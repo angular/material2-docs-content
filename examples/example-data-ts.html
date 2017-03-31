@@ -1,0 +1,46 @@
+<span class="hljs-keyword">import</span> {EXAMPLE_COMPONENTS} from <span class="hljs-string">'./example-module'</span>;
+
+
+<span class="hljs-comment">/**
+ * Example data
+ *   with information about Component name, selector, files used in example, and path to examples
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleData {
+  <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> figure out how do we get these variables.</span>
+  description: <span class="hljs-built_in">string</span> = <span class="hljs-string">'Some description for material'</span>;
+  <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> use real example and delete the example/ folder.</span>
+  examplePath = <span class="hljs-string">'/assets/example/'</span>;
+  exampleFiles = [<span class="hljs-string">'button-demo.html'</span>, <span class="hljs-string">'button-demo.scss'</span>, <span class="hljs-string">'button-demo.ts'</span>];
+
+  <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> extract these variables from example code.</span>
+  selectorName = <span class="hljs-string">'button-demo'</span>;
+  indexFilename = <span class="hljs-string">'button-demo'</span>;
+  componentName = <span class="hljs-string">'ButtonDemo'</span>;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">example: <span class="hljs-built_in">string</span></span>) {
+    <span class="hljs-keyword">if</span> (example &amp;&amp; EXAMPLE_COMPONENTS[example]) {
+      <span class="hljs-keyword">this</span>.examplePath = <span class="hljs-string">`/assets/plunker/examples/<span class="hljs-subst">${example}</span>/`</span>;
+      <span class="hljs-comment">// TODO(tinayuangao): Do not hard-code extensions</span>
+      <span class="hljs-keyword">this</span>.exampleFiles = [<span class="hljs-string">'html'</span>, <span class="hljs-string">'ts'</span>, <span class="hljs-string">'css'</span>]
+        .map((extension) =&gt; <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example.<span class="hljs-subst">${extension}</span>`</span>);
+      <span class="hljs-keyword">if</span> (EXAMPLE_COMPONENTS[example].additionalFiles) {
+        <span class="hljs-keyword">this</span>.exampleFiles = <span class="hljs-keyword">this</span>.exampleFiles.concat(EXAMPLE_COMPONENTS[example].additionalFiles);
+      }
+      <span class="hljs-keyword">this</span>.selectorName = <span class="hljs-keyword">this</span>.indexFilename = <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example`</span>;
+
+      <span class="hljs-keyword">let</span> exampleName = example.replace(<span class="hljs-regexp">/(?:^\w|\b\w)/g</span>, letter =&gt; letter.toUpperCase());
+
+      <span class="hljs-keyword">if</span> (EXAMPLE_COMPONENTS[example].title) {
+        <span class="hljs-keyword">this</span>.description = EXAMPLE_COMPONENTS[example].title;
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.description = exampleName.replace(<span class="hljs-regexp">/[\-]+/g</span>, <span class="hljs-string">' '</span>) + <span class="hljs-string">' Example'</span>;
+      }
+
+      <span class="hljs-keyword">if</span> (EXAMPLE_COMPONENTS[example].selectorName) {
+        <span class="hljs-keyword">this</span>.componentName = EXAMPLE_COMPONENTS[example].selectorName;
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.componentName = exampleName.replace(<span class="hljs-regexp">/[\-]+/g</span>, <span class="hljs-string">''</span>) + <span class="hljs-string">'Example'</span>;
+      }
+    }
+  }
+}

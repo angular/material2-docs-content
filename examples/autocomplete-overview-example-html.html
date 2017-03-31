@@ -1,0 +1,9 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">md-input-container</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">mdInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"State"</span> [<span class="hljs-attr">mdAutocomplete</span>]=<span class="hljs-string">"auto"</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"stateCtrl"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-input-container</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">md-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"mdAutocomplete"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let state of filteredStates | async"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"state"</span>&gt;</span>
+    {{ state }}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-autocomplete</span>&gt;</span>

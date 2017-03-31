@@ -1,0 +1,66 @@
+<html><head></head><body><p class="docs-markdown-p"><code>&lt;md-input-container&gt;</code> is a wrapper for native <code>input</code> and <code>textarea</code> elements. This container
+applies Material Design styles and behavior while still allowing direct access to the underlying
+native element.</p>
+<p class="docs-markdown-p">The native element wrapped by the <code>md-input-container</code> must be marked with the <code>mdInput</code> directive.</p>
+<div material-docs-example="input-overview"></div>
+<h3 id="-input-and-textarea-attributes" class="docs-markdown-h3"><code>input</code> and <code>textarea</code> attributes</h3>
+<p class="docs-markdown-p">All of the attributes that can be used with normal <code>input</code> and <code>textarea</code> elements can be used on
+elements inside <code>md-input-container</code> as well. This includes Angular directives such as
+<code>ngModel</code> and <code>formControl</code>.</p>
+<p class="docs-markdown-p">The only limitations are that the <code>type</code> attribute can only be one of the values supported by
+<code>md-input-container</code> and the native element cannot specify a <code>placeholder</code> attribute if the
+<code>md-input-container</code> also contains a <code>md-placeholder</code> element.</p>
+<h3 id="supported-input-types" class="docs-markdown-h3">Supported <code>input</code> types</h3>
+<p class="docs-markdown-p">The following <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" class="docs-markdown-a">input types</a> can
+be used with <code>md-input-container</code>:</p>
+<ul class="docs-markdown-ul">
+<li class="docs-markdown-li">date</li>
+<li class="docs-markdown-li">datetime-local</li>
+<li class="docs-markdown-li">email</li>
+<li class="docs-markdown-li">month</li>
+<li class="docs-markdown-li">number</li>
+<li class="docs-markdown-li">password</li>
+<li class="docs-markdown-li">search</li>
+<li class="docs-markdown-li">tel</li>
+<li class="docs-markdown-li">text</li>
+<li class="docs-markdown-li">time</li>
+<li class="docs-markdown-li">url</li>
+<li class="docs-markdown-li">week</li>
+</ul>
+<h3 id="error-messages" class="docs-markdown-h3">Error messages</h3>
+<p class="docs-markdown-p">Error messages can be shown beneath an input by specifying <code>md-error</code> elements inside the
+<code>md-input-container</code>. Errors are hidden by default and will be displayed on invalid inputs after
+the user has interacted with the element or the parent form has been submitted. In addition,
+whenever errors are displayed, the container's <code>md-hint</code> labels will be hidden.</p>
+<p class="docs-markdown-p">If an input element can have more than one error state, it is up to the consumer to toggle which
+messages should be displayed. This can be done with CSS, <code>ngIf</code> or <code>ngSwitch</code>.</p>
+<p class="docs-markdown-p">Note that, while multiple error messages can be displayed at the same time, it is recommended to
+only show one at a time.</p>
+<h3 id="placeholder" class="docs-markdown-h3">Placeholder</h3>
+<p class="docs-markdown-p">A placeholder is an indicative text displayed in the input zone when the input does not contain
+text. When text is present, the indicative text will float above this input zone.</p>
+<p class="docs-markdown-p">The <code>floatPlaceholder</code> attribute of <code>md-input-container</code> can be set to <code>never</code> to hide the
+indicative text instead when text is present in the input.</p>
+<p class="docs-markdown-p">When setting <code>floatPlaceholder</code> to <code>always</code> the floating label will always show above the input.</p>
+<p class="docs-markdown-p">A placeholder for the input can be specified in one of two ways: either using the <code>placeholder</code>
+attribute on the <code>input</code> or <code>textarea</code>, or using an <code>md-placeholder</code> element in the
+<code>md-input-container</code>. Using both will raise an error.</p>
+<h3 id="prefix-and-suffix" class="docs-markdown-h3">Prefix and Suffix</h3>
+<p class="docs-markdown-p">HTML can be included before, and after the input tag, as prefix or suffix. It will be underlined as
+per the Material specification, and clicking it will focus the input.</p>
+<p class="docs-markdown-p">Adding the <code>mdPrefix</code> attribute to an element inside the <code>md-input-container</code> will designate it as
+the prefix. Similarly, adding <code>mdSuffix</code> will designate it as the suffix.</p>
+<h3 id="hint-labels" class="docs-markdown-h3">Hint Labels</h3>
+<p class="docs-markdown-p">Hint labels are the labels that show below the underline. An <code>md-input-container</code> can have up to two
+hint labels; one on the <code>start</code> of the line (left in an LTR language, right in RTL), and one on the
+<code>end</code>.</p>
+<p class="docs-markdown-p">Hint labels are specified in one of two ways: either using the <code>hintLabel</code> attribute of
+<code>md-input-container</code>, or using an <code>md-hint</code> element inside the <code>md-input-container</code>, which takes an
+<code>align</code> attribute containing the side. The attribute version is assumed to be at the <code>start</code>.
+Specifying a side twice will result in an exception during initialization.</p>
+<h3 id="underline-color" class="docs-markdown-h3">Underline Color</h3>
+<p class="docs-markdown-p">The underline (line under the <code>input</code> content) color can be changed by using the <code>color</code>
+attribute of <code>md-input-container</code>. A value of <code>primary</code> is the default and will correspond to the
+theme primary color. Alternatively, <code>accent</code> or <code>warn</code> can be specified to use the theme's accent or
+warn color.</p>
+</body></html>

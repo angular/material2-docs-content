@@ -1,0 +1,45 @@
+<html><head></head><body><p class="docs-markdown-p"><code>&lt;md-select&gt;</code> is a form control for selecting a value from a set of options, similar to the native
+<code>&lt;select&gt;</code> element. You can read more about selects in the 
+<a href="https://material.google.com/components/menus.html" class="docs-markdown-a">Material Design spec</a>.</p>
+<div material-docs-example="select-overview"></div>
+<h3 id="simple-select" class="docs-markdown-h3">Simple select</h3>
+<p class="docs-markdown-p">In your template, create an <code>md-select</code> element. For each option you'd like in your select, add an 
+<code>md-option</code> tag. Note that you can disable items by adding the <code>disabled</code> boolean attribute or 
+binding to it.</p>
+<p class="docs-markdown-p"><em>my-comp.html</em></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">md-select</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"State"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let state of states"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"state.code"</span>&gt;</span>{{ state.name }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-select</span>&gt;</span>
+</code></pre>
+<h3 id="getting-and-setting-the-select-value" class="docs-markdown-h3">Getting and setting the select value</h3>
+<p class="docs-markdown-p">The select component is set up as a custom value accessor, so you can manipulate the select's value using 
+any of the form directives from the core <code>FormsModule</code> or <code>ReactiveFormsModule</code>: <code>ngModel</code>, <code>formControl</code>, etc.</p>
+<p class="docs-markdown-p"><em>my-comp.html</em></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">md-select</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"State"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"myState"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let state of states"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"state.code"</span>&gt;</span>{{ state.name }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-select</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p"><em>my-comp.ts</em></p>
+<pre><code class="lang-ts"><span class="hljs-keyword">class</span> MyComp {
+  myState = <span class="hljs-string">'AZ'</span>;
+  states = [{code: <span class="hljs-string">'AL'</span>, name: <span class="hljs-string">'Alabama'</span>}...];
+}
+</code></pre>
+<h3 id="setting-a-static-placeholder" class="docs-markdown-h3">Setting a static placeholder</h3>
+<p class="docs-markdown-p">It's possible to turn off the placeholder's floating animation using the <code>floatPlaceholder</code> property. It accepts one of three string options:</p>
+<ul class="docs-markdown-ul">
+<li class="docs-markdown-li"><code>'auto'</code>: This is the default floating placeholder animation. It will float up when a selection is made.</li>
+<li class="docs-markdown-li"><code>'never'</code>: This makes the placeholder static. Rather than floating, it will disappear once a selection is made.</li>
+<li class="docs-markdown-li"><code>'always'</code>: This makes the placeholder permanently float above the input. It will not animate up or down.</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">md-select</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"State"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"myState"</span> <span class="hljs-attr">floatPlaceholder</span>=<span class="hljs-string">"never"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let state of states"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"state.code"</span>&gt;</span>{{ state.name }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-select</span>&gt;</span>
+</code></pre>
+<h4 id="keyboard-interaction-" class="docs-markdown-h4">Keyboard interaction:</h4>
+<ul class="docs-markdown-ul">
+<li class="docs-markdown-li"><kbd>DOWN_ARROW</kbd>: Focus next option</li>
+<li class="docs-markdown-li"><kbd>UP_ARROW</kbd>: Focus previous option</li>
+<li class="docs-markdown-li"><kbd>ENTER</kbd> or <kbd>SPACE</kbd>: Select focused item</li>
+</ul>
+</body></html>
