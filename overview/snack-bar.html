@@ -14,12 +14,12 @@
 <p class="docs-markdown-p">In either case, an <code>MdSnackBarRef</code> is returned. This can be used to dismiss the snack-bar or to 
 recieve notification of when the snack-bar is dismissed. For simple messages with an action, the 
 <code>MdSnackBarRef</code> exposes an observable for when the action is triggered.</p>
-<pre><code class="lang-ts">snackBarRef.afterDismissed().subscribe(() =&gt; {
+<pre><code class="lang-ts">snackBarRef.afterDismissed().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The snack-bar was dismissed'</span>);
 });
 
 
-snackBarRef.onAction().subscribe(() =&gt; {
+snackBarRef.onAction().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The snack-bar action was triggered!'</span>);
 });
 

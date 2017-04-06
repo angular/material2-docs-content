@@ -1,5 +1,5 @@
-<span class="hljs-keyword">import</span> {Component} from <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormControl} from <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/startWith'</span>;
 
 <span class="hljs-meta">@Component</span>({
@@ -67,11 +67,11 @@
     <span class="hljs-keyword">this</span>.stateCtrl = <span class="hljs-keyword">new</span> FormControl();
     <span class="hljs-keyword">this</span>.filteredStates = <span class="hljs-keyword">this</span>.stateCtrl.valueChanges
         .startWith(<span class="hljs-literal">null</span>)
-        .map(name =&gt; <span class="hljs-keyword">this</span>.filterStates(name));
+        .map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-keyword">this</span>.filterStates(name));
   }
 
   filterStates(val: <span class="hljs-built_in">string</span>) {
-    <span class="hljs-keyword">return</span> val ? <span class="hljs-keyword">this</span>.states.filter(s =&gt; <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">`^<span class="hljs-subst">${val}</span>`</span>, <span class="hljs-string">'gi'</span>).test(s))
+    <span class="hljs-keyword">return</span> val ? <span class="hljs-keyword">this</span>.states.filter(<span class="hljs-function"><span class="hljs-params">s</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">`^<span class="hljs-subst">${val}</span>`</span>, <span class="hljs-string">'gi'</span>).test(s))
                : <span class="hljs-keyword">this</span>.states;
   }
 

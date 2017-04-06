@@ -57,11 +57,11 @@ to the beginning of the string.</p>
    ngOnInit() {
       <span class="hljs-keyword">this</span>.filteredOptions = <span class="hljs-keyword">this</span>.myControl.valueChanges
          .startWith(<span class="hljs-literal">null</span>)
-         .map(val =&gt; val ? <span class="hljs-keyword">this</span>.filter(val) : <span class="hljs-keyword">this</span>.options.slice());
+         .map(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> val ? <span class="hljs-keyword">this</span>.filter(val) : <span class="hljs-keyword">this</span>.options.slice());
    }
 
    filter(val: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span>[] {
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.options.filter(option =&gt; <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">`^<span class="hljs-subst">${val}</span>`</span>, <span class="hljs-string">'gi'</span>).test(option)); 
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.options.filter(<span class="hljs-function"><span class="hljs-params">option</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">`^<span class="hljs-subst">${val}</span>`</span>, <span class="hljs-string">'gi'</span>).test(option)); 
    }
 }
 </code></pre>
@@ -106,12 +106,12 @@ Then bind it to the autocomplete's <code>displayWith</code> property. </p>
    ngOnInit() { 
       <span class="hljs-keyword">this</span>.filteredOptions = <span class="hljs-keyword">this</span>.myControl.valueChanges
          .startWith(<span class="hljs-literal">null</span>)
-         .map(user =&gt; user &amp;&amp; <span class="hljs-keyword">typeof</span> user === <span class="hljs-string">'object'</span> ? user.name : user)
-         .map(name =&gt; name ? <span class="hljs-keyword">this</span>.filter(name) : <span class="hljs-keyword">this</span>.options.slice());
+         .map(<span class="hljs-function"><span class="hljs-params">user</span> =&gt;</span> user &amp;&amp; <span class="hljs-keyword">typeof</span> user === <span class="hljs-string">'object'</span> ? user.name : user)
+         .map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> name ? <span class="hljs-keyword">this</span>.filter(name) : <span class="hljs-keyword">this</span>.options.slice());
    }
 
    filter(name: <span class="hljs-built_in">string</span>): User[] {
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.options.filter(option =&gt; <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">`^<span class="hljs-subst">${name}</span>`</span>, <span class="hljs-string">'gi'</span>).test(option)); 
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.options.filter(<span class="hljs-function"><span class="hljs-params">option</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">`^<span class="hljs-subst">${name}</span>`</span>, <span class="hljs-string">'gi'</span>).test(option)); 
    }
 
    displayFn(user: User): <span class="hljs-built_in">string</span> {

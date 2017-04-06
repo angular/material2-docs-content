@@ -10,7 +10,7 @@ more advanced transitions. If you want these animations to work in your app, you
 install the <code>@angular/animations</code> module and include the <code>BrowserAnimationsModule</code> in your app.</p>
 <pre><code class="lang-bash">npm install --save @angular/animations
 </code></pre>
-<pre><code class="lang-ts"><span class="hljs-keyword">import</span> {BrowserAnimationsModule} from <span class="hljs-string">'@angular/platform-browser/animations'</span>;
+<pre><code class="lang-ts"><span class="hljs-keyword">import</span> {BrowserAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser/animations'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   ...
@@ -20,7 +20,7 @@ install the <code>@angular/animations</code> module and include the <code>Browse
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PizzaPartyAppModule { }
 </code></pre>
 <p class="docs-markdown-p">If you don't want to add another dependency to your project, you can use the <code>NoopAnimationsModule</code>.</p>
-<pre><code class="lang-ts"><span class="hljs-keyword">import</span> {NoopAnimationsModule} from <span class="hljs-string">'@angular/platform-browser/animations'</span>;
+<pre><code class="lang-ts"><span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser/animations'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   ...
@@ -31,7 +31,7 @@ install the <code>@angular/animations</code> module and include the <code>Browse
 </code></pre>
 <h2 id="step-3-import-the-module" class="docs-markdown-h2">Step 3: Import the Module</h2>
 <p class="docs-markdown-p">Add MaterialModule as an import in your app's root NgModule.</p>
-<pre><code class="lang-ts"><span class="hljs-keyword">import</span> {MaterialModule} from <span class="hljs-string">'@angular/material'</span>;
+<pre><code class="lang-ts"><span class="hljs-keyword">import</span> {MaterialModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   ...

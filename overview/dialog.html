@@ -10,7 +10,7 @@ config object. The <code>open</code> method will return an instance of <code>MdD
 </code></pre>
 <p class="docs-markdown-p">The <code>MdDialogRef</code> provides a handle on the opened dialog. It can be used to close the dialog and to
 receive notification when the dialog has been closed.</p>
-<pre><code class="lang-ts">dialogRef.afterClosed().subscribe(result =&gt; {
+<pre><code class="lang-ts">dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Dialog result: <span class="hljs-subst">${result}</span>`</span>); <span class="hljs-comment">// Pizza!</span>
 });
 

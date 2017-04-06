@@ -1,5 +1,5 @@
-<span class="hljs-keyword">import</span> {Component} from <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MdDialog, MdDialogRef} from <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MdDialog, MdDialogRef} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 
 <span class="hljs-meta">@Component</span>({
@@ -13,7 +13,7 @@
 
   openDialog() {
     <span class="hljs-keyword">let</span> dialogRef = <span class="hljs-keyword">this</span>.dialog.open(DialogResultExampleDialog);
-    dialogRef.afterClosed().subscribe(result =&gt; {
+    dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
       <span class="hljs-keyword">this</span>.selectedOption = result;
     });
   }
