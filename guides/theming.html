@@ -18,7 +18,7 @@ app doesn't have to spend cycles generating theme styles on startup.</p>
 include all of the styles for core (styles common to all components), so you only have to include a
 single css file for Angular Material in your app.</p>
 <p class="docs-markdown-p">You can include a theme file directly into your application from
-<code>@angular/material/core/theming/prebuilt</code></p>
+<code>@angular/material/prebuilt-themes</code></p>
 <p class="docs-markdown-p">Available pre-built themes:</p>
 <ul class="docs-markdown-ul">
 <li class="docs-markdown-li"><code>deeppurple-amber.css</code></li>
@@ -28,10 +28,10 @@ single css file for Angular Material in your app.</p>
 </ul>
 <p class="docs-markdown-p">If you're using Angular CLI, this is as simple as including one line
 in your <code>styles.css</code>  file:</p>
-<pre><code class="lang-css">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/core/theming/prebuilt/deeppurple-amber.css'</span>;
+<pre><code class="lang-css">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/prebuilt-themes/deeppurple-amber.css'</span>;
 </code></pre>
 <p class="docs-markdown-p">Alternatively, you can just reference the file directly. This would look something like:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
 </code></pre>
 <p class="docs-markdown-p">The actual path will depend on your server setup.</p>
 <p class="docs-markdown-p">You can also concatenate the file with the rest of your application's css.</p>
@@ -57,7 +57,7 @@ have to specify it on the global <code>OverlayContainer</code> instance:</p>
 <p class="docs-markdown-p">When you want more customization than a pre-built theme offers, you can create your own theme file.</p>
 <p class="docs-markdown-p">A theme file is a simple Sass file that defines your palettes and passes them to mixins that output
 the corresponding styles. A typical theme file will look something like this:</p>
-<pre><code class="lang-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/core/theming/all-theme'</span>;
+<pre><code class="lang-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
 <span class="hljs-comment">// Plus imports for other components in your app.</span>
 
 <span class="hljs-comment">// Include the base styles for Angular Material core. We include this here so that you only</span>
