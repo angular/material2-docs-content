@@ -1,8 +1,8 @@
-<html><head></head><body><p class="docs-markdown-p"><code>MdSnackBar</code> is a service for displaying snack-bar notifications.</p>
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">MdSnackBar</code> is a service for displaying snack-bar notifications.</p>
 <div material-docs-example="snack-bar-overview"></div>
 <h3 id="opening-a-snack-bar" class="docs-markdown-h3">Opening a snack-bar</h3>
 <p class="docs-markdown-p">A snack-bar can contain either a string message or a given component.</p>
-<pre><code class="lang-ts"><span class="hljs-comment">// Simple message.</span>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-comment">// Simple message.</span>
 <span class="hljs-keyword">let</span> snackBarRef = snackBar.open(<span class="hljs-string">'Message archived'</span>);
 
 <span class="hljs-comment">// Simple message with an action.</span>
@@ -11,10 +11,10 @@
 <span class="hljs-comment">// Load the given component into the snack-bar.</span>
 <span class="hljs-keyword">let</span> snackBarRef = snackbar.openFromComponent(MessageArchivedComponent);
 </code></pre>
-<p class="docs-markdown-p">In either case, an <code>MdSnackBarRef</code> is returned. This can be used to dismiss the snack-bar or to 
+<p class="docs-markdown-p">In either case, an <code class="docs-markdown-code">MdSnackBarRef</code> is returned. This can be used to dismiss the snack-bar or to 
 recieve notification of when the snack-bar is dismissed. For simple messages with an action, the 
-<code>MdSnackBarRef</code> exposes an observable for when the action is triggered.</p>
-<pre><code class="lang-ts">snackBarRef.afterDismissed().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+<code class="docs-markdown-code">MdSnackBarRef</code> exposes an observable for when the action is triggered.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">snackBarRef.afterDismissed().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The snack-bar was dismissed'</span>);
 });
 
@@ -26,13 +26,13 @@ snackBarRef.onAction().subscribe(<span class="hljs-function"><span class="hljs-p
 snackBarRef.dismiss();
 </code></pre>
 <h3 id="dismissal" class="docs-markdown-h3">Dismissal</h3>
-<p class="docs-markdown-p">A snack-bar can be dismissed manually by calling the <code>dismiss</code> method on the <code>MdSnackBarRef</code> 
-returned from the call to <code>open</code>.</p>
+<p class="docs-markdown-p">A snack-bar can be dismissed manually by calling the <code class="docs-markdown-code">dismiss</code> method on the <code class="docs-markdown-code">MdSnackBarRef</code> 
+returned from the call to <code class="docs-markdown-code">open</code>.</p>
 <p class="docs-markdown-p">Only one snack-bar can ever be opened at one time. If a new snackbar is opened while a previous
 message is still showing, the older message will be automatically dismissed.</p>
 <p class="docs-markdown-p">A snack-bar can also be given a duration via the optional configuration object:</p>
-<pre><code class="lang-ts">snackbar.open(<span class="hljs-string">'Message archived'</span>, <span class="hljs-string">'Undo'</span>, {
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">snackbar.open(<span class="hljs-string">'Message archived'</span>, <span class="hljs-string">'Undo'</span>, {
   duration: <span class="hljs-number">3000</span>
 });
 </code></pre>
-</body></html>
+</div></body></html>

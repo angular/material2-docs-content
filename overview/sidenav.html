@@ -1,8 +1,8 @@
-<html><head></head><body><p class="docs-markdown-p"><code>&lt;md-sidenav&gt;</code> is a panel that can be placed next to or above some primary content. A sidenav is
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;md-sidenav&gt;</code> is a panel that can be placed next to or above some primary content. A sidenav is
 typically used for navigation, but can contain any content.</p>
 <div material-docs-example="sidenav-overview"></div>
-<p class="docs-markdown-p">The sidenav and its associated content live inside of an <code>&lt;md-sidenav-container&gt;</code>:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">md-sidenav-container</span>&gt;</span>
+<p class="docs-markdown-p">The sidenav and its associated content live inside of an <code class="docs-markdown-code">&lt;md-sidenav-container&gt;</code>:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-sidenav-container</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-sidenav</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- sidenav content --&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">md-sidenav</span>&gt;</span>
@@ -10,11 +10,11 @@ typically used for navigation, but can contain any content.</p>
   <span class="hljs-comment">&lt;!-- primary content --&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-sidenav-container</span>&gt;</span>
 </code></pre>
-<p class="docs-markdown-p">A sidenav container may contain one or two <code>&lt;md-sidenav&gt;</code> elements. When there are two 
-<code>&lt;md-sidenav&gt;</code> elements, each must be placed on a different side of the container.
+<p class="docs-markdown-p">A sidenav container may contain one or two <code class="docs-markdown-code">&lt;md-sidenav&gt;</code> elements. When there are two 
+<code class="docs-markdown-code">&lt;md-sidenav&gt;</code> elements, each must be placed on a different side of the container.
 See the section on positioning below.</p>
 <h3 id="sidenav-mode" class="docs-markdown-h3">Sidenav mode</h3>
-<p class="docs-markdown-p">The sidenav can render in one of three different ways based on the <code>mode</code> property.</p>
+<p class="docs-markdown-p">The sidenav can render in one of three different ways based on the <code class="docs-markdown-code">mode</code> property.</p>
 <table class="docs-markdown-table">
 <thead>
 <tr class="docs-markdown-tr">
@@ -37,30 +37,30 @@ See the section on positioning below.</p>
 </tr>
 </tbody>
 </table>
-<p class="docs-markdown-p">Using the <code>side</code> mode on mobile devices can affect the performance and is also not recommended by the
+<p class="docs-markdown-p">Using the <code class="docs-markdown-code">side</code> mode on mobile devices can affect the performance and is also not recommended by the
 <a href="https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-behavior" class="docs-markdown-a">Material Design specification</a>.</p>
 <h3 id="positioning-the-sidenav" class="docs-markdown-h3">Positioning the sidenav</h3>
-<p class="docs-markdown-p">The <code>align</code> property determines whether the sidenav appears at the <code>"start"</code> or <code>"end"</code> of the
+<p class="docs-markdown-p">The <code class="docs-markdown-code">align</code> property determines whether the sidenav appears at the <code class="docs-markdown-code">"start"</code> or <code class="docs-markdown-code">"end"</code> of the
 container. This is affected by the current text direction ("ltr" or "rtl"). By default, the sidenav
 appears at the start of the container.</p>
 <h3 id="sizing-the-sidenav" class="docs-markdown-h3">Sizing the sidenav</h3>
-<p class="docs-markdown-p">The <code>&lt;md-sidenav&gt;</code> will, by default, fit the size of its content. The width can be explicitly set
+<p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;md-sidenav&gt;</code> will, by default, fit the size of its content. The width can be explicitly set
 via CSS:</p>
-<pre><code class="lang-css"><span class="hljs-selector-tag">md-sidenav</span> {
+<pre class="docs-markdown-pre"><code class="lang-css docs-markdown-code"><span class="hljs-selector-tag">md-sidenav</span> {
   <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
 }
 </code></pre>
-<p class="docs-markdown-p">Try to avoid percent based width as <code>resize</code> events are not (yet) supported.</p>
+<p class="docs-markdown-p">Try to avoid percent based width as <code class="docs-markdown-code">resize</code> events are not (yet) supported.</p>
 <p class="docs-markdown-p">For a fullscreen sidenav, the recommended approach is set up the DOM such that the
-<code>&lt;md-sidenav-container&gt;</code> can naturally take up the full space:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">app</span>&gt;</span>
+<code class="docs-markdown-code">&lt;md-sidenav-container&gt;</code> can naturally take up the full space:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">app</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-sidenav-container</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">md-sidenav</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">"side"</span> <span class="hljs-attr">opened</span>=<span class="hljs-string">"true"</span>&gt;</span>Drawer content<span class="hljs-tag">&lt;/<span class="hljs-name">md-sidenav</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-content"</span>&gt;</span>Main content<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">md-sidenav-container</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">app</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-css"><span class="hljs-selector-tag">html</span>, <span class="hljs-selector-tag">body</span>, <span class="hljs-selector-tag">material-app</span>, <span class="hljs-selector-tag">md-sidenav-container</span>, <span class="hljs-selector-class">.my-content</span> {
+<pre class="docs-markdown-pre"><code class="lang-css docs-markdown-code"><span class="hljs-selector-tag">html</span>, <span class="hljs-selector-tag">body</span>, <span class="hljs-selector-tag">material-app</span>, <span class="hljs-selector-tag">md-sidenav-container</span>, <span class="hljs-selector-class">.my-content</span> {
   <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
   <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
   <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
@@ -69,4 +69,4 @@ via CSS:</p>
 <h3 id="fabs-inside-sidenav" class="docs-markdown-h3">FABs inside sidenav</h3>
 <p class="docs-markdown-p">For a sidenav with a FAB (or other floating element), the recommended approach is to place the FAB
 outside of the scrollable region and absolutely position it.</p>
-</body></html>
+</div></body></html>

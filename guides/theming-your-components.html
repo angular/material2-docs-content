@@ -1,13 +1,13 @@
-<html><head></head><body><h1 id="theming-your-custom-components" class="docs-markdown-h1">Theming your custom components</h1>
+<html><head></head><body><div class="docs-markdown"><h1 id="theming-your-custom-components" class="docs-markdown-h1">Theming your custom components</h1>
 <p class="docs-markdown-p">In order to style your own components with Angular Material's tooling, the component's styles must be defined with Sass.</p>
-<h2 id="using-mixin-to-automatically-apply-a-theme" class="docs-markdown-h2">Using <code>@mixin</code> to automatically apply a theme</h2>
-<h3 id="why-using-mixin-" class="docs-markdown-h3">Why using <code>@mixin</code></h3>
-<p class="docs-markdown-p">The advantage of using a <code>@mixin</code> function is that when you change your theme, every file that uses it will be updated automatically.
+<h2 id="using-mixin-to-automatically-apply-a-theme" class="docs-markdown-h2">Using <code class="docs-markdown-code">@mixin</code> to automatically apply a theme</h2>
+<h3 id="why-using-mixin-" class="docs-markdown-h3">Why using <code class="docs-markdown-code">@mixin</code></h3>
+<p class="docs-markdown-p">The advantage of using a <code class="docs-markdown-code">@mixin</code> function is that when you change your theme, every file that uses it will be updated automatically.
 Calling it with a different theme argument allow multiple themes within the app or component.</p>
-<h3 id="how-to-use-mixin-" class="docs-markdown-h3">How to use <code>@mixin</code></h3>
-<p class="docs-markdown-p">We can better theming our custom components adding a <code>@mixin</code> function to its theme file and then calling this function to apply a theme.</p>
-<p class="docs-markdown-p">All you need is to create a <code>@mixin</code> function in the custom-component-theme.scss</p>
-<pre><code class="lang-scss"><span class="hljs-comment">// Import all the tools needed to customize the theme and extract parts of it</span>
+<h3 id="how-to-use-mixin-" class="docs-markdown-h3">How to use <code class="docs-markdown-code">@mixin</code></h3>
+<p class="docs-markdown-p">We can better theming our custom components adding a <code class="docs-markdown-code">@mixin</code> function to its theme file and then calling this function to apply a theme.</p>
+<p class="docs-markdown-p">All you need is to create a <code class="docs-markdown-code">@mixin</code> function in the custom-component-theme.scss</p>
+<pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-comment">// Import all the tools needed to customize the theme and extract parts of it</span>
 @<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
 
 <span class="hljs-comment">// Define a mixin that accepts a theme and outputs the color styles for the component.</span>
@@ -23,8 +23,8 @@ Calling it with a different theme argument allow multiple themes within the app 
   }
 }
 </code></pre>
-<p class="docs-markdown-p">Now you just have to call the <code>@mixin</code> function to apply the theme:</p>
-<pre><code class="lang-scss"><span class="hljs-comment">// Import a pre-built theme</span>
+<p class="docs-markdown-p">Now you just have to call the <code class="docs-markdown-code">@mixin</code> function to apply the theme:</p>
+<pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-comment">// Import a pre-built theme</span>
 @<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/prebuilt-themes/deeppurple-amber.css'</span>;
 <span class="hljs-comment">// Import your custom input theme file so you can call the custom-input-theme function</span>
 @<span class="hljs-keyword">import</span> <span class="hljs-string">'app/candy-carousel/candy-carousel-theme.scss'</span>;
@@ -34,14 +34,14 @@ Calling it with a different theme argument allow multiple themes within the app 
 </code></pre>
 <p class="docs-markdown-p">For more details about the theming functions, see the comments in the
 <a href="https://github.com/angular/material2/blob/master/src/lib/core/theming/_theming.scss" class="docs-markdown-a">source</a>.</p>
-<h3 id="best-practices-using-mixin-" class="docs-markdown-h3">Best practices using <code>@mixin</code></h3>
-<p class="docs-markdown-p">When using <code>@mixin</code>, the theme file should only contain the definitions that are affected by the passed-in theme.</p>
-<p class="docs-markdown-p">All styles that are not affected by the theme should be placed in a <code>candy-carousel.scss</code> file. This file should contain everything that is not affected by the theme like sizes, transitions...</p>
-<p class="docs-markdown-p">Styles that are affected by the theme should be placed in a separated theming file as <code>_candy-carousel-theme.scss</code> and the file should have a <code>_</code> before the name. This file should contain the <code>@mixin</code> function responsible for applying the theme to the component.</p>
+<h3 id="best-practices-using-mixin-" class="docs-markdown-h3">Best practices using <code class="docs-markdown-code">@mixin</code></h3>
+<p class="docs-markdown-p">When using <code class="docs-markdown-code">@mixin</code>, the theme file should only contain the definitions that are affected by the passed-in theme.</p>
+<p class="docs-markdown-p">All styles that are not affected by the theme should be placed in a <code class="docs-markdown-code">candy-carousel.scss</code> file. This file should contain everything that is not affected by the theme like sizes, transitions...</p>
+<p class="docs-markdown-p">Styles that are affected by the theme should be placed in a separated theming file as <code class="docs-markdown-code">_candy-carousel-theme.scss</code> and the file should have a <code class="docs-markdown-code">_</code> before the name. This file should contain the <code class="docs-markdown-code">@mixin</code> function responsible for applying the theme to the component.</p>
 <h2 id="using-colors-from-a-palette" class="docs-markdown-h2">Using colors from a palette</h2>
-<p class="docs-markdown-p">You can consume the theming functions and Material palette variables from <code>@angular/material/theming</code>.
-You can use the <code>mat-color</code> function to extract a specific color from a palette. For example:</p>
-<pre><code class="lang-scss"><span class="hljs-comment">// Import theming functions</span>
+<p class="docs-markdown-p">You can consume the theming functions and Material palette variables from <code class="docs-markdown-code">@angular/material/theming</code>.
+You can use the <code class="docs-markdown-code">mat-color</code> function to extract a specific color from a palette. For example:</p>
+<pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-comment">// Import theming functions</span>
 @<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
 <span class="hljs-comment">// Import your custom theme</span>
 @<span class="hljs-keyword">import</span> <span class="hljs-string">'src/unicorn-app-theme.scss'</span>;
@@ -52,4 +52,4 @@ You can use the <code>mat-color</code> function to extract a specific color from
   <span class="hljs-attribute">border-color</span>: mat-color(<span class="hljs-variable">$candy-app-accent</span>, A400);
 }
 </code></pre>
-</body></html>
+</div></body></html>

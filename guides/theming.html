@@ -1,4 +1,4 @@
-<html><head></head><body><h1 id="theming-your-angular-material-app" class="docs-markdown-h1">Theming your Angular Material app</h1>
+<html><head></head><body><div class="docs-markdown"><h1 id="theming-your-angular-material-app" class="docs-markdown-h1">Theming your Angular Material app</h1>
 <h3 id="what-is-a-theme-" class="docs-markdown-h3">What is a theme?</h3>
 <p class="docs-markdown-p">A <strong>theme</strong> is the set of colors that will be applied to the Angular Material components. The
 library's approach to theming is based on the guidance from the <a href="https://material.google.com/style/color.html#color-color-palette" class="docs-markdown-a">Material Design spec</a>.</p>
@@ -18,31 +18,31 @@ app doesn't have to spend cycles generating theme styles on startup.</p>
 include all of the styles for core (styles common to all components), so you only have to include a
 single css file for Angular Material in your app.</p>
 <p class="docs-markdown-p">You can include a theme file directly into your application from
-<code>@angular/material/prebuilt-themes</code></p>
+<code class="docs-markdown-code">@angular/material/prebuilt-themes</code></p>
 <p class="docs-markdown-p">Available pre-built themes:</p>
 <ul class="docs-markdown-ul">
-<li class="docs-markdown-li"><code>deeppurple-amber.css</code></li>
-<li class="docs-markdown-li"><code>indigo-pink.css</code></li>
-<li class="docs-markdown-li"><code>pink-bluegrey.css</code></li>
-<li class="docs-markdown-li"><code>purple-green.css</code></li>
+<li class="docs-markdown-li"><code class="docs-markdown-code">deeppurple-amber.css</code></li>
+<li class="docs-markdown-li"><code class="docs-markdown-code">indigo-pink.css</code></li>
+<li class="docs-markdown-li"><code class="docs-markdown-code">pink-bluegrey.css</code></li>
+<li class="docs-markdown-li"><code class="docs-markdown-code">purple-green.css</code></li>
 </ul>
 <p class="docs-markdown-p">If you're using Angular CLI, this is as simple as including one line
-in your <code>styles.css</code>  file:</p>
-<pre><code class="lang-css">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/prebuilt-themes/deeppurple-amber.css'</span>;
+in your <code class="docs-markdown-code">styles.css</code>  file:</p>
+<pre class="docs-markdown-pre"><code class="lang-css docs-markdown-code">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/prebuilt-themes/deeppurple-amber.css'</span>;
 </code></pre>
 <p class="docs-markdown-p">Alternatively, you can just reference the file directly. This would look something like:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
 </code></pre>
 <p class="docs-markdown-p">The actual path will depend on your server setup.</p>
 <p class="docs-markdown-p">You can also concatenate the file with the rest of your application's css.</p>
-<p class="docs-markdown-p">Finally, if your app's content <strong>is not</strong> placed inside of a <code>md-sidenav-container</code> element, you
-need to add the <code>mat-app-background</code> class to your wrapper element (for example the <code>body</code>). This
+<p class="docs-markdown-p">Finally, if your app's content <strong>is not</strong> placed inside of a <code class="docs-markdown-code">md-sidenav-container</code> element, you
+need to add the <code class="docs-markdown-code">mat-app-background</code> class to your wrapper element (for example the <code class="docs-markdown-code">body</code>). This
 ensures that the proper theme background is applied to your page.</p>
 <h4 id="theming-overlay-based-components" class="docs-markdown-h4">Theming overlay-based components</h4>
-<p class="docs-markdown-p">Since certain components (e.g. <code>dialog</code>) are inside of a global overlay container, your theme may
+<p class="docs-markdown-p">Since certain components (e.g. <code class="docs-markdown-code">dialog</code>) are inside of a global overlay container, your theme may
 not be applied to them. In order to define the theme that will be used for overlay components, you
-have to specify it on the global <code>OverlayContainer</code> instance:</p>
-<pre><code class="lang-ts"><span class="hljs-keyword">import</span> {OverlayContainer} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+have to specify it on the global <code class="docs-markdown-code">OverlayContainer</code> instance:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {OverlayContainer} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   <span class="hljs-comment">// misc config goes here</span>
@@ -57,7 +57,7 @@ have to specify it on the global <code>OverlayContainer</code> instance:</p>
 <p class="docs-markdown-p">When you want more customization than a pre-built theme offers, you can create your own theme file.</p>
 <p class="docs-markdown-p">A theme file is a simple Sass file that defines your palettes and passes them to mixins that output
 the corresponding styles. A typical theme file will look something like this:</p>
-<pre><code class="lang-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
+<pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
 <span class="hljs-comment">// Plus imports for other components in your app.</span>
 
 <span class="hljs-comment">// Include the base styles for Angular Material core. We include this here so that you only</span>
@@ -83,18 +83,18 @@ the corresponding styles. A typical theme file will look something like this:</p
 </code></pre>
 <p class="docs-markdown-p">You only need this single Sass file; you do not need to use Sass to style the rest of your app.</p>
 <p class="docs-markdown-p">If you are using the Angular CLI, support for compiling Sass to css is built-in; you only have to
-add a new entry to the <code>"styles"</code> list in <code>angular-cli.json</code> pointing to the theme
-file (e.g., <code>unicorn-app-theme.scss</code>).</p>
+add a new entry to the <code class="docs-markdown-code">"styles"</code> list in <code class="docs-markdown-code">angular-cli.json</code> pointing to the theme
+file (e.g., <code class="docs-markdown-code">unicorn-app-theme.scss</code>).</p>
 <p class="docs-markdown-p">If you're not using the Angular CLI, you can use any existing Sass tooling to build the file (such
-as gulp-sass or grunt-sass). The simplest approach is to use the <code>node-sass</code> CLI; you simply run:</p>
-<pre><code>node-sass src/unicorn-app-theme.scss dist/unicorn-app-theme.css
+as gulp-sass or grunt-sass). The simplest approach is to use the <code class="docs-markdown-code">node-sass</code> CLI; you simply run:</p>
+<pre class="docs-markdown-pre"><code class="docs-markdown-code">node-sass src/unicorn-app-theme.scss dist/unicorn-app-theme.css
 </code></pre><p class="docs-markdown-p">and then include the output file in your application.</p>
 <p class="docs-markdown-p">The theme file can be concatenated and minified with the rest of the application's css.</p>
 <h4 id="multiple-themes" class="docs-markdown-h4">Multiple themes</h4>
 <p class="docs-markdown-p">You can extend the example above to define a second (or third or fourth) theme that is gated by
 some selector. For example, we could append the following to the example above to define a
 secondary dark theme:</p>
-<pre><code class="lang-scss"><span class="hljs-selector-class">.unicorn-dark-theme</span> {
+<pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-selector-class">.unicorn-dark-theme</span> {
   <span class="hljs-variable">$dark-primary</span>: mat-palette(<span class="hljs-variable">$mat-blue-grey</span>);
   <span class="hljs-variable">$dark-accent</span>:  mat-palette(<span class="hljs-variable">$mat-amber</span>, A200, A100, A400);
   <span class="hljs-variable">$dark-warn</span>:    mat-palette(<span class="hljs-variable">$mat-deep-orange</span>);
@@ -104,7 +104,7 @@ secondary dark theme:</p>
   @<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$dark-theme</span>);
 }
 </code></pre>
-<p class="docs-markdown-p">With this, any element inside of a parent with the <code>unicorn-dark-theme</code> class will use this
+<p class="docs-markdown-p">With this, any element inside of a parent with the <code class="docs-markdown-code">unicorn-dark-theme</code> class will use this
 dark theme.</p>
 <h3 id="theming-your-own-components" class="docs-markdown-h3">Theming your own components</h3>
 <p class="docs-markdown-p">For more details about theming your own components, see <a href="https://github.com/angular/material2/blob/master/guides/theming-your-components.md" class="docs-markdown-a">theming-your-components.md</a></p>
@@ -114,4 +114,4 @@ dark theme.</p>
 we will explore how to take advantage of them to make theming even simpler.</li>
 <li class="docs-markdown-li">More prebuilt themes will be added as development continues.</li>
 </ul>
-</body></html>
+</div></body></html>
