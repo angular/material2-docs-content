@@ -29,21 +29,32 @@ install the <code class="docs-markdown-code">@angular/animations</code> module a
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PizzaPartyAppModule { }
 </code></pre>
-<h2 id="step-3-import-the-module" class="docs-markdown-h2">Step 3: Import the Module</h2>
-<p class="docs-markdown-p">Add MaterialModule as an import in your app's root NgModule.</p>
-<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {MaterialModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<h2 id="step-3-import-the-component-modules" class="docs-markdown-h2">Step 3: Import the component modules</h2>
+<p class="docs-markdown-p">Import the NgModule for each component you want to use: </p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {MdButtonModule, MdCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   ...
-  imports: [MaterialModule],
+  imports: [MdButtonModule, MdCheckboxModule],
   ...
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PizzaPartyAppModule { }
 </code></pre>
-<h2 id="step-4-include-theming" class="docs-markdown-h2">Step 4: Include Theming</h2>
+<p class="docs-markdown-p">Alternatively, you can create a separate NgModule that imports all of the 
+Angular Material components that you will use in your application. You can then
+include this module wherever you'd like to use the components.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {MdButtonModule, MdCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [MdButtonModule, MdCheckboxModule],
+  exports: [MdButtonModule, MdCheckboxModule],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyOwnCustomMaterialModule { }
+</code></pre>
+<h2 id="step-4-include-a-theme" class="docs-markdown-h2">Step 4: Include a theme</h2>
 <p class="docs-markdown-p">Including a theme is <strong>required</strong> to apply all of the core and theme styles to your application.</p>
 <p class="docs-markdown-p">To get started with a prebuilt theme, include the following in your app's index.html:</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"node_modules/@angular/material/prebuilt-themes/indigo-pink.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
 </code></pre>
 <p class="docs-markdown-p">Note that your app's project structure may have a different relative location for your node_modules.</p>
 <p class="docs-markdown-p">For more information on theming and instructions on how to create a custom theme, see the
@@ -62,23 +73,22 @@ directly from your app.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> <span class="hljs-string">'hammerjs'</span>;
 </code></pre>
 <h2 id="step-6-optional-add-material-icons" class="docs-markdown-h2">Step 6 (Optional): Add Material Icons</h2>
-<p class="docs-markdown-p">If you want your <code class="docs-markdown-code">md-icon</code> components to use <a href="https://material.io/icons/" class="docs-markdown-a">Material Icons</a>,
-load the font in your <code class="docs-markdown-code">index.html</code>.</p>
+<p class="docs-markdown-p">If you want to use the <code class="docs-markdown-code">md-icon</code> component with the official 
+<a href="https://material.io/icons/" class="docs-markdown-a">Material Design Icons</a>, load the icon font in your <code class="docs-markdown-code">index.html</code>.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
 </code></pre>
 <p class="docs-markdown-p">For more information on using Material Icons, check out the
 <a href="https://google.github.io/material-design-icons/" class="docs-markdown-a">Material Icons Guide</a>.</p>
-<p class="docs-markdown-p">Note that <code class="docs-markdown-code">md-icon</code> has support for any font or svg icons, so using Material Icons is
-just one option.</p>
-<h2 id="configuring-systemjs" class="docs-markdown-h2">Configuring SystemJS</h2>
+<p class="docs-markdown-p">Note that <code class="docs-markdown-code">md-icon</code> supports any font or svg icons; using Material Icons is one of many options.</p>
+<h2 id="appendix-configuring-systemjs" class="docs-markdown-h2">Appendix: Configuring SystemJS</h2>
 <p class="docs-markdown-p">If your project is using SystemJS for module loading, you will need to add <code class="docs-markdown-code">@angular/material</code>
 to the SystemJS configuration:</p>
 <pre class="docs-markdown-pre"><code class="lang-js docs-markdown-code">System.config({
   <span class="hljs-comment">// existing configuration options</span>
   map: {
-    ...
+    <span class="hljs-comment">// ...</span>
     <span class="hljs-string">'@angular/material'</span>: <span class="hljs-string">'npm:@angular/material/bundles/material.umd.js'</span>,
-    ...
+    <span class="hljs-comment">// ...</span>
   }
 });
 </code></pre>
