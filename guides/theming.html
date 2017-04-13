@@ -135,9 +135,9 @@ the dark theme, while other components will fall back to the default <code class
 interaction (how to lazily load the CSS assets will vary based on your application).</p>
 <p class="docs-markdown-p">It's important to remember, however, that the <code class="docs-markdown-code">mat-core</code> mixin should only ever be included <em>once</em>.</p>
 <h5 id="multiple-themes-and-overlay-based-components" class="docs-markdown-h5">Multiple themes and overlay-based components</h5>
-<p class="docs-markdown-p">Since certain components (e.g. <code class="docs-markdown-code">dialog</code>) are inside of a global overlay container, the css class
-that determines the theme (such as the <code class="docs-markdown-code">.unicorn-dark-theme</code> example above), an additional step is
-needed to affect overlay-based components (menu, select, dialog, etc.).</p>
+<p class="docs-markdown-p">Since certain components (e.g. menu, select, dialog, etc.) are inside of a global overlay container,
+an additional step is required for those components to be affected by the theme's css class selector 
+(<code class="docs-markdown-code">.unicorn-dark-theme</code> in the example above).</p>
 <p class="docs-markdown-p">To do this, you can specify a <code class="docs-markdown-code">themeClass</code> on the global overlay container. For the example above,
 this would look like:</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {OverlayContainer} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
