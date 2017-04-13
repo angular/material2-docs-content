@@ -12,7 +12,7 @@
 <span class="hljs-keyword">let</span> snackBarRef = snackbar.openFromComponent(MessageArchivedComponent);
 </code></pre>
 <p class="docs-markdown-p">In either case, an <code class="docs-markdown-code">MdSnackBarRef</code> is returned. This can be used to dismiss the snack-bar or to 
-recieve notification of when the snack-bar is dismissed. For simple messages with an action, the 
+receive notification of when the snack-bar is dismissed. For simple messages with an action, the 
 <code class="docs-markdown-code">MdSnackBarRef</code> exposes an observable for when the action is triggered.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">snackBarRef.afterDismissed().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The snack-bar was dismissed'</span>);
