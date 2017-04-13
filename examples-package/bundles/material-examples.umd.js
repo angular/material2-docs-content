@@ -1244,3 +1244,4 @@ exports.ExampleModule = ExampleModule;
 Object.defineProperty(exports, '__esModule', { value: true });
 
 })));
+//# sourceMappingURL=material-examples.umd.js.map

@@ -1161,3 +1161,4 @@ class ExampleData {
 }
 
 export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule };
+//# sourceMappingURL=material-examples.js.map

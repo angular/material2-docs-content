@@ -1232,3 +1232,4 @@ var ExampleData = (function () {
     return ExampleData;
 }());
 export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule };
+//# sourceMappingURL=material-examples.es5.js.map
