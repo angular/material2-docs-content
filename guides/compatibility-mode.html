@@ -1,0 +1,14 @@
+<html><head></head><body><div class="docs-markdown"><h2 id="what-is-compatibility-mode-" class="docs-markdown-h2">What is compatibility mode?</h2>
+<p class="docs-markdown-p">Compatibility mode for <code class="docs-markdown-code">@angular/material</code> allows the components to exist side-by-side with AngularJS Material components without any CSS collisions.</p>
+<h2 id="what-does-compatibility-mode-do-" class="docs-markdown-h2">What does compatibility mode do?</h2>
+<p class="docs-markdown-p">When enabled, compatibility mode enforces that all template APIs use the prefix <code class="docs-markdown-code">mat-</code> instead of <code class="docs-markdown-code">md-</code>. This will prevent any CSS from AngularJS Material from affecting the components in <code class="docs-markdown-code">@angular/material</code>.</p>
+<h2 id="how-is-compatibility-mode-enabled-" class="docs-markdown-h2">How is compatibility mode enabled?</h2>
+<p class="docs-markdown-p">Import <code class="docs-markdown-code">NoConflictStyleCompatibilityMode</code> into your application's root <code class="docs-markdown-code">NgModule</code>.</p>
+<h2 id="example" class="docs-markdown-h2">Example</h2>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- Regular mode --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> <span class="hljs-attr">mdTooltip</span>=<span class="hljs-string">"With a tooltip"</span>&gt;</span>Regular button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- In compatibility mode --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matTooltip</span>=<span class="hljs-string">"With a compatibility mode tooltip"</span>&gt;</span>Compatibility Mode button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+</div></body></html>
