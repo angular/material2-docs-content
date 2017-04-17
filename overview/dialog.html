@@ -19,6 +19,25 @@ dialogRef.close(<span class="hljs-string">'Pizza!'</span>);
 <p class="docs-markdown-p">Components created via <code class="docs-markdown-code">MdDialog</code> can <em>inject</em> <code class="docs-markdown-code">MdDialogRef</code> and use it to close the dialog
 in which they are contained. When closing, an optional result value can be provided. This result
 value is forwarded as the result of the <code class="docs-markdown-code">afterClosed</code> promise. </p>
+<h3 id="sharing-data-with-the-dialog-component-" class="docs-markdown-h3">Sharing data with the Dialog component.</h3>
+<p class="docs-markdown-p">If you want to share data with your dialog, you can use the <code class="docs-markdown-code">data</code> option to pass information to the dialog component.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">let</span> dialogRef = dialog.open(YourDialog, {
+  data: <span class="hljs-string">'your data'</span>,
+});
+</code></pre>
+<p class="docs-markdown-p">To access the data in your dialog component, you have to use the MD_DIALOG_DATA injection token:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">import {Component, Inject} from '@angular/core';
+import {MD_DIALOG_DATA} from '@angular/material';
+
+@Component({
+  selector: 'your-dialog',
+  template: 'passed in {{ data }}',
+})
+
+export class YourDialog {
+  constructor(@Inject(MD_DIALOG_DATA) public data: any) { }
+}
+</code></pre>
 <h3 id="dialog-content" class="docs-markdown-h3">Dialog content</h3>
 <p class="docs-markdown-p">Several directives are available to make it easier to structure your dialog content:</p>
 <table class="docs-markdown-table">
