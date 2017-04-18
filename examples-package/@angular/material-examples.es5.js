@@ -6,7 +6,7 @@
 import { Component, NgModule, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MaterialModule, MdDialog, MdDialogRef, MdIconRegistry, MdSnackBar } from '@angular/material/index';
+import { MaterialModule, MdDialog, MdDialogRef, MdIconRegistry, MdSnackBar } from '@angular/material';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 import { DomSanitizer } from '@angular/platform-browser';

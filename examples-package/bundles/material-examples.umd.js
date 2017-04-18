@@ -4,10 +4,10 @@
   * License: MIT
   */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/material/index'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/platform-browser')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/material/index', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/platform-browser'], factory) :
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/platform-browser')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/platform-browser'], factory) :
 	(factory((global.ng = global.ng || {}, global.ng.material = global.ng.material || {}, global.ng.material['material-examples'] = global.ng.material['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.platformBrowser));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_material_index,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_platformBrowser) { 'use strict';
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_platformBrowser) { 'use strict';
 
 /**
   * @license Angular Material v2.0.0-beta.3
@@ -227,7 +227,7 @@ SnackBarComponentExample.decorators = [
  * @nocollapse
  */
 SnackBarComponentExample.ctorParameters = function () { return [
-    { type: _angular_material_index.MdSnackBar, },
+    { type: _angular_material.MdSnackBar, },
 ]; };
 var PizzaPartyComponent = (function () {
     function PizzaPartyComponent() {
@@ -290,7 +290,7 @@ DialogOverviewExample.decorators = [
  * @nocollapse
  */
 DialogOverviewExample.ctorParameters = function () { return [
-    { type: _angular_material_index.MdDialog, },
+    { type: _angular_material.MdDialog, },
 ]; };
 var DialogOverviewExampleDialog = (function () {
     function DialogOverviewExampleDialog() {
@@ -591,7 +591,7 @@ SnackBarOverviewExample.decorators = [
  * @nocollapse
  */
 SnackBarOverviewExample.ctorParameters = function () { return [
-    { type: _angular_material_index.MdSnackBar, },
+    { type: _angular_material.MdSnackBar, },
 ]; };
 var DialogResultExample = (function () {
     /**
@@ -622,7 +622,7 @@ DialogResultExample.decorators = [
  * @nocollapse
  */
 DialogResultExample.ctorParameters = function () { return [
-    { type: _angular_material_index.MdDialog, },
+    { type: _angular_material.MdDialog, },
 ]; };
 var DialogResultExampleDialog = (function () {
     /**
@@ -643,7 +643,7 @@ DialogResultExampleDialog.decorators = [
  * @nocollapse
  */
 DialogResultExampleDialog.ctorParameters = function () { return [
-    { type: _angular_material_index.MdDialogRef, },
+    { type: _angular_material.MdDialogRef, },
 ]; };
 var DialogElementsExample = (function () {
     /**
@@ -670,7 +670,7 @@ DialogElementsExample.decorators = [
  * @nocollapse
  */
 DialogElementsExample.ctorParameters = function () { return [
-    { type: _angular_material_index.MdDialog, },
+    { type: _angular_material.MdDialog, },
 ]; };
 var DialogElementsExampleDialog = (function () {
     function DialogElementsExampleDialog() {
@@ -855,7 +855,7 @@ IconSvgExample.decorators = [
  * @nocollapse
  */
 IconSvgExample.ctorParameters = function () { return [
-    { type: _angular_material_index.MdIconRegistry, },
+    { type: _angular_material.MdIconRegistry, },
     { type: _angular_platformBrowser.DomSanitizer, },
 ]; };
 var SidenavFabExample = (function () {
@@ -1180,7 +1180,7 @@ ExampleModule.decorators = [
                 declarations: EXAMPLE_LIST,
                 entryComponents: EXAMPLE_LIST,
                 imports: [
-                    _angular_material_index.MaterialModule,
+                    _angular_material.MaterialModule,
                     _angular_forms.FormsModule,
                     _angular_forms.ReactiveFormsModule,
                     _angular_common.CommonModule,
