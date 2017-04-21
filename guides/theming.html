@@ -45,8 +45,8 @@ ensures that the proper theme background is applied to your page.</p>
 <li class="docs-markdown-li">Imports the <code class="docs-markdown-code">mat-core()</code> sass mixin. This includes all common styles that are used by multiple
 components. <strong>This should only be included once in your application.</strong> If this mixin is included
 multiple times, your application will end up with multiple copies of these common styles.</li>
-<li class="docs-markdown-li">Defines a <strong>theme</strong> data structure as the composition of multiple palettes. This object can be 
-created with either the <code class="docs-markdown-code">mat-light-theme</code> function or the <code class="docs-markdown-code">mat-dark-theme</code> function. The output of 
+<li class="docs-markdown-li">Defines a <strong>theme</strong> data structure as the composition of multiple palettes. This object can be
+created with either the <code class="docs-markdown-code">mat-light-theme</code> function or the <code class="docs-markdown-code">mat-dark-theme</code> function. The output of
 this function is then passed to the  <code class="docs-markdown-code">angular-material-theme</code> mixin, which will output all of the
 corresponding styles for the theme.</li>
 </ol>
@@ -85,7 +85,7 @@ as gulp-sass or grunt-sass). The simplest approach is to use the <code class="do
 <pre class="docs-markdown-pre"><code class="docs-markdown-code">node-sass src/unicorn-app-theme.scss dist/unicorn-app-theme.css
 </code></pre><p class="docs-markdown-p">and then include the output file in your index.html.</p>
 <p class="docs-markdown-p">The theme file <strong>should not</strong> be imported into other SCSS files. This will cause duplicate styles
-to be written into your CSS output. If you want to consume the theme definition object 
+to be written into your CSS output. If you want to consume the theme definition object
 (e.g., <code class="docs-markdown-code">$candy-app-theme</code>) in other SCSS files, then the definition of the theme object should be
 broken into its own file, separate from the inclusion of the <code class="docs-markdown-code">mat-core</code> and
 <code class="docs-markdown-code">angular-material-theme</code> mixins.</p>
@@ -95,8 +95,8 @@ styles will be subject to that component's <a href="https://angular.io/docs/ts/l
 <h4 id="multiple-themes" class="docs-markdown-h4">Multiple themes</h4>
 <p class="docs-markdown-p">You can create multiple themes for your application by including the <code class="docs-markdown-code">angular-material-theme</code> mixin
 multiple times, where each inclusion is gated by an additional CSS class.</p>
-<p class="docs-markdown-p">Remember to only ever include the <code class="docs-markdown-code">@mat-core</code> mixin only once; it should not be included for each 
-theme. </p>
+<p class="docs-markdown-p">Remember to only ever include the <code class="docs-markdown-code">@mat-core</code> mixin only once; it should not be included for each
+theme.</p>
 <h5 id="example-of-defining-multiple-themes-" class="docs-markdown-h5">Example of defining multiple themes:</h5>
 <pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
 <span class="hljs-comment">// Plus imports for other components in your app.</span>
@@ -122,21 +122,21 @@ theme. </p>
 <span class="hljs-variable">$dark-theme</span>:   mat-dark-theme(<span class="hljs-variable">$dark-primary</span>, <span class="hljs-variable">$dark-accent</span>, <span class="hljs-variable">$dark-warn</span>);
 
 <span class="hljs-comment">// Include the alternative theme styles inside of a block with a CSS class. You can make this</span>
-<span class="hljs-comment">// CSS class whatever you want. In this example, any component inside of an element with </span>
-<span class="hljs-comment">// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme. </span>
+<span class="hljs-comment">// CSS class whatever you want. In this example, any component inside of an element with</span>
+<span class="hljs-comment">// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.</span>
 <span class="hljs-selector-class">.unicorn-dark-theme</span> {
   @<span class="hljs-keyword">include</span> angular-material-theme(<span class="hljs-variable">$dark-theme</span>);
 }
 </code></pre>
-<p class="docs-markdown-p">In the above example, any component inside of a parent with the <code class="docs-markdown-code">unicorn-dark-theme</code> class will use 
+<p class="docs-markdown-p">In the above example, any component inside of a parent with the <code class="docs-markdown-code">unicorn-dark-theme</code> class will use
 the dark theme, while other components will fall back to the default <code class="docs-markdown-code">$candy-app-theme</code>.</p>
-<p class="docs-markdown-p">You can include as many themes as you like in this manner. You can also <code class="docs-markdown-code">@include</code> the 
-<code class="docs-markdown-code">angular-material-theme</code> in separate files and then lazily load them based on an end-user 
+<p class="docs-markdown-p">You can include as many themes as you like in this manner. You can also <code class="docs-markdown-code">@include</code> the
+<code class="docs-markdown-code">angular-material-theme</code> in separate files and then lazily load them based on an end-user
 interaction (how to lazily load the CSS assets will vary based on your application).</p>
 <p class="docs-markdown-p">It's important to remember, however, that the <code class="docs-markdown-code">mat-core</code> mixin should only ever be included <em>once</em>.</p>
 <h5 id="multiple-themes-and-overlay-based-components" class="docs-markdown-h5">Multiple themes and overlay-based components</h5>
 <p class="docs-markdown-p">Since certain components (e.g. menu, select, dialog, etc.) are inside of a global overlay container,
-an additional step is required for those components to be affected by the theme's css class selector 
+an additional step is required for those components to be affected by the theme's css class selector
 (<code class="docs-markdown-code">.unicorn-dark-theme</code> in the example above).</p>
 <p class="docs-markdown-p">To do this, you can specify a <code class="docs-markdown-code">themeClass</code> on the global overlay container. For the example above,
 this would look like:</p>
@@ -173,12 +173,12 @@ the <code class="docs-markdown-code">mat-core-theme</code> mixin as well, which 
 <span class="hljs-variable">$candy-app-theme</span>:   mat-light-theme(<span class="hljs-variable">$candy-app-primary</span>, <span class="hljs-variable">$candy-app-accent</span>);
 
 <span class="hljs-comment">// Include the theme styles for only specified components.</span>
-@<span class="hljs-keyword">include</span> mat-core-theme(<span class="hljs-variable">$theme</span>);
-@<span class="hljs-keyword">include</span> mat-button-theme(<span class="hljs-variable">$theme</span>);
-@<span class="hljs-keyword">include</span> mat-checkbox-theme(<span class="hljs-variable">$theme</span>);
+@<span class="hljs-keyword">include</span> mat-core-theme(<span class="hljs-variable">$candy-app-theme</span>);
+@<span class="hljs-keyword">include</span> mat-button-theme(<span class="hljs-variable">$candy-app-theme</span>);
+@<span class="hljs-keyword">include</span> mat-checkbox-theme(<span class="hljs-variable">$candy-app-theme</span>);
 </code></pre>
 <h3 id="theming-your-own-components" class="docs-markdown-h3">Theming your own components</h3>
-<p class="docs-markdown-p">For more details about theming your own components, 
+<p class="docs-markdown-p">For more details about theming your own components,
 see <a href="guide/theming-your-components" class="docs-markdown-a">theming-your-components.md</a></p>
 <h3 id="future-work" class="docs-markdown-h3">Future work</h3>
 <ul class="docs-markdown-ul">
