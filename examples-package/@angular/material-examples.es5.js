@@ -10,7 +10,7 @@ import { MaterialModule, MdDialog, MdDialogRef, MdIconRegistry, MdSnackBar } fro
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 import { DomSanitizer } from '@angular/platform-browser';
-var AutocompleteOverviewExample = (function () {
+var AutocompleteOverviewExample = /*@__PURE__*/(function () {
     function AutocompleteOverviewExample() {
         var _this = this;
         this.states = [
@@ -90,7 +90,7 @@ AutocompleteOverviewExample.decorators = [
  * @nocollapse
  */
 AutocompleteOverviewExample.ctorParameters = function () { return []; };
-var ButtonOverviewExample = (function () {
+var ButtonOverviewExample = /*@__PURE__*/(function () {
     function ButtonOverviewExample() {
     }
     return ButtonOverviewExample;
@@ -105,7 +105,7 @@ ButtonOverviewExample.decorators = [
  * @nocollapse
  */
 ButtonOverviewExample.ctorParameters = function () { return []; };
-var ButtonTypesExample = (function () {
+var ButtonTypesExample = /*@__PURE__*/(function () {
     function ButtonTypesExample() {
     }
     return ButtonTypesExample;
@@ -121,7 +121,7 @@ ButtonTypesExample.decorators = [
  * @nocollapse
  */
 ButtonTypesExample.ctorParameters = function () { return []; };
-var CheckboxOverviewExample = (function () {
+var CheckboxOverviewExample = /*@__PURE__*/(function () {
     function CheckboxOverviewExample() {
     }
     return CheckboxOverviewExample;
@@ -136,7 +136,7 @@ CheckboxOverviewExample.decorators = [
  * @nocollapse
  */
 CheckboxOverviewExample.ctorParameters = function () { return []; };
-var SliderConfigurableExample = (function () {
+var SliderConfigurableExample = /*@__PURE__*/(function () {
     function SliderConfigurableExample() {
         this.autoTicks = false;
         this.disabled = false;
@@ -181,7 +181,7 @@ SliderConfigurableExample.decorators = [
  * @nocollapse
  */
 SliderConfigurableExample.ctorParameters = function () { return []; };
-var TabsOverviewExample = (function () {
+var TabsOverviewExample = /*@__PURE__*/(function () {
     function TabsOverviewExample() {
     }
     return TabsOverviewExample;
@@ -196,7 +196,7 @@ TabsOverviewExample.decorators = [
  * @nocollapse
  */
 TabsOverviewExample.ctorParameters = function () { return []; };
-var SnackBarComponentExample = (function () {
+var SnackBarComponentExample = /*@__PURE__*/(function () {
     /**
      * @param {?} snackBar
      */
@@ -225,7 +225,7 @@ SnackBarComponentExample.decorators = [
 SnackBarComponentExample.ctorParameters = function () { return [
     { type: MdSnackBar, },
 ]; };
-var PizzaPartyComponent = (function () {
+var PizzaPartyComponent = /*@__PURE__*/(function () {
     function PizzaPartyComponent() {
     }
     return PizzaPartyComponent;
@@ -241,7 +241,7 @@ PizzaPartyComponent.decorators = [
  * @nocollapse
  */
 PizzaPartyComponent.ctorParameters = function () { return []; };
-var ProgressBarConfigurableExample = (function () {
+var ProgressBarConfigurableExample = /*@__PURE__*/(function () {
     function ProgressBarConfigurableExample() {
         this.color = 'primary';
         this.mode = 'determinate';
@@ -261,7 +261,7 @@ ProgressBarConfigurableExample.decorators = [
  * @nocollapse
  */
 ProgressBarConfigurableExample.ctorParameters = function () { return []; };
-var DialogOverviewExample = (function () {
+var DialogOverviewExample = /*@__PURE__*/(function () {
     /**
      * @param {?} dialog
      */
@@ -288,7 +288,7 @@ DialogOverviewExample.decorators = [
 DialogOverviewExample.ctorParameters = function () { return [
     { type: MdDialog, },
 ]; };
-var DialogOverviewExampleDialog = (function () {
+var DialogOverviewExampleDialog = /*@__PURE__*/(function () {
     function DialogOverviewExampleDialog() {
     }
     return DialogOverviewExampleDialog;
@@ -303,7 +303,7 @@ DialogOverviewExampleDialog.decorators = [
  * @nocollapse
  */
 DialogOverviewExampleDialog.ctorParameters = function () { return []; };
-var RadioNgModelExample = (function () {
+var RadioNgModelExample = /*@__PURE__*/(function () {
     function RadioNgModelExample() {
         this.seasons = [
             'Winter',
@@ -325,7 +325,7 @@ RadioNgModelExample.decorators = [
  * @nocollapse
  */
 RadioNgModelExample.ctorParameters = function () { return []; };
-var CardFancyExample = (function () {
+var CardFancyExample = /*@__PURE__*/(function () {
     function CardFancyExample() {
     }
     return CardFancyExample;
@@ -341,7 +341,7 @@ CardFancyExample.decorators = [
  * @nocollapse
  */
 CardFancyExample.ctorParameters = function () { return []; };
-var ToolbarOverviewExample = (function () {
+var ToolbarOverviewExample = /*@__PURE__*/(function () {
     function ToolbarOverviewExample() {
     }
     return ToolbarOverviewExample;
@@ -356,7 +356,7 @@ ToolbarOverviewExample.decorators = [
  * @nocollapse
  */
 ToolbarOverviewExample.ctorParameters = function () { return []; };
-var ToolbarMultirowExample = (function () {
+var ToolbarMultirowExample = /*@__PURE__*/(function () {
     function ToolbarMultirowExample() {
     }
     return ToolbarMultirowExample;
@@ -372,7 +372,7 @@ ToolbarMultirowExample.decorators = [
  * @nocollapse
  */
 ToolbarMultirowExample.ctorParameters = function () { return []; };
-var MenuIconsExample = (function () {
+var MenuIconsExample = /*@__PURE__*/(function () {
     function MenuIconsExample() {
     }
     return MenuIconsExample;
@@ -387,7 +387,7 @@ MenuIconsExample.decorators = [
  * @nocollapse
  */
 MenuIconsExample.ctorParameters = function () { return []; };
-var GridListDynamicExample = (function () {
+var GridListDynamicExample = /*@__PURE__*/(function () {
     function GridListDynamicExample() {
         this.tiles = [
             { text: 'One', cols: 3, rows: 1, color: 'lightblue' },
@@ -408,7 +408,7 @@ GridListDynamicExample.decorators = [
  * @nocollapse
  */
 GridListDynamicExample.ctorParameters = function () { return []; };
-var IconOverviewExample = (function () {
+var IconOverviewExample = /*@__PURE__*/(function () {
     function IconOverviewExample() {
     }
     return IconOverviewExample;
@@ -423,7 +423,7 @@ IconOverviewExample.decorators = [
  * @nocollapse
  */
 IconOverviewExample.ctorParameters = function () { return []; };
-var ProgressBarOverviewExample = (function () {
+var ProgressBarOverviewExample = /*@__PURE__*/(function () {
     function ProgressBarOverviewExample() {
     }
     return ProgressBarOverviewExample;
@@ -438,7 +438,7 @@ ProgressBarOverviewExample.decorators = [
  * @nocollapse
  */
 ProgressBarOverviewExample.ctorParameters = function () { return []; };
-var SlideToggleOverviewExample = (function () {
+var SlideToggleOverviewExample = /*@__PURE__*/(function () {
     function SlideToggleOverviewExample() {
     }
     return SlideToggleOverviewExample;
@@ -453,7 +453,7 @@ SlideToggleOverviewExample.decorators = [
  * @nocollapse
  */
 SlideToggleOverviewExample.ctorParameters = function () { return []; };
-var InputOverviewExample = (function () {
+var InputOverviewExample = /*@__PURE__*/(function () {
     function InputOverviewExample() {
     }
     return InputOverviewExample;
@@ -468,7 +468,7 @@ InputOverviewExample.decorators = [
  * @nocollapse
  */
 InputOverviewExample.ctorParameters = function () { return []; };
-var MenuOverviewExample = (function () {
+var MenuOverviewExample = /*@__PURE__*/(function () {
     function MenuOverviewExample() {
     }
     return MenuOverviewExample;
@@ -483,7 +483,7 @@ MenuOverviewExample.decorators = [
  * @nocollapse
  */
 MenuOverviewExample.ctorParameters = function () { return []; };
-var CheckboxConfigurableExample = (function () {
+var CheckboxConfigurableExample = /*@__PURE__*/(function () {
     function CheckboxConfigurableExample() {
         this.checked = false;
         this.indeterminate = false;
@@ -503,7 +503,7 @@ CheckboxConfigurableExample.decorators = [
  * @nocollapse
  */
 CheckboxConfigurableExample.ctorParameters = function () { return []; };
-var ButtonToggleExclusiveExample = (function () {
+var ButtonToggleExclusiveExample = /*@__PURE__*/(function () {
     function ButtonToggleExclusiveExample() {
     }
     return ButtonToggleExclusiveExample;
@@ -519,7 +519,7 @@ ButtonToggleExclusiveExample.decorators = [
  * @nocollapse
  */
 ButtonToggleExclusiveExample.ctorParameters = function () { return []; };
-var ListSectionsExample = (function () {
+var ListSectionsExample = /*@__PURE__*/(function () {
     function ListSectionsExample() {
         this.folders = [
             {
@@ -558,7 +558,7 @@ ListSectionsExample.decorators = [
  * @nocollapse
  */
 ListSectionsExample.ctorParameters = function () { return []; };
-var SnackBarOverviewExample = (function () {
+var SnackBarOverviewExample = /*@__PURE__*/(function () {
     /**
      * @param {?} snackBar
      */
@@ -589,7 +589,7 @@ SnackBarOverviewExample.decorators = [
 SnackBarOverviewExample.ctorParameters = function () { return [
     { type: MdSnackBar, },
 ]; };
-var DialogResultExample = (function () {
+var DialogResultExample = /*@__PURE__*/(function () {
     /**
      * @param {?} dialog
      */
@@ -620,7 +620,7 @@ DialogResultExample.decorators = [
 DialogResultExample.ctorParameters = function () { return [
     { type: MdDialog, },
 ]; };
-var DialogResultExampleDialog = (function () {
+var DialogResultExampleDialog = /*@__PURE__*/(function () {
     /**
      * @param {?} dialogRef
      */
@@ -641,7 +641,7 @@ DialogResultExampleDialog.decorators = [
 DialogResultExampleDialog.ctorParameters = function () { return [
     { type: MdDialogRef, },
 ]; };
-var DialogElementsExample = (function () {
+var DialogElementsExample = /*@__PURE__*/(function () {
     /**
      * @param {?} dialog
      */
@@ -668,7 +668,7 @@ DialogElementsExample.decorators = [
 DialogElementsExample.ctorParameters = function () { return [
     { type: MdDialog, },
 ]; };
-var DialogElementsExampleDialog = (function () {
+var DialogElementsExampleDialog = /*@__PURE__*/(function () {
     function DialogElementsExampleDialog() {
     }
     return DialogElementsExampleDialog;
@@ -683,7 +683,7 @@ DialogElementsExampleDialog.decorators = [
  * @nocollapse
  */
 DialogElementsExampleDialog.ctorParameters = function () { return []; };
-var TooltipOverviewExample = (function () {
+var TooltipOverviewExample = /*@__PURE__*/(function () {
     function TooltipOverviewExample() {
     }
     return TooltipOverviewExample;
@@ -698,7 +698,7 @@ TooltipOverviewExample.decorators = [
  * @nocollapse
  */
 TooltipOverviewExample.ctorParameters = function () { return []; };
-var ButtonToggleOverviewExample = (function () {
+var ButtonToggleOverviewExample = /*@__PURE__*/(function () {
     function ButtonToggleOverviewExample() {
     }
     return ButtonToggleOverviewExample;
@@ -713,7 +713,7 @@ ButtonToggleOverviewExample.decorators = [
  * @nocollapse
  */
 ButtonToggleOverviewExample.ctorParameters = function () { return []; };
-var GridListOverviewExample = (function () {
+var GridListOverviewExample = /*@__PURE__*/(function () {
     function GridListOverviewExample() {
     }
     return GridListOverviewExample;
@@ -729,7 +729,7 @@ GridListOverviewExample.decorators = [
  * @nocollapse
  */
 GridListOverviewExample.ctorParameters = function () { return []; };
-var TooltipPositionExample = (function () {
+var TooltipPositionExample = /*@__PURE__*/(function () {
     function TooltipPositionExample() {
         this.position = 'before';
     }
@@ -746,7 +746,7 @@ TooltipPositionExample.decorators = [
  * @nocollapse
  */
 TooltipPositionExample.ctorParameters = function () { return []; };
-var ProgressSpinnerConfigurableExample = (function () {
+var ProgressSpinnerConfigurableExample = /*@__PURE__*/(function () {
     function ProgressSpinnerConfigurableExample() {
         this.color = 'primary';
         this.mode = 'determinate';
@@ -765,7 +765,7 @@ ProgressSpinnerConfigurableExample.decorators = [
  * @nocollapse
  */
 ProgressSpinnerConfigurableExample.ctorParameters = function () { return []; };
-var InputFormExample = (function () {
+var InputFormExample = /*@__PURE__*/(function () {
     function InputFormExample() {
     }
     return InputFormExample;
@@ -781,7 +781,7 @@ InputFormExample.decorators = [
  * @nocollapse
  */
 InputFormExample.ctorParameters = function () { return []; };
-var ListOverviewExample = (function () {
+var ListOverviewExample = /*@__PURE__*/(function () {
     function ListOverviewExample() {
     }
     return ListOverviewExample;
@@ -796,7 +796,7 @@ ListOverviewExample.decorators = [
  * @nocollapse
  */
 ListOverviewExample.ctorParameters = function () { return []; };
-var SliderOverviewExample = (function () {
+var SliderOverviewExample = /*@__PURE__*/(function () {
     function SliderOverviewExample() {
     }
     return SliderOverviewExample;
@@ -812,7 +812,7 @@ SliderOverviewExample.decorators = [
  * @nocollapse
  */
 SliderOverviewExample.ctorParameters = function () { return []; };
-var SlideToggleConfigurableExample = (function () {
+var SlideToggleConfigurableExample = /*@__PURE__*/(function () {
     function SlideToggleConfigurableExample() {
         this.color = 'accent';
         this.checked = false;
@@ -831,7 +831,7 @@ SlideToggleConfigurableExample.decorators = [
  * @nocollapse
  */
 SlideToggleConfigurableExample.ctorParameters = function () { return []; };
-var IconSvgExample = (function () {
+var IconSvgExample = /*@__PURE__*/(function () {
     /**
      * @param {?} iconRegistry
      * @param {?} sanitizer
@@ -854,7 +854,7 @@ IconSvgExample.ctorParameters = function () { return [
     { type: MdIconRegistry, },
     { type: DomSanitizer, },
 ]; };
-var SidenavFabExample = (function () {
+var SidenavFabExample = /*@__PURE__*/(function () {
     function SidenavFabExample() {
     }
     return SidenavFabExample;
@@ -871,7 +871,7 @@ SidenavFabExample.decorators = [
  * @nocollapse
  */
 SidenavFabExample.ctorParameters = function () { return []; };
-var CardOverviewExample = (function () {
+var CardOverviewExample = /*@__PURE__*/(function () {
     function CardOverviewExample() {
     }
     return CardOverviewExample;
@@ -886,7 +886,7 @@ CardOverviewExample.decorators = [
  * @nocollapse
  */
 CardOverviewExample.ctorParameters = function () { return []; };
-var ProgressSpinnerOverviewExample = (function () {
+var ProgressSpinnerOverviewExample = /*@__PURE__*/(function () {
     function ProgressSpinnerOverviewExample() {
     }
     return ProgressSpinnerOverviewExample;
@@ -901,7 +901,7 @@ ProgressSpinnerOverviewExample.decorators = [
  * @nocollapse
  */
 ProgressSpinnerOverviewExample.ctorParameters = function () { return []; };
-var TabsTemplateLabelExample = (function () {
+var TabsTemplateLabelExample = /*@__PURE__*/(function () {
     function TabsTemplateLabelExample() {
     }
     return TabsTemplateLabelExample;
@@ -916,7 +916,7 @@ TabsTemplateLabelExample.decorators = [
  * @nocollapse
  */
 TabsTemplateLabelExample.ctorParameters = function () { return []; };
-var RadioOverviewExample = (function () {
+var RadioOverviewExample = /*@__PURE__*/(function () {
     function RadioOverviewExample() {
     }
     return RadioOverviewExample;
@@ -931,7 +931,7 @@ RadioOverviewExample.decorators = [
  * @nocollapse
  */
 RadioOverviewExample.ctorParameters = function () { return []; };
-var SidenavOverviewExample = (function () {
+var SidenavOverviewExample = /*@__PURE__*/(function () {
     function SidenavOverviewExample() {
     }
     return SidenavOverviewExample;
@@ -947,7 +947,7 @@ SidenavOverviewExample.decorators = [
  * @nocollapse
  */
 SidenavOverviewExample.ctorParameters = function () { return []; };
-var SelectOverviewExample = (function () {
+var SelectOverviewExample = /*@__PURE__*/(function () {
     function SelectOverviewExample() {
         this.foods = [
             { value: 'steak-0', viewValue: 'Steak' },
@@ -967,7 +967,7 @@ SelectOverviewExample.decorators = [
  * @nocollapse
  */
 SelectOverviewExample.ctorParameters = function () { return []; };
-var ChipsOverviewExample = (function () {
+var ChipsOverviewExample = /*@__PURE__*/(function () {
     function ChipsOverviewExample() {
     }
     return ChipsOverviewExample;
@@ -982,7 +982,7 @@ ChipsOverviewExample.decorators = [
  * @nocollapse
  */
 ChipsOverviewExample.ctorParameters = function () { return []; };
-var ChipsStackedExample = (function () {
+var ChipsStackedExample = /*@__PURE__*/(function () {
     function ChipsStackedExample() {
         this.availableColors = [
             { name: 'none', color: '' },
@@ -1004,7 +1004,7 @@ ChipsStackedExample.decorators = [
  * @nocollapse
  */
 ChipsStackedExample.ctorParameters = function () { return []; };
-var SelectFormExample = (function () {
+var SelectFormExample = /*@__PURE__*/(function () {
     function SelectFormExample() {
         this.foods = [
             { value: 'steak-0', viewValue: 'Steak' },
@@ -1166,7 +1166,7 @@ var EXAMPLE_LIST = [
     TooltipOverviewExample,
     TooltipPositionExample,
 ];
-var ExampleModule = (function () {
+var ExampleModule = /*@__PURE__*/(function () {
     function ExampleModule() {
     }
     return ExampleModule;
@@ -1191,7 +1191,7 @@ ExampleModule.ctorParameters = function () { return []; };
  * Example data
  *   with information about Component name, selector, files used in example, and path to examples
  */
-var ExampleData = (function () {
+var ExampleData = /*@__PURE__*/(function () {
     /**
      * @param {?} example
      */
