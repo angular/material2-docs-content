@@ -51,6 +51,8 @@ include this module wherever you'd like to use the components.</p>
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyOwnCustomMaterialModule { }
 </code></pre>
+<p class="docs-markdown-p">Whichever approach you use, be sure to import the Angular Material modules <em>after</em> Angular's 
+<code class="docs-markdown-code">BrowserModule</code>, as the import order matters for NgModules.</p>
 <h2 id="step-4-include-a-theme" class="docs-markdown-h2">Step 4: Include a theme</h2>
 <p class="docs-markdown-p">Including a theme is <strong>required</strong> to apply all of the core and theme styles to your application.</p>
 <p class="docs-markdown-p">To get started with a prebuilt theme, include the following in your app's index.html:</p>
