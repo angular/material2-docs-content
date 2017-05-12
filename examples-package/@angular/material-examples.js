@@ -955,6 +955,20 @@ SelectFormExample.decorators = [
  */
 SelectFormExample.ctorParameters = () => [];
 
+class DatepickerOverviewExample {
+}
+DatepickerOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-overview-example',
+                template: "<md-input-container> <input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button> </md-input-container> <md-datepicker #picker></md-datepicker> ",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerOverviewExample.ctorParameters = () => [];
+
 /**
  * The list of example components.
  * Key is the example name which will be used in `material-docs-example="key"`.
@@ -975,6 +989,7 @@ const EXAMPLE_COMPONENTS = {
     'card-overview': { title: 'Basic cards', component: CardOverviewExample },
     'checkbox-configurable': { title: 'Configurable checkbox', component: CheckboxConfigurableExample },
     'checkbox-overview': { title: 'Basic checkboxes', component: CheckboxOverviewExample },
+    'datepicker-overview': { title: 'Basic datepicker', component: DatepickerOverviewExample },
     'dialog-overview': {
         title: 'Basic dialog',
         component: DialogOverviewExample,
@@ -1057,6 +1072,7 @@ const EXAMPLE_LIST = [
     ChipsStackedExample,
     CheckboxConfigurableExample,
     CheckboxOverviewExample,
+    DatepickerOverviewExample,
     DialogOverviewExample,
     DialogOverviewExampleDialog,
     DialogResultExample,
@@ -1164,5 +1180,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DialogElementsExample as ɵp, DialogElementsExampleDialog as ɵq, DialogOverviewExample as ɵl, DialogOverviewExampleDialog as ɵm, DialogResultExample as ɵn, DialogResultExampleDialog as ɵo, GridListDynamicExample as ɵr, GridListOverviewExample as ɵs, IconOverviewExample as ɵt, IconSvgExample as ɵu, InputFormExample as ɵv, InputOverviewExample as ɵw, ListOverviewExample as ɵx, ListSectionsExample as ɵy, MenuIconsExample as ɵz, MenuOverviewExample as ɵba, ProgressBarConfigurableExample as ɵbb, ProgressBarOverviewExample as ɵbc, ProgressSpinnerConfigurableExample as ɵbd, ProgressSpinnerOverviewExample as ɵbe, RadioNgModelExample as ɵbf, RadioOverviewExample as ɵbg, SelectFormExample as ɵbi, SelectOverviewExample as ɵbh, SidenavFabExample as ɵbj, SidenavOverviewExample as ɵbk, SlideToggleConfigurableExample as ɵbn, SlideToggleOverviewExample as ɵbo, SliderConfigurableExample as ɵbl, SliderOverviewExample as ɵbm, PizzaPartyComponent as ɵbq, SnackBarComponentExample as ɵbp, SnackBarOverviewExample as ɵbr, TabsOverviewExample as ɵbs, TabsTemplateLabelExample as ɵbt, ToolbarMultirowExample as ɵbu, ToolbarOverviewExample as ɵbv, TooltipOverviewExample as ɵbw, TooltipPositionExample as ɵbx };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerOverviewExample as ɵl, DialogElementsExample as ɵq, DialogElementsExampleDialog as ɵr, DialogOverviewExample as ɵm, DialogOverviewExampleDialog as ɵn, DialogResultExample as ɵo, DialogResultExampleDialog as ɵp, GridListDynamicExample as ɵs, GridListOverviewExample as ɵt, IconOverviewExample as ɵu, IconSvgExample as ɵv, InputFormExample as ɵw, InputOverviewExample as ɵx, ListOverviewExample as ɵy, ListSectionsExample as ɵz, MenuIconsExample as ɵba, MenuOverviewExample as ɵbb, ProgressBarConfigurableExample as ɵbc, ProgressBarOverviewExample as ɵbd, ProgressSpinnerConfigurableExample as ɵbe, ProgressSpinnerOverviewExample as ɵbf, RadioNgModelExample as ɵbg, RadioOverviewExample as ɵbh, SelectFormExample as ɵbj, SelectOverviewExample as ɵbi, SidenavFabExample as ɵbk, SidenavOverviewExample as ɵbl, SlideToggleConfigurableExample as ɵbo, SlideToggleOverviewExample as ɵbp, SliderConfigurableExample as ɵbm, SliderOverviewExample as ɵbn, PizzaPartyComponent as ɵbr, SnackBarComponentExample as ɵbq, SnackBarOverviewExample as ɵbs, TabsOverviewExample as ɵbt, TabsTemplateLabelExample as ɵbu, ToolbarMultirowExample as ɵbv, ToolbarOverviewExample as ɵbw, TooltipOverviewExample as ɵbx, TooltipPositionExample as ɵby };
 //# sourceMappingURL=material-examples.js.map

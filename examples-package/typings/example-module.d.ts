@@ -44,6 +44,7 @@ import { SelectOverviewExample } from './select-overview/select-overview-example
 import { ChipsOverviewExample } from './chips-overview/chips-overview-example';
 import { ChipsStackedExample } from './chips-stacked/chips-stacked-example';
 import { SelectFormExample } from './select-form/select-form-example';
+import { DatepickerOverviewExample } from './datepicker-overview/datepicker-overview-example';
 export interface LiveExample {
     title: string;
     component: any;
@@ -99,6 +100,10 @@ export declare const EXAMPLE_COMPONENTS: {
     'checkbox-overview': {
         title: string;
         component: typeof CheckboxOverviewExample;
+    };
+    'datepicker-overview': {
+        title: string;
+        component: typeof DatepickerOverviewExample;
     };
     'dialog-overview': {
         title: string;
