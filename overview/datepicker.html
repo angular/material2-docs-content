@@ -38,7 +38,7 @@ then proceed to month view after choosing a month.</p>
 currently selected, if so it will open to the month or year containing that date. Otherwise it will
 open to the month or year containing today's date. This behavior can be overridden by using the
 <code class="docs-markdown-code">startAt</code> property of <code class="docs-markdown-code">md-datepicker</code>. In this case the calendar will open to the month or year
-containing the <code class="docs-markdown-code">startAt</code> date. </p>
+containing the <code class="docs-markdown-code">startAt</code> date.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">startDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1990</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
 </code></pre>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code">...
@@ -59,7 +59,7 @@ not. Again this will also disable the dates on the calendar that are invalid. Ho
 difference between using <code class="docs-markdown-code">mdDatepickerFilter</code> vs using <code class="docs-markdown-code">min</code> or <code class="docs-markdown-code">max</code> is that filtering out all
 dates before or after a certain point, will not prevent the user from advancing the calendar past
 that point.</p>
-<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">myFilter = <span class="hljs-function">(<span class="hljs-params">d: <span class="hljs-built_in">Date</span></span>) =&gt;</span> d.getFullYear() &gt; <span class="hljs-number">2005</span> 
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">myFilter = <span class="hljs-function">(<span class="hljs-params">d: <span class="hljs-built_in">Date</span></span>) =&gt;</span> d.getFullYear() &gt; <span class="hljs-number">2005</span>
 minDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2000</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
 maxDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2020</span>, <span class="hljs-number">11</span>, <span class="hljs-number">31</span>);
 </code></pre>
