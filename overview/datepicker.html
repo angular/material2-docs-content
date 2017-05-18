@@ -92,7 +92,15 @@ friendly UI where the calendar opens in a large dialog.</p>
   }
 }
 </code></pre>
-<h3 id="choosing-a-date-implementation-and-date-format-settings" class="docs-markdown-h3">Choosing a date implementation and date format settings</h3>
+<h3 id="internationalization" class="docs-markdown-h3">Internationalization</h3>
+<p class="docs-markdown-p">In order to support internationalization, the datepicker supports customization of the following
+three pieces via injection:</p>
+<ol class="docs-markdown-ol">
+<li class="docs-markdown-li">The date implementation that the datepicker accepts.</li>
+<li class="docs-markdown-li">The display and parse formats used by the datepicker.</li>
+<li class="docs-markdown-li">The message strings used in the datepicker's UI.</li>
+</ol>
+<h4 id="choosing-a-date-implementation-and-date-format-settings" class="docs-markdown-h4">Choosing a date implementation and date format settings</h4>
 <p class="docs-markdown-p">The datepicker was built to be date implementation agnostic. This means that it can be made to work
 with a variety of different date implementations. However it also means that developers need to make
 sure to provide the appropriate pieces for the datepicker to work with their chosen implementation.
@@ -117,6 +125,10 @@ example:</p>
   <span class="hljs-meta">@ViewChild</span>(MdDatepicker) datepicker: MdDatepicker&lt;<span class="hljs-built_in">Date</span>&gt;;
 }
 </code></pre>
+<p class="docs-markdown-p"><em>Please note: <code class="docs-markdown-code">MdNativeDateModule</code> is based off of the functionality available in JavaScript's
+native <code class="docs-markdown-code">Date</code> object, and is thus not suitable for many locales. One of the biggest shortcomings of
+the native <code class="docs-markdown-code">Date</code> object is the inability to set the parse format. We highly recommend using a
+custom <code class="docs-markdown-code">DateAdapter</code> that works with the formatting/parsing library of your choice.</em></p>
 <h4 id="customizing-the-date-implementation" class="docs-markdown-h4">Customizing the date implementation</h4>
 <p class="docs-markdown-p">The datepicker does all of its interaction with date objects via the <code class="docs-markdown-code">DateAdapter</code>. Making the
 datepicker work with a different date implementation is as easy as extending <code class="docs-markdown-code">DateAdapter</code>, and
@@ -146,7 +158,7 @@ formats.</p>
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}
 </code></pre>
-<h3 id="localizing-labels-and-messages" class="docs-markdown-h3">Localizing labels and messages</h3>
+<h4 id="localizing-labels-and-messages" class="docs-markdown-h4">Localizing labels and messages</h4>
 <p class="docs-markdown-p">The various text strings used by the datepicker are provided through <code class="docs-markdown-code">MdDatepickerIntl</code>.
 Localization of these messages can be done by providing a subclass with translated values in your
 application root module.</p>
