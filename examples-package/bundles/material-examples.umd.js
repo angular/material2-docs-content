@@ -4,10 +4,10 @@
   * License: MIT
   */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/platform-browser')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/platform-browser'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.platformBrowser));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_platformBrowser) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/material'), require('@angular/platform-browser')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/material', '@angular/platform-browser'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.material,global.ng.platformBrowser));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_material,_angular_platformBrowser) { 'use strict';
 
 /**
   * @license Angular Material v2.0.0-beta.5
@@ -1133,6 +1133,47 @@ var EXAMPLE_COMPONENTS = {
     'tooltip-position': { title: 'Tooltip with custom position', component: TooltipPositionExample },
 };
 /**
+ * NgModule that includes all Material modules that are required to serve the examples.
+ */
+var ExampleMaterialModule = (function () {
+    function ExampleMaterialModule() {
+    }
+    return ExampleMaterialModule;
+}());
+ExampleMaterialModule.decorators = [
+    { type: _angular_core.NgModule, args: [{
+                exports: [
+                    _angular_material.MdAutocompleteModule,
+                    _angular_material.MdButtonModule,
+                    _angular_material.MdButtonToggleModule,
+                    _angular_material.MdCardModule,
+                    _angular_material.MdCheckboxModule,
+                    _angular_material.MdChipsModule,
+                    _angular_material.MdDatepickerModule,
+                    _angular_material.MdDialogModule,
+                    _angular_material.MdGridListModule,
+                    _angular_material.MdIconModule,
+                    _angular_material.MdInputModule,
+                    _angular_material.MdListModule,
+                    _angular_material.MdMenuModule,
+                    _angular_material.MdProgressBarModule,
+                    _angular_material.MdProgressSpinnerModule,
+                    _angular_material.MdRadioModule,
+                    _angular_material.MdSelectModule,
+                    _angular_material.MdSlideToggleModule,
+                    _angular_material.MdSliderModule,
+                    _angular_material.MdSnackBarModule,
+                    _angular_material.MdTabsModule,
+                    _angular_material.MdToolbarModule,
+                    _angular_material.MdTooltipModule
+                ]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ExampleMaterialModule.ctorParameters = function () { return []; };
+/**
  * The list of all example components.
  * We need to put them in both `declarations` and `entryComponents` to make them work.
  */
@@ -1199,7 +1240,7 @@ ExampleModule.decorators = [
                 declarations: EXAMPLE_LIST,
                 entryComponents: EXAMPLE_LIST,
                 imports: [
-                    _angular_material.MaterialModule,
+                    ExampleMaterialModule,
                     _angular_forms.FormsModule,
                     _angular_forms.ReactiveFormsModule,
                     _angular_common.CommonModule,
@@ -1257,6 +1298,7 @@ var ExampleData = (function () {
 
 exports.ExampleData = ExampleData;
 exports.EXAMPLE_COMPONENTS = EXAMPLE_COMPONENTS;
+exports.ExampleMaterialModule = ExampleMaterialModule;
 exports.EXAMPLE_LIST = EXAMPLE_LIST;
 exports.ExampleModule = ExampleModule;
 exports.ɵa = AutocompleteOverviewExample;

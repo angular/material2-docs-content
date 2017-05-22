@@ -253,6 +253,11 @@ export declare const EXAMPLE_COMPONENTS: {
     };
 };
 /**
+ * NgModule that includes all Material modules that are required to serve the examples.
+ */
+export declare class ExampleMaterialModule {
+}
+/**
  * The list of all example components.
  * We need to put them in both `declarations` and `entryComponents` to make them work.
  */
