@@ -62,10 +62,19 @@ export class YourDialog {
 </tr>
 <tr class="docs-markdown-tr">
 <td class="docs-markdown-td"><code class="docs-markdown-code">md-dialog-close</code></td>
-<td class="docs-markdown-td">[Attr] Added to a <code class="docs-markdown-code">&lt;button&gt;</code>, makes the button close the dialog on click</td>
+<td class="docs-markdown-td">[Attr] Added to a <code class="docs-markdown-code">&lt;button&gt;</code>, makes the button close the dialog with an optional result from the bound value.</td>
 </tr>
 </tbody>
 </table>
+<p class="docs-markdown-p">For example:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">md-dialog-title</span>&gt;</span>Delete all<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">md-dialog-content</span>&gt;</span>Are you sure?<span class="hljs-tag">&lt;/<span class="hljs-name">md-dialog-content</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">md-dialog-actions</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> <span class="hljs-attr">md-dialog-close</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Can optionally provide a result for the closing dialog. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> [<span class="hljs-attr">md-dialog-close</span>]=<span class="hljs-string">"true"</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-dialog-actions</span>&gt;</span>
+</code></pre>
 <p class="docs-markdown-p">Once a dialog opens, the dialog will automatically focus the first tabbable element.</p>
 <p class="docs-markdown-p">You can control which elements are tab stops with the <code class="docs-markdown-code">tabindex</code> attribute</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>

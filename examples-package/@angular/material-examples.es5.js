@@ -633,7 +633,7 @@ var DialogResultExampleDialog = /*@__PURE__*/(function () {
 DialogResultExampleDialog.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-result-example-dialog',
-                template: "<h1 md-dialog-title>Dialog</h1> <div md-dialog-content>What would you like to do?</div> <div md-dialog-actions> <button md-button (click)=\"dialogRef.close('Option 1')\">Option 1</button> <button md-button (click)=\"dialogRef.close('Option 2')\">Option 2</button> </div> ",
+                template: "<h1 md-dialog-title>Dialog</h1> <div md-dialog-content>What would you like to do?</div> <div md-dialog-actions> <button md-button md-dialog-close=\"Option 1\">Option 1</button> <button md-button md-dialog-close=\"Option 2\">Option 2</button> </div> ",
             },] },
 ];
 /**
