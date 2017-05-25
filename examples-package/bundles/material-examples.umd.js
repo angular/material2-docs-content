@@ -1,5 +1,5 @@
 /**
-  * @license Angular Material v2.0.0-beta.5
+  * @license Angular Material v2.0.0-beta.6
   * Copyright (c) 2017 Google, Inc. https://material.angular.io/
   * License: MIT
   */
@@ -10,7 +10,7 @@
 }(this, (function (exports,_angular_core,_angular_forms,_angular_common,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_material,_angular_platformBrowser) { 'use strict';
 
 /**
-  * @license Angular Material v2.0.0-beta.5
+  * @license Angular Material v2.0.0-beta.6
   * Copyright (c) 2017 Google, Inc. https://material.angular.io/
   * License: MIT
   */
