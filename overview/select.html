@@ -1,10 +1,10 @@
 <html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;md-select&gt;</code> is a form control for selecting a value from a set of options, similar to the native
-<code class="docs-markdown-code">&lt;select&gt;</code> element. You can read more about selects in the 
+<code class="docs-markdown-code">&lt;select&gt;</code> element. You can read more about selects in the
 <a href="https://material.google.com/components/menus.html" class="docs-markdown-a">Material Design spec</a>.</p>
 <div material-docs-example="select-overview"></div>
 <h3 id="simple-select" class="docs-markdown-h3">Simple select</h3>
-<p class="docs-markdown-p">In your template, create an <code class="docs-markdown-code">md-select</code> element. For each option you'd like in your select, add an 
-<code class="docs-markdown-code">md-option</code> tag. Note that you can disable items by adding the <code class="docs-markdown-code">disabled</code> boolean attribute or 
+<p class="docs-markdown-p">In your template, create an <code class="docs-markdown-code">md-select</code> element. For each option you'd like in your select, add an
+<code class="docs-markdown-code">md-option</code> tag. Note that you can disable items by adding the <code class="docs-markdown-code">disabled</code> boolean attribute or
 binding to it.</p>
 <p class="docs-markdown-p"><em>my-comp.html</em></p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-select</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"State"</span>&gt;</span>
@@ -12,7 +12,7 @@ binding to it.</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-select</span>&gt;</span>
 </code></pre>
 <h3 id="getting-and-setting-the-select-value" class="docs-markdown-h3">Getting and setting the select value</h3>
-<p class="docs-markdown-p">The select component is set up as a custom value accessor, so you can manipulate the select's value using 
+<p class="docs-markdown-p">The select component is set up as a custom value accessor, so you can manipulate the select's value using
 any of the form directives from the core <code class="docs-markdown-code">FormsModule</code> or <code class="docs-markdown-code">ReactiveFormsModule</code>: <code class="docs-markdown-code">ngModel</code>, <code class="docs-markdown-code">formControl</code>, etc.</p>
 <p class="docs-markdown-p"><em>my-comp.html</em></p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-select</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"State"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"myState"</span>&gt;</span>
@@ -24,6 +24,14 @@ any of the form directives from the core <code class="docs-markdown-code">FormsM
   myState = <span class="hljs-string">'AZ'</span>;
   states = [{code: <span class="hljs-string">'AL'</span>, name: <span class="hljs-string">'Alabama'</span>}...];
 }
+</code></pre>
+<h3 id="resetting-the-select-value" class="docs-markdown-h3">Resetting the select value</h3>
+<p class="docs-markdown-p">If you want one of your options to reset the select's value, you can omit specifying its value:</p>
+<p class="docs-markdown-p"><em>my-comp.html</em></p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-select</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"State"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span>&gt;</span>None<span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let state of states"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"state.code"</span>&gt;</span>{{ state.name }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-select</span>&gt;</span>
 </code></pre>
 <h3 id="setting-a-static-placeholder" class="docs-markdown-h3">Setting a static placeholder</h3>
 <p class="docs-markdown-p">It's possible to turn off the placeholder's floating animation using the <code class="docs-markdown-code">floatPlaceholder</code> property. It accepts one of three string options:</p>
