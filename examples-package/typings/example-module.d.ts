@@ -16,6 +16,7 @@ import { GridListDynamicExample } from './grid-list-dynamic/grid-list-dynamic-ex
 import { IconOverviewExample } from './icon-overview/icon-overview-example';
 import { ProgressBarOverviewExample } from './progress-bar-overview/progress-bar-overview-example';
 import { SlideToggleOverviewExample } from './slide-toggle-overview/slide-toggle-overview-example';
+import { SlideToggleFormsExample } from './slide-toggle-forms/slide-toggle-forms-example';
 import { InputOverviewExample } from './input-overview/input-overview-example';
 import { MenuOverviewExample } from './menu-overview/menu-overview-example';
 import { CheckboxConfigurableExample } from './checkbox-configurable/checkbox-configurable-example';
@@ -215,6 +216,10 @@ export declare const EXAMPLE_COMPONENTS: {
         title: string;
         component: typeof SlideToggleConfigurableExample;
     };
+    'slide-toggle-forms': {
+        title: string;
+        component: typeof SlideToggleFormsExample;
+    };
     'slide-toggle-overview': {
         title: string;
         component: typeof SlideToggleOverviewExample;
@@ -261,6 +266,6 @@ export declare class ExampleMaterialModule {
  * The list of all example components.
  * We need to put them in both `declarations` and `entryComponents` to make them work.
  */
-export declare const EXAMPLE_LIST: (typeof DialogOverviewExample | typeof SnackBarOverviewExample | typeof DialogResultExampleDialog | typeof IconSvgExample)[];
+export declare const EXAMPLE_LIST: (typeof DialogOverviewExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof DialogResultExampleDialog | typeof IconSvgExample)[];
 export declare class ExampleModule {
 }

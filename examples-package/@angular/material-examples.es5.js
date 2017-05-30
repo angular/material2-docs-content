@@ -4,7 +4,7 @@
   * License: MIT
   */
 import { Component, NgModule, ViewEncapsulation } from '@angular/core';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
@@ -453,6 +453,39 @@ SlideToggleOverviewExample.decorators = [
  * @nocollapse
  */
 SlideToggleOverviewExample.ctorParameters = function () { return []; };
+var SlideToggleFormsExample = /*@__PURE__*/(function () {
+    /**
+     * @param {?} formBuilder
+     */
+    function SlideToggleFormsExample(formBuilder) {
+        this.isChecked = true;
+        this.formGroup = formBuilder.group({
+            enableWifi: '',
+            acceptTerms: ['', Validators.requiredTrue]
+        });
+    }
+    /**
+     * @param {?} formValue
+     * @return {?}
+     */
+    SlideToggleFormsExample.prototype.onFormSubmit = function (formValue) {
+        alert(JSON.stringify(formValue, null, 2));
+    };
+    return SlideToggleFormsExample;
+}());
+SlideToggleFormsExample.decorators = [
+    { type: Component, args: [{
+                selector: 'slide-toggle-forms-example',
+                template: "<p>Slide Toggle using a simple NgModel.</p> <md-slide-toggle [(ngModel)]=\"isChecked\">Slide Toggle Checked: {{ isChecked }}</md-slide-toggle> <p>Slide Toggle inside of a Template-driven form</p> <form class=\"example-form\" #form=\"ngForm\" (ngSubmit)=\"onFormSubmit(form.value)\" ngNativeValidate> <md-slide-toggle ngModel name=\"enableWifi\">Enable Wifi</md-slide-toggle> <md-slide-toggle ngModel name=\"acceptTerms\" required>Accept Terms of Service</md-slide-toggle> <button md-raised-button type=\"submit\">Save Settings</button> </form> <p>Slide Toggle inside of a Reactive form</p> <form class=\"example-form\" [formGroup]=\"formGroup\" (ngSubmit)=\"onFormSubmit(formGroup.value)\" ngNativeValidate> <md-slide-toggle formControlName=\"enableWifi\">Enable Wifi</md-slide-toggle> <md-slide-toggle formControlName=\"acceptTerms\">Accept Terms of Service</md-slide-toggle> <p>Form Group Status: {{ formGroup.status}}</p> <button md-rasied-button type=\"submit\">Save Settings</button> </form> ",
+                styles: [".example-form md-slide-toggle { margin: 8px 0; display: block; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SlideToggleFormsExample.ctorParameters = function () { return [
+    { type: FormBuilder, },
+]; };
 var InputOverviewExample = /*@__PURE__*/(function () {
     function InputOverviewExample() {
     }
@@ -1115,6 +1148,7 @@ var EXAMPLE_COMPONENTS = {
         title: 'Configurable slide-toggle',
         component: SlideToggleConfigurableExample
     },
+    'slide-toggle-forms': { title: 'Slide-toggle with forms', component: SlideToggleFormsExample },
     'slide-toggle-overview': { title: 'Basic slide-toggles', component: SlideToggleOverviewExample },
     'snack-bar-component': {
         title: 'Snack-bar with a custom component',
@@ -1216,6 +1250,7 @@ var EXAMPLE_LIST = [
     SliderOverviewExample,
     SlideToggleConfigurableExample,
     SlideToggleOverviewExample,
+    SlideToggleFormsExample,
     SnackBarComponentExample,
     PizzaPartyComponent,
     SnackBarOverviewExample,
@@ -1294,5 +1329,5 @@ var ExampleData = /*@__PURE__*/(function () {
 /**
  * Generated bundle index. Do not edit.
  */
-export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerOverviewExample as ɵl, DialogElementsExample as ɵq, DialogElementsExampleDialog as ɵr, DialogOverviewExample as ɵm, DialogOverviewExampleDialog as ɵn, DialogResultExample as ɵo, DialogResultExampleDialog as ɵp, GridListDynamicExample as ɵs, GridListOverviewExample as ɵt, IconOverviewExample as ɵu, IconSvgExample as ɵv, InputFormExample as ɵw, InputOverviewExample as ɵx, ListOverviewExample as ɵy, ListSectionsExample as ɵz, MenuIconsExample as ɵba, MenuOverviewExample as ɵbb, ProgressBarConfigurableExample as ɵbc, ProgressBarOverviewExample as ɵbd, ProgressSpinnerConfigurableExample as ɵbe, ProgressSpinnerOverviewExample as ɵbf, RadioNgModelExample as ɵbg, RadioOverviewExample as ɵbh, SelectFormExample as ɵbj, SelectOverviewExample as ɵbi, SidenavFabExample as ɵbk, SidenavOverviewExample as ɵbl, SlideToggleConfigurableExample as ɵbo, SlideToggleOverviewExample as ɵbp, SliderConfigurableExample as ɵbm, SliderOverviewExample as ɵbn, PizzaPartyComponent as ɵbr, SnackBarComponentExample as ɵbq, SnackBarOverviewExample as ɵbs, TabsOverviewExample as ɵbt, TabsTemplateLabelExample as ɵbu, ToolbarMultirowExample as ɵbv, ToolbarOverviewExample as ɵbw, TooltipOverviewExample as ɵbx, TooltipPositionExample as ɵby };
+export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerOverviewExample as ɵl, DialogElementsExample as ɵq, DialogElementsExampleDialog as ɵr, DialogOverviewExample as ɵm, DialogOverviewExampleDialog as ɵn, DialogResultExample as ɵo, DialogResultExampleDialog as ɵp, GridListDynamicExample as ɵs, GridListOverviewExample as ɵt, IconOverviewExample as ɵu, IconSvgExample as ɵv, InputFormExample as ɵw, InputOverviewExample as ɵx, ListOverviewExample as ɵy, ListSectionsExample as ɵz, MenuIconsExample as ɵba, MenuOverviewExample as ɵbb, ProgressBarConfigurableExample as ɵbc, ProgressBarOverviewExample as ɵbd, ProgressSpinnerConfigurableExample as ɵbe, ProgressSpinnerOverviewExample as ɵbf, RadioNgModelExample as ɵbg, RadioOverviewExample as ɵbh, SelectFormExample as ɵbj, SelectOverviewExample as ɵbi, SidenavFabExample as ɵbk, SidenavOverviewExample as ɵbl, SlideToggleConfigurableExample as ɵbo, SlideToggleFormsExample as ɵbp, SlideToggleOverviewExample as ɵbq, SliderConfigurableExample as ɵbm, SliderOverviewExample as ɵbn, PizzaPartyComponent as ɵbs, SnackBarComponentExample as ɵbr, SnackBarOverviewExample as ɵbt, TabsOverviewExample as ɵbu, TabsTemplateLabelExample as ɵbv, ToolbarMultirowExample as ɵbw, ToolbarOverviewExample as ɵbx, TooltipOverviewExample as ɵby, TooltipPositionExample as ɵbz };
 //# sourceMappingURL=material-examples.es5.js.map

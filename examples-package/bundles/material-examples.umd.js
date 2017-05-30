@@ -457,6 +457,39 @@ SlideToggleOverviewExample.decorators = [
  * @nocollapse
  */
 SlideToggleOverviewExample.ctorParameters = function () { return []; };
+var SlideToggleFormsExample = (function () {
+    /**
+     * @param {?} formBuilder
+     */
+    function SlideToggleFormsExample(formBuilder) {
+        this.isChecked = true;
+        this.formGroup = formBuilder.group({
+            enableWifi: '',
+            acceptTerms: ['', _angular_forms.Validators.requiredTrue]
+        });
+    }
+    /**
+     * @param {?} formValue
+     * @return {?}
+     */
+    SlideToggleFormsExample.prototype.onFormSubmit = function (formValue) {
+        alert(JSON.stringify(formValue, null, 2));
+    };
+    return SlideToggleFormsExample;
+}());
+SlideToggleFormsExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'slide-toggle-forms-example',
+                template: "<p>Slide Toggle using a simple NgModel.</p> <md-slide-toggle [(ngModel)]=\"isChecked\">Slide Toggle Checked: {{ isChecked }}</md-slide-toggle> <p>Slide Toggle inside of a Template-driven form</p> <form class=\"example-form\" #form=\"ngForm\" (ngSubmit)=\"onFormSubmit(form.value)\" ngNativeValidate> <md-slide-toggle ngModel name=\"enableWifi\">Enable Wifi</md-slide-toggle> <md-slide-toggle ngModel name=\"acceptTerms\" required>Accept Terms of Service</md-slide-toggle> <button md-raised-button type=\"submit\">Save Settings</button> </form> <p>Slide Toggle inside of a Reactive form</p> <form class=\"example-form\" [formGroup]=\"formGroup\" (ngSubmit)=\"onFormSubmit(formGroup.value)\" ngNativeValidate> <md-slide-toggle formControlName=\"enableWifi\">Enable Wifi</md-slide-toggle> <md-slide-toggle formControlName=\"acceptTerms\">Accept Terms of Service</md-slide-toggle> <p>Form Group Status: {{ formGroup.status}}</p> <button md-rasied-button type=\"submit\">Save Settings</button> </form> ",
+                styles: [".example-form md-slide-toggle { margin: 8px 0; display: block; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SlideToggleFormsExample.ctorParameters = function () { return [
+    { type: _angular_forms.FormBuilder, },
+]; };
 var InputOverviewExample = (function () {
     function InputOverviewExample() {
     }
@@ -1119,6 +1152,7 @@ var EXAMPLE_COMPONENTS = {
         title: 'Configurable slide-toggle',
         component: SlideToggleConfigurableExample
     },
+    'slide-toggle-forms': { title: 'Slide-toggle with forms', component: SlideToggleFormsExample },
     'slide-toggle-overview': { title: 'Basic slide-toggles', component: SlideToggleOverviewExample },
     'snack-bar-component': {
         title: 'Snack-bar with a custom component',
@@ -1220,6 +1254,7 @@ var EXAMPLE_LIST = [
     SliderOverviewExample,
     SlideToggleConfigurableExample,
     SlideToggleOverviewExample,
+    SlideToggleFormsExample,
     SnackBarComponentExample,
     PizzaPartyComponent,
     SnackBarOverviewExample,
@@ -1340,18 +1375,19 @@ exports.ɵbi = SelectOverviewExample;
 exports.ɵbk = SidenavFabExample;
 exports.ɵbl = SidenavOverviewExample;
 exports.ɵbo = SlideToggleConfigurableExample;
-exports.ɵbp = SlideToggleOverviewExample;
+exports.ɵbp = SlideToggleFormsExample;
+exports.ɵbq = SlideToggleOverviewExample;
 exports.ɵbm = SliderConfigurableExample;
 exports.ɵbn = SliderOverviewExample;
-exports.ɵbr = PizzaPartyComponent;
-exports.ɵbq = SnackBarComponentExample;
-exports.ɵbs = SnackBarOverviewExample;
-exports.ɵbt = TabsOverviewExample;
-exports.ɵbu = TabsTemplateLabelExample;
-exports.ɵbv = ToolbarMultirowExample;
-exports.ɵbw = ToolbarOverviewExample;
-exports.ɵbx = TooltipOverviewExample;
-exports.ɵby = TooltipPositionExample;
+exports.ɵbs = PizzaPartyComponent;
+exports.ɵbr = SnackBarComponentExample;
+exports.ɵbt = SnackBarOverviewExample;
+exports.ɵbu = TabsOverviewExample;
+exports.ɵbv = TabsTemplateLabelExample;
+exports.ɵbw = ToolbarMultirowExample;
+exports.ɵbx = ToolbarOverviewExample;
+exports.ɵby = TooltipOverviewExample;
+exports.ɵbz = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

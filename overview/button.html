@@ -1,4 +1,4 @@
-<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">Angular Material buttons are native <code class="docs-markdown-code">&lt;button&gt;</code> or <code class="docs-markdown-code">&lt;a&gt;</code> elements enhanced with Material Design 
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">Angular Material buttons are native <code class="docs-markdown-code">&lt;button&gt;</code> or <code class="docs-markdown-code">&lt;a&gt;</code> elements enhanced with Material Design
 styling and ink ripples.</p>
 <div material-docs-example="button-overview"></div>
 <p class="docs-markdown-p">Native <code class="docs-markdown-code">&lt;button&gt;</code> and <code class="docs-markdown-code">&lt;a&gt;</code> elements are always used in order to provide the most straightforward
@@ -36,7 +36,13 @@ is performed. An <code class="docs-markdown-code">&lt;a&gt;</code> element shoul
 </tbody>
 </table>
 <h3 id="theming" class="docs-markdown-h3">Theming</h3>
-<p class="docs-markdown-p">Buttons can be colored in terms of the current theme using the <code class="docs-markdown-code">color</code> property to set the 
+<p class="docs-markdown-p">Buttons can be colored in terms of the current theme using the <code class="docs-markdown-code">color</code> property to set the
 background color to <code class="docs-markdown-code">primary</code>, <code class="docs-markdown-code">accent</code>, or <code class="docs-markdown-code">warn</code>. By default, only FABs are colored; the default
-background color for <code class="docs-markdown-code">md-button</code> and <code class="docs-markdown-code">md-raised-button</code> matches the theme's background color. </p>
+background color for <code class="docs-markdown-code">md-button</code> and <code class="docs-markdown-code">md-raised-button</code> matches the theme's background color.</p>
+<h3 id="capitalization" class="docs-markdown-h3">Capitalization</h3>
+<p class="docs-markdown-p">According to the Material design spec button text has to be capitalized, however we have opted not
+to capitalize buttons automatically via <code class="docs-markdown-code">text-transform: uppercase</code>, because it can cause issues in
+certain locales. It is also worth noting that using ALL CAPS in the text itself causes issues for
+screen-readers, which will read the text character-by-character. We leave the decision of how to
+approach this to the consuming app.</p>
 </div></body></html>

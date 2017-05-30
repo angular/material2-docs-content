@@ -1,0 +1,23 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'slide-toggle-forms-example'</span>,
+  templateUrl: <span class="hljs-string">'./slide-toggle-forms-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'./slide-toggle-forms-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SlideToggleFormsExample {
+  isChecked = <span class="hljs-literal">true</span>;
+  formGroup: FormGroup;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">formBuilder: FormBuilder</span>) {
+    <span class="hljs-keyword">this</span>.formGroup = formBuilder.group({
+      enableWifi: <span class="hljs-string">''</span>,
+      acceptTerms: [<span class="hljs-string">''</span>, Validators.requiredTrue]
+    });
+  }
+
+  onFormSubmit(formValue: <span class="hljs-built_in">any</span>) {
+    alert(<span class="hljs-built_in">JSON</span>.stringify(formValue, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>));
+  }
+}
