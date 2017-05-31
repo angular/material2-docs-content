@@ -49,8 +49,8 @@ import { DatepickerOverviewExample } from './datepicker-overview/datepicker-over
 export interface LiveExample {
     title: string;
     component: any;
-    additionalFiles: string[];
-    selectorName: string;
+    additionalFiles?: string[];
+    selectorName?: string;
 }
 /**
  * The list of example components.
