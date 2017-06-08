@@ -44,6 +44,32 @@ any of the form directives from the core <code class="docs-markdown-code">FormsM
    <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let state of states"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"state.code"</span>&gt;</span>{{ state.name }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-select</span>&gt;</span>
 </code></pre>
+<p class="docs-markdown-p">Global default placeholder options can be specified by setting the <code class="docs-markdown-code">MD_PLACEHOLDER_GLOBAL_OPTIONS</code> provider. This setting will apply to all components that support the floating placeholder.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  providers: [
+    {provide: MD_PLACEHOLDER_GLOBAL_OPTIONS, useValue: { float: <span class="hljs-string">'always'</span> }}
+  ]
+})
+</code></pre>
+<p class="docs-markdown-p">Here are the available global options:</p>
+<table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Name</th>
+<th class="docs-markdown-th">Type</th>
+<th class="docs-markdown-th">Values</th>
+<th class="docs-markdown-th">Description</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">float</td>
+<td class="docs-markdown-td">string</td>
+<td class="docs-markdown-td">auto, always, never</td>
+<td class="docs-markdown-td">The default placeholder float behavior.</td>
+</tr>
+</tbody>
+</table>
 <h4 id="keyboard-interaction-" class="docs-markdown-h4">Keyboard interaction:</h4>
 <ul class="docs-markdown-ul">
 <li class="docs-markdown-li"><kbd>DOWN_ARROW</kbd>: Focus next option</li>
