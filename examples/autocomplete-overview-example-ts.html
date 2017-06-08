@@ -73,7 +73,7 @@
   }
 
   filterStates(val: <span class="hljs-built_in">string</span>) {
-    <span class="hljs-keyword">return</span> val ? <span class="hljs-keyword">this</span>.states.filter(<span class="hljs-function"><span class="hljs-params">s</span> =&gt;</span> s.toLowerCase().indexOf(val.toLowerCase()) === <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">return</span> val ? <span class="hljs-keyword">this</span>.states.filter(<span class="hljs-function"><span class="hljs-params">s</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">`^<span class="hljs-subst">${val}</span>`</span>, <span class="hljs-string">'gi'</span>).test(s))
                : <span class="hljs-keyword">this</span>.states;
   }
 

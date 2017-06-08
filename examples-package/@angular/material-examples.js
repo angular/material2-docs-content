@@ -75,7 +75,7 @@ class AutocompleteOverviewExample {
      * @return {?}
      */
     filterStates(val) {
-        return val ? this.states.filter(s => s.toLowerCase().indexOf(val.toLowerCase()) === 0)
+        return val ? this.states.filter(s => new RegExp(`^${val}`, 'gi').test(s))
             : this.states;
     }
 }

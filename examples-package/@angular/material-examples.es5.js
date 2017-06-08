@@ -75,7 +75,7 @@ var AutocompleteOverviewExample = /*@__PURE__*/(function () {
      * @return {?}
      */
     AutocompleteOverviewExample.prototype.filterStates = function (val) {
-        return val ? this.states.filter(function (s) { return s.toLowerCase().indexOf(val.toLowerCase()) === 0; })
+        return val ? this.states.filter(function (s) { return new RegExp("^" + val, 'gi').test(s); })
             : this.states;
     };
     return AutocompleteOverviewExample;
