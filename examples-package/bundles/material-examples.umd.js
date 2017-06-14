@@ -1,8 +1,10 @@
 /**
-  * @license Angular Material v2.0.0-beta.6
-  * Copyright (c) 2017 Google, Inc. https://material.angular.io/
-  * License: MIT
-  */
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/material'), require('@angular/platform-browser')) :
 	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/material', '@angular/platform-browser'], factory) :
@@ -10,10 +12,12 @@
 }(this, (function (exports,_angular_core,_angular_forms,_angular_common,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_material,_angular_platformBrowser) { 'use strict';
 
 /**
-  * @license Angular Material v2.0.0-beta.6
-  * Copyright (c) 2017 Google, Inc. https://material.angular.io/
-  * License: MIT
-  */
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
 var AutocompleteOverviewExample = (function () {
     function AutocompleteOverviewExample() {
         var _this = this;

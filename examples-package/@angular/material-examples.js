@@ -1,8 +1,10 @@
 /**
-  * @license Angular Material v2.0.0-beta.6
-  * Copyright (c) 2017 Google, Inc. https://material.angular.io/
-  * License: MIT
-  */
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
 import { Component, NgModule, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
