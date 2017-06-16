@@ -10,7 +10,7 @@ import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators 
 import { CommonModule } from '@angular/common';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
-import { MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdTabsModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
+import { MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdTabsModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 var AutocompleteOverviewExample = /*@__PURE__*/(function () {
     function AutocompleteOverviewExample() {
@@ -975,7 +975,7 @@ var SidenavOverviewExample = /*@__PURE__*/(function () {
 SidenavOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'sidenav-overview-example',
-                template: "<md-sidenav-container class=\"example-container\"><md-sidenav #sidenav class=\"example-sidenav\">Jolly good!</md-sidenav><div class=\"example-sidenav-content\"><button md-button (click)=\"sidenav.open()\">Open sidenav</button></div></md-sidenav-container>",
+                template: "<md-sidenav-container class=\"example-container\"><md-sidenav #sidenav class=\"example-sidenav\">Jolly good!</md-sidenav><div class=\"example-sidenav-content\"><button type=\"button\" md-button (click)=\"sidenav.open()\">Open sidenav</button></div></md-sidenav-container>",
                 styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
             },] },
 ];
@@ -1194,6 +1194,7 @@ ExampleMaterialModule.decorators = [
                     MdSelectModule,
                     MdSlideToggleModule,
                     MdSliderModule,
+                    MdSidenavModule,
                     MdSnackBarModule,
                     MdTabsModule,
                     MdToolbarModule,

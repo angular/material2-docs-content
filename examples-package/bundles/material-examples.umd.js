@@ -981,7 +981,7 @@ var SidenavOverviewExample = (function () {
 SidenavOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'sidenav-overview-example',
-                template: "<md-sidenav-container class=\"example-container\"><md-sidenav #sidenav class=\"example-sidenav\">Jolly good!</md-sidenav><div class=\"example-sidenav-content\"><button md-button (click)=\"sidenav.open()\">Open sidenav</button></div></md-sidenav-container>",
+                template: "<md-sidenav-container class=\"example-container\"><md-sidenav #sidenav class=\"example-sidenav\">Jolly good!</md-sidenav><div class=\"example-sidenav-content\"><button type=\"button\" md-button (click)=\"sidenav.open()\">Open sidenav</button></div></md-sidenav-container>",
                 styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
             },] },
 ];
@@ -1200,6 +1200,7 @@ ExampleMaterialModule.decorators = [
                     _angular_material.MdSelectModule,
                     _angular_material.MdSlideToggleModule,
                     _angular_material.MdSliderModule,
+                    _angular_material.MdSidenavModule,
                     _angular_material.MdSnackBarModule,
                     _angular_material.MdTabsModule,
                     _angular_material.MdToolbarModule,
