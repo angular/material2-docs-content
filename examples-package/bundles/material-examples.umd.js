@@ -11,13 +11,6 @@
 	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.material,global.ng.platformBrowser));
 }(this, (function (exports,_angular_core,_angular_forms,_angular_common,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_material,_angular_platformBrowser) { 'use strict';
 
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
 var AutocompleteOverviewExample = (function () {
     function AutocompleteOverviewExample() {
         var _this = this;
