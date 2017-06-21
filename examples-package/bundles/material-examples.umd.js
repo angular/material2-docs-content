@@ -487,21 +487,6 @@ SlideToggleFormsExample.decorators = [
 SlideToggleFormsExample.ctorParameters = function () { return [
     { type: _angular_forms.FormBuilder, },
 ]; };
-var InputOverviewExample = (function () {
-    function InputOverviewExample() {
-    }
-    return InputOverviewExample;
-}());
-InputOverviewExample.decorators = [
-    { type: _angular_core.Component, args: [{
-                selector: 'input-overview-example',
-                template: "<md-input-container><input mdInput placeholder=\"Favorite food\" value=\"Sushi\"></md-input-container>",
-            },] },
-];
-/**
- * @nocollapse
- */
-InputOverviewExample.ctorParameters = function () { return []; };
 var MenuOverviewExample = (function () {
     function MenuOverviewExample() {
     }
@@ -800,22 +785,6 @@ ProgressSpinnerConfigurableExample.decorators = [
  * @nocollapse
  */
 ProgressSpinnerConfigurableExample.ctorParameters = function () { return []; };
-var InputFormExample = (function () {
-    function InputFormExample() {
-    }
-    return InputFormExample;
-}());
-InputFormExample.decorators = [
-    { type: _angular_core.Component, args: [{
-                selector: 'input-form-example',
-                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Company (disabled)\" disabled=\"disabled\" value=\"Google\"></md-input-container><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"First name\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Long Last Name That Will Be Truncated\"></md-input-container></td></tr></table><p><md-input-container class=\"example-full-width\"><textarea mdInput placeholder=\"Address\">1600 Amphitheatre Pkwy</textarea></md-input-container><md-input-container class=\"example-full-width\"><textarea mdInput placeholder=\"Address 2\"></textarea></md-input-container></p><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"City\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"State\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput #postalCode maxlength=\"5\" placeholder=\"Postal Code\" value=\"94043\"><md-hint align=\"end\">{{postalCode.value.length}} / 5</md-hint></md-input-container></td></tr></table></form>",
-                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
-            },] },
-];
-/**
- * @nocollapse
- */
-InputFormExample.ctorParameters = function () { return []; };
 var ListOverviewExample = (function () {
     function ListOverviewExample() {
     }
@@ -1075,6 +1044,90 @@ DatepickerOverviewExample.decorators = [
  * @nocollapse
  */
 DatepickerOverviewExample.ctorParameters = function () { return []; };
+var InputOverviewExample = (function () {
+    function InputOverviewExample() {
+    }
+    return InputOverviewExample;
+}());
+InputOverviewExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'input-overview-example',
+                template: "<md-input-container><input mdInput placeholder=\"Favorite food\" value=\"Sushi\"></md-input-container>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputOverviewExample.ctorParameters = function () { return []; };
+var EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+var InputErrorsExample = (function () {
+    function InputErrorsExample() {
+        this.emailFormControl = new _angular_forms.FormControl('', [
+            _angular_forms.Validators.required,
+            _angular_forms.Validators.pattern(EMAIL_REGEX)
+        ]);
+    }
+    return InputErrorsExample;
+}());
+InputErrorsExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'input-errors-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Email\" [formControl]=\"emailFormControl\"><md-error *ngIf=\"emailFormControl.hasError('pattern')\">Please enter a valid email address</md-error><md-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></md-error></md-input-container></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputErrorsExample.ctorParameters = function () { return []; };
+var InputFormExample = (function () {
+    function InputFormExample() {
+    }
+    return InputFormExample;
+}());
+InputFormExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'input-form-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Company (disabled)\" disabled=\"disabled\" value=\"Google\"></md-input-container><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"First name\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Long Last Name That Will Be Truncated\"></md-input-container></td></tr></table><p><md-input-container class=\"example-full-width\"><textarea mdInput placeholder=\"Address\">1600 Amphitheatre Pkwy</textarea></md-input-container><md-input-container class=\"example-full-width\"><textarea mdInput placeholder=\"Address 2\"></textarea></md-input-container></p><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"City\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"State\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput #postalCode maxlength=\"5\" placeholder=\"Postal Code\" value=\"94043\"><md-hint align=\"end\">{{postalCode.value.length}} / 5</md-hint></md-input-container></td></tr></table></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputFormExample.ctorParameters = function () { return []; };
+var InputPrefixSuffixExample = (function () {
+    function InputPrefixSuffixExample() {
+    }
+    return InputPrefixSuffixExample;
+}());
+InputPrefixSuffixExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'input-prefix-suffix-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><span mdPrefix>+1 &nbsp;</span> <input type=\"tel\" mdInput placeholder=\"Telephone\"><md-icon mdSuffix>mode_edit</md-icon></md-input-container></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputPrefixSuffixExample.ctorParameters = function () { return []; };
+var InputHintExample = (function () {
+    function InputHintExample() {
+    }
+    return InputHintExample;
+}());
+InputHintExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'input-hint-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput #message maxlength=\"256\" placeholder=\"Message\"><md-hint align=\"start\"><strong>Don't disclose personal info</strong></md-hint><md-hint align=\"end\">{{message.value.length}} / 256</md-hint></md-input-container></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputHintExample.ctorParameters = function () { return []; };
 /**
  * The list of example components.
  * Key is the example name which will be used in `material-docs-example="key"`.
@@ -1120,6 +1173,9 @@ var EXAMPLE_COMPONENTS = {
     'icon-svg': { title: 'SVG icons', component: IconSvgExample },
     'input-form': { title: 'Inputs in a form', component: InputFormExample },
     'input-overview': { title: 'Basic inputs', component: InputOverviewExample },
+    'input-errors': { title: 'Input Errors', component: InputErrorsExample },
+    'input-prefix-suffix': { title: 'Input Prefixes/Suffixes', component: InputPrefixSuffixExample },
+    'input-hint': { title: 'Input Hint', component: InputHintExample },
     'list-overview': { title: 'Basic list', component: ListOverviewExample },
     'list-sections': { title: 'List with sections', component: ListSectionsExample },
     'menu-icons': { title: 'Menu with icons', component: MenuIconsExample },
@@ -1234,6 +1290,9 @@ var EXAMPLE_LIST = [
     IconSvgExample,
     InputFormExample,
     InputOverviewExample,
+    InputPrefixSuffixExample,
+    InputHintExample,
+    InputErrorsExample,
     ListOverviewExample,
     ListSectionsExample,
     MenuIconsExample,
@@ -1356,36 +1415,39 @@ exports.ɵs = GridListDynamicExample;
 exports.ɵt = GridListOverviewExample;
 exports.ɵu = IconOverviewExample;
 exports.ɵv = IconSvgExample;
+exports.ɵy = InputErrorsExample;
 exports.ɵw = InputFormExample;
+exports.ɵba = InputHintExample;
 exports.ɵx = InputOverviewExample;
-exports.ɵy = ListOverviewExample;
-exports.ɵz = ListSectionsExample;
-exports.ɵba = MenuIconsExample;
-exports.ɵbb = MenuOverviewExample;
-exports.ɵbc = ProgressBarConfigurableExample;
-exports.ɵbd = ProgressBarOverviewExample;
-exports.ɵbe = ProgressSpinnerConfigurableExample;
-exports.ɵbf = ProgressSpinnerOverviewExample;
-exports.ɵbg = RadioNgModelExample;
-exports.ɵbh = RadioOverviewExample;
-exports.ɵbj = SelectFormExample;
-exports.ɵbi = SelectOverviewExample;
-exports.ɵbk = SidenavFabExample;
-exports.ɵbl = SidenavOverviewExample;
-exports.ɵbo = SlideToggleConfigurableExample;
-exports.ɵbp = SlideToggleFormsExample;
-exports.ɵbq = SlideToggleOverviewExample;
-exports.ɵbm = SliderConfigurableExample;
-exports.ɵbn = SliderOverviewExample;
-exports.ɵbs = PizzaPartyComponent;
-exports.ɵbr = SnackBarComponentExample;
-exports.ɵbt = SnackBarOverviewExample;
-exports.ɵbu = TabsOverviewExample;
-exports.ɵbv = TabsTemplateLabelExample;
-exports.ɵbw = ToolbarMultirowExample;
-exports.ɵbx = ToolbarOverviewExample;
-exports.ɵby = TooltipOverviewExample;
-exports.ɵbz = TooltipPositionExample;
+exports.ɵz = InputPrefixSuffixExample;
+exports.ɵbb = ListOverviewExample;
+exports.ɵbc = ListSectionsExample;
+exports.ɵbd = MenuIconsExample;
+exports.ɵbe = MenuOverviewExample;
+exports.ɵbf = ProgressBarConfigurableExample;
+exports.ɵbg = ProgressBarOverviewExample;
+exports.ɵbh = ProgressSpinnerConfigurableExample;
+exports.ɵbi = ProgressSpinnerOverviewExample;
+exports.ɵbj = RadioNgModelExample;
+exports.ɵbk = RadioOverviewExample;
+exports.ɵbm = SelectFormExample;
+exports.ɵbl = SelectOverviewExample;
+exports.ɵbn = SidenavFabExample;
+exports.ɵbo = SidenavOverviewExample;
+exports.ɵbr = SlideToggleConfigurableExample;
+exports.ɵbs = SlideToggleFormsExample;
+exports.ɵbt = SlideToggleOverviewExample;
+exports.ɵbp = SliderConfigurableExample;
+exports.ɵbq = SliderOverviewExample;
+exports.ɵbv = PizzaPartyComponent;
+exports.ɵbu = SnackBarComponentExample;
+exports.ɵbw = SnackBarOverviewExample;
+exports.ɵbx = TabsOverviewExample;
+exports.ɵby = TabsTemplateLabelExample;
+exports.ɵbz = ToolbarMultirowExample;
+exports.ɵca = ToolbarOverviewExample;
+exports.ɵcb = TooltipOverviewExample;
+exports.ɵcc = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

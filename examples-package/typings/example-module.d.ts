@@ -17,7 +17,6 @@ import { IconOverviewExample } from './icon-overview/icon-overview-example';
 import { ProgressBarOverviewExample } from './progress-bar-overview/progress-bar-overview-example';
 import { SlideToggleOverviewExample } from './slide-toggle-overview/slide-toggle-overview-example';
 import { SlideToggleFormsExample } from './slide-toggle-forms/slide-toggle-forms-example';
-import { InputOverviewExample } from './input-overview/input-overview-example';
 import { MenuOverviewExample } from './menu-overview/menu-overview-example';
 import { CheckboxConfigurableExample } from './checkbox-configurable/checkbox-configurable-example';
 import { ButtonToggleExclusiveExample } from './button-toggle-exclusive/button-toggle-exclusive-example';
@@ -30,7 +29,6 @@ import { ButtonToggleOverviewExample } from './button-toggle-overview/button-tog
 import { GridListOverviewExample } from './grid-list-overview/grid-list-overview-example';
 import { TooltipPositionExample } from './tooltip-position/tooltip-position-example';
 import { ProgressSpinnerConfigurableExample } from './progress-spinner-configurable/progress-spinner-configurable-example';
-import { InputFormExample } from './input-form/input-form-example';
 import { ListOverviewExample } from './list-overview/list-overview-example';
 import { SliderOverviewExample } from './slider-overview/slider-overview-example';
 import { SlideToggleConfigurableExample } from './slide-toggle-configurable/slide-toggle-configurable-example';
@@ -46,6 +44,11 @@ import { ChipsOverviewExample } from './chips-overview/chips-overview-example';
 import { ChipsStackedExample } from './chips-stacked/chips-stacked-example';
 import { SelectFormExample } from './select-form/select-form-example';
 import { DatepickerOverviewExample } from './datepicker-overview/datepicker-overview-example';
+import { InputOverviewExample } from './input-overview/input-overview-example';
+import { InputErrorsExample } from './input-errors/input-errors-example';
+import { InputFormExample } from './input-form/input-form-example';
+import { InputPrefixSuffixExample } from './input-prefix-suffix/input-prefix-suffix-example';
+import { InputHintExample } from './input-hint/input-hint-example';
 export interface LiveExample {
     title: string;
     component: any;
@@ -147,6 +150,18 @@ export declare const EXAMPLE_COMPONENTS: {
     'input-overview': {
         title: string;
         component: typeof InputOverviewExample;
+    };
+    'input-errors': {
+        title: string;
+        component: typeof InputErrorsExample;
+    };
+    'input-prefix-suffix': {
+        title: string;
+        component: typeof InputPrefixSuffixExample;
+    };
+    'input-hint': {
+        title: string;
+        component: typeof InputHintExample;
     };
     'list-overview': {
         title: string;

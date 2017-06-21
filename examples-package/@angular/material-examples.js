@@ -456,19 +456,6 @@ SlideToggleFormsExample.ctorParameters = () => [
     { type: FormBuilder, },
 ];
 
-class InputOverviewExample {
-}
-InputOverviewExample.decorators = [
-    { type: Component, args: [{
-                selector: 'input-overview-example',
-                template: "<md-input-container><input mdInput placeholder=\"Favorite food\" value=\"Sushi\"></md-input-container>",
-            },] },
-];
-/**
- * @nocollapse
- */
-InputOverviewExample.ctorParameters = () => [];
-
 class MenuOverviewExample {
 }
 MenuOverviewExample.decorators = [
@@ -752,20 +739,6 @@ ProgressSpinnerConfigurableExample.decorators = [
  */
 ProgressSpinnerConfigurableExample.ctorParameters = () => [];
 
-class InputFormExample {
-}
-InputFormExample.decorators = [
-    { type: Component, args: [{
-                selector: 'input-form-example',
-                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Company (disabled)\" disabled=\"disabled\" value=\"Google\"></md-input-container><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"First name\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Long Last Name That Will Be Truncated\"></md-input-container></td></tr></table><p><md-input-container class=\"example-full-width\"><textarea mdInput placeholder=\"Address\">1600 Amphitheatre Pkwy</textarea></md-input-container><md-input-container class=\"example-full-width\"><textarea mdInput placeholder=\"Address 2\"></textarea></md-input-container></p><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"City\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"State\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput #postalCode maxlength=\"5\" placeholder=\"Postal Code\" value=\"94043\"><md-hint align=\"end\">{{postalCode.value.length}} / 5</md-hint></md-input-container></td></tr></table></form>",
-                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
-            },] },
-];
-/**
- * @nocollapse
- */
-InputFormExample.ctorParameters = () => [];
-
 class ListOverviewExample {
 }
 ListOverviewExample.decorators = [
@@ -1005,6 +978,82 @@ DatepickerOverviewExample.decorators = [
  */
 DatepickerOverviewExample.ctorParameters = () => [];
 
+class InputOverviewExample {
+}
+InputOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'input-overview-example',
+                template: "<md-input-container><input mdInput placeholder=\"Favorite food\" value=\"Sushi\"></md-input-container>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputOverviewExample.ctorParameters = () => [];
+
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+class InputErrorsExample {
+    constructor() {
+        this.emailFormControl = new FormControl('', [
+            Validators.required,
+            Validators.pattern(EMAIL_REGEX)
+        ]);
+    }
+}
+InputErrorsExample.decorators = [
+    { type: Component, args: [{
+                selector: 'input-errors-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Email\" [formControl]=\"emailFormControl\"><md-error *ngIf=\"emailFormControl.hasError('pattern')\">Please enter a valid email address</md-error><md-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></md-error></md-input-container></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputErrorsExample.ctorParameters = () => [];
+
+class InputFormExample {
+}
+InputFormExample.decorators = [
+    { type: Component, args: [{
+                selector: 'input-form-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Company (disabled)\" disabled=\"disabled\" value=\"Google\"></md-input-container><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"First name\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Long Last Name That Will Be Truncated\"></md-input-container></td></tr></table><p><md-input-container class=\"example-full-width\"><textarea mdInput placeholder=\"Address\">1600 Amphitheatre Pkwy</textarea></md-input-container><md-input-container class=\"example-full-width\"><textarea mdInput placeholder=\"Address 2\"></textarea></md-input-container></p><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"City\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"State\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput #postalCode maxlength=\"5\" placeholder=\"Postal Code\" value=\"94043\"><md-hint align=\"end\">{{postalCode.value.length}} / 5</md-hint></md-input-container></td></tr></table></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputFormExample.ctorParameters = () => [];
+
+class InputPrefixSuffixExample {
+}
+InputPrefixSuffixExample.decorators = [
+    { type: Component, args: [{
+                selector: 'input-prefix-suffix-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><span mdPrefix>+1 &nbsp;</span> <input type=\"tel\" mdInput placeholder=\"Telephone\"><md-icon mdSuffix>mode_edit</md-icon></md-input-container></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputPrefixSuffixExample.ctorParameters = () => [];
+
+class InputHintExample {
+}
+InputHintExample.decorators = [
+    { type: Component, args: [{
+                selector: 'input-hint-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput #message maxlength=\"256\" placeholder=\"Message\"><md-hint align=\"start\"><strong>Don't disclose personal info</strong></md-hint><md-hint align=\"end\">{{message.value.length}} / 256</md-hint></md-input-container></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputHintExample.ctorParameters = () => [];
+
 /**
  * The list of example components.
  * Key is the example name which will be used in `material-docs-example="key"`.
@@ -1050,6 +1099,9 @@ const EXAMPLE_COMPONENTS = {
     'icon-svg': { title: 'SVG icons', component: IconSvgExample },
     'input-form': { title: 'Inputs in a form', component: InputFormExample },
     'input-overview': { title: 'Basic inputs', component: InputOverviewExample },
+    'input-errors': { title: 'Input Errors', component: InputErrorsExample },
+    'input-prefix-suffix': { title: 'Input Prefixes/Suffixes', component: InputPrefixSuffixExample },
+    'input-hint': { title: 'Input Hint', component: InputHintExample },
     'list-overview': { title: 'Basic list', component: ListOverviewExample },
     'list-sections': { title: 'List with sections', component: ListSectionsExample },
     'menu-icons': { title: 'Menu with icons', component: MenuIconsExample },
@@ -1161,6 +1213,9 @@ const EXAMPLE_LIST = [
     IconSvgExample,
     InputFormExample,
     InputOverviewExample,
+    InputPrefixSuffixExample,
+    InputHintExample,
+    InputErrorsExample,
     ListOverviewExample,
     ListSectionsExample,
     MenuIconsExample,
@@ -1257,5 +1312,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerOverviewExample as ɵl, DialogElementsExample as ɵq, DialogElementsExampleDialog as ɵr, DialogOverviewExample as ɵm, DialogOverviewExampleDialog as ɵn, DialogResultExample as ɵo, DialogResultExampleDialog as ɵp, GridListDynamicExample as ɵs, GridListOverviewExample as ɵt, IconOverviewExample as ɵu, IconSvgExample as ɵv, InputFormExample as ɵw, InputOverviewExample as ɵx, ListOverviewExample as ɵy, ListSectionsExample as ɵz, MenuIconsExample as ɵba, MenuOverviewExample as ɵbb, ProgressBarConfigurableExample as ɵbc, ProgressBarOverviewExample as ɵbd, ProgressSpinnerConfigurableExample as ɵbe, ProgressSpinnerOverviewExample as ɵbf, RadioNgModelExample as ɵbg, RadioOverviewExample as ɵbh, SelectFormExample as ɵbj, SelectOverviewExample as ɵbi, SidenavFabExample as ɵbk, SidenavOverviewExample as ɵbl, SlideToggleConfigurableExample as ɵbo, SlideToggleFormsExample as ɵbp, SlideToggleOverviewExample as ɵbq, SliderConfigurableExample as ɵbm, SliderOverviewExample as ɵbn, PizzaPartyComponent as ɵbs, SnackBarComponentExample as ɵbr, SnackBarOverviewExample as ɵbt, TabsOverviewExample as ɵbu, TabsTemplateLabelExample as ɵbv, ToolbarMultirowExample as ɵbw, ToolbarOverviewExample as ɵbx, TooltipOverviewExample as ɵby, TooltipPositionExample as ɵbz };
+export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerOverviewExample as ɵl, DialogElementsExample as ɵq, DialogElementsExampleDialog as ɵr, DialogOverviewExample as ɵm, DialogOverviewExampleDialog as ɵn, DialogResultExample as ɵo, DialogResultExampleDialog as ɵp, GridListDynamicExample as ɵs, GridListOverviewExample as ɵt, IconOverviewExample as ɵu, IconSvgExample as ɵv, InputErrorsExample as ɵy, InputFormExample as ɵw, InputHintExample as ɵba, InputOverviewExample as ɵx, InputPrefixSuffixExample as ɵz, ListOverviewExample as ɵbb, ListSectionsExample as ɵbc, MenuIconsExample as ɵbd, MenuOverviewExample as ɵbe, ProgressBarConfigurableExample as ɵbf, ProgressBarOverviewExample as ɵbg, ProgressSpinnerConfigurableExample as ɵbh, ProgressSpinnerOverviewExample as ɵbi, RadioNgModelExample as ɵbj, RadioOverviewExample as ɵbk, SelectFormExample as ɵbm, SelectOverviewExample as ɵbl, SidenavFabExample as ɵbn, SidenavOverviewExample as ɵbo, SlideToggleConfigurableExample as ɵbr, SlideToggleFormsExample as ɵbs, SlideToggleOverviewExample as ɵbt, SliderConfigurableExample as ɵbp, SliderOverviewExample as ɵbq, PizzaPartyComponent as ɵbv, SnackBarComponentExample as ɵbu, SnackBarOverviewExample as ɵbw, TabsOverviewExample as ɵbx, TabsTemplateLabelExample as ɵby, ToolbarMultirowExample as ɵbz, ToolbarOverviewExample as ɵca, TooltipOverviewExample as ɵcb, TooltipPositionExample as ɵcc };
 //# sourceMappingURL=material-examples.js.map
