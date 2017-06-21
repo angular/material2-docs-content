@@ -156,7 +156,7 @@ var SliderConfigurableExample = (function () {
          * @return {?}
          */
         get: function () {
-            return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : null;
+            return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
         },
         /**
          * @param {?} v
