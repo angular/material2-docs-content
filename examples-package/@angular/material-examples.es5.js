@@ -10,7 +10,7 @@ import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators 
 import { CommonModule } from '@angular/common';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
-import { MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdTabsModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
+import { MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdTabsModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 var AutocompleteOverviewExample = /*@__PURE__*/(function () {
     function AutocompleteOverviewExample() {
@@ -1029,6 +1029,21 @@ SelectFormExample.decorators = [
  * @nocollapse
  */
 SelectFormExample.ctorParameters = function () { return []; };
+var PaginatorOverviewExample = /*@__PURE__*/(function () {
+    function PaginatorOverviewExample() {
+    }
+    return PaginatorOverviewExample;
+}());
+PaginatorOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'paginator-overview-example',
+                template: "<md-paginator [length]=\"100\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\" ]></md-paginator>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+PaginatorOverviewExample.ctorParameters = function () { return []; };
 var DatepickerOverviewExample = /*@__PURE__*/(function () {
     function DatepickerOverviewExample() {
     }
@@ -1045,6 +1060,32 @@ DatepickerOverviewExample.decorators = [
  * @nocollapse
  */
 DatepickerOverviewExample.ctorParameters = function () { return []; };
+var PaginatorConfigurableExample = /*@__PURE__*/(function () {
+    function PaginatorConfigurableExample() {
+        // MdPaginator Inputs
+        this.length = 100;
+        this.pageSize = 10;
+        this.pageSizeOptions = [5, 10, 25, 100];
+    }
+    /**
+     * @param {?} setPageSizeOptionsInput
+     * @return {?}
+     */
+    PaginatorConfigurableExample.prototype.setPageSizeOptions = function (setPageSizeOptionsInput) {
+        this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(function (str) { return +str; });
+    };
+    return PaginatorConfigurableExample;
+}());
+PaginatorConfigurableExample.decorators = [
+    { type: Component, args: [{
+                selector: 'paginator-configurable-example',
+                template: "<md-input-container>List length: <input mdInput [(ngModel)]=\"length\"></md-input-container><md-input-container>Page size: <input mdInput [(ngModel)]=\"pageSize\"></md-input-container><md-input-container>Page size options: <input mdInput [ngModel]=\"pageSizeOptions\" (ngModelChange)=\"setPageSizeOptions($event)\"></md-input-container><md-paginator [length]=\"length\" [pageSize]=\"pageSize\" [pageSizeOptions]=\"pageSizeOptions\" (page)=\"pageEvent = $event\"></md-paginator><div *ngIf=\"pageEvent\"><h2>Page Change Event Properties</h2><div>List length: {{pageEvent.length}}</div><div>Page size: {{pageEvent.pageSize}}</div><div>Page index: {{pageEvent.pageIndex}}</div></div>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+PaginatorConfigurableExample.ctorParameters = function () { return []; };
 var InputOverviewExample = /*@__PURE__*/(function () {
     function InputOverviewExample() {
     }
@@ -1181,6 +1222,11 @@ var EXAMPLE_COMPONENTS = {
     'list-sections': { title: 'List with sections', component: ListSectionsExample },
     'menu-icons': { title: 'Menu with icons', component: MenuIconsExample },
     'menu-overview': { title: 'Basic menu', component: MenuOverviewExample },
+    'paginator-overview': { title: 'Paginator', component: PaginatorOverviewExample },
+    'paginator-configurable': {
+        title: 'Configurable paginator',
+        component: PaginatorConfigurableExample
+    },
     'progress-bar-configurable': {
         title: 'Configurable progress-bar',
         component: ProgressBarConfigurableExample
@@ -1244,6 +1290,7 @@ ExampleMaterialModule.decorators = [
                     MdInputModule,
                     MdListModule,
                     MdMenuModule,
+                    MdPaginatorModule,
                     MdProgressBarModule,
                     MdProgressSpinnerModule,
                     MdRadioModule,
@@ -1298,6 +1345,7 @@ var EXAMPLE_LIST = [
     ListSectionsExample,
     MenuIconsExample,
     MenuOverviewExample,
+    PaginatorOverviewExample,
     ProgressBarConfigurableExample,
     ProgressBarOverviewExample,
     ProgressSpinnerConfigurableExample,
@@ -1391,5 +1439,5 @@ var ExampleData = /*@__PURE__*/(function () {
 /**
  * Generated bundle index. Do not edit.
  */
-export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerOverviewExample as ɵl, DialogElementsExample as ɵq, DialogElementsExampleDialog as ɵr, DialogOverviewExample as ɵm, DialogOverviewExampleDialog as ɵn, DialogResultExample as ɵo, DialogResultExampleDialog as ɵp, GridListDynamicExample as ɵs, GridListOverviewExample as ɵt, IconOverviewExample as ɵu, IconSvgExample as ɵv, InputErrorsExample as ɵy, InputFormExample as ɵw, InputHintExample as ɵba, InputOverviewExample as ɵx, InputPrefixSuffixExample as ɵz, ListOverviewExample as ɵbb, ListSectionsExample as ɵbc, MenuIconsExample as ɵbd, MenuOverviewExample as ɵbe, ProgressBarConfigurableExample as ɵbf, ProgressBarOverviewExample as ɵbg, ProgressSpinnerConfigurableExample as ɵbh, ProgressSpinnerOverviewExample as ɵbi, RadioNgModelExample as ɵbj, RadioOverviewExample as ɵbk, SelectFormExample as ɵbm, SelectOverviewExample as ɵbl, SidenavFabExample as ɵbn, SidenavOverviewExample as ɵbo, SlideToggleConfigurableExample as ɵbr, SlideToggleFormsExample as ɵbs, SlideToggleOverviewExample as ɵbt, SliderConfigurableExample as ɵbp, SliderOverviewExample as ɵbq, PizzaPartyComponent as ɵbv, SnackBarComponentExample as ɵbu, SnackBarOverviewExample as ɵbw, TabsOverviewExample as ɵbx, TabsTemplateLabelExample as ɵby, ToolbarMultirowExample as ɵbz, ToolbarOverviewExample as ɵca, TooltipOverviewExample as ɵcb, TooltipPositionExample as ɵcc };
+export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerOverviewExample as ɵl, DialogElementsExample as ɵq, DialogElementsExampleDialog as ɵr, DialogOverviewExample as ɵm, DialogOverviewExampleDialog as ɵn, DialogResultExample as ɵo, DialogResultExampleDialog as ɵp, GridListDynamicExample as ɵs, GridListOverviewExample as ɵt, IconOverviewExample as ɵu, IconSvgExample as ɵv, InputErrorsExample as ɵy, InputFormExample as ɵw, InputHintExample as ɵba, InputOverviewExample as ɵx, InputPrefixSuffixExample as ɵz, ListOverviewExample as ɵbb, ListSectionsExample as ɵbc, MenuIconsExample as ɵbd, MenuOverviewExample as ɵbe, PaginatorConfigurableExample as ɵbg, PaginatorOverviewExample as ɵbf, ProgressBarConfigurableExample as ɵbh, ProgressBarOverviewExample as ɵbi, ProgressSpinnerConfigurableExample as ɵbj, ProgressSpinnerOverviewExample as ɵbk, RadioNgModelExample as ɵbl, RadioOverviewExample as ɵbm, SelectFormExample as ɵbo, SelectOverviewExample as ɵbn, SidenavFabExample as ɵbp, SidenavOverviewExample as ɵbq, SlideToggleConfigurableExample as ɵbt, SlideToggleFormsExample as ɵbu, SlideToggleOverviewExample as ɵbv, SliderConfigurableExample as ɵbr, SliderOverviewExample as ɵbs, PizzaPartyComponent as ɵbx, SnackBarComponentExample as ɵbw, SnackBarOverviewExample as ɵby, TabsOverviewExample as ɵbz, TabsTemplateLabelExample as ɵca, ToolbarMultirowExample as ɵcb, ToolbarOverviewExample as ɵcc, TooltipOverviewExample as ɵcd, TooltipPositionExample as ɵce };
 //# sourceMappingURL=material-examples.es5.js.map

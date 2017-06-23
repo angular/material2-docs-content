@@ -1,0 +1,28 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">md-input-container</span>&gt;</span>
+  List length:
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">mdInput</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"length"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-input-container</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">md-input-container</span>&gt;</span>
+  Page size:
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">mdInput</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"pageSize"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-input-container</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">md-input-container</span>&gt;</span>
+  Page size options:
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">mdInput</span>
+         [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">"pageSizeOptions"</span>
+         (<span class="hljs-attr">ngModelChange</span>)=<span class="hljs-string">"setPageSizeOptions($event)"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-input-container</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">md-paginator</span> [<span class="hljs-attr">length</span>]=<span class="hljs-string">"length"</span>
+              [<span class="hljs-attr">pageSize</span>]=<span class="hljs-string">"pageSize"</span>
+              [<span class="hljs-attr">pageSizeOptions</span>]=<span class="hljs-string">"pageSizeOptions"</span>
+              (<span class="hljs-attr">page</span>)=<span class="hljs-string">"pageEvent = $event"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-paginator</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"pageEvent"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Page Change Event Properties<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>List length: {{pageEvent.length}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Page size: {{pageEvent.pageSize}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Page index: {{pageEvent.pageIndex}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

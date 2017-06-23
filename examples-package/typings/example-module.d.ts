@@ -22,7 +22,7 @@ import { CheckboxConfigurableExample } from './checkbox-configurable/checkbox-co
 import { ButtonToggleExclusiveExample } from './button-toggle-exclusive/button-toggle-exclusive-example';
 import { ListSectionsExample } from './list-sections/list-sections-example';
 import { SnackBarOverviewExample } from './snack-bar-overview/snack-bar-overview-example';
-import { DialogResultExampleDialog, DialogResultExample } from './dialog-result/dialog-result-example';
+import { DialogResultExample, DialogResultExampleDialog } from './dialog-result/dialog-result-example';
 import { DialogElementsExample } from './dialog-elements/dialog-elements-example';
 import { TooltipOverviewExample } from './tooltip-overview/tooltip-overview-example';
 import { ButtonToggleOverviewExample } from './button-toggle-overview/button-toggle-overview-example';
@@ -43,7 +43,9 @@ import { SelectOverviewExample } from './select-overview/select-overview-example
 import { ChipsOverviewExample } from './chips-overview/chips-overview-example';
 import { ChipsStackedExample } from './chips-stacked/chips-stacked-example';
 import { SelectFormExample } from './select-form/select-form-example';
+import { PaginatorOverviewExample } from './paginator-overview/paginator-overview-example';
 import { DatepickerOverviewExample } from './datepicker-overview/datepicker-overview-example';
+import { PaginatorConfigurableExample } from './paginator-configurable/paginator-configurable-example';
 import { InputOverviewExample } from './input-overview/input-overview-example';
 import { InputErrorsExample } from './input-errors/input-errors-example';
 import { InputFormExample } from './input-form/input-form-example';
@@ -178,6 +180,14 @@ export declare const EXAMPLE_COMPONENTS: {
     'menu-overview': {
         title: string;
         component: typeof MenuOverviewExample;
+    };
+    'paginator-overview': {
+        title: string;
+        component: typeof PaginatorOverviewExample;
+    };
+    'paginator-configurable': {
+        title: string;
+        component: typeof PaginatorConfigurableExample;
     };
     'progress-bar-configurable': {
         title: string;

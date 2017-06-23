@@ -1028,6 +1028,21 @@ SelectFormExample.decorators = [
  * @nocollapse
  */
 SelectFormExample.ctorParameters = function () { return []; };
+var PaginatorOverviewExample = (function () {
+    function PaginatorOverviewExample() {
+    }
+    return PaginatorOverviewExample;
+}());
+PaginatorOverviewExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'paginator-overview-example',
+                template: "<md-paginator [length]=\"100\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\" ]></md-paginator>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+PaginatorOverviewExample.ctorParameters = function () { return []; };
 var DatepickerOverviewExample = (function () {
     function DatepickerOverviewExample() {
     }
@@ -1044,6 +1059,32 @@ DatepickerOverviewExample.decorators = [
  * @nocollapse
  */
 DatepickerOverviewExample.ctorParameters = function () { return []; };
+var PaginatorConfigurableExample = (function () {
+    function PaginatorConfigurableExample() {
+        // MdPaginator Inputs
+        this.length = 100;
+        this.pageSize = 10;
+        this.pageSizeOptions = [5, 10, 25, 100];
+    }
+    /**
+     * @param {?} setPageSizeOptionsInput
+     * @return {?}
+     */
+    PaginatorConfigurableExample.prototype.setPageSizeOptions = function (setPageSizeOptionsInput) {
+        this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(function (str) { return +str; });
+    };
+    return PaginatorConfigurableExample;
+}());
+PaginatorConfigurableExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'paginator-configurable-example',
+                template: "<md-input-container>List length: <input mdInput [(ngModel)]=\"length\"></md-input-container><md-input-container>Page size: <input mdInput [(ngModel)]=\"pageSize\"></md-input-container><md-input-container>Page size options: <input mdInput [ngModel]=\"pageSizeOptions\" (ngModelChange)=\"setPageSizeOptions($event)\"></md-input-container><md-paginator [length]=\"length\" [pageSize]=\"pageSize\" [pageSizeOptions]=\"pageSizeOptions\" (page)=\"pageEvent = $event\"></md-paginator><div *ngIf=\"pageEvent\"><h2>Page Change Event Properties</h2><div>List length: {{pageEvent.length}}</div><div>Page size: {{pageEvent.pageSize}}</div><div>Page index: {{pageEvent.pageIndex}}</div></div>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+PaginatorConfigurableExample.ctorParameters = function () { return []; };
 var InputOverviewExample = (function () {
     function InputOverviewExample() {
     }
@@ -1180,6 +1221,11 @@ var EXAMPLE_COMPONENTS = {
     'list-sections': { title: 'List with sections', component: ListSectionsExample },
     'menu-icons': { title: 'Menu with icons', component: MenuIconsExample },
     'menu-overview': { title: 'Basic menu', component: MenuOverviewExample },
+    'paginator-overview': { title: 'Paginator', component: PaginatorOverviewExample },
+    'paginator-configurable': {
+        title: 'Configurable paginator',
+        component: PaginatorConfigurableExample
+    },
     'progress-bar-configurable': {
         title: 'Configurable progress-bar',
         component: ProgressBarConfigurableExample
@@ -1243,6 +1289,7 @@ ExampleMaterialModule.decorators = [
                     _angular_material.MdInputModule,
                     _angular_material.MdListModule,
                     _angular_material.MdMenuModule,
+                    _angular_material.MdPaginatorModule,
                     _angular_material.MdProgressBarModule,
                     _angular_material.MdProgressSpinnerModule,
                     _angular_material.MdRadioModule,
@@ -1297,6 +1344,7 @@ var EXAMPLE_LIST = [
     ListSectionsExample,
     MenuIconsExample,
     MenuOverviewExample,
+    PaginatorOverviewExample,
     ProgressBarConfigurableExample,
     ProgressBarOverviewExample,
     ProgressSpinnerConfigurableExample,
@@ -1424,30 +1472,32 @@ exports.ɵbb = ListOverviewExample;
 exports.ɵbc = ListSectionsExample;
 exports.ɵbd = MenuIconsExample;
 exports.ɵbe = MenuOverviewExample;
-exports.ɵbf = ProgressBarConfigurableExample;
-exports.ɵbg = ProgressBarOverviewExample;
-exports.ɵbh = ProgressSpinnerConfigurableExample;
-exports.ɵbi = ProgressSpinnerOverviewExample;
-exports.ɵbj = RadioNgModelExample;
-exports.ɵbk = RadioOverviewExample;
-exports.ɵbm = SelectFormExample;
-exports.ɵbl = SelectOverviewExample;
-exports.ɵbn = SidenavFabExample;
-exports.ɵbo = SidenavOverviewExample;
-exports.ɵbr = SlideToggleConfigurableExample;
-exports.ɵbs = SlideToggleFormsExample;
-exports.ɵbt = SlideToggleOverviewExample;
-exports.ɵbp = SliderConfigurableExample;
-exports.ɵbq = SliderOverviewExample;
-exports.ɵbv = PizzaPartyComponent;
-exports.ɵbu = SnackBarComponentExample;
-exports.ɵbw = SnackBarOverviewExample;
-exports.ɵbx = TabsOverviewExample;
-exports.ɵby = TabsTemplateLabelExample;
-exports.ɵbz = ToolbarMultirowExample;
-exports.ɵca = ToolbarOverviewExample;
-exports.ɵcb = TooltipOverviewExample;
-exports.ɵcc = TooltipPositionExample;
+exports.ɵbg = PaginatorConfigurableExample;
+exports.ɵbf = PaginatorOverviewExample;
+exports.ɵbh = ProgressBarConfigurableExample;
+exports.ɵbi = ProgressBarOverviewExample;
+exports.ɵbj = ProgressSpinnerConfigurableExample;
+exports.ɵbk = ProgressSpinnerOverviewExample;
+exports.ɵbl = RadioNgModelExample;
+exports.ɵbm = RadioOverviewExample;
+exports.ɵbo = SelectFormExample;
+exports.ɵbn = SelectOverviewExample;
+exports.ɵbp = SidenavFabExample;
+exports.ɵbq = SidenavOverviewExample;
+exports.ɵbt = SlideToggleConfigurableExample;
+exports.ɵbu = SlideToggleFormsExample;
+exports.ɵbv = SlideToggleOverviewExample;
+exports.ɵbr = SliderConfigurableExample;
+exports.ɵbs = SliderOverviewExample;
+exports.ɵbx = PizzaPartyComponent;
+exports.ɵbw = SnackBarComponentExample;
+exports.ɵby = SnackBarOverviewExample;
+exports.ɵbz = TabsOverviewExample;
+exports.ɵca = TabsTemplateLabelExample;
+exports.ɵcb = ToolbarMultirowExample;
+exports.ɵcc = ToolbarOverviewExample;
+exports.ɵcd = TooltipOverviewExample;
+exports.ɵce = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

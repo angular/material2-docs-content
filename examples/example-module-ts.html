@@ -15,8 +15,8 @@
   ProgressBarConfigurableExample
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-configurable/progress-bar-configurable-example'</span>;
 <span class="hljs-keyword">import</span> {
-  DialogOverviewExampleDialog,
-  DialogOverviewExample
+  DialogOverviewExample,
+  DialogOverviewExampleDialog
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-overview/dialog-overview-example'</span>;
 <span class="hljs-keyword">import</span> {RadioNgModelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./radio-ng-model/radio-ng-model-example'</span>;
 <span class="hljs-keyword">import</span> {CardFancyExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./card-fancy/card-fancy-example'</span>;
@@ -36,12 +36,12 @@
 <span class="hljs-keyword">import</span> {ListSectionsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./list-sections/list-sections-example'</span>;
 <span class="hljs-keyword">import</span> {SnackBarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./snack-bar-overview/snack-bar-overview-example'</span>;
 <span class="hljs-keyword">import</span> {
-  DialogResultExampleDialog,
-  DialogResultExample
+  DialogResultExample,
+  DialogResultExampleDialog
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-result/dialog-result-example'</span>;
 <span class="hljs-keyword">import</span> {
-  DialogElementsExampleDialog,
-  DialogElementsExample
+  DialogElementsExample,
+  DialogElementsExampleDialog
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-elements/dialog-elements-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-overview/tooltip-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ButtonToggleOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./button-toggle-overview/button-toggle-overview-example'</span>;
@@ -68,20 +68,22 @@
 <span class="hljs-keyword">import</span> {ChipsOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-overview/chips-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ChipsStackedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-stacked/chips-stacked-example'</span>;
 <span class="hljs-keyword">import</span> {SelectFormExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-form/select-form-example'</span>;
+<span class="hljs-keyword">import</span> {PaginatorOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./paginator-overview/paginator-overview-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-overview/datepicker-overview-example'</span>;
+<span class="hljs-keyword">import</span> {
+  PaginatorConfigurableExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./paginator-configurable/paginator-configurable-example'</span>;
 <span class="hljs-keyword">import</span> {InputOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-overview/input-overview-example'</span>;
 <span class="hljs-keyword">import</span> {InputErrorsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-errors/input-errors-example'</span>;
 <span class="hljs-keyword">import</span> {InputFormExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-form/input-form-example'</span>;
 <span class="hljs-keyword">import</span> {InputPrefixSuffixExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-prefix-suffix/input-prefix-suffix-example'</span>;
 <span class="hljs-keyword">import</span> {InputHintExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-hint/input-hint-example'</span>;
-
 <span class="hljs-keyword">import</span> {
   MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule,
   MdChipsModule, MdDatepickerModule, MdDialogModule, MdGridListModule, MdIconModule, MdInputModule,
-  MdListModule, MdMenuModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule,
-  MdSelectModule, MdSidenavModule, MdSliderModule, MdSlideToggleModule, MdSnackBarModule,
-  MdTabsModule,
-  MdToolbarModule, MdTooltipModule
+  MdListModule, MdMenuModule, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule,
+  MdRadioModule, MdSelectModule, MdSidenavModule, MdSliderModule, MdSlideToggleModule,
+  MdSnackBarModule, MdTabsModule, MdToolbarModule, MdTooltipModule
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> LiveExample {
@@ -143,6 +145,11 @@
   <span class="hljs-string">'list-sections'</span>: {title: <span class="hljs-string">'List with sections'</span>, component: ListSectionsExample},
   <span class="hljs-string">'menu-icons'</span>: {title: <span class="hljs-string">'Menu with icons'</span>, component: MenuIconsExample},
   <span class="hljs-string">'menu-overview'</span>: {title: <span class="hljs-string">'Basic menu'</span>, component: MenuOverviewExample},
+  <span class="hljs-string">'paginator-overview'</span>: {title: <span class="hljs-string">'Paginator'</span>, component: PaginatorOverviewExample},
+  <span class="hljs-string">'paginator-configurable'</span>: {
+    title: <span class="hljs-string">'Configurable paginator'</span>,
+    component: PaginatorConfigurableExample
+  },
   <span class="hljs-string">'progress-bar-configurable'</span>: {
     title: <span class="hljs-string">'Configurable progress-bar'</span>,
     component: ProgressBarConfigurableExample
@@ -201,6 +208,7 @@
     MdInputModule,
     MdListModule,
     MdMenuModule,
+    MdPaginatorModule,
     MdProgressBarModule,
     MdProgressSpinnerModule,
     MdRadioModule,
@@ -252,6 +260,7 @@
   ListSectionsExample,
   MenuIconsExample,
   MenuOverviewExample,
+  PaginatorOverviewExample,
   ProgressBarConfigurableExample,
   ProgressBarOverviewExample,
   ProgressSpinnerConfigurableExample,
