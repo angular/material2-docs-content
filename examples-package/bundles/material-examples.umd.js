@@ -6,10 +6,18 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/material'), require('@angular/platform-browser')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/material', '@angular/platform-browser'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.material,global.ng.platformBrowser));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_material,_angular_platformBrowser) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/material'), require('@angular/platform-browser')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/material', '@angular/platform-browser'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.material,global.ng.platformBrowser));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_material,_angular_platformBrowser) { 'use strict';
+
+var Observable_1 = require('../../Observable');
+var startWith_1 = require('../../operator/startWith');
+Observable_1.Observable.prototype.startWith = startWith_1.startWith;
+
+var Observable_1$1 = require('../../Observable');
+var map_1 = require('../../operator/map');
+Observable_1$1.Observable.prototype.map = map_1.map;
 
 var AutocompleteOverviewExample = (function () {
     function AutocompleteOverviewExample() {
