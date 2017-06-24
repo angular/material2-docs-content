@@ -1266,6 +1266,7 @@ const EXAMPLE_LIST = [
     MenuIconsExample,
     MenuOverviewExample,
     PaginatorOverviewExample,
+    PaginatorConfigurableExample,
     ProgressBarConfigurableExample,
     ProgressBarOverviewExample,
     ProgressSpinnerConfigurableExample,
