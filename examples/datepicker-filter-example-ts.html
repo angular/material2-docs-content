@@ -1,0 +1,14 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'datepicker-filter-example'</span>,
+  templateUrl: <span class="hljs-string">'datepicker-filter-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'datepicker-filter-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatepickerFilterExample {
+  myFilter = (d: <span class="hljs-built_in">Date</span>): <span class="hljs-function"><span class="hljs-params">boolean</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> day = d.getDay();
+    <span class="hljs-comment">// Prevent Saturday and Sunday from being selected.</span>
+    <span class="hljs-keyword">return</span> day !== <span class="hljs-number">0</span> &amp;&amp; day !== <span class="hljs-number">6</span>;
+  }
+}

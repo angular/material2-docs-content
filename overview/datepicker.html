@@ -1,6 +1,6 @@
 <html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The datepicker allows users to enter a date either through text input, or by choosing a date from
 the calendar. It is made up of several components and directives that work together:</p>
-<!-- TODO: INSERT OVERVIEW EXAMPLE HERE -->
+<div material-docs-example="datepicker-overview"></div>
 <h3 id="current-state" class="docs-markdown-h3">Current state</h3>
 <p class="docs-markdown-p">Currently the datepicker is in the beginning stages and supports basic date selection functionality.
 There are many more features that will be added in future iterations, including:</p>
@@ -39,17 +39,14 @@ currently selected, if so it will open to the month or year containing that date
 open to the month or year containing today's date. This behavior can be overridden by using the
 <code class="docs-markdown-code">startAt</code> property of <code class="docs-markdown-code">md-datepicker</code>. In this case the calendar will open to the month or year
 containing the <code class="docs-markdown-code">startAt</code> date.</p>
-<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">startDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">1990</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
-</code></pre>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code">...
-<span class="hljs-tag">&lt;<span class="hljs-name">md-datepicker</span> <span class="hljs-attr">startView</span>=<span class="hljs-string">"year"</span> [<span class="hljs-attr">startAt</span>]=<span class="hljs-string">"startDate"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-datepicker</span>&gt;</span>
-</code></pre>
+<div material-docs-example="datepicker-start-view"></div>
 <h3 id="date-validation" class="docs-markdown-h3">Date validation</h3>
 <p class="docs-markdown-p">There are three properties that add date validation to the datepicker input. The first two are the
 <code class="docs-markdown-code">min</code> and <code class="docs-markdown-code">max</code> properties. In addition to enforcing validation on the input, these properties will
 disable all dates on the calendar popup before or after the respective values and prevent the user
 from advancing the calendar past the <code class="docs-markdown-code">month</code> or <code class="docs-markdown-code">year</code> (depending on current view) containing the
 <code class="docs-markdown-code">min</code> or <code class="docs-markdown-code">max</code> date.</p>
+<div material-docs-example="datepicker-min-max"></div>
 <p class="docs-markdown-p">The second way to add date validation is using the <code class="docs-markdown-code">mdDatepickerFilter</code> property of the datepicker
 input. This property accepts a function of <code class="docs-markdown-code">&lt;D&gt; =&gt; boolean</code> (where <code class="docs-markdown-code">&lt;D&gt;</code> is the date type used by
 the datepicker, see section on
@@ -59,13 +56,7 @@ not. Again this will also disable the dates on the calendar that are invalid. Ho
 difference between using <code class="docs-markdown-code">mdDatepickerFilter</code> vs using <code class="docs-markdown-code">min</code> or <code class="docs-markdown-code">max</code> is that filtering out all
 dates before or after a certain point, will not prevent the user from advancing the calendar past
 that point.</p>
-<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">myFilter = <span class="hljs-function">(<span class="hljs-params">d: <span class="hljs-built_in">Date</span></span>) =&gt;</span> d.getFullYear() &gt; <span class="hljs-number">2005</span>
-minDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2000</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
-maxDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2020</span>, <span class="hljs-number">11</span>, <span class="hljs-number">31</span>);
-</code></pre>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">mdDatepicker</span>]=<span class="hljs-string">"d"</span> [<span class="hljs-attr">mdDatepickerFilter</span>]=<span class="hljs-string">"myFilter"</span> [<span class="hljs-attr">min</span>]=<span class="hljs-string">"minDate"</span> [<span class="hljs-attr">max</span>]=<span class="hljs-string">"maxDate"</span> <span class="hljs-attr">ngModel</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">md-datepicker</span> #<span class="hljs-attr">d</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-datepicker</span>&gt;</span>
-</code></pre>
+<div material-docs-example="datepicker-filter"></div>
 <p class="docs-markdown-p">In this example the user can back past 2005, but all of the dates before then will be unselectable.
 They will not be able to go further back in the calendar than 2000. If they manually type in a date
 that is before the min, after the max, or filtered out, the input will have validation errors.</p>
@@ -80,18 +71,11 @@ that is before the min, after the max, or filtered out, the input will have vali
 devices that don't have as much screen real estate and need bigger click targets. For this reason
 <code class="docs-markdown-code">md-datepicker</code> has a <code class="docs-markdown-code">touchUi</code> property that can be set to <code class="docs-markdown-code">true</code> in order to enable a more touch
 friendly UI where the calendar opens in a large dialog.</p>
+<div material-docs-example="datepicker-touch"></div>
 <h3 id="manually-opening-and-closing-the-calendar" class="docs-markdown-h3">Manually opening and closing the calendar</h3>
 <p class="docs-markdown-p">The calendar popup can be programmatically controlled using the <code class="docs-markdown-code">open</code> and <code class="docs-markdown-code">close</code> methods on the
 <code class="docs-markdown-code">md-datepicker</code>. It also has an <code class="docs-markdown-code">opened</code> property that reflects the status of the popup.</p>
-<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({...})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyComponent <span class="hljs-keyword">implements</span> AfterViewInit {
-  <span class="hljs-meta">@ViewChild</span>(MdDatepicker) dp: MdDatepicker&lt;<span class="hljs-built_in">Date</span>&gt;;
-
-  ngAfterViewInit() {
-    dp.open();
-  }
-}
-</code></pre>
+<div material-docs-example="datepicker-api"></div>
 <h3 id="internationalization" class="docs-markdown-h3">Internationalization</h3>
 <p class="docs-markdown-p">In order to support internationalization, the datepicker supports customization of the following
 three pieces via injection:</p>

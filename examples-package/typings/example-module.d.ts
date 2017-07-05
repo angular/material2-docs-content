@@ -51,6 +51,11 @@ import { InputErrorsExample } from './input-errors/input-errors-example';
 import { InputFormExample } from './input-form/input-form-example';
 import { InputPrefixSuffixExample } from './input-prefix-suffix/input-prefix-suffix-example';
 import { InputHintExample } from './input-hint/input-hint-example';
+import { DatepickerStartViewExample } from './datepicker-start-view/datepicker-start-view-example';
+import { DatepickerMinMaxExample } from './datepicker-min-max/datepicker-min-max-example';
+import { DatepickerFilterExample } from './datepicker-filter/datepicker-filter-example';
+import { DatepickerTouchExample } from './datepicker-touch/datepicker-touch-example';
+import { DatepickerApiExample } from './datepicker-api/datepicker-api-example';
 export interface LiveExample {
     title: string;
     component: any;
@@ -110,6 +115,26 @@ export declare const EXAMPLE_COMPONENTS: {
     'datepicker-overview': {
         title: string;
         component: typeof DatepickerOverviewExample;
+    };
+    'datepicker-start-view': {
+        title: string;
+        component: typeof DatepickerStartViewExample;
+    };
+    'datepicker-min-max': {
+        title: string;
+        component: typeof DatepickerMinMaxExample;
+    };
+    'datepicker-filter': {
+        title: string;
+        component: typeof DatepickerFilterExample;
+    };
+    'datepicker-touch': {
+        title: string;
+        component: typeof DatepickerTouchExample;
+    };
+    'datepicker-api': {
+        title: string;
+        component: typeof DatepickerApiExample;
     };
     'dialog-overview': {
         title: string;

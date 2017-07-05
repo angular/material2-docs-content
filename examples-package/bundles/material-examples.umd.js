@@ -1177,6 +1177,94 @@ InputHintExample.decorators = [
  * @nocollapse
  */
 InputHintExample.ctorParameters = function () { return []; };
+var DatepickerStartViewExample = (function () {
+    function DatepickerStartViewExample() {
+        this.startDate = new Date(1990, 0, 1);
+    }
+    return DatepickerStartViewExample;
+}());
+DatepickerStartViewExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'datepicker-start-view-example',
+                template: "<md-input-container><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker #picker startView=\"year\" [startAt]=\"startDate\"></md-datepicker>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerStartViewExample.ctorParameters = function () { return []; };
+var DatepickerMinMaxExample = (function () {
+    function DatepickerMinMaxExample() {
+        this.minDate = new Date(2000, 0, 1);
+        this.maxDate = new Date(2020, 0, 1);
+    }
+    return DatepickerMinMaxExample;
+}());
+DatepickerMinMaxExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'datepicker-min-max-example',
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [min]=\"minDate\" [max]=\"maxDate\" [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker #picker></md-datepicker>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerMinMaxExample.ctorParameters = function () { return []; };
+var DatepickerFilterExample = (function () {
+    function DatepickerFilterExample() {
+        this.myFilter = function (d) {
+            var /** @type {?} */ day = d.getDay();
+            // Prevent Saturday and Sunday from being selected.
+            return day !== 0 && day !== 6;
+        };
+    }
+    return DatepickerFilterExample;
+}());
+DatepickerFilterExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'datepicker-filter-example',
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [mdDatepickerFilter]=\"myFilter\" [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker #picker></md-datepicker>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerFilterExample.ctorParameters = function () { return []; };
+var DatepickerTouchExample = (function () {
+    function DatepickerTouchExample() {
+    }
+    return DatepickerTouchExample;
+}());
+DatepickerTouchExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'datepicker-touch-example',
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker touchUi=\"true\" #picker></md-datepicker>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerTouchExample.ctorParameters = function () { return []; };
+var DatepickerApiExample = (function () {
+    function DatepickerApiExample() {
+    }
+    return DatepickerApiExample;
+}());
+DatepickerApiExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'datepicker-api-example',
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"></md-input-container><md-datepicker #picker></md-datepicker><button md-raised-button (click)=\"picker.open()\">Open</button>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerApiExample.ctorParameters = function () { return []; };
 /**
  * The list of example components.
  * Key is the example name which will be used in `material-docs-example="key"`.
@@ -1198,6 +1286,11 @@ var EXAMPLE_COMPONENTS = {
     'checkbox-configurable': { title: 'Configurable checkbox', component: CheckboxConfigurableExample },
     'checkbox-overview': { title: 'Basic checkboxes', component: CheckboxOverviewExample },
     'datepicker-overview': { title: 'Basic datepicker', component: DatepickerOverviewExample },
+    'datepicker-start-view': { title: 'Start View', component: DatepickerStartViewExample },
+    'datepicker-min-max': { title: 'Min/Max Validation', component: DatepickerMinMaxExample },
+    'datepicker-filter': { title: 'Filter Validation', component: DatepickerFilterExample },
+    'datepicker-touch': { title: 'Touch', component: DatepickerTouchExample },
+    'datepicker-api': { title: 'API', component: DatepickerApiExample },
     'dialog-overview': {
         title: 'Basic dialog',
         component: DialogOverviewExample,
@@ -1333,6 +1426,11 @@ var EXAMPLE_LIST = [
     CheckboxConfigurableExample,
     CheckboxOverviewExample,
     DatepickerOverviewExample,
+    DatepickerStartViewExample,
+    DatepickerMinMaxExample,
+    DatepickerFilterExample,
+    DatepickerTouchExample,
+    DatepickerApiExample,
     DialogOverviewExample,
     DialogOverviewExampleDialog,
     DialogResultExample,
@@ -1461,52 +1559,57 @@ exports.ɵj = CheckboxConfigurableExample;
 exports.ɵk = CheckboxOverviewExample;
 exports.ɵf = ChipsOverviewExample;
 exports.ɵg = ChipsStackedExample;
+exports.ɵq = DatepickerApiExample;
+exports.ɵo = DatepickerFilterExample;
+exports.ɵn = DatepickerMinMaxExample;
 exports.ɵl = DatepickerOverviewExample;
-exports.ɵq = DialogElementsExample;
-exports.ɵr = DialogElementsExampleDialog;
-exports.ɵm = DialogOverviewExample;
-exports.ɵn = DialogOverviewExampleDialog;
-exports.ɵo = DialogResultExample;
-exports.ɵp = DialogResultExampleDialog;
-exports.ɵs = GridListDynamicExample;
-exports.ɵt = GridListOverviewExample;
-exports.ɵu = IconOverviewExample;
-exports.ɵv = IconSvgExample;
-exports.ɵy = InputErrorsExample;
-exports.ɵw = InputFormExample;
-exports.ɵba = InputHintExample;
-exports.ɵx = InputOverviewExample;
-exports.ɵz = InputPrefixSuffixExample;
-exports.ɵbb = ListOverviewExample;
-exports.ɵbc = ListSectionsExample;
-exports.ɵbd = MenuIconsExample;
-exports.ɵbe = MenuOverviewExample;
-exports.ɵbg = PaginatorConfigurableExample;
-exports.ɵbf = PaginatorOverviewExample;
-exports.ɵbh = ProgressBarConfigurableExample;
-exports.ɵbi = ProgressBarOverviewExample;
-exports.ɵbj = ProgressSpinnerConfigurableExample;
-exports.ɵbk = ProgressSpinnerOverviewExample;
-exports.ɵbl = RadioNgModelExample;
-exports.ɵbm = RadioOverviewExample;
-exports.ɵbo = SelectFormExample;
-exports.ɵbn = SelectOverviewExample;
-exports.ɵbp = SidenavFabExample;
-exports.ɵbq = SidenavOverviewExample;
-exports.ɵbt = SlideToggleConfigurableExample;
-exports.ɵbu = SlideToggleFormsExample;
-exports.ɵbv = SlideToggleOverviewExample;
-exports.ɵbr = SliderConfigurableExample;
-exports.ɵbs = SliderOverviewExample;
-exports.ɵbx = PizzaPartyComponent;
-exports.ɵbw = SnackBarComponentExample;
-exports.ɵby = SnackBarOverviewExample;
-exports.ɵbz = TabsOverviewExample;
-exports.ɵca = TabsTemplateLabelExample;
-exports.ɵcb = ToolbarMultirowExample;
-exports.ɵcc = ToolbarOverviewExample;
-exports.ɵcd = TooltipOverviewExample;
-exports.ɵce = TooltipPositionExample;
+exports.ɵm = DatepickerStartViewExample;
+exports.ɵp = DatepickerTouchExample;
+exports.ɵv = DialogElementsExample;
+exports.ɵw = DialogElementsExampleDialog;
+exports.ɵr = DialogOverviewExample;
+exports.ɵs = DialogOverviewExampleDialog;
+exports.ɵt = DialogResultExample;
+exports.ɵu = DialogResultExampleDialog;
+exports.ɵx = GridListDynamicExample;
+exports.ɵy = GridListOverviewExample;
+exports.ɵz = IconOverviewExample;
+exports.ɵba = IconSvgExample;
+exports.ɵbd = InputErrorsExample;
+exports.ɵbb = InputFormExample;
+exports.ɵbf = InputHintExample;
+exports.ɵbc = InputOverviewExample;
+exports.ɵbe = InputPrefixSuffixExample;
+exports.ɵbg = ListOverviewExample;
+exports.ɵbh = ListSectionsExample;
+exports.ɵbi = MenuIconsExample;
+exports.ɵbj = MenuOverviewExample;
+exports.ɵbl = PaginatorConfigurableExample;
+exports.ɵbk = PaginatorOverviewExample;
+exports.ɵbm = ProgressBarConfigurableExample;
+exports.ɵbn = ProgressBarOverviewExample;
+exports.ɵbo = ProgressSpinnerConfigurableExample;
+exports.ɵbp = ProgressSpinnerOverviewExample;
+exports.ɵbq = RadioNgModelExample;
+exports.ɵbr = RadioOverviewExample;
+exports.ɵbt = SelectFormExample;
+exports.ɵbs = SelectOverviewExample;
+exports.ɵbu = SidenavFabExample;
+exports.ɵbv = SidenavOverviewExample;
+exports.ɵby = SlideToggleConfigurableExample;
+exports.ɵbz = SlideToggleFormsExample;
+exports.ɵca = SlideToggleOverviewExample;
+exports.ɵbw = SliderConfigurableExample;
+exports.ɵbx = SliderOverviewExample;
+exports.ɵcc = PizzaPartyComponent;
+exports.ɵcb = SnackBarComponentExample;
+exports.ɵcd = SnackBarOverviewExample;
+exports.ɵce = TabsOverviewExample;
+exports.ɵcf = TabsTemplateLabelExample;
+exports.ɵcg = ToolbarMultirowExample;
+exports.ɵch = ToolbarOverviewExample;
+exports.ɵci = TooltipOverviewExample;
+exports.ɵcj = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

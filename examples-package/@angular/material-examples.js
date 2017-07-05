@@ -1093,6 +1093,90 @@ InputHintExample.decorators = [
  */
 InputHintExample.ctorParameters = () => [];
 
+class DatepickerStartViewExample {
+    constructor() {
+        this.startDate = new Date(1990, 0, 1);
+    }
+}
+DatepickerStartViewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-start-view-example',
+                template: "<md-input-container><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker #picker startView=\"year\" [startAt]=\"startDate\"></md-datepicker>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerStartViewExample.ctorParameters = () => [];
+
+class DatepickerMinMaxExample {
+    constructor() {
+        this.minDate = new Date(2000, 0, 1);
+        this.maxDate = new Date(2020, 0, 1);
+    }
+}
+DatepickerMinMaxExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-min-max-example',
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [min]=\"minDate\" [max]=\"maxDate\" [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker #picker></md-datepicker>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerMinMaxExample.ctorParameters = () => [];
+
+class DatepickerFilterExample {
+    constructor() {
+        this.myFilter = (d) => {
+            const /** @type {?} */ day = d.getDay();
+            // Prevent Saturday and Sunday from being selected.
+            return day !== 0 && day !== 6;
+        };
+    }
+}
+DatepickerFilterExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-filter-example',
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [mdDatepickerFilter]=\"myFilter\" [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker #picker></md-datepicker>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerFilterExample.ctorParameters = () => [];
+
+class DatepickerTouchExample {
+}
+DatepickerTouchExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-touch-example',
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker touchUi=\"true\" #picker></md-datepicker>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerTouchExample.ctorParameters = () => [];
+
+class DatepickerApiExample {
+}
+DatepickerApiExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-api-example',
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"></md-input-container><md-datepicker #picker></md-datepicker><button md-raised-button (click)=\"picker.open()\">Open</button>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerApiExample.ctorParameters = () => [];
+
 /**
  * The list of example components.
  * Key is the example name which will be used in `material-docs-example="key"`.
@@ -1114,6 +1198,11 @@ const EXAMPLE_COMPONENTS = {
     'checkbox-configurable': { title: 'Configurable checkbox', component: CheckboxConfigurableExample },
     'checkbox-overview': { title: 'Basic checkboxes', component: CheckboxOverviewExample },
     'datepicker-overview': { title: 'Basic datepicker', component: DatepickerOverviewExample },
+    'datepicker-start-view': { title: 'Start View', component: DatepickerStartViewExample },
+    'datepicker-min-max': { title: 'Min/Max Validation', component: DatepickerMinMaxExample },
+    'datepicker-filter': { title: 'Filter Validation', component: DatepickerFilterExample },
+    'datepicker-touch': { title: 'Touch', component: DatepickerTouchExample },
+    'datepicker-api': { title: 'API', component: DatepickerApiExample },
     'dialog-overview': {
         title: 'Basic dialog',
         component: DialogOverviewExample,
@@ -1246,6 +1335,11 @@ const EXAMPLE_LIST = [
     CheckboxConfigurableExample,
     CheckboxOverviewExample,
     DatepickerOverviewExample,
+    DatepickerStartViewExample,
+    DatepickerMinMaxExample,
+    DatepickerFilterExample,
+    DatepickerTouchExample,
+    DatepickerApiExample,
     DialogOverviewExample,
     DialogOverviewExampleDialog,
     DialogResultExample,
@@ -1359,5 +1453,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerOverviewExample as ɵl, DialogElementsExample as ɵq, DialogElementsExampleDialog as ɵr, DialogOverviewExample as ɵm, DialogOverviewExampleDialog as ɵn, DialogResultExample as ɵo, DialogResultExampleDialog as ɵp, GridListDynamicExample as ɵs, GridListOverviewExample as ɵt, IconOverviewExample as ɵu, IconSvgExample as ɵv, InputErrorsExample as ɵy, InputFormExample as ɵw, InputHintExample as ɵba, InputOverviewExample as ɵx, InputPrefixSuffixExample as ɵz, ListOverviewExample as ɵbb, ListSectionsExample as ɵbc, MenuIconsExample as ɵbd, MenuOverviewExample as ɵbe, PaginatorConfigurableExample as ɵbg, PaginatorOverviewExample as ɵbf, ProgressBarConfigurableExample as ɵbh, ProgressBarOverviewExample as ɵbi, ProgressSpinnerConfigurableExample as ɵbj, ProgressSpinnerOverviewExample as ɵbk, RadioNgModelExample as ɵbl, RadioOverviewExample as ɵbm, SelectFormExample as ɵbo, SelectOverviewExample as ɵbn, SidenavFabExample as ɵbp, SidenavOverviewExample as ɵbq, SlideToggleConfigurableExample as ɵbt, SlideToggleFormsExample as ɵbu, SlideToggleOverviewExample as ɵbv, SliderConfigurableExample as ɵbr, SliderOverviewExample as ɵbs, PizzaPartyComponent as ɵbx, SnackBarComponentExample as ɵbw, SnackBarOverviewExample as ɵby, TabsOverviewExample as ɵbz, TabsTemplateLabelExample as ɵca, ToolbarMultirowExample as ɵcb, ToolbarOverviewExample as ɵcc, TooltipOverviewExample as ɵcd, TooltipPositionExample as ɵce };
+export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerApiExample as ɵq, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵn, DatepickerOverviewExample as ɵl, DatepickerStartViewExample as ɵm, DatepickerTouchExample as ɵp, DialogElementsExample as ɵv, DialogElementsExampleDialog as ɵw, DialogOverviewExample as ɵr, DialogOverviewExampleDialog as ɵs, DialogResultExample as ɵt, DialogResultExampleDialog as ɵu, GridListDynamicExample as ɵx, GridListOverviewExample as ɵy, IconOverviewExample as ɵz, IconSvgExample as ɵba, InputErrorsExample as ɵbd, InputFormExample as ɵbb, InputHintExample as ɵbf, InputOverviewExample as ɵbc, InputPrefixSuffixExample as ɵbe, ListOverviewExample as ɵbg, ListSectionsExample as ɵbh, MenuIconsExample as ɵbi, MenuOverviewExample as ɵbj, PaginatorConfigurableExample as ɵbl, PaginatorOverviewExample as ɵbk, ProgressBarConfigurableExample as ɵbm, ProgressBarOverviewExample as ɵbn, ProgressSpinnerConfigurableExample as ɵbo, ProgressSpinnerOverviewExample as ɵbp, RadioNgModelExample as ɵbq, RadioOverviewExample as ɵbr, SelectFormExample as ɵbt, SelectOverviewExample as ɵbs, SidenavFabExample as ɵbu, SidenavOverviewExample as ɵbv, SlideToggleConfigurableExample as ɵby, SlideToggleFormsExample as ɵbz, SlideToggleOverviewExample as ɵca, SliderConfigurableExample as ɵbw, SliderOverviewExample as ɵbx, PizzaPartyComponent as ɵcc, SnackBarComponentExample as ɵcb, SnackBarOverviewExample as ɵcd, TabsOverviewExample as ɵce, TabsTemplateLabelExample as ɵcf, ToolbarMultirowExample as ɵcg, ToolbarOverviewExample as ɵch, TooltipOverviewExample as ɵci, TooltipPositionExample as ɵcj };
 //# sourceMappingURL=material-examples.js.map
