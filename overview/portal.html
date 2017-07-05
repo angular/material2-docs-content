@@ -1,0 +1,86 @@
+<html><head></head><body><div class="docs-markdown"><h3 id="portals" class="docs-markdown-h3">Portals</h3>
+<p class="docs-markdown-p">A <code class="docs-markdown-code">Portal</code>is a piece of UI that can be dynamically rendered to an open slot on the page.</p>
+<p class="docs-markdown-p">The "piece of UI" can be either a <code class="docs-markdown-code">Component</code> or a <code class="docs-markdown-code">TemplateRef</code> and the "open slot" is 
+a <code class="docs-markdown-code">PortalHost</code>.</p>
+<p class="docs-markdown-p">Portals and PortalHosts are low-level building blocks that other concepts, such as overlays, are
+built upon.</p>
+<h5 id="-portal-t-" class="docs-markdown-h5"><code class="docs-markdown-code">Portal&lt;T&gt;</code></h5>
+<table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Method</th>
+<th class="docs-markdown-th">Description</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">attach(PortalHost): Promise&lt;T&gt;</code></td>
+<td class="docs-markdown-td">Attaches the portal to a host.</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">detach(): Promise&lt;void&gt;</code></td>
+<td class="docs-markdown-td">Detaches the portal from its host.</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">isAttached: boolean</code></td>
+<td class="docs-markdown-td">Whether the portal is attached.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-portalhost-" class="docs-markdown-h5"><code class="docs-markdown-code">PortalHost</code></h5>
+<table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Method</th>
+<th class="docs-markdown-th">Description</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">attach(Portal): Promise&lt;void&gt;</code></td>
+<td class="docs-markdown-td">Attaches a portal to the host.</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">detach(): Promise&lt;void&gt;</code></td>
+<td class="docs-markdown-td">Detaches the portal from the host.</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">dispose(): Promise&lt;void&gt;</code></td>
+<td class="docs-markdown-td">Permanently dispose the host.</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">hasAttached: boolean</code></td>
+<td class="docs-markdown-td">Whether a portal is attached to the host.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="portals-in-practice" class="docs-markdown-h4">Portals in practice</h4>
+<h5 id="-templateportaldirective-" class="docs-markdown-h5"><code class="docs-markdown-code">TemplatePortalDirective</code></h5>
+<p class="docs-markdown-p">Used to get a portal from an <code class="docs-markdown-code">&lt;ng-template&gt;</code>. <code class="docs-markdown-code">TemplatePortalDirectives</code> <em>is</em> a <code class="docs-markdown-code">Portal</code>.</p>
+<p class="docs-markdown-p">Usage:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">cdk-portal</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The content of this template is captured by the portal.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- OR --&gt;</span>
+
+<span class="hljs-comment">&lt;!-- This result here is identical to the syntax above --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> *<span class="hljs-attr">cdkPortal</span>&gt;</span>
+  The content of this template is captured by the portal.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">A component can use <code class="docs-markdown-code">@ViewChild</code> or <code class="docs-markdown-code">@ViewChildren</code> to get a reference to a
+<code class="docs-markdown-code">TemplatePortalDirective</code>.</p>
+<h5 id="-componentportal-" class="docs-markdown-h5"><code class="docs-markdown-code">ComponentPortal</code></h5>
+<p class="docs-markdown-p">Used to create a portal from a component type. When a component is dynamically created using
+portals, it must be included in the <code class="docs-markdown-code">entryComponents</code> of its <code class="docs-markdown-code">NgModule</code>.</p>
+<p class="docs-markdown-p">Usage:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">this</span>.userSettingsPortal = <span class="hljs-keyword">new</span> ComponentPortal(UserSettingsComponent);
+</code></pre>
+<h5 id="-portalhostdirective-" class="docs-markdown-h5"><code class="docs-markdown-code">PortalHostDirective</code></h5>
+<p class="docs-markdown-p">Used to add a portal host to a template. <code class="docs-markdown-code">PortalHostDirective</code> <em>is</em> a <code class="docs-markdown-code">PortalHost</code>.</p>
+<p class="docs-markdown-p">Usage:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- Attaches the `userSettingsPortal` from the previous example. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">cdkPortalHost</span>]=<span class="hljs-string">"userSettingsPortal"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+</code></pre>
+</div></body></html>

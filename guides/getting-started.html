@@ -1,8 +1,8 @@
 <html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">For help getting started with a new Angular app, check out the
 <a href="https://cli.angular.io/" class="docs-markdown-a">Angular CLI</a>.</p>
 <p class="docs-markdown-p">For existing apps, follow these steps to begin using Angular Material.</p>
-<h2 id="step-1-install-angular-material" class="docs-markdown-h2">Step 1: Install Angular Material</h2>
-<pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code">npm install --save @angular/material
+<h2 id="step-1-install-angular-material-and-angular-cdk" class="docs-markdown-h2">Step 1: Install Angular Material and Angular CDK</h2>
+<pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code">npm install --save @angular/material @angular/cdk
 </code></pre>
 <h2 id="step-2-animations" class="docs-markdown-h2">Step 2: Animations</h2>
 <p class="docs-markdown-p">Some Material components depend on the Angular animations module in order to be able to do
@@ -55,10 +55,12 @@ include this module wherever you'd like to use the components.</p>
 <code class="docs-markdown-code">BrowserModule</code>, as the import order matters for NgModules.</p>
 <h2 id="step-4-include-a-theme" class="docs-markdown-h2">Step 4: Include a theme</h2>
 <p class="docs-markdown-p">Including a theme is <strong>required</strong> to apply all of the core and theme styles to your application.</p>
-<p class="docs-markdown-p">To get started with a prebuilt theme, include the following in your app's index.html:</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
+<p class="docs-markdown-p">To get started with a prebuilt theme, include one of Angular Material's prebuilt themes globally
+in your application. If you're using the Angular CLI, you can add this to your <code class="docs-markdown-code">styles.css</code>:</p>
+<pre class="docs-markdown-pre"><code class="lang-css docs-markdown-code">@<span class="hljs-keyword">import</span> <span class="hljs-string">"~@angular/material/prebuilt-themes/indigo-pink.css"</span>;
 </code></pre>
-<p class="docs-markdown-p">Note that your app's project structure may have a different relative location for your node_modules.</p>
+<p class="docs-markdown-p">If you are not using the Angular CLI, you can include a prebuilt theme via a <code class="docs-markdown-code">&lt;link&gt;</code> element in
+your <code class="docs-markdown-code">index.html</code>.</p>
 <p class="docs-markdown-p">For more information on theming and instructions on how to create a custom theme, see the
 <a href="guide/theming" class="docs-markdown-a">theming guide</a>.</p>
 <h2 id="step-5-gesture-support" class="docs-markdown-h2">Step 5: Gesture Support</h2>
@@ -94,9 +96,9 @@ to the SystemJS configuration:</p>
   }
 });
 </code></pre>
-<h2 id="sample-angular-material-projects" class="docs-markdown-h2">Sample Angular Material projects</h2>
+<h2 id="example-angular-material-projects" class="docs-markdown-h2">Example Angular Material projects</h2>
 <ul class="docs-markdown-ul">
-<li class="docs-markdown-li"><a href="https://github.com/jelbourn/material2-app" class="docs-markdown-a">Material Sample App</a></li>
-<li class="docs-markdown-li"><a href="https://github.com/kara/leashed-in" class="docs-markdown-a">Angular Connect 2016 Demo</a></li>
+<li class="docs-markdown-li"><a href="https://material.angular.io" class="docs-markdown-a">material.angular.io</a> -
+We build our own documentation with Angular Material!</li>
 </ul>
 </div></body></html>
