@@ -89,8 +89,15 @@
   MdChipsModule, MdDatepickerModule, MdDialogModule, MdGridListModule, MdIconModule, MdInputModule,
   MdListModule, MdMenuModule, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule,
   MdRadioModule, MdSelectModule, MdSidenavModule, MdSliderModule, MdSlideToggleModule,
-  MdSnackBarModule, MdTabsModule, MdToolbarModule, MdTooltipModule
+  MdSnackBarModule, MdSortModule, MdTableModule, MdTabsModule, MdToolbarModule, MdTooltipModule
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {CdkTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk'</span>;
+<span class="hljs-keyword">import</span> {TableOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-overview/table-overview-example'</span>;
+<span class="hljs-keyword">import</span> {TablePaginationExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-pagination/table-pagination-example'</span>;
+<span class="hljs-keyword">import</span> {TableBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-basic/table-basic-example'</span>;
+<span class="hljs-keyword">import</span> {TableSortingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sorting/table-sorting-example'</span>;
+<span class="hljs-keyword">import</span> {TableFilteringExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-filtering/table-filtering-example'</span>;
+<span class="hljs-keyword">import</span> {CdkTableBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-table-basic/cdk-table-basic-example'</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> LiveExample {
   title: <span class="hljs-built_in">string</span>;
@@ -114,6 +121,7 @@
   },
   <span class="hljs-string">'button-toggle-overview'</span>: {title: <span class="hljs-string">'Basic button-toggles'</span>, component: ButtonToggleOverviewExample},
   <span class="hljs-string">'chips-overview'</span>: {title: <span class="hljs-string">'Basic chips'</span>, component: ChipsOverviewExample},
+  <span class="hljs-string">'cdk-table-basic'</span>: {title: <span class="hljs-string">'Basic CDK data-table'</span>, component: CdkTableBasicExample},
   <span class="hljs-string">'chips-stacked'</span>: {title: <span class="hljs-string">'Stacked chips'</span>, component: ChipsStackedExample},
   <span class="hljs-string">'card-fancy'</span>: {title: <span class="hljs-string">'Card with multiple sections'</span>, component: CardFancyExample},
   <span class="hljs-string">'card-overview'</span>: {title: <span class="hljs-string">'Basic cards'</span>, component: CardOverviewExample},
@@ -194,6 +202,11 @@
     component: SnackBarComponentExample
   },
   <span class="hljs-string">'snack-bar-overview'</span>: {title: <span class="hljs-string">'Basic snack-bar'</span>, component: SnackBarOverviewExample},
+  <span class="hljs-string">'table-overview'</span>: {title: <span class="hljs-string">'Feature-rich data table'</span>, component: TableOverviewExample},
+  <span class="hljs-string">'table-pagination'</span>: {title: <span class="hljs-string">'Table with pagination'</span>, component: TablePaginationExample},
+  <span class="hljs-string">'table-sorting'</span>: {title: <span class="hljs-string">'Table with sorting'</span>, component: TableSortingExample},
+  <span class="hljs-string">'table-filtering'</span>: {title: <span class="hljs-string">'Table with filtering'</span>, component: TableFilteringExample},
+  <span class="hljs-string">'table-basic'</span>: {title: <span class="hljs-string">'Basic table'</span>, component: TableBasicExample},
   <span class="hljs-string">'tabs-overview'</span>: {title: <span class="hljs-string">'Basic tabs'</span>, component: TabsOverviewExample},
   <span class="hljs-string">'tabs-template-label'</span>: {title: <span class="hljs-string">'Coming soon!'</span>, component: TabsTemplateLabelExample},
   <span class="hljs-string">'toolbar-multirow'</span>: {title: <span class="hljs-string">'Multi-row toolbar'</span>, component: ToolbarMultirowExample},
@@ -207,6 +220,7 @@
  */</span>
 <span class="hljs-meta">@NgModule</span>({
   exports: [
+    CdkTableModule,
     MdAutocompleteModule,
     MdButtonModule,
     MdButtonToggleModule,
@@ -224,11 +238,13 @@
     MdProgressBarModule,
     MdProgressSpinnerModule,
     MdRadioModule,
+    MdSortModule,
     MdSelectModule,
     MdSlideToggleModule,
     MdSliderModule,
     MdSidenavModule,
     MdSnackBarModule,
+    MdTableModule,
     MdTabsModule,
     MdToolbarModule,
     MdTooltipModule
@@ -248,6 +264,7 @@
   ButtonTypesExample,
   CardFancyExample,
   CardOverviewExample,
+  CdkTableBasicExample,
   ChipsOverviewExample,
   ChipsStackedExample,
   CheckboxConfigurableExample,
@@ -298,6 +315,11 @@
   SnackBarComponentExample,
   PizzaPartyComponent,
   SnackBarOverviewExample,
+  TableBasicExample,
+  TableOverviewExample,
+  TableFilteringExample,
+  TablePaginationExample,
+  TableSortingExample,
   TabsOverviewExample,
   TabsTemplateLabelExample,
   ToolbarMultirowExample,

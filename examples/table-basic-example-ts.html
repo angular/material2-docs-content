@@ -1,0 +1,89 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk'</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/BehaviorSubject'</span>;
+<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/startWith'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/observable/merge'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/map'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'table-basic-example'</span>,
+  styleUrls: [<span class="hljs-string">'table-basic-example.css'</span>],
+  templateUrl: <span class="hljs-string">'table-basic-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableBasicExample {
+  displayedColumns = [<span class="hljs-string">'userId'</span>, <span class="hljs-string">'userName'</span>, <span class="hljs-string">'progress'</span>, <span class="hljs-string">'color'</span>];
+  exampleDatabase = <span class="hljs-keyword">new</span> ExampleDatabase();
+  dataSource: ExampleDataSource | <span class="hljs-literal">null</span>;
+
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.dataSource = <span class="hljs-keyword">new</span> ExampleDataSource(<span class="hljs-keyword">this</span>.exampleDatabase);
+  }
+}
+
+<span class="hljs-comment">/** Constants used to fill up our data base. */</span>
+<span class="hljs-keyword">const</span> COLORS = [<span class="hljs-string">'maroon'</span>, <span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, <span class="hljs-string">'olive'</span>, <span class="hljs-string">'green'</span>, <span class="hljs-string">'purple'</span>,
+  <span class="hljs-string">'fuchsia'</span>, <span class="hljs-string">'lime'</span>, <span class="hljs-string">'teal'</span>, <span class="hljs-string">'aqua'</span>, <span class="hljs-string">'blue'</span>, <span class="hljs-string">'navy'</span>, <span class="hljs-string">'black'</span>, <span class="hljs-string">'gray'</span>];
+<span class="hljs-keyword">const</span> NAMES = [<span class="hljs-string">'Maia'</span>, <span class="hljs-string">'Asher'</span>, <span class="hljs-string">'Olivia'</span>, <span class="hljs-string">'Atticus'</span>, <span class="hljs-string">'Amelia'</span>, <span class="hljs-string">'Jack'</span>,
+  <span class="hljs-string">'Charlotte'</span>, <span class="hljs-string">'Theodore'</span>, <span class="hljs-string">'Isla'</span>, <span class="hljs-string">'Oliver'</span>, <span class="hljs-string">'Isabella'</span>, <span class="hljs-string">'Jasper'</span>,
+  <span class="hljs-string">'Cora'</span>, <span class="hljs-string">'Levi'</span>, <span class="hljs-string">'Violet'</span>, <span class="hljs-string">'Arthur'</span>, <span class="hljs-string">'Mia'</span>, <span class="hljs-string">'Thomas'</span>, <span class="hljs-string">'Elizabeth'</span>];
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> UserData {
+  id: <span class="hljs-built_in">string</span>;
+  name: <span class="hljs-built_in">string</span>;
+  progress: <span class="hljs-built_in">string</span>;
+  color: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-comment">/** An example database that the data source uses to retrieve data for the table. */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDatabase {
+  <span class="hljs-comment">/** Stream that emits whenever the data has been modified. */</span>
+  dataChange: BehaviorSubject&lt;UserData[]&gt; = <span class="hljs-keyword">new</span> BehaviorSubject&lt;UserData[]&gt;([]);
+  <span class="hljs-keyword">get</span> data(): UserData[] { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dataChange.value; }
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-comment">// Fill up the database with 100 users.</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) { <span class="hljs-keyword">this</span>.addUser(); }
+  }
+
+  <span class="hljs-comment">/** Adds a new user to the database. */</span>
+  addUser() {
+    <span class="hljs-keyword">const</span> copiedData = <span class="hljs-keyword">this</span>.data.slice();
+    copiedData.push(<span class="hljs-keyword">this</span>.createNewUser());
+    <span class="hljs-keyword">this</span>.dataChange.next(copiedData);
+  }
+
+  <span class="hljs-comment">/** Builds and returns a new User. */</span>
+  <span class="hljs-keyword">private</span> createNewUser() {
+    <span class="hljs-keyword">const</span> name =
+        NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))] + <span class="hljs-string">' '</span> +
+        NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))].charAt(<span class="hljs-number">0</span>) + <span class="hljs-string">'.'</span>;
+
+    <span class="hljs-keyword">return</span> {
+      id: (<span class="hljs-keyword">this</span>.data.length + <span class="hljs-number">1</span>).toString(),
+      name: name,
+      progress: <span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>).toString(),
+      color: COLORS[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (COLORS.length - <span class="hljs-number">1</span>))]
+    };
+  }
+}
+
+<span class="hljs-comment">/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDataSource <span class="hljs-keyword">extends</span> DataSource&lt;<span class="hljs-built_in">any</span>&gt; {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _exampleDatabase: ExampleDatabase</span>) {
+    <span class="hljs-keyword">super</span>();
+  }
+
+  <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
+  connect(): Observable&lt;UserData[]&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._exampleDatabase.dataChange;
+  }
+
+  disconnect() {}
+}

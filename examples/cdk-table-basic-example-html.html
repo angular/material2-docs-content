@@ -1,0 +1,36 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container mat-elevation-z8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-table</span> #<span class="hljs-attr">table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-table"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" --&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- ID Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"userId"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-header-cell"</span>&gt;</span> ID <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-cell"</span>&gt;</span> {{row.id}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Progress Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"progress"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-header-cell"</span>&gt;</span> Progress <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-cell"</span>&gt;</span> {{row.progress}}% <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"userName"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-header-cell"</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-cell"</span>&gt;</span> {{row.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Color Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"color"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-header-cell"</span>&gt;</span>Color<span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-cell"</span>
+                [<span class="hljs-attr">style.color</span>]=<span class="hljs-string">"row.color"</span>&gt;</span>
+        {{row.color}}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-header-row"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-row"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

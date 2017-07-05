@@ -1,0 +1,181 @@
+<span class="hljs-keyword">import</span> {Component, ElementRef, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk'</span>;
+<span class="hljs-keyword">import</span> {MdPaginator, MdSort, SelectionModel} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/BehaviorSubject'</span>;
+<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/startWith'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/observable/merge'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/observable/fromEvent'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/map'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/distinctUntilChanged'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/debounceTime'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'table-overview-example'</span>,
+  styleUrls: [<span class="hljs-string">'table-overview-example.css'</span>],
+  templateUrl: <span class="hljs-string">'table-overview-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableOverviewExample {
+  displayedColumns = [<span class="hljs-string">'select'</span>, <span class="hljs-string">'userId'</span>, <span class="hljs-string">'userName'</span>, <span class="hljs-string">'progress'</span>, <span class="hljs-string">'color'</span>];
+  exampleDatabase = <span class="hljs-keyword">new</span> ExampleDatabase();
+  selection = <span class="hljs-keyword">new</span> SelectionModel&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-literal">true</span>, []);
+  dataSource: ExampleDataSource | <span class="hljs-literal">null</span>;
+
+  <span class="hljs-meta">@ViewChild</span>(MdPaginator) paginator: MdPaginator;
+  <span class="hljs-meta">@ViewChild</span>(MdSort) sort: MdSort;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'filter'</span>) filter: ElementRef;
+
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.dataSource = <span class="hljs-keyword">new</span> ExampleDataSource(<span class="hljs-keyword">this</span>.exampleDatabase, <span class="hljs-keyword">this</span>.paginator, <span class="hljs-keyword">this</span>.sort);
+    Observable.fromEvent(<span class="hljs-keyword">this</span>.filter.nativeElement, <span class="hljs-string">'keyup'</span>)
+        .debounceTime(<span class="hljs-number">150</span>)
+        .distinctUntilChanged()
+        .subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.dataSource) { <span class="hljs-keyword">return</span>; }
+          <span class="hljs-keyword">this</span>.dataSource.filter = <span class="hljs-keyword">this</span>.filter.nativeElement.value;
+        });
+  }
+
+  isAllSelected(): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.dataSource) { <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; }
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.selection.isEmpty()) { <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.filter.nativeElement.value) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.selection.selected.length == <span class="hljs-keyword">this</span>.dataSource.renderedData.length;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.selection.selected.length == <span class="hljs-keyword">this</span>.exampleDatabase.data.length;
+    }
+  }
+
+  masterToggle() {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.dataSource) { <span class="hljs-keyword">return</span>; }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.isAllSelected()) {
+      <span class="hljs-keyword">this</span>.selection.clear();
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.filter.nativeElement.value) {
+      <span class="hljs-keyword">this</span>.dataSource.renderedData.forEach(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> <span class="hljs-keyword">this</span>.selection.select(data.id));
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">this</span>.exampleDatabase.data.forEach(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> <span class="hljs-keyword">this</span>.selection.select(data.id));
+    }
+  }
+}
+
+<span class="hljs-comment">/** Constants used to fill up our data base. */</span>
+<span class="hljs-keyword">const</span> COLORS = [<span class="hljs-string">'maroon'</span>, <span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, <span class="hljs-string">'olive'</span>, <span class="hljs-string">'green'</span>, <span class="hljs-string">'purple'</span>,
+  <span class="hljs-string">'fuchsia'</span>, <span class="hljs-string">'lime'</span>, <span class="hljs-string">'teal'</span>, <span class="hljs-string">'aqua'</span>, <span class="hljs-string">'blue'</span>, <span class="hljs-string">'navy'</span>, <span class="hljs-string">'black'</span>, <span class="hljs-string">'gray'</span>];
+<span class="hljs-keyword">const</span> NAMES = [<span class="hljs-string">'Maia'</span>, <span class="hljs-string">'Asher'</span>, <span class="hljs-string">'Olivia'</span>, <span class="hljs-string">'Atticus'</span>, <span class="hljs-string">'Amelia'</span>, <span class="hljs-string">'Jack'</span>,
+  <span class="hljs-string">'Charlotte'</span>, <span class="hljs-string">'Theodore'</span>, <span class="hljs-string">'Isla'</span>, <span class="hljs-string">'Oliver'</span>, <span class="hljs-string">'Isabella'</span>, <span class="hljs-string">'Jasper'</span>,
+  <span class="hljs-string">'Cora'</span>, <span class="hljs-string">'Levi'</span>, <span class="hljs-string">'Violet'</span>, <span class="hljs-string">'Arthur'</span>, <span class="hljs-string">'Mia'</span>, <span class="hljs-string">'Thomas'</span>, <span class="hljs-string">'Elizabeth'</span>];
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> UserData {
+  id: <span class="hljs-built_in">string</span>;
+  name: <span class="hljs-built_in">string</span>;
+  progress: <span class="hljs-built_in">string</span>;
+  color: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-comment">/** An example database that the data source uses to retrieve data for the table. */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDatabase {
+  <span class="hljs-comment">/** Stream that emits whenever the data has been modified. */</span>
+  dataChange: BehaviorSubject&lt;UserData[]&gt; = <span class="hljs-keyword">new</span> BehaviorSubject&lt;UserData[]&gt;([]);
+  <span class="hljs-keyword">get</span> data(): UserData[] { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dataChange.value; }
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-comment">// Fill up the database with 100 users.</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) { <span class="hljs-keyword">this</span>.addUser(); }
+  }
+
+  <span class="hljs-comment">/** Adds a new user to the database. */</span>
+  addUser() {
+    <span class="hljs-keyword">const</span> copiedData = <span class="hljs-keyword">this</span>.data.slice();
+    copiedData.push(<span class="hljs-keyword">this</span>.createNewUser());
+    <span class="hljs-keyword">this</span>.dataChange.next(copiedData);
+  }
+
+  <span class="hljs-comment">/** Builds and returns a new User. */</span>
+  <span class="hljs-keyword">private</span> createNewUser() {
+    <span class="hljs-keyword">const</span> name =
+        NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))] + <span class="hljs-string">' '</span> +
+        NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))].charAt(<span class="hljs-number">0</span>) + <span class="hljs-string">'.'</span>;
+
+    <span class="hljs-keyword">return</span> {
+      id: (<span class="hljs-keyword">this</span>.data.length + <span class="hljs-number">1</span>).toString(),
+      name: name,
+      progress: <span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>).toString(),
+      color: COLORS[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (COLORS.length - <span class="hljs-number">1</span>))]
+    };
+  }
+}
+
+<span class="hljs-comment">/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDataSource <span class="hljs-keyword">extends</span> DataSource&lt;<span class="hljs-built_in">any</span>&gt; {
+  _filterChange = <span class="hljs-keyword">new</span> BehaviorSubject(<span class="hljs-string">''</span>);
+  <span class="hljs-keyword">get</span> filter(): <span class="hljs-built_in">string</span> { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._filterChange.value; }
+  <span class="hljs-keyword">set</span> filter(filter: <span class="hljs-built_in">string</span>) { <span class="hljs-keyword">this</span>._filterChange.next(filter); }
+
+  filteredData: UserData[] = [];
+  renderedData: UserData[] = [];
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _exampleDatabase: ExampleDatabase,
+              <span class="hljs-keyword">private</span> _paginator: MdPaginator,
+              <span class="hljs-keyword">private</span> _sort: MdSort</span>) {
+    <span class="hljs-keyword">super</span>();
+  }
+
+  <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
+  connect(): Observable&lt;UserData[]&gt; {
+    <span class="hljs-comment">// Listen for any changes in the base data, sorting, filtering, or pagination</span>
+    <span class="hljs-keyword">const</span> displayDataChanges = [
+      <span class="hljs-keyword">this</span>._exampleDatabase.dataChange,
+      <span class="hljs-keyword">this</span>._sort.mdSortChange,
+      <span class="hljs-keyword">this</span>._filterChange,
+      <span class="hljs-keyword">this</span>._paginator.page,
+    ];
+
+    <span class="hljs-keyword">return</span> Observable.merge(...displayDataChanges).map(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      <span class="hljs-comment">// Filter data</span>
+      <span class="hljs-keyword">this</span>.filteredData = <span class="hljs-keyword">this</span>._exampleDatabase.data.slice().filter(<span class="hljs-function">(<span class="hljs-params">item: UserData</span>) =&gt;</span> {
+        <span class="hljs-keyword">let</span> searchStr = (item.name + item.color).toLowerCase();
+        <span class="hljs-keyword">return</span> searchStr.indexOf(<span class="hljs-keyword">this</span>.filter.toLowerCase()) != <span class="hljs-number">-1</span>;
+      });
+
+      <span class="hljs-comment">// Sort filtered data</span>
+      <span class="hljs-keyword">const</span> sortedData = <span class="hljs-keyword">this</span>.sortData(<span class="hljs-keyword">this</span>.filteredData.slice());
+
+      <span class="hljs-comment">// Grab the page's slice of the filtered sorted data.</span>
+      <span class="hljs-keyword">const</span> startIndex = <span class="hljs-keyword">this</span>._paginator.pageIndex * <span class="hljs-keyword">this</span>._paginator.pageSize;
+      <span class="hljs-keyword">this</span>.renderedData = sortedData.splice(startIndex, <span class="hljs-keyword">this</span>._paginator.pageSize);
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.renderedData;
+    });
+  }
+
+  disconnect() {}
+
+  <span class="hljs-comment">/** Returns a sorted copy of the database data. */</span>
+  sortData(data: UserData[]): UserData[] {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>._sort.active || <span class="hljs-keyword">this</span>._sort.direction == <span class="hljs-string">''</span>) { <span class="hljs-keyword">return</span> data; }
+
+    <span class="hljs-keyword">return</span> data.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
+      <span class="hljs-keyword">let</span> propertyA: <span class="hljs-built_in">number</span>|<span class="hljs-built_in">string</span> = <span class="hljs-string">''</span>;
+      <span class="hljs-keyword">let</span> propertyB: <span class="hljs-built_in">number</span>|<span class="hljs-built_in">string</span> = <span class="hljs-string">''</span>;
+
+      <span class="hljs-keyword">switch</span> (<span class="hljs-keyword">this</span>._sort.active) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'userId'</span>: [propertyA, propertyB] = [a.id, b.id]; <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'userName'</span>: [propertyA, propertyB] = [a.name, b.name]; <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'progress'</span>: [propertyA, propertyB] = [a.progress, b.progress]; <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'color'</span>: [propertyA, propertyB] = [a.color, b.color]; <span class="hljs-keyword">break</span>;
+      }
+
+      <span class="hljs-keyword">let</span> valueA = <span class="hljs-built_in">isNaN</span>(+propertyA) ? propertyA : +propertyA;
+      <span class="hljs-keyword">let</span> valueB = <span class="hljs-built_in">isNaN</span>(+propertyB) ? propertyB : +propertyB;
+
+      <span class="hljs-keyword">return</span> (valueA &lt; valueB ? <span class="hljs-number">-1</span> : <span class="hljs-number">1</span>) * (<span class="hljs-keyword">this</span>._sort.direction == <span class="hljs-string">'asc'</span> ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>);
+    });
+  }
+}

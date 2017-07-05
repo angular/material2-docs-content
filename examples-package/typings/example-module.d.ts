@@ -57,6 +57,12 @@ import { DatepickerFilterExample } from './datepicker-filter/datepicker-filter-e
 import { DatepickerTouchExample } from './datepicker-touch/datepicker-touch-example';
 import { DatepickerApiExample } from './datepicker-api/datepicker-api-example';
 import { InputClearableExample } from './input-clearable/input-clearable-example';
+import { TableOverviewExample } from './table-overview/table-overview-example';
+import { TablePaginationExample } from './table-pagination/table-pagination-example';
+import { TableBasicExample } from './table-basic/table-basic-example';
+import { TableSortingExample } from './table-sorting/table-sorting-example';
+import { TableFilteringExample } from './table-filtering/table-filtering-example';
+import { CdkTableBasicExample } from './cdk-table-basic/cdk-table-basic-example';
 export interface LiveExample {
     title: string;
     component: any;
@@ -92,6 +98,10 @@ export declare const EXAMPLE_COMPONENTS: {
     'chips-overview': {
         title: string;
         component: typeof ChipsOverviewExample;
+    };
+    'cdk-table-basic': {
+        title: string;
+        component: typeof CdkTableBasicExample;
     };
     'chips-stacked': {
         title: string;
@@ -286,6 +296,26 @@ export declare const EXAMPLE_COMPONENTS: {
     'snack-bar-overview': {
         title: string;
         component: typeof SnackBarOverviewExample;
+    };
+    'table-overview': {
+        title: string;
+        component: typeof TableOverviewExample;
+    };
+    'table-pagination': {
+        title: string;
+        component: typeof TablePaginationExample;
+    };
+    'table-sorting': {
+        title: string;
+        component: typeof TableSortingExample;
+    };
+    'table-filtering': {
+        title: string;
+        component: typeof TableFilteringExample;
+    };
+    'table-basic': {
+        title: string;
+        component: typeof TableBasicExample;
     };
     'tabs-overview': {
         title: string;
