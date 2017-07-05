@@ -1265,6 +1265,23 @@ DatepickerApiExample.decorators = [
  * @nocollapse
  */
 DatepickerApiExample.ctorParameters = function () { return []; };
+var InputClearableExample = (function () {
+    function InputClearableExample() {
+        this.value = 'Clear me';
+    }
+    return InputClearableExample;
+}());
+InputClearableExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'input-clearable-example',
+                template: "<md-input-container class=\"example-input-container\"><input mdInput type=\"text\" placeholder=\"Clearable input\" [(ngModel)]=\"value\"><md-button *ngIf=\"value\" mdSuffix md-icon-button aria-label=\"Clear\" (click)=\"value=''\"><md-icon>close</md-icon></md-button></md-input-container>",
+                styles: [".example-input-container { width: 200px; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputClearableExample.ctorParameters = function () { return []; };
 /**
  * The list of example components.
  * Key is the example name which will be used in `material-docs-example="key"`.
@@ -1313,6 +1330,7 @@ var EXAMPLE_COMPONENTS = {
     'grid-list-overview': { title: 'Basic grid-list', component: GridListOverviewExample },
     'icon-overview': { title: 'Basic icons', component: IconOverviewExample },
     'icon-svg': { title: 'SVG icons', component: IconSvgExample },
+    'input-clearable': { title: 'Input with clear button', component: InputClearableExample },
     'input-form': { title: 'Inputs in a form', component: InputFormExample },
     'input-overview': { title: 'Basic inputs', component: InputOverviewExample },
     'input-errors': { title: 'Input Errors', component: InputErrorsExample },
@@ -1441,6 +1459,7 @@ var EXAMPLE_LIST = [
     GridListOverviewExample,
     IconOverviewExample,
     IconSvgExample,
+    InputClearableExample,
     InputFormExample,
     InputOverviewExample,
     InputPrefixSuffixExample,
@@ -1575,41 +1594,42 @@ exports.ɵx = GridListDynamicExample;
 exports.ɵy = GridListOverviewExample;
 exports.ɵz = IconOverviewExample;
 exports.ɵba = IconSvgExample;
-exports.ɵbd = InputErrorsExample;
-exports.ɵbb = InputFormExample;
-exports.ɵbf = InputHintExample;
-exports.ɵbc = InputOverviewExample;
-exports.ɵbe = InputPrefixSuffixExample;
-exports.ɵbg = ListOverviewExample;
-exports.ɵbh = ListSectionsExample;
-exports.ɵbi = MenuIconsExample;
-exports.ɵbj = MenuOverviewExample;
-exports.ɵbl = PaginatorConfigurableExample;
-exports.ɵbk = PaginatorOverviewExample;
-exports.ɵbm = ProgressBarConfigurableExample;
-exports.ɵbn = ProgressBarOverviewExample;
-exports.ɵbo = ProgressSpinnerConfigurableExample;
-exports.ɵbp = ProgressSpinnerOverviewExample;
-exports.ɵbq = RadioNgModelExample;
-exports.ɵbr = RadioOverviewExample;
-exports.ɵbt = SelectFormExample;
-exports.ɵbs = SelectOverviewExample;
-exports.ɵbu = SidenavFabExample;
-exports.ɵbv = SidenavOverviewExample;
-exports.ɵby = SlideToggleConfigurableExample;
-exports.ɵbz = SlideToggleFormsExample;
-exports.ɵca = SlideToggleOverviewExample;
-exports.ɵbw = SliderConfigurableExample;
-exports.ɵbx = SliderOverviewExample;
-exports.ɵcc = PizzaPartyComponent;
-exports.ɵcb = SnackBarComponentExample;
-exports.ɵcd = SnackBarOverviewExample;
-exports.ɵce = TabsOverviewExample;
-exports.ɵcf = TabsTemplateLabelExample;
-exports.ɵcg = ToolbarMultirowExample;
-exports.ɵch = ToolbarOverviewExample;
-exports.ɵci = TooltipOverviewExample;
-exports.ɵcj = TooltipPositionExample;
+exports.ɵbb = InputClearableExample;
+exports.ɵbe = InputErrorsExample;
+exports.ɵbc = InputFormExample;
+exports.ɵbg = InputHintExample;
+exports.ɵbd = InputOverviewExample;
+exports.ɵbf = InputPrefixSuffixExample;
+exports.ɵbh = ListOverviewExample;
+exports.ɵbi = ListSectionsExample;
+exports.ɵbj = MenuIconsExample;
+exports.ɵbk = MenuOverviewExample;
+exports.ɵbm = PaginatorConfigurableExample;
+exports.ɵbl = PaginatorOverviewExample;
+exports.ɵbn = ProgressBarConfigurableExample;
+exports.ɵbo = ProgressBarOverviewExample;
+exports.ɵbp = ProgressSpinnerConfigurableExample;
+exports.ɵbq = ProgressSpinnerOverviewExample;
+exports.ɵbr = RadioNgModelExample;
+exports.ɵbs = RadioOverviewExample;
+exports.ɵbu = SelectFormExample;
+exports.ɵbt = SelectOverviewExample;
+exports.ɵbv = SidenavFabExample;
+exports.ɵbw = SidenavOverviewExample;
+exports.ɵbz = SlideToggleConfigurableExample;
+exports.ɵca = SlideToggleFormsExample;
+exports.ɵcb = SlideToggleOverviewExample;
+exports.ɵbx = SliderConfigurableExample;
+exports.ɵby = SliderOverviewExample;
+exports.ɵcd = PizzaPartyComponent;
+exports.ɵcc = SnackBarComponentExample;
+exports.ɵce = SnackBarOverviewExample;
+exports.ɵcf = TabsOverviewExample;
+exports.ɵcg = TabsTemplateLabelExample;
+exports.ɵch = ToolbarMultirowExample;
+exports.ɵci = ToolbarOverviewExample;
+exports.ɵcj = TooltipOverviewExample;
+exports.ɵck = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -56,6 +56,7 @@ import { DatepickerMinMaxExample } from './datepicker-min-max/datepicker-min-max
 import { DatepickerFilterExample } from './datepicker-filter/datepicker-filter-example';
 import { DatepickerTouchExample } from './datepicker-touch/datepicker-touch-example';
 import { DatepickerApiExample } from './datepicker-api/datepicker-api-example';
+import { InputClearableExample } from './input-clearable/input-clearable-example';
 export interface LiveExample {
     title: string;
     component: any;
@@ -169,6 +170,10 @@ export declare const EXAMPLE_COMPONENTS: {
     'icon-svg': {
         title: string;
         component: typeof IconSvgExample;
+    };
+    'input-clearable': {
+        title: string;
+        component: typeof InputClearableExample;
     };
     'input-form': {
         title: string;

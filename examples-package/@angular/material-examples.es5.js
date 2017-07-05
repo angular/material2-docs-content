@@ -1258,6 +1258,23 @@ DatepickerApiExample.decorators = [
  * @nocollapse
  */
 DatepickerApiExample.ctorParameters = function () { return []; };
+var InputClearableExample = /*@__PURE__*/(function () {
+    function InputClearableExample() {
+        this.value = 'Clear me';
+    }
+    return InputClearableExample;
+}());
+InputClearableExample.decorators = [
+    { type: Component, args: [{
+                selector: 'input-clearable-example',
+                template: "<md-input-container class=\"example-input-container\"><input mdInput type=\"text\" placeholder=\"Clearable input\" [(ngModel)]=\"value\"><md-button *ngIf=\"value\" mdSuffix md-icon-button aria-label=\"Clear\" (click)=\"value=''\"><md-icon>close</md-icon></md-button></md-input-container>",
+                styles: [".example-input-container { width: 200px; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputClearableExample.ctorParameters = function () { return []; };
 /**
  * The list of example components.
  * Key is the example name which will be used in `material-docs-example="key"`.
@@ -1306,6 +1323,7 @@ var EXAMPLE_COMPONENTS = {
     'grid-list-overview': { title: 'Basic grid-list', component: GridListOverviewExample },
     'icon-overview': { title: 'Basic icons', component: IconOverviewExample },
     'icon-svg': { title: 'SVG icons', component: IconSvgExample },
+    'input-clearable': { title: 'Input with clear button', component: InputClearableExample },
     'input-form': { title: 'Inputs in a form', component: InputFormExample },
     'input-overview': { title: 'Basic inputs', component: InputOverviewExample },
     'input-errors': { title: 'Input Errors', component: InputErrorsExample },
@@ -1434,6 +1452,7 @@ var EXAMPLE_LIST = [
     GridListOverviewExample,
     IconOverviewExample,
     IconSvgExample,
+    InputClearableExample,
     InputFormExample,
     InputOverviewExample,
     InputPrefixSuffixExample,
@@ -1538,5 +1557,5 @@ var ExampleData = /*@__PURE__*/(function () {
 /**
  * Generated bundle index. Do not edit.
  */
-export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerApiExample as ɵq, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵn, DatepickerOverviewExample as ɵl, DatepickerStartViewExample as ɵm, DatepickerTouchExample as ɵp, DialogElementsExample as ɵv, DialogElementsExampleDialog as ɵw, DialogOverviewExample as ɵr, DialogOverviewExampleDialog as ɵs, DialogResultExample as ɵt, DialogResultExampleDialog as ɵu, GridListDynamicExample as ɵx, GridListOverviewExample as ɵy, IconOverviewExample as ɵz, IconSvgExample as ɵba, InputErrorsExample as ɵbd, InputFormExample as ɵbb, InputHintExample as ɵbf, InputOverviewExample as ɵbc, InputPrefixSuffixExample as ɵbe, ListOverviewExample as ɵbg, ListSectionsExample as ɵbh, MenuIconsExample as ɵbi, MenuOverviewExample as ɵbj, PaginatorConfigurableExample as ɵbl, PaginatorOverviewExample as ɵbk, ProgressBarConfigurableExample as ɵbm, ProgressBarOverviewExample as ɵbn, ProgressSpinnerConfigurableExample as ɵbo, ProgressSpinnerOverviewExample as ɵbp, RadioNgModelExample as ɵbq, RadioOverviewExample as ɵbr, SelectFormExample as ɵbt, SelectOverviewExample as ɵbs, SidenavFabExample as ɵbu, SidenavOverviewExample as ɵbv, SlideToggleConfigurableExample as ɵby, SlideToggleFormsExample as ɵbz, SlideToggleOverviewExample as ɵca, SliderConfigurableExample as ɵbw, SliderOverviewExample as ɵbx, PizzaPartyComponent as ɵcc, SnackBarComponentExample as ɵcb, SnackBarOverviewExample as ɵcd, TabsOverviewExample as ɵce, TabsTemplateLabelExample as ɵcf, ToolbarMultirowExample as ɵcg, ToolbarOverviewExample as ɵch, TooltipOverviewExample as ɵci, TooltipPositionExample as ɵcj };
+export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵh, CardOverviewExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵg, DatepickerApiExample as ɵq, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵn, DatepickerOverviewExample as ɵl, DatepickerStartViewExample as ɵm, DatepickerTouchExample as ɵp, DialogElementsExample as ɵv, DialogElementsExampleDialog as ɵw, DialogOverviewExample as ɵr, DialogOverviewExampleDialog as ɵs, DialogResultExample as ɵt, DialogResultExampleDialog as ɵu, GridListDynamicExample as ɵx, GridListOverviewExample as ɵy, IconOverviewExample as ɵz, IconSvgExample as ɵba, InputClearableExample as ɵbb, InputErrorsExample as ɵbe, InputFormExample as ɵbc, InputHintExample as ɵbg, InputOverviewExample as ɵbd, InputPrefixSuffixExample as ɵbf, ListOverviewExample as ɵbh, ListSectionsExample as ɵbi, MenuIconsExample as ɵbj, MenuOverviewExample as ɵbk, PaginatorConfigurableExample as ɵbm, PaginatorOverviewExample as ɵbl, ProgressBarConfigurableExample as ɵbn, ProgressBarOverviewExample as ɵbo, ProgressSpinnerConfigurableExample as ɵbp, ProgressSpinnerOverviewExample as ɵbq, RadioNgModelExample as ɵbr, RadioOverviewExample as ɵbs, SelectFormExample as ɵbu, SelectOverviewExample as ɵbt, SidenavFabExample as ɵbv, SidenavOverviewExample as ɵbw, SlideToggleConfigurableExample as ɵbz, SlideToggleFormsExample as ɵca, SlideToggleOverviewExample as ɵcb, SliderConfigurableExample as ɵbx, SliderOverviewExample as ɵby, PizzaPartyComponent as ɵcd, SnackBarComponentExample as ɵcc, SnackBarOverviewExample as ɵce, TabsOverviewExample as ɵcf, TabsTemplateLabelExample as ɵcg, ToolbarMultirowExample as ɵch, ToolbarOverviewExample as ɵci, TooltipOverviewExample as ɵcj, TooltipPositionExample as ɵck };
 //# sourceMappingURL=material-examples.es5.js.map
