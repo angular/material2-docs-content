@@ -1192,7 +1192,7 @@ class InputClearableExample {
 InputClearableExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-clearable-example',
-                template: "<md-input-container class=\"example-input-container\"><input mdInput type=\"text\" placeholder=\"Clearable input\" [(ngModel)]=\"value\"><md-button *ngIf=\"value\" mdSuffix md-icon-button aria-label=\"Clear\" (click)=\"value=''\"><md-icon>close</md-icon></md-button></md-input-container>",
+                template: "<md-input-container class=\"example-input-container\"><input mdInput type=\"text\" placeholder=\"Clearable input\" [(ngModel)]=\"value\"> <button md-button *ngIf=\"value\" mdSuffix md-icon-button aria-label=\"Clear\" (click)=\"value=''\"><md-icon>close</md-icon></button></md-input-container>",
                 styles: [".example-input-container { width: 200px; } "],
             },] },
 ];
@@ -1260,8 +1260,8 @@ class TableOverviewExample {
 TableOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-overview-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; background: white; min-width: 300px; } .example-header { min-height: 56px; max-height: 56px; display: flex; align-items: center; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; border-bottom: 1px solid transparent; } .mat-input-container { font-size: 14px; flex-grow: 1; margin-left: 32px; margin-top: 8px; } .example-no-results { display: flex; justify-content: center; padding: 24px; font-size: 12px; font-style: italic; } /** Selection styles */ .example-selection-header { font-size: 18px; background: rgba(255, 64, 129, 0.3); border-bottom: 1px solid #d696ac; } .mat-column-select { max-width: 54px; } .mat-row:hover, .example-selected-row { background: #f5f5f5; } .mat-row:active, .mat-row.example-selected-row { background: #eaeaea; } .mat-table { overflow: auto; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\" [style.display]=\"selection.isEmpty() ? '' : 'none'\">Users<md-input-container floatPlaceholder=\"never\"><input mdInput #filter placeholder=\"Filter users\"></md-input-container></div><div class=\"example-header example-selection-header\" *ngIf=\"!selection.isEmpty()\">{{selection.selected.length}} {{selection.selected.length == 1 ? 'user' : 'users'}} selected</div><md-table #table [dataSource]=\"dataSource\" mdSort><ng-container cdkColumnDef=\"select\"><md-header-cell *cdkHeaderCellDef><md-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></md-checkbox></md-header-cell><md-cell *cdkCellDef=\"let row\"><md-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row.id) : null\" [checked]=\"selection.isSelected(row.id)\"></md-checkbox></md-cell></ng-container><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef md-sort-header>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef md-sort-header>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef md-sort-header>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef md-sort-header>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\" [class.example-selected-row]=\"selection.isSelected(row.id)\" (click)=\"selection.toggle(row.id)\"></md-row></md-table><div class=\"example-no-results\" [style.display]=\"dataSource.renderedData.length == 0 ? '' : 'none'\">No users found matching filter.</div><md-paginator #paginator [length]=\"dataSource.filteredData.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></md-paginator></div>",
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; } .example-header { min-height: 56px; max-height: 56px; display: flex; align-items: center; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; border-bottom: 1px solid transparent; } .mat-input-container { font-size: 14px; flex-grow: 1; margin-left: 32px; margin-top: 8px; } .example-no-results { display: flex; justify-content: center; padding: 24px; font-size: 12px; font-style: italic; } /** Selection styles */ .example-selection-header { font-size: 18px; background: rgba(255, 64, 129, 0.3); border-bottom: 1px solid #d696ac; } .mat-column-select { max-width: 54px; } .mat-row:hover, .example-selected-row { background: #f5f5f5; } .mat-row:active, .mat-row.example-selected-row { background: #eaeaea; } .mat-table { overflow: auto; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\" [style.display]=\"selection.isEmpty() ? '' : 'none'\"><md-input-container floatPlaceholder=\"never\"><input mdInput #filter placeholder=\"Filter users\"></md-input-container></div><div class=\"example-header example-selection-header\" *ngIf=\"!selection.isEmpty()\">{{selection.selected.length}} {{selection.selected.length == 1 ? 'user' : 'users'}} selected</div><md-table #table [dataSource]=\"dataSource\" mdSort><ng-container cdkColumnDef=\"select\"><md-header-cell *cdkHeaderCellDef><md-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></md-checkbox></md-header-cell><md-cell *cdkCellDef=\"let row\"><md-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row.id) : null\" [checked]=\"selection.isSelected(row.id)\"></md-checkbox></md-cell></ng-container><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef md-sort-header>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef md-sort-header>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef md-sort-header>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef md-sort-header>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\" [class.example-selected-row]=\"selection.isSelected(row.id)\" (click)=\"selection.toggle(row.id)\"></md-row></md-table><div class=\"example-no-results\" [style.display]=\"dataSource.renderedData.length == 0 ? '' : 'none'\">No users found matching filter.</div><md-paginator #paginator [length]=\"dataSource.filteredData.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></md-paginator></div>",
             },] },
 ];
 /**
@@ -1432,8 +1432,8 @@ class TablePaginationExample {
 TablePaginationExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-pagination-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; background: white; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\">Users</div><md-table #table [dataSource]=\"dataSource\"><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></md-paginator></div>",
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><md-table #table [dataSource]=\"dataSource\"><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></md-paginator></div>",
             },] },
 ];
 /**
@@ -1547,8 +1547,8 @@ class TableBasicExample {
 TableBasicExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-basic-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; background: white; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\">Users</div><md-table #table [dataSource]=\"dataSource\"><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table></div>",
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><md-table #table [dataSource]=\"dataSource\"><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table></div>",
             },] },
 ];
 /**
@@ -1648,8 +1648,8 @@ class TableSortingExample {
 TableSortingExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-sorting-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; background: white; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; } .mat-header-cell .mat-sort-header-sorted { color: black; }"],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\">Users</div><md-table #table [dataSource]=\"dataSource\" mdSort><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef md-sort-header>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef md-sort-header>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef md-sort-header>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef md-sort-header>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table></div>",
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; } .mat-header-cell .mat-sort-header-sorted { color: black; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><md-table #table [dataSource]=\"dataSource\" mdSort><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef md-sort-header>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef md-sort-header>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef md-sort-header>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef md-sort-header>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table></div>",
             },] },
 ];
 /**
@@ -1800,8 +1800,8 @@ class TableFilteringExample {
 TableFilteringExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-filtering-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; background: white; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-header { min-height: 64px; display: flex; align-items: baseline; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; } .mat-input-container { font-size: 14px; flex-grow: 1; margin-left: 32px; } .mat-table { overflow: auto; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\">Users<md-input-container floatPlaceholder=\"never\"><input mdInput #filter placeholder=\"Filter users\"></md-input-container></div><md-table #table [dataSource]=\"dataSource\"><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table></div>",
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-header { min-height: 64px; display: flex; align-items: baseline; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; } .mat-input-container { font-size: 14px; flex-grow: 1; margin-left: 32px; } .mat-table { overflow: auto; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><md-input-container floatPlaceholder=\"never\"><input mdInput #filter placeholder=\"Filter users\"></md-input-container></div><md-table #table [dataSource]=\"dataSource\"><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table></div>",
             },] },
 ];
 /**
@@ -2009,6 +2009,61 @@ class ExampleDataSource$5 extends DataSource {
     disconnect() { }
 }
 
+class SortOverviewExample {
+    constructor() {
+        this.desserts = [
+            { name: 'Frozen yogurt', calories: '159', fat: '6', carbs: '24', protein: '4' },
+            { name: 'Ice cream sandwich', calories: '237', fat: '9', carbs: '37', protein: '4' },
+            { name: 'Eclair', calories: '262', fat: '16', carbs: '24', protein: '6' },
+            { name: 'Cupcake', calories: '305', fat: '4', carbs: '67', protein: '4' },
+            { name: 'Gingerbread', calories: '356', fat: '16', carbs: '49', protein: '4' },
+        ];
+        this.sortedData = this.desserts.slice();
+    }
+    /**
+     * @param {?} sort
+     * @return {?}
+     */
+    sortData(sort) {
+        const /** @type {?} */ data = this.desserts.slice();
+        if (!sort.active || sort.direction == '') {
+            this.sortedData = data;
+            return;
+        }
+        this.sortedData = data.sort((a, b) => {
+            let /** @type {?} */ isAsc = sort.direction == 'asc';
+            switch (sort.active) {
+                case 'name': return compare(a.name, b.name, isAsc);
+                case 'calories': return compare(+a.calories, +b.calories, isAsc);
+                case 'fat': return compare(+a.fat, +b.fat, isAsc);
+                case 'carbs': return compare(+a.carbs, +b.carbs, isAsc);
+                case 'protein': return compare(+a.protein, +b.protein, isAsc);
+                default: return 0;
+            }
+        });
+    }
+}
+SortOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'sort-overview-example',
+                template: "<table mdSort (mdSortChange)=\"sortData($event)\"><tr><th md-sort-header=\"name\">Dessert (100g)</th><th md-sort-header=\"calories\">Calories</th><th md-sort-header=\"fat\">Fat (g)</th><th md-sort-header=\"carbs\">Carbs (g)</th><th md-sort-header=\"protein\">Protein (g)</th></tr><tr *ngFor=\"let dessert of sortedData\"><td>{{dessert.name}}</td><td>{{dessert.calories}}</td><td>{{dessert.fat}}</td><td>{{dessert.carbs}}</td><td>{{dessert.protein}}</td></tr></table>",
+                styles: [".mat-sort-header-container { align-items: center; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SortOverviewExample.ctorParameters = () => [];
+/**
+ * @param {?} a
+ * @param {?} b
+ * @param {?} isAsc
+ * @return {?}
+ */
+function compare(a, b, isAsc) {
+    return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+}
+
 /**
  * The list of example components.
  * Key is the example name which will be used in `material-docs-example="key"`.
@@ -2100,6 +2155,7 @@ const EXAMPLE_COMPONENTS = {
     },
     'slide-toggle-forms': { title: 'Slide-toggle with forms', component: SlideToggleFormsExample },
     'slide-toggle-overview': { title: 'Basic slide-toggles', component: SlideToggleOverviewExample },
+    'sort-overview': { title: 'Sorting overview', component: SortOverviewExample },
     'snack-bar-component': {
         title: 'Snack-bar with a custom component',
         component: SnackBarComponentExample
@@ -2220,6 +2276,7 @@ const EXAMPLE_LIST = [
     SlideToggleConfigurableExample,
     SlideToggleOverviewExample,
     SlideToggleFormsExample,
+    SortOverviewExample,
     SnackBarComponentExample,
     PizzaPartyComponent,
     SnackBarOverviewExample,
@@ -2302,5 +2359,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵi, CardOverviewExample as ɵj, CdkTableBasicExample as ɵg, CheckboxConfigurableExample as ɵk, CheckboxOverviewExample as ɵl, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵh, DatepickerApiExample as ɵr, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵo, DatepickerOverviewExample as ɵm, DatepickerStartViewExample as ɵn, DatepickerTouchExample as ɵq, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵs, DialogOverviewExampleDialog as ɵt, DialogResultExample as ɵu, DialogResultExampleDialog as ɵv, GridListDynamicExample as ɵy, GridListOverviewExample as ɵz, IconOverviewExample as ɵba, IconSvgExample as ɵbb, InputClearableExample as ɵbc, InputErrorsExample as ɵbf, InputFormExample as ɵbd, InputHintExample as ɵbh, InputOverviewExample as ɵbe, InputPrefixSuffixExample as ɵbg, ListOverviewExample as ɵbi, ListSectionsExample as ɵbj, MenuIconsExample as ɵbk, MenuOverviewExample as ɵbl, PaginatorConfigurableExample as ɵbn, PaginatorOverviewExample as ɵbm, ProgressBarConfigurableExample as ɵbo, ProgressBarOverviewExample as ɵbp, ProgressSpinnerConfigurableExample as ɵbq, ProgressSpinnerOverviewExample as ɵbr, RadioNgModelExample as ɵbs, RadioOverviewExample as ɵbt, SelectFormExample as ɵbv, SelectOverviewExample as ɵbu, SidenavFabExample as ɵbw, SidenavOverviewExample as ɵbx, SlideToggleConfigurableExample as ɵca, SlideToggleFormsExample as ɵcb, SlideToggleOverviewExample as ɵcc, SliderConfigurableExample as ɵby, SliderOverviewExample as ɵbz, PizzaPartyComponent as ɵce, SnackBarComponentExample as ɵcd, SnackBarOverviewExample as ɵcf, TableBasicExample as ɵck, TableFilteringExample as ɵcj, TableOverviewExample as ɵcg, TablePaginationExample as ɵch, TableSortingExample as ɵci, TabsOverviewExample as ɵcl, TabsTemplateLabelExample as ɵcm, ToolbarMultirowExample as ɵcn, ToolbarOverviewExample as ɵco, TooltipOverviewExample as ɵcp, TooltipPositionExample as ɵcq };
+export { ExampleData, EXAMPLE_COMPONENTS, ExampleMaterialModule, EXAMPLE_LIST, ExampleModule, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵd, ButtonToggleOverviewExample as ɵe, ButtonTypesExample as ɵc, CardFancyExample as ɵi, CardOverviewExample as ɵj, CdkTableBasicExample as ɵg, CheckboxConfigurableExample as ɵk, CheckboxOverviewExample as ɵl, ChipsOverviewExample as ɵf, ChipsStackedExample as ɵh, DatepickerApiExample as ɵr, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵo, DatepickerOverviewExample as ɵm, DatepickerStartViewExample as ɵn, DatepickerTouchExample as ɵq, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵs, DialogOverviewExampleDialog as ɵt, DialogResultExample as ɵu, DialogResultExampleDialog as ɵv, GridListDynamicExample as ɵy, GridListOverviewExample as ɵz, IconOverviewExample as ɵba, IconSvgExample as ɵbb, InputClearableExample as ɵbc, InputErrorsExample as ɵbf, InputFormExample as ɵbd, InputHintExample as ɵbh, InputOverviewExample as ɵbe, InputPrefixSuffixExample as ɵbg, ListOverviewExample as ɵbi, ListSectionsExample as ɵbj, MenuIconsExample as ɵbk, MenuOverviewExample as ɵbl, PaginatorConfigurableExample as ɵbn, PaginatorOverviewExample as ɵbm, ProgressBarConfigurableExample as ɵbo, ProgressBarOverviewExample as ɵbp, ProgressSpinnerConfigurableExample as ɵbq, ProgressSpinnerOverviewExample as ɵbr, RadioNgModelExample as ɵbs, RadioOverviewExample as ɵbt, SelectFormExample as ɵbv, SelectOverviewExample as ɵbu, SidenavFabExample as ɵbw, SidenavOverviewExample as ɵbx, SlideToggleConfigurableExample as ɵca, SlideToggleFormsExample as ɵcb, SlideToggleOverviewExample as ɵcc, SliderConfigurableExample as ɵby, SliderOverviewExample as ɵbz, PizzaPartyComponent as ɵcf, SnackBarComponentExample as ɵce, SnackBarOverviewExample as ɵcg, SortOverviewExample as ɵcd, TableBasicExample as ɵcl, TableFilteringExample as ɵck, TableOverviewExample as ɵch, TablePaginationExample as ɵci, TableSortingExample as ɵcj, TabsOverviewExample as ɵcm, TabsTemplateLabelExample as ɵcn, ToolbarMultirowExample as ɵco, ToolbarOverviewExample as ɵcp, TooltipOverviewExample as ɵcq, TooltipPositionExample as ɵcr };
 //# sourceMappingURL=material-examples.js.map

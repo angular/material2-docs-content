@@ -1,0 +1,17 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">mdSort</span> (<span class="hljs-attr">mdSortChange</span>)=<span class="hljs-string">"sortData($event)"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">md-sort-header</span>=<span class="hljs-string">"name"</span>&gt;</span>Dessert (100g)<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">md-sort-header</span>=<span class="hljs-string">"calories"</span>&gt;</span>Calories<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">md-sort-header</span>=<span class="hljs-string">"fat"</span>&gt;</span>Fat (g)<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">md-sort-header</span>=<span class="hljs-string">"carbs"</span>&gt;</span>Carbs (g)<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">md-sort-header</span>=<span class="hljs-string">"protein"</span>&gt;</span>Protein (g)<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let dessert of sortedData"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{{dessert.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{{dessert.calories}}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{{dessert.fat}}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{{dessert.carbs}}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{{dessert.protein}}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>

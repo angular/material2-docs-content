@@ -1,0 +1,48 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Sort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'sort-overview-example'</span>,
+  templateUrl: <span class="hljs-string">'sort-overview-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'sort-overview-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SortOverviewExample {
+  desserts = [
+    {name: <span class="hljs-string">'Frozen yogurt'</span>, calories: <span class="hljs-string">'159'</span>, fat: <span class="hljs-string">'6'</span>, carbs: <span class="hljs-string">'24'</span>, protein: <span class="hljs-string">'4'</span>},
+    {name: <span class="hljs-string">'Ice cream sandwich'</span>, calories: <span class="hljs-string">'237'</span>, fat: <span class="hljs-string">'9'</span>, carbs: <span class="hljs-string">'37'</span>, protein: <span class="hljs-string">'4'</span>},
+    {name: <span class="hljs-string">'Eclair'</span>, calories: <span class="hljs-string">'262'</span>, fat: <span class="hljs-string">'16'</span>, carbs: <span class="hljs-string">'24'</span>, protein: <span class="hljs-string">'6'</span>},
+    {name: <span class="hljs-string">'Cupcake'</span>, calories: <span class="hljs-string">'305'</span>, fat: <span class="hljs-string">'4'</span>, carbs: <span class="hljs-string">'67'</span>, protein: <span class="hljs-string">'4'</span>},
+    {name: <span class="hljs-string">'Gingerbread'</span>, calories: <span class="hljs-string">'356'</span>, fat: <span class="hljs-string">'16'</span>, carbs: <span class="hljs-string">'49'</span>, protein: <span class="hljs-string">'4'</span>},
+  ];
+
+  sortedData;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">this</span>.sortedData = <span class="hljs-keyword">this</span>.desserts.slice();
+  }
+
+  sortData(sort: Sort) {
+    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">this</span>.desserts.slice();
+    <span class="hljs-keyword">if</span> (!sort.active || sort.direction == <span class="hljs-string">''</span>) {
+      <span class="hljs-keyword">this</span>.sortedData = data;
+      <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">this</span>.sortedData = data.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
+      <span class="hljs-keyword">let</span> isAsc = sort.direction == <span class="hljs-string">'asc'</span>;
+      <span class="hljs-keyword">switch</span> (sort.active) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'name'</span>: <span class="hljs-keyword">return</span> compare(a.name, b.name, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'calories'</span>: <span class="hljs-keyword">return</span> compare(+a.calories, +b.calories, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'fat'</span>: <span class="hljs-keyword">return</span> compare(+a.fat, +b.fat, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'carbs'</span>: <span class="hljs-keyword">return</span> compare(+a.carbs, +b.carbs, isAsc);
+        <span class="hljs-keyword">case</span> <span class="hljs-string">'protein'</span>: <span class="hljs-keyword">return</span> compare(+a.protein, +b.protein, isAsc);
+        <span class="hljs-keyword">default</span>: <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+      }
+    });
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compare</span>(<span class="hljs-params">a, b, isAsc</span>) </span>{
+  <span class="hljs-keyword">return</span> (a &lt; b ? <span class="hljs-number">-1</span> : <span class="hljs-number">1</span>) * (isAsc ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>);
+}

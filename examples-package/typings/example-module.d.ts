@@ -63,6 +63,7 @@ import { TableBasicExample } from './table-basic/table-basic-example';
 import { TableSortingExample } from './table-sorting/table-sorting-example';
 import { TableFilteringExample } from './table-filtering/table-filtering-example';
 import { CdkTableBasicExample } from './cdk-table-basic/cdk-table-basic-example';
+import { SortOverviewExample } from './sort-overview/sort-overview-example';
 export interface LiveExample {
     title: string;
     component: any;
@@ -288,6 +289,10 @@ export declare const EXAMPLE_COMPONENTS: {
     'slide-toggle-overview': {
         title: string;
         component: typeof SlideToggleOverviewExample;
+    };
+    'sort-overview': {
+        title: string;
+        component: typeof SortOverviewExample;
     };
     'snack-bar-component': {
         title: string;

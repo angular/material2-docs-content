@@ -4,8 +4,9 @@ build their own tailored data-table experience.</p>
 <p class="docs-markdown-p">The table provides a foundation upon which other features, such as sorting and pagination, can be
 built. Because it enforces no opinions on these matters, developers have full control over the
 interaction patterns associated with the table.</p>
-<p class="docs-markdown-p">For a Material Design styled table, see the documentation for <code class="docs-markdown-code">&lt;md-table&gt;</code> which builds on top of
-the CDK data-table.</p>
+<p class="docs-markdown-p">For a Material Design styled table, see the
+<a href="https://material.angular.io/components/table" class="docs-markdown-a">documentation for <code class="docs-markdown-code">&lt;md-table&gt;</code></a> which builds on
+top of the CDK data-table.</p>
 <div material-docs-example="cdk-table-basic"></div>
 <h3 id="using-the-cdk-data-table" class="docs-markdown-h3">Using the CDK data-table</h3>
 <h4 id="writing-your-table-template" class="docs-markdown-h4">Writing your table template</h4>
@@ -86,9 +87,8 @@ time-based intervals, etc. Most commonly, updates will be triggered by user inte
 sorting and pagination.</p>
 <h5 id="-trackby-" class="docs-markdown-h5"><code class="docs-markdown-code">trackBy</code></h5>
 <p class="docs-markdown-p">To improve performance, a trackBy function can be provided to the table similar to Angular’s
-(<code class="docs-markdown-code">ngFor</code> trackBy)[trackBy]. This informs the table how to uniquely identify rows to track how the
-data changes with each update.</p>
+<a href="https://angular.io/api/common/NgForOf#change-propagation" class="docs-markdown-a"><code class="docs-markdown-code">ngFor</code> trackBy</a>. This informs the
+table how to uniquely identify rows to track how the data changes with each update.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">"myTrackById"</span>&gt;</span>
 </code></pre>
-<p class="docs-markdown-p">[trackBy][<a href="https://angular.io/api/common/NgForOf#change-propagation" class="docs-markdown-a">https://angular.io/api/common/NgForOf#change-propagation</a>]</p>
 </div></body></html>
