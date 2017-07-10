@@ -19,6 +19,15 @@ dialogRef.close(<span class="hljs-string">'Pizza!'</span>);
 <p class="docs-markdown-p">Components created via <code class="docs-markdown-code">MdDialog</code> can <em>inject</em> <code class="docs-markdown-code">MdDialogRef</code> and use it to close the dialog
 in which they are contained. When closing, an optional result value can be provided. This result
 value is forwarded as the result of the <code class="docs-markdown-code">afterClosed</code> promise. </p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({<span class="hljs-comment">/* ... */</span>})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> YourDialog {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialogRef: MdDialogRef&lt;YourDialog&gt;</span>) { }
+
+  closeDialog() {
+    <span class="hljs-keyword">this</span>.dialogRef.close(<span class="hljs-string">'Pizza!'</span>);
+  }
+}
+</code></pre>
 <h3 id="sharing-data-with-the-dialog-component-" class="docs-markdown-h3">Sharing data with the Dialog component.</h3>
 <p class="docs-markdown-p">If you want to share data with your dialog, you can use the <code class="docs-markdown-code">data</code> option to pass information to the dialog component.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">let</span> dialogRef = dialog.open(YourDialog, {
