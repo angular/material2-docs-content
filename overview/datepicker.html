@@ -84,6 +84,16 @@ three pieces via injection:</p>
 <li class="docs-markdown-li">The display and parse formats used by the datepicker.</li>
 <li class="docs-markdown-li">The message strings used in the datepicker's UI.</li>
 </ol>
+<h4 id="setting-the-locale-code" class="docs-markdown-h4">Setting the locale code</h4>
+<p class="docs-markdown-p">By default the datepicker will use the locale code from the <code class="docs-markdown-code">LOCALE_ID</code> injection token from
+<code class="docs-markdown-code">@angular/core</code>. If you want to override it, you can provide a new value for the token:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  providers: [
+    {provide: LOCALE_ID, useValue: <span class="hljs-string">'en-GB'</span>},
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}
+</code></pre>
 <h4 id="choosing-a-date-implementation-and-date-format-settings" class="docs-markdown-h4">Choosing a date implementation and date format settings</h4>
 <p class="docs-markdown-p">The datepicker was built to be date implementation agnostic. This means that it can be made to work
 with a variety of different date implementations. However it also means that developers need to make

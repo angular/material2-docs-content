@@ -4,7 +4,8 @@
 <h2 id="step-1-install-angular-material-and-angular-cdk" class="docs-markdown-h2">Step 1: Install Angular Material and Angular CDK</h2>
 <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code">npm install --save @angular/material @angular/cdk
 </code></pre>
-<p class="docs-markdown-p">A snapshot build with the latest changes from master is also available. Note that this snapshot build should not be considered stable and may break between releases.</p>
+<p class="docs-markdown-p">A snapshot build with the latest changes from master is also available. Note that this snapshot
+build should not be considered stable and may break between releases.</p>
 <pre class="docs-markdown-pre"><code class="lang-bash docs-markdown-code">npm install --save angular/material2-builds angular/cdk-builds
 </code></pre>
 <h2 id="step-2-animations" class="docs-markdown-h2">Step 2: Animations</h2>
@@ -88,13 +89,14 @@ directly from your app.</p>
 <a href="https://google.github.io/material-design-icons/" class="docs-markdown-a">Material Icons Guide</a>.</p>
 <p class="docs-markdown-p">Note that <code class="docs-markdown-code">md-icon</code> supports any font or svg icons; using Material Icons is one of many options.</p>
 <h2 id="appendix-configuring-systemjs" class="docs-markdown-h2">Appendix: Configuring SystemJS</h2>
-<p class="docs-markdown-p">If your project is using SystemJS for module loading, you will need to add <code class="docs-markdown-code">@angular/material</code>
-to the SystemJS configuration:</p>
+<p class="docs-markdown-p">If your project is using SystemJS for module loading, you will need to add <code class="docs-markdown-code">@angular/material</code> and
+<code class="docs-markdown-code">@angular/cdk</code> to the SystemJS configuration:</p>
 <pre class="docs-markdown-pre"><code class="lang-js docs-markdown-code">System.config({
   <span class="hljs-comment">// existing configuration options</span>
   map: {
     <span class="hljs-comment">// ...</span>
     <span class="hljs-string">'@angular/material'</span>: <span class="hljs-string">'npm:@angular/material/bundles/material.umd.js'</span>,
+    <span class="hljs-string">'@angular/cdk'</span>: <span class="hljs-string">'npm:@angular/cdk/bundles/cdk.umd.js'</span>
     <span class="hljs-comment">// ...</span>
   }
 });

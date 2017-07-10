@@ -1,4 +1,7 @@
 import { FormBuilder, FormGroup } from '@angular/forms';
+/**
+ * @title Slide-toggle with forms
+ */
 export declare class SlideToggleFormsExample {
     isChecked: boolean;
     formGroup: FormGroup;

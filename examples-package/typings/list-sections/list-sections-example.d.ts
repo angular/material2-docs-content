@@ -1,3 +1,6 @@
+/**
+ * @title List with sections
+ */
 export declare class ListSectionsExample {
     folders: {
         name: string;

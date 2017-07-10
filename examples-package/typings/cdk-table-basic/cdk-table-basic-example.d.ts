@@ -4,6 +4,9 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/map';
+/**
+ * @title Basic CDK data-table
+ */
 export declare class CdkTableBasicExample {
     displayedColumns: string[];
     exampleDatabase: ExampleDatabase;

@@ -5,6 +5,9 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/map';
+/**
+ * @title Table with pagination
+ */
 export declare class TablePaginationExample {
     displayedColumns: string[];
     exampleDatabase: ExampleDatabase;

@@ -5,6 +5,9 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/map';
+/**
+ * @title Table with sorting
+ */
 export declare class TableSortingExample {
     displayedColumns: string[];
     exampleDatabase: ExampleDatabase;

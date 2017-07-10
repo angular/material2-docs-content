@@ -1,3 +1,6 @@
+/**
+ * @title Dynamic grid-list
+ */
 export declare class GridListDynamicExample {
     tiles: {
         text: string;

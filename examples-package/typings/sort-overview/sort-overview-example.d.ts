@@ -1,4 +1,7 @@
 import { Sort } from '@angular/material';
+/**
+ * @title Sorting overview
+ */
 export declare class SortOverviewExample {
     desserts: {
         name: string;

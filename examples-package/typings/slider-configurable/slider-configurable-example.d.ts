@@ -1,3 +1,6 @@
+/**
+ * @title Configurable slider
+ */
 export declare class SliderConfigurableExample {
     autoTicks: boolean;
     disabled: boolean;
