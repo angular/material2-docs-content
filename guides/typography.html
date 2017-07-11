@@ -65,6 +65,11 @@ different SASS mixins.</p>
 <span class="hljs-comment">// Override typography for all Angular Material, including mat-base-typography and all components.</span>
 @<span class="hljs-keyword">include</span> angular-material-typography(<span class="hljs-variable">$custom-typography</span>);
 </code></pre>
+<p class="docs-markdown-p">If you're using Material's theming, you can also pass in your typography config to the
+<code class="docs-markdown-code">mat-core</code> mixin:</p>
+<pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-comment">// Override the typography in the core CSS.</span>
+@<span class="hljs-keyword">include</span> mat-core(<span class="hljs-variable">$custom-typography</span>);
+</code></pre>
 <p class="docs-markdown-p">For more details about the typography functions and default config, see the
 <a href="https://github.com/angular/material2/blob/master/src/lib/core/typography/_typography.scss" class="docs-markdown-a">source</a>.</p>
 <h3 id="material-typography-in-your-custom-css" class="docs-markdown-h3">Material typography in your custom CSS</h3>
