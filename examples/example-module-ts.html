@@ -31,9 +31,10 @@
 <span class="hljs-keyword">import</span> {DatepickerOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-overview/datepicker-overview-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerStartViewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-start-view/datepicker-start-view-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerTouchExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-touch/datepicker-touch-example'</span>;
+<span class="hljs-keyword">import</span> {DialogContentExampleDialog,DialogContentExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-content/dialog-content-example'</span>;
+<span class="hljs-keyword">import</span> {DialogDataExampleDialog,DialogDataExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-data/dialog-data-example'</span>;
 <span class="hljs-keyword">import</span> {DialogElementsExampleDialog,DialogElementsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-elements/dialog-elements-example'</span>;
 <span class="hljs-keyword">import</span> {DialogOverviewExampleDialog,DialogOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-overview/dialog-overview-example'</span>;
-<span class="hljs-keyword">import</span> {DialogResultExampleDialog,DialogResultExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-result/dialog-result-example'</span>;
 <span class="hljs-keyword">import</span> {GridListDynamicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./grid-list-dynamic/grid-list-dynamic-example'</span>;
 <span class="hljs-keyword">import</span> {GridListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./grid-list-overview/grid-list-overview-example'</span>;
 <span class="hljs-keyword">import</span> {IconOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./icon-overview/icon-overview-example'</span>;
@@ -189,6 +190,18 @@
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
+  <span class="hljs-string">'dialog-content'</span>: {
+    title: <span class="hljs-string">'Dialog with header, scrollable content and actions'</span>,
+    component: DialogContentExample,
+    additionalFiles: [<span class="hljs-string">"dialog-content-example-dialog.html"</span>],
+    selectorName: <span class="hljs-string">'DialogContentExample, DialogContentExampleDialog'</span>
+  },
+  <span class="hljs-string">'dialog-data'</span>: {
+    title: <span class="hljs-string">'Injecting data when opening a dialog'</span>,
+    component: DialogDataExample,
+    additionalFiles: [<span class="hljs-string">"dialog-data-example-dialog.html"</span>],
+    selectorName: <span class="hljs-string">'DialogDataExample, DialogDataExampleDialog'</span>
+  },
   <span class="hljs-string">'dialog-elements'</span>: {
     title: <span class="hljs-string">'Dialog elements'</span>,
     component: DialogElementsExample,
@@ -200,12 +213,6 @@
     component: DialogOverviewExample,
     additionalFiles: [<span class="hljs-string">"dialog-overview-example-dialog.html"</span>],
     selectorName: <span class="hljs-string">'DialogOverviewExample, DialogOverviewExampleDialog'</span>
-  },
-  <span class="hljs-string">'dialog-result'</span>: {
-    title: <span class="hljs-string">'Dialog with a result'</span>,
-    component: DialogResultExample,
-    additionalFiles: [<span class="hljs-string">"dialog-result-example-dialog.html"</span>],
-    selectorName: <span class="hljs-string">'DialogResultExample, DialogResultExampleDialog'</span>
   },
   <span class="hljs-string">'grid-list-dynamic'</span>: {
     title: <span class="hljs-string">'Dynamic grid-list'</span>,
@@ -498,9 +505,10 @@
   DatepickerOverviewExample,
   DatepickerStartViewExample,
   DatepickerTouchExample,
+  DialogContentExampleDialog,DialogContentExample,
+  DialogDataExampleDialog,DialogDataExample,
   DialogElementsExampleDialog,DialogElementsExample,
   DialogOverviewExampleDialog,DialogOverviewExample,
-  DialogResultExampleDialog,DialogResultExample,
   GridListDynamicExample,
   GridListOverviewExample,
   IconOverviewExample,

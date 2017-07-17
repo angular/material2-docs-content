@@ -22,9 +22,10 @@ import { DatepickerMinMaxExample } from './datepicker-min-max/datepicker-min-max
 import { DatepickerOverviewExample } from './datepicker-overview/datepicker-overview-example';
 import { DatepickerStartViewExample } from './datepicker-start-view/datepicker-start-view-example';
 import { DatepickerTouchExample } from './datepicker-touch/datepicker-touch-example';
+import { DialogContentExample } from './dialog-content/dialog-content-example';
+import { DialogDataExample } from './dialog-data/dialog-data-example';
 import { DialogElementsExample } from './dialog-elements/dialog-elements-example';
-import { DialogOverviewExample } from './dialog-overview/dialog-overview-example';
-import { DialogResultExampleDialog, DialogResultExample } from './dialog-result/dialog-result-example';
+import { DialogOverviewExampleDialog, DialogOverviewExample } from './dialog-overview/dialog-overview-example';
 import { GridListDynamicExample } from './grid-list-dynamic/grid-list-dynamic-example';
 import { GridListOverviewExample } from './grid-list-overview/grid-list-overview-example';
 import { IconOverviewExample } from './icon-overview/icon-overview-example';
@@ -179,6 +180,18 @@ export declare const EXAMPLE_COMPONENTS: {
         additionalFiles: null;
         selectorName: null;
     };
+    'dialog-content': {
+        title: string;
+        component: typeof DialogContentExample;
+        additionalFiles: string[];
+        selectorName: string;
+    };
+    'dialog-data': {
+        title: string;
+        component: typeof DialogDataExample;
+        additionalFiles: string[];
+        selectorName: string;
+    };
     'dialog-elements': {
         title: string;
         component: typeof DialogElementsExample;
@@ -188,12 +201,6 @@ export declare const EXAMPLE_COMPONENTS: {
     'dialog-overview': {
         title: string;
         component: typeof DialogOverviewExample;
-        additionalFiles: string[];
-        selectorName: string;
-    };
-    'dialog-result': {
-        title: string;
-        component: typeof DialogResultExample;
         additionalFiles: string[];
         selectorName: string;
     };
@@ -468,6 +475,6 @@ export declare const EXAMPLE_COMPONENTS: {
         selectorName: null;
     };
 };
-export declare const EXAMPLE_LIST: (typeof DialogElementsExample | typeof DialogResultExampleDialog | typeof IconSvgExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample)[];
+export declare const EXAMPLE_LIST: (typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof IconSvgExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample)[];
 export declare class ExampleModule {
 }

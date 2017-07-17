@@ -67,12 +67,12 @@ ExampleMaterialModule.decorators = [
                     _angular_material.MdSliderModule,
                     _angular_material.MdSidenavModule,
                     _angular_material.MdSnackBarModule,
-                    _angular_material.MdTableModule,
                     _angular_material.MdTabsModule,
                     _angular_material.MdToolbarModule,
                     _angular_material.MdTooltipModule,
                     _angular_material.MdPaginatorModule,
-                    _angular_material.MdSortModule
+                    _angular_material.MdSortModule,
+                    _angular_material.MdTableModule
                 ]
             },] },
 ];
@@ -593,6 +593,111 @@ DatepickerTouchExample.decorators = [
  */
 DatepickerTouchExample.ctorParameters = function () { return []; };
 /**
+ * \@title Dialog with header, scrollable content and actions
+ */
+var DialogContentExample = (function () {
+    /**
+     * @param {?} dialog
+     */
+    function DialogContentExample(dialog) {
+        this.dialog = dialog;
+    }
+    /**
+     * @return {?}
+     */
+    DialogContentExample.prototype.openDialog = function () {
+        var /** @type {?} */ dialogRef = this.dialog.open(DialogContentExampleDialog, {
+            height: '350px'
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log("Dialog result: " + result);
+        });
+    };
+    return DialogContentExample;
+}());
+DialogContentExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'dialog-content-example',
+                template: "<button md-button (click)=\"openDialog()\">Open dialog</button>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DialogContentExample.ctorParameters = function () { return [
+    { type: _angular_material.MdDialog, },
+]; };
+var DialogContentExampleDialog = (function () {
+    function DialogContentExampleDialog() {
+    }
+    return DialogContentExampleDialog;
+}());
+DialogContentExampleDialog.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'dialog-content-example-dialog',
+                template: "<h2 md-dialog-title>Install Angular</h2><md-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED & PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></md-dialog-content><md-dialog-actions><button md-button [md-dialog-close]=\"true\" tabindex=\"1\">Install</button> <button md-button md-dialog-close tabindex=\"-1\">Cancel</button></md-dialog-actions>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DialogContentExampleDialog.ctorParameters = function () { return []; };
+/**
+ * \@title Injecting data when opening a dialog
+ */
+var DialogDataExample = (function () {
+    /**
+     * @param {?} dialog
+     */
+    function DialogDataExample(dialog) {
+        this.dialog = dialog;
+    }
+    /**
+     * @return {?}
+     */
+    DialogDataExample.prototype.openDialog = function () {
+        this.dialog.open(DialogDataExampleDialog, {
+            data: {
+                animal: 'panda'
+            }
+        });
+    };
+    return DialogDataExample;
+}());
+DialogDataExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'dialog-data-example',
+                template: "<button md-button (click)=\"openDialog()\">Open dialog</button>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DialogDataExample.ctorParameters = function () { return [
+    { type: _angular_material.MdDialog, },
+]; };
+var DialogDataExampleDialog = (function () {
+    /**
+     * @param {?} data
+     */
+    function DialogDataExampleDialog(data) {
+        this.data = data;
+    }
+    return DialogDataExampleDialog;
+}());
+DialogDataExampleDialog.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'dialog-data-example-dialog',
+                template: "<h1 md-dialog-title>Favorite Animal</h1><div md-dialog-content>My favorite animal is:<ul><li><span *ngIf=\"data.animal === 'panda'\">&#10003;</span> Panda</li><li><span *ngIf=\"data.animal === 'unicorn'\">&#10003;</span> Unicorn</li><li><span *ngIf=\"data.animal === 'lion'\">&#10003;</span> Lion</li></ul></div>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DialogDataExampleDialog.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: _angular_core.Inject, args: [_angular_material.MD_DIALOG_DATA,] },] },
+]; };
+/**
  * \@title Dialog elements
  */
 var DialogElementsExample = (function () {
@@ -651,14 +756,22 @@ var DialogOverviewExample = (function () {
      * @return {?}
      */
     DialogOverviewExample.prototype.openDialog = function () {
-        this.dialog.open(DialogOverviewExampleDialog);
+        var _this = this;
+        var /** @type {?} */ dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+            width: '250px',
+            data: { name: this.name, animal: this.animal }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('The dialog was closed');
+            _this.animal = result;
+        });
     };
     return DialogOverviewExample;
 }());
 DialogOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'dialog-overview-example',
-                template: "<button md-button (click)=\"openDialog()\">Open dialog</button>",
+                template: "<ol><li><md-input-container><input mdInput [(ngModel)]=\"name\" placeholder=\"What's your name?\"></md-input-container></li><li><button md-raised-button (click)=\"openDialog()\">Pick one</button></li><li *ngIf=\"animal\">You chose: <i>{{animal}}</i></li></ol>"
             },] },
 ];
 /**
@@ -668,74 +781,34 @@ DialogOverviewExample.ctorParameters = function () { return [
     { type: _angular_material.MdDialog, },
 ]; };
 var DialogOverviewExampleDialog = (function () {
-    function DialogOverviewExampleDialog() {
+    /**
+     * @param {?} dialogRef
+     * @param {?} data
+     */
+    function DialogOverviewExampleDialog(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
     }
+    /**
+     * @return {?}
+     */
+    DialogOverviewExampleDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
     return DialogOverviewExampleDialog;
 }());
 DialogOverviewExampleDialog.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'dialog-overview-example-dialog',
-                template: "<p>Hi, I'm a dialog!</p>",
+                template: "<h1 md-dialog-title>Hi {{data.name}}</h1><div md-dialog-content><p>What's your favorite animal?</p><md-input-container><input mdInput tabindex=\"1\" [(ngModel)]=\"data.animal\"></md-input-container></div><div md-dialog-actions><button md-button [md-dialog-close]=\"data.animal\" tabindex=\"2\">Ok</button> <button md-button (click)=\"onNoClick()\" tabindex=\"-1\">No Thanks</button></div>",
             },] },
 ];
 /**
  * @nocollapse
  */
-DialogOverviewExampleDialog.ctorParameters = function () { return []; };
-/**
- * \@title Dialog with a result
- */
-var DialogResultExample = (function () {
-    /**
-     * @param {?} dialog
-     */
-    function DialogResultExample(dialog) {
-        this.dialog = dialog;
-    }
-    /**
-     * @return {?}
-     */
-    DialogResultExample.prototype.openDialog = function () {
-        var _this = this;
-        var /** @type {?} */ dialogRef = this.dialog.open(DialogResultExampleDialog);
-        dialogRef.afterClosed().subscribe(function (result) {
-            _this.selectedOption = result;
-        });
-    };
-    return DialogResultExample;
-}());
-DialogResultExample.decorators = [
-    { type: _angular_core.Component, args: [{
-                selector: 'dialog-result-example',
-                template: "<button md-button (click)=\"openDialog()\">Launch dialog</button> You chose: {{selectedOption}}",
-            },] },
-];
-/**
- * @nocollapse
- */
-DialogResultExample.ctorParameters = function () { return [
-    { type: _angular_material.MdDialog, },
-]; };
-var DialogResultExampleDialog = (function () {
-    /**
-     * @param {?} dialogRef
-     */
-    function DialogResultExampleDialog(dialogRef) {
-        this.dialogRef = dialogRef;
-    }
-    return DialogResultExampleDialog;
-}());
-DialogResultExampleDialog.decorators = [
-    { type: _angular_core.Component, args: [{
-                selector: 'dialog-result-example-dialog',
-                template: "<h1 md-dialog-title>Dialog</h1><div md-dialog-content>What would you like to do?</div><div md-dialog-actions><button md-button md-dialog-close=\"Option 1\">Option 1</button> <button md-button md-dialog-close=\"Option 2\">Option 2</button></div>",
-            },] },
-];
-/**
- * @nocollapse
- */
-DialogResultExampleDialog.ctorParameters = function () { return [
+DialogOverviewExampleDialog.ctorParameters = function () { return [
     { type: _angular_material.MdDialogRef, },
+    { type: undefined, decorators: [{ type: _angular_core.Inject, args: [_angular_material.MD_DIALOG_DATA,] },] },
 ]; };
 /**
  * \@title Dynamic grid-list
@@ -2582,6 +2655,18 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'dialog-content': {
+        title: 'Dialog with header, scrollable content and actions',
+        component: DialogContentExample,
+        additionalFiles: ["dialog-content-example-dialog.html"],
+        selectorName: 'DialogContentExample, DialogContentExampleDialog'
+    },
+    'dialog-data': {
+        title: 'Injecting data when opening a dialog',
+        component: DialogDataExample,
+        additionalFiles: ["dialog-data-example-dialog.html"],
+        selectorName: 'DialogDataExample, DialogDataExampleDialog'
+    },
     'dialog-elements': {
         title: 'Dialog elements',
         component: DialogElementsExample,
@@ -2593,12 +2678,6 @@ var EXAMPLE_COMPONENTS = {
         component: DialogOverviewExample,
         additionalFiles: ["dialog-overview-example-dialog.html"],
         selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
-    },
-    'dialog-result': {
-        title: 'Dialog with a result',
-        component: DialogResultExample,
-        additionalFiles: ["dialog-result-example-dialog.html"],
-        selectorName: 'DialogResultExample, DialogResultExampleDialog'
     },
     'grid-list-dynamic': {
         title: 'Dynamic grid-list',
@@ -2890,9 +2969,10 @@ var EXAMPLE_LIST = [
     DatepickerOverviewExample,
     DatepickerStartViewExample,
     DatepickerTouchExample,
+    DialogContentExampleDialog, DialogContentExample,
+    DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
     DialogOverviewExampleDialog, DialogOverviewExample,
-    DialogResultExampleDialog, DialogResultExample,
     GridListDynamicExample,
     GridListOverviewExample,
     IconOverviewExample,
@@ -3027,59 +3107,61 @@ exports.ɵm = DatepickerFilterExample;
 exports.ɵn = DatepickerMinMaxExample;
 exports.ɵo = DatepickerStartViewExample;
 exports.ɵp = DatepickerTouchExample;
-exports.ɵq = DialogElementsExample;
-exports.ɵr = DialogElementsExampleDialog;
-exports.ɵs = DialogOverviewExample;
-exports.ɵt = DialogOverviewExampleDialog;
-exports.ɵu = DialogResultExample;
-exports.ɵv = DialogResultExampleDialog;
-exports.ɵw = GridListDynamicExample;
-exports.ɵx = GridListOverviewExample;
-exports.ɵy = IconOverviewExample;
-exports.ɵz = IconSvgExample;
-exports.ɵba = InputClearableExample;
-exports.ɵbb = InputErrorsExample;
-exports.ɵbc = InputFormExample;
-exports.ɵbd = InputHintExample;
-exports.ɵbe = InputOverviewExample;
-exports.ɵbf = InputPrefixSuffixExample;
-exports.ɵbg = ListOverviewExample;
-exports.ɵbh = ListSectionsExample;
-exports.ɵcq = ExampleMaterialModule;
-exports.ɵbi = MenuIconsExample;
-exports.ɵbj = MenuOverviewExample;
-exports.ɵbk = PaginatorConfigurableExample;
-exports.ɵbl = PaginatorOverviewExample;
-exports.ɵbm = ProgressBarConfigurableExample;
-exports.ɵbn = ProgressBarOverviewExample;
-exports.ɵbo = ProgressSpinnerConfigurableExample;
-exports.ɵbp = ProgressSpinnerOverviewExample;
-exports.ɵbq = RadioNgModelExample;
-exports.ɵbr = RadioOverviewExample;
-exports.ɵbs = SelectFormExample;
-exports.ɵbt = SelectOverviewExample;
-exports.ɵbu = SidenavFabExample;
-exports.ɵbv = SidenavOverviewExample;
-exports.ɵbw = SlideToggleConfigurableExample;
-exports.ɵbx = SlideToggleFormsExample;
-exports.ɵby = SlideToggleOverviewExample;
-exports.ɵbz = SliderConfigurableExample;
-exports.ɵca = SliderOverviewExample;
-exports.ɵcc = PizzaPartyComponent;
-exports.ɵcb = SnackBarComponentExample;
-exports.ɵcd = SnackBarOverviewExample;
-exports.ɵce = SortOverviewExample;
-exports.ɵcf = TableBasicExample;
-exports.ɵcg = TableFilteringExample;
-exports.ɵch = TableOverviewExample;
-exports.ɵci = TablePaginationExample;
-exports.ɵcj = TableSortingExample;
-exports.ɵck = TabsOverviewExample;
-exports.ɵcl = TabsTemplateLabelExample;
-exports.ɵcm = ToolbarMultirowExample;
-exports.ɵcn = ToolbarOverviewExample;
-exports.ɵco = TooltipOverviewExample;
-exports.ɵcp = TooltipPositionExample;
+exports.ɵq = DialogContentExample;
+exports.ɵr = DialogContentExampleDialog;
+exports.ɵs = DialogDataExample;
+exports.ɵt = DialogDataExampleDialog;
+exports.ɵu = DialogElementsExample;
+exports.ɵv = DialogElementsExampleDialog;
+exports.ɵw = DialogOverviewExample;
+exports.ɵx = DialogOverviewExampleDialog;
+exports.ɵy = GridListDynamicExample;
+exports.ɵz = GridListOverviewExample;
+exports.ɵba = IconOverviewExample;
+exports.ɵbb = IconSvgExample;
+exports.ɵbc = InputClearableExample;
+exports.ɵbd = InputErrorsExample;
+exports.ɵbe = InputFormExample;
+exports.ɵbf = InputHintExample;
+exports.ɵbg = InputOverviewExample;
+exports.ɵbh = InputPrefixSuffixExample;
+exports.ɵbi = ListOverviewExample;
+exports.ɵbj = ListSectionsExample;
+exports.ɵcs = ExampleMaterialModule;
+exports.ɵbk = MenuIconsExample;
+exports.ɵbl = MenuOverviewExample;
+exports.ɵbm = PaginatorConfigurableExample;
+exports.ɵbn = PaginatorOverviewExample;
+exports.ɵbo = ProgressBarConfigurableExample;
+exports.ɵbp = ProgressBarOverviewExample;
+exports.ɵbq = ProgressSpinnerConfigurableExample;
+exports.ɵbr = ProgressSpinnerOverviewExample;
+exports.ɵbs = RadioNgModelExample;
+exports.ɵbt = RadioOverviewExample;
+exports.ɵbu = SelectFormExample;
+exports.ɵbv = SelectOverviewExample;
+exports.ɵbw = SidenavFabExample;
+exports.ɵbx = SidenavOverviewExample;
+exports.ɵby = SlideToggleConfigurableExample;
+exports.ɵbz = SlideToggleFormsExample;
+exports.ɵca = SlideToggleOverviewExample;
+exports.ɵcb = SliderConfigurableExample;
+exports.ɵcc = SliderOverviewExample;
+exports.ɵce = PizzaPartyComponent;
+exports.ɵcd = SnackBarComponentExample;
+exports.ɵcf = SnackBarOverviewExample;
+exports.ɵcg = SortOverviewExample;
+exports.ɵch = TableBasicExample;
+exports.ɵci = TableFilteringExample;
+exports.ɵcj = TableOverviewExample;
+exports.ɵck = TablePaginationExample;
+exports.ɵcl = TableSortingExample;
+exports.ɵcm = TabsOverviewExample;
+exports.ɵcn = TabsTemplateLabelExample;
+exports.ɵco = ToolbarMultirowExample;
+exports.ɵcp = ToolbarOverviewExample;
+exports.ɵcq = TooltipOverviewExample;
+exports.ɵcr = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

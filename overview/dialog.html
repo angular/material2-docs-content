@@ -31,7 +31,7 @@ value is forwarded as the result of the <code class="docs-markdown-code">afterCl
 <h3 id="sharing-data-with-the-dialog-component-" class="docs-markdown-h3">Sharing data with the Dialog component.</h3>
 <p class="docs-markdown-p">If you want to share data with your dialog, you can use the <code class="docs-markdown-code">data</code> option to pass information to the dialog component.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">let</span> dialogRef = dialog.open(YourDialog, {
-  data: <span class="hljs-string">'your data'</span>,
+  data: { name: <span class="hljs-string">'austin'</span> },
 });
 </code></pre>
 <p class="docs-markdown-p">To access the data in your dialog component, you have to use the MD_DIALOG_DATA injection token:</p>
@@ -40,13 +40,13 @@ import {MD_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'your-dialog',
-  template: 'passed in {{ data }}',
+  template: 'passed in {{ data.name }}',
 })
-
 export class YourDialog {
   constructor(@Inject(MD_DIALOG_DATA) public data: any) { }
 }
 </code></pre>
+<div material-docs-example="dialog-data"></div>
 <h3 id="dialog-content" class="docs-markdown-h3">Dialog content</h3>
 <p class="docs-markdown-p">Several directives are available to make it easier to structure your dialog content:</p>
 <table class="docs-markdown-table">
@@ -88,6 +88,7 @@ export class YourDialog {
 <p class="docs-markdown-p">You can control which elements are tab stops with the <code class="docs-markdown-code">tabindex</code> attribute</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
+<div material-docs-example="dialog-content"></div>
 <h3 id="aot-compilation" class="docs-markdown-h3">AOT Compilation</h3>
 <p class="docs-markdown-p">Due to the dynamic nature of the <code class="docs-markdown-code">MdDialog</code>, and its usage of <code class="docs-markdown-code">ViewContainerRef#createComponent()</code>
 to create the component on the fly, the AOT compiler will not know to create the proper
@@ -107,7 +108,7 @@ that the AOT compiler knows to create the <code class="docs-markdown-code">Compo
 
   entryComponents: [
     ExampleDialogComponent
-  ]
+  ],
 
   providers: [],
   bootstrap: [AppComponent]

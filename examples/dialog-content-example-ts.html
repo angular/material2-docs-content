@@ -1,0 +1,29 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MdDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-comment">/**
+ * @title Dialog with header, scrollable content and actions
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'dialog-content-example'</span>,
+  templateUrl: <span class="hljs-string">'dialog-content-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogContentExample {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MdDialog</span>) {}
+
+  openDialog() {
+    <span class="hljs-keyword">const</span> dialogRef = <span class="hljs-keyword">this</span>.dialog.open(DialogContentExampleDialog, {
+      height: <span class="hljs-string">'350px'</span>
+    });
+
+    dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Dialog result: <span class="hljs-subst">${result}</span>`</span>);
+    });
+  }
+}
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'dialog-content-example-dialog'</span>,
+  templateUrl: <span class="hljs-string">'dialog-content-example-dialog.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogContentExampleDialog {}

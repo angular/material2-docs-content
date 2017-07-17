@@ -6,11 +6,11 @@ import * as tslib_1 from "tslib";
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { Component, NgModule, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, Inject, NgModule, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule, DataSource } from '@angular/cdk';
-import { MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdPaginator, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdSort, MdSortModule, MdTableModule, MdTabsModule, MdToolbarModule, MdTooltipModule, SelectionModel } from '@angular/material';
+import { MD_DIALOG_DATA, MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdPaginator, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdSort, MdSortModule, MdTableModule, MdTabsModule, MdToolbarModule, MdTooltipModule, SelectionModel } from '@angular/material';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
@@ -50,12 +50,12 @@ ExampleMaterialModule.decorators = [
                     MdSliderModule,
                     MdSidenavModule,
                     MdSnackBarModule,
-                    MdTableModule,
                     MdTabsModule,
                     MdToolbarModule,
                     MdTooltipModule,
                     MdPaginatorModule,
-                    MdSortModule
+                    MdSortModule,
+                    MdTableModule
                 ]
             },] },
 ];
@@ -576,6 +576,111 @@ DatepickerTouchExample.decorators = [
  */
 DatepickerTouchExample.ctorParameters = function () { return []; };
 /**
+ * \@title Dialog with header, scrollable content and actions
+ */
+var DialogContentExample = /*@__PURE__*/(function () {
+    /**
+     * @param {?} dialog
+     */
+    function DialogContentExample(dialog) {
+        this.dialog = dialog;
+    }
+    /**
+     * @return {?}
+     */
+    DialogContentExample.prototype.openDialog = function () {
+        var /** @type {?} */ dialogRef = this.dialog.open(DialogContentExampleDialog, {
+            height: '350px'
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log("Dialog result: " + result);
+        });
+    };
+    return DialogContentExample;
+}());
+DialogContentExample.decorators = [
+    { type: Component, args: [{
+                selector: 'dialog-content-example',
+                template: "<button md-button (click)=\"openDialog()\">Open dialog</button>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DialogContentExample.ctorParameters = function () { return [
+    { type: MdDialog, },
+]; };
+var DialogContentExampleDialog = /*@__PURE__*/(function () {
+    function DialogContentExampleDialog() {
+    }
+    return DialogContentExampleDialog;
+}());
+DialogContentExampleDialog.decorators = [
+    { type: Component, args: [{
+                selector: 'dialog-content-example-dialog',
+                template: "<h2 md-dialog-title>Install Angular</h2><md-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED & PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></md-dialog-content><md-dialog-actions><button md-button [md-dialog-close]=\"true\" tabindex=\"1\">Install</button> <button md-button md-dialog-close tabindex=\"-1\">Cancel</button></md-dialog-actions>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DialogContentExampleDialog.ctorParameters = function () { return []; };
+/**
+ * \@title Injecting data when opening a dialog
+ */
+var DialogDataExample = /*@__PURE__*/(function () {
+    /**
+     * @param {?} dialog
+     */
+    function DialogDataExample(dialog) {
+        this.dialog = dialog;
+    }
+    /**
+     * @return {?}
+     */
+    DialogDataExample.prototype.openDialog = function () {
+        this.dialog.open(DialogDataExampleDialog, {
+            data: {
+                animal: 'panda'
+            }
+        });
+    };
+    return DialogDataExample;
+}());
+DialogDataExample.decorators = [
+    { type: Component, args: [{
+                selector: 'dialog-data-example',
+                template: "<button md-button (click)=\"openDialog()\">Open dialog</button>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DialogDataExample.ctorParameters = function () { return [
+    { type: MdDialog, },
+]; };
+var DialogDataExampleDialog = /*@__PURE__*/(function () {
+    /**
+     * @param {?} data
+     */
+    function DialogDataExampleDialog(data) {
+        this.data = data;
+    }
+    return DialogDataExampleDialog;
+}());
+DialogDataExampleDialog.decorators = [
+    { type: Component, args: [{
+                selector: 'dialog-data-example-dialog',
+                template: "<h1 md-dialog-title>Favorite Animal</h1><div md-dialog-content>My favorite animal is:<ul><li><span *ngIf=\"data.animal === 'panda'\">&#10003;</span> Panda</li><li><span *ngIf=\"data.animal === 'unicorn'\">&#10003;</span> Unicorn</li><li><span *ngIf=\"data.animal === 'lion'\">&#10003;</span> Lion</li></ul></div>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DialogDataExampleDialog.ctorParameters = function () { return [
+    { type: undefined, decorators: [{ type: Inject, args: [MD_DIALOG_DATA,] },] },
+]; };
+/**
  * \@title Dialog elements
  */
 var DialogElementsExample = /*@__PURE__*/(function () {
@@ -634,14 +739,22 @@ var DialogOverviewExample = /*@__PURE__*/(function () {
      * @return {?}
      */
     DialogOverviewExample.prototype.openDialog = function () {
-        this.dialog.open(DialogOverviewExampleDialog);
+        var _this = this;
+        var /** @type {?} */ dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+            width: '250px',
+            data: { name: this.name, animal: this.animal }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            console.log('The dialog was closed');
+            _this.animal = result;
+        });
     };
     return DialogOverviewExample;
 }());
 DialogOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-overview-example',
-                template: "<button md-button (click)=\"openDialog()\">Open dialog</button>",
+                template: "<ol><li><md-input-container><input mdInput [(ngModel)]=\"name\" placeholder=\"What's your name?\"></md-input-container></li><li><button md-raised-button (click)=\"openDialog()\">Pick one</button></li><li *ngIf=\"animal\">You chose: <i>{{animal}}</i></li></ol>"
             },] },
 ];
 /**
@@ -651,74 +764,34 @@ DialogOverviewExample.ctorParameters = function () { return [
     { type: MdDialog, },
 ]; };
 var DialogOverviewExampleDialog = /*@__PURE__*/(function () {
-    function DialogOverviewExampleDialog() {
+    /**
+     * @param {?} dialogRef
+     * @param {?} data
+     */
+    function DialogOverviewExampleDialog(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
     }
+    /**
+     * @return {?}
+     */
+    DialogOverviewExampleDialog.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
     return DialogOverviewExampleDialog;
 }());
 DialogOverviewExampleDialog.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-overview-example-dialog',
-                template: "<p>Hi, I'm a dialog!</p>",
+                template: "<h1 md-dialog-title>Hi {{data.name}}</h1><div md-dialog-content><p>What's your favorite animal?</p><md-input-container><input mdInput tabindex=\"1\" [(ngModel)]=\"data.animal\"></md-input-container></div><div md-dialog-actions><button md-button [md-dialog-close]=\"data.animal\" tabindex=\"2\">Ok</button> <button md-button (click)=\"onNoClick()\" tabindex=\"-1\">No Thanks</button></div>",
             },] },
 ];
 /**
  * @nocollapse
  */
-DialogOverviewExampleDialog.ctorParameters = function () { return []; };
-/**
- * \@title Dialog with a result
- */
-var DialogResultExample = /*@__PURE__*/(function () {
-    /**
-     * @param {?} dialog
-     */
-    function DialogResultExample(dialog) {
-        this.dialog = dialog;
-    }
-    /**
-     * @return {?}
-     */
-    DialogResultExample.prototype.openDialog = function () {
-        var _this = this;
-        var /** @type {?} */ dialogRef = this.dialog.open(DialogResultExampleDialog);
-        dialogRef.afterClosed().subscribe(function (result) {
-            _this.selectedOption = result;
-        });
-    };
-    return DialogResultExample;
-}());
-DialogResultExample.decorators = [
-    { type: Component, args: [{
-                selector: 'dialog-result-example',
-                template: "<button md-button (click)=\"openDialog()\">Launch dialog</button> You chose: {{selectedOption}}",
-            },] },
-];
-/**
- * @nocollapse
- */
-DialogResultExample.ctorParameters = function () { return [
-    { type: MdDialog, },
-]; };
-var DialogResultExampleDialog = /*@__PURE__*/(function () {
-    /**
-     * @param {?} dialogRef
-     */
-    function DialogResultExampleDialog(dialogRef) {
-        this.dialogRef = dialogRef;
-    }
-    return DialogResultExampleDialog;
-}());
-DialogResultExampleDialog.decorators = [
-    { type: Component, args: [{
-                selector: 'dialog-result-example-dialog',
-                template: "<h1 md-dialog-title>Dialog</h1><div md-dialog-content>What would you like to do?</div><div md-dialog-actions><button md-button md-dialog-close=\"Option 1\">Option 1</button> <button md-button md-dialog-close=\"Option 2\">Option 2</button></div>",
-            },] },
-];
-/**
- * @nocollapse
- */
-DialogResultExampleDialog.ctorParameters = function () { return [
+DialogOverviewExampleDialog.ctorParameters = function () { return [
     { type: MdDialogRef, },
+    { type: undefined, decorators: [{ type: Inject, args: [MD_DIALOG_DATA,] },] },
 ]; };
 /**
  * \@title Dynamic grid-list
@@ -2565,6 +2638,18 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'dialog-content': {
+        title: 'Dialog with header, scrollable content and actions',
+        component: DialogContentExample,
+        additionalFiles: ["dialog-content-example-dialog.html"],
+        selectorName: 'DialogContentExample, DialogContentExampleDialog'
+    },
+    'dialog-data': {
+        title: 'Injecting data when opening a dialog',
+        component: DialogDataExample,
+        additionalFiles: ["dialog-data-example-dialog.html"],
+        selectorName: 'DialogDataExample, DialogDataExampleDialog'
+    },
     'dialog-elements': {
         title: 'Dialog elements',
         component: DialogElementsExample,
@@ -2576,12 +2661,6 @@ var EXAMPLE_COMPONENTS = {
         component: DialogOverviewExample,
         additionalFiles: ["dialog-overview-example-dialog.html"],
         selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
-    },
-    'dialog-result': {
-        title: 'Dialog with a result',
-        component: DialogResultExample,
-        additionalFiles: ["dialog-result-example-dialog.html"],
-        selectorName: 'DialogResultExample, DialogResultExampleDialog'
     },
     'grid-list-dynamic': {
         title: 'Dynamic grid-list',
@@ -2873,9 +2952,10 @@ var EXAMPLE_LIST = [
     DatepickerOverviewExample,
     DatepickerStartViewExample,
     DatepickerTouchExample,
+    DialogContentExampleDialog, DialogContentExample,
+    DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
     DialogOverviewExampleDialog, DialogOverviewExample,
-    DialogResultExampleDialog, DialogResultExample,
     GridListDynamicExample,
     GridListOverviewExample,
     IconOverviewExample,
@@ -2990,5 +3070,5 @@ var ExampleData = /*@__PURE__*/(function () {
 /**
  * Generated bundle index. Do not edit.
  */
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, DatepickerOverviewExample, CardFancyExample, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵc, ButtonToggleOverviewExample as ɵd, ButtonTypesExample as ɵe, CardOverviewExample as ɵf, CdkTableBasicExample as ɵg, CheckboxConfigurableExample as ɵh, CheckboxOverviewExample as ɵi, ChipsOverviewExample as ɵj, ChipsStackedExample as ɵk, DatepickerApiExample as ɵl, DatepickerFilterExample as ɵm, DatepickerMinMaxExample as ɵn, DatepickerStartViewExample as ɵo, DatepickerTouchExample as ɵp, DialogElementsExample as ɵq, DialogElementsExampleDialog as ɵr, DialogOverviewExample as ɵs, DialogOverviewExampleDialog as ɵt, DialogResultExample as ɵu, DialogResultExampleDialog as ɵv, GridListDynamicExample as ɵw, GridListOverviewExample as ɵx, IconOverviewExample as ɵy, IconSvgExample as ɵz, InputClearableExample as ɵba, InputErrorsExample as ɵbb, InputFormExample as ɵbc, InputHintExample as ɵbd, InputOverviewExample as ɵbe, InputPrefixSuffixExample as ɵbf, ListOverviewExample as ɵbg, ListSectionsExample as ɵbh, ExampleMaterialModule as ɵcq, MenuIconsExample as ɵbi, MenuOverviewExample as ɵbj, PaginatorConfigurableExample as ɵbk, PaginatorOverviewExample as ɵbl, ProgressBarConfigurableExample as ɵbm, ProgressBarOverviewExample as ɵbn, ProgressSpinnerConfigurableExample as ɵbo, ProgressSpinnerOverviewExample as ɵbp, RadioNgModelExample as ɵbq, RadioOverviewExample as ɵbr, SelectFormExample as ɵbs, SelectOverviewExample as ɵbt, SidenavFabExample as ɵbu, SidenavOverviewExample as ɵbv, SlideToggleConfigurableExample as ɵbw, SlideToggleFormsExample as ɵbx, SlideToggleOverviewExample as ɵby, SliderConfigurableExample as ɵbz, SliderOverviewExample as ɵca, PizzaPartyComponent as ɵcc, SnackBarComponentExample as ɵcb, SnackBarOverviewExample as ɵcd, SortOverviewExample as ɵce, TableBasicExample as ɵcf, TableFilteringExample as ɵcg, TableOverviewExample as ɵch, TablePaginationExample as ɵci, TableSortingExample as ɵcj, TabsOverviewExample as ɵck, TabsTemplateLabelExample as ɵcl, ToolbarMultirowExample as ɵcm, ToolbarOverviewExample as ɵcn, TooltipOverviewExample as ɵco, TooltipPositionExample as ɵcp };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, DatepickerOverviewExample, CardFancyExample, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵc, ButtonToggleOverviewExample as ɵd, ButtonTypesExample as ɵe, CardOverviewExample as ɵf, CdkTableBasicExample as ɵg, CheckboxConfigurableExample as ɵh, CheckboxOverviewExample as ɵi, ChipsOverviewExample as ɵj, ChipsStackedExample as ɵk, DatepickerApiExample as ɵl, DatepickerFilterExample as ɵm, DatepickerMinMaxExample as ɵn, DatepickerStartViewExample as ɵo, DatepickerTouchExample as ɵp, DialogContentExample as ɵq, DialogContentExampleDialog as ɵr, DialogDataExample as ɵs, DialogDataExampleDialog as ɵt, DialogElementsExample as ɵu, DialogElementsExampleDialog as ɵv, DialogOverviewExample as ɵw, DialogOverviewExampleDialog as ɵx, GridListDynamicExample as ɵy, GridListOverviewExample as ɵz, IconOverviewExample as ɵba, IconSvgExample as ɵbb, InputClearableExample as ɵbc, InputErrorsExample as ɵbd, InputFormExample as ɵbe, InputHintExample as ɵbf, InputOverviewExample as ɵbg, InputPrefixSuffixExample as ɵbh, ListOverviewExample as ɵbi, ListSectionsExample as ɵbj, ExampleMaterialModule as ɵcs, MenuIconsExample as ɵbk, MenuOverviewExample as ɵbl, PaginatorConfigurableExample as ɵbm, PaginatorOverviewExample as ɵbn, ProgressBarConfigurableExample as ɵbo, ProgressBarOverviewExample as ɵbp, ProgressSpinnerConfigurableExample as ɵbq, ProgressSpinnerOverviewExample as ɵbr, RadioNgModelExample as ɵbs, RadioOverviewExample as ɵbt, SelectFormExample as ɵbu, SelectOverviewExample as ɵbv, SidenavFabExample as ɵbw, SidenavOverviewExample as ɵbx, SlideToggleConfigurableExample as ɵby, SlideToggleFormsExample as ɵbz, SlideToggleOverviewExample as ɵca, SliderConfigurableExample as ɵcb, SliderOverviewExample as ɵcc, PizzaPartyComponent as ɵce, SnackBarComponentExample as ɵcd, SnackBarOverviewExample as ɵcf, SortOverviewExample as ɵcg, TableBasicExample as ɵch, TableFilteringExample as ɵci, TableOverviewExample as ɵcj, TablePaginationExample as ɵck, TableSortingExample as ɵcl, TabsOverviewExample as ɵcm, TabsTemplateLabelExample as ɵcn, ToolbarMultirowExample as ɵco, ToolbarOverviewExample as ɵcp, TooltipOverviewExample as ɵcq, TooltipPositionExample as ɵcr };
 //# sourceMappingURL=material-examples.es5.js.map
