@@ -870,7 +870,7 @@ InputErrorsExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-errors-example',
                 template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Email\" [formControl]=\"emailFormControl\"><md-error *ngIf=\"emailFormControl.hasError('pattern')\">Please enter a valid email address</md-error><md-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></md-error></md-input-container></form>",
-                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+                styles: [".example-form { width: 500px; max-width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
 /**
@@ -887,7 +887,7 @@ InputFormExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-form-example',
                 template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Company (disabled)\" disabled=\"disabled\" value=\"Google\"></md-input-container><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"First name\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"Long Last Name That Will Be Truncated\"></md-input-container></td></tr></table><p><md-input-container class=\"example-full-width\"><textarea mdInput placeholder=\"Address\">1600 Amphitheatre Pkwy</textarea></md-input-container><md-input-container class=\"example-full-width\"><textarea mdInput placeholder=\"Address 2\"></textarea></md-input-container></p><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"City\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"State\"></md-input-container></td><td><md-input-container class=\"example-full-width\"><input mdInput #postalCode maxlength=\"5\" placeholder=\"Postal Code\" value=\"94043\"><md-hint align=\"end\">{{postalCode.value.length}} / 5</md-hint></md-input-container></td></tr></table></form>",
-                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+                styles: [".example-form { width: 500px; max-width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
 /**
@@ -904,7 +904,7 @@ InputHintExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-hint-example',
                 template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput #message maxlength=\"256\" placeholder=\"Message\"><md-hint align=\"start\"><strong>Don't disclose personal info</strong></md-hint><md-hint align=\"end\">{{message.value.length}} / 256</md-hint></md-input-container></form>",
-                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+                styles: [".example-form { width: 500px; max-width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
 /**
@@ -937,7 +937,7 @@ InputPrefixSuffixExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-prefix-suffix-example',
                 template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><span mdPrefix>+1 &nbsp;</span> <input type=\"tel\" mdInput placeholder=\"Telephone\"><md-icon mdSuffix>mode_edit</md-icon></md-input-container></form>",
-                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "],
+                styles: [".example-form { width: 500px; max-width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
 /**
