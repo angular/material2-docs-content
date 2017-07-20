@@ -66,6 +66,14 @@ that is before the min, after the max, or filtered out, the input will have vali
 <li class="docs-markdown-li">A value that violates the <code class="docs-markdown-code">max</code> property will have a <code class="docs-markdown-code">mdDatepickerMax</code> error.</li>
 <li class="docs-markdown-li">A value that violates the <code class="docs-markdown-code">mdDatepickerFilter</code> property will have a <code class="docs-markdown-code">mdDatepickerFilter</code> error.</li>
 </ul>
+<h3 id="input-and-change-events" class="docs-markdown-h3">Input and change events</h3>
+<p class="docs-markdown-p">The input's native <code class="docs-markdown-code">input</code> and <code class="docs-markdown-code">change</code> events will only trigger due to user interaction with the
+input element; they will not fire when the user selects a date from the calendar popup. Because of
+this limitation, the datepicker input also has support for <code class="docs-markdown-code">dateInput</code> and <code class="docs-markdown-code">dateChange</code> events.
+These trigger when the user interacts with either the input or the popup.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">mdDatepicker</span>]=<span class="hljs-string">"d"</span> (<span class="hljs-attr">dateInput</span>)=<span class="hljs-string">"onInput($event)"</span> (<span class="hljs-attr">dateChange</span>)=<span class="hljs-string">"onChange($event)"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">md-datepicker</span> #<span class="hljs-attr">d</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-datepicker</span>&gt;</span>
+</code></pre>
 <h3 id="touch-ui-mode" class="docs-markdown-h3">Touch UI mode</h3>
 <p class="docs-markdown-p">The datepicker normally opens as a popup under the input. However this is not ideal for touch
 devices that don't have as much screen real estate and need bigger click targets. For this reason
