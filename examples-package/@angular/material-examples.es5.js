@@ -16,7 +16,13 @@ import 'rxjs/add/operator/map';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/observable/merge';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/first';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/observable/interval';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/observable/fromEvent';
@@ -1747,6 +1753,143 @@ var ExampleDataSource$1 = /*@__PURE__*/(function (_super) {
     ExampleDataSource$1.prototype.disconnect = function () { };
     return ExampleDataSource$1;
 }(DataSource));
+var TableHttpExample = /*@__PURE__*/(function () {
+    /**
+     * @param {?} http
+     */
+    function TableHttpExample(http) {
+        this.displayedColumns = ['created', 'state', 'number', 'title'];
+        this.exampleDatabase = new ExampleHttpDao(http);
+    }
+    /**
+     * @return {?}
+     */
+    TableHttpExample.prototype.ngOnInit = function () {
+        this.dataSource = new ExampleDataSource$2(/** @type {?} */ ((this.exampleDatabase)), this.sort, this.paginator);
+    };
+    return TableHttpExample;
+}());
+TableHttpExample.decorators = [
+    { type: Component, args: [{
+                selector: 'table-http-example',
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .mat-column-title { text-overflow: ellipsis; white-space: nowrap; flex: 1; overflow: hidden; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; }"],
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><md-spinner *ngIf=\"dataSource.isLoadingResults\"></md-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><md-table #table [dataSource]=\"dataSource\" class=\"example-table\" mdSort mdSortActive=\"created\" mdSortDisableClear mdSortDirection=\"asc\"><ng-container cdkColumnDef=\"number\"><md-header-cell *cdkHeaderCellDef>Number</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.number}}</md-cell></ng-container><ng-container cdkColumnDef=\"title\"><md-header-cell *cdkHeaderCellDef>Title</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.title}}</md-cell></ng-container><ng-container cdkColumnDef=\"state\"><md-header-cell *cdkHeaderCellDef>State</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.state}}</md-cell></ng-container><ng-container cdkColumnDef=\"created\"><md-header-cell *cdkHeaderCellDef md-sort-header disableClear=\"true\">Created</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.created.toDateString()}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></md-paginator></div>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+TableHttpExample.ctorParameters = function () { return [
+    { type: Http, },
+]; };
+TableHttpExample.propDecorators = {
+    'paginator': [{ type: ViewChild, args: [MdPaginator,] },],
+    'sort': [{ type: ViewChild, args: [MdSort,] },],
+};
+/**
+ * An example database that the data source uses to retrieve data for the table.
+ */
+var ExampleHttpDao = /*@__PURE__*/(function () {
+    /**
+     * @param {?} http
+     */
+    function ExampleHttpDao(http) {
+        this.http = http;
+    }
+    /**
+     * @param {?} sort
+     * @param {?} order
+     * @param {?} page
+     * @return {?}
+     */
+    ExampleHttpDao.prototype.getRepoIssues = function (sort, order, page) {
+        var /** @type {?} */ href = 'https://api.github.com/search/issues';
+        var /** @type {?} */ requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
+        return this.http.get(requestUrl);
+    };
+    return ExampleHttpDao;
+}());
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleHttpDao. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+var ExampleDataSource$2 = /*@__PURE__*/(function (_super) {
+    tslib_1.__extends(ExampleDataSource$2, _super);
+    /**
+     * @param {?} _exampleDatabase
+     * @param {?} _sort
+     * @param {?} _paginator
+     */
+    function ExampleDataSource$2(_exampleDatabase, _sort, _paginator) {
+        var _this = _super.call(this) || this;
+        _this._exampleDatabase = _exampleDatabase;
+        _this._sort = _sort;
+        _this._paginator = _paginator;
+        // The number of issues returned by github matching the query.
+        _this.resultsLength = 0;
+        return _this;
+    }
+    /**
+     * Connect function called by the table to retrieve one stream containing the data to render.
+     * @return {?}
+     */
+    ExampleDataSource$2.prototype.connect = function () {
+        var _this = this;
+        var /** @type {?} */ displayDataChanges = [
+            this._sort.mdSortChange,
+            this._paginator.page,
+        ];
+        // If the user changes the sort order, reset back to the first page.
+        this._sort.mdSortChange.subscribe(function () {
+            _this._paginator.pageIndex = 0;
+        });
+        return Observable.merge.apply(Observable, displayDataChanges).startWith(null)
+            .switchMap(function () {
+            _this.isLoadingResults = true;
+            return _this._exampleDatabase.getRepoIssues(_this._sort.active, _this._sort.direction, _this._paginator.pageIndex);
+        })
+            .catch(function () {
+            // Catch if the GitHub API has reached its rate limit. Return empty result.
+            _this.isRateLimitReached = true;
+            return Observable.of(null);
+        })
+            .map(function (result) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            return result;
+        })
+            .map(function (result) {
+            if (!result) {
+                return [];
+            }
+            _this.isRateLimitReached = false;
+            _this.resultsLength = result.json().total_count;
+            return _this.readGithubResult(result);
+        });
+    };
+    /**
+     * @return {?}
+     */
+    ExampleDataSource$2.prototype.disconnect = function () { };
+    /**
+     * @param {?} result
+     * @return {?}
+     */
+    ExampleDataSource$2.prototype.readGithubResult = function (result) {
+        return result.json().items.map(function (issue) {
+            return {
+                number: issue.number,
+                created: new Date(issue.created_at),
+                state: issue.state,
+                title: issue.title,
+            };
+        });
+    };
+    return ExampleDataSource$2;
+}(DataSource));
 /**
  * \@title Table with filtering
  */
@@ -1760,7 +1903,7 @@ var TableFilteringExample = /*@__PURE__*/(function () {
      */
     TableFilteringExample.prototype.ngOnInit = function () {
         var _this = this;
-        this.dataSource = new ExampleDataSource$2(this.exampleDatabase);
+        this.dataSource = new ExampleDataSource$3(this.exampleDatabase);
         Observable.fromEvent(this.filter.nativeElement, 'keyup')
             .debounceTime(150)
             .distinctUntilChanged()
@@ -1849,18 +1992,18 @@ var ExampleDatabase$2 = /*@__PURE__*/(function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource$2 = /*@__PURE__*/(function (_super) {
-    tslib_1.__extends(ExampleDataSource$2, _super);
+var ExampleDataSource$3 = /*@__PURE__*/(function (_super) {
+    tslib_1.__extends(ExampleDataSource$3, _super);
     /**
      * @param {?} _exampleDatabase
      */
-    function ExampleDataSource$2(_exampleDatabase) {
+    function ExampleDataSource$3(_exampleDatabase) {
         var _this = _super.call(this) || this;
         _this._exampleDatabase = _exampleDatabase;
         _this._filterChange = new BehaviorSubject('');
         return _this;
     }
-    Object.defineProperty(ExampleDataSource$2.prototype, "filter", {
+    Object.defineProperty(ExampleDataSource$3.prototype, "filter", {
         /**
          * @return {?}
          */
@@ -1877,7 +2020,7 @@ var ExampleDataSource$2 = /*@__PURE__*/(function (_super) {
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$2.prototype.connect = function () {
+    ExampleDataSource$3.prototype.connect = function () {
         var _this = this;
         var /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
@@ -1893,8 +2036,8 @@ var ExampleDataSource$2 = /*@__PURE__*/(function (_super) {
     /**
      * @return {?}
      */
-    ExampleDataSource$2.prototype.disconnect = function () { };
-    return ExampleDataSource$2;
+    ExampleDataSource$3.prototype.disconnect = function () { };
+    return ExampleDataSource$3;
 }(DataSource));
 /**
  * \@title Feature-rich data table
@@ -1910,7 +2053,7 @@ var TableOverviewExample = /*@__PURE__*/(function () {
      */
     TableOverviewExample.prototype.ngOnInit = function () {
         var _this = this;
-        this.dataSource = new ExampleDataSource$3(this.exampleDatabase, this.paginator, this.sort);
+        this.dataSource = new ExampleDataSource$4(this.exampleDatabase, this.paginator, this.sort);
         Observable.fromEvent(this.filter.nativeElement, 'keyup')
             .debounceTime(150)
             .distinctUntilChanged()
@@ -2036,14 +2179,14 @@ var ExampleDatabase$3 = /*@__PURE__*/(function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource$3 = /*@__PURE__*/(function (_super) {
-    tslib_1.__extends(ExampleDataSource$3, _super);
+var ExampleDataSource$4 = /*@__PURE__*/(function (_super) {
+    tslib_1.__extends(ExampleDataSource$4, _super);
     /**
      * @param {?} _exampleDatabase
      * @param {?} _paginator
      * @param {?} _sort
      */
-    function ExampleDataSource$3(_exampleDatabase, _paginator, _sort) {
+    function ExampleDataSource$4(_exampleDatabase, _paginator, _sort) {
         var _this = _super.call(this) || this;
         _this._exampleDatabase = _exampleDatabase;
         _this._paginator = _paginator;
@@ -2053,7 +2196,7 @@ var ExampleDataSource$3 = /*@__PURE__*/(function (_super) {
         _this.renderedData = [];
         return _this;
     }
-    Object.defineProperty(ExampleDataSource$3.prototype, "filter", {
+    Object.defineProperty(ExampleDataSource$4.prototype, "filter", {
         /**
          * @return {?}
          */
@@ -2070,7 +2213,7 @@ var ExampleDataSource$3 = /*@__PURE__*/(function (_super) {
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$3.prototype.connect = function () {
+    ExampleDataSource$4.prototype.connect = function () {
         var _this = this;
         // Listen for any changes in the base data, sorting, filtering, or pagination
         var /** @type {?} */ displayDataChanges = [
@@ -2096,13 +2239,13 @@ var ExampleDataSource$3 = /*@__PURE__*/(function (_super) {
     /**
      * @return {?}
      */
-    ExampleDataSource$3.prototype.disconnect = function () { };
+    ExampleDataSource$4.prototype.disconnect = function () { };
     /**
      * Returns a sorted copy of the database data.
      * @param {?} data
      * @return {?}
      */
-    ExampleDataSource$3.prototype.sortData = function (data) {
+    ExampleDataSource$4.prototype.sortData = function (data) {
         var _this = this;
         if (!this._sort.active || this._sort.direction == '') {
             return data;
@@ -2130,7 +2273,7 @@ var ExampleDataSource$3 = /*@__PURE__*/(function (_super) {
             var _a, _b, _c, _d;
         });
     };
-    return ExampleDataSource$3;
+    return ExampleDataSource$4;
 }(DataSource));
 /**
  * \@title Table with pagination
@@ -2144,7 +2287,7 @@ var TablePaginationExample = /*@__PURE__*/(function () {
      * @return {?}
      */
     TablePaginationExample.prototype.ngOnInit = function () {
-        this.dataSource = new ExampleDataSource$4(this.exampleDatabase, this.paginator);
+        this.dataSource = new ExampleDataSource$5(this.exampleDatabase, this.paginator);
     };
     return TablePaginationExample;
 }());
@@ -2224,13 +2367,13 @@ var ExampleDatabase$4 = /*@__PURE__*/(function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource$4 = /*@__PURE__*/(function (_super) {
-    tslib_1.__extends(ExampleDataSource$4, _super);
+var ExampleDataSource$5 = /*@__PURE__*/(function (_super) {
+    tslib_1.__extends(ExampleDataSource$5, _super);
     /**
      * @param {?} _exampleDatabase
      * @param {?} _paginator
      */
-    function ExampleDataSource$4(_exampleDatabase, _paginator) {
+    function ExampleDataSource$5(_exampleDatabase, _paginator) {
         var _this = _super.call(this) || this;
         _this._exampleDatabase = _exampleDatabase;
         _this._paginator = _paginator;
@@ -2240,7 +2383,7 @@ var ExampleDataSource$4 = /*@__PURE__*/(function (_super) {
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$4.prototype.connect = function () {
+    ExampleDataSource$5.prototype.connect = function () {
         var _this = this;
         var /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
@@ -2256,8 +2399,8 @@ var ExampleDataSource$4 = /*@__PURE__*/(function (_super) {
     /**
      * @return {?}
      */
-    ExampleDataSource$4.prototype.disconnect = function () { };
-    return ExampleDataSource$4;
+    ExampleDataSource$5.prototype.disconnect = function () { };
+    return ExampleDataSource$5;
 }(DataSource));
 /**
  * \@title Table with sorting
@@ -2271,7 +2414,7 @@ var TableSortingExample = /*@__PURE__*/(function () {
      * @return {?}
      */
     TableSortingExample.prototype.ngOnInit = function () {
-        this.dataSource = new ExampleDataSource$5(this.exampleDatabase, this.sort);
+        this.dataSource = new ExampleDataSource$6(this.exampleDatabase, this.sort);
     };
     return TableSortingExample;
 }());
@@ -2351,13 +2494,13 @@ var ExampleDatabase$5 = /*@__PURE__*/(function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource$5 = /*@__PURE__*/(function (_super) {
-    tslib_1.__extends(ExampleDataSource$5, _super);
+var ExampleDataSource$6 = /*@__PURE__*/(function (_super) {
+    tslib_1.__extends(ExampleDataSource$6, _super);
     /**
      * @param {?} _exampleDatabase
      * @param {?} _sort
      */
-    function ExampleDataSource$5(_exampleDatabase, _sort) {
+    function ExampleDataSource$6(_exampleDatabase, _sort) {
         var _this = _super.call(this) || this;
         _this._exampleDatabase = _exampleDatabase;
         _this._sort = _sort;
@@ -2367,7 +2510,7 @@ var ExampleDataSource$5 = /*@__PURE__*/(function (_super) {
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$5.prototype.connect = function () {
+    ExampleDataSource$6.prototype.connect = function () {
         var _this = this;
         var /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
@@ -2380,12 +2523,12 @@ var ExampleDataSource$5 = /*@__PURE__*/(function (_super) {
     /**
      * @return {?}
      */
-    ExampleDataSource$5.prototype.disconnect = function () { };
+    ExampleDataSource$6.prototype.disconnect = function () { };
     /**
      * Returns a sorted copy of the database data.
      * @return {?}
      */
-    ExampleDataSource$5.prototype.getSortedData = function () {
+    ExampleDataSource$6.prototype.getSortedData = function () {
         var _this = this;
         var /** @type {?} */ data = this._exampleDatabase.data.slice();
         if (!this._sort.active || this._sort.direction == '') {
@@ -2414,7 +2557,7 @@ var ExampleDataSource$5 = /*@__PURE__*/(function (_super) {
             var _a, _b, _c, _d;
         });
     };
-    return ExampleDataSource$5;
+    return ExampleDataSource$6;
 }(DataSource));
 /**
  * \@title Basic tabs
@@ -2872,6 +3015,12 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'table-http': {
+        title: 'Table retrieving data through HTTP',
+        component: TableHttpExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'table-filtering': {
         title: 'Table with filtering',
         component: TableFilteringExample,
@@ -2992,6 +3141,7 @@ var EXAMPLE_LIST = [
     SortOverviewExample,
     TableBasicExample,
     TableFilteringExample,
+    TableHttpExample,
     TableOverviewExample,
     TablePaginationExample,
     TableSortingExample,
@@ -3070,5 +3220,5 @@ var ExampleData = /*@__PURE__*/(function () {
 /**
  * Generated bundle index. Do not edit.
  */
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, DatepickerOverviewExample, CardFancyExample, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵc, ButtonToggleOverviewExample as ɵd, ButtonTypesExample as ɵe, CardOverviewExample as ɵf, CdkTableBasicExample as ɵg, CheckboxConfigurableExample as ɵh, CheckboxOverviewExample as ɵi, ChipsOverviewExample as ɵj, ChipsStackedExample as ɵk, DatepickerApiExample as ɵl, DatepickerFilterExample as ɵm, DatepickerMinMaxExample as ɵn, DatepickerStartViewExample as ɵo, DatepickerTouchExample as ɵp, DialogContentExample as ɵq, DialogContentExampleDialog as ɵr, DialogDataExample as ɵs, DialogDataExampleDialog as ɵt, DialogElementsExample as ɵu, DialogElementsExampleDialog as ɵv, DialogOverviewExample as ɵw, DialogOverviewExampleDialog as ɵx, GridListDynamicExample as ɵy, GridListOverviewExample as ɵz, IconOverviewExample as ɵba, IconSvgExample as ɵbb, InputClearableExample as ɵbc, InputErrorsExample as ɵbd, InputFormExample as ɵbe, InputHintExample as ɵbf, InputOverviewExample as ɵbg, InputPrefixSuffixExample as ɵbh, ListOverviewExample as ɵbi, ListSectionsExample as ɵbj, ExampleMaterialModule as ɵcs, MenuIconsExample as ɵbk, MenuOverviewExample as ɵbl, PaginatorConfigurableExample as ɵbm, PaginatorOverviewExample as ɵbn, ProgressBarConfigurableExample as ɵbo, ProgressBarOverviewExample as ɵbp, ProgressSpinnerConfigurableExample as ɵbq, ProgressSpinnerOverviewExample as ɵbr, RadioNgModelExample as ɵbs, RadioOverviewExample as ɵbt, SelectFormExample as ɵbu, SelectOverviewExample as ɵbv, SidenavFabExample as ɵbw, SidenavOverviewExample as ɵbx, SlideToggleConfigurableExample as ɵby, SlideToggleFormsExample as ɵbz, SlideToggleOverviewExample as ɵca, SliderConfigurableExample as ɵcb, SliderOverviewExample as ɵcc, PizzaPartyComponent as ɵce, SnackBarComponentExample as ɵcd, SnackBarOverviewExample as ɵcf, SortOverviewExample as ɵcg, TableBasicExample as ɵch, TableFilteringExample as ɵci, TableOverviewExample as ɵcj, TablePaginationExample as ɵck, TableSortingExample as ɵcl, TabsOverviewExample as ɵcm, TabsTemplateLabelExample as ɵcn, ToolbarMultirowExample as ɵco, ToolbarOverviewExample as ɵcp, TooltipOverviewExample as ɵcq, TooltipPositionExample as ɵcr };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, DatepickerOverviewExample, CardFancyExample, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵc, ButtonToggleOverviewExample as ɵd, ButtonTypesExample as ɵe, CardOverviewExample as ɵf, CdkTableBasicExample as ɵg, CheckboxConfigurableExample as ɵh, CheckboxOverviewExample as ɵi, ChipsOverviewExample as ɵj, ChipsStackedExample as ɵk, DatepickerApiExample as ɵl, DatepickerFilterExample as ɵm, DatepickerMinMaxExample as ɵn, DatepickerStartViewExample as ɵo, DatepickerTouchExample as ɵp, DialogContentExample as ɵq, DialogContentExampleDialog as ɵr, DialogDataExample as ɵs, DialogDataExampleDialog as ɵt, DialogElementsExample as ɵu, DialogElementsExampleDialog as ɵv, DialogOverviewExample as ɵw, DialogOverviewExampleDialog as ɵx, GridListDynamicExample as ɵy, GridListOverviewExample as ɵz, IconOverviewExample as ɵba, IconSvgExample as ɵbb, InputClearableExample as ɵbc, InputErrorsExample as ɵbd, InputFormExample as ɵbe, InputHintExample as ɵbf, InputOverviewExample as ɵbg, InputPrefixSuffixExample as ɵbh, ListOverviewExample as ɵbi, ListSectionsExample as ɵbj, ExampleMaterialModule as ɵct, MenuIconsExample as ɵbk, MenuOverviewExample as ɵbl, PaginatorConfigurableExample as ɵbm, PaginatorOverviewExample as ɵbn, ProgressBarConfigurableExample as ɵbo, ProgressBarOverviewExample as ɵbp, ProgressSpinnerConfigurableExample as ɵbq, ProgressSpinnerOverviewExample as ɵbr, RadioNgModelExample as ɵbs, RadioOverviewExample as ɵbt, SelectFormExample as ɵbu, SelectOverviewExample as ɵbv, SidenavFabExample as ɵbw, SidenavOverviewExample as ɵbx, SlideToggleConfigurableExample as ɵby, SlideToggleFormsExample as ɵbz, SlideToggleOverviewExample as ɵca, SliderConfigurableExample as ɵcb, SliderOverviewExample as ɵcc, PizzaPartyComponent as ɵce, SnackBarComponentExample as ɵcd, SnackBarOverviewExample as ɵcf, SortOverviewExample as ɵcg, TableBasicExample as ɵch, TableFilteringExample as ɵcj, TableHttpExample as ɵci, TableOverviewExample as ɵck, TablePaginationExample as ɵcl, TableSortingExample as ɵcm, TabsOverviewExample as ɵcn, TabsTemplateLabelExample as ɵco, ToolbarMultirowExample as ɵcp, ToolbarOverviewExample as ɵcq, TooltipOverviewExample as ɵcr, TooltipPositionExample as ɵcs };
 //# sourceMappingURL=material-examples.es5.js.map
