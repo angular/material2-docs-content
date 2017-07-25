@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/platform-browser'), require('@angular/http'), require('rxjs/Observable'), require('rxjs/add/operator/first'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap'), require('rxjs/add/observable/of'), require('rxjs/add/observable/interval'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/platform-browser', '@angular/http', 'rxjs/Observable', 'rxjs/add/operator/first', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap', 'rxjs/add/observable/of', 'rxjs/add/observable/interval', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable,global.ng.platformBrowser,global.ng.http,global.Rx));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_platformBrowser,_angular_http,rxjs_Observable) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/platform-browser'), require('@angular/http'), require('rxjs/Observable'), require('rxjs/add/operator/first'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap'), require('rxjs/add/observable/of'), require('rxjs/add/observable/interval'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/platform-browser', '@angular/http', 'rxjs/Observable', 'rxjs/add/operator/first', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap', 'rxjs/add/observable/of', 'rxjs/add/observable/interval', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable,global.ng.platformBrowser,global.ng.http,global.Rx));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_platformBrowser,_angular_http,rxjs_Observable) { 'use strict';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -45,7 +45,7 @@ var ExampleMaterialModule = (function () {
 ExampleMaterialModule.decorators = [
     { type: _angular_core.NgModule, args: [{
                 exports: [
-                    _angular_cdk.CdkTableModule,
+                    _angular_cdk_table.CdkTableModule,
                     _angular_material.MdAutocompleteModule,
                     _angular_material.MdButtonModule,
                     _angular_material.MdButtonToggleModule,
@@ -385,7 +385,7 @@ var ExampleDataSource = (function (_super) {
      */
     ExampleDataSource.prototype.disconnect = function () { };
     return ExampleDataSource;
-}(_angular_cdk.DataSource));
+}(_angular_cdk_table.DataSource));
 /**
  * \@title Configurable checkbox
  */
@@ -1763,7 +1763,7 @@ var ExampleDataSource$1 = (function (_super) {
      */
     ExampleDataSource$1.prototype.disconnect = function () { };
     return ExampleDataSource$1;
-}(_angular_cdk.DataSource));
+}(_angular_cdk_table.DataSource));
 var TableHttpExample = (function () {
     /**
      * @param {?} http
@@ -1900,7 +1900,7 @@ var ExampleDataSource$2 = (function (_super) {
         });
     };
     return ExampleDataSource$2;
-}(_angular_cdk.DataSource));
+}(_angular_cdk_table.DataSource));
 /**
  * \@title Table with filtering
  */
@@ -2049,7 +2049,7 @@ var ExampleDataSource$3 = (function (_super) {
      */
     ExampleDataSource$3.prototype.disconnect = function () { };
     return ExampleDataSource$3;
-}(_angular_cdk.DataSource));
+}(_angular_cdk_table.DataSource));
 /**
  * \@title Feature-rich data table
  */
@@ -2285,7 +2285,7 @@ var ExampleDataSource$4 = (function (_super) {
         });
     };
     return ExampleDataSource$4;
-}(_angular_cdk.DataSource));
+}(_angular_cdk_table.DataSource));
 /**
  * \@title Table with pagination
  */
@@ -2412,7 +2412,7 @@ var ExampleDataSource$5 = (function (_super) {
      */
     ExampleDataSource$5.prototype.disconnect = function () { };
     return ExampleDataSource$5;
-}(_angular_cdk.DataSource));
+}(_angular_cdk_table.DataSource));
 /**
  * \@title Table with sorting
  */
@@ -2569,7 +2569,7 @@ var ExampleDataSource$6 = (function (_super) {
         });
     };
     return ExampleDataSource$6;
-}(_angular_cdk.DataSource));
+}(_angular_cdk_table.DataSource));
 /**
  * \@title Basic tabs
  */

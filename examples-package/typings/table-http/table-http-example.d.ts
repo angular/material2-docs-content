@@ -1,5 +1,5 @@
 import { Http, Response } from '@angular/http';
-import { DataSource } from '@angular/cdk';
+import { DataSource } from '@angular/cdk/table';
 import { MdPaginator, MdSort } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/first';
