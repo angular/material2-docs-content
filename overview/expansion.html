@@ -1,0 +1,68 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;md-expansion-panel&gt;</code> provides an expandable details-summary view.</p>
+<div material-docs-example="expansion-overview"></div>
+<h3 id="expansion-panel-content" class="docs-markdown-h3">Expansion-panel content</h3>
+<p class="docs-markdown-p">Each expansion-panel must include a header and may optionally include an action bar.</p>
+<h4 id="header" class="docs-markdown-h4">Header</h4>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;md-expansion-panel-header&gt;</code> shows a summary of the panel content and acts
+as the control for expanding and collapsing. This header may optionally contain an
+<code class="docs-markdown-code">&lt;md-panel-title&gt;</code> and an <code class="docs-markdown-code">&lt;md-panel-description&gt;</code>, which format the content of the
+header to align with Material Design specifications.</p>
+<p class="docs-markdown-p">By default, the expansion-panel header includes a toggle icon at the end of the
+header to indicate the expansion state. This icon can be hidden via the 
+<code class="docs-markdown-code">hideToggle</code> property.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">md-panel-title</span>&gt;</span>
+      This is the expansion title
+    <span class="hljs-tag">&lt;/<span class="hljs-name">md-panel-title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">md-panel-description</span>&gt;</span>
+      This is a summary of the content
+    <span class="hljs-tag">&lt;/<span class="hljs-name">md-panel-description</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is the primary content of the panel.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel</span>&gt;</span>
+</code></pre>
+<h4 id="action-bar" class="docs-markdown-h4">Action bar</h4>
+<p class="docs-markdown-p">Actions may optionally be included at the bottom of the panel, visible only when the expansion is in its
+expanded state.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
+    This is the expansion title
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is the primary content of the panel.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-action-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-action-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel</span>&gt;</span>
+</code></pre>
+<h3 id="accordion" class="docs-markdown-h3">Accordion</h3>
+<p class="docs-markdown-p">Multiple expansion-panels can be combined into an accordion. The <code class="docs-markdown-code">multi="true"</code> input allows the
+expansions state to be set independently of each other. When <code class="docs-markdown-code">multi="false"</code> (default) just one
+panel can be expanded at a given time:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-accordion</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
+      This is the expansion 1 title
+    <span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
+
+    This the expansion 1 content
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
+      This is the expansion 2 title
+    <span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
+
+    This the expansion 2 content
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-accordion</span>&gt;</span>
+</code></pre>
+</div></body></html>

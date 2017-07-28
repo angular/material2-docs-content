@@ -129,6 +129,9 @@
               <span class="hljs-keyword">private</span> _paginator: MdPaginator,
               <span class="hljs-keyword">private</span> _sort: MdSort</span>) {
     <span class="hljs-keyword">super</span>();
+
+    <span class="hljs-comment">// Reset to the first page when the user changes the filter.</span>
+    <span class="hljs-keyword">this</span>._filterChange.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>._paginator.pageIndex = <span class="hljs-number">0</span>);
   }
 
   <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>

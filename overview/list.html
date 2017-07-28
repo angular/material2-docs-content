@@ -20,7 +20,7 @@ list component, it provides Material Design styling, but no behavior of its own.
 element in an <code class="docs-markdown-code">&lt;md-list-item&gt;</code>.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-nav-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let link of links"</span>&gt;</span>
-     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">md-line</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span>&gt;</span>{{ link }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mdLine</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span>&gt;</span>{{ link }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-icon-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"showInfo(link)"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span>&gt;</span>info<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -28,14 +28,14 @@ element in an <code class="docs-markdown-code">&lt;md-list-item&gt;</code>.</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-nav-list</span>&gt;</span>
 </code></pre>
 <h3 id="multi-line-lists" class="docs-markdown-h3">Multi-line lists</h3>
-<p class="docs-markdown-p">For lists that require multiple lines per item, annotate each line with an <code class="docs-markdown-code">md-line</code> attribute.
+<p class="docs-markdown-p">For lists that require multiple lines per item, annotate each line with an <code class="docs-markdown-code">mdLine</code> attribute.
 Whichever heading tag is appropriate for your DOM hierarchy should be used (not necessarily <code class="docs-markdown-code">&lt;h3&gt;</code>
 as shown in the example).</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- two line list --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">md-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let message of messages"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">md-line</span>&gt;</span> {{message.from}} <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">md-line</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mdLine</span>&gt;</span> {{message.from}} <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mdLine</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span> {{message.subject}} <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> -- {{message.content}} <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -45,19 +45,19 @@ as shown in the example).</p>
 <span class="hljs-comment">&lt;!-- three line list --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">md-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let message of messages"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">md-line</span>&gt;</span> {{message.from}} <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">md-line</span>&gt;</span> {{message.subject}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">md-line</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> {{message.content}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mdLine</span>&gt;</span> {{message.from}} <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mdLine</span>&gt;</span> {{message.subject}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mdLine</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> {{message.content}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-list</span>&gt;</span>
 </code></pre>
 <h3 id="lists-with-icons" class="docs-markdown-h3">Lists with icons</h3>
-<p class="docs-markdown-p">To add an icon to your list item, use the <code class="docs-markdown-code">md-list-icon</code> attribute.</p>
+<p class="docs-markdown-p">To add an icon to your list item, use the <code class="docs-markdown-code">mdListIcon</code> attribute.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let message of messages"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span> <span class="hljs-attr">md-list-icon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">md-line</span>&gt;</span> {{message.from}} <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">md-line</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span> <span class="hljs-attr">mdListIcon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mdLine</span>&gt;</span> {{message.from}} <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mdLine</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span> {{message.subject}} <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> -- {{message.content}} <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -65,12 +65,12 @@ as shown in the example).</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-list</span>&gt;</span>
 </code></pre>
 <h3 id="lists-with-avatars" class="docs-markdown-h3">Lists with avatars</h3>
-<p class="docs-markdown-p">To include an avatar image, add an image tag with an <code class="docs-markdown-code">md-list-avatar</code> attribute. </p>
+<p class="docs-markdown-p">To include an avatar image, add an image tag with an <code class="docs-markdown-code">mdListAvatar</code> attribute. </p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let message of messages"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">md-list-avatar</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"..."</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">md-line</span>&gt;</span> {{message.from}} <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">md-line</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">mdListAvatar</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"..."</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mdLine</span>&gt;</span> {{message.from}} <span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mdLine</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span> {{message.subject}} <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> -- {{message.content}} <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
@@ -88,21 +88,21 @@ to the main <code class="docs-markdown-code">md-list</code> tag.</p>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-list</span>&gt;</span>
 </code></pre>
 <h3 id="lists-with-multiple-sections" class="docs-markdown-h3">Lists with multiple sections</h3>
-<p class="docs-markdown-p">Subheader can be added to a list by annotating a heading tag with an <code class="docs-markdown-code">md-subheader</code> attribute. 
+<p class="docs-markdown-p">Subheader can be added to a list by annotating a heading tag with an <code class="docs-markdown-code">mdSubheader</code> attribute. 
 To add a divider, use <code class="docs-markdown-code">&lt;md-divider&gt;</code>.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-list</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">md-subheader</span>&gt;</span>Folders<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mdSubheader</span>&gt;</span>Folders<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let folder of folders"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span> <span class="hljs-attr">md-list-icon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">md-line</span>&gt;</span>{{folder.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">md-line</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> {{folder.updated}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span> <span class="hljs-attr">mdListIcon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">mdLine</span>&gt;</span>{{folder.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mdLine</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> {{folder.updated}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
    <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">md-divider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-divider</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">md-subheader</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mdSubheader</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let note of notes"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span> <span class="hljs-attr">md-list-icon</span>&gt;</span>note<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">md-line</span>&gt;</span>{{note.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">md-line</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> {{note.updated}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span> <span class="hljs-attr">mdListIcon</span>&gt;</span>note<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">mdLine</span>&gt;</span>{{note.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mdLine</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> {{note.updated}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
    <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-list</span>&gt;</span>
 </code></pre>

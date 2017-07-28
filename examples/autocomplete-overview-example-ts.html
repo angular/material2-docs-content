@@ -1,83 +1,59 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
+<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/startWith'</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/map'</span>;
 
 <span class="hljs-comment">/**
- * @title Basic autocomplete
+ * @title Autocomplete overview
  */</span>
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'autocomplete-overview-example'</span>,
   templateUrl: <span class="hljs-string">'autocomplete-overview-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'autocomplete-overview-example.css'</span>]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AutocompleteOverviewExample {
   stateCtrl: FormControl;
-  filteredStates: <span class="hljs-built_in">any</span>;
+  filteredStates: Observable&lt;<span class="hljs-built_in">any</span>[]&gt;;
 
-  states = [
-    <span class="hljs-string">'Alabama'</span>,
-    <span class="hljs-string">'Alaska'</span>,
-    <span class="hljs-string">'Arizona'</span>,
-    <span class="hljs-string">'Arkansas'</span>,
-    <span class="hljs-string">'California'</span>,
-    <span class="hljs-string">'Colorado'</span>,
-    <span class="hljs-string">'Connecticut'</span>,
-    <span class="hljs-string">'Delaware'</span>,
-    <span class="hljs-string">'Florida'</span>,
-    <span class="hljs-string">'Georgia'</span>,
-    <span class="hljs-string">'Hawaii'</span>,
-    <span class="hljs-string">'Idaho'</span>,
-    <span class="hljs-string">'Illinois'</span>,
-    <span class="hljs-string">'Indiana'</span>,
-    <span class="hljs-string">'Iowa'</span>,
-    <span class="hljs-string">'Kansas'</span>,
-    <span class="hljs-string">'Kentucky'</span>,
-    <span class="hljs-string">'Louisiana'</span>,
-    <span class="hljs-string">'Maine'</span>,
-    <span class="hljs-string">'Maryland'</span>,
-    <span class="hljs-string">'Massachusetts'</span>,
-    <span class="hljs-string">'Michigan'</span>,
-    <span class="hljs-string">'Minnesota'</span>,
-    <span class="hljs-string">'Mississippi'</span>,
-    <span class="hljs-string">'Missouri'</span>,
-    <span class="hljs-string">'Montana'</span>,
-    <span class="hljs-string">'Nebraska'</span>,
-    <span class="hljs-string">'Nevada'</span>,
-    <span class="hljs-string">'New Hampshire'</span>,
-    <span class="hljs-string">'New Jersey'</span>,
-    <span class="hljs-string">'New Mexico'</span>,
-    <span class="hljs-string">'New York'</span>,
-    <span class="hljs-string">'North Carolina'</span>,
-    <span class="hljs-string">'North Dakota'</span>,
-    <span class="hljs-string">'Ohio'</span>,
-    <span class="hljs-string">'Oklahoma'</span>,
-    <span class="hljs-string">'Oregon'</span>,
-    <span class="hljs-string">'Pennsylvania'</span>,
-    <span class="hljs-string">'Rhode Island'</span>,
-    <span class="hljs-string">'South Carolina'</span>,
-    <span class="hljs-string">'South Dakota'</span>,
-    <span class="hljs-string">'Tennessee'</span>,
-    <span class="hljs-string">'Texas'</span>,
-    <span class="hljs-string">'Utah'</span>,
-    <span class="hljs-string">'Vermont'</span>,
-    <span class="hljs-string">'Virginia'</span>,
-    <span class="hljs-string">'Washington'</span>,
-    <span class="hljs-string">'West Virginia'</span>,
-    <span class="hljs-string">'Wisconsin'</span>,
-    <span class="hljs-string">'Wyoming'</span>,
+  states: <span class="hljs-built_in">any</span>[] = [
+    {
+      name: <span class="hljs-string">'Arkansas'</span>,
+      population: <span class="hljs-string">'2.978M'</span>,
+      <span class="hljs-comment">// https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg</span>
+      flag: <span class="hljs-string">'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg'</span>
+    },
+    {
+      name: <span class="hljs-string">'California'</span>,
+      population: <span class="hljs-string">'39.14M'</span>,
+      <span class="hljs-comment">// https://commons.wikimedia.org/wiki/File:Flag_of_California.svg</span>
+      flag: <span class="hljs-string">'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg'</span>
+    },
+    {
+      name: <span class="hljs-string">'Florida'</span>,
+      population: <span class="hljs-string">'20.27M'</span>,
+      <span class="hljs-comment">// https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg</span>
+      flag: <span class="hljs-string">'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg'</span>
+    },
+    {
+      name: <span class="hljs-string">'Texas'</span>,
+      population: <span class="hljs-string">'27.47M'</span>,
+      <span class="hljs-comment">// https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg</span>
+      flag: <span class="hljs-string">'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'</span>
+    }
   ];
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
     <span class="hljs-keyword">this</span>.stateCtrl = <span class="hljs-keyword">new</span> FormControl();
     <span class="hljs-keyword">this</span>.filteredStates = <span class="hljs-keyword">this</span>.stateCtrl.valueChanges
         .startWith(<span class="hljs-literal">null</span>)
-        .map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-keyword">this</span>.filterStates(name));
+        .map(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state ? <span class="hljs-keyword">this</span>.filterStates(state) : <span class="hljs-keyword">this</span>.states.slice());
   }
 
-  filterStates(val: <span class="hljs-built_in">string</span>) {
-    <span class="hljs-keyword">return</span> val ? <span class="hljs-keyword">this</span>.states.filter(<span class="hljs-function"><span class="hljs-params">s</span> =&gt;</span> s.toLowerCase().indexOf(val.toLowerCase()) === <span class="hljs-number">0</span>)
-               : <span class="hljs-keyword">this</span>.states;
+  filterStates(name: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.states.filter(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span>
+      state.name.toLowerCase().indexOf(name.toLowerCase()) === <span class="hljs-number">0</span>);
   }
 
 }

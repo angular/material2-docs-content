@@ -1,9 +1,21 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">md-input-container</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">mdInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"State"</span> [<span class="hljs-attr">mdAutocomplete</span>]=<span class="hljs-string">"auto"</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"stateCtrl"</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-input-container</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-form"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-input-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-full-width"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">mdInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"State"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"State"</span> [<span class="hljs-attr">mdAutocomplete</span>]=<span class="hljs-string">"auto"</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"stateCtrl"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-input-container</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">md-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"mdAutocomplete"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let state of filteredStates | async"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"state"</span>&gt;</span>
-    {{ state }}
-  <span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-autocomplete</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"mdAutocomplete"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let state of filteredStates | async"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"state.name"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"vertical-align:middle;"</span> <span class="hljs-attr">aria-hidden</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"{{state.flag}}"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"25"</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{{ state.name }}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> | 
+      <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>Population: {{state.population}}<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-autocomplete</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-slide-toggle</span>
+    [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"stateCtrl.disabled"</span>
+    (<span class="hljs-attr">change</span>)=<span class="hljs-string">"stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()"</span>&gt;</span>
+    Disable Input?
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-slide-toggle</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>

@@ -17,11 +17,9 @@ import 'rxjs/add/observable/merge';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/first';
+import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/observable/interval';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/observable/fromEvent';
@@ -67,87 +65,182 @@ ExampleMaterialModule.decorators = [
  */
 ExampleMaterialModule.ctorParameters = () => [];
 
+class User {
+    /**
+     * @param {?} name
+     */
+    constructor(name) {
+        this.name = name;
+    }
+}
 /**
- * \@title Basic autocomplete
+ * \@title Display value autocomplete
  */
-class AutocompleteOverviewExample {
+class AutocompleteDisplayExample {
     constructor() {
-        this.states = [
-            'Alabama',
-            'Alaska',
-            'Arizona',
-            'Arkansas',
-            'California',
-            'Colorado',
-            'Connecticut',
-            'Delaware',
-            'Florida',
-            'Georgia',
-            'Hawaii',
-            'Idaho',
-            'Illinois',
-            'Indiana',
-            'Iowa',
-            'Kansas',
-            'Kentucky',
-            'Louisiana',
-            'Maine',
-            'Maryland',
-            'Massachusetts',
-            'Michigan',
-            'Minnesota',
-            'Mississippi',
-            'Missouri',
-            'Montana',
-            'Nebraska',
-            'Nevada',
-            'New Hampshire',
-            'New Jersey',
-            'New Mexico',
-            'New York',
-            'North Carolina',
-            'North Dakota',
-            'Ohio',
-            'Oklahoma',
-            'Oregon',
-            'Pennsylvania',
-            'Rhode Island',
-            'South Carolina',
-            'South Dakota',
-            'Tennessee',
-            'Texas',
-            'Utah',
-            'Vermont',
-            'Virginia',
-            'Washington',
-            'West Virginia',
-            'Wisconsin',
-            'Wyoming',
+        this.myControl = new FormControl();
+        this.options = [
+            new User('Mary'),
+            new User('Shelley'),
+            new User('Igor')
         ];
-        this.stateCtrl = new FormControl();
-        this.filteredStates = this.stateCtrl.valueChanges
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.filteredOptions = this.myControl.valueChanges
             .startWith(null)
-            .map(name => this.filterStates(name));
+            .map(user => user && typeof user === 'object' ? user.name : user)
+            .map(name => name ? this.filter(name) : this.options.slice());
+    }
+    /**
+     * @param {?} name
+     * @return {?}
+     */
+    filter(name) {
+        return this.options.filter(option => option.name.toLowerCase().indexOf(name.toLowerCase()) === 0);
+    }
+    /**
+     * @param {?} user
+     * @return {?}
+     */
+    displayFn(user) {
+        return user ? user.name : user;
+    }
+}
+AutocompleteDisplayExample.decorators = [
+    { type: Component, args: [{
+                selector: 'autocomplete-display-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input type=\"text\" placeholder=\"Assignee\" aria-label=\"Assignee\" mdInput [formControl]=\"myControl\" [mdAutocomplete]=\"auto\"></md-input-container><md-autocomplete #auto=\"mdAutocomplete\" [displayWith]=\"displayFn\"><md-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{ option.name }}</md-option></md-autocomplete></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+AutocompleteDisplayExample.ctorParameters = () => [];
+
+/**
+ * \@title Filter autocomplete
+ */
+class AutocompleteFilterExample {
+    constructor() {
+        this.myControl = new FormControl();
+        this.options = [
+            'One',
+            'Two',
+            'Three'
+        ];
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.filteredOptions = this.myControl.valueChanges
+            .startWith(null)
+            .map(val => val ? this.filter(val) : this.options.slice());
     }
     /**
      * @param {?} val
      * @return {?}
      */
-    filterStates(val) {
-        return val ? this.states.filter(s => s.toLowerCase().indexOf(val.toLowerCase()) === 0)
-            : this.states;
+    filter(val) {
+        return this.options.filter(option => option.toLowerCase().indexOf(val.toLowerCase()) === 0);
+    }
+}
+AutocompleteFilterExample.decorators = [
+    { type: Component, args: [{
+                selector: 'autocomplete-filter-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" mdInput [formControl]=\"myControl\" [mdAutocomplete]=\"auto\"></md-input-container><md-autocomplete #auto=\"mdAutocomplete\"><md-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{ option }}</md-option></md-autocomplete></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+AutocompleteFilterExample.ctorParameters = () => [];
+
+/**
+ * \@title Autocomplete overview
+ */
+class AutocompleteOverviewExample {
+    constructor() {
+        this.states = [
+            {
+                name: 'Arkansas',
+                population: '2.978M',
+                // https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg'
+            },
+            {
+                name: 'California',
+                population: '39.14M',
+                // https://commons.wikimedia.org/wiki/File:Flag_of_California.svg
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg'
+            },
+            {
+                name: 'Florida',
+                population: '20.27M',
+                // https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg'
+            },
+            {
+                name: 'Texas',
+                population: '27.47M',
+                // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+            }
+        ];
+        this.stateCtrl = new FormControl();
+        this.filteredStates = this.stateCtrl.valueChanges
+            .startWith(null)
+            .map(state => state ? this.filterStates(state) : this.states.slice());
+    }
+    /**
+     * @param {?} name
+     * @return {?}
+     */
+    filterStates(name) {
+        return this.states.filter(state => state.name.toLowerCase().indexOf(name.toLowerCase()) === 0);
     }
 }
 AutocompleteOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'autocomplete-overview-example',
-                template: "<md-input-container><input mdInput placeholder=\"State\" [mdAutocomplete]=\"auto\" [formControl]=\"stateCtrl\"></md-input-container><md-autocomplete #auto=\"mdAutocomplete\"><md-option *ngFor=\"let state of filteredStates | async\" [value]=\"state\">{{ state }}</md-option></md-autocomplete>",
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input mdInput placeholder=\"State\" aria-label=\"State\" [mdAutocomplete]=\"auto\" [formControl]=\"stateCtrl\"></md-input-container><md-autocomplete #auto=\"mdAutocomplete\"><md-option *ngFor=\"let state of filteredStates | async\" [value]=\"state.name\"><img style=\"vertical-align:middle\" aria-hidden src=\"{{state.flag}}\" height=\"25\"> <span>{{ state.name }}</span> | <small>Population: {{state.population}}</small></md-option></md-autocomplete><br><md-slide-toggle [checked]=\"stateCtrl.disabled\" (change)=\"stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()\">Disable Input?</md-slide-toggle></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "]
             },] },
 ];
 /**
  * @nocollapse
  */
 AutocompleteOverviewExample.ctorParameters = () => [];
+
+/**
+ * \@title Simple autocomplete
+ */
+class AutocompleteSimpleExample {
+    constructor() {
+        this.myControl = new FormControl();
+        this.options = [
+            'One',
+            'Two',
+            'Three'
+        ];
+    }
+}
+AutocompleteSimpleExample.decorators = [
+    { type: Component, args: [{
+                selector: 'autocomplete-simple-example',
+                template: "<form class=\"example-form\"><md-input-container class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" mdInput [formControl]=\"myControl\" [mdAutocomplete]=\"auto\"></md-input-container><md-autocomplete #auto=\"mdAutocomplete\"><md-option *ngFor=\"let option of options\" [value]=\"option\">{{ option }}</md-option></md-autocomplete></form>",
+                styles: [".example-form { width: 500px; } .example-full-width { width: 100%; } "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+AutocompleteSimpleExample.ctorParameters = () => [];
 
 /**
  * \@title Basic buttons
@@ -366,7 +459,7 @@ class CheckboxConfigurableExample {
 CheckboxConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'checkbox-configurable-example',
-                template: "<md-card><md-card-content><h2 class=\"example-h2\">Checkbox configuration</h2><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</md-checkbox><md-checkbox class=\"example-margin\" [(ngModel)]=\"indeterminate\">Indeterminate</md-checkbox></section><section class=\"example-section\"><label class=\"example-margin\">Align:</label><md-radio-group [(ngModel)]=\"align\"><md-radio-button class=\"example-margin\" value=\"start\">Start</md-radio-button><md-radio-button class=\"example-margin\" value=\"end\">End</md-radio-button></md-radio-group></section><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</md-checkbox></section></md-card-content></md-card><md-card class=\"result\"><md-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><md-checkbox class=\"example-margin\" [checked]=\"checked\" [indeterminate]=\"indeterminate\" [align]=\"align\" [disabled]=\"disabled\">I'm a checkbox</md-checkbox></section></md-card-content></md-card>",
+                template: "<md-card><md-card-content><h2 class=\"example-h2\">Checkbox configuration</h2><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</md-checkbox><md-checkbox class=\"example-margin\" [(ngModel)]=\"indeterminate\">Indeterminate</md-checkbox></section><section class=\"example-section\"><label class=\"example-margin\">Align:</label><md-radio-group [(ngModel)]=\"align\"><md-radio-button class=\"example-margin\" value=\"start\">Start</md-radio-button><md-radio-button class=\"example-margin\" value=\"end\">End</md-radio-button></md-radio-group></section><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</md-checkbox></section></md-card-content></md-card><md-card class=\"result\"><md-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"checked\" [(indeterminate)]=\"indeterminate\" [align]=\"align\" [disabled]=\"disabled\">I'm a checkbox</md-checkbox></section></md-card-content></md-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
@@ -1667,21 +1760,22 @@ class TableHttpExample {
      * @param {?} http
      */
     constructor(http) {
-        this.displayedColumns = ['created', 'state', 'number', 'title'];
-        this.exampleDatabase = new ExampleHttpDao(http);
+        this.http = http;
+        this.displayedColumns = ['created_at', 'state', 'number', 'title'];
     }
     /**
      * @return {?}
      */
     ngOnInit() {
-        this.dataSource = new ExampleDataSource$2(/** @type {?} */ ((this.exampleDatabase)), this.sort, this.paginator);
+        this.exampleDatabase = new ExampleHttpDao(this.http);
+        this.dataSource = new ExampleDataSource$2(/** @type {?} */ ((this.exampleDatabase)), this.paginator, this.sort);
     }
 }
 TableHttpExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-http-example',
                 styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .mat-column-title { text-overflow: ellipsis; white-space: nowrap; flex: 1; overflow: hidden; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><md-spinner *ngIf=\"dataSource.isLoadingResults\"></md-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><md-table #table [dataSource]=\"dataSource\" class=\"example-table\" mdSort mdSortActive=\"created\" mdSortDisableClear mdSortDirection=\"asc\"><ng-container cdkColumnDef=\"number\"><md-header-cell *cdkHeaderCellDef>Number</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.number}}</md-cell></ng-container><ng-container cdkColumnDef=\"title\"><md-header-cell *cdkHeaderCellDef>Title</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.title}}</md-cell></ng-container><ng-container cdkColumnDef=\"state\"><md-header-cell *cdkHeaderCellDef>State</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.state}}</md-cell></ng-container><ng-container cdkColumnDef=\"created\"><md-header-cell *cdkHeaderCellDef md-sort-header disableClear=\"true\">Created</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.created.toDateString()}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></md-paginator></div>",
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><md-spinner *ngIf=\"dataSource.isLoadingResults\"></md-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><md-table #table [dataSource]=\"dataSource\" class=\"example-table\" mdSort mdSortActive=\"created_at\" mdSortDisableClear mdSortDirection=\"asc\"><ng-container cdkColumnDef=\"number\"><md-header-cell *cdkHeaderCellDef>#</md-header-cell><md-cell *cdkCellDef=\"let row\">{{ row.number }}</md-cell></ng-container><ng-container cdkColumnDef=\"title\"><md-header-cell *cdkHeaderCellDef>Title</md-header-cell><md-cell *cdkCellDef=\"let row\">{{ row.title }}</md-cell></ng-container><ng-container cdkColumnDef=\"state\"><md-header-cell *cdkHeaderCellDef>State</md-header-cell><md-cell *cdkCellDef=\"let row\">{{ row.state }}</md-cell></ng-container><ng-container cdkColumnDef=\"created_at\"><md-header-cell *cdkHeaderCellDef md-sort-header disableClear=\"true\">Created</md-header-cell><md-cell *cdkCellDef=\"let row\">{{ row.created_at | date }}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></md-paginator></div>",
             },] },
 ];
 /**
@@ -1713,7 +1807,8 @@ class ExampleHttpDao {
     getRepoIssues(sort, order, page) {
         const /** @type {?} */ href = 'https://api.github.com/search/issues';
         const /** @type {?} */ requestUrl = `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
-        return this.http.get(requestUrl);
+        return this.http.get(requestUrl)
+            .map(response => (response.json()));
     }
 }
 /**
@@ -1725,15 +1820,15 @@ class ExampleHttpDao {
  */
 class ExampleDataSource$2 extends DataSource {
     /**
-     * @param {?} _exampleDatabase
-     * @param {?} _sort
-     * @param {?} _paginator
+     * @param {?} exampleDatabase
+     * @param {?} paginator
+     * @param {?} sort
      */
-    constructor(_exampleDatabase, _sort, _paginator) {
+    constructor(exampleDatabase, paginator, sort) {
         super();
-        this._exampleDatabase = _exampleDatabase;
-        this._sort = _sort;
-        this._paginator = _paginator;
+        this.exampleDatabase = exampleDatabase;
+        this.paginator = paginator;
+        this.sort = sort;
         // The number of issues returned by github matching the query.
         this.resultsLength = 0;
     }
@@ -1743,56 +1838,35 @@ class ExampleDataSource$2 extends DataSource {
      */
     connect() {
         const /** @type {?} */ displayDataChanges = [
-            this._sort.mdSortChange,
-            this._paginator.page,
+            this.sort.mdSortChange,
+            this.paginator.page
         ];
         // If the user changes the sort order, reset back to the first page.
-        this._sort.mdSortChange.subscribe(() => {
-            this._paginator.pageIndex = 0;
-        });
+        this.sort.mdSortChange.subscribe(() => this.paginator.pageIndex = 0);
         return Observable.merge(...displayDataChanges)
             .startWith(null)
             .switchMap(() => {
             this.isLoadingResults = true;
-            return this._exampleDatabase.getRepoIssues(this._sort.active, this._sort.direction, this._paginator.pageIndex);
+            return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
         })
-            .catch(() => {
-            // Catch if the GitHub API has reached its rate limit. Return empty result.
-            this.isRateLimitReached = true;
-            return Observable.of(null);
-        })
-            .map(result => {
+            .map(data => {
             // Flip flag to show that loading has finished.
             this.isLoadingResults = false;
-            return result;
-        })
-            .map(result => {
-            if (!result) {
-                return [];
-            }
             this.isRateLimitReached = false;
-            this.resultsLength = result.json().total_count;
-            return this.readGithubResult(result);
+            this.resultsLength = data.total_count;
+            return data.items;
+        })
+            .catch(() => {
+            this.isLoadingResults = false;
+            // Catch if the GitHub API has reached its rate limit. Return empty data.
+            this.isRateLimitReached = true;
+            return Observable.of(null);
         });
     }
     /**
      * @return {?}
      */
     disconnect() { }
-    /**
-     * @param {?} result
-     * @return {?}
-     */
-    readGithubResult(result) {
-        return result.json().items.map(issue => {
-            return {
-                number: issue.number,
-                created: new Date(issue.created_at),
-                state: issue.state,
-                title: issue.title,
-            };
-        });
-    }
 }
 
 /**
@@ -1992,8 +2066,8 @@ class TableOverviewExample {
 TableOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-overview-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 56px; max-height: 56px; display: flex; align-items: center; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; border-bottom: 1px solid transparent; } .mat-input-container { font-size: 14px; flex-grow: 1; margin-left: 32px; margin-top: 8px; } .example-no-results { display: flex; justify-content: center; padding: 24px; font-size: 12px; font-style: italic; } /** Selection styles */ .example-selection-header { font-size: 18px; background: rgba(255, 64, 129, 0.3); border-bottom: 1px solid #d696ac; } .mat-column-select { max-width: 54px; } .mat-row:hover, .example-selected-row { background: #f5f5f5; } .mat-row:active, .mat-row.example-selected-row { background: #eaeaea; } .mat-table { overflow: auto; max-height: 500px; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\" [style.display]=\"selection.isEmpty() ? '' : 'none'\"><md-input-container floatPlaceholder=\"never\"><input mdInput #filter placeholder=\"Filter users\"></md-input-container></div><div class=\"example-header example-selection-header\" *ngIf=\"!selection.isEmpty()\">{{selection.selected.length}} {{selection.selected.length == 1 ? 'user' : 'users'}} selected</div><md-table #table [dataSource]=\"dataSource\" mdSort><ng-container cdkColumnDef=\"select\"><md-header-cell *cdkHeaderCellDef><md-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></md-checkbox></md-header-cell><md-cell *cdkCellDef=\"let row\"><md-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row.id) : null\" [checked]=\"selection.isSelected(row.id)\"></md-checkbox></md-cell></ng-container><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef md-sort-header>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef md-sort-header>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef md-sort-header>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef md-sort-header>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\" [class.example-selected-row]=\"selection.isSelected(row.id)\" (click)=\"selection.toggle(row.id)\"></md-row></md-table><div class=\"example-no-results\" [style.display]=\"dataSource.renderedData.length == 0 ? '' : 'none'\">No users found matching filter.</div><md-paginator #paginator [length]=\"dataSource.filteredData.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></md-paginator></div>",
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 56px; max-height: 56px; display: flex; align-items: center; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; border-bottom: 1px solid transparent; } .mat-input-container { font-size: 14px; flex-grow: 1; margin-top: 8px; } .example-no-results { display: flex; justify-content: center; padding: 24px; font-size: 12px; font-style: italic; } /** Selection styles */ .example-selection-header { font-size: 18px; } .mat-column-select { max-width: 54px; } .mat-row:hover, .example-selected-row { background: #f5f5f5; } .mat-row:active, .mat-row.example-selected-row { background: #eaeaea; } .mat-table { overflow: auto; max-height: 500px; } "],
+                template: "<div class=\"example-header\" [style.display]=\"selection.isEmpty() ? '' : 'none'\"><md-input-container floatPlaceholder=\"never\"><input mdInput #filter placeholder=\"Filter users\"></md-input-container></div><div class=\"example-header example-selection-header\" *ngIf=\"!selection.isEmpty()\">{{selection.selected.length}} {{selection.selected.length == 1 ? 'user' : 'users'}} selected</div><div class=\"example-container mat-elevation-z8\"><md-table #table [dataSource]=\"dataSource\" mdSort><ng-container cdkColumnDef=\"select\"><md-header-cell *cdkHeaderCellDef><md-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></md-checkbox></md-header-cell><md-cell *cdkCellDef=\"let row\"><md-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row.id) : null\" [checked]=\"selection.isSelected(row.id)\"></md-checkbox></md-cell></ng-container><ng-container cdkColumnDef=\"userId\"><md-header-cell *cdkHeaderCellDef md-sort-header>ID</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container cdkColumnDef=\"progress\"><md-header-cell *cdkHeaderCellDef md-sort-header>Progress</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container cdkColumnDef=\"userName\"><md-header-cell *cdkHeaderCellDef md-sort-header>Name</md-header-cell><md-cell *cdkCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container cdkColumnDef=\"color\"><md-header-cell *cdkHeaderCellDef md-sort-header>Color</md-header-cell><md-cell *cdkCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *cdkHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *cdkRowDef=\"let row; columns: displayedColumns;\" [class.example-selected-row]=\"selection.isSelected(row.id)\" (click)=\"selection.toggle(row.id)\"></md-row></md-table><div class=\"example-no-results\" [style.display]=\"dataSource.renderedData.length == 0 ? '' : 'none'\">No users found matching filter.</div><md-paginator #paginator [length]=\"dataSource.filteredData.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></md-paginator></div>",
             },] },
 ];
 /**
@@ -2076,6 +2150,8 @@ class ExampleDataSource$4 extends DataSource {
         this._filterChange = new BehaviorSubject('');
         this.filteredData = [];
         this.renderedData = [];
+        // Reset to the first page when the user changes the filter.
+        this._filterChange.subscribe(() => this._paginator.pageIndex = 0);
     }
     /**
      * @return {?}
@@ -2517,9 +2593,27 @@ TooltipPositionExample.ctorParameters = () => [];
 /* tslint:disable */
 /** DO NOT MANUALLY EDIT THIS FILE, IT IS GENERATED VIA GULP 'build-examples-module' */
 const EXAMPLE_COMPONENTS = {
+    'autocomplete-display': {
+        title: 'Display value autocomplete',
+        component: AutocompleteDisplayExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'autocomplete-filter': {
+        title: 'Filter autocomplete',
+        component: AutocompleteFilterExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'autocomplete-overview': {
-        title: 'Basic autocomplete',
+        title: 'Autocomplete overview',
         component: AutocompleteOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'autocomplete-simple': {
+        title: 'Simple autocomplete',
+        component: AutocompleteSimpleExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -2927,7 +3021,10 @@ const EXAMPLE_COMPONENTS = {
     },
 };
 const EXAMPLE_LIST = [
+    AutocompleteDisplayExample,
+    AutocompleteFilterExample,
     AutocompleteOverviewExample,
+    AutocompleteSimpleExample,
     ButtonOverviewExample,
     ButtonToggleExclusiveExample,
     ButtonToggleOverviewExample,
@@ -3063,5 +3160,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, DatepickerOverviewExample, CardFancyExample, AutocompleteOverviewExample as ɵa, ButtonOverviewExample as ɵb, ButtonToggleExclusiveExample as ɵc, ButtonToggleOverviewExample as ɵd, ButtonTypesExample as ɵe, CardOverviewExample as ɵf, CdkTableBasicExample as ɵg, CheckboxConfigurableExample as ɵh, CheckboxOverviewExample as ɵi, ChipsOverviewExample as ɵj, ChipsStackedExample as ɵk, DatepickerApiExample as ɵl, DatepickerFilterExample as ɵm, DatepickerMinMaxExample as ɵn, DatepickerStartViewExample as ɵo, DatepickerTouchExample as ɵp, DialogContentExample as ɵq, DialogContentExampleDialog as ɵr, DialogDataExample as ɵs, DialogDataExampleDialog as ɵt, DialogElementsExample as ɵu, DialogElementsExampleDialog as ɵv, DialogOverviewExample as ɵw, DialogOverviewExampleDialog as ɵx, GridListDynamicExample as ɵy, GridListOverviewExample as ɵz, IconOverviewExample as ɵba, IconSvgExample as ɵbb, InputClearableExample as ɵbc, InputErrorsExample as ɵbd, InputFormExample as ɵbe, InputHintExample as ɵbf, InputOverviewExample as ɵbg, InputPrefixSuffixExample as ɵbh, ListOverviewExample as ɵbi, ListSectionsExample as ɵbj, ExampleMaterialModule as ɵct, MenuIconsExample as ɵbk, MenuOverviewExample as ɵbl, PaginatorConfigurableExample as ɵbm, PaginatorOverviewExample as ɵbn, ProgressBarConfigurableExample as ɵbo, ProgressBarOverviewExample as ɵbp, ProgressSpinnerConfigurableExample as ɵbq, ProgressSpinnerOverviewExample as ɵbr, RadioNgModelExample as ɵbs, RadioOverviewExample as ɵbt, SelectFormExample as ɵbu, SelectOverviewExample as ɵbv, SidenavFabExample as ɵbw, SidenavOverviewExample as ɵbx, SlideToggleConfigurableExample as ɵby, SlideToggleFormsExample as ɵbz, SlideToggleOverviewExample as ɵca, SliderConfigurableExample as ɵcb, SliderOverviewExample as ɵcc, PizzaPartyComponent as ɵce, SnackBarComponentExample as ɵcd, SnackBarOverviewExample as ɵcf, SortOverviewExample as ɵcg, TableBasicExample as ɵch, TableFilteringExample as ɵcj, TableHttpExample as ɵci, TableOverviewExample as ɵck, TablePaginationExample as ɵcl, TableSortingExample as ɵcm, TabsOverviewExample as ɵcn, TabsTemplateLabelExample as ɵco, ToolbarMultirowExample as ɵcp, ToolbarOverviewExample as ɵcq, TooltipOverviewExample as ɵcr, TooltipPositionExample as ɵcs };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonToggleOverviewExample as ɵg, ButtonTypesExample as ɵh, CardOverviewExample as ɵi, CdkTableBasicExample as ɵj, CheckboxConfigurableExample as ɵk, CheckboxOverviewExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵq, DatepickerStartViewExample as ɵr, DatepickerTouchExample as ɵs, DialogContentExample as ɵt, DialogContentExampleDialog as ɵu, DialogDataExample as ɵv, DialogDataExampleDialog as ɵw, DialogElementsExample as ɵx, DialogElementsExampleDialog as ɵy, DialogOverviewExample as ɵz, DialogOverviewExampleDialog as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ExampleMaterialModule as ɵcv, MenuIconsExample as ɵbm, MenuOverviewExample as ɵbn, PaginatorConfigurableExample as ɵbo, PaginatorOverviewExample as ɵbp, ProgressBarConfigurableExample as ɵbq, ProgressBarOverviewExample as ɵbr, ProgressSpinnerConfigurableExample as ɵbs, ProgressSpinnerOverviewExample as ɵbt, RadioNgModelExample as ɵbu, RadioOverviewExample as ɵbv, SelectFormExample as ɵbw, SelectOverviewExample as ɵbx, SidenavFabExample as ɵby, SidenavOverviewExample as ɵbz, SlideToggleConfigurableExample as ɵca, SlideToggleFormsExample as ɵcb, SlideToggleOverviewExample as ɵcc, SliderConfigurableExample as ɵcd, SliderOverviewExample as ɵce, PizzaPartyComponent as ɵcg, SnackBarComponentExample as ɵcf, SnackBarOverviewExample as ɵch, SortOverviewExample as ɵci, TableBasicExample as ɵcj, TableFilteringExample as ɵcl, TableHttpExample as ɵck, TableOverviewExample as ɵcm, TablePaginationExample as ɵcn, TableSortingExample as ɵco, TabsOverviewExample as ɵcp, TabsTemplateLabelExample as ɵcq, ToolbarMultirowExample as ɵcr, ToolbarOverviewExample as ɵcs, TooltipOverviewExample as ɵct, TooltipPositionExample as ɵcu };
 //# sourceMappingURL=material-examples.js.map

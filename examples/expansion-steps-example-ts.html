@@ -1,0 +1,23 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'expansion-steps-example'</span>,
+  templateUrl: <span class="hljs-string">'expansion-steps-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'expansion-steps-example.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExpansionStepsExample {
+  step = <span class="hljs-number">0</span>;
+
+  setStep(index: <span class="hljs-built_in">number</span>) {
+    <span class="hljs-keyword">this</span>.step = index;
+  }
+
+  nextStep() {
+    <span class="hljs-keyword">this</span>.step++;
+  }
+
+  prevStep() {
+    <span class="hljs-keyword">this</span>.step--;
+  }
+}
