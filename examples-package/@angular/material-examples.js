@@ -557,7 +557,7 @@ class DatepickerFilterExample {
 DatepickerFilterExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-filter-example',
-                template: "<md-input-container class=\"example-full-width\"><input mdInput [mdDatepickerFilter]=\"myFilter\" [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker #picker></md-datepicker>",
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [mdDatepickerFilter]=\"myFilter\" [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker-toggle mdSuffix [for]=\"picker\"></md-datepicker-toggle></md-input-container><md-datepicker #picker></md-datepicker>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -578,7 +578,7 @@ class DatepickerMinMaxExample {
 DatepickerMinMaxExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-min-max-example',
-                template: "<md-input-container class=\"example-full-width\"><input mdInput [min]=\"minDate\" [max]=\"maxDate\" [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker #picker></md-datepicker>",
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [min]=\"minDate\" [max]=\"maxDate\" [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker-toggle mdSuffix [for]=\"picker\"></md-datepicker-toggle></md-input-container><md-datepicker #picker></md-datepicker>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -595,7 +595,7 @@ class DatepickerOverviewExample {
 DatepickerOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-overview-example',
-                template: "<md-input-container><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker #picker></md-datepicker>",
+                template: "<md-input-container><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker-toggle mdSuffix [for]=\"picker\"></md-datepicker-toggle></md-input-container><md-datepicker #picker></md-datepicker>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -615,7 +615,7 @@ class DatepickerStartViewExample {
 DatepickerStartViewExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-start-view-example',
-                template: "<md-input-container><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker #picker startView=\"year\" [startAt]=\"startDate\"></md-datepicker>",
+                template: "<md-input-container><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker-toggle mdSuffix [for]=\"picker\"></md-datepicker-toggle></md-input-container><md-datepicker #picker startView=\"year\" [startAt]=\"startDate\"></md-datepicker>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -632,7 +632,7 @@ class DatepickerTouchExample {
 DatepickerTouchExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-touch-example',
-                template: "<md-input-container class=\"example-full-width\"><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"> <button mdSuffix [mdDatepickerToggle]=\"picker\"></button></md-input-container><md-datepicker touchUi=\"true\" #picker></md-datepicker>",
+                template: "<md-input-container class=\"example-full-width\"><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker-toggle mdSuffix [for]=\"picker\"></md-datepicker-toggle></md-input-container><md-datepicker touchUi=\"true\" #picker></md-datepicker>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
