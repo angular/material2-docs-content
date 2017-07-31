@@ -90,13 +90,20 @@ directly from your app.</p>
 <p class="docs-markdown-p">Note that <code class="docs-markdown-code">md-icon</code> supports any font or svg icons; using Material Icons is one of many options.</p>
 <h2 id="appendix-configuring-systemjs" class="docs-markdown-h2">Appendix: Configuring SystemJS</h2>
 <p class="docs-markdown-p">If your project is using SystemJS for module loading, you will need to add <code class="docs-markdown-code">@angular/material</code> and
-<code class="docs-markdown-code">@angular/cdk</code> to the SystemJS configuration:</p>
+<code class="docs-markdown-code">@angular/cdk</code> to the SystemJS configuration.</p>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">@angular/cdk</code> package is organized of multiple entry-points. 
+Each of these entry-points must be registered individually with SystemJS.</p>
+<p class="docs-markdown-p">Here is a example configuration where <code class="docs-markdown-code">@angular/material</code>, <code class="docs-markdown-code">@angular/cdk/platform</code> and 
+<code class="docs-markdown-code">@angular/cdk/a11y</code> are used:</p>
 <pre class="docs-markdown-pre"><code class="lang-js docs-markdown-code">System.config({
-  <span class="hljs-comment">// existing configuration options</span>
+  <span class="hljs-comment">// Existing configuration options</span>
   map: {
     <span class="hljs-comment">// ...</span>
     <span class="hljs-string">'@angular/material'</span>: <span class="hljs-string">'npm:@angular/material/bundles/material.umd.js'</span>,
-    <span class="hljs-string">'@angular/cdk'</span>: <span class="hljs-string">'npm:@angular/cdk/bundles/cdk.umd.js'</span>
+
+    <span class="hljs-comment">// CDK individual packages</span>
+    <span class="hljs-string">'@angular/cdk/platform'</span>: <span class="hljs-string">'npm:@angular/cdk/bundles/cdk-platform.umd.js'</span>,
+    <span class="hljs-string">'@angular/cdk/a11y'</span>: <span class="hljs-string">'npm:@angular/cdk/bundles/cdk-a11y.umd.js'</span>,
     <span class="hljs-comment">// ...</span>
   }
 });
