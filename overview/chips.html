@@ -7,23 +7,43 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">md-chip</span>&gt;</span>Dal<span class="hljs-tag">&lt;/<span class="hljs-name">md-chip</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-chip-list</span>&gt;</span>
 </code></pre>
-<h3 id="unstyled-chips" class="docs-markdown-h3">Unstyled chips</h3>
-<p class="docs-markdown-p">By default, <code class="docs-markdown-code">&lt;md-chip&gt;</code> has Material Design styles applied. For a chip with no styles applied,
+
+        <h3 id="unstyled-chips" class="docs-header-link docs-markdown-h3">
+          <div header-link="unstyled-chips"></div>
+          Unstyled chips
+        </h3>
+      <p class="docs-markdown-p">By default, <code class="docs-markdown-code">&lt;md-chip&gt;</code> has Material Design styles applied. For a chip with no styles applied,
 use <code class="docs-markdown-code">&lt;md-basic-chip&gt;</code>. You can then customize the chip appearance by adding your own CSS.</p>
 <p class="docs-markdown-p"><em>Hint: <code class="docs-markdown-code">&lt;md-basic-chip&gt;</code> receives the <code class="docs-markdown-code">mat-basic-chip</code> CSS class in addition to the <code class="docs-markdown-code">mat-chip</code> class.</em></p>
-<h3 id="selection" class="docs-markdown-h3">Selection</h3>
-<p class="docs-markdown-p">Chips can be selected via the <code class="docs-markdown-code">selected</code> property. Selection can be disabled by setting
+
+        <h3 id="selection" class="docs-header-link docs-markdown-h3">
+          <div header-link="selection"></div>
+          Selection
+        </h3>
+      <p class="docs-markdown-p">Chips can be selected via the <code class="docs-markdown-code">selected</code> property. Selection can be disabled by setting
 <code class="docs-markdown-code">selectable</code> to <code class="docs-markdown-code">false</code> on the <code class="docs-markdown-code">&lt;md-chip-list&gt;</code>.</p>
 <p class="docs-markdown-p">Selection emits the <code class="docs-markdown-code">(select)</code> output while deselecting emits the <code class="docs-markdown-code">(deselect)</code> output. Both outputs
 receive a ChipEvent object with a structure of <code class="docs-markdown-code">{ chip: alteredChip }</code>.</p>
-<h3 id="disabled-chips" class="docs-markdown-h3">Disabled chips</h3>
-<p class="docs-markdown-p">Individual chips may be disabled by applying the <code class="docs-markdown-code">disabled</code> attribute to the chip. When disabled,
+
+        <h3 id="disabled-chips" class="docs-header-link docs-markdown-h3">
+          <div header-link="disabled-chips"></div>
+          Disabled chips
+        </h3>
+      <p class="docs-markdown-p">Individual chips may be disabled by applying the <code class="docs-markdown-code">disabled</code> attribute to the chip. When disabled,
 chips are neither selectable nor focusable. Currently, disabled chips receive no special styling.</p>
-<h3 id="keyboard-interaction" class="docs-markdown-h3">Keyboard interaction</h3>
-<p class="docs-markdown-p">Users can move through the chips using the arrow keys and select/deselect them with the space. Chips
+
+        <h3 id="keyboard-interaction" class="docs-header-link docs-markdown-h3">
+          <div header-link="keyboard-interaction"></div>
+          Keyboard interaction
+        </h3>
+      <p class="docs-markdown-p">Users can move through the chips using the arrow keys and select/deselect them with the space. Chips
 also gain focus when clicked, ensuring keyboard navigation starts at the appropriate chip.</p>
-<h3 id="theming" class="docs-markdown-h3">Theming</h3>
-<p class="docs-markdown-p">The selected color of an <code class="docs-markdown-code">&lt;md-chip&gt;</code> can be changed by using the <code class="docs-markdown-code">color</code> property. By default, chips
+
+        <h3 id="theming" class="docs-header-link docs-markdown-h3">
+          <div header-link="theming"></div>
+          Theming
+        </h3>
+      <p class="docs-markdown-p">The selected color of an <code class="docs-markdown-code">&lt;md-chip&gt;</code> can be changed by using the <code class="docs-markdown-code">color</code> property. By default, chips
 use a neutral background color based on the current theme (light or dark). This can be changed to 
 <code class="docs-markdown-code">'primary'</code>, <code class="docs-markdown-code">'accent'</code>, or <code class="docs-markdown-code">'warn'</code>.</p>
 </div></body></html>

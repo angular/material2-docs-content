@@ -1,12 +1,19 @@
-<html><head></head><body><div class="docs-markdown"><h1 id="angular-material-bi-directionality" class="docs-markdown-h1">Angular Material bi-directionality</h1>
-<h3 id="setting-a-text-direction-for-your-application" class="docs-markdown-h3">Setting a text-direction for your application</h3>
-<p class="docs-markdown-p">The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir" class="docs-markdown-a"><code class="docs-markdown-code">dir</code> attribute</a>
+<html><head></head><body><div class="docs-markdown"><h1 class="docs-markdown-h1">Angular Material bi-directionality</h1>
+        <h3 id="setting-a-text-direction-for-your-application" class="docs-header-link docs-markdown-h3">
+          <div header-link="setting-a-text-direction-for-your-application"></div>
+          Setting a text-direction for your application
+        </h3>
+      <p class="docs-markdown-p">The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir" class="docs-markdown-a"><code class="docs-markdown-code">dir</code> attribute</a>
 is typically applied to <code class="docs-markdown-code">&lt;html&gt;</code> or <code class="docs-markdown-code">&lt;body&gt;</code> element of a page. However, it can be used on any
 element to apply a text-direction to a smaller subset of the page.</p>
 <p class="docs-markdown-p">All Angular Material components automatically reflect the LTR/RTL direction
 of their container. </p>
-<h3 id="reading-the-text-direction-in-your-own-components" class="docs-markdown-h3">Reading the text-direction in your own components</h3>
-<p class="docs-markdown-p"><code class="docs-markdown-code">@angular/cdk</code> provides a <code class="docs-markdown-code">Directionality</code> injectable that can be used by any component
+
+        <h3 id="reading-the-text-direction-in-your-own-components" class="docs-header-link docs-markdown-h3">
+          <div header-link="reading-the-text-direction-in-your-own-components"></div>
+          Reading the text-direction in your own components
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">@angular/cdk</code> provides a <code class="docs-markdown-code">Directionality</code> injectable that can be used by any component
 in your application. To consume this injectable, you must import <code class="docs-markdown-code">BidiModule</code>
 from <code class="docs-markdown-code">@angular/cdk</code>.</p>
 <p class="docs-markdown-p"><code class="docs-markdown-code">Directionality</code> provides two useful properties:</p>
@@ -16,8 +23,12 @@ from <code class="docs-markdown-code">@angular/cdk</code>.</p>
 captures changes from <code class="docs-markdown-code">dir</code> attributes <em>inside the Angular application context</em>. It will not
 emit for changes to <code class="docs-markdown-code">dir</code> on <code class="docs-markdown-code">&lt;html&gt;</code> and <code class="docs-markdown-code">&lt;body&gt;</code>, as these are assumed to be static.</li>
 </ul>
-<h4 id="example" class="docs-markdown-h4">Example</h4>
-<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({ <span class="hljs-comment">/* ... */</span>})
+
+        <h4 id="example" class="docs-header-link docs-markdown-h4">
+          <div header-link="example"></div>
+          Example
+        </h4>
+      <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({ <span class="hljs-comment">/* ... */</span>})
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyCustomComponent {
   <span class="hljs-keyword">private</span> dir: Direction;
 

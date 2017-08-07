@@ -1,6 +1,9 @@
-<html><head></head><body><div class="docs-markdown"><h1 id="angular-material-typography" class="docs-markdown-h1">Angular Material typography</h1>
-<h3 id="what-is-typography-" class="docs-markdown-h3">What is typography?</h3>
-<p class="docs-markdown-p">Typography is a way of arranging type to make text legible, readable, and appealing when displayed.
+<html><head></head><body><div class="docs-markdown"><h1 class="docs-markdown-h1">Angular Material typography</h1>
+        <h3 id="what-is-typography-" class="docs-header-link docs-markdown-h3">
+          <div header-link="what-is-typography-"></div>
+          What is typography?
+        </h3>
+      <p class="docs-markdown-p">Typography is a way of arranging type to make text legible, readable, and appealing when displayed.
 Angular Material's typography is based on the guidelines from the <a href="https://material.io/guidelines/style/typography.html" class="docs-markdown-a">Material Design spec</a> and is
 arranged into typography levels. Each level has a <code class="docs-markdown-code">font-size</code>, <code class="docs-markdown-code">line-height</code> and <code class="docs-markdown-code">font-weight</code>. The
 available levels are:</p>
@@ -17,8 +20,12 @@ at the top of the page (e.g. a hero header).</li>
 <li class="docs-markdown-li"><code class="docs-markdown-code">button</code> - Buttons and anchors.</li>
 </ul>
 <p class="docs-markdown-p">The typography levels are collected into a typography config which is used to generate the CSS.</p>
-<h3 id="usage" class="docs-markdown-h3">Usage</h3>
-<p class="docs-markdown-p">To get started, you first include the <code class="docs-markdown-code">Roboto</code> font with the 300, 400 and 500 weights.
+
+        <h3 id="usage" class="docs-header-link docs-markdown-h3">
+          <div header-link="usage"></div>
+          Usage
+        </h3>
+      <p class="docs-markdown-p">To get started, you first include the <code class="docs-markdown-code">Roboto</code> font with the 300, 400 and 500 weights.
 You can host it yourself or include it from <a href="https://fonts.google.com/" class="docs-markdown-a">Google Fonts</a>:</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/css?family=Roboto:300,400,500"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
 </code></pre>
@@ -37,8 +44,12 @@ descendant native elements.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This header will be styled<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 </code></pre>
-<h3 id="customization" class="docs-markdown-h3">Customization</h3>
-<p class="docs-markdown-p">Typography customization is an extension of Angular Material's SASS-based theming. Similar to
+
+        <h3 id="customization" class="docs-header-link docs-markdown-h3">
+          <div header-link="customization"></div>
+          Customization
+        </h3>
+      <p class="docs-markdown-p">Typography customization is an extension of Angular Material's SASS-based theming. Similar to
 creating a custom theme, you can create a custom <strong>typography configuration</strong>.</p>
 <pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
 
@@ -72,8 +83,12 @@ different SASS mixins.</p>
 </code></pre>
 <p class="docs-markdown-p">For more details about the typography functions and default config, see the
 <a href="https://github.com/angular/material2/blob/master/src/lib/core/typography/_typography.scss" class="docs-markdown-a">source</a>.</p>
-<h3 id="material-typography-in-your-custom-css" class="docs-markdown-h3">Material typography in your custom CSS</h3>
-<p class="docs-markdown-p">Angular Material includes typography utility mixins and functions that you can use to customize your
+
+        <h3 id="material-typography-in-your-custom-css" class="docs-header-link docs-markdown-h3">
+          <div header-link="material-typography-in-your-custom-css"></div>
+          Material typography in your custom CSS
+        </h3>
+      <p class="docs-markdown-p">Angular Material includes typography utility mixins and functions that you can use to customize your
 own components:</p>
 <ul class="docs-markdown-ul">
 <li class="docs-markdown-li"><code class="docs-markdown-code">mat-font-size($config, $level)</code> - Gets the <code class="docs-markdown-code">font-size</code>, based on the provided config and level.</li>

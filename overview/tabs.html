@@ -5,12 +5,20 @@ of the header, pagination controls appear to let the user scroll left and right 
 <p class="docs-markdown-p">The active tab may be set using the <code class="docs-markdown-code">selectedIndex</code> input or when the user selects one of the
 tab labels in the header.</p>
 <div material-docs-example="tabs-overview"></div>
-<h3 id="events" class="docs-markdown-h3">Events</h3>
-<p class="docs-markdown-p">The <code class="docs-markdown-code">selectChange</code> output event is emitted when the active tab changes.</p>
+
+        <h3 id="events" class="docs-header-link docs-markdown-h3">
+          <div header-link="events"></div>
+          Events
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">selectChange</code> output event is emitted when the active tab changes.</p>
 <p class="docs-markdown-p">The <code class="docs-markdown-code">focusChange</code> output event is emitted when the user puts focus on any of the tab labels in
 the header, usually through keyboard navigation.</p>
-<h3 id="labels" class="docs-markdown-h3">Labels</h3>
-<p class="docs-markdown-p">If a tab's label is only text then the simple tab-group API can be used.</p>
+
+        <h3 id="labels" class="docs-header-link docs-markdown-h3">
+          <div header-link="labels"></div>
+          Labels
+        </h3>
+      <p class="docs-markdown-p">If a tab's label is only text then the simple tab-group API can be used.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-tab-group</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"One"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Some tab content<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -40,12 +48,20 @@ the header, usually through keyboard navigation.</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">md-tab</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-tab-group</span>&gt;</span>
 </code></pre>
-<h3 id="dynamic-height" class="docs-markdown-h3">Dynamic Height</h3>
-<p class="docs-markdown-p">By default, the tab group will not change its height to the height of the currently active tab. To
+
+        <h3 id="dynamic-height" class="docs-header-link docs-markdown-h3">
+          <div header-link="dynamic-height"></div>
+          Dynamic Height
+        </h3>
+      <p class="docs-markdown-p">By default, the tab group will not change its height to the height of the currently active tab. To
 change this, set the <code class="docs-markdown-code">dynamicHeight</code> input to true. The tab body will animate its height according
  to the height of the active tab.</p>
-<h3 id="tabs-and-navigation" class="docs-markdown-h3">Tabs and navigation</h3>
-<p class="docs-markdown-p">While <code class="docs-markdown-code">&lt;md-tab-group&gt;</code> is used to switch between views within a single route, <code class="docs-markdown-code">&lt;nav md-tab-nav-bar&gt;</code>
+
+        <h3 id="tabs-and-navigation" class="docs-header-link docs-markdown-h3">
+          <div header-link="tabs-and-navigation"></div>
+          Tabs and navigation
+        </h3>
+      <p class="docs-markdown-p">While <code class="docs-markdown-code">&lt;md-tab-group&gt;</code> is used to switch between views within a single route, <code class="docs-markdown-code">&lt;nav md-tab-nav-bar&gt;</code>
 provides a tab-like UI for navigating between routes.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">md-tab-nav-bar</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">md-tab-link</span>

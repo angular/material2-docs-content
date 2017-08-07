@@ -1,11 +1,22 @@
-<html><head></head><body><div class="docs-markdown"><h1 id="theming-your-custom-components" class="docs-markdown-h1">Theming your custom components</h1>
-<p class="docs-markdown-p">In order to style your own components with Angular Material's tooling, the component's styles must be defined with Sass.</p>
-<h2 id="using-mixin-to-automatically-apply-a-theme" class="docs-markdown-h2">Using <code class="docs-markdown-code">@mixin</code> to automatically apply a theme</h2>
-<h3 id="why-using-mixin-" class="docs-markdown-h3">Why using <code class="docs-markdown-code">@mixin</code></h3>
-<p class="docs-markdown-p">The advantage of using a <code class="docs-markdown-code">@mixin</code> function is that when you change your theme, every file that uses it will be updated automatically.
+<html><head></head><body><div class="docs-markdown"><h1 class="docs-markdown-h1">Theming your custom components</h1><p class="docs-markdown-p">In order to style your own components with Angular Material's tooling, the component's styles must be defined with Sass.</p>
+
+        <h3 id="using-code-mixin-code-to-automatically-apply-a-theme" class="docs-header-link docs-markdown-h3">
+          <div header-link="using-code-mixin-code-to-automatically-apply-a-theme"></div>
+          Using <code class="docs-markdown-code">@mixin</code> to automatically apply a theme
+        </h3>
+      
+        <h4 id="why-using-code-mixin-code-" class="docs-header-link docs-markdown-h4">
+          <div header-link="why-using-code-mixin-code-"></div>
+          Why using <code class="docs-markdown-code">@mixin</code>
+        </h4>
+      <p class="docs-markdown-p">The advantage of using a <code class="docs-markdown-code">@mixin</code> function is that when you change your theme, every file that uses it will be updated automatically.
 Calling it with a different theme argument allow multiple themes within the app or component.</p>
-<h3 id="how-to-use-mixin-" class="docs-markdown-h3">How to use <code class="docs-markdown-code">@mixin</code></h3>
-<p class="docs-markdown-p">We can better theming our custom components adding a <code class="docs-markdown-code">@mixin</code> function to its theme file and then calling this function to apply a theme.</p>
+
+        <h4 id="how-to-use-code-mixin-code-" class="docs-header-link docs-markdown-h4">
+          <div header-link="how-to-use-code-mixin-code-"></div>
+          How to use <code class="docs-markdown-code">@mixin</code>
+        </h4>
+      <p class="docs-markdown-p">We can better theming our custom components adding a <code class="docs-markdown-code">@mixin</code> function to its theme file and then calling this function to apply a theme.</p>
 <p class="docs-markdown-p">All you need is to create a <code class="docs-markdown-code">@mixin</code> function in the custom-component-theme.scss</p>
 <pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-comment">// Import all the tools needed to customize the theme and extract parts of it</span>
 @<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;
@@ -34,12 +45,20 @@ Calling it with a different theme argument allow multiple themes within the app 
 </code></pre>
 <p class="docs-markdown-p">For more details about the theming functions, see the comments in the
 <a href="https://github.com/angular/material2/blob/master/src/lib/core/theming/_theming.scss" class="docs-markdown-a">source</a>.</p>
-<h3 id="best-practices-using-mixin-" class="docs-markdown-h3">Best practices using <code class="docs-markdown-code">@mixin</code></h3>
-<p class="docs-markdown-p">When using <code class="docs-markdown-code">@mixin</code>, the theme file should only contain the definitions that are affected by the passed-in theme.</p>
+
+        <h4 id="best-practices-using-code-mixin-code-" class="docs-header-link docs-markdown-h4">
+          <div header-link="best-practices-using-code-mixin-code-"></div>
+          Best practices using <code class="docs-markdown-code">@mixin</code>
+        </h4>
+      <p class="docs-markdown-p">When using <code class="docs-markdown-code">@mixin</code>, the theme file should only contain the definitions that are affected by the passed-in theme.</p>
 <p class="docs-markdown-p">All styles that are not affected by the theme should be placed in a <code class="docs-markdown-code">candy-carousel.scss</code> file. This file should contain everything that is not affected by the theme like sizes, transitions...</p>
 <p class="docs-markdown-p">Styles that are affected by the theme should be placed in a separated theming file as <code class="docs-markdown-code">_candy-carousel-theme.scss</code> and the file should have a <code class="docs-markdown-code">_</code> before the name. This file should contain the <code class="docs-markdown-code">@mixin</code> function responsible for applying the theme to the component.</p>
-<h2 id="using-colors-from-a-palette" class="docs-markdown-h2">Using colors from a palette</h2>
-<p class="docs-markdown-p">You can consume the theming functions and Material palette variables from <code class="docs-markdown-code">@angular/material/theming</code>.
+
+        <h3 id="using-colors-from-a-palette" class="docs-header-link docs-markdown-h3">
+          <div header-link="using-colors-from-a-palette"></div>
+          Using colors from a palette
+        </h3>
+      <p class="docs-markdown-p">You can consume the theming functions and Material palette variables from <code class="docs-markdown-code">@angular/material/theming</code>.
 You can use the <code class="docs-markdown-code">mat-color</code> function to extract a specific color from a palette. For example:</p>
 <pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-comment">// Import theming functions</span>
 @<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/material/theming'</span>;

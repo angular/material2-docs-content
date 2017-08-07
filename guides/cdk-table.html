@@ -8,9 +8,17 @@ interaction patterns associated with the table.</p>
 <a href="https://material.angular.io/components/table" class="docs-markdown-a">documentation for <code class="docs-markdown-code">&lt;md-table&gt;</code></a> which builds on
 top of the CDK data-table.</p>
 <div material-docs-example="cdk-table-basic"></div>
-<h3 id="using-the-cdk-data-table" class="docs-markdown-h3">Using the CDK data-table</h3>
-<h4 id="writing-your-table-template" class="docs-markdown-h4">Writing your table template</h4>
-<p class="docs-markdown-p">The first step to writing the data-table template is to define the columns.
+
+        <h3 id="using-the-cdk-data-table" class="docs-header-link docs-markdown-h3">
+          <div header-link="using-the-cdk-data-table"></div>
+          Using the CDK data-table
+        </h3>
+      
+        <h4 id="writing-your-table-template" class="docs-header-link docs-markdown-h4">
+          <div header-link="writing-your-table-template"></div>
+          Writing your table template
+        </h4>
+      <p class="docs-markdown-p">The first step to writing the data-table template is to define the columns.
 A column definition is specified via an <code class="docs-markdown-code">&lt;ng-container&gt;</code> with the <code class="docs-markdown-code">cdkColumnDef</code> directive, giving
 the column a name. Each column definition then further defines both a header-cell template
 (<code class="docs-markdown-code">cdkHeaderCellDef</code>) and a data-cell template (<code class="docs-markdown-code">cdkCellDef</code>).</p>
@@ -34,8 +42,7 @@ last).</p>
 bindings on the row element. Any content placed <em>inside</em> of the header row or data row template
 will be ignored, as the rendered content of the row comes from the cell templates described
 above.</p>
-<h5 id="example-table-with-three-columns" class="docs-markdown-h5">Example: table with three columns</h5>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span>&gt;</span>
+<h5 class="docs-markdown-h5">Example: table with three columns</h5><pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- User name Definition --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"username"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> User name <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
@@ -69,8 +76,7 @@ and <code class="docs-markdown-code">username</code> and in that order, then the
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">"let row; columns: ['age', 'username']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-row</span>&gt;</span>
 </code></pre>
 <p class="docs-markdown-p">Event and property bindings can be added directly to the row element.</p>
-<h5 id="example-table-with-event-and-class-binding" class="docs-markdown-h5">Example: table with event and class binding</h5>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">"['age', 'username']"</span>
+<h5 class="docs-markdown-h5">Example: table with event and class binding</h5><pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">"['age', 'username']"</span>
                 (<span class="hljs-attr">click</span>)=<span class="hljs-string">"handleHeaderRowClick(row)"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-row</span>&gt;</span>
 
@@ -79,16 +85,26 @@ and <code class="docs-markdown-code">username</code> and in that order, then the
           (<span class="hljs-attr">click</span>)=<span class="hljs-string">"handleRowClick(row)"</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-row</span>&gt;</span>
 </code></pre>
-<h4 id="connecting-the-table-to-a-data-source" class="docs-markdown-h4">Connecting the table to a data source</h4>
-<p class="docs-markdown-p">Data is provided to the table through a <code class="docs-markdown-code">DataSource</code>. When the table receives a data source,
+<h5 class="docs-markdown-h5">Styling columns</h5><p class="docs-markdown-p">Each header and row cell will be provided a CSS class that includes its column. For example,
+cells that are displayed in the column <code class="docs-markdown-code">name</code> will be given the class <code class="docs-markdown-code">cdk-column-name</code>. This allows
+columns to be given styles that will match across the header and rows.</p>
+<p class="docs-markdown-p">Since columns can be given any string for its name, its possible that it cannot be directly applied
+to the CSS class (e.g. <code class="docs-markdown-code">*nameColumn!</code>). In these cases, the special characters will be replaced by 
+the <code class="docs-markdown-code">-</code> character. For example, cells container in a column named <code class="docs-markdown-code">*nameColumn!</code> will be given
+the class <code class="docs-markdown-code">cdk-column--nameColumn-</code>.    </p>
+
+        <h4 id="connecting-the-table-to-a-data-source" class="docs-header-link docs-markdown-h4">
+          <div header-link="connecting-the-table-to-a-data-source"></div>
+          Connecting the table to a data source
+        </h4>
+      <p class="docs-markdown-p">Data is provided to the table through a <code class="docs-markdown-code">DataSource</code>. When the table receives a data source,
 it calls the DataSource's <code class="docs-markdown-code">connect()</code> method which returns an observable that emits an array of data.
 Whenever the data source emits data to this stream, the table will render an update.</p>
 <p class="docs-markdown-p">Because the <em>data source</em> provides this stream, it bears the responsibility of triggering table
 updates. This can be based on <em>anything</em>: websocket connections, user interaction, model updates,
 time-based intervals, etc. Most commonly, updates will be triggered by user interactions like
 sorting and pagination.</p>
-<h5 id="-trackby-" class="docs-markdown-h5"><code class="docs-markdown-code">trackBy</code></h5>
-<p class="docs-markdown-p">To improve performance, a <code class="docs-markdown-code">trackBy</code> function can be provided to the table similar to Angular’s
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">trackBy</code></h5><p class="docs-markdown-p">To improve performance, a <code class="docs-markdown-code">trackBy</code> function can be provided to the table similar to Angular’s
 <a href="https://angular.io/api/common/NgForOf#change-propagation" class="docs-markdown-a"><code class="docs-markdown-code">ngFor</code> <code class="docs-markdown-code">trackBy</code></a>. This informs the
 table how to uniquely identify rows to track how the data changes with each update.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> [<span class="hljs-attr">trackBy</span>]=<span class="hljs-string">"myTrackById"</span>&gt;</span>

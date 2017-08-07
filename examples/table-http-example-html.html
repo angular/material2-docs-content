@@ -14,35 +14,35 @@
           The actual rendered columns are set as a property on the row definition" --&gt;</span>
 
     <span class="hljs-comment">&lt;!-- Number Column --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"number"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">md-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span>#<span class="hljs-tag">&lt;/<span class="hljs-name">md-header-cell</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">md-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>{{ row.number }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">mdColumnDef</span>=<span class="hljs-string">"number"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">md-header-cell</span> *<span class="hljs-attr">mdHeaderCellDef</span>&gt;</span>#<span class="hljs-tag">&lt;/<span class="hljs-name">md-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">md-cell</span> *<span class="hljs-attr">mdCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>{{ row.number }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-cell</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- Title Column --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"title"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">md-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">md-header-cell</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">md-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>{{ row.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">mdColumnDef</span>=<span class="hljs-string">"title"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">md-header-cell</span> *<span class="hljs-attr">mdHeaderCellDef</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">md-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">md-cell</span> *<span class="hljs-attr">mdCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>{{ row.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-cell</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- State Column --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"state"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">md-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">md-header-cell</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">md-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>{{ row.state }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">mdColumnDef</span>=<span class="hljs-string">"state"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">md-header-cell</span> *<span class="hljs-attr">mdHeaderCellDef</span>&gt;</span>State<span class="hljs-tag">&lt;/<span class="hljs-name">md-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">md-cell</span> *<span class="hljs-attr">mdCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>{{ row.state }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-cell</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- Created Column --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"created_at"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">md-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">mdColumnDef</span>=<span class="hljs-string">"created_at"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">md-header-cell</span> *<span class="hljs-attr">mdHeaderCellDef</span>
                       <span class="hljs-attr">md-sort-header</span>
                       <span class="hljs-attr">disableClear</span>=<span class="hljs-string">"true"</span>&gt;</span>
         Created
       <span class="hljs-tag">&lt;/<span class="hljs-name">md-header-cell</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">md-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>{{ row.created_at | date }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">md-cell</span> *<span class="hljs-attr">mdCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>{{ row.created_at | date }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-cell</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
-    <span class="hljs-tag">&lt;<span class="hljs-name">md-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-header-row</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">md-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">md-header-row</span> *<span class="hljs-attr">mdHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-header-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">md-row</span> *<span class="hljs-attr">mdRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-row</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">md-table</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">md-paginator</span> [<span class="hljs-attr">length</span>]=<span class="hljs-string">"dataSource.resultsLength"</span>

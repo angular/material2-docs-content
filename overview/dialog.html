@@ -28,8 +28,12 @@ value is forwarded as the result of the <code class="docs-markdown-code">afterCl
   }
 }
 </code></pre>
-<h3 id="sharing-data-with-the-dialog-component-" class="docs-markdown-h3">Sharing data with the Dialog component.</h3>
-<p class="docs-markdown-p">If you want to share data with your dialog, you can use the <code class="docs-markdown-code">data</code> option to pass information to the dialog component.</p>
+
+        <h3 id="sharing-data-with-the-dialog-component-" class="docs-header-link docs-markdown-h3">
+          <div header-link="sharing-data-with-the-dialog-component-"></div>
+          Sharing data with the Dialog component.
+        </h3>
+      <p class="docs-markdown-p">If you want to share data with your dialog, you can use the <code class="docs-markdown-code">data</code> option to pass information to the dialog component.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">let</span> dialogRef = dialog.open(YourDialog, {
   data: { name: <span class="hljs-string">'austin'</span> },
 });
@@ -47,8 +51,12 @@ export class YourDialog {
 }
 </code></pre>
 <div material-docs-example="dialog-data"></div>
-<h3 id="dialog-content" class="docs-markdown-h3">Dialog content</h3>
-<p class="docs-markdown-p">Several directives are available to make it easier to structure your dialog content:</p>
+
+        <h3 id="dialog-content" class="docs-header-link docs-markdown-h3">
+          <div header-link="dialog-content"></div>
+          Dialog content
+        </h3>
+      <p class="docs-markdown-p">Several directives are available to make it easier to structure your dialog content:</p>
 <table class="docs-markdown-table">
 <thead>
 <tr class="docs-markdown-tr">
@@ -89,8 +97,12 @@ export class YourDialog {
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
 <div material-docs-example="dialog-content"></div>
-<h3 id="aot-compilation" class="docs-markdown-h3">AOT Compilation</h3>
-<p class="docs-markdown-p">Due to the dynamic nature of the <code class="docs-markdown-code">MdDialog</code>, and its usage of <code class="docs-markdown-code">ViewContainerRef#createComponent()</code>
+
+        <h3 id="aot-compilation" class="docs-header-link docs-markdown-h3">
+          <div header-link="aot-compilation"></div>
+          AOT Compilation
+        </h3>
+      <p class="docs-markdown-p">Due to the dynamic nature of the <code class="docs-markdown-code">MdDialog</code>, and its usage of <code class="docs-markdown-code">ViewContainerRef#createComponent()</code>
 to create the component on the fly, the AOT compiler will not know to create the proper
 <code class="docs-markdown-code">ComponentFactory</code> for your dialog component by default.</p>
 <p class="docs-markdown-p">You must include your dialog class in the list of <code class="docs-markdown-code">entryComponents</code> in your module definition so

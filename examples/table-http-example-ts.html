@@ -68,8 +68,8 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDataSource <span class="hljs-keyword">extends</span> DataSource&lt;GithubIssue&gt; {
   <span class="hljs-comment">// The number of issues returned by github matching the query.</span>
   resultsLength = <span class="hljs-number">0</span>;
-  isLoadingResults: <span class="hljs-built_in">boolean</span>;
-  isRateLimitReached: <span class="hljs-built_in">boolean</span>;
+  isLoadingResults = <span class="hljs-literal">false</span>;
+  isRateLimitReached = <span class="hljs-literal">false</span>;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> exampleDatabase: ExampleHttpDao,
               <span class="hljs-keyword">private</span> paginator: MdPaginator,

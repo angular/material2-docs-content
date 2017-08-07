@@ -1,16 +1,24 @@
 <html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;md-list&gt;</code> is a container component that wraps and formats a series of line items. As the base 
 list component, it provides Material Design styling, but no behavior of its own.</p>
 <div material-docs-example="list-overview"></div>
-<h3 id="simple-lists" class="docs-markdown-h3">Simple lists</h3>
-<p class="docs-markdown-p">An <code class="docs-markdown-code">&lt;md-list&gt;</code> element contains a number of <code class="docs-markdown-code">&lt;md-list-item&gt;</code> elements.</p>
+
+        <h3 id="simple-lists" class="docs-header-link docs-markdown-h3">
+          <div header-link="simple-lists"></div>
+          Simple lists
+        </h3>
+      <p class="docs-markdown-p">An <code class="docs-markdown-code">&lt;md-list&gt;</code> element contains a number of <code class="docs-markdown-code">&lt;md-list-item&gt;</code> elements.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-list</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span>&gt;</span> Pepper <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span>&gt;</span> Salt <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span>&gt;</span> Paprika <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-list</span>&gt;</span>
 </code></pre>
-<h3 id="navigation-lists" class="docs-markdown-h3">Navigation lists</h3>
-<p class="docs-markdown-p">Use <code class="docs-markdown-code">md-nav-list</code> tags for navigation lists (i.e. lists that have anchor tags).</p>
+
+        <h3 id="navigation-lists" class="docs-header-link docs-markdown-h3">
+          <div header-link="navigation-lists"></div>
+          Navigation lists
+        </h3>
+      <p class="docs-markdown-p">Use <code class="docs-markdown-code">md-nav-list</code> tags for navigation lists (i.e. lists that have anchor tags).</p>
 <p class="docs-markdown-p">Simple navigation lists can use the <code class="docs-markdown-code">md-list-item</code> attribute on anchor tag elements directly:</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-nav-list</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">md-list-item</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"..."</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let link of links"</span>&gt;</span> {{ link }} <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
@@ -27,8 +35,12 @@ element in an <code class="docs-markdown-code">&lt;md-list-item&gt;</code>.</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-nav-list</span>&gt;</span>
 </code></pre>
-<h3 id="multi-line-lists" class="docs-markdown-h3">Multi-line lists</h3>
-<p class="docs-markdown-p">For lists that require multiple lines per item, annotate each line with an <code class="docs-markdown-code">mdLine</code> attribute.
+
+        <h3 id="multi-line-lists" class="docs-header-link docs-markdown-h3">
+          <div header-link="multi-line-lists"></div>
+          Multi-line lists
+        </h3>
+      <p class="docs-markdown-p">For lists that require multiple lines per item, annotate each line with an <code class="docs-markdown-code">mdLine</code> attribute.
 Whichever heading tag is appropriate for your DOM hierarchy should be used (not necessarily <code class="docs-markdown-code">&lt;h3&gt;</code>
 as shown in the example).</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- two line list --&gt;</span>
@@ -51,8 +63,12 @@ as shown in the example).</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-list</span>&gt;</span>
 </code></pre>
-<h3 id="lists-with-icons" class="docs-markdown-h3">Lists with icons</h3>
-<p class="docs-markdown-p">To add an icon to your list item, use the <code class="docs-markdown-code">mdListIcon</code> attribute.</p>
+
+        <h3 id="lists-with-icons" class="docs-header-link docs-markdown-h3">
+          <div header-link="lists-with-icons"></div>
+          Lists with icons
+        </h3>
+      <p class="docs-markdown-p">To add an icon to your list item, use the <code class="docs-markdown-code">mdListIcon</code> attribute.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let message of messages"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span> <span class="hljs-attr">mdListIcon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
@@ -64,8 +80,12 @@ as shown in the example).</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-list</span>&gt;</span>
 </code></pre>
-<h3 id="lists-with-avatars" class="docs-markdown-h3">Lists with avatars</h3>
-<p class="docs-markdown-p">To include an avatar image, add an image tag with an <code class="docs-markdown-code">mdListAvatar</code> attribute. </p>
+
+        <h3 id="lists-with-avatars" class="docs-header-link docs-markdown-h3">
+          <div header-link="lists-with-avatars"></div>
+          Lists with avatars
+        </h3>
+      <p class="docs-markdown-p">To include an avatar image, add an image tag with an <code class="docs-markdown-code">mdListAvatar</code> attribute. </p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-list</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let message of messages"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">mdListAvatar</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"..."</span>&gt;</span>
@@ -77,8 +97,12 @@ as shown in the example).</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-list</span>&gt;</span>
 </code></pre>
-<h3 id="dense-lists" class="docs-markdown-h3">Dense lists</h3>
-<p class="docs-markdown-p">Lists are also available in "dense layout" mode, which shrinks the font size and height of the list
+
+        <h3 id="dense-lists" class="docs-header-link docs-markdown-h3">
+          <div header-link="dense-lists"></div>
+          Dense lists
+        </h3>
+      <p class="docs-markdown-p">Lists are also available in "dense layout" mode, which shrinks the font size and height of the list
 to suit UIs that may need to display more information. To enable this mode, add a <code class="docs-markdown-code">dense</code> attribute
 to the main <code class="docs-markdown-code">md-list</code> tag.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-list</span> <span class="hljs-attr">dense</span>&gt;</span>
@@ -87,8 +111,12 @@ to the main <code class="docs-markdown-code">md-list</code> tag.</p>
  <span class="hljs-tag">&lt;<span class="hljs-name">md-list-item</span>&gt;</span> Paprika <span class="hljs-tag">&lt;/<span class="hljs-name">md-list-item</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-list</span>&gt;</span>
 </code></pre>
-<h3 id="lists-with-multiple-sections" class="docs-markdown-h3">Lists with multiple sections</h3>
-<p class="docs-markdown-p">Subheader can be added to a list by annotating a heading tag with an <code class="docs-markdown-code">mdSubheader</code> attribute. 
+
+        <h3 id="lists-with-multiple-sections" class="docs-header-link docs-markdown-h3">
+          <div header-link="lists-with-multiple-sections"></div>
+          Lists with multiple sections
+        </h3>
+      <p class="docs-markdown-p">Subheader can be added to a list by annotating a heading tag with an <code class="docs-markdown-code">mdSubheader</code> attribute. 
 To add a divider, use <code class="docs-markdown-code">&lt;md-divider&gt;</code>.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-list</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mdSubheader</span>&gt;</span>Folders<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>

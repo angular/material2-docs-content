@@ -11,8 +11,12 @@ via application of the <code class="docs-markdown-code">mdMenuTriggerFor</code> 
    <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
-<h3 id="toggling-the-menu-programmatically" class="docs-markdown-h3">Toggling the menu programmatically</h3>
-<p class="docs-markdown-p">The menu exposes an API to open/close programmatically. Please note that in this case, an
+
+        <h3 id="toggling-the-menu-programmatically" class="docs-header-link docs-markdown-h3">
+          <div header-link="toggling-the-menu-programmatically"></div>
+          Toggling the menu programmatically
+        </h3>
+      <p class="docs-markdown-p">The menu exposes an API to open/close programmatically. Please note that in this case, an
 <code class="docs-markdown-code">mdMenuTriggerFor</code> directive is still necessary to attach the menu to a trigger element in the DOM.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">class</span> MyComponent {
   <span class="hljs-meta">@ViewChild</span>(MdMenuTrigger) trigger: MdMenuTrigger;
@@ -22,8 +26,12 @@ via application of the <code class="docs-markdown-code">mdMenuTriggerFor</code> 
   }
 }
 </code></pre>
-<h3 id="icons" class="docs-markdown-h3">Icons</h3>
-<p class="docs-markdown-p">Menus support displaying <code class="docs-markdown-code">md-icon</code> elements before the menu item text.</p>
+
+        <h3 id="icons" class="docs-header-link docs-markdown-h3">
+          <div header-link="icons"></div>
+          Icons
+        </h3>
+      <p class="docs-markdown-p">Menus support displaying <code class="docs-markdown-code">md-icon</code> elements before the menu item text.</p>
 <p class="docs-markdown-p"><em>my-comp.html</em></p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-menu</span> #<span class="hljs-attr">menu</span>=<span class="hljs-string">"mdMenu"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-menu-item</span>&gt;</span>
@@ -40,8 +48,12 @@ via application of the <code class="docs-markdown-code">mdMenuTriggerFor</code> 
   <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-menu</span>&gt;</span>
 </code></pre>
-<h3 id="customizing-menu-position" class="docs-markdown-h3">Customizing menu position</h3>
-<p class="docs-markdown-p">By default, the menu will display below (y-axis), after (x-axis), and overlapping its trigger.
+
+        <h3 id="customizing-menu-position" class="docs-header-link docs-markdown-h3">
+          <div header-link="customizing-menu-position"></div>
+          Customizing menu position
+        </h3>
+      <p class="docs-markdown-p">By default, the menu will display below (y-axis), after (x-axis), and overlapping its trigger.
 The position can be changed using the <code class="docs-markdown-code">xPosition</code> (<code class="docs-markdown-code">before | after</code>) and <code class="docs-markdown-code">yPosition</code>
 (<code class="docs-markdown-code">above | below</code>) attributes. The menu can be be forced to not overlap the trigger using
 <code class="docs-markdown-code">[overlapTrigger]="false"</code> attribute.</p>
@@ -54,8 +66,12 @@ The position can be changed using the <code class="docs-markdown-code">xPosition
   <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
-<h3 id="nested-menu" class="docs-markdown-h3">Nested menu</h3>
-<p class="docs-markdown-p">Material supports the ability for an <code class="docs-markdown-code">md-menu-item</code> to open a sub-menu. To do so, you have to define
+
+        <h3 id="nested-menu" class="docs-header-link docs-markdown-h3">
+          <div header-link="nested-menu"></div>
+          Nested menu
+        </h3>
+      <p class="docs-markdown-p">Material supports the ability for an <code class="docs-markdown-code">md-menu-item</code> to open a sub-menu. To do so, you have to define
 your root menu and sub-menus, in addition to setting the <code class="docs-markdown-code">[mdMenuTriggerFor]</code> on the <code class="docs-markdown-code">md-menu-item</code>
 that should trigger the sub-menu:</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-menu</span> #<span class="hljs-attr">rootMenu</span>=<span class="hljs-string">"mdMenu"</span>&gt;</span>
@@ -73,8 +89,12 @@ that should trigger the sub-menu:</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">md-icon</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 </code></pre>
-<h3 id="keyboard-interaction" class="docs-markdown-h3">Keyboard interaction</h3>
-<ul class="docs-markdown-ul">
+
+        <h3 id="keyboard-interaction" class="docs-header-link docs-markdown-h3">
+          <div header-link="keyboard-interaction"></div>
+          Keyboard interaction
+        </h3>
+      <ul class="docs-markdown-ul">
 <li class="docs-markdown-li"><kbd>DOWN_ARROW</kbd>: Focuses the next menu item</li>
 <li class="docs-markdown-li"><kbd>UP_ARROW</kbd>: Focuses previous menu item</li>
 <li class="docs-markdown-li"><kbd>RIGHT_ARROW</kbd>: Opens the menu item's sub-menu</li>

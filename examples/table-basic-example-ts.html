@@ -1,91 +1,58 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/table'</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/BehaviorSubject'</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/startWith'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/observable/merge'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/map'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/observable/of'</span>;
 
-<span class="hljs-comment">/**
- * @title Basic table
- */</span>
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'table-basic-example'</span>,
   styleUrls: [<span class="hljs-string">'table-basic-example.css'</span>],
   templateUrl: <span class="hljs-string">'table-basic-example.html'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableBasicExample {
-  displayedColumns = [<span class="hljs-string">'userId'</span>, <span class="hljs-string">'userName'</span>, <span class="hljs-string">'progress'</span>, <span class="hljs-string">'color'</span>];
-  exampleDatabase = <span class="hljs-keyword">new</span> ExampleDatabase();
-  dataSource: ExampleDataSource | <span class="hljs-literal">null</span>;
-
-  ngOnInit() {
-    <span class="hljs-keyword">this</span>.dataSource = <span class="hljs-keyword">new</span> ExampleDataSource(<span class="hljs-keyword">this</span>.exampleDatabase);
-  }
+  displayedColumns = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
+  dataSource = <span class="hljs-keyword">new</span> ExampleDataSource();
 }
 
-<span class="hljs-comment">/** Constants used to fill up our data base. */</span>
-<span class="hljs-keyword">const</span> COLORS = [<span class="hljs-string">'maroon'</span>, <span class="hljs-string">'red'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'yellow'</span>, <span class="hljs-string">'olive'</span>, <span class="hljs-string">'green'</span>, <span class="hljs-string">'purple'</span>,
-  <span class="hljs-string">'fuchsia'</span>, <span class="hljs-string">'lime'</span>, <span class="hljs-string">'teal'</span>, <span class="hljs-string">'aqua'</span>, <span class="hljs-string">'blue'</span>, <span class="hljs-string">'navy'</span>, <span class="hljs-string">'black'</span>, <span class="hljs-string">'gray'</span>];
-<span class="hljs-keyword">const</span> NAMES = [<span class="hljs-string">'Maia'</span>, <span class="hljs-string">'Asher'</span>, <span class="hljs-string">'Olivia'</span>, <span class="hljs-string">'Atticus'</span>, <span class="hljs-string">'Amelia'</span>, <span class="hljs-string">'Jack'</span>,
-  <span class="hljs-string">'Charlotte'</span>, <span class="hljs-string">'Theodore'</span>, <span class="hljs-string">'Isla'</span>, <span class="hljs-string">'Oliver'</span>, <span class="hljs-string">'Isabella'</span>, <span class="hljs-string">'Jasper'</span>,
-  <span class="hljs-string">'Cora'</span>, <span class="hljs-string">'Levi'</span>, <span class="hljs-string">'Violet'</span>, <span class="hljs-string">'Arthur'</span>, <span class="hljs-string">'Mia'</span>, <span class="hljs-string">'Thomas'</span>, <span class="hljs-string">'Elizabeth'</span>];
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> UserData {
-  id: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Element {
   name: <span class="hljs-built_in">string</span>;
-  progress: <span class="hljs-built_in">string</span>;
-  color: <span class="hljs-built_in">string</span>;
+  position: <span class="hljs-built_in">number</span>;
+  weight: <span class="hljs-built_in">number</span>;
+  symbol: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-comment">/** An example database that the data source uses to retrieve data for the table. */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDatabase {
-  <span class="hljs-comment">/** Stream that emits whenever the data has been modified. */</span>
-  dataChange: BehaviorSubject&lt;UserData[]&gt; = <span class="hljs-keyword">new</span> BehaviorSubject&lt;UserData[]&gt;([]);
-  <span class="hljs-keyword">get</span> data(): UserData[] { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dataChange.value; }
-
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-comment">// Fill up the database with 100 users.</span>
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) { <span class="hljs-keyword">this</span>.addUser(); }
-  }
-
-  <span class="hljs-comment">/** Adds a new user to the database. */</span>
-  addUser() {
-    <span class="hljs-keyword">const</span> copiedData = <span class="hljs-keyword">this</span>.data.slice();
-    copiedData.push(<span class="hljs-keyword">this</span>.createNewUser());
-    <span class="hljs-keyword">this</span>.dataChange.next(copiedData);
-  }
-
-  <span class="hljs-comment">/** Builds and returns a new User. */</span>
-  <span class="hljs-keyword">private</span> createNewUser() {
-    <span class="hljs-keyword">const</span> name =
-        NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))] + <span class="hljs-string">' '</span> +
-        NAMES[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (NAMES.length - <span class="hljs-number">1</span>))].charAt(<span class="hljs-number">0</span>) + <span class="hljs-string">'.'</span>;
-
-    <span class="hljs-keyword">return</span> {
-      id: (<span class="hljs-keyword">this</span>.data.length + <span class="hljs-number">1</span>).toString(),
-      name: name,
-      progress: <span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>).toString(),
-      color: COLORS[<span class="hljs-built_in">Math</span>.round(<span class="hljs-built_in">Math</span>.random() * (COLORS.length - <span class="hljs-number">1</span>))]
-    };
-  }
-}
+<span class="hljs-keyword">const</span> data: Element[] = [
+  {position: <span class="hljs-number">1</span>, name: <span class="hljs-string">'Hydrogen'</span>, weight: <span class="hljs-number">1.0079</span>, symbol: <span class="hljs-string">'H'</span>},
+  {position: <span class="hljs-number">2</span>, name: <span class="hljs-string">'Helium'</span>, weight: <span class="hljs-number">4.0026</span>, symbol: <span class="hljs-string">'He'</span>},
+  {position: <span class="hljs-number">3</span>, name: <span class="hljs-string">'Lithium'</span>, weight: <span class="hljs-number">6.941</span>, symbol: <span class="hljs-string">'Li'</span>},
+  {position: <span class="hljs-number">4</span>, name: <span class="hljs-string">'Beryllium'</span>, weight: <span class="hljs-number">9.0122</span>, symbol: <span class="hljs-string">'Be'</span>},
+  {position: <span class="hljs-number">5</span>, name: <span class="hljs-string">'Boron'</span>, weight: <span class="hljs-number">10.811</span>, symbol: <span class="hljs-string">'B'</span>},
+  {position: <span class="hljs-number">6</span>, name: <span class="hljs-string">'Carbon'</span>, weight: <span class="hljs-number">12.0107</span>, symbol: <span class="hljs-string">'C'</span>},
+  {position: <span class="hljs-number">7</span>, name: <span class="hljs-string">'Nitrogen'</span>, weight: <span class="hljs-number">14.0067</span>, symbol: <span class="hljs-string">'N'</span>},
+  {position: <span class="hljs-number">8</span>, name: <span class="hljs-string">'Oxygen'</span>, weight: <span class="hljs-number">15.9994</span>, symbol: <span class="hljs-string">'O'</span>},
+  {position: <span class="hljs-number">9</span>, name: <span class="hljs-string">'Fluorine'</span>, weight: <span class="hljs-number">18.9984</span>, symbol: <span class="hljs-string">'F'</span>},
+  {position: <span class="hljs-number">10</span>, name: <span class="hljs-string">'Neon'</span>, weight: <span class="hljs-number">20.1797</span>, symbol: <span class="hljs-string">'Ne'</span>},
+  {position: <span class="hljs-number">11</span>, name: <span class="hljs-string">'Sodium'</span>, weight: <span class="hljs-number">22.9897</span>, symbol: <span class="hljs-string">'Na'</span>},
+  {position: <span class="hljs-number">12</span>, name: <span class="hljs-string">'Magnesium'</span>, weight: <span class="hljs-number">24.305</span>, symbol: <span class="hljs-string">'Mg'</span>},
+  {position: <span class="hljs-number">13</span>, name: <span class="hljs-string">'Aluminum'</span>, weight: <span class="hljs-number">26.9815</span>, symbol: <span class="hljs-string">'Al'</span>},
+  {position: <span class="hljs-number">14</span>, name: <span class="hljs-string">'Silicon'</span>, weight: <span class="hljs-number">28.0855</span>, symbol: <span class="hljs-string">'Si'</span>},
+  {position: <span class="hljs-number">15</span>, name: <span class="hljs-string">'Phosphorus'</span>, weight: <span class="hljs-number">30.9738</span>, symbol: <span class="hljs-string">'P'</span>},
+  {position: <span class="hljs-number">16</span>, name: <span class="hljs-string">'Sulfur'</span>, weight: <span class="hljs-number">32.065</span>, symbol: <span class="hljs-string">'S'</span>},
+  {position: <span class="hljs-number">17</span>, name: <span class="hljs-string">'Chlorine'</span>, weight: <span class="hljs-number">35.453</span>, symbol: <span class="hljs-string">'Cl'</span>},
+  {position: <span class="hljs-number">18</span>, name: <span class="hljs-string">'Argon'</span>, weight: <span class="hljs-number">39.948</span>, symbol: <span class="hljs-string">'Ar'</span>},
+  {position: <span class="hljs-number">19</span>, name: <span class="hljs-string">'Potassium'</span>, weight: <span class="hljs-number">39.0983</span>, symbol: <span class="hljs-string">'K'</span>},
+  {position: <span class="hljs-number">20</span>, name: <span class="hljs-string">'Calcium'</span>, weight: <span class="hljs-number">40.078</span>, symbol: <span class="hljs-string">'Ca'</span>},
+];
 
 <span class="hljs-comment">/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
+ * Data source to provide what data should be rendered in the table. The observable provided
+ * in connect should emit exactly the data that should be rendered by the table. If the data is
+ * altered, the observable should emit that new set of data on the stream. In our case here,
+ * we return a stream that contains only one set of data that doesn't change.
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDataSource <span class="hljs-keyword">extends</span> DataSource&lt;<span class="hljs-built_in">any</span>&gt; {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _exampleDatabase: ExampleDatabase</span>) {
-    <span class="hljs-keyword">super</span>();
-  }
-
   <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
-  connect(): Observable&lt;UserData[]&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._exampleDatabase.dataChange;
+  connect(): Observable&lt;Element[]&gt; {
+    <span class="hljs-keyword">return</span> Observable.of(data);
   }
 
   disconnect() {}

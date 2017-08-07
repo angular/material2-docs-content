@@ -1,46 +1,24 @@
 import { DataSource } from '@angular/cdk/table';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/observable/merge';
-import 'rxjs/add/operator/map';
-/**
- * @title Basic table
- */
+import 'rxjs/add/observable/of';
 export declare class TableBasicExample {
     displayedColumns: string[];
-    exampleDatabase: ExampleDatabase;
-    dataSource: ExampleDataSource | null;
-    ngOnInit(): void;
+    dataSource: ExampleDataSource;
 }
-export interface UserData {
-    id: string;
+export interface Element {
     name: string;
-    progress: string;
-    color: string;
-}
-/** An example database that the data source uses to retrieve data for the table. */
-export declare class ExampleDatabase {
-    /** Stream that emits whenever the data has been modified. */
-    dataChange: BehaviorSubject<UserData[]>;
-    readonly data: UserData[];
-    constructor();
-    /** Adds a new user to the database. */
-    addUser(): void;
-    /** Builds and returns a new User. */
-    private createNewUser();
+    position: number;
+    weight: number;
+    symbol: string;
 }
 /**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
+ * Data source to provide what data should be rendered in the table. The observable provided
+ * in connect should emit exactly the data that should be rendered by the table. If the data is
+ * altered, the observable should emit that new set of data on the stream. In our case here,
+ * we return a stream that contains only one set of data that doesn't change.
  */
 export declare class ExampleDataSource extends DataSource<any> {
-    private _exampleDatabase;
-    constructor(_exampleDatabase: ExampleDatabase);
     /** Connect function called by the table to retrieve one stream containing the data to render. */
-    connect(): Observable<UserData[]>;
+    connect(): Observable<Element[]>;
     disconnect(): void;
 }
