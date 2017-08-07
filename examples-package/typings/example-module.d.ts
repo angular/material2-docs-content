@@ -64,8 +64,8 @@ import { SnackBarComponentExample } from './snack-bar-component/snack-bar-compon
 import { SnackBarOverviewExample } from './snack-bar-overview/snack-bar-overview-example';
 import { SortOverviewExample } from './sort-overview/sort-overview-example';
 import { TableBasicExample } from './table-basic/table-basic-example';
-import { TableHttpExample } from './table-http/table-http-example';
 import { TableFilteringExample } from './table-filtering/table-filtering-example';
+import { TableHttpExample } from './table-http/table-http-example';
 import { TableOverviewExample } from './table-overview/table-overview-example';
 import { TablePaginationExample } from './table-pagination/table-pagination-example';
 import { TableSortingExample } from './table-sorting/table-sorting-example';
@@ -436,15 +436,15 @@ export declare const EXAMPLE_COMPONENTS: {
         additionalFiles: null;
         selectorName: null;
     };
-    'table-http': {
-        title: string;
-        component: typeof TableHttpExample;
-        additionalFiles: null;
-        selectorName: null;
-    };
     'table-filtering': {
         title: string;
         component: typeof TableFilteringExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'table-http': {
+        title: string;
+        component: typeof TableHttpExample;
         additionalFiles: null;
         selectorName: null;
     };

@@ -17,12 +17,12 @@ import 'rxjs/add/observable/merge';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/observable/fromEvent';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/switchMap';
 
 class ExampleMaterialModule {
 }
@@ -1652,6 +1652,9 @@ function compare(a, b, isAsc) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
 
+/**
+ * \@title Basic table
+ */
 class TableBasicExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
@@ -1711,122 +1714,6 @@ class ExampleDataSource$1 extends DataSource {
     disconnect() { }
 }
 
-class TableHttpExample {
-    /**
-     * @param {?} http
-     */
-    constructor(http) {
-        this.http = http;
-        this.displayedColumns = ['created_at', 'state', 'number', 'title'];
-    }
-    /**
-     * @return {?}
-     */
-    ngOnInit() {
-        this.exampleDatabase = new ExampleHttpDao(this.http);
-        this.dataSource = new ExampleDataSource$2(/** @type {?} */ ((this.exampleDatabase)), this.paginator, this.sort);
-    }
-}
-TableHttpExample.decorators = [
-    { type: Component, args: [{
-                selector: 'table-http-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .mat-column-title { text-overflow: ellipsis; white-space: nowrap; flex: 1; overflow: hidden; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><md-spinner *ngIf=\"dataSource.isLoadingResults\"></md-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><md-table #table [dataSource]=\"dataSource\" class=\"example-table\" mdSort mdSortActive=\"created_at\" mdSortDisableClear mdSortDirection=\"asc\"><ng-container mdColumnDef=\"number\"><md-header-cell *mdHeaderCellDef>#</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.number }}</md-cell></ng-container><ng-container mdColumnDef=\"title\"><md-header-cell *mdHeaderCellDef>Title</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.title }}</md-cell></ng-container><ng-container mdColumnDef=\"state\"><md-header-cell *mdHeaderCellDef>State</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.state }}</md-cell></ng-container><ng-container mdColumnDef=\"created_at\"><md-header-cell *mdHeaderCellDef md-sort-header disableClear=\"true\">Created</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.created_at | date }}</md-cell></ng-container><md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></md-paginator></div>",
-            },] },
-];
-/**
- * @nocollapse
- */
-TableHttpExample.ctorParameters = () => [
-    { type: Http, },
-];
-TableHttpExample.propDecorators = {
-    'paginator': [{ type: ViewChild, args: [MdPaginator,] },],
-    'sort': [{ type: ViewChild, args: [MdSort,] },],
-};
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-class ExampleHttpDao {
-    /**
-     * @param {?} http
-     */
-    constructor(http) {
-        this.http = http;
-    }
-    /**
-     * @param {?} sort
-     * @param {?} order
-     * @param {?} page
-     * @return {?}
-     */
-    getRepoIssues(sort, order, page) {
-        const /** @type {?} */ href = 'https://api.github.com/search/issues';
-        const /** @type {?} */ requestUrl = `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
-        return this.http.get(requestUrl)
-            .map(response => (response.json()));
-    }
-}
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleHttpDao. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-class ExampleDataSource$2 extends DataSource {
-    /**
-     * @param {?} exampleDatabase
-     * @param {?} paginator
-     * @param {?} sort
-     */
-    constructor(exampleDatabase, paginator, sort) {
-        super();
-        this.exampleDatabase = exampleDatabase;
-        this.paginator = paginator;
-        this.sort = sort;
-        // The number of issues returned by github matching the query.
-        this.resultsLength = 0;
-        this.isLoadingResults = false;
-        this.isRateLimitReached = false;
-    }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    connect() {
-        const /** @type {?} */ displayDataChanges = [
-            this.sort.mdSortChange,
-            this.paginator.page
-        ];
-        // If the user changes the sort order, reset back to the first page.
-        this.sort.mdSortChange.subscribe(() => this.paginator.pageIndex = 0);
-        return Observable.merge(...displayDataChanges)
-            .startWith(null)
-            .switchMap(() => {
-            this.isLoadingResults = true;
-            return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
-        })
-            .map(data => {
-            // Flip flag to show that loading has finished.
-            this.isLoadingResults = false;
-            this.isRateLimitReached = false;
-            this.resultsLength = data.total_count;
-            return data.items;
-        })
-            .catch(() => {
-            this.isLoadingResults = false;
-            // Catch if the GitHub API has reached its rate limit. Return empty data.
-            this.isRateLimitReached = true;
-            return Observable.of(null);
-        });
-    }
-    /**
-     * @return {?}
-     */
-    disconnect() { }
-}
-
 /**
  * \@title Table with filtering
  */
@@ -1839,7 +1726,7 @@ class TableFilteringExample {
      * @return {?}
      */
     ngOnInit() {
-        this.dataSource = new ExampleDataSource$3(this.exampleDatabase);
+        this.dataSource = new ExampleDataSource$2(this.exampleDatabase);
         Observable.fromEvent(this.filter.nativeElement, 'keyup')
             .debounceTime(150)
             .distinctUntilChanged()
@@ -1922,7 +1809,7 @@ class ExampleDatabase$1 {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-class ExampleDataSource$3 extends DataSource {
+class ExampleDataSource$2 extends DataSource {
     /**
      * @param {?} _exampleDatabase
      */
@@ -1954,6 +1841,125 @@ class ExampleDataSource$3 extends DataSource {
                 let /** @type {?} */ searchStr = (item.name + item.color).toLowerCase();
                 return searchStr.indexOf(this.filter.toLowerCase()) != -1;
             });
+        });
+    }
+    /**
+     * @return {?}
+     */
+    disconnect() { }
+}
+
+/**
+ * \@title Table retrieving data through HTTP
+ */
+class TableHttpExample {
+    /**
+     * @param {?} http
+     */
+    constructor(http) {
+        this.http = http;
+        this.displayedColumns = ['created_at', 'state', 'number', 'title'];
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.exampleDatabase = new ExampleHttpDao(this.http);
+        this.dataSource = new ExampleDataSource$3(/** @type {?} */ ((this.exampleDatabase)), this.paginator, this.sort);
+    }
+}
+TableHttpExample.decorators = [
+    { type: Component, args: [{
+                selector: 'table-http-example',
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .mat-column-title { text-overflow: ellipsis; white-space: nowrap; flex: 1; overflow: hidden; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><md-spinner *ngIf=\"dataSource.isLoadingResults\"></md-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><md-table #table [dataSource]=\"dataSource\" class=\"example-table\" mdSort mdSortActive=\"created_at\" mdSortDisableClear mdSortDirection=\"asc\"><ng-container mdColumnDef=\"number\"><md-header-cell *mdHeaderCellDef>#</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.number }}</md-cell></ng-container><ng-container mdColumnDef=\"title\"><md-header-cell *mdHeaderCellDef>Title</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.title }}</md-cell></ng-container><ng-container mdColumnDef=\"state\"><md-header-cell *mdHeaderCellDef>State</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.state }}</md-cell></ng-container><ng-container mdColumnDef=\"created_at\"><md-header-cell *mdHeaderCellDef md-sort-header disableClear=\"true\">Created</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.created_at | date }}</md-cell></ng-container><md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></md-paginator></div>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+TableHttpExample.ctorParameters = () => [
+    { type: Http, },
+];
+TableHttpExample.propDecorators = {
+    'paginator': [{ type: ViewChild, args: [MdPaginator,] },],
+    'sort': [{ type: ViewChild, args: [MdSort,] },],
+};
+/**
+ * An example database that the data source uses to retrieve data for the table.
+ */
+class ExampleHttpDao {
+    /**
+     * @param {?} http
+     */
+    constructor(http) {
+        this.http = http;
+    }
+    /**
+     * @param {?} sort
+     * @param {?} order
+     * @param {?} page
+     * @return {?}
+     */
+    getRepoIssues(sort, order, page) {
+        const /** @type {?} */ href = 'https://api.github.com/search/issues';
+        const /** @type {?} */ requestUrl = `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
+        return this.http.get(requestUrl)
+            .map(response => (response.json()));
+    }
+}
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleHttpDao. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+class ExampleDataSource$3 extends DataSource {
+    /**
+     * @param {?} exampleDatabase
+     * @param {?} paginator
+     * @param {?} sort
+     */
+    constructor(exampleDatabase, paginator, sort) {
+        super();
+        this.exampleDatabase = exampleDatabase;
+        this.paginator = paginator;
+        this.sort = sort;
+        // The number of issues returned by github matching the query.
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
+        this.isRateLimitReached = false;
+    }
+    /**
+     * Connect function called by the table to retrieve one stream containing the data to render.
+     * @return {?}
+     */
+    connect() {
+        const /** @type {?} */ displayDataChanges = [
+            this.sort.mdSortChange,
+            this.paginator.page
+        ];
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.mdSortChange.subscribe(() => this.paginator.pageIndex = 0);
+        return Observable.merge(...displayDataChanges)
+            .startWith(null)
+            .switchMap(() => {
+            this.isLoadingResults = true;
+            return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
+        })
+            .map(data => {
+            // Flip flag to show that loading has finished.
+            this.isLoadingResults = false;
+            this.isRateLimitReached = false;
+            this.resultsLength = data.total_count;
+            return data.items;
+        })
+            .catch(() => {
+            this.isLoadingResults = false;
+            // Catch if the GitHub API has reached its rate limit. Return empty data.
+            this.isRateLimitReached = true;
+            return Observable.of(null);
         });
     }
     /**
@@ -2911,15 +2917,15 @@ const EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
-    'table-http': {
-        title: 'Table retrieving data through HTTP',
-        component: TableHttpExample,
-        additionalFiles: null,
-        selectorName: null
-    },
     'table-filtering': {
         title: 'Table with filtering',
         component: TableFilteringExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'table-http': {
+        title: 'Table retrieving data through HTTP',
+        component: TableHttpExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -3118,5 +3124,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonToggleOverviewExample as ɵg, ButtonTypesExample as ɵh, CardOverviewExample as ɵi, CdkTableBasicExample as ɵj, CheckboxConfigurableExample as ɵk, CheckboxOverviewExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵq, DatepickerStartViewExample as ɵr, DatepickerTouchExample as ɵs, DialogContentExample as ɵt, DialogContentExampleDialog as ɵu, DialogDataExample as ɵv, DialogDataExampleDialog as ɵw, DialogElementsExample as ɵx, DialogElementsExampleDialog as ɵy, DialogOverviewExample as ɵz, DialogOverviewExampleDialog as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ExampleMaterialModule as ɵcu, MenuIconsExample as ɵbm, MenuOverviewExample as ɵbn, PaginatorConfigurableExample as ɵbo, PaginatorOverviewExample as ɵbp, ProgressBarConfigurableExample as ɵbq, ProgressBarOverviewExample as ɵbr, ProgressSpinnerConfigurableExample as ɵbs, ProgressSpinnerOverviewExample as ɵbt, RadioNgModelExample as ɵbu, RadioOverviewExample as ɵbv, SelectFormExample as ɵbw, SelectOverviewExample as ɵbx, SidenavFabExample as ɵby, SidenavOverviewExample as ɵbz, SlideToggleConfigurableExample as ɵca, SlideToggleFormsExample as ɵcb, SlideToggleOverviewExample as ɵcc, SliderConfigurableExample as ɵcd, SliderOverviewExample as ɵce, PizzaPartyComponent as ɵcg, SnackBarComponentExample as ɵcf, SnackBarOverviewExample as ɵch, SortOverviewExample as ɵci, TableBasicExample as ɵcj, TableFilteringExample as ɵcl, TableHttpExample as ɵck, TableOverviewExample as ɵcm, TablePaginationExample as ɵcn, TableSortingExample as ɵco, TabsOverviewExample as ɵcp, TabsTemplateLabelExample as ɵcq, ToolbarOverviewExample as ɵcr, TooltipOverviewExample as ɵcs, TooltipPositionExample as ɵct };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonToggleOverviewExample as ɵg, ButtonTypesExample as ɵh, CardOverviewExample as ɵi, CdkTableBasicExample as ɵj, CheckboxConfigurableExample as ɵk, CheckboxOverviewExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵq, DatepickerStartViewExample as ɵr, DatepickerTouchExample as ɵs, DialogContentExample as ɵt, DialogContentExampleDialog as ɵu, DialogDataExample as ɵv, DialogDataExampleDialog as ɵw, DialogElementsExample as ɵx, DialogElementsExampleDialog as ɵy, DialogOverviewExample as ɵz, DialogOverviewExampleDialog as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ExampleMaterialModule as ɵcu, MenuIconsExample as ɵbm, MenuOverviewExample as ɵbn, PaginatorConfigurableExample as ɵbo, PaginatorOverviewExample as ɵbp, ProgressBarConfigurableExample as ɵbq, ProgressBarOverviewExample as ɵbr, ProgressSpinnerConfigurableExample as ɵbs, ProgressSpinnerOverviewExample as ɵbt, RadioNgModelExample as ɵbu, RadioOverviewExample as ɵbv, SelectFormExample as ɵbw, SelectOverviewExample as ɵbx, SidenavFabExample as ɵby, SidenavOverviewExample as ɵbz, SlideToggleConfigurableExample as ɵca, SlideToggleFormsExample as ɵcb, SlideToggleOverviewExample as ɵcc, SliderConfigurableExample as ɵcd, SliderOverviewExample as ɵce, PizzaPartyComponent as ɵcg, SnackBarComponentExample as ɵcf, SnackBarOverviewExample as ɵch, SortOverviewExample as ɵci, TableBasicExample as ɵcj, TableFilteringExample as ɵck, TableHttpExample as ɵcl, TableOverviewExample as ɵcm, TablePaginationExample as ɵcn, TableSortingExample as ɵco, TabsOverviewExample as ɵcp, TabsTemplateLabelExample as ɵcq, ToolbarOverviewExample as ɵcr, TooltipOverviewExample as ɵcs, TooltipPositionExample as ɵct };
 //# sourceMappingURL=material-examples.js.map

@@ -1,6 +1,9 @@
 import { DataSource } from '@angular/cdk/table';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
+/**
+ * @title Basic table
+ */
 export declare class TableBasicExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource;

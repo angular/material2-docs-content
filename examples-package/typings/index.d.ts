@@ -60,8 +60,8 @@ export { PizzaPartyComponent as ɵcg, SnackBarComponentExample as ɵcf } from '.
 export { SnackBarOverviewExample as ɵch } from './snack-bar-overview/snack-bar-overview-example';
 export { SortOverviewExample as ɵci } from './sort-overview/sort-overview-example';
 export { TableBasicExample as ɵcj } from './table-basic/table-basic-example';
-export { TableFilteringExample as ɵcl } from './table-filtering/table-filtering-example';
-export { TableHttpExample as ɵck } from './table-http/table-http-example';
+export { TableFilteringExample as ɵck } from './table-filtering/table-filtering-example';
+export { TableHttpExample as ɵcl } from './table-http/table-http-example';
 export { TableOverviewExample as ɵcm } from './table-overview/table-overview-example';
 export { TablePaginationExample as ɵcn } from './table-pagination/table-pagination-example';
 export { TableSortingExample as ɵco } from './table-sorting/table-sorting-example';

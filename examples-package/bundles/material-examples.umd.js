@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/platform-browser'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('@angular/http'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/platform-browser', 'rxjs/Observable', 'rxjs/add/observable/of', '@angular/http', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable,global.ng.platformBrowser,global.Rx,global.Rx.Observable,global.ng.http));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_platformBrowser,rxjs_Observable,rxjs_add_observable_of,_angular_http) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/platform-browser'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent'), require('@angular/http'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/platform-browser', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent', '@angular/http', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable,global.ng.platformBrowser,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable,global.ng.http));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_platformBrowser,rxjs_Observable,rxjs_add_observable_of,rxjs_add_operator_debounceTime,rxjs_add_operator_distinctUntilChanged,rxjs_add_observable_fromEvent,_angular_http) { 'use strict';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -1751,6 +1751,9 @@ SortOverviewExample.ctorParameters = function () { return []; };
 function compare(a, b, isAsc) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
+/**
+ * \@title Basic table
+ */
 var TableBasicExample = (function () {
     function TableBasicExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
@@ -1815,126 +1818,6 @@ var ExampleDataSource$1 = (function (_super) {
     ExampleDataSource$1.prototype.disconnect = function () { };
     return ExampleDataSource$1;
 }(_angular_cdk_table.DataSource));
-var TableHttpExample = (function () {
-    /**
-     * @param {?} http
-     */
-    function TableHttpExample(http) {
-        this.http = http;
-        this.displayedColumns = ['created_at', 'state', 'number', 'title'];
-    }
-    /**
-     * @return {?}
-     */
-    TableHttpExample.prototype.ngOnInit = function () {
-        this.exampleDatabase = new ExampleHttpDao(this.http);
-        this.dataSource = new ExampleDataSource$2(/** @type {?} */ ((this.exampleDatabase)), this.paginator, this.sort);
-    };
-    return TableHttpExample;
-}());
-TableHttpExample.decorators = [
-    { type: _angular_core.Component, args: [{
-                selector: 'table-http-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .mat-column-title { text-overflow: ellipsis; white-space: nowrap; flex: 1; overflow: hidden; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><md-spinner *ngIf=\"dataSource.isLoadingResults\"></md-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><md-table #table [dataSource]=\"dataSource\" class=\"example-table\" mdSort mdSortActive=\"created_at\" mdSortDisableClear mdSortDirection=\"asc\"><ng-container mdColumnDef=\"number\"><md-header-cell *mdHeaderCellDef>#</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.number }}</md-cell></ng-container><ng-container mdColumnDef=\"title\"><md-header-cell *mdHeaderCellDef>Title</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.title }}</md-cell></ng-container><ng-container mdColumnDef=\"state\"><md-header-cell *mdHeaderCellDef>State</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.state }}</md-cell></ng-container><ng-container mdColumnDef=\"created_at\"><md-header-cell *mdHeaderCellDef md-sort-header disableClear=\"true\">Created</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.created_at | date }}</md-cell></ng-container><md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></md-paginator></div>",
-            },] },
-];
-/**
- * @nocollapse
- */
-TableHttpExample.ctorParameters = function () { return [
-    { type: _angular_http.Http, },
-]; };
-TableHttpExample.propDecorators = {
-    'paginator': [{ type: _angular_core.ViewChild, args: [_angular_material.MdPaginator,] },],
-    'sort': [{ type: _angular_core.ViewChild, args: [_angular_material.MdSort,] },],
-};
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-var ExampleHttpDao = (function () {
-    /**
-     * @param {?} http
-     */
-    function ExampleHttpDao(http) {
-        this.http = http;
-    }
-    /**
-     * @param {?} sort
-     * @param {?} order
-     * @param {?} page
-     * @return {?}
-     */
-    ExampleHttpDao.prototype.getRepoIssues = function (sort, order, page) {
-        var /** @type {?} */ href = 'https://api.github.com/search/issues';
-        var /** @type {?} */ requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
-        return this.http.get(requestUrl)
-            .map(function (response) { return (response.json()); });
-    };
-    return ExampleHttpDao;
-}());
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleHttpDao. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-var ExampleDataSource$2 = (function (_super) {
-    __extends(ExampleDataSource$2, _super);
-    /**
-     * @param {?} exampleDatabase
-     * @param {?} paginator
-     * @param {?} sort
-     */
-    function ExampleDataSource$2(exampleDatabase, paginator, sort) {
-        var _this = _super.call(this) || this;
-        _this.exampleDatabase = exampleDatabase;
-        _this.paginator = paginator;
-        _this.sort = sort;
-        // The number of issues returned by github matching the query.
-        _this.resultsLength = 0;
-        _this.isLoadingResults = false;
-        _this.isRateLimitReached = false;
-        return _this;
-    }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    ExampleDataSource$2.prototype.connect = function () {
-        var _this = this;
-        var /** @type {?} */ displayDataChanges = [
-            this.sort.mdSortChange,
-            this.paginator.page
-        ];
-        // If the user changes the sort order, reset back to the first page.
-        this.sort.mdSortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
-        return rxjs_Observable.Observable.merge.apply(rxjs_Observable.Observable, displayDataChanges).startWith(null)
-            .switchMap(function () {
-            _this.isLoadingResults = true;
-            return _this.exampleDatabase.getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
-        })
-            .map(function (data) {
-            // Flip flag to show that loading has finished.
-            _this.isLoadingResults = false;
-            _this.isRateLimitReached = false;
-            _this.resultsLength = data.total_count;
-            return data.items;
-        })
-            .catch(function () {
-            _this.isLoadingResults = false;
-            // Catch if the GitHub API has reached its rate limit. Return empty data.
-            _this.isRateLimitReached = true;
-            return rxjs_Observable.Observable.of(null);
-        });
-    };
-    /**
-     * @return {?}
-     */
-    ExampleDataSource$2.prototype.disconnect = function () { };
-    return ExampleDataSource$2;
-}(_angular_cdk_table.DataSource));
 /**
  * \@title Table with filtering
  */
@@ -1948,7 +1831,7 @@ var TableFilteringExample = (function () {
      */
     TableFilteringExample.prototype.ngOnInit = function () {
         var _this = this;
-        this.dataSource = new ExampleDataSource$3(this.exampleDatabase);
+        this.dataSource = new ExampleDataSource$2(this.exampleDatabase);
         rxjs_Observable.Observable.fromEvent(this.filter.nativeElement, 'keyup')
             .debounceTime(150)
             .distinctUntilChanged()
@@ -2037,18 +1920,18 @@ var ExampleDatabase$1 = (function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource$3 = (function (_super) {
-    __extends(ExampleDataSource$3, _super);
+var ExampleDataSource$2 = (function (_super) {
+    __extends(ExampleDataSource$2, _super);
     /**
      * @param {?} _exampleDatabase
      */
-    function ExampleDataSource$3(_exampleDatabase) {
+    function ExampleDataSource$2(_exampleDatabase) {
         var _this = _super.call(this) || this;
         _this._exampleDatabase = _exampleDatabase;
         _this._filterChange = new rxjs_BehaviorSubject.BehaviorSubject('');
         return _this;
     }
-    Object.defineProperty(ExampleDataSource$3.prototype, "filter", {
+    Object.defineProperty(ExampleDataSource$2.prototype, "filter", {
         /**
          * @return {?}
          */
@@ -2065,7 +1948,7 @@ var ExampleDataSource$3 = (function (_super) {
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$3.prototype.connect = function () {
+    ExampleDataSource$2.prototype.connect = function () {
         var _this = this;
         var /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
@@ -2076,6 +1959,129 @@ var ExampleDataSource$3 = (function (_super) {
                 var /** @type {?} */ searchStr = (item.name + item.color).toLowerCase();
                 return searchStr.indexOf(_this.filter.toLowerCase()) != -1;
             });
+        });
+    };
+    /**
+     * @return {?}
+     */
+    ExampleDataSource$2.prototype.disconnect = function () { };
+    return ExampleDataSource$2;
+}(_angular_cdk_table.DataSource));
+/**
+ * \@title Table retrieving data through HTTP
+ */
+var TableHttpExample = (function () {
+    /**
+     * @param {?} http
+     */
+    function TableHttpExample(http) {
+        this.http = http;
+        this.displayedColumns = ['created_at', 'state', 'number', 'title'];
+    }
+    /**
+     * @return {?}
+     */
+    TableHttpExample.prototype.ngOnInit = function () {
+        this.exampleDatabase = new ExampleHttpDao(this.http);
+        this.dataSource = new ExampleDataSource$3(/** @type {?} */ ((this.exampleDatabase)), this.paginator, this.sort);
+    };
+    return TableHttpExample;
+}());
+TableHttpExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'table-http-example',
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .mat-column-title { text-overflow: ellipsis; white-space: nowrap; flex: 1; overflow: hidden; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><md-spinner *ngIf=\"dataSource.isLoadingResults\"></md-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><md-table #table [dataSource]=\"dataSource\" class=\"example-table\" mdSort mdSortActive=\"created_at\" mdSortDisableClear mdSortDirection=\"asc\"><ng-container mdColumnDef=\"number\"><md-header-cell *mdHeaderCellDef>#</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.number }}</md-cell></ng-container><ng-container mdColumnDef=\"title\"><md-header-cell *mdHeaderCellDef>Title</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.title }}</md-cell></ng-container><ng-container mdColumnDef=\"state\"><md-header-cell *mdHeaderCellDef>State</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.state }}</md-cell></ng-container><ng-container mdColumnDef=\"created_at\"><md-header-cell *mdHeaderCellDef md-sort-header disableClear=\"true\">Created</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.created_at | date }}</md-cell></ng-container><md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></md-paginator></div>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+TableHttpExample.ctorParameters = function () { return [
+    { type: _angular_http.Http, },
+]; };
+TableHttpExample.propDecorators = {
+    'paginator': [{ type: _angular_core.ViewChild, args: [_angular_material.MdPaginator,] },],
+    'sort': [{ type: _angular_core.ViewChild, args: [_angular_material.MdSort,] },],
+};
+/**
+ * An example database that the data source uses to retrieve data for the table.
+ */
+var ExampleHttpDao = (function () {
+    /**
+     * @param {?} http
+     */
+    function ExampleHttpDao(http) {
+        this.http = http;
+    }
+    /**
+     * @param {?} sort
+     * @param {?} order
+     * @param {?} page
+     * @return {?}
+     */
+    ExampleHttpDao.prototype.getRepoIssues = function (sort, order, page) {
+        var /** @type {?} */ href = 'https://api.github.com/search/issues';
+        var /** @type {?} */ requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
+        return this.http.get(requestUrl)
+            .map(function (response) { return (response.json()); });
+    };
+    return ExampleHttpDao;
+}());
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleHttpDao. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+var ExampleDataSource$3 = (function (_super) {
+    __extends(ExampleDataSource$3, _super);
+    /**
+     * @param {?} exampleDatabase
+     * @param {?} paginator
+     * @param {?} sort
+     */
+    function ExampleDataSource$3(exampleDatabase, paginator, sort) {
+        var _this = _super.call(this) || this;
+        _this.exampleDatabase = exampleDatabase;
+        _this.paginator = paginator;
+        _this.sort = sort;
+        // The number of issues returned by github matching the query.
+        _this.resultsLength = 0;
+        _this.isLoadingResults = false;
+        _this.isRateLimitReached = false;
+        return _this;
+    }
+    /**
+     * Connect function called by the table to retrieve one stream containing the data to render.
+     * @return {?}
+     */
+    ExampleDataSource$3.prototype.connect = function () {
+        var _this = this;
+        var /** @type {?} */ displayDataChanges = [
+            this.sort.mdSortChange,
+            this.paginator.page
+        ];
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.mdSortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        return rxjs_Observable.Observable.merge.apply(rxjs_Observable.Observable, displayDataChanges).startWith(null)
+            .switchMap(function () {
+            _this.isLoadingResults = true;
+            return _this.exampleDatabase.getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
+        })
+            .map(function (data) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.isRateLimitReached = false;
+            _this.resultsLength = data.total_count;
+            return data.items;
+        })
+            .catch(function () {
+            _this.isLoadingResults = false;
+            // Catch if the GitHub API has reached its rate limit. Return empty data.
+            _this.isRateLimitReached = true;
+            return rxjs_Observable.Observable.of(null);
         });
     };
     /**
@@ -3080,15 +3086,15 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
-    'table-http': {
-        title: 'Table retrieving data through HTTP',
-        component: TableHttpExample,
-        additionalFiles: null,
-        selectorName: null
-    },
     'table-filtering': {
         title: 'Table with filtering',
         component: TableFilteringExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'table-http': {
+        title: 'Table retrieving data through HTTP',
+        component: TableHttpExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -3357,8 +3363,8 @@ exports.ɵcf = SnackBarComponentExample;
 exports.ɵch = SnackBarOverviewExample;
 exports.ɵci = SortOverviewExample;
 exports.ɵcj = TableBasicExample;
-exports.ɵcl = TableFilteringExample;
-exports.ɵck = TableHttpExample;
+exports.ɵck = TableFilteringExample;
+exports.ɵcl = TableHttpExample;
 exports.ɵcm = TableOverviewExample;
 exports.ɵcn = TablePaginationExample;
 exports.ɵco = TableSortingExample;
