@@ -67,6 +67,17 @@ any of the form directives from the core <code class="docs-markdown-code">FormsM
   ]
 })
 </code></pre>
+
+        <h3 id="customizing-the-trigger-label" class="docs-header-link docs-markdown-h3">
+          <div header-link="customizing-the-trigger-label"></div>
+          Customizing the trigger label
+        </h3>
+      <p class="docs-markdown-p">If you want to display a custom trigger label inside a select, you can use the <code class="docs-markdown-code">md-select-trigger</code> element:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-select</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Favorite food"</span> #<span class="hljs-attr">select</span>=<span class="hljs-string">"mdSelect"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-select-trigger</span>&gt;</span>You have selected: {{ select.selected?.viewValue }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-select-trigger</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let food of foods"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"food.value"</span>&gt;</span>{{ food.viewValue }}<span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-select</span>&gt;</span>
+</code></pre>
 <p class="docs-markdown-p">Here are the available global options:</p>
 <table class="docs-markdown-table">
 <thead>
