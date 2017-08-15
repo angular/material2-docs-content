@@ -51,4 +51,15 @@ however, more rows will simply be added for it the tile to fill.</p>
         </h3>
       <p class="docs-markdown-p">A header and footer can be added to an <code class="docs-markdown-code">md-grid-tile</code> using the <code class="docs-markdown-code">md-grid-tile-header</code> and
 <code class="docs-markdown-code">md-grid-tile-footer</code> elements respectively.</p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <div header-link="accessibility"></div>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">By default, the grid-list assumes that it will be used in a purely decorative fashion and thus sets
+no roles, ARIA attributes, or keyboard shortcuts. This is equivalent to having a sequence of <code class="docs-markdown-code">&lt;div&gt;</code>
+elements on the page. Any interactive content within the grid-list should be given an appropriate
+accessibility treatment based on the specific workflow of your application.</p>
+<p class="docs-markdown-p">If the grid-list is used to present a list of <em>non-interactive</em> content items, then the grid-list
+element should be given <code class="docs-markdown-code">role="list"</code> and each tile should be given <code class="docs-markdown-code">role="listitem"</code>.</p>
 </div></body></html>
