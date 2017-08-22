@@ -16,7 +16,7 @@ as the control for expanding and collapsing. This header may optionally contain 
 <code class="docs-markdown-code">&lt;md-panel-title&gt;</code> and an <code class="docs-markdown-code">&lt;md-panel-description&gt;</code>, which format the content of the
 header to align with Material Design specifications.</p>
 <p class="docs-markdown-p">By default, the expansion-panel header includes a toggle icon at the end of the
-header to indicate the expansion state. This icon can be hidden via the 
+header to indicate the expansion state. This icon can be hidden via the
 <code class="docs-markdown-code">hideToggle</code> property.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
@@ -37,8 +37,8 @@ header to indicate the expansion state. This icon can be hidden via the
           <div header-link="action-bar"></div>
           Action bar
         </h4>
-      <p class="docs-markdown-p">Actions may optionally be included at the bottom of the panel, visible only when the expansion is in its
-expanded state.</p>
+      <p class="docs-markdown-p">Actions may optionally be included at the bottom of the panel, visible only when the expansion
+is in its expanded state.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
     This is the expansion title
@@ -49,6 +49,22 @@ expanded state.</p>
   <span class="hljs-tag">&lt;<span class="hljs-name">md-action-row</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">md-action-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel</span>&gt;</span>
+</code></pre>
+
+        <h4 id="disabling-a-panel" class="docs-header-link docs-markdown-h4">
+          <div header-link="disabling-a-panel"></div>
+          Disabling a panel
+        </h4>
+      <p class="docs-markdown-p">Expansion panels can be disabled using the <code class="docs-markdown-code">disabled</code> attribute. A disabled expansion panel can't
+be toggled by the user, but can still be manipulated using programmatically.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"isDisabled"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
+    This is the expansion title
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel-header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-panel-description</span>&gt;</span>
+    This is a summary of the content
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-panel-description</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">md-expansion-panel</span>&gt;</span>
 </code></pre>
 
