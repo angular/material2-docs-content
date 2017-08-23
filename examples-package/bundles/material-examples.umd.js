@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/platform-browser'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent'), require('@angular/http'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/platform-browser', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent', '@angular/http', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx,global.Rx.Observable,global.ng.platformBrowser,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable,global.ng.http));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_platformBrowser,rxjs_Observable,rxjs_add_observable_of,rxjs_add_operator_debounceTime,rxjs_add_operator_distinctUntilChanged,rxjs_add_observable_fromEvent,_angular_http) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/platform-browser'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent'), require('@angular/http'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/platform-browser', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent', '@angular/http', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.cdk.collections,global.Rx,global.Rx.Observable,global.ng.platformBrowser,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable,global.ng.http));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_cdk_collections,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_platformBrowser,rxjs_Observable,rxjs_add_observable_of,rxjs_add_operator_debounceTime,rxjs_add_operator_distinctUntilChanged,rxjs_add_observable_fromEvent,_angular_http) { 'use strict';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -484,7 +484,7 @@ var ExampleDataSource = (function (_super) {
      */
     ExampleDataSource.prototype.disconnect = function () { };
     return ExampleDataSource;
-}(_angular_cdk_table.DataSource));
+}(_angular_cdk_collections.DataSource));
 /**
  * \@title Configurable checkbox
  */
@@ -1818,7 +1818,7 @@ var ExampleDataSource$1 = (function (_super) {
      */
     ExampleDataSource$1.prototype.disconnect = function () { };
     return ExampleDataSource$1;
-}(_angular_cdk_table.DataSource));
+}(_angular_cdk_collections.DataSource));
 /**
  * \@title Table with filtering
  */
@@ -1967,7 +1967,7 @@ var ExampleDataSource$2 = (function (_super) {
      */
     ExampleDataSource$2.prototype.disconnect = function () { };
     return ExampleDataSource$2;
-}(_angular_cdk_table.DataSource));
+}(_angular_cdk_collections.DataSource));
 /**
  * \@title Table retrieving data through HTTP
  */
@@ -2090,7 +2090,7 @@ var ExampleDataSource$3 = (function (_super) {
      */
     ExampleDataSource$3.prototype.disconnect = function () { };
     return ExampleDataSource$3;
-}(_angular_cdk_table.DataSource));
+}(_angular_cdk_collections.DataSource));
 /**
  * \@title Feature-rich data table
  */
@@ -2098,7 +2098,7 @@ var TableOverviewExample = (function () {
     function TableOverviewExample() {
         this.displayedColumns = ['select', 'userId', 'userName', 'progress', 'color'];
         this.exampleDatabase = new ExampleDatabase$2();
-        this.selection = new _angular_material.SelectionModel(true, []);
+        this.selection = new _angular_cdk_collections.SelectionModel(true, []);
     }
     /**
      * @return {?}
@@ -2328,7 +2328,7 @@ var ExampleDataSource$4 = (function (_super) {
         });
     };
     return ExampleDataSource$4;
-}(_angular_cdk_table.DataSource));
+}(_angular_cdk_collections.DataSource));
 /**
  * \@title Table with pagination
  */
@@ -2455,7 +2455,7 @@ var ExampleDataSource$5 = (function (_super) {
      */
     ExampleDataSource$5.prototype.disconnect = function () { };
     return ExampleDataSource$5;
-}(_angular_cdk_table.DataSource));
+}(_angular_cdk_collections.DataSource));
 /**
  * \@title Table with sorting
  */
@@ -2612,7 +2612,7 @@ var ExampleDataSource$6 = (function (_super) {
         });
     };
     return ExampleDataSource$6;
-}(_angular_cdk_table.DataSource));
+}(_angular_cdk_collections.DataSource));
 /**
  * \@title Basic tabs
  */

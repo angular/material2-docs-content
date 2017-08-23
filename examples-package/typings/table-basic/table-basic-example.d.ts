@@ -1,4 +1,4 @@
-import { DataSource } from '@angular/cdk/table';
+import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 /**
