@@ -526,7 +526,6 @@ ChipsOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'chips-overview-example',
                 template: "<md-chip-list><md-chip>One fish</md-chip><md-chip>Two fish</md-chip><md-chip color=\"primary\" selected=\"true\">Primary fish</md-chip><md-chip color=\"accent\" selected=\"true\">Accent fish</md-chip></md-chip-list>",
-                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /**
