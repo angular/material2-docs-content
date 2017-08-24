@@ -13,7 +13,7 @@ elements inside <code class="docs-markdown-code">md-form-field</code> as well. T
 <code class="docs-markdown-code">ngModel</code> and <code class="docs-markdown-code">formControl</code>.</p>
 <p class="docs-markdown-p">The only limitations are that the <code class="docs-markdown-code">type</code> attribute can only be one of the values supported by
 <code class="docs-markdown-code">mdInput</code> and the native element cannot specify a <code class="docs-markdown-code">placeholder</code> attribute if the <code class="docs-markdown-code">md-form-field</code>
-also contains a <code class="docs-markdown-code">md-placeholder</code> element.</p>
+also contains an <code class="docs-markdown-code">md-placeholder</code> element.</p>
 
         <h3 id="supported-code-input-code-types" class="docs-header-link docs-markdown-h3">
           <div header-link="supported-code-input-code-types"></div>
@@ -58,7 +58,7 @@ only show one at a time.</p>
 text. When text is present, the indicative text will float above this input zone.</p>
 <p class="docs-markdown-p">The <code class="docs-markdown-code">floatPlaceholder</code> attribute of <code class="docs-markdown-code">md-form-field</code> can be set to <code class="docs-markdown-code">never</code> to hide the
 indicative text instead when text is present in the input.</p>
-<p class="docs-markdown-p">When setting <code class="docs-markdown-code">floatPlaceholder</code> to <code class="docs-markdown-code">always</code> the floating label will always show above the input.</p>
+<p class="docs-markdown-p">When setting <code class="docs-markdown-code">floatPlaceholder</code> to <code class="docs-markdown-code">always</code>, the floating label will always show above the input.</p>
 <p class="docs-markdown-p">A placeholder for the input can be specified in one of two ways: either using the <code class="docs-markdown-code">placeholder</code>
 attribute on the <code class="docs-markdown-code">input</code> or <code class="docs-markdown-code">textarea</code>, or using an <code class="docs-markdown-code">md-placeholder</code> element in the
 <code class="docs-markdown-code">md-form-field</code>. Using both will raise an error.</p>
@@ -66,7 +66,7 @@ attribute on the <code class="docs-markdown-code">input</code> or <code class="d
 provider. This setting will apply to all components that support the floating placeholder.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
   providers: [
-    {provide: MD_PLACEHOLDER_GLOBAL_OPTIONS, useValue: { float: <span class="hljs-string">'always'</span> }}
+    {provide: MD_PLACEHOLDER_GLOBAL_OPTIONS, useValue: {float: <span class="hljs-string">'always'</span>}}
   ]
 })
 </code></pre>
@@ -94,8 +94,8 @@ provider. This setting will apply to all components that support the floating pl
           <div header-link="prefix-and-suffix"></div>
           Prefix and Suffix
         </h3>
-      <p class="docs-markdown-p">HTML can be included before, and after the input tag, as prefix or suffix. It will be underlined as
-per the Material specification, and clicking it will focus the input.</p>
+      <p class="docs-markdown-p">HTML can be included before and after the input tag, as a prefix or suffix. It will be underlined
+as per the Material specification, and clicking it will focus the input.</p>
 <p class="docs-markdown-p">Adding the <code class="docs-markdown-code">mdPrefix</code> attribute to an element inside the <code class="docs-markdown-code">md-form-field</code> will designate it as
 the prefix. Similarly, adding <code class="docs-markdown-code">mdSuffix</code> will designate it as the suffix.</p>
 <div material-docs-example="input-prefix-suffix"></div>
@@ -140,15 +140,15 @@ the error messages.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myErrorStateMatcher</span>(<span class="hljs-params">control: FormControl, form: FormGroupDirective | NgForm</span>): <span class="hljs-title">boolean</span> </span>{
   <span class="hljs-comment">// Error when invalid control is dirty, touched, or submitted</span>
   <span class="hljs-keyword">const</span> isSubmitted = form &amp;&amp; form.submitted;
-  <span class="hljs-keyword">return</span> !!(control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted)));
+  <span class="hljs-keyword">return</span> !!(control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted));
 }
 </code></pre>
 <p class="docs-markdown-p">A global error state matcher can be specified by setting the <code class="docs-markdown-code">MD_ERROR_GLOBAL_OPTIONS</code> provider. This applies
-to all inputs. For convenience, <code class="docs-markdown-code">showOnDirtyErrorStateMatcher</code> is available in order to globally cause
+to all inputs. For convenience, <code class="docs-markdown-code">showOnDirtyErrorStateMatcher</code> is available in order to globally set
 input errors to show when the input is dirty and invalid.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
   providers: [
-    {provide: MD_ERROR_GLOBAL_OPTIONS, useValue: { errorStateMatcher: showOnDirtyErrorStateMatcher }}
+    {provide: MD_ERROR_GLOBAL_OPTIONS, useValue: {errorStateMatcher: showOnDirtyErrorStateMatcher}}
   ]
 })
 </code></pre>
