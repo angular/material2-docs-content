@@ -29,6 +29,8 @@ import { DialogContentExample } from './dialog-content/dialog-content-example';
 import { DialogDataExample } from './dialog-data/dialog-data-example';
 import { DialogElementsExample } from './dialog-elements/dialog-elements-example';
 import { DialogOverviewExampleDialog, DialogOverviewExample } from './dialog-overview/dialog-overview-example';
+import { ExpansionOverviewExample } from './expansion-overview/expansion-overview-example';
+import { ExpansionStepsExample } from './expansion-steps/expansion-steps-example';
 import { GridListDynamicExample } from './grid-list-dynamic/grid-list-dynamic-example';
 import { GridListOverviewExample } from './grid-list-overview/grid-list-overview-example';
 import { IconOverviewExample } from './icon-overview/icon-overview-example';
@@ -225,6 +227,18 @@ export declare const EXAMPLE_COMPONENTS: {
         component: typeof DialogOverviewExample;
         additionalFiles: string[];
         selectorName: string;
+    };
+    'expansion-overview': {
+        title: string;
+        component: typeof ExpansionOverviewExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'expansion-steps': {
+        title: string;
+        component: typeof ExpansionStepsExample;
+        additionalFiles: null;
+        selectorName: null;
     };
     'grid-list-dynamic': {
         title: string;

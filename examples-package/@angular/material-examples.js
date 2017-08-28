@@ -9,7 +9,7 @@ import { Component, Inject, NgModule, ViewChild, ViewEncapsulation } from '@angu
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
-import { MD_DIALOG_DATA, MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdFormFieldModule, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdPaginator, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdSort, MdSortModule, MdTableModule, MdTabsModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
+import { MD_DIALOG_DATA, MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdExpansionModule, MdFormFieldModule, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdPaginator, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdSort, MdSortModule, MdTableModule, MdTabsModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
@@ -39,6 +39,7 @@ ExampleMaterialModule.decorators = [
                     MdChipsModule,
                     MdDatepickerModule,
                     MdDialogModule,
+                    MdExpansionModule,
                     MdFormFieldModule,
                     MdGridListModule,
                     MdIconModule,
@@ -852,6 +853,61 @@ DialogOverviewExampleDialog.ctorParameters = () => [
     { type: MdDialogRef, },
     { type: undefined, decorators: [{ type: Inject, args: [MD_DIALOG_DATA,] },] },
 ];
+
+/**
+ * \@title Basic expansion panel
+ */
+class ExpansionOverviewExample {
+}
+ExpansionOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'expansion-overview-example',
+                template: "<md-expansion-panel><md-expansion-panel-header><md-panel-title>Personal data</md-panel-title><md-panel-description>Type your name and age</md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"First name\"></md-form-field><md-form-field><input mdInput placeholder=\"Age\"></md-form-field></md-expansion-panel>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ExpansionOverviewExample.ctorParameters = () => [];
+
+/**
+ * \@title Expansion panel as accordion
+ */
+class ExpansionStepsExample {
+    constructor() {
+        this.step = 0;
+    }
+    /**
+     * @param {?} index
+     * @return {?}
+     */
+    setStep(index) {
+        this.step = index;
+    }
+    /**
+     * @return {?}
+     */
+    nextStep() {
+        this.step++;
+    }
+    /**
+     * @return {?}
+     */
+    prevStep() {
+        this.step--;
+    }
+}
+ExpansionStepsExample.decorators = [
+    { type: Component, args: [{
+                selector: 'expansion-steps-example',
+                template: "<md-accordion class=\"example-headers-align\"><md-expansion-panel [expanded]=\"step === 0\" (opened)=\"setStep(0)\" hideToggle=\"true\"><md-expansion-panel-header><md-panel-title>Personal data</md-panel-title><md-panel-description>Type your name and age<md-icon>account_circle</md-icon></md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"First name\"></md-form-field><md-form-field><input mdInput type=\"number\" min=\"1\" placeholder=\"Age\"></md-form-field><md-action-row><button md-button color=\"primary\" (click)=\"nextStep()\">Next</button></md-action-row></md-expansion-panel><md-expansion-panel [expanded]=\"step === 1\" (opened)=\"setStep(1)\" hideToggle=\"true\"><md-expansion-panel-header><md-panel-title>Destination</md-panel-title><md-panel-description>Type the country name<md-icon>map</md-icon></md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"Country\"></md-form-field><md-action-row><button md-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button md-button color=\"primary\" (click)=\"nextStep()\">Next</button></md-action-row></md-expansion-panel><md-expansion-panel [expanded]=\"step === 2\" (opened)=\"setStep(2)\" hideToggle=\"true\"><md-expansion-panel-header><md-panel-title>Day of the trip</md-panel-title><md-panel-description>Inform the date you wish to travel<md-icon>date_range</md-icon></md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"Date\" [mdDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></md-form-field><md-datepicker #picker></md-datepicker><md-action-row><button md-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button md-button color=\"primary\" (click)=\"nextStep()\">End</button></md-action-row></md-expansion-panel></md-accordion>",
+                styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ExpansionStepsExample.ctorParameters = () => [];
 
 /**
  * \@title Dynamic grid-list
@@ -2710,6 +2766,18 @@ const EXAMPLE_COMPONENTS = {
         additionalFiles: ["dialog-overview-example-dialog.html"],
         selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
     },
+    'expansion-overview': {
+        title: 'Basic expansion panel',
+        component: ExpansionOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'expansion-steps': {
+        title: 'Expansion panel as accordion',
+        component: ExpansionStepsExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'grid-list-dynamic': {
         title: 'Dynamic grid-list',
         component: GridListDynamicExample,
@@ -3013,6 +3081,8 @@ const EXAMPLE_LIST = [
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
     DialogOverviewExampleDialog, DialogOverviewExample,
+    ExpansionOverviewExample,
+    ExpansionStepsExample,
     GridListDynamicExample,
     GridListOverviewExample,
     IconOverviewExample,
@@ -3127,5 +3197,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵl, ChipsStackedExample as ɵm, DatepickerApiExample as ɵn, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵp, DatepickerStartViewExample as ɵq, DatepickerTouchExample as ɵr, DialogContentExample as ɵs, DialogContentExampleDialog as ɵt, DialogDataExample as ɵu, DialogDataExampleDialog as ɵv, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵy, DialogOverviewExampleDialog as ɵz, GridListDynamicExample as ɵba, GridListOverviewExample as ɵbb, IconOverviewExample as ɵbc, IconSvgExample as ɵbd, InputClearableExample as ɵbe, InputErrorsExample as ɵbf, InputFormExample as ɵbg, InputHintExample as ɵbh, InputOverviewExample as ɵbi, InputPrefixSuffixExample as ɵbj, ListSectionsExample as ɵbk, ExampleMaterialModule as ɵct, MenuIconsExample as ɵbl, MenuOverviewExample as ɵbm, PaginatorConfigurableExample as ɵbn, PaginatorOverviewExample as ɵbo, ProgressBarConfigurableExample as ɵbp, ProgressBarOverviewExample as ɵbq, ProgressSpinnerConfigurableExample as ɵbr, ProgressSpinnerOverviewExample as ɵbs, RadioNgModelExample as ɵbt, RadioOverviewExample as ɵbu, SelectFormExample as ɵbv, SelectOverviewExample as ɵbw, SidenavFabExample as ɵbx, SidenavOverviewExample as ɵby, SlideToggleConfigurableExample as ɵbz, SlideToggleFormsExample as ɵca, SlideToggleOverviewExample as ɵcb, SliderConfigurableExample as ɵcc, SliderOverviewExample as ɵcd, PizzaPartyComponent as ɵcf, SnackBarComponentExample as ɵce, SnackBarOverviewExample as ɵcg, SortOverviewExample as ɵch, TableBasicExample as ɵci, TableFilteringExample as ɵcj, TableHttpExample as ɵck, TableOverviewExample as ɵcl, TablePaginationExample as ɵcm, TableSortingExample as ɵcn, TabsOverviewExample as ɵco, TabsTemplateLabelExample as ɵcp, ToolbarOverviewExample as ɵcq, TooltipOverviewExample as ɵcr, TooltipPositionExample as ɵcs };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵl, ChipsStackedExample as ɵm, DatepickerApiExample as ɵn, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵp, DatepickerStartViewExample as ɵq, DatepickerTouchExample as ɵr, DialogContentExample as ɵs, DialogContentExampleDialog as ɵt, DialogDataExample as ɵu, DialogDataExampleDialog as ɵv, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵy, DialogOverviewExampleDialog as ɵz, ExpansionStepsExample as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ExampleMaterialModule as ɵcu, MenuIconsExample as ɵbm, MenuOverviewExample as ɵbn, PaginatorConfigurableExample as ɵbo, PaginatorOverviewExample as ɵbp, ProgressBarConfigurableExample as ɵbq, ProgressBarOverviewExample as ɵbr, ProgressSpinnerConfigurableExample as ɵbs, ProgressSpinnerOverviewExample as ɵbt, RadioNgModelExample as ɵbu, RadioOverviewExample as ɵbv, SelectFormExample as ɵbw, SelectOverviewExample as ɵbx, SidenavFabExample as ɵby, SidenavOverviewExample as ɵbz, SlideToggleConfigurableExample as ɵca, SlideToggleFormsExample as ɵcb, SlideToggleOverviewExample as ɵcc, SliderConfigurableExample as ɵcd, SliderOverviewExample as ɵce, PizzaPartyComponent as ɵcg, SnackBarComponentExample as ɵcf, SnackBarOverviewExample as ɵch, SortOverviewExample as ɵci, TableBasicExample as ɵcj, TableFilteringExample as ɵck, TableHttpExample as ɵcl, TableOverviewExample as ɵcm, TablePaginationExample as ɵcn, TableSortingExample as ɵco, TabsOverviewExample as ɵcp, TabsTemplateLabelExample as ɵcq, ToolbarOverviewExample as ɵcr, TooltipOverviewExample as ɵcs, TooltipPositionExample as ɵct };
 //# sourceMappingURL=material-examples.js.map

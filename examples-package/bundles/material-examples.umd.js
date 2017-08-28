@@ -54,6 +54,7 @@ ExampleMaterialModule.decorators = [
                     _angular_material.MdChipsModule,
                     _angular_material.MdDatepickerModule,
                     _angular_material.MdDialogModule,
+                    _angular_material.MdExpansionModule,
                     _angular_material.MdFormFieldModule,
                     _angular_material.MdGridListModule,
                     _angular_material.MdIconModule,
@@ -910,6 +911,63 @@ DialogOverviewExampleDialog.ctorParameters = function () { return [
     { type: _angular_material.MdDialogRef, },
     { type: undefined, decorators: [{ type: _angular_core.Inject, args: [_angular_material.MD_DIALOG_DATA,] },] },
 ]; };
+/**
+ * \@title Basic expansion panel
+ */
+var ExpansionOverviewExample = (function () {
+    function ExpansionOverviewExample() {
+    }
+    return ExpansionOverviewExample;
+}());
+ExpansionOverviewExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'expansion-overview-example',
+                template: "<md-expansion-panel><md-expansion-panel-header><md-panel-title>Personal data</md-panel-title><md-panel-description>Type your name and age</md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"First name\"></md-form-field><md-form-field><input mdInput placeholder=\"Age\"></md-form-field></md-expansion-panel>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ExpansionOverviewExample.ctorParameters = function () { return []; };
+/**
+ * \@title Expansion panel as accordion
+ */
+var ExpansionStepsExample = (function () {
+    function ExpansionStepsExample() {
+        this.step = 0;
+    }
+    /**
+     * @param {?} index
+     * @return {?}
+     */
+    ExpansionStepsExample.prototype.setStep = function (index) {
+        this.step = index;
+    };
+    /**
+     * @return {?}
+     */
+    ExpansionStepsExample.prototype.nextStep = function () {
+        this.step++;
+    };
+    /**
+     * @return {?}
+     */
+    ExpansionStepsExample.prototype.prevStep = function () {
+        this.step--;
+    };
+    return ExpansionStepsExample;
+}());
+ExpansionStepsExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'expansion-steps-example',
+                template: "<md-accordion class=\"example-headers-align\"><md-expansion-panel [expanded]=\"step === 0\" (opened)=\"setStep(0)\" hideToggle=\"true\"><md-expansion-panel-header><md-panel-title>Personal data</md-panel-title><md-panel-description>Type your name and age<md-icon>account_circle</md-icon></md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"First name\"></md-form-field><md-form-field><input mdInput type=\"number\" min=\"1\" placeholder=\"Age\"></md-form-field><md-action-row><button md-button color=\"primary\" (click)=\"nextStep()\">Next</button></md-action-row></md-expansion-panel><md-expansion-panel [expanded]=\"step === 1\" (opened)=\"setStep(1)\" hideToggle=\"true\"><md-expansion-panel-header><md-panel-title>Destination</md-panel-title><md-panel-description>Type the country name<md-icon>map</md-icon></md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"Country\"></md-form-field><md-action-row><button md-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button md-button color=\"primary\" (click)=\"nextStep()\">Next</button></md-action-row></md-expansion-panel><md-expansion-panel [expanded]=\"step === 2\" (opened)=\"setStep(2)\" hideToggle=\"true\"><md-expansion-panel-header><md-panel-title>Day of the trip</md-panel-title><md-panel-description>Inform the date you wish to travel<md-icon>date_range</md-icon></md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"Date\" [mdDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></md-form-field><md-datepicker #picker></md-datepicker><md-action-row><button md-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button md-button color=\"primary\" (click)=\"nextStep()\">End</button></md-action-row></md-expansion-panel></md-accordion>",
+                styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ExpansionStepsExample.ctorParameters = function () { return []; };
 /**
  * \@title Dynamic grid-list
  */
@@ -2878,6 +2936,18 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: ["dialog-overview-example-dialog.html"],
         selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
     },
+    'expansion-overview': {
+        title: 'Basic expansion panel',
+        component: ExpansionOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'expansion-steps': {
+        title: 'Expansion panel as accordion',
+        component: ExpansionStepsExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'grid-list-dynamic': {
         title: 'Dynamic grid-list',
         component: GridListDynamicExample,
@@ -3181,6 +3251,8 @@ var EXAMPLE_LIST = [
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
     DialogOverviewExampleDialog, DialogOverviewExample,
+    ExpansionOverviewExample,
+    ExpansionStepsExample,
     GridListDynamicExample,
     GridListOverviewExample,
     IconOverviewExample,
@@ -3303,6 +3375,7 @@ exports.DatepickerOverviewExample = DatepickerOverviewExample;
 exports.CardFancyExample = CardFancyExample;
 exports.ToolbarMultirowExample = ToolbarMultirowExample;
 exports.ButtonToggleOverviewExample = ButtonToggleOverviewExample;
+exports.ExpansionOverviewExample = ExpansionOverviewExample;
 exports.ɵa = AutocompleteDisplayExample;
 exports.ɵb = AutocompleteFilterExample;
 exports.ɵc = AutocompleteOverviewExample;
@@ -3329,52 +3402,53 @@ exports.ɵw = DialogElementsExample;
 exports.ɵx = DialogElementsExampleDialog;
 exports.ɵy = DialogOverviewExample;
 exports.ɵz = DialogOverviewExampleDialog;
-exports.ɵba = GridListDynamicExample;
-exports.ɵbb = GridListOverviewExample;
-exports.ɵbc = IconOverviewExample;
-exports.ɵbd = IconSvgExample;
-exports.ɵbe = InputClearableExample;
-exports.ɵbf = InputErrorsExample;
-exports.ɵbg = InputFormExample;
-exports.ɵbh = InputHintExample;
-exports.ɵbi = InputOverviewExample;
-exports.ɵbj = InputPrefixSuffixExample;
-exports.ɵbk = ListSectionsExample;
-exports.ɵct = ExampleMaterialModule;
-exports.ɵbl = MenuIconsExample;
-exports.ɵbm = MenuOverviewExample;
-exports.ɵbn = PaginatorConfigurableExample;
-exports.ɵbo = PaginatorOverviewExample;
-exports.ɵbp = ProgressBarConfigurableExample;
-exports.ɵbq = ProgressBarOverviewExample;
-exports.ɵbr = ProgressSpinnerConfigurableExample;
-exports.ɵbs = ProgressSpinnerOverviewExample;
-exports.ɵbt = RadioNgModelExample;
-exports.ɵbu = RadioOverviewExample;
-exports.ɵbv = SelectFormExample;
-exports.ɵbw = SelectOverviewExample;
-exports.ɵbx = SidenavFabExample;
-exports.ɵby = SidenavOverviewExample;
-exports.ɵbz = SlideToggleConfigurableExample;
-exports.ɵca = SlideToggleFormsExample;
-exports.ɵcb = SlideToggleOverviewExample;
-exports.ɵcc = SliderConfigurableExample;
-exports.ɵcd = SliderOverviewExample;
-exports.ɵcf = PizzaPartyComponent;
-exports.ɵce = SnackBarComponentExample;
-exports.ɵcg = SnackBarOverviewExample;
-exports.ɵch = SortOverviewExample;
-exports.ɵci = TableBasicExample;
-exports.ɵcj = TableFilteringExample;
-exports.ɵck = TableHttpExample;
-exports.ɵcl = TableOverviewExample;
-exports.ɵcm = TablePaginationExample;
-exports.ɵcn = TableSortingExample;
-exports.ɵco = TabsOverviewExample;
-exports.ɵcp = TabsTemplateLabelExample;
-exports.ɵcq = ToolbarOverviewExample;
-exports.ɵcr = TooltipOverviewExample;
-exports.ɵcs = TooltipPositionExample;
+exports.ɵba = ExpansionStepsExample;
+exports.ɵbb = GridListDynamicExample;
+exports.ɵbc = GridListOverviewExample;
+exports.ɵbd = IconOverviewExample;
+exports.ɵbe = IconSvgExample;
+exports.ɵbf = InputClearableExample;
+exports.ɵbg = InputErrorsExample;
+exports.ɵbh = InputFormExample;
+exports.ɵbi = InputHintExample;
+exports.ɵbj = InputOverviewExample;
+exports.ɵbk = InputPrefixSuffixExample;
+exports.ɵbl = ListSectionsExample;
+exports.ɵcu = ExampleMaterialModule;
+exports.ɵbm = MenuIconsExample;
+exports.ɵbn = MenuOverviewExample;
+exports.ɵbo = PaginatorConfigurableExample;
+exports.ɵbp = PaginatorOverviewExample;
+exports.ɵbq = ProgressBarConfigurableExample;
+exports.ɵbr = ProgressBarOverviewExample;
+exports.ɵbs = ProgressSpinnerConfigurableExample;
+exports.ɵbt = ProgressSpinnerOverviewExample;
+exports.ɵbu = RadioNgModelExample;
+exports.ɵbv = RadioOverviewExample;
+exports.ɵbw = SelectFormExample;
+exports.ɵbx = SelectOverviewExample;
+exports.ɵby = SidenavFabExample;
+exports.ɵbz = SidenavOverviewExample;
+exports.ɵca = SlideToggleConfigurableExample;
+exports.ɵcb = SlideToggleFormsExample;
+exports.ɵcc = SlideToggleOverviewExample;
+exports.ɵcd = SliderConfigurableExample;
+exports.ɵce = SliderOverviewExample;
+exports.ɵcg = PizzaPartyComponent;
+exports.ɵcf = SnackBarComponentExample;
+exports.ɵch = SnackBarOverviewExample;
+exports.ɵci = SortOverviewExample;
+exports.ɵcj = TableBasicExample;
+exports.ɵck = TableFilteringExample;
+exports.ɵcl = TableHttpExample;
+exports.ɵcm = TableOverviewExample;
+exports.ɵcn = TablePaginationExample;
+exports.ɵco = TableSortingExample;
+exports.ɵcp = TabsOverviewExample;
+exports.ɵcq = TabsTemplateLabelExample;
+exports.ɵcr = ToolbarOverviewExample;
+exports.ɵcs = TooltipOverviewExample;
+exports.ɵct = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
