@@ -129,11 +129,12 @@ three pieces via injection:</p>
           <div header-link="setting-the-locale-code"></div>
           Setting the locale code
         </h4>
-      <p class="docs-markdown-p">By default the datepicker will use the locale code from the <code class="docs-markdown-code">LOCALE_ID</code> injection token from
-<code class="docs-markdown-code">@angular/core</code>. If you want to override it, you can provide a new value for the token:</p>
+      <p class="docs-markdown-p">By default, the <code class="docs-markdown-code">MAT_DATE_LOCALE</code> injection token will use the existing <code class="docs-markdown-code">LOCALE_ID</code> locale code
+from <code class="docs-markdown-code">@angular/core</code>. If you want to override it, you can provide a new value for the
+<code class="docs-markdown-code">MAT_DATE_LOCALE</code> token:</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
   providers: [
-    {provide: LOCALE_ID, useValue: <span class="hljs-string">'en-GB'</span>},
+    {provide: MAT_DATE_LOCALE, useValue: <span class="hljs-string">'en-GB'</span>},
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}
