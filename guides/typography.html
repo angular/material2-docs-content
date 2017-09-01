@@ -56,7 +56,7 @@ creating a custom theme, you can create a custom <strong>typography configuratio
 <span class="hljs-comment">// Define a custom typography config that overrides the font-family as well as the</span>
 <span class="hljs-comment">// `headlines` and `body-1` levels.</span>
 <span class="hljs-variable">$custom-typography</span>: mat-typography-config(
-  <span class="hljs-variable">$font-family</span>: monospace,
+  <span class="hljs-variable">$font-family</span>: <span class="hljs-string">'Roboto, monospace'</span>,
   <span class="hljs-variable">$headline</span>: mat-typography-level(<span class="hljs-number">32px</span>, <span class="hljs-number">48px</span>, <span class="hljs-number">700</span>),
   <span class="hljs-variable">$body-1</span>: mat-typography-level(<span class="hljs-number">16px</span>, <span class="hljs-number">24px</span>, <span class="hljs-number">500</span>)
 );
@@ -64,7 +64,8 @@ creating a custom theme, you can create a custom <strong>typography configuratio
 <p class="docs-markdown-p">As the above example demonstrates, a typography configuration is created by using the
 <code class="docs-markdown-code">mat-typography-config</code> function, which is given both the font-family and the set of typographic
 levels described earlier. Each typographic level is defined by the <code class="docs-markdown-code">mat-typography-level</code> function,
-which requires a <code class="docs-markdown-code">font-size</code>, <code class="docs-markdown-code">line-height</code>, and <code class="docs-markdown-code">font-weight</code>.</p>
+which requires a <code class="docs-markdown-code">font-size</code>, <code class="docs-markdown-code">line-height</code>, and <code class="docs-markdown-code">font-weight</code>. <strong>Note</strong> that the <code class="docs-markdown-code">font-family</code>
+has to be in quotes.</p>
 <p class="docs-markdown-p">Once the custom typography definition is created, it can be consumed to generate styles via
 different SASS mixins.</p>
 <pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-comment">// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).</span>
