@@ -68,4 +68,13 @@ export class MessageArchivedComponent {
   constructor(@Inject(MD_SNACK_BAR_DATA) public data: any) { }
 }
 </code></pre>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <div header-link="accessibility"></div>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Snack-bar messages are announced via an <code class="docs-markdown-code">aria-live</code> region. Focus is not moved to
+the snack-bar element, as this would be disruptive to a user in the middle of a
+workflow. For any action offered in the snack-bar, the application should offer the
+user an alternative way to perform the action (typically via keyboard shortcut).</p>
 </div></body></html>
