@@ -1,0 +1,31 @@
+<html><head></head><body><div class="docs-markdown">
+        <h3 id="rxjs-usage" class="docs-header-link docs-markdown-h3">
+          <div header-link="rxjs-usage"></div>
+          RxJS Usage
+        </h3>
+      <p class="docs-markdown-p">When dealing with RxJS operators it is important to be aware that using the "patch" imports will
+pollute the global Observable object (e.g. <code class="docs-markdown-code">import "rxjs/add/operator/map"</code>).  When creating a
+component library, it is highly recommended to import the operator functions directly (e.g.
+<code class="docs-markdown-code">import "rxjs/operator/map"</code>):</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-comment">// NO</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/map'</span>;
+someObservable.map(...).subscribe(...);
+
+<span class="hljs-comment">// YES</span>
+<span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operator/map'</span>;
+map.call(someObservable, ...).subscribe(...);
+</code></pre>
+
+        <h4 id="rxchain" class="docs-header-link docs-markdown-h4">
+          <div header-link="rxchain"></div>
+          RxChain
+        </h4>
+      <p class="docs-markdown-p">Because this approach can be inflexible when dealing with long chains of operators. You should use
+the <code class="docs-markdown-code">RxChain</code> class to help with it:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-comment">// Before</span>
+someObservable.filter(...).map(...).do(...);
+
+<span class="hljs-comment">// After</span>
+RxChain.from(someObservable).call(filter, ...).call(map, ...).subscribe(...);
+</code></pre>
+</div></body></html>
