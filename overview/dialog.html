@@ -127,4 +127,30 @@ that the AOT compiler knows to create the <code class="docs-markdown-code">Compo
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule() {}
 </code></pre>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <div header-link="accessibility"></div>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">By default, each dialog has <code class="docs-markdown-code">role="dialog"</code> on the root element. The role can be changed to
+<code class="docs-markdown-code">alertdialog</code> via the <code class="docs-markdown-code">MdDialogConfig</code> when opening.</p>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">aria-label</code>, <code class="docs-markdown-code">aria-labelledby</code>, and <code class="docs-markdown-code">aria-describedby</code> attributes can all be set to the
+dialog element via the <code class="docs-markdown-code">MdDialogConfig</code> as well. Each dialog should typically have a label
+set via <code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+
+        <h4 id="focus-management" class="docs-header-link docs-markdown-h4">
+          <div header-link="focus-management"></div>
+          Focus management
+        </h4>
+      <p class="docs-markdown-p">By default, the first tabbable element within the dialog will receive focus upon open.</p>
+<p class="docs-markdown-p">Tabbing through the elements of the dialog will keep focus inside of the dialog element,
+wrapping back to the first tabbable element when reaching the end of the tab sequence.</p>
+
+        <h4 id="keyboard-interaction" class="docs-header-link docs-markdown-h4">
+          <div header-link="keyboard-interaction"></div>
+          Keyboard interaction
+        </h4>
+      <p class="docs-markdown-p">By default pressing the escape key will close the dialog. While this behavior can
+be turned off via the <code class="docs-markdown-code">disableClose</code> option, users should generally avoid doing so
+as it breaks the expected interaction pattern for screen-reader users.</p>
 </div></body></html>
