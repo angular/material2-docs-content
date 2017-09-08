@@ -9,7 +9,7 @@ import { Component, Inject, NgModule, ViewChild, ViewEncapsulation } from '@angu
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
-import { MD_DIALOG_DATA, MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdExpansionModule, MdFormFieldModule, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdPaginator, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdSort, MdSortModule, MdTableModule, MdTabsModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
+import { MD_DIALOG_DATA, MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdExpansionModule, MdFormFieldModule, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdPaginator, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdSort, MdSortModule, MdStepperModule, MdTableModule, MdTabsModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
@@ -54,6 +54,7 @@ ExampleMaterialModule.decorators = [
                     MdSliderModule,
                     MdSidenavModule,
                     MdSnackBarModule,
+                    MdStepperModule,
                     MdTabsModule,
                     MdToolbarModule,
                     MdTooltipModule,
@@ -1712,6 +1713,43 @@ function compare(a, b, isAsc) {
 }
 
 /**
+ * \@title Stepper overview
+ */
+class StepperOverviewExample {
+    /**
+     * @param {?} _formBuilder
+     */
+    constructor(_formBuilder) {
+        this._formBuilder = _formBuilder;
+        this.isLinear = false;
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', Validators.required]
+        });
+    }
+}
+StepperOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'stepper-overview-example',
+                template: "<button (click)=\"isLinear=!isLinear\" id=\"toggle-linear\">Enable linear</button><md-horizontal-stepper [linear]=\"isLinear\"><md-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template mdStepLabel>Fill out your name</ng-template><md-form-field><input mdInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></md-form-field><div><button md-button mdStepperNext>Next</button></div></form></md-step><md-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template mdStepLabel>Fill out your address</ng-template><md-form-field><input mdInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></md-form-field><div><button md-button mdStepperPrevious>Back</button> <button md-button mdStepperNext>Next</button></div></form></md-step><md-step><ng-template mdStepLabel>Done</ng-template>You are now done.<div><button md-button mdStepperPrevious>Back</button></div></md-step></md-horizontal-stepper>",
+                styles: ["/** No CSS for this example */ "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+StepperOverviewExample.ctorParameters = () => [
+    { type: FormBuilder, },
+];
+
+/**
  * \@title Basic table
  */
 class TableBasicExample {
@@ -2982,6 +3020,12 @@ const EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'stepper-overview': {
+        title: 'Stepper overview',
+        component: StepperOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'table-basic': {
         title: 'Basic table',
         component: TableBasicExample,
@@ -3117,6 +3161,7 @@ const EXAMPLE_LIST = [
     PizzaPartyComponent, SnackBarComponentExample,
     SnackBarOverviewExample,
     SortOverviewExample,
+    StepperOverviewExample,
     TableBasicExample,
     TableFilteringExample,
     TableHttpExample,
@@ -3197,5 +3242,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵl, ChipsStackedExample as ɵm, DatepickerApiExample as ɵn, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵp, DatepickerStartViewExample as ɵq, DatepickerTouchExample as ɵr, DialogContentExample as ɵs, DialogContentExampleDialog as ɵt, DialogDataExample as ɵu, DialogDataExampleDialog as ɵv, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵy, DialogOverviewExampleDialog as ɵz, ExpansionStepsExample as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ExampleMaterialModule as ɵcu, MenuIconsExample as ɵbm, MenuOverviewExample as ɵbn, PaginatorConfigurableExample as ɵbo, PaginatorOverviewExample as ɵbp, ProgressBarConfigurableExample as ɵbq, ProgressBarOverviewExample as ɵbr, ProgressSpinnerConfigurableExample as ɵbs, ProgressSpinnerOverviewExample as ɵbt, RadioNgModelExample as ɵbu, RadioOverviewExample as ɵbv, SelectFormExample as ɵbw, SelectOverviewExample as ɵbx, SidenavFabExample as ɵby, SidenavOverviewExample as ɵbz, SlideToggleConfigurableExample as ɵca, SlideToggleFormsExample as ɵcb, SlideToggleOverviewExample as ɵcc, SliderConfigurableExample as ɵcd, SliderOverviewExample as ɵce, PizzaPartyComponent as ɵcg, SnackBarComponentExample as ɵcf, SnackBarOverviewExample as ɵch, SortOverviewExample as ɵci, TableBasicExample as ɵcj, TableFilteringExample as ɵck, TableHttpExample as ɵcl, TableOverviewExample as ɵcm, TablePaginationExample as ɵcn, TableSortingExample as ɵco, TabsOverviewExample as ɵcp, TabsTemplateLabelExample as ɵcq, ToolbarOverviewExample as ɵcr, TooltipOverviewExample as ɵcs, TooltipPositionExample as ɵct };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵl, ChipsStackedExample as ɵm, DatepickerApiExample as ɵn, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵp, DatepickerStartViewExample as ɵq, DatepickerTouchExample as ɵr, DialogContentExample as ɵs, DialogContentExampleDialog as ɵt, DialogDataExample as ɵu, DialogDataExampleDialog as ɵv, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵy, DialogOverviewExampleDialog as ɵz, ExpansionStepsExample as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ExampleMaterialModule as ɵcu, MenuIconsExample as ɵbm, MenuOverviewExample as ɵbn, PaginatorConfigurableExample as ɵbo, PaginatorOverviewExample as ɵbp, ProgressBarConfigurableExample as ɵbq, ProgressBarOverviewExample as ɵbr, ProgressSpinnerConfigurableExample as ɵbs, ProgressSpinnerOverviewExample as ɵbt, RadioNgModelExample as ɵbu, RadioOverviewExample as ɵbv, SelectFormExample as ɵbw, SelectOverviewExample as ɵbx, SidenavFabExample as ɵby, SidenavOverviewExample as ɵbz, SlideToggleConfigurableExample as ɵca, SlideToggleFormsExample as ɵcb, SlideToggleOverviewExample as ɵcc, SliderConfigurableExample as ɵcd, SliderOverviewExample as ɵce, PizzaPartyComponent as ɵcg, SnackBarComponentExample as ɵcf, SnackBarOverviewExample as ɵch, SortOverviewExample as ɵci, TableBasicExample as ɵcj, TableFilteringExample as ɵck, TableHttpExample as ɵcl, TableOverviewExample as ɵcm, TablePaginationExample as ɵcn, TableSortingExample as ɵco, TabsOverviewExample as ɵcp, TabsTemplateLabelExample as ɵcq, ToolbarOverviewExample as ɵcr, TooltipOverviewExample as ɵcs, TooltipPositionExample as ɵct };
 //# sourceMappingURL=material-examples.js.map

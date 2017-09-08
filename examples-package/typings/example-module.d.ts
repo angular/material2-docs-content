@@ -65,6 +65,7 @@ import { SliderOverviewExample } from './slider-overview/slider-overview-example
 import { SnackBarComponentExample } from './snack-bar-component/snack-bar-component-example';
 import { SnackBarOverviewExample } from './snack-bar-overview/snack-bar-overview-example';
 import { SortOverviewExample } from './sort-overview/sort-overview-example';
+import { StepperOverviewExample } from './stepper-overview/stepper-overview-example';
 import { TableBasicExample } from './table-basic/table-basic-example';
 import { TableFilteringExample } from './table-filtering/table-filtering-example';
 import { TableHttpExample } from './table-http/table-http-example';
@@ -444,6 +445,12 @@ export declare const EXAMPLE_COMPONENTS: {
         additionalFiles: null;
         selectorName: null;
     };
+    'stepper-overview': {
+        title: string;
+        component: typeof StepperOverviewExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
     'table-basic': {
         title: string;
         component: typeof TableBasicExample;
@@ -517,6 +524,6 @@ export declare const EXAMPLE_COMPONENTS: {
         selectorName: null;
     };
 };
-export declare const EXAMPLE_LIST: (typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof IconSvgExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof TableHttpExample)[];
+export declare const EXAMPLE_LIST: (typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof IconSvgExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample)[];
 export declare class ExampleModule {
 }

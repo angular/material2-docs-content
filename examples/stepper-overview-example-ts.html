@@ -1,0 +1,27 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/**
+ * @title Stepper overview
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'stepper-overview-example'</span>,
+  templateUrl: <span class="hljs-string">'stepper-overview-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'stepper-overview-example.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperOverviewExample {
+  isLinear = <span class="hljs-literal">false</span>;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>) { }
+
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.firstFormGroup = <span class="hljs-keyword">this</span>._formBuilder.group({
+      firstCtrl: [<span class="hljs-string">''</span>, Validators.required]
+    });
+    <span class="hljs-keyword">this</span>.secondFormGroup = <span class="hljs-keyword">this</span>._formBuilder.group({
+      secondCtrl: [<span class="hljs-string">''</span>, Validators.required]
+    });
+  }
+}

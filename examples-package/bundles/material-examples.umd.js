@@ -69,6 +69,7 @@ ExampleMaterialModule.decorators = [
                     _angular_material.MdSliderModule,
                     _angular_material.MdSidenavModule,
                     _angular_material.MdSnackBarModule,
+                    _angular_material.MdStepperModule,
                     _angular_material.MdTabsModule,
                     _angular_material.MdToolbarModule,
                     _angular_material.MdTooltipModule,
@@ -1812,6 +1813,43 @@ function compare(a, b, isAsc) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
 /**
+ * \@title Stepper overview
+ */
+var StepperOverviewExample = (function () {
+    /**
+     * @param {?} _formBuilder
+     */
+    function StepperOverviewExample(_formBuilder) {
+        this._formBuilder = _formBuilder;
+        this.isLinear = false;
+    }
+    /**
+     * @return {?}
+     */
+    StepperOverviewExample.prototype.ngOnInit = function () {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', _angular_forms.Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', _angular_forms.Validators.required]
+        });
+    };
+    return StepperOverviewExample;
+}());
+StepperOverviewExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'stepper-overview-example',
+                template: "<button (click)=\"isLinear=!isLinear\" id=\"toggle-linear\">Enable linear</button><md-horizontal-stepper [linear]=\"isLinear\"><md-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template mdStepLabel>Fill out your name</ng-template><md-form-field><input mdInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></md-form-field><div><button md-button mdStepperNext>Next</button></div></form></md-step><md-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template mdStepLabel>Fill out your address</ng-template><md-form-field><input mdInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></md-form-field><div><button md-button mdStepperPrevious>Back</button> <button md-button mdStepperNext>Next</button></div></form></md-step><md-step><ng-template mdStepLabel>Done</ng-template>You are now done.<div><button md-button mdStepperPrevious>Back</button></div></md-step></md-horizontal-stepper>",
+                styles: ["/** No CSS for this example */ "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+StepperOverviewExample.ctorParameters = function () { return [
+    { type: _angular_forms.FormBuilder, },
+]; };
+/**
  * \@title Basic table
  */
 var TableBasicExample = (function () {
@@ -3152,6 +3190,12 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'stepper-overview': {
+        title: 'Stepper overview',
+        component: StepperOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'table-basic': {
         title: 'Basic table',
         component: TableBasicExample,
@@ -3287,6 +3331,7 @@ var EXAMPLE_LIST = [
     PizzaPartyComponent, SnackBarComponentExample,
     SnackBarOverviewExample,
     SortOverviewExample,
+    StepperOverviewExample,
     TableBasicExample,
     TableFilteringExample,
     TableHttpExample,
@@ -3376,6 +3421,7 @@ exports.CardFancyExample = CardFancyExample;
 exports.ToolbarMultirowExample = ToolbarMultirowExample;
 exports.ButtonToggleOverviewExample = ButtonToggleOverviewExample;
 exports.ExpansionOverviewExample = ExpansionOverviewExample;
+exports.StepperOverviewExample = StepperOverviewExample;
 exports.ɵa = AutocompleteDisplayExample;
 exports.ɵb = AutocompleteFilterExample;
 exports.ɵc = AutocompleteOverviewExample;
