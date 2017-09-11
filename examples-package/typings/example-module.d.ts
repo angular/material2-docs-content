@@ -43,6 +43,7 @@ import { InputOverviewExample } from './input-overview/input-overview-example';
 import { InputPrefixSuffixExample } from './input-prefix-suffix/input-prefix-suffix-example';
 import { ListOverviewExample } from './list-overview/list-overview-example';
 import { ListSectionsExample } from './list-sections/list-sections-example';
+import { ListSelectionExample } from './list-selection/list-selection-example';
 import { MenuIconsExample } from './menu-icons/menu-icons-example';
 import { MenuOverviewExample } from './menu-overview/menu-overview-example';
 import { PaginatorConfigurableExample } from './paginator-configurable/paginator-configurable-example';
@@ -310,6 +311,12 @@ export declare const EXAMPLE_COMPONENTS: {
     'list-sections': {
         title: string;
         component: typeof ListSectionsExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'list-selection': {
+        title: string;
+        component: typeof ListSelectionExample;
         additionalFiles: null;
         selectorName: null;
     };

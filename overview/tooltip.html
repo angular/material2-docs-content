@@ -58,4 +58,13 @@ delay of 1500ms. The longpress behavior requires HammerJS to be loaded on the pa
 <p class="docs-markdown-p">The tooltip can also be shown and hidden through the <code class="docs-markdown-code">show</code> and <code class="docs-markdown-code">hide</code> directive methods,
 which both accept a number in milliseconds to delay before applying the display change.</p>
 <p class="docs-markdown-p">To turn off the tooltip and prevent it from showing to the user, use the <code class="docs-markdown-code">mdTooltipDisabled</code> input flag.</p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <div header-link="accessibility"></div>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Elements with the <code class="docs-markdown-code">mdTooltip</code> will add an <code class="docs-markdown-code">aria-describedby</code> label that provides a reference
+to a visually hidden element containing the tooltip's message. This provides screenreaders the
+information needed to read out the tooltip's contents when the end-user focuses on the element
+triggering the tooltip.</p>
 </div></body></html>

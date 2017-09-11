@@ -85,4 +85,17 @@ via CSS:</p>
         </h3>
       <p class="docs-markdown-p">For a sidenav with a FAB (Floating Action Button) or other floating element, the recommended approach is to place the FAB
 outside of the scrollable region and absolutely position it.</p>
+
+        <h3 id="disabling-closing-of-sidenav" class="docs-header-link docs-markdown-h3">
+          <div header-link="disabling-closing-of-sidenav"></div>
+          Disabling closing of sidenav
+        </h3>
+      <p class="docs-markdown-p">By default, sidenav can be closed either by clicking on the backdrop or by pressing <kbd>ESCAPE</kbd>.
+The <code class="docs-markdown-code">disableClose</code> attribute can be set on <code class="docs-markdown-code">md-sidenav</code> to disable automatic closing when the backdrop
+is clicked or <kbd>ESCAPE</kbd> is pressed. To add custom logic on backdrop click, add a <code class="docs-markdown-code">(backdropClick)</code> listener to
+<code class="docs-markdown-code">md-sidenav-container</code>. For custom <kbd>ESCAPE</kbd> logic, a standard <code class="docs-markdown-code">(keydown)</code> listener will suffice.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-sidenav-container</span> (<span class="hljs-attr">backdropClick</span>)=<span class="hljs-string">"customBackdropClickHandler()"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-sidenav</span> <span class="hljs-attr">disableClose</span> (<span class="hljs-attr">keydown</span>)=<span class="hljs-string">"customKeydownHandler($event)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-sidenav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-sidenav-container</span>&gt;</span>
+</code></pre>
 </div></body></html>

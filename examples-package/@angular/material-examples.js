@@ -1165,6 +1165,26 @@ ListSectionsExample.decorators = [
 ListSectionsExample.ctorParameters = () => [];
 
 /**
+ * \@title List with selection
+ */
+class ListSelectionExample {
+    constructor() {
+        this.typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
+    }
+}
+ListSelectionExample.decorators = [
+    { type: Component, args: [{
+                selector: 'list-selection-example',
+                styles: ["/** No styles for this example. */ "],
+                template: "<md-selection-list #shoes><md-list-option *ngFor=\"let shoe of typesOfShoes\">{{shoe}}</md-list-option></md-selection-list><p>Options selected: {{shoes.selectedOptions.selected.length}}</p>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ListSelectionExample.ctorParameters = () => [];
+
+/**
  * \@title Menu with icons
  */
 class MenuIconsExample {
@@ -2567,14 +2587,15 @@ TabsOverviewExample.decorators = [
 TabsOverviewExample.ctorParameters = () => [];
 
 /**
- * \@title Coming soon!
+ * \@title Complex Example
  */
 class TabsTemplateLabelExample {
 }
 TabsTemplateLabelExample.decorators = [
     { type: Component, args: [{
                 selector: 'tabs-template-label-example',
-                template: "More examples coming soon!",
+                template: "<md-tab-group class=\"demo-tab-group\"><md-tab label=\"Tab 1\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></md-tab><md-tab label=\"Tab 2\"><ng-template md-tab-label>⭐</ng-template><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></md-tab><md-tab label=\"Tab 3\" disabled=\"disabled\">No content</md-tab><md-tab label=\"Tab 4\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></md-tab><md-tab label=\"Tab 5\">No content</md-tab><md-tab label=\"Tab 6\">No content</md-tab></md-tab-group>",
+                styles: [".demo-tab-group { border: 1px solid #e8e8e8; } .demo-tab-content { padding: 16px; } "]
             },] },
 ];
 /**
@@ -2888,6 +2909,12 @@ const EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'list-selection': {
+        title: 'List with selection',
+        component: ListSelectionExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'menu-icons': {
         title: 'Menu with icons',
         component: MenuIconsExample,
@@ -3069,7 +3096,7 @@ const EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'tabs-template-label': {
-        title: 'Coming soon!',
+        title: 'Complex Example',
         component: TabsTemplateLabelExample,
         additionalFiles: null,
         selectorName: null
@@ -3139,6 +3166,7 @@ const EXAMPLE_LIST = [
     InputPrefixSuffixExample,
     ListOverviewExample,
     ListSectionsExample,
+    ListSelectionExample,
     MenuIconsExample,
     MenuOverviewExample,
     PaginatorConfigurableExample,
@@ -3242,5 +3270,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵl, ChipsStackedExample as ɵm, DatepickerApiExample as ɵn, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵp, DatepickerStartViewExample as ɵq, DatepickerTouchExample as ɵr, DialogContentExample as ɵs, DialogContentExampleDialog as ɵt, DialogDataExample as ɵu, DialogDataExampleDialog as ɵv, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵy, DialogOverviewExampleDialog as ɵz, ExpansionStepsExample as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ExampleMaterialModule as ɵcu, MenuIconsExample as ɵbm, MenuOverviewExample as ɵbn, PaginatorConfigurableExample as ɵbo, PaginatorOverviewExample as ɵbp, ProgressBarConfigurableExample as ɵbq, ProgressBarOverviewExample as ɵbr, ProgressSpinnerConfigurableExample as ɵbs, ProgressSpinnerOverviewExample as ɵbt, RadioNgModelExample as ɵbu, RadioOverviewExample as ɵbv, SelectFormExample as ɵbw, SelectOverviewExample as ɵbx, SidenavFabExample as ɵby, SidenavOverviewExample as ɵbz, SlideToggleConfigurableExample as ɵca, SlideToggleFormsExample as ɵcb, SlideToggleOverviewExample as ɵcc, SliderConfigurableExample as ɵcd, SliderOverviewExample as ɵce, PizzaPartyComponent as ɵcg, SnackBarComponentExample as ɵcf, SnackBarOverviewExample as ɵch, SortOverviewExample as ɵci, TableBasicExample as ɵcj, TableFilteringExample as ɵck, TableHttpExample as ɵcl, TableOverviewExample as ɵcm, TablePaginationExample as ɵcn, TableSortingExample as ɵco, TabsOverviewExample as ɵcp, TabsTemplateLabelExample as ɵcq, ToolbarOverviewExample as ɵcr, TooltipOverviewExample as ɵcs, TooltipPositionExample as ɵct };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵl, ChipsStackedExample as ɵm, DatepickerApiExample as ɵn, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵp, DatepickerStartViewExample as ɵq, DatepickerTouchExample as ɵr, DialogContentExample as ɵs, DialogContentExampleDialog as ɵt, DialogDataExample as ɵu, DialogDataExampleDialog as ɵv, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵy, DialogOverviewExampleDialog as ɵz, ExpansionStepsExample as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ListSelectionExample as ɵbm, ExampleMaterialModule as ɵcv, MenuIconsExample as ɵbn, MenuOverviewExample as ɵbo, PaginatorConfigurableExample as ɵbp, PaginatorOverviewExample as ɵbq, ProgressBarConfigurableExample as ɵbr, ProgressBarOverviewExample as ɵbs, ProgressSpinnerConfigurableExample as ɵbt, ProgressSpinnerOverviewExample as ɵbu, RadioNgModelExample as ɵbv, RadioOverviewExample as ɵbw, SelectFormExample as ɵbx, SelectOverviewExample as ɵby, SidenavFabExample as ɵbz, SidenavOverviewExample as ɵca, SlideToggleConfigurableExample as ɵcb, SlideToggleFormsExample as ɵcc, SlideToggleOverviewExample as ɵcd, SliderConfigurableExample as ɵce, SliderOverviewExample as ɵcf, PizzaPartyComponent as ɵch, SnackBarComponentExample as ɵcg, SnackBarOverviewExample as ɵci, SortOverviewExample as ɵcj, TableBasicExample as ɵck, TableFilteringExample as ɵcl, TableHttpExample as ɵcm, TableOverviewExample as ɵcn, TablePaginationExample as ɵco, TableSortingExample as ɵcp, TabsOverviewExample as ɵcq, TabsTemplateLabelExample as ɵcr, ToolbarOverviewExample as ɵcs, TooltipOverviewExample as ɵct, TooltipPositionExample as ɵcu };
 //# sourceMappingURL=material-examples.js.map

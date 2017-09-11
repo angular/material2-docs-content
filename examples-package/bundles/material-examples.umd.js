@@ -1238,6 +1238,26 @@ ListSectionsExample.decorators = [
  */
 ListSectionsExample.ctorParameters = function () { return []; };
 /**
+ * \@title List with selection
+ */
+var ListSelectionExample = (function () {
+    function ListSelectionExample() {
+        this.typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
+    }
+    return ListSelectionExample;
+}());
+ListSelectionExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'list-selection-example',
+                styles: ["/** No styles for this example. */ "],
+                template: "<md-selection-list #shoes><md-list-option *ngFor=\"let shoe of typesOfShoes\">{{shoe}}</md-list-option></md-selection-list><p>Options selected: {{shoes.selectedOptions.selected.length}}</p>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ListSelectionExample.ctorParameters = function () { return []; };
+/**
  * \@title Menu with icons
  */
 var MenuIconsExample = (function () {
@@ -2729,7 +2749,7 @@ TabsOverviewExample.decorators = [
  */
 TabsOverviewExample.ctorParameters = function () { return []; };
 /**
- * \@title Coming soon!
+ * \@title Complex Example
  */
 var TabsTemplateLabelExample = (function () {
     function TabsTemplateLabelExample() {
@@ -2739,7 +2759,8 @@ var TabsTemplateLabelExample = (function () {
 TabsTemplateLabelExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'tabs-template-label-example',
-                template: "More examples coming soon!",
+                template: "<md-tab-group class=\"demo-tab-group\"><md-tab label=\"Tab 1\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></md-tab><md-tab label=\"Tab 2\"><ng-template md-tab-label>⭐</ng-template><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></md-tab><md-tab label=\"Tab 3\" disabled=\"disabled\">No content</md-tab><md-tab label=\"Tab 4\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></md-tab><md-tab label=\"Tab 5\">No content</md-tab><md-tab label=\"Tab 6\">No content</md-tab></md-tab-group>",
+                styles: [".demo-tab-group { border: 1px solid #e8e8e8; } .demo-tab-content { padding: 16px; } "]
             },] },
 ];
 /**
@@ -3058,6 +3079,12 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'list-selection': {
+        title: 'List with selection',
+        component: ListSelectionExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'menu-icons': {
         title: 'Menu with icons',
         component: MenuIconsExample,
@@ -3239,7 +3266,7 @@ var EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'tabs-template-label': {
-        title: 'Coming soon!',
+        title: 'Complex Example',
         component: TabsTemplateLabelExample,
         additionalFiles: null,
         selectorName: null
@@ -3309,6 +3336,7 @@ var EXAMPLE_LIST = [
     InputPrefixSuffixExample,
     ListOverviewExample,
     ListSectionsExample,
+    ListSelectionExample,
     MenuIconsExample,
     MenuOverviewExample,
     PaginatorConfigurableExample,
@@ -3460,41 +3488,42 @@ exports.ɵbi = InputHintExample;
 exports.ɵbj = InputOverviewExample;
 exports.ɵbk = InputPrefixSuffixExample;
 exports.ɵbl = ListSectionsExample;
-exports.ɵcu = ExampleMaterialModule;
-exports.ɵbm = MenuIconsExample;
-exports.ɵbn = MenuOverviewExample;
-exports.ɵbo = PaginatorConfigurableExample;
-exports.ɵbp = PaginatorOverviewExample;
-exports.ɵbq = ProgressBarConfigurableExample;
-exports.ɵbr = ProgressBarOverviewExample;
-exports.ɵbs = ProgressSpinnerConfigurableExample;
-exports.ɵbt = ProgressSpinnerOverviewExample;
-exports.ɵbu = RadioNgModelExample;
-exports.ɵbv = RadioOverviewExample;
-exports.ɵbw = SelectFormExample;
-exports.ɵbx = SelectOverviewExample;
-exports.ɵby = SidenavFabExample;
-exports.ɵbz = SidenavOverviewExample;
-exports.ɵca = SlideToggleConfigurableExample;
-exports.ɵcb = SlideToggleFormsExample;
-exports.ɵcc = SlideToggleOverviewExample;
-exports.ɵcd = SliderConfigurableExample;
-exports.ɵce = SliderOverviewExample;
-exports.ɵcg = PizzaPartyComponent;
-exports.ɵcf = SnackBarComponentExample;
-exports.ɵch = SnackBarOverviewExample;
-exports.ɵci = SortOverviewExample;
-exports.ɵcj = TableBasicExample;
-exports.ɵck = TableFilteringExample;
-exports.ɵcl = TableHttpExample;
-exports.ɵcm = TableOverviewExample;
-exports.ɵcn = TablePaginationExample;
-exports.ɵco = TableSortingExample;
-exports.ɵcp = TabsOverviewExample;
-exports.ɵcq = TabsTemplateLabelExample;
-exports.ɵcr = ToolbarOverviewExample;
-exports.ɵcs = TooltipOverviewExample;
-exports.ɵct = TooltipPositionExample;
+exports.ɵbm = ListSelectionExample;
+exports.ɵcv = ExampleMaterialModule;
+exports.ɵbn = MenuIconsExample;
+exports.ɵbo = MenuOverviewExample;
+exports.ɵbp = PaginatorConfigurableExample;
+exports.ɵbq = PaginatorOverviewExample;
+exports.ɵbr = ProgressBarConfigurableExample;
+exports.ɵbs = ProgressBarOverviewExample;
+exports.ɵbt = ProgressSpinnerConfigurableExample;
+exports.ɵbu = ProgressSpinnerOverviewExample;
+exports.ɵbv = RadioNgModelExample;
+exports.ɵbw = RadioOverviewExample;
+exports.ɵbx = SelectFormExample;
+exports.ɵby = SelectOverviewExample;
+exports.ɵbz = SidenavFabExample;
+exports.ɵca = SidenavOverviewExample;
+exports.ɵcb = SlideToggleConfigurableExample;
+exports.ɵcc = SlideToggleFormsExample;
+exports.ɵcd = SlideToggleOverviewExample;
+exports.ɵce = SliderConfigurableExample;
+exports.ɵcf = SliderOverviewExample;
+exports.ɵch = PizzaPartyComponent;
+exports.ɵcg = SnackBarComponentExample;
+exports.ɵci = SnackBarOverviewExample;
+exports.ɵcj = SortOverviewExample;
+exports.ɵck = TableBasicExample;
+exports.ɵcl = TableFilteringExample;
+exports.ɵcm = TableHttpExample;
+exports.ɵcn = TableOverviewExample;
+exports.ɵco = TablePaginationExample;
+exports.ɵcp = TableSortingExample;
+exports.ɵcq = TabsOverviewExample;
+exports.ɵcr = TabsTemplateLabelExample;
+exports.ɵcs = ToolbarOverviewExample;
+exports.ɵct = TooltipOverviewExample;
+exports.ɵcu = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
