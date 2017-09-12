@@ -1269,12 +1269,32 @@ MenuIconsExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'menu-icons-example',
                 template: "<button md-icon-button [mdMenuTriggerFor]=\"menu\"><md-icon>more_vert</md-icon></button><md-menu #menu=\"mdMenu\"><button md-menu-item><md-icon>dialpad</md-icon><span>Redial</span></button> <button md-menu-item disabled=\"disabled\"><md-icon>voicemail</md-icon><span>Check voicemail</span></button> <button md-menu-item><md-icon>notifications_off</md-icon><span>Disable alerts</span></button></md-menu>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /**
  * @nocollapse
  */
 MenuIconsExample.ctorParameters = function () { return []; };
+/**
+ * \@title Nested menu
+ */
+var NestedMenuExample = (function () {
+    function NestedMenuExample() {
+    }
+    return NestedMenuExample;
+}());
+NestedMenuExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'nested-menu-example',
+                template: "<button md-button [mdMenuTriggerFor]=\"animals\">Animal index</button><md-menu #animals=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"vertebrates\">Vertebrates</button> <button md-menu-item [mdMenuTriggerFor]=\"invertebrates\">Invertebrates</button></md-menu><md-menu #vertebrates=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"fish\">Fishes</button> <button md-menu-item [mdMenuTriggerFor]=\"amphibians\">Amphibians</button> <button md-menu-item [mdMenuTriggerFor]=\"reptiles\">Reptiles</button> <button md-menu-item>Birds</button> <button md-menu-item>Mammals</button></md-menu><md-menu #invertebrates=\"mdMenu\"><button md-menu-item>Insects</button> <button md-menu-item>Molluscs</button> <button md-menu-item>Crustaceans</button> <button md-menu-item>Corals</button> <button md-menu-item>Arachnids</button> <button md-menu-item>Velvet worms</button> <button md-menu-item>Horseshoe crabs</button></md-menu><md-menu #fish=\"mdMenu\"><button md-menu-item>Baikal oilfish</button> <button md-menu-item>Bala shark</button> <button md-menu-item>Ballan wrasse</button> <button md-menu-item>Bamboo shark</button> <button md-menu-item>Banded killifish</button></md-menu><md-menu #amphibians=\"mdMenu\"><button md-menu-item>Sonoran desert toad</button> <button md-menu-item>Western toad</button> <button md-menu-item>Arroyo toad</button> <button md-menu-item>Yosemite toad</button></md-menu><md-menu #reptiles=\"mdMenu\"><button md-menu-item>Banded Day Gecko</button> <button md-menu-item>Banded Gila Monster</button> <button md-menu-item>Black Tree Monitor</button> <button md-menu-item>Blue Spiny Lizard</button> <button md-menu-item disabled=\"disabled\">Velociraptor</button></md-menu>",
+                styles: ["/** No CSS for this example */ "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+NestedMenuExample.ctorParameters = function () { return []; };
 /**
  * \@title Basic menu
  */
@@ -1287,6 +1307,7 @@ MenuOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'menu-overview-example',
                 template: "<button md-button [mdMenuTriggerFor]=\"menu\">Menu</button><md-menu #menu=\"mdMenu\"><button md-menu-item>Item 1</button> <button md-menu-item>Item 2</button></md-menu>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /**
@@ -3091,6 +3112,12 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'nested-menu': {
+        title: 'Nested menu',
+        component: NestedMenuExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'menu-overview': {
         title: 'Basic menu',
         component: MenuOverviewExample,
@@ -3338,6 +3365,7 @@ var EXAMPLE_LIST = [
     ListSectionsExample,
     ListSelectionExample,
     MenuIconsExample,
+    NestedMenuExample,
     MenuOverviewExample,
     PaginatorConfigurableExample,
     PaginatorOverviewExample,
@@ -3489,41 +3517,42 @@ exports.ɵbj = InputOverviewExample;
 exports.ɵbk = InputPrefixSuffixExample;
 exports.ɵbl = ListSectionsExample;
 exports.ɵbm = ListSelectionExample;
-exports.ɵcv = ExampleMaterialModule;
+exports.ɵcw = ExampleMaterialModule;
 exports.ɵbn = MenuIconsExample;
-exports.ɵbo = MenuOverviewExample;
-exports.ɵbp = PaginatorConfigurableExample;
-exports.ɵbq = PaginatorOverviewExample;
-exports.ɵbr = ProgressBarConfigurableExample;
-exports.ɵbs = ProgressBarOverviewExample;
-exports.ɵbt = ProgressSpinnerConfigurableExample;
-exports.ɵbu = ProgressSpinnerOverviewExample;
-exports.ɵbv = RadioNgModelExample;
-exports.ɵbw = RadioOverviewExample;
-exports.ɵbx = SelectFormExample;
-exports.ɵby = SelectOverviewExample;
-exports.ɵbz = SidenavFabExample;
-exports.ɵca = SidenavOverviewExample;
-exports.ɵcb = SlideToggleConfigurableExample;
-exports.ɵcc = SlideToggleFormsExample;
-exports.ɵcd = SlideToggleOverviewExample;
-exports.ɵce = SliderConfigurableExample;
-exports.ɵcf = SliderOverviewExample;
-exports.ɵch = PizzaPartyComponent;
-exports.ɵcg = SnackBarComponentExample;
-exports.ɵci = SnackBarOverviewExample;
-exports.ɵcj = SortOverviewExample;
-exports.ɵck = TableBasicExample;
-exports.ɵcl = TableFilteringExample;
-exports.ɵcm = TableHttpExample;
-exports.ɵcn = TableOverviewExample;
-exports.ɵco = TablePaginationExample;
-exports.ɵcp = TableSortingExample;
-exports.ɵcq = TabsOverviewExample;
-exports.ɵcr = TabsTemplateLabelExample;
-exports.ɵcs = ToolbarOverviewExample;
-exports.ɵct = TooltipOverviewExample;
-exports.ɵcu = TooltipPositionExample;
+exports.ɵbp = MenuOverviewExample;
+exports.ɵbo = NestedMenuExample;
+exports.ɵbq = PaginatorConfigurableExample;
+exports.ɵbr = PaginatorOverviewExample;
+exports.ɵbs = ProgressBarConfigurableExample;
+exports.ɵbt = ProgressBarOverviewExample;
+exports.ɵbu = ProgressSpinnerConfigurableExample;
+exports.ɵbv = ProgressSpinnerOverviewExample;
+exports.ɵbw = RadioNgModelExample;
+exports.ɵbx = RadioOverviewExample;
+exports.ɵby = SelectFormExample;
+exports.ɵbz = SelectOverviewExample;
+exports.ɵca = SidenavFabExample;
+exports.ɵcb = SidenavOverviewExample;
+exports.ɵcc = SlideToggleConfigurableExample;
+exports.ɵcd = SlideToggleFormsExample;
+exports.ɵce = SlideToggleOverviewExample;
+exports.ɵcf = SliderConfigurableExample;
+exports.ɵcg = SliderOverviewExample;
+exports.ɵci = PizzaPartyComponent;
+exports.ɵch = SnackBarComponentExample;
+exports.ɵcj = SnackBarOverviewExample;
+exports.ɵck = SortOverviewExample;
+exports.ɵcl = TableBasicExample;
+exports.ɵcm = TableFilteringExample;
+exports.ɵcn = TableHttpExample;
+exports.ɵco = TableOverviewExample;
+exports.ɵcp = TablePaginationExample;
+exports.ɵcq = TableSortingExample;
+exports.ɵcr = TabsOverviewExample;
+exports.ɵcs = TabsTemplateLabelExample;
+exports.ɵct = ToolbarOverviewExample;
+exports.ɵcu = TooltipOverviewExample;
+exports.ɵcv = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
