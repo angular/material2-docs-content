@@ -1,4 +1,3 @@
-import * as tslib_1 from "tslib";
 /**
  * @license
  * Copyright Google Inc. All Rights Reserved.
@@ -25,11 +24,9 @@ import 'rxjs/add/observable/fromEvent';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/switchMap';
-var ExampleMaterialModule = (function () {
-    function ExampleMaterialModule() {
-    }
-    return ExampleMaterialModule;
-}());
+
+class ExampleMaterialModule {
+}
 ExampleMaterialModule.decorators = [
     { type: NgModule, args: [{
                 exports: [
@@ -70,21 +67,21 @@ ExampleMaterialModule.decorators = [
 /**
  * @nocollapse
  */
-ExampleMaterialModule.ctorParameters = function () { return []; };
-var User = (function () {
+ExampleMaterialModule.ctorParameters = () => [];
+
+class User {
     /**
      * @param {?} name
      */
-    function User(name) {
+    constructor(name) {
         this.name = name;
     }
-    return User;
-}());
+}
 /**
  * \@title Display value autocomplete
  */
-var AutocompleteDisplayExample = (function () {
-    function AutocompleteDisplayExample() {
+class AutocompleteDisplayExample {
+    constructor() {
         this.myControl = new FormControl();
         this.options = [
             new User('Mary'),
@@ -95,29 +92,27 @@ var AutocompleteDisplayExample = (function () {
     /**
      * @return {?}
      */
-    AutocompleteDisplayExample.prototype.ngOnInit = function () {
-        var _this = this;
+    ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
             .startWith(null)
-            .map(function (user) { return user && typeof user === 'object' ? user.name : user; })
-            .map(function (name) { return name ? _this.filter(name) : _this.options.slice(); });
-    };
+            .map(user => user && typeof user === 'object' ? user.name : user)
+            .map(name => name ? this.filter(name) : this.options.slice());
+    }
     /**
      * @param {?} name
      * @return {?}
      */
-    AutocompleteDisplayExample.prototype.filter = function (name) {
-        return this.options.filter(function (option) { return option.name.toLowerCase().indexOf(name.toLowerCase()) === 0; });
-    };
+    filter(name) {
+        return this.options.filter(option => option.name.toLowerCase().indexOf(name.toLowerCase()) === 0);
+    }
     /**
      * @param {?} user
      * @return {?}
      */
-    AutocompleteDisplayExample.prototype.displayFn = function (user) {
+    displayFn(user) {
         return user ? user.name : user;
-    };
-    return AutocompleteDisplayExample;
-}());
+    }
+}
 AutocompleteDisplayExample.decorators = [
     { type: Component, args: [{
                 selector: 'autocomplete-display-example',
@@ -128,12 +123,13 @@ AutocompleteDisplayExample.decorators = [
 /**
  * @nocollapse
  */
-AutocompleteDisplayExample.ctorParameters = function () { return []; };
+AutocompleteDisplayExample.ctorParameters = () => [];
+
 /**
  * \@title Filter autocomplete
  */
-var AutocompleteFilterExample = (function () {
-    function AutocompleteFilterExample() {
+class AutocompleteFilterExample {
+    constructor() {
         this.myControl = new FormControl();
         this.options = [
             'One',
@@ -144,21 +140,19 @@ var AutocompleteFilterExample = (function () {
     /**
      * @return {?}
      */
-    AutocompleteFilterExample.prototype.ngOnInit = function () {
-        var _this = this;
+    ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
             .startWith(null)
-            .map(function (val) { return val ? _this.filter(val) : _this.options.slice(); });
-    };
+            .map(val => val ? this.filter(val) : this.options.slice());
+    }
     /**
      * @param {?} val
      * @return {?}
      */
-    AutocompleteFilterExample.prototype.filter = function (val) {
-        return this.options.filter(function (option) { return option.toLowerCase().indexOf(val.toLowerCase()) === 0; });
-    };
-    return AutocompleteFilterExample;
-}());
+    filter(val) {
+        return this.options.filter(option => option.toLowerCase().indexOf(val.toLowerCase()) === 0);
+    }
+}
 AutocompleteFilterExample.decorators = [
     { type: Component, args: [{
                 selector: 'autocomplete-filter-example',
@@ -169,13 +163,13 @@ AutocompleteFilterExample.decorators = [
 /**
  * @nocollapse
  */
-AutocompleteFilterExample.ctorParameters = function () { return []; };
+AutocompleteFilterExample.ctorParameters = () => [];
+
 /**
  * \@title Autocomplete overview
  */
-var AutocompleteOverviewExample = (function () {
-    function AutocompleteOverviewExample() {
-        var _this = this;
+class AutocompleteOverviewExample {
+    constructor() {
         this.states = [
             {
                 name: 'Arkansas',
@@ -205,17 +199,16 @@ var AutocompleteOverviewExample = (function () {
         this.stateCtrl = new FormControl();
         this.filteredStates = this.stateCtrl.valueChanges
             .startWith(null)
-            .map(function (state) { return state ? _this.filterStates(state) : _this.states.slice(); });
+            .map(state => state ? this.filterStates(state) : this.states.slice());
     }
     /**
      * @param {?} name
      * @return {?}
      */
-    AutocompleteOverviewExample.prototype.filterStates = function (name) {
-        return this.states.filter(function (state) { return state.name.toLowerCase().indexOf(name.toLowerCase()) === 0; });
-    };
-    return AutocompleteOverviewExample;
-}());
+    filterStates(name) {
+        return this.states.filter(state => state.name.toLowerCase().indexOf(name.toLowerCase()) === 0);
+    }
+}
 AutocompleteOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'autocomplete-overview-example',
@@ -226,12 +219,13 @@ AutocompleteOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-AutocompleteOverviewExample.ctorParameters = function () { return []; };
+AutocompleteOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Simple autocomplete
  */
-var AutocompleteSimpleExample = (function () {
-    function AutocompleteSimpleExample() {
+class AutocompleteSimpleExample {
+    constructor() {
         this.myControl = new FormControl();
         this.options = [
             'One',
@@ -239,8 +233,7 @@ var AutocompleteSimpleExample = (function () {
             'Three'
         ];
     }
-    return AutocompleteSimpleExample;
-}());
+}
 AutocompleteSimpleExample.decorators = [
     { type: Component, args: [{
                 selector: 'autocomplete-simple-example',
@@ -251,15 +244,13 @@ AutocompleteSimpleExample.decorators = [
 /**
  * @nocollapse
  */
-AutocompleteSimpleExample.ctorParameters = function () { return []; };
+AutocompleteSimpleExample.ctorParameters = () => [];
+
 /**
  * \@title Basic buttons
  */
-var ButtonOverviewExample = (function () {
-    function ButtonOverviewExample() {
-    }
-    return ButtonOverviewExample;
-}());
+class ButtonOverviewExample {
+}
 ButtonOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'button-overview-example',
@@ -269,15 +260,13 @@ ButtonOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-ButtonOverviewExample.ctorParameters = function () { return []; };
+ButtonOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Exclusive selection
  */
-var ButtonToggleExclusiveExample = (function () {
-    function ButtonToggleExclusiveExample() {
-    }
-    return ButtonToggleExclusiveExample;
-}());
+class ButtonToggleExclusiveExample {
+}
 ButtonToggleExclusiveExample.decorators = [
     { type: Component, args: [{
                 selector: 'button-toggle-exclusive-example',
@@ -288,15 +277,13 @@ ButtonToggleExclusiveExample.decorators = [
 /**
  * @nocollapse
  */
-ButtonToggleExclusiveExample.ctorParameters = function () { return []; };
+ButtonToggleExclusiveExample.ctorParameters = () => [];
+
 /**
  * \@title Basic button-toggles
  */
-var ButtonToggleOverviewExample = (function () {
-    function ButtonToggleOverviewExample() {
-    }
-    return ButtonToggleOverviewExample;
-}());
+class ButtonToggleOverviewExample {
+}
 ButtonToggleOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'button-toggle-overview-example',
@@ -306,15 +293,13 @@ ButtonToggleOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-ButtonToggleOverviewExample.ctorParameters = function () { return []; };
+ButtonToggleOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Button varieties
  */
-var ButtonTypesExample = (function () {
-    function ButtonTypesExample() {
-    }
-    return ButtonTypesExample;
-}());
+class ButtonTypesExample {
+}
 ButtonTypesExample.decorators = [
     { type: Component, args: [{
                 selector: 'button-types-example',
@@ -325,15 +310,13 @@ ButtonTypesExample.decorators = [
 /**
  * @nocollapse
  */
-ButtonTypesExample.ctorParameters = function () { return []; };
+ButtonTypesExample.ctorParameters = () => [];
+
 /**
  * \@title Card with multiple sections
  */
-var CardFancyExample = (function () {
-    function CardFancyExample() {
-    }
-    return CardFancyExample;
-}());
+class CardFancyExample {
+}
 CardFancyExample.decorators = [
     { type: Component, args: [{
                 selector: 'card-fancy-example',
@@ -344,15 +327,13 @@ CardFancyExample.decorators = [
 /**
  * @nocollapse
  */
-CardFancyExample.ctorParameters = function () { return []; };
+CardFancyExample.ctorParameters = () => [];
+
 /**
  * \@title Basic cards
  */
-var CardOverviewExample = (function () {
-    function CardOverviewExample() {
-    }
-    return CardOverviewExample;
-}());
+class CardOverviewExample {
+}
 CardOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'card-overview-example',
@@ -362,23 +343,23 @@ CardOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-CardOverviewExample.ctorParameters = function () { return []; };
+CardOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Basic CDK data-table
  */
-var CdkTableBasicExample = (function () {
-    function CdkTableBasicExample() {
+class CdkTableBasicExample {
+    constructor() {
         this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
         this.exampleDatabase = new ExampleDatabase();
     }
     /**
      * @return {?}
      */
-    CdkTableBasicExample.prototype.ngOnInit = function () {
+    ngOnInit() {
         this.dataSource = new ExampleDataSource(this.exampleDatabase);
-    };
-    return CdkTableBasicExample;
-}());
+    }
+}
 CdkTableBasicExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-table-basic-example',
@@ -389,52 +370,48 @@ CdkTableBasicExample.decorators = [
 /**
  * @nocollapse
  */
-CdkTableBasicExample.ctorParameters = function () { return []; };
+CdkTableBasicExample.ctorParameters = () => [];
 /**
  * Constants used to fill up our data base.
  */
-var COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
-var ExampleDatabase = (function () {
-    function ExampleDatabase() {
+class ExampleDatabase {
+    constructor() {
         /**
          * Stream that emits whenever the data has been modified.
          */
         this.dataChange = new BehaviorSubject([]);
         // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
+        for (let i = 0; i < 100; i++) {
             this.addUser();
         }
     }
-    Object.defineProperty(ExampleDatabase.prototype, "data", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
+    /**
+     * @return {?}
+     */
+    get data() { return this.dataChange.value; }
     /**
      * Adds a new user to the database.
      * @return {?}
      */
-    ExampleDatabase.prototype.addUser = function () {
-        var /** @type {?} */ copiedData = this.data.slice();
+    addUser() {
+        const /** @type {?} */ copiedData = this.data.slice();
         copiedData.push(this.createNewUser());
         this.dataChange.next(copiedData);
-    };
+    }
     /**
      * Builds and returns a new User.
      * @return {?}
      */
-    ExampleDatabase.prototype.createNewUser = function () {
-        var /** @type {?} */ name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
+    createNewUser() {
+        const /** @type {?} */ name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
             NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
         return {
             id: (this.data.length + 1).toString(),
@@ -442,9 +419,8 @@ var ExampleDatabase = (function () {
             progress: Math.round(Math.random() * 100).toString(),
             color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
         };
-    };
-    return ExampleDatabase;
-}());
+    }
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -452,41 +428,38 @@ var ExampleDatabase = (function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource = (function (_super) {
-    tslib_1.__extends(ExampleDataSource, _super);
+class ExampleDataSource extends DataSource {
     /**
      * @param {?} _exampleDatabase
      */
-    function ExampleDataSource(_exampleDatabase) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
-        return _this;
+    constructor(_exampleDatabase) {
+        super();
+        this._exampleDatabase = _exampleDatabase;
     }
     /**
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource.prototype.connect = function () {
+    connect() {
         return this._exampleDatabase.dataChange;
-    };
+    }
     /**
      * @return {?}
      */
-    ExampleDataSource.prototype.disconnect = function () { };
-    return ExampleDataSource;
-}(DataSource));
+    disconnect() { }
+}
+
 /**
  * \@title Configurable checkbox
  */
-var CheckboxConfigurableExample = (function () {
-    function CheckboxConfigurableExample() {
+class CheckboxConfigurableExample {
+    constructor() {
         this.checked = false;
         this.indeterminate = false;
         this.align = 'start';
         this.disabled = false;
     }
-    return CheckboxConfigurableExample;
-}());
+}
 CheckboxConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'checkbox-configurable-example',
@@ -497,15 +470,13 @@ CheckboxConfigurableExample.decorators = [
 /**
  * @nocollapse
  */
-CheckboxConfigurableExample.ctorParameters = function () { return []; };
+CheckboxConfigurableExample.ctorParameters = () => [];
+
 /**
  * \@title Basic checkboxes
  */
-var CheckboxOverviewExample = (function () {
-    function CheckboxOverviewExample() {
-    }
-    return CheckboxOverviewExample;
-}());
+class CheckboxOverviewExample {
+}
 CheckboxOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'checkbox-overview-example',
@@ -515,15 +486,13 @@ CheckboxOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-CheckboxOverviewExample.ctorParameters = function () { return []; };
+CheckboxOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Basic chips
  */
-var ChipsOverviewExample = (function () {
-    function ChipsOverviewExample() {
-    }
-    return ChipsOverviewExample;
-}());
+class ChipsOverviewExample {
+}
 ChipsOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'chips-overview-example',
@@ -534,12 +503,13 @@ ChipsOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-ChipsOverviewExample.ctorParameters = function () { return []; };
+ChipsOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Stacked chips
  */
-var ChipsStackedExample = (function () {
-    function ChipsStackedExample() {
+class ChipsStackedExample {
+    constructor() {
         this.availableColors = [
             { name: 'none', color: '' },
             { name: 'Primary', color: 'primary' },
@@ -547,8 +517,7 @@ var ChipsStackedExample = (function () {
             { name: 'Warn', color: 'warn' }
         ];
     }
-    return ChipsStackedExample;
-}());
+}
 ChipsStackedExample.decorators = [
     { type: Component, args: [{
                 selector: 'chips-stacked-example',
@@ -559,15 +528,13 @@ ChipsStackedExample.decorators = [
 /**
  * @nocollapse
  */
-ChipsStackedExample.ctorParameters = function () { return []; };
+ChipsStackedExample.ctorParameters = () => [];
+
 /**
  * \@title Datepicker API
  */
-var DatepickerApiExample = (function () {
-    function DatepickerApiExample() {
-    }
-    return DatepickerApiExample;
-}());
+class DatepickerApiExample {
+}
 DatepickerApiExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-api-example',
@@ -578,20 +545,20 @@ DatepickerApiExample.decorators = [
 /**
  * @nocollapse
  */
-DatepickerApiExample.ctorParameters = function () { return []; };
+DatepickerApiExample.ctorParameters = () => [];
+
 /**
  * \@title Datepicker Filter
  */
-var DatepickerFilterExample = (function () {
-    function DatepickerFilterExample() {
-        this.myFilter = function (d) {
-            var /** @type {?} */ day = d.getDay();
+class DatepickerFilterExample {
+    constructor() {
+        this.myFilter = (d) => {
+            const /** @type {?} */ day = d.getDay();
             // Prevent Saturday and Sunday from being selected.
             return day !== 0 && day !== 6;
         };
     }
-    return DatepickerFilterExample;
-}());
+}
 DatepickerFilterExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-filter-example',
@@ -602,17 +569,17 @@ DatepickerFilterExample.decorators = [
 /**
  * @nocollapse
  */
-DatepickerFilterExample.ctorParameters = function () { return []; };
+DatepickerFilterExample.ctorParameters = () => [];
+
 /**
  * \@title Datepicker Min Max
  */
-var DatepickerMinMaxExample = (function () {
-    function DatepickerMinMaxExample() {
+class DatepickerMinMaxExample {
+    constructor() {
         this.minDate = new Date(2000, 0, 1);
         this.maxDate = new Date(2020, 0, 1);
     }
-    return DatepickerMinMaxExample;
-}());
+}
 DatepickerMinMaxExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-min-max-example',
@@ -623,15 +590,13 @@ DatepickerMinMaxExample.decorators = [
 /**
  * @nocollapse
  */
-DatepickerMinMaxExample.ctorParameters = function () { return []; };
+DatepickerMinMaxExample.ctorParameters = () => [];
+
 /**
  * \@title Basic datepicker
  */
-var DatepickerOverviewExample = (function () {
-    function DatepickerOverviewExample() {
-    }
-    return DatepickerOverviewExample;
-}());
+class DatepickerOverviewExample {
+}
 DatepickerOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-overview-example',
@@ -642,16 +607,16 @@ DatepickerOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-DatepickerOverviewExample.ctorParameters = function () { return []; };
+DatepickerOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Datepicker start date
  */
-var DatepickerStartViewExample = (function () {
-    function DatepickerStartViewExample() {
+class DatepickerStartViewExample {
+    constructor() {
         this.startDate = new Date(1990, 0, 1);
     }
-    return DatepickerStartViewExample;
-}());
+}
 DatepickerStartViewExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-start-view-example',
@@ -662,15 +627,13 @@ DatepickerStartViewExample.decorators = [
 /**
  * @nocollapse
  */
-DatepickerStartViewExample.ctorParameters = function () { return []; };
+DatepickerStartViewExample.ctorParameters = () => [];
+
 /**
  * \@title Datepicker Touch
  */
-var DatepickerTouchExample = (function () {
-    function DatepickerTouchExample() {
-    }
-    return DatepickerTouchExample;
-}());
+class DatepickerTouchExample {
+}
 DatepickerTouchExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-touch-example',
@@ -681,30 +644,30 @@ DatepickerTouchExample.decorators = [
 /**
  * @nocollapse
  */
-DatepickerTouchExample.ctorParameters = function () { return []; };
+DatepickerTouchExample.ctorParameters = () => [];
+
 /**
  * \@title Dialog with header, scrollable content and actions
  */
-var DialogContentExample = (function () {
+class DialogContentExample {
     /**
      * @param {?} dialog
      */
-    function DialogContentExample(dialog) {
+    constructor(dialog) {
         this.dialog = dialog;
     }
     /**
      * @return {?}
      */
-    DialogContentExample.prototype.openDialog = function () {
-        var /** @type {?} */ dialogRef = this.dialog.open(DialogContentExampleDialog, {
+    openDialog() {
+        const /** @type {?} */ dialogRef = this.dialog.open(DialogContentExampleDialog, {
             height: '350px'
         });
-        dialogRef.afterClosed().subscribe(function (result) {
-            console.log("Dialog result: " + result);
+        dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog result: ${result}`);
         });
-    };
-    return DialogContentExample;
-}());
+    }
+}
 DialogContentExample.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-content-example',
@@ -714,14 +677,11 @@ DialogContentExample.decorators = [
 /**
  * @nocollapse
  */
-DialogContentExample.ctorParameters = function () { return [
+DialogContentExample.ctorParameters = () => [
     { type: MdDialog, },
-]; };
-var DialogContentExampleDialog = (function () {
-    function DialogContentExampleDialog() {
-    }
-    return DialogContentExampleDialog;
-}());
+];
+class DialogContentExampleDialog {
+}
 DialogContentExampleDialog.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-content-example-dialog',
@@ -731,29 +691,29 @@ DialogContentExampleDialog.decorators = [
 /**
  * @nocollapse
  */
-DialogContentExampleDialog.ctorParameters = function () { return []; };
+DialogContentExampleDialog.ctorParameters = () => [];
+
 /**
  * \@title Injecting data when opening a dialog
  */
-var DialogDataExample = (function () {
+class DialogDataExample {
     /**
      * @param {?} dialog
      */
-    function DialogDataExample(dialog) {
+    constructor(dialog) {
         this.dialog = dialog;
     }
     /**
      * @return {?}
      */
-    DialogDataExample.prototype.openDialog = function () {
+    openDialog() {
         this.dialog.open(DialogDataExampleDialog, {
             data: {
                 animal: 'panda'
             }
         });
-    };
-    return DialogDataExample;
-}());
+    }
+}
 DialogDataExample.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-data-example',
@@ -763,18 +723,17 @@ DialogDataExample.decorators = [
 /**
  * @nocollapse
  */
-DialogDataExample.ctorParameters = function () { return [
+DialogDataExample.ctorParameters = () => [
     { type: MdDialog, },
-]; };
-var DialogDataExampleDialog = (function () {
+];
+class DialogDataExampleDialog {
     /**
      * @param {?} data
      */
-    function DialogDataExampleDialog(data) {
+    constructor(data) {
         this.data = data;
     }
-    return DialogDataExampleDialog;
-}());
+}
 DialogDataExampleDialog.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-data-example-dialog',
@@ -784,27 +743,27 @@ DialogDataExampleDialog.decorators = [
 /**
  * @nocollapse
  */
-DialogDataExampleDialog.ctorParameters = function () { return [
+DialogDataExampleDialog.ctorParameters = () => [
     { type: undefined, decorators: [{ type: Inject, args: [MD_DIALOG_DATA,] },] },
-]; };
+];
+
 /**
  * \@title Dialog elements
  */
-var DialogElementsExample = (function () {
+class DialogElementsExample {
     /**
      * @param {?} dialog
      */
-    function DialogElementsExample(dialog) {
+    constructor(dialog) {
         this.dialog = dialog;
     }
     /**
      * @return {?}
      */
-    DialogElementsExample.prototype.openDialog = function () {
+    openDialog() {
         this.dialog.open(DialogElementsExampleDialog);
-    };
-    return DialogElementsExample;
-}());
+    }
+}
 DialogElementsExample.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-elements-example',
@@ -814,14 +773,11 @@ DialogElementsExample.decorators = [
 /**
  * @nocollapse
  */
-DialogElementsExample.ctorParameters = function () { return [
+DialogElementsExample.ctorParameters = () => [
     { type: MdDialog, },
-]; };
-var DialogElementsExampleDialog = (function () {
-    function DialogElementsExampleDialog() {
-    }
-    return DialogElementsExampleDialog;
-}());
+];
+class DialogElementsExampleDialog {
+}
 DialogElementsExampleDialog.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-elements-example-dialog',
@@ -831,33 +787,32 @@ DialogElementsExampleDialog.decorators = [
 /**
  * @nocollapse
  */
-DialogElementsExampleDialog.ctorParameters = function () { return []; };
+DialogElementsExampleDialog.ctorParameters = () => [];
+
 /**
  * \@title Dialog Overview
  */
-var DialogOverviewExample = (function () {
+class DialogOverviewExample {
     /**
      * @param {?} dialog
      */
-    function DialogOverviewExample(dialog) {
+    constructor(dialog) {
         this.dialog = dialog;
     }
     /**
      * @return {?}
      */
-    DialogOverviewExample.prototype.openDialog = function () {
-        var _this = this;
-        var /** @type {?} */ dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    openDialog() {
+        let /** @type {?} */ dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
             width: '250px',
             data: { name: this.name, animal: this.animal }
         });
-        dialogRef.afterClosed().subscribe(function (result) {
+        dialogRef.afterClosed().subscribe(result => {
             console.log('The dialog was closed');
-            _this.animal = result;
+            this.animal = result;
         });
-    };
-    return DialogOverviewExample;
-}());
+    }
+}
 DialogOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-overview-example',
@@ -867,26 +822,25 @@ DialogOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-DialogOverviewExample.ctorParameters = function () { return [
+DialogOverviewExample.ctorParameters = () => [
     { type: MdDialog, },
-]; };
-var DialogOverviewExampleDialog = (function () {
+];
+class DialogOverviewExampleDialog {
     /**
      * @param {?} dialogRef
      * @param {?} data
      */
-    function DialogOverviewExampleDialog(dialogRef, data) {
+    constructor(dialogRef, data) {
         this.dialogRef = dialogRef;
         this.data = data;
     }
     /**
      * @return {?}
      */
-    DialogOverviewExampleDialog.prototype.onNoClick = function () {
+    onNoClick() {
         this.dialogRef.close();
-    };
-    return DialogOverviewExampleDialog;
-}());
+    }
+}
 DialogOverviewExampleDialog.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-overview-example-dialog',
@@ -896,18 +850,16 @@ DialogOverviewExampleDialog.decorators = [
 /**
  * @nocollapse
  */
-DialogOverviewExampleDialog.ctorParameters = function () { return [
+DialogOverviewExampleDialog.ctorParameters = () => [
     { type: MdDialogRef, },
     { type: undefined, decorators: [{ type: Inject, args: [MD_DIALOG_DATA,] },] },
-]; };
+];
+
 /**
  * \@title Basic expansion panel
  */
-var ExpansionOverviewExample = (function () {
-    function ExpansionOverviewExample() {
-    }
-    return ExpansionOverviewExample;
-}());
+class ExpansionOverviewExample {
+}
 ExpansionOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'expansion-overview-example',
@@ -917,35 +869,35 @@ ExpansionOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-ExpansionOverviewExample.ctorParameters = function () { return []; };
+ExpansionOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Expansion panel as accordion
  */
-var ExpansionStepsExample = (function () {
-    function ExpansionStepsExample() {
+class ExpansionStepsExample {
+    constructor() {
         this.step = 0;
     }
     /**
      * @param {?} index
      * @return {?}
      */
-    ExpansionStepsExample.prototype.setStep = function (index) {
+    setStep(index) {
         this.step = index;
-    };
+    }
     /**
      * @return {?}
      */
-    ExpansionStepsExample.prototype.nextStep = function () {
+    nextStep() {
         this.step++;
-    };
+    }
     /**
      * @return {?}
      */
-    ExpansionStepsExample.prototype.prevStep = function () {
+    prevStep() {
         this.step--;
-    };
-    return ExpansionStepsExample;
-}());
+    }
+}
 ExpansionStepsExample.decorators = [
     { type: Component, args: [{
                 selector: 'expansion-steps-example',
@@ -956,12 +908,13 @@ ExpansionStepsExample.decorators = [
 /**
  * @nocollapse
  */
-ExpansionStepsExample.ctorParameters = function () { return []; };
+ExpansionStepsExample.ctorParameters = () => [];
+
 /**
  * \@title Dynamic grid-list
  */
-var GridListDynamicExample = (function () {
-    function GridListDynamicExample() {
+class GridListDynamicExample {
+    constructor() {
         this.tiles = [
             { text: 'One', cols: 3, rows: 1, color: 'lightblue' },
             { text: 'Two', cols: 1, rows: 2, color: 'lightgreen' },
@@ -969,8 +922,7 @@ var GridListDynamicExample = (function () {
             { text: 'Four', cols: 2, rows: 1, color: '#DDBDF1' },
         ];
     }
-    return GridListDynamicExample;
-}());
+}
 GridListDynamicExample.decorators = [
     { type: Component, args: [{
                 selector: 'grid-list-dynamic-example',
@@ -980,15 +932,13 @@ GridListDynamicExample.decorators = [
 /**
  * @nocollapse
  */
-GridListDynamicExample.ctorParameters = function () { return []; };
+GridListDynamicExample.ctorParameters = () => [];
+
 /**
  * \@title Basic grid-list
  */
-var GridListOverviewExample = (function () {
-    function GridListOverviewExample() {
-    }
-    return GridListOverviewExample;
-}());
+class GridListOverviewExample {
+}
 GridListOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'grid-list-overview-example',
@@ -999,15 +949,13 @@ GridListOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-GridListOverviewExample.ctorParameters = function () { return []; };
+GridListOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Basic icons
  */
-var IconOverviewExample = (function () {
-    function IconOverviewExample() {
-    }
-    return IconOverviewExample;
-}());
+class IconOverviewExample {
+}
 IconOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'icon-overview-example',
@@ -1017,20 +965,20 @@ IconOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-IconOverviewExample.ctorParameters = function () { return []; };
+IconOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title SVG icons
  */
-var IconSvgExample = (function () {
+class IconSvgExample {
     /**
      * @param {?} iconRegistry
      * @param {?} sanitizer
      */
-    function IconSvgExample(iconRegistry, sanitizer) {
+    constructor(iconRegistry, sanitizer) {
         iconRegistry.addSvgIcon('thumbs-up', sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));
     }
-    return IconSvgExample;
-}());
+}
 IconSvgExample.decorators = [
     { type: Component, args: [{
                 selector: 'icon-svg-example',
@@ -1040,19 +988,19 @@ IconSvgExample.decorators = [
 /**
  * @nocollapse
  */
-IconSvgExample.ctorParameters = function () { return [
+IconSvgExample.ctorParameters = () => [
     { type: MdIconRegistry, },
     { type: DomSanitizer, },
-]; };
+];
+
 /**
  * \@title Input Clearable
  */
-var InputClearableExample = (function () {
-    function InputClearableExample() {
+class InputClearableExample {
+    constructor() {
         this.value = 'Clear me';
     }
-    return InputClearableExample;
-}());
+}
 InputClearableExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-clearable-example',
@@ -1063,20 +1011,20 @@ InputClearableExample.decorators = [
 /**
  * @nocollapse
  */
-InputClearableExample.ctorParameters = function () { return []; };
-var EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+InputClearableExample.ctorParameters = () => [];
+
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 /**
  * \@title Input Errors
  */
-var InputErrorsExample = (function () {
-    function InputErrorsExample() {
+class InputErrorsExample {
+    constructor() {
         this.emailFormControl = new FormControl('', [
             Validators.required,
             Validators.pattern(EMAIL_REGEX)
         ]);
     }
-    return InputErrorsExample;
-}());
+}
 InputErrorsExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-errors-example',
@@ -1087,15 +1035,13 @@ InputErrorsExample.decorators = [
 /**
  * @nocollapse
  */
-InputErrorsExample.ctorParameters = function () { return []; };
+InputErrorsExample.ctorParameters = () => [];
+
 /**
  * \@title Inputs in a form
  */
-var InputFormExample = (function () {
-    function InputFormExample() {
-    }
-    return InputFormExample;
-}());
+class InputFormExample {
+}
 InputFormExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-form-example',
@@ -1106,15 +1052,13 @@ InputFormExample.decorators = [
 /**
  * @nocollapse
  */
-InputFormExample.ctorParameters = function () { return []; };
+InputFormExample.ctorParameters = () => [];
+
 /**
  * \@title Input hints
  */
-var InputHintExample = (function () {
-    function InputHintExample() {
-    }
-    return InputHintExample;
-}());
+class InputHintExample {
+}
 InputHintExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-hint-example',
@@ -1125,15 +1069,13 @@ InputHintExample.decorators = [
 /**
  * @nocollapse
  */
-InputHintExample.ctorParameters = function () { return []; };
+InputHintExample.ctorParameters = () => [];
+
 /**
  * \@title Basic Inputs
  */
-var InputOverviewExample = (function () {
-    function InputOverviewExample() {
-    }
-    return InputOverviewExample;
-}());
+class InputOverviewExample {
+}
 InputOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-overview-example',
@@ -1144,15 +1086,13 @@ InputOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-InputOverviewExample.ctorParameters = function () { return []; };
+InputOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Input Prefixes and Suffixes
  */
-var InputPrefixSuffixExample = (function () {
-    function InputPrefixSuffixExample() {
-    }
-    return InputPrefixSuffixExample;
-}());
+class InputPrefixSuffixExample {
+}
 InputPrefixSuffixExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-prefix-suffix-example',
@@ -1163,15 +1103,13 @@ InputPrefixSuffixExample.decorators = [
 /**
  * @nocollapse
  */
-InputPrefixSuffixExample.ctorParameters = function () { return []; };
+InputPrefixSuffixExample.ctorParameters = () => [];
+
 /**
  * \@title Basic list
  */
-var ListOverviewExample = (function () {
-    function ListOverviewExample() {
-    }
-    return ListOverviewExample;
-}());
+class ListOverviewExample {
+}
 ListOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'list-overview-example',
@@ -1181,12 +1119,13 @@ ListOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-ListOverviewExample.ctorParameters = function () { return []; };
+ListOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title List with sections
  */
-var ListSectionsExample = (function () {
-    function ListSectionsExample() {
+class ListSectionsExample {
+    constructor() {
         this.folders = [
             {
                 name: 'Photos',
@@ -1212,8 +1151,7 @@ var ListSectionsExample = (function () {
             }
         ];
     }
-    return ListSectionsExample;
-}());
+}
 ListSectionsExample.decorators = [
     { type: Component, args: [{
                 selector: 'list-sections-example',
@@ -1224,16 +1162,16 @@ ListSectionsExample.decorators = [
 /**
  * @nocollapse
  */
-ListSectionsExample.ctorParameters = function () { return []; };
+ListSectionsExample.ctorParameters = () => [];
+
 /**
  * \@title List with selection
  */
-var ListSelectionExample = (function () {
-    function ListSelectionExample() {
+class ListSelectionExample {
+    constructor() {
         this.typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
     }
-    return ListSelectionExample;
-}());
+}
 ListSelectionExample.decorators = [
     { type: Component, args: [{
                 selector: 'list-selection-example',
@@ -1244,15 +1182,13 @@ ListSelectionExample.decorators = [
 /**
  * @nocollapse
  */
-ListSelectionExample.ctorParameters = function () { return []; };
+ListSelectionExample.ctorParameters = () => [];
+
 /**
  * \@title Menu with icons
  */
-var MenuIconsExample = (function () {
-    function MenuIconsExample() {
-    }
-    return MenuIconsExample;
-}());
+class MenuIconsExample {
+}
 MenuIconsExample.decorators = [
     { type: Component, args: [{
                 selector: 'menu-icons-example',
@@ -1263,15 +1199,13 @@ MenuIconsExample.decorators = [
 /**
  * @nocollapse
  */
-MenuIconsExample.ctorParameters = function () { return []; };
+MenuIconsExample.ctorParameters = () => [];
+
 /**
  * \@title Nested menu
  */
-var NestedMenuExample = (function () {
-    function NestedMenuExample() {
-    }
-    return NestedMenuExample;
-}());
+class NestedMenuExample {
+}
 NestedMenuExample.decorators = [
     { type: Component, args: [{
                 selector: 'nested-menu-example',
@@ -1282,15 +1216,13 @@ NestedMenuExample.decorators = [
 /**
  * @nocollapse
  */
-NestedMenuExample.ctorParameters = function () { return []; };
+NestedMenuExample.ctorParameters = () => [];
+
 /**
  * \@title Basic menu
  */
-var MenuOverviewExample = (function () {
-    function MenuOverviewExample() {
-    }
-    return MenuOverviewExample;
-}());
+class MenuOverviewExample {
+}
 MenuOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'menu-overview-example',
@@ -1301,12 +1233,13 @@ MenuOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-MenuOverviewExample.ctorParameters = function () { return []; };
+MenuOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Configurable paginator
  */
-var PaginatorConfigurableExample = (function () {
-    function PaginatorConfigurableExample() {
+class PaginatorConfigurableExample {
+    constructor() {
         // MdPaginator Inputs
         this.length = 100;
         this.pageSize = 10;
@@ -1316,11 +1249,10 @@ var PaginatorConfigurableExample = (function () {
      * @param {?} setPageSizeOptionsInput
      * @return {?}
      */
-    PaginatorConfigurableExample.prototype.setPageSizeOptions = function (setPageSizeOptionsInput) {
-        this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(function (str) { return +str; });
-    };
-    return PaginatorConfigurableExample;
-}());
+    setPageSizeOptions(setPageSizeOptionsInput) {
+        this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
+    }
+}
 PaginatorConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'paginator-configurable-example',
@@ -1330,15 +1262,13 @@ PaginatorConfigurableExample.decorators = [
 /**
  * @nocollapse
  */
-PaginatorConfigurableExample.ctorParameters = function () { return []; };
+PaginatorConfigurableExample.ctorParameters = () => [];
+
 /**
  * \@title Paginator
  */
-var PaginatorOverviewExample = (function () {
-    function PaginatorOverviewExample() {
-    }
-    return PaginatorOverviewExample;
-}());
+class PaginatorOverviewExample {
+}
 PaginatorOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'paginator-overview-example',
@@ -1348,19 +1278,19 @@ PaginatorOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-PaginatorOverviewExample.ctorParameters = function () { return []; };
+PaginatorOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Configurable progress-bar
  */
-var ProgressBarConfigurableExample = (function () {
-    function ProgressBarConfigurableExample() {
+class ProgressBarConfigurableExample {
+    constructor() {
         this.color = 'primary';
         this.mode = 'determinate';
         this.value = 50;
         this.bufferValue = 75;
     }
-    return ProgressBarConfigurableExample;
-}());
+}
 ProgressBarConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-configurable-example',
@@ -1371,15 +1301,13 @@ ProgressBarConfigurableExample.decorators = [
 /**
  * @nocollapse
  */
-ProgressBarConfigurableExample.ctorParameters = function () { return []; };
+ProgressBarConfigurableExample.ctorParameters = () => [];
+
 /**
  * \@title Basic progress-bar
  */
-var ProgressBarOverviewExample = (function () {
-    function ProgressBarOverviewExample() {
-    }
-    return ProgressBarOverviewExample;
-}());
+class ProgressBarOverviewExample {
+}
 ProgressBarOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-overview-example',
@@ -1389,18 +1317,18 @@ ProgressBarOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-ProgressBarOverviewExample.ctorParameters = function () { return []; };
+ProgressBarOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Configurable progress spinner
  */
-var ProgressSpinnerConfigurableExample = (function () {
-    function ProgressSpinnerConfigurableExample() {
+class ProgressSpinnerConfigurableExample {
+    constructor() {
         this.color = 'primary';
         this.mode = 'determinate';
         this.value = 50;
     }
-    return ProgressSpinnerConfigurableExample;
-}());
+}
 ProgressSpinnerConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-spinner-configurable-example',
@@ -1411,15 +1339,13 @@ ProgressSpinnerConfigurableExample.decorators = [
 /**
  * @nocollapse
  */
-ProgressSpinnerConfigurableExample.ctorParameters = function () { return []; };
+ProgressSpinnerConfigurableExample.ctorParameters = () => [];
+
 /**
  * \@title Basic progress-spinner
  */
-var ProgressSpinnerOverviewExample = (function () {
-    function ProgressSpinnerOverviewExample() {
-    }
-    return ProgressSpinnerOverviewExample;
-}());
+class ProgressSpinnerOverviewExample {
+}
 ProgressSpinnerOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-spinner-overview-example',
@@ -1429,12 +1355,13 @@ ProgressSpinnerOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-ProgressSpinnerOverviewExample.ctorParameters = function () { return []; };
+ProgressSpinnerOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Radios with ngModel
  */
-var RadioNgModelExample = (function () {
-    function RadioNgModelExample() {
+class RadioNgModelExample {
+    constructor() {
         this.seasons = [
             'Winter',
             'Spring',
@@ -1442,8 +1369,7 @@ var RadioNgModelExample = (function () {
             'Autumn',
         ];
     }
-    return RadioNgModelExample;
-}());
+}
 RadioNgModelExample.decorators = [
     { type: Component, args: [{
                 selector: 'radio-ng-model-example',
@@ -1454,15 +1380,13 @@ RadioNgModelExample.decorators = [
 /**
  * @nocollapse
  */
-RadioNgModelExample.ctorParameters = function () { return []; };
+RadioNgModelExample.ctorParameters = () => [];
+
 /**
  * \@title Basic radios
  */
-var RadioOverviewExample = (function () {
-    function RadioOverviewExample() {
-    }
-    return RadioOverviewExample;
-}());
+class RadioOverviewExample {
+}
 RadioOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'radio-overview-example',
@@ -1472,20 +1396,20 @@ RadioOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-RadioOverviewExample.ctorParameters = function () { return []; };
+RadioOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Select in a form
  */
-var SelectFormExample = (function () {
-    function SelectFormExample() {
+class SelectFormExample {
+    constructor() {
         this.foods = [
             { value: 'steak-0', viewValue: 'Steak' },
             { value: 'pizza-1', viewValue: 'Pizza' },
             { value: 'tacos-2', viewValue: 'Tacos' }
         ];
     }
-    return SelectFormExample;
-}());
+}
 SelectFormExample.decorators = [
     { type: Component, args: [{
                 selector: 'select-form-example',
@@ -1495,20 +1419,20 @@ SelectFormExample.decorators = [
 /**
  * @nocollapse
  */
-SelectFormExample.ctorParameters = function () { return []; };
+SelectFormExample.ctorParameters = () => [];
+
 /**
  * \@title Basic select
  */
-var SelectOverviewExample = (function () {
-    function SelectOverviewExample() {
+class SelectOverviewExample {
+    constructor() {
         this.foods = [
             { value: 'steak-0', viewValue: 'Steak' },
             { value: 'pizza-1', viewValue: 'Pizza' },
             { value: 'tacos-2', viewValue: 'Tacos' }
         ];
     }
-    return SelectOverviewExample;
-}());
+}
 SelectOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'select-overview-example',
@@ -1518,15 +1442,13 @@ SelectOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-SelectOverviewExample.ctorParameters = function () { return []; };
+SelectOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Sidenav with a FAB
  */
-var SidenavFabExample = (function () {
-    function SidenavFabExample() {
-    }
-    return SidenavFabExample;
-}());
+class SidenavFabExample {
+}
 SidenavFabExample.decorators = [
     { type: Component, args: [{
                 selector: 'sidenav-fab-example',
@@ -1538,15 +1460,13 @@ SidenavFabExample.decorators = [
 /**
  * @nocollapse
  */
-SidenavFabExample.ctorParameters = function () { return []; };
+SidenavFabExample.ctorParameters = () => [];
+
 /**
  * \@title Basic sidenav
  */
-var SidenavOverviewExample = (function () {
-    function SidenavOverviewExample() {
-    }
-    return SidenavOverviewExample;
-}());
+class SidenavOverviewExample {
+}
 SidenavOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'sidenav-overview-example',
@@ -1557,18 +1477,18 @@ SidenavOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-SidenavOverviewExample.ctorParameters = function () { return []; };
+SidenavOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Configurable slide-toggle
  */
-var SlideToggleConfigurableExample = (function () {
-    function SlideToggleConfigurableExample() {
+class SlideToggleConfigurableExample {
+    constructor() {
         this.color = 'accent';
         this.checked = false;
         this.disabled = false;
     }
-    return SlideToggleConfigurableExample;
-}());
+}
 SlideToggleConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'slide-toggle-configurable-example',
@@ -1579,15 +1499,16 @@ SlideToggleConfigurableExample.decorators = [
 /**
  * @nocollapse
  */
-SlideToggleConfigurableExample.ctorParameters = function () { return []; };
+SlideToggleConfigurableExample.ctorParameters = () => [];
+
 /**
  * \@title Slide-toggle with forms
  */
-var SlideToggleFormsExample = (function () {
+class SlideToggleFormsExample {
     /**
      * @param {?} formBuilder
      */
-    function SlideToggleFormsExample(formBuilder) {
+    constructor(formBuilder) {
         this.isChecked = true;
         this.formGroup = formBuilder.group({
             enableWifi: '',
@@ -1598,11 +1519,10 @@ var SlideToggleFormsExample = (function () {
      * @param {?} formValue
      * @return {?}
      */
-    SlideToggleFormsExample.prototype.onFormSubmit = function (formValue) {
+    onFormSubmit(formValue) {
         alert(JSON.stringify(formValue, null, 2));
-    };
-    return SlideToggleFormsExample;
-}());
+    }
+}
 SlideToggleFormsExample.decorators = [
     { type: Component, args: [{
                 selector: 'slide-toggle-forms-example',
@@ -1613,17 +1533,15 @@ SlideToggleFormsExample.decorators = [
 /**
  * @nocollapse
  */
-SlideToggleFormsExample.ctorParameters = function () { return [
+SlideToggleFormsExample.ctorParameters = () => [
     { type: FormBuilder, },
-]; };
+];
+
 /**
  * \@title Basic slide-toggles
  */
-var SlideToggleOverviewExample = (function () {
-    function SlideToggleOverviewExample() {
-    }
-    return SlideToggleOverviewExample;
-}());
+class SlideToggleOverviewExample {
+}
 SlideToggleOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'slide-toggle-overview-example',
@@ -1633,12 +1551,13 @@ SlideToggleOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-SlideToggleOverviewExample.ctorParameters = function () { return []; };
+SlideToggleOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Configurable slider
  */
-var SliderConfigurableExample = (function () {
-    function SliderConfigurableExample() {
+class SliderConfigurableExample {
+    constructor() {
         this.autoTicks = false;
         this.disabled = false;
         this.invert = false;
@@ -1651,25 +1570,20 @@ var SliderConfigurableExample = (function () {
         this.vertical = false;
         this._tickInterval = 1;
     }
-    Object.defineProperty(SliderConfigurableExample.prototype, "tickInterval", {
-        /**
-         * @return {?}
-         */
-        get: function () {
-            return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
-        },
-        /**
-         * @param {?} v
-         * @return {?}
-         */
-        set: function (v) {
-            this._tickInterval = Number(v);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    return SliderConfigurableExample;
-}());
+    /**
+     * @return {?}
+     */
+    get tickInterval() {
+        return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
+    }
+    /**
+     * @param {?} v
+     * @return {?}
+     */
+    set tickInterval(v) {
+        this._tickInterval = Number(v);
+    }
+}
 SliderConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'slider-configurable-example',
@@ -1681,15 +1595,13 @@ SliderConfigurableExample.decorators = [
 /**
  * @nocollapse
  */
-SliderConfigurableExample.ctorParameters = function () { return []; };
+SliderConfigurableExample.ctorParameters = () => [];
+
 /**
  * \@title Basic slider
  */
-var SliderOverviewExample = (function () {
-    function SliderOverviewExample() {
-    }
-    return SliderOverviewExample;
-}());
+class SliderOverviewExample {
+}
 SliderOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'slider-overview-example',
@@ -1700,27 +1612,27 @@ SliderOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-SliderOverviewExample.ctorParameters = function () { return []; };
+SliderOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Snack-bar with a custom component
  */
-var SnackBarComponentExample = (function () {
+class SnackBarComponentExample {
     /**
      * @param {?} snackBar
      */
-    function SnackBarComponentExample(snackBar) {
+    constructor(snackBar) {
         this.snackBar = snackBar;
     }
     /**
      * @return {?}
      */
-    SnackBarComponentExample.prototype.openSnackBar = function () {
+    openSnackBar() {
         this.snackBar.openFromComponent(PizzaPartyComponent, {
             duration: 500,
         });
-    };
-    return SnackBarComponentExample;
-}());
+    }
+}
 SnackBarComponentExample.decorators = [
     { type: Component, args: [{
                 selector: 'snack-bar-component-example',
@@ -1730,14 +1642,11 @@ SnackBarComponentExample.decorators = [
 /**
  * @nocollapse
  */
-SnackBarComponentExample.ctorParameters = function () { return [
+SnackBarComponentExample.ctorParameters = () => [
     { type: MdSnackBar, },
-]; };
-var PizzaPartyComponent = (function () {
-    function PizzaPartyComponent() {
-    }
-    return PizzaPartyComponent;
-}());
+];
+class PizzaPartyComponent {
+}
 PizzaPartyComponent.decorators = [
     { type: Component, args: [{
                 selector: 'snack-bar-component-example-snack',
@@ -1748,15 +1657,16 @@ PizzaPartyComponent.decorators = [
 /**
  * @nocollapse
  */
-PizzaPartyComponent.ctorParameters = function () { return []; };
+PizzaPartyComponent.ctorParameters = () => [];
+
 /**
  * \@title Basic snack-bar
  */
-var SnackBarOverviewExample = (function () {
+class SnackBarOverviewExample {
     /**
      * @param {?} snackBar
      */
-    function SnackBarOverviewExample(snackBar) {
+    constructor(snackBar) {
         this.snackBar = snackBar;
     }
     /**
@@ -1764,13 +1674,12 @@ var SnackBarOverviewExample = (function () {
      * @param {?} action
      * @return {?}
      */
-    SnackBarOverviewExample.prototype.openSnackBar = function (message, action) {
+    openSnackBar(message, action) {
         this.snackBar.open(message, action, {
             duration: 2000,
         });
-    };
-    return SnackBarOverviewExample;
-}());
+    }
+}
 SnackBarOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'snack-bar-overview-example',
@@ -1780,14 +1689,15 @@ SnackBarOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-SnackBarOverviewExample.ctorParameters = function () { return [
+SnackBarOverviewExample.ctorParameters = () => [
     { type: MdSnackBar, },
-]; };
+];
+
 /**
  * \@title Sorting overview
  */
-var SortOverviewExample = (function () {
-    function SortOverviewExample() {
+class SortOverviewExample {
+    constructor() {
         this.desserts = [
             { name: 'Frozen yogurt', calories: '159', fat: '6', carbs: '24', protein: '4' },
             { name: 'Ice cream sandwich', calories: '237', fat: '9', carbs: '37', protein: '4' },
@@ -1801,14 +1711,14 @@ var SortOverviewExample = (function () {
      * @param {?} sort
      * @return {?}
      */
-    SortOverviewExample.prototype.sortData = function (sort) {
-        var /** @type {?} */ data = this.desserts.slice();
+    sortData(sort) {
+        const /** @type {?} */ data = this.desserts.slice();
         if (!sort.active || sort.direction == '') {
             this.sortedData = data;
             return;
         }
-        this.sortedData = data.sort(function (a, b) {
-            var /** @type {?} */ isAsc = sort.direction == 'asc';
+        this.sortedData = data.sort((a, b) => {
+            let /** @type {?} */ isAsc = sort.direction == 'asc';
             switch (sort.active) {
                 case 'name': return compare(a.name, b.name, isAsc);
                 case 'calories': return compare(+a.calories, +b.calories, isAsc);
@@ -1818,9 +1728,8 @@ var SortOverviewExample = (function () {
                 default: return 0;
             }
         });
-    };
-    return SortOverviewExample;
-}());
+    }
+}
 SortOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'sort-overview-example',
@@ -1831,7 +1740,7 @@ SortOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-SortOverviewExample.ctorParameters = function () { return []; };
+SortOverviewExample.ctorParameters = () => [];
 /**
  * @param {?} a
  * @param {?} b
@@ -1841,30 +1750,30 @@ SortOverviewExample.ctorParameters = function () { return []; };
 function compare(a, b, isAsc) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
+
 /**
  * \@title Stepper overview
  */
-var StepperOverviewExample = (function () {
+class StepperOverviewExample {
     /**
      * @param {?} _formBuilder
      */
-    function StepperOverviewExample(_formBuilder) {
+    constructor(_formBuilder) {
         this._formBuilder = _formBuilder;
         this.isLinear = false;
     }
     /**
      * @return {?}
      */
-    StepperOverviewExample.prototype.ngOnInit = function () {
+    ngOnInit() {
         this.firstFormGroup = this._formBuilder.group({
             firstCtrl: ['', Validators.required]
         });
         this.secondFormGroup = this._formBuilder.group({
             secondCtrl: ['', Validators.required]
         });
-    };
-    return StepperOverviewExample;
-}());
+    }
+}
 StepperOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'stepper-overview-example',
@@ -1875,19 +1784,19 @@ StepperOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-StepperOverviewExample.ctorParameters = function () { return [
+StepperOverviewExample.ctorParameters = () => [
     { type: FormBuilder, },
-]; };
+];
+
 /**
  * \@title Basic table
  */
-var TableBasicExample = (function () {
-    function TableBasicExample() {
+class TableBasicExample {
+    constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = new ExampleDataSource$1();
     }
-    return TableBasicExample;
-}());
+}
 TableBasicExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-basic-example',
@@ -1898,8 +1807,8 @@ TableBasicExample.decorators = [
 /**
  * @nocollapse
  */
-TableBasicExample.ctorParameters = function () { return []; };
-var data = [
+TableBasicExample.ctorParameters = () => [];
+const data = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1927,50 +1836,44 @@ var data = [
  * altered, the observable should emit that new set of data on the stream. In our case here,
  * we return a stream that contains only one set of data that doesn't change.
  */
-var ExampleDataSource$1 = (function (_super) {
-    tslib_1.__extends(ExampleDataSource$1, _super);
-    function ExampleDataSource$1() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
+class ExampleDataSource$1 extends DataSource {
     /**
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$1.prototype.connect = function () {
+    connect() {
         return Observable.of(data);
-    };
+    }
     /**
      * @return {?}
      */
-    ExampleDataSource$1.prototype.disconnect = function () { };
-    return ExampleDataSource$1;
-}(DataSource));
+    disconnect() { }
+}
+
 /**
  * \@title Table with filtering
  */
-var TableFilteringExample = (function () {
-    function TableFilteringExample() {
+class TableFilteringExample {
+    constructor() {
         this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
         this.exampleDatabase = new ExampleDatabase$1();
     }
     /**
      * @return {?}
      */
-    TableFilteringExample.prototype.ngOnInit = function () {
-        var _this = this;
+    ngOnInit() {
         this.dataSource = new ExampleDataSource$2(this.exampleDatabase);
         Observable.fromEvent(this.filter.nativeElement, 'keyup')
             .debounceTime(150)
             .distinctUntilChanged()
-            .subscribe(function () {
-            if (!_this.dataSource) {
+            .subscribe(() => {
+            if (!this.dataSource) {
                 return;
             }
-            _this.dataSource.filter = _this.filter.nativeElement.value;
+            this.dataSource.filter = this.filter.nativeElement.value;
         });
-    };
-    return TableFilteringExample;
-}());
+    }
+}
 TableFilteringExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-filtering-example',
@@ -1981,55 +1884,51 @@ TableFilteringExample.decorators = [
 /**
  * @nocollapse
  */
-TableFilteringExample.ctorParameters = function () { return []; };
+TableFilteringExample.ctorParameters = () => [];
 TableFilteringExample.propDecorators = {
     'filter': [{ type: ViewChild, args: ['filter',] },],
 };
 /**
  * Constants used to fill up our data base.
  */
-var COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+const COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+const NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
-var ExampleDatabase$1 = (function () {
-    function ExampleDatabase$1() {
+class ExampleDatabase$1 {
+    constructor() {
         /**
          * Stream that emits whenever the data has been modified.
          */
         this.dataChange = new BehaviorSubject([]);
         // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
+        for (let i = 0; i < 100; i++) {
             this.addUser();
         }
     }
-    Object.defineProperty(ExampleDatabase$1.prototype, "data", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
+    /**
+     * @return {?}
+     */
+    get data() { return this.dataChange.value; }
     /**
      * Adds a new user to the database.
      * @return {?}
      */
-    ExampleDatabase$1.prototype.addUser = function () {
-        var /** @type {?} */ copiedData = this.data.slice();
+    addUser() {
+        const /** @type {?} */ copiedData = this.data.slice();
         copiedData.push(this.createNewUser());
         this.dataChange.next(copiedData);
-    };
+    }
     /**
      * Builds and returns a new User.
      * @return {?}
      */
-    ExampleDatabase$1.prototype.createNewUser = function () {
-        var /** @type {?} */ name = NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))] + ' ' +
+    createNewUser() {
+        const /** @type {?} */ name = NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))] + ' ' +
             NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))].charAt(0) + '.';
         return {
             id: (this.data.length + 1).toString(),
@@ -2037,9 +1936,8 @@ var ExampleDatabase$1 = (function () {
             progress: Math.round(Math.random() * 100).toString(),
             color: COLORS$1[Math.round(Math.random() * (COLORS$1.length - 1))]
         };
-    };
-    return ExampleDatabase$1;
-}());
+    }
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -2047,73 +1945,65 @@ var ExampleDatabase$1 = (function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource$2 = (function (_super) {
-    tslib_1.__extends(ExampleDataSource$2, _super);
+class ExampleDataSource$2 extends DataSource {
     /**
      * @param {?} _exampleDatabase
      */
-    function ExampleDataSource$2(_exampleDatabase) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
-        _this._filterChange = new BehaviorSubject('');
-        return _this;
+    constructor(_exampleDatabase) {
+        super();
+        this._exampleDatabase = _exampleDatabase;
+        this._filterChange = new BehaviorSubject('');
     }
-    Object.defineProperty(ExampleDataSource$2.prototype, "filter", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this._filterChange.value; },
-        /**
-         * @param {?} filter
-         * @return {?}
-         */
-        set: function (filter) { this._filterChange.next(filter); },
-        enumerable: true,
-        configurable: true
-    });
+    /**
+     * @return {?}
+     */
+    get filter() { return this._filterChange.value; }
+    /**
+     * @param {?} filter
+     * @return {?}
+     */
+    set filter(filter) { this._filterChange.next(filter); }
     /**
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$2.prototype.connect = function () {
-        var _this = this;
-        var /** @type {?} */ displayDataChanges = [
+    connect() {
+        const /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
             this._filterChange,
         ];
-        return Observable.merge.apply(Observable, displayDataChanges).map(function () {
-            return _this._exampleDatabase.data.slice().filter(function (item) {
-                var /** @type {?} */ searchStr = (item.name + item.color).toLowerCase();
-                return searchStr.indexOf(_this.filter.toLowerCase()) != -1;
+        return Observable.merge(...displayDataChanges).map(() => {
+            return this._exampleDatabase.data.slice().filter((item) => {
+                let /** @type {?} */ searchStr = (item.name + item.color).toLowerCase();
+                return searchStr.indexOf(this.filter.toLowerCase()) != -1;
             });
         });
-    };
+    }
     /**
      * @return {?}
      */
-    ExampleDataSource$2.prototype.disconnect = function () { };
-    return ExampleDataSource$2;
-}(DataSource));
+    disconnect() { }
+}
+
 /**
  * \@title Table retrieving data through HTTP
  */
-var TableHttpExample = (function () {
+class TableHttpExample {
     /**
      * @param {?} http
      */
-    function TableHttpExample(http) {
+    constructor(http) {
         this.http = http;
         this.displayedColumns = ['created_at', 'state', 'number', 'title'];
     }
     /**
      * @return {?}
      */
-    TableHttpExample.prototype.ngOnInit = function () {
+    ngOnInit() {
         this.exampleDatabase = new ExampleHttpDao(this.http);
         this.dataSource = new ExampleDataSource$3(/** @type {?} */ ((this.exampleDatabase)), this.paginator, this.sort);
-    };
-    return TableHttpExample;
-}());
+    }
+}
 TableHttpExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-http-example',
@@ -2124,9 +2014,9 @@ TableHttpExample.decorators = [
 /**
  * @nocollapse
  */
-TableHttpExample.ctorParameters = function () { return [
+TableHttpExample.ctorParameters = () => [
     { type: Http, },
-]; };
+];
 TableHttpExample.propDecorators = {
     'paginator': [{ type: ViewChild, args: [MdPaginator,] },],
     'sort': [{ type: ViewChild, args: [MdSort,] },],
@@ -2134,11 +2024,11 @@ TableHttpExample.propDecorators = {
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
-var ExampleHttpDao = (function () {
+class ExampleHttpDao {
     /**
      * @param {?} http
      */
-    function ExampleHttpDao(http) {
+    constructor(http) {
         this.http = http;
     }
     /**
@@ -2147,14 +2037,13 @@ var ExampleHttpDao = (function () {
      * @param {?} page
      * @return {?}
      */
-    ExampleHttpDao.prototype.getRepoIssues = function (sort, order, page) {
-        var /** @type {?} */ href = 'https://api.github.com/search/issues';
-        var /** @type {?} */ requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
+    getRepoIssues(sort, order, page) {
+        const /** @type {?} */ href = 'https://api.github.com/search/issues';
+        const /** @type {?} */ requestUrl = `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
         return this.http.get(requestUrl)
-            .map(function (response) { return (response.json()); });
-    };
-    return ExampleHttpDao;
-}());
+            .map(response => (response.json()));
+    }
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -2162,66 +2051,64 @@ var ExampleHttpDao = (function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource$3 = (function (_super) {
-    tslib_1.__extends(ExampleDataSource$3, _super);
+class ExampleDataSource$3 extends DataSource {
     /**
      * @param {?} exampleDatabase
      * @param {?} paginator
      * @param {?} sort
      */
-    function ExampleDataSource$3(exampleDatabase, paginator, sort) {
-        var _this = _super.call(this) || this;
-        _this.exampleDatabase = exampleDatabase;
-        _this.paginator = paginator;
-        _this.sort = sort;
+    constructor(exampleDatabase, paginator, sort) {
+        super();
+        this.exampleDatabase = exampleDatabase;
+        this.paginator = paginator;
+        this.sort = sort;
         // The number of issues returned by github matching the query.
-        _this.resultsLength = 0;
-        _this.isLoadingResults = false;
-        _this.isRateLimitReached = false;
-        return _this;
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
+        this.isRateLimitReached = false;
     }
     /**
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$3.prototype.connect = function () {
-        var _this = this;
-        var /** @type {?} */ displayDataChanges = [
+    connect() {
+        const /** @type {?} */ displayDataChanges = [
             this.sort.mdSortChange,
             this.paginator.page
         ];
         // If the user changes the sort order, reset back to the first page.
-        this.sort.mdSortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
-        return Observable.merge.apply(Observable, displayDataChanges).startWith(null)
-            .switchMap(function () {
-            _this.isLoadingResults = true;
-            return _this.exampleDatabase.getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
+        this.sort.mdSortChange.subscribe(() => this.paginator.pageIndex = 0);
+        return Observable.merge(...displayDataChanges)
+            .startWith(null)
+            .switchMap(() => {
+            this.isLoadingResults = true;
+            return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
         })
-            .map(function (data) {
+            .map(data => {
             // Flip flag to show that loading has finished.
-            _this.isLoadingResults = false;
-            _this.isRateLimitReached = false;
-            _this.resultsLength = data.total_count;
+            this.isLoadingResults = false;
+            this.isRateLimitReached = false;
+            this.resultsLength = data.total_count;
             return data.items;
         })
-            .catch(function () {
-            _this.isLoadingResults = false;
+            .catch(() => {
+            this.isLoadingResults = false;
             // Catch if the GitHub API has reached its rate limit. Return empty data.
-            _this.isRateLimitReached = true;
-            return Observable.of(null);
+            this.isRateLimitReached = true;
+            return Observable.of([]);
         });
-    };
+    }
     /**
      * @return {?}
      */
-    ExampleDataSource$3.prototype.disconnect = function () { };
-    return ExampleDataSource$3;
-}(DataSource));
+    disconnect() { }
+}
+
 /**
  * \@title Feature-rich data table
  */
-var TableOverviewExample = (function () {
-    function TableOverviewExample() {
+class TableOverviewExample {
+    constructor() {
         this.displayedColumns = ['select', 'userId', 'userName', 'progress', 'color'];
         this.exampleDatabase = new ExampleDatabase$2();
         this.selection = new SelectionModel(true, []);
@@ -2229,23 +2116,22 @@ var TableOverviewExample = (function () {
     /**
      * @return {?}
      */
-    TableOverviewExample.prototype.ngOnInit = function () {
-        var _this = this;
+    ngOnInit() {
         this.dataSource = new ExampleDataSource$4(this.exampleDatabase, this.paginator, this.sort);
         Observable.fromEvent(this.filter.nativeElement, 'keyup')
             .debounceTime(150)
             .distinctUntilChanged()
-            .subscribe(function () {
-            if (!_this.dataSource) {
+            .subscribe(() => {
+            if (!this.dataSource) {
                 return;
             }
-            _this.dataSource.filter = _this.filter.nativeElement.value;
+            this.dataSource.filter = this.filter.nativeElement.value;
         });
-    };
+    }
     /**
      * @return {?}
      */
-    TableOverviewExample.prototype.isAllSelected = function () {
+    isAllSelected() {
         if (!this.dataSource) {
             return false;
         }
@@ -2258,12 +2144,11 @@ var TableOverviewExample = (function () {
         else {
             return this.selection.selected.length == this.exampleDatabase.data.length;
         }
-    };
+    }
     /**
      * @return {?}
      */
-    TableOverviewExample.prototype.masterToggle = function () {
-        var _this = this;
+    masterToggle() {
         if (!this.dataSource) {
             return;
         }
@@ -2271,14 +2156,13 @@ var TableOverviewExample = (function () {
             this.selection.clear();
         }
         else if (this.filter.nativeElement.value) {
-            this.dataSource.renderedData.forEach(function (data) { return _this.selection.select(data.id); });
+            this.dataSource.renderedData.forEach(data => this.selection.select(data.id));
         }
         else {
-            this.exampleDatabase.data.forEach(function (data) { return _this.selection.select(data.id); });
+            this.exampleDatabase.data.forEach(data => this.selection.select(data.id));
         }
-    };
-    return TableOverviewExample;
-}());
+    }
+}
 TableOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-overview-example',
@@ -2289,7 +2173,7 @@ TableOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-TableOverviewExample.ctorParameters = function () { return []; };
+TableOverviewExample.ctorParameters = () => [];
 TableOverviewExample.propDecorators = {
     'paginator': [{ type: ViewChild, args: [MdPaginator,] },],
     'sort': [{ type: ViewChild, args: [MdSort,] },],
@@ -2298,48 +2182,44 @@ TableOverviewExample.propDecorators = {
 /**
  * Constants used to fill up our data base.
  */
-var COLORS$2 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+const COLORS$2 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES$2 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+const NAMES$2 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
-var ExampleDatabase$2 = (function () {
-    function ExampleDatabase$2() {
+class ExampleDatabase$2 {
+    constructor() {
         /**
          * Stream that emits whenever the data has been modified.
          */
         this.dataChange = new BehaviorSubject([]);
         // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
+        for (let i = 0; i < 100; i++) {
             this.addUser();
         }
     }
-    Object.defineProperty(ExampleDatabase$2.prototype, "data", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
+    /**
+     * @return {?}
+     */
+    get data() { return this.dataChange.value; }
     /**
      * Adds a new user to the database.
      * @return {?}
      */
-    ExampleDatabase$2.prototype.addUser = function () {
-        var /** @type {?} */ copiedData = this.data.slice();
+    addUser() {
+        const /** @type {?} */ copiedData = this.data.slice();
         copiedData.push(this.createNewUser());
         this.dataChange.next(copiedData);
-    };
+    }
     /**
      * Builds and returns a new User.
      * @return {?}
      */
-    ExampleDatabase$2.prototype.createNewUser = function () {
-        var /** @type {?} */ name = NAMES$2[Math.round(Math.random() * (NAMES$2.length - 1))] + ' ' +
+    createNewUser() {
+        const /** @type {?} */ name = NAMES$2[Math.round(Math.random() * (NAMES$2.length - 1))] + ' ' +
             NAMES$2[Math.round(Math.random() * (NAMES$2.length - 1))].charAt(0) + '.';
         return {
             id: (this.data.length + 1).toString(),
@@ -2347,9 +2227,8 @@ var ExampleDatabase$2 = (function () {
             progress: Math.round(Math.random() * 100).toString(),
             color: COLORS$2[Math.round(Math.random() * (COLORS$2.length - 1))]
         };
-    };
-    return ExampleDatabase$2;
-}());
+    }
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -2357,120 +2236,110 @@ var ExampleDatabase$2 = (function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource$4 = (function (_super) {
-    tslib_1.__extends(ExampleDataSource$4, _super);
+class ExampleDataSource$4 extends DataSource {
     /**
      * @param {?} _exampleDatabase
      * @param {?} _paginator
      * @param {?} _sort
      */
-    function ExampleDataSource$4(_exampleDatabase, _paginator, _sort) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
-        _this._paginator = _paginator;
-        _this._sort = _sort;
-        _this._filterChange = new BehaviorSubject('');
-        _this.filteredData = [];
-        _this.renderedData = [];
+    constructor(_exampleDatabase, _paginator, _sort) {
+        super();
+        this._exampleDatabase = _exampleDatabase;
+        this._paginator = _paginator;
+        this._sort = _sort;
+        this._filterChange = new BehaviorSubject('');
+        this.filteredData = [];
+        this.renderedData = [];
         // Reset to the first page when the user changes the filter.
-        _this._filterChange.subscribe(function () { return _this._paginator.pageIndex = 0; });
-        return _this;
+        this._filterChange.subscribe(() => this._paginator.pageIndex = 0);
     }
-    Object.defineProperty(ExampleDataSource$4.prototype, "filter", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this._filterChange.value; },
-        /**
-         * @param {?} filter
-         * @return {?}
-         */
-        set: function (filter) { this._filterChange.next(filter); },
-        enumerable: true,
-        configurable: true
-    });
+    /**
+     * @return {?}
+     */
+    get filter() { return this._filterChange.value; }
+    /**
+     * @param {?} filter
+     * @return {?}
+     */
+    set filter(filter) { this._filterChange.next(filter); }
     /**
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$4.prototype.connect = function () {
-        var _this = this;
+    connect() {
         // Listen for any changes in the base data, sorting, filtering, or pagination
-        var /** @type {?} */ displayDataChanges = [
+        const /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
             this._sort.mdSortChange,
             this._filterChange,
             this._paginator.page,
         ];
-        return Observable.merge.apply(Observable, displayDataChanges).map(function () {
+        return Observable.merge(...displayDataChanges).map(() => {
             // Filter data
-            _this.filteredData = _this._exampleDatabase.data.slice().filter(function (item) {
-                var /** @type {?} */ searchStr = (item.name + item.color).toLowerCase();
-                return searchStr.indexOf(_this.filter.toLowerCase()) != -1;
+            this.filteredData = this._exampleDatabase.data.slice().filter((item) => {
+                let /** @type {?} */ searchStr = (item.name + item.color).toLowerCase();
+                return searchStr.indexOf(this.filter.toLowerCase()) != -1;
             });
             // Sort filtered data
-            var /** @type {?} */ sortedData = _this.sortData(_this.filteredData.slice());
+            const /** @type {?} */ sortedData = this.sortData(this.filteredData.slice());
             // Grab the page's slice of the filtered sorted data.
-            var /** @type {?} */ startIndex = _this._paginator.pageIndex * _this._paginator.pageSize;
-            _this.renderedData = sortedData.splice(startIndex, _this._paginator.pageSize);
-            return _this.renderedData;
+            const /** @type {?} */ startIndex = this._paginator.pageIndex * this._paginator.pageSize;
+            this.renderedData = sortedData.splice(startIndex, this._paginator.pageSize);
+            return this.renderedData;
         });
-    };
+    }
     /**
      * @return {?}
      */
-    ExampleDataSource$4.prototype.disconnect = function () { };
+    disconnect() { }
     /**
      * Returns a sorted copy of the database data.
      * @param {?} data
      * @return {?}
      */
-    ExampleDataSource$4.prototype.sortData = function (data) {
-        var _this = this;
+    sortData(data) {
         if (!this._sort.active || this._sort.direction == '') {
             return data;
         }
-        return data.sort(function (a, b) {
-            var /** @type {?} */ propertyA = '';
-            var /** @type {?} */ propertyB = '';
-            switch (_this._sort.active) {
+        return data.sort((a, b) => {
+            let /** @type {?} */ propertyA = '';
+            let /** @type {?} */ propertyB = '';
+            switch (this._sort.active) {
                 case 'userId':
-                    _a = [a.id, b.id], propertyA = _a[0], propertyB = _a[1];
+                    [propertyA, propertyB] = [a.id, b.id];
                     break;
                 case 'userName':
-                    _b = [a.name, b.name], propertyA = _b[0], propertyB = _b[1];
+                    [propertyA, propertyB] = [a.name, b.name];
                     break;
                 case 'progress':
-                    _c = [a.progress, b.progress], propertyA = _c[0], propertyB = _c[1];
+                    [propertyA, propertyB] = [a.progress, b.progress];
                     break;
                 case 'color':
-                    _d = [a.color, b.color], propertyA = _d[0], propertyB = _d[1];
+                    [propertyA, propertyB] = [a.color, b.color];
                     break;
             }
-            var /** @type {?} */ valueA = isNaN(+propertyA) ? propertyA : +propertyA;
-            var /** @type {?} */ valueB = isNaN(+propertyB) ? propertyB : +propertyB;
-            return (valueA < valueB ? -1 : 1) * (_this._sort.direction == 'asc' ? 1 : -1);
-            var _a, _b, _c, _d;
+            let /** @type {?} */ valueA = isNaN(+propertyA) ? propertyA : +propertyA;
+            let /** @type {?} */ valueB = isNaN(+propertyB) ? propertyB : +propertyB;
+            return (valueA < valueB ? -1 : 1) * (this._sort.direction == 'asc' ? 1 : -1);
         });
-    };
-    return ExampleDataSource$4;
-}(DataSource));
+    }
+}
+
 /**
  * \@title Table with pagination
  */
-var TablePaginationExample = (function () {
-    function TablePaginationExample() {
+class TablePaginationExample {
+    constructor() {
         this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
         this.exampleDatabase = new ExampleDatabase$3();
     }
     /**
      * @return {?}
      */
-    TablePaginationExample.prototype.ngOnInit = function () {
+    ngOnInit() {
         this.dataSource = new ExampleDataSource$5(this.exampleDatabase, this.paginator);
-    };
-    return TablePaginationExample;
-}());
+    }
+}
 TablePaginationExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-pagination-example',
@@ -2481,55 +2350,51 @@ TablePaginationExample.decorators = [
 /**
  * @nocollapse
  */
-TablePaginationExample.ctorParameters = function () { return []; };
+TablePaginationExample.ctorParameters = () => [];
 TablePaginationExample.propDecorators = {
     'paginator': [{ type: ViewChild, args: [MdPaginator,] },],
 };
 /**
  * Constants used to fill up our data base.
  */
-var COLORS$3 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+const COLORS$3 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES$3 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+const NAMES$3 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
-var ExampleDatabase$3 = (function () {
-    function ExampleDatabase$3() {
+class ExampleDatabase$3 {
+    constructor() {
         /**
          * Stream that emits whenever the data has been modified.
          */
         this.dataChange = new BehaviorSubject([]);
         // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
+        for (let i = 0; i < 100; i++) {
             this.addUser();
         }
     }
-    Object.defineProperty(ExampleDatabase$3.prototype, "data", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
+    /**
+     * @return {?}
+     */
+    get data() { return this.dataChange.value; }
     /**
      * Adds a new user to the database.
      * @return {?}
      */
-    ExampleDatabase$3.prototype.addUser = function () {
-        var /** @type {?} */ copiedData = this.data.slice();
+    addUser() {
+        const /** @type {?} */ copiedData = this.data.slice();
         copiedData.push(this.createNewUser());
         this.dataChange.next(copiedData);
-    };
+    }
     /**
      * Builds and returns a new User.
      * @return {?}
      */
-    ExampleDatabase$3.prototype.createNewUser = function () {
-        var /** @type {?} */ name = NAMES$3[Math.round(Math.random() * (NAMES$3.length - 1))] + ' ' +
+    createNewUser() {
+        const /** @type {?} */ name = NAMES$3[Math.round(Math.random() * (NAMES$3.length - 1))] + ' ' +
             NAMES$3[Math.round(Math.random() * (NAMES$3.length - 1))].charAt(0) + '.';
         return {
             id: (this.data.length + 1).toString(),
@@ -2537,9 +2402,8 @@ var ExampleDatabase$3 = (function () {
             progress: Math.round(Math.random() * 100).toString(),
             color: COLORS$3[Math.round(Math.random() * (COLORS$3.length - 1))]
         };
-    };
-    return ExampleDatabase$3;
-}());
+    }
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -2547,57 +2411,53 @@ var ExampleDatabase$3 = (function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource$5 = (function (_super) {
-    tslib_1.__extends(ExampleDataSource$5, _super);
+class ExampleDataSource$5 extends DataSource {
     /**
      * @param {?} _exampleDatabase
      * @param {?} _paginator
      */
-    function ExampleDataSource$5(_exampleDatabase, _paginator) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
-        _this._paginator = _paginator;
-        return _this;
+    constructor(_exampleDatabase, _paginator) {
+        super();
+        this._exampleDatabase = _exampleDatabase;
+        this._paginator = _paginator;
     }
     /**
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$5.prototype.connect = function () {
-        var _this = this;
-        var /** @type {?} */ displayDataChanges = [
+    connect() {
+        const /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
             this._paginator.page,
         ];
-        return Observable.merge.apply(Observable, displayDataChanges).map(function () {
-            var /** @type {?} */ data = _this._exampleDatabase.data.slice();
+        return Observable.merge(...displayDataChanges).map(() => {
+            const /** @type {?} */ data = this._exampleDatabase.data.slice();
             // Grab the page's slice of data.
-            var /** @type {?} */ startIndex = _this._paginator.pageIndex * _this._paginator.pageSize;
-            return data.splice(startIndex, _this._paginator.pageSize);
+            const /** @type {?} */ startIndex = this._paginator.pageIndex * this._paginator.pageSize;
+            return data.splice(startIndex, this._paginator.pageSize);
         });
-    };
+    }
     /**
      * @return {?}
      */
-    ExampleDataSource$5.prototype.disconnect = function () { };
-    return ExampleDataSource$5;
-}(DataSource));
+    disconnect() { }
+}
+
 /**
  * \@title Table with sorting
  */
-var TableSortingExample = (function () {
-    function TableSortingExample() {
+class TableSortingExample {
+    constructor() {
         this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
         this.exampleDatabase = new ExampleDatabase$4();
     }
     /**
      * @return {?}
      */
-    TableSortingExample.prototype.ngOnInit = function () {
+    ngOnInit() {
         this.dataSource = new ExampleDataSource$6(this.exampleDatabase, this.sort);
-    };
-    return TableSortingExample;
-}());
+    }
+}
 TableSortingExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-sorting-example',
@@ -2608,55 +2468,51 @@ TableSortingExample.decorators = [
 /**
  * @nocollapse
  */
-TableSortingExample.ctorParameters = function () { return []; };
+TableSortingExample.ctorParameters = () => [];
 TableSortingExample.propDecorators = {
     'sort': [{ type: ViewChild, args: [MdSort,] },],
 };
 /**
  * Constants used to fill up our data base.
  */
-var COLORS$4 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+const COLORS$4 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES$4 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+const NAMES$4 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
-var ExampleDatabase$4 = (function () {
-    function ExampleDatabase$4() {
+class ExampleDatabase$4 {
+    constructor() {
         /**
          * Stream that emits whenever the data has been modified.
          */
         this.dataChange = new BehaviorSubject([]);
         // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
+        for (let i = 0; i < 100; i++) {
             this.addUser();
         }
     }
-    Object.defineProperty(ExampleDatabase$4.prototype, "data", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
+    /**
+     * @return {?}
+     */
+    get data() { return this.dataChange.value; }
     /**
      * Adds a new user to the database.
      * @return {?}
      */
-    ExampleDatabase$4.prototype.addUser = function () {
-        var /** @type {?} */ copiedData = this.data.slice();
+    addUser() {
+        const /** @type {?} */ copiedData = this.data.slice();
         copiedData.push(this.createNewUser());
         this.dataChange.next(copiedData);
-    };
+    }
     /**
      * Builds and returns a new User.
      * @return {?}
      */
-    ExampleDatabase$4.prototype.createNewUser = function () {
-        var /** @type {?} */ name = NAMES$4[Math.round(Math.random() * (NAMES$4.length - 1))] + ' ' +
+    createNewUser() {
+        const /** @type {?} */ name = NAMES$4[Math.round(Math.random() * (NAMES$4.length - 1))] + ' ' +
             NAMES$4[Math.round(Math.random() * (NAMES$4.length - 1))].charAt(0) + '.';
         return {
             id: (this.data.length + 1).toString(),
@@ -2664,9 +2520,8 @@ var ExampleDatabase$4 = (function () {
             progress: Math.round(Math.random() * 100).toString(),
             color: COLORS$4[Math.round(Math.random() * (COLORS$4.length - 1))]
         };
-    };
-    return ExampleDatabase$4;
-}());
+    }
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -2674,79 +2529,71 @@ var ExampleDatabase$4 = (function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource$6 = (function (_super) {
-    tslib_1.__extends(ExampleDataSource$6, _super);
+class ExampleDataSource$6 extends DataSource {
     /**
      * @param {?} _exampleDatabase
      * @param {?} _sort
      */
-    function ExampleDataSource$6(_exampleDatabase, _sort) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
-        _this._sort = _sort;
-        return _this;
+    constructor(_exampleDatabase, _sort) {
+        super();
+        this._exampleDatabase = _exampleDatabase;
+        this._sort = _sort;
     }
     /**
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource$6.prototype.connect = function () {
-        var _this = this;
-        var /** @type {?} */ displayDataChanges = [
+    connect() {
+        const /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
             this._sort.mdSortChange,
         ];
-        return Observable.merge.apply(Observable, displayDataChanges).map(function () {
-            return _this.getSortedData();
+        return Observable.merge(...displayDataChanges).map(() => {
+            return this.getSortedData();
         });
-    };
+    }
     /**
      * @return {?}
      */
-    ExampleDataSource$6.prototype.disconnect = function () { };
+    disconnect() { }
     /**
      * Returns a sorted copy of the database data.
      * @return {?}
      */
-    ExampleDataSource$6.prototype.getSortedData = function () {
-        var _this = this;
-        var /** @type {?} */ data = this._exampleDatabase.data.slice();
+    getSortedData() {
+        const /** @type {?} */ data = this._exampleDatabase.data.slice();
         if (!this._sort.active || this._sort.direction == '') {
             return data;
         }
-        return data.sort(function (a, b) {
-            var /** @type {?} */ propertyA = '';
-            var /** @type {?} */ propertyB = '';
-            switch (_this._sort.active) {
+        return data.sort((a, b) => {
+            let /** @type {?} */ propertyA = '';
+            let /** @type {?} */ propertyB = '';
+            switch (this._sort.active) {
                 case 'userId':
-                    _a = [a.id, b.id], propertyA = _a[0], propertyB = _a[1];
+                    [propertyA, propertyB] = [a.id, b.id];
                     break;
                 case 'userName':
-                    _b = [a.name, b.name], propertyA = _b[0], propertyB = _b[1];
+                    [propertyA, propertyB] = [a.name, b.name];
                     break;
                 case 'progress':
-                    _c = [a.progress, b.progress], propertyA = _c[0], propertyB = _c[1];
+                    [propertyA, propertyB] = [a.progress, b.progress];
                     break;
                 case 'color':
-                    _d = [a.color, b.color], propertyA = _d[0], propertyB = _d[1];
+                    [propertyA, propertyB] = [a.color, b.color];
                     break;
             }
-            var /** @type {?} */ valueA = isNaN(+propertyA) ? propertyA : +propertyA;
-            var /** @type {?} */ valueB = isNaN(+propertyB) ? propertyB : +propertyB;
-            return (valueA < valueB ? -1 : 1) * (_this._sort.direction == 'asc' ? 1 : -1);
-            var _a, _b, _c, _d;
+            let /** @type {?} */ valueA = isNaN(+propertyA) ? propertyA : +propertyA;
+            let /** @type {?} */ valueB = isNaN(+propertyB) ? propertyB : +propertyB;
+            return (valueA < valueB ? -1 : 1) * (this._sort.direction == 'asc' ? 1 : -1);
         });
-    };
-    return ExampleDataSource$6;
-}(DataSource));
+    }
+}
+
 /**
  * \@title Basic tabs
  */
-var TabsOverviewExample = (function () {
-    function TabsOverviewExample() {
-    }
-    return TabsOverviewExample;
-}());
+class TabsOverviewExample {
+}
 TabsOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'tabs-overview-example',
@@ -2756,15 +2603,13 @@ TabsOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-TabsOverviewExample.ctorParameters = function () { return []; };
+TabsOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Complex Example
  */
-var TabsTemplateLabelExample = (function () {
-    function TabsTemplateLabelExample() {
-    }
-    return TabsTemplateLabelExample;
-}());
+class TabsTemplateLabelExample {
+}
 TabsTemplateLabelExample.decorators = [
     { type: Component, args: [{
                 selector: 'tabs-template-label-example',
@@ -2775,15 +2620,13 @@ TabsTemplateLabelExample.decorators = [
 /**
  * @nocollapse
  */
-TabsTemplateLabelExample.ctorParameters = function () { return []; };
+TabsTemplateLabelExample.ctorParameters = () => [];
+
 /**
  * \@title Multi-row toolbar
  */
-var ToolbarMultirowExample = (function () {
-    function ToolbarMultirowExample() {
-    }
-    return ToolbarMultirowExample;
-}());
+class ToolbarMultirowExample {
+}
 ToolbarMultirowExample.decorators = [
     { type: Component, args: [{
                 selector: 'toolbar-multirow-example',
@@ -2794,15 +2637,13 @@ ToolbarMultirowExample.decorators = [
 /**
  * @nocollapse
  */
-ToolbarMultirowExample.ctorParameters = function () { return []; };
+ToolbarMultirowExample.ctorParameters = () => [];
+
 /**
  * \@title Basic toolbar
  */
-var ToolbarOverviewExample = (function () {
-    function ToolbarOverviewExample() {
-    }
-    return ToolbarOverviewExample;
-}());
+class ToolbarOverviewExample {
+}
 ToolbarOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'toolbar-overview-example',
@@ -2812,15 +2653,13 @@ ToolbarOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-ToolbarOverviewExample.ctorParameters = function () { return []; };
+ToolbarOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Basic tooltip
  */
-var TooltipOverviewExample = (function () {
-    function TooltipOverviewExample() {
-    }
-    return TooltipOverviewExample;
-}());
+class TooltipOverviewExample {
+}
 TooltipOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'tooltip-overview-example',
@@ -2830,16 +2669,16 @@ TooltipOverviewExample.decorators = [
 /**
  * @nocollapse
  */
-TooltipOverviewExample.ctorParameters = function () { return []; };
+TooltipOverviewExample.ctorParameters = () => [];
+
 /**
  * \@title Tooltip with custom position
  */
-var TooltipPositionExample = (function () {
-    function TooltipPositionExample() {
+class TooltipPositionExample {
+    constructor() {
         this.position = 'before';
     }
-    return TooltipPositionExample;
-}());
+}
 TooltipPositionExample.decorators = [
     { type: Component, args: [{
                 selector: 'tooltip-position-example',
@@ -2850,10 +2689,11 @@ TooltipPositionExample.decorators = [
 /**
  * @nocollapse
  */
-TooltipPositionExample.ctorParameters = function () { return []; };
+TooltipPositionExample.ctorParameters = () => [];
+
 /* tslint:disable */
 /** DO NOT MANUALLY EDIT THIS FILE, IT IS GENERATED VIA GULP 'build-examples-module' */
-var EXAMPLE_COMPONENTS = {
+const EXAMPLE_COMPONENTS = {
     'autocomplete-display': {
         title: 'Display value autocomplete',
         component: AutocompleteDisplayExample,
@@ -3311,7 +3151,7 @@ var EXAMPLE_COMPONENTS = {
         selectorName: null
     },
 };
-var EXAMPLE_LIST = [
+const EXAMPLE_LIST = [
     AutocompleteDisplayExample,
     AutocompleteFilterExample,
     AutocompleteOverviewExample,
@@ -3389,11 +3229,8 @@ var EXAMPLE_LIST = [
     TooltipOverviewExample,
     TooltipPositionExample,
 ];
-var ExampleModule = (function () {
-    function ExampleModule() {
-    }
-    return ExampleModule;
-}());
+class ExampleModule {
+}
 ExampleModule.decorators = [
     { type: NgModule, args: [{
                 declarations: EXAMPLE_LIST,
@@ -3409,16 +3246,17 @@ ExampleModule.decorators = [
 /**
  * @nocollapse
  */
-ExampleModule.ctorParameters = function () { return []; };
+ExampleModule.ctorParameters = () => [];
+
 /**
  * Example data
  *   with information about Component name, selector, files used in example, and path to examples
  */
-var ExampleData = (function () {
+class ExampleData {
     /**
      * @param {?} example
      */
-    function ExampleData(example) {
+    constructor(example) {
         // TODO: figure out how do we get these variables.
         this.description = 'Some description for material';
         // TODO: use real example and delete the example/ folder.
@@ -3429,15 +3267,15 @@ var ExampleData = (function () {
         this.indexFilename = 'button-demo';
         this.componentName = 'ButtonDemo';
         if (example && EXAMPLE_COMPONENTS[example]) {
-            this.examplePath = "/assets/plunker/examples/" + example + "/";
+            this.examplePath = `/assets/plunker/examples/${example}/`;
             // TODO(tinayuangao): Do not hard-code extensions
             this.exampleFiles = ['html', 'ts', 'css']
-                .map(function (extension) { return example + "-example." + extension; });
+                .map((extension) => `${example}-example.${extension}`);
             if (EXAMPLE_COMPONENTS[example].additionalFiles) {
                 this.exampleFiles = this.exampleFiles.concat(EXAMPLE_COMPONENTS[example].additionalFiles);
             }
-            this.selectorName = this.indexFilename = example + "-example";
-            var exampleName = example.replace(/(?:^\w|\b\w)/g, function (letter) { return letter.toUpperCase(); });
+            this.selectorName = this.indexFilename = `${example}-example`;
+            let exampleName = example.replace(/(?:^\w|\b\w)/g, letter => letter.toUpperCase());
             if (EXAMPLE_COMPONENTS[example].title) {
                 this.description = EXAMPLE_COMPONENTS[example].title;
             }
@@ -3452,10 +3290,11 @@ var ExampleData = (function () {
             }
         }
     }
-    return ExampleData;
-}());
+}
+
 /**
  * Generated bundle index. Do not edit.
  */
+
 export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵl, ChipsStackedExample as ɵm, DatepickerApiExample as ɵn, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵp, DatepickerStartViewExample as ɵq, DatepickerTouchExample as ɵr, DialogContentExample as ɵs, DialogContentExampleDialog as ɵt, DialogDataExample as ɵu, DialogDataExampleDialog as ɵv, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵy, DialogOverviewExampleDialog as ɵz, ExpansionStepsExample as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ListSelectionExample as ɵbm, ExampleMaterialModule as ɵcw, MenuIconsExample as ɵbn, MenuOverviewExample as ɵbp, NestedMenuExample as ɵbo, PaginatorConfigurableExample as ɵbq, PaginatorOverviewExample as ɵbr, ProgressBarConfigurableExample as ɵbs, ProgressBarOverviewExample as ɵbt, ProgressSpinnerConfigurableExample as ɵbu, ProgressSpinnerOverviewExample as ɵbv, RadioNgModelExample as ɵbw, RadioOverviewExample as ɵbx, SelectFormExample as ɵby, SelectOverviewExample as ɵbz, SidenavFabExample as ɵca, SidenavOverviewExample as ɵcb, SlideToggleConfigurableExample as ɵcc, SlideToggleFormsExample as ɵcd, SlideToggleOverviewExample as ɵce, SliderConfigurableExample as ɵcf, SliderOverviewExample as ɵcg, PizzaPartyComponent as ɵci, SnackBarComponentExample as ɵch, SnackBarOverviewExample as ɵcj, SortOverviewExample as ɵck, TableBasicExample as ɵcl, TableFilteringExample as ɵcm, TableHttpExample as ɵcn, TableOverviewExample as ɵco, TablePaginationExample as ɵcp, TableSortingExample as ɵcq, TabsOverviewExample as ɵcr, TabsTemplateLabelExample as ɵcs, ToolbarOverviewExample as ɵct, TooltipOverviewExample as ɵcu, TooltipPositionExample as ɵcv };
-//# sourceMappingURL=material-examples.es5.js.map
+//# sourceMappingURL=material-examples.js.map

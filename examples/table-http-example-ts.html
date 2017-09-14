@@ -109,7 +109,7 @@
         <span class="hljs-keyword">this</span>.isLoadingResults = <span class="hljs-literal">false</span>;
         <span class="hljs-comment">// Catch if the GitHub API has reached its rate limit. Return empty data.</span>
         <span class="hljs-keyword">this</span>.isRateLimitReached = <span class="hljs-literal">true</span>;
-        <span class="hljs-keyword">return</span> Observable.of(<span class="hljs-literal">null</span>);
+        <span class="hljs-keyword">return</span> Observable.of([]);
       });
   }
 

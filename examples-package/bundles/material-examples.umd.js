@@ -2220,7 +2220,7 @@ var ExampleDataSource$3 = (function (_super) {
             _this.isLoadingResults = false;
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             _this.isRateLimitReached = true;
-            return rxjs_Observable.Observable.of(null);
+            return rxjs_Observable.Observable.of([]);
         });
     };
     /**
