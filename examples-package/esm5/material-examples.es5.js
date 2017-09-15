@@ -1265,25 +1265,6 @@ MenuIconsExample.decorators = [
  */
 MenuIconsExample.ctorParameters = function () { return []; };
 /**
- * \@title Nested menu
- */
-var NestedMenuExample = (function () {
-    function NestedMenuExample() {
-    }
-    return NestedMenuExample;
-}());
-NestedMenuExample.decorators = [
-    { type: Component, args: [{
-                selector: 'nested-menu-example',
-                template: "<button md-button [mdMenuTriggerFor]=\"animals\">Animal index</button><md-menu #animals=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"vertebrates\">Vertebrates</button> <button md-menu-item [mdMenuTriggerFor]=\"invertebrates\">Invertebrates</button></md-menu><md-menu #vertebrates=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"fish\">Fishes</button> <button md-menu-item [mdMenuTriggerFor]=\"amphibians\">Amphibians</button> <button md-menu-item [mdMenuTriggerFor]=\"reptiles\">Reptiles</button> <button md-menu-item>Birds</button> <button md-menu-item>Mammals</button></md-menu><md-menu #invertebrates=\"mdMenu\"><button md-menu-item>Insects</button> <button md-menu-item>Molluscs</button> <button md-menu-item>Crustaceans</button> <button md-menu-item>Corals</button> <button md-menu-item>Arachnids</button> <button md-menu-item>Velvet worms</button> <button md-menu-item>Horseshoe crabs</button></md-menu><md-menu #fish=\"mdMenu\"><button md-menu-item>Baikal oilfish</button> <button md-menu-item>Bala shark</button> <button md-menu-item>Ballan wrasse</button> <button md-menu-item>Bamboo shark</button> <button md-menu-item>Banded killifish</button></md-menu><md-menu #amphibians=\"mdMenu\"><button md-menu-item>Sonoran desert toad</button> <button md-menu-item>Western toad</button> <button md-menu-item>Arroyo toad</button> <button md-menu-item>Yosemite toad</button></md-menu><md-menu #reptiles=\"mdMenu\"><button md-menu-item>Banded Day Gecko</button> <button md-menu-item>Banded Gila Monster</button> <button md-menu-item>Black Tree Monitor</button> <button md-menu-item>Blue Spiny Lizard</button> <button md-menu-item disabled=\"disabled\">Velociraptor</button></md-menu>",
-                styles: ["/** No CSS for this example */ "]
-            },] },
-];
-/**
- * @nocollapse
- */
-NestedMenuExample.ctorParameters = function () { return []; };
-/**
  * \@title Basic menu
  */
 var MenuOverviewExample = (function () {
@@ -1302,6 +1283,25 @@ MenuOverviewExample.decorators = [
  * @nocollapse
  */
 MenuOverviewExample.ctorParameters = function () { return []; };
+/**
+ * \@title Nested menu
+ */
+var NestedMenuExample = (function () {
+    function NestedMenuExample() {
+    }
+    return NestedMenuExample;
+}());
+NestedMenuExample.decorators = [
+    { type: Component, args: [{
+                selector: 'nested-menu-example',
+                template: "<button md-button [mdMenuTriggerFor]=\"animals\">Animal index</button><md-menu #animals=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"vertebrates\">Vertebrates</button> <button md-menu-item [mdMenuTriggerFor]=\"invertebrates\">Invertebrates</button></md-menu><md-menu #vertebrates=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"fish\">Fishes</button> <button md-menu-item [mdMenuTriggerFor]=\"amphibians\">Amphibians</button> <button md-menu-item [mdMenuTriggerFor]=\"reptiles\">Reptiles</button> <button md-menu-item>Birds</button> <button md-menu-item>Mammals</button></md-menu><md-menu #invertebrates=\"mdMenu\"><button md-menu-item>Insects</button> <button md-menu-item>Molluscs</button> <button md-menu-item>Crustaceans</button> <button md-menu-item>Corals</button> <button md-menu-item>Arachnids</button> <button md-menu-item>Velvet worms</button> <button md-menu-item>Horseshoe crabs</button></md-menu><md-menu #fish=\"mdMenu\"><button md-menu-item>Baikal oilfish</button> <button md-menu-item>Bala shark</button> <button md-menu-item>Ballan wrasse</button> <button md-menu-item>Bamboo shark</button> <button md-menu-item>Banded killifish</button></md-menu><md-menu #amphibians=\"mdMenu\"><button md-menu-item>Sonoran desert toad</button> <button md-menu-item>Western toad</button> <button md-menu-item>Arroyo toad</button> <button md-menu-item>Yosemite toad</button></md-menu><md-menu #reptiles=\"mdMenu\"><button md-menu-item>Banded Day Gecko</button> <button md-menu-item>Banded Gila Monster</button> <button md-menu-item>Black Tree Monitor</button> <button md-menu-item>Blue Spiny Lizard</button> <button md-menu-item disabled=\"disabled\">Velociraptor</button></md-menu>",
+                styles: ["/** No CSS for this example */ "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+NestedMenuExample.ctorParameters = function () { return []; };
 /**
  * \@title Configurable paginator
  */
@@ -3100,15 +3100,15 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
-    'nested-menu': {
-        title: 'Nested menu',
-        component: NestedMenuExample,
-        additionalFiles: null,
-        selectorName: null
-    },
     'menu-overview': {
         title: 'Basic menu',
         component: MenuOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'nested-menu': {
+        title: 'Nested menu',
+        component: NestedMenuExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -3353,8 +3353,8 @@ var EXAMPLE_LIST = [
     ListSectionsExample,
     ListSelectionExample,
     MenuIconsExample,
-    NestedMenuExample,
     MenuOverviewExample,
+    NestedMenuExample,
     PaginatorConfigurableExample,
     PaginatorOverviewExample,
     ProgressBarConfigurableExample,
@@ -3457,5 +3457,5 @@ var ExampleData = (function () {
 /**
  * Generated bundle index. Do not edit.
  */
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵl, ChipsStackedExample as ɵm, DatepickerApiExample as ɵn, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵp, DatepickerStartViewExample as ɵq, DatepickerTouchExample as ɵr, DialogContentExample as ɵs, DialogContentExampleDialog as ɵt, DialogDataExample as ɵu, DialogDataExampleDialog as ɵv, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵy, DialogOverviewExampleDialog as ɵz, ExpansionStepsExample as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ListSelectionExample as ɵbm, ExampleMaterialModule as ɵcw, MenuIconsExample as ɵbn, MenuOverviewExample as ɵbp, NestedMenuExample as ɵbo, PaginatorConfigurableExample as ɵbq, PaginatorOverviewExample as ɵbr, ProgressBarConfigurableExample as ɵbs, ProgressBarOverviewExample as ɵbt, ProgressSpinnerConfigurableExample as ɵbu, ProgressSpinnerOverviewExample as ɵbv, RadioNgModelExample as ɵbw, RadioOverviewExample as ɵbx, SelectFormExample as ɵby, SelectOverviewExample as ɵbz, SidenavFabExample as ɵca, SidenavOverviewExample as ɵcb, SlideToggleConfigurableExample as ɵcc, SlideToggleFormsExample as ɵcd, SlideToggleOverviewExample as ɵce, SliderConfigurableExample as ɵcf, SliderOverviewExample as ɵcg, PizzaPartyComponent as ɵci, SnackBarComponentExample as ɵch, SnackBarOverviewExample as ɵcj, SortOverviewExample as ɵck, TableBasicExample as ɵcl, TableFilteringExample as ɵcm, TableHttpExample as ɵcn, TableOverviewExample as ɵco, TablePaginationExample as ɵcp, TableSortingExample as ɵcq, TabsOverviewExample as ɵcr, TabsTemplateLabelExample as ɵcs, ToolbarOverviewExample as ɵct, TooltipOverviewExample as ɵcu, TooltipPositionExample as ɵcv };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵl, ChipsStackedExample as ɵm, DatepickerApiExample as ɵn, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵp, DatepickerStartViewExample as ɵq, DatepickerTouchExample as ɵr, DialogContentExample as ɵs, DialogContentExampleDialog as ɵt, DialogDataExample as ɵu, DialogDataExampleDialog as ɵv, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵy, DialogOverviewExampleDialog as ɵz, ExpansionStepsExample as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ListSelectionExample as ɵbm, ExampleMaterialModule as ɵcw, MenuIconsExample as ɵbn, MenuOverviewExample as ɵbo, NestedMenuExample as ɵbp, PaginatorConfigurableExample as ɵbq, PaginatorOverviewExample as ɵbr, ProgressBarConfigurableExample as ɵbs, ProgressBarOverviewExample as ɵbt, ProgressSpinnerConfigurableExample as ɵbu, ProgressSpinnerOverviewExample as ɵbv, RadioNgModelExample as ɵbw, RadioOverviewExample as ɵbx, SelectFormExample as ɵby, SelectOverviewExample as ɵbz, SidenavFabExample as ɵca, SidenavOverviewExample as ɵcb, SlideToggleConfigurableExample as ɵcc, SlideToggleFormsExample as ɵcd, SlideToggleOverviewExample as ɵce, SliderConfigurableExample as ɵcf, SliderOverviewExample as ɵcg, PizzaPartyComponent as ɵci, SnackBarComponentExample as ɵch, SnackBarOverviewExample as ɵcj, SortOverviewExample as ɵck, TableBasicExample as ɵcl, TableFilteringExample as ɵcm, TableHttpExample as ɵcn, TableOverviewExample as ɵco, TablePaginationExample as ɵcp, TableSortingExample as ɵcq, TabsOverviewExample as ɵcr, TabsTemplateLabelExample as ɵcs, ToolbarOverviewExample as ɵct, TooltipOverviewExample as ɵcu, TooltipPositionExample as ɵcv };
 //# sourceMappingURL=material-examples.es5.js.map

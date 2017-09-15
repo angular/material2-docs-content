@@ -1277,25 +1277,6 @@ MenuIconsExample.decorators = [
  */
 MenuIconsExample.ctorParameters = function () { return []; };
 /**
- * \@title Nested menu
- */
-var NestedMenuExample = (function () {
-    function NestedMenuExample() {
-    }
-    return NestedMenuExample;
-}());
-NestedMenuExample.decorators = [
-    { type: _angular_core.Component, args: [{
-                selector: 'nested-menu-example',
-                template: "<button md-button [mdMenuTriggerFor]=\"animals\">Animal index</button><md-menu #animals=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"vertebrates\">Vertebrates</button> <button md-menu-item [mdMenuTriggerFor]=\"invertebrates\">Invertebrates</button></md-menu><md-menu #vertebrates=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"fish\">Fishes</button> <button md-menu-item [mdMenuTriggerFor]=\"amphibians\">Amphibians</button> <button md-menu-item [mdMenuTriggerFor]=\"reptiles\">Reptiles</button> <button md-menu-item>Birds</button> <button md-menu-item>Mammals</button></md-menu><md-menu #invertebrates=\"mdMenu\"><button md-menu-item>Insects</button> <button md-menu-item>Molluscs</button> <button md-menu-item>Crustaceans</button> <button md-menu-item>Corals</button> <button md-menu-item>Arachnids</button> <button md-menu-item>Velvet worms</button> <button md-menu-item>Horseshoe crabs</button></md-menu><md-menu #fish=\"mdMenu\"><button md-menu-item>Baikal oilfish</button> <button md-menu-item>Bala shark</button> <button md-menu-item>Ballan wrasse</button> <button md-menu-item>Bamboo shark</button> <button md-menu-item>Banded killifish</button></md-menu><md-menu #amphibians=\"mdMenu\"><button md-menu-item>Sonoran desert toad</button> <button md-menu-item>Western toad</button> <button md-menu-item>Arroyo toad</button> <button md-menu-item>Yosemite toad</button></md-menu><md-menu #reptiles=\"mdMenu\"><button md-menu-item>Banded Day Gecko</button> <button md-menu-item>Banded Gila Monster</button> <button md-menu-item>Black Tree Monitor</button> <button md-menu-item>Blue Spiny Lizard</button> <button md-menu-item disabled=\"disabled\">Velociraptor</button></md-menu>",
-                styles: ["/** No CSS for this example */ "]
-            },] },
-];
-/**
- * @nocollapse
- */
-NestedMenuExample.ctorParameters = function () { return []; };
-/**
  * \@title Basic menu
  */
 var MenuOverviewExample = (function () {
@@ -1314,6 +1295,25 @@ MenuOverviewExample.decorators = [
  * @nocollapse
  */
 MenuOverviewExample.ctorParameters = function () { return []; };
+/**
+ * \@title Nested menu
+ */
+var NestedMenuExample = (function () {
+    function NestedMenuExample() {
+    }
+    return NestedMenuExample;
+}());
+NestedMenuExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'nested-menu-example',
+                template: "<button md-button [mdMenuTriggerFor]=\"animals\">Animal index</button><md-menu #animals=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"vertebrates\">Vertebrates</button> <button md-menu-item [mdMenuTriggerFor]=\"invertebrates\">Invertebrates</button></md-menu><md-menu #vertebrates=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"fish\">Fishes</button> <button md-menu-item [mdMenuTriggerFor]=\"amphibians\">Amphibians</button> <button md-menu-item [mdMenuTriggerFor]=\"reptiles\">Reptiles</button> <button md-menu-item>Birds</button> <button md-menu-item>Mammals</button></md-menu><md-menu #invertebrates=\"mdMenu\"><button md-menu-item>Insects</button> <button md-menu-item>Molluscs</button> <button md-menu-item>Crustaceans</button> <button md-menu-item>Corals</button> <button md-menu-item>Arachnids</button> <button md-menu-item>Velvet worms</button> <button md-menu-item>Horseshoe crabs</button></md-menu><md-menu #fish=\"mdMenu\"><button md-menu-item>Baikal oilfish</button> <button md-menu-item>Bala shark</button> <button md-menu-item>Ballan wrasse</button> <button md-menu-item>Bamboo shark</button> <button md-menu-item>Banded killifish</button></md-menu><md-menu #amphibians=\"mdMenu\"><button md-menu-item>Sonoran desert toad</button> <button md-menu-item>Western toad</button> <button md-menu-item>Arroyo toad</button> <button md-menu-item>Yosemite toad</button></md-menu><md-menu #reptiles=\"mdMenu\"><button md-menu-item>Banded Day Gecko</button> <button md-menu-item>Banded Gila Monster</button> <button md-menu-item>Black Tree Monitor</button> <button md-menu-item>Blue Spiny Lizard</button> <button md-menu-item disabled=\"disabled\">Velociraptor</button></md-menu>",
+                styles: ["/** No CSS for this example */ "]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+NestedMenuExample.ctorParameters = function () { return []; };
 /**
  * \@title Configurable paginator
  */
@@ -3112,15 +3112,15 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
-    'nested-menu': {
-        title: 'Nested menu',
-        component: NestedMenuExample,
-        additionalFiles: null,
-        selectorName: null
-    },
     'menu-overview': {
         title: 'Basic menu',
         component: MenuOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'nested-menu': {
+        title: 'Nested menu',
+        component: NestedMenuExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -3365,8 +3365,8 @@ var EXAMPLE_LIST = [
     ListSectionsExample,
     ListSelectionExample,
     MenuIconsExample,
-    NestedMenuExample,
     MenuOverviewExample,
+    NestedMenuExample,
     PaginatorConfigurableExample,
     PaginatorOverviewExample,
     ProgressBarConfigurableExample,
@@ -3519,8 +3519,8 @@ exports.ɵbl = ListSectionsExample;
 exports.ɵbm = ListSelectionExample;
 exports.ɵcw = ExampleMaterialModule;
 exports.ɵbn = MenuIconsExample;
-exports.ɵbp = MenuOverviewExample;
-exports.ɵbo = NestedMenuExample;
+exports.ɵbo = MenuOverviewExample;
+exports.ɵbp = NestedMenuExample;
 exports.ɵbq = PaginatorConfigurableExample;
 exports.ɵbr = PaginatorOverviewExample;
 exports.ɵbs = ProgressBarConfigurableExample;

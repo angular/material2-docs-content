@@ -39,8 +39,8 @@ export { ListSectionsExample as ɵbl } from './list-sections/list-sections-examp
 export { ListSelectionExample as ɵbm } from './list-selection/list-selection-example';
 export { ExampleMaterialModule as ɵcw } from './material-module';
 export { MenuIconsExample as ɵbn } from './menu-icons/menu-icons-example';
-export { MenuOverviewExample as ɵbp } from './menu-overview/menu-overview-example';
-export { NestedMenuExample as ɵbo } from './nested-menu/nested-menu-example';
+export { MenuOverviewExample as ɵbo } from './menu-overview/menu-overview-example';
+export { NestedMenuExample as ɵbp } from './nested-menu/nested-menu-example';
 export { PaginatorConfigurableExample as ɵbq } from './paginator-configurable/paginator-configurable-example';
 export { PaginatorOverviewExample as ɵbr } from './paginator-overview/paginator-overview-example';
 export { ProgressBarConfigurableExample as ɵbs } from './progress-bar-configurable/progress-bar-configurable-example';
