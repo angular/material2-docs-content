@@ -1,29 +1,29 @@
-import {Component, Inject} from '@angular/core';
-import {MdDialog, MD_DIALOG_DATA} from '@angular/material';
+<span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MdDialog, MD_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
-/**
+<span class="hljs-comment">/**
  * @title Injecting data when opening a dialog
- */
-@Component({
-  selector: 'dialog-data-example',
-  templateUrl: 'dialog-data-example.html',
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'dialog-data-example'</span>,
+  templateUrl: <span class="hljs-string">'dialog-data-example.html'</span>,
 })
-export class DialogDataExample {
-  constructor(public dialog: MdDialog) {}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogDataExample {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MdDialog</span>) {}
 
   openDialog() {
-    this.dialog.open(DialogDataExampleDialog, {
+    <span class="hljs-keyword">this</span>.dialog.open(DialogDataExampleDialog, {
       data: {
-        animal: 'panda'
+        animal: <span class="hljs-string">'panda'</span>
       }
     });
   }
 }
 
-@Component({
-  selector: 'dialog-data-example-dialog',
-  templateUrl: 'dialog-data-example-dialog.html',
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'dialog-data-example-dialog'</span>,
+  templateUrl: <span class="hljs-string">'dialog-data-example-dialog.html'</span>,
 })
-export class DialogDataExampleDialog {
-  constructor(@Inject(MD_DIALOG_DATA) public data: any) {}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogDataExampleDialog {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">@Inject(MD_DIALOG_DATA</span>) public data: any) {}
 }

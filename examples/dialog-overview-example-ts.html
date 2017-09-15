@@ -1,46 +1,46 @@
-import {Component, Inject} from '@angular/core';
-import {MdDialog, MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
+<span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MdDialog, MdDialogRef, MD_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
-/**
+<span class="hljs-comment">/**
  * @title Dialog Overview
- */
-@Component({
-  selector: 'dialog-overview-example',
-  templateUrl: 'dialog-overview-example.html'
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'dialog-overview-example'</span>,
+  templateUrl: <span class="hljs-string">'dialog-overview-example.html'</span>
 })
-export class DialogOverviewExample {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogOverviewExample {
 
-  animal: string;
-  name: string;
+  animal: <span class="hljs-built_in">string</span>;
+  name: <span class="hljs-built_in">string</span>;
 
-  constructor(public dialog: MdDialog) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MdDialog</span>) {}
 
-  openDialog(): void {
-    let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '250px',
-      data: { name: this.name, animal: this.animal }
+  openDialog(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> dialogRef = <span class="hljs-keyword">this</span>.dialog.open(DialogOverviewExampleDialog, {
+      width: <span class="hljs-string">'250px'</span>,
+      data: { name: <span class="hljs-keyword">this</span>.name, animal: <span class="hljs-keyword">this</span>.animal }
     });
 
-    dialogRef.afterClosed().subscribe(result =&gt; {
-      console.log('The dialog was closed');
-      this.animal = result;
+    dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The dialog was closed'</span>);
+      <span class="hljs-keyword">this</span>.animal = result;
     });
   }
 
 }
 
-@Component({
-  selector: 'dialog-overview-example-dialog',
-  templateUrl: 'dialog-overview-example-dialog.html',
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'dialog-overview-example-dialog'</span>,
+  templateUrl: <span class="hljs-string">'dialog-overview-example-dialog.html'</span>,
 })
-export class DialogOverviewExampleDialog {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogOverviewExampleDialog {
 
-  constructor(
-    public dialogRef: MdDialogRef&lt;DialogOverviewExampleDialog&gt;,
-    @Inject(MD_DIALOG_DATA) public data: any) { }
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
+    <span class="hljs-keyword">public</span> dialogRef: MdDialogRef&lt;DialogOverviewExampleDialog&gt;,
+    @Inject(MD_DIALOG_DATA</span>) public data: any) { }
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  onNoClick(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">this</span>.dialogRef.close();
   }
 
 }
