@@ -90,7 +90,7 @@
   connect(): Observable&lt;UserData[]&gt; {
     <span class="hljs-keyword">const</span> displayDataChanges = [
       <span class="hljs-keyword">this</span>._exampleDatabase.dataChange,
-      <span class="hljs-keyword">this</span>._sort.mdSortChange,
+      <span class="hljs-keyword">this</span>._sort.sortChange,
     ];
 
     <span class="hljs-keyword">return</span> Observable.merge(...displayDataChanges).map(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {

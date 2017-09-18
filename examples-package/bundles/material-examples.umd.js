@@ -2256,11 +2256,11 @@ var ExampleDataSource$3 = (function (_super) {
     ExampleDataSource$3.prototype.connect = function () {
         var _this = this;
         var /** @type {?} */ displayDataChanges = [
-            this.sort.mdSortChange,
+            this.sort.sortChange,
             this.paginator.page
         ];
         // If the user changes the sort order, reset back to the first page.
-        this.sort.mdSortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
         return rxjs_Observable.Observable.merge.apply(rxjs_Observable.Observable, displayDataChanges).startWith(null)
             .switchMap(function () {
             _this.isLoadingResults = true;
@@ -2467,7 +2467,7 @@ var ExampleDataSource$4 = (function (_super) {
         // Listen for any changes in the base data, sorting, filtering, or pagination
         var /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
-            this._sort.mdSortChange,
+            this._sort.sortChange,
             this._filterChange,
             this._paginator.page,
         ];
@@ -2763,7 +2763,7 @@ var ExampleDataSource$6 = (function (_super) {
         var _this = this;
         var /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
-            this._sort.mdSortChange,
+            this._sort.sortChange,
         ];
         return rxjs_Observable.Observable.merge.apply(rxjs_Observable.Observable, displayDataChanges).map(function () {
             return _this.getSortedData();

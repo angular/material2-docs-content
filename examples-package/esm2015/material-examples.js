@@ -2130,11 +2130,11 @@ class ExampleDataSource$3 extends DataSource {
      */
     connect() {
         const /** @type {?} */ displayDataChanges = [
-            this.sort.mdSortChange,
+            this.sort.sortChange,
             this.paginator.page
         ];
         // If the user changes the sort order, reset back to the first page.
-        this.sort.mdSortChange.subscribe(() => this.paginator.pageIndex = 0);
+        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
         return Observable.merge(...displayDataChanges)
             .startWith(null)
             .switchMap(() => {
@@ -2327,7 +2327,7 @@ class ExampleDataSource$4 extends DataSource {
         // Listen for any changes in the base data, sorting, filtering, or pagination
         const /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
-            this._sort.mdSortChange,
+            this._sort.sortChange,
             this._filterChange,
             this._paginator.page,
         ];
@@ -2603,7 +2603,7 @@ class ExampleDataSource$6 extends DataSource {
     connect() {
         const /** @type {?} */ displayDataChanges = [
             this._exampleDatabase.dataChange,
-            this._sort.mdSortChange,
+            this._sort.sortChange,
         ];
         return Observable.merge(...displayDataChanges).map(() => {
             return this.getSortedData();

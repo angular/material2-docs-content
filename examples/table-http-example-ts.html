@@ -83,12 +83,12 @@
   <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
   connect(): Observable&lt;GithubIssue[]&gt; {
     <span class="hljs-keyword">const</span> displayDataChanges = [
-      <span class="hljs-keyword">this</span>.sort.mdSortChange,
+      <span class="hljs-keyword">this</span>.sort.sortChange,
       <span class="hljs-keyword">this</span>.paginator.page
     ];
 
     <span class="hljs-comment">// If the user changes the sort order, reset back to the first page.</span>
-    <span class="hljs-keyword">this</span>.sort.mdSortChange.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.paginator.pageIndex = <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">this</span>.sort.sortChange.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.paginator.pageIndex = <span class="hljs-number">0</span>);
 
     <span class="hljs-keyword">return</span> Observable.merge(...displayDataChanges)
       .startWith(<span class="hljs-literal">null</span>)
