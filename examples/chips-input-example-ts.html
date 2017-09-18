@@ -1,0 +1,52 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MdChipInputEvent, ENTER} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-keyword">const</span> COMMA = <span class="hljs-number">188</span>;
+
+<span class="hljs-comment">/**
+ * @title Chips with input
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'chips-input-example'</span>,
+  templateUrl: <span class="hljs-string">'chips-input-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'chips-input-example.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipsInputExample {
+  visible: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">true</span>;
+  selectable: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">true</span>;
+  removable: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">true</span>;
+  addOnBlur: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">true</span>;
+
+  <span class="hljs-comment">// Enter, comma</span>
+  separatorKeysCodes = [ENTER, COMMA];
+
+  fruits = [
+    { name: <span class="hljs-string">'Lemon'</span> },
+    { name: <span class="hljs-string">'Lime'</span> },
+    { name: <span class="hljs-string">'Apple'</span> },
+  ];
+
+
+  add(event: MdChipInputEvent): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> input = event.input;
+    <span class="hljs-keyword">let</span> value = event.value;
+
+    <span class="hljs-comment">// Add our person</span>
+    <span class="hljs-keyword">if</span> ((value || <span class="hljs-string">''</span>).trim()) {
+      <span class="hljs-keyword">this</span>.fruits.push({ name: value.trim() });
+    }
+
+    <span class="hljs-comment">// Reset the input value</span>
+    <span class="hljs-keyword">if</span> (input) {
+      input.value = <span class="hljs-string">''</span>;
+    }
+  }
+
+  remove(fruit: <span class="hljs-built_in">any</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> index = <span class="hljs-keyword">this</span>.fruits.indexOf(fruit);
+
+    <span class="hljs-keyword">if</span> (index &gt;= <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">this</span>.fruits.splice(index, <span class="hljs-number">1</span>);
+    }
+  }
+}

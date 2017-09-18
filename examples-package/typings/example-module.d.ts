@@ -17,6 +17,7 @@ import { CardOverviewExample } from './card-overview/card-overview-example';
 import { CdkTableBasicExample } from './cdk-table-basic/cdk-table-basic-example';
 import { CheckboxConfigurableExample } from './checkbox-configurable/checkbox-configurable-example';
 import { CheckboxOverviewExample } from './checkbox-overview/checkbox-overview-example';
+import { ChipsInputExample } from './chips-input/chips-input-example';
 import { ChipsOverviewExample } from './chips-overview/chips-overview-example';
 import { ChipsStackedExample } from './chips-stacked/chips-stacked-example';
 import { DatepickerApiExample } from './datepicker-api/datepicker-api-example';
@@ -156,6 +157,12 @@ export declare const EXAMPLE_COMPONENTS: {
     'checkbox-overview': {
         title: string;
         component: typeof CheckboxOverviewExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'chips-input': {
+        title: string;
+        component: typeof ChipsInputExample;
         additionalFiles: null;
         selectorName: null;
     };

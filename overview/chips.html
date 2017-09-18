@@ -22,8 +22,8 @@ use <code class="docs-markdown-code">&lt;md-basic-chip&gt;</code>. You can then 
         </h3>
       <p class="docs-markdown-p">Chips can be selected via the <code class="docs-markdown-code">selected</code> property. Selection can be disabled by setting
 <code class="docs-markdown-code">selectable</code> to <code class="docs-markdown-code">false</code> on the <code class="docs-markdown-code">&lt;md-chip-list&gt;</code>.</p>
-<p class="docs-markdown-p">Selection emits the <code class="docs-markdown-code">(select)</code> output while deselecting emits the <code class="docs-markdown-code">(deselect)</code> output. Both outputs
-receive a ChipEvent object with a structure of <code class="docs-markdown-code">{ chip: alteredChip }</code>.</p>
+<p class="docs-markdown-p">Whenever the selection state changes, a <code class="docs-markdown-code">ChipSelectionChange</code> event will be emitted via 
+<code class="docs-markdown-code">(onSelectionChange)</code>.</p>
 
         <h3 id="disabled-chips" class="docs-header-link docs-markdown-h3">
           <div header-link="disabled-chips"></div>
@@ -31,6 +31,26 @@ receive a ChipEvent object with a structure of <code class="docs-markdown-code">
         </h3>
       <p class="docs-markdown-p">Individual chips may be disabled by applying the <code class="docs-markdown-code">disabled</code> attribute to the chip. When disabled,
 chips are neither selectable nor focusable. Currently, disabled chips receive no special styling.</p>
+
+        <h3 id="chip-input" class="docs-header-link docs-markdown-h3">
+          <div header-link="chip-input"></div>
+          Chip input
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">MdChipInput</code> directive can be used together with a chip-list to streamline the interaction
+between the two components. This directive adds chip-specific behaviors to the input element
+within <code class="docs-markdown-code">&lt;md-form-field&gt;</code> for adding and removing chips. The <code class="docs-markdown-code">&lt;input&gt;</code> with <code class="docs-markdown-code">MdChipInput</code> can
+be placed inside or outside the chip-list element.</p>
+<p class="docs-markdown-p">An exmaple of chip input placed inside the chip-list element.
+</p><div material-docs-example="chips-input"></div><p class="docs-markdown-p"></p>
+<p class="docs-markdown-p">An example of chip input placed outside the chip-list element.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">md-chip-list</span> #<span class="hljs-attr">chipList</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">md-chip</span>&gt;</span>Chip 1<span class="hljs-tag">&lt;<span class="hljs-name">md-chip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">md-chip</span>&gt;</span>Chip 2<span class="hljs-tag">&lt;<span class="hljs-name">md-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">md-chip-list</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">mdChipInputFor</span>=<span class="hljs-string">"chipList"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">md-form-field</span>&gt;</span>
+</code></pre>
 
         <h3 id="keyboard-interaction" class="docs-header-link docs-markdown-h3">
           <div header-link="keyboard-interaction"></div>

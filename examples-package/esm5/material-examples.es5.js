@@ -10,7 +10,7 @@ import { Component, Inject, NgModule, ViewChild, ViewEncapsulation } from '@angu
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
-import { MD_DIALOG_DATA, MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdExpansionModule, MdFormFieldModule, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdPaginator, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdSort, MdSortModule, MdStepperModule, MdTableModule, MdTabsModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
+import { ENTER, MD_DIALOG_DATA, MdAutocompleteModule, MdButtonModule, MdButtonToggleModule, MdCardModule, MdCheckboxModule, MdChipsModule, MdDatepickerModule, MdDialog, MdDialogModule, MdDialogRef, MdExpansionModule, MdFormFieldModule, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule, MdListModule, MdMenuModule, MdPaginator, MdPaginatorModule, MdProgressBarModule, MdProgressSpinnerModule, MdRadioModule, MdSelectModule, MdSidenavModule, MdSlideToggleModule, MdSliderModule, MdSnackBar, MdSnackBarModule, MdSort, MdSortModule, MdStepperModule, MdTableModule, MdTabsModule, MdToolbarModule, MdTooltipModule } from '@angular/material';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
@@ -516,6 +516,63 @@ CheckboxOverviewExample.decorators = [
  * @nocollapse
  */
 CheckboxOverviewExample.ctorParameters = function () { return []; };
+var COMMA = 188;
+/**
+ * \@title Chips with input
+ */
+var ChipsInputExample = (function () {
+    function ChipsInputExample() {
+        this.visible = true;
+        this.selectable = true;
+        this.removable = true;
+        this.addOnBlur = true;
+        // Enter, comma
+        this.separatorKeysCodes = [ENTER, COMMA];
+        this.fruits = [
+            { name: 'Lemon' },
+            { name: 'Lime' },
+            { name: 'Apple' },
+        ];
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    ChipsInputExample.prototype.add = function (event) {
+        var /** @type {?} */ input = event.input;
+        var /** @type {?} */ value = event.value;
+        // Add our person
+        if ((value || '').trim()) {
+            this.fruits.push({ name: value.trim() });
+        }
+        // Reset the input value
+        if (input) {
+            input.value = '';
+        }
+    };
+    /**
+     * @param {?} fruit
+     * @return {?}
+     */
+    ChipsInputExample.prototype.remove = function (fruit) {
+        var /** @type {?} */ index = this.fruits.indexOf(fruit);
+        if (index >= 0) {
+            this.fruits.splice(index, 1);
+        }
+    };
+    return ChipsInputExample;
+}());
+ChipsInputExample.decorators = [
+    { type: Component, args: [{
+                selector: 'chips-input-example',
+                template: "<md-form-field class=\"demo-chip-list\"><md-chip-list mdPrefix #chipList><md-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (remove)=\"remove(fruit)\">{{fruit.name}}<md-icon mdChipRemove *ngIf=\"removable\">cancel</md-icon></md-chip></md-chip-list><input mdInput placeholder=\"New fruit...\" [mdChipInputFor]=\"chipList\" [mdChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [mdChipInputAddOnBlur]=\"addOnBlur\" (mdChipInputTokenEnd)=\"add($event)\"></md-form-field>",
+                styles: [".demo-chip-list{width:100%}"]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ChipsInputExample.ctorParameters = function () { return []; };
 /**
  * \@title Basic chips
  */
@@ -1531,7 +1588,7 @@ SidenavFabExample.decorators = [
     { type: Component, args: [{
                 selector: 'sidenav-fab-example',
                 template: "<md-sidenav-container class=\"example-sidenav-fab-container\"><md-sidenav #sidenav mode=\"side\" opened=\"true\"><button md-mini-fab class=\"example-fab\" (click)=\"sidenav.toggle()\"><md-icon>add</md-icon></button><div class=\"example-scrolling-content\">Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.</div></md-sidenav><button md-mini-fab class=\"example-fab\" (click)=\"sidenav.toggle()\"><md-icon>add</md-icon></button><div class=\"example-scrolling-content\">Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.</div></md-sidenav-container>",
-                styles: [".example-sidenav-fab-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-fab-container md-sidenav { max-width: 200px; } .example-sidenav-fab-container .mat-sidenav-content, .example-sidenav-fab-container md-sidenav { display: flex; overflow: visible; } .example-scrolling-content { overflow: auto; } .example-fab { position: absolute; right: 20px; bottom: 10px; } "],
+                styles: [".example-sidenav-fab-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-fab-container md-sidenav { max-width: 200px; } .example-sidenav-fab-container .mat-sidenav-content, .example-sidenav-fab-container md-sidenav { display: flex; overflow: visible; } .example-scrolling-content { overflow: auto; } .example-fab.mat-mini-fab { position: absolute; right: 20px; bottom: 10px; } "],
                 encapsulation: ViewEncapsulation.None,
             },] },
 ];
@@ -2932,6 +2989,12 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'chips-input': {
+        title: 'Chips with input',
+        component: ChipsInputExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'chips-overview': {
         title: 'Basic chips',
         component: ChipsOverviewExample,
@@ -3325,6 +3388,7 @@ var EXAMPLE_LIST = [
     CdkTableBasicExample,
     CheckboxConfigurableExample,
     CheckboxOverviewExample,
+    ChipsInputExample,
     ChipsOverviewExample,
     ChipsStackedExample,
     DatepickerApiExample,
@@ -3457,5 +3521,5 @@ var ExampleData = (function () {
 /**
  * Generated bundle index. Do not edit.
  */
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsOverviewExample as ɵl, ChipsStackedExample as ɵm, DatepickerApiExample as ɵn, DatepickerFilterExample as ɵo, DatepickerMinMaxExample as ɵp, DatepickerStartViewExample as ɵq, DatepickerTouchExample as ɵr, DialogContentExample as ɵs, DialogContentExampleDialog as ɵt, DialogDataExample as ɵu, DialogDataExampleDialog as ɵv, DialogElementsExample as ɵw, DialogElementsExampleDialog as ɵx, DialogOverviewExample as ɵy, DialogOverviewExampleDialog as ɵz, ExpansionStepsExample as ɵba, GridListDynamicExample as ɵbb, GridListOverviewExample as ɵbc, IconOverviewExample as ɵbd, IconSvgExample as ɵbe, InputClearableExample as ɵbf, InputErrorsExample as ɵbg, InputFormExample as ɵbh, InputHintExample as ɵbi, InputOverviewExample as ɵbj, InputPrefixSuffixExample as ɵbk, ListSectionsExample as ɵbl, ListSelectionExample as ɵbm, ExampleMaterialModule as ɵcw, MenuIconsExample as ɵbn, MenuOverviewExample as ɵbo, NestedMenuExample as ɵbp, PaginatorConfigurableExample as ɵbq, PaginatorOverviewExample as ɵbr, ProgressBarConfigurableExample as ɵbs, ProgressBarOverviewExample as ɵbt, ProgressSpinnerConfigurableExample as ɵbu, ProgressSpinnerOverviewExample as ɵbv, RadioNgModelExample as ɵbw, RadioOverviewExample as ɵbx, SelectFormExample as ɵby, SelectOverviewExample as ɵbz, SidenavFabExample as ɵca, SidenavOverviewExample as ɵcb, SlideToggleConfigurableExample as ɵcc, SlideToggleFormsExample as ɵcd, SlideToggleOverviewExample as ɵce, SliderConfigurableExample as ɵcf, SliderOverviewExample as ɵcg, PizzaPartyComponent as ɵci, SnackBarComponentExample as ɵch, SnackBarOverviewExample as ɵcj, SortOverviewExample as ɵck, TableBasicExample as ɵcl, TableFilteringExample as ɵcm, TableHttpExample as ɵcn, TableOverviewExample as ɵco, TablePaginationExample as ɵcp, TableSortingExample as ɵcq, TabsOverviewExample as ɵcr, TabsTemplateLabelExample as ɵcs, ToolbarOverviewExample as ɵct, TooltipOverviewExample as ɵcu, TooltipPositionExample as ɵcv };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵq, DatepickerStartViewExample as ɵr, DatepickerTouchExample as ɵs, DialogContentExample as ɵt, DialogContentExampleDialog as ɵu, DialogDataExample as ɵv, DialogDataExampleDialog as ɵw, DialogElementsExample as ɵx, DialogElementsExampleDialog as ɵy, DialogOverviewExample as ɵz, DialogOverviewExampleDialog as ɵba, ExpansionStepsExample as ɵbb, GridListDynamicExample as ɵbc, GridListOverviewExample as ɵbd, IconOverviewExample as ɵbe, IconSvgExample as ɵbf, InputClearableExample as ɵbg, InputErrorsExample as ɵbh, InputFormExample as ɵbi, InputHintExample as ɵbj, InputOverviewExample as ɵbk, InputPrefixSuffixExample as ɵbl, ListSectionsExample as ɵbm, ListSelectionExample as ɵbn, ExampleMaterialModule as ɵcx, MenuIconsExample as ɵbo, MenuOverviewExample as ɵbp, NestedMenuExample as ɵbq, PaginatorConfigurableExample as ɵbr, PaginatorOverviewExample as ɵbs, ProgressBarConfigurableExample as ɵbt, ProgressBarOverviewExample as ɵbu, ProgressSpinnerConfigurableExample as ɵbv, ProgressSpinnerOverviewExample as ɵbw, RadioNgModelExample as ɵbx, RadioOverviewExample as ɵby, SelectFormExample as ɵbz, SelectOverviewExample as ɵca, SidenavFabExample as ɵcb, SidenavOverviewExample as ɵcc, SlideToggleConfigurableExample as ɵcd, SlideToggleFormsExample as ɵce, SlideToggleOverviewExample as ɵcf, SliderConfigurableExample as ɵcg, SliderOverviewExample as ɵch, PizzaPartyComponent as ɵcj, SnackBarComponentExample as ɵci, SnackBarOverviewExample as ɵck, SortOverviewExample as ɵcl, TableBasicExample as ɵcm, TableFilteringExample as ɵcn, TableHttpExample as ɵco, TableOverviewExample as ɵcp, TablePaginationExample as ɵcq, TableSortingExample as ɵcr, TabsOverviewExample as ɵcs, TabsTemplateLabelExample as ɵct, ToolbarOverviewExample as ɵcu, TooltipOverviewExample as ɵcv, TooltipPositionExample as ɵcw };
 //# sourceMappingURL=material-examples.es5.js.map

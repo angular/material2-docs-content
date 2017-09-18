@@ -528,6 +528,63 @@ CheckboxOverviewExample.decorators = [
  * @nocollapse
  */
 CheckboxOverviewExample.ctorParameters = function () { return []; };
+var COMMA = 188;
+/**
+ * \@title Chips with input
+ */
+var ChipsInputExample = (function () {
+    function ChipsInputExample() {
+        this.visible = true;
+        this.selectable = true;
+        this.removable = true;
+        this.addOnBlur = true;
+        // Enter, comma
+        this.separatorKeysCodes = [_angular_material.ENTER, COMMA];
+        this.fruits = [
+            { name: 'Lemon' },
+            { name: 'Lime' },
+            { name: 'Apple' },
+        ];
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    ChipsInputExample.prototype.add = function (event) {
+        var /** @type {?} */ input = event.input;
+        var /** @type {?} */ value = event.value;
+        // Add our person
+        if ((value || '').trim()) {
+            this.fruits.push({ name: value.trim() });
+        }
+        // Reset the input value
+        if (input) {
+            input.value = '';
+        }
+    };
+    /**
+     * @param {?} fruit
+     * @return {?}
+     */
+    ChipsInputExample.prototype.remove = function (fruit) {
+        var /** @type {?} */ index = this.fruits.indexOf(fruit);
+        if (index >= 0) {
+            this.fruits.splice(index, 1);
+        }
+    };
+    return ChipsInputExample;
+}());
+ChipsInputExample.decorators = [
+    { type: _angular_core.Component, args: [{
+                selector: 'chips-input-example',
+                template: "<md-form-field class=\"demo-chip-list\"><md-chip-list mdPrefix #chipList><md-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (remove)=\"remove(fruit)\">{{fruit.name}}<md-icon mdChipRemove *ngIf=\"removable\">cancel</md-icon></md-chip></md-chip-list><input mdInput placeholder=\"New fruit...\" [mdChipInputFor]=\"chipList\" [mdChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [mdChipInputAddOnBlur]=\"addOnBlur\" (mdChipInputTokenEnd)=\"add($event)\"></md-form-field>",
+                styles: [".demo-chip-list{width:100%}"]
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ChipsInputExample.ctorParameters = function () { return []; };
 /**
  * \@title Basic chips
  */
@@ -1543,7 +1600,7 @@ SidenavFabExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'sidenav-fab-example',
                 template: "<md-sidenav-container class=\"example-sidenav-fab-container\"><md-sidenav #sidenav mode=\"side\" opened=\"true\"><button md-mini-fab class=\"example-fab\" (click)=\"sidenav.toggle()\"><md-icon>add</md-icon></button><div class=\"example-scrolling-content\">Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.</div></md-sidenav><button md-mini-fab class=\"example-fab\" (click)=\"sidenav.toggle()\"><md-icon>add</md-icon></button><div class=\"example-scrolling-content\">Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.</div></md-sidenav-container>",
-                styles: [".example-sidenav-fab-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-fab-container md-sidenav { max-width: 200px; } .example-sidenav-fab-container .mat-sidenav-content, .example-sidenav-fab-container md-sidenav { display: flex; overflow: visible; } .example-scrolling-content { overflow: auto; } .example-fab { position: absolute; right: 20px; bottom: 10px; } "],
+                styles: [".example-sidenav-fab-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-fab-container md-sidenav { max-width: 200px; } .example-sidenav-fab-container .mat-sidenav-content, .example-sidenav-fab-container md-sidenav { display: flex; overflow: visible; } .example-scrolling-content { overflow: auto; } .example-fab.mat-mini-fab { position: absolute; right: 20px; bottom: 10px; } "],
                 encapsulation: _angular_core.ViewEncapsulation.None,
             },] },
 ];
@@ -2944,6 +3001,12 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'chips-input': {
+        title: 'Chips with input',
+        component: ChipsInputExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'chips-overview': {
         title: 'Basic chips',
         component: ChipsOverviewExample,
@@ -3337,6 +3400,7 @@ var EXAMPLE_LIST = [
     CdkTableBasicExample,
     CheckboxConfigurableExample,
     CheckboxOverviewExample,
+    ChipsInputExample,
     ChipsOverviewExample,
     ChipsStackedExample,
     DatepickerApiExample,
@@ -3489,70 +3553,71 @@ exports.ɵh = CardOverviewExample;
 exports.ɵi = CdkTableBasicExample;
 exports.ɵj = CheckboxConfigurableExample;
 exports.ɵk = CheckboxOverviewExample;
-exports.ɵl = ChipsOverviewExample;
-exports.ɵm = ChipsStackedExample;
-exports.ɵn = DatepickerApiExample;
-exports.ɵo = DatepickerFilterExample;
-exports.ɵp = DatepickerMinMaxExample;
-exports.ɵq = DatepickerStartViewExample;
-exports.ɵr = DatepickerTouchExample;
-exports.ɵs = DialogContentExample;
-exports.ɵt = DialogContentExampleDialog;
-exports.ɵu = DialogDataExample;
-exports.ɵv = DialogDataExampleDialog;
-exports.ɵw = DialogElementsExample;
-exports.ɵx = DialogElementsExampleDialog;
-exports.ɵy = DialogOverviewExample;
-exports.ɵz = DialogOverviewExampleDialog;
-exports.ɵba = ExpansionStepsExample;
-exports.ɵbb = GridListDynamicExample;
-exports.ɵbc = GridListOverviewExample;
-exports.ɵbd = IconOverviewExample;
-exports.ɵbe = IconSvgExample;
-exports.ɵbf = InputClearableExample;
-exports.ɵbg = InputErrorsExample;
-exports.ɵbh = InputFormExample;
-exports.ɵbi = InputHintExample;
-exports.ɵbj = InputOverviewExample;
-exports.ɵbk = InputPrefixSuffixExample;
-exports.ɵbl = ListSectionsExample;
-exports.ɵbm = ListSelectionExample;
-exports.ɵcw = ExampleMaterialModule;
-exports.ɵbn = MenuIconsExample;
-exports.ɵbo = MenuOverviewExample;
-exports.ɵbp = NestedMenuExample;
-exports.ɵbq = PaginatorConfigurableExample;
-exports.ɵbr = PaginatorOverviewExample;
-exports.ɵbs = ProgressBarConfigurableExample;
-exports.ɵbt = ProgressBarOverviewExample;
-exports.ɵbu = ProgressSpinnerConfigurableExample;
-exports.ɵbv = ProgressSpinnerOverviewExample;
-exports.ɵbw = RadioNgModelExample;
-exports.ɵbx = RadioOverviewExample;
-exports.ɵby = SelectFormExample;
-exports.ɵbz = SelectOverviewExample;
-exports.ɵca = SidenavFabExample;
-exports.ɵcb = SidenavOverviewExample;
-exports.ɵcc = SlideToggleConfigurableExample;
-exports.ɵcd = SlideToggleFormsExample;
-exports.ɵce = SlideToggleOverviewExample;
-exports.ɵcf = SliderConfigurableExample;
-exports.ɵcg = SliderOverviewExample;
-exports.ɵci = PizzaPartyComponent;
-exports.ɵch = SnackBarComponentExample;
-exports.ɵcj = SnackBarOverviewExample;
-exports.ɵck = SortOverviewExample;
-exports.ɵcl = TableBasicExample;
-exports.ɵcm = TableFilteringExample;
-exports.ɵcn = TableHttpExample;
-exports.ɵco = TableOverviewExample;
-exports.ɵcp = TablePaginationExample;
-exports.ɵcq = TableSortingExample;
-exports.ɵcr = TabsOverviewExample;
-exports.ɵcs = TabsTemplateLabelExample;
-exports.ɵct = ToolbarOverviewExample;
-exports.ɵcu = TooltipOverviewExample;
-exports.ɵcv = TooltipPositionExample;
+exports.ɵl = ChipsInputExample;
+exports.ɵm = ChipsOverviewExample;
+exports.ɵn = ChipsStackedExample;
+exports.ɵo = DatepickerApiExample;
+exports.ɵp = DatepickerFilterExample;
+exports.ɵq = DatepickerMinMaxExample;
+exports.ɵr = DatepickerStartViewExample;
+exports.ɵs = DatepickerTouchExample;
+exports.ɵt = DialogContentExample;
+exports.ɵu = DialogContentExampleDialog;
+exports.ɵv = DialogDataExample;
+exports.ɵw = DialogDataExampleDialog;
+exports.ɵx = DialogElementsExample;
+exports.ɵy = DialogElementsExampleDialog;
+exports.ɵz = DialogOverviewExample;
+exports.ɵba = DialogOverviewExampleDialog;
+exports.ɵbb = ExpansionStepsExample;
+exports.ɵbc = GridListDynamicExample;
+exports.ɵbd = GridListOverviewExample;
+exports.ɵbe = IconOverviewExample;
+exports.ɵbf = IconSvgExample;
+exports.ɵbg = InputClearableExample;
+exports.ɵbh = InputErrorsExample;
+exports.ɵbi = InputFormExample;
+exports.ɵbj = InputHintExample;
+exports.ɵbk = InputOverviewExample;
+exports.ɵbl = InputPrefixSuffixExample;
+exports.ɵbm = ListSectionsExample;
+exports.ɵbn = ListSelectionExample;
+exports.ɵcx = ExampleMaterialModule;
+exports.ɵbo = MenuIconsExample;
+exports.ɵbp = MenuOverviewExample;
+exports.ɵbq = NestedMenuExample;
+exports.ɵbr = PaginatorConfigurableExample;
+exports.ɵbs = PaginatorOverviewExample;
+exports.ɵbt = ProgressBarConfigurableExample;
+exports.ɵbu = ProgressBarOverviewExample;
+exports.ɵbv = ProgressSpinnerConfigurableExample;
+exports.ɵbw = ProgressSpinnerOverviewExample;
+exports.ɵbx = RadioNgModelExample;
+exports.ɵby = RadioOverviewExample;
+exports.ɵbz = SelectFormExample;
+exports.ɵca = SelectOverviewExample;
+exports.ɵcb = SidenavFabExample;
+exports.ɵcc = SidenavOverviewExample;
+exports.ɵcd = SlideToggleConfigurableExample;
+exports.ɵce = SlideToggleFormsExample;
+exports.ɵcf = SlideToggleOverviewExample;
+exports.ɵcg = SliderConfigurableExample;
+exports.ɵch = SliderOverviewExample;
+exports.ɵcj = PizzaPartyComponent;
+exports.ɵci = SnackBarComponentExample;
+exports.ɵck = SnackBarOverviewExample;
+exports.ɵcl = SortOverviewExample;
+exports.ɵcm = TableBasicExample;
+exports.ɵcn = TableFilteringExample;
+exports.ɵco = TableHttpExample;
+exports.ɵcp = TableOverviewExample;
+exports.ɵcq = TablePaginationExample;
+exports.ɵcr = TableSortingExample;
+exports.ɵcs = TabsOverviewExample;
+exports.ɵct = TabsTemplateLabelExample;
+exports.ɵcu = ToolbarOverviewExample;
+exports.ɵcv = TooltipOverviewExample;
+exports.ɵcw = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
