@@ -151,7 +151,7 @@ interaction (how to lazily load the CSS assets will vary based on your applicati
 <h5 class="docs-markdown-h5">Multiple themes and overlay-based components</h5><p class="docs-markdown-p">Since certain components (e.g. menu, select, dialog, etc.) are inside of a global overlay container,
 an additional step is required for those components to be affected by the theme's css class selector
 (<code class="docs-markdown-code">.unicorn-dark-theme</code> in the example above).</p>
-<p class="docs-markdown-p">To do this, you can specify a <code class="docs-markdown-code">themeClass</code> on the global overlay container. For the example above,
+<p class="docs-markdown-p">To do this, you can add the appropriate class to the global overlay container. For the example above,
 this would look like:</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {OverlayContainer} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
@@ -160,12 +160,10 @@ this would look like:</p>
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> UnicornCandyAppModule {
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">overlayContainer: OverlayContainer</span>) {
-    overlayContainer.themeClass = <span class="hljs-string">'unicorn-dark-theme'</span>;
+    overlayContainer.getContainerElement().classList.add(<span class="hljs-string">'unicorn-dark-theme'</span>);
   }
 }
 </code></pre>
-<p class="docs-markdown-p">The <code class="docs-markdown-code">themeClass</code> of the <code class="docs-markdown-code">OverlayContainer</code> can be changed at any time to change the active theme
-class.</p>
 
         <h4 id="theming-only-certain-components" class="docs-header-link docs-markdown-h4">
           <div header-link="theming-only-certain-components"></div>
