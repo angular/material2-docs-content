@@ -24,9 +24,9 @@
   "homepage": "https://github.com/angular/material2#readme",
   "peerDependencies": {
     "@angular/cdk": "2.0.0-beta.11",
-    "@angular/core": "^4.4.1",
-    "@angular/common": "^4.4.1",
-    "@angular/http": "^4.4.1",
+    "@angular/core": "^4.4.3",
+    "@angular/common": "^4.4.3",
+    "@angular/http": "^4.4.3",
     "@angular/material": "2.0.0-beta.11"
   },
   "dependencies": {
