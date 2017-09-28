@@ -1,4 +1,4 @@
-<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">MdSnackBar</code> is a service for displaying snack-bar notifications.</p>
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">MatSnackBar</code> is a service for displaying snack-bar notifications.</p>
 <div material-docs-example="snack-bar-overview"></div>
 
         <h3 id="opening-a-snack-bar" class="docs-header-link docs-markdown-h3">
@@ -15,11 +15,11 @@
 <span class="hljs-comment">// Load the given component into the snack-bar.</span>
 <span class="hljs-keyword">let</span> snackBarRef = snackbar.openFromComponent(MessageArchivedComponent);
 </code></pre>
-<p class="docs-markdown-p">In either case, a <code class="docs-markdown-code">MdSnackBarRef</code> is returned. This can be used to dismiss the snack-bar or to
+<p class="docs-markdown-p">In either case, a <code class="docs-markdown-code">MatSnackBarRef</code> is returned. This can be used to dismiss the snack-bar or to
 receive notification of when the snack-bar is dismissed. For simple messages with an action, the
-<code class="docs-markdown-code">MdSnackBarRef</code> exposes an observable for when the action is triggered.
+<code class="docs-markdown-code">MatSnackBarRef</code> exposes an observable for when the action is triggered.
 If you want to close a custom snack-bar that was opened via <code class="docs-markdown-code">openFromComponent</code>, from within the
-component itself, you can inject the <code class="docs-markdown-code">MdSnackBarRef</code>.</p>
+component itself, you can inject the <code class="docs-markdown-code">MatSnackBarRef</code>.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">snackBarRef.afterDismissed().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The snack-bar was dismissed'</span>);
 });
@@ -36,7 +36,7 @@ snackBarRef.dismiss();
           <div header-link="dismissal"></div>
           Dismissal
         </h3>
-      <p class="docs-markdown-p">A snack-bar can be dismissed manually by calling the <code class="docs-markdown-code">dismiss</code> method on the <code class="docs-markdown-code">MdSnackBarRef</code>
+      <p class="docs-markdown-p">A snack-bar can be dismissed manually by calling the <code class="docs-markdown-code">dismiss</code> method on the <code class="docs-markdown-code">MatSnackBarRef</code>
 returned from the call to <code class="docs-markdown-code">open</code>.</p>
 <p class="docs-markdown-p">Only one snack-bar can ever be opened at one time. If a new snackbar is opened while a previous
 message is still showing, the older message will be automatically dismissed.</p>
@@ -56,16 +56,16 @@ by passing it through the <code class="docs-markdown-code">data</code> property.
   data: <span class="hljs-string">'some data'</span>
 });
 </code></pre>
-<p class="docs-markdown-p">To access the data in your component, you have to use the <code class="docs-markdown-code">MD_SNACK_BAR_DATA</code> injection token:</p>
+<p class="docs-markdown-p">To access the data in your component, you have to use the <code class="docs-markdown-code">MAT_SNACK_BAR_DATA</code> injection token:</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">import {Component, Inject} from '@angular/core';
-import {MD_SNACK_BAR_DATA} from '@angular/material';
+import {MAT_SNACK_BAR_DATA} from '@angular/material';
 
 @Component({
   selector: 'your-snack-bar',
   template: 'passed in {{ data }}',
 })
 export class MessageArchivedComponent {
-  constructor(@Inject(MD_SNACK_BAR_DATA) public data: any) { }
+  constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) { }
 }
 </code></pre>
 

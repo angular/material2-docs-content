@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/platform-browser'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent'), require('@angular/http'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/platform-browser', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent', '@angular/http', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.cdk.collections,global.Rx,global.Rx.Observable,global.ng.platformBrowser,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable,global.ng.http));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_cdk_collections,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_platformBrowser,rxjs_Observable,rxjs_add_observable_of,rxjs_add_operator_debounceTime,rxjs_add_operator_distinctUntilChanged,rxjs_add_observable_fromEvent,_angular_http) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/cdk/keycodes'), require('@angular/platform-browser'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent'), require('@angular/http'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/cdk/keycodes', '@angular/platform-browser', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent', '@angular/http', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.cdk.collections,global.Rx,global.Rx.Observable,global.ng.cdk.keycodes,global.ng.platformBrowser,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable,global.ng.http));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_cdk_collections,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_cdk_keycodes,_angular_platformBrowser,rxjs_Observable,rxjs_add_observable_of,rxjs_add_operator_debounceTime,rxjs_add_operator_distinctUntilChanged,rxjs_add_observable_fromEvent,_angular_http) { 'use strict';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -46,36 +46,36 @@ ExampleMaterialModule.decorators = [
     { type: _angular_core.NgModule, args: [{
                 exports: [
                     _angular_cdk_table.CdkTableModule,
-                    _angular_material.MdAutocompleteModule,
-                    _angular_material.MdButtonModule,
-                    _angular_material.MdButtonToggleModule,
-                    _angular_material.MdCardModule,
-                    _angular_material.MdCheckboxModule,
-                    _angular_material.MdChipsModule,
-                    _angular_material.MdDatepickerModule,
-                    _angular_material.MdDialogModule,
-                    _angular_material.MdExpansionModule,
-                    _angular_material.MdFormFieldModule,
-                    _angular_material.MdGridListModule,
-                    _angular_material.MdIconModule,
-                    _angular_material.MdInputModule,
-                    _angular_material.MdListModule,
-                    _angular_material.MdMenuModule,
-                    _angular_material.MdProgressBarModule,
-                    _angular_material.MdProgressSpinnerModule,
-                    _angular_material.MdRadioModule,
-                    _angular_material.MdSelectModule,
-                    _angular_material.MdSlideToggleModule,
-                    _angular_material.MdSliderModule,
-                    _angular_material.MdSidenavModule,
-                    _angular_material.MdSnackBarModule,
-                    _angular_material.MdStepperModule,
-                    _angular_material.MdTabsModule,
-                    _angular_material.MdToolbarModule,
-                    _angular_material.MdTooltipModule,
-                    _angular_material.MdPaginatorModule,
-                    _angular_material.MdSortModule,
-                    _angular_material.MdTableModule
+                    _angular_material.MatAutocompleteModule,
+                    _angular_material.MatButtonModule,
+                    _angular_material.MatButtonToggleModule,
+                    _angular_material.MatCardModule,
+                    _angular_material.MatCheckboxModule,
+                    _angular_material.MatChipsModule,
+                    _angular_material.MatDatepickerModule,
+                    _angular_material.MatDialogModule,
+                    _angular_material.MatExpansionModule,
+                    _angular_material.MatFormFieldModule,
+                    _angular_material.MatGridListModule,
+                    _angular_material.MatIconModule,
+                    _angular_material.MatInputModule,
+                    _angular_material.MatListModule,
+                    _angular_material.MatMenuModule,
+                    _angular_material.MatProgressBarModule,
+                    _angular_material.MatProgressSpinnerModule,
+                    _angular_material.MatRadioModule,
+                    _angular_material.MatSelectModule,
+                    _angular_material.MatSlideToggleModule,
+                    _angular_material.MatSliderModule,
+                    _angular_material.MatSidenavModule,
+                    _angular_material.MatSnackBarModule,
+                    _angular_material.MatStepperModule,
+                    _angular_material.MatTabsModule,
+                    _angular_material.MatToolbarModule,
+                    _angular_material.MatTooltipModule,
+                    _angular_material.MatPaginatorModule,
+                    _angular_material.MatSortModule,
+                    _angular_material.MatTableModule
                 ]
             },] },
 ];
@@ -133,7 +133,7 @@ var AutocompleteDisplayExample = (function () {
 AutocompleteDisplayExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'autocomplete-display-example',
-                template: "<form class=\"example-form\"><md-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Assignee\" aria-label=\"Assignee\" mdInput [formControl]=\"myControl\" [mdAutocomplete]=\"auto\"><md-autocomplete #auto=\"mdAutocomplete\" [displayWith]=\"displayFn\"><md-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{ option.name }}</md-option></md-autocomplete></md-form-field></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Assignee\" aria-label=\"Assignee\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete #auto=\"matAutocomplete\" [displayWith]=\"displayFn\"><mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{ option.name }}</mat-option></mat-autocomplete></mat-form-field></form>",
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
@@ -174,7 +174,7 @@ var AutocompleteFilterExample = (function () {
 AutocompleteFilterExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'autocomplete-filter-example',
-                template: "<form class=\"example-form\"><md-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" mdInput [formControl]=\"myControl\" [mdAutocomplete]=\"auto\"><md-autocomplete #auto=\"mdAutocomplete\"><md-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{ option }}</md-option></md-autocomplete></md-form-field></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete #auto=\"matAutocomplete\"><mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{ option }}</mat-option></mat-autocomplete></mat-form-field></form>",
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
@@ -231,7 +231,7 @@ var AutocompleteOverviewExample = (function () {
 AutocompleteOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'autocomplete-overview-example',
-                template: "<form class=\"example-form\"><md-form-field class=\"example-full-width\"><input mdInput placeholder=\"State\" aria-label=\"State\" [mdAutocomplete]=\"auto\" [formControl]=\"stateCtrl\"><md-autocomplete #auto=\"mdAutocomplete\"><md-option *ngFor=\"let state of filteredStates | async\" [value]=\"state.name\"><img style=\"vertical-align:middle\" aria-hidden src=\"{{state.flag}}\" height=\"25\"> <span>{{ state.name }}</span> | <small>Population: {{state.population}}</small></md-option></md-autocomplete></md-form-field><br><md-slide-toggle [checked]=\"stateCtrl.disabled\" (change)=\"stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()\">Disable Input?</md-slide-toggle></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"State\" aria-label=\"State\" [matAutocomplete]=\"auto\" [formControl]=\"stateCtrl\"><mat-autocomplete #auto=\"matAutocomplete\"><mat-option *ngFor=\"let state of filteredStates | async\" [value]=\"state.name\"><img style=\"vertical-align:middle\" aria-hidden src=\"{{state.flag}}\" height=\"25\"> <span>{{ state.name }}</span> | <small>Population: {{state.population}}</small></mat-option></mat-autocomplete></mat-form-field><br><mat-slide-toggle [checked]=\"stateCtrl.disabled\" (change)=\"stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()\">Disable Input?</mat-slide-toggle></form>",
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
@@ -256,7 +256,7 @@ var AutocompleteSimpleExample = (function () {
 AutocompleteSimpleExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'autocomplete-simple-example',
-                template: "<form class=\"example-form\"><md-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" mdInput [formControl]=\"myControl\" [mdAutocomplete]=\"auto\"><md-autocomplete #auto=\"mdAutocomplete\"><md-option *ngFor=\"let option of options\" [value]=\"option\">{{ option }}</md-option></md-autocomplete></md-form-field></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete #auto=\"matAutocomplete\"><mat-option *ngFor=\"let option of options\" [value]=\"option\">{{ option }}</mat-option></mat-autocomplete></mat-form-field></form>",
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
@@ -275,7 +275,7 @@ var ButtonOverviewExample = (function () {
 ButtonOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'button-overview-example',
-                template: "<button md-button>Click me!</button>",
+                template: "<button mat-button>Click me!</button>",
             },] },
 ];
 /**
@@ -293,7 +293,7 @@ var ButtonToggleExclusiveExample = (function () {
 ButtonToggleExclusiveExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'button-toggle-exclusive-example',
-                template: "<md-button-toggle-group #group=\"mdButtonToggleGroup\"><md-button-toggle value=\"left\"><md-icon>format_align_left</md-icon></md-button-toggle><md-button-toggle value=\"center\"><md-icon>format_align_center</md-icon></md-button-toggle><md-button-toggle value=\"right\"><md-icon>format_align_right</md-icon></md-button-toggle><md-button-toggle value=\"justify\" disabled=\"disabled\"><md-icon>format_align_justify</md-icon></md-button-toggle></md-button-toggle-group><div class=\"example-selected-value\">Selected value: {{group.value}}</div>",
+                template: "<mat-button-toggle-group #group=\"matButtonToggleGroup\"><mat-button-toggle value=\"left\"><mat-icon>format_align_left</mat-icon></mat-button-toggle><mat-button-toggle value=\"center\"><mat-icon>format_align_center</mat-icon></mat-button-toggle><mat-button-toggle value=\"right\"><mat-icon>format_align_right</mat-icon></mat-button-toggle><mat-button-toggle value=\"justify\" disabled=\"disabled\"><mat-icon>format_align_justify</mat-icon></mat-button-toggle></mat-button-toggle-group><div class=\"example-selected-value\">Selected value: {{group.value}}</div>",
                 styles: [".example-selected-value { margin: 15px 0; } "],
             },] },
 ];
@@ -312,7 +312,7 @@ var ButtonToggleOverviewExample = (function () {
 ButtonToggleOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'button-toggle-overview-example',
-                template: "<md-button-toggle>Toggle me!</md-button-toggle>",
+                template: "<mat-button-toggle>Toggle me!</mat-button-toggle>",
             },] },
 ];
 /**
@@ -330,7 +330,7 @@ var ButtonTypesExample = (function () {
 ButtonTypesExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'button-types-example',
-                template: "<h3>Basic Buttons</h3><div class=\"button-row\"><button md-button>Basic</button> <button md-button color=\"primary\">Primary</button> <button md-button color=\"accent\">Accent</button> <button md-button color=\"warn\">Warn</button> <button md-button disabled=\"disabled\">Disabled</button> <a md-button routerLink=\".\">Link</a></div><h3>Raised Buttons</h3><div class=\"button-row\"><button md-raised-button>Basic</button> <button md-raised-button color=\"primary\">Primary</button> <button md-raised-button color=\"accent\">Accent</button> <button md-raised-button color=\"warn\">Warn</button> <button md-raised-button disabled=\"disabled\">Disabled</button> <a md-raised-button routerLink=\".\">Link</a></div><h3>Icon Buttons</h3><div class=\"button-row\"><button md-icon-button><md-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</md-icon></button> <button md-icon-button color=\"primary\"><md-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</md-icon></button> <button md-icon-button color=\"accent\"><md-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</md-icon></button> <button md-icon-button color=\"warn\"><md-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</md-icon></button> <button md-icon-button disabled=\"disabled\"><md-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</md-icon></button></div><h3>Fab Buttons</h3><div class=\"button-row\"><button md-fab>Basic</button> <button md-fab color=\"primary\">Primary</button> <button md-fab color=\"accent\">Accent</button> <button md-fab color=\"warn\">Warn</button> <button md-fab disabled=\"disabled\">Disabled</button> <button md-fab><md-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</md-icon></button> <a md-fab routerLink=\".\">Link</a></div><h3>Mini Fab Buttons</h3><div class=\"button-row\"><button md-mini-fab>Basic</button> <button md-mini-fab color=\"primary\">Primary</button> <button md-mini-fab color=\"accent\">Accent</button> <button md-mini-fab color=\"warn\">Warn</button> <button md-mini-fab disabled=\"disabled\">Disabled</button> <button md-mini-fab><md-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</md-icon></button> <a md-mini-fab routerLink=\".\">Link</a></div>",
+                template: "<h3>Basic Buttons</h3><div class=\"button-row\"><button mat-button>Basic</button> <button mat-button color=\"primary\">Primary</button> <button mat-button color=\"accent\">Accent</button> <button mat-button color=\"warn\">Warn</button> <button mat-button disabled=\"disabled\">Disabled</button> <a mat-button routerLink=\".\">Link</a></div><h3>Raised Buttons</h3><div class=\"button-row\"><button mat-raised-button>Basic</button> <button mat-raised-button color=\"primary\">Primary</button> <button mat-raised-button color=\"accent\">Accent</button> <button mat-raised-button color=\"warn\">Warn</button> <button mat-raised-button disabled=\"disabled\">Disabled</button> <a mat-raised-button routerLink=\".\">Link</a></div><h3>Icon Buttons</h3><div class=\"button-row\"><button mat-icon-button><mat-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"primary\"><mat-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"accent\"><mat-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"warn\"><mat-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button disabled=\"disabled\"><mat-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button></div><h3>Fab Buttons</h3><div class=\"button-row\"><button mat-fab>Basic</button> <button mat-fab color=\"primary\">Primary</button> <button mat-fab color=\"accent\">Accent</button> <button mat-fab color=\"warn\">Warn</button> <button mat-fab disabled=\"disabled\">Disabled</button> <button mat-fab><mat-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <a mat-fab routerLink=\".\">Link</a></div><h3>Mini Fab Buttons</h3><div class=\"button-row\"><button mat-mini-fab>Basic</button> <button mat-mini-fab color=\"primary\">Primary</button> <button mat-mini-fab color=\"accent\">Accent</button> <button mat-mini-fab color=\"warn\">Warn</button> <button mat-mini-fab disabled=\"disabled\">Disabled</button> <button mat-mini-fab><mat-icon class=\"md-24\" aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <a mat-mini-fab routerLink=\".\">Link</a></div>",
                 styles: [".example-button-row { display: flex; align-items: center; justify-content: space-around; } "],
             },] },
 ];
@@ -349,7 +349,7 @@ var CardFancyExample = (function () {
 CardFancyExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'card-fancy-example',
-                template: "<md-card class=\"example-card\"><md-card-header><div md-card-avatar class=\"example-header-image\"></div><md-card-title>Shiba Inu</md-card-title><md-card-subtitle>Dog Breed</md-card-subtitle></md-card-header><img md-card-image src=\"assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"><md-card-content><p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p></md-card-content><md-card-actions><button md-button>LIKE</button> <button md-button>SHARE</button></md-card-actions></md-card>",
+                template: "<mat-card class=\"example-card\"><mat-card-header><div mat-card-avatar class=\"example-header-image\"></div><mat-card-title>Shiba Inu</mat-card-title><mat-card-subtitle>Dog Breed</mat-card-subtitle></mat-card-header><img mat-card-image src=\"assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"><mat-card-content><p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p></mat-card-content><mat-card-actions><button mat-button>LIKE</button> <button mat-button>SHARE</button></mat-card-actions></mat-card>",
                 styles: [".example-card { width: 400px; } .example-header-image { background-image: url('../../../assets/img/examples/shiba1.jpg'); background-size: cover; } "],
             },] },
 ];
@@ -368,7 +368,7 @@ var CardOverviewExample = (function () {
 CardOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'card-overview-example',
-                template: "<md-card>Simple card</md-card>",
+                template: "<mat-card>Simple card</mat-card>",
             },] },
 ];
 /**
@@ -502,7 +502,7 @@ var CheckboxConfigurableExample = (function () {
 CheckboxConfigurableExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'checkbox-configurable-example',
-                template: "<md-card><md-card-content><h2 class=\"example-h2\">Checkbox configuration</h2><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</md-checkbox><md-checkbox class=\"example-margin\" [(ngModel)]=\"indeterminate\">Indeterminate</md-checkbox></section><section class=\"example-section\"><label class=\"example-margin\">Align:</label><md-radio-group [(ngModel)]=\"align\"><md-radio-button class=\"example-margin\" value=\"start\">Start</md-radio-button><md-radio-button class=\"example-margin\" value=\"end\">End</md-radio-button></md-radio-group></section><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</md-checkbox></section></md-card-content></md-card><md-card class=\"result\"><md-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"checked\" [(indeterminate)]=\"indeterminate\" [align]=\"align\" [disabled]=\"disabled\">I'm a checkbox</md-checkbox></section></md-card-content></md-card>",
+                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Checkbox configuration</h2><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"indeterminate\">Indeterminate</mat-checkbox></section><section class=\"example-section\"><label class=\"example-margin\">Align:</label><mat-radio-group [(ngModel)]=\"align\"><mat-radio-button class=\"example-margin\" value=\"start\">Start</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"end\">End</mat-radio-button></mat-radio-group></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox></section></mat-card-content></mat-card><mat-card class=\"result\"><mat-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\" [(indeterminate)]=\"indeterminate\" [align]=\"align\" [disabled]=\"disabled\">I'm a checkbox</mat-checkbox></section></mat-card-content></mat-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
@@ -521,7 +521,7 @@ var CheckboxOverviewExample = (function () {
 CheckboxOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'checkbox-overview-example',
-                template: "<md-checkbox>Check me!</md-checkbox>",
+                template: "<mat-checkbox>Check me!</mat-checkbox>",
             },] },
 ];
 /**
@@ -539,7 +539,7 @@ var ChipsInputExample = (function () {
         this.removable = true;
         this.addOnBlur = true;
         // Enter, comma
-        this.separatorKeysCodes = [_angular_material.ENTER, COMMA];
+        this.separatorKeysCodes = [_angular_cdk_keycodes.ENTER, COMMA];
         this.fruits = [
             { name: 'Lemon' },
             { name: 'Lime' },
@@ -577,7 +577,7 @@ var ChipsInputExample = (function () {
 ChipsInputExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'chips-input-example',
-                template: "<md-form-field class=\"demo-chip-list\"><md-chip-list mdPrefix #chipList><md-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (remove)=\"remove(fruit)\">{{fruit.name}}<md-icon mdChipRemove *ngIf=\"removable\">cancel</md-icon></md-chip></md-chip-list><input mdInput placeholder=\"New fruit...\" [mdChipInputFor]=\"chipList\" [mdChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [mdChipInputAddOnBlur]=\"addOnBlur\" (mdChipInputTokenEnd)=\"add($event)\"></md-form-field>",
+                template: "<mat-form-field class=\"demo-chip-list\"><mat-chip-list matPrefix #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (remove)=\"remove(fruit)\">{{fruit.name}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip></mat-chip-list><input matInput placeholder=\"New fruit...\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-form-field>",
                 styles: [".demo-chip-list{width:100%}"]
             },] },
 ];
@@ -596,7 +596,7 @@ var ChipsOverviewExample = (function () {
 ChipsOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'chips-overview-example',
-                template: "<md-chip-list><md-chip>One fish</md-chip><md-chip>Two fish</md-chip><md-chip color=\"primary\" selected=\"true\">Primary fish</md-chip><md-chip color=\"accent\" selected=\"true\">Accent fish</md-chip></md-chip-list>",
+                template: "<mat-chip-list><mat-chip>One fish</mat-chip><mat-chip>Two fish</mat-chip><mat-chip color=\"primary\" selected=\"true\">Primary fish</mat-chip><mat-chip color=\"accent\" selected=\"true\">Accent fish</mat-chip></mat-chip-list>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -621,8 +621,8 @@ var ChipsStackedExample = (function () {
 ChipsStackedExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'chips-stacked-example',
-                template: "<md-chip-list class=\"mat-chip-list-stacked\"><md-chip *ngFor=\"let chipColor of availableColors\" selected=\"true\" color=\"{{chipColor.color}}\">{{chipColor.name}}</md-chip></md-chip-list>",
-                styles: ["md-chip { max-width: 200px; } "],
+                template: "<mat-chip-list class=\"mat-chip-list-stacked\"><mat-chip *ngFor=\"let chipColor of availableColors\" selected=\"true\" color=\"{{chipColor.color}}\">{{chipColor.name}}</mat-chip></mat-chip-list>",
+                styles: ["mat-chip { max-width: 200px; } "],
             },] },
 ];
 /**
@@ -640,7 +640,7 @@ var DatepickerApiExample = (function () {
 DatepickerApiExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'datepicker-api-example',
-                template: "<md-form-field class=\"example-full-width\"><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker #picker></md-datepicker></md-form-field><button md-raised-button (click)=\"picker.open()\">Open</button>",
+                template: "<mat-form-field class=\"example-full-width\"><input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\"><mat-datepicker #picker></mat-datepicker></mat-form-field><button mat-raised-button (click)=\"picker.open()\">Open</button>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -664,7 +664,7 @@ var DatepickerFilterExample = (function () {
 DatepickerFilterExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'datepicker-filter-example',
-                template: "<md-form-field class=\"example-full-width\"><input mdInput [mdDatepickerFilter]=\"myFilter\" [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker-toggle mdSuffix [for]=\"picker\"></md-datepicker-toggle><md-datepicker #picker></md-datepicker></md-form-field>",
+                template: "<mat-form-field class=\"example-full-width\"><input matInput [matDatepickerFilter]=\"myFilter\" [matDatepicker]=\"picker\" placeholder=\"Choose a date\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker></mat-datepicker></mat-form-field>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -685,7 +685,7 @@ var DatepickerMinMaxExample = (function () {
 DatepickerMinMaxExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'datepicker-min-max-example',
-                template: "<md-form-field class=\"example-full-width\"><input mdInput [min]=\"minDate\" [max]=\"maxDate\" [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker-toggle mdSuffix [for]=\"picker\"></md-datepicker-toggle><md-datepicker #picker></md-datepicker></md-form-field>",
+                template: "<mat-form-field class=\"example-full-width\"><input matInput [min]=\"minDate\" [max]=\"maxDate\" [matDatepicker]=\"picker\" placeholder=\"Choose a date\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker></mat-datepicker></mat-form-field>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -704,7 +704,7 @@ var DatepickerOverviewExample = (function () {
 DatepickerOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'datepicker-overview-example',
-                template: "<md-form-field><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker-toggle mdSuffix [for]=\"picker\"></md-datepicker-toggle><md-datepicker #picker></md-datepicker></md-form-field>",
+                template: "<mat-form-field><input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker></mat-datepicker></mat-form-field>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -724,7 +724,7 @@ var DatepickerStartViewExample = (function () {
 DatepickerStartViewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'datepicker-start-view-example',
-                template: "<md-form-field><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker-toggle mdSuffix [for]=\"picker\"></md-datepicker-toggle><md-datepicker #picker startView=\"year\" [startAt]=\"startDate\"></md-datepicker></md-form-field>",
+                template: "<mat-form-field><input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker startView=\"year\" [startAt]=\"startDate\"></mat-datepicker></mat-form-field>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -743,7 +743,7 @@ var DatepickerTouchExample = (function () {
 DatepickerTouchExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'datepicker-touch-example',
-                template: "<md-form-field class=\"example-full-width\"><input mdInput [mdDatepicker]=\"picker\" placeholder=\"Choose a date\"><md-datepicker-toggle mdSuffix [for]=\"picker\"></md-datepicker-toggle><md-datepicker touchUi=\"true\" #picker></md-datepicker></md-form-field>",
+                template: "<mat-form-field class=\"example-full-width\"><input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker touchUi=\"true\" #picker></mat-datepicker></mat-form-field>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -777,14 +777,14 @@ var DialogContentExample = (function () {
 DialogContentExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'dialog-content-example',
-                template: "<button md-button (click)=\"openDialog()\">Open dialog</button>",
+                template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>",
             },] },
 ];
 /**
  * @nocollapse
  */
 DialogContentExample.ctorParameters = function () { return [
-    { type: _angular_material.MdDialog, },
+    { type: _angular_material.MatDialog, },
 ]; };
 var DialogContentExampleDialog = (function () {
     function DialogContentExampleDialog() {
@@ -794,7 +794,7 @@ var DialogContentExampleDialog = (function () {
 DialogContentExampleDialog.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'dialog-content-example-dialog',
-                template: "<h2 md-dialog-title>Install Angular</h2><md-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED & PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></md-dialog-content><md-dialog-actions><button md-button [md-dialog-close]=\"true\" tabindex=\"1\">Install</button> <button md-button md-dialog-close tabindex=\"-1\">Cancel</button></md-dialog-actions>",
+                template: "<h2 mat-dialog-title>Install Angular</h2><mat-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED & PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></mat-dialog-content><mat-dialog-actions><button mat-button [mat-dialog-close]=\"true\" tabindex=\"1\">Install</button> <button mat-button mat-dialog-close tabindex=\"-1\">Cancel</button></mat-dialog-actions>",
             },] },
 ];
 /**
@@ -826,14 +826,14 @@ var DialogDataExample = (function () {
 DialogDataExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'dialog-data-example',
-                template: "<button md-button (click)=\"openDialog()\">Open dialog</button>",
+                template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>",
             },] },
 ];
 /**
  * @nocollapse
  */
 DialogDataExample.ctorParameters = function () { return [
-    { type: _angular_material.MdDialog, },
+    { type: _angular_material.MatDialog, },
 ]; };
 var DialogDataExampleDialog = (function () {
     /**
@@ -847,14 +847,14 @@ var DialogDataExampleDialog = (function () {
 DialogDataExampleDialog.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'dialog-data-example-dialog',
-                template: "<h1 md-dialog-title>Favorite Animal</h1><div md-dialog-content>My favorite animal is:<ul><li><span *ngIf=\"data.animal === 'panda'\">&#10003;</span> Panda</li><li><span *ngIf=\"data.animal === 'unicorn'\">&#10003;</span> Unicorn</li><li><span *ngIf=\"data.animal === 'lion'\">&#10003;</span> Lion</li></ul></div>",
+                template: "<h1 mat-dialog-title>Favorite Animal</h1><div mat-dialog-content>My favorite animal is:<ul><li><span *ngIf=\"data.animal === 'panda'\">&#10003;</span> Panda</li><li><span *ngIf=\"data.animal === 'unicorn'\">&#10003;</span> Unicorn</li><li><span *ngIf=\"data.animal === 'lion'\">&#10003;</span> Lion</li></ul></div>",
             },] },
 ];
 /**
  * @nocollapse
  */
 DialogDataExampleDialog.ctorParameters = function () { return [
-    { type: undefined, decorators: [{ type: _angular_core.Inject, args: [_angular_material.MD_DIALOG_DATA,] },] },
+    { type: undefined, decorators: [{ type: _angular_core.Inject, args: [_angular_material.MAT_DIALOG_DATA,] },] },
 ]; };
 /**
  * \@title Dialog elements
@@ -877,14 +877,14 @@ var DialogElementsExample = (function () {
 DialogElementsExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'dialog-elements-example',
-                template: "<button md-button (click)=\"openDialog()\">Launch dialog</button>",
+                template: "<button mat-button (click)=\"openDialog()\">Launch dialog</button>",
             },] },
 ];
 /**
  * @nocollapse
  */
 DialogElementsExample.ctorParameters = function () { return [
-    { type: _angular_material.MdDialog, },
+    { type: _angular_material.MatDialog, },
 ]; };
 var DialogElementsExampleDialog = (function () {
     function DialogElementsExampleDialog() {
@@ -894,7 +894,7 @@ var DialogElementsExampleDialog = (function () {
 DialogElementsExampleDialog.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'dialog-elements-example-dialog',
-                template: "<h1 md-dialog-title>Dialog with elements</h1><div md-dialog-content>This dialog showcases the title, close, content and actions elements.</div><div md-dialog-actions><button md-button md-dialog-close>Close</button></div>",
+                template: "<h1 mat-dialog-title>Dialog with elements</h1><div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div><div mat-dialog-actions><button mat-button mat-dialog-close>Close</button></div>",
             },] },
 ];
 /**
@@ -930,14 +930,14 @@ var DialogOverviewExample = (function () {
 DialogOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'dialog-overview-example',
-                template: "<ol><li><md-form-field><input mdInput [(ngModel)]=\"name\" placeholder=\"What's your name?\"></md-form-field></li><li><button md-raised-button (click)=\"openDialog()\">Pick one</button></li><li *ngIf=\"animal\">You chose: <i>{{animal}}</i></li></ol>"
+                template: "<ol><li><mat-form-field><input matInput [(ngModel)]=\"name\" placeholder=\"What's your name?\"></mat-form-field></li><li><button mat-raised-button (click)=\"openDialog()\">Pick one</button></li><li *ngIf=\"animal\">You chose: <i>{{animal}}</i></li></ol>"
             },] },
 ];
 /**
  * @nocollapse
  */
 DialogOverviewExample.ctorParameters = function () { return [
-    { type: _angular_material.MdDialog, },
+    { type: _angular_material.MatDialog, },
 ]; };
 var DialogOverviewExampleDialog = (function () {
     /**
@@ -959,15 +959,15 @@ var DialogOverviewExampleDialog = (function () {
 DialogOverviewExampleDialog.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'dialog-overview-example-dialog',
-                template: "<h1 md-dialog-title>Hi {{data.name}}</h1><div md-dialog-content><p>What's your favorite animal?</p><md-form-field><input mdInput tabindex=\"1\" [(ngModel)]=\"data.animal\"></md-form-field></div><div md-dialog-actions><button md-button [md-dialog-close]=\"data.animal\" tabindex=\"2\">Ok</button> <button md-button (click)=\"onNoClick()\" tabindex=\"-1\">No Thanks</button></div>",
+                template: "<h1 mat-dialog-title>Hi {{data.name}}</h1><div mat-dialog-content><p>What's your favorite animal?</p><mat-form-field><input matInput tabindex=\"1\" [(ngModel)]=\"data.animal\"></mat-form-field></div><div mat-dialog-actions><button mat-button [mat-dialog-close]=\"data.animal\" tabindex=\"2\">Ok</button> <button mat-button (click)=\"onNoClick()\" tabindex=\"-1\">No Thanks</button></div>",
             },] },
 ];
 /**
  * @nocollapse
  */
 DialogOverviewExampleDialog.ctorParameters = function () { return [
-    { type: _angular_material.MdDialogRef, },
-    { type: undefined, decorators: [{ type: _angular_core.Inject, args: [_angular_material.MD_DIALOG_DATA,] },] },
+    { type: _angular_material.MatDialogRef, },
+    { type: undefined, decorators: [{ type: _angular_core.Inject, args: [_angular_material.MAT_DIALOG_DATA,] },] },
 ]; };
 /**
  * \@title Basic expansion panel
@@ -980,7 +980,7 @@ var ExpansionOverviewExample = (function () {
 ExpansionOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'expansion-overview-example',
-                template: "<md-expansion-panel><md-expansion-panel-header><md-panel-title>Personal data</md-panel-title><md-panel-description>Type your name and age</md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"First name\"></md-form-field><md-form-field><input mdInput placeholder=\"Age\"></md-form-field></md-expansion-panel>",
+                template: "<mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age</mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput placeholder=\"Age\"></mat-form-field></mat-expansion-panel>",
             },] },
 ];
 /**
@@ -1018,7 +1018,7 @@ var ExpansionStepsExample = (function () {
 ExpansionStepsExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'expansion-steps-example',
-                template: "<md-accordion class=\"example-headers-align\"><md-expansion-panel [expanded]=\"step === 0\" (opened)=\"setStep(0)\" hideToggle=\"true\"><md-expansion-panel-header><md-panel-title>Personal data</md-panel-title><md-panel-description>Type your name and age<md-icon>account_circle</md-icon></md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"First name\"></md-form-field><md-form-field><input mdInput type=\"number\" min=\"1\" placeholder=\"Age\"></md-form-field><md-action-row><button md-button color=\"primary\" (click)=\"nextStep()\">Next</button></md-action-row></md-expansion-panel><md-expansion-panel [expanded]=\"step === 1\" (opened)=\"setStep(1)\" hideToggle=\"true\"><md-expansion-panel-header><md-panel-title>Destination</md-panel-title><md-panel-description>Type the country name<md-icon>map</md-icon></md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"Country\"></md-form-field><md-action-row><button md-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button md-button color=\"primary\" (click)=\"nextStep()\">Next</button></md-action-row></md-expansion-panel><md-expansion-panel [expanded]=\"step === 2\" (opened)=\"setStep(2)\" hideToggle=\"true\"><md-expansion-panel-header><md-panel-title>Day of the trip</md-panel-title><md-panel-description>Inform the date you wish to travel<md-icon>date_range</md-icon></md-panel-description></md-expansion-panel-header><md-form-field><input mdInput placeholder=\"Date\" [mdDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></md-form-field><md-datepicker #picker></md-datepicker><md-action-row><button md-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button md-button color=\"primary\" (click)=\"nextStep()\">End</button></md-action-row></md-expansion-panel></md-accordion>",
+                template: "<mat-accordion class=\"example-headers-align\"><mat-expansion-panel [expanded]=\"step === 0\" (opened)=\"setStep(0)\" hideToggle=\"true\"><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age<mat-icon>account_circle</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput type=\"number\" min=\"1\" placeholder=\"Age\"></mat-form-field><mat-action-row><button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button></mat-action-row></mat-expansion-panel><mat-expansion-panel [expanded]=\"step === 1\" (opened)=\"setStep(1)\" hideToggle=\"true\"><mat-expansion-panel-header><mat-panel-title>Destination</mat-panel-title><mat-panel-description>Type the country name<mat-icon>map</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Country\"></mat-form-field><mat-action-row><button mat-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button></mat-action-row></mat-expansion-panel><mat-expansion-panel [expanded]=\"step === 2\" (opened)=\"setStep(2)\" hideToggle=\"true\"><mat-expansion-panel-header><mat-panel-title>Day of the trip</mat-panel-title><mat-panel-description>Inform the date you wish to travel<mat-icon>date_range</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Date\" [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></mat-form-field><mat-datepicker #picker></mat-datepicker><mat-action-row><button mat-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button mat-button color=\"primary\" (click)=\"nextStep()\">End</button></mat-action-row></mat-expansion-panel></mat-accordion>",
                 styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
             },] },
 ];
@@ -1043,7 +1043,7 @@ var GridListDynamicExample = (function () {
 GridListDynamicExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'grid-list-dynamic-example',
-                template: "<md-grid-list cols=\"4\" rowHeight=\"100px\"><md-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\" [style.background]=\"tile.color\">{{tile.text}}</md-grid-tile></md-grid-list>",
+                template: "<mat-grid-list cols=\"4\" rowHeight=\"100px\"><mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\" [style.background]=\"tile.color\">{{tile.text}}</mat-grid-tile></mat-grid-list>",
             },] },
 ];
 /**
@@ -1061,8 +1061,8 @@ var GridListOverviewExample = (function () {
 GridListOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'grid-list-overview-example',
-                styles: ["md-grid-tile { background: lightblue; } "],
-                template: "<md-grid-list cols=\"2\" rowHeight=\"2:1\"><md-grid-tile>1</md-grid-tile><md-grid-tile>2</md-grid-tile><md-grid-tile>3</md-grid-tile><md-grid-tile>4</md-grid-tile></md-grid-list>",
+                styles: ["mat-grid-tile { background: lightblue; } "],
+                template: "<mat-grid-list cols=\"2\" rowHeight=\"2:1\"><mat-grid-tile>1</mat-grid-tile><mat-grid-tile>2</mat-grid-tile><mat-grid-tile>3</mat-grid-tile><mat-grid-tile>4</mat-grid-tile></mat-grid-list>",
             },] },
 ];
 /**
@@ -1080,7 +1080,7 @@ var IconOverviewExample = (function () {
 IconOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'icon-overview-example',
-                template: "<md-icon>home</md-icon>",
+                template: "<mat-icon>home</mat-icon>",
             },] },
 ];
 /**
@@ -1103,14 +1103,14 @@ var IconSvgExample = (function () {
 IconSvgExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'icon-svg-example',
-                template: "<md-icon svgIcon=\"thumbs-up\"></md-icon>",
+                template: "<mat-icon svgIcon=\"thumbs-up\"></mat-icon>",
             },] },
 ];
 /**
  * @nocollapse
  */
 IconSvgExample.ctorParameters = function () { return [
-    { type: _angular_material.MdIconRegistry, },
+    { type: _angular_material.MatIconRegistry, },
     { type: _angular_platformBrowser.DomSanitizer, },
 ]; };
 /**
@@ -1125,7 +1125,7 @@ var InputClearableExample = (function () {
 InputClearableExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'input-clearable-example',
-                template: "<md-form-field class=\"example-form-field\"><input mdInput type=\"text\" placeholder=\"Clearable input\" [(ngModel)]=\"value\"> <button md-button *ngIf=\"value\" mdSuffix md-icon-button aria-label=\"Clear\" (click)=\"value=''\"><md-icon>close</md-icon></button></md-form-field>",
+                template: "<mat-form-field class=\"example-form-field\"><input matInput type=\"text\" placeholder=\"Clearable input\" [(ngModel)]=\"value\"> <button mat-button *ngIf=\"value\" matSuffix mat-icon-button aria-label=\"Clear\" (click)=\"value=''\"><mat-icon>close</mat-icon></button></mat-form-field>",
                 styles: [".example-form-field { width: 200px; } "],
             },] },
 ];
@@ -1149,7 +1149,7 @@ var InputErrorsExample = (function () {
 InputErrorsExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'input-errors-example',
-                template: "<form class=\"example-form\"><md-form-field class=\"example-full-width\"><input mdInput placeholder=\"Email\" [formControl]=\"emailFormControl\"><md-error *ngIf=\"emailFormControl.hasError('pattern')\">Please enter a valid email address</md-error><md-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></md-error></md-form-field></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\"><mat-error *ngIf=\"emailFormControl.hasError('pattern')\">Please enter a valid email address</mat-error><mat-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></mat-error></mat-form-field></form>",
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
@@ -1168,7 +1168,7 @@ var InputFormExample = (function () {
 InputFormExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'input-form-example',
-                template: "<form class=\"example-form\"><md-form-field class=\"example-full-width\"><input mdInput placeholder=\"Company (disabled)\" disabled=\"disabled\" value=\"Google\"></md-form-field><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-form-field class=\"example-full-width\"><input mdInput placeholder=\"First name\"></md-form-field></td><td><md-form-field class=\"example-full-width\"><input mdInput placeholder=\"Long Last Name That Will Be Truncated\"></md-form-field></td></tr></table><p><md-form-field class=\"example-full-width\"><textarea mdInput placeholder=\"Address\">1600 Amphitheatre Pkwy</textarea></md-form-field><md-form-field class=\"example-full-width\"><textarea mdInput placeholder=\"Address 2\"></textarea></md-form-field></p><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><md-form-field class=\"example-full-width\"><input mdInput placeholder=\"City\"></md-form-field></td><td><md-form-field class=\"example-full-width\"><input mdInput placeholder=\"State\"></md-form-field></td><td><md-form-field class=\"example-full-width\"><input mdInput #postalCode maxlength=\"5\" placeholder=\"Postal Code\" value=\"94043\"><md-hint align=\"end\">{{postalCode.value.length}} / 5</md-hint></md-form-field></td></tr></table></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Company (disabled)\" disabled=\"disabled\" value=\"Google\"></mat-form-field><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"First name\"></mat-form-field></td><td><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Long Last Name That Will Be Truncated\"></mat-form-field></td></tr></table><p><mat-form-field class=\"example-full-width\"><textarea matInput placeholder=\"Address\">1600 Amphitheatre Pkwy</textarea></mat-form-field><mat-form-field class=\"example-full-width\"><textarea matInput placeholder=\"Address 2\"></textarea></mat-form-field></p><table class=\"example-full-width\" cellspacing=\"0\"><tr><td><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"City\"></mat-form-field></td><td><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"State\"></mat-form-field></td><td><mat-form-field class=\"example-full-width\"><input matInput #postalCode maxlength=\"5\" placeholder=\"Postal Code\" value=\"94043\"><mat-hint align=\"end\">{{postalCode.value.length}} / 5</mat-hint></mat-form-field></td></tr></table></form>",
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
@@ -1187,7 +1187,7 @@ var InputHintExample = (function () {
 InputHintExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'input-hint-example',
-                template: "<form class=\"example-form\"><md-form-field class=\"example-full-width\"><input mdInput #message maxlength=\"256\" placeholder=\"Message\"><md-hint align=\"start\"><strong>Don't disclose personal info</strong></md-hint><md-hint align=\"end\">{{message.value.length}} / 256</md-hint></md-form-field></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput #message maxlength=\"256\" placeholder=\"Message\"><mat-hint align=\"start\"><strong>Don't disclose personal info</strong></mat-hint><mat-hint align=\"end\">{{message.value.length}} / 256</mat-hint></mat-form-field></form>",
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
@@ -1207,7 +1207,7 @@ InputOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'input-overview-example',
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
-                template: "<form class=\"example-form\"><md-form-field class=\"example-full-width\"><input mdInput placeholder=\"Favorite food\" value=\"Sushi\"></md-form-field></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Favorite food\" value=\"Sushi\"></mat-form-field></form>",
             },] },
 ];
 /**
@@ -1225,7 +1225,7 @@ var InputPrefixSuffixExample = (function () {
 InputPrefixSuffixExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'input-prefix-suffix-example',
-                template: "<form class=\"example-form\"><md-form-field class=\"example-full-width\"><span mdPrefix>+1 &nbsp;</span> <input type=\"tel\" mdInput placeholder=\"Telephone\"><md-icon mdSuffix>mode_edit</md-icon></md-form-field></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><span matPrefix>+1 &nbsp;</span> <input type=\"tel\" matInput placeholder=\"Telephone\"><mat-icon matSuffix>mode_edit</mat-icon></mat-form-field></form>",
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
@@ -1244,7 +1244,7 @@ var ListOverviewExample = (function () {
 ListOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'list-overview-example',
-                template: "<md-list><md-list-item>Item 1</md-list-item><md-list-item>Item 2</md-list-item><md-list-item>Item 3</md-list-item></md-list>",
+                template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-list-item>Item 2</mat-list-item><mat-list-item>Item 3</mat-list-item></mat-list>",
             },] },
 ];
 /**
@@ -1287,7 +1287,7 @@ ListSectionsExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'list-sections-example',
                 styles: [".mat-list-icon { color: rgba(0, 0, 0, 0.54); } "],
-                template: "<md-list><h3 md-subheader>Folders</h3><md-list-item *ngFor=\"let folder of folders\"><md-icon md-list-icon>folder</md-icon><h4 md-line>{{folder.name}}</h4><p md-line>{{folder.updated | date}}</p></md-list-item><md-divider></md-divider><h3 md-subheader>Notes</h3><md-list-item *ngFor=\"let note of notes\"><md-icon md-list-icon>note</md-icon><h4 md-line>{{note.name}}</h4><p md-line>{{note.updated | date}}</p></md-list-item></md-list>",
+                template: "<mat-list><h3 mat-subheader>Folders</h3><mat-list-item *ngFor=\"let folder of folders\"><mat-icon mat-list-icon>folder</mat-icon><h4 mat-line>{{folder.name}}</h4><p mat-line>{{folder.updated | date}}</p></mat-list-item><mat-divider></mat-divider><h3 mat-subheader>Notes</h3><mat-list-item *ngFor=\"let note of notes\"><mat-icon mat-list-icon>note</mat-icon><h4 mat-line>{{note.name}}</h4><p mat-line>{{note.updated | date}}</p></mat-list-item></mat-list>",
             },] },
 ];
 /**
@@ -1307,7 +1307,7 @@ ListSelectionExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'list-selection-example',
                 styles: ["/** No styles for this example. */ "],
-                template: "<md-selection-list #shoes><md-list-option *ngFor=\"let shoe of typesOfShoes\">{{shoe}}</md-list-option></md-selection-list><p>Options selected: {{shoes.selectedOptions.selected.length}}</p>",
+                template: "<mat-selection-list #shoes><mat-list-option *ngFor=\"let shoe of typesOfShoes\">{{shoe}}</mat-list-option></mat-selection-list><p>Options selected: {{shoes.selectedOptions.selected.length}}</p>",
             },] },
 ];
 /**
@@ -1325,7 +1325,7 @@ var MenuIconsExample = (function () {
 MenuIconsExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'menu-icons-example',
-                template: "<button md-icon-button [mdMenuTriggerFor]=\"menu\"><md-icon>more_vert</md-icon></button><md-menu #menu=\"mdMenu\"><button md-menu-item><md-icon>dialpad</md-icon><span>Redial</span></button> <button md-menu-item disabled=\"disabled\"><md-icon>voicemail</md-icon><span>Check voicemail</span></button> <button md-menu-item><md-icon>notifications_off</md-icon><span>Disable alerts</span></button></md-menu>",
+                template: "<button mat-icon-button [matMenuTriggerFor]=\"menu\"><mat-icon>more_vert</mat-icon></button><mat-menu #menu=\"matMenu\"><button mat-menu-item><mat-icon>dialpad</mat-icon><span>Redial</span></button> <button mat-menu-item disabled=\"disabled\"><mat-icon>voicemail</mat-icon><span>Check voicemail</span></button> <button mat-menu-item><mat-icon>notifications_off</mat-icon><span>Disable alerts</span></button></mat-menu>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -1344,7 +1344,7 @@ var MenuOverviewExample = (function () {
 MenuOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'menu-overview-example',
-                template: "<button md-button [mdMenuTriggerFor]=\"menu\">Menu</button><md-menu #menu=\"mdMenu\"><button md-menu-item>Item 1</button> <button md-menu-item>Item 2</button></md-menu>",
+                template: "<button mat-button [matMenuTriggerFor]=\"menu\">Menu</button><mat-menu #menu=\"matMenu\"><button mat-menu-item>Item 1</button> <button mat-menu-item>Item 2</button></mat-menu>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -1363,7 +1363,7 @@ var NestedMenuExample = (function () {
 NestedMenuExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'nested-menu-example',
-                template: "<button md-button [mdMenuTriggerFor]=\"animals\">Animal index</button><md-menu #animals=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"vertebrates\">Vertebrates</button> <button md-menu-item [mdMenuTriggerFor]=\"invertebrates\">Invertebrates</button></md-menu><md-menu #vertebrates=\"mdMenu\"><button md-menu-item [mdMenuTriggerFor]=\"fish\">Fishes</button> <button md-menu-item [mdMenuTriggerFor]=\"amphibians\">Amphibians</button> <button md-menu-item [mdMenuTriggerFor]=\"reptiles\">Reptiles</button> <button md-menu-item>Birds</button> <button md-menu-item>Mammals</button></md-menu><md-menu #invertebrates=\"mdMenu\"><button md-menu-item>Insects</button> <button md-menu-item>Molluscs</button> <button md-menu-item>Crustaceans</button> <button md-menu-item>Corals</button> <button md-menu-item>Arachnids</button> <button md-menu-item>Velvet worms</button> <button md-menu-item>Horseshoe crabs</button></md-menu><md-menu #fish=\"mdMenu\"><button md-menu-item>Baikal oilfish</button> <button md-menu-item>Bala shark</button> <button md-menu-item>Ballan wrasse</button> <button md-menu-item>Bamboo shark</button> <button md-menu-item>Banded killifish</button></md-menu><md-menu #amphibians=\"mdMenu\"><button md-menu-item>Sonoran desert toad</button> <button md-menu-item>Western toad</button> <button md-menu-item>Arroyo toad</button> <button md-menu-item>Yosemite toad</button></md-menu><md-menu #reptiles=\"mdMenu\"><button md-menu-item>Banded Day Gecko</button> <button md-menu-item>Banded Gila Monster</button> <button md-menu-item>Black Tree Monitor</button> <button md-menu-item>Blue Spiny Lizard</button> <button md-menu-item disabled=\"disabled\">Velociraptor</button></md-menu>",
+                template: "<button mat-button [matMenuTriggerFor]=\"animals\">Animal index</button><mat-menu #animals=\"matMenu\"><button mat-menu-item [matMenuTriggerFor]=\"vertebrates\">Vertebrates</button> <button mat-menu-item [matMenuTriggerFor]=\"invertebrates\">Invertebrates</button></mat-menu><mat-menu #vertebrates=\"matMenu\"><button mat-menu-item [matMenuTriggerFor]=\"fish\">Fishes</button> <button mat-menu-item [matMenuTriggerFor]=\"amphibians\">Amphibians</button> <button mat-menu-item [matMenuTriggerFor]=\"reptiles\">Reptiles</button> <button mat-menu-item>Birds</button> <button mat-menu-item>Mammals</button></mat-menu><mat-menu #invertebrates=\"matMenu\"><button mat-menu-item>Insects</button> <button mat-menu-item>Molluscs</button> <button mat-menu-item>Crustaceans</button> <button mat-menu-item>Corals</button> <button mat-menu-item>Arachnids</button> <button mat-menu-item>Velvet worms</button> <button mat-menu-item>Horseshoe crabs</button></mat-menu><mat-menu #fish=\"matMenu\"><button mat-menu-item>Baikal oilfish</button> <button mat-menu-item>Bala shark</button> <button mat-menu-item>Ballan wrasse</button> <button mat-menu-item>Bamboo shark</button> <button mat-menu-item>Banded killifish</button></mat-menu><mat-menu #amphibians=\"matMenu\"><button mat-menu-item>Sonoran desert toad</button> <button mat-menu-item>Western toad</button> <button mat-menu-item>Arroyo toad</button> <button mat-menu-item>Yosemite toad</button></mat-menu><mat-menu #reptiles=\"matMenu\"><button mat-menu-item>Banded Day Gecko</button> <button mat-menu-item>Banded Gila Monster</button> <button mat-menu-item>Black Tree Monitor</button> <button mat-menu-item>Blue Spiny Lizard</button> <button mat-menu-item disabled=\"disabled\">Velociraptor</button></mat-menu>",
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
@@ -1376,7 +1376,7 @@ NestedMenuExample.ctorParameters = function () { return []; };
  */
 var PaginatorConfigurableExample = (function () {
     function PaginatorConfigurableExample() {
-        // MdPaginator Inputs
+        // MatPaginator Inputs
         this.length = 100;
         this.pageSize = 10;
         this.pageSizeOptions = [5, 10, 25, 100];
@@ -1393,7 +1393,7 @@ var PaginatorConfigurableExample = (function () {
 PaginatorConfigurableExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'paginator-configurable-example',
-                template: "<md-form-field>List length: <input mdInput [(ngModel)]=\"length\"></md-form-field><md-form-field>Page size: <input mdInput [(ngModel)]=\"pageSize\"></md-form-field><md-form-field>Page size options: <input mdInput [ngModel]=\"pageSizeOptions\" (ngModelChange)=\"setPageSizeOptions($event)\"></md-form-field><md-paginator [length]=\"length\" [pageSize]=\"pageSize\" [pageSizeOptions]=\"pageSizeOptions\" (page)=\"pageEvent = $event\"></md-paginator><div *ngIf=\"pageEvent\"><h5>Page Change Event Properties</h5><div>List length: {{pageEvent.length}}</div><div>Page size: {{pageEvent.pageSize}}</div><div>Page index: {{pageEvent.pageIndex}}</div></div>",
+                template: "<mat-form-field>List length: <input matInput [(ngModel)]=\"length\"></mat-form-field><mat-form-field>Page size: <input matInput [(ngModel)]=\"pageSize\"></mat-form-field><mat-form-field>Page size options: <input matInput [ngModel]=\"pageSizeOptions\" (ngModelChange)=\"setPageSizeOptions($event)\"></mat-form-field><mat-paginator [length]=\"length\" [pageSize]=\"pageSize\" [pageSizeOptions]=\"pageSizeOptions\" (page)=\"pageEvent = $event\"></mat-paginator><div *ngIf=\"pageEvent\"><h5>Page Change Event Properties</h5><div>List length: {{pageEvent.length}}</div><div>Page size: {{pageEvent.pageSize}}</div><div>Page index: {{pageEvent.pageIndex}}</div></div>",
             },] },
 ];
 /**
@@ -1411,7 +1411,7 @@ var PaginatorOverviewExample = (function () {
 PaginatorOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'paginator-overview-example',
-                template: "<md-paginator [length]=\"100\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></md-paginator>",
+                template: "<mat-paginator [length]=\"100\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>",
             },] },
 ];
 /**
@@ -1433,7 +1433,7 @@ var ProgressBarConfigurableExample = (function () {
 ProgressBarConfigurableExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'progress-bar-configurable-example',
-                template: "<md-card><md-card-content><h2 class=\"example-h2\">Progress bar configuration</h2><section class=\"example-section\"><label class=\"example-margin\">Color:</label><md-radio-group [(ngModel)]=\"color\"><md-radio-button class=\"example-margin\" value=\"primary\">Primary</md-radio-button><md-radio-button class=\"example-margin\" value=\"accent\">Accent</md-radio-button><md-radio-button class=\"example-margin\" value=\"warn\">Warn</md-radio-button></md-radio-group></section><section class=\"example-section\"><label class=\"example-margin\">Mode:</label><md-radio-group [(ngModel)]=\"mode\"><md-radio-button class=\"example-margin\" value=\"determinate\">Determinate</md-radio-button><md-radio-button class=\"example-margin\" value=\"indeterminate\">Indeterminate</md-radio-button><md-radio-button class=\"example-margin\" value=\"buffer\">Buffer</md-radio-button><md-radio-button class=\"example-margin\" value=\"query\">Query</md-radio-button></md-radio-group></section><section class=\"example-section\" *ngIf=\"mode == 'determinate' || mode == 'buffer'\"><label class=\"example-margin\">Progress:</label><md-slider class=\"example-margin\" [(ngModel)]=\"value\"></md-slider></section><section class=\"example-section\" *ngIf=\"mode == 'buffer'\"><label class=\"example-margin\">Buffer:</label><md-slider class=\"example-margin\" [(ngModel)]=\"bufferValue\"></md-slider></section></md-card-content></md-card><md-card><md-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><md-progress-bar class=\"example-margin\" [color]=\"color\" [mode]=\"mode\" [value]=\"value\" [bufferValue]=\"bufferValue\"></md-progress-bar></section></md-card-content></md-card>",
+                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Progress bar configuration</h2><section class=\"example-section\"><label class=\"example-margin\">Color:</label><mat-radio-group [(ngModel)]=\"color\"><mat-radio-button class=\"example-margin\" value=\"primary\">Primary</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"accent\">Accent</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"warn\">Warn</mat-radio-button></mat-radio-group></section><section class=\"example-section\"><label class=\"example-margin\">Mode:</label><mat-radio-group [(ngModel)]=\"mode\"><mat-radio-button class=\"example-margin\" value=\"determinate\">Determinate</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"indeterminate\">Indeterminate</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"buffer\">Buffer</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"query\">Query</mat-radio-button></mat-radio-group></section><section class=\"example-section\" *ngIf=\"mode == 'determinate' || mode == 'buffer'\"><label class=\"example-margin\">Progress:</label><mat-slider class=\"example-margin\" [(ngModel)]=\"value\"></mat-slider></section><section class=\"example-section\" *ngIf=\"mode == 'buffer'\"><label class=\"example-margin\">Buffer:</label><mat-slider class=\"example-margin\" [(ngModel)]=\"bufferValue\"></mat-slider></section></mat-card-content></mat-card><mat-card><mat-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><mat-progress-bar class=\"example-margin\" [color]=\"color\" [mode]=\"mode\" [value]=\"value\" [bufferValue]=\"bufferValue\"></mat-progress-bar></section></mat-card-content></mat-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
@@ -1452,7 +1452,7 @@ var ProgressBarOverviewExample = (function () {
 ProgressBarOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'progress-bar-overview-example',
-                template: "<md-progress-bar mode=\"indeterminate\"></md-progress-bar>",
+                template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>",
             },] },
 ];
 /**
@@ -1473,7 +1473,7 @@ var ProgressSpinnerConfigurableExample = (function () {
 ProgressSpinnerConfigurableExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'progress-spinner-configurable-example',
-                template: "<md-card><md-card-content><h2 class=\"example-h2\">Progress spinner configuration</h2><section class=\"example-section\"><label class=\"example-margin\">Color:</label><md-radio-group [(ngModel)]=\"color\"><md-radio-button class=\"example-margin\" value=\"primary\">Primary</md-radio-button><md-radio-button class=\"example-margin\" value=\"accent\">Accent</md-radio-button><md-radio-button class=\"example-margin\" value=\"warn\">Warn</md-radio-button></md-radio-group></section><section class=\"example-section\"><label class=\"example-margin\">Mode:</label><md-radio-group [(ngModel)]=\"mode\"><md-radio-button class=\"example-margin\" value=\"determinate\">Determinate</md-radio-button><md-radio-button class=\"example-margin\" value=\"indeterminate\">Indeterminate</md-radio-button></md-radio-group></section><section class=\"example-section\" *ngIf=\"mode == 'determinate'\"><label class=\"example-margin\">Progress:</label><md-slider class=\"example-margin\" [(ngModel)]=\"value\"></md-slider></section></md-card-content></md-card><md-card><md-card-content><h2 class=\"example-h2\">Result</h2><md-progress-spinner class=\"example-margin\" [color]=\"color\" [mode]=\"mode\" [value]=\"value\"></md-progress-spinner></md-card-content></md-card>",
+                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Progress spinner configuration</h2><section class=\"example-section\"><label class=\"example-margin\">Color:</label><mat-radio-group [(ngModel)]=\"color\"><mat-radio-button class=\"example-margin\" value=\"primary\">Primary</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"accent\">Accent</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"warn\">Warn</mat-radio-button></mat-radio-group></section><section class=\"example-section\"><label class=\"example-margin\">Mode:</label><mat-radio-group [(ngModel)]=\"mode\"><mat-radio-button class=\"example-margin\" value=\"determinate\">Determinate</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"indeterminate\">Indeterminate</mat-radio-button></mat-radio-group></section><section class=\"example-section\" *ngIf=\"mode == 'determinate'\"><label class=\"example-margin\">Progress:</label><mat-slider class=\"example-margin\" [(ngModel)]=\"value\"></mat-slider></section></mat-card-content></mat-card><mat-card><mat-card-content><h2 class=\"example-h2\">Result</h2><mat-progress-spinner class=\"example-margin\" [color]=\"color\" [mode]=\"mode\" [value]=\"value\"></mat-progress-spinner></mat-card-content></mat-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
@@ -1492,7 +1492,7 @@ var ProgressSpinnerOverviewExample = (function () {
 ProgressSpinnerOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'progress-spinner-overview-example',
-                template: "<md-spinner></md-spinner>",
+                template: "<mat-spinner></mat-spinner>",
             },] },
 ];
 /**
@@ -1516,7 +1516,7 @@ var RadioNgModelExample = (function () {
 RadioNgModelExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'radio-ng-model-example',
-                template: "<md-radio-group class=\"example-radio-group\" [(ngModel)]=\"favoriteSeason\"><md-radio-button class=\"example-radio-button\" *ngFor=\"let season of seasons\" [value]=\"season\">{{season}}</md-radio-button></md-radio-group><div class=\"example-selected-value\">Your favorite season is: {{favoriteSeason}}</div>",
+                template: "<mat-radio-group class=\"example-radio-group\" [(ngModel)]=\"favoriteSeason\"><mat-radio-button class=\"example-radio-button\" *ngFor=\"let season of seasons\" [value]=\"season\">{{season}}</mat-radio-button></mat-radio-group><div class=\"example-selected-value\">Your favorite season is: {{favoriteSeason}}</div>",
                 styles: [".example-radio-group { display: inline-flex; flex-direction: column; } .example-radio-button { margin: 5px; } .example-selected-value { margin: 15px 0; } "],
             },] },
 ];
@@ -1535,7 +1535,7 @@ var RadioOverviewExample = (function () {
 RadioOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'radio-overview-example',
-                template: "<md-radio-group><md-radio-button value=\"1\">Option 1</md-radio-button><md-radio-button value=\"2\">Option 2</md-radio-button></md-radio-group>",
+                template: "<mat-radio-group><mat-radio-button value=\"1\">Option 1</mat-radio-button><mat-radio-button value=\"2\">Option 2</mat-radio-button></mat-radio-group>",
             },] },
 ];
 /**
@@ -1558,7 +1558,7 @@ var SelectFormExample = (function () {
 SelectFormExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'select-form-example',
-                template: "<form><md-select placeholder=\"Favorite food\" [(ngModel)]=\"selectedValue\" name=\"food\"><md-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{food.viewValue}}</md-option></md-select><p>Selected value: {{selectedValue}}</p></form>",
+                template: "<form><mat-form-field><mat-select placeholder=\"Favorite food\" [(ngModel)]=\"selectedValue\" name=\"food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{food.viewValue}}</mat-option></mat-select></mat-form-field><p>Selected value: {{selectedValue}}</p></form>",
             },] },
 ];
 /**
@@ -1581,7 +1581,7 @@ var SelectOverviewExample = (function () {
 SelectOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'select-overview-example',
-                template: "<md-select placeholder=\"Favorite food\"><md-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{ food.viewValue }}</md-option></md-select>",
+                template: "<mat-form-field><mat-select placeholder=\"Favorite food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{ food.viewValue }}</mat-option></mat-select></mat-form-field>",
             },] },
 ];
 /**
@@ -1599,8 +1599,8 @@ var SidenavFabExample = (function () {
 SidenavFabExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'sidenav-fab-example',
-                template: "<md-sidenav-container class=\"example-sidenav-fab-container\"><md-sidenav #sidenav mode=\"side\" opened=\"true\"><button md-mini-fab class=\"example-fab\" (click)=\"sidenav.toggle()\"><md-icon>add</md-icon></button><div class=\"example-scrolling-content\">Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.</div></md-sidenav><button md-mini-fab class=\"example-fab\" (click)=\"sidenav.toggle()\"><md-icon>add</md-icon></button><div class=\"example-scrolling-content\">Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.</div></md-sidenav-container>",
-                styles: [".example-sidenav-fab-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-fab-container md-sidenav { max-width: 200px; } .example-sidenav-fab-container .mat-sidenav-content, .example-sidenav-fab-container md-sidenav { display: flex; overflow: visible; } .example-scrolling-content { overflow: auto; height: 100%; } .example-fab.mat-mini-fab { position: absolute; right: 20px; bottom: 10px; } "],
+                template: "<mat-sidenav-container class=\"example-sidenav-fab-container\"><mat-sidenav #sidenav mode=\"side\" opened=\"true\"><button mat-mini-fab class=\"example-fab\" (click)=\"sidenav.toggle()\"><mat-icon>add</mat-icon></button><div class=\"example-scrolling-content\">Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.</div></mat-sidenav><button mat-mini-fab class=\"example-fab\" (click)=\"sidenav.toggle()\"><mat-icon>add</mat-icon></button><div class=\"example-scrolling-content\">Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.</div></mat-sidenav-container>",
+                styles: [".example-sidenav-fab-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-fab-container mat-sidenav { max-width: 200px; } .example-sidenav-fab-container .mat-sidenav-content, .example-sidenav-fab-container mat-sidenav { display: flex; overflow: visible; } .example-scrolling-content { overflow: auto; height: 100%; } .example-fab.mat-mini-fab { position: absolute; right: 20px; bottom: 10px; } "],
                 encapsulation: _angular_core.ViewEncapsulation.None,
                 preserveWhitespaces: false,
             },] },
@@ -1620,7 +1620,7 @@ var SidenavOverviewExample = (function () {
 SidenavOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'sidenav-overview-example',
-                template: "<md-sidenav-container class=\"example-container\"><md-sidenav #sidenav class=\"example-sidenav\">Jolly good!</md-sidenav><div class=\"example-sidenav-content\"><button type=\"button\" md-button (click)=\"sidenav.open()\">Open sidenav</button></div></md-sidenav-container>",
+                template: "<mat-sidenav-container class=\"example-container\"><mat-sidenav #sidenav class=\"example-sidenav\">Jolly good!</mat-sidenav><div class=\"example-sidenav-content\"><button type=\"button\" mat-button (click)=\"sidenav.open()\">Open sidenav</button></div></mat-sidenav-container>",
                 styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
             },] },
 ];
@@ -1642,7 +1642,7 @@ var SlideToggleConfigurableExample = (function () {
 SlideToggleConfigurableExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'slide-toggle-configurable-example',
-                template: "<md-card><md-card-content><h2 class=\"example-h2\">Slider configuration</h2><section class=\"example-section\"><label class=\"example-margin\">Color:</label><md-radio-group [(ngModel)]=\"color\"><md-radio-button class=\"example-margin\" value=\"primary\">Primary</md-radio-button><md-radio-button class=\"example-margin\" value=\"accent\">Accent</md-radio-button><md-radio-button class=\"example-margin\" value=\"warn\">Warn</md-radio-button></md-radio-group></section><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</md-checkbox></section><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</md-checkbox></section></md-card-content></md-card><md-card class=\"result\"><md-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><md-slide-toggle class=\"example-margin\" [color]=\"color\" [checked]=\"checked\" [disabled]=\"disabled\">Slide me!</md-slide-toggle></section></md-card-content></md-card>",
+                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Slider configuration</h2><section class=\"example-section\"><label class=\"example-margin\">Color:</label><mat-radio-group [(ngModel)]=\"color\"><mat-radio-button class=\"example-margin\" value=\"primary\">Primary</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"accent\">Accent</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"warn\">Warn</mat-radio-button></mat-radio-group></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox></section></mat-card-content></mat-card><mat-card class=\"result\"><mat-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><mat-slide-toggle class=\"example-margin\" [color]=\"color\" [checked]=\"checked\" [disabled]=\"disabled\">Slide me!</mat-slide-toggle></section></mat-card-content></mat-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 10px; } "],
             },] },
 ];
@@ -1676,8 +1676,8 @@ var SlideToggleFormsExample = (function () {
 SlideToggleFormsExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'slide-toggle-forms-example',
-                template: "<p>Slide Toggle using a simple NgModel.</p><md-slide-toggle [(ngModel)]=\"isChecked\">Slide Toggle Checked: {{ isChecked }}</md-slide-toggle><p>Slide Toggle inside of a Template-driven form</p><form class=\"example-form\" #form=\"ngForm\" (ngSubmit)=\"onFormSubmit(form.value)\" ngNativeValidate><md-slide-toggle ngModel name=\"enableWifi\">Enable Wifi</md-slide-toggle><md-slide-toggle ngModel name=\"acceptTerms\" required>Accept Terms of Service</md-slide-toggle><button md-raised-button type=\"submit\">Save Settings</button></form><p>Slide Toggle inside of a Reactive form</p><form class=\"example-form\" [formGroup]=\"formGroup\" (ngSubmit)=\"onFormSubmit(formGroup.value)\" ngNativeValidate><md-slide-toggle formControlName=\"enableWifi\">Enable Wifi</md-slide-toggle><md-slide-toggle formControlName=\"acceptTerms\">Accept Terms of Service</md-slide-toggle><p>Form Group Status: {{ formGroup.status}}</p><button md-rasied-button type=\"submit\">Save Settings</button></form>",
-                styles: [".example-form md-slide-toggle { margin: 8px 0; display: block; } "],
+                template: "<p>Slide Toggle using a simple NgModel.</p><mat-slide-toggle [(ngModel)]=\"isChecked\">Slide Toggle Checked: {{ isChecked }}</mat-slide-toggle><p>Slide Toggle inside of a Template-driven form</p><form class=\"example-form\" #form=\"ngForm\" (ngSubmit)=\"onFormSubmit(form.value)\" ngNativeValidate><mat-slide-toggle ngModel name=\"enableWifi\">Enable Wifi</mat-slide-toggle><mat-slide-toggle ngModel name=\"acceptTerms\" required>Accept Terms of Service</mat-slide-toggle><button mat-raised-button type=\"submit\">Save Settings</button></form><p>Slide Toggle inside of a Reactive form</p><form class=\"example-form\" [formGroup]=\"formGroup\" (ngSubmit)=\"onFormSubmit(formGroup.value)\" ngNativeValidate><mat-slide-toggle formControlName=\"enableWifi\">Enable Wifi</mat-slide-toggle><mat-slide-toggle formControlName=\"acceptTerms\">Accept Terms of Service</mat-slide-toggle><p>Form Group Status: {{ formGroup.status}}</p><button mat-rasied-button type=\"submit\">Save Settings</button></form>",
+                styles: [".example-form mat-slide-toggle { margin: 8px 0; display: block; } "],
             },] },
 ];
 /**
@@ -1697,7 +1697,7 @@ var SlideToggleOverviewExample = (function () {
 SlideToggleOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'slide-toggle-overview-example',
-                template: "<md-slide-toggle>Slide me!</md-slide-toggle>",
+                template: "<mat-slide-toggle>Slide me!</mat-slide-toggle>",
             },] },
 ];
 /**
@@ -1743,7 +1743,7 @@ var SliderConfigurableExample = (function () {
 SliderConfigurableExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'slider-configurable-example',
-                template: "<md-card><md-card-content><h2 class=\"example-h2\">Slider configuration</h2><section class=\"example-section\"><md-form-field class=\"example-margin\"><input mdInput type=\"number\" placeholder=\"Value\" [(ngModel)]=\"value\"></md-form-field><md-form-field class=\"example-margin\"><input mdInput type=\"number\" placeholder=\"Min value\" [(ngModel)]=\"min\"></md-form-field><md-form-field class=\"example-margin\"><input mdInput type=\"number\" placeholder=\"Max value\" [(ngModel)]=\"max\"></md-form-field><md-form-field class=\"example-margin\"><input mdInput type=\"number\" placeholder=\"Step size\" [(ngModel)]=\"step\"></md-form-field></section><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"showTicks\">Show ticks</md-checkbox><md-checkbox class=\"example-margin\" [(ngModel)]=\"autoTicks\" *ngIf=\"showTicks\">Auto ticks</md-checkbox><md-form-field class=\"example-margin\" *ngIf=\"showTicks && !autoTicks\"><input mdInput type=\"number\" placeholder=\"Tick interval\" [(ngModel)]=\"tickInterval\"></md-form-field></section><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"thumbLabel\">Show thumb label</md-checkbox></section><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"vertical\">Vertical</md-checkbox><md-checkbox class=\"example-margin\" [(ngModel)]=\"invert\">Inverted</md-checkbox></section><section class=\"example-section\"><md-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</md-checkbox></section></md-card-content></md-card><md-card class=\"result\"><md-card-content><h2 class=\"example-h2\">Result</h2><md-slider class=\"example-margin\" [disabled]=\"disabled\" [invert]=\"invert\" [max]=\"max\" [min]=\"min\" [step]=\"step\" [thumb-label]=\"thumbLabel\" [tick-interval]=\"tickInterval\" [value]=\"value\" [vertical]=\"vertical\"></md-slider></md-card-content></md-card>",
+                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Slider configuration</h2><section class=\"example-section\"><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Value\" [(ngModel)]=\"value\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Min value\" [(ngModel)]=\"min\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Max value\" [(ngModel)]=\"max\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Step size\" [(ngModel)]=\"step\"></mat-form-field></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"autoTicks\" *ngIf=\"showTicks\">Auto ticks</mat-checkbox><mat-form-field class=\"example-margin\" *ngIf=\"showTicks && !autoTicks\"><input matInput type=\"number\" placeholder=\"Tick interval\" [(ngModel)]=\"tickInterval\"></mat-form-field></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"vertical\">Vertical</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"invert\">Inverted</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox></section></mat-card-content></mat-card><mat-card class=\"result\"><mat-card-content><h2 class=\"example-h2\">Result</h2><mat-slider class=\"example-margin\" [disabled]=\"disabled\" [invert]=\"invert\" [max]=\"max\" [min]=\"min\" [step]=\"step\" [thumb-label]=\"thumbLabel\" [tick-interval]=\"tickInterval\" [value]=\"value\" [vertical]=\"vertical\"></mat-slider></mat-card-content></mat-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 10px; } .mat-slider-horizontal { width: 300px; } .mat-slider-vertical { height: 300px; } "],
                 encapsulation: _angular_core.ViewEncapsulation.None,
                 preserveWhitespaces: false,
@@ -1764,8 +1764,8 @@ var SliderOverviewExample = (function () {
 SliderOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'slider-overview-example',
-                template: "<md-slider></md-slider>",
-                styles: ["/** No CSS for this example */ md-slider { width: 300px; } "],
+                template: "<mat-slider></mat-slider>",
+                styles: ["/** No CSS for this example */ mat-slider { width: 300px; } "],
             },] },
 ];
 /**
@@ -1795,14 +1795,14 @@ var SnackBarComponentExample = (function () {
 SnackBarComponentExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'snack-bar-component-example',
-                template: "<button md-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">Pizza party</button>",
+                template: "<button mat-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">Pizza party</button>",
             },] },
 ];
 /**
  * @nocollapse
  */
 SnackBarComponentExample.ctorParameters = function () { return [
-    { type: _angular_material.MdSnackBar, },
+    { type: _angular_material.MatSnackBar, },
 ]; };
 var PizzaPartyComponent = (function () {
     function PizzaPartyComponent() {
@@ -1845,14 +1845,14 @@ var SnackBarOverviewExample = (function () {
 SnackBarOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'snack-bar-overview-example',
-                template: "<md-form-field><input mdInput value=\"Disco party!\" placeholder=\"Message\" #message></md-form-field><md-form-field><input mdInput value=\"Dance\" placeholder=\"Action\" #action></md-form-field><button md-button (click)=\"openSnackBar(message.value, action.value)\">Show snack-bar</button>",
+                template: "<mat-form-field><input matInput value=\"Disco party!\" placeholder=\"Message\" #message></mat-form-field><mat-form-field><input matInput value=\"Dance\" placeholder=\"Action\" #action></mat-form-field><button mat-button (click)=\"openSnackBar(message.value, action.value)\">Show snack-bar</button>",
             },] },
 ];
 /**
  * @nocollapse
  */
 SnackBarOverviewExample.ctorParameters = function () { return [
-    { type: _angular_material.MdSnackBar, },
+    { type: _angular_material.MatSnackBar, },
 ]; };
 /**
  * \@title Sorting overview
@@ -1895,7 +1895,7 @@ var SortOverviewExample = (function () {
 SortOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'sort-overview-example',
-                template: "<table mdSort (mdSortChange)=\"sortData($event)\"><tr><th md-sort-header=\"name\">Dessert (100g)</th><th md-sort-header=\"calories\">Calories</th><th md-sort-header=\"fat\">Fat (g)</th><th md-sort-header=\"carbs\">Carbs (g)</th><th md-sort-header=\"protein\">Protein (g)</th></tr><tr *ngFor=\"let dessert of sortedData\"><td>{{dessert.name}}</td><td>{{dessert.calories}}</td><td>{{dessert.fat}}</td><td>{{dessert.carbs}}</td><td>{{dessert.protein}}</td></tr></table>",
+                template: "<table matSort (matSortChange)=\"sortData($event)\"><tr><th mat-sort-header=\"name\">Dessert (100g)</th><th mat-sort-header=\"calories\">Calories</th><th mat-sort-header=\"fat\">Fat (g)</th><th mat-sort-header=\"carbs\">Carbs (g)</th><th mat-sort-header=\"protein\">Protein (g)</th></tr><tr *ngFor=\"let dessert of sortedData\"><td>{{dessert.name}}</td><td>{{dessert.calories}}</td><td>{{dessert.fat}}</td><td>{{dessert.carbs}}</td><td>{{dessert.protein}}</td></tr></table>",
                 styles: [".mat-sort-header-container { align-items: center; } "],
             },] },
 ];
@@ -1939,7 +1939,7 @@ var StepperOverviewExample = (function () {
 StepperOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'stepper-overview-example',
-                template: "<button (click)=\"isLinear=!isLinear\" id=\"toggle-linear\">Enable linear</button><md-horizontal-stepper [linear]=\"isLinear\"><md-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template mdStepLabel>Fill out your name</ng-template><md-form-field><input mdInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></md-form-field><div><button md-button mdStepperNext>Next</button></div></form></md-step><md-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template mdStepLabel>Fill out your address</ng-template><md-form-field><input mdInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></md-form-field><div><button md-button mdStepperPrevious>Back</button> <button md-button mdStepperNext>Next</button></div></form></md-step><md-step><ng-template mdStepLabel>Done</ng-template>You are now done.<div><button md-button mdStepperPrevious>Back</button></div></md-step></md-horizontal-stepper>",
+                template: "<mat-horizontal-stepper [linear]=\"isLinear\"><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button></div></mat-step></mat-horizontal-stepper>",
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
@@ -1963,7 +1963,7 @@ TableBasicExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'table-basic-example',
                 styles: [".example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><md-table #table [dataSource]=\"dataSource\"><ng-container mdColumnDef=\"position\"><md-header-cell *mdHeaderCellDef>No.</md-header-cell><md-cell *mdCellDef=\"let element\">{{element.position}}</md-cell></ng-container><ng-container mdColumnDef=\"name\"><md-header-cell *mdHeaderCellDef>Name</md-header-cell><md-cell *mdCellDef=\"let element\">{{element.name}}</md-cell></ng-container><ng-container mdColumnDef=\"weight\"><md-header-cell *mdHeaderCellDef>Weight</md-header-cell><md-cell *mdCellDef=\"let element\">{{element.weight}}</md-cell></ng-container><ng-container mdColumnDef=\"symbol\"><md-header-cell *mdHeaderCellDef>Symbol</md-header-cell><md-cell *mdCellDef=\"let element\">{{element.symbol}}</md-cell></ng-container><md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table></div>",
+                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
 /**
@@ -2046,7 +2046,7 @@ TableFilteringExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'table-filtering-example',
                 styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: baseline; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; } .mat-form-field { font-size: 14px; flex-grow: 1; margin-left: 32px; } .mat-table { overflow: auto; max-height: 500px; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><md-form-field floatPlaceholder=\"never\"><input mdInput #filter placeholder=\"Filter users\"></md-form-field></div><md-table #table [dataSource]=\"dataSource\"><ng-container mdColumnDef=\"userId\"><md-header-cell *mdHeaderCellDef>ID</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container mdColumnDef=\"progress\"><md-header-cell *mdHeaderCellDef>Progress</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container mdColumnDef=\"userName\"><md-header-cell *mdHeaderCellDef>Name</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container mdColumnDef=\"color\"><md-header-cell *mdHeaderCellDef>Color</md-header-cell><md-cell *mdCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table></div>",
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field floatPlaceholder=\"never\"><input matInput #filter placeholder=\"Filter users\"></mat-form-field></div><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
 /**
@@ -2189,7 +2189,7 @@ TableHttpExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'table-http-example',
                 styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .mat-column-title { text-overflow: ellipsis; white-space: nowrap; flex: 1; overflow: hidden; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><md-spinner *ngIf=\"dataSource.isLoadingResults\"></md-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><md-table #table [dataSource]=\"dataSource\" class=\"example-table\" mdSort mdSortActive=\"created_at\" mdSortDisableClear mdSortDirection=\"asc\"><ng-container mdColumnDef=\"number\"><md-header-cell *mdHeaderCellDef>#</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.number }}</md-cell></ng-container><ng-container mdColumnDef=\"title\"><md-header-cell *mdHeaderCellDef>Title</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.title }}</md-cell></ng-container><ng-container mdColumnDef=\"state\"><md-header-cell *mdHeaderCellDef>State</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.state }}</md-cell></ng-container><ng-container mdColumnDef=\"created_at\"><md-header-cell *mdHeaderCellDef md-sort-header disableClear=\"true\">Created</md-header-cell><md-cell *mdCellDef=\"let row\">{{ row.created_at | date }}</md-cell></ng-container><md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></md-paginator></div>",
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><mat-spinner *ngIf=\"dataSource.isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><mat-table #table [dataSource]=\"dataSource\" class=\"example-table\" matSort matSortActive=\"created_at\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><mat-header-cell *matHeaderCellDef>#</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.number }}</mat-cell></ng-container><ng-container matColumnDef=\"title\"><mat-header-cell *matHeaderCellDef>Title</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.title }}</mat-cell></ng-container><ng-container matColumnDef=\"state\"><mat-header-cell *matHeaderCellDef>State</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.state }}</mat-cell></ng-container><ng-container matColumnDef=\"created_at\"><mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
             },] },
 ];
 /**
@@ -2199,8 +2199,8 @@ TableHttpExample.ctorParameters = function () { return [
     { type: _angular_http.Http, },
 ]; };
 TableHttpExample.propDecorators = {
-    'paginator': [{ type: _angular_core.ViewChild, args: [_angular_material.MdPaginator,] },],
-    'sort': [{ type: _angular_core.ViewChild, args: [_angular_material.MdSort,] },],
+    'paginator': [{ type: _angular_core.ViewChild, args: [_angular_material.MatPaginator,] },],
+    'sort': [{ type: _angular_core.ViewChild, args: [_angular_material.MatSort,] },],
 };
 /**
  * An example database that the data source uses to retrieve data for the table.
@@ -2354,7 +2354,7 @@ TableOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'table-overview-example',
                 styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 56px; max-height: 56px; display: flex; align-items: center; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; border-bottom: 1px solid transparent; } .mat-form-field { font-size: 14px; flex-grow: 1; margin-top: 8px; } .example-no-results { display: flex; justify-content: center; padding: 24px; font-size: 12px; font-style: italic; } /** Selection styles */ .example-selection-header { font-size: 18px; } .mat-column-select { max-width: 54px; } .mat-row:hover, .example-selected-row { background: #f5f5f5; } .mat-row:active, .mat-row.example-selected-row { background: #eaeaea; } .mat-table { overflow: auto; max-height: 500px; } "],
-                template: "<div class=\"example-header\" [style.display]=\"selection.isEmpty() ? '' : 'none'\"><md-form-field floatPlaceholder=\"never\"><input mdInput #filter placeholder=\"Filter users\"></md-form-field></div><div class=\"example-header example-selection-header\" *ngIf=\"!selection.isEmpty()\">{{selection.selected.length}} {{selection.selected.length == 1 ? 'user' : 'users'}} selected</div><div class=\"example-container mat-elevation-z8\"><md-table #table [dataSource]=\"dataSource\" mdSort><ng-container mdColumnDef=\"select\"><md-header-cell *mdHeaderCellDef><md-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></md-checkbox></md-header-cell><md-cell *mdCellDef=\"let row\"><md-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row.id) : null\" [checked]=\"selection.isSelected(row.id)\"></md-checkbox></md-cell></ng-container><ng-container mdColumnDef=\"userId\"><md-header-cell *mdHeaderCellDef md-sort-header>ID</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container mdColumnDef=\"progress\"><md-header-cell *mdHeaderCellDef md-sort-header>Progress</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container mdColumnDef=\"userName\"><md-header-cell *mdHeaderCellDef md-sort-header>Name</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container mdColumnDef=\"color\"><md-header-cell *mdHeaderCellDef md-sort-header>Color</md-header-cell><md-cell *mdCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *mdRowDef=\"let row; columns: displayedColumns;\" [class.example-selected-row]=\"selection.isSelected(row.id)\" (click)=\"selection.toggle(row.id)\"></md-row></md-table><div class=\"example-no-results\" [style.display]=\"dataSource.renderedData.length == 0 ? '' : 'none'\">No users found matching filter.</div><md-paginator #paginator [length]=\"dataSource.filteredData.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></md-paginator></div>",
+                template: "<div class=\"example-header\" [style.display]=\"selection.isEmpty() ? '' : 'none'\"><mat-form-field floatPlaceholder=\"never\"><input matInput #filter placeholder=\"Filter users\"></mat-form-field></div><div class=\"example-header example-selection-header\" *ngIf=\"!selection.isEmpty()\">{{selection.selected.length}} {{selection.selected.length == 1 ? 'user' : 'users'}} selected</div><div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"select\"><mat-header-cell *matHeaderCellDef><mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></mat-checkbox></mat-header-cell><mat-cell *matCellDef=\"let row\"><mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row.id) : null\" [checked]=\"selection.isSelected(row.id)\"></mat-checkbox></mat-cell></ng-container><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\" [class.example-selected-row]=\"selection.isSelected(row.id)\" (click)=\"selection.toggle(row.id)\"></mat-row></mat-table><div class=\"example-no-results\" [style.display]=\"dataSource.renderedData.length == 0 ? '' : 'none'\">No users found matching filter.</div><mat-paginator #paginator [length]=\"dataSource.filteredData.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
             },] },
 ];
 /**
@@ -2362,8 +2362,8 @@ TableOverviewExample.decorators = [
  */
 TableOverviewExample.ctorParameters = function () { return []; };
 TableOverviewExample.propDecorators = {
-    'paginator': [{ type: _angular_core.ViewChild, args: [_angular_material.MdPaginator,] },],
-    'sort': [{ type: _angular_core.ViewChild, args: [_angular_material.MdSort,] },],
+    'paginator': [{ type: _angular_core.ViewChild, args: [_angular_material.MatPaginator,] },],
+    'sort': [{ type: _angular_core.ViewChild, args: [_angular_material.MatSort,] },],
     'filter': [{ type: _angular_core.ViewChild, args: ['filter',] },],
 };
 /**
@@ -2546,7 +2546,7 @@ TablePaginationExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'table-pagination-example',
                 styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; max-height: 500px; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><md-table #table [dataSource]=\"dataSource\"><ng-container mdColumnDef=\"userId\"><md-header-cell *mdHeaderCellDef>ID</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container mdColumnDef=\"progress\"><md-header-cell *mdHeaderCellDef>Progress</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container mdColumnDef=\"userName\"><md-header-cell *mdHeaderCellDef>Name</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container mdColumnDef=\"color\"><md-header-cell *mdHeaderCellDef>Color</md-header-cell><md-cell *mdCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table><md-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></md-paginator></div>",
+                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
             },] },
 ];
 /**
@@ -2554,7 +2554,7 @@ TablePaginationExample.decorators = [
  */
 TablePaginationExample.ctorParameters = function () { return []; };
 TablePaginationExample.propDecorators = {
-    'paginator': [{ type: _angular_core.ViewChild, args: [_angular_material.MdPaginator,] },],
+    'paginator': [{ type: _angular_core.ViewChild, args: [_angular_material.MatPaginator,] },],
 };
 /**
  * Constants used to fill up our data base.
@@ -2673,7 +2673,7 @@ TableSortingExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'table-sorting-example',
                 styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; max-height: 500px; } .mat-header-cell .mat-sort-header-sorted { color: black; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><md-table #table [dataSource]=\"dataSource\" mdSort><ng-container mdColumnDef=\"userId\"><md-header-cell *mdHeaderCellDef md-sort-header>ID</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.id}}</md-cell></ng-container><ng-container mdColumnDef=\"progress\"><md-header-cell *mdHeaderCellDef md-sort-header>Progress</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.progress}}%</md-cell></ng-container><ng-container mdColumnDef=\"userName\"><md-header-cell *mdHeaderCellDef md-sort-header>Name</md-header-cell><md-cell *mdCellDef=\"let row\">{{row.name}}</md-cell></ng-container><ng-container mdColumnDef=\"color\"><md-header-cell *mdHeaderCellDef md-sort-header>Color</md-header-cell><md-cell *mdCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</md-cell></ng-container><md-header-row *mdHeaderRowDef=\"displayedColumns\"></md-header-row><md-row *mdRowDef=\"let row; columns: displayedColumns;\"></md-row></md-table></div>",
+                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
 /**
@@ -2681,7 +2681,7 @@ TableSortingExample.decorators = [
  */
 TableSortingExample.ctorParameters = function () { return []; };
 TableSortingExample.propDecorators = {
-    'sort': [{ type: _angular_core.ViewChild, args: [_angular_material.MdSort,] },],
+    'sort': [{ type: _angular_core.ViewChild, args: [_angular_material.MatSort,] },],
 };
 /**
  * Constants used to fill up our data base.
@@ -2821,7 +2821,7 @@ var TabsOverviewExample = (function () {
 TabsOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'tabs-overview-example',
-                template: "<md-tab-group><md-tab label=\"Tab 1\">Content 1</md-tab><md-tab label=\"Tab 2\">Content 2</md-tab></md-tab-group>",
+                template: "<mat-tab-group><mat-tab label=\"Tab 1\">Content 1</mat-tab><mat-tab label=\"Tab 2\">Content 2</mat-tab></mat-tab-group>",
             },] },
 ];
 /**
@@ -2839,7 +2839,7 @@ var TabsTemplateLabelExample = (function () {
 TabsTemplateLabelExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'tabs-template-label-example',
-                template: "<md-tab-group class=\"demo-tab-group\"><md-tab label=\"Tab 1\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></md-tab><md-tab label=\"Tab 2\"><ng-template md-tab-label>⭐</ng-template><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></md-tab><md-tab label=\"Tab 3\" disabled=\"disabled\">No content</md-tab><md-tab label=\"Tab 4\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></md-tab><md-tab label=\"Tab 5\">No content</md-tab><md-tab label=\"Tab 6\">No content</md-tab></md-tab-group>",
+                template: "<mat-tab-group class=\"demo-tab-group\"><mat-tab label=\"Tab 1\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></mat-tab><mat-tab label=\"Tab 2\"><ng-template mat-tab-label>⭐</ng-template><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></mat-tab><mat-tab label=\"Tab 3\" disabled=\"disabled\">No content</mat-tab><mat-tab label=\"Tab 4\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></mat-tab><mat-tab label=\"Tab 5\">No content</mat-tab><mat-tab label=\"Tab 6\">No content</mat-tab></mat-tab-group>",
                 styles: [".demo-tab-group { border: 1px solid #e8e8e8; } .demo-tab-content { padding: 16px; } "]
             },] },
 ];
@@ -2858,7 +2858,7 @@ var ToolbarMultirowExample = (function () {
 ToolbarMultirowExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'toolbar-multirow-example',
-                template: "<md-toolbar color=\"primary\"><span>Custom Toolbar</span><md-toolbar-row><span>Second Line</span> <span class=\"example-spacer\"></span><md-icon class=\"example-icon\">verified_user</md-icon></md-toolbar-row><md-toolbar-row><span>Third Line</span> <span class=\"example-spacer\"></span><md-icon class=\"example-icon\">favorite</md-icon><md-icon class=\"example-icon\">delete</md-icon></md-toolbar-row></md-toolbar>",
+                template: "<mat-toolbar color=\"primary\"><span>Custom Toolbar</span><mat-toolbar-row><span>Second Line</span> <span class=\"example-spacer\"></span><mat-icon class=\"example-icon\">verified_user</mat-icon></mat-toolbar-row><mat-toolbar-row><span>Third Line</span> <span class=\"example-spacer\"></span><mat-icon class=\"example-icon\">favorite</mat-icon><mat-icon class=\"example-icon\">delete</mat-icon></mat-toolbar-row></mat-toolbar>",
                 styles: [".example-icon { padding: 0 14px; } .example-spacer { flex: 1 1 auto; } "],
             },] },
 ];
@@ -2877,7 +2877,7 @@ var ToolbarOverviewExample = (function () {
 ToolbarOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'toolbar-overview-example',
-                template: "<md-toolbar>My App</md-toolbar>",
+                template: "<mat-toolbar>My App</mat-toolbar>",
             },] },
 ];
 /**
@@ -2895,7 +2895,7 @@ var TooltipOverviewExample = (function () {
 TooltipOverviewExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'tooltip-overview-example',
-                template: "<span mdTooltip=\"Tooltip!\">I have a tooltip</span>",
+                template: "<span matTooltip=\"Tooltip!\">I have a tooltip</span>",
             },] },
 ];
 /**
@@ -2914,7 +2914,7 @@ var TooltipPositionExample = (function () {
 TooltipPositionExample.decorators = [
     { type: _angular_core.Component, args: [{
                 selector: 'tooltip-position-example',
-                template: "<div class=\"example-tooltip-host\" mdTooltip=\"Tooltip!\" [mdTooltipPosition]=\"position\"><span>Show tooltip</span><md-select class=\"example-select\" [(ngModel)]=\"position\"><md-option value=\"before\">Before</md-option><md-option value=\"after\">After</md-option><md-option value=\"above\">Above</md-option><md-option value=\"below\">Below</md-option><md-option value=\"left\">Left</md-option><md-option value=\"right\">Right</md-option></md-select></div>",
+                template: "<div class=\"example-tooltip-host\" matTooltip=\"Tooltip!\" [matTooltipPosition]=\"position\"><span>Show tooltip</span><mat-form-field><mat-select class=\"example-select\" [(ngModel)]=\"position\"><mat-option value=\"before\">Before</mat-option><mat-option value=\"after\">After</mat-option><mat-option value=\"above\">Above</mat-option><mat-option value=\"below\">Below</mat-option><mat-option value=\"left\">Left</mat-option><mat-option value=\"right\">Right</mat-option></mat-select></mat-form-field></div>",
                 styles: [".example-tooltip-host { display: inline-flex; align-items: center; margin: 50px; } .example-select { margin: 0 10px; } "],
             },] },
 ];

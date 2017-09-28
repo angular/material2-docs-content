@@ -1,8 +1,8 @@
-<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The <code class="docs-markdown-code">md-table</code> provides a Material Design styled data-table that can be used to display rows of
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The <code class="docs-markdown-code">mat-table</code> provides a Material Design styled data-table that can be used to display rows of
 data.</p>
 <p class="docs-markdown-p">This table builds on the foundation of the CDK data-table and uses a similar interface for its
 data source input and template, except that its element and attribute selectors will be prefixed 
-with <code class="docs-markdown-code">md-</code> instead of <code class="docs-markdown-code">cdk-</code>.</p>
+with <code class="docs-markdown-code">mat-</code> instead of <code class="docs-markdown-code">cdk-</code>.</p>
 <p class="docs-markdown-p">For more information on the interface and how it works, see the
 <a href="https://material.angular.io/guide/cdk-table" class="docs-markdown-a">guide covering the CDK data-table</a>.</p>
 <div material-docs-example="table-basic"></div>
@@ -11,7 +11,7 @@ with <code class="docs-markdown-code">md-</code> instead of <code class="docs-ma
           <div header-link="features"></div>
           Features
         </h3>
-      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;md-table&gt;</code> itself only deals with the rendering of a table structure (rows and cells).
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-table&gt;</code> itself only deals with the rendering of a table structure (rows and cells).
 Additional features can be built on top of the table by adding behavior inside cell templates
 (e.g., sort headers) or next to the table (e.g. a paginator). Interactions that affect the
 rendered data (such as sorting and pagination) should be propagated through the table's data source.</p>
@@ -20,7 +20,7 @@ rendered data (such as sorting and pagination) should be propagated through the 
           <div header-link="pagination"></div>
           Pagination
         </h4>
-      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;md-paginator&gt;</code> adds a pagination UI that can be used in conjunction with the <code class="docs-markdown-code">&lt;md-table&gt;</code>. The
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-paginator&gt;</code> adds a pagination UI that can be used in conjunction with the <code class="docs-markdown-code">&lt;mat-table&gt;</code>. The
 paginator emits events that can be used to trigger an update via the table's data source.</p>
 <div material-docs-example="table-pagination"></div>
 
@@ -28,7 +28,7 @@ paginator emits events that can be used to trigger an update via the table's dat
           <div header-link="sorting"></div>
           Sorting
         </h4>
-      <p class="docs-markdown-p">Use the <code class="docs-markdown-code">mdSort</code> directive and <code class="docs-markdown-code">&lt;md-sort-header&gt;</code> adds a sorting UI the table's column headers. The
+      <p class="docs-markdown-p">Use the <code class="docs-markdown-code">matSort</code> directive and <code class="docs-markdown-code">&lt;mat-sort-header&gt;</code> adds a sorting UI the table's column headers. The
 sort headers emit events that can be used to trigger an update via the table's data source.</p>
 <div material-docs-example="table-sorting"></div>
 
@@ -56,6 +56,6 @@ and selection).</p>
       <p class="docs-markdown-p">Tables without text or labels should be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or
 <code class="docs-markdown-code">aria-labelledby</code>. The <code class="docs-markdown-code">aria-readonly</code> defaults to <code class="docs-markdown-code">true</code> if it's not set.</p>
 <p class="docs-markdown-p">Table's default role is <code class="docs-markdown-code">grid</code>, and it can be changed to <code class="docs-markdown-code">treegrid</code> through <code class="docs-markdown-code">role</code> attribute.</p>
-<p class="docs-markdown-p"><code class="docs-markdown-code">md-table</code> does not manage any focus/keyboard interaction on its own. Users can add desired
+<p class="docs-markdown-p"><code class="docs-markdown-code">mat-table</code> does not manage any focus/keyboard interaction on its own. Users can add desired
 focus/keyboard interactions in their application.</p>
 </div></body></html>

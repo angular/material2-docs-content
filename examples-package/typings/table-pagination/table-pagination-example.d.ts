@@ -1,5 +1,5 @@
 import { DataSource } from '@angular/cdk/collections';
-import { MdPaginator } from '@angular/material';
+import { MatPaginator } from '@angular/material';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
@@ -12,7 +12,7 @@ export declare class TablePaginationExample {
     displayedColumns: string[];
     exampleDatabase: ExampleDatabase;
     dataSource: ExampleDataSource | null;
-    paginator: MdPaginator;
+    paginator: MatPaginator;
     ngOnInit(): void;
 }
 export interface UserData {
@@ -42,7 +42,7 @@ export declare class ExampleDatabase {
 export declare class ExampleDataSource extends DataSource<any> {
     private _exampleDatabase;
     private _paginator;
-    constructor(_exampleDatabase: ExampleDatabase, _paginator: MdPaginator);
+    constructor(_exampleDatabase: ExampleDatabase, _paginator: MatPaginator);
     /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect(): Observable<UserData[]>;
     disconnect(): void;

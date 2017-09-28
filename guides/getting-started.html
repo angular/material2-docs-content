@@ -47,11 +47,11 @@ install the <code class="docs-markdown-code">@angular/animations</code> module a
           Step 3: Import the component modules
         </h3>
       <p class="docs-markdown-p">Import the NgModule for each component you want to use: </p>
-<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {MdButtonModule, MdCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {MatButtonModule, MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   ...
-  imports: [MdButtonModule, MdCheckboxModule],
+  imports: [MatButtonModule, MatCheckboxModule],
   ...
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PizzaPartyAppModule { }
@@ -59,11 +59,11 @@ install the <code class="docs-markdown-code">@angular/animations</code> module a
 <p class="docs-markdown-p">Alternatively, you can create a separate NgModule that imports all of the 
 Angular Material components that you will use in your application. You can then
 include this module wherever you'd like to use the components.</p>
-<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {MdButtonModule, MdCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {MatButtonModule, MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
-  imports: [MdButtonModule, MdCheckboxModule],
-  exports: [MdButtonModule, MdCheckboxModule],
+  imports: [MatButtonModule, MatCheckboxModule],
+  exports: [MatButtonModule, MatCheckboxModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyOwnCustomMaterialModule { }
 </code></pre>
@@ -88,7 +88,7 @@ your <code class="docs-markdown-code">index.html</code>.</p>
           <div header-link="step-5-gesture-support"></div>
           Step 5: Gesture Support
         </h3>
-      <p class="docs-markdown-p">Some components (<code class="docs-markdown-code">md-slide-toggle</code>, <code class="docs-markdown-code">md-slider</code>, <code class="docs-markdown-code">mdTooltip</code>) rely on
+      <p class="docs-markdown-p">Some components (<code class="docs-markdown-code">mat-slide-toggle</code>, <code class="docs-markdown-code">mat-slider</code>, <code class="docs-markdown-code">matTooltip</code>) rely on
 <a href="http://hammerjs.github.io/" class="docs-markdown-a">HammerJS</a> for gestures. In order to get the full feature-set of these
 components, HammerJS must be loaded into the application.</p>
 <p class="docs-markdown-p">You can add HammerJS to your application via <a href="https://www.npmjs.com/package/hammerjs" class="docs-markdown-a">npm</a>, a CDN
@@ -105,13 +105,13 @@ directly from your app.</p>
           <div header-link="step-6-optional-add-material-icons"></div>
           Step 6 (Optional): Add Material Icons
         </h3>
-      <p class="docs-markdown-p">If you want to use the <code class="docs-markdown-code">md-icon</code> component with the official 
+      <p class="docs-markdown-p">If you want to use the <code class="docs-markdown-code">mat-icon</code> component with the official 
 <a href="https://material.io/icons/" class="docs-markdown-a">Material Design Icons</a>, load the icon font in your <code class="docs-markdown-code">index.html</code>.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
 </code></pre>
 <p class="docs-markdown-p">For more information on using Material Icons, check out the
 <a href="https://google.github.io/material-design-icons/" class="docs-markdown-a">Material Icons Guide</a>.</p>
-<p class="docs-markdown-p">Note that <code class="docs-markdown-code">md-icon</code> supports any font or svg icons; using Material Icons is one of many options.</p>
+<p class="docs-markdown-p">Note that <code class="docs-markdown-code">mat-icon</code> supports any font or svg icons; using Material Icons is one of many options.</p>
 
         <h3 id="appendix-configuring-systemjs" class="docs-header-link docs-markdown-h3">
           <div header-link="appendix-configuring-systemjs"></div>

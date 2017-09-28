@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MdDialog, MD_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {MatDialog, MAT_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-comment">/**
  * @title Injecting data when opening a dialog
@@ -9,7 +9,7 @@
   templateUrl: <span class="hljs-string">'dialog-data-example.html'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogDataExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MdDialog</span>) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>) {}
 
   openDialog() {
     <span class="hljs-keyword">this</span>.dialog.open(DialogDataExampleDialog, {
@@ -25,5 +25,5 @@
   templateUrl: <span class="hljs-string">'dialog-data-example-dialog.html'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogDataExampleDialog {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">@Inject(MD_DIALOG_DATA</span>) public data: any) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">@Inject(MAT_DIALOG_DATA</span>) public data: any) {}
 }

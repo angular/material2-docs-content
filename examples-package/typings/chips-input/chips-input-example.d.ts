@@ -1,4 +1,4 @@
-import { MdChipInputEvent } from '@angular/material';
+import { MatChipInputEvent } from '@angular/material';
 /**
  * @title Chips with input
  */
@@ -11,6 +11,6 @@ export declare class ChipsInputExample {
     fruits: {
         name: string;
     }[];
-    add(event: MdChipInputEvent): void;
+    add(event: MatChipInputEvent): void;
     remove(fruit: any): void;
 }

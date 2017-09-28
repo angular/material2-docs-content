@@ -6,7 +6,7 @@ over or longpresses an element.</p>
           <div header-link="positioning"></div>
           Positioning
         </h3>
-      <p class="docs-markdown-p">The tooltip will be displayed below the element but this can be configured using the <code class="docs-markdown-code">mdTooltipPosition</code>
+      <p class="docs-markdown-p">The tooltip will be displayed below the element but this can be configured using the <code class="docs-markdown-code">matTooltipPosition</code>
 input.
 The tooltip can be displayed above, below, left, or right of the element. By default the position
 will be below. If the tooltip should switch left/right positions in an RTL layout direction, then
@@ -52,18 +52,18 @@ the positions <code class="docs-markdown-code">before</code> and <code class="do
         </h3>
       <p class="docs-markdown-p">The tooltip is immediately shown when the user's mouse hovers over the element and immediately
 hides when the user's mouse leaves. A delay in showing or hiding the tooltip can be added through
-the inputs <code class="docs-markdown-code">mdTooltipShowDelay</code> and <code class="docs-markdown-code">mdTooltipHideDelay</code>.</p>
+the inputs <code class="docs-markdown-code">matTooltipShowDelay</code> and <code class="docs-markdown-code">matTooltipHideDelay</code>.</p>
 <p class="docs-markdown-p">On mobile, the tooltip is displayed when the user longpresses the element and hides after a
 delay of 1500ms. The longpress behavior requires HammerJS to be loaded on the page.</p>
 <p class="docs-markdown-p">The tooltip can also be shown and hidden through the <code class="docs-markdown-code">show</code> and <code class="docs-markdown-code">hide</code> directive methods,
 which both accept a number in milliseconds to delay before applying the display change.</p>
-<p class="docs-markdown-p">To turn off the tooltip and prevent it from showing to the user, use the <code class="docs-markdown-code">mdTooltipDisabled</code> input flag.</p>
+<p class="docs-markdown-p">To turn off the tooltip and prevent it from showing to the user, use the <code class="docs-markdown-code">matTooltipDisabled</code> input flag.</p>
 
         <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
           <div header-link="accessibility"></div>
           Accessibility
         </h3>
-      <p class="docs-markdown-p">Elements with the <code class="docs-markdown-code">mdTooltip</code> will add an <code class="docs-markdown-code">aria-describedby</code> label that provides a reference
+      <p class="docs-markdown-p">Elements with the <code class="docs-markdown-code">matTooltip</code> will add an <code class="docs-markdown-code">aria-describedby</code> label that provides a reference
 to a visually hidden element containing the tooltip's message. This provides screenreaders the
 information needed to read out the tooltip's contents when the end-user focuses on the element
 triggering the tooltip.</p>

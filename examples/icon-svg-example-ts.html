@@ -1,6 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {DomSanitizer} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser'</span>;
-<span class="hljs-keyword">import</span> {MdIconRegistry} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {MatIconRegistry} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-comment">/**
  * @title SVG icons
@@ -10,7 +10,7 @@
   templateUrl: <span class="hljs-string">'icon-svg-example.html'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> IconSvgExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">iconRegistry: MdIconRegistry, sanitizer: DomSanitizer</span>) {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">iconRegistry: MatIconRegistry, sanitizer: DomSanitizer</span>) {
     iconRegistry.addSvgIcon(
         <span class="hljs-string">'thumbs-up'</span>,
         sanitizer.bypassSecurityTrustResourceUrl(<span class="hljs-string">'assets/img/examples/thumbup-icon.svg'</span>));

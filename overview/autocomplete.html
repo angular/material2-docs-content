@@ -5,36 +5,36 @@ You can read more about autocompletes in the <a href="https://material.io/guidel
           <div header-link="simple-autocomplete"></div>
           Simple autocomplete
         </h3>
-      <p class="docs-markdown-p">Start by adding a regular <code class="docs-markdown-code">mdInput</code> to the page. Let's assume you're using the <code class="docs-markdown-code">formControl</code>
+      <p class="docs-markdown-p">Start by adding a regular <code class="docs-markdown-code">matInput</code> to the page. Let's assume you're using the <code class="docs-markdown-code">formControl</code>
 directive from the <code class="docs-markdown-code">@angular/forms</code> module to track the value of the input.</p>
 <p class="docs-markdown-p"><em>my-comp.html</em></p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-form-field</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">mdInput</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"myControl"</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-form-field</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"myControl"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 </code></pre>
 <p class="docs-markdown-p">Next, create the autocomplete panel and the options displayed inside it. Each option should be
-defined by an <code class="docs-markdown-code">md-option</code> tag. Set each option's value property to whatever you'd like the value
+defined by an <code class="docs-markdown-code">mat-option</code> tag. Set each option's value property to whatever you'd like the value
 of the text input to be upon that option's selection.</p>
 <p class="docs-markdown-p"><em>my-comp.html</em></p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-autocomplete</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>
       {{ option }}
-   <span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-autocomplete</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
 </code></pre>
 <p class="docs-markdown-p">Now we'll need to link the text input to its panel. We can do this by exporting the autocomplete
 panel instance into a local template variable (here we called it "auto"), and binding that variable
-to the input's <code class="docs-markdown-code">mdAutocomplete</code> property.</p>
+to the input's <code class="docs-markdown-code">matAutocomplete</code> property.</p>
 <p class="docs-markdown-p"><em>my-comp.html</em></p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-form-field</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">mdInput</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"myControl"</span> [<span class="hljs-attr">mdAutocomplete</span>]=<span class="hljs-string">"auto"</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-form-field</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"myControl"</span> [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">"auto"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">md-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"mdAutocomplete"</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"matAutocomplete"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>
       {{ option }}
-   <span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-autocomplete</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
 </code></pre>
 <div material-docs-example="autocomplete-simple"></div>
 
@@ -83,14 +83,14 @@ desired display value. Then bind it to the autocomplete's <code class="docs-mark
           <div header-link="option-groups"></div>
           Option groups
         </h4>
-      <p class="docs-markdown-p"><code class="docs-markdown-code">md-option</code> can be collected into groups using the <code class="docs-markdown-code">md-optgroup</code> element:</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"mdAutocomplete"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-optgroup</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let group of filteredGroups | async"</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">"group.name"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">md-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of group.options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">mat-option</code> can be collected into groups using the <code class="docs-markdown-code">mat-optgroup</code> element:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"matAutocomplete"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let group of filteredGroups | async"</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">"group.name"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of group.options"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>
       {{ option.name }}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">md-option</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">md-optgroup</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-autocomplete</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
 </code></pre>
 
         <h3 id="accessibility" class="docs-header-link docs-markdown-h3">

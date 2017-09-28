@@ -1,7 +1,7 @@
-<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;md-form-field&gt;</code> is a wrapper for native <code class="docs-markdown-code">input</code> and <code class="docs-markdown-code">textarea</code> elements. This container
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-form-field&gt;</code> is a wrapper for native <code class="docs-markdown-code">input</code> and <code class="docs-markdown-code">textarea</code> elements. This container
 applies Material Design styles and behavior while still allowing direct access to the underlying
 native element.</p>
-<p class="docs-markdown-p">The native element wrapped by the <code class="docs-markdown-code">md-form-field</code> must be marked with the <code class="docs-markdown-code">mdInput</code> directive.</p>
+<p class="docs-markdown-p">The native element wrapped by the <code class="docs-markdown-code">mat-form-field</code> must be marked with the <code class="docs-markdown-code">matInput</code> directive.</p>
 <div material-docs-example="input-overview"></div>
 
         <h3 id="-code-input-code-and-code-textarea-code-attributes" class="docs-header-link docs-markdown-h3">
@@ -9,18 +9,18 @@ native element.</p>
           <code class="docs-markdown-code">input</code> and <code class="docs-markdown-code">textarea</code> attributes
         </h3>
       <p class="docs-markdown-p">All of the attributes that can be used with normal <code class="docs-markdown-code">input</code> and <code class="docs-markdown-code">textarea</code> elements can be used on
-elements inside <code class="docs-markdown-code">md-form-field</code> as well. This includes Angular directives such as
+elements inside <code class="docs-markdown-code">mat-form-field</code> as well. This includes Angular directives such as
 <code class="docs-markdown-code">ngModel</code> and <code class="docs-markdown-code">formControl</code>.</p>
 <p class="docs-markdown-p">The only limitations are that the <code class="docs-markdown-code">type</code> attribute can only be one of the values supported by
-<code class="docs-markdown-code">mdInput</code> and the native element cannot specify a <code class="docs-markdown-code">placeholder</code> attribute if the <code class="docs-markdown-code">md-form-field</code>
-also contains an <code class="docs-markdown-code">md-placeholder</code> element.</p>
+<code class="docs-markdown-code">matInput</code> and the native element cannot specify a <code class="docs-markdown-code">placeholder</code> attribute if the <code class="docs-markdown-code">mat-form-field</code>
+also contains an <code class="docs-markdown-code">mat-placeholder</code> element.</p>
 
         <h3 id="supported-code-input-code-types" class="docs-header-link docs-markdown-h3">
           <div header-link="supported-code-input-code-types"></div>
           Supported <code class="docs-markdown-code">input</code> types
         </h3>
       <p class="docs-markdown-p">The following <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" class="docs-markdown-a">input types</a> can
-be used with <code class="docs-markdown-code">mdInput</code>:</p>
+be used with <code class="docs-markdown-code">matInput</code>:</p>
 <ul class="docs-markdown-ul">
 <li class="docs-markdown-li">date</li>
 <li class="docs-markdown-li">datetime-local</li>
@@ -40,10 +40,10 @@ be used with <code class="docs-markdown-code">mdInput</code>:</p>
           <div header-link="error-messages"></div>
           Error messages
         </h3>
-      <p class="docs-markdown-p">Error messages can be shown beneath an input by specifying <code class="docs-markdown-code">md-error</code> elements inside the
-<code class="docs-markdown-code">md-form-field</code>. Errors are hidden by default and will be displayed on invalid inputs after
+      <p class="docs-markdown-p">Error messages can be shown beneath an input by specifying <code class="docs-markdown-code">mat-error</code> elements inside the
+<code class="docs-markdown-code">mat-form-field</code>. Errors are hidden by default and will be displayed on invalid inputs after
 the user has interacted with the element or the parent form has been submitted. In addition,
-whenever errors are displayed, the container's <code class="docs-markdown-code">md-hint</code> labels will be hidden.</p>
+whenever errors are displayed, the container's <code class="docs-markdown-code">mat-hint</code> labels will be hidden.</p>
 <p class="docs-markdown-p">If an input element can have more than one error state, it is up to the consumer to toggle which
 messages should be displayed. This can be done with CSS, <code class="docs-markdown-code">ngIf</code> or <code class="docs-markdown-code">ngSwitch</code>.</p>
 <p class="docs-markdown-p">Note that, while multiple error messages can be displayed at the same time, it is recommended to
@@ -56,17 +56,17 @@ only show one at a time.</p>
         </h3>
       <p class="docs-markdown-p">A placeholder is an indicative text displayed in the input zone when the input does not contain
 text. When text is present, the indicative text will float above this input zone.</p>
-<p class="docs-markdown-p">The <code class="docs-markdown-code">floatPlaceholder</code> attribute of <code class="docs-markdown-code">md-form-field</code> can be set to <code class="docs-markdown-code">never</code> to hide the
+<p class="docs-markdown-p">The <code class="docs-markdown-code">floatPlaceholder</code> attribute of <code class="docs-markdown-code">mat-form-field</code> can be set to <code class="docs-markdown-code">never</code> to hide the
 indicative text instead when text is present in the input.</p>
 <p class="docs-markdown-p">When setting <code class="docs-markdown-code">floatPlaceholder</code> to <code class="docs-markdown-code">always</code>, the floating label will always show above the input.</p>
 <p class="docs-markdown-p">A placeholder for the input can be specified in one of two ways: either using the <code class="docs-markdown-code">placeholder</code>
-attribute on the <code class="docs-markdown-code">input</code> or <code class="docs-markdown-code">textarea</code>, or using an <code class="docs-markdown-code">md-placeholder</code> element in the
-<code class="docs-markdown-code">md-form-field</code>. Using both will raise an error.</p>
-<p class="docs-markdown-p">Global default placeholder options can be specified by setting the <code class="docs-markdown-code">MD_PLACEHOLDER_GLOBAL_OPTIONS</code>
+attribute on the <code class="docs-markdown-code">input</code> or <code class="docs-markdown-code">textarea</code>, or using an <code class="docs-markdown-code">mat-placeholder</code> element in the
+<code class="docs-markdown-code">mat-form-field</code>. Using both will raise an error.</p>
+<p class="docs-markdown-p">Global default placeholder options can be specified by setting the <code class="docs-markdown-code">MAT_PLACEHOLDER_GLOBAL_OPTIONS</code>
 provider. This setting will apply to all components that support the floating placeholder.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
   providers: [
-    {provide: MD_PLACEHOLDER_GLOBAL_OPTIONS, useValue: {float: <span class="hljs-string">'always'</span>}}
+    {provide: MAT_PLACEHOLDER_GLOBAL_OPTIONS, useValue: {float: <span class="hljs-string">'always'</span>}}
   ]
 })
 </code></pre>
@@ -96,19 +96,19 @@ provider. This setting will apply to all components that support the floating pl
         </h3>
       <p class="docs-markdown-p">HTML can be included before and after the input tag, as a prefix or suffix. It will be underlined
 as per the Material specification, and clicking it will focus the input.</p>
-<p class="docs-markdown-p">Adding the <code class="docs-markdown-code">mdPrefix</code> attribute to an element inside the <code class="docs-markdown-code">md-form-field</code> will designate it as
-the prefix. Similarly, adding <code class="docs-markdown-code">mdSuffix</code> will designate it as the suffix.</p>
+<p class="docs-markdown-p">Adding the <code class="docs-markdown-code">matPrefix</code> attribute to an element inside the <code class="docs-markdown-code">mat-form-field</code> will designate it as
+the prefix. Similarly, adding <code class="docs-markdown-code">matSuffix</code> will designate it as the suffix.</p>
 <div material-docs-example="input-prefix-suffix"></div>
 
         <h3 id="hint-labels" class="docs-header-link docs-markdown-h3">
           <div header-link="hint-labels"></div>
           Hint Labels
         </h3>
-      <p class="docs-markdown-p">Hint labels are the labels that show below the underline. An <code class="docs-markdown-code">md-form-field</code> can have up to two
+      <p class="docs-markdown-p">Hint labels are the labels that show below the underline. An <code class="docs-markdown-code">mat-form-field</code> can have up to two
 hint labels; one on the <code class="docs-markdown-code">start</code> of the line (left in an LTR language, right in RTL), and one on the
 <code class="docs-markdown-code">end</code>.</p>
 <p class="docs-markdown-p">Hint labels are specified in one of two ways: either using the <code class="docs-markdown-code">hintLabel</code> attribute of
-<code class="docs-markdown-code">md-form-field</code>, or using an <code class="docs-markdown-code">md-hint</code> element inside the <code class="docs-markdown-code">md-form-field</code>, which takes an
+<code class="docs-markdown-code">mat-form-field</code>, or using an <code class="docs-markdown-code">mat-hint</code> element inside the <code class="docs-markdown-code">mat-form-field</code>, which takes an
 <code class="docs-markdown-code">align</code> attribute containing the side. The attribute version is assumed to be at the <code class="docs-markdown-code">start</code>.
 Specifying a side twice will result in an exception during initialization.</p>
 <div material-docs-example="input-hint"></div>
@@ -118,7 +118,7 @@ Specifying a side twice will result in an exception during initialization.</p>
           Underline Color
         </h3>
       <p class="docs-markdown-p">The underline (line under the <code class="docs-markdown-code">input</code> content) color can be changed by using the <code class="docs-markdown-code">color</code>
-attribute of <code class="docs-markdown-code">md-form-field</code>. A value of <code class="docs-markdown-code">primary</code> is the default and will correspond to the
+attribute of <code class="docs-markdown-code">mat-form-field</code>. A value of <code class="docs-markdown-code">primary</code> is the default and will correspond to the
 theme primary color. Alternatively, <code class="docs-markdown-code">accent</code> or <code class="docs-markdown-code">warn</code> can be specified to use the theme's accent or
 warn color.</p>
 
@@ -129,13 +129,13 @@ warn color.</p>
       <p class="docs-markdown-p">By default, error messages are shown when the control is invalid and either the user has interacted with
 (touched) the element or the parent form has been submitted. If you wish to override this
 behavior (e.g. to show the error as soon as the invalid control is dirty or when a parent form group
-is invalid), you can use the <code class="docs-markdown-code">errorStateMatcher</code> property of the <code class="docs-markdown-code">mdInput</code>. To use this property,
+is invalid), you can use the <code class="docs-markdown-code">errorStateMatcher</code> property of the <code class="docs-markdown-code">matInput</code>. To use this property,
 create a function in your component class that returns a boolean. A result of <code class="docs-markdown-code">true</code> will display
 the error messages.</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-form-field</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">mdInput</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"myInput"</span> <span class="hljs-attr">required</span> [<span class="hljs-attr">errorStateMatcher</span>]=<span class="hljs-string">"myErrorStateMatcher"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-error</span>&gt;</span>This field is required<span class="hljs-tag">&lt;/<span class="hljs-name">md-error</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-form-field</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"myInput"</span> <span class="hljs-attr">required</span> [<span class="hljs-attr">errorStateMatcher</span>]=<span class="hljs-string">"myErrorStateMatcher"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>This field is required<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 </code></pre>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myErrorStateMatcher</span>(<span class="hljs-params">control: FormControl, form: FormGroupDirective | NgForm</span>): <span class="hljs-title">boolean</span> </span>{
   <span class="hljs-comment">// Error when invalid control is dirty, touched, or submitted</span>
@@ -143,12 +143,12 @@ the error messages.</p>
   <span class="hljs-keyword">return</span> !!(control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted));
 }
 </code></pre>
-<p class="docs-markdown-p">A global error state matcher can be specified by setting the <code class="docs-markdown-code">MD_ERROR_GLOBAL_OPTIONS</code> provider. This applies
+<p class="docs-markdown-p">A global error state matcher can be specified by setting the <code class="docs-markdown-code">MAT_ERROR_GLOBAL_OPTIONS</code> provider. This applies
 to all inputs. For convenience, <code class="docs-markdown-code">showOnDirtyErrorStateMatcher</code> is available in order to globally set
 input errors to show when the input is dirty and invalid.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
   providers: [
-    {provide: MD_ERROR_GLOBAL_OPTIONS, useValue: {errorStateMatcher: showOnDirtyErrorStateMatcher}}
+    {provide: MAT_ERROR_GLOBAL_OPTIONS, useValue: {errorStateMatcher: showOnDirtyErrorStateMatcher}}
   ]
 })
 </code></pre>
@@ -174,10 +174,10 @@ input errors to show when the input is dirty and invalid.</p>
           <div header-link="accessibility"></div>
           Accessibility
         </h3>
-      <p class="docs-markdown-p">The <code class="docs-markdown-code">mdInput</code> directive works with native <code class="docs-markdown-code">&lt;input&gt;</code> to provide an accessible experience.</p>
-<p class="docs-markdown-p">If a placeholder attribute is added to the input, or a <code class="docs-markdown-code">md-placeholder</code> element is added
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">matInput</code> directive works with native <code class="docs-markdown-code">&lt;input&gt;</code> to provide an accessible experience.</p>
+<p class="docs-markdown-p">If a placeholder attribute is added to the input, or a <code class="docs-markdown-code">mat-placeholder</code> element is added
 in the form field, the placeholder text will automatically be used as the label for the input.
 If there's no placeholder specified, <code class="docs-markdown-code">aria-label</code>, <code class="docs-markdown-code">aria-labelledby</code> or <code class="docs-markdown-code">&lt;label for=...&gt;</code> should be
 added.</p>
-<p class="docs-markdown-p">Any <code class="docs-markdown-code">md-error</code> and <code class="docs-markdown-code">md-hint</code> are automatically added to the input's <code class="docs-markdown-code">aria-describedby</code>.</p>
+<p class="docs-markdown-p">Any <code class="docs-markdown-code">mat-error</code> and <code class="docs-markdown-code">mat-hint</code> are automatically added to the input's <code class="docs-markdown-code">aria-describedby</code>.</p>
 </div></body></html>

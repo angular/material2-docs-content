@@ -1,5 +1,5 @@
 import { DataSource } from '@angular/cdk/collections';
-import { MdSort } from '@angular/material';
+import { MatSort } from '@angular/material';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/startWith';
@@ -12,7 +12,7 @@ export declare class TableSortingExample {
     displayedColumns: string[];
     exampleDatabase: ExampleDatabase;
     dataSource: ExampleDataSource | null;
-    sort: MdSort;
+    sort: MatSort;
     ngOnInit(): void;
 }
 export interface UserData {
@@ -42,7 +42,7 @@ export declare class ExampleDatabase {
 export declare class ExampleDataSource extends DataSource<any> {
     private _exampleDatabase;
     private _sort;
-    constructor(_exampleDatabase: ExampleDatabase, _sort: MdSort);
+    constructor(_exampleDatabase: ExampleDatabase, _sort: MatSort);
     /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect(): Observable<UserData[]>;
     disconnect(): void;

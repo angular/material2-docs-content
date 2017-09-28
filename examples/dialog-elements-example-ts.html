@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MdDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {MatDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-comment">/**
  * @title Dialog elements
@@ -9,7 +9,7 @@
   templateUrl: <span class="hljs-string">'dialog-elements-example.html'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogElementsExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MdDialog</span>) { }
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>) { }
 
   openDialog() {
     <span class="hljs-keyword">this</span>.dialog.open(DialogElementsExampleDialog);

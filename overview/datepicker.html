@@ -20,23 +20,23 @@ There are many more features that will be added in future iterations, including:
           <div header-link="connecting-a-datepicker-to-an-input"></div>
           Connecting a datepicker to an input
         </h3>
-      <p class="docs-markdown-p">A datepicker is composed of a text input and a calendar pop-up, connected via the <code class="docs-markdown-code">mdDatepicker</code>
+      <p class="docs-markdown-p">A datepicker is composed of a text input and a calendar pop-up, connected via the <code class="docs-markdown-code">matDatepicker</code>
 property on the text input.</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">mdDatepicker</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">md-datepicker</span> #<span class="hljs-attr">myDatepicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-datepicker</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">myDatepicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span>
 </code></pre>
 <p class="docs-markdown-p">An optional datepicker toggle button is available. A toggle can be added to the example above:</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">mdDatepicker</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">md-datepicker-toggle</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-datepicker-toggle</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">md-datepicker</span> #<span class="hljs-attr">myDatepicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-datepicker</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker-toggle</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker-toggle</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">myDatepicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span>
 </code></pre>
-<p class="docs-markdown-p">This works exactly the same with an input that is part of an <code class="docs-markdown-code">&lt;md-form-field&gt;</code> and the toggle
+<p class="docs-markdown-p">This works exactly the same with an input that is part of an <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> and the toggle
 can easily be used as a prefix or suffix on the material input:</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-form-field</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">mdInput</span> [<span class="hljs-attr">mdDatepicker</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-datepicker-toggle</span> <span class="hljs-attr">mdSuffix</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-datepicker-toggle</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-datepicker</span> #<span class="hljs-attr">myDatepicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-datepicker</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-form-field</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker-toggle</span> <span class="hljs-attr">matSuffix</span> [<span class="hljs-attr">for</span>]=<span class="hljs-string">"myDatepicker"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker-toggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">myDatepicker</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 </code></pre>
 
         <h3 id="setting-the-calendar-starting-view" class="docs-header-link docs-markdown-h3">
@@ -44,12 +44,12 @@ can easily be used as a prefix or suffix on the material input:</p>
           Setting the calendar starting view
         </h3>
       <p class="docs-markdown-p">By default the calendar will open in month view, this can be changed by setting the <code class="docs-markdown-code">startView</code>
-property of <code class="docs-markdown-code">md-datepicker</code> to <code class="docs-markdown-code">"year"</code>. In year view the user will see all months of the year and
+property of <code class="docs-markdown-code">mat-datepicker</code> to <code class="docs-markdown-code">"year"</code>. In year view the user will see all months of the year and
 then proceed to month view after choosing a month.</p>
 <p class="docs-markdown-p">The month or year that the calendar opens to is determined by first checking if any date is
 currently selected, if so it will open to the month or year containing that date. Otherwise it will
 open to the month or year containing today's date. This behavior can be overridden by using the
-<code class="docs-markdown-code">startAt</code> property of <code class="docs-markdown-code">md-datepicker</code>. In this case the calendar will open to the month or year
+<code class="docs-markdown-code">startAt</code> property of <code class="docs-markdown-code">mat-datepicker</code>. In this case the calendar will open to the month or year
 containing the <code class="docs-markdown-code">startAt</code> date.</p>
 <div material-docs-example="datepicker-start-view"></div>
 
@@ -63,13 +63,13 @@ disable all dates on the calendar popup before or after the respective values an
 from advancing the calendar past the <code class="docs-markdown-code">month</code> or <code class="docs-markdown-code">year</code> (depending on current view) containing the
 <code class="docs-markdown-code">min</code> or <code class="docs-markdown-code">max</code> date.</p>
 <div material-docs-example="datepicker-min-max"></div>
-<p class="docs-markdown-p">The second way to add date validation is using the <code class="docs-markdown-code">mdDatepickerFilter</code> property of the datepicker
+<p class="docs-markdown-p">The second way to add date validation is using the <code class="docs-markdown-code">matDatepickerFilter</code> property of the datepicker
 input. This property accepts a function of <code class="docs-markdown-code">&lt;D&gt; =&gt; boolean</code> (where <code class="docs-markdown-code">&lt;D&gt;</code> is the date type used by
 the datepicker, see section on
 <a href="#choosing-a-date-implementation-and-date-format-settings" class="docs-markdown-a">choosing a date implementation</a>).
 A result of <code class="docs-markdown-code">true</code> indicates that the date is valid and a result of <code class="docs-markdown-code">false</code> indicates that it is
 not. Again this will also disable the dates on the calendar that are invalid. However, one important
-difference between using <code class="docs-markdown-code">mdDatepickerFilter</code> vs using <code class="docs-markdown-code">min</code> or <code class="docs-markdown-code">max</code> is that filtering out all
+difference between using <code class="docs-markdown-code">matDatepickerFilter</code> vs using <code class="docs-markdown-code">min</code> or <code class="docs-markdown-code">max</code> is that filtering out all
 dates before or after a certain point, will not prevent the user from advancing the calendar past
 that point.</p>
 <div material-docs-example="datepicker-filter"></div>
@@ -78,9 +78,9 @@ They will not be able to go further back in the calendar than 2000. If they manu
 that is before the min, after the max, or filtered out, the input will have validation errors.</p>
 <p class="docs-markdown-p">Each validation property has a different error that can be checked:</p>
 <ul class="docs-markdown-ul">
-<li class="docs-markdown-li">A value that violates the <code class="docs-markdown-code">min</code> property will have a <code class="docs-markdown-code">mdDatepickerMin</code> error.</li>
-<li class="docs-markdown-li">A value that violates the <code class="docs-markdown-code">max</code> property will have a <code class="docs-markdown-code">mdDatepickerMax</code> error.</li>
-<li class="docs-markdown-li">A value that violates the <code class="docs-markdown-code">mdDatepickerFilter</code> property will have a <code class="docs-markdown-code">mdDatepickerFilter</code> error.</li>
+<li class="docs-markdown-li">A value that violates the <code class="docs-markdown-code">min</code> property will have a <code class="docs-markdown-code">matDatepickerMin</code> error.</li>
+<li class="docs-markdown-li">A value that violates the <code class="docs-markdown-code">max</code> property will have a <code class="docs-markdown-code">matDatepickerMax</code> error.</li>
+<li class="docs-markdown-li">A value that violates the <code class="docs-markdown-code">matDatepickerFilter</code> property will have a <code class="docs-markdown-code">matDatepickerFilter</code> error.</li>
 </ul>
 
         <h3 id="input-and-change-events" class="docs-header-link docs-markdown-h3">
@@ -91,8 +91,8 @@ that is before the min, after the max, or filtered out, the input will have vali
 input element; they will not fire when the user selects a date from the calendar popup. Because of
 this limitation, the datepicker input also has support for <code class="docs-markdown-code">dateInput</code> and <code class="docs-markdown-code">dateChange</code> events.
 These trigger when the user interacts with either the input or the popup.</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">mdDatepicker</span>]=<span class="hljs-string">"d"</span> (<span class="hljs-attr">dateInput</span>)=<span class="hljs-string">"onInput($event)"</span> (<span class="hljs-attr">dateChange</span>)=<span class="hljs-string">"onChange($event)"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">md-datepicker</span> #<span class="hljs-attr">d</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">md-datepicker</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matDatepicker</span>]=<span class="hljs-string">"d"</span> (<span class="hljs-attr">dateInput</span>)=<span class="hljs-string">"onInput($event)"</span> (<span class="hljs-attr">dateChange</span>)=<span class="hljs-string">"onChange($event)"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-datepicker</span> #<span class="hljs-attr">d</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-datepicker</span>&gt;</span>
 </code></pre>
 
         <h3 id="touch-ui-mode" class="docs-header-link docs-markdown-h3">
@@ -101,7 +101,7 @@ These trigger when the user interacts with either the input or the popup.</p>
         </h3>
       <p class="docs-markdown-p">The datepicker normally opens as a popup under the input. However this is not ideal for touch
 devices that don't have as much screen real estate and need bigger click targets. For this reason
-<code class="docs-markdown-code">md-datepicker</code> has a <code class="docs-markdown-code">touchUi</code> property that can be set to <code class="docs-markdown-code">true</code> in order to enable a more touch
+<code class="docs-markdown-code">mat-datepicker</code> has a <code class="docs-markdown-code">touchUi</code> property that can be set to <code class="docs-markdown-code">true</code> in order to enable a more touch
 friendly UI where the calendar opens in a large dialog.</p>
 <div material-docs-example="datepicker-touch"></div>
 
@@ -110,7 +110,7 @@ friendly UI where the calendar opens in a large dialog.</p>
           Manually opening and closing the calendar
         </h3>
       <p class="docs-markdown-p">The calendar popup can be programmatically controlled using the <code class="docs-markdown-code">open</code> and <code class="docs-markdown-code">close</code> methods on the
-<code class="docs-markdown-code">md-datepicker</code>. It also has an <code class="docs-markdown-code">opened</code> property that reflects the status of the popup.</p>
+<code class="docs-markdown-code">mat-datepicker</code>. It also has an <code class="docs-markdown-code">opened</code> property that reflects the status of the popup.</p>
 <div material-docs-example="datepicker-api"></div>
 
         <h3 id="internationalization" class="docs-header-link docs-markdown-h3">
@@ -161,27 +161,27 @@ from <code class="docs-markdown-code">@angular/core</code>. If you want to overr
 with a variety of different date implementations. However it also means that developers need to make
 sure to provide the appropriate pieces for the datepicker to work with their chosen implementation.
 The easiest way to ensure this is just to import one of the pre-made modules (currently
-<code class="docs-markdown-code">MdNativeDateModule</code> is the only implementation that ships with material, but there are plans to add
+<code class="docs-markdown-code">MatNativeDateModule</code> is the only implementation that ships with material, but there are plans to add
 a module for Moment.js support):</p>
 <ul class="docs-markdown-ul">
-<li class="docs-markdown-li"><code class="docs-markdown-code">MdNativeDateModule</code> - support for native JavaScript Date object</li>
+<li class="docs-markdown-li"><code class="docs-markdown-code">MatNativeDateModule</code> - support for native JavaScript Date object</li>
 </ul>
-<p class="docs-markdown-p">These modules include providers for <code class="docs-markdown-code">DateAdapter</code> and <code class="docs-markdown-code">MD_DATE_FORMATS</code></p>
+<p class="docs-markdown-p">These modules include providers for <code class="docs-markdown-code">DateAdapter</code> and <code class="docs-markdown-code">MAT_DATE_FORMATS</code></p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
-  imports: [MdDatepickerModule, MdNativeDateModule],
+  imports: [MatDatepickerModule, MatNativeDateModule],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}
 </code></pre>
-<p class="docs-markdown-p">Because <code class="docs-markdown-code">DateAdapter</code> is a generic class, <code class="docs-markdown-code">MdDatepicker</code> and <code class="docs-markdown-code">MdDatepickerInput</code> also need to be
+<p class="docs-markdown-p">Because <code class="docs-markdown-code">DateAdapter</code> is a generic class, <code class="docs-markdown-code">MatDatepicker</code> and <code class="docs-markdown-code">MatDatepickerInput</code> also need to be
 made generic. When working with these classes (for example as a <code class="docs-markdown-code">ViewChild</code>) you should include the
 appropriate generic type that corresponds to the <code class="docs-markdown-code">DateAdapter</code> implementation you are using. For
 example:</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({...})
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyComponent {
-  <span class="hljs-meta">@ViewChild</span>(MdDatepicker) datepicker: MdDatepicker&lt;<span class="hljs-built_in">Date</span>&gt;;
+  <span class="hljs-meta">@ViewChild</span>(MatDatepicker) datepicker: MatDatepicker&lt;<span class="hljs-built_in">Date</span>&gt;;
 }
 </code></pre>
-<p class="docs-markdown-p"><em>Please note: <code class="docs-markdown-code">MdNativeDateModule</code> is based off of the functionality available in JavaScript's
+<p class="docs-markdown-p"><em>Please note: <code class="docs-markdown-code">MatNativeDateModule</code> is based off of the functionality available in JavaScript's
 native <code class="docs-markdown-code">Date</code> object, and is thus not suitable for many locales. One of the biggest shortcomings of
 the native <code class="docs-markdown-code">Date</code> object is the inability to set the parse format. We highly recommend using a
 custom <code class="docs-markdown-code">DateAdapter</code> that works with the formatting/parsing library of your choice.</em></p>
@@ -192,13 +192,13 @@ custom <code class="docs-markdown-code">DateAdapter</code> that works with the f
         </h4>
       <p class="docs-markdown-p">The datepicker does all of its interaction with date objects via the <code class="docs-markdown-code">DateAdapter</code>. Making the
 datepicker work with a different date implementation is as easy as extending <code class="docs-markdown-code">DateAdapter</code>, and
-using your subclass as the provider. You will also want to make sure that the <code class="docs-markdown-code">MD_DATE_FORMATS</code>
+using your subclass as the provider. You will also want to make sure that the <code class="docs-markdown-code">MAT_DATE_FORMATS</code>
 provided in your app are formats that can be understood by your date implementation.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
-  imports: [MdDatepickerModule],
+  imports: [MatDatepickerModule],
   providers: [
     {provide: DateAdapter, useClass: MyDateAdapter},
-    {provide: MD_DATE_FORMATS, useValue: MY_DATE_FORMATS},
+    {provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS},
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}
@@ -208,16 +208,16 @@ provided in your app are formats that can be understood by your date implementat
           <div header-link="customizing-the-parse-and-display-formats"></div>
           Customizing the parse and display formats
         </h4>
-      <p class="docs-markdown-p">The <code class="docs-markdown-code">MD_DATE_FORMATS</code> object is just a collection of formats that the datepicker uses when parsing
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">MAT_DATE_FORMATS</code> object is just a collection of formats that the datepicker uses when parsing
 and displaying dates. These formats are passed through to the <code class="docs-markdown-code">DateAdapter</code> so you will want to make
 sure that the format objects you're using are compatible with the <code class="docs-markdown-code">DateAdapter</code> used in your app.
 This example shows how to use the native <code class="docs-markdown-code">Date</code> implementation from material, but with custom
 formats.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
-  imports: [MdDatepickerModule],
+  imports: [MatDatepickerModule],
   providers: [
     {provide: DateAdapter, useClass: NativeDateAdapter},
-    {provide: MD_DATE_FORMATS, useValue: MY_NATIVE_DATE_FORMATS},
+    {provide: MAT_DATE_FORMATS, useValue: MY_NATIVE_DATE_FORMATS},
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}
@@ -227,13 +227,13 @@ formats.</p>
           <div header-link="localizing-labels-and-messages"></div>
           Localizing labels and messages
         </h4>
-      <p class="docs-markdown-p">The various text strings used by the datepicker are provided through <code class="docs-markdown-code">MdDatepickerIntl</code>.
+      <p class="docs-markdown-p">The various text strings used by the datepicker are provided through <code class="docs-markdown-code">MatDatepickerIntl</code>.
 Localization of these messages can be done by providing a subclass with translated values in your
 application root module.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
-  imports: [MdDatepickerModule, MdNativeDateModule],
+  imports: [MatDatepickerModule, MatNativeDateModule],
   providers: [
-    {provide: MdDatepickerIntl, useClass: MyIntl},
+    {provide: MatDatepickerIntl, useClass: MyIntl},
   ],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}
@@ -243,11 +243,11 @@ application root module.</p>
           <div header-link="accessibility"></div>
           Accessibility
         </h3>
-      <p class="docs-markdown-p">The <code class="docs-markdown-code">MdDatepickerInput</code> directive adds <code class="docs-markdown-code">aria-haspopup</code> attribute to the native input element, and it
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">MatDatepickerInput</code> directive adds <code class="docs-markdown-code">aria-haspopup</code> attribute to the native input element, and it
 triggers a calendar dialog with <code class="docs-markdown-code">role="dialog"</code>.</p>
-<p class="docs-markdown-p"><code class="docs-markdown-code">MdDatepickerIntl</code> includes strings that are used for <code class="docs-markdown-code">aria-label</code>s. The datepicker input
+<p class="docs-markdown-p"><code class="docs-markdown-code">MatDatepickerIntl</code> includes strings that are used for <code class="docs-markdown-code">aria-label</code>s. The datepicker input
 should have a placeholder or be given a meaningful label via <code class="docs-markdown-code">aria-label</code>, <code class="docs-markdown-code">aria-labelledby</code> or
-<code class="docs-markdown-code">MdDatepickerIntl</code>.</p>
+<code class="docs-markdown-code">MatDatepickerIntl</code>.</p>
 
         <h4 id="keyboard-shortcuts" class="docs-header-link docs-markdown-h4">
           <div header-link="keyboard-shortcuts"></div>

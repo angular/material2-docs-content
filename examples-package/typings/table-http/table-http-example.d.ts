@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { DataSource } from '@angular/cdk/collections';
-import { MdPaginator, MdSort } from '@angular/material';
+import { MatPaginator, MatSort } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/observable/of';
@@ -17,8 +17,8 @@ export declare class TableHttpExample implements OnInit {
     displayedColumns: string[];
     exampleDatabase: ExampleHttpDao | null;
     dataSource: ExampleDataSource | null;
-    paginator: MdPaginator;
-    sort: MdSort;
+    paginator: MatPaginator;
+    sort: MatSort;
     constructor(http: Http);
     ngOnInit(): void;
 }
@@ -52,7 +52,7 @@ export declare class ExampleDataSource extends DataSource<GithubIssue> {
     resultsLength: number;
     isLoadingResults: boolean;
     isRateLimitReached: boolean;
-    constructor(exampleDatabase: ExampleHttpDao, paginator: MdPaginator, sort: MdSort);
+    constructor(exampleDatabase: ExampleHttpDao, paginator: MatPaginator, sort: MatSort);
     /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect(): Observable<GithubIssue[]>;
     disconnect(): void;

@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {Http} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/http'</span>;
 <span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
-<span class="hljs-keyword">import</span> {MdPaginator, MdSort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {MatPaginator, MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/observable/merge'</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/observable/of'</span>;
@@ -23,8 +23,8 @@
   exampleDatabase: ExampleHttpDao | <span class="hljs-literal">null</span>;
   dataSource: ExampleDataSource | <span class="hljs-literal">null</span>;
 
-  <span class="hljs-meta">@ViewChild</span>(MdPaginator) paginator: MdPaginator;
-  <span class="hljs-meta">@ViewChild</span>(MdSort) sort: MdSort;
+  <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
+  <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> http: Http</span>) {}
 
@@ -75,8 +75,8 @@
   isRateLimitReached = <span class="hljs-literal">false</span>;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> exampleDatabase: ExampleHttpDao,
-              <span class="hljs-keyword">private</span> paginator: MdPaginator,
-              <span class="hljs-keyword">private</span> sort: MdSort</span>) {
+              <span class="hljs-keyword">private</span> paginator: MatPaginator,
+              <span class="hljs-keyword">private</span> sort: MatSort</span>) {
     <span class="hljs-keyword">super</span>();
   }
 

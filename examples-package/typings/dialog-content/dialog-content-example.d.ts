@@ -1,10 +1,10 @@
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 /**
  * @title Dialog with header, scrollable content and actions
  */
 export declare class DialogContentExample {
-    dialog: MdDialog;
-    constructor(dialog: MdDialog);
+    dialog: MatDialog;
+    constructor(dialog: MatDialog);
     openDialog(): void;
 }
 export declare class DialogContentExampleDialog {

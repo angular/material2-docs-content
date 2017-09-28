@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MdDialog, MdDialogRef, MD_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {MatDialog, MatDialogRef, MAT_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-comment">/**
  * @title Dialog Overview
@@ -13,7 +13,7 @@
   animal: <span class="hljs-built_in">string</span>;
   name: <span class="hljs-built_in">string</span>;
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MdDialog</span>) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>) {}
 
   openDialog(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">let</span> dialogRef = <span class="hljs-keyword">this</span>.dialog.open(DialogOverviewExampleDialog, {
@@ -36,8 +36,8 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogOverviewExampleDialog {
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">public</span> dialogRef: MdDialogRef&lt;DialogOverviewExampleDialog&gt;,
-    @Inject(MD_DIALOG_DATA</span>) public data: any) { }
+    <span class="hljs-keyword">public</span> dialogRef: MatDialogRef&lt;DialogOverviewExampleDialog&gt;,
+    @Inject(MAT_DIALOG_DATA</span>) public data: any) { }
 
   onNoClick(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">this</span>.dialogRef.close();

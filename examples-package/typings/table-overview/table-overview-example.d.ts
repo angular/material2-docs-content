@@ -1,6 +1,6 @@
 import { ElementRef } from '@angular/core';
 import { DataSource } from '@angular/cdk/collections';
-import { MdPaginator, MdSort } from '@angular/material';
+import { MatPaginator, MatSort } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
@@ -18,8 +18,8 @@ export declare class TableOverviewExample {
     exampleDatabase: ExampleDatabase;
     selection: SelectionModel<string>;
     dataSource: ExampleDataSource | null;
-    paginator: MdPaginator;
-    sort: MdSort;
+    paginator: MatPaginator;
+    sort: MatSort;
     filter: ElementRef;
     ngOnInit(): void;
     isAllSelected(): boolean;
@@ -57,7 +57,7 @@ export declare class ExampleDataSource extends DataSource<any> {
     filter: string;
     filteredData: UserData[];
     renderedData: UserData[];
-    constructor(_exampleDatabase: ExampleDatabase, _paginator: MdPaginator, _sort: MdSort);
+    constructor(_exampleDatabase: ExampleDatabase, _paginator: MatPaginator, _sort: MatSort);
     /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect(): Observable<UserData[]>;
     disconnect(): void;

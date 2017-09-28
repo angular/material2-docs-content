@@ -1,17 +1,17 @@
-import { MdDialog, MdDialogRef } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material';
 /**
  * @title Dialog Overview
  */
 export declare class DialogOverviewExample {
-    dialog: MdDialog;
+    dialog: MatDialog;
     animal: string;
     name: string;
-    constructor(dialog: MdDialog);
+    constructor(dialog: MatDialog);
     openDialog(): void;
 }
 export declare class DialogOverviewExampleDialog {
-    dialogRef: MdDialogRef<DialogOverviewExampleDialog>;
+    dialogRef: MatDialogRef<DialogOverviewExampleDialog>;
     data: any;
-    constructor(dialogRef: MdDialogRef<DialogOverviewExampleDialog>, data: any);
+    constructor(dialogRef: MatDialogRef<DialogOverviewExampleDialog>, data: any);
     onNoClick(): void;
 }

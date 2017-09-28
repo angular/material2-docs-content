@@ -8,10 +8,10 @@ styling.</p>
           <div header-link="stepper-variants"></div>
           Stepper variants
         </h3>
-      <p class="docs-markdown-p">There are two stepper components: <code class="docs-markdown-code">md-horizontal-stepper</code> and <code class="docs-markdown-code">md-vertical-stepper</code>. They 
+      <p class="docs-markdown-p">There are two stepper components: <code class="docs-markdown-code">mat-horizontal-stepper</code> and <code class="docs-markdown-code">mat-vertical-stepper</code>. They 
 can be used the same way. The only difference is the orientation of stepper. 
-<code class="docs-markdown-code">md-horizontal-stepper</code> selector can be used to create a horizontal stepper, and
-<code class="docs-markdown-code">md-vertical-stepper</code> can be used to create a vertical stepper. <code class="docs-markdown-code">md-step</code> components need to be
+<code class="docs-markdown-code">mat-horizontal-stepper</code> selector can be used to create a horizontal stepper, and
+<code class="docs-markdown-code">mat-vertical-stepper</code> can be used to create a vertical stepper. <code class="docs-markdown-code">mat-step</code> components need to be
 placed inside either one of the two stepper components.</p>
 
         <h3 id="labels" class="docs-header-link docs-markdown-h3">
@@ -19,23 +19,23 @@ placed inside either one of the two stepper components.</p>
           Labels
         </h3>
       <p class="docs-markdown-p">If a step's label is only text, then the <code class="docs-markdown-code">label</code> attribute can be used.</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-vertical-stepper</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-step</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Step 1"</span>&gt;</span>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-vertical-stepper</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Step 1"</span>&gt;</span>
     Content 1
-  <span class="hljs-tag">&lt;/<span class="hljs-name">md-step</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-step</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Step 1"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Step 1"</span>&gt;</span>
     Content 2
-  <span class="hljs-tag">&lt;/<span class="hljs-name">md-step</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-vertical-stepper</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-vertical-stepper</span>&gt;</span>
 </code></pre>
-<p class="docs-markdown-p">For more complex labels, add a template with the <code class="docs-markdown-code">mdStepLabel</code> directive inside the 
-<code class="docs-markdown-code">md-step</code>.</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-vertical-stepper</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-step</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mdStepLabel</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+<p class="docs-markdown-p">For more complex labels, add a template with the <code class="docs-markdown-code">matStepLabel</code> directive inside the 
+<code class="docs-markdown-code">mat-step</code>.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-vertical-stepper</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matStepLabel</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
     ...
-  <span class="hljs-tag">&lt;/<span class="hljs-name">md-step</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-vertical-stepper</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-vertical-stepper</span>&gt;</span>
 </code></pre>
 
         <h3 id="stepper-buttons" class="docs-header-link docs-markdown-h3">
@@ -43,25 +43,25 @@ placed inside either one of the two stepper components.</p>
           Stepper buttons
         </h3>
       <p class="docs-markdown-p">There are two button directives to support navigation between different steps:
-<code class="docs-markdown-code">mdStepperPrevious</code> and <code class="docs-markdown-code">mdStepperNext</code>.</p>
-<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-horizontal-stepper</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-step</span>&gt;</span>
+<code class="docs-markdown-code">matStepperPrevious</code> and <code class="docs-markdown-code">matStepperNext</code>.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span>&gt;</span>
     ...
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> <span class="hljs-attr">mdStepperPrevious</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> <span class="hljs-attr">mdStepperNext</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperPrevious</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">md-step</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-horizontal-stepper</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span>
 </code></pre>
 
         <h3 id="linear-stepper" class="docs-header-link docs-markdown-h3">
           <div header-link="linear-stepper"></div>
           Linear stepper
         </h3>
-      <p class="docs-markdown-p">The <code class="docs-markdown-code">linear</code> attribute can be set on <code class="docs-markdown-code">md-horizontal-stepper</code> and <code class="docs-markdown-code">md-vertical-stepper</code> to create
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">linear</code> attribute can be set on <code class="docs-markdown-code">mat-horizontal-stepper</code> and <code class="docs-markdown-code">mat-vertical-stepper</code> to create
 a linear stepper that requires the user to complete previous steps before proceeding
-to following steps. For each <code class="docs-markdown-code">md-step</code>, the <code class="docs-markdown-code">stepControl</code> attribute can be set to the top level
+to following steps. For each <code class="docs-markdown-code">mat-step</code>, the <code class="docs-markdown-code">stepControl</code> attribute can be set to the top level
 <code class="docs-markdown-code">AbstractControl</code> that is used to check the validity of the step. </p>
 <p class="docs-markdown-p">There are two possible approaches. One is using a single form for stepper, and the other is
 using a different form for each step.</p>
@@ -70,26 +70,26 @@ using a different form for each step.</p>
           <div header-link="using-a-single-form"></div>
           Using a single form
         </h4>
-      <p class="docs-markdown-p">When using a single form for the stepper, <code class="docs-markdown-code">mdStepperPrevious</code> and <code class="docs-markdown-code">mdStepperNext</code> have to be
+      <p class="docs-markdown-p">When using a single form for the stepper, <code class="docs-markdown-code">matStepperPrevious</code> and <code class="docs-markdown-code">matStepperNext</code> have to be
 set to <code class="docs-markdown-code">type="button"</code> in order to prevent submission of the form before all steps
 are completed. </p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"formGroup"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-horizontal-stepper</span> <span class="hljs-attr">formArrayName</span>=<span class="hljs-string">"formArray"</span> <span class="hljs-attr">linear</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">md-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">"0"</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formArray.get([0])"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> <span class="hljs-attr">formArrayName</span>=<span class="hljs-string">"formArray"</span> <span class="hljs-attr">linear</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">"0"</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formArray.get([0])"</span>&gt;</span>
       ...
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> <span class="hljs-attr">mdStepperNext</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">md-step</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">md-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">"1"</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formArray.get([1])"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">"1"</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formArray.get([1])"</span>&gt;</span>
       ...
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> <span class="hljs-attr">mdStepperPrevious</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">md-button</span> <span class="hljs-attr">mdStepperNext</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperPrevious</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">md-step</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
     ...
-  <span class="hljs-tag">&lt;/<span class="hljs-name">md-horizontal-stepper</span>&gt;</span> 
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span> 
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 </code></pre>
 
@@ -97,18 +97,18 @@ are completed. </p>
           <div header-link="using-a-different-form-for-each-step"></div>
           Using a different form for each step
         </h4>
-      <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">md-vertical-stepper</span> <span class="hljs-attr">linear</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formGroup1"</span>&gt;</span>
+      <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-vertical-stepper</span> <span class="hljs-attr">linear</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formGroup1"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"formGroup1"</span>&gt;</span>
       ...
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">md-step</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">md-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formGroup2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formGroup2"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"formGroup2"</span>&gt;</span>
       ...
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">md-step</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">md-vertical-stepper</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-vertical-stepper</span>&gt;</span>
 </code></pre>
 
         <h3 id="types-of-steps" class="docs-header-link docs-markdown-h3">
@@ -121,14 +121,14 @@ are completed. </p>
           Optional step
         </h4>
       <p class="docs-markdown-p">If completion of a step in linear stepper is not required, then the <code class="docs-markdown-code">optional</code> attribute can be set
-on <code class="docs-markdown-code">md-step</code>. </p>
+on <code class="docs-markdown-code">mat-step</code>. </p>
 
         <h4 id="editable-step" class="docs-header-link docs-markdown-h4">
           <div header-link="editable-step"></div>
           Editable step
         </h4>
       <p class="docs-markdown-p">By default, steps are editable, which means users can return to previously completed steps and
-edit their responses. <code class="docs-markdown-code">editable="true"</code> can be set on <code class="docs-markdown-code">md-step</code> to change the default. </p>
+edit their responses. <code class="docs-markdown-code">editable="true"</code> can be set on <code class="docs-markdown-code">mat-step</code> to change the default. </p>
 
         <h4 id="completed-step" class="docs-header-link docs-markdown-h4">
           <div header-link="completed-step"></div>

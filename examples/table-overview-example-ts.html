@@ -1,6 +1,6 @@
 <span class="hljs-keyword">import</span> {Component, ElementRef, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
-<span class="hljs-keyword">import</span> {MdPaginator, MdSort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {MatPaginator, MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 <span class="hljs-keyword">import</span> {SelectionModel} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
 <span class="hljs-keyword">import</span> {BehaviorSubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/BehaviorSubject'</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
@@ -25,8 +25,8 @@
   selection = <span class="hljs-keyword">new</span> SelectionModel&lt;<span class="hljs-built_in">string</span>&gt;(<span class="hljs-literal">true</span>, []);
   dataSource: ExampleDataSource | <span class="hljs-literal">null</span>;
 
-  <span class="hljs-meta">@ViewChild</span>(MdPaginator) paginator: MdPaginator;
-  <span class="hljs-meta">@ViewChild</span>(MdSort) sort: MdSort;
+  <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
+  <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'filter'</span>) filter: ElementRef;
 
   ngOnInit() {
@@ -127,8 +127,8 @@
   renderedData: UserData[] = [];
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _exampleDatabase: ExampleDatabase,
-              <span class="hljs-keyword">private</span> _paginator: MdPaginator,
-              <span class="hljs-keyword">private</span> _sort: MdSort</span>) {
+              <span class="hljs-keyword">private</span> _paginator: MatPaginator,
+              <span class="hljs-keyword">private</span> _sort: MatSort</span>) {
     <span class="hljs-keyword">super</span>();
 
     <span class="hljs-comment">// Reset to the first page when the user changes the filter.</span>
