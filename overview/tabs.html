@@ -66,16 +66,16 @@ provides a tab-like UI for navigating between routes.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">mat-tab-nav-bar</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-tab-link</span>
      *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let link of navLinks"</span>
-     [<span class="hljs-attr">routerLink</span>]=<span class="hljs-string">"link"</span>
+     [<span class="hljs-attr">routerLink</span>]=<span class="hljs-string">"link.path"</span>
      <span class="hljs-attr">routerLinkActive</span> #<span class="hljs-attr">rla</span>=<span class="hljs-string">"routerLinkActive"</span>
      [<span class="hljs-attr">active</span>]=<span class="hljs-string">"rla.isActive"</span>&gt;</span>
-    {{tabLink.label}}
+    {{link.label}}
   <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span>
 </code></pre>
-<p class="docs-markdown-p">The tab-nav-bar is not tied to any particular router; it works with normal <code class="docs-markdown-code">&lt;a&gt;</code> elements and uses
+<p class="docs-markdown-p">The <code class="docs-markdown-code">tab-nav-bar</code> is not tied to any particular router; it works with normal <code class="docs-markdown-code">&lt;a&gt;</code> elements and uses
 the <code class="docs-markdown-code">active</code> property to determine which tab is currently active. The corresponding
 <code class="docs-markdown-code">&lt;router-outlet&gt;</code> can be placed anywhere in the view.</p>
 
@@ -107,7 +107,7 @@ the <code class="docs-markdown-code">active</code> property to determine which t
 <td class="docs-markdown-td">Move focus to next tab</td>
 </tr>
 <tr class="docs-markdown-tr">
-<td class="docs-markdown-td"><code class="docs-markdown-code">SPACE</code> or 'ENTER'</td>
+<td class="docs-markdown-td"><code class="docs-markdown-code">SPACE</code> or <code class="docs-markdown-code">ENTER</code></td>
 <td class="docs-markdown-td">Switch to focused tab</td>
 </tr>
 </tbody>
