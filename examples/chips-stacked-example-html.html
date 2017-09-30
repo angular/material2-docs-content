@@ -1,7 +1,5 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-chip-list-stacked"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let chipColor of availableColors"</span>
-      <span class="hljs-attr">selected</span>=<span class="hljs-string">"true"</span>
-      <span class="hljs-attr">color</span>=<span class="hljs-string">"{{chipColor.color}}"</span>&gt;</span>
-    {{chipColor.name}}
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let chip of availableColors"</span> <span class="hljs-attr">selected</span>=<span class="hljs-string">"true"</span> [<span class="hljs-attr">color</span>]=<span class="hljs-string">"chip.color"</span>&gt;</span>
+    {{chip.name}}
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-list</span>&gt;</span>

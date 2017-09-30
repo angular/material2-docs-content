@@ -321,8 +321,8 @@ class CardFancyExample {
 CardFancyExample.decorators = [
     { type: Component, args: [{
                 selector: 'card-fancy-example',
-                template: "<mat-card class=\"example-card\"><mat-card-header><div mat-card-avatar class=\"example-header-image\"></div><mat-card-title>Shiba Inu</mat-card-title><mat-card-subtitle>Dog Breed</mat-card-subtitle></mat-card-header><img mat-card-image src=\"assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"><mat-card-content><p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p></mat-card-content><mat-card-actions><button mat-button>LIKE</button> <button mat-button>SHARE</button></mat-card-actions></mat-card>",
-                styles: [".example-card { width: 400px; } .example-header-image { background-image: url('../../../assets/img/examples/shiba1.jpg'); background-size: cover; } "],
+                template: "<mat-card class=\"example-card\"><mat-card-header><div mat-card-avatar class=\"example-header-image\"></div><mat-card-title>Shiba Inu</mat-card-title><mat-card-subtitle>Dog Breed</mat-card-subtitle></mat-card-header><img mat-card-image src=\"http://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"><mat-card-content><p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p></mat-card-content><mat-card-actions><button mat-button>LIKE</button> <button mat-button>SHARE</button></mat-card-actions></mat-card>",
+                styles: [".example-card { width: 400px; } .example-header-image { background-image: url('http://material.angular.io/assets/img/examples/shiba1.jpg'); background-size: cover; } "],
             },] },
 ];
 /**
@@ -579,7 +579,7 @@ class ChipsStackedExample {
 ChipsStackedExample.decorators = [
     { type: Component, args: [{
                 selector: 'chips-stacked-example',
-                template: "<mat-chip-list class=\"mat-chip-list-stacked\"><mat-chip *ngFor=\"let chipColor of availableColors\" selected=\"true\" color=\"{{chipColor.color}}\">{{chipColor.name}}</mat-chip></mat-chip-list>",
+                template: "<mat-chip-list class=\"mat-chip-list-stacked\"><mat-chip *ngFor=\"let chip of availableColors\" selected=\"true\" [color]=\"chip.color\">{{chip.name}}</mat-chip></mat-chip-list>",
                 styles: ["mat-chip { max-width: 200px; } "],
             },] },
 ];
@@ -1711,7 +1711,7 @@ PizzaPartyComponent.decorators = [
     { type: Component, args: [{
                 selector: 'snack-bar-component-example-snack',
                 template: "<span class=\"example-pizza-party\">Pizza party!!! 🍕</span>",
-                styles: [".example-pizza-party { color: hotpink; } "],
+                styles: [`.example-pizza-party { color: hotpink; }`],
             },] },
 ];
 /**
