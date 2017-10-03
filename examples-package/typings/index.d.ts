@@ -1,7 +1,7 @@
 /**
  * Generated bundle index. Do not edit.
  */
-export * from './public_api';
+export * from './public-api';
 export { AutocompleteDisplayExample as ɵa } from './autocomplete-display/autocomplete-display-example';
 export { AutocompleteFilterExample as ɵb } from './autocomplete-filter/autocomplete-filter-example';
 export { AutocompleteOverviewExample as ɵc } from './autocomplete-overview/autocomplete-overview-example';
