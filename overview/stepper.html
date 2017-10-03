@@ -8,8 +8,8 @@ styling.</p>
           <div header-link="stepper-variants"></div>
           Stepper variants
         </h3>
-      <p class="docs-markdown-p">There are two stepper components: <code class="docs-markdown-code">mat-horizontal-stepper</code> and <code class="docs-markdown-code">mat-vertical-stepper</code>. They 
-can be used the same way. The only difference is the orientation of stepper. 
+      <p class="docs-markdown-p">There are two stepper components: <code class="docs-markdown-code">mat-horizontal-stepper</code> and <code class="docs-markdown-code">mat-vertical-stepper</code>. They
+can be used the same way. The only difference is the orientation of stepper.
 <code class="docs-markdown-code">mat-horizontal-stepper</code> selector can be used to create a horizontal stepper, and
 <code class="docs-markdown-code">mat-vertical-stepper</code> can be used to create a vertical stepper. <code class="docs-markdown-code">mat-step</code> components need to be
 placed inside either one of the two stepper components.</p>
@@ -28,7 +28,7 @@ placed inside either one of the two stepper components.</p>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-vertical-stepper</span>&gt;</span>
 </code></pre>
-<p class="docs-markdown-p">For more complex labels, add a template with the <code class="docs-markdown-code">matStepLabel</code> directive inside the 
+<p class="docs-markdown-p">For more complex labels, add a template with the <code class="docs-markdown-code">matStepLabel</code> directive inside the
 <code class="docs-markdown-code">mat-step</code>.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-vertical-stepper</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span>&gt;</span>
@@ -62,7 +62,7 @@ placed inside either one of the two stepper components.</p>
       <p class="docs-markdown-p">The <code class="docs-markdown-code">linear</code> attribute can be set on <code class="docs-markdown-code">mat-horizontal-stepper</code> and <code class="docs-markdown-code">mat-vertical-stepper</code> to create
 a linear stepper that requires the user to complete previous steps before proceeding
 to following steps. For each <code class="docs-markdown-code">mat-step</code>, the <code class="docs-markdown-code">stepControl</code> attribute can be set to the top level
-<code class="docs-markdown-code">AbstractControl</code> that is used to check the validity of the step. </p>
+<code class="docs-markdown-code">AbstractControl</code> that is used to check the validity of the step.</p>
 <p class="docs-markdown-p">There are two possible approaches. One is using a single form for stepper, and the other is
 using a different form for each step.</p>
 
@@ -72,7 +72,7 @@ using a different form for each step.</p>
         </h4>
       <p class="docs-markdown-p">When using a single form for the stepper, <code class="docs-markdown-code">matStepperPrevious</code> and <code class="docs-markdown-code">matStepperNext</code> have to be
 set to <code class="docs-markdown-code">type="button"</code> in order to prevent submission of the form before all steps
-are completed. </p>
+are completed.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"formGroup"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> <span class="hljs-attr">formArrayName</span>=<span class="hljs-string">"formArray"</span> <span class="hljs-attr">linear</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">formGroupName</span>=<span class="hljs-string">"0"</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"formArray.get([0])"</span>&gt;</span>
@@ -89,7 +89,7 @@ are completed. </p>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
     ...
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span> 
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 </code></pre>
 
@@ -121,14 +121,14 @@ are completed. </p>
           Optional step
         </h4>
       <p class="docs-markdown-p">If completion of a step in linear stepper is not required, then the <code class="docs-markdown-code">optional</code> attribute can be set
-on <code class="docs-markdown-code">mat-step</code>. </p>
+on <code class="docs-markdown-code">mat-step</code>.</p>
 
         <h4 id="editable-step" class="docs-header-link docs-markdown-h4">
           <div header-link="editable-step"></div>
           Editable step
         </h4>
       <p class="docs-markdown-p">By default, steps are editable, which means users can return to previously completed steps and
-edit their responses. <code class="docs-markdown-code">editable="true"</code> can be set on <code class="docs-markdown-code">mat-step</code> to change the default. </p>
+edit their responses. <code class="docs-markdown-code">editable="true"</code> can be set on <code class="docs-markdown-code">mat-step</code> to change the default.</p>
 
         <h4 id="completed-step" class="docs-header-link docs-markdown-h4">
           <div header-link="completed-step"></div>
@@ -149,6 +149,21 @@ this default <code class="docs-markdown-code">completed</code> behavior by setti
 <li class="docs-markdown-li"><kbd>TAB</kbd>: Focuses the next tabbable element</li>
 <li class="docs-markdown-li"><kbd>TAB</kbd>+<kbd>SHIFT</kbd>: Focuses the previous tabbable element</li>
 </ul>
+
+        <h3 id="localizing-labels" class="docs-header-link docs-markdown-h3">
+          <div header-link="localizing-labels"></div>
+          Localizing labels
+        </h3>
+      <p class="docs-markdown-p">Labels used by the stepper are provided through <code class="docs-markdown-code">MatStepperIntl</code>. Localization of these messages
+can be done by providing a subclass with translated values in your application root module.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  imports: [MatStepperModule],
+  providers: [
+    {provide: MatStepperIntl, useClass: MyIntl},
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}
+</code></pre>
 
         <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
           <div header-link="accessibility"></div>
