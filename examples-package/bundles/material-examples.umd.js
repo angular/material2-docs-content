@@ -595,7 +595,7 @@ var ChipsInputExample = (function () {
     ChipsInputExample.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'chips-input-example',
-                    template: "<mat-form-field class=\"demo-chip-list\"><mat-chip-list matPrefix #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (remove)=\"remove(fruit)\">{{fruit.name}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip></mat-chip-list><input matInput placeholder=\"New fruit...\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-form-field>",
+                    template: "<mat-form-field class=\"demo-chip-list\"><mat-chip-list #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (remove)=\"remove(fruit)\">{{fruit.name}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip><input placeholder=\"New fruit...\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-chip-list></mat-form-field>",
                     styles: [".demo-chip-list{width:100%}"]
                 },] },
     ];
@@ -1966,6 +1966,7 @@ var RadioOverviewExample = (function () {
         { type: _angular_core.Component, args: [{
                     selector: 'radio-overview-example',
                     template: "<mat-radio-group><mat-radio-button value=\"1\">Option 1</mat-radio-button><mat-radio-button value=\"2\">Option 2</mat-radio-button></mat-radio-group>",
+                    styles: [".mat-radio-button ~ .mat-radio-button { padding-right: 16px; } "],
                 },] },
     ];
     /**
