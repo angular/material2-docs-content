@@ -138,7 +138,7 @@ returns a boolean. A result of <code class="docs-markdown-code">true</code> will
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 </code></pre>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">class</span> MyErrorStateMatcher <span class="hljs-keyword">implements</span> ErrorStateMatcher {
-  isErrorState(control: NgControl | <span class="hljs-literal">null</span>, form: FormGroupDirective | NgForm | <span class="hljs-literal">null</span>): <span class="hljs-built_in">boolean</span> {
+  isErrorState(control: FormControl | <span class="hljs-literal">null</span>, form: FormGroupDirective | NgForm | <span class="hljs-literal">null</span>): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-comment">// Error when invalid control is dirty, touched, or submitted</span>
     <span class="hljs-keyword">const</span> isSubmitted = form &amp;&amp; form.submitted;
     <span class="hljs-keyword">return</span> !!(control &amp;&amp; control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted)));
