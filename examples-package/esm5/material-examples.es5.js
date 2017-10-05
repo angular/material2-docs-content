@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { Component, Inject, NgModule, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, Inject, Input, NgModule, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -18,6 +18,10 @@ import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/observable/merge';
 import { ENTER } from '@angular/cdk/keycodes';
+import { FocusMonitor } from '@angular/cdk/a11y';
+import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { MatFormFieldControl } from '@angular/material/form-field';
+import { Subject } from 'rxjs/Subject';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
@@ -1050,6 +1054,380 @@ var ExpansionStepsExample = (function () {
      */
     ExpansionStepsExample.ctorParameters = function () { return []; };
     return ExpansionStepsExample;
+}());
+
+/**
+ * Data structure for holding telephone number.
+ */
+var MyTel = (function () {
+    /**
+     * @param {?} area
+     * @param {?} exchange
+     * @param {?} subscriber
+     */
+    function MyTel(area, exchange, subscriber) {
+        this.area = area;
+        this.exchange = exchange;
+        this.subscriber = subscriber;
+    }
+    return MyTel;
+}());
+/**
+ * Custom `MatFormFieldControl` for telephone number input.
+ */
+var MyTelInput = (function () {
+    /**
+     * @param {?} fb
+     * @param {?} fm
+     * @param {?} elRef
+     * @param {?} renderer
+     */
+    function MyTelInput(fb, fm, elRef, renderer) {
+        var _this = this;
+        this.fm = fm;
+        this.elRef = elRef;
+        this.stateChanges = new Subject();
+        this.focused = false;
+        this.ngControl = null;
+        this.errorState = false;
+        this.controlType = 'my-tel-input';
+        this.id = "my-tel-input-" + MyTelInput.nextId++;
+        this.describedBy = '';
+        this._required = false;
+        this._disabled = false;
+        this.parts = fb.group({
+            'area': '',
+            'exchange': '',
+            'subscriber': '',
+        });
+        fm.monitor(elRef.nativeElement, renderer, true).subscribe(function (origin) {
+            _this.focused = !!origin;
+            _this.stateChanges.next();
+        });
+    }
+    Object.defineProperty(MyTelInput.prototype, "empty", {
+        /**
+         * @return {?}
+         */
+        get: function () {
+            var /** @type {?} */ n = this.parts.value;
+            return !n.area && !n.exchange && !n.subscriber;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MyTelInput.prototype, "shouldPlaceholderFloat", {
+        /**
+         * @return {?}
+         */
+        get: function () {
+            return this.focused || !this.empty;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MyTelInput.prototype, "placeholder", {
+        /**
+         * @return {?}
+         */
+        get: function () {
+            return this._placeholder;
+        },
+        /**
+         * @param {?} plh
+         * @return {?}
+         */
+        set: function (plh) {
+            this._placeholder = plh;
+            this.stateChanges.next();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MyTelInput.prototype, "required", {
+        /**
+         * @return {?}
+         */
+        get: function () {
+            return this._required;
+        },
+        /**
+         * @param {?} req
+         * @return {?}
+         */
+        set: function (req) {
+            this._required = coerceBooleanProperty(req);
+            this.stateChanges.next();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MyTelInput.prototype, "disabled", {
+        /**
+         * @return {?}
+         */
+        get: function () {
+            return this._disabled;
+        },
+        /**
+         * @param {?} dis
+         * @return {?}
+         */
+        set: function (dis) {
+            this._disabled = coerceBooleanProperty(dis);
+            this.stateChanges.next();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MyTelInput.prototype, "value", {
+        /**
+         * @return {?}
+         */
+        get: function () {
+            var /** @type {?} */ n = this.parts.value;
+            if (n.area.length == 3 && n.exchange.length == 3 && n.subscriber.length == 4) {
+                return new MyTel(n.area, n.exchange, n.subscriber);
+            }
+            return null;
+        },
+        /**
+         * @param {?} tel
+         * @return {?}
+         */
+        set: function (tel) {
+            tel = tel || new MyTel('', '', '');
+            this.parts.setValue({ area: tel.area, exchange: tel.exchange, subscriber: tel.subscriber });
+            this.stateChanges.next();
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    MyTelInput.prototype.ngOnDestroy = function () {
+        this.stateChanges.complete();
+        this.fm.stopMonitoring(this.elRef.nativeElement);
+    };
+    /**
+     * @param {?} ids
+     * @return {?}
+     */
+    MyTelInput.prototype.setDescribedByIds = function (ids) {
+        this.describedBy = ids.join(' ');
+    };
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    MyTelInput.prototype.onContainerClick = function (event) {
+        if (((event.target)).tagName.toLowerCase() != 'input') {
+            this.elRef.nativeElement.querySelector('input').focus();
+        }
+    };
+    MyTelInput.nextId = 0;
+    MyTelInput.decorators = [
+        { type: Component, args: [{
+                    selector: 'my-tel-input',
+                    template: "<div [formGroup]=\"parts\"><input class=\"area\" formControlName=\"area\" size=\"3\" [disabled]=\"disabled\"> <span>&ndash;</span> <input class=\"exchange\" formControlName=\"exchange\" size=\"3\" [disabled]=\"disabled\"> <span>&ndash;</span> <input class=\"subscriber\" formControlName=\"subscriber\" size=\"4\" [disabled]=\"disabled\"></div>",
+                    styles: ["div { display: flex; } input { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } span { opacity: 0; transition: opacity 200ms; } :host.floating span { opacity: 1; } "],
+                    providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }],
+                    host: {
+                        '[class.floating]': 'shouldPlaceholderFloat',
+                        '[id]': 'id',
+                        '[attr.aria-describedby]': 'describedBy',
+                    }
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    MyTelInput.ctorParameters = function () { return [
+        { type: FormBuilder, },
+        { type: FocusMonitor, },
+        { type: ElementRef, },
+        { type: Renderer2, },
+    ]; };
+    MyTelInput.propDecorators = {
+        'placeholder': [{ type: Input },],
+        'required': [{ type: Input },],
+        'disabled': [{ type: Input },],
+        'value': [{ type: Input },],
+    };
+    return MyTelInput;
+}());
+/**
+ * \@title Form field with custom telephone number input control.
+ */
+var FormFieldCustomControlExample = (function () {
+    function FormFieldCustomControlExample() {
+    }
+    FormFieldCustomControlExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'form-field-custom-control-example',
+                    template: "\n    <mat-form-field>\n      <my-tel-input placeholder=\"Phone number\" required></my-tel-input>\n      <mat-icon matSuffix>phone</mat-icon>\n      <mat-hint>Include area code</mat-hint>\n    </mat-form-field>\n  "
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    FormFieldCustomControlExample.ctorParameters = function () { return []; };
+    return FormFieldCustomControlExample;
+}());
+
+/**
+ * \@title Form field with error messages
+ */
+var FormFieldErrorExample = (function () {
+    function FormFieldErrorExample() {
+        this.email = new FormControl('', [Validators.required, Validators.email]);
+    }
+    /**
+     * @return {?}
+     */
+    FormFieldErrorExample.prototype.getErrorMessage = function () {
+        return this.email.hasError('required') ? 'You must enter a value' :
+            this.email.hasError('email') ? 'Not a valid email' :
+                '';
+    };
+    FormFieldErrorExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'form-field-error-example',
+                    template: "<div class=\"example-container\"><mat-form-field><input matInput placeholder=\"Enter your email\" [formControl]=\"email\" required><mat-error *ngIf=\"email.invalid\">{{getErrorMessage()}}</mat-error></mat-form-field></div>",
+                    styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    FormFieldErrorExample.ctorParameters = function () { return []; };
+    return FormFieldErrorExample;
+}());
+
+/**
+ * \@title Form field with hints
+ */
+var FormFieldHintExample = (function () {
+    function FormFieldHintExample() {
+    }
+    FormFieldHintExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'form-field-hint-example',
+                    template: "<div class=\"example-container\"><mat-form-field hintLabel=\"Max 10 characters\"><input matInput #input maxlength=\"10\" placeholder=\"Enter some input\"><mat-hint align=\"end\">{{input.value?.length || 0}}/10</mat-hint></mat-form-field><mat-form-field><mat-select placeholder=\"Select me\"><mat-option value=\"option\">Option</mat-option></mat-select><mat-hint align=\"end\">Here's the dropdown arrow ^</mat-hint></mat-form-field></div>",
+                    styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    FormFieldHintExample.ctorParameters = function () { return []; };
+    return FormFieldHintExample;
+}());
+
+/**
+ * \@title Simple form field
+ */
+var FormFieldOverviewExample = (function () {
+    function FormFieldOverviewExample() {
+    }
+    FormFieldOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'form-field-overview-example',
+                    template: "<div class=\"example-container\"><mat-form-field><input matInput placeholder=\"Input\"></mat-form-field><mat-form-field><textarea matInput placeholder=\"Textarea\"></textarea></mat-form-field><mat-form-field><mat-select placeholder=\"Select\"><mat-option value=\"option\">Option</mat-option></mat-select></mat-form-field></div>",
+                    styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    FormFieldOverviewExample.ctorParameters = function () { return []; };
+    return FormFieldOverviewExample;
+}());
+
+/**
+ * \@title Form field with placeholder
+ */
+var FormFieldPlaceholderExample = (function () {
+    /**
+     * @param {?} fb
+     */
+    function FormFieldPlaceholderExample(fb) {
+        this.options = fb.group({
+            hideRequired: false,
+            floatPlaceholder: 'auto',
+        });
+    }
+    FormFieldPlaceholderExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'form-field-placeholder-example',
+                    template: "<div class=\"example-container\"><form class=\"example-container\" [formGroup]=\"options\"><mat-checkbox formControlName=\"hideRequired\">Hide required marker</mat-checkbox><div><label>Float placeholder:</label><mat-radio-group formControlName=\"floatPlaceholder\"><mat-radio-button value=\"auto\">Auto</mat-radio-button><mat-radio-button value=\"always\">Always</mat-radio-button><mat-radio-button value=\"never\">Never</mat-radio-button></mat-radio-group></div></form><mat-form-field [hideRequiredMarker]=\"options.value.hideRequired\" [floatPlaceholder]=\"options.value.floatPlaceholder\"><input matInput placeholder=\"Simple placeholder\" required></mat-form-field><mat-form-field [hideRequiredMarker]=\"options.value.hideRequired\" [floatPlaceholder]=\"options.value.floatPlaceholder\"><mat-select required><mat-option>-- None --</mat-option><mat-option value=\"option\">Option</mat-option></mat-select><mat-placeholder><mat-icon>favorite</mat-icon><b>Fancy</b> <i>placeholder</i></mat-placeholder></mat-form-field></div>",
+                    styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-container form { margin-bottom: 20px; } .example-container form > * { margin: 5px 0; } .example-container .mat-radio-button { margin: 0 5px; } "]
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    FormFieldPlaceholderExample.ctorParameters = function () { return [
+        { type: FormBuilder, },
+    ]; };
+    return FormFieldPlaceholderExample;
+}());
+
+/**
+ * \@title Form field with prefix & suffix
+ */
+var FormFieldPrefixSuffixExample = (function () {
+    function FormFieldPrefixSuffixExample() {
+        this.hide = true;
+    }
+    FormFieldPrefixSuffixExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'form-field-prefix-suffix-example',
+                    template: "<div class=\"example-container\"><mat-form-field><input matInput placeholder=\"Enter your password\" [type]=\"hide ? 'password' : 'text'\"><mat-icon matSuffix (click)=\"hide = !hide\">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon></mat-form-field><mat-form-field><input matInput placeholder=\"Amount\" type=\"number\" class=\"example-right-align\"> <span matPrefix>$&nbsp;</span> <span matSuffix>.00</span></mat-form-field></div>",
+                    styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-right-align { text-align: right; } input.example-right-align::-webkit-outer-spin-button, input.example-right-align::-webkit-inner-spin-button { display: none; } "]
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    FormFieldPrefixSuffixExample.ctorParameters = function () { return []; };
+    return FormFieldPrefixSuffixExample;
+}());
+
+/**
+ * \@title Form field theming
+ */
+var FormFieldThemingExample = (function () {
+    /**
+     * @param {?} fb
+     */
+    function FormFieldThemingExample(fb) {
+        this.options = fb.group({
+            'color': 'primary',
+            'fontSize': [16, Validators.min(10)],
+        });
+    }
+    /**
+     * @return {?}
+     */
+    FormFieldThemingExample.prototype.getFontSize = function () {
+        return Math.max(10, this.options.value.fontSize);
+    };
+    FormFieldThemingExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'form-field-theming-example',
+                    template: "<form class=\"example-container\" [formGroup]=\"options\" [style.fontSize.px]=\"getFontSize()\"><mat-form-field [color]=\"options.value.color\"><mat-select placeholder=\"Color\" formControlName=\"color\"><mat-option value=\"primary\">Primary</mat-option><mat-option value=\"accent\">Accent</mat-option><mat-option value=\"warn\">Warn</mat-option></mat-select></mat-form-field><mat-form-field [color]=\"options.value.color\"><input matInput type=\"number\" placeholder=\"Font size (px)\" formControlName=\"fontSize\" min=\"10\"><mat-error *ngIf=\"options.get('fontSize').invalid\">Min size: 10px</mat-error></mat-form-field></form>",
+                    styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    FormFieldThemingExample.ctorParameters = function () { return [
+        { type: FormBuilder, },
+    ]; };
+    return FormFieldThemingExample;
 }());
 
 /**
@@ -3168,6 +3546,48 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'form-field-custom-control': {
+        title: 'Form field with custom telephone number input control. ',
+        component: FormFieldCustomControlExample,
+        additionalFiles: ["form-field-custom-control-example.html"],
+        selectorName: 'FormFieldCustomControlExample, MyTelInput'
+    },
+    'form-field-error': {
+        title: 'Form field with error messages ',
+        component: FormFieldErrorExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'form-field-hint': {
+        title: 'Form field with hints ',
+        component: FormFieldHintExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'form-field-overview': {
+        title: 'Simple form field ',
+        component: FormFieldOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'form-field-placeholder': {
+        title: 'Form field with placeholder ',
+        component: FormFieldPlaceholderExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'form-field-prefix-suffix': {
+        title: 'Form field with prefix & suffix ',
+        component: FormFieldPrefixSuffixExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'form-field-theming': {
+        title: 'Form field theming ',
+        component: FormFieldThemingExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'grid-list-dynamic': {
         title: 'Dynamic grid-list',
         component: GridListDynamicExample,
@@ -3492,6 +3912,13 @@ var EXAMPLE_LIST = [
     DialogOverviewExampleDialog, DialogOverviewExample,
     ExpansionOverviewExample,
     ExpansionStepsExample,
+    MyTelInput, FormFieldCustomControlExample,
+    FormFieldErrorExample,
+    FormFieldHintExample,
+    FormFieldOverviewExample,
+    FormFieldPlaceholderExample,
+    FormFieldPrefixSuffixExample,
+    FormFieldThemingExample,
     GridListDynamicExample,
     GridListOverviewExample,
     IconOverviewExample,
@@ -3613,5 +4040,5 @@ var ExampleData = (function () {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵq, DatepickerStartViewExample as ɵr, DatepickerTouchExample as ɵs, DialogContentExample as ɵt, DialogContentExampleDialog as ɵu, DialogDataExample as ɵv, DialogDataExampleDialog as ɵw, DialogElementsExample as ɵx, DialogElementsExampleDialog as ɵy, DialogOverviewExample as ɵz, DialogOverviewExampleDialog as ɵba, ExpansionStepsExample as ɵbb, GridListDynamicExample as ɵbc, GridListOverviewExample as ɵbd, IconOverviewExample as ɵbe, IconSvgExample as ɵbf, InputClearableExample as ɵbg, InputErrorsExample as ɵbh, InputFormExample as ɵbi, InputHintExample as ɵbj, InputOverviewExample as ɵbk, InputPrefixSuffixExample as ɵbl, ListSectionsExample as ɵbm, ListSelectionExample as ɵbn, ExampleMaterialModule as ɵcx, MenuIconsExample as ɵbo, MenuOverviewExample as ɵbp, NestedMenuExample as ɵbq, PaginatorConfigurableExample as ɵbr, PaginatorOverviewExample as ɵbs, ProgressBarConfigurableExample as ɵbt, ProgressBarOverviewExample as ɵbu, ProgressSpinnerConfigurableExample as ɵbv, ProgressSpinnerOverviewExample as ɵbw, RadioNgModelExample as ɵbx, RadioOverviewExample as ɵby, SelectFormExample as ɵbz, SelectOverviewExample as ɵca, SidenavFabExample as ɵcb, SidenavOverviewExample as ɵcc, SlideToggleConfigurableExample as ɵcd, SlideToggleFormsExample as ɵce, SlideToggleOverviewExample as ɵcf, SliderConfigurableExample as ɵcg, SliderOverviewExample as ɵch, PizzaPartyComponent as ɵcj, SnackBarComponentExample as ɵci, SnackBarOverviewExample as ɵck, SortOverviewExample as ɵcl, TableBasicExample as ɵcm, TableFilteringExample as ɵcn, TableHttpExample as ɵco, TableOverviewExample as ɵcp, TablePaginationExample as ɵcq, TableSortingExample as ɵcr, TabsOverviewExample as ɵcs, TabsTemplateLabelExample as ɵct, ToolbarOverviewExample as ɵcu, TooltipOverviewExample as ɵcv, TooltipPositionExample as ɵcw };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵq, DatepickerStartViewExample as ɵr, DatepickerTouchExample as ɵs, DialogContentExample as ɵt, DialogContentExampleDialog as ɵu, DialogDataExample as ɵv, DialogDataExampleDialog as ɵw, DialogElementsExample as ɵx, DialogElementsExampleDialog as ɵy, DialogOverviewExample as ɵz, DialogOverviewExampleDialog as ɵba, ExpansionStepsExample as ɵbb, FormFieldCustomControlExample as ɵbd, MyTelInput as ɵbc, FormFieldErrorExample as ɵbe, FormFieldHintExample as ɵbf, FormFieldOverviewExample as ɵbg, FormFieldPlaceholderExample as ɵbh, FormFieldPrefixSuffixExample as ɵbi, FormFieldThemingExample as ɵbj, GridListDynamicExample as ɵbk, GridListOverviewExample as ɵbl, IconOverviewExample as ɵbm, IconSvgExample as ɵbn, InputClearableExample as ɵbo, InputErrorsExample as ɵbp, InputFormExample as ɵbq, InputHintExample as ɵbr, InputOverviewExample as ɵbs, InputPrefixSuffixExample as ɵbt, ListSectionsExample as ɵbu, ListSelectionExample as ɵbv, ExampleMaterialModule as ɵdf, MenuIconsExample as ɵbw, MenuOverviewExample as ɵbx, NestedMenuExample as ɵby, PaginatorConfigurableExample as ɵbz, PaginatorOverviewExample as ɵca, ProgressBarConfigurableExample as ɵcb, ProgressBarOverviewExample as ɵcc, ProgressSpinnerConfigurableExample as ɵcd, ProgressSpinnerOverviewExample as ɵce, RadioNgModelExample as ɵcf, RadioOverviewExample as ɵcg, SelectFormExample as ɵch, SelectOverviewExample as ɵci, SidenavFabExample as ɵcj, SidenavOverviewExample as ɵck, SlideToggleConfigurableExample as ɵcl, SlideToggleFormsExample as ɵcm, SlideToggleOverviewExample as ɵcn, SliderConfigurableExample as ɵco, SliderOverviewExample as ɵcp, PizzaPartyComponent as ɵcr, SnackBarComponentExample as ɵcq, SnackBarOverviewExample as ɵcs, SortOverviewExample as ɵct, TableBasicExample as ɵcu, TableFilteringExample as ɵcv, TableHttpExample as ɵcw, TableOverviewExample as ɵcx, TablePaginationExample as ɵcy, TableSortingExample as ɵcz, TabsOverviewExample as ɵda, TabsTemplateLabelExample as ɵdb, ToolbarOverviewExample as ɵdc, TooltipOverviewExample as ɵdd, TooltipPositionExample as ɵde };
 //# sourceMappingURL=material-examples.es5.js.map

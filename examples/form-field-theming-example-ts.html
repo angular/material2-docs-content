@@ -1,0 +1,23 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/** @title Form field theming */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'form-field-theming-example'</span>,
+  templateUrl: <span class="hljs-string">'form-field-theming-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'form-field-theming-example.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldThemingExample {
+  options: FormGroup;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder</span>) {
+    <span class="hljs-keyword">this</span>.options = fb.group({
+      <span class="hljs-string">'color'</span>: <span class="hljs-string">'primary'</span>,
+      <span class="hljs-string">'fontSize'</span>: [<span class="hljs-number">16</span>, Validators.min(<span class="hljs-number">10</span>)],
+    });
+  }
+
+  getFontSize() {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max(<span class="hljs-number">10</span>, <span class="hljs-keyword">this</span>.options.value.fontSize);
+  }
+}

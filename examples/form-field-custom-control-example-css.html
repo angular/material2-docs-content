@@ -1,0 +1,21 @@
+<span class="hljs-selector-tag">div</span> {
+  <span class="hljs-attribute">display</span>: flex;
+}
+
+<span class="hljs-selector-tag">input</span> {
+  <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">background</span>: none;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">outline</span>: none;
+  <span class="hljs-attribute">font</span>: inherit;
+  <span class="hljs-attribute">text-align</span>: center;
+}
+
+<span class="hljs-selector-tag">span</span> {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
+}
+
+<span class="hljs-selector-pseudo">:host.floating</span> <span class="hljs-selector-tag">span</span> {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+}

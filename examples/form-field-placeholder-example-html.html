@@ -1,0 +1,29 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"options"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"hideRequired"</span>&gt;</span>Hide required marker<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Float placeholder: <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"floatPlaceholder"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"auto"</span>&gt;</span>Auto<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"always"</span>&gt;</span>Always<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"never"</span>&gt;</span>Never<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>
+      [<span class="hljs-attr">hideRequiredMarker</span>]=<span class="hljs-string">"options.value.hideRequired"</span>
+      [<span class="hljs-attr">floatPlaceholder</span>]=<span class="hljs-string">"options.value.floatPlaceholder"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Simple placeholder"</span> <span class="hljs-attr">required</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>
+      [<span class="hljs-attr">hideRequiredMarker</span>]=<span class="hljs-string">"options.value.hideRequired"</span>
+      [<span class="hljs-attr">floatPlaceholder</span>]=<span class="hljs-string">"options.value.floatPlaceholder"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> <span class="hljs-attr">required</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span>&gt;</span>-- None --<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"option"</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-placeholder</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>favorite<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span> Fancy<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span> placeholder<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-placeholder</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

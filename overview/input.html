@@ -126,29 +126,31 @@ warn color.</p>
           <div header-link="custom-error-matcher"></div>
           Custom Error Matcher
         </h3>
-      <p class="docs-markdown-p">By default, error messages are shown when the control is invalid and either the user has interacted with
-(touched) the element or the parent form has been submitted. If you wish to override this
+      <p class="docs-markdown-p">By default, error messages are shown when the control is invalid and either the user has interacted
+with (touched) the element or the parent form has been submitted. If you wish to override this
 behavior (e.g. to show the error as soon as the invalid control is dirty or when a parent form group
 is invalid), you can use the <code class="docs-markdown-code">errorStateMatcher</code> property of the <code class="docs-markdown-code">matInput</code>. To use this property,
-create a function in your component class that returns a boolean. A result of <code class="docs-markdown-code">true</code> will display
-the error messages.</p>
+create an <code class="docs-markdown-code">ErrorStateMatcher</code> object in your component class that has a <code class="docs-markdown-code">isErrorState</code> function which
+returns a boolean. A result of <code class="docs-markdown-code">true</code> will display the error messages.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"myInput"</span> <span class="hljs-attr">required</span> [<span class="hljs-attr">errorStateMatcher</span>]=<span class="hljs-string">"myErrorStateMatcher"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span>&gt;</span>This field is required<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
 </code></pre>
-<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myErrorStateMatcher</span>(<span class="hljs-params">control: FormControl, form: FormGroupDirective | NgForm</span>): <span class="hljs-title">boolean</span> </span>{
-  <span class="hljs-comment">// Error when invalid control is dirty, touched, or submitted</span>
-  <span class="hljs-keyword">const</span> isSubmitted = form &amp;&amp; form.submitted;
-  <span class="hljs-keyword">return</span> !!(control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted));
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">class</span> MyErrorStateMatcher <span class="hljs-keyword">implements</span> ErrorStateMatcher {
+  isErrorState(control: NgControl | <span class="hljs-literal">null</span>, form: FormGroupDirective | NgForm | <span class="hljs-literal">null</span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-comment">// Error when invalid control is dirty, touched, or submitted</span>
+    <span class="hljs-keyword">const</span> isSubmitted = form &amp;&amp; form.submitted;
+    <span class="hljs-keyword">return</span> !!(control &amp;&amp; control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted)));
+  }
 }
 </code></pre>
-<p class="docs-markdown-p">A global error state matcher can be specified by setting the <code class="docs-markdown-code">MAT_ERROR_GLOBAL_OPTIONS</code> provider. This applies
-to all inputs. For convenience, <code class="docs-markdown-code">showOnDirtyErrorStateMatcher</code> is available in order to globally set
-input errors to show when the input is dirty and invalid.</p>
+<p class="docs-markdown-p">A global error state matcher can be specified by setting the <code class="docs-markdown-code">ErrorStateMatcher</code> provider. This
+applies to all inputs. For convenience, <code class="docs-markdown-code">ShowOnDirtyErrorStateMatcher</code> is available in order to
+globally cause input errors to show when the input is dirty and invalid.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
   providers: [
-    {provide: MAT_ERROR_GLOBAL_OPTIONS, useValue: {errorStateMatcher: showOnDirtyErrorStateMatcher}}
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
   ]
 })
 </code></pre>

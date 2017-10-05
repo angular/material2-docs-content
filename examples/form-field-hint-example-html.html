@@ -1,0 +1,13 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">hintLabel</span>=<span class="hljs-string">"Max 10 characters"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> #<span class="hljs-attr">input</span> <span class="hljs-attr">maxlength</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter some input"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-hint</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"end"</span>&gt;</span>{{input.value?.length || 0}}/10<span class="hljs-tag">&lt;/<span class="hljs-name">mat-hint</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Select me"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"option"</span>&gt;</span>Option<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-hint</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"end"</span>&gt;</span>Here's the dropdown arrow ^<span class="hljs-tag">&lt;/<span class="hljs-name">mat-hint</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

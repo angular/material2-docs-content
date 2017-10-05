@@ -1,0 +1,14 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"options"</span> [<span class="hljs-attr">style.fontSize.px</span>]=<span class="hljs-string">"getFontSize()"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> [<span class="hljs-attr">color</span>]=<span class="hljs-string">"options.value.color"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Color"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"color"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"primary"</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"accent"</span>&gt;</span>Accent<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"warn"</span>&gt;</span>Warn<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> [<span class="hljs-attr">color</span>]=<span class="hljs-string">"options.value.color"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Font size (px)"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"fontSize"</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"10"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"options.get('fontSize').invalid"</span>&gt;</span>Min size: 10px<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
