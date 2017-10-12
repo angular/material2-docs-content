@@ -1527,7 +1527,27 @@ var IconSvgExample = (function () {
 }());
 
 /**
- * \@title Input Clearable
+ * \@title Auto-resizing textarea
+ */
+var InputAutosizeTextareaExample = (function () {
+    function InputAutosizeTextareaExample() {
+    }
+    InputAutosizeTextareaExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'input-autosize-textarea-example',
+                    template: "<mat-form-field><textarea matInput placeholder=\"Autosize textarea\" matTextareaAutosize matAutosizeMinRows=\"2\" matAutosizeMaxRows=\"5\"></textarea></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    InputAutosizeTextareaExample.ctorParameters = function () { return []; };
+    return InputAutosizeTextareaExample;
+}());
+
+/**
+ * \@title Input with a clear button
  */
 var InputClearableExample = (function () {
     function InputClearableExample() {
@@ -1547,21 +1567,62 @@ var InputClearableExample = (function () {
     return InputClearableExample;
 }());
 
-var EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 /**
- * \@title Input Errors
+ * Error when invalid control is dirty, touched, or submitted.
+ */
+var MyErrorStateMatcher = (function () {
+    function MyErrorStateMatcher() {
+    }
+    /**
+     * @param {?} control
+     * @param {?} form
+     * @return {?}
+     */
+    MyErrorStateMatcher.prototype.isErrorState = function (control, form) {
+        var /** @type {?} */ isSubmitted = form && form.submitted;
+        return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    };
+    return MyErrorStateMatcher;
+}());
+/**
+ * \@title Input with a custom ErrorStateMatcher
+ */
+var InputErrorStateMatcherExample = (function () {
+    function InputErrorStateMatcherExample() {
+        this.emailFormControl = new _angular_forms.FormControl('', [
+            _angular_forms.Validators.required,
+            _angular_forms.Validators.email,
+        ]);
+        this.matcher = new MyErrorStateMatcher();
+    }
+    InputErrorStateMatcherExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'input-error-state-matcher-example',
+                    template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\" [errorStateMatcher]=\"matcher\"><mat-hint>Errors appear instantly!</mat-hint><mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">Please enter a valid email address</mat-error><mat-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></mat-error></mat-form-field></form>",
+                    styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    InputErrorStateMatcherExample.ctorParameters = function () { return []; };
+    return InputErrorStateMatcherExample;
+}());
+
+/**
+ * \@title Input with error messages
  */
 var InputErrorsExample = (function () {
     function InputErrorsExample() {
         this.emailFormControl = new _angular_forms.FormControl('', [
             _angular_forms.Validators.required,
-            _angular_forms.Validators.pattern(EMAIL_REGEX)
+            _angular_forms.Validators.email,
         ]);
     }
     InputErrorsExample.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'input-errors-example',
-                    template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\"><mat-error *ngIf=\"emailFormControl.hasError('pattern')\">Please enter a valid email address</mat-error><mat-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></mat-error></mat-form-field></form>",
+                    template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\"><mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">Please enter a valid email address</mat-error><mat-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></mat-error></mat-form-field></form>",
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
@@ -1593,7 +1654,7 @@ var InputFormExample = (function () {
 }());
 
 /**
- * \@title Input hints
+ * \@title Input with hints
  */
 var InputHintExample = (function () {
     function InputHintExample() {
@@ -1622,7 +1683,7 @@ var InputOverviewExample = (function () {
         { type: _angular_core.Component, args: [{
                     selector: 'input-overview-example',
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
-                    template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Favorite food\" value=\"Sushi\"></mat-form-field></form>",
+                    template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Favorite food\" value=\"Sushi\"></mat-form-field><mat-form-field class=\"example-full-width\"><textarea matInput placeholder=\"Leave a comment\"></textarea></mat-form-field></form>",
                 },] },
     ];
     /**
@@ -1633,7 +1694,7 @@ var InputOverviewExample = (function () {
 }());
 
 /**
- * \@title Input Prefixes and Suffixes
+ * \@title Inputs with prefixes and suffixes
  */
 var InputPrefixSuffixExample = (function () {
     function InputPrefixSuffixExample() {
@@ -1977,6 +2038,91 @@ var RadioOverviewExample = (function () {
 }());
 
 /**
+ * \@title Select with custom trigger text
+ */
+var SelectCustomTriggerExample = (function () {
+    function SelectCustomTriggerExample() {
+        this.toppings = new _angular_forms.FormControl();
+        this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+    }
+    SelectCustomTriggerExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'select-custom-trigger-example',
+                    template: "<mat-form-field><mat-select placeholder=\"Toppings\" [formControl]=\"toppings\" multiple=\"multiple\"><mat-select-trigger>{{toppings.value ? toppings.value[0] : ''}} <span *ngIf=\"toppings.value?.length > 1\" class=\"example-additional-selection\">(+{{toppings.value.length - 1}} others)</span></mat-select-trigger><mat-option *ngFor=\"let topping of toppingList\" [value]=\"topping\">{{topping}}</mat-option></mat-select></mat-form-field>",
+                    styles: [".example-additional-selection { opacity: 0.75; font-size: 0.75em; } "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    SelectCustomTriggerExample.ctorParameters = function () { return []; };
+    return SelectCustomTriggerExample;
+}());
+
+/**
+ * \@title Disabled select
+ */
+var SelectDisabledExample = (function () {
+    function SelectDisabledExample() {
+        this.disableSelect = new _angular_forms.FormControl(false);
+    }
+    SelectDisabledExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'select-disabled-example',
+                    template: "<p><mat-checkbox [formControl]=\"disableSelect\">Disable select</mat-checkbox></p><p><mat-form-field><mat-select placeholder=\"Choose an option\" [disabled]=\"disableSelect.value\"><mat-option value=\"option1\">Option 1</mat-option><mat-option value=\"option2\" disabled=\"disabled\">Option 2 (disabled)</mat-option><mat-option value=\"option3\">Option 3</mat-option></mat-select></mat-form-field></p>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    SelectDisabledExample.ctorParameters = function () { return []; };
+    return SelectDisabledExample;
+}());
+
+/**
+ * Error when invalid control is dirty, touched, or submitted.
+ */
+var MyErrorStateMatcher$1 = (function () {
+    function MyErrorStateMatcher() {
+    }
+    /**
+     * @param {?} control
+     * @param {?} form
+     * @return {?}
+     */
+    MyErrorStateMatcher.prototype.isErrorState = function (control, form) {
+        var /** @type {?} */ isSubmitted = form && form.submitted;
+        return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    };
+    return MyErrorStateMatcher;
+}());
+/**
+ * \@title Select with a custom ErrorStateMatcher
+ */
+var SelectErrorStateMatcherExample = (function () {
+    function SelectErrorStateMatcherExample() {
+        this.selected = new _angular_forms.FormControl('valid', [
+            _angular_forms.Validators.required,
+            _angular_forms.Validators.pattern('valid'),
+        ]);
+        this.matcher = new MyErrorStateMatcher$1();
+    }
+    SelectErrorStateMatcherExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'select-error-state-matcher-example',
+                    template: "<mat-form-field><mat-select placeholder=\"Choose one\" [formControl]=\"selected\" [errorStateMatcher]=\"matcher\"><mat-option>Clear</mat-option><mat-option value=\"valid\">Valid option</mat-option><mat-option value=\"invalid\">Invalid option</mat-option></mat-select><mat-hint>Errors appear instantly!</mat-hint><mat-error *ngIf=\"selected.hasError('required')\">You must make a selection</mat-error><mat-error *ngIf=\"selected.hasError('pattern') && !selected.hasError('required')\">Your selection is invalid</mat-error></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    SelectErrorStateMatcherExample.ctorParameters = function () { return []; };
+    return SelectErrorStateMatcherExample;
+}());
+
+/**
  * \@title Select in a form
  */
 var SelectFormExample = (function () {
@@ -1991,6 +2137,7 @@ var SelectFormExample = (function () {
         { type: _angular_core.Component, args: [{
                     selector: 'select-form-example',
                     template: "<form><mat-form-field><mat-select placeholder=\"Favorite food\" [(ngModel)]=\"selectedValue\" name=\"food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{food.viewValue}}</mat-option></mat-select></mat-form-field><p>Selected value: {{selectedValue}}</p></form>",
+                    styles: ["/** No CSS for this example */ "],
                 },] },
     ];
     /**
@@ -1998,6 +2145,130 @@ var SelectFormExample = (function () {
      */
     SelectFormExample.ctorParameters = function () { return []; };
     return SelectFormExample;
+}());
+
+/**
+ * \@title Select with form field features
+ */
+var SelectHintErrorExample = (function () {
+    function SelectHintErrorExample() {
+        this.animalControl = new _angular_forms.FormControl('', [_angular_forms.Validators.required]);
+        this.animals = [
+            { name: 'Dog', sound: 'Woof!' },
+            { name: 'Cat', sound: 'Meow!' },
+            { name: 'Cow', sound: 'Moo!' },
+            { name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!' },
+        ];
+    }
+    SelectHintErrorExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'select-hint-error-example',
+                    template: "<mat-form-field><mat-select placeholder=\"Favorite animal\" [formControl]=\"animalControl\" required><mat-option>--</mat-option><mat-option *ngFor=\"let animal of animals\" [value]=\"animal\">{{animal.name}}</mat-option></mat-select><mat-error *ngIf=\"animalControl.hasError('required')\">Please choose an animal</mat-error><mat-hint>{{animalControl.value?.sound}}</mat-hint></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    SelectHintErrorExample.ctorParameters = function () { return []; };
+    return SelectHintErrorExample;
+}());
+
+/**
+ * \@title Select with multiple selection
+ */
+var SelectMultipleExample = (function () {
+    function SelectMultipleExample() {
+        this.toppings = new _angular_forms.FormControl();
+        this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+    }
+    SelectMultipleExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'select-multiple-example',
+                    template: "<mat-form-field><mat-select placeholder=\"Toppings\" [formControl]=\"toppings\" multiple=\"multiple\"><mat-option *ngFor=\"let topping of toppingList\" [value]=\"topping\">{{topping}}</mat-option></mat-select></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    SelectMultipleExample.ctorParameters = function () { return []; };
+    return SelectMultipleExample;
+}());
+
+/**
+ * \@title Select with no option ripple
+ */
+var SelectNoRippleExample = (function () {
+    function SelectNoRippleExample() {
+    }
+    SelectNoRippleExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'select-no-ripple-example',
+                    template: "<mat-form-field><mat-select placeholder=\"Select an option\" disableRipple><mat-option value=\"1\">Option 1</mat-option><mat-option value=\"2\">Option 2</mat-option><mat-option value=\"3\">Option 3</mat-option></mat-select></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    SelectNoRippleExample.ctorParameters = function () { return []; };
+    return SelectNoRippleExample;
+}());
+
+/**
+ * \@title Select with option groups
+ */
+var SelectOptgroupExample = (function () {
+    function SelectOptgroupExample() {
+        this.pokemonControl = new _angular_forms.FormControl();
+        this.pokemonGroups = [
+            {
+                name: 'Grass',
+                pokemon: [
+                    { value: 'bulbasaur-0', viewValue: 'Bulbasaur' },
+                    { value: 'oddish-1', viewValue: 'Oddish' },
+                    { value: 'bellsprout-2', viewValue: 'Bellsprout' }
+                ]
+            },
+            {
+                name: 'Water',
+                pokemon: [
+                    { value: 'squirtle-3', viewValue: 'Squirtle' },
+                    { value: 'psyduck-4', viewValue: 'Psyduck' },
+                    { value: 'horsea-5', viewValue: 'Horsea' }
+                ]
+            },
+            {
+                name: 'Fire',
+                disabled: true,
+                pokemon: [
+                    { value: 'charmander-6', viewValue: 'Charmander' },
+                    { value: 'vulpix-7', viewValue: 'Vulpix' },
+                    { value: 'flareon-8', viewValue: 'Flareon' }
+                ]
+            },
+            {
+                name: 'Psychic',
+                pokemon: [
+                    { value: 'mew-9', viewValue: 'Mew' },
+                    { value: 'mewtwo-10', viewValue: 'Mewtwo' },
+                ]
+            }
+        ];
+    }
+    SelectOptgroupExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'select-optgroup-example',
+                    template: "<mat-form-field><mat-select placeholder=\"Pokemon\" [formControl]=\"pokemonControl\"><mat-option>-- None --</mat-option><mat-optgroup *ngFor=\"let group of pokemonGroups\" [label]=\"group.name\" [disabled]=\"group.disabled\"><mat-option *ngFor=\"let pokemon of group.pokemon\" [value]=\"pokemon.value\">{{ pokemon.viewValue }}</mat-option></mat-optgroup></mat-select></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    SelectOptgroupExample.ctorParameters = function () { return []; };
+    return SelectOptgroupExample;
 }());
 
 /**
@@ -2015,6 +2286,7 @@ var SelectOverviewExample = (function () {
         { type: _angular_core.Component, args: [{
                     selector: 'select-overview-example',
                     template: "<mat-form-field><mat-select placeholder=\"Favorite food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{ food.viewValue }}</mat-option></mat-select></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
                 },] },
     ];
     /**
@@ -2022,6 +2294,78 @@ var SelectOverviewExample = (function () {
      */
     SelectOverviewExample.ctorParameters = function () { return []; };
     return SelectOverviewExample;
+}());
+
+/**
+ * \@title Select with custom panel styling
+ */
+var SelectPanelClassExample = (function () {
+    function SelectPanelClassExample() {
+        this.panelColor = new _angular_forms.FormControl('red');
+    }
+    SelectPanelClassExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'select-panel-class-example',
+                    template: "<mat-form-field><mat-select placeholder=\"Panel color\" [formControl]=\"panelColor\" panelClass=\"example-panel-{{panelColor.value}}\"><mat-option value=\"red\">Red</mat-option><mat-option value=\"green\">Green</mat-option><mat-option value=\"blue\">Blue</mat-option></mat-select></mat-form-field>",
+                    styles: [".example-panel-red .mat-select-content { background: rgba(255, 0, 0, 0.5); } .example-panel-green .mat-select-content { background: rgba(0, 255, 0, 0.5); } .example-panel-blue .mat-select-content { background: rgba(0, 0, 255, 0.5); } "],
+                    encapsulation: _angular_core.ViewEncapsulation.None,
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    SelectPanelClassExample.ctorParameters = function () { return []; };
+    return SelectPanelClassExample;
+}());
+
+/**
+ * \@title Select with reset option
+ */
+var SelectResetExample = (function () {
+    function SelectResetExample() {
+        this.states = [
+            'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
+            'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+            'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
+            'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico',
+            'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
+            'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+            'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+        ];
+    }
+    SelectResetExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'select-reset-example',
+                    template: "<mat-form-field><mat-select placeholder=\"State\"><mat-option>None</mat-option><mat-option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</mat-option></mat-select></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    SelectResetExample.ctorParameters = function () { return []; };
+    return SelectResetExample;
+}());
+
+/**
+ * \@title Select with 2-way value binding
+ */
+var SelectValueBindingExample = (function () {
+    function SelectValueBindingExample() {
+        this.selected = 'option2';
+    }
+    SelectValueBindingExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'select-value-binding-example',
+                    template: "<mat-form-field><mat-select [(value)]=\"selected\"><mat-option>None</mat-option><mat-option value=\"option1\">Option 1</mat-option><mat-option value=\"option2\">Option 2</mat-option><mat-option value=\"option3\">Option 3</mat-option></mat-select></mat-form-field><p>You selected: {{selected}}</p>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    SelectValueBindingExample.ctorParameters = function () { return []; };
+    return SelectValueBindingExample;
 }());
 
 /**
@@ -3618,14 +3962,26 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'input-autosize-textarea': {
+        title: 'Auto-resizing textarea ',
+        component: InputAutosizeTextareaExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'input-clearable': {
-        title: 'Input Clearable',
+        title: 'Input with a clear button',
         component: InputClearableExample,
         additionalFiles: null,
         selectorName: null
     },
+    'input-error-state-matcher': {
+        title: 'Input with a custom ErrorStateMatcher ',
+        component: InputErrorStateMatcherExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'input-errors': {
-        title: 'Input Errors',
+        title: 'Input with error messages',
         component: InputErrorsExample,
         additionalFiles: null,
         selectorName: null
@@ -3637,7 +3993,7 @@ var EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'input-hint': {
-        title: 'Input hints',
+        title: 'Input with hints',
         component: InputHintExample,
         additionalFiles: null,
         selectorName: null
@@ -3649,7 +4005,7 @@ var EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'input-prefix-suffix': {
-        title: 'Input Prefixes and Suffixes',
+        title: 'Inputs with prefixes and suffixes',
         component: InputPrefixSuffixExample,
         additionalFiles: null,
         selectorName: null
@@ -3738,15 +4094,75 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'select-custom-trigger': {
+        title: 'Select with custom trigger text ',
+        component: SelectCustomTriggerExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-disabled': {
+        title: 'Disabled select ',
+        component: SelectDisabledExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-error-state-matcher': {
+        title: 'Select with a custom ErrorStateMatcher ',
+        component: SelectErrorStateMatcherExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'select-form': {
         title: 'Select in a form',
         component: SelectFormExample,
         additionalFiles: null,
         selectorName: null
     },
+    'select-hint-error': {
+        title: 'Select with form field features ',
+        component: SelectHintErrorExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-multiple': {
+        title: 'Select with multiple selection ',
+        component: SelectMultipleExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-no-ripple': {
+        title: 'Select with cno option ripple ',
+        component: SelectNoRippleExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-optgroup': {
+        title: 'Select with option groups ',
+        component: SelectOptgroupExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'select-overview': {
         title: 'Basic select',
         component: SelectOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-panel-class': {
+        title: 'Select with custom panel styling',
+        component: SelectPanelClassExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-reset': {
+        title: 'Select with reset option ',
+        component: SelectResetExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-value-binding': {
+        title: 'Select with 2-way value binding ',
+        component: SelectValueBindingExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -3929,7 +4345,9 @@ var EXAMPLE_LIST = [
     GridListOverviewExample,
     IconOverviewExample,
     IconSvgExample,
+    InputAutosizeTextareaExample,
     InputClearableExample,
+    InputErrorStateMatcherExample,
     InputErrorsExample,
     InputFormExample,
     InputHintExample,
@@ -3949,8 +4367,18 @@ var EXAMPLE_LIST = [
     ProgressSpinnerOverviewExample,
     RadioNgModelExample,
     RadioOverviewExample,
+    SelectCustomTriggerExample,
+    SelectDisabledExample,
+    SelectErrorStateMatcherExample,
     SelectFormExample,
+    SelectHintErrorExample,
+    SelectMultipleExample,
+    SelectNoRippleExample,
+    SelectOptgroupExample,
     SelectOverviewExample,
+    SelectPanelClassExample,
+    SelectResetExample,
+    SelectValueBindingExample,
     SidenavFabExample,
     SidenavOverviewExample,
     SlideToggleConfigurableExample,
@@ -4093,50 +4521,62 @@ exports.ɵbk = GridListDynamicExample;
 exports.ɵbl = GridListOverviewExample;
 exports.ɵbm = IconOverviewExample;
 exports.ɵbn = IconSvgExample;
-exports.ɵbo = InputClearableExample;
-exports.ɵbp = InputErrorsExample;
-exports.ɵbq = InputFormExample;
-exports.ɵbr = InputHintExample;
-exports.ɵbs = InputOverviewExample;
-exports.ɵbt = InputPrefixSuffixExample;
-exports.ɵbu = ListSectionsExample;
-exports.ɵbv = ListSelectionExample;
-exports.ɵdf = ExampleMaterialModule;
-exports.ɵbw = MenuIconsExample;
-exports.ɵbx = MenuOverviewExample;
-exports.ɵby = NestedMenuExample;
-exports.ɵbz = PaginatorConfigurableExample;
-exports.ɵca = PaginatorOverviewExample;
-exports.ɵcb = ProgressBarConfigurableExample;
-exports.ɵcc = ProgressBarOverviewExample;
-exports.ɵcd = ProgressSpinnerConfigurableExample;
-exports.ɵce = ProgressSpinnerOverviewExample;
-exports.ɵcf = RadioNgModelExample;
-exports.ɵcg = RadioOverviewExample;
-exports.ɵch = SelectFormExample;
-exports.ɵci = SelectOverviewExample;
-exports.ɵcj = SidenavFabExample;
-exports.ɵck = SidenavOverviewExample;
-exports.ɵcl = SlideToggleConfigurableExample;
-exports.ɵcm = SlideToggleFormsExample;
-exports.ɵcn = SlideToggleOverviewExample;
-exports.ɵco = SliderConfigurableExample;
-exports.ɵcp = SliderOverviewExample;
-exports.ɵcr = PizzaPartyComponent;
-exports.ɵcq = SnackBarComponentExample;
-exports.ɵcs = SnackBarOverviewExample;
-exports.ɵct = SortOverviewExample;
-exports.ɵcu = TableBasicExample;
-exports.ɵcv = TableFilteringExample;
-exports.ɵcw = TableHttpExample;
-exports.ɵcx = TableOverviewExample;
-exports.ɵcy = TablePaginationExample;
-exports.ɵcz = TableSortingExample;
-exports.ɵda = TabsOverviewExample;
-exports.ɵdb = TabsTemplateLabelExample;
-exports.ɵdc = ToolbarOverviewExample;
-exports.ɵdd = TooltipOverviewExample;
-exports.ɵde = TooltipPositionExample;
+exports.ɵbo = InputAutosizeTextareaExample;
+exports.ɵbp = InputClearableExample;
+exports.ɵbq = InputErrorStateMatcherExample;
+exports.ɵbr = InputErrorsExample;
+exports.ɵbs = InputFormExample;
+exports.ɵbt = InputHintExample;
+exports.ɵbu = InputOverviewExample;
+exports.ɵbv = InputPrefixSuffixExample;
+exports.ɵbw = ListSectionsExample;
+exports.ɵbx = ListSelectionExample;
+exports.ɵdr = ExampleMaterialModule;
+exports.ɵby = MenuIconsExample;
+exports.ɵbz = MenuOverviewExample;
+exports.ɵca = NestedMenuExample;
+exports.ɵcb = PaginatorConfigurableExample;
+exports.ɵcc = PaginatorOverviewExample;
+exports.ɵcd = ProgressBarConfigurableExample;
+exports.ɵce = ProgressBarOverviewExample;
+exports.ɵcf = ProgressSpinnerConfigurableExample;
+exports.ɵcg = ProgressSpinnerOverviewExample;
+exports.ɵch = RadioNgModelExample;
+exports.ɵci = RadioOverviewExample;
+exports.ɵcj = SelectCustomTriggerExample;
+exports.ɵck = SelectDisabledExample;
+exports.ɵcl = SelectErrorStateMatcherExample;
+exports.ɵcm = SelectFormExample;
+exports.ɵcn = SelectHintErrorExample;
+exports.ɵco = SelectMultipleExample;
+exports.ɵcp = SelectNoRippleExample;
+exports.ɵcq = SelectOptgroupExample;
+exports.ɵcr = SelectOverviewExample;
+exports.ɵcs = SelectPanelClassExample;
+exports.ɵct = SelectResetExample;
+exports.ɵcu = SelectValueBindingExample;
+exports.ɵcv = SidenavFabExample;
+exports.ɵcw = SidenavOverviewExample;
+exports.ɵcx = SlideToggleConfigurableExample;
+exports.ɵcy = SlideToggleFormsExample;
+exports.ɵcz = SlideToggleOverviewExample;
+exports.ɵda = SliderConfigurableExample;
+exports.ɵdb = SliderOverviewExample;
+exports.ɵdd = PizzaPartyComponent;
+exports.ɵdc = SnackBarComponentExample;
+exports.ɵde = SnackBarOverviewExample;
+exports.ɵdf = SortOverviewExample;
+exports.ɵdg = TableBasicExample;
+exports.ɵdh = TableFilteringExample;
+exports.ɵdi = TableHttpExample;
+exports.ɵdj = TableOverviewExample;
+exports.ɵdk = TablePaginationExample;
+exports.ɵdl = TableSortingExample;
+exports.ɵdm = TabsOverviewExample;
+exports.ɵdn = TabsTemplateLabelExample;
+exports.ɵdo = ToolbarOverviewExample;
+exports.ɵdp = TooltipOverviewExample;
+exports.ɵdq = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

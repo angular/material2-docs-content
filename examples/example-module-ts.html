@@ -52,7 +52,9 @@
 <span class="hljs-keyword">import</span> {GridListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./grid-list-overview/grid-list-overview-example'</span>;
 <span class="hljs-keyword">import</span> {IconOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./icon-overview/icon-overview-example'</span>;
 <span class="hljs-keyword">import</span> {IconSvgExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./icon-svg-example/icon-svg-example'</span>;
+<span class="hljs-keyword">import</span> {InputAutosizeTextareaExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-autosize-textarea/input-autosize-textarea-example'</span>;
 <span class="hljs-keyword">import</span> {InputClearableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-clearable/input-clearable-example'</span>;
+<span class="hljs-keyword">import</span> {InputErrorStateMatcherExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-error-state-matcher/input-error-state-matcher-example'</span>;
 <span class="hljs-keyword">import</span> {InputErrorsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-errors/input-errors-example'</span>;
 <span class="hljs-keyword">import</span> {InputFormExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-form/input-form-example'</span>;
 <span class="hljs-keyword">import</span> {InputHintExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-hint/input-hint-example'</span>;
@@ -72,8 +74,18 @@
 <span class="hljs-keyword">import</span> {ProgressSpinnerOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-spinner-overview/progress-spinner-overview-example'</span>;
 <span class="hljs-keyword">import</span> {RadioNgModelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./radio-ng-model/radio-ng-model-example'</span>;
 <span class="hljs-keyword">import</span> {RadioOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./radio-overview/radio-overview-example'</span>;
+<span class="hljs-keyword">import</span> {SelectCustomTriggerExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-custom-trigger/select-custom-trigger-example'</span>;
+<span class="hljs-keyword">import</span> {SelectDisabledExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-disabled/select-disabled-example'</span>;
+<span class="hljs-keyword">import</span> {SelectErrorStateMatcherExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-error-state-matcher/select-error-state-matcher-example'</span>;
 <span class="hljs-keyword">import</span> {SelectFormExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-form/select-form-example'</span>;
+<span class="hljs-keyword">import</span> {SelectHintErrorExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-hint-error/select-hint-error-example'</span>;
+<span class="hljs-keyword">import</span> {SelectMultipleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-multiple/select-multiple-example'</span>;
+<span class="hljs-keyword">import</span> {SelectNoRippleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-no-ripple/select-no-ripple-example'</span>;
+<span class="hljs-keyword">import</span> {SelectOptgroupExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-optgroup/select-optgroup-example'</span>;
 <span class="hljs-keyword">import</span> {SelectOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-overview/select-overview-example'</span>;
+<span class="hljs-keyword">import</span> {SelectPanelClassExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-panel-class/select-panel-class-example'</span>;
+<span class="hljs-keyword">import</span> {SelectResetExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-reset/select-reset-example'</span>;
+<span class="hljs-keyword">import</span> {SelectValueBindingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-vlaue-binding/select-value-binding-example'</span>;
 <span class="hljs-keyword">import</span> {SidenavFabExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-fab/sidenav-fab-example'</span>;
 <span class="hljs-keyword">import</span> {SidenavOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-overview/sidenav-overview-example'</span>;
 <span class="hljs-keyword">import</span> {SlideToggleConfigurableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./slide-toggle-configurable/slide-toggle-configurable-example'</span>;
@@ -333,14 +345,26 @@
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
+  <span class="hljs-string">'input-autosize-textarea'</span>: {
+    title: <span class="hljs-string">'Auto-resizing textarea '</span>,
+    component: InputAutosizeTextareaExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
   <span class="hljs-string">'input-clearable'</span>: {
-    title: <span class="hljs-string">'Input Clearable'</span>,
+    title: <span class="hljs-string">'Input with a clear button'</span>,
     component: InputClearableExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
+  <span class="hljs-string">'input-error-state-matcher'</span>: {
+    title: <span class="hljs-string">'Input with a custom ErrorStateMatcher '</span>,
+    component: InputErrorStateMatcherExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
   <span class="hljs-string">'input-errors'</span>: {
-    title: <span class="hljs-string">'Input Errors'</span>,
+    title: <span class="hljs-string">'Input with error messages'</span>,
     component: InputErrorsExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
@@ -352,7 +376,7 @@
     selectorName: <span class="hljs-literal">null</span>
   },
   <span class="hljs-string">'input-hint'</span>: {
-    title: <span class="hljs-string">'Input hints'</span>,
+    title: <span class="hljs-string">'Input with hints'</span>,
     component: InputHintExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
@@ -364,7 +388,7 @@
     selectorName: <span class="hljs-literal">null</span>
   },
   <span class="hljs-string">'input-prefix-suffix'</span>: {
-    title: <span class="hljs-string">'Input Prefixes and Suffixes'</span>,
+    title: <span class="hljs-string">'Inputs with prefixes and suffixes'</span>,
     component: InputPrefixSuffixExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
@@ -453,15 +477,75 @@
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
+  <span class="hljs-string">'select-custom-trigger'</span>: {
+    title: <span class="hljs-string">'Select with custom trigger text '</span>,
+    component: SelectCustomTriggerExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'select-disabled'</span>: {
+    title: <span class="hljs-string">'Disabled select '</span>,
+    component: SelectDisabledExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'select-error-state-matcher'</span>: {
+    title: <span class="hljs-string">'Select with a custom ErrorStateMatcher '</span>,
+    component: SelectErrorStateMatcherExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
   <span class="hljs-string">'select-form'</span>: {
     title: <span class="hljs-string">'Select in a form'</span>,
     component: SelectFormExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
+  <span class="hljs-string">'select-hint-error'</span>: {
+    title: <span class="hljs-string">'Select with form field features '</span>,
+    component: SelectHintErrorExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'select-multiple'</span>: {
+    title: <span class="hljs-string">'Select with multiple selection '</span>,
+    component: SelectMultipleExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'select-no-ripple'</span>: {
+    title: <span class="hljs-string">'Select with no option ripple '</span>,
+    component: SelectNoRippleExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'select-optgroup'</span>: {
+    title: <span class="hljs-string">'Select with option groups '</span>,
+    component: SelectOptgroupExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
   <span class="hljs-string">'select-overview'</span>: {
     title: <span class="hljs-string">'Basic select'</span>,
     component: SelectOverviewExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'select-panel-class'</span>: {
+    title: <span class="hljs-string">'Select with custom panel styling'</span>,
+    component: SelectPanelClassExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'select-reset'</span>: {
+    title: <span class="hljs-string">'Select with reset option '</span>,
+    component: SelectResetExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'select-value-binding'</span>: {
+    title: <span class="hljs-string">'Select with 2-way value binding '</span>,
+    component: SelectValueBindingExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
@@ -645,7 +729,9 @@
   GridListOverviewExample,
   IconOverviewExample,
   IconSvgExample,
+  InputAutosizeTextareaExample,
   InputClearableExample,
+  InputErrorStateMatcherExample,
   InputErrorsExample,
   InputFormExample,
   InputHintExample,
@@ -665,8 +751,18 @@
   ProgressSpinnerOverviewExample,
   RadioNgModelExample,
   RadioOverviewExample,
+  SelectCustomTriggerExample,
+  SelectDisabledExample,
+  SelectErrorStateMatcherExample,
   SelectFormExample,
+  SelectHintErrorExample,
+  SelectMultipleExample,
+  SelectNoRippleExample,
+  SelectOptgroupExample,
   SelectOverviewExample,
+  SelectPanelClassExample,
+  SelectResetExample,
+  SelectValueBindingExample,
   SidenavFabExample,
   SidenavOverviewExample,
   SlideToggleConfigurableExample,

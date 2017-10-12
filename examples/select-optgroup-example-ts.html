@@ -1,0 +1,47 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/** @title Select with option groups */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'select-optgroup-example'</span>,
+  templateUrl: <span class="hljs-string">'select-optgroup-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'select-optgroup-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectOptgroupExample {
+  pokemonControl = <span class="hljs-keyword">new</span> FormControl();
+
+  pokemonGroups = [
+    {
+      name: <span class="hljs-string">'Grass'</span>,
+      pokemon: [
+        { value: <span class="hljs-string">'bulbasaur-0'</span>, viewValue: <span class="hljs-string">'Bulbasaur'</span> },
+        { value: <span class="hljs-string">'oddish-1'</span>, viewValue: <span class="hljs-string">'Oddish'</span> },
+        { value: <span class="hljs-string">'bellsprout-2'</span>, viewValue: <span class="hljs-string">'Bellsprout'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'Water'</span>,
+      pokemon: [
+        { value: <span class="hljs-string">'squirtle-3'</span>, viewValue: <span class="hljs-string">'Squirtle'</span> },
+        { value: <span class="hljs-string">'psyduck-4'</span>, viewValue: <span class="hljs-string">'Psyduck'</span> },
+        { value: <span class="hljs-string">'horsea-5'</span>, viewValue: <span class="hljs-string">'Horsea'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'Fire'</span>,
+      disabled: <span class="hljs-literal">true</span>,
+      pokemon: [
+        { value: <span class="hljs-string">'charmander-6'</span>, viewValue: <span class="hljs-string">'Charmander'</span> },
+        { value: <span class="hljs-string">'vulpix-7'</span>, viewValue: <span class="hljs-string">'Vulpix'</span> },
+        { value: <span class="hljs-string">'flareon-8'</span>, viewValue: <span class="hljs-string">'Flareon'</span> }
+      ]
+    },
+    {
+      name: <span class="hljs-string">'Psychic'</span>,
+      pokemon: [
+        { value: <span class="hljs-string">'mew-9'</span>, viewValue: <span class="hljs-string">'Mew'</span> },
+        { value: <span class="hljs-string">'mewtwo-10'</span>, viewValue: <span class="hljs-string">'Mewtwo'</span> },
+      ]
+    }
+  ];
+}

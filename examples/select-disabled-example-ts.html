@@ -1,0 +1,12 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/** @title Disabled select */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'select-disabled-example'</span>,
+  templateUrl: <span class="hljs-string">'select-disabled-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'select-disabled-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectDisabledExample {
+  disableSelect = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-literal">false</span>);
+}

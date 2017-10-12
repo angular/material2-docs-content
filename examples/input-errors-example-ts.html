@@ -1,10 +1,8 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
-<span class="hljs-keyword">const</span> EMAIL_REGEX = <span class="hljs-regexp">/^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/</span>;
-
 <span class="hljs-comment">/**
- * @title Input Errors
+ * @title Input with error messages
  */</span>
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'input-errors-example'</span>,
@@ -12,9 +10,8 @@
   styleUrls: [<span class="hljs-string">'input-errors-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> InputErrorsExample {
-
   emailFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [
     Validators.required,
-    Validators.pattern(EMAIL_REGEX)]);
-
+    Validators.email,
+  ]);
 }

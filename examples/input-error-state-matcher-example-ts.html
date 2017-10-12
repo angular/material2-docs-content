@@ -1,0 +1,26 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl, FormGroupDirective, NgForm, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {ErrorStateMatcher} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
+
+<span class="hljs-comment">/** Error when invalid control is dirty, touched, or submitted. */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyErrorStateMatcher <span class="hljs-keyword">implements</span> ErrorStateMatcher {
+  isErrorState(control: FormControl | <span class="hljs-literal">null</span>, form: FormGroupDirective | NgForm | <span class="hljs-literal">null</span>): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">const</span> isSubmitted = form &amp;&amp; form.submitted;
+    <span class="hljs-keyword">return</span> !!(control &amp;&amp; control.invalid &amp;&amp; (control.dirty || control.touched || isSubmitted));
+  }
+}
+
+<span class="hljs-comment">/** @title Input with a custom ErrorStateMatcher */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'input-error-state-matcher-example'</span>,
+  templateUrl: <span class="hljs-string">'./input-error-state-matcher-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'./input-error-state-matcher-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> InputErrorStateMatcherExample {
+  emailFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [
+    Validators.required,
+    Validators.email,
+  ]);
+
+  matcher = <span class="hljs-keyword">new</span> MyErrorStateMatcher();
+}

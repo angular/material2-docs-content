@@ -43,7 +43,9 @@ import { GridListDynamicExample } from './grid-list-dynamic/grid-list-dynamic-ex
 import { GridListOverviewExample } from './grid-list-overview/grid-list-overview-example';
 import { IconOverviewExample } from './icon-overview/icon-overview-example';
 import { IconSvgExample } from './icon-svg-example/icon-svg-example';
+import { InputAutosizeTextareaExample } from './input-autosize-textarea/input-autosize-textarea-example';
 import { InputClearableExample } from './input-clearable/input-clearable-example';
+import { InputErrorStateMatcherExample } from './input-error-state-matcher/input-error-state-matcher-example';
 import { InputErrorsExample } from './input-errors/input-errors-example';
 import { InputFormExample } from './input-form/input-form-example';
 import { InputHintExample } from './input-hint/input-hint-example';
@@ -63,8 +65,18 @@ import { ProgressSpinnerConfigurableExample } from './progress-spinner-configura
 import { ProgressSpinnerOverviewExample } from './progress-spinner-overview/progress-spinner-overview-example';
 import { RadioNgModelExample } from './radio-ng-model/radio-ng-model-example';
 import { RadioOverviewExample } from './radio-overview/radio-overview-example';
+import { SelectCustomTriggerExample } from './select-custom-trigger/select-custom-trigger-example';
+import { SelectDisabledExample } from './select-disabled/select-disabled-example';
+import { SelectErrorStateMatcherExample } from './select-error-state-matcher/select-error-state-matcher-example';
 import { SelectFormExample } from './select-form/select-form-example';
+import { SelectHintErrorExample } from './select-hint-error/select-hint-error-example';
+import { SelectMultipleExample } from './select-multiple/select-multiple-example';
+import { SelectNoRippleExample } from './select-no-ripple/select-no-ripple-example';
+import { SelectOptgroupExample } from './select-optgroup/select-optgroup-example';
 import { SelectOverviewExample } from './select-overview/select-overview-example';
+import { SelectPanelClassExample } from './select-panel-class/select-panel-class-example';
+import { SelectResetExample } from './select-reset/select-reset-example';
+import { SelectValueBindingExample } from './select-vlaue-binding/select-value-binding-example';
 import { SidenavFabExample } from './sidenav-fab/sidenav-fab-example';
 import { SidenavOverviewExample } from './sidenav-overview/sidenav-overview-example';
 import { SlideToggleConfigurableExample } from './slide-toggle-configurable/slide-toggle-configurable-example';
@@ -323,9 +335,21 @@ export declare const EXAMPLE_COMPONENTS: {
         additionalFiles: null;
         selectorName: null;
     };
+    'input-autosize-textarea': {
+        title: string;
+        component: typeof InputAutosizeTextareaExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
     'input-clearable': {
         title: string;
         component: typeof InputClearableExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'input-error-state-matcher': {
+        title: string;
+        component: typeof InputErrorStateMatcherExample;
         additionalFiles: null;
         selectorName: null;
     };
@@ -443,15 +467,75 @@ export declare const EXAMPLE_COMPONENTS: {
         additionalFiles: null;
         selectorName: null;
     };
+    'select-custom-trigger': {
+        title: string;
+        component: typeof SelectCustomTriggerExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'select-disabled': {
+        title: string;
+        component: typeof SelectDisabledExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'select-error-state-matcher': {
+        title: string;
+        component: typeof SelectErrorStateMatcherExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
     'select-form': {
         title: string;
         component: typeof SelectFormExample;
         additionalFiles: null;
         selectorName: null;
     };
+    'select-hint-error': {
+        title: string;
+        component: typeof SelectHintErrorExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'select-multiple': {
+        title: string;
+        component: typeof SelectMultipleExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'select-no-ripple': {
+        title: string;
+        component: typeof SelectNoRippleExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'select-optgroup': {
+        title: string;
+        component: typeof SelectOptgroupExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
     'select-overview': {
         title: string;
         component: typeof SelectOverviewExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'select-panel-class': {
+        title: string;
+        component: typeof SelectPanelClassExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'select-reset': {
+        title: string;
+        component: typeof SelectResetExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'select-value-binding': {
+        title: string;
+        component: typeof SelectValueBindingExample;
         additionalFiles: null;
         selectorName: null;
     };

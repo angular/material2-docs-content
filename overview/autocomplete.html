@@ -5,8 +5,14 @@ You can read more about autocompletes in the <a href="https://material.io/guidel
           <div header-link="simple-autocomplete"></div>
           Simple autocomplete
         </h3>
-      <p class="docs-markdown-p">Start by adding a regular <code class="docs-markdown-code">matInput</code> to the page. Let's assume you're using the <code class="docs-markdown-code">formControl</code>
-directive from the <code class="docs-markdown-code">@angular/forms</code> module to track the value of the input.</p>
+      <p class="docs-markdown-p">Start by adding a regular <code class="docs-markdown-code">matInput</code> to your template. Let's assume you're using the <code class="docs-markdown-code">formControl</code>
+directive from <code class="docs-markdown-code">ReactiveFormsModule</code> to track the value of the input.</p>
+<blockquote>
+<p class="docs-markdown-p">Note: It is possible to use template-driven forms instead, if you prefer. We use reactive forms
+in this example because it makes subscribing to changes in the input's value easy. For this example, be sure to
+import <code class="docs-markdown-code">ReactiveFormsModule</code> from <code class="docs-markdown-code">@angular/forms</code> into your <code class="docs-markdown-code">NgModule</code>. If you are unfamiliar with using reactive
+forms, you can read more about the subject in the <a href="https://angular.io/guide/reactive-forms" class="docs-markdown-a">Angular documentation</a>.</p>
+</blockquote>
 <p class="docs-markdown-p"><em>my-comp.html</em></p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"myControl"</span>&gt;</span>

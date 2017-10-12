@@ -1396,7 +1396,24 @@ IconSvgExample.ctorParameters = () => [
 ];
 
 /**
- * \@title Input Clearable
+ * \@title Auto-resizing textarea
+ */
+class InputAutosizeTextareaExample {
+}
+InputAutosizeTextareaExample.decorators = [
+    { type: Component, args: [{
+                selector: 'input-autosize-textarea-example',
+                template: "<mat-form-field><textarea matInput placeholder=\"Autosize textarea\" matTextareaAutosize matAutosizeMinRows=\"2\" matAutosizeMaxRows=\"5\"></textarea></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputAutosizeTextareaExample.ctorParameters = () => [];
+
+/**
+ * \@title Input with a clear button
  */
 class InputClearableExample {
     constructor() {
@@ -1415,22 +1432,59 @@ InputClearableExample.decorators = [
  */
 InputClearableExample.ctorParameters = () => [];
 
-const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 /**
- * \@title Input Errors
+ * Error when invalid control is dirty, touched, or submitted.
+ */
+class MyErrorStateMatcher {
+    /**
+     * @param {?} control
+     * @param {?} form
+     * @return {?}
+     */
+    isErrorState(control, form) {
+        const /** @type {?} */ isSubmitted = form && form.submitted;
+        return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    }
+}
+/**
+ * \@title Input with a custom ErrorStateMatcher
+ */
+class InputErrorStateMatcherExample {
+    constructor() {
+        this.emailFormControl = new FormControl('', [
+            Validators.required,
+            Validators.email,
+        ]);
+        this.matcher = new MyErrorStateMatcher();
+    }
+}
+InputErrorStateMatcherExample.decorators = [
+    { type: Component, args: [{
+                selector: 'input-error-state-matcher-example',
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\" [errorStateMatcher]=\"matcher\"><mat-hint>Errors appear instantly!</mat-hint><mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">Please enter a valid email address</mat-error><mat-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></mat-error></mat-form-field></form>",
+                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+InputErrorStateMatcherExample.ctorParameters = () => [];
+
+/**
+ * \@title Input with error messages
  */
 class InputErrorsExample {
     constructor() {
         this.emailFormControl = new FormControl('', [
             Validators.required,
-            Validators.pattern(EMAIL_REGEX)
+            Validators.email,
         ]);
     }
 }
 InputErrorsExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-errors-example',
-                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\"><mat-error *ngIf=\"emailFormControl.hasError('pattern')\">Please enter a valid email address</mat-error><mat-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></mat-error></mat-form-field></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Email\" [formControl]=\"emailFormControl\"><mat-error *ngIf=\"emailFormControl.hasError('email') && !emailFormControl.hasError('required')\">Please enter a valid email address</mat-error><mat-error *ngIf=\"emailFormControl.hasError('required')\">Email is <strong>required</strong></mat-error></mat-form-field></form>",
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
@@ -1457,7 +1511,7 @@ InputFormExample.decorators = [
 InputFormExample.ctorParameters = () => [];
 
 /**
- * \@title Input hints
+ * \@title Input with hints
  */
 class InputHintExample {
 }
@@ -1482,7 +1536,7 @@ InputOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'input-overview-example',
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
-                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Favorite food\" value=\"Sushi\"></mat-form-field></form>",
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Favorite food\" value=\"Sushi\"></mat-form-field><mat-form-field class=\"example-full-width\"><textarea matInput placeholder=\"Leave a comment\"></textarea></mat-form-field></form>",
             },] },
 ];
 /**
@@ -1491,7 +1545,7 @@ InputOverviewExample.decorators = [
 InputOverviewExample.ctorParameters = () => [];
 
 /**
- * \@title Input Prefixes and Suffixes
+ * \@title Inputs with prefixes and suffixes
  */
 class InputPrefixSuffixExample {
 }
@@ -1802,6 +1856,85 @@ RadioOverviewExample.decorators = [
 RadioOverviewExample.ctorParameters = () => [];
 
 /**
+ * \@title Select with custom trigger text
+ */
+class SelectCustomTriggerExample {
+    constructor() {
+        this.toppings = new FormControl();
+        this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+    }
+}
+SelectCustomTriggerExample.decorators = [
+    { type: Component, args: [{
+                selector: 'select-custom-trigger-example',
+                template: "<mat-form-field><mat-select placeholder=\"Toppings\" [formControl]=\"toppings\" multiple=\"multiple\"><mat-select-trigger>{{toppings.value ? toppings.value[0] : ''}} <span *ngIf=\"toppings.value?.length > 1\" class=\"example-additional-selection\">(+{{toppings.value.length - 1}} others)</span></mat-select-trigger><mat-option *ngFor=\"let topping of toppingList\" [value]=\"topping\">{{topping}}</mat-option></mat-select></mat-form-field>",
+                styles: [".example-additional-selection { opacity: 0.75; font-size: 0.75em; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SelectCustomTriggerExample.ctorParameters = () => [];
+
+/**
+ * \@title Disabled select
+ */
+class SelectDisabledExample {
+    constructor() {
+        this.disableSelect = new FormControl(false);
+    }
+}
+SelectDisabledExample.decorators = [
+    { type: Component, args: [{
+                selector: 'select-disabled-example',
+                template: "<p><mat-checkbox [formControl]=\"disableSelect\">Disable select</mat-checkbox></p><p><mat-form-field><mat-select placeholder=\"Choose an option\" [disabled]=\"disableSelect.value\"><mat-option value=\"option1\">Option 1</mat-option><mat-option value=\"option2\" disabled=\"disabled\">Option 2 (disabled)</mat-option><mat-option value=\"option3\">Option 3</mat-option></mat-select></mat-form-field></p>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SelectDisabledExample.ctorParameters = () => [];
+
+/**
+ * Error when invalid control is dirty, touched, or submitted.
+ */
+class MyErrorStateMatcher$1 {
+    /**
+     * @param {?} control
+     * @param {?} form
+     * @return {?}
+     */
+    isErrorState(control, form) {
+        const /** @type {?} */ isSubmitted = form && form.submitted;
+        return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    }
+}
+/**
+ * \@title Select with a custom ErrorStateMatcher
+ */
+class SelectErrorStateMatcherExample {
+    constructor() {
+        this.selected = new FormControl('valid', [
+            Validators.required,
+            Validators.pattern('valid'),
+        ]);
+        this.matcher = new MyErrorStateMatcher$1();
+    }
+}
+SelectErrorStateMatcherExample.decorators = [
+    { type: Component, args: [{
+                selector: 'select-error-state-matcher-example',
+                template: "<mat-form-field><mat-select placeholder=\"Choose one\" [formControl]=\"selected\" [errorStateMatcher]=\"matcher\"><mat-option>Clear</mat-option><mat-option value=\"valid\">Valid option</mat-option><mat-option value=\"invalid\">Invalid option</mat-option></mat-select><mat-hint>Errors appear instantly!</mat-hint><mat-error *ngIf=\"selected.hasError('required')\">You must make a selection</mat-error><mat-error *ngIf=\"selected.hasError('pattern') && !selected.hasError('required')\">Your selection is invalid</mat-error></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SelectErrorStateMatcherExample.ctorParameters = () => [];
+
+/**
  * \@title Select in a form
  */
 class SelectFormExample {
@@ -1817,12 +1950,131 @@ SelectFormExample.decorators = [
     { type: Component, args: [{
                 selector: 'select-form-example',
                 template: "<form><mat-form-field><mat-select placeholder=\"Favorite food\" [(ngModel)]=\"selectedValue\" name=\"food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{food.viewValue}}</mat-option></mat-select></mat-form-field><p>Selected value: {{selectedValue}}</p></form>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /**
  * @nocollapse
  */
 SelectFormExample.ctorParameters = () => [];
+
+/**
+ * \@title Select with form field features
+ */
+class SelectHintErrorExample {
+    constructor() {
+        this.animalControl = new FormControl('', [Validators.required]);
+        this.animals = [
+            { name: 'Dog', sound: 'Woof!' },
+            { name: 'Cat', sound: 'Meow!' },
+            { name: 'Cow', sound: 'Moo!' },
+            { name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!' },
+        ];
+    }
+}
+SelectHintErrorExample.decorators = [
+    { type: Component, args: [{
+                selector: 'select-hint-error-example',
+                template: "<mat-form-field><mat-select placeholder=\"Favorite animal\" [formControl]=\"animalControl\" required><mat-option>--</mat-option><mat-option *ngFor=\"let animal of animals\" [value]=\"animal\">{{animal.name}}</mat-option></mat-select><mat-error *ngIf=\"animalControl.hasError('required')\">Please choose an animal</mat-error><mat-hint>{{animalControl.value?.sound}}</mat-hint></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SelectHintErrorExample.ctorParameters = () => [];
+
+/**
+ * \@title Select with multiple selection
+ */
+class SelectMultipleExample {
+    constructor() {
+        this.toppings = new FormControl();
+        this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+    }
+}
+SelectMultipleExample.decorators = [
+    { type: Component, args: [{
+                selector: 'select-multiple-example',
+                template: "<mat-form-field><mat-select placeholder=\"Toppings\" [formControl]=\"toppings\" multiple=\"multiple\"><mat-option *ngFor=\"let topping of toppingList\" [value]=\"topping\">{{topping}}</mat-option></mat-select></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SelectMultipleExample.ctorParameters = () => [];
+
+/**
+ * \@title Select with no option ripple
+ */
+class SelectNoRippleExample {
+}
+SelectNoRippleExample.decorators = [
+    { type: Component, args: [{
+                selector: 'select-no-ripple-example',
+                template: "<mat-form-field><mat-select placeholder=\"Select an option\" disableRipple><mat-option value=\"1\">Option 1</mat-option><mat-option value=\"2\">Option 2</mat-option><mat-option value=\"3\">Option 3</mat-option></mat-select></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SelectNoRippleExample.ctorParameters = () => [];
+
+/**
+ * \@title Select with option groups
+ */
+class SelectOptgroupExample {
+    constructor() {
+        this.pokemonControl = new FormControl();
+        this.pokemonGroups = [
+            {
+                name: 'Grass',
+                pokemon: [
+                    { value: 'bulbasaur-0', viewValue: 'Bulbasaur' },
+                    { value: 'oddish-1', viewValue: 'Oddish' },
+                    { value: 'bellsprout-2', viewValue: 'Bellsprout' }
+                ]
+            },
+            {
+                name: 'Water',
+                pokemon: [
+                    { value: 'squirtle-3', viewValue: 'Squirtle' },
+                    { value: 'psyduck-4', viewValue: 'Psyduck' },
+                    { value: 'horsea-5', viewValue: 'Horsea' }
+                ]
+            },
+            {
+                name: 'Fire',
+                disabled: true,
+                pokemon: [
+                    { value: 'charmander-6', viewValue: 'Charmander' },
+                    { value: 'vulpix-7', viewValue: 'Vulpix' },
+                    { value: 'flareon-8', viewValue: 'Flareon' }
+                ]
+            },
+            {
+                name: 'Psychic',
+                pokemon: [
+                    { value: 'mew-9', viewValue: 'Mew' },
+                    { value: 'mewtwo-10', viewValue: 'Mewtwo' },
+                ]
+            }
+        ];
+    }
+}
+SelectOptgroupExample.decorators = [
+    { type: Component, args: [{
+                selector: 'select-optgroup-example',
+                template: "<mat-form-field><mat-select placeholder=\"Pokemon\" [formControl]=\"pokemonControl\"><mat-option>-- None --</mat-option><mat-optgroup *ngFor=\"let group of pokemonGroups\" [label]=\"group.name\" [disabled]=\"group.disabled\"><mat-option *ngFor=\"let pokemon of group.pokemon\" [value]=\"pokemon.value\">{{ pokemon.viewValue }}</mat-option></mat-optgroup></mat-select></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SelectOptgroupExample.ctorParameters = () => [];
 
 /**
  * \@title Basic select
@@ -1840,12 +2092,82 @@ SelectOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'select-overview-example',
                 template: "<mat-form-field><mat-select placeholder=\"Favorite food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{ food.viewValue }}</mat-option></mat-select></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /**
  * @nocollapse
  */
 SelectOverviewExample.ctorParameters = () => [];
+
+/**
+ * \@title Select with custom panel styling
+ */
+class SelectPanelClassExample {
+    constructor() {
+        this.panelColor = new FormControl('red');
+    }
+}
+SelectPanelClassExample.decorators = [
+    { type: Component, args: [{
+                selector: 'select-panel-class-example',
+                template: "<mat-form-field><mat-select placeholder=\"Panel color\" [formControl]=\"panelColor\" panelClass=\"example-panel-{{panelColor.value}}\"><mat-option value=\"red\">Red</mat-option><mat-option value=\"green\">Green</mat-option><mat-option value=\"blue\">Blue</mat-option></mat-select></mat-form-field>",
+                styles: [".example-panel-red .mat-select-content { background: rgba(255, 0, 0, 0.5); } .example-panel-green .mat-select-content { background: rgba(0, 255, 0, 0.5); } .example-panel-blue .mat-select-content { background: rgba(0, 0, 255, 0.5); } "],
+                encapsulation: ViewEncapsulation.None,
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SelectPanelClassExample.ctorParameters = () => [];
+
+/**
+ * \@title Select with reset option
+ */
+class SelectResetExample {
+    constructor() {
+        this.states = [
+            'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware',
+            'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
+            'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
+            'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico',
+            'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
+            'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+            'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+        ];
+    }
+}
+SelectResetExample.decorators = [
+    { type: Component, args: [{
+                selector: 'select-reset-example',
+                template: "<mat-form-field><mat-select placeholder=\"State\"><mat-option>None</mat-option><mat-option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</mat-option></mat-select></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SelectResetExample.ctorParameters = () => [];
+
+/**
+ * \@title Select with 2-way value binding
+ */
+class SelectValueBindingExample {
+    constructor() {
+        this.selected = 'option2';
+    }
+}
+SelectValueBindingExample.decorators = [
+    { type: Component, args: [{
+                selector: 'select-value-binding-example',
+                template: "<mat-form-field><mat-select [(value)]=\"selected\"><mat-option>None</mat-option><mat-option value=\"option1\">Option 1</mat-option><mat-option value=\"option2\">Option 2</mat-option><mat-option value=\"option3\">Option 3</mat-option></mat-select></mat-form-field><p>You selected: {{selected}}</p>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+SelectValueBindingExample.ctorParameters = () => [];
 
 /**
  * \@title Sidenav with a FAB
@@ -3333,14 +3655,26 @@ const EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'input-autosize-textarea': {
+        title: 'Auto-resizing textarea ',
+        component: InputAutosizeTextareaExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'input-clearable': {
-        title: 'Input Clearable',
+        title: 'Input with a clear button',
         component: InputClearableExample,
         additionalFiles: null,
         selectorName: null
     },
+    'input-error-state-matcher': {
+        title: 'Input with a custom ErrorStateMatcher ',
+        component: InputErrorStateMatcherExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'input-errors': {
-        title: 'Input Errors',
+        title: 'Input with error messages',
         component: InputErrorsExample,
         additionalFiles: null,
         selectorName: null
@@ -3352,7 +3686,7 @@ const EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'input-hint': {
-        title: 'Input hints',
+        title: 'Input with hints',
         component: InputHintExample,
         additionalFiles: null,
         selectorName: null
@@ -3364,7 +3698,7 @@ const EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'input-prefix-suffix': {
-        title: 'Input Prefixes and Suffixes',
+        title: 'Inputs with prefixes and suffixes',
         component: InputPrefixSuffixExample,
         additionalFiles: null,
         selectorName: null
@@ -3453,15 +3787,75 @@ const EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'select-custom-trigger': {
+        title: 'Select with custom trigger text ',
+        component: SelectCustomTriggerExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-disabled': {
+        title: 'Disabled select ',
+        component: SelectDisabledExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-error-state-matcher': {
+        title: 'Select with a custom ErrorStateMatcher ',
+        component: SelectErrorStateMatcherExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'select-form': {
         title: 'Select in a form',
         component: SelectFormExample,
         additionalFiles: null,
         selectorName: null
     },
+    'select-hint-error': {
+        title: 'Select with form field features ',
+        component: SelectHintErrorExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-multiple': {
+        title: 'Select with multiple selection ',
+        component: SelectMultipleExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-no-ripple': {
+        title: 'Select with cno option ripple ',
+        component: SelectNoRippleExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-optgroup': {
+        title: 'Select with option groups ',
+        component: SelectOptgroupExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'select-overview': {
         title: 'Basic select',
         component: SelectOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-panel-class': {
+        title: 'Select with custom panel styling',
+        component: SelectPanelClassExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-reset': {
+        title: 'Select with reset option ',
+        component: SelectResetExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'select-value-binding': {
+        title: 'Select with 2-way value binding ',
+        component: SelectValueBindingExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -3644,7 +4038,9 @@ const EXAMPLE_LIST = [
     GridListOverviewExample,
     IconOverviewExample,
     IconSvgExample,
+    InputAutosizeTextareaExample,
     InputClearableExample,
+    InputErrorStateMatcherExample,
     InputErrorsExample,
     InputFormExample,
     InputHintExample,
@@ -3664,8 +4060,18 @@ const EXAMPLE_LIST = [
     ProgressSpinnerOverviewExample,
     RadioNgModelExample,
     RadioOverviewExample,
+    SelectCustomTriggerExample,
+    SelectDisabledExample,
+    SelectErrorStateMatcherExample,
     SelectFormExample,
+    SelectHintErrorExample,
+    SelectMultipleExample,
+    SelectNoRippleExample,
+    SelectOptgroupExample,
     SelectOverviewExample,
+    SelectPanelClassExample,
+    SelectResetExample,
+    SelectValueBindingExample,
     SidenavFabExample,
     SidenavOverviewExample,
     SlideToggleConfigurableExample,
@@ -3757,5 +4163,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵq, DatepickerStartViewExample as ɵr, DatepickerTouchExample as ɵs, DialogContentExample as ɵt, DialogContentExampleDialog as ɵu, DialogDataExample as ɵv, DialogDataExampleDialog as ɵw, DialogElementsExample as ɵx, DialogElementsExampleDialog as ɵy, DialogOverviewExample as ɵz, DialogOverviewExampleDialog as ɵba, ExpansionStepsExample as ɵbb, FormFieldCustomControlExample as ɵbd, MyTelInput as ɵbc, FormFieldErrorExample as ɵbe, FormFieldHintExample as ɵbf, FormFieldOverviewExample as ɵbg, FormFieldPlaceholderExample as ɵbh, FormFieldPrefixSuffixExample as ɵbi, FormFieldThemingExample as ɵbj, GridListDynamicExample as ɵbk, GridListOverviewExample as ɵbl, IconOverviewExample as ɵbm, IconSvgExample as ɵbn, InputClearableExample as ɵbo, InputErrorsExample as ɵbp, InputFormExample as ɵbq, InputHintExample as ɵbr, InputOverviewExample as ɵbs, InputPrefixSuffixExample as ɵbt, ListSectionsExample as ɵbu, ListSelectionExample as ɵbv, ExampleMaterialModule as ɵdf, MenuIconsExample as ɵbw, MenuOverviewExample as ɵbx, NestedMenuExample as ɵby, PaginatorConfigurableExample as ɵbz, PaginatorOverviewExample as ɵca, ProgressBarConfigurableExample as ɵcb, ProgressBarOverviewExample as ɵcc, ProgressSpinnerConfigurableExample as ɵcd, ProgressSpinnerOverviewExample as ɵce, RadioNgModelExample as ɵcf, RadioOverviewExample as ɵcg, SelectFormExample as ɵch, SelectOverviewExample as ɵci, SidenavFabExample as ɵcj, SidenavOverviewExample as ɵck, SlideToggleConfigurableExample as ɵcl, SlideToggleFormsExample as ɵcm, SlideToggleOverviewExample as ɵcn, SliderConfigurableExample as ɵco, SliderOverviewExample as ɵcp, PizzaPartyComponent as ɵcr, SnackBarComponentExample as ɵcq, SnackBarOverviewExample as ɵcs, SortOverviewExample as ɵct, TableBasicExample as ɵcu, TableFilteringExample as ɵcv, TableHttpExample as ɵcw, TableOverviewExample as ɵcx, TablePaginationExample as ɵcy, TableSortingExample as ɵcz, TabsOverviewExample as ɵda, TabsTemplateLabelExample as ɵdb, ToolbarOverviewExample as ɵdc, TooltipOverviewExample as ɵdd, TooltipPositionExample as ɵde };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵq, DatepickerStartViewExample as ɵr, DatepickerTouchExample as ɵs, DialogContentExample as ɵt, DialogContentExampleDialog as ɵu, DialogDataExample as ɵv, DialogDataExampleDialog as ɵw, DialogElementsExample as ɵx, DialogElementsExampleDialog as ɵy, DialogOverviewExample as ɵz, DialogOverviewExampleDialog as ɵba, ExpansionStepsExample as ɵbb, FormFieldCustomControlExample as ɵbd, MyTelInput as ɵbc, FormFieldErrorExample as ɵbe, FormFieldHintExample as ɵbf, FormFieldOverviewExample as ɵbg, FormFieldPlaceholderExample as ɵbh, FormFieldPrefixSuffixExample as ɵbi, FormFieldThemingExample as ɵbj, GridListDynamicExample as ɵbk, GridListOverviewExample as ɵbl, IconOverviewExample as ɵbm, IconSvgExample as ɵbn, InputAutosizeTextareaExample as ɵbo, InputClearableExample as ɵbp, InputErrorStateMatcherExample as ɵbq, InputErrorsExample as ɵbr, InputFormExample as ɵbs, InputHintExample as ɵbt, InputOverviewExample as ɵbu, InputPrefixSuffixExample as ɵbv, ListSectionsExample as ɵbw, ListSelectionExample as ɵbx, ExampleMaterialModule as ɵdr, MenuIconsExample as ɵby, MenuOverviewExample as ɵbz, NestedMenuExample as ɵca, PaginatorConfigurableExample as ɵcb, PaginatorOverviewExample as ɵcc, ProgressBarConfigurableExample as ɵcd, ProgressBarOverviewExample as ɵce, ProgressSpinnerConfigurableExample as ɵcf, ProgressSpinnerOverviewExample as ɵcg, RadioNgModelExample as ɵch, RadioOverviewExample as ɵci, SelectCustomTriggerExample as ɵcj, SelectDisabledExample as ɵck, SelectErrorStateMatcherExample as ɵcl, SelectFormExample as ɵcm, SelectHintErrorExample as ɵcn, SelectMultipleExample as ɵco, SelectNoRippleExample as ɵcp, SelectOptgroupExample as ɵcq, SelectOverviewExample as ɵcr, SelectPanelClassExample as ɵcs, SelectResetExample as ɵct, SelectValueBindingExample as ɵcu, SidenavFabExample as ɵcv, SidenavOverviewExample as ɵcw, SlideToggleConfigurableExample as ɵcx, SlideToggleFormsExample as ɵcy, SlideToggleOverviewExample as ɵcz, SliderConfigurableExample as ɵda, SliderOverviewExample as ɵdb, PizzaPartyComponent as ɵdd, SnackBarComponentExample as ɵdc, SnackBarOverviewExample as ɵde, SortOverviewExample as ɵdf, TableBasicExample as ɵdg, TableFilteringExample as ɵdh, TableHttpExample as ɵdi, TableOverviewExample as ɵdj, TablePaginationExample as ɵdk, TableSortingExample as ɵdl, TabsOverviewExample as ɵdm, TabsTemplateLabelExample as ɵdn, ToolbarOverviewExample as ɵdo, TooltipOverviewExample as ɵdp, TooltipPositionExample as ɵdq };
 //# sourceMappingURL=material-examples.js.map

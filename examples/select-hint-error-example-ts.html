@@ -1,0 +1,19 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/** @title Select with form field features */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'select-hint-error-example'</span>,
+  templateUrl: <span class="hljs-string">'select-hint-error-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'select-hint-error-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectHintErrorExample {
+  animalControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [Validators.required]);
+
+  animals = [
+    {name: <span class="hljs-string">'Dog'</span>, sound: <span class="hljs-string">'Woof!'</span>},
+    {name: <span class="hljs-string">'Cat'</span>, sound: <span class="hljs-string">'Meow!'</span>},
+    {name: <span class="hljs-string">'Cow'</span>, sound: <span class="hljs-string">'Moo!'</span>},
+    {name: <span class="hljs-string">'Fox'</span>, sound: <span class="hljs-string">'Wa-pa-pa-pa-pa-pa-pow!'</span>},
+  ];
+}

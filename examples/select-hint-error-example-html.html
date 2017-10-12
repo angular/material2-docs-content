@@ -1,0 +1,10 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Favorite animal"</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"animalControl"</span> <span class="hljs-attr">required</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span>&gt;</span>--<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let animal of animals"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"animal"</span>&gt;</span>
+      {{animal.name}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-error</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"animalControl.hasError('required')"</span>&gt;</span>Please choose an animal<span class="hljs-tag">&lt;/<span class="hljs-name">mat-error</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-hint</span>&gt;</span>{{animalControl.value?.sound}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-hint</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>

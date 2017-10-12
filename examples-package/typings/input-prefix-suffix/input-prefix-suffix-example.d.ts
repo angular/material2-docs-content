@@ -1,5 +1,5 @@
 /**
- * @title Input Prefixes and Suffixes
+ * @title Inputs with prefixes and suffixes
  */
 export declare class InputPrefixSuffixExample {
 }

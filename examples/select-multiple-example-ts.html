@@ -1,0 +1,14 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/** @title Select with multiple selection */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'select-multiple-example'</span>,
+  templateUrl: <span class="hljs-string">'select-multiple-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'select-multiple-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectMultipleExample {
+  toppings = <span class="hljs-keyword">new</span> FormControl();
+
+  toppingList = [<span class="hljs-string">'Extra cheese'</span>, <span class="hljs-string">'Mushroom'</span>, <span class="hljs-string">'Onion'</span>, <span class="hljs-string">'Pepperoni'</span>, <span class="hljs-string">'Sausage'</span>, <span class="hljs-string">'Tomato'</span>];
+}

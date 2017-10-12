@@ -57,7 +57,7 @@ is in its expanded state.</p>
           Disabling a panel
         </h4>
       <p class="docs-markdown-p">Expansion panels can be disabled using the <code class="docs-markdown-code">disabled</code> attribute. A disabled expansion panel can't
-be toggled by the user, but can still be manipulated using programmatically.</p>
+be toggled by the user, but can still be manipulated programmatically.</p>
 <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"isDisabled"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
     This is the expansion title
@@ -103,8 +103,8 @@ panel can be expanded at a given time:</p>
           Accessibility
         </h3>
       <p class="docs-markdown-p">The expansion-panel aims to mimic the experience of the native <code class="docs-markdown-code">&lt;details&gt;</code> and <code class="docs-markdown-code">&lt;summary&gt;</code> elements.
-The expansion panel header has <code class="docs-markdown-code">role="button"</code>. The expansion panel header has attribute
-<code class="docs-markdown-code">aria-controls</code> with the expansion panel's id as value.</p>
+The expansion panel header has <code class="docs-markdown-code">role="button"</code> and also the attribute <code class="docs-markdown-code">aria-controls</code> with the 
+expansion panel's id as value.</p>
 <p class="docs-markdown-p">The expansion panel headers are buttons. Users can use the keyboard to activate the expansion panel
 header to switch between expanded state and collapsed state. Because the header acts as a button,
 additional interactive elements should not be put inside of the header.</p>
