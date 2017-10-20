@@ -70,7 +70,7 @@ export { SelectOptgroupExample as ɵcq } from './select-optgroup/select-optgroup
 export { SelectOverviewExample as ɵcr } from './select-overview/select-overview-example';
 export { SelectPanelClassExample as ɵcs } from './select-panel-class/select-panel-class-example';
 export { SelectResetExample as ɵct } from './select-reset/select-reset-example';
-export { SelectValueBindingExample as ɵcu } from './select-vlaue-binding/select-value-binding-example';
+export { SelectValueBindingExample as ɵcu } from './select-value-binding/select-value-binding-example';
 export { SidenavFabExample as ɵcv } from './sidenav-fab/sidenav-fab-example';
 export { SidenavOverviewExample as ɵcw } from './sidenav-overview/sidenav-overview-example';
 export { SlideToggleConfigurableExample as ɵcx } from './slide-toggle-configurable/slide-toggle-configurable-example';
