@@ -1,5 +1,3 @@
-/**
- * @title Datepicker Touch
- */
+/** @title Datepicker touch UI */
 export declare class DatepickerTouchExample {
 }

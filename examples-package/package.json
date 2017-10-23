@@ -27,7 +27,8 @@
     "@angular/core": "~4.4.4",
     "@angular/common": "~4.4.4",
     "@angular/http": "~4.4.4",
-    "@angular/material": "2.0.0-beta.12"
+    "@angular/material": "2.0.0-beta.12",
+    "@angular/material-moment-adapter": "2.0.0-beta.12"
   },
   "dependencies": {
     "tslib": "^1.7.1"

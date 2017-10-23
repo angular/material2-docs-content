@@ -30,11 +30,17 @@
 <span class="hljs-keyword">import</span> {ChipsOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-overview/chips-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ChipsStackedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-stacked/chips-stacked-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerApiExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-api/datepicker-api-example'</span>;
+<span class="hljs-keyword">import</span> {DatepickerDisabledExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-disabled/datepicker-disabled-example'</span>;
+<span class="hljs-keyword">import</span> {DatepickerEventsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-events/datepicker-events-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerFilterExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-filter/datepicker-filter-example'</span>;
+<span class="hljs-keyword">import</span> {DatepickerFormatsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-formats/datepicker-formats-example'</span>;
+<span class="hljs-keyword">import</span> {DatepickerLocaleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-locale/datepicker-locale-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerMinMaxExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-min-max/datepicker-min-max-example'</span>;
+<span class="hljs-keyword">import</span> {DatepickerMomentExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-moment/datepicker-moment-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-overview/datepicker-overview-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerStartViewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-start-view/datepicker-start-view-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerTouchExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-touch/datepicker-touch-example'</span>;
+<span class="hljs-keyword">import</span> {DatepickerValueExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-value/datepicker-value-example'</span>;
 <span class="hljs-keyword">import</span> {DialogContentExampleDialog,DialogContentExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-content/dialog-content-example'</span>;
 <span class="hljs-keyword">import</span> {DialogDataExampleDialog,DialogDataExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-data/dialog-data-example'</span>;
 <span class="hljs-keyword">import</span> {DialogElementsExampleDialog,DialogElementsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-elements/dialog-elements-example'</span>;
@@ -68,8 +74,11 @@
 <span class="hljs-keyword">import</span> {NestedMenuExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./nested-menu/nested-menu-example'</span>;
 <span class="hljs-keyword">import</span> {PaginatorConfigurableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./paginator-configurable/paginator-configurable-example'</span>;
 <span class="hljs-keyword">import</span> {PaginatorOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./paginator-overview/paginator-overview-example'</span>;
+<span class="hljs-keyword">import</span> {ProgressBarBufferExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-buffer/progress-bar-buffer-example'</span>;
 <span class="hljs-keyword">import</span> {ProgressBarConfigurableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-configurable/progress-bar-configurable-example'</span>;
-<span class="hljs-keyword">import</span> {ProgressBarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-overview/progress-bar-overview-example'</span>;
+<span class="hljs-keyword">import</span> {ProgressBarDeterminateExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-determinate/progress-bar-determinate-example'</span>;
+<span class="hljs-keyword">import</span> {ProgressBarIndeterminateExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-indeterminate/progress-bar-indeterminate-example'</span>;
+<span class="hljs-keyword">import</span> {ProgressBarQueryExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-query/progress-bar-query-example'</span>;
 <span class="hljs-keyword">import</span> {ProgressSpinnerConfigurableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-spinner-configurable/progress-spinner-configurable-example'</span>;
 <span class="hljs-keyword">import</span> {ProgressSpinnerOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-spinner-overview/progress-spinner-overview-example'</span>;
 <span class="hljs-keyword">import</span> {RadioNgModelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./radio-ng-model/radio-ng-model-example'</span>;
@@ -208,38 +217,74 @@
     selectorName: <span class="hljs-literal">null</span>
   },
   <span class="hljs-string">'datepicker-api'</span>: {
-    title: <span class="hljs-string">'Datepicker API'</span>,
+    title: <span class="hljs-string">'Datepicker open method '</span>,
     component: DatepickerApiExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
+  <span class="hljs-string">'datepicker-disabled'</span>: {
+    title: <span class="hljs-string">'Disabled datepicker '</span>,
+    component: DatepickerDisabledExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'datepicker-events'</span>: {
+    title: <span class="hljs-string">'Datepicker input and change events '</span>,
+    component: DatepickerEventsExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
   <span class="hljs-string">'datepicker-filter'</span>: {
-    title: <span class="hljs-string">'Datepicker Filter'</span>,
+    title: <span class="hljs-string">'Datepicker with filter validation '</span>,
     component: DatepickerFilterExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
+  <span class="hljs-string">'datepicker-formats'</span>: {
+    title: <span class="hljs-string">'Datepicker with custom formats '</span>,
+    component: DatepickerFormatsExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'datepicker-locale'</span>: {
+    title: <span class="hljs-string">'Datepicker with different locale '</span>,
+    component: DatepickerLocaleExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
   <span class="hljs-string">'datepicker-min-max'</span>: {
-    title: <span class="hljs-string">'Datepicker Min Max'</span>,
+    title: <span class="hljs-string">'Datepicker with min &amp; max validation '</span>,
     component: DatepickerMinMaxExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
+  <span class="hljs-string">'datepicker-moment'</span>: {
+    title: <span class="hljs-string">'Datepicker that uses Moment.js dates '</span>,
+    component: DatepickerMomentExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
   <span class="hljs-string">'datepicker-overview'</span>: {
-    title: <span class="hljs-string">'Basic datepicker'</span>,
+    title: <span class="hljs-string">'Basic datepicker '</span>,
     component: DatepickerOverviewExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
   <span class="hljs-string">'datepicker-start-view'</span>: {
-    title: <span class="hljs-string">'Datepicker start date'</span>,
+    title: <span class="hljs-string">'Datepicker start date '</span>,
     component: DatepickerStartViewExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
   <span class="hljs-string">'datepicker-touch'</span>: {
-    title: <span class="hljs-string">'Datepicker Touch'</span>,
+    title: <span class="hljs-string">'Datepicker touch UI '</span>,
     component: DatepickerTouchExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'datepicker-value'</span>: {
+    title: <span class="hljs-string">'Datepicker selected value '</span>,
+    component: DatepickerValueExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
@@ -441,15 +486,33 @@
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
+  <span class="hljs-string">'progress-bar-buffer'</span>: {
+    title: <span class="hljs-string">'Buffer progress-bar'</span>,
+    component: ProgressBarBufferExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
   <span class="hljs-string">'progress-bar-configurable'</span>: {
     title: <span class="hljs-string">'Configurable progress-bar'</span>,
     component: ProgressBarConfigurableExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
-  <span class="hljs-string">'progress-bar-overview'</span>: {
-    title: <span class="hljs-string">'Basic progress-bar'</span>,
-    component: ProgressBarOverviewExample,
+  <span class="hljs-string">'progress-bar-determinate'</span>: {
+    title: <span class="hljs-string">'Determinate progress-bar'</span>,
+    component: ProgressBarDeterminateExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'progress-bar-indeterminate'</span>: {
+    title: <span class="hljs-string">'Indeterminate progress-bar'</span>,
+    component: ProgressBarIndeterminateExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'progress-bar-query'</span>: {
+    title: <span class="hljs-string">'Query progress-bar'</span>,
+    component: ProgressBarQueryExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
@@ -707,11 +770,17 @@
   ChipsOverviewExample,
   ChipsStackedExample,
   DatepickerApiExample,
+  DatepickerDisabledExample,
+  DatepickerEventsExample,
   DatepickerFilterExample,
+  DatepickerFormatsExample,
+  DatepickerLocaleExample,
   DatepickerMinMaxExample,
+  DatepickerMomentExample,
   DatepickerOverviewExample,
   DatepickerStartViewExample,
   DatepickerTouchExample,
+  DatepickerValueExample,
   DialogContentExampleDialog,DialogContentExample,
   DialogDataExampleDialog,DialogDataExample,
   DialogElementsExampleDialog,DialogElementsExample,
@@ -745,8 +814,11 @@
   NestedMenuExample,
   PaginatorConfigurableExample,
   PaginatorOverviewExample,
+  ProgressBarBufferExample,
   ProgressBarConfigurableExample,
-  ProgressBarOverviewExample,
+  ProgressBarDeterminateExample,
+  ProgressBarIndeterminateExample,
+  ProgressBarQueryExample,
   ProgressSpinnerConfigurableExample,
   ProgressSpinnerOverviewExample,
   RadioNgModelExample,

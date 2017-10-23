@@ -6,10 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/cdk/keycodes'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/material/form-field'), require('rxjs/Subject'), require('@angular/platform-browser'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent'), require('@angular/http'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/cdk/keycodes', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/material/form-field', 'rxjs/Subject', '@angular/platform-browser', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent', '@angular/http', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.cdk.collections,global.Rx,global.Rx.Observable,global.ng.cdk.keycodes,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.material.formField,global.Rx,global.ng.platformBrowser,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable,global.ng.http));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_cdk_collections,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_cdk_keycodes,_angular_cdk_a11y,_angular_cdk_coercion,_angular_material_formField,rxjs_Subject,_angular_platformBrowser,rxjs_Observable,rxjs_add_observable_of,rxjs_add_operator_debounceTime,rxjs_add_operator_distinctUntilChanged,rxjs_add_observable_fromEvent,_angular_http) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/material/form-field'), require('rxjs/Subject'), require('@angular/platform-browser'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent'), require('@angular/http'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/material/form-field', 'rxjs/Subject', '@angular/platform-browser', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent', '@angular/http', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.cdk.collections,global.Rx,global.Rx.Observable,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.material.formField,global.Rx,global.ng.platformBrowser,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable,global.ng.http));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_cdk_collections,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,_angular_material_formField,rxjs_Subject,_angular_platformBrowser,rxjs_Observable,rxjs_add_observable_of,rxjs_add_operator_debounceTime,rxjs_add_operator_distinctUntilChanged,rxjs_add_observable_fromEvent,_angular_http) { 'use strict';
+
+var _rollupMoment__default__default = _rollupMoment__default['default'];
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -362,8 +364,8 @@ var CardFancyExample = (function () {
     CardFancyExample.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'card-fancy-example',
-                    template: "<mat-card class=\"example-card\"><mat-card-header><div mat-card-avatar class=\"example-header-image\"></div><mat-card-title>Shiba Inu</mat-card-title><mat-card-subtitle>Dog Breed</mat-card-subtitle></mat-card-header><img mat-card-image src=\"http://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"><mat-card-content><p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p></mat-card-content><mat-card-actions><button mat-button>LIKE</button> <button mat-button>SHARE</button></mat-card-actions></mat-card>",
-                    styles: [".example-card { width: 400px; } .example-header-image { background-image: url('http://material.angular.io/assets/img/examples/shiba1.jpg'); background-size: cover; } "],
+                    template: "<mat-card class=\"example-card\"><mat-card-header><div mat-card-avatar class=\"example-header-image\"></div><mat-card-title>Shiba Inu</mat-card-title><mat-card-subtitle>Dog Breed</mat-card-subtitle></mat-card-header><img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"><mat-card-content><p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p></mat-card-content><mat-card-actions><button mat-button>LIKE</button> <button mat-button>SHARE</button></mat-card-actions></mat-card>",
+                    styles: [".example-card { width: 400px; } .example-header-image { background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); background-size: cover; } "],
                 },] },
     ];
     /**
@@ -596,7 +598,7 @@ var ChipsInputExample = (function () {
         { type: _angular_core.Component, args: [{
                     selector: 'chips-input-example',
                     template: "<mat-form-field class=\"demo-chip-list\"><mat-chip-list #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (remove)=\"remove(fruit)\">{{fruit.name}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip><input placeholder=\"New fruit...\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-chip-list></mat-form-field>",
-                    styles: [".demo-chip-list{width:100%}"]
+                    styles: [".demo-chip-list { width: 100%; } "]
                 },] },
     ];
     /**
@@ -653,7 +655,7 @@ var ChipsStackedExample = (function () {
 }());
 
 /**
- * \@title Datepicker API
+ * \@title Datepicker open method
  */
 var DatepickerApiExample = (function () {
     function DatepickerApiExample() {
@@ -673,7 +675,56 @@ var DatepickerApiExample = (function () {
 }());
 
 /**
- * \@title Datepicker Filter
+ * \@title Disabled datepicker
+ */
+var DatepickerDisabledExample = (function () {
+    function DatepickerDisabledExample() {
+    }
+    DatepickerDisabledExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'datepicker-disabled-example',
+                    template: "<p><mat-form-field><input matInput [matDatepicker]=\"dp1\" placeholder=\"Completely disabled\" disabled=\"disabled\"><mat-datepicker-toggle matSuffix [for]=\"dp1\"></mat-datepicker-toggle><mat-datepicker #dp1></mat-datepicker></mat-form-field></p><p><mat-form-field><input matInput [matDatepicker]=\"dp2\" placeholder=\"Popup disabled\"><mat-datepicker-toggle matSuffix [for]=\"dp2\" disabled=\"disabled\"></mat-datepicker-toggle><mat-datepicker #dp2></mat-datepicker></mat-form-field></p><p><mat-form-field><input matInput [matDatepicker]=\"dp3\" placeholder=\"Input disabled\" disabled=\"disabled\"><mat-datepicker-toggle matSuffix [for]=\"dp3\"></mat-datepicker-toggle><mat-datepicker #dp3 disabled=\"false\"></mat-datepicker></mat-form-field></p>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    DatepickerDisabledExample.ctorParameters = function () { return []; };
+    return DatepickerDisabledExample;
+}());
+
+/**
+ * \@title Datepicker input and change events
+ */
+var DatepickerEventsExample = (function () {
+    function DatepickerEventsExample() {
+        this.events = [];
+    }
+    /**
+     * @param {?} type
+     * @param {?} event
+     * @return {?}
+     */
+    DatepickerEventsExample.prototype.addEvent = function (type, event) {
+        this.events.push(type + ": " + event.value);
+    };
+    DatepickerEventsExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'datepicker-events-example',
+                    template: "<mat-form-field><input matInput [matDatepicker]=\"picker\" placeholder=\"Input & change events\" (dateInput)=\"addEvent('input', $event)\" (dateChange)=\"addEvent('change', $event)\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker></mat-datepicker></mat-form-field><div class=\"example-events\"><div *ngFor=\"let e of events\">{{e}}</div></div>",
+                    styles: [".example-events { width: 400px; height: 200px; border: 1px solid #555; overflow: auto; } "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    DatepickerEventsExample.ctorParameters = function () { return []; };
+    return DatepickerEventsExample;
+}());
+
+/**
+ * \@title Datepicker with filter validation
  */
 var DatepickerFilterExample = (function () {
     function DatepickerFilterExample() {
@@ -697,8 +748,96 @@ var DatepickerFilterExample = (function () {
     return DatepickerFilterExample;
 }());
 
+// Depending on whether rollup is used, moment needs to be imported differently.
+// Since Moment.js doesn't have a default export, we normally need to import using the `* as`
+// syntax. However, rollup creates a synthetic default module and we thus need to import it using
+// the `default as` syntax.
+var moment = _rollupMoment__default__default || _rollupMoment__default;
+// See the Moment.js docs for the meaning of these formats:
+// https://momentjs.com/docs/#/displaying/format/
+var MY_FORMATS = {
+    parse: {
+        dateInput: 'LL',
+    },
+    display: {
+        dateInput: 'LL',
+        monthYearLabel: 'MMM YYYY',
+        dateA11yLabel: 'LL',
+        monthYearA11yLabel: 'MMMM YYYY',
+    },
+};
 /**
- * \@title Datepicker Min Max
+ * \@title Datepicker with custom formats
+ */
+var DatepickerFormatsExample = (function () {
+    function DatepickerFormatsExample() {
+        this.date = new _angular_forms.FormControl(moment());
+    }
+    DatepickerFormatsExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'datepicker-formats-example',
+                    template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Verbose datepicker\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp></mat-datepicker></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                    providers: [
+                        // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
+                        // application's root module. We provide it at the component level here, due to limitations of
+                        // our example generation script.
+                        { provide: _angular_material_core.DateAdapter, useClass: _angular_materialMomentAdapter.MomentDateAdapter, deps: [_angular_material_core.MAT_DATE_LOCALE] },
+                        { provide: _angular_material_core.MAT_DATE_FORMATS, useValue: MY_FORMATS },
+                    ],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    DatepickerFormatsExample.ctorParameters = function () { return []; };
+    return DatepickerFormatsExample;
+}());
+
+/**
+ * \@title Datepicker with different locale
+ */
+var DatepickerLocaleExample = (function () {
+    /**
+     * @param {?} adapter
+     */
+    function DatepickerLocaleExample(adapter) {
+        this.adapter = adapter;
+    }
+    /**
+     * @return {?}
+     */
+    DatepickerLocaleExample.prototype.french = function () {
+        this.adapter.setLocale('fr');
+    };
+    DatepickerLocaleExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'datepicker-locale-example',
+                    template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Different locale\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp></mat-datepicker></mat-form-field><button mat-button (click)=\"french()\">Dynamically switch to French</button>",
+                    styles: ["/** No CSS for this example */ "],
+                    providers: [
+                        // The locale would typically be provided on the root module of your application. We do it at
+                        // the component level here, due to limitations of our example generation script.
+                        { provide: _angular_material_core.MAT_DATE_LOCALE, useValue: 'ja-JP' },
+                        // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
+                        // `MatMomentDateModule` in your applications root module. We provide it at the component level
+                        // here, due to limitations of our example generation script.
+                        { provide: _angular_material_core.DateAdapter, useClass: _angular_materialMomentAdapter.MomentDateAdapter, deps: [_angular_material_core.MAT_DATE_LOCALE] },
+                        { provide: _angular_material_core.MAT_DATE_FORMATS, useValue: _angular_materialMomentAdapter.MAT_MOMENT_DATE_FORMATS },
+                    ],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    DatepickerLocaleExample.ctorParameters = function () { return [
+        { type: _angular_material_core.DateAdapter, },
+    ]; };
+    return DatepickerLocaleExample;
+}());
+
+/**
+ * \@title Datepicker with min & max validation
  */
 var DatepickerMinMaxExample = (function () {
     function DatepickerMinMaxExample() {
@@ -717,6 +856,40 @@ var DatepickerMinMaxExample = (function () {
      */
     DatepickerMinMaxExample.ctorParameters = function () { return []; };
     return DatepickerMinMaxExample;
+}());
+
+// Depending on whether rollup is used, moment needs to be imported differently.
+// Since Moment.js doesn't have a default export, we normally need to import using the `* as`
+// syntax. However, rollup creates a synthetic default module and we thus need to import it using
+// the `default as` syntax.
+var moment$1 = _rollupMoment__default__default || _rollupMoment__default;
+/**
+ * \@title Datepicker that uses Moment.js dates
+ */
+var DatepickerMomentExample = (function () {
+    function DatepickerMomentExample() {
+        // Datepicker takes `Moment` objects instead of `Date` objects.
+        this.date = new _angular_forms.FormControl(moment$1([2017, 0, 1]));
+    }
+    DatepickerMomentExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'datepicker-moment-example',
+                    template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Moment.js datepicker\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp></mat-datepicker></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                    providers: [
+                        // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
+                        // `MatMomentDateModule` in your applications root module. We provide it at the component level
+                        // here, due to limitations of our example generation script.
+                        { provide: _angular_material_core.DateAdapter, useClass: _angular_materialMomentAdapter.MomentDateAdapter, deps: [_angular_material_core.MAT_DATE_LOCALE] },
+                        { provide: _angular_material_core.MAT_DATE_FORMATS, useValue: _angular_materialMomentAdapter.MAT_MOMENT_DATE_FORMATS },
+                    ],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    DatepickerMomentExample.ctorParameters = function () { return []; };
+    return DatepickerMomentExample;
 }());
 
 /**
@@ -761,7 +934,7 @@ var DatepickerStartViewExample = (function () {
 }());
 
 /**
- * \@title Datepicker Touch
+ * \@title Datepicker touch UI
  */
 var DatepickerTouchExample = (function () {
     function DatepickerTouchExample() {
@@ -778,6 +951,28 @@ var DatepickerTouchExample = (function () {
      */
     DatepickerTouchExample.ctorParameters = function () { return []; };
     return DatepickerTouchExample;
+}());
+
+/**
+ * \@title Datepicker selected value
+ */
+var DatepickerValueExample = (function () {
+    function DatepickerValueExample() {
+        this.date = new _angular_forms.FormControl(new Date());
+        this.serializedDate = new _angular_forms.FormControl((new Date()).toISOString());
+    }
+    DatepickerValueExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'datepicker-value-example',
+                    template: "<mat-form-field><input matInput [matDatepicker]=\"picker1\" placeholder=\"Angular forms\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle><mat-datepicker #picker1></mat-datepicker></mat-form-field><mat-form-field><input matInput [matDatepicker]=\"picker2\" placeholder=\"Angular forms (w/ deserialization)\" [formControl]=\"serializedDate\"><mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle><mat-datepicker #picker2></mat-datepicker></mat-form-field><mat-form-field><input matInput [matDatepicker]=\"picker3\" placeholder=\"Value binding\" [value]=\"date.value\"><mat-datepicker-toggle matSuffix [for]=\"picker3\"></mat-datepicker-toggle><mat-datepicker #picker3></mat-datepicker></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    DatepickerValueExample.ctorParameters = function () { return []; };
+    return DatepickerValueExample;
 }());
 
 /**
@@ -1907,6 +2102,25 @@ var PaginatorOverviewExample = (function () {
 }());
 
 /**
+ * \@title Buffer progress-bar
+ */
+var ProgressBarBufferExample = (function () {
+    function ProgressBarBufferExample() {
+    }
+    ProgressBarBufferExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'progress-bar-buffer-example',
+                    template: "<mat-progress-bar mode=\"buffer\"></mat-progress-bar>",
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    ProgressBarBufferExample.ctorParameters = function () { return []; };
+    return ProgressBarBufferExample;
+}());
+
+/**
  * \@title Configurable progress-bar
  */
 var ProgressBarConfigurableExample = (function () {
@@ -1931,22 +2145,60 @@ var ProgressBarConfigurableExample = (function () {
 }());
 
 /**
- * \@title Basic progress-bar
+ * \@title Determinate progress-bar
  */
-var ProgressBarOverviewExample = (function () {
-    function ProgressBarOverviewExample() {
+var ProgressBarDeterminateExample = (function () {
+    function ProgressBarDeterminateExample() {
     }
-    ProgressBarOverviewExample.decorators = [
+    ProgressBarDeterminateExample.decorators = [
         { type: _angular_core.Component, args: [{
-                    selector: 'progress-bar-overview-example',
+                    selector: 'progress-bar-determinate-example',
+                    template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>",
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    ProgressBarDeterminateExample.ctorParameters = function () { return []; };
+    return ProgressBarDeterminateExample;
+}());
+
+/**
+ * \@title Indeterminate progress-bar
+ */
+var ProgressBarIndeterminateExample = (function () {
+    function ProgressBarIndeterminateExample() {
+    }
+    ProgressBarIndeterminateExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'progress-bar-indeterminate-example',
                     template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>",
                 },] },
     ];
     /**
      * @nocollapse
      */
-    ProgressBarOverviewExample.ctorParameters = function () { return []; };
-    return ProgressBarOverviewExample;
+    ProgressBarIndeterminateExample.ctorParameters = function () { return []; };
+    return ProgressBarIndeterminateExample;
+}());
+
+/**
+ * \@title Query progress-bar
+ */
+var ProgressBarQueryExample = (function () {
+    function ProgressBarQueryExample() {
+    }
+    ProgressBarQueryExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'progress-bar-query-example',
+                    template: "<mat-progress-bar mode=\"query\"></mat-progress-bar>",
+                },] },
+    ];
+    /**
+     * @nocollapse
+     */
+    ProgressBarQueryExample.ctorParameters = function () { return []; };
+    return ProgressBarQueryExample;
 }());
 
 /**
@@ -3825,38 +4077,74 @@ var EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'datepicker-api': {
-        title: 'Datepicker API',
+        title: 'Datepicker open method ',
         component: DatepickerApiExample,
         additionalFiles: null,
         selectorName: null
     },
+    'datepicker-disabled': {
+        title: 'Disabled datepicker ',
+        component: DatepickerDisabledExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'datepicker-events': {
+        title: 'Datepicker input and change events ',
+        component: DatepickerEventsExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'datepicker-filter': {
-        title: 'Datepicker Filter',
+        title: 'Datepicker with filter validation ',
         component: DatepickerFilterExample,
         additionalFiles: null,
         selectorName: null
     },
+    'datepicker-formats': {
+        title: 'Datepicker with custom formats ',
+        component: DatepickerFormatsExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'datepicker-locale': {
+        title: 'Datepicker with different locale ',
+        component: DatepickerLocaleExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'datepicker-min-max': {
-        title: 'Datepicker Min Max',
+        title: 'Datepicker with min & max validation ',
         component: DatepickerMinMaxExample,
         additionalFiles: null,
         selectorName: null
     },
+    'datepicker-moment': {
+        title: 'Datepicker that uses Moment.js dates ',
+        component: DatepickerMomentExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'datepicker-overview': {
-        title: 'Basic datepicker',
+        title: 'Basic datepicker ',
         component: DatepickerOverviewExample,
         additionalFiles: null,
         selectorName: null
     },
     'datepicker-start-view': {
-        title: 'Datepicker start date',
+        title: 'Datepicker start date ',
         component: DatepickerStartViewExample,
         additionalFiles: null,
         selectorName: null
     },
     'datepicker-touch': {
-        title: 'Datepicker Touch',
+        title: 'Datepicker touch UI ',
         component: DatepickerTouchExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'datepicker-value': {
+        title: 'Datepicker selected value ',
+        component: DatepickerValueExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -4058,15 +4346,33 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'progress-bar-buffer': {
+        title: 'Buffer progress-bar',
+        component: ProgressBarBufferExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'progress-bar-configurable': {
         title: 'Configurable progress-bar',
         component: ProgressBarConfigurableExample,
         additionalFiles: null,
         selectorName: null
     },
-    'progress-bar-overview': {
-        title: 'Basic progress-bar',
-        component: ProgressBarOverviewExample,
+    'progress-bar-determinate': {
+        title: 'Determinate progress-bar',
+        component: ProgressBarDeterminateExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'progress-bar-indeterminate': {
+        title: 'Indeterminate progress-bar',
+        component: ProgressBarIndeterminateExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'progress-bar-query': {
+        title: 'Query progress-bar',
+        component: ProgressBarQueryExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -4131,7 +4437,7 @@ var EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'select-no-ripple': {
-        title: 'Select with cno option ripple ',
+        title: 'Select with no option ripple ',
         component: SelectNoRippleExample,
         additionalFiles: null,
         selectorName: null
@@ -4323,11 +4629,17 @@ var EXAMPLE_LIST = [
     ChipsOverviewExample,
     ChipsStackedExample,
     DatepickerApiExample,
+    DatepickerDisabledExample,
+    DatepickerEventsExample,
     DatepickerFilterExample,
+    DatepickerFormatsExample,
+    DatepickerLocaleExample,
     DatepickerMinMaxExample,
+    DatepickerMomentExample,
     DatepickerOverviewExample,
     DatepickerStartViewExample,
     DatepickerTouchExample,
+    DatepickerValueExample,
     DialogContentExampleDialog, DialogContentExample,
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
@@ -4361,8 +4673,11 @@ var EXAMPLE_LIST = [
     NestedMenuExample,
     PaginatorConfigurableExample,
     PaginatorOverviewExample,
+    ProgressBarBufferExample,
     ProgressBarConfigurableExample,
-    ProgressBarOverviewExample,
+    ProgressBarDeterminateExample,
+    ProgressBarIndeterminateExample,
+    ProgressBarQueryExample,
     ProgressSpinnerConfigurableExample,
     ProgressSpinnerOverviewExample,
     RadioNgModelExample,
@@ -4496,87 +4811,97 @@ exports.ɵl = ChipsInputExample;
 exports.ɵm = ChipsOverviewExample;
 exports.ɵn = ChipsStackedExample;
 exports.ɵo = DatepickerApiExample;
-exports.ɵp = DatepickerFilterExample;
-exports.ɵq = DatepickerMinMaxExample;
-exports.ɵr = DatepickerStartViewExample;
-exports.ɵs = DatepickerTouchExample;
-exports.ɵt = DialogContentExample;
-exports.ɵu = DialogContentExampleDialog;
-exports.ɵv = DialogDataExample;
-exports.ɵw = DialogDataExampleDialog;
-exports.ɵx = DialogElementsExample;
-exports.ɵy = DialogElementsExampleDialog;
-exports.ɵz = DialogOverviewExample;
-exports.ɵba = DialogOverviewExampleDialog;
-exports.ɵbb = ExpansionStepsExample;
-exports.ɵbd = FormFieldCustomControlExample;
-exports.ɵbc = MyTelInput;
-exports.ɵbe = FormFieldErrorExample;
-exports.ɵbf = FormFieldHintExample;
-exports.ɵbg = FormFieldOverviewExample;
-exports.ɵbh = FormFieldPlaceholderExample;
-exports.ɵbi = FormFieldPrefixSuffixExample;
-exports.ɵbj = FormFieldThemingExample;
-exports.ɵbk = GridListDynamicExample;
-exports.ɵbl = GridListOverviewExample;
-exports.ɵbm = IconOverviewExample;
-exports.ɵbn = IconSvgExample;
-exports.ɵbo = InputAutosizeTextareaExample;
-exports.ɵbp = InputClearableExample;
-exports.ɵbq = InputErrorStateMatcherExample;
-exports.ɵbr = InputErrorsExample;
-exports.ɵbs = InputFormExample;
-exports.ɵbt = InputHintExample;
-exports.ɵbu = InputOverviewExample;
-exports.ɵbv = InputPrefixSuffixExample;
-exports.ɵbw = ListSectionsExample;
-exports.ɵbx = ListSelectionExample;
-exports.ɵdr = ExampleMaterialModule;
-exports.ɵby = MenuIconsExample;
-exports.ɵbz = MenuOverviewExample;
-exports.ɵca = NestedMenuExample;
-exports.ɵcb = PaginatorConfigurableExample;
-exports.ɵcc = PaginatorOverviewExample;
-exports.ɵcd = ProgressBarConfigurableExample;
-exports.ɵce = ProgressBarOverviewExample;
-exports.ɵcf = ProgressSpinnerConfigurableExample;
-exports.ɵcg = ProgressSpinnerOverviewExample;
-exports.ɵch = RadioNgModelExample;
-exports.ɵci = RadioOverviewExample;
-exports.ɵcj = SelectCustomTriggerExample;
-exports.ɵck = SelectDisabledExample;
-exports.ɵcl = SelectErrorStateMatcherExample;
-exports.ɵcm = SelectFormExample;
-exports.ɵcn = SelectHintErrorExample;
-exports.ɵco = SelectMultipleExample;
-exports.ɵcp = SelectNoRippleExample;
-exports.ɵcq = SelectOptgroupExample;
-exports.ɵcr = SelectOverviewExample;
-exports.ɵcs = SelectPanelClassExample;
-exports.ɵct = SelectResetExample;
-exports.ɵcu = SelectValueBindingExample;
-exports.ɵcv = SidenavFabExample;
-exports.ɵcw = SidenavOverviewExample;
-exports.ɵcx = SlideToggleConfigurableExample;
-exports.ɵcy = SlideToggleFormsExample;
-exports.ɵcz = SlideToggleOverviewExample;
-exports.ɵda = SliderConfigurableExample;
-exports.ɵdb = SliderOverviewExample;
-exports.ɵdd = PizzaPartyComponent;
-exports.ɵdc = SnackBarComponentExample;
-exports.ɵde = SnackBarOverviewExample;
-exports.ɵdf = SortOverviewExample;
-exports.ɵdg = TableBasicExample;
-exports.ɵdh = TableFilteringExample;
-exports.ɵdi = TableHttpExample;
-exports.ɵdj = TableOverviewExample;
-exports.ɵdk = TablePaginationExample;
-exports.ɵdl = TableSortingExample;
-exports.ɵdm = TabsOverviewExample;
-exports.ɵdn = TabsTemplateLabelExample;
-exports.ɵdo = ToolbarOverviewExample;
-exports.ɵdp = TooltipOverviewExample;
-exports.ɵdq = TooltipPositionExample;
+exports.ɵp = DatepickerDisabledExample;
+exports.ɵq = DatepickerEventsExample;
+exports.ɵr = DatepickerFilterExample;
+exports.ɵt = DatepickerFormatsExample;
+exports.ɵs = MY_FORMATS;
+exports.ɵu = DatepickerLocaleExample;
+exports.ɵv = DatepickerMinMaxExample;
+exports.ɵw = DatepickerMomentExample;
+exports.ɵx = DatepickerStartViewExample;
+exports.ɵy = DatepickerTouchExample;
+exports.ɵz = DatepickerValueExample;
+exports.ɵba = DialogContentExample;
+exports.ɵbb = DialogContentExampleDialog;
+exports.ɵbc = DialogDataExample;
+exports.ɵbd = DialogDataExampleDialog;
+exports.ɵbe = DialogElementsExample;
+exports.ɵbf = DialogElementsExampleDialog;
+exports.ɵbg = DialogOverviewExample;
+exports.ɵbh = DialogOverviewExampleDialog;
+exports.ɵbi = ExpansionStepsExample;
+exports.ɵbk = FormFieldCustomControlExample;
+exports.ɵbj = MyTelInput;
+exports.ɵbl = FormFieldErrorExample;
+exports.ɵbm = FormFieldHintExample;
+exports.ɵbn = FormFieldOverviewExample;
+exports.ɵbo = FormFieldPlaceholderExample;
+exports.ɵbp = FormFieldPrefixSuffixExample;
+exports.ɵbq = FormFieldThemingExample;
+exports.ɵbr = GridListDynamicExample;
+exports.ɵbs = GridListOverviewExample;
+exports.ɵbt = IconOverviewExample;
+exports.ɵbu = IconSvgExample;
+exports.ɵbv = InputAutosizeTextareaExample;
+exports.ɵbw = InputClearableExample;
+exports.ɵbx = InputErrorStateMatcherExample;
+exports.ɵby = InputErrorsExample;
+exports.ɵbz = InputFormExample;
+exports.ɵca = InputHintExample;
+exports.ɵcb = InputOverviewExample;
+exports.ɵcc = InputPrefixSuffixExample;
+exports.ɵcd = ListSectionsExample;
+exports.ɵce = ListSelectionExample;
+exports.ɵeb = ExampleMaterialModule;
+exports.ɵcf = MenuIconsExample;
+exports.ɵcg = MenuOverviewExample;
+exports.ɵch = NestedMenuExample;
+exports.ɵci = PaginatorConfigurableExample;
+exports.ɵcj = PaginatorOverviewExample;
+exports.ɵck = ProgressBarBufferExample;
+exports.ɵcl = ProgressBarConfigurableExample;
+exports.ɵcm = ProgressBarDeterminateExample;
+exports.ɵcn = ProgressBarIndeterminateExample;
+exports.ɵco = ProgressBarQueryExample;
+exports.ɵcp = ProgressSpinnerConfigurableExample;
+exports.ɵcq = ProgressSpinnerOverviewExample;
+exports.ɵcr = RadioNgModelExample;
+exports.ɵcs = RadioOverviewExample;
+exports.ɵct = SelectCustomTriggerExample;
+exports.ɵcu = SelectDisabledExample;
+exports.ɵcv = SelectErrorStateMatcherExample;
+exports.ɵcw = SelectFormExample;
+exports.ɵcx = SelectHintErrorExample;
+exports.ɵcy = SelectMultipleExample;
+exports.ɵcz = SelectNoRippleExample;
+exports.ɵda = SelectOptgroupExample;
+exports.ɵdb = SelectOverviewExample;
+exports.ɵdc = SelectPanelClassExample;
+exports.ɵdd = SelectResetExample;
+exports.ɵde = SelectValueBindingExample;
+exports.ɵdf = SidenavFabExample;
+exports.ɵdg = SidenavOverviewExample;
+exports.ɵdh = SlideToggleConfigurableExample;
+exports.ɵdi = SlideToggleFormsExample;
+exports.ɵdj = SlideToggleOverviewExample;
+exports.ɵdk = SliderConfigurableExample;
+exports.ɵdl = SliderOverviewExample;
+exports.ɵdn = PizzaPartyComponent;
+exports.ɵdm = SnackBarComponentExample;
+exports.ɵdo = SnackBarOverviewExample;
+exports.ɵdp = SortOverviewExample;
+exports.ɵdq = TableBasicExample;
+exports.ɵdr = TableFilteringExample;
+exports.ɵds = TableHttpExample;
+exports.ɵdt = TableOverviewExample;
+exports.ɵdu = TablePaginationExample;
+exports.ɵdv = TableSortingExample;
+exports.ɵdw = TabsOverviewExample;
+exports.ɵdx = TabsTemplateLabelExample;
+exports.ɵdy = ToolbarOverviewExample;
+exports.ɵdz = TooltipOverviewExample;
+exports.ɵea = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

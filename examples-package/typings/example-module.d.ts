@@ -21,11 +21,17 @@ import { ChipsInputExample } from './chips-input/chips-input-example';
 import { ChipsOverviewExample } from './chips-overview/chips-overview-example';
 import { ChipsStackedExample } from './chips-stacked/chips-stacked-example';
 import { DatepickerApiExample } from './datepicker-api/datepicker-api-example';
+import { DatepickerDisabledExample } from './datepicker-disabled/datepicker-disabled-example';
+import { DatepickerEventsExample } from './datepicker-events/datepicker-events-example';
 import { DatepickerFilterExample } from './datepicker-filter/datepicker-filter-example';
+import { DatepickerFormatsExample } from './datepicker-formats/datepicker-formats-example';
+import { DatepickerLocaleExample } from './datepicker-locale/datepicker-locale-example';
 import { DatepickerMinMaxExample } from './datepicker-min-max/datepicker-min-max-example';
+import { DatepickerMomentExample } from './datepicker-moment/datepicker-moment-example';
 import { DatepickerOverviewExample } from './datepicker-overview/datepicker-overview-example';
 import { DatepickerStartViewExample } from './datepicker-start-view/datepicker-start-view-example';
 import { DatepickerTouchExample } from './datepicker-touch/datepicker-touch-example';
+import { DatepickerValueExample } from './datepicker-value/datepicker-value-example';
 import { DialogContentExample } from './dialog-content/dialog-content-example';
 import { DialogDataExample } from './dialog-data/dialog-data-example';
 import { DialogElementsExample } from './dialog-elements/dialog-elements-example';
@@ -59,8 +65,11 @@ import { MenuOverviewExample } from './menu-overview/menu-overview-example';
 import { NestedMenuExample } from './nested-menu/nested-menu-example';
 import { PaginatorConfigurableExample } from './paginator-configurable/paginator-configurable-example';
 import { PaginatorOverviewExample } from './paginator-overview/paginator-overview-example';
+import { ProgressBarBufferExample } from './progress-bar-buffer/progress-bar-buffer-example';
 import { ProgressBarConfigurableExample } from './progress-bar-configurable/progress-bar-configurable-example';
-import { ProgressBarOverviewExample } from './progress-bar-overview/progress-bar-overview-example';
+import { ProgressBarDeterminateExample } from './progress-bar-determinate/progress-bar-determinate-example';
+import { ProgressBarIndeterminateExample } from './progress-bar-indeterminate/progress-bar-indeterminate-example';
+import { ProgressBarQueryExample } from './progress-bar-query/progress-bar-query-example';
 import { ProgressSpinnerConfigurableExample } from './progress-spinner-configurable/progress-spinner-configurable-example';
 import { ProgressSpinnerOverviewExample } from './progress-spinner-overview/progress-spinner-overview-example';
 import { RadioNgModelExample } from './radio-ng-model/radio-ng-model-example';
@@ -203,15 +212,45 @@ export declare const EXAMPLE_COMPONENTS: {
         additionalFiles: null;
         selectorName: null;
     };
+    'datepicker-disabled': {
+        title: string;
+        component: typeof DatepickerDisabledExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'datepicker-events': {
+        title: string;
+        component: typeof DatepickerEventsExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
     'datepicker-filter': {
         title: string;
         component: typeof DatepickerFilterExample;
         additionalFiles: null;
         selectorName: null;
     };
+    'datepicker-formats': {
+        title: string;
+        component: typeof DatepickerFormatsExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'datepicker-locale': {
+        title: string;
+        component: typeof DatepickerLocaleExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
     'datepicker-min-max': {
         title: string;
         component: typeof DatepickerMinMaxExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'datepicker-moment': {
+        title: string;
+        component: typeof DatepickerMomentExample;
         additionalFiles: null;
         selectorName: null;
     };
@@ -230,6 +269,12 @@ export declare const EXAMPLE_COMPONENTS: {
     'datepicker-touch': {
         title: string;
         component: typeof DatepickerTouchExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'datepicker-value': {
+        title: string;
+        component: typeof DatepickerValueExample;
         additionalFiles: null;
         selectorName: null;
     };
@@ -431,15 +476,33 @@ export declare const EXAMPLE_COMPONENTS: {
         additionalFiles: null;
         selectorName: null;
     };
+    'progress-bar-buffer': {
+        title: string;
+        component: typeof ProgressBarBufferExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
     'progress-bar-configurable': {
         title: string;
         component: typeof ProgressBarConfigurableExample;
         additionalFiles: null;
         selectorName: null;
     };
-    'progress-bar-overview': {
+    'progress-bar-determinate': {
         title: string;
-        component: typeof ProgressBarOverviewExample;
+        component: typeof ProgressBarDeterminateExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'progress-bar-indeterminate': {
+        title: string;
+        component: typeof ProgressBarIndeterminateExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'progress-bar-query': {
+        title: string;
+        component: typeof ProgressBarQueryExample;
         additionalFiles: null;
         selectorName: null;
     };
@@ -678,6 +741,6 @@ export declare const EXAMPLE_COMPONENTS: {
         selectorName: null;
     };
 };
-export declare const EXAMPLE_LIST: (typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof MyTelInput | typeof FormFieldPlaceholderExample | typeof IconSvgExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample)[];
+export declare const EXAMPLE_LIST: (typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof MyTelInput | typeof FormFieldPlaceholderExample | typeof IconSvgExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample)[];
 export declare class ExampleModule {
 }

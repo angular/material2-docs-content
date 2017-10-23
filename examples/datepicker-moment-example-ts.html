@@ -1,0 +1,30 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-moment-adapter'</span>;
+<span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
+
+<span class="hljs-comment">// Depending on whether rollup is used, moment needs to be imported differently.</span>
+<span class="hljs-comment">// Since Moment.js doesn't have a default export, we normally need to import using the `* as`</span>
+<span class="hljs-comment">// syntax. However, rollup creates a synthetic default module and we thus need to import it using</span>
+<span class="hljs-comment">// the `default as` syntax.</span>
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> _moment <span class="hljs-keyword">from</span> <span class="hljs-string">'moment'</span>;
+<span class="hljs-keyword">import</span> {<span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> _rollupMoment} <span class="hljs-keyword">from</span> <span class="hljs-string">'moment'</span>;
+<span class="hljs-keyword">const</span> moment = _rollupMoment || _moment;
+
+<span class="hljs-comment">/** @title Datepicker that uses Moment.js dates */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'datepicker-moment-example'</span>,
+  templateUrl: <span class="hljs-string">'datepicker-moment-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'datepicker-moment-example.css'</span>],
+  providers: [
+    <span class="hljs-comment">// `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing</span>
+    <span class="hljs-comment">// `MatMomentDateModule` in your applications root module. We provide it at the component level</span>
+    <span class="hljs-comment">// here, due to limitations of our example generation script.</span>
+    {provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
+    {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatepickerMomentExample {
+  <span class="hljs-comment">// Datepicker takes `Moment` objects instead of `Date` objects.</span>
+  date = <span class="hljs-keyword">new</span> FormControl(moment([<span class="hljs-number">2017</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]));
+}

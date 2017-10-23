@@ -16,6 +16,10 @@ import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/observable/merge';
 import { ENTER } from '@angular/cdk/keycodes';
+import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import * as _rollupMoment from 'moment';
+import _rollupMoment__default from 'moment';
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { MatFormFieldControl } from '@angular/material/form-field';
@@ -325,8 +329,8 @@ class CardFancyExample {
 CardFancyExample.decorators = [
     { type: Component, args: [{
                 selector: 'card-fancy-example',
-                template: "<mat-card class=\"example-card\"><mat-card-header><div mat-card-avatar class=\"example-header-image\"></div><mat-card-title>Shiba Inu</mat-card-title><mat-card-subtitle>Dog Breed</mat-card-subtitle></mat-card-header><img mat-card-image src=\"http://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"><mat-card-content><p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p></mat-card-content><mat-card-actions><button mat-button>LIKE</button> <button mat-button>SHARE</button></mat-card-actions></mat-card>",
-                styles: [".example-card { width: 400px; } .example-header-image { background-image: url('http://material.angular.io/assets/img/examples/shiba1.jpg'); background-size: cover; } "],
+                template: "<mat-card class=\"example-card\"><mat-card-header><div mat-card-avatar class=\"example-header-image\"></div><mat-card-title>Shiba Inu</mat-card-title><mat-card-subtitle>Dog Breed</mat-card-subtitle></mat-card-header><img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\"><mat-card-content><p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</p></mat-card-content><mat-card-actions><button mat-button>LIKE</button> <button mat-button>SHARE</button></mat-card-actions></mat-card>",
+                styles: [".example-card { width: 400px; } .example-header-image { background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); background-size: cover; } "],
             },] },
 ];
 /**
@@ -542,7 +546,7 @@ ChipsInputExample.decorators = [
     { type: Component, args: [{
                 selector: 'chips-input-example',
                 template: "<mat-form-field class=\"demo-chip-list\"><mat-chip-list #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (remove)=\"remove(fruit)\">{{fruit.name}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip><input placeholder=\"New fruit...\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-chip-list></mat-form-field>",
-                styles: [".demo-chip-list{width:100%}"]
+                styles: [".demo-chip-list { width: 100%; } "]
             },] },
 ];
 /**
@@ -593,7 +597,7 @@ ChipsStackedExample.decorators = [
 ChipsStackedExample.ctorParameters = () => [];
 
 /**
- * \@title Datepicker API
+ * \@title Datepicker open method
  */
 class DatepickerApiExample {
 }
@@ -610,7 +614,52 @@ DatepickerApiExample.decorators = [
 DatepickerApiExample.ctorParameters = () => [];
 
 /**
- * \@title Datepicker Filter
+ * \@title Disabled datepicker
+ */
+class DatepickerDisabledExample {
+}
+DatepickerDisabledExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-disabled-example',
+                template: "<p><mat-form-field><input matInput [matDatepicker]=\"dp1\" placeholder=\"Completely disabled\" disabled=\"disabled\"><mat-datepicker-toggle matSuffix [for]=\"dp1\"></mat-datepicker-toggle><mat-datepicker #dp1></mat-datepicker></mat-form-field></p><p><mat-form-field><input matInput [matDatepicker]=\"dp2\" placeholder=\"Popup disabled\"><mat-datepicker-toggle matSuffix [for]=\"dp2\" disabled=\"disabled\"></mat-datepicker-toggle><mat-datepicker #dp2></mat-datepicker></mat-form-field></p><p><mat-form-field><input matInput [matDatepicker]=\"dp3\" placeholder=\"Input disabled\" disabled=\"disabled\"><mat-datepicker-toggle matSuffix [for]=\"dp3\"></mat-datepicker-toggle><mat-datepicker #dp3 disabled=\"false\"></mat-datepicker></mat-form-field></p>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerDisabledExample.ctorParameters = () => [];
+
+/**
+ * \@title Datepicker input and change events
+ */
+class DatepickerEventsExample {
+    constructor() {
+        this.events = [];
+    }
+    /**
+     * @param {?} type
+     * @param {?} event
+     * @return {?}
+     */
+    addEvent(type, event) {
+        this.events.push(`${type}: ${event.value}`);
+    }
+}
+DatepickerEventsExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-events-example',
+                template: "<mat-form-field><input matInput [matDatepicker]=\"picker\" placeholder=\"Input & change events\" (dateInput)=\"addEvent('input', $event)\" (dateChange)=\"addEvent('change', $event)\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker></mat-datepicker></mat-form-field><div class=\"example-events\"><div *ngFor=\"let e of events\">{{e}}</div></div>",
+                styles: [".example-events { width: 400px; height: 200px; border: 1px solid #555; overflow: auto; } "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerEventsExample.ctorParameters = () => [];
+
+/**
+ * \@title Datepicker with filter validation
  */
 class DatepickerFilterExample {
     constructor() {
@@ -633,8 +682,94 @@ DatepickerFilterExample.decorators = [
  */
 DatepickerFilterExample.ctorParameters = () => [];
 
+// Depending on whether rollup is used, moment needs to be imported differently.
+// Since Moment.js doesn't have a default export, we normally need to import using the `* as`
+// syntax. However, rollup creates a synthetic default module and we thus need to import it using
+// the `default as` syntax.
+const moment = _rollupMoment__default || _rollupMoment;
+// See the Moment.js docs for the meaning of these formats:
+// https://momentjs.com/docs/#/displaying/format/
+const MY_FORMATS = {
+    parse: {
+        dateInput: 'LL',
+    },
+    display: {
+        dateInput: 'LL',
+        monthYearLabel: 'MMM YYYY',
+        dateA11yLabel: 'LL',
+        monthYearA11yLabel: 'MMMM YYYY',
+    },
+};
 /**
- * \@title Datepicker Min Max
+ * \@title Datepicker with custom formats
+ */
+class DatepickerFormatsExample {
+    constructor() {
+        this.date = new FormControl(moment());
+    }
+}
+DatepickerFormatsExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-formats-example',
+                template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Verbose datepicker\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp></mat-datepicker></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+                providers: [
+                    // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
+                    // application's root module. We provide it at the component level here, due to limitations of
+                    // our example generation script.
+                    { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
+                    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
+                ],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerFormatsExample.ctorParameters = () => [];
+
+/**
+ * \@title Datepicker with different locale
+ */
+class DatepickerLocaleExample {
+    /**
+     * @param {?} adapter
+     */
+    constructor(adapter) {
+        this.adapter = adapter;
+    }
+    /**
+     * @return {?}
+     */
+    french() {
+        this.adapter.setLocale('fr');
+    }
+}
+DatepickerLocaleExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-locale-example',
+                template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Different locale\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp></mat-datepicker></mat-form-field><button mat-button (click)=\"french()\">Dynamically switch to French</button>",
+                styles: ["/** No CSS for this example */ "],
+                providers: [
+                    // The locale would typically be provided on the root module of your application. We do it at
+                    // the component level here, due to limitations of our example generation script.
+                    { provide: MAT_DATE_LOCALE, useValue: 'ja-JP' },
+                    // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
+                    // `MatMomentDateModule` in your applications root module. We provide it at the component level
+                    // here, due to limitations of our example generation script.
+                    { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
+                    { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
+                ],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerLocaleExample.ctorParameters = () => [
+    { type: DateAdapter, },
+];
+
+/**
+ * \@title Datepicker with min & max validation
  */
 class DatepickerMinMaxExample {
     constructor() {
@@ -653,6 +788,39 @@ DatepickerMinMaxExample.decorators = [
  * @nocollapse
  */
 DatepickerMinMaxExample.ctorParameters = () => [];
+
+// Depending on whether rollup is used, moment needs to be imported differently.
+// Since Moment.js doesn't have a default export, we normally need to import using the `* as`
+// syntax. However, rollup creates a synthetic default module and we thus need to import it using
+// the `default as` syntax.
+const moment$1 = _rollupMoment__default || _rollupMoment;
+/**
+ * \@title Datepicker that uses Moment.js dates
+ */
+class DatepickerMomentExample {
+    constructor() {
+        // Datepicker takes `Moment` objects instead of `Date` objects.
+        this.date = new FormControl(moment$1([2017, 0, 1]));
+    }
+}
+DatepickerMomentExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-moment-example',
+                template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Moment.js datepicker\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp></mat-datepicker></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+                providers: [
+                    // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
+                    // `MatMomentDateModule` in your applications root module. We provide it at the component level
+                    // here, due to limitations of our example generation script.
+                    { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
+                    { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
+                ],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerMomentExample.ctorParameters = () => [];
 
 /**
  * \@title Basic datepicker
@@ -692,7 +860,7 @@ DatepickerStartViewExample.decorators = [
 DatepickerStartViewExample.ctorParameters = () => [];
 
 /**
- * \@title Datepicker Touch
+ * \@title Datepicker touch UI
  */
 class DatepickerTouchExample {
 }
@@ -707,6 +875,27 @@ DatepickerTouchExample.decorators = [
  * @nocollapse
  */
 DatepickerTouchExample.ctorParameters = () => [];
+
+/**
+ * \@title Datepicker selected value
+ */
+class DatepickerValueExample {
+    constructor() {
+        this.date = new FormControl(new Date());
+        this.serializedDate = new FormControl((new Date()).toISOString());
+    }
+}
+DatepickerValueExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-value-example',
+                template: "<mat-form-field><input matInput [matDatepicker]=\"picker1\" placeholder=\"Angular forms\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle><mat-datepicker #picker1></mat-datepicker></mat-form-field><mat-form-field><input matInput [matDatepicker]=\"picker2\" placeholder=\"Angular forms (w/ deserialization)\" [formControl]=\"serializedDate\"><mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle><mat-datepicker #picker2></mat-datepicker></mat-form-field><mat-form-field><input matInput [matDatepicker]=\"picker3\" placeholder=\"Value binding\" [value]=\"date.value\"><mat-datepicker-toggle matSuffix [for]=\"picker3\"></mat-datepicker-toggle><mat-datepicker #picker3></mat-datepicker></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/**
+ * @nocollapse
+ */
+DatepickerValueExample.ctorParameters = () => [];
 
 /**
  * \@title Dialog with header, scrollable content and actions
@@ -1737,6 +1926,22 @@ PaginatorOverviewExample.decorators = [
 PaginatorOverviewExample.ctorParameters = () => [];
 
 /**
+ * \@title Buffer progress-bar
+ */
+class ProgressBarBufferExample {
+}
+ProgressBarBufferExample.decorators = [
+    { type: Component, args: [{
+                selector: 'progress-bar-buffer-example',
+                template: "<mat-progress-bar mode=\"buffer\"></mat-progress-bar>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ProgressBarBufferExample.ctorParameters = () => [];
+
+/**
  * \@title Configurable progress-bar
  */
 class ProgressBarConfigurableExample {
@@ -1760,20 +1965,52 @@ ProgressBarConfigurableExample.decorators = [
 ProgressBarConfigurableExample.ctorParameters = () => [];
 
 /**
- * \@title Basic progress-bar
+ * \@title Determinate progress-bar
  */
-class ProgressBarOverviewExample {
+class ProgressBarDeterminateExample {
 }
-ProgressBarOverviewExample.decorators = [
+ProgressBarDeterminateExample.decorators = [
     { type: Component, args: [{
-                selector: 'progress-bar-overview-example',
+                selector: 'progress-bar-determinate-example',
+                template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ProgressBarDeterminateExample.ctorParameters = () => [];
+
+/**
+ * \@title Indeterminate progress-bar
+ */
+class ProgressBarIndeterminateExample {
+}
+ProgressBarIndeterminateExample.decorators = [
+    { type: Component, args: [{
+                selector: 'progress-bar-indeterminate-example',
                 template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>",
             },] },
 ];
 /**
  * @nocollapse
  */
-ProgressBarOverviewExample.ctorParameters = () => [];
+ProgressBarIndeterminateExample.ctorParameters = () => [];
+
+/**
+ * \@title Query progress-bar
+ */
+class ProgressBarQueryExample {
+}
+ProgressBarQueryExample.decorators = [
+    { type: Component, args: [{
+                selector: 'progress-bar-query-example',
+                template: "<mat-progress-bar mode=\"query\"></mat-progress-bar>",
+            },] },
+];
+/**
+ * @nocollapse
+ */
+ProgressBarQueryExample.ctorParameters = () => [];
 
 /**
  * \@title Configurable progress spinner
@@ -3518,38 +3755,74 @@ const EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'datepicker-api': {
-        title: 'Datepicker API',
+        title: 'Datepicker open method ',
         component: DatepickerApiExample,
         additionalFiles: null,
         selectorName: null
     },
+    'datepicker-disabled': {
+        title: 'Disabled datepicker ',
+        component: DatepickerDisabledExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'datepicker-events': {
+        title: 'Datepicker input and change events ',
+        component: DatepickerEventsExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'datepicker-filter': {
-        title: 'Datepicker Filter',
+        title: 'Datepicker with filter validation ',
         component: DatepickerFilterExample,
         additionalFiles: null,
         selectorName: null
     },
+    'datepicker-formats': {
+        title: 'Datepicker with custom formats ',
+        component: DatepickerFormatsExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'datepicker-locale': {
+        title: 'Datepicker with different locale ',
+        component: DatepickerLocaleExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'datepicker-min-max': {
-        title: 'Datepicker Min Max',
+        title: 'Datepicker with min & max validation ',
         component: DatepickerMinMaxExample,
         additionalFiles: null,
         selectorName: null
     },
+    'datepicker-moment': {
+        title: 'Datepicker that uses Moment.js dates ',
+        component: DatepickerMomentExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'datepicker-overview': {
-        title: 'Basic datepicker',
+        title: 'Basic datepicker ',
         component: DatepickerOverviewExample,
         additionalFiles: null,
         selectorName: null
     },
     'datepicker-start-view': {
-        title: 'Datepicker start date',
+        title: 'Datepicker start date ',
         component: DatepickerStartViewExample,
         additionalFiles: null,
         selectorName: null
     },
     'datepicker-touch': {
-        title: 'Datepicker Touch',
+        title: 'Datepicker touch UI ',
         component: DatepickerTouchExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'datepicker-value': {
+        title: 'Datepicker selected value ',
+        component: DatepickerValueExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -3751,15 +4024,33 @@ const EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'progress-bar-buffer': {
+        title: 'Buffer progress-bar',
+        component: ProgressBarBufferExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'progress-bar-configurable': {
         title: 'Configurable progress-bar',
         component: ProgressBarConfigurableExample,
         additionalFiles: null,
         selectorName: null
     },
-    'progress-bar-overview': {
-        title: 'Basic progress-bar',
-        component: ProgressBarOverviewExample,
+    'progress-bar-determinate': {
+        title: 'Determinate progress-bar',
+        component: ProgressBarDeterminateExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'progress-bar-indeterminate': {
+        title: 'Indeterminate progress-bar',
+        component: ProgressBarIndeterminateExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'progress-bar-query': {
+        title: 'Query progress-bar',
+        component: ProgressBarQueryExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -3824,7 +4115,7 @@ const EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'select-no-ripple': {
-        title: 'Select with cno option ripple ',
+        title: 'Select with no option ripple ',
         component: SelectNoRippleExample,
         additionalFiles: null,
         selectorName: null
@@ -4016,11 +4307,17 @@ const EXAMPLE_LIST = [
     ChipsOverviewExample,
     ChipsStackedExample,
     DatepickerApiExample,
+    DatepickerDisabledExample,
+    DatepickerEventsExample,
     DatepickerFilterExample,
+    DatepickerFormatsExample,
+    DatepickerLocaleExample,
     DatepickerMinMaxExample,
+    DatepickerMomentExample,
     DatepickerOverviewExample,
     DatepickerStartViewExample,
     DatepickerTouchExample,
+    DatepickerValueExample,
     DialogContentExampleDialog, DialogContentExample,
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
@@ -4054,8 +4351,11 @@ const EXAMPLE_LIST = [
     NestedMenuExample,
     PaginatorConfigurableExample,
     PaginatorOverviewExample,
+    ProgressBarBufferExample,
     ProgressBarConfigurableExample,
-    ProgressBarOverviewExample,
+    ProgressBarDeterminateExample,
+    ProgressBarIndeterminateExample,
+    ProgressBarQueryExample,
     ProgressSpinnerConfigurableExample,
     ProgressSpinnerOverviewExample,
     RadioNgModelExample,
@@ -4163,5 +4463,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerFilterExample as ɵp, DatepickerMinMaxExample as ɵq, DatepickerStartViewExample as ɵr, DatepickerTouchExample as ɵs, DialogContentExample as ɵt, DialogContentExampleDialog as ɵu, DialogDataExample as ɵv, DialogDataExampleDialog as ɵw, DialogElementsExample as ɵx, DialogElementsExampleDialog as ɵy, DialogOverviewExample as ɵz, DialogOverviewExampleDialog as ɵba, ExpansionStepsExample as ɵbb, FormFieldCustomControlExample as ɵbd, MyTelInput as ɵbc, FormFieldErrorExample as ɵbe, FormFieldHintExample as ɵbf, FormFieldOverviewExample as ɵbg, FormFieldPlaceholderExample as ɵbh, FormFieldPrefixSuffixExample as ɵbi, FormFieldThemingExample as ɵbj, GridListDynamicExample as ɵbk, GridListOverviewExample as ɵbl, IconOverviewExample as ɵbm, IconSvgExample as ɵbn, InputAutosizeTextareaExample as ɵbo, InputClearableExample as ɵbp, InputErrorStateMatcherExample as ɵbq, InputErrorsExample as ɵbr, InputFormExample as ɵbs, InputHintExample as ɵbt, InputOverviewExample as ɵbu, InputPrefixSuffixExample as ɵbv, ListSectionsExample as ɵbw, ListSelectionExample as ɵbx, ExampleMaterialModule as ɵdr, MenuIconsExample as ɵby, MenuOverviewExample as ɵbz, NestedMenuExample as ɵca, PaginatorConfigurableExample as ɵcb, PaginatorOverviewExample as ɵcc, ProgressBarConfigurableExample as ɵcd, ProgressBarOverviewExample as ɵce, ProgressSpinnerConfigurableExample as ɵcf, ProgressSpinnerOverviewExample as ɵcg, RadioNgModelExample as ɵch, RadioOverviewExample as ɵci, SelectCustomTriggerExample as ɵcj, SelectDisabledExample as ɵck, SelectErrorStateMatcherExample as ɵcl, SelectFormExample as ɵcm, SelectHintErrorExample as ɵcn, SelectMultipleExample as ɵco, SelectNoRippleExample as ɵcp, SelectOptgroupExample as ɵcq, SelectOverviewExample as ɵcr, SelectPanelClassExample as ɵcs, SelectResetExample as ɵct, SelectValueBindingExample as ɵcu, SidenavFabExample as ɵcv, SidenavOverviewExample as ɵcw, SlideToggleConfigurableExample as ɵcx, SlideToggleFormsExample as ɵcy, SlideToggleOverviewExample as ɵcz, SliderConfigurableExample as ɵda, SliderOverviewExample as ɵdb, PizzaPartyComponent as ɵdd, SnackBarComponentExample as ɵdc, SnackBarOverviewExample as ɵde, SortOverviewExample as ɵdf, TableBasicExample as ɵdg, TableFilteringExample as ɵdh, TableHttpExample as ɵdi, TableOverviewExample as ɵdj, TablePaginationExample as ɵdk, TableSortingExample as ɵdl, TabsOverviewExample as ɵdm, TabsTemplateLabelExample as ɵdn, ToolbarOverviewExample as ɵdo, TooltipOverviewExample as ɵdp, TooltipPositionExample as ɵdq };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerDisabledExample as ɵp, DatepickerEventsExample as ɵq, DatepickerFilterExample as ɵr, DatepickerFormatsExample as ɵt, MY_FORMATS as ɵs, DatepickerLocaleExample as ɵu, DatepickerMinMaxExample as ɵv, DatepickerMomentExample as ɵw, DatepickerStartViewExample as ɵx, DatepickerTouchExample as ɵy, DatepickerValueExample as ɵz, DialogContentExample as ɵba, DialogContentExampleDialog as ɵbb, DialogDataExample as ɵbc, DialogDataExampleDialog as ɵbd, DialogElementsExample as ɵbe, DialogElementsExampleDialog as ɵbf, DialogOverviewExample as ɵbg, DialogOverviewExampleDialog as ɵbh, ExpansionStepsExample as ɵbi, FormFieldCustomControlExample as ɵbk, MyTelInput as ɵbj, FormFieldErrorExample as ɵbl, FormFieldHintExample as ɵbm, FormFieldOverviewExample as ɵbn, FormFieldPlaceholderExample as ɵbo, FormFieldPrefixSuffixExample as ɵbp, FormFieldThemingExample as ɵbq, GridListDynamicExample as ɵbr, GridListOverviewExample as ɵbs, IconOverviewExample as ɵbt, IconSvgExample as ɵbu, InputAutosizeTextareaExample as ɵbv, InputClearableExample as ɵbw, InputErrorStateMatcherExample as ɵbx, InputErrorsExample as ɵby, InputFormExample as ɵbz, InputHintExample as ɵca, InputOverviewExample as ɵcb, InputPrefixSuffixExample as ɵcc, ListSectionsExample as ɵcd, ListSelectionExample as ɵce, ExampleMaterialModule as ɵeb, MenuIconsExample as ɵcf, MenuOverviewExample as ɵcg, NestedMenuExample as ɵch, PaginatorConfigurableExample as ɵci, PaginatorOverviewExample as ɵcj, ProgressBarBufferExample as ɵck, ProgressBarConfigurableExample as ɵcl, ProgressBarDeterminateExample as ɵcm, ProgressBarIndeterminateExample as ɵcn, ProgressBarQueryExample as ɵco, ProgressSpinnerConfigurableExample as ɵcp, ProgressSpinnerOverviewExample as ɵcq, RadioNgModelExample as ɵcr, RadioOverviewExample as ɵcs, SelectCustomTriggerExample as ɵct, SelectDisabledExample as ɵcu, SelectErrorStateMatcherExample as ɵcv, SelectFormExample as ɵcw, SelectHintErrorExample as ɵcx, SelectMultipleExample as ɵcy, SelectNoRippleExample as ɵcz, SelectOptgroupExample as ɵda, SelectOverviewExample as ɵdb, SelectPanelClassExample as ɵdc, SelectResetExample as ɵdd, SelectValueBindingExample as ɵde, SidenavFabExample as ɵdf, SidenavOverviewExample as ɵdg, SlideToggleConfigurableExample as ɵdh, SlideToggleFormsExample as ɵdi, SlideToggleOverviewExample as ɵdj, SliderConfigurableExample as ɵdk, SliderOverviewExample as ɵdl, PizzaPartyComponent as ɵdn, SnackBarComponentExample as ɵdm, SnackBarOverviewExample as ɵdo, SortOverviewExample as ɵdp, TableBasicExample as ɵdq, TableFilteringExample as ɵdr, TableHttpExample as ɵds, TableOverviewExample as ɵdt, TablePaginationExample as ɵdu, TableSortingExample as ɵdv, TabsOverviewExample as ɵdw, TabsTemplateLabelExample as ɵdx, ToolbarOverviewExample as ɵdy, TooltipOverviewExample as ɵdz, TooltipPositionExample as ɵea };
 //# sourceMappingURL=material-examples.js.map
