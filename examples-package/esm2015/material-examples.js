@@ -30,7 +30,7 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/observable/fromEvent';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/switchMap';
 
@@ -2954,17 +2954,17 @@ class ExampleDataSource$2 extends DataSource {
  */
 class TableHttpExample {
     /**
-     * @param {?} http
+     * @param {?} _httpClient
      */
-    constructor(http) {
-        this.http = http;
+    constructor(_httpClient) {
+        this._httpClient = _httpClient;
         this.displayedColumns = ['created_at', 'state', 'number', 'title'];
     }
     /**
      * @return {?}
      */
     ngOnInit() {
-        this.exampleDatabase = new ExampleHttpDao(this.http);
+        this.exampleDatabase = new ExampleHttpDataSource(this._httpClient);
         this.dataSource = new ExampleDataSource$3(/** @type {?} */ ((this.exampleDatabase)), this.paginator, this.sort);
     }
 }
@@ -2979,7 +2979,7 @@ TableHttpExample.decorators = [
  * @nocollapse
  */
 TableHttpExample.ctorParameters = () => [
-    { type: Http, },
+    { type: HttpClient, },
 ];
 TableHttpExample.propDecorators = {
     'paginator': [{ type: ViewChild, args: [MatPaginator,] },],
@@ -2988,12 +2988,12 @@ TableHttpExample.propDecorators = {
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
-class ExampleHttpDao {
+class ExampleHttpDataSource {
     /**
-     * @param {?} http
+     * @param {?} _httpClient
      */
-    constructor(http) {
-        this.http = http;
+    constructor(_httpClient) {
+        this._httpClient = _httpClient;
     }
     /**
      * @param {?} sort
@@ -3004,8 +3004,7 @@ class ExampleHttpDao {
     getRepoIssues(sort, order, page) {
         const /** @type {?} */ href = 'https://api.github.com/search/issues';
         const /** @type {?} */ requestUrl = `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
-        return this.http.get(requestUrl)
-            .map(response => (response.json()));
+        return this._httpClient.get(requestUrl);
     }
 }
 /**

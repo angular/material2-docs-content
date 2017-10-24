@@ -32,7 +32,7 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/observable/fromEvent';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/switchMap';
 
@@ -3212,17 +3212,17 @@ var ExampleDataSource$2 = (function (_super) {
  */
 var TableHttpExample = (function () {
     /**
-     * @param {?} http
+     * @param {?} _httpClient
      */
-    function TableHttpExample(http) {
-        this.http = http;
+    function TableHttpExample(_httpClient) {
+        this._httpClient = _httpClient;
         this.displayedColumns = ['created_at', 'state', 'number', 'title'];
     }
     /**
      * @return {?}
      */
     TableHttpExample.prototype.ngOnInit = function () {
-        this.exampleDatabase = new ExampleHttpDao(this.http);
+        this.exampleDatabase = new ExampleHttpDataSource(this._httpClient);
         this.dataSource = new ExampleDataSource$3(/** @type {?} */ ((this.exampleDatabase)), this.paginator, this.sort);
     };
     TableHttpExample.decorators = [
@@ -3236,7 +3236,7 @@ var TableHttpExample = (function () {
      * @nocollapse
      */
     TableHttpExample.ctorParameters = function () { return [
-        { type: Http, },
+        { type: HttpClient, },
     ]; };
     TableHttpExample.propDecorators = {
         'paginator': [{ type: ViewChild, args: [MatPaginator,] },],
@@ -3247,12 +3247,12 @@ var TableHttpExample = (function () {
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
-var ExampleHttpDao = (function () {
+var ExampleHttpDataSource = (function () {
     /**
-     * @param {?} http
+     * @param {?} _httpClient
      */
-    function ExampleHttpDao(http) {
-        this.http = http;
+    function ExampleHttpDataSource(_httpClient) {
+        this._httpClient = _httpClient;
     }
     /**
      * @param {?} sort
@@ -3260,13 +3260,12 @@ var ExampleHttpDao = (function () {
      * @param {?} page
      * @return {?}
      */
-    ExampleHttpDao.prototype.getRepoIssues = function (sort, order, page) {
+    ExampleHttpDataSource.prototype.getRepoIssues = function (sort, order, page) {
         var /** @type {?} */ href = 'https://api.github.com/search/issues';
         var /** @type {?} */ requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
-        return this.http.get(requestUrl)
-            .map(function (response) { /** @type {?} */ return (response.json()); });
+        return this._httpClient.get(requestUrl);
     };
-    return ExampleHttpDao;
+    return ExampleHttpDataSource;
 }());
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

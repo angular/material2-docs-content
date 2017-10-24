@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator, MatSort } from '@angular/material';
 import { Observable } from 'rxjs/Observable';
@@ -13,13 +13,13 @@ import 'rxjs/add/operator/switchMap';
  * @title Table retrieving data through HTTP
  */
 export declare class TableHttpExample implements OnInit {
-    private http;
+    private _httpClient;
     displayedColumns: string[];
-    exampleDatabase: ExampleHttpDao | null;
+    exampleDatabase: ExampleHttpDataSource | null;
     dataSource: ExampleDataSource | null;
     paginator: MatPaginator;
     sort: MatSort;
-    constructor(http: Http);
+    constructor(_httpClient: HttpClient);
     ngOnInit(): void;
 }
 export interface GithubApi {
@@ -33,9 +33,9 @@ export interface GithubIssue {
     title: string;
 }
 /** An example database that the data source uses to retrieve data for the table. */
-export declare class ExampleHttpDao {
-    private http;
-    constructor(http: Http);
+export declare class ExampleHttpDataSource {
+    private _httpClient;
+    constructor(_httpClient: HttpClient);
     getRepoIssues(sort: string, order: string, page: number): Observable<GithubApi>;
 }
 /**
@@ -52,7 +52,7 @@ export declare class ExampleDataSource extends DataSource<GithubIssue> {
     resultsLength: number;
     isLoadingResults: boolean;
     isRateLimitReached: boolean;
-    constructor(exampleDatabase: ExampleHttpDao, paginator: MatPaginator, sort: MatSort);
+    constructor(exampleDatabase: ExampleHttpDataSource, paginator: MatPaginator, sort: MatSort);
     /** Connect function called by the table to retrieve one stream containing the data to render. */
     connect(): Observable<GithubIssue[]>;
     disconnect(): void;
