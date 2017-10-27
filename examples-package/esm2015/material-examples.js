@@ -3790,7 +3790,7 @@ const EXAMPLE_COMPONENTS = {
         selectorName: null
     },
     'table-overview': {
-        title: 'Feature-rich data table',
+        title: 'Data table with sorting, pagination, and filtering.',
         component: TableOverviewExample,
         additionalFiles: null,
         selectorName: null
