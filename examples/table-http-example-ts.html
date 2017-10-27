@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component, AfterViewInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {HttpClient} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common/http'</span>;
 <span class="hljs-keyword">import</span> {MatPaginator, MatSort, MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
@@ -17,7 +17,7 @@
   styleUrls: [<span class="hljs-string">'table-http-example.css'</span>],
   templateUrl: <span class="hljs-string">'table-http-example.html'</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableHttpExample {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableHttpExample <span class="hljs-keyword">implements</span> AfterViewInit {
   displayedColumns = [<span class="hljs-string">'created'</span>, <span class="hljs-string">'state'</span>, <span class="hljs-string">'number'</span>, <span class="hljs-string">'title'</span>];
   exampleDatabase: ExampleHttpDao | <span class="hljs-literal">null</span>;
   dataSource = <span class="hljs-keyword">new</span> MatTableDataSource();
