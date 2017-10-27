@@ -1,14 +1,14 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container mat-elevation-z8"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-loading-shade"</span>
-       *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"dataSource.isLoadingResults || dataSource.isRateLimitReached"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">mat-spinner</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"dataSource.isLoadingResults"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-spinner</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-rate-limit-reached"</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"dataSource.isRateLimitReached"</span>&gt;</span>
+       *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"isLoadingResults || isRateLimitReached"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-spinner</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"isLoadingResults"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-spinner</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-rate-limit-reached"</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"isRateLimitReached"</span>&gt;</span>
       GitHub's API rate limit has been reached. It will be reset in one minute.
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-table</span> #<span class="hljs-attr">table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-table"</span>
-            <span class="hljs-attr">matSort</span> <span class="hljs-attr">matSortActive</span>=<span class="hljs-string">"created_at"</span> <span class="hljs-attr">matSortDisableClear</span> <span class="hljs-attr">matSortDirection</span>=<span class="hljs-string">"asc"</span>&gt;</span>
+             <span class="hljs-attr">matSort</span> <span class="hljs-attr">matSortActive</span>=<span class="hljs-string">"created"</span> <span class="hljs-attr">matSortDisableClear</span> <span class="hljs-attr">matSortDirection</span>=<span class="hljs-string">"asc"</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" --&gt;</span>
@@ -32,10 +32,10 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- Created Column --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"created_at"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"created"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>
-                      <span class="hljs-attr">mat-sort-header</span>
-                      <span class="hljs-attr">disableClear</span>=<span class="hljs-string">"true"</span>&gt;</span>
+                       <span class="hljs-attr">mat-sort-header</span>
+                       <span class="hljs-attr">disableClear</span>=<span class="hljs-string">"true"</span>&gt;</span>
         Created
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>{{ row.created_at | date }}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
@@ -45,7 +45,6 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-row</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-table</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-paginator</span> [<span class="hljs-attr">length</span>]=<span class="hljs-string">"dataSource.resultsLength"</span>
-                [<span class="hljs-attr">pageSize</span>]=<span class="hljs-string">"30"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-paginator</span> [<span class="hljs-attr">length</span>]=<span class="hljs-string">"resultsLength"</span> [<span class="hljs-attr">pageSize</span>]=<span class="hljs-string">"30"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-paginator</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
