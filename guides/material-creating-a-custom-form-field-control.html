@@ -65,7 +65,7 @@ just a starting point for us to learn.)</p>
 </code></pre>
 
         <h3 id="providing-our-component-as-a-matformfieldcontrol" class="docs-header-link docs-markdown-h3">
-          <div header-link="providing-our-component-as-a-matformfieldcontrol"></div>
+          <span header-link="providing-our-component-as-a-matformfieldcontrol"></span>
           Providing our component as a MatFormFieldControl
         </h3>
       <p class="docs-markdown-p">The first step is to provide our new component as an implementation of the <code class="docs-markdown-code">MatFormFieldControl</code>
@@ -88,12 +88,12 @@ the <code class="docs-markdown-code">MatFormFieldControl</code> interface, see t
 <a href="https://material.angular.io/components/form-field/api" class="docs-markdown-a">form field API documentation</a>.</p>
 
         <h3 id="implementing-the-methods-and-properties-of-matformfieldcontrol" class="docs-header-link docs-markdown-h3">
-          <div header-link="implementing-the-methods-and-properties-of-matformfieldcontrol"></div>
+          <span header-link="implementing-the-methods-and-properties-of-matformfieldcontrol"></span>
           Implementing the methods and properties of MatFormFieldControl
         </h3>
       
         <h4 id="-code-value-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-value-code-"></div>
+          <span header-link="-code-value-code-"></span>
           <code class="docs-markdown-code">value</code>
         </h4>
       <p class="docs-markdown-p">This property allows someone to set or get the value of our control. Its type should be the same
@@ -101,7 +101,7 @@ type we used for the type parameter when we implemented <code class="docs-markdo
 already has a value property, we don't need to do anything for this one.</p>
 
         <h4 id="-code-statechanges-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-statechanges-code-"></div>
+          <span header-link="-code-statechanges-code-"></span>
           <code class="docs-markdown-code">stateChanges</code>
         </h4>
       <p class="docs-markdown-p">Because the <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> uses the <code class="docs-markdown-code">OnPush</code> change detection strategy, we need to let it know
@@ -123,7 +123,7 @@ ngOnDestroy() {
 </code></pre>
 
         <h4 id="-code-id-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-id-code-"></div>
+          <span header-link="-code-id-code-"></span>
           <code class="docs-markdown-code">id</code>
         </h4>
       <p class="docs-markdown-p">This property should return the ID of an element in the component's template that we want the
@@ -135,7 +135,7 @@ element and just generate a unique ID for it.</p>
 </code></pre>
 
         <h4 id="-code-placeholder-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-placeholder-code-"></div>
+          <span header-link="-code-placeholder-code-"></span>
           <code class="docs-markdown-code">placeholder</code>
         </h4>
       <p class="docs-markdown-p">This property allows us to tell the <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> what to use as a placeholder. In this
@@ -155,7 +155,7 @@ placeholder changes.</p>
 </code></pre>
 
         <h4 id="-code-ngcontrol-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-ngcontrol-code-"></div>
+          <span header-link="-code-ngcontrol-code-"></span>
           <code class="docs-markdown-code">ngControl</code>
         </h4>
       <p class="docs-markdown-p">This property allows the form field control to specify the <code class="docs-markdown-code">@angular/forms</code> control that is bound to
@@ -171,7 +171,7 @@ publicly available. (For additional information about <code class="docs-markdown
 </code></pre>
 
         <h4 id="-code-focused-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-focused-code-"></div>
+          <span header-link="-code-focused-code-"></span>
           <code class="docs-markdown-code">focused</code>
         </h4>
       <p class="docs-markdown-p">This property indicates whether or not the form field control should be considered to be in a
@@ -197,7 +197,7 @@ ngOnDestroy() {
 </code></pre>
 
         <h4 id="-code-empty-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-empty-code-"></div>
+          <span header-link="-code-empty-code-"></span>
           <code class="docs-markdown-code">empty</code>
         </h4>
       <p class="docs-markdown-p">This property indicates whether the form field control is empty. For our control, we'll consider it
@@ -209,7 +209,7 @@ empty if all of the parts are empty.</p>
 </code></pre>
 
         <h4 id="-code-shouldplaceholderfloat-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-shouldplaceholderfloat-code-"></div>
+          <span header-link="-code-shouldplaceholderfloat-code-"></span>
           <code class="docs-markdown-code">shouldPlaceholderFloat</code>
         </h4>
       <p class="docs-markdown-p">This property is used to indicate whether the placeholder should be in the floating position. We'll
@@ -231,7 +231,7 @@ the <code class="docs-markdown-code">–</code> characters when it's not floatin
 </code></pre>
 
         <h4 id="-code-required-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-required-code-"></div>
+          <span header-link="-code-required-code-"></span>
           <code class="docs-markdown-code">required</code>
         </h4>
       <p class="docs-markdown-p">This property is used to indicate whether the input is required. <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> uses this
@@ -249,7 +249,7 @@ change detection if the required state changes.</p>
 </code></pre>
 
         <h4 id="-code-disabled-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-disabled-code-"></div>
+          <span header-link="-code-disabled-code-"></span>
           <code class="docs-markdown-code">disabled</code>
         </h4>
       <p class="docs-markdown-p">This property tells the form field when it should be in the disabled state. In addition to reporting
@@ -273,7 +273,7 @@ make up our component.</p>
 </code></pre>
 
         <h4 id="-code-errorstate-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-errorstate-code-"></div>
+          <span header-link="-code-errorstate-code-"></span>
           <code class="docs-markdown-code">errorState</code>
         </h4>
       <p class="docs-markdown-p">This property indicates whether the associated <code class="docs-markdown-code">NgControl</code> is in an error state. Since we're not
@@ -282,7 +282,7 @@ using an <code class="docs-markdown-code">NgControl</code> in this example, we d
 </code></pre>
 
         <h4 id="-code-controltype-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-controltype-code-"></div>
+          <span header-link="-code-controltype-code-"></span>
           <code class="docs-markdown-code">controlType</code>
         </h4>
       <p class="docs-markdown-p">This property allows us to specify a unique string for the type of control in form field. The
@@ -294,7 +294,7 @@ we'll use <code class="docs-markdown-code">my-tel-input</code> as our control ty
 </code></pre>
 
         <h4 id="-code-setariadescribedbyids-ids-string-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-setariadescribedbyids-ids-string-code-"></div>
+          <span header-link="-code-setariadescribedbyids-ids-string-code-"></span>
           <code class="docs-markdown-code">setAriaDescribedByIds(ids: string[])</code>
         </h4>
       <p class="docs-markdown-p">This method is used by the <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> to specify the IDs that should be used for the
@@ -308,7 +308,7 @@ setDescribedByIds(ids: <span class="hljs-built_in">string</span>[]) {
 </code></pre>
 
         <h4 id="-code-oncontainerclick-event-mouseevent-code-" class="docs-header-link docs-markdown-h4">
-          <div header-link="-code-oncontainerclick-event-mouseevent-code-"></div>
+          <span header-link="-code-oncontainerclick-event-mouseevent-code-"></span>
           <code class="docs-markdown-code">onContainerClick(event: MouseEvent)</code>
         </h4>
       <p class="docs-markdown-p">This method will be called when the form field is clicked on. It allows your component to hook in
@@ -323,7 +323,7 @@ click. In our case we'll just focus the first <code class="docs-markdown-code">&
 </code></pre>
 
         <h3 id="trying-it-out" class="docs-header-link docs-markdown-h3">
-          <div header-link="trying-it-out"></div>
+          <span header-link="trying-it-out"></span>
           Trying it out
         </h3>
       <p class="docs-markdown-p">Now that we've fully implemented the interface, we're ready to try our component out! All we need to
