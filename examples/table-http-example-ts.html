@@ -1,6 +1,7 @@
 <span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {HttpClient} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common/http'</span>;
-<span class="hljs-keyword">import</span> {MatPaginator, MatSort, MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
+<span class="hljs-keyword">import</span> {MatPaginator, MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/observable/merge'</span>;
 <span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/observable/of'</span>;
@@ -17,48 +18,20 @@
   styleUrls: [<span class="hljs-string">'table-http-example.css'</span>],
   templateUrl: <span class="hljs-string">'table-http-example.html'</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableHttpExample {
-  displayedColumns = [<span class="hljs-string">'created'</span>, <span class="hljs-string">'state'</span>, <span class="hljs-string">'number'</span>, <span class="hljs-string">'title'</span>];
-  exampleDatabase: ExampleHttpDao | <span class="hljs-literal">null</span>;
-  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource();
-
-  resultsLength = <span class="hljs-number">0</span>;
-  isLoadingResults = <span class="hljs-literal">false</span>;
-  isRateLimitReached = <span class="hljs-literal">false</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableHttpExample <span class="hljs-keyword">implements</span> OnInit {
+  displayedColumns = [<span class="hljs-string">'created_at'</span>, <span class="hljs-string">'state'</span>, <span class="hljs-string">'number'</span>, <span class="hljs-string">'title'</span>];
+  exampleDatabase: ExampleHttpDataSource | <span class="hljs-literal">null</span>;
+  dataSource: ExampleDataSource | <span class="hljs-literal">null</span>;
 
   <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
   <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> http: HttpClient</span>) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _httpClient: HttpClient</span>) {}
 
-  ngAfterViewInit() {
-    <span class="hljs-keyword">this</span>.exampleDatabase = <span class="hljs-keyword">new</span> ExampleHttpDao(<span class="hljs-keyword">this</span>.http);
-
-    <span class="hljs-comment">// If the user changes the sort order, reset back to the first page.</span>
-    <span class="hljs-keyword">this</span>.sort.sortChange.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.paginator.pageIndex = <span class="hljs-number">0</span>);
-
-    Observable.merge(<span class="hljs-keyword">this</span>.sort.sortChange, <span class="hljs-keyword">this</span>.paginator.page)
-        .startWith(<span class="hljs-literal">null</span>)
-        .switchMap(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-          <span class="hljs-keyword">this</span>.isLoadingResults = <span class="hljs-literal">true</span>;
-          <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.exampleDatabase!.getRepoIssues(
-              <span class="hljs-keyword">this</span>.sort.active, <span class="hljs-keyword">this</span>.sort.direction, <span class="hljs-keyword">this</span>.paginator.pageIndex);
-        })
-        .map(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
-          <span class="hljs-comment">// Flip flag to show that loading has finished.</span>
-          <span class="hljs-keyword">this</span>.isLoadingResults = <span class="hljs-literal">false</span>;
-          <span class="hljs-keyword">this</span>.isRateLimitReached = <span class="hljs-literal">false</span>;
-          <span class="hljs-keyword">this</span>.resultsLength = data.total_count;
-
-          <span class="hljs-keyword">return</span> data.items;
-        })
-        .catch(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-          <span class="hljs-keyword">this</span>.isLoadingResults = <span class="hljs-literal">false</span>;
-          <span class="hljs-comment">// Catch if the GitHub API has reached its rate limit. Return empty data.</span>
-          <span class="hljs-keyword">this</span>.isRateLimitReached = <span class="hljs-literal">true</span>;
-          <span class="hljs-keyword">return</span> Observable.of([]);
-        })
-        .subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> <span class="hljs-keyword">this</span>.dataSource.data = data);
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.exampleDatabase = <span class="hljs-keyword">new</span> ExampleHttpDataSource(<span class="hljs-keyword">this</span>._httpClient);
+    <span class="hljs-keyword">this</span>.dataSource = <span class="hljs-keyword">new</span> ExampleDataSource(
+      <span class="hljs-keyword">this</span>.exampleDatabase!, <span class="hljs-keyword">this</span>.paginator, <span class="hljs-keyword">this</span>.sort);
   }
 }
 
@@ -75,14 +48,69 @@
 }
 
 <span class="hljs-comment">/** An example database that the data source uses to retrieve data for the table. */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleHttpDao {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> http: HttpClient</span>) {}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleHttpDataSource {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _httpClient: HttpClient</span>) {}
 
   getRepoIssues(sort: <span class="hljs-built_in">string</span>, order: <span class="hljs-built_in">string</span>, page: <span class="hljs-built_in">number</span>): Observable&lt;GithubApi&gt; {
     <span class="hljs-keyword">const</span> href = <span class="hljs-string">'https://api.github.com/search/issues'</span>;
     <span class="hljs-keyword">const</span> requestUrl =
-        <span class="hljs-string">`<span class="hljs-subst">${href}</span>?q=repo:angular/material2&amp;sort=<span class="hljs-subst">${sort}</span>&amp;order=<span class="hljs-subst">${order}</span>&amp;page=<span class="hljs-subst">${page + 1}</span>`</span>;
+      <span class="hljs-string">`<span class="hljs-subst">${href}</span>?q=repo:angular/material2&amp;sort=<span class="hljs-subst">${sort}</span>&amp;order=<span class="hljs-subst">${order}</span>&amp;page=<span class="hljs-subst">${page + 1}</span>`</span>;
 
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.http.get&lt;GithubApi&gt;(requestUrl);
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._httpClient.get&lt;GithubApi&gt;(requestUrl);
   }
+}
+
+<span class="hljs-comment">/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleHttpDao. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDataSource <span class="hljs-keyword">extends</span> DataSource&lt;GithubIssue&gt; {
+  <span class="hljs-comment">// The number of issues returned by github matching the query.</span>
+  resultsLength = <span class="hljs-number">0</span>;
+  isLoadingResults = <span class="hljs-literal">false</span>;
+  isRateLimitReached = <span class="hljs-literal">false</span>;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> exampleDatabase: ExampleHttpDataSource,
+              <span class="hljs-keyword">private</span> paginator: MatPaginator,
+              <span class="hljs-keyword">private</span> sort: MatSort</span>) {
+    <span class="hljs-keyword">super</span>();
+  }
+
+  <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
+  connect(): Observable&lt;GithubIssue[]&gt; {
+    <span class="hljs-keyword">const</span> displayDataChanges = [
+      <span class="hljs-keyword">this</span>.sort.sortChange,
+      <span class="hljs-keyword">this</span>.paginator.page
+    ];
+
+    <span class="hljs-comment">// If the user changes the sort order, reset back to the first page.</span>
+    <span class="hljs-keyword">this</span>.sort.sortChange.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.paginator.pageIndex = <span class="hljs-number">0</span>);
+
+    <span class="hljs-keyword">return</span> Observable.merge(...displayDataChanges)
+      .startWith(<span class="hljs-literal">null</span>)
+      .switchMap(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">this</span>.isLoadingResults = <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.exampleDatabase.getRepoIssues(
+          <span class="hljs-keyword">this</span>.sort.active, <span class="hljs-keyword">this</span>.sort.direction, <span class="hljs-keyword">this</span>.paginator.pageIndex);
+      })
+      .map(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+        <span class="hljs-comment">// Flip flag to show that loading has finished.</span>
+        <span class="hljs-keyword">this</span>.isLoadingResults = <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">this</span>.isRateLimitReached = <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">this</span>.resultsLength = data.total_count;
+
+        <span class="hljs-keyword">return</span> data.items;
+      })
+      .catch(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">this</span>.isLoadingResults = <span class="hljs-literal">false</span>;
+        <span class="hljs-comment">// Catch if the GitHub API has reached its rate limit. Return empty data.</span>
+        <span class="hljs-keyword">this</span>.isRateLimitReached = <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">return</span> Observable.of([]);
+      });
+  }
+
+  disconnect() {}
 }

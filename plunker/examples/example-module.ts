@@ -697,7 +697,7 @@ export const EXAMPLE_COMPONENTS = {
     selectorName: null
   },
   'table-overview': {
-    title: 'Data table with sorting, pagination, and filtering.',
+    title: 'Feature-rich data table',
     component: TableOverviewExample,
     additionalFiles: null,
     selectorName: null

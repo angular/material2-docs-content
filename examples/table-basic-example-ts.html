@@ -1,5 +1,7 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
+<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/observable/of'</span>;
 
 <span class="hljs-comment">/**
  * @title Basic table
@@ -11,7 +13,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableBasicExample {
   displayedColumns = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;Element&gt;(ELEMENT_DATA);
+  dataSource = <span class="hljs-keyword">new</span> ExampleDataSource();
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Element {
@@ -21,7 +23,7 @@
   symbol: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: Element[] = [
+<span class="hljs-keyword">const</span> data: Element[] = [
   {position: <span class="hljs-number">1</span>, name: <span class="hljs-string">'Hydrogen'</span>, weight: <span class="hljs-number">1.0079</span>, symbol: <span class="hljs-string">'H'</span>},
   {position: <span class="hljs-number">2</span>, name: <span class="hljs-string">'Helium'</span>, weight: <span class="hljs-number">4.0026</span>, symbol: <span class="hljs-string">'He'</span>},
   {position: <span class="hljs-number">3</span>, name: <span class="hljs-string">'Lithium'</span>, weight: <span class="hljs-number">6.941</span>, symbol: <span class="hljs-string">'Li'</span>},
@@ -43,3 +45,18 @@
   {position: <span class="hljs-number">19</span>, name: <span class="hljs-string">'Potassium'</span>, weight: <span class="hljs-number">39.0983</span>, symbol: <span class="hljs-string">'K'</span>},
   {position: <span class="hljs-number">20</span>, name: <span class="hljs-string">'Calcium'</span>, weight: <span class="hljs-number">40.078</span>, symbol: <span class="hljs-string">'Ca'</span>},
 ];
+
+<span class="hljs-comment">/**
+ * Data source to provide what data should be rendered in the table. The observable provided
+ * in connect should emit exactly the data that should be rendered by the table. If the data is
+ * altered, the observable should emit that new set of data on the stream. In our case here,
+ * we return a stream that contains only one set of data that doesn't change.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDataSource <span class="hljs-keyword">extends</span> DataSource&lt;<span class="hljs-built_in">any</span>&gt; {
+  <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
+  connect(): Observable&lt;Element[]&gt; {
+    <span class="hljs-keyword">return</span> Observable.of(data);
+  }
+
+  disconnect() {}
+}

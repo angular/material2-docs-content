@@ -20,6 +20,23 @@
   <span class="hljs-attribute">min-height</span>: <span class="hljs-number">300px</span>;
 }
 
+<span class="hljs-selector-class">.mat-column-title</span> {
+  <span class="hljs-attribute">text-overflow</span>: ellipsis;
+  <span class="hljs-attribute">white-space</span>: nowrap;
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">overflow</span>: hidden;
+}
+
+<span class="hljs-comment">/* Column Widths */</span>
+<span class="hljs-selector-class">.mat-column-number</span>,
+<span class="hljs-selector-class">.mat-column-state</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">64px</span>;
+}
+
+<span class="hljs-selector-class">.mat-column-created</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">124px</span>;
+}
+
 <span class="hljs-selector-class">.example-loading-shade</span> {
   <span class="hljs-attribute">position</span>: absolute;
   <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
@@ -37,14 +54,4 @@
   <span class="hljs-attribute">color</span>: <span class="hljs-number">#980000</span>;
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">360px</span>;
   <span class="hljs-attribute">text-align</span>: center;
-}
-
-<span class="hljs-comment">/* Column Widths */</span>
-<span class="hljs-selector-class">.mat-column-number</span>,
-<span class="hljs-selector-class">.mat-column-state</span> {
-  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">64px</span>;
-}
-
-<span class="hljs-selector-class">.mat-column-created</span> {
-  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">124px</span>;
 }

@@ -7,12 +7,17 @@
 
 .example-header {
   min-height: 64px;
+  display: flex;
+  align-items: baseline;
   padding: 8px 24px 0;
+  font-size: 20px;
+  justify-content: space-between;
 }
 
 .mat-form-field {
   font-size: 14px;
-  width: 100%;
+  flex-grow: 1;
+  margin-left: 32px;
 }
 
 .mat-table {
