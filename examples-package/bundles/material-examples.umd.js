@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/material/form-field'), require('rxjs/Subject'), require('@angular/platform-browser'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/debounceTime'), require('rxjs/add/operator/distinctUntilChanged'), require('rxjs/add/observable/fromEvent'), require('@angular/common/http'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/material/form-field', 'rxjs/Subject', '@angular/platform-browser', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/debounceTime', 'rxjs/add/operator/distinctUntilChanged', 'rxjs/add/observable/fromEvent', '@angular/common/http', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.cdk.collections,global.Rx,global.Rx.Observable,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.material.formField,global.Rx,global.ng.platformBrowser,global.Rx,global.Rx.Observable,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.Rx.Observable,global.ng.common.http));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_cdk_collections,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,_angular_material_formField,rxjs_Subject,_angular_platformBrowser,rxjs_Observable,rxjs_add_observable_of,rxjs_add_operator_debounceTime,rxjs_add_operator_distinctUntilChanged,rxjs_add_observable_fromEvent,_angular_common_http) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/material/form-field'), require('rxjs/Subject'), require('@angular/platform-browser'), require('@angular/common/http'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/material/form-field', 'rxjs/Subject', '@angular/platform-browser', '@angular/common/http', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.cdk.collections,global.Rx,global.Rx.Observable,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.material.formField,global.Rx,global.ng.platformBrowser,global.ng.common.http,global.Rx));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_cdk_collections,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,_angular_material_formField,rxjs_Subject,_angular_platformBrowser,_angular_common_http,rxjs_Observable) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -2998,7 +2998,7 @@ var StepperOverviewExample = (function () {
 var TableBasicExample = (function () {
     function TableBasicExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new ExampleDataSource$1();
+        this.dataSource = new _angular_material.MatTableDataSource(ELEMENT_DATA);
     }
     TableBasicExample.decorators = [
         { type: _angular_core.Component, args: [{
@@ -3013,7 +3013,7 @@ var TableBasicExample = (function () {
     TableBasicExample.ctorParameters = function () { return []; };
     return TableBasicExample;
 }());
-var data = [
+var ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3035,204 +3035,109 @@ var data = [
     { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
-/**
- * Data source to provide what data should be rendered in the table. The observable provided
- * in connect should emit exactly the data that should be rendered by the table. If the data is
- * altered, the observable should emit that new set of data on the stream. In our case here,
- * we return a stream that contains only one set of data that doesn't change.
- */
-var ExampleDataSource$1 = (function (_super) {
-    __extends(ExampleDataSource, _super);
-    function ExampleDataSource() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    ExampleDataSource.prototype.connect = function () {
-        return rxjs_Observable.Observable.of(data);
-    };
-    /**
-     * @return {?}
-     */
-    ExampleDataSource.prototype.disconnect = function () { };
-    return ExampleDataSource;
-}(_angular_cdk_collections.DataSource));
 
 /**
  * \@title Table with filtering
  */
 var TableFilteringExample = (function () {
     function TableFilteringExample() {
-        this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
-        this.exampleDatabase = new ExampleDatabase$1();
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new _angular_material.MatTableDataSource(ELEMENT_DATA$1);
     }
     /**
+     * @param {?} filterValue
      * @return {?}
      */
-    TableFilteringExample.prototype.ngOnInit = function () {
-        var _this = this;
-        this.dataSource = new ExampleDataSource$2(this.exampleDatabase);
-        rxjs_Observable.Observable.fromEvent(this.filter.nativeElement, 'keyup')
-            .debounceTime(150)
-            .distinctUntilChanged()
-            .subscribe(function () {
-            if (!_this.dataSource) {
-                return;
-            }
-            _this.dataSource.filter = _this.filter.nativeElement.value;
-        });
+    TableFilteringExample.prototype.applyFilter = function (filterValue) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
     };
     TableFilteringExample.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'table-filtering-example',
-                    styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: baseline; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; } .mat-form-field { font-size: 14px; flex-grow: 1; margin-left: 32px; } .mat-table { overflow: auto; max-height: 500px; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field floatPlaceholder=\"never\"><input matInput #filter placeholder=\"Filter users\"></mat-form-field></div><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
+                    styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; padding: 8px 24px 0; } .mat-form-field { font-size: 14px; width: 100%; } .mat-table { overflow: auto; max-height: 500px; } "],
+                    template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
                 },] },
     ];
     /**
      * @nocollapse
      */
     TableFilteringExample.ctorParameters = function () { return []; };
-    TableFilteringExample.propDecorators = {
-        'filter': [{ type: _angular_core.ViewChild, args: ['filter',] },],
-    };
     return TableFilteringExample;
 }());
-/**
- * Constants used to fill up our data base.
- */
-var COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-var ExampleDatabase$1 = (function () {
-    function ExampleDatabase() {
-        /**
-         * Stream that emits whenever the data has been modified.
-         */
-        this.dataChange = new rxjs_BehaviorSubject.BehaviorSubject([]);
-        // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
-            this.addUser();
-        }
-    }
-    Object.defineProperty(ExampleDatabase.prototype, "data", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Adds a new user to the database.
-     * @return {?}
-     */
-    ExampleDatabase.prototype.addUser = function () {
-        var /** @type {?} */ copiedData = this.data.slice();
-        copiedData.push(this.createNewUser());
-        this.dataChange.next(copiedData);
-    };
-    /**
-     * Builds and returns a new User.
-     * @return {?}
-     */
-    ExampleDatabase.prototype.createNewUser = function () {
-        var /** @type {?} */ name = NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))] + ' ' +
-            NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))].charAt(0) + '.';
-        return {
-            id: (this.data.length + 1).toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS$1[Math.round(Math.random() * (COLORS$1.length - 1))]
-        };
-    };
-    return ExampleDatabase;
-}());
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-var ExampleDataSource$2 = (function (_super) {
-    __extends(ExampleDataSource, _super);
-    /**
-     * @param {?} _exampleDatabase
-     */
-    function ExampleDataSource(_exampleDatabase) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
-        _this._filterChange = new rxjs_BehaviorSubject.BehaviorSubject('');
-        return _this;
-    }
-    Object.defineProperty(ExampleDataSource.prototype, "filter", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this._filterChange.value; },
-        /**
-         * @param {?} filter
-         * @return {?}
-         */
-        set: function (filter) { this._filterChange.next(filter); },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    ExampleDataSource.prototype.connect = function () {
-        var _this = this;
-        var /** @type {?} */ displayDataChanges = [
-            this._exampleDatabase.dataChange,
-            this._filterChange,
-        ];
-        return rxjs_Observable.Observable.merge.apply(rxjs_Observable.Observable, displayDataChanges).map(function () {
-            return _this._exampleDatabase.data.slice().filter(function (item) {
-                var /** @type {?} */ searchStr = (item.name + item.color).toLowerCase();
-                return searchStr.indexOf(_this.filter.toLowerCase()) != -1;
-            });
-        });
-    };
-    /**
-     * @return {?}
-     */
-    ExampleDataSource.prototype.disconnect = function () { };
-    return ExampleDataSource;
-}(_angular_cdk_collections.DataSource));
+var ELEMENT_DATA$1 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
 
 /**
  * \@title Table retrieving data through HTTP
  */
 var TableHttpExample = (function () {
     /**
-     * @param {?} _httpClient
+     * @param {?} http
      */
-    function TableHttpExample(_httpClient) {
-        this._httpClient = _httpClient;
-        this.displayedColumns = ['created_at', 'state', 'number', 'title'];
+    function TableHttpExample(http) {
+        this.http = http;
+        this.displayedColumns = ['created', 'state', 'number', 'title'];
+        this.dataSource = new _angular_material.MatTableDataSource();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
+        this.isRateLimitReached = false;
     }
     /**
      * @return {?}
      */
-    TableHttpExample.prototype.ngOnInit = function () {
-        this.exampleDatabase = new ExampleHttpDataSource(this._httpClient);
-        this.dataSource = new ExampleDataSource$3(/** @type {?} */ ((this.exampleDatabase)), this.paginator, this.sort);
+    TableHttpExample.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.exampleDatabase = new ExampleHttpDao(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+        rxjs_Observable.Observable.merge(this.sort.sortChange, this.paginator.page)
+            .startWith(null)
+            .switchMap(function () {
+            _this.isLoadingResults = true;
+            return ((_this.exampleDatabase)).getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
+        })
+            .map(function (data) {
+            // Flip flag to show that loading has finished.
+            _this.isLoadingResults = false;
+            _this.isRateLimitReached = false;
+            _this.resultsLength = data.total_count;
+            return data.items;
+        })
+            .catch(function () {
+            _this.isLoadingResults = false;
+            // Catch if the GitHub API has reached its rate limit. Return empty data.
+            _this.isRateLimitReached = true;
+            return rxjs_Observable.Observable.of([]);
+        })
+            .subscribe(function (data) { return _this.dataSource.data = data; });
     };
     TableHttpExample.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'table-http-example',
-                    styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .mat-column-title { text-overflow: ellipsis; white-space: nowrap; flex: 1; overflow: hidden; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><mat-spinner *ngIf=\"dataSource.isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><mat-table #table [dataSource]=\"dataSource\" class=\"example-table\" matSort matSortActive=\"created_at\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><mat-header-cell *matHeaderCellDef>#</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.number }}</mat-cell></ng-container><ng-container matColumnDef=\"title\"><mat-header-cell *matHeaderCellDef>Title</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.title }}</mat-cell></ng-container><ng-container matColumnDef=\"state\"><mat-header-cell *matHeaderCellDef>State</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.state }}</mat-cell></ng-container><ng-container matColumnDef=\"created_at\"><mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
+                    styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } "],
+                    template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><mat-table #table [dataSource]=\"dataSource\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><mat-header-cell *matHeaderCellDef>#</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.number }}</mat-cell></ng-container><ng-container matColumnDef=\"title\"><mat-header-cell *matHeaderCellDef>Title</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.title }}</mat-cell></ng-container><ng-container matColumnDef=\"state\"><mat-header-cell *matHeaderCellDef>State</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.state }}</mat-cell></ng-container><ng-container matColumnDef=\"created\"><mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
                 },] },
     ];
     /**
@@ -3250,12 +3155,12 @@ var TableHttpExample = (function () {
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
-var ExampleHttpDataSource = (function () {
+var ExampleHttpDao = (function () {
     /**
-     * @param {?} _httpClient
+     * @param {?} http
      */
-    function ExampleHttpDataSource(_httpClient) {
-        this._httpClient = _httpClient;
+    function ExampleHttpDao(http) {
+        this.http = http;
     }
     /**
      * @param {?} sort
@@ -3263,141 +3168,51 @@ var ExampleHttpDataSource = (function () {
      * @param {?} page
      * @return {?}
      */
-    ExampleHttpDataSource.prototype.getRepoIssues = function (sort, order, page) {
+    ExampleHttpDao.prototype.getRepoIssues = function (sort, order, page) {
         var /** @type {?} */ href = 'https://api.github.com/search/issues';
         var /** @type {?} */ requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
-        return this._httpClient.get(requestUrl);
+        return this.http.get(requestUrl);
     };
-    return ExampleHttpDataSource;
+    return ExampleHttpDao;
 }());
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleHttpDao. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-var ExampleDataSource$3 = (function (_super) {
-    __extends(ExampleDataSource, _super);
-    /**
-     * @param {?} exampleDatabase
-     * @param {?} paginator
-     * @param {?} sort
-     */
-    function ExampleDataSource(exampleDatabase, paginator, sort) {
-        var _this = _super.call(this) || this;
-        _this.exampleDatabase = exampleDatabase;
-        _this.paginator = paginator;
-        _this.sort = sort;
-        // The number of issues returned by github matching the query.
-        _this.resultsLength = 0;
-        _this.isLoadingResults = false;
-        _this.isRateLimitReached = false;
-        return _this;
-    }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    ExampleDataSource.prototype.connect = function () {
-        var _this = this;
-        var /** @type {?} */ displayDataChanges = [
-            this.sort.sortChange,
-            this.paginator.page
-        ];
-        // If the user changes the sort order, reset back to the first page.
-        this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
-        return rxjs_Observable.Observable.merge.apply(rxjs_Observable.Observable, displayDataChanges).startWith(null)
-            .switchMap(function () {
-            _this.isLoadingResults = true;
-            return _this.exampleDatabase.getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
-        })
-            .map(function (data) {
-            // Flip flag to show that loading has finished.
-            _this.isLoadingResults = false;
-            _this.isRateLimitReached = false;
-            _this.resultsLength = data.total_count;
-            return data.items;
-        })
-            .catch(function () {
-            _this.isLoadingResults = false;
-            // Catch if the GitHub API has reached its rate limit. Return empty data.
-            _this.isRateLimitReached = true;
-            return rxjs_Observable.Observable.of([]);
-        });
-    };
-    /**
-     * @return {?}
-     */
-    ExampleDataSource.prototype.disconnect = function () { };
-    return ExampleDataSource;
-}(_angular_cdk_collections.DataSource));
 
 /**
- * \@title Feature-rich data table
+ * \@title Data table with sorting, pagination, and filtering.
  */
 var TableOverviewExample = (function () {
     function TableOverviewExample() {
-        this.displayedColumns = ['select', 'userId', 'userName', 'progress', 'color'];
-        this.exampleDatabase = new ExampleDatabase$2();
-        this.selection = new _angular_cdk_collections.SelectionModel(true, []);
+        this.displayedColumns = ['id', 'name', 'progress', 'color'];
+        // Create 100 users
+        var users = [];
+        for (var i = 1; i <= 100; i++) {
+            users.push(createNewUser(i));
+        }
+        // Assign the data to the data source for the table to render
+        this.dataSource = new _angular_material.MatTableDataSource(users);
     }
     /**
+     * Set the paginator and sort after the view init since this component will
+     * be able to query its view for the initialized paginator and sort.
      * @return {?}
      */
-    TableOverviewExample.prototype.ngOnInit = function () {
-        var _this = this;
-        this.dataSource = new ExampleDataSource$4(this.exampleDatabase, this.paginator, this.sort);
-        rxjs_Observable.Observable.fromEvent(this.filter.nativeElement, 'keyup')
-            .debounceTime(150)
-            .distinctUntilChanged()
-            .subscribe(function () {
-            if (!_this.dataSource) {
-                return;
-            }
-            _this.dataSource.filter = _this.filter.nativeElement.value;
-        });
+    TableOverviewExample.prototype.ngAfterViewInit = function () {
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
     };
     /**
+     * @param {?} filterValue
      * @return {?}
      */
-    TableOverviewExample.prototype.isAllSelected = function () {
-        if (!this.dataSource) {
-            return false;
-        }
-        if (this.selection.isEmpty()) {
-            return false;
-        }
-        if (this.filter.nativeElement.value) {
-            return this.selection.selected.length == this.dataSource.renderedData.length;
-        }
-        else {
-            return this.selection.selected.length == this.exampleDatabase.data.length;
-        }
-    };
-    /**
-     * @return {?}
-     */
-    TableOverviewExample.prototype.masterToggle = function () {
-        var _this = this;
-        if (!this.dataSource) {
-            return;
-        }
-        if (this.isAllSelected()) {
-            this.selection.clear();
-        }
-        else if (this.filter.nativeElement.value) {
-            this.dataSource.renderedData.forEach(function (data) { return _this.selection.select(data.id); });
-        }
-        else {
-            this.exampleDatabase.data.forEach(function (data) { return _this.selection.select(data.id); });
-        }
+    TableOverviewExample.prototype.applyFilter = function (filterValue) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
     };
     TableOverviewExample.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'table-overview-example',
-                    styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 56px; max-height: 56px; display: flex; align-items: center; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; border-bottom: 1px solid transparent; } .mat-form-field { font-size: 14px; flex-grow: 1; margin-top: 8px; } .example-no-results { display: flex; justify-content: center; padding: 24px; font-size: 12px; font-style: italic; } /** Selection styles */ .example-selection-header { font-size: 18px; } .mat-column-select { max-width: 54px; } .mat-row:hover, .example-selected-row { background: #f5f5f5; } .mat-row:active, .mat-row.example-selected-row { background: #eaeaea; } .mat-table { overflow: auto; max-height: 500px; } "],
-                    template: "<div class=\"example-header\" [style.display]=\"selection.isEmpty() ? '' : 'none'\"><mat-form-field floatPlaceholder=\"never\"><input matInput #filter placeholder=\"Filter users\"></mat-form-field></div><div class=\"example-header example-selection-header\" *ngIf=\"!selection.isEmpty()\">{{selection.selected.length}} {{selection.selected.length == 1 ? 'user' : 'users'}} selected</div><div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"select\"><mat-header-cell *matHeaderCellDef><mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></mat-checkbox></mat-header-cell><mat-cell *matCellDef=\"let row\"><mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row.id) : null\" [checked]=\"selection.isSelected(row.id)\"></mat-checkbox></mat-cell></ng-container><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\" [class.example-selected-row]=\"selection.isSelected(row.id)\" (click)=\"selection.toggle(row.id)\"></mat-row></mat-table><div class=\"example-no-results\" [style.display]=\"dataSource.renderedData.length == 0 ? '' : 'none'\">No users found matching filter.</div><mat-paginator #paginator [length]=\"dataSource.filteredData.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
+                    styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; padding: 8px 24px 0; } .mat-form-field { font-size: 14px; width: 100%; } .mat-table { overflow: auto; max-height: 500px; } "],
+                    template: "<div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><div class=\"example-container mat-elevation-z8\"><mat-table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"id\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
                 },] },
     ];
     /**
@@ -3407,190 +3222,54 @@ var TableOverviewExample = (function () {
     TableOverviewExample.propDecorators = {
         'paginator': [{ type: _angular_core.ViewChild, args: [_angular_material.MatPaginator,] },],
         'sort': [{ type: _angular_core.ViewChild, args: [_angular_material.MatSort,] },],
-        'filter': [{ type: _angular_core.ViewChild, args: ['filter',] },],
     };
     return TableOverviewExample;
 }());
 /**
+ * Builds and returns a new User.
+ * @param {?} id
+ * @return {?}
+ */
+function createNewUser(id) {
+    var /** @type {?} */ name = NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))] + ' ' +
+        NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))].charAt(0) + '.';
+    return {
+        id: id.toString(),
+        name: name,
+        progress: Math.round(Math.random() * 100).toString(),
+        color: COLORS$1[Math.round(Math.random() * (COLORS$1.length - 1))]
+    };
+}
+/**
  * Constants used to fill up our data base.
  */
-var COLORS$2 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+var COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES$2 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+var NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-var ExampleDatabase$2 = (function () {
-    function ExampleDatabase() {
-        /**
-         * Stream that emits whenever the data has been modified.
-         */
-        this.dataChange = new rxjs_BehaviorSubject.BehaviorSubject([]);
-        // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
-            this.addUser();
-        }
-    }
-    Object.defineProperty(ExampleDatabase.prototype, "data", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Adds a new user to the database.
-     * @return {?}
-     */
-    ExampleDatabase.prototype.addUser = function () {
-        var /** @type {?} */ copiedData = this.data.slice();
-        copiedData.push(this.createNewUser());
-        this.dataChange.next(copiedData);
-    };
-    /**
-     * Builds and returns a new User.
-     * @return {?}
-     */
-    ExampleDatabase.prototype.createNewUser = function () {
-        var /** @type {?} */ name = NAMES$2[Math.round(Math.random() * (NAMES$2.length - 1))] + ' ' +
-            NAMES$2[Math.round(Math.random() * (NAMES$2.length - 1))].charAt(0) + '.';
-        return {
-            id: (this.data.length + 1).toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS$2[Math.round(Math.random() * (COLORS$2.length - 1))]
-        };
-    };
-    return ExampleDatabase;
-}());
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-var ExampleDataSource$4 = (function (_super) {
-    __extends(ExampleDataSource, _super);
-    /**
-     * @param {?} _exampleDatabase
-     * @param {?} _paginator
-     * @param {?} _sort
-     */
-    function ExampleDataSource(_exampleDatabase, _paginator, _sort) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
-        _this._paginator = _paginator;
-        _this._sort = _sort;
-        _this._filterChange = new rxjs_BehaviorSubject.BehaviorSubject('');
-        _this.filteredData = [];
-        _this.renderedData = [];
-        // Reset to the first page when the user changes the filter.
-        _this._filterChange.subscribe(function () { return _this._paginator.pageIndex = 0; });
-        return _this;
-    }
-    Object.defineProperty(ExampleDataSource.prototype, "filter", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this._filterChange.value; },
-        /**
-         * @param {?} filter
-         * @return {?}
-         */
-        set: function (filter) { this._filterChange.next(filter); },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    ExampleDataSource.prototype.connect = function () {
-        var _this = this;
-        // Listen for any changes in the base data, sorting, filtering, or pagination
-        var /** @type {?} */ displayDataChanges = [
-            this._exampleDatabase.dataChange,
-            this._sort.sortChange,
-            this._filterChange,
-            this._paginator.page,
-        ];
-        return rxjs_Observable.Observable.merge.apply(rxjs_Observable.Observable, displayDataChanges).map(function () {
-            // Filter data
-            _this.filteredData = _this._exampleDatabase.data.slice().filter(function (item) {
-                var /** @type {?} */ searchStr = (item.name + item.color).toLowerCase();
-                return searchStr.indexOf(_this.filter.toLowerCase()) != -1;
-            });
-            // Sort filtered data
-            var /** @type {?} */ sortedData = _this.sortData(_this.filteredData.slice());
-            // Grab the page's slice of the filtered sorted data.
-            var /** @type {?} */ startIndex = _this._paginator.pageIndex * _this._paginator.pageSize;
-            _this.renderedData = sortedData.splice(startIndex, _this._paginator.pageSize);
-            return _this.renderedData;
-        });
-    };
-    /**
-     * @return {?}
-     */
-    ExampleDataSource.prototype.disconnect = function () { };
-    /**
-     * Returns a sorted copy of the database data.
-     * @param {?} data
-     * @return {?}
-     */
-    ExampleDataSource.prototype.sortData = function (data) {
-        var _this = this;
-        if (!this._sort.active || this._sort.direction == '') {
-            return data;
-        }
-        return data.sort(function (a, b) {
-            var /** @type {?} */ propertyA = '';
-            var /** @type {?} */ propertyB = '';
-            switch (_this._sort.active) {
-                case 'userId':
-                    _a = [a.id, b.id], propertyA = _a[0], propertyB = _a[1];
-                    break;
-                case 'userName':
-                    _b = [a.name, b.name], propertyA = _b[0], propertyB = _b[1];
-                    break;
-                case 'progress':
-                    _c = [a.progress, b.progress], propertyA = _c[0], propertyB = _c[1];
-                    break;
-                case 'color':
-                    _d = [a.color, b.color], propertyA = _d[0], propertyB = _d[1];
-                    break;
-            }
-            var /** @type {?} */ valueA = isNaN(+propertyA) ? propertyA : +propertyA;
-            var /** @type {?} */ valueB = isNaN(+propertyB) ? propertyB : +propertyB;
-            return (valueA < valueB ? -1 : 1) * (_this._sort.direction == 'asc' ? 1 : -1);
-            var _a, _b, _c, _d;
-        });
-    };
-    return ExampleDataSource;
-}(_angular_cdk_collections.DataSource));
 
 /**
  * \@title Table with pagination
  */
 var TablePaginationExample = (function () {
     function TablePaginationExample() {
-        this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
-        this.exampleDatabase = new ExampleDatabase$3();
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new _angular_material.MatTableDataSource(ELEMENT_DATA$2);
     }
     /**
+     * Set the paginator after the view init since this component will
+     * be able to query its view for the initialized paginator.
      * @return {?}
      */
-    TablePaginationExample.prototype.ngOnInit = function () {
-        this.dataSource = new ExampleDataSource$5(this.exampleDatabase, this.paginator);
+    TablePaginationExample.prototype.ngAfterViewInit = function () {
+        this.dataSource.paginator = this.paginator;
     };
     TablePaginationExample.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'table-pagination-example',
-                    styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; max-height: 500px; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
+                    styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } "],
+                    template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator #paginator [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 20]\"></mat-paginator></div>",
                 },] },
     ];
     /**
@@ -3602,123 +3281,50 @@ var TablePaginationExample = (function () {
     };
     return TablePaginationExample;
 }());
-/**
- * Constants used to fill up our data base.
- */
-var COLORS$3 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES$3 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-var ExampleDatabase$3 = (function () {
-    function ExampleDatabase() {
-        /**
-         * Stream that emits whenever the data has been modified.
-         */
-        this.dataChange = new rxjs_BehaviorSubject.BehaviorSubject([]);
-        // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
-            this.addUser();
-        }
-    }
-    Object.defineProperty(ExampleDatabase.prototype, "data", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Adds a new user to the database.
-     * @return {?}
-     */
-    ExampleDatabase.prototype.addUser = function () {
-        var /** @type {?} */ copiedData = this.data.slice();
-        copiedData.push(this.createNewUser());
-        this.dataChange.next(copiedData);
-    };
-    /**
-     * Builds and returns a new User.
-     * @return {?}
-     */
-    ExampleDatabase.prototype.createNewUser = function () {
-        var /** @type {?} */ name = NAMES$3[Math.round(Math.random() * (NAMES$3.length - 1))] + ' ' +
-            NAMES$3[Math.round(Math.random() * (NAMES$3.length - 1))].charAt(0) + '.';
-        return {
-            id: (this.data.length + 1).toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS$3[Math.round(Math.random() * (COLORS$3.length - 1))]
-        };
-    };
-    return ExampleDatabase;
-}());
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-var ExampleDataSource$5 = (function (_super) {
-    __extends(ExampleDataSource, _super);
-    /**
-     * @param {?} _exampleDatabase
-     * @param {?} _paginator
-     */
-    function ExampleDataSource(_exampleDatabase, _paginator) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
-        _this._paginator = _paginator;
-        return _this;
-    }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    ExampleDataSource.prototype.connect = function () {
-        var _this = this;
-        var /** @type {?} */ displayDataChanges = [
-            this._exampleDatabase.dataChange,
-            this._paginator.page,
-        ];
-        return rxjs_Observable.Observable.merge.apply(rxjs_Observable.Observable, displayDataChanges).map(function () {
-            var /** @type {?} */ data = _this._exampleDatabase.data.slice();
-            // Grab the page's slice of data.
-            var /** @type {?} */ startIndex = _this._paginator.pageIndex * _this._paginator.pageSize;
-            return data.splice(startIndex, _this._paginator.pageSize);
-        });
-    };
-    /**
-     * @return {?}
-     */
-    ExampleDataSource.prototype.disconnect = function () { };
-    return ExampleDataSource;
-}(_angular_cdk_collections.DataSource));
+var ELEMENT_DATA$2 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
 
 /**
  * \@title Table with sorting
  */
 var TableSortingExample = (function () {
     function TableSortingExample() {
-        this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
-        this.exampleDatabase = new ExampleDatabase$4();
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new _angular_material.MatTableDataSource(ELEMENT_DATA$3);
     }
     /**
+     * Set the sort after the view init since this component will
+     * be able to query its view for the initialized sort.
      * @return {?}
      */
-    TableSortingExample.prototype.ngOnInit = function () {
-        this.dataSource = new ExampleDataSource$6(this.exampleDatabase, this.sort);
+    TableSortingExample.prototype.ngAfterViewInit = function () {
+        this.dataSource.sort = this.sort;
     };
     TableSortingExample.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'table-sorting-example',
-                    styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; max-height: 500px; } .mat-header-cell .mat-sort-header-sorted { color: black; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
+                    styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } .mat-header-cell.mat-sort-header-sorted { color: black; } "],
+                    template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef mat-sort-header>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef mat-sort-header>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
                 },] },
     ];
     /**
@@ -3730,133 +3336,28 @@ var TableSortingExample = (function () {
     };
     return TableSortingExample;
 }());
-/**
- * Constants used to fill up our data base.
- */
-var COLORS$4 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES$4 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-var ExampleDatabase$4 = (function () {
-    function ExampleDatabase() {
-        /**
-         * Stream that emits whenever the data has been modified.
-         */
-        this.dataChange = new rxjs_BehaviorSubject.BehaviorSubject([]);
-        // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
-            this.addUser();
-        }
-    }
-    Object.defineProperty(ExampleDatabase.prototype, "data", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * Adds a new user to the database.
-     * @return {?}
-     */
-    ExampleDatabase.prototype.addUser = function () {
-        var /** @type {?} */ copiedData = this.data.slice();
-        copiedData.push(this.createNewUser());
-        this.dataChange.next(copiedData);
-    };
-    /**
-     * Builds and returns a new User.
-     * @return {?}
-     */
-    ExampleDatabase.prototype.createNewUser = function () {
-        var /** @type {?} */ name = NAMES$4[Math.round(Math.random() * (NAMES$4.length - 1))] + ' ' +
-            NAMES$4[Math.round(Math.random() * (NAMES$4.length - 1))].charAt(0) + '.';
-        return {
-            id: (this.data.length + 1).toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS$4[Math.round(Math.random() * (COLORS$4.length - 1))]
-        };
-    };
-    return ExampleDatabase;
-}());
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-var ExampleDataSource$6 = (function (_super) {
-    __extends(ExampleDataSource, _super);
-    /**
-     * @param {?} _exampleDatabase
-     * @param {?} _sort
-     */
-    function ExampleDataSource(_exampleDatabase, _sort) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
-        _this._sort = _sort;
-        return _this;
-    }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    ExampleDataSource.prototype.connect = function () {
-        var _this = this;
-        var /** @type {?} */ displayDataChanges = [
-            this._exampleDatabase.dataChange,
-            this._sort.sortChange,
-        ];
-        return rxjs_Observable.Observable.merge.apply(rxjs_Observable.Observable, displayDataChanges).map(function () {
-            return _this.getSortedData();
-        });
-    };
-    /**
-     * @return {?}
-     */
-    ExampleDataSource.prototype.disconnect = function () { };
-    /**
-     * Returns a sorted copy of the database data.
-     * @return {?}
-     */
-    ExampleDataSource.prototype.getSortedData = function () {
-        var _this = this;
-        var /** @type {?} */ data = this._exampleDatabase.data.slice();
-        if (!this._sort.active || this._sort.direction == '') {
-            return data;
-        }
-        return data.sort(function (a, b) {
-            var /** @type {?} */ propertyA = '';
-            var /** @type {?} */ propertyB = '';
-            switch (_this._sort.active) {
-                case 'userId':
-                    _a = [a.id, b.id], propertyA = _a[0], propertyB = _a[1];
-                    break;
-                case 'userName':
-                    _b = [a.name, b.name], propertyA = _b[0], propertyB = _b[1];
-                    break;
-                case 'progress':
-                    _c = [a.progress, b.progress], propertyA = _c[0], propertyB = _c[1];
-                    break;
-                case 'color':
-                    _d = [a.color, b.color], propertyA = _d[0], propertyB = _d[1];
-                    break;
-            }
-            var /** @type {?} */ valueA = isNaN(+propertyA) ? propertyA : +propertyA;
-            var /** @type {?} */ valueB = isNaN(+propertyB) ? propertyB : +propertyB;
-            return (valueA < valueB ? -1 : 1) * (_this._sort.direction == 'asc' ? 1 : -1);
-            var _a, _b, _c, _d;
-        });
-    };
-    return ExampleDataSource;
-}(_angular_cdk_collections.DataSource));
+var ELEMENT_DATA$3 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
 
 /**
  * \@title Basic tabs

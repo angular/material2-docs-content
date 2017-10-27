@@ -1,32 +1,28 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container mat-elevation-z8"</span>&gt;</span>
-
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-table</span> #<span class="hljs-attr">table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span>&gt;</span>
 
-    <span class="hljs-comment">&lt;!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" --&gt;</span>
-
-    <span class="hljs-comment">&lt;!-- ID Column --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"userId"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> ID <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.id}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
-
-    <span class="hljs-comment">&lt;!-- Progress Column --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"progress"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Progress <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.progress}}% <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Position Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"position"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> No. <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"userName"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"name"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span> {{row.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Weight Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"weight"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Weight <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.weight}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
     <span class="hljs-comment">&lt;!-- Color Column --&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"color"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Color <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span> [<span class="hljs-attr">style.color</span>]=<span class="hljs-string">"row.color"</span>&gt;</span> {{row.color}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"symbol"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Symbol <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.symbol}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-row</span>&gt;</span>
@@ -34,9 +30,7 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-table</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-paginator</span> #<span class="hljs-attr">paginator</span>
-                [<span class="hljs-attr">length</span>]=<span class="hljs-string">"exampleDatabase.data.length"</span>
-                [<span class="hljs-attr">pageIndex</span>]=<span class="hljs-string">"0"</span>
-                [<span class="hljs-attr">pageSize</span>]=<span class="hljs-string">"25"</span>
-                [<span class="hljs-attr">pageSizeOptions</span>]=<span class="hljs-string">"[5, 10, 25, 100]"</span>&gt;</span>
+                 [<span class="hljs-attr">pageSize</span>]=<span class="hljs-string">"10"</span>
+                 [<span class="hljs-attr">pageSizeOptions</span>]=<span class="hljs-string">"[5, 10, 20]"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-paginator</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

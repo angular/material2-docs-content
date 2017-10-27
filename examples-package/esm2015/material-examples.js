@@ -9,10 +9,10 @@ import { Component, ElementRef, Inject, Input, NgModule, Renderer2, ViewChild, V
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
-import { MAT_DIALOG_DATA, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
+import { MAT_DIALOG_DATA, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
 import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/map';
-import { DataSource, SelectionModel } from '@angular/cdk/collections';
+import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/observable/merge';
 import { ENTER } from '@angular/cdk/keycodes';
@@ -25,12 +25,9 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { Subject } from 'rxjs/Subject';
 import { DomSanitizer } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
-import 'rxjs/add/observable/fromEvent';
-import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/switchMap';
 
@@ -2758,7 +2755,7 @@ StepperOverviewExample.ctorParameters = () => [
 class TableBasicExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new ExampleDataSource$1();
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA);
     }
 }
 TableBasicExample.decorators = [
@@ -2772,7 +2769,7 @@ TableBasicExample.decorators = [
  * @nocollapse
  */
 TableBasicExample.ctorParameters = () => [];
-const data = [
+const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -2794,185 +2791,108 @@ const data = [
     { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
-/**
- * Data source to provide what data should be rendered in the table. The observable provided
- * in connect should emit exactly the data that should be rendered by the table. If the data is
- * altered, the observable should emit that new set of data on the stream. In our case here,
- * we return a stream that contains only one set of data that doesn't change.
- */
-class ExampleDataSource$1 extends DataSource {
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    connect() {
-        return Observable.of(data);
-    }
-    /**
-     * @return {?}
-     */
-    disconnect() { }
-}
 
 /**
  * \@title Table with filtering
  */
 class TableFilteringExample {
     constructor() {
-        this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
-        this.exampleDatabase = new ExampleDatabase$1();
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$1);
     }
     /**
+     * @param {?} filterValue
      * @return {?}
      */
-    ngOnInit() {
-        this.dataSource = new ExampleDataSource$2(this.exampleDatabase);
-        Observable.fromEvent(this.filter.nativeElement, 'keyup')
-            .debounceTime(150)
-            .distinctUntilChanged()
-            .subscribe(() => {
-            if (!this.dataSource) {
-                return;
-            }
-            this.dataSource.filter = this.filter.nativeElement.value;
-        });
+    applyFilter(filterValue) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
     }
 }
 TableFilteringExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-filtering-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: baseline; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; } .mat-form-field { font-size: 14px; flex-grow: 1; margin-left: 32px; } .mat-table { overflow: auto; max-height: 500px; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field floatPlaceholder=\"never\"><input matInput #filter placeholder=\"Filter users\"></mat-form-field></div><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; padding: 8px 24px 0; } .mat-form-field { font-size: 14px; width: 100%; } .mat-table { overflow: auto; max-height: 500px; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
 /**
  * @nocollapse
  */
 TableFilteringExample.ctorParameters = () => [];
-TableFilteringExample.propDecorators = {
-    'filter': [{ type: ViewChild, args: ['filter',] },],
-};
-/**
- * Constants used to fill up our data base.
- */
-const COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-class ExampleDatabase$1 {
-    constructor() {
-        /**
-         * Stream that emits whenever the data has been modified.
-         */
-        this.dataChange = new BehaviorSubject([]);
-        // Fill up the database with 100 users.
-        for (let i = 0; i < 100; i++) {
-            this.addUser();
-        }
-    }
-    /**
-     * @return {?}
-     */
-    get data() { return this.dataChange.value; }
-    /**
-     * Adds a new user to the database.
-     * @return {?}
-     */
-    addUser() {
-        const /** @type {?} */ copiedData = this.data.slice();
-        copiedData.push(this.createNewUser());
-        this.dataChange.next(copiedData);
-    }
-    /**
-     * Builds and returns a new User.
-     * @return {?}
-     */
-    createNewUser() {
-        const /** @type {?} */ name = NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))] + ' ' +
-            NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))].charAt(0) + '.';
-        return {
-            id: (this.data.length + 1).toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS$1[Math.round(Math.random() * (COLORS$1.length - 1))]
-        };
-    }
-}
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-class ExampleDataSource$2 extends DataSource {
-    /**
-     * @param {?} _exampleDatabase
-     */
-    constructor(_exampleDatabase) {
-        super();
-        this._exampleDatabase = _exampleDatabase;
-        this._filterChange = new BehaviorSubject('');
-    }
-    /**
-     * @return {?}
-     */
-    get filter() { return this._filterChange.value; }
-    /**
-     * @param {?} filter
-     * @return {?}
-     */
-    set filter(filter) { this._filterChange.next(filter); }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    connect() {
-        const /** @type {?} */ displayDataChanges = [
-            this._exampleDatabase.dataChange,
-            this._filterChange,
-        ];
-        return Observable.merge(...displayDataChanges).map(() => {
-            return this._exampleDatabase.data.slice().filter((item) => {
-                let /** @type {?} */ searchStr = (item.name + item.color).toLowerCase();
-                return searchStr.indexOf(this.filter.toLowerCase()) != -1;
-            });
-        });
-    }
-    /**
-     * @return {?}
-     */
-    disconnect() { }
-}
+const ELEMENT_DATA$1 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
 
 /**
  * \@title Table retrieving data through HTTP
  */
 class TableHttpExample {
     /**
-     * @param {?} _httpClient
+     * @param {?} http
      */
-    constructor(_httpClient) {
-        this._httpClient = _httpClient;
-        this.displayedColumns = ['created_at', 'state', 'number', 'title'];
+    constructor(http) {
+        this.http = http;
+        this.displayedColumns = ['created', 'state', 'number', 'title'];
+        this.dataSource = new MatTableDataSource();
+        this.resultsLength = 0;
+        this.isLoadingResults = false;
+        this.isRateLimitReached = false;
     }
     /**
      * @return {?}
      */
-    ngOnInit() {
-        this.exampleDatabase = new ExampleHttpDataSource(this._httpClient);
-        this.dataSource = new ExampleDataSource$3(/** @type {?} */ ((this.exampleDatabase)), this.paginator, this.sort);
+    ngAfterViewInit() {
+        this.exampleDatabase = new ExampleHttpDao(this.http);
+        // If the user changes the sort order, reset back to the first page.
+        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+        Observable.merge(this.sort.sortChange, this.paginator.page)
+            .startWith(null)
+            .switchMap(() => {
+            this.isLoadingResults = true;
+            return ((this.exampleDatabase)).getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
+        })
+            .map(data => {
+            // Flip flag to show that loading has finished.
+            this.isLoadingResults = false;
+            this.isRateLimitReached = false;
+            this.resultsLength = data.total_count;
+            return data.items;
+        })
+            .catch(() => {
+            this.isLoadingResults = false;
+            // Catch if the GitHub API has reached its rate limit. Return empty data.
+            this.isRateLimitReached = true;
+            return Observable.of([]);
+        })
+            .subscribe(data => this.dataSource.data = data);
     }
 }
 TableHttpExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-http-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .mat-column-title { text-overflow: ellipsis; white-space: nowrap; flex: 1; overflow: hidden; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"dataSource.isLoadingResults || dataSource.isRateLimitReached\"><mat-spinner *ngIf=\"dataSource.isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"dataSource.isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><mat-table #table [dataSource]=\"dataSource\" class=\"example-table\" matSort matSortActive=\"created_at\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><mat-header-cell *matHeaderCellDef>#</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.number }}</mat-cell></ng-container><ng-container matColumnDef=\"title\"><mat-header-cell *matHeaderCellDef>Title</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.title }}</mat-cell></ng-container><ng-container matColumnDef=\"state\"><mat-header-cell *matHeaderCellDef>State</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.state }}</mat-cell></ng-container><ng-container matColumnDef=\"created_at\"><mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [length]=\"dataSource.resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><mat-table #table [dataSource]=\"dataSource\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><mat-header-cell *matHeaderCellDef>#</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.number }}</mat-cell></ng-container><ng-container matColumnDef=\"title\"><mat-header-cell *matHeaderCellDef>Title</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.title }}</mat-cell></ng-container><ng-container matColumnDef=\"state\"><mat-header-cell *matHeaderCellDef>State</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.state }}</mat-cell></ng-container><ng-container matColumnDef=\"created\"><mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
             },] },
 ];
 /**
@@ -2988,12 +2908,12 @@ TableHttpExample.propDecorators = {
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
-class ExampleHttpDataSource {
+class ExampleHttpDao {
     /**
-     * @param {?} _httpClient
+     * @param {?} http
      */
-    constructor(_httpClient) {
-        this._httpClient = _httpClient;
+    constructor(http) {
+        this.http = http;
     }
     /**
      * @param {?} sort
@@ -3004,133 +2924,48 @@ class ExampleHttpDataSource {
     getRepoIssues(sort, order, page) {
         const /** @type {?} */ href = 'https://api.github.com/search/issues';
         const /** @type {?} */ requestUrl = `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
-        return this._httpClient.get(requestUrl);
+        return this.http.get(requestUrl);
     }
-}
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleHttpDao. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-class ExampleDataSource$3 extends DataSource {
-    /**
-     * @param {?} exampleDatabase
-     * @param {?} paginator
-     * @param {?} sort
-     */
-    constructor(exampleDatabase, paginator, sort) {
-        super();
-        this.exampleDatabase = exampleDatabase;
-        this.paginator = paginator;
-        this.sort = sort;
-        // The number of issues returned by github matching the query.
-        this.resultsLength = 0;
-        this.isLoadingResults = false;
-        this.isRateLimitReached = false;
-    }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    connect() {
-        const /** @type {?} */ displayDataChanges = [
-            this.sort.sortChange,
-            this.paginator.page
-        ];
-        // If the user changes the sort order, reset back to the first page.
-        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
-        return Observable.merge(...displayDataChanges)
-            .startWith(null)
-            .switchMap(() => {
-            this.isLoadingResults = true;
-            return this.exampleDatabase.getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
-        })
-            .map(data => {
-            // Flip flag to show that loading has finished.
-            this.isLoadingResults = false;
-            this.isRateLimitReached = false;
-            this.resultsLength = data.total_count;
-            return data.items;
-        })
-            .catch(() => {
-            this.isLoadingResults = false;
-            // Catch if the GitHub API has reached its rate limit. Return empty data.
-            this.isRateLimitReached = true;
-            return Observable.of([]);
-        });
-    }
-    /**
-     * @return {?}
-     */
-    disconnect() { }
 }
 
 /**
- * \@title Feature-rich data table
+ * \@title Data table with sorting, pagination, and filtering.
  */
 class TableOverviewExample {
     constructor() {
-        this.displayedColumns = ['select', 'userId', 'userName', 'progress', 'color'];
-        this.exampleDatabase = new ExampleDatabase$2();
-        this.selection = new SelectionModel(true, []);
+        this.displayedColumns = ['id', 'name', 'progress', 'color'];
+        // Create 100 users
+        const users = [];
+        for (let i = 1; i <= 100; i++) {
+            users.push(createNewUser(i));
+        }
+        // Assign the data to the data source for the table to render
+        this.dataSource = new MatTableDataSource(users);
     }
     /**
+     * Set the paginator and sort after the view init since this component will
+     * be able to query its view for the initialized paginator and sort.
      * @return {?}
      */
-    ngOnInit() {
-        this.dataSource = new ExampleDataSource$4(this.exampleDatabase, this.paginator, this.sort);
-        Observable.fromEvent(this.filter.nativeElement, 'keyup')
-            .debounceTime(150)
-            .distinctUntilChanged()
-            .subscribe(() => {
-            if (!this.dataSource) {
-                return;
-            }
-            this.dataSource.filter = this.filter.nativeElement.value;
-        });
+    ngAfterViewInit() {
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
     }
     /**
+     * @param {?} filterValue
      * @return {?}
      */
-    isAllSelected() {
-        if (!this.dataSource) {
-            return false;
-        }
-        if (this.selection.isEmpty()) {
-            return false;
-        }
-        if (this.filter.nativeElement.value) {
-            return this.selection.selected.length == this.dataSource.renderedData.length;
-        }
-        else {
-            return this.selection.selected.length == this.exampleDatabase.data.length;
-        }
-    }
-    /**
-     * @return {?}
-     */
-    masterToggle() {
-        if (!this.dataSource) {
-            return;
-        }
-        if (this.isAllSelected()) {
-            this.selection.clear();
-        }
-        else if (this.filter.nativeElement.value) {
-            this.dataSource.renderedData.forEach(data => this.selection.select(data.id));
-        }
-        else {
-            this.exampleDatabase.data.forEach(data => this.selection.select(data.id));
-        }
+    applyFilter(filterValue) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
     }
 }
 TableOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-overview-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 56px; max-height: 56px; display: flex; align-items: center; padding: 8px 24px 0; font-size: 20px; justify-content: space-between; border-bottom: 1px solid transparent; } .mat-form-field { font-size: 14px; flex-grow: 1; margin-top: 8px; } .example-no-results { display: flex; justify-content: center; padding: 24px; font-size: 12px; font-style: italic; } /** Selection styles */ .example-selection-header { font-size: 18px; } .mat-column-select { max-width: 54px; } .mat-row:hover, .example-selected-row { background: #f5f5f5; } .mat-row:active, .mat-row.example-selected-row { background: #eaeaea; } .mat-table { overflow: auto; max-height: 500px; } "],
-                template: "<div class=\"example-header\" [style.display]=\"selection.isEmpty() ? '' : 'none'\"><mat-form-field floatPlaceholder=\"never\"><input matInput #filter placeholder=\"Filter users\"></mat-form-field></div><div class=\"example-header example-selection-header\" *ngIf=\"!selection.isEmpty()\">{{selection.selected.length}} {{selection.selected.length == 1 ? 'user' : 'users'}} selected</div><div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"select\"><mat-header-cell *matHeaderCellDef><mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></mat-checkbox></mat-header-cell><mat-cell *matCellDef=\"let row\"><mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row.id) : null\" [checked]=\"selection.isSelected(row.id)\"></mat-checkbox></mat-cell></ng-container><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\" [class.example-selected-row]=\"selection.isSelected(row.id)\" (click)=\"selection.toggle(row.id)\"></mat-row></mat-table><div class=\"example-no-results\" [style.display]=\"dataSource.renderedData.length == 0 ? '' : 'none'\">No users found matching filter.</div><mat-paginator #paginator [length]=\"dataSource.filteredData.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
+                styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; padding: 8px 24px 0; } .mat-form-field { font-size: 14px; width: 100%; } .mat-table { overflow: auto; max-height: 500px; } "],
+                template: "<div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><div class=\"example-container mat-elevation-z8\"><mat-table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"id\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
             },] },
 ];
 /**
@@ -3140,174 +2975,53 @@ TableOverviewExample.ctorParameters = () => [];
 TableOverviewExample.propDecorators = {
     'paginator': [{ type: ViewChild, args: [MatPaginator,] },],
     'sort': [{ type: ViewChild, args: [MatSort,] },],
-    'filter': [{ type: ViewChild, args: ['filter',] },],
 };
+/**
+ * Builds and returns a new User.
+ * @param {?} id
+ * @return {?}
+ */
+function createNewUser(id) {
+    const /** @type {?} */ name = NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))] + ' ' +
+        NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))].charAt(0) + '.';
+    return {
+        id: id.toString(),
+        name: name,
+        progress: Math.round(Math.random() * 100).toString(),
+        color: COLORS$1[Math.round(Math.random() * (COLORS$1.length - 1))]
+    };
+}
 /**
  * Constants used to fill up our data base.
  */
-const COLORS$2 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+const COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const NAMES$2 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+const NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-class ExampleDatabase$2 {
-    constructor() {
-        /**
-         * Stream that emits whenever the data has been modified.
-         */
-        this.dataChange = new BehaviorSubject([]);
-        // Fill up the database with 100 users.
-        for (let i = 0; i < 100; i++) {
-            this.addUser();
-        }
-    }
-    /**
-     * @return {?}
-     */
-    get data() { return this.dataChange.value; }
-    /**
-     * Adds a new user to the database.
-     * @return {?}
-     */
-    addUser() {
-        const /** @type {?} */ copiedData = this.data.slice();
-        copiedData.push(this.createNewUser());
-        this.dataChange.next(copiedData);
-    }
-    /**
-     * Builds and returns a new User.
-     * @return {?}
-     */
-    createNewUser() {
-        const /** @type {?} */ name = NAMES$2[Math.round(Math.random() * (NAMES$2.length - 1))] + ' ' +
-            NAMES$2[Math.round(Math.random() * (NAMES$2.length - 1))].charAt(0) + '.';
-        return {
-            id: (this.data.length + 1).toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS$2[Math.round(Math.random() * (COLORS$2.length - 1))]
-        };
-    }
-}
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-class ExampleDataSource$4 extends DataSource {
-    /**
-     * @param {?} _exampleDatabase
-     * @param {?} _paginator
-     * @param {?} _sort
-     */
-    constructor(_exampleDatabase, _paginator, _sort) {
-        super();
-        this._exampleDatabase = _exampleDatabase;
-        this._paginator = _paginator;
-        this._sort = _sort;
-        this._filterChange = new BehaviorSubject('');
-        this.filteredData = [];
-        this.renderedData = [];
-        // Reset to the first page when the user changes the filter.
-        this._filterChange.subscribe(() => this._paginator.pageIndex = 0);
-    }
-    /**
-     * @return {?}
-     */
-    get filter() { return this._filterChange.value; }
-    /**
-     * @param {?} filter
-     * @return {?}
-     */
-    set filter(filter) { this._filterChange.next(filter); }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    connect() {
-        // Listen for any changes in the base data, sorting, filtering, or pagination
-        const /** @type {?} */ displayDataChanges = [
-            this._exampleDatabase.dataChange,
-            this._sort.sortChange,
-            this._filterChange,
-            this._paginator.page,
-        ];
-        return Observable.merge(...displayDataChanges).map(() => {
-            // Filter data
-            this.filteredData = this._exampleDatabase.data.slice().filter((item) => {
-                let /** @type {?} */ searchStr = (item.name + item.color).toLowerCase();
-                return searchStr.indexOf(this.filter.toLowerCase()) != -1;
-            });
-            // Sort filtered data
-            const /** @type {?} */ sortedData = this.sortData(this.filteredData.slice());
-            // Grab the page's slice of the filtered sorted data.
-            const /** @type {?} */ startIndex = this._paginator.pageIndex * this._paginator.pageSize;
-            this.renderedData = sortedData.splice(startIndex, this._paginator.pageSize);
-            return this.renderedData;
-        });
-    }
-    /**
-     * @return {?}
-     */
-    disconnect() { }
-    /**
-     * Returns a sorted copy of the database data.
-     * @param {?} data
-     * @return {?}
-     */
-    sortData(data) {
-        if (!this._sort.active || this._sort.direction == '') {
-            return data;
-        }
-        return data.sort((a, b) => {
-            let /** @type {?} */ propertyA = '';
-            let /** @type {?} */ propertyB = '';
-            switch (this._sort.active) {
-                case 'userId':
-                    [propertyA, propertyB] = [a.id, b.id];
-                    break;
-                case 'userName':
-                    [propertyA, propertyB] = [a.name, b.name];
-                    break;
-                case 'progress':
-                    [propertyA, propertyB] = [a.progress, b.progress];
-                    break;
-                case 'color':
-                    [propertyA, propertyB] = [a.color, b.color];
-                    break;
-            }
-            let /** @type {?} */ valueA = isNaN(+propertyA) ? propertyA : +propertyA;
-            let /** @type {?} */ valueB = isNaN(+propertyB) ? propertyB : +propertyB;
-            return (valueA < valueB ? -1 : 1) * (this._sort.direction == 'asc' ? 1 : -1);
-        });
-    }
-}
 
 /**
  * \@title Table with pagination
  */
 class TablePaginationExample {
     constructor() {
-        this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
-        this.exampleDatabase = new ExampleDatabase$3();
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$2);
     }
     /**
+     * Set the paginator after the view init since this component will
+     * be able to query its view for the initialized paginator.
      * @return {?}
      */
-    ngOnInit() {
-        this.dataSource = new ExampleDataSource$5(this.exampleDatabase, this.paginator);
+    ngAfterViewInit() {
+        this.dataSource.paginator = this.paginator;
     }
 }
 TablePaginationExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-pagination-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; max-height: 500px; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator #paginator [length]=\"exampleDatabase.data.length\" [pageIndex]=\"0\" [pageSize]=\"25\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
+                styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator #paginator [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 20]\"></mat-paginator></div>",
             },] },
 ];
 /**
@@ -3317,115 +3031,51 @@ TablePaginationExample.ctorParameters = () => [];
 TablePaginationExample.propDecorators = {
     'paginator': [{ type: ViewChild, args: [MatPaginator,] },],
 };
-/**
- * Constants used to fill up our data base.
- */
-const COLORS$3 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const NAMES$3 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-class ExampleDatabase$3 {
-    constructor() {
-        /**
-         * Stream that emits whenever the data has been modified.
-         */
-        this.dataChange = new BehaviorSubject([]);
-        // Fill up the database with 100 users.
-        for (let i = 0; i < 100; i++) {
-            this.addUser();
-        }
-    }
-    /**
-     * @return {?}
-     */
-    get data() { return this.dataChange.value; }
-    /**
-     * Adds a new user to the database.
-     * @return {?}
-     */
-    addUser() {
-        const /** @type {?} */ copiedData = this.data.slice();
-        copiedData.push(this.createNewUser());
-        this.dataChange.next(copiedData);
-    }
-    /**
-     * Builds and returns a new User.
-     * @return {?}
-     */
-    createNewUser() {
-        const /** @type {?} */ name = NAMES$3[Math.round(Math.random() * (NAMES$3.length - 1))] + ' ' +
-            NAMES$3[Math.round(Math.random() * (NAMES$3.length - 1))].charAt(0) + '.';
-        return {
-            id: (this.data.length + 1).toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS$3[Math.round(Math.random() * (COLORS$3.length - 1))]
-        };
-    }
-}
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-class ExampleDataSource$5 extends DataSource {
-    /**
-     * @param {?} _exampleDatabase
-     * @param {?} _paginator
-     */
-    constructor(_exampleDatabase, _paginator) {
-        super();
-        this._exampleDatabase = _exampleDatabase;
-        this._paginator = _paginator;
-    }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    connect() {
-        const /** @type {?} */ displayDataChanges = [
-            this._exampleDatabase.dataChange,
-            this._paginator.page,
-        ];
-        return Observable.merge(...displayDataChanges).map(() => {
-            const /** @type {?} */ data = this._exampleDatabase.data.slice();
-            // Grab the page's slice of data.
-            const /** @type {?} */ startIndex = this._paginator.pageIndex * this._paginator.pageSize;
-            return data.splice(startIndex, this._paginator.pageSize);
-        });
-    }
-    /**
-     * @return {?}
-     */
-    disconnect() { }
-}
+const ELEMENT_DATA$2 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
 
 /**
  * \@title Table with sorting
  */
 class TableSortingExample {
     constructor() {
-        this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
-        this.exampleDatabase = new ExampleDatabase$4();
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$3);
     }
     /**
+     * Set the sort after the view init since this component will
+     * be able to query its view for the initialized sort.
      * @return {?}
      */
-    ngOnInit() {
-        this.dataSource = new ExampleDataSource$6(this.exampleDatabase, this.sort);
+    ngAfterViewInit() {
+        this.dataSource.sort = this.sort;
     }
 }
 TableSortingExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-sorting-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .mat-table { overflow: auto; max-height: 500px; } .mat-header-cell .mat-sort-header-sorted { color: black; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"userId\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"userName\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
+                styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } .mat-header-cell.mat-sort-header-sorted { color: black; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef mat-sort-header>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef mat-sort-header>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
 /**
@@ -3435,122 +3085,28 @@ TableSortingExample.ctorParameters = () => [];
 TableSortingExample.propDecorators = {
     'sort': [{ type: ViewChild, args: [MatSort,] },],
 };
-/**
- * Constants used to fill up our data base.
- */
-const COLORS$4 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const NAMES$4 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-class ExampleDatabase$4 {
-    constructor() {
-        /**
-         * Stream that emits whenever the data has been modified.
-         */
-        this.dataChange = new BehaviorSubject([]);
-        // Fill up the database with 100 users.
-        for (let i = 0; i < 100; i++) {
-            this.addUser();
-        }
-    }
-    /**
-     * @return {?}
-     */
-    get data() { return this.dataChange.value; }
-    /**
-     * Adds a new user to the database.
-     * @return {?}
-     */
-    addUser() {
-        const /** @type {?} */ copiedData = this.data.slice();
-        copiedData.push(this.createNewUser());
-        this.dataChange.next(copiedData);
-    }
-    /**
-     * Builds and returns a new User.
-     * @return {?}
-     */
-    createNewUser() {
-        const /** @type {?} */ name = NAMES$4[Math.round(Math.random() * (NAMES$4.length - 1))] + ' ' +
-            NAMES$4[Math.round(Math.random() * (NAMES$4.length - 1))].charAt(0) + '.';
-        return {
-            id: (this.data.length + 1).toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS$4[Math.round(Math.random() * (COLORS$4.length - 1))]
-        };
-    }
-}
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-class ExampleDataSource$6 extends DataSource {
-    /**
-     * @param {?} _exampleDatabase
-     * @param {?} _sort
-     */
-    constructor(_exampleDatabase, _sort) {
-        super();
-        this._exampleDatabase = _exampleDatabase;
-        this._sort = _sort;
-    }
-    /**
-     * Connect function called by the table to retrieve one stream containing the data to render.
-     * @return {?}
-     */
-    connect() {
-        const /** @type {?} */ displayDataChanges = [
-            this._exampleDatabase.dataChange,
-            this._sort.sortChange,
-        ];
-        return Observable.merge(...displayDataChanges).map(() => {
-            return this.getSortedData();
-        });
-    }
-    /**
-     * @return {?}
-     */
-    disconnect() { }
-    /**
-     * Returns a sorted copy of the database data.
-     * @return {?}
-     */
-    getSortedData() {
-        const /** @type {?} */ data = this._exampleDatabase.data.slice();
-        if (!this._sort.active || this._sort.direction == '') {
-            return data;
-        }
-        return data.sort((a, b) => {
-            let /** @type {?} */ propertyA = '';
-            let /** @type {?} */ propertyB = '';
-            switch (this._sort.active) {
-                case 'userId':
-                    [propertyA, propertyB] = [a.id, b.id];
-                    break;
-                case 'userName':
-                    [propertyA, propertyB] = [a.name, b.name];
-                    break;
-                case 'progress':
-                    [propertyA, propertyB] = [a.progress, b.progress];
-                    break;
-                case 'color':
-                    [propertyA, propertyB] = [a.color, b.color];
-                    break;
-            }
-            let /** @type {?} */ valueA = isNaN(+propertyA) ? propertyA : +propertyA;
-            let /** @type {?} */ valueB = isNaN(+propertyB) ? propertyB : +propertyB;
-            return (valueA < valueB ? -1 : 1) * (this._sort.direction == 'asc' ? 1 : -1);
-        });
-    }
-}
+const ELEMENT_DATA$3 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
 
 /**
  * \@title Basic tabs
