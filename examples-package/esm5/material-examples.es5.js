@@ -33,6 +33,10 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/switchMap';
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 var ExampleMaterialModule = (function () {
     function ExampleMaterialModule() {
     }
@@ -73,17 +77,16 @@ var ExampleMaterialModule = (function () {
                     ]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ExampleMaterialModule.ctorParameters = function () { return []; };
     return ExampleMaterialModule;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 var User = (function () {
-    /**
-     * @param {?} name
-     */
     function User(name) {
         this.name = name;
     }
@@ -104,7 +107,10 @@ var AutocompleteDisplayExample = (function () {
     /**
      * @return {?}
      */
-    AutocompleteDisplayExample.prototype.ngOnInit = function () {
+    AutocompleteDisplayExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
             .startWith(null)
@@ -115,7 +121,11 @@ var AutocompleteDisplayExample = (function () {
      * @param {?} name
      * @return {?}
      */
-    AutocompleteDisplayExample.prototype.filter = function (name) {
+    AutocompleteDisplayExample.prototype.filter = /**
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) {
         return this.options.filter(function (option) {
             return option.name.toLowerCase().indexOf(name.toLowerCase()) === 0;
         });
@@ -124,7 +134,11 @@ var AutocompleteDisplayExample = (function () {
      * @param {?} user
      * @return {?}
      */
-    AutocompleteDisplayExample.prototype.displayFn = function (user) {
+    AutocompleteDisplayExample.prototype.displayFn = /**
+     * @param {?} user
+     * @return {?}
+     */
+    function (user) {
         return user ? user.name : user;
     };
     AutocompleteDisplayExample.decorators = [
@@ -134,13 +148,15 @@ var AutocompleteDisplayExample = (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     AutocompleteDisplayExample.ctorParameters = function () { return []; };
     return AutocompleteDisplayExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Filter autocomplete
  */
@@ -156,7 +172,10 @@ var AutocompleteFilterExample = (function () {
     /**
      * @return {?}
      */
-    AutocompleteFilterExample.prototype.ngOnInit = function () {
+    AutocompleteFilterExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
             .startWith(null)
@@ -166,7 +185,11 @@ var AutocompleteFilterExample = (function () {
      * @param {?} val
      * @return {?}
      */
-    AutocompleteFilterExample.prototype.filter = function (val) {
+    AutocompleteFilterExample.prototype.filter = /**
+     * @param {?} val
+     * @return {?}
+     */
+    function (val) {
         return this.options.filter(function (option) {
             return option.toLowerCase().indexOf(val.toLowerCase()) === 0;
         });
@@ -178,13 +201,15 @@ var AutocompleteFilterExample = (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     AutocompleteFilterExample.ctorParameters = function () { return []; };
     return AutocompleteFilterExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Autocomplete overview
  */
@@ -226,7 +251,11 @@ var AutocompleteOverviewExample = (function () {
      * @param {?} name
      * @return {?}
      */
-    AutocompleteOverviewExample.prototype.filterStates = function (name) {
+    AutocompleteOverviewExample.prototype.filterStates = /**
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) {
         return this.states.filter(function (state) {
             return state.name.toLowerCase().indexOf(name.toLowerCase()) === 0;
         });
@@ -238,13 +267,15 @@ var AutocompleteOverviewExample = (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     AutocompleteOverviewExample.ctorParameters = function () { return []; };
     return AutocompleteOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Simple autocomplete
  */
@@ -264,13 +295,15 @@ var AutocompleteSimpleExample = (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     AutocompleteSimpleExample.ctorParameters = function () { return []; };
     return AutocompleteSimpleExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic buttons
  */
@@ -283,13 +316,15 @@ var ButtonOverviewExample = (function () {
                     template: "<button mat-button>Click me!</button>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ButtonOverviewExample.ctorParameters = function () { return []; };
     return ButtonOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Exclusive selection
  */
@@ -303,13 +338,15 @@ var ButtonToggleExclusiveExample = (function () {
                     styles: [".example-selected-value { margin: 15px 0; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ButtonToggleExclusiveExample.ctorParameters = function () { return []; };
     return ButtonToggleExclusiveExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic button-toggles
  */
@@ -322,13 +359,15 @@ var ButtonToggleOverviewExample = (function () {
                     template: "<mat-button-toggle>Toggle me!</mat-button-toggle>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ButtonToggleOverviewExample.ctorParameters = function () { return []; };
     return ButtonToggleOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Button varieties
  */
@@ -342,13 +381,15 @@ var ButtonTypesExample = (function () {
                     styles: [".example-button-row { display: flex; align-items: center; justify-content: space-around; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ButtonTypesExample.ctorParameters = function () { return []; };
     return ButtonTypesExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Card with multiple sections
  */
@@ -362,13 +403,15 @@ var CardFancyExample = (function () {
                     styles: [".example-card { width: 400px; } .example-header-image { background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); background-size: cover; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     CardFancyExample.ctorParameters = function () { return []; };
     return CardFancyExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic cards
  */
@@ -381,13 +424,15 @@ var CardOverviewExample = (function () {
                     template: "<mat-card>Simple card</mat-card>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     CardOverviewExample.ctorParameters = function () { return []; };
     return CardOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic CDK data-table
  */
@@ -399,7 +444,10 @@ var CdkTableBasicExample = (function () {
     /**
      * @return {?}
      */
-    CdkTableBasicExample.prototype.ngOnInit = function () {
+    CdkTableBasicExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
         this.dataSource = new ExampleDataSource(this.exampleDatabase);
     };
     CdkTableBasicExample.decorators = [
@@ -409,9 +457,7 @@ var CdkTableBasicExample = (function () {
                     template: "<div class=\"example-container mat-elevation-z8\"><cdk-table #table [dataSource]=\"dataSource\" class=\"example-table\"><ng-container cdkColumnDef=\"userId\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">ID</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.id}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"progress\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Progress</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.progress}}%</cdk-cell></ng-container><ng-container cdkColumnDef=\"userName\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Name</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.name}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"color\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Color</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\" [style.color]=\"row.color\">{{row.color}}</cdk-cell></ng-container><cdk-header-row *cdkHeaderRowDef=\"displayedColumns\" class=\"example-header-row\"></cdk-header-row><cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\" class=\"example-row\"></cdk-row></cdk-table></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     CdkTableBasicExample.ctorParameters = function () { return []; };
     return CdkTableBasicExample;
 }());
@@ -424,6 +470,10 @@ var NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 /**
+ * @record
+ */
+
+/**
  * An example database that the data source uses to retrieve data for the table.
  */
 var ExampleDatabase = (function () {
@@ -433,23 +483,28 @@ var ExampleDatabase = (function () {
          */
         this.dataChange = new BehaviorSubject([]);
         // Fill up the database with 100 users.
-        for (var i = 0; i < 100; i++) {
+        for (var /** @type {?} */ i = 0; i < 100; i++) {
             this.addUser();
         }
     }
     Object.defineProperty(ExampleDatabase.prototype, "data", {
-        /**
+        get: /**
          * @return {?}
          */
-        get: function () { return this.dataChange.value; },
+        function () { return this.dataChange.value; },
         enumerable: true,
         configurable: true
     });
+    /** Adds a new user to the database. */
     /**
      * Adds a new user to the database.
      * @return {?}
      */
-    ExampleDatabase.prototype.addUser = function () {
+    ExampleDatabase.prototype.addUser = /**
+     * Adds a new user to the database.
+     * @return {?}
+     */
+    function () {
         var /** @type {?} */ copiedData = this.data.slice();
         copiedData.push(this.createNewUser());
         this.dataChange.next(copiedData);
@@ -458,7 +513,11 @@ var ExampleDatabase = (function () {
      * Builds and returns a new User.
      * @return {?}
      */
-    ExampleDatabase.prototype.createNewUser = function () {
+    ExampleDatabase.prototype.createNewUser = /**
+     * Builds and returns a new User.
+     * @return {?}
+     */
+    function () {
         var /** @type {?} */ name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
             NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
         return {
@@ -479,28 +538,37 @@ var ExampleDatabase = (function () {
  */
 var ExampleDataSource = (function (_super) {
     __extends(ExampleDataSource, _super);
-    /**
-     * @param {?} _exampleDatabase
-     */
     function ExampleDataSource(_exampleDatabase) {
         var _this = _super.call(this) || this;
         _this._exampleDatabase = _exampleDatabase;
         return _this;
     }
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
     /**
      * Connect function called by the table to retrieve one stream containing the data to render.
      * @return {?}
      */
-    ExampleDataSource.prototype.connect = function () {
+    ExampleDataSource.prototype.connect = /**
+     * Connect function called by the table to retrieve one stream containing the data to render.
+     * @return {?}
+     */
+    function () {
         return this._exampleDatabase.dataChange;
     };
     /**
      * @return {?}
      */
-    ExampleDataSource.prototype.disconnect = function () { };
+    ExampleDataSource.prototype.disconnect = /**
+     * @return {?}
+     */
+    function () { };
     return ExampleDataSource;
 }(DataSource));
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable checkbox
  */
@@ -518,13 +586,15 @@ var CheckboxConfigurableExample = (function () {
                     styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     CheckboxConfigurableExample.ctorParameters = function () { return []; };
     return CheckboxConfigurableExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic checkboxes
  */
@@ -537,13 +607,15 @@ var CheckboxOverviewExample = (function () {
                     template: "<mat-checkbox>Check me!</mat-checkbox>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     CheckboxOverviewExample.ctorParameters = function () { return []; };
     return CheckboxOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 var COMMA = 188;
 /**
  * \@title Chips with input
@@ -566,7 +638,11 @@ var ChipsInputExample = (function () {
      * @param {?} event
      * @return {?}
      */
-    ChipsInputExample.prototype.add = function (event) {
+    ChipsInputExample.prototype.add = /**
+     * @param {?} event
+     * @return {?}
+     */
+    function (event) {
         var /** @type {?} */ input = event.input;
         var /** @type {?} */ value = event.value;
         // Add our person
@@ -582,7 +658,11 @@ var ChipsInputExample = (function () {
      * @param {?} fruit
      * @return {?}
      */
-    ChipsInputExample.prototype.remove = function (fruit) {
+    ChipsInputExample.prototype.remove = /**
+     * @param {?} fruit
+     * @return {?}
+     */
+    function (fruit) {
         var /** @type {?} */ index = this.fruits.indexOf(fruit);
         if (index >= 0) {
             this.fruits.splice(index, 1);
@@ -595,13 +675,15 @@ var ChipsInputExample = (function () {
                     styles: [".demo-chip-list { width: 100%; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ChipsInputExample.ctorParameters = function () { return []; };
     return ChipsInputExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic chips
  */
@@ -615,13 +697,15 @@ var ChipsOverviewExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ChipsOverviewExample.ctorParameters = function () { return []; };
     return ChipsOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Stacked chips
  */
@@ -641,13 +725,15 @@ var ChipsStackedExample = (function () {
                     styles: ["mat-chip { max-width: 200px; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ChipsStackedExample.ctorParameters = function () { return []; };
     return ChipsStackedExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker open method
  */
@@ -661,13 +747,15 @@ var DatepickerApiExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerApiExample.ctorParameters = function () { return []; };
     return DatepickerApiExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Disabled datepicker
  */
@@ -681,13 +769,15 @@ var DatepickerDisabledExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerDisabledExample.ctorParameters = function () { return []; };
     return DatepickerDisabledExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker input and change events
  */
@@ -700,7 +790,12 @@ var DatepickerEventsExample = (function () {
      * @param {?} event
      * @return {?}
      */
-    DatepickerEventsExample.prototype.addEvent = function (type, event) {
+    DatepickerEventsExample.prototype.addEvent = /**
+     * @param {?} type
+     * @param {?} event
+     * @return {?}
+     */
+    function (type, event) {
         this.events.push(type + ": " + event.value);
     };
     DatepickerEventsExample.decorators = [
@@ -710,13 +805,15 @@ var DatepickerEventsExample = (function () {
                     styles: [".example-events { width: 400px; height: 200px; border: 1px solid #555; overflow: auto; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerEventsExample.ctorParameters = function () { return []; };
     return DatepickerEventsExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker with filter validation
  */
@@ -735,13 +832,15 @@ var DatepickerFilterExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerFilterExample.ctorParameters = function () { return []; };
     return DatepickerFilterExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 // Depending on whether rollup is used, moment needs to be imported differently.
 // Since Moment.js doesn't have a default export, we normally need to import using the `* as`
 // syntax. However, rollup creates a synthetic default module and we thus need to import it using
@@ -781,27 +880,30 @@ var DatepickerFormatsExample = (function () {
                     ],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerFormatsExample.ctorParameters = function () { return []; };
     return DatepickerFormatsExample;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+var ɵ0 = MAT_MOMENT_DATE_FORMATS;
+/**
  * \@title Datepicker with different locale
  */
 var DatepickerLocaleExample = (function () {
-    /**
-     * @param {?} adapter
-     */
     function DatepickerLocaleExample(adapter) {
         this.adapter = adapter;
     }
     /**
      * @return {?}
      */
-    DatepickerLocaleExample.prototype.french = function () {
+    DatepickerLocaleExample.prototype.french = /**
+     * @return {?}
+     */
+    function () {
         this.adapter.setLocale('fr');
     };
     DatepickerLocaleExample.decorators = [
@@ -817,19 +919,21 @@ var DatepickerLocaleExample = (function () {
                         // `MatMomentDateModule` in your applications root module. We provide it at the component level
                         // here, due to limitations of our example generation script.
                         { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                        { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
+                        { provide: MAT_DATE_FORMATS, useValue: ɵ0 },
                     ],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerLocaleExample.ctorParameters = function () { return [
         { type: DateAdapter, },
     ]; };
     return DatepickerLocaleExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker with min & max validation
  */
@@ -845,18 +949,21 @@ var DatepickerMinMaxExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerMinMaxExample.ctorParameters = function () { return []; };
     return DatepickerMinMaxExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 // Depending on whether rollup is used, moment needs to be imported differently.
 // Since Moment.js doesn't have a default export, we normally need to import using the `* as`
 // syntax. However, rollup creates a synthetic default module and we thus need to import it using
 // the `default as` syntax.
 var moment$1 = _rollupMoment__default || _rollupMoment;
+var ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker that uses Moment.js dates
  */
@@ -875,17 +982,19 @@ var DatepickerMomentExample = (function () {
                         // `MatMomentDateModule` in your applications root module. We provide it at the component level
                         // here, due to limitations of our example generation script.
                         { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                        { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
+                        { provide: MAT_DATE_FORMATS, useValue: ɵ0$1 },
                     ],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerMomentExample.ctorParameters = function () { return []; };
     return DatepickerMomentExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic datepicker
  */
@@ -899,13 +1008,15 @@ var DatepickerOverviewExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerOverviewExample.ctorParameters = function () { return []; };
     return DatepickerOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker start date
  */
@@ -920,13 +1031,15 @@ var DatepickerStartViewExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerStartViewExample.ctorParameters = function () { return []; };
     return DatepickerStartViewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker touch UI
  */
@@ -940,13 +1053,15 @@ var DatepickerTouchExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerTouchExample.ctorParameters = function () { return []; };
     return DatepickerTouchExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker selected value
  */
@@ -962,27 +1077,29 @@ var DatepickerValueExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DatepickerValueExample.ctorParameters = function () { return []; };
     return DatepickerValueExample;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Dialog with header, scrollable content and actions
  */
 var DialogContentExample = (function () {
-    /**
-     * @param {?} dialog
-     */
     function DialogContentExample(dialog) {
         this.dialog = dialog;
     }
     /**
      * @return {?}
      */
-    DialogContentExample.prototype.openDialog = function () {
+    DialogContentExample.prototype.openDialog = /**
+     * @return {?}
+     */
+    function () {
         var /** @type {?} */ dialogRef = this.dialog.open(DialogContentExampleDialog, {
             height: '350px'
         });
@@ -996,9 +1113,7 @@ var DialogContentExample = (function () {
                     template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DialogContentExample.ctorParameters = function () { return [
         { type: MatDialog, },
     ]; };
@@ -1013,27 +1128,29 @@ var DialogContentExampleDialog = (function () {
                     template: "<h2 mat-dialog-title>Install Angular</h2><mat-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED & PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></mat-dialog-content><mat-dialog-actions><button mat-button [mat-dialog-close]=\"true\" tabindex=\"1\">Install</button> <button mat-button mat-dialog-close tabindex=\"-1\">Cancel</button></mat-dialog-actions>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DialogContentExampleDialog.ctorParameters = function () { return []; };
     return DialogContentExampleDialog;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Injecting data when opening a dialog
  */
 var DialogDataExample = (function () {
-    /**
-     * @param {?} dialog
-     */
     function DialogDataExample(dialog) {
         this.dialog = dialog;
     }
     /**
      * @return {?}
      */
-    DialogDataExample.prototype.openDialog = function () {
+    DialogDataExample.prototype.openDialog = /**
+     * @return {?}
+     */
+    function () {
         this.dialog.open(DialogDataExampleDialog, {
             data: {
                 animal: 'panda'
@@ -1046,18 +1163,13 @@ var DialogDataExample = (function () {
                     template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DialogDataExample.ctorParameters = function () { return [
         { type: MatDialog, },
     ]; };
     return DialogDataExample;
 }());
 var DialogDataExampleDialog = (function () {
-    /**
-     * @param {?} data
-     */
     function DialogDataExampleDialog(data) {
         this.data = data;
     }
@@ -1067,9 +1179,7 @@ var DialogDataExampleDialog = (function () {
                     template: "<h1 mat-dialog-title>Favorite Animal</h1><div mat-dialog-content>My favorite animal is:<ul><li><span *ngIf=\"data.animal === 'panda'\">&#10003;</span> Panda</li><li><span *ngIf=\"data.animal === 'unicorn'\">&#10003;</span> Unicorn</li><li><span *ngIf=\"data.animal === 'lion'\">&#10003;</span> Lion</li></ul></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DialogDataExampleDialog.ctorParameters = function () { return [
         { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] },] },
     ]; };
@@ -1077,19 +1187,23 @@ var DialogDataExampleDialog = (function () {
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Dialog elements
  */
 var DialogElementsExample = (function () {
-    /**
-     * @param {?} dialog
-     */
     function DialogElementsExample(dialog) {
         this.dialog = dialog;
     }
     /**
      * @return {?}
      */
-    DialogElementsExample.prototype.openDialog = function () {
+    DialogElementsExample.prototype.openDialog = /**
+     * @return {?}
+     */
+    function () {
         this.dialog.open(DialogElementsExampleDialog);
     };
     DialogElementsExample.decorators = [
@@ -1098,9 +1212,7 @@ var DialogElementsExample = (function () {
                     template: "<button mat-button (click)=\"openDialog()\">Launch dialog</button>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DialogElementsExample.ctorParameters = function () { return [
         { type: MatDialog, },
     ]; };
@@ -1115,27 +1227,29 @@ var DialogElementsExampleDialog = (function () {
                     template: "<h1 mat-dialog-title>Dialog with elements</h1><div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div><div mat-dialog-actions><button mat-button mat-dialog-close>Close</button></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DialogElementsExampleDialog.ctorParameters = function () { return []; };
     return DialogElementsExampleDialog;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Dialog Overview
  */
 var DialogOverviewExample = (function () {
-    /**
-     * @param {?} dialog
-     */
     function DialogOverviewExample(dialog) {
         this.dialog = dialog;
     }
     /**
      * @return {?}
      */
-    DialogOverviewExample.prototype.openDialog = function () {
+    DialogOverviewExample.prototype.openDialog = /**
+     * @return {?}
+     */
+    function () {
         var _this = this;
         var /** @type {?} */ dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
             width: '250px',
@@ -1152,19 +1266,13 @@ var DialogOverviewExample = (function () {
                     template: "<ol><li><mat-form-field><input matInput [(ngModel)]=\"name\" placeholder=\"What's your name?\"></mat-form-field></li><li><button mat-raised-button (click)=\"openDialog()\">Pick one</button></li><li *ngIf=\"animal\">You chose: <i>{{animal}}</i></li></ol>"
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DialogOverviewExample.ctorParameters = function () { return [
         { type: MatDialog, },
     ]; };
     return DialogOverviewExample;
 }());
 var DialogOverviewExampleDialog = (function () {
-    /**
-     * @param {?} dialogRef
-     * @param {?} data
-     */
     function DialogOverviewExampleDialog(dialogRef, data) {
         this.dialogRef = dialogRef;
         this.data = data;
@@ -1172,7 +1280,10 @@ var DialogOverviewExampleDialog = (function () {
     /**
      * @return {?}
      */
-    DialogOverviewExampleDialog.prototype.onNoClick = function () {
+    DialogOverviewExampleDialog.prototype.onNoClick = /**
+     * @return {?}
+     */
+    function () {
         this.dialogRef.close();
     };
     DialogOverviewExampleDialog.decorators = [
@@ -1181,9 +1292,7 @@ var DialogOverviewExampleDialog = (function () {
                     template: "<h1 mat-dialog-title>Hi {{data.name}}</h1><div mat-dialog-content><p>What's your favorite animal?</p><mat-form-field><input matInput tabindex=\"1\" [(ngModel)]=\"data.animal\"></mat-form-field></div><div mat-dialog-actions><button mat-button [mat-dialog-close]=\"data.animal\" tabindex=\"2\">Ok</button> <button mat-button (click)=\"onNoClick()\" tabindex=\"-1\">No Thanks</button></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     DialogOverviewExampleDialog.ctorParameters = function () { return [
         { type: MatDialogRef, },
         { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] },] },
@@ -1191,6 +1300,10 @@ var DialogOverviewExampleDialog = (function () {
     return DialogOverviewExampleDialog;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic expansion panel
  */
@@ -1203,13 +1316,15 @@ var ExpansionOverviewExample = (function () {
                     template: "<mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age</mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput placeholder=\"Age\"></mat-form-field></mat-expansion-panel>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ExpansionOverviewExample.ctorParameters = function () { return []; };
     return ExpansionOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Expansion panel as accordion
  */
@@ -1221,19 +1336,29 @@ var ExpansionStepsExample = (function () {
      * @param {?} index
      * @return {?}
      */
-    ExpansionStepsExample.prototype.setStep = function (index) {
+    ExpansionStepsExample.prototype.setStep = /**
+     * @param {?} index
+     * @return {?}
+     */
+    function (index) {
         this.step = index;
     };
     /**
      * @return {?}
      */
-    ExpansionStepsExample.prototype.nextStep = function () {
+    ExpansionStepsExample.prototype.nextStep = /**
+     * @return {?}
+     */
+    function () {
         this.step++;
     };
     /**
      * @return {?}
      */
-    ExpansionStepsExample.prototype.prevStep = function () {
+    ExpansionStepsExample.prototype.prevStep = /**
+     * @return {?}
+     */
+    function () {
         this.step--;
     };
     ExpansionStepsExample.decorators = [
@@ -1243,22 +1368,19 @@ var ExpansionStepsExample = (function () {
                     styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ExpansionStepsExample.ctorParameters = function () { return []; };
     return ExpansionStepsExample;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * Data structure for holding telephone number.
  */
 var MyTel = (function () {
-    /**
-     * @param {?} area
-     * @param {?} exchange
-     * @param {?} subscriber
-     */
     function MyTel(area, exchange, subscriber) {
         this.area = area;
         this.exchange = exchange;
@@ -1270,12 +1392,6 @@ var MyTel = (function () {
  * Custom `MatFormFieldControl` for telephone number input.
  */
 var MyTelInput = (function () {
-    /**
-     * @param {?} fb
-     * @param {?} fm
-     * @param {?} elRef
-     * @param {?} renderer
-     */
     function MyTelInput(fb, fm, elRef, renderer) {
         var _this = this;
         this.fm = fm;
@@ -1300,10 +1416,10 @@ var MyTelInput = (function () {
         });
     }
     Object.defineProperty(MyTelInput.prototype, "empty", {
-        /**
+        get: /**
          * @return {?}
          */
-        get: function () {
+        function () {
             var /** @type {?} */ n = this.parts.value;
             return !n.area && !n.exchange && !n.subscriber;
         },
@@ -1311,27 +1427,27 @@ var MyTelInput = (function () {
         configurable: true
     });
     Object.defineProperty(MyTelInput.prototype, "shouldPlaceholderFloat", {
-        /**
+        get: /**
          * @return {?}
          */
-        get: function () {
+        function () {
             return this.focused || !this.empty;
         },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(MyTelInput.prototype, "placeholder", {
-        /**
+        get: /**
          * @return {?}
          */
-        get: function () {
+        function () {
             return this._placeholder;
         },
-        /**
+        set: /**
          * @param {?} plh
          * @return {?}
          */
-        set: function (plh) {
+        function (plh) {
             this._placeholder = plh;
             this.stateChanges.next();
         },
@@ -1339,17 +1455,17 @@ var MyTelInput = (function () {
         configurable: true
     });
     Object.defineProperty(MyTelInput.prototype, "required", {
-        /**
+        get: /**
          * @return {?}
          */
-        get: function () {
+        function () {
             return this._required;
         },
-        /**
+        set: /**
          * @param {?} req
          * @return {?}
          */
-        set: function (req) {
+        function (req) {
             this._required = coerceBooleanProperty(req);
             this.stateChanges.next();
         },
@@ -1357,17 +1473,17 @@ var MyTelInput = (function () {
         configurable: true
     });
     Object.defineProperty(MyTelInput.prototype, "disabled", {
-        /**
+        get: /**
          * @return {?}
          */
-        get: function () {
+        function () {
             return this._disabled;
         },
-        /**
+        set: /**
          * @param {?} dis
          * @return {?}
          */
-        set: function (dis) {
+        function (dis) {
             this._disabled = coerceBooleanProperty(dis);
             this.stateChanges.next();
         },
@@ -1375,21 +1491,21 @@ var MyTelInput = (function () {
         configurable: true
     });
     Object.defineProperty(MyTelInput.prototype, "value", {
-        /**
+        get: /**
          * @return {?}
          */
-        get: function () {
+        function () {
             var /** @type {?} */ n = this.parts.value;
             if (n.area.length == 3 && n.exchange.length == 3 && n.subscriber.length == 4) {
                 return new MyTel(n.area, n.exchange, n.subscriber);
             }
             return null;
         },
-        /**
+        set: /**
          * @param {?} tel
          * @return {?}
          */
-        set: function (tel) {
+        function (tel) {
             tel = tel || new MyTel('', '', '');
             this.parts.setValue({ area: tel.area, exchange: tel.exchange, subscriber: tel.subscriber });
             this.stateChanges.next();
@@ -1400,7 +1516,10 @@ var MyTelInput = (function () {
     /**
      * @return {?}
      */
-    MyTelInput.prototype.ngOnDestroy = function () {
+    MyTelInput.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () {
         this.stateChanges.complete();
         this.fm.stopMonitoring(this.elRef.nativeElement);
     };
@@ -1408,15 +1527,23 @@ var MyTelInput = (function () {
      * @param {?} ids
      * @return {?}
      */
-    MyTelInput.prototype.setDescribedByIds = function (ids) {
+    MyTelInput.prototype.setDescribedByIds = /**
+     * @param {?} ids
+     * @return {?}
+     */
+    function (ids) {
         this.describedBy = ids.join(' ');
     };
     /**
      * @param {?} event
      * @return {?}
      */
-    MyTelInput.prototype.onContainerClick = function (event) {
-        if (((event.target)).tagName.toLowerCase() != 'input') {
+    MyTelInput.prototype.onContainerClick = /**
+     * @param {?} event
+     * @return {?}
+     */
+    function (event) {
+        if ((/** @type {?} */ (event.target)).tagName.toLowerCase() != 'input') {
             this.elRef.nativeElement.querySelector('input').focus();
         }
     };
@@ -1434,9 +1561,7 @@ var MyTelInput = (function () {
                     }
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     MyTelInput.ctorParameters = function () { return [
         { type: FormBuilder, },
         { type: FocusMonitor, },
@@ -1444,10 +1569,10 @@ var MyTelInput = (function () {
         { type: Renderer2, },
     ]; };
     MyTelInput.propDecorators = {
-        'placeholder': [{ type: Input },],
-        'required': [{ type: Input },],
-        'disabled': [{ type: Input },],
-        'value': [{ type: Input },],
+        "placeholder": [{ type: Input },],
+        "required": [{ type: Input },],
+        "disabled": [{ type: Input },],
+        "value": [{ type: Input },],
     };
     return MyTelInput;
 }());
@@ -1463,13 +1588,15 @@ var FormFieldCustomControlExample = (function () {
                     template: "\n    <mat-form-field>\n      <my-tel-input placeholder=\"Phone number\" required></my-tel-input>\n      <mat-icon matSuffix>phone</mat-icon>\n      <mat-hint>Include area code</mat-hint>\n    </mat-form-field>\n  "
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     FormFieldCustomControlExample.ctorParameters = function () { return []; };
     return FormFieldCustomControlExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Form field with error messages
  */
@@ -1480,7 +1607,10 @@ var FormFieldErrorExample = (function () {
     /**
      * @return {?}
      */
-    FormFieldErrorExample.prototype.getErrorMessage = function () {
+    FormFieldErrorExample.prototype.getErrorMessage = /**
+     * @return {?}
+     */
+    function () {
         return this.email.hasError('required') ? 'You must enter a value' :
             this.email.hasError('email') ? 'Not a valid email' :
                 '';
@@ -1492,13 +1622,15 @@ var FormFieldErrorExample = (function () {
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     FormFieldErrorExample.ctorParameters = function () { return []; };
     return FormFieldErrorExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Form field with hints
  */
@@ -1512,13 +1644,15 @@ var FormFieldHintExample = (function () {
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     FormFieldHintExample.ctorParameters = function () { return []; };
     return FormFieldHintExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Simple form field
  */
@@ -1532,20 +1666,19 @@ var FormFieldOverviewExample = (function () {
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     FormFieldOverviewExample.ctorParameters = function () { return []; };
     return FormFieldOverviewExample;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Form field with placeholder
  */
 var FormFieldPlaceholderExample = (function () {
-    /**
-     * @param {?} fb
-     */
     function FormFieldPlaceholderExample(fb) {
         this.options = fb.group({
             hideRequired: false,
@@ -1559,15 +1692,17 @@ var FormFieldPlaceholderExample = (function () {
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-container form { margin-bottom: 20px; } .example-container form > * { margin: 5px 0; } .example-container .mat-radio-button { margin: 0 5px; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     FormFieldPlaceholderExample.ctorParameters = function () { return [
         { type: FormBuilder, },
     ]; };
     return FormFieldPlaceholderExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Form field with prefix & suffix
  */
@@ -1582,20 +1717,19 @@ var FormFieldPrefixSuffixExample = (function () {
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-right-align { text-align: right; } input.example-right-align::-webkit-outer-spin-button, input.example-right-align::-webkit-inner-spin-button { display: none; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     FormFieldPrefixSuffixExample.ctorParameters = function () { return []; };
     return FormFieldPrefixSuffixExample;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Form field theming
  */
 var FormFieldThemingExample = (function () {
-    /**
-     * @param {?} fb
-     */
     function FormFieldThemingExample(fb) {
         this.options = fb.group({
             'color': 'primary',
@@ -1605,25 +1739,30 @@ var FormFieldThemingExample = (function () {
     /**
      * @return {?}
      */
-    FormFieldThemingExample.prototype.getFontSize = function () {
+    FormFieldThemingExample.prototype.getFontSize = /**
+     * @return {?}
+     */
+    function () {
         return Math.max(10, this.options.value.fontSize);
     };
     FormFieldThemingExample.decorators = [
         { type: Component, args: [{
                     selector: 'form-field-theming-example',
-                    template: "<form class=\"example-container\" [formGroup]=\"options\" [style.fontSize.px]=\"getFontSize()\"><mat-form-field [color]=\"options.value.color\"><mat-select placeholder=\"Color\" formControlName=\"color\"><mat-option value=\"primary\">Primary</mat-option><mat-option value=\"accent\">Accent</mat-option><mat-option value=\"warn\">Warn</mat-option></mat-select></mat-form-field><mat-form-field [color]=\"options.value.color\"><input matInput type=\"number\" placeholder=\"Font size (px)\" formControlName=\"fontSize\" min=\"10\"><mat-error *ngIf=\"options.get('fontSize').invalid\">Min size: 10px</mat-error></mat-form-field></form>",
+                    template: "<form class=\"example-container\" [formGroup]=\"options\" [style.fontSize.px]=\"getFontSize()\"><mat-form-field [color]=\"options.value.color\"><mat-select placeholder=\"Color\" formControlName=\"color\"><mat-option value=\"primary\">Primary</mat-option><mat-option value=\"accent\">Accent</mat-option><mat-option value=\"warn\">Warn</mat-option></mat-select></mat-form-field><mat-form-field [color]=\"options.value.color\"><input matInput type=\"number\" placeholder=\"Font size (px)\" formControlName=\"fontSize\" min=\"10\"><mat-error *ngIf=\"options.get('fontSize')?.invalid\">Min size: 10px</mat-error></mat-form-field></form>",
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     FormFieldThemingExample.ctorParameters = function () { return [
         { type: FormBuilder, },
     ]; };
     return FormFieldThemingExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Dynamic grid-list
  */
@@ -1642,13 +1781,15 @@ var GridListDynamicExample = (function () {
                     template: "<mat-grid-list cols=\"4\" rowHeight=\"100px\"><mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\" [style.background]=\"tile.color\">{{tile.text}}</mat-grid-tile></mat-grid-list>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     GridListDynamicExample.ctorParameters = function () { return []; };
     return GridListDynamicExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic grid-list
  */
@@ -1662,13 +1803,15 @@ var GridListOverviewExample = (function () {
                     template: "<mat-grid-list cols=\"2\" rowHeight=\"2:1\"><mat-grid-tile>1</mat-grid-tile><mat-grid-tile>2</mat-grid-tile><mat-grid-tile>3</mat-grid-tile><mat-grid-tile>4</mat-grid-tile></mat-grid-list>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     GridListOverviewExample.ctorParameters = function () { return []; };
     return GridListOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic icons
  */
@@ -1681,21 +1824,19 @@ var IconOverviewExample = (function () {
                     template: "<mat-icon>home</mat-icon>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     IconOverviewExample.ctorParameters = function () { return []; };
     return IconOverviewExample;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title SVG icons
  */
 var IconSvgExample = (function () {
-    /**
-     * @param {?} iconRegistry
-     * @param {?} sanitizer
-     */
     function IconSvgExample(iconRegistry, sanitizer) {
         iconRegistry.addSvgIcon('thumbs-up', sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));
     }
@@ -1705,9 +1846,7 @@ var IconSvgExample = (function () {
                     template: "<mat-icon svgIcon=\"thumbs-up\"></mat-icon>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     IconSvgExample.ctorParameters = function () { return [
         { type: MatIconRegistry, },
         { type: DomSanitizer, },
@@ -1715,6 +1854,10 @@ var IconSvgExample = (function () {
     return IconSvgExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Auto-resizing textarea
  */
@@ -1728,13 +1871,15 @@ var InputAutosizeTextareaExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     InputAutosizeTextareaExample.ctorParameters = function () { return []; };
     return InputAutosizeTextareaExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Input with a clear button
  */
@@ -1749,13 +1894,15 @@ var InputClearableExample = (function () {
                     styles: [".example-form-field { width: 200px; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     InputClearableExample.ctorParameters = function () { return []; };
     return InputClearableExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * Error when invalid control is dirty, touched, or submitted.
  */
@@ -1767,7 +1914,12 @@ var MyErrorStateMatcher = (function () {
      * @param {?} form
      * @return {?}
      */
-    MyErrorStateMatcher.prototype.isErrorState = function (control, form) {
+    MyErrorStateMatcher.prototype.isErrorState = /**
+     * @param {?} control
+     * @param {?} form
+     * @return {?}
+     */
+    function (control, form) {
         var /** @type {?} */ isSubmitted = form && form.submitted;
         return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
     };
@@ -1791,13 +1943,15 @@ var InputErrorStateMatcherExample = (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     InputErrorStateMatcherExample.ctorParameters = function () { return []; };
     return InputErrorStateMatcherExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Input with error messages
  */
@@ -1815,13 +1969,15 @@ var InputErrorsExample = (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     InputErrorsExample.ctorParameters = function () { return []; };
     return InputErrorsExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Inputs in a form
  */
@@ -1835,13 +1991,15 @@ var InputFormExample = (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     InputFormExample.ctorParameters = function () { return []; };
     return InputFormExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Input with hints
  */
@@ -1855,13 +2013,15 @@ var InputHintExample = (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     InputHintExample.ctorParameters = function () { return []; };
     return InputHintExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic Inputs
  */
@@ -1875,13 +2035,15 @@ var InputOverviewExample = (function () {
                     template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Favorite food\" value=\"Sushi\"></mat-form-field><mat-form-field class=\"example-full-width\"><textarea matInput placeholder=\"Leave a comment\"></textarea></mat-form-field></form>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     InputOverviewExample.ctorParameters = function () { return []; };
     return InputOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Inputs with prefixes and suffixes
  */
@@ -1895,13 +2057,15 @@ var InputPrefixSuffixExample = (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     InputPrefixSuffixExample.ctorParameters = function () { return []; };
     return InputPrefixSuffixExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic list
  */
@@ -1914,13 +2078,15 @@ var ListOverviewExample = (function () {
                     template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-list-item>Item 2</mat-list-item><mat-list-item>Item 3</mat-list-item></mat-list>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ListOverviewExample.ctorParameters = function () { return []; };
     return ListOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title List with sections
  */
@@ -1958,13 +2124,15 @@ var ListSectionsExample = (function () {
                     template: "<mat-list><h3 mat-subheader>Folders</h3><mat-list-item *ngFor=\"let folder of folders\"><mat-icon mat-list-icon>folder</mat-icon><h4 mat-line>{{folder.name}}</h4><p mat-line>{{folder.updated | date}}</p></mat-list-item><mat-divider></mat-divider><h3 mat-subheader>Notes</h3><mat-list-item *ngFor=\"let note of notes\"><mat-icon mat-list-icon>note</mat-icon><h4 mat-line>{{note.name}}</h4><p mat-line>{{note.updated | date}}</p></mat-list-item></mat-list>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ListSectionsExample.ctorParameters = function () { return []; };
     return ListSectionsExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title List with selection
  */
@@ -1979,13 +2147,15 @@ var ListSelectionExample = (function () {
                     template: "<mat-selection-list #shoes><mat-list-option *ngFor=\"let shoe of typesOfShoes\">{{shoe}}</mat-list-option></mat-selection-list><p>Options selected: {{shoes.selectedOptions.selected.length}}</p>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ListSelectionExample.ctorParameters = function () { return []; };
     return ListSelectionExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Menu with icons
  */
@@ -1999,13 +2169,15 @@ var MenuIconsExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     MenuIconsExample.ctorParameters = function () { return []; };
     return MenuIconsExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic menu
  */
@@ -2019,13 +2191,15 @@ var MenuOverviewExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     MenuOverviewExample.ctorParameters = function () { return []; };
     return MenuOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Nested menu
  */
@@ -2039,13 +2213,15 @@ var NestedMenuExample = (function () {
                     styles: ["/** No CSS for this example */ "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     NestedMenuExample.ctorParameters = function () { return []; };
     return NestedMenuExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable paginator
  */
@@ -2060,7 +2236,11 @@ var PaginatorConfigurableExample = (function () {
      * @param {?} setPageSizeOptionsInput
      * @return {?}
      */
-    PaginatorConfigurableExample.prototype.setPageSizeOptions = function (setPageSizeOptionsInput) {
+    PaginatorConfigurableExample.prototype.setPageSizeOptions = /**
+     * @param {?} setPageSizeOptionsInput
+     * @return {?}
+     */
+    function (setPageSizeOptionsInput) {
         this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(function (str) { return +str; });
     };
     PaginatorConfigurableExample.decorators = [
@@ -2069,13 +2249,15 @@ var PaginatorConfigurableExample = (function () {
                     template: "<mat-form-field>List length: <input matInput [(ngModel)]=\"length\"></mat-form-field><mat-form-field>Page size: <input matInput [(ngModel)]=\"pageSize\"></mat-form-field><mat-form-field>Page size options: <input matInput [ngModel]=\"pageSizeOptions\" (ngModelChange)=\"setPageSizeOptions($event)\"></mat-form-field><mat-paginator [length]=\"length\" [pageSize]=\"pageSize\" [pageSizeOptions]=\"pageSizeOptions\" (page)=\"pageEvent = $event\"></mat-paginator><div *ngIf=\"pageEvent\"><h5>Page Change Event Properties</h5><div>List length: {{pageEvent.length}}</div><div>Page size: {{pageEvent.pageSize}}</div><div>Page index: {{pageEvent.pageIndex}}</div></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     PaginatorConfigurableExample.ctorParameters = function () { return []; };
     return PaginatorConfigurableExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Paginator
  */
@@ -2088,13 +2270,15 @@ var PaginatorOverviewExample = (function () {
                     template: "<mat-paginator [length]=\"100\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     PaginatorOverviewExample.ctorParameters = function () { return []; };
     return PaginatorOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Buffer progress-bar
  */
@@ -2107,13 +2291,15 @@ var ProgressBarBufferExample = (function () {
                     template: "<mat-progress-bar mode=\"buffer\"></mat-progress-bar>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ProgressBarBufferExample.ctorParameters = function () { return []; };
     return ProgressBarBufferExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable progress-bar
  */
@@ -2131,13 +2317,15 @@ var ProgressBarConfigurableExample = (function () {
                     styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ProgressBarConfigurableExample.ctorParameters = function () { return []; };
     return ProgressBarConfigurableExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Determinate progress-bar
  */
@@ -2150,13 +2338,15 @@ var ProgressBarDeterminateExample = (function () {
                     template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ProgressBarDeterminateExample.ctorParameters = function () { return []; };
     return ProgressBarDeterminateExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Indeterminate progress-bar
  */
@@ -2169,13 +2359,15 @@ var ProgressBarIndeterminateExample = (function () {
                     template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ProgressBarIndeterminateExample.ctorParameters = function () { return []; };
     return ProgressBarIndeterminateExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Query progress-bar
  */
@@ -2188,13 +2380,15 @@ var ProgressBarQueryExample = (function () {
                     template: "<mat-progress-bar mode=\"query\"></mat-progress-bar>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ProgressBarQueryExample.ctorParameters = function () { return []; };
     return ProgressBarQueryExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable progress spinner
  */
@@ -2211,13 +2405,15 @@ var ProgressSpinnerConfigurableExample = (function () {
                     styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ProgressSpinnerConfigurableExample.ctorParameters = function () { return []; };
     return ProgressSpinnerConfigurableExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic progress-spinner
  */
@@ -2230,13 +2426,15 @@ var ProgressSpinnerOverviewExample = (function () {
                     template: "<mat-spinner></mat-spinner>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ProgressSpinnerOverviewExample.ctorParameters = function () { return []; };
     return ProgressSpinnerOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Radios with ngModel
  */
@@ -2256,13 +2454,15 @@ var RadioNgModelExample = (function () {
                     styles: [".example-radio-group { display: inline-flex; flex-direction: column; } .example-radio-button { margin: 5px; } .example-selected-value { margin: 15px 0; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     RadioNgModelExample.ctorParameters = function () { return []; };
     return RadioNgModelExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic radios
  */
@@ -2276,13 +2476,15 @@ var RadioOverviewExample = (function () {
                     styles: [".mat-radio-button ~ .mat-radio-button { padding-right: 16px; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     RadioOverviewExample.ctorParameters = function () { return []; };
     return RadioOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with custom trigger text
  */
@@ -2298,13 +2500,15 @@ var SelectCustomTriggerExample = (function () {
                     styles: [".example-additional-selection { opacity: 0.75; font-size: 0.75em; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectCustomTriggerExample.ctorParameters = function () { return []; };
     return SelectCustomTriggerExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Disabled select
  */
@@ -2319,13 +2523,15 @@ var SelectDisabledExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectDisabledExample.ctorParameters = function () { return []; };
     return SelectDisabledExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * Error when invalid control is dirty, touched, or submitted.
  */
@@ -2337,7 +2543,12 @@ var MyErrorStateMatcher$1 = (function () {
      * @param {?} form
      * @return {?}
      */
-    MyErrorStateMatcher.prototype.isErrorState = function (control, form) {
+    MyErrorStateMatcher.prototype.isErrorState = /**
+     * @param {?} control
+     * @param {?} form
+     * @return {?}
+     */
+    function (control, form) {
         var /** @type {?} */ isSubmitted = form && form.submitted;
         return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
     };
@@ -2361,13 +2572,15 @@ var SelectErrorStateMatcherExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectErrorStateMatcherExample.ctorParameters = function () { return []; };
     return SelectErrorStateMatcherExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select in a form
  */
@@ -2386,13 +2599,15 @@ var SelectFormExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectFormExample.ctorParameters = function () { return []; };
     return SelectFormExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with form field features
  */
@@ -2413,13 +2628,15 @@ var SelectHintErrorExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectHintErrorExample.ctorParameters = function () { return []; };
     return SelectHintErrorExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with multiple selection
  */
@@ -2435,13 +2652,15 @@ var SelectMultipleExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectMultipleExample.ctorParameters = function () { return []; };
     return SelectMultipleExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with no option ripple
  */
@@ -2455,13 +2674,15 @@ var SelectNoRippleExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectNoRippleExample.ctorParameters = function () { return []; };
     return SelectNoRippleExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with option groups
  */
@@ -2510,13 +2731,15 @@ var SelectOptgroupExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectOptgroupExample.ctorParameters = function () { return []; };
     return SelectOptgroupExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic select
  */
@@ -2535,13 +2758,15 @@ var SelectOverviewExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectOverviewExample.ctorParameters = function () { return []; };
     return SelectOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with custom panel styling
  */
@@ -2557,13 +2782,15 @@ var SelectPanelClassExample = (function () {
                     encapsulation: ViewEncapsulation.None,
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectPanelClassExample.ctorParameters = function () { return []; };
     return SelectPanelClassExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with reset option
  */
@@ -2586,13 +2813,15 @@ var SelectResetExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectResetExample.ctorParameters = function () { return []; };
     return SelectResetExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with 2-way value binding
  */
@@ -2607,13 +2836,15 @@ var SelectValueBindingExample = (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SelectValueBindingExample.ctorParameters = function () { return []; };
     return SelectValueBindingExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Sidenav with a FAB
  */
@@ -2629,13 +2860,15 @@ var SidenavFabExample = (function () {
                     preserveWhitespaces: false,
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SidenavFabExample.ctorParameters = function () { return []; };
     return SidenavFabExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic sidenav
  */
@@ -2649,13 +2882,15 @@ var SidenavOverviewExample = (function () {
                     styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SidenavOverviewExample.ctorParameters = function () { return []; };
     return SidenavOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable slide-toggle
  */
@@ -2672,20 +2907,19 @@ var SlideToggleConfigurableExample = (function () {
                     styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 10px; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SlideToggleConfigurableExample.ctorParameters = function () { return []; };
     return SlideToggleConfigurableExample;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Slide-toggle with forms
  */
 var SlideToggleFormsExample = (function () {
-    /**
-     * @param {?} formBuilder
-     */
     function SlideToggleFormsExample(formBuilder) {
         this.isChecked = true;
         this.formGroup = formBuilder.group({
@@ -2697,7 +2931,11 @@ var SlideToggleFormsExample = (function () {
      * @param {?} formValue
      * @return {?}
      */
-    SlideToggleFormsExample.prototype.onFormSubmit = function (formValue) {
+    SlideToggleFormsExample.prototype.onFormSubmit = /**
+     * @param {?} formValue
+     * @return {?}
+     */
+    function (formValue) {
         alert(JSON.stringify(formValue, null, 2));
     };
     SlideToggleFormsExample.decorators = [
@@ -2707,15 +2945,17 @@ var SlideToggleFormsExample = (function () {
                     styles: [".example-form mat-slide-toggle { margin: 8px 0; display: block; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SlideToggleFormsExample.ctorParameters = function () { return [
         { type: FormBuilder, },
     ]; };
     return SlideToggleFormsExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic slide-toggles
  */
@@ -2728,13 +2968,15 @@ var SlideToggleOverviewExample = (function () {
                     template: "<mat-slide-toggle>Slide me!</mat-slide-toggle>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SlideToggleOverviewExample.ctorParameters = function () { return []; };
     return SlideToggleOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable slider
  */
@@ -2753,17 +2995,17 @@ var SliderConfigurableExample = (function () {
         this._tickInterval = 1;
     }
     Object.defineProperty(SliderConfigurableExample.prototype, "tickInterval", {
-        /**
+        get: /**
          * @return {?}
          */
-        get: function () {
+        function () {
             return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
         },
-        /**
+        set: /**
          * @param {?} v
          * @return {?}
          */
-        set: function (v) {
+        function (v) {
             this._tickInterval = Number(v);
         },
         enumerable: true,
@@ -2778,13 +3020,15 @@ var SliderConfigurableExample = (function () {
                     preserveWhitespaces: false,
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SliderConfigurableExample.ctorParameters = function () { return []; };
     return SliderConfigurableExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic slider
  */
@@ -2798,27 +3042,29 @@ var SliderOverviewExample = (function () {
                     styles: ["/** No CSS for this example */ mat-slider { width: 300px; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SliderOverviewExample.ctorParameters = function () { return []; };
     return SliderOverviewExample;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Snack-bar with a custom component
  */
 var SnackBarComponentExample = (function () {
-    /**
-     * @param {?} snackBar
-     */
     function SnackBarComponentExample(snackBar) {
         this.snackBar = snackBar;
     }
     /**
      * @return {?}
      */
-    SnackBarComponentExample.prototype.openSnackBar = function () {
+    SnackBarComponentExample.prototype.openSnackBar = /**
+     * @return {?}
+     */
+    function () {
         this.snackBar.openFromComponent(PizzaPartyComponent, {
             duration: 500,
         });
@@ -2829,9 +3075,7 @@ var SnackBarComponentExample = (function () {
                     template: "<button mat-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">Pizza party</button>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SnackBarComponentExample.ctorParameters = function () { return [
         { type: MatSnackBar, },
     ]; };
@@ -2847,20 +3091,19 @@ var PizzaPartyComponent = (function () {
                     styles: [".example-pizza-party { color: hotpink; }"],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     PizzaPartyComponent.ctorParameters = function () { return []; };
     return PizzaPartyComponent;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Basic snack-bar
  */
 var SnackBarOverviewExample = (function () {
-    /**
-     * @param {?} snackBar
-     */
     function SnackBarOverviewExample(snackBar) {
         this.snackBar = snackBar;
     }
@@ -2869,7 +3112,12 @@ var SnackBarOverviewExample = (function () {
      * @param {?} action
      * @return {?}
      */
-    SnackBarOverviewExample.prototype.openSnackBar = function (message, action) {
+    SnackBarOverviewExample.prototype.openSnackBar = /**
+     * @param {?} message
+     * @param {?} action
+     * @return {?}
+     */
+    function (message, action) {
         this.snackBar.open(message, action, {
             duration: 2000,
         });
@@ -2880,15 +3128,17 @@ var SnackBarOverviewExample = (function () {
                     template: "<mat-form-field><input matInput value=\"Disco party!\" placeholder=\"Message\" #message></mat-form-field><mat-form-field><input matInput value=\"Dance\" placeholder=\"Action\" #action></mat-form-field><button mat-button (click)=\"openSnackBar(message.value, action.value)\">Show snack-bar</button>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SnackBarOverviewExample.ctorParameters = function () { return [
         { type: MatSnackBar, },
     ]; };
     return SnackBarOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Sorting overview
  */
@@ -2907,7 +3157,11 @@ var SortOverviewExample = (function () {
      * @param {?} sort
      * @return {?}
      */
-    SortOverviewExample.prototype.sortData = function (sort) {
+    SortOverviewExample.prototype.sortData = /**
+     * @param {?} sort
+     * @return {?}
+     */
+    function (sort) {
         var /** @type {?} */ data = this.desserts.slice();
         if (!sort.active || sort.direction == '') {
             this.sortedData = data;
@@ -2932,9 +3186,7 @@ var SortOverviewExample = (function () {
                     styles: [".mat-sort-header-container { align-items: center; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     SortOverviewExample.ctorParameters = function () { return []; };
     return SortOverviewExample;
 }());
@@ -2949,12 +3201,13 @@ function compare(a, b, isAsc) {
 }
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Stepper overview
  */
 var StepperOverviewExample = (function () {
-    /**
-     * @param {?} _formBuilder
-     */
     function StepperOverviewExample(_formBuilder) {
         this._formBuilder = _formBuilder;
         this.isLinear = false;
@@ -2962,7 +3215,10 @@ var StepperOverviewExample = (function () {
     /**
      * @return {?}
      */
-    StepperOverviewExample.prototype.ngOnInit = function () {
+    StepperOverviewExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
         this.firstFormGroup = this._formBuilder.group({
             firstCtrl: ['', Validators.required]
         });
@@ -2977,15 +3233,17 @@ var StepperOverviewExample = (function () {
                     styles: ["/** No CSS for this example */ "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     StepperOverviewExample.ctorParameters = function () { return [
         { type: FormBuilder, },
     ]; };
     return StepperOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic table
  */
@@ -3001,12 +3259,14 @@ var TableBasicExample = (function () {
                     template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     TableBasicExample.ctorParameters = function () { return []; };
     return TableBasicExample;
 }());
+/**
+ * @record
+ */
+
 var ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3031,6 +3291,10 @@ var ELEMENT_DATA = [
 ];
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Table with filtering
  */
 var TableFilteringExample = (function () {
@@ -3042,7 +3306,11 @@ var TableFilteringExample = (function () {
      * @param {?} filterValue
      * @return {?}
      */
-    TableFilteringExample.prototype.applyFilter = function (filterValue) {
+    TableFilteringExample.prototype.applyFilter = /**
+     * @param {?} filterValue
+     * @return {?}
+     */
+    function (filterValue) {
         filterValue = filterValue.trim(); // Remove whitespace
         filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
         this.dataSource.filter = filterValue;
@@ -3054,12 +3322,14 @@ var TableFilteringExample = (function () {
                     template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     TableFilteringExample.ctorParameters = function () { return []; };
     return TableFilteringExample;
 }());
+/**
+ * @record
+ */
+
 var ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3084,12 +3354,13 @@ var ELEMENT_DATA$1 = [
 ];
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Table retrieving data through HTTP
  */
 var TableHttpExample = (function () {
-    /**
-     * @param {?} http
-     */
     function TableHttpExample(http) {
         this.http = http;
         this.displayedColumns = ['created', 'state', 'number', 'title'];
@@ -3101,7 +3372,10 @@ var TableHttpExample = (function () {
     /**
      * @return {?}
      */
-    TableHttpExample.prototype.ngAfterViewInit = function () {
+    TableHttpExample.prototype.ngAfterViewInit = /**
+     * @return {?}
+     */
+    function () {
         var _this = this;
         this.exampleDatabase = new ExampleHttpDao(this.http);
         // If the user changes the sort order, reset back to the first page.
@@ -3110,9 +3384,10 @@ var TableHttpExample = (function () {
             .startWith(null)
             .switchMap(function () {
             _this.isLoadingResults = true;
-            return ((_this.exampleDatabase)).getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
+            return /** @type {?} */ ((_this.exampleDatabase)).getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
         })
             .map(function (data) {
+            // Flip flag to show that loading has finished.
             // Flip flag to show that loading has finished.
             _this.isLoadingResults = false;
             _this.isRateLimitReached = false;
@@ -3121,6 +3396,7 @@ var TableHttpExample = (function () {
         })
             .catch(function () {
             _this.isLoadingResults = false;
+            // Catch if the GitHub API has reached its rate limit. Return empty data.
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             _this.isRateLimitReached = true;
             return Observable.of([]);
@@ -3134,25 +3410,28 @@ var TableHttpExample = (function () {
                     template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><mat-table #table [dataSource]=\"dataSource\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><mat-header-cell *matHeaderCellDef>#</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.number }}</mat-cell></ng-container><ng-container matColumnDef=\"title\"><mat-header-cell *matHeaderCellDef>Title</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.title }}</mat-cell></ng-container><ng-container matColumnDef=\"state\"><mat-header-cell *matHeaderCellDef>State</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.state }}</mat-cell></ng-container><ng-container matColumnDef=\"created\"><mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     TableHttpExample.ctorParameters = function () { return [
         { type: HttpClient, },
     ]; };
     TableHttpExample.propDecorators = {
-        'paginator': [{ type: ViewChild, args: [MatPaginator,] },],
-        'sort': [{ type: ViewChild, args: [MatSort,] },],
+        "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
+        "sort": [{ type: ViewChild, args: [MatSort,] },],
     };
     return TableHttpExample;
 }());
 /**
+ * @record
+ */
+
+/**
+ * @record
+ */
+
+/**
  * An example database that the data source uses to retrieve data for the table.
  */
 var ExampleHttpDao = (function () {
-    /**
-     * @param {?} http
-     */
     function ExampleHttpDao(http) {
         this.http = http;
     }
@@ -3162,7 +3441,13 @@ var ExampleHttpDao = (function () {
      * @param {?} page
      * @return {?}
      */
-    ExampleHttpDao.prototype.getRepoIssues = function (sort, order, page) {
+    ExampleHttpDao.prototype.getRepoIssues = /**
+     * @param {?} sort
+     * @param {?} order
+     * @param {?} page
+     * @return {?}
+     */
+    function (sort, order, page) {
         var /** @type {?} */ href = 'https://api.github.com/search/issues';
         var /** @type {?} */ requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
         return this.http.get(requestUrl);
@@ -3171,14 +3456,18 @@ var ExampleHttpDao = (function () {
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Data table with sorting, pagination, and filtering.
  */
 var TableOverviewExample = (function () {
     function TableOverviewExample() {
         this.displayedColumns = ['id', 'name', 'progress', 'color'];
         // Create 100 users
-        var users = [];
-        for (var i = 1; i <= 100; i++) {
+        var /** @type {?} */ users = [];
+        for (var /** @type {?} */ i = 1; i <= 100; i++) {
             users.push(createNewUser(i));
         }
         // Assign the data to the data source for the table to render
@@ -3187,9 +3476,18 @@ var TableOverviewExample = (function () {
     /**
      * Set the paginator and sort after the view init since this component will
      * be able to query its view for the initialized paginator and sort.
+     */
+    /**
+     * Set the paginator and sort after the view init since this component will
+     * be able to query its view for the initialized paginator and sort.
      * @return {?}
      */
-    TableOverviewExample.prototype.ngAfterViewInit = function () {
+    TableOverviewExample.prototype.ngAfterViewInit = /**
+     * Set the paginator and sort after the view init since this component will
+     * be able to query its view for the initialized paginator and sort.
+     * @return {?}
+     */
+    function () {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
     };
@@ -3197,7 +3495,11 @@ var TableOverviewExample = (function () {
      * @param {?} filterValue
      * @return {?}
      */
-    TableOverviewExample.prototype.applyFilter = function (filterValue) {
+    TableOverviewExample.prototype.applyFilter = /**
+     * @param {?} filterValue
+     * @return {?}
+     */
+    function (filterValue) {
         filterValue = filterValue.trim(); // Remove whitespace
         filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
         this.dataSource.filter = filterValue;
@@ -3209,13 +3511,11 @@ var TableOverviewExample = (function () {
                     template: "<div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><div class=\"example-container mat-elevation-z8\"><mat-table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"id\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     TableOverviewExample.ctorParameters = function () { return []; };
     TableOverviewExample.propDecorators = {
-        'paginator': [{ type: ViewChild, args: [MatPaginator,] },],
-        'sort': [{ type: ViewChild, args: [MatSort,] },],
+        "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
+        "sort": [{ type: ViewChild, args: [MatSort,] },],
     };
     return TableOverviewExample;
 }());
@@ -3242,7 +3542,14 @@ var COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
 var NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+/**
+ * @record
+ */
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Table with pagination
  */
@@ -3254,9 +3561,18 @@ var TablePaginationExample = (function () {
     /**
      * Set the paginator after the view init since this component will
      * be able to query its view for the initialized paginator.
+     */
+    /**
+     * Set the paginator after the view init since this component will
+     * be able to query its view for the initialized paginator.
      * @return {?}
      */
-    TablePaginationExample.prototype.ngAfterViewInit = function () {
+    TablePaginationExample.prototype.ngAfterViewInit = /**
+     * Set the paginator after the view init since this component will
+     * be able to query its view for the initialized paginator.
+     * @return {?}
+     */
+    function () {
         this.dataSource.paginator = this.paginator;
     };
     TablePaginationExample.decorators = [
@@ -3266,15 +3582,17 @@ var TablePaginationExample = (function () {
                     template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator #paginator [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 20]\"></mat-paginator></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     TablePaginationExample.ctorParameters = function () { return []; };
     TablePaginationExample.propDecorators = {
-        'paginator': [{ type: ViewChild, args: [MatPaginator,] },],
+        "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
     };
     return TablePaginationExample;
 }());
+/**
+ * @record
+ */
+
 var ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3299,6 +3617,10 @@ var ELEMENT_DATA$2 = [
 ];
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Table with sorting
  */
 var TableSortingExample = (function () {
@@ -3309,9 +3631,18 @@ var TableSortingExample = (function () {
     /**
      * Set the sort after the view init since this component will
      * be able to query its view for the initialized sort.
+     */
+    /**
+     * Set the sort after the view init since this component will
+     * be able to query its view for the initialized sort.
      * @return {?}
      */
-    TableSortingExample.prototype.ngAfterViewInit = function () {
+    TableSortingExample.prototype.ngAfterViewInit = /**
+     * Set the sort after the view init since this component will
+     * be able to query its view for the initialized sort.
+     * @return {?}
+     */
+    function () {
         this.dataSource.sort = this.sort;
     };
     TableSortingExample.decorators = [
@@ -3321,15 +3652,17 @@ var TableSortingExample = (function () {
                     template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef mat-sort-header>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef mat-sort-header>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     TableSortingExample.ctorParameters = function () { return []; };
     TableSortingExample.propDecorators = {
-        'sort': [{ type: ViewChild, args: [MatSort,] },],
+        "sort": [{ type: ViewChild, args: [MatSort,] },],
     };
     return TableSortingExample;
 }());
+/**
+ * @record
+ */
+
 var ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3354,6 +3687,10 @@ var ELEMENT_DATA$3 = [
 ];
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Basic tabs
  */
 var TabsOverviewExample = (function () {
@@ -3365,13 +3702,15 @@ var TabsOverviewExample = (function () {
                     template: "<mat-tab-group><mat-tab label=\"Tab 1\">Content 1</mat-tab><mat-tab label=\"Tab 2\">Content 2</mat-tab></mat-tab-group>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     TabsOverviewExample.ctorParameters = function () { return []; };
     return TabsOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Complex Example
  */
@@ -3385,13 +3724,15 @@ var TabsTemplateLabelExample = (function () {
                     styles: [".demo-tab-group { border: 1px solid #e8e8e8; } .demo-tab-content { padding: 16px; } "]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     TabsTemplateLabelExample.ctorParameters = function () { return []; };
     return TabsTemplateLabelExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Multi-row toolbar
  */
@@ -3405,13 +3746,15 @@ var ToolbarMultirowExample = (function () {
                     styles: [".example-icon { padding: 0 14px; } .example-spacer { flex: 1 1 auto; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ToolbarMultirowExample.ctorParameters = function () { return []; };
     return ToolbarMultirowExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic toolbar
  */
@@ -3424,13 +3767,15 @@ var ToolbarOverviewExample = (function () {
                     template: "<mat-toolbar>My App</mat-toolbar>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ToolbarOverviewExample.ctorParameters = function () { return []; };
     return ToolbarOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic tooltip
  */
@@ -3443,13 +3788,15 @@ var TooltipOverviewExample = (function () {
                     template: "<span matTooltip=\"Tooltip!\">I have a tooltip</span>",
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     TooltipOverviewExample.ctorParameters = function () { return []; };
     return TooltipOverviewExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Tooltip with custom position
  */
@@ -3464,15 +3811,21 @@ var TooltipPositionExample = (function () {
                     styles: [".example-tooltip-host { display: inline-flex; align-items: center; margin: 50px; } .example-select { margin: 0 10px; } "],
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     TooltipPositionExample.ctorParameters = function () { return []; };
     return TooltipPositionExample;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /* tslint:disable */
 /** DO NOT MANUALLY EDIT THIS FILE, IT IS GENERATED VIA GULP 'build-examples-module' */
+/**
+ * @record
+ */
+
 var EXAMPLE_COMPONENTS = {
     'autocomplete-display': {
         title: 'Display value autocomplete',
@@ -4227,21 +4580,20 @@ var ExampleModule = (function () {
                     ]
                 },] },
     ];
-    /**
-     * @nocollapse
-     */
+    /** @nocollapse */
     ExampleModule.ctorParameters = function () { return []; };
     return ExampleModule;
 }());
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * Example data
  *   with information about Component name, selector, files used in example, and path to examples
  */
 var ExampleData = (function () {
-    /**
-     * @param {?} example
-     */
     function ExampleData(example) {
         // TODO: figure out how do we get these variables.
         this.description = 'Some description for material';
@@ -4261,7 +4613,7 @@ var ExampleData = (function () {
                 this.exampleFiles = this.exampleFiles.concat(EXAMPLE_COMPONENTS[example].additionalFiles);
             }
             this.selectorName = this.indexFilename = example + "-example";
-            var exampleName = example.replace(/(?:^\w|\b\w)/g, function (letter) { return letter.toUpperCase(); });
+            var /** @type {?} */ exampleName = example.replace(/(?:^\w|\b\w)/g, function (letter) { return letter.toUpperCase(); });
             if (EXAMPLE_COMPONENTS[example].title) {
                 this.description = EXAMPLE_COMPONENTS[example].title;
             }
@@ -4279,6 +4631,15 @@ var ExampleData = (function () {
     return ExampleData;
 }());
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * Generated bundle index. Do not edit.
  */

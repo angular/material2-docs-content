@@ -31,6 +31,10 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/switchMap';
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 class ExampleMaterialModule {
 }
 ExampleMaterialModule.decorators = [
@@ -70,11 +74,13 @@ ExampleMaterialModule.decorators = [
                 ]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ExampleMaterialModule.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 class User {
     /**
      * @param {?} name
@@ -126,11 +132,13 @@ AutocompleteDisplayExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 AutocompleteDisplayExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Filter autocomplete
  */
@@ -166,11 +174,13 @@ AutocompleteFilterExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 AutocompleteFilterExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Autocomplete overview
  */
@@ -222,11 +232,13 @@ AutocompleteOverviewExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 AutocompleteOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Simple autocomplete
  */
@@ -247,11 +259,13 @@ AutocompleteSimpleExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 AutocompleteSimpleExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic buttons
  */
@@ -263,11 +277,13 @@ ButtonOverviewExample.decorators = [
                 template: "<button mat-button>Click me!</button>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ButtonOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Exclusive selection
  */
@@ -280,11 +296,13 @@ ButtonToggleExclusiveExample.decorators = [
                 styles: [".example-selected-value { margin: 15px 0; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ButtonToggleExclusiveExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic button-toggles
  */
@@ -296,11 +314,13 @@ ButtonToggleOverviewExample.decorators = [
                 template: "<mat-button-toggle>Toggle me!</mat-button-toggle>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ButtonToggleOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Button varieties
  */
@@ -313,11 +333,13 @@ ButtonTypesExample.decorators = [
                 styles: [".example-button-row { display: flex; align-items: center; justify-content: space-around; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ButtonTypesExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Card with multiple sections
  */
@@ -330,11 +352,13 @@ CardFancyExample.decorators = [
                 styles: [".example-card { width: 400px; } .example-header-image { background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); background-size: cover; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 CardFancyExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic cards
  */
@@ -346,11 +370,13 @@ CardOverviewExample.decorators = [
                 template: "<mat-card>Simple card</mat-card>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 CardOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic CDK data-table
  */
@@ -373,9 +399,7 @@ CdkTableBasicExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><cdk-table #table [dataSource]=\"dataSource\" class=\"example-table\"><ng-container cdkColumnDef=\"userId\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">ID</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.id}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"progress\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Progress</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.progress}}%</cdk-cell></ng-container><ng-container cdkColumnDef=\"userName\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Name</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.name}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"color\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Color</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\" [style.color]=\"row.color\">{{row.color}}</cdk-cell></ng-container><cdk-header-row *cdkHeaderRowDef=\"displayedColumns\" class=\"example-header-row\"></cdk-header-row><cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\" class=\"example-row\"></cdk-row></cdk-table></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 CdkTableBasicExample.ctorParameters = () => [];
 /**
  * Constants used to fill up our data base.
@@ -386,6 +410,10 @@ const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 /**
+ * @record
+ */
+
+/**
  * An example database that the data source uses to retrieve data for the table.
  */
 class ExampleDatabase {
@@ -395,7 +423,7 @@ class ExampleDatabase {
          */
         this.dataChange = new BehaviorSubject([]);
         // Fill up the database with 100 users.
-        for (let i = 0; i < 100; i++) {
+        for (let /** @type {?} */ i = 0; i < 100; i++) {
             this.addUser();
         }
     }
@@ -456,6 +484,10 @@ class ExampleDataSource extends DataSource {
 }
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Configurable checkbox
  */
 class CheckboxConfigurableExample {
@@ -473,11 +505,13 @@ CheckboxConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 CheckboxConfigurableExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic checkboxes
  */
@@ -489,11 +523,13 @@ CheckboxOverviewExample.decorators = [
                 template: "<mat-checkbox>Check me!</mat-checkbox>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 CheckboxOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 const COMMA = 188;
 /**
  * \@title Chips with input
@@ -546,11 +582,13 @@ ChipsInputExample.decorators = [
                 styles: [".demo-chip-list { width: 100%; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ChipsInputExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic chips
  */
@@ -563,11 +601,13 @@ ChipsOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ChipsOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Stacked chips
  */
@@ -588,11 +628,13 @@ ChipsStackedExample.decorators = [
                 styles: ["mat-chip { max-width: 200px; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ChipsStackedExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker open method
  */
@@ -605,11 +647,13 @@ DatepickerApiExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerApiExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Disabled datepicker
  */
@@ -622,11 +666,13 @@ DatepickerDisabledExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerDisabledExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker input and change events
  */
@@ -650,11 +696,13 @@ DatepickerEventsExample.decorators = [
                 styles: [".example-events { width: 400px; height: 200px; border: 1px solid #555; overflow: auto; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerEventsExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker with filter validation
  */
@@ -674,11 +722,13 @@ DatepickerFilterExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerFilterExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 // Depending on whether rollup is used, moment needs to be imported differently.
 // Since Moment.js doesn't have a default export, we normally need to import using the `* as`
 // syntax. However, rollup creates a synthetic default module and we thus need to import it using
@@ -719,11 +769,14 @@ DatepickerFormatsExample.decorators = [
                 ],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerFormatsExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+const ɵ0 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker with different locale
  */
@@ -754,17 +807,19 @@ DatepickerLocaleExample.decorators = [
                     // `MatMomentDateModule` in your applications root module. We provide it at the component level
                     // here, due to limitations of our example generation script.
                     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                    { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
+                    { provide: MAT_DATE_FORMATS, useValue: ɵ0 },
                 ],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerLocaleExample.ctorParameters = () => [
     { type: DateAdapter, },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker with min & max validation
  */
@@ -781,16 +836,19 @@ DatepickerMinMaxExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerMinMaxExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 // Depending on whether rollup is used, moment needs to be imported differently.
 // Since Moment.js doesn't have a default export, we normally need to import using the `* as`
 // syntax. However, rollup creates a synthetic default module and we thus need to import it using
 // the `default as` syntax.
 const moment$1 = _rollupMoment__default || _rollupMoment;
+const ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker that uses Moment.js dates
  */
@@ -810,15 +868,17 @@ DatepickerMomentExample.decorators = [
                     // `MatMomentDateModule` in your applications root module. We provide it at the component level
                     // here, due to limitations of our example generation script.
                     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                    { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
+                    { provide: MAT_DATE_FORMATS, useValue: ɵ0$1 },
                 ],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerMomentExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic datepicker
  */
@@ -831,11 +891,13 @@ DatepickerOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker start date
  */
@@ -851,11 +913,13 @@ DatepickerStartViewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerStartViewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker touch UI
  */
@@ -868,11 +932,13 @@ DatepickerTouchExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerTouchExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Datepicker selected value
  */
@@ -889,11 +955,13 @@ DatepickerValueExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DatepickerValueExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Dialog with header, scrollable content and actions
  */
@@ -922,9 +990,7 @@ DialogContentExample.decorators = [
                 template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DialogContentExample.ctorParameters = () => [
     { type: MatDialog, },
 ];
@@ -936,11 +1002,13 @@ DialogContentExampleDialog.decorators = [
                 template: "<h2 mat-dialog-title>Install Angular</h2><mat-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED & PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></mat-dialog-content><mat-dialog-actions><button mat-button [mat-dialog-close]=\"true\" tabindex=\"1\">Install</button> <button mat-button mat-dialog-close tabindex=\"-1\">Cancel</button></mat-dialog-actions>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DialogContentExampleDialog.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Injecting data when opening a dialog
  */
@@ -968,9 +1036,7 @@ DialogDataExample.decorators = [
                 template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DialogDataExample.ctorParameters = () => [
     { type: MatDialog, },
 ];
@@ -988,13 +1054,15 @@ DialogDataExampleDialog.decorators = [
                 template: "<h1 mat-dialog-title>Favorite Animal</h1><div mat-dialog-content>My favorite animal is:<ul><li><span *ngIf=\"data.animal === 'panda'\">&#10003;</span> Panda</li><li><span *ngIf=\"data.animal === 'unicorn'\">&#10003;</span> Unicorn</li><li><span *ngIf=\"data.animal === 'lion'\">&#10003;</span> Lion</li></ul></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DialogDataExampleDialog.ctorParameters = () => [
     { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] },] },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Dialog elements
  */
@@ -1018,9 +1086,7 @@ DialogElementsExample.decorators = [
                 template: "<button mat-button (click)=\"openDialog()\">Launch dialog</button>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DialogElementsExample.ctorParameters = () => [
     { type: MatDialog, },
 ];
@@ -1032,11 +1098,13 @@ DialogElementsExampleDialog.decorators = [
                 template: "<h1 mat-dialog-title>Dialog with elements</h1><div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div><div mat-dialog-actions><button mat-button mat-dialog-close>Close</button></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DialogElementsExampleDialog.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Dialog Overview
  */
@@ -1067,9 +1135,7 @@ DialogOverviewExample.decorators = [
                 template: "<ol><li><mat-form-field><input matInput [(ngModel)]=\"name\" placeholder=\"What's your name?\"></mat-form-field></li><li><button mat-raised-button (click)=\"openDialog()\">Pick one</button></li><li *ngIf=\"animal\">You chose: <i>{{animal}}</i></li></ol>"
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DialogOverviewExample.ctorParameters = () => [
     { type: MatDialog, },
 ];
@@ -1095,14 +1161,16 @@ DialogOverviewExampleDialog.decorators = [
                 template: "<h1 mat-dialog-title>Hi {{data.name}}</h1><div mat-dialog-content><p>What's your favorite animal?</p><mat-form-field><input matInput tabindex=\"1\" [(ngModel)]=\"data.animal\"></mat-form-field></div><div mat-dialog-actions><button mat-button [mat-dialog-close]=\"data.animal\" tabindex=\"2\">Ok</button> <button mat-button (click)=\"onNoClick()\" tabindex=\"-1\">No Thanks</button></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 DialogOverviewExampleDialog.ctorParameters = () => [
     { type: MatDialogRef, },
     { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] },] },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic expansion panel
  */
@@ -1114,11 +1182,13 @@ ExpansionOverviewExample.decorators = [
                 template: "<mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age</mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput placeholder=\"Age\"></mat-form-field></mat-expansion-panel>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ExpansionOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Expansion panel as accordion
  */
@@ -1153,11 +1223,13 @@ ExpansionStepsExample.decorators = [
                 styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ExpansionStepsExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * Data structure for holding telephone number.
  */
@@ -1298,7 +1370,7 @@ class MyTelInput {
      * @return {?}
      */
     onContainerClick(event) {
-        if (((event.target)).tagName.toLowerCase() != 'input') {
+        if ((/** @type {?} */ (event.target)).tagName.toLowerCase() != 'input') {
             this.elRef.nativeElement.querySelector('input').focus();
         }
     }
@@ -1317,9 +1389,7 @@ MyTelInput.decorators = [
                 }
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 MyTelInput.ctorParameters = () => [
     { type: FormBuilder, },
     { type: FocusMonitor, },
@@ -1327,10 +1397,10 @@ MyTelInput.ctorParameters = () => [
     { type: Renderer2, },
 ];
 MyTelInput.propDecorators = {
-    'placeholder': [{ type: Input },],
-    'required': [{ type: Input },],
-    'disabled': [{ type: Input },],
-    'value': [{ type: Input },],
+    "placeholder": [{ type: Input },],
+    "required": [{ type: Input },],
+    "disabled": [{ type: Input },],
+    "value": [{ type: Input },],
 };
 /**
  * \@title Form field with custom telephone number input control.
@@ -1349,11 +1419,13 @@ FormFieldCustomControlExample.decorators = [
   `
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 FormFieldCustomControlExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Form field with error messages
  */
@@ -1377,11 +1449,13 @@ FormFieldErrorExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 FormFieldErrorExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Form field with hints
  */
@@ -1394,11 +1468,13 @@ FormFieldHintExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 FormFieldHintExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Simple form field
  */
@@ -1411,11 +1487,13 @@ FormFieldOverviewExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 FormFieldOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Form field with placeholder
  */
@@ -1437,13 +1515,15 @@ FormFieldPlaceholderExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-container form { margin-bottom: 20px; } .example-container form > * { margin: 5px 0; } .example-container .mat-radio-button { margin: 0 5px; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 FormFieldPlaceholderExample.ctorParameters = () => [
     { type: FormBuilder, },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Form field with prefix & suffix
  */
@@ -1459,11 +1539,13 @@ FormFieldPrefixSuffixExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-right-align { text-align: right; } input.example-right-align::-webkit-outer-spin-button, input.example-right-align::-webkit-inner-spin-button { display: none; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 FormFieldPrefixSuffixExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Form field theming
  */
@@ -1487,17 +1569,19 @@ class FormFieldThemingExample {
 FormFieldThemingExample.decorators = [
     { type: Component, args: [{
                 selector: 'form-field-theming-example',
-                template: "<form class=\"example-container\" [formGroup]=\"options\" [style.fontSize.px]=\"getFontSize()\"><mat-form-field [color]=\"options.value.color\"><mat-select placeholder=\"Color\" formControlName=\"color\"><mat-option value=\"primary\">Primary</mat-option><mat-option value=\"accent\">Accent</mat-option><mat-option value=\"warn\">Warn</mat-option></mat-select></mat-form-field><mat-form-field [color]=\"options.value.color\"><input matInput type=\"number\" placeholder=\"Font size (px)\" formControlName=\"fontSize\" min=\"10\"><mat-error *ngIf=\"options.get('fontSize').invalid\">Min size: 10px</mat-error></mat-form-field></form>",
+                template: "<form class=\"example-container\" [formGroup]=\"options\" [style.fontSize.px]=\"getFontSize()\"><mat-form-field [color]=\"options.value.color\"><mat-select placeholder=\"Color\" formControlName=\"color\"><mat-option value=\"primary\">Primary</mat-option><mat-option value=\"accent\">Accent</mat-option><mat-option value=\"warn\">Warn</mat-option></mat-select></mat-form-field><mat-form-field [color]=\"options.value.color\"><input matInput type=\"number\" placeholder=\"Font size (px)\" formControlName=\"fontSize\" min=\"10\"><mat-error *ngIf=\"options.get('fontSize')?.invalid\">Min size: 10px</mat-error></mat-form-field></form>",
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 FormFieldThemingExample.ctorParameters = () => [
     { type: FormBuilder, },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Dynamic grid-list
  */
@@ -1517,11 +1601,13 @@ GridListDynamicExample.decorators = [
                 template: "<mat-grid-list cols=\"4\" rowHeight=\"100px\"><mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\" [style.background]=\"tile.color\">{{tile.text}}</mat-grid-tile></mat-grid-list>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 GridListDynamicExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic grid-list
  */
@@ -1534,11 +1620,13 @@ GridListOverviewExample.decorators = [
                 template: "<mat-grid-list cols=\"2\" rowHeight=\"2:1\"><mat-grid-tile>1</mat-grid-tile><mat-grid-tile>2</mat-grid-tile><mat-grid-tile>3</mat-grid-tile><mat-grid-tile>4</mat-grid-tile></mat-grid-list>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 GridListOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic icons
  */
@@ -1550,11 +1638,13 @@ IconOverviewExample.decorators = [
                 template: "<mat-icon>home</mat-icon>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 IconOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title SVG icons
  */
@@ -1573,14 +1663,16 @@ IconSvgExample.decorators = [
                 template: "<mat-icon svgIcon=\"thumbs-up\"></mat-icon>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 IconSvgExample.ctorParameters = () => [
     { type: MatIconRegistry, },
     { type: DomSanitizer, },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Auto-resizing textarea
  */
@@ -1593,11 +1685,13 @@ InputAutosizeTextareaExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 InputAutosizeTextareaExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Input with a clear button
  */
@@ -1613,11 +1707,13 @@ InputClearableExample.decorators = [
                 styles: [".example-form-field { width: 200px; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 InputClearableExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * Error when invalid control is dirty, touched, or submitted.
  */
@@ -1651,11 +1747,13 @@ InputErrorStateMatcherExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 InputErrorStateMatcherExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Input with error messages
  */
@@ -1674,11 +1772,13 @@ InputErrorsExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 InputErrorsExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Inputs in a form
  */
@@ -1691,11 +1791,13 @@ InputFormExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 InputFormExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Input with hints
  */
@@ -1708,11 +1810,13 @@ InputHintExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 InputHintExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic Inputs
  */
@@ -1725,11 +1829,13 @@ InputOverviewExample.decorators = [
                 template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Favorite food\" value=\"Sushi\"></mat-form-field><mat-form-field class=\"example-full-width\"><textarea matInput placeholder=\"Leave a comment\"></textarea></mat-form-field></form>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 InputOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Inputs with prefixes and suffixes
  */
@@ -1742,11 +1848,13 @@ InputPrefixSuffixExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 InputPrefixSuffixExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic list
  */
@@ -1758,11 +1866,13 @@ ListOverviewExample.decorators = [
                 template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-list-item>Item 2</mat-list-item><mat-list-item>Item 3</mat-list-item></mat-list>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ListOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title List with sections
  */
@@ -1801,11 +1911,13 @@ ListSectionsExample.decorators = [
                 template: "<mat-list><h3 mat-subheader>Folders</h3><mat-list-item *ngFor=\"let folder of folders\"><mat-icon mat-list-icon>folder</mat-icon><h4 mat-line>{{folder.name}}</h4><p mat-line>{{folder.updated | date}}</p></mat-list-item><mat-divider></mat-divider><h3 mat-subheader>Notes</h3><mat-list-item *ngFor=\"let note of notes\"><mat-icon mat-list-icon>note</mat-icon><h4 mat-line>{{note.name}}</h4><p mat-line>{{note.updated | date}}</p></mat-list-item></mat-list>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ListSectionsExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title List with selection
  */
@@ -1821,11 +1933,13 @@ ListSelectionExample.decorators = [
                 template: "<mat-selection-list #shoes><mat-list-option *ngFor=\"let shoe of typesOfShoes\">{{shoe}}</mat-list-option></mat-selection-list><p>Options selected: {{shoes.selectedOptions.selected.length}}</p>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ListSelectionExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Menu with icons
  */
@@ -1838,11 +1952,13 @@ MenuIconsExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 MenuIconsExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic menu
  */
@@ -1855,11 +1971,13 @@ MenuOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 MenuOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Nested menu
  */
@@ -1872,11 +1990,13 @@ NestedMenuExample.decorators = [
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 NestedMenuExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable paginator
  */
@@ -1901,11 +2021,13 @@ PaginatorConfigurableExample.decorators = [
                 template: "<mat-form-field>List length: <input matInput [(ngModel)]=\"length\"></mat-form-field><mat-form-field>Page size: <input matInput [(ngModel)]=\"pageSize\"></mat-form-field><mat-form-field>Page size options: <input matInput [ngModel]=\"pageSizeOptions\" (ngModelChange)=\"setPageSizeOptions($event)\"></mat-form-field><mat-paginator [length]=\"length\" [pageSize]=\"pageSize\" [pageSizeOptions]=\"pageSizeOptions\" (page)=\"pageEvent = $event\"></mat-paginator><div *ngIf=\"pageEvent\"><h5>Page Change Event Properties</h5><div>List length: {{pageEvent.length}}</div><div>Page size: {{pageEvent.pageSize}}</div><div>Page index: {{pageEvent.pageIndex}}</div></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 PaginatorConfigurableExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Paginator
  */
@@ -1917,11 +2039,13 @@ PaginatorOverviewExample.decorators = [
                 template: "<mat-paginator [length]=\"100\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 PaginatorOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Buffer progress-bar
  */
@@ -1933,11 +2057,13 @@ ProgressBarBufferExample.decorators = [
                 template: "<mat-progress-bar mode=\"buffer\"></mat-progress-bar>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ProgressBarBufferExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable progress-bar
  */
@@ -1956,11 +2082,13 @@ ProgressBarConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ProgressBarConfigurableExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Determinate progress-bar
  */
@@ -1972,11 +2100,13 @@ ProgressBarDeterminateExample.decorators = [
                 template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ProgressBarDeterminateExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Indeterminate progress-bar
  */
@@ -1988,11 +2118,13 @@ ProgressBarIndeterminateExample.decorators = [
                 template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ProgressBarIndeterminateExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Query progress-bar
  */
@@ -2004,11 +2136,13 @@ ProgressBarQueryExample.decorators = [
                 template: "<mat-progress-bar mode=\"query\"></mat-progress-bar>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ProgressBarQueryExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable progress spinner
  */
@@ -2026,11 +2160,13 @@ ProgressSpinnerConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ProgressSpinnerConfigurableExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic progress-spinner
  */
@@ -2042,11 +2178,13 @@ ProgressSpinnerOverviewExample.decorators = [
                 template: "<mat-spinner></mat-spinner>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ProgressSpinnerOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Radios with ngModel
  */
@@ -2067,11 +2205,13 @@ RadioNgModelExample.decorators = [
                 styles: [".example-radio-group { display: inline-flex; flex-direction: column; } .example-radio-button { margin: 5px; } .example-selected-value { margin: 15px 0; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 RadioNgModelExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic radios
  */
@@ -2084,11 +2224,13 @@ RadioOverviewExample.decorators = [
                 styles: [".mat-radio-button ~ .mat-radio-button { padding-right: 16px; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 RadioOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with custom trigger text
  */
@@ -2105,11 +2247,13 @@ SelectCustomTriggerExample.decorators = [
                 styles: [".example-additional-selection { opacity: 0.75; font-size: 0.75em; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectCustomTriggerExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Disabled select
  */
@@ -2125,11 +2269,13 @@ SelectDisabledExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectDisabledExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * Error when invalid control is dirty, touched, or submitted.
  */
@@ -2163,11 +2309,13 @@ SelectErrorStateMatcherExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectErrorStateMatcherExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select in a form
  */
@@ -2187,11 +2335,13 @@ SelectFormExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectFormExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with form field features
  */
@@ -2213,11 +2363,13 @@ SelectHintErrorExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectHintErrorExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with multiple selection
  */
@@ -2234,11 +2386,13 @@ SelectMultipleExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectMultipleExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with no option ripple
  */
@@ -2251,11 +2405,13 @@ SelectNoRippleExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectNoRippleExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with option groups
  */
@@ -2305,11 +2461,13 @@ SelectOptgroupExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectOptgroupExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic select
  */
@@ -2329,11 +2487,13 @@ SelectOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with custom panel styling
  */
@@ -2350,11 +2510,13 @@ SelectPanelClassExample.decorators = [
                 encapsulation: ViewEncapsulation.None,
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectPanelClassExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with reset option
  */
@@ -2378,11 +2540,13 @@ SelectResetExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectResetExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Select with 2-way value binding
  */
@@ -2398,11 +2562,13 @@ SelectValueBindingExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SelectValueBindingExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Sidenav with a FAB
  */
@@ -2417,11 +2583,13 @@ SidenavFabExample.decorators = [
                 preserveWhitespaces: false,
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SidenavFabExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic sidenav
  */
@@ -2434,11 +2602,13 @@ SidenavOverviewExample.decorators = [
                 styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SidenavOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable slide-toggle
  */
@@ -2456,11 +2626,13 @@ SlideToggleConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 10px; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SlideToggleConfigurableExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Slide-toggle with forms
  */
@@ -2490,13 +2662,15 @@ SlideToggleFormsExample.decorators = [
                 styles: [".example-form mat-slide-toggle { margin: 8px 0; display: block; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SlideToggleFormsExample.ctorParameters = () => [
     { type: FormBuilder, },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic slide-toggles
  */
@@ -2508,11 +2682,13 @@ SlideToggleOverviewExample.decorators = [
                 template: "<mat-slide-toggle>Slide me!</mat-slide-toggle>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SlideToggleOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Configurable slider
  */
@@ -2553,11 +2729,13 @@ SliderConfigurableExample.decorators = [
                 preserveWhitespaces: false,
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SliderConfigurableExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic slider
  */
@@ -2570,11 +2748,13 @@ SliderOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ mat-slider { width: 300px; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SliderOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Snack-bar with a custom component
  */
@@ -2600,9 +2780,7 @@ SnackBarComponentExample.decorators = [
                 template: "<button mat-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">Pizza party</button>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SnackBarComponentExample.ctorParameters = () => [
     { type: MatSnackBar, },
 ];
@@ -2615,11 +2793,13 @@ PizzaPartyComponent.decorators = [
                 styles: [`.example-pizza-party { color: hotpink; }`],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 PizzaPartyComponent.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic snack-bar
  */
@@ -2647,13 +2827,15 @@ SnackBarOverviewExample.decorators = [
                 template: "<mat-form-field><input matInput value=\"Disco party!\" placeholder=\"Message\" #message></mat-form-field><mat-form-field><input matInput value=\"Dance\" placeholder=\"Action\" #action></mat-form-field><button mat-button (click)=\"openSnackBar(message.value, action.value)\">Show snack-bar</button>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SnackBarOverviewExample.ctorParameters = () => [
     { type: MatSnackBar, },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Sorting overview
  */
@@ -2698,9 +2880,7 @@ SortOverviewExample.decorators = [
                 styles: [".mat-sort-header-container { align-items: center; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 SortOverviewExample.ctorParameters = () => [];
 /**
  * @param {?} a
@@ -2712,6 +2892,10 @@ function compare(a, b, isAsc) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Stepper overview
  */
@@ -2742,13 +2926,15 @@ StepperOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 StepperOverviewExample.ctorParameters = () => [
     { type: FormBuilder, },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic table
  */
@@ -2765,10 +2951,12 @@ TableBasicExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 TableBasicExample.ctorParameters = () => [];
+/**
+ * @record
+ */
+
 const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -2792,6 +2980,10 @@ const ELEMENT_DATA = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Table with filtering
  */
@@ -2817,10 +3009,12 @@ TableFilteringExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 TableFilteringExample.ctorParameters = () => [];
+/**
+ * @record
+ */
+
 const ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -2844,6 +3038,10 @@ const ELEMENT_DATA$1 = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Table retrieving data through HTTP
  */
@@ -2870,7 +3068,7 @@ class TableHttpExample {
             .startWith(null)
             .switchMap(() => {
             this.isLoadingResults = true;
-            return ((this.exampleDatabase)).getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
+            return /** @type {?} */ ((this.exampleDatabase)).getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
         })
             .map(data => {
             // Flip flag to show that loading has finished.
@@ -2895,16 +3093,22 @@ TableHttpExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><mat-table #table [dataSource]=\"dataSource\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><mat-header-cell *matHeaderCellDef>#</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.number }}</mat-cell></ng-container><ng-container matColumnDef=\"title\"><mat-header-cell *matHeaderCellDef>Title</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.title }}</mat-cell></ng-container><ng-container matColumnDef=\"state\"><mat-header-cell *matHeaderCellDef>State</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.state }}</mat-cell></ng-container><ng-container matColumnDef=\"created\"><mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 TableHttpExample.ctorParameters = () => [
     { type: HttpClient, },
 ];
 TableHttpExample.propDecorators = {
-    'paginator': [{ type: ViewChild, args: [MatPaginator,] },],
-    'sort': [{ type: ViewChild, args: [MatSort,] },],
+    "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
+    "sort": [{ type: ViewChild, args: [MatSort,] },],
 };
+/**
+ * @record
+ */
+
+/**
+ * @record
+ */
+
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
@@ -2929,14 +3133,18 @@ class ExampleHttpDao {
 }
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Data table with sorting, pagination, and filtering.
  */
 class TableOverviewExample {
     constructor() {
         this.displayedColumns = ['id', 'name', 'progress', 'color'];
         // Create 100 users
-        const users = [];
-        for (let i = 1; i <= 100; i++) {
+        const /** @type {?} */ users = [];
+        for (let /** @type {?} */ i = 1; i <= 100; i++) {
             users.push(createNewUser(i));
         }
         // Assign the data to the data source for the table to render
@@ -2968,13 +3176,11 @@ TableOverviewExample.decorators = [
                 template: "<div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><div class=\"example-container mat-elevation-z8\"><mat-table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"id\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 TableOverviewExample.ctorParameters = () => [];
 TableOverviewExample.propDecorators = {
-    'paginator': [{ type: ViewChild, args: [MatPaginator,] },],
-    'sort': [{ type: ViewChild, args: [MatSort,] },],
+    "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
+    "sort": [{ type: ViewChild, args: [MatSort,] },],
 };
 /**
  * Builds and returns a new User.
@@ -2999,7 +3205,14 @@ const COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple
 const NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+/**
+ * @record
+ */
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Table with pagination
  */
@@ -3024,13 +3237,15 @@ TablePaginationExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator #paginator [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 20]\"></mat-paginator></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 TablePaginationExample.ctorParameters = () => [];
 TablePaginationExample.propDecorators = {
-    'paginator': [{ type: ViewChild, args: [MatPaginator,] },],
+    "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
 };
+/**
+ * @record
+ */
+
 const ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3055,6 +3270,10 @@ const ELEMENT_DATA$2 = [
 ];
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Table with sorting
  */
 class TableSortingExample {
@@ -3078,13 +3297,15 @@ TableSortingExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef mat-sort-header>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef mat-sort-header>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 TableSortingExample.ctorParameters = () => [];
 TableSortingExample.propDecorators = {
-    'sort': [{ type: ViewChild, args: [MatSort,] },],
+    "sort": [{ type: ViewChild, args: [MatSort,] },],
 };
+/**
+ * @record
+ */
+
 const ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3109,6 +3330,10 @@ const ELEMENT_DATA$3 = [
 ];
 
 /**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Basic tabs
  */
 class TabsOverviewExample {
@@ -3119,11 +3344,13 @@ TabsOverviewExample.decorators = [
                 template: "<mat-tab-group><mat-tab label=\"Tab 1\">Content 1</mat-tab><mat-tab label=\"Tab 2\">Content 2</mat-tab></mat-tab-group>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 TabsOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Complex Example
  */
@@ -3136,11 +3363,13 @@ TabsTemplateLabelExample.decorators = [
                 styles: [".demo-tab-group { border: 1px solid #e8e8e8; } .demo-tab-content { padding: 16px; } "]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 TabsTemplateLabelExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Multi-row toolbar
  */
@@ -3153,11 +3382,13 @@ ToolbarMultirowExample.decorators = [
                 styles: [".example-icon { padding: 0 14px; } .example-spacer { flex: 1 1 auto; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ToolbarMultirowExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic toolbar
  */
@@ -3169,11 +3400,13 @@ ToolbarOverviewExample.decorators = [
                 template: "<mat-toolbar>My App</mat-toolbar>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ToolbarOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Basic tooltip
  */
@@ -3185,11 +3418,13 @@ TooltipOverviewExample.decorators = [
                 template: "<span matTooltip=\"Tooltip!\">I have a tooltip</span>",
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 TooltipOverviewExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * \@title Tooltip with custom position
  */
@@ -3205,13 +3440,19 @@ TooltipPositionExample.decorators = [
                 styles: [".example-tooltip-host { display: inline-flex; align-items: center; margin: 50px; } .example-select { margin: 0 10px; } "],
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 TooltipPositionExample.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /* tslint:disable */
 /** DO NOT MANUALLY EDIT THIS FILE, IT IS GENERATED VIA GULP 'build-examples-module' */
+/**
+ * @record
+ */
+
 const EXAMPLE_COMPONENTS = {
     'autocomplete-display': {
         title: 'Display value autocomplete',
@@ -3965,11 +4206,13 @@ ExampleModule.decorators = [
                 ]
             },] },
 ];
-/**
- * @nocollapse
- */
+/** @nocollapse */
 ExampleModule.ctorParameters = () => [];
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * Example data
  *   with information about Component name, selector, files used in example, and path to examples
@@ -3997,7 +4240,7 @@ class ExampleData {
                 this.exampleFiles = this.exampleFiles.concat(EXAMPLE_COMPONENTS[example].additionalFiles);
             }
             this.selectorName = this.indexFilename = `${example}-example`;
-            let exampleName = example.replace(/(?:^\w|\b\w)/g, letter => letter.toUpperCase());
+            let /** @type {?} */ exampleName = example.replace(/(?:^\w|\b\w)/g, letter => letter.toUpperCase());
             if (EXAMPLE_COMPONENTS[example].title) {
                 this.description = EXAMPLE_COMPONENTS[example].title;
             }
@@ -4014,6 +4257,15 @@ class ExampleData {
     }
 }
 
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * Generated bundle index. Do not edit.
  */
