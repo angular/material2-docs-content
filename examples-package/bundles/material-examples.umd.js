@@ -622,7 +622,6 @@ var CheckboxOverviewExample = (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var COMMA = 188;
 /**
  * \@title Chips with input
  */
@@ -633,7 +632,7 @@ var ChipsInputExample = (function () {
         this.removable = true;
         this.addOnBlur = true;
         // Enter, comma
-        this.separatorKeysCodes = [_angular_cdk_keycodes.ENTER, COMMA];
+        this.separatorKeysCodes = [_angular_cdk_keycodes.ENTER, _angular_cdk_keycodes.COMMA];
         this.fruits = [
             { name: 'Lemon' },
             { name: 'Lime' },
