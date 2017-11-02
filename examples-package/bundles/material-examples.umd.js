@@ -1310,6 +1310,29 @@ var DialogOverviewExampleDialog = (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Elevation CSS classes
+ */
+var ElevationOverviewExample = (function () {
+    function ElevationOverviewExample() {
+        this.isActive = false;
+    }
+    ElevationOverviewExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'elevation-overview-example',
+                    styles: [".example-container { padding: 16px; margin-bottom: 16px; } "],
+                    template: "<div class=\"example-container\" [class.mat-elevation-z2]=\"!isActive\" [class.mat-elevation-z8]=\"isActive\">Example</div><button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>",
+                },] },
+    ];
+    /** @nocollapse */
+    ElevationOverviewExample.ctorParameters = function () { return []; };
+    return ElevationOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Basic expansion panel
  */
 var ExpansionOverviewExample = (function () {
@@ -4024,6 +4047,12 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: ["dialog-overview-example-dialog.html"],
         selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
     },
+    'elevation-overview': {
+        title: 'Elevation CSS classes',
+        component: ElevationOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'expansion-overview': {
         title: 'Basic expansion panel',
         component: ExpansionOverviewExample,
@@ -4496,6 +4525,7 @@ var EXAMPLE_LIST = [
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
     DialogOverviewExampleDialog, DialogOverviewExample,
+    ElevationOverviewExample,
     ExpansionOverviewExample,
     ExpansionStepsExample,
     MyTelInput, FormFieldCustomControlExample,
@@ -4681,78 +4711,79 @@ exports.ɵbe = DialogElementsExample;
 exports.ɵbf = DialogElementsExampleDialog;
 exports.ɵbg = DialogOverviewExample;
 exports.ɵbh = DialogOverviewExampleDialog;
-exports.ɵbi = ExpansionStepsExample;
-exports.ɵbk = FormFieldCustomControlExample;
-exports.ɵbj = MyTelInput;
-exports.ɵbl = FormFieldErrorExample;
-exports.ɵbm = FormFieldHintExample;
-exports.ɵbn = FormFieldOverviewExample;
-exports.ɵbo = FormFieldPlaceholderExample;
-exports.ɵbp = FormFieldPrefixSuffixExample;
-exports.ɵbq = FormFieldThemingExample;
-exports.ɵbr = GridListDynamicExample;
-exports.ɵbs = GridListOverviewExample;
-exports.ɵbt = IconOverviewExample;
-exports.ɵbu = IconSvgExample;
-exports.ɵbv = InputAutosizeTextareaExample;
-exports.ɵbw = InputClearableExample;
-exports.ɵbx = InputErrorStateMatcherExample;
-exports.ɵby = InputErrorsExample;
-exports.ɵbz = InputFormExample;
-exports.ɵca = InputHintExample;
-exports.ɵcb = InputOverviewExample;
-exports.ɵcc = InputPrefixSuffixExample;
-exports.ɵcd = ListSectionsExample;
-exports.ɵce = ListSelectionExample;
-exports.ɵeb = ExampleMaterialModule;
-exports.ɵcf = MenuIconsExample;
-exports.ɵcg = MenuOverviewExample;
-exports.ɵch = NestedMenuExample;
-exports.ɵci = PaginatorConfigurableExample;
-exports.ɵcj = PaginatorOverviewExample;
-exports.ɵck = ProgressBarBufferExample;
-exports.ɵcl = ProgressBarConfigurableExample;
-exports.ɵcm = ProgressBarDeterminateExample;
-exports.ɵcn = ProgressBarIndeterminateExample;
-exports.ɵco = ProgressBarQueryExample;
-exports.ɵcp = ProgressSpinnerConfigurableExample;
-exports.ɵcq = ProgressSpinnerOverviewExample;
-exports.ɵcr = RadioNgModelExample;
-exports.ɵcs = RadioOverviewExample;
-exports.ɵct = SelectCustomTriggerExample;
-exports.ɵcu = SelectDisabledExample;
-exports.ɵcv = SelectErrorStateMatcherExample;
-exports.ɵcw = SelectFormExample;
-exports.ɵcx = SelectHintErrorExample;
-exports.ɵcy = SelectMultipleExample;
-exports.ɵcz = SelectNoRippleExample;
-exports.ɵda = SelectOptgroupExample;
-exports.ɵdb = SelectOverviewExample;
-exports.ɵdc = SelectPanelClassExample;
-exports.ɵdd = SelectResetExample;
-exports.ɵde = SelectValueBindingExample;
-exports.ɵdf = SidenavFabExample;
-exports.ɵdg = SidenavOverviewExample;
-exports.ɵdh = SlideToggleConfigurableExample;
-exports.ɵdi = SlideToggleFormsExample;
-exports.ɵdj = SlideToggleOverviewExample;
-exports.ɵdk = SliderConfigurableExample;
-exports.ɵdl = SliderOverviewExample;
-exports.ɵdn = PizzaPartyComponent;
-exports.ɵdm = SnackBarComponentExample;
-exports.ɵdo = SnackBarOverviewExample;
-exports.ɵdp = SortOverviewExample;
-exports.ɵdq = TableBasicExample;
-exports.ɵdr = TableFilteringExample;
-exports.ɵds = TableHttpExample;
-exports.ɵdt = TableOverviewExample;
-exports.ɵdu = TablePaginationExample;
-exports.ɵdv = TableSortingExample;
-exports.ɵdw = TabsOverviewExample;
-exports.ɵdx = TabsTemplateLabelExample;
-exports.ɵdy = ToolbarOverviewExample;
-exports.ɵdz = TooltipOverviewExample;
-exports.ɵea = TooltipPositionExample;
+exports.ɵbi = ElevationOverviewExample;
+exports.ɵbj = ExpansionStepsExample;
+exports.ɵbl = FormFieldCustomControlExample;
+exports.ɵbk = MyTelInput;
+exports.ɵbm = FormFieldErrorExample;
+exports.ɵbn = FormFieldHintExample;
+exports.ɵbo = FormFieldOverviewExample;
+exports.ɵbp = FormFieldPlaceholderExample;
+exports.ɵbq = FormFieldPrefixSuffixExample;
+exports.ɵbr = FormFieldThemingExample;
+exports.ɵbs = GridListDynamicExample;
+exports.ɵbt = GridListOverviewExample;
+exports.ɵbu = IconOverviewExample;
+exports.ɵbv = IconSvgExample;
+exports.ɵbw = InputAutosizeTextareaExample;
+exports.ɵbx = InputClearableExample;
+exports.ɵby = InputErrorStateMatcherExample;
+exports.ɵbz = InputErrorsExample;
+exports.ɵca = InputFormExample;
+exports.ɵcb = InputHintExample;
+exports.ɵcc = InputOverviewExample;
+exports.ɵcd = InputPrefixSuffixExample;
+exports.ɵce = ListSectionsExample;
+exports.ɵcf = ListSelectionExample;
+exports.ɵec = ExampleMaterialModule;
+exports.ɵcg = MenuIconsExample;
+exports.ɵch = MenuOverviewExample;
+exports.ɵci = NestedMenuExample;
+exports.ɵcj = PaginatorConfigurableExample;
+exports.ɵck = PaginatorOverviewExample;
+exports.ɵcl = ProgressBarBufferExample;
+exports.ɵcm = ProgressBarConfigurableExample;
+exports.ɵcn = ProgressBarDeterminateExample;
+exports.ɵco = ProgressBarIndeterminateExample;
+exports.ɵcp = ProgressBarQueryExample;
+exports.ɵcq = ProgressSpinnerConfigurableExample;
+exports.ɵcr = ProgressSpinnerOverviewExample;
+exports.ɵcs = RadioNgModelExample;
+exports.ɵct = RadioOverviewExample;
+exports.ɵcu = SelectCustomTriggerExample;
+exports.ɵcv = SelectDisabledExample;
+exports.ɵcw = SelectErrorStateMatcherExample;
+exports.ɵcx = SelectFormExample;
+exports.ɵcy = SelectHintErrorExample;
+exports.ɵcz = SelectMultipleExample;
+exports.ɵda = SelectNoRippleExample;
+exports.ɵdb = SelectOptgroupExample;
+exports.ɵdc = SelectOverviewExample;
+exports.ɵdd = SelectPanelClassExample;
+exports.ɵde = SelectResetExample;
+exports.ɵdf = SelectValueBindingExample;
+exports.ɵdg = SidenavFabExample;
+exports.ɵdh = SidenavOverviewExample;
+exports.ɵdi = SlideToggleConfigurableExample;
+exports.ɵdj = SlideToggleFormsExample;
+exports.ɵdk = SlideToggleOverviewExample;
+exports.ɵdl = SliderConfigurableExample;
+exports.ɵdm = SliderOverviewExample;
+exports.ɵdo = PizzaPartyComponent;
+exports.ɵdn = SnackBarComponentExample;
+exports.ɵdp = SnackBarOverviewExample;
+exports.ɵdq = SortOverviewExample;
+exports.ɵdr = TableBasicExample;
+exports.ɵds = TableFilteringExample;
+exports.ɵdt = TableHttpExample;
+exports.ɵdu = TableOverviewExample;
+exports.ɵdv = TablePaginationExample;
+exports.ɵdw = TableSortingExample;
+exports.ɵdx = TabsOverviewExample;
+exports.ɵdy = TabsTemplateLabelExample;
+exports.ɵdz = ToolbarOverviewExample;
+exports.ɵea = TooltipOverviewExample;
+exports.ɵeb = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

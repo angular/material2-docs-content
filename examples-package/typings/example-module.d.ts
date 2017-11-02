@@ -36,6 +36,7 @@ import { DialogContentExample } from './dialog-content/dialog-content-example';
 import { DialogDataExample } from './dialog-data/dialog-data-example';
 import { DialogElementsExample } from './dialog-elements/dialog-elements-example';
 import { DialogOverviewExampleDialog, DialogOverviewExample } from './dialog-overview/dialog-overview-example';
+import { ElevationOverviewExample } from './elevation-overview/elevation-overview-example';
 import { ExpansionOverviewExample } from './expansion-overview/expansion-overview-example';
 import { ExpansionStepsExample } from './expansion-steps/expansion-steps-example';
 import { MyTelInput, FormFieldCustomControlExample } from './form-field-custom-control/form-field-custom-control-example';
@@ -301,6 +302,12 @@ export declare const EXAMPLE_COMPONENTS: {
         component: typeof DialogOverviewExample;
         additionalFiles: string[];
         selectorName: string;
+    };
+    'elevation-overview': {
+        title: string;
+        component: typeof ElevationOverviewExample;
+        additionalFiles: null;
+        selectorName: null;
     };
     'expansion-overview': {
         title: string;
