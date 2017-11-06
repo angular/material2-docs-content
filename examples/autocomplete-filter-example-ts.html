@@ -26,8 +26,8 @@
 
    ngOnInit() {
       <span class="hljs-keyword">this</span>.filteredOptions = <span class="hljs-keyword">this</span>.myControl.valueChanges
-         .startWith(<span class="hljs-string">''</span>)
-         .map(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-keyword">this</span>.filter(val));
+         .startWith(<span class="hljs-literal">null</span>)
+         .map(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> val ? <span class="hljs-keyword">this</span>.filter(val) : <span class="hljs-keyword">this</span>.options.slice());
    }
 
     filter(val: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span>[] {

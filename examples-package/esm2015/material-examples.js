@@ -156,8 +156,8 @@ class AutocompleteFilterExample {
      */
     ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
-            .startWith('')
-            .map(val => this.filter(val));
+            .startWith(null)
+            .map(val => val ? this.filter(val) : this.options.slice());
     }
     /**
      * @param {?} val
