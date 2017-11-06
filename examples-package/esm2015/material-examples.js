@@ -1400,7 +1400,7 @@ MyTelInput.nextId = 0;
 MyTelInput.decorators = [
     { type: Component, args: [{
                 selector: 'my-tel-input',
-                template: "<div [formGroup]=\"parts\"><input class=\"area\" formControlName=\"area\" size=\"3\" [disabled]=\"disabled\"> <span>&ndash;</span> <input class=\"exchange\" formControlName=\"exchange\" size=\"3\" [disabled]=\"disabled\"> <span>&ndash;</span> <input class=\"subscriber\" formControlName=\"subscriber\" size=\"4\" [disabled]=\"disabled\"></div>",
+                template: "<div [formGroup]=\"parts\"><input class=\"area\" formControlName=\"area\" size=\"3\"> <span>&ndash;</span> <input class=\"exchange\" formControlName=\"exchange\" size=\"3\"> <span>&ndash;</span> <input class=\"subscriber\" formControlName=\"subscriber\" size=\"4\"></div>",
                 styles: ["div { display: flex; } input { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } span { opacity: 0; transition: opacity 200ms; } :host.floating span { opacity: 1; } "],
                 providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }],
                 host: {
