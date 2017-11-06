@@ -1,0 +1,49 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container mat-elevation-z8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-table</span> #<span class="hljs-attr">table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Checkbox Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"select"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">"$event ? masterToggle() : null"</span>
+                      [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"selection.hasValue() &amp;&amp; isAllSelected()"</span>
+                      [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"selection.hasValue() &amp;&amp; !isAllSelected()"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"$event.stopPropagation()"</span>
+                      (<span class="hljs-attr">change</span>)=<span class="hljs-string">"$event ? selection.toggle(row) : null"</span>
+                      [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"selection.isSelected(row)"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Position Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"position"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> No. <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"name"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Weight Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"weight"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Weight <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.weight}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Color Column --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"symbol"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Symbol <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.symbol}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span>
+             (<span class="hljs-attr">click</span>)=<span class="hljs-string">"selection.toggle(row)"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

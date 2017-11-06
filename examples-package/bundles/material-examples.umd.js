@@ -184,8 +184,8 @@ var AutocompleteFilterExample = (function () {
     function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
-            .startWith(null)
-            .map(function (val) { return val ? _this.filter(val) : _this.options.slice(); });
+            .startWith('')
+            .map(function (val) { return _this.filter(val); });
     };
     /**
      * @param {?} val
