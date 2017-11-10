@@ -1421,7 +1421,7 @@ var MyTel = (function () {
  * Custom `MatFormFieldControl` for telephone number input.
  */
 var MyTelInput = (function () {
-    function MyTelInput(fb, fm, elRef, renderer) {
+    function MyTelInput(fb, fm, elRef) {
         var _this = this;
         this.fm = fm;
         this.elRef = elRef;
@@ -1439,7 +1439,7 @@ var MyTelInput = (function () {
             'exchange': '',
             'subscriber': '',
         });
-        fm.monitor(elRef.nativeElement, renderer, true).subscribe(function (origin) {
+        fm.monitor(elRef.nativeElement, true).subscribe(function (origin) {
             _this.focused = !!origin;
             _this.stateChanges.next();
         });
@@ -1595,7 +1595,6 @@ var MyTelInput = (function () {
         { type: _angular_forms.FormBuilder, },
         { type: _angular_cdk_a11y.FocusMonitor, },
         { type: _angular_core.ElementRef, },
-        { type: _angular_core.Renderer2, },
     ]; };
     MyTelInput.propDecorators = {
         "placeholder": [{ type: _angular_core.Input },],

@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { Component, ElementRef, Inject, Input, NgModule, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, Inject, Input, NgModule, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -1277,9 +1277,8 @@ class MyTelInput {
      * @param {?} fb
      * @param {?} fm
      * @param {?} elRef
-     * @param {?} renderer
      */
-    constructor(fb, fm, elRef, renderer) {
+    constructor(fb, fm, elRef) {
         this.fm = fm;
         this.elRef = elRef;
         this.stateChanges = new Subject();
@@ -1296,7 +1295,7 @@ class MyTelInput {
             'exchange': '',
             'subscriber': '',
         });
-        fm.monitor(elRef.nativeElement, renderer, true).subscribe((origin) => {
+        fm.monitor(elRef.nativeElement, true).subscribe((origin) => {
             this.focused = !!origin;
             this.stateChanges.next();
         });
@@ -1418,7 +1417,6 @@ MyTelInput.ctorParameters = () => [
     { type: FormBuilder, },
     { type: FocusMonitor, },
     { type: ElementRef, },
-    { type: Renderer2, },
 ];
 MyTelInput.propDecorators = {
     "placeholder": [{ type: Input },],

@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { Component, ElementRef, Inject, Input, NgModule, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, Inject, Input, NgModule, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -1415,7 +1415,7 @@ var MyTel = (function () {
  * Custom `MatFormFieldControl` for telephone number input.
  */
 var MyTelInput = (function () {
-    function MyTelInput(fb, fm, elRef, renderer) {
+    function MyTelInput(fb, fm, elRef) {
         var _this = this;
         this.fm = fm;
         this.elRef = elRef;
@@ -1433,7 +1433,7 @@ var MyTelInput = (function () {
             'exchange': '',
             'subscriber': '',
         });
-        fm.monitor(elRef.nativeElement, renderer, true).subscribe(function (origin) {
+        fm.monitor(elRef.nativeElement, true).subscribe(function (origin) {
             _this.focused = !!origin;
             _this.stateChanges.next();
         });
@@ -1589,7 +1589,6 @@ var MyTelInput = (function () {
         { type: FormBuilder, },
         { type: FocusMonitor, },
         { type: ElementRef, },
-        { type: Renderer2, },
     ]; };
     MyTelInput.propDecorators = {
         "placeholder": [{ type: Input },],

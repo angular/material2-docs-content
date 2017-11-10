@@ -1,5 +1,5 @@
 import { FocusMonitor } from '@angular/cdk/a11y';
-import { ElementRef, OnDestroy, Renderer2 } from '@angular/core';
+import { ElementRef, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { Subject } from 'rxjs/Subject';
@@ -32,7 +32,7 @@ export declare class MyTelInput implements MatFormFieldControl<MyTel>, OnDestroy
     disabled: boolean;
     private _disabled;
     value: MyTel | null;
-    constructor(fb: FormBuilder, fm: FocusMonitor, elRef: ElementRef, renderer: Renderer2);
+    constructor(fb: FormBuilder, fm: FocusMonitor, elRef: ElementRef);
     ngOnDestroy(): void;
     setDescribedByIds(ids: string[]): void;
     onContainerClick(event: MouseEvent): void;
