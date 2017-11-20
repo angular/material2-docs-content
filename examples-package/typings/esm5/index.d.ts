@@ -54,7 +54,7 @@ export { InputOverviewExample as ɵcc } from './input-overview/input-overview-ex
 export { InputPrefixSuffixExample as ɵcd } from './input-prefix-suffix/input-prefix-suffix-example';
 export { ListSectionsExample as ɵce } from './list-sections/list-sections-example';
 export { ListSelectionExample as ɵcf } from './list-selection/list-selection-example';
-export { ExampleMaterialModule as ɵec } from './material-module';
+export { ExampleMaterialModule as ɵed } from './material-module';
 export { MenuIconsExample as ɵcg } from './menu-icons/menu-icons-example';
 export { MenuOverviewExample as ɵch } from './menu-overview/menu-overview-example';
 export { NestedMenuExample as ɵci } from './nested-menu/nested-menu-example';
@@ -96,9 +96,10 @@ export { TableFilteringExample as ɵds } from './table-filtering/table-filtering
 export { TableHttpExample as ɵdt } from './table-http/table-http-example';
 export { TableOverviewExample as ɵdu } from './table-overview/table-overview-example';
 export { TablePaginationExample as ɵdv } from './table-pagination/table-pagination-example';
-export { TableSortingExample as ɵdw } from './table-sorting/table-sorting-example';
-export { TabsOverviewExample as ɵdx } from './tabs-overview/tabs-overview-example';
-export { TabsTemplateLabelExample as ɵdy } from './tabs-template-label/tabs-template-label-example';
-export { ToolbarOverviewExample as ɵdz } from './toolbar-overview/toolbar-overview-example';
-export { TooltipOverviewExample as ɵea } from './tooltip-overview/tooltip-overview-example';
-export { TooltipPositionExample as ɵeb } from './tooltip-position/tooltip-position-example';
+export { TableSelectionExample as ɵdw } from './table-selection/table-selection-example';
+export { TableSortingExample as ɵdx } from './table-sorting/table-sorting-example';
+export { TabsOverviewExample as ɵdy } from './tabs-overview/tabs-overview-example';
+export { TabsTemplateLabelExample as ɵdz } from './tabs-template-label/tabs-template-label-example';
+export { ToolbarOverviewExample as ɵea } from './toolbar-overview/toolbar-overview-example';
+export { TooltipOverviewExample as ɵeb } from './tooltip-overview/tooltip-overview-example';
+export { TooltipPositionExample as ɵec } from './tooltip-position/tooltip-position-example';
