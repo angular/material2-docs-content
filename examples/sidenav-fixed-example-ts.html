@@ -1,0 +1,22 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/** @title Fixed sidenav */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'sidenav-fixed-example'</span>,
+  templateUrl: <span class="hljs-string">'sidenav-fixed-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'sidenav-fixed-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavFixedExample {
+  options: FormGroup;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder</span>) {
+    <span class="hljs-keyword">this</span>.options = fb.group({
+      <span class="hljs-string">'fixed'</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-string">'top'</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-string">'bottom'</span>: <span class="hljs-number">0</span>,
+    });
+  }
+
+  shouldRun = [<span class="hljs-regexp">/(^|\.)plnkr\.co$/</span>, <span class="hljs-regexp">/(^|\.)stackblitz\.io$/</span>].some(<span class="hljs-function"><span class="hljs-params">h</span> =&gt;</span> h.test(<span class="hljs-built_in">window</span>.location.host));
+}

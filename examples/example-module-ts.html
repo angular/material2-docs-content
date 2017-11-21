@@ -96,8 +96,14 @@
 <span class="hljs-keyword">import</span> {SelectPanelClassExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-panel-class/select-panel-class-example'</span>;
 <span class="hljs-keyword">import</span> {SelectResetExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-reset/select-reset-example'</span>;
 <span class="hljs-keyword">import</span> {SelectValueBindingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-value-binding/select-value-binding-example'</span>;
-<span class="hljs-keyword">import</span> {SidenavFabExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-fab/sidenav-fab-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavDisableCloseExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-disable-close/sidenav-disable-close-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavDrawerOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-drawer-overview/sidenav-drawer-overview-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavFixedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-fixed/sidenav-fixed-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavModeExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-mode/sidenav-mode-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavOpenCloseExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-open-close/sidenav-open-close-example'</span>;
 <span class="hljs-keyword">import</span> {SidenavOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-overview/sidenav-overview-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-position/sidenav-position-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavResponsiveExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-responsive/sidenav-responsive-example'</span>;
 <span class="hljs-keyword">import</span> {SlideToggleConfigurableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./slide-toggle-configurable/slide-toggle-configurable-example'</span>;
 <span class="hljs-keyword">import</span> {SlideToggleFormsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./slide-toggle-forms/slide-toggle-forms-example'</span>;
 <span class="hljs-keyword">import</span> {SlideToggleOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./slide-toggle-overview/slide-toggle-overview-example'</span>;
@@ -620,15 +626,51 @@
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
-  <span class="hljs-string">'sidenav-fab'</span>: {
-    title: <span class="hljs-string">'Sidenav with a FAB'</span>,
-    component: SidenavFabExample,
+  <span class="hljs-string">'sidenav-disable-close'</span>: {
+    title: <span class="hljs-string">'Sidenav with custom escape and backdrop click behavior '</span>,
+    component: SidenavDisableCloseExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'sidenav-drawer-overview'</span>: {
+    title: <span class="hljs-string">'Basic drawer '</span>,
+    component: SidenavDrawerOverviewExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'sidenav-fixed'</span>: {
+    title: <span class="hljs-string">'Fixed sidenav '</span>,
+    component: SidenavFixedExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'sidenav-mode'</span>: {
+    title: <span class="hljs-string">'Sidenav with configurable mode '</span>,
+    component: SidenavModeExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'sidenav-open-close'</span>: {
+    title: <span class="hljs-string">'Sidenav open &amp; close behavior '</span>,
+    component: SidenavOpenCloseExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
   <span class="hljs-string">'sidenav-overview'</span>: {
-    title: <span class="hljs-string">'Basic sidenav'</span>,
+    title: <span class="hljs-string">'Basic sidenav '</span>,
     component: SidenavOverviewExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'sidenav-position'</span>: {
+    title: <span class="hljs-string">'Implicit main content with two sidenavs '</span>,
+    component: SidenavPositionExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
+  },
+  <span class="hljs-string">'sidenav-responsive'</span>: {
+    title: <span class="hljs-string">'Responsive sidenav '</span>,
+    component: SidenavResponsiveExample,
     additionalFiles: <span class="hljs-literal">null</span>,
     selectorName: <span class="hljs-literal">null</span>
   },
@@ -850,8 +892,14 @@
   SelectPanelClassExample,
   SelectResetExample,
   SelectValueBindingExample,
-  SidenavFabExample,
+  SidenavDisableCloseExample,
+  SidenavDrawerOverviewExample,
+  SidenavFixedExample,
+  SidenavModeExample,
+  SidenavOpenCloseExample,
   SidenavOverviewExample,
+  SidenavPositionExample,
+  SidenavResponsiveExample,
   SlideToggleConfigurableExample,
   SlideToggleFormsExample,
   SlideToggleOverviewExample,

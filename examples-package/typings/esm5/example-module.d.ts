@@ -87,8 +87,14 @@ import { SelectOverviewExample } from './select-overview/select-overview-example
 import { SelectPanelClassExample } from './select-panel-class/select-panel-class-example';
 import { SelectResetExample } from './select-reset/select-reset-example';
 import { SelectValueBindingExample } from './select-value-binding/select-value-binding-example';
-import { SidenavFabExample } from './sidenav-fab/sidenav-fab-example';
+import { SidenavDisableCloseExample } from './sidenav-disable-close/sidenav-disable-close-example';
+import { SidenavDrawerOverviewExample } from './sidenav-drawer-overview/sidenav-drawer-overview-example';
+import { SidenavFixedExample } from './sidenav-fixed/sidenav-fixed-example';
+import { SidenavModeExample } from './sidenav-mode/sidenav-mode-example';
+import { SidenavOpenCloseExample } from './sidenav-open-close/sidenav-open-close-example';
 import { SidenavOverviewExample } from './sidenav-overview/sidenav-overview-example';
+import { SidenavPositionExample } from './sidenav-position/sidenav-position-example';
+import { SidenavResponsiveExample } from './sidenav-responsive/sidenav-responsive-example';
 import { SlideToggleConfigurableExample } from './slide-toggle-configurable/slide-toggle-configurable-example';
 import { SlideToggleFormsExample } from './slide-toggle-forms/slide-toggle-forms-example';
 import { SlideToggleOverviewExample } from './slide-toggle-overview/slide-toggle-overview-example';
@@ -610,15 +616,51 @@ export declare const EXAMPLE_COMPONENTS: {
         additionalFiles: null;
         selectorName: null;
     };
-    'sidenav-fab': {
+    'sidenav-disable-close': {
         title: string;
-        component: typeof SidenavFabExample;
+        component: typeof SidenavDisableCloseExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'sidenav-drawer-overview': {
+        title: string;
+        component: typeof SidenavDrawerOverviewExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'sidenav-fixed': {
+        title: string;
+        component: typeof SidenavFixedExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'sidenav-mode': {
+        title: string;
+        component: typeof SidenavModeExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'sidenav-open-close': {
+        title: string;
+        component: typeof SidenavOpenCloseExample;
         additionalFiles: null;
         selectorName: null;
     };
     'sidenav-overview': {
         title: string;
         component: typeof SidenavOverviewExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'sidenav-position': {
+        title: string;
+        component: typeof SidenavPositionExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'sidenav-responsive': {
+        title: string;
+        component: typeof SidenavResponsiveExample;
         additionalFiles: null;
         selectorName: null;
     };
@@ -755,6 +797,6 @@ export declare const EXAMPLE_COMPONENTS: {
         selectorName: null;
     };
 };
-export declare const EXAMPLE_LIST: (typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof MyTelInput | typeof FormFieldPlaceholderExample | typeof IconSvgExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample)[];
+export declare const EXAMPLE_LIST: (typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof MyTelInput | typeof FormFieldPlaceholderExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample)[];
 export declare class ExampleModule {
 }

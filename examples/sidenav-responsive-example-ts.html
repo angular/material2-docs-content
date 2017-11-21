@@ -1,0 +1,35 @@
+<span class="hljs-keyword">import</span> {MediaMatcher} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/layout'</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectorRef, Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/** @title Responsive sidenav */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'sidenav-responsive-example'</span>,
+  templateUrl: <span class="hljs-string">'sidenav-responsive-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'sidenav-responsive-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavResponsiveExample {
+  mobileQuery: MediaQueryList;
+
+  fillerNav = <span class="hljs-built_in">Array</span>(<span class="hljs-number">50</span>).fill(<span class="hljs-number">0</span>).map(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Nav Item <span class="hljs-subst">${i + 1}</span>`</span>);
+
+  fillerContent = <span class="hljs-built_in">Array</span>(<span class="hljs-number">50</span>).fill(<span class="hljs-number">0</span>).map(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span>
+      <span class="hljs-string">`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+       laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+       voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`</span>);
+
+  <span class="hljs-keyword">private</span> _mobileQueryListener: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">void</span>;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">changeDetectorRef: ChangeDetectorRef, media: MediaMatcher</span>) {
+    <span class="hljs-keyword">this</span>.mobileQuery = media.matchMedia(<span class="hljs-string">'(max-width: 600px)'</span>);
+    <span class="hljs-keyword">this</span>._mobileQueryListener = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> changeDetectorRef.detectChanges();
+    <span class="hljs-keyword">this</span>.mobileQuery.addListener(<span class="hljs-keyword">this</span>._mobileQueryListener);
+  }
+
+  ngOnDestroy(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">this</span>.mobileQuery.removeListener(<span class="hljs-keyword">this</span>._mobileQueryListener);
+  }
+
+  shouldRun = [<span class="hljs-regexp">/(^|\.)plnkr\.co$/</span>, <span class="hljs-regexp">/(^|\.)stackblitz\.io$/</span>].some(<span class="hljs-function"><span class="hljs-params">h</span> =&gt;</span> h.test(<span class="hljs-built_in">window</span>.location.host));
+}

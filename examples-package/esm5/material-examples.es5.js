@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { Component, ElementRef, Inject, Input, NgModule, ViewChild, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, Inject, Input, NgModule, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -27,6 +27,8 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { Subject } from 'rxjs/Subject';
 import { DomSanitizer } from '@angular/platform-browser';
+import '@angular/material/sidenav';
+import { MediaMatcher } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
@@ -2868,23 +2870,138 @@ var SelectValueBindingExample = (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Sidenav with a FAB
+ * \@title Sidenav with custom escape and backdrop click behavior
  */
-var SidenavFabExample = (function () {
-    function SidenavFabExample() {
+var SidenavDisableCloseExample = (function () {
+    function SidenavDisableCloseExample() {
+        this.reason = '';
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(function (h) { return h.test(window.location.host); });
     }
-    SidenavFabExample.decorators = [
+    /**
+     * @param {?} reason
+     * @return {?}
+     */
+    SidenavDisableCloseExample.prototype.close = /**
+     * @param {?} reason
+     * @return {?}
+     */
+    function (reason) {
+        this.reason = reason;
+        this.sidenav.close();
+    };
+    SidenavDisableCloseExample.decorators = [
         { type: Component, args: [{
-                    selector: 'sidenav-fab-example',
-                    template: "<mat-sidenav-container class=\"example-sidenav-fab-container\"><mat-sidenav #sidenav mode=\"side\" opened=\"true\"><button mat-mini-fab class=\"example-fab\" (click)=\"sidenav.toggle()\"><mat-icon>add</mat-icon></button><div class=\"example-scrolling-content\">Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.</div></mat-sidenav><button mat-mini-fab class=\"example-fab\" (click)=\"sidenav.toggle()\"><mat-icon>add</mat-icon></button><div class=\"example-scrolling-content\">Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti dui, sapien consectetuer.</div></mat-sidenav-container>",
-                    styles: [".example-sidenav-fab-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-fab-container mat-sidenav { max-width: 200px; } .example-sidenav-fab-container .mat-sidenav-content, .example-sidenav-fab-container mat-sidenav { display: flex; overflow: visible; } .example-scrolling-content { overflow: auto; height: 100%; } .example-fab.mat-mini-fab { position: absolute; right: 20px; bottom: 10px; } "],
-                    encapsulation: ViewEncapsulation.None,
-                    preserveWhitespaces: false,
+                    selector: 'sidenav-disable-close-example',
+                    template: "<mat-sidenav-container class=\"example-container\" (backdropClick)=\"close('backdrop')\" *ngIf=\"shouldRun\"><mat-sidenav #sidenav (keydown.escape)=\"close('escape')\" disableClose><p><button mat-button (click)=\"close('toggle button')\">Toggle</button></p></mat-sidenav><mat-sidenav-content><p><button mat-button (click)=\"sidenav.open()\">Open</button></p><p>Closed due to: {{reason}}</p></mat-sidenav-content></mat-sidenav-container><div *ngIf=\"!shouldRun\">Please open in Plunker to see result</div>",
+                    styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
                 },] },
     ];
     /** @nocollapse */
-    SidenavFabExample.ctorParameters = function () { return []; };
-    return SidenavFabExample;
+    SidenavDisableCloseExample.ctorParameters = function () { return []; };
+    SidenavDisableCloseExample.propDecorators = {
+        "sidenav": [{ type: ViewChild, args: ['sidenav',] },],
+    };
+    return SidenavDisableCloseExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Basic drawer
+ */
+var SidenavDrawerOverviewExample = (function () {
+    function SidenavDrawerOverviewExample() {
+    }
+    SidenavDrawerOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'sidenav-drawer-overview-example',
+                    template: "<mat-drawer-container class=\"example-container\"><mat-drawer mode=\"side\" opened=\"true\">Drawer content</mat-drawer><mat-drawer-content>Main content</mat-drawer-content></mat-drawer-container>",
+                    styles: [".example-container { width: 400px; height: 200px; margin: 10px; border: 1px solid #555; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    SidenavDrawerOverviewExample.ctorParameters = function () { return []; };
+    return SidenavDrawerOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Fixed sidenav
+ */
+var SidenavFixedExample = (function () {
+    function SidenavFixedExample(fb) {
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(function (h) { return h.test(window.location.host); });
+        this.options = fb.group({
+            'fixed': false,
+            'top': 0,
+            'bottom': 0,
+        });
+    }
+    SidenavFixedExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'sidenav-fixed-example',
+                    template: "<ng-container *ngIf=\"shouldRun\"><mat-toolbar class=\"example-header\">Header</mat-toolbar><mat-sidenav-container class=\"example-container\"><mat-sidenav #sidenav mode=\"side\" opened=\"true\" class=\"example-sidenav\" [fixedInViewport]=\"options.value.fixed\" [fixedTopGap]=\"options.value.top\" [fixedBottomGap]=\"options.value.bottom\">{{options.value.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav</mat-sidenav><mat-sidenav-content [formGroup]=\"options\"><p><mat-checkbox formControlName=\"fixed\">Fixed</mat-checkbox></p><p><mat-form-field><input matInput type=\"number\" formControlName=\"top\" placeholder=\"Top gap\"></mat-form-field></p><p><mat-form-field><input matInput type=\"number\" formControlName=\"bottom\" placeholder=\"Bottom gap\"></mat-form-field></p><p><button mat-button (click)=\"sidenav.toggle()\">Toggle</button></p></mat-sidenav-content></mat-sidenav-container><mat-toolbar class=\"example-footer\">Footer</mat-toolbar></ng-container><div *ngIf=\"!shouldRun\">Please open in Plunker to see result</div>",
+                    styles: [".example-container { position: absolute; top: 60px; bottom: 60px; left: 0; right: 0; } .example-sidenav { display: flex; align-items: center; justify-content: center; width: 200px; background: rgba(255, 0, 0, 0.5); } .example-header { position: fixed; top: 0; left: 0; right: 0; } .example-footer { position: fixed; bottom: 0; left: 0; right: 0; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    SidenavFixedExample.ctorParameters = function () { return [
+        { type: FormBuilder, },
+    ]; };
+    return SidenavFixedExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Sidenav with configurable mode
+ */
+var SidenavModeExample = (function () {
+    function SidenavModeExample() {
+        this.mode = new FormControl('over');
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(function (h) { return h.test(window.location.host); });
+    }
+    SidenavModeExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'sidenav-mode-example',
+                    template: "<mat-sidenav-container class=\"example-container\" *ngIf=\"shouldRun\"><mat-sidenav #sidenav [mode]=\"mode.value\"><p><button mat-button (click)=\"sidenav.toggle()\">Toggle</button></p><p><mat-radio-group class=\"example-radio-group\" [formControl]=\"mode\"><label>Mode:</label><mat-radio-button value=\"over\">Over</mat-radio-button><mat-radio-button value=\"side\">Side</mat-radio-button><mat-radio-button value=\"push\">Push</mat-radio-button></mat-radio-group></p></mat-sidenav><mat-sidenav-content><p><button mat-button (click)=\"sidenav.toggle()\">Toggle</button></p><p><mat-radio-group class=\"example-radio-group\" [formControl]=\"mode\"><label>Mode:</label><mat-radio-button value=\"over\">Over</mat-radio-button><mat-radio-button value=\"side\">Side</mat-radio-button><mat-radio-button value=\"push\">Push</mat-radio-button></mat-radio-group></p></mat-sidenav-content></mat-sidenav-container><div *ngIf=\"!shouldRun\">Please open in Plunker to see result</div>",
+                    styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } .example-radio-group { display: block; border: 1px solid #555; margin: 20px; padding: 10px; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    SidenavModeExample.ctorParameters = function () { return []; };
+    return SidenavModeExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Sidenav open & close behavior
+ */
+var SidenavOpenCloseExample = (function () {
+    function SidenavOpenCloseExample() {
+        this.events = [];
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(function (h) { return h.test(window.location.host); });
+    }
+    SidenavOpenCloseExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'sidenav-open-close-example',
+                    template: "<mat-sidenav-container class=\"example-container\" *ngIf=\"shouldRun\"><mat-sidenav #sidenav mode=\"side\" [(opened)]=\"opened\" (opened)=\"events.push('open!')\" (closed)=\"events.push('close!')\">Sidenav content</mat-sidenav><mat-sidenav-content><p><mat-checkbox [(ngModel)]=\"opened\">sidenav.opened</mat-checkbox></p><p><button mat-button (click)=\"sidenav.toggle()\">sidenav.toggle()</button></p><p>Events:</p><div class=\"example-events\"><div *ngFor=\"let e of events\">{{e}}</div></div></mat-sidenav-content></mat-sidenav-container><div *ngIf=\"!shouldRun\">Please open in Plunker to see result</div>",
+                    styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } .example-events { width: 300px; height: 200px; overflow: auto; border: 1px solid #555; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    SidenavOpenCloseExample.ctorParameters = function () { return []; };
+    return SidenavOpenCloseExample;
 }());
 
 /**
@@ -2896,17 +3013,83 @@ var SidenavFabExample = (function () {
  */
 var SidenavOverviewExample = (function () {
     function SidenavOverviewExample() {
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(function (h) { return h.test(window.location.host); });
     }
     SidenavOverviewExample.decorators = [
         { type: Component, args: [{
                     selector: 'sidenav-overview-example',
-                    template: "<mat-sidenav-container class=\"example-container\"><mat-sidenav #sidenav class=\"example-sidenav\">Jolly good!</mat-sidenav><div class=\"example-sidenav-content\"><button type=\"button\" mat-button (click)=\"sidenav.open()\">Open sidenav</button></div></mat-sidenav-container>",
-                    styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
+                    template: "<mat-sidenav-container class=\"example-container\" *ngIf=\"shouldRun\"><mat-sidenav mode=\"side\" opened=\"true\">Sidenav content</mat-sidenav><mat-sidenav-content>Main content</mat-sidenav-content></mat-sidenav-container><div *ngIf=\"!shouldRun\">Please open in Plunker to see result</div>",
+                    styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
                 },] },
     ];
     /** @nocollapse */
     SidenavOverviewExample.ctorParameters = function () { return []; };
     return SidenavOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Implicit main content with two sidenavs
+ */
+var SidenavPositionExample = (function () {
+    function SidenavPositionExample() {
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(function (h) { return h.test(window.location.host); });
+    }
+    SidenavPositionExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'sidenav-position-example',
+                    template: "<mat-sidenav-container class=\"example-container\" *ngIf=\"shouldRun\"><mat-sidenav opened mode=\"side\">Start content</mat-sidenav><mat-sidenav opened mode=\"side\" position=\"end\">End content</mat-sidenav>Implicit main content</mat-sidenav-container><div *ngIf=\"!shouldRun\">Please open in Plunker to see result</div>",
+                    styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    SidenavPositionExample.ctorParameters = function () { return []; };
+    return SidenavPositionExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Responsive sidenav
+ */
+var SidenavResponsiveExample = (function () {
+    function SidenavResponsiveExample(changeDetectorRef, media) {
+        this.fillerNav = Array(50).fill(0).map(function (_, i) { return "Nav Item " + (i + 1); });
+        this.fillerContent = Array(50).fill(0).map(function () {
+            return "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut\n       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\n       laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in\n       voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat\n       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+        });
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(function (h) { return h.test(window.location.host); });
+        this.mobileQuery = media.matchMedia('(max-width: 600px)');
+        this._mobileQueryListener = function () { return changeDetectorRef.detectChanges(); };
+        this.mobileQuery.addListener(this._mobileQueryListener);
+    }
+    /**
+     * @return {?}
+     */
+    SidenavResponsiveExample.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () {
+        this.mobileQuery.removeListener(this._mobileQueryListener);
+    };
+    SidenavResponsiveExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'sidenav-responsive-example',
+                    template: "<div class=\"example-container\" [class.example-is-mobile]=\"mobileQuery.matches\" *ngIf=\"shouldRun\"><mat-toolbar color=\"primary\" class=\"example-toolbar\"><button mat-icon-button (click)=\"snav.toggle()\"><mat-icon>menu</mat-icon></button><h1 class=\"example-app-name\">Responsive App</h1></mat-toolbar><mat-sidenav-container class=\"example-sidenav-container\" [style.marginTop.px]=\"mobileQuery.matches ? 56 : 0\"><mat-sidenav #snav [mode]=\"mobileQuery.matches ? 'over' : 'side'\" [fixedInViewport]=\"mobileQuery.matches\" fixedTopGap=\"56\"><mat-nav-list><a mat-list-item routerLink=\".\" *ngFor=\"let nav of fillerNav\">{{nav}}</a></mat-nav-list></mat-sidenav><mat-sidenav-content><p *ngFor=\"let content of fillerContent\">{{content}}</p></mat-sidenav-content></mat-sidenav-container></div><div *ngIf=\"!shouldRun\">Please open in Plunker to see result</div>",
+                    styles: [".example-container { display: flex; flex-direction: column; position: absolute; top: 0; bottom: 0; left: 0; right: 0; } .example-is-mobile .example-toolbar { position: fixed; /* Make sure the toolbar will stay on top of the content as it scrolls past. */ z-index: 2; } h1.example-app-name { margin-left: 8px; } .example-sidenav-container { /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */ flex: 1; } .example-is-mobile .example-sidenav-container { /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the `<body>` to be our scrolling element for mobile layouts. */ flex: 1 0 auto; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    SidenavResponsiveExample.ctorParameters = function () { return [
+        { type: ChangeDetectorRef, },
+        { type: MediaMatcher, },
+    ]; };
+    return SidenavResponsiveExample;
 }());
 
 /**
@@ -4427,15 +4610,51 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
-    'sidenav-fab': {
-        title: 'Sidenav with a FAB',
-        component: SidenavFabExample,
+    'sidenav-disable-close': {
+        title: 'Sidenav with custom escape and backdrop click behavior ',
+        component: SidenavDisableCloseExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'sidenav-drawer-overview': {
+        title: 'Basic drawer ',
+        component: SidenavDrawerOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'sidenav-fixed': {
+        title: 'Fixed sidenav ',
+        component: SidenavFixedExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'sidenav-mode': {
+        title: 'Sidenav with configurable mode ',
+        component: SidenavModeExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'sidenav-open-close': {
+        title: 'Sidenav open & close behavior ',
+        component: SidenavOpenCloseExample,
         additionalFiles: null,
         selectorName: null
     },
     'sidenav-overview': {
-        title: 'Basic sidenav',
+        title: 'Basic sidenav ',
         component: SidenavOverviewExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'sidenav-position': {
+        title: 'Implicit main content with two sidenavs ',
+        component: SidenavPositionExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'sidenav-responsive': {
+        title: 'Responsive sidenav ',
+        component: SidenavResponsiveExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -4656,8 +4875,14 @@ var EXAMPLE_LIST = [
     SelectPanelClassExample,
     SelectResetExample,
     SelectValueBindingExample,
-    SidenavFabExample,
+    SidenavDisableCloseExample,
+    SidenavDrawerOverviewExample,
+    SidenavFixedExample,
+    SidenavModeExample,
+    SidenavOpenCloseExample,
     SidenavOverviewExample,
+    SidenavPositionExample,
+    SidenavResponsiveExample,
     SlideToggleConfigurableExample,
     SlideToggleFormsExample,
     SlideToggleOverviewExample,
@@ -4721,7 +4946,7 @@ var ExampleData = (function () {
         this.indexFilename = 'button-demo';
         this.componentName = 'ButtonDemo';
         if (example && EXAMPLE_COMPONENTS[example]) {
-            this.examplePath = "/assets/plunker/examples/" + example + "/";
+            this.examplePath = "/assets/stackblitz/examples/" + example + "/";
             // TODO(tinayuangao): Do not hard-code extensions
             this.exampleFiles = ['html', 'ts', 'css']
                 .map(function (extension) { return example + "-example." + extension; });
@@ -4760,5 +4985,5 @@ var ExampleData = (function () {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerDisabledExample as ɵp, DatepickerEventsExample as ɵq, DatepickerFilterExample as ɵr, DatepickerFormatsExample as ɵt, MY_FORMATS as ɵs, DatepickerLocaleExample as ɵu, DatepickerMinMaxExample as ɵv, DatepickerMomentExample as ɵw, DatepickerStartViewExample as ɵx, DatepickerTouchExample as ɵy, DatepickerValueExample as ɵz, DialogContentExample as ɵba, DialogContentExampleDialog as ɵbb, DialogDataExample as ɵbc, DialogDataExampleDialog as ɵbd, DialogElementsExample as ɵbe, DialogElementsExampleDialog as ɵbf, DialogOverviewExample as ɵbg, DialogOverviewExampleDialog as ɵbh, ElevationOverviewExample as ɵbi, ExpansionStepsExample as ɵbj, FormFieldCustomControlExample as ɵbl, MyTelInput as ɵbk, FormFieldErrorExample as ɵbm, FormFieldHintExample as ɵbn, FormFieldOverviewExample as ɵbo, FormFieldPlaceholderExample as ɵbp, FormFieldPrefixSuffixExample as ɵbq, FormFieldThemingExample as ɵbr, GridListDynamicExample as ɵbs, GridListOverviewExample as ɵbt, IconOverviewExample as ɵbu, IconSvgExample as ɵbv, InputAutosizeTextareaExample as ɵbw, InputClearableExample as ɵbx, InputErrorStateMatcherExample as ɵby, InputErrorsExample as ɵbz, InputFormExample as ɵca, InputHintExample as ɵcb, InputOverviewExample as ɵcc, InputPrefixSuffixExample as ɵcd, ListSectionsExample as ɵce, ListSelectionExample as ɵcf, ExampleMaterialModule as ɵed, MenuIconsExample as ɵcg, MenuOverviewExample as ɵch, NestedMenuExample as ɵci, PaginatorConfigurableExample as ɵcj, PaginatorOverviewExample as ɵck, ProgressBarBufferExample as ɵcl, ProgressBarConfigurableExample as ɵcm, ProgressBarDeterminateExample as ɵcn, ProgressBarIndeterminateExample as ɵco, ProgressBarQueryExample as ɵcp, ProgressSpinnerConfigurableExample as ɵcq, ProgressSpinnerOverviewExample as ɵcr, RadioNgModelExample as ɵcs, RadioOverviewExample as ɵct, SelectCustomTriggerExample as ɵcu, SelectDisabledExample as ɵcv, SelectErrorStateMatcherExample as ɵcw, SelectFormExample as ɵcx, SelectHintErrorExample as ɵcy, SelectMultipleExample as ɵcz, SelectNoRippleExample as ɵda, SelectOptgroupExample as ɵdb, SelectOverviewExample as ɵdc, SelectPanelClassExample as ɵdd, SelectResetExample as ɵde, SelectValueBindingExample as ɵdf, SidenavFabExample as ɵdg, SidenavOverviewExample as ɵdh, SlideToggleConfigurableExample as ɵdi, SlideToggleFormsExample as ɵdj, SlideToggleOverviewExample as ɵdk, SliderConfigurableExample as ɵdl, SliderOverviewExample as ɵdm, PizzaPartyComponent as ɵdo, SnackBarComponentExample as ɵdn, SnackBarOverviewExample as ɵdp, SortOverviewExample as ɵdq, TableBasicExample as ɵdr, TableFilteringExample as ɵds, TableHttpExample as ɵdt, TableOverviewExample as ɵdu, TablePaginationExample as ɵdv, TableSelectionExample as ɵdw, TableSortingExample as ɵdx, TabsOverviewExample as ɵdy, TabsTemplateLabelExample as ɵdz, ToolbarOverviewExample as ɵea, TooltipOverviewExample as ɵeb, TooltipPositionExample as ɵec };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerDisabledExample as ɵp, DatepickerEventsExample as ɵq, DatepickerFilterExample as ɵr, DatepickerFormatsExample as ɵt, MY_FORMATS as ɵs, DatepickerLocaleExample as ɵu, DatepickerMinMaxExample as ɵv, DatepickerMomentExample as ɵw, DatepickerStartViewExample as ɵx, DatepickerTouchExample as ɵy, DatepickerValueExample as ɵz, DialogContentExample as ɵba, DialogContentExampleDialog as ɵbb, DialogDataExample as ɵbc, DialogDataExampleDialog as ɵbd, DialogElementsExample as ɵbe, DialogElementsExampleDialog as ɵbf, DialogOverviewExample as ɵbg, DialogOverviewExampleDialog as ɵbh, ElevationOverviewExample as ɵbi, ExpansionStepsExample as ɵbj, FormFieldCustomControlExample as ɵbl, MyTelInput as ɵbk, FormFieldErrorExample as ɵbm, FormFieldHintExample as ɵbn, FormFieldOverviewExample as ɵbo, FormFieldPlaceholderExample as ɵbp, FormFieldPrefixSuffixExample as ɵbq, FormFieldThemingExample as ɵbr, GridListDynamicExample as ɵbs, GridListOverviewExample as ɵbt, IconOverviewExample as ɵbu, IconSvgExample as ɵbv, InputAutosizeTextareaExample as ɵbw, InputClearableExample as ɵbx, InputErrorStateMatcherExample as ɵby, InputErrorsExample as ɵbz, InputFormExample as ɵca, InputHintExample as ɵcb, InputOverviewExample as ɵcc, InputPrefixSuffixExample as ɵcd, ListSectionsExample as ɵce, ListSelectionExample as ɵcf, ExampleMaterialModule as ɵej, MenuIconsExample as ɵcg, MenuOverviewExample as ɵch, NestedMenuExample as ɵci, PaginatorConfigurableExample as ɵcj, PaginatorOverviewExample as ɵck, ProgressBarBufferExample as ɵcl, ProgressBarConfigurableExample as ɵcm, ProgressBarDeterminateExample as ɵcn, ProgressBarIndeterminateExample as ɵco, ProgressBarQueryExample as ɵcp, ProgressSpinnerConfigurableExample as ɵcq, ProgressSpinnerOverviewExample as ɵcr, RadioNgModelExample as ɵcs, RadioOverviewExample as ɵct, SelectCustomTriggerExample as ɵcu, SelectDisabledExample as ɵcv, SelectErrorStateMatcherExample as ɵcw, SelectFormExample as ɵcx, SelectHintErrorExample as ɵcy, SelectMultipleExample as ɵcz, SelectNoRippleExample as ɵda, SelectOptgroupExample as ɵdb, SelectOverviewExample as ɵdc, SelectPanelClassExample as ɵdd, SelectResetExample as ɵde, SelectValueBindingExample as ɵdf, SidenavDisableCloseExample as ɵdg, SidenavDrawerOverviewExample as ɵdh, SidenavFixedExample as ɵdi, SidenavModeExample as ɵdj, SidenavOpenCloseExample as ɵdk, SidenavOverviewExample as ɵdl, SidenavPositionExample as ɵdm, SidenavResponsiveExample as ɵdn, SlideToggleConfigurableExample as ɵdo, SlideToggleFormsExample as ɵdp, SlideToggleOverviewExample as ɵdq, SliderConfigurableExample as ɵdr, SliderOverviewExample as ɵds, PizzaPartyComponent as ɵdu, SnackBarComponentExample as ɵdt, SnackBarOverviewExample as ɵdv, SortOverviewExample as ɵdw, TableBasicExample as ɵdx, TableFilteringExample as ɵdy, TableHttpExample as ɵdz, TableOverviewExample as ɵea, TablePaginationExample as ɵeb, TableSelectionExample as ɵec, TableSortingExample as ɵed, TabsOverviewExample as ɵee, TabsTemplateLabelExample as ɵef, ToolbarOverviewExample as ɵeg, TooltipOverviewExample as ɵeh, TooltipPositionExample as ɵei };
 //# sourceMappingURL=material-examples.es5.js.map

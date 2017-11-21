@@ -1,0 +1,21 @@
+<span class="hljs-keyword">import</span> {Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatSidenav} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/sidenav'</span>;
+
+<span class="hljs-comment">/** @title Sidenav with custom escape and backdrop click behavior */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'sidenav-disable-close-example'</span>,
+  templateUrl: <span class="hljs-string">'sidenav-disable-close-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'sidenav-disable-close-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavDisableCloseExample {
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'sidenav'</span>) sidenav: MatSidenav;
+
+  reason = <span class="hljs-string">''</span>;
+
+  close(reason: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">this</span>.reason = reason;
+    <span class="hljs-keyword">this</span>.sidenav.close();
+  }
+
+  shouldRun = [<span class="hljs-regexp">/(^|\.)plnkr\.co$/</span>, <span class="hljs-regexp">/(^|\.)stackblitz\.io$/</span>].some(<span class="hljs-function"><span class="hljs-params">h</span> =&gt;</span> h.test(<span class="hljs-built_in">window</span>.location.host));
+}

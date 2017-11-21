@@ -1,0 +1,31 @@
+<span class="hljs-selector-class">.example-container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">position</span>: absolute;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.example-is-mobile</span> <span class="hljs-selector-class">.example-toolbar</span> {
+  <span class="hljs-attribute">position</span>: fixed;
+  <span class="hljs-comment">/* Make sure the toolbar will stay on top of the content as it scrolls past. */</span>
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">2</span>;
+}
+
+<span class="hljs-selector-tag">h1</span><span class="hljs-selector-class">.example-app-name</span> {
+  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8px</span>;
+}
+
+<span class="hljs-selector-class">.example-sidenav-container</span> {
+  <span class="hljs-comment">/* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `&lt;mat-sidenav-content&gt;` to act as our scrolling element for desktop layouts. */</span>
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
+}
+
+<span class="hljs-selector-class">.example-is-mobile</span> <span class="hljs-selector-class">.example-sidenav-container</span> {
+  <span class="hljs-comment">/* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `&lt;body&gt;` to be our scrolling element for mobile layouts. */</span>
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">0</span> auto;
+}

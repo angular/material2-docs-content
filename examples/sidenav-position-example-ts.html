@@ -1,0 +1,11 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/** @title Implicit main content with two sidenavs */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'sidenav-position-example'</span>,
+  templateUrl: <span class="hljs-string">'sidenav-position-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'sidenav-position-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavPositionExample {
+  shouldRun = [<span class="hljs-regexp">/(^|\.)plnkr\.co$/</span>, <span class="hljs-regexp">/(^|\.)stackblitz\.io$/</span>].some(<span class="hljs-function"><span class="hljs-params">h</span> =&gt;</span> h.test(<span class="hljs-built_in">window</span>.location.host));
+}
