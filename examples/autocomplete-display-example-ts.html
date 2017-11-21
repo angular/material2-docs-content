@@ -1,8 +1,8 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/startWith'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/map'</span>;
+<span class="hljs-keyword">import</span> {startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators/startWith'</span>;
+<span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators/map'</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> User {
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> name: <span class="hljs-built_in">string</span></span>) { }
@@ -30,9 +30,11 @@
 
   ngOnInit() {
     <span class="hljs-keyword">this</span>.filteredOptions = <span class="hljs-keyword">this</span>.myControl.valueChanges
-        .startWith(<span class="hljs-literal">null</span>)
-        .map(<span class="hljs-function"><span class="hljs-params">user</span> =&gt;</span> user &amp;&amp; <span class="hljs-keyword">typeof</span> user === <span class="hljs-string">'object'</span> ? user.name : user)
-        .map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> name ? <span class="hljs-keyword">this</span>.filter(name) : <span class="hljs-keyword">this</span>.options.slice());
+      .pipe(
+        startWith({} <span class="hljs-keyword">as</span> User),
+        map(<span class="hljs-function"><span class="hljs-params">user</span> =&gt;</span> user &amp;&amp; <span class="hljs-keyword">typeof</span> user === <span class="hljs-string">'object'</span> ? user.name : user),
+        map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> name ? <span class="hljs-keyword">this</span>.filter(name) : <span class="hljs-keyword">this</span>.options.slice())
+      );
   }
 
   filter(name: <span class="hljs-built_in">string</span>): User[] {

@@ -1,8 +1,8 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/startWith'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/map'</span>;
+<span class="hljs-keyword">import</span> {startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators/startWith'</span>;
+<span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators/map'</span>;
 
 <span class="hljs-comment">/**
  * @title Filter autocomplete
@@ -24,15 +24,17 @@
 
   filteredOptions: Observable&lt;<span class="hljs-built_in">string</span>[]&gt;;
 
-   ngOnInit() {
-      <span class="hljs-keyword">this</span>.filteredOptions = <span class="hljs-keyword">this</span>.myControl.valueChanges
-         .startWith(<span class="hljs-string">''</span>)
-         .map(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-keyword">this</span>.filter(val));
-   }
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.filteredOptions = <span class="hljs-keyword">this</span>.myControl.valueChanges
+      .pipe(
+        startWith(<span class="hljs-string">''</span>),
+        map(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-keyword">this</span>.filter(val))
+      );
+  }
 
-    filter(val: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span>[] {
-      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.options.filter(<span class="hljs-function"><span class="hljs-params">option</span> =&gt;</span>
-        option.toLowerCase().indexOf(val.toLowerCase()) === <span class="hljs-number">0</span>);
-   }
+  filter(val: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span>[] {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.options.filter(<span class="hljs-function"><span class="hljs-params">option</span> =&gt;</span>
+      option.toLowerCase().indexOf(val.toLowerCase()) === <span class="hljs-number">0</span>);
+  }
 
 }

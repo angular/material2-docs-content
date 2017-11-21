@@ -10,11 +10,10 @@ import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators 
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
 import { MAT_DIALOG_DATA, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/operator/map';
+import { startWith } from 'rxjs/operators/startWith';
+import { map } from 'rxjs/operators/map';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import 'rxjs/add/observable/merge';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
@@ -28,10 +27,10 @@ import { DomSanitizer } from '@angular/platform-browser';
 import '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/switchMap';
+import { merge } from 'rxjs/observable/merge';
+import { of } from 'rxjs/observable/of';
+import { catchError } from 'rxjs/operators/catchError';
+import { switchMap } from 'rxjs/operators/switchMap';
 
 /**
  * @fileoverview added by tsickle
@@ -108,9 +107,7 @@ class AutocompleteDisplayExample {
      */
     ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
-            .startWith(null)
-            .map(user => user && typeof user === 'object' ? user.name : user)
-            .map(name => name ? this.filter(name) : this.options.slice());
+            .pipe(startWith(/** @type {?} */ ({})), map(user => user && typeof user === 'object' ? user.name : user), map(name => name ? this.filter(name) : this.options.slice()));
     }
     /**
      * @param {?} name
@@ -158,8 +155,7 @@ class AutocompleteFilterExample {
      */
     ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
-            .startWith('')
-            .map(val => this.filter(val));
+            .pipe(startWith(''), map(val => this.filter(val)));
     }
     /**
      * @param {?} val
@@ -183,6 +179,7 @@ AutocompleteFilterExample.ctorParameters = () => [];
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+
 /**
  * \@title Autocomplete overview
  */
@@ -216,8 +213,7 @@ class AutocompleteOverviewExample {
         ];
         this.stateCtrl = new FormControl();
         this.filteredStates = this.stateCtrl.valueChanges
-            .startWith(null)
-            .map(state => state ? this.filterStates(state) : this.states.slice());
+            .pipe(startWith(''), map(state => state ? this.filterStates(state) : this.states.slice()));
     }
     /**
      * @param {?} name
@@ -3267,26 +3263,22 @@ class TableHttpExample {
         this.exampleDatabase = new ExampleHttpDao(this.http);
         // If the user changes the sort order, reset back to the first page.
         this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
-        Observable.merge(this.sort.sortChange, this.paginator.page)
-            .startWith(null)
-            .switchMap(() => {
+        merge(this.sort.sortChange, this.paginator.page)
+            .pipe(startWith({}), switchMap(() => {
             this.isLoadingResults = true;
             return /** @type {?} */ ((this.exampleDatabase)).getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
-        })
-            .map(data => {
+        }), map(data => {
             // Flip flag to show that loading has finished.
             this.isLoadingResults = false;
             this.isRateLimitReached = false;
             this.resultsLength = data.total_count;
             return data.items;
-        })
-            .catch(() => {
+        }), catchError(() => {
             this.isLoadingResults = false;
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             this.isRateLimitReached = true;
-            return Observable.of([]);
-        })
-            .subscribe(data => this.dataSource.data = data);
+            return of([]);
+        })).subscribe(data => this.dataSource.data = data);
     }
 }
 TableHttpExample.decorators = [

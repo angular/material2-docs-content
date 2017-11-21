@@ -1,14 +1,18 @@
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/operator/map';
+export declare class State {
+    name: string;
+    population: string;
+    flag: string;
+    constructor(name: string, population: string, flag: string);
+}
 /**
  * @title Autocomplete overview
  */
 export declare class AutocompleteOverviewExample {
     stateCtrl: FormControl;
     filteredStates: Observable<any[]>;
-    states: any[];
+    states: State[];
     constructor();
-    filterStates(name: string): any[];
+    filterStates(name: string): State[];
 }

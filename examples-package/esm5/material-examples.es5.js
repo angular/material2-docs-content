@@ -10,13 +10,12 @@ import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators 
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
 import { MAT_DIALOG_DATA, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/operator/map';
+import { startWith } from 'rxjs/operators/startWith';
+import { map } from 'rxjs/operators/map';
 import { __extends } from 'tslib';
 import * as tslib_1 from 'tslib';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import 'rxjs/add/observable/merge';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
@@ -30,10 +29,10 @@ import { DomSanitizer } from '@angular/platform-browser';
 import '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/switchMap';
+import { merge } from 'rxjs/observable/merge';
+import { of } from 'rxjs/observable/of';
+import { catchError } from 'rxjs/operators/catchError';
+import { switchMap } from 'rxjs/operators/switchMap';
 
 /**
  * @fileoverview added by tsickle
@@ -115,9 +114,7 @@ var AutocompleteDisplayExample = (function () {
     function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
-            .startWith(null)
-            .map(function (user) { return user && typeof user === 'object' ? user.name : user; })
-            .map(function (name) { return name ? _this.filter(name) : _this.options.slice(); });
+            .pipe(startWith(/** @type {?} */ ({})), map(function (user) { return user && typeof user === 'object' ? user.name : user; }), map(function (name) { return name ? _this.filter(name) : _this.options.slice(); }));
     };
     /**
      * @param {?} name
@@ -180,8 +177,7 @@ var AutocompleteFilterExample = (function () {
     function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
-            .startWith('')
-            .map(function (val) { return _this.filter(val); });
+            .pipe(startWith(''), map(function (val) { return _this.filter(val); }));
     };
     /**
      * @param {?} val
@@ -246,8 +242,7 @@ var AutocompleteOverviewExample = (function () {
         ];
         this.stateCtrl = new FormControl();
         this.filteredStates = this.stateCtrl.valueChanges
-            .startWith(null)
-            .map(function (state) { return state ? _this.filterStates(state) : _this.states.slice(); });
+            .pipe(startWith(''), map(function (state) { return state ? _this.filterStates(state) : _this.states.slice(); }));
     }
     /**
      * @param {?} name
@@ -3585,28 +3580,24 @@ var TableHttpExample = (function () {
         this.exampleDatabase = new ExampleHttpDao(this.http);
         // If the user changes the sort order, reset back to the first page.
         this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
-        Observable.merge(this.sort.sortChange, this.paginator.page)
-            .startWith(null)
-            .switchMap(function () {
+        merge(this.sort.sortChange, this.paginator.page)
+            .pipe(startWith({}), switchMap(function () {
             _this.isLoadingResults = true;
             return /** @type {?} */ ((_this.exampleDatabase)).getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
-        })
-            .map(function (data) {
+        }), map(function (data) {
             // Flip flag to show that loading has finished.
             // Flip flag to show that loading has finished.
             _this.isLoadingResults = false;
             _this.isRateLimitReached = false;
             _this.resultsLength = data.total_count;
             return data.items;
-        })
-            .catch(function () {
+        }), catchError(function () {
             _this.isLoadingResults = false;
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             _this.isRateLimitReached = true;
-            return Observable.of([]);
-        })
-            .subscribe(function (data) { return _this.dataSource.data = data; });
+            return of([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
     TableHttpExample.decorators = [
         { type: Component, args: [{

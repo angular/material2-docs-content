@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/add/operator/startWith'), require('rxjs/add/operator/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('rxjs/add/observable/merge'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/material/form-field'), require('rxjs/Subject'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('rxjs/Observable'), require('rxjs/add/observable/of'), require('rxjs/add/operator/catch'), require('rxjs/add/operator/switchMap')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/add/operator/startWith', 'rxjs/add/operator/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', 'rxjs/add/observable/merge', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/material/form-field', 'rxjs/Subject', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', 'rxjs/Observable', 'rxjs/add/observable/of', 'rxjs/add/operator/catch', 'rxjs/add/operator/switchMap'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable.prototype,global.Rx.Observable.prototype,global.ng.cdk.collections,global.Rx,global.Rx.Observable,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.material.formField,global.Rx,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.Rx));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_add_operator_startWith,rxjs_add_operator_map,_angular_cdk_collections,rxjs_BehaviorSubject,rxjs_add_observable_merge,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,_angular_material_formField,rxjs_Subject,_angular_platformBrowser,_angular_material_sidenav,_angular_cdk_layout,_angular_common_http,rxjs_Observable) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/operators/startWith'), require('rxjs/operators/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/material/form-field'), require('rxjs/Subject'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('rxjs/observable/merge'), require('rxjs/observable/of'), require('rxjs/operators/catchError'), require('rxjs/operators/switchMap')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/operators/startWith', 'rxjs/operators/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/material/form-field', 'rxjs/Subject', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', 'rxjs/observable/merge', 'rxjs/observable/of', 'rxjs/operators/catchError', 'rxjs/operators/switchMap'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.Observable,global.Rx.Observable,global.ng.cdk.collections,global.Rx,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.material.formField,global.Rx,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.Rx.Observable,global.Rx.Observable,global.Rx.Observable,global.Rx.Observable));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_operators_startWith,rxjs_operators_map,_angular_cdk_collections,rxjs_BehaviorSubject,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,_angular_material_formField,rxjs_Subject,_angular_platformBrowser,_angular_material_sidenav,_angular_cdk_layout,_angular_common_http,rxjs_observable_merge,rxjs_observable_of,rxjs_operators_catchError,rxjs_operators_switchMap) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -119,9 +119,7 @@ var AutocompleteDisplayExample = (function () {
     function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
-            .startWith(null)
-            .map(function (user) { return user && typeof user === 'object' ? user.name : user; })
-            .map(function (name) { return name ? _this.filter(name) : _this.options.slice(); });
+            .pipe(rxjs_operators_startWith.startWith(/** @type {?} */ ({})), rxjs_operators_map.map(function (user) { return user && typeof user === 'object' ? user.name : user; }), rxjs_operators_map.map(function (name) { return name ? _this.filter(name) : _this.options.slice(); }));
     };
     /**
      * @param {?} name
@@ -184,8 +182,7 @@ var AutocompleteFilterExample = (function () {
     function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
-            .startWith('')
-            .map(function (val) { return _this.filter(val); });
+            .pipe(rxjs_operators_startWith.startWith(''), rxjs_operators_map.map(function (val) { return _this.filter(val); }));
     };
     /**
      * @param {?} val
@@ -250,8 +247,7 @@ var AutocompleteOverviewExample = (function () {
         ];
         this.stateCtrl = new _angular_forms.FormControl();
         this.filteredStates = this.stateCtrl.valueChanges
-            .startWith(null)
-            .map(function (state) { return state ? _this.filterStates(state) : _this.states.slice(); });
+            .pipe(rxjs_operators_startWith.startWith(''), rxjs_operators_map.map(function (state) { return state ? _this.filterStates(state) : _this.states.slice(); }));
     }
     /**
      * @param {?} name
@@ -3589,28 +3585,24 @@ var TableHttpExample = (function () {
         this.exampleDatabase = new ExampleHttpDao(this.http);
         // If the user changes the sort order, reset back to the first page.
         this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
-        rxjs_Observable.Observable.merge(this.sort.sortChange, this.paginator.page)
-            .startWith(null)
-            .switchMap(function () {
+        rxjs_observable_merge.merge(this.sort.sortChange, this.paginator.page)
+            .pipe(rxjs_operators_startWith.startWith({}), rxjs_operators_switchMap.switchMap(function () {
             _this.isLoadingResults = true;
             return /** @type {?} */ ((_this.exampleDatabase)).getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
-        })
-            .map(function (data) {
+        }), rxjs_operators_map.map(function (data) {
             // Flip flag to show that loading has finished.
             // Flip flag to show that loading has finished.
             _this.isLoadingResults = false;
             _this.isRateLimitReached = false;
             _this.resultsLength = data.total_count;
             return data.items;
-        })
-            .catch(function () {
+        }), rxjs_operators_catchError.catchError(function () {
             _this.isLoadingResults = false;
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             _this.isRateLimitReached = true;
-            return rxjs_Observable.Observable.of([]);
-        })
-            .subscribe(function (data) { return _this.dataSource.data = data; });
+            return rxjs_observable_of.of([]);
+        })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
     TableHttpExample.decorators = [
         { type: _angular_core.Component, args: [{

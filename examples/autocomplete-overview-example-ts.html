@@ -2,8 +2,12 @@
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/startWith'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-string">'rxjs/add/operator/map'</span>;
+<span class="hljs-keyword">import</span> {startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators/startWith'</span>;
+<span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators/map'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> State {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> name: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> population: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> flag: <span class="hljs-built_in">string</span></span>) { }
+}
 
 <span class="hljs-comment">/**
  * @title Autocomplete overview
@@ -17,7 +21,7 @@
   stateCtrl: FormControl;
   filteredStates: Observable&lt;<span class="hljs-built_in">any</span>[]&gt;;
 
-  states: <span class="hljs-built_in">any</span>[] = [
+  states: State[] = [
     {
       name: <span class="hljs-string">'Arkansas'</span>,
       population: <span class="hljs-string">'2.978M'</span>,
@@ -47,8 +51,10 @@
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
     <span class="hljs-keyword">this</span>.stateCtrl = <span class="hljs-keyword">new</span> FormControl();
     <span class="hljs-keyword">this</span>.filteredStates = <span class="hljs-keyword">this</span>.stateCtrl.valueChanges
-        .startWith(<span class="hljs-literal">null</span>)
-        .map(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state ? <span class="hljs-keyword">this</span>.filterStates(state) : <span class="hljs-keyword">this</span>.states.slice());
+      .pipe(
+        startWith(<span class="hljs-string">''</span>),
+        map(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state ? <span class="hljs-keyword">this</span>.filterStates(state) : <span class="hljs-keyword">this</span>.states.slice())
+      );
   }
 
   filterStates(name: <span class="hljs-built_in">string</span>) {

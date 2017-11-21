@@ -1,7 +1,5 @@
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/startWith';
-import 'rxjs/add/operator/map';
 export declare class User {
     name: string;
     constructor(name: string);
