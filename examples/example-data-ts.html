@@ -19,7 +19,7 @@
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">example: <span class="hljs-built_in">string</span></span>) {
     <span class="hljs-keyword">if</span> (example &amp;&amp; EXAMPLE_COMPONENTS[example]) {
-      <span class="hljs-keyword">this</span>.examplePath = <span class="hljs-string">`/assets/plunker/examples/<span class="hljs-subst">${example}</span>/`</span>;
+      <span class="hljs-keyword">this</span>.examplePath = <span class="hljs-string">`/assets/stackblitz/examples/<span class="hljs-subst">${example}</span>/`</span>;
       <span class="hljs-comment">// TODO(tinayuangao): Do not hard-code extensions</span>
       <span class="hljs-keyword">this</span>.exampleFiles = [<span class="hljs-string">'html'</span>, <span class="hljs-string">'ts'</span>, <span class="hljs-string">'css'</span>]
         .map(<span class="hljs-function">(<span class="hljs-params">extension</span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example.<span class="hljs-subst">${extension}</span>`</span>);
