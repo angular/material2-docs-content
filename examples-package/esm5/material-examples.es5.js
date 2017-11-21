@@ -4721,7 +4721,7 @@ var ExampleData = (function () {
         this.indexFilename = 'button-demo';
         this.componentName = 'ButtonDemo';
         if (example && EXAMPLE_COMPONENTS[example]) {
-            this.examplePath = "/assets/stackblitz/examples/" + example + "/";
+            this.examplePath = "/assets/plunker/examples/" + example + "/";
             // TODO(tinayuangao): Do not hard-code extensions
             this.exampleFiles = ['html', 'ts', 'css']
                 .map(function (extension) { return example + "-example." + extension; });
