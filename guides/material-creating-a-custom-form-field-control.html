@@ -97,7 +97,7 @@ the <code class="docs-markdown-code">MatFormFieldControl</code> interface, see t
           <code class="docs-markdown-code">value</code>
         </h4>
       <p class="docs-markdown-p">This property allows someone to set or get the value of our control. Its type should be the same
-type we used for the type parameter when we implemented <code class="docs-markdown-code">MatFormFieldControl</code>. Since our component 
+type we used for the type parameter when we implemented <code class="docs-markdown-code">MatFormFieldControl</code>. Since our component
 already has a value property, we don't need to do anything for this one.</p>
 
         <h4 id="-code-statechanges-code-" class="docs-header-link docs-markdown-h4">
@@ -181,10 +181,9 @@ inputs are focused. We can use the <code class="docs-markdown-code">FocusMonitor
 need to remember to emit on the <code class="docs-markdown-code">stateChanges</code> stream so change detection can happen.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">focused = <span class="hljs-literal">false</span>;
 
-<span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder, <span class="hljs-keyword">private</span> fm: FocusMonitor, <span class="hljs-keyword">private</span> elRef: ElementRef,
-            renderer: Renderer2</span>) {
+<span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder, <span class="hljs-keyword">private</span> fm: FocusMonitor, <span class="hljs-keyword">private</span> elRef: ElementRef</span>) {
   ...
-  fm.monitor(elRef.nativeElement, renderer, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
+  fm.monitor(elRef.nativeElement, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
     <span class="hljs-keyword">this</span>.focused = !!origin;
     <span class="hljs-keyword">this</span>.stateChanges.next();
   });
