@@ -1451,7 +1451,7 @@ var MyTelInput = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(MyTelInput.prototype, "shouldPlaceholderFloat", {
+    Object.defineProperty(MyTelInput.prototype, "shouldLabelFloat", {
         get: /**
          * @return {?}
          */
@@ -1580,7 +1580,7 @@ var MyTelInput = (function () {
                     styles: ["div { display: flex; } input { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } span { opacity: 0; transition: opacity 200ms; } :host.floating span { opacity: 1; } "],
                     providers: [{ provide: _angular_material_formField.MatFormFieldControl, useExisting: MyTelInput }],
                     host: {
-                        '[class.floating]': 'shouldPlaceholderFloat',
+                        '[class.floating]': 'shouldLabelFloat',
                         '[id]': 'id',
                         '[attr.aria-describedby]': 'describedBy',
                     }
@@ -1700,27 +1700,27 @@ var FormFieldOverviewExample = (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Form field with placeholder
+ * \@title Form field with label
  */
-var FormFieldPlaceholderExample = (function () {
-    function FormFieldPlaceholderExample(fb) {
+var FormFieldLabelExample = (function () {
+    function FormFieldLabelExample(fb) {
         this.options = fb.group({
             hideRequired: false,
-            floatPlaceholder: 'auto',
+            floatLabel: 'auto',
         });
     }
-    FormFieldPlaceholderExample.decorators = [
+    FormFieldLabelExample.decorators = [
         { type: _angular_core.Component, args: [{
-                    selector: 'form-field-placeholder-example',
-                    template: "<div class=\"example-container\"><form class=\"example-container\" [formGroup]=\"options\"><mat-checkbox formControlName=\"hideRequired\">Hide required marker</mat-checkbox><div><label>Float placeholder:</label><mat-radio-group formControlName=\"floatPlaceholder\"><mat-radio-button value=\"auto\">Auto</mat-radio-button><mat-radio-button value=\"always\">Always</mat-radio-button><mat-radio-button value=\"never\">Never</mat-radio-button></mat-radio-group></div></form><mat-form-field [hideRequiredMarker]=\"options.value.hideRequired\" [floatPlaceholder]=\"options.value.floatPlaceholder\"><input matInput placeholder=\"Simple placeholder\" required></mat-form-field><mat-form-field [hideRequiredMarker]=\"options.value.hideRequired\" [floatPlaceholder]=\"options.value.floatPlaceholder\"><mat-select required><mat-option>-- None --</mat-option><mat-option value=\"option\">Option</mat-option></mat-select><mat-placeholder><mat-icon>favorite</mat-icon><b>Fancy</b> <i>placeholder</i></mat-placeholder></mat-form-field></div>",
+                    selector: 'form-field-label-example',
+                    template: "<div class=\"example-container\"><form class=\"example-container\" [formGroup]=\"options\"><mat-checkbox formControlName=\"hideRequired\">Hide required marker</mat-checkbox><div><label>Float label:</label><mat-radio-group formControlName=\"floatLabel\"><mat-radio-button value=\"auto\">Auto</mat-radio-button><mat-radio-button value=\"always\">Always</mat-radio-button><mat-radio-button value=\"never\">Never</mat-radio-button></mat-radio-group></div></form><mat-form-field [hideRequiredMarker]=\"options.value.hideRequired\" [floatLabel]=\"options.value.floatLabel\"><input matInput placeholder=\"Simple placeholder\" required></mat-form-field><mat-form-field [floatLabel]=\"options.value.floatLabel\"><mat-label>Both a label and a placeholder</mat-label><input matInput placeholder=\"Simple placeholder\"></mat-form-field><mat-form-field [hideRequiredMarker]=\"options.value.hideRequired\" [floatLabel]=\"options.value.floatLabel\"><mat-select required><mat-option>-- None --</mat-option><mat-option value=\"option\">Option</mat-option></mat-select><mat-placeholder><mat-icon>favorite</mat-icon><b>Fancy</b> <i>placeholder</i></mat-placeholder></mat-form-field></div>",
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-container form { margin-bottom: 20px; } .example-container form > * { margin: 5px 0; } .example-container .mat-radio-button { margin: 0 5px; } "]
                 },] },
     ];
     /** @nocollapse */
-    FormFieldPlaceholderExample.ctorParameters = function () { return [
+    FormFieldLabelExample.ctorParameters = function () { return [
         { type: _angular_forms.FormBuilder, },
     ]; };
-    return FormFieldPlaceholderExample;
+    return FormFieldLabelExample;
 }());
 
 /**
@@ -4342,9 +4342,9 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
-    'form-field-placeholder': {
-        title: 'Form field with placeholder ',
-        component: FormFieldPlaceholderExample,
+    'form-field-label': {
+        title: 'Form field with label ',
+        component: FormFieldLabelExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -4827,7 +4827,7 @@ var EXAMPLE_LIST = [
     FormFieldErrorExample,
     FormFieldHintExample,
     FormFieldOverviewExample,
-    FormFieldPlaceholderExample,
+    FormFieldLabelExample,
     FormFieldPrefixSuffixExample,
     FormFieldThemingExample,
     GridListDynamicExample,
@@ -5019,8 +5019,8 @@ exports.ɵbl = FormFieldCustomControlExample;
 exports.ɵbk = MyTelInput;
 exports.ɵbm = FormFieldErrorExample;
 exports.ɵbn = FormFieldHintExample;
+exports.ɵbp = FormFieldLabelExample;
 exports.ɵbo = FormFieldOverviewExample;
-exports.ɵbp = FormFieldPlaceholderExample;
 exports.ɵbq = FormFieldPrefixSuffixExample;
 exports.ɵbr = FormFieldThemingExample;
 exports.ɵbs = GridListDynamicExample;

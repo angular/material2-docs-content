@@ -1,19 +1,19 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormBuilder, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
-<span class="hljs-comment">/** @title Form field with placeholder */</span>
+<span class="hljs-comment">/** @title Form field with label */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'form-field-placeholder-example'</span>,
-  templateUrl: <span class="hljs-string">'form-field-placeholder-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'form-field-placeholder-example.css'</span>]
+  selector: <span class="hljs-string">'form-field-label-example'</span>,
+  templateUrl: <span class="hljs-string">'form-field-label-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'form-field-label-example.css'</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldPlaceholderExample {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldLabelExample {
   options: FormGroup;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder</span>) {
     <span class="hljs-keyword">this</span>.options = fb.group({
       hideRequired: <span class="hljs-literal">false</span>,
-      floatPlaceholder: <span class="hljs-string">'auto'</span>,
+      floatLabel: <span class="hljs-string">'auto'</span>,
     });
   }
 }

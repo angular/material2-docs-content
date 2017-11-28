@@ -51,8 +51,8 @@ import {ExpansionStepsExample} from './expansion-steps/expansion-steps-example';
 import {MyTelInput,FormFieldCustomControlExample} from './form-field-custom-control/form-field-custom-control-example';
 import {FormFieldErrorExample} from './form-field-error/form-field-error-example';
 import {FormFieldHintExample} from './form-field-hint/form-field-hint-example';
+import {FormFieldLabelExample} from './form-field-label/form-field-label-example';
 import {FormFieldOverviewExample} from './form-field-overview/form-field-overview-example';
-import {FormFieldPlaceholderExample} from './form-field-placeholder/form-field-placeholder-example';
 import {FormFieldPrefixSuffixExample} from './form-field-prefix-suffix/form-field-prefix-suffix-example';
 import {FormFieldThemingExample} from './form-field-theming/form-field-theming-example';
 import {GridListDynamicExample} from './grid-list-dynamic/grid-list-dynamic-example';
@@ -356,15 +356,15 @@ export const EXAMPLE_COMPONENTS = {
     additionalFiles: null,
     selectorName: null
   },
-  'form-field-overview': {
-    title: 'Simple form field ',
-    component: FormFieldOverviewExample,
+  'form-field-label': {
+    title: 'Form field with label ',
+    component: FormFieldLabelExample,
     additionalFiles: null,
     selectorName: null
   },
-  'form-field-placeholder': {
-    title: 'Form field with placeholder ',
-    component: FormFieldPlaceholderExample,
+  'form-field-overview': {
+    title: 'Simple form field ',
+    component: FormFieldOverviewExample,
     additionalFiles: null,
     selectorName: null
   },
@@ -847,8 +847,8 @@ export const EXAMPLE_LIST = [
   MyTelInput,FormFieldCustomControlExample,
   FormFieldErrorExample,
   FormFieldHintExample,
+  FormFieldLabelExample,
   FormFieldOverviewExample,
-  FormFieldPlaceholderExample,
   FormFieldPrefixSuffixExample,
   FormFieldThemingExample,
   GridListDynamicExample,

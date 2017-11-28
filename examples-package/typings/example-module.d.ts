@@ -43,7 +43,7 @@ import { MyTelInput, FormFieldCustomControlExample } from './form-field-custom-c
 import { FormFieldErrorExample } from './form-field-error/form-field-error-example';
 import { FormFieldHintExample } from './form-field-hint/form-field-hint-example';
 import { FormFieldOverviewExample } from './form-field-overview/form-field-overview-example';
-import { FormFieldPlaceholderExample } from './form-field-placeholder/form-field-placeholder-example';
+import { FormFieldLabelExample } from './form-field-label/form-field-label-example';
 import { FormFieldPrefixSuffixExample } from './form-field-prefix-suffix/form-field-prefix-suffix-example';
 import { FormFieldThemingExample } from './form-field-theming/form-field-theming-example';
 import { GridListDynamicExample } from './grid-list-dynamic/grid-list-dynamic-example';
@@ -352,9 +352,9 @@ export declare const EXAMPLE_COMPONENTS: {
         additionalFiles: null;
         selectorName: null;
     };
-    'form-field-placeholder': {
+    'form-field-label': {
         title: string;
-        component: typeof FormFieldPlaceholderExample;
+        component: typeof FormFieldLabelExample;
         additionalFiles: null;
         selectorName: null;
     };
@@ -797,6 +797,6 @@ export declare const EXAMPLE_COMPONENTS: {
         selectorName: null;
     };
 };
-export declare const EXAMPLE_LIST: (typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof MyTelInput | typeof FormFieldPlaceholderExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample)[];
+export declare const EXAMPLE_LIST: (typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample)[];
 export declare class ExampleModule {
 }

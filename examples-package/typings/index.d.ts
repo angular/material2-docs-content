@@ -36,8 +36,8 @@ export { ExpansionStepsExample as ɵbj } from './expansion-steps/expansion-steps
 export { FormFieldCustomControlExample as ɵbl, MyTelInput as ɵbk } from './form-field-custom-control/form-field-custom-control-example';
 export { FormFieldErrorExample as ɵbm } from './form-field-error/form-field-error-example';
 export { FormFieldHintExample as ɵbn } from './form-field-hint/form-field-hint-example';
+export { FormFieldLabelExample as ɵbp } from './form-field-label/form-field-label-example';
 export { FormFieldOverviewExample as ɵbo } from './form-field-overview/form-field-overview-example';
-export { FormFieldPlaceholderExample as ɵbp } from './form-field-placeholder/form-field-placeholder-example';
 export { FormFieldPrefixSuffixExample as ɵbq } from './form-field-prefix-suffix/form-field-prefix-suffix-example';
 export { FormFieldThemingExample as ɵbr } from './form-field-theming/form-field-theming-example';
 export { GridListDynamicExample as ɵbs } from './grid-list-dynamic/grid-list-dynamic-example';

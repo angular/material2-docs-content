@@ -207,16 +207,16 @@ empty if all of the parts are empty.</p>
 }
 </code></pre>
 
-        <h4 id="-code-shouldplaceholderfloat-code-" class="docs-header-link docs-markdown-h4">
-          <span header-link="-code-shouldplaceholderfloat-code-"></span>
-          <code class="docs-markdown-code">shouldPlaceholderFloat</code>
+        <h4 id="-code-shouldlabelfloat-code-" class="docs-header-link docs-markdown-h4">
+          <span header-link="-code-shouldlabelfloat-code-"></span>
+          <code class="docs-markdown-code">shouldLabelFloat</code>
         </h4>
-      <p class="docs-markdown-p">This property is used to indicate whether the placeholder should be in the floating position. We'll
+      <p class="docs-markdown-p">This property is used to indicate whether the label should be in the floating position. We'll
 use the same logic as <code class="docs-markdown-code">matInput</code> and float the placeholder when the input is focused or non-empty.
 Since the placeholder will be overlapping our control when when it's not floating, we should hide
 the <code class="docs-markdown-code">–</code> characters when it's not floating.</p>
 <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@HostBinding</span>(<span class="hljs-string">'class.floating'</span>)
-<span class="hljs-keyword">get</span> shouldPlaceholderFloat() {
+<span class="hljs-keyword">get</span> shouldLabelFloat() {
   <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.focused || !<span class="hljs-keyword">this</span>.empty;
 }
 </code></pre>

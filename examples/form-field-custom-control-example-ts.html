@@ -19,7 +19,7 @@
   styleUrls: [<span class="hljs-string">'form-field-custom-control-example.css'</span>],
   providers: [{provide: MatFormFieldControl, useExisting: MyTelInput}],
   host: {
-    <span class="hljs-string">'[class.floating]'</span>: <span class="hljs-string">'shouldPlaceholderFloat'</span>,
+    <span class="hljs-string">'[class.floating]'</span>: <span class="hljs-string">'shouldLabelFloat'</span>,
     <span class="hljs-string">'[id]'</span>: <span class="hljs-string">'id'</span>,
     <span class="hljs-string">'[attr.aria-describedby]'</span>: <span class="hljs-string">'describedBy'</span>,
   }
@@ -44,7 +44,7 @@
     <span class="hljs-keyword">return</span> !n.area &amp;&amp; !n.exchange &amp;&amp; !n.subscriber;
   }
 
-  <span class="hljs-keyword">get</span> shouldPlaceholderFloat() {
+  <span class="hljs-keyword">get</span> shouldLabelFloat() {
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.focused || !<span class="hljs-keyword">this</span>.empty;
   }
 

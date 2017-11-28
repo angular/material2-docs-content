@@ -22,7 +22,7 @@ export declare class MyTelInput implements MatFormFieldControl<MyTel>, OnDestroy
     errorState: boolean;
     controlType: string;
     readonly empty: boolean;
-    readonly shouldPlaceholderFloat: boolean;
+    readonly shouldLabelFloat: boolean;
     id: string;
     describedBy: string;
     placeholder: string;
