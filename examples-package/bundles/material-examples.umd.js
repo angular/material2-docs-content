@@ -2099,7 +2099,7 @@ var ListOverviewExample = (function () {
     ListOverviewExample.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'list-overview-example',
-                    template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-list-item>Item 2</mat-list-item><mat-list-item>Item 3</mat-list-item></mat-list>",
+                    template: "<mat-list role=\"list\"><mat-list-item>Item 1</mat-list-item><mat-list-item>Item 2</mat-list-item><mat-list-item>Item 3</mat-list-item></mat-list>",
                 },] },
     ];
     /** @nocollapse */
