@@ -1883,7 +1883,7 @@ class ListOverviewExample {
 ListOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'list-overview-example',
-                template: "<mat-list role=\"list\"><mat-list-item>Item 1</mat-list-item><mat-list-item>Item 2</mat-list-item><mat-list-item>Item 3</mat-list-item></mat-list>",
+                template: "<mat-list role=\"list\"><mat-list-item role=\"listitem\">Item 1</mat-list-item><mat-list-item role=\"listitem\">Item 2</mat-list-item><mat-list-item role=\"listitem\">Item 3</mat-list-item></mat-list>",
             },] },
 ];
 /** @nocollapse */
