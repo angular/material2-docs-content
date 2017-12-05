@@ -3097,6 +3097,29 @@ var SidenavResponsiveExample = (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Autosize sidenav
+ */
+var SidenavAutosizeExample = (function () {
+    function SidenavAutosizeExample() {
+        this.showFiller = false;
+    }
+    SidenavAutosizeExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'sidenav-autosize-example',
+                    template: "<mat-drawer-container class=\"example-container\" autosize><mat-drawer #drawer class=\"example-sidenav\" mode=\"side\"><p>Auto-resizing sidenav</p><p *ngIf=\"showFiller\">Lorem, ipsum dolor sit amet consectetur.</p><button (click)=\"showFiller = !showFiller\" mat-raised-button>Toggle extra text</button></mat-drawer><div class=\"example-sidenav-content\"><button type=\"button\" mat-button (click)=\"drawer.toggle()\">Toggle sidenav</button></div></mat-drawer-container>",
+                    styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    SidenavAutosizeExample.ctorParameters = function () { return []; };
+    return SidenavAutosizeExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Configurable slide-toggle
  */
 var SlideToggleConfigurableExample = (function () {
@@ -4654,6 +4677,12 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'sidenav-autosize': {
+        title: 'Autosize sidenav',
+        component: SidenavAutosizeExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'slide-toggle-configurable': {
         title: 'Configurable slide-toggle',
         component: SlideToggleConfigurableExample,
@@ -4879,6 +4908,7 @@ var EXAMPLE_LIST = [
     SidenavOverviewExample,
     SidenavPositionExample,
     SidenavResponsiveExample,
+    SidenavAutosizeExample,
     SlideToggleConfigurableExample,
     SlideToggleFormsExample,
     SlideToggleOverviewExample,
@@ -5037,7 +5067,7 @@ exports.ɵcc = InputOverviewExample;
 exports.ɵcd = InputPrefixSuffixExample;
 exports.ɵce = ListSectionsExample;
 exports.ɵcf = ListSelectionExample;
-exports.ɵej = ExampleMaterialModule;
+exports.ɵek = ExampleMaterialModule;
 exports.ɵcg = MenuIconsExample;
 exports.ɵch = MenuOverviewExample;
 exports.ɵci = NestedMenuExample;
@@ -5064,6 +5094,7 @@ exports.ɵdc = SelectOverviewExample;
 exports.ɵdd = SelectPanelClassExample;
 exports.ɵde = SelectResetExample;
 exports.ɵdf = SelectValueBindingExample;
+exports.ɵdo = SidenavAutosizeExample;
 exports.ɵdg = SidenavDisableCloseExample;
 exports.ɵdh = SidenavDrawerOverviewExample;
 exports.ɵdi = SidenavFixedExample;
@@ -5072,27 +5103,27 @@ exports.ɵdk = SidenavOpenCloseExample;
 exports.ɵdl = SidenavOverviewExample;
 exports.ɵdm = SidenavPositionExample;
 exports.ɵdn = SidenavResponsiveExample;
-exports.ɵdo = SlideToggleConfigurableExample;
-exports.ɵdp = SlideToggleFormsExample;
-exports.ɵdq = SlideToggleOverviewExample;
-exports.ɵdr = SliderConfigurableExample;
-exports.ɵds = SliderOverviewExample;
-exports.ɵdu = PizzaPartyComponent;
-exports.ɵdt = SnackBarComponentExample;
-exports.ɵdv = SnackBarOverviewExample;
-exports.ɵdw = SortOverviewExample;
-exports.ɵdx = TableBasicExample;
-exports.ɵdy = TableFilteringExample;
-exports.ɵdz = TableHttpExample;
-exports.ɵea = TableOverviewExample;
-exports.ɵeb = TablePaginationExample;
-exports.ɵec = TableSelectionExample;
-exports.ɵed = TableSortingExample;
-exports.ɵee = TabsOverviewExample;
-exports.ɵef = TabsTemplateLabelExample;
-exports.ɵeg = ToolbarOverviewExample;
-exports.ɵeh = TooltipOverviewExample;
-exports.ɵei = TooltipPositionExample;
+exports.ɵdp = SlideToggleConfigurableExample;
+exports.ɵdq = SlideToggleFormsExample;
+exports.ɵdr = SlideToggleOverviewExample;
+exports.ɵds = SliderConfigurableExample;
+exports.ɵdt = SliderOverviewExample;
+exports.ɵdv = PizzaPartyComponent;
+exports.ɵdu = SnackBarComponentExample;
+exports.ɵdw = SnackBarOverviewExample;
+exports.ɵdx = SortOverviewExample;
+exports.ɵdy = TableBasicExample;
+exports.ɵdz = TableFilteringExample;
+exports.ɵea = TableHttpExample;
+exports.ɵeb = TableOverviewExample;
+exports.ɵec = TablePaginationExample;
+exports.ɵed = TableSelectionExample;
+exports.ɵee = TableSortingExample;
+exports.ɵef = TabsOverviewExample;
+exports.ɵeg = TabsTemplateLabelExample;
+exports.ɵeh = ToolbarOverviewExample;
+exports.ɵei = TooltipOverviewExample;
+exports.ɵej = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

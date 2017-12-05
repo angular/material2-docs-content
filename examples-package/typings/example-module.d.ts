@@ -95,6 +95,7 @@ import { SidenavOpenCloseExample } from './sidenav-open-close/sidenav-open-close
 import { SidenavOverviewExample } from './sidenav-overview/sidenav-overview-example';
 import { SidenavPositionExample } from './sidenav-position/sidenav-position-example';
 import { SidenavResponsiveExample } from './sidenav-responsive/sidenav-responsive-example';
+import { SidenavAutosizeExample } from './sidenav-autosize/sidenav-autosize-example';
 import { SlideToggleConfigurableExample } from './slide-toggle-configurable/slide-toggle-configurable-example';
 import { SlideToggleFormsExample } from './slide-toggle-forms/slide-toggle-forms-example';
 import { SlideToggleOverviewExample } from './slide-toggle-overview/slide-toggle-overview-example';
@@ -661,6 +662,12 @@ export declare const EXAMPLE_COMPONENTS: {
     'sidenav-responsive': {
         title: string;
         component: typeof SidenavResponsiveExample;
+        additionalFiles: null;
+        selectorName: null;
+    };
+    'sidenav-autosize': {
+        title: string;
+        component: typeof SidenavAutosizeExample;
         additionalFiles: null;
         selectorName: null;
     };

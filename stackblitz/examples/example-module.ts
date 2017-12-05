@@ -96,6 +96,7 @@ import {SelectOverviewExample} from './select-overview/select-overview-example';
 import {SelectPanelClassExample} from './select-panel-class/select-panel-class-example';
 import {SelectResetExample} from './select-reset/select-reset-example';
 import {SelectValueBindingExample} from './select-value-binding/select-value-binding-example';
+import {SidenavAutosizeExample} from './sidenav-autosize/sidenav-autosize-example';
 import {SidenavDisableCloseExample} from './sidenav-disable-close/sidenav-disable-close-example';
 import {SidenavDrawerOverviewExample} from './sidenav-drawer-overview/sidenav-drawer-overview-example';
 import {SidenavFixedExample} from './sidenav-fixed/sidenav-fixed-example';
@@ -626,6 +627,12 @@ export const EXAMPLE_COMPONENTS = {
     additionalFiles: null,
     selectorName: null
   },
+  'sidenav-autosize': {
+    title: 'Autosize sidenav',
+    component: SidenavAutosizeExample,
+    additionalFiles: null,
+    selectorName: null
+  },
   'sidenav-disable-close': {
     title: 'Sidenav with custom escape and backdrop click behavior ',
     component: SidenavDisableCloseExample,
@@ -892,6 +899,7 @@ export const EXAMPLE_LIST = [
   SelectPanelClassExample,
   SelectResetExample,
   SelectValueBindingExample,
+  SidenavAutosizeExample,
   SidenavDisableCloseExample,
   SidenavDrawerOverviewExample,
   SidenavFixedExample,

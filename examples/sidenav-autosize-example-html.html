@@ -1,0 +1,16 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-drawer-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span> <span class="hljs-attr">autosize</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-drawer</span> #<span class="hljs-attr">drawer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-sidenav"</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">"side"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Auto-resizing sidenav<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"showFiller"</span>&gt;</span>Lorem, ipsum dolor sit amet consectetur.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"showFiller = !showFiller"</span> <span class="hljs-attr">mat-raised-button</span>&gt;</span>
+      Toggle extra text
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-drawer</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-sidenav-content"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"drawer.toggle()"</span>&gt;</span>
+      Toggle sidenav
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-drawer-container</span>&gt;</span>
