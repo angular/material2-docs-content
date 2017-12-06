@@ -9,7 +9,7 @@ import { ChangeDetectorRef, Component, ElementRef, Inject, Input, NgModule, View
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
-import { MAT_DIALOG_DATA, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
+import { MAT_DIALOG_DATA, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatExpansionModule, MatFormFieldControl, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
 import { startWith } from 'rxjs/operators/startWith';
 import { map } from 'rxjs/operators/map';
 import { __extends } from 'tslib';
@@ -23,7 +23,6 @@ import * as _rollupMoment from 'moment';
 import _rollupMoment__default from 'moment';
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { MatFormFieldControl } from '@angular/material/form-field';
 import { Subject } from 'rxjs/Subject';
 import { DomSanitizer } from '@angular/platform-browser';
 import '@angular/material/sidenav';
@@ -4971,9 +4970,14 @@ var ExampleData = (function () {
             // TODO(tinayuangao): Do not hard-code extensions
             this.exampleFiles = ['html', 'ts', 'css']
                 .map(function (extension) { return example + "-example." + extension; });
+            var /** @type {?} */ exampleFilesSet = new Set(['html', 'ts', 'css'].map(function (extension) { return example + "-example." + extension; }));
             if (EXAMPLE_COMPONENTS[example].additionalFiles) {
-                this.exampleFiles = this.exampleFiles.concat(EXAMPLE_COMPONENTS[example].additionalFiles);
+                for (var _i = 0, _a = EXAMPLE_COMPONENTS[example].additionalFiles; _i < _a.length; _i++) {
+                    var file = _a[_i];
+                    exampleFilesSet.add(file);
+                }
             }
+            this.exampleFiles = Array.from(exampleFilesSet.values());
             this.selectorName = this.indexFilename = example + "-example";
             var /** @type {?} */ exampleName = example.replace(/(?:^\w|\b\w)/g, function (letter) { return letter.toUpperCase(); });
             if (EXAMPLE_COMPONENTS[example].title) {

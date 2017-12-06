@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/operators/startWith'), require('rxjs/operators/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/material/form-field'), require('rxjs/Subject'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('rxjs/observable/merge'), require('rxjs/observable/of'), require('rxjs/operators/catchError'), require('rxjs/operators/switchMap')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/operators/startWith', 'rxjs/operators/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/material/form-field', 'rxjs/Subject', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', 'rxjs/observable/merge', 'rxjs/observable/of', 'rxjs/operators/catchError', 'rxjs/operators/switchMap'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.operators,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.material.formField,global.Rx,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.Rx.Observable,global.Rx.Observable,global.Rx.operators,global.Rx.operators));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_operators_startWith,rxjs_operators_map,_angular_cdk_collections,rxjs_BehaviorSubject,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,_angular_material_formField,rxjs_Subject,_angular_platformBrowser,_angular_material_sidenav,_angular_cdk_layout,_angular_common_http,rxjs_observable_merge,rxjs_observable_of,rxjs_operators_catchError,rxjs_operators_switchMap) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/operators/startWith'), require('rxjs/operators/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('rxjs/Subject'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('rxjs/observable/merge'), require('rxjs/observable/of'), require('rxjs/operators/catchError'), require('rxjs/operators/switchMap')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/operators/startWith', 'rxjs/operators/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', 'rxjs/Subject', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', 'rxjs/observable/merge', 'rxjs/observable/of', 'rxjs/operators/catchError', 'rxjs/operators/switchMap'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.operators,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.Rx,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.Rx.Observable,global.Rx.Observable,global.Rx.operators,global.Rx.operators));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_operators_startWith,rxjs_operators_map,_angular_cdk_collections,rxjs_BehaviorSubject,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,rxjs_Subject,_angular_platformBrowser,_angular_material_sidenav,_angular_cdk_layout,_angular_common_http,rxjs_observable_merge,rxjs_observable_of,rxjs_operators_catchError,rxjs_operators_switchMap) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -1578,7 +1578,7 @@ var MyTelInput = (function () {
                     selector: 'my-tel-input',
                     template: "<div [formGroup]=\"parts\"><input class=\"area\" formControlName=\"area\" size=\"3\"> <span>&ndash;</span> <input class=\"exchange\" formControlName=\"exchange\" size=\"3\"> <span>&ndash;</span> <input class=\"subscriber\" formControlName=\"subscriber\" size=\"4\"></div>",
                     styles: ["div { display: flex; } input { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } span { opacity: 0; transition: opacity 200ms; } :host.floating span { opacity: 1; } "],
-                    providers: [{ provide: _angular_material_formField.MatFormFieldControl, useExisting: MyTelInput }],
+                    providers: [{ provide: _angular_material.MatFormFieldControl, useExisting: MyTelInput }],
                     host: {
                         '[class.floating]': 'shouldLabelFloat',
                         '[id]': 'id',
@@ -4976,9 +4976,14 @@ var ExampleData = (function () {
             // TODO(tinayuangao): Do not hard-code extensions
             this.exampleFiles = ['html', 'ts', 'css']
                 .map(function (extension) { return example + "-example." + extension; });
+            var /** @type {?} */ exampleFilesSet = new Set(['html', 'ts', 'css'].map(function (extension) { return example + "-example." + extension; }));
             if (EXAMPLE_COMPONENTS[example].additionalFiles) {
-                this.exampleFiles = this.exampleFiles.concat(EXAMPLE_COMPONENTS[example].additionalFiles);
+                for (var _i = 0, _a = EXAMPLE_COMPONENTS[example].additionalFiles; _i < _a.length; _i++) {
+                    var file = _a[_i];
+                    exampleFilesSet.add(file);
+                }
             }
+            this.exampleFiles = Array.from(exampleFilesSet.values());
             this.selectorName = this.indexFilename = example + "-example";
             var /** @type {?} */ exampleName = example.replace(/(?:^\w|\b\w)/g, function (letter) { return letter.toUpperCase(); });
             if (EXAMPLE_COMPONENTS[example].title) {
