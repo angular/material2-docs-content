@@ -1678,28 +1678,6 @@ var FormFieldHintExample = (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Simple form field
- */
-var FormFieldOverviewExample = (function () {
-    function FormFieldOverviewExample() {
-    }
-    FormFieldOverviewExample.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'form-field-overview-example',
-                    template: "<div class=\"example-container\"><mat-form-field><input matInput placeholder=\"Input\"></mat-form-field><mat-form-field><textarea matInput placeholder=\"Textarea\"></textarea></mat-form-field><mat-form-field><mat-select placeholder=\"Select\"><mat-option value=\"option\">Option</mat-option></mat-select></mat-form-field></div>",
-                    styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
-                },] },
-    ];
-    /** @nocollapse */
-    FormFieldOverviewExample.ctorParameters = function () { return []; };
-    return FormFieldOverviewExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
  * \@title Form field with label
  */
 var FormFieldLabelExample = (function () {
@@ -1721,6 +1699,28 @@ var FormFieldLabelExample = (function () {
         { type: _angular_forms.FormBuilder, },
     ]; };
     return FormFieldLabelExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Simple form field
+ */
+var FormFieldOverviewExample = (function () {
+    function FormFieldOverviewExample() {
+    }
+    FormFieldOverviewExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'form-field-overview-example',
+                    template: "<div class=\"example-container\"><mat-form-field><input matInput placeholder=\"Input\"></mat-form-field><mat-form-field><textarea matInput placeholder=\"Textarea\"></textarea></mat-form-field><mat-form-field><mat-select placeholder=\"Select\"><mat-option value=\"option\">Option</mat-option></mat-select></mat-form-field></div>",
+                    styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
+                },] },
+    ];
+    /** @nocollapse */
+    FormFieldOverviewExample.ctorParameters = function () { return []; };
+    return FormFieldOverviewExample;
 }());
 
 /**
@@ -2870,6 +2870,29 @@ var SelectValueBindingExample = (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Autosize sidenav
+ */
+var SidenavAutosizeExample = (function () {
+    function SidenavAutosizeExample() {
+        this.showFiller = false;
+    }
+    SidenavAutosizeExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'sidenav-autosize-example',
+                    template: "<mat-drawer-container class=\"example-container\" autosize><mat-drawer #drawer class=\"example-sidenav\" mode=\"side\"><p>Auto-resizing sidenav</p><p *ngIf=\"showFiller\">Lorem, ipsum dolor sit amet consectetur.</p><button (click)=\"showFiller = !showFiller\" mat-raised-button>Toggle extra text</button></mat-drawer><div class=\"example-sidenav-content\"><button type=\"button\" mat-button (click)=\"drawer.toggle()\">Toggle sidenav</button></div></mat-drawer-container>",
+                    styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    SidenavAutosizeExample.ctorParameters = function () { return []; };
+    return SidenavAutosizeExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Sidenav with custom escape and backdrop click behavior
  */
 var SidenavDisableCloseExample = (function () {
@@ -3090,29 +3113,6 @@ var SidenavResponsiveExample = (function () {
         { type: _angular_cdk_layout.MediaMatcher, },
     ]; };
     return SidenavResponsiveExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Autosize sidenav
- */
-var SidenavAutosizeExample = (function () {
-    function SidenavAutosizeExample() {
-        this.showFiller = false;
-    }
-    SidenavAutosizeExample.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'sidenav-autosize-example',
-                    template: "<mat-drawer-container class=\"example-container\" autosize><mat-drawer #drawer class=\"example-sidenav\" mode=\"side\"><p>Auto-resizing sidenav</p><p *ngIf=\"showFiller\">Lorem, ipsum dolor sit amet consectetur.</p><button (click)=\"showFiller = !showFiller\" mat-raised-button>Toggle extra text</button></mat-drawer><div class=\"example-sidenav-content\"><button type=\"button\" mat-button (click)=\"drawer.toggle()\">Toggle sidenav</button></div></mat-drawer-container>",
-                    styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
-                },] },
-    ];
-    /** @nocollapse */
-    SidenavAutosizeExample.ctorParameters = function () { return []; };
-    return SidenavAutosizeExample;
 }());
 
 /**
@@ -4359,15 +4359,15 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
-    'form-field-overview': {
-        title: 'Simple form field ',
-        component: FormFieldOverviewExample,
-        additionalFiles: null,
-        selectorName: null
-    },
     'form-field-label': {
         title: 'Form field with label ',
         component: FormFieldLabelExample,
+        additionalFiles: null,
+        selectorName: null
+    },
+    'form-field-overview': {
+        title: 'Simple form field ',
+        component: FormFieldOverviewExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -4629,6 +4629,12 @@ var EXAMPLE_COMPONENTS = {
         additionalFiles: null,
         selectorName: null
     },
+    'sidenav-autosize': {
+        title: 'Autosize sidenav',
+        component: SidenavAutosizeExample,
+        additionalFiles: null,
+        selectorName: null
+    },
     'sidenav-disable-close': {
         title: 'Sidenav with custom escape and backdrop click behavior ',
         component: SidenavDisableCloseExample,
@@ -4674,12 +4680,6 @@ var EXAMPLE_COMPONENTS = {
     'sidenav-responsive': {
         title: 'Responsive sidenav ',
         component: SidenavResponsiveExample,
-        additionalFiles: null,
-        selectorName: null
-    },
-    'sidenav-autosize': {
-        title: 'Autosize sidenav',
-        component: SidenavAutosizeExample,
         additionalFiles: null,
         selectorName: null
     },
@@ -4855,8 +4855,8 @@ var EXAMPLE_LIST = [
     MyTelInput, FormFieldCustomControlExample,
     FormFieldErrorExample,
     FormFieldHintExample,
-    FormFieldOverviewExample,
     FormFieldLabelExample,
+    FormFieldOverviewExample,
     FormFieldPrefixSuffixExample,
     FormFieldThemingExample,
     GridListDynamicExample,
@@ -4900,6 +4900,7 @@ var EXAMPLE_LIST = [
     SelectPanelClassExample,
     SelectResetExample,
     SelectValueBindingExample,
+    SidenavAutosizeExample,
     SidenavDisableCloseExample,
     SidenavDrawerOverviewExample,
     SidenavFixedExample,
@@ -4908,7 +4909,6 @@ var EXAMPLE_LIST = [
     SidenavOverviewExample,
     SidenavPositionExample,
     SidenavResponsiveExample,
-    SidenavAutosizeExample,
     SlideToggleConfigurableExample,
     SlideToggleFormsExample,
     SlideToggleOverviewExample,
@@ -5049,8 +5049,8 @@ exports.ɵbl = FormFieldCustomControlExample;
 exports.ɵbk = MyTelInput;
 exports.ɵbm = FormFieldErrorExample;
 exports.ɵbn = FormFieldHintExample;
-exports.ɵbp = FormFieldLabelExample;
-exports.ɵbo = FormFieldOverviewExample;
+exports.ɵbo = FormFieldLabelExample;
+exports.ɵbp = FormFieldOverviewExample;
 exports.ɵbq = FormFieldPrefixSuffixExample;
 exports.ɵbr = FormFieldThemingExample;
 exports.ɵbs = GridListDynamicExample;
@@ -5094,15 +5094,15 @@ exports.ɵdc = SelectOverviewExample;
 exports.ɵdd = SelectPanelClassExample;
 exports.ɵde = SelectResetExample;
 exports.ɵdf = SelectValueBindingExample;
-exports.ɵdo = SidenavAutosizeExample;
-exports.ɵdg = SidenavDisableCloseExample;
-exports.ɵdh = SidenavDrawerOverviewExample;
-exports.ɵdi = SidenavFixedExample;
-exports.ɵdj = SidenavModeExample;
-exports.ɵdk = SidenavOpenCloseExample;
-exports.ɵdl = SidenavOverviewExample;
-exports.ɵdm = SidenavPositionExample;
-exports.ɵdn = SidenavResponsiveExample;
+exports.ɵdg = SidenavAutosizeExample;
+exports.ɵdh = SidenavDisableCloseExample;
+exports.ɵdi = SidenavDrawerOverviewExample;
+exports.ɵdj = SidenavFixedExample;
+exports.ɵdk = SidenavModeExample;
+exports.ɵdl = SidenavOpenCloseExample;
+exports.ɵdm = SidenavOverviewExample;
+exports.ɵdn = SidenavPositionExample;
+exports.ɵdo = SidenavResponsiveExample;
 exports.ɵdp = SlideToggleConfigurableExample;
 exports.ɵdq = SlideToggleFormsExample;
 exports.ɵdr = SlideToggleOverviewExample;
