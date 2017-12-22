@@ -1,0 +1,42 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-radio&gt;</code> provides the same functionality as a native <code class="docs-markdown-code">&lt;input type="radio"&gt;</code> enhanced with
+Material Design styling and animations.</p>
+<div material-docs-example="radio-overview"></div>
+<p class="docs-markdown-p">All radio-buttons with the same <code class="docs-markdown-code">name</code> comprise a set from which only one may be selected at a time.</p>
+
+        <h3 id="radio-button-label" class="docs-header-link docs-markdown-h3">
+          <span header-link="radio-button-label"></span>
+          Radio-button label
+        </h3>
+      <p class="docs-markdown-p">The radio-button label is provided as the content to the <code class="docs-markdown-code">&lt;mat-radio-button&gt;</code> element. The label can
+be positioned before or after the radio-button by setting the <code class="docs-markdown-code">labelPosition</code> property to <code class="docs-markdown-code">'before'</code>
+or <code class="docs-markdown-code">'after'</code>.</p>
+<p class="docs-markdown-p">If you don't want the label to appear next to the radio-button, you can use
+<a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-label" class="docs-markdown-a"><code class="docs-markdown-code">aria-label</code></a> or
+<a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby" class="docs-markdown-a"><code class="docs-markdown-code">aria-labelledby</code></a> to
+specify an appropriate label.</p>
+
+        <h3 id="radio-groups" class="docs-header-link docs-markdown-h3">
+          <span header-link="radio-groups"></span>
+          Radio groups
+        </h3>
+      <p class="docs-markdown-p">Radio-buttons should typically be placed inside of an <code class="docs-markdown-code">&lt;mat-radio-group&gt;</code> unless the DOM structure
+would make that impossible (e.g., radio-buttons inside of table cells). The radio-group has a
+<code class="docs-markdown-code">value</code> property that reflects the currently selected radio-button inside of the group.</p>
+<p class="docs-markdown-p">Individual radio-buttons inside of a radio-group will inherit the <code class="docs-markdown-code">name</code> of the group.</p>
+
+        <h3 id="use-with-code-angular-forms-code-" class="docs-header-link docs-markdown-h3">
+          <span header-link="use-with-code-angular-forms-code-"></span>
+          Use with <code class="docs-markdown-code">@angular/forms</code>
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-radio-group&gt;</code> is compatible with <code class="docs-markdown-code">@angular/forms</code> and supports both <code class="docs-markdown-code">FormsModule</code>
+and <code class="docs-markdown-code">ReactiveFormsModule</code>.</p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-radio-button&gt;</code> uses an internal <code class="docs-markdown-code">&lt;input type="radio"&gt;</code> to provide an accessible experience.
+This internal radio button receives focus and is automatically labelled by the text content of the
+<code class="docs-markdown-code">&lt;mat-radio-button&gt;</code> element.</p>
+<p class="docs-markdown-p">Radio button groups should should be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+</div></body></html>

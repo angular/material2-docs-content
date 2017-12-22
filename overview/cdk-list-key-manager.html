@@ -1,0 +1,35 @@
+<html><head></head><body><div class="docs-markdown">
+        <h3 id="listkeymanager" class="docs-header-link docs-markdown-h3">
+          <span header-link="listkeymanager"></span>
+          ListKeyManager
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">ListKeyManager</code> manages the focus in a list of items based on keyboard interaction. Intended to be
+used with components that correspond to a <code class="docs-markdown-code">role="menu"</code> or <code class="docs-markdown-code">role="listbox"</code> pattern.</p>
+
+        <h4 id="properties" class="docs-header-link docs-markdown-h4">
+          <span header-link="properties"></span>
+          Properties
+        </h4>
+      <h5 class="docs-markdown-h5"><code class="docs-markdown-code">activeItemIndex</code></h5><p class="docs-markdown-p">Index of the currently active item</p>
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">activeItem</code></h5><p class="docs-markdown-p">The active item</p>
+
+        <h4 id="-code-tabout-code-" class="docs-header-link docs-markdown-h4">
+          <span header-link="-code-tabout-code-"></span>
+          <code class="docs-markdown-code">tabOut</code>
+        </h4>
+      <p class="docs-markdown-p">Observable that emits any time the <kbd>Tab</kbd> key is pressed, so components can react when
+focus is shifted off of the list.</p>
+
+        <h4 id="methods" class="docs-header-link docs-markdown-h4">
+          <span header-link="methods"></span>
+          Methods
+        </h4>
+      <h5 class="docs-markdown-h5"><code class="docs-markdown-code">withWrap(): this</code></h5><p class="docs-markdown-p">Turns on wrapping mode, which ensures that the active item will wrap to
+the other end of list when there are no more items in the given direction.</p>
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">setActiveItem(index: number): void</code></h5><p class="docs-markdown-p">Sets the active item to the item at the index specified.</p>
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">onKeydown(event: KeyboardEvent): void</code></h5><p class="docs-markdown-p">Sets the active item depending on the key event passed in.</p>
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">setFirstItemActive(): void</code></h5><p class="docs-markdown-p">Sets the active item to the first enabled item in the list.</p>
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">setLastItemActive(): void</code></h5><p class="docs-markdown-p">Sets the active item to the last enabled item in the list.</p>
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">setNextItemActive(): void</code></h5><p class="docs-markdown-p">Sets the active item to the next enabled item in the list.</p>
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">setPreviousItemActive(): void</code></h5><p class="docs-markdown-p">Sets the active item to a previous enabled item in the list.</p>
+</div></body></html>

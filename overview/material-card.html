@@ -1,0 +1,124 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-card&gt;</code> is a content container for text, photos, and actions in the context of a single subject.</p>
+<div material-docs-example="card-overview"></div>
+
+        <h3 id="basic-card-sections" class="docs-header-link docs-markdown-h3">
+          <span header-link="basic-card-sections"></span>
+          Basic card sections
+        </h3>
+      <p class="docs-markdown-p">The most basic card needs only an <code class="docs-markdown-code">&lt;mat-card&gt;</code> element with some content. However, Angular Material
+provides a number of preset sections that you can use inside of an <code class="docs-markdown-code">&lt;mat-card&gt;</code>:</p>
+<table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Element</th>
+<th class="docs-markdown-th">Description</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-card-title&gt;</code></td>
+<td class="docs-markdown-td">Card title</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-card-subtitle&gt;</code></td>
+<td class="docs-markdown-td">Card subtitle</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-card-content&gt;</code></td>
+<td class="docs-markdown-td">Primary card content. Intended for blocks of text</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;img mat-card-image&gt;</code></td>
+<td class="docs-markdown-td">Card image. Stretches the image to the container width</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-card-actions&gt;</code></td>
+<td class="docs-markdown-td">Container for buttons at the bottom of the card</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-card-footer&gt;</code></td>
+<td class="docs-markdown-td">Section anchored to the bottom of the card</td>
+</tr>
+</tbody>
+</table>
+<p class="docs-markdown-p">These elements primary serve as pre-styled content containers without any additional APIs. 
+However, the <code class="docs-markdown-code">align</code> property on <code class="docs-markdown-code">&lt;mat-card-actions&gt;</code> can be used to position the actions at the 
+<code class="docs-markdown-code">'start'</code> or <code class="docs-markdown-code">'end</code> of the container.  </p>
+
+        <h3 id="card-headers" class="docs-header-link docs-markdown-h3">
+          <span header-link="card-headers"></span>
+          Card headers
+        </h3>
+      <p class="docs-markdown-p">In addition to the aforementioned sections, <code class="docs-markdown-code">&lt;mat-card-header&gt;</code> gives the ability to add a rich
+header to a card. This header can contain:</p>
+<table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Element</th>
+<th class="docs-markdown-th">Description</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-card-title&gt;</code></td>
+<td class="docs-markdown-td">A title within the header</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-card-subtitle&gt;</code></td>
+<td class="docs-markdown-td">A subtitle within the header</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;img mat-card-avatar&gt;</code></td>
+<td class="docs-markdown-td">An image used as an avatar within the header</td>
+</tr>
+</tbody>
+</table>
+
+        <h3 id="title-groups" class="docs-header-link docs-markdown-h3">
+          <span header-link="title-groups"></span>
+          Title groups
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-card-title-group&gt;</code> can be used to combine a title, subtitle, and image into a single section.
+This element can contain:</p>
+<ul class="docs-markdown-ul">
+<li class="docs-markdown-li"><code class="docs-markdown-code">&lt;mat-card-title&gt;</code></li>
+<li class="docs-markdown-li"><code class="docs-markdown-code">&lt;mat-card-subtitle&gt;</code></li>
+<li class="docs-markdown-li">One of:<ul class="docs-markdown-ul">
+<li class="docs-markdown-li"><code class="docs-markdown-code">&lt;img mat-card-sm-image&gt;</code></li>
+<li class="docs-markdown-li"><code class="docs-markdown-code">&lt;img mat-card-md-image&gt;</code></li>
+<li class="docs-markdown-li"><code class="docs-markdown-code">&lt;img mat-card-lg-image&gt;</code></li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Cards can be used in a wide variety of scenarios and can contain many different types of content.
+Due to this dynamic nature, the appropriate accessibility treatment depends on how <code class="docs-markdown-code">&lt;mat-card&gt;</code> is
+used.</p>
+
+        <h4 id="group-region-and-landmarks" class="docs-header-link docs-markdown-h4">
+          <span header-link="group-region-and-landmarks"></span>
+          Group, region, and landmarks
+        </h4>
+      <p class="docs-markdown-p">There are several ARIA roles that communicate that a portion of the UI represents some semantically
+meaningful whole. Depending on what the content of the card means to your application,
+<a href="https://www.w3.org/TR/wai-aria/roles#group" class="docs-markdown-a"><code class="docs-markdown-code">role="group"</code></a>, <a href="https://www.w3.org/TR/wai-aria/roles#region" class="docs-markdown-a"><code class="docs-markdown-code">role="region"</code></a>, or [one of the landmark roles][3] should typically be
+applied to the <code class="docs-markdown-code">&lt;mat-card&gt;</code> element.</p>
+<p class="docs-markdown-p">A role is not necessary when the card is used as a purely decorative container that does not
+convey a meaningful grouping of related content for a single subject. In these cases, the content
+of the card should follow standard practices for document content.</p>
+
+        <h4 id="focus" class="docs-header-link docs-markdown-h4">
+          <span header-link="focus"></span>
+          Focus
+        </h4>
+      <p class="docs-markdown-p">Depending on how cards are used, it may be appropriate to apply a <code class="docs-markdown-code">tabindex</code> to the <code class="docs-markdown-code">&lt;mat-card&gt;</code>
+element. If cards are a primary mechanism through which user interact with the application,
+<code class="docs-markdown-code">tabindex="0"</code> is appropriate. If attention can be sent to the card, but it's not part of the
+document flow, <code class="docs-markdown-code">tabindex="-1"</code> is appropriate.</p>
+<p class="docs-markdown-p">If the card acts as a purely decorative container, it does not need to be tabbable. In this case,
+the card content should follow normal best practices for tab order.</p>
+</div></body></html>

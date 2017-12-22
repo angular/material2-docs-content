@@ -1,0 +1,44 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-progress-spinner&gt;</code> and <code class="docs-markdown-code">&lt;mat-spinner&gt;</code> are a circular indicators of progress and activity.</p>
+<div material-docs-example="progress-spinner-overview"></div>
+
+        <h3 id="progress-mode" class="docs-header-link docs-markdown-h3">
+          <span header-link="progress-mode"></span>
+          Progress mode
+        </h3>
+      <p class="docs-markdown-p">The progress-spinner supports two modes, "determinate" and "indeterminate". 
+The <code class="docs-markdown-code">&lt;mat-spinner&gt;</code> component is an alias for <code class="docs-markdown-code">&lt;mat-progress-spinner mode="indeterminate"&gt;</code>.</p>
+<table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Mode</th>
+<th class="docs-markdown-th">Description</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">determinate</td>
+<td class="docs-markdown-td">Standard progress indicator, fills from 0% to 100%</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">indeterminate</td>
+<td class="docs-markdown-td">Indicates that something is happening without conveying a discrete progress</td>
+</tr>
+</tbody>
+</table>
+<p class="docs-markdown-p">The default mode is "determinate". In this mode, the progress is set via the <code class="docs-markdown-code">value</code> property, 
+which can be a whole number between 0 and 100.</p>
+<p class="docs-markdown-p">In "indeterminate" mode, the <code class="docs-markdown-code">value</code> property is ignored.</p>
+
+        <h3 id="theming" class="docs-header-link docs-markdown-h3">
+          <span header-link="theming"></span>
+          Theming
+        </h3>
+      <p class="docs-markdown-p">The color of a progress-spinner can be changed by using the <code class="docs-markdown-code">color</code> property. By default, 
+progress-spinners use the theme's primary color. This can be changed to <code class="docs-markdown-code">'accent'</code> or <code class="docs-markdown-code">'warn'</code>.</p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Each progress spinner should be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+</div></body></html>

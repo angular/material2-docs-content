@@ -1,0 +1,60 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-progress-bar&gt;</code> is a horizontal progress-bar for indicating progress and activity.</p>
+
+        <h3 id="progress-mode" class="docs-header-link docs-markdown-h3">
+          <span header-link="progress-mode"></span>
+          Progress mode
+        </h3>
+      <p class="docs-markdown-p">The progress-bar supports four modes: determinate, indeterminate, buffer and query.</p>
+
+        <h4 id="determinate" class="docs-header-link docs-markdown-h4">
+          <span header-link="determinate"></span>
+          Determinate
+        </h4>
+      <p class="docs-markdown-p">Operations where the percentage of the operation complete is known should use the 
+determinate indicator.</p>
+<div material-docs-example="progress-bar-determinate"></div>
+<p class="docs-markdown-p">This is the default mode and the progress is represented by the <code class="docs-markdown-code">value</code> property.</p>
+
+        <h4 id="indeterminate" class="docs-header-link docs-markdown-h4">
+          <span header-link="indeterminate"></span>
+          Indeterminate
+        </h4>
+      <p class="docs-markdown-p">Operations where the user is asked to wait while something finishes and it’s 
+not necessary to indicate how long it will take should use the indeterminate indicator.</p>
+<div material-docs-example="progress-bar-indeterminate"></div>
+<p class="docs-markdown-p">In this mode the <code class="docs-markdown-code">value</code> property is ignored.</p>
+
+        <h4 id="buffer" class="docs-header-link docs-markdown-h4">
+          <span header-link="buffer"></span>
+          Buffer
+        </h4>
+      <p class="docs-markdown-p">Operations where the user wants to indicate some activity or loading from the server, 
+use the buffer indicator.</p>
+<div material-docs-example="progress-bar-buffer"></div>
+<p class="docs-markdown-p">In "buffer" mode, <code class="docs-markdown-code">value</code> determines the progress of the primary bar while the <code class="docs-markdown-code">bufferValue</code> is 
+used to show the additional buffering progress.</p>
+
+        <h4 id="query" class="docs-header-link docs-markdown-h4">
+          <span header-link="query"></span>
+          Query
+        </h4>
+      <p class="docs-markdown-p">For situations where the user wants to indicate pre-loading (until the loading can actually be made), 
+use the query indicator.</p>
+<div material-docs-example="progress-bar-query"></div>
+<p class="docs-markdown-p">In "query" mode, the progress-bar renders as an inverted "indeterminate" bar. Once the response 
+progress is available, the <code class="docs-markdown-code">mode</code> should be changed to determinate to convey the progress. In
+this mode the <code class="docs-markdown-code">value</code> property is ignored.</p>
+
+        <h3 id="theming" class="docs-header-link docs-markdown-h3">
+          <span header-link="theming"></span>
+          Theming
+        </h3>
+      <p class="docs-markdown-p">The color of a progress-bar can be changed by using the <code class="docs-markdown-code">color</code> property. By default, progress-bars
+use the theme's primary color. This can be changed to <code class="docs-markdown-code">'accent'</code> or <code class="docs-markdown-code">'warn'</code>.  </p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Each progress bar should be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+</div></body></html>

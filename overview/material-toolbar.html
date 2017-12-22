@@ -1,0 +1,77 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-toolbar&gt;</code> is a container for headers, titles, or actions.</p>
+<div material-docs-example="toolbar-overview"></div>
+
+        <h3 id="single-row" class="docs-header-link docs-markdown-h3">
+          <span header-link="single-row"></span>
+          Single row
+        </h3>
+      <p class="docs-markdown-p">In the most situations, a toolbar will be placed at the top of your application and will only 
+have a single row that includes the title of your application.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>My Application<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
+</code></pre>
+
+        <h3 id="multiple-rows" class="docs-header-link docs-markdown-h3">
+          <span header-link="multiple-rows"></span>
+          Multiple rows
+        </h3>
+      <p class="docs-markdown-p">The Material Design specifications describe that toolbars can also have multiple rows. Creating
+toolbars with multiple rows in Angular Material can be done by placing <code class="docs-markdown-code">&lt;mat-toolbar-row&gt;</code> elements
+inside of a <code class="docs-markdown-code">&lt;mat-toolbar&gt;</code>.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span>&gt;</span>  
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>First Row<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar-row</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Second Row<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p"><strong>Note</strong>: Placing content outside of a <code class="docs-markdown-code">&lt;mat-toolbar-row&gt;</code> when multiple rows are specified is not
+supported.</p>
+
+        <h3 id="positioning-toolbar-content" class="docs-header-link docs-markdown-h3">
+          <span header-link="positioning-toolbar-content"></span>
+          Positioning toolbar content
+        </h3>
+      <p class="docs-markdown-p">The toolbar does not perform any positioning of its content. This gives the user full power to 
+position the content as it suits their application.</p>
+<p class="docs-markdown-p">A common pattern is to position a title on the left with some actions on the right. This can be
+easily accomplished with <code class="docs-markdown-code">display: flex</code>:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-toolbar</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"primary"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Application Title<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- This fills the remaining space of the current row --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-fill-remaining-space"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Right Aligned Text<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-toolbar</span>&gt;</span>
+</code></pre>
+<pre class="docs-markdown-pre"><code class="lang-scss docs-markdown-code"><span class="hljs-selector-class">.example-fill-remaining-space</span> {
+  <span class="hljs-comment">// This fills the remaining space, by using flexbox. </span>
+  <span class="hljs-comment">// Every toolbar row uses a flexbox row layout.</span>
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> auto;
+}
+</code></pre>
+
+        <h3 id="theming" class="docs-header-link docs-markdown-h3">
+          <span header-link="theming"></span>
+          Theming
+        </h3>
+      <p class="docs-markdown-p">The color of a <code class="docs-markdown-code">&lt;mat-toolbar&gt;</code> can be changed by using the <code class="docs-markdown-code">color</code> property. By default, toolbars
+use a neutral background color based on the current theme (light or dark). This can be changed to 
+<code class="docs-markdown-code">'primary'</code>, <code class="docs-markdown-code">'accent'</code>, or <code class="docs-markdown-code">'warn'</code>.  </p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">By default, the toolbar assumes that it will be used in a purely decorative fashion and thus sets
+no roles, ARIA attributes, or keyboard shortcuts. This is equivalent to having a sequence of <code class="docs-markdown-code">&lt;div&gt;</code>
+elements on the page.</p>
+<p class="docs-markdown-p">Generally, the toolbar is used as a header where <code class="docs-markdown-code">role="header"</code> would be appropriate.</p>
+<p class="docs-markdown-p">Only if the use-case of the toolbar match that of role="toolbar", the user should add the role and
+an appropriate label via <code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+</div></body></html>

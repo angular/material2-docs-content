@@ -1,0 +1,183 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The <code class="docs-markdown-code">mat-table</code> provides a Material Design styled data-table that can be used to display rows of 
+data. </p>
+<p class="docs-markdown-p">The table's template consists of two parts: column definitions and row definitions. Each column 
+definition contains templates for that column's header and content cells. Each row definition 
+captures the columns used for that row and any bindings applied to the row element.</p>
+<p class="docs-markdown-p">A <code class="docs-markdown-code">DataSource</code> provides data to the table by emitting an <code class="docs-markdown-code">Observable</code> stream of the items to be 
+rendered. Each emit includes the <em>entire set of items</em> that should be displayed. The table, 
+listening to this stream, will render a row per item. Any manipulation of the data being displayed 
+(e.g. sorting, pagination, filtering) should be captured by the <code class="docs-markdown-code">DataSource</code>, ultimately emitting 
+a new set of items to reflect any changes.</p>
+<p class="docs-markdown-p">This table builds on the foundation of the CDK data-table and uses a similar interface for its 
+data source input and template, except that its element and attribute selectors will be prefixed 
+with <code class="docs-markdown-code">mat-</code> instead of <code class="docs-markdown-code">cdk-</code>. For detailed information on the interface and how it works, see the 
+<a href="https://material.angular.io/guide/cdk-table" class="docs-markdown-a">guide covering the CDK data-table</a>.</p>
+
+        <h3 id="getting-started" class="docs-header-link docs-markdown-h3">
+          <span header-link="getting-started"></span>
+          Getting Started
+        </h3>
+      <div material-docs-example="table-basic"></div>
+
+        <h4 id="1-define-the-table-39-s-columns" class="docs-header-link docs-markdown-h4">
+          <span header-link="1-define-the-table-39-s-columns"></span>
+          1. Define the table's columns
+        </h4>
+      <p class="docs-markdown-p">Start by writing your table's column definitions. Each column definition should be given a unique 
+name and contain the content for its header and row cells.</p>
+<p class="docs-markdown-p">Here's a simple column definition with the name <code class="docs-markdown-code">'userName'</code>. The header cell contains the text 
+"Name" and each row cell will render the <code class="docs-markdown-code">name</code> property of each row's data.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"userName"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let user"</span>&gt;</span> {{user.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+</code></pre>
+
+        <h4 id="2-define-the-table-39-s-rows" class="docs-header-link docs-markdown-h4">
+          <span header-link="2-define-the-table-39-s-rows"></span>
+          2. Define the table's rows
+        </h4>
+      <p class="docs-markdown-p">After defining your columns, provide the header and data row templates that will be rendered out by 
+the table. Each row needs to be given a list of the columns that it should contain. The order of 
+the names will define the order of the cells rendered. It is not required to provide a list of all 
+the defined column names, but only the ones that you want to have rendered.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"['userName', 'age']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-row</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let myRowData; columns: ['userName', 'age']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-row</span>&gt;</span>
+</code></pre>
+
+        <h4 id="3-provide-data" class="docs-header-link docs-markdown-h4">
+          <span header-link="3-provide-data"></span>
+          3. Provide data
+        </h4>
+      <p class="docs-markdown-p">The column and row definitions now capture <em>how</em> data will render - all that's left is to provide 
+the data itself. For simple scenarios with client-side operations, <code class="docs-markdown-code">MatTableDataSource</code> offers a 
+quick and easy starting point. Simply create an instance of <code class="docs-markdown-code">MatTableDataSource</code> and set the items 
+to be displayed to the <code class="docs-markdown-code">data</code> property. For more advanced scenarios, applications will implement 
+one or more custom <code class="docs-markdown-code">DataSource</code> to capture more specific behaviors.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">this</span>.myDataSource = <span class="hljs-keyword">new</span> MatTableDataSource();
+<span class="hljs-keyword">this</span>.myDataSource.data = dataToRender;
+</code></pre>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">”myDataSource”</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-table</span>&gt;</span>
+</code></pre>
+
+        <h3 id="features" class="docs-header-link docs-markdown-h3">
+          <span header-link="features"></span>
+          Features
+        </h3>
+      
+        <h4 id="pagination" class="docs-header-link docs-markdown-h4">
+          <span header-link="pagination"></span>
+          Pagination
+        </h4>
+      <p class="docs-markdown-p">To paginate the table's data, add a <code class="docs-markdown-code">&lt;mat-paginator&gt;</code> after the <code class="docs-markdown-code">&lt;mat-table&gt;</code> and provide the 
+<code class="docs-markdown-code">MatPaginator</code> to the <code class="docs-markdown-code">MatTableDataSource</code>. The data source will automatically listen for page 
+changes made by the user and send the right paged data to the table.</p>
+<p class="docs-markdown-p">For more information on using and configuring the <code class="docs-markdown-code">&lt;mat-paginator&gt;</code>, check out the 
+<a href="https://material.angular.io/components/paginator/overview" class="docs-markdown-a">mat-paginator docs</a>.</p>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">MatPaginator</code> is one provided solution to paginating your table's data, but it is not the only 
+option. In fact, the table can work with any custom pagination UI or strategy since the <code class="docs-markdown-code">MatTable</code> and <code class="docs-markdown-code">DataSource</code> interface is not tied to any one specific implementation.</p>
+<div material-docs-example="table-pagination"></div>
+
+        <h4 id="sorting" class="docs-header-link docs-markdown-h4">
+          <span header-link="sorting"></span>
+          Sorting
+        </h4>
+      <p class="docs-markdown-p">To add sorting behavior to the table, add the <code class="docs-markdown-code">matSort</code> directive to the <code class="docs-markdown-code">&lt;mat-table&gt;</code> and add 
+<code class="docs-markdown-code">mat-sort-header</code> to each column header cell that should trigger sorting. Provide the <code class="docs-markdown-code">MatSort</code> directive to the <code class="docs-markdown-code">MatTableDataSource</code> and it will automatically listen for sorting changes and change the order of data rendered by the table.</p>
+<p class="docs-markdown-p">By default, the <code class="docs-markdown-code">MatTableDataSource</code> sorts with the assumption that the sorted column's name 
+matches the data property name that the column displays. For example, the following column definition is named <code class="docs-markdown-code">position</code>, which matches the name of the property displayed in the row cell.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"position"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span> <span class="hljs-attr">mat-sort-header</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">If the data properties do not match the column names, or if a more complex data property accessor 
+is required, then a custom <code class="docs-markdown-code">sortingDataAccessor</code> function can be set to override the default data accessor on the <code class="docs-markdown-code">MatTableDataSource</code>.</p>
+<div material-docs-example="table-sorting"></div>
+<p class="docs-markdown-p">For more information on using and configuring the sorting behavior, check out the 
+<a href="https://material.angular.io/components/sort/overview" class="docs-markdown-a">matSort docs</a>.</p>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">MatSort</code> is one provided solution to sorting your table's data, but it is not the only option. 
+In fact, the table can work with any custom pagination UI or strategy since the <code class="docs-markdown-code">MatTable</code> and <code class="docs-markdown-code">DataSource</code> interface is not tied to any one specific implementation.</p>
+
+        <h4 id="filtering" class="docs-header-link docs-markdown-h4">
+          <span header-link="filtering"></span>
+          Filtering
+        </h4>
+      <p class="docs-markdown-p">Angular Material does not provide a specific component to be used for filtering the <code class="docs-markdown-code">MatTable</code> 
+since there is no single common approach to adding a filter UI to table data.</p>
+<p class="docs-markdown-p">A general strategy is to add an input where users can type in a filter string and listen to this 
+input to change what data is offered from the data source to the table. </p>
+<p class="docs-markdown-p">If you are using the <code class="docs-markdown-code">MatTableDataSource</code>, simply provide the filter string to the 
+<code class="docs-markdown-code">MatTableDataSource</code>. The data source will reduce each row data to a serialized form and will filter out the row if it does not contain the filter string. By default, the row data reducing function will concatenate all the object values and convert them to lowercase.</p>
+<p class="docs-markdown-p">For example, the data object <code class="docs-markdown-code">{id: 123, name: 'Mr. Smith', favoriteColor: 'blue'}</code> will be reduced 
+to <code class="docs-markdown-code">123mr. smithblue</code>. If your filter string was <code class="docs-markdown-code">blue</code> then it would be considered a match because it is contained in the reduced string, and the row would be displayed in the table.</p>
+<p class="docs-markdown-p">To override the default filtering behavior, a custom <code class="docs-markdown-code">filterPredicate</code> function can be set which 
+takes a data object and filter string and returns true if the data object is considered a match.</p>
+<div material-docs-example="table-filtering"></div>
+
+        <h4 id="selection" class="docs-header-link docs-markdown-h4">
+          <span header-link="selection"></span>
+          Selection
+        </h4>
+      <p class="docs-markdown-p">Right now there is no formal support for adding a selection UI to the table, but Angular Material 
+does offer the right components and pieces to set this up. The following steps are one solution but it is not the only way to incorporate row selection in your table.</p>
+<h5 class="docs-markdown-h5">1. Add a selection model</h5><p class="docs-markdown-p">Get started by setting up a <code class="docs-markdown-code">SelectionModel</code> from <code class="docs-markdown-code">@angular/cdk/collections</code> that will maintain the 
+selection state.</p>
+<pre class="docs-markdown-pre"><code class="lang-js docs-markdown-code"><span class="hljs-keyword">const</span> initialSelection = [];
+<span class="hljs-keyword">const</span> allowMultiSelect = <span class="hljs-literal">true</span>;
+<span class="hljs-keyword">this</span>.selection = <span class="hljs-keyword">new</span> SelectionModel&lt;MyDataType&gt;(allowMultiSelect, initialSelection);
+</code></pre>
+<h5 class="docs-markdown-h5">2. Define a selection column</h5><p class="docs-markdown-p">Add a column definition for displaying the row checkboxes, including a master toggle checkbox for 
+the header. The column name should be added to the list of displayed columns provided to the <code class="docs-markdown-code">&lt;mat-header-row&gt;</code> and <code class="docs-markdown-code">&lt;mat-row&gt;</code>.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"select"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">"$event ? masterToggle() : null"</span>
+                  [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"selection.hasValue() &amp;&amp; isAllSelected()"</span>
+                  [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"selection.hasValue() &amp;&amp; !isAllSelected()"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"$event.stopPropagation()"</span>
+                  (<span class="hljs-attr">change</span>)=<span class="hljs-string">"$event ? selection.toggle(row) : null"</span>
+                  [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"selection.isSelected(row)"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+</code></pre>
+<h5 class="docs-markdown-h5">3. Add event handling logic</h5><p class="docs-markdown-p">Implement the behavior in your component's logic to handle the header's master toggle and checking 
+if all rows are selected.</p>
+<pre class="docs-markdown-pre"><code class="lang-js docs-markdown-code"><span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>
+isAllSelected() {
+  <span class="hljs-keyword">const</span> numSelected = <span class="hljs-keyword">this</span>.selection.selected.length;
+  <span class="hljs-keyword">const</span> numRows = <span class="hljs-keyword">this</span>.dataSource.data.length;
+  <span class="hljs-keyword">return</span> numSelected == numRows;
+}
+
+<span class="hljs-comment">/** Selects all rows if they are not all selected; otherwise clear selection. */</span>
+masterToggle() {
+  <span class="hljs-keyword">this</span>.isAllSelected() ?
+      <span class="hljs-keyword">this</span>.selection.clear() :
+      <span class="hljs-keyword">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-keyword">this</span>.selection.select(row));
+}
+</code></pre>
+<h5 class="docs-markdown-h5">4. Include overflow styling</h5><p class="docs-markdown-p">Finally, adjust the styling for the select column so that its overflow is not hidden. This allows 
+the ripple effect to extend beyond the cell.</p>
+<pre class="docs-markdown-pre"><code class="lang-css docs-markdown-code"><span class="hljs-selector-class">.mat-column-select</span> {
+  <span class="hljs-attribute">overflow</span>: initial;
+}
+</code></pre>
+<div material-docs-example="table-selection"></div>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Tables without text or labels should be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or 
+<code class="docs-markdown-code">aria-labelledby</code>. The <code class="docs-markdown-code">aria-readonly</code> defaults to <code class="docs-markdown-code">true</code> if it's not set.</p>
+<p class="docs-markdown-p">Table's default role is <code class="docs-markdown-code">grid</code>, and it can be changed to <code class="docs-markdown-code">treegrid</code> through <code class="docs-markdown-code">role</code> attribute.</p>
+<p class="docs-markdown-p"><code class="docs-markdown-code">mat-table</code> does not manage any focus/keyboard interaction on its own. Users can add desired 
+focus/keyboard interactions in their application.</p>
+</div></body></html>

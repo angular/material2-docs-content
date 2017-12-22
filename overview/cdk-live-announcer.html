@@ -1,0 +1,34 @@
+<html><head></head><body><div class="docs-markdown">
+        <h3 id="liveannouncer" class="docs-header-link docs-markdown-h3">
+          <span header-link="liveannouncer"></span>
+          LiveAnnouncer
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">LiveAnnouncer</code> is used to announce messages for screen-reader users using an <code class="docs-markdown-code">aria-live</code> region.
+See <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-live" class="docs-markdown-a">the W3C's WAI-ARIA</a>
+for more information on aria-live regions. </p>
+
+        <h4 id="methods" class="docs-header-link docs-markdown-h4">
+          <span header-link="methods"></span>
+          Methods
+        </h4>
+      <h5 class="docs-markdown-h5"><code class="docs-markdown-code">announce(message: string, politeness?: 'off' | 'polite' | 'assertive'): void</code></h5><p class="docs-markdown-p">Announce the given message via aria-live region. The politeness argument determines the 
+<code class="docs-markdown-code">aria-live</code> attribute on the announcer element, defaulting to 'polite'.</p>
+
+        <h4 id="examples" class="docs-header-link docs-markdown-h4">
+          <span header-link="examples"></span>
+          Examples
+        </h4>
+      <p class="docs-markdown-p">The LiveAnnouncer is injected into a component:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'my-component'</span>
+  providers: [LiveAnnouncer]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyComponent {
+
+ <span class="hljs-keyword">constructor</span>(<span class="hljs-params">liveAnnouncer: LiveAnnouncer</span>) {
+   liveAnnouncer.announce(<span class="hljs-string">"Hey Google"</span>);
+ }
+
+}
+</code></pre>
+</div></body></html>

@@ -1,0 +1,197 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">Angular Material provides two sets of components designed to add collapsible side content (often
+navigation, though it can be any content) alongside some primary content. These are the sidenav and
+drawer components.</p>
+<p class="docs-markdown-p">The sidenav components are designed to add side content to a fullscreen app. To set up a sidenav we
+use three components: <code class="docs-markdown-code">&lt;mat-sidenav-container&gt;</code> which acts as a structural container for our content
+and sidenav, <code class="docs-markdown-code">&lt;mat-sidenav-content&gt;</code> which represents the main content, and <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> which
+represents the added side content.</p>
+<div material-docs-example="sidenav-overview"></div>
+<p class="docs-markdown-p">The drawer component is designed to add side content to a small section of your app. This is
+accomplished using the <code class="docs-markdown-code">&lt;mat-drawer-container&gt;</code>, <code class="docs-markdown-code">&lt;mat-drawer-content&gt;</code>, and <code class="docs-markdown-code">&lt;mat-drawer&gt;</code>
+components, which are analogous to their sidenav equivalents. Rather than adding side content to the
+app as a whole, these are designed to add side content to a small section of your app. They support
+almost all of the same features, but do not support fixed positioning.</p>
+<div material-docs-example="sidenav-drawer-overview"></div>
+
+        <h3 id="specifying-the-main-and-side-content" class="docs-header-link docs-markdown-h3">
+          <span header-link="specifying-the-main-and-side-content"></span>
+          Specifying the main and side content
+        </h3>
+      <p class="docs-markdown-p">Both the main and side content should be placed inside of the <code class="docs-markdown-code">&lt;mat-sidenav-container&gt;</code>, content
+that you don't want to be affected by the sidenav, such as a header or footer, can be placed outside
+of the container.</p>
+<p class="docs-markdown-p">The side content should be wrapped in a <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> element. The <code class="docs-markdown-code">position</code> property can be used
+to specify which end of the main content to place the side content on. <code class="docs-markdown-code">position</code> can be either
+<code class="docs-markdown-code">start</code> or <code class="docs-markdown-code">end</code> which places the side content on the left or right respectively in left-to-right
+languages. If the <code class="docs-markdown-code">position</code> is not set, the default value of <code class="docs-markdown-code">start</code> will be assumed. A
+<code class="docs-markdown-code">&lt;mat-sidenav-container&gt;</code> can have up to two <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> elements total, but only one for any
+given side.</p>
+<p class="docs-markdown-p">The main content should be wrapped in a <code class="docs-markdown-code">&lt;mat-sidenav-content&gt;</code>. If no <code class="docs-markdown-code">&lt;mat-sidenav-content&gt;</code> is
+specified for a <code class="docs-markdown-code">&lt;mat-sidenav-container&gt;</code>, one will be created implicitly and all of the content
+inside the <code class="docs-markdown-code">&lt;mat-sidenav-container&gt;</code> other than the <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> elements will be placed inside
+of it.</p>
+<div material-docs-example="sidenav-position"></div>
+<p class="docs-markdown-p">The following are examples of valid sidenav layouts:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- Creates a layout with a left-positioned sidenav and explicit content. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>&gt;</span>Start<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-content</span>&gt;</span>Main<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+</code></pre>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- Creates a layout with a left and right sidenav and implicit content. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>&gt;</span>Start<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"end"</span>&gt;</span>End<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>Main<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+</code></pre>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- Creates an empty sidenav container with no sidenavs and implicit empty content. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">And these are examples of invalid sidenav layouts:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- Invalid because there are two `start` position sidenavs. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>&gt;</span>Start<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span> <span class="hljs-attr">position</span>=<span class="hljs-string">"start"</span>&gt;</span>Start 2<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+</code></pre>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- Invalid because there are multiple `&lt;mat-sidenav-content&gt;` elements. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-content</span>&gt;</span>Main<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-content</span>&gt;</span>Main 2<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+</code></pre>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-comment">&lt;!-- Invalid because the `&lt;mat-sidenav&gt;` is outside of the `&lt;mat-sidenav-container&gt;`. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav-container</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav-container</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-sidenav</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-sidenav</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">These same rules all apply to the drawer components as well.</p>
+
+        <h3 id="opening-and-closing-a-sidenav" class="docs-header-link docs-markdown-h3">
+          <span header-link="opening-and-closing-a-sidenav"></span>
+          Opening and closing a sidenav
+        </h3>
+      <p class="docs-markdown-p">A <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> can be opened or closed using the <code class="docs-markdown-code">open()</code>, <code class="docs-markdown-code">close()</code> and <code class="docs-markdown-code">toggle()</code> methods. Each
+of these methods returns a <code class="docs-markdown-code">Promise&lt;boolean&gt;</code> that will be resolved with <code class="docs-markdown-code">true</code> when the sidenav
+finishes opening or <code class="docs-markdown-code">false</code> when it finishes closing.</p>
+<p class="docs-markdown-p">The opened state can also be set via a property binding in the template using the <code class="docs-markdown-code">opened</code> property.
+The property supports 2-way binding.</p>
+<p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> also supports output properties for just open and just close events, The <code class="docs-markdown-code">(opened)</code>
+and <code class="docs-markdown-code">(closed)</code> properties respectively.</p>
+<div material-docs-example="sidenav-open-close"></div>
+<p class="docs-markdown-p">All of these properties and methods work on <code class="docs-markdown-code">&lt;mat-drawer&gt;</code> as well.</p>
+
+        <h3 id="changing-the-sidenav-39-s-behavior" class="docs-header-link docs-markdown-h3">
+          <span header-link="changing-the-sidenav-39-s-behavior"></span>
+          Changing the sidenav's behavior
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> can render in one of three different ways based on the <code class="docs-markdown-code">mode</code> property.</p>
+<table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Mode</th>
+<th class="docs-markdown-th">Description</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">over</code></td>
+<td class="docs-markdown-td">Sidenav floats over the primary content, which is covered by a backdrop</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">push</code></td>
+<td class="docs-markdown-td">Sidenav pushes the primary content out of its way, also covering it with a backdrop</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">side</code></td>
+<td class="docs-markdown-td">Sidenav appears side-by-side with the main content, shrinking the main content's width to make space for the sidenav.</td>
+</tr>
+</tbody>
+</table>
+<p class="docs-markdown-p">If no <code class="docs-markdown-code">mode</code> is specified, <code class="docs-markdown-code">over</code> is used by default.</p>
+<div material-docs-example="sidenav-mode"></div>
+<p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-drawer&gt;</code> also supports all of these same modes.</p>
+
+        <h3 id="disabling-automatic-close" class="docs-header-link docs-markdown-h3">
+          <span header-link="disabling-automatic-close"></span>
+          Disabling automatic close
+        </h3>
+      <p class="docs-markdown-p">Clicking on the backdrop or pressing the <kbd>Esc</kbd> key will normally close an open sidenav.
+However, this automatic closing behavior can be disabled by setting the <code class="docs-markdown-code">disableClose</code> property on
+the <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> or <code class="docs-markdown-code">&lt;mat-drawer&gt;</code> that you want to disable the behavior for.</p>
+<p class="docs-markdown-p">Custom handling for <kbd>Esc</kbd> can be done by adding a keydown listener to the <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code>.
+Custom handling for backdrop clicks can be done via the <code class="docs-markdown-code">(backdropClick)</code> output property on
+<code class="docs-markdown-code">&lt;mat-sidenav-container&gt;</code>.</p>
+<div material-docs-example="sidenav-disable-close"></div>
+
+        <h3 id="resizing-an-open-sidenav" class="docs-header-link docs-markdown-h3">
+          <span header-link="resizing-an-open-sidenav"></span>
+          Resizing an open sidenav
+        </h3>
+      <p class="docs-markdown-p">By default, Material will only measure and resize the drawer container in a few key moments
+(on open, on window resize, on mode change) in order to avoid layout thrashing, however there
+are cases where this can be problematic. If your app requires for a drawer to change its width
+while it is open, you can use the <code class="docs-markdown-code">autosize</code> option to tell Material to continue measuring it.
+Note that you should use this option <strong>at your own risk</strong>, because it could cause performance
+issues.</p>
+<div material-docs-example="sidenav-autosize"></div>
+
+        <h3 id="setting-the-sidenav-39-s-size" class="docs-header-link docs-markdown-h3">
+          <span header-link="setting-the-sidenav-39-s-size"></span>
+          Setting the sidenav's size
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> and <code class="docs-markdown-code">&lt;mat-drawer&gt;</code> will, by default, fit the size of its content. The width can
+be explicitly set via CSS:</p>
+<pre class="docs-markdown-pre"><code class="lang-css docs-markdown-code"><span class="hljs-selector-tag">mat-sidenav</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;
+}
+</code></pre>
+<p class="docs-markdown-p">Try to avoid percent based width as <code class="docs-markdown-code">resize</code> events are not (yet) supported.</p>
+
+        <h3 id="fixed-position-sidenavs" class="docs-header-link docs-markdown-h3">
+          <span header-link="fixed-position-sidenavs"></span>
+          Fixed position sidenavs
+        </h3>
+      <p class="docs-markdown-p">For <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> only (not <code class="docs-markdown-code">&lt;mat-drawer&gt;</code>) fixed positioning is supported. It can be enabled by
+setting the <code class="docs-markdown-code">fixedInViewport</code> property. Additionally, top and bottom space can be set via the
+<code class="docs-markdown-code">fixedTopGap</code> and <code class="docs-markdown-code">fixedBottomGap</code>. These properties accept a pixel value amount of space to add at
+the top or bottom.</p>
+<div material-docs-example="sidenav-fixed"></div>
+
+        <h3 id="creating-a-responsive-layout-for-mobile-amp-desktop" class="docs-header-link docs-markdown-h3">
+          <span header-link="creating-a-responsive-layout-for-mobile-amp-desktop"></span>
+          Creating a responsive layout for mobile &amp; desktop
+        </h3>
+      <p class="docs-markdown-p">A sidenav often needs to behave differently on a mobile vs a desktop display. On a desktop, it may
+make sense to have just the content section scroll. However, on mobile you often want the body to be
+the element that scrolls; this allows the address bar to auto-hide. The sidenav can be styled with
+CSS to adjust to either type of device.</p>
+<div material-docs-example="sidenav-responsive"></div>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> an <code class="docs-markdown-code">&lt;mat-sidenav-content&gt;</code> should each be given an appropriate <code class="docs-markdown-code">role</code> attribute
+depending on the context in which they are used.</p>
+<p class="docs-markdown-p">For example, a <code class="docs-markdown-code">&lt;mat-sidenav&gt;</code> that contains links
+to other pages might be marked <code class="docs-markdown-code">role="navigation"</code>, whereas one that contains a table of
+contents about might be marked as <code class="docs-markdown-code">role="directory"</code>. If there is no more specific role that
+describes your sidenav, <code class="docs-markdown-code">role="region"</code> is recommended.</p>
+<p class="docs-markdown-p">Similarly, the <code class="docs-markdown-code">&lt;mat-sidenav-content&gt;</code> should be given a role based on what it contains. If it
+represents the primary content of the page, it may make sense to mark it <code class="docs-markdown-code">role="main"</code>. If no more
+specific role makes sense, <code class="docs-markdown-code">role="region"</code> is again a good fallback.</p>
+
+        <h3 id="troubleshooting" class="docs-header-link docs-markdown-h3">
+          <span header-link="troubleshooting"></span>
+          Troubleshooting
+        </h3>
+      
+        <h4 id="error-a-drawer-was-already-declared-for-39-position-quot-quot-39-" class="docs-header-link docs-markdown-h4">
+          <span header-link="error-a-drawer-was-already-declared-for-39-position-quot-quot-39-"></span>
+          Error: A drawer was already declared for 'position="..."'
+        </h4>
+      <p class="docs-markdown-p">This error is thrown if you have more than one sidenav or drawer in a given container with the same
+<code class="docs-markdown-code">position</code>. The <code class="docs-markdown-code">position</code> property defaults to <code class="docs-markdown-code">start</code>, so the issue may just be that you forgot to
+mark the <code class="docs-markdown-code">end</code> sidenav with <code class="docs-markdown-code">position="end"</code>.</p>
+</div></body></html>

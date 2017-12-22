@@ -1307,6 +1307,27 @@ var DialogOverviewExampleDialog = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Basic divider
+ */
+var DividerOverviewExample = /** @class */ (function () {
+    function DividerOverviewExample() {
+    }
+    DividerOverviewExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'divider-overview-example',
+                    template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 2</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 3</mat-list-item></mat-list>",
+                },] },
+    ];
+    /** @nocollapse */
+    DividerOverviewExample.ctorParameters = function () { return []; };
+    return DividerOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Elevation CSS classes
  */
 var ElevationOverviewExample = /** @class */ (function () {
@@ -4125,27 +4146,6 @@ var TooltipPositionExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-/**
- * \@title Basic divider
- */
-var DividerOverviewExample = /** @class */ (function () {
-    function DividerOverviewExample() {
-    }
-    DividerOverviewExample.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'divider-overview-example',
-                    template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 2</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 3</mat-list-item></mat-list>",
-                },] },
-    ];
-    /** @nocollapse */
-    DividerOverviewExample.ctorParameters = function () { return []; };
-    return DividerOverviewExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
 /* tslint:disable */
 /** DO NOT MANUALLY EDIT THIS FILE, IT IS GENERATED VIA GULP 'build-examples-module' */
 /**
@@ -4346,7 +4346,7 @@ var EXAMPLE_COMPONENTS = {
         selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
     },
     'divider-overview': {
-        title: 'Divider Overview',
+        title: 'Basic divider',
         component: DividerOverviewExample,
         additionalFiles: null,
         selectorName: null

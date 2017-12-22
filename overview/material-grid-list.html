@@ -1,0 +1,65 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">mat-grid-list</code> is a two-dimensional list view that arranges cells into grid-based layout. 
+See Material Design spec <a href="https://www.google.com/design/spec/components/grid-lists.html" class="docs-markdown-a">here</a>.</p>
+<div material-docs-example="grid-list-overview"></div>
+
+        <h3 id="setting-the-number-of-columns" class="docs-header-link docs-markdown-h3">
+          <span header-link="setting-the-number-of-columns"></span>
+          Setting the number of columns
+        </h3>
+      <p class="docs-markdown-p">An <code class="docs-markdown-code">mat-grid-list</code> must specify a <code class="docs-markdown-code">cols</code> attribute which sets the number of columns in the grid. The
+number of rows will be automatically determined based on the number of columns and the number of
+items.</p>
+
+        <h3 id="setting-the-row-height" class="docs-header-link docs-markdown-h3">
+          <span header-link="setting-the-row-height"></span>
+          Setting the row height
+        </h3>
+      <p class="docs-markdown-p">The height of the rows in a grid list can be set via the <code class="docs-markdown-code">rowHeight</code> attribute. Row height for the
+list can be calculated in three ways:</p>
+<ol class="docs-markdown-ol">
+<li class="docs-markdown-li"><p class="docs-markdown-p"><strong>Fixed height</strong>: The height can be in <code class="docs-markdown-code">px</code>, <code class="docs-markdown-code">em</code>, or <code class="docs-markdown-code">rem</code>.  If no units are specified, <code class="docs-markdown-code">px</code> 
+units are assumed (e.g. <code class="docs-markdown-code">100px</code>, <code class="docs-markdown-code">5em</code>, <code class="docs-markdown-code">250</code>).</p>
+</li>
+<li class="docs-markdown-li"><p class="docs-markdown-p"><strong>Ratio</strong>: This ratio is column-width:row-height, and must be passed in with a colon, not a
+decimal (e.g. <code class="docs-markdown-code">4:3</code>).</p>
+</li>
+<li class="docs-markdown-li"><p class="docs-markdown-p"><strong>Fit</strong>:  Setting <code class="docs-markdown-code">rowHeight</code> to <code class="docs-markdown-code">fit</code> This mode automatically divides the available height by
+the number of rows.  Please note the height of the grid-list or its container must be set.  </p>
+</li>
+</ol>
+<p class="docs-markdown-p">If <code class="docs-markdown-code">rowHeight</code> is not specified, it defaults to a <code class="docs-markdown-code">1:1</code> ratio of width:height. </p>
+
+        <h3 id="setting-the-gutter-size" class="docs-header-link docs-markdown-h3">
+          <span header-link="setting-the-gutter-size"></span>
+          Setting the gutter size
+        </h3>
+      <p class="docs-markdown-p">The gutter size can be set to any <code class="docs-markdown-code">px</code>, <code class="docs-markdown-code">em</code>, or <code class="docs-markdown-code">rem</code> value with the <code class="docs-markdown-code">gutterSize</code> property.  If no 
+units are specified, <code class="docs-markdown-code">px</code> units are assumed. By default the gutter size is <code class="docs-markdown-code">1px</code>.</p>
+
+        <h3 id="adding-tiles-that-span-multiple-rows-or-columns" class="docs-header-link docs-markdown-h3">
+          <span header-link="adding-tiles-that-span-multiple-rows-or-columns"></span>
+          Adding tiles that span multiple rows or columns
+        </h3>
+      <p class="docs-markdown-p">It is possible to set the rowspan and colspan of each <code class="docs-markdown-code">mat-grid-tile</code> individually, using the
+<code class="docs-markdown-code">rowspan</code> and <code class="docs-markdown-code">colspan</code> properties. If not set, they both default to <code class="docs-markdown-code">1</code>. The <code class="docs-markdown-code">colspan</code> must not
+exceed the number of <code class="docs-markdown-code">cols</code> in the <code class="docs-markdown-code">mat-grid-list</code>. There is no such restriction on the <code class="docs-markdown-code">rowspan</code>
+however, more rows will simply be added for it the tile to fill.</p>
+
+        <h3 id="tile-headers-and-footers" class="docs-header-link docs-markdown-h3">
+          <span header-link="tile-headers-and-footers"></span>
+          Tile headers and footers
+        </h3>
+      <p class="docs-markdown-p">A header and footer can be added to an <code class="docs-markdown-code">mat-grid-tile</code> using the <code class="docs-markdown-code">mat-grid-tile-header</code> and
+<code class="docs-markdown-code">mat-grid-tile-footer</code> elements respectively.</p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">By default, the grid-list assumes that it will be used in a purely decorative fashion and thus sets
+no roles, ARIA attributes, or keyboard shortcuts. This is equivalent to having a sequence of <code class="docs-markdown-code">&lt;div&gt;</code>
+elements on the page. Any interactive content within the grid-list should be given an appropriate
+accessibility treatment based on the specific workflow of your application.</p>
+<p class="docs-markdown-p">If the grid-list is used to present a list of <em>non-interactive</em> content items, then the grid-list
+element should be given <code class="docs-markdown-code">role="list"</code> and each tile should be given <code class="docs-markdown-code">role="listitem"</code>.</p>
+</div></body></html>

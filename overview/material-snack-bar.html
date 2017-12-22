@@ -1,0 +1,80 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">MatSnackBar</code> is a service for displaying snack-bar notifications.</p>
+<div material-docs-example="snack-bar-overview"></div>
+
+        <h3 id="opening-a-snack-bar" class="docs-header-link docs-markdown-h3">
+          <span header-link="opening-a-snack-bar"></span>
+          Opening a snack-bar
+        </h3>
+      <p class="docs-markdown-p">A snack-bar can contain either a string message or a given component.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-comment">// Simple message.</span>
+<span class="hljs-keyword">let</span> snackBarRef = snackBar.open(<span class="hljs-string">'Message archived'</span>);
+
+<span class="hljs-comment">// Simple message with an action.</span>
+<span class="hljs-keyword">let</span> snackBarRef = snackBar.open(<span class="hljs-string">'Message archived'</span>, <span class="hljs-string">'Undo'</span>);
+
+<span class="hljs-comment">// Load the given component into the snack-bar.</span>
+<span class="hljs-keyword">let</span> snackBarRef = snackbar.openFromComponent(MessageArchivedComponent);
+</code></pre>
+<p class="docs-markdown-p">In either case, a <code class="docs-markdown-code">MatSnackBarRef</code> is returned. This can be used to dismiss the snack-bar or to
+receive notification of when the snack-bar is dismissed. For simple messages with an action, the
+<code class="docs-markdown-code">MatSnackBarRef</code> exposes an observable for when the action is triggered.
+If you want to close a custom snack-bar that was opened via <code class="docs-markdown-code">openFromComponent</code>, from within the
+component itself, you can inject the <code class="docs-markdown-code">MatSnackBarRef</code>.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">snackBarRef.afterDismissed().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The snack-bar was dismissed'</span>);
+});
+
+
+snackBarRef.onAction().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'The snack-bar action was triggered!'</span>);
+});
+
+snackBarRef.dismiss();
+</code></pre>
+
+        <h3 id="dismissal" class="docs-header-link docs-markdown-h3">
+          <span header-link="dismissal"></span>
+          Dismissal
+        </h3>
+      <p class="docs-markdown-p">A snack-bar can be dismissed manually by calling the <code class="docs-markdown-code">dismiss</code> method on the <code class="docs-markdown-code">MatSnackBarRef</code>
+returned from the call to <code class="docs-markdown-code">open</code>.</p>
+<p class="docs-markdown-p">Only one snack-bar can ever be opened at one time. If a new snackbar is opened while a previous
+message is still showing, the older message will be automatically dismissed.</p>
+<p class="docs-markdown-p">A snack-bar can also be given a duration via the optional configuration object:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">snackbar.open(<span class="hljs-string">'Message archived'</span>, <span class="hljs-string">'Undo'</span>, {
+  duration: <span class="hljs-number">3000</span>
+});
+</code></pre>
+
+        <h3 id="sharing-data-with-a-custom-snack-bar" class="docs-header-link docs-markdown-h3">
+          <span header-link="sharing-data-with-a-custom-snack-bar"></span>
+          Sharing data with a custom snack-bar
+        </h3>
+      <p class="docs-markdown-p">You can share data with the custom snack-bar, that you opened via the <code class="docs-markdown-code">openFromComponent</code> method,
+by passing it through the <code class="docs-markdown-code">data</code> property.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">snackbar.openFromComponent(MessageArchivedComponent, {
+  data: <span class="hljs-string">'some data'</span>
+});
+</code></pre>
+<p class="docs-markdown-p">To access the data in your component, you have to use the <code class="docs-markdown-code">MAT_SNACK_BAR_DATA</code> injection token:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">import {Component, Inject} from '@angular/core';
+import {MAT_SNACK_BAR_DATA} from '@angular/material';
+
+@Component({
+  selector: 'your-snack-bar',
+  template: 'passed in {{ data }}',
+})
+export class MessageArchivedComponent {
+  constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) { }
+}
+</code></pre>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Snack-bar messages are announced via an <code class="docs-markdown-code">aria-live</code> region. Focus is not moved to
+the snack-bar element, as this would be disruptive to a user in the middle of a
+workflow. For any action offered in the snack-bar, the application should offer the
+user an alternative way to perform the action (typically via keyboard shortcut).</p>
+</div></body></html>

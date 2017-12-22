@@ -1,0 +1,92 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">CDK stepper provides a foundation upon which more concrete stepper varities can be built. A
+stepper is a wizard-like workflow that divides content into logical steps</p>
+
+        <h3 id="behavior-captured-by-cdkstepper" class="docs-header-link docs-markdown-h3">
+          <span header-link="behavior-captured-by-cdkstepper"></span>
+          Behavior captured by CdkStepper
+        </h3>
+      <p class="docs-markdown-p">The base CDK version of the stepper primarily manages which step is active. This includes handling
+keyboard interactions and exposing an API for advancing or rewinding through the workflow.</p>
+
+        <h4 id="linear-stepper" class="docs-header-link docs-markdown-h4">
+          <span header-link="linear-stepper"></span>
+          Linear stepper
+        </h4>
+      <p class="docs-markdown-p">A stepper marked as <code class="docs-markdown-code">linear</code> requires the user to complete previous steps before proceeding.
+For each step, the <code class="docs-markdown-code">stepControl</code> attribute can be set to the top level
+<code class="docs-markdown-code">AbstractControl</code> that is used to check the validity of the step.</p>
+<p class="docs-markdown-p">There are two possible approaches. One is using a single form for stepper, and the other is
+using a different form for each step.</p>
+
+        <h4 id="using-a-single-form-for-the-entire-stepper" class="docs-header-link docs-markdown-h4">
+          <span header-link="using-a-single-form-for-the-entire-stepper"></span>
+          Using a single form for the entire stepper
+        </h4>
+      <p class="docs-markdown-p">When using a single form for the stepper, any intermediate next/previous buttons within the steps
+must be set to <code class="docs-markdown-code">type="button"</code> in order to prevent submission of the form before all steps are
+complete.</p>
+
+        <h4 id="using-a-form-for-each-individual-step" class="docs-header-link docs-markdown-h4">
+          <span header-link="using-a-form-for-each-individual-step"></span>
+          Using a form for each individual step
+        </h4>
+      <p class="docs-markdown-p">When using a form for each step, the workflow is advanced whenever one of the forms is submitted.</p>
+
+        <h3 id="types-of-steps" class="docs-header-link docs-markdown-h3">
+          <span header-link="types-of-steps"></span>
+          Types of steps
+        </h3>
+      
+        <h4 id="optional-step" class="docs-header-link docs-markdown-h4">
+          <span header-link="optional-step"></span>
+          Optional step
+        </h4>
+      <p class="docs-markdown-p">If completion of a step in linear stepper is not required, then the <code class="docs-markdown-code">optional</code> attribute can be set
+on <code class="docs-markdown-code">CdkStep</code> in a <code class="docs-markdown-code">linear</code> stepper.</p>
+
+        <h4 id="editable-step" class="docs-header-link docs-markdown-h4">
+          <span header-link="editable-step"></span>
+          Editable step
+        </h4>
+      <p class="docs-markdown-p">By default, steps are editable, which means users can return to previously completed steps and
+edit their responses. <code class="docs-markdown-code">editable="true"</code> can be set on <code class="docs-markdown-code">CdkStep</code> to change the default.</p>
+
+        <h4 id="completed-step" class="docs-header-link docs-markdown-h4">
+          <span header-link="completed-step"></span>
+          Completed step
+        </h4>
+      <p class="docs-markdown-p">By default, the <code class="docs-markdown-code">completed</code> attribute of a step returns <code class="docs-markdown-code">true</code> if the step is valid (in case of
+linear stepper) and the user has interacted with the step. The user, however, can also override
+this default <code class="docs-markdown-code">completed</code> behavior by setting the <code class="docs-markdown-code">completed</code> attribute as needed.</p>
+
+        <h3 id="stepper-buttons" class="docs-header-link docs-markdown-h3">
+          <span header-link="stepper-buttons"></span>
+          Stepper buttons
+        </h3>
+      <p class="docs-markdown-p">There are two button directives to support navigation between different steps:
+<code class="docs-markdown-code">CdkStepperNext</code> and <code class="docs-markdown-code">CdkStepperPrevious</code>. When placed inside of a step, these will automatically
+add click handlers to advance or rewind the workflow, respectively.</p>
+
+        <h3 id="keyboard-interaction" class="docs-header-link docs-markdown-h3">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h3>
+      <ul class="docs-markdown-ul">
+<li class="docs-markdown-li"><kbd>LEFT_ARROW</kbd>: Focuses the previous step header</li>
+<li class="docs-markdown-li"><kbd>RIGHT_ARROW</kbd>: Focuses the next step header</li>
+<li class="docs-markdown-li"><kbd>ENTER</kbd>, <kbd>SPACE</kbd>: Selects the step that the focus is currently on</li>
+<li class="docs-markdown-li"><kbd>TAB</kbd>: Focuses the next tabbable element</li>
+<li class="docs-markdown-li"><kbd>TAB</kbd>+<kbd>SHIFT</kbd>: Focuses the previous tabbable element</li>
+</ul>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">The CDK stepper is treated as a tabbed view for accessibility purposes, so it is given
+<code class="docs-markdown-code">role="tablist"</code> by default. The header of step that can be clicked to select the step
+is given <code class="docs-markdown-code">role="tab"</code>, and the content that can be expanded upon selection is given
+<code class="docs-markdown-code">role="tabpanel"</code>. <code class="docs-markdown-code">aria-selected</code> attribute of step header and <code class="docs-markdown-code">aria-expanded</code> attribute of
+step content is automatically set based on step selection change.</p>
+<p class="docs-markdown-p">The stepper and each step should be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+</div></body></html>

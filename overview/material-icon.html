@@ -1,0 +1,137 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">mat-icon</code> makes it easier to use <em>vector-based</em> icons in your app.  This directive supports both
+icon fonts and SVG icons, but not bitmap-based formats (png, jpg, etc.).</p>
+<div material-docs-example="icon-overview"></div>
+
+        <h3 id="registering-icons" class="docs-header-link docs-markdown-h3">
+          <span header-link="registering-icons"></span>
+          Registering icons
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">MatIconRegistry</code> is an injectable service that allows you to associate icon names with SVG URLs and
+define aliases for CSS font classes. Its methods are discussed below and listed in the API summary.</p>
+
+        <h3 id="font-icons-with-ligatures" class="docs-header-link docs-markdown-h3">
+          <span header-link="font-icons-with-ligatures"></span>
+          Font icons with ligatures
+        </h3>
+      <p class="docs-markdown-p">Some fonts are designed to show icons by using
+<a href="https://en.wikipedia.org/wiki/Typographic_ligature" class="docs-markdown-a">ligatures</a>, for example by rendering the text
+"home" as a home image. To use a ligature icon, put its text in the content of the <code class="docs-markdown-code">mat-icon</code>
+component.</p>
+<p class="docs-markdown-p">By default, <code class="docs-markdown-code">&lt;mat-icon&gt;</code> expects the
+<a href="http://google.github.io/material-design-icons/#icon-font-for-the-web" class="docs-markdown-a">Material icons font</a>.
+(You will still need to include the HTML to load the font and its CSS, as described in the link).
+You can specify a different font by setting the <code class="docs-markdown-code">fontSet</code> input to either the CSS class to apply to
+use the desired font, or to an alias previously registered with
+<code class="docs-markdown-code">MatIconRegistry.registerFontClassAlias</code>.</p>
+
+        <h3 id="font-icons-with-css" class="docs-header-link docs-markdown-h3">
+          <span header-link="font-icons-with-css"></span>
+          Font icons with CSS
+        </h3>
+      <p class="docs-markdown-p">Fonts can also display icons by defining a CSS class for each icon glyph, which typically uses a
+<code class="docs-markdown-code">:before</code> selector to cause the icon to appear.
+<a href="https://fortawesome.github.io/Font-Awesome/examples/" class="docs-markdown-a">FontAwesome</a> uses this approach to display
+its icons. To use such a font, set the <code class="docs-markdown-code">fontSet</code> input to the font's CSS class (either the class
+itself or an alias registered with <code class="docs-markdown-code">MatIconRegistry.registerFontClassAlias</code>), and set the <code class="docs-markdown-code">fontIcon</code>
+input to the class for the specific icon to show.</p>
+<p class="docs-markdown-p">For both types of font icons, you can specify the default font class to use when <code class="docs-markdown-code">fontSet</code> is not
+explicitly set by calling <code class="docs-markdown-code">MatIconRegistry.setDefaultFontSetClass</code>.</p>
+
+        <h3 id="svg-icons" class="docs-header-link docs-markdown-h3">
+          <span header-link="svg-icons"></span>
+          SVG icons
+        </h3>
+      <p class="docs-markdown-p">When an <code class="docs-markdown-code">mat-icon</code> component displays an SVG icon, it does so by directly inlining the SVG content
+into the page as a child of the component. (Rather than using an <img> tag or a div background
+image). This makes it easier to apply CSS styles to SVG icons. For example, the default color of the
+SVG content is the CSS 
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentColor_keyword" class="docs-markdown-a">currentColor</a> 
+value. This makes SVG icons by default have the same color as surrounding text, and allows you to 
+change the color by setting the "color" style on the <code class="docs-markdown-code">mat-icon</code> element.</p>
+<p class="docs-markdown-p">In order to prevent XSS vulnerabilities, any SVG URLs passed to the <code class="docs-markdown-code">MatIconRegistry</code> must be 
+marked as trusted resource URLs by using Angular's <code class="docs-markdown-code">DomSanitizer</code> service.</p>
+<p class="docs-markdown-p">Also note that all SVG icons are fetched via XmlHttpRequest, and due to the same-origin policy, 
+their URLs must be on the same domain as the containing page, or their servers must be configured 
+to allow cross-domain access.</p>
+
+        <h4 id="named-icons" class="docs-header-link docs-markdown-h4">
+          <span header-link="named-icons"></span>
+          Named icons
+        </h4>
+      <p class="docs-markdown-p">To associate a name with an icon URL, use the <code class="docs-markdown-code">addSvgIcon</code> or <code class="docs-markdown-code">addSvgIconInNamespace</code> methods of
+<code class="docs-markdown-code">MatIconRegistry</code>. After registering an icon, it can be displayed by setting the <code class="docs-markdown-code">svgIcon</code> input.
+For an icon in the default namespace, use the name directly. For a non-default namespace, use the
+format <code class="docs-markdown-code">[namespace]:[name]</code>.</p>
+
+        <h4 id="icon-sets" class="docs-header-link docs-markdown-h4">
+          <span header-link="icon-sets"></span>
+          Icon sets
+        </h4>
+      <p class="docs-markdown-p">Icon sets allow grouping multiple icons into a single SVG file. This is done by creating a single
+root <code class="docs-markdown-code">&lt;svg&gt;</code> tag that contains multiple nested <code class="docs-markdown-code">&lt;svg&gt;</code> tags in its <code class="docs-markdown-code">&lt;defs&gt;</code> section. Each of these
+nested tags is identified with an <code class="docs-markdown-code">id</code> attribute. This <code class="docs-markdown-code">id</code> is used as the name of the icon.</p>
+<p class="docs-markdown-p">Icon sets are registered using the <code class="docs-markdown-code">addSvgIconSet</code> or <code class="docs-markdown-code">addSvgIconSetInNamespace</code> methods of
+<code class="docs-markdown-code">MatIconRegistry</code>. After an icon set is registered, each of its embedded icons can be accessed by
+their <code class="docs-markdown-code">id</code> attributes. To display an icon from an icon set, use the <code class="docs-markdown-code">svgIcon</code> input in the same way
+as for individually registered icons.</p>
+<p class="docs-markdown-p">Multiple icon sets can be registered in the same namespace. Requesting an icon whose id appears in
+more than one icon set, the icon from the most recently registered set will be used.</p>
+
+        <h3 id="theming" class="docs-header-link docs-markdown-h3">
+          <span header-link="theming"></span>
+          Theming
+        </h3>
+      <p class="docs-markdown-p">By default, icons will use the current font color (<code class="docs-markdown-code">currentColor</code>). this color can be changed to 
+match the current theme's colors using the <code class="docs-markdown-code">color</code> attribute. This can be changed to 
+<code class="docs-markdown-code">'primary'</code>, <code class="docs-markdown-code">'accent'</code>, or <code class="docs-markdown-code">'warn'</code>.</p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Similar to an <code class="docs-markdown-code">&lt;img&gt;</code> element, an icon alone does not convey any useful information for a
+screen-reader user. The user of <code class="docs-markdown-code">&lt;mat-icon&gt;</code> must provide additional information pertaining to how
+the icon is used. Based on the use-cases described below, <code class="docs-markdown-code">mat-icon</code> is marked as
+<code class="docs-markdown-code">aria-hidden="true"</code> by default, but this can be overriden by adding <code class="docs-markdown-code">aria-hidden="false"</code> to the
+element.</p>
+<p class="docs-markdown-p">In thinking about accessibility, it is useful to place icon use into one of three categories:</p>
+<ol class="docs-markdown-ol">
+<li class="docs-markdown-li"><strong>Decorative</strong>: the icon conveys no real semantic meaning and is purely cosmetic.</li>
+<li class="docs-markdown-li"><strong>Interactive</strong>: a user will click or otherwise interact with the icon to perform some action.</li>
+<li class="docs-markdown-li"><strong>Indicator</strong>: the icon is not interactive, but it conveys some information, such as a status.</li>
+</ol>
+
+        <h4 id="decorative-icons" class="docs-header-link docs-markdown-h4">
+          <span header-link="decorative-icons"></span>
+          Decorative icons
+        </h4>
+      <p class="docs-markdown-p">When the icon is puely cosmetic and conveys no real semantic meaning, the <code class="docs-markdown-code">&lt;mat-icon&gt;</code> element
+should be marked with <code class="docs-markdown-code">aria-hidden="true"</code>.</p>
+
+        <h4 id="interactive-icons" class="docs-header-link docs-markdown-h4">
+          <span header-link="interactive-icons"></span>
+          Interactive icons
+        </h4>
+      <p class="docs-markdown-p">Icons alone are not interactive elements for screen-reader users; when the user would interact with
+some icon on the page, a more appropriate  element should "own" the interaction:</p>
+<ul class="docs-markdown-ul">
+<li class="docs-markdown-li">The <code class="docs-markdown-code">&lt;mat-icon&gt;</code> element should be a child of a <code class="docs-markdown-code">&lt;button&gt;</code> or <code class="docs-markdown-code">&lt;a&gt;</code> element.</li>
+<li class="docs-markdown-li">The <code class="docs-markdown-code">&lt;mat-icon&gt;</code> element should be marked with <code class="docs-markdown-code">aria-hidden="true"</code>.</li>
+<li class="docs-markdown-li">The parent <code class="docs-markdown-code">&lt;button&gt;</code> or <code class="docs-markdown-code">&lt;a&gt;</code> should either have a meaningful label provided either through
+direct text content, <code class="docs-markdown-code">aria-label</code>, or <code class="docs-markdown-code">aria-labelledby</code>.</li>
+</ul>
+
+        <h4 id="indicator-icons" class="docs-header-link docs-markdown-h4">
+          <span header-link="indicator-icons"></span>
+          Indicator icons
+        </h4>
+      <p class="docs-markdown-p">When the presence of an icon communicates some information to the user, that information must also
+be made available to screen-readers. The most straightforward way to do this is to</p>
+<ol class="docs-markdown-ol">
+<li class="docs-markdown-li">Mark the <code class="docs-markdown-code">&lt;mat-icon&gt;</code> as <code class="docs-markdown-code">aria-hidden="true"</code></li>
+<li class="docs-markdown-li">Add a <code class="docs-markdown-code">&lt;span&gt;</code> as an adjacent sibling to the <code class="docs-markdown-code">&lt;mat-icon&gt;</code> element with text that conveys the same
+information as the icon.</li>
+<li class="docs-markdown-li">Add the <code class="docs-markdown-code">cdk-visually-hidden</code> class to the <code class="docs-markdown-code">&lt;span&gt;</code>. This will make the message invisible
+on-screen but still available to screen-reader users.</li>
+</ol>
+</div></body></html>

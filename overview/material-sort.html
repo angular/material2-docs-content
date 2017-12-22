@@ -1,0 +1,50 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The <code class="docs-markdown-code">matSort</code> and <code class="docs-markdown-code">mat-sort-header</code> are used, respectively, to add sorting state and display
+to tabular data.</p>
+<div material-docs-example="sort-overview"></div>
+
+        <h3 id="adding-sort-to-table-headers" class="docs-header-link docs-markdown-h3">
+          <span header-link="adding-sort-to-table-headers"></span>
+          Adding sort to table headers
+        </h3>
+      <p class="docs-markdown-p">To add sorting behavior and styling to a set of table headers, add the <code class="docs-markdown-code">&lt;mat-sort-header&gt;</code> component
+to each header and provide an <code class="docs-markdown-code">id</code> that will identify it. These headers should be contained within a
+parent element with the <code class="docs-markdown-code">matSort</code> directive, which will emit an <code class="docs-markdown-code">matSortChange</code> event when the user
+ triggers sorting on the header.</p>
+<p class="docs-markdown-p">Users can trigger the sort header through a mouse click or keyboard action. When this happens, the
+<code class="docs-markdown-code">matSort</code> will emit an <code class="docs-markdown-code">matSortChange</code> event that contains the ID of the header triggered and the
+direction to sort (<code class="docs-markdown-code">asc</code> or <code class="docs-markdown-code">desc</code>).</p>
+
+        <h4 id="changing-the-sort-order" class="docs-header-link docs-markdown-h4">
+          <span header-link="changing-the-sort-order"></span>
+          Changing the sort order
+        </h4>
+      <p class="docs-markdown-p">By default, a sort header starts its sorting at <code class="docs-markdown-code">asc</code> and then <code class="docs-markdown-code">desc</code>. Triggering the sort header
+after <code class="docs-markdown-code">desc</code> will remove sorting.</p>
+<p class="docs-markdown-p">To reverse the sort order for all headers, set the <code class="docs-markdown-code">matSortStart</code> to <code class="docs-markdown-code">desc</code> on the <code class="docs-markdown-code">matSort</code>
+directive. To reverse the order only for a specific header, set the <code class="docs-markdown-code">start</code> input only on the header
+instead.</p>
+<p class="docs-markdown-p">To prevent the user from clearing the sort sort state from an already sorted column, set
+<code class="docs-markdown-code">matSortDisableClear</code> to <code class="docs-markdown-code">true</code> on the <code class="docs-markdown-code">matSort</code> to affect all headers, or set <code class="docs-markdown-code">disableClear</code> to
+<code class="docs-markdown-code">true</code> on a specific header.</p>
+
+        <h4 id="disabling-sorting" class="docs-header-link docs-markdown-h4">
+          <span header-link="disabling-sorting"></span>
+          Disabling sorting
+        </h4>
+      <p class="docs-markdown-p">If you want to prevent the user from changing the sorting order of any column, you can use the
+<code class="docs-markdown-code">matSortDisabled</code> binding on the <code class="docs-markdown-code">mat-sort</code>, or the <code class="docs-markdown-code">disabled</code> on an single <code class="docs-markdown-code">mat-sort-header</code>.</p>
+
+        <h4 id="using-sort-with-the-mat-table" class="docs-header-link docs-markdown-h4">
+          <span header-link="using-sort-with-the-mat-table"></span>
+          Using sort with the mat-table
+        </h4>
+      <p class="docs-markdown-p">When used on an <code class="docs-markdown-code">mat-table</code> header, it is not required to set an <code class="docs-markdown-code">mat-sort-header</code> id on because
+by default it will use the id of the column.</p>
+<div material-docs-example="table-sorting"></div>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">aria-label</code> for the sort button can be set in <code class="docs-markdown-code">MatSortHeaderIntl</code>.</p>
+</div></body></html>

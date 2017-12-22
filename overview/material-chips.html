@@ -1,0 +1,89 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-chip-list&gt;</code> displays a list of values as individual, keyboard accessible, chips.</p>
+<div material-docs-example="chips-overview"></div>
+<p class="docs-markdown-p"><em>Note: chips are still early in their development and more features are being actively worked on.</em></p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-list</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Papadum<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Naan<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Dal<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-list</span>&gt;</span>
+</code></pre>
+
+        <h3 id="unstyled-chips" class="docs-header-link docs-markdown-h3">
+          <span header-link="unstyled-chips"></span>
+          Unstyled chips
+        </h3>
+      <p class="docs-markdown-p">By default, <code class="docs-markdown-code">&lt;mat-chip&gt;</code> has Material Design styles applied. For a chip with no styles applied,
+use <code class="docs-markdown-code">&lt;mat-basic-chip&gt;</code>. You can then customize the chip appearance by adding your own CSS.</p>
+<p class="docs-markdown-p"><em>Hint: <code class="docs-markdown-code">&lt;mat-basic-chip&gt;</code> receives the <code class="docs-markdown-code">mat-basic-chip</code> CSS class in addition to the <code class="docs-markdown-code">mat-chip</code> class.</em></p>
+
+        <h3 id="selection" class="docs-header-link docs-markdown-h3">
+          <span header-link="selection"></span>
+          Selection
+        </h3>
+      <p class="docs-markdown-p">Chips can be selected via the <code class="docs-markdown-code">selected</code> property. Selection can be disabled by setting
+<code class="docs-markdown-code">selectable</code> to <code class="docs-markdown-code">false</code> on the <code class="docs-markdown-code">&lt;mat-chip-list&gt;</code>.</p>
+<p class="docs-markdown-p">Whenever the selection state changes, a <code class="docs-markdown-code">ChipSelectionChange</code> event will be emitted via 
+<code class="docs-markdown-code">(selectionChange)</code>.</p>
+
+        <h3 id="disabled-chips" class="docs-header-link docs-markdown-h3">
+          <span header-link="disabled-chips"></span>
+          Disabled chips
+        </h3>
+      <p class="docs-markdown-p">Individual chips may be disabled by applying the <code class="docs-markdown-code">disabled</code> attribute to the chip. When disabled,
+chips are neither selectable nor focusable. Currently, disabled chips receive no special styling.</p>
+
+        <h3 id="chip-input" class="docs-header-link docs-markdown-h3">
+          <span header-link="chip-input"></span>
+          Chip input
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">MatChipInput</code> directive can be used together with a chip-list to streamline the interaction
+between the two components. This directive adds chip-specific behaviors to the input element
+within <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> for adding and removing chips. The <code class="docs-markdown-code">&lt;input&gt;</code> with <code class="docs-markdown-code">MatChipInput</code> can
+be placed inside or outside the chip-list element.</p>
+<p class="docs-markdown-p">An example of chip input placed inside the chip-list element.
+</p><div material-docs-example="chips-input"></div><p class="docs-markdown-p"></p>
+<p class="docs-markdown-p">An example of chip input placed outside the chip-list element.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-list</span> #<span class="hljs-attr">chipList</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Chip 1<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Chip 2<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-list</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">matChipInputFor</span>]=<span class="hljs-string">"chipList"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+</code></pre>
+
+        <h3 id="keyboard-interaction" class="docs-header-link docs-markdown-h3">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h3>
+      <p class="docs-markdown-p">Users can move through the chips using the arrow keys and select/deselect them with the space. Chips
+also gain focus when clicked, ensuring keyboard navigation starts at the appropriate chip.</p>
+
+        <h3 id="orientation" class="docs-header-link docs-markdown-h3">
+          <span header-link="orientation"></span>
+          Orientation
+        </h3>
+      <p class="docs-markdown-p">If you want the chips in the list to be stacked vertically, instead of horizontally, you can apply
+the <code class="docs-markdown-code">mat-chip-list-stacked</code> class, as well as the <code class="docs-markdown-code">aria-orientation="vertical"</code> attribute:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-list</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-chip-list-stacked"</span> <span class="hljs-attr">aria-orientation</span>=<span class="hljs-string">"vertical"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Papadum<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Naan<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Dal<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-list</span>&gt;</span>
+</code></pre>
+
+        <h3 id="theming" class="docs-header-link docs-markdown-h3">
+          <span header-link="theming"></span>
+          Theming
+        </h3>
+      <p class="docs-markdown-p">The selected color of an <code class="docs-markdown-code">&lt;mat-chip&gt;</code> can be changed by using the <code class="docs-markdown-code">color</code> property. By default, chips
+use a neutral background color based on the current theme (light or dark). This can be changed to
+<code class="docs-markdown-code">'primary'</code>, <code class="docs-markdown-code">'accent'</code>, or <code class="docs-markdown-code">'warn'</code>.</p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">A chip-list behaves as a <code class="docs-markdown-code">role="listbox"</code>, with each chip being a <code class="docs-markdown-code">role="option"</code>. The chip input
+should have a placeholder or be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+</div></body></html>

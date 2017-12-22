@@ -1,0 +1,22 @@
+<html><head></head><body><div class="docs-markdown">
+        <h3 id="mediamatcher" class="docs-header-link docs-markdown-h3">
+          <span header-link="mediamatcher"></span>
+          MediaMatcher
+        </h3>
+      <p class="docs-markdown-p">When including the CDK's <code class="docs-markdown-code">LayoutModule</code>, components can inject <code class="docs-markdown-code">MediaMatcher</code> to access the 
+matchMedia method, if available on the platform.</p>
+
+        <h4 id="example" class="docs-header-link docs-markdown-h4">
+          <span header-link="example"></span>
+          Example
+        </h4>
+      <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({ ... }) 
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyWidget {  
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">mm: MediaMatcher</span>) {
+    mm.matchMedia(<span class="hljs-string">'(orientation: landscape)'</span>).matches ? 
+      <span class="hljs-keyword">this</span>.setLandscapeMode() :
+      <span class="hljs-keyword">this</span>.setPortraitMode();
+  }
+}
+</code></pre>
+</div></body></html>

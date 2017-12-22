@@ -1,0 +1,33 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-button-toggle&gt;</code> are on/off toggles with the appearance of a button. These toggles can be 
+configured to behave as either radio-buttons or checkboxes. While they can be standalone, they are 
+typically part of a <code class="docs-markdown-code">mat-button-toggle-group</code>.</p>
+<div material-docs-example="button-toggle-overview"></div>
+
+        <h3 id="exclusive-selection-vs-multiple-selection" class="docs-header-link docs-markdown-h3">
+          <span header-link="exclusive-selection-vs-multiple-selection"></span>
+          Exclusive selection vs. multiple selection
+        </h3>
+      <p class="docs-markdown-p">By default, <code class="docs-markdown-code">mat-button-toggle-group</code> acts like a radio-button group- only one item can be selected.
+In this mode, the <code class="docs-markdown-code">value</code> of the <code class="docs-markdown-code">mat-button-toggle-group</code> will reflect the value of the selected 
+button and <code class="docs-markdown-code">ngModel</code> is supported. </p>
+<p class="docs-markdown-p">Adding the <code class="docs-markdown-code">multiple</code> attribute allows multiple items to be selected (checkbox behavior). In this
+mode the values of the the toggles are not used, the <code class="docs-markdown-code">mat-button-toggle-group</code> does not have a value, 
+and <code class="docs-markdown-code">ngModel</code> is not supported.</p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">The button-toggles will present themselves as either checkboxes or radio-buttons based on the
+presence of the <code class="docs-markdown-code">multiple</code> attribute. </p>
+<p class="docs-markdown-p">For button toggles containing only icons, each button toggle should be given a meaningful label via
+<code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+<p class="docs-markdown-p">For button toggle groups, each group should be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or
+<code class="docs-markdown-code">aria-labelledby</code>.</p>
+
+        <h3 id="orientation" class="docs-header-link docs-markdown-h3">
+          <span header-link="orientation"></span>
+          Orientation
+        </h3>
+      <p class="docs-markdown-p">The button-toggles can be rendered in a vertical orientation by adding the <code class="docs-markdown-code">vertical</code> attribute.</p>
+</div></body></html>

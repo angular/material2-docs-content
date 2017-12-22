@@ -1,0 +1,184 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-select&gt;</code> is a form control for selecting a value from a set of options, similar to the native
+<code class="docs-markdown-code">&lt;select&gt;</code> element. You can read more about selects in the
+<a href="https://material.google.com/components/menus.html" class="docs-markdown-a">Material Design spec</a>. It is designed to work
+inside of a <a href="https://material.angular.io/components/form-field/overview" class="docs-markdown-a"><code class="docs-markdown-code">&lt;mat-form-field&gt;</code></a>
+element.</p>
+<p class="docs-markdown-p">To add options to the select, add <code class="docs-markdown-code">&lt;mat-option&gt;</code> elements to the <code class="docs-markdown-code">&lt;mat-select&gt;</code>. Each <code class="docs-markdown-code">&lt;mat-option&gt;</code>
+has a <code class="docs-markdown-code">value</code> property that can be used to set the value that will be selected if the user chooses
+this option. The content of the <code class="docs-markdown-code">&lt;mat-option&gt;</code> is what will be shown to the user.</p>
+<div material-docs-example="select-overview"></div>
+
+        <h3 id="getting-and-setting-the-select-value" class="docs-header-link docs-markdown-h3">
+          <span header-link="getting-and-setting-the-select-value"></span>
+          Getting and setting the select value
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-select&gt;</code> supports 2-way binding to the <code class="docs-markdown-code">value</code> property without the need for Angular
+forms.</p>
+<div material-docs-example="select-value-binding"></div>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-select&gt;</code> also supports all of the form directives from the core <code class="docs-markdown-code">FormsModule</code> and
+<code class="docs-markdown-code">ReactiveFormsModule</code> (<code class="docs-markdown-code">ngModel</code>, <code class="docs-markdown-code">formControl</code>, etc.) As with native <code class="docs-markdown-code">&lt;select&gt;</code>, <code class="docs-markdown-code">&lt;mat-select&gt;</code>
+also supports a <code class="docs-markdown-code">compareWith</code> function. (Additional information about using a custom <code class="docs-markdown-code">compareWith</code>
+function can be found in the
+<a href="https://angular.io/api/forms/SelectControlValueAccessor#caveat-option-selection" class="docs-markdown-a">Angular forms documentation</a>).</p>
+<div material-docs-example="select-form"></div>
+
+        <h3 id="form-field-features" class="docs-header-link docs-markdown-h3">
+          <span header-link="form-field-features"></span>
+          Form field features
+        </h3>
+      <p class="docs-markdown-p">There are a number of <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> features that can be used with any <code class="docs-markdown-code">&lt;mat-select&gt;</code>. These
+include error messages, hint text, prefix &amp; suffix, and theming. For additional information about
+these features, see the
+<a href="https://material.angular.io/components/form-field/overview" class="docs-markdown-a">form field documentation</a>.</p>
+<div material-docs-example="select-hint-error"></div>
+
+        <h3 id="setting-a-static-placeholder" class="docs-header-link docs-markdown-h3">
+          <span header-link="setting-a-static-placeholder"></span>
+          Setting a static placeholder
+        </h3>
+      <p class="docs-markdown-p">The placeholder is a text label displayed in the select trigger area when no value is selected. When
+a value is selected, the placeholder will float above the select trigger area. The placeholder can
+be specified either via a <code class="docs-markdown-code">placeholder</code> attribute on the <code class="docs-markdown-code">&lt;mat-select&gt;</code> or a <code class="docs-markdown-code">&lt;mat-placeholder&gt;</code>
+element in the same form field as the <code class="docs-markdown-code">&lt;mat-select&gt;</code>. The <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> also has additional
+options for changing the behavior of the placeholder. For more information see the
+<a href="https://material.angular.io/components/form-field/overview#floating-placeholder" class="docs-markdown-a">form field placeholder documentation</a>.</p>
+
+        <h3 id="disabling-the-select-or-individual-options" class="docs-header-link docs-markdown-h3">
+          <span header-link="disabling-the-select-or-individual-options"></span>
+          Disabling the select or individual options
+        </h3>
+      <p class="docs-markdown-p">It is possible to disable the entire select or individual options in the select by using the
+disabled property on the <code class="docs-markdown-code">&lt;mat-select&gt;</code> and the <code class="docs-markdown-code">&lt;mat-option&gt;</code> components respectively.</p>
+<div material-docs-example="select-disabled"></div>
+
+        <h3 id="resetting-the-select-value" class="docs-header-link docs-markdown-h3">
+          <span header-link="resetting-the-select-value"></span>
+          Resetting the select value
+        </h3>
+      <p class="docs-markdown-p">If you want one of your options to reset the select's value, you can omit specifying its value.</p>
+<div material-docs-example="select-reset"></div>
+
+        <h3 id="creating-groups-of-options" class="docs-header-link docs-markdown-h3">
+          <span header-link="creating-groups-of-options"></span>
+          Creating groups of options
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-optgroup&gt;</code> element can be used to group common options under a subheading. The name of the
+group can be set using the <code class="docs-markdown-code">label</code> property of <code class="docs-markdown-code">&lt;mat-optgroup&gt;</code>. Like individual <code class="docs-markdown-code">&lt;mat-option&gt;</code>
+elements, an entire <code class="docs-markdown-code">&lt;mat-optgroup&gt;</code> can be disabled or enabled by setting the <code class="docs-markdown-code">disabled</code> property
+on the group.</p>
+<div material-docs-example="select-optgroup"></div>
+
+        <h3 id="multiple-selection" class="docs-header-link docs-markdown-h3">
+          <span header-link="multiple-selection"></span>
+          Multiple selection
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-select&gt;</code> defaults to single-selection mode, but can be configured to allow multiple selection 
+by setting the <code class="docs-markdown-code">multiple</code> property. This will allow the user to select multiple values at once. When
+using the <code class="docs-markdown-code">&lt;mat-select&gt;</code> in multiple selection mode, its value will be a sorted list of all selected
+values rather than a single value.</p>
+<div material-docs-example="select-multiple"></div>
+
+        <h3 id="customizing-the-trigger-label" class="docs-header-link docs-markdown-h3">
+          <span header-link="customizing-the-trigger-label"></span>
+          Customizing the trigger label
+        </h3>
+      <p class="docs-markdown-p">If you want to display a custom trigger label inside a select, you can use the
+<code class="docs-markdown-code">&lt;mat-select-trigger&gt;</code> element.</p>
+<div material-docs-example="select-custom-trigger"></div>
+
+        <h3 id="disabling-the-ripple-effect" class="docs-header-link docs-markdown-h3">
+          <span header-link="disabling-the-ripple-effect"></span>
+          Disabling the ripple effect
+        </h3>
+      <p class="docs-markdown-p">By default, when a user clicks on a <code class="docs-markdown-code">&lt;mat-option&gt;</code>, a ripple animation is shown. This can be disabled
+by setting the <code class="docs-markdown-code">disableRipple</code> property on <code class="docs-markdown-code">&lt;mat-select&gt;</code>.</p>
+<div material-docs-example="select-no-ripple"></div>
+
+        <h3 id="adding-custom-styles-to-the-dropdown-panel" class="docs-header-link docs-markdown-h3">
+          <span header-link="adding-custom-styles-to-the-dropdown-panel"></span>
+          Adding custom styles to the dropdown panel
+        </h3>
+      <p class="docs-markdown-p">In order to facilitate easily styling the dropdown panel, <code class="docs-markdown-code">&lt;mat-select&gt;</code> has a <code class="docs-markdown-code">panelClass</code> property
+which can be used to apply additional CSS classes to the dropdown panel.</p>
+<div material-docs-example="select-panel-class"></div>
+
+        <h3 id="changing-when-error-messages-are-shown" class="docs-header-link docs-markdown-h3">
+          <span header-link="changing-when-error-messages-are-shown"></span>
+          Changing when error messages are shown
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> allows you to
+<a href="https://material.angular.io/components/form-field/overview#error-messages" class="docs-markdown-a">associate error messages</a>
+with your <code class="docs-markdown-code">&lt;mat-select&gt;</code>. By default, these error messages are shown when the control is invalid and
+either the user has interacted with (touched) the element or the parent form has been submitted. If
+you wish to override this behavior (e.g. to show the error as soon as the invalid control is dirty
+or when a parent form group is invalid), you can use the <code class="docs-markdown-code">errorStateMatcher</code> property of the
+<code class="docs-markdown-code">&lt;mat-select&gt;</code>. The property takes an instance of an <code class="docs-markdown-code">ErrorStateMatcher</code> object. An
+<code class="docs-markdown-code">ErrorStateMatcher</code> must implement a single method <code class="docs-markdown-code">isErrorState</code> which takes the <code class="docs-markdown-code">FormControl</code> for
+this <code class="docs-markdown-code">&lt;mat-select&gt;</code> as well as the parent form and returns a boolean indicating whether errors
+should be shown. (<code class="docs-markdown-code">true</code> indicating that they should be shown, and <code class="docs-markdown-code">false</code> indicating that they
+should not.)</p>
+<div material-docs-example="select-error-state-matcher"></div>
+<p class="docs-markdown-p">A global error state matcher can be specified by setting the <code class="docs-markdown-code">ErrorStateMatcher</code> provider. This
+applies to all inputs. For convenience, <code class="docs-markdown-code">ShowOnDirtyErrorStateMatcher</code> is available in order to
+globally cause input errors to show when the input is dirty and invalid.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  providers: [
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
+  ]
+})
+</code></pre>
+
+        <h3 id="keyboard-interaction" class="docs-header-link docs-markdown-h3">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h3>
+      <ul class="docs-markdown-ul">
+<li class="docs-markdown-li"><kbd>DOWN_ARROW</kbd>: Focus next option</li>
+<li class="docs-markdown-li"><kbd>UP_ARROW</kbd>: Focus previous option</li>
+<li class="docs-markdown-li"><kbd>ENTER</kbd> or <kbd>SPACE</kbd>: Select focused item</li>
+</ul>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">The select component without text or label should be given a meaningful label via
+<code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+<p class="docs-markdown-p">The select component has <code class="docs-markdown-code">role="listbox"</code> and options inside select have <code class="docs-markdown-code">role="option"</code>.</p>
+
+        <h3 id="troubleshooting" class="docs-header-link docs-markdown-h3">
+          <span header-link="troubleshooting"></span>
+          Troubleshooting
+        </h3>
+      
+        <h4 id="error-cannot-change-code-multiple-code-mode-of-select-after-initialization" class="docs-header-link docs-markdown-h4">
+          <span header-link="error-cannot-change-code-multiple-code-mode-of-select-after-initialization"></span>
+          Error: Cannot change <code class="docs-markdown-code">multiple</code> mode of select after initialization
+        </h4>
+      <p class="docs-markdown-p">This error is thrown if you attempt to bind the <code class="docs-markdown-code">multiple</code> property on <code class="docs-markdown-code">&lt;mat-select&gt;</code> to a dynamic
+value. (e.g. <code class="docs-markdown-code">[multiple]="isMultiple"</code> where the value of <code class="docs-markdown-code">isMultiple</code> changes over the course of
+the component's lifetime). If you need to change this dynamically, use <code class="docs-markdown-code">ngIf</code> or <code class="docs-markdown-code">ngSwitch</code> instead:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"isMultiple"</span> <span class="hljs-attr">multiple</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"!isMultiple"</span>&gt;</span>
+  ...
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+</code></pre>
+
+        <h4 id="error-value-must-be-an-array-in-multiple-selection-mode" class="docs-header-link docs-markdown-h4">
+          <span header-link="error-value-must-be-an-array-in-multiple-selection-mode"></span>
+          Error: Value must be an array in multiple-selection mode
+        </h4>
+      <p class="docs-markdown-p">This error is thrown if you attempt to assign a value other than <code class="docs-markdown-code">null</code>, <code class="docs-markdown-code">undefined</code>, or an array to
+a <code class="docs-markdown-code">&lt;mat-select multiple&gt;</code>. For example, something like <code class="docs-markdown-code">mySelect.value = 'option1'</code>. What you likely
+meant to do was <code class="docs-markdown-code">mySelect.value = ['option1']</code>.</p>
+
+        <h4 id="error-code-comparewith-code-must-be-a-function" class="docs-header-link docs-markdown-h4">
+          <span header-link="error-code-comparewith-code-must-be-a-function"></span>
+          Error: <code class="docs-markdown-code">compareWith</code> must be a function
+        </h4>
+      <p class="docs-markdown-p">This error occurs if you attempt to assign something other than a function to the <code class="docs-markdown-code">compareWith</code>
+property. For more information on proper usage of <code class="docs-markdown-code">compareWith</code> see the
+<a href="https://angular.io/api/forms/SelectControlValueAccessor#caveat-option-selection" class="docs-markdown-a">Angular forms documentation</a>).</p>
+</div></body></html>

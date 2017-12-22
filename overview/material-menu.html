@@ -1,0 +1,112 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-menu&gt;</code> is a floating panel containing list of options.</p>
+<div material-docs-example="menu-overview"></div>
+<p class="docs-markdown-p">By itself, the <code class="docs-markdown-code">&lt;mat-menu&gt;</code> element does not render anything. The menu is attached to and opened
+via application of the <code class="docs-markdown-code">matMenuTriggerFor</code> directive:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span> Settings <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span> Help <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"appMenu"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+
+        <h3 id="toggling-the-menu-programmatically" class="docs-header-link docs-markdown-h3">
+          <span header-link="toggling-the-menu-programmatically"></span>
+          Toggling the menu programmatically
+        </h3>
+      <p class="docs-markdown-p">The menu exposes an API to open/close programmatically. Please note that in this case, an
+<code class="docs-markdown-code">matMenuTriggerFor</code> directive is still necessary to attach the menu to a trigger element in the DOM.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">class</span> MyComponent {
+  <span class="hljs-meta">@ViewChild</span>(MatMenuTrigger) trigger: MatMenuTrigger;
+
+  someMethod() {
+    <span class="hljs-keyword">this</span>.trigger.openMenu();
+  }
+}
+</code></pre>
+
+        <h3 id="icons" class="docs-header-link docs-markdown-h3">
+          <span header-link="icons"></span>
+          Icons
+        </h3>
+      <p class="docs-markdown-p">Menus support displaying <code class="docs-markdown-code">mat-icon</code> elements before the menu item text.</p>
+<p class="docs-markdown-p"><em>my-comp.html</em></p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">menu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span> dialpad <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span> Redial <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span> <span class="hljs-attr">disabled</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span> voicemail <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span> Check voicemail <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span> notifications_off <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span> Disable alerts <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+</code></pre>
+
+        <h3 id="customizing-menu-position" class="docs-header-link docs-markdown-h3">
+          <span header-link="customizing-menu-position"></span>
+          Customizing menu position
+        </h3>
+      <p class="docs-markdown-p">By default, the menu will display below (y-axis), after (x-axis), and overlapping its trigger.
+The position can be changed using the <code class="docs-markdown-code">xPosition</code> (<code class="docs-markdown-code">before | after</code>) and <code class="docs-markdown-code">yPosition</code>
+(<code class="docs-markdown-code">above | below</code>) attributes. The menu can be be forced to not overlap the trigger using
+<code class="docs-markdown-code">[overlapTrigger]="false"</code> attribute.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">"matMenu"</span> <span class="hljs-attr">yPosition</span>=<span class="hljs-string">"above"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span> Settings <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span> Help <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"appMenu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+
+        <h3 id="nested-menu" class="docs-header-link docs-markdown-h3">
+          <span header-link="nested-menu"></span>
+          Nested menu
+        </h3>
+      <p class="docs-markdown-p">Material supports the ability for an <code class="docs-markdown-code">mat-menu-item</code> to open a sub-menu. To do so, you have to define
+your root menu and sub-menus, in addition to setting the <code class="docs-markdown-code">[matMenuTriggerFor]</code> on the <code class="docs-markdown-code">mat-menu-item</code>
+that should trigger the sub-menu:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">rootMenu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"subMenu"</span>&gt;</span>Power<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>System settings<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">subMenu</span>=<span class="hljs-string">"matMenu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Shut down<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Restart<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Hibernate<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-menu</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> [<span class="hljs-attr">matMenuTriggerFor</span>]=<span class="hljs-string">"rootMenu"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>more_vert<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<div material-docs-example="nested-menu"></div>
+
+        <h3 id="keyboard-interaction" class="docs-header-link docs-markdown-h3">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h3>
+      <ul class="docs-markdown-ul">
+<li class="docs-markdown-li"><kbd>DOWN_ARROW</kbd>: Focuses the next menu item</li>
+<li class="docs-markdown-li"><kbd>UP_ARROW</kbd>: Focuses previous menu item</li>
+<li class="docs-markdown-li"><kbd>RIGHT_ARROW</kbd>: Opens the menu item's sub-menu</li>
+<li class="docs-markdown-li"><kbd>LEFT_ARROW</kbd>: Closes the current menu, if it is a sub-menu.</li>
+<li class="docs-markdown-li"><kbd>ENTER</kbd>: Activates the focused menu item</li>
+</ul>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Menu triggers or menu items without text or labels should be given a meaningful label via
+<code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+</div></body></html>

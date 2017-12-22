@@ -1,0 +1,89 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The <code class="docs-markdown-code">overlay</code> package provides a way to open floating panels on the screen.</p>
+
+        <h3 id="creating-overlays" class="docs-header-link docs-markdown-h3">
+          <span header-link="creating-overlays"></span>
+          Creating overlays
+        </h3>
+      <p class="docs-markdown-p">Calling <code class="docs-markdown-code">overlay.create()</code> will return an <code class="docs-markdown-code">OverlayRef</code> instance. This instance is a handle for
+managing that specific overlay.</p>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">OverlayRef</code> <em>is</em> a <code class="docs-markdown-code">PortalOutlet</code>- once created, content can be added by attaching a <code class="docs-markdown-code">Portal</code>.
+See the documentation on portals for further information.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">const</span> overlayRef = overlay.create();
+<span class="hljs-keyword">const</span> userProfilePortal = <span class="hljs-keyword">new</span> ComponentPortal(UserProfile);
+overlayRef.attach(userProfilePortal);
+</code></pre>
+
+        <h3 id="configuring-an-overlay" class="docs-header-link docs-markdown-h3">
+          <span header-link="configuring-an-overlay"></span>
+          Configuring an overlay
+        </h3>
+      <p class="docs-markdown-p">When creating an overlay, an optional configuration object can be provided.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">const</span> overlayRef = overlay.create({
+  height: <span class="hljs-string">'400px'</span>,
+  width: <span class="hljs-string">'600px'</span>,
+});
+</code></pre>
+<p class="docs-markdown-p">The full set of configuration options can be found in the API documentation.</p>
+
+        <h4 id="position-strategies" class="docs-header-link docs-markdown-h4">
+          <span header-link="position-strategies"></span>
+          Position strategies
+        </h4>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">positionStrategy</code> configuration option determines how the overlay will be positioned on-screen.
+There are two position strategies available as part of the library: <code class="docs-markdown-code">GlobalPositionStrategy</code> and
+<code class="docs-markdown-code">ConnectedPositionStrategy</code>.</p>
+<p class="docs-markdown-p"><code class="docs-markdown-code">GlobalPositionStrategy</code> is used for overlays that require a specific position in the viewport,
+unrelated to other elements. This is commonly used for modal dialogs and application-level
+notifications.</p>
+<p class="docs-markdown-p"><code class="docs-markdown-code">ConnectedPositionStrategy</code> is used for overlays that are positioned relative to some other "origin"
+element on the page. This is commonly used for menus, pickers, and tooltips. When using the
+connected strategy, a set of preferred positions is provided; the "best" position will be selected
+based on how well the overlay would fit within the viewport.</p>
+<p class="docs-markdown-p">A custom position strategy can be created by implementing the <code class="docs-markdown-code">PositionStrategy</code> interface.
+Each <code class="docs-markdown-code">PositionStrategy</code> defines an <code class="docs-markdown-code">apply</code> method that is called whenever the overlay's position
+should be updated. A custom position strategy can additionally expose any other APIs necessary as
+related to the positioning of the overlay element.</p>
+
+        <h4 id="scroll-strategies" class="docs-header-link docs-markdown-h4">
+          <span header-link="scroll-strategies"></span>
+          Scroll strategies
+        </h4>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">scrollStrategy</code> configuration option determines how the overlay will react to scrolling outside
+the overlay element. There are four scroll strategies available as part of the library.</p>
+<p class="docs-markdown-p"><code class="docs-markdown-code">NoopScrollStrategy</code> is the default option. This strategy does nothing.</p>
+<p class="docs-markdown-p"><code class="docs-markdown-code">CloseScrollStrategy</code> will automatically close the overlay when scrolling occurs.</p>
+<p class="docs-markdown-p"><code class="docs-markdown-code">BlockScrollStrategy</code> will block page scrolling while the overlay is open. Note that some
+applications may implement special or customized page scrolling; if the <code class="docs-markdown-code">BlockScrollStrategy</code>
+conflicts with this kind of situation, it can be overriden by re-providing <code class="docs-markdown-code">BlockScrollStrategy</code>
+with a custom implementation.</p>
+<p class="docs-markdown-p"><code class="docs-markdown-code">RepositionScrollStrategy</code> will re-position the overlay element on scroll. Note that this will have
+some performance impact on scrolling- users should weigh this cost in the context of each specific
+application.</p>
+<p class="docs-markdown-p">A custom scroll strategy can be created by implementing the <code class="docs-markdown-code">ScrollStrategy</code> interface. Each
+strategy will typically inject <code class="docs-markdown-code">ScrollDispatcher</code> (from <code class="docs-markdown-code">@angular/cdk/scrolling</code>) to be notified
+of when scrolling takes place. See the documentation for <code class="docs-markdown-code">ScrollDispatcher</code> for more information
+on how scroll events are detected and dispatched.</p>
+
+        <h3 id="the-overlay-container" class="docs-header-link docs-markdown-h3">
+          <span header-link="the-overlay-container"></span>
+          The overlay container
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">OverlayContainer</code> provides a handle to the container element in which all individual overlay
+elements are rendered. By default, the overlay container is appended directly to the document body
+so that an overlay is never clipped by an <code class="docs-markdown-code">overflow: hidden</code> parent.</p>
+
+        <h4 id="full-screen-overlays" class="docs-header-link docs-markdown-h4">
+          <span header-link="full-screen-overlays"></span>
+          Full-screen overlays
+        </h4>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">FullscreenOverlayContainer</code> is an alternative to <code class="docs-markdown-code">OverlayContainer</code> that supports correct
+displaying of overlay elements in
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullScreen" class="docs-markdown-a">fullscreen mode</a>.</p>
+<p class="docs-markdown-p"><code class="docs-markdown-code">FullscreenOverlayContainer</code> can be enabled by providing it in your <code class="docs-markdown-code">NgModule</code>:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  providers: [{provide: OverlayContainer, useClass: FullscreenOverlayContainer}],
+  <span class="hljs-comment">// ...</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyModule { }
+</code></pre>
+</div></body></html>

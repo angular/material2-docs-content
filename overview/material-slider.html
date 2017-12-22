@@ -1,0 +1,119 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">&lt;mat-slider&gt;</code> allows for the selection of a value from a range via mouse, touch, or keyboard, 
+similar to <code class="docs-markdown-code">&lt;input type="range"&gt;</code>.</p>
+<div material-docs-example="slider-overview"></div>
+<p class="docs-markdown-p"><em>Note: the sliding behavior for this component requires that HammerJS is loaded on the page.</em></p>
+
+        <h3 id="selecting-a-value" class="docs-header-link docs-markdown-h3">
+          <span header-link="selecting-a-value"></span>
+          Selecting a value
+        </h3>
+      <p class="docs-markdown-p">By default the minimum value of the slider is <code class="docs-markdown-code">0</code>, the maximum value is <code class="docs-markdown-code">100</code>, and the thumb moves
+in increments of <code class="docs-markdown-code">1</code>. These values can be changed by setting the <code class="docs-markdown-code">min</code>, <code class="docs-markdown-code">max</code>, and <code class="docs-markdown-code">step</code> attributes
+respectively. The initial value is set to the minimum value unless otherwise specified.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"5"</span> <span class="hljs-attr">step</span>=<span class="hljs-string">"0.5"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1.5"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+
+        <h3 id="orientation" class="docs-header-link docs-markdown-h3">
+          <span header-link="orientation"></span>
+          Orientation
+        </h3>
+      <p class="docs-markdown-p">By default sliders are horizontal with the minimum value on the left and the maximum value on the
+right. The <code class="docs-markdown-code">vertical</code> attribute can be added to a slider to make it vertical with the minimum value
+on bottom and the maximum value on top.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">vertical</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">An <code class="docs-markdown-code">invert</code> attribute is also available which can be specified to flip the axis that the thumb moves
+along. An inverted horizontal slider will have the minimum value on the right and the maximum value
+on the left, while an inverted vertical slider will have the minimum value on top and the  maximum
+value on bottom.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">invert</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+
+        <h3 id="thumb-label" class="docs-header-link docs-markdown-h3">
+          <span header-link="thumb-label"></span>
+          Thumb label
+        </h3>
+      <p class="docs-markdown-p">By default, the exact selected value of a slider is not visible to the user. However, this value can
+be added to the thumb by adding the <code class="docs-markdown-code">thumbLabel</code> attribute.</p>
+<p class="docs-markdown-p">The <a href="https://material.google.com/components/sliders.html" class="docs-markdown-a">Material Design spec</a> recommends using the
+<code class="docs-markdown-code">thumbLabel</code> attribute (along with <code class="docs-markdown-code">tickInterval="1"</code>) only for sliders that are used to display a
+discrete value (such as a 1-5 rating).</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">thumbLabel</span> <span class="hljs-attr">tickInterval</span>=<span class="hljs-string">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+
+        <h3 id="tick-marks" class="docs-header-link docs-markdown-h3">
+          <span header-link="tick-marks"></span>
+          Tick marks
+        </h3>
+      <p class="docs-markdown-p">By default, sliders do not show tick marks along the thumb track. This can be enabled using the
+<code class="docs-markdown-code">tickInterval</code> attribute. The value of <code class="docs-markdown-code">tickInterval</code> should be a number representing the number
+of steps between between ticks. For example a <code class="docs-markdown-code">tickInterval</code> of <code class="docs-markdown-code">3</code> with a <code class="docs-markdown-code">step</code> of <code class="docs-markdown-code">4</code> will draw
+tick marks at every <code class="docs-markdown-code">3</code> steps, which is the same as every <code class="docs-markdown-code">12</code> values.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">step</span>=<span class="hljs-string">"4"</span> <span class="hljs-attr">tickInterval</span>=<span class="hljs-string">"3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">tickInterval</code> can also be set to <code class="docs-markdown-code">auto</code> which will automatically choose the number of steps
+such that there is at least <code class="docs-markdown-code">30px</code> of space between ticks.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">tickInterval</span>=<span class="hljs-string">"auto"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">The slider will always show a tick at the beginning and end of the track. If the remaining space
+doesn't add up perfectly the last interval will be shortened or lengthened so that the tick can be
+shown at the end of the track.</p>
+<p class="docs-markdown-p">The <a href="https://material.google.com/components/sliders.html" class="docs-markdown-a">Material Design spec</a> recommends using the
+<code class="docs-markdown-code">tickInterval</code> attribute (set to <code class="docs-markdown-code">1</code> along with the <code class="docs-markdown-code">thumbLabel</code> attribute) only for sliders that
+are used to display a discrete value (such as a 1-5 rating).</p>
+
+        <h3 id="keyboard-interaction" class="docs-header-link docs-markdown-h3">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h3>
+      <p class="docs-markdown-p">The slider has the following keyboard bindings:</p>
+<table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Key</th>
+<th class="docs-markdown-th">Action</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">Right arrow</td>
+<td class="docs-markdown-td">Increment the slider value by one step (decrements in RTL).</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">Up arrow</td>
+<td class="docs-markdown-td">Increment the slider value by one step.</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">Left arrow</td>
+<td class="docs-markdown-td">Decrement the slider value by one step (increments in RTL).</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">Down arrow</td>
+<td class="docs-markdown-td">Decrement the slider value by one step.</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">Page up</td>
+<td class="docs-markdown-td">Increment the slider value by 10 steps.</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">Page down</td>
+<td class="docs-markdown-td">Decrement the slider value by 10 steps.</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">End</td>
+<td class="docs-markdown-td">Set the value to the maximum possible.</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td">Home</td>
+<td class="docs-markdown-td">Set the value to the minimum possible.</td>
+</tr>
+</tbody>
+</table>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Sliders without text or labels should be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or
+<code class="docs-markdown-code">aria-labelledby</code>.</p>
+</div></body></html>

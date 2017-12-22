@@ -1,0 +1,161 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The <code class="docs-markdown-code">MatDialog</code> service can be used to open modal dialogs with Material Design styling and
+animations.</p>
+<div material-docs-example="dialog-overview"></div>
+<p class="docs-markdown-p">A dialog is opened by calling the <code class="docs-markdown-code">open</code> method with a component to be loaded and an optional
+config object. The <code class="docs-markdown-code">open</code> method will return an instance of <code class="docs-markdown-code">MatDialogRef</code>:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">let</span> dialogRef = dialog.open(UserProfileComponent, {
+  height: <span class="hljs-string">'400px'</span>,
+  width: <span class="hljs-string">'600px'</span>,
+});
+</code></pre>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">MatDialogRef</code> provides a handle on the opened dialog. It can be used to close the dialog and to
+receive notification when the dialog has been closed.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">dialogRef.afterClosed().subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Dialog result: <span class="hljs-subst">${result}</span>`</span>); <span class="hljs-comment">// Pizza!</span>
+});
+
+dialogRef.close(<span class="hljs-string">'Pizza!'</span>);
+</code></pre>
+<p class="docs-markdown-p">Components created via <code class="docs-markdown-code">MatDialog</code> can <em>inject</em> <code class="docs-markdown-code">MatDialogRef</code> and use it to close the dialog
+in which they are contained. When closing, an optional result value can be provided. This result
+value is forwarded as the result of the <code class="docs-markdown-code">afterClosed</code> promise.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({<span class="hljs-comment">/* ... */</span>})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> YourDialog {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialogRef: MatDialogRef&lt;YourDialog&gt;</span>) { }
+
+  closeDialog() {
+    <span class="hljs-keyword">this</span>.dialogRef.close(<span class="hljs-string">'Pizza!'</span>);
+  }
+}
+</code></pre>
+
+        <h3 id="sharing-data-with-the-dialog-component-" class="docs-header-link docs-markdown-h3">
+          <span header-link="sharing-data-with-the-dialog-component-"></span>
+          Sharing data with the Dialog component.
+        </h3>
+      <p class="docs-markdown-p">If you want to share data with your dialog, you can use the <code class="docs-markdown-code">data</code> option to pass information to the dialog component.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">let</span> dialogRef = dialog.open(YourDialog, {
+  data: { name: <span class="hljs-string">'austin'</span> },
+});
+</code></pre>
+<p class="docs-markdown-p">To access the data in your dialog component, you have to use the MAT_DIALOG_DATA injection token:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">import {Component, Inject} from '@angular/core';
+import {MAT_DIALOG_DATA} from '@angular/material';
+
+@Component({
+  selector: 'your-dialog',
+  template: 'passed in {{ data.name }}',
+})
+export class YourDialog {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+}
+</code></pre>
+<div material-docs-example="dialog-data"></div>
+
+        <h3 id="dialog-content" class="docs-header-link docs-markdown-h3">
+          <span header-link="dialog-content"></span>
+          Dialog content
+        </h3>
+      <p class="docs-markdown-p">Several directives are available to make it easier to structure your dialog content:</p>
+<table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Name</th>
+<th class="docs-markdown-th">Description</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">mat-dialog-title</code></td>
+<td class="docs-markdown-td">[Attr] Dialog title, applied to a heading element (e.g., <code class="docs-markdown-code">&lt;h1&gt;</code>, <code class="docs-markdown-code">&lt;h2&gt;</code>)</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-dialog-content&gt;</code></td>
+<td class="docs-markdown-td">Primary scrollable content of the dialog</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-dialog-actions&gt;</code></td>
+<td class="docs-markdown-td">Container for action buttons at the bottom of the dialog</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">mat-dialog-close</code></td>
+<td class="docs-markdown-td">[Attr] Added to a <code class="docs-markdown-code">&lt;button&gt;</code>, makes the button close the dialog with an optional result from the bound value.</td>
+</tr>
+</tbody>
+</table>
+<p class="docs-markdown-p">For example:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">mat-dialog-title</span>&gt;</span>Delete all<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-dialog-content</span>&gt;</span>Are you sure?<span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-content</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-dialog-actions</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">mat-dialog-close</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Can optionally provide a result for the closing dialog. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> [<span class="hljs-attr">mat-dialog-close</span>]=<span class="hljs-string">"true"</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-actions</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">Once a dialog opens, the dialog will automatically focus the first tabbable element.</p>
+<p class="docs-markdown-p">You can control which elements are tab stops with the <code class="docs-markdown-code">tabindex</code> attribute</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+</code></pre>
+<div material-docs-example="dialog-content"></div>
+
+        <h3 id="configuring-dialog-content-via-code-entrycomponents-code-" class="docs-header-link docs-markdown-h3">
+          <span header-link="configuring-dialog-content-via-code-entrycomponents-code-"></span>
+          Configuring dialog content via <code class="docs-markdown-code">entryComponents</code>
+        </h3>
+      <p class="docs-markdown-p">Because <code class="docs-markdown-code">MatDialog</code> instantiates components at run-time, the Angular compiler needs extra
+information to create the necessary <code class="docs-markdown-code">ComponentFactory</code> for your dialog content component.</p>
+<p class="docs-markdown-p">For any component loaded into a dialog, you must include your component class in the list of
+<code class="docs-markdown-code">entryComponents</code> in your NgModule definition so that the Angular compiler knows to create
+the <code class="docs-markdown-code">ComponentFactory</code> for it.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  imports: [
+    <span class="hljs-comment">// ...</span>
+    MatDialogModule
+  ],
+
+  declarations: [
+    AppComponent,
+    ExampleDialogComponent
+  ],
+
+  entryComponents: [
+    ExampleDialogComponent
+  ],
+
+  providers: [],
+  bootstrap: [AppComponent]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule() {}
+</code></pre>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">By default, each dialog has <code class="docs-markdown-code">role="dialog"</code> on the root element. The role can be changed to
+<code class="docs-markdown-code">alertdialog</code> via the <code class="docs-markdown-code">MatDialogConfig</code> when opening.</p>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">aria-label</code>, <code class="docs-markdown-code">aria-labelledby</code>, and <code class="docs-markdown-code">aria-describedby</code> attributes can all be set to the
+dialog element via the <code class="docs-markdown-code">MatDialogConfig</code> as well. Each dialog should typically have a label
+set via <code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p>
+<p class="docs-markdown-p">When a dialog is opened, it will move focus to the first focusable element that it can find. In
+order to prevent users from tabbing into elements in the background, the Material dialog uses
+a <a href="https://material.angular.io/cdk/a11y/overview#focustrap" class="docs-markdown-a">focus trap</a> to contain focus
+within itself. Once a dialog is closed, it will return focus to the element that was focused
+before the dialog was opened.</p>
+
+        <h4 id="focus-management" class="docs-header-link docs-markdown-h4">
+          <span header-link="focus-management"></span>
+          Focus management
+        </h4>
+      <p class="docs-markdown-p">By default, the first tabbable element within the dialog will receive focus upon open.</p>
+<p class="docs-markdown-p">Tabbing through the elements of the dialog will keep focus inside of the dialog element,
+wrapping back to the first tabbable element when reaching the end of the tab sequence.</p>
+
+        <h4 id="keyboard-interaction" class="docs-header-link docs-markdown-h4">
+          <span header-link="keyboard-interaction"></span>
+          Keyboard interaction
+        </h4>
+      <p class="docs-markdown-p">By default pressing the escape key will close the dialog. While this behavior can
+be turned off via the <code class="docs-markdown-code">disableClose</code> option, users should generally avoid doing so
+as it breaks the expected interaction pattern for screen-reader users.</p>
+</div></body></html>

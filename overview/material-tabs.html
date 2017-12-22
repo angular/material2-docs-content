@@ -1,0 +1,115 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">Angular Material tabs organize content into separate views where only one view can be
+visible at a time. Each tab's label is shown in the tab header and the active
+tab's label is designated with the animated ink bar. When the list of tab labels exceeds the width
+of the header, pagination controls appear to let the user scroll left and right across the labels.</p>
+<p class="docs-markdown-p">The active tab may be set using the <code class="docs-markdown-code">selectedIndex</code> input or when the user selects one of the
+tab labels in the header.</p>
+<div material-docs-example="tabs-overview"></div>
+
+        <h3 id="events" class="docs-header-link docs-markdown-h3">
+          <span header-link="events"></span>
+          Events
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">selectedTabChange</code> output event is emitted when the active tab changes.</p>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">focusChange</code> output event is emitted when the user puts focus on any of the tab labels in
+the header, usually through keyboard navigation.</p>
+
+        <h3 id="labels" class="docs-header-link docs-markdown-h3">
+          <span header-link="labels"></span>
+          Labels
+        </h3>
+      <p class="docs-markdown-p">If a tab's label is only text then the simple tab-group API can be used.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"One"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Some tab content<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Two"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Some more tab content<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">For more complex labels, add a template with the <code class="docs-markdown-code">mat-tab-label</code> directive inside the <code class="docs-markdown-code">mat-tab</code>.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
+      The <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>best<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> pasta
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Best pasta restaurants<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>thumb_down<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span> The worst sushi
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Terrible sushi restaurants<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>
+</code></pre>
+
+        <h3 id="dynamic-height" class="docs-header-link docs-markdown-h3">
+          <span header-link="dynamic-height"></span>
+          Dynamic Height
+        </h3>
+      <p class="docs-markdown-p">By default, the tab group will not change its height to the height of the currently active tab. To
+change this, set the <code class="docs-markdown-code">dynamicHeight</code> input to true. The tab body will animate its height according
+ to the height of the active tab.</p>
+
+        <h3 id="tabs-and-navigation" class="docs-header-link docs-markdown-h3">
+          <span header-link="tabs-and-navigation"></span>
+          Tabs and navigation
+        </h3>
+      <p class="docs-markdown-p">While <code class="docs-markdown-code">&lt;mat-tab-group&gt;</code> is used to switch between views within a single route, <code class="docs-markdown-code">&lt;nav mat-tab-nav-bar&gt;</code>
+provides a tab-like UI for navigating between routes.</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">mat-tab-nav-bar</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-tab-link</span>
+     *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let link of navLinks"</span>
+     [<span class="hljs-attr">routerLink</span>]=<span class="hljs-string">"link.path"</span>
+     <span class="hljs-attr">routerLinkActive</span> #<span class="hljs-attr">rla</span>=<span class="hljs-string">"routerLinkActive"</span>
+     [<span class="hljs-attr">active</span>]=<span class="hljs-string">"rla.isActive"</span>&gt;</span>
+    {{link.label}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">router-outlet</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">router-outlet</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">The <code class="docs-markdown-code">tab-nav-bar</code> is not tied to any particular router; it works with normal <code class="docs-markdown-code">&lt;a&gt;</code> elements and uses
+the <code class="docs-markdown-code">active</code> property to determine which tab is currently active. The corresponding
+<code class="docs-markdown-code">&lt;router-outlet&gt;</code> can be placed anywhere in the view.</p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Tabs without text or labels should be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or
+<code class="docs-markdown-code">aria-labelledby</code>. For <code class="docs-markdown-code">MatTabNav</code>, the <code class="docs-markdown-code">&lt;nav&gt;</code> element should have a label as well.</p>
+
+        <h4 id="keyboard-shortcuts" class="docs-header-link docs-markdown-h4">
+          <span header-link="keyboard-shortcuts"></span>
+          Keyboard shortcuts
+        </h4>
+      <table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Shortcut</th>
+<th class="docs-markdown-th">Action</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">LEFT_ARROW</code></td>
+<td class="docs-markdown-td">Move focus to previous tab</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">RIGHT_ARROW</code></td>
+<td class="docs-markdown-td">Move focus to next tab</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">SPACE</code> or <code class="docs-markdown-code">ENTER</code></td>
+<td class="docs-markdown-td">Switch to focused tab</td>
+</tr>
+</tbody>
+</table>
+</div></body></html>

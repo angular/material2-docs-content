@@ -1,0 +1,118 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p"><code class="docs-markdown-code">matInput</code> is a directive that allows native <code class="docs-markdown-code">&lt;input&gt;</code> and <code class="docs-markdown-code">&lt;textarea&gt;</code> elements to work with
+<a href="https://material.angular.io/components/form-field/overview" class="docs-markdown-a"><code class="docs-markdown-code">&lt;mat-form-field&gt;</code></a>. </p>
+<div material-docs-example="input-overview"></div>
+
+        <h3 id="-code-lt-input-gt-code-and-code-lt-textarea-gt-code-attributes" class="docs-header-link docs-markdown-h3">
+          <span header-link="-code-lt-input-gt-code-and-code-lt-textarea-gt-code-attributes"></span>
+          <code class="docs-markdown-code">&lt;input&gt;</code> and <code class="docs-markdown-code">&lt;textarea&gt;</code> attributes
+        </h3>
+      <p class="docs-markdown-p">All of the attributes that can be used with normal <code class="docs-markdown-code">&lt;input&gt;</code> and <code class="docs-markdown-code">&lt;textarea&gt;</code> elements can be used
+on elements inside <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> as well. This includes Angular directives such as <code class="docs-markdown-code">ngModel</code>
+and <code class="docs-markdown-code">formControl</code>.</p>
+<p class="docs-markdown-p">The only limitations are that the <code class="docs-markdown-code">type</code> attribute can only be one of the values supported by
+<code class="docs-markdown-code">matInput</code> and the native element cannot specify a <code class="docs-markdown-code">placeholder</code> attribute if the <code class="docs-markdown-code">&lt;mat-form-field&gt;</code>
+also contains an <code class="docs-markdown-code">&lt;mat-placeholder&gt;</code> element.</p>
+
+        <h3 id="supported-code-lt-input-gt-code-types" class="docs-header-link docs-markdown-h3">
+          <span header-link="supported-code-lt-input-gt-code-types"></span>
+          Supported <code class="docs-markdown-code">&lt;input&gt;</code> types
+        </h3>
+      <p class="docs-markdown-p">The following <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" class="docs-markdown-a">input types</a> can
+be used with <code class="docs-markdown-code">matInput</code>:</p>
+<ul class="docs-markdown-ul">
+<li class="docs-markdown-li">date</li>
+<li class="docs-markdown-li">datetime-local</li>
+<li class="docs-markdown-li">email</li>
+<li class="docs-markdown-li">month</li>
+<li class="docs-markdown-li">number</li>
+<li class="docs-markdown-li">password</li>
+<li class="docs-markdown-li">search</li>
+<li class="docs-markdown-li">tel</li>
+<li class="docs-markdown-li">text</li>
+<li class="docs-markdown-li">time</li>
+<li class="docs-markdown-li">url</li>
+<li class="docs-markdown-li">week</li>
+</ul>
+
+        <h3 id="form-field-features" class="docs-header-link docs-markdown-h3">
+          <span header-link="form-field-features"></span>
+          Form field features
+        </h3>
+      <p class="docs-markdown-p">There are a number of <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> features that can be used with any <code class="docs-markdown-code">&lt;input matInput&gt;</code> or
+<code class="docs-markdown-code">&lt;textarea matInput&gt;</code>. These include error messages, hint text, prefix &amp; suffix, and theming. For
+additional information about these features, see the
+<a href="https://material.angular.io/components/form-field/overview" class="docs-markdown-a">form field documentation</a>.</p>
+
+        <h3 id="placeholder" class="docs-header-link docs-markdown-h3">
+          <span header-link="placeholder"></span>
+          Placeholder
+        </h3>
+      <p class="docs-markdown-p">A placeholder is a text label displayed in the input area when the input does not contain text.
+When text is present, the placeholder will float above the input area. The placeholder can be
+specified either via a <code class="docs-markdown-code">placeholder</code> attribute on the input or a <code class="docs-markdown-code">&lt;mat-placeholder&gt;</code> element in the
+same form field as the <code class="docs-markdown-code">matInput</code>. The <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> also has additional options for changing
+the behavior of the placeholder. For more information see the
+<a href="https://material.angular.io/components/form-field/overview#floating-placeholder" class="docs-markdown-a">form field placeholder documentation</a>.</p>
+
+        <h3 id="changing-when-error-messages-are-shown" class="docs-header-link docs-markdown-h3">
+          <span header-link="changing-when-error-messages-are-shown"></span>
+          Changing when error messages are shown
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">&lt;mat-form-field&gt;</code> allows you to
+<a href="https://material.angular.io/components/form-field/overview#error-messages" class="docs-markdown-a">associate error messages</a>
+with your <code class="docs-markdown-code">matInput</code>. By default, these error messages are shown when the control is invalid and
+either the user has interacted with (touched) the element or the parent form has been submitted. If
+you wish to override this behavior (e.g. to show the error as soon as the invalid control is dirty
+or when a parent form group is invalid), you can use the <code class="docs-markdown-code">errorStateMatcher</code> property of the
+<code class="docs-markdown-code">matInput</code>. The property takes an instance of an <code class="docs-markdown-code">ErrorStateMatcher</code> object. An <code class="docs-markdown-code">ErrorStateMatcher</code>
+must implement a single method <code class="docs-markdown-code">isErrorState</code> which takes the <code class="docs-markdown-code">FormControl</code> for this <code class="docs-markdown-code">matInput</code> as
+well as the parent form and returns a boolean indicating whether errors should be shown. (<code class="docs-markdown-code">true</code>
+indicating that they should be shown, and <code class="docs-markdown-code">false</code> indicating that they should not.)</p>
+<div material-docs-example="input-error-state-matcher"></div>
+<p class="docs-markdown-p">A global error state matcher can be specified by setting the <code class="docs-markdown-code">ErrorStateMatcher</code> provider. This
+applies to all inputs. For convenience, <code class="docs-markdown-code">ShowOnDirtyErrorStateMatcher</code> is available in order to
+globally cause input errors to show when the input is dirty and invalid.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  providers: [
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
+  ]
+})
+</code></pre>
+
+        <h3 id="auto-resizing-code-lt-textarea-gt-code-elements" class="docs-header-link docs-markdown-h3">
+          <span header-link="auto-resizing-code-lt-textarea-gt-code-elements"></span>
+          Auto-resizing <code class="docs-markdown-code">&lt;textarea&gt;</code> elements
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">&lt;textarea&gt;</code> elements can be made to automatically resize to fit their contents by applying the
+<code class="docs-markdown-code">matTextareaAutosize</code> directive. This works with <code class="docs-markdown-code">&lt;textarea matInput&gt;</code> elements as well as plain
+native <code class="docs-markdown-code">&lt;textarea&gt;</code> elements. The min and max size of the textarea can be specified in rows, using
+the <code class="docs-markdown-code">matAutosizeMinRows</code> and <code class="docs-markdown-code">matAutosizeMaxRows</code> properties respectively.</p>
+<div material-docs-example="input-autosize-textarea"></div>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">matInput</code> directive works with native <code class="docs-markdown-code">&lt;input&gt;</code> to provide an accessible experience.</p>
+<p class="docs-markdown-p">If a placeholder attribute is added to the input, or a <code class="docs-markdown-code">mat-placeholder</code> element is added
+in the form field, the placeholder text will automatically be used as the label for the input.
+If there's no placeholder specified, <code class="docs-markdown-code">aria-label</code>, <code class="docs-markdown-code">aria-labelledby</code> or <code class="docs-markdown-code">&lt;label for=...&gt;</code> should be
+added.</p>
+<p class="docs-markdown-p">Any <code class="docs-markdown-code">mat-error</code> and <code class="docs-markdown-code">mat-hint</code> are automatically added to the input's <code class="docs-markdown-code">aria-describedby</code> list, and
+<code class="docs-markdown-code">aria-invalid</code> is automatically updated based on the input's validity state.</p>
+
+        <h3 id="troubleshooting" class="docs-header-link docs-markdown-h3">
+          <span header-link="troubleshooting"></span>
+          Troubleshooting
+        </h3>
+      
+        <h4 id="error-input-type-quot-quot-isn-39-t-supported-by-matinput" class="docs-header-link docs-markdown-h4">
+          <span header-link="error-input-type-quot-quot-isn-39-t-supported-by-matinput"></span>
+          Error: Input type "..." isn't supported by matInput
+        </h4>
+      <p class="docs-markdown-p">This error is thrown when you attempt to set an input's <code class="docs-markdown-code">type</code> property to a value that isn't
+supported by the <code class="docs-markdown-code">matInput</code> directive. If you need to use an unsupported input type with
+<code class="docs-markdown-code">&lt;mat-form-field&gt;</code> consider writing a
+<a href="https://material.angular.io/guide/creating-a-custom-form-field-control" class="docs-markdown-a">custom form field control</a>
+for it.</p>
+</div></body></html>

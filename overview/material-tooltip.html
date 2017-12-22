@@ -1,0 +1,72 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The Angular Material tooltip provides a text label that is displayed when the user hovers
+over or longpresses an element.</p>
+<div material-docs-example="tooltip-overview"></div>
+
+        <h3 id="positioning" class="docs-header-link docs-markdown-h3">
+          <span header-link="positioning"></span>
+          Positioning
+        </h3>
+      <p class="docs-markdown-p">The tooltip will be displayed below the element but this can be configured using the
+<code class="docs-markdown-code">matTooltipPosition</code> input.
+The tooltip can be displayed above, below, left, or right of the element. By default the position
+will be below. If the tooltip should switch left/right positions in an RTL layout direction, then
+the positions <code class="docs-markdown-code">before</code> and <code class="docs-markdown-code">after</code> should be used instead of <code class="docs-markdown-code">left</code> and <code class="docs-markdown-code">right</code>, respectively.</p>
+<table class="docs-markdown-table">
+<thead>
+<tr class="docs-markdown-tr">
+<th class="docs-markdown-th">Position</th>
+<th class="docs-markdown-th">Description</th>
+</tr>
+</thead>
+<tbody class="docs-markdown-tbody">
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">above</code></td>
+<td class="docs-markdown-td">Always display above the element</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">below</code></td>
+<td class="docs-markdown-td">Always display beneath the element</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">left</code></td>
+<td class="docs-markdown-td">Always display to the left of the element</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">right</code></td>
+<td class="docs-markdown-td">Always display to the right of the element</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">before</code></td>
+<td class="docs-markdown-td">Display to the left in left-to-right layout and to the right in right-to-left layout</td>
+</tr>
+<tr class="docs-markdown-tr">
+<td class="docs-markdown-td"><code class="docs-markdown-code">after</code></td>
+<td class="docs-markdown-td">Display to the right in left-to-right layout and to the right in right-to-left layout</td>
+</tr>
+</tbody>
+</table>
+
+        <h3 id="showing-and-hiding" class="docs-header-link docs-markdown-h3">
+          <span header-link="showing-and-hiding"></span>
+          Showing and hiding
+        </h3>
+      <p class="docs-markdown-p">The tooltip is immediately shown when the user's mouse hovers over the element and immediately
+hides when the user's mouse leaves. A delay in showing or hiding the tooltip can be added through
+the inputs <code class="docs-markdown-code">matTooltipShowDelay</code> and <code class="docs-markdown-code">matTooltipHideDelay</code>. The default show and hide delays can be
+configured through the <code class="docs-markdown-code">MAT_TOOLTIP_DEFAULT_OPTIONS</code> injection token.</p>
+<p class="docs-markdown-p">On mobile, the tooltip is displayed when the user longpresses the element and hides after a
+delay of 1500ms. The longpress behavior requires HammerJS to be loaded on the page.</p>
+<p class="docs-markdown-p">The tooltip can also be shown and hidden through the <code class="docs-markdown-code">show</code> and <code class="docs-markdown-code">hide</code> directive methods,
+which both accept a number in milliseconds to delay before applying the display change.</p>
+<p class="docs-markdown-p">To turn off the tooltip and prevent it from showing to the user, use the <code class="docs-markdown-code">matTooltipDisabled</code> input
+flag.</p>
+
+        <h3 id="accessibility" class="docs-header-link docs-markdown-h3">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p class="docs-markdown-p">Elements with the <code class="docs-markdown-code">matTooltip</code> will add an <code class="docs-markdown-code">aria-describedby</code> label that provides a reference
+to a visually hidden element containing the tooltip's message. This provides screenreaders the
+information needed to read out the tooltip's contents when the end-user focuses on the element
+triggering the tooltip.</p>
+</div></body></html>

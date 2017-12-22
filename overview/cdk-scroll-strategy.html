@@ -1,0 +1,30 @@
+<html><head></head><body><div class="docs-markdown"><h1 class="docs-markdown-h1">Scroll strategies</h1><h2 class="docs-markdown-h2">What is a scroll strategy?</h2><p class="docs-markdown-p">A scroll strategy is a way of describing how an overlay should behave if the user scrolls
+while the overlay is open. The strategy has a reference to the <code class="docs-markdown-code">OverlayRef</code>, allowing it to
+recalculate the position, close the overlay, block scrolling, etc.</p>
+<h2 class="docs-markdown-h2">Usage</h2><p class="docs-markdown-p">To associate an overlay with a scroll strategy, you have to pass in a function, that returns a
+scroll strategy, to the <code class="docs-markdown-code">OverlayConfig</code>. By default, all overlays will use the <code class="docs-markdown-code">noop</code> strategy which
+doesn't do anything. The other available strategies are <code class="docs-markdown-code">reposition</code>, <code class="docs-markdown-code">block</code> and <code class="docs-markdown-code">close</code>:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">let</span> overlayConfig = <span class="hljs-keyword">new</span> OverlayConfig({
+  scrollStrategy: overlay.scrollStrategies.block()
+});
+
+<span class="hljs-keyword">this</span>._overlay.create(overlayConfig).attach(yourPortal);
+</code></pre>
+<h2 class="docs-markdown-h2">Creating a custom scroll strategy</h2><p class="docs-markdown-p">To set up a custom scroll strategy, you have to create a class that implements the <code class="docs-markdown-code">ScrollStrategy</code>
+interface. There are three stages of a scroll strategy's life cycle:</p>
+<ol class="docs-markdown-ol">
+<li class="docs-markdown-li">When an overlay is created, it'll call the strategy's <code class="docs-markdown-code">attach</code> method with a reference to itself.</li>
+<li class="docs-markdown-li">When an overlay is attached to the DOM, it'll call the <code class="docs-markdown-code">enable</code> method on its scroll strategy,</li>
+<li class="docs-markdown-li">When an overlay is detached from the DOM or destroyed, it'll call the <code class="docs-markdown-code">disable</code> method on its
+scroll strategy, allowing it to clean up after itself.</li>
+</ol>
+<p class="docs-markdown-p">Afterwards you can pass in the new scroll strategy to your overlay state:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-comment">// Your custom scroll strategy.</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CustomScrollStrategy <span class="hljs-keyword">implements</span> ScrollStrategy {
+  <span class="hljs-comment">// your implementation</span>
+}
+
+overlayConfig.scrollStrategy = <span class="hljs-keyword">new</span> CustomScrollStrategy();
+<span class="hljs-keyword">this</span>._overlay.create(overlayConfig).attach(yourPortal);
+</code></pre>
+</div></body></html>

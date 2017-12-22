@@ -1,0 +1,121 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The <code class="docs-markdown-code">a11y</code> package provides a number of tools to improve accessibility, described below.</p>
+
+        <h3 id="listkeymanager" class="docs-header-link docs-markdown-h3">
+          <span header-link="listkeymanager"></span>
+          ListKeyManager
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">ListKeyManager</code> manages the active option in a list of items based on keyboard interaction.
+Intended to be used with components that correspond to a <code class="docs-markdown-code">role="menu"</code> or <code class="docs-markdown-code">role="listbox"</code> pattern.</p>
+
+        <h4 id="basic-usage" class="docs-header-link docs-markdown-h4">
+          <span header-link="basic-usage"></span>
+          Basic usage
+        </h4>
+      <p class="docs-markdown-p">Any component that uses a <code class="docs-markdown-code">ListKeyManager</code> will generally do three things:</p>
+<ul class="docs-markdown-ul">
+<li class="docs-markdown-li">Create a <code class="docs-markdown-code">@ViewChildren</code> query for the options being managed.</li>
+<li class="docs-markdown-li">Initialize the <code class="docs-markdown-code">ListKeyManager</code>, passing in the options.</li>
+<li class="docs-markdown-li">Forward keyboard events from the managed component to the <code class="docs-markdown-code">ListKeyManager</code>.</li>
+</ul>
+<p class="docs-markdown-p">Each option should implement the <code class="docs-markdown-code">ListKeyManagerOption</code> interface:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">interface</span> ListKeyManagerOption {
+  disabled?: <span class="hljs-built_in">boolean</span>;
+  getLabel?(): <span class="hljs-built_in">string</span>;
+}
+</code></pre>
+
+        <h4 id="wrapping" class="docs-header-link docs-markdown-h4">
+          <span header-link="wrapping"></span>
+          Wrapping
+        </h4>
+      <p class="docs-markdown-p">Navigation through options can be made to wrap via the <code class="docs-markdown-code">withWrap</code> method</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">this</span>.keyManager = <span class="hljs-keyword">new</span> FocusKeyManager(...).withWrap();
+</code></pre>
+
+        <h4 id="types-of-key-managers" class="docs-header-link docs-markdown-h4">
+          <span header-link="types-of-key-managers"></span>
+          Types of key managers
+        </h4>
+      <p class="docs-markdown-p">There are two varieties of <code class="docs-markdown-code">ListKeyManager</code>, <code class="docs-markdown-code">FocusKeyManager</code> and <code class="docs-markdown-code">ActiveDescendantKeyManager</code>.</p>
+<h5 class="docs-markdown-h5">FocusKeyManager</h5><p class="docs-markdown-p">Used when options will directly receive browser focus. Each item managed must implement the
+<code class="docs-markdown-code">FocusableOption</code> interface:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">interface</span> FocusableOption <span class="hljs-keyword">extends</span> ListKeyManagerOption {
+  focus(): <span class="hljs-built_in">void</span>;
+}
+</code></pre>
+<h5 class="docs-markdown-h5">ActiveDescendantKeyManager</h5><p class="docs-markdown-p">Used when options will be marked as active via <code class="docs-markdown-code">aria-activedescendant</code>. 
+Each item managed must implement the
+<code class="docs-markdown-code">Highlightable</code> interface:</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">interface</span> Highlightable <span class="hljs-keyword">extends</span> ListKeyManagerOption {
+  setActiveStyles(): <span class="hljs-built_in">void</span>;
+  setInactiveStyles(): <span class="hljs-built_in">void</span>;
+}
+</code></pre>
+<p class="docs-markdown-p">Each item must also have an ID bound to the listbox's or menu's <code class="docs-markdown-code">aria-activedescendant</code>.</p>
+
+        <h3 id="focustrap" class="docs-header-link docs-markdown-h3">
+          <span header-link="focustrap"></span>
+          FocusTrap
+        </h3>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">cdkTrapFocus</code> directive traps <kbd>Tab</kbd> key focus within an element. This is intended to
+be used to create accessible experience for components like
+<a href="https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal" class="docs-markdown-a">modal dialogs</a>, where focus must be
+constrained.</p>
+<p class="docs-markdown-p">This directive is declared in <code class="docs-markdown-code">A11yModule</code>.</p>
+
+        <h4 id="example" class="docs-header-link docs-markdown-h4">
+          <span header-link="example"></span>
+          Example
+        </h4>
+      <pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"my-inner-dialog-content"</span> <span class="hljs-attr">cdkTrapFocus</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Tab and Shift + Tab will not leave this element. --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p class="docs-markdown-p">This directive will not prevent focus from moving out of the trapped region due to mouse
+interaction.</p>
+
+        <h4 id="regions" class="docs-header-link docs-markdown-h4">
+          <span header-link="regions"></span>
+          Regions
+        </h4>
+      <p class="docs-markdown-p">Regions can be declared explicitly with an initial focus element by using 
+the <code class="docs-markdown-code">cdkFocusRegionStart</code>, <code class="docs-markdown-code">cdkFocusRegionEnd</code> and <code class="docs-markdown-code">cdkFocusInitial</code> DOM attributes. 
+<code class="docs-markdown-code">cdkFocusInitial</code> specifies the element that will receive focus upon initialization of the region. 
+<code class="docs-markdown-code">cdkFocusRegionStart</code> and <code class="docs-markdown-code">cdkFocusRegionEnd</code> define the region within which focus will be 
+trapped. When using the tab key, focus will move through this region and wrap around on either end.</p>
+<p class="docs-markdown-p">For example:</p>
+<pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span> <span class="hljs-attr">cdkFocusRegionStart</span>&gt;</span>Focus region start<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span> <span class="hljs-attr">cdkFocusInitial</span>&gt;</span>Initially focused<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">mat-list-item</span> <span class="hljs-attr">routerLink</span> <span class="hljs-attr">cdkFocusRegionEnd</span>&gt;</span>Focus region end<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+
+        <h3 id="interactivitychecker" class="docs-header-link docs-markdown-h3">
+          <span header-link="interactivitychecker"></span>
+          InteractivityChecker
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">InteractivityChecker</code> is used to check the interactivity of an element, capturing disabled,
+visible, tabbable, and focusable states for accessibility purposes. See the API docs for more
+details.</p>
+
+        <h3 id="liveannouncer" class="docs-header-link docs-markdown-h3">
+          <span header-link="liveannouncer"></span>
+          LiveAnnouncer
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">LiveAnnouncer</code> is used to announce messages for screen-reader users using an <code class="docs-markdown-code">aria-live</code> region.
+See <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-live" class="docs-markdown-a">the W3C's WAI-ARIA</a>
+for more information on aria-live regions. </p>
+
+        <h4 id="example" class="docs-header-link docs-markdown-h4">
+          <span header-link="example"></span>
+          Example
+        </h4>
+      <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({...})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyComponent {
+
+ <span class="hljs-keyword">constructor</span>(<span class="hljs-params">liveAnnouncer: LiveAnnouncer</span>) {
+   liveAnnouncer.announce(<span class="hljs-string">"Hey Google"</span>);
+ }
+}
+</code></pre>
+</div></body></html>

@@ -36,6 +36,7 @@ import { DialogContentExample } from './dialog-content/dialog-content-example';
 import { DialogDataExample } from './dialog-data/dialog-data-example';
 import { DialogElementsExample } from './dialog-elements/dialog-elements-example';
 import { DialogOverviewExampleDialog, DialogOverviewExample } from './dialog-overview/dialog-overview-example';
+import { DividerOverviewExample } from './divider-overview/divider-overview-example';
 import { ElevationOverviewExample } from './elevation-overview/elevation-overview-example';
 import { ExpansionOverviewExample } from './expansion-overview/expansion-overview-example';
 import { ExpansionStepsExample } from './expansion-steps/expansion-steps-example';
@@ -118,7 +119,6 @@ import { ToolbarMultirowExample } from './toolbar-multirow/toolbar-multirow-exam
 import { ToolbarOverviewExample } from './toolbar-overview/toolbar-overview-example';
 import { TooltipOverviewExample } from './tooltip-overview/tooltip-overview-example';
 import { TooltipPositionExample } from './tooltip-position/tooltip-position-example';
-import { DividerOverviewExample } from './divider-overview/divider-overview-example';
 export declare const EXAMPLE_COMPONENTS: {
     'autocomplete-display': {
         title: string;

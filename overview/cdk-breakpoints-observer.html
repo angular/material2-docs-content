@@ -1,0 +1,30 @@
+<html><head></head><body><div class="docs-markdown">
+        <h3 id="breakpointsmodule" class="docs-header-link docs-markdown-h3">
+          <span header-link="breakpointsmodule"></span>
+          BreakpointsModule
+        </h3>
+      <p class="docs-markdown-p">When including the CDK's <code class="docs-markdown-code">LayoutModule</code>, components can inject <code class="docs-markdown-code">BreakpointsObserver</code> to request
+the matching state of a CSS Media Query.</p>
+<p class="docs-markdown-p">A set of breakpoints is provided based on the Material Design
+<a href="https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints" class="docs-markdown-a">breakpoint system</a>.</p>
+
+        <h4 id="example" class="docs-header-link docs-markdown-h4">
+          <span header-link="example"></span>
+          Example
+        </h4>
+      <pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({ ... })
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyWidget {
+  isHandset: Observable&lt;BreakpointState&gt;;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">bm: BreakpointObserver</span>) {
+    bm.observe(Handset).subscribe(<span class="hljs-function">(<span class="hljs-params">state: BreakpointState</span>) =&gt;</span> {
+      <span class="hljs-keyword">if</span> (state.matches) {
+        <span class="hljs-keyword">this</span>.makeEverythingFitOnSmallScreen();
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">this</span>.expandEverythingToFillTheScreen();
+      }
+    });
+  }
+}
+</code></pre>
+</div></body></html>

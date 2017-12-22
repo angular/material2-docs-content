@@ -1169,6 +1169,24 @@ DialogOverviewExampleDialog.ctorParameters = () => [
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Basic divider
+ */
+class DividerOverviewExample {
+}
+DividerOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'divider-overview-example',
+                template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 2</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 3</mat-list-item></mat-list>",
+            },] },
+];
+/** @nocollapse */
+DividerOverviewExample.ctorParameters = () => [];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Elevation CSS classes
  */
 class ElevationOverviewExample {
@@ -3732,24 +3750,6 @@ TooltipPositionExample.ctorParameters = () => [];
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-/**
- * \@title Basic divider
- */
-class DividerOverviewExample {
-}
-DividerOverviewExample.decorators = [
-    { type: Component, args: [{
-                selector: 'divider-overview-example',
-                template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 2</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 3</mat-list-item></mat-list>",
-            },] },
-];
-/** @nocollapse */
-DividerOverviewExample.ctorParameters = () => [];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
 /* tslint:disable */
 /** DO NOT MANUALLY EDIT THIS FILE, IT IS GENERATED VIA GULP 'build-examples-module' */
 /**
@@ -3950,7 +3950,7 @@ const EXAMPLE_COMPONENTS = {
         selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
     },
     'divider-overview': {
-        title: 'Divider Overview',
+        title: 'Basic divider',
         component: DividerOverviewExample,
         additionalFiles: null,
         selectorName: null

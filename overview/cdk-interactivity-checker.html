@@ -1,0 +1,20 @@
+<html><head></head><body><div class="docs-markdown">
+        <h3 id="interactivitychecker" class="docs-header-link docs-markdown-h3">
+          <span header-link="interactivitychecker"></span>
+          InteractivityChecker
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">InteractivityChecker</code> is used to check the interactivity of an element, capturing disabled,
+visible, tabbable, and focusable states for accessibility purposes.</p>
+
+        <h4 id="methods" class="docs-header-link docs-markdown-h4">
+          <span header-link="methods"></span>
+          Methods
+        </h4>
+      <h5 class="docs-markdown-h5"><code class="docs-markdown-code">isDisabled(element: HTMLElement): boolean</code></h5><p class="docs-markdown-p">Whether the given element is disabled.</p>
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">isVisible(element: HTMLElement): boolean</code></h5><p class="docs-markdown-p">Whether the given element is visible. </p>
+<p class="docs-markdown-p">This will capture states like <code class="docs-markdown-code">display: none</code> and <code class="docs-markdown-code">visibility: hidden</code>,
+but not things like being clipped by an <code class="docs-markdown-code">overflow: hidden</code> parent or being outside the viewport.</p>
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">isFocusable(element: HTMLElement): boolean</code></h5><p class="docs-markdown-p">Gets whether an element can be focused by the user.</p>
+<h5 class="docs-markdown-h5"><code class="docs-markdown-code">isTabbable(element: HTMLElement): boolean</code></h5><p class="docs-markdown-p">Gets whether an element can be reached via Tab key. 
+Assumes that the element has already been checked with isFocusable.</p>
+</div></body></html>

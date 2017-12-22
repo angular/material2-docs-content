@@ -1,0 +1,86 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The <code class="docs-markdown-code">layout</code> package provides utilities to build responsive UIs that react to screen-size changes. </p>
+
+        <h3 id="breakpointobserver" class="docs-header-link docs-markdown-h3">
+          <span header-link="breakpointobserver"></span>
+          BreakpointObserver
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">BreakpointObserver</code> is a utility for evaluating media queries and reacting to their changing.</p>
+
+        <h4 id="evaluate-against-the-current-viewport" class="docs-header-link docs-markdown-h4">
+          <span header-link="evaluate-against-the-current-viewport"></span>
+          Evaluate against the current viewport
+        </h4>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">isMatched</code> method is used to evaluate one or more media queries against the current viewport
+size.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">const</span> isSmallScreen = breakpointObserver.isMatched(<span class="hljs-string">'(max-width: 599px)'</span>);
+</code></pre>
+
+        <h4 id="react-to-changes-to-the-viewport" class="docs-header-link docs-markdown-h4">
+          <span header-link="react-to-changes-to-the-viewport"></span>
+          React to changes to the viewport
+        </h4>
+      <p class="docs-markdown-p">The <code class="docs-markdown-code">observe</code> method is used to get an observable stream that will emit whenever one of the given
+media queries would have a different result.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">const</span> layoutChanges = breakpointObserver.observe([
+  <span class="hljs-string">'(orientation: portrait)'</span>,
+  <span class="hljs-string">'(orientation: landscape)'</span>,
+]);
+
+layoutChanges.subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+  updateMyLayoutForOrientationChange();
+});
+</code></pre>
+
+        <h4 id="default-breakpoints" class="docs-header-link docs-markdown-h4">
+          <span header-link="default-breakpoints"></span>
+          Default breakpoints
+        </h4>
+      <p class="docs-markdown-p">A set of default media queries are available corresponding to breakpoints for different device
+types.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {BreakpointObserver, Breakpoints} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/layout'</span>;
+
+<span class="hljs-meta">@Component</span>({...})
+<span class="hljs-keyword">class</span> MyComponent {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">breakpointObserver: BreakpointObserver</span>) {
+    breakpointObserver.observe([
+      Breakpoints.HandsetLandscape,
+      Breakpoints.HandsetPortrait
+    ]).subscribe(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+      <span class="hljs-keyword">if</span> (result.matches) {
+        <span class="hljs-keyword">this</span>.activateHandsetLayout();
+      }
+    });
+  }
+}
+</code></pre>
+<p class="docs-markdown-p">The built-in breakpoints based on <a href="https://material.io/guidelines/layout/responsive-ui.html#responsive-ui-breakpoints" class="docs-markdown-a">Google's Material Design
+specification</a>.
+The available values are:</p>
+<ul class="docs-markdown-ul">
+<li class="docs-markdown-li">Handset</li>
+<li class="docs-markdown-li">Tablet</li>
+<li class="docs-markdown-li">Web</li>
+<li class="docs-markdown-li">HandsetPortrait</li>
+<li class="docs-markdown-li">TabletPortrait</li>
+<li class="docs-markdown-li">WebPortrait</li>
+<li class="docs-markdown-li">HandsetLandscape</li>
+<li class="docs-markdown-li">TabletLandscape</li>
+<li class="docs-markdown-li">WebLandscape</li>
+</ul>
+
+        <h3 id="mediamatcher" class="docs-header-link docs-markdown-h3">
+          <span header-link="mediamatcher"></span>
+          MediaMatcher
+        </h3>
+      <p class="docs-markdown-p"><code class="docs-markdown-code">MediaMatcher</code> is a lower-level utility that wraps the native <code class="docs-markdown-code">matchMedia</code>. This service normalizes
+browser differences and serves as a convenient API that can be replaced with a fake in unit tests.
+The <code class="docs-markdown-code">matchMedia</code> method can be used to get a native
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList" class="docs-markdown-a"><code class="docs-markdown-code">MediaQueryList</code></a>.</p>
+<pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@Component</span>({...})
+<span class="hljs-keyword">class</span> MyComponent {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">mediaMatcher: MediaMatcher</span>) {
+    <span class="hljs-keyword">const</span> mediaQueryList = mediaMatcher.matchMedia(<span class="hljs-string">'(min-width: 1px)'</span>);
+  }
+}
+</code></pre>
+</div></body></html>
