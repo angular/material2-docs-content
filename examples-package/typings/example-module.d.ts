@@ -118,6 +118,7 @@ import { ToolbarMultirowExample } from './toolbar-multirow/toolbar-multirow-exam
 import { ToolbarOverviewExample } from './toolbar-overview/toolbar-overview-example';
 import { TooltipOverviewExample } from './tooltip-overview/tooltip-overview-example';
 import { TooltipPositionExample } from './tooltip-position/tooltip-position-example';
+import { DividerOverviewExample } from './divider-overview/divider-overview-example';
 export declare const EXAMPLE_COMPONENTS: {
     'autocomplete-display': {
         title: string;
@@ -310,6 +311,12 @@ export declare const EXAMPLE_COMPONENTS: {
         component: typeof DialogOverviewExample;
         additionalFiles: string[];
         selectorName: string;
+    };
+    'divider-overview': {
+        title: string;
+        component: typeof DividerOverviewExample;
+        additionalFiles: null;
+        selectorName: null;
     };
     'elevation-overview': {
         title: string;

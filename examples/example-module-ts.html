@@ -45,6 +45,7 @@
 <span class="hljs-keyword">import</span> {DialogDataExampleDialog,DialogDataExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-data/dialog-data-example'</span>;
 <span class="hljs-keyword">import</span> {DialogElementsExampleDialog,DialogElementsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-elements/dialog-elements-example'</span>;
 <span class="hljs-keyword">import</span> {DialogOverviewExampleDialog,DialogOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-overview/dialog-overview-example'</span>;
+<span class="hljs-keyword">import</span> {DividerOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./divider-overview/divider-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ElevationOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./elevation-overview/elevation-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ExpansionOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./expansion-overview/expansion-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ExpansionStepsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./expansion-steps/expansion-steps-example'</span>;
@@ -320,6 +321,12 @@
     component: DialogOverviewExample,
     additionalFiles: [<span class="hljs-string">"dialog-overview-example-dialog.html"</span>],
     selectorName: <span class="hljs-string">'DialogOverviewExample, DialogOverviewExampleDialog'</span>
+  },
+  <span class="hljs-string">'divider-overview'</span>: {
+    title: <span class="hljs-string">'Basic divider'</span>,
+    component: DividerOverviewExample,
+    additionalFiles: <span class="hljs-literal">null</span>,
+    selectorName: <span class="hljs-literal">null</span>
   },
   <span class="hljs-string">'elevation-overview'</span>: {
     title: <span class="hljs-string">'Elevation CSS classes'</span>,
@@ -848,6 +855,7 @@
   DialogDataExampleDialog,DialogDataExample,
   DialogElementsExampleDialog,DialogElementsExample,
   DialogOverviewExampleDialog,DialogOverviewExample,
+  DividerOverviewExample,
   ElevationOverviewExample,
   ExpansionOverviewExample,
   ExpansionStepsExample,

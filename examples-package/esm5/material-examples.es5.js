@@ -9,7 +9,7 @@ import { ChangeDetectorRef, Component, ElementRef, Inject, Input, NgModule, View
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
-import { MAT_DIALOG_DATA, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatExpansionModule, MatFormFieldControl, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
+import { MAT_DIALOG_DATA, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatDividerModule, MatExpansionModule, MatFormFieldControl, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
 import { startWith } from 'rxjs/operators/startWith';
 import { map } from 'rxjs/operators/map';
 import { __extends } from 'tslib';
@@ -52,6 +52,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                         MatChipsModule,
                         MatDatepickerModule,
                         MatDialogModule,
+                        MatDividerModule,
                         MatExpansionModule,
                         MatFormFieldModule,
                         MatGridListModule,
@@ -1120,7 +1121,7 @@ var DialogContentExampleDialog = /** @class */ (function () {
     DialogContentExampleDialog.decorators = [
         { type: Component, args: [{
                     selector: 'dialog-content-example-dialog',
-                    template: "<h2 mat-dialog-title>Install Angular</h2><mat-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED & PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></mat-dialog-content><mat-dialog-actions><button mat-button [mat-dialog-close]=\"true\" tabindex=\"1\">Install</button> <button mat-button mat-dialog-close tabindex=\"-1\">Cancel</button></mat-dialog-actions>",
+                    template: "<h2 mat-dialog-title>Install Angular</h2><mat-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED &amp; PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></mat-dialog-content><mat-dialog-actions><button mat-button mat-dialog-close>Cancel</button> <button mat-button [mat-dialog-close]=\"true\" cdkFocusInitial>Install</button></mat-dialog-actions>",
                 },] },
     ];
     /** @nocollapse */
@@ -1284,7 +1285,7 @@ var DialogOverviewExampleDialog = /** @class */ (function () {
     DialogOverviewExampleDialog.decorators = [
         { type: Component, args: [{
                     selector: 'dialog-overview-example-dialog',
-                    template: "<h1 mat-dialog-title>Hi {{data.name}}</h1><div mat-dialog-content><p>What's your favorite animal?</p><mat-form-field><input matInput tabindex=\"1\" [(ngModel)]=\"data.animal\"></mat-form-field></div><div mat-dialog-actions><button mat-button [mat-dialog-close]=\"data.animal\" tabindex=\"2\">Ok</button> <button mat-button (click)=\"onNoClick()\" tabindex=\"-1\">No Thanks</button></div>",
+                    template: "<h1 mat-dialog-title>Hi {{data.name}}</h1><div mat-dialog-content><p>What's your favorite animal?</p><mat-form-field><input matInput tabindex=\"1\" [(ngModel)]=\"data.animal\"></mat-form-field></div><div mat-dialog-actions><button mat-button (click)=\"onNoClick()\">No Thanks</button> <button mat-button [mat-dialog-close]=\"data.animal\" cdkFocusInitial>Ok</button></div>",
                 },] },
     ];
     /** @nocollapse */
@@ -4118,6 +4119,27 @@ var TooltipPositionExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+/**
+ * \@title Basic divider
+ */
+var DividerOverviewExample = /** @class */ (function () {
+    function DividerOverviewExample() {
+    }
+    DividerOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'divider-overview-example',
+                    template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 2</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 3</mat-list-item></mat-list>",
+                },] },
+    ];
+    /** @nocollapse */
+    DividerOverviewExample.ctorParameters = function () { return []; };
+    return DividerOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /* tslint:disable */
 /** DO NOT MANUALLY EDIT THIS FILE, IT IS GENERATED VIA GULP 'build-examples-module' */
 /**
@@ -4316,6 +4338,12 @@ var EXAMPLE_COMPONENTS = {
         component: DialogOverviewExample,
         additionalFiles: ["dialog-overview-example-dialog.html"],
         selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
+    },
+    'divider-overview': {
+        title: 'Divider Overview',
+        component: DividerOverviewExample,
+        additionalFiles: null,
+        selectorName: null
     },
     'elevation-overview': {
         title: 'Elevation CSS classes',
@@ -4843,6 +4871,7 @@ var EXAMPLE_LIST = [
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
     DialogOverviewExampleDialog, DialogOverviewExample,
+    DividerOverviewExample,
     ElevationOverviewExample,
     ExpansionOverviewExample,
     ExpansionStepsExample,
@@ -5010,5 +5039,5 @@ var ExampleData = /** @class */ (function () {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerDisabledExample as ɵp, DatepickerEventsExample as ɵq, DatepickerFilterExample as ɵr, DatepickerFormatsExample as ɵt, MY_FORMATS as ɵs, DatepickerLocaleExample as ɵu, DatepickerMinMaxExample as ɵv, DatepickerMomentExample as ɵw, DatepickerStartViewExample as ɵx, DatepickerTouchExample as ɵy, DatepickerValueExample as ɵz, DialogContentExample as ɵba, DialogContentExampleDialog as ɵbb, DialogDataExample as ɵbc, DialogDataExampleDialog as ɵbd, DialogElementsExample as ɵbe, DialogElementsExampleDialog as ɵbf, DialogOverviewExample as ɵbg, DialogOverviewExampleDialog as ɵbh, ElevationOverviewExample as ɵbi, ExpansionStepsExample as ɵbj, FormFieldCustomControlExample as ɵbl, MyTelInput as ɵbk, FormFieldErrorExample as ɵbm, FormFieldHintExample as ɵbn, FormFieldLabelExample as ɵbo, FormFieldOverviewExample as ɵbp, FormFieldPrefixSuffixExample as ɵbq, FormFieldThemingExample as ɵbr, GridListDynamicExample as ɵbs, GridListOverviewExample as ɵbt, IconOverviewExample as ɵbu, IconSvgExample as ɵbv, InputAutosizeTextareaExample as ɵbw, InputClearableExample as ɵbx, InputErrorStateMatcherExample as ɵby, InputErrorsExample as ɵbz, InputFormExample as ɵca, InputHintExample as ɵcb, InputOverviewExample as ɵcc, InputPrefixSuffixExample as ɵcd, ListSectionsExample as ɵce, ListSelectionExample as ɵcf, ExampleMaterialModule as ɵek, MenuIconsExample as ɵcg, MenuOverviewExample as ɵch, NestedMenuExample as ɵci, PaginatorConfigurableExample as ɵcj, PaginatorOverviewExample as ɵck, ProgressBarBufferExample as ɵcl, ProgressBarConfigurableExample as ɵcm, ProgressBarDeterminateExample as ɵcn, ProgressBarIndeterminateExample as ɵco, ProgressBarQueryExample as ɵcp, ProgressSpinnerConfigurableExample as ɵcq, ProgressSpinnerOverviewExample as ɵcr, RadioNgModelExample as ɵcs, RadioOverviewExample as ɵct, SelectCustomTriggerExample as ɵcu, SelectDisabledExample as ɵcv, SelectErrorStateMatcherExample as ɵcw, SelectFormExample as ɵcx, SelectHintErrorExample as ɵcy, SelectMultipleExample as ɵcz, SelectNoRippleExample as ɵda, SelectOptgroupExample as ɵdb, SelectOverviewExample as ɵdc, SelectPanelClassExample as ɵdd, SelectResetExample as ɵde, SelectValueBindingExample as ɵdf, SidenavAutosizeExample as ɵdg, SidenavDisableCloseExample as ɵdh, SidenavDrawerOverviewExample as ɵdi, SidenavFixedExample as ɵdj, SidenavModeExample as ɵdk, SidenavOpenCloseExample as ɵdl, SidenavOverviewExample as ɵdm, SidenavPositionExample as ɵdn, SidenavResponsiveExample as ɵdo, SlideToggleConfigurableExample as ɵdp, SlideToggleFormsExample as ɵdq, SlideToggleOverviewExample as ɵdr, SliderConfigurableExample as ɵds, SliderOverviewExample as ɵdt, PizzaPartyComponent as ɵdv, SnackBarComponentExample as ɵdu, SnackBarOverviewExample as ɵdw, SortOverviewExample as ɵdx, TableBasicExample as ɵdy, TableFilteringExample as ɵdz, TableHttpExample as ɵea, TableOverviewExample as ɵeb, TablePaginationExample as ɵec, TableSelectionExample as ɵed, TableSortingExample as ɵee, TabsOverviewExample as ɵef, TabsTemplateLabelExample as ɵeg, ToolbarOverviewExample as ɵeh, TooltipOverviewExample as ɵei, TooltipPositionExample as ɵej };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerDisabledExample as ɵp, DatepickerEventsExample as ɵq, DatepickerFilterExample as ɵr, DatepickerFormatsExample as ɵt, MY_FORMATS as ɵs, DatepickerLocaleExample as ɵu, DatepickerMinMaxExample as ɵv, DatepickerMomentExample as ɵw, DatepickerStartViewExample as ɵx, DatepickerTouchExample as ɵy, DatepickerValueExample as ɵz, DialogContentExample as ɵba, DialogContentExampleDialog as ɵbb, DialogDataExample as ɵbc, DialogDataExampleDialog as ɵbd, DialogElementsExample as ɵbe, DialogElementsExampleDialog as ɵbf, DialogOverviewExample as ɵbg, DialogOverviewExampleDialog as ɵbh, DividerOverviewExample as ɵbi, ElevationOverviewExample as ɵbj, ExpansionStepsExample as ɵbk, FormFieldCustomControlExample as ɵbm, MyTelInput as ɵbl, FormFieldErrorExample as ɵbn, FormFieldHintExample as ɵbo, FormFieldLabelExample as ɵbp, FormFieldOverviewExample as ɵbq, FormFieldPrefixSuffixExample as ɵbr, FormFieldThemingExample as ɵbs, GridListDynamicExample as ɵbt, GridListOverviewExample as ɵbu, IconOverviewExample as ɵbv, IconSvgExample as ɵbw, InputAutosizeTextareaExample as ɵbx, InputClearableExample as ɵby, InputErrorStateMatcherExample as ɵbz, InputErrorsExample as ɵca, InputFormExample as ɵcb, InputHintExample as ɵcc, InputOverviewExample as ɵcd, InputPrefixSuffixExample as ɵce, ListSectionsExample as ɵcf, ListSelectionExample as ɵcg, ExampleMaterialModule as ɵel, MenuIconsExample as ɵch, MenuOverviewExample as ɵci, NestedMenuExample as ɵcj, PaginatorConfigurableExample as ɵck, PaginatorOverviewExample as ɵcl, ProgressBarBufferExample as ɵcm, ProgressBarConfigurableExample as ɵcn, ProgressBarDeterminateExample as ɵco, ProgressBarIndeterminateExample as ɵcp, ProgressBarQueryExample as ɵcq, ProgressSpinnerConfigurableExample as ɵcr, ProgressSpinnerOverviewExample as ɵcs, RadioNgModelExample as ɵct, RadioOverviewExample as ɵcu, SelectCustomTriggerExample as ɵcv, SelectDisabledExample as ɵcw, SelectErrorStateMatcherExample as ɵcx, SelectFormExample as ɵcy, SelectHintErrorExample as ɵcz, SelectMultipleExample as ɵda, SelectNoRippleExample as ɵdb, SelectOptgroupExample as ɵdc, SelectOverviewExample as ɵdd, SelectPanelClassExample as ɵde, SelectResetExample as ɵdf, SelectValueBindingExample as ɵdg, SidenavAutosizeExample as ɵdh, SidenavDisableCloseExample as ɵdi, SidenavDrawerOverviewExample as ɵdj, SidenavFixedExample as ɵdk, SidenavModeExample as ɵdl, SidenavOpenCloseExample as ɵdm, SidenavOverviewExample as ɵdn, SidenavPositionExample as ɵdo, SidenavResponsiveExample as ɵdp, SlideToggleConfigurableExample as ɵdq, SlideToggleFormsExample as ɵdr, SlideToggleOverviewExample as ɵds, SliderConfigurableExample as ɵdt, SliderOverviewExample as ɵdu, PizzaPartyComponent as ɵdw, SnackBarComponentExample as ɵdv, SnackBarOverviewExample as ɵdx, SortOverviewExample as ɵdy, TableBasicExample as ɵdz, TableFilteringExample as ɵea, TableHttpExample as ɵeb, TableOverviewExample as ɵec, TablePaginationExample as ɵed, TableSelectionExample as ɵee, TableSortingExample as ɵef, TabsOverviewExample as ɵeg, TabsTemplateLabelExample as ɵeh, ToolbarOverviewExample as ɵei, TooltipOverviewExample as ɵej, TooltipPositionExample as ɵek };
 //# sourceMappingURL=material-examples.es5.js.map

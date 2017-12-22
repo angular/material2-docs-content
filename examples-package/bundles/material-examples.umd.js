@@ -58,6 +58,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                         _angular_material.MatChipsModule,
                         _angular_material.MatDatepickerModule,
                         _angular_material.MatDialogModule,
+                        _angular_material.MatDividerModule,
                         _angular_material.MatExpansionModule,
                         _angular_material.MatFormFieldModule,
                         _angular_material.MatGridListModule,
@@ -1126,7 +1127,7 @@ var DialogContentExampleDialog = /** @class */ (function () {
     DialogContentExampleDialog.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'dialog-content-example-dialog',
-                    template: "<h2 mat-dialog-title>Install Angular</h2><mat-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED & PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></mat-dialog-content><mat-dialog-actions><button mat-button [mat-dialog-close]=\"true\" tabindex=\"1\">Install</button> <button mat-button mat-dialog-close tabindex=\"-1\">Cancel</button></mat-dialog-actions>",
+                    template: "<h2 mat-dialog-title>Install Angular</h2><mat-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED &amp; PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></mat-dialog-content><mat-dialog-actions><button mat-button mat-dialog-close>Cancel</button> <button mat-button [mat-dialog-close]=\"true\" cdkFocusInitial>Install</button></mat-dialog-actions>",
                 },] },
     ];
     /** @nocollapse */
@@ -1290,7 +1291,7 @@ var DialogOverviewExampleDialog = /** @class */ (function () {
     DialogOverviewExampleDialog.decorators = [
         { type: _angular_core.Component, args: [{
                     selector: 'dialog-overview-example-dialog',
-                    template: "<h1 mat-dialog-title>Hi {{data.name}}</h1><div mat-dialog-content><p>What's your favorite animal?</p><mat-form-field><input matInput tabindex=\"1\" [(ngModel)]=\"data.animal\"></mat-form-field></div><div mat-dialog-actions><button mat-button [mat-dialog-close]=\"data.animal\" tabindex=\"2\">Ok</button> <button mat-button (click)=\"onNoClick()\" tabindex=\"-1\">No Thanks</button></div>",
+                    template: "<h1 mat-dialog-title>Hi {{data.name}}</h1><div mat-dialog-content><p>What's your favorite animal?</p><mat-form-field><input matInput tabindex=\"1\" [(ngModel)]=\"data.animal\"></mat-form-field></div><div mat-dialog-actions><button mat-button (click)=\"onNoClick()\">No Thanks</button> <button mat-button [mat-dialog-close]=\"data.animal\" cdkFocusInitial>Ok</button></div>",
                 },] },
     ];
     /** @nocollapse */
@@ -4124,6 +4125,27 @@ var TooltipPositionExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+/**
+ * \@title Basic divider
+ */
+var DividerOverviewExample = /** @class */ (function () {
+    function DividerOverviewExample() {
+    }
+    DividerOverviewExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'divider-overview-example',
+                    template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 2</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 3</mat-list-item></mat-list>",
+                },] },
+    ];
+    /** @nocollapse */
+    DividerOverviewExample.ctorParameters = function () { return []; };
+    return DividerOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /* tslint:disable */
 /** DO NOT MANUALLY EDIT THIS FILE, IT IS GENERATED VIA GULP 'build-examples-module' */
 /**
@@ -4322,6 +4344,12 @@ var EXAMPLE_COMPONENTS = {
         component: DialogOverviewExample,
         additionalFiles: ["dialog-overview-example-dialog.html"],
         selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
+    },
+    'divider-overview': {
+        title: 'Divider Overview',
+        component: DividerOverviewExample,
+        additionalFiles: null,
+        selectorName: null
     },
     'elevation-overview': {
         title: 'Elevation CSS classes',
@@ -4849,6 +4877,7 @@ var EXAMPLE_LIST = [
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
     DialogOverviewExampleDialog, DialogOverviewExample,
+    DividerOverviewExample,
     ElevationOverviewExample,
     ExpansionOverviewExample,
     ExpansionStepsExample,
@@ -5048,87 +5077,88 @@ exports.ɵbe = DialogElementsExample;
 exports.ɵbf = DialogElementsExampleDialog;
 exports.ɵbg = DialogOverviewExample;
 exports.ɵbh = DialogOverviewExampleDialog;
-exports.ɵbi = ElevationOverviewExample;
-exports.ɵbj = ExpansionStepsExample;
-exports.ɵbl = FormFieldCustomControlExample;
-exports.ɵbk = MyTelInput;
-exports.ɵbm = FormFieldErrorExample;
-exports.ɵbn = FormFieldHintExample;
-exports.ɵbo = FormFieldLabelExample;
-exports.ɵbp = FormFieldOverviewExample;
-exports.ɵbq = FormFieldPrefixSuffixExample;
-exports.ɵbr = FormFieldThemingExample;
-exports.ɵbs = GridListDynamicExample;
-exports.ɵbt = GridListOverviewExample;
-exports.ɵbu = IconOverviewExample;
-exports.ɵbv = IconSvgExample;
-exports.ɵbw = InputAutosizeTextareaExample;
-exports.ɵbx = InputClearableExample;
-exports.ɵby = InputErrorStateMatcherExample;
-exports.ɵbz = InputErrorsExample;
-exports.ɵca = InputFormExample;
-exports.ɵcb = InputHintExample;
-exports.ɵcc = InputOverviewExample;
-exports.ɵcd = InputPrefixSuffixExample;
-exports.ɵce = ListSectionsExample;
-exports.ɵcf = ListSelectionExample;
-exports.ɵek = ExampleMaterialModule;
-exports.ɵcg = MenuIconsExample;
-exports.ɵch = MenuOverviewExample;
-exports.ɵci = NestedMenuExample;
-exports.ɵcj = PaginatorConfigurableExample;
-exports.ɵck = PaginatorOverviewExample;
-exports.ɵcl = ProgressBarBufferExample;
-exports.ɵcm = ProgressBarConfigurableExample;
-exports.ɵcn = ProgressBarDeterminateExample;
-exports.ɵco = ProgressBarIndeterminateExample;
-exports.ɵcp = ProgressBarQueryExample;
-exports.ɵcq = ProgressSpinnerConfigurableExample;
-exports.ɵcr = ProgressSpinnerOverviewExample;
-exports.ɵcs = RadioNgModelExample;
-exports.ɵct = RadioOverviewExample;
-exports.ɵcu = SelectCustomTriggerExample;
-exports.ɵcv = SelectDisabledExample;
-exports.ɵcw = SelectErrorStateMatcherExample;
-exports.ɵcx = SelectFormExample;
-exports.ɵcy = SelectHintErrorExample;
-exports.ɵcz = SelectMultipleExample;
-exports.ɵda = SelectNoRippleExample;
-exports.ɵdb = SelectOptgroupExample;
-exports.ɵdc = SelectOverviewExample;
-exports.ɵdd = SelectPanelClassExample;
-exports.ɵde = SelectResetExample;
-exports.ɵdf = SelectValueBindingExample;
-exports.ɵdg = SidenavAutosizeExample;
-exports.ɵdh = SidenavDisableCloseExample;
-exports.ɵdi = SidenavDrawerOverviewExample;
-exports.ɵdj = SidenavFixedExample;
-exports.ɵdk = SidenavModeExample;
-exports.ɵdl = SidenavOpenCloseExample;
-exports.ɵdm = SidenavOverviewExample;
-exports.ɵdn = SidenavPositionExample;
-exports.ɵdo = SidenavResponsiveExample;
-exports.ɵdp = SlideToggleConfigurableExample;
-exports.ɵdq = SlideToggleFormsExample;
-exports.ɵdr = SlideToggleOverviewExample;
-exports.ɵds = SliderConfigurableExample;
-exports.ɵdt = SliderOverviewExample;
-exports.ɵdv = PizzaPartyComponent;
-exports.ɵdu = SnackBarComponentExample;
-exports.ɵdw = SnackBarOverviewExample;
-exports.ɵdx = SortOverviewExample;
-exports.ɵdy = TableBasicExample;
-exports.ɵdz = TableFilteringExample;
-exports.ɵea = TableHttpExample;
-exports.ɵeb = TableOverviewExample;
-exports.ɵec = TablePaginationExample;
-exports.ɵed = TableSelectionExample;
-exports.ɵee = TableSortingExample;
-exports.ɵef = TabsOverviewExample;
-exports.ɵeg = TabsTemplateLabelExample;
-exports.ɵeh = ToolbarOverviewExample;
-exports.ɵei = TooltipOverviewExample;
-exports.ɵej = TooltipPositionExample;
+exports.ɵbi = DividerOverviewExample;
+exports.ɵbj = ElevationOverviewExample;
+exports.ɵbk = ExpansionStepsExample;
+exports.ɵbm = FormFieldCustomControlExample;
+exports.ɵbl = MyTelInput;
+exports.ɵbn = FormFieldErrorExample;
+exports.ɵbo = FormFieldHintExample;
+exports.ɵbp = FormFieldLabelExample;
+exports.ɵbq = FormFieldOverviewExample;
+exports.ɵbr = FormFieldPrefixSuffixExample;
+exports.ɵbs = FormFieldThemingExample;
+exports.ɵbt = GridListDynamicExample;
+exports.ɵbu = GridListOverviewExample;
+exports.ɵbv = IconOverviewExample;
+exports.ɵbw = IconSvgExample;
+exports.ɵbx = InputAutosizeTextareaExample;
+exports.ɵby = InputClearableExample;
+exports.ɵbz = InputErrorStateMatcherExample;
+exports.ɵca = InputErrorsExample;
+exports.ɵcb = InputFormExample;
+exports.ɵcc = InputHintExample;
+exports.ɵcd = InputOverviewExample;
+exports.ɵce = InputPrefixSuffixExample;
+exports.ɵcf = ListSectionsExample;
+exports.ɵcg = ListSelectionExample;
+exports.ɵel = ExampleMaterialModule;
+exports.ɵch = MenuIconsExample;
+exports.ɵci = MenuOverviewExample;
+exports.ɵcj = NestedMenuExample;
+exports.ɵck = PaginatorConfigurableExample;
+exports.ɵcl = PaginatorOverviewExample;
+exports.ɵcm = ProgressBarBufferExample;
+exports.ɵcn = ProgressBarConfigurableExample;
+exports.ɵco = ProgressBarDeterminateExample;
+exports.ɵcp = ProgressBarIndeterminateExample;
+exports.ɵcq = ProgressBarQueryExample;
+exports.ɵcr = ProgressSpinnerConfigurableExample;
+exports.ɵcs = ProgressSpinnerOverviewExample;
+exports.ɵct = RadioNgModelExample;
+exports.ɵcu = RadioOverviewExample;
+exports.ɵcv = SelectCustomTriggerExample;
+exports.ɵcw = SelectDisabledExample;
+exports.ɵcx = SelectErrorStateMatcherExample;
+exports.ɵcy = SelectFormExample;
+exports.ɵcz = SelectHintErrorExample;
+exports.ɵda = SelectMultipleExample;
+exports.ɵdb = SelectNoRippleExample;
+exports.ɵdc = SelectOptgroupExample;
+exports.ɵdd = SelectOverviewExample;
+exports.ɵde = SelectPanelClassExample;
+exports.ɵdf = SelectResetExample;
+exports.ɵdg = SelectValueBindingExample;
+exports.ɵdh = SidenavAutosizeExample;
+exports.ɵdi = SidenavDisableCloseExample;
+exports.ɵdj = SidenavDrawerOverviewExample;
+exports.ɵdk = SidenavFixedExample;
+exports.ɵdl = SidenavModeExample;
+exports.ɵdm = SidenavOpenCloseExample;
+exports.ɵdn = SidenavOverviewExample;
+exports.ɵdo = SidenavPositionExample;
+exports.ɵdp = SidenavResponsiveExample;
+exports.ɵdq = SlideToggleConfigurableExample;
+exports.ɵdr = SlideToggleFormsExample;
+exports.ɵds = SlideToggleOverviewExample;
+exports.ɵdt = SliderConfigurableExample;
+exports.ɵdu = SliderOverviewExample;
+exports.ɵdw = PizzaPartyComponent;
+exports.ɵdv = SnackBarComponentExample;
+exports.ɵdx = SnackBarOverviewExample;
+exports.ɵdy = SortOverviewExample;
+exports.ɵdz = TableBasicExample;
+exports.ɵea = TableFilteringExample;
+exports.ɵeb = TableHttpExample;
+exports.ɵec = TableOverviewExample;
+exports.ɵed = TablePaginationExample;
+exports.ɵee = TableSelectionExample;
+exports.ɵef = TableSortingExample;
+exports.ɵeg = TabsOverviewExample;
+exports.ɵeh = TabsTemplateLabelExample;
+exports.ɵei = ToolbarOverviewExample;
+exports.ɵej = TooltipOverviewExample;
+exports.ɵek = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

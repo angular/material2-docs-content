@@ -45,6 +45,7 @@ import {DialogContentExampleDialog,DialogContentExample} from './dialog-content/
 import {DialogDataExampleDialog,DialogDataExample} from './dialog-data/dialog-data-example';
 import {DialogElementsExampleDialog,DialogElementsExample} from './dialog-elements/dialog-elements-example';
 import {DialogOverviewExampleDialog,DialogOverviewExample} from './dialog-overview/dialog-overview-example';
+import {DividerOverviewExample} from './divider-overview/divider-overview-example';
 import {ElevationOverviewExample} from './elevation-overview/elevation-overview-example';
 import {ExpansionOverviewExample} from './expansion-overview/expansion-overview-example';
 import {ExpansionStepsExample} from './expansion-steps/expansion-steps-example';
@@ -320,6 +321,12 @@ export const EXAMPLE_COMPONENTS = {
     component: DialogOverviewExample,
     additionalFiles: ["dialog-overview-example-dialog.html"],
     selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
+  },
+  'divider-overview': {
+    title: 'Basic divider',
+    component: DividerOverviewExample,
+    additionalFiles: null,
+    selectorName: null
   },
   'elevation-overview': {
     title: 'Elevation CSS classes',
@@ -848,6 +855,7 @@ export const EXAMPLE_LIST = [
   DialogDataExampleDialog,DialogDataExample,
   DialogElementsExampleDialog,DialogElementsExample,
   DialogOverviewExampleDialog,DialogOverviewExample,
+  DividerOverviewExample,
   ElevationOverviewExample,
   ExpansionOverviewExample,
   ExpansionStepsExample,
