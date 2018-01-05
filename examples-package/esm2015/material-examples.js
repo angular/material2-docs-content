@@ -273,6 +273,7 @@ ButtonOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'button-overview-example',
                 template: "<button mat-button>Click me!</button>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -310,6 +311,7 @@ ButtonToggleOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'button-toggle-overview-example',
                 template: "<mat-button-toggle>Toggle me!</mat-button-toggle>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -366,6 +368,7 @@ CardOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'card-overview-example',
                 template: "<mat-card>Simple card</mat-card>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -519,6 +522,7 @@ CheckboxOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'checkbox-overview-example',
                 template: "<mat-checkbox>Check me!</mat-checkbox>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -985,6 +989,7 @@ DialogContentExample.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-content-example',
                 template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -1031,6 +1036,7 @@ DialogDataExample.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-data-example',
                 template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>",
+                styles: ["/** No CSS for this example */ "]
             },] },
 ];
 /** @nocollapse */
@@ -1081,6 +1087,7 @@ DialogElementsExample.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-elements-example',
                 template: "<button mat-button (click)=\"openDialog()\">Launch dialog</button>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -1129,7 +1136,8 @@ class DialogOverviewExample {
 DialogOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-overview-example',
-                template: "<ol><li><mat-form-field><input matInput [(ngModel)]=\"name\" placeholder=\"What's your name?\"></mat-form-field></li><li><button mat-raised-button (click)=\"openDialog()\">Pick one</button></li><li *ngIf=\"animal\">You chose: <i>{{animal}}</i></li></ol>"
+                template: "<ol><li><mat-form-field><input matInput [(ngModel)]=\"name\" placeholder=\"What's your name?\"></mat-form-field></li><li><button mat-raised-button (click)=\"openDialog()\">Pick one</button></li><li *ngIf=\"animal\">You chose: <i>{{animal}}</i></li></ol>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -1177,6 +1185,7 @@ DividerOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'divider-overview-example',
                 template: "<mat-list><mat-list-item>Item 1</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 2</mat-list-item><mat-divider></mat-divider><mat-list-item>Item 3</mat-list-item></mat-list>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -1220,6 +1229,7 @@ ExpansionOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'expansion-overview-example',
                 template: "<mat-accordion><mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age</mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput placeholder=\"Age\"></mat-form-field></mat-expansion-panel><mat-expansion-panel (opened)=\"panelOpenState = true\" (closed)=\"panelOpenState = false\"><mat-expansion-panel-header><mat-panel-title>Self aware panel</mat-panel-title><mat-panel-description>Currently I am {{panelOpenState ? 'open' : 'closed'}}</mat-panel-description></mat-expansion-panel-header><p>I'm visible because I am open</p></mat-expansion-panel></mat-accordion>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -1637,6 +1647,7 @@ GridListDynamicExample.decorators = [
     { type: Component, args: [{
                 selector: 'grid-list-dynamic-example',
                 template: "<mat-grid-list cols=\"4\" rowHeight=\"100px\"><mat-grid-tile *ngFor=\"let tile of tiles\" [colspan]=\"tile.cols\" [rowspan]=\"tile.rows\" [style.background]=\"tile.color\">{{tile.text}}</mat-grid-tile></mat-grid-list>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -1674,6 +1685,7 @@ IconOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'icon-overview-example',
                 template: "<mat-icon>home</mat-icon>",
+                styles: ["/** No CSS for this example */ "]
             },] },
 ];
 /** @nocollapse */
@@ -1699,6 +1711,7 @@ IconSvgExample.decorators = [
     { type: Component, args: [{
                 selector: 'icon-svg-example',
                 template: "<mat-icon svgIcon=\"thumbs-up\"></mat-icon>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -1902,6 +1915,7 @@ ListOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'list-overview-example',
                 template: "<mat-list role=\"list\"><mat-list-item role=\"listitem\">Item 1</mat-list-item><mat-list-item role=\"listitem\">Item 2</mat-list-item><mat-list-item role=\"listitem\">Item 3</mat-list-item></mat-list>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -2057,6 +2071,7 @@ PaginatorConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'paginator-configurable-example',
                 template: "<mat-form-field>List length: <input matInput [(ngModel)]=\"length\"></mat-form-field><mat-form-field>Page size: <input matInput [(ngModel)]=\"pageSize\"></mat-form-field><mat-form-field>Page size options: <input matInput [ngModel]=\"pageSizeOptions\" (ngModelChange)=\"setPageSizeOptions($event)\"></mat-form-field><mat-paginator [length]=\"length\" [pageSize]=\"pageSize\" [pageSizeOptions]=\"pageSizeOptions\" (page)=\"pageEvent = $event\"></mat-paginator><div *ngIf=\"pageEvent\"><h5>Page Change Event Properties</h5><div>List length: {{pageEvent.length}}</div><div>Page size: {{pageEvent.pageSize}}</div><div>Page index: {{pageEvent.pageIndex}}</div></div>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -2075,6 +2090,7 @@ PaginatorOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'paginator-overview-example',
                 template: "<mat-paginator [length]=\"100\" [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -2093,6 +2109,7 @@ ProgressBarBufferExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-buffer-example',
                 template: "<mat-progress-bar mode=\"buffer\"></mat-progress-bar>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -2136,6 +2153,7 @@ ProgressBarDeterminateExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-determinate-example',
                 template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -2154,6 +2172,7 @@ ProgressBarIndeterminateExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-indeterminate-example',
                 template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -2172,6 +2191,7 @@ ProgressBarQueryExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-query-example',
                 template: "<mat-progress-bar mode=\"query\"></mat-progress-bar>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -2214,6 +2234,7 @@ ProgressSpinnerOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-spinner-overview-example',
                 template: "<mat-spinner></mat-spinner>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -2919,6 +2940,7 @@ SlideToggleOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'slide-toggle-overview-example',
                 template: "<mat-slide-toggle>Slide me!</mat-slide-toggle>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -3064,6 +3086,7 @@ SnackBarOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'snack-bar-overview-example',
                 template: "<mat-form-field><input matInput value=\"Disco party!\" placeholder=\"Message\" #message></mat-form-field><mat-form-field><input matInput value=\"Dance\" placeholder=\"Action\" #action></mat-form-field><button mat-button (click)=\"openSnackBar(message.value, action.value)\">Show snack-bar</button>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -3645,6 +3668,7 @@ TabsOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'tabs-overview-example',
                 template: "<mat-tab-group><mat-tab label=\"Tab 1\">Content 1</mat-tab><mat-tab label=\"Tab 2\">Content 2</mat-tab></mat-tab-group>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -3701,6 +3725,7 @@ ToolbarOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'toolbar-overview-example',
                 template: "<mat-toolbar>My App</mat-toolbar>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -3719,6 +3744,7 @@ TooltipOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'tooltip-overview-example',
                 template: "<span matTooltip=\"Tooltip!\">I have a tooltip</span>",
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
