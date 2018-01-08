@@ -107,7 +107,7 @@ class AutocompleteDisplayExample {
      */
     ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith(/** @type {?} */ ({})), map(user => user && typeof user === 'object' ? user.name : user), map(name => name ? this.filter(name) : this.options.slice()));
+            .pipe(startWith(''), map(value => typeof value === 'string' ? value : value.name), map(name => name ? this.filter(name) : this.options.slice()));
     }
     /**
      * @param {?} name
@@ -117,11 +117,11 @@ class AutocompleteDisplayExample {
         return this.options.filter(option => option.name.toLowerCase().indexOf(name.toLowerCase()) === 0);
     }
     /**
-     * @param {?} user
+     * @param {?=} user
      * @return {?}
      */
     displayFn(user) {
-        return user ? user.name : user;
+        return user ? user.name : undefined;
     }
 }
 AutocompleteDisplayExample.decorators = [

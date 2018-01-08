@@ -114,7 +114,7 @@ var AutocompleteDisplayExample = /** @class */ (function () {
     function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith(/** @type {?} */ ({})), map(function (user) { return user && typeof user === 'object' ? user.name : user; }), map(function (name) { return name ? _this.filter(name) : _this.options.slice(); }));
+            .pipe(startWith(''), map(function (value) { return typeof value === 'string' ? value : value.name; }), map(function (name) { return name ? _this.filter(name) : _this.options.slice(); }));
     };
     /**
      * @param {?} name
@@ -130,15 +130,15 @@ var AutocompleteDisplayExample = /** @class */ (function () {
         });
     };
     /**
-     * @param {?} user
+     * @param {?=} user
      * @return {?}
      */
     AutocompleteDisplayExample.prototype.displayFn = /**
-     * @param {?} user
+     * @param {?=} user
      * @return {?}
      */
     function (user) {
-        return user ? user.name : user;
+        return user ? user.name : undefined;
     };
     AutocompleteDisplayExample.decorators = [
         { type: Component, args: [{

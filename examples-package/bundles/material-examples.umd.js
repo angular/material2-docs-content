@@ -120,7 +120,7 @@ var AutocompleteDisplayExample = /** @class */ (function () {
     function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
-            .pipe(rxjs_operators_startWith.startWith(/** @type {?} */ ({})), rxjs_operators_map.map(function (user) { return user && typeof user === 'object' ? user.name : user; }), rxjs_operators_map.map(function (name) { return name ? _this.filter(name) : _this.options.slice(); }));
+            .pipe(rxjs_operators_startWith.startWith(''), rxjs_operators_map.map(function (value) { return typeof value === 'string' ? value : value.name; }), rxjs_operators_map.map(function (name) { return name ? _this.filter(name) : _this.options.slice(); }));
     };
     /**
      * @param {?} name
@@ -136,15 +136,15 @@ var AutocompleteDisplayExample = /** @class */ (function () {
         });
     };
     /**
-     * @param {?} user
+     * @param {?=} user
      * @return {?}
      */
     AutocompleteDisplayExample.prototype.displayFn = /**
-     * @param {?} user
+     * @param {?=} user
      * @return {?}
      */
     function (user) {
-        return user ? user.name : user;
+        return user ? user.name : undefined;
     };
     AutocompleteDisplayExample.decorators = [
         { type: _angular_core.Component, args: [{
