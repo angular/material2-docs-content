@@ -15,6 +15,11 @@ dialogRef.close(<span class="hljs-string">'Pizza!'</span>);
     <span class="hljs-keyword">this</span>.dialogRef.close(<span class="hljs-string">'Pizza!'</span>);
   }
 }
+</code></pre><h3 id="specifying-global-configuration-defaults" class="docs-header-link docs-markdown-h3"><span header-link="specifying-global-configuration-defaults"></span> Specifying global configuration defaults</h3><p class="docs-markdown-p">Default dialog options can be specified by providing an instance of <code class="docs-markdown-code">MatDialogConfig</code> for MAT_DIALOG_DEFAULT_OPTIONS in your application's root module.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  providers: [
+    {provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: <span class="hljs-literal">false</span>}}
+  ]
+})
 </code></pre><h3 id="sharing-data-with-the-dialog-component-" class="docs-header-link docs-markdown-h3"><span header-link="sharing-data-with-the-dialog-component-"></span> Sharing data with the Dialog component.</h3><p class="docs-markdown-p">If you want to share data with your dialog, you can use the <code class="docs-markdown-code">data</code> option to pass information to the dialog component.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">let</span> dialogRef = dialog.open(YourDialog, {
   data: { name: <span class="hljs-string">'austin'</span> },
 });

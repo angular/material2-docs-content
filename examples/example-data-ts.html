@@ -18,36 +18,31 @@
   componentName = <span class="hljs-string">'ButtonDemo'</span>;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">example: <span class="hljs-built_in">string</span></span>) {
-    <span class="hljs-keyword">if</span> (example &amp;&amp; EXAMPLE_COMPONENTS[example]) {
-      <span class="hljs-keyword">this</span>.examplePath = <span class="hljs-string">`/assets/stackblitz/examples/<span class="hljs-subst">${example}</span>/`</span>;
+    <span class="hljs-keyword">if</span> (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
+      <span class="hljs-keyword">return</span>;
+    }
 
-      <span class="hljs-comment">// TODO(tinayuangao): Do not hard-code extensions</span>
-      <span class="hljs-keyword">this</span>.exampleFiles = [<span class="hljs-string">'html'</span>, <span class="hljs-string">'ts'</span>, <span class="hljs-string">'css'</span>]
-          .map(<span class="hljs-function">(<span class="hljs-params">extension</span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example.<span class="hljs-subst">${extension}</span>`</span>);
-      <span class="hljs-keyword">let</span> exampleFilesSet = <span class="hljs-keyword">new</span> Set(
-          [<span class="hljs-string">'html'</span>, <span class="hljs-string">'ts'</span>, <span class="hljs-string">'css'</span>].map(<span class="hljs-function">(<span class="hljs-params">extension</span>) =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example.<span class="hljs-subst">${extension}</span>`</span>));
-      <span class="hljs-keyword">if</span> (EXAMPLE_COMPONENTS[example].additionalFiles) {
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> file of EXAMPLE_COMPONENTS[example].additionalFiles) {
-          exampleFilesSet.add(file);
-        }
-      }
-      <span class="hljs-keyword">this</span>.exampleFiles = <span class="hljs-built_in">Array</span>.from(exampleFilesSet.values());
+    <span class="hljs-keyword">const</span> exampleConfig = EXAMPLE_COMPONENTS[example];
+    <span class="hljs-keyword">const</span> exampleFilesSet = <span class="hljs-keyword">new</span> Set([<span class="hljs-string">'html'</span>, <span class="hljs-string">'ts'</span>, <span class="hljs-string">'css'</span>].map(<span class="hljs-function"><span class="hljs-params">extension</span> =&gt;</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example.<span class="hljs-subst">${extension}</span>`</span>;
+    }));
 
-      <span class="hljs-keyword">this</span>.selectorName = <span class="hljs-keyword">this</span>.indexFilename = <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example`</span>;
+    <span class="hljs-comment">// TODO(tinayuangao): Do not hard-code extensions</span>
+    <span class="hljs-keyword">this</span>.exampleFiles = [<span class="hljs-string">'html'</span>, <span class="hljs-string">'ts'</span>, <span class="hljs-string">'css'</span>].map(<span class="hljs-function"><span class="hljs-params">extension</span> =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example.<span class="hljs-subst">${extension}</span>`</span>);
+    <span class="hljs-keyword">this</span>.examplePath = <span class="hljs-string">`/assets/stackblitz/examples/<span class="hljs-subst">${example}</span>/`</span>;
+    <span class="hljs-keyword">this</span>.exampleFiles = <span class="hljs-built_in">Array</span>.from(exampleFilesSet.values());
+    <span class="hljs-keyword">this</span>.selectorName = <span class="hljs-keyword">this</span>.indexFilename = <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example`</span>;
 
-      <span class="hljs-keyword">let</span> exampleName = example.replace(<span class="hljs-regexp">/(?:^\w|\b\w)/g</span>, <span class="hljs-function"><span class="hljs-params">letter</span> =&gt;</span> letter.toUpperCase());
-
-      <span class="hljs-keyword">if</span> (EXAMPLE_COMPONENTS[example].title) {
-        <span class="hljs-keyword">this</span>.description = EXAMPLE_COMPONENTS[example].title;
-      } <span class="hljs-keyword">else</span> {
-        <span class="hljs-keyword">this</span>.description = exampleName.replace(<span class="hljs-regexp">/[\-]+/g</span>, <span class="hljs-string">' '</span>) + <span class="hljs-string">' Example'</span>;
-      }
-
-      <span class="hljs-keyword">if</span> (EXAMPLE_COMPONENTS[example].selectorName) {
-        <span class="hljs-keyword">this</span>.componentName = EXAMPLE_COMPONENTS[example].selectorName;
-      } <span class="hljs-keyword">else</span> {
-        <span class="hljs-keyword">this</span>.componentName = exampleName.replace(<span class="hljs-regexp">/[\-]+/g</span>, <span class="hljs-string">''</span>) + <span class="hljs-string">'Example'</span>;
+    <span class="hljs-keyword">if</span> (exampleConfig.additionalFiles) {
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> file of exampleConfig.additionalFiles) {
+        exampleFilesSet.add(file);
       }
     }
+
+    <span class="hljs-keyword">const</span> exampleName = example.replace(<span class="hljs-regexp">/(?:^\w|\b\w)/g</span>, <span class="hljs-function"><span class="hljs-params">letter</span> =&gt;</span> letter.toUpperCase());
+
+    <span class="hljs-keyword">this</span>.description = exampleConfig.title || exampleName.replace(<span class="hljs-regexp">/[\-]+/g</span>, <span class="hljs-string">' '</span>) + <span class="hljs-string">' Example'</span>;
+    <span class="hljs-keyword">this</span>.componentName = exampleConfig.selectorName ||
+                          exampleName.replace(<span class="hljs-regexp">/[\-]+/g</span>, <span class="hljs-string">''</span>) + <span class="hljs-string">'Example'</span>;
   }
 }

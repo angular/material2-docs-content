@@ -5,14 +5,6 @@
 <span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
 <span class="hljs-keyword">import</span> {ExampleMaterialModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'./material-module'</span>;
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> LiveExample {
-  title: <span class="hljs-built_in">string</span>;
-  component: <span class="hljs-built_in">any</span>;
-  additionalFiles?: <span class="hljs-built_in">string</span>[];
-  selectorName?: <span class="hljs-built_in">string</span>;
-}
-
 <span class="hljs-keyword">import</span> {AutocompleteDisplayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-display/autocomplete-display-example'</span>;
 <span class="hljs-keyword">import</span> {AutocompleteFilterExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-filter/autocomplete-filter-example'</span>;
 <span class="hljs-keyword">import</span> {AutocompleteOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-overview/autocomplete-overview-example'</span>;
@@ -129,174 +121,125 @@
 <span class="hljs-keyword">import</span> {TooltipOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-overview/tooltip-overview-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-position/tooltip-position-example'</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> EXAMPLE_COMPONENTS = {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> LiveExample {
+  title: <span class="hljs-built_in">string</span>;
+  component: <span class="hljs-built_in">any</span>;
+  additionalFiles?: <span class="hljs-built_in">string</span>[];
+  selectorName?: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> EXAMPLE_COMPONENTS: {[key: <span class="hljs-built_in">string</span>]: LiveExample} = {
   <span class="hljs-string">'autocomplete-display'</span>: {
     title: <span class="hljs-string">'Display value autocomplete'</span>,
-    component: AutocompleteDisplayExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: AutocompleteDisplayExample
   },
   <span class="hljs-string">'autocomplete-filter'</span>: {
     title: <span class="hljs-string">'Filter autocomplete'</span>,
-    component: AutocompleteFilterExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: AutocompleteFilterExample
   },
   <span class="hljs-string">'autocomplete-overview'</span>: {
     title: <span class="hljs-string">'Autocomplete overview'</span>,
-    component: AutocompleteOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: AutocompleteOverviewExample
   },
   <span class="hljs-string">'autocomplete-simple'</span>: {
     title: <span class="hljs-string">'Simple autocomplete'</span>,
-    component: AutocompleteSimpleExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: AutocompleteSimpleExample
   },
   <span class="hljs-string">'button-overview'</span>: {
     title: <span class="hljs-string">'Basic buttons'</span>,
-    component: ButtonOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ButtonOverviewExample
   },
   <span class="hljs-string">'button-toggle-exclusive'</span>: {
     title: <span class="hljs-string">'Exclusive selection'</span>,
-    component: ButtonToggleExclusiveExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ButtonToggleExclusiveExample
   },
   <span class="hljs-string">'button-toggle-overview'</span>: {
     title: <span class="hljs-string">'Basic button-toggles'</span>,
-    component: ButtonToggleOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ButtonToggleOverviewExample
   },
   <span class="hljs-string">'button-types'</span>: {
     title: <span class="hljs-string">'Button varieties'</span>,
-    component: ButtonTypesExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ButtonTypesExample
   },
   <span class="hljs-string">'card-fancy'</span>: {
     title: <span class="hljs-string">'Card with multiple sections'</span>,
-    component: CardFancyExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: CardFancyExample
   },
   <span class="hljs-string">'card-overview'</span>: {
     title: <span class="hljs-string">'Basic cards'</span>,
-    component: CardOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: CardOverviewExample
   },
   <span class="hljs-string">'cdk-table-basic'</span>: {
     title: <span class="hljs-string">'Basic CDK data-table'</span>,
-    component: CdkTableBasicExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: CdkTableBasicExample
   },
   <span class="hljs-string">'checkbox-configurable'</span>: {
     title: <span class="hljs-string">'Configurable checkbox'</span>,
-    component: CheckboxConfigurableExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: CheckboxConfigurableExample
   },
   <span class="hljs-string">'checkbox-overview'</span>: {
     title: <span class="hljs-string">'Basic checkboxes'</span>,
-    component: CheckboxOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: CheckboxOverviewExample
   },
   <span class="hljs-string">'chips-input'</span>: {
     title: <span class="hljs-string">'Chips with input'</span>,
-    component: ChipsInputExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ChipsInputExample
   },
   <span class="hljs-string">'chips-overview'</span>: {
     title: <span class="hljs-string">'Basic chips'</span>,
-    component: ChipsOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ChipsOverviewExample
   },
   <span class="hljs-string">'chips-stacked'</span>: {
     title: <span class="hljs-string">'Stacked chips'</span>,
-    component: ChipsStackedExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ChipsStackedExample
   },
   <span class="hljs-string">'datepicker-api'</span>: {
-    title: <span class="hljs-string">'Datepicker open method '</span>,
-    component: DatepickerApiExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Datepicker open method'</span>,
+    component: DatepickerApiExample
   },
   <span class="hljs-string">'datepicker-disabled'</span>: {
-    title: <span class="hljs-string">'Disabled datepicker '</span>,
-    component: DatepickerDisabledExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Disabled datepicker'</span>,
+    component: DatepickerDisabledExample
   },
   <span class="hljs-string">'datepicker-events'</span>: {
-    title: <span class="hljs-string">'Datepicker input and change events '</span>,
-    component: DatepickerEventsExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Datepicker input and change events'</span>,
+    component: DatepickerEventsExample
   },
   <span class="hljs-string">'datepicker-filter'</span>: {
-    title: <span class="hljs-string">'Datepicker with filter validation '</span>,
-    component: DatepickerFilterExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Datepicker with filter validation'</span>,
+    component: DatepickerFilterExample
   },
   <span class="hljs-string">'datepicker-formats'</span>: {
-    title: <span class="hljs-string">'Datepicker with custom formats '</span>,
-    component: DatepickerFormatsExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Datepicker with custom formats'</span>,
+    component: DatepickerFormatsExample
   },
   <span class="hljs-string">'datepicker-locale'</span>: {
-    title: <span class="hljs-string">'Datepicker with different locale '</span>,
-    component: DatepickerLocaleExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Datepicker with different locale'</span>,
+    component: DatepickerLocaleExample
   },
   <span class="hljs-string">'datepicker-min-max'</span>: {
-    title: <span class="hljs-string">'Datepicker with min &amp; max validation '</span>,
-    component: DatepickerMinMaxExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Datepicker with min &amp; max validation'</span>,
+    component: DatepickerMinMaxExample
   },
   <span class="hljs-string">'datepicker-moment'</span>: {
-    title: <span class="hljs-string">'Datepicker that uses Moment.js dates '</span>,
-    component: DatepickerMomentExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Datepicker that uses Moment.js dates'</span>,
+    component: DatepickerMomentExample
   },
   <span class="hljs-string">'datepicker-overview'</span>: {
-    title: <span class="hljs-string">'Basic datepicker '</span>,
-    component: DatepickerOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Basic datepicker'</span>,
+    component: DatepickerOverviewExample
   },
   <span class="hljs-string">'datepicker-start-view'</span>: {
-    title: <span class="hljs-string">'Datepicker start date '</span>,
-    component: DatepickerStartViewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Datepicker start date'</span>,
+    component: DatepickerStartViewExample
   },
   <span class="hljs-string">'datepicker-touch'</span>: {
-    title: <span class="hljs-string">'Datepicker touch UI '</span>,
-    component: DatepickerTouchExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Datepicker touch UI'</span>,
+    component: DatepickerTouchExample
   },
   <span class="hljs-string">'datepicker-value'</span>: {
-    title: <span class="hljs-string">'Datepicker selected value '</span>,
-    component: DatepickerValueExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Datepicker selected value'</span>,
+    component: DatepickerValueExample
   },
   <span class="hljs-string">'dialog-content'</span>: {
     title: <span class="hljs-string">'Dialog with header, scrollable content and actions'</span>,
@@ -324,399 +267,269 @@
   },
   <span class="hljs-string">'divider-overview'</span>: {
     title: <span class="hljs-string">'Basic divider'</span>,
-    component: DividerOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: DividerOverviewExample
   },
   <span class="hljs-string">'elevation-overview'</span>: {
     title: <span class="hljs-string">'Elevation CSS classes'</span>,
-    component: ElevationOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ElevationOverviewExample
   },
   <span class="hljs-string">'expansion-overview'</span>: {
     title: <span class="hljs-string">'Basic expansion panel'</span>,
-    component: ExpansionOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ExpansionOverviewExample
   },
   <span class="hljs-string">'expansion-steps'</span>: {
     title: <span class="hljs-string">'Expansion panel as accordion'</span>,
-    component: ExpansionStepsExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ExpansionStepsExample
   },
   <span class="hljs-string">'form-field-custom-control'</span>: {
-    title: <span class="hljs-string">'Form field with custom telephone number input control. '</span>,
+    title: <span class="hljs-string">'Form field with custom telephone number input control.'</span>,
     component: FormFieldCustomControlExample,
     additionalFiles: [<span class="hljs-string">"form-field-custom-control-example.html"</span>],
     selectorName: <span class="hljs-string">'FormFieldCustomControlExample, MyTelInput'</span>
   },
   <span class="hljs-string">'form-field-error'</span>: {
-    title: <span class="hljs-string">'Form field with error messages '</span>,
-    component: FormFieldErrorExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Form field with error messages'</span>,
+    component: FormFieldErrorExample
   },
   <span class="hljs-string">'form-field-hint'</span>: {
-    title: <span class="hljs-string">'Form field with hints '</span>,
-    component: FormFieldHintExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Form field with hints'</span>,
+    component: FormFieldHintExample
   },
   <span class="hljs-string">'form-field-label'</span>: {
-    title: <span class="hljs-string">'Form field with label '</span>,
-    component: FormFieldLabelExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Form field with label'</span>,
+    component: FormFieldLabelExample
   },
   <span class="hljs-string">'form-field-overview'</span>: {
-    title: <span class="hljs-string">'Simple form field '</span>,
-    component: FormFieldOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Simple form field'</span>,
+    component: FormFieldOverviewExample
   },
   <span class="hljs-string">'form-field-prefix-suffix'</span>: {
-    title: <span class="hljs-string">'Form field with prefix &amp; suffix '</span>,
-    component: FormFieldPrefixSuffixExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Form field with prefix &amp; suffix'</span>,
+    component: FormFieldPrefixSuffixExample
   },
   <span class="hljs-string">'form-field-theming'</span>: {
-    title: <span class="hljs-string">'Form field theming '</span>,
-    component: FormFieldThemingExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Form field theming'</span>,
+    component: FormFieldThemingExample
   },
   <span class="hljs-string">'grid-list-dynamic'</span>: {
     title: <span class="hljs-string">'Dynamic grid-list'</span>,
-    component: GridListDynamicExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: GridListDynamicExample
   },
   <span class="hljs-string">'grid-list-overview'</span>: {
     title: <span class="hljs-string">'Basic grid-list'</span>,
-    component: GridListOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: GridListOverviewExample
   },
   <span class="hljs-string">'icon-overview'</span>: {
     title: <span class="hljs-string">'Basic icons'</span>,
-    component: IconOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: IconOverviewExample
   },
   <span class="hljs-string">'icon-svg'</span>: {
     title: <span class="hljs-string">'SVG icons'</span>,
-    component: IconSvgExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: IconSvgExample
   },
   <span class="hljs-string">'input-autosize-textarea'</span>: {
-    title: <span class="hljs-string">'Auto-resizing textarea '</span>,
-    component: InputAutosizeTextareaExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Auto-resizing textarea'</span>,
+    component: InputAutosizeTextareaExample
   },
   <span class="hljs-string">'input-clearable'</span>: {
     title: <span class="hljs-string">'Input with a clear button'</span>,
-    component: InputClearableExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: InputClearableExample
   },
   <span class="hljs-string">'input-error-state-matcher'</span>: {
-    title: <span class="hljs-string">'Input with a custom ErrorStateMatcher '</span>,
-    component: InputErrorStateMatcherExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Input with a custom ErrorStateMatcher'</span>,
+    component: InputErrorStateMatcherExample
   },
   <span class="hljs-string">'input-errors'</span>: {
     title: <span class="hljs-string">'Input with error messages'</span>,
-    component: InputErrorsExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: InputErrorsExample
   },
   <span class="hljs-string">'input-form'</span>: {
     title: <span class="hljs-string">'Inputs in a form'</span>,
-    component: InputFormExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: InputFormExample
   },
   <span class="hljs-string">'input-hint'</span>: {
     title: <span class="hljs-string">'Input with hints'</span>,
-    component: InputHintExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: InputHintExample
   },
   <span class="hljs-string">'input-overview'</span>: {
     title: <span class="hljs-string">'Basic Inputs'</span>,
-    component: InputOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: InputOverviewExample
   },
   <span class="hljs-string">'input-prefix-suffix'</span>: {
     title: <span class="hljs-string">'Inputs with prefixes and suffixes'</span>,
-    component: InputPrefixSuffixExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: InputPrefixSuffixExample
   },
   <span class="hljs-string">'list-overview'</span>: {
     title: <span class="hljs-string">'Basic list'</span>,
-    component: ListOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ListOverviewExample
   },
   <span class="hljs-string">'list-sections'</span>: {
     title: <span class="hljs-string">'List with sections'</span>,
-    component: ListSectionsExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ListSectionsExample
   },
   <span class="hljs-string">'list-selection'</span>: {
     title: <span class="hljs-string">'List with selection'</span>,
-    component: ListSelectionExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ListSelectionExample
   },
   <span class="hljs-string">'menu-icons'</span>: {
     title: <span class="hljs-string">'Menu with icons'</span>,
-    component: MenuIconsExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: MenuIconsExample
   },
   <span class="hljs-string">'menu-overview'</span>: {
     title: <span class="hljs-string">'Basic menu'</span>,
-    component: MenuOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: MenuOverviewExample
   },
   <span class="hljs-string">'nested-menu'</span>: {
     title: <span class="hljs-string">'Nested menu'</span>,
-    component: NestedMenuExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: NestedMenuExample
   },
   <span class="hljs-string">'paginator-configurable'</span>: {
     title: <span class="hljs-string">'Configurable paginator'</span>,
-    component: PaginatorConfigurableExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: PaginatorConfigurableExample
   },
   <span class="hljs-string">'paginator-overview'</span>: {
     title: <span class="hljs-string">'Paginator'</span>,
-    component: PaginatorOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: PaginatorOverviewExample
   },
   <span class="hljs-string">'progress-bar-buffer'</span>: {
     title: <span class="hljs-string">'Buffer progress-bar'</span>,
-    component: ProgressBarBufferExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ProgressBarBufferExample
   },
   <span class="hljs-string">'progress-bar-configurable'</span>: {
     title: <span class="hljs-string">'Configurable progress-bar'</span>,
-    component: ProgressBarConfigurableExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ProgressBarConfigurableExample
   },
   <span class="hljs-string">'progress-bar-determinate'</span>: {
     title: <span class="hljs-string">'Determinate progress-bar'</span>,
-    component: ProgressBarDeterminateExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ProgressBarDeterminateExample
   },
   <span class="hljs-string">'progress-bar-indeterminate'</span>: {
     title: <span class="hljs-string">'Indeterminate progress-bar'</span>,
-    component: ProgressBarIndeterminateExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ProgressBarIndeterminateExample
   },
   <span class="hljs-string">'progress-bar-query'</span>: {
     title: <span class="hljs-string">'Query progress-bar'</span>,
-    component: ProgressBarQueryExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ProgressBarQueryExample
   },
   <span class="hljs-string">'progress-spinner-configurable'</span>: {
     title: <span class="hljs-string">'Configurable progress spinner'</span>,
-    component: ProgressSpinnerConfigurableExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ProgressSpinnerConfigurableExample
   },
   <span class="hljs-string">'progress-spinner-overview'</span>: {
     title: <span class="hljs-string">'Basic progress-spinner'</span>,
-    component: ProgressSpinnerOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ProgressSpinnerOverviewExample
   },
   <span class="hljs-string">'radio-ng-model'</span>: {
     title: <span class="hljs-string">'Radios with ngModel'</span>,
-    component: RadioNgModelExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: RadioNgModelExample
   },
   <span class="hljs-string">'radio-overview'</span>: {
     title: <span class="hljs-string">'Basic radios'</span>,
-    component: RadioOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: RadioOverviewExample
   },
   <span class="hljs-string">'select-custom-trigger'</span>: {
-    title: <span class="hljs-string">'Select with custom trigger text '</span>,
-    component: SelectCustomTriggerExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Select with custom trigger text'</span>,
+    component: SelectCustomTriggerExample
   },
   <span class="hljs-string">'select-disabled'</span>: {
-    title: <span class="hljs-string">'Disabled select '</span>,
-    component: SelectDisabledExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Disabled select'</span>,
+    component: SelectDisabledExample
   },
   <span class="hljs-string">'select-error-state-matcher'</span>: {
-    title: <span class="hljs-string">'Select with a custom ErrorStateMatcher '</span>,
-    component: SelectErrorStateMatcherExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Select with a custom ErrorStateMatcher'</span>,
+    component: SelectErrorStateMatcherExample
   },
   <span class="hljs-string">'select-form'</span>: {
     title: <span class="hljs-string">'Select in a form'</span>,
-    component: SelectFormExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SelectFormExample
   },
   <span class="hljs-string">'select-hint-error'</span>: {
-    title: <span class="hljs-string">'Select with form field features '</span>,
-    component: SelectHintErrorExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Select with form field features'</span>,
+    component: SelectHintErrorExample
   },
   <span class="hljs-string">'select-multiple'</span>: {
-    title: <span class="hljs-string">'Select with multiple selection '</span>,
-    component: SelectMultipleExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Select with multiple selection'</span>,
+    component: SelectMultipleExample
   },
   <span class="hljs-string">'select-no-ripple'</span>: {
-    title: <span class="hljs-string">'Select with no option ripple '</span>,
-    component: SelectNoRippleExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Select with no option ripple'</span>,
+    component: SelectNoRippleExample
   },
   <span class="hljs-string">'select-optgroup'</span>: {
-    title: <span class="hljs-string">'Select with option groups '</span>,
-    component: SelectOptgroupExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Select with option groups'</span>,
+    component: SelectOptgroupExample
   },
   <span class="hljs-string">'select-overview'</span>: {
     title: <span class="hljs-string">'Basic select'</span>,
-    component: SelectOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SelectOverviewExample
   },
   <span class="hljs-string">'select-panel-class'</span>: {
     title: <span class="hljs-string">'Select with custom panel styling'</span>,
-    component: SelectPanelClassExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SelectPanelClassExample
   },
   <span class="hljs-string">'select-reset'</span>: {
-    title: <span class="hljs-string">'Select with reset option '</span>,
-    component: SelectResetExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Select with reset option'</span>,
+    component: SelectResetExample
   },
   <span class="hljs-string">'select-value-binding'</span>: {
-    title: <span class="hljs-string">'Select with 2-way value binding '</span>,
-    component: SelectValueBindingExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Select with 2-way value binding'</span>,
+    component: SelectValueBindingExample
   },
   <span class="hljs-string">'sidenav-autosize'</span>: {
     title: <span class="hljs-string">'Autosize sidenav'</span>,
-    component: SidenavAutosizeExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SidenavAutosizeExample
   },
   <span class="hljs-string">'sidenav-disable-close'</span>: {
-    title: <span class="hljs-string">'Sidenav with custom escape and backdrop click behavior '</span>,
-    component: SidenavDisableCloseExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Sidenav with custom escape and backdrop click behavior'</span>,
+    component: SidenavDisableCloseExample
   },
   <span class="hljs-string">'sidenav-drawer-overview'</span>: {
-    title: <span class="hljs-string">'Basic drawer '</span>,
-    component: SidenavDrawerOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Basic drawer'</span>,
+    component: SidenavDrawerOverviewExample
   },
   <span class="hljs-string">'sidenav-fixed'</span>: {
-    title: <span class="hljs-string">'Fixed sidenav '</span>,
-    component: SidenavFixedExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Fixed sidenav'</span>,
+    component: SidenavFixedExample
   },
   <span class="hljs-string">'sidenav-mode'</span>: {
-    title: <span class="hljs-string">'Sidenav with configurable mode '</span>,
-    component: SidenavModeExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Sidenav with configurable mode'</span>,
+    component: SidenavModeExample
   },
   <span class="hljs-string">'sidenav-open-close'</span>: {
-    title: <span class="hljs-string">'Sidenav open &amp; close behavior '</span>,
-    component: SidenavOpenCloseExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Sidenav open &amp; close behavior'</span>,
+    component: SidenavOpenCloseExample
   },
   <span class="hljs-string">'sidenav-overview'</span>: {
-    title: <span class="hljs-string">'Basic sidenav '</span>,
-    component: SidenavOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Basic sidenav'</span>,
+    component: SidenavOverviewExample
   },
   <span class="hljs-string">'sidenav-position'</span>: {
-    title: <span class="hljs-string">'Implicit main content with two sidenavs '</span>,
-    component: SidenavPositionExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Implicit main content with two sidenavs'</span>,
+    component: SidenavPositionExample
   },
   <span class="hljs-string">'sidenav-responsive'</span>: {
-    title: <span class="hljs-string">'Responsive sidenav '</span>,
-    component: SidenavResponsiveExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    title: <span class="hljs-string">'Responsive sidenav'</span>,
+    component: SidenavResponsiveExample
   },
   <span class="hljs-string">'slide-toggle-configurable'</span>: {
     title: <span class="hljs-string">'Configurable slide-toggle'</span>,
-    component: SlideToggleConfigurableExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SlideToggleConfigurableExample
   },
   <span class="hljs-string">'slide-toggle-forms'</span>: {
     title: <span class="hljs-string">'Slide-toggle with forms'</span>,
-    component: SlideToggleFormsExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SlideToggleFormsExample
   },
   <span class="hljs-string">'slide-toggle-overview'</span>: {
     title: <span class="hljs-string">'Basic slide-toggles'</span>,
-    component: SlideToggleOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SlideToggleOverviewExample
   },
   <span class="hljs-string">'slider-configurable'</span>: {
     title: <span class="hljs-string">'Configurable slider'</span>,
-    component: SliderConfigurableExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SliderConfigurableExample
   },
   <span class="hljs-string">'slider-overview'</span>: {
     title: <span class="hljs-string">'Basic slider'</span>,
-    component: SliderOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SliderOverviewExample
   },
   <span class="hljs-string">'snack-bar-component'</span>: {
     title: <span class="hljs-string">'Snack-bar with a custom component'</span>,
@@ -726,99 +539,67 @@
   },
   <span class="hljs-string">'snack-bar-overview'</span>: {
     title: <span class="hljs-string">'Basic snack-bar'</span>,
-    component: SnackBarOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SnackBarOverviewExample
   },
   <span class="hljs-string">'sort-overview'</span>: {
     title: <span class="hljs-string">'Sorting overview'</span>,
-    component: SortOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: SortOverviewExample
   },
   <span class="hljs-string">'stepper-overview'</span>: {
     title: <span class="hljs-string">'Stepper overview'</span>,
-    component: StepperOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: StepperOverviewExample
   },
   <span class="hljs-string">'table-basic'</span>: {
     title: <span class="hljs-string">'Basic table'</span>,
-    component: TableBasicExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TableBasicExample
   },
   <span class="hljs-string">'table-filtering'</span>: {
     title: <span class="hljs-string">'Table with filtering'</span>,
-    component: TableFilteringExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TableFilteringExample
   },
   <span class="hljs-string">'table-http'</span>: {
     title: <span class="hljs-string">'Table retrieving data through HTTP'</span>,
-    component: TableHttpExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TableHttpExample
   },
   <span class="hljs-string">'table-overview'</span>: {
     title: <span class="hljs-string">'Data table with sorting, pagination, and filtering.'</span>,
-    component: TableOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TableOverviewExample
   },
   <span class="hljs-string">'table-pagination'</span>: {
     title: <span class="hljs-string">'Table with pagination'</span>,
-    component: TablePaginationExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TablePaginationExample
   },
   <span class="hljs-string">'table-selection'</span>: {
     title: <span class="hljs-string">'Table with selection'</span>,
-    component: TableSelectionExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TableSelectionExample
   },
   <span class="hljs-string">'table-sorting'</span>: {
     title: <span class="hljs-string">'Table with sorting'</span>,
-    component: TableSortingExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TableSortingExample
   },
   <span class="hljs-string">'tabs-overview'</span>: {
     title: <span class="hljs-string">'Basic tabs'</span>,
-    component: TabsOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TabsOverviewExample
   },
   <span class="hljs-string">'tabs-template-label'</span>: {
     title: <span class="hljs-string">'Complex Example'</span>,
-    component: TabsTemplateLabelExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TabsTemplateLabelExample
   },
   <span class="hljs-string">'toolbar-multirow'</span>: {
     title: <span class="hljs-string">'Multi-row toolbar'</span>,
-    component: ToolbarMultirowExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ToolbarMultirowExample
   },
   <span class="hljs-string">'toolbar-overview'</span>: {
     title: <span class="hljs-string">'Basic toolbar'</span>,
-    component: ToolbarOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: ToolbarOverviewExample
   },
   <span class="hljs-string">'tooltip-overview'</span>: {
     title: <span class="hljs-string">'Basic tooltip'</span>,
-    component: TooltipOverviewExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TooltipOverviewExample
   },
   <span class="hljs-string">'tooltip-position'</span>: {
     title: <span class="hljs-string">'Tooltip with custom position'</span>,
-    component: TooltipPositionExample,
-    additionalFiles: <span class="hljs-literal">null</span>,
-    selectorName: <span class="hljs-literal">null</span>
+    component: TooltipPositionExample
   },
 };
 
