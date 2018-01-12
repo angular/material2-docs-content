@@ -24,8 +24,8 @@
   "homepage": "https://github.com/angular/material2#readme",
   "peerDependencies": {
     "@angular/cdk": "5.0.4",
-    "@angular/core": "~5.1.1",
-    "@angular/common": "~5.1.1",
+    "@angular/core": "^5.0.0",
+    "@angular/common": "^5.0.0",
     "@angular/material": "5.0.4",
     "@angular/material-moment-adapter": "5.0.4"
   },
