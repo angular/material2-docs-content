@@ -1,6 +1,6 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"isLinear = true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"toggle-linear"</span>&gt;</span>Enable linear mode<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> [<span class="hljs-attr">linear</span>]=<span class="hljs-string">"isLinear"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> [<span class="hljs-attr">linear</span>]=<span class="hljs-string">"isLinear"</span> #<span class="hljs-attr">stepper</span>=<span class="hljs-string">"matHorizontalStepper"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"firstFormGroup"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"firstFormGroup"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matStepLabel</span>&gt;</span>Fill out your name<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
@@ -29,6 +29,7 @@
     You are now done.
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperPrevious</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"stepper.reset()"</span>&gt;</span>Reset<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span>
