@@ -6,16 +6,27 @@
  *   with information about Component name, selector, files used in example, and path to examples
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleData {
-  <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> figure out how do we get these variables.</span>
-  description = <span class="hljs-string">'Some description for material'</span>;
-  <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> use real example and delete the example/ folder.</span>
-  examplePath = <span class="hljs-string">'/assets/example/'</span>;
-  exampleFiles = [<span class="hljs-string">'button-demo.html'</span>, <span class="hljs-string">'button-demo.scss'</span>, <span class="hljs-string">'button-demo.ts'</span>];
 
-  <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> extract these variables from example code.</span>
-  selectorName = <span class="hljs-string">'button-demo'</span>;
-  indexFilename = <span class="hljs-string">'button-demo'</span>;
-  componentName = <span class="hljs-string">'ButtonDemo'</span>;
+  <span class="hljs-comment">/** Description of the example. */</span>
+  description: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-comment">/** Path to the example. This is based on the structure of the material.angular.io repo. */</span>
+  examplePath: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-comment">/** List of files that are part of this example. */</span>
+  exampleFiles: <span class="hljs-built_in">string</span>[];
+
+  <span class="hljs-comment">/** Selector name of the example component. */</span>
+  selectorName: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-comment">/** Name of the file that contains the example component. */</span>
+  indexFilename: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-comment">/**
+   * Name of the example component. For examples with multiple components, this property will
+   * include multiple components that are comma separated (e.g. dialog-overview)
+   */</span>
+  componentName: <span class="hljs-built_in">string</span>;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">example: <span class="hljs-built_in">string</span></span>) {
     <span class="hljs-keyword">if</span> (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
@@ -23,20 +34,14 @@
     }
 
     <span class="hljs-keyword">const</span> exampleConfig = EXAMPLE_COMPONENTS[example];
-    <span class="hljs-keyword">const</span> exampleFilesSet = <span class="hljs-keyword">new</span> Set([<span class="hljs-string">'html'</span>, <span class="hljs-string">'ts'</span>, <span class="hljs-string">'css'</span>].map(<span class="hljs-function"><span class="hljs-params">extension</span> =&gt;</span> {
-      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example.<span class="hljs-subst">${extension}</span>`</span>;
-    }));
 
     <span class="hljs-comment">// TODO(tinayuangao): Do not hard-code extensions</span>
     <span class="hljs-keyword">this</span>.exampleFiles = [<span class="hljs-string">'html'</span>, <span class="hljs-string">'ts'</span>, <span class="hljs-string">'css'</span>].map(<span class="hljs-function"><span class="hljs-params">extension</span> =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example.<span class="hljs-subst">${extension}</span>`</span>);
     <span class="hljs-keyword">this</span>.examplePath = <span class="hljs-string">`/assets/stackblitz/examples/<span class="hljs-subst">${example}</span>/`</span>;
-    <span class="hljs-keyword">this</span>.exampleFiles = <span class="hljs-built_in">Array</span>.from(exampleFilesSet.values());
     <span class="hljs-keyword">this</span>.selectorName = <span class="hljs-keyword">this</span>.indexFilename = <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example`</span>;
 
     <span class="hljs-keyword">if</span> (exampleConfig.additionalFiles) {
-      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> file of exampleConfig.additionalFiles) {
-        exampleFilesSet.add(file);
-      }
+      <span class="hljs-keyword">this</span>.exampleFiles.push(...exampleConfig.additionalFiles);
     }
 
     <span class="hljs-keyword">const</span> exampleName = example.replace(<span class="hljs-regexp">/(?:^\w|\b\w)/g</span>, <span class="hljs-function"><span class="hljs-params">letter</span> =&gt;</span> letter.toUpperCase());
