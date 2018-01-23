@@ -4791,22 +4791,37 @@ var ExampleModule = /** @class */ (function () {
  */
 var ExampleData = /** @class */ (function () {
     function ExampleData(example) {
+        // TODO: figure out how do we get these variables.
+        this.description = 'Some description for material';
+        // TODO: use real example and delete the example/ folder.
+        this.examplePath = '/assets/example/';
+        this.exampleFiles = ['button-demo.html', 'button-demo.scss', 'button-demo.ts'];
+        // TODO: extract these variables from example code.
+        this.selectorName = 'button-demo';
+        this.indexFilename = 'button-demo';
+        this.componentName = 'ButtonDemo';
         if (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
             return;
         }
         var /** @type {?} */ exampleConfig = EXAMPLE_COMPONENTS[example];
+        var /** @type {?} */ exampleFilesSet = new Set(['html', 'ts', 'css'].map(function (extension) {
+            return example + "-example." + extension;
+        }));
         // TODO(tinayuangao): Do not hard-code extensions
         this.exampleFiles = ['html', 'ts', 'css'].map(function (extension) { return example + "-example." + extension; });
         this.examplePath = "/assets/stackblitz/examples/" + example + "/";
+        this.exampleFiles = Array.from(exampleFilesSet.values());
         this.selectorName = this.indexFilename = example + "-example";
         if (exampleConfig.additionalFiles) {
-            (_a = this.exampleFiles).push.apply(_a, exampleConfig.additionalFiles);
+            for (var _i = 0, _a = exampleConfig.additionalFiles; _i < _a.length; _i++) {
+                var file = _a[_i];
+                exampleFilesSet.add(file);
+            }
         }
         var /** @type {?} */ exampleName = example.replace(/(?:^\w|\b\w)/g, function (letter) { return letter.toUpperCase(); });
         this.description = exampleConfig.title || exampleName.replace(/[\-]+/g, ' ') + ' Example';
         this.componentName = exampleConfig.selectorName ||
             exampleName.replace(/[\-]+/g, '') + 'Example';
-        var _a;
     }
     return ExampleData;
 }());
