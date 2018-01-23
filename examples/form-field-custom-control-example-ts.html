@@ -44,18 +44,14 @@
     <span class="hljs-keyword">return</span> !n.area &amp;&amp; !n.exchange &amp;&amp; !n.subscriber;
   }
 
-  <span class="hljs-keyword">get</span> shouldLabelFloat() {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.focused || !<span class="hljs-keyword">this</span>.empty;
-  }
+  <span class="hljs-keyword">get</span> shouldLabelFloat() { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.focused || !<span class="hljs-keyword">this</span>.empty; }
 
   id = <span class="hljs-string">`my-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;
 
   describedBy = <span class="hljs-string">''</span>;
 
   <span class="hljs-meta">@Input</span>()
-  <span class="hljs-keyword">get</span> placeholder() {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._placeholder;
-  }
+  <span class="hljs-keyword">get</span> placeholder() { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._placeholder; }
   <span class="hljs-keyword">set</span> placeholder(plh) {
     <span class="hljs-keyword">this</span>._placeholder = plh;
     <span class="hljs-keyword">this</span>.stateChanges.next();
@@ -63,9 +59,7 @@
   <span class="hljs-keyword">private</span> _placeholder: <span class="hljs-built_in">string</span>;
 
   <span class="hljs-meta">@Input</span>()
-  <span class="hljs-keyword">get</span> required() {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._required;
-  }
+  <span class="hljs-keyword">get</span> required() { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._required; }
   <span class="hljs-keyword">set</span> required(req) {
     <span class="hljs-keyword">this</span>._required = coerceBooleanProperty(req);
     <span class="hljs-keyword">this</span>.stateChanges.next();
@@ -73,9 +67,7 @@
   <span class="hljs-keyword">private</span> _required = <span class="hljs-literal">false</span>;
 
   <span class="hljs-meta">@Input</span>()
-  <span class="hljs-keyword">get</span> disabled() {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._disabled;
-  }
+  <span class="hljs-keyword">get</span> disabled() { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._disabled; }
   <span class="hljs-keyword">set</span> disabled(dis) {
     <span class="hljs-keyword">this</span>._disabled = coerceBooleanProperty(dis);
     <span class="hljs-keyword">this</span>.stateChanges.next();
@@ -97,7 +89,7 @@
   }
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder, <span class="hljs-keyword">private</span> fm: FocusMonitor, <span class="hljs-keyword">private</span> elRef: ElementRef</span>) {
-    <span class="hljs-keyword">this</span>.parts =  fb.group({
+    <span class="hljs-keyword">this</span>.parts = fb.group({
       <span class="hljs-string">'area'</span>: <span class="hljs-string">''</span>,
       <span class="hljs-string">'exchange'</span>: <span class="hljs-string">''</span>,
       <span class="hljs-string">'subscriber'</span>: <span class="hljs-string">''</span>,

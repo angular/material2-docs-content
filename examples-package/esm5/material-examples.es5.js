@@ -1481,9 +1481,7 @@ var MyTelInput = /** @class */ (function () {
         get: /**
          * @return {?}
          */
-        function () {
-            return this.focused || !this.empty;
-        },
+        function () { return this.focused || !this.empty; },
         enumerable: true,
         configurable: true
     });
@@ -1491,9 +1489,7 @@ var MyTelInput = /** @class */ (function () {
         get: /**
          * @return {?}
          */
-        function () {
-            return this._placeholder;
-        },
+        function () { return this._placeholder; },
         set: /**
          * @param {?} plh
          * @return {?}
@@ -1509,9 +1505,7 @@ var MyTelInput = /** @class */ (function () {
         get: /**
          * @return {?}
          */
-        function () {
-            return this._required;
-        },
+        function () { return this._required; },
         set: /**
          * @param {?} req
          * @return {?}
@@ -1527,9 +1521,7 @@ var MyTelInput = /** @class */ (function () {
         get: /**
          * @return {?}
          */
-        function () {
-            return this._disabled;
-        },
+        function () { return this._disabled; },
         set: /**
          * @param {?} dis
          * @return {?}

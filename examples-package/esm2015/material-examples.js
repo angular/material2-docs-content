@@ -1336,15 +1336,11 @@ class MyTelInput {
     /**
      * @return {?}
      */
-    get shouldLabelFloat() {
-        return this.focused || !this.empty;
-    }
+    get shouldLabelFloat() { return this.focused || !this.empty; }
     /**
      * @return {?}
      */
-    get placeholder() {
-        return this._placeholder;
-    }
+    get placeholder() { return this._placeholder; }
     /**
      * @param {?} plh
      * @return {?}
@@ -1356,9 +1352,7 @@ class MyTelInput {
     /**
      * @return {?}
      */
-    get required() {
-        return this._required;
-    }
+    get required() { return this._required; }
     /**
      * @param {?} req
      * @return {?}
@@ -1370,9 +1364,7 @@ class MyTelInput {
     /**
      * @return {?}
      */
-    get disabled() {
-        return this._disabled;
-    }
+    get disabled() { return this._disabled; }
     /**
      * @param {?} dis
      * @return {?}
