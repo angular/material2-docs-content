@@ -3647,13 +3647,13 @@ var TableHttpExample = /** @class */ (function () {
         this.displayedColumns = ['created', 'state', 'number', 'title'];
         this.dataSource = new MatTableDataSource();
         this.resultsLength = 0;
-        this.isLoadingResults = false;
+        this.isLoadingResults = true;
         this.isRateLimitReached = false;
     }
     /**
      * @return {?}
      */
-    TableHttpExample.prototype.ngAfterViewInit = /**
+    TableHttpExample.prototype.ngOnInit = /**
      * @return {?}
      */
     function () {

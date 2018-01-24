@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component, AfterViewInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {HttpClient} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common/http'</span>;
 <span class="hljs-keyword">import</span> {MatPaginator, MatSort, MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
@@ -17,13 +17,13 @@
   styleUrls: [<span class="hljs-string">'table-http-example.css'</span>],
   templateUrl: <span class="hljs-string">'table-http-example.html'</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableHttpExample <span class="hljs-keyword">implements</span> AfterViewInit {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableHttpExample <span class="hljs-keyword">implements</span> OnInit {
   displayedColumns = [<span class="hljs-string">'created'</span>, <span class="hljs-string">'state'</span>, <span class="hljs-string">'number'</span>, <span class="hljs-string">'title'</span>];
   exampleDatabase: ExampleHttpDao | <span class="hljs-literal">null</span>;
   dataSource = <span class="hljs-keyword">new</span> MatTableDataSource();
 
   resultsLength = <span class="hljs-number">0</span>;
-  isLoadingResults = <span class="hljs-literal">false</span>;
+  isLoadingResults = <span class="hljs-literal">true</span>;
   isRateLimitReached = <span class="hljs-literal">false</span>;
 
   <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
@@ -31,7 +31,7 @@
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> http: HttpClient</span>) {}
 
-  ngAfterViewInit() {
+  ngOnInit() {
     <span class="hljs-keyword">this</span>.exampleDatabase = <span class="hljs-keyword">new</span> ExampleHttpDao(<span class="hljs-keyword">this</span>.http);
 
     <span class="hljs-comment">// If the user changes the sort order, reset back to the first page.</span>

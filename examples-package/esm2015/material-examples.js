@@ -3327,13 +3327,13 @@ class TableHttpExample {
         this.displayedColumns = ['created', 'state', 'number', 'title'];
         this.dataSource = new MatTableDataSource();
         this.resultsLength = 0;
-        this.isLoadingResults = false;
+        this.isLoadingResults = true;
         this.isRateLimitReached = false;
     }
     /**
      * @return {?}
      */
-    ngAfterViewInit() {
+    ngOnInit() {
         this.exampleDatabase = new ExampleHttpDao(this.http);
         // If the user changes the sort order, reset back to the first page.
         this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
