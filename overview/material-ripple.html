@@ -26,12 +26,22 @@
 }
 </code></pre><p class="docs-markdown-p">In the example above, the <code class="docs-markdown-code">x</code> and <code class="docs-markdown-code">y</code> parameters will be ignored, because the <code class="docs-markdown-code">centered</code> ripple option has been set to <code class="docs-markdown-code">true</code>.</p><p class="docs-markdown-p">Ripples that are being dispatched programmatically can be launched with the <code class="docs-markdown-code">persistent</code> option. This means that the ripples will not fade out automatically, and need to be faded out using the <code class="docs-markdown-code">RippleRef</code> (<em>useful for focus indicators</em>).</p><h3 id="global-options" class="docs-header-link docs-markdown-h3"><span header-link="global-options"></span> Global options</h3><p class="docs-markdown-p">Developers are able to specify options for all ripples inside of their application.</p><p class="docs-markdown-p">The speed of the ripples can be adjusted and the ripples can be disabled globally as well.</p><p class="docs-markdown-p">Global ripple options can be specified by setting the <code class="docs-markdown-code">MAT_RIPPLE_GLOBAL_OPTIONS</code> provider.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">const</span> globalRippleConfig: RippleGlobalOptions = {
   disabled: <span class="hljs-literal">true</span>,
-  baseSpeedFactor: <span class="hljs-number">1.5</span> <span class="hljs-comment">// Ripples will animate 50% faster than before.</span>
-}
+  animation: {
+    enterDuration: <span class="hljs-number">300</span>,
+    exitDuration: <span class="hljs-number">0</span>
+  }
+};
 
 <span class="hljs-meta">@NgModule</span>({
   providers: [
     {provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig} 
   ]
 })
-</code></pre><p class="docs-markdown-p">All available global options can be seen in the <code class="docs-markdown-code">RippleGlobalOptions</code> interface.</p></div></body></html>
+</code></pre><p class="docs-markdown-p">All available global options can be seen in the <code class="docs-markdown-code">RippleGlobalOptions</code> interface.</p><h3 id="disabling-animation" class="docs-header-link docs-markdown-h3"><span header-link="disabling-animation"></span> Disabling animation</h3><p class="docs-markdown-p">The animation of ripples can be disabled by using the <code class="docs-markdown-code">animation</code> global option. If the <code class="docs-markdown-code">enterDuration</code> and <code class="docs-markdown-code">exitDuration</code> is being set to <code class="docs-markdown-code">0</code>, ripples will just appear without any animation.</p><p class="docs-markdown-p">This is specifically useful in combination with the <code class="docs-markdown-code">disabled</code> global option, because globally disabling ripples won't affect the focus indicator ripples. If someone still wants to disable those ripples for performance reasons, the duration can be set to <code class="docs-markdown-code">0</code>, to remove the ripple feel.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">const</span> globalRippleConfig: RippleGlobalOptions = {
+  disabled: <span class="hljs-literal">true</span>,
+  animation: {
+    enterDuration: <span class="hljs-number">0</span>,
+    exitDuration: <span class="hljs-number">0</span>
+  }
+};
+</code></pre></div></body></html>
