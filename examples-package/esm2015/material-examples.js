@@ -4395,31 +4395,16 @@ class ExampleData {
      * @param {?} example
      */
     constructor(example) {
-        // TODO: figure out how do we get these variables.
-        this.description = 'Some description for material';
-        // TODO: use real example and delete the example/ folder.
-        this.examplePath = '/assets/example/';
-        this.exampleFiles = ['button-demo.html', 'button-demo.scss', 'button-demo.ts'];
-        // TODO: extract these variables from example code.
-        this.selectorName = 'button-demo';
-        this.indexFilename = 'button-demo';
-        this.componentName = 'ButtonDemo';
         if (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
             return;
         }
         const /** @type {?} */ exampleConfig = EXAMPLE_COMPONENTS[example];
-        const /** @type {?} */ exampleFilesSet = new Set(['html', 'ts', 'css'].map(extension => {
-            return `${example}-example.${extension}`;
-        }));
         // TODO(tinayuangao): Do not hard-code extensions
         this.exampleFiles = ['html', 'ts', 'css'].map(extension => `${example}-example.${extension}`);
         this.examplePath = `/assets/stackblitz/examples/${example}/`;
-        this.exampleFiles = Array.from(exampleFilesSet.values());
         this.selectorName = this.indexFilename = `${example}-example`;
         if (exampleConfig.additionalFiles) {
-            for (let /** @type {?} */ file of exampleConfig.additionalFiles) {
-                exampleFilesSet.add(file);
-            }
+            this.exampleFiles.push(...exampleConfig.additionalFiles);
         }
         const /** @type {?} */ exampleName = example.replace(/(?:^\w|\b\w)/g, letter => letter.toUpperCase());
         this.description = exampleConfig.title || exampleName.replace(/[\-]+/g, ' ') + ' Example';
