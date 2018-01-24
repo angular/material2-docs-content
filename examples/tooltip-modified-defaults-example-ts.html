@@ -1,0 +1,22 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-comment">/** Custom options the configure the tooltip's default show/hide delays. */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> myCustomTooltipDefaults: MatTooltipDefaultOptions = {
+  showDelay: <span class="hljs-number">1000</span>,
+  hideDelay: <span class="hljs-number">1000</span>,
+  touchendHideDelay: <span class="hljs-number">1000</span>,
+};
+
+<span class="hljs-comment">/**
+ * @title Tooltip with a show and hide delay
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tooltip-modified-defaults-example'</span>,
+  templateUrl: <span class="hljs-string">'tooltip-modified-defaults-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'tooltip-modified-defaults-example.css'</span>],
+  providers: [
+    {provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults}
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TooltipModifiedDefaultsExample {}

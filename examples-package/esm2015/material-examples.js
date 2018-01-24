@@ -9,7 +9,7 @@ import { ChangeDetectorRef, Component, ElementRef, Inject, Input, NgModule, View
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
-import { MAT_DIALOG_DATA, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatDividerModule, MatExpansionModule, MatFormFieldControl, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
+import { MAT_DIALOG_DATA, MAT_TOOLTIP_DEFAULT_OPTIONS, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatDividerModule, MatExpansionModule, MatFormFieldControl, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
 import { startWith } from 'rxjs/operators/startWith';
 import { map } from 'rxjs/operators/map';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
@@ -3747,6 +3747,25 @@ TooltipOverviewExample.ctorParameters = () => [];
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Tooltip with a show and hide delay
+ */
+class TooltipDelayExample {
+}
+TooltipDelayExample.decorators = [
+    { type: Component, args: [{
+                selector: 'tooltip-delay-example',
+                template: "<button mat-raised-button matTooltip=\"Tooltip!\" matTooltipShowDelay=\"1000\">My tooltip waits one second to show</button> <button mat-raised-button matTooltip=\"Tooltip!\" matTooltipHideDelay=\"2000\">My tooltip waits two seconds to hide</button>",
+                styles: ["button { margin: 8px; } "],
+            },] },
+];
+/** @nocollapse */
+TooltipDelayExample.ctorParameters = () => [];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Tooltip with custom position
  */
 class TooltipPositionExample {
@@ -3763,6 +3782,55 @@ TooltipPositionExample.decorators = [
 ];
 /** @nocollapse */
 TooltipPositionExample.ctorParameters = () => [];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tooltip that can be manually shown/hidden.
+ */
+class TooltipManualExample {
+}
+TooltipManualExample.decorators = [
+    { type: Component, args: [{
+                selector: 'tooltip-manual-example',
+                template: "<button mat-raised-button (click)=\"tooltip.show()\">Show tooltip</button> <span matTooltip=\"This is the tooltip message\" #tooltip=\"matTooltip\">I have a tooltip</span>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/** @nocollapse */
+TooltipManualExample.ctorParameters = () => [];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Custom options the configure the tooltip's default show/hide delays.
+ */
+const myCustomTooltipDefaults = {
+    showDelay: 1000,
+    hideDelay: 1000,
+    touchendHideDelay: 1000,
+};
+/**
+ * \@title Tooltip with a show and hide delay
+ */
+class TooltipModifiedDefaultsExample {
+}
+TooltipModifiedDefaultsExample.decorators = [
+    { type: Component, args: [{
+                selector: 'tooltip-modified-defaults-example',
+                template: "<button mat-raised-button matTooltip=\"By default, I delay\">Button with delay-default tooltip</button>",
+                styles: ["/** No CSS for this example */ "],
+                providers: [
+                    { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
+                ],
+            },] },
+];
+/** @nocollapse */
+TooltipModifiedDefaultsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4243,6 +4311,18 @@ const EXAMPLE_COMPONENTS = {
         title: 'Basic tooltip',
         component: TooltipOverviewExample
     },
+    'tooltip-delay': {
+        title: 'Tooltips with delay',
+        component: TooltipDelayExample
+    },
+    'tooltip-manual': {
+        title: 'Tooltips with manual show button',
+        component: TooltipManualExample
+    },
+    'tooltip-modified-defaults': {
+        title: 'Tooltips with modified default values',
+        component: TooltipModifiedDefaultsExample
+    },
     'tooltip-position': {
         title: 'Tooltip with custom position',
         component: TooltipPositionExample
@@ -4363,6 +4443,9 @@ const EXAMPLE_LIST = [
     ToolbarMultirowExample,
     ToolbarOverviewExample,
     TooltipOverviewExample,
+    TooltipDelayExample,
+    TooltipManualExample,
+    TooltipModifiedDefaultsExample,
     TooltipPositionExample,
 ];
 class ExampleModule {
@@ -4426,5 +4509,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerDisabledExample as ɵp, DatepickerEventsExample as ɵq, DatepickerFilterExample as ɵr, DatepickerFormatsExample as ɵt, MY_FORMATS as ɵs, DatepickerLocaleExample as ɵu, DatepickerMinMaxExample as ɵv, DatepickerMomentExample as ɵw, DatepickerStartViewExample as ɵx, DatepickerTouchExample as ɵy, DatepickerValueExample as ɵz, DialogContentExample as ɵba, DialogContentExampleDialog as ɵbb, DialogDataExample as ɵbc, DialogDataExampleDialog as ɵbd, DialogElementsExample as ɵbe, DialogElementsExampleDialog as ɵbf, DialogOverviewExample as ɵbg, DialogOverviewExampleDialog as ɵbh, DividerOverviewExample as ɵbi, ElevationOverviewExample as ɵbj, ExpansionStepsExample as ɵbk, FormFieldCustomControlExample as ɵbm, MyTelInput as ɵbl, FormFieldErrorExample as ɵbn, FormFieldHintExample as ɵbo, FormFieldLabelExample as ɵbp, FormFieldOverviewExample as ɵbq, FormFieldPrefixSuffixExample as ɵbr, FormFieldThemingExample as ɵbs, GridListDynamicExample as ɵbt, GridListOverviewExample as ɵbu, IconOverviewExample as ɵbv, IconSvgExample as ɵbw, InputAutosizeTextareaExample as ɵbx, InputClearableExample as ɵby, InputErrorStateMatcherExample as ɵbz, InputErrorsExample as ɵca, InputFormExample as ɵcb, InputHintExample as ɵcc, InputOverviewExample as ɵcd, InputPrefixSuffixExample as ɵce, ListSectionsExample as ɵcf, ListSelectionExample as ɵcg, ExampleMaterialModule as ɵel, MenuIconsExample as ɵch, MenuOverviewExample as ɵci, NestedMenuExample as ɵcj, PaginatorConfigurableExample as ɵck, PaginatorOverviewExample as ɵcl, ProgressBarBufferExample as ɵcm, ProgressBarConfigurableExample as ɵcn, ProgressBarDeterminateExample as ɵco, ProgressBarIndeterminateExample as ɵcp, ProgressBarQueryExample as ɵcq, ProgressSpinnerConfigurableExample as ɵcr, ProgressSpinnerOverviewExample as ɵcs, RadioNgModelExample as ɵct, RadioOverviewExample as ɵcu, SelectCustomTriggerExample as ɵcv, SelectDisabledExample as ɵcw, SelectErrorStateMatcherExample as ɵcx, SelectFormExample as ɵcy, SelectHintErrorExample as ɵcz, SelectMultipleExample as ɵda, SelectNoRippleExample as ɵdb, SelectOptgroupExample as ɵdc, SelectOverviewExample as ɵdd, SelectPanelClassExample as ɵde, SelectResetExample as ɵdf, SelectValueBindingExample as ɵdg, SidenavAutosizeExample as ɵdh, SidenavDisableCloseExample as ɵdi, SidenavDrawerOverviewExample as ɵdj, SidenavFixedExample as ɵdk, SidenavModeExample as ɵdl, SidenavOpenCloseExample as ɵdm, SidenavOverviewExample as ɵdn, SidenavPositionExample as ɵdo, SidenavResponsiveExample as ɵdp, SlideToggleConfigurableExample as ɵdq, SlideToggleFormsExample as ɵdr, SlideToggleOverviewExample as ɵds, SliderConfigurableExample as ɵdt, SliderOverviewExample as ɵdu, PizzaPartyComponent as ɵdw, SnackBarComponentExample as ɵdv, SnackBarOverviewExample as ɵdx, SortOverviewExample as ɵdy, TableBasicExample as ɵdz, TableFilteringExample as ɵea, TableHttpExample as ɵeb, TableOverviewExample as ɵec, TablePaginationExample as ɵed, TableSelectionExample as ɵee, TableSortingExample as ɵef, TabsOverviewExample as ɵeg, TabsTemplateLabelExample as ɵeh, ToolbarOverviewExample as ɵei, TooltipOverviewExample as ɵej, TooltipPositionExample as ɵek };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteDisplayExample as ɵa, AutocompleteFilterExample as ɵb, AutocompleteOverviewExample as ɵc, AutocompleteSimpleExample as ɵd, ButtonOverviewExample as ɵe, ButtonToggleExclusiveExample as ɵf, ButtonTypesExample as ɵg, CardOverviewExample as ɵh, CdkTableBasicExample as ɵi, CheckboxConfigurableExample as ɵj, CheckboxOverviewExample as ɵk, ChipsInputExample as ɵl, ChipsOverviewExample as ɵm, ChipsStackedExample as ɵn, DatepickerApiExample as ɵo, DatepickerDisabledExample as ɵp, DatepickerEventsExample as ɵq, DatepickerFilterExample as ɵr, DatepickerFormatsExample as ɵt, MY_FORMATS as ɵs, DatepickerLocaleExample as ɵu, DatepickerMinMaxExample as ɵv, DatepickerMomentExample as ɵw, DatepickerStartViewExample as ɵx, DatepickerTouchExample as ɵy, DatepickerValueExample as ɵz, DialogContentExample as ɵba, DialogContentExampleDialog as ɵbb, DialogDataExample as ɵbc, DialogDataExampleDialog as ɵbd, DialogElementsExample as ɵbe, DialogElementsExampleDialog as ɵbf, DialogOverviewExample as ɵbg, DialogOverviewExampleDialog as ɵbh, DividerOverviewExample as ɵbi, ElevationOverviewExample as ɵbj, ExpansionStepsExample as ɵbk, FormFieldCustomControlExample as ɵbm, MyTelInput as ɵbl, FormFieldErrorExample as ɵbn, FormFieldHintExample as ɵbo, FormFieldLabelExample as ɵbp, FormFieldOverviewExample as ɵbq, FormFieldPrefixSuffixExample as ɵbr, FormFieldThemingExample as ɵbs, GridListDynamicExample as ɵbt, GridListOverviewExample as ɵbu, IconOverviewExample as ɵbv, IconSvgExample as ɵbw, InputAutosizeTextareaExample as ɵbx, InputClearableExample as ɵby, InputErrorStateMatcherExample as ɵbz, InputErrorsExample as ɵca, InputFormExample as ɵcb, InputHintExample as ɵcc, InputOverviewExample as ɵcd, InputPrefixSuffixExample as ɵce, ListSectionsExample as ɵcf, ListSelectionExample as ɵcg, ExampleMaterialModule as ɵep, MenuIconsExample as ɵch, MenuOverviewExample as ɵci, NestedMenuExample as ɵcj, PaginatorConfigurableExample as ɵck, PaginatorOverviewExample as ɵcl, ProgressBarBufferExample as ɵcm, ProgressBarConfigurableExample as ɵcn, ProgressBarDeterminateExample as ɵco, ProgressBarIndeterminateExample as ɵcp, ProgressBarQueryExample as ɵcq, ProgressSpinnerConfigurableExample as ɵcr, ProgressSpinnerOverviewExample as ɵcs, RadioNgModelExample as ɵct, RadioOverviewExample as ɵcu, SelectCustomTriggerExample as ɵcv, SelectDisabledExample as ɵcw, SelectErrorStateMatcherExample as ɵcx, SelectFormExample as ɵcy, SelectHintErrorExample as ɵcz, SelectMultipleExample as ɵda, SelectNoRippleExample as ɵdb, SelectOptgroupExample as ɵdc, SelectOverviewExample as ɵdd, SelectPanelClassExample as ɵde, SelectResetExample as ɵdf, SelectValueBindingExample as ɵdg, SidenavAutosizeExample as ɵdh, SidenavDisableCloseExample as ɵdi, SidenavDrawerOverviewExample as ɵdj, SidenavFixedExample as ɵdk, SidenavModeExample as ɵdl, SidenavOpenCloseExample as ɵdm, SidenavOverviewExample as ɵdn, SidenavPositionExample as ɵdo, SidenavResponsiveExample as ɵdp, SlideToggleConfigurableExample as ɵdq, SlideToggleFormsExample as ɵdr, SlideToggleOverviewExample as ɵds, SliderConfigurableExample as ɵdt, SliderOverviewExample as ɵdu, PizzaPartyComponent as ɵdw, SnackBarComponentExample as ɵdv, SnackBarOverviewExample as ɵdx, SortOverviewExample as ɵdy, TableBasicExample as ɵdz, TableFilteringExample as ɵea, TableHttpExample as ɵeb, TableOverviewExample as ɵec, TablePaginationExample as ɵed, TableSelectionExample as ɵee, TableSortingExample as ɵef, TabsOverviewExample as ɵeg, TabsTemplateLabelExample as ɵeh, ToolbarOverviewExample as ɵei, TooltipDelayExample as ɵek, TooltipManualExample as ɵel, TooltipModifiedDefaultsExample as ɵen, myCustomTooltipDefaults as ɵem, TooltipOverviewExample as ɵej, TooltipPositionExample as ɵeo };
 //# sourceMappingURL=material-examples.js.map

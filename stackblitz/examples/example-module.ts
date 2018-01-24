@@ -118,6 +118,9 @@ import {TabsOverviewExample} from './tabs-overview/tabs-overview-example';
 import {TabsTemplateLabelExample} from './tabs-template-label/tabs-template-label-example';
 import {ToolbarMultirowExample} from './toolbar-multirow/toolbar-multirow-example';
 import {ToolbarOverviewExample} from './toolbar-overview/toolbar-overview-example';
+import {TooltipDelayExample} from './tooltip-delay/tooltip-delay-example';
+import {TooltipManualExample} from './tooltip-manual/tooltip-manual-example';
+import {TooltipModifiedDefaultsExample} from './tooltip-modified-defaults/tooltip-modified-defaults-example';
 import {TooltipOverviewExample} from './tooltip-overview/tooltip-overview-example';
 import {TooltipPositionExample} from './tooltip-position/tooltip-position-example';
 
@@ -593,6 +596,18 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Basic toolbar',
     component: ToolbarOverviewExample
   },
+  'tooltip-delay': {
+    title: 'Tooltip with a show and hide delay',
+    component: TooltipDelayExample
+  },
+  'tooltip-manual': {
+    title: 'Tooltip that can be manually shown/hidden.',
+    component: TooltipManualExample
+  },
+  'tooltip-modified-defaults': {
+    title: 'Tooltip with a show and hide delay',
+    component: TooltipModifiedDefaultsExample
+  },
   'tooltip-overview': {
     title: 'Basic tooltip',
     component: TooltipOverviewExample
@@ -717,6 +732,9 @@ export const EXAMPLE_LIST = [
   TabsTemplateLabelExample,
   ToolbarMultirowExample,
   ToolbarOverviewExample,
+  TooltipDelayExample,
+  TooltipManualExample,
+  TooltipModifiedDefaultsExample,
   TooltipOverviewExample,
   TooltipPositionExample,
 ];

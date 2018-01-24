@@ -4142,6 +4142,28 @@ var TooltipOverviewExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Tooltip with a show and hide delay
+ */
+var TooltipDelayExample = /** @class */ (function () {
+    function TooltipDelayExample() {
+    }
+    TooltipDelayExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'tooltip-delay-example',
+                    template: "<button mat-raised-button matTooltip=\"Tooltip!\" matTooltipShowDelay=\"1000\">My tooltip waits one second to show</button> <button mat-raised-button matTooltip=\"Tooltip!\" matTooltipHideDelay=\"2000\">My tooltip waits two seconds to hide</button>",
+                    styles: ["button { margin: 8px; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    TooltipDelayExample.ctorParameters = function () { return []; };
+    return TooltipDelayExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Tooltip with custom position
  */
 var TooltipPositionExample = /** @class */ (function () {
@@ -4158,6 +4180,61 @@ var TooltipPositionExample = /** @class */ (function () {
     /** @nocollapse */
     TooltipPositionExample.ctorParameters = function () { return []; };
     return TooltipPositionExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tooltip that can be manually shown/hidden.
+ */
+var TooltipManualExample = /** @class */ (function () {
+    function TooltipManualExample() {
+    }
+    TooltipManualExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'tooltip-manual-example',
+                    template: "<button mat-raised-button (click)=\"tooltip.show()\">Show tooltip</button> <span matTooltip=\"This is the tooltip message\" #tooltip=\"matTooltip\">I have a tooltip</span>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    TooltipManualExample.ctorParameters = function () { return []; };
+    return TooltipManualExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Custom options the configure the tooltip's default show/hide delays.
+ */
+var myCustomTooltipDefaults = {
+    showDelay: 1000,
+    hideDelay: 1000,
+    touchendHideDelay: 1000,
+};
+/**
+ * \@title Tooltip with a show and hide delay
+ */
+var TooltipModifiedDefaultsExample = /** @class */ (function () {
+    function TooltipModifiedDefaultsExample() {
+    }
+    TooltipModifiedDefaultsExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'tooltip-modified-defaults-example',
+                    template: "<button mat-raised-button matTooltip=\"By default, I delay\">Button with delay-default tooltip</button>",
+                    styles: ["/** No CSS for this example */ "],
+                    providers: [
+                        { provide: _angular_material.MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
+                    ],
+                },] },
+    ];
+    /** @nocollapse */
+    TooltipModifiedDefaultsExample.ctorParameters = function () { return []; };
+    return TooltipModifiedDefaultsExample;
 }());
 
 /**
@@ -4639,6 +4716,18 @@ var EXAMPLE_COMPONENTS = {
         title: 'Basic tooltip',
         component: TooltipOverviewExample
     },
+    'tooltip-delay': {
+        title: 'Tooltips with delay',
+        component: TooltipDelayExample
+    },
+    'tooltip-manual': {
+        title: 'Tooltips with manual show button',
+        component: TooltipManualExample
+    },
+    'tooltip-modified-defaults': {
+        title: 'Tooltips with modified default values',
+        component: TooltipModifiedDefaultsExample
+    },
     'tooltip-position': {
         title: 'Tooltip with custom position',
         component: TooltipPositionExample
@@ -4759,6 +4848,9 @@ var EXAMPLE_LIST = [
     ToolbarMultirowExample,
     ToolbarOverviewExample,
     TooltipOverviewExample,
+    TooltipDelayExample,
+    TooltipManualExample,
+    TooltipModifiedDefaultsExample,
     TooltipPositionExample,
 ];
 var ExampleModule = /** @class */ (function () {
@@ -4881,7 +4973,7 @@ exports.ɵcd = InputOverviewExample;
 exports.ɵce = InputPrefixSuffixExample;
 exports.ɵcf = ListSectionsExample;
 exports.ɵcg = ListSelectionExample;
-exports.ɵel = ExampleMaterialModule;
+exports.ɵep = ExampleMaterialModule;
 exports.ɵch = MenuIconsExample;
 exports.ɵci = MenuOverviewExample;
 exports.ɵcj = NestedMenuExample;
@@ -4936,8 +5028,12 @@ exports.ɵef = TableSortingExample;
 exports.ɵeg = TabsOverviewExample;
 exports.ɵeh = TabsTemplateLabelExample;
 exports.ɵei = ToolbarOverviewExample;
+exports.ɵek = TooltipDelayExample;
+exports.ɵel = TooltipManualExample;
+exports.ɵen = TooltipModifiedDefaultsExample;
+exports.ɵem = myCustomTooltipDefaults;
 exports.ɵej = TooltipOverviewExample;
-exports.ɵek = TooltipPositionExample;
+exports.ɵeo = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

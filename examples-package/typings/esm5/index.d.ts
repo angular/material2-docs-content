@@ -55,7 +55,7 @@ export { InputOverviewExample as ɵcd } from './input-overview/input-overview-ex
 export { InputPrefixSuffixExample as ɵce } from './input-prefix-suffix/input-prefix-suffix-example';
 export { ListSectionsExample as ɵcf } from './list-sections/list-sections-example';
 export { ListSelectionExample as ɵcg } from './list-selection/list-selection-example';
-export { ExampleMaterialModule as ɵel } from './material-module';
+export { ExampleMaterialModule as ɵep } from './material-module';
 export { MenuIconsExample as ɵch } from './menu-icons/menu-icons-example';
 export { MenuOverviewExample as ɵci } from './menu-overview/menu-overview-example';
 export { NestedMenuExample as ɵcj } from './nested-menu/nested-menu-example';
@@ -109,5 +109,8 @@ export { TableSortingExample as ɵef } from './table-sorting/table-sorting-examp
 export { TabsOverviewExample as ɵeg } from './tabs-overview/tabs-overview-example';
 export { TabsTemplateLabelExample as ɵeh } from './tabs-template-label/tabs-template-label-example';
 export { ToolbarOverviewExample as ɵei } from './toolbar-overview/toolbar-overview-example';
+export { TooltipDelayExample as ɵek } from './tooltip-delay/tooltip-delay-example';
+export { TooltipManualExample as ɵel } from './tooltip-manual/tooltip-manual-example';
+export { TooltipModifiedDefaultsExample as ɵen, myCustomTooltipDefaults as ɵem } from './tooltip-modified-defaults/tooltip-modified-defaults-example';
 export { TooltipOverviewExample as ɵej } from './tooltip-overview/tooltip-overview-example';
-export { TooltipPositionExample as ɵek } from './tooltip-position/tooltip-position-example';
+export { TooltipPositionExample as ɵeo } from './tooltip-position/tooltip-position-example';
