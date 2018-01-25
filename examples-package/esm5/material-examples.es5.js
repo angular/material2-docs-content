@@ -3092,7 +3092,7 @@ var SidenavOverviewExample = /** @class */ (function () {
     SidenavOverviewExample.decorators = [
         { type: Component, args: [{
                     selector: 'sidenav-overview-example',
-                    template: "<mat-sidenav-container class=\"example-container\" *ngIf=\"shouldRun\"><mat-sidenav mode=\"side\" opened=\"true\">Sidenav content</mat-sidenav><mat-sidenav-content>Main content</mat-sidenav-content></mat-sidenav-container><div *ngIf=\"!shouldRun\">Please open on Stackblitz to see result</div>",
+                    template: "<mat-sidenav-container class=\"example-container\" *ngIf=\"shouldRun\"><mat-sidenav mode=\"side\" opened>Sidenav content</mat-sidenav><mat-sidenav-content>Main content</mat-sidenav-content></mat-sidenav-container><div *ngIf=\"!shouldRun\">Please open on Stackblitz to see result</div>",
                     styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
                 },] },
     ];
