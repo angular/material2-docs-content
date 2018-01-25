@@ -110,8 +110,8 @@ export { TableSortingExample as ɵeg } from './table-sorting/table-sorting-examp
 export { TabsOverviewExample as ɵeh } from './tabs-overview/tabs-overview-example';
 export { TabsTemplateLabelExample as ɵei } from './tabs-template-label/tabs-template-label-example';
 export { ToolbarOverviewExample as ɵej } from './toolbar-overview/toolbar-overview-example';
-export { TooltipDelayExample as ɵel } from './tooltip-delay/tooltip-delay-example';
-export { TooltipManualExample as ɵem } from './tooltip-manual/tooltip-manual-example';
-export { TooltipModifiedDefaultsExample as ɵeo, myCustomTooltipDefaults as ɵen } from './tooltip-modified-defaults/tooltip-modified-defaults-example';
-export { TooltipOverviewExample as ɵek } from './tooltip-overview/tooltip-overview-example';
+export { TooltipDelayExample as ɵek } from './tooltip-delay/tooltip-delay-example';
+export { TooltipManualExample as ɵel } from './tooltip-manual/tooltip-manual-example';
+export { TooltipModifiedDefaultsExample as ɵen, myCustomTooltipDefaults as ɵem } from './tooltip-modified-defaults/tooltip-modified-defaults-example';
+export { TooltipOverviewExample as ɵeo } from './tooltip-overview/tooltip-overview-example';
 export { TooltipPositionExample as ɵep } from './tooltip-position/tooltip-position-example';

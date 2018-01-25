@@ -4142,28 +4142,6 @@ var ToolbarOverviewExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Basic tooltip
- */
-var TooltipOverviewExample = /** @class */ (function () {
-    function TooltipOverviewExample() {
-    }
-    TooltipOverviewExample.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'tooltip-overview-example',
-                    template: "<span matTooltip=\"Tooltip!\">I have a tooltip</span>",
-                    styles: ["/** No CSS for this example */ "],
-                },] },
-    ];
-    /** @nocollapse */
-    TooltipOverviewExample.ctorParameters = function () { return []; };
-    return TooltipOverviewExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
  * \@title Tooltip with a show and hide delay
  */
 var TooltipDelayExample = /** @class */ (function () {
@@ -4179,29 +4157,6 @@ var TooltipDelayExample = /** @class */ (function () {
     /** @nocollapse */
     TooltipDelayExample.ctorParameters = function () { return []; };
     return TooltipDelayExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Tooltip with custom position
- */
-var TooltipPositionExample = /** @class */ (function () {
-    function TooltipPositionExample() {
-        this.position = 'before';
-    }
-    TooltipPositionExample.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'tooltip-position-example',
-                    template: "<div class=\"example-tooltip-host\" matTooltip=\"Tooltip!\" [matTooltipPosition]=\"position\"><span>Show tooltip</span><mat-form-field><mat-select class=\"example-select\" [(ngModel)]=\"position\"><mat-option value=\"before\">Before</mat-option><mat-option value=\"after\">After</mat-option><mat-option value=\"above\">Above</mat-option><mat-option value=\"below\">Below</mat-option><mat-option value=\"left\">Left</mat-option><mat-option value=\"right\">Right</mat-option></mat-select></mat-form-field></div>",
-                    styles: [".example-tooltip-host { display: inline-flex; align-items: center; margin: 50px; } .example-select { margin: 0 10px; } "],
-                },] },
-    ];
-    /** @nocollapse */
-    TooltipPositionExample.ctorParameters = function () { return []; };
-    return TooltipPositionExample;
 }());
 
 /**
@@ -4257,6 +4212,51 @@ var TooltipModifiedDefaultsExample = /** @class */ (function () {
     /** @nocollapse */
     TooltipModifiedDefaultsExample.ctorParameters = function () { return []; };
     return TooltipModifiedDefaultsExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Basic tooltip
+ */
+var TooltipOverviewExample = /** @class */ (function () {
+    function TooltipOverviewExample() {
+    }
+    TooltipOverviewExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'tooltip-overview-example',
+                    template: "<span matTooltip=\"Tooltip!\">I have a tooltip</span>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    TooltipOverviewExample.ctorParameters = function () { return []; };
+    return TooltipOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tooltip with custom position
+ */
+var TooltipPositionExample = /** @class */ (function () {
+    function TooltipPositionExample() {
+        this.position = 'before';
+    }
+    TooltipPositionExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'tooltip-position-example',
+                    template: "<div class=\"example-tooltip-host\" matTooltip=\"Tooltip!\" [matTooltipPosition]=\"position\"><span>Show tooltip</span><mat-form-field><mat-select class=\"example-select\" [(ngModel)]=\"position\"><mat-option value=\"before\">Before</mat-option><mat-option value=\"after\">After</mat-option><mat-option value=\"above\">Above</mat-option><mat-option value=\"below\">Below</mat-option><mat-option value=\"left\">Left</mat-option><mat-option value=\"right\">Right</mat-option></mat-select></mat-form-field></div>",
+                    styles: [".example-tooltip-host { display: inline-flex; align-items: center; margin: 50px; } .example-select { margin: 0 10px; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    TooltipPositionExample.ctorParameters = function () { return []; };
+    return TooltipPositionExample;
 }());
 
 /**
@@ -4738,21 +4738,21 @@ var EXAMPLE_COMPONENTS = {
         title: 'Basic toolbar',
         component: ToolbarOverviewExample
     },
-    'tooltip-overview': {
-        title: 'Basic tooltip',
-        component: TooltipOverviewExample
-    },
     'tooltip-delay': {
-        title: 'Tooltips with delay',
+        title: 'Tooltip with a show and hide delay',
         component: TooltipDelayExample
     },
     'tooltip-manual': {
-        title: 'Tooltips with manual show button',
+        title: 'Tooltip that can be manually shown/hidden.',
         component: TooltipManualExample
     },
     'tooltip-modified-defaults': {
-        title: 'Tooltips with modified default values',
+        title: 'Tooltip with a show and hide delay',
         component: TooltipModifiedDefaultsExample
+    },
+    'tooltip-overview': {
+        title: 'Basic tooltip',
+        component: TooltipOverviewExample
     },
     'tooltip-position': {
         title: 'Tooltip with custom position',
@@ -4874,10 +4874,10 @@ var EXAMPLE_LIST = [
     TabsTemplateLabelExample,
     ToolbarMultirowExample,
     ToolbarOverviewExample,
-    TooltipOverviewExample,
     TooltipDelayExample,
     TooltipManualExample,
     TooltipModifiedDefaultsExample,
+    TooltipOverviewExample,
     TooltipPositionExample,
 ];
 var ExampleModule = /** @class */ (function () {
@@ -4904,6 +4904,8 @@ var ExampleModule = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+// The example-module file will be auto-generated. As soon as the
+// examples are being compiled, the module file will be generated.
 /**
  * Example data
  *   with information about Component name, selector, files used in example, and path to examples
@@ -5056,11 +5058,11 @@ exports.ɵeg = TableSortingExample;
 exports.ɵeh = TabsOverviewExample;
 exports.ɵei = TabsTemplateLabelExample;
 exports.ɵej = ToolbarOverviewExample;
-exports.ɵel = TooltipDelayExample;
-exports.ɵem = TooltipManualExample;
-exports.ɵeo = TooltipModifiedDefaultsExample;
-exports.ɵen = myCustomTooltipDefaults;
-exports.ɵek = TooltipOverviewExample;
+exports.ɵek = TooltipDelayExample;
+exports.ɵel = TooltipManualExample;
+exports.ɵen = TooltipModifiedDefaultsExample;
+exports.ɵem = myCustomTooltipDefaults;
+exports.ɵeo = TooltipOverviewExample;
 exports.ɵep = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
