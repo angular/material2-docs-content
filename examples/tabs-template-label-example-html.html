@@ -1,48 +1,119 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-group"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 1"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-content"</span>&gt;</span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-      Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-      In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
-      feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
-      orci enim rutrum enim, vel tempor sapien arcu a tellus.
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 2"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
-      ⭐
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-content"</span>&gt;</span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-      Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-      In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
-      feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
-      orci enim rutrum enim, vel tempor sapien arcu a tellus.
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 3"</span> <span class="hljs-attr">disabled</span>&gt;</span>
-    No content  
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 4"</span>&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-content"</span>&gt;</span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-      Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-      In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
-      feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
-      orci enim rutrum enim, vel tempor sapien arcu a tellus.
-      <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
-      Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
-      In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
-      feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
-      orci enim rutrum enim, vel tempor sapien arcu a tellus.
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 5"</span>&gt;</span>
-    No content  
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 6"</span>&gt;</span>
-    No content  
-  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-card</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-card-content</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-h2"</span>&gt;</span>Tabs with text labels<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-content"</span>&gt;</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-content"</span>&gt;</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 3"</span> <span class="hljs-attr">disabled</span>&gt;</span>
+        No content  
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-content"</span>&gt;</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+          <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 5"</span>&gt;</span>
+        No content  
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 6"</span>&gt;</span>
+        No content  
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-card-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-card</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-card</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-card-content</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-h2"</span>&gt;</span>Tabs with icon labels<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-group"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>security<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-content"</span>&gt;</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>attach_file<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-content"</span>&gt;</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 3"</span> <span class="hljs-attr">disabled</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>block<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+        No content  
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 4"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>loop<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-tab-content"</span>&gt;</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+          <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue.
+          Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus.
+          In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec,
+          feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor,
+          orci enim rutrum enim, vel tempor sapien arcu a tellus.
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 5"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>build<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+        No content  
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Tab 6"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>thumb_down<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+        No content  
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-card-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-card</span>&gt;</span>
