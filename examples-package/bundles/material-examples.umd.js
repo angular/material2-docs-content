@@ -3537,7 +3537,7 @@ var StepperOverviewExample = /** @class */ (function () {
 var TableBasicExample = /** @class */ (function () {
     function TableBasicExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new _angular_material.MatTableDataSource(ELEMENT_DATA);
+        this.dataSource = ELEMENT_DATA;
     }
     TableBasicExample.decorators = [
         { type: _angular_core.Component, args: [{

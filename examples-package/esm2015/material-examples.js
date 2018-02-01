@@ -3214,7 +3214,7 @@ StepperOverviewExample.ctorParameters = () => [
 class TableBasicExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA);
+        this.dataSource = ELEMENT_DATA;
     }
 }
 TableBasicExample.decorators = [

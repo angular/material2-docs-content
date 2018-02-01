@@ -1,5 +1,4 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-comment">/**
  * @title Basic table
@@ -11,7 +10,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableBasicExample {
   displayedColumns = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;Element&gt;(ELEMENT_DATA);
+  dataSource = ELEMENT_DATA;
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Element {

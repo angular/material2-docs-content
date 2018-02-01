@@ -1,10 +1,9 @@
-import { MatTableDataSource } from '@angular/material';
 /**
  * @title Basic table
  */
 export declare class TableBasicExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<Element>;
+    dataSource: Element[];
 }
 export interface Element {
     name: string;
