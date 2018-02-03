@@ -5,6 +5,7 @@ import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {ExampleMaterialModule} from './material-module';
+import {AutocompleteAutoActiveFirstOptionExample} from './autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example';
 import {AutocompleteDisplayExample} from './autocomplete-display/autocomplete-display-example';
 import {AutocompleteFilterExample} from './autocomplete-filter/autocomplete-filter-example';
 import {AutocompleteOverviewExample} from './autocomplete-overview/autocomplete-overview-example';
@@ -133,6 +134,10 @@ export interface LiveExample {
 }
 
 export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
+  'autocomplete-auto-active-first-option': {
+    title: 'Highlight the first autocomplete option',
+    component: AutocompleteAutoActiveFirstOptionExample
+  },
   'autocomplete-display': {
     title: 'Display value autocomplete',
     component: AutocompleteDisplayExample
@@ -624,6 +629,7 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
 };
 
 export const EXAMPLE_LIST = [
+  AutocompleteAutoActiveFirstOptionExample,
   AutocompleteDisplayExample,
   AutocompleteFilterExample,
   AutocompleteOverviewExample,

@@ -1,0 +1,10 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-form"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-full-width"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Pick one"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Number"</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"myControl"</span> [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">"auto"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> <span class="hljs-attr">autoActiveFirstOption</span> #<span class="hljs-attr">auto</span>=<span class="hljs-string">"matAutocomplete"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let option of filteredOptions | async"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"option"</span>&gt;</span>
+        {{ option }}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>

@@ -5,6 +5,7 @@
 <span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
 <span class="hljs-keyword">import</span> {ExampleMaterialModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'./material-module'</span>;
+<span class="hljs-keyword">import</span> {AutocompleteAutoActiveFirstOptionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example'</span>;
 <span class="hljs-keyword">import</span> {AutocompleteDisplayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-display/autocomplete-display-example'</span>;
 <span class="hljs-keyword">import</span> {AutocompleteFilterExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-filter/autocomplete-filter-example'</span>;
 <span class="hljs-keyword">import</span> {AutocompleteOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-overview/autocomplete-overview-example'</span>;
@@ -133,6 +134,10 @@
 }
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> EXAMPLE_COMPONENTS: {[key: <span class="hljs-built_in">string</span>]: LiveExample} = {
+  <span class="hljs-string">'autocomplete-auto-active-first-option'</span>: {
+    title: <span class="hljs-string">'Highlight the first autocomplete option'</span>,
+    component: AutocompleteAutoActiveFirstOptionExample
+  },
   <span class="hljs-string">'autocomplete-display'</span>: {
     title: <span class="hljs-string">'Display value autocomplete'</span>,
     component: AutocompleteDisplayExample
@@ -624,6 +629,7 @@
 };
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> EXAMPLE_LIST = [
+  AutocompleteAutoActiveFirstOptionExample,
   AutocompleteDisplayExample,
   AutocompleteFilterExample,
   AutocompleteOverviewExample,
