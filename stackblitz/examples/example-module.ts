@@ -35,6 +35,7 @@ import {DatepickerOverviewExample} from './datepicker-overview/datepicker-overvi
 import {DatepickerStartViewExample} from './datepicker-start-view/datepicker-start-view-example';
 import {DatepickerTouchExample} from './datepicker-touch/datepicker-touch-example';
 import {DatepickerValueExample} from './datepicker-value/datepicker-value-example';
+import {DatepickerViewsSelectionExample} from './datepicker-views-selection/datepicker-views-selection-example';
 import {DialogContentExampleDialog,DialogContentExample} from './dialog-content/dialog-content-example';
 import {DialogDataExampleDialog,DialogDataExample} from './dialog-data/dialog-data-example';
 import {DialogElementsExampleDialog,DialogElementsExample} from './dialog-elements/dialog-elements-example';
@@ -253,6 +254,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'datepicker-value': {
     title: 'Datepicker selected value',
     component: DatepickerValueExample
+  },
+  'datepicker-views-selection': {
+    title: 'Datepicker emulating a Year and month picker',
+    component: DatepickerViewsSelectionExample
   },
   'dialog-content': {
     title: 'Dialog with header, scrollable content and actions',
@@ -659,6 +664,7 @@ export const EXAMPLE_LIST = [
   DatepickerStartViewExample,
   DatepickerTouchExample,
   DatepickerValueExample,
+  DatepickerViewsSelectionExample,
   DialogContentExampleDialog,DialogContentExample,
   DialogDataExampleDialog,DialogDataExample,
   DialogElementsExampleDialog,DialogElementsExample,

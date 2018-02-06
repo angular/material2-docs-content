@@ -66,21 +66,21 @@ var ExampleMaterialModule = /** @class */ (function () {
                         _angular_material.MatInputModule,
                         _angular_material.MatListModule,
                         _angular_material.MatMenuModule,
+                        _angular_material.MatPaginatorModule,
                         _angular_material.MatProgressBarModule,
                         _angular_material.MatProgressSpinnerModule,
                         _angular_material.MatRadioModule,
                         _angular_material.MatSelectModule,
+                        _angular_material.MatSidenavModule,
                         _angular_material.MatSlideToggleModule,
                         _angular_material.MatSliderModule,
-                        _angular_material.MatSidenavModule,
                         _angular_material.MatSnackBarModule,
+                        _angular_material.MatSortModule,
                         _angular_material.MatStepperModule,
+                        _angular_material.MatTableModule,
                         _angular_material.MatTabsModule,
                         _angular_material.MatToolbarModule,
                         _angular_material.MatTooltipModule,
-                        _angular_material.MatPaginatorModule,
-                        _angular_material.MatSortModule,
-                        _angular_material.MatTableModule
                     ]
                 },] },
     ];
@@ -1153,6 +1153,83 @@ var DatepickerValueExample = /** @class */ (function () {
     /** @nocollapse */
     DatepickerValueExample.ctorParameters = function () { return []; };
     return DatepickerValueExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+// Depending on whether rollup is used, moment needs to be imported differently.
+// Since Moment.js doesn't have a default export, we normally need to import using the `* as`
+// syntax. However, rollup creates a synthetic default module and we thus need to import it using
+// the `default as` syntax.
+var moment$2 = _rollupMoment__default__default || _rollupMoment__default;
+// See the Moment.js docs for the meaning of these formats:
+// https://momentjs.com/docs/#/displaying/format/
+var MY_FORMATS$1 = {
+    parse: {
+        dateInput: 'MM/YYYY',
+    },
+    display: {
+        dateInput: 'MM/YYYY',
+        monthYearLabel: 'MMM YYYY',
+        dateA11yLabel: 'LL',
+        monthYearA11yLabel: 'MMMM YYYY',
+    },
+};
+/**
+ * \@title Datepicker emulating a Year and month picker
+ */
+var DatepickerViewsSelectionExample = /** @class */ (function () {
+    function DatepickerViewsSelectionExample() {
+        this.date = new _angular_forms.FormControl(moment$2());
+    }
+    /**
+     * @param {?} normalizedYear
+     * @return {?}
+     */
+    DatepickerViewsSelectionExample.prototype.chosenYearHandler = /**
+     * @param {?} normalizedYear
+     * @return {?}
+     */
+    function (normalizedYear) {
+        var /** @type {?} */ ctrlValue = this.date.value;
+        ctrlValue.year(normalizedYear.year());
+        this.date.setValue(ctrlValue);
+    };
+    /**
+     * @param {?} normlizedMonth
+     * @param {?} datepicker
+     * @return {?}
+     */
+    DatepickerViewsSelectionExample.prototype.chosenMonthHandler = /**
+     * @param {?} normlizedMonth
+     * @param {?} datepicker
+     * @return {?}
+     */
+    function (normlizedMonth, datepicker) {
+        var /** @type {?} */ ctrlValue = this.date.value;
+        ctrlValue.month(normlizedMonth.month());
+        this.date.setValue(ctrlValue);
+        datepicker.close();
+    };
+    DatepickerViewsSelectionExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'datepicker-views-selection-example',
+                    template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Month and Year\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp (yearSelected)=\"chosenYearHandler($event)\" (monthSelected)=\"chosenMonthHandler($event, dp)\"></mat-datepicker></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                    providers: [
+                        // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
+                        // application's root module. We provide it at the component level here, due to limitations of
+                        // our example generation script.
+                        { provide: _angular_material_core.DateAdapter, useClass: _angular_materialMomentAdapter.MomentDateAdapter, deps: [_angular_material_core.MAT_DATE_LOCALE] },
+                        { provide: _angular_material_core.MAT_DATE_FORMATS, useValue: MY_FORMATS$1 },
+                    ],
+                },] },
+    ];
+    /** @nocollapse */
+    DatepickerViewsSelectionExample.ctorParameters = function () { return []; };
+    return DatepickerViewsSelectionExample;
 }());
 
 /**
@@ -4435,6 +4512,10 @@ var EXAMPLE_COMPONENTS = {
         title: 'Datepicker selected value',
         component: DatepickerValueExample
     },
+    'datepicker-views-selection': {
+        title: 'Datepicker emulating a Year and month picker',
+        component: DatepickerViewsSelectionExample
+    },
     'dialog-content': {
         title: 'Dialog with header, scrollable content and actions',
         component: DialogContentExample,
@@ -4839,6 +4920,7 @@ var EXAMPLE_LIST = [
     DatepickerStartViewExample,
     DatepickerTouchExample,
     DatepickerValueExample,
+    DatepickerViewsSelectionExample,
     DialogContentExampleDialog, DialogContentExample,
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
@@ -5021,100 +5103,102 @@ exports.ɵy = DatepickerMomentExample;
 exports.ɵz = DatepickerStartViewExample;
 exports.ɵba = DatepickerTouchExample;
 exports.ɵbb = DatepickerValueExample;
-exports.ɵbc = DialogContentExample;
-exports.ɵbd = DialogContentExampleDialog;
-exports.ɵbe = DialogDataExample;
-exports.ɵbf = DialogDataExampleDialog;
-exports.ɵbg = DialogElementsExample;
-exports.ɵbh = DialogElementsExampleDialog;
-exports.ɵbi = DialogOverviewExample;
-exports.ɵbj = DialogOverviewExampleDialog;
-exports.ɵbk = DividerOverviewExample;
-exports.ɵbl = ElevationOverviewExample;
-exports.ɵbm = ExpansionStepsExample;
-exports.ɵbo = FormFieldCustomControlExample;
-exports.ɵbn = MyTelInput;
-exports.ɵbp = FormFieldErrorExample;
-exports.ɵbq = FormFieldHintExample;
-exports.ɵbr = FormFieldLabelExample;
-exports.ɵbs = FormFieldOverviewExample;
-exports.ɵbt = FormFieldPrefixSuffixExample;
-exports.ɵbu = FormFieldThemingExample;
-exports.ɵbv = GridListDynamicExample;
-exports.ɵbw = GridListOverviewExample;
-exports.ɵbx = IconOverviewExample;
-exports.ɵby = IconSvgExample;
-exports.ɵbz = InputAutosizeTextareaExample;
-exports.ɵca = InputClearableExample;
-exports.ɵcb = InputErrorStateMatcherExample;
-exports.ɵcc = InputErrorsExample;
-exports.ɵcd = InputFormExample;
-exports.ɵce = InputHintExample;
-exports.ɵcf = InputOverviewExample;
-exports.ɵcg = InputPrefixSuffixExample;
-exports.ɵch = ListSectionsExample;
-exports.ɵci = ListSelectionExample;
-exports.ɵer = ExampleMaterialModule;
-exports.ɵcj = MenuIconsExample;
-exports.ɵck = MenuOverviewExample;
-exports.ɵcl = NestedMenuExample;
-exports.ɵcm = PaginatorConfigurableExample;
-exports.ɵcn = PaginatorOverviewExample;
-exports.ɵco = ProgressBarBufferExample;
-exports.ɵcp = ProgressBarConfigurableExample;
-exports.ɵcq = ProgressBarDeterminateExample;
-exports.ɵcr = ProgressBarIndeterminateExample;
-exports.ɵcs = ProgressBarQueryExample;
-exports.ɵct = ProgressSpinnerConfigurableExample;
-exports.ɵcu = ProgressSpinnerOverviewExample;
-exports.ɵcv = RadioNgModelExample;
-exports.ɵcw = RadioOverviewExample;
-exports.ɵcx = SelectCustomTriggerExample;
-exports.ɵcy = SelectDisabledExample;
-exports.ɵcz = SelectErrorStateMatcherExample;
-exports.ɵda = SelectFormExample;
-exports.ɵdb = SelectHintErrorExample;
-exports.ɵdc = SelectMultipleExample;
-exports.ɵdd = SelectNoRippleExample;
-exports.ɵde = SelectOptgroupExample;
-exports.ɵdf = SelectOverviewExample;
-exports.ɵdg = SelectPanelClassExample;
-exports.ɵdh = SelectResetExample;
-exports.ɵdi = SelectValueBindingExample;
-exports.ɵdj = SidenavAutosizeExample;
-exports.ɵdk = SidenavDisableCloseExample;
-exports.ɵdl = SidenavDrawerOverviewExample;
-exports.ɵdm = SidenavFixedExample;
-exports.ɵdn = SidenavModeExample;
-exports.ɵdo = SidenavOpenCloseExample;
-exports.ɵdp = SidenavOverviewExample;
-exports.ɵdq = SidenavPositionExample;
-exports.ɵdr = SidenavResponsiveExample;
-exports.ɵds = SlideToggleConfigurableExample;
-exports.ɵdt = SlideToggleFormsExample;
-exports.ɵdu = SlideToggleOverviewExample;
-exports.ɵdv = SliderConfigurableExample;
-exports.ɵdw = SliderOverviewExample;
-exports.ɵdy = PizzaPartyComponent;
-exports.ɵdx = SnackBarComponentExample;
-exports.ɵdz = SnackBarOverviewExample;
-exports.ɵea = SortOverviewExample;
-exports.ɵeb = TableBasicExample;
-exports.ɵec = TableFilteringExample;
-exports.ɵed = TableHttpExample;
-exports.ɵee = TableOverviewExample;
-exports.ɵef = TablePaginationExample;
-exports.ɵeg = TableSelectionExample;
-exports.ɵeh = TableSortingExample;
-exports.ɵei = TabsOverviewExample;
-exports.ɵej = TabsTemplateLabelExample;
-exports.ɵek = ToolbarOverviewExample;
-exports.ɵel = TooltipDelayExample;
-exports.ɵem = TooltipManualExample;
-exports.ɵeo = TooltipModifiedDefaultsExample;
-exports.ɵen = myCustomTooltipDefaults;
-exports.ɵep = TooltipOverviewExample;
-exports.ɵeq = TooltipPositionExample;
+exports.ɵbd = DatepickerViewsSelectionExample;
+exports.ɵbc = MY_FORMATS$1;
+exports.ɵbe = DialogContentExample;
+exports.ɵbf = DialogContentExampleDialog;
+exports.ɵbg = DialogDataExample;
+exports.ɵbh = DialogDataExampleDialog;
+exports.ɵbi = DialogElementsExample;
+exports.ɵbj = DialogElementsExampleDialog;
+exports.ɵbk = DialogOverviewExample;
+exports.ɵbl = DialogOverviewExampleDialog;
+exports.ɵbm = DividerOverviewExample;
+exports.ɵbn = ElevationOverviewExample;
+exports.ɵbo = ExpansionStepsExample;
+exports.ɵbq = FormFieldCustomControlExample;
+exports.ɵbp = MyTelInput;
+exports.ɵbr = FormFieldErrorExample;
+exports.ɵbs = FormFieldHintExample;
+exports.ɵbt = FormFieldLabelExample;
+exports.ɵbu = FormFieldOverviewExample;
+exports.ɵbv = FormFieldPrefixSuffixExample;
+exports.ɵbw = FormFieldThemingExample;
+exports.ɵbx = GridListDynamicExample;
+exports.ɵby = GridListOverviewExample;
+exports.ɵbz = IconOverviewExample;
+exports.ɵca = IconSvgExample;
+exports.ɵcb = InputAutosizeTextareaExample;
+exports.ɵcc = InputClearableExample;
+exports.ɵcd = InputErrorStateMatcherExample;
+exports.ɵce = InputErrorsExample;
+exports.ɵcf = InputFormExample;
+exports.ɵcg = InputHintExample;
+exports.ɵch = InputOverviewExample;
+exports.ɵci = InputPrefixSuffixExample;
+exports.ɵcj = ListSectionsExample;
+exports.ɵck = ListSelectionExample;
+exports.ɵet = ExampleMaterialModule;
+exports.ɵcl = MenuIconsExample;
+exports.ɵcm = MenuOverviewExample;
+exports.ɵcn = NestedMenuExample;
+exports.ɵco = PaginatorConfigurableExample;
+exports.ɵcp = PaginatorOverviewExample;
+exports.ɵcq = ProgressBarBufferExample;
+exports.ɵcr = ProgressBarConfigurableExample;
+exports.ɵcs = ProgressBarDeterminateExample;
+exports.ɵct = ProgressBarIndeterminateExample;
+exports.ɵcu = ProgressBarQueryExample;
+exports.ɵcv = ProgressSpinnerConfigurableExample;
+exports.ɵcw = ProgressSpinnerOverviewExample;
+exports.ɵcx = RadioNgModelExample;
+exports.ɵcy = RadioOverviewExample;
+exports.ɵcz = SelectCustomTriggerExample;
+exports.ɵda = SelectDisabledExample;
+exports.ɵdb = SelectErrorStateMatcherExample;
+exports.ɵdc = SelectFormExample;
+exports.ɵdd = SelectHintErrorExample;
+exports.ɵde = SelectMultipleExample;
+exports.ɵdf = SelectNoRippleExample;
+exports.ɵdg = SelectOptgroupExample;
+exports.ɵdh = SelectOverviewExample;
+exports.ɵdi = SelectPanelClassExample;
+exports.ɵdj = SelectResetExample;
+exports.ɵdk = SelectValueBindingExample;
+exports.ɵdl = SidenavAutosizeExample;
+exports.ɵdm = SidenavDisableCloseExample;
+exports.ɵdn = SidenavDrawerOverviewExample;
+exports.ɵdo = SidenavFixedExample;
+exports.ɵdp = SidenavModeExample;
+exports.ɵdq = SidenavOpenCloseExample;
+exports.ɵdr = SidenavOverviewExample;
+exports.ɵds = SidenavPositionExample;
+exports.ɵdt = SidenavResponsiveExample;
+exports.ɵdu = SlideToggleConfigurableExample;
+exports.ɵdv = SlideToggleFormsExample;
+exports.ɵdw = SlideToggleOverviewExample;
+exports.ɵdx = SliderConfigurableExample;
+exports.ɵdy = SliderOverviewExample;
+exports.ɵea = PizzaPartyComponent;
+exports.ɵdz = SnackBarComponentExample;
+exports.ɵeb = SnackBarOverviewExample;
+exports.ɵec = SortOverviewExample;
+exports.ɵed = TableBasicExample;
+exports.ɵee = TableFilteringExample;
+exports.ɵef = TableHttpExample;
+exports.ɵeg = TableOverviewExample;
+exports.ɵeh = TablePaginationExample;
+exports.ɵei = TableSelectionExample;
+exports.ɵej = TableSortingExample;
+exports.ɵek = TabsOverviewExample;
+exports.ɵel = TabsTemplateLabelExample;
+exports.ɵem = ToolbarOverviewExample;
+exports.ɵen = TooltipDelayExample;
+exports.ɵeo = TooltipManualExample;
+exports.ɵeq = TooltipModifiedDefaultsExample;
+exports.ɵep = myCustomTooltipDefaults;
+exports.ɵer = TooltipOverviewExample;
+exports.ɵes = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

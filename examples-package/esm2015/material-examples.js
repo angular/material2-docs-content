@@ -57,21 +57,21 @@ ExampleMaterialModule.decorators = [
                     MatInputModule,
                     MatListModule,
                     MatMenuModule,
+                    MatPaginatorModule,
                     MatProgressBarModule,
                     MatProgressSpinnerModule,
                     MatRadioModule,
                     MatSelectModule,
+                    MatSidenavModule,
                     MatSlideToggleModule,
                     MatSliderModule,
-                    MatSidenavModule,
                     MatSnackBarModule,
+                    MatSortModule,
                     MatStepperModule,
+                    MatTableModule,
                     MatTabsModule,
                     MatToolbarModule,
                     MatTooltipModule,
-                    MatPaginatorModule,
-                    MatSortModule,
-                    MatTableModule
                 ]
             },] },
 ];
@@ -1013,6 +1013,73 @@ DatepickerValueExample.decorators = [
 ];
 /** @nocollapse */
 DatepickerValueExample.ctorParameters = () => [];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+// Depending on whether rollup is used, moment needs to be imported differently.
+// Since Moment.js doesn't have a default export, we normally need to import using the `* as`
+// syntax. However, rollup creates a synthetic default module and we thus need to import it using
+// the `default as` syntax.
+const moment$2 = _rollupMoment__default || _rollupMoment;
+// See the Moment.js docs for the meaning of these formats:
+// https://momentjs.com/docs/#/displaying/format/
+const MY_FORMATS$1 = {
+    parse: {
+        dateInput: 'MM/YYYY',
+    },
+    display: {
+        dateInput: 'MM/YYYY',
+        monthYearLabel: 'MMM YYYY',
+        dateA11yLabel: 'LL',
+        monthYearA11yLabel: 'MMMM YYYY',
+    },
+};
+/**
+ * \@title Datepicker emulating a Year and month picker
+ */
+class DatepickerViewsSelectionExample {
+    constructor() {
+        this.date = new FormControl(moment$2());
+    }
+    /**
+     * @param {?} normalizedYear
+     * @return {?}
+     */
+    chosenYearHandler(normalizedYear) {
+        const /** @type {?} */ ctrlValue = this.date.value;
+        ctrlValue.year(normalizedYear.year());
+        this.date.setValue(ctrlValue);
+    }
+    /**
+     * @param {?} normlizedMonth
+     * @param {?} datepicker
+     * @return {?}
+     */
+    chosenMonthHandler(normlizedMonth, datepicker) {
+        const /** @type {?} */ ctrlValue = this.date.value;
+        ctrlValue.month(normlizedMonth.month());
+        this.date.setValue(ctrlValue);
+        datepicker.close();
+    }
+}
+DatepickerViewsSelectionExample.decorators = [
+    { type: Component, args: [{
+                selector: 'datepicker-views-selection-example',
+                template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Month and Year\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp (yearSelected)=\"chosenYearHandler($event)\" (monthSelected)=\"chosenMonthHandler($event, dp)\"></mat-datepicker></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+                providers: [
+                    // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
+                    // application's root module. We provide it at the component level here, due to limitations of
+                    // our example generation script.
+                    { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
+                    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS$1 },
+                ],
+            },] },
+];
+/** @nocollapse */
+DatepickerViewsSelectionExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4018,6 +4085,10 @@ const EXAMPLE_COMPONENTS = {
         title: 'Datepicker selected value',
         component: DatepickerValueExample
     },
+    'datepicker-views-selection': {
+        title: 'Datepicker emulating a Year and month picker',
+        component: DatepickerViewsSelectionExample
+    },
     'dialog-content': {
         title: 'Dialog with header, scrollable content and actions',
         component: DialogContentExample,
@@ -4422,6 +4493,7 @@ const EXAMPLE_LIST = [
     DatepickerStartViewExample,
     DatepickerTouchExample,
     DatepickerValueExample,
+    DatepickerViewsSelectionExample,
     DialogContentExampleDialog, DialogContentExample,
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
@@ -4576,5 +4648,5 @@ class ExampleData {
  * Generated bundle index. Do not edit.
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, ButtonOverviewExample as ɵf, ButtonToggleExclusiveExample as ɵg, ButtonTypesExample as ɵh, CardOverviewExample as ɵi, CdkTableBasicExample as ɵj, CheckboxConfigurableExample as ɵk, CheckboxOverviewExample as ɵl, ChipsInputExample as ɵm, ChipsOverviewExample as ɵn, ChipsStackedExample as ɵo, DatepickerApiExample as ɵp, DatepickerCustomIconExample as ɵq, DatepickerDisabledExample as ɵr, DatepickerEventsExample as ɵs, DatepickerFilterExample as ɵt, DatepickerFormatsExample as ɵv, MY_FORMATS as ɵu, DatepickerLocaleExample as ɵw, DatepickerMinMaxExample as ɵx, DatepickerMomentExample as ɵy, DatepickerStartViewExample as ɵz, DatepickerTouchExample as ɵba, DatepickerValueExample as ɵbb, DialogContentExample as ɵbc, DialogContentExampleDialog as ɵbd, DialogDataExample as ɵbe, DialogDataExampleDialog as ɵbf, DialogElementsExample as ɵbg, DialogElementsExampleDialog as ɵbh, DialogOverviewExample as ɵbi, DialogOverviewExampleDialog as ɵbj, DividerOverviewExample as ɵbk, ElevationOverviewExample as ɵbl, ExpansionStepsExample as ɵbm, FormFieldCustomControlExample as ɵbo, MyTelInput as ɵbn, FormFieldErrorExample as ɵbp, FormFieldHintExample as ɵbq, FormFieldLabelExample as ɵbr, FormFieldOverviewExample as ɵbs, FormFieldPrefixSuffixExample as ɵbt, FormFieldThemingExample as ɵbu, GridListDynamicExample as ɵbv, GridListOverviewExample as ɵbw, IconOverviewExample as ɵbx, IconSvgExample as ɵby, InputAutosizeTextareaExample as ɵbz, InputClearableExample as ɵca, InputErrorStateMatcherExample as ɵcb, InputErrorsExample as ɵcc, InputFormExample as ɵcd, InputHintExample as ɵce, InputOverviewExample as ɵcf, InputPrefixSuffixExample as ɵcg, ListSectionsExample as ɵch, ListSelectionExample as ɵci, ExampleMaterialModule as ɵer, MenuIconsExample as ɵcj, MenuOverviewExample as ɵck, NestedMenuExample as ɵcl, PaginatorConfigurableExample as ɵcm, PaginatorOverviewExample as ɵcn, ProgressBarBufferExample as ɵco, ProgressBarConfigurableExample as ɵcp, ProgressBarDeterminateExample as ɵcq, ProgressBarIndeterminateExample as ɵcr, ProgressBarQueryExample as ɵcs, ProgressSpinnerConfigurableExample as ɵct, ProgressSpinnerOverviewExample as ɵcu, RadioNgModelExample as ɵcv, RadioOverviewExample as ɵcw, SelectCustomTriggerExample as ɵcx, SelectDisabledExample as ɵcy, SelectErrorStateMatcherExample as ɵcz, SelectFormExample as ɵda, SelectHintErrorExample as ɵdb, SelectMultipleExample as ɵdc, SelectNoRippleExample as ɵdd, SelectOptgroupExample as ɵde, SelectOverviewExample as ɵdf, SelectPanelClassExample as ɵdg, SelectResetExample as ɵdh, SelectValueBindingExample as ɵdi, SidenavAutosizeExample as ɵdj, SidenavDisableCloseExample as ɵdk, SidenavDrawerOverviewExample as ɵdl, SidenavFixedExample as ɵdm, SidenavModeExample as ɵdn, SidenavOpenCloseExample as ɵdo, SidenavOverviewExample as ɵdp, SidenavPositionExample as ɵdq, SidenavResponsiveExample as ɵdr, SlideToggleConfigurableExample as ɵds, SlideToggleFormsExample as ɵdt, SlideToggleOverviewExample as ɵdu, SliderConfigurableExample as ɵdv, SliderOverviewExample as ɵdw, PizzaPartyComponent as ɵdy, SnackBarComponentExample as ɵdx, SnackBarOverviewExample as ɵdz, SortOverviewExample as ɵea, TableBasicExample as ɵeb, TableFilteringExample as ɵec, TableHttpExample as ɵed, TableOverviewExample as ɵee, TablePaginationExample as ɵef, TableSelectionExample as ɵeg, TableSortingExample as ɵeh, TabsOverviewExample as ɵei, TabsTemplateLabelExample as ɵej, ToolbarOverviewExample as ɵek, TooltipDelayExample as ɵel, TooltipManualExample as ɵem, TooltipModifiedDefaultsExample as ɵeo, myCustomTooltipDefaults as ɵen, TooltipOverviewExample as ɵep, TooltipPositionExample as ɵeq };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, ButtonOverviewExample as ɵf, ButtonToggleExclusiveExample as ɵg, ButtonTypesExample as ɵh, CardOverviewExample as ɵi, CdkTableBasicExample as ɵj, CheckboxConfigurableExample as ɵk, CheckboxOverviewExample as ɵl, ChipsInputExample as ɵm, ChipsOverviewExample as ɵn, ChipsStackedExample as ɵo, DatepickerApiExample as ɵp, DatepickerCustomIconExample as ɵq, DatepickerDisabledExample as ɵr, DatepickerEventsExample as ɵs, DatepickerFilterExample as ɵt, DatepickerFormatsExample as ɵv, MY_FORMATS as ɵu, DatepickerLocaleExample as ɵw, DatepickerMinMaxExample as ɵx, DatepickerMomentExample as ɵy, DatepickerStartViewExample as ɵz, DatepickerTouchExample as ɵba, DatepickerValueExample as ɵbb, DatepickerViewsSelectionExample as ɵbd, MY_FORMATS$1 as ɵbc, DialogContentExample as ɵbe, DialogContentExampleDialog as ɵbf, DialogDataExample as ɵbg, DialogDataExampleDialog as ɵbh, DialogElementsExample as ɵbi, DialogElementsExampleDialog as ɵbj, DialogOverviewExample as ɵbk, DialogOverviewExampleDialog as ɵbl, DividerOverviewExample as ɵbm, ElevationOverviewExample as ɵbn, ExpansionStepsExample as ɵbo, FormFieldCustomControlExample as ɵbq, MyTelInput as ɵbp, FormFieldErrorExample as ɵbr, FormFieldHintExample as ɵbs, FormFieldLabelExample as ɵbt, FormFieldOverviewExample as ɵbu, FormFieldPrefixSuffixExample as ɵbv, FormFieldThemingExample as ɵbw, GridListDynamicExample as ɵbx, GridListOverviewExample as ɵby, IconOverviewExample as ɵbz, IconSvgExample as ɵca, InputAutosizeTextareaExample as ɵcb, InputClearableExample as ɵcc, InputErrorStateMatcherExample as ɵcd, InputErrorsExample as ɵce, InputFormExample as ɵcf, InputHintExample as ɵcg, InputOverviewExample as ɵch, InputPrefixSuffixExample as ɵci, ListSectionsExample as ɵcj, ListSelectionExample as ɵck, ExampleMaterialModule as ɵet, MenuIconsExample as ɵcl, MenuOverviewExample as ɵcm, NestedMenuExample as ɵcn, PaginatorConfigurableExample as ɵco, PaginatorOverviewExample as ɵcp, ProgressBarBufferExample as ɵcq, ProgressBarConfigurableExample as ɵcr, ProgressBarDeterminateExample as ɵcs, ProgressBarIndeterminateExample as ɵct, ProgressBarQueryExample as ɵcu, ProgressSpinnerConfigurableExample as ɵcv, ProgressSpinnerOverviewExample as ɵcw, RadioNgModelExample as ɵcx, RadioOverviewExample as ɵcy, SelectCustomTriggerExample as ɵcz, SelectDisabledExample as ɵda, SelectErrorStateMatcherExample as ɵdb, SelectFormExample as ɵdc, SelectHintErrorExample as ɵdd, SelectMultipleExample as ɵde, SelectNoRippleExample as ɵdf, SelectOptgroupExample as ɵdg, SelectOverviewExample as ɵdh, SelectPanelClassExample as ɵdi, SelectResetExample as ɵdj, SelectValueBindingExample as ɵdk, SidenavAutosizeExample as ɵdl, SidenavDisableCloseExample as ɵdm, SidenavDrawerOverviewExample as ɵdn, SidenavFixedExample as ɵdo, SidenavModeExample as ɵdp, SidenavOpenCloseExample as ɵdq, SidenavOverviewExample as ɵdr, SidenavPositionExample as ɵds, SidenavResponsiveExample as ɵdt, SlideToggleConfigurableExample as ɵdu, SlideToggleFormsExample as ɵdv, SlideToggleOverviewExample as ɵdw, SliderConfigurableExample as ɵdx, SliderOverviewExample as ɵdy, PizzaPartyComponent as ɵea, SnackBarComponentExample as ɵdz, SnackBarOverviewExample as ɵeb, SortOverviewExample as ɵec, TableBasicExample as ɵed, TableFilteringExample as ɵee, TableHttpExample as ɵef, TableOverviewExample as ɵeg, TablePaginationExample as ɵeh, TableSelectionExample as ɵei, TableSortingExample as ɵej, TabsOverviewExample as ɵek, TabsTemplateLabelExample as ɵel, ToolbarOverviewExample as ɵem, TooltipDelayExample as ɵen, TooltipManualExample as ɵeo, TooltipModifiedDefaultsExample as ɵeq, myCustomTooltipDefaults as ɵep, TooltipOverviewExample as ɵer, TooltipPositionExample as ɵes };
 //# sourceMappingURL=material-examples.js.map
