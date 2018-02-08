@@ -44,4 +44,7 @@
     exitDuration: <span class="hljs-number">0</span>
   }
 };
+</code></pre><h3 id="animation-behavior" class="docs-header-link docs-markdown-h3"><span header-link="animation-behavior"></span> Animation behavior</h3><p class="docs-markdown-p">There are two different animation behaviors for the fade-out of ripples shown in the Material Design specifications.</p><p class="docs-markdown-p">By default, all ripples will start fading out if the mouse or touch is released and the enter animation completed. The second possible behavior, which is also shown in the specifications, is that ripples start to fade out immediately on mouse or touch release.</p><p class="docs-markdown-p">In some scenarios, developers might prefer that behavior over the default and would like to have the same for Angular Material. This behavior can be activated by specifying the <code class="docs-markdown-code">terminateOnPointerUp</code> global ripple option.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">const</span> globalRippleConfig: RippleGlobalOptions = {
+  terminateOnPointerUp: <span class="hljs-literal">true</span>
+};
 </code></pre></div></body></html>
