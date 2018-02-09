@@ -1,0 +1,41 @@
+<html><head></head><body><div class="docs-markdown"><p class="docs-markdown-p">The <code class="docs-markdown-code">MatBottomSheet</code> service can be used to open Material Design panels to the bottom of the screen. These panels are intended primarily as an interaction on mobile devices where they can be used as an alternative to dialogs and menus.</p><div material-docs-example="bottom-sheet-overview"></div><p class="docs-markdown-p">You can open a bottom sheet by calling the <code class="docs-markdown-code">open</code> method with a component to be loaded and an optional config object. The <code class="docs-markdown-code">open</code> method will return an instance of <code class="docs-markdown-code">MatBottomSheetRef</code>:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(SocialShareComponent, {
+  ariaLabel: <span class="hljs-string">'Share on social media'</span>
+});
+</code></pre><p class="docs-markdown-p">The <code class="docs-markdown-code">MatBottomSheetRef</code> is a reference to the currently-opened bottom sheet and can be used to close it or to subscribe to events. Note that only one bottom sheet can be open at a time. Any component contained inside of a bottom sheet can inject the <code class="docs-markdown-code">MatBottomSheetRef</code> as well.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">bottomSheetRef.afterDismissed().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Bottom sheet has been dismissed.'</span>);
+});
+
+bottomSheetRef.dismiss();
+</code></pre><h3 id="sharing-data-with-the-bottom-sheet-component-" class="docs-header-link docs-markdown-h3"><span header-link="sharing-data-with-the-bottom-sheet-component-"></span> Sharing data with the bottom sheet component.</h3><p class="docs-markdown-p">If you want to pass in some data to the bottom sheet, you can do so using the <code class="docs-markdown-code">data</code> property:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(HobbitSheet, {
+  data: { names: [<span class="hljs-string">'Frodo'</span>, <span class="hljs-string">'Bilbo'</span>] },
+});
+</code></pre><p class="docs-markdown-p">Afterwards you can access the injected data using the <code class="docs-markdown-code">MAT_BOTTOM_SHEET_DATA</code> injection token:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">import {Component, Inject} from '@angular/core';
+import {MAT_BOTTOM_SHEET_DATA} from '@angular/material';
+
+@Component({
+  selector: 'hobbit-sheet',
+  template: 'passed in {{ data.names }}',
+})
+export class HobbitSheet {
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any) { }
+}
+</code></pre><h3 id="configuring-bottom-sheet-content-via-code-entrycomponents-code-" class="docs-header-link docs-markdown-h3"><span header-link="configuring-bottom-sheet-content-via-code-entrycomponents-code-"></span> Configuring bottom sheet content via <code class="docs-markdown-code">entryComponents</code></h3><p class="docs-markdown-p">Similarly to <code class="docs-markdown-code">MatDialog</code>, <code class="docs-markdown-code">MatBottomSheet</code> instantiates components at run-time. In order for it to work, the Angular compiler needs extra information to create the necessary <code class="docs-markdown-code">ComponentFactory</code> for your bottom sheet content component.</p><p class="docs-markdown-p">Any components that are include inside of a bottom sheet have to be added to the <code class="docs-markdown-code">entryComponents</code> inside your <code class="docs-markdown-code">NgModule</code>.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  imports: [
+    <span class="hljs-comment">// ...</span>
+    MatBottomSheetModule
+  ],
+
+  declarations: [
+    AppComponent,
+    ExampleBottomSheetComponent
+  ],
+
+  entryComponents: [
+    ExampleBottomSheetComponent
+  ],
+
+  providers: [],
+  bootstrap: [AppComponent]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule {}
+</code></pre><h3 id="accessibility" class="docs-header-link docs-markdown-h3"><span header-link="accessibility"></span> Accessibility</h3><p class="docs-markdown-p">By default, the bottom sheet has <code class="docs-markdown-code">role="dialog"</code> on the root element and can be labelled using the <code class="docs-markdown-code">ariaLabel</code> property on the <code class="docs-markdown-code">MatBottomSheetConfig</code>.</p><p class="docs-markdown-p">When a bottom sheet is opened, it will move focus to the first focusable element that it can find. In order to prevent users from tabbing into elements in the background, the Material bottom sheet uses a <a href="https://material.angular.io/cdk/a11y/overview#focustrap" class="docs-markdown-a">focus trap</a> to contain focus within itself. Once a bottom sheet is closed, it will return focus to the element that was focused before it was opened.</p><h4 id="focus-management" class="docs-header-link docs-markdown-h4"><span header-link="focus-management"></span> Focus management</h4><p class="docs-markdown-p">By default, the first tabbable element within the bottom sheet will receive focus upon open. This can be configured by setting the <code class="docs-markdown-code">cdkFocusInitial</code> attribute on another focusable element.</p><h4 id="keyboard-interaction" class="docs-header-link docs-markdown-h4"><span header-link="keyboard-interaction"></span> Keyboard interaction</h4><p class="docs-markdown-p">By default pressing the escape key will close the bottom sheet. While this behavior can be turned off via the <code class="docs-markdown-code">disableClose</code> option, users should generally avoid doing so as it breaks the expected interaction pattern for screen-reader users.</p></div></body></html>
