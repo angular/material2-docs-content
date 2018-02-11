@@ -389,7 +389,7 @@ var BottomSheetOverviewExampleSheet = /** @class */ (function () {
      * @param {?} event
      * @return {?}
      */
-    BottomSheetOverviewExampleSheet.prototype.onNoClick = /**
+    BottomSheetOverviewExampleSheet.prototype.openLink = /**
      * @param {?} event
      * @return {?}
      */

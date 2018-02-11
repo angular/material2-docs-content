@@ -24,7 +24,7 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BottomSheetOverviewExampleSheet {
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> bottomSheetRef: MatBottomSheetRef&lt;BottomSheetOverviewExampleSheet&gt;</span>) {}
 
-  onNoClick(event: MouseEvent): <span class="hljs-built_in">void</span> {
+  openLink(event: MouseEvent): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">this</span>.bottomSheetRef.dismiss();
     event.preventDefault();
   }

@@ -339,7 +339,7 @@ class BottomSheetOverviewExampleSheet {
      * @param {?} event
      * @return {?}
      */
-    onNoClick(event) {
+    openLink(event) {
         this.bottomSheetRef.dismiss();
         event.preventDefault();
     }

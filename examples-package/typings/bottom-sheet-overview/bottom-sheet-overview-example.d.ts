@@ -10,5 +10,5 @@ export declare class BottomSheetOverviewExample {
 export declare class BottomSheetOverviewExampleSheet {
     private bottomSheetRef;
     constructor(bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>);
-    onNoClick(event: MouseEvent): void;
+    openLink(event: MouseEvent): void;
 }
