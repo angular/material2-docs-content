@@ -10,6 +10,7 @@
 <span class="hljs-keyword">import</span> {AutocompleteFilterExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-filter/autocomplete-filter-example'</span>;
 <span class="hljs-keyword">import</span> {AutocompleteOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-overview/autocomplete-overview-example'</span>;
 <span class="hljs-keyword">import</span> {AutocompleteSimpleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./autocomplete-simple/autocomplete-simple-example'</span>;
+<span class="hljs-keyword">import</span> {BottomSheetOverviewExampleSheet,BottomSheetOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./bottom-sheet-overview/bottom-sheet-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ButtonOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./button-overview/button-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ButtonToggleExclusiveExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./button-toggle-exclusive/button-toggle-exclusive-example'</span>;
 <span class="hljs-keyword">import</span> {ButtonToggleOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./button-toggle-overview/button-toggle-overview-example'</span>;
@@ -35,12 +36,14 @@
 <span class="hljs-keyword">import</span> {DatepickerStartViewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-start-view/datepicker-start-view-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerTouchExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-touch/datepicker-touch-example'</span>;
 <span class="hljs-keyword">import</span> {DatepickerValueExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-value/datepicker-value-example'</span>;
+<span class="hljs-keyword">import</span> {DatepickerViewsSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./datepicker-views-selection/datepicker-views-selection-example'</span>;
 <span class="hljs-keyword">import</span> {DialogContentExampleDialog,DialogContentExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-content/dialog-content-example'</span>;
 <span class="hljs-keyword">import</span> {DialogDataExampleDialog,DialogDataExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-data/dialog-data-example'</span>;
 <span class="hljs-keyword">import</span> {DialogElementsExampleDialog,DialogElementsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-elements/dialog-elements-example'</span>;
 <span class="hljs-keyword">import</span> {DialogOverviewExampleDialog,DialogOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-overview/dialog-overview-example'</span>;
 <span class="hljs-keyword">import</span> {DividerOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./divider-overview/divider-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ElevationOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./elevation-overview/elevation-overview-example'</span>;
+<span class="hljs-keyword">import</span> {ExpansionExpandCollapseAllExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./expansion-expand-collapse-all/expansion-expand-collapse-all-example'</span>;
 <span class="hljs-keyword">import</span> {ExpansionOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./expansion-overview/expansion-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ExpansionStepsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./expansion-steps/expansion-steps-example'</span>;
 <span class="hljs-keyword">import</span> {MyTelInput,FormFieldCustomControlExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./form-field-custom-control/form-field-custom-control-example'</span>;
@@ -154,6 +157,12 @@
     title: <span class="hljs-string">'Simple autocomplete'</span>,
     component: AutocompleteSimpleExample
   },
+  <span class="hljs-string">'bottom-sheet-overview'</span>: {
+    title: <span class="hljs-string">'Bottom Sheet Overview'</span>,
+    component: BottomSheetOverviewExample,
+    additionalFiles: [<span class="hljs-string">"bottom-sheet-overview-example-sheet.html"</span>],
+    selectorName: <span class="hljs-string">'BottomSheetOverviewExample, BottomSheetOverviewExampleSheet'</span>
+  },
   <span class="hljs-string">'button-overview'</span>: {
     title: <span class="hljs-string">'Basic buttons'</span>,
     component: ButtonOverviewExample
@@ -254,6 +263,10 @@
     title: <span class="hljs-string">'Datepicker selected value'</span>,
     component: DatepickerValueExample
   },
+  <span class="hljs-string">'datepicker-views-selection'</span>: {
+    title: <span class="hljs-string">'Datepicker emulating a Year and month picker'</span>,
+    component: DatepickerViewsSelectionExample
+  },
   <span class="hljs-string">'dialog-content'</span>: {
     title: <span class="hljs-string">'Dialog with header, scrollable content and actions'</span>,
     component: DialogContentExample,
@@ -285,6 +298,10 @@
   <span class="hljs-string">'elevation-overview'</span>: {
     title: <span class="hljs-string">'Elevation CSS classes'</span>,
     component: ElevationOverviewExample
+  },
+  <span class="hljs-string">'expansion-expand-collapse-all'</span>: {
+    title: <span class="hljs-string">'Accordion with expand/collapse all toggles'</span>,
+    component: ExpansionExpandCollapseAllExample
   },
   <span class="hljs-string">'expansion-overview'</span>: {
     title: <span class="hljs-string">'Basic expansion panel'</span>,
@@ -634,6 +651,7 @@
   AutocompleteFilterExample,
   AutocompleteOverviewExample,
   AutocompleteSimpleExample,
+  BottomSheetOverviewExampleSheet,BottomSheetOverviewExample,
   ButtonOverviewExample,
   ButtonToggleExclusiveExample,
   ButtonToggleOverviewExample,
@@ -659,12 +677,14 @@
   DatepickerStartViewExample,
   DatepickerTouchExample,
   DatepickerValueExample,
+  DatepickerViewsSelectionExample,
   DialogContentExampleDialog,DialogContentExample,
   DialogDataExampleDialog,DialogDataExample,
   DialogElementsExampleDialog,DialogElementsExample,
   DialogOverviewExampleDialog,DialogOverviewExample,
   DividerOverviewExample,
   ElevationOverviewExample,
+  ExpansionExpandCollapseAllExample,
   ExpansionOverviewExample,
   ExpansionStepsExample,
   MyTelInput,FormFieldCustomControlExample,
