@@ -56,7 +56,7 @@ import {FormFieldThemingExample} from './form-field-theming/form-field-theming-e
 import {GridListDynamicExample} from './grid-list-dynamic/grid-list-dynamic-example';
 import {GridListOverviewExample} from './grid-list-overview/grid-list-overview-example';
 import {IconOverviewExample} from './icon-overview/icon-overview-example';
-import {IconSvgExample} from './icon-svg-example/icon-svg-example';
+import {IconSvgExample} from './icon-svg/icon-svg-example';
 import {InputAutosizeTextareaExample} from './input-autosize-textarea/input-autosize-textarea-example';
 import {InputClearableExample} from './input-clearable/input-clearable-example';
 import {InputErrorStateMatcherExample} from './input-error-state-matcher/input-error-state-matcher-example';

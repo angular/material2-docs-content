@@ -4,7 +4,7 @@ import { DialogContentExample } from './dialog-content/dialog-content-example';
 import { DialogOverviewExampleDialog } from './dialog-overview/dialog-overview-example';
 import { MyTelInput } from './form-field-custom-control/form-field-custom-control-example';
 import { FormFieldLabelExample } from './form-field-label/form-field-label-example';
-import { IconSvgExample } from './icon-svg-example/icon-svg-example';
+import { IconSvgExample } from './icon-svg/icon-svg-example';
 import { SidenavResponsiveExample } from './sidenav-responsive/sidenav-responsive-example';
 import { SlideToggleFormsExample } from './slide-toggle-forms/slide-toggle-forms-example';
 import { SnackBarOverviewExample } from './snack-bar-overview/snack-bar-overview-example';

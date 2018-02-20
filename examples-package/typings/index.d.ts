@@ -49,7 +49,7 @@ export { FormFieldThemingExample as ɵbz } from './form-field-theming/form-field
 export { GridListDynamicExample as ɵca } from './grid-list-dynamic/grid-list-dynamic-example';
 export { GridListOverviewExample as ɵcb } from './grid-list-overview/grid-list-overview-example';
 export { IconOverviewExample as ɵcc } from './icon-overview/icon-overview-example';
-export { IconSvgExample as ɵcd } from './icon-svg-example/icon-svg-example';
+export { IconSvgExample as ɵcd } from './icon-svg/icon-svg-example';
 export { InputAutosizeTextareaExample as ɵce } from './input-autosize-textarea/input-autosize-textarea-example';
 export { InputClearableExample as ɵcf } from './input-clearable/input-clearable-example';
 export { InputErrorStateMatcherExample as ɵcg } from './input-error-state-matcher/input-error-state-matcher-example';
