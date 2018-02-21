@@ -10,6 +10,7 @@ import {AutocompleteDisplayExample} from './autocomplete-display/autocomplete-di
 import {AutocompleteFilterExample} from './autocomplete-filter/autocomplete-filter-example';
 import {AutocompleteOverviewExample} from './autocomplete-overview/autocomplete-overview-example';
 import {AutocompleteSimpleExample} from './autocomplete-simple/autocomplete-simple-example';
+import {BottomSheetOverviewExampleSheet,BottomSheetOverviewExample} from './bottom-sheet-overview/bottom-sheet-overview-example';
 import {ButtonOverviewExample} from './button-overview/button-overview-example';
 import {ButtonToggleExclusiveExample} from './button-toggle-exclusive/button-toggle-exclusive-example';
 import {ButtonToggleOverviewExample} from './button-toggle-overview/button-toggle-overview-example';
@@ -35,12 +36,14 @@ import {DatepickerOverviewExample} from './datepicker-overview/datepicker-overvi
 import {DatepickerStartViewExample} from './datepicker-start-view/datepicker-start-view-example';
 import {DatepickerTouchExample} from './datepicker-touch/datepicker-touch-example';
 import {DatepickerValueExample} from './datepicker-value/datepicker-value-example';
+import {DatepickerViewsSelectionExample} from './datepicker-views-selection/datepicker-views-selection-example';
 import {DialogContentExampleDialog,DialogContentExample} from './dialog-content/dialog-content-example';
 import {DialogDataExampleDialog,DialogDataExample} from './dialog-data/dialog-data-example';
 import {DialogElementsExampleDialog,DialogElementsExample} from './dialog-elements/dialog-elements-example';
 import {DialogOverviewExampleDialog,DialogOverviewExample} from './dialog-overview/dialog-overview-example';
 import {DividerOverviewExample} from './divider-overview/divider-overview-example';
 import {ElevationOverviewExample} from './elevation-overview/elevation-overview-example';
+import {ExpansionExpandCollapseAllExample} from './expansion-expand-collapse-all/expansion-expand-collapse-all-example';
 import {ExpansionOverviewExample} from './expansion-overview/expansion-overview-example';
 import {ExpansionStepsExample} from './expansion-steps/expansion-steps-example';
 import {MyTelInput,FormFieldCustomControlExample} from './form-field-custom-control/form-field-custom-control-example';
@@ -53,7 +56,7 @@ import {FormFieldThemingExample} from './form-field-theming/form-field-theming-e
 import {GridListDynamicExample} from './grid-list-dynamic/grid-list-dynamic-example';
 import {GridListOverviewExample} from './grid-list-overview/grid-list-overview-example';
 import {IconOverviewExample} from './icon-overview/icon-overview-example';
-import {IconSvgExample} from './icon-svg-example/icon-svg-example';
+import {IconSvgExample} from './icon-svg/icon-svg-example';
 import {InputAutosizeTextareaExample} from './input-autosize-textarea/input-autosize-textarea-example';
 import {InputClearableExample} from './input-clearable/input-clearable-example';
 import {InputErrorStateMatcherExample} from './input-error-state-matcher/input-error-state-matcher-example';
@@ -153,6 +156,12 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'autocomplete-simple': {
     title: 'Simple autocomplete',
     component: AutocompleteSimpleExample
+  },
+  'bottom-sheet-overview': {
+    title: 'Bottom Sheet Overview',
+    component: BottomSheetOverviewExample,
+    additionalFiles: ["bottom-sheet-overview-example-sheet.html"],
+    selectorName: 'BottomSheetOverviewExample, BottomSheetOverviewExampleSheet'
   },
   'button-overview': {
     title: 'Basic buttons',
@@ -254,6 +263,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Datepicker selected value',
     component: DatepickerValueExample
   },
+  'datepicker-views-selection': {
+    title: 'Datepicker emulating a Year and month picker',
+    component: DatepickerViewsSelectionExample
+  },
   'dialog-content': {
     title: 'Dialog with header, scrollable content and actions',
     component: DialogContentExample,
@@ -285,6 +298,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'elevation-overview': {
     title: 'Elevation CSS classes',
     component: ElevationOverviewExample
+  },
+  'expansion-expand-collapse-all': {
+    title: 'Accordion with expand/collapse all toggles',
+    component: ExpansionExpandCollapseAllExample
   },
   'expansion-overview': {
     title: 'Basic expansion panel',
@@ -634,6 +651,7 @@ export const EXAMPLE_LIST = [
   AutocompleteFilterExample,
   AutocompleteOverviewExample,
   AutocompleteSimpleExample,
+  BottomSheetOverviewExampleSheet,BottomSheetOverviewExample,
   ButtonOverviewExample,
   ButtonToggleExclusiveExample,
   ButtonToggleOverviewExample,
@@ -659,12 +677,14 @@ export const EXAMPLE_LIST = [
   DatepickerStartViewExample,
   DatepickerTouchExample,
   DatepickerValueExample,
+  DatepickerViewsSelectionExample,
   DialogContentExampleDialog,DialogContentExample,
   DialogDataExampleDialog,DialogDataExample,
   DialogElementsExampleDialog,DialogElementsExample,
   DialogOverviewExampleDialog,DialogOverviewExample,
   DividerOverviewExample,
   ElevationOverviewExample,
+  ExpansionExpandCollapseAllExample,
   ExpansionOverviewExample,
   ExpansionStepsExample,
   MyTelInput,FormFieldCustomControlExample,
