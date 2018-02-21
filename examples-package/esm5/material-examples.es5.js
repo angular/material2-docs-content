@@ -1260,8 +1260,9 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
     DatepickerViewsSelectionExample.decorators = [
         { type: Component, args: [{
                     selector: 'datepicker-views-selection-example',
-                    template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Month and Year\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp (yearSelected)=\"chosenYearHandler($event)\" (monthSelected)=\"chosenMonthHandler($event, dp)\"></mat-datepicker></mat-form-field>",
-                    styles: ["/** No CSS for this example */ "],
+                    template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Month and Year\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp startView=\"multi-year\" (yearSelected)=\"chosenYearHandler($event)\" (monthSelected)=\"chosenMonthHandler($event, dp)\" panelClass=\"example-month-picker\"></mat-datepicker></mat-form-field>",
+                    styles: [".example-month-picker .mat-calendar-period-button { pointer-events: none; } .example-month-picker .mat-calendar-arrow { display: none; } "],
+                    encapsulation: ViewEncapsulation.None,
                     providers: [
                         // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
                         // application's root module. We provide it at the component level here, due to limitations of
