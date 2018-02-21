@@ -1,0 +1,29 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-comment">/**
+ * @title Snack-bar with configurable position
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'snack-bar-position-example'</span>,
+  templateUrl: <span class="hljs-string">'snack-bar-position-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SnackBarPositionExample {
+
+  horizontalPosition: MatSnackBarHorizontalPosition = <span class="hljs-string">'start'</span>;
+  verticalPosition: MatSnackBarVerticalPosition = <span class="hljs-string">'bottom'</span>;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> snackBar: MatSnackBar</span>) {}
+
+  openSnackBar() {
+    <span class="hljs-keyword">this</span>.snackBar.open(<span class="hljs-string">'Canonball!!'</span>, <span class="hljs-string">'End now'</span>, {
+      duration: <span class="hljs-number">500</span>,
+      horizontalPosition: <span class="hljs-keyword">this</span>.horizontalPosition,
+      verticalPosition: <span class="hljs-keyword">this</span>.verticalPosition,
+    });
+  }
+}

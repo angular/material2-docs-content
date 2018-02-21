@@ -3625,6 +3625,45 @@ var SnackBarOverviewExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Snack-bar with configurable position
+ */
+var SnackBarPositionExample = /** @class */ (function () {
+    function SnackBarPositionExample(snackBar) {
+        this.snackBar = snackBar;
+        this.horizontalPosition = 'start';
+        this.verticalPosition = 'bottom';
+    }
+    /**
+     * @return {?}
+     */
+    SnackBarPositionExample.prototype.openSnackBar = /**
+     * @return {?}
+     */
+    function () {
+        this.snackBar.open('Canonball!!', 'End now', {
+            duration: 500,
+            horizontalPosition: this.horizontalPosition,
+            verticalPosition: this.verticalPosition,
+        });
+    };
+    SnackBarPositionExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'snack-bar-position-example',
+                    template: "<mat-form-field><mat-select placeholder=\"Horizontal position\" [(value)]=\"horizontalPosition\"><mat-option value=\"start\">Start</mat-option><mat-option value=\"center\">Center</mat-option><mat-option value=\"end\">End</mat-option><mat-option value=\"left\">Left</mat-option><mat-option value=\"right\">Right</mat-option></mat-select></mat-form-field><mat-form-field><mat-select placeholder=\"Vertical position\" [(value)]=\"verticalPosition\"><mat-option value=\"top\">Top</mat-option><mat-option value=\"bottom\">Bottom</mat-option></mat-select></mat-form-field><button mat-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">Pool party!</button>",
+                },] },
+    ];
+    /** @nocollapse */
+    SnackBarPositionExample.ctorParameters = function () { return [
+        { type: _angular_material.MatSnackBar, },
+    ]; };
+    return SnackBarPositionExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Sorting overview
  */
 var SortOverviewExample = /** @class */ (function () {
@@ -4900,6 +4939,10 @@ var EXAMPLE_COMPONENTS = {
         title: 'Basic snack-bar',
         component: SnackBarOverviewExample
     },
+    'snack-bar-position': {
+        title: 'Snack-bar with configurable position',
+        component: SnackBarPositionExample
+    },
     'sort-overview': {
         title: 'Sorting overview',
         component: SortOverviewExample
@@ -5079,6 +5122,7 @@ var EXAMPLE_LIST = [
     SliderOverviewExample,
     PizzaPartyComponent, SnackBarComponentExample,
     SnackBarOverviewExample,
+    SnackBarPositionExample,
     SortOverviewExample,
     StepperOverviewExample,
     TableBasicExample,
@@ -5225,7 +5269,7 @@ exports.ɵck = InputOverviewExample;
 exports.ɵcl = InputPrefixSuffixExample;
 exports.ɵcm = ListSectionsExample;
 exports.ɵcn = ListSelectionExample;
-exports.ɵew = ExampleMaterialModule;
+exports.ɵex = ExampleMaterialModule;
 exports.ɵco = MenuIconsExample;
 exports.ɵcp = MenuOverviewExample;
 exports.ɵcq = NestedMenuExample;
@@ -5269,23 +5313,24 @@ exports.ɵeb = SliderOverviewExample;
 exports.ɵed = PizzaPartyComponent;
 exports.ɵec = SnackBarComponentExample;
 exports.ɵee = SnackBarOverviewExample;
-exports.ɵef = SortOverviewExample;
-exports.ɵeg = TableBasicExample;
-exports.ɵeh = TableFilteringExample;
-exports.ɵei = TableHttpExample;
-exports.ɵej = TableOverviewExample;
-exports.ɵek = TablePaginationExample;
-exports.ɵel = TableSelectionExample;
-exports.ɵem = TableSortingExample;
-exports.ɵen = TabsOverviewExample;
-exports.ɵeo = TabsTemplateLabelExample;
-exports.ɵep = ToolbarOverviewExample;
-exports.ɵeq = TooltipDelayExample;
-exports.ɵer = TooltipManualExample;
-exports.ɵet = TooltipModifiedDefaultsExample;
-exports.ɵes = myCustomTooltipDefaults;
-exports.ɵeu = TooltipOverviewExample;
-exports.ɵev = TooltipPositionExample;
+exports.ɵef = SnackBarPositionExample;
+exports.ɵeg = SortOverviewExample;
+exports.ɵeh = TableBasicExample;
+exports.ɵei = TableFilteringExample;
+exports.ɵej = TableHttpExample;
+exports.ɵek = TableOverviewExample;
+exports.ɵel = TablePaginationExample;
+exports.ɵem = TableSelectionExample;
+exports.ɵen = TableSortingExample;
+exports.ɵeo = TabsOverviewExample;
+exports.ɵep = TabsTemplateLabelExample;
+exports.ɵeq = ToolbarOverviewExample;
+exports.ɵer = TooltipDelayExample;
+exports.ɵes = TooltipManualExample;
+exports.ɵeu = TooltipModifiedDefaultsExample;
+exports.ɵet = myCustomTooltipDefaults;
+exports.ɵev = TooltipOverviewExample;
+exports.ɵew = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

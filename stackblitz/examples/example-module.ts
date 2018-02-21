@@ -110,6 +110,7 @@ import {SliderConfigurableExample} from './slider-configurable/slider-configurab
 import {SliderOverviewExample} from './slider-overview/slider-overview-example';
 import {PizzaPartyComponent,SnackBarComponentExample} from './snack-bar-component/snack-bar-component-example';
 import {SnackBarOverviewExample} from './snack-bar-overview/snack-bar-overview-example';
+import {SnackBarPositionExample} from './snack-bar-position/snack-bar-position-example';
 import {SortOverviewExample} from './sort-overview/sort-overview-example';
 import {StepperOverviewExample} from './stepper-overview/stepper-overview-example';
 import {TableBasicExample} from './table-basic/table-basic-example';
@@ -571,6 +572,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Basic snack-bar',
     component: SnackBarOverviewExample
   },
+  'snack-bar-position': {
+    title: 'Snack-bar with configurable position',
+    component: SnackBarPositionExample
+  },
   'sort-overview': {
     title: 'Sorting overview',
     component: SortOverviewExample
@@ -751,6 +756,7 @@ export const EXAMPLE_LIST = [
   SliderOverviewExample,
   PizzaPartyComponent,SnackBarComponentExample,
   SnackBarOverviewExample,
+  SnackBarPositionExample,
   SortOverviewExample,
   StepperOverviewExample,
   TableBasicExample,
