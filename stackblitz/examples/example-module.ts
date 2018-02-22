@@ -129,6 +129,8 @@ import {TooltipManualExample} from './tooltip-manual/tooltip-manual-example';
 import {TooltipModifiedDefaultsExample} from './tooltip-modified-defaults/tooltip-modified-defaults-example';
 import {TooltipOverviewExample} from './tooltip-overview/tooltip-overview-example';
 import {TooltipPositionExample} from './tooltip-position/tooltip-position-example';
+import {TreeFlatOverviewExample} from './tree-flat-overview/tree-flat-overview-example';
+import {TreeNestedOverviewExample} from './tree-nested-overview/tree-nested-overview-example';
 
 export interface LiveExample {
   title: string;
@@ -648,6 +650,14 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Tooltip with custom position',
     component: TooltipPositionExample
   },
+  'tree-flat-overview': {
+    title: 'Tree with flat nodes',
+    component: TreeFlatOverviewExample
+  },
+  'tree-nested-overview': {
+    title: 'Tree with nested nodes',
+    component: TreeNestedOverviewExample
+  },
 };
 
 export const EXAMPLE_LIST = [
@@ -775,6 +785,8 @@ export const EXAMPLE_LIST = [
   TooltipModifiedDefaultsExample,
   TooltipOverviewExample,
   TooltipPositionExample,
+  TreeFlatOverviewExample,
+  TreeNestedOverviewExample,
 ];
 
 @NgModule({

@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/operators/startWith'), require('rxjs/operators/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('rxjs/Subject'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('rxjs/observable/merge'), require('rxjs/observable/of'), require('rxjs/operators/catchError'), require('rxjs/operators/switchMap')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/operators/startWith', 'rxjs/operators/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', 'rxjs/Subject', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', 'rxjs/observable/merge', 'rxjs/observable/of', 'rxjs/operators/catchError', 'rxjs/operators/switchMap'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.operators,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.Rx,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.Rx.Observable,global.Rx.Observable,global.Rx.operators,global.Rx.operators));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_operators_startWith,rxjs_operators_map,_angular_cdk_collections,rxjs_BehaviorSubject,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,rxjs_Subject,_angular_platformBrowser,_angular_material_sidenav,_angular_cdk_layout,_angular_common_http,rxjs_observable_merge,rxjs_observable_of,rxjs_operators_catchError,rxjs_operators_switchMap) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('rxjs/operators/startWith'), require('rxjs/operators/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('rxjs/Subject'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('rxjs/observable/merge'), require('rxjs/observable/of'), require('rxjs/operators/catchError'), require('rxjs/operators/switchMap'), require('@angular/material/tree')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', 'rxjs/operators/startWith', 'rxjs/operators/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', 'rxjs/Subject', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', 'rxjs/observable/merge', 'rxjs/observable/of', 'rxjs/operators/catchError', 'rxjs/operators/switchMap', '@angular/material/tree'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.Rx.operators,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.Rx,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.Rx.Observable,global.Rx.Observable,global.Rx.operators,global.Rx.operators,global.ng.material.tree));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_cdk_tree,_angular_material,rxjs_operators_startWith,rxjs_operators_map,_angular_cdk_collections,rxjs_BehaviorSubject,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,rxjs_Subject,_angular_platformBrowser,_angular_material_sidenav,_angular_cdk_layout,_angular_common_http,rxjs_observable_merge,rxjs_observable_of,rxjs_operators_catchError,rxjs_operators_switchMap,_angular_material_tree) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -50,6 +50,7 @@ var ExampleMaterialModule = /** @class */ (function () {
         { type: _angular_core.NgModule, args: [{
                     exports: [
                         _angular_cdk_table.CdkTableModule,
+                        _angular_cdk_tree.CdkTreeModule,
                         _angular_material.MatAutocompleteModule,
                         _angular_material.MatButtonModule,
                         _angular_material.MatButtonToggleModule,
@@ -81,6 +82,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                         _angular_material.MatTabsModule,
                         _angular_material.MatToolbarModule,
                         _angular_material.MatTooltipModule,
+                        _angular_material.MatTreeModule
                     ]
                 },] },
     ];
@@ -4501,6 +4503,272 @@ var TooltipPositionExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * File node data with nested structure.
+ * Each node has a filename, and a type or a list of children.
+ */
+var FileNode = /** @class */ (function () {
+    function FileNode() {
+    }
+    return FileNode;
+}());
+/**
+ * Flat node with expandable and level information
+ */
+var FileFlatNode = /** @class */ (function () {
+    function FileFlatNode() {
+    }
+    return FileFlatNode;
+}());
+/**
+ * The file structure tree data in string. The data could be parsed into a Json object
+ */
+var TREE_DATA = "{\"Tina\":\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}}";
+/**
+ * File database, it can build a tree structured Json object from string.
+ * Each node in Json object represents a file or a directory. For a file, it has filename and type.
+ * For a directory, it has filename and children (a list of files or directories).
+ * The input will be a json object string, and the output is a list of `FileNode` with nested
+ * structure.
+ */
+var FileDatabase = /** @class */ (function () {
+    function FileDatabase() {
+        this.dataChange = new rxjs_BehaviorSubject.BehaviorSubject([]);
+        this.initialize();
+    }
+    Object.defineProperty(FileDatabase.prototype, "data", {
+        get: /**
+         * @return {?}
+         */
+        function () { return this.dataChange.value; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    FileDatabase.prototype.initialize = /**
+     * @return {?}
+     */
+    function () {
+        // Parse the string to json object.
+        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
+        var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        // Notify the change.
+        this.dataChange.next(data);
+    };
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     */
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     * @param {?} value
+     * @param {?} level
+     * @return {?}
+     */
+    FileDatabase.prototype.buildFileTree = /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     * @param {?} value
+     * @param {?} level
+     * @return {?}
+     */
+    function (value, level) {
+        var /** @type {?} */ data = [];
+        for (var /** @type {?} */ k in value) {
+            var /** @type {?} */ v = value[k];
+            var /** @type {?} */ node = new FileNode();
+            node.filename = "" + k;
+            if (v === null || v === undefined) {
+                // no action
+            }
+            else if (typeof v === 'object') {
+                node.children = this.buildFileTree(v, level + 1);
+            }
+            else {
+                node.type = v;
+            }
+            data.push(node);
+        }
+        return data;
+    };
+    FileDatabase.decorators = [
+        { type: _angular_core.Injectable },
+    ];
+    /** @nocollapse */
+    FileDatabase.ctorParameters = function () { return []; };
+    return FileDatabase;
+}());
+/**
+ * \@title Tree with flat nodes
+ */
+var TreeFlatOverviewExample = /** @class */ (function () {
+    function TreeFlatOverviewExample(database) {
+        var _this = this;
+        this.transformer = function (node, level) {
+            var /** @type {?} */ flatNode = new FileFlatNode();
+            flatNode.filename = node.filename;
+            flatNode.type = node.type;
+            flatNode.level = level;
+            flatNode.expandable = !!node.children;
+            return flatNode;
+        };
+        this._getLevel = function (node) { return node.level; };
+        this._isExpandable = function (node) { return node.expandable; };
+        this._getChildren = function (node) { return rxjs_observable_of.of(node.children); };
+        this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
+        this.treeFlattener = new _angular_material_tree.MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
+        this.treeControl = new _angular_cdk_tree.FlatTreeControl(this._getLevel, this._isExpandable);
+        this.dataSource = new _angular_material_tree.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+        database.dataChange.subscribe(function (data) {
+            _this.dataSource.data = data;
+        });
+    }
+    TreeFlatOverviewExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'tree-flat-overview-example',
+                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\" class=\"example-tree\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding>{{node.filename}} : {{node.type}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}} : {{node.type}}</mat-tree-node></mat-tree>",
+                    styles: [".example-tree ul, .example-tree li { -webkit-margin-before: 0; -webkit-margin-after: 0; list-style-type: none; } "],
+                    providers: [FileDatabase]
+                },] },
+    ];
+    /** @nocollapse */
+    TreeFlatOverviewExample.ctorParameters = function () { return [
+        { type: FileDatabase, },
+    ]; };
+    return TreeFlatOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Json node data with nested structure. Each node has a filename and a value or a list of children
+ */
+var FileNode$1 = /** @class */ (function () {
+    function FileNode() {
+    }
+    return FileNode;
+}());
+/**
+ * The Json tree data in string. The data could be parsed into Json object
+ */
+var TREE_DATA$1 = "{\"Tina\":\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}}";
+/**
+ * File database, it can build a tree structured Json object from string.
+ * Each node in Json object represents a file or a directory. For a file, it has filename and type.
+ * For a directory, it has filename and children (a list of files or directories).
+ * The input will be a json object string, and the output is a list of `FileNode` with nested
+ * structure.
+ */
+var FileDatabase$1 = /** @class */ (function () {
+    function FileDatabase() {
+        this.dataChange = new rxjs_BehaviorSubject.BehaviorSubject([]);
+        this.initialize();
+    }
+    Object.defineProperty(FileDatabase.prototype, "data", {
+        get: /**
+         * @return {?}
+         */
+        function () { return this.dataChange.value; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    FileDatabase.prototype.initialize = /**
+     * @return {?}
+     */
+    function () {
+        // Parse the string to json object.
+        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$1);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
+        var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        // Notify the change.
+        this.dataChange.next(data);
+    };
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     */
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     * @param {?} value
+     * @param {?} level
+     * @return {?}
+     */
+    FileDatabase.prototype.buildFileTree = /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     * @param {?} value
+     * @param {?} level
+     * @return {?}
+     */
+    function (value, level) {
+        var /** @type {?} */ data = [];
+        for (var /** @type {?} */ k in value) {
+            var /** @type {?} */ v = value[k];
+            var /** @type {?} */ node = new FileNode$1();
+            node.filename = "" + k;
+            if (v === null || v === undefined) {
+                // no action
+            }
+            else if (typeof v === 'object') {
+                node.children = this.buildFileTree(v, level + 1);
+            }
+            else {
+                node.type = v;
+            }
+            data.push(node);
+        }
+        return data;
+    };
+    FileDatabase.decorators = [
+        { type: _angular_core.Injectable },
+    ];
+    /** @nocollapse */
+    FileDatabase.ctorParameters = function () { return []; };
+    return FileDatabase;
+}());
+/**
+ * \@title Tree with nested nodes
+ */
+var TreeNestedOverviewExample = /** @class */ (function () {
+    function TreeNestedOverviewExample(database) {
+        var _this = this;
+        this._getChildren = function (node) { return rxjs_observable_of.of(node.children); };
+        this.hasNestedChild = function (_, nodeData) { return !(nodeData.type); };
+        this.nestedTreeControl = new _angular_cdk_tree.NestedTreeControl(this._getChildren);
+        this.nestedDataSource = new _angular_material_tree.MatTreeNestedDataSource();
+        database.dataChange.subscribe(function (data) { return _this.nestedDataSource.data = data; });
+    }
+    TreeNestedOverviewExample.decorators = [
+        { type: _angular_core.Component, args: [{
+                    selector: 'tree-nested-overview-example',
+                    template: "<mat-tree [dataSource]=\"nestedDataSource\" [treeControl]=\"nestedTreeControl\" class=\"example-tree\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle><li><div>{{node.filename}}: {{node.type}}</div></li></mat-tree-node><mat-nested-tree-node *matTreeNodeDef=\"let node; when: hasNestedChild\"><li><div class=\"mat-tree-node\"><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}</div><ul [class.example-tree-invisible]=\"!nestedTreeControl.isExpanded(node)\"><ng-container matTreeNodeOutlet></ng-container></ul></li></mat-nested-tree-node></mat-tree>",
+                    styles: [".example-tree-invisible { display: none; } .example-tree ul, .example-tree li { -webkit-margin-before: 0; -webkit-margin-after: 0; list-style-type: none; } "],
+                    providers: [FileDatabase$1]
+                },] },
+    ];
+    /** @nocollapse */
+    TreeNestedOverviewExample.ctorParameters = function () { return [
+        { type: FileDatabase$1, },
+    ]; };
+    return TreeNestedOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * @record
  */
 
@@ -5015,6 +5283,14 @@ var EXAMPLE_COMPONENTS = {
         title: 'Tooltip with custom position',
         component: TooltipPositionExample
     },
+    'tree-flat-overview': {
+        title: 'Tree with flat nodes',
+        component: TreeFlatOverviewExample
+    },
+    'tree-nested-overview': {
+        title: 'Tree with nested nodes',
+        component: TreeNestedOverviewExample
+    },
 };
 var EXAMPLE_LIST = [
     AutocompleteAutoActiveFirstOptionExample,
@@ -5141,6 +5417,8 @@ var EXAMPLE_LIST = [
     TooltipModifiedDefaultsExample,
     TooltipOverviewExample,
     TooltipPositionExample,
+    TreeFlatOverviewExample,
+    TreeNestedOverviewExample,
 ];
 var ExampleModule = /** @class */ (function () {
     function ExampleModule() {
@@ -5269,7 +5547,7 @@ exports.ɵck = InputOverviewExample;
 exports.ɵcl = InputPrefixSuffixExample;
 exports.ɵcm = ListSectionsExample;
 exports.ɵcn = ListSelectionExample;
-exports.ɵex = ExampleMaterialModule;
+exports.ɵfb = ExampleMaterialModule;
 exports.ɵco = MenuIconsExample;
 exports.ɵcp = MenuOverviewExample;
 exports.ɵcq = NestedMenuExample;
@@ -5331,6 +5609,10 @@ exports.ɵeu = TooltipModifiedDefaultsExample;
 exports.ɵet = myCustomTooltipDefaults;
 exports.ɵev = TooltipOverviewExample;
 exports.ɵew = TooltipPositionExample;
+exports.ɵex = FileDatabase;
+exports.ɵey = TreeFlatOverviewExample;
+exports.ɵez = FileDatabase$1;
+exports.ɵfa = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

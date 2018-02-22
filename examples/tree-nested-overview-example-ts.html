@@ -1,0 +1,132 @@
+<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {NestedTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
+<span class="hljs-keyword">import</span> {MatTreeNestedDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
+<span class="hljs-keyword">import</span> {of} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/observable/of'</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/BehaviorSubject'</span>;
+
+<span class="hljs-comment">/**
+ * Json node data with nested structure. Each node has a filename and a value or a list of children
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FileNode {
+  children: FileNode[];
+  filename: <span class="hljs-built_in">string</span>;
+  <span class="hljs-keyword">type</span>: <span class="hljs-built_in">any</span>;
+}
+
+<span class="hljs-comment">/**
+ * The Json tree data in string. The data could be parsed into Json object
+ */</span>
+<span class="hljs-keyword">const</span> TREE_DATA = <span class="hljs-string">`{"Tina":
+  {
+    "Documents": {
+      "angular": {
+        "src": {
+          "core": "ts",
+          "compiler": "ts"
+        }
+      },
+      "material2": {
+        "src": {
+          "button": "ts",
+          "checkbox": "ts",
+          "input": "ts"
+        }
+      }
+    },
+    "Downloads": {
+        "Tutorial": "html",
+        "November": "pdf",
+        "October": "pdf"
+    },
+    "Pictures": {
+        "Sun": "png",
+        "Woods": "jpg",
+        "Photo Booth Library": {
+          "Contents": "dir",
+          "Pictures": "dir"
+        }
+    },
+    "Applications": {
+        "Chrome": "app",
+        "Calendar": "app",
+        "Webstorm": "app"
+    }
+}}`</span>;
+
+<span class="hljs-comment">/**
+ * File database, it can build a tree structured Json object from string.
+ * Each node in Json object represents a file or a directory. For a file, it has filename and type.
+ * For a directory, it has filename and children (a list of files or directories).
+ * The input will be a json object string, and the output is a list of `FileNode` with nested
+ * structure.
+ */</span>
+<span class="hljs-meta">@Injectable</span>()
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FileDatabase {
+  dataChange: BehaviorSubject&lt;FileNode[]&gt; = <span class="hljs-keyword">new</span> BehaviorSubject&lt;FileNode[]&gt;([]);
+
+  <span class="hljs-keyword">get</span> data(): FileNode[] { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dataChange.value; }
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">this</span>.initialize();
+  }
+
+  initialize() {
+    <span class="hljs-comment">// Parse the string to json object.</span>
+    <span class="hljs-keyword">const</span> dataObject = <span class="hljs-built_in">JSON</span>.parse(TREE_DATA);
+
+    <span class="hljs-comment">// Build the tree nodes from Json object. The result is a list of `FileNode` with nested</span>
+    <span class="hljs-comment">//     file node as children.</span>
+    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">this</span>.buildFileTree(dataObject, <span class="hljs-number">0</span>);
+
+    <span class="hljs-comment">// Notify the change.</span>
+    <span class="hljs-keyword">this</span>.dataChange.next(data);
+  }
+
+  <span class="hljs-comment">/**
+   * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+   * The return value is the list of `FileNode`.
+   */</span>
+  buildFileTree(value: <span class="hljs-built_in">any</span>, level: <span class="hljs-built_in">number</span>) {
+    <span class="hljs-keyword">let</span> data: <span class="hljs-built_in">any</span>[] = [];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> k <span class="hljs-keyword">in</span> value) {
+      <span class="hljs-keyword">let</span> v = value[k];
+      <span class="hljs-keyword">let</span> node = <span class="hljs-keyword">new</span> FileNode();
+      node.filename = <span class="hljs-string">`<span class="hljs-subst">${k}</span>`</span>;
+      <span class="hljs-keyword">if</span> (v === <span class="hljs-literal">null</span> || v === <span class="hljs-literal">undefined</span>) {
+        <span class="hljs-comment">// no action</span>
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> v === <span class="hljs-string">'object'</span>) {
+        node.children = <span class="hljs-keyword">this</span>.buildFileTree(v, level + <span class="hljs-number">1</span>);
+      } <span class="hljs-keyword">else</span> {
+        node.type = v;
+      }
+      data.push(node);
+    }
+    <span class="hljs-keyword">return</span> data;
+  }
+}
+
+<span class="hljs-comment">/**
+ * @title Tree with nested nodes
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tree-nested-overview-example'</span>,
+  templateUrl: <span class="hljs-string">'tree-nested-overview-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'tree-nested-overview-example.css'</span>],
+  providers: [FileDatabase]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TreeNestedOverviewExample {
+  nestedTreeControl: NestedTreeControl&lt;FileNode&gt;;
+
+  nestedDataSource: MatTreeNestedDataSource&lt;FileNode&gt;;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">database: FileDatabase</span>) {
+    <span class="hljs-keyword">this</span>.nestedTreeControl = <span class="hljs-keyword">new</span> NestedTreeControl&lt;FileNode&gt;(<span class="hljs-keyword">this</span>._getChildren);
+    <span class="hljs-keyword">this</span>.nestedDataSource = <span class="hljs-keyword">new</span> MatTreeNestedDataSource();
+
+    database.dataChange.subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> <span class="hljs-keyword">this</span>.nestedDataSource.data = data);
+  }
+
+  <span class="hljs-keyword">private</span> _getChildren = <span class="hljs-function">(<span class="hljs-params">node: FileNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> of(node.children); };
+
+  hasNestedChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, nodeData: FileNode</span>) =&gt;</span> {<span class="hljs-keyword">return</span> !(nodeData.type); };
+}

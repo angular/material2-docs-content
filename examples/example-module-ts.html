@@ -129,6 +129,8 @@
 <span class="hljs-keyword">import</span> {TooltipModifiedDefaultsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-modified-defaults/tooltip-modified-defaults-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-overview/tooltip-overview-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-position/tooltip-position-example'</span>;
+<span class="hljs-keyword">import</span> {TreeFlatOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-flat-overview/tree-flat-overview-example'</span>;
+<span class="hljs-keyword">import</span> {TreeNestedOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-nested-overview/tree-nested-overview-example'</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> LiveExample {
   title: <span class="hljs-built_in">string</span>;
@@ -648,6 +650,14 @@
     title: <span class="hljs-string">'Tooltip with custom position'</span>,
     component: TooltipPositionExample
   },
+  <span class="hljs-string">'tree-flat-overview'</span>: {
+    title: <span class="hljs-string">'Tree with flat nodes'</span>,
+    component: TreeFlatOverviewExample
+  },
+  <span class="hljs-string">'tree-nested-overview'</span>: {
+    title: <span class="hljs-string">'Tree with nested nodes'</span>,
+    component: TreeNestedOverviewExample
+  },
 };
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> EXAMPLE_LIST = [
@@ -775,6 +785,8 @@
   TooltipModifiedDefaultsExample,
   TooltipOverviewExample,
   TooltipPositionExample,
+  TreeFlatOverviewExample,
+  TreeNestedOverviewExample,
 ];
 
 <span class="hljs-meta">@NgModule</span>({

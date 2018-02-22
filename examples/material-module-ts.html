@@ -1,6 +1,7 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
 <span class="hljs-keyword">import</span> {CdkTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/table'</span>;
+<span class="hljs-keyword">import</span> {CdkTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
 <span class="hljs-keyword">import</span> {
   MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatPaginatorModule,
   MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule,
@@ -8,12 +9,13 @@
   MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule,
   MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule,
   MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule,
-  MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule
+  MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule, MatTreeModule
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   exports: [
     CdkTableModule,
+    CdkTreeModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -45,6 +47,7 @@
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+    MatTreeModule
   ]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleMaterialModule {}
