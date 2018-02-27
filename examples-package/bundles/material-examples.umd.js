@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('rxjs/operators/startWith'), require('rxjs/operators/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('rxjs/Subject'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('rxjs/observable/merge'), require('rxjs/observable/of'), require('rxjs/operators/catchError'), require('rxjs/operators/switchMap'), require('@angular/material/tree')) :
-	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', 'rxjs/operators/startWith', 'rxjs/operators/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', 'rxjs/Subject', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', 'rxjs/observable/merge', 'rxjs/observable/of', 'rxjs/operators/catchError', 'rxjs/operators/switchMap', '@angular/material/tree'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.Rx.operators,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.Rx,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.Rx.Observable,global.Rx.Observable,global.Rx.operators,global.Rx.operators,global.ng.material.tree));
-}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_cdk_tree,_angular_material,rxjs_operators_startWith,rxjs_operators_map,_angular_cdk_collections,rxjs_BehaviorSubject,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,rxjs_Subject,_angular_platformBrowser,_angular_material_sidenav,_angular_cdk_layout,_angular_common_http,rxjs_observable_merge,rxjs_observable_of,rxjs_operators_catchError,rxjs_operators_switchMap,_angular_material_tree) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/table'), require('@angular/material'), require('rxjs/operators/startWith'), require('rxjs/operators/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('rxjs/Subject'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('rxjs/observable/merge'), require('rxjs/observable/of'), require('rxjs/operators/catchError'), require('rxjs/operators/switchMap')) :
+	typeof define === 'function' && define.amd ? define(['exports', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/table', '@angular/material', 'rxjs/operators/startWith', 'rxjs/operators/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', 'rxjs/Subject', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', 'rxjs/observable/merge', 'rxjs/observable/of', 'rxjs/operators/catchError', 'rxjs/operators/switchMap'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = global.ng['material-examples'] || {}),global.ng.core,global.ng.forms,global.ng.common,global.ng.cdk.table,global.ng.material,global.Rx.operators,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.Rx,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.Rx.Observable,global.Rx.Observable,global.Rx.operators,global.Rx.operators));
+}(this, (function (exports,_angular_core,_angular_forms,_angular_common,_angular_cdk_table,_angular_material,rxjs_operators_startWith,rxjs_operators_map,_angular_cdk_collections,rxjs_BehaviorSubject,_angular_cdk_keycodes,_angular_materialMomentAdapter,_angular_material_core,_rollupMoment__default,_angular_cdk_a11y,_angular_cdk_coercion,rxjs_Subject,_angular_platformBrowser,_angular_material_sidenav,_angular_cdk_layout,_angular_common_http,rxjs_observable_merge,rxjs_observable_of,rxjs_operators_catchError,rxjs_operators_switchMap) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -50,7 +50,6 @@ var ExampleMaterialModule = /** @class */ (function () {
         { type: _angular_core.NgModule, args: [{
                     exports: [
                         _angular_cdk_table.CdkTableModule,
-                        _angular_cdk_tree.CdkTreeModule,
                         _angular_material.MatAutocompleteModule,
                         _angular_material.MatButtonModule,
                         _angular_material.MatButtonToggleModule,
@@ -67,22 +66,21 @@ var ExampleMaterialModule = /** @class */ (function () {
                         _angular_material.MatInputModule,
                         _angular_material.MatListModule,
                         _angular_material.MatMenuModule,
-                        _angular_material.MatPaginatorModule,
                         _angular_material.MatProgressBarModule,
                         _angular_material.MatProgressSpinnerModule,
                         _angular_material.MatRadioModule,
                         _angular_material.MatSelectModule,
-                        _angular_material.MatSidenavModule,
                         _angular_material.MatSlideToggleModule,
                         _angular_material.MatSliderModule,
+                        _angular_material.MatSidenavModule,
                         _angular_material.MatSnackBarModule,
-                        _angular_material.MatSortModule,
                         _angular_material.MatStepperModule,
-                        _angular_material.MatTableModule,
                         _angular_material.MatTabsModule,
                         _angular_material.MatToolbarModule,
                         _angular_material.MatTooltipModule,
-                        _angular_material.MatTreeModule
+                        _angular_material.MatPaginatorModule,
+                        _angular_material.MatSortModule,
+                        _angular_material.MatTableModule
                     ]
                 },] },
     ];
@@ -348,68 +346,6 @@ var AutocompleteSimpleExample = /** @class */ (function () {
     /** @nocollapse */
     AutocompleteSimpleExample.ctorParameters = function () { return []; };
     return AutocompleteSimpleExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Bottom Sheet Overview
- */
-var BottomSheetOverviewExample = /** @class */ (function () {
-    function BottomSheetOverviewExample(bottomSheet) {
-        this.bottomSheet = bottomSheet;
-    }
-    /**
-     * @return {?}
-     */
-    BottomSheetOverviewExample.prototype.openBottomSheet = /**
-     * @return {?}
-     */
-    function () {
-        this.bottomSheet.open(BottomSheetOverviewExampleSheet);
-    };
-    BottomSheetOverviewExample.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'bottom-sheet-overview-example',
-                    template: "<p>You have receive a file called \"cat-picture.jpeg\".</p><button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>",
-                    styles: ["/** No CSS for this example */ "],
-                },] },
-    ];
-    /** @nocollapse */
-    BottomSheetOverviewExample.ctorParameters = function () { return [
-        { type: _angular_material.MatBottomSheet, },
-    ]; };
-    return BottomSheetOverviewExample;
-}());
-var BottomSheetOverviewExampleSheet = /** @class */ (function () {
-    function BottomSheetOverviewExampleSheet(bottomSheetRef) {
-        this.bottomSheetRef = bottomSheetRef;
-    }
-    /**
-     * @param {?} event
-     * @return {?}
-     */
-    BottomSheetOverviewExampleSheet.prototype.openLink = /**
-     * @param {?} event
-     * @return {?}
-     */
-    function (event) {
-        this.bottomSheetRef.dismiss();
-        event.preventDefault();
-    };
-    BottomSheetOverviewExampleSheet.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'bottom-sheet-overview-example-sheet',
-                    template: "<mat-nav-list><a href=\"https://keep.google.com/\" mat-list-item (click)=\"openLink($event)\"><span mat-line>Google Keep</span> <span mat-line>Add to a note</span> </a><a href=\"https://docs.google.com/\" mat-list-item (click)=\"openLink($event)\"><span mat-line>Google Docs</span> <span mat-line>Embed in a document</span> </a><a href=\"https://plus.google.com/\" mat-list-item (click)=\"openLink($event)\"><span mat-line>Google Plus</span> <span mat-line>Share with your friends</span> </a><a href=\"https://hangouts.google.com/\" mat-list-item (click)=\"openLink($event)\"><span mat-line>Google Hangouts</span> <span mat-line>Show to your coworkers</span></a></mat-nav-list>",
-                },] },
-    ];
-    /** @nocollapse */
-    BottomSheetOverviewExampleSheet.ctorParameters = function () { return [
-        { type: _angular_material.MatBottomSheetRef, },
-    ]; };
-    return BottomSheetOverviewExampleSheet;
 }());
 
 /**
@@ -1215,80 +1151,6 @@ var DatepickerValueExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var moment$2 = _rollupMoment__default__default || _rollupMoment__default;
-// See the Moment.js docs for the meaning of these formats:
-// https://momentjs.com/docs/#/displaying/format/
-var MY_FORMATS$1 = {
-    parse: {
-        dateInput: 'MM/YYYY',
-    },
-    display: {
-        dateInput: 'MM/YYYY',
-        monthYearLabel: 'MMM YYYY',
-        dateA11yLabel: 'LL',
-        monthYearA11yLabel: 'MMMM YYYY',
-    },
-};
-/**
- * \@title Datepicker emulating a Year and month picker
- */
-var DatepickerViewsSelectionExample = /** @class */ (function () {
-    function DatepickerViewsSelectionExample() {
-        this.date = new _angular_forms.FormControl(moment$2());
-    }
-    /**
-     * @param {?} normalizedYear
-     * @return {?}
-     */
-    DatepickerViewsSelectionExample.prototype.chosenYearHandler = /**
-     * @param {?} normalizedYear
-     * @return {?}
-     */
-    function (normalizedYear) {
-        var /** @type {?} */ ctrlValue = this.date.value;
-        ctrlValue.year(normalizedYear.year());
-        this.date.setValue(ctrlValue);
-    };
-    /**
-     * @param {?} normlizedMonth
-     * @param {?} datepicker
-     * @return {?}
-     */
-    DatepickerViewsSelectionExample.prototype.chosenMonthHandler = /**
-     * @param {?} normlizedMonth
-     * @param {?} datepicker
-     * @return {?}
-     */
-    function (normlizedMonth, datepicker) {
-        var /** @type {?} */ ctrlValue = this.date.value;
-        ctrlValue.month(normlizedMonth.month());
-        this.date.setValue(ctrlValue);
-        datepicker.close();
-    };
-    DatepickerViewsSelectionExample.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'datepicker-views-selection-example',
-                    template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Month and Year\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp startView=\"multi-year\" (yearSelected)=\"chosenYearHandler($event)\" (monthSelected)=\"chosenMonthHandler($event, dp)\" panelClass=\"example-month-picker\"></mat-datepicker></mat-form-field>",
-                    styles: [".example-month-picker .mat-calendar-period-button { pointer-events: none; } .example-month-picker .mat-calendar-arrow { display: none; } "],
-                    encapsulation: _angular_core.ViewEncapsulation.None,
-                    providers: [
-                        // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
-                        // application's root module. We provide it at the component level here, due to limitations of
-                        // our example generation script.
-                        { provide: _angular_material_core.DateAdapter, useClass: _angular_materialMomentAdapter.MomentDateAdapter, deps: [_angular_material_core.MAT_DATE_LOCALE] },
-                        { provide: _angular_material_core.MAT_DATE_FORMATS, useValue: MY_FORMATS$1 },
-                    ],
-                },] },
-    ];
-    /** @nocollapse */
-    DatepickerViewsSelectionExample.ctorParameters = function () { return []; };
-    return DatepickerViewsSelectionExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
 /**
  * \@title Dialog with header, scrollable content and actions
  */
@@ -1550,31 +1412,6 @@ var ElevationOverviewExample = /** @class */ (function () {
     /** @nocollapse */
     ElevationOverviewExample.ctorParameters = function () { return []; };
     return ElevationOverviewExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Accordion with expand/collapse all toggles
- */
-var ExpansionExpandCollapseAllExample = /** @class */ (function () {
-    function ExpansionExpandCollapseAllExample() {
-    }
-    ExpansionExpandCollapseAllExample.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'expansion-toggle-all-example',
-                    template: "<div class=\"example-action-buttons\"><button mat-button (click)=\"accordion.openAll()\">Expand All</button> <button mat-button (click)=\"accordion.closeAll()\">Collapse All</button></div><mat-accordion class=\"example-headers-align\" [multi]=\"true\"><mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age<mat-icon>account_circle</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput type=\"number\" min=\"1\" placeholder=\"Age\"></mat-form-field></mat-expansion-panel><mat-expansion-panel [disabled]=\"true\"><mat-expansion-panel-header><mat-panel-title>Destination</mat-panel-title><mat-panel-description>Type the country name<mat-icon>map</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Country\"></mat-form-field></mat-expansion-panel><mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Day of the trip</mat-panel-title><mat-panel-description>Inform the date you wish to travel<mat-icon>date_range</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Date\" [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></mat-form-field><mat-datepicker #picker></mat-datepicker></mat-expansion-panel></mat-accordion>",
-                    styles: [".example-action-buttons { padding-bottom: 20px; } .example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
-                },] },
-    ];
-    /** @nocollapse */
-    ExpansionExpandCollapseAllExample.ctorParameters = function () { return []; };
-    ExpansionExpandCollapseAllExample.propDecorators = {
-        "accordion": [{ type: _angular_core.ViewChild, args: [_angular_material.MatAccordion,] },],
-    };
-    return ExpansionExpandCollapseAllExample;
 }());
 
 /**
@@ -4503,272 +4340,6 @@ var TooltipPositionExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * File node data with nested structure.
- * Each node has a filename, and a type or a list of children.
- */
-var FileNode = /** @class */ (function () {
-    function FileNode() {
-    }
-    return FileNode;
-}());
-/**
- * Flat node with expandable and level information
- */
-var FileFlatNode = /** @class */ (function () {
-    function FileFlatNode() {
-    }
-    return FileFlatNode;
-}());
-/**
- * The file structure tree data in string. The data could be parsed into a Json object
- */
-var TREE_DATA = "{\"Tina\":\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}}";
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-var FileDatabase = /** @class */ (function () {
-    function FileDatabase() {
-        this.dataChange = new rxjs_BehaviorSubject.BehaviorSubject([]);
-        this.initialize();
-    }
-    Object.defineProperty(FileDatabase.prototype, "data", {
-        get: /**
-         * @return {?}
-         */
-        function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @return {?}
-     */
-    FileDatabase.prototype.initialize = /**
-     * @return {?}
-     */
-    function () {
-        // Parse the string to json object.
-        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    };
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     */
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     * @param {?} value
-     * @param {?} level
-     * @return {?}
-     */
-    FileDatabase.prototype.buildFileTree = /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     * @param {?} value
-     * @param {?} level
-     * @return {?}
-     */
-    function (value, level) {
-        var /** @type {?} */ data = [];
-        for (var /** @type {?} */ k in value) {
-            var /** @type {?} */ v = value[k];
-            var /** @type {?} */ node = new FileNode();
-            node.filename = "" + k;
-            if (v === null || v === undefined) {
-                // no action
-            }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.type = v;
-            }
-            data.push(node);
-        }
-        return data;
-    };
-    FileDatabase.decorators = [
-        { type: _angular_core.Injectable },
-    ];
-    /** @nocollapse */
-    FileDatabase.ctorParameters = function () { return []; };
-    return FileDatabase;
-}());
-/**
- * \@title Tree with flat nodes
- */
-var TreeFlatOverviewExample = /** @class */ (function () {
-    function TreeFlatOverviewExample(database) {
-        var _this = this;
-        this.transformer = function (node, level) {
-            var /** @type {?} */ flatNode = new FileFlatNode();
-            flatNode.filename = node.filename;
-            flatNode.type = node.type;
-            flatNode.level = level;
-            flatNode.expandable = !!node.children;
-            return flatNode;
-        };
-        this._getLevel = function (node) { return node.level; };
-        this._isExpandable = function (node) { return node.expandable; };
-        this._getChildren = function (node) { return rxjs_observable_of.of(node.children); };
-        this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
-        this.treeFlattener = new _angular_material_tree.MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
-        this.treeControl = new _angular_cdk_tree.FlatTreeControl(this._getLevel, this._isExpandable);
-        this.dataSource = new _angular_material_tree.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe(function (data) {
-            _this.dataSource.data = data;
-        });
-    }
-    TreeFlatOverviewExample.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'tree-flat-overview-example',
-                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\" class=\"example-tree\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding>{{node.filename}} : {{node.type}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}} : {{node.type}}</mat-tree-node></mat-tree>",
-                    styles: [".example-tree ul, .example-tree li { -webkit-margin-before: 0; -webkit-margin-after: 0; list-style-type: none; } "],
-                    providers: [FileDatabase]
-                },] },
-    ];
-    /** @nocollapse */
-    TreeFlatOverviewExample.ctorParameters = function () { return [
-        { type: FileDatabase, },
-    ]; };
-    return TreeFlatOverviewExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * Json node data with nested structure. Each node has a filename and a value or a list of children
- */
-var FileNode$1 = /** @class */ (function () {
-    function FileNode() {
-    }
-    return FileNode;
-}());
-/**
- * The Json tree data in string. The data could be parsed into Json object
- */
-var TREE_DATA$1 = "{\"Tina\":\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}}";
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-var FileDatabase$1 = /** @class */ (function () {
-    function FileDatabase() {
-        this.dataChange = new rxjs_BehaviorSubject.BehaviorSubject([]);
-        this.initialize();
-    }
-    Object.defineProperty(FileDatabase.prototype, "data", {
-        get: /**
-         * @return {?}
-         */
-        function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    /**
-     * @return {?}
-     */
-    FileDatabase.prototype.initialize = /**
-     * @return {?}
-     */
-    function () {
-        // Parse the string to json object.
-        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$1);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    };
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     */
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     * @param {?} value
-     * @param {?} level
-     * @return {?}
-     */
-    FileDatabase.prototype.buildFileTree = /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     * @param {?} value
-     * @param {?} level
-     * @return {?}
-     */
-    function (value, level) {
-        var /** @type {?} */ data = [];
-        for (var /** @type {?} */ k in value) {
-            var /** @type {?} */ v = value[k];
-            var /** @type {?} */ node = new FileNode$1();
-            node.filename = "" + k;
-            if (v === null || v === undefined) {
-                // no action
-            }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.type = v;
-            }
-            data.push(node);
-        }
-        return data;
-    };
-    FileDatabase.decorators = [
-        { type: _angular_core.Injectable },
-    ];
-    /** @nocollapse */
-    FileDatabase.ctorParameters = function () { return []; };
-    return FileDatabase;
-}());
-/**
- * \@title Tree with nested nodes
- */
-var TreeNestedOverviewExample = /** @class */ (function () {
-    function TreeNestedOverviewExample(database) {
-        var _this = this;
-        this._getChildren = function (node) { return rxjs_observable_of.of(node.children); };
-        this.hasNestedChild = function (_, nodeData) { return !(nodeData.type); };
-        this.nestedTreeControl = new _angular_cdk_tree.NestedTreeControl(this._getChildren);
-        this.nestedDataSource = new _angular_material_tree.MatTreeNestedDataSource();
-        database.dataChange.subscribe(function (data) { return _this.nestedDataSource.data = data; });
-    }
-    TreeNestedOverviewExample.decorators = [
-        { type: _angular_core.Component, args: [{
-                    selector: 'tree-nested-overview-example',
-                    template: "<mat-tree [dataSource]=\"nestedDataSource\" [treeControl]=\"nestedTreeControl\" class=\"example-tree\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle><li><div>{{node.filename}}: {{node.type}}</div></li></mat-tree-node><mat-nested-tree-node *matTreeNodeDef=\"let node; when: hasNestedChild\"><li><div class=\"mat-tree-node\"><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}</div><ul [class.example-tree-invisible]=\"!nestedTreeControl.isExpanded(node)\"><ng-container matTreeNodeOutlet></ng-container></ul></li></mat-nested-tree-node></mat-tree>",
-                    styles: [".example-tree-invisible { display: none; } .example-tree ul, .example-tree li { -webkit-margin-before: 0; -webkit-margin-after: 0; list-style-type: none; } "],
-                    providers: [FileDatabase$1]
-                },] },
-    ];
-    /** @nocollapse */
-    TreeNestedOverviewExample.ctorParameters = function () { return [
-        { type: FileDatabase$1, },
-    ]; };
-    return TreeNestedOverviewExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
  * @record
  */
 
@@ -4792,12 +4363,6 @@ var EXAMPLE_COMPONENTS = {
     'autocomplete-simple': {
         title: 'Simple autocomplete',
         component: AutocompleteSimpleExample
-    },
-    'bottom-sheet-overview': {
-        title: 'Bottom Sheet Overview',
-        component: BottomSheetOverviewExample,
-        additionalFiles: ["bottom-sheet-overview-example-sheet.html"],
-        selectorName: 'BottomSheetOverviewExample, BottomSheetOverviewExampleSheet'
     },
     'button-overview': {
         title: 'Basic buttons',
@@ -4899,10 +4464,6 @@ var EXAMPLE_COMPONENTS = {
         title: 'Datepicker selected value',
         component: DatepickerValueExample
     },
-    'datepicker-views-selection': {
-        title: 'Datepicker emulating a Year and month picker',
-        component: DatepickerViewsSelectionExample
-    },
     'dialog-content': {
         title: 'Dialog with header, scrollable content and actions',
         component: DialogContentExample,
@@ -4934,10 +4495,6 @@ var EXAMPLE_COMPONENTS = {
     'elevation-overview': {
         title: 'Elevation CSS classes',
         component: ElevationOverviewExample
-    },
-    'expansion-expand-collapse-all': {
-        title: 'Accordion with expand/collapse all toggles',
-        component: ExpansionExpandCollapseAllExample
     },
     'expansion-overview': {
         title: 'Basic expansion panel',
@@ -5283,14 +4840,6 @@ var EXAMPLE_COMPONENTS = {
         title: 'Tooltip with custom position',
         component: TooltipPositionExample
     },
-    'tree-flat-overview': {
-        title: 'Tree with flat nodes',
-        component: TreeFlatOverviewExample
-    },
-    'tree-nested-overview': {
-        title: 'Tree with nested nodes',
-        component: TreeNestedOverviewExample
-    },
 };
 var EXAMPLE_LIST = [
     AutocompleteAutoActiveFirstOptionExample,
@@ -5298,7 +4847,6 @@ var EXAMPLE_LIST = [
     AutocompleteFilterExample,
     AutocompleteOverviewExample,
     AutocompleteSimpleExample,
-    BottomSheetOverviewExampleSheet, BottomSheetOverviewExample,
     ButtonOverviewExample,
     ButtonToggleExclusiveExample,
     ButtonToggleOverviewExample,
@@ -5324,14 +4872,12 @@ var EXAMPLE_LIST = [
     DatepickerStartViewExample,
     DatepickerTouchExample,
     DatepickerValueExample,
-    DatepickerViewsSelectionExample,
     DialogContentExampleDialog, DialogContentExample,
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
     DialogOverviewExampleDialog, DialogOverviewExample,
     DividerOverviewExample,
     ElevationOverviewExample,
-    ExpansionExpandCollapseAllExample,
     ExpansionOverviewExample,
     ExpansionStepsExample,
     MyTelInput, FormFieldCustomControlExample,
@@ -5417,8 +4963,6 @@ var EXAMPLE_LIST = [
     TooltipModifiedDefaultsExample,
     TooltipOverviewExample,
     TooltipPositionExample,
-    TreeFlatOverviewExample,
-    TreeNestedOverviewExample,
 ];
 var ExampleModule = /** @class */ (function () {
     function ExampleModule() {
@@ -5486,133 +5030,124 @@ exports.ɵb = AutocompleteDisplayExample;
 exports.ɵc = AutocompleteFilterExample;
 exports.ɵd = AutocompleteOverviewExample;
 exports.ɵe = AutocompleteSimpleExample;
-exports.ɵf = BottomSheetOverviewExample;
-exports.ɵg = BottomSheetOverviewExampleSheet;
-exports.ɵh = ButtonOverviewExample;
-exports.ɵi = ButtonToggleExclusiveExample;
-exports.ɵj = ButtonTypesExample;
-exports.ɵk = CardOverviewExample;
-exports.ɵl = CdkTableBasicExample;
-exports.ɵm = CheckboxConfigurableExample;
-exports.ɵn = CheckboxOverviewExample;
-exports.ɵo = ChipsInputExample;
-exports.ɵp = ChipsOverviewExample;
-exports.ɵq = ChipsStackedExample;
-exports.ɵr = DatepickerApiExample;
-exports.ɵs = DatepickerCustomIconExample;
-exports.ɵt = DatepickerDisabledExample;
-exports.ɵu = DatepickerEventsExample;
-exports.ɵv = DatepickerFilterExample;
-exports.ɵx = DatepickerFormatsExample;
-exports.ɵw = MY_FORMATS;
-exports.ɵy = DatepickerLocaleExample;
-exports.ɵz = DatepickerMinMaxExample;
-exports.ɵba = DatepickerMomentExample;
-exports.ɵbb = DatepickerStartViewExample;
-exports.ɵbc = DatepickerTouchExample;
-exports.ɵbd = DatepickerValueExample;
-exports.ɵbf = DatepickerViewsSelectionExample;
-exports.ɵbe = MY_FORMATS$1;
-exports.ɵbg = DialogContentExample;
-exports.ɵbh = DialogContentExampleDialog;
-exports.ɵbi = DialogDataExample;
-exports.ɵbj = DialogDataExampleDialog;
-exports.ɵbk = DialogElementsExample;
-exports.ɵbl = DialogElementsExampleDialog;
-exports.ɵbm = DialogOverviewExample;
-exports.ɵbn = DialogOverviewExampleDialog;
-exports.ɵbo = DividerOverviewExample;
-exports.ɵbp = ElevationOverviewExample;
-exports.ɵbq = ExpansionExpandCollapseAllExample;
-exports.ɵbr = ExpansionStepsExample;
-exports.ɵbt = FormFieldCustomControlExample;
-exports.ɵbs = MyTelInput;
-exports.ɵbu = FormFieldErrorExample;
-exports.ɵbv = FormFieldHintExample;
-exports.ɵbw = FormFieldLabelExample;
-exports.ɵbx = FormFieldOverviewExample;
-exports.ɵby = FormFieldPrefixSuffixExample;
-exports.ɵbz = FormFieldThemingExample;
-exports.ɵca = GridListDynamicExample;
-exports.ɵcb = GridListOverviewExample;
-exports.ɵcc = IconOverviewExample;
-exports.ɵcd = IconSvgExample;
-exports.ɵce = InputAutosizeTextareaExample;
-exports.ɵcf = InputClearableExample;
-exports.ɵcg = InputErrorStateMatcherExample;
-exports.ɵch = InputErrorsExample;
-exports.ɵci = InputFormExample;
-exports.ɵcj = InputHintExample;
-exports.ɵck = InputOverviewExample;
-exports.ɵcl = InputPrefixSuffixExample;
-exports.ɵcm = ListSectionsExample;
-exports.ɵcn = ListSelectionExample;
-exports.ɵfb = ExampleMaterialModule;
-exports.ɵco = MenuIconsExample;
-exports.ɵcp = MenuOverviewExample;
-exports.ɵcq = NestedMenuExample;
-exports.ɵcr = PaginatorConfigurableExample;
-exports.ɵcs = PaginatorOverviewExample;
-exports.ɵct = ProgressBarBufferExample;
-exports.ɵcu = ProgressBarConfigurableExample;
-exports.ɵcv = ProgressBarDeterminateExample;
-exports.ɵcw = ProgressBarIndeterminateExample;
-exports.ɵcx = ProgressBarQueryExample;
-exports.ɵcy = ProgressSpinnerConfigurableExample;
-exports.ɵcz = ProgressSpinnerOverviewExample;
-exports.ɵda = RadioNgModelExample;
-exports.ɵdb = RadioOverviewExample;
-exports.ɵdc = SelectCustomTriggerExample;
-exports.ɵdd = SelectDisabledExample;
-exports.ɵde = SelectErrorStateMatcherExample;
-exports.ɵdf = SelectFormExample;
-exports.ɵdg = SelectHintErrorExample;
-exports.ɵdh = SelectMultipleExample;
-exports.ɵdi = SelectNoRippleExample;
-exports.ɵdj = SelectOptgroupExample;
-exports.ɵdk = SelectOverviewExample;
-exports.ɵdl = SelectPanelClassExample;
-exports.ɵdm = SelectResetExample;
-exports.ɵdn = SelectValueBindingExample;
-exports.ɵdo = SidenavAutosizeExample;
-exports.ɵdp = SidenavDisableCloseExample;
-exports.ɵdq = SidenavDrawerOverviewExample;
-exports.ɵdr = SidenavFixedExample;
-exports.ɵds = SidenavModeExample;
-exports.ɵdt = SidenavOpenCloseExample;
-exports.ɵdu = SidenavOverviewExample;
-exports.ɵdv = SidenavPositionExample;
-exports.ɵdw = SidenavResponsiveExample;
-exports.ɵdx = SlideToggleConfigurableExample;
-exports.ɵdy = SlideToggleFormsExample;
-exports.ɵdz = SlideToggleOverviewExample;
-exports.ɵea = SliderConfigurableExample;
-exports.ɵeb = SliderOverviewExample;
-exports.ɵed = PizzaPartyComponent;
-exports.ɵec = SnackBarComponentExample;
-exports.ɵee = SnackBarOverviewExample;
-exports.ɵef = SnackBarPositionExample;
-exports.ɵeg = SortOverviewExample;
-exports.ɵeh = TableBasicExample;
-exports.ɵei = TableFilteringExample;
-exports.ɵej = TableHttpExample;
-exports.ɵek = TableOverviewExample;
-exports.ɵel = TablePaginationExample;
-exports.ɵem = TableSelectionExample;
-exports.ɵen = TableSortingExample;
-exports.ɵeo = TabsOverviewExample;
-exports.ɵep = TabsTemplateLabelExample;
-exports.ɵeq = ToolbarOverviewExample;
-exports.ɵer = TooltipDelayExample;
-exports.ɵes = TooltipManualExample;
-exports.ɵeu = TooltipModifiedDefaultsExample;
-exports.ɵet = myCustomTooltipDefaults;
-exports.ɵev = TooltipOverviewExample;
-exports.ɵew = TooltipPositionExample;
-exports.ɵex = FileDatabase;
-exports.ɵey = TreeFlatOverviewExample;
-exports.ɵez = FileDatabase$1;
-exports.ɵfa = TreeNestedOverviewExample;
+exports.ɵf = ButtonOverviewExample;
+exports.ɵg = ButtonToggleExclusiveExample;
+exports.ɵh = ButtonTypesExample;
+exports.ɵi = CardOverviewExample;
+exports.ɵj = CdkTableBasicExample;
+exports.ɵk = CheckboxConfigurableExample;
+exports.ɵl = CheckboxOverviewExample;
+exports.ɵm = ChipsInputExample;
+exports.ɵn = ChipsOverviewExample;
+exports.ɵo = ChipsStackedExample;
+exports.ɵp = DatepickerApiExample;
+exports.ɵq = DatepickerCustomIconExample;
+exports.ɵr = DatepickerDisabledExample;
+exports.ɵs = DatepickerEventsExample;
+exports.ɵt = DatepickerFilterExample;
+exports.ɵv = DatepickerFormatsExample;
+exports.ɵu = MY_FORMATS;
+exports.ɵw = DatepickerLocaleExample;
+exports.ɵx = DatepickerMinMaxExample;
+exports.ɵy = DatepickerMomentExample;
+exports.ɵz = DatepickerStartViewExample;
+exports.ɵba = DatepickerTouchExample;
+exports.ɵbb = DatepickerValueExample;
+exports.ɵbc = DialogContentExample;
+exports.ɵbd = DialogContentExampleDialog;
+exports.ɵbe = DialogDataExample;
+exports.ɵbf = DialogDataExampleDialog;
+exports.ɵbg = DialogElementsExample;
+exports.ɵbh = DialogElementsExampleDialog;
+exports.ɵbi = DialogOverviewExample;
+exports.ɵbj = DialogOverviewExampleDialog;
+exports.ɵbk = DividerOverviewExample;
+exports.ɵbl = ElevationOverviewExample;
+exports.ɵbm = ExpansionStepsExample;
+exports.ɵbo = FormFieldCustomControlExample;
+exports.ɵbn = MyTelInput;
+exports.ɵbp = FormFieldErrorExample;
+exports.ɵbq = FormFieldHintExample;
+exports.ɵbr = FormFieldLabelExample;
+exports.ɵbs = FormFieldOverviewExample;
+exports.ɵbt = FormFieldPrefixSuffixExample;
+exports.ɵbu = FormFieldThemingExample;
+exports.ɵbv = GridListDynamicExample;
+exports.ɵbw = GridListOverviewExample;
+exports.ɵbx = IconOverviewExample;
+exports.ɵby = IconSvgExample;
+exports.ɵbz = InputAutosizeTextareaExample;
+exports.ɵca = InputClearableExample;
+exports.ɵcb = InputErrorStateMatcherExample;
+exports.ɵcc = InputErrorsExample;
+exports.ɵcd = InputFormExample;
+exports.ɵce = InputHintExample;
+exports.ɵcf = InputOverviewExample;
+exports.ɵcg = InputPrefixSuffixExample;
+exports.ɵch = ListSectionsExample;
+exports.ɵci = ListSelectionExample;
+exports.ɵes = ExampleMaterialModule;
+exports.ɵcj = MenuIconsExample;
+exports.ɵck = MenuOverviewExample;
+exports.ɵcl = NestedMenuExample;
+exports.ɵcm = PaginatorConfigurableExample;
+exports.ɵcn = PaginatorOverviewExample;
+exports.ɵco = ProgressBarBufferExample;
+exports.ɵcp = ProgressBarConfigurableExample;
+exports.ɵcq = ProgressBarDeterminateExample;
+exports.ɵcr = ProgressBarIndeterminateExample;
+exports.ɵcs = ProgressBarQueryExample;
+exports.ɵct = ProgressSpinnerConfigurableExample;
+exports.ɵcu = ProgressSpinnerOverviewExample;
+exports.ɵcv = RadioNgModelExample;
+exports.ɵcw = RadioOverviewExample;
+exports.ɵcx = SelectCustomTriggerExample;
+exports.ɵcy = SelectDisabledExample;
+exports.ɵcz = SelectErrorStateMatcherExample;
+exports.ɵda = SelectFormExample;
+exports.ɵdb = SelectHintErrorExample;
+exports.ɵdc = SelectMultipleExample;
+exports.ɵdd = SelectNoRippleExample;
+exports.ɵde = SelectOptgroupExample;
+exports.ɵdf = SelectOverviewExample;
+exports.ɵdg = SelectPanelClassExample;
+exports.ɵdh = SelectResetExample;
+exports.ɵdi = SelectValueBindingExample;
+exports.ɵdj = SidenavAutosizeExample;
+exports.ɵdk = SidenavDisableCloseExample;
+exports.ɵdl = SidenavDrawerOverviewExample;
+exports.ɵdm = SidenavFixedExample;
+exports.ɵdn = SidenavModeExample;
+exports.ɵdo = SidenavOpenCloseExample;
+exports.ɵdp = SidenavOverviewExample;
+exports.ɵdq = SidenavPositionExample;
+exports.ɵdr = SidenavResponsiveExample;
+exports.ɵds = SlideToggleConfigurableExample;
+exports.ɵdt = SlideToggleFormsExample;
+exports.ɵdu = SlideToggleOverviewExample;
+exports.ɵdv = SliderConfigurableExample;
+exports.ɵdw = SliderOverviewExample;
+exports.ɵdy = PizzaPartyComponent;
+exports.ɵdx = SnackBarComponentExample;
+exports.ɵdz = SnackBarOverviewExample;
+exports.ɵea = SnackBarPositionExample;
+exports.ɵeb = SortOverviewExample;
+exports.ɵec = TableBasicExample;
+exports.ɵed = TableFilteringExample;
+exports.ɵee = TableHttpExample;
+exports.ɵef = TableOverviewExample;
+exports.ɵeg = TablePaginationExample;
+exports.ɵeh = TableSelectionExample;
+exports.ɵei = TableSortingExample;
+exports.ɵej = TabsOverviewExample;
+exports.ɵek = TabsTemplateLabelExample;
+exports.ɵel = ToolbarOverviewExample;
+exports.ɵem = TooltipDelayExample;
+exports.ɵen = TooltipManualExample;
+exports.ɵep = TooltipModifiedDefaultsExample;
+exports.ɵeo = myCustomTooltipDefaults;
+exports.ɵeq = TooltipOverviewExample;
+exports.ɵer = TooltipPositionExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
