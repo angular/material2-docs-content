@@ -5,21 +5,20 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { ChangeDetectorRef, Component, ElementRef, Inject, Injectable, Input, NgModule, ViewChild, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { NgModule, Component, ViewEncapsulation, Inject, ViewChild, ElementRef, Input, ChangeDetectorRef, Injectable } from '@angular/core';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
-import { MAT_DIALOG_DATA, MAT_TOOLTIP_DEFAULT_OPTIONS, MatAccordion, MatAutocompleteModule, MatBottomSheet, MatBottomSheetRef, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatDividerModule, MatExpansionModule, MatFormFieldControl, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule } from '@angular/material';
+import { MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatPaginatorModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule, MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
+import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { startWith } from 'rxjs/operators/startWith';
 import { map } from 'rxjs/operators/map';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
+import { ENTER, COMMA } from '@angular/cdk/keycodes';
+import { MomentDateAdapter, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import * as _rollupMoment from 'moment';
-import _rollupMoment__default from 'moment';
+import _rollupMoment__default, {  } from 'moment';
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Subject } from 'rxjs/Subject';
@@ -31,7 +30,8 @@ import { merge } from 'rxjs/observable/merge';
 import { of } from 'rxjs/observable/of';
 import { catchError } from 'rxjs/operators/catchError';
 import { switchMap } from 'rxjs/operators/switchMap';
-import { MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource } from '@angular/material/tree';
+import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
+import { CommonModule } from '@angular/common';
 
 /**
  * @fileoverview added by tsickle
@@ -219,7 +219,6 @@ AutocompleteFilterExample.ctorParameters = () => [];
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-
 /**
  * \@title Autocomplete overview
  */
@@ -504,15 +503,11 @@ CdkTableBasicExample.ctorParameters = () => [];
 /**
  * Constants used to fill up our data base.
  */
-const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+const /** @type {?} */ COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+const /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * @record
- */
-
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
@@ -848,10 +843,10 @@ DatepickerFilterExample.ctorParameters = () => [];
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const moment = _rollupMoment__default || _rollupMoment;
+const /** @type {?} */ moment = _rollupMoment__default || _rollupMoment;
 // See the Moment.js docs for the meaning of these formats:
 // https://momentjs.com/docs/#/displaying/format/
-const MY_FORMATS = {
+const /** @type {?} */ MY_FORMATS = {
     parse: {
         dateInput: 'LL',
     },
@@ -958,7 +953,7 @@ DatepickerMinMaxExample.ctorParameters = () => [];
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const moment$1 = _rollupMoment__default || _rollupMoment;
+const /** @type {?} */ moment$1 = _rollupMoment__default || _rollupMoment;
 const ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker that uses Moment.js dates
@@ -1073,10 +1068,10 @@ DatepickerValueExample.ctorParameters = () => [];
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const moment$2 = _rollupMoment__default || _rollupMoment;
+const /** @type {?} */ moment$2 = _rollupMoment__default || _rollupMoment;
 // See the Moment.js docs for the meaning of these formats:
 // https://momentjs.com/docs/#/displaying/format/
-const MY_FORMATS$1 = {
+const /** @type {?} */ MY_FORMATS$1 = {
     parse: {
         dateInput: 'MM/YYYY',
     },
@@ -3441,11 +3436,7 @@ TableBasicExample.decorators = [
 ];
 /** @nocollapse */
 TableBasicExample.ctorParameters = () => [];
-/**
- * @record
- */
-
-const ELEMENT_DATA = [
+const /** @type {?} */ ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3499,11 +3490,7 @@ TableFilteringExample.decorators = [
 ];
 /** @nocollapse */
 TableFilteringExample.ctorParameters = () => [];
-/**
- * @record
- */
-
-const ELEMENT_DATA$1 = [
+const /** @type {?} */ ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3585,14 +3572,6 @@ TableHttpExample.propDecorators = {
     "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
     "sort": [{ type: ViewChild, args: [MatSort,] },],
 };
-/**
- * @record
- */
-
-/**
- * @record
- */
-
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
@@ -3684,14 +3663,11 @@ function createNewUser(id) {
 /**
  * Constants used to fill up our data base.
  */
-const COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+const /** @type {?} */ COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+const /** @type {?} */ NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * @record
- */
 
 /**
  * @fileoverview added by tsickle
@@ -3726,11 +3702,7 @@ TablePaginationExample.ctorParameters = () => [];
 TablePaginationExample.propDecorators = {
     "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
 };
-/**
- * @record
- */
-
-const ELEMENT_DATA$2 = [
+const /** @type {?} */ ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3794,11 +3766,7 @@ TableSelectionExample.decorators = [
 ];
 /** @nocollapse */
 TableSelectionExample.ctorParameters = () => [];
-/**
- * @record
- */
-
-const ELEMENT_DATA$3 = [
+const /** @type {?} */ ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3854,11 +3822,7 @@ TableSortingExample.ctorParameters = () => [];
 TableSortingExample.propDecorators = {
     "sort": [{ type: ViewChild, args: [MatSort,] },],
 };
-/**
- * @record
- */
-
-const ELEMENT_DATA$4 = [
+const /** @type {?} */ ELEMENT_DATA$4 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4002,7 +3966,7 @@ TooltipManualExample.ctorParameters = () => [];
 /**
  * Custom options the configure the tooltip's default show/hide delays.
  */
-const myCustomTooltipDefaults = {
+const /** @type {?} */ myCustomTooltipDefaults = {
     showDelay: 1000,
     hideDelay: 1000,
     touchendHideDelay: 1000,
@@ -4084,7 +4048,7 @@ class FileFlatNode {
 /**
  * The file structure tree data in string. The data could be parsed into a Json object
  */
-const TREE_DATA = `{"Tina":
+const /** @type {?} */ TREE_DATA = `{"Tina":
   {
     "Documents": {
       "angular": {
@@ -4233,7 +4197,7 @@ class FileNode$1 {
 /**
  * The Json tree data in string. The data could be parsed into Json object
  */
-const TREE_DATA$1 = `{"Tina":
+const /** @type {?} */ TREE_DATA$1 = `{"Tina":
   {
     "Documents": {
       "angular": {
@@ -4361,11 +4325,7 @@ TreeNestedOverviewExample.ctorParameters = () => [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-/**
- * @record
- */
-
-const EXAMPLE_COMPONENTS = {
+const /** @type {?} */ EXAMPLE_COMPONENTS = {
     'autocomplete-auto-active-first-option': {
         title: 'Highlight the first autocomplete option',
         component: AutocompleteAutoActiveFirstOptionExample
@@ -4885,7 +4845,7 @@ const EXAMPLE_COMPONENTS = {
         component: TreeNestedOverviewExample
     },
 };
-const EXAMPLE_LIST = [
+const /** @type {?} */ EXAMPLE_LIST = [
     AutocompleteAutoActiveFirstOptionExample,
     AutocompleteDisplayExample,
     AutocompleteFilterExample,
@@ -5069,9 +5029,6 @@ class ExampleData {
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
- */
-/**
- * Generated bundle index. Do not edit.
  */
 
 export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CheckboxConfigurableExample as ɵm, CheckboxOverviewExample as ɵn, ChipsInputExample as ɵo, ChipsOverviewExample as ɵp, ChipsStackedExample as ɵq, DatepickerApiExample as ɵr, DatepickerCustomIconExample as ɵs, DatepickerDisabledExample as ɵt, DatepickerEventsExample as ɵu, DatepickerFilterExample as ɵv, DatepickerFormatsExample as ɵx, MY_FORMATS as ɵw, DatepickerLocaleExample as ɵy, DatepickerMinMaxExample as ɵz, DatepickerMomentExample as ɵba, DatepickerStartViewExample as ɵbb, DatepickerTouchExample as ɵbc, DatepickerValueExample as ɵbd, DatepickerViewsSelectionExample as ɵbf, MY_FORMATS$1 as ɵbe, DialogContentExample as ɵbg, DialogContentExampleDialog as ɵbh, DialogDataExample as ɵbi, DialogDataExampleDialog as ɵbj, DialogElementsExample as ɵbk, DialogElementsExampleDialog as ɵbl, DialogOverviewExample as ɵbm, DialogOverviewExampleDialog as ɵbn, DividerOverviewExample as ɵbo, ElevationOverviewExample as ɵbp, ExpansionExpandCollapseAllExample as ɵbq, ExpansionStepsExample as ɵbr, FormFieldCustomControlExample as ɵbt, MyTelInput as ɵbs, FormFieldErrorExample as ɵbu, FormFieldHintExample as ɵbv, FormFieldLabelExample as ɵbw, FormFieldOverviewExample as ɵbx, FormFieldPrefixSuffixExample as ɵby, FormFieldThemingExample as ɵbz, GridListDynamicExample as ɵca, GridListOverviewExample as ɵcb, IconOverviewExample as ɵcc, IconSvgExample as ɵcd, InputAutosizeTextareaExample as ɵce, InputClearableExample as ɵcf, InputErrorStateMatcherExample as ɵcg, InputErrorsExample as ɵch, InputFormExample as ɵci, InputHintExample as ɵcj, InputOverviewExample as ɵck, InputPrefixSuffixExample as ɵcl, ListSectionsExample as ɵcm, ListSelectionExample as ɵcn, ExampleMaterialModule as ɵfb, MenuIconsExample as ɵco, MenuOverviewExample as ɵcp, NestedMenuExample as ɵcq, PaginatorConfigurableExample as ɵcr, PaginatorOverviewExample as ɵcs, ProgressBarBufferExample as ɵct, ProgressBarConfigurableExample as ɵcu, ProgressBarDeterminateExample as ɵcv, ProgressBarIndeterminateExample as ɵcw, ProgressBarQueryExample as ɵcx, ProgressSpinnerConfigurableExample as ɵcy, ProgressSpinnerOverviewExample as ɵcz, RadioNgModelExample as ɵda, RadioOverviewExample as ɵdb, SelectCustomTriggerExample as ɵdc, SelectDisabledExample as ɵdd, SelectErrorStateMatcherExample as ɵde, SelectFormExample as ɵdf, SelectHintErrorExample as ɵdg, SelectMultipleExample as ɵdh, SelectNoRippleExample as ɵdi, SelectOptgroupExample as ɵdj, SelectOverviewExample as ɵdk, SelectPanelClassExample as ɵdl, SelectResetExample as ɵdm, SelectValueBindingExample as ɵdn, SidenavAutosizeExample as ɵdo, SidenavDisableCloseExample as ɵdp, SidenavDrawerOverviewExample as ɵdq, SidenavFixedExample as ɵdr, SidenavModeExample as ɵds, SidenavOpenCloseExample as ɵdt, SidenavOverviewExample as ɵdu, SidenavPositionExample as ɵdv, SidenavResponsiveExample as ɵdw, SlideToggleConfigurableExample as ɵdx, SlideToggleFormsExample as ɵdy, SlideToggleOverviewExample as ɵdz, SliderConfigurableExample as ɵea, SliderOverviewExample as ɵeb, PizzaPartyComponent as ɵed, SnackBarComponentExample as ɵec, SnackBarOverviewExample as ɵee, SnackBarPositionExample as ɵef, SortOverviewExample as ɵeg, TableBasicExample as ɵeh, TableFilteringExample as ɵei, TableHttpExample as ɵej, TableOverviewExample as ɵek, TablePaginationExample as ɵel, TableSelectionExample as ɵem, TableSortingExample as ɵen, TabsOverviewExample as ɵeo, TabsTemplateLabelExample as ɵep, ToolbarOverviewExample as ɵeq, TooltipDelayExample as ɵer, TooltipManualExample as ɵes, TooltipModifiedDefaultsExample as ɵeu, myCustomTooltipDefaults as ɵet, TooltipOverviewExample as ɵev, TooltipPositionExample as ɵew, FileDatabase as ɵex, TreeFlatOverviewExample as ɵey, FileDatabase$1 as ɵez, TreeNestedOverviewExample as ɵfa };

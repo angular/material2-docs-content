@@ -5,23 +5,21 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { ChangeDetectorRef, Component, ElementRef, Inject, Injectable, Input, NgModule, ViewChild, ViewEncapsulation } from '@angular/core';
-import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { NgModule, Component, ViewEncapsulation, Inject, ViewChild, ElementRef, Input, ChangeDetectorRef, Injectable } from '@angular/core';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
-import { MAT_DIALOG_DATA, MAT_TOOLTIP_DEFAULT_OPTIONS, MatAccordion, MatAutocompleteModule, MatBottomSheet, MatBottomSheetRef, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatDividerModule, MatExpansionModule, MatFormFieldControl, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule } from '@angular/material';
+import { MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatPaginatorModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule, MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
+import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { startWith } from 'rxjs/operators/startWith';
 import { map } from 'rxjs/operators/map';
 import { __extends } from 'tslib';
-import * as tslib_1 from 'tslib';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
+import { ENTER, COMMA } from '@angular/cdk/keycodes';
+import { MomentDateAdapter, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import * as _rollupMoment from 'moment';
-import _rollupMoment__default from 'moment';
+import _rollupMoment__default, {  } from 'moment';
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Subject } from 'rxjs/Subject';
@@ -33,7 +31,8 @@ import { merge } from 'rxjs/observable/merge';
 import { of } from 'rxjs/observable/of';
 import { catchError } from 'rxjs/operators/catchError';
 import { switchMap } from 'rxjs/operators/switchMap';
-import { MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource } from '@angular/material/tree';
+import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
+import { CommonModule } from '@angular/common';
 
 /**
  * @fileoverview added by tsickle
@@ -575,19 +574,18 @@ var CdkTableBasicExample = /** @class */ (function () {
 /**
  * Constants used to fill up our data base.
  */
-var COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+var /** @type {?} */ COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+var /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 /**
- * @record
- */
-
-/**
  * An example database that the data source uses to retrieve data for the table.
  */
-var ExampleDatabase = /** @class */ (function () {
+var /**
+ * An example database that the data source uses to retrieve data for the table.
+ */
+ExampleDatabase = /** @class */ (function () {
     function ExampleDatabase() {
         /**
          * Stream that emits whenever the data has been modified.
@@ -647,7 +645,14 @@ var ExampleDatabase = /** @class */ (function () {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-var ExampleDataSource = /** @class */ (function (_super) {
+var /**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+ExampleDataSource = /** @class */ (function (_super) {
     __extends(ExampleDataSource, _super);
     function ExampleDataSource(_exampleDatabase) {
         var _this = _super.call(this) || this;
@@ -974,10 +979,10 @@ var DatepickerFilterExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var moment = _rollupMoment__default || _rollupMoment;
+var /** @type {?} */ moment = _rollupMoment__default || _rollupMoment;
 // See the Moment.js docs for the meaning of these formats:
 // https://momentjs.com/docs/#/displaying/format/
-var MY_FORMATS = {
+var /** @type {?} */ MY_FORMATS = {
     parse: {
         dateInput: 'LL',
     },
@@ -1087,7 +1092,7 @@ var DatepickerMinMaxExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var moment$1 = _rollupMoment__default || _rollupMoment;
+var /** @type {?} */ moment$1 = _rollupMoment__default || _rollupMoment;
 var ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker that uses Moment.js dates
@@ -1211,10 +1216,10 @@ var DatepickerValueExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var moment$2 = _rollupMoment__default || _rollupMoment;
+var /** @type {?} */ moment$2 = _rollupMoment__default || _rollupMoment;
 // See the Moment.js docs for the meaning of these formats:
 // https://momentjs.com/docs/#/displaying/format/
-var MY_FORMATS$1 = {
+var /** @type {?} */ MY_FORMATS$1 = {
     parse: {
         dateInput: 'MM/YYYY',
     },
@@ -1655,7 +1660,10 @@ var ExpansionStepsExample = /** @class */ (function () {
 /**
  * Data structure for holding telephone number.
  */
-var MyTel = /** @class */ (function () {
+var /**
+ * Data structure for holding telephone number.
+ */
+MyTel = /** @class */ (function () {
     function MyTel(area, exchange, subscriber) {
         this.area = area;
         this.exchange = exchange;
@@ -2175,7 +2183,10 @@ var InputClearableExample = /** @class */ (function () {
 /**
  * Error when invalid control is dirty, touched, or submitted.
  */
-var MyErrorStateMatcher = /** @class */ (function () {
+var /**
+ * Error when invalid control is dirty, touched, or submitted.
+ */
+MyErrorStateMatcher = /** @class */ (function () {
     function MyErrorStateMatcher() {
     }
     /**
@@ -2812,7 +2823,10 @@ var SelectDisabledExample = /** @class */ (function () {
 /**
  * Error when invalid control is dirty, touched, or submitted.
  */
-var MyErrorStateMatcher$1 = /** @class */ (function () {
+var /**
+ * Error when invalid control is dirty, touched, or submitted.
+ */
+MyErrorStateMatcher$1 = /** @class */ (function () {
     function MyErrorStateMatcher() {
     }
     /**
@@ -3785,11 +3799,7 @@ var TableBasicExample = /** @class */ (function () {
     TableBasicExample.ctorParameters = function () { return []; };
     return TableBasicExample;
 }());
-/**
- * @record
- */
-
-var ELEMENT_DATA = [
+var /** @type {?} */ ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3848,11 +3858,7 @@ var TableFilteringExample = /** @class */ (function () {
     TableFilteringExample.ctorParameters = function () { return []; };
     return TableFilteringExample;
 }());
-/**
- * @record
- */
-
-var ELEMENT_DATA$1 = [
+var /** @type {?} */ ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -3939,17 +3945,12 @@ var TableHttpExample = /** @class */ (function () {
     return TableHttpExample;
 }());
 /**
- * @record
- */
-
-/**
- * @record
- */
-
-/**
  * An example database that the data source uses to retrieve data for the table.
  */
-var ExampleHttpDao = /** @class */ (function () {
+var /**
+ * An example database that the data source uses to retrieve data for the table.
+ */
+ExampleHttpDao = /** @class */ (function () {
     function ExampleHttpDao(http) {
         this.http = http;
     }
@@ -4055,14 +4056,11 @@ function createNewUser(id) {
 /**
  * Constants used to fill up our data base.
  */
-var COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+var /** @type {?} */ COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+var /** @type {?} */ NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * @record
- */
 
 /**
  * @fileoverview added by tsickle
@@ -4107,11 +4105,7 @@ var TablePaginationExample = /** @class */ (function () {
     };
     return TablePaginationExample;
 }());
-/**
- * @record
- */
-
-var ELEMENT_DATA$2 = [
+var /** @type {?} */ ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4187,11 +4181,7 @@ var TableSelectionExample = /** @class */ (function () {
     TableSelectionExample.ctorParameters = function () { return []; };
     return TableSelectionExample;
 }());
-/**
- * @record
- */
-
-var ELEMENT_DATA$3 = [
+var /** @type {?} */ ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4257,11 +4247,7 @@ var TableSortingExample = /** @class */ (function () {
     };
     return TableSortingExample;
 }());
-/**
- * @record
- */
-
-var ELEMENT_DATA$4 = [
+var /** @type {?} */ ELEMENT_DATA$4 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4423,7 +4409,7 @@ var TooltipManualExample = /** @class */ (function () {
 /**
  * Custom options the configure the tooltip's default show/hide delays.
  */
-var myCustomTooltipDefaults = {
+var /** @type {?} */ myCustomTooltipDefaults = {
     showDelay: 1000,
     hideDelay: 1000,
     touchendHideDelay: 1000,
@@ -4502,7 +4488,11 @@ var TooltipPositionExample = /** @class */ (function () {
  * File node data with nested structure.
  * Each node has a filename, and a type or a list of children.
  */
-var FileNode = /** @class */ (function () {
+var /**
+ * File node data with nested structure.
+ * Each node has a filename, and a type or a list of children.
+ */
+FileNode = /** @class */ (function () {
     function FileNode() {
     }
     return FileNode;
@@ -4510,7 +4500,10 @@ var FileNode = /** @class */ (function () {
 /**
  * Flat node with expandable and level information
  */
-var FileFlatNode = /** @class */ (function () {
+var /**
+ * Flat node with expandable and level information
+ */
+FileFlatNode = /** @class */ (function () {
     function FileFlatNode() {
     }
     return FileFlatNode;
@@ -4518,7 +4511,7 @@ var FileFlatNode = /** @class */ (function () {
 /**
  * The file structure tree data in string. The data could be parsed into a Json object
  */
-var TREE_DATA = "{\"Tina\":\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}}";
+var /** @type {?} */ TREE_DATA = "{\"Tina\":\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}}";
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -4645,7 +4638,10 @@ var TreeFlatOverviewExample = /** @class */ (function () {
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
  */
-var FileNode$1 = /** @class */ (function () {
+var /**
+ * Json node data with nested structure. Each node has a filename and a value or a list of children
+ */
+FileNode$1 = /** @class */ (function () {
     function FileNode() {
     }
     return FileNode;
@@ -4653,7 +4649,7 @@ var FileNode$1 = /** @class */ (function () {
 /**
  * The Json tree data in string. The data could be parsed into Json object
  */
-var TREE_DATA$1 = "{\"Tina\":\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}}";
+var /** @type {?} */ TREE_DATA$1 = "{\"Tina\":\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}}";
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -4764,11 +4760,7 @@ var TreeNestedOverviewExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-/**
- * @record
- */
-
-var EXAMPLE_COMPONENTS = {
+var /** @type {?} */ EXAMPLE_COMPONENTS = {
     'autocomplete-auto-active-first-option': {
         title: 'Highlight the first autocomplete option',
         component: AutocompleteAutoActiveFirstOptionExample
@@ -5288,7 +5280,7 @@ var EXAMPLE_COMPONENTS = {
         component: TreeNestedOverviewExample
     },
 };
-var EXAMPLE_LIST = [
+var /** @type {?} */ EXAMPLE_LIST = [
     AutocompleteAutoActiveFirstOptionExample,
     AutocompleteDisplayExample,
     AutocompleteFilterExample,
@@ -5444,7 +5436,11 @@ var ExampleModule = /** @class */ (function () {
  * Example data
  *   with information about Component name, selector, files used in example, and path to examples
  */
-var ExampleData = /** @class */ (function () {
+var  /**
+ * Example data
+ *   with information about Component name, selector, files used in example, and path to examples
+ */
+ExampleData = /** @class */ (function () {
     function ExampleData(example) {
         if (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
             return;
@@ -5474,9 +5470,6 @@ var ExampleData = /** @class */ (function () {
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
- */
-/**
- * Generated bundle index. Do not edit.
  */
 
 export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CheckboxConfigurableExample as ɵm, CheckboxOverviewExample as ɵn, ChipsInputExample as ɵo, ChipsOverviewExample as ɵp, ChipsStackedExample as ɵq, DatepickerApiExample as ɵr, DatepickerCustomIconExample as ɵs, DatepickerDisabledExample as ɵt, DatepickerEventsExample as ɵu, DatepickerFilterExample as ɵv, DatepickerFormatsExample as ɵx, MY_FORMATS as ɵw, DatepickerLocaleExample as ɵy, DatepickerMinMaxExample as ɵz, DatepickerMomentExample as ɵba, DatepickerStartViewExample as ɵbb, DatepickerTouchExample as ɵbc, DatepickerValueExample as ɵbd, DatepickerViewsSelectionExample as ɵbf, MY_FORMATS$1 as ɵbe, DialogContentExample as ɵbg, DialogContentExampleDialog as ɵbh, DialogDataExample as ɵbi, DialogDataExampleDialog as ɵbj, DialogElementsExample as ɵbk, DialogElementsExampleDialog as ɵbl, DialogOverviewExample as ɵbm, DialogOverviewExampleDialog as ɵbn, DividerOverviewExample as ɵbo, ElevationOverviewExample as ɵbp, ExpansionExpandCollapseAllExample as ɵbq, ExpansionStepsExample as ɵbr, FormFieldCustomControlExample as ɵbt, MyTelInput as ɵbs, FormFieldErrorExample as ɵbu, FormFieldHintExample as ɵbv, FormFieldLabelExample as ɵbw, FormFieldOverviewExample as ɵbx, FormFieldPrefixSuffixExample as ɵby, FormFieldThemingExample as ɵbz, GridListDynamicExample as ɵca, GridListOverviewExample as ɵcb, IconOverviewExample as ɵcc, IconSvgExample as ɵcd, InputAutosizeTextareaExample as ɵce, InputClearableExample as ɵcf, InputErrorStateMatcherExample as ɵcg, InputErrorsExample as ɵch, InputFormExample as ɵci, InputHintExample as ɵcj, InputOverviewExample as ɵck, InputPrefixSuffixExample as ɵcl, ListSectionsExample as ɵcm, ListSelectionExample as ɵcn, ExampleMaterialModule as ɵfb, MenuIconsExample as ɵco, MenuOverviewExample as ɵcp, NestedMenuExample as ɵcq, PaginatorConfigurableExample as ɵcr, PaginatorOverviewExample as ɵcs, ProgressBarBufferExample as ɵct, ProgressBarConfigurableExample as ɵcu, ProgressBarDeterminateExample as ɵcv, ProgressBarIndeterminateExample as ɵcw, ProgressBarQueryExample as ɵcx, ProgressSpinnerConfigurableExample as ɵcy, ProgressSpinnerOverviewExample as ɵcz, RadioNgModelExample as ɵda, RadioOverviewExample as ɵdb, SelectCustomTriggerExample as ɵdc, SelectDisabledExample as ɵdd, SelectErrorStateMatcherExample as ɵde, SelectFormExample as ɵdf, SelectHintErrorExample as ɵdg, SelectMultipleExample as ɵdh, SelectNoRippleExample as ɵdi, SelectOptgroupExample as ɵdj, SelectOverviewExample as ɵdk, SelectPanelClassExample as ɵdl, SelectResetExample as ɵdm, SelectValueBindingExample as ɵdn, SidenavAutosizeExample as ɵdo, SidenavDisableCloseExample as ɵdp, SidenavDrawerOverviewExample as ɵdq, SidenavFixedExample as ɵdr, SidenavModeExample as ɵds, SidenavOpenCloseExample as ɵdt, SidenavOverviewExample as ɵdu, SidenavPositionExample as ɵdv, SidenavResponsiveExample as ɵdw, SlideToggleConfigurableExample as ɵdx, SlideToggleFormsExample as ɵdy, SlideToggleOverviewExample as ɵdz, SliderConfigurableExample as ɵea, SliderOverviewExample as ɵeb, PizzaPartyComponent as ɵed, SnackBarComponentExample as ɵec, SnackBarOverviewExample as ɵee, SnackBarPositionExample as ɵef, SortOverviewExample as ɵeg, TableBasicExample as ɵeh, TableFilteringExample as ɵei, TableHttpExample as ɵej, TableOverviewExample as ɵek, TablePaginationExample as ɵel, TableSelectionExample as ɵem, TableSortingExample as ɵen, TabsOverviewExample as ɵeo, TabsTemplateLabelExample as ɵep, ToolbarOverviewExample as ɵeq, TooltipDelayExample as ɵer, TooltipManualExample as ɵes, TooltipModifiedDefaultsExample as ɵeu, myCustomTooltipDefaults as ɵet, TooltipOverviewExample as ɵev, TooltipPositionExample as ɵew, FileDatabase as ɵex, TreeFlatOverviewExample as ɵey, FileDatabase$1 as ɵez, TreeNestedOverviewExample as ɵfa };
