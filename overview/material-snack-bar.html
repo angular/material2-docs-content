@@ -32,4 +32,9 @@ import {MAT_SNACK_BAR_DATA} from '@angular/material';
 export class MessageArchivedComponent {
   constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) { }
 }
+</code></pre><h3 id="setting-the-global-configuration-defaults" class="docs-header-link docs-markdown-h3"><span header-link="setting-the-global-configuration-defaults"></span> Setting the global configuration defaults</h3><p class="docs-markdown-p">If you want to override the default snack bar options, you can do so using the <code class="docs-markdown-code">MAT_SNACK_BAR_DEFAULT_OPTIONS</code> injection token.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  providers: [
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: <span class="hljs-number">2500</span>}}
+  ]
+})
 </code></pre><h3 id="accessibility" class="docs-header-link docs-markdown-h3"><span header-link="accessibility"></span> Accessibility</h3><p class="docs-markdown-p">Snack-bar messages are announced via an <code class="docs-markdown-code">aria-live</code> region. Focus is not moved to the snack-bar element, as this would be disruptive to a user in the middle of a workflow. For any action offered in the snack-bar, the application should offer the user an alternative way to perform the action (typically via keyboard shortcut).</p></div></body></html>
