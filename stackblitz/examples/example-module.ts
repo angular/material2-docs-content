@@ -108,6 +108,7 @@ import {SlideToggleConfigurableExample} from './slide-toggle-configurable/slide-
 import {SlideToggleFormsExample} from './slide-toggle-forms/slide-toggle-forms-example';
 import {SlideToggleOverviewExample} from './slide-toggle-overview/slide-toggle-overview-example';
 import {SliderConfigurableExample} from './slider-configurable/slider-configurable-example';
+import {SliderFormattingExample} from './slider-formatting/slider-formatting-example';
 import {SliderOverviewExample} from './slider-overview/slider-overview-example';
 import {PizzaPartyComponent,SnackBarComponentExample} from './snack-bar-component/snack-bar-component-example';
 import {SnackBarOverviewExample} from './snack-bar-overview/snack-bar-overview-example';
@@ -565,6 +566,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Configurable slider',
     component: SliderConfigurableExample
   },
+  'slider-formatting': {
+    title: 'Slider with custom thumb label formatting.',
+    component: SliderFormattingExample
+  },
   'slider-overview': {
     title: 'Basic slider',
     component: SliderOverviewExample
@@ -769,6 +774,7 @@ export const EXAMPLE_LIST = [
   SlideToggleFormsExample,
   SlideToggleOverviewExample,
   SliderConfigurableExample,
+  SliderFormattingExample,
   SliderOverviewExample,
   PizzaPartyComponent,SnackBarComponentExample,
   SnackBarOverviewExample,

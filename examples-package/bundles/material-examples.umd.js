@@ -3540,12 +3540,50 @@ var SliderConfigurableExample = /** @class */ (function () {
                     template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Slider configuration</h2><section class=\"example-section\"><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Value\" [(ngModel)]=\"value\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Min value\" [(ngModel)]=\"min\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Max value\" [(ngModel)]=\"max\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Step size\" [(ngModel)]=\"step\"></mat-form-field></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"autoTicks\" *ngIf=\"showTicks\">Auto ticks</mat-checkbox><mat-form-field class=\"example-margin\" *ngIf=\"showTicks && !autoTicks\"><input matInput type=\"number\" placeholder=\"Tick interval\" [(ngModel)]=\"tickInterval\"></mat-form-field></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"vertical\">Vertical</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"invert\">Inverted</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox></section></mat-card-content></mat-card><mat-card class=\"result\"><mat-card-content><h2 class=\"example-h2\">Result</h2><mat-slider class=\"example-margin\" [disabled]=\"disabled\" [invert]=\"invert\" [max]=\"max\" [min]=\"min\" [step]=\"step\" [thumb-label]=\"thumbLabel\" [tick-interval]=\"tickInterval\" [(ngModel)]=\"value\" [vertical]=\"vertical\"></mat-slider></mat-card-content></mat-card>",
                     styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 10px; } .mat-slider-horizontal { width: 300px; } .mat-slider-vertical { height: 300px; } "],
                     encapsulation: core.ViewEncapsulation.None,
-                    preserveWhitespaces: false,
                 },] },
     ];
     /** @nocollapse */
     SliderConfigurableExample.ctorParameters = function () { return []; };
     return SliderConfigurableExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Slider with custom thumb label formatting.
+ */
+var SliderFormattingExample = /** @class */ (function () {
+    function SliderFormattingExample() {
+    }
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    SliderFormattingExample.prototype.formatLabel = /**
+     * @param {?} value
+     * @return {?}
+     */
+    function (value) {
+        if (!value) {
+            return 0;
+        }
+        if (value >= 1000) {
+            return Math.round(value / 1000) + 'k';
+        }
+        return value;
+    };
+    SliderFormattingExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'slider-formatting-example',
+                    template: "<mat-slider thumbLabel [displayWith]=\"formatLabel\" tickInterval=\"1000\" min=\"1\" max=\"100000\"></mat-slider>",
+                    styles: ["mat-slider { width: 300px; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    SliderFormattingExample.ctorParameters = function () { return []; };
+    return SliderFormattingExample;
 }());
 
 /**
@@ -5212,6 +5250,10 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Configurable slider',
         component: SliderConfigurableExample
     },
+    'slider-formatting': {
+        title: 'Slider with custom thumb label formatting.',
+        component: SliderFormattingExample
+    },
     'slider-overview': {
         title: 'Basic slider',
         component: SliderOverviewExample
@@ -5415,6 +5457,7 @@ var /** @type {?} */ EXAMPLE_LIST = [
     SlideToggleFormsExample,
     SlideToggleOverviewExample,
     SliderConfigurableExample,
+    SliderFormattingExample,
     SliderOverviewExample,
     PizzaPartyComponent, SnackBarComponentExample,
     SnackBarOverviewExample,
@@ -5572,7 +5615,7 @@ exports.ɵcl = InputOverviewExample;
 exports.ɵcm = InputPrefixSuffixExample;
 exports.ɵcn = ListSectionsExample;
 exports.ɵco = ListSelectionExample;
-exports.ɵfc = ExampleMaterialModule;
+exports.ɵfd = ExampleMaterialModule;
 exports.ɵcp = MenuIconsExample;
 exports.ɵcq = MenuOverviewExample;
 exports.ɵcr = NestedMenuExample;
@@ -5612,32 +5655,33 @@ exports.ɵdy = SlideToggleConfigurableExample;
 exports.ɵdz = SlideToggleFormsExample;
 exports.ɵea = SlideToggleOverviewExample;
 exports.ɵeb = SliderConfigurableExample;
-exports.ɵec = SliderOverviewExample;
-exports.ɵee = PizzaPartyComponent;
-exports.ɵed = SnackBarComponentExample;
-exports.ɵef = SnackBarOverviewExample;
-exports.ɵeg = SnackBarPositionExample;
-exports.ɵeh = SortOverviewExample;
-exports.ɵei = TableBasicExample;
-exports.ɵej = TableFilteringExample;
-exports.ɵek = TableHttpExample;
-exports.ɵel = TableOverviewExample;
-exports.ɵem = TablePaginationExample;
-exports.ɵen = TableSelectionExample;
-exports.ɵeo = TableSortingExample;
-exports.ɵep = TabsOverviewExample;
-exports.ɵeq = TabsTemplateLabelExample;
-exports.ɵer = ToolbarOverviewExample;
-exports.ɵes = TooltipDelayExample;
-exports.ɵet = TooltipManualExample;
-exports.ɵev = TooltipModifiedDefaultsExample;
-exports.ɵeu = myCustomTooltipDefaults;
-exports.ɵew = TooltipOverviewExample;
-exports.ɵex = TooltipPositionExample;
-exports.ɵey = FileDatabase;
-exports.ɵez = TreeFlatOverviewExample;
-exports.ɵfa = FileDatabase$1;
-exports.ɵfb = TreeNestedOverviewExample;
+exports.ɵec = SliderFormattingExample;
+exports.ɵed = SliderOverviewExample;
+exports.ɵef = PizzaPartyComponent;
+exports.ɵee = SnackBarComponentExample;
+exports.ɵeg = SnackBarOverviewExample;
+exports.ɵeh = SnackBarPositionExample;
+exports.ɵei = SortOverviewExample;
+exports.ɵej = TableBasicExample;
+exports.ɵek = TableFilteringExample;
+exports.ɵel = TableHttpExample;
+exports.ɵem = TableOverviewExample;
+exports.ɵen = TablePaginationExample;
+exports.ɵeo = TableSelectionExample;
+exports.ɵep = TableSortingExample;
+exports.ɵeq = TabsOverviewExample;
+exports.ɵer = TabsTemplateLabelExample;
+exports.ɵes = ToolbarOverviewExample;
+exports.ɵet = TooltipDelayExample;
+exports.ɵeu = TooltipManualExample;
+exports.ɵew = TooltipModifiedDefaultsExample;
+exports.ɵev = myCustomTooltipDefaults;
+exports.ɵex = TooltipOverviewExample;
+exports.ɵey = TooltipPositionExample;
+exports.ɵez = FileDatabase;
+exports.ɵfa = TreeFlatOverviewExample;
+exports.ɵfb = FileDatabase$1;
+exports.ɵfc = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
