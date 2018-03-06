@@ -3187,6 +3187,28 @@ var SidenavAutosizeExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Drawer with explicit backdrop setting
+ */
+var SidenavBackdropExample = /** @class */ (function () {
+    function SidenavBackdropExample() {
+    }
+    SidenavBackdropExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'sidenav-backdrop-example',
+                    template: "<mat-drawer-container class=\"example-container\" [hasBackdrop]=\"hasBackdrop.value\"><mat-drawer #drawer [mode]=\"mode.value\">I'm a drawer</mat-drawer><mat-drawer-content><mat-form-field><mat-label>Sidenav mode</mat-label><mat-select #mode value=\"side\"><mat-option value=\"side\">Side</mat-option><mat-option value=\"over\">Over</mat-option><mat-option value=\"push\">Push</mat-option></mat-select></mat-form-field><mat-form-field><mat-label>Has backdrop</mat-label><mat-select #hasBackdrop><mat-option>Unset</mat-option><mat-option [value]=\"true\">True</mat-option><mat-option [value]=\"false\">False</mat-option></mat-select></mat-form-field><button mat-raised-button (click)=\"drawer.toggle()\">Toggle drawer</button></mat-drawer-content></mat-drawer-container>",
+                    styles: [".example-container { width: 400px; height: 200px; margin: 10px; border: 1px solid #555; } "],
+                },] },
+    ];
+    /** @nocollapse */
+    SidenavBackdropExample.ctorParameters = function () { return []; };
+    return SidenavBackdropExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Sidenav with custom escape and backdrop click behavior
  */
 var SidenavDisableCloseExample = /** @class */ (function () {
@@ -5202,6 +5224,10 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Autosize sidenav',
         component: SidenavAutosizeExample
     },
+    'sidenav-backdrop': {
+        title: 'Drawer with explicit backdrop setting',
+        component: SidenavBackdropExample
+    },
     'sidenav-disable-close': {
         title: 'Sidenav with custom escape and backdrop click behavior',
         component: SidenavDisableCloseExample
@@ -5445,6 +5471,7 @@ var /** @type {?} */ EXAMPLE_LIST = [
     SelectResetExample,
     SelectValueBindingExample,
     SidenavAutosizeExample,
+    SidenavBackdropExample,
     SidenavDisableCloseExample,
     SidenavDrawerOverviewExample,
     SidenavFixedExample,
@@ -5615,7 +5642,7 @@ exports.ɵcl = InputOverviewExample;
 exports.ɵcm = InputPrefixSuffixExample;
 exports.ɵcn = ListSectionsExample;
 exports.ɵco = ListSelectionExample;
-exports.ɵfd = ExampleMaterialModule;
+exports.ɵfe = ExampleMaterialModule;
 exports.ɵcp = MenuIconsExample;
 exports.ɵcq = MenuOverviewExample;
 exports.ɵcr = NestedMenuExample;
@@ -5643,45 +5670,46 @@ exports.ɵdm = SelectPanelClassExample;
 exports.ɵdn = SelectResetExample;
 exports.ɵdo = SelectValueBindingExample;
 exports.ɵdp = SidenavAutosizeExample;
-exports.ɵdq = SidenavDisableCloseExample;
-exports.ɵdr = SidenavDrawerOverviewExample;
-exports.ɵds = SidenavFixedExample;
-exports.ɵdt = SidenavModeExample;
-exports.ɵdu = SidenavOpenCloseExample;
-exports.ɵdv = SidenavOverviewExample;
-exports.ɵdw = SidenavPositionExample;
-exports.ɵdx = SidenavResponsiveExample;
-exports.ɵdy = SlideToggleConfigurableExample;
-exports.ɵdz = SlideToggleFormsExample;
-exports.ɵea = SlideToggleOverviewExample;
-exports.ɵeb = SliderConfigurableExample;
-exports.ɵec = SliderFormattingExample;
-exports.ɵed = SliderOverviewExample;
-exports.ɵef = PizzaPartyComponent;
-exports.ɵee = SnackBarComponentExample;
-exports.ɵeg = SnackBarOverviewExample;
-exports.ɵeh = SnackBarPositionExample;
-exports.ɵei = SortOverviewExample;
-exports.ɵej = TableBasicExample;
-exports.ɵek = TableFilteringExample;
-exports.ɵel = TableHttpExample;
-exports.ɵem = TableOverviewExample;
-exports.ɵen = TablePaginationExample;
-exports.ɵeo = TableSelectionExample;
-exports.ɵep = TableSortingExample;
-exports.ɵeq = TabsOverviewExample;
-exports.ɵer = TabsTemplateLabelExample;
-exports.ɵes = ToolbarOverviewExample;
-exports.ɵet = TooltipDelayExample;
-exports.ɵeu = TooltipManualExample;
-exports.ɵew = TooltipModifiedDefaultsExample;
-exports.ɵev = myCustomTooltipDefaults;
-exports.ɵex = TooltipOverviewExample;
-exports.ɵey = TooltipPositionExample;
-exports.ɵez = FileDatabase;
-exports.ɵfa = TreeFlatOverviewExample;
-exports.ɵfb = FileDatabase$1;
-exports.ɵfc = TreeNestedOverviewExample;
+exports.ɵdq = SidenavBackdropExample;
+exports.ɵdr = SidenavDisableCloseExample;
+exports.ɵds = SidenavDrawerOverviewExample;
+exports.ɵdt = SidenavFixedExample;
+exports.ɵdu = SidenavModeExample;
+exports.ɵdv = SidenavOpenCloseExample;
+exports.ɵdw = SidenavOverviewExample;
+exports.ɵdx = SidenavPositionExample;
+exports.ɵdy = SidenavResponsiveExample;
+exports.ɵdz = SlideToggleConfigurableExample;
+exports.ɵea = SlideToggleFormsExample;
+exports.ɵeb = SlideToggleOverviewExample;
+exports.ɵec = SliderConfigurableExample;
+exports.ɵed = SliderFormattingExample;
+exports.ɵee = SliderOverviewExample;
+exports.ɵeg = PizzaPartyComponent;
+exports.ɵef = SnackBarComponentExample;
+exports.ɵeh = SnackBarOverviewExample;
+exports.ɵei = SnackBarPositionExample;
+exports.ɵej = SortOverviewExample;
+exports.ɵek = TableBasicExample;
+exports.ɵel = TableFilteringExample;
+exports.ɵem = TableHttpExample;
+exports.ɵen = TableOverviewExample;
+exports.ɵeo = TablePaginationExample;
+exports.ɵep = TableSelectionExample;
+exports.ɵeq = TableSortingExample;
+exports.ɵer = TabsOverviewExample;
+exports.ɵes = TabsTemplateLabelExample;
+exports.ɵet = ToolbarOverviewExample;
+exports.ɵeu = TooltipDelayExample;
+exports.ɵev = TooltipManualExample;
+exports.ɵex = TooltipModifiedDefaultsExample;
+exports.ɵew = myCustomTooltipDefaults;
+exports.ɵey = TooltipOverviewExample;
+exports.ɵez = TooltipPositionExample;
+exports.ɵfa = FileDatabase;
+exports.ɵfb = TreeFlatOverviewExample;
+exports.ɵfc = FileDatabase$1;
+exports.ɵfd = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

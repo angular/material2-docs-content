@@ -1,0 +1,22 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-drawer-container</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span> [<span class="hljs-attr">hasBackdrop</span>]=<span class="hljs-string">"hasBackdrop.value"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-drawer</span> #<span class="hljs-attr">drawer</span> [<span class="hljs-attr">mode</span>]=<span class="hljs-string">"mode.value"</span>&gt;</span>I'm a drawer<span class="hljs-tag">&lt;/<span class="hljs-name">mat-drawer</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-drawer-content</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Sidenav mode<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> #<span class="hljs-attr">mode</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"side"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"side"</span>&gt;</span>Side<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"over"</span>&gt;</span>Over<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"push"</span>&gt;</span>Push<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Has backdrop<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> #<span class="hljs-attr">hasBackdrop</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span>&gt;</span>Unset<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"true"</span>&gt;</span>True<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"false"</span>&gt;</span>False<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"drawer.toggle()"</span>&gt;</span>Toggle drawer<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-drawer-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-drawer-container</span>&gt;</span>
