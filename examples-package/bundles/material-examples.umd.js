@@ -878,6 +878,28 @@ var DatepickerApiExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Datepicker palette colors
+ */
+var DatepickerColorExample = /** @class */ (function () {
+    function DatepickerColorExample() {
+    }
+    DatepickerColorExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'datepicker-color-example',
+                    template: "<mat-form-field color=\"accent\"><mat-label>Inherited calendar color</mat-label><input matInput [matDatepicker]=\"picker1\"><mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle><mat-datepicker #picker1></mat-datepicker></mat-form-field><mat-form-field color=\"accent\"><mat-label>Custom calendar color</mat-label><input matInput [matDatepicker]=\"picker2\"><mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle><mat-datepicker #picker2 color=\"primary\"></mat-datepicker></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    DatepickerColorExample.ctorParameters = function () { return []; };
+    return DatepickerColorExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Datepicker with custom icon
  */
 var DatepickerCustomIconExample = /** @class */ (function () {
@@ -4844,6 +4866,10 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Datepicker open method',
         component: DatepickerApiExample
     },
+    'datepicker-color': {
+        title: 'Datepicker palette colors',
+        component: DatepickerColorExample
+    },
     'datepicker-custom-icon': {
         title: 'Datepicker with custom icon',
         component: DatepickerCustomIconExample
@@ -5305,6 +5331,7 @@ var /** @type {?} */ EXAMPLE_LIST = [
     ChipsOverviewExample,
     ChipsStackedExample,
     DatepickerApiExample,
+    DatepickerColorExample,
     DatepickerCustomIconExample,
     DatepickerDisabledExample,
     DatepickerEventsExample,
@@ -5496,120 +5523,121 @@ exports.ɵo = ChipsInputExample;
 exports.ɵp = ChipsOverviewExample;
 exports.ɵq = ChipsStackedExample;
 exports.ɵr = DatepickerApiExample;
-exports.ɵs = DatepickerCustomIconExample;
-exports.ɵt = DatepickerDisabledExample;
-exports.ɵu = DatepickerEventsExample;
-exports.ɵv = DatepickerFilterExample;
-exports.ɵx = DatepickerFormatsExample;
-exports.ɵw = MY_FORMATS;
-exports.ɵy = DatepickerLocaleExample;
-exports.ɵz = DatepickerMinMaxExample;
-exports.ɵba = DatepickerMomentExample;
-exports.ɵbb = DatepickerStartViewExample;
-exports.ɵbc = DatepickerTouchExample;
-exports.ɵbd = DatepickerValueExample;
-exports.ɵbf = DatepickerViewsSelectionExample;
-exports.ɵbe = MY_FORMATS$1;
-exports.ɵbg = DialogContentExample;
-exports.ɵbh = DialogContentExampleDialog;
-exports.ɵbi = DialogDataExample;
-exports.ɵbj = DialogDataExampleDialog;
-exports.ɵbk = DialogElementsExample;
-exports.ɵbl = DialogElementsExampleDialog;
-exports.ɵbm = DialogOverviewExample;
-exports.ɵbn = DialogOverviewExampleDialog;
-exports.ɵbo = DividerOverviewExample;
-exports.ɵbp = ElevationOverviewExample;
-exports.ɵbq = ExpansionExpandCollapseAllExample;
-exports.ɵbr = ExpansionStepsExample;
-exports.ɵbt = FormFieldCustomControlExample;
-exports.ɵbs = MyTelInput;
-exports.ɵbu = FormFieldErrorExample;
-exports.ɵbv = FormFieldHintExample;
-exports.ɵbw = FormFieldLabelExample;
-exports.ɵbx = FormFieldOverviewExample;
-exports.ɵby = FormFieldPrefixSuffixExample;
-exports.ɵbz = FormFieldThemingExample;
-exports.ɵca = GridListDynamicExample;
-exports.ɵcb = GridListOverviewExample;
-exports.ɵcc = IconOverviewExample;
-exports.ɵcd = IconSvgExample;
-exports.ɵce = InputAutosizeTextareaExample;
-exports.ɵcf = InputClearableExample;
-exports.ɵcg = InputErrorStateMatcherExample;
-exports.ɵch = InputErrorsExample;
-exports.ɵci = InputFormExample;
-exports.ɵcj = InputHintExample;
-exports.ɵck = InputOverviewExample;
-exports.ɵcl = InputPrefixSuffixExample;
-exports.ɵcm = ListSectionsExample;
-exports.ɵcn = ListSelectionExample;
-exports.ɵfb = ExampleMaterialModule;
-exports.ɵco = MenuIconsExample;
-exports.ɵcp = MenuOverviewExample;
-exports.ɵcq = NestedMenuExample;
-exports.ɵcr = PaginatorConfigurableExample;
-exports.ɵcs = PaginatorOverviewExample;
-exports.ɵct = ProgressBarBufferExample;
-exports.ɵcu = ProgressBarConfigurableExample;
-exports.ɵcv = ProgressBarDeterminateExample;
-exports.ɵcw = ProgressBarIndeterminateExample;
-exports.ɵcx = ProgressBarQueryExample;
-exports.ɵcy = ProgressSpinnerConfigurableExample;
-exports.ɵcz = ProgressSpinnerOverviewExample;
-exports.ɵda = RadioNgModelExample;
-exports.ɵdb = RadioOverviewExample;
-exports.ɵdc = SelectCustomTriggerExample;
-exports.ɵdd = SelectDisabledExample;
-exports.ɵde = SelectErrorStateMatcherExample;
-exports.ɵdf = SelectFormExample;
-exports.ɵdg = SelectHintErrorExample;
-exports.ɵdh = SelectMultipleExample;
-exports.ɵdi = SelectNoRippleExample;
-exports.ɵdj = SelectOptgroupExample;
-exports.ɵdk = SelectOverviewExample;
-exports.ɵdl = SelectPanelClassExample;
-exports.ɵdm = SelectResetExample;
-exports.ɵdn = SelectValueBindingExample;
-exports.ɵdo = SidenavAutosizeExample;
-exports.ɵdp = SidenavDisableCloseExample;
-exports.ɵdq = SidenavDrawerOverviewExample;
-exports.ɵdr = SidenavFixedExample;
-exports.ɵds = SidenavModeExample;
-exports.ɵdt = SidenavOpenCloseExample;
-exports.ɵdu = SidenavOverviewExample;
-exports.ɵdv = SidenavPositionExample;
-exports.ɵdw = SidenavResponsiveExample;
-exports.ɵdx = SlideToggleConfigurableExample;
-exports.ɵdy = SlideToggleFormsExample;
-exports.ɵdz = SlideToggleOverviewExample;
-exports.ɵea = SliderConfigurableExample;
-exports.ɵeb = SliderOverviewExample;
-exports.ɵed = PizzaPartyComponent;
-exports.ɵec = SnackBarComponentExample;
-exports.ɵee = SnackBarOverviewExample;
-exports.ɵef = SnackBarPositionExample;
-exports.ɵeg = SortOverviewExample;
-exports.ɵeh = TableBasicExample;
-exports.ɵei = TableFilteringExample;
-exports.ɵej = TableHttpExample;
-exports.ɵek = TableOverviewExample;
-exports.ɵel = TablePaginationExample;
-exports.ɵem = TableSelectionExample;
-exports.ɵen = TableSortingExample;
-exports.ɵeo = TabsOverviewExample;
-exports.ɵep = TabsTemplateLabelExample;
-exports.ɵeq = ToolbarOverviewExample;
-exports.ɵer = TooltipDelayExample;
-exports.ɵes = TooltipManualExample;
-exports.ɵeu = TooltipModifiedDefaultsExample;
-exports.ɵet = myCustomTooltipDefaults;
-exports.ɵev = TooltipOverviewExample;
-exports.ɵew = TooltipPositionExample;
-exports.ɵex = FileDatabase;
-exports.ɵey = TreeFlatOverviewExample;
-exports.ɵez = FileDatabase$1;
-exports.ɵfa = TreeNestedOverviewExample;
+exports.ɵs = DatepickerColorExample;
+exports.ɵt = DatepickerCustomIconExample;
+exports.ɵu = DatepickerDisabledExample;
+exports.ɵv = DatepickerEventsExample;
+exports.ɵw = DatepickerFilterExample;
+exports.ɵy = DatepickerFormatsExample;
+exports.ɵx = MY_FORMATS;
+exports.ɵz = DatepickerLocaleExample;
+exports.ɵba = DatepickerMinMaxExample;
+exports.ɵbb = DatepickerMomentExample;
+exports.ɵbc = DatepickerStartViewExample;
+exports.ɵbd = DatepickerTouchExample;
+exports.ɵbe = DatepickerValueExample;
+exports.ɵbg = DatepickerViewsSelectionExample;
+exports.ɵbf = MY_FORMATS$1;
+exports.ɵbh = DialogContentExample;
+exports.ɵbi = DialogContentExampleDialog;
+exports.ɵbj = DialogDataExample;
+exports.ɵbk = DialogDataExampleDialog;
+exports.ɵbl = DialogElementsExample;
+exports.ɵbm = DialogElementsExampleDialog;
+exports.ɵbn = DialogOverviewExample;
+exports.ɵbo = DialogOverviewExampleDialog;
+exports.ɵbp = DividerOverviewExample;
+exports.ɵbq = ElevationOverviewExample;
+exports.ɵbr = ExpansionExpandCollapseAllExample;
+exports.ɵbs = ExpansionStepsExample;
+exports.ɵbu = FormFieldCustomControlExample;
+exports.ɵbt = MyTelInput;
+exports.ɵbv = FormFieldErrorExample;
+exports.ɵbw = FormFieldHintExample;
+exports.ɵbx = FormFieldLabelExample;
+exports.ɵby = FormFieldOverviewExample;
+exports.ɵbz = FormFieldPrefixSuffixExample;
+exports.ɵca = FormFieldThemingExample;
+exports.ɵcb = GridListDynamicExample;
+exports.ɵcc = GridListOverviewExample;
+exports.ɵcd = IconOverviewExample;
+exports.ɵce = IconSvgExample;
+exports.ɵcf = InputAutosizeTextareaExample;
+exports.ɵcg = InputClearableExample;
+exports.ɵch = InputErrorStateMatcherExample;
+exports.ɵci = InputErrorsExample;
+exports.ɵcj = InputFormExample;
+exports.ɵck = InputHintExample;
+exports.ɵcl = InputOverviewExample;
+exports.ɵcm = InputPrefixSuffixExample;
+exports.ɵcn = ListSectionsExample;
+exports.ɵco = ListSelectionExample;
+exports.ɵfc = ExampleMaterialModule;
+exports.ɵcp = MenuIconsExample;
+exports.ɵcq = MenuOverviewExample;
+exports.ɵcr = NestedMenuExample;
+exports.ɵcs = PaginatorConfigurableExample;
+exports.ɵct = PaginatorOverviewExample;
+exports.ɵcu = ProgressBarBufferExample;
+exports.ɵcv = ProgressBarConfigurableExample;
+exports.ɵcw = ProgressBarDeterminateExample;
+exports.ɵcx = ProgressBarIndeterminateExample;
+exports.ɵcy = ProgressBarQueryExample;
+exports.ɵcz = ProgressSpinnerConfigurableExample;
+exports.ɵda = ProgressSpinnerOverviewExample;
+exports.ɵdb = RadioNgModelExample;
+exports.ɵdc = RadioOverviewExample;
+exports.ɵdd = SelectCustomTriggerExample;
+exports.ɵde = SelectDisabledExample;
+exports.ɵdf = SelectErrorStateMatcherExample;
+exports.ɵdg = SelectFormExample;
+exports.ɵdh = SelectHintErrorExample;
+exports.ɵdi = SelectMultipleExample;
+exports.ɵdj = SelectNoRippleExample;
+exports.ɵdk = SelectOptgroupExample;
+exports.ɵdl = SelectOverviewExample;
+exports.ɵdm = SelectPanelClassExample;
+exports.ɵdn = SelectResetExample;
+exports.ɵdo = SelectValueBindingExample;
+exports.ɵdp = SidenavAutosizeExample;
+exports.ɵdq = SidenavDisableCloseExample;
+exports.ɵdr = SidenavDrawerOverviewExample;
+exports.ɵds = SidenavFixedExample;
+exports.ɵdt = SidenavModeExample;
+exports.ɵdu = SidenavOpenCloseExample;
+exports.ɵdv = SidenavOverviewExample;
+exports.ɵdw = SidenavPositionExample;
+exports.ɵdx = SidenavResponsiveExample;
+exports.ɵdy = SlideToggleConfigurableExample;
+exports.ɵdz = SlideToggleFormsExample;
+exports.ɵea = SlideToggleOverviewExample;
+exports.ɵeb = SliderConfigurableExample;
+exports.ɵec = SliderOverviewExample;
+exports.ɵee = PizzaPartyComponent;
+exports.ɵed = SnackBarComponentExample;
+exports.ɵef = SnackBarOverviewExample;
+exports.ɵeg = SnackBarPositionExample;
+exports.ɵeh = SortOverviewExample;
+exports.ɵei = TableBasicExample;
+exports.ɵej = TableFilteringExample;
+exports.ɵek = TableHttpExample;
+exports.ɵel = TableOverviewExample;
+exports.ɵem = TablePaginationExample;
+exports.ɵen = TableSelectionExample;
+exports.ɵeo = TableSortingExample;
+exports.ɵep = TabsOverviewExample;
+exports.ɵeq = TabsTemplateLabelExample;
+exports.ɵer = ToolbarOverviewExample;
+exports.ɵes = TooltipDelayExample;
+exports.ɵet = TooltipManualExample;
+exports.ɵev = TooltipModifiedDefaultsExample;
+exports.ɵeu = myCustomTooltipDefaults;
+exports.ɵew = TooltipOverviewExample;
+exports.ɵex = TooltipPositionExample;
+exports.ɵey = FileDatabase;
+exports.ɵez = TreeFlatOverviewExample;
+exports.ɵfa = FileDatabase$1;
+exports.ɵfb = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

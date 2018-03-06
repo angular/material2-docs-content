@@ -24,6 +24,7 @@ import {ChipsInputExample} from './chips-input/chips-input-example';
 import {ChipsOverviewExample} from './chips-overview/chips-overview-example';
 import {ChipsStackedExample} from './chips-stacked/chips-stacked-example';
 import {DatepickerApiExample} from './datepicker-api/datepicker-api-example';
+import {DatepickerColorExample} from './datepicker-color/datepicker-color-example';
 import {DatepickerCustomIconExample} from './datepicker-custom-icon/datepicker-custom-icon-example';
 import {DatepickerDisabledExample} from './datepicker-disabled/datepicker-disabled-example';
 import {DatepickerEventsExample} from './datepicker-events/datepicker-events-example';
@@ -217,6 +218,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'datepicker-api': {
     title: 'Datepicker open method',
     component: DatepickerApiExample
+  },
+  'datepicker-color': {
+    title: 'Datepicker palette colors',
+    component: DatepickerColorExample
   },
   'datepicker-custom-icon': {
     title: 'Datepicker with custom icon',
@@ -680,6 +685,7 @@ export const EXAMPLE_LIST = [
   ChipsOverviewExample,
   ChipsStackedExample,
   DatepickerApiExample,
+  DatepickerColorExample,
   DatepickerCustomIconExample,
   DatepickerDisabledExample,
   DatepickerEventsExample,
