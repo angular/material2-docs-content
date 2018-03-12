@@ -9,9 +9,9 @@
 
     <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-section"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-margin"</span>&gt;</span>Align:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"align"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-margin"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"start"</span>&gt;</span>Start<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-margin"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"end"</span>&gt;</span>End<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-group</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"labelPosition"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-margin"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"after"</span>&gt;</span>After<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-radio-button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-margin"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"before"</span>&gt;</span>Before<span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-button</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-radio-group</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
 
@@ -30,7 +30,7 @@
           <span class="hljs-attr">class</span>=<span class="hljs-string">"example-margin"</span>
           [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"checked"</span>
           [(<span class="hljs-attr">indeterminate</span>)]=<span class="hljs-string">"indeterminate"</span>
-          [<span class="hljs-attr">align</span>]=<span class="hljs-string">"align"</span>
+          [<span class="hljs-attr">labelPosition</span>]=<span class="hljs-string">"labelPosition"</span>
           [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"disabled"</span>&gt;</span>
         I'm a checkbox
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
