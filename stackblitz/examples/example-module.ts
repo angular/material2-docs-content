@@ -20,6 +20,7 @@ import {CardOverviewExample} from './card-overview/card-overview-example';
 import {CdkTableBasicExample} from './cdk-table-basic/cdk-table-basic-example';
 import {CheckboxConfigurableExample} from './checkbox-configurable/checkbox-configurable-example';
 import {CheckboxOverviewExample} from './checkbox-overview/checkbox-overview-example';
+import {ChipsAutocompleteExample} from './chips-autocomplete/chips-autocomplete-example';
 import {ChipsInputExample} from './chips-input/chips-input-example';
 import {ChipsOverviewExample} from './chips-overview/chips-overview-example';
 import {ChipsStackedExample} from './chips-stacked/chips-stacked-example';
@@ -205,6 +206,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'checkbox-overview': {
     title: 'Basic checkboxes',
     component: CheckboxOverviewExample
+  },
+  'chips-autocomplete': {
+    title: 'Chips Autocomplete',
+    component: ChipsAutocompleteExample
   },
   'chips-input': {
     title: 'Chips with input',
@@ -696,6 +701,7 @@ export const EXAMPLE_LIST = [
   CdkTableBasicExample,
   CheckboxConfigurableExample,
   CheckboxOverviewExample,
+  ChipsAutocompleteExample,
   ChipsInputExample,
   ChipsOverviewExample,
   ChipsStackedExample,

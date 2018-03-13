@@ -1,0 +1,80 @@
+<span class="hljs-keyword">import</span> {Component, ViewChild, ElementRef} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatChipInputEvent, MatAutocompleteSelectedEvent} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {ENTER, COMMA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/keycodes'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
+<span class="hljs-keyword">import</span> {startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators/startWith'</span>;
+<span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators/map'</span>;
+
+<span class="hljs-comment">/**
+ * @title Chips Autocomplete
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'chips-autocomplete-example'</span>,
+  templateUrl: <span class="hljs-string">'chips-autocomplete-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'chips-autocomplete-example.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipsAutocompleteExample {
+  visible: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">true</span>;
+  selectable: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">true</span>;
+  removable: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">true</span>;
+  addOnBlur: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>;
+
+  separatorKeysCodes = [ENTER, COMMA];
+
+  fruitCtrl = <span class="hljs-keyword">new</span> FormControl();
+
+  filteredFruits: Observable&lt;<span class="hljs-built_in">any</span>[]&gt;;
+
+  fruits = [
+    { name: <span class="hljs-string">'Lemon'</span> },
+  ];
+
+  allFruits = [
+    <span class="hljs-string">'Orange'</span>,
+    <span class="hljs-string">'Strawberry'</span>,
+    <span class="hljs-string">'Lime'</span>,
+    <span class="hljs-string">'Apple'</span>,
+  ];
+
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'fruitInput'</span>) fruitInput: ElementRef;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">this</span>.filteredFruits = <span class="hljs-keyword">this</span>.fruitCtrl.valueChanges.pipe(
+        startWith(<span class="hljs-literal">null</span>),
+        map(<span class="hljs-function">(<span class="hljs-params">fruit: <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span></span>) =&gt;</span> fruit ? <span class="hljs-keyword">this</span>.filter(fruit) : <span class="hljs-keyword">this</span>.allFruits.slice()));
+  }
+
+  add(event: MatChipInputEvent): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> input = event.input;
+    <span class="hljs-keyword">const</span> value = event.value;
+
+    <span class="hljs-comment">// Add our fruit</span>
+    <span class="hljs-keyword">if</span> ((value || <span class="hljs-string">''</span>).trim()) {
+      <span class="hljs-keyword">this</span>.fruits.push({ name: value.trim() });
+    }
+
+    <span class="hljs-comment">// Reset the input value</span>
+    <span class="hljs-keyword">if</span> (input) {
+      input.value = <span class="hljs-string">''</span>;
+    }
+  }
+
+  remove(fruit: <span class="hljs-built_in">any</span>): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> index = <span class="hljs-keyword">this</span>.fruits.indexOf(fruit);
+
+    <span class="hljs-keyword">if</span> (index &gt;= <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">this</span>.fruits.splice(index, <span class="hljs-number">1</span>);
+    }
+  }
+
+  filter(name: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.allFruits.filter(<span class="hljs-function"><span class="hljs-params">fruit</span> =&gt;</span>
+        fruit.toLowerCase().indexOf(name.toLowerCase()) === <span class="hljs-number">0</span>);
+  }
+
+  selected(event: MatAutocompleteSelectedEvent): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">this</span>.fruits.push({ name: event.option.viewValue });
+    <span class="hljs-keyword">this</span>.fruitInput.nativeElement.value = <span class="hljs-string">''</span>;
+  }
+}
