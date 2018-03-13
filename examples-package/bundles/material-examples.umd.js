@@ -2193,7 +2193,7 @@ var InputAutosizeTextareaExample = /** @class */ (function () {
     InputAutosizeTextareaExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'input-autosize-textarea-example',
-                    template: "<mat-form-field><textarea matInput placeholder=\"Autosize textarea\" matTextareaAutosize matAutosizeMinRows=\"2\" matAutosizeMaxRows=\"5\"></textarea></mat-form-field>",
+                    template: "<mat-form-field><textarea matInput placeholder=\"Autosize textarea\" cdkTextareaAutosize cdkAutosizeMinRows=\"2\" cdkAutosizeMaxRows=\"5\"></textarea></mat-form-field>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
