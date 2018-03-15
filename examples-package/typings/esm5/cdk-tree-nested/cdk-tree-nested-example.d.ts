@@ -30,7 +30,7 @@ export declare class FileDatabase {
 /**
  * @title Tree with nested nodes
  */
-export declare class TreeNestedOverviewExample {
+export declare class CdkTreeNestedExample {
     nestedTreeControl: NestedTreeControl<FileNode>;
     nestedDataSource: MatTreeNestedDataSource<FileNode>;
     constructor(database: FileDatabase);

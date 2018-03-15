@@ -18,6 +18,8 @@ import {ButtonTypesExample} from './button-types/button-types-example';
 import {CardFancyExample} from './card-fancy/card-fancy-example';
 import {CardOverviewExample} from './card-overview/card-overview-example';
 import {CdkTableBasicExample} from './cdk-table-basic/cdk-table-basic-example';
+import {CdkTreeFlatExample} from './cdk-tree-flat/cdk-tree-flat-example';
+import {CdkTreeNestedExample} from './cdk-tree-nested/cdk-tree-nested-example';
 import {CheckboxConfigurableExample} from './checkbox-configurable/checkbox-configurable-example';
 import {CheckboxOverviewExample} from './checkbox-overview/checkbox-overview-example';
 import {ChipsAutocompleteExample} from './chips-autocomplete/chips-autocomplete-example';
@@ -198,6 +200,14 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'cdk-table-basic': {
     title: 'Basic CDK data-table',
     component: CdkTableBasicExample
+  },
+  'cdk-tree-flat': {
+    title: 'Tree with flat nodes',
+    component: CdkTreeFlatExample
+  },
+  'cdk-tree-nested': {
+    title: 'Tree with nested nodes',
+    component: CdkTreeNestedExample
   },
   'checkbox-configurable': {
     title: 'Configurable checkbox',
@@ -699,6 +709,8 @@ export const EXAMPLE_LIST = [
   CardFancyExample,
   CardOverviewExample,
   CdkTableBasicExample,
+  CdkTreeFlatExample,
+  CdkTreeNestedExample,
   CheckboxConfigurableExample,
   CheckboxOverviewExample,
   ChipsAutocompleteExample,

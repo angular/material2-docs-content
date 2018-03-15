@@ -1,13 +1,21 @@
-import { NestedTreeControl } from '@angular/cdk/tree';
-import { MatTreeNestedDataSource } from '@angular/material/tree';
+import { FlatTreeControl } from '@angular/cdk/tree';
+import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material/tree';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 /**
- * Json node data with nested structure. Each node has a filename and a value or a list of children
+ * File node data with nested structure.
+ * Each node has a filename, and a type or a list of children.
  */
 export declare class FileNode {
     children: FileNode[];
     filename: string;
     type: any;
+}
+/** Flat node with expandable and level information */
+export declare class FileFlatNode {
+    filename: string;
+    type: any;
+    level: number;
+    expandable: boolean;
 }
 /**
  * File database, it can build a tree structured Json object from string.
@@ -28,12 +36,16 @@ export declare class FileDatabase {
     buildFileTree(value: any, level: number): FileNode[];
 }
 /**
- * @title Tree with nested nodes
+ * @title Tree with flat nodes
  */
-export declare class TreeNestedOverviewExample {
-    nestedTreeControl: NestedTreeControl<FileNode>;
-    nestedDataSource: MatTreeNestedDataSource<FileNode>;
+export declare class CdkTreeFlatExample {
+    treeControl: FlatTreeControl<FileFlatNode>;
+    treeFlattener: MatTreeFlattener<FileNode, FileFlatNode>;
+    dataSource: MatTreeFlatDataSource<FileNode, FileFlatNode>;
     constructor(database: FileDatabase);
+    transformer: (node: FileNode, level: number) => FileFlatNode;
+    private _getLevel;
+    private _isExpandable;
     private _getChildren;
-    hasNestedChild: (_: number, nodeData: FileNode) => boolean;
+    hasChild: (_: number, _nodeData: FileFlatNode) => boolean;
 }

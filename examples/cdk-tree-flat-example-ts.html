@@ -1,11 +1,13 @@
 <span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {NestedTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
-<span class="hljs-keyword">import</span> {MatTreeNestedDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
+<span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
+<span class="hljs-keyword">import</span> {MatTreeFlattener, MatTreeFlatDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
 <span class="hljs-keyword">import</span> {of} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/observable/of'</span>;
+<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/Observable'</span>;
 <span class="hljs-keyword">import</span> {BehaviorSubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/BehaviorSubject'</span>;
 
 <span class="hljs-comment">/**
- * Json node data with nested structure. Each node has a filename and a value or a list of children
+ * File node data with nested structure.
+ * Each node has a filename, and a type or a list of children.
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FileNode {
   children: FileNode[];
@@ -13,8 +15,16 @@
   <span class="hljs-keyword">type</span>: <span class="hljs-built_in">any</span>;
 }
 
+<span class="hljs-comment">/** Flat node with expandable and level information */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FileFlatNode {
+  filename: <span class="hljs-built_in">string</span>;
+  <span class="hljs-keyword">type</span>: <span class="hljs-built_in">any</span>;
+  level: <span class="hljs-built_in">number</span>;
+  expandable: <span class="hljs-built_in">boolean</span>;
+}
+
 <span class="hljs-comment">/**
- * The Json tree data in string. The data could be parsed into Json object
+ * The file structure tree data in string. The data could be parsed into a Json object
  */</span>
 <span class="hljs-keyword">const</span> TREE_DATA = <span class="hljs-string">`
   {
@@ -51,7 +61,7 @@
         "Calendar": "app",
         "Webstorm": "app"
     }
-  }`</span>;
+}`</span>;
 
 <span class="hljs-comment">/**
  * File database, it can build a tree structured Json object from string.
@@ -106,27 +116,47 @@
 }
 
 <span class="hljs-comment">/**
- * @title Tree with nested nodes
+ * @title Tree with flat nodes
  */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'tree-nested-overview-example'</span>,
-  templateUrl: <span class="hljs-string">'tree-nested-overview-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'tree-nested-overview-example.css'</span>],
+  selector: <span class="hljs-string">'cdk-tree-flat-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-tree-flat-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-tree-flat-example.css'</span>],
   providers: [FileDatabase]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TreeNestedOverviewExample {
-  nestedTreeControl: NestedTreeControl&lt;FileNode&gt;;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkTreeFlatExample {
 
-  nestedDataSource: MatTreeNestedDataSource&lt;FileNode&gt;;
+  treeControl: FlatTreeControl&lt;FileFlatNode&gt;;
+
+  treeFlattener: MatTreeFlattener&lt;FileNode, FileFlatNode&gt;;
+
+  dataSource: MatTreeFlatDataSource&lt;FileNode, FileFlatNode&gt;;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">database: FileDatabase</span>) {
-    <span class="hljs-keyword">this</span>.nestedTreeControl = <span class="hljs-keyword">new</span> NestedTreeControl&lt;FileNode&gt;(<span class="hljs-keyword">this</span>._getChildren);
-    <span class="hljs-keyword">this</span>.nestedDataSource = <span class="hljs-keyword">new</span> MatTreeNestedDataSource();
+    <span class="hljs-keyword">this</span>.treeFlattener = <span class="hljs-keyword">new</span> MatTreeFlattener(<span class="hljs-keyword">this</span>.transformer, <span class="hljs-keyword">this</span>._getLevel,
+      <span class="hljs-keyword">this</span>._isExpandable, <span class="hljs-keyword">this</span>._getChildren);
+    <span class="hljs-keyword">this</span>.treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;FileFlatNode&gt;(<span class="hljs-keyword">this</span>._getLevel, <span class="hljs-keyword">this</span>._isExpandable);
+    <span class="hljs-keyword">this</span>.dataSource = <span class="hljs-keyword">new</span> MatTreeFlatDataSource(<span class="hljs-keyword">this</span>.treeControl, <span class="hljs-keyword">this</span>.treeFlattener);
 
-    database.dataChange.subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> <span class="hljs-keyword">this</span>.nestedDataSource.data = data);
+    database.dataChange.subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+      <span class="hljs-keyword">this</span>.dataSource.data = data;
+    });
   }
 
-  <span class="hljs-keyword">private</span> _getChildren = <span class="hljs-function">(<span class="hljs-params">node: FileNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> of(node.children); };
+  transformer = <span class="hljs-function">(<span class="hljs-params">node: FileNode, level: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
+    <span class="hljs-keyword">let</span> flatNode = <span class="hljs-keyword">new</span> FileFlatNode();
+    flatNode.filename = node.filename;
+    flatNode.type = node.type;
+    flatNode.level = level;
+    flatNode.expandable = !!node.children;
+    <span class="hljs-keyword">return</span> flatNode;
+  }
 
-  hasNestedChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, nodeData: FileNode</span>) =&gt;</span> {<span class="hljs-keyword">return</span> !(nodeData.type); };
+  <span class="hljs-keyword">private</span> _getLevel = <span class="hljs-function">(<span class="hljs-params">node: FileFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> node.level; };
+
+  <span class="hljs-keyword">private</span> _isExpandable = <span class="hljs-function">(<span class="hljs-params">node: FileFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> node.expandable; };
+
+  <span class="hljs-keyword">private</span> _getChildren = (node: FileNode): Observable&lt;FileNode[]&gt; =&gt; { <span class="hljs-keyword">return</span> of(node.children); };
+
+  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, _nodeData: FileFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> _nodeData.expandable; };
 }

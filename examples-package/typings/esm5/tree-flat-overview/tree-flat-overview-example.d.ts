@@ -33,7 +33,7 @@ export declare class FileDatabase {
      * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
      * The return value is the list of `FileNode`.
      */
-    buildFileTree(value: any, level: number): any[];
+    buildFileTree(value: any, level: number): FileNode[];
 }
 /**
  * @title Tree with flat nodes

@@ -26,7 +26,7 @@
 <span class="hljs-comment">/**
  * The file structure tree data in string. The data could be parsed into a Json object
  */</span>
-<span class="hljs-keyword">const</span> TREE_DATA = <span class="hljs-string">`{"Tina":
+<span class="hljs-keyword">const</span> TREE_DATA = <span class="hljs-string">`
   {
     "Documents": {
       "angular": {
@@ -61,7 +61,7 @@
         "Calendar": "app",
         "Webstorm": "app"
     }
-}}`</span>;
+}`</span>;
 
 <span class="hljs-comment">/**
  * File database, it can build a tree structured Json object from string.
@@ -96,7 +96,7 @@
    * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
    * The return value is the list of `FileNode`.
    */</span>
-  buildFileTree(value: <span class="hljs-built_in">any</span>, level: <span class="hljs-built_in">number</span>) {
+  buildFileTree(value: <span class="hljs-built_in">any</span>, level: <span class="hljs-built_in">number</span>): FileNode[] {
     <span class="hljs-keyword">let</span> data: <span class="hljs-built_in">any</span>[] = [];
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> k <span class="hljs-keyword">in</span> value) {
       <span class="hljs-keyword">let</span> v = value[k];

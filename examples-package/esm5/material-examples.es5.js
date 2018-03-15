@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule, Component, ViewChild, ElementRef, ViewEncapsulation, Inject, Input, ChangeDetectorRef, Injectable } from '@angular/core';
+import { NgModule, Component, Injectable, ViewChild, ElementRef, ViewEncapsulation, Inject, Input, ChangeDetectorRef } from '@angular/core';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
 import { MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatPaginatorModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule, MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
@@ -15,6 +15,8 @@ import { map } from 'rxjs/operators/map';
 import { __extends } from 'tslib';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
+import { of } from 'rxjs/observable/of';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { MomentDateAdapter, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
@@ -28,10 +30,8 @@ import '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
 import { merge } from 'rxjs/observable/merge';
-import { of } from 'rxjs/observable/of';
 import { catchError } from 'rxjs/operators/catchError';
 import { switchMap } from 'rxjs/operators/switchMap';
-import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
 import { CommonModule } from '@angular/common';
 
 /**
@@ -680,6 +680,282 @@ ExampleDataSource = /** @class */ (function (_super) {
     function () { };
     return ExampleDataSource;
 }(DataSource));
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * File node data with nested structure.
+ * Each node has a filename, and a type or a list of children.
+ */
+var /**
+ * File node data with nested structure.
+ * Each node has a filename, and a type or a list of children.
+ */
+FileNode = /** @class */ (function () {
+    function FileNode() {
+    }
+    return FileNode;
+}());
+/**
+ * Flat node with expandable and level information
+ */
+var /**
+ * Flat node with expandable and level information
+ */
+FileFlatNode = /** @class */ (function () {
+    function FileFlatNode() {
+    }
+    return FileFlatNode;
+}());
+/**
+ * The file structure tree data in string. The data could be parsed into a Json object
+ */
+var /** @type {?} */ TREE_DATA = "\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}";
+/**
+ * File database, it can build a tree structured Json object from string.
+ * Each node in Json object represents a file or a directory. For a file, it has filename and type.
+ * For a directory, it has filename and children (a list of files or directories).
+ * The input will be a json object string, and the output is a list of `FileNode` with nested
+ * structure.
+ */
+var FileDatabase = /** @class */ (function () {
+    function FileDatabase() {
+        this.dataChange = new BehaviorSubject([]);
+        this.initialize();
+    }
+    Object.defineProperty(FileDatabase.prototype, "data", {
+        get: /**
+         * @return {?}
+         */
+        function () { return this.dataChange.value; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    FileDatabase.prototype.initialize = /**
+     * @return {?}
+     */
+    function () {
+        // Parse the string to json object.
+        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
+        var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        // Notify the change.
+        this.dataChange.next(data);
+    };
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     */
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     * @param {?} value
+     * @param {?} level
+     * @return {?}
+     */
+    FileDatabase.prototype.buildFileTree = /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     * @param {?} value
+     * @param {?} level
+     * @return {?}
+     */
+    function (value, level) {
+        var /** @type {?} */ data = [];
+        for (var /** @type {?} */ k in value) {
+            var /** @type {?} */ v = value[k];
+            var /** @type {?} */ node = new FileNode();
+            node.filename = "" + k;
+            if (v === null || v === undefined) {
+                // no action
+            }
+            else if (typeof v === 'object') {
+                node.children = this.buildFileTree(v, level + 1);
+            }
+            else {
+                node.type = v;
+            }
+            data.push(node);
+        }
+        return data;
+    };
+    FileDatabase.decorators = [
+        { type: Injectable },
+    ];
+    /** @nocollapse */
+    FileDatabase.ctorParameters = function () { return []; };
+    return FileDatabase;
+}());
+/**
+ * \@title Tree with flat nodes
+ */
+var CdkTreeFlatExample = /** @class */ (function () {
+    function CdkTreeFlatExample(database) {
+        var _this = this;
+        this.transformer = function (node, level) {
+            var /** @type {?} */ flatNode = new FileFlatNode();
+            flatNode.filename = node.filename;
+            flatNode.type = node.type;
+            flatNode.level = level;
+            flatNode.expandable = !!node.children;
+            return flatNode;
+        };
+        this._getLevel = function (node) { return node.level; };
+        this._isExpandable = function (node) { return node.expandable; };
+        this._getChildren = function (node) { return of(node.children); };
+        this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
+        this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
+        this.treeControl = new FlatTreeControl(this._getLevel, this._isExpandable);
+        this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+        database.dataChange.subscribe(function (data) {
+            _this.dataSource.data = data;
+        });
+    }
+    CdkTreeFlatExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'cdk-tree-flat-example',
+                    template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding class=\"demo-tree-node\"><button mat-icon-button disabled=\"disabled\"></button> {{node.filename}}: {{node.type}}</cdk-tree-node><cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding class=\"demo-tree-node\"><button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" cdkTreeNodeToggle><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}: {{node.type}}</cdk-tree-node></cdk-tree>",
+                    styles: [".demo-tree-node { display: flex; align-items: center; } "],
+                    providers: [FileDatabase]
+                },] },
+    ];
+    /** @nocollapse */
+    CdkTreeFlatExample.ctorParameters = function () { return [
+        { type: FileDatabase, },
+    ]; };
+    return CdkTreeFlatExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Json node data with nested structure. Each node has a filename and a value or a list of children
+ */
+var /**
+ * Json node data with nested structure. Each node has a filename and a value or a list of children
+ */
+FileNode$1 = /** @class */ (function () {
+    function FileNode() {
+    }
+    return FileNode;
+}());
+/**
+ * The Json tree data in string. The data could be parsed into Json object
+ */
+var /** @type {?} */ TREE_DATA$1 = "\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n  }";
+/**
+ * File database, it can build a tree structured Json object from string.
+ * Each node in Json object represents a file or a directory. For a file, it has filename and type.
+ * For a directory, it has filename and children (a list of files or directories).
+ * The input will be a json object string, and the output is a list of `FileNode` with nested
+ * structure.
+ */
+var FileDatabase$1 = /** @class */ (function () {
+    function FileDatabase() {
+        this.dataChange = new BehaviorSubject([]);
+        this.initialize();
+    }
+    Object.defineProperty(FileDatabase.prototype, "data", {
+        get: /**
+         * @return {?}
+         */
+        function () { return this.dataChange.value; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    FileDatabase.prototype.initialize = /**
+     * @return {?}
+     */
+    function () {
+        // Parse the string to json object.
+        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$1);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
+        var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        // Notify the change.
+        this.dataChange.next(data);
+    };
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     */
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     * @param {?} value
+     * @param {?} level
+     * @return {?}
+     */
+    FileDatabase.prototype.buildFileTree = /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `FileNode`.
+     * @param {?} value
+     * @param {?} level
+     * @return {?}
+     */
+    function (value, level) {
+        var /** @type {?} */ data = [];
+        for (var /** @type {?} */ k in value) {
+            var /** @type {?} */ v = value[k];
+            var /** @type {?} */ node = new FileNode$1();
+            node.filename = "" + k;
+            if (v === null || v === undefined) {
+                // no action
+            }
+            else if (typeof v === 'object') {
+                node.children = this.buildFileTree(v, level + 1);
+            }
+            else {
+                node.type = v;
+            }
+            data.push(node);
+        }
+        return data;
+    };
+    FileDatabase.decorators = [
+        { type: Injectable },
+    ];
+    /** @nocollapse */
+    FileDatabase.ctorParameters = function () { return []; };
+    return FileDatabase;
+}());
+/**
+ * \@title Tree with nested nodes
+ */
+var CdkTreeNestedExample = /** @class */ (function () {
+    function CdkTreeNestedExample(database) {
+        var _this = this;
+        this._getChildren = function (node) { return of(node.children); };
+        this.hasNestedChild = function (_, nodeData) { return !(nodeData.type); };
+        this.nestedTreeControl = new NestedTreeControl(this._getChildren);
+        this.nestedDataSource = new MatTreeNestedDataSource();
+        database.dataChange.subscribe(function (data) { return _this.nestedDataSource.data = data; });
+    }
+    CdkTreeNestedExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'cdk-tree-nested-example',
+                    template: "<cdk-tree [dataSource]=\"nestedDataSource\" [treeControl]=\"nestedTreeControl\"><cdk-nested-tree-node *cdkTreeNodeDef=\"let node\" class=\"example-tree-node\"><button mat-icon-button disabled=\"disabled\"></button> {{node.filename}}: {{node.type}}</cdk-nested-tree-node><cdk-nested-tree-node *cdkTreeNodeDef=\"let node; when: hasNestedChild\" class=\"example-tree-node\"><button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" cdkTreeNodeToggle><mat-icon>{{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}: {{node.type}}<div [class.example-tree-invisible]=\"!nestedTreeControl.isExpanded(node)\"><ng-container cdkTreeNodeOutlet></ng-container></div></cdk-nested-tree-node></cdk-tree>",
+                    styles: [".example-tree-invisible { display: none; } .example-tree ul, .example-tree li { margin-top: 0; margin-bottom: 0; list-style-type: none; } .example-tree-node { display: block; padding-left: 40px; } "],
+                    providers: [FileDatabase$1]
+                },] },
+    ];
+    /** @nocollapse */
+    CdkTreeNestedExample.ctorParameters = function () { return [
+        { type: FileDatabase$1, },
+    ]; };
+    return CdkTreeNestedExample;
+}());
 
 /**
  * @fileoverview added by tsickle
@@ -4697,7 +4973,7 @@ var /**
  * File node data with nested structure.
  * Each node has a filename, and a type or a list of children.
  */
-FileNode = /** @class */ (function () {
+FileNode$2 = /** @class */ (function () {
     function FileNode() {
     }
     return FileNode;
@@ -4708,7 +4984,7 @@ FileNode = /** @class */ (function () {
 var /**
  * Flat node with expandable and level information
  */
-FileFlatNode = /** @class */ (function () {
+FileFlatNode$1 = /** @class */ (function () {
     function FileFlatNode() {
     }
     return FileFlatNode;
@@ -4716,7 +4992,7 @@ FileFlatNode = /** @class */ (function () {
 /**
  * The file structure tree data in string. The data could be parsed into a Json object
  */
-var /** @type {?} */ TREE_DATA = "{\"Tina\":\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}}";
+var /** @type {?} */ TREE_DATA$2 = "\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}";
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -4724,7 +5000,7 @@ var /** @type {?} */ TREE_DATA = "{\"Tina\":\n  {\n    \"Documents\": {\n      \
  * The input will be a json object string, and the output is a list of `FileNode` with nested
  * structure.
  */
-var FileDatabase = /** @class */ (function () {
+var FileDatabase$2 = /** @class */ (function () {
     function FileDatabase() {
         this.dataChange = new BehaviorSubject([]);
         this.initialize();
@@ -4745,7 +5021,7 @@ var FileDatabase = /** @class */ (function () {
      */
     function () {
         // Parse the string to json object.
-        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA);
+        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$2);
         // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
         //     file node as children.
         var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
@@ -4774,7 +5050,7 @@ var FileDatabase = /** @class */ (function () {
         var /** @type {?} */ data = [];
         for (var /** @type {?} */ k in value) {
             var /** @type {?} */ v = value[k];
-            var /** @type {?} */ node = new FileNode();
+            var /** @type {?} */ node = new FileNode$2();
             node.filename = "" + k;
             if (v === null || v === undefined) {
                 // no action
@@ -4803,7 +5079,7 @@ var TreeFlatOverviewExample = /** @class */ (function () {
     function TreeFlatOverviewExample(database) {
         var _this = this;
         this.transformer = function (node, level) {
-            var /** @type {?} */ flatNode = new FileFlatNode();
+            var /** @type {?} */ flatNode = new FileFlatNode$1();
             flatNode.filename = node.filename;
             flatNode.type = node.type;
             flatNode.level = level;
@@ -4824,14 +5100,14 @@ var TreeFlatOverviewExample = /** @class */ (function () {
     TreeFlatOverviewExample.decorators = [
         { type: Component, args: [{
                     selector: 'tree-flat-overview-example',
-                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\" class=\"example-tree\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding>{{node.filename}} : {{node.type}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}} : {{node.type}}</mat-tree-node></mat-tree>",
-                    styles: [".example-tree ul, .example-tree li { -webkit-margin-before: 0; -webkit-margin-after: 0; list-style-type: none; } "],
-                    providers: [FileDatabase]
+                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button> {{node.filename}} : {{node.type}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}} : {{node.type}}</mat-tree-node></mat-tree>",
+                    styles: [""],
+                    providers: [FileDatabase$2]
                 },] },
     ];
     /** @nocollapse */
     TreeFlatOverviewExample.ctorParameters = function () { return [
-        { type: FileDatabase, },
+        { type: FileDatabase$2, },
     ]; };
     return TreeFlatOverviewExample;
 }());
@@ -4846,7 +5122,7 @@ var TreeFlatOverviewExample = /** @class */ (function () {
 var /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
  */
-FileNode$1 = /** @class */ (function () {
+FileNode$3 = /** @class */ (function () {
     function FileNode() {
     }
     return FileNode;
@@ -4854,7 +5130,7 @@ FileNode$1 = /** @class */ (function () {
 /**
  * The Json tree data in string. The data could be parsed into Json object
  */
-var /** @type {?} */ TREE_DATA$1 = "{\"Tina\":\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}}";
+var /** @type {?} */ TREE_DATA$3 = "\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n  }";
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -4862,7 +5138,7 @@ var /** @type {?} */ TREE_DATA$1 = "{\"Tina\":\n  {\n    \"Documents\": {\n     
  * The input will be a json object string, and the output is a list of `FileNode` with nested
  * structure.
  */
-var FileDatabase$1 = /** @class */ (function () {
+var FileDatabase$3 = /** @class */ (function () {
     function FileDatabase() {
         this.dataChange = new BehaviorSubject([]);
         this.initialize();
@@ -4883,7 +5159,7 @@ var FileDatabase$1 = /** @class */ (function () {
      */
     function () {
         // Parse the string to json object.
-        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$1);
+        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$3);
         // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
         //     file node as children.
         var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
@@ -4912,7 +5188,7 @@ var FileDatabase$1 = /** @class */ (function () {
         var /** @type {?} */ data = [];
         for (var /** @type {?} */ k in value) {
             var /** @type {?} */ v = value[k];
-            var /** @type {?} */ node = new FileNode$1();
+            var /** @type {?} */ node = new FileNode$3();
             node.filename = "" + k;
             if (v === null || v === undefined) {
                 // no action
@@ -4949,14 +5225,14 @@ var TreeNestedOverviewExample = /** @class */ (function () {
     TreeNestedOverviewExample.decorators = [
         { type: Component, args: [{
                     selector: 'tree-nested-overview-example',
-                    template: "<mat-tree [dataSource]=\"nestedDataSource\" [treeControl]=\"nestedTreeControl\" class=\"example-tree\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle><li><div>{{node.filename}}: {{node.type}}</div></li></mat-tree-node><mat-nested-tree-node *matTreeNodeDef=\"let node; when: hasNestedChild\"><li><div class=\"mat-tree-node\"><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}</div><ul [class.example-tree-invisible]=\"!nestedTreeControl.isExpanded(node)\"><ng-container matTreeNodeOutlet></ng-container></ul></li></mat-nested-tree-node></mat-tree>",
-                    styles: [".example-tree-invisible { display: none; } .example-tree ul, .example-tree li { -webkit-margin-before: 0; -webkit-margin-after: 0; list-style-type: none; } "],
-                    providers: [FileDatabase$1]
+                    template: "<mat-tree [dataSource]=\"nestedDataSource\" [treeControl]=\"nestedTreeControl\" class=\"example-tree\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle><li class=\"mat-tree-node\"><button mat-icon-button disabled=\"disabled\"></button> {{node.filename}}: {{node.type}}</li></mat-tree-node><mat-nested-tree-node *matTreeNodeDef=\"let node; when: hasNestedChild\"><li><div class=\"mat-tree-node\"><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}</div><ul [class.example-tree-invisible]=\"!nestedTreeControl.isExpanded(node)\"><ng-container matTreeNodeOutlet></ng-container></ul></li></mat-nested-tree-node></mat-tree>",
+                    styles: [".example-tree-invisible { display: none; } .example-tree ul, .example-tree li { margin-top: 0; margin-bottom: 0; list-style-type: none; } "],
+                    providers: [FileDatabase$3]
                 },] },
     ];
     /** @nocollapse */
     TreeNestedOverviewExample.ctorParameters = function () { return [
-        { type: FileDatabase$1, },
+        { type: FileDatabase$3, },
     ]; };
     return TreeNestedOverviewExample;
 }());
@@ -5019,6 +5295,14 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
     'cdk-table-basic': {
         title: 'Basic CDK data-table',
         component: CdkTableBasicExample
+    },
+    'cdk-tree-flat': {
+        title: 'Tree with flat nodes',
+        component: CdkTreeFlatExample
+    },
+    'cdk-tree-nested': {
+        title: 'Tree with nested nodes',
+        component: CdkTreeNestedExample
     },
     'checkbox-configurable': {
         title: 'Configurable checkbox',
@@ -5519,6 +5803,8 @@ var /** @type {?} */ EXAMPLE_LIST = [
     CardFancyExample,
     CardOverviewExample,
     CdkTableBasicExample,
+    CdkTreeFlatExample,
+    CdkTreeNestedExample,
     CheckboxConfigurableExample,
     CheckboxOverviewExample,
     ChipsAutocompleteExample,
@@ -5702,5 +5988,5 @@ ExampleData = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CheckboxConfigurableExample as ɵm, CheckboxOverviewExample as ɵn, ChipsAutocompleteExample as ɵo, ChipsInputExample as ɵp, ChipsOverviewExample as ɵq, ChipsStackedExample as ɵr, DatepickerApiExample as ɵs, DatepickerColorExample as ɵt, DatepickerCustomIconExample as ɵu, DatepickerDisabledExample as ɵv, DatepickerEventsExample as ɵw, DatepickerFilterExample as ɵx, DatepickerFormatsExample as ɵz, MY_FORMATS as ɵy, DatepickerLocaleExample as ɵba, DatepickerMinMaxExample as ɵbb, DatepickerMomentExample as ɵbc, DatepickerStartViewExample as ɵbd, DatepickerTouchExample as ɵbe, DatepickerValueExample as ɵbf, DatepickerViewsSelectionExample as ɵbh, MY_FORMATS$1 as ɵbg, DialogContentExample as ɵbi, DialogContentExampleDialog as ɵbj, DialogDataExample as ɵbk, DialogDataExampleDialog as ɵbl, DialogElementsExample as ɵbm, DialogElementsExampleDialog as ɵbn, DialogOverviewExample as ɵbo, DialogOverviewExampleDialog as ɵbp, DividerOverviewExample as ɵbq, ElevationOverviewExample as ɵbr, ExpansionExpandCollapseAllExample as ɵbs, ExpansionStepsExample as ɵbt, FormFieldAppearanceExample as ɵbu, FormFieldCustomControlExample as ɵbw, MyTelInput as ɵbv, FormFieldErrorExample as ɵbx, FormFieldHintExample as ɵby, FormFieldLabelExample as ɵbz, FormFieldOverviewExample as ɵca, FormFieldPrefixSuffixExample as ɵcb, FormFieldThemingExample as ɵcc, GridListDynamicExample as ɵcd, GridListOverviewExample as ɵce, IconOverviewExample as ɵcf, IconSvgExample as ɵcg, InputAutosizeTextareaExample as ɵch, InputClearableExample as ɵci, InputErrorStateMatcherExample as ɵcj, InputErrorsExample as ɵck, InputFormExample as ɵcl, InputHintExample as ɵcm, InputOverviewExample as ɵcn, InputPrefixSuffixExample as ɵco, ListSectionsExample as ɵcp, ListSelectionExample as ɵcq, ExampleMaterialModule as ɵfg, MenuIconsExample as ɵcr, MenuOverviewExample as ɵcs, NestedMenuExample as ɵct, PaginatorConfigurableExample as ɵcu, PaginatorOverviewExample as ɵcv, ProgressBarBufferExample as ɵcw, ProgressBarConfigurableExample as ɵcx, ProgressBarDeterminateExample as ɵcy, ProgressBarIndeterminateExample as ɵcz, ProgressBarQueryExample as ɵda, ProgressSpinnerConfigurableExample as ɵdb, ProgressSpinnerOverviewExample as ɵdc, RadioNgModelExample as ɵdd, RadioOverviewExample as ɵde, SelectCustomTriggerExample as ɵdf, SelectDisabledExample as ɵdg, SelectErrorStateMatcherExample as ɵdh, SelectFormExample as ɵdi, SelectHintErrorExample as ɵdj, SelectMultipleExample as ɵdk, SelectNoRippleExample as ɵdl, SelectOptgroupExample as ɵdm, SelectOverviewExample as ɵdn, SelectPanelClassExample as ɵdo, SelectResetExample as ɵdp, SelectValueBindingExample as ɵdq, SidenavAutosizeExample as ɵdr, SidenavBackdropExample as ɵds, SidenavDisableCloseExample as ɵdt, SidenavDrawerOverviewExample as ɵdu, SidenavFixedExample as ɵdv, SidenavModeExample as ɵdw, SidenavOpenCloseExample as ɵdx, SidenavOverviewExample as ɵdy, SidenavPositionExample as ɵdz, SidenavResponsiveExample as ɵea, SlideToggleConfigurableExample as ɵeb, SlideToggleFormsExample as ɵec, SlideToggleOverviewExample as ɵed, SliderConfigurableExample as ɵee, SliderFormattingExample as ɵef, SliderOverviewExample as ɵeg, PizzaPartyComponent as ɵei, SnackBarComponentExample as ɵeh, SnackBarOverviewExample as ɵej, SnackBarPositionExample as ɵek, SortOverviewExample as ɵel, TableBasicExample as ɵem, TableFilteringExample as ɵen, TableHttpExample as ɵeo, TableOverviewExample as ɵep, TablePaginationExample as ɵeq, TableSelectionExample as ɵer, TableSortingExample as ɵes, TabsOverviewExample as ɵet, TabsTemplateLabelExample as ɵeu, ToolbarOverviewExample as ɵev, TooltipDelayExample as ɵew, TooltipManualExample as ɵex, TooltipModifiedDefaultsExample as ɵez, myCustomTooltipDefaults as ɵey, TooltipOverviewExample as ɵfa, TooltipPositionExample as ɵfb, FileDatabase as ɵfc, TreeFlatOverviewExample as ɵfd, FileDatabase$1 as ɵfe, TreeNestedOverviewExample as ɵff };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CdkTreeFlatExample as ɵn, FileDatabase as ɵm, CdkTreeNestedExample as ɵp, FileDatabase$1 as ɵo, CheckboxConfigurableExample as ɵq, CheckboxOverviewExample as ɵr, ChipsAutocompleteExample as ɵs, ChipsInputExample as ɵt, ChipsOverviewExample as ɵu, ChipsStackedExample as ɵv, DatepickerApiExample as ɵw, DatepickerColorExample as ɵx, DatepickerCustomIconExample as ɵy, DatepickerDisabledExample as ɵz, DatepickerEventsExample as ɵba, DatepickerFilterExample as ɵbb, DatepickerFormatsExample as ɵbd, MY_FORMATS as ɵbc, DatepickerLocaleExample as ɵbe, DatepickerMinMaxExample as ɵbf, DatepickerMomentExample as ɵbg, DatepickerStartViewExample as ɵbh, DatepickerTouchExample as ɵbi, DatepickerValueExample as ɵbj, DatepickerViewsSelectionExample as ɵbl, MY_FORMATS$1 as ɵbk, DialogContentExample as ɵbm, DialogContentExampleDialog as ɵbn, DialogDataExample as ɵbo, DialogDataExampleDialog as ɵbp, DialogElementsExample as ɵbq, DialogElementsExampleDialog as ɵbr, DialogOverviewExample as ɵbs, DialogOverviewExampleDialog as ɵbt, DividerOverviewExample as ɵbu, ElevationOverviewExample as ɵbv, ExpansionExpandCollapseAllExample as ɵbw, ExpansionStepsExample as ɵbx, FormFieldAppearanceExample as ɵby, FormFieldCustomControlExample as ɵca, MyTelInput as ɵbz, FormFieldErrorExample as ɵcb, FormFieldHintExample as ɵcc, FormFieldLabelExample as ɵcd, FormFieldOverviewExample as ɵce, FormFieldPrefixSuffixExample as ɵcf, FormFieldThemingExample as ɵcg, GridListDynamicExample as ɵch, GridListOverviewExample as ɵci, IconOverviewExample as ɵcj, IconSvgExample as ɵck, InputAutosizeTextareaExample as ɵcl, InputClearableExample as ɵcm, InputErrorStateMatcherExample as ɵcn, InputErrorsExample as ɵco, InputFormExample as ɵcp, InputHintExample as ɵcq, InputOverviewExample as ɵcr, InputPrefixSuffixExample as ɵcs, ListSectionsExample as ɵct, ListSelectionExample as ɵcu, ExampleMaterialModule as ɵfk, MenuIconsExample as ɵcv, MenuOverviewExample as ɵcw, NestedMenuExample as ɵcx, PaginatorConfigurableExample as ɵcy, PaginatorOverviewExample as ɵcz, ProgressBarBufferExample as ɵda, ProgressBarConfigurableExample as ɵdb, ProgressBarDeterminateExample as ɵdc, ProgressBarIndeterminateExample as ɵdd, ProgressBarQueryExample as ɵde, ProgressSpinnerConfigurableExample as ɵdf, ProgressSpinnerOverviewExample as ɵdg, RadioNgModelExample as ɵdh, RadioOverviewExample as ɵdi, SelectCustomTriggerExample as ɵdj, SelectDisabledExample as ɵdk, SelectErrorStateMatcherExample as ɵdl, SelectFormExample as ɵdm, SelectHintErrorExample as ɵdn, SelectMultipleExample as ɵdo, SelectNoRippleExample as ɵdp, SelectOptgroupExample as ɵdq, SelectOverviewExample as ɵdr, SelectPanelClassExample as ɵds, SelectResetExample as ɵdt, SelectValueBindingExample as ɵdu, SidenavAutosizeExample as ɵdv, SidenavBackdropExample as ɵdw, SidenavDisableCloseExample as ɵdx, SidenavDrawerOverviewExample as ɵdy, SidenavFixedExample as ɵdz, SidenavModeExample as ɵea, SidenavOpenCloseExample as ɵeb, SidenavOverviewExample as ɵec, SidenavPositionExample as ɵed, SidenavResponsiveExample as ɵee, SlideToggleConfigurableExample as ɵef, SlideToggleFormsExample as ɵeg, SlideToggleOverviewExample as ɵeh, SliderConfigurableExample as ɵei, SliderFormattingExample as ɵej, SliderOverviewExample as ɵek, PizzaPartyComponent as ɵem, SnackBarComponentExample as ɵel, SnackBarOverviewExample as ɵen, SnackBarPositionExample as ɵeo, SortOverviewExample as ɵep, TableBasicExample as ɵeq, TableFilteringExample as ɵer, TableHttpExample as ɵes, TableOverviewExample as ɵet, TablePaginationExample as ɵeu, TableSelectionExample as ɵev, TableSortingExample as ɵew, TabsOverviewExample as ɵex, TabsTemplateLabelExample as ɵey, ToolbarOverviewExample as ɵez, TooltipDelayExample as ɵfa, TooltipManualExample as ɵfb, TooltipModifiedDefaultsExample as ɵfd, myCustomTooltipDefaults as ɵfc, TooltipOverviewExample as ɵfe, TooltipPositionExample as ɵff, FileDatabase$2 as ɵfg, TreeFlatOverviewExample as ɵfh, FileDatabase$3 as ɵfi, TreeNestedOverviewExample as ɵfj };
 //# sourceMappingURL=material-examples.es5.js.map
