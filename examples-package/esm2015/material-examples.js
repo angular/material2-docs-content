@@ -740,8 +740,8 @@ CdkTreeFlatExample.ctorParameters = () => [
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
  */
-class FileNode$1 {
-}
+let FileNode$1 = class FileNode {
+};
 /**
  * The Json tree data in string. The data could be parsed into Json object
  */
@@ -788,7 +788,7 @@ const /** @type {?} */ TREE_DATA$1 = `
  * The input will be a json object string, and the output is a list of `FileNode` with nested
  * structure.
  */
-class FileDatabase$1 {
+let FileDatabase$1 = class FileDatabase {
     constructor() {
         this.dataChange = new BehaviorSubject([]);
         this.initialize();
@@ -835,7 +835,7 @@ class FileDatabase$1 {
         }
         return data;
     }
-}
+};
 FileDatabase$1.decorators = [
     { type: Injectable },
 ];
@@ -2931,7 +2931,7 @@ SelectDisabledExample.ctorParameters = () => [];
 /**
  * Error when invalid control is dirty, touched, or submitted.
  */
-class MyErrorStateMatcher$1 {
+let MyErrorStateMatcher$1 = class MyErrorStateMatcher {
     /**
      * @param {?} control
      * @param {?} form
@@ -2941,7 +2941,7 @@ class MyErrorStateMatcher$1 {
         const /** @type {?} */ isSubmitted = form && form.submitted;
         return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
     }
-}
+};
 /**
  * \@title Select with a custom ErrorStateMatcher
  */
@@ -4498,13 +4498,13 @@ TooltipPositionExample.ctorParameters = () => [];
  * File node data with nested structure.
  * Each node has a filename, and a type or a list of children.
  */
-class FileNode$2 {
-}
+let FileNode$2 = class FileNode {
+};
 /**
  * Flat node with expandable and level information
  */
-class FileFlatNode$1 {
-}
+let FileFlatNode$1 = class FileFlatNode {
+};
 /**
  * The file structure tree data in string. The data could be parsed into a Json object
  */
@@ -4551,7 +4551,7 @@ const /** @type {?} */ TREE_DATA$2 = `
  * The input will be a json object string, and the output is a list of `FileNode` with nested
  * structure.
  */
-class FileDatabase$2 {
+let FileDatabase$2 = class FileDatabase {
     constructor() {
         this.dataChange = new BehaviorSubject([]);
         this.initialize();
@@ -4598,7 +4598,7 @@ class FileDatabase$2 {
         }
         return data;
     }
-}
+};
 FileDatabase$2.decorators = [
     { type: Injectable },
 ];
@@ -4652,8 +4652,8 @@ TreeFlatOverviewExample.ctorParameters = () => [
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
  */
-class FileNode$3 {
-}
+let FileNode$3 = class FileNode {
+};
 /**
  * The Json tree data in string. The data could be parsed into Json object
  */
@@ -4700,7 +4700,7 @@ const /** @type {?} */ TREE_DATA$3 = `
  * The input will be a json object string, and the output is a list of `FileNode` with nested
  * structure.
  */
-class FileDatabase$3 {
+let FileDatabase$3 = class FileDatabase {
     constructor() {
         this.dataChange = new BehaviorSubject([]);
         this.initialize();
@@ -4747,7 +4747,7 @@ class FileDatabase$3 {
         }
         return data;
     }
-}
+};
 FileDatabase$3.decorators = [
     { type: Injectable },
 ];

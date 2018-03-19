@@ -3,6 +3,7 @@
     &lt;cdk-tree-node&gt; -- child node1 &lt;/cdk-tree-node&gt;
     &lt;cdk-tree-node&gt; -- child node2 &lt;/cdk-tree-node&gt;
 &lt;/cdk-tree&gt;
+
 </code></pre><p class="docs-markdown-p">Flat trees are generally easier to style and inspect. They are also more friendly to scrolling variations, such as infinite or virtual scrolling.</p><h4 id="nested-tree" class="docs-header-link docs-markdown-h4"><span header-link="nested-tree"></span> Nested tree</h4><div material-docs-example="cdk-tree-nested"></div><p class="docs-markdown-p">In nested tree, children nodes are placed inside their parent node in DOM. The parent node contains a node outlet into which children are projected.</p><pre class="docs-markdown-pre"><code class="docs-markdown-code">&lt;cdk-tree&gt;
    &lt;cdk-nested-tree-node&gt;
        parent node
@@ -17,6 +18,7 @@
     {{node.value}}
     &lt;ng-container cdkTreeNodeOutlet&gt;&lt;/ng-container&gt;
 &lt;/cdk-nested-tree-node&gt;
+
 </code></pre><h4 id="adding-expand-collapse" class="docs-header-link docs-markdown-h4"><span header-link="adding-expand-collapse"></span> Adding expand/collapse</h4><p class="docs-markdown-p">A <code class="docs-markdown-code">cdkTreeNodeToggle</code> can be added in the tree node template to expand/collapse the tree node. The toggle toggles the expand/collapse functions in TreeControl and is able to expand/collapse a tree node recursively by setting <code class="docs-markdown-code">[cdkTreeNodeToggleRecursive]</code> to true.</p><pre class="docs-markdown-pre"><code class="docs-markdown-code">&lt;cdk-tree-node *cdkNodeDef=“let node” cdkTreeNodeToggle [cdkTreeNodeToggleRecursive]="true"&gt;
     {{node.value}}
 &lt;/cdk-tree-node&gt;
@@ -29,6 +31,7 @@
 </code></pre><h4 id="padding-flat-tree-only-" class="docs-header-link docs-markdown-h4"><span header-link="padding-flat-tree-only-"></span> Padding (Flat tree only)</h4><p class="docs-markdown-p">The cdkTreeNodePadding can be placed in a flat tree's node template to display the level information of a flat tree node.</p><pre class="docs-markdown-pre"><code class="docs-markdown-code">&lt;cdk-tree-node *cdkNodeDef=“let node” cdkNodePadding&gt;
     {{node.value}}
 &lt;/cdk-tree-node&gt;
+
 </code></pre><p class="docs-markdown-p">Nested tree does not need this padding since padding can be easily added to the hierarchy structure in DOM.</p><h4 id="conditional-template" class="docs-header-link docs-markdown-h4"><span header-link="conditional-template"></span> Conditional template</h4><p class="docs-markdown-p">The tree may include multiple node templates, where a template is chosen for a particular data node via the <code class="docs-markdown-code">when</code> predicate of the template.</p><pre class="docs-markdown-pre"><code class="docs-markdown-code">&lt;cdk-tree-node *cdkNodeDef=“let node” cdkTreeNodePadding&gt;
     {{node.value}}
 &lt;/cdk-tree-node&gt;

@@ -8,6 +8,7 @@ export declare class SelectOptgroupExample {
             value: string;
             viewValue: string;
         }[];
+        disabled?: undefined;
     } | {
         name: string;
         disabled: boolean;
