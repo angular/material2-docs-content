@@ -15,4 +15,14 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Naan<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>&gt;</span>Dal<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-list</span>&gt;</span>
+</code></pre><h3 id="specifying-global-configuration-defaults" class="docs-header-link docs-markdown-h3"><span header-link="specifying-global-configuration-defaults"></span> Specifying global configuration defaults</h3><p class="docs-markdown-p">Default options for the chips module can be specified using the <code class="docs-markdown-code">MAT_CHIPS_DEFAULT_OPTIONS</code> injection token.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  providers: [
+    {
+      provide: MAT_CHIPS_DEFAULT_OPTIONS,
+      useValue: {
+        separatorKeyCodes: [ENTER, COMMA]
+      }
+    }
+  ]
+})
 </code></pre><h3 id="theming" class="docs-header-link docs-markdown-h3"><span header-link="theming"></span> Theming</h3><p class="docs-markdown-p">The selected color of an <code class="docs-markdown-code">&lt;mat-chip&gt;</code> can be changed by using the <code class="docs-markdown-code">color</code> property. By default, chips use a neutral background color based on the current theme (light or dark). This can be changed to <code class="docs-markdown-code">'primary'</code>, <code class="docs-markdown-code">'accent'</code>, or <code class="docs-markdown-code">'warn'</code>.</p><h3 id="accessibility" class="docs-header-link docs-markdown-h3"><span header-link="accessibility"></span> Accessibility</h3><p class="docs-markdown-p">A chip-list behaves as a <code class="docs-markdown-code">role="listbox"</code>, with each chip being a <code class="docs-markdown-code">role="option"</code>. The chip input should have a placeholder or be given a meaningful label via <code class="docs-markdown-code">aria-label</code> or <code class="docs-markdown-code">aria-labelledby</code>.</p></div></body></html>
