@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 /**
  * @title Table retrieving data through HTTP
  */

@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators/startWith'), require('rxjs/operators/map'), require('@angular/cdk/collections'), require('rxjs/BehaviorSubject'), require('@angular/material/tree'), require('rxjs/observable/of'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('rxjs/Subject'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('rxjs/observable/merge'), require('rxjs/operators/catchError'), require('rxjs/operators/switchMap'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators/startWith', 'rxjs/operators/map', '@angular/cdk/collections', 'rxjs/BehaviorSubject', '@angular/material/tree', 'rxjs/observable/of', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', 'rxjs/Subject', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', 'rxjs/observable/merge', 'rxjs/operators/catchError', 'rxjs/operators/switchMap', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.Rx.operators,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.material.tree,global.Rx.Observable,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.Rx,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.Rx.Observable,global.Rx.operators,global.Rx.operators,global.ng.common));
-}(this, (function (exports,core,table,tree,material,forms,startWith,map,collections,BehaviorSubject,tree$1,of,keycodes,materialMomentAdapter,core$1,_rollupMoment__default,a11y,coercion,Subject,platformBrowser,sidenav,layout,http,merge,catchError,switchMap,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', '@angular/common'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.ng.common));
+}(this, (function (exports,core,table,tree,material,forms,operators,collections,rxjs,tree$1,keycodes,materialMomentAdapter,core$1,_rollupMoment__default,a11y,coercion,platformBrowser,sidenav,layout,http,common) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -111,7 +111,7 @@ var AutocompleteAutoActiveFirstOptionExample = /** @class */ (function () {
      */
     function () {
         var _this = this;
-        this.filteredOptions = this.myControl.valueChanges.pipe(startWith.startWith(''), map.map(function (val) { return _this.filter(val); }));
+        this.filteredOptions = this.myControl.valueChanges.pipe(operators.startWith(''), operators.map(function (val) { return _this.filter(val); }));
     };
     /**
      * @param {?} val
@@ -167,7 +167,7 @@ var AutocompleteDisplayExample = /** @class */ (function () {
     function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith.startWith(''), map.map(function (value) { return typeof value === 'string' ? value : value.name; }), map.map(function (name) { return name ? _this.filter(name) : _this.options.slice(); }));
+            .pipe(operators.startWith(''), operators.map(function (value) { return typeof value === 'string' ? value : value.name; }), operators.map(function (name) { return name ? _this.filter(name) : _this.options.slice(); }));
     };
     /**
      * @param {?} name
@@ -230,7 +230,7 @@ var AutocompleteFilterExample = /** @class */ (function () {
     function () {
         var _this = this;
         this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith.startWith(''), map.map(function (val) { return _this.filter(val); }));
+            .pipe(operators.startWith(''), operators.map(function (val) { return _this.filter(val); }));
     };
     /**
      * @param {?} val
@@ -295,7 +295,7 @@ var AutocompleteOverviewExample = /** @class */ (function () {
         ];
         this.stateCtrl = new forms.FormControl();
         this.filteredStates = this.stateCtrl.valueChanges
-            .pipe(startWith.startWith(''), map.map(function (state) { return state ? _this.filterStates(state) : _this.states.slice(); }));
+            .pipe(operators.startWith(''), operators.map(function (state) { return state ? _this.filterStates(state) : _this.states.slice(); }));
     }
     /**
      * @param {?} name
@@ -595,7 +595,7 @@ ExampleDatabase = /** @class */ (function () {
         /**
          * Stream that emits whenever the data has been modified.
          */
-        this.dataChange = new BehaviorSubject.BehaviorSubject([]);
+        this.dataChange = new rxjs.BehaviorSubject([]);
         // Fill up the database with 100 users.
         for (var /** @type {?} */ i = 0; i < 100; i++) {
             this.addUser();
@@ -727,7 +727,7 @@ var /** @type {?} */ TREE_DATA = "\n  {\n    \"Documents\": {\n      \"angular\"
  */
 var FileDatabase = /** @class */ (function () {
     function FileDatabase() {
-        this.dataChange = new BehaviorSubject.BehaviorSubject([]);
+        this.dataChange = new rxjs.BehaviorSubject([]);
         this.initialize();
     }
     Object.defineProperty(FileDatabase.prototype, "data", {
@@ -813,7 +813,7 @@ var CdkTreeFlatExample = /** @class */ (function () {
         };
         this._getLevel = function (node) { return node.level; };
         this._isExpandable = function (node) { return node.expandable; };
-        this._getChildren = function (node) { return of.of(node.children); };
+        this._getChildren = function (node) { return rxjs.of(node.children); };
         this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
         this.treeFlattener = new tree$1.MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
         this.treeControl = new tree.FlatTreeControl(this._getLevel, this._isExpandable);
@@ -865,7 +865,7 @@ var /** @type {?} */ TREE_DATA$1 = "\n  {\n    \"Documents\": {\n      \"angular
  */
 var FileDatabase$1 = /** @class */ (function () {
     function FileDatabase() {
-        this.dataChange = new BehaviorSubject.BehaviorSubject([]);
+        this.dataChange = new rxjs.BehaviorSubject([]);
         this.initialize();
     }
     Object.defineProperty(FileDatabase.prototype, "data", {
@@ -941,7 +941,7 @@ var FileDatabase$1 = /** @class */ (function () {
 var CdkTreeNestedExample = /** @class */ (function () {
     function CdkTreeNestedExample(database) {
         var _this = this;
-        this._getChildren = function (node) { return of.of(node.children); };
+        this._getChildren = function (node) { return rxjs.of(node.children); };
         this.hasNestedChild = function (_, nodeData) { return !(nodeData.type); };
         this.nestedTreeControl = new tree.NestedTreeControl(this._getChildren);
         this.nestedDataSource = new tree$1.MatTreeNestedDataSource();
@@ -1035,7 +1035,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
             'Lime',
             'Apple',
         ];
-        this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith.startWith(null), map.map(function (fruit) { return fruit ? _this.filter(fruit) : _this.allFruits.slice(); }));
+        this.filteredFruits = this.fruitCtrl.valueChanges.pipe(operators.startWith(null), operators.map(function (fruit) { return fruit ? _this.filter(fruit) : _this.allFruits.slice(); }));
     }
     /**
      * @param {?} event
@@ -2105,7 +2105,7 @@ var MyTelInput = /** @class */ (function () {
         var _this = this;
         this.fm = fm;
         this.elRef = elRef;
-        this.stateChanges = new Subject.Subject();
+        this.stateChanges = new rxjs.Subject();
         this.focused = false;
         this.ngControl = null;
         this.errorState = false;
@@ -4394,23 +4394,23 @@ var TableHttpExample = /** @class */ (function () {
         this.exampleDatabase = new ExampleHttpDao(this.http);
         // If the user changes the sort order, reset back to the first page.
         this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
-        merge.merge(this.sort.sortChange, this.paginator.page)
-            .pipe(startWith.startWith({}), switchMap.switchMap(function () {
+        rxjs.merge(this.sort.sortChange, this.paginator.page)
+            .pipe(operators.startWith({}), operators.switchMap(function () {
             _this.isLoadingResults = true;
             return /** @type {?} */ ((_this.exampleDatabase)).getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
-        }), map.map(function (data) {
+        }), operators.map(function (data) {
             // Flip flag to show that loading has finished.
             // Flip flag to show that loading has finished.
             _this.isLoadingResults = false;
             _this.isRateLimitReached = false;
             _this.resultsLength = data.total_count;
             return data.items;
-        }), catchError.catchError(function () {
+        }), operators.catchError(function () {
             _this.isLoadingResults = false;
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             _this.isRateLimitReached = true;
-            return of.of([]);
+            return rxjs.of([]);
         })).subscribe(function (data) { return _this.dataSource.data = data; });
     };
     TableHttpExample.decorators = [
@@ -5007,7 +5007,7 @@ var /** @type {?} */ TREE_DATA$2 = "\n  {\n    \"Documents\": {\n      \"angular
  */
 var FileDatabase$2 = /** @class */ (function () {
     function FileDatabase() {
-        this.dataChange = new BehaviorSubject.BehaviorSubject([]);
+        this.dataChange = new rxjs.BehaviorSubject([]);
         this.initialize();
     }
     Object.defineProperty(FileDatabase.prototype, "data", {
@@ -5093,7 +5093,7 @@ var TreeFlatOverviewExample = /** @class */ (function () {
         };
         this._getLevel = function (node) { return node.level; };
         this._isExpandable = function (node) { return node.expandable; };
-        this._getChildren = function (node) { return of.of(node.children); };
+        this._getChildren = function (node) { return rxjs.of(node.children); };
         this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
         this.treeFlattener = new tree$1.MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
         this.treeControl = new tree.FlatTreeControl(this._getLevel, this._isExpandable);
@@ -5145,7 +5145,7 @@ var /** @type {?} */ TREE_DATA$3 = "\n  {\n    \"Documents\": {\n      \"angular
  */
 var FileDatabase$3 = /** @class */ (function () {
     function FileDatabase() {
-        this.dataChange = new BehaviorSubject.BehaviorSubject([]);
+        this.dataChange = new rxjs.BehaviorSubject([]);
         this.initialize();
     }
     Object.defineProperty(FileDatabase.prototype, "data", {
@@ -5221,7 +5221,7 @@ var FileDatabase$3 = /** @class */ (function () {
 var TreeNestedOverviewExample = /** @class */ (function () {
     function TreeNestedOverviewExample(database) {
         var _this = this;
-        this._getChildren = function (node) { return of.of(node.children); };
+        this._getChildren = function (node) { return rxjs.of(node.children); };
         this.hasNestedChild = function (_, nodeData) { return !(nodeData.type); };
         this.nestedTreeControl = new tree.NestedTreeControl(this._getChildren);
         this.nestedDataSource = new tree$1.MatTreeNestedDataSource();
