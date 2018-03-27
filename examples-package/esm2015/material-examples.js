@@ -403,7 +403,7 @@ class ButtonToggleOverviewExample {
 ButtonToggleOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'button-toggle-overview-example',
-                template: "<mat-button-toggle>Toggle me!</mat-button-toggle>",
+                template: "<mat-button-toggle-group name=\"fontStyle\"><mat-button-toggle value=\"bold\">Bold</mat-button-toggle><mat-button-toggle value=\"italic\">Italic</mat-button-toggle><mat-button-toggle value=\"underline\">Underline</mat-button-toggle></mat-button-toggle-group>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
