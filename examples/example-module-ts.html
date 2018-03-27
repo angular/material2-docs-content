@@ -62,7 +62,6 @@
 <span class="hljs-keyword">import</span> {GridListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./grid-list-overview/grid-list-overview-example'</span>;
 <span class="hljs-keyword">import</span> {IconOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./icon-overview/icon-overview-example'</span>;
 <span class="hljs-keyword">import</span> {IconSvgExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./icon-svg/icon-svg-example'</span>;
-<span class="hljs-keyword">import</span> {InputAutosizeTextareaExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-autosize-textarea/input-autosize-textarea-example'</span>;
 <span class="hljs-keyword">import</span> {InputClearableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-clearable/input-clearable-example'</span>;
 <span class="hljs-keyword">import</span> {InputErrorStateMatcherExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-error-state-matcher/input-error-state-matcher-example'</span>;
 <span class="hljs-keyword">import</span> {InputErrorsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-errors/input-errors-example'</span>;
@@ -129,6 +128,9 @@
 <span class="hljs-keyword">import</span> {TableSortingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sorting/table-sorting-example'</span>;
 <span class="hljs-keyword">import</span> {TabsOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tabs-overview/tabs-overview-example'</span>;
 <span class="hljs-keyword">import</span> {TabsTemplateLabelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tabs-template-label/tabs-template-label-example'</span>;
+<span class="hljs-keyword">import</span> {TextFieldAutofillDirectiveExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./text-field-autofill-directive/text-field-autofill-directive-example'</span>;
+<span class="hljs-keyword">import</span> {TextFieldAutofillMonitorExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./text-field-autofill-monitor/text-field-autofill-monitor-example'</span>;
+<span class="hljs-keyword">import</span> {TextFieldAutosizeTextareaExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./text-field-autosize-textarea/text-field-autosize-textarea-example'</span>;
 <span class="hljs-keyword">import</span> {ToolbarMultirowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./toolbar-multirow/toolbar-multirow-example'</span>;
 <span class="hljs-keyword">import</span> {ToolbarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./toolbar-overview/toolbar-overview-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipDelayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-delay/tooltip-delay-example'</span>;
@@ -386,10 +388,6 @@
   <span class="hljs-string">'icon-svg'</span>: {
     title: <span class="hljs-string">'SVG icons'</span>,
     component: IconSvgExample
-  },
-  <span class="hljs-string">'input-autosize-textarea'</span>: {
-    title: <span class="hljs-string">'Auto-resizing textarea'</span>,
-    component: InputAutosizeTextareaExample
   },
   <span class="hljs-string">'input-clearable'</span>: {
     title: <span class="hljs-string">'Input with a clear button'</span>,
@@ -657,6 +655,18 @@
     title: <span class="hljs-string">'Complex Example'</span>,
     component: TabsTemplateLabelExample
   },
+  <span class="hljs-string">'text-field-autofill-directive'</span>: {
+    title: <span class="hljs-string">'Monitoring autofill state with cdkAutofill'</span>,
+    component: TextFieldAutofillDirectiveExample
+  },
+  <span class="hljs-string">'text-field-autofill-monitor'</span>: {
+    title: <span class="hljs-string">'Monitoring autofill state with AutofillMonitor'</span>,
+    component: TextFieldAutofillMonitorExample
+  },
+  <span class="hljs-string">'text-field-autosize-textarea'</span>: {
+    title: <span class="hljs-string">'Auto-resizing textarea'</span>,
+    component: TextFieldAutosizeTextareaExample
+  },
   <span class="hljs-string">'toolbar-multirow'</span>: {
     title: <span class="hljs-string">'Multi-row toolbar'</span>,
     component: ToolbarMultirowExample
@@ -753,7 +763,6 @@
   GridListOverviewExample,
   IconOverviewExample,
   IconSvgExample,
-  InputAutosizeTextareaExample,
   InputClearableExample,
   InputErrorStateMatcherExample,
   InputErrorsExample,
@@ -820,6 +829,9 @@
   TableSortingExample,
   TabsOverviewExample,
   TabsTemplateLabelExample,
+  TextFieldAutofillDirectiveExample,
+  TextFieldAutofillMonitorExample,
+  TextFieldAutosizeTextareaExample,
   ToolbarMultirowExample,
   ToolbarOverviewExample,
   TooltipDelayExample,

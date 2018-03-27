@@ -1,0 +1,29 @@
+<span class="hljs-keyword">import</span> {AutofillMonitor} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/text-field'</span>;
+<span class="hljs-keyword">import</span> {Component, ElementRef, OnDestroy, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/** @title Monitoring autofill state with AutofillMonitor */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'text-field-autofill-monitor-example'</span>,
+  templateUrl: <span class="hljs-string">'./text-field-autofill-monitor-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'./text-field-autofill-monitor-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TextFieldAutofillMonitorExample <span class="hljs-keyword">implements</span> OnDestroy, OnInit {
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'first'</span>, {read: ElementRef}) firstName: ElementRef;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'last'</span>, {read: ElementRef}) lastName: ElementRef;
+  firstNameAutofilled: <span class="hljs-built_in">boolean</span>;
+  lastNameAutofilled: <span class="hljs-built_in">boolean</span>;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> autofill: AutofillMonitor</span>) {}
+
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.autofill.monitor(<span class="hljs-keyword">this</span>.firstName.nativeElement)
+        .subscribe(<span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> <span class="hljs-keyword">this</span>.firstNameAutofilled = e.isAutofilled);
+    <span class="hljs-keyword">this</span>.autofill.monitor(<span class="hljs-keyword">this</span>.lastName.nativeElement)
+        .subscribe(<span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> <span class="hljs-keyword">this</span>.lastNameAutofilled = e.isAutofilled);
+  }
+
+  ngOnDestroy() {
+    <span class="hljs-keyword">this</span>.autofill.stopMonitoring(<span class="hljs-keyword">this</span>.firstName.nativeElement);
+    <span class="hljs-keyword">this</span>.autofill.stopMonitoring(<span class="hljs-keyword">this</span>.lastName.nativeElement);
+  }
+}

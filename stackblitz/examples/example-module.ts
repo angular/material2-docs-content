@@ -62,7 +62,6 @@ import {GridListDynamicExample} from './grid-list-dynamic/grid-list-dynamic-exam
 import {GridListOverviewExample} from './grid-list-overview/grid-list-overview-example';
 import {IconOverviewExample} from './icon-overview/icon-overview-example';
 import {IconSvgExample} from './icon-svg/icon-svg-example';
-import {InputAutosizeTextareaExample} from './input-autosize-textarea/input-autosize-textarea-example';
 import {InputClearableExample} from './input-clearable/input-clearable-example';
 import {InputErrorStateMatcherExample} from './input-error-state-matcher/input-error-state-matcher-example';
 import {InputErrorsExample} from './input-errors/input-errors-example';
@@ -129,6 +128,9 @@ import {TableSelectionExample} from './table-selection/table-selection-example';
 import {TableSortingExample} from './table-sorting/table-sorting-example';
 import {TabsOverviewExample} from './tabs-overview/tabs-overview-example';
 import {TabsTemplateLabelExample} from './tabs-template-label/tabs-template-label-example';
+import {TextFieldAutofillDirectiveExample} from './text-field-autofill-directive/text-field-autofill-directive-example';
+import {TextFieldAutofillMonitorExample} from './text-field-autofill-monitor/text-field-autofill-monitor-example';
+import {TextFieldAutosizeTextareaExample} from './text-field-autosize-textarea/text-field-autosize-textarea-example';
 import {ToolbarMultirowExample} from './toolbar-multirow/toolbar-multirow-example';
 import {ToolbarOverviewExample} from './toolbar-overview/toolbar-overview-example';
 import {TooltipDelayExample} from './tooltip-delay/tooltip-delay-example';
@@ -386,10 +388,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'icon-svg': {
     title: 'SVG icons',
     component: IconSvgExample
-  },
-  'input-autosize-textarea': {
-    title: 'Auto-resizing textarea',
-    component: InputAutosizeTextareaExample
   },
   'input-clearable': {
     title: 'Input with a clear button',
@@ -657,6 +655,18 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Complex Example',
     component: TabsTemplateLabelExample
   },
+  'text-field-autofill-directive': {
+    title: 'Monitoring autofill state with cdkAutofill',
+    component: TextFieldAutofillDirectiveExample
+  },
+  'text-field-autofill-monitor': {
+    title: 'Monitoring autofill state with AutofillMonitor',
+    component: TextFieldAutofillMonitorExample
+  },
+  'text-field-autosize-textarea': {
+    title: 'Auto-resizing textarea',
+    component: TextFieldAutosizeTextareaExample
+  },
   'toolbar-multirow': {
     title: 'Multi-row toolbar',
     component: ToolbarMultirowExample
@@ -753,7 +763,6 @@ export const EXAMPLE_LIST = [
   GridListOverviewExample,
   IconOverviewExample,
   IconSvgExample,
-  InputAutosizeTextareaExample,
   InputClearableExample,
   InputErrorStateMatcherExample,
   InputErrorsExample,
@@ -820,6 +829,9 @@ export const EXAMPLE_LIST = [
   TableSortingExample,
   TabsOverviewExample,
   TabsTemplateLabelExample,
+  TextFieldAutofillDirectiveExample,
+  TextFieldAutofillMonitorExample,
+  TextFieldAutosizeTextareaExample,
   ToolbarMultirowExample,
   ToolbarOverviewExample,
   TooltipDelayExample,

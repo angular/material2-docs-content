@@ -5,12 +5,12 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule, Component, Injectable, ViewChild, ElementRef, ViewEncapsulation, Inject, Input, ChangeDetectorRef } from '@angular/core';
+import { NgModule, Component, Injectable, ViewChild, ElementRef, ViewEncapsulation, Inject, Input, ChangeDetectorRef, NgZone } from '@angular/core';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
 import { MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatPaginatorModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule, MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
 import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { startWith, map, catchError, switchMap } from 'rxjs/operators';
+import { startWith, map, catchError, switchMap, take } from 'rxjs/operators';
 import { __extends } from 'tslib';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject, of, Subject, merge } from 'rxjs';
@@ -26,6 +26,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
+import { AutofillMonitor } from '@angular/cdk/text-field';
 import { CommonModule } from '@angular/common';
 
 /**
@@ -2551,28 +2552,6 @@ var IconSvgExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Auto-resizing textarea
- */
-var InputAutosizeTextareaExample = /** @class */ (function () {
-    function InputAutosizeTextareaExample() {
-    }
-    InputAutosizeTextareaExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'input-autosize-textarea-example',
-                    template: "<mat-form-field><textarea matInput placeholder=\"Autosize textarea\" cdkTextareaAutosize cdkAutosizeMinRows=\"2\" cdkAutosizeMaxRows=\"5\"></textarea></mat-form-field>",
-                    styles: ["/** No CSS for this example */ "],
-                },] },
-    ];
-    /** @nocollapse */
-    InputAutosizeTextareaExample.ctorParameters = function () { return []; };
-    return InputAutosizeTextareaExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
  * \@title Input with a clear button
  */
 var InputClearableExample = /** @class */ (function () {
@@ -4794,6 +4773,120 @@ var TabsTemplateLabelExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Monitoring autofill state with cdkAutofill
+ */
+var TextFieldAutofillDirectiveExample = /** @class */ (function () {
+    function TextFieldAutofillDirectiveExample() {
+    }
+    TextFieldAutofillDirectiveExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'text-field-autofill-directive-example',
+                    template: "<form><mat-form-field><mat-label>First name</mat-label><input matInput (cdkAutofill)=\"firstNameAutofilled = $event.isAutofilled\"><mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint></mat-form-field><mat-form-field><mat-label>Last name</mat-label><input matInput (cdkAutofill)=\"lastNameAutofilled = $event.isAutofilled\"><mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint></mat-form-field><button mat-raised-button>Submit</button></form>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    TextFieldAutofillDirectiveExample.ctorParameters = function () { return []; };
+    return TextFieldAutofillDirectiveExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Monitoring autofill state with AutofillMonitor
+ */
+var TextFieldAutofillMonitorExample = /** @class */ (function () {
+    function TextFieldAutofillMonitorExample(autofill) {
+        this.autofill = autofill;
+    }
+    /**
+     * @return {?}
+     */
+    TextFieldAutofillMonitorExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.autofill.monitor(this.firstName.nativeElement)
+            .subscribe(function (e) { return _this.firstNameAutofilled = e.isAutofilled; });
+        this.autofill.monitor(this.lastName.nativeElement)
+            .subscribe(function (e) { return _this.lastNameAutofilled = e.isAutofilled; });
+    };
+    /**
+     * @return {?}
+     */
+    TextFieldAutofillMonitorExample.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () {
+        this.autofill.stopMonitoring(this.firstName.nativeElement);
+        this.autofill.stopMonitoring(this.lastName.nativeElement);
+    };
+    TextFieldAutofillMonitorExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'text-field-autofill-monitor-example',
+                    template: "<form><mat-form-field><mat-label>First name</mat-label><input matInput #first><mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint></mat-form-field><mat-form-field><mat-label>Last name</mat-label><input matInput #last><mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint></mat-form-field><button mat-raised-button>Submit</button></form>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    TextFieldAutofillMonitorExample.ctorParameters = function () { return [
+        { type: AutofillMonitor, },
+    ]; };
+    TextFieldAutofillMonitorExample.propDecorators = {
+        "firstName": [{ type: ViewChild, args: ['first', { read: ElementRef },] },],
+        "lastName": [{ type: ViewChild, args: ['last', { read: ElementRef },] },],
+    };
+    return TextFieldAutofillMonitorExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Auto-resizing textarea
+ */
+var TextFieldAutosizeTextareaExample = /** @class */ (function () {
+    function TextFieldAutosizeTextareaExample(ngZone) {
+        this.ngZone = ngZone;
+    }
+    /**
+     * @return {?}
+     */
+    TextFieldAutosizeTextareaExample.prototype.triggerResize = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        // Wait for changes to be applied, then trigger textarea resize.
+        this.ngZone.onStable.pipe(take(1))
+            .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
+    };
+    TextFieldAutosizeTextareaExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'text-field-autosize-textarea-example',
+                    template: "<mat-form-field><mat-label>Font size</mat-label><mat-select #fontSize value=\"16px\" (selectionChange)=\"triggerResize()\"><mat-option value=\"10px\">10px</mat-option><mat-option value=\"12px\">12px</mat-option><mat-option value=\"14px\">14px</mat-option><mat-option value=\"16px\">16px</mat-option><mat-option value=\"18px\">18px</mat-option><mat-option value=\"20px\">20px</mat-option></mat-select></mat-form-field><mat-form-field [style.fontSize]=\"fontSize.value\"><mat-label>Autosize textarea</mat-label><textarea matInput cdkTextareaAutosize #autosize=\"cdkTextareaAutosize\" cdkAutosizeMinRows=\"2\" cdkAutosizeMaxRows=\"5\"></textarea></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    TextFieldAutosizeTextareaExample.ctorParameters = function () { return [
+        { type: NgZone, },
+    ]; };
+    TextFieldAutosizeTextareaExample.propDecorators = {
+        "autosize": [{ type: ViewChild, args: ['autosize',] },],
+    };
+    return TextFieldAutosizeTextareaExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Multi-row toolbar
  */
 var ToolbarMultirowExample = /** @class */ (function () {
@@ -5476,10 +5569,6 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'SVG icons',
         component: IconSvgExample
     },
-    'input-autosize-textarea': {
-        title: 'Auto-resizing textarea',
-        component: InputAutosizeTextareaExample
-    },
     'input-clearable': {
         title: 'Input with a clear button',
         component: InputClearableExample
@@ -5746,6 +5835,18 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Complex Example',
         component: TabsTemplateLabelExample
     },
+    'text-field-autofill-directive': {
+        title: 'Monitoring autofill state with cdkAutofill',
+        component: TextFieldAutofillDirectiveExample
+    },
+    'text-field-autofill-monitor': {
+        title: 'Monitoring autofill state with AutofillMonitor',
+        component: TextFieldAutofillMonitorExample
+    },
+    'text-field-autosize-textarea': {
+        title: 'Auto-resizing textarea',
+        component: TextFieldAutosizeTextareaExample
+    },
     'toolbar-multirow': {
         title: 'Multi-row toolbar',
         component: ToolbarMultirowExample
@@ -5841,7 +5942,6 @@ var /** @type {?} */ EXAMPLE_LIST = [
     GridListOverviewExample,
     IconOverviewExample,
     IconSvgExample,
-    InputAutosizeTextareaExample,
     InputClearableExample,
     InputErrorStateMatcherExample,
     InputErrorsExample,
@@ -5908,6 +6008,9 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TableSortingExample,
     TabsOverviewExample,
     TabsTemplateLabelExample,
+    TextFieldAutofillDirectiveExample,
+    TextFieldAutofillMonitorExample,
+    TextFieldAutosizeTextareaExample,
     ToolbarMultirowExample,
     ToolbarOverviewExample,
     TooltipDelayExample,
@@ -5982,5 +6085,5 @@ ExampleData = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CdkTreeFlatExample as ɵn, FileDatabase as ɵm, CdkTreeNestedExample as ɵp, FileDatabase$1 as ɵo, CheckboxConfigurableExample as ɵq, CheckboxOverviewExample as ɵr, ChipsAutocompleteExample as ɵs, ChipsInputExample as ɵt, ChipsOverviewExample as ɵu, ChipsStackedExample as ɵv, DatepickerApiExample as ɵw, DatepickerColorExample as ɵx, DatepickerCustomIconExample as ɵy, DatepickerDisabledExample as ɵz, DatepickerEventsExample as ɵba, DatepickerFilterExample as ɵbb, DatepickerFormatsExample as ɵbd, MY_FORMATS as ɵbc, DatepickerLocaleExample as ɵbe, DatepickerMinMaxExample as ɵbf, DatepickerMomentExample as ɵbg, DatepickerStartViewExample as ɵbh, DatepickerTouchExample as ɵbi, DatepickerValueExample as ɵbj, DatepickerViewsSelectionExample as ɵbl, MY_FORMATS$1 as ɵbk, DialogContentExample as ɵbm, DialogContentExampleDialog as ɵbn, DialogDataExample as ɵbo, DialogDataExampleDialog as ɵbp, DialogElementsExample as ɵbq, DialogElementsExampleDialog as ɵbr, DialogOverviewExample as ɵbs, DialogOverviewExampleDialog as ɵbt, DividerOverviewExample as ɵbu, ElevationOverviewExample as ɵbv, ExpansionExpandCollapseAllExample as ɵbw, ExpansionStepsExample as ɵbx, FormFieldAppearanceExample as ɵby, FormFieldCustomControlExample as ɵca, MyTelInput as ɵbz, FormFieldErrorExample as ɵcb, FormFieldHintExample as ɵcc, FormFieldLabelExample as ɵcd, FormFieldOverviewExample as ɵce, FormFieldPrefixSuffixExample as ɵcf, FormFieldThemingExample as ɵcg, GridListDynamicExample as ɵch, GridListOverviewExample as ɵci, IconOverviewExample as ɵcj, IconSvgExample as ɵck, InputAutosizeTextareaExample as ɵcl, InputClearableExample as ɵcm, InputErrorStateMatcherExample as ɵcn, InputErrorsExample as ɵco, InputFormExample as ɵcp, InputHintExample as ɵcq, InputOverviewExample as ɵcr, InputPrefixSuffixExample as ɵcs, ListSectionsExample as ɵct, ListSelectionExample as ɵcu, ExampleMaterialModule as ɵfk, MenuIconsExample as ɵcv, MenuOverviewExample as ɵcw, NestedMenuExample as ɵcx, PaginatorConfigurableExample as ɵcy, PaginatorOverviewExample as ɵcz, ProgressBarBufferExample as ɵda, ProgressBarConfigurableExample as ɵdb, ProgressBarDeterminateExample as ɵdc, ProgressBarIndeterminateExample as ɵdd, ProgressBarQueryExample as ɵde, ProgressSpinnerConfigurableExample as ɵdf, ProgressSpinnerOverviewExample as ɵdg, RadioNgModelExample as ɵdh, RadioOverviewExample as ɵdi, SelectCustomTriggerExample as ɵdj, SelectDisabledExample as ɵdk, SelectErrorStateMatcherExample as ɵdl, SelectFormExample as ɵdm, SelectHintErrorExample as ɵdn, SelectMultipleExample as ɵdo, SelectNoRippleExample as ɵdp, SelectOptgroupExample as ɵdq, SelectOverviewExample as ɵdr, SelectPanelClassExample as ɵds, SelectResetExample as ɵdt, SelectValueBindingExample as ɵdu, SidenavAutosizeExample as ɵdv, SidenavBackdropExample as ɵdw, SidenavDisableCloseExample as ɵdx, SidenavDrawerOverviewExample as ɵdy, SidenavFixedExample as ɵdz, SidenavModeExample as ɵea, SidenavOpenCloseExample as ɵeb, SidenavOverviewExample as ɵec, SidenavPositionExample as ɵed, SidenavResponsiveExample as ɵee, SlideToggleConfigurableExample as ɵef, SlideToggleFormsExample as ɵeg, SlideToggleOverviewExample as ɵeh, SliderConfigurableExample as ɵei, SliderFormattingExample as ɵej, SliderOverviewExample as ɵek, PizzaPartyComponent as ɵem, SnackBarComponentExample as ɵel, SnackBarOverviewExample as ɵen, SnackBarPositionExample as ɵeo, SortOverviewExample as ɵep, TableBasicExample as ɵeq, TableFilteringExample as ɵer, TableHttpExample as ɵes, TableOverviewExample as ɵet, TablePaginationExample as ɵeu, TableSelectionExample as ɵev, TableSortingExample as ɵew, TabsOverviewExample as ɵex, TabsTemplateLabelExample as ɵey, ToolbarOverviewExample as ɵez, TooltipDelayExample as ɵfa, TooltipManualExample as ɵfb, TooltipModifiedDefaultsExample as ɵfd, myCustomTooltipDefaults as ɵfc, TooltipOverviewExample as ɵfe, TooltipPositionExample as ɵff, FileDatabase$2 as ɵfg, TreeFlatOverviewExample as ɵfh, FileDatabase$3 as ɵfi, TreeNestedOverviewExample as ɵfj };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CdkTreeFlatExample as ɵn, FileDatabase as ɵm, CdkTreeNestedExample as ɵp, FileDatabase$1 as ɵo, CheckboxConfigurableExample as ɵq, CheckboxOverviewExample as ɵr, ChipsAutocompleteExample as ɵs, ChipsInputExample as ɵt, ChipsOverviewExample as ɵu, ChipsStackedExample as ɵv, DatepickerApiExample as ɵw, DatepickerColorExample as ɵx, DatepickerCustomIconExample as ɵy, DatepickerDisabledExample as ɵz, DatepickerEventsExample as ɵba, DatepickerFilterExample as ɵbb, DatepickerFormatsExample as ɵbd, MY_FORMATS as ɵbc, DatepickerLocaleExample as ɵbe, DatepickerMinMaxExample as ɵbf, DatepickerMomentExample as ɵbg, DatepickerStartViewExample as ɵbh, DatepickerTouchExample as ɵbi, DatepickerValueExample as ɵbj, DatepickerViewsSelectionExample as ɵbl, MY_FORMATS$1 as ɵbk, DialogContentExample as ɵbm, DialogContentExampleDialog as ɵbn, DialogDataExample as ɵbo, DialogDataExampleDialog as ɵbp, DialogElementsExample as ɵbq, DialogElementsExampleDialog as ɵbr, DialogOverviewExample as ɵbs, DialogOverviewExampleDialog as ɵbt, DividerOverviewExample as ɵbu, ElevationOverviewExample as ɵbv, ExpansionExpandCollapseAllExample as ɵbw, ExpansionStepsExample as ɵbx, FormFieldAppearanceExample as ɵby, FormFieldCustomControlExample as ɵca, MyTelInput as ɵbz, FormFieldErrorExample as ɵcb, FormFieldHintExample as ɵcc, FormFieldLabelExample as ɵcd, FormFieldOverviewExample as ɵce, FormFieldPrefixSuffixExample as ɵcf, FormFieldThemingExample as ɵcg, GridListDynamicExample as ɵch, GridListOverviewExample as ɵci, IconOverviewExample as ɵcj, IconSvgExample as ɵck, InputClearableExample as ɵcl, InputErrorStateMatcherExample as ɵcm, InputErrorsExample as ɵcn, InputFormExample as ɵco, InputHintExample as ɵcp, InputOverviewExample as ɵcq, InputPrefixSuffixExample as ɵcr, ListSectionsExample as ɵcs, ListSelectionExample as ɵct, ExampleMaterialModule as ɵfm, MenuIconsExample as ɵcu, MenuOverviewExample as ɵcv, NestedMenuExample as ɵcw, PaginatorConfigurableExample as ɵcx, PaginatorOverviewExample as ɵcy, ProgressBarBufferExample as ɵcz, ProgressBarConfigurableExample as ɵda, ProgressBarDeterminateExample as ɵdb, ProgressBarIndeterminateExample as ɵdc, ProgressBarQueryExample as ɵdd, ProgressSpinnerConfigurableExample as ɵde, ProgressSpinnerOverviewExample as ɵdf, RadioNgModelExample as ɵdg, RadioOverviewExample as ɵdh, SelectCustomTriggerExample as ɵdi, SelectDisabledExample as ɵdj, SelectErrorStateMatcherExample as ɵdk, SelectFormExample as ɵdl, SelectHintErrorExample as ɵdm, SelectMultipleExample as ɵdn, SelectNoRippleExample as ɵdo, SelectOptgroupExample as ɵdp, SelectOverviewExample as ɵdq, SelectPanelClassExample as ɵdr, SelectResetExample as ɵds, SelectValueBindingExample as ɵdt, SidenavAutosizeExample as ɵdu, SidenavBackdropExample as ɵdv, SidenavDisableCloseExample as ɵdw, SidenavDrawerOverviewExample as ɵdx, SidenavFixedExample as ɵdy, SidenavModeExample as ɵdz, SidenavOpenCloseExample as ɵea, SidenavOverviewExample as ɵeb, SidenavPositionExample as ɵec, SidenavResponsiveExample as ɵed, SlideToggleConfigurableExample as ɵee, SlideToggleFormsExample as ɵef, SlideToggleOverviewExample as ɵeg, SliderConfigurableExample as ɵeh, SliderFormattingExample as ɵei, SliderOverviewExample as ɵej, PizzaPartyComponent as ɵel, SnackBarComponentExample as ɵek, SnackBarOverviewExample as ɵem, SnackBarPositionExample as ɵen, SortOverviewExample as ɵeo, TableBasicExample as ɵep, TableFilteringExample as ɵeq, TableHttpExample as ɵer, TableOverviewExample as ɵes, TablePaginationExample as ɵet, TableSelectionExample as ɵeu, TableSortingExample as ɵev, TabsOverviewExample as ɵew, TabsTemplateLabelExample as ɵex, TextFieldAutofillDirectiveExample as ɵey, TextFieldAutofillMonitorExample as ɵez, TextFieldAutosizeTextareaExample as ɵfa, ToolbarOverviewExample as ɵfb, TooltipDelayExample as ɵfc, TooltipManualExample as ɵfd, TooltipModifiedDefaultsExample as ɵff, myCustomTooltipDefaults as ɵfe, TooltipOverviewExample as ɵfg, TooltipPositionExample as ɵfh, FileDatabase$2 as ɵfi, TreeFlatOverviewExample as ɵfj, FileDatabase$3 as ɵfk, TreeNestedOverviewExample as ɵfl };
 //# sourceMappingURL=material-examples.es5.js.map

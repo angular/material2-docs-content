@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.ng.common));
-}(this, (function (exports,core,table,tree,material,forms,operators,collections,rxjs,tree$1,keycodes,materialMomentAdapter,core$1,_rollupMoment__default,a11y,coercion,platformBrowser,sidenav,layout,http,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material-moment-adapter'), require('@angular/material/core'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material-moment-adapter', '@angular/material/core', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.materialMomentAdapter,global.ng.material.core,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
+}(this, (function (exports,core,table,tree,material,forms,operators,collections,rxjs,tree$1,keycodes,materialMomentAdapter,core$1,_rollupMoment__default,a11y,coercion,platformBrowser,sidenav,layout,http,textField,common) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -2562,28 +2562,6 @@ var IconSvgExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Auto-resizing textarea
- */
-var InputAutosizeTextareaExample = /** @class */ (function () {
-    function InputAutosizeTextareaExample() {
-    }
-    InputAutosizeTextareaExample.decorators = [
-        { type: core.Component, args: [{
-                    selector: 'input-autosize-textarea-example',
-                    template: "<mat-form-field><textarea matInput placeholder=\"Autosize textarea\" cdkTextareaAutosize cdkAutosizeMinRows=\"2\" cdkAutosizeMaxRows=\"5\"></textarea></mat-form-field>",
-                    styles: ["/** No CSS for this example */ "],
-                },] },
-    ];
-    /** @nocollapse */
-    InputAutosizeTextareaExample.ctorParameters = function () { return []; };
-    return InputAutosizeTextareaExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
  * \@title Input with a clear button
  */
 var InputClearableExample = /** @class */ (function () {
@@ -4805,6 +4783,120 @@ var TabsTemplateLabelExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Monitoring autofill state with cdkAutofill
+ */
+var TextFieldAutofillDirectiveExample = /** @class */ (function () {
+    function TextFieldAutofillDirectiveExample() {
+    }
+    TextFieldAutofillDirectiveExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'text-field-autofill-directive-example',
+                    template: "<form><mat-form-field><mat-label>First name</mat-label><input matInput (cdkAutofill)=\"firstNameAutofilled = $event.isAutofilled\"><mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint></mat-form-field><mat-form-field><mat-label>Last name</mat-label><input matInput (cdkAutofill)=\"lastNameAutofilled = $event.isAutofilled\"><mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint></mat-form-field><button mat-raised-button>Submit</button></form>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    TextFieldAutofillDirectiveExample.ctorParameters = function () { return []; };
+    return TextFieldAutofillDirectiveExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Monitoring autofill state with AutofillMonitor
+ */
+var TextFieldAutofillMonitorExample = /** @class */ (function () {
+    function TextFieldAutofillMonitorExample(autofill) {
+        this.autofill = autofill;
+    }
+    /**
+     * @return {?}
+     */
+    TextFieldAutofillMonitorExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.autofill.monitor(this.firstName.nativeElement)
+            .subscribe(function (e) { return _this.firstNameAutofilled = e.isAutofilled; });
+        this.autofill.monitor(this.lastName.nativeElement)
+            .subscribe(function (e) { return _this.lastNameAutofilled = e.isAutofilled; });
+    };
+    /**
+     * @return {?}
+     */
+    TextFieldAutofillMonitorExample.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () {
+        this.autofill.stopMonitoring(this.firstName.nativeElement);
+        this.autofill.stopMonitoring(this.lastName.nativeElement);
+    };
+    TextFieldAutofillMonitorExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'text-field-autofill-monitor-example',
+                    template: "<form><mat-form-field><mat-label>First name</mat-label><input matInput #first><mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint></mat-form-field><mat-form-field><mat-label>Last name</mat-label><input matInput #last><mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint></mat-form-field><button mat-raised-button>Submit</button></form>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    TextFieldAutofillMonitorExample.ctorParameters = function () { return [
+        { type: textField.AutofillMonitor, },
+    ]; };
+    TextFieldAutofillMonitorExample.propDecorators = {
+        "firstName": [{ type: core.ViewChild, args: ['first', { read: core.ElementRef },] },],
+        "lastName": [{ type: core.ViewChild, args: ['last', { read: core.ElementRef },] },],
+    };
+    return TextFieldAutofillMonitorExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Auto-resizing textarea
+ */
+var TextFieldAutosizeTextareaExample = /** @class */ (function () {
+    function TextFieldAutosizeTextareaExample(ngZone) {
+        this.ngZone = ngZone;
+    }
+    /**
+     * @return {?}
+     */
+    TextFieldAutosizeTextareaExample.prototype.triggerResize = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        // Wait for changes to be applied, then trigger textarea resize.
+        this.ngZone.onStable.pipe(operators.take(1))
+            .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
+    };
+    TextFieldAutosizeTextareaExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'text-field-autosize-textarea-example',
+                    template: "<mat-form-field><mat-label>Font size</mat-label><mat-select #fontSize value=\"16px\" (selectionChange)=\"triggerResize()\"><mat-option value=\"10px\">10px</mat-option><mat-option value=\"12px\">12px</mat-option><mat-option value=\"14px\">14px</mat-option><mat-option value=\"16px\">16px</mat-option><mat-option value=\"18px\">18px</mat-option><mat-option value=\"20px\">20px</mat-option></mat-select></mat-form-field><mat-form-field [style.fontSize]=\"fontSize.value\"><mat-label>Autosize textarea</mat-label><textarea matInput cdkTextareaAutosize #autosize=\"cdkTextareaAutosize\" cdkAutosizeMinRows=\"2\" cdkAutosizeMaxRows=\"5\"></textarea></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    TextFieldAutosizeTextareaExample.ctorParameters = function () { return [
+        { type: core.NgZone, },
+    ]; };
+    TextFieldAutosizeTextareaExample.propDecorators = {
+        "autosize": [{ type: core.ViewChild, args: ['autosize',] },],
+    };
+    return TextFieldAutosizeTextareaExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Multi-row toolbar
  */
 var ToolbarMultirowExample = /** @class */ (function () {
@@ -5487,10 +5579,6 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'SVG icons',
         component: IconSvgExample
     },
-    'input-autosize-textarea': {
-        title: 'Auto-resizing textarea',
-        component: InputAutosizeTextareaExample
-    },
     'input-clearable': {
         title: 'Input with a clear button',
         component: InputClearableExample
@@ -5757,6 +5845,18 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Complex Example',
         component: TabsTemplateLabelExample
     },
+    'text-field-autofill-directive': {
+        title: 'Monitoring autofill state with cdkAutofill',
+        component: TextFieldAutofillDirectiveExample
+    },
+    'text-field-autofill-monitor': {
+        title: 'Monitoring autofill state with AutofillMonitor',
+        component: TextFieldAutofillMonitorExample
+    },
+    'text-field-autosize-textarea': {
+        title: 'Auto-resizing textarea',
+        component: TextFieldAutosizeTextareaExample
+    },
     'toolbar-multirow': {
         title: 'Multi-row toolbar',
         component: ToolbarMultirowExample
@@ -5852,7 +5952,6 @@ var /** @type {?} */ EXAMPLE_LIST = [
     GridListOverviewExample,
     IconOverviewExample,
     IconSvgExample,
-    InputAutosizeTextareaExample,
     InputClearableExample,
     InputErrorStateMatcherExample,
     InputErrorsExample,
@@ -5919,6 +6018,9 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TableSortingExample,
     TabsOverviewExample,
     TabsTemplateLabelExample,
+    TextFieldAutofillDirectiveExample,
+    TextFieldAutofillMonitorExample,
+    TextFieldAutosizeTextareaExample,
     ToolbarMultirowExample,
     ToolbarOverviewExample,
     TooltipDelayExample,
@@ -6057,84 +6159,86 @@ exports.ɵch = GridListDynamicExample;
 exports.ɵci = GridListOverviewExample;
 exports.ɵcj = IconOverviewExample;
 exports.ɵck = IconSvgExample;
-exports.ɵcl = InputAutosizeTextareaExample;
-exports.ɵcm = InputClearableExample;
-exports.ɵcn = InputErrorStateMatcherExample;
-exports.ɵco = InputErrorsExample;
-exports.ɵcp = InputFormExample;
-exports.ɵcq = InputHintExample;
-exports.ɵcr = InputOverviewExample;
-exports.ɵcs = InputPrefixSuffixExample;
-exports.ɵct = ListSectionsExample;
-exports.ɵcu = ListSelectionExample;
-exports.ɵfk = ExampleMaterialModule;
-exports.ɵcv = MenuIconsExample;
-exports.ɵcw = MenuOverviewExample;
-exports.ɵcx = NestedMenuExample;
-exports.ɵcy = PaginatorConfigurableExample;
-exports.ɵcz = PaginatorOverviewExample;
-exports.ɵda = ProgressBarBufferExample;
-exports.ɵdb = ProgressBarConfigurableExample;
-exports.ɵdc = ProgressBarDeterminateExample;
-exports.ɵdd = ProgressBarIndeterminateExample;
-exports.ɵde = ProgressBarQueryExample;
-exports.ɵdf = ProgressSpinnerConfigurableExample;
-exports.ɵdg = ProgressSpinnerOverviewExample;
-exports.ɵdh = RadioNgModelExample;
-exports.ɵdi = RadioOverviewExample;
-exports.ɵdj = SelectCustomTriggerExample;
-exports.ɵdk = SelectDisabledExample;
-exports.ɵdl = SelectErrorStateMatcherExample;
-exports.ɵdm = SelectFormExample;
-exports.ɵdn = SelectHintErrorExample;
-exports.ɵdo = SelectMultipleExample;
-exports.ɵdp = SelectNoRippleExample;
-exports.ɵdq = SelectOptgroupExample;
-exports.ɵdr = SelectOverviewExample;
-exports.ɵds = SelectPanelClassExample;
-exports.ɵdt = SelectResetExample;
-exports.ɵdu = SelectValueBindingExample;
-exports.ɵdv = SidenavAutosizeExample;
-exports.ɵdw = SidenavBackdropExample;
-exports.ɵdx = SidenavDisableCloseExample;
-exports.ɵdy = SidenavDrawerOverviewExample;
-exports.ɵdz = SidenavFixedExample;
-exports.ɵea = SidenavModeExample;
-exports.ɵeb = SidenavOpenCloseExample;
-exports.ɵec = SidenavOverviewExample;
-exports.ɵed = SidenavPositionExample;
-exports.ɵee = SidenavResponsiveExample;
-exports.ɵef = SlideToggleConfigurableExample;
-exports.ɵeg = SlideToggleFormsExample;
-exports.ɵeh = SlideToggleOverviewExample;
-exports.ɵei = SliderConfigurableExample;
-exports.ɵej = SliderFormattingExample;
-exports.ɵek = SliderOverviewExample;
-exports.ɵem = PizzaPartyComponent;
-exports.ɵel = SnackBarComponentExample;
-exports.ɵen = SnackBarOverviewExample;
-exports.ɵeo = SnackBarPositionExample;
-exports.ɵep = SortOverviewExample;
-exports.ɵeq = TableBasicExample;
-exports.ɵer = TableFilteringExample;
-exports.ɵes = TableHttpExample;
-exports.ɵet = TableOverviewExample;
-exports.ɵeu = TablePaginationExample;
-exports.ɵev = TableSelectionExample;
-exports.ɵew = TableSortingExample;
-exports.ɵex = TabsOverviewExample;
-exports.ɵey = TabsTemplateLabelExample;
-exports.ɵez = ToolbarOverviewExample;
-exports.ɵfa = TooltipDelayExample;
-exports.ɵfb = TooltipManualExample;
-exports.ɵfd = TooltipModifiedDefaultsExample;
-exports.ɵfc = myCustomTooltipDefaults;
-exports.ɵfe = TooltipOverviewExample;
-exports.ɵff = TooltipPositionExample;
-exports.ɵfg = FileDatabase$2;
-exports.ɵfh = TreeFlatOverviewExample;
-exports.ɵfi = FileDatabase$3;
-exports.ɵfj = TreeNestedOverviewExample;
+exports.ɵcl = InputClearableExample;
+exports.ɵcm = InputErrorStateMatcherExample;
+exports.ɵcn = InputErrorsExample;
+exports.ɵco = InputFormExample;
+exports.ɵcp = InputHintExample;
+exports.ɵcq = InputOverviewExample;
+exports.ɵcr = InputPrefixSuffixExample;
+exports.ɵcs = ListSectionsExample;
+exports.ɵct = ListSelectionExample;
+exports.ɵfm = ExampleMaterialModule;
+exports.ɵcu = MenuIconsExample;
+exports.ɵcv = MenuOverviewExample;
+exports.ɵcw = NestedMenuExample;
+exports.ɵcx = PaginatorConfigurableExample;
+exports.ɵcy = PaginatorOverviewExample;
+exports.ɵcz = ProgressBarBufferExample;
+exports.ɵda = ProgressBarConfigurableExample;
+exports.ɵdb = ProgressBarDeterminateExample;
+exports.ɵdc = ProgressBarIndeterminateExample;
+exports.ɵdd = ProgressBarQueryExample;
+exports.ɵde = ProgressSpinnerConfigurableExample;
+exports.ɵdf = ProgressSpinnerOverviewExample;
+exports.ɵdg = RadioNgModelExample;
+exports.ɵdh = RadioOverviewExample;
+exports.ɵdi = SelectCustomTriggerExample;
+exports.ɵdj = SelectDisabledExample;
+exports.ɵdk = SelectErrorStateMatcherExample;
+exports.ɵdl = SelectFormExample;
+exports.ɵdm = SelectHintErrorExample;
+exports.ɵdn = SelectMultipleExample;
+exports.ɵdo = SelectNoRippleExample;
+exports.ɵdp = SelectOptgroupExample;
+exports.ɵdq = SelectOverviewExample;
+exports.ɵdr = SelectPanelClassExample;
+exports.ɵds = SelectResetExample;
+exports.ɵdt = SelectValueBindingExample;
+exports.ɵdu = SidenavAutosizeExample;
+exports.ɵdv = SidenavBackdropExample;
+exports.ɵdw = SidenavDisableCloseExample;
+exports.ɵdx = SidenavDrawerOverviewExample;
+exports.ɵdy = SidenavFixedExample;
+exports.ɵdz = SidenavModeExample;
+exports.ɵea = SidenavOpenCloseExample;
+exports.ɵeb = SidenavOverviewExample;
+exports.ɵec = SidenavPositionExample;
+exports.ɵed = SidenavResponsiveExample;
+exports.ɵee = SlideToggleConfigurableExample;
+exports.ɵef = SlideToggleFormsExample;
+exports.ɵeg = SlideToggleOverviewExample;
+exports.ɵeh = SliderConfigurableExample;
+exports.ɵei = SliderFormattingExample;
+exports.ɵej = SliderOverviewExample;
+exports.ɵel = PizzaPartyComponent;
+exports.ɵek = SnackBarComponentExample;
+exports.ɵem = SnackBarOverviewExample;
+exports.ɵen = SnackBarPositionExample;
+exports.ɵeo = SortOverviewExample;
+exports.ɵep = TableBasicExample;
+exports.ɵeq = TableFilteringExample;
+exports.ɵer = TableHttpExample;
+exports.ɵes = TableOverviewExample;
+exports.ɵet = TablePaginationExample;
+exports.ɵeu = TableSelectionExample;
+exports.ɵev = TableSortingExample;
+exports.ɵew = TabsOverviewExample;
+exports.ɵex = TabsTemplateLabelExample;
+exports.ɵey = TextFieldAutofillDirectiveExample;
+exports.ɵez = TextFieldAutofillMonitorExample;
+exports.ɵfa = TextFieldAutosizeTextareaExample;
+exports.ɵfb = ToolbarOverviewExample;
+exports.ɵfc = TooltipDelayExample;
+exports.ɵfd = TooltipManualExample;
+exports.ɵff = TooltipModifiedDefaultsExample;
+exports.ɵfe = myCustomTooltipDefaults;
+exports.ɵfg = TooltipOverviewExample;
+exports.ɵfh = TooltipPositionExample;
+exports.ɵfi = FileDatabase$2;
+exports.ɵfj = TreeFlatOverviewExample;
+exports.ɵfk = FileDatabase$3;
+exports.ɵfl = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

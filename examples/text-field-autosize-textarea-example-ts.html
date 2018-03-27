@@ -1,0 +1,21 @@
+<span class="hljs-keyword">import</span> {CdkTextareaAutosize} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/text-field'</span>;
+<span class="hljs-keyword">import</span> {Component, NgZone, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {take} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
+
+<span class="hljs-comment">/** @title Auto-resizing textarea */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'text-field-autosize-textarea-example'</span>,
+  templateUrl: <span class="hljs-string">'./text-field-autosize-textarea-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'./text-field-autosize-textarea-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TextFieldAutosizeTextareaExample {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> ngZone: NgZone</span>) {}
+
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'autosize'</span>) autosize: CdkTextareaAutosize;
+
+  triggerResize() {
+    <span class="hljs-comment">// Wait for changes to be applied, then trigger textarea resize.</span>
+    <span class="hljs-keyword">this</span>.ngZone.onStable.pipe(take(<span class="hljs-number">1</span>))
+        .subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.autosize.resizeToFitContent(<span class="hljs-literal">true</span>));
+  }
+}

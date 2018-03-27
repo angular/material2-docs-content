@@ -12,6 +12,8 @@ import { SlideToggleFormsExample } from './slide-toggle-forms/slide-toggle-forms
 import { SnackBarOverviewExample } from './snack-bar-overview/snack-bar-overview-example';
 import { StepperOverviewExample } from './stepper-overview/stepper-overview-example';
 import { TableHttpExample } from './table-http/table-http-example';
+import { TextFieldAutofillMonitorExample } from './text-field-autofill-monitor/text-field-autofill-monitor-example';
+import { TextFieldAutosizeTextareaExample } from './text-field-autosize-textarea/text-field-autosize-textarea-example';
 import { TreeFlatOverviewExample } from './tree-flat-overview/tree-flat-overview-example';
 import { TreeNestedOverviewExample } from './tree-nested-overview/tree-nested-overview-example';
 export interface LiveExample {
@@ -23,6 +25,6 @@ export interface LiveExample {
 export declare const EXAMPLE_COMPONENTS: {
     [key: string]: LiveExample;
 };
-export declare const EXAMPLE_LIST: (typeof BottomSheetOverviewExample | typeof BottomSheetOverviewExampleSheet | typeof CdkTreeFlatExample | typeof CdkTreeNestedExample | typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample | typeof TreeFlatOverviewExample | typeof TreeNestedOverviewExample)[];
+export declare const EXAMPLE_LIST: (typeof BottomSheetOverviewExample | typeof BottomSheetOverviewExampleSheet | typeof CdkTreeFlatExample | typeof CdkTreeNestedExample | typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample | typeof TextFieldAutofillMonitorExample | typeof TextFieldAutosizeTextareaExample | typeof TreeFlatOverviewExample | typeof TreeNestedOverviewExample)[];
 export declare class ExampleModule {
 }

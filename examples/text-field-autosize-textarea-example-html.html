@@ -1,0 +1,20 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Font size<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> #<span class="hljs-attr">fontSize</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"16px"</span> (<span class="hljs-attr">selectionChange</span>)=<span class="hljs-string">"triggerResize()"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"10px"</span>&gt;</span>10px<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"12px"</span>&gt;</span>12px<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"14px"</span>&gt;</span>14px<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"16px"</span>&gt;</span>16px<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"18px"</span>&gt;</span>18px<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"20px"</span>&gt;</span>20px<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> [<span class="hljs-attr">style.fontSize</span>]=<span class="hljs-string">"fontSize.value"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Autosize textarea<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">matInput</span>
+            <span class="hljs-attr">cdkTextareaAutosize</span>
+            #<span class="hljs-attr">autosize</span>=<span class="hljs-string">"cdkTextareaAutosize"</span>
+            <span class="hljs-attr">cdkAutosizeMinRows</span>=<span class="hljs-string">"2"</span>
+            <span class="hljs-attr">cdkAutosizeMaxRows</span>=<span class="hljs-string">"5"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
