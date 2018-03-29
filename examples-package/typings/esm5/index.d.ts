@@ -64,7 +64,7 @@ export { InputOverviewExample as ɵcq } from './input-overview/input-overview-ex
 export { InputPrefixSuffixExample as ɵcr } from './input-prefix-suffix/input-prefix-suffix-example';
 export { ListSectionsExample as ɵcs } from './list-sections/list-sections-example';
 export { ListSelectionExample as ɵct } from './list-selection/list-selection-example';
-export { ExampleMaterialModule as ɵfm } from './material-module';
+export { ExampleMaterialModule as ɵfs } from './material-module';
 export { MenuIconsExample as ɵcu } from './menu-icons/menu-icons-example';
 export { MenuOverviewExample as ɵcv } from './menu-overview/menu-overview-example';
 export { NestedMenuExample as ɵcw } from './nested-menu/nested-menu-example';
@@ -129,5 +129,8 @@ export { TooltipManualExample as ɵfd } from './tooltip-manual/tooltip-manual-ex
 export { TooltipModifiedDefaultsExample as ɵff, myCustomTooltipDefaults as ɵfe } from './tooltip-modified-defaults/tooltip-modified-defaults-example';
 export { TooltipOverviewExample as ɵfg } from './tooltip-overview/tooltip-overview-example';
 export { TooltipPositionExample as ɵfh } from './tooltip-position/tooltip-position-example';
-export { FileDatabase as ɵfi, TreeFlatOverviewExample as ɵfj } from './tree-flat-overview/tree-flat-overview-example';
-export { FileDatabase as ɵfk, TreeNestedOverviewExample as ɵfl } from './tree-nested-overview/tree-nested-overview-example';
+export { ChecklistDatabase as ɵfi, TreeChecklistExample as ɵfj } from './tree-checklist/tree-checklist-example';
+export { DynamicDatabase as ɵfk, TreeDynamicExample as ɵfl } from './tree-dynamic/tree-dynamic-example';
+export { FileDatabase as ɵfm, TreeFlatOverviewExample as ɵfn } from './tree-flat-overview/tree-flat-overview-example';
+export { LoadmoreDatabase as ɵfo, TreeLoadmoreExample as ɵfp } from './tree-loadmore/tree-loadmore-example';
+export { FileDatabase as ɵfq, TreeNestedOverviewExample as ɵfr } from './tree-nested-overview/tree-nested-overview-example';

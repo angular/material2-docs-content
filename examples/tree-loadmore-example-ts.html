@@ -1,0 +1,155 @@
+<span class="hljs-comment">/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */</span>
+<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
+<span class="hljs-keyword">import</span> {MatTreeFlatDataSource, MatTreeFlattener} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+
+
+<span class="hljs-keyword">const</span> LOAD_MORE = <span class="hljs-string">'LOAD_MORE'</span>;
+
+<span class="hljs-comment">/** Nested node */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> LoadmoreNode {
+  childrenChange: BehaviorSubject&lt;LoadmoreNode[]&gt; = <span class="hljs-keyword">new</span> BehaviorSubject&lt;LoadmoreNode[]&gt;([]);
+
+  <span class="hljs-keyword">get</span> children(): LoadmoreNode[] {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.childrenChange.value;
+  }
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> item: <span class="hljs-built_in">string</span>,
+              <span class="hljs-keyword">public</span> hasChildren: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>,
+              <span class="hljs-keyword">public</span> loadMoreParentItem: <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span></span>) {}
+}
+
+<span class="hljs-comment">/** Flat node with expandable and level information */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> LoadmoreFlatNode {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> item: <span class="hljs-built_in">string</span>,
+              <span class="hljs-keyword">public</span> level: <span class="hljs-built_in">number</span> = 1,
+              <span class="hljs-keyword">public</span> expandable: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>,
+              <span class="hljs-keyword">public</span> loadMoreParentItem: <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span></span>) {}
+}
+
+<span class="hljs-comment">/**
+ * A database that only load part of the data initially. After user clicks on the `Load more`
+ * button, more data will be loaded.
+ */</span>
+<span class="hljs-meta">@Injectable</span>()
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> LoadmoreDatabase {
+  batchNumber = <span class="hljs-number">5</span>;
+  dataChange: BehaviorSubject&lt;LoadmoreNode[]&gt; = <span class="hljs-keyword">new</span> BehaviorSubject&lt;LoadmoreNode[]&gt;([]);
+  nodeMap: Map&lt;<span class="hljs-built_in">string</span>, LoadmoreNode&gt; = <span class="hljs-keyword">new</span> Map&lt;<span class="hljs-built_in">string</span>, LoadmoreNode&gt;();
+
+  <span class="hljs-comment">/** The data */</span>
+  rootLevelNodes = [<span class="hljs-string">'Vegetables'</span>, <span class="hljs-string">'Fruits'</span>];
+  dataMap = <span class="hljs-keyword">new</span> Map([
+    [<span class="hljs-string">'Fruits'</span>, [<span class="hljs-string">'Apple'</span>, <span class="hljs-string">'Orange'</span>, <span class="hljs-string">'Banana'</span>]],
+    [<span class="hljs-string">'Vegetables'</span>, [<span class="hljs-string">'Tomato'</span>, <span class="hljs-string">'Potato'</span>, <span class="hljs-string">'Onion'</span>]],
+    [<span class="hljs-string">'Apple'</span>, [<span class="hljs-string">'Fuji'</span>, <span class="hljs-string">'Macintosh'</span>]],
+    [<span class="hljs-string">'Onion'</span>, [<span class="hljs-string">'Yellow'</span>, <span class="hljs-string">'White'</span>, <span class="hljs-string">'Purple'</span>, <span class="hljs-string">'Green'</span>, <span class="hljs-string">'Shallot'</span>, <span class="hljs-string">'Sweet'</span>, <span class="hljs-string">'Red'</span>, <span class="hljs-string">'Leek'</span>]],
+  ]);
+
+  initialize() {
+    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">this</span>.rootLevelNodes.map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-keyword">this</span>._generateNode(name));
+    <span class="hljs-keyword">this</span>.dataChange.next(data);
+  }
+
+  <span class="hljs-comment">/** Expand a node whose children are not loaded */</span>
+  loadMore(item: <span class="hljs-built_in">string</span>, onlyFirstTime: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>) {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.nodeMap.has(item) || !<span class="hljs-keyword">this</span>.dataMap.has(item)) {
+      <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">const</span> parent = <span class="hljs-keyword">this</span>.nodeMap.get(item)!;
+    <span class="hljs-keyword">const</span> children = <span class="hljs-keyword">this</span>.dataMap.get(item)!;
+    <span class="hljs-keyword">if</span> (onlyFirstTime &amp;&amp; parent.children!.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">const</span> newChildrenNumber = parent.children!.length + <span class="hljs-keyword">this</span>.batchNumber;
+    <span class="hljs-keyword">let</span> nodes = children.slice(<span class="hljs-number">0</span>, newChildrenNumber)
+      .map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-keyword">this</span>._generateNode(name));
+    <span class="hljs-keyword">if</span> (newChildrenNumber &lt; children.length) {
+      <span class="hljs-comment">// Need a new load more node</span>
+      nodes.push(<span class="hljs-keyword">new</span> LoadmoreNode(LOAD_MORE, <span class="hljs-literal">false</span>, item));
+    }
+
+    parent.childrenChange.next(nodes);
+    <span class="hljs-keyword">this</span>.dataChange.next(<span class="hljs-keyword">this</span>.dataChange.value);
+  }
+
+  <span class="hljs-keyword">private</span> _generateNode(item: <span class="hljs-built_in">string</span>): LoadmoreNode {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.nodeMap.has(item)) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.nodeMap.get(item)!;
+    }
+    <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">new</span> LoadmoreNode(item, <span class="hljs-keyword">this</span>.dataMap.has(item));
+    <span class="hljs-keyword">this</span>.nodeMap.set(item, result);
+    <span class="hljs-keyword">return</span> result;
+  }
+}
+
+<span class="hljs-comment">/**
+ * @title Tree with partially loaded data
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tree-loadmore-example'</span>,
+  templateUrl: <span class="hljs-string">'tree-loadmore-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'tree-loadmore-example.css'</span>],
+  providers: [LoadmoreDatabase]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TreeLoadmoreExample {
+
+  nodeMap: Map&lt;<span class="hljs-built_in">string</span>, LoadmoreFlatNode&gt; = <span class="hljs-keyword">new</span> Map&lt;<span class="hljs-built_in">string</span>, LoadmoreFlatNode&gt;();
+
+  treeControl: FlatTreeControl&lt;LoadmoreFlatNode&gt;;
+
+  treeFlattener: MatTreeFlattener&lt;LoadmoreNode, LoadmoreFlatNode&gt;;
+
+  <span class="hljs-comment">// Flat tree data source</span>
+  dataSource: MatTreeFlatDataSource&lt;LoadmoreNode, LoadmoreFlatNode&gt;;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> database: LoadmoreDatabase</span>) {
+    <span class="hljs-keyword">this</span>.treeFlattener = <span class="hljs-keyword">new</span> MatTreeFlattener(<span class="hljs-keyword">this</span>.transformer, <span class="hljs-keyword">this</span>.getLevel,
+      <span class="hljs-keyword">this</span>.isExpandable, <span class="hljs-keyword">this</span>.getChildren);
+
+    <span class="hljs-keyword">this</span>.treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;LoadmoreFlatNode&gt;(<span class="hljs-keyword">this</span>.getLevel, <span class="hljs-keyword">this</span>.isExpandable);
+
+    <span class="hljs-keyword">this</span>.dataSource = <span class="hljs-keyword">new</span> MatTreeFlatDataSource(<span class="hljs-keyword">this</span>.treeControl, <span class="hljs-keyword">this</span>.treeFlattener);
+
+    database.dataChange.subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+      <span class="hljs-keyword">this</span>.dataSource.data = data;
+    });
+
+    database.initialize();
+  }
+
+  getChildren = (node: LoadmoreNode): Observable&lt;LoadmoreNode[]&gt; =&gt; { <span class="hljs-keyword">return</span> node.childrenChange; };
+
+  transformer = <span class="hljs-function">(<span class="hljs-params">node: LoadmoreNode, level: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.nodeMap.has(node.item)) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.nodeMap.get(node.item)!;
+    }
+    <span class="hljs-keyword">let</span> newNode = <span class="hljs-keyword">new</span> LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
+    <span class="hljs-keyword">this</span>.nodeMap.set(node.item, newNode);
+    <span class="hljs-keyword">return</span> newNode;
+  }
+
+  getLevel = <span class="hljs-function">(<span class="hljs-params">node: LoadmoreFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> node.level; };
+
+  isExpandable = <span class="hljs-function">(<span class="hljs-params">node: LoadmoreFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> node.expandable; };
+
+  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, _nodeData: LoadmoreFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> _nodeData.expandable; };
+
+  isLoadMore = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, _nodeData: LoadmoreFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> _nodeData.item === LOAD_MORE; };
+
+  <span class="hljs-comment">/** Load more nodes from data source */</span>
+  loadMore(item: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">this</span>.database.loadMore(item);
+  }
+
+  loadChildren(node: LoadmoreFlatNode) {
+    <span class="hljs-keyword">this</span>.database.loadMore(node.item, <span class="hljs-literal">true</span>);
+  }
+}

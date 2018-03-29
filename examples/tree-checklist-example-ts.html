@@ -1,0 +1,208 @@
+<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {SelectionModel} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
+<span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
+<span class="hljs-keyword">import</span> {MatTreeFlattener, MatTreeFlatDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
+<span class="hljs-keyword">import</span> {of <span class="hljs-keyword">as</span> ofObservable, Observable, BehaviorSubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+
+
+<span class="hljs-comment">/**
+ * Node for to-do item
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TodoItemNode {
+  children: TodoItemNode[];
+  item: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-comment">/** Flat to-do item node with expandable and level information */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TodoItemFlatNode {
+  item: <span class="hljs-built_in">string</span>;
+  level: <span class="hljs-built_in">number</span>;
+  expandable: <span class="hljs-built_in">boolean</span>;
+}
+
+<span class="hljs-comment">/**
+ * The Json object for to-do list data.
+ */</span>
+<span class="hljs-keyword">const</span> TREE_DATA = {
+  <span class="hljs-string">'Reminders'</span>: [
+    <span class="hljs-string">'Cook dinner'</span>,
+    <span class="hljs-string">'Read the Material Design spec'</span>,
+    <span class="hljs-string">'Upgrade Application to Angular'</span>
+  ],
+  <span class="hljs-string">'Groceries'</span>: {
+    <span class="hljs-string">'Organic eggs'</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">'Protein Powder'</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">'Almond Meal flour'</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">'Fruits'</span>: {
+      <span class="hljs-string">'Apple'</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-string">'Orange'</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-string">'Berries'</span>: [<span class="hljs-string">'Blueberry'</span>, <span class="hljs-string">'Raspberry'</span>]
+    }
+  }
+};
+
+<span class="hljs-comment">/**
+ * Checklist database, it can build a tree structured Json object.
+ * Each node in Json object represents a to-do item or a category.
+ * If a node is a category, it has children items and new items can be added under the category.
+ */</span>
+<span class="hljs-meta">@Injectable</span>()
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChecklistDatabase {
+  dataChange: BehaviorSubject&lt;TodoItemNode[]&gt; = <span class="hljs-keyword">new</span> BehaviorSubject&lt;TodoItemNode[]&gt;([]);
+
+  <span class="hljs-keyword">get</span> data(): TodoItemNode[] { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dataChange.value; }
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">this</span>.initialize();
+  }
+
+  initialize() {
+    <span class="hljs-comment">// Build the tree nodes from Json object. The result is a list of `TodoItemNode` with nested</span>
+    <span class="hljs-comment">//     file node as children.</span>
+    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">this</span>.buildFileTree(TREE_DATA, <span class="hljs-number">0</span>);
+
+    <span class="hljs-comment">// Notify the change.</span>
+    <span class="hljs-keyword">this</span>.dataChange.next(data);
+  }
+
+  <span class="hljs-comment">/**
+   * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+   * The return value is the list of `TodoItemNode`.
+   */</span>
+  buildFileTree(value: <span class="hljs-built_in">any</span>, level: <span class="hljs-built_in">number</span>) {
+    <span class="hljs-keyword">let</span> data: <span class="hljs-built_in">any</span>[] = [];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> k <span class="hljs-keyword">in</span> value) {
+      <span class="hljs-keyword">let</span> v = value[k];
+      <span class="hljs-keyword">let</span> node = <span class="hljs-keyword">new</span> TodoItemNode();
+      node.item = <span class="hljs-string">`<span class="hljs-subst">${k}</span>`</span>;
+      <span class="hljs-keyword">if</span> (v === <span class="hljs-literal">null</span> || v === <span class="hljs-literal">undefined</span>) {
+        <span class="hljs-comment">// no action</span>
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> v === <span class="hljs-string">'object'</span>) {
+        node.children = <span class="hljs-keyword">this</span>.buildFileTree(v, level + <span class="hljs-number">1</span>);
+      } <span class="hljs-keyword">else</span> {
+        node.item = v;
+      }
+      data.push(node);
+    }
+    <span class="hljs-keyword">return</span> data;
+  }
+
+  <span class="hljs-comment">/** Add an item to to-do list */</span>
+  insertItem(parent: TodoItemNode, name: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">const</span> child = &lt;TodoItemNode&gt;{item: name};
+    <span class="hljs-keyword">if</span> (parent.children) {
+      parent.children.push(child);
+      <span class="hljs-keyword">this</span>.dataChange.next(<span class="hljs-keyword">this</span>.data);
+    }
+  }
+
+  updateItem(node: TodoItemNode, name: <span class="hljs-built_in">string</span>) {
+    node.item = name;
+    <span class="hljs-keyword">this</span>.dataChange.next(<span class="hljs-keyword">this</span>.data);
+  }
+}
+
+<span class="hljs-comment">/**
+ * @title Tree with checkboxes
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tree-checklist-example'</span>,
+  templateUrl: <span class="hljs-string">'tree-checklist-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'tree-checklist-example.css'</span>],
+  providers: [ChecklistDatabase]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TreeChecklistExample {
+  <span class="hljs-comment">/** Map from flat node to nested node. This helps us finding the nested node to be modified */</span>
+  flatNodeMap: Map&lt;TodoItemFlatNode, TodoItemNode&gt; = <span class="hljs-keyword">new</span> Map&lt;TodoItemFlatNode, TodoItemNode&gt;();
+
+  <span class="hljs-comment">/** Map from nested node to flattened node. This helps us to keep the same object for selection */</span>
+  nestedNodeMap: Map&lt;TodoItemNode, TodoItemFlatNode&gt; = <span class="hljs-keyword">new</span> Map&lt;TodoItemNode, TodoItemFlatNode&gt;();
+
+  <span class="hljs-comment">/** A selected parent node to be inserted */</span>
+  selectedParent: TodoItemFlatNode | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
+
+  <span class="hljs-comment">/** The new item's name */</span>
+  newItemName: <span class="hljs-built_in">string</span> = <span class="hljs-string">''</span>;
+
+  treeControl: FlatTreeControl&lt;TodoItemFlatNode&gt;;
+
+  treeFlattener: MatTreeFlattener&lt;TodoItemNode, TodoItemFlatNode&gt;;
+
+  dataSource: MatTreeFlatDataSource&lt;TodoItemNode, TodoItemFlatNode&gt;;
+
+  <span class="hljs-comment">/** The selection for checklist */</span>
+  checklistSelection = <span class="hljs-keyword">new</span> SelectionModel&lt;TodoItemFlatNode&gt;(<span class="hljs-literal">true</span> <span class="hljs-comment">/* multiple */</span>);
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> database: ChecklistDatabase</span>) {
+    <span class="hljs-keyword">this</span>.treeFlattener = <span class="hljs-keyword">new</span> MatTreeFlattener(<span class="hljs-keyword">this</span>.transformer, <span class="hljs-keyword">this</span>.getLevel,
+      <span class="hljs-keyword">this</span>.isExpandable, <span class="hljs-keyword">this</span>.getChildren);
+    <span class="hljs-keyword">this</span>.treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;TodoItemFlatNode&gt;(<span class="hljs-keyword">this</span>.getLevel, <span class="hljs-keyword">this</span>.isExpandable);
+    <span class="hljs-keyword">this</span>.dataSource = <span class="hljs-keyword">new</span> MatTreeFlatDataSource(<span class="hljs-keyword">this</span>.treeControl, <span class="hljs-keyword">this</span>.treeFlattener);
+
+    database.dataChange.subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+      <span class="hljs-keyword">this</span>.dataSource.data = data;
+    });
+  }
+
+  getLevel = <span class="hljs-function">(<span class="hljs-params">node: TodoItemFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> node.level; };
+
+  isExpandable = <span class="hljs-function">(<span class="hljs-params">node: TodoItemFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> node.expandable; };
+
+  getChildren = (node: TodoItemNode): Observable&lt;TodoItemNode[]&gt; =&gt; {
+    <span class="hljs-keyword">return</span> ofObservable(node.children);
+  }
+
+  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, _nodeData: TodoItemFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> _nodeData.expandable; };
+
+  hasNoContent = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, _nodeData: TodoItemFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> _nodeData.item === <span class="hljs-string">''</span>; };
+
+  <span class="hljs-comment">/**
+   * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
+   */</span>
+  transformer = <span class="hljs-function">(<span class="hljs-params">node: TodoItemNode, level: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
+    <span class="hljs-keyword">let</span> flatNode = <span class="hljs-keyword">this</span>.nestedNodeMap.has(node) &amp;&amp; <span class="hljs-keyword">this</span>.nestedNodeMap.get(node)!.item === node.item
+      ? <span class="hljs-keyword">this</span>.nestedNodeMap.get(node)!
+      : <span class="hljs-keyword">new</span> TodoItemFlatNode();
+    flatNode.item = node.item;
+    flatNode.level = level;
+    flatNode.expandable = !!node.children;
+    <span class="hljs-keyword">this</span>.flatNodeMap.set(flatNode, node);
+    <span class="hljs-keyword">this</span>.nestedNodeMap.set(node, flatNode);
+    <span class="hljs-keyword">return</span> flatNode;
+  }
+
+  <span class="hljs-comment">/** Whether all the descendants of the node are selected */</span>
+  descendantsAllSelected(node: TodoItemFlatNode): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">const</span> descendants = <span class="hljs-keyword">this</span>.treeControl.getDescendants(node);
+    <span class="hljs-keyword">return</span> descendants.every(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span> <span class="hljs-keyword">this</span>.checklistSelection.isSelected(child));
+  }
+
+  <span class="hljs-comment">/** Whether part of the descendants are selected */</span>
+  descendantsPartiallySelected(node: TodoItemFlatNode): <span class="hljs-built_in">boolean</span> {
+    <span class="hljs-keyword">const</span> descendants = <span class="hljs-keyword">this</span>.treeControl.getDescendants(node);
+    <span class="hljs-keyword">const</span> result = descendants.some(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span> <span class="hljs-keyword">this</span>.checklistSelection.isSelected(child));
+    <span class="hljs-keyword">return</span> result &amp;&amp; !<span class="hljs-keyword">this</span>.descendantsAllSelected(node);
+  }
+
+  <span class="hljs-comment">/** Toggle the to-do item selection. Select/deselect all the descendants node */</span>
+  todoItemSelectionToggle(node: TodoItemFlatNode): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">this</span>.checklistSelection.toggle(node);
+    <span class="hljs-keyword">const</span> descendants = <span class="hljs-keyword">this</span>.treeControl.getDescendants(node);
+    <span class="hljs-keyword">this</span>.checklistSelection.isSelected(node)
+      ? <span class="hljs-keyword">this</span>.checklistSelection.select(...descendants)
+      : <span class="hljs-keyword">this</span>.checklistSelection.deselect(...descendants);
+  }
+
+  <span class="hljs-comment">/** Select the category so we can insert the new item. */</span>
+  addNewItem(node: TodoItemFlatNode) {
+    <span class="hljs-keyword">const</span> parentNode = <span class="hljs-keyword">this</span>.flatNodeMap.get(node);
+    <span class="hljs-keyword">this</span>.database.insertItem(parentNode!, <span class="hljs-string">''</span>);
+    <span class="hljs-keyword">this</span>.treeControl.expand(node);
+  }
+
+  <span class="hljs-comment">/** Save the node to database */</span>
+  saveNode(node: TodoItemFlatNode, itemValue: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">const</span> nestedNode = <span class="hljs-keyword">this</span>.flatNodeMap.get(node);
+    <span class="hljs-keyword">this</span>.database.updateItem(nestedNode!, itemValue);
+  }
+}

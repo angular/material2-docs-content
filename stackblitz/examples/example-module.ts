@@ -138,7 +138,10 @@ import {TooltipManualExample} from './tooltip-manual/tooltip-manual-example';
 import {TooltipModifiedDefaultsExample} from './tooltip-modified-defaults/tooltip-modified-defaults-example';
 import {TooltipOverviewExample} from './tooltip-overview/tooltip-overview-example';
 import {TooltipPositionExample} from './tooltip-position/tooltip-position-example';
+import {TreeChecklistExample} from './tree-checklist/tree-checklist-example';
+import {TreeDynamicExample} from './tree-dynamic/tree-dynamic-example';
 import {TreeFlatOverviewExample} from './tree-flat-overview/tree-flat-overview-example';
+import {TreeLoadmoreExample} from './tree-loadmore/tree-loadmore-example';
 import {TreeNestedOverviewExample} from './tree-nested-overview/tree-nested-overview-example';
 
 export interface LiveExample {
@@ -695,9 +698,21 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Tooltip with custom position',
     component: TooltipPositionExample
   },
+  'tree-checklist': {
+    title: 'Tree with checkboxes',
+    component: TreeChecklistExample
+  },
+  'tree-dynamic': {
+    title: 'Tree with dynamic data',
+    component: TreeDynamicExample
+  },
   'tree-flat-overview': {
     title: 'Tree with flat nodes',
     component: TreeFlatOverviewExample
+  },
+  'tree-loadmore': {
+    title: 'Tree with partially loaded data',
+    component: TreeLoadmoreExample
   },
   'tree-nested-overview': {
     title: 'Tree with nested nodes',
@@ -839,7 +854,10 @@ export const EXAMPLE_LIST = [
   TooltipModifiedDefaultsExample,
   TooltipOverviewExample,
   TooltipPositionExample,
+  TreeChecklistExample,
+  TreeDynamicExample,
   TreeFlatOverviewExample,
+  TreeLoadmoreExample,
   TreeNestedOverviewExample,
 ];
 

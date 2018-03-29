@@ -138,7 +138,10 @@
 <span class="hljs-keyword">import</span> {TooltipModifiedDefaultsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-modified-defaults/tooltip-modified-defaults-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-overview/tooltip-overview-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-position/tooltip-position-example'</span>;
+<span class="hljs-keyword">import</span> {TreeChecklistExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-checklist/tree-checklist-example'</span>;
+<span class="hljs-keyword">import</span> {TreeDynamicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-dynamic/tree-dynamic-example'</span>;
 <span class="hljs-keyword">import</span> {TreeFlatOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-flat-overview/tree-flat-overview-example'</span>;
+<span class="hljs-keyword">import</span> {TreeLoadmoreExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-loadmore/tree-loadmore-example'</span>;
 <span class="hljs-keyword">import</span> {TreeNestedOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-nested-overview/tree-nested-overview-example'</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> LiveExample {
@@ -695,9 +698,21 @@
     title: <span class="hljs-string">'Tooltip with custom position'</span>,
     component: TooltipPositionExample
   },
+  <span class="hljs-string">'tree-checklist'</span>: {
+    title: <span class="hljs-string">'Tree with checkboxes'</span>,
+    component: TreeChecklistExample
+  },
+  <span class="hljs-string">'tree-dynamic'</span>: {
+    title: <span class="hljs-string">'Tree with dynamic data'</span>,
+    component: TreeDynamicExample
+  },
   <span class="hljs-string">'tree-flat-overview'</span>: {
     title: <span class="hljs-string">'Tree with flat nodes'</span>,
     component: TreeFlatOverviewExample
+  },
+  <span class="hljs-string">'tree-loadmore'</span>: {
+    title: <span class="hljs-string">'Tree with partially loaded data'</span>,
+    component: TreeLoadmoreExample
   },
   <span class="hljs-string">'tree-nested-overview'</span>: {
     title: <span class="hljs-string">'Tree with nested nodes'</span>,
@@ -839,7 +854,10 @@
   TooltipModifiedDefaultsExample,
   TooltipOverviewExample,
   TooltipPositionExample,
+  TreeChecklistExample,
+  TreeDynamicExample,
   TreeFlatOverviewExample,
+  TreeLoadmoreExample,
   TreeNestedOverviewExample,
 ];
 

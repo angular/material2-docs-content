@@ -1,0 +1,29 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tree</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> [<span class="hljs-attr">treeControl</span>]=<span class="hljs-string">"treeControl"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span> *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">"let node"</span> <span class="hljs-attr">matTreeNodeToggle</span> <span class="hljs-attr">matTreeNodePadding</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checklist-leaf-node"</span>
+                  [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"checklistSelection.isSelected(node)"</span>
+                  (<span class="hljs-attr">change</span>)=<span class="hljs-string">"checklistSelection.toggle(node);"</span>&gt;</span>{{node.item}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span> *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">"let node; when: hasNoContent"</span> <span class="hljs-attr">matTreeNodePadding</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> #<span class="hljs-attr">itemValue</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"New item..."</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"saveNode(node, itemValue.value)"</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span> *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">"let node; when: hasChild"</span> <span class="hljs-attr">matTreeNodePadding</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">matTreeNodeToggle</span>
+            [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">"'toggle ' + node.filename"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>
+        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"descendantsAllSelected(node)"</span>
+                  [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"descendantsPartiallySelected(node)"</span>
+                  (<span class="hljs-attr">change</span>)=<span class="hljs-string">"todoItemSelectionToggle(node)"</span>&gt;</span>{{node.item}}<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"addNewItem(node)"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>add<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree</span>&gt;</span>

@@ -5063,6 +5063,536 @@ var TooltipPositionExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * Node for to-do item
+ */
+var /**
+ * Node for to-do item
+ */
+TodoItemNode = /** @class */ (function () {
+    function TodoItemNode() {
+    }
+    return TodoItemNode;
+}());
+/**
+ * Flat to-do item node with expandable and level information
+ */
+var /**
+ * Flat to-do item node with expandable and level information
+ */
+TodoItemFlatNode = /** @class */ (function () {
+    function TodoItemFlatNode() {
+    }
+    return TodoItemFlatNode;
+}());
+/**
+ * The Json object for to-do list data.
+ */
+var /** @type {?} */ TREE_DATA$2 = {
+    'Reminders': [
+        'Cook dinner',
+        'Read the Material Design spec',
+        'Upgrade Application to Angular'
+    ],
+    'Groceries': {
+        'Organic eggs': null,
+        'Protein Powder': null,
+        'Almond Meal flour': null,
+        'Fruits': {
+            'Apple': null,
+            'Orange': null,
+            'Berries': ['Blueberry', 'Raspberry']
+        }
+    }
+};
+/**
+ * Checklist database, it can build a tree structured Json object.
+ * Each node in Json object represents a to-do item or a category.
+ * If a node is a category, it has children items and new items can be added under the category.
+ */
+var ChecklistDatabase = /** @class */ (function () {
+    function ChecklistDatabase() {
+        this.dataChange = new rxjs.BehaviorSubject([]);
+        this.initialize();
+    }
+    Object.defineProperty(ChecklistDatabase.prototype, "data", {
+        get: /**
+         * @return {?}
+         */
+        function () { return this.dataChange.value; },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    ChecklistDatabase.prototype.initialize = /**
+     * @return {?}
+     */
+    function () {
+        // Build the tree nodes from Json object. The result is a list of `TodoItemNode` with nested
+        //     file node as children.
+        var /** @type {?} */ data = this.buildFileTree(TREE_DATA$2, 0);
+        // Notify the change.
+        this.dataChange.next(data);
+    };
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `TodoItemNode`.
+     */
+    /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `TodoItemNode`.
+     * @param {?} value
+     * @param {?} level
+     * @return {?}
+     */
+    ChecklistDatabase.prototype.buildFileTree = /**
+     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
+     * The return value is the list of `TodoItemNode`.
+     * @param {?} value
+     * @param {?} level
+     * @return {?}
+     */
+    function (value, level) {
+        var /** @type {?} */ data = [];
+        for (var /** @type {?} */ k in value) {
+            var /** @type {?} */ v = value[k];
+            var /** @type {?} */ node = new TodoItemNode();
+            node.item = "" + k;
+            if (v === null || v === undefined) {
+                // no action
+            }
+            else if (typeof v === 'object') {
+                node.children = this.buildFileTree(v, level + 1);
+            }
+            else {
+                node.item = v;
+            }
+            data.push(node);
+        }
+        return data;
+    };
+    /** Add an item to to-do list */
+    /**
+     * Add an item to to-do list
+     * @param {?} parent
+     * @param {?} name
+     * @return {?}
+     */
+    ChecklistDatabase.prototype.insertItem = /**
+     * Add an item to to-do list
+     * @param {?} parent
+     * @param {?} name
+     * @return {?}
+     */
+    function (parent, name) {
+        var /** @type {?} */ child = /** @type {?} */ ({ item: name });
+        if (parent.children) {
+            parent.children.push(child);
+            this.dataChange.next(this.data);
+        }
+    };
+    /**
+     * @param {?} node
+     * @param {?} name
+     * @return {?}
+     */
+    ChecklistDatabase.prototype.updateItem = /**
+     * @param {?} node
+     * @param {?} name
+     * @return {?}
+     */
+    function (node, name) {
+        node.item = name;
+        this.dataChange.next(this.data);
+    };
+    ChecklistDatabase.decorators = [
+        { type: core.Injectable },
+    ];
+    /** @nocollapse */
+    ChecklistDatabase.ctorParameters = function () { return []; };
+    return ChecklistDatabase;
+}());
+/**
+ * \@title Tree with checkboxes
+ */
+var TreeChecklistExample = /** @class */ (function () {
+    function TreeChecklistExample(database) {
+        var _this = this;
+        this.database = database;
+        /**
+         * Map from flat node to nested node. This helps us finding the nested node to be modified
+         */
+        this.flatNodeMap = new Map();
+        /**
+         * Map from nested node to flattened node. This helps us to keep the same object for selection
+         */
+        this.nestedNodeMap = new Map();
+        /**
+         * A selected parent node to be inserted
+         */
+        this.selectedParent = null;
+        /**
+         * The new item's name
+         */
+        this.newItemName = '';
+        /**
+         * The selection for checklist
+         */
+        this.checklistSelection = new collections.SelectionModel(true /* multiple */);
+        this.getLevel = function (node) { return node.level; };
+        this.isExpandable = function (node) { return node.expandable; };
+        this.getChildren = function (node) {
+            return rxjs.of(node.children);
+        };
+        this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
+        this.hasNoContent = function (_, _nodeData) { return _nodeData.item === ''; };
+        /**
+         * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
+         */
+        this.transformer = function (node, level) {
+            var /** @type {?} */ flatNode = _this.nestedNodeMap.has(node) && /** @type {?} */ ((_this.nestedNodeMap.get(node))).item === node.item
+                ? /** @type {?} */ ((_this.nestedNodeMap.get(node)))
+                : new TodoItemFlatNode();
+            flatNode.item = node.item;
+            flatNode.level = level;
+            flatNode.expandable = !!node.children;
+            _this.flatNodeMap.set(flatNode, node);
+            _this.nestedNodeMap.set(node, flatNode);
+            return flatNode;
+        };
+        this.treeFlattener = new tree$1.MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
+        this.treeControl = new tree.FlatTreeControl(this.getLevel, this.isExpandable);
+        this.dataSource = new tree$1.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+        database.dataChange.subscribe(function (data) {
+            _this.dataSource.data = data;
+        });
+    }
+    /** Whether all the descendants of the node are selected */
+    /**
+     * Whether all the descendants of the node are selected
+     * @param {?} node
+     * @return {?}
+     */
+    TreeChecklistExample.prototype.descendantsAllSelected = /**
+     * Whether all the descendants of the node are selected
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        var _this = this;
+        var /** @type {?} */ descendants = this.treeControl.getDescendants(node);
+        return descendants.every(function (child) { return _this.checklistSelection.isSelected(child); });
+    };
+    /** Whether part of the descendants are selected */
+    /**
+     * Whether part of the descendants are selected
+     * @param {?} node
+     * @return {?}
+     */
+    TreeChecklistExample.prototype.descendantsPartiallySelected = /**
+     * Whether part of the descendants are selected
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        var _this = this;
+        var /** @type {?} */ descendants = this.treeControl.getDescendants(node);
+        var /** @type {?} */ result = descendants.some(function (child) { return _this.checklistSelection.isSelected(child); });
+        return result && !this.descendantsAllSelected(node);
+    };
+    /** Toggle the to-do item selection. Select/deselect all the descendants node */
+    /**
+     * Toggle the to-do item selection. Select/deselect all the descendants node
+     * @param {?} node
+     * @return {?}
+     */
+    TreeChecklistExample.prototype.todoItemSelectionToggle = /**
+     * Toggle the to-do item selection. Select/deselect all the descendants node
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        this.checklistSelection.toggle(node);
+        var /** @type {?} */ descendants = this.treeControl.getDescendants(node);
+        this.checklistSelection.isSelected(node)
+            ? (_a = this.checklistSelection).select.apply(_a, descendants) : (_b = this.checklistSelection).deselect.apply(_b, descendants);
+        var _a, _b;
+    };
+    /** Select the category so we can insert the new item. */
+    /**
+     * Select the category so we can insert the new item.
+     * @param {?} node
+     * @return {?}
+     */
+    TreeChecklistExample.prototype.addNewItem = /**
+     * Select the category so we can insert the new item.
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        var /** @type {?} */ parentNode = this.flatNodeMap.get(node);
+        this.database.insertItem(/** @type {?} */ ((parentNode)), '');
+        this.treeControl.expand(node);
+    };
+    /** Save the node to database */
+    /**
+     * Save the node to database
+     * @param {?} node
+     * @param {?} itemValue
+     * @return {?}
+     */
+    TreeChecklistExample.prototype.saveNode = /**
+     * Save the node to database
+     * @param {?} node
+     * @param {?} itemValue
+     * @return {?}
+     */
+    function (node, itemValue) {
+        var /** @type {?} */ nestedNode = this.flatNodeMap.get(node);
+        this.database.updateItem(/** @type {?} */ ((nestedNode)), itemValue);
+    };
+    TreeChecklistExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tree-checklist-example',
+                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button><mat-checkbox class=\"checklist-leaf-node\" [checked]=\"checklistSelection.isSelected(node)\" (change)=\"checklistSelection.toggle(node);\">{{node.item}}</mat-checkbox></mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasNoContent\" matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button><mat-form-field><input matInput #itemValue placeholder=\"New item...\"></mat-form-field><button mat-button (click)=\"saveNode(node, itemValue.value)\">Save</button></mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button><mat-checkbox [checked]=\"descendantsAllSelected(node)\" [indeterminate]=\"descendantsPartiallySelected(node)\" (change)=\"todoItemSelectionToggle(node)\">{{node.item}}</mat-checkbox><button mat-icon-button (click)=\"addNewItem(node)\"><mat-icon>add</mat-icon></button></mat-tree-node></mat-tree>",
+                    styles: [""],
+                    providers: [ChecklistDatabase]
+                },] },
+    ];
+    /** @nocollapse */
+    TreeChecklistExample.ctorParameters = function () { return [
+        { type: ChecklistDatabase, },
+    ]; };
+    return TreeChecklistExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Flat node with expandable and level information
+ */
+var /**
+ * Flat node with expandable and level information
+ */
+DynamicFlatNode = /** @class */ (function () {
+    function DynamicFlatNode(item, level, expandable, isLoading) {
+        if (level === void 0) { level = 1; }
+        if (expandable === void 0) { expandable = false; }
+        if (isLoading === void 0) { isLoading = false; }
+        this.item = item;
+        this.level = level;
+        this.expandable = expandable;
+        this.isLoading = isLoading;
+    }
+    return DynamicFlatNode;
+}());
+/**
+ * Database for dynamic data. When expanding a node in the tree, the data source will need to fetch
+ * the descendants data from the database.
+ */
+var   /**
+ * Database for dynamic data. When expanding a node in the tree, the data source will need to fetch
+ * the descendants data from the database.
+ */
+DynamicDatabase = /** @class */ (function () {
+    function DynamicDatabase() {
+        this.dataMap = new Map([
+            ['Fruits', ['Apple', 'Orange', 'Banana']],
+            ['Vegetables', ['Tomato', 'Potato', 'Onion']],
+            ['Apple', ['Fuji', 'Macintosh']],
+            ['Onion', ['Yellow', 'White', 'Purple']]
+        ]);
+        this.rootLevelNodes = ['Fruits', 'Vegetables'];
+    }
+    /** Initial data from database */
+    /**
+     * Initial data from database
+     * @return {?}
+     */
+    DynamicDatabase.prototype.initialData = /**
+     * Initial data from database
+     * @return {?}
+     */
+    function () {
+        return this.rootLevelNodes.map(function (name) { return new DynamicFlatNode(name, 0, true); });
+    };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    DynamicDatabase.prototype.getChildren = /**
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        return this.dataMap.get(node);
+    };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    DynamicDatabase.prototype.isExpandable = /**
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        return this.dataMap.has(node);
+    };
+    return DynamicDatabase;
+}());
+/**
+ * File database, it can build a tree structured Json object from string.
+ * Each node in Json object represents a file or a directory. For a file, it has filename and type.
+ * For a directory, it has filename and children (a list of files or directories).
+ * The input will be a json object string, and the output is a list of `FileNode` with nested
+ * structure.
+ */
+var DynamicDataSource = /** @class */ (function () {
+    function DynamicDataSource(treeControl, database) {
+        this.treeControl = treeControl;
+        this.database = database;
+        this.dataChange = new rxjs.BehaviorSubject([]);
+    }
+    Object.defineProperty(DynamicDataSource.prototype, "data", {
+        get: /**
+         * @return {?}
+         */
+        function () { return this.dataChange.value; },
+        set: /**
+         * @param {?} value
+         * @return {?}
+         */
+        function (value) {
+            this.treeControl.dataNodes = value;
+            this.dataChange.next(value);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @param {?} collectionViewer
+     * @return {?}
+     */
+    DynamicDataSource.prototype.connect = /**
+     * @param {?} collectionViewer
+     * @return {?}
+     */
+    function (collectionViewer) {
+        var _this = this;
+        /** @type {?} */ ((this.treeControl.expansionModel.onChange)).subscribe(function (change) {
+            if ((/** @type {?} */ (change)).added ||
+                (/** @type {?} */ (change)).removed) {
+                _this.handleTreeControl(/** @type {?} */ (change));
+            }
+        });
+        return rxjs.merge(collectionViewer.viewChange, this.dataChange).pipe(operators.map(function () { return _this.data; }));
+    };
+    /** Handle expand/collapse behaviors */
+    /**
+     * Handle expand/collapse behaviors
+     * @param {?} change
+     * @return {?}
+     */
+    DynamicDataSource.prototype.handleTreeControl = /**
+     * Handle expand/collapse behaviors
+     * @param {?} change
+     * @return {?}
+     */
+    function (change) {
+        var _this = this;
+        if (change.added) {
+            change.added.forEach(function (node) { return _this.toggleNode(node, true); });
+        }
+        if (change.removed) {
+            change.removed.reverse().forEach(function (node) { return _this.toggleNode(node, false); });
+        }
+    };
+    /**
+     * Toggle the node, remove from display list
+     */
+    /**
+     * Toggle the node, remove from display list
+     * @param {?} node
+     * @param {?} expand
+     * @return {?}
+     */
+    DynamicDataSource.prototype.toggleNode = /**
+     * Toggle the node, remove from display list
+     * @param {?} node
+     * @param {?} expand
+     * @return {?}
+     */
+    function (node, expand) {
+        var _this = this;
+        var /** @type {?} */ children = this.database.getChildren(node.item);
+        var /** @type {?} */ index = this.data.indexOf(node);
+        if (!children || index < 0) {
+            // If no children, or cannot find the node, no op
+            return;
+        }
+        node.isLoading = true;
+        setTimeout(function () {
+            if (expand) {
+                var /** @type {?} */ nodes = children.map(function (name) {
+                    return new DynamicFlatNode(name, node.level + 1, _this.database.isExpandable(name));
+                });
+                (_a = _this.data).splice.apply(_a, [index + 1, 0].concat(nodes));
+            }
+            else {
+                _this.data.splice(index + 1, children.length);
+            }
+            // notify the change
+            // notify the change
+            _this.dataChange.next(_this.data);
+            node.isLoading = false;
+            var _a;
+        }, 1000);
+    };
+    DynamicDataSource.decorators = [
+        { type: core.Injectable },
+    ];
+    /** @nocollapse */
+    DynamicDataSource.ctorParameters = function () { return [
+        { type: tree.FlatTreeControl, },
+        { type: DynamicDatabase, },
+    ]; };
+    return DynamicDataSource;
+}());
+/**
+ * \@title Tree with dynamic data
+ */
+var TreeDynamicExample = /** @class */ (function () {
+    function TreeDynamicExample(database) {
+        this.getLevel = function (node) { return node.level; };
+        this.isExpandable = function (node) { return node.expandable; };
+        this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
+        this.treeControl = new tree.FlatTreeControl(this.getLevel, this.isExpandable);
+        this.dataSource = new DynamicDataSource(this.treeControl, database);
+        this.dataSource.data = database.initialData();
+    }
+    TreeDynamicExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tree-dynamic-example',
+                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button> {{node.item}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding><button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" matTreeNodeToggle><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.item}}<mat-progress-bar *ngIf=\"node.isLoading\" mode=\"indeterminate\" class=\"example-tree-progress-bar\"></mat-progress-bar></mat-tree-node></mat-tree>",
+                    styles: [".example-tree-progress-bar { margin-left: 30px; } "],
+                    providers: [DynamicDatabase]
+                },] },
+    ];
+    /** @nocollapse */
+    TreeDynamicExample.ctorParameters = function () { return [
+        { type: DynamicDatabase, },
+    ]; };
+    return TreeDynamicExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * File node data with nested structure.
  * Each node has a filename, and a type or a list of children.
  */
@@ -5089,7 +5619,7 @@ FileFlatNode$1 = /** @class */ (function () {
 /**
  * The file structure tree data in string. The data could be parsed into a Json object
  */
-var /** @type {?} */ TREE_DATA$2 = "\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}";
+var /** @type {?} */ TREE_DATA$3 = "\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n}";
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -5118,7 +5648,7 @@ var FileDatabase$2 = /** @class */ (function () {
      */
     function () {
         // Parse the string to json object.
-        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$2);
+        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$3);
         // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
         //     file node as children.
         var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
@@ -5213,6 +5743,213 @@ var TreeFlatOverviewExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+var /** @type {?} */ LOAD_MORE = 'LOAD_MORE';
+/**
+ * Nested node
+ */
+var /**
+ * Nested node
+ */
+LoadmoreNode = /** @class */ (function () {
+    function LoadmoreNode(item, hasChildren, loadMoreParentItem) {
+        if (hasChildren === void 0) { hasChildren = false; }
+        if (loadMoreParentItem === void 0) { loadMoreParentItem = null; }
+        this.item = item;
+        this.hasChildren = hasChildren;
+        this.loadMoreParentItem = loadMoreParentItem;
+        this.childrenChange = new rxjs.BehaviorSubject([]);
+    }
+    Object.defineProperty(LoadmoreNode.prototype, "children", {
+        get: /**
+         * @return {?}
+         */
+        function () {
+            return this.childrenChange.value;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return LoadmoreNode;
+}());
+/**
+ * Flat node with expandable and level information
+ */
+var /**
+ * Flat node with expandable and level information
+ */
+LoadmoreFlatNode = /** @class */ (function () {
+    function LoadmoreFlatNode(item, level, expandable, loadMoreParentItem) {
+        if (level === void 0) { level = 1; }
+        if (expandable === void 0) { expandable = false; }
+        if (loadMoreParentItem === void 0) { loadMoreParentItem = null; }
+        this.item = item;
+        this.level = level;
+        this.expandable = expandable;
+        this.loadMoreParentItem = loadMoreParentItem;
+    }
+    return LoadmoreFlatNode;
+}());
+/**
+ * A database that only load part of the data initially. After user clicks on the `Load more`
+ * button, more data will be loaded.
+ */
+var LoadmoreDatabase = /** @class */ (function () {
+    function LoadmoreDatabase() {
+        this.batchNumber = 5;
+        this.dataChange = new rxjs.BehaviorSubject([]);
+        this.nodeMap = new Map();
+        /**
+         * The data
+         */
+        this.rootLevelNodes = ['Vegetables', 'Fruits'];
+        this.dataMap = new Map([
+            ['Fruits', ['Apple', 'Orange', 'Banana']],
+            ['Vegetables', ['Tomato', 'Potato', 'Onion']],
+            ['Apple', ['Fuji', 'Macintosh']],
+            ['Onion', ['Yellow', 'White', 'Purple', 'Green', 'Shallot', 'Sweet', 'Red', 'Leek']],
+        ]);
+    }
+    /**
+     * @return {?}
+     */
+    LoadmoreDatabase.prototype.initialize = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        var /** @type {?} */ data = this.rootLevelNodes.map(function (name) { return _this._generateNode(name); });
+        this.dataChange.next(data);
+    };
+    /** Expand a node whose children are not loaded */
+    /**
+     * Expand a node whose children are not loaded
+     * @param {?} item
+     * @param {?=} onlyFirstTime
+     * @return {?}
+     */
+    LoadmoreDatabase.prototype.loadMore = /**
+     * Expand a node whose children are not loaded
+     * @param {?} item
+     * @param {?=} onlyFirstTime
+     * @return {?}
+     */
+    function (item, onlyFirstTime) {
+        var _this = this;
+        if (onlyFirstTime === void 0) { onlyFirstTime = false; }
+        if (!this.nodeMap.has(item) || !this.dataMap.has(item)) {
+            return;
+        }
+        var /** @type {?} */ parent = /** @type {?} */ ((this.nodeMap.get(item)));
+        var /** @type {?} */ children = /** @type {?} */ ((this.dataMap.get(item)));
+        if (onlyFirstTime && /** @type {?} */ ((parent.children)).length > 0) {
+            return;
+        }
+        var /** @type {?} */ newChildrenNumber = /** @type {?} */ ((parent.children)).length + this.batchNumber;
+        var /** @type {?} */ nodes = children.slice(0, newChildrenNumber)
+            .map(function (name) { return _this._generateNode(name); });
+        if (newChildrenNumber < children.length) {
+            // Need a new load more node
+            nodes.push(new LoadmoreNode(LOAD_MORE, false, item));
+        }
+        parent.childrenChange.next(nodes);
+        this.dataChange.next(this.dataChange.value);
+    };
+    /**
+     * @param {?} item
+     * @return {?}
+     */
+    LoadmoreDatabase.prototype._generateNode = /**
+     * @param {?} item
+     * @return {?}
+     */
+    function (item) {
+        if (this.nodeMap.has(item)) {
+            return /** @type {?} */ ((this.nodeMap.get(item)));
+        }
+        var /** @type {?} */ result = new LoadmoreNode(item, this.dataMap.has(item));
+        this.nodeMap.set(item, result);
+        return result;
+    };
+    LoadmoreDatabase.decorators = [
+        { type: core.Injectable },
+    ];
+    /** @nocollapse */
+    LoadmoreDatabase.ctorParameters = function () { return []; };
+    return LoadmoreDatabase;
+}());
+/**
+ * \@title Tree with partially loaded data
+ */
+var TreeLoadmoreExample = /** @class */ (function () {
+    function TreeLoadmoreExample(database) {
+        var _this = this;
+        this.database = database;
+        this.nodeMap = new Map();
+        this.getChildren = function (node) { return node.childrenChange; };
+        this.transformer = function (node, level) {
+            if (_this.nodeMap.has(node.item)) {
+                return /** @type {?} */ ((_this.nodeMap.get(node.item)));
+            }
+            var /** @type {?} */ newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
+            _this.nodeMap.set(node.item, newNode);
+            return newNode;
+        };
+        this.getLevel = function (node) { return node.level; };
+        this.isExpandable = function (node) { return node.expandable; };
+        this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
+        this.isLoadMore = function (_, _nodeData) { return _nodeData.item === LOAD_MORE; };
+        this.treeFlattener = new tree$1.MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
+        this.treeControl = new tree.FlatTreeControl(this.getLevel, this.isExpandable);
+        this.dataSource = new tree$1.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
+        database.dataChange.subscribe(function (data) {
+            _this.dataSource.data = data;
+        });
+        database.initialize();
+    }
+    /** Load more nodes from data source */
+    /**
+     * Load more nodes from data source
+     * @param {?} item
+     * @return {?}
+     */
+    TreeLoadmoreExample.prototype.loadMore = /**
+     * Load more nodes from data source
+     * @param {?} item
+     * @return {?}
+     */
+    function (item) {
+        this.database.loadMore(item);
+    };
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    TreeLoadmoreExample.prototype.loadChildren = /**
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        this.database.loadMore(node.item, true);
+    };
+    TreeLoadmoreExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tree-loadmore-example',
+                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button> {{node.item}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding><button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" (click)=\"loadChildren(node)\" matTreeNodeToggle><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.item}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: isLoadMore\"><button mat-button (click)=\"loadMore(node.loadMoreParentItem)\">Load more...</button></mat-tree-node></mat-tree>",
+                    styles: [""],
+                    providers: [LoadmoreDatabase]
+                },] },
+    ];
+    /** @nocollapse */
+    TreeLoadmoreExample.ctorParameters = function () { return [
+        { type: LoadmoreDatabase, },
+    ]; };
+    return TreeLoadmoreExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
  */
@@ -5227,7 +5964,7 @@ FileNode$3 = /** @class */ (function () {
 /**
  * The Json tree data in string. The data could be parsed into Json object
  */
-var /** @type {?} */ TREE_DATA$3 = "\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n  }";
+var /** @type {?} */ TREE_DATA$4 = "\n  {\n    \"Documents\": {\n      \"angular\": {\n        \"src\": {\n          \"core\": \"ts\",\n          \"compiler\": \"ts\"\n        }\n      },\n      \"material2\": {\n        \"src\": {\n          \"button\": \"ts\",\n          \"checkbox\": \"ts\",\n          \"input\": \"ts\"\n        }\n      }\n    },\n    \"Downloads\": {\n        \"Tutorial\": \"html\",\n        \"November\": \"pdf\",\n        \"October\": \"pdf\"\n    },\n    \"Pictures\": {\n        \"Sun\": \"png\",\n        \"Woods\": \"jpg\",\n        \"Photo Booth Library\": {\n          \"Contents\": \"dir\",\n          \"Pictures\": \"dir\"\n        }\n    },\n    \"Applications\": {\n        \"Chrome\": \"app\",\n        \"Calendar\": \"app\",\n        \"Webstorm\": \"app\"\n    }\n  }";
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -5256,7 +5993,7 @@ var FileDatabase$3 = /** @class */ (function () {
      */
     function () {
         // Parse the string to json object.
-        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$3);
+        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$4);
         // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
         //     file node as children.
         var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
@@ -5885,9 +6622,21 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Tooltip with custom position',
         component: TooltipPositionExample
     },
+    'tree-checklist': {
+        title: 'Tree with checkboxes',
+        component: TreeChecklistExample
+    },
+    'tree-dynamic': {
+        title: 'Tree with dynamic data',
+        component: TreeDynamicExample
+    },
     'tree-flat-overview': {
         title: 'Tree with flat nodes',
         component: TreeFlatOverviewExample
+    },
+    'tree-loadmore': {
+        title: 'Tree with partially loaded data',
+        component: TreeLoadmoreExample
     },
     'tree-nested-overview': {
         title: 'Tree with nested nodes',
@@ -6028,7 +6777,10 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TooltipModifiedDefaultsExample,
     TooltipOverviewExample,
     TooltipPositionExample,
+    TreeChecklistExample,
+    TreeDynamicExample,
     TreeFlatOverviewExample,
+    TreeLoadmoreExample,
     TreeNestedOverviewExample,
 ];
 var ExampleModule = /** @class */ (function () {
@@ -6168,7 +6920,7 @@ exports.ɵcq = InputOverviewExample;
 exports.ɵcr = InputPrefixSuffixExample;
 exports.ɵcs = ListSectionsExample;
 exports.ɵct = ListSelectionExample;
-exports.ɵfm = ExampleMaterialModule;
+exports.ɵfs = ExampleMaterialModule;
 exports.ɵcu = MenuIconsExample;
 exports.ɵcv = MenuOverviewExample;
 exports.ɵcw = NestedMenuExample;
@@ -6235,10 +6987,16 @@ exports.ɵff = TooltipModifiedDefaultsExample;
 exports.ɵfe = myCustomTooltipDefaults;
 exports.ɵfg = TooltipOverviewExample;
 exports.ɵfh = TooltipPositionExample;
-exports.ɵfi = FileDatabase$2;
-exports.ɵfj = TreeFlatOverviewExample;
-exports.ɵfk = FileDatabase$3;
-exports.ɵfl = TreeNestedOverviewExample;
+exports.ɵfi = ChecklistDatabase;
+exports.ɵfj = TreeChecklistExample;
+exports.ɵfk = DynamicDatabase;
+exports.ɵfl = TreeDynamicExample;
+exports.ɵfm = FileDatabase$2;
+exports.ɵfn = TreeFlatOverviewExample;
+exports.ɵfo = LoadmoreDatabase;
+exports.ɵfp = TreeLoadmoreExample;
+exports.ɵfq = FileDatabase$3;
+exports.ɵfr = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
