@@ -122,6 +122,7 @@ import {StepperOverviewExample} from './stepper-overview/stepper-overview-exampl
 import {TableBasicExample} from './table-basic/table-basic-example';
 import {TableFilteringExample} from './table-filtering/table-filtering-example';
 import {TableHttpExample} from './table-http/table-http-example';
+import {TableNativeOnlyExample} from './table-native-only/table-native-only-example';
 import {TableOverviewExample} from './table-overview/table-overview-example';
 import {TablePaginationExample} from './table-pagination/table-pagination-example';
 import {TableSelectionExample} from './table-selection/table-selection-example';
@@ -634,6 +635,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Table retrieving data through HTTP',
     component: TableHttpExample
   },
+  'table-native-only': {
+    title: 'Native `<table>` that only applies the Material styles',
+    component: TableNativeOnlyExample
+  },
   'table-overview': {
     title: 'Data table with sorting, pagination, and filtering.',
     component: TableOverviewExample
@@ -838,6 +843,7 @@ export const EXAMPLE_LIST = [
   TableBasicExample,
   TableFilteringExample,
   TableHttpExample,
+  TableNativeOnlyExample,
   TableOverviewExample,
   TablePaginationExample,
   TableSelectionExample,
