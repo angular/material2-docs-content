@@ -8,7 +8,9 @@
 <span class="hljs-comment">// syntax. However, rollup creates a synthetic default module and we thus need to import it using</span>
 <span class="hljs-comment">// the `default as` syntax.</span>
 <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> _moment <span class="hljs-keyword">from</span> <span class="hljs-string">'moment'</span>;
+<span class="hljs-comment">// tslint:disable-next-line:no-duplicate-imports</span>
 <span class="hljs-keyword">import</span> {<span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> _rollupMoment} <span class="hljs-keyword">from</span> <span class="hljs-string">'moment'</span>;
+
 <span class="hljs-keyword">const</span> moment = _rollupMoment || _moment;
 
 <span class="hljs-comment">// See the Moment.js docs for the meaning of these formats:</span>

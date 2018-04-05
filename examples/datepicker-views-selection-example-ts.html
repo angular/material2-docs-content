@@ -1,15 +1,17 @@
 <span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {MatDatepicker} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/datepicker'</span>;
 <span class="hljs-keyword">import</span> {MomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-moment-adapter'</span>;
 <span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
+<span class="hljs-keyword">import</span> {MatDatepicker} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/datepicker'</span>;
 
 <span class="hljs-comment">// Depending on whether rollup is used, moment needs to be imported differently.</span>
 <span class="hljs-comment">// Since Moment.js doesn't have a default export, we normally need to import using the `* as`</span>
 <span class="hljs-comment">// syntax. However, rollup creates a synthetic default module and we thus need to import it using</span>
 <span class="hljs-comment">// the `default as` syntax.</span>
 <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> _moment <span class="hljs-keyword">from</span> <span class="hljs-string">'moment'</span>;
+<span class="hljs-comment">// tslint:disable-next-line:no-duplicate-imports</span>
 <span class="hljs-keyword">import</span> {<span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> _rollupMoment, Moment} <span class="hljs-keyword">from</span> <span class="hljs-string">'moment'</span>;
+
 <span class="hljs-keyword">const</span> moment = _rollupMoment || _moment;
 
 <span class="hljs-comment">// See the Moment.js docs for the meaning of these formats:</span>

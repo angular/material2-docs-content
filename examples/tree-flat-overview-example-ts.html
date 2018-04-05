@@ -1,9 +1,7 @@
-<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
-<span class="hljs-keyword">import</span> {MatTreeFlattener, MatTreeFlatDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
-<span class="hljs-keyword">import</span> {of} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
-<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatTreeFlatDataSource, MatTreeFlattener} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject, Observable, of <span class="hljs-keyword">as</span> observableOf} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 
 <span class="hljs-comment">/**
  * File node data with nested structure.
@@ -156,7 +154,9 @@
 
   <span class="hljs-keyword">private</span> _isExpandable = <span class="hljs-function">(<span class="hljs-params">node: FileFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> node.expandable; };
 
-  <span class="hljs-keyword">private</span> _getChildren = (node: FileNode): Observable&lt;FileNode[]&gt; =&gt; { <span class="hljs-keyword">return</span> of(node.children); };
+  <span class="hljs-keyword">private</span> _getChildren = (node: FileNode): Observable&lt;FileNode[]&gt; =&gt; {
+    <span class="hljs-keyword">return</span> observableOf(node.children);
+  }
 
   hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, _nodeData: FileFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> _nodeData.expandable; };
 }

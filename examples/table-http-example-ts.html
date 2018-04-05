@@ -1,13 +1,8 @@
-<span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {HttpClient} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common/http'</span>;
+<span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatPaginator, MatSort, MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
-<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
-<span class="hljs-keyword">import</span> {merge} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
-<span class="hljs-keyword">import</span> {of <span class="hljs-keyword">as</span> observableOf} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
-<span class="hljs-keyword">import</span> {catchError} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
-<span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
-<span class="hljs-keyword">import</span> {startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
-<span class="hljs-keyword">import</span> {switchMap} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
+<span class="hljs-keyword">import</span> {merge, Observable, of <span class="hljs-keyword">as</span> observableOf} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> {catchError, map, startWith, switchMap} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
 
 <span class="hljs-comment">/**
  * @title Table retrieving data through HTTP

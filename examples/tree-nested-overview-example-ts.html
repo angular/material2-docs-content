@@ -1,8 +1,7 @@
-<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {NestedTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
+<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatTreeNestedDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
-<span class="hljs-keyword">import</span> {of} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject, of <span class="hljs-keyword">as</span> observableOf} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 
 <span class="hljs-comment">/**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
@@ -126,7 +125,7 @@
     database.dataChange.subscribe(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> <span class="hljs-keyword">this</span>.nestedDataSource.data = data);
   }
 
-  <span class="hljs-keyword">private</span> _getChildren = <span class="hljs-function">(<span class="hljs-params">node: FileNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> of(node.children); };
+  <span class="hljs-keyword">private</span> _getChildren = <span class="hljs-function">(<span class="hljs-params">node: FileNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> observableOf(node.children); };
 
   hasNestedChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, nodeData: FileNode</span>) =&gt;</span> {<span class="hljs-keyword">return</span> !(nodeData.type); };
 }

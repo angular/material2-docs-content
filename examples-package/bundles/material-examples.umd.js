@@ -5780,7 +5780,9 @@ var TreeFlatOverviewExample = /** @class */ (function () {
         };
         this._getLevel = function (node) { return node.level; };
         this._isExpandable = function (node) { return node.expandable; };
-        this._getChildren = function (node) { return rxjs.of(node.children); };
+        this._getChildren = function (node) {
+            return rxjs.of(node.children);
+        };
         this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
         this.treeFlattener = new tree$1.MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
         this.treeControl = new tree.FlatTreeControl(this._getLevel, this._isExpandable);

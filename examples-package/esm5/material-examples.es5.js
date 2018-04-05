@@ -5,17 +5,17 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule, Component, Injectable, ViewChild, ElementRef, ViewEncapsulation, Inject, Input, ChangeDetectorRef, NgZone } from '@angular/core';
+import { NgModule, Component, Injectable, ElementRef, ViewChild, ViewEncapsulation, Inject, Input, ChangeDetectorRef, NgZone } from '@angular/core';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
 import { MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatPaginatorModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule, MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
 import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { startWith, map, catchError, switchMap, take } from 'rxjs/operators';
+import { map, startWith, catchError, switchMap, take } from 'rxjs/operators';
 import { __extends } from 'tslib';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject, of, Subject, merge } from 'rxjs';
 import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
-import { ENTER, COMMA } from '@angular/cdk/keycodes';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MomentDateAdapter, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import * as _rollupMoment from 'moment';
@@ -5770,7 +5770,9 @@ var TreeFlatOverviewExample = /** @class */ (function () {
         };
         this._getLevel = function (node) { return node.level; };
         this._isExpandable = function (node) { return node.expandable; };
-        this._getChildren = function (node) { return of(node.children); };
+        this._getChildren = function (node) {
+            return of(node.children);
+        };
         this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
         this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
         this.treeControl = new FlatTreeControl(this._getLevel, this._isExpandable);
