@@ -1,0 +1,21 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-focus-monitor"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> #<span class="hljs-attr">monitored</span>&gt;</span>1. Focus Monitored Element ({{origin}})<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> #<span class="hljs-attr">unmonitored</span>&gt;</span>2. Not Monitored<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Simulated focus origin<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> #<span class="hljs-attr">simulatedOrigin</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mouse"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mouse"</span>&gt;</span>Mouse<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"keyboard"</span>&gt;</span>Keyboard<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"touch"</span>&gt;</span>Touch<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"program"</span>&gt;</span>Programmatic<span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"focusMonitor.focusVia(monitored, simulatedOrigin.value)"</span>&gt;</span>
+  Focus button #1
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"focusMonitor.focusVia(unmonitored, simulatedOrigin.value)"</span>&gt;</span>
+  Focus button #2
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>

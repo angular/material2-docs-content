@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule, Component, Injectable, ElementRef, ViewChild, ViewEncapsulation, Inject, Input, ChangeDetectorRef, NgZone } from '@angular/core';
+import { NgModule, Component, Injectable, ElementRef, ViewChild, ViewEncapsulation, Inject, ChangeDetectorRef, NgZone, Input } from '@angular/core';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
 import { MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatPaginatorModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule, MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
@@ -1888,6 +1888,179 @@ ExpansionStepsExample.decorators = [
 ];
 /** @nocollapse */
 ExpansionStepsExample.ctorParameters = () => [];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Monitoring focus with FocusMonitor
+ */
+class FocusMonitorDirectivesExample {
+    /**
+     * @param {?} ngZone
+     * @param {?} cdr
+     */
+    constructor(ngZone, cdr) {
+        this.ngZone = ngZone;
+        this.cdr = cdr;
+        this.elementOrigin = this.formatOrigin(null);
+        this.subtreeOrigin = this.formatOrigin(null);
+    }
+    /**
+     * @param {?} origin
+     * @return {?}
+     */
+    formatOrigin(origin) {
+        return origin ? origin + ' focused' : 'blurred';
+    }
+    /**
+     * @return {?}
+     */
+    markForCheck() {
+        this.ngZone.run(() => this.cdr.markForCheck());
+    }
+}
+FocusMonitorDirectivesExample.decorators = [
+    { type: Component, args: [{
+                selector: 'focus-monitor-directives-example',
+                template: "<div class=\"example-focus-monitor\"><button cdkMonitorSubtreeFocus (cdkFocusChange)=\"elementOrigin = formatOrigin($event); markForCheck()\">Focus Monitored Element ({{elementOrigin}})</button></div><div class=\"example-focus-monitor\"><div cdkMonitorSubtreeFocus (cdkFocusChange)=\"subtreeOrigin = formatOrigin($event); markForCheck()\"><p>Focus Monitored Subtree ({{subtreeOrigin}})</p><button>Child Button 1</button> <button>Child Button 2</button></div></div>",
+                styles: [".example-focus-monitor { padding: 20px; } .example-focus-monitor .cdk-mouse-focused { background: rgba(255, 0, 0, 0.5); } .example-focus-monitor .cdk-keyboard-focused { background: rgba(0, 255, 0, 0.5); } .example-focus-monitor .cdk-touch-focused { background: rgba(0, 0, 255, 0.5); } .example-focus-monitor .cdk-program-focused { background: rgba(255, 0, 255, 0.5); } "]
+            },] },
+];
+/** @nocollapse */
+FocusMonitorDirectivesExample.ctorParameters = () => [
+    { type: NgZone, },
+    { type: ChangeDetectorRef, },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Focusing with a specific FocusOrigin
+ */
+class FocusMonitorFocusViaExample {
+    /**
+     * @param {?} focusMonitor
+     * @param {?} cdr
+     * @param {?} ngZone
+     */
+    constructor(focusMonitor, cdr, ngZone) {
+        this.focusMonitor = focusMonitor;
+        this.cdr = cdr;
+        this.ngZone = ngZone;
+        this.origin = this.formatOrigin(null);
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.focusMonitor.monitor(this.monitoredEl.nativeElement)
+            .subscribe(origin => this.ngZone.run(() => {
+            this.origin = this.formatOrigin(origin);
+            this.cdr.markForCheck();
+        }));
+    }
+    /**
+     * @return {?}
+     */
+    ngOnDestroy() {
+        this.focusMonitor.stopMonitoring(this.monitoredEl.nativeElement);
+    }
+    /**
+     * @param {?} origin
+     * @return {?}
+     */
+    formatOrigin(origin) {
+        return origin ? origin + ' focused' : 'blurred';
+    }
+}
+FocusMonitorFocusViaExample.decorators = [
+    { type: Component, args: [{
+                selector: 'focus-monitor-focus-via-example',
+                template: "<div class=\"example-focus-monitor\"><button #monitored>1. Focus Monitored Element ({{origin}})</button> <button #unmonitored>2. Not Monitored</button></div><mat-form-field><mat-label>Simulated focus origin</mat-label><mat-select #simulatedOrigin value=\"mouse\"><mat-option value=\"mouse\">Mouse</mat-option><mat-option value=\"keyboard\">Keyboard</mat-option><mat-option value=\"touch\">Touch</mat-option><mat-option value=\"program\">Programmatic</mat-option></mat-select></mat-form-field><button (click)=\"focusMonitor.focusVia(monitored, simulatedOrigin.value)\">Focus button #1</button> <button (click)=\"focusMonitor.focusVia(unmonitored, simulatedOrigin.value)\">Focus button #2</button>",
+                styles: [".example-focus-monitor { padding: 20px; } .example-focus-monitor .cdk-mouse-focused { background: rgba(255, 0, 0, 0.5); } .example-focus-monitor .cdk-keyboard-focused { background: rgba(0, 255, 0, 0.5); } .example-focus-monitor .cdk-touch-focused { background: rgba(0, 0, 255, 0.5); } .example-focus-monitor .cdk-program-focused { background: rgba(255, 0, 255, 0.5); } .example-focus-monitor button:focus { box-shadow: 0 0 30px cyan; } "]
+            },] },
+];
+/** @nocollapse */
+FocusMonitorFocusViaExample.ctorParameters = () => [
+    { type: FocusMonitor, },
+    { type: ChangeDetectorRef, },
+    { type: NgZone, },
+];
+FocusMonitorFocusViaExample.propDecorators = {
+    "monitoredEl": [{ type: ViewChild, args: ['monitored',] },],
+};
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Monitoring focus with FocusMonitor
+ */
+class FocusMonitorOverviewExample {
+    /**
+     * @param {?} focusMonitor
+     * @param {?} cdr
+     * @param {?} ngZone
+     */
+    constructor(focusMonitor, cdr, ngZone) {
+        this.focusMonitor = focusMonitor;
+        this.cdr = cdr;
+        this.ngZone = ngZone;
+        this.elementOrigin = this.formatOrigin(null);
+        this.subtreeOrigin = this.formatOrigin(null);
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.focusMonitor.monitor(this.element.nativeElement)
+            .subscribe(origin => this.ngZone.run(() => {
+            this.elementOrigin = this.formatOrigin(origin);
+            this.cdr.markForCheck();
+        }));
+        this.focusMonitor.monitor(this.subtree.nativeElement, true)
+            .subscribe(origin => this.ngZone.run(() => {
+            this.subtreeOrigin = this.formatOrigin(origin);
+            this.cdr.markForCheck();
+        }));
+    }
+    /**
+     * @return {?}
+     */
+    ngOnDestroy() {
+        this.focusMonitor.stopMonitoring(this.element.nativeElement);
+        this.focusMonitor.stopMonitoring(this.subtree.nativeElement);
+    }
+    /**
+     * @param {?} origin
+     * @return {?}
+     */
+    formatOrigin(origin) {
+        return origin ? origin + ' focused' : 'blurred';
+    }
+}
+FocusMonitorOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'focus-monitor-overview-example',
+                template: "<div class=\"example-focus-monitor\"><button #element>Focus Monitored Element ({{elementOrigin}})</button></div><div class=\"example-focus-monitor\"><div #subtree><p>Focus Monitored Subtree ({{subtreeOrigin}})</p><button>Child Button 1</button> <button>Child Button 2</button></div></div>",
+                styles: [".example-focus-monitor { padding: 20px; } .example-focus-monitor .cdk-mouse-focused { background: rgba(255, 0, 0, 0.5); } .example-focus-monitor .cdk-keyboard-focused { background: rgba(0, 255, 0, 0.5); } .example-focus-monitor .cdk-touch-focused { background: rgba(0, 0, 255, 0.5); } .example-focus-monitor .cdk-program-focused { background: rgba(255, 0, 255, 0.5); } "]
+            },] },
+];
+/** @nocollapse */
+FocusMonitorOverviewExample.ctorParameters = () => [
+    { type: FocusMonitor, },
+    { type: ChangeDetectorRef, },
+    { type: NgZone, },
+];
+FocusMonitorOverviewExample.propDecorators = {
+    "element": [{ type: ViewChild, args: ['element',] },],
+    "subtree": [{ type: ViewChild, args: ['subtree',] },],
+};
 
 /**
  * @fileoverview added by tsickle
@@ -5707,6 +5880,18 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Expansion panel as accordion',
         component: ExpansionStepsExample
     },
+    'focus-monitor-directives': {
+        title: 'Monitoring focus with FocusMonitor',
+        component: FocusMonitorDirectivesExample
+    },
+    'focus-monitor-focus-via': {
+        title: 'Focusing with a specific FocusOrigin',
+        component: FocusMonitorFocusViaExample
+    },
+    'focus-monitor-overview': {
+        title: 'Monitoring focus with FocusMonitor',
+        component: FocusMonitorOverviewExample
+    },
     'form-field-appearance': {
         title: 'Form field appearance variants',
         component: FormFieldAppearanceExample
@@ -6134,6 +6319,9 @@ const /** @type {?} */ EXAMPLE_LIST = [
     ExpansionExpandCollapseAllExample,
     ExpansionOverviewExample,
     ExpansionStepsExample,
+    FocusMonitorDirectivesExample,
+    FocusMonitorFocusViaExample,
+    FocusMonitorOverviewExample,
     FormFieldAppearanceExample,
     MyTelInput, FormFieldCustomControlExample,
     FormFieldErrorExample,
@@ -6287,5 +6475,5 @@ class ExampleData {
  * @suppress {checkTypes} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CdkTreeFlatExample as ɵn, FileDatabase as ɵm, CdkTreeNestedExample as ɵp, FileDatabase$1 as ɵo, CheckboxConfigurableExample as ɵq, CheckboxOverviewExample as ɵr, ChipsAutocompleteExample as ɵs, ChipsInputExample as ɵt, ChipsOverviewExample as ɵu, ChipsStackedExample as ɵv, DatepickerApiExample as ɵw, DatepickerColorExample as ɵx, DatepickerCustomIconExample as ɵy, DatepickerDisabledExample as ɵz, DatepickerEventsExample as ɵba, DatepickerFilterExample as ɵbb, DatepickerFormatsExample as ɵbd, MY_FORMATS as ɵbc, DatepickerLocaleExample as ɵbe, DatepickerMinMaxExample as ɵbf, DatepickerMomentExample as ɵbg, DatepickerStartViewExample as ɵbh, DatepickerTouchExample as ɵbi, DatepickerValueExample as ɵbj, DatepickerViewsSelectionExample as ɵbl, MY_FORMATS$1 as ɵbk, DialogContentExample as ɵbm, DialogContentExampleDialog as ɵbn, DialogDataExample as ɵbo, DialogDataExampleDialog as ɵbp, DialogElementsExample as ɵbq, DialogElementsExampleDialog as ɵbr, DialogOverviewExample as ɵbs, DialogOverviewExampleDialog as ɵbt, DividerOverviewExample as ɵbu, ElevationOverviewExample as ɵbv, ExpansionExpandCollapseAllExample as ɵbw, ExpansionStepsExample as ɵbx, FormFieldAppearanceExample as ɵby, FormFieldCustomControlExample as ɵca, MyTelInput as ɵbz, FormFieldErrorExample as ɵcb, FormFieldHintExample as ɵcc, FormFieldLabelExample as ɵcd, FormFieldOverviewExample as ɵce, FormFieldPrefixSuffixExample as ɵcf, FormFieldThemingExample as ɵcg, GridListDynamicExample as ɵch, GridListOverviewExample as ɵci, IconOverviewExample as ɵcj, IconSvgExample as ɵck, InputClearableExample as ɵcl, InputErrorStateMatcherExample as ɵcm, InputErrorsExample as ɵcn, InputFormExample as ɵco, InputHintExample as ɵcp, InputOverviewExample as ɵcq, InputPrefixSuffixExample as ɵcr, ListSectionsExample as ɵcs, ListSelectionExample as ɵct, ExampleMaterialModule as ɵft, MenuIconsExample as ɵcu, MenuOverviewExample as ɵcv, NestedMenuExample as ɵcw, PaginatorConfigurableExample as ɵcx, PaginatorOverviewExample as ɵcy, ProgressBarBufferExample as ɵcz, ProgressBarConfigurableExample as ɵda, ProgressBarDeterminateExample as ɵdb, ProgressBarIndeterminateExample as ɵdc, ProgressBarQueryExample as ɵdd, ProgressSpinnerConfigurableExample as ɵde, ProgressSpinnerOverviewExample as ɵdf, RadioNgModelExample as ɵdg, RadioOverviewExample as ɵdh, SelectCustomTriggerExample as ɵdi, SelectDisabledExample as ɵdj, SelectErrorStateMatcherExample as ɵdk, SelectFormExample as ɵdl, SelectHintErrorExample as ɵdm, SelectMultipleExample as ɵdn, SelectNoRippleExample as ɵdo, SelectOptgroupExample as ɵdp, SelectOverviewExample as ɵdq, SelectPanelClassExample as ɵdr, SelectResetExample as ɵds, SelectValueBindingExample as ɵdt, SidenavAutosizeExample as ɵdu, SidenavBackdropExample as ɵdv, SidenavDisableCloseExample as ɵdw, SidenavDrawerOverviewExample as ɵdx, SidenavFixedExample as ɵdy, SidenavModeExample as ɵdz, SidenavOpenCloseExample as ɵea, SidenavOverviewExample as ɵeb, SidenavPositionExample as ɵec, SidenavResponsiveExample as ɵed, SlideToggleConfigurableExample as ɵee, SlideToggleFormsExample as ɵef, SlideToggleOverviewExample as ɵeg, SliderConfigurableExample as ɵeh, SliderFormattingExample as ɵei, SliderOverviewExample as ɵej, PizzaPartyComponent as ɵel, SnackBarComponentExample as ɵek, SnackBarOverviewExample as ɵem, SnackBarPositionExample as ɵen, SortOverviewExample as ɵeo, TableBasicExample as ɵep, TableFilteringExample as ɵeq, TableHttpExample as ɵer, TableNativeOnlyExample as ɵes, TableOverviewExample as ɵet, TablePaginationExample as ɵeu, TableSelectionExample as ɵev, TableSortingExample as ɵew, TabsOverviewExample as ɵex, TabsTemplateLabelExample as ɵey, TextFieldAutofillDirectiveExample as ɵez, TextFieldAutofillMonitorExample as ɵfa, TextFieldAutosizeTextareaExample as ɵfb, ToolbarOverviewExample as ɵfc, TooltipDelayExample as ɵfd, TooltipManualExample as ɵfe, TooltipModifiedDefaultsExample as ɵfg, myCustomTooltipDefaults as ɵff, TooltipOverviewExample as ɵfh, TooltipPositionExample as ɵfi, ChecklistDatabase as ɵfj, TreeChecklistExample as ɵfk, DynamicDatabase as ɵfl, TreeDynamicExample as ɵfm, FileDatabase$2 as ɵfn, TreeFlatOverviewExample as ɵfo, LoadmoreDatabase as ɵfp, TreeLoadmoreExample as ɵfq, FileDatabase$3 as ɵfr, TreeNestedOverviewExample as ɵfs };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CdkTreeFlatExample as ɵn, FileDatabase as ɵm, CdkTreeNestedExample as ɵp, FileDatabase$1 as ɵo, CheckboxConfigurableExample as ɵq, CheckboxOverviewExample as ɵr, ChipsAutocompleteExample as ɵs, ChipsInputExample as ɵt, ChipsOverviewExample as ɵu, ChipsStackedExample as ɵv, DatepickerApiExample as ɵw, DatepickerColorExample as ɵx, DatepickerCustomIconExample as ɵy, DatepickerDisabledExample as ɵz, DatepickerEventsExample as ɵba, DatepickerFilterExample as ɵbb, DatepickerFormatsExample as ɵbd, MY_FORMATS as ɵbc, DatepickerLocaleExample as ɵbe, DatepickerMinMaxExample as ɵbf, DatepickerMomentExample as ɵbg, DatepickerStartViewExample as ɵbh, DatepickerTouchExample as ɵbi, DatepickerValueExample as ɵbj, DatepickerViewsSelectionExample as ɵbl, MY_FORMATS$1 as ɵbk, DialogContentExample as ɵbm, DialogContentExampleDialog as ɵbn, DialogDataExample as ɵbo, DialogDataExampleDialog as ɵbp, DialogElementsExample as ɵbq, DialogElementsExampleDialog as ɵbr, DialogOverviewExample as ɵbs, DialogOverviewExampleDialog as ɵbt, DividerOverviewExample as ɵbu, ElevationOverviewExample as ɵbv, ExpansionExpandCollapseAllExample as ɵbw, ExpansionStepsExample as ɵbx, FocusMonitorDirectivesExample as ɵby, FocusMonitorFocusViaExample as ɵbz, FocusMonitorOverviewExample as ɵca, FormFieldAppearanceExample as ɵcb, FormFieldCustomControlExample as ɵcd, MyTelInput as ɵcc, FormFieldErrorExample as ɵce, FormFieldHintExample as ɵcf, FormFieldLabelExample as ɵcg, FormFieldOverviewExample as ɵch, FormFieldPrefixSuffixExample as ɵci, FormFieldThemingExample as ɵcj, GridListDynamicExample as ɵck, GridListOverviewExample as ɵcl, IconOverviewExample as ɵcm, IconSvgExample as ɵcn, InputClearableExample as ɵco, InputErrorStateMatcherExample as ɵcp, InputErrorsExample as ɵcq, InputFormExample as ɵcr, InputHintExample as ɵcs, InputOverviewExample as ɵct, InputPrefixSuffixExample as ɵcu, ListSectionsExample as ɵcv, ListSelectionExample as ɵcw, ExampleMaterialModule as ɵfw, MenuIconsExample as ɵcx, MenuOverviewExample as ɵcy, NestedMenuExample as ɵcz, PaginatorConfigurableExample as ɵda, PaginatorOverviewExample as ɵdb, ProgressBarBufferExample as ɵdc, ProgressBarConfigurableExample as ɵdd, ProgressBarDeterminateExample as ɵde, ProgressBarIndeterminateExample as ɵdf, ProgressBarQueryExample as ɵdg, ProgressSpinnerConfigurableExample as ɵdh, ProgressSpinnerOverviewExample as ɵdi, RadioNgModelExample as ɵdj, RadioOverviewExample as ɵdk, SelectCustomTriggerExample as ɵdl, SelectDisabledExample as ɵdm, SelectErrorStateMatcherExample as ɵdn, SelectFormExample as ɵdo, SelectHintErrorExample as ɵdp, SelectMultipleExample as ɵdq, SelectNoRippleExample as ɵdr, SelectOptgroupExample as ɵds, SelectOverviewExample as ɵdt, SelectPanelClassExample as ɵdu, SelectResetExample as ɵdv, SelectValueBindingExample as ɵdw, SidenavAutosizeExample as ɵdx, SidenavBackdropExample as ɵdy, SidenavDisableCloseExample as ɵdz, SidenavDrawerOverviewExample as ɵea, SidenavFixedExample as ɵeb, SidenavModeExample as ɵec, SidenavOpenCloseExample as ɵed, SidenavOverviewExample as ɵee, SidenavPositionExample as ɵef, SidenavResponsiveExample as ɵeg, SlideToggleConfigurableExample as ɵeh, SlideToggleFormsExample as ɵei, SlideToggleOverviewExample as ɵej, SliderConfigurableExample as ɵek, SliderFormattingExample as ɵel, SliderOverviewExample as ɵem, PizzaPartyComponent as ɵeo, SnackBarComponentExample as ɵen, SnackBarOverviewExample as ɵep, SnackBarPositionExample as ɵeq, SortOverviewExample as ɵer, TableBasicExample as ɵes, TableFilteringExample as ɵet, TableHttpExample as ɵeu, TableNativeOnlyExample as ɵev, TableOverviewExample as ɵew, TablePaginationExample as ɵex, TableSelectionExample as ɵey, TableSortingExample as ɵez, TabsOverviewExample as ɵfa, TabsTemplateLabelExample as ɵfb, TextFieldAutofillDirectiveExample as ɵfc, TextFieldAutofillMonitorExample as ɵfd, TextFieldAutosizeTextareaExample as ɵfe, ToolbarOverviewExample as ɵff, TooltipDelayExample as ɵfg, TooltipManualExample as ɵfh, TooltipModifiedDefaultsExample as ɵfj, myCustomTooltipDefaults as ɵfi, TooltipOverviewExample as ɵfk, TooltipPositionExample as ɵfl, ChecklistDatabase as ɵfm, TreeChecklistExample as ɵfn, DynamicDatabase as ɵfo, TreeDynamicExample as ɵfp, FileDatabase$2 as ɵfq, TreeFlatOverviewExample as ɵfr, LoadmoreDatabase as ɵfs, TreeLoadmoreExample as ɵft, FileDatabase$3 as ɵfu, TreeNestedOverviewExample as ɵfv };
 //# sourceMappingURL=material-examples.js.map

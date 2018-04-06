@@ -50,6 +50,9 @@ import {ElevationOverviewExample} from './elevation-overview/elevation-overview-
 import {ExpansionExpandCollapseAllExample} from './expansion-expand-collapse-all/expansion-expand-collapse-all-example';
 import {ExpansionOverviewExample} from './expansion-overview/expansion-overview-example';
 import {ExpansionStepsExample} from './expansion-steps/expansion-steps-example';
+import {FocusMonitorDirectivesExample} from './focus-monitor-directives/focus-monitor-directives-example';
+import {FocusMonitorFocusViaExample} from './focus-monitor-focus-via/focus-monitor-focus-via-example';
+import {FocusMonitorOverviewExample} from './focus-monitor-overview/focus-monitor-overview-example';
 import {FormFieldAppearanceExample} from './form-field-appearance/form-field-appearance-example';
 import {MyTelInput,FormFieldCustomControlExample} from './form-field-custom-control/form-field-custom-control-example';
 import {FormFieldErrorExample} from './form-field-error/form-field-error-example';
@@ -342,6 +345,18 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'expansion-steps': {
     title: 'Expansion panel as accordion',
     component: ExpansionStepsExample
+  },
+  'focus-monitor-directives': {
+    title: 'Monitoring focus with FocusMonitor',
+    component: FocusMonitorDirectivesExample
+  },
+  'focus-monitor-focus-via': {
+    title: 'Focusing with a specific FocusOrigin',
+    component: FocusMonitorFocusViaExample
+  },
+  'focus-monitor-overview': {
+    title: 'Monitoring focus with FocusMonitor',
+    component: FocusMonitorOverviewExample
   },
   'form-field-appearance': {
     title: 'Form field appearance variants',
@@ -771,6 +786,9 @@ export const EXAMPLE_LIST = [
   ExpansionExpandCollapseAllExample,
   ExpansionOverviewExample,
   ExpansionStepsExample,
+  FocusMonitorDirectivesExample,
+  FocusMonitorFocusViaExample,
+  FocusMonitorOverviewExample,
   FormFieldAppearanceExample,
   MyTelInput,FormFieldCustomControlExample,
   FormFieldErrorExample,

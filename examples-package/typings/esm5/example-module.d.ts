@@ -4,6 +4,9 @@ import { CdkTreeNestedExample } from './cdk-tree-nested/cdk-tree-nested-example'
 import { DatepickerLocaleExample } from './datepicker-locale/datepicker-locale-example';
 import { DialogContentExample } from './dialog-content/dialog-content-example';
 import { DialogOverviewExampleDialog } from './dialog-overview/dialog-overview-example';
+import { FocusMonitorDirectivesExample } from './focus-monitor-directives/focus-monitor-directives-example';
+import { FocusMonitorFocusViaExample } from './focus-monitor-focus-via/focus-monitor-focus-via-example';
+import { FocusMonitorOverviewExample } from './focus-monitor-overview/focus-monitor-overview-example';
 import { MyTelInput } from './form-field-custom-control/form-field-custom-control-example';
 import { FormFieldLabelExample } from './form-field-label/form-field-label-example';
 import { IconSvgExample } from './icon-svg/icon-svg-example';
@@ -28,6 +31,6 @@ export interface LiveExample {
 export declare const EXAMPLE_COMPONENTS: {
     [key: string]: LiveExample;
 };
-export declare const EXAMPLE_LIST: (typeof BottomSheetOverviewExample | typeof BottomSheetOverviewExampleSheet | typeof CdkTreeFlatExample | typeof CdkTreeNestedExample | typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample | typeof TextFieldAutofillMonitorExample | typeof TextFieldAutosizeTextareaExample | typeof TreeChecklistExample | typeof TreeDynamicExample | typeof TreeFlatOverviewExample | typeof TreeLoadmoreExample | typeof TreeNestedOverviewExample)[];
+export declare const EXAMPLE_LIST: (typeof BottomSheetOverviewExample | typeof BottomSheetOverviewExampleSheet | typeof CdkTreeFlatExample | typeof CdkTreeNestedExample | typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof FocusMonitorDirectivesExample | typeof FocusMonitorFocusViaExample | typeof FocusMonitorOverviewExample | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample | typeof TextFieldAutofillMonitorExample | typeof TextFieldAutosizeTextareaExample | typeof TreeChecklistExample | typeof TreeDynamicExample | typeof TreeFlatOverviewExample | typeof TreeLoadmoreExample | typeof TreeNestedOverviewExample)[];
 export declare class ExampleModule {
 }

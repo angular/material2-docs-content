@@ -1,0 +1,50 @@
+<span class="hljs-keyword">import</span> {FocusMonitor, FocusOrigin} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/a11y'</span>;
+<span class="hljs-keyword">import</span> {
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  NgZone,
+  OnDestroy,
+  OnInit,
+  ViewChild
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/** @title Monitoring focus with FocusMonitor */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'focus-monitor-overview-example'</span>,
+  templateUrl: <span class="hljs-string">'focus-monitor-overview-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'focus-monitor-overview-example.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FocusMonitorOverviewExample <span class="hljs-keyword">implements</span> OnDestroy, OnInit {
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'element'</span>) element: ElementRef;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'subtree'</span>) subtree: ElementRef;
+
+  elementOrigin: <span class="hljs-built_in">string</span> = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
+  subtreeOrigin: <span class="hljs-built_in">string</span> = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> focusMonitor: FocusMonitor,
+              <span class="hljs-keyword">private</span> cdr: ChangeDetectorRef,
+              <span class="hljs-keyword">private</span> ngZone: NgZone</span>) {}
+
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.element.nativeElement)
+        .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-keyword">this</span>.ngZone.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.elementOrigin = <span class="hljs-keyword">this</span>.formatOrigin(origin);
+          <span class="hljs-keyword">this</span>.cdr.markForCheck();
+        }));
+    <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.subtree.nativeElement, <span class="hljs-literal">true</span>)
+        .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-keyword">this</span>.ngZone.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          <span class="hljs-keyword">this</span>.subtreeOrigin = <span class="hljs-keyword">this</span>.formatOrigin(origin);
+          <span class="hljs-keyword">this</span>.cdr.markForCheck();
+        }));
+  }
+
+  ngOnDestroy() {
+    <span class="hljs-keyword">this</span>.focusMonitor.stopMonitoring(<span class="hljs-keyword">this</span>.element.nativeElement);
+    <span class="hljs-keyword">this</span>.focusMonitor.stopMonitoring(<span class="hljs-keyword">this</span>.subtree.nativeElement);
+  }
+
+  formatOrigin(origin: FocusOrigin): <span class="hljs-built_in">string</span> {
+    <span class="hljs-keyword">return</span> origin ? origin + <span class="hljs-string">' focused'</span> : <span class="hljs-string">'blurred'</span>;
+  }
+}

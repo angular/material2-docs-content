@@ -2098,6 +2098,205 @@ var ExpansionStepsExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Monitoring focus with FocusMonitor
+ */
+var FocusMonitorDirectivesExample = /** @class */ (function () {
+    function FocusMonitorDirectivesExample(ngZone, cdr) {
+        this.ngZone = ngZone;
+        this.cdr = cdr;
+        this.elementOrigin = this.formatOrigin(null);
+        this.subtreeOrigin = this.formatOrigin(null);
+    }
+    /**
+     * @param {?} origin
+     * @return {?}
+     */
+    FocusMonitorDirectivesExample.prototype.formatOrigin = /**
+     * @param {?} origin
+     * @return {?}
+     */
+    function (origin) {
+        return origin ? origin + ' focused' : 'blurred';
+    };
+    // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
+    /**
+     * @return {?}
+     */
+    FocusMonitorDirectivesExample.prototype.markForCheck = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.ngZone.run(function () { return _this.cdr.markForCheck(); });
+    };
+    FocusMonitorDirectivesExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'focus-monitor-directives-example',
+                    template: "<div class=\"example-focus-monitor\"><button cdkMonitorSubtreeFocus (cdkFocusChange)=\"elementOrigin = formatOrigin($event); markForCheck()\">Focus Monitored Element ({{elementOrigin}})</button></div><div class=\"example-focus-monitor\"><div cdkMonitorSubtreeFocus (cdkFocusChange)=\"subtreeOrigin = formatOrigin($event); markForCheck()\"><p>Focus Monitored Subtree ({{subtreeOrigin}})</p><button>Child Button 1</button> <button>Child Button 2</button></div></div>",
+                    styles: [".example-focus-monitor { padding: 20px; } .example-focus-monitor .cdk-mouse-focused { background: rgba(255, 0, 0, 0.5); } .example-focus-monitor .cdk-keyboard-focused { background: rgba(0, 255, 0, 0.5); } .example-focus-monitor .cdk-touch-focused { background: rgba(0, 0, 255, 0.5); } .example-focus-monitor .cdk-program-focused { background: rgba(255, 0, 255, 0.5); } "]
+                },] },
+    ];
+    /** @nocollapse */
+    FocusMonitorDirectivesExample.ctorParameters = function () { return [
+        { type: core.NgZone, },
+        { type: core.ChangeDetectorRef, },
+    ]; };
+    return FocusMonitorDirectivesExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Focusing with a specific FocusOrigin
+ */
+var FocusMonitorFocusViaExample = /** @class */ (function () {
+    function FocusMonitorFocusViaExample(focusMonitor, cdr, ngZone) {
+        this.focusMonitor = focusMonitor;
+        this.cdr = cdr;
+        this.ngZone = ngZone;
+        this.origin = this.formatOrigin(null);
+    }
+    /**
+     * @return {?}
+     */
+    FocusMonitorFocusViaExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.focusMonitor.monitor(this.monitoredEl.nativeElement)
+            .subscribe(function (origin) {
+            return _this.ngZone.run(function () {
+                _this.origin = _this.formatOrigin(origin);
+                _this.cdr.markForCheck();
+            });
+        });
+    };
+    /**
+     * @return {?}
+     */
+    FocusMonitorFocusViaExample.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () {
+        this.focusMonitor.stopMonitoring(this.monitoredEl.nativeElement);
+    };
+    /**
+     * @param {?} origin
+     * @return {?}
+     */
+    FocusMonitorFocusViaExample.prototype.formatOrigin = /**
+     * @param {?} origin
+     * @return {?}
+     */
+    function (origin) {
+        return origin ? origin + ' focused' : 'blurred';
+    };
+    FocusMonitorFocusViaExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'focus-monitor-focus-via-example',
+                    template: "<div class=\"example-focus-monitor\"><button #monitored>1. Focus Monitored Element ({{origin}})</button> <button #unmonitored>2. Not Monitored</button></div><mat-form-field><mat-label>Simulated focus origin</mat-label><mat-select #simulatedOrigin value=\"mouse\"><mat-option value=\"mouse\">Mouse</mat-option><mat-option value=\"keyboard\">Keyboard</mat-option><mat-option value=\"touch\">Touch</mat-option><mat-option value=\"program\">Programmatic</mat-option></mat-select></mat-form-field><button (click)=\"focusMonitor.focusVia(monitored, simulatedOrigin.value)\">Focus button #1</button> <button (click)=\"focusMonitor.focusVia(unmonitored, simulatedOrigin.value)\">Focus button #2</button>",
+                    styles: [".example-focus-monitor { padding: 20px; } .example-focus-monitor .cdk-mouse-focused { background: rgba(255, 0, 0, 0.5); } .example-focus-monitor .cdk-keyboard-focused { background: rgba(0, 255, 0, 0.5); } .example-focus-monitor .cdk-touch-focused { background: rgba(0, 0, 255, 0.5); } .example-focus-monitor .cdk-program-focused { background: rgba(255, 0, 255, 0.5); } .example-focus-monitor button:focus { box-shadow: 0 0 30px cyan; } "]
+                },] },
+    ];
+    /** @nocollapse */
+    FocusMonitorFocusViaExample.ctorParameters = function () { return [
+        { type: a11y.FocusMonitor, },
+        { type: core.ChangeDetectorRef, },
+        { type: core.NgZone, },
+    ]; };
+    FocusMonitorFocusViaExample.propDecorators = {
+        "monitoredEl": [{ type: core.ViewChild, args: ['monitored',] },],
+    };
+    return FocusMonitorFocusViaExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Monitoring focus with FocusMonitor
+ */
+var FocusMonitorOverviewExample = /** @class */ (function () {
+    function FocusMonitorOverviewExample(focusMonitor, cdr, ngZone) {
+        this.focusMonitor = focusMonitor;
+        this.cdr = cdr;
+        this.ngZone = ngZone;
+        this.elementOrigin = this.formatOrigin(null);
+        this.subtreeOrigin = this.formatOrigin(null);
+    }
+    /**
+     * @return {?}
+     */
+    FocusMonitorOverviewExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.focusMonitor.monitor(this.element.nativeElement)
+            .subscribe(function (origin) {
+            return _this.ngZone.run(function () {
+                _this.elementOrigin = _this.formatOrigin(origin);
+                _this.cdr.markForCheck();
+            });
+        });
+        this.focusMonitor.monitor(this.subtree.nativeElement, true)
+            .subscribe(function (origin) {
+            return _this.ngZone.run(function () {
+                _this.subtreeOrigin = _this.formatOrigin(origin);
+                _this.cdr.markForCheck();
+            });
+        });
+    };
+    /**
+     * @return {?}
+     */
+    FocusMonitorOverviewExample.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () {
+        this.focusMonitor.stopMonitoring(this.element.nativeElement);
+        this.focusMonitor.stopMonitoring(this.subtree.nativeElement);
+    };
+    /**
+     * @param {?} origin
+     * @return {?}
+     */
+    FocusMonitorOverviewExample.prototype.formatOrigin = /**
+     * @param {?} origin
+     * @return {?}
+     */
+    function (origin) {
+        return origin ? origin + ' focused' : 'blurred';
+    };
+    FocusMonitorOverviewExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'focus-monitor-overview-example',
+                    template: "<div class=\"example-focus-monitor\"><button #element>Focus Monitored Element ({{elementOrigin}})</button></div><div class=\"example-focus-monitor\"><div #subtree><p>Focus Monitored Subtree ({{subtreeOrigin}})</p><button>Child Button 1</button> <button>Child Button 2</button></div></div>",
+                    styles: [".example-focus-monitor { padding: 20px; } .example-focus-monitor .cdk-mouse-focused { background: rgba(255, 0, 0, 0.5); } .example-focus-monitor .cdk-keyboard-focused { background: rgba(0, 255, 0, 0.5); } .example-focus-monitor .cdk-touch-focused { background: rgba(0, 0, 255, 0.5); } .example-focus-monitor .cdk-program-focused { background: rgba(255, 0, 255, 0.5); } "]
+                },] },
+    ];
+    /** @nocollapse */
+    FocusMonitorOverviewExample.ctorParameters = function () { return [
+        { type: a11y.FocusMonitor, },
+        { type: core.ChangeDetectorRef, },
+        { type: core.NgZone, },
+    ]; };
+    FocusMonitorOverviewExample.propDecorators = {
+        "element": [{ type: core.ViewChild, args: ['element',] },],
+        "subtree": [{ type: core.ViewChild, args: ['subtree',] },],
+    };
+    return FocusMonitorOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Form field appearance variants
  */
 var FormFieldAppearanceExample = /** @class */ (function () {
@@ -6333,6 +6532,18 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Expansion panel as accordion',
         component: ExpansionStepsExample
     },
+    'focus-monitor-directives': {
+        title: 'Monitoring focus with FocusMonitor',
+        component: FocusMonitorDirectivesExample
+    },
+    'focus-monitor-focus-via': {
+        title: 'Focusing with a specific FocusOrigin',
+        component: FocusMonitorFocusViaExample
+    },
+    'focus-monitor-overview': {
+        title: 'Monitoring focus with FocusMonitor',
+        component: FocusMonitorOverviewExample
+    },
     'form-field-appearance': {
         title: 'Form field appearance variants',
         component: FormFieldAppearanceExample
@@ -6760,6 +6971,9 @@ var /** @type {?} */ EXAMPLE_LIST = [
     ExpansionExpandCollapseAllExample,
     ExpansionOverviewExample,
     ExpansionStepsExample,
+    FocusMonitorDirectivesExample,
+    FocusMonitorFocusViaExample,
+    FocusMonitorOverviewExample,
     FormFieldAppearanceExample,
     MyTelInput, FormFieldCustomControlExample,
     FormFieldErrorExample,
@@ -6970,106 +7184,109 @@ exports.ɵbu = DividerOverviewExample;
 exports.ɵbv = ElevationOverviewExample;
 exports.ɵbw = ExpansionExpandCollapseAllExample;
 exports.ɵbx = ExpansionStepsExample;
-exports.ɵby = FormFieldAppearanceExample;
-exports.ɵca = FormFieldCustomControlExample;
-exports.ɵbz = MyTelInput;
-exports.ɵcb = FormFieldErrorExample;
-exports.ɵcc = FormFieldHintExample;
-exports.ɵcd = FormFieldLabelExample;
-exports.ɵce = FormFieldOverviewExample;
-exports.ɵcf = FormFieldPrefixSuffixExample;
-exports.ɵcg = FormFieldThemingExample;
-exports.ɵch = GridListDynamicExample;
-exports.ɵci = GridListOverviewExample;
-exports.ɵcj = IconOverviewExample;
-exports.ɵck = IconSvgExample;
-exports.ɵcl = InputClearableExample;
-exports.ɵcm = InputErrorStateMatcherExample;
-exports.ɵcn = InputErrorsExample;
-exports.ɵco = InputFormExample;
-exports.ɵcp = InputHintExample;
-exports.ɵcq = InputOverviewExample;
-exports.ɵcr = InputPrefixSuffixExample;
-exports.ɵcs = ListSectionsExample;
-exports.ɵct = ListSelectionExample;
-exports.ɵft = ExampleMaterialModule;
-exports.ɵcu = MenuIconsExample;
-exports.ɵcv = MenuOverviewExample;
-exports.ɵcw = NestedMenuExample;
-exports.ɵcx = PaginatorConfigurableExample;
-exports.ɵcy = PaginatorOverviewExample;
-exports.ɵcz = ProgressBarBufferExample;
-exports.ɵda = ProgressBarConfigurableExample;
-exports.ɵdb = ProgressBarDeterminateExample;
-exports.ɵdc = ProgressBarIndeterminateExample;
-exports.ɵdd = ProgressBarQueryExample;
-exports.ɵde = ProgressSpinnerConfigurableExample;
-exports.ɵdf = ProgressSpinnerOverviewExample;
-exports.ɵdg = RadioNgModelExample;
-exports.ɵdh = RadioOverviewExample;
-exports.ɵdi = SelectCustomTriggerExample;
-exports.ɵdj = SelectDisabledExample;
-exports.ɵdk = SelectErrorStateMatcherExample;
-exports.ɵdl = SelectFormExample;
-exports.ɵdm = SelectHintErrorExample;
-exports.ɵdn = SelectMultipleExample;
-exports.ɵdo = SelectNoRippleExample;
-exports.ɵdp = SelectOptgroupExample;
-exports.ɵdq = SelectOverviewExample;
-exports.ɵdr = SelectPanelClassExample;
-exports.ɵds = SelectResetExample;
-exports.ɵdt = SelectValueBindingExample;
-exports.ɵdu = SidenavAutosizeExample;
-exports.ɵdv = SidenavBackdropExample;
-exports.ɵdw = SidenavDisableCloseExample;
-exports.ɵdx = SidenavDrawerOverviewExample;
-exports.ɵdy = SidenavFixedExample;
-exports.ɵdz = SidenavModeExample;
-exports.ɵea = SidenavOpenCloseExample;
-exports.ɵeb = SidenavOverviewExample;
-exports.ɵec = SidenavPositionExample;
-exports.ɵed = SidenavResponsiveExample;
-exports.ɵee = SlideToggleConfigurableExample;
-exports.ɵef = SlideToggleFormsExample;
-exports.ɵeg = SlideToggleOverviewExample;
-exports.ɵeh = SliderConfigurableExample;
-exports.ɵei = SliderFormattingExample;
-exports.ɵej = SliderOverviewExample;
-exports.ɵel = PizzaPartyComponent;
-exports.ɵek = SnackBarComponentExample;
-exports.ɵem = SnackBarOverviewExample;
-exports.ɵen = SnackBarPositionExample;
-exports.ɵeo = SortOverviewExample;
-exports.ɵep = TableBasicExample;
-exports.ɵeq = TableFilteringExample;
-exports.ɵer = TableHttpExample;
-exports.ɵes = TableNativeOnlyExample;
-exports.ɵet = TableOverviewExample;
-exports.ɵeu = TablePaginationExample;
-exports.ɵev = TableSelectionExample;
-exports.ɵew = TableSortingExample;
-exports.ɵex = TabsOverviewExample;
-exports.ɵey = TabsTemplateLabelExample;
-exports.ɵez = TextFieldAutofillDirectiveExample;
-exports.ɵfa = TextFieldAutofillMonitorExample;
-exports.ɵfb = TextFieldAutosizeTextareaExample;
-exports.ɵfc = ToolbarOverviewExample;
-exports.ɵfd = TooltipDelayExample;
-exports.ɵfe = TooltipManualExample;
-exports.ɵfg = TooltipModifiedDefaultsExample;
-exports.ɵff = myCustomTooltipDefaults;
-exports.ɵfh = TooltipOverviewExample;
-exports.ɵfi = TooltipPositionExample;
-exports.ɵfj = ChecklistDatabase;
-exports.ɵfk = TreeChecklistExample;
-exports.ɵfl = DynamicDatabase;
-exports.ɵfm = TreeDynamicExample;
-exports.ɵfn = FileDatabase$2;
-exports.ɵfo = TreeFlatOverviewExample;
-exports.ɵfp = LoadmoreDatabase;
-exports.ɵfq = TreeLoadmoreExample;
-exports.ɵfr = FileDatabase$3;
-exports.ɵfs = TreeNestedOverviewExample;
+exports.ɵby = FocusMonitorDirectivesExample;
+exports.ɵbz = FocusMonitorFocusViaExample;
+exports.ɵca = FocusMonitorOverviewExample;
+exports.ɵcb = FormFieldAppearanceExample;
+exports.ɵcd = FormFieldCustomControlExample;
+exports.ɵcc = MyTelInput;
+exports.ɵce = FormFieldErrorExample;
+exports.ɵcf = FormFieldHintExample;
+exports.ɵcg = FormFieldLabelExample;
+exports.ɵch = FormFieldOverviewExample;
+exports.ɵci = FormFieldPrefixSuffixExample;
+exports.ɵcj = FormFieldThemingExample;
+exports.ɵck = GridListDynamicExample;
+exports.ɵcl = GridListOverviewExample;
+exports.ɵcm = IconOverviewExample;
+exports.ɵcn = IconSvgExample;
+exports.ɵco = InputClearableExample;
+exports.ɵcp = InputErrorStateMatcherExample;
+exports.ɵcq = InputErrorsExample;
+exports.ɵcr = InputFormExample;
+exports.ɵcs = InputHintExample;
+exports.ɵct = InputOverviewExample;
+exports.ɵcu = InputPrefixSuffixExample;
+exports.ɵcv = ListSectionsExample;
+exports.ɵcw = ListSelectionExample;
+exports.ɵfw = ExampleMaterialModule;
+exports.ɵcx = MenuIconsExample;
+exports.ɵcy = MenuOverviewExample;
+exports.ɵcz = NestedMenuExample;
+exports.ɵda = PaginatorConfigurableExample;
+exports.ɵdb = PaginatorOverviewExample;
+exports.ɵdc = ProgressBarBufferExample;
+exports.ɵdd = ProgressBarConfigurableExample;
+exports.ɵde = ProgressBarDeterminateExample;
+exports.ɵdf = ProgressBarIndeterminateExample;
+exports.ɵdg = ProgressBarQueryExample;
+exports.ɵdh = ProgressSpinnerConfigurableExample;
+exports.ɵdi = ProgressSpinnerOverviewExample;
+exports.ɵdj = RadioNgModelExample;
+exports.ɵdk = RadioOverviewExample;
+exports.ɵdl = SelectCustomTriggerExample;
+exports.ɵdm = SelectDisabledExample;
+exports.ɵdn = SelectErrorStateMatcherExample;
+exports.ɵdo = SelectFormExample;
+exports.ɵdp = SelectHintErrorExample;
+exports.ɵdq = SelectMultipleExample;
+exports.ɵdr = SelectNoRippleExample;
+exports.ɵds = SelectOptgroupExample;
+exports.ɵdt = SelectOverviewExample;
+exports.ɵdu = SelectPanelClassExample;
+exports.ɵdv = SelectResetExample;
+exports.ɵdw = SelectValueBindingExample;
+exports.ɵdx = SidenavAutosizeExample;
+exports.ɵdy = SidenavBackdropExample;
+exports.ɵdz = SidenavDisableCloseExample;
+exports.ɵea = SidenavDrawerOverviewExample;
+exports.ɵeb = SidenavFixedExample;
+exports.ɵec = SidenavModeExample;
+exports.ɵed = SidenavOpenCloseExample;
+exports.ɵee = SidenavOverviewExample;
+exports.ɵef = SidenavPositionExample;
+exports.ɵeg = SidenavResponsiveExample;
+exports.ɵeh = SlideToggleConfigurableExample;
+exports.ɵei = SlideToggleFormsExample;
+exports.ɵej = SlideToggleOverviewExample;
+exports.ɵek = SliderConfigurableExample;
+exports.ɵel = SliderFormattingExample;
+exports.ɵem = SliderOverviewExample;
+exports.ɵeo = PizzaPartyComponent;
+exports.ɵen = SnackBarComponentExample;
+exports.ɵep = SnackBarOverviewExample;
+exports.ɵeq = SnackBarPositionExample;
+exports.ɵer = SortOverviewExample;
+exports.ɵes = TableBasicExample;
+exports.ɵet = TableFilteringExample;
+exports.ɵeu = TableHttpExample;
+exports.ɵev = TableNativeOnlyExample;
+exports.ɵew = TableOverviewExample;
+exports.ɵex = TablePaginationExample;
+exports.ɵey = TableSelectionExample;
+exports.ɵez = TableSortingExample;
+exports.ɵfa = TabsOverviewExample;
+exports.ɵfb = TabsTemplateLabelExample;
+exports.ɵfc = TextFieldAutofillDirectiveExample;
+exports.ɵfd = TextFieldAutofillMonitorExample;
+exports.ɵfe = TextFieldAutosizeTextareaExample;
+exports.ɵff = ToolbarOverviewExample;
+exports.ɵfg = TooltipDelayExample;
+exports.ɵfh = TooltipManualExample;
+exports.ɵfj = TooltipModifiedDefaultsExample;
+exports.ɵfi = myCustomTooltipDefaults;
+exports.ɵfk = TooltipOverviewExample;
+exports.ɵfl = TooltipPositionExample;
+exports.ɵfm = ChecklistDatabase;
+exports.ɵfn = TreeChecklistExample;
+exports.ɵfo = DynamicDatabase;
+exports.ɵfp = TreeDynamicExample;
+exports.ɵfq = FileDatabase$2;
+exports.ɵfr = TreeFlatOverviewExample;
+exports.ɵfs = LoadmoreDatabase;
+exports.ɵft = TreeLoadmoreExample;
+exports.ɵfu = FileDatabase$3;
+exports.ɵfv = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
