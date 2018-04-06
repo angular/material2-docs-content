@@ -4025,6 +4025,84 @@ function compare(a, b, isAsc) {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Stepper with editable steps
+ */
+class StepperEditableExample {
+    /**
+     * @param {?} _formBuilder
+     */
+    constructor(_formBuilder) {
+        this._formBuilder = _formBuilder;
+        this.isEditable = false;
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', Validators.required]
+        });
+    }
+}
+StepperEditableExample.decorators = [
+    { type: Component, args: [{
+                selector: 'stepper-editable-example',
+                template: "<button mat-raised-button (click)=\"isEditable = !isEditable\">{{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}</button><mat-horizontal-stepper [linear]=\"true\" #stepper><mat-step [stepControl]=\"firstFormGroup\" [editable]=\"isEditable\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" [editable]=\"isEditable\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                styles: ["/** No CSS for this example */ "]
+            },] },
+];
+/** @nocollapse */
+StepperEditableExample.ctorParameters = () => [
+    { type: FormBuilder, },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Stepper with optional steps
+ */
+class StepperOptionalExample {
+    /**
+     * @param {?} _formBuilder
+     */
+    constructor(_formBuilder) {
+        this._formBuilder = _formBuilder;
+        this.isOptional = false;
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ''
+        });
+    }
+}
+StepperOptionalExample.decorators = [
+    { type: Component, args: [{
+                selector: 'stepper-optional-example',
+                template: "<button mat-raised-button (click)=\"isOptional = !isOptional\">{{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}</button><mat-horizontal-stepper [linear]=\"true\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" [optional]=\"isOptional\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                styles: ["/** No CSS for this example */ "]
+            },] },
+];
+/** @nocollapse */
+StepperOptionalExample.ctorParameters = () => [
+    { type: FormBuilder, },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Stepper overview
  */
 class StepperOverviewExample {
@@ -4050,7 +4128,7 @@ class StepperOverviewExample {
 StepperOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'stepper-overview-example',
-                template: "<button mat-raised-button (click)=\"isLinear = true\" id=\"toggle-linear\">Enable linear mode</button><mat-horizontal-stepper [linear]=\"isLinear\" #stepper=\"matHorizontalStepper\"><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                template: "<button mat-raised-button (click)=\"isLinear = !isLinear\" id=\"toggle-linear\">{{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}</button><mat-horizontal-stepper [linear]=\"isLinear\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
@@ -6168,6 +6246,14 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Sorting overview',
         component: SortOverviewExample
     },
+    'stepper-editable': {
+        title: 'Stepper with editable steps',
+        component: StepperEditableExample
+    },
+    'stepper-optional': {
+        title: 'Stepper with optional steps',
+        component: StepperOptionalExample
+    },
     'stepper-overview': {
         title: 'Stepper overview',
         component: StepperOverviewExample
@@ -6390,6 +6476,8 @@ const /** @type {?} */ EXAMPLE_LIST = [
     SnackBarOverviewExample,
     SnackBarPositionExample,
     SortOverviewExample,
+    StepperEditableExample,
+    StepperOptionalExample,
     StepperOverviewExample,
     TableBasicExample,
     TableFilteringExample,
@@ -6475,5 +6563,5 @@ class ExampleData {
  * @suppress {checkTypes} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CdkTreeFlatExample as ɵn, FileDatabase as ɵm, CdkTreeNestedExample as ɵp, FileDatabase$1 as ɵo, CheckboxConfigurableExample as ɵq, CheckboxOverviewExample as ɵr, ChipsAutocompleteExample as ɵs, ChipsInputExample as ɵt, ChipsOverviewExample as ɵu, ChipsStackedExample as ɵv, DatepickerApiExample as ɵw, DatepickerColorExample as ɵx, DatepickerCustomIconExample as ɵy, DatepickerDisabledExample as ɵz, DatepickerEventsExample as ɵba, DatepickerFilterExample as ɵbb, DatepickerFormatsExample as ɵbd, MY_FORMATS as ɵbc, DatepickerLocaleExample as ɵbe, DatepickerMinMaxExample as ɵbf, DatepickerMomentExample as ɵbg, DatepickerStartViewExample as ɵbh, DatepickerTouchExample as ɵbi, DatepickerValueExample as ɵbj, DatepickerViewsSelectionExample as ɵbl, MY_FORMATS$1 as ɵbk, DialogContentExample as ɵbm, DialogContentExampleDialog as ɵbn, DialogDataExample as ɵbo, DialogDataExampleDialog as ɵbp, DialogElementsExample as ɵbq, DialogElementsExampleDialog as ɵbr, DialogOverviewExample as ɵbs, DialogOverviewExampleDialog as ɵbt, DividerOverviewExample as ɵbu, ElevationOverviewExample as ɵbv, ExpansionExpandCollapseAllExample as ɵbw, ExpansionStepsExample as ɵbx, FocusMonitorDirectivesExample as ɵby, FocusMonitorFocusViaExample as ɵbz, FocusMonitorOverviewExample as ɵca, FormFieldAppearanceExample as ɵcb, FormFieldCustomControlExample as ɵcd, MyTelInput as ɵcc, FormFieldErrorExample as ɵce, FormFieldHintExample as ɵcf, FormFieldLabelExample as ɵcg, FormFieldOverviewExample as ɵch, FormFieldPrefixSuffixExample as ɵci, FormFieldThemingExample as ɵcj, GridListDynamicExample as ɵck, GridListOverviewExample as ɵcl, IconOverviewExample as ɵcm, IconSvgExample as ɵcn, InputClearableExample as ɵco, InputErrorStateMatcherExample as ɵcp, InputErrorsExample as ɵcq, InputFormExample as ɵcr, InputHintExample as ɵcs, InputOverviewExample as ɵct, InputPrefixSuffixExample as ɵcu, ListSectionsExample as ɵcv, ListSelectionExample as ɵcw, ExampleMaterialModule as ɵfw, MenuIconsExample as ɵcx, MenuOverviewExample as ɵcy, NestedMenuExample as ɵcz, PaginatorConfigurableExample as ɵda, PaginatorOverviewExample as ɵdb, ProgressBarBufferExample as ɵdc, ProgressBarConfigurableExample as ɵdd, ProgressBarDeterminateExample as ɵde, ProgressBarIndeterminateExample as ɵdf, ProgressBarQueryExample as ɵdg, ProgressSpinnerConfigurableExample as ɵdh, ProgressSpinnerOverviewExample as ɵdi, RadioNgModelExample as ɵdj, RadioOverviewExample as ɵdk, SelectCustomTriggerExample as ɵdl, SelectDisabledExample as ɵdm, SelectErrorStateMatcherExample as ɵdn, SelectFormExample as ɵdo, SelectHintErrorExample as ɵdp, SelectMultipleExample as ɵdq, SelectNoRippleExample as ɵdr, SelectOptgroupExample as ɵds, SelectOverviewExample as ɵdt, SelectPanelClassExample as ɵdu, SelectResetExample as ɵdv, SelectValueBindingExample as ɵdw, SidenavAutosizeExample as ɵdx, SidenavBackdropExample as ɵdy, SidenavDisableCloseExample as ɵdz, SidenavDrawerOverviewExample as ɵea, SidenavFixedExample as ɵeb, SidenavModeExample as ɵec, SidenavOpenCloseExample as ɵed, SidenavOverviewExample as ɵee, SidenavPositionExample as ɵef, SidenavResponsiveExample as ɵeg, SlideToggleConfigurableExample as ɵeh, SlideToggleFormsExample as ɵei, SlideToggleOverviewExample as ɵej, SliderConfigurableExample as ɵek, SliderFormattingExample as ɵel, SliderOverviewExample as ɵem, PizzaPartyComponent as ɵeo, SnackBarComponentExample as ɵen, SnackBarOverviewExample as ɵep, SnackBarPositionExample as ɵeq, SortOverviewExample as ɵer, TableBasicExample as ɵes, TableFilteringExample as ɵet, TableHttpExample as ɵeu, TableNativeOnlyExample as ɵev, TableOverviewExample as ɵew, TablePaginationExample as ɵex, TableSelectionExample as ɵey, TableSortingExample as ɵez, TabsOverviewExample as ɵfa, TabsTemplateLabelExample as ɵfb, TextFieldAutofillDirectiveExample as ɵfc, TextFieldAutofillMonitorExample as ɵfd, TextFieldAutosizeTextareaExample as ɵfe, ToolbarOverviewExample as ɵff, TooltipDelayExample as ɵfg, TooltipManualExample as ɵfh, TooltipModifiedDefaultsExample as ɵfj, myCustomTooltipDefaults as ɵfi, TooltipOverviewExample as ɵfk, TooltipPositionExample as ɵfl, ChecklistDatabase as ɵfm, TreeChecklistExample as ɵfn, DynamicDatabase as ɵfo, TreeDynamicExample as ɵfp, FileDatabase$2 as ɵfq, TreeFlatOverviewExample as ɵfr, LoadmoreDatabase as ɵfs, TreeLoadmoreExample as ɵft, FileDatabase$3 as ɵfu, TreeNestedOverviewExample as ɵfv };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CdkTreeFlatExample as ɵn, FileDatabase as ɵm, CdkTreeNestedExample as ɵp, FileDatabase$1 as ɵo, CheckboxConfigurableExample as ɵq, CheckboxOverviewExample as ɵr, ChipsAutocompleteExample as ɵs, ChipsInputExample as ɵt, ChipsOverviewExample as ɵu, ChipsStackedExample as ɵv, DatepickerApiExample as ɵw, DatepickerColorExample as ɵx, DatepickerCustomIconExample as ɵy, DatepickerDisabledExample as ɵz, DatepickerEventsExample as ɵba, DatepickerFilterExample as ɵbb, DatepickerFormatsExample as ɵbd, MY_FORMATS as ɵbc, DatepickerLocaleExample as ɵbe, DatepickerMinMaxExample as ɵbf, DatepickerMomentExample as ɵbg, DatepickerStartViewExample as ɵbh, DatepickerTouchExample as ɵbi, DatepickerValueExample as ɵbj, DatepickerViewsSelectionExample as ɵbl, MY_FORMATS$1 as ɵbk, DialogContentExample as ɵbm, DialogContentExampleDialog as ɵbn, DialogDataExample as ɵbo, DialogDataExampleDialog as ɵbp, DialogElementsExample as ɵbq, DialogElementsExampleDialog as ɵbr, DialogOverviewExample as ɵbs, DialogOverviewExampleDialog as ɵbt, DividerOverviewExample as ɵbu, ElevationOverviewExample as ɵbv, ExpansionExpandCollapseAllExample as ɵbw, ExpansionStepsExample as ɵbx, FocusMonitorDirectivesExample as ɵby, FocusMonitorFocusViaExample as ɵbz, FocusMonitorOverviewExample as ɵca, FormFieldAppearanceExample as ɵcb, FormFieldCustomControlExample as ɵcd, MyTelInput as ɵcc, FormFieldErrorExample as ɵce, FormFieldHintExample as ɵcf, FormFieldLabelExample as ɵcg, FormFieldOverviewExample as ɵch, FormFieldPrefixSuffixExample as ɵci, FormFieldThemingExample as ɵcj, GridListDynamicExample as ɵck, GridListOverviewExample as ɵcl, IconOverviewExample as ɵcm, IconSvgExample as ɵcn, InputClearableExample as ɵco, InputErrorStateMatcherExample as ɵcp, InputErrorsExample as ɵcq, InputFormExample as ɵcr, InputHintExample as ɵcs, InputOverviewExample as ɵct, InputPrefixSuffixExample as ɵcu, ListSectionsExample as ɵcv, ListSelectionExample as ɵcw, ExampleMaterialModule as ɵfy, MenuIconsExample as ɵcx, MenuOverviewExample as ɵcy, NestedMenuExample as ɵcz, PaginatorConfigurableExample as ɵda, PaginatorOverviewExample as ɵdb, ProgressBarBufferExample as ɵdc, ProgressBarConfigurableExample as ɵdd, ProgressBarDeterminateExample as ɵde, ProgressBarIndeterminateExample as ɵdf, ProgressBarQueryExample as ɵdg, ProgressSpinnerConfigurableExample as ɵdh, ProgressSpinnerOverviewExample as ɵdi, RadioNgModelExample as ɵdj, RadioOverviewExample as ɵdk, SelectCustomTriggerExample as ɵdl, SelectDisabledExample as ɵdm, SelectErrorStateMatcherExample as ɵdn, SelectFormExample as ɵdo, SelectHintErrorExample as ɵdp, SelectMultipleExample as ɵdq, SelectNoRippleExample as ɵdr, SelectOptgroupExample as ɵds, SelectOverviewExample as ɵdt, SelectPanelClassExample as ɵdu, SelectResetExample as ɵdv, SelectValueBindingExample as ɵdw, SidenavAutosizeExample as ɵdx, SidenavBackdropExample as ɵdy, SidenavDisableCloseExample as ɵdz, SidenavDrawerOverviewExample as ɵea, SidenavFixedExample as ɵeb, SidenavModeExample as ɵec, SidenavOpenCloseExample as ɵed, SidenavOverviewExample as ɵee, SidenavPositionExample as ɵef, SidenavResponsiveExample as ɵeg, SlideToggleConfigurableExample as ɵeh, SlideToggleFormsExample as ɵei, SlideToggleOverviewExample as ɵej, SliderConfigurableExample as ɵek, SliderFormattingExample as ɵel, SliderOverviewExample as ɵem, PizzaPartyComponent as ɵeo, SnackBarComponentExample as ɵen, SnackBarOverviewExample as ɵep, SnackBarPositionExample as ɵeq, SortOverviewExample as ɵer, StepperEditableExample as ɵes, StepperOptionalExample as ɵet, TableBasicExample as ɵeu, TableFilteringExample as ɵev, TableHttpExample as ɵew, TableNativeOnlyExample as ɵex, TableOverviewExample as ɵey, TablePaginationExample as ɵez, TableSelectionExample as ɵfa, TableSortingExample as ɵfb, TabsOverviewExample as ɵfc, TabsTemplateLabelExample as ɵfd, TextFieldAutofillDirectiveExample as ɵfe, TextFieldAutofillMonitorExample as ɵff, TextFieldAutosizeTextareaExample as ɵfg, ToolbarOverviewExample as ɵfh, TooltipDelayExample as ɵfi, TooltipManualExample as ɵfj, TooltipModifiedDefaultsExample as ɵfl, myCustomTooltipDefaults as ɵfk, TooltipOverviewExample as ɵfm, TooltipPositionExample as ɵfn, ChecklistDatabase as ɵfo, TreeChecklistExample as ɵfp, DynamicDatabase as ɵfq, TreeDynamicExample as ɵfr, FileDatabase$2 as ɵfs, TreeFlatOverviewExample as ɵft, LoadmoreDatabase as ɵfu, TreeLoadmoreExample as ɵfv, FileDatabase$3 as ɵfw, TreeNestedOverviewExample as ɵfx };
 //# sourceMappingURL=material-examples.js.map

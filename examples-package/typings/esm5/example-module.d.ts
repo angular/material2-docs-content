@@ -13,6 +13,8 @@ import { IconSvgExample } from './icon-svg/icon-svg-example';
 import { SidenavResponsiveExample } from './sidenav-responsive/sidenav-responsive-example';
 import { SlideToggleFormsExample } from './slide-toggle-forms/slide-toggle-forms-example';
 import { SnackBarOverviewExample } from './snack-bar-overview/snack-bar-overview-example';
+import { StepperEditableExample } from './stepper-editable/stepper-editable-example';
+import { StepperOptionalExample } from './stepper-optional/stepper-optional-example';
 import { StepperOverviewExample } from './stepper-overview/stepper-overview-example';
 import { TableHttpExample } from './table-http/table-http-example';
 import { TextFieldAutofillMonitorExample } from './text-field-autofill-monitor/text-field-autofill-monitor-example';
@@ -31,6 +33,6 @@ export interface LiveExample {
 export declare const EXAMPLE_COMPONENTS: {
     [key: string]: LiveExample;
 };
-export declare const EXAMPLE_LIST: (typeof BottomSheetOverviewExample | typeof BottomSheetOverviewExampleSheet | typeof CdkTreeFlatExample | typeof CdkTreeNestedExample | typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof FocusMonitorDirectivesExample | typeof FocusMonitorFocusViaExample | typeof FocusMonitorOverviewExample | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperOverviewExample | typeof TableHttpExample | typeof TextFieldAutofillMonitorExample | typeof TextFieldAutosizeTextareaExample | typeof TreeChecklistExample | typeof TreeDynamicExample | typeof TreeFlatOverviewExample | typeof TreeLoadmoreExample | typeof TreeNestedOverviewExample)[];
+export declare const EXAMPLE_LIST: (typeof BottomSheetOverviewExample | typeof BottomSheetOverviewExampleSheet | typeof CdkTreeFlatExample | typeof CdkTreeNestedExample | typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof FocusMonitorDirectivesExample | typeof FocusMonitorFocusViaExample | typeof FocusMonitorOverviewExample | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperEditableExample | typeof StepperOptionalExample | typeof StepperOverviewExample | typeof TableHttpExample | typeof TextFieldAutofillMonitorExample | typeof TextFieldAutosizeTextareaExample | typeof TreeChecklistExample | typeof TreeDynamicExample | typeof TreeFlatOverviewExample | typeof TreeLoadmoreExample | typeof TreeNestedOverviewExample)[];
 export declare class ExampleModule {
 }

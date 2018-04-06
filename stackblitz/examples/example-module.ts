@@ -121,6 +121,8 @@ import {PizzaPartyComponent,SnackBarComponentExample} from './snack-bar-componen
 import {SnackBarOverviewExample} from './snack-bar-overview/snack-bar-overview-example';
 import {SnackBarPositionExample} from './snack-bar-position/snack-bar-position-example';
 import {SortOverviewExample} from './sort-overview/sort-overview-example';
+import {StepperEditableExample} from './stepper-editable/stepper-editable-example';
+import {StepperOptionalExample} from './stepper-optional/stepper-optional-example';
 import {StepperOverviewExample} from './stepper-overview/stepper-overview-example';
 import {TableBasicExample} from './table-basic/table-basic-example';
 import {TableFilteringExample} from './table-filtering/table-filtering-example';
@@ -634,6 +636,14 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Sorting overview',
     component: SortOverviewExample
   },
+  'stepper-editable': {
+    title: 'Stepper with editable steps',
+    component: StepperEditableExample
+  },
+  'stepper-optional': {
+    title: 'Stepper with optional steps',
+    component: StepperOptionalExample
+  },
   'stepper-overview': {
     title: 'Stepper overview',
     component: StepperOverviewExample
@@ -857,6 +867,8 @@ export const EXAMPLE_LIST = [
   SnackBarOverviewExample,
   SnackBarPositionExample,
   SortOverviewExample,
+  StepperEditableExample,
+  StepperOptionalExample,
   StepperOverviewExample,
   TableBasicExample,
   TableFilteringExample,

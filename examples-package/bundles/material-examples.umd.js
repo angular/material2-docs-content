@@ -4440,6 +4440,86 @@ function compare(a, b, isAsc) {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Stepper with editable steps
+ */
+var StepperEditableExample = /** @class */ (function () {
+    function StepperEditableExample(_formBuilder) {
+        this._formBuilder = _formBuilder;
+        this.isEditable = false;
+    }
+    /**
+     * @return {?}
+     */
+    StepperEditableExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', forms.Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', forms.Validators.required]
+        });
+    };
+    StepperEditableExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'stepper-editable-example',
+                    template: "<button mat-raised-button (click)=\"isEditable = !isEditable\">{{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}</button><mat-horizontal-stepper [linear]=\"true\" #stepper><mat-step [stepControl]=\"firstFormGroup\" [editable]=\"isEditable\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" [editable]=\"isEditable\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                    styles: ["/** No CSS for this example */ "]
+                },] },
+    ];
+    /** @nocollapse */
+    StepperEditableExample.ctorParameters = function () { return [
+        { type: forms.FormBuilder, },
+    ]; };
+    return StepperEditableExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Stepper with optional steps
+ */
+var StepperOptionalExample = /** @class */ (function () {
+    function StepperOptionalExample(_formBuilder) {
+        this._formBuilder = _formBuilder;
+        this.isOptional = false;
+    }
+    /**
+     * @return {?}
+     */
+    StepperOptionalExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', forms.Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ''
+        });
+    };
+    StepperOptionalExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'stepper-optional-example',
+                    template: "<button mat-raised-button (click)=\"isOptional = !isOptional\">{{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}</button><mat-horizontal-stepper [linear]=\"true\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" [optional]=\"isOptional\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                    styles: ["/** No CSS for this example */ "]
+                },] },
+    ];
+    /** @nocollapse */
+    StepperOptionalExample.ctorParameters = function () { return [
+        { type: forms.FormBuilder, },
+    ]; };
+    return StepperOptionalExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Stepper overview
  */
 var StepperOverviewExample = /** @class */ (function () {
@@ -4464,7 +4544,7 @@ var StepperOverviewExample = /** @class */ (function () {
     StepperOverviewExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'stepper-overview-example',
-                    template: "<button mat-raised-button (click)=\"isLinear = true\" id=\"toggle-linear\">Enable linear mode</button><mat-horizontal-stepper [linear]=\"isLinear\" #stepper=\"matHorizontalStepper\"><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                    template: "<button mat-raised-button (click)=\"isLinear = !isLinear\" id=\"toggle-linear\">{{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}</button><mat-horizontal-stepper [linear]=\"isLinear\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
                     styles: ["/** No CSS for this example */ "]
                 },] },
     ];
@@ -6820,6 +6900,14 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Sorting overview',
         component: SortOverviewExample
     },
+    'stepper-editable': {
+        title: 'Stepper with editable steps',
+        component: StepperEditableExample
+    },
+    'stepper-optional': {
+        title: 'Stepper with optional steps',
+        component: StepperOptionalExample
+    },
     'stepper-overview': {
         title: 'Stepper overview',
         component: StepperOverviewExample
@@ -7042,6 +7130,8 @@ var /** @type {?} */ EXAMPLE_LIST = [
     SnackBarOverviewExample,
     SnackBarPositionExample,
     SortOverviewExample,
+    StepperEditableExample,
+    StepperOptionalExample,
     StepperOverviewExample,
     TableBasicExample,
     TableFilteringExample,
@@ -7209,7 +7299,7 @@ exports.ɵct = InputOverviewExample;
 exports.ɵcu = InputPrefixSuffixExample;
 exports.ɵcv = ListSectionsExample;
 exports.ɵcw = ListSelectionExample;
-exports.ɵfw = ExampleMaterialModule;
+exports.ɵfy = ExampleMaterialModule;
 exports.ɵcx = MenuIconsExample;
 exports.ɵcy = MenuOverviewExample;
 exports.ɵcz = NestedMenuExample;
@@ -7257,36 +7347,38 @@ exports.ɵen = SnackBarComponentExample;
 exports.ɵep = SnackBarOverviewExample;
 exports.ɵeq = SnackBarPositionExample;
 exports.ɵer = SortOverviewExample;
-exports.ɵes = TableBasicExample;
-exports.ɵet = TableFilteringExample;
-exports.ɵeu = TableHttpExample;
-exports.ɵev = TableNativeOnlyExample;
-exports.ɵew = TableOverviewExample;
-exports.ɵex = TablePaginationExample;
-exports.ɵey = TableSelectionExample;
-exports.ɵez = TableSortingExample;
-exports.ɵfa = TabsOverviewExample;
-exports.ɵfb = TabsTemplateLabelExample;
-exports.ɵfc = TextFieldAutofillDirectiveExample;
-exports.ɵfd = TextFieldAutofillMonitorExample;
-exports.ɵfe = TextFieldAutosizeTextareaExample;
-exports.ɵff = ToolbarOverviewExample;
-exports.ɵfg = TooltipDelayExample;
-exports.ɵfh = TooltipManualExample;
-exports.ɵfj = TooltipModifiedDefaultsExample;
-exports.ɵfi = myCustomTooltipDefaults;
-exports.ɵfk = TooltipOverviewExample;
-exports.ɵfl = TooltipPositionExample;
-exports.ɵfm = ChecklistDatabase;
-exports.ɵfn = TreeChecklistExample;
-exports.ɵfo = DynamicDatabase;
-exports.ɵfp = TreeDynamicExample;
-exports.ɵfq = FileDatabase$2;
-exports.ɵfr = TreeFlatOverviewExample;
-exports.ɵfs = LoadmoreDatabase;
-exports.ɵft = TreeLoadmoreExample;
-exports.ɵfu = FileDatabase$3;
-exports.ɵfv = TreeNestedOverviewExample;
+exports.ɵes = StepperEditableExample;
+exports.ɵet = StepperOptionalExample;
+exports.ɵeu = TableBasicExample;
+exports.ɵev = TableFilteringExample;
+exports.ɵew = TableHttpExample;
+exports.ɵex = TableNativeOnlyExample;
+exports.ɵey = TableOverviewExample;
+exports.ɵez = TablePaginationExample;
+exports.ɵfa = TableSelectionExample;
+exports.ɵfb = TableSortingExample;
+exports.ɵfc = TabsOverviewExample;
+exports.ɵfd = TabsTemplateLabelExample;
+exports.ɵfe = TextFieldAutofillDirectiveExample;
+exports.ɵff = TextFieldAutofillMonitorExample;
+exports.ɵfg = TextFieldAutosizeTextareaExample;
+exports.ɵfh = ToolbarOverviewExample;
+exports.ɵfi = TooltipDelayExample;
+exports.ɵfj = TooltipManualExample;
+exports.ɵfl = TooltipModifiedDefaultsExample;
+exports.ɵfk = myCustomTooltipDefaults;
+exports.ɵfm = TooltipOverviewExample;
+exports.ɵfn = TooltipPositionExample;
+exports.ɵfo = ChecklistDatabase;
+exports.ɵfp = TreeChecklistExample;
+exports.ɵfq = DynamicDatabase;
+exports.ɵfr = TreeDynamicExample;
+exports.ɵfs = FileDatabase$2;
+exports.ɵft = TreeFlatOverviewExample;
+exports.ɵfu = LoadmoreDatabase;
+exports.ɵfv = TreeLoadmoreExample;
+exports.ɵfw = FileDatabase$3;
+exports.ɵfx = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
