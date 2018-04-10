@@ -28,6 +28,7 @@ import {ChipsOverviewExample} from './chips-overview/chips-overview-example';
 import {ChipsStackedExample} from './chips-stacked/chips-stacked-example';
 import {DatepickerApiExample} from './datepicker-api/datepicker-api-example';
 import {DatepickerColorExample} from './datepicker-color/datepicker-color-example';
+import {ExampleHeader,DatepickerCustomHeaderExample} from './datepicker-custom-header/datepicker-custom-header-example';
 import {DatepickerCustomIconExample} from './datepicker-custom-icon/datepicker-custom-icon-example';
 import {DatepickerDisabledExample} from './datepicker-disabled/datepicker-disabled-example';
 import {DatepickerEventsExample} from './datepicker-events/datepicker-events-example';
@@ -251,6 +252,11 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'datepicker-color': {
     title: 'Datepicker palette colors',
     component: DatepickerColorExample
+  },
+  'datepicker-custom-header': {
+    title: 'Datepicker with custom calendar header',
+    component: DatepickerCustomHeaderExample,
+    selectorName: 'DatepickerCustomHeaderExample, ExampleHeader'
   },
   'datepicker-custom-icon': {
     title: 'Datepicker with custom icon',
@@ -774,6 +780,7 @@ export const EXAMPLE_LIST = [
   ChipsStackedExample,
   DatepickerApiExample,
   DatepickerColorExample,
+  ExampleHeader,DatepickerCustomHeaderExample,
   DatepickerCustomIconExample,
   DatepickerDisabledExample,
   DatepickerEventsExample,
