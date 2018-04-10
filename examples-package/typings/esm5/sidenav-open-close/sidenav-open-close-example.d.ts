@@ -1,5 +1,6 @@
 /** @title Sidenav open & close behavior */
 export declare class SidenavOpenCloseExample {
-    events: never[];
+    events: string[];
+    opened: boolean;
     shouldRun: boolean;
 }
