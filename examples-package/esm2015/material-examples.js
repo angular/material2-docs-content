@@ -110,8 +110,6 @@ ExampleMaterialModule.decorators = [
                 ]
             },] },
 ];
-/** @nocollapse */
-ExampleMaterialModule.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -146,8 +144,6 @@ AutocompleteAutoActiveFirstOptionExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
-/** @nocollapse */
-AutocompleteAutoActiveFirstOptionExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -202,8 +198,6 @@ AutocompleteDisplayExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
-/** @nocollapse */
-AutocompleteDisplayExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -243,8 +237,6 @@ AutocompleteFilterExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
-/** @nocollapse */
-AutocompleteFilterExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -327,8 +319,6 @@ AutocompleteSimpleExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
-/** @nocollapse */
-AutocompleteSimpleExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -405,8 +395,6 @@ ButtonOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ButtonOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -424,8 +412,6 @@ ButtonToggleExclusiveExample.decorators = [
                 styles: [".example-selected-value { margin: 15px 0; } "],
             },] },
 ];
-/** @nocollapse */
-ButtonToggleExclusiveExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -443,8 +429,6 @@ ButtonToggleOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ButtonToggleOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -462,8 +446,6 @@ ButtonTypesExample.decorators = [
                 styles: [".example-button-row { display: flex; align-items: center; justify-content: space-around; } "],
             },] },
 ];
-/** @nocollapse */
-ButtonTypesExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -481,8 +463,6 @@ CardFancyExample.decorators = [
                 styles: [".example-card { max-width: 400px; } .example-header-image { background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); background-size: cover; } "],
             },] },
 ];
-/** @nocollapse */
-CardFancyExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -500,8 +480,6 @@ CardOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-CardOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -529,8 +507,6 @@ CdkTableBasicExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><cdk-table #table [dataSource]=\"dataSource\" class=\"example-table\"><ng-container cdkColumnDef=\"userId\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">ID</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.id}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"progress\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Progress</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.progress}}%</cdk-cell></ng-container><ng-container cdkColumnDef=\"userName\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Name</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.name}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"color\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Color</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\" [style.color]=\"row.color\">{{row.color}}</cdk-cell></ng-container><cdk-header-row *cdkHeaderRowDef=\"displayedColumns\" class=\"example-header-row\"></cdk-header-row><cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\" class=\"example-row\"></cdk-row></cdk-table></div>",
             },] },
 ];
-/** @nocollapse */
-CdkTableBasicExample.ctorParameters = () => [];
 /**
  * Constants used to fill up our data base.
  */
@@ -922,8 +898,6 @@ CheckboxConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
-/** @nocollapse */
-CheckboxConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -941,8 +915,6 @@ CheckboxOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-CheckboxOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1080,8 +1052,6 @@ ChipsInputExample.decorators = [
                 styles: [".demo-chip-list { width: 100%; } "]
             },] },
 ];
-/** @nocollapse */
-ChipsInputExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1099,8 +1069,6 @@ ChipsOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ChipsOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1126,8 +1094,6 @@ ChipsStackedExample.decorators = [
                 styles: ["mat-chip { max-width: 200px; } "],
             },] },
 ];
-/** @nocollapse */
-ChipsStackedExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1145,8 +1111,6 @@ DatepickerApiExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DatepickerApiExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1164,8 +1128,6 @@ DatepickerColorExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DatepickerColorExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1188,8 +1150,6 @@ DatepickerCustomHeaderExample.decorators = [
                 changeDetection: ChangeDetectionStrategy.OnPush,
             },] },
 ];
-/** @nocollapse */
-DatepickerCustomHeaderExample.ctorParameters = () => [];
 /**
  * Custom header component for datepicker.
  * @template D
@@ -1294,8 +1254,6 @@ DatepickerCustomIconExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DatepickerCustomIconExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1313,8 +1271,6 @@ DatepickerDisabledExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DatepickerDisabledExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1343,8 +1299,6 @@ DatepickerEventsExample.decorators = [
                 styles: [".example-events { width: 400px; height: 200px; border: 1px solid #555; overflow: auto; } "],
             },] },
 ];
-/** @nocollapse */
-DatepickerEventsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1369,8 +1323,6 @@ DatepickerFilterExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DatepickerFilterExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1412,8 +1364,6 @@ DatepickerFormatsExample.decorators = [
                 ],
             },] },
 ];
-/** @nocollapse */
-DatepickerFormatsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1479,8 +1429,6 @@ DatepickerMinMaxExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DatepickerMinMaxExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1511,8 +1459,6 @@ DatepickerMomentExample.decorators = [
                 ],
             },] },
 ];
-/** @nocollapse */
-DatepickerMomentExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1530,8 +1476,6 @@ DatepickerOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DatepickerOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1552,8 +1496,6 @@ DatepickerStartViewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DatepickerStartViewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1571,8 +1513,6 @@ DatepickerTouchExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DatepickerTouchExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1594,8 +1534,6 @@ DatepickerValueExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DatepickerValueExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1658,8 +1596,6 @@ DatepickerViewsSelectionExample.decorators = [
                 ],
             },] },
 ];
-/** @nocollapse */
-DatepickerViewsSelectionExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1706,8 +1642,6 @@ DialogContentExampleDialog.decorators = [
                 template: "<h2 mat-dialog-title>Install Angular</h2><mat-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED &amp; PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></mat-dialog-content><mat-dialog-actions><button mat-button mat-dialog-close>Cancel</button> <button mat-button [mat-dialog-close]=\"true\" cdkFocusInitial>Install</button></mat-dialog-actions>",
             },] },
 ];
-/** @nocollapse */
-DialogContentExampleDialog.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1804,8 +1738,6 @@ DialogElementsExampleDialog.decorators = [
                 template: "<h1 mat-dialog-title>Dialog with elements</h1><div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div><div mat-dialog-actions><button mat-button mat-dialog-close>Close</button></div>",
             },] },
 ];
-/** @nocollapse */
-DialogElementsExampleDialog.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1890,8 +1822,6 @@ DividerOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-DividerOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1912,8 +1842,6 @@ ElevationOverviewExample.decorators = [
                 template: "<div class=\"example-container\" [class.mat-elevation-z2]=\"!isActive\" [class.mat-elevation-z8]=\"isActive\">Example</div><button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>",
             },] },
 ];
-/** @nocollapse */
-ElevationOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1932,7 +1860,6 @@ ExpansionExpandCollapseAllExample.decorators = [
             },] },
 ];
 /** @nocollapse */
-ExpansionExpandCollapseAllExample.ctorParameters = () => [];
 ExpansionExpandCollapseAllExample.propDecorators = {
     "accordion": [{ type: ViewChild, args: [MatAccordion,] },],
 };
@@ -1956,8 +1883,6 @@ ExpansionOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ExpansionOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1997,8 +1922,6 @@ ExpansionStepsExample.decorators = [
                 styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
             },] },
 ];
-/** @nocollapse */
-ExpansionStepsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2189,8 +2112,6 @@ FormFieldAppearanceExample.decorators = [
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
-/** @nocollapse */
-FormFieldAppearanceExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2375,8 +2296,6 @@ FormFieldCustomControlExample.decorators = [
   `
             },] },
 ];
-/** @nocollapse */
-FormFieldCustomControlExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2405,8 +2324,6 @@ FormFieldErrorExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
             },] },
 ];
-/** @nocollapse */
-FormFieldErrorExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2424,8 +2341,6 @@ FormFieldHintExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
             },] },
 ];
-/** @nocollapse */
-FormFieldHintExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2473,8 +2388,6 @@ FormFieldOverviewExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
             },] },
 ];
-/** @nocollapse */
-FormFieldOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2495,8 +2408,6 @@ FormFieldPrefixSuffixExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-right-align { text-align: right; } input.example-right-align::-webkit-outer-spin-button, input.example-right-align::-webkit-inner-spin-button { display: none; } input.example-right-align { -moz-appearance: textfield; } "]
             },] },
 ];
-/** @nocollapse */
-FormFieldPrefixSuffixExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2558,8 +2469,6 @@ GridListDynamicExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-GridListDynamicExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2577,8 +2486,6 @@ GridListOverviewExample.decorators = [
                 template: "<mat-grid-list cols=\"2\" rowHeight=\"2:1\"><mat-grid-tile>1</mat-grid-tile><mat-grid-tile>2</mat-grid-tile><mat-grid-tile>3</mat-grid-tile><mat-grid-tile>4</mat-grid-tile></mat-grid-list>",
             },] },
 ];
-/** @nocollapse */
-GridListOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2596,8 +2503,6 @@ IconOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
-/** @nocollapse */
-IconOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2647,8 +2552,6 @@ InputClearableExample.decorators = [
                 styles: [".example-form-field { width: 200px; } "],
             },] },
 ];
-/** @nocollapse */
-InputClearableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2687,8 +2590,6 @@ InputErrorStateMatcherExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
-/** @nocollapse */
-InputErrorStateMatcherExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2712,8 +2613,6 @@ InputErrorsExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
-/** @nocollapse */
-InputErrorsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2731,8 +2630,6 @@ InputFormExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
-/** @nocollapse */
-InputFormExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2750,8 +2647,6 @@ InputHintExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
-/** @nocollapse */
-InputHintExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2769,8 +2664,6 @@ InputOverviewExample.decorators = [
                 template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Favorite food\" value=\"Sushi\"></mat-form-field><mat-form-field class=\"example-full-width\"><textarea matInput placeholder=\"Leave a comment\"></textarea></mat-form-field></form>",
             },] },
 ];
-/** @nocollapse */
-InputOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2788,8 +2681,6 @@ InputPrefixSuffixExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
-/** @nocollapse */
-InputPrefixSuffixExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2807,8 +2698,6 @@ ListOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ListOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2852,8 +2741,6 @@ ListSectionsExample.decorators = [
                 template: "<mat-list><h3 mat-subheader>Folders</h3><mat-list-item *ngFor=\"let folder of folders\"><mat-icon mat-list-icon>folder</mat-icon><h4 mat-line>{{folder.name}}</h4><p mat-line>{{folder.updated | date}}</p></mat-list-item><mat-divider></mat-divider><h3 mat-subheader>Notes</h3><mat-list-item *ngFor=\"let note of notes\"><mat-icon mat-list-icon>note</mat-icon><h4 mat-line>{{note.name}}</h4><p mat-line>{{note.updated | date}}</p></mat-list-item></mat-list>",
             },] },
 ];
-/** @nocollapse */
-ListSectionsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2874,8 +2761,6 @@ ListSelectionExample.decorators = [
                 template: "<mat-selection-list #shoes><mat-list-option *ngFor=\"let shoe of typesOfShoes\">{{shoe}}</mat-list-option></mat-selection-list><p>Options selected: {{shoes.selectedOptions.selected.length}}</p>",
             },] },
 ];
-/** @nocollapse */
-ListSelectionExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2893,8 +2778,6 @@ MenuIconsExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-MenuIconsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2912,8 +2795,6 @@ MenuOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-MenuOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2931,8 +2812,6 @@ NestedMenuExample.decorators = [
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
-/** @nocollapse */
-NestedMenuExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2963,8 +2842,6 @@ PaginatorConfigurableExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-PaginatorConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2982,8 +2859,6 @@ PaginatorOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-PaginatorOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3001,8 +2876,6 @@ ProgressBarBufferExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ProgressBarBufferExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3026,8 +2899,6 @@ ProgressBarConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
-/** @nocollapse */
-ProgressBarConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3045,8 +2916,6 @@ ProgressBarDeterminateExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ProgressBarDeterminateExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3064,8 +2933,6 @@ ProgressBarIndeterminateExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ProgressBarIndeterminateExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3083,8 +2950,6 @@ ProgressBarQueryExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ProgressBarQueryExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3107,8 +2972,6 @@ ProgressSpinnerConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
-/** @nocollapse */
-ProgressSpinnerConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3126,8 +2989,6 @@ ProgressSpinnerOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ProgressSpinnerOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3153,8 +3014,6 @@ RadioNgModelExample.decorators = [
                 styles: [".example-radio-group { display: inline-flex; flex-direction: column; } .example-radio-button { margin: 5px; } .example-selected-value { margin: 15px 0; } "],
             },] },
 ];
-/** @nocollapse */
-RadioNgModelExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3172,8 +3031,6 @@ RadioOverviewExample.decorators = [
                 styles: [".mat-radio-button ~ .mat-radio-button { padding-right: 16px; } "],
             },] },
 ];
-/** @nocollapse */
-RadioOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3195,8 +3052,6 @@ SelectCustomTriggerExample.decorators = [
                 styles: [".example-additional-selection { opacity: 0.75; font-size: 0.75em; } "],
             },] },
 ];
-/** @nocollapse */
-SelectCustomTriggerExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3217,8 +3072,6 @@ SelectDisabledExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SelectDisabledExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3257,8 +3110,6 @@ SelectErrorStateMatcherExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SelectErrorStateMatcherExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3283,8 +3134,6 @@ SelectFormExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SelectFormExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3311,8 +3160,6 @@ SelectHintErrorExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SelectHintErrorExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3334,8 +3181,6 @@ SelectMultipleExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SelectMultipleExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3353,8 +3198,6 @@ SelectNoRippleExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SelectNoRippleExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3409,8 +3252,6 @@ SelectOptgroupExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SelectOptgroupExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3435,8 +3276,6 @@ SelectOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SelectOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3458,8 +3297,6 @@ SelectPanelClassExample.decorators = [
                 encapsulation: ViewEncapsulation.None,
             },] },
 ];
-/** @nocollapse */
-SelectPanelClassExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3488,8 +3325,6 @@ SelectResetExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SelectResetExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3510,8 +3345,6 @@ SelectValueBindingExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SelectValueBindingExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3532,8 +3365,6 @@ SidenavAutosizeExample.decorators = [
                 styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
             },] },
 ];
-/** @nocollapse */
-SidenavAutosizeExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3551,8 +3382,6 @@ SidenavBackdropExample.decorators = [
                 styles: [".example-container { width: 400px; height: 200px; margin: 10px; border: 1px solid #555; } "],
             },] },
 ];
-/** @nocollapse */
-SidenavBackdropExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3583,7 +3412,6 @@ SidenavDisableCloseExample.decorators = [
             },] },
 ];
 /** @nocollapse */
-SidenavDisableCloseExample.ctorParameters = () => [];
 SidenavDisableCloseExample.propDecorators = {
     "sidenav": [{ type: ViewChild, args: ['sidenav',] },],
 };
@@ -3604,8 +3432,6 @@ SidenavDrawerOverviewExample.decorators = [
                 styles: [".example-container { width: 400px; height: 200px; margin: 10px; border: 1px solid #555; } "],
             },] },
 ];
-/** @nocollapse */
-SidenavDrawerOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3659,8 +3485,6 @@ SidenavModeExample.decorators = [
                 styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } .example-radio-group { display: block; border: 1px solid #555; margin: 20px; padding: 10px; } "],
             },] },
 ];
-/** @nocollapse */
-SidenavModeExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3682,8 +3506,6 @@ SidenavOpenCloseExample.decorators = [
                 styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } .example-events { width: 300px; height: 200px; overflow: auto; border: 1px solid #555; } "],
             },] },
 ];
-/** @nocollapse */
-SidenavOpenCloseExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3704,8 +3526,6 @@ SidenavOverviewExample.decorators = [
                 styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
             },] },
 ];
-/** @nocollapse */
-SidenavOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3726,8 +3546,6 @@ SidenavPositionExample.decorators = [
                 styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
             },] },
 ];
-/** @nocollapse */
-SidenavPositionExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3794,8 +3612,6 @@ SlideToggleConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 10px; } "],
             },] },
 ];
-/** @nocollapse */
-SlideToggleConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3851,8 +3667,6 @@ SlideToggleOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-SlideToggleOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3897,8 +3711,6 @@ SliderConfigurableExample.decorators = [
                 encapsulation: ViewEncapsulation.None,
             },] },
 ];
-/** @nocollapse */
-SliderConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3929,8 +3741,6 @@ SliderFormattingExample.decorators = [
                 styles: ["mat-slider { width: 300px; } "],
             },] },
 ];
-/** @nocollapse */
-SliderFormattingExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3948,8 +3758,6 @@ SliderOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ mat-slider { width: 300px; } "],
             },] },
 ];
-/** @nocollapse */
-SliderOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3993,8 +3801,6 @@ PizzaPartyComponent.decorators = [
                 styles: [`.example-pizza-party { color: hotpink; }`],
             },] },
 ];
-/** @nocollapse */
-PizzaPartyComponent.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4268,8 +4074,6 @@ TableBasicExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
             },] },
 ];
-/** @nocollapse */
-TableBasicExample.ctorParameters = () => [];
 const /** @type {?} */ ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -4322,8 +4126,6 @@ TableFilteringExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
             },] },
 ];
-/** @nocollapse */
-TableFilteringExample.ctorParameters = () => [];
 const /** @type {?} */ ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -4454,8 +4256,6 @@ TableNativeOnlyExample.decorators = [
                 template: "<table class=\"mat-table\"><thead><tr class=\"mat-header-row\"><th class=\"mat-header-cell\">No.</th><th class=\"mat-header-cell\">Name</th><th class=\"mat-header-cell\">Weight</th><th class=\"mat-header-cell\">Symbol</th></tr></thead><tbody><tr class=\"mat-row\" *ngFor=\"let element of elements\"><td class=\"mat-cell\">{{element.position}}</td><td class=\"mat-cell\">{{element.name}}</td><td class=\"mat-cell\">{{element.weight}}</td><td class=\"mat-cell\">{{element.symbol}}</td></tr></tbody></table>",
             },] },
 ];
-/** @nocollapse */
-TableNativeOnlyExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4560,7 +4360,6 @@ TablePaginationExample.decorators = [
             },] },
 ];
 /** @nocollapse */
-TablePaginationExample.ctorParameters = () => [];
 TablePaginationExample.propDecorators = {
     "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
 };
@@ -4626,8 +4425,6 @@ TableSelectionExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"select\"><th mat-header-cell *matHeaderCellDef><mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"selection.hasValue() && isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></mat-checkbox></th><td mat-cell *matCellDef=\"let row\"><mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row) : null\" [checked]=\"selection.isSelected(row)\"></mat-checkbox></td></ng-container><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" (click)=\"selection.toggle(row)\"></tr></table></div>",
             },] },
 ];
-/** @nocollapse */
-TableSelectionExample.ctorParameters = () => [];
 const /** @type {?} */ ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -4680,7 +4477,6 @@ TableSortingExample.decorators = [
             },] },
 ];
 /** @nocollapse */
-TableSortingExample.ctorParameters = () => [];
 TableSortingExample.propDecorators = {
     "sort": [{ type: ViewChild, args: [MatSort,] },],
 };
@@ -4723,8 +4519,6 @@ TabsOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-TabsOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4742,8 +4536,6 @@ TabsTemplateLabelExample.decorators = [
                 styles: [".demo-tab-group { border: 1px solid #e8e8e8; } .demo-tab-content { padding: 16px; } "]
             },] },
 ];
-/** @nocollapse */
-TabsTemplateLabelExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4761,8 +4553,6 @@ TextFieldAutofillDirectiveExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-TextFieldAutofillDirectiveExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4865,8 +4655,6 @@ ToolbarMultirowExample.decorators = [
                 styles: [".example-icon { padding: 0 14px; } .example-spacer { flex: 1 1 auto; } "],
             },] },
 ];
-/** @nocollapse */
-ToolbarMultirowExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4884,8 +4672,6 @@ ToolbarOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-ToolbarOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4903,8 +4689,6 @@ TooltipDelayExample.decorators = [
                 styles: ["button { margin: 8px; } "],
             },] },
 ];
-/** @nocollapse */
-TooltipDelayExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4922,8 +4706,6 @@ TooltipManualExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-TooltipManualExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4952,8 +4734,6 @@ TooltipModifiedDefaultsExample.decorators = [
                 ],
             },] },
 ];
-/** @nocollapse */
-TooltipModifiedDefaultsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4971,8 +4751,6 @@ TooltipOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-/** @nocollapse */
-TooltipOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4993,8 +4771,6 @@ TooltipPositionExample.decorators = [
                 styles: [".example-tooltip-host { display: inline-flex; align-items: center; margin: 50px; } .example-select { margin: 0 10px; } "],
             },] },
 ];
-/** @nocollapse */
-TooltipPositionExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -5676,8 +5452,6 @@ class LoadmoreDatabase {
 LoadmoreDatabase.decorators = [
     { type: Injectable },
 ];
-/** @nocollapse */
-LoadmoreDatabase.ctorParameters = () => [];
 /**
  * \@title Tree with partially loaded data
  */
@@ -6636,8 +6410,6 @@ ExampleModule.decorators = [
                 ]
             },] },
 ];
-/** @nocollapse */
-ExampleModule.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle

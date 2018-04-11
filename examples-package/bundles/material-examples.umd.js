@@ -122,8 +122,6 @@ var ExampleMaterialModule = /** @class */ (function () {
                     ]
                 },] },
     ];
-    /** @nocollapse */
-    ExampleMaterialModule.ctorParameters = function () { return []; };
     return ExampleMaterialModule;
 }());
 
@@ -167,8 +165,6 @@ var AutocompleteAutoActiveFirstOptionExample = /** @class */ (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
                 },] },
     ];
-    /** @nocollapse */
-    AutocompleteAutoActiveFirstOptionExample.ctorParameters = function () { return []; };
     return AutocompleteAutoActiveFirstOptionExample;
 }());
 
@@ -236,8 +232,6 @@ var AutocompleteDisplayExample = /** @class */ (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
                 },] },
     ];
-    /** @nocollapse */
-    AutocompleteDisplayExample.ctorParameters = function () { return []; };
     return AutocompleteDisplayExample;
 }());
 
@@ -288,8 +282,6 @@ var AutocompleteFilterExample = /** @class */ (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
                 },] },
     ];
-    /** @nocollapse */
-    AutocompleteFilterExample.ctorParameters = function () { return []; };
     return AutocompleteFilterExample;
 }());
 
@@ -381,8 +373,6 @@ var AutocompleteSimpleExample = /** @class */ (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
                 },] },
     ];
-    /** @nocollapse */
-    AutocompleteSimpleExample.ctorParameters = function () { return []; };
     return AutocompleteSimpleExample;
 }());
 
@@ -465,8 +455,6 @@ var ButtonOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ButtonOverviewExample.ctorParameters = function () { return []; };
     return ButtonOverviewExample;
 }());
 
@@ -487,8 +475,6 @@ var ButtonToggleExclusiveExample = /** @class */ (function () {
                     styles: [".example-selected-value { margin: 15px 0; } "],
                 },] },
     ];
-    /** @nocollapse */
-    ButtonToggleExclusiveExample.ctorParameters = function () { return []; };
     return ButtonToggleExclusiveExample;
 }());
 
@@ -509,8 +495,6 @@ var ButtonToggleOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ButtonToggleOverviewExample.ctorParameters = function () { return []; };
     return ButtonToggleOverviewExample;
 }());
 
@@ -531,8 +515,6 @@ var ButtonTypesExample = /** @class */ (function () {
                     styles: [".example-button-row { display: flex; align-items: center; justify-content: space-around; } "],
                 },] },
     ];
-    /** @nocollapse */
-    ButtonTypesExample.ctorParameters = function () { return []; };
     return ButtonTypesExample;
 }());
 
@@ -553,8 +535,6 @@ var CardFancyExample = /** @class */ (function () {
                     styles: [".example-card { max-width: 400px; } .example-header-image { background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); background-size: cover; } "],
                 },] },
     ];
-    /** @nocollapse */
-    CardFancyExample.ctorParameters = function () { return []; };
     return CardFancyExample;
 }());
 
@@ -575,8 +555,6 @@ var CardOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    CardOverviewExample.ctorParameters = function () { return []; };
     return CardOverviewExample;
 }());
 
@@ -608,8 +586,6 @@ var CdkTableBasicExample = /** @class */ (function () {
                     template: "<div class=\"example-container mat-elevation-z8\"><cdk-table #table [dataSource]=\"dataSource\" class=\"example-table\"><ng-container cdkColumnDef=\"userId\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">ID</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.id}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"progress\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Progress</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.progress}}%</cdk-cell></ng-container><ng-container cdkColumnDef=\"userName\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Name</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.name}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"color\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Color</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\" [style.color]=\"row.color\">{{row.color}}</cdk-cell></ng-container><cdk-header-row *cdkHeaderRowDef=\"displayedColumns\" class=\"example-header-row\"></cdk-header-row><cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\" class=\"example-row\"></cdk-row></cdk-table></div>",
                 },] },
     ];
-    /** @nocollapse */
-    CdkTableBasicExample.ctorParameters = function () { return []; };
     return CdkTableBasicExample;
 }());
 /**
@@ -1019,8 +995,6 @@ var CheckboxConfigurableExample = /** @class */ (function () {
                     styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    CheckboxConfigurableExample.ctorParameters = function () { return []; };
     return CheckboxConfigurableExample;
 }());
 
@@ -1041,8 +1015,6 @@ var CheckboxOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    CheckboxOverviewExample.ctorParameters = function () { return []; };
     return CheckboxOverviewExample;
 }());
 
@@ -1209,8 +1181,6 @@ var ChipsInputExample = /** @class */ (function () {
                     styles: [".demo-chip-list { width: 100%; } "]
                 },] },
     ];
-    /** @nocollapse */
-    ChipsInputExample.ctorParameters = function () { return []; };
     return ChipsInputExample;
 }());
 
@@ -1231,8 +1201,6 @@ var ChipsOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ChipsOverviewExample.ctorParameters = function () { return []; };
     return ChipsOverviewExample;
 }());
 
@@ -1259,8 +1227,6 @@ var ChipsStackedExample = /** @class */ (function () {
                     styles: ["mat-chip { max-width: 200px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    ChipsStackedExample.ctorParameters = function () { return []; };
     return ChipsStackedExample;
 }());
 
@@ -1281,8 +1247,6 @@ var DatepickerApiExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerApiExample.ctorParameters = function () { return []; };
     return DatepickerApiExample;
 }());
 
@@ -1303,8 +1267,6 @@ var DatepickerColorExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerColorExample.ctorParameters = function () { return []; };
     return DatepickerColorExample;
 }());
 
@@ -1328,8 +1290,6 @@ var DatepickerCustomHeaderExample = /** @class */ (function () {
                     changeDetection: core.ChangeDetectionStrategy.OnPush,
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerCustomHeaderExample.ctorParameters = function () { return []; };
     return DatepickerCustomHeaderExample;
 }());
 /**
@@ -1429,8 +1389,6 @@ var DatepickerCustomIconExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerCustomIconExample.ctorParameters = function () { return []; };
     return DatepickerCustomIconExample;
 }());
 
@@ -1451,8 +1409,6 @@ var DatepickerDisabledExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerDisabledExample.ctorParameters = function () { return []; };
     return DatepickerDisabledExample;
 }());
 
@@ -1487,8 +1443,6 @@ var DatepickerEventsExample = /** @class */ (function () {
                     styles: [".example-events { width: 400px; height: 200px; border: 1px solid #555; overflow: auto; } "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerEventsExample.ctorParameters = function () { return []; };
     return DatepickerEventsExample;
 }());
 
@@ -1514,8 +1468,6 @@ var DatepickerFilterExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerFilterExample.ctorParameters = function () { return []; };
     return DatepickerFilterExample;
 }());
 
@@ -1558,8 +1510,6 @@ var DatepickerFormatsExample = /** @class */ (function () {
                     ],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerFormatsExample.ctorParameters = function () { return []; };
     return DatepickerFormatsExample;
 }());
 
@@ -1627,8 +1577,6 @@ var DatepickerMinMaxExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerMinMaxExample.ctorParameters = function () { return []; };
     return DatepickerMinMaxExample;
 }());
 
@@ -1660,8 +1608,6 @@ var DatepickerMomentExample = /** @class */ (function () {
                     ],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerMomentExample.ctorParameters = function () { return []; };
     return DatepickerMomentExample;
 }());
 
@@ -1682,8 +1628,6 @@ var DatepickerOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerOverviewExample.ctorParameters = function () { return []; };
     return DatepickerOverviewExample;
 }());
 
@@ -1705,8 +1649,6 @@ var DatepickerStartViewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerStartViewExample.ctorParameters = function () { return []; };
     return DatepickerStartViewExample;
 }());
 
@@ -1727,8 +1669,6 @@ var DatepickerTouchExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerTouchExample.ctorParameters = function () { return []; };
     return DatepickerTouchExample;
 }());
 
@@ -1751,8 +1691,6 @@ var DatepickerValueExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerValueExample.ctorParameters = function () { return []; };
     return DatepickerValueExample;
 }());
 
@@ -1825,8 +1763,6 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
                     ],
                 },] },
     ];
-    /** @nocollapse */
-    DatepickerViewsSelectionExample.ctorParameters = function () { return []; };
     return DatepickerViewsSelectionExample;
 }());
 
@@ -1877,8 +1813,6 @@ var DialogContentExampleDialog = /** @class */ (function () {
                     template: "<h2 mat-dialog-title>Install Angular</h2><mat-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED &amp; PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></mat-dialog-content><mat-dialog-actions><button mat-button mat-dialog-close>Cancel</button> <button mat-button [mat-dialog-close]=\"true\" cdkFocusInitial>Install</button></mat-dialog-actions>",
                 },] },
     ];
-    /** @nocollapse */
-    DialogContentExampleDialog.ctorParameters = function () { return []; };
     return DialogContentExampleDialog;
 }());
 
@@ -1978,8 +1912,6 @@ var DialogElementsExampleDialog = /** @class */ (function () {
                     template: "<h1 mat-dialog-title>Dialog with elements</h1><div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div><div mat-dialog-actions><button mat-button mat-dialog-close>Close</button></div>",
                 },] },
     ];
-    /** @nocollapse */
-    DialogElementsExampleDialog.ctorParameters = function () { return []; };
     return DialogElementsExampleDialog;
 }());
 
@@ -2069,8 +2001,6 @@ var DividerOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    DividerOverviewExample.ctorParameters = function () { return []; };
     return DividerOverviewExample;
 }());
 
@@ -2092,8 +2022,6 @@ var ElevationOverviewExample = /** @class */ (function () {
                     template: "<div class=\"example-container\" [class.mat-elevation-z2]=\"!isActive\" [class.mat-elevation-z8]=\"isActive\">Example</div><button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>",
                 },] },
     ];
-    /** @nocollapse */
-    ElevationOverviewExample.ctorParameters = function () { return []; };
     return ElevationOverviewExample;
 }());
 
@@ -2115,7 +2043,6 @@ var ExpansionExpandCollapseAllExample = /** @class */ (function () {
                 },] },
     ];
     /** @nocollapse */
-    ExpansionExpandCollapseAllExample.ctorParameters = function () { return []; };
     ExpansionExpandCollapseAllExample.propDecorators = {
         "accordion": [{ type: core.ViewChild, args: [material.MatAccordion,] },],
     };
@@ -2140,8 +2067,6 @@ var ExpansionOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ExpansionOverviewExample.ctorParameters = function () { return []; };
     return ExpansionOverviewExample;
 }());
 
@@ -2192,8 +2117,6 @@ var ExpansionStepsExample = /** @class */ (function () {
                     styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
                 },] },
     ];
-    /** @nocollapse */
-    ExpansionStepsExample.ctorParameters = function () { return []; };
     return ExpansionStepsExample;
 }());
 
@@ -2413,8 +2336,6 @@ var FormFieldAppearanceExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "]
                 },] },
     ];
-    /** @nocollapse */
-    FormFieldAppearanceExample.ctorParameters = function () { return []; };
     return FormFieldAppearanceExample;
 }());
 
@@ -2627,8 +2548,6 @@ var FormFieldCustomControlExample = /** @class */ (function () {
                     template: "\n    <mat-form-field>\n      <my-tel-input placeholder=\"Phone number\" required></my-tel-input>\n      <mat-icon matSuffix>phone</mat-icon>\n      <mat-hint>Include area code</mat-hint>\n    </mat-form-field>\n  "
                 },] },
     ];
-    /** @nocollapse */
-    FormFieldCustomControlExample.ctorParameters = function () { return []; };
     return FormFieldCustomControlExample;
 }());
 
@@ -2661,8 +2580,6 @@ var FormFieldErrorExample = /** @class */ (function () {
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
                 },] },
     ];
-    /** @nocollapse */
-    FormFieldErrorExample.ctorParameters = function () { return []; };
     return FormFieldErrorExample;
 }());
 
@@ -2683,8 +2600,6 @@ var FormFieldHintExample = /** @class */ (function () {
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
                 },] },
     ];
-    /** @nocollapse */
-    FormFieldHintExample.ctorParameters = function () { return []; };
     return FormFieldHintExample;
 }());
 
@@ -2733,8 +2648,6 @@ var FormFieldOverviewExample = /** @class */ (function () {
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
                 },] },
     ];
-    /** @nocollapse */
-    FormFieldOverviewExample.ctorParameters = function () { return []; };
     return FormFieldOverviewExample;
 }());
 
@@ -2756,8 +2669,6 @@ var FormFieldPrefixSuffixExample = /** @class */ (function () {
                     styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-right-align { text-align: right; } input.example-right-align::-webkit-outer-spin-button, input.example-right-align::-webkit-inner-spin-button { display: none; } input.example-right-align { -moz-appearance: textfield; } "]
                 },] },
     ];
-    /** @nocollapse */
-    FormFieldPrefixSuffixExample.ctorParameters = function () { return []; };
     return FormFieldPrefixSuffixExample;
 }());
 
@@ -2821,8 +2732,6 @@ var GridListDynamicExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    GridListDynamicExample.ctorParameters = function () { return []; };
     return GridListDynamicExample;
 }());
 
@@ -2843,8 +2752,6 @@ var GridListOverviewExample = /** @class */ (function () {
                     template: "<mat-grid-list cols=\"2\" rowHeight=\"2:1\"><mat-grid-tile>1</mat-grid-tile><mat-grid-tile>2</mat-grid-tile><mat-grid-tile>3</mat-grid-tile><mat-grid-tile>4</mat-grid-tile></mat-grid-list>",
                 },] },
     ];
-    /** @nocollapse */
-    GridListOverviewExample.ctorParameters = function () { return []; };
     return GridListOverviewExample;
 }());
 
@@ -2865,8 +2772,6 @@ var IconOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "]
                 },] },
     ];
-    /** @nocollapse */
-    IconOverviewExample.ctorParameters = function () { return []; };
     return IconOverviewExample;
 }());
 
@@ -2914,8 +2819,6 @@ var InputClearableExample = /** @class */ (function () {
                     styles: [".example-form-field { width: 200px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    InputClearableExample.ctorParameters = function () { return []; };
     return InputClearableExample;
 }());
 
@@ -2966,8 +2869,6 @@ var InputErrorStateMatcherExample = /** @class */ (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
-    /** @nocollapse */
-    InputErrorStateMatcherExample.ctorParameters = function () { return []; };
     return InputErrorStateMatcherExample;
 }());
 
@@ -2992,8 +2893,6 @@ var InputErrorsExample = /** @class */ (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
-    /** @nocollapse */
-    InputErrorsExample.ctorParameters = function () { return []; };
     return InputErrorsExample;
 }());
 
@@ -3014,8 +2913,6 @@ var InputFormExample = /** @class */ (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
-    /** @nocollapse */
-    InputFormExample.ctorParameters = function () { return []; };
     return InputFormExample;
 }());
 
@@ -3036,8 +2933,6 @@ var InputHintExample = /** @class */ (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
-    /** @nocollapse */
-    InputHintExample.ctorParameters = function () { return []; };
     return InputHintExample;
 }());
 
@@ -3058,8 +2953,6 @@ var InputOverviewExample = /** @class */ (function () {
                     template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Favorite food\" value=\"Sushi\"></mat-form-field><mat-form-field class=\"example-full-width\"><textarea matInput placeholder=\"Leave a comment\"></textarea></mat-form-field></form>",
                 },] },
     ];
-    /** @nocollapse */
-    InputOverviewExample.ctorParameters = function () { return []; };
     return InputOverviewExample;
 }());
 
@@ -3080,8 +2973,6 @@ var InputPrefixSuffixExample = /** @class */ (function () {
                     styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
                 },] },
     ];
-    /** @nocollapse */
-    InputPrefixSuffixExample.ctorParameters = function () { return []; };
     return InputPrefixSuffixExample;
 }());
 
@@ -3102,8 +2993,6 @@ var ListOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ListOverviewExample.ctorParameters = function () { return []; };
     return ListOverviewExample;
 }());
 
@@ -3148,8 +3037,6 @@ var ListSectionsExample = /** @class */ (function () {
                     template: "<mat-list><h3 mat-subheader>Folders</h3><mat-list-item *ngFor=\"let folder of folders\"><mat-icon mat-list-icon>folder</mat-icon><h4 mat-line>{{folder.name}}</h4><p mat-line>{{folder.updated | date}}</p></mat-list-item><mat-divider></mat-divider><h3 mat-subheader>Notes</h3><mat-list-item *ngFor=\"let note of notes\"><mat-icon mat-list-icon>note</mat-icon><h4 mat-line>{{note.name}}</h4><p mat-line>{{note.updated | date}}</p></mat-list-item></mat-list>",
                 },] },
     ];
-    /** @nocollapse */
-    ListSectionsExample.ctorParameters = function () { return []; };
     return ListSectionsExample;
 }());
 
@@ -3171,8 +3058,6 @@ var ListSelectionExample = /** @class */ (function () {
                     template: "<mat-selection-list #shoes><mat-list-option *ngFor=\"let shoe of typesOfShoes\">{{shoe}}</mat-list-option></mat-selection-list><p>Options selected: {{shoes.selectedOptions.selected.length}}</p>",
                 },] },
     ];
-    /** @nocollapse */
-    ListSelectionExample.ctorParameters = function () { return []; };
     return ListSelectionExample;
 }());
 
@@ -3193,8 +3078,6 @@ var MenuIconsExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    MenuIconsExample.ctorParameters = function () { return []; };
     return MenuIconsExample;
 }());
 
@@ -3215,8 +3098,6 @@ var MenuOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    MenuOverviewExample.ctorParameters = function () { return []; };
     return MenuOverviewExample;
 }());
 
@@ -3237,8 +3118,6 @@ var NestedMenuExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "]
                 },] },
     ];
-    /** @nocollapse */
-    NestedMenuExample.ctorParameters = function () { return []; };
     return NestedMenuExample;
 }());
 
@@ -3274,8 +3153,6 @@ var PaginatorConfigurableExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    PaginatorConfigurableExample.ctorParameters = function () { return []; };
     return PaginatorConfigurableExample;
 }());
 
@@ -3296,8 +3173,6 @@ var PaginatorOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    PaginatorOverviewExample.ctorParameters = function () { return []; };
     return PaginatorOverviewExample;
 }());
 
@@ -3318,8 +3193,6 @@ var ProgressBarBufferExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ProgressBarBufferExample.ctorParameters = function () { return []; };
     return ProgressBarBufferExample;
 }());
 
@@ -3344,8 +3217,6 @@ var ProgressBarConfigurableExample = /** @class */ (function () {
                     styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    ProgressBarConfigurableExample.ctorParameters = function () { return []; };
     return ProgressBarConfigurableExample;
 }());
 
@@ -3366,8 +3237,6 @@ var ProgressBarDeterminateExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ProgressBarDeterminateExample.ctorParameters = function () { return []; };
     return ProgressBarDeterminateExample;
 }());
 
@@ -3388,8 +3257,6 @@ var ProgressBarIndeterminateExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ProgressBarIndeterminateExample.ctorParameters = function () { return []; };
     return ProgressBarIndeterminateExample;
 }());
 
@@ -3410,8 +3277,6 @@ var ProgressBarQueryExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ProgressBarQueryExample.ctorParameters = function () { return []; };
     return ProgressBarQueryExample;
 }());
 
@@ -3435,8 +3300,6 @@ var ProgressSpinnerConfigurableExample = /** @class */ (function () {
                     styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    ProgressSpinnerConfigurableExample.ctorParameters = function () { return []; };
     return ProgressSpinnerConfigurableExample;
 }());
 
@@ -3457,8 +3320,6 @@ var ProgressSpinnerOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ProgressSpinnerOverviewExample.ctorParameters = function () { return []; };
     return ProgressSpinnerOverviewExample;
 }());
 
@@ -3485,8 +3346,6 @@ var RadioNgModelExample = /** @class */ (function () {
                     styles: [".example-radio-group { display: inline-flex; flex-direction: column; } .example-radio-button { margin: 5px; } .example-selected-value { margin: 15px 0; } "],
                 },] },
     ];
-    /** @nocollapse */
-    RadioNgModelExample.ctorParameters = function () { return []; };
     return RadioNgModelExample;
 }());
 
@@ -3507,8 +3366,6 @@ var RadioOverviewExample = /** @class */ (function () {
                     styles: [".mat-radio-button ~ .mat-radio-button { padding-right: 16px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    RadioOverviewExample.ctorParameters = function () { return []; };
     return RadioOverviewExample;
 }());
 
@@ -3531,8 +3388,6 @@ var SelectCustomTriggerExample = /** @class */ (function () {
                     styles: [".example-additional-selection { opacity: 0.75; font-size: 0.75em; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectCustomTriggerExample.ctorParameters = function () { return []; };
     return SelectCustomTriggerExample;
 }());
 
@@ -3554,8 +3409,6 @@ var SelectDisabledExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectDisabledExample.ctorParameters = function () { return []; };
     return SelectDisabledExample;
 }());
 
@@ -3606,8 +3459,6 @@ var SelectErrorStateMatcherExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectErrorStateMatcherExample.ctorParameters = function () { return []; };
     return SelectErrorStateMatcherExample;
 }());
 
@@ -3633,8 +3484,6 @@ var SelectFormExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectFormExample.ctorParameters = function () { return []; };
     return SelectFormExample;
 }());
 
@@ -3662,8 +3511,6 @@ var SelectHintErrorExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectHintErrorExample.ctorParameters = function () { return []; };
     return SelectHintErrorExample;
 }());
 
@@ -3686,8 +3533,6 @@ var SelectMultipleExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectMultipleExample.ctorParameters = function () { return []; };
     return SelectMultipleExample;
 }());
 
@@ -3708,8 +3553,6 @@ var SelectNoRippleExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectNoRippleExample.ctorParameters = function () { return []; };
     return SelectNoRippleExample;
 }());
 
@@ -3765,8 +3608,6 @@ var SelectOptgroupExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectOptgroupExample.ctorParameters = function () { return []; };
     return SelectOptgroupExample;
 }());
 
@@ -3792,8 +3633,6 @@ var SelectOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectOverviewExample.ctorParameters = function () { return []; };
     return SelectOverviewExample;
 }());
 
@@ -3816,8 +3655,6 @@ var SelectPanelClassExample = /** @class */ (function () {
                     encapsulation: core.ViewEncapsulation.None,
                 },] },
     ];
-    /** @nocollapse */
-    SelectPanelClassExample.ctorParameters = function () { return []; };
     return SelectPanelClassExample;
 }());
 
@@ -3847,8 +3684,6 @@ var SelectResetExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectResetExample.ctorParameters = function () { return []; };
     return SelectResetExample;
 }());
 
@@ -3870,8 +3705,6 @@ var SelectValueBindingExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SelectValueBindingExample.ctorParameters = function () { return []; };
     return SelectValueBindingExample;
 }());
 
@@ -3893,8 +3726,6 @@ var SidenavAutosizeExample = /** @class */ (function () {
                     styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SidenavAutosizeExample.ctorParameters = function () { return []; };
     return SidenavAutosizeExample;
 }());
 
@@ -3915,8 +3746,6 @@ var SidenavBackdropExample = /** @class */ (function () {
                     styles: [".example-container { width: 400px; height: 200px; margin: 10px; border: 1px solid #555; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SidenavBackdropExample.ctorParameters = function () { return []; };
     return SidenavBackdropExample;
 }());
 
@@ -3952,7 +3781,6 @@ var SidenavDisableCloseExample = /** @class */ (function () {
                 },] },
     ];
     /** @nocollapse */
-    SidenavDisableCloseExample.ctorParameters = function () { return []; };
     SidenavDisableCloseExample.propDecorators = {
         "sidenav": [{ type: core.ViewChild, args: ['sidenav',] },],
     };
@@ -3976,8 +3804,6 @@ var SidenavDrawerOverviewExample = /** @class */ (function () {
                     styles: [".example-container { width: 400px; height: 200px; margin: 10px; border: 1px solid #555; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SidenavDrawerOverviewExample.ctorParameters = function () { return []; };
     return SidenavDrawerOverviewExample;
 }());
 
@@ -4030,8 +3856,6 @@ var SidenavModeExample = /** @class */ (function () {
                     styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } .example-radio-group { display: block; border: 1px solid #555; margin: 20px; padding: 10px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SidenavModeExample.ctorParameters = function () { return []; };
     return SidenavModeExample;
 }());
 
@@ -4054,8 +3878,6 @@ var SidenavOpenCloseExample = /** @class */ (function () {
                     styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } .example-events { width: 300px; height: 200px; overflow: auto; border: 1px solid #555; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SidenavOpenCloseExample.ctorParameters = function () { return []; };
     return SidenavOpenCloseExample;
 }());
 
@@ -4077,8 +3899,6 @@ var SidenavOverviewExample = /** @class */ (function () {
                     styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SidenavOverviewExample.ctorParameters = function () { return []; };
     return SidenavOverviewExample;
 }());
 
@@ -4100,8 +3920,6 @@ var SidenavPositionExample = /** @class */ (function () {
                     styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SidenavPositionExample.ctorParameters = function () { return []; };
     return SidenavPositionExample;
 }());
 
@@ -4167,8 +3985,6 @@ var SlideToggleConfigurableExample = /** @class */ (function () {
                     styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 10px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SlideToggleConfigurableExample.ctorParameters = function () { return []; };
     return SlideToggleConfigurableExample;
 }());
 
@@ -4229,8 +4045,6 @@ var SlideToggleOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    SlideToggleOverviewExample.ctorParameters = function () { return []; };
     return SlideToggleOverviewExample;
 }());
 
@@ -4280,8 +4094,6 @@ var SliderConfigurableExample = /** @class */ (function () {
                     encapsulation: core.ViewEncapsulation.None,
                 },] },
     ];
-    /** @nocollapse */
-    SliderConfigurableExample.ctorParameters = function () { return []; };
     return SliderConfigurableExample;
 }());
 
@@ -4319,8 +4131,6 @@ var SliderFormattingExample = /** @class */ (function () {
                     styles: ["mat-slider { width: 300px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SliderFormattingExample.ctorParameters = function () { return []; };
     return SliderFormattingExample;
 }());
 
@@ -4341,8 +4151,6 @@ var SliderOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ mat-slider { width: 300px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    SliderOverviewExample.ctorParameters = function () { return []; };
     return SliderOverviewExample;
 }());
 
@@ -4390,8 +4198,6 @@ var PizzaPartyComponent = /** @class */ (function () {
                     styles: [".example-pizza-party { color: hotpink; }"],
                 },] },
     ];
-    /** @nocollapse */
-    PizzaPartyComponent.ctorParameters = function () { return []; };
     return PizzaPartyComponent;
 }());
 
@@ -4678,8 +4484,6 @@ var TableBasicExample = /** @class */ (function () {
                     template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
                 },] },
     ];
-    /** @nocollapse */
-    TableBasicExample.ctorParameters = function () { return []; };
     return TableBasicExample;
 }());
 var /** @type {?} */ ELEMENT_DATA = [
@@ -4737,8 +4541,6 @@ var TableFilteringExample = /** @class */ (function () {
                     template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
                 },] },
     ];
-    /** @nocollapse */
-    TableFilteringExample.ctorParameters = function () { return []; };
     return TableFilteringExample;
 }());
 var /** @type {?} */ ELEMENT_DATA$1 = [
@@ -4881,8 +4683,6 @@ var TableNativeOnlyExample = /** @class */ (function () {
                     template: "<table class=\"mat-table\"><thead><tr class=\"mat-header-row\"><th class=\"mat-header-cell\">No.</th><th class=\"mat-header-cell\">Name</th><th class=\"mat-header-cell\">Weight</th><th class=\"mat-header-cell\">Symbol</th></tr></thead><tbody><tr class=\"mat-row\" *ngFor=\"let element of elements\"><td class=\"mat-cell\">{{element.position}}</td><td class=\"mat-cell\">{{element.name}}</td><td class=\"mat-cell\">{{element.weight}}</td><td class=\"mat-cell\">{{element.symbol}}</td></tr></tbody></table>",
                 },] },
     ];
-    /** @nocollapse */
-    TableNativeOnlyExample.ctorParameters = function () { return []; };
     return TableNativeOnlyExample;
 }());
 
@@ -5011,7 +4811,6 @@ var TablePaginationExample = /** @class */ (function () {
                 },] },
     ];
     /** @nocollapse */
-    TablePaginationExample.ctorParameters = function () { return []; };
     TablePaginationExample.propDecorators = {
         "paginator": [{ type: core.ViewChild, args: [material.MatPaginator,] },],
     };
@@ -5089,8 +4888,6 @@ var TableSelectionExample = /** @class */ (function () {
                     template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"select\"><th mat-header-cell *matHeaderCellDef><mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"selection.hasValue() && isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></mat-checkbox></th><td mat-cell *matCellDef=\"let row\"><mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row) : null\" [checked]=\"selection.isSelected(row)\"></mat-checkbox></td></ng-container><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" (click)=\"selection.toggle(row)\"></tr></table></div>",
                 },] },
     ];
-    /** @nocollapse */
-    TableSelectionExample.ctorParameters = function () { return []; };
     return TableSelectionExample;
 }());
 var /** @type {?} */ ELEMENT_DATA$3 = [
@@ -5153,7 +4950,6 @@ var TableSortingExample = /** @class */ (function () {
                 },] },
     ];
     /** @nocollapse */
-    TableSortingExample.ctorParameters = function () { return []; };
     TableSortingExample.propDecorators = {
         "sort": [{ type: core.ViewChild, args: [material.MatSort,] },],
     };
@@ -5199,8 +4995,6 @@ var TabsOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    TabsOverviewExample.ctorParameters = function () { return []; };
     return TabsOverviewExample;
 }());
 
@@ -5221,8 +5015,6 @@ var TabsTemplateLabelExample = /** @class */ (function () {
                     styles: [".demo-tab-group { border: 1px solid #e8e8e8; } .demo-tab-content { padding: 16px; } "]
                 },] },
     ];
-    /** @nocollapse */
-    TabsTemplateLabelExample.ctorParameters = function () { return []; };
     return TabsTemplateLabelExample;
 }());
 
@@ -5243,8 +5035,6 @@ var TextFieldAutofillDirectiveExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    TextFieldAutofillDirectiveExample.ctorParameters = function () { return []; };
     return TextFieldAutofillDirectiveExample;
 }());
 
@@ -5357,8 +5147,6 @@ var ToolbarMultirowExample = /** @class */ (function () {
                     styles: [".example-icon { padding: 0 14px; } .example-spacer { flex: 1 1 auto; } "],
                 },] },
     ];
-    /** @nocollapse */
-    ToolbarMultirowExample.ctorParameters = function () { return []; };
     return ToolbarMultirowExample;
 }());
 
@@ -5379,8 +5167,6 @@ var ToolbarOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    ToolbarOverviewExample.ctorParameters = function () { return []; };
     return ToolbarOverviewExample;
 }());
 
@@ -5401,8 +5187,6 @@ var TooltipDelayExample = /** @class */ (function () {
                     styles: ["button { margin: 8px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    TooltipDelayExample.ctorParameters = function () { return []; };
     return TooltipDelayExample;
 }());
 
@@ -5423,8 +5207,6 @@ var TooltipManualExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    TooltipManualExample.ctorParameters = function () { return []; };
     return TooltipManualExample;
 }());
 
@@ -5456,8 +5238,6 @@ var TooltipModifiedDefaultsExample = /** @class */ (function () {
                     ],
                 },] },
     ];
-    /** @nocollapse */
-    TooltipModifiedDefaultsExample.ctorParameters = function () { return []; };
     return TooltipModifiedDefaultsExample;
 }());
 
@@ -5478,8 +5258,6 @@ var TooltipOverviewExample = /** @class */ (function () {
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
-    /** @nocollapse */
-    TooltipOverviewExample.ctorParameters = function () { return []; };
     return TooltipOverviewExample;
 }());
 
@@ -5501,8 +5279,6 @@ var TooltipPositionExample = /** @class */ (function () {
                     styles: [".example-tooltip-host { display: inline-flex; align-items: center; margin: 50px; } .example-select { margin: 0 10px; } "],
                 },] },
     ];
-    /** @nocollapse */
-    TooltipPositionExample.ctorParameters = function () { return []; };
     return TooltipPositionExample;
 }());
 
@@ -6323,8 +6099,6 @@ var LoadmoreDatabase = /** @class */ (function () {
     LoadmoreDatabase.decorators = [
         { type: core.Injectable },
     ];
-    /** @nocollapse */
-    LoadmoreDatabase.ctorParameters = function () { return []; };
     return LoadmoreDatabase;
 }());
 /**
@@ -7284,8 +7058,6 @@ var ExampleModule = /** @class */ (function () {
                     ]
                 },] },
     ];
-    /** @nocollapse */
-    ExampleModule.ctorParameters = function () { return []; };
     return ExampleModule;
 }());
 
