@@ -272,7 +272,7 @@ var AutocompleteFilterExample = /** @class */ (function () {
      */
     function (val) {
         return this.options.filter(function (option) {
-            return option.toLowerCase().includes(val.toLowerCase());
+            return option.toLowerCase().indexOf(val.toLowerCase()) === 0;
         });
     };
     AutocompleteFilterExample.decorators = [
