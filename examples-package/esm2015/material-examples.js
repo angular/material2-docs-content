@@ -227,7 +227,7 @@ class AutocompleteFilterExample {
      * @return {?}
      */
     filter(val) {
-        return this.options.filter(option => option.toLowerCase().indexOf(val.toLowerCase()) === 0);
+        return this.options.filter(option => option.toLowerCase().includes(val.toLowerCase()));
     }
 }
 AutocompleteFilterExample.decorators = [
