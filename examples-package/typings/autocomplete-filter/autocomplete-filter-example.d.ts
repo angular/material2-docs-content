@@ -1,5 +1,5 @@
 import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 /**
  * @title Filter autocomplete
  */

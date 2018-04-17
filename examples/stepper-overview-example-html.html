@@ -1,7 +1,6 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"isLinear = !isLinear"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"toggle-linear"</span>&gt;</span>
-  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> [<span class="hljs-attr">linear</span>]=<span class="hljs-string">"isLinear"</span> #<span class="hljs-attr">stepper</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"isLinear = true"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"toggle-linear"</span>&gt;</span>Enable linear mode<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span> [<span class="hljs-attr">linear</span>]=<span class="hljs-string">"isLinear"</span> #<span class="hljs-attr">stepper</span>=<span class="hljs-string">"matHorizontalStepper"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> [<span class="hljs-attr">stepControl</span>]=<span class="hljs-string">"firstFormGroup"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"firstFormGroup"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matStepLabel</span>&gt;</span>Fill out your name<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>

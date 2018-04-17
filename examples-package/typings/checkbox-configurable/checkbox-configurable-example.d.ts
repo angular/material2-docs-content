@@ -4,6 +4,6 @@
 export declare class CheckboxConfigurableExample {
     checked: boolean;
     indeterminate: boolean;
-    labelPosition: string;
+    align: string;
     disabled: boolean;
 }

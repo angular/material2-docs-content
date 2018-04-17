@@ -1,5 +1,5 @@
 import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 export declare class State {
     name: string;
     population: string;

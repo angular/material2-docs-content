@@ -5,28 +5,31 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule, Component, Injectable, ElementRef, ViewChild, ChangeDetectionStrategy, ChangeDetectorRef, Host, Inject, ViewEncapsulation, NgZone, Input } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, Inject, Input, NgModule, ViewChild, ViewEncapsulation } from '@angular/core';
+import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { CdkTableModule } from '@angular/cdk/table';
-import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
-import { MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatPaginatorModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule, MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
-import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { map, startWith, takeUntil, catchError, switchMap, take } from 'rxjs/operators';
+import { MAT_DIALOG_DATA, MAT_TOOLTIP_DEFAULT_OPTIONS, MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialog, MatDialogModule, MatDialogRef, MatDividerModule, MatExpansionModule, MatFormFieldControl, MatFormFieldModule, MatGridListModule, MatIconModule, MatIconRegistry, MatInputModule, MatListModule, MatMenuModule, MatPaginator, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBar, MatSnackBarModule, MatSort, MatSortModule, MatStepperModule, MatTableDataSource, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule } from '@angular/material';
+import { startWith } from 'rxjs/operators/startWith';
+import { map } from 'rxjs/operators/map';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
-import { BehaviorSubject, of, Subject, merge } from 'rxjs';
-import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { MAT_MOMENT_DATE_FORMATS, MomentDateAdapter } from '@angular/material-moment-adapter';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
-import { MomentDateAdapter, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import * as _rollupMoment from 'moment';
-import _rollupMoment__default, {  } from 'moment';
+import _rollupMoment__default from 'moment';
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { Subject } from 'rxjs/Subject';
 import { DomSanitizer } from '@angular/platform-browser';
 import '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
-import { AutofillMonitor } from '@angular/cdk/text-field';
-import { CommonModule } from '@angular/common';
+import { merge } from 'rxjs/observable/merge';
+import { of } from 'rxjs/observable/of';
+import { catchError } from 'rxjs/operators/catchError';
+import { switchMap } from 'rxjs/operators/switchMap';
 
 /**
  * @fileoverview added by tsickle
@@ -36,45 +39,8 @@ class ExampleMaterialModule {
 }
 ExampleMaterialModule.decorators = [
     { type: NgModule, args: [{
-                imports: [
-                    CdkTableModule,
-                    CdkTreeModule,
-                    MatAutocompleteModule,
-                    MatButtonModule,
-                    MatButtonToggleModule,
-                    MatCardModule,
-                    MatCheckboxModule,
-                    MatChipsModule,
-                    MatDatepickerModule,
-                    MatDialogModule,
-                    MatDividerModule,
-                    MatExpansionModule,
-                    MatFormFieldModule,
-                    MatGridListModule,
-                    MatIconModule,
-                    MatInputModule,
-                    MatListModule,
-                    MatMenuModule,
-                    MatPaginatorModule,
-                    MatProgressBarModule,
-                    MatProgressSpinnerModule,
-                    MatRadioModule,
-                    MatSelectModule,
-                    MatSidenavModule,
-                    MatSlideToggleModule,
-                    MatSliderModule,
-                    MatSnackBarModule,
-                    MatSortModule,
-                    MatStepperModule,
-                    MatTableModule,
-                    MatTabsModule,
-                    MatToolbarModule,
-                    MatTooltipModule,
-                    MatTreeModule
-                ],
                 exports: [
                     CdkTableModule,
-                    CdkTreeModule,
                     MatAutocompleteModule,
                     MatButtonModule,
                     MatButtonToggleModule,
@@ -91,25 +57,26 @@ ExampleMaterialModule.decorators = [
                     MatInputModule,
                     MatListModule,
                     MatMenuModule,
-                    MatPaginatorModule,
                     MatProgressBarModule,
                     MatProgressSpinnerModule,
                     MatRadioModule,
                     MatSelectModule,
-                    MatSidenavModule,
                     MatSlideToggleModule,
                     MatSliderModule,
+                    MatSidenavModule,
                     MatSnackBarModule,
-                    MatSortModule,
                     MatStepperModule,
-                    MatTableModule,
                     MatTabsModule,
                     MatToolbarModule,
                     MatTooltipModule,
-                    MatTreeModule
+                    MatPaginatorModule,
+                    MatSortModule,
+                    MatTableModule
                 ]
             },] },
 ];
+/** @nocollapse */
+ExampleMaterialModule.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -144,6 +111,8 @@ AutocompleteAutoActiveFirstOptionExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
+/** @nocollapse */
+AutocompleteAutoActiveFirstOptionExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -198,6 +167,8 @@ AutocompleteDisplayExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
+/** @nocollapse */
+AutocompleteDisplayExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -227,7 +198,7 @@ class AutocompleteFilterExample {
      * @return {?}
      */
     filter(val) {
-        return this.options.filter(option => option.toLowerCase().includes(val.toLowerCase()));
+        return this.options.filter(option => option.toLowerCase().indexOf(val.toLowerCase()) === 0);
     }
 }
 AutocompleteFilterExample.decorators = [
@@ -237,11 +208,14 @@ AutocompleteFilterExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
+/** @nocollapse */
+AutocompleteFilterExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+
 /**
  * \@title Autocomplete overview
  */
@@ -319,65 +293,8 @@ AutocompleteSimpleExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
             },] },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Bottom Sheet Overview
- */
-class BottomSheetOverviewExample {
-    /**
-     * @param {?} bottomSheet
-     */
-    constructor(bottomSheet) {
-        this.bottomSheet = bottomSheet;
-    }
-    /**
-     * @return {?}
-     */
-    openBottomSheet() {
-        this.bottomSheet.open(BottomSheetOverviewExampleSheet);
-    }
-}
-BottomSheetOverviewExample.decorators = [
-    { type: Component, args: [{
-                selector: 'bottom-sheet-overview-example',
-                template: "<p>You have receive a file called \"cat-picture.jpeg\".</p><button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>",
-                styles: ["/** No CSS for this example */ "],
-            },] },
-];
 /** @nocollapse */
-BottomSheetOverviewExample.ctorParameters = () => [
-    { type: MatBottomSheet, },
-];
-class BottomSheetOverviewExampleSheet {
-    /**
-     * @param {?} bottomSheetRef
-     */
-    constructor(bottomSheetRef) {
-        this.bottomSheetRef = bottomSheetRef;
-    }
-    /**
-     * @param {?} event
-     * @return {?}
-     */
-    openLink(event) {
-        this.bottomSheetRef.dismiss();
-        event.preventDefault();
-    }
-}
-BottomSheetOverviewExampleSheet.decorators = [
-    { type: Component, args: [{
-                selector: 'bottom-sheet-overview-example-sheet',
-                template: "<mat-nav-list><a href=\"https://keep.google.com/\" mat-list-item (click)=\"openLink($event)\"><span mat-line>Google Keep</span> <span mat-line>Add to a note</span> </a><a href=\"https://docs.google.com/\" mat-list-item (click)=\"openLink($event)\"><span mat-line>Google Docs</span> <span mat-line>Embed in a document</span> </a><a href=\"https://plus.google.com/\" mat-list-item (click)=\"openLink($event)\"><span mat-line>Google Plus</span> <span mat-line>Share with your friends</span> </a><a href=\"https://hangouts.google.com/\" mat-list-item (click)=\"openLink($event)\"><span mat-line>Google Hangouts</span> <span mat-line>Show to your coworkers</span></a></mat-nav-list>",
-            },] },
-];
-/** @nocollapse */
-BottomSheetOverviewExampleSheet.ctorParameters = () => [
-    { type: MatBottomSheetRef, },
-];
+AutocompleteSimpleExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -395,6 +312,8 @@ ButtonOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ButtonOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -412,6 +331,8 @@ ButtonToggleExclusiveExample.decorators = [
                 styles: [".example-selected-value { margin: 15px 0; } "],
             },] },
 ];
+/** @nocollapse */
+ButtonToggleExclusiveExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -425,10 +346,12 @@ class ButtonToggleOverviewExample {
 ButtonToggleOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'button-toggle-overview-example',
-                template: "<mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\"><mat-button-toggle value=\"bold\">Bold</mat-button-toggle><mat-button-toggle value=\"italic\">Italic</mat-button-toggle><mat-button-toggle value=\"underline\">Underline</mat-button-toggle></mat-button-toggle-group>",
+                template: "<mat-button-toggle>Toggle me!</mat-button-toggle>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ButtonToggleOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -446,6 +369,8 @@ ButtonTypesExample.decorators = [
                 styles: [".example-button-row { display: flex; align-items: center; justify-content: space-around; } "],
             },] },
 ];
+/** @nocollapse */
+ButtonTypesExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -463,6 +388,8 @@ CardFancyExample.decorators = [
                 styles: [".example-card { max-width: 400px; } .example-header-image { background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); background-size: cover; } "],
             },] },
 ];
+/** @nocollapse */
+CardFancyExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -480,6 +407,8 @@ CardOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+CardOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -507,14 +436,20 @@ CdkTableBasicExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><cdk-table #table [dataSource]=\"dataSource\" class=\"example-table\"><ng-container cdkColumnDef=\"userId\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">ID</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.id}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"progress\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Progress</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.progress}}%</cdk-cell></ng-container><ng-container cdkColumnDef=\"userName\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Name</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.name}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"color\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Color</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\" [style.color]=\"row.color\">{{row.color}}</cdk-cell></ng-container><cdk-header-row *cdkHeaderRowDef=\"displayedColumns\" class=\"example-header-row\"></cdk-header-row><cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\" class=\"example-row\"></cdk-row></cdk-table></div>",
             },] },
 ];
+/** @nocollapse */
+CdkTableBasicExample.ctorParameters = () => [];
 /**
  * Constants used to fill up our data base.
  */
-const /** @type {?} */ COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+/**
+ * @record
+ */
+
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
@@ -590,314 +525,25 @@ class ExampleDataSource extends DataSource {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * File node data with nested structure.
- * Each node has a filename, and a type or a list of children.
- */
-class FileNode {
-}
-/**
- * Flat node with expandable and level information
- */
-class FileFlatNode {
-}
-/**
- * The file structure tree data in string. The data could be parsed into a Json object
- */
-const /** @type {?} */ TREE_DATA = `
-  {
-    "Documents": {
-      "angular": {
-        "src": {
-          "core": "ts",
-          "compiler": "ts"
-        }
-      },
-      "material2": {
-        "src": {
-          "button": "ts",
-          "checkbox": "ts",
-          "input": "ts"
-        }
-      }
-    },
-    "Downloads": {
-        "Tutorial": "html",
-        "November": "pdf",
-        "October": "pdf"
-    },
-    "Pictures": {
-        "Sun": "png",
-        "Woods": "jpg",
-        "Photo Booth Library": {
-          "Contents": "dir",
-          "Pictures": "dir"
-        }
-    },
-    "Applications": {
-        "Chrome": "app",
-        "Calendar": "app",
-        "Webstorm": "app"
-    }
-}`;
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-class FileDatabase {
-    constructor() {
-        this.dataChange = new BehaviorSubject([]);
-        this.initialize();
-    }
-    /**
-     * @return {?}
-     */
-    get data() { return this.dataChange.value; }
-    /**
-     * @return {?}
-     */
-    initialize() {
-        // Parse the string to json object.
-        const /** @type {?} */ dataObject = JSON.parse(TREE_DATA);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        const /** @type {?} */ data = this.buildFileTree(dataObject, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    }
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     * @param {?} value
-     * @param {?} level
-     * @return {?}
-     */
-    buildFileTree(value, level) {
-        let /** @type {?} */ data = [];
-        for (let /** @type {?} */ k in value) {
-            let /** @type {?} */ v = value[k];
-            let /** @type {?} */ node = new FileNode();
-            node.filename = `${k}`;
-            if (v === null || v === undefined) {
-                // no action
-            }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.type = v;
-            }
-            data.push(node);
-        }
-        return data;
-    }
-}
-FileDatabase.decorators = [
-    { type: Injectable },
-];
-/** @nocollapse */
-FileDatabase.ctorParameters = () => [];
-/**
- * \@title Tree with flat nodes
- */
-class CdkTreeFlatExample {
-    /**
-     * @param {?} database
-     */
-    constructor(database) {
-        this.transformer = (node, level) => {
-            let /** @type {?} */ flatNode = new FileFlatNode();
-            flatNode.filename = node.filename;
-            flatNode.type = node.type;
-            flatNode.level = level;
-            flatNode.expandable = !!node.children;
-            return flatNode;
-        };
-        this._getLevel = (node) => { return node.level; };
-        this._isExpandable = (node) => { return node.expandable; };
-        this._getChildren = (node) => { return of(node.children); };
-        this.hasChild = (_, _nodeData) => { return _nodeData.expandable; };
-        this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
-        this.treeControl = new FlatTreeControl(this._getLevel, this._isExpandable);
-        this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe(data => {
-            this.dataSource.data = data;
-        });
-    }
-}
-CdkTreeFlatExample.decorators = [
-    { type: Component, args: [{
-                selector: 'cdk-tree-flat-example',
-                template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding class=\"demo-tree-node\"><button mat-icon-button disabled=\"disabled\"></button> {{node.filename}}: {{node.type}}</cdk-tree-node><cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding class=\"demo-tree-node\"><button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" cdkTreeNodeToggle><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}: {{node.type}}</cdk-tree-node></cdk-tree>",
-                styles: [".demo-tree-node { display: flex; align-items: center; } "],
-                providers: [FileDatabase]
-            },] },
-];
-/** @nocollapse */
-CdkTreeFlatExample.ctorParameters = () => [
-    { type: FileDatabase, },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * Json node data with nested structure. Each node has a filename and a value or a list of children
- */
-let FileNode$1 = class FileNode {
-};
-/**
- * The Json tree data in string. The data could be parsed into Json object
- */
-const /** @type {?} */ TREE_DATA$1 = `
-  {
-    "Documents": {
-      "angular": {
-        "src": {
-          "core": "ts",
-          "compiler": "ts"
-        }
-      },
-      "material2": {
-        "src": {
-          "button": "ts",
-          "checkbox": "ts",
-          "input": "ts"
-        }
-      }
-    },
-    "Downloads": {
-        "Tutorial": "html",
-        "November": "pdf",
-        "October": "pdf"
-    },
-    "Pictures": {
-        "Sun": "png",
-        "Woods": "jpg",
-        "Photo Booth Library": {
-          "Contents": "dir",
-          "Pictures": "dir"
-        }
-    },
-    "Applications": {
-        "Chrome": "app",
-        "Calendar": "app",
-        "Webstorm": "app"
-    }
-  }`;
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-let FileDatabase$1 = class FileDatabase {
-    constructor() {
-        this.dataChange = new BehaviorSubject([]);
-        this.initialize();
-    }
-    /**
-     * @return {?}
-     */
-    get data() { return this.dataChange.value; }
-    /**
-     * @return {?}
-     */
-    initialize() {
-        // Parse the string to json object.
-        const /** @type {?} */ dataObject = JSON.parse(TREE_DATA$1);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        const /** @type {?} */ data = this.buildFileTree(dataObject, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    }
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     * @param {?} value
-     * @param {?} level
-     * @return {?}
-     */
-    buildFileTree(value, level) {
-        let /** @type {?} */ data = [];
-        for (let /** @type {?} */ k in value) {
-            let /** @type {?} */ v = value[k];
-            let /** @type {?} */ node = new FileNode$1();
-            node.filename = `${k}`;
-            if (v === null || v === undefined) {
-                // no action
-            }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.type = v;
-            }
-            data.push(node);
-        }
-        return data;
-    }
-};
-FileDatabase$1.decorators = [
-    { type: Injectable },
-];
-/** @nocollapse */
-FileDatabase$1.ctorParameters = () => [];
-/**
- * \@title Tree with nested nodes
- */
-class CdkTreeNestedExample {
-    /**
-     * @param {?} database
-     */
-    constructor(database) {
-        this._getChildren = (node) => { return of(node.children); };
-        this.hasNestedChild = (_, nodeData) => { return !(nodeData.type); };
-        this.nestedTreeControl = new NestedTreeControl(this._getChildren);
-        this.nestedDataSource = new MatTreeNestedDataSource();
-        database.dataChange.subscribe(data => this.nestedDataSource.data = data);
-    }
-}
-CdkTreeNestedExample.decorators = [
-    { type: Component, args: [{
-                selector: 'cdk-tree-nested-example',
-                template: "<cdk-tree [dataSource]=\"nestedDataSource\" [treeControl]=\"nestedTreeControl\"><cdk-nested-tree-node *cdkTreeNodeDef=\"let node\" class=\"example-tree-node\"><button mat-icon-button disabled=\"disabled\"></button> {{node.filename}}: {{node.type}}</cdk-nested-tree-node><cdk-nested-tree-node *cdkTreeNodeDef=\"let node; when: hasNestedChild\" class=\"example-tree-node\"><button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" cdkTreeNodeToggle><mat-icon>{{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}: {{node.type}}<div [class.example-tree-invisible]=\"!nestedTreeControl.isExpanded(node)\"><ng-container cdkTreeNodeOutlet></ng-container></div></cdk-nested-tree-node></cdk-tree>",
-                styles: [".example-tree-invisible { display: none; } .example-tree ul, .example-tree li { margin-top: 0; margin-bottom: 0; list-style-type: none; } .example-tree-node { display: block; padding-left: 40px; } "],
-                providers: [FileDatabase$1]
-            },] },
-];
-/** @nocollapse */
-CdkTreeNestedExample.ctorParameters = () => [
-    { type: FileDatabase$1, },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
  * \@title Configurable checkbox
  */
 class CheckboxConfigurableExample {
     constructor() {
         this.checked = false;
         this.indeterminate = false;
-        this.labelPosition = 'after';
+        this.align = 'start';
         this.disabled = false;
     }
 }
 CheckboxConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'checkbox-configurable-example',
-                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Checkbox configuration</h2><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"indeterminate\">Indeterminate</mat-checkbox></section><section class=\"example-section\"><label class=\"example-margin\">Align:</label><mat-radio-group [(ngModel)]=\"labelPosition\"><mat-radio-button class=\"example-margin\" value=\"after\">After</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"before\">Before</mat-radio-button></mat-radio-group></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox></section></mat-card-content></mat-card><mat-card class=\"result\"><mat-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\" [(indeterminate)]=\"indeterminate\" [labelPosition]=\"labelPosition\" [disabled]=\"disabled\">I'm a checkbox</mat-checkbox></section></mat-card-content></mat-card>",
+                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Checkbox configuration</h2><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"indeterminate\">Indeterminate</mat-checkbox></section><section class=\"example-section\"><label class=\"example-margin\">Align:</label><mat-radio-group [(ngModel)]=\"align\"><mat-radio-button class=\"example-margin\" value=\"start\">Start</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"end\">End</mat-radio-button></mat-radio-group></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox></section></mat-card-content></mat-card><mat-card class=\"result\"><mat-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\" [(indeterminate)]=\"indeterminate\" [align]=\"align\" [disabled]=\"disabled\">I'm a checkbox</mat-checkbox></section></mat-card-content></mat-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
+/** @nocollapse */
+CheckboxConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -915,87 +561,8 @@ CheckboxOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Chips Autocomplete
- */
-class ChipsAutocompleteExample {
-    constructor() {
-        this.visible = true;
-        this.selectable = true;
-        this.removable = true;
-        this.addOnBlur = false;
-        this.separatorKeysCodes = [ENTER, COMMA];
-        this.fruitCtrl = new FormControl();
-        this.fruits = [
-            { name: 'Lemon' },
-        ];
-        this.allFruits = [
-            'Orange',
-            'Strawberry',
-            'Lime',
-            'Apple',
-        ];
-        this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith(null), map((fruit) => fruit ? this.filter(fruit) : this.allFruits.slice()));
-    }
-    /**
-     * @param {?} event
-     * @return {?}
-     */
-    add(event) {
-        const /** @type {?} */ input = event.input;
-        const /** @type {?} */ value = event.value;
-        // Add our fruit
-        if ((value || '').trim()) {
-            this.fruits.push({ name: value.trim() });
-        }
-        // Reset the input value
-        if (input) {
-            input.value = '';
-        }
-    }
-    /**
-     * @param {?} fruit
-     * @return {?}
-     */
-    remove(fruit) {
-        const /** @type {?} */ index = this.fruits.indexOf(fruit);
-        if (index >= 0) {
-            this.fruits.splice(index, 1);
-        }
-    }
-    /**
-     * @param {?} name
-     * @return {?}
-     */
-    filter(name) {
-        return this.allFruits.filter(fruit => fruit.toLowerCase().indexOf(name.toLowerCase()) === 0);
-    }
-    /**
-     * @param {?} event
-     * @return {?}
-     */
-    selected(event) {
-        this.fruits.push({ name: event.option.viewValue });
-        this.fruitInput.nativeElement.value = '';
-    }
-}
-ChipsAutocompleteExample.decorators = [
-    { type: Component, args: [{
-                selector: 'chips-autocomplete-example',
-                template: "<mat-form-field class=\"demo-chip-list\"><mat-chip-list #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (remove)=\"remove(fruit)\">{{fruit.name}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip><input placeholder=\"New fruit...\" #fruitInput [formControl]=\"fruitCtrl\" [matAutocomplete]=\"auto\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-chip-list><mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\"><mat-option *ngFor=\"let fruit of filteredFruits | async\" [value]=\"fruit\">{{ fruit }}</mat-option></mat-autocomplete></mat-form-field>",
-                styles: [".demo-chip-list { width: 100%; } "]
-            },] },
-];
 /** @nocollapse */
-ChipsAutocompleteExample.ctorParameters = () => [];
-ChipsAutocompleteExample.propDecorators = {
-    "fruitInput": [{ type: ViewChild, args: ['fruitInput',] },],
-};
+CheckboxOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1048,10 +615,12 @@ class ChipsInputExample {
 ChipsInputExample.decorators = [
     { type: Component, args: [{
                 selector: 'chips-input-example',
-                template: "<mat-form-field class=\"demo-chip-list\"><mat-chip-list #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (removed)=\"remove(fruit)\">{{fruit.name}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip><input placeholder=\"New fruit...\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-chip-list></mat-form-field>",
+                template: "<mat-form-field class=\"demo-chip-list\"><mat-chip-list #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (remove)=\"remove(fruit)\">{{fruit.name}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip><input placeholder=\"New fruit...\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-chip-list></mat-form-field>",
                 styles: [".demo-chip-list { width: 100%; } "]
             },] },
 ];
+/** @nocollapse */
+ChipsInputExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1069,6 +638,8 @@ ChipsOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ChipsOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1094,6 +665,8 @@ ChipsStackedExample.decorators = [
                 styles: ["mat-chip { max-width: 200px; } "],
             },] },
 ];
+/** @nocollapse */
+ChipsStackedExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1111,132 +684,8 @@ DatepickerApiExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Datepicker palette colors
- */
-class DatepickerColorExample {
-}
-DatepickerColorExample.decorators = [
-    { type: Component, args: [{
-                selector: 'datepicker-color-example',
-                template: "<mat-form-field color=\"accent\"><mat-label>Inherited calendar color</mat-label><input matInput [matDatepicker]=\"picker1\"><mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle><mat-datepicker #picker1></mat-datepicker></mat-form-field><mat-form-field color=\"accent\"><mat-label>Custom calendar color</mat-label><input matInput [matDatepicker]=\"picker2\"><mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle><mat-datepicker #picker2 color=\"primary\"></mat-datepicker></mat-form-field>",
-                styles: ["/** No CSS for this example */ "],
-            },] },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Datepicker with custom calendar header
- */
-class DatepickerCustomHeaderExample {
-    constructor() {
-        this.exampleHeader = ExampleHeader;
-    }
-}
-DatepickerCustomHeaderExample.decorators = [
-    { type: Component, args: [{
-                selector: 'datepicker-custom-header-example',
-                template: "<mat-form-field><mat-label>Custom calendar header</mat-label><input matInput [matDatepicker]=\"picker\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker [calendarHeaderComponent]=\"exampleHeader\"></mat-datepicker></mat-form-field>",
-                styles: [".example-header { display: flex; align-items: center; padding: 0.5em; } .example-header-label { flex: 1; height: 1em; font-weight: bold; text-align: center; } .example-double-arrow .mat-icon { margin: -22%; } "],
-                encapsulation: ViewEncapsulation.None,
-                changeDetection: ChangeDetectionStrategy.OnPush,
-            },] },
-];
-/**
- * Custom header component for datepicker.
- * @template D
- */
-class ExampleHeader {
-    /**
-     * @param {?} calendar
-     * @param {?} dateAdapter
-     * @param {?} dateFormats
-     * @param {?} cdr
-     */
-    constructor(calendar, dateAdapter, dateFormats, cdr) {
-        this.calendar = calendar;
-        this.dateAdapter = dateAdapter;
-        this.dateFormats = dateFormats;
-        this.destroyed = new Subject();
-        calendar.stateChanges
-            .pipe(takeUntil(this.destroyed))
-            .subscribe(() => cdr.markForCheck());
-    }
-    /**
-     * @return {?}
-     */
-    ngOnDestroy() {
-        this.destroyed.next();
-        this.destroyed.complete();
-    }
-    /**
-     * @return {?}
-     */
-    get periodLabel() {
-        return this.dateAdapter
-            .format(this.calendar.activeDate, this.dateFormats.display.monthYearLabel)
-            .toLocaleUpperCase();
-    }
-    /**
-     * @param {?} mode
-     * @return {?}
-     */
-    previousClicked(mode) {
-        this.calendar.activeDate = mode == 'month' ?
-            this.dateAdapter.addCalendarMonths(this.calendar.activeDate, -1) :
-            this.dateAdapter.addCalendarYears(this.calendar.activeDate, -1);
-    }
-    /**
-     * @param {?} mode
-     * @return {?}
-     */
-    nextClicked(mode) {
-        this.calendar.activeDate = mode == 'month' ?
-            this.dateAdapter.addCalendarMonths(this.calendar.activeDate, 1) :
-            this.dateAdapter.addCalendarYears(this.calendar.activeDate, 1);
-    }
-}
-ExampleHeader.decorators = [
-    { type: Component, args: [{
-                selector: 'example-header',
-                template: `
-    <div class="example-header">
-      <button mat-icon-button class="example-double-arrow" (click)="previousClicked('year')">
-        <mat-icon>keyboard_arrow_left</mat-icon>
-        <mat-icon>keyboard_arrow_left</mat-icon>
-      </button>
-      <button mat-icon-button (click)="previousClicked('month')">
-        <mat-icon>keyboard_arrow_left</mat-icon>
-      </button>
-      <span class="example-header-label">{{periodLabel}}</span>
-      <button mat-icon-button (click)="nextClicked('month')">
-        <mat-icon>keyboard_arrow_right</mat-icon>
-      </button>
-      <button mat-icon-button class="example-double-arrow" (click)="nextClicked('year')">
-        <mat-icon>keyboard_arrow_right</mat-icon>
-        <mat-icon>keyboard_arrow_right</mat-icon>
-      </button>
-    </div>
-  `,
-                encapsulation: ViewEncapsulation.None,
-                changeDetection: ChangeDetectionStrategy.OnPush,
-            },] },
-];
 /** @nocollapse */
-ExampleHeader.ctorParameters = () => [
-    { type: MatCalendar, decorators: [{ type: Host },] },
-    { type: DateAdapter, },
-    { type: undefined, decorators: [{ type: Inject, args: [MAT_DATE_FORMATS,] },] },
-    { type: ChangeDetectorRef, },
-];
+DatepickerApiExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1254,6 +703,8 @@ DatepickerCustomIconExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+DatepickerCustomIconExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1271,6 +722,8 @@ DatepickerDisabledExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+DatepickerDisabledExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1299,6 +752,8 @@ DatepickerEventsExample.decorators = [
                 styles: [".example-events { width: 400px; height: 200px; border: 1px solid #555; overflow: auto; } "],
             },] },
 ];
+/** @nocollapse */
+DatepickerEventsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1323,15 +778,17 @@ DatepickerFilterExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+DatepickerFilterExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ moment = _rollupMoment__default || _rollupMoment;
+const moment = _rollupMoment__default || _rollupMoment;
 // See the Moment.js docs for the meaning of these formats:
 // https://momentjs.com/docs/#/displaying/format/
-const /** @type {?} */ MY_FORMATS = {
+const MY_FORMATS = {
     parse: {
         dateInput: 'LL',
     },
@@ -1364,6 +821,8 @@ DatepickerFormatsExample.decorators = [
                 ],
             },] },
 ];
+/** @nocollapse */
+DatepickerFormatsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1429,12 +888,14 @@ DatepickerMinMaxExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+DatepickerMinMaxExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ moment$1 = _rollupMoment__default || _rollupMoment;
+const moment$1 = _rollupMoment__default || _rollupMoment;
 const ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker that uses Moment.js dates
@@ -1459,6 +920,8 @@ DatepickerMomentExample.decorators = [
                 ],
             },] },
 ];
+/** @nocollapse */
+DatepickerMomentExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1476,6 +939,8 @@ DatepickerOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+DatepickerOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1496,6 +961,8 @@ DatepickerStartViewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+DatepickerStartViewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1513,6 +980,8 @@ DatepickerTouchExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+DatepickerTouchExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1534,68 +1003,8 @@ DatepickerValueExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-const /** @type {?} */ moment$2 = _rollupMoment__default || _rollupMoment;
-// See the Moment.js docs for the meaning of these formats:
-// https://momentjs.com/docs/#/displaying/format/
-const /** @type {?} */ MY_FORMATS$1 = {
-    parse: {
-        dateInput: 'MM/YYYY',
-    },
-    display: {
-        dateInput: 'MM/YYYY',
-        monthYearLabel: 'MMM YYYY',
-        dateA11yLabel: 'LL',
-        monthYearA11yLabel: 'MMMM YYYY',
-    },
-};
-/**
- * \@title Datepicker emulating a Year and month picker
- */
-class DatepickerViewsSelectionExample {
-    constructor() {
-        this.date = new FormControl(moment$2());
-    }
-    /**
-     * @param {?} normalizedYear
-     * @return {?}
-     */
-    chosenYearHandler(normalizedYear) {
-        const /** @type {?} */ ctrlValue = this.date.value;
-        ctrlValue.year(normalizedYear.year());
-        this.date.setValue(ctrlValue);
-    }
-    /**
-     * @param {?} normlizedMonth
-     * @param {?} datepicker
-     * @return {?}
-     */
-    chosenMonthHandler(normlizedMonth, datepicker) {
-        const /** @type {?} */ ctrlValue = this.date.value;
-        ctrlValue.month(normlizedMonth.month());
-        this.date.setValue(ctrlValue);
-        datepicker.close();
-    }
-}
-DatepickerViewsSelectionExample.decorators = [
-    { type: Component, args: [{
-                selector: 'datepicker-views-selection-example',
-                template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Month and Year\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp startView=\"multi-year\" (yearSelected)=\"chosenYearHandler($event)\" (monthSelected)=\"chosenMonthHandler($event, dp)\" panelClass=\"example-month-picker\"></mat-datepicker></mat-form-field>",
-                styles: [".example-month-picker .mat-calendar-period-button { pointer-events: none; } .example-month-picker .mat-calendar-arrow { display: none; } "],
-                encapsulation: ViewEncapsulation.None,
-                providers: [
-                    // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
-                    // application's root module. We provide it at the component level here, due to limitations of
-                    // our example generation script.
-                    { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS$1 },
-                ],
-            },] },
-];
+/** @nocollapse */
+DatepickerValueExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1642,6 +1051,8 @@ DialogContentExampleDialog.decorators = [
                 template: "<h2 mat-dialog-title>Install Angular</h2><mat-dialog-content><h3>DEVELOP ACROSS ALL PLATFORMS</h3><p>Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.</p><h3>SPEED &amp; PERFORMANCE</h3><p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. Angular puts you in control over scalability. Meet huge data requirements by building data models on RxJS, Immutable.js or another push-model.</p><h3>INCREDIBLE TOOLING</h3><p>Build features quickly with simple, declarative templates. Extend the template language with your own components and use a wide array of existing components. Get immediate Angular-specific help and feedback with nearly every IDE and editor. All this comes together so you can focus on building amazing apps rather than trying to make the code work.</p><h3>LOVED BY MILLIONS</h3><p>From prototype through global deployment, Angular delivers the productivity and scalable infrastructure that supports Google's largest applications.</p></mat-dialog-content><mat-dialog-actions><button mat-button mat-dialog-close>Cancel</button> <button mat-button [mat-dialog-close]=\"true\" cdkFocusInitial>Install</button></mat-dialog-actions>",
             },] },
 ];
+/** @nocollapse */
+DialogContentExampleDialog.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1738,6 +1149,8 @@ DialogElementsExampleDialog.decorators = [
                 template: "<h1 mat-dialog-title>Dialog with elements</h1><div mat-dialog-content>This dialog showcases the title, close, content and actions elements.</div><div mat-dialog-actions><button mat-button mat-dialog-close>Close</button></div>",
             },] },
 ];
+/** @nocollapse */
+DialogElementsExampleDialog.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1822,6 +1235,8 @@ DividerOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+DividerOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1842,27 +1257,8 @@ ElevationOverviewExample.decorators = [
                 template: "<div class=\"example-container\" [class.mat-elevation-z2]=\"!isActive\" [class.mat-elevation-z8]=\"isActive\">Example</div><button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>",
             },] },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Accordion with expand/collapse all toggles
- */
-class ExpansionExpandCollapseAllExample {
-}
-ExpansionExpandCollapseAllExample.decorators = [
-    { type: Component, args: [{
-                selector: 'expansion-toggle-all-example',
-                template: "<div class=\"example-action-buttons\"><button mat-button (click)=\"accordion.openAll()\">Expand All</button> <button mat-button (click)=\"accordion.closeAll()\">Collapse All</button></div><mat-accordion class=\"example-headers-align\" [multi]=\"true\"><mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age<mat-icon>account_circle</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput type=\"number\" min=\"1\" placeholder=\"Age\"></mat-form-field></mat-expansion-panel><mat-expansion-panel [disabled]=\"true\"><mat-expansion-panel-header><mat-panel-title>Destination</mat-panel-title><mat-panel-description>Type the country name<mat-icon>map</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Country\"></mat-form-field></mat-expansion-panel><mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Day of the trip</mat-panel-title><mat-panel-description>Inform the date you wish to travel<mat-icon>date_range</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Date\" [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></mat-form-field><mat-datepicker #picker></mat-datepicker></mat-expansion-panel></mat-accordion>",
-                styles: [".example-action-buttons { padding-bottom: 20px; } .example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
-            },] },
-];
 /** @nocollapse */
-ExpansionExpandCollapseAllExample.propDecorators = {
-    "accordion": [{ type: ViewChild, args: [MatAccordion,] },],
-};
+ElevationOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1883,6 +1279,8 @@ ExpansionOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ExpansionOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -1922,196 +1320,8 @@ ExpansionStepsExample.decorators = [
                 styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
             },] },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Monitoring focus with FocusMonitor
- */
-class FocusMonitorDirectivesExample {
-    /**
-     * @param {?} ngZone
-     * @param {?} cdr
-     */
-    constructor(ngZone, cdr) {
-        this.ngZone = ngZone;
-        this.cdr = cdr;
-        this.elementOrigin = this.formatOrigin(null);
-        this.subtreeOrigin = this.formatOrigin(null);
-    }
-    /**
-     * @param {?} origin
-     * @return {?}
-     */
-    formatOrigin(origin) {
-        return origin ? origin + ' focused' : 'blurred';
-    }
-    /**
-     * @return {?}
-     */
-    markForCheck() {
-        this.ngZone.run(() => this.cdr.markForCheck());
-    }
-}
-FocusMonitorDirectivesExample.decorators = [
-    { type: Component, args: [{
-                selector: 'focus-monitor-directives-example',
-                template: "<div class=\"example-focus-monitor\"><button cdkMonitorSubtreeFocus (cdkFocusChange)=\"elementOrigin = formatOrigin($event); markForCheck()\">Focus Monitored Element ({{elementOrigin}})</button></div><div class=\"example-focus-monitor\"><div cdkMonitorSubtreeFocus (cdkFocusChange)=\"subtreeOrigin = formatOrigin($event); markForCheck()\"><p>Focus Monitored Subtree ({{subtreeOrigin}})</p><button>Child Button 1</button> <button>Child Button 2</button></div></div>",
-                styles: [".example-focus-monitor { padding: 20px; } .example-focus-monitor .cdk-mouse-focused { background: rgba(255, 0, 0, 0.5); } .example-focus-monitor .cdk-keyboard-focused { background: rgba(0, 255, 0, 0.5); } .example-focus-monitor .cdk-touch-focused { background: rgba(0, 0, 255, 0.5); } .example-focus-monitor .cdk-program-focused { background: rgba(255, 0, 255, 0.5); } "]
-            },] },
-];
 /** @nocollapse */
-FocusMonitorDirectivesExample.ctorParameters = () => [
-    { type: NgZone, },
-    { type: ChangeDetectorRef, },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Focusing with a specific FocusOrigin
- */
-class FocusMonitorFocusViaExample {
-    /**
-     * @param {?} focusMonitor
-     * @param {?} cdr
-     * @param {?} ngZone
-     */
-    constructor(focusMonitor, cdr, ngZone) {
-        this.focusMonitor = focusMonitor;
-        this.cdr = cdr;
-        this.ngZone = ngZone;
-        this.origin = this.formatOrigin(null);
-    }
-    /**
-     * @return {?}
-     */
-    ngOnInit() {
-        this.focusMonitor.monitor(this.monitoredEl.nativeElement)
-            .subscribe(origin => this.ngZone.run(() => {
-            this.origin = this.formatOrigin(origin);
-            this.cdr.markForCheck();
-        }));
-    }
-    /**
-     * @return {?}
-     */
-    ngOnDestroy() {
-        this.focusMonitor.stopMonitoring(this.monitoredEl.nativeElement);
-    }
-    /**
-     * @param {?} origin
-     * @return {?}
-     */
-    formatOrigin(origin) {
-        return origin ? origin + ' focused' : 'blurred';
-    }
-}
-FocusMonitorFocusViaExample.decorators = [
-    { type: Component, args: [{
-                selector: 'focus-monitor-focus-via-example',
-                template: "<div class=\"example-focus-monitor\"><button #monitored>1. Focus Monitored Element ({{origin}})</button> <button #unmonitored>2. Not Monitored</button></div><mat-form-field><mat-label>Simulated focus origin</mat-label><mat-select #simulatedOrigin value=\"mouse\"><mat-option value=\"mouse\">Mouse</mat-option><mat-option value=\"keyboard\">Keyboard</mat-option><mat-option value=\"touch\">Touch</mat-option><mat-option value=\"program\">Programmatic</mat-option></mat-select></mat-form-field><button (click)=\"focusMonitor.focusVia(monitored, simulatedOrigin.value)\">Focus button #1</button> <button (click)=\"focusMonitor.focusVia(unmonitored, simulatedOrigin.value)\">Focus button #2</button>",
-                styles: [".example-focus-monitor { padding: 20px; } .example-focus-monitor .cdk-mouse-focused { background: rgba(255, 0, 0, 0.5); } .example-focus-monitor .cdk-keyboard-focused { background: rgba(0, 255, 0, 0.5); } .example-focus-monitor .cdk-touch-focused { background: rgba(0, 0, 255, 0.5); } .example-focus-monitor .cdk-program-focused { background: rgba(255, 0, 255, 0.5); } .example-focus-monitor button:focus { box-shadow: 0 0 30px cyan; } "]
-            },] },
-];
-/** @nocollapse */
-FocusMonitorFocusViaExample.ctorParameters = () => [
-    { type: FocusMonitor, },
-    { type: ChangeDetectorRef, },
-    { type: NgZone, },
-];
-FocusMonitorFocusViaExample.propDecorators = {
-    "monitoredEl": [{ type: ViewChild, args: ['monitored',] },],
-};
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Monitoring focus with FocusMonitor
- */
-class FocusMonitorOverviewExample {
-    /**
-     * @param {?} focusMonitor
-     * @param {?} cdr
-     * @param {?} ngZone
-     */
-    constructor(focusMonitor, cdr, ngZone) {
-        this.focusMonitor = focusMonitor;
-        this.cdr = cdr;
-        this.ngZone = ngZone;
-        this.elementOrigin = this.formatOrigin(null);
-        this.subtreeOrigin = this.formatOrigin(null);
-    }
-    /**
-     * @return {?}
-     */
-    ngOnInit() {
-        this.focusMonitor.monitor(this.element.nativeElement)
-            .subscribe(origin => this.ngZone.run(() => {
-            this.elementOrigin = this.formatOrigin(origin);
-            this.cdr.markForCheck();
-        }));
-        this.focusMonitor.monitor(this.subtree.nativeElement, true)
-            .subscribe(origin => this.ngZone.run(() => {
-            this.subtreeOrigin = this.formatOrigin(origin);
-            this.cdr.markForCheck();
-        }));
-    }
-    /**
-     * @return {?}
-     */
-    ngOnDestroy() {
-        this.focusMonitor.stopMonitoring(this.element.nativeElement);
-        this.focusMonitor.stopMonitoring(this.subtree.nativeElement);
-    }
-    /**
-     * @param {?} origin
-     * @return {?}
-     */
-    formatOrigin(origin) {
-        return origin ? origin + ' focused' : 'blurred';
-    }
-}
-FocusMonitorOverviewExample.decorators = [
-    { type: Component, args: [{
-                selector: 'focus-monitor-overview-example',
-                template: "<div class=\"example-focus-monitor\"><button #element>Focus Monitored Element ({{elementOrigin}})</button></div><div class=\"example-focus-monitor\"><div #subtree><p>Focus Monitored Subtree ({{subtreeOrigin}})</p><button>Child Button 1</button> <button>Child Button 2</button></div></div>",
-                styles: [".example-focus-monitor { padding: 20px; } .example-focus-monitor .cdk-mouse-focused { background: rgba(255, 0, 0, 0.5); } .example-focus-monitor .cdk-keyboard-focused { background: rgba(0, 255, 0, 0.5); } .example-focus-monitor .cdk-touch-focused { background: rgba(0, 0, 255, 0.5); } .example-focus-monitor .cdk-program-focused { background: rgba(255, 0, 255, 0.5); } "]
-            },] },
-];
-/** @nocollapse */
-FocusMonitorOverviewExample.ctorParameters = () => [
-    { type: FocusMonitor, },
-    { type: ChangeDetectorRef, },
-    { type: NgZone, },
-];
-FocusMonitorOverviewExample.propDecorators = {
-    "element": [{ type: ViewChild, args: ['element',] },],
-    "subtree": [{ type: ViewChild, args: ['subtree',] },],
-};
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Form field appearance variants
- */
-class FormFieldAppearanceExample {
-}
-FormFieldAppearanceExample.decorators = [
-    { type: Component, args: [{
-                selector: 'form-field-appearance-example',
-                template: "<p><mat-form-field appearance=\"legacy\"><mat-label>Legacy form field</mat-label><input matInput placeholder=\"Placeholder\"><mat-icon matSuffix>sentiment_very_satisfied</mat-icon><mat-hint>Hint</mat-hint></mat-form-field></p><p><mat-form-field appearance=\"standard\"><mat-label>Standard form field</mat-label><input matInput placeholder=\"Placeholder\"><mat-icon matSuffix>sentiment_very_satisfied</mat-icon><mat-hint>Hint</mat-hint></mat-form-field></p><p><mat-form-field appearance=\"fill\"><mat-label>Fill form field</mat-label><input matInput placeholder=\"Placeholder\"><mat-icon matSuffix>sentiment_very_satisfied</mat-icon><mat-hint>Hint</mat-hint></mat-form-field></p><p><mat-form-field appearance=\"outline\"><mat-label>Outline form field</mat-label><input matInput placeholder=\"Placeholder\"><mat-icon matSuffix>sentiment_very_satisfied</mat-icon><mat-hint>Hint</mat-hint></mat-form-field></p>",
-                styles: ["/** No CSS for this example */ "]
-            },] },
-];
+ExpansionStepsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2296,6 +1506,8 @@ FormFieldCustomControlExample.decorators = [
   `
             },] },
 ];
+/** @nocollapse */
+FormFieldCustomControlExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2324,6 +1536,8 @@ FormFieldErrorExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
             },] },
 ];
+/** @nocollapse */
+FormFieldErrorExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2341,6 +1555,8 @@ FormFieldHintExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
             },] },
 ];
+/** @nocollapse */
+FormFieldHintExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2388,6 +1604,8 @@ FormFieldOverviewExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
             },] },
 ];
+/** @nocollapse */
+FormFieldOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2408,6 +1626,8 @@ FormFieldPrefixSuffixExample.decorators = [
                 styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-right-align { text-align: right; } input.example-right-align::-webkit-outer-spin-button, input.example-right-align::-webkit-inner-spin-button { display: none; } input.example-right-align { -moz-appearance: textfield; } "]
             },] },
 ];
+/** @nocollapse */
+FormFieldPrefixSuffixExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2469,6 +1689,8 @@ GridListDynamicExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+GridListDynamicExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2486,6 +1708,8 @@ GridListOverviewExample.decorators = [
                 template: "<mat-grid-list cols=\"2\" rowHeight=\"2:1\"><mat-grid-tile>1</mat-grid-tile><mat-grid-tile>2</mat-grid-tile><mat-grid-tile>3</mat-grid-tile><mat-grid-tile>4</mat-grid-tile></mat-grid-list>",
             },] },
 ];
+/** @nocollapse */
+GridListOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2503,6 +1727,8 @@ IconOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
+/** @nocollapse */
+IconOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2538,6 +1764,25 @@ IconSvgExample.ctorParameters = () => [
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Auto-resizing textarea
+ */
+class InputAutosizeTextareaExample {
+}
+InputAutosizeTextareaExample.decorators = [
+    { type: Component, args: [{
+                selector: 'input-autosize-textarea-example',
+                template: "<mat-form-field><textarea matInput placeholder=\"Autosize textarea\" matTextareaAutosize matAutosizeMinRows=\"2\" matAutosizeMaxRows=\"5\"></textarea></mat-form-field>",
+                styles: ["/** No CSS for this example */ "],
+            },] },
+];
+/** @nocollapse */
+InputAutosizeTextareaExample.ctorParameters = () => [];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Input with a clear button
  */
 class InputClearableExample {
@@ -2552,6 +1797,8 @@ InputClearableExample.decorators = [
                 styles: [".example-form-field { width: 200px; } "],
             },] },
 ];
+/** @nocollapse */
+InputClearableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2590,6 +1837,8 @@ InputErrorStateMatcherExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
+/** @nocollapse */
+InputErrorStateMatcherExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2613,6 +1862,8 @@ InputErrorsExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
+/** @nocollapse */
+InputErrorsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2630,6 +1881,8 @@ InputFormExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
+/** @nocollapse */
+InputFormExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2647,6 +1900,8 @@ InputHintExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
+/** @nocollapse */
+InputHintExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2664,6 +1919,8 @@ InputOverviewExample.decorators = [
                 template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"Favorite food\" value=\"Sushi\"></mat-form-field><mat-form-field class=\"example-full-width\"><textarea matInput placeholder=\"Leave a comment\"></textarea></mat-form-field></form>",
             },] },
 ];
+/** @nocollapse */
+InputOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2681,6 +1938,8 @@ InputPrefixSuffixExample.decorators = [
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
+/** @nocollapse */
+InputPrefixSuffixExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2698,6 +1957,8 @@ ListOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ListOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2741,6 +2002,8 @@ ListSectionsExample.decorators = [
                 template: "<mat-list><h3 mat-subheader>Folders</h3><mat-list-item *ngFor=\"let folder of folders\"><mat-icon mat-list-icon>folder</mat-icon><h4 mat-line>{{folder.name}}</h4><p mat-line>{{folder.updated | date}}</p></mat-list-item><mat-divider></mat-divider><h3 mat-subheader>Notes</h3><mat-list-item *ngFor=\"let note of notes\"><mat-icon mat-list-icon>note</mat-icon><h4 mat-line>{{note.name}}</h4><p mat-line>{{note.updated | date}}</p></mat-list-item></mat-list>",
             },] },
 ];
+/** @nocollapse */
+ListSectionsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2761,6 +2024,8 @@ ListSelectionExample.decorators = [
                 template: "<mat-selection-list #shoes><mat-list-option *ngFor=\"let shoe of typesOfShoes\">{{shoe}}</mat-list-option></mat-selection-list><p>Options selected: {{shoes.selectedOptions.selected.length}}</p>",
             },] },
 ];
+/** @nocollapse */
+ListSelectionExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2778,6 +2043,8 @@ MenuIconsExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+MenuIconsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2795,6 +2062,8 @@ MenuOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+MenuOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2812,6 +2081,8 @@ NestedMenuExample.decorators = [
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
+/** @nocollapse */
+NestedMenuExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2842,6 +2113,8 @@ PaginatorConfigurableExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+PaginatorConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2859,6 +2132,8 @@ PaginatorOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+PaginatorOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2876,6 +2151,8 @@ ProgressBarBufferExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ProgressBarBufferExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2899,6 +2176,8 @@ ProgressBarConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
+/** @nocollapse */
+ProgressBarConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2916,6 +2195,8 @@ ProgressBarDeterminateExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ProgressBarDeterminateExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2933,6 +2214,8 @@ ProgressBarIndeterminateExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ProgressBarIndeterminateExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2950,6 +2233,8 @@ ProgressBarQueryExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ProgressBarQueryExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2972,6 +2257,8 @@ ProgressSpinnerConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
+/** @nocollapse */
+ProgressSpinnerConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -2989,6 +2276,8 @@ ProgressSpinnerOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ProgressSpinnerOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3014,6 +2303,8 @@ RadioNgModelExample.decorators = [
                 styles: [".example-radio-group { display: inline-flex; flex-direction: column; } .example-radio-button { margin: 5px; } .example-selected-value { margin: 15px 0; } "],
             },] },
 ];
+/** @nocollapse */
+RadioNgModelExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3031,6 +2322,8 @@ RadioOverviewExample.decorators = [
                 styles: [".mat-radio-button ~ .mat-radio-button { padding-right: 16px; } "],
             },] },
 ];
+/** @nocollapse */
+RadioOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3052,6 +2345,8 @@ SelectCustomTriggerExample.decorators = [
                 styles: [".example-additional-selection { opacity: 0.75; font-size: 0.75em; } "],
             },] },
 ];
+/** @nocollapse */
+SelectCustomTriggerExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3072,6 +2367,8 @@ SelectDisabledExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SelectDisabledExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3080,7 +2377,7 @@ SelectDisabledExample.decorators = [
 /**
  * Error when invalid control is dirty, touched, or submitted.
  */
-let MyErrorStateMatcher$1 = class MyErrorStateMatcher {
+class MyErrorStateMatcher$1 {
     /**
      * @param {?} control
      * @param {?} form
@@ -3090,7 +2387,7 @@ let MyErrorStateMatcher$1 = class MyErrorStateMatcher {
         const /** @type {?} */ isSubmitted = form && form.submitted;
         return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
     }
-};
+}
 /**
  * \@title Select with a custom ErrorStateMatcher
  */
@@ -3110,6 +2407,8 @@ SelectErrorStateMatcherExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SelectErrorStateMatcherExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3134,6 +2433,8 @@ SelectFormExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SelectFormExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3160,6 +2461,8 @@ SelectHintErrorExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SelectHintErrorExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3181,6 +2484,8 @@ SelectMultipleExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SelectMultipleExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3198,6 +2503,8 @@ SelectNoRippleExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SelectNoRippleExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3252,6 +2559,8 @@ SelectOptgroupExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SelectOptgroupExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3276,6 +2585,8 @@ SelectOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SelectOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3297,6 +2608,8 @@ SelectPanelClassExample.decorators = [
                 encapsulation: ViewEncapsulation.None,
             },] },
 ];
+/** @nocollapse */
+SelectPanelClassExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3325,6 +2638,8 @@ SelectResetExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SelectResetExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3345,6 +2660,8 @@ SelectValueBindingExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SelectValueBindingExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3365,23 +2682,8 @@ SidenavAutosizeExample.decorators = [
                 styles: [".example-container { width: 500px; height: 300px; border: 1px solid rgba(0, 0, 0, 0.5); } .example-sidenav-content { display: flex; height: 100%; align-items: center; justify-content: center; } .example-sidenav { padding: 20px; } "],
             },] },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Drawer with explicit backdrop setting
- */
-class SidenavBackdropExample {
-}
-SidenavBackdropExample.decorators = [
-    { type: Component, args: [{
-                selector: 'sidenav-backdrop-example',
-                template: "<mat-drawer-container class=\"example-container\" [hasBackdrop]=\"hasBackdrop.value\"><mat-drawer #drawer [mode]=\"mode.value\">I'm a drawer</mat-drawer><mat-drawer-content><mat-form-field><mat-label>Sidenav mode</mat-label><mat-select #mode value=\"side\"><mat-option value=\"side\">Side</mat-option><mat-option value=\"over\">Over</mat-option><mat-option value=\"push\">Push</mat-option></mat-select></mat-form-field><mat-form-field><mat-label>Has backdrop</mat-label><mat-select #hasBackdrop><mat-option>Unset</mat-option><mat-option [value]=\"true\">True</mat-option><mat-option [value]=\"false\">False</mat-option></mat-select></mat-form-field><button mat-raised-button (click)=\"drawer.toggle()\">Toggle drawer</button></mat-drawer-content></mat-drawer-container>",
-                styles: [".example-container { width: 400px; height: 200px; margin: 10px; border: 1px solid #555; } "],
-            },] },
-];
+/** @nocollapse */
+SidenavAutosizeExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3412,6 +2714,7 @@ SidenavDisableCloseExample.decorators = [
             },] },
 ];
 /** @nocollapse */
+SidenavDisableCloseExample.ctorParameters = () => [];
 SidenavDisableCloseExample.propDecorators = {
     "sidenav": [{ type: ViewChild, args: ['sidenav',] },],
 };
@@ -3432,6 +2735,8 @@ SidenavDrawerOverviewExample.decorators = [
                 styles: [".example-container { width: 400px; height: 200px; margin: 10px; border: 1px solid #555; } "],
             },] },
 ];
+/** @nocollapse */
+SidenavDrawerOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3485,6 +2790,8 @@ SidenavModeExample.decorators = [
                 styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } .example-radio-group { display: block; border: 1px solid #555; margin: 20px; padding: 10px; } "],
             },] },
 ];
+/** @nocollapse */
+SidenavModeExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3506,6 +2813,8 @@ SidenavOpenCloseExample.decorators = [
                 styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } .example-events { width: 300px; height: 200px; overflow: auto; border: 1px solid #555; } "],
             },] },
 ];
+/** @nocollapse */
+SidenavOpenCloseExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3526,6 +2835,8 @@ SidenavOverviewExample.decorators = [
                 styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
             },] },
 ];
+/** @nocollapse */
+SidenavOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3546,6 +2857,8 @@ SidenavPositionExample.decorators = [
                 styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
             },] },
 ];
+/** @nocollapse */
+SidenavPositionExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3612,6 +2925,8 @@ SlideToggleConfigurableExample.decorators = [
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 10px; } "],
             },] },
 ];
+/** @nocollapse */
+SlideToggleConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3667,6 +2982,8 @@ SlideToggleOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+SlideToggleOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3706,41 +3023,14 @@ class SliderConfigurableExample {
 SliderConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'slider-configurable-example',
-                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Slider configuration</h2><section class=\"example-section\"><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Value\" [(ngModel)]=\"value\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Min value\" [(ngModel)]=\"min\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Max value\" [(ngModel)]=\"max\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Step size\" [(ngModel)]=\"step\"></mat-form-field></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"autoTicks\" *ngIf=\"showTicks\">Auto ticks</mat-checkbox><mat-form-field class=\"example-margin\" *ngIf=\"showTicks && !autoTicks\"><input matInput type=\"number\" placeholder=\"Tick interval\" [(ngModel)]=\"tickInterval\"></mat-form-field></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"vertical\">Vertical</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"invert\">Inverted</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox></section></mat-card-content></mat-card><mat-card class=\"result\"><mat-card-content><h2 class=\"example-h2\">Result</h2><mat-slider class=\"example-margin\" [disabled]=\"disabled\" [invert]=\"invert\" [max]=\"max\" [min]=\"min\" [step]=\"step\" [thumbLabel]=\"thumbLabel\" [tickInterval]=\"tickInterval\" [(ngModel)]=\"value\" [vertical]=\"vertical\"></mat-slider></mat-card-content></mat-card>",
+                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Slider configuration</h2><section class=\"example-section\"><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Value\" [(ngModel)]=\"value\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Min value\" [(ngModel)]=\"min\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Max value\" [(ngModel)]=\"max\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Step size\" [(ngModel)]=\"step\"></mat-form-field></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"autoTicks\" *ngIf=\"showTicks\">Auto ticks</mat-checkbox><mat-form-field class=\"example-margin\" *ngIf=\"showTicks && !autoTicks\"><input matInput type=\"number\" placeholder=\"Tick interval\" [(ngModel)]=\"tickInterval\"></mat-form-field></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"vertical\">Vertical</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"invert\">Inverted</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox></section></mat-card-content></mat-card><mat-card class=\"result\"><mat-card-content><h2 class=\"example-h2\">Result</h2><mat-slider class=\"example-margin\" [disabled]=\"disabled\" [invert]=\"invert\" [max]=\"max\" [min]=\"min\" [step]=\"step\" [thumb-label]=\"thumbLabel\" [tick-interval]=\"tickInterval\" [(ngModel)]=\"value\" [vertical]=\"vertical\"></mat-slider></mat-card-content></mat-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 10px; } .mat-slider-horizontal { width: 300px; } .mat-slider-vertical { height: 300px; } "],
                 encapsulation: ViewEncapsulation.None,
+                preserveWhitespaces: false,
             },] },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Slider with custom thumb label formatting.
- */
-class SliderFormattingExample {
-    /**
-     * @param {?} value
-     * @return {?}
-     */
-    formatLabel(value) {
-        if (!value) {
-            return 0;
-        }
-        if (value >= 1000) {
-            return Math.round(value / 1000) + 'k';
-        }
-        return value;
-    }
-}
-SliderFormattingExample.decorators = [
-    { type: Component, args: [{
-                selector: 'slider-formatting-example',
-                template: "<mat-slider thumbLabel [displayWith]=\"formatLabel\" tickInterval=\"1000\" min=\"1\" max=\"100000\"></mat-slider>",
-                styles: ["mat-slider { width: 300px; } "],
-            },] },
-];
+/** @nocollapse */
+SliderConfigurableExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3758,6 +3048,8 @@ SliderOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ mat-slider { width: 300px; } "],
             },] },
 ];
+/** @nocollapse */
+SliderOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3801,6 +3093,8 @@ PizzaPartyComponent.decorators = [
                 styles: [`.example-pizza-party { color: hotpink; }`],
             },] },
 ];
+/** @nocollapse */
+PizzaPartyComponent.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -3942,84 +3236,6 @@ function compare(a, b, isAsc) {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Stepper with editable steps
- */
-class StepperEditableExample {
-    /**
-     * @param {?} _formBuilder
-     */
-    constructor(_formBuilder) {
-        this._formBuilder = _formBuilder;
-        this.isEditable = false;
-    }
-    /**
-     * @return {?}
-     */
-    ngOnInit() {
-        this.firstFormGroup = this._formBuilder.group({
-            firstCtrl: ['', Validators.required]
-        });
-        this.secondFormGroup = this._formBuilder.group({
-            secondCtrl: ['', Validators.required]
-        });
-    }
-}
-StepperEditableExample.decorators = [
-    { type: Component, args: [{
-                selector: 'stepper-editable-example',
-                template: "<button mat-raised-button (click)=\"isEditable = !isEditable\">{{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}</button><mat-horizontal-stepper [linear]=\"true\" #stepper><mat-step [stepControl]=\"firstFormGroup\" [editable]=\"isEditable\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" [editable]=\"isEditable\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
-                styles: ["/** No CSS for this example */ "]
-            },] },
-];
-/** @nocollapse */
-StepperEditableExample.ctorParameters = () => [
-    { type: FormBuilder, },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Stepper with optional steps
- */
-class StepperOptionalExample {
-    /**
-     * @param {?} _formBuilder
-     */
-    constructor(_formBuilder) {
-        this._formBuilder = _formBuilder;
-        this.isOptional = false;
-    }
-    /**
-     * @return {?}
-     */
-    ngOnInit() {
-        this.firstFormGroup = this._formBuilder.group({
-            firstCtrl: ['', Validators.required]
-        });
-        this.secondFormGroup = this._formBuilder.group({
-            secondCtrl: ''
-        });
-    }
-}
-StepperOptionalExample.decorators = [
-    { type: Component, args: [{
-                selector: 'stepper-optional-example',
-                template: "<button mat-raised-button (click)=\"isOptional = !isOptional\">{{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}</button><mat-horizontal-stepper [linear]=\"true\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" [optional]=\"isOptional\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
-                styles: ["/** No CSS for this example */ "]
-            },] },
-];
-/** @nocollapse */
-StepperOptionalExample.ctorParameters = () => [
-    { type: FormBuilder, },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
  * \@title Stepper overview
  */
 class StepperOverviewExample {
@@ -4045,7 +3261,7 @@ class StepperOverviewExample {
 StepperOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'stepper-overview-example',
-                template: "<button mat-raised-button (click)=\"isLinear = !isLinear\" id=\"toggle-linear\">{{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}</button><mat-horizontal-stepper [linear]=\"isLinear\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                template: "<button mat-raised-button (click)=\"isLinear = true\" id=\"toggle-linear\">Enable linear mode</button><mat-horizontal-stepper [linear]=\"isLinear\" #stepper=\"matHorizontalStepper\"><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
@@ -4070,11 +3286,17 @@ class TableBasicExample {
 TableBasicExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-basic-example',
-                styles: [".example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; overflow: auto; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
+                styles: [".example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
-const /** @type {?} */ ELEMENT_DATA = [
+/** @nocollapse */
+TableBasicExample.ctorParameters = () => [];
+/**
+ * @record
+ */
+
+const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4122,11 +3344,17 @@ class TableFilteringExample {
 TableFilteringExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-filtering-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; max-height: 500px; overflow: auto; } .example-header { min-height: 64px; padding: 8px 24px 0; } .mat-form-field { font-size: 14px; width: 100%; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; padding: 8px 24px 0; } .mat-form-field { font-size: 14px; width: 100%; } .mat-table { overflow: auto; max-height: 500px; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
-const /** @type {?} */ ELEMENT_DATA$1 = [
+/** @nocollapse */
+TableFilteringExample.ctorParameters = () => [];
+/**
+ * @record
+ */
+
+const ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4196,8 +3424,8 @@ class TableHttpExample {
 TableHttpExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-http-example',
-                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; position: relative; max-height: 500px; overflow: auto; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><table mat-table #table [dataSource]=\"dataSource\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><th mat-header-cell *matHeaderCellDef>#</th><td mat-cell *matCellDef=\"let row\">{{ row.number }}</td></ng-container><ng-container matColumnDef=\"title\"><th mat-header-cell *matHeaderCellDef>Title</th><td mat-cell *matCellDef=\"let row\">{{ row.title }}</td></ng-container><ng-container matColumnDef=\"state\"><th mat-header-cell *matHeaderCellDef>State</th><td mat-cell *matCellDef=\"let row\">{{ row.state }}</td></ng-container><ng-container matColumnDef=\"created\"><th mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</th><td mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
+                styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; position: relative; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-table { overflow: auto; min-height: 300px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><mat-table #table [dataSource]=\"dataSource\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><mat-header-cell *matHeaderCellDef>#</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.number }}</mat-cell></ng-container><ng-container matColumnDef=\"title\"><mat-header-cell *matHeaderCellDef>Title</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.title }}</mat-cell></ng-container><ng-container matColumnDef=\"state\"><mat-header-cell *matHeaderCellDef>State</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.state }}</mat-cell></ng-container><ng-container matColumnDef=\"created\"><mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</mat-header-cell><mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
             },] },
 ];
 /** @nocollapse */
@@ -4208,6 +3436,14 @@ TableHttpExample.propDecorators = {
     "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
     "sort": [{ type: ViewChild, args: [MatSort,] },],
 };
+/**
+ * @record
+ */
+
+/**
+ * @record
+ */
+
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
@@ -4230,32 +3466,6 @@ class ExampleHttpDao {
         return this.http.get(requestUrl);
     }
 }
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Native `<table>` that only applies the Material styles
- */
-class TableNativeOnlyExample {
-    constructor() {
-        this.elements = [
-            { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-            { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-            { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-            { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-            { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        ];
-    }
-}
-TableNativeOnlyExample.decorators = [
-    { type: Component, args: [{
-                selector: 'table-native-only-example',
-                styles: [""],
-                template: "<table class=\"mat-table\"><thead><tr class=\"mat-header-row\"><th class=\"mat-header-cell\">No.</th><th class=\"mat-header-cell\">Name</th><th class=\"mat-header-cell\">Weight</th><th class=\"mat-header-cell\">Symbol</th></tr></thead><tbody><tr class=\"mat-row\" *ngFor=\"let element of elements\"><td class=\"mat-cell\">{{element.position}}</td><td class=\"mat-cell\">{{element.name}}</td><td class=\"mat-cell\">{{element.weight}}</td><td class=\"mat-cell\">{{element.symbol}}</td></tr></tbody></table>",
-            },] },
-];
 
 /**
  * @fileoverview added by tsickle
@@ -4297,8 +3507,8 @@ class TableOverviewExample {
 TableOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-overview-example',
-                styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; max-height: 500px; overflow: auto; } .example-header { min-height: 64px; padding: 8px 24px 0; } .mat-form-field { font-size: 14px; width: 100%; } "],
-                template: "<div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><div class=\"example-container mat-elevation-z8\"><table mat-table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"id\"><th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th><td mat-cell *matCellDef=\"let row\">{{row.id}}</td></ng-container><ng-container matColumnDef=\"progress\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Progress</th><td mat-cell *matCellDef=\"let row\">{{row.progress}}%</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th><td mat-cell *matCellDef=\"let row\">{{row.name}}</td></ng-container><ng-container matColumnDef=\"color\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Color</th><td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table><mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
+                styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; } .example-header { min-height: 64px; padding: 8px 24px 0; } .mat-form-field { font-size: 14px; width: 100%; } .mat-table { overflow: auto; max-height: 500px; } "],
+                template: "<div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><div class=\"example-container mat-elevation-z8\"><mat-table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"id\"><mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.id}}</mat-cell></ng-container><ng-container matColumnDef=\"progress\"><mat-header-cell *matHeaderCellDef mat-sort-header>Progress</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.progress}}%</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let row\">{{row.name}}</mat-cell></ng-container><ng-container matColumnDef=\"color\"><mat-header-cell *matHeaderCellDef mat-sort-header>Color</mat-header-cell><mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
             },] },
 ];
 /** @nocollapse */
@@ -4325,11 +3535,14 @@ function createNewUser(id) {
 /**
  * Constants used to fill up our data base.
  */
-const /** @type {?} */ COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+const COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const /** @type {?} */ NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+const NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+/**
+ * @record
+ */
 
 /**
  * @fileoverview added by tsickle
@@ -4355,15 +3568,20 @@ class TablePaginationExample {
 TablePaginationExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-pagination-example',
-                styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; max-height: 500px; overflow: auto; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table><mat-paginator #paginator [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 20]\" [showFirstLastButtons]=\"true\"></mat-paginator></div>",
+                styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table><mat-paginator #paginator [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 20]\" [showFirstLastButtons]=\"true\"></mat-paginator></div>",
             },] },
 ];
 /** @nocollapse */
+TablePaginationExample.ctorParameters = () => [];
 TablePaginationExample.propDecorators = {
     "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
 };
-const /** @type {?} */ ELEMENT_DATA$2 = [
+/**
+ * @record
+ */
+
+const ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4421,11 +3639,17 @@ class TableSelectionExample {
 TableSelectionExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-selection-example',
-                styles: [".example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; overflow: auto; } .mat-column-select { overflow: visible; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"select\"><th mat-header-cell *matHeaderCellDef><mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"selection.hasValue() && isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></mat-checkbox></th><td mat-cell *matCellDef=\"let row\"><mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row) : null\" [checked]=\"selection.isSelected(row)\"></mat-checkbox></td></ng-container><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" (click)=\"selection.toggle(row)\"></tr></table></div>",
+                styles: [".example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } .mat-column-select { overflow: visible; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"select\"><mat-header-cell *matHeaderCellDef><mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"selection.hasValue() && isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></mat-checkbox></mat-header-cell><mat-cell *matCellDef=\"let row\"><mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row) : null\" [checked]=\"selection.isSelected(row)\"></mat-checkbox></mat-cell></ng-container><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\" (click)=\"selection.toggle(row)\"></mat-row></mat-table></div>",
             },] },
 ];
-const /** @type {?} */ ELEMENT_DATA$3 = [
+/** @nocollapse */
+TableSelectionExample.ctorParameters = () => [];
+/**
+ * @record
+ */
+
+const ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4472,15 +3696,20 @@ class TableSortingExample {
 TableSortingExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-sorting-example',
-                styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; overflow: auto; max-height: 500px; } .mat-header-cell.mat-sort-header-sorted { color: black; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
+                styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } .mat-header-cell.mat-sort-header-sorted { color: black; } "],
+                template: "<div class=\"example-container mat-elevation-z8\"><mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef mat-sort-header>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef mat-sort-header>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table></div>",
             },] },
 ];
 /** @nocollapse */
+TableSortingExample.ctorParameters = () => [];
 TableSortingExample.propDecorators = {
     "sort": [{ type: ViewChild, args: [MatSort,] },],
 };
-const /** @type {?} */ ELEMENT_DATA$4 = [
+/**
+ * @record
+ */
+
+const ELEMENT_DATA$4 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4519,6 +3748,8 @@ TabsOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+TabsOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4536,108 +3767,8 @@ TabsTemplateLabelExample.decorators = [
                 styles: [".demo-tab-group { border: 1px solid #e8e8e8; } .demo-tab-content { padding: 16px; } "]
             },] },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Monitoring autofill state with cdkAutofill
- */
-class TextFieldAutofillDirectiveExample {
-}
-TextFieldAutofillDirectiveExample.decorators = [
-    { type: Component, args: [{
-                selector: 'text-field-autofill-directive-example',
-                template: "<form><mat-form-field><mat-label>First name</mat-label><input matInput (cdkAutofill)=\"firstNameAutofilled = $event.isAutofilled\"><mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint></mat-form-field><mat-form-field><mat-label>Last name</mat-label><input matInput (cdkAutofill)=\"lastNameAutofilled = $event.isAutofilled\"><mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint></mat-form-field><button mat-raised-button>Submit</button></form>",
-                styles: ["/** No CSS for this example */ "],
-            },] },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Monitoring autofill state with AutofillMonitor
- */
-class TextFieldAutofillMonitorExample {
-    /**
-     * @param {?} autofill
-     */
-    constructor(autofill) {
-        this.autofill = autofill;
-    }
-    /**
-     * @return {?}
-     */
-    ngOnInit() {
-        this.autofill.monitor(this.firstName.nativeElement)
-            .subscribe(e => this.firstNameAutofilled = e.isAutofilled);
-        this.autofill.monitor(this.lastName.nativeElement)
-            .subscribe(e => this.lastNameAutofilled = e.isAutofilled);
-    }
-    /**
-     * @return {?}
-     */
-    ngOnDestroy() {
-        this.autofill.stopMonitoring(this.firstName.nativeElement);
-        this.autofill.stopMonitoring(this.lastName.nativeElement);
-    }
-}
-TextFieldAutofillMonitorExample.decorators = [
-    { type: Component, args: [{
-                selector: 'text-field-autofill-monitor-example',
-                template: "<form><mat-form-field><mat-label>First name</mat-label><input matInput #first><mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint></mat-form-field><mat-form-field><mat-label>Last name</mat-label><input matInput #last><mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint></mat-form-field><button mat-raised-button>Submit</button></form>",
-                styles: ["/** No CSS for this example */ "],
-            },] },
-];
 /** @nocollapse */
-TextFieldAutofillMonitorExample.ctorParameters = () => [
-    { type: AutofillMonitor, },
-];
-TextFieldAutofillMonitorExample.propDecorators = {
-    "firstName": [{ type: ViewChild, args: ['first', { read: ElementRef },] },],
-    "lastName": [{ type: ViewChild, args: ['last', { read: ElementRef },] },],
-};
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Auto-resizing textarea
- */
-class TextFieldAutosizeTextareaExample {
-    /**
-     * @param {?} ngZone
-     */
-    constructor(ngZone) {
-        this.ngZone = ngZone;
-    }
-    /**
-     * @return {?}
-     */
-    triggerResize() {
-        // Wait for changes to be applied, then trigger textarea resize.
-        this.ngZone.onStable.pipe(take(1))
-            .subscribe(() => this.autosize.resizeToFitContent(true));
-    }
-}
-TextFieldAutosizeTextareaExample.decorators = [
-    { type: Component, args: [{
-                selector: 'text-field-autosize-textarea-example',
-                template: "<mat-form-field><mat-label>Font size</mat-label><mat-select #fontSize value=\"16px\" (selectionChange)=\"triggerResize()\"><mat-option value=\"10px\">10px</mat-option><mat-option value=\"12px\">12px</mat-option><mat-option value=\"14px\">14px</mat-option><mat-option value=\"16px\">16px</mat-option><mat-option value=\"18px\">18px</mat-option><mat-option value=\"20px\">20px</mat-option></mat-select></mat-form-field><mat-form-field [style.fontSize]=\"fontSize.value\"><mat-label>Autosize textarea</mat-label><textarea matInput cdkTextareaAutosize #autosize=\"cdkTextareaAutosize\" cdkAutosizeMinRows=\"2\" cdkAutosizeMaxRows=\"5\"></textarea></mat-form-field>",
-                styles: ["/** No CSS for this example */ "],
-            },] },
-];
-/** @nocollapse */
-TextFieldAutosizeTextareaExample.ctorParameters = () => [
-    { type: NgZone, },
-];
-TextFieldAutosizeTextareaExample.propDecorators = {
-    "autosize": [{ type: ViewChild, args: ['autosize',] },],
-};
+TabsTemplateLabelExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4655,6 +3786,8 @@ ToolbarMultirowExample.decorators = [
                 styles: [".example-icon { padding: 0 14px; } .example-spacer { flex: 1 1 auto; } "],
             },] },
 ];
+/** @nocollapse */
+ToolbarMultirowExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4672,6 +3805,8 @@ ToolbarOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+ToolbarOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4689,6 +3824,8 @@ TooltipDelayExample.decorators = [
                 styles: ["button { margin: 8px; } "],
             },] },
 ];
+/** @nocollapse */
+TooltipDelayExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4706,6 +3843,8 @@ TooltipManualExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+TooltipManualExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4714,7 +3853,7 @@ TooltipManualExample.decorators = [
 /**
  * Custom options the configure the tooltip's default show/hide delays.
  */
-const /** @type {?} */ myCustomTooltipDefaults = {
+const myCustomTooltipDefaults = {
     showDelay: 1000,
     hideDelay: 1000,
     touchendHideDelay: 1000,
@@ -4734,6 +3873,8 @@ TooltipModifiedDefaultsExample.decorators = [
                 ],
             },] },
 ];
+/** @nocollapse */
+TooltipModifiedDefaultsExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4751,6 +3892,8 @@ TooltipOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
+/** @nocollapse */
+TooltipOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -4771,888 +3914,18 @@ TooltipPositionExample.decorators = [
                 styles: [".example-tooltip-host { display: inline-flex; align-items: center; margin: 50px; } .example-select { margin: 0 10px; } "],
             },] },
 ];
+/** @nocollapse */
+TooltipPositionExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * Node for to-do item
+ * @record
  */
-class TodoItemNode {
-}
-/**
- * Flat to-do item node with expandable and level information
- */
-class TodoItemFlatNode {
-}
-/**
- * The Json object for to-do list data.
- */
-const /** @type {?} */ TREE_DATA$2 = {
-    'Reminders': [
-        'Cook dinner',
-        'Read the Material Design spec',
-        'Upgrade Application to Angular'
-    ],
-    'Groceries': {
-        'Organic eggs': null,
-        'Protein Powder': null,
-        'Almond Meal flour': null,
-        'Fruits': {
-            'Apple': null,
-            'Orange': null,
-            'Berries': ['Blueberry', 'Raspberry']
-        }
-    }
-};
-/**
- * Checklist database, it can build a tree structured Json object.
- * Each node in Json object represents a to-do item or a category.
- * If a node is a category, it has children items and new items can be added under the category.
- */
-class ChecklistDatabase {
-    constructor() {
-        this.dataChange = new BehaviorSubject([]);
-        this.initialize();
-    }
-    /**
-     * @return {?}
-     */
-    get data() { return this.dataChange.value; }
-    /**
-     * @return {?}
-     */
-    initialize() {
-        // Build the tree nodes from Json object. The result is a list of `TodoItemNode` with nested
-        //     file node as children.
-        const /** @type {?} */ data = this.buildFileTree(TREE_DATA$2, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    }
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `TodoItemNode`.
-     * @param {?} value
-     * @param {?} level
-     * @return {?}
-     */
-    buildFileTree(value, level) {
-        let /** @type {?} */ data = [];
-        for (let /** @type {?} */ k in value) {
-            let /** @type {?} */ v = value[k];
-            let /** @type {?} */ node = new TodoItemNode();
-            node.item = `${k}`;
-            if (v === null || v === undefined) {
-                // no action
-            }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.item = v;
-            }
-            data.push(node);
-        }
-        return data;
-    }
-    /**
-     * Add an item to to-do list
-     * @param {?} parent
-     * @param {?} name
-     * @return {?}
-     */
-    insertItem(parent, name) {
-        const /** @type {?} */ child = /** @type {?} */ ({ item: name });
-        if (parent.children) {
-            parent.children.push(child);
-            this.dataChange.next(this.data);
-        }
-    }
-    /**
-     * @param {?} node
-     * @param {?} name
-     * @return {?}
-     */
-    updateItem(node, name) {
-        node.item = name;
-        this.dataChange.next(this.data);
-    }
-}
-ChecklistDatabase.decorators = [
-    { type: Injectable },
-];
-/** @nocollapse */
-ChecklistDatabase.ctorParameters = () => [];
-/**
- * \@title Tree with checkboxes
- */
-class TreeChecklistExample {
-    /**
-     * @param {?} database
-     */
-    constructor(database) {
-        this.database = database;
-        /**
-         * Map from flat node to nested node. This helps us finding the nested node to be modified
-         */
-        this.flatNodeMap = new Map();
-        /**
-         * Map from nested node to flattened node. This helps us to keep the same object for selection
-         */
-        this.nestedNodeMap = new Map();
-        /**
-         * A selected parent node to be inserted
-         */
-        this.selectedParent = null;
-        /**
-         * The new item's name
-         */
-        this.newItemName = '';
-        /**
-         * The selection for checklist
-         */
-        this.checklistSelection = new SelectionModel(true /* multiple */);
-        this.getLevel = (node) => { return node.level; };
-        this.isExpandable = (node) => { return node.expandable; };
-        this.getChildren = (node) => {
-            return of(node.children);
-        };
-        this.hasChild = (_, _nodeData) => { return _nodeData.expandable; };
-        this.hasNoContent = (_, _nodeData) => { return _nodeData.item === ''; };
-        /**
-         * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
-         */
-        this.transformer = (node, level) => {
-            let /** @type {?} */ flatNode = this.nestedNodeMap.has(node) && /** @type {?} */ ((this.nestedNodeMap.get(node))).item === node.item
-                ? /** @type {?} */ ((this.nestedNodeMap.get(node)))
-                : new TodoItemFlatNode();
-            flatNode.item = node.item;
-            flatNode.level = level;
-            flatNode.expandable = !!node.children;
-            this.flatNodeMap.set(flatNode, node);
-            this.nestedNodeMap.set(node, flatNode);
-            return flatNode;
-        };
-        this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
-        this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
-        this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe(data => {
-            this.dataSource.data = data;
-        });
-    }
-    /**
-     * Whether all the descendants of the node are selected
-     * @param {?} node
-     * @return {?}
-     */
-    descendantsAllSelected(node) {
-        const /** @type {?} */ descendants = this.treeControl.getDescendants(node);
-        return descendants.every(child => this.checklistSelection.isSelected(child));
-    }
-    /**
-     * Whether part of the descendants are selected
-     * @param {?} node
-     * @return {?}
-     */
-    descendantsPartiallySelected(node) {
-        const /** @type {?} */ descendants = this.treeControl.getDescendants(node);
-        const /** @type {?} */ result = descendants.some(child => this.checklistSelection.isSelected(child));
-        return result && !this.descendantsAllSelected(node);
-    }
-    /**
-     * Toggle the to-do item selection. Select/deselect all the descendants node
-     * @param {?} node
-     * @return {?}
-     */
-    todoItemSelectionToggle(node) {
-        this.checklistSelection.toggle(node);
-        const /** @type {?} */ descendants = this.treeControl.getDescendants(node);
-        this.checklistSelection.isSelected(node)
-            ? this.checklistSelection.select(...descendants)
-            : this.checklistSelection.deselect(...descendants);
-    }
-    /**
-     * Select the category so we can insert the new item.
-     * @param {?} node
-     * @return {?}
-     */
-    addNewItem(node) {
-        const /** @type {?} */ parentNode = this.flatNodeMap.get(node);
-        this.database.insertItem(/** @type {?} */ ((parentNode)), '');
-        this.treeControl.expand(node);
-    }
-    /**
-     * Save the node to database
-     * @param {?} node
-     * @param {?} itemValue
-     * @return {?}
-     */
-    saveNode(node, itemValue) {
-        const /** @type {?} */ nestedNode = this.flatNodeMap.get(node);
-        this.database.updateItem(/** @type {?} */ ((nestedNode)), itemValue);
-    }
-}
-TreeChecklistExample.decorators = [
-    { type: Component, args: [{
-                selector: 'tree-checklist-example',
-                template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button><mat-checkbox class=\"checklist-leaf-node\" [checked]=\"checklistSelection.isSelected(node)\" (change)=\"checklistSelection.toggle(node);\">{{node.item}}</mat-checkbox></mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasNoContent\" matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button><mat-form-field><input matInput #itemValue placeholder=\"New item...\"></mat-form-field><button mat-button (click)=\"saveNode(node, itemValue.value)\">Save</button></mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button><mat-checkbox [checked]=\"descendantsAllSelected(node)\" [indeterminate]=\"descendantsPartiallySelected(node)\" (change)=\"todoItemSelectionToggle(node)\">{{node.item}}</mat-checkbox><button mat-icon-button (click)=\"addNewItem(node)\"><mat-icon>add</mat-icon></button></mat-tree-node></mat-tree>",
-                styles: [""],
-                providers: [ChecklistDatabase]
-            },] },
-];
-/** @nocollapse */
-TreeChecklistExample.ctorParameters = () => [
-    { type: ChecklistDatabase, },
-];
 
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * Flat node with expandable and level information
- */
-class DynamicFlatNode {
-    /**
-     * @param {?} item
-     * @param {?=} level
-     * @param {?=} expandable
-     * @param {?=} isLoading
-     */
-    constructor(item, level = 1, expandable = false, isLoading = false) {
-        this.item = item;
-        this.level = level;
-        this.expandable = expandable;
-        this.isLoading = isLoading;
-    }
-}
-/**
- * Database for dynamic data. When expanding a node in the tree, the data source will need to fetch
- * the descendants data from the database.
- */
-class DynamicDatabase {
-    constructor() {
-        this.dataMap = new Map([
-            ['Fruits', ['Apple', 'Orange', 'Banana']],
-            ['Vegetables', ['Tomato', 'Potato', 'Onion']],
-            ['Apple', ['Fuji', 'Macintosh']],
-            ['Onion', ['Yellow', 'White', 'Purple']]
-        ]);
-        this.rootLevelNodes = ['Fruits', 'Vegetables'];
-    }
-    /**
-     * Initial data from database
-     * @return {?}
-     */
-    initialData() {
-        return this.rootLevelNodes.map(name => new DynamicFlatNode(name, 0, true));
-    }
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    getChildren(node) {
-        return this.dataMap.get(node);
-    }
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    isExpandable(node) {
-        return this.dataMap.has(node);
-    }
-}
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-class DynamicDataSource {
-    /**
-     * @param {?} treeControl
-     * @param {?} database
-     */
-    constructor(treeControl, database) {
-        this.treeControl = treeControl;
-        this.database = database;
-        this.dataChange = new BehaviorSubject([]);
-    }
-    /**
-     * @return {?}
-     */
-    get data() { return this.dataChange.value; }
-    /**
-     * @param {?} value
-     * @return {?}
-     */
-    set data(value) {
-        this.treeControl.dataNodes = value;
-        this.dataChange.next(value);
-    }
-    /**
-     * @param {?} collectionViewer
-     * @return {?}
-     */
-    connect(collectionViewer) {
-        /** @type {?} */ ((this.treeControl.expansionModel.onChange)).subscribe(change => {
-            if ((/** @type {?} */ (change)).added ||
-                (/** @type {?} */ (change)).removed) {
-                this.handleTreeControl(/** @type {?} */ (change));
-            }
-        });
-        return merge(collectionViewer.viewChange, this.dataChange).pipe(map(() => this.data));
-    }
-    /**
-     * Handle expand/collapse behaviors
-     * @param {?} change
-     * @return {?}
-     */
-    handleTreeControl(change) {
-        if (change.added) {
-            change.added.forEach((node) => this.toggleNode(node, true));
-        }
-        if (change.removed) {
-            change.removed.reverse().forEach((node) => this.toggleNode(node, false));
-        }
-    }
-    /**
-     * Toggle the node, remove from display list
-     * @param {?} node
-     * @param {?} expand
-     * @return {?}
-     */
-    toggleNode(node, expand) {
-        const /** @type {?} */ children = this.database.getChildren(node.item);
-        const /** @type {?} */ index = this.data.indexOf(node);
-        if (!children || index < 0) {
-            // If no children, or cannot find the node, no op
-            return;
-        }
-        node.isLoading = true;
-        setTimeout(() => {
-            if (expand) {
-                const /** @type {?} */ nodes = children.map(name => new DynamicFlatNode(name, node.level + 1, this.database.isExpandable(name)));
-                this.data.splice(index + 1, 0, ...nodes);
-            }
-            else {
-                this.data.splice(index + 1, children.length);
-            }
-            // notify the change
-            this.dataChange.next(this.data);
-            node.isLoading = false;
-        }, 1000);
-    }
-}
-DynamicDataSource.decorators = [
-    { type: Injectable },
-];
-/** @nocollapse */
-DynamicDataSource.ctorParameters = () => [
-    { type: FlatTreeControl, },
-    { type: DynamicDatabase, },
-];
-/**
- * \@title Tree with dynamic data
- */
-class TreeDynamicExample {
-    /**
-     * @param {?} database
-     */
-    constructor(database) {
-        this.getLevel = (node) => { return node.level; };
-        this.isExpandable = (node) => { return node.expandable; };
-        this.hasChild = (_, _nodeData) => { return _nodeData.expandable; };
-        this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
-        this.dataSource = new DynamicDataSource(this.treeControl, database);
-        this.dataSource.data = database.initialData();
-    }
-}
-TreeDynamicExample.decorators = [
-    { type: Component, args: [{
-                selector: 'tree-dynamic-example',
-                template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button> {{node.item}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding><button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" matTreeNodeToggle><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.item}}<mat-progress-bar *ngIf=\"node.isLoading\" mode=\"indeterminate\" class=\"example-tree-progress-bar\"></mat-progress-bar></mat-tree-node></mat-tree>",
-                styles: [".example-tree-progress-bar { margin-left: 30px; } "],
-                providers: [DynamicDatabase]
-            },] },
-];
-/** @nocollapse */
-TreeDynamicExample.ctorParameters = () => [
-    { type: DynamicDatabase, },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * File node data with nested structure.
- * Each node has a filename, and a type or a list of children.
- */
-let FileNode$2 = class FileNode {
-};
-/**
- * Flat node with expandable and level information
- */
-let FileFlatNode$1 = class FileFlatNode {
-};
-/**
- * The file structure tree data in string. The data could be parsed into a Json object
- */
-const /** @type {?} */ TREE_DATA$3 = `
-  {
-    "Documents": {
-      "angular": {
-        "src": {
-          "core": "ts",
-          "compiler": "ts"
-        }
-      },
-      "material2": {
-        "src": {
-          "button": "ts",
-          "checkbox": "ts",
-          "input": "ts"
-        }
-      }
-    },
-    "Downloads": {
-        "Tutorial": "html",
-        "November": "pdf",
-        "October": "pdf"
-    },
-    "Pictures": {
-        "Sun": "png",
-        "Woods": "jpg",
-        "Photo Booth Library": {
-          "Contents": "dir",
-          "Pictures": "dir"
-        }
-    },
-    "Applications": {
-        "Chrome": "app",
-        "Calendar": "app",
-        "Webstorm": "app"
-    }
-}`;
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-let FileDatabase$2 = class FileDatabase {
-    constructor() {
-        this.dataChange = new BehaviorSubject([]);
-        this.initialize();
-    }
-    /**
-     * @return {?}
-     */
-    get data() { return this.dataChange.value; }
-    /**
-     * @return {?}
-     */
-    initialize() {
-        // Parse the string to json object.
-        const /** @type {?} */ dataObject = JSON.parse(TREE_DATA$3);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        const /** @type {?} */ data = this.buildFileTree(dataObject, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    }
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     * @param {?} value
-     * @param {?} level
-     * @return {?}
-     */
-    buildFileTree(value, level) {
-        let /** @type {?} */ data = [];
-        for (let /** @type {?} */ k in value) {
-            let /** @type {?} */ v = value[k];
-            let /** @type {?} */ node = new FileNode$2();
-            node.filename = `${k}`;
-            if (v === null || v === undefined) {
-                // no action
-            }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.type = v;
-            }
-            data.push(node);
-        }
-        return data;
-    }
-};
-FileDatabase$2.decorators = [
-    { type: Injectable },
-];
-/** @nocollapse */
-FileDatabase$2.ctorParameters = () => [];
-/**
- * \@title Tree with flat nodes
- */
-class TreeFlatOverviewExample {
-    /**
-     * @param {?} database
-     */
-    constructor(database) {
-        this.transformer = (node, level) => {
-            let /** @type {?} */ flatNode = new FileFlatNode$1();
-            flatNode.filename = node.filename;
-            flatNode.type = node.type;
-            flatNode.level = level;
-            flatNode.expandable = !!node.children;
-            return flatNode;
-        };
-        this._getLevel = (node) => { return node.level; };
-        this._isExpandable = (node) => { return node.expandable; };
-        this._getChildren = (node) => {
-            return of(node.children);
-        };
-        this.hasChild = (_, _nodeData) => { return _nodeData.expandable; };
-        this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
-        this.treeControl = new FlatTreeControl(this._getLevel, this._isExpandable);
-        this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe(data => {
-            this.dataSource.data = data;
-        });
-    }
-}
-TreeFlatOverviewExample.decorators = [
-    { type: Component, args: [{
-                selector: 'tree-flat-overview-example',
-                template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button> {{node.filename}} : {{node.type}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}} : {{node.type}}</mat-tree-node></mat-tree>",
-                styles: [""],
-                providers: [FileDatabase$2]
-            },] },
-];
-/** @nocollapse */
-TreeFlatOverviewExample.ctorParameters = () => [
-    { type: FileDatabase$2, },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-const /** @type {?} */ LOAD_MORE = 'LOAD_MORE';
-/**
- * Nested node
- */
-class LoadmoreNode {
-    /**
-     * @param {?} item
-     * @param {?=} hasChildren
-     * @param {?=} loadMoreParentItem
-     */
-    constructor(item, hasChildren = false, loadMoreParentItem = null) {
-        this.item = item;
-        this.hasChildren = hasChildren;
-        this.loadMoreParentItem = loadMoreParentItem;
-        this.childrenChange = new BehaviorSubject([]);
-    }
-    /**
-     * @return {?}
-     */
-    get children() {
-        return this.childrenChange.value;
-    }
-}
-/**
- * Flat node with expandable and level information
- */
-class LoadmoreFlatNode {
-    /**
-     * @param {?} item
-     * @param {?=} level
-     * @param {?=} expandable
-     * @param {?=} loadMoreParentItem
-     */
-    constructor(item, level = 1, expandable = false, loadMoreParentItem = null) {
-        this.item = item;
-        this.level = level;
-        this.expandable = expandable;
-        this.loadMoreParentItem = loadMoreParentItem;
-    }
-}
-/**
- * A database that only load part of the data initially. After user clicks on the `Load more`
- * button, more data will be loaded.
- */
-class LoadmoreDatabase {
-    constructor() {
-        this.batchNumber = 5;
-        this.dataChange = new BehaviorSubject([]);
-        this.nodeMap = new Map();
-        /**
-         * The data
-         */
-        this.rootLevelNodes = ['Vegetables', 'Fruits'];
-        this.dataMap = new Map([
-            ['Fruits', ['Apple', 'Orange', 'Banana']],
-            ['Vegetables', ['Tomato', 'Potato', 'Onion']],
-            ['Apple', ['Fuji', 'Macintosh']],
-            ['Onion', ['Yellow', 'White', 'Purple', 'Green', 'Shallot', 'Sweet', 'Red', 'Leek']],
-        ]);
-    }
-    /**
-     * @return {?}
-     */
-    initialize() {
-        const /** @type {?} */ data = this.rootLevelNodes.map(name => this._generateNode(name));
-        this.dataChange.next(data);
-    }
-    /**
-     * Expand a node whose children are not loaded
-     * @param {?} item
-     * @param {?=} onlyFirstTime
-     * @return {?}
-     */
-    loadMore(item, onlyFirstTime = false) {
-        if (!this.nodeMap.has(item) || !this.dataMap.has(item)) {
-            return;
-        }
-        const /** @type {?} */ parent = /** @type {?} */ ((this.nodeMap.get(item)));
-        const /** @type {?} */ children = /** @type {?} */ ((this.dataMap.get(item)));
-        if (onlyFirstTime && /** @type {?} */ ((parent.children)).length > 0) {
-            return;
-        }
-        const /** @type {?} */ newChildrenNumber = /** @type {?} */ ((parent.children)).length + this.batchNumber;
-        let /** @type {?} */ nodes = children.slice(0, newChildrenNumber)
-            .map(name => this._generateNode(name));
-        if (newChildrenNumber < children.length) {
-            // Need a new load more node
-            nodes.push(new LoadmoreNode(LOAD_MORE, false, item));
-        }
-        parent.childrenChange.next(nodes);
-        this.dataChange.next(this.dataChange.value);
-    }
-    /**
-     * @param {?} item
-     * @return {?}
-     */
-    _generateNode(item) {
-        if (this.nodeMap.has(item)) {
-            return /** @type {?} */ ((this.nodeMap.get(item)));
-        }
-        const /** @type {?} */ result = new LoadmoreNode(item, this.dataMap.has(item));
-        this.nodeMap.set(item, result);
-        return result;
-    }
-}
-LoadmoreDatabase.decorators = [
-    { type: Injectable },
-];
-/**
- * \@title Tree with partially loaded data
- */
-class TreeLoadmoreExample {
-    /**
-     * @param {?} database
-     */
-    constructor(database) {
-        this.database = database;
-        this.nodeMap = new Map();
-        this.getChildren = (node) => { return node.childrenChange; };
-        this.transformer = (node, level) => {
-            if (this.nodeMap.has(node.item)) {
-                return /** @type {?} */ ((this.nodeMap.get(node.item)));
-            }
-            let /** @type {?} */ newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
-            this.nodeMap.set(node.item, newNode);
-            return newNode;
-        };
-        this.getLevel = (node) => { return node.level; };
-        this.isExpandable = (node) => { return node.expandable; };
-        this.hasChild = (_, _nodeData) => { return _nodeData.expandable; };
-        this.isLoadMore = (_, _nodeData) => { return _nodeData.item === LOAD_MORE; };
-        this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
-        this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
-        this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe(data => {
-            this.dataSource.data = data;
-        });
-        database.initialize();
-    }
-    /**
-     * Load more nodes from data source
-     * @param {?} item
-     * @return {?}
-     */
-    loadMore(item) {
-        this.database.loadMore(item);
-    }
-    /**
-     * @param {?} node
-     * @return {?}
-     */
-    loadChildren(node) {
-        this.database.loadMore(node.item, true);
-    }
-}
-TreeLoadmoreExample.decorators = [
-    { type: Component, args: [{
-                selector: 'tree-loadmore-example',
-                template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button> {{node.item}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding><button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" (click)=\"loadChildren(node)\" matTreeNodeToggle><mat-icon>{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.item}}</mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: isLoadMore\"><button mat-button (click)=\"loadMore(node.loadMoreParentItem)\">Load more...</button></mat-tree-node></mat-tree>",
-                styles: [""],
-                providers: [LoadmoreDatabase]
-            },] },
-];
-/** @nocollapse */
-TreeLoadmoreExample.ctorParameters = () => [
-    { type: LoadmoreDatabase, },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * Json node data with nested structure. Each node has a filename and a value or a list of children
- */
-let FileNode$3 = class FileNode {
-};
-/**
- * The Json tree data in string. The data could be parsed into Json object
- */
-const /** @type {?} */ TREE_DATA$4 = `
-  {
-    "Documents": {
-      "angular": {
-        "src": {
-          "core": "ts",
-          "compiler": "ts"
-        }
-      },
-      "material2": {
-        "src": {
-          "button": "ts",
-          "checkbox": "ts",
-          "input": "ts"
-        }
-      }
-    },
-    "Downloads": {
-        "Tutorial": "html",
-        "November": "pdf",
-        "October": "pdf"
-    },
-    "Pictures": {
-        "Sun": "png",
-        "Woods": "jpg",
-        "Photo Booth Library": {
-          "Contents": "dir",
-          "Pictures": "dir"
-        }
-    },
-    "Applications": {
-        "Chrome": "app",
-        "Calendar": "app",
-        "Webstorm": "app"
-    }
-  }`;
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-let FileDatabase$3 = class FileDatabase {
-    constructor() {
-        this.dataChange = new BehaviorSubject([]);
-        this.initialize();
-    }
-    /**
-     * @return {?}
-     */
-    get data() { return this.dataChange.value; }
-    /**
-     * @return {?}
-     */
-    initialize() {
-        // Parse the string to json object.
-        const /** @type {?} */ dataObject = JSON.parse(TREE_DATA$4);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        const /** @type {?} */ data = this.buildFileTree(dataObject, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    }
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     * @param {?} value
-     * @param {?} level
-     * @return {?}
-     */
-    buildFileTree(value, level) {
-        let /** @type {?} */ data = [];
-        for (let /** @type {?} */ k in value) {
-            let /** @type {?} */ v = value[k];
-            let /** @type {?} */ node = new FileNode$3();
-            node.filename = `${k}`;
-            if (v === null || v === undefined) {
-                // no action
-            }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.type = v;
-            }
-            data.push(node);
-        }
-        return data;
-    }
-};
-FileDatabase$3.decorators = [
-    { type: Injectable },
-];
-/** @nocollapse */
-FileDatabase$3.ctorParameters = () => [];
-/**
- * \@title Tree with nested nodes
- */
-class TreeNestedOverviewExample {
-    /**
-     * @param {?} database
-     */
-    constructor(database) {
-        this._getChildren = (node) => { return of(node.children); };
-        this.hasNestedChild = (_, nodeData) => { return !(nodeData.type); };
-        this.nestedTreeControl = new NestedTreeControl(this._getChildren);
-        this.nestedDataSource = new MatTreeNestedDataSource();
-        database.dataChange.subscribe(data => this.nestedDataSource.data = data);
-    }
-}
-TreeNestedOverviewExample.decorators = [
-    { type: Component, args: [{
-                selector: 'tree-nested-overview-example',
-                template: "<mat-tree [dataSource]=\"nestedDataSource\" [treeControl]=\"nestedTreeControl\" class=\"example-tree\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle><li class=\"mat-tree-node\"><button mat-icon-button disabled=\"disabled\"></button> {{node.filename}}: {{node.type}}</li></mat-tree-node><mat-nested-tree-node *matTreeNodeDef=\"let node; when: hasNestedChild\"><li><div class=\"mat-tree-node\"><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon>{{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}</div><ul [class.example-tree-invisible]=\"!nestedTreeControl.isExpanded(node)\"><ng-container matTreeNodeOutlet></ng-container></ul></li></mat-nested-tree-node></mat-tree>",
-                styles: [".example-tree-invisible { display: none; } .example-tree ul, .example-tree li { margin-top: 0; margin-bottom: 0; list-style-type: none; } "],
-                providers: [FileDatabase$3]
-            },] },
-];
-/** @nocollapse */
-TreeNestedOverviewExample.ctorParameters = () => [
-    { type: FileDatabase$3, },
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-const /** @type {?} */ EXAMPLE_COMPONENTS = {
+const EXAMPLE_COMPONENTS = {
     'autocomplete-auto-active-first-option': {
         title: 'Highlight the first autocomplete option',
         component: AutocompleteAutoActiveFirstOptionExample
@@ -5672,12 +3945,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
     'autocomplete-simple': {
         title: 'Simple autocomplete',
         component: AutocompleteSimpleExample
-    },
-    'bottom-sheet-overview': {
-        title: 'Bottom Sheet Overview',
-        component: BottomSheetOverviewExample,
-        additionalFiles: ["bottom-sheet-overview-example-sheet.html"],
-        selectorName: 'BottomSheetOverviewExample, BottomSheetOverviewExampleSheet'
     },
     'button-overview': {
         title: 'Basic buttons',
@@ -5707,14 +3974,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Basic CDK data-table',
         component: CdkTableBasicExample
     },
-    'cdk-tree-flat': {
-        title: 'Tree with flat nodes',
-        component: CdkTreeFlatExample
-    },
-    'cdk-tree-nested': {
-        title: 'Tree with nested nodes',
-        component: CdkTreeNestedExample
-    },
     'checkbox-configurable': {
         title: 'Configurable checkbox',
         component: CheckboxConfigurableExample
@@ -5722,10 +3981,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
     'checkbox-overview': {
         title: 'Basic checkboxes',
         component: CheckboxOverviewExample
-    },
-    'chips-autocomplete': {
-        title: 'Chips Autocomplete',
-        component: ChipsAutocompleteExample
     },
     'chips-input': {
         title: 'Chips with input',
@@ -5742,15 +3997,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
     'datepicker-api': {
         title: 'Datepicker open method',
         component: DatepickerApiExample
-    },
-    'datepicker-color': {
-        title: 'Datepicker palette colors',
-        component: DatepickerColorExample
-    },
-    'datepicker-custom-header': {
-        title: 'Datepicker with custom calendar header',
-        component: DatepickerCustomHeaderExample,
-        selectorName: 'DatepickerCustomHeaderExample, ExampleHeader'
     },
     'datepicker-custom-icon': {
         title: 'Datepicker with custom icon',
@@ -5800,10 +4046,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Datepicker selected value',
         component: DatepickerValueExample
     },
-    'datepicker-views-selection': {
-        title: 'Datepicker emulating a Year and month picker',
-        component: DatepickerViewsSelectionExample
-    },
     'dialog-content': {
         title: 'Dialog with header, scrollable content and actions',
         component: DialogContentExample,
@@ -5836,10 +4078,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Elevation CSS classes',
         component: ElevationOverviewExample
     },
-    'expansion-expand-collapse-all': {
-        title: 'Accordion with expand/collapse all toggles',
-        component: ExpansionExpandCollapseAllExample
-    },
     'expansion-overview': {
         title: 'Basic expansion panel',
         component: ExpansionOverviewExample
@@ -5847,22 +4085,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
     'expansion-steps': {
         title: 'Expansion panel as accordion',
         component: ExpansionStepsExample
-    },
-    'focus-monitor-directives': {
-        title: 'Monitoring focus with FocusMonitor',
-        component: FocusMonitorDirectivesExample
-    },
-    'focus-monitor-focus-via': {
-        title: 'Focusing with a specific FocusOrigin',
-        component: FocusMonitorFocusViaExample
-    },
-    'focus-monitor-overview': {
-        title: 'Monitoring focus with FocusMonitor',
-        component: FocusMonitorOverviewExample
-    },
-    'form-field-appearance': {
-        title: 'Form field appearance variants',
-        component: FormFieldAppearanceExample
     },
     'form-field-custom-control': {
         title: 'Form field with custom telephone number input control.',
@@ -5909,6 +4131,10 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
     'icon-svg': {
         title: 'SVG icons',
         component: IconSvgExample
+    },
+    'input-autosize-textarea': {
+        title: 'Auto-resizing textarea',
+        component: InputAutosizeTextareaExample
     },
     'input-clearable': {
         title: 'Input with a clear button',
@@ -6058,10 +4284,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Autosize sidenav',
         component: SidenavAutosizeExample
     },
-    'sidenav-backdrop': {
-        title: 'Drawer with explicit backdrop setting',
-        component: SidenavBackdropExample
-    },
     'sidenav-disable-close': {
         title: 'Sidenav with custom escape and backdrop click behavior',
         component: SidenavDisableCloseExample
@@ -6110,10 +4332,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Configurable slider',
         component: SliderConfigurableExample
     },
-    'slider-formatting': {
-        title: 'Slider with custom thumb label formatting.',
-        component: SliderFormattingExample
-    },
     'slider-overview': {
         title: 'Basic slider',
         component: SliderOverviewExample
@@ -6136,14 +4354,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Sorting overview',
         component: SortOverviewExample
     },
-    'stepper-editable': {
-        title: 'Stepper with editable steps',
-        component: StepperEditableExample
-    },
-    'stepper-optional': {
-        title: 'Stepper with optional steps',
-        component: StepperOptionalExample
-    },
     'stepper-overview': {
         title: 'Stepper overview',
         component: StepperOverviewExample
@@ -6159,10 +4369,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
     'table-http': {
         title: 'Table retrieving data through HTTP',
         component: TableHttpExample
-    },
-    'table-native-only': {
-        title: 'Native `<table>` that only applies the Material styles',
-        component: TableNativeOnlyExample
     },
     'table-overview': {
         title: 'Data table with sorting, pagination, and filtering.',
@@ -6187,18 +4393,6 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
     'tabs-template-label': {
         title: 'Complex Example',
         component: TabsTemplateLabelExample
-    },
-    'text-field-autofill-directive': {
-        title: 'Monitoring autofill state with cdkAutofill',
-        component: TextFieldAutofillDirectiveExample
-    },
-    'text-field-autofill-monitor': {
-        title: 'Monitoring autofill state with AutofillMonitor',
-        component: TextFieldAutofillMonitorExample
-    },
-    'text-field-autosize-textarea': {
-        title: 'Auto-resizing textarea',
-        component: TextFieldAutosizeTextareaExample
     },
     'toolbar-multirow': {
         title: 'Multi-row toolbar',
@@ -6228,34 +4422,13 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Tooltip with custom position',
         component: TooltipPositionExample
     },
-    'tree-checklist': {
-        title: 'Tree with checkboxes',
-        component: TreeChecklistExample
-    },
-    'tree-dynamic': {
-        title: 'Tree with dynamic data',
-        component: TreeDynamicExample
-    },
-    'tree-flat-overview': {
-        title: 'Tree with flat nodes',
-        component: TreeFlatOverviewExample
-    },
-    'tree-loadmore': {
-        title: 'Tree with partially loaded data',
-        component: TreeLoadmoreExample
-    },
-    'tree-nested-overview': {
-        title: 'Tree with nested nodes',
-        component: TreeNestedOverviewExample
-    },
 };
-const /** @type {?} */ EXAMPLE_LIST = [
+const EXAMPLE_LIST = [
     AutocompleteAutoActiveFirstOptionExample,
     AutocompleteDisplayExample,
     AutocompleteFilterExample,
     AutocompleteOverviewExample,
     AutocompleteSimpleExample,
-    BottomSheetOverviewExampleSheet, BottomSheetOverviewExample,
     ButtonOverviewExample,
     ButtonToggleExclusiveExample,
     ButtonToggleOverviewExample,
@@ -6263,17 +4436,12 @@ const /** @type {?} */ EXAMPLE_LIST = [
     CardFancyExample,
     CardOverviewExample,
     CdkTableBasicExample,
-    CdkTreeFlatExample,
-    CdkTreeNestedExample,
     CheckboxConfigurableExample,
     CheckboxOverviewExample,
-    ChipsAutocompleteExample,
     ChipsInputExample,
     ChipsOverviewExample,
     ChipsStackedExample,
     DatepickerApiExample,
-    DatepickerColorExample,
-    ExampleHeader, DatepickerCustomHeaderExample,
     DatepickerCustomIconExample,
     DatepickerDisabledExample,
     DatepickerEventsExample,
@@ -6286,20 +4454,14 @@ const /** @type {?} */ EXAMPLE_LIST = [
     DatepickerStartViewExample,
     DatepickerTouchExample,
     DatepickerValueExample,
-    DatepickerViewsSelectionExample,
     DialogContentExampleDialog, DialogContentExample,
     DialogDataExampleDialog, DialogDataExample,
     DialogElementsExampleDialog, DialogElementsExample,
     DialogOverviewExampleDialog, DialogOverviewExample,
     DividerOverviewExample,
     ElevationOverviewExample,
-    ExpansionExpandCollapseAllExample,
     ExpansionOverviewExample,
     ExpansionStepsExample,
-    FocusMonitorDirectivesExample,
-    FocusMonitorFocusViaExample,
-    FocusMonitorOverviewExample,
-    FormFieldAppearanceExample,
     MyTelInput, FormFieldCustomControlExample,
     FormFieldErrorExample,
     FormFieldHintExample,
@@ -6311,6 +4473,7 @@ const /** @type {?} */ EXAMPLE_LIST = [
     GridListOverviewExample,
     IconOverviewExample,
     IconSvgExample,
+    InputAutosizeTextareaExample,
     InputClearableExample,
     InputErrorStateMatcherExample,
     InputErrorsExample,
@@ -6348,7 +4511,6 @@ const /** @type {?} */ EXAMPLE_LIST = [
     SelectResetExample,
     SelectValueBindingExample,
     SidenavAutosizeExample,
-    SidenavBackdropExample,
     SidenavDisableCloseExample,
     SidenavDrawerOverviewExample,
     SidenavFixedExample,
@@ -6361,28 +4523,21 @@ const /** @type {?} */ EXAMPLE_LIST = [
     SlideToggleFormsExample,
     SlideToggleOverviewExample,
     SliderConfigurableExample,
-    SliderFormattingExample,
     SliderOverviewExample,
     PizzaPartyComponent, SnackBarComponentExample,
     SnackBarOverviewExample,
     SnackBarPositionExample,
     SortOverviewExample,
-    StepperEditableExample,
-    StepperOptionalExample,
     StepperOverviewExample,
     TableBasicExample,
     TableFilteringExample,
     TableHttpExample,
-    TableNativeOnlyExample,
     TableOverviewExample,
     TablePaginationExample,
     TableSelectionExample,
     TableSortingExample,
     TabsOverviewExample,
     TabsTemplateLabelExample,
-    TextFieldAutofillDirectiveExample,
-    TextFieldAutofillMonitorExample,
-    TextFieldAutosizeTextareaExample,
     ToolbarMultirowExample,
     ToolbarOverviewExample,
     TooltipDelayExample,
@@ -6390,11 +4545,6 @@ const /** @type {?} */ EXAMPLE_LIST = [
     TooltipModifiedDefaultsExample,
     TooltipOverviewExample,
     TooltipPositionExample,
-    TreeChecklistExample,
-    TreeDynamicExample,
-    TreeFlatOverviewExample,
-    TreeLoadmoreExample,
-    TreeNestedOverviewExample,
 ];
 class ExampleModule {
 }
@@ -6410,6 +4560,8 @@ ExampleModule.decorators = [
                 ]
             },] },
 ];
+/** @nocollapse */
+ExampleModule.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
@@ -6451,6 +4603,9 @@ class ExampleData {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+/**
+ * Generated bundle index. Do not edit.
+ */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, BottomSheetOverviewExample as ɵf, BottomSheetOverviewExampleSheet as ɵg, ButtonOverviewExample as ɵh, ButtonToggleExclusiveExample as ɵi, ButtonTypesExample as ɵj, CardOverviewExample as ɵk, CdkTableBasicExample as ɵl, CdkTreeFlatExample as ɵn, FileDatabase as ɵm, CdkTreeNestedExample as ɵp, FileDatabase$1 as ɵo, CheckboxConfigurableExample as ɵq, CheckboxOverviewExample as ɵr, ChipsAutocompleteExample as ɵs, ChipsInputExample as ɵt, ChipsOverviewExample as ɵu, ChipsStackedExample as ɵv, DatepickerApiExample as ɵw, DatepickerColorExample as ɵx, DatepickerCustomHeaderExample as ɵy, ExampleHeader as ɵz, DatepickerCustomIconExample as ɵba, DatepickerDisabledExample as ɵbb, DatepickerEventsExample as ɵbc, DatepickerFilterExample as ɵbd, DatepickerFormatsExample as ɵbf, MY_FORMATS as ɵbe, DatepickerLocaleExample as ɵbg, DatepickerMinMaxExample as ɵbh, DatepickerMomentExample as ɵbi, DatepickerStartViewExample as ɵbj, DatepickerTouchExample as ɵbk, DatepickerValueExample as ɵbl, DatepickerViewsSelectionExample as ɵbn, MY_FORMATS$1 as ɵbm, DialogContentExample as ɵbo, DialogContentExampleDialog as ɵbp, DialogDataExample as ɵbq, DialogDataExampleDialog as ɵbr, DialogElementsExample as ɵbs, DialogElementsExampleDialog as ɵbt, DialogOverviewExample as ɵbu, DialogOverviewExampleDialog as ɵbv, DividerOverviewExample as ɵbw, ElevationOverviewExample as ɵbx, ExpansionExpandCollapseAllExample as ɵby, ExpansionStepsExample as ɵbz, FocusMonitorDirectivesExample as ɵca, FocusMonitorFocusViaExample as ɵcb, FocusMonitorOverviewExample as ɵcc, FormFieldAppearanceExample as ɵcd, FormFieldCustomControlExample as ɵcf, MyTelInput as ɵce, FormFieldErrorExample as ɵcg, FormFieldHintExample as ɵch, FormFieldLabelExample as ɵci, FormFieldOverviewExample as ɵcj, FormFieldPrefixSuffixExample as ɵck, FormFieldThemingExample as ɵcl, GridListDynamicExample as ɵcm, GridListOverviewExample as ɵcn, IconOverviewExample as ɵco, IconSvgExample as ɵcp, InputClearableExample as ɵcq, InputErrorStateMatcherExample as ɵcr, InputErrorsExample as ɵcs, InputFormExample as ɵct, InputHintExample as ɵcu, InputOverviewExample as ɵcv, InputPrefixSuffixExample as ɵcw, ListSectionsExample as ɵcx, ListSelectionExample as ɵcy, ExampleMaterialModule as ɵga, MenuIconsExample as ɵcz, MenuOverviewExample as ɵda, NestedMenuExample as ɵdb, PaginatorConfigurableExample as ɵdc, PaginatorOverviewExample as ɵdd, ProgressBarBufferExample as ɵde, ProgressBarConfigurableExample as ɵdf, ProgressBarDeterminateExample as ɵdg, ProgressBarIndeterminateExample as ɵdh, ProgressBarQueryExample as ɵdi, ProgressSpinnerConfigurableExample as ɵdj, ProgressSpinnerOverviewExample as ɵdk, RadioNgModelExample as ɵdl, RadioOverviewExample as ɵdm, SelectCustomTriggerExample as ɵdn, SelectDisabledExample as ɵdo, SelectErrorStateMatcherExample as ɵdp, SelectFormExample as ɵdq, SelectHintErrorExample as ɵdr, SelectMultipleExample as ɵds, SelectNoRippleExample as ɵdt, SelectOptgroupExample as ɵdu, SelectOverviewExample as ɵdv, SelectPanelClassExample as ɵdw, SelectResetExample as ɵdx, SelectValueBindingExample as ɵdy, SidenavAutosizeExample as ɵdz, SidenavBackdropExample as ɵea, SidenavDisableCloseExample as ɵeb, SidenavDrawerOverviewExample as ɵec, SidenavFixedExample as ɵed, SidenavModeExample as ɵee, SidenavOpenCloseExample as ɵef, SidenavOverviewExample as ɵeg, SidenavPositionExample as ɵeh, SidenavResponsiveExample as ɵei, SlideToggleConfigurableExample as ɵej, SlideToggleFormsExample as ɵek, SlideToggleOverviewExample as ɵel, SliderConfigurableExample as ɵem, SliderFormattingExample as ɵen, SliderOverviewExample as ɵeo, PizzaPartyComponent as ɵeq, SnackBarComponentExample as ɵep, SnackBarOverviewExample as ɵer, SnackBarPositionExample as ɵes, SortOverviewExample as ɵet, StepperEditableExample as ɵeu, StepperOptionalExample as ɵev, TableBasicExample as ɵew, TableFilteringExample as ɵex, TableHttpExample as ɵey, TableNativeOnlyExample as ɵez, TableOverviewExample as ɵfa, TablePaginationExample as ɵfb, TableSelectionExample as ɵfc, TableSortingExample as ɵfd, TabsOverviewExample as ɵfe, TabsTemplateLabelExample as ɵff, TextFieldAutofillDirectiveExample as ɵfg, TextFieldAutofillMonitorExample as ɵfh, TextFieldAutosizeTextareaExample as ɵfi, ToolbarOverviewExample as ɵfj, TooltipDelayExample as ɵfk, TooltipManualExample as ɵfl, TooltipModifiedDefaultsExample as ɵfn, myCustomTooltipDefaults as ɵfm, TooltipOverviewExample as ɵfo, TooltipPositionExample as ɵfp, ChecklistDatabase as ɵfq, TreeChecklistExample as ɵfr, DynamicDatabase as ɵfs, TreeDynamicExample as ɵft, FileDatabase$2 as ɵfu, TreeFlatOverviewExample as ɵfv, LoadmoreDatabase as ɵfw, TreeLoadmoreExample as ɵfx, FileDatabase$3 as ɵfy, TreeNestedOverviewExample as ɵfz };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOverviewExample as ɵd, AutocompleteSimpleExample as ɵe, ButtonOverviewExample as ɵf, ButtonToggleExclusiveExample as ɵg, ButtonTypesExample as ɵh, CardOverviewExample as ɵi, CdkTableBasicExample as ɵj, CheckboxConfigurableExample as ɵk, CheckboxOverviewExample as ɵl, ChipsInputExample as ɵm, ChipsOverviewExample as ɵn, ChipsStackedExample as ɵo, DatepickerApiExample as ɵp, DatepickerCustomIconExample as ɵq, DatepickerDisabledExample as ɵr, DatepickerEventsExample as ɵs, DatepickerFilterExample as ɵt, DatepickerFormatsExample as ɵv, MY_FORMATS as ɵu, DatepickerLocaleExample as ɵw, DatepickerMinMaxExample as ɵx, DatepickerMomentExample as ɵy, DatepickerStartViewExample as ɵz, DatepickerTouchExample as ɵba, DatepickerValueExample as ɵbb, DialogContentExample as ɵbc, DialogContentExampleDialog as ɵbd, DialogDataExample as ɵbe, DialogDataExampleDialog as ɵbf, DialogElementsExample as ɵbg, DialogElementsExampleDialog as ɵbh, DialogOverviewExample as ɵbi, DialogOverviewExampleDialog as ɵbj, DividerOverviewExample as ɵbk, ElevationOverviewExample as ɵbl, ExpansionStepsExample as ɵbm, FormFieldCustomControlExample as ɵbo, MyTelInput as ɵbn, FormFieldErrorExample as ɵbp, FormFieldHintExample as ɵbq, FormFieldLabelExample as ɵbr, FormFieldOverviewExample as ɵbs, FormFieldPrefixSuffixExample as ɵbt, FormFieldThemingExample as ɵbu, GridListDynamicExample as ɵbv, GridListOverviewExample as ɵbw, IconOverviewExample as ɵbx, IconSvgExample as ɵby, InputAutosizeTextareaExample as ɵbz, InputClearableExample as ɵca, InputErrorStateMatcherExample as ɵcb, InputErrorsExample as ɵcc, InputFormExample as ɵcd, InputHintExample as ɵce, InputOverviewExample as ɵcf, InputPrefixSuffixExample as ɵcg, ListSectionsExample as ɵch, ListSelectionExample as ɵci, ExampleMaterialModule as ɵes, MenuIconsExample as ɵcj, MenuOverviewExample as ɵck, NestedMenuExample as ɵcl, PaginatorConfigurableExample as ɵcm, PaginatorOverviewExample as ɵcn, ProgressBarBufferExample as ɵco, ProgressBarConfigurableExample as ɵcp, ProgressBarDeterminateExample as ɵcq, ProgressBarIndeterminateExample as ɵcr, ProgressBarQueryExample as ɵcs, ProgressSpinnerConfigurableExample as ɵct, ProgressSpinnerOverviewExample as ɵcu, RadioNgModelExample as ɵcv, RadioOverviewExample as ɵcw, SelectCustomTriggerExample as ɵcx, SelectDisabledExample as ɵcy, SelectErrorStateMatcherExample as ɵcz, SelectFormExample as ɵda, SelectHintErrorExample as ɵdb, SelectMultipleExample as ɵdc, SelectNoRippleExample as ɵdd, SelectOptgroupExample as ɵde, SelectOverviewExample as ɵdf, SelectPanelClassExample as ɵdg, SelectResetExample as ɵdh, SelectValueBindingExample as ɵdi, SidenavAutosizeExample as ɵdj, SidenavDisableCloseExample as ɵdk, SidenavDrawerOverviewExample as ɵdl, SidenavFixedExample as ɵdm, SidenavModeExample as ɵdn, SidenavOpenCloseExample as ɵdo, SidenavOverviewExample as ɵdp, SidenavPositionExample as ɵdq, SidenavResponsiveExample as ɵdr, SlideToggleConfigurableExample as ɵds, SlideToggleFormsExample as ɵdt, SlideToggleOverviewExample as ɵdu, SliderConfigurableExample as ɵdv, SliderOverviewExample as ɵdw, PizzaPartyComponent as ɵdy, SnackBarComponentExample as ɵdx, SnackBarOverviewExample as ɵdz, SnackBarPositionExample as ɵea, SortOverviewExample as ɵeb, TableBasicExample as ɵec, TableFilteringExample as ɵed, TableHttpExample as ɵee, TableOverviewExample as ɵef, TablePaginationExample as ɵeg, TableSelectionExample as ɵeh, TableSortingExample as ɵei, TabsOverviewExample as ɵej, TabsTemplateLabelExample as ɵek, ToolbarOverviewExample as ɵel, TooltipDelayExample as ɵem, TooltipManualExample as ɵen, TooltipModifiedDefaultsExample as ɵep, myCustomTooltipDefaults as ɵeo, TooltipOverviewExample as ɵeq, TooltipPositionExample as ɵer };
 //# sourceMappingURL=material-examples.js.map
