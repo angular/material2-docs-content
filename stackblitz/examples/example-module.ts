@@ -10,7 +10,6 @@ import {AutocompleteDisplayExample} from './autocomplete-display/autocomplete-di
 import {AutocompleteFilterExample} from './autocomplete-filter/autocomplete-filter-example';
 import {AutocompleteOverviewExample} from './autocomplete-overview/autocomplete-overview-example';
 import {AutocompleteSimpleExample} from './autocomplete-simple/autocomplete-simple-example';
-import {BottomSheetOverviewExampleSheet,BottomSheetOverviewExample} from './bottom-sheet-overview/bottom-sheet-overview-example';
 import {ButtonOverviewExample} from './button-overview/button-overview-example';
 import {ButtonToggleExclusiveExample} from './button-toggle-exclusive/button-toggle-exclusive-example';
 import {ButtonToggleOverviewExample} from './button-toggle-overview/button-toggle-overview-example';
@@ -18,17 +17,12 @@ import {ButtonTypesExample} from './button-types/button-types-example';
 import {CardFancyExample} from './card-fancy/card-fancy-example';
 import {CardOverviewExample} from './card-overview/card-overview-example';
 import {CdkTableBasicExample} from './cdk-table-basic/cdk-table-basic-example';
-import {CdkTreeFlatExample} from './cdk-tree-flat/cdk-tree-flat-example';
-import {CdkTreeNestedExample} from './cdk-tree-nested/cdk-tree-nested-example';
 import {CheckboxConfigurableExample} from './checkbox-configurable/checkbox-configurable-example';
 import {CheckboxOverviewExample} from './checkbox-overview/checkbox-overview-example';
-import {ChipsAutocompleteExample} from './chips-autocomplete/chips-autocomplete-example';
 import {ChipsInputExample} from './chips-input/chips-input-example';
 import {ChipsOverviewExample} from './chips-overview/chips-overview-example';
 import {ChipsStackedExample} from './chips-stacked/chips-stacked-example';
 import {DatepickerApiExample} from './datepicker-api/datepicker-api-example';
-import {DatepickerColorExample} from './datepicker-color/datepicker-color-example';
-import {ExampleHeader,DatepickerCustomHeaderExample} from './datepicker-custom-header/datepicker-custom-header-example';
 import {DatepickerCustomIconExample} from './datepicker-custom-icon/datepicker-custom-icon-example';
 import {DatepickerDisabledExample} from './datepicker-disabled/datepicker-disabled-example';
 import {DatepickerEventsExample} from './datepicker-events/datepicker-events-example';
@@ -41,20 +35,14 @@ import {DatepickerOverviewExample} from './datepicker-overview/datepicker-overvi
 import {DatepickerStartViewExample} from './datepicker-start-view/datepicker-start-view-example';
 import {DatepickerTouchExample} from './datepicker-touch/datepicker-touch-example';
 import {DatepickerValueExample} from './datepicker-value/datepicker-value-example';
-import {DatepickerViewsSelectionExample} from './datepicker-views-selection/datepicker-views-selection-example';
 import {DialogContentExampleDialog,DialogContentExample} from './dialog-content/dialog-content-example';
 import {DialogDataExampleDialog,DialogDataExample} from './dialog-data/dialog-data-example';
 import {DialogElementsExampleDialog,DialogElementsExample} from './dialog-elements/dialog-elements-example';
 import {DialogOverviewExampleDialog,DialogOverviewExample} from './dialog-overview/dialog-overview-example';
 import {DividerOverviewExample} from './divider-overview/divider-overview-example';
 import {ElevationOverviewExample} from './elevation-overview/elevation-overview-example';
-import {ExpansionExpandCollapseAllExample} from './expansion-expand-collapse-all/expansion-expand-collapse-all-example';
 import {ExpansionOverviewExample} from './expansion-overview/expansion-overview-example';
 import {ExpansionStepsExample} from './expansion-steps/expansion-steps-example';
-import {FocusMonitorDirectivesExample} from './focus-monitor-directives/focus-monitor-directives-example';
-import {FocusMonitorFocusViaExample} from './focus-monitor-focus-via/focus-monitor-focus-via-example';
-import {FocusMonitorOverviewExample} from './focus-monitor-overview/focus-monitor-overview-example';
-import {FormFieldAppearanceExample} from './form-field-appearance/form-field-appearance-example';
 import {MyTelInput,FormFieldCustomControlExample} from './form-field-custom-control/form-field-custom-control-example';
 import {FormFieldErrorExample} from './form-field-error/form-field-error-example';
 import {FormFieldHintExample} from './form-field-hint/form-field-hint-example';
@@ -65,7 +53,8 @@ import {FormFieldThemingExample} from './form-field-theming/form-field-theming-e
 import {GridListDynamicExample} from './grid-list-dynamic/grid-list-dynamic-example';
 import {GridListOverviewExample} from './grid-list-overview/grid-list-overview-example';
 import {IconOverviewExample} from './icon-overview/icon-overview-example';
-import {IconSvgExample} from './icon-svg/icon-svg-example';
+import {IconSvgExample} from './icon-svg-example/icon-svg-example';
+import {InputAutosizeTextareaExample} from './input-autosize-textarea/input-autosize-textarea-example';
 import {InputClearableExample} from './input-clearable/input-clearable-example';
 import {InputErrorStateMatcherExample} from './input-error-state-matcher/input-error-state-matcher-example';
 import {InputErrorsExample} from './input-errors/input-errors-example';
@@ -103,7 +92,6 @@ import {SelectPanelClassExample} from './select-panel-class/select-panel-class-e
 import {SelectResetExample} from './select-reset/select-reset-example';
 import {SelectValueBindingExample} from './select-value-binding/select-value-binding-example';
 import {SidenavAutosizeExample} from './sidenav-autosize/sidenav-autosize-example';
-import {SidenavBackdropExample} from './sidenav-backdrop/sidenav-backdrop-example';
 import {SidenavDisableCloseExample} from './sidenav-disable-close/sidenav-disable-close-example';
 import {SidenavDrawerOverviewExample} from './sidenav-drawer-overview/sidenav-drawer-overview-example';
 import {SidenavFixedExample} from './sidenav-fixed/sidenav-fixed-example';
@@ -116,28 +104,21 @@ import {SlideToggleConfigurableExample} from './slide-toggle-configurable/slide-
 import {SlideToggleFormsExample} from './slide-toggle-forms/slide-toggle-forms-example';
 import {SlideToggleOverviewExample} from './slide-toggle-overview/slide-toggle-overview-example';
 import {SliderConfigurableExample} from './slider-configurable/slider-configurable-example';
-import {SliderFormattingExample} from './slider-formatting/slider-formatting-example';
 import {SliderOverviewExample} from './slider-overview/slider-overview-example';
 import {PizzaPartyComponent,SnackBarComponentExample} from './snack-bar-component/snack-bar-component-example';
 import {SnackBarOverviewExample} from './snack-bar-overview/snack-bar-overview-example';
 import {SnackBarPositionExample} from './snack-bar-position/snack-bar-position-example';
 import {SortOverviewExample} from './sort-overview/sort-overview-example';
-import {StepperEditableExample} from './stepper-editable/stepper-editable-example';
-import {StepperOptionalExample} from './stepper-optional/stepper-optional-example';
 import {StepperOverviewExample} from './stepper-overview/stepper-overview-example';
 import {TableBasicExample} from './table-basic/table-basic-example';
 import {TableFilteringExample} from './table-filtering/table-filtering-example';
 import {TableHttpExample} from './table-http/table-http-example';
-import {TableNativeOnlyExample} from './table-native-only/table-native-only-example';
 import {TableOverviewExample} from './table-overview/table-overview-example';
 import {TablePaginationExample} from './table-pagination/table-pagination-example';
 import {TableSelectionExample} from './table-selection/table-selection-example';
 import {TableSortingExample} from './table-sorting/table-sorting-example';
 import {TabsOverviewExample} from './tabs-overview/tabs-overview-example';
 import {TabsTemplateLabelExample} from './tabs-template-label/tabs-template-label-example';
-import {TextFieldAutofillDirectiveExample} from './text-field-autofill-directive/text-field-autofill-directive-example';
-import {TextFieldAutofillMonitorExample} from './text-field-autofill-monitor/text-field-autofill-monitor-example';
-import {TextFieldAutosizeTextareaExample} from './text-field-autosize-textarea/text-field-autosize-textarea-example';
 import {ToolbarMultirowExample} from './toolbar-multirow/toolbar-multirow-example';
 import {ToolbarOverviewExample} from './toolbar-overview/toolbar-overview-example';
 import {TooltipDelayExample} from './tooltip-delay/tooltip-delay-example';
@@ -145,11 +126,6 @@ import {TooltipManualExample} from './tooltip-manual/tooltip-manual-example';
 import {TooltipModifiedDefaultsExample} from './tooltip-modified-defaults/tooltip-modified-defaults-example';
 import {TooltipOverviewExample} from './tooltip-overview/tooltip-overview-example';
 import {TooltipPositionExample} from './tooltip-position/tooltip-position-example';
-import {TreeChecklistExample} from './tree-checklist/tree-checklist-example';
-import {TreeDynamicExample} from './tree-dynamic/tree-dynamic-example';
-import {TreeFlatOverviewExample} from './tree-flat-overview/tree-flat-overview-example';
-import {TreeLoadmoreExample} from './tree-loadmore/tree-loadmore-example';
-import {TreeNestedOverviewExample} from './tree-nested-overview/tree-nested-overview-example';
 
 export interface LiveExample {
   title: string;
@@ -179,12 +155,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Simple autocomplete',
     component: AutocompleteSimpleExample
   },
-  'bottom-sheet-overview': {
-    title: 'Bottom Sheet Overview',
-    component: BottomSheetOverviewExample,
-    additionalFiles: ["bottom-sheet-overview-example-sheet.html"],
-    selectorName: 'BottomSheetOverviewExample, BottomSheetOverviewExampleSheet'
-  },
   'button-overview': {
     title: 'Basic buttons',
     component: ButtonOverviewExample
@@ -213,14 +183,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Basic CDK data-table',
     component: CdkTableBasicExample
   },
-  'cdk-tree-flat': {
-    title: 'Tree with flat nodes',
-    component: CdkTreeFlatExample
-  },
-  'cdk-tree-nested': {
-    title: 'Tree with nested nodes',
-    component: CdkTreeNestedExample
-  },
   'checkbox-configurable': {
     title: 'Configurable checkbox',
     component: CheckboxConfigurableExample
@@ -228,10 +190,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'checkbox-overview': {
     title: 'Basic checkboxes',
     component: CheckboxOverviewExample
-  },
-  'chips-autocomplete': {
-    title: 'Chips Autocomplete',
-    component: ChipsAutocompleteExample
   },
   'chips-input': {
     title: 'Chips with input',
@@ -248,15 +206,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'datepicker-api': {
     title: 'Datepicker open method',
     component: DatepickerApiExample
-  },
-  'datepicker-color': {
-    title: 'Datepicker palette colors',
-    component: DatepickerColorExample
-  },
-  'datepicker-custom-header': {
-    title: 'Datepicker with custom calendar header',
-    component: DatepickerCustomHeaderExample,
-    selectorName: 'DatepickerCustomHeaderExample, ExampleHeader'
   },
   'datepicker-custom-icon': {
     title: 'Datepicker with custom icon',
@@ -306,10 +255,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Datepicker selected value',
     component: DatepickerValueExample
   },
-  'datepicker-views-selection': {
-    title: 'Datepicker emulating a Year and month picker',
-    component: DatepickerViewsSelectionExample
-  },
   'dialog-content': {
     title: 'Dialog with header, scrollable content and actions',
     component: DialogContentExample,
@@ -342,10 +287,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Elevation CSS classes',
     component: ElevationOverviewExample
   },
-  'expansion-expand-collapse-all': {
-    title: 'Accordion with expand/collapse all toggles',
-    component: ExpansionExpandCollapseAllExample
-  },
   'expansion-overview': {
     title: 'Basic expansion panel',
     component: ExpansionOverviewExample
@@ -353,22 +294,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'expansion-steps': {
     title: 'Expansion panel as accordion',
     component: ExpansionStepsExample
-  },
-  'focus-monitor-directives': {
-    title: 'Monitoring focus with FocusMonitor',
-    component: FocusMonitorDirectivesExample
-  },
-  'focus-monitor-focus-via': {
-    title: 'Focusing with a specific FocusOrigin',
-    component: FocusMonitorFocusViaExample
-  },
-  'focus-monitor-overview': {
-    title: 'Monitoring focus with FocusMonitor',
-    component: FocusMonitorOverviewExample
-  },
-  'form-field-appearance': {
-    title: 'Form field appearance variants',
-    component: FormFieldAppearanceExample
   },
   'form-field-custom-control': {
     title: 'Form field with custom telephone number input control.',
@@ -415,6 +340,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'icon-svg': {
     title: 'SVG icons',
     component: IconSvgExample
+  },
+  'input-autosize-textarea': {
+    title: 'Auto-resizing textarea',
+    component: InputAutosizeTextareaExample
   },
   'input-clearable': {
     title: 'Input with a clear button',
@@ -564,10 +493,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Autosize sidenav',
     component: SidenavAutosizeExample
   },
-  'sidenav-backdrop': {
-    title: 'Drawer with explicit backdrop setting',
-    component: SidenavBackdropExample
-  },
   'sidenav-disable-close': {
     title: 'Sidenav with custom escape and backdrop click behavior',
     component: SidenavDisableCloseExample
@@ -616,10 +541,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Configurable slider',
     component: SliderConfigurableExample
   },
-  'slider-formatting': {
-    title: 'Slider with custom thumb label formatting.',
-    component: SliderFormattingExample
-  },
   'slider-overview': {
     title: 'Basic slider',
     component: SliderOverviewExample
@@ -642,14 +563,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Sorting overview',
     component: SortOverviewExample
   },
-  'stepper-editable': {
-    title: 'Stepper with editable steps',
-    component: StepperEditableExample
-  },
-  'stepper-optional': {
-    title: 'Stepper with optional steps',
-    component: StepperOptionalExample
-  },
   'stepper-overview': {
     title: 'Stepper overview',
     component: StepperOverviewExample
@@ -665,10 +578,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'table-http': {
     title: 'Table retrieving data through HTTP',
     component: TableHttpExample
-  },
-  'table-native-only': {
-    title: 'Native `<table>` that only applies the Material styles',
-    component: TableNativeOnlyExample
   },
   'table-overview': {
     title: 'Data table with sorting, pagination, and filtering.',
@@ -693,18 +602,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'tabs-template-label': {
     title: 'Complex Example',
     component: TabsTemplateLabelExample
-  },
-  'text-field-autofill-directive': {
-    title: 'Monitoring autofill state with cdkAutofill',
-    component: TextFieldAutofillDirectiveExample
-  },
-  'text-field-autofill-monitor': {
-    title: 'Monitoring autofill state with AutofillMonitor',
-    component: TextFieldAutofillMonitorExample
-  },
-  'text-field-autosize-textarea': {
-    title: 'Auto-resizing textarea',
-    component: TextFieldAutosizeTextareaExample
   },
   'toolbar-multirow': {
     title: 'Multi-row toolbar',
@@ -734,26 +631,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Tooltip with custom position',
     component: TooltipPositionExample
   },
-  'tree-checklist': {
-    title: 'Tree with checkboxes',
-    component: TreeChecklistExample
-  },
-  'tree-dynamic': {
-    title: 'Tree with dynamic data',
-    component: TreeDynamicExample
-  },
-  'tree-flat-overview': {
-    title: 'Tree with flat nodes',
-    component: TreeFlatOverviewExample
-  },
-  'tree-loadmore': {
-    title: 'Tree with partially loaded data',
-    component: TreeLoadmoreExample
-  },
-  'tree-nested-overview': {
-    title: 'Tree with nested nodes',
-    component: TreeNestedOverviewExample
-  },
 };
 
 export const EXAMPLE_LIST = [
@@ -762,7 +639,6 @@ export const EXAMPLE_LIST = [
   AutocompleteFilterExample,
   AutocompleteOverviewExample,
   AutocompleteSimpleExample,
-  BottomSheetOverviewExampleSheet,BottomSheetOverviewExample,
   ButtonOverviewExample,
   ButtonToggleExclusiveExample,
   ButtonToggleOverviewExample,
@@ -770,17 +646,12 @@ export const EXAMPLE_LIST = [
   CardFancyExample,
   CardOverviewExample,
   CdkTableBasicExample,
-  CdkTreeFlatExample,
-  CdkTreeNestedExample,
   CheckboxConfigurableExample,
   CheckboxOverviewExample,
-  ChipsAutocompleteExample,
   ChipsInputExample,
   ChipsOverviewExample,
   ChipsStackedExample,
   DatepickerApiExample,
-  DatepickerColorExample,
-  ExampleHeader,DatepickerCustomHeaderExample,
   DatepickerCustomIconExample,
   DatepickerDisabledExample,
   DatepickerEventsExample,
@@ -793,20 +664,14 @@ export const EXAMPLE_LIST = [
   DatepickerStartViewExample,
   DatepickerTouchExample,
   DatepickerValueExample,
-  DatepickerViewsSelectionExample,
   DialogContentExampleDialog,DialogContentExample,
   DialogDataExampleDialog,DialogDataExample,
   DialogElementsExampleDialog,DialogElementsExample,
   DialogOverviewExampleDialog,DialogOverviewExample,
   DividerOverviewExample,
   ElevationOverviewExample,
-  ExpansionExpandCollapseAllExample,
   ExpansionOverviewExample,
   ExpansionStepsExample,
-  FocusMonitorDirectivesExample,
-  FocusMonitorFocusViaExample,
-  FocusMonitorOverviewExample,
-  FormFieldAppearanceExample,
   MyTelInput,FormFieldCustomControlExample,
   FormFieldErrorExample,
   FormFieldHintExample,
@@ -818,6 +683,7 @@ export const EXAMPLE_LIST = [
   GridListOverviewExample,
   IconOverviewExample,
   IconSvgExample,
+  InputAutosizeTextareaExample,
   InputClearableExample,
   InputErrorStateMatcherExample,
   InputErrorsExample,
@@ -855,7 +721,6 @@ export const EXAMPLE_LIST = [
   SelectResetExample,
   SelectValueBindingExample,
   SidenavAutosizeExample,
-  SidenavBackdropExample,
   SidenavDisableCloseExample,
   SidenavDrawerOverviewExample,
   SidenavFixedExample,
@@ -868,28 +733,21 @@ export const EXAMPLE_LIST = [
   SlideToggleFormsExample,
   SlideToggleOverviewExample,
   SliderConfigurableExample,
-  SliderFormattingExample,
   SliderOverviewExample,
   PizzaPartyComponent,SnackBarComponentExample,
   SnackBarOverviewExample,
   SnackBarPositionExample,
   SortOverviewExample,
-  StepperEditableExample,
-  StepperOptionalExample,
   StepperOverviewExample,
   TableBasicExample,
   TableFilteringExample,
   TableHttpExample,
-  TableNativeOnlyExample,
   TableOverviewExample,
   TablePaginationExample,
   TableSelectionExample,
   TableSortingExample,
   TabsOverviewExample,
   TabsTemplateLabelExample,
-  TextFieldAutofillDirectiveExample,
-  TextFieldAutofillMonitorExample,
-  TextFieldAutosizeTextareaExample,
   ToolbarMultirowExample,
   ToolbarOverviewExample,
   TooltipDelayExample,
@@ -897,11 +755,6 @@ export const EXAMPLE_LIST = [
   TooltipModifiedDefaultsExample,
   TooltipOverviewExample,
   TooltipPositionExample,
-  TreeChecklistExample,
-  TreeDynamicExample,
-  TreeFlatOverviewExample,
-  TreeLoadmoreExample,
-  TreeNestedOverviewExample,
 ];
 
 @NgModule({

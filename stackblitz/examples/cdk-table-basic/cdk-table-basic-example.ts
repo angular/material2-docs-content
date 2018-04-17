@@ -1,6 +1,7 @@
-import {DataSource} from '@angular/cdk/collections';
 import {Component} from '@angular/core';
-import {BehaviorSubject, Observable} from 'rxjs';
+import {DataSource} from '@angular/cdk/collections';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {Observable} from 'rxjs/Observable';
 
 /**
  * @title Basic CDK data-table

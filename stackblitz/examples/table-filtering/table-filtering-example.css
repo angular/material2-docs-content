@@ -3,8 +3,6 @@
   display: flex;
   flex-direction: column;
   min-width: 300px;
-  max-height: 500px;
-  overflow: auto;
 }
 
 .example-header {
@@ -15,4 +13,9 @@
 .mat-form-field {
   font-size: 14px;
   width: 100%;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
 }
