@@ -1,0 +1,12 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> [<span class="hljs-attr">formGroup</span>]=<span class="hljs-string">"stateForm"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"States Group"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"stateGroup"</span> <span class="hljs-attr">required</span> [<span class="hljs-attr">matAutocomplete</span>]=<span class="hljs-string">"autoGroup"</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-autocomplete</span> #<span class="hljs-attr">autoGroup</span>=<span class="hljs-string">"matAutocomplete"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let group of stateGroupOptions | async"</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">"group.letter"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let name of group.names"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"name"</span>&gt;</span>
+            {{ name }}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-autocomplete</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span> 
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>  

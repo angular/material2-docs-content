@@ -8,6 +8,7 @@ import {ExampleMaterialModule} from './material-module';
 import {AutocompleteAutoActiveFirstOptionExample} from './autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example';
 import {AutocompleteDisplayExample} from './autocomplete-display/autocomplete-display-example';
 import {AutocompleteFilterExample} from './autocomplete-filter/autocomplete-filter-example';
+import {AutocompleteOptionGroupExample} from './autocomplete-optgroup/autocomplete-optgroup-example';
 import {AutocompleteOverviewExample} from './autocomplete-overview/autocomplete-overview-example';
 import {AutocompleteSimpleExample} from './autocomplete-simple/autocomplete-simple-example';
 import {BottomSheetOverviewExampleSheet,BottomSheetOverviewExample} from './bottom-sheet-overview/bottom-sheet-overview-example';
@@ -170,6 +171,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'autocomplete-filter': {
     title: 'Filter autocomplete',
     component: AutocompleteFilterExample
+  },
+  'autocomplete-option-group': {
+    title: 'Option groups autocomplete',
+    component: AutocompleteOptionGroupExample
   },
   'autocomplete-overview': {
     title: 'Autocomplete overview',
@@ -760,6 +765,7 @@ export const EXAMPLE_LIST = [
   AutocompleteAutoActiveFirstOptionExample,
   AutocompleteDisplayExample,
   AutocompleteFilterExample,
+  AutocompleteOptionGroupExample,
   AutocompleteOverviewExample,
   AutocompleteSimpleExample,
   BottomSheetOverviewExampleSheet,BottomSheetOverviewExample,

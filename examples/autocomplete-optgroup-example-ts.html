@@ -1,0 +1,111 @@
+<span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormGroup, FormBuilder} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> {startWith, map} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> StateGroup {
+  letter: <span class="hljs-built_in">string</span>;
+  names: <span class="hljs-built_in">string</span>[];
+}
+
+<span class="hljs-comment">/**
+ * @title Option groups autocomplete
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  templateUrl: <span class="hljs-string">'./autocomplete-optgroup-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'./autocomplete-optgroup-example.css'</span>],
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AutocompleteOptionGroupExample <span class="hljs-keyword">implements</span> OnInit {
+  stateForm: FormGroup = <span class="hljs-keyword">this</span>.fb.group({
+    stateGroup: <span class="hljs-string">''</span>,
+  });
+
+  stateGroups: StateGroup[] = [{
+    letter: <span class="hljs-string">'A'</span>,
+    names: [<span class="hljs-string">'Alabama'</span>, <span class="hljs-string">'Alaska'</span>, <span class="hljs-string">'Arizona'</span>, <span class="hljs-string">'Arkansas'</span>]
+  }, {
+    letter: <span class="hljs-string">'C'</span>,
+    names: [<span class="hljs-string">'California'</span>, <span class="hljs-string">'Colorado'</span>, <span class="hljs-string">'Connecticut'</span>]
+  }, {
+    letter: <span class="hljs-string">'D'</span>,
+    names: [<span class="hljs-string">'Delaware'</span>]
+  }, {
+    letter: <span class="hljs-string">'F'</span>,
+    names: [<span class="hljs-string">'Florida'</span>]
+  }, {
+    letter: <span class="hljs-string">'G'</span>,
+    names: [<span class="hljs-string">'Georgia'</span>]
+  }, {
+    letter: <span class="hljs-string">'H'</span>,
+    names: [<span class="hljs-string">'Hawaii'</span>]
+  }, {
+    letter: <span class="hljs-string">'I'</span>,
+    names: [<span class="hljs-string">'Idaho'</span>, <span class="hljs-string">'Illinois'</span>, <span class="hljs-string">'Indiana'</span>, <span class="hljs-string">'Iowa'</span>]
+  }, {
+    letter: <span class="hljs-string">'K'</span>,
+    names: [<span class="hljs-string">'Kansas'</span>, <span class="hljs-string">'Kentucky'</span>]
+  }, {
+    letter: <span class="hljs-string">'L'</span>,
+    names: [<span class="hljs-string">'Louisiana'</span>]
+  }, {
+    letter: <span class="hljs-string">'M'</span>,
+    names: [<span class="hljs-string">'Maine'</span>, <span class="hljs-string">'Maryland'</span>, <span class="hljs-string">'Massachusetts'</span>, <span class="hljs-string">'Michigan'</span>,
+      <span class="hljs-string">'Minnesota'</span>, <span class="hljs-string">'Mississippi'</span>, <span class="hljs-string">'Missouri'</span>, <span class="hljs-string">'Montana'</span>]
+  }, {
+    letter: <span class="hljs-string">'N'</span>,
+    names: [<span class="hljs-string">'Nebraska'</span>, <span class="hljs-string">'Nevada'</span>, <span class="hljs-string">'New Hampshire'</span>, <span class="hljs-string">'New Jersey'</span>,
+      <span class="hljs-string">'New Mexico'</span>, <span class="hljs-string">'New York'</span>, <span class="hljs-string">'North Carolina'</span>, <span class="hljs-string">'North Dakota'</span>]
+  }, {
+    letter: <span class="hljs-string">'O'</span>,
+    names: [<span class="hljs-string">'Ohio'</span>, <span class="hljs-string">'Oklahoma'</span>, <span class="hljs-string">'Oregon'</span>]
+  }, {
+    letter: <span class="hljs-string">'P'</span>,
+    names: [<span class="hljs-string">'Pennsylvania'</span>]
+  }, {
+    letter: <span class="hljs-string">'R'</span>,
+    names: [<span class="hljs-string">'Rhode Island'</span>]
+  }, {
+    letter: <span class="hljs-string">'S'</span>,
+    names: [<span class="hljs-string">'South Carolina'</span>, <span class="hljs-string">'South Dakota'</span>]
+  }, {
+    letter: <span class="hljs-string">'T'</span>,
+    names: [<span class="hljs-string">'Tennessee'</span>, <span class="hljs-string">'Texas'</span>]
+  }, {
+    letter: <span class="hljs-string">'U'</span>,
+    names: [<span class="hljs-string">'Utah'</span>]
+  }, {
+    letter: <span class="hljs-string">'V'</span>,
+    names: [<span class="hljs-string">'Vermont'</span>, <span class="hljs-string">'Virginia'</span>]
+  }, {
+    letter: <span class="hljs-string">'W'</span>,
+    names: [<span class="hljs-string">'Washington'</span>, <span class="hljs-string">'West Virginia'</span>, <span class="hljs-string">'Wisconsin'</span>, <span class="hljs-string">'Wyoming'</span>]
+  }];
+
+  stateGroupOptions: Observable&lt;StateGroup[]&gt;;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> fb: FormBuilder</span>) { }
+
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.stateGroupOptions = <span class="hljs-keyword">this</span>.stateForm.get(<span class="hljs-string">'stateGroup'</span>)!.valueChanges
+      .pipe(
+        startWith(<span class="hljs-string">''</span>),
+        map(<span class="hljs-function"><span class="hljs-params">val</span> =&gt;</span> <span class="hljs-keyword">this</span>.filterGroup(val))
+      );
+  }
+
+  filterGroup(val: <span class="hljs-built_in">string</span>): StateGroup[] {
+    <span class="hljs-keyword">if</span> (val) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.stateGroups
+        .map(<span class="hljs-function"><span class="hljs-params">group</span> =&gt;</span> ({ letter: group.letter, names: <span class="hljs-keyword">this</span>._filter(group.names, val) }))
+        .filter(<span class="hljs-function"><span class="hljs-params">group</span> =&gt;</span> group.names.length &gt; <span class="hljs-number">0</span>);
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.stateGroups;
+  }
+
+  <span class="hljs-keyword">private</span> _filter(opt: <span class="hljs-built_in">string</span>[], val: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">const</span> filterValue = val.toLowerCase();
+    <span class="hljs-keyword">return</span> opt.filter(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.toLowerCase().startsWith(filterValue));
+  }
+}
