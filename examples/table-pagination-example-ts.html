@@ -15,11 +15,7 @@
 
   <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
 
-  <span class="hljs-comment">/**
-   * Set the paginator after the view init since this component will
-   * be able to query its view for the initialized paginator.
-   */</span>
-  ngAfterViewInit() {
+  ngOnInit() {
     <span class="hljs-keyword">this</span>.dataSource.paginator = <span class="hljs-keyword">this</span>.paginator;
   }
 }

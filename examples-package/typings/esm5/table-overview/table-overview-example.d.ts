@@ -8,11 +8,7 @@ export declare class TableOverviewExample {
     paginator: MatPaginator;
     sort: MatSort;
     constructor();
-    /**
-     * Set the paginator and sort after the view init since this component will
-     * be able to query its view for the initialized paginator and sort.
-     */
-    ngAfterViewInit(): void;
+    ngOnInit(): void;
     applyFilter(filterValue: string): void;
 }
 export interface UserData {

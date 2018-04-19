@@ -4833,17 +4833,9 @@ var TableOverviewExample = /** @class */ (function () {
         this.dataSource = new material.MatTableDataSource(users);
     }
     /**
-     * Set the paginator and sort after the view init since this component will
-     * be able to query its view for the initialized paginator and sort.
-     */
-    /**
-     * Set the paginator and sort after the view init since this component will
-     * be able to query its view for the initialized paginator and sort.
      * @return {?}
      */
-    TableOverviewExample.prototype.ngAfterViewInit = /**
-     * Set the paginator and sort after the view init since this component will
-     * be able to query its view for the initialized paginator and sort.
+    TableOverviewExample.prototype.ngOnInit = /**
      * @return {?}
      */
     function () {
@@ -4915,17 +4907,9 @@ var TablePaginationExample = /** @class */ (function () {
         this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$2);
     }
     /**
-     * Set the paginator after the view init since this component will
-     * be able to query its view for the initialized paginator.
-     */
-    /**
-     * Set the paginator after the view init since this component will
-     * be able to query its view for the initialized paginator.
      * @return {?}
      */
-    TablePaginationExample.prototype.ngAfterViewInit = /**
-     * Set the paginator after the view init since this component will
-     * be able to query its view for the initialized paginator.
+    TablePaginationExample.prototype.ngOnInit = /**
      * @return {?}
      */
     function () {
@@ -5054,17 +5038,9 @@ var TableSortingExample = /** @class */ (function () {
         this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$4);
     }
     /**
-     * Set the sort after the view init since this component will
-     * be able to query its view for the initialized sort.
-     */
-    /**
-     * Set the sort after the view init since this component will
-     * be able to query its view for the initialized sort.
      * @return {?}
      */
-    TableSortingExample.prototype.ngAfterViewInit = /**
-     * Set the sort after the view init since this component will
-     * be able to query its view for the initialized sort.
+    TableSortingExample.prototype.ngOnInit = /**
      * @return {?}
      */
     function () {

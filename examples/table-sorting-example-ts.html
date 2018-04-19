@@ -15,11 +15,7 @@
 
   <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
 
-  <span class="hljs-comment">/**
-   * Set the sort after the view init since this component will
-   * be able to query its view for the initialized sort.
-   */</span>
-  ngAfterViewInit() {
+  ngOnInit() {
     <span class="hljs-keyword">this</span>.dataSource.sort = <span class="hljs-keyword">this</span>.sort;
   }
 }

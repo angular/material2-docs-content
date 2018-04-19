@@ -4392,11 +4392,9 @@ class TableOverviewExample {
         this.dataSource = new MatTableDataSource(users);
     }
     /**
-     * Set the paginator and sort after the view init since this component will
-     * be able to query its view for the initialized paginator and sort.
      * @return {?}
      */
-    ngAfterViewInit() {
+    ngOnInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
     }
@@ -4460,11 +4458,9 @@ class TablePaginationExample {
         this.dataSource = new MatTableDataSource(ELEMENT_DATA$2);
     }
     /**
-     * Set the paginator after the view init since this component will
-     * be able to query its view for the initialized paginator.
      * @return {?}
      */
-    ngAfterViewInit() {
+    ngOnInit() {
         this.dataSource.paginator = this.paginator;
     }
 }
@@ -4577,11 +4573,9 @@ class TableSortingExample {
         this.dataSource = new MatTableDataSource(ELEMENT_DATA$4);
     }
     /**
-     * Set the sort after the view init since this component will
-     * be able to query its view for the initialized sort.
      * @return {?}
      */
-    ngAfterViewInit() {
+    ngOnInit() {
         this.dataSource.sort = this.sort;
     }
 }
