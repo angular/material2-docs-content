@@ -4699,6 +4699,47 @@ var /** @type {?} */ ELEMENT_DATA$1 = [
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Footer row table
+ */
+var TableFooterRowExample = /** @class */ (function () {
+    function TableFooterRowExample() {
+        this.displayedColumns = ['item', 'cost'];
+        this.transactions = [
+            { item: 'Beach ball', cost: 4 },
+            { item: 'Towel', cost: 5 },
+            { item: 'Frisbee', cost: 2 },
+            { item: 'Sunscreen', cost: 4 },
+            { item: 'Cooler', cost: 25 },
+            { item: 'Swim suit', cost: 15 },
+        ];
+    }
+    /** Gets the total cost of all transactions. */
+    /**
+     * Gets the total cost of all transactions.
+     * @return {?}
+     */
+    TableFooterRowExample.prototype.getTotalCost = /**
+     * Gets the total cost of all transactions.
+     * @return {?}
+     */
+    function () {
+        return this.transactions.map(function (t) { return t.cost; }).reduce(function (acc, value) { return acc + value; }, 0);
+    };
+    TableFooterRowExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'table-footer-row-example',
+                    styles: [".example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } "],
+                    template: "<div class=\"example-container mat-elevation-z8\"><mat-table [dataSource]=\"transactions\"><ng-container matColumnDef=\"item\"><mat-header-cell *matHeaderCellDef>Item</mat-header-cell><mat-cell *matCellDef=\"let transaction\">{{transaction.item}}</mat-cell><mat-footer-cell *matFooterCellDef></mat-footer-cell></ng-container><ng-container matColumnDef=\"cost\"><mat-header-cell *matHeaderCellDef>Cost</mat-header-cell><mat-cell *matCellDef=\"let transaction\">{{transaction.cost | currency}}</mat-cell><mat-footer-cell *matFooterCellDef>getTotalCost()</mat-footer-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row><mat-footer-row *matFooterRowDef=\"displayedColumns\"></mat-footer-row></mat-table></div>",
+                },] },
+    ];
+    return TableFooterRowExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Table retrieving data through HTTP
  */
 var TableHttpExample = /** @class */ (function () {
@@ -6911,6 +6952,10 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Table with filtering',
         component: TableFilteringExample
     },
+    'table-footer-row': {
+        title: 'Footer row table',
+        component: TableFooterRowExample
+    },
     'table-http': {
         title: 'Table retrieving data through HTTP',
         component: TableHttpExample
@@ -7128,6 +7173,7 @@ var /** @type {?} */ EXAMPLE_LIST = [
     StepperOverviewExample,
     TableBasicExample,
     TableFilteringExample,
+    TableFooterRowExample,
     TableHttpExample,
     TableNativeOnlyExample,
     TableOverviewExample,
@@ -7293,7 +7339,7 @@ exports.ɵcw = InputOverviewExample;
 exports.ɵcx = InputPrefixSuffixExample;
 exports.ɵcy = ListSectionsExample;
 exports.ɵcz = ListSelectionExample;
-exports.ɵgb = ExampleMaterialModule;
+exports.ɵgc = ExampleMaterialModule;
 exports.ɵda = MenuIconsExample;
 exports.ɵdb = MenuOverviewExample;
 exports.ɵdc = NestedMenuExample;
@@ -7345,34 +7391,35 @@ exports.ɵev = StepperEditableExample;
 exports.ɵew = StepperOptionalExample;
 exports.ɵex = TableBasicExample;
 exports.ɵey = TableFilteringExample;
-exports.ɵez = TableHttpExample;
-exports.ɵfa = TableNativeOnlyExample;
-exports.ɵfb = TableOverviewExample;
-exports.ɵfc = TablePaginationExample;
-exports.ɵfd = TableSelectionExample;
-exports.ɵfe = TableSortingExample;
-exports.ɵff = TabsOverviewExample;
-exports.ɵfg = TabsTemplateLabelExample;
-exports.ɵfh = TextFieldAutofillDirectiveExample;
-exports.ɵfi = TextFieldAutofillMonitorExample;
-exports.ɵfj = TextFieldAutosizeTextareaExample;
-exports.ɵfk = ToolbarOverviewExample;
-exports.ɵfl = TooltipDelayExample;
-exports.ɵfm = TooltipManualExample;
-exports.ɵfo = TooltipModifiedDefaultsExample;
-exports.ɵfn = myCustomTooltipDefaults;
-exports.ɵfp = TooltipOverviewExample;
-exports.ɵfq = TooltipPositionExample;
-exports.ɵfr = ChecklistDatabase;
-exports.ɵfs = TreeChecklistExample;
-exports.ɵft = DynamicDatabase;
-exports.ɵfu = TreeDynamicExample;
-exports.ɵfv = FileDatabase$2;
-exports.ɵfw = TreeFlatOverviewExample;
-exports.ɵfx = LoadmoreDatabase;
-exports.ɵfy = TreeLoadmoreExample;
-exports.ɵfz = FileDatabase$3;
-exports.ɵga = TreeNestedOverviewExample;
+exports.ɵez = TableFooterRowExample;
+exports.ɵfa = TableHttpExample;
+exports.ɵfb = TableNativeOnlyExample;
+exports.ɵfc = TableOverviewExample;
+exports.ɵfd = TablePaginationExample;
+exports.ɵfe = TableSelectionExample;
+exports.ɵff = TableSortingExample;
+exports.ɵfg = TabsOverviewExample;
+exports.ɵfh = TabsTemplateLabelExample;
+exports.ɵfi = TextFieldAutofillDirectiveExample;
+exports.ɵfj = TextFieldAutofillMonitorExample;
+exports.ɵfk = TextFieldAutosizeTextareaExample;
+exports.ɵfl = ToolbarOverviewExample;
+exports.ɵfm = TooltipDelayExample;
+exports.ɵfn = TooltipManualExample;
+exports.ɵfp = TooltipModifiedDefaultsExample;
+exports.ɵfo = myCustomTooltipDefaults;
+exports.ɵfq = TooltipOverviewExample;
+exports.ɵfr = TooltipPositionExample;
+exports.ɵfs = ChecklistDatabase;
+exports.ɵft = TreeChecklistExample;
+exports.ɵfu = DynamicDatabase;
+exports.ɵfv = TreeDynamicExample;
+exports.ɵfw = FileDatabase$2;
+exports.ɵfx = TreeFlatOverviewExample;
+exports.ɵfy = LoadmoreDatabase;
+exports.ɵfz = TreeLoadmoreExample;
+exports.ɵga = FileDatabase$3;
+exports.ɵgb = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

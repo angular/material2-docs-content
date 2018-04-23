@@ -128,6 +128,7 @@ import {StepperOptionalExample} from './stepper-optional/stepper-optional-exampl
 import {StepperOverviewExample} from './stepper-overview/stepper-overview-example';
 import {TableBasicExample} from './table-basic/table-basic-example';
 import {TableFilteringExample} from './table-filtering/table-filtering-example';
+import {TableFooterRowExample} from './table-footer-row/table-footer-row-example';
 import {TableHttpExample} from './table-http/table-http-example';
 import {TableNativeOnlyExample} from './table-native-only/table-native-only-example';
 import {TableOverviewExample} from './table-overview/table-overview-example';
@@ -667,6 +668,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Table with filtering',
     component: TableFilteringExample
   },
+  'table-footer-row': {
+    title: 'Footer row table',
+    component: TableFooterRowExample
+  },
   'table-http': {
     title: 'Table retrieving data through HTTP',
     component: TableHttpExample
@@ -885,6 +890,7 @@ export const EXAMPLE_LIST = [
   StepperOverviewExample,
   TableBasicExample,
   TableFilteringExample,
+  TableFooterRowExample,
   TableHttpExample,
   TableNativeOnlyExample,
   TableOverviewExample,

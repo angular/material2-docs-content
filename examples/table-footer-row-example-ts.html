@@ -1,0 +1,31 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Transaction {
+  item: <span class="hljs-built_in">string</span>;
+  cost: <span class="hljs-built_in">number</span>;
+}
+
+<span class="hljs-comment">/**
+ * @title Footer row table
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'table-footer-row-example'</span>,
+  styleUrls: [<span class="hljs-string">'table-footer-row-example.css'</span>],
+  templateUrl: <span class="hljs-string">'table-footer-row-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableFooterRowExample {
+  displayedColumns = [<span class="hljs-string">'item'</span>, <span class="hljs-string">'cost'</span>];
+  transactions: Transaction[] = [
+    {item: <span class="hljs-string">'Beach ball'</span>, cost: <span class="hljs-number">4</span>},
+    {item: <span class="hljs-string">'Towel'</span>, cost: <span class="hljs-number">5</span>},
+    {item: <span class="hljs-string">'Frisbee'</span>, cost: <span class="hljs-number">2</span>},
+    {item: <span class="hljs-string">'Sunscreen'</span>, cost: <span class="hljs-number">4</span>},
+    {item: <span class="hljs-string">'Cooler'</span>, cost: <span class="hljs-number">25</span>},
+    {item: <span class="hljs-string">'Swim suit'</span>, cost: <span class="hljs-number">15</span>},
+  ];
+
+  <span class="hljs-comment">/** Gets the total cost of all transactions. */</span>
+  getTotalCost() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.transactions.map(<span class="hljs-function"><span class="hljs-params">t</span> =&gt;</span> t.cost).reduce(<span class="hljs-function">(<span class="hljs-params">acc, value</span>) =&gt;</span> acc + value, <span class="hljs-number">0</span>);
+  }
+}
