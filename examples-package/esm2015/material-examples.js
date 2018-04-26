@@ -8,7 +8,7 @@
 import { NgModule, Component, Injectable, ElementRef, ViewChild, ChangeDetectionStrategy, ChangeDetectorRef, Host, Inject, ViewEncapsulation, NgZone, Input } from '@angular/core';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
-import { MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatPaginatorModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSortModule, MatSlideToggleModule, MatSnackBarModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatFormFieldModule, MatExpansionModule, MatStepperModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
+import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
 import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { map, startWith, takeUntil, catchError, switchMap, take } from 'rxjs/operators';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
@@ -40,6 +40,8 @@ ExampleMaterialModule.decorators = [
                     CdkTableModule,
                     CdkTreeModule,
                     MatAutocompleteModule,
+                    MatBadgeModule,
+                    MatBottomSheetModule,
                     MatButtonModule,
                     MatButtonToggleModule,
                     MatCardModule,
@@ -59,6 +61,7 @@ ExampleMaterialModule.decorators = [
                     MatProgressBarModule,
                     MatProgressSpinnerModule,
                     MatRadioModule,
+                    MatRippleModule,
                     MatSelectModule,
                     MatSidenavModule,
                     MatSlideToggleModule,
@@ -76,6 +79,8 @@ ExampleMaterialModule.decorators = [
                     CdkTableModule,
                     CdkTreeModule,
                     MatAutocompleteModule,
+                    MatBadgeModule,
+                    MatBottomSheetModule,
                     MatButtonModule,
                     MatButtonToggleModule,
                     MatCardModule,
@@ -95,6 +100,7 @@ ExampleMaterialModule.decorators = [
                     MatProgressBarModule,
                     MatProgressSpinnerModule,
                     MatRadioModule,
+                    MatRippleModule,
                     MatSelectModule,
                     MatSidenavModule,
                     MatSlideToggleModule,
