@@ -6,7 +6,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span> *<span class="hljs-attr">matTreeNodeDef</span>=<span class="hljs-string">"let node; when: hasChild"</span> <span class="hljs-attr">matTreeNodePadding</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span>
             [<span class="hljs-attr">attr.aria-label</span>]=<span class="hljs-string">"'toggle ' + node.filename"</span> <span class="hljs-attr">matTreeNodeToggle</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-icon-rtl-mirror"</span>&gt;</span>
         {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
