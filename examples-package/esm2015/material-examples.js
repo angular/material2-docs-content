@@ -251,7 +251,7 @@ AutocompleteFilterExample.decorators = [
 /**
  * \@title Option groups autocomplete
  */
-class AutocompleteOptionGroupExample {
+class AutocompleteOptgroupExample {
     /**
      * @param {?} fb
      */
@@ -349,14 +349,14 @@ class AutocompleteOptionGroupExample {
         return opt.filter(item => item.toLowerCase().startsWith(filterValue));
     }
 }
-AutocompleteOptionGroupExample.decorators = [
+AutocompleteOptgroupExample.decorators = [
     { type: Component, args: [{
                 template: "<form [formGroup]=\"stateForm\"><mat-form-field><input type=\"text\" matInput placeholder=\"States Group\" formControlName=\"stateGroup\" required [matAutocomplete]=\"autoGroup\"><mat-autocomplete #autoGroup=\"matAutocomplete\"><mat-optgroup *ngFor=\"let group of stateGroupOptions | async\" [label]=\"group.letter\"><mat-option *ngFor=\"let name of group.names\" [value]=\"name\">{{ name }}</mat-option></mat-optgroup></mat-autocomplete></mat-form-field></form>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
-AutocompleteOptionGroupExample.ctorParameters = () => [
+AutocompleteOptgroupExample.ctorParameters = () => [
     { type: FormBuilder, },
 ];
 
@@ -439,6 +439,23 @@ AutocompleteSimpleExample.decorators = [
                 selector: 'autocomplete-simple-example',
                 template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete #auto=\"matAutocomplete\"><mat-option *ngFor=\"let option of options\" [value]=\"option\">{{ option }}</mat-option></mat-autocomplete></mat-form-field></form>",
                 styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Badge overview
+ */
+class BadgeOverviewExample {
+}
+BadgeOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'badge-overview-example',
+                template: "<p><span matBadge=\"4\" matBadgeOverlap=\"false\">Text with a badge</span></p><p>Button with a badge on the left <button mat-raised-button color=\"primary\" matBadge=\"8\" matBadgePosition=\"before\" matBadgeColor=\"accent\">Action</button></p><p>Icon with a badge<mat-icon matBadge=\"15\" matBadgeColor=\"warn\">home</mat-icon></p>",
+                styles: ["/** No CSS for this example */ "]
             },] },
 ];
 
@@ -5816,9 +5833,9 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Filter autocomplete',
         component: AutocompleteFilterExample
     },
-    'autocomplete-option-group': {
+    'autocomplete-optgroup': {
         title: 'Option groups autocomplete',
-        component: AutocompleteOptionGroupExample
+        component: AutocompleteOptgroupExample
     },
     'autocomplete-overview': {
         title: 'Autocomplete overview',
@@ -5827,6 +5844,10 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
     'autocomplete-simple': {
         title: 'Simple autocomplete',
         component: AutocompleteSimpleExample
+    },
+    'badge-overview': {
+        title: 'Badge overview',
+        component: BadgeOverviewExample
     },
     'bottom-sheet-overview': {
         title: 'Bottom Sheet Overview',
@@ -6412,9 +6433,10 @@ const /** @type {?} */ EXAMPLE_LIST = [
     AutocompleteAutoActiveFirstOptionExample,
     AutocompleteDisplayExample,
     AutocompleteFilterExample,
-    AutocompleteOptionGroupExample,
+    AutocompleteOptgroupExample,
     AutocompleteOverviewExample,
     AutocompleteSimpleExample,
+    BadgeOverviewExample,
     BottomSheetOverviewExampleSheet, BottomSheetOverviewExample,
     ButtonOverviewExample,
     ButtonToggleExclusiveExample,
@@ -6613,5 +6635,5 @@ class ExampleData {
  * @suppress {checkTypes} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptionGroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BottomSheetOverviewExample as ɵg, BottomSheetOverviewExampleSheet as ɵh, ButtonOverviewExample as ɵi, ButtonToggleExclusiveExample as ɵj, ButtonTypesExample as ɵk, CardOverviewExample as ɵl, CdkTableBasicExample as ɵm, CdkTreeFlatExample as ɵo, FileDatabase as ɵn, CdkTreeNestedExample as ɵq, FileDatabase$1 as ɵp, CheckboxConfigurableExample as ɵr, CheckboxOverviewExample as ɵs, ChipsAutocompleteExample as ɵt, ChipsInputExample as ɵu, ChipsOverviewExample as ɵv, ChipsStackedExample as ɵw, DatepickerApiExample as ɵx, DatepickerColorExample as ɵy, DatepickerCustomHeaderExample as ɵz, ExampleHeader as ɵba, DatepickerCustomIconExample as ɵbb, DatepickerDisabledExample as ɵbc, DatepickerEventsExample as ɵbd, DatepickerFilterExample as ɵbe, DatepickerFormatsExample as ɵbg, MY_FORMATS as ɵbf, DatepickerLocaleExample as ɵbh, DatepickerMinMaxExample as ɵbi, DatepickerMomentExample as ɵbj, DatepickerStartViewExample as ɵbk, DatepickerTouchExample as ɵbl, DatepickerValueExample as ɵbm, DatepickerViewsSelectionExample as ɵbo, MY_FORMATS$1 as ɵbn, DialogContentExample as ɵbp, DialogContentExampleDialog as ɵbq, DialogDataExample as ɵbr, DialogDataExampleDialog as ɵbs, DialogElementsExample as ɵbt, DialogElementsExampleDialog as ɵbu, DialogOverviewExample as ɵbv, DialogOverviewExampleDialog as ɵbw, DividerOverviewExample as ɵbx, ElevationOverviewExample as ɵby, ExpansionExpandCollapseAllExample as ɵbz, ExpansionStepsExample as ɵca, FocusMonitorDirectivesExample as ɵcb, FocusMonitorFocusViaExample as ɵcc, FocusMonitorOverviewExample as ɵcd, FormFieldAppearanceExample as ɵce, FormFieldCustomControlExample as ɵcg, MyTelInput as ɵcf, FormFieldErrorExample as ɵch, FormFieldHintExample as ɵci, FormFieldLabelExample as ɵcj, FormFieldOverviewExample as ɵck, FormFieldPrefixSuffixExample as ɵcl, FormFieldThemingExample as ɵcm, GridListDynamicExample as ɵcn, GridListOverviewExample as ɵco, IconOverviewExample as ɵcp, IconSvgExample as ɵcq, InputClearableExample as ɵcr, InputErrorStateMatcherExample as ɵcs, InputErrorsExample as ɵct, InputFormExample as ɵcu, InputHintExample as ɵcv, InputOverviewExample as ɵcw, InputPrefixSuffixExample as ɵcx, ListSectionsExample as ɵcy, ListSelectionExample as ɵcz, ExampleMaterialModule as ɵgc, MenuIconsExample as ɵda, MenuOverviewExample as ɵdb, NestedMenuExample as ɵdc, PaginatorConfigurableExample as ɵdd, PaginatorOverviewExample as ɵde, ProgressBarBufferExample as ɵdf, ProgressBarConfigurableExample as ɵdg, ProgressBarDeterminateExample as ɵdh, ProgressBarIndeterminateExample as ɵdi, ProgressBarQueryExample as ɵdj, ProgressSpinnerConfigurableExample as ɵdk, ProgressSpinnerOverviewExample as ɵdl, RadioNgModelExample as ɵdm, RadioOverviewExample as ɵdn, SelectCustomTriggerExample as ɵdo, SelectDisabledExample as ɵdp, SelectErrorStateMatcherExample as ɵdq, SelectFormExample as ɵdr, SelectHintErrorExample as ɵds, SelectMultipleExample as ɵdt, SelectNoRippleExample as ɵdu, SelectOptgroupExample as ɵdv, SelectOverviewExample as ɵdw, SelectPanelClassExample as ɵdx, SelectResetExample as ɵdy, SelectValueBindingExample as ɵdz, SidenavAutosizeExample as ɵea, SidenavBackdropExample as ɵeb, SidenavDisableCloseExample as ɵec, SidenavDrawerOverviewExample as ɵed, SidenavFixedExample as ɵee, SidenavModeExample as ɵef, SidenavOpenCloseExample as ɵeg, SidenavOverviewExample as ɵeh, SidenavPositionExample as ɵei, SidenavResponsiveExample as ɵej, SlideToggleConfigurableExample as ɵek, SlideToggleFormsExample as ɵel, SlideToggleOverviewExample as ɵem, SliderConfigurableExample as ɵen, SliderFormattingExample as ɵeo, SliderOverviewExample as ɵep, PizzaPartyComponent as ɵer, SnackBarComponentExample as ɵeq, SnackBarOverviewExample as ɵes, SnackBarPositionExample as ɵet, SortOverviewExample as ɵeu, StepperEditableExample as ɵev, StepperOptionalExample as ɵew, TableBasicExample as ɵex, TableFilteringExample as ɵey, TableFooterRowExample as ɵez, TableHttpExample as ɵfa, TableNativeOnlyExample as ɵfb, TableOverviewExample as ɵfc, TablePaginationExample as ɵfd, TableSelectionExample as ɵfe, TableSortingExample as ɵff, TabsOverviewExample as ɵfg, TabsTemplateLabelExample as ɵfh, TextFieldAutofillDirectiveExample as ɵfi, TextFieldAutofillMonitorExample as ɵfj, TextFieldAutosizeTextareaExample as ɵfk, ToolbarOverviewExample as ɵfl, TooltipDelayExample as ɵfm, TooltipManualExample as ɵfn, TooltipModifiedDefaultsExample as ɵfp, myCustomTooltipDefaults as ɵfo, TooltipOverviewExample as ɵfq, TooltipPositionExample as ɵfr, ChecklistDatabase as ɵfs, TreeChecklistExample as ɵft, DynamicDatabase as ɵfu, TreeDynamicExample as ɵfv, FileDatabase$2 as ɵfw, TreeFlatOverviewExample as ɵfx, LoadmoreDatabase as ɵfy, TreeLoadmoreExample as ɵfz, FileDatabase$3 as ɵga, TreeNestedOverviewExample as ɵgb };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleExclusiveExample as ɵk, ButtonTypesExample as ɵl, CardOverviewExample as ɵm, CdkTableBasicExample as ɵn, CdkTreeFlatExample as ɵp, FileDatabase as ɵo, CdkTreeNestedExample as ɵr, FileDatabase$1 as ɵq, CheckboxConfigurableExample as ɵs, CheckboxOverviewExample as ɵt, ChipsAutocompleteExample as ɵu, ChipsInputExample as ɵv, ChipsOverviewExample as ɵw, ChipsStackedExample as ɵx, DatepickerApiExample as ɵy, DatepickerColorExample as ɵz, DatepickerCustomHeaderExample as ɵba, ExampleHeader as ɵbb, DatepickerCustomIconExample as ɵbc, DatepickerDisabledExample as ɵbd, DatepickerEventsExample as ɵbe, DatepickerFilterExample as ɵbf, DatepickerFormatsExample as ɵbh, MY_FORMATS as ɵbg, DatepickerLocaleExample as ɵbi, DatepickerMinMaxExample as ɵbj, DatepickerMomentExample as ɵbk, DatepickerStartViewExample as ɵbl, DatepickerTouchExample as ɵbm, DatepickerValueExample as ɵbn, DatepickerViewsSelectionExample as ɵbp, MY_FORMATS$1 as ɵbo, DialogContentExample as ɵbq, DialogContentExampleDialog as ɵbr, DialogDataExample as ɵbs, DialogDataExampleDialog as ɵbt, DialogElementsExample as ɵbu, DialogElementsExampleDialog as ɵbv, DialogOverviewExample as ɵbw, DialogOverviewExampleDialog as ɵbx, DividerOverviewExample as ɵby, ElevationOverviewExample as ɵbz, ExpansionExpandCollapseAllExample as ɵca, ExpansionStepsExample as ɵcb, FocusMonitorDirectivesExample as ɵcc, FocusMonitorFocusViaExample as ɵcd, FocusMonitorOverviewExample as ɵce, FormFieldAppearanceExample as ɵcf, FormFieldCustomControlExample as ɵch, MyTelInput as ɵcg, FormFieldErrorExample as ɵci, FormFieldHintExample as ɵcj, FormFieldLabelExample as ɵck, FormFieldOverviewExample as ɵcl, FormFieldPrefixSuffixExample as ɵcm, FormFieldThemingExample as ɵcn, GridListDynamicExample as ɵco, GridListOverviewExample as ɵcp, IconOverviewExample as ɵcq, IconSvgExample as ɵcr, InputClearableExample as ɵcs, InputErrorStateMatcherExample as ɵct, InputErrorsExample as ɵcu, InputFormExample as ɵcv, InputHintExample as ɵcw, InputOverviewExample as ɵcx, InputPrefixSuffixExample as ɵcy, ListSectionsExample as ɵcz, ListSelectionExample as ɵda, ExampleMaterialModule as ɵgd, MenuIconsExample as ɵdb, MenuOverviewExample as ɵdc, NestedMenuExample as ɵdd, PaginatorConfigurableExample as ɵde, PaginatorOverviewExample as ɵdf, ProgressBarBufferExample as ɵdg, ProgressBarConfigurableExample as ɵdh, ProgressBarDeterminateExample as ɵdi, ProgressBarIndeterminateExample as ɵdj, ProgressBarQueryExample as ɵdk, ProgressSpinnerConfigurableExample as ɵdl, ProgressSpinnerOverviewExample as ɵdm, RadioNgModelExample as ɵdn, RadioOverviewExample as ɵdo, SelectCustomTriggerExample as ɵdp, SelectDisabledExample as ɵdq, SelectErrorStateMatcherExample as ɵdr, SelectFormExample as ɵds, SelectHintErrorExample as ɵdt, SelectMultipleExample as ɵdu, SelectNoRippleExample as ɵdv, SelectOptgroupExample as ɵdw, SelectOverviewExample as ɵdx, SelectPanelClassExample as ɵdy, SelectResetExample as ɵdz, SelectValueBindingExample as ɵea, SidenavAutosizeExample as ɵeb, SidenavBackdropExample as ɵec, SidenavDisableCloseExample as ɵed, SidenavDrawerOverviewExample as ɵee, SidenavFixedExample as ɵef, SidenavModeExample as ɵeg, SidenavOpenCloseExample as ɵeh, SidenavOverviewExample as ɵei, SidenavPositionExample as ɵej, SidenavResponsiveExample as ɵek, SlideToggleConfigurableExample as ɵel, SlideToggleFormsExample as ɵem, SlideToggleOverviewExample as ɵen, SliderConfigurableExample as ɵeo, SliderFormattingExample as ɵep, SliderOverviewExample as ɵeq, PizzaPartyComponent as ɵes, SnackBarComponentExample as ɵer, SnackBarOverviewExample as ɵet, SnackBarPositionExample as ɵeu, SortOverviewExample as ɵev, StepperEditableExample as ɵew, StepperOptionalExample as ɵex, TableBasicExample as ɵey, TableFilteringExample as ɵez, TableFooterRowExample as ɵfa, TableHttpExample as ɵfb, TableNativeOnlyExample as ɵfc, TableOverviewExample as ɵfd, TablePaginationExample as ɵfe, TableSelectionExample as ɵff, TableSortingExample as ɵfg, TabsOverviewExample as ɵfh, TabsTemplateLabelExample as ɵfi, TextFieldAutofillDirectiveExample as ɵfj, TextFieldAutofillMonitorExample as ɵfk, TextFieldAutosizeTextareaExample as ɵfl, ToolbarOverviewExample as ɵfm, TooltipDelayExample as ɵfn, TooltipManualExample as ɵfo, TooltipModifiedDefaultsExample as ɵfq, myCustomTooltipDefaults as ɵfp, TooltipOverviewExample as ɵfr, TooltipPositionExample as ɵfs, ChecklistDatabase as ɵft, TreeChecklistExample as ɵfu, DynamicDatabase as ɵfv, TreeDynamicExample as ɵfw, FileDatabase$2 as ɵfx, TreeFlatOverviewExample as ɵfy, LoadmoreDatabase as ɵfz, TreeLoadmoreExample as ɵga, FileDatabase$3 as ɵgb, TreeNestedOverviewExample as ɵgc };
 //# sourceMappingURL=material-examples.js.map

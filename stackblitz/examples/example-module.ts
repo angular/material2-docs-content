@@ -8,9 +8,10 @@ import {ExampleMaterialModule} from './material-module';
 import {AutocompleteAutoActiveFirstOptionExample} from './autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example';
 import {AutocompleteDisplayExample} from './autocomplete-display/autocomplete-display-example';
 import {AutocompleteFilterExample} from './autocomplete-filter/autocomplete-filter-example';
-import {AutocompleteOptionGroupExample} from './autocomplete-optgroup/autocomplete-optgroup-example';
+import {AutocompleteOptgroupExample} from './autocomplete-optgroup/autocomplete-optgroup-example';
 import {AutocompleteOverviewExample} from './autocomplete-overview/autocomplete-overview-example';
 import {AutocompleteSimpleExample} from './autocomplete-simple/autocomplete-simple-example';
+import {BadgeOverviewExample} from './badge-overview/badge-overview-example';
 import {BottomSheetOverviewExampleSheet,BottomSheetOverviewExample} from './bottom-sheet-overview/bottom-sheet-overview-example';
 import {ButtonOverviewExample} from './button-overview/button-overview-example';
 import {ButtonToggleExclusiveExample} from './button-toggle-exclusive/button-toggle-exclusive-example';
@@ -173,9 +174,9 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Filter autocomplete',
     component: AutocompleteFilterExample
   },
-  'autocomplete-option-group': {
+  'autocomplete-optgroup': {
     title: 'Option groups autocomplete',
-    component: AutocompleteOptionGroupExample
+    component: AutocompleteOptgroupExample
   },
   'autocomplete-overview': {
     title: 'Autocomplete overview',
@@ -184,6 +185,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'autocomplete-simple': {
     title: 'Simple autocomplete',
     component: AutocompleteSimpleExample
+  },
+  'badge-overview': {
+    title: 'Badge overview',
+    component: BadgeOverviewExample
   },
   'bottom-sheet-overview': {
     title: 'Bottom Sheet Overview',
@@ -770,9 +775,10 @@ export const EXAMPLE_LIST = [
   AutocompleteAutoActiveFirstOptionExample,
   AutocompleteDisplayExample,
   AutocompleteFilterExample,
-  AutocompleteOptionGroupExample,
+  AutocompleteOptgroupExample,
   AutocompleteOverviewExample,
   AutocompleteSimpleExample,
+  BadgeOverviewExample,
   BottomSheetOverviewExampleSheet,BottomSheetOverviewExample,
   ButtonOverviewExample,
   ButtonToggleExclusiveExample,

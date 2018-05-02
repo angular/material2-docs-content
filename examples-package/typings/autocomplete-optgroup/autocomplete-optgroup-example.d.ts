@@ -8,7 +8,7 @@ export interface StateGroup {
 /**
  * @title Option groups autocomplete
  */
-export declare class AutocompleteOptionGroupExample implements OnInit {
+export declare class AutocompleteOptgroupExample implements OnInit {
     private fb;
     stateForm: FormGroup;
     stateGroups: StateGroup[];
