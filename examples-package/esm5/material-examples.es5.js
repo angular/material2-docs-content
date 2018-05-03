@@ -4770,7 +4770,7 @@ var TableHttpExample = /** @class */ (function () {
     /**
      * @return {?}
      */
-    TableHttpExample.prototype.ngOnInit = /**
+    TableHttpExample.prototype.ngAfterViewInit = /**
      * @return {?}
      */
     function () {

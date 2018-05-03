@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { OnInit } from '@angular/core';
+import { AfterViewInit } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { Observable } from 'rxjs';
 /**
  * @title Table retrieving data through HTTP
  */
-export declare class TableHttpExample implements OnInit {
+export declare class TableHttpExample implements AfterViewInit {
     private http;
     displayedColumns: string[];
     exampleDatabase: ExampleHttpDao | null;
@@ -16,7 +16,7 @@ export declare class TableHttpExample implements OnInit {
     paginator: MatPaginator;
     sort: MatSort;
     constructor(http: HttpClient);
-    ngOnInit(): void;
+    ngAfterViewInit(): void;
 }
 export interface GithubApi {
     items: GithubIssue[];
