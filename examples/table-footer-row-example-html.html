@@ -12,7 +12,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"cost"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Cost <span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-cell</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let transaction"</span>&gt;</span> {{transaction.cost | currency}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-cell</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">mat-footer-cell</span> *<span class="hljs-attr">matFooterCellDef</span>&gt;</span> getTotalCost() <span class="hljs-tag">&lt;/<span class="hljs-name">mat-footer-cell</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-footer-cell</span> *<span class="hljs-attr">matFooterCellDef</span>&gt;</span> {{getTotalCost() | currency}} <span class="hljs-tag">&lt;/<span class="hljs-name">mat-footer-cell</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-header-row</span>&gt;</span>
