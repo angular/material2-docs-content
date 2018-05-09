@@ -34,6 +34,9 @@
     filterValue = filterValue.trim(); <span class="hljs-comment">// Remove whitespace</span>
     filterValue = filterValue.toLowerCase(); <span class="hljs-comment">// Datasource defaults to lowercase matches</span>
     <span class="hljs-keyword">this</span>.dataSource.filter = filterValue;
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.dataSource.paginator) {
+      <span class="hljs-keyword">this</span>.dataSource.paginator.firstPage();
+    }
   }
 }
 
