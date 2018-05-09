@@ -13,9 +13,7 @@ export declare class ChipsAutocompleteExample {
     separatorKeysCodes: number[];
     fruitCtrl: FormControl;
     filteredFruits: Observable<any[]>;
-    fruits: {
-        name: string;
-    }[];
+    fruits: string[];
     allFruits: string[];
     fruitInput: ElementRef;
     constructor();

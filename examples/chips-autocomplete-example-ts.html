@@ -26,14 +26,15 @@
   filteredFruits: Observable&lt;<span class="hljs-built_in">any</span>[]&gt;;
 
   fruits = [
-    { name: <span class="hljs-string">'Lemon'</span> },
+    <span class="hljs-string">'Lemon'</span>,
   ];
 
   allFruits = [
-    <span class="hljs-string">'Orange'</span>,
-    <span class="hljs-string">'Strawberry'</span>,
-    <span class="hljs-string">'Lime'</span>,
     <span class="hljs-string">'Apple'</span>,
+    <span class="hljs-string">'Lemon'</span>,
+    <span class="hljs-string">'Lime'</span>,
+    <span class="hljs-string">'Orange'</span>,
+    <span class="hljs-string">'Strawberry'</span>
   ];
 
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'fruitInput'</span>) fruitInput: ElementRef;
@@ -50,7 +51,7 @@
 
     <span class="hljs-comment">// Add our fruit</span>
     <span class="hljs-keyword">if</span> ((value || <span class="hljs-string">''</span>).trim()) {
-      <span class="hljs-keyword">this</span>.fruits.push({ name: value.trim() });
+      <span class="hljs-keyword">this</span>.fruits.push(value.trim());
     }
 
     <span class="hljs-comment">// Reset the input value</span>
@@ -73,7 +74,7 @@
   }
 
   selected(event: MatAutocompleteSelectedEvent): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">this</span>.fruits.push({ name: event.option.viewValue });
+    <span class="hljs-keyword">this</span>.fruits.push(event.option.viewValue);
     <span class="hljs-keyword">this</span>.fruitInput.nativeElement.value = <span class="hljs-string">''</span>;
   }
 }
