@@ -717,98 +717,34 @@ var CardOverviewExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Basic CDK data-table
+ * \@title Basic use of `<cdk-table>` (uses display flex)
  */
-var CdkTableBasicExample = /** @class */ (function () {
-    function CdkTableBasicExample() {
-        this.displayedColumns = ['userId', 'userName', 'progress', 'color'];
-        this.exampleDatabase = new ExampleDatabase();
+var CdkTableBasicFlexExample = /** @class */ (function () {
+    function CdkTableBasicFlexExample() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new ExampleDataSource();
     }
-    /**
-     * @return {?}
-     */
-    CdkTableBasicExample.prototype.ngOnInit = /**
-     * @return {?}
-     */
-    function () {
-        this.dataSource = new ExampleDataSource(this.exampleDatabase);
-    };
-    CdkTableBasicExample.decorators = [
+    CdkTableBasicFlexExample.decorators = [
         { type: core.Component, args: [{
-                    selector: 'cdk-table-basic-example',
-                    styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; } /* * Styles to make the demo's cdk-table match the material design spec * https://material.io/guidelines/components/data-tables.html */ .example-table { flex: 1 1 auto; overflow: auto; max-height: 500px; } .example-header-row, .example-row { display: flex; border-bottom: 1px solid #ccc; align-items: center; height: 32px; padding: 0 8px; } .example-cell, .example-header-cell { flex: 1; } .example-header-cell { font-size: 12px; font-weight: bold; color: rgba(0, 0, 0, 0.54); } .example-cell { font-size: 13px; color: rgba(0, 0, 0, 0.87); } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><cdk-table #table [dataSource]=\"dataSource\" class=\"example-table\"><ng-container cdkColumnDef=\"userId\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">ID</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.id}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"progress\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Progress</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.progress}}%</cdk-cell></ng-container><ng-container cdkColumnDef=\"userName\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Name</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\">{{row.name}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"color\"><cdk-header-cell *cdkHeaderCellDef class=\"example-header-cell\">Color</cdk-header-cell><cdk-cell *cdkCellDef=\"let row\" class=\"example-cell\" [style.color]=\"row.color\">{{row.color}}</cdk-cell></ng-container><cdk-header-row *cdkHeaderRowDef=\"displayedColumns\" class=\"example-header-row\"></cdk-header-row><cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\" class=\"example-row\"></cdk-row></cdk-table></div>",
+                    selector: 'cdk-table-basic-flex-example',
+                    styles: ["/** * Add basic flex styling so that the cells evenly space themselves in the row. */ cdk-row, cdk-header-row, cdk-footer-row { display: flex; } cdk-cell, cdk-header-cell, cdk-footer-cell { flex: 1; } "],
+                    template: "<cdk-table [dataSource]=\"dataSource\"><ng-container cdkColumnDef=\"position\"><cdk-header-cell *cdkHeaderCellDef>No.</cdk-header-cell><cdk-cell *cdkCellDef=\"let element\">{{element.position}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"name\"><cdk-header-cell *cdkHeaderCellDef>Name</cdk-header-cell><cdk-cell *cdkCellDef=\"let element\">{{element.name}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"weight\"><cdk-header-cell *cdkHeaderCellDef>Weight</cdk-header-cell><cdk-cell *cdkCellDef=\"let element\">{{element.weight}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"symbol\"><cdk-header-cell *cdkHeaderCellDef>Symbol</cdk-header-cell><cdk-cell *cdkCellDef=\"let element\">{{element.symbol}}</cdk-cell></ng-container><cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></cdk-header-row><cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></cdk-row></cdk-table>",
                 },] },
     ];
-    return CdkTableBasicExample;
+    return CdkTableBasicFlexExample;
 }());
-/**
- * Constants used to fill up our data base.
- */
-var /** @type {?} */ COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-/**
- * An example database that the data source uses to retrieve data for the table.
- */
-var /**
- * An example database that the data source uses to retrieve data for the table.
- */
-ExampleDatabase = /** @class */ (function () {
-    function ExampleDatabase() {
-        /**
-         * Stream that emits whenever the data has been modified.
-         */
-        this.dataChange = new rxjs.BehaviorSubject([]);
-        // Fill up the database with 100 users.
-        for (var /** @type {?} */ i = 0; i < 100; i++) {
-            this.addUser();
-        }
-    }
-    Object.defineProperty(ExampleDatabase.prototype, "data", {
-        get: /**
-         * @return {?}
-         */
-        function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    /** Adds a new user to the database. */
-    /**
-     * Adds a new user to the database.
-     * @return {?}
-     */
-    ExampleDatabase.prototype.addUser = /**
-     * Adds a new user to the database.
-     * @return {?}
-     */
-    function () {
-        var /** @type {?} */ copiedData = this.data.slice();
-        copiedData.push(this.createNewUser());
-        this.dataChange.next(copiedData);
-    };
-    /**
-     * Builds and returns a new User.
-     * @return {?}
-     */
-    ExampleDatabase.prototype.createNewUser = /**
-     * Builds and returns a new User.
-     * @return {?}
-     */
-    function () {
-        var /** @type {?} */ name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-            NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-        return {
-            id: (this.data.length + 1).toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
-        };
-    };
-    return ExampleDatabase;
-}());
+var /** @type {?} */ ELEMENT_DATA = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -825,9 +761,12 @@ var /**
  */
 ExampleDataSource = /** @class */ (function (_super) {
     __extends(ExampleDataSource, _super);
-    function ExampleDataSource(_exampleDatabase) {
-        var _this = _super.call(this) || this;
-        _this._exampleDatabase = _exampleDatabase;
+    function ExampleDataSource() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        /**
+         * Stream of data that is provided to the table.
+         */
+        _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA);
         return _this;
     }
     /** Connect function called by the table to retrieve one stream containing the data to render. */
@@ -840,7 +779,86 @@ ExampleDataSource = /** @class */ (function (_super) {
      * @return {?}
      */
     function () {
-        return this._exampleDatabase.dataChange;
+        return this.data;
+    };
+    /**
+     * @return {?}
+     */
+    ExampleDataSource.prototype.disconnect = /**
+     * @return {?}
+     */
+    function () { };
+    return ExampleDataSource;
+}(collections.DataSource));
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Basic CDK data-table
+ */
+var CdkTableBasicExample = /** @class */ (function () {
+    function CdkTableBasicExample() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new ExampleDataSource$1();
+    }
+    CdkTableBasicExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-table-basic-example',
+                    styles: ["table { width: 100%; } th { text-align: left; } "],
+                    template: "<table cdk-table [dataSource]=\"dataSource\"><ng-container cdkColumnDef=\"position\"><th cdk-header-cell *cdkHeaderCellDef>No.</th><td cdk-cell *cdkCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container cdkColumnDef=\"name\"><th cdk-header-cell *cdkHeaderCellDef>Name</th><td cdk-cell *cdkCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container cdkColumnDef=\"weight\"><th cdk-header-cell *cdkHeaderCellDef>Weight</th><td cdk-cell *cdkCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container cdkColumnDef=\"symbol\"><th cdk-header-cell *cdkHeaderCellDef>Symbol</th><td cdk-cell *cdkCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></tr><tr cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
+                },] },
+    ];
+    return CdkTableBasicExample;
+}());
+var /** @type {?} */ ELEMENT_DATA$1 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+var /**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+ExampleDataSource$1 = /** @class */ (function (_super) {
+    __extends(ExampleDataSource, _super);
+    function ExampleDataSource() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        /**
+         * Stream of data that is provided to the table.
+         */
+        _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$1);
+        return _this;
+    }
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
+    /**
+     * Connect function called by the table to retrieve one stream containing the data to render.
+     * @return {?}
+     */
+    ExampleDataSource.prototype.connect = /**
+     * Connect function called by the table to retrieve one stream containing the data to render.
+     * @return {?}
+     */
+    function () {
+        return this.data;
     };
     /**
      * @return {?}
@@ -4625,23 +4643,23 @@ var StepperOverviewExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Basic table
+ * \@title Basic use of `<mat-table>` (uses display flex)
  */
-var TableBasicExample = /** @class */ (function () {
-    function TableBasicExample() {
+var TableBasicFlexExample = /** @class */ (function () {
+    function TableBasicFlexExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA;
+        this.dataSource = ELEMENT_DATA$2;
     }
-    TableBasicExample.decorators = [
+    TableBasicFlexExample.decorators = [
         { type: core.Component, args: [{
-                    selector: 'table-basic-example',
-                    styles: [".example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; overflow: auto; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
+                    selector: 'table-basic-flex-example',
+                    styles: ["table { width: 100%; } "],
+                    template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
                 },] },
     ];
-    return TableBasicExample;
+    return TableBasicFlexExample;
 }());
-var /** @type {?} */ ELEMENT_DATA = [
+var /** @type {?} */ ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4652,16 +4670,113 @@ var /** @type {?} */ ELEMENT_DATA = [
     { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
-    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
-    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
-    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
-    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
-    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
-    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
-    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
-    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
-    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Basic use of `<table mat-table>`
+ */
+var TableBasicExample = /** @class */ (function () {
+    function TableBasicExample() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = ELEMENT_DATA$3;
+    }
+    TableBasicExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'table-basic-example',
+                    styles: ["table { width: 100%; } "],
+                    template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
+                },] },
+    ];
+    return TableBasicExample;
+}());
+var /** @type {?} */ ELEMENT_DATA$3 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Table dynamically changing the columns displayed
+ */
+var TableDynamicColumnsExample = /** @class */ (function () {
+    function TableDynamicColumnsExample() {
+        this.definedColumns = ['name', 'weight', 'symbol', 'position'];
+        this.columnsToDisplay = this.definedColumns.slice();
+        this.data = ELEMENT_DATA$4;
+    }
+    /**
+     * @return {?}
+     */
+    TableDynamicColumnsExample.prototype.addColumn = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ randomColumn = Math.floor(Math.random() * this.definedColumns.length);
+        this.columnsToDisplay.push(this.definedColumns[randomColumn]);
+    };
+    /**
+     * @return {?}
+     */
+    TableDynamicColumnsExample.prototype.removeColumn = /**
+     * @return {?}
+     */
+    function () {
+        if (this.columnsToDisplay.length) {
+            this.columnsToDisplay.pop();
+        }
+    };
+    /**
+     * @return {?}
+     */
+    TableDynamicColumnsExample.prototype.shuffle = /**
+     * @return {?}
+     */
+    function () {
+        var /** @type {?} */ currentIndex = this.columnsToDisplay.length;
+        while (0 !== currentIndex) {
+            var /** @type {?} */ randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            // Swap
+            var /** @type {?} */ temp = this.columnsToDisplay[currentIndex];
+            this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
+            this.columnsToDisplay[randomIndex] = temp;
+        }
+    };
+    TableDynamicColumnsExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'table-dynamic-columns-example',
+                    styles: ["table { width: 100%; } button { margin: 16px 8px; } "],
+                    template: "<button mat-raised-button (click)=\"addColumn()\">Add column</button> <button mat-raised-button (click)=\"removeColumn()\">Remove column</button> <button mat-raised-button (click)=\"shuffle()\">Shuffle</button><table mat-table [dataSource]=\"data\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"{{column}}\" *ngFor=\"let column of definedColumns\"><th mat-header-cell *matHeaderCellDef>{{column}}</th><td mat-cell *matCellDef=\"let element\">{{element[column]}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr><tr mat-row *matRowDef=\"let row; columns: columnsToDisplay;\"></tr></table>",
+                },] },
+    ];
+    return TableDynamicColumnsExample;
+}());
+var /** @type {?} */ ELEMENT_DATA$4 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
 /**
@@ -4674,7 +4789,7 @@ var /** @type {?} */ ELEMENT_DATA = [
 var TableFilteringExample = /** @class */ (function () {
     function TableFilteringExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$1);
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$5);
     }
     /**
      * @param {?} filterValue
@@ -4692,13 +4807,13 @@ var TableFilteringExample = /** @class */ (function () {
     TableFilteringExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'table-filtering-example',
-                    styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; max-height: 500px; overflow: auto; } .example-header { min-height: 64px; padding: 8px 24px 0; } .mat-form-field { font-size: 14px; width: 100%; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
+                    styles: ["/* Structure */ table { width: 100%; } .mat-form-field { font-size: 14px; width: 100%; } "],
+                    template: "<mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field><table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
                 },] },
     ];
     return TableFilteringExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$1 = [
+var /** @type {?} */ ELEMENT_DATA$5 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4709,16 +4824,6 @@ var /** @type {?} */ ELEMENT_DATA$1 = [
     { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
-    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
-    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
-    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
-    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
-    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
-    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
-    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
-    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
-    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 
 /**
@@ -4755,8 +4860,8 @@ var TableFooterRowExample = /** @class */ (function () {
     TableFooterRowExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'table-footer-row-example',
-                    styles: [".example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; } .mat-table { overflow: auto; max-height: 500px; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><mat-table [dataSource]=\"transactions\"><ng-container matColumnDef=\"item\"><mat-header-cell *matHeaderCellDef>Item</mat-header-cell><mat-cell *matCellDef=\"let transaction\">{{transaction.item}}</mat-cell><mat-footer-cell *matFooterCellDef></mat-footer-cell></ng-container><ng-container matColumnDef=\"cost\"><mat-header-cell *matHeaderCellDef>Cost</mat-header-cell><mat-cell *matCellDef=\"let transaction\">{{transaction.cost | currency}}</mat-cell><mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</mat-footer-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row><mat-footer-row *matFooterRowDef=\"displayedColumns\"></mat-footer-row></mat-table></div>",
+                    styles: ["table { width: 100%; } tr.mat-footer-row { font-weight: bold; } "],
+                    template: "<table mat-table [dataSource]=\"transactions\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"item\"><th mat-header-cell *matHeaderCellDef>Item</th><td mat-cell *matCellDef=\"let transaction\">{{transaction.item}}</td><td mat-footer-cell *matFooterCellDef>Total</td></ng-container><ng-container matColumnDef=\"cost\"><th mat-header-cell *matHeaderCellDef>Cost</th><td mat-cell *matCellDef=\"let transaction\">{{transaction.cost | currency}}</td><td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr><tr mat-footer-row *matFooterRowDef=\"displayedColumns\"></tr></table>",
                 },] },
     ];
     return TableFooterRowExample;
@@ -4773,7 +4878,7 @@ var TableHttpExample = /** @class */ (function () {
     function TableHttpExample(http$$1) {
         this.http = http$$1;
         this.displayedColumns = ['created', 'state', 'number', 'title'];
-        this.dataSource = new material.MatTableDataSource();
+        this.data = [];
         this.resultsLength = 0;
         this.isLoadingResults = true;
         this.isRateLimitReached = false;
@@ -4781,7 +4886,7 @@ var TableHttpExample = /** @class */ (function () {
     /**
      * @return {?}
      */
-    TableHttpExample.prototype.ngAfterViewInit = /**
+    TableHttpExample.prototype.ngOnInit = /**
      * @return {?}
      */
     function () {
@@ -4806,13 +4911,13 @@ var TableHttpExample = /** @class */ (function () {
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             _this.isRateLimitReached = true;
             return rxjs.of([]);
-        })).subscribe(function (data) { return _this.dataSource.data = data; });
+        })).subscribe(function (data) { return _this.data = data; });
     };
     TableHttpExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'table-http-example',
-                    styles: ["/* Structure */ .example-container { display: flex; flex-direction: column; min-width: 300px; position: relative; max-height: 500px; overflow: auto; } .example-header { min-height: 64px; display: flex; align-items: center; padding-left: 24px; font-size: 20px; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><table mat-table #table [dataSource]=\"dataSource\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><th mat-header-cell *matHeaderCellDef>#</th><td mat-cell *matCellDef=\"let row\">{{ row.number }}</td></ng-container><ng-container matColumnDef=\"title\"><th mat-header-cell *matHeaderCellDef>Title</th><td mat-cell *matCellDef=\"let row\">{{ row.title }}</td></ng-container><ng-container matColumnDef=\"state\"><th mat-header-cell *matHeaderCellDef>State</th><td mat-cell *matCellDef=\"let row\">{{ row.state }}</td></ng-container><ng-container matColumnDef=\"created\"><th mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</th><td mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
+                    styles: ["/* Structure */ .example-container { position: relative; } .example-table-container { position: relative; max-height: 400px; overflow: auto; } table { width: 100%; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } "],
+                    template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><div class=\"example-table-container\"><table mat-table [dataSource]=\"data\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><th mat-header-cell *matHeaderCellDef>#</th><td mat-cell *matCellDef=\"let row\">{{ row.number }}</td></ng-container><ng-container matColumnDef=\"title\"><th mat-header-cell *matHeaderCellDef>Title</th><td mat-cell *matCellDef=\"let row\">{{ row.title }}</td></ng-container><ng-container matColumnDef=\"state\"><th mat-header-cell *matHeaderCellDef>State</th><td mat-cell *matCellDef=\"let row\">{{ row.state }}</td></ng-container><ng-container matColumnDef=\"created\"><th mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</th><td mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
                 },] },
     ];
     /** @nocollapse */
@@ -4875,8 +4980,8 @@ var TableNativeOnlyExample = /** @class */ (function () {
     TableNativeOnlyExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'table-native-only-example',
-                    styles: [""],
-                    template: "<table class=\"mat-table\"><thead><tr class=\"mat-header-row\"><th class=\"mat-header-cell\">No.</th><th class=\"mat-header-cell\">Name</th><th class=\"mat-header-cell\">Weight</th><th class=\"mat-header-cell\">Symbol</th></tr></thead><tbody><tr class=\"mat-row\" *ngFor=\"let element of elements\"><td class=\"mat-cell\">{{element.position}}</td><td class=\"mat-cell\">{{element.name}}</td><td class=\"mat-cell\">{{element.weight}}</td><td class=\"mat-cell\">{{element.symbol}}</td></tr></tbody></table>",
+                    styles: ["table { width: 100%; } "],
+                    template: "<table class=\"mat-table mat-elevation-z8\"><thead><tr class=\"mat-header-row\"><th class=\"mat-header-cell\">No.</th><th class=\"mat-header-cell\">Name</th><th class=\"mat-header-cell\">Weight</th><th class=\"mat-header-cell\">Symbol</th></tr></thead><tbody><tr class=\"mat-row\" *ngFor=\"let element of elements\"><td class=\"mat-cell\">{{element.position}}</td><td class=\"mat-cell\">{{element.name}}</td><td class=\"mat-cell\">{{element.weight}}</td><td class=\"mat-cell\">{{element.symbol}}</td></tr></tbody></table>",
                 },] },
     ];
     return TableNativeOnlyExample;
@@ -4926,8 +5031,8 @@ var TableOverviewExample = /** @class */ (function () {
     TableOverviewExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'table-overview-example',
-                    styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; max-height: 500px; overflow: auto; } .example-header { min-height: 64px; padding: 8px 24px 0; } .mat-form-field { font-size: 14px; width: 100%; } "],
-                    template: "<div class=\"example-header\"><mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field></div><div class=\"example-container mat-elevation-z8\"><table mat-table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"id\"><th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th><td mat-cell *matCellDef=\"let row\">{{row.id}}</td></ng-container><ng-container matColumnDef=\"progress\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Progress</th><td mat-cell *matCellDef=\"let row\">{{row.progress}}%</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th><td mat-cell *matCellDef=\"let row\">{{row.name}}</td></ng-container><ng-container matColumnDef=\"color\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Color</th><td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table><mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
+                    styles: ["table { width: 100%; } .mat-form-field { font-size: 14px; width: 100%; } td, th { width: 25%; } "],
+                    template: "<mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field><div class=\"mat-elevation-z8\"><table mat-table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"id\"><th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th><td mat-cell *matCellDef=\"let row\">{{row.id}}</td></ng-container><ng-container matColumnDef=\"progress\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Progress</th><td mat-cell *matCellDef=\"let row\">{{row.progress}}%</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th><td mat-cell *matCellDef=\"let row\">{{row.name}}</td></ng-container><ng-container matColumnDef=\"color\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Color</th><td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\">{{row.color}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table><mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator></div>",
                 },] },
     ];
     /** @nocollapse */
@@ -4944,21 +5049,21 @@ var TableOverviewExample = /** @class */ (function () {
  * @return {?}
  */
 function createNewUser(id) {
-    var /** @type {?} */ name = NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))] + ' ' +
-        NAMES$1[Math.round(Math.random() * (NAMES$1.length - 1))].charAt(0) + '.';
+    var /** @type {?} */ name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
+        NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
     return {
         id: id.toString(),
         name: name,
         progress: Math.round(Math.random() * 100).toString(),
-        color: COLORS$1[Math.round(Math.random() * (COLORS$1.length - 1))]
+        color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
     };
 }
 /**
  * Constants used to fill up our data base.
  */
-var /** @type {?} */ COLORS$1 = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+var /** @type {?} */ COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var /** @type {?} */ NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+var /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 
@@ -4972,7 +5077,7 @@ var /** @type {?} */ NAMES$1 = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 
 var TablePaginationExample = /** @class */ (function () {
     function TablePaginationExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$2);
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$6);
     }
     /**
      * @return {?}
@@ -4986,8 +5091,8 @@ var TablePaginationExample = /** @class */ (function () {
     TablePaginationExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'table-pagination-example',
-                    styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; max-height: 500px; overflow: auto; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table><mat-paginator #paginator [pageSize]=\"10\" [pageSizeOptions]=\"[5, 10, 20]\" [showFirstLastButtons]=\"true\"></mat-paginator></div>",
+                    styles: ["table { width: 100%; } "],
+                    template: "<div class=\"mat-elevation-z8\"><table mat-table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table><mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator></div>",
                 },] },
     ];
     /** @nocollapse */
@@ -4996,7 +5101,7 @@ var TablePaginationExample = /** @class */ (function () {
     };
     return TablePaginationExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$2 = [
+var /** @type {?} */ ELEMENT_DATA$6 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5024,12 +5129,34 @@ var /** @type {?} */ ELEMENT_DATA$2 = [
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Table showing each row context properties.
+ */
+var TableRowContextExample = /** @class */ (function () {
+    function TableRowContextExample() {
+        this.displayedColumns = ['$implicit', 'index', 'count', 'first', 'last', 'even', 'odd'];
+        this.data = ['one', 'two', 'three', 'four', 'five'];
+    }
+    TableRowContextExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'table-row-context-example',
+                    styles: ["table { width: 100%; } "],
+                    template: "<table mat-table [dataSource]=\"data\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"$implicit\"><th mat-header-cell *matHeaderCellDef>$implicit</th><td mat-cell *matCellDef=\"let data\">{{data}}</td></ng-container><ng-container matColumnDef=\"index\"><th mat-header-cell *matHeaderCellDef>index</th><td mat-cell *matCellDef=\"let index = index\">{{index}}</td></ng-container><ng-container matColumnDef=\"count\"><th mat-header-cell *matHeaderCellDef>count</th><td mat-cell *matCellDef=\"let count = count\">{{count}}</td></ng-container><ng-container matColumnDef=\"first\"><th mat-header-cell *matHeaderCellDef>first</th><td mat-cell *matCellDef=\"let first = first\">{{first}}</td></ng-container><ng-container matColumnDef=\"last\"><th mat-header-cell *matHeaderCellDef>last</th><td mat-cell *matCellDef=\"let last = last\">{{last}}</td></ng-container><ng-container matColumnDef=\"even\"><th mat-header-cell *matHeaderCellDef>even</th><td mat-cell *matCellDef=\"let even = even\">{{even}}</td></ng-container><ng-container matColumnDef=\"odd\"><th mat-header-cell *matHeaderCellDef>odd</th><td mat-cell *matCellDef=\"let odd = odd\">{{odd}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
+                },] },
+    ];
+    return TableRowContextExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Table with selection
  */
 var TableSelectionExample = /** @class */ (function () {
     function TableSelectionExample() {
         this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$3);
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$7);
         this.selection = new collections.SelectionModel(true, []);
     }
     /** Whether the number of selected elements matches the total number of rows. */
@@ -5064,13 +5191,13 @@ var TableSelectionExample = /** @class */ (function () {
     TableSelectionExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'table-selection-example',
-                    styles: [".example-container { display: flex; flex-direction: column; max-height: 500px; min-width: 300px; overflow: auto; } .mat-column-select { overflow: visible; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"select\"><th mat-header-cell *matHeaderCellDef><mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"selection.hasValue() && isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></mat-checkbox></th><td mat-cell *matCellDef=\"let row\"><mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row) : null\" [checked]=\"selection.isSelected(row)\"></mat-checkbox></td></ng-container><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" (click)=\"selection.toggle(row)\"></tr></table></div>",
+                    styles: ["table { width: 100%; } "],
+                    template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"select\"><th mat-header-cell *matHeaderCellDef><mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"selection.hasValue() && isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></mat-checkbox></th><td mat-cell *matCellDef=\"let row\"><mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row) : null\" [checked]=\"selection.isSelected(row)\"></mat-checkbox></td></ng-container><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" (click)=\"selection.toggle(row)\"></tr></table>",
                 },] },
     ];
     return TableSelectionExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$3 = [
+var /** @type {?} */ ELEMENT_DATA$7 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5081,16 +5208,6 @@ var /** @type {?} */ ELEMENT_DATA$3 = [
     { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
-    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
-    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
-    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
-    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
-    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
-    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
-    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
-    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
-    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 
 /**
@@ -5103,7 +5220,7 @@ var /** @type {?} */ ELEMENT_DATA$3 = [
 var TableSortingExample = /** @class */ (function () {
     function TableSortingExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$4);
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$8);
     }
     /**
      * @return {?}
@@ -5117,8 +5234,8 @@ var TableSortingExample = /** @class */ (function () {
     TableSortingExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'table-sorting-example',
-                    styles: [".example-container { display: flex; flex-direction: column; min-width: 300px; overflow: auto; max-height: 500px; } .mat-header-cell.mat-sort-header-sorted { color: black; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><table mat-table #table [dataSource]=\"dataSource\" matSort><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
+                    styles: ["table { width: 100%; } th.mat-sort-header-sorted { color: black; } "],
+                    template: "<table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z8\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
                 },] },
     ];
     /** @nocollapse */
@@ -5127,7 +5244,7 @@ var TableSortingExample = /** @class */ (function () {
     };
     return TableSortingExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$4 = [
+var /** @type {?} */ ELEMENT_DATA$8 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5138,16 +5255,6 @@ var /** @type {?} */ ELEMENT_DATA$4 = [
     { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
-    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
-    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
-    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
-    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
-    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
-    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
-    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
-    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
-    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 
 /**
@@ -6530,6 +6637,10 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Basic cards',
         component: CardOverviewExample
     },
+    'cdk-table-basic-flex': {
+        title: 'Basic use of `<cdk-table>` (uses display flex)',
+        component: CdkTableBasicFlexExample
+    },
     'cdk-table-basic': {
         title: 'Basic CDK data-table',
         component: CdkTableBasicExample
@@ -6975,9 +7086,17 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Stepper overview',
         component: StepperOverviewExample
     },
+    'table-basic-flex': {
+        title: 'Basic use of `<mat-table>` (uses display flex)',
+        component: TableBasicFlexExample
+    },
     'table-basic': {
-        title: 'Basic table',
+        title: 'Basic use of `<table mat-table>`',
         component: TableBasicExample
+    },
+    'table-dynamic-columns': {
+        title: 'Table dynamically changing the columns displayed',
+        component: TableDynamicColumnsExample
     },
     'table-filtering': {
         title: 'Table with filtering',
@@ -7002,6 +7121,10 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
     'table-pagination': {
         title: 'Table with pagination',
         component: TablePaginationExample
+    },
+    'table-row-context': {
+        title: 'Table showing each row context properties.',
+        component: TableRowContextExample
     },
     'table-selection': {
         title: 'Table with selection',
@@ -7095,6 +7218,7 @@ var /** @type {?} */ EXAMPLE_LIST = [
     ButtonTypesExample,
     CardFancyExample,
     CardOverviewExample,
+    CdkTableBasicFlexExample,
     CdkTableBasicExample,
     CdkTreeFlatExample,
     CdkTreeNestedExample,
@@ -7203,13 +7327,16 @@ var /** @type {?} */ EXAMPLE_LIST = [
     StepperEditableExample,
     StepperOptionalExample,
     StepperOverviewExample,
+    TableBasicFlexExample,
     TableBasicExample,
+    TableDynamicColumnsExample,
     TableFilteringExample,
     TableFooterRowExample,
     TableHttpExample,
     TableNativeOnlyExample,
     TableOverviewExample,
     TablePaginationExample,
+    TableRowContextExample,
     TableSelectionExample,
     TableSortingExample,
     TabsOverviewExample,
@@ -7306,153 +7433,157 @@ exports.ɵj = ButtonOverviewExample;
 exports.ɵk = ButtonToggleExclusiveExample;
 exports.ɵl = ButtonTypesExample;
 exports.ɵm = CardOverviewExample;
-exports.ɵn = CdkTableBasicExample;
-exports.ɵp = CdkTreeFlatExample;
-exports.ɵo = FileDatabase;
-exports.ɵr = CdkTreeNestedExample;
-exports.ɵq = FileDatabase$1;
-exports.ɵs = CheckboxConfigurableExample;
-exports.ɵt = CheckboxOverviewExample;
-exports.ɵu = ChipsAutocompleteExample;
-exports.ɵv = ChipsInputExample;
-exports.ɵw = ChipsOverviewExample;
-exports.ɵx = ChipsStackedExample;
-exports.ɵy = DatepickerApiExample;
-exports.ɵz = DatepickerColorExample;
-exports.ɵba = DatepickerCustomHeaderExample;
-exports.ɵbb = ExampleHeader;
-exports.ɵbc = DatepickerCustomIconExample;
-exports.ɵbd = DatepickerDisabledExample;
-exports.ɵbe = DatepickerEventsExample;
-exports.ɵbf = DatepickerFilterExample;
-exports.ɵbh = DatepickerFormatsExample;
-exports.ɵbg = MY_FORMATS;
-exports.ɵbi = DatepickerLocaleExample;
-exports.ɵbj = DatepickerMinMaxExample;
-exports.ɵbk = DatepickerMomentExample;
-exports.ɵbl = DatepickerStartViewExample;
-exports.ɵbm = DatepickerTouchExample;
-exports.ɵbn = DatepickerValueExample;
-exports.ɵbp = DatepickerViewsSelectionExample;
-exports.ɵbo = MY_FORMATS$1;
-exports.ɵbq = DialogContentExample;
-exports.ɵbr = DialogContentExampleDialog;
-exports.ɵbs = DialogDataExample;
-exports.ɵbt = DialogDataExampleDialog;
-exports.ɵbu = DialogElementsExample;
-exports.ɵbv = DialogElementsExampleDialog;
-exports.ɵbw = DialogOverviewExample;
-exports.ɵbx = DialogOverviewExampleDialog;
-exports.ɵby = DividerOverviewExample;
-exports.ɵbz = ElevationOverviewExample;
-exports.ɵca = ExpansionExpandCollapseAllExample;
-exports.ɵcb = ExpansionStepsExample;
-exports.ɵcc = FocusMonitorDirectivesExample;
-exports.ɵcd = FocusMonitorFocusViaExample;
-exports.ɵce = FocusMonitorOverviewExample;
-exports.ɵcf = FormFieldAppearanceExample;
-exports.ɵch = FormFieldCustomControlExample;
-exports.ɵcg = MyTelInput;
-exports.ɵci = FormFieldErrorExample;
-exports.ɵcj = FormFieldHintExample;
-exports.ɵck = FormFieldLabelExample;
-exports.ɵcl = FormFieldOverviewExample;
-exports.ɵcm = FormFieldPrefixSuffixExample;
-exports.ɵcn = FormFieldThemingExample;
-exports.ɵco = GridListDynamicExample;
-exports.ɵcp = GridListOverviewExample;
-exports.ɵcq = IconOverviewExample;
-exports.ɵcr = IconSvgExample;
-exports.ɵcs = InputClearableExample;
-exports.ɵct = InputErrorStateMatcherExample;
-exports.ɵcu = InputErrorsExample;
-exports.ɵcv = InputFormExample;
-exports.ɵcw = InputHintExample;
-exports.ɵcx = InputOverviewExample;
-exports.ɵcy = InputPrefixSuffixExample;
-exports.ɵcz = ListSectionsExample;
-exports.ɵda = ListSelectionExample;
-exports.ɵgd = ExampleMaterialModule;
-exports.ɵdb = MenuIconsExample;
-exports.ɵdc = MenuOverviewExample;
-exports.ɵdd = NestedMenuExample;
-exports.ɵde = PaginatorConfigurableExample;
-exports.ɵdf = PaginatorOverviewExample;
-exports.ɵdg = ProgressBarBufferExample;
-exports.ɵdh = ProgressBarConfigurableExample;
-exports.ɵdi = ProgressBarDeterminateExample;
-exports.ɵdj = ProgressBarIndeterminateExample;
-exports.ɵdk = ProgressBarQueryExample;
-exports.ɵdl = ProgressSpinnerConfigurableExample;
-exports.ɵdm = ProgressSpinnerOverviewExample;
-exports.ɵdn = RadioNgModelExample;
-exports.ɵdo = RadioOverviewExample;
-exports.ɵdp = SelectCustomTriggerExample;
-exports.ɵdq = SelectDisabledExample;
-exports.ɵdr = SelectErrorStateMatcherExample;
-exports.ɵds = SelectFormExample;
-exports.ɵdt = SelectHintErrorExample;
-exports.ɵdu = SelectMultipleExample;
-exports.ɵdv = SelectNoRippleExample;
-exports.ɵdw = SelectOptgroupExample;
-exports.ɵdx = SelectOverviewExample;
-exports.ɵdy = SelectPanelClassExample;
-exports.ɵdz = SelectResetExample;
-exports.ɵea = SelectValueBindingExample;
-exports.ɵeb = SidenavAutosizeExample;
-exports.ɵec = SidenavBackdropExample;
-exports.ɵed = SidenavDisableCloseExample;
-exports.ɵee = SidenavDrawerOverviewExample;
-exports.ɵef = SidenavFixedExample;
-exports.ɵeg = SidenavModeExample;
-exports.ɵeh = SidenavOpenCloseExample;
-exports.ɵei = SidenavOverviewExample;
-exports.ɵej = SidenavPositionExample;
-exports.ɵek = SidenavResponsiveExample;
-exports.ɵel = SlideToggleConfigurableExample;
-exports.ɵem = SlideToggleFormsExample;
-exports.ɵen = SlideToggleOverviewExample;
-exports.ɵeo = SliderConfigurableExample;
-exports.ɵep = SliderFormattingExample;
-exports.ɵeq = SliderOverviewExample;
-exports.ɵes = PizzaPartyComponent;
-exports.ɵer = SnackBarComponentExample;
-exports.ɵet = SnackBarOverviewExample;
-exports.ɵeu = SnackBarPositionExample;
-exports.ɵev = SortOverviewExample;
-exports.ɵew = StepperEditableExample;
-exports.ɵex = StepperOptionalExample;
-exports.ɵey = TableBasicExample;
-exports.ɵez = TableFilteringExample;
-exports.ɵfa = TableFooterRowExample;
-exports.ɵfb = TableHttpExample;
-exports.ɵfc = TableNativeOnlyExample;
-exports.ɵfd = TableOverviewExample;
-exports.ɵfe = TablePaginationExample;
-exports.ɵff = TableSelectionExample;
-exports.ɵfg = TableSortingExample;
-exports.ɵfh = TabsOverviewExample;
-exports.ɵfi = TabsTemplateLabelExample;
-exports.ɵfj = TextFieldAutofillDirectiveExample;
-exports.ɵfk = TextFieldAutofillMonitorExample;
-exports.ɵfl = TextFieldAutosizeTextareaExample;
-exports.ɵfm = ToolbarOverviewExample;
-exports.ɵfn = TooltipDelayExample;
-exports.ɵfo = TooltipManualExample;
-exports.ɵfq = TooltipModifiedDefaultsExample;
-exports.ɵfp = myCustomTooltipDefaults;
-exports.ɵfr = TooltipOverviewExample;
-exports.ɵfs = TooltipPositionExample;
-exports.ɵft = ChecklistDatabase;
-exports.ɵfu = TreeChecklistExample;
-exports.ɵfv = DynamicDatabase;
-exports.ɵfw = TreeDynamicExample;
-exports.ɵfx = FileDatabase$2;
-exports.ɵfy = TreeFlatOverviewExample;
-exports.ɵfz = LoadmoreDatabase;
-exports.ɵga = TreeLoadmoreExample;
-exports.ɵgb = FileDatabase$3;
-exports.ɵgc = TreeNestedOverviewExample;
+exports.ɵn = CdkTableBasicFlexExample;
+exports.ɵo = CdkTableBasicExample;
+exports.ɵq = CdkTreeFlatExample;
+exports.ɵp = FileDatabase;
+exports.ɵs = CdkTreeNestedExample;
+exports.ɵr = FileDatabase$1;
+exports.ɵt = CheckboxConfigurableExample;
+exports.ɵu = CheckboxOverviewExample;
+exports.ɵv = ChipsAutocompleteExample;
+exports.ɵw = ChipsInputExample;
+exports.ɵx = ChipsOverviewExample;
+exports.ɵy = ChipsStackedExample;
+exports.ɵz = DatepickerApiExample;
+exports.ɵba = DatepickerColorExample;
+exports.ɵbb = DatepickerCustomHeaderExample;
+exports.ɵbc = ExampleHeader;
+exports.ɵbd = DatepickerCustomIconExample;
+exports.ɵbe = DatepickerDisabledExample;
+exports.ɵbf = DatepickerEventsExample;
+exports.ɵbg = DatepickerFilterExample;
+exports.ɵbi = DatepickerFormatsExample;
+exports.ɵbh = MY_FORMATS;
+exports.ɵbj = DatepickerLocaleExample;
+exports.ɵbk = DatepickerMinMaxExample;
+exports.ɵbl = DatepickerMomentExample;
+exports.ɵbm = DatepickerStartViewExample;
+exports.ɵbn = DatepickerTouchExample;
+exports.ɵbo = DatepickerValueExample;
+exports.ɵbq = DatepickerViewsSelectionExample;
+exports.ɵbp = MY_FORMATS$1;
+exports.ɵbr = DialogContentExample;
+exports.ɵbs = DialogContentExampleDialog;
+exports.ɵbt = DialogDataExample;
+exports.ɵbu = DialogDataExampleDialog;
+exports.ɵbv = DialogElementsExample;
+exports.ɵbw = DialogElementsExampleDialog;
+exports.ɵbx = DialogOverviewExample;
+exports.ɵby = DialogOverviewExampleDialog;
+exports.ɵbz = DividerOverviewExample;
+exports.ɵca = ElevationOverviewExample;
+exports.ɵcb = ExpansionExpandCollapseAllExample;
+exports.ɵcc = ExpansionStepsExample;
+exports.ɵcd = FocusMonitorDirectivesExample;
+exports.ɵce = FocusMonitorFocusViaExample;
+exports.ɵcf = FocusMonitorOverviewExample;
+exports.ɵcg = FormFieldAppearanceExample;
+exports.ɵci = FormFieldCustomControlExample;
+exports.ɵch = MyTelInput;
+exports.ɵcj = FormFieldErrorExample;
+exports.ɵck = FormFieldHintExample;
+exports.ɵcl = FormFieldLabelExample;
+exports.ɵcm = FormFieldOverviewExample;
+exports.ɵcn = FormFieldPrefixSuffixExample;
+exports.ɵco = FormFieldThemingExample;
+exports.ɵcp = GridListDynamicExample;
+exports.ɵcq = GridListOverviewExample;
+exports.ɵcr = IconOverviewExample;
+exports.ɵcs = IconSvgExample;
+exports.ɵct = InputClearableExample;
+exports.ɵcu = InputErrorStateMatcherExample;
+exports.ɵcv = InputErrorsExample;
+exports.ɵcw = InputFormExample;
+exports.ɵcx = InputHintExample;
+exports.ɵcy = InputOverviewExample;
+exports.ɵcz = InputPrefixSuffixExample;
+exports.ɵda = ListSectionsExample;
+exports.ɵdb = ListSelectionExample;
+exports.ɵgh = ExampleMaterialModule;
+exports.ɵdc = MenuIconsExample;
+exports.ɵdd = MenuOverviewExample;
+exports.ɵde = NestedMenuExample;
+exports.ɵdf = PaginatorConfigurableExample;
+exports.ɵdg = PaginatorOverviewExample;
+exports.ɵdh = ProgressBarBufferExample;
+exports.ɵdi = ProgressBarConfigurableExample;
+exports.ɵdj = ProgressBarDeterminateExample;
+exports.ɵdk = ProgressBarIndeterminateExample;
+exports.ɵdl = ProgressBarQueryExample;
+exports.ɵdm = ProgressSpinnerConfigurableExample;
+exports.ɵdn = ProgressSpinnerOverviewExample;
+exports.ɵdo = RadioNgModelExample;
+exports.ɵdp = RadioOverviewExample;
+exports.ɵdq = SelectCustomTriggerExample;
+exports.ɵdr = SelectDisabledExample;
+exports.ɵds = SelectErrorStateMatcherExample;
+exports.ɵdt = SelectFormExample;
+exports.ɵdu = SelectHintErrorExample;
+exports.ɵdv = SelectMultipleExample;
+exports.ɵdw = SelectNoRippleExample;
+exports.ɵdx = SelectOptgroupExample;
+exports.ɵdy = SelectOverviewExample;
+exports.ɵdz = SelectPanelClassExample;
+exports.ɵea = SelectResetExample;
+exports.ɵeb = SelectValueBindingExample;
+exports.ɵec = SidenavAutosizeExample;
+exports.ɵed = SidenavBackdropExample;
+exports.ɵee = SidenavDisableCloseExample;
+exports.ɵef = SidenavDrawerOverviewExample;
+exports.ɵeg = SidenavFixedExample;
+exports.ɵeh = SidenavModeExample;
+exports.ɵei = SidenavOpenCloseExample;
+exports.ɵej = SidenavOverviewExample;
+exports.ɵek = SidenavPositionExample;
+exports.ɵel = SidenavResponsiveExample;
+exports.ɵem = SlideToggleConfigurableExample;
+exports.ɵen = SlideToggleFormsExample;
+exports.ɵeo = SlideToggleOverviewExample;
+exports.ɵep = SliderConfigurableExample;
+exports.ɵeq = SliderFormattingExample;
+exports.ɵer = SliderOverviewExample;
+exports.ɵet = PizzaPartyComponent;
+exports.ɵes = SnackBarComponentExample;
+exports.ɵeu = SnackBarOverviewExample;
+exports.ɵev = SnackBarPositionExample;
+exports.ɵew = SortOverviewExample;
+exports.ɵex = StepperEditableExample;
+exports.ɵey = StepperOptionalExample;
+exports.ɵez = TableBasicFlexExample;
+exports.ɵfa = TableBasicExample;
+exports.ɵfb = TableDynamicColumnsExample;
+exports.ɵfc = TableFilteringExample;
+exports.ɵfd = TableFooterRowExample;
+exports.ɵfe = TableHttpExample;
+exports.ɵff = TableNativeOnlyExample;
+exports.ɵfg = TableOverviewExample;
+exports.ɵfh = TablePaginationExample;
+exports.ɵfi = TableRowContextExample;
+exports.ɵfj = TableSelectionExample;
+exports.ɵfk = TableSortingExample;
+exports.ɵfl = TabsOverviewExample;
+exports.ɵfm = TabsTemplateLabelExample;
+exports.ɵfn = TextFieldAutofillDirectiveExample;
+exports.ɵfo = TextFieldAutofillMonitorExample;
+exports.ɵfp = TextFieldAutosizeTextareaExample;
+exports.ɵfq = ToolbarOverviewExample;
+exports.ɵfr = TooltipDelayExample;
+exports.ɵfs = TooltipManualExample;
+exports.ɵfu = TooltipModifiedDefaultsExample;
+exports.ɵft = myCustomTooltipDefaults;
+exports.ɵfv = TooltipOverviewExample;
+exports.ɵfw = TooltipPositionExample;
+exports.ɵfx = ChecklistDatabase;
+exports.ɵfy = TreeChecklistExample;
+exports.ɵfz = DynamicDatabase;
+exports.ɵga = TreeDynamicExample;
+exports.ɵgb = FileDatabase$2;
+exports.ɵgc = TreeFlatOverviewExample;
+exports.ɵgd = LoadmoreDatabase;
+exports.ɵge = TreeLoadmoreExample;
+exports.ɵgf = FileDatabase$3;
+exports.ɵgg = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

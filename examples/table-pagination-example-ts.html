@@ -11,7 +11,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TablePaginationExample {
   displayedColumns = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;Element&gt;(ELEMENT_DATA);
+  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
 
   <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
 
@@ -20,14 +20,14 @@
   }
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Element {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   name: <span class="hljs-built_in">string</span>;
   position: <span class="hljs-built_in">number</span>;
   weight: <span class="hljs-built_in">number</span>;
   symbol: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: Element[] = [
+<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
   {position: <span class="hljs-number">1</span>, name: <span class="hljs-string">'Hydrogen'</span>, weight: <span class="hljs-number">1.0079</span>, symbol: <span class="hljs-string">'H'</span>},
   {position: <span class="hljs-number">2</span>, name: <span class="hljs-string">'Helium'</span>, weight: <span class="hljs-number">4.0026</span>, symbol: <span class="hljs-string">'He'</span>},
   {position: <span class="hljs-number">3</span>, name: <span class="hljs-string">'Lithium'</span>, weight: <span class="hljs-number">6.941</span>, symbol: <span class="hljs-string">'Li'</span>},

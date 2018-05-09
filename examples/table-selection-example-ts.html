@@ -12,8 +12,8 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableSelectionExample {
   displayedColumns = [<span class="hljs-string">'select'</span>, <span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;Element&gt;(ELEMENT_DATA);
-  selection = <span class="hljs-keyword">new</span> SelectionModel&lt;Element&gt;(<span class="hljs-literal">true</span>, []);
+  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
+  selection = <span class="hljs-keyword">new</span> SelectionModel&lt;PeriodicElement&gt;(<span class="hljs-literal">true</span>, []);
 
   <span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>
   isAllSelected() {
@@ -30,14 +30,14 @@
   }
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Element {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   name: <span class="hljs-built_in">string</span>;
   position: <span class="hljs-built_in">number</span>;
   weight: <span class="hljs-built_in">number</span>;
   symbol: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">const</span> ELEMENT_DATA: Element[] = [
+<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
   {position: <span class="hljs-number">1</span>, name: <span class="hljs-string">'Hydrogen'</span>, weight: <span class="hljs-number">1.0079</span>, symbol: <span class="hljs-string">'H'</span>},
   {position: <span class="hljs-number">2</span>, name: <span class="hljs-string">'Helium'</span>, weight: <span class="hljs-number">4.0026</span>, symbol: <span class="hljs-string">'He'</span>},
   {position: <span class="hljs-number">3</span>, name: <span class="hljs-string">'Lithium'</span>, weight: <span class="hljs-number">6.941</span>, symbol: <span class="hljs-string">'Li'</span>},
@@ -48,14 +48,4 @@
   {position: <span class="hljs-number">8</span>, name: <span class="hljs-string">'Oxygen'</span>, weight: <span class="hljs-number">15.9994</span>, symbol: <span class="hljs-string">'O'</span>},
   {position: <span class="hljs-number">9</span>, name: <span class="hljs-string">'Fluorine'</span>, weight: <span class="hljs-number">18.9984</span>, symbol: <span class="hljs-string">'F'</span>},
   {position: <span class="hljs-number">10</span>, name: <span class="hljs-string">'Neon'</span>, weight: <span class="hljs-number">20.1797</span>, symbol: <span class="hljs-string">'Ne'</span>},
-  {position: <span class="hljs-number">11</span>, name: <span class="hljs-string">'Sodium'</span>, weight: <span class="hljs-number">22.9897</span>, symbol: <span class="hljs-string">'Na'</span>},
-  {position: <span class="hljs-number">12</span>, name: <span class="hljs-string">'Magnesium'</span>, weight: <span class="hljs-number">24.305</span>, symbol: <span class="hljs-string">'Mg'</span>},
-  {position: <span class="hljs-number">13</span>, name: <span class="hljs-string">'Aluminum'</span>, weight: <span class="hljs-number">26.9815</span>, symbol: <span class="hljs-string">'Al'</span>},
-  {position: <span class="hljs-number">14</span>, name: <span class="hljs-string">'Silicon'</span>, weight: <span class="hljs-number">28.0855</span>, symbol: <span class="hljs-string">'Si'</span>},
-  {position: <span class="hljs-number">15</span>, name: <span class="hljs-string">'Phosphorus'</span>, weight: <span class="hljs-number">30.9738</span>, symbol: <span class="hljs-string">'P'</span>},
-  {position: <span class="hljs-number">16</span>, name: <span class="hljs-string">'Sulfur'</span>, weight: <span class="hljs-number">32.065</span>, symbol: <span class="hljs-string">'S'</span>},
-  {position: <span class="hljs-number">17</span>, name: <span class="hljs-string">'Chlorine'</span>, weight: <span class="hljs-number">35.453</span>, symbol: <span class="hljs-string">'Cl'</span>},
-  {position: <span class="hljs-number">18</span>, name: <span class="hljs-string">'Argon'</span>, weight: <span class="hljs-number">39.948</span>, symbol: <span class="hljs-string">'Ar'</span>},
-  {position: <span class="hljs-number">19</span>, name: <span class="hljs-string">'Potassium'</span>, weight: <span class="hljs-number">39.0983</span>, symbol: <span class="hljs-string">'K'</span>},
-  {position: <span class="hljs-number">20</span>, name: <span class="hljs-string">'Calcium'</span>, weight: <span class="hljs-number">40.078</span>, symbol: <span class="hljs-string">'Ca'</span>},
 ];

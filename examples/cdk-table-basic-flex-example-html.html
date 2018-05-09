@@ -1,0 +1,28 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">cdk-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- Position Column --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"position"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> No. <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"name"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Weight Column --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"weight"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> Weight <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.weight}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Symbol Column --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">cdkColumnDef</span>=<span class="hljs-string">"symbol"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-cell</span> *<span class="hljs-attr">cdkHeaderCellDef</span>&gt;</span> Symbol <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">cdk-cell</span> *<span class="hljs-attr">cdkCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.symbol}} <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-cell</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-header-row</span> *<span class="hljs-attr">cdkHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-header-row</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-row</span> *<span class="hljs-attr">cdkRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cdk-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">cdk-table</span>&gt;</span>

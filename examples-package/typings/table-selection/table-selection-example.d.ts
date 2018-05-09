@@ -5,14 +5,14 @@ import { SelectionModel } from '@angular/cdk/collections';
  */
 export declare class TableSelectionExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<Element>;
-    selection: SelectionModel<Element>;
+    dataSource: MatTableDataSource<PeriodicElement>;
+    selection: SelectionModel<PeriodicElement>;
     /** Whether the number of selected elements matches the total number of rows. */
     isAllSelected(): boolean;
     /** Selects all rows if they are not all selected; otherwise clear selection. */
     masterToggle(): void;
 }
-export interface Element {
+export interface PeriodicElement {
     name: string;
     position: number;
     weight: number;

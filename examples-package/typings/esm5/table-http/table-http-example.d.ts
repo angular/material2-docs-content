@@ -1,22 +1,22 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit } from '@angular/core';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { OnInit } from '@angular/core';
+import { MatPaginator, MatSort } from '@angular/material';
 import { Observable } from 'rxjs';
 /**
  * @title Table retrieving data through HTTP
  */
-export declare class TableHttpExample implements AfterViewInit {
+export declare class TableHttpExample implements OnInit {
     private http;
     displayedColumns: string[];
     exampleDatabase: ExampleHttpDao | null;
-    dataSource: MatTableDataSource<{}>;
+    data: GithubIssue[];
     resultsLength: number;
     isLoadingResults: boolean;
     isRateLimitReached: boolean;
     paginator: MatPaginator;
     sort: MatSort;
     constructor(http: HttpClient);
-    ngAfterViewInit(): void;
+    ngOnInit(): void;
 }
 export interface GithubApi {
     items: GithubIssue[];

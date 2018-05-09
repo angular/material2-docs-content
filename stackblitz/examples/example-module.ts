@@ -19,6 +19,7 @@ import {ButtonToggleOverviewExample} from './button-toggle-overview/button-toggl
 import {ButtonTypesExample} from './button-types/button-types-example';
 import {CardFancyExample} from './card-fancy/card-fancy-example';
 import {CardOverviewExample} from './card-overview/card-overview-example';
+import {CdkTableBasicFlexExample} from './cdk-table-basic-flex/cdk-table-basic-flex-example';
 import {CdkTableBasicExample} from './cdk-table-basic/cdk-table-basic-example';
 import {CdkTreeFlatExample} from './cdk-tree-flat/cdk-tree-flat-example';
 import {CdkTreeNestedExample} from './cdk-tree-nested/cdk-tree-nested-example';
@@ -127,13 +128,16 @@ import {SortOverviewExample} from './sort-overview/sort-overview-example';
 import {StepperEditableExample} from './stepper-editable/stepper-editable-example';
 import {StepperOptionalExample} from './stepper-optional/stepper-optional-example';
 import {StepperOverviewExample} from './stepper-overview/stepper-overview-example';
+import {TableBasicFlexExample} from './table-basic-flex/table-basic-flex-example';
 import {TableBasicExample} from './table-basic/table-basic-example';
+import {TableDynamicColumnsExample} from './table-dynamic-columns/table-dynamic-columns-example';
 import {TableFilteringExample} from './table-filtering/table-filtering-example';
 import {TableFooterRowExample} from './table-footer-row/table-footer-row-example';
 import {TableHttpExample} from './table-http/table-http-example';
 import {TableNativeOnlyExample} from './table-native-only/table-native-only-example';
 import {TableOverviewExample} from './table-overview/table-overview-example';
 import {TablePaginationExample} from './table-pagination/table-pagination-example';
+import {TableRowContextExample} from './table-row-context/table-row-context-example';
 import {TableSelectionExample} from './table-selection/table-selection-example';
 import {TableSortingExample} from './table-sorting/table-sorting-example';
 import {TabsOverviewExample} from './tabs-overview/tabs-overview-example';
@@ -219,6 +223,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'card-overview': {
     title: 'Basic cards',
     component: CardOverviewExample
+  },
+  'cdk-table-basic-flex': {
+    title: 'Basic use of `<cdk-table>` (uses display flex)',
+    component: CdkTableBasicFlexExample
   },
   'cdk-table-basic': {
     title: 'Basic CDK data-table',
@@ -665,9 +673,17 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Stepper overview',
     component: StepperOverviewExample
   },
+  'table-basic-flex': {
+    title: 'Basic use of `<mat-table>` (uses display flex)',
+    component: TableBasicFlexExample
+  },
   'table-basic': {
-    title: 'Basic table',
+    title: 'Basic use of `<table mat-table>`',
     component: TableBasicExample
+  },
+  'table-dynamic-columns': {
+    title: 'Table dynamically changing the columns displayed',
+    component: TableDynamicColumnsExample
   },
   'table-filtering': {
     title: 'Table with filtering',
@@ -692,6 +708,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'table-pagination': {
     title: 'Table with pagination',
     component: TablePaginationExample
+  },
+  'table-row-context': {
+    title: 'Table showing each row context properties.',
+    component: TableRowContextExample
   },
   'table-selection': {
     title: 'Table with selection',
@@ -786,6 +806,7 @@ export const EXAMPLE_LIST = [
   ButtonTypesExample,
   CardFancyExample,
   CardOverviewExample,
+  CdkTableBasicFlexExample,
   CdkTableBasicExample,
   CdkTreeFlatExample,
   CdkTreeNestedExample,
@@ -894,13 +915,16 @@ export const EXAMPLE_LIST = [
   StepperEditableExample,
   StepperOptionalExample,
   StepperOverviewExample,
+  TableBasicFlexExample,
   TableBasicExample,
+  TableDynamicColumnsExample,
   TableFilteringExample,
   TableFooterRowExample,
   TableHttpExample,
   TableNativeOnlyExample,
   TableOverviewExample,
   TablePaginationExample,
+  TableRowContextExample,
   TableSelectionExample,
   TableSortingExample,
   TabsOverviewExample,

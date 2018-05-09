@@ -19,6 +19,7 @@
 <span class="hljs-keyword">import</span> {ButtonTypesExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./button-types/button-types-example'</span>;
 <span class="hljs-keyword">import</span> {CardFancyExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./card-fancy/card-fancy-example'</span>;
 <span class="hljs-keyword">import</span> {CardOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./card-overview/card-overview-example'</span>;
+<span class="hljs-keyword">import</span> {CdkTableBasicFlexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-table-basic-flex/cdk-table-basic-flex-example'</span>;
 <span class="hljs-keyword">import</span> {CdkTableBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-table-basic/cdk-table-basic-example'</span>;
 <span class="hljs-keyword">import</span> {CdkTreeFlatExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-tree-flat/cdk-tree-flat-example'</span>;
 <span class="hljs-keyword">import</span> {CdkTreeNestedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-tree-nested/cdk-tree-nested-example'</span>;
@@ -127,13 +128,16 @@
 <span class="hljs-keyword">import</span> {StepperEditableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-editable/stepper-editable-example'</span>;
 <span class="hljs-keyword">import</span> {StepperOptionalExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-optional/stepper-optional-example'</span>;
 <span class="hljs-keyword">import</span> {StepperOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-overview/stepper-overview-example'</span>;
+<span class="hljs-keyword">import</span> {TableBasicFlexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-basic-flex/table-basic-flex-example'</span>;
 <span class="hljs-keyword">import</span> {TableBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-basic/table-basic-example'</span>;
+<span class="hljs-keyword">import</span> {TableDynamicColumnsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-dynamic-columns/table-dynamic-columns-example'</span>;
 <span class="hljs-keyword">import</span> {TableFilteringExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-filtering/table-filtering-example'</span>;
 <span class="hljs-keyword">import</span> {TableFooterRowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-footer-row/table-footer-row-example'</span>;
 <span class="hljs-keyword">import</span> {TableHttpExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-http/table-http-example'</span>;
 <span class="hljs-keyword">import</span> {TableNativeOnlyExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-native-only/table-native-only-example'</span>;
 <span class="hljs-keyword">import</span> {TableOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-overview/table-overview-example'</span>;
 <span class="hljs-keyword">import</span> {TablePaginationExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-pagination/table-pagination-example'</span>;
+<span class="hljs-keyword">import</span> {TableRowContextExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-row-context/table-row-context-example'</span>;
 <span class="hljs-keyword">import</span> {TableSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-selection/table-selection-example'</span>;
 <span class="hljs-keyword">import</span> {TableSortingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sorting/table-sorting-example'</span>;
 <span class="hljs-keyword">import</span> {TabsOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tabs-overview/tabs-overview-example'</span>;
@@ -219,6 +223,10 @@
   <span class="hljs-string">'card-overview'</span>: {
     title: <span class="hljs-string">'Basic cards'</span>,
     component: CardOverviewExample
+  },
+  <span class="hljs-string">'cdk-table-basic-flex'</span>: {
+    title: <span class="hljs-string">'Basic use of `&lt;cdk-table&gt;` (uses display flex)'</span>,
+    component: CdkTableBasicFlexExample
   },
   <span class="hljs-string">'cdk-table-basic'</span>: {
     title: <span class="hljs-string">'Basic CDK data-table'</span>,
@@ -665,9 +673,17 @@
     title: <span class="hljs-string">'Stepper overview'</span>,
     component: StepperOverviewExample
   },
+  <span class="hljs-string">'table-basic-flex'</span>: {
+    title: <span class="hljs-string">'Basic use of `&lt;mat-table&gt;` (uses display flex)'</span>,
+    component: TableBasicFlexExample
+  },
   <span class="hljs-string">'table-basic'</span>: {
-    title: <span class="hljs-string">'Basic table'</span>,
+    title: <span class="hljs-string">'Basic use of `&lt;table mat-table&gt;`'</span>,
     component: TableBasicExample
+  },
+  <span class="hljs-string">'table-dynamic-columns'</span>: {
+    title: <span class="hljs-string">'Table dynamically changing the columns displayed'</span>,
+    component: TableDynamicColumnsExample
   },
   <span class="hljs-string">'table-filtering'</span>: {
     title: <span class="hljs-string">'Table with filtering'</span>,
@@ -692,6 +708,10 @@
   <span class="hljs-string">'table-pagination'</span>: {
     title: <span class="hljs-string">'Table with pagination'</span>,
     component: TablePaginationExample
+  },
+  <span class="hljs-string">'table-row-context'</span>: {
+    title: <span class="hljs-string">'Table showing each row context properties.'</span>,
+    component: TableRowContextExample
   },
   <span class="hljs-string">'table-selection'</span>: {
     title: <span class="hljs-string">'Table with selection'</span>,
@@ -786,6 +806,7 @@
   ButtonTypesExample,
   CardFancyExample,
   CardOverviewExample,
+  CdkTableBasicFlexExample,
   CdkTableBasicExample,
   CdkTreeFlatExample,
   CdkTreeNestedExample,
@@ -894,13 +915,16 @@
   StepperEditableExample,
   StepperOptionalExample,
   StepperOverviewExample,
+  TableBasicFlexExample,
   TableBasicExample,
+  TableDynamicColumnsExample,
   TableFilteringExample,
   TableFooterRowExample,
   TableHttpExample,
   TableNativeOnlyExample,
   TableOverviewExample,
   TablePaginationExample,
+  TableRowContextExample,
   TableSelectionExample,
   TableSortingExample,
   TabsOverviewExample,

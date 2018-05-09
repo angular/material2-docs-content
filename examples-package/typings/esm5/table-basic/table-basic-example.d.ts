@@ -1,11 +1,11 @@
 /**
- * @title Basic table
+ * @title Basic use of `<table mat-table>`
  */
 export declare class TableBasicExample {
     displayedColumns: string[];
-    dataSource: Element[];
+    dataSource: PeriodicElement[];
 }
-export interface Element {
+export interface PeriodicElement {
     name: string;
     position: number;
     weight: number;

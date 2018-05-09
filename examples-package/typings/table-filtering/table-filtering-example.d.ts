@@ -4,10 +4,10 @@ import { MatTableDataSource } from '@angular/material';
  */
 export declare class TableFilteringExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<Element>;
+    dataSource: MatTableDataSource<PeriodicElement>;
     applyFilter(filterValue: string): void;
 }
-export interface Element {
+export interface PeriodicElement {
     name: string;
     position: number;
     weight: number;

@@ -5,26 +5,13 @@ import { BehaviorSubject, Observable } from 'rxjs';
  */
 export declare class CdkTableBasicExample {
     displayedColumns: string[];
-    exampleDatabase: ExampleDatabase;
-    dataSource: ExampleDataSource | null;
-    ngOnInit(): void;
+    dataSource: ExampleDataSource;
 }
-export interface UserData {
-    id: string;
+export interface PeriodicElement {
     name: string;
-    progress: string;
-    color: string;
-}
-/** An example database that the data source uses to retrieve data for the table. */
-export declare class ExampleDatabase {
-    /** Stream that emits whenever the data has been modified. */
-    dataChange: BehaviorSubject<UserData[]>;
-    readonly data: UserData[];
-    constructor();
-    /** Adds a new user to the database. */
-    addUser(): void;
-    /** Builds and returns a new User. */
-    private createNewUser();
+    position: number;
+    weight: number;
+    symbol: string;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
@@ -33,10 +20,10 @@ export declare class ExampleDatabase {
  * the underlying data. Instead, it only needs to take the data and send the table exactly what
  * should be rendered.
  */
-export declare class ExampleDataSource extends DataSource<any> {
-    private _exampleDatabase;
-    constructor(_exampleDatabase: ExampleDatabase);
+export declare class ExampleDataSource extends DataSource<PeriodicElement> {
+    /** Stream of data that is provided to the table. */
+    data: BehaviorSubject<PeriodicElement[]>;
     /** Connect function called by the table to retrieve one stream containing the data to render. */
-    connect(): Observable<UserData[]>;
+    connect(): Observable<PeriodicElement[]>;
     disconnect(): void;
 }

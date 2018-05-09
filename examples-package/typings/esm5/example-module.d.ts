@@ -18,7 +18,6 @@ import { SnackBarOverviewExample } from './snack-bar-overview/snack-bar-overview
 import { StepperEditableExample } from './stepper-editable/stepper-editable-example';
 import { StepperOptionalExample } from './stepper-optional/stepper-optional-example';
 import { StepperOverviewExample } from './stepper-overview/stepper-overview-example';
-import { TableHttpExample } from './table-http/table-http-example';
 import { TextFieldAutofillMonitorExample } from './text-field-autofill-monitor/text-field-autofill-monitor-example';
 import { TextFieldAutosizeTextareaExample } from './text-field-autosize-textarea/text-field-autosize-textarea-example';
 import { TreeChecklistExample } from './tree-checklist/tree-checklist-example';
@@ -35,6 +34,6 @@ export interface LiveExample {
 export declare const EXAMPLE_COMPONENTS: {
     [key: string]: LiveExample;
 };
-export declare const EXAMPLE_LIST: (typeof AutocompleteOptgroupExample | typeof BottomSheetOverviewExample | typeof BottomSheetOverviewExampleSheet | typeof CdkTreeFlatExample | typeof CdkTreeNestedExample | typeof ExampleHeader | typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof FocusMonitorDirectivesExample | typeof FocusMonitorFocusViaExample | typeof FocusMonitorOverviewExample | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperEditableExample | typeof StepperOptionalExample | typeof StepperOverviewExample | typeof TableHttpExample | typeof TextFieldAutofillMonitorExample | typeof TextFieldAutosizeTextareaExample | typeof TreeChecklistExample | typeof TreeDynamicExample | typeof TreeFlatOverviewExample | typeof TreeLoadmoreExample | typeof TreeNestedOverviewExample)[];
+export declare const EXAMPLE_LIST: (typeof AutocompleteOptgroupExample | typeof BottomSheetOverviewExample | typeof BottomSheetOverviewExampleSheet | typeof CdkTreeFlatExample | typeof CdkTreeNestedExample | typeof ExampleHeader | typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogOverviewExampleDialog | typeof FocusMonitorDirectivesExample | typeof FocusMonitorFocusViaExample | typeof FocusMonitorOverviewExample | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarOverviewExample | typeof StepperEditableExample | typeof StepperOptionalExample | typeof StepperOverviewExample | typeof TextFieldAutofillMonitorExample | typeof TextFieldAutosizeTextareaExample | typeof TreeChecklistExample | typeof TreeDynamicExample | typeof TreeFlatOverviewExample | typeof TreeLoadmoreExample | typeof TreeNestedOverviewExample)[];
 export declare class ExampleModule {
 }

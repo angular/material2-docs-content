@@ -4,11 +4,11 @@ import { MatTableDataSource, MatSort } from '@angular/material';
  */
 export declare class TableSortingExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<Element>;
+    dataSource: MatTableDataSource<PeriodicElement>;
     sort: MatSort;
     ngOnInit(): void;
 }
-export interface Element {
+export interface PeriodicElement {
     name: string;
     position: number;
     weight: number;

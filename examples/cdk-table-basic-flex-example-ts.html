@@ -1,0 +1,55 @@
+<span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+
+<span class="hljs-comment">/**
+ * @title Basic use of `&lt;cdk-table&gt;` (uses display flex)
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-table-basic-flex-example'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-table-basic-flex-example.css'</span>],
+  templateUrl: <span class="hljs-string">'cdk-table-basic-flex-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkTableBasicFlexExample {
+  displayedColumns = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
+  dataSource = <span class="hljs-keyword">new</span> ExampleDataSource();
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+  name: <span class="hljs-built_in">string</span>;
+  position: <span class="hljs-built_in">number</span>;
+  weight: <span class="hljs-built_in">number</span>;
+  symbol: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+  {position: <span class="hljs-number">1</span>, name: <span class="hljs-string">'Hydrogen'</span>, weight: <span class="hljs-number">1.0079</span>, symbol: <span class="hljs-string">'H'</span>},
+  {position: <span class="hljs-number">2</span>, name: <span class="hljs-string">'Helium'</span>, weight: <span class="hljs-number">4.0026</span>, symbol: <span class="hljs-string">'He'</span>},
+  {position: <span class="hljs-number">3</span>, name: <span class="hljs-string">'Lithium'</span>, weight: <span class="hljs-number">6.941</span>, symbol: <span class="hljs-string">'Li'</span>},
+  {position: <span class="hljs-number">4</span>, name: <span class="hljs-string">'Beryllium'</span>, weight: <span class="hljs-number">9.0122</span>, symbol: <span class="hljs-string">'Be'</span>},
+  {position: <span class="hljs-number">5</span>, name: <span class="hljs-string">'Boron'</span>, weight: <span class="hljs-number">10.811</span>, symbol: <span class="hljs-string">'B'</span>},
+  {position: <span class="hljs-number">6</span>, name: <span class="hljs-string">'Carbon'</span>, weight: <span class="hljs-number">12.0107</span>, symbol: <span class="hljs-string">'C'</span>},
+  {position: <span class="hljs-number">7</span>, name: <span class="hljs-string">'Nitrogen'</span>, weight: <span class="hljs-number">14.0067</span>, symbol: <span class="hljs-string">'N'</span>},
+  {position: <span class="hljs-number">8</span>, name: <span class="hljs-string">'Oxygen'</span>, weight: <span class="hljs-number">15.9994</span>, symbol: <span class="hljs-string">'O'</span>},
+  {position: <span class="hljs-number">9</span>, name: <span class="hljs-string">'Fluorine'</span>, weight: <span class="hljs-number">18.9984</span>, symbol: <span class="hljs-string">'F'</span>},
+  {position: <span class="hljs-number">10</span>, name: <span class="hljs-string">'Neon'</span>, weight: <span class="hljs-number">20.1797</span>, symbol: <span class="hljs-string">'Ne'</span>},
+];
+
+<span class="hljs-comment">/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDataSource <span class="hljs-keyword">extends</span> DataSource&lt;PeriodicElement&gt; {
+  <span class="hljs-comment">/** Stream of data that is provided to the table. */</span>
+  data: BehaviorSubject&lt;PeriodicElement[]&gt; = <span class="hljs-keyword">new</span> BehaviorSubject&lt;PeriodicElement[]&gt;(ELEMENT_DATA);
+
+  <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
+  connect(): Observable&lt;PeriodicElement[]&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.data;
+  }
+
+  disconnect() {}
+}

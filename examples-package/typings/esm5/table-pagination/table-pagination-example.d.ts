@@ -4,11 +4,11 @@ import { MatPaginator, MatTableDataSource } from '@angular/material';
  */
 export declare class TablePaginationExample {
     displayedColumns: string[];
-    dataSource: MatTableDataSource<Element>;
+    dataSource: MatTableDataSource<PeriodicElement>;
     paginator: MatPaginator;
     ngOnInit(): void;
 }
-export interface Element {
+export interface PeriodicElement {
     name: string;
     position: number;
     weight: number;
