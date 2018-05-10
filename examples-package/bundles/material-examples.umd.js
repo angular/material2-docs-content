@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
-}(this, (function (exports,core,table,tree,material,forms,operators,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,a11y,coercion,platformBrowser,sidenav,layout,http,textField,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.Rx.operators,global.ng.cdk.collections,global.Rx,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
+}(this, (function (exports,core,scrolling,table,tree,material,forms,operators,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,a11y,coercion,platformBrowser,sidenav,layout,http,textField,common) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -85,7 +85,8 @@ var ExampleMaterialModule = /** @class */ (function () {
                         material.MatTabsModule,
                         material.MatToolbarModule,
                         material.MatTooltipModule,
-                        material.MatTreeModule
+                        material.MatTreeModule,
+                        scrolling.ScrollDispatchModule,
                     ],
                     exports: [
                         table.CdkTableModule,
@@ -124,7 +125,8 @@ var ExampleMaterialModule = /** @class */ (function () {
                         material.MatTabsModule,
                         material.MatToolbarModule,
                         material.MatTooltipModule,
-                        material.MatTreeModule
+                        material.MatTreeModule,
+                        scrolling.ScrollDispatchModule,
                     ]
                 },] },
     ];
@@ -5457,19 +5459,87 @@ var ToolbarOverviewExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
+ */
+var TooltipAutoHideExample = /** @class */ (function () {
+    function TooltipAutoHideExample() {
+        this.positionOptions = ['below', 'above', 'left', 'right'];
+        this.position = new forms.FormControl(this.positionOptions[0]);
+    }
+    TooltipAutoHideExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tooltip-auto-hide-example',
+                    template: "<mat-form-field><mat-select placeholder=\"Tooltip position\" [formControl]=\"position\"><mat-option *ngFor=\"let positionOption of positionOptions\" [value]=\"positionOption\">{{positionOption}}</mat-option></mat-select></mat-form-field><div class=\"example-container\" cdk-scrollable><button mat-raised-button #tooltip=\"matTooltip\" matTooltip=\"Info about the action\" [matTooltipPosition]=\"position.value\" matTooltipHideDelay=\"100000\" aria-label=\"Button that displays a tooltip that hides when scrolled out of the container\" class=\"example-button\">Action</button></div>",
+                    styles: [".example-button { display: block; width: 48px; margin: 80px auto 400px; } .example-container { height: 200px; overflow: auto; border: 1px solid #ccc; } "],
+                },] },
+    ];
+    return TooltipAutoHideExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tooltip that can have a custom class applied.
+ */
+var TooltipCustomClassExample = /** @class */ (function () {
+    function TooltipCustomClassExample() {
+    }
+    TooltipCustomClassExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tooltip-custom-class-example',
+                    template: "<button mat-raised-button matTooltip=\"Info about the action\" matTooltipClass=\"example-tooltip-red\" aria-label=\"Button that shows a red tooltip\" class=\"example-button\">Red-tooltip Action</button>",
+                    styles: [".example-button { margin-top: 16px; } .example-tooltip-red { background: #b71c1c; } "],
+                    // Need to remove view encapsulation so that the custom tooltip style defined in
+                    // `tooltip-custom-class-example.css` will not be scoped to this component's view.
+                    encapsulation: core.ViewEncapsulation.None,
+                },] },
+    ];
+    return TooltipCustomClassExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Tooltip with a show and hide delay
  */
 var TooltipDelayExample = /** @class */ (function () {
     function TooltipDelayExample() {
+        this.showDelay = new forms.FormControl(1000);
+        this.hideDelay = new forms.FormControl(2000);
     }
     TooltipDelayExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'tooltip-delay-example',
-                    template: "<button mat-raised-button matTooltip=\"Tooltip!\" matTooltipShowDelay=\"1000\">My tooltip waits one second to show</button> <button mat-raised-button matTooltip=\"Tooltip!\" matTooltipHideDelay=\"2000\">My tooltip waits two seconds to hide</button>",
-                    styles: ["button { margin: 8px; } "],
+                    template: "<mat-form-field class=\"example-user-input\"><input matInput placeholder=\"Show delay (milliseconds)\" type=\"number\" aria-label=\"Adds a delay between hovering over the button and displaying the tooltip\" [formControl]=\"showDelay\"></mat-form-field><mat-form-field class=\"example-user-input\"><input matInput placeholder=\"Hide delay (milliseconds)\" type=\"number\" aria-label=\"Adds a delay between hovering away from the button and hiding the tooltip\" [formControl]=\"hideDelay\"></mat-form-field><button mat-raised-button matTooltip=\"Info about the action\" [matTooltipShowDelay]=\"showDelay.value\" [matTooltipHideDelay]=\"hideDelay.value\" aria-label=\"Button that displays a tooltip with a customized delay in showing and hiding\">Action</button>",
+                    styles: [".example-user-input { display: block; width: 150px; } "],
                 },] },
     ];
     return TooltipDelayExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tooltip that can be disabled
+ */
+var TooltipDisabledExample = /** @class */ (function () {
+    function TooltipDisabledExample() {
+        this.disabled = new forms.FormControl(false);
+    }
+    TooltipDisabledExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tooltip-disabled-example',
+                    template: "<button mat-raised-button matTooltip=\"Info about the action\" [matTooltipDisabled]=\"disabled.value\" aria-label=\"Button that displays a tooltip that can be programatically disabled\">Action</button><mat-checkbox [formControl]=\"disabled\" class=\"example-disabled-checkbox\">Tooltip disabled</mat-checkbox>",
+                    styles: [".example-disabled-checkbox { margin-left: 8px; } "],
+                },] },
+    ];
+    return TooltipDisabledExample;
 }());
 
 /**
@@ -5485,11 +5555,32 @@ var TooltipManualExample = /** @class */ (function () {
     TooltipManualExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'tooltip-manual-example',
-                    template: "<button mat-raised-button (click)=\"tooltip.show()\">Show tooltip</button> <span matTooltip=\"This is the tooltip message\" #tooltip=\"matTooltip\">I have a tooltip</span>",
-                    styles: ["/** No CSS for this example */ "],
+                    template: "<div><span>Mouse over to </span><button mat-button (mouseenter)=\"tooltip.show()\" aria-label=\"Button that progamatically shows a tooltip on another button\" class=\"example-action-button\">show</button> <button mat-button (mouseenter)=\"tooltip.hide()\" aria-label=\"Button that progamatically hides a tooltip on another button\" class=\"example-action-button\">hide</button> <button mat-button (mouseenter)=\"tooltip.toggle()\" aria-label=\"Button that progamatically toggles a tooltip on another button to show/hide\" class=\"example-action-button\">toggle show/hide</button></div><button mat-raised-button #tooltip=\"matTooltip\" matTooltip=\"Info about the action\" matTooltipPosition=\"right\" aria-tooltip=\"Button that displays and hides a tooltip triggered by other buttons\">Action</button>",
+                    styles: [".example-action-button { margin-top: 16px; } "],
                 },] },
     ];
     return TooltipManualExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tooltip with a changing message
+ */
+var TooltipMessageExample = /** @class */ (function () {
+    function TooltipMessageExample() {
+        this.message = new forms.FormControl('Info about the action');
+    }
+    TooltipMessageExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tooltip-message-example',
+                    template: "<mat-form-field class=\"example-user-input\"><input matInput placeholder=\"Tooltip message\" [formControl]=\"message\"></mat-form-field><button mat-raised-button [matTooltip]=\"message.value\" aria-label=\"Button that displays a tooltip with a custom message\">Action</button>",
+                    styles: [".example-user-input { margin-right: 8px; } "],
+                },] },
+    ];
+    return TooltipMessageExample;
 }());
 
 /**
@@ -5513,7 +5604,7 @@ var TooltipModifiedDefaultsExample = /** @class */ (function () {
     TooltipModifiedDefaultsExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'tooltip-modified-defaults-example',
-                    template: "<button mat-raised-button matTooltip=\"By default, I delay\">Button with delay-default tooltip</button>",
+                    template: "<button mat-raised-button matTooltip=\"By default, I delay\" aria-label=\"Button that displays a tooltip that has custom delays through a default config\">Button with delay-default tooltip</button>",
                     styles: ["/** No CSS for this example */ "],
                     providers: [
                         { provide: material.MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
@@ -5536,7 +5627,7 @@ var TooltipOverviewExample = /** @class */ (function () {
     TooltipOverviewExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'tooltip-overview-example',
-                    template: "<span matTooltip=\"Tooltip!\">I have a tooltip</span>",
+                    template: "<button mat-raised-button matTooltip=\"Info about the action\" aria-label=\"Button that displays a tooltip when focused or hovered over\">Action</button>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
@@ -5548,17 +5639,18 @@ var TooltipOverviewExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Tooltip with custom position
+ * \@title Tooltip with a custom position
  */
 var TooltipPositionExample = /** @class */ (function () {
     function TooltipPositionExample() {
-        this.position = 'before';
+        this.positionOptions = ['after', 'before', 'above', 'below', 'left', 'right'];
+        this.position = new forms.FormControl(this.positionOptions[0]);
     }
     TooltipPositionExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'tooltip-position-example',
-                    template: "<div class=\"example-tooltip-host\" matTooltip=\"Tooltip!\" [matTooltipPosition]=\"position\"><span>Show tooltip</span><mat-form-field><mat-select class=\"example-select\" [(ngModel)]=\"position\"><mat-option value=\"before\">Before</mat-option><mat-option value=\"after\">After</mat-option><mat-option value=\"above\">Above</mat-option><mat-option value=\"below\">Below</mat-option><mat-option value=\"left\">Left</mat-option><mat-option value=\"right\">Right</mat-option></mat-select></mat-form-field></div>",
-                    styles: [".example-tooltip-host { display: inline-flex; align-items: center; margin: 50px; } .example-select { margin: 0 10px; } "],
+                    template: "<mat-form-field class=\"example-user-input\"><mat-select placeholder=\"Tooltip position\" [formControl]=\"position\"><mat-option *ngFor=\"let positionOption of positionOptions\" [value]=\"positionOption\">{{ positionOption }}</mat-option></mat-select></mat-form-field><button mat-raised-button matTooltip=\"Info about the action\" [matTooltipPosition]=\"position.value\" aria-label=\"Button that displays a tooltip in various positions\">Action</button>",
+                    styles: [".example-user-input { margin-right: 8px; } "],
                 },] },
     ];
     return TooltipPositionExample;
@@ -7165,13 +7257,29 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Basic toolbar',
         component: ToolbarOverviewExample
     },
+    'tooltip-auto-hide': {
+        title: 'Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.',
+        component: TooltipAutoHideExample
+    },
+    'tooltip-custom-class': {
+        title: 'Tooltip that can have a custom class applied.',
+        component: TooltipCustomClassExample
+    },
     'tooltip-delay': {
         title: 'Tooltip with a show and hide delay',
         component: TooltipDelayExample
     },
+    'tooltip-disabled': {
+        title: 'Tooltip that can be disabled',
+        component: TooltipDisabledExample
+    },
     'tooltip-manual': {
         title: 'Tooltip that can be manually shown/hidden.',
         component: TooltipManualExample
+    },
+    'tooltip-message': {
+        title: 'Tooltip with a changing message',
+        component: TooltipMessageExample
     },
     'tooltip-modified-defaults': {
         title: 'Tooltip with a show and hide delay',
@@ -7182,7 +7290,7 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         component: TooltipOverviewExample
     },
     'tooltip-position': {
-        title: 'Tooltip with custom position',
+        title: 'Tooltip with a custom position',
         component: TooltipPositionExample
     },
     'tree-checklist': {
@@ -7349,8 +7457,12 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TextFieldAutosizeTextareaExample,
     ToolbarMultirowExample,
     ToolbarOverviewExample,
+    TooltipAutoHideExample,
+    TooltipCustomClassExample,
     TooltipDelayExample,
+    TooltipDisabledExample,
     TooltipManualExample,
+    TooltipMessageExample,
     TooltipModifiedDefaultsExample,
     TooltipOverviewExample,
     TooltipPositionExample,
@@ -7503,7 +7615,7 @@ exports.ɵcy = InputOverviewExample;
 exports.ɵcz = InputPrefixSuffixExample;
 exports.ɵda = ListSectionsExample;
 exports.ɵdb = ListSelectionExample;
-exports.ɵgh = ExampleMaterialModule;
+exports.ɵgl = ExampleMaterialModule;
 exports.ɵdc = MenuIconsExample;
 exports.ɵdd = MenuOverviewExample;
 exports.ɵde = NestedMenuExample;
@@ -7571,22 +7683,26 @@ exports.ɵfn = TextFieldAutofillDirectiveExample;
 exports.ɵfo = TextFieldAutofillMonitorExample;
 exports.ɵfp = TextFieldAutosizeTextareaExample;
 exports.ɵfq = ToolbarOverviewExample;
-exports.ɵfr = TooltipDelayExample;
-exports.ɵfs = TooltipManualExample;
-exports.ɵfu = TooltipModifiedDefaultsExample;
-exports.ɵft = myCustomTooltipDefaults;
-exports.ɵfv = TooltipOverviewExample;
-exports.ɵfw = TooltipPositionExample;
-exports.ɵfx = ChecklistDatabase;
-exports.ɵfy = TreeChecklistExample;
-exports.ɵfz = DynamicDatabase;
-exports.ɵga = TreeDynamicExample;
-exports.ɵgb = FileDatabase$2;
-exports.ɵgc = TreeFlatOverviewExample;
-exports.ɵgd = LoadmoreDatabase;
-exports.ɵge = TreeLoadmoreExample;
-exports.ɵgf = FileDatabase$3;
-exports.ɵgg = TreeNestedOverviewExample;
+exports.ɵfr = TooltipAutoHideExample;
+exports.ɵfs = TooltipCustomClassExample;
+exports.ɵft = TooltipDelayExample;
+exports.ɵfu = TooltipDisabledExample;
+exports.ɵfv = TooltipManualExample;
+exports.ɵfw = TooltipMessageExample;
+exports.ɵfy = TooltipModifiedDefaultsExample;
+exports.ɵfx = myCustomTooltipDefaults;
+exports.ɵfz = TooltipOverviewExample;
+exports.ɵga = TooltipPositionExample;
+exports.ɵgb = ChecklistDatabase;
+exports.ɵgc = TreeChecklistExample;
+exports.ɵgd = DynamicDatabase;
+exports.ɵge = TreeDynamicExample;
+exports.ɵgf = FileDatabase$2;
+exports.ɵgg = TreeFlatOverviewExample;
+exports.ɵgh = LoadmoreDatabase;
+exports.ɵgi = TreeLoadmoreExample;
+exports.ɵgj = FileDatabase$3;
+exports.ɵgk = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -147,8 +147,12 @@
 <span class="hljs-keyword">import</span> {TextFieldAutosizeTextareaExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./text-field-autosize-textarea/text-field-autosize-textarea-example'</span>;
 <span class="hljs-keyword">import</span> {ToolbarMultirowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./toolbar-multirow/toolbar-multirow-example'</span>;
 <span class="hljs-keyword">import</span> {ToolbarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./toolbar-overview/toolbar-overview-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipAutoHideExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-auto-hide/tooltip-auto-hide-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipCustomClassExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-custom-class/tooltip-custom-class-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipDelayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-delay/tooltip-delay-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipDisabledExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-disabled/tooltip-disabled-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipManualExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-manual/tooltip-manual-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipMessageExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-message/tooltip-message-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipModifiedDefaultsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-modified-defaults/tooltip-modified-defaults-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-overview/tooltip-overview-example'</span>;
 <span class="hljs-keyword">import</span> {TooltipPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-position/tooltip-position-example'</span>;
@@ -749,13 +753,29 @@
     title: <span class="hljs-string">'Basic toolbar'</span>,
     component: ToolbarOverviewExample
   },
+  <span class="hljs-string">'tooltip-auto-hide'</span>: {
+    title: <span class="hljs-string">'Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.'</span>,
+    component: TooltipAutoHideExample
+  },
+  <span class="hljs-string">'tooltip-custom-class'</span>: {
+    title: <span class="hljs-string">'Tooltip that can have a custom class applied.'</span>,
+    component: TooltipCustomClassExample
+  },
   <span class="hljs-string">'tooltip-delay'</span>: {
     title: <span class="hljs-string">'Tooltip with a show and hide delay'</span>,
     component: TooltipDelayExample
   },
+  <span class="hljs-string">'tooltip-disabled'</span>: {
+    title: <span class="hljs-string">'Tooltip that can be disabled'</span>,
+    component: TooltipDisabledExample
+  },
   <span class="hljs-string">'tooltip-manual'</span>: {
     title: <span class="hljs-string">'Tooltip that can be manually shown/hidden.'</span>,
     component: TooltipManualExample
+  },
+  <span class="hljs-string">'tooltip-message'</span>: {
+    title: <span class="hljs-string">'Tooltip with a changing message'</span>,
+    component: TooltipMessageExample
   },
   <span class="hljs-string">'tooltip-modified-defaults'</span>: {
     title: <span class="hljs-string">'Tooltip with a show and hide delay'</span>,
@@ -766,7 +786,7 @@
     component: TooltipOverviewExample
   },
   <span class="hljs-string">'tooltip-position'</span>: {
-    title: <span class="hljs-string">'Tooltip with custom position'</span>,
+    title: <span class="hljs-string">'Tooltip with a custom position'</span>,
     component: TooltipPositionExample
   },
   <span class="hljs-string">'tree-checklist'</span>: {
@@ -934,8 +954,12 @@
   TextFieldAutosizeTextareaExample,
   ToolbarMultirowExample,
   ToolbarOverviewExample,
+  TooltipAutoHideExample,
+  TooltipCustomClassExample,
   TooltipDelayExample,
+  TooltipDisabledExample,
   TooltipManualExample,
+  TooltipMessageExample,
   TooltipModifiedDefaultsExample,
   TooltipOverviewExample,
   TooltipPositionExample,

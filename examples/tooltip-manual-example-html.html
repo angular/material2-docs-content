@@ -1,5 +1,28 @@
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"tooltip.show()"</span>&gt;</span> Show tooltip <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span> Mouse over to <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span>
+          (<span class="hljs-attr">mouseenter</span>)=<span class="hljs-string">"tooltip.show()"</span>
+          <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Button that progamatically shows a tooltip on another button"</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"example-action-button"</span>&gt;</span>
+    show
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span>
+          (<span class="hljs-attr">mouseenter</span>)=<span class="hljs-string">"tooltip.hide()"</span>
+          <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Button that progamatically hides a tooltip on another button"</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"example-action-button"</span>&gt;</span>
+    hide
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span>
+          (<span class="hljs-attr">mouseenter</span>)=<span class="hljs-string">"tooltip.toggle()"</span>
+          <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Button that progamatically toggles a tooltip on another button to show/hide"</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"example-action-button"</span>&gt;</span>
+    toggle show/hide
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">matTooltip</span>=<span class="hljs-string">"This is the tooltip message"</span> #<span class="hljs-attr">tooltip</span>=<span class="hljs-string">"matTooltip"</span>&gt;</span>
-  I have a tooltip
-<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> #<span class="hljs-attr">tooltip</span>=<span class="hljs-string">"matTooltip"</span>
+        <span class="hljs-attr">matTooltip</span>=<span class="hljs-string">"Info about the action"</span>
+        <span class="hljs-attr">matTooltipPosition</span>=<span class="hljs-string">"right"</span>
+        <span class="hljs-attr">aria-tooltip</span>=<span class="hljs-string">"Button that displays and hides a tooltip triggered by other buttons"</span>&gt;</span>
+  Action
+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>

@@ -1,0 +1,14 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/**
+ * @title Tooltip with a changing message
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tooltip-message-example'</span>,
+  templateUrl: <span class="hljs-string">'tooltip-message-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'tooltip-message-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TooltipMessageExample {
+  message = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">'Info about the action'</span>);
+}

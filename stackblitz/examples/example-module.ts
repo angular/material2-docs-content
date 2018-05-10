@@ -147,8 +147,12 @@ import {TextFieldAutofillMonitorExample} from './text-field-autofill-monitor/tex
 import {TextFieldAutosizeTextareaExample} from './text-field-autosize-textarea/text-field-autosize-textarea-example';
 import {ToolbarMultirowExample} from './toolbar-multirow/toolbar-multirow-example';
 import {ToolbarOverviewExample} from './toolbar-overview/toolbar-overview-example';
+import {TooltipAutoHideExample} from './tooltip-auto-hide/tooltip-auto-hide-example';
+import {TooltipCustomClassExample} from './tooltip-custom-class/tooltip-custom-class-example';
 import {TooltipDelayExample} from './tooltip-delay/tooltip-delay-example';
+import {TooltipDisabledExample} from './tooltip-disabled/tooltip-disabled-example';
 import {TooltipManualExample} from './tooltip-manual/tooltip-manual-example';
+import {TooltipMessageExample} from './tooltip-message/tooltip-message-example';
 import {TooltipModifiedDefaultsExample} from './tooltip-modified-defaults/tooltip-modified-defaults-example';
 import {TooltipOverviewExample} from './tooltip-overview/tooltip-overview-example';
 import {TooltipPositionExample} from './tooltip-position/tooltip-position-example';
@@ -749,13 +753,29 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Basic toolbar',
     component: ToolbarOverviewExample
   },
+  'tooltip-auto-hide': {
+    title: 'Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.',
+    component: TooltipAutoHideExample
+  },
+  'tooltip-custom-class': {
+    title: 'Tooltip that can have a custom class applied.',
+    component: TooltipCustomClassExample
+  },
   'tooltip-delay': {
     title: 'Tooltip with a show and hide delay',
     component: TooltipDelayExample
   },
+  'tooltip-disabled': {
+    title: 'Tooltip that can be disabled',
+    component: TooltipDisabledExample
+  },
   'tooltip-manual': {
     title: 'Tooltip that can be manually shown/hidden.',
     component: TooltipManualExample
+  },
+  'tooltip-message': {
+    title: 'Tooltip with a changing message',
+    component: TooltipMessageExample
   },
   'tooltip-modified-defaults': {
     title: 'Tooltip with a show and hide delay',
@@ -766,7 +786,7 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     component: TooltipOverviewExample
   },
   'tooltip-position': {
-    title: 'Tooltip with custom position',
+    title: 'Tooltip with a custom position',
     component: TooltipPositionExample
   },
   'tree-checklist': {
@@ -934,8 +954,12 @@ export const EXAMPLE_LIST = [
   TextFieldAutosizeTextareaExample,
   ToolbarMultirowExample,
   ToolbarOverviewExample,
+  TooltipAutoHideExample,
+  TooltipCustomClassExample,
   TooltipDelayExample,
+  TooltipDisabledExample,
   TooltipManualExample,
+  TooltipMessageExample,
   TooltipModifiedDefaultsExample,
   TooltipOverviewExample,
   TooltipPositionExample,

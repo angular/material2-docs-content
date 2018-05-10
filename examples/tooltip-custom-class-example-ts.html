@@ -1,0 +1,14 @@
+<span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/**
+ * @title Tooltip that can have a custom class applied.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tooltip-custom-class-example'</span>,
+  templateUrl: <span class="hljs-string">'tooltip-custom-class-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'tooltip-custom-class-example.css'</span>],
+  <span class="hljs-comment">// Need to remove view encapsulation so that the custom tooltip style defined in</span>
+  <span class="hljs-comment">// `tooltip-custom-class-example.css` will not be scoped to this component's view.</span>
+  encapsulation: ViewEncapsulation.None,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TooltipCustomClassExample { }

@@ -1,4 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
 <span class="hljs-comment">/**
  * @title Tooltip with a show and hide delay
@@ -8,4 +9,7 @@
   templateUrl: <span class="hljs-string">'tooltip-delay-example.html'</span>,
   styleUrls: [<span class="hljs-string">'tooltip-delay-example.css'</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TooltipDelayExample {}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TooltipDelayExample {
+  showDelay = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-number">1000</span>);
+  hideDelay = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-number">2000</span>);
+}

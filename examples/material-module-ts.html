@@ -1,5 +1,6 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
+<span class="hljs-keyword">import</span> {ScrollDispatchModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/scrolling'</span>;
 <span class="hljs-keyword">import</span> {CdkTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/table'</span>;
 <span class="hljs-keyword">import</span> {CdkTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
 <span class="hljs-keyword">import</span> {
@@ -50,7 +51,8 @@
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    ScrollDispatchModule,
   ],
   exports: [
     CdkTableModule,
@@ -89,7 +91,8 @@
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    ScrollDispatchModule,
   ]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleMaterialModule {}

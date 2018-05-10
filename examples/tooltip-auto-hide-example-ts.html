@@ -1,0 +1,16 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {TooltipPosition} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-comment">/**
+ * @title Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tooltip-auto-hide-example'</span>,
+  templateUrl: <span class="hljs-string">'tooltip-auto-hide-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'tooltip-auto-hide-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TooltipAutoHideExample {
+  positionOptions: TooltipPosition[] = [<span class="hljs-string">'below'</span>, <span class="hljs-string">'above'</span>, <span class="hljs-string">'left'</span>, <span class="hljs-string">'right'</span>];
+  position = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">this</span>.positionOptions[<span class="hljs-number">0</span>]);
+}
