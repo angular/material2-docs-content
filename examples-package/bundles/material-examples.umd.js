@@ -4969,6 +4969,47 @@ ExampleHttpDao = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Table with multiple header and footer rows
+ */
+var TableMultipleHeaderFooterExample = /** @class */ (function () {
+    function TableMultipleHeaderFooterExample() {
+        this.displayedColumns = ['item', 'cost'];
+        this.transactions = [
+            { item: 'Beach ball', cost: 4 },
+            { item: 'Towel', cost: 5 },
+            { item: 'Frisbee', cost: 2 },
+            { item: 'Sunscreen', cost: 4 },
+            { item: 'Cooler', cost: 25 },
+            { item: 'Swim suit', cost: 15 },
+        ];
+    }
+    /** Gets the total cost of all transactions. */
+    /**
+     * Gets the total cost of all transactions.
+     * @return {?}
+     */
+    TableMultipleHeaderFooterExample.prototype.getTotalCost = /**
+     * Gets the total cost of all transactions.
+     * @return {?}
+     */
+    function () {
+        return this.transactions.map(function (t) { return t.cost; }).reduce(function (acc, value) { return acc + value; }, 0);
+    };
+    TableMultipleHeaderFooterExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'table-multiple-header-footer-example',
+                    styles: ["table { width: 100%; } .example-first-header-row th { border-bottom: none; } .example-second-header-row { font-style: italic; } .example-first-footer-row { font-weight: bold; } .example-second-footer-row td { color: #900000; } "],
+                    template: "<table mat-table [dataSource]=\"transactions\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"item\"><th mat-header-cell *matHeaderCellDef>Item</th><td mat-cell *matCellDef=\"let transaction\">{{transaction.item}}</td><td mat-footer-cell *matFooterCellDef>Total</td></ng-container><ng-container matColumnDef=\"cost\"><th mat-header-cell *matHeaderCellDef>Cost</th><td mat-cell *matCellDef=\"let transaction\">{{transaction.cost | currency}}</td><td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td></ng-container><ng-container matColumnDef=\"item-description\"><th mat-header-cell *matHeaderCellDef>Name of the item purchased</th></ng-container><ng-container matColumnDef=\"cost-description\"><th mat-header-cell *matHeaderCellDef>Cost of the item in USD</th></ng-container><ng-container matColumnDef=\"disclaimer\"><td mat-footer-cell *matFooterCellDef colspan=\"2\">Please note that the cost of items displayed are completely and totally made up.</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\" class=\"example-first-header-row\"></tr><tr mat-header-row *matHeaderRowDef=\"['item-description', 'cost-description']\" class=\"example-second-header-row\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr><tr mat-footer-row *matFooterRowDef=\"displayedColumns\" class=\"example-first-footer-row\"></tr><tr mat-footer-row *matFooterRowDef=\"['disclaimer']\" class=\"example-second-footer-row\"></tr></table>",
+                },] },
+    ];
+    return TableMultipleHeaderFooterExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Native `<table>` that only applies the Material styles
  */
 var TableNativeOnlyExample = /** @class */ (function () {
@@ -7207,6 +7248,10 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Table retrieving data through HTTP',
         component: TableHttpExample
     },
+    'table-multiple-header-footer': {
+        title: 'Table with multiple header and footer rows',
+        component: TableMultipleHeaderFooterExample
+    },
     'table-native-only': {
         title: 'Native `<table>` that only applies the Material styles',
         component: TableNativeOnlyExample
@@ -7446,6 +7491,7 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TableFilteringExample,
     TableFooterRowExample,
     TableHttpExample,
+    TableMultipleHeaderFooterExample,
     TableNativeOnlyExample,
     TableOverviewExample,
     TablePaginationExample,
@@ -7617,7 +7663,7 @@ exports.ɵcy = InputOverviewExample;
 exports.ɵcz = InputPrefixSuffixExample;
 exports.ɵda = ListSectionsExample;
 exports.ɵdb = ListSelectionExample;
-exports.ɵgl = ExampleMaterialModule;
+exports.ɵgm = ExampleMaterialModule;
 exports.ɵdc = MenuIconsExample;
 exports.ɵdd = MenuOverviewExample;
 exports.ɵde = NestedMenuExample;
@@ -7673,38 +7719,39 @@ exports.ɵfb = TableDynamicColumnsExample;
 exports.ɵfc = TableFilteringExample;
 exports.ɵfd = TableFooterRowExample;
 exports.ɵfe = TableHttpExample;
-exports.ɵff = TableNativeOnlyExample;
-exports.ɵfg = TableOverviewExample;
-exports.ɵfh = TablePaginationExample;
-exports.ɵfi = TableRowContextExample;
-exports.ɵfj = TableSelectionExample;
-exports.ɵfk = TableSortingExample;
-exports.ɵfl = TabsOverviewExample;
-exports.ɵfm = TabsTemplateLabelExample;
-exports.ɵfn = TextFieldAutofillDirectiveExample;
-exports.ɵfo = TextFieldAutofillMonitorExample;
-exports.ɵfp = TextFieldAutosizeTextareaExample;
-exports.ɵfq = ToolbarOverviewExample;
-exports.ɵfr = TooltipAutoHideExample;
-exports.ɵfs = TooltipCustomClassExample;
-exports.ɵft = TooltipDelayExample;
-exports.ɵfu = TooltipDisabledExample;
-exports.ɵfv = TooltipManualExample;
-exports.ɵfw = TooltipMessageExample;
-exports.ɵfy = TooltipModifiedDefaultsExample;
-exports.ɵfx = myCustomTooltipDefaults;
-exports.ɵfz = TooltipOverviewExample;
-exports.ɵga = TooltipPositionExample;
-exports.ɵgb = ChecklistDatabase;
-exports.ɵgc = TreeChecklistExample;
-exports.ɵgd = DynamicDatabase;
-exports.ɵge = TreeDynamicExample;
-exports.ɵgf = FileDatabase$2;
-exports.ɵgg = TreeFlatOverviewExample;
-exports.ɵgh = LoadmoreDatabase;
-exports.ɵgi = TreeLoadmoreExample;
-exports.ɵgj = FileDatabase$3;
-exports.ɵgk = TreeNestedOverviewExample;
+exports.ɵff = TableMultipleHeaderFooterExample;
+exports.ɵfg = TableNativeOnlyExample;
+exports.ɵfh = TableOverviewExample;
+exports.ɵfi = TablePaginationExample;
+exports.ɵfj = TableRowContextExample;
+exports.ɵfk = TableSelectionExample;
+exports.ɵfl = TableSortingExample;
+exports.ɵfm = TabsOverviewExample;
+exports.ɵfn = TabsTemplateLabelExample;
+exports.ɵfo = TextFieldAutofillDirectiveExample;
+exports.ɵfp = TextFieldAutofillMonitorExample;
+exports.ɵfq = TextFieldAutosizeTextareaExample;
+exports.ɵfr = ToolbarOverviewExample;
+exports.ɵfs = TooltipAutoHideExample;
+exports.ɵft = TooltipCustomClassExample;
+exports.ɵfu = TooltipDelayExample;
+exports.ɵfv = TooltipDisabledExample;
+exports.ɵfw = TooltipManualExample;
+exports.ɵfx = TooltipMessageExample;
+exports.ɵfz = TooltipModifiedDefaultsExample;
+exports.ɵfy = myCustomTooltipDefaults;
+exports.ɵga = TooltipOverviewExample;
+exports.ɵgb = TooltipPositionExample;
+exports.ɵgc = ChecklistDatabase;
+exports.ɵgd = TreeChecklistExample;
+exports.ɵge = DynamicDatabase;
+exports.ɵgf = TreeDynamicExample;
+exports.ɵgg = FileDatabase$2;
+exports.ɵgh = TreeFlatOverviewExample;
+exports.ɵgi = LoadmoreDatabase;
+exports.ɵgj = TreeLoadmoreExample;
+exports.ɵgk = FileDatabase$3;
+exports.ɵgl = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -134,6 +134,7 @@ import {TableDynamicColumnsExample} from './table-dynamic-columns/table-dynamic-
 import {TableFilteringExample} from './table-filtering/table-filtering-example';
 import {TableFooterRowExample} from './table-footer-row/table-footer-row-example';
 import {TableHttpExample} from './table-http/table-http-example';
+import {TableMultipleHeaderFooterExample} from './table-multiple-header-footer/table-multiple-header-footer-example';
 import {TableNativeOnlyExample} from './table-native-only/table-native-only-example';
 import {TableOverviewExample} from './table-overview/table-overview-example';
 import {TablePaginationExample} from './table-pagination/table-pagination-example';
@@ -701,6 +702,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Table retrieving data through HTTP',
     component: TableHttpExample
   },
+  'table-multiple-header-footer': {
+    title: 'Table with multiple header and footer rows',
+    component: TableMultipleHeaderFooterExample
+  },
   'table-native-only': {
     title: 'Native `<table>` that only applies the Material styles',
     component: TableNativeOnlyExample
@@ -941,6 +946,7 @@ export const EXAMPLE_LIST = [
   TableFilteringExample,
   TableFooterRowExample,
   TableHttpExample,
+  TableMultipleHeaderFooterExample,
   TableNativeOnlyExample,
   TableOverviewExample,
   TablePaginationExample,
