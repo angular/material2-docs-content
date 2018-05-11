@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatPaginator, MatSort, MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-comment">/**
@@ -9,7 +9,7 @@
   styleUrls: [<span class="hljs-string">'table-overview-example.css'</span>],
   templateUrl: <span class="hljs-string">'table-overview-example.html'</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableOverviewExample {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableOverviewExample <span class="hljs-keyword">implements</span> OnInit {
   displayedColumns = [<span class="hljs-string">'id'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'progress'</span>, <span class="hljs-string">'color'</span>];
   dataSource: MatTableDataSource&lt;UserData&gt;;
 

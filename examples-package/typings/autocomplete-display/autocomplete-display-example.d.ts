@@ -1,3 +1,4 @@
+import { OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 export declare class User {
@@ -7,7 +8,7 @@ export declare class User {
 /**
  * @title Display value autocomplete
  */
-export declare class AutocompleteDisplayExample {
+export declare class AutocompleteDisplayExample implements OnInit {
     myControl: FormControl;
     options: User[];
     filteredOptions: Observable<User[]>;

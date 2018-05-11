@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
 <span class="hljs-comment">/**
@@ -9,7 +9,7 @@
   templateUrl: <span class="hljs-string">'stepper-editable-example.html'</span>,
   styleUrls: [<span class="hljs-string">'stepper-editable-example.css'</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperEditableExample {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperEditableExample <span class="hljs-keyword">implements</span> OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   isEditable: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>;

@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 <span class="hljs-keyword">import</span> {map, startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
@@ -11,7 +11,7 @@
   templateUrl: <span class="hljs-string">'autocomplete-auto-active-first-option-example.html'</span>,
   styleUrls: [<span class="hljs-string">'autocomplete-auto-active-first-option-example.css'</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AutocompleteAutoActiveFirstOptionExample {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AutocompleteAutoActiveFirstOptionExample <span class="hljs-keyword">implements</span> OnInit {
   myControl: FormControl = <span class="hljs-keyword">new</span> FormControl();
   options = [<span class="hljs-string">'One'</span>, <span class="hljs-string">'Two'</span>, <span class="hljs-string">'Three'</span>];
   filteredOptions: Observable&lt;<span class="hljs-built_in">string</span>[]&gt;;

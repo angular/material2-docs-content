@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatPaginator, MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-comment">/**
@@ -9,7 +9,7 @@
   styleUrls: [<span class="hljs-string">'table-pagination-example.css'</span>],
   templateUrl: <span class="hljs-string">'table-pagination-example.html'</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TablePaginationExample {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TablePaginationExample <span class="hljs-keyword">implements</span> OnInit {
   displayedColumns = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
   dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
 

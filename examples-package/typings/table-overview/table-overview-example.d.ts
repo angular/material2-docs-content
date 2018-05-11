@@ -1,8 +1,9 @@
+import { OnInit } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
-export declare class TableOverviewExample {
+export declare class TableOverviewExample implements OnInit {
     displayedColumns: string[];
     dataSource: MatTableDataSource<UserData>;
     paginator: MatPaginator;

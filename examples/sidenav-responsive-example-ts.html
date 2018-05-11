@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {MediaMatcher} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/layout'</span>;
-<span class="hljs-keyword">import</span> {ChangeDetectorRef, Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectorRef, Component, OnDestroy} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
 <span class="hljs-comment">/** @title Responsive sidenav */</span>
 <span class="hljs-meta">@Component</span>({
@@ -7,7 +7,7 @@
   templateUrl: <span class="hljs-string">'sidenav-responsive-example.html'</span>,
   styleUrls: [<span class="hljs-string">'sidenav-responsive-example.css'</span>],
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavResponsiveExample {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavResponsiveExample <span class="hljs-keyword">implements</span> OnDestroy {
   mobileQuery: MediaQueryList;
 
   fillerNav = <span class="hljs-built_in">Array</span>(<span class="hljs-number">50</span>).fill(<span class="hljs-number">0</span>).map(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Nav Item <span class="hljs-subst">${i + 1}</span>`</span>);

@@ -1,7 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectorRef, OnDestroy } from '@angular/core';
 /** @title Responsive sidenav */
-export declare class SidenavResponsiveExample {
+export declare class SidenavResponsiveExample implements OnDestroy {
     mobileQuery: MediaQueryList;
     fillerNav: string[];
     fillerContent: string[];

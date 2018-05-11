@@ -1,5 +1,5 @@
-<span class="hljs-keyword">import</span> {Component, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatTableDataSource, MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatSort, MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
 <span class="hljs-comment">/**
  * @title Table with sorting
@@ -9,7 +9,7 @@
   styleUrls: [<span class="hljs-string">'table-sorting-example.css'</span>],
   templateUrl: <span class="hljs-string">'table-sorting-example.html'</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableSortingExample {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableSortingExample <span class="hljs-keyword">implements</span> OnInit {
   displayedColumns = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
   dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(ELEMENT_DATA);
 

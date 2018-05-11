@@ -1,8 +1,9 @@
+import { OnInit } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
 /**
  * @title Table with pagination
  */
-export declare class TablePaginationExample {
+export declare class TablePaginationExample implements OnInit {
     displayedColumns: string[];
     dataSource: MatTableDataSource<PeriodicElement>;
     paginator: MatPaginator;

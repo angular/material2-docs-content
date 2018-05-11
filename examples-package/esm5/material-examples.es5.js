@@ -15,7 +15,7 @@ import { map, startWith, takeUntil, catchError, switchMap, take } from 'rxjs/ope
 import { __extends } from 'tslib';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject, of, Subject, merge } from 'rxjs';
-import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
+import { MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource } from '@angular/material/tree';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MomentDateAdapter, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
@@ -990,7 +990,9 @@ var CdkTreeFlatExample = /** @class */ (function () {
         };
         this._getLevel = function (node) { return node.level; };
         this._isExpandable = function (node) { return node.expandable; };
-        this._getChildren = function (node) { return of(node.children); };
+        this._getChildren = function (node) {
+            return of(node.children);
+        };
         this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
         this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
         this.treeControl = new FlatTreeControl(this._getLevel, this._isExpandable);
