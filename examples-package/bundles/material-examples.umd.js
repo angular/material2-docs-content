@@ -1241,6 +1241,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
         if (input) {
             input.value = '';
         }
+        this.fruitCtrl.setValue(null);
     };
     /**
      * @param {?} fruit
@@ -1280,6 +1281,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
     function (event) {
         this.fruits.push(event.option.viewValue);
         this.fruitInput.nativeElement.value = '';
+        this.fruitCtrl.setValue(null);
     };
     ChipsAutocompleteExample.decorators = [
         { type: core.Component, args: [{
