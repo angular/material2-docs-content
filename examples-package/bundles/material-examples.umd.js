@@ -1241,6 +1241,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
         if (input) {
             input.value = '';
         }
+        this.fruitCtrl.setValue(null);
     };
     /**
      * @param {?} fruit
@@ -1280,6 +1281,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
     function (event) {
         this.fruits.push(event.option.viewValue);
         this.fruitInput.nativeElement.value = '';
+        this.fruitCtrl.setValue(null);
     };
     ChipsAutocompleteExample.decorators = [
         { type: core.Component, args: [{
@@ -4647,6 +4649,46 @@ var StepperOverviewExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Stepper vertical
+ */
+var StepperVerticalExample = /** @class */ (function () {
+    function StepperVerticalExample(_formBuilder) {
+        this._formBuilder = _formBuilder;
+        this.isLinear = false;
+    }
+    /**
+     * @return {?}
+     */
+    StepperVerticalExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', forms.Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', forms.Validators.required]
+        });
+    };
+    StepperVerticalExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'stepper-vertical',
+                    template: "<button mat-raised-button (click)=\"isLinear = !isLinear\" id=\"toggle-linear\">{{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}</button><mat-vertical-stepper [linear]=\"isLinear\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-vertical-stepper>",
+                    styles: ["/** No CSS for this example */ "]
+                },] },
+    ];
+    /** @nocollapse */
+    StepperVerticalExample.ctorParameters = function () { return [
+        { type: forms.FormBuilder, },
+    ]; };
+    return StepperVerticalExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Basic use of `<mat-table>` (uses display flex)
  */
 var TableBasicFlexExample = /** @class */ (function () {
@@ -7224,6 +7266,10 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Stepper overview',
         component: StepperOverviewExample
     },
+    'stepper-vertical': {
+        title: 'Stepper vertical',
+        component: StepperVerticalExample
+    },
     'table-basic-flex': {
         title: 'Basic use of `<mat-table>` (uses display flex)',
         component: TableBasicFlexExample
@@ -7485,6 +7531,7 @@ var /** @type {?} */ EXAMPLE_LIST = [
     StepperEditableExample,
     StepperOptionalExample,
     StepperOverviewExample,
+    StepperVerticalExample,
     TableBasicFlexExample,
     TableBasicExample,
     TableDynamicColumnsExample,
@@ -7663,7 +7710,7 @@ exports.ɵcy = InputOverviewExample;
 exports.ɵcz = InputPrefixSuffixExample;
 exports.ɵda = ListSectionsExample;
 exports.ɵdb = ListSelectionExample;
-exports.ɵgm = ExampleMaterialModule;
+exports.ɵgn = ExampleMaterialModule;
 exports.ɵdc = MenuIconsExample;
 exports.ɵdd = MenuOverviewExample;
 exports.ɵde = NestedMenuExample;
@@ -7713,45 +7760,46 @@ exports.ɵev = SnackBarPositionExample;
 exports.ɵew = SortOverviewExample;
 exports.ɵex = StepperEditableExample;
 exports.ɵey = StepperOptionalExample;
-exports.ɵez = TableBasicFlexExample;
-exports.ɵfa = TableBasicExample;
-exports.ɵfb = TableDynamicColumnsExample;
-exports.ɵfc = TableFilteringExample;
-exports.ɵfd = TableFooterRowExample;
-exports.ɵfe = TableHttpExample;
-exports.ɵff = TableMultipleHeaderFooterExample;
-exports.ɵfg = TableNativeOnlyExample;
-exports.ɵfh = TableOverviewExample;
-exports.ɵfi = TablePaginationExample;
-exports.ɵfj = TableRowContextExample;
-exports.ɵfk = TableSelectionExample;
-exports.ɵfl = TableSortingExample;
-exports.ɵfm = TabsOverviewExample;
-exports.ɵfn = TabsTemplateLabelExample;
-exports.ɵfo = TextFieldAutofillDirectiveExample;
-exports.ɵfp = TextFieldAutofillMonitorExample;
-exports.ɵfq = TextFieldAutosizeTextareaExample;
-exports.ɵfr = ToolbarOverviewExample;
-exports.ɵfs = TooltipAutoHideExample;
-exports.ɵft = TooltipCustomClassExample;
-exports.ɵfu = TooltipDelayExample;
-exports.ɵfv = TooltipDisabledExample;
-exports.ɵfw = TooltipManualExample;
-exports.ɵfx = TooltipMessageExample;
-exports.ɵfz = TooltipModifiedDefaultsExample;
-exports.ɵfy = myCustomTooltipDefaults;
-exports.ɵga = TooltipOverviewExample;
-exports.ɵgb = TooltipPositionExample;
-exports.ɵgc = ChecklistDatabase;
-exports.ɵgd = TreeChecklistExample;
-exports.ɵge = DynamicDatabase;
-exports.ɵgf = TreeDynamicExample;
-exports.ɵgg = FileDatabase$2;
-exports.ɵgh = TreeFlatOverviewExample;
-exports.ɵgi = LoadmoreDatabase;
-exports.ɵgj = TreeLoadmoreExample;
-exports.ɵgk = FileDatabase$3;
-exports.ɵgl = TreeNestedOverviewExample;
+exports.ɵez = StepperVerticalExample;
+exports.ɵfa = TableBasicFlexExample;
+exports.ɵfb = TableBasicExample;
+exports.ɵfc = TableDynamicColumnsExample;
+exports.ɵfd = TableFilteringExample;
+exports.ɵfe = TableFooterRowExample;
+exports.ɵff = TableHttpExample;
+exports.ɵfg = TableMultipleHeaderFooterExample;
+exports.ɵfh = TableNativeOnlyExample;
+exports.ɵfi = TableOverviewExample;
+exports.ɵfj = TablePaginationExample;
+exports.ɵfk = TableRowContextExample;
+exports.ɵfl = TableSelectionExample;
+exports.ɵfm = TableSortingExample;
+exports.ɵfn = TabsOverviewExample;
+exports.ɵfo = TabsTemplateLabelExample;
+exports.ɵfp = TextFieldAutofillDirectiveExample;
+exports.ɵfq = TextFieldAutofillMonitorExample;
+exports.ɵfr = TextFieldAutosizeTextareaExample;
+exports.ɵfs = ToolbarOverviewExample;
+exports.ɵft = TooltipAutoHideExample;
+exports.ɵfu = TooltipCustomClassExample;
+exports.ɵfv = TooltipDelayExample;
+exports.ɵfw = TooltipDisabledExample;
+exports.ɵfx = TooltipManualExample;
+exports.ɵfy = TooltipMessageExample;
+exports.ɵga = TooltipModifiedDefaultsExample;
+exports.ɵfz = myCustomTooltipDefaults;
+exports.ɵgb = TooltipOverviewExample;
+exports.ɵgc = TooltipPositionExample;
+exports.ɵgd = ChecklistDatabase;
+exports.ɵge = TreeChecklistExample;
+exports.ɵgf = DynamicDatabase;
+exports.ɵgg = TreeDynamicExample;
+exports.ɵgh = FileDatabase$2;
+exports.ɵgi = TreeFlatOverviewExample;
+exports.ɵgj = LoadmoreDatabase;
+exports.ɵgk = TreeLoadmoreExample;
+exports.ɵgl = FileDatabase$3;
+exports.ɵgm = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

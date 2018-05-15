@@ -58,6 +58,8 @@
     <span class="hljs-keyword">if</span> (input) {
       input.value = <span class="hljs-string">''</span>;
     }
+
+    <span class="hljs-keyword">this</span>.fruitCtrl.setValue(<span class="hljs-literal">null</span>);
   }
 
   remove(fruit: <span class="hljs-built_in">any</span>): <span class="hljs-built_in">void</span> {
@@ -76,5 +78,6 @@
   selected(event: MatAutocompleteSelectedEvent): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">this</span>.fruits.push(event.option.viewValue);
     <span class="hljs-keyword">this</span>.fruitInput.nativeElement.value = <span class="hljs-string">''</span>;
+    <span class="hljs-keyword">this</span>.fruitCtrl.setValue(<span class="hljs-literal">null</span>);
   }
 }

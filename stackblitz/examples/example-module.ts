@@ -128,6 +128,7 @@ import {SortOverviewExample} from './sort-overview/sort-overview-example';
 import {StepperEditableExample} from './stepper-editable/stepper-editable-example';
 import {StepperOptionalExample} from './stepper-optional/stepper-optional-example';
 import {StepperOverviewExample} from './stepper-overview/stepper-overview-example';
+import {StepperVerticalExample} from './stepper-vertical/stepper-vertical-example';
 import {TableBasicFlexExample} from './table-basic-flex/table-basic-flex-example';
 import {TableBasicExample} from './table-basic/table-basic-example';
 import {TableDynamicColumnsExample} from './table-dynamic-columns/table-dynamic-columns-example';
@@ -678,6 +679,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Stepper overview',
     component: StepperOverviewExample
   },
+  'stepper-vertical': {
+    title: 'Stepper vertical',
+    component: StepperVerticalExample
+  },
   'table-basic-flex': {
     title: 'Basic use of `<mat-table>` (uses display flex)',
     component: TableBasicFlexExample
@@ -940,6 +945,7 @@ export const EXAMPLE_LIST = [
   StepperEditableExample,
   StepperOptionalExample,
   StepperOverviewExample,
+  StepperVerticalExample,
   TableBasicFlexExample,
   TableBasicExample,
   TableDynamicColumnsExample,
