@@ -1,8 +1,9 @@
+import { OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 /**
  * @title Stepper vertical
  */
-export declare class StepperVerticalExample {
+export declare class StepperVerticalExample implements OnInit {
     private _formBuilder;
     isLinear: boolean;
     firstFormGroup: FormGroup;
