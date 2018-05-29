@@ -132,6 +132,7 @@ import {StepperVerticalExample} from './stepper-vertical/stepper-vertical-exampl
 import {TableBasicFlexExample} from './table-basic-flex/table-basic-flex-example';
 import {TableBasicExample} from './table-basic/table-basic-example';
 import {TableDynamicColumnsExample} from './table-dynamic-columns/table-dynamic-columns-example';
+import {TableExpandableRowsExample} from './table-expandable-rows/table-expandable-rows-example';
 import {TableFilteringExample} from './table-filtering/table-filtering-example';
 import {TableFooterRowExample} from './table-footer-row/table-footer-row-example';
 import {TableHttpExample} from './table-http/table-http-example';
@@ -695,6 +696,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Table dynamically changing the columns displayed',
     component: TableDynamicColumnsExample
   },
+  'table-expandable-rows': {
+    title: 'Table with expandable rows',
+    component: TableExpandableRowsExample
+  },
   'table-filtering': {
     title: 'Table with filtering',
     component: TableFilteringExample
@@ -949,6 +954,7 @@ export const EXAMPLE_LIST = [
   TableBasicFlexExample,
   TableBasicExample,
   TableDynamicColumnsExample,
+  TableExpandableRowsExample,
   TableFilteringExample,
   TableFooterRowExample,
   TableHttpExample,

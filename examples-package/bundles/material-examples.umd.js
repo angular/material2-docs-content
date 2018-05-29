@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
-}(this, (function (exports,core,scrolling,table,tree,material,forms,operators,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,a11y,coercion,platformBrowser,sidenav,layout,http,textField,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
+}(this, (function (exports,core,scrolling,table,tree,material,forms,operators,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,a11y,coercion,platformBrowser,sidenav,layout,animations,http,textField,common) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -459,7 +459,7 @@ var AutocompleteOverviewExample = /** @class */ (function () {
         ];
         this.stateCtrl = new forms.FormControl();
         this.filteredStates = this.stateCtrl.valueChanges
-            .pipe(operators.startWith(''), operators.map(function (state) { return state ? _this.filterStates(state) : _this.states.slice(); }));
+            .pipe(operators.startWith(''), operators.map(function (state$$1) { return state$$1 ? _this.filterStates(state$$1) : _this.states.slice(); }));
     }
     /**
      * @param {?} name
@@ -470,8 +470,8 @@ var AutocompleteOverviewExample = /** @class */ (function () {
      * @return {?}
      */
     function (name) {
-        return this.states.filter(function (state) {
-            return state.name.toLowerCase().indexOf(name.toLowerCase()) === 0;
+        return this.states.filter(function (state$$1) {
+            return state$$1.name.toLowerCase().indexOf(name.toLowerCase()) === 0;
         });
     };
     AutocompleteOverviewExample.decorators = [
@@ -4830,12 +4830,104 @@ var /** @type {?} */ ELEMENT_DATA$4 = [
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Table with expandable rows
+ */
+var TableExpandableRowsExample = /** @class */ (function () {
+    function TableExpandableRowsExample() {
+        this.dataSource = ELEMENT_DATA$5;
+        this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
+    }
+    TableExpandableRowsExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'table-expandable-rows-example',
+                    styles: ["table { width: 100%; } tr.example-detail-row { height: 0; } tr.example-element-row:not(.example-expanded-row):hover { background: #f5f5f5; } tr.example-element-row:not(.example-expanded-row):active { background: #efefef; } .example-element-row td { border-bottom-width: 0; } .example-element-detail { overflow: hidden; display: flex; } .example-element-diagram { min-width: 80px; border: 2px solid black; padding: 8px; font-weight: lighter; margin: 8px 0; height: 104px; } .example-element-symbol { font-weight: bold; font-size: 48px; } .example-element-description { padding: 16px; } .example-element-description-attribution { opacity: 0.5; } "],
+                    template: "<table mat-table [dataSource]=\"dataSource\" multiTemplateDataRows class=\"mat-elevation-z8\"><ng-container matColumnDef=\"{{column}}\" *ngFor=\"let column of columnsToDisplay\"><th mat-header-cell *matHeaderCellDef>{{column}}</th><td mat-cell *matCellDef=\"let element\">{{element[column]}}</td></ng-container><ng-container matColumnDef=\"expandedDetail\"><td mat-cell *matCellDef=\"let element\" [attr.colspan]=\"columnsToDisplay.length\"><div class=\"example-element-detail\" [@detailExpand]=\"element == expandedElement ? 'expanded' : 'collapsed'\"><div class=\"example-element-diagram\"><div class=\"example-element-position\">{{element.position}}</div><div class=\"example-element-symbol\">{{element.symbol}}</div><div class=\"example-element-name\">{{element.name}}</div><div class=\"example-element-weight\">{{element.weight}}</div></div><div class=\"example-element-description\">{{element.description}} <span class=\"example-element-description-attribution\">-- Wikipedia</span></div></div></td></ng-container><tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr><tr mat-row *matRowDef=\"let element; columns: columnsToDisplay;\" class=\"example-element-row\" [class.example-expanded-row]=\"expandedElement === element\" (click)=\"expandedElement = element\"></tr><tr mat-row *matRowDef=\"let row; columns: ['expandedDetail']\" class=\"example-detail-row\"></tr></table>",
+                    animations: [
+                        animations.trigger('detailExpand', [
+                            animations.state('collapsed', animations.style({ height: '0px', minHeight: '0', display: 'none' })),
+                            animations.state('expanded', animations.style({ height: '*' })),
+                            animations.transition('expanded <=> collapsed', animations.animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+                        ]),
+                    ],
+                },] },
+    ];
+    return TableExpandableRowsExample;
+}());
+var /** @type {?} */ ELEMENT_DATA$5 = [
+    {
+        position: 1,
+        name: 'Hydrogen',
+        weight: 1.0079,
+        symbol: 'H',
+        description: "Hydrogen is a chemical element with symbol H and atomic number 1. With a standard\n        atomic weight of 1.008, hydrogen is the lightest element on the periodic table."
+    }, {
+        position: 2,
+        name: 'Helium',
+        weight: 4.0026,
+        symbol: 'He',
+        description: "Helium is a chemical element with symbol He and atomic number 2. It is a\n        colorless, odorless, tasteless, non-toxic, inert, monatomic gas, the first in the noble gas\n        group in the periodic table. Its boiling point is the lowest among all the elements."
+    }, {
+        position: 3,
+        name: 'Lithium',
+        weight: 6.941,
+        symbol: 'Li',
+        description: "Lithium is a chemical element with symbol Li and atomic number 3. It is a soft,\n        silvery-white alkali metal. Under standard conditions, it is the lightest metal and the\n        lightest solid element."
+    }, {
+        position: 4,
+        name: 'Beryllium',
+        weight: 9.0122,
+        symbol: 'Be',
+        description: "Beryllium is a chemical element with symbol Be and atomic number 4. It is a\n        relatively rare element in the universe, usually occurring as a product of the spallation of\n        larger atomic nuclei that have collided with cosmic rays."
+    }, {
+        position: 5,
+        name: 'Boron',
+        weight: 10.811,
+        symbol: 'B',
+        description: "Boron is a chemical element with symbol B and atomic number 5. Produced entirely\n        by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a\n        low-abundance element in the Solar system and in the Earth's crust."
+    }, {
+        position: 6,
+        name: 'Carbon',
+        weight: 12.0107,
+        symbol: 'C',
+        description: "Carbon is a chemical element with symbol C and atomic number 6. It is nonmetallic\n        and tetravalent\u2014making four electrons available to form covalent chemical bonds. It belongs\n        to group 14 of the periodic table."
+    }, {
+        position: 7,
+        name: 'Nitrogen',
+        weight: 14.0067,
+        symbol: 'N',
+        description: "Nitrogen is a chemical element with symbol N and atomic number 7. It was first\n        discovered and isolated by Scottish physician Daniel Rutherford in 1772."
+    }, {
+        position: 8,
+        name: 'Oxygen',
+        weight: 15.9994,
+        symbol: 'O',
+        description: "Oxygen is a chemical element with symbol O and atomic number 8. It is a member of\n         the chalcogen group on the periodic table, a highly reactive nonmetal, and an oxidizing\n         agent that readily forms oxides with most elements as well as with other compounds."
+    }, {
+        position: 9,
+        name: 'Fluorine',
+        weight: 18.9984,
+        symbol: 'F',
+        description: "Fluorine is a chemical element with symbol F and atomic number 9. It is the\n        lightest halogen and exists as a highly toxic pale yellow diatomic gas at standard\n        conditions."
+    }, {
+        position: 10,
+        name: 'Neon',
+        weight: 20.1797,
+        symbol: 'Ne',
+        description: "Neon is a chemical element with symbol Ne and atomic number 10. It is a noble gas.\n        Neon is a colorless, odorless, inert monatomic gas under standard conditions, with about\n        two-thirds the density of air."
+    },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Table with filtering
  */
 var TableFilteringExample = /** @class */ (function () {
     function TableFilteringExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$5);
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$6);
     }
     /**
      * @param {?} filterValue
@@ -4859,7 +4951,7 @@ var TableFilteringExample = /** @class */ (function () {
     ];
     return TableFilteringExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$5 = [
+var /** @type {?} */ ELEMENT_DATA$6 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5167,7 +5259,7 @@ var /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'J
 var TablePaginationExample = /** @class */ (function () {
     function TablePaginationExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$6);
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$7);
     }
     /**
      * @return {?}
@@ -5191,7 +5283,7 @@ var TablePaginationExample = /** @class */ (function () {
     };
     return TablePaginationExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$6 = [
+var /** @type {?} */ ELEMENT_DATA$7 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5246,7 +5338,7 @@ var TableRowContextExample = /** @class */ (function () {
 var TableSelectionExample = /** @class */ (function () {
     function TableSelectionExample() {
         this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$7);
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$8);
         this.selection = new collections.SelectionModel(true, []);
     }
     /** Whether the number of selected elements matches the total number of rows. */
@@ -5287,7 +5379,7 @@ var TableSelectionExample = /** @class */ (function () {
     ];
     return TableSelectionExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$7 = [
+var /** @type {?} */ ELEMENT_DATA$8 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5310,7 +5402,7 @@ var /** @type {?} */ ELEMENT_DATA$7 = [
 var TableSortingExample = /** @class */ (function () {
     function TableSortingExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$8);
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$9);
     }
     /**
      * @return {?}
@@ -5334,7 +5426,7 @@ var TableSortingExample = /** @class */ (function () {
     };
     return TableSortingExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$8 = [
+var /** @type {?} */ ELEMENT_DATA$9 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7282,6 +7374,10 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Table dynamically changing the columns displayed',
         component: TableDynamicColumnsExample
     },
+    'table-expandable-rows': {
+        title: 'Table with expandable rows',
+        component: TableExpandableRowsExample
+    },
     'table-filtering': {
         title: 'Table with filtering',
         component: TableFilteringExample
@@ -7535,6 +7631,7 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TableBasicFlexExample,
     TableBasicExample,
     TableDynamicColumnsExample,
+    TableExpandableRowsExample,
     TableFilteringExample,
     TableFooterRowExample,
     TableHttpExample,
@@ -7710,7 +7807,7 @@ exports.ɵcy = InputOverviewExample;
 exports.ɵcz = InputPrefixSuffixExample;
 exports.ɵda = ListSectionsExample;
 exports.ɵdb = ListSelectionExample;
-exports.ɵgn = ExampleMaterialModule;
+exports.ɵgo = ExampleMaterialModule;
 exports.ɵdc = MenuIconsExample;
 exports.ɵdd = MenuOverviewExample;
 exports.ɵde = NestedMenuExample;
@@ -7764,42 +7861,43 @@ exports.ɵez = StepperVerticalExample;
 exports.ɵfa = TableBasicFlexExample;
 exports.ɵfb = TableBasicExample;
 exports.ɵfc = TableDynamicColumnsExample;
-exports.ɵfd = TableFilteringExample;
-exports.ɵfe = TableFooterRowExample;
-exports.ɵff = TableHttpExample;
-exports.ɵfg = TableMultipleHeaderFooterExample;
-exports.ɵfh = TableNativeOnlyExample;
-exports.ɵfi = TableOverviewExample;
-exports.ɵfj = TablePaginationExample;
-exports.ɵfk = TableRowContextExample;
-exports.ɵfl = TableSelectionExample;
-exports.ɵfm = TableSortingExample;
-exports.ɵfn = TabsOverviewExample;
-exports.ɵfo = TabsTemplateLabelExample;
-exports.ɵfp = TextFieldAutofillDirectiveExample;
-exports.ɵfq = TextFieldAutofillMonitorExample;
-exports.ɵfr = TextFieldAutosizeTextareaExample;
-exports.ɵfs = ToolbarOverviewExample;
-exports.ɵft = TooltipAutoHideExample;
-exports.ɵfu = TooltipCustomClassExample;
-exports.ɵfv = TooltipDelayExample;
-exports.ɵfw = TooltipDisabledExample;
-exports.ɵfx = TooltipManualExample;
-exports.ɵfy = TooltipMessageExample;
-exports.ɵga = TooltipModifiedDefaultsExample;
-exports.ɵfz = myCustomTooltipDefaults;
-exports.ɵgb = TooltipOverviewExample;
-exports.ɵgc = TooltipPositionExample;
-exports.ɵgd = ChecklistDatabase;
-exports.ɵge = TreeChecklistExample;
-exports.ɵgf = DynamicDatabase;
-exports.ɵgg = TreeDynamicExample;
-exports.ɵgh = FileDatabase$2;
-exports.ɵgi = TreeFlatOverviewExample;
-exports.ɵgj = LoadmoreDatabase;
-exports.ɵgk = TreeLoadmoreExample;
-exports.ɵgl = FileDatabase$3;
-exports.ɵgm = TreeNestedOverviewExample;
+exports.ɵfd = TableExpandableRowsExample;
+exports.ɵfe = TableFilteringExample;
+exports.ɵff = TableFooterRowExample;
+exports.ɵfg = TableHttpExample;
+exports.ɵfh = TableMultipleHeaderFooterExample;
+exports.ɵfi = TableNativeOnlyExample;
+exports.ɵfj = TableOverviewExample;
+exports.ɵfk = TablePaginationExample;
+exports.ɵfl = TableRowContextExample;
+exports.ɵfm = TableSelectionExample;
+exports.ɵfn = TableSortingExample;
+exports.ɵfo = TabsOverviewExample;
+exports.ɵfp = TabsTemplateLabelExample;
+exports.ɵfq = TextFieldAutofillDirectiveExample;
+exports.ɵfr = TextFieldAutofillMonitorExample;
+exports.ɵfs = TextFieldAutosizeTextareaExample;
+exports.ɵft = ToolbarOverviewExample;
+exports.ɵfu = TooltipAutoHideExample;
+exports.ɵfv = TooltipCustomClassExample;
+exports.ɵfw = TooltipDelayExample;
+exports.ɵfx = TooltipDisabledExample;
+exports.ɵfy = TooltipManualExample;
+exports.ɵfz = TooltipMessageExample;
+exports.ɵgb = TooltipModifiedDefaultsExample;
+exports.ɵga = myCustomTooltipDefaults;
+exports.ɵgc = TooltipOverviewExample;
+exports.ɵgd = TooltipPositionExample;
+exports.ɵge = ChecklistDatabase;
+exports.ɵgf = TreeChecklistExample;
+exports.ɵgg = DynamicDatabase;
+exports.ɵgh = TreeDynamicExample;
+exports.ɵgi = FileDatabase$2;
+exports.ɵgj = TreeFlatOverviewExample;
+exports.ɵgk = LoadmoreDatabase;
+exports.ɵgl = TreeLoadmoreExample;
+exports.ɵgm = FileDatabase$3;
+exports.ɵgn = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
