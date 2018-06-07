@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/a11y', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.a11y,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
-}(this, (function (exports,core,scrolling,table,tree,material,forms,operators,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,a11y,coercion,platformBrowser,sidenav,layout,animations,http,textField,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.a11y,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
+}(this, (function (exports,core,scrolling,a11y,table,tree,material,forms,operators,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,coercion,platformBrowser,sidenav,layout,animations,http,textField,common) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -49,6 +49,7 @@ var ExampleMaterialModule = /** @class */ (function () {
     ExampleMaterialModule.decorators = [
         { type: core.NgModule, args: [{
                     imports: [
+                        a11y.A11yModule,
                         table.CdkTableModule,
                         tree.CdkTreeModule,
                         material.MatAutocompleteModule,
@@ -89,6 +90,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                         scrolling.ScrollDispatchModule,
                     ],
                     exports: [
+                        a11y.A11yModule,
                         table.CdkTableModule,
                         tree.CdkTreeModule,
                         material.MatAutocompleteModule,
@@ -5144,33 +5146,6 @@ var TableMultipleHeaderFooterExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Native `<table>` that only applies the Material styles
- */
-var TableNativeOnlyExample = /** @class */ (function () {
-    function TableNativeOnlyExample() {
-        this.elements = [
-            { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-            { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-            { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-            { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-            { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        ];
-    }
-    TableNativeOnlyExample.decorators = [
-        { type: core.Component, args: [{
-                    selector: 'table-native-only-example',
-                    styles: ["table { width: 100%; } "],
-                    template: "<table class=\"mat-table mat-elevation-z8\"><thead><tr class=\"mat-header-row\"><th class=\"mat-header-cell\">No.</th><th class=\"mat-header-cell\">Name</th><th class=\"mat-header-cell\">Weight</th><th class=\"mat-header-cell\">Symbol</th></tr></thead><tbody><tr class=\"mat-row\" *ngFor=\"let element of elements\"><td class=\"mat-cell\">{{element.position}}</td><td class=\"mat-cell\">{{element.name}}</td><td class=\"mat-cell\">{{element.weight}}</td><td class=\"mat-cell\">{{element.symbol}}</td></tr></tbody></table>",
-                },] },
-    ];
-    return TableNativeOnlyExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
  * \@title Data table with sorting, pagination, and filtering.
  */
 var TableOverviewExample = /** @class */ (function () {
@@ -7623,10 +7598,6 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Table with multiple header and footer rows',
         component: TableMultipleHeaderFooterExample
     },
-    'table-native-only': {
-        title: 'Native `<table>` that only applies the Material styles',
-        component: TableNativeOnlyExample
-    },
     'table-overview': {
         title: 'Data table with sorting, pagination, and filtering.',
         component: TableOverviewExample
@@ -7885,7 +7856,6 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TableFooterRowExample,
     TableHttpExample,
     TableMultipleHeaderFooterExample,
-    TableNativeOnlyExample,
     TableOverviewExample,
     TablePaginationExample,
     TableRowContextExample,
@@ -8061,7 +8031,7 @@ exports.ɵcy = InputOverviewExample;
 exports.ɵcz = InputPrefixSuffixExample;
 exports.ɵda = ListSectionsExample;
 exports.ɵdb = ListSelectionExample;
-exports.ɵgt = ExampleMaterialModule;
+exports.ɵgs = ExampleMaterialModule;
 exports.ɵdc = MenuIconsExample;
 exports.ɵdd = MenuOverviewExample;
 exports.ɵde = NestedMenuExample;
@@ -8120,43 +8090,42 @@ exports.ɵfe = TableFilteringExample;
 exports.ɵff = TableFooterRowExample;
 exports.ɵfg = TableHttpExample;
 exports.ɵfh = TableMultipleHeaderFooterExample;
-exports.ɵfi = TableNativeOnlyExample;
-exports.ɵfj = TableOverviewExample;
-exports.ɵfk = TablePaginationExample;
-exports.ɵfl = TableRowContextExample;
-exports.ɵfm = TableSelectionExample;
-exports.ɵfn = TableSortingExample;
-exports.ɵfo = TableStickyColumnExample;
-exports.ɵfp = TableStickyComplexFlexExample;
-exports.ɵfq = TableStickyComplexExample;
-exports.ɵfr = TableStickyFooterExample;
-exports.ɵfs = TableStickyHeaderExample;
-exports.ɵft = TabsOverviewExample;
-exports.ɵfu = TabsTemplateLabelExample;
-exports.ɵfv = TextFieldAutofillDirectiveExample;
-exports.ɵfw = TextFieldAutofillMonitorExample;
-exports.ɵfx = TextFieldAutosizeTextareaExample;
-exports.ɵfy = ToolbarOverviewExample;
-exports.ɵfz = TooltipAutoHideExample;
-exports.ɵga = TooltipCustomClassExample;
-exports.ɵgb = TooltipDelayExample;
-exports.ɵgc = TooltipDisabledExample;
-exports.ɵgd = TooltipManualExample;
-exports.ɵge = TooltipMessageExample;
-exports.ɵgg = TooltipModifiedDefaultsExample;
-exports.ɵgf = myCustomTooltipDefaults;
-exports.ɵgh = TooltipOverviewExample;
-exports.ɵgi = TooltipPositionExample;
-exports.ɵgj = ChecklistDatabase;
-exports.ɵgk = TreeChecklistExample;
-exports.ɵgl = DynamicDatabase;
-exports.ɵgm = TreeDynamicExample;
-exports.ɵgn = FileDatabase$2;
-exports.ɵgo = TreeFlatOverviewExample;
-exports.ɵgp = LoadmoreDatabase;
-exports.ɵgq = TreeLoadmoreExample;
-exports.ɵgr = FileDatabase$3;
-exports.ɵgs = TreeNestedOverviewExample;
+exports.ɵfi = TableOverviewExample;
+exports.ɵfj = TablePaginationExample;
+exports.ɵfk = TableRowContextExample;
+exports.ɵfl = TableSelectionExample;
+exports.ɵfm = TableSortingExample;
+exports.ɵfn = TableStickyColumnExample;
+exports.ɵfo = TableStickyComplexFlexExample;
+exports.ɵfp = TableStickyComplexExample;
+exports.ɵfq = TableStickyFooterExample;
+exports.ɵfr = TableStickyHeaderExample;
+exports.ɵfs = TabsOverviewExample;
+exports.ɵft = TabsTemplateLabelExample;
+exports.ɵfu = TextFieldAutofillDirectiveExample;
+exports.ɵfv = TextFieldAutofillMonitorExample;
+exports.ɵfw = TextFieldAutosizeTextareaExample;
+exports.ɵfx = ToolbarOverviewExample;
+exports.ɵfy = TooltipAutoHideExample;
+exports.ɵfz = TooltipCustomClassExample;
+exports.ɵga = TooltipDelayExample;
+exports.ɵgb = TooltipDisabledExample;
+exports.ɵgc = TooltipManualExample;
+exports.ɵgd = TooltipMessageExample;
+exports.ɵgf = TooltipModifiedDefaultsExample;
+exports.ɵge = myCustomTooltipDefaults;
+exports.ɵgg = TooltipOverviewExample;
+exports.ɵgh = TooltipPositionExample;
+exports.ɵgi = ChecklistDatabase;
+exports.ɵgj = TreeChecklistExample;
+exports.ɵgk = DynamicDatabase;
+exports.ɵgl = TreeDynamicExample;
+exports.ɵgm = FileDatabase$2;
+exports.ɵgn = TreeFlatOverviewExample;
+exports.ɵgo = LoadmoreDatabase;
+exports.ɵgp = TreeLoadmoreExample;
+exports.ɵgq = FileDatabase$3;
+exports.ɵgr = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

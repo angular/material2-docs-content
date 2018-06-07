@@ -137,7 +137,6 @@ import {TableFilteringExample} from './table-filtering/table-filtering-example';
 import {TableFooterRowExample} from './table-footer-row/table-footer-row-example';
 import {TableHttpExample} from './table-http/table-http-example';
 import {TableMultipleHeaderFooterExample} from './table-multiple-header-footer/table-multiple-header-footer-example';
-import {TableNativeOnlyExample} from './table-native-only/table-native-only-example';
 import {TableOverviewExample} from './table-overview/table-overview-example';
 import {TablePaginationExample} from './table-pagination/table-pagination-example';
 import {TableRowContextExample} from './table-row-context/table-row-context-example';
@@ -721,10 +720,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Table with multiple header and footer rows',
     component: TableMultipleHeaderFooterExample
   },
-  'table-native-only': {
-    title: 'Native `<table>` that only applies the Material styles',
-    component: TableNativeOnlyExample
-  },
   'table-overview': {
     title: 'Data table with sorting, pagination, and filtering.',
     component: TableOverviewExample
@@ -984,7 +979,6 @@ export const EXAMPLE_LIST = [
   TableFooterRowExample,
   TableHttpExample,
   TableMultipleHeaderFooterExample,
-  TableNativeOnlyExample,
   TableOverviewExample,
   TablePaginationExample,
   TableRowContextExample,

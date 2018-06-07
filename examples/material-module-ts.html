@@ -1,6 +1,7 @@
 <span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
 <span class="hljs-keyword">import</span> {ScrollDispatchModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/scrolling'</span>;
+<span class="hljs-keyword">import</span> {A11yModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/a11y'</span>;
 <span class="hljs-keyword">import</span> {CdkTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/table'</span>;
 <span class="hljs-keyword">import</span> {CdkTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
 <span class="hljs-keyword">import</span> {
@@ -15,6 +16,7 @@
 
 <span class="hljs-meta">@NgModule</span>({
   imports: [
+    A11yModule,
     CdkTableModule,
     CdkTreeModule,
     MatAutocompleteModule,
@@ -55,6 +57,7 @@
     ScrollDispatchModule,
   ],
   exports: [
+    A11yModule,
     CdkTableModule,
     CdkTreeModule,
     MatAutocompleteModule,
