@@ -1,0 +1,78 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"tables.push(tables.length)"</span>&gt;</span>Add table<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"tables.pop()"</span>&gt;</span>Remove table<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  Sticky Headers:
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle-group</span> <span class="hljs-attr">multiple</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"['header-1']"</span>
+                           #<span class="hljs-attr">stickyHeaders</span>=<span class="hljs-string">"matButtonToggleGroup"</span>
+                           <span class="hljs-attr">class</span>=<span class="hljs-string">"example-sticky-toggle-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"header-1"</span>&gt;</span> Row 1 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"header-2"</span>&gt;</span> Row 2 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  Sticky Footers:
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle-group</span> <span class="hljs-attr">multiple</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"['footer-1']"</span>
+                           #<span class="hljs-attr">stickyFooters</span>=<span class="hljs-string">"matButtonToggleGroup"</span>
+                           <span class="hljs-attr">class</span>=<span class="hljs-string">"example-sticky-toggle-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"footer-1"</span>&gt;</span> Row 1 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"footer-2"</span>&gt;</span> Row 2 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  Sticky Columns:
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle-group</span> <span class="hljs-attr">multiple</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"['position', 'symbol']"</span>
+                           #<span class="hljs-attr">stickyColumns</span>=<span class="hljs-string">"matButtonToggleGroup"</span>
+                           <span class="hljs-attr">class</span>=<span class="hljs-string">"example-sticky-toggle-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"position"</span>&gt;</span> Position <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"name"</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"weight"</span>&gt;</span> Weight <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"symbol"</span>&gt;</span> Symbol <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-button-toggle-group</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container mat-elevation-z8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let table of tables"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"position"</span> [<span class="hljs-attr">sticky</span>]=<span class="hljs-string">"isSticky(stickyColumns, 'position')"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Position <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-footer-cell</span> *<span class="hljs-attr">matFooterCellDef</span>&gt;</span> Position Footer <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"name"</span> [<span class="hljs-attr">sticky</span>]=<span class="hljs-string">"isSticky(stickyColumns, 'name')"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.name}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-footer-cell</span> *<span class="hljs-attr">matFooterCellDef</span>&gt;</span> Name Footer <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"weight"</span> [<span class="hljs-attr">stickyEnd</span>]=<span class="hljs-string">"isSticky(stickyColumns, 'weight')"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Weight <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.weight}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-footer-cell</span> *<span class="hljs-attr">matFooterCellDef</span>&gt;</span> Weight Footer <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"symbol"</span> [<span class="hljs-attr">stickyEnd</span>]=<span class="hljs-string">"isSticky(stickyColumns, 'symbol')"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Symbol <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.symbol}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-footer-cell</span> *<span class="hljs-attr">matFooterCellDef</span>&gt;</span> Symbol Footer <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"filler"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Filler header cell <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> Filler data cell <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-footer-cell</span> *<span class="hljs-attr">matFooterCellDef</span>&gt;</span> Filler footer cell <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"displayedColumns; sticky: isSticky(stickyHeaders, 'header-1')"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"displayedColumns; sticky: isSticky(stickyHeaders, 'header-2')"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-footer-row</span> *<span class="hljs-attr">matFooterRowDef</span>=<span class="hljs-string">"displayedColumns; sticky: isSticky(stickyFooters, 'footer-1')"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-footer-row</span> *<span class="hljs-attr">matFooterRowDef</span>=<span class="hljs-string">"displayedColumns; sticky: isSticky(stickyFooters, 'footer-2')"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

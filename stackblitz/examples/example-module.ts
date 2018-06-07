@@ -143,6 +143,11 @@ import {TablePaginationExample} from './table-pagination/table-pagination-exampl
 import {TableRowContextExample} from './table-row-context/table-row-context-example';
 import {TableSelectionExample} from './table-selection/table-selection-example';
 import {TableSortingExample} from './table-sorting/table-sorting-example';
+import {TableStickyColumnExample} from './table-sticky-columns/table-sticky-column-example';
+import {TableStickyComplexFlexExample} from './table-sticky-complex-flex/table-sticky-complex-flex-example';
+import {TableStickyComplexExample} from './table-sticky-complex/table-sticky-complex-example';
+import {TableStickyFooterExample} from './table-sticky-footer/table-sticky-footer-example';
+import {TableStickyHeaderExample} from './table-sticky-header/table-sticky-header-example';
 import {TabsOverviewExample} from './tabs-overview/tabs-overview-example';
 import {TabsTemplateLabelExample} from './tabs-template-label/tabs-template-label-example';
 import {TextFieldAutofillDirectiveExample} from './text-field-autofill-directive/text-field-autofill-directive-example';
@@ -740,6 +745,26 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Table with sorting',
     component: TableSortingExample
   },
+  'table-sticky-column': {
+    title: 'Table with a sticky columns',
+    component: TableStickyColumnExample
+  },
+  'table-sticky-complex-flex': {
+    title: 'Flex-layout tables with toggle-able sticky headers, footers, and columns',
+    component: TableStickyComplexFlexExample
+  },
+  'table-sticky-complex': {
+    title: 'Tables with toggle-able sticky headers, footers, and columns',
+    component: TableStickyComplexExample
+  },
+  'table-sticky-footer': {
+    title: 'Table with a sticky footer',
+    component: TableStickyFooterExample
+  },
+  'table-sticky-header': {
+    title: 'Table with sticky header',
+    component: TableStickyHeaderExample
+  },
   'tabs-overview': {
     title: 'Basic tabs',
     component: TabsOverviewExample
@@ -965,6 +990,11 @@ export const EXAMPLE_LIST = [
   TableRowContextExample,
   TableSelectionExample,
   TableSortingExample,
+  TableStickyColumnExample,
+  TableStickyComplexFlexExample,
+  TableStickyComplexExample,
+  TableStickyFooterExample,
+  TableStickyHeaderExample,
   TabsOverviewExample,
   TabsTemplateLabelExample,
   TextFieldAutofillDirectiveExample,

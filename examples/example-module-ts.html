@@ -143,6 +143,11 @@
 <span class="hljs-keyword">import</span> {TableRowContextExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-row-context/table-row-context-example'</span>;
 <span class="hljs-keyword">import</span> {TableSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-selection/table-selection-example'</span>;
 <span class="hljs-keyword">import</span> {TableSortingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sorting/table-sorting-example'</span>;
+<span class="hljs-keyword">import</span> {TableStickyColumnExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-columns/table-sticky-column-example'</span>;
+<span class="hljs-keyword">import</span> {TableStickyComplexFlexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-complex-flex/table-sticky-complex-flex-example'</span>;
+<span class="hljs-keyword">import</span> {TableStickyComplexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-complex/table-sticky-complex-example'</span>;
+<span class="hljs-keyword">import</span> {TableStickyFooterExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-footer/table-sticky-footer-example'</span>;
+<span class="hljs-keyword">import</span> {TableStickyHeaderExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-header/table-sticky-header-example'</span>;
 <span class="hljs-keyword">import</span> {TabsOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tabs-overview/tabs-overview-example'</span>;
 <span class="hljs-keyword">import</span> {TabsTemplateLabelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tabs-template-label/tabs-template-label-example'</span>;
 <span class="hljs-keyword">import</span> {TextFieldAutofillDirectiveExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./text-field-autofill-directive/text-field-autofill-directive-example'</span>;
@@ -740,6 +745,26 @@
     title: <span class="hljs-string">'Table with sorting'</span>,
     component: TableSortingExample
   },
+  <span class="hljs-string">'table-sticky-column'</span>: {
+    title: <span class="hljs-string">'Table with a sticky columns'</span>,
+    component: TableStickyColumnExample
+  },
+  <span class="hljs-string">'table-sticky-complex-flex'</span>: {
+    title: <span class="hljs-string">'Flex-layout tables with toggle-able sticky headers, footers, and columns'</span>,
+    component: TableStickyComplexFlexExample
+  },
+  <span class="hljs-string">'table-sticky-complex'</span>: {
+    title: <span class="hljs-string">'Tables with toggle-able sticky headers, footers, and columns'</span>,
+    component: TableStickyComplexExample
+  },
+  <span class="hljs-string">'table-sticky-footer'</span>: {
+    title: <span class="hljs-string">'Table with a sticky footer'</span>,
+    component: TableStickyFooterExample
+  },
+  <span class="hljs-string">'table-sticky-header'</span>: {
+    title: <span class="hljs-string">'Table with sticky header'</span>,
+    component: TableStickyHeaderExample
+  },
   <span class="hljs-string">'tabs-overview'</span>: {
     title: <span class="hljs-string">'Basic tabs'</span>,
     component: TabsOverviewExample
@@ -965,6 +990,11 @@
   TableRowContextExample,
   TableSelectionExample,
   TableSortingExample,
+  TableStickyColumnExample,
+  TableStickyComplexFlexExample,
+  TableStickyComplexExample,
+  TableStickyFooterExample,
+  TableStickyHeaderExample,
   TabsOverviewExample,
   TabsTemplateLabelExample,
   TextFieldAutofillDirectiveExample,
