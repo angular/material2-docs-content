@@ -5913,26 +5913,6 @@ var /** @type {?} */ ELEMENT_DATA$13 = [
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Complex Example
- */
-var TabsTemplateLabelExample = /** @class */ (function () {
-    function TabsTemplateLabelExample() {
-    }
-    TabsTemplateLabelExample.decorators = [
-        { type: core.Component, args: [{
-                    selector: 'tabs-template-label-example',
-                    template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Tabs with text labels</h2><mat-tab-group class=\"demo-tab-group\"><mat-tab label=\"Tab 1\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></mat-tab><mat-tab label=\"Tab 2\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></mat-tab><mat-tab label=\"Tab 3\" disabled=\"disabled\">No content</mat-tab><mat-tab label=\"Tab 4\"><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></mat-tab><mat-tab label=\"Tab 5\">No content</mat-tab><mat-tab label=\"Tab 6\">No content</mat-tab></mat-tab-group></mat-card-content></mat-card><mat-card><mat-card-content><h2 class=\"example-h2\">Tabs with icon labels</h2><mat-tab-group class=\"demo-tab-group\"><mat-tab label=\"Tab 1\"><ng-template mat-tab-label><mat-icon>security</mat-icon></ng-template><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></mat-tab><mat-tab label=\"Tab 2\"><ng-template mat-tab-label><mat-icon>attach_file</mat-icon></ng-template><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></mat-tab><mat-tab label=\"Tab 3\" disabled=\"disabled\"><ng-template mat-tab-label><mat-icon>block</mat-icon></ng-template>No content</mat-tab><mat-tab label=\"Tab 4\"><ng-template mat-tab-label><mat-icon>loop</mat-icon></ng-template><div class=\"demo-tab-content\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus.</div></mat-tab><mat-tab label=\"Tab 5\"><ng-template mat-tab-label><mat-icon>build</mat-icon></ng-template>No content</mat-tab><mat-tab label=\"Tab 6\"><ng-template mat-tab-label><mat-icon>thumb_down</mat-icon></ng-template>No content</mat-tab></mat-tab-group></mat-card-content></mat-card>",
-                    styles: [".demo-tab-group { border: 1px solid #e8e8e8; } .demo-tab-content { padding: 16px; } "]
-                },] },
-    ];
-    return TabsTemplateLabelExample;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
  * \@title Monitoring autofill state with cdkAutofill
  */
 var TextFieldAutofillDirectiveExample = /** @class */ (function () {
@@ -7923,10 +7903,6 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Table with sticky header',
         component: TableStickyHeaderExample
     },
-    'tabs-template-label': {
-        title: 'Complex Example',
-        component: TabsTemplateLabelExample
-    },
     'text-field-autofill-directive': {
         title: 'Monitoring autofill state with cdkAutofill',
         component: TextFieldAutofillDirectiveExample
@@ -8157,7 +8133,6 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TableStickyComplexExample,
     TableStickyFooterExample,
     TableStickyHeaderExample,
-    TabsTemplateLabelExample,
     TextFieldAutofillDirectiveExample,
     TextFieldAutofillMonitorExample,
     TextFieldAutosizeTextareaExample,
@@ -8321,7 +8296,7 @@ exports.ɵcy = InputOverviewExample;
 exports.ɵcz = InputPrefixSuffixExample;
 exports.ɵda = ListSectionsExample;
 exports.ɵdb = ListSelectionExample;
-exports.ɵhb = ExampleMaterialModule;
+exports.ɵha = ExampleMaterialModule;
 exports.ɵdc = MenuIconsExample;
 exports.ɵdd = MenuOverviewExample;
 exports.ɵde = NestedMenuExample;
@@ -8400,31 +8375,30 @@ exports.ɵfy = TableStickyComplexFlexExample;
 exports.ɵfz = TableStickyComplexExample;
 exports.ɵga = TableStickyFooterExample;
 exports.ɵgb = TableStickyHeaderExample;
-exports.ɵgc = TabsTemplateLabelExample;
-exports.ɵgd = TextFieldAutofillDirectiveExample;
-exports.ɵge = TextFieldAutofillMonitorExample;
-exports.ɵgf = TextFieldAutosizeTextareaExample;
-exports.ɵgg = ToolbarOverviewExample;
-exports.ɵgh = TooltipAutoHideExample;
-exports.ɵgi = TooltipCustomClassExample;
-exports.ɵgj = TooltipDelayExample;
-exports.ɵgk = TooltipDisabledExample;
-exports.ɵgl = TooltipManualExample;
-exports.ɵgm = TooltipMessageExample;
-exports.ɵgo = TooltipModifiedDefaultsExample;
-exports.ɵgn = myCustomTooltipDefaults;
-exports.ɵgp = TooltipOverviewExample;
-exports.ɵgq = TooltipPositionExample;
-exports.ɵgr = ChecklistDatabase;
-exports.ɵgs = TreeChecklistExample;
-exports.ɵgt = DynamicDatabase;
-exports.ɵgu = TreeDynamicExample;
-exports.ɵgv = FileDatabase$2;
-exports.ɵgw = TreeFlatOverviewExample;
-exports.ɵgx = LoadmoreDatabase;
-exports.ɵgy = TreeLoadmoreExample;
-exports.ɵgz = FileDatabase$3;
-exports.ɵha = TreeNestedOverviewExample;
+exports.ɵgc = TextFieldAutofillDirectiveExample;
+exports.ɵgd = TextFieldAutofillMonitorExample;
+exports.ɵge = TextFieldAutosizeTextareaExample;
+exports.ɵgf = ToolbarOverviewExample;
+exports.ɵgg = TooltipAutoHideExample;
+exports.ɵgh = TooltipCustomClassExample;
+exports.ɵgi = TooltipDelayExample;
+exports.ɵgj = TooltipDisabledExample;
+exports.ɵgk = TooltipManualExample;
+exports.ɵgl = TooltipMessageExample;
+exports.ɵgn = TooltipModifiedDefaultsExample;
+exports.ɵgm = myCustomTooltipDefaults;
+exports.ɵgo = TooltipOverviewExample;
+exports.ɵgp = TooltipPositionExample;
+exports.ɵgq = ChecklistDatabase;
+exports.ɵgr = TreeChecklistExample;
+exports.ɵgs = DynamicDatabase;
+exports.ɵgt = TreeDynamicExample;
+exports.ɵgu = FileDatabase$2;
+exports.ɵgv = TreeFlatOverviewExample;
+exports.ɵgw = LoadmoreDatabase;
+exports.ɵgx = TreeLoadmoreExample;
+exports.ɵgy = FileDatabase$3;
+exports.ɵgz = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

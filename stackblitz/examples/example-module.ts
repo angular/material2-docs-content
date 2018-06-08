@@ -157,7 +157,6 @@ import {TableStickyComplexFlexExample} from './table-sticky-complex-flex/table-s
 import {TableStickyComplexExample} from './table-sticky-complex/table-sticky-complex-example';
 import {TableStickyFooterExample} from './table-sticky-footer/table-sticky-footer-example';
 import {TableStickyHeaderExample} from './table-sticky-header/table-sticky-header-example';
-import {TabsTemplateLabelExample} from './tabs-template-label/tabs-template-label-example';
 import {TextFieldAutofillDirectiveExample} from './text-field-autofill-directive/text-field-autofill-directive-example';
 import {TextFieldAutofillMonitorExample} from './text-field-autofill-monitor/text-field-autofill-monitor-example';
 import {TextFieldAutosizeTextareaExample} from './text-field-autosize-textarea/text-field-autosize-textarea-example';
@@ -809,10 +808,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Table with sticky header',
     component: TableStickyHeaderExample
   },
-  'tabs-template-label': {
-    title: 'Complex Example',
-    component: TabsTemplateLabelExample
-  },
   'text-field-autofill-directive': {
     title: 'Monitoring autofill state with cdkAutofill',
     component: TextFieldAutofillDirectiveExample
@@ -1044,7 +1039,6 @@ export const EXAMPLE_LIST = [
   TableStickyComplexExample,
   TableStickyFooterExample,
   TableStickyHeaderExample,
-  TabsTemplateLabelExample,
   TextFieldAutofillDirectiveExample,
   TextFieldAutofillMonitorExample,
   TextFieldAutosizeTextareaExample,
