@@ -4872,7 +4872,7 @@ var TabGroupLazyLoadedExample = /** @class */ (function () {
     TabGroupLazyLoadedExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'tab-group-lazy-loaded-example',
-                    template: "<mat-tab-group><mat-tab label=\"First\"><ng-template matTabContent>Content 1 - Loaded: {{ getTimeLoaded(1) | date:'medium' }}</ng-template></mat-tab><mat-tab label=\"Second\"><ng-template matTabContent>Content 2 - Loaded: {{ getTimeLoaded(2) | date:'medium' }}</ng-template></mat-tab><mat-tab label=\"Third\"><ng-template matTabContent>Content 3 - Loaded: {{ getTimeLoaded(3) | date:'medium' }}</ng-template></mat-tab></mat-tab-group>",
+                    template: "<mat-tab-group><mat-tab label=\"First\"><ng-template matTabContent>Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}</ng-template></mat-tab><mat-tab label=\"Second\"><ng-template matTabContent>Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}</ng-template></mat-tab><mat-tab label=\"Third\"><ng-template matTabContent>Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}</ng-template></mat-tab></mat-tab-group>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
