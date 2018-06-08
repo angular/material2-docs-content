@@ -5686,19 +5686,19 @@ var /** @type {?} */ ELEMENT_DATA$9 = [
 /**
  * \@title Table with a sticky columns
  */
-var TableStickyColumnExample = /** @class */ (function () {
-    function TableStickyColumnExample() {
+var TableStickyColumnsExample = /** @class */ (function () {
+    function TableStickyColumnsExample() {
         this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
         this.dataSource = ELEMENT_DATA$10;
     }
-    TableStickyColumnExample.decorators = [
+    TableStickyColumnsExample.decorators = [
         { type: core.Component, args: [{
-                    selector: 'table-sticky-column-example',
+                    selector: 'table-sticky-columns-example',
                     styles: [".example-container { height: 400px; width: 550px; overflow: auto; } table { width: 800px; } td.mat-column-star { width: 20px; padding-right: 8px; } th.mat-column-position, td.mat-column-position { padding-left: 8px; } .mat-table-sticky:first-child { border-right: 1px solid #e0e0e0; } .mat-table-sticky:last-child { border-left: 1px solid #e0e0e0; } "],
                     template: "<div class=\"example-container mat-elevation-z8\"><table mat-table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"name\" sticky><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><ng-container matColumnDef=\"star\" stickyEnd><th mat-header-cell *matHeaderCellDef></th><td mat-cell *matCellDef=\"let element\"><mat-icon>more_vert</mat-icon></td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
                 },] },
     ];
-    return TableStickyColumnExample;
+    return TableStickyColumnsExample;
 }());
 var /** @type {?} */ ELEMENT_DATA$10 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -7883,9 +7883,9 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Table with sorting',
         component: TableSortingExample
     },
-    'table-sticky-column': {
+    'table-sticky-columns': {
         title: 'Table with a sticky columns',
-        component: TableStickyColumnExample
+        component: TableStickyColumnsExample
     },
     'table-sticky-complex-flex': {
         title: 'Flex-layout tables with toggle-able sticky headers, footers, and columns',
@@ -8128,7 +8128,7 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TableRowContextExample,
     TableSelectionExample,
     TableSortingExample,
-    TableStickyColumnExample,
+    TableStickyColumnsExample,
     TableStickyComplexFlexExample,
     TableStickyComplexExample,
     TableStickyFooterExample,
@@ -8370,7 +8370,7 @@ exports.ɵft = TablePaginationExample;
 exports.ɵfu = TableRowContextExample;
 exports.ɵfv = TableSelectionExample;
 exports.ɵfw = TableSortingExample;
-exports.ɵfx = TableStickyColumnExample;
+exports.ɵfx = TableStickyColumnsExample;
 exports.ɵfy = TableStickyComplexFlexExample;
 exports.ɵfz = TableStickyComplexExample;
 exports.ɵga = TableStickyFooterExample;

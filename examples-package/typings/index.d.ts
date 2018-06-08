@@ -144,7 +144,7 @@ export { TablePaginationExample as ɵft } from './table-pagination/table-paginat
 export { TableRowContextExample as ɵfu } from './table-row-context/table-row-context-example';
 export { TableSelectionExample as ɵfv } from './table-selection/table-selection-example';
 export { TableSortingExample as ɵfw } from './table-sorting/table-sorting-example';
-export { TableStickyColumnExample as ɵfx } from './table-sticky-columns/table-sticky-column-example';
+export { TableStickyColumnsExample as ɵfx } from './table-sticky-columns/table-sticky-columns-example';
 export { TableStickyComplexFlexExample as ɵfy } from './table-sticky-complex-flex/table-sticky-complex-flex-example';
 export { TableStickyComplexExample as ɵfz } from './table-sticky-complex/table-sticky-complex-example';
 export { TableStickyFooterExample as ɵga } from './table-sticky-footer/table-sticky-footer-example';

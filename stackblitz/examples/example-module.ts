@@ -152,7 +152,7 @@ import {TablePaginationExample} from './table-pagination/table-pagination-exampl
 import {TableRowContextExample} from './table-row-context/table-row-context-example';
 import {TableSelectionExample} from './table-selection/table-selection-example';
 import {TableSortingExample} from './table-sorting/table-sorting-example';
-import {TableStickyColumnExample} from './table-sticky-columns/table-sticky-column-example';
+import {TableStickyColumnsExample} from './table-sticky-columns/table-sticky-columns-example';
 import {TableStickyComplexFlexExample} from './table-sticky-complex-flex/table-sticky-complex-flex-example';
 import {TableStickyComplexExample} from './table-sticky-complex/table-sticky-complex-example';
 import {TableStickyFooterExample} from './table-sticky-footer/table-sticky-footer-example';
@@ -788,9 +788,9 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Table with sorting',
     component: TableSortingExample
   },
-  'table-sticky-column': {
+  'table-sticky-columns': {
     title: 'Table with a sticky columns',
-    component: TableStickyColumnExample
+    component: TableStickyColumnsExample
   },
   'table-sticky-complex-flex': {
     title: 'Flex-layout tables with toggle-able sticky headers, footers, and columns',
@@ -1034,7 +1034,7 @@ export const EXAMPLE_LIST = [
   TableRowContextExample,
   TableSelectionExample,
   TableSortingExample,
-  TableStickyColumnExample,
+  TableStickyColumnsExample,
   TableStickyComplexFlexExample,
   TableStickyComplexExample,
   TableStickyFooterExample,

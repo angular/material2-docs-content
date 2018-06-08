@@ -1,7 +1,7 @@
 /**
  * @title Table with a sticky columns
  */
-export declare class TableStickyColumnExample {
+export declare class TableStickyColumnsExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
 }
