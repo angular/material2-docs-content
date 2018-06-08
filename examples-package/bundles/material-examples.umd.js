@@ -4691,6 +4691,271 @@ var StepperVerticalExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Tab group with asynchronously loading tab contents
+ */
+var TabGroupAsyncExample = /** @class */ (function () {
+    function TabGroupAsyncExample() {
+        this.asyncTabs = rxjs.Observable.create(function (observer) {
+            setTimeout(function () {
+                observer.next([
+                    { label: 'First', content: 'Content 1' },
+                    { label: 'Second', content: 'Content 2' },
+                    { label: 'Third', content: 'Content 3' },
+                ]);
+            }, 1000);
+        });
+    }
+    TabGroupAsyncExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-group-async-example',
+                    template: "<ng-container *ngIf=\"(asyncTabs | async) === null\">Loading tabs...</ng-container><mat-tab-group><mat-tab *ngFor=\"let tab of asyncTabs | async\"><ng-template mat-tab-label>{{tab.label}}</ng-template>{{tab.content}}</mat-tab></mat-tab-group>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    TabGroupAsyncExample.ctorParameters = function () { return []; };
+    return TabGroupAsyncExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Basic use of the tab group
+ */
+var TabGroupBasicExample = /** @class */ (function () {
+    function TabGroupBasicExample() {
+    }
+    TabGroupBasicExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-group-basic-example',
+                    template: "<mat-tab-group><mat-tab label=\"First\">Content 1</mat-tab><mat-tab label=\"Second\">Content 2</mat-tab><mat-tab label=\"Third\">Content 3</mat-tab></mat-tab-group>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    return TabGroupBasicExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Using tabs with a custom label template
+ */
+var TabGroupCustomLabelExample = /** @class */ (function () {
+    function TabGroupCustomLabelExample() {
+    }
+    TabGroupCustomLabelExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-group-custom-label-example',
+                    template: "<mat-tab-group><mat-tab><ng-template mat-tab-label><mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>First</ng-template>Content 1</mat-tab><mat-tab><ng-template mat-tab-label><mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>Second</ng-template>Content 2</mat-tab><mat-tab><ng-template mat-tab-label><mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>Third</ng-template>Content 3</mat-tab></mat-tab-group>",
+                    styles: [".example-tab-icon { margin-right: 8px; } "],
+                },] },
+    ];
+    return TabGroupCustomLabelExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tag group with dynamic height based on tab contents
+ */
+var TabGroupDynamicHeightExample = /** @class */ (function () {
+    function TabGroupDynamicHeightExample() {
+    }
+    TabGroupDynamicHeightExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-group-dynamic-height-example',
+                    template: "<mat-tab-group dynamicHeight><mat-tab label=\"Short tab\"><div class=\"example-small-box mat-elevation-z4\">Small content</div></mat-tab><mat-tab label=\"Long tab\"><div class=\"example-large-box mat-elevation-z4\">Large content</div></mat-tab></mat-tab-group>",
+                    styles: [".example-small-box, .example-large-box { display: flex; align-items: center; justify-content: center; margin: 16px; padding: 16px; border-radius: 8px; } .example-small-box { height: 100px; width: 100px; } .example-large-box { height: 300px; width: 300px; } "],
+                },] },
+    ];
+    return TabGroupDynamicHeightExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tag group with dynamically changing tabs
+ */
+var TabGroupDynamicExample = /** @class */ (function () {
+    function TabGroupDynamicExample() {
+        this.tabs = ['First', 'Second', 'Third'];
+        this.selected = new forms.FormControl(0);
+    }
+    /**
+     * @param {?} selectAfterAdding
+     * @return {?}
+     */
+    TabGroupDynamicExample.prototype.addTab = /**
+     * @param {?} selectAfterAdding
+     * @return {?}
+     */
+    function (selectAfterAdding) {
+        this.tabs.push('New');
+        if (selectAfterAdding) {
+            this.selected.setValue(this.tabs.length - 1);
+        }
+    };
+    /**
+     * @param {?} index
+     * @return {?}
+     */
+    TabGroupDynamicExample.prototype.removeTab = /**
+     * @param {?} index
+     * @return {?}
+     */
+    function (index) {
+        this.tabs.splice(index, 1);
+    };
+    TabGroupDynamicExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-group-dynamic-example',
+                    template: "<div><span class=\"example-input-label\">Selected tab index:</span><mat-form-field><input matInput type=\"number\" [formControl]=\"selected\"></mat-form-field></div><div><button mat-raised-button class=\"example-add-tab-button\" (click)=\"addTab(selectAfterAdding.checked)\">Add new tab</button><mat-checkbox #selectAfterAdding>Select tab after adding</mat-checkbox></div><mat-tab-group [selectedIndex]=\"selected.value\" (selectedIndexChange)=\"selected.setValue($event)\"><mat-tab *ngFor=\"let tab of tabs; let index = index\" [label]=\"tab\">Contents for {{tab}} tab <button mat-raised-button class=\"example-delete-tab-button\" [disabled]=\"tabs.length === 1\" (click)=\"removeTab(index)\">Delete Tab</button></mat-tab></mat-tab-group>",
+                    styles: [".example-input-label, .example-add-tab-button, .example-delete-tab-button { margin: 8px; } "],
+                },] },
+    ];
+    return TabGroupDynamicExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tab group with the headers on the bottom
+ */
+var TabGroupHeaderBelowExample = /** @class */ (function () {
+    function TabGroupHeaderBelowExample() {
+    }
+    TabGroupHeaderBelowExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-group-header-below-example',
+                    template: "<mat-tab-group headerPosition=\"below\"><mat-tab label=\"First\">Content 1</mat-tab><mat-tab label=\"Second\">Content 2</mat-tab><mat-tab label=\"Third\">Content 3</mat-tab></mat-tab-group>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    return TabGroupHeaderBelowExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tab group where the tab content is loaded lazily (when activated)
+ */
+var TabGroupLazyLoadedExample = /** @class */ (function () {
+    function TabGroupLazyLoadedExample() {
+        this.tabLoadTimes = [];
+    }
+    /**
+     * @param {?} index
+     * @return {?}
+     */
+    TabGroupLazyLoadedExample.prototype.getTimeLoaded = /**
+     * @param {?} index
+     * @return {?}
+     */
+    function (index) {
+        if (!this.tabLoadTimes[index]) {
+            this.tabLoadTimes[index] = new Date();
+        }
+        return this.tabLoadTimes[index];
+    };
+    TabGroupLazyLoadedExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-group-lazy-loaded-example',
+                    template: "<mat-tab-group><mat-tab label=\"First\"><ng-template matTabContent>Content 1 - Loaded: {{ getTimeLoaded(1) | date:'medium' }}</ng-template></mat-tab><mat-tab label=\"Second\"><ng-template matTabContent>Content 2 - Loaded: {{ getTimeLoaded(2) | date:'medium' }}</ng-template></mat-tab><mat-tab label=\"Third\"><ng-template matTabContent>Content 3 - Loaded: {{ getTimeLoaded(3) | date:'medium' }}</ng-template></mat-tab></mat-tab-group>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    return TabGroupLazyLoadedExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tab group with stretched labels
+ */
+var TabGroupStretchedExample = /** @class */ (function () {
+    function TabGroupStretchedExample() {
+    }
+    TabGroupStretchedExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-group-stretched-example',
+                    template: "<mat-tab-group mat-stretch-tabs class=\"example-stretched-tabs mat-elevation-z4\"><mat-tab label=\"First\">Content 1</mat-tab><mat-tab label=\"Second\">Content 2</mat-tab><mat-tab label=\"Third\">Content 3</mat-tab></mat-tab-group>",
+                    styles: [".example-stretched-tabs { max-width: 800px; } "],
+                },] },
+    ];
+    return TabGroupStretchedExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Customizing the theme options on the tab group
+ */
+var TabGroupThemeExample = /** @class */ (function () {
+    function TabGroupThemeExample() {
+    }
+    TabGroupThemeExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-group-theme-example',
+                    template: "<div><mat-button-toggle-group #colorToggle=\"matButtonToggleGroup\" value=\"primary\" aria-label=\"Change color\"><mat-button-toggle value=\"primary\">Primary</mat-button-toggle><mat-button-toggle value=\"accent\">Accent</mat-button-toggle></mat-button-toggle-group><span class=\"example-button-toggle-label\">Color</span></div><div><mat-button-toggle-group #backgroundColorToggle=\"matButtonToggleGroup\" value=\"primary\" aria-label=\"Change color\"><mat-button-toggle value=\"primary\">Primary</mat-button-toggle><mat-button-toggle value=\"accent\">Accent</mat-button-toggle></mat-button-toggle-group><span class=\"example-button-toggle-label\">Background Color</span></div><mat-tab-group [color]=\"colorToggle.value\" [backgroundColor]=\"backgroundColorToggle.value\"><mat-tab label=\"First\">Content 1</mat-tab><mat-tab label=\"Second\">Content 2</mat-tab><mat-tab label=\"Third\">Content 3</mat-tab></mat-tab-group>",
+                    styles: [".example-button-toggle-label { display: inline-block; margin: 16px; } "],
+                },] },
+    ];
+    return TabGroupThemeExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Basic use of the tab nav bar
+ */
+var TabNavBarBasicExample = /** @class */ (function () {
+    function TabNavBarBasicExample() {
+        this.links = ['First', 'Second', 'Third'];
+        this.activeLink = this.links[0];
+        this.background = '';
+    }
+    /**
+     * @return {?}
+     */
+    TabNavBarBasicExample.prototype.toggleBackground = /**
+     * @return {?}
+     */
+    function () {
+        this.background = this.background ? '' : 'primary';
+    };
+    TabNavBarBasicExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-nav-bar-basic-example',
+                    template: "<button mat-raised-button class=\"example-action-button\" (click)=\"toggleBackground()\">Toggle background</button><nav mat-tab-nav-bar [backgroundColor]=\"background\"><a mat-tab-link *ngFor=\"let link of links\" (click)=\"activeLink = link\" [active]=\"activeLink == link\">{{ link }} </a><a mat-tab-link disabled=\"disabled\">Disabled Link</a></nav>",
+                    styles: [".example-action-button { margin-bottom: 8px; } "],
+                },] },
+    ];
+    return TabNavBarBasicExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Basic use of `<mat-table>` (uses display flex)
  */
 var TableBasicFlexExample = /** @class */ (function () {
@@ -5642,26 +5907,6 @@ var /** @type {?} */ ELEMENT_DATA$13 = [
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Basic tabs
- */
-var TabsOverviewExample = /** @class */ (function () {
-    function TabsOverviewExample() {
-    }
-    TabsOverviewExample.decorators = [
-        { type: core.Component, args: [{
-                    selector: 'tabs-overview-example',
-                    template: "<mat-tab-group><mat-tab label=\"Tab 1\">Content 1</mat-tab><mat-tab label=\"Tab 2\">Content 2</mat-tab></mat-tab-group>",
-                    styles: ["/** No CSS for this example */ "],
-                },] },
-    ];
-    return TabsOverviewExample;
-}());
 
 /**
  * @fileoverview added by tsickle
@@ -7566,6 +7811,46 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Stepper vertical',
         component: StepperVerticalExample
     },
+    'tab-group-async': {
+        title: 'Tab group with asynchronously loading tab contents',
+        component: TabGroupAsyncExample
+    },
+    'tab-group-basic': {
+        title: 'Basic use of the tab group',
+        component: TabGroupBasicExample
+    },
+    'tab-group-custom-label': {
+        title: 'Using tabs with a custom label template',
+        component: TabGroupCustomLabelExample
+    },
+    'tab-group-dynamic-height': {
+        title: 'Tag group with dynamic height based on tab contents',
+        component: TabGroupDynamicHeightExample
+    },
+    'tab-group-dynamic': {
+        title: 'Tag group with dynamically changing tabs',
+        component: TabGroupDynamicExample
+    },
+    'tab-group-header-below': {
+        title: 'Tab group with the headers on the bottom',
+        component: TabGroupHeaderBelowExample
+    },
+    'tab-group-lazy-loaded': {
+        title: 'Tab group where the tab content is loaded lazily (when activated)',
+        component: TabGroupLazyLoadedExample
+    },
+    'tab-group-stretched': {
+        title: 'Tab group with stretched labels',
+        component: TabGroupStretchedExample
+    },
+    'tab-group-theme': {
+        title: 'Customizing the theme options on the tab group',
+        component: TabGroupThemeExample
+    },
+    'tab-nav-bar-basic': {
+        title: 'Basic use of the tab nav bar',
+        component: TabNavBarBasicExample
+    },
     'table-basic-flex': {
         title: 'Basic use of `<mat-table>` (uses display flex)',
         component: TableBasicFlexExample
@@ -7637,10 +7922,6 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
     'table-sticky-header': {
         title: 'Table with sticky header',
         component: TableStickyHeaderExample
-    },
-    'tabs-overview': {
-        title: 'Basic tabs',
-        component: TabsOverviewExample
     },
     'tabs-template-label': {
         title: 'Complex Example',
@@ -7848,6 +8129,16 @@ var /** @type {?} */ EXAMPLE_LIST = [
     StepperOptionalExample,
     StepperOverviewExample,
     StepperVerticalExample,
+    TabGroupAsyncExample,
+    TabGroupBasicExample,
+    TabGroupCustomLabelExample,
+    TabGroupDynamicHeightExample,
+    TabGroupDynamicExample,
+    TabGroupHeaderBelowExample,
+    TabGroupLazyLoadedExample,
+    TabGroupStretchedExample,
+    TabGroupThemeExample,
+    TabNavBarBasicExample,
     TableBasicFlexExample,
     TableBasicExample,
     TableDynamicColumnsExample,
@@ -7866,7 +8157,6 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TableStickyComplexExample,
     TableStickyFooterExample,
     TableStickyHeaderExample,
-    TabsOverviewExample,
     TabsTemplateLabelExample,
     TextFieldAutofillDirectiveExample,
     TextFieldAutofillMonitorExample,
@@ -8031,7 +8321,7 @@ exports.ɵcy = InputOverviewExample;
 exports.ɵcz = InputPrefixSuffixExample;
 exports.ɵda = ListSectionsExample;
 exports.ɵdb = ListSelectionExample;
-exports.ɵgs = ExampleMaterialModule;
+exports.ɵhb = ExampleMaterialModule;
 exports.ɵdc = MenuIconsExample;
 exports.ɵdd = MenuOverviewExample;
 exports.ɵde = NestedMenuExample;
@@ -8082,50 +8372,59 @@ exports.ɵew = SortOverviewExample;
 exports.ɵex = StepperEditableExample;
 exports.ɵey = StepperOptionalExample;
 exports.ɵez = StepperVerticalExample;
-exports.ɵfa = TableBasicFlexExample;
-exports.ɵfb = TableBasicExample;
-exports.ɵfc = TableDynamicColumnsExample;
-exports.ɵfd = TableExpandableRowsExample;
-exports.ɵfe = TableFilteringExample;
-exports.ɵff = TableFooterRowExample;
-exports.ɵfg = TableHttpExample;
-exports.ɵfh = TableMultipleHeaderFooterExample;
-exports.ɵfi = TableOverviewExample;
-exports.ɵfj = TablePaginationExample;
-exports.ɵfk = TableRowContextExample;
-exports.ɵfl = TableSelectionExample;
-exports.ɵfm = TableSortingExample;
-exports.ɵfn = TableStickyColumnExample;
-exports.ɵfo = TableStickyComplexFlexExample;
-exports.ɵfp = TableStickyComplexExample;
-exports.ɵfq = TableStickyFooterExample;
-exports.ɵfr = TableStickyHeaderExample;
-exports.ɵfs = TabsOverviewExample;
-exports.ɵft = TabsTemplateLabelExample;
-exports.ɵfu = TextFieldAutofillDirectiveExample;
-exports.ɵfv = TextFieldAutofillMonitorExample;
-exports.ɵfw = TextFieldAutosizeTextareaExample;
-exports.ɵfx = ToolbarOverviewExample;
-exports.ɵfy = TooltipAutoHideExample;
-exports.ɵfz = TooltipCustomClassExample;
-exports.ɵga = TooltipDelayExample;
-exports.ɵgb = TooltipDisabledExample;
-exports.ɵgc = TooltipManualExample;
-exports.ɵgd = TooltipMessageExample;
-exports.ɵgf = TooltipModifiedDefaultsExample;
-exports.ɵge = myCustomTooltipDefaults;
-exports.ɵgg = TooltipOverviewExample;
-exports.ɵgh = TooltipPositionExample;
-exports.ɵgi = ChecklistDatabase;
-exports.ɵgj = TreeChecklistExample;
-exports.ɵgk = DynamicDatabase;
-exports.ɵgl = TreeDynamicExample;
-exports.ɵgm = FileDatabase$2;
-exports.ɵgn = TreeFlatOverviewExample;
-exports.ɵgo = LoadmoreDatabase;
-exports.ɵgp = TreeLoadmoreExample;
-exports.ɵgq = FileDatabase$3;
-exports.ɵgr = TreeNestedOverviewExample;
+exports.ɵfa = TabGroupAsyncExample;
+exports.ɵfb = TabGroupBasicExample;
+exports.ɵfc = TabGroupCustomLabelExample;
+exports.ɵfd = TabGroupDynamicHeightExample;
+exports.ɵfe = TabGroupDynamicExample;
+exports.ɵff = TabGroupHeaderBelowExample;
+exports.ɵfg = TabGroupLazyLoadedExample;
+exports.ɵfh = TabGroupStretchedExample;
+exports.ɵfi = TabGroupThemeExample;
+exports.ɵfj = TabNavBarBasicExample;
+exports.ɵfk = TableBasicFlexExample;
+exports.ɵfl = TableBasicExample;
+exports.ɵfm = TableDynamicColumnsExample;
+exports.ɵfn = TableExpandableRowsExample;
+exports.ɵfo = TableFilteringExample;
+exports.ɵfp = TableFooterRowExample;
+exports.ɵfq = TableHttpExample;
+exports.ɵfr = TableMultipleHeaderFooterExample;
+exports.ɵfs = TableOverviewExample;
+exports.ɵft = TablePaginationExample;
+exports.ɵfu = TableRowContextExample;
+exports.ɵfv = TableSelectionExample;
+exports.ɵfw = TableSortingExample;
+exports.ɵfx = TableStickyColumnExample;
+exports.ɵfy = TableStickyComplexFlexExample;
+exports.ɵfz = TableStickyComplexExample;
+exports.ɵga = TableStickyFooterExample;
+exports.ɵgb = TableStickyHeaderExample;
+exports.ɵgc = TabsTemplateLabelExample;
+exports.ɵgd = TextFieldAutofillDirectiveExample;
+exports.ɵge = TextFieldAutofillMonitorExample;
+exports.ɵgf = TextFieldAutosizeTextareaExample;
+exports.ɵgg = ToolbarOverviewExample;
+exports.ɵgh = TooltipAutoHideExample;
+exports.ɵgi = TooltipCustomClassExample;
+exports.ɵgj = TooltipDelayExample;
+exports.ɵgk = TooltipDisabledExample;
+exports.ɵgl = TooltipManualExample;
+exports.ɵgm = TooltipMessageExample;
+exports.ɵgo = TooltipModifiedDefaultsExample;
+exports.ɵgn = myCustomTooltipDefaults;
+exports.ɵgp = TooltipOverviewExample;
+exports.ɵgq = TooltipPositionExample;
+exports.ɵgr = ChecklistDatabase;
+exports.ɵgs = TreeChecklistExample;
+exports.ɵgt = DynamicDatabase;
+exports.ɵgu = TreeDynamicExample;
+exports.ɵgv = FileDatabase$2;
+exports.ɵgw = TreeFlatOverviewExample;
+exports.ɵgx = LoadmoreDatabase;
+exports.ɵgy = TreeLoadmoreExample;
+exports.ɵgz = FileDatabase$3;
+exports.ɵha = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

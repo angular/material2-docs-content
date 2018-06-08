@@ -1,0 +1,10 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"(asyncTabs | async) === null"</span>&gt;</span>
+  Loading tabs...
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let tab of asyncTabs | async"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">mat-tab-label</span>&gt;</span>{{tab.label}}<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+    {{tab.content}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>

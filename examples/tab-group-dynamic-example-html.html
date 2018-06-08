@@ -1,0 +1,29 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-input-label"</span>&gt;</span> Selected tab index: <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"selected"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"example-add-tab-button"</span>
+          (<span class="hljs-attr">click</span>)=<span class="hljs-string">"addTab(selectAfterAdding.checked)"</span>&gt;</span>
+    Add new tab
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> #<span class="hljs-attr">selectAfterAdding</span>&gt;</span> Select tab after adding <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-tab-group</span> [<span class="hljs-attr">selectedIndex</span>]=<span class="hljs-string">"selected.value"</span>
+               (<span class="hljs-attr">selectedIndexChange</span>)=<span class="hljs-string">"selected.setValue($event)"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tab</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let tab of tabs; let index = index"</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">"tab"</span>&gt;</span>
+    Contents for {{tab}} tab
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span>
+            <span class="hljs-attr">class</span>=<span class="hljs-string">"example-delete-tab-button"</span>
+            [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"tabs.length === 1"</span>
+            (<span class="hljs-attr">click</span>)=<span class="hljs-string">"removeTab(index)"</span>&gt;</span>
+      Delete Tab
+    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tab-group</span>&gt;</span>

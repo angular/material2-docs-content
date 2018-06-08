@@ -129,6 +129,16 @@ import {StepperEditableExample} from './stepper-editable/stepper-editable-exampl
 import {StepperOptionalExample} from './stepper-optional/stepper-optional-example';
 import {StepperOverviewExample} from './stepper-overview/stepper-overview-example';
 import {StepperVerticalExample} from './stepper-vertical/stepper-vertical-example';
+import {TabGroupAsyncExample} from './tab-group-async/tab-group-async-example';
+import {TabGroupBasicExample} from './tab-group-basic/tab-group-basic-example';
+import {TabGroupCustomLabelExample} from './tab-group-custom-label/tab-group-custom-label-example';
+import {TabGroupDynamicHeightExample} from './tab-group-dynamic-height/tab-group-dynamic-height-example';
+import {TabGroupDynamicExample} from './tab-group-dynamic/tab-group-dynamic-example';
+import {TabGroupHeaderBelowExample} from './tab-group-header-below/tab-group-header-below-example';
+import {TabGroupLazyLoadedExample} from './tab-group-lazy-loaded/tab-group-lazy-loaded-example';
+import {TabGroupStretchedExample} from './tab-group-stretched/tab-group-stretched-example';
+import {TabGroupThemeExample} from './tab-group-theme/tab-group-theme-example';
+import {TabNavBarBasicExample} from './tab-nav-bar-basic/tab-nav-bar-basic-example';
 import {TableBasicFlexExample} from './table-basic-flex/table-basic-flex-example';
 import {TableBasicExample} from './table-basic/table-basic-example';
 import {TableDynamicColumnsExample} from './table-dynamic-columns/table-dynamic-columns-example';
@@ -147,7 +157,6 @@ import {TableStickyComplexFlexExample} from './table-sticky-complex-flex/table-s
 import {TableStickyComplexExample} from './table-sticky-complex/table-sticky-complex-example';
 import {TableStickyFooterExample} from './table-sticky-footer/table-sticky-footer-example';
 import {TableStickyHeaderExample} from './table-sticky-header/table-sticky-header-example';
-import {TabsOverviewExample} from './tabs-overview/tabs-overview-example';
 import {TabsTemplateLabelExample} from './tabs-template-label/tabs-template-label-example';
 import {TextFieldAutofillDirectiveExample} from './text-field-autofill-directive/text-field-autofill-directive-example';
 import {TextFieldAutofillMonitorExample} from './text-field-autofill-monitor/text-field-autofill-monitor-example';
@@ -688,6 +697,46 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Stepper vertical',
     component: StepperVerticalExample
   },
+  'tab-group-async': {
+    title: 'Tab group with asynchronously loading tab contents',
+    component: TabGroupAsyncExample
+  },
+  'tab-group-basic': {
+    title: 'Basic use of the tab group',
+    component: TabGroupBasicExample
+  },
+  'tab-group-custom-label': {
+    title: 'Using tabs with a custom label template',
+    component: TabGroupCustomLabelExample
+  },
+  'tab-group-dynamic-height': {
+    title: 'Tag group with dynamic height based on tab contents',
+    component: TabGroupDynamicHeightExample
+  },
+  'tab-group-dynamic': {
+    title: 'Tag group with dynamically changing tabs',
+    component: TabGroupDynamicExample
+  },
+  'tab-group-header-below': {
+    title: 'Tab group with the headers on the bottom',
+    component: TabGroupHeaderBelowExample
+  },
+  'tab-group-lazy-loaded': {
+    title: 'Tab group where the tab content is loaded lazily (when activated)',
+    component: TabGroupLazyLoadedExample
+  },
+  'tab-group-stretched': {
+    title: 'Tab group with stretched labels',
+    component: TabGroupStretchedExample
+  },
+  'tab-group-theme': {
+    title: 'Customizing the theme options on the tab group',
+    component: TabGroupThemeExample
+  },
+  'tab-nav-bar-basic': {
+    title: 'Basic use of the tab nav bar',
+    component: TabNavBarBasicExample
+  },
   'table-basic-flex': {
     title: 'Basic use of `<mat-table>` (uses display flex)',
     component: TableBasicFlexExample
@@ -759,10 +808,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'table-sticky-header': {
     title: 'Table with sticky header',
     component: TableStickyHeaderExample
-  },
-  'tabs-overview': {
-    title: 'Basic tabs',
-    component: TabsOverviewExample
   },
   'tabs-template-label': {
     title: 'Complex Example',
@@ -971,6 +1016,16 @@ export const EXAMPLE_LIST = [
   StepperOptionalExample,
   StepperOverviewExample,
   StepperVerticalExample,
+  TabGroupAsyncExample,
+  TabGroupBasicExample,
+  TabGroupCustomLabelExample,
+  TabGroupDynamicHeightExample,
+  TabGroupDynamicExample,
+  TabGroupHeaderBelowExample,
+  TabGroupLazyLoadedExample,
+  TabGroupStretchedExample,
+  TabGroupThemeExample,
+  TabNavBarBasicExample,
   TableBasicFlexExample,
   TableBasicExample,
   TableDynamicColumnsExample,
@@ -989,7 +1044,6 @@ export const EXAMPLE_LIST = [
   TableStickyComplexExample,
   TableStickyFooterExample,
   TableStickyHeaderExample,
-  TabsOverviewExample,
   TabsTemplateLabelExample,
   TextFieldAutofillDirectiveExample,
   TextFieldAutofillMonitorExample,

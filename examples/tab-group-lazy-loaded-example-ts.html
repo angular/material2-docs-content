@@ -1,0 +1,21 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/**
+ * @title Tab group where the tab content is loaded lazily (when activated)
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tab-group-lazy-loaded-example'</span>,
+  templateUrl: <span class="hljs-string">'tab-group-lazy-loaded-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'tab-group-lazy-loaded-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TabGroupLazyLoadedExample {
+  tabLoadTimes: <span class="hljs-built_in">Date</span>[] = [];
+
+  getTimeLoaded(index: <span class="hljs-built_in">number</span>) {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.tabLoadTimes[index]) {
+      <span class="hljs-keyword">this</span>.tabLoadTimes[index] = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.tabLoadTimes[index];
+  }
+}

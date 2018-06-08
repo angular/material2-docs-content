@@ -1,0 +1,27 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-comment">/**
+ * @title Tag group with dynamically changing tabs
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'tab-group-dynamic-example'</span>,
+  templateUrl: <span class="hljs-string">'tab-group-dynamic-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'tab-group-dynamic-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TabGroupDynamicExample {
+  tabs = [<span class="hljs-string">'First'</span>, <span class="hljs-string">'Second'</span>, <span class="hljs-string">'Third'</span>];
+  selected = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-number">0</span>);
+
+  addTab(selectAfterAdding: <span class="hljs-built_in">boolean</span>) {
+    <span class="hljs-keyword">this</span>.tabs.push(<span class="hljs-string">'New'</span>);
+
+    <span class="hljs-keyword">if</span> (selectAfterAdding) {
+      <span class="hljs-keyword">this</span>.selected.setValue(<span class="hljs-keyword">this</span>.tabs.length - <span class="hljs-number">1</span>);
+    }
+  }
+
+  removeTab(index: <span class="hljs-built_in">number</span>) {
+    <span class="hljs-keyword">this</span>.tabs.splice(index, <span class="hljs-number">1</span>);
+  }
+}

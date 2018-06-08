@@ -15,7 +15,7 @@ import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule 
 import { map, startWith, takeUntil, catchError, switchMap, take } from 'rxjs/operators';
 import { __extends } from 'tslib';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
-import { BehaviorSubject, of, Subject, merge } from 'rxjs';
+import { BehaviorSubject, of, Subject, Observable, merge } from 'rxjs';
 import { MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource } from '@angular/material/tree';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
@@ -4683,6 +4683,271 @@ var StepperVerticalExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Tab group with asynchronously loading tab contents
+ */
+var TabGroupAsyncExample = /** @class */ (function () {
+    function TabGroupAsyncExample() {
+        this.asyncTabs = Observable.create(function (observer) {
+            setTimeout(function () {
+                observer.next([
+                    { label: 'First', content: 'Content 1' },
+                    { label: 'Second', content: 'Content 2' },
+                    { label: 'Third', content: 'Content 3' },
+                ]);
+            }, 1000);
+        });
+    }
+    TabGroupAsyncExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tab-group-async-example',
+                    template: "<ng-container *ngIf=\"(asyncTabs | async) === null\">Loading tabs...</ng-container><mat-tab-group><mat-tab *ngFor=\"let tab of asyncTabs | async\"><ng-template mat-tab-label>{{tab.label}}</ng-template>{{tab.content}}</mat-tab></mat-tab-group>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    TabGroupAsyncExample.ctorParameters = function () { return []; };
+    return TabGroupAsyncExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Basic use of the tab group
+ */
+var TabGroupBasicExample = /** @class */ (function () {
+    function TabGroupBasicExample() {
+    }
+    TabGroupBasicExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tab-group-basic-example',
+                    template: "<mat-tab-group><mat-tab label=\"First\">Content 1</mat-tab><mat-tab label=\"Second\">Content 2</mat-tab><mat-tab label=\"Third\">Content 3</mat-tab></mat-tab-group>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    return TabGroupBasicExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Using tabs with a custom label template
+ */
+var TabGroupCustomLabelExample = /** @class */ (function () {
+    function TabGroupCustomLabelExample() {
+    }
+    TabGroupCustomLabelExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tab-group-custom-label-example',
+                    template: "<mat-tab-group><mat-tab><ng-template mat-tab-label><mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>First</ng-template>Content 1</mat-tab><mat-tab><ng-template mat-tab-label><mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>Second</ng-template>Content 2</mat-tab><mat-tab><ng-template mat-tab-label><mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>Third</ng-template>Content 3</mat-tab></mat-tab-group>",
+                    styles: [".example-tab-icon { margin-right: 8px; } "],
+                },] },
+    ];
+    return TabGroupCustomLabelExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tag group with dynamic height based on tab contents
+ */
+var TabGroupDynamicHeightExample = /** @class */ (function () {
+    function TabGroupDynamicHeightExample() {
+    }
+    TabGroupDynamicHeightExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tab-group-dynamic-height-example',
+                    template: "<mat-tab-group dynamicHeight><mat-tab label=\"Short tab\"><div class=\"example-small-box mat-elevation-z4\">Small content</div></mat-tab><mat-tab label=\"Long tab\"><div class=\"example-large-box mat-elevation-z4\">Large content</div></mat-tab></mat-tab-group>",
+                    styles: [".example-small-box, .example-large-box { display: flex; align-items: center; justify-content: center; margin: 16px; padding: 16px; border-radius: 8px; } .example-small-box { height: 100px; width: 100px; } .example-large-box { height: 300px; width: 300px; } "],
+                },] },
+    ];
+    return TabGroupDynamicHeightExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tag group with dynamically changing tabs
+ */
+var TabGroupDynamicExample = /** @class */ (function () {
+    function TabGroupDynamicExample() {
+        this.tabs = ['First', 'Second', 'Third'];
+        this.selected = new FormControl(0);
+    }
+    /**
+     * @param {?} selectAfterAdding
+     * @return {?}
+     */
+    TabGroupDynamicExample.prototype.addTab = /**
+     * @param {?} selectAfterAdding
+     * @return {?}
+     */
+    function (selectAfterAdding) {
+        this.tabs.push('New');
+        if (selectAfterAdding) {
+            this.selected.setValue(this.tabs.length - 1);
+        }
+    };
+    /**
+     * @param {?} index
+     * @return {?}
+     */
+    TabGroupDynamicExample.prototype.removeTab = /**
+     * @param {?} index
+     * @return {?}
+     */
+    function (index) {
+        this.tabs.splice(index, 1);
+    };
+    TabGroupDynamicExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tab-group-dynamic-example',
+                    template: "<div><span class=\"example-input-label\">Selected tab index:</span><mat-form-field><input matInput type=\"number\" [formControl]=\"selected\"></mat-form-field></div><div><button mat-raised-button class=\"example-add-tab-button\" (click)=\"addTab(selectAfterAdding.checked)\">Add new tab</button><mat-checkbox #selectAfterAdding>Select tab after adding</mat-checkbox></div><mat-tab-group [selectedIndex]=\"selected.value\" (selectedIndexChange)=\"selected.setValue($event)\"><mat-tab *ngFor=\"let tab of tabs; let index = index\" [label]=\"tab\">Contents for {{tab}} tab <button mat-raised-button class=\"example-delete-tab-button\" [disabled]=\"tabs.length === 1\" (click)=\"removeTab(index)\">Delete Tab</button></mat-tab></mat-tab-group>",
+                    styles: [".example-input-label, .example-add-tab-button, .example-delete-tab-button { margin: 8px; } "],
+                },] },
+    ];
+    return TabGroupDynamicExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tab group with the headers on the bottom
+ */
+var TabGroupHeaderBelowExample = /** @class */ (function () {
+    function TabGroupHeaderBelowExample() {
+    }
+    TabGroupHeaderBelowExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tab-group-header-below-example',
+                    template: "<mat-tab-group headerPosition=\"below\"><mat-tab label=\"First\">Content 1</mat-tab><mat-tab label=\"Second\">Content 2</mat-tab><mat-tab label=\"Third\">Content 3</mat-tab></mat-tab-group>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    return TabGroupHeaderBelowExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tab group where the tab content is loaded lazily (when activated)
+ */
+var TabGroupLazyLoadedExample = /** @class */ (function () {
+    function TabGroupLazyLoadedExample() {
+        this.tabLoadTimes = [];
+    }
+    /**
+     * @param {?} index
+     * @return {?}
+     */
+    TabGroupLazyLoadedExample.prototype.getTimeLoaded = /**
+     * @param {?} index
+     * @return {?}
+     */
+    function (index) {
+        if (!this.tabLoadTimes[index]) {
+            this.tabLoadTimes[index] = new Date();
+        }
+        return this.tabLoadTimes[index];
+    };
+    TabGroupLazyLoadedExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tab-group-lazy-loaded-example',
+                    template: "<mat-tab-group><mat-tab label=\"First\"><ng-template matTabContent>Content 1 - Loaded: {{ getTimeLoaded(1) | date:'medium' }}</ng-template></mat-tab><mat-tab label=\"Second\"><ng-template matTabContent>Content 2 - Loaded: {{ getTimeLoaded(2) | date:'medium' }}</ng-template></mat-tab><mat-tab label=\"Third\"><ng-template matTabContent>Content 3 - Loaded: {{ getTimeLoaded(3) | date:'medium' }}</ng-template></mat-tab></mat-tab-group>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    return TabGroupLazyLoadedExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Tab group with stretched labels
+ */
+var TabGroupStretchedExample = /** @class */ (function () {
+    function TabGroupStretchedExample() {
+    }
+    TabGroupStretchedExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tab-group-stretched-example',
+                    template: "<mat-tab-group mat-stretch-tabs class=\"example-stretched-tabs mat-elevation-z4\"><mat-tab label=\"First\">Content 1</mat-tab><mat-tab label=\"Second\">Content 2</mat-tab><mat-tab label=\"Third\">Content 3</mat-tab></mat-tab-group>",
+                    styles: [".example-stretched-tabs { max-width: 800px; } "],
+                },] },
+    ];
+    return TabGroupStretchedExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Customizing the theme options on the tab group
+ */
+var TabGroupThemeExample = /** @class */ (function () {
+    function TabGroupThemeExample() {
+    }
+    TabGroupThemeExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tab-group-theme-example',
+                    template: "<div><mat-button-toggle-group #colorToggle=\"matButtonToggleGroup\" value=\"primary\" aria-label=\"Change color\"><mat-button-toggle value=\"primary\">Primary</mat-button-toggle><mat-button-toggle value=\"accent\">Accent</mat-button-toggle></mat-button-toggle-group><span class=\"example-button-toggle-label\">Color</span></div><div><mat-button-toggle-group #backgroundColorToggle=\"matButtonToggleGroup\" value=\"primary\" aria-label=\"Change color\"><mat-button-toggle value=\"primary\">Primary</mat-button-toggle><mat-button-toggle value=\"accent\">Accent</mat-button-toggle></mat-button-toggle-group><span class=\"example-button-toggle-label\">Background Color</span></div><mat-tab-group [color]=\"colorToggle.value\" [backgroundColor]=\"backgroundColorToggle.value\"><mat-tab label=\"First\">Content 1</mat-tab><mat-tab label=\"Second\">Content 2</mat-tab><mat-tab label=\"Third\">Content 3</mat-tab></mat-tab-group>",
+                    styles: [".example-button-toggle-label { display: inline-block; margin: 16px; } "],
+                },] },
+    ];
+    return TabGroupThemeExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Basic use of the tab nav bar
+ */
+var TabNavBarBasicExample = /** @class */ (function () {
+    function TabNavBarBasicExample() {
+        this.links = ['First', 'Second', 'Third'];
+        this.activeLink = this.links[0];
+        this.background = '';
+    }
+    /**
+     * @return {?}
+     */
+    TabNavBarBasicExample.prototype.toggleBackground = /**
+     * @return {?}
+     */
+    function () {
+        this.background = this.background ? '' : 'primary';
+    };
+    TabNavBarBasicExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tab-nav-bar-basic-example',
+                    template: "<button mat-raised-button class=\"example-action-button\" (click)=\"toggleBackground()\">Toggle background</button><nav mat-tab-nav-bar [backgroundColor]=\"background\"><a mat-tab-link *ngFor=\"let link of links\" (click)=\"activeLink = link\" [active]=\"activeLink == link\">{{ link }} </a><a mat-tab-link disabled=\"disabled\">Disabled Link</a></nav>",
+                    styles: [".example-action-button { margin-bottom: 8px; } "],
+                },] },
+    ];
+    return TabNavBarBasicExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Basic use of `<mat-table>` (uses display flex)
  */
 var TableBasicFlexExample = /** @class */ (function () {
@@ -5634,26 +5899,6 @@ var /** @type {?} */ ELEMENT_DATA$13 = [
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * \@title Basic tabs
- */
-var TabsOverviewExample = /** @class */ (function () {
-    function TabsOverviewExample() {
-    }
-    TabsOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'tabs-overview-example',
-                    template: "<mat-tab-group><mat-tab label=\"Tab 1\">Content 1</mat-tab><mat-tab label=\"Tab 2\">Content 2</mat-tab></mat-tab-group>",
-                    styles: ["/** No CSS for this example */ "],
-                },] },
-    ];
-    return TabsOverviewExample;
-}());
 
 /**
  * @fileoverview added by tsickle
@@ -7558,6 +7803,46 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Stepper vertical',
         component: StepperVerticalExample
     },
+    'tab-group-async': {
+        title: 'Tab group with asynchronously loading tab contents',
+        component: TabGroupAsyncExample
+    },
+    'tab-group-basic': {
+        title: 'Basic use of the tab group',
+        component: TabGroupBasicExample
+    },
+    'tab-group-custom-label': {
+        title: 'Using tabs with a custom label template',
+        component: TabGroupCustomLabelExample
+    },
+    'tab-group-dynamic-height': {
+        title: 'Tag group with dynamic height based on tab contents',
+        component: TabGroupDynamicHeightExample
+    },
+    'tab-group-dynamic': {
+        title: 'Tag group with dynamically changing tabs',
+        component: TabGroupDynamicExample
+    },
+    'tab-group-header-below': {
+        title: 'Tab group with the headers on the bottom',
+        component: TabGroupHeaderBelowExample
+    },
+    'tab-group-lazy-loaded': {
+        title: 'Tab group where the tab content is loaded lazily (when activated)',
+        component: TabGroupLazyLoadedExample
+    },
+    'tab-group-stretched': {
+        title: 'Tab group with stretched labels',
+        component: TabGroupStretchedExample
+    },
+    'tab-group-theme': {
+        title: 'Customizing the theme options on the tab group',
+        component: TabGroupThemeExample
+    },
+    'tab-nav-bar-basic': {
+        title: 'Basic use of the tab nav bar',
+        component: TabNavBarBasicExample
+    },
     'table-basic-flex': {
         title: 'Basic use of `<mat-table>` (uses display flex)',
         component: TableBasicFlexExample
@@ -7629,10 +7914,6 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
     'table-sticky-header': {
         title: 'Table with sticky header',
         component: TableStickyHeaderExample
-    },
-    'tabs-overview': {
-        title: 'Basic tabs',
-        component: TabsOverviewExample
     },
     'tabs-template-label': {
         title: 'Complex Example',
@@ -7840,6 +8121,16 @@ var /** @type {?} */ EXAMPLE_LIST = [
     StepperOptionalExample,
     StepperOverviewExample,
     StepperVerticalExample,
+    TabGroupAsyncExample,
+    TabGroupBasicExample,
+    TabGroupCustomLabelExample,
+    TabGroupDynamicHeightExample,
+    TabGroupDynamicExample,
+    TabGroupHeaderBelowExample,
+    TabGroupLazyLoadedExample,
+    TabGroupStretchedExample,
+    TabGroupThemeExample,
+    TabNavBarBasicExample,
     TableBasicFlexExample,
     TableBasicExample,
     TableDynamicColumnsExample,
@@ -7858,7 +8149,6 @@ var /** @type {?} */ EXAMPLE_LIST = [
     TableStickyComplexExample,
     TableStickyFooterExample,
     TableStickyHeaderExample,
-    TabsOverviewExample,
     TabsTemplateLabelExample,
     TextFieldAutofillDirectiveExample,
     TextFieldAutofillMonitorExample,
@@ -7942,5 +8232,5 @@ ExampleData = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleExclusiveExample as ɵk, ButtonTypesExample as ɵl, CardOverviewExample as ɵm, CdkTableBasicFlexExample as ɵn, CdkTableBasicExample as ɵo, CdkTreeFlatExample as ɵq, FileDatabase as ɵp, CdkTreeNestedExample as ɵs, FileDatabase$1 as ɵr, CheckboxConfigurableExample as ɵt, CheckboxOverviewExample as ɵu, ChipsAutocompleteExample as ɵv, ChipsInputExample as ɵw, ChipsOverviewExample as ɵx, ChipsStackedExample as ɵy, DatepickerApiExample as ɵz, DatepickerColorExample as ɵba, DatepickerCustomHeaderExample as ɵbb, ExampleHeader as ɵbc, DatepickerCustomIconExample as ɵbd, DatepickerDisabledExample as ɵbe, DatepickerEventsExample as ɵbf, DatepickerFilterExample as ɵbg, DatepickerFormatsExample as ɵbi, MY_FORMATS as ɵbh, DatepickerLocaleExample as ɵbj, DatepickerMinMaxExample as ɵbk, DatepickerMomentExample as ɵbl, DatepickerStartViewExample as ɵbm, DatepickerTouchExample as ɵbn, DatepickerValueExample as ɵbo, DatepickerViewsSelectionExample as ɵbq, MY_FORMATS$1 as ɵbp, DialogContentExample as ɵbr, DialogContentExampleDialog as ɵbs, DialogDataExample as ɵbt, DialogDataExampleDialog as ɵbu, DialogElementsExample as ɵbv, DialogElementsExampleDialog as ɵbw, DialogOverviewExample as ɵbx, DialogOverviewExampleDialog as ɵby, DividerOverviewExample as ɵbz, ElevationOverviewExample as ɵca, ExpansionExpandCollapseAllExample as ɵcb, ExpansionStepsExample as ɵcc, FocusMonitorDirectivesExample as ɵcd, FocusMonitorFocusViaExample as ɵce, FocusMonitorOverviewExample as ɵcf, FormFieldAppearanceExample as ɵcg, FormFieldCustomControlExample as ɵci, MyTelInput as ɵch, FormFieldErrorExample as ɵcj, FormFieldHintExample as ɵck, FormFieldLabelExample as ɵcl, FormFieldOverviewExample as ɵcm, FormFieldPrefixSuffixExample as ɵcn, FormFieldThemingExample as ɵco, GridListDynamicExample as ɵcp, GridListOverviewExample as ɵcq, IconOverviewExample as ɵcr, IconSvgExample as ɵcs, InputClearableExample as ɵct, InputErrorStateMatcherExample as ɵcu, InputErrorsExample as ɵcv, InputFormExample as ɵcw, InputHintExample as ɵcx, InputOverviewExample as ɵcy, InputPrefixSuffixExample as ɵcz, ListSectionsExample as ɵda, ListSelectionExample as ɵdb, ExampleMaterialModule as ɵgs, MenuIconsExample as ɵdc, MenuOverviewExample as ɵdd, NestedMenuExample as ɵde, PaginatorConfigurableExample as ɵdf, PaginatorOverviewExample as ɵdg, ProgressBarBufferExample as ɵdh, ProgressBarConfigurableExample as ɵdi, ProgressBarDeterminateExample as ɵdj, ProgressBarIndeterminateExample as ɵdk, ProgressBarQueryExample as ɵdl, ProgressSpinnerConfigurableExample as ɵdm, ProgressSpinnerOverviewExample as ɵdn, RadioNgModelExample as ɵdo, RadioOverviewExample as ɵdp, SelectCustomTriggerExample as ɵdq, SelectDisabledExample as ɵdr, SelectErrorStateMatcherExample as ɵds, SelectFormExample as ɵdt, SelectHintErrorExample as ɵdu, SelectMultipleExample as ɵdv, SelectNoRippleExample as ɵdw, SelectOptgroupExample as ɵdx, SelectOverviewExample as ɵdy, SelectPanelClassExample as ɵdz, SelectResetExample as ɵea, SelectValueBindingExample as ɵeb, SidenavAutosizeExample as ɵec, SidenavBackdropExample as ɵed, SidenavDisableCloseExample as ɵee, SidenavDrawerOverviewExample as ɵef, SidenavFixedExample as ɵeg, SidenavModeExample as ɵeh, SidenavOpenCloseExample as ɵei, SidenavOverviewExample as ɵej, SidenavPositionExample as ɵek, SidenavResponsiveExample as ɵel, SlideToggleConfigurableExample as ɵem, SlideToggleFormsExample as ɵen, SlideToggleOverviewExample as ɵeo, SliderConfigurableExample as ɵep, SliderFormattingExample as ɵeq, SliderOverviewExample as ɵer, PizzaPartyComponent as ɵet, SnackBarComponentExample as ɵes, SnackBarOverviewExample as ɵeu, SnackBarPositionExample as ɵev, SortOverviewExample as ɵew, StepperEditableExample as ɵex, StepperOptionalExample as ɵey, StepperVerticalExample as ɵez, TableBasicFlexExample as ɵfa, TableBasicExample as ɵfb, TableDynamicColumnsExample as ɵfc, TableExpandableRowsExample as ɵfd, TableFilteringExample as ɵfe, TableFooterRowExample as ɵff, TableHttpExample as ɵfg, TableMultipleHeaderFooterExample as ɵfh, TableOverviewExample as ɵfi, TablePaginationExample as ɵfj, TableRowContextExample as ɵfk, TableSelectionExample as ɵfl, TableSortingExample as ɵfm, TableStickyColumnExample as ɵfn, TableStickyComplexFlexExample as ɵfo, TableStickyComplexExample as ɵfp, TableStickyFooterExample as ɵfq, TableStickyHeaderExample as ɵfr, TabsOverviewExample as ɵfs, TabsTemplateLabelExample as ɵft, TextFieldAutofillDirectiveExample as ɵfu, TextFieldAutofillMonitorExample as ɵfv, TextFieldAutosizeTextareaExample as ɵfw, ToolbarOverviewExample as ɵfx, TooltipAutoHideExample as ɵfy, TooltipCustomClassExample as ɵfz, TooltipDelayExample as ɵga, TooltipDisabledExample as ɵgb, TooltipManualExample as ɵgc, TooltipMessageExample as ɵgd, TooltipModifiedDefaultsExample as ɵgf, myCustomTooltipDefaults as ɵge, TooltipOverviewExample as ɵgg, TooltipPositionExample as ɵgh, ChecklistDatabase as ɵgi, TreeChecklistExample as ɵgj, DynamicDatabase as ɵgk, TreeDynamicExample as ɵgl, FileDatabase$2 as ɵgm, TreeFlatOverviewExample as ɵgn, LoadmoreDatabase as ɵgo, TreeLoadmoreExample as ɵgp, FileDatabase$3 as ɵgq, TreeNestedOverviewExample as ɵgr };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleExclusiveExample as ɵk, ButtonTypesExample as ɵl, CardOverviewExample as ɵm, CdkTableBasicFlexExample as ɵn, CdkTableBasicExample as ɵo, CdkTreeFlatExample as ɵq, FileDatabase as ɵp, CdkTreeNestedExample as ɵs, FileDatabase$1 as ɵr, CheckboxConfigurableExample as ɵt, CheckboxOverviewExample as ɵu, ChipsAutocompleteExample as ɵv, ChipsInputExample as ɵw, ChipsOverviewExample as ɵx, ChipsStackedExample as ɵy, DatepickerApiExample as ɵz, DatepickerColorExample as ɵba, DatepickerCustomHeaderExample as ɵbb, ExampleHeader as ɵbc, DatepickerCustomIconExample as ɵbd, DatepickerDisabledExample as ɵbe, DatepickerEventsExample as ɵbf, DatepickerFilterExample as ɵbg, DatepickerFormatsExample as ɵbi, MY_FORMATS as ɵbh, DatepickerLocaleExample as ɵbj, DatepickerMinMaxExample as ɵbk, DatepickerMomentExample as ɵbl, DatepickerStartViewExample as ɵbm, DatepickerTouchExample as ɵbn, DatepickerValueExample as ɵbo, DatepickerViewsSelectionExample as ɵbq, MY_FORMATS$1 as ɵbp, DialogContentExample as ɵbr, DialogContentExampleDialog as ɵbs, DialogDataExample as ɵbt, DialogDataExampleDialog as ɵbu, DialogElementsExample as ɵbv, DialogElementsExampleDialog as ɵbw, DialogOverviewExample as ɵbx, DialogOverviewExampleDialog as ɵby, DividerOverviewExample as ɵbz, ElevationOverviewExample as ɵca, ExpansionExpandCollapseAllExample as ɵcb, ExpansionStepsExample as ɵcc, FocusMonitorDirectivesExample as ɵcd, FocusMonitorFocusViaExample as ɵce, FocusMonitorOverviewExample as ɵcf, FormFieldAppearanceExample as ɵcg, FormFieldCustomControlExample as ɵci, MyTelInput as ɵch, FormFieldErrorExample as ɵcj, FormFieldHintExample as ɵck, FormFieldLabelExample as ɵcl, FormFieldOverviewExample as ɵcm, FormFieldPrefixSuffixExample as ɵcn, FormFieldThemingExample as ɵco, GridListDynamicExample as ɵcp, GridListOverviewExample as ɵcq, IconOverviewExample as ɵcr, IconSvgExample as ɵcs, InputClearableExample as ɵct, InputErrorStateMatcherExample as ɵcu, InputErrorsExample as ɵcv, InputFormExample as ɵcw, InputHintExample as ɵcx, InputOverviewExample as ɵcy, InputPrefixSuffixExample as ɵcz, ListSectionsExample as ɵda, ListSelectionExample as ɵdb, ExampleMaterialModule as ɵhb, MenuIconsExample as ɵdc, MenuOverviewExample as ɵdd, NestedMenuExample as ɵde, PaginatorConfigurableExample as ɵdf, PaginatorOverviewExample as ɵdg, ProgressBarBufferExample as ɵdh, ProgressBarConfigurableExample as ɵdi, ProgressBarDeterminateExample as ɵdj, ProgressBarIndeterminateExample as ɵdk, ProgressBarQueryExample as ɵdl, ProgressSpinnerConfigurableExample as ɵdm, ProgressSpinnerOverviewExample as ɵdn, RadioNgModelExample as ɵdo, RadioOverviewExample as ɵdp, SelectCustomTriggerExample as ɵdq, SelectDisabledExample as ɵdr, SelectErrorStateMatcherExample as ɵds, SelectFormExample as ɵdt, SelectHintErrorExample as ɵdu, SelectMultipleExample as ɵdv, SelectNoRippleExample as ɵdw, SelectOptgroupExample as ɵdx, SelectOverviewExample as ɵdy, SelectPanelClassExample as ɵdz, SelectResetExample as ɵea, SelectValueBindingExample as ɵeb, SidenavAutosizeExample as ɵec, SidenavBackdropExample as ɵed, SidenavDisableCloseExample as ɵee, SidenavDrawerOverviewExample as ɵef, SidenavFixedExample as ɵeg, SidenavModeExample as ɵeh, SidenavOpenCloseExample as ɵei, SidenavOverviewExample as ɵej, SidenavPositionExample as ɵek, SidenavResponsiveExample as ɵel, SlideToggleConfigurableExample as ɵem, SlideToggleFormsExample as ɵen, SlideToggleOverviewExample as ɵeo, SliderConfigurableExample as ɵep, SliderFormattingExample as ɵeq, SliderOverviewExample as ɵer, PizzaPartyComponent as ɵet, SnackBarComponentExample as ɵes, SnackBarOverviewExample as ɵeu, SnackBarPositionExample as ɵev, SortOverviewExample as ɵew, StepperEditableExample as ɵex, StepperOptionalExample as ɵey, StepperVerticalExample as ɵez, TabGroupAsyncExample as ɵfa, TabGroupBasicExample as ɵfb, TabGroupCustomLabelExample as ɵfc, TabGroupDynamicHeightExample as ɵfd, TabGroupDynamicExample as ɵfe, TabGroupHeaderBelowExample as ɵff, TabGroupLazyLoadedExample as ɵfg, TabGroupStretchedExample as ɵfh, TabGroupThemeExample as ɵfi, TabNavBarBasicExample as ɵfj, TableBasicFlexExample as ɵfk, TableBasicExample as ɵfl, TableDynamicColumnsExample as ɵfm, TableExpandableRowsExample as ɵfn, TableFilteringExample as ɵfo, TableFooterRowExample as ɵfp, TableHttpExample as ɵfq, TableMultipleHeaderFooterExample as ɵfr, TableOverviewExample as ɵfs, TablePaginationExample as ɵft, TableRowContextExample as ɵfu, TableSelectionExample as ɵfv, TableSortingExample as ɵfw, TableStickyColumnExample as ɵfx, TableStickyComplexFlexExample as ɵfy, TableStickyComplexExample as ɵfz, TableStickyFooterExample as ɵga, TableStickyHeaderExample as ɵgb, TabsTemplateLabelExample as ɵgc, TextFieldAutofillDirectiveExample as ɵgd, TextFieldAutofillMonitorExample as ɵge, TextFieldAutosizeTextareaExample as ɵgf, ToolbarOverviewExample as ɵgg, TooltipAutoHideExample as ɵgh, TooltipCustomClassExample as ɵgi, TooltipDelayExample as ɵgj, TooltipDisabledExample as ɵgk, TooltipManualExample as ɵgl, TooltipMessageExample as ɵgm, TooltipModifiedDefaultsExample as ɵgo, myCustomTooltipDefaults as ɵgn, TooltipOverviewExample as ɵgp, TooltipPositionExample as ɵgq, ChecklistDatabase as ɵgr, TreeChecklistExample as ɵgs, DynamicDatabase as ɵgt, TreeDynamicExample as ɵgu, FileDatabase$2 as ɵgv, TreeFlatOverviewExample as ɵgw, LoadmoreDatabase as ɵgx, TreeLoadmoreExample as ɵgy, FileDatabase$3 as ɵgz, TreeNestedOverviewExample as ɵha };
 //# sourceMappingURL=material-examples.es5.js.map

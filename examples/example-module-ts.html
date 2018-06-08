@@ -129,6 +129,16 @@
 <span class="hljs-keyword">import</span> {StepperOptionalExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-optional/stepper-optional-example'</span>;
 <span class="hljs-keyword">import</span> {StepperOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-overview/stepper-overview-example'</span>;
 <span class="hljs-keyword">import</span> {StepperVerticalExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-vertical/stepper-vertical-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupAsyncExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-async/tab-group-async-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-basic/tab-group-basic-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupCustomLabelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-custom-label/tab-group-custom-label-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupDynamicHeightExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-dynamic-height/tab-group-dynamic-height-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupDynamicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-dynamic/tab-group-dynamic-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupHeaderBelowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-header-below/tab-group-header-below-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupLazyLoadedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-lazy-loaded/tab-group-lazy-loaded-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupStretchedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-stretched/tab-group-stretched-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupThemeExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-theme/tab-group-theme-example'</span>;
+<span class="hljs-keyword">import</span> {TabNavBarBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-nav-bar-basic/tab-nav-bar-basic-example'</span>;
 <span class="hljs-keyword">import</span> {TableBasicFlexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-basic-flex/table-basic-flex-example'</span>;
 <span class="hljs-keyword">import</span> {TableBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-basic/table-basic-example'</span>;
 <span class="hljs-keyword">import</span> {TableDynamicColumnsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-dynamic-columns/table-dynamic-columns-example'</span>;
@@ -147,7 +157,6 @@
 <span class="hljs-keyword">import</span> {TableStickyComplexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-complex/table-sticky-complex-example'</span>;
 <span class="hljs-keyword">import</span> {TableStickyFooterExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-footer/table-sticky-footer-example'</span>;
 <span class="hljs-keyword">import</span> {TableStickyHeaderExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-header/table-sticky-header-example'</span>;
-<span class="hljs-keyword">import</span> {TabsOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tabs-overview/tabs-overview-example'</span>;
 <span class="hljs-keyword">import</span> {TabsTemplateLabelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tabs-template-label/tabs-template-label-example'</span>;
 <span class="hljs-keyword">import</span> {TextFieldAutofillDirectiveExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./text-field-autofill-directive/text-field-autofill-directive-example'</span>;
 <span class="hljs-keyword">import</span> {TextFieldAutofillMonitorExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./text-field-autofill-monitor/text-field-autofill-monitor-example'</span>;
@@ -688,6 +697,46 @@
     title: <span class="hljs-string">'Stepper vertical'</span>,
     component: StepperVerticalExample
   },
+  <span class="hljs-string">'tab-group-async'</span>: {
+    title: <span class="hljs-string">'Tab group with asynchronously loading tab contents'</span>,
+    component: TabGroupAsyncExample
+  },
+  <span class="hljs-string">'tab-group-basic'</span>: {
+    title: <span class="hljs-string">'Basic use of the tab group'</span>,
+    component: TabGroupBasicExample
+  },
+  <span class="hljs-string">'tab-group-custom-label'</span>: {
+    title: <span class="hljs-string">'Using tabs with a custom label template'</span>,
+    component: TabGroupCustomLabelExample
+  },
+  <span class="hljs-string">'tab-group-dynamic-height'</span>: {
+    title: <span class="hljs-string">'Tag group with dynamic height based on tab contents'</span>,
+    component: TabGroupDynamicHeightExample
+  },
+  <span class="hljs-string">'tab-group-dynamic'</span>: {
+    title: <span class="hljs-string">'Tag group with dynamically changing tabs'</span>,
+    component: TabGroupDynamicExample
+  },
+  <span class="hljs-string">'tab-group-header-below'</span>: {
+    title: <span class="hljs-string">'Tab group with the headers on the bottom'</span>,
+    component: TabGroupHeaderBelowExample
+  },
+  <span class="hljs-string">'tab-group-lazy-loaded'</span>: {
+    title: <span class="hljs-string">'Tab group where the tab content is loaded lazily (when activated)'</span>,
+    component: TabGroupLazyLoadedExample
+  },
+  <span class="hljs-string">'tab-group-stretched'</span>: {
+    title: <span class="hljs-string">'Tab group with stretched labels'</span>,
+    component: TabGroupStretchedExample
+  },
+  <span class="hljs-string">'tab-group-theme'</span>: {
+    title: <span class="hljs-string">'Customizing the theme options on the tab group'</span>,
+    component: TabGroupThemeExample
+  },
+  <span class="hljs-string">'tab-nav-bar-basic'</span>: {
+    title: <span class="hljs-string">'Basic use of the tab nav bar'</span>,
+    component: TabNavBarBasicExample
+  },
   <span class="hljs-string">'table-basic-flex'</span>: {
     title: <span class="hljs-string">'Basic use of `&lt;mat-table&gt;` (uses display flex)'</span>,
     component: TableBasicFlexExample
@@ -759,10 +808,6 @@
   <span class="hljs-string">'table-sticky-header'</span>: {
     title: <span class="hljs-string">'Table with sticky header'</span>,
     component: TableStickyHeaderExample
-  },
-  <span class="hljs-string">'tabs-overview'</span>: {
-    title: <span class="hljs-string">'Basic tabs'</span>,
-    component: TabsOverviewExample
   },
   <span class="hljs-string">'tabs-template-label'</span>: {
     title: <span class="hljs-string">'Complex Example'</span>,
@@ -971,6 +1016,16 @@
   StepperOptionalExample,
   StepperOverviewExample,
   StepperVerticalExample,
+  TabGroupAsyncExample,
+  TabGroupBasicExample,
+  TabGroupCustomLabelExample,
+  TabGroupDynamicHeightExample,
+  TabGroupDynamicExample,
+  TabGroupHeaderBelowExample,
+  TabGroupLazyLoadedExample,
+  TabGroupStretchedExample,
+  TabGroupThemeExample,
+  TabNavBarBasicExample,
   TableBasicFlexExample,
   TableBasicExample,
   TableDynamicColumnsExample,
@@ -989,7 +1044,6 @@
   TableStickyComplexExample,
   TableStickyFooterExample,
   TableStickyHeaderExample,
-  TabsOverviewExample,
   TabsTemplateLabelExample,
   TextFieldAutofillDirectiveExample,
   TextFieldAutofillMonitorExample,
