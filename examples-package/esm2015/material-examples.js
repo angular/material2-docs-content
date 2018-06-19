@@ -6055,7 +6055,10 @@ class DynamicDataSource {
                 this.data.splice(index + 1, 0, ...nodes);
             }
             else {
-                this.data.splice(index + 1, children.length);
+                let /** @type {?} */ count = 0;
+                for (let /** @type {?} */ i = index + 1; i < this.data.length
+                    && this.data[i].level > node.level; i++, count++) { }
+                this.data.splice(index + 1, count);
             }
             // notify the change
             this.dataChange.next(this.data);

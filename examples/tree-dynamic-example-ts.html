@@ -100,7 +100,10 @@
           <span class="hljs-keyword">new</span> DynamicFlatNode(name, node.level + <span class="hljs-number">1</span>, <span class="hljs-keyword">this</span>.database.isExpandable(name)));
         <span class="hljs-keyword">this</span>.data.splice(index + <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, ...nodes);
       } <span class="hljs-keyword">else</span> {
-        <span class="hljs-keyword">this</span>.data.splice(index + <span class="hljs-number">1</span>, children.length);
+        <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = index + <span class="hljs-number">1</span>; i &lt; <span class="hljs-keyword">this</span>.data.length
+          &amp;&amp; <span class="hljs-keyword">this</span>.data[i].level &gt; node.level; i++, count++) {}
+        <span class="hljs-keyword">this</span>.data.splice(index + <span class="hljs-number">1</span>, count);
       }
 
       <span class="hljs-comment">// notify the change</span>

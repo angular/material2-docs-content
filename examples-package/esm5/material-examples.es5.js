@@ -6738,7 +6738,10 @@ var DynamicDataSource = /** @class */ (function () {
                 (_a = _this.data).splice.apply(_a, [index + 1, 0].concat(nodes));
             }
             else {
-                _this.data.splice(index + 1, children.length);
+                var /** @type {?} */ count = 0;
+                for (var /** @type {?} */ i = index + 1; i < _this.data.length
+                    && _this.data[i].level > node.level; i++, count++) { }
+                _this.data.splice(index + 1, count);
             }
             // notify the change
             // notify the change
