@@ -13,7 +13,7 @@
   templateUrl: <span class="hljs-string">'table-http-example.html'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableHttpExample <span class="hljs-keyword">implements</span> OnInit {
-  displayedColumns = [<span class="hljs-string">'created'</span>, <span class="hljs-string">'state'</span>, <span class="hljs-string">'number'</span>, <span class="hljs-string">'title'</span>];
+  displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'created'</span>, <span class="hljs-string">'state'</span>, <span class="hljs-string">'number'</span>, <span class="hljs-string">'title'</span>];
   exampleDatabase: ExampleHttpDao | <span class="hljs-literal">null</span>;
   data: GithubIssue[] = [];
 

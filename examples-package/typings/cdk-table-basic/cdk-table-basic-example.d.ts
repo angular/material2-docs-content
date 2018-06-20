@@ -1,17 +1,17 @@
 import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, Observable } from 'rxjs';
+export interface PeriodicElement {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 /**
  * @title Basic CDK data-table
  */
 export declare class CdkTableBasicExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource;
-}
-export interface PeriodicElement {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

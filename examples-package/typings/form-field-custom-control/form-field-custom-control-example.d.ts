@@ -21,10 +21,10 @@ export declare class MyTelInput implements MatFormFieldControl<MyTel>, OnDestroy
     ngControl: null;
     errorState: boolean;
     controlType: string;
-    readonly empty: boolean;
-    readonly shouldLabelFloat: boolean;
     id: string;
     describedBy: string;
+    readonly empty: boolean;
+    readonly shouldLabelFloat: boolean;
     placeholder: string;
     private _placeholder;
     required: boolean;

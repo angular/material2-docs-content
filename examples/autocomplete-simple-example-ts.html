@@ -7,16 +7,9 @@
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'autocomplete-simple-example'</span>,
   templateUrl: <span class="hljs-string">'autocomplete-simple-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'autocomplete-simple-example.css'</span>]
+  styleUrls: [<span class="hljs-string">'autocomplete-simple-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AutocompleteSimpleExample {
-
-  myControl: FormControl = <span class="hljs-keyword">new</span> FormControl();
-
-  options = [
-    <span class="hljs-string">'One'</span>,
-    <span class="hljs-string">'Two'</span>,
-    <span class="hljs-string">'Three'</span>
-   ];
-
+  myControl = <span class="hljs-keyword">new</span> FormControl();
+  options: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'One'</span>, <span class="hljs-string">'Two'</span>, <span class="hljs-string">'Three'</span>];
 }

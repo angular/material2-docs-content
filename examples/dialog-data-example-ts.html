@@ -1,13 +1,17 @@
 <span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatDialog, MAT_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> DialogData {
+  animal: <span class="hljs-string">'panda'</span> | <span class="hljs-string">'unicorn'</span> | <span class="hljs-string">'lion'</span>;
+}
+
 <span class="hljs-comment">/**
  * @title Injecting data when opening a dialog
  */</span>
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'dialog-data-example'</span>,
   templateUrl: <span class="hljs-string">'dialog-data-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'dialog-data-example.css'</span>]
+  styleUrls: [<span class="hljs-string">'dialog-data-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogDataExample {
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> dialog: MatDialog</span>) {}
@@ -26,5 +30,5 @@
   templateUrl: <span class="hljs-string">'dialog-data-example-dialog.html'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogDataExampleDialog {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">@Inject(MAT_DIALOG_DATA</span>) public data: any) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">@Inject(MAT_DIALOG_DATA</span>) public data: DialogData) {}
 }

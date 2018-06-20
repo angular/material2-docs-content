@@ -10,9 +10,9 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavResponsiveExample <span class="hljs-keyword">implements</span> OnDestroy {
   mobileQuery: MediaQueryList;
 
-  fillerNav = <span class="hljs-built_in">Array</span>(<span class="hljs-number">50</span>).fill(<span class="hljs-number">0</span>).map(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Nav Item <span class="hljs-subst">${i + 1}</span>`</span>);
+  fillerNav = <span class="hljs-built_in">Array</span>.from({length: <span class="hljs-number">50</span>}, <span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Nav Item <span class="hljs-subst">${i + 1}</span>`</span>);
 
-  fillerContent = <span class="hljs-built_in">Array</span>(<span class="hljs-number">50</span>).fill(<span class="hljs-number">0</span>).map(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span>
+  fillerContent = <span class="hljs-built_in">Array</span>.from({length: <span class="hljs-number">50</span>}, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span>
       <span class="hljs-string">`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in

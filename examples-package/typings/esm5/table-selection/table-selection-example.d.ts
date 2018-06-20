@@ -1,5 +1,11 @@
-import { MatTableDataSource } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
+import { MatTableDataSource } from '@angular/material';
+export interface PeriodicElement {
+    name: string;
+    position: number;
+    weight: number;
+    symbol: string;
+}
 /**
  * @title Table with selection
  */
@@ -11,10 +17,4 @@ export declare class TableSelectionExample {
     isAllSelected(): boolean;
     /** Selects all rows if they are not all selected; otherwise clear selection. */
     masterToggle(): void;
-}
-export interface PeriodicElement {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
 }

@@ -4,8 +4,7 @@
   Component,
   Host,
   Inject,
-  OnDestroy,
-  ViewEncapsulation
+  OnDestroy
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatCalendar} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 <span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MatDateFormats} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
@@ -17,7 +16,6 @@
   selector: <span class="hljs-string">'datepicker-custom-header-example'</span>,
   templateUrl: <span class="hljs-string">'datepicker-custom-header-example.html'</span>,
   styleUrls: [<span class="hljs-string">'datepicker-custom-header-example.css'</span>],
-  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatepickerCustomHeaderExample {
@@ -46,7 +44,6 @@
       &lt;/button&gt;
     &lt;/div&gt;
   `</span>,
-  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleHeader&lt;D&gt; <span class="hljs-keyword">implements</span> OnDestroy {
@@ -73,13 +70,13 @@
   }
 
   previousClicked(mode: <span class="hljs-string">'month'</span> | <span class="hljs-string">'year'</span>) {
-    <span class="hljs-keyword">this</span>.calendar.activeDate = mode == <span class="hljs-string">'month'</span> ?
+    <span class="hljs-keyword">this</span>.calendar.activeDate = mode === <span class="hljs-string">'month'</span> ?
         <span class="hljs-keyword">this</span>.dateAdapter.addCalendarMonths(<span class="hljs-keyword">this</span>.calendar.activeDate, <span class="hljs-number">-1</span>) :
         <span class="hljs-keyword">this</span>.dateAdapter.addCalendarYears(<span class="hljs-keyword">this</span>.calendar.activeDate, <span class="hljs-number">-1</span>);
   }
 
   nextClicked(mode: <span class="hljs-string">'month'</span> | <span class="hljs-string">'year'</span>) {
-    <span class="hljs-keyword">this</span>.calendar.activeDate = mode == <span class="hljs-string">'month'</span> ?
+    <span class="hljs-keyword">this</span>.calendar.activeDate = mode === <span class="hljs-string">'month'</span> ?
         <span class="hljs-keyword">this</span>.dateAdapter.addCalendarMonths(<span class="hljs-keyword">this</span>.calendar.activeDate, <span class="hljs-number">1</span>) :
         <span class="hljs-keyword">this</span>.dateAdapter.addCalendarYears(<span class="hljs-keyword">this</span>.calendar.activeDate, <span class="hljs-number">1</span>);
   }

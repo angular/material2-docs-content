@@ -1,5 +1,12 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Tile {
+  color: <span class="hljs-built_in">string</span>;
+  cols: <span class="hljs-built_in">number</span>;
+  rows: <span class="hljs-built_in">number</span>;
+  text: <span class="hljs-built_in">string</span>;
+}
+
 <span class="hljs-comment">/**
  * @title Dynamic grid-list
  */</span>
@@ -9,7 +16,7 @@
   styleUrls: [<span class="hljs-string">'grid-list-dynamic-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> GridListDynamicExample {
-  tiles = [
+  tiles: Tile[] = [
     {text: <span class="hljs-string">'One'</span>, cols: <span class="hljs-number">3</span>, rows: <span class="hljs-number">1</span>, color: <span class="hljs-string">'lightblue'</span>},
     {text: <span class="hljs-string">'Two'</span>, cols: <span class="hljs-number">1</span>, rows: <span class="hljs-number">2</span>, color: <span class="hljs-string">'lightgreen'</span>},
     {text: <span class="hljs-string">'Three'</span>, cols: <span class="hljs-number">1</span>, rows: <span class="hljs-number">1</span>, color: <span class="hljs-string">'lightpink'</span>},

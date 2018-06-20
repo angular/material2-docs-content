@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> {MomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-moment-adapter'</span>;
 <span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
@@ -33,7 +33,6 @@
   selector: <span class="hljs-string">'datepicker-views-selection-example'</span>,
   templateUrl: <span class="hljs-string">'datepicker-views-selection-example.html'</span>,
   styleUrls: [<span class="hljs-string">'datepicker-views-selection-example.css'</span>],
-  encapsulation: ViewEncapsulation.None,
   providers: [
     <span class="hljs-comment">// `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your</span>
     <span class="hljs-comment">// application's root module. We provide it at the component level here, due to limitations of</span>

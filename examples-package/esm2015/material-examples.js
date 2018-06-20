@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule, Component, Injectable, ElementRef, ViewChild, ChangeDetectionStrategy, ChangeDetectorRef, Host, Inject, ViewEncapsulation, NgZone, Input } from '@angular/core';
+import { NgModule, Component, Injectable, ElementRef, ViewChild, ChangeDetectionStrategy, ChangeDetectorRef, Host, Inject, NgZone, Input, ViewEncapsulation } from '@angular/core';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -21,7 +21,7 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
 import { MomentDateAdapter, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import * as _rollupMoment from 'moment';
 import _rollupMoment__default, {  } from 'moment';
-import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { coerceBooleanProperty, coerceNumberProperty } from '@angular/cdk/coercion';
 import { DomSanitizer } from '@angular/platform-browser';
 import '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
@@ -139,21 +139,22 @@ class AutocompleteAutoActiveFirstOptionExample {
      * @return {?}
      */
     ngOnInit() {
-        this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(val => this.filter(val)));
+        this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => this._filter(value)));
     }
     /**
-     * @param {?} val
+     * @param {?} value
      * @return {?}
      */
-    filter(val) {
-        return this.options.filter(option => option.toLowerCase().indexOf(val.toLowerCase()) === 0);
+    _filter(value) {
+        const /** @type {?} */ filterValue = value.toLowerCase();
+        return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
     }
 }
 AutocompleteAutoActiveFirstOptionExample.decorators = [
     { type: Component, args: [{
                 selector: 'autocomplete-auto-active-first-option-example',
-                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\"><mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{ option }}</mat-option></mat-autocomplete></mat-form-field></form>",
-                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\"><mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{option}}</mat-option></mat-autocomplete></mat-form-field></form>",
+                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
 
@@ -161,14 +162,6 @@ AutocompleteAutoActiveFirstOptionExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-class User {
-    /**
-     * @param {?} name
-     */
-    constructor(name) {
-        this.name = name;
-    }
-}
 /**
  * \@title Display value autocomplete
  */
@@ -176,9 +169,9 @@ class AutocompleteDisplayExample {
     constructor() {
         this.myControl = new FormControl();
         this.options = [
-            new User('Mary'),
-            new User('Shelley'),
-            new User('Igor')
+            { name: 'Mary' },
+            { name: 'Shelley' },
+            { name: 'Igor' }
         ];
     }
     /**
@@ -186,14 +179,7 @@ class AutocompleteDisplayExample {
      */
     ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith(''), map(value => typeof value === 'string' ? value : value.name), map(name => name ? this.filter(name) : this.options.slice()));
-    }
-    /**
-     * @param {?} name
-     * @return {?}
-     */
-    filter(name) {
-        return this.options.filter(option => option.name.toLowerCase().indexOf(name.toLowerCase()) === 0);
+            .pipe(startWith(''), map(value => typeof value === 'string' ? value : value.name), map(name => name ? this._filter(name) : this.options.slice()));
     }
     /**
      * @param {?=} user
@@ -202,12 +188,20 @@ class AutocompleteDisplayExample {
     displayFn(user) {
         return user ? user.name : undefined;
     }
+    /**
+     * @param {?} name
+     * @return {?}
+     */
+    _filter(name) {
+        const /** @type {?} */ filterValue = name.toLowerCase();
+        return this.options.filter(option => option.name.toLowerCase().indexOf(filterValue) === 0);
+    }
 }
 AutocompleteDisplayExample.decorators = [
     { type: Component, args: [{
                 selector: 'autocomplete-display-example',
-                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Assignee\" aria-label=\"Assignee\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete #auto=\"matAutocomplete\" [displayWith]=\"displayFn\"><mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{ option.name }}</mat-option></mat-autocomplete></mat-form-field></form>",
-                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Assignee\" aria-label=\"Assignee\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete #auto=\"matAutocomplete\" [displayWith]=\"displayFn\"><mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{option.name}}</mat-option></mat-autocomplete></mat-form-field></form>",
+                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
 
@@ -221,32 +215,29 @@ AutocompleteDisplayExample.decorators = [
 class AutocompleteFilterExample {
     constructor() {
         this.myControl = new FormControl();
-        this.options = [
-            'One',
-            'Two',
-            'Three'
-        ];
+        this.options = ['One', 'Two', 'Three'];
     }
     /**
      * @return {?}
      */
     ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith(''), map(val => this.filter(val)));
+            .pipe(startWith(''), map(value => this._filter(value)));
     }
     /**
-     * @param {?} val
+     * @param {?} value
      * @return {?}
      */
-    filter(val) {
-        return this.options.filter(option => option.toLowerCase().includes(val.toLowerCase()));
+    _filter(value) {
+        const /** @type {?} */ filterValue = value.toLowerCase();
+        return this.options.filter(option => option.toLowerCase().includes(filterValue));
     }
 }
 AutocompleteFilterExample.decorators = [
     { type: Component, args: [{
                 selector: 'autocomplete-filter-example',
-                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete #auto=\"matAutocomplete\"><mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{ option }}</mat-option></mat-autocomplete></mat-form-field></form>",
-                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete #auto=\"matAutocomplete\"><mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">{{option}}</mat-option></mat-autocomplete></mat-form-field></form>",
+                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
 
@@ -254,6 +245,10 @@ AutocompleteFilterExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+const /** @type {?} */ _filter = (opt, value) => {
+    const /** @type {?} */ filterValue = value.toLowerCase();
+    return opt.filter(item => item.toLowerCase().indexOf(filterValue) === 0);
+};
 /**
  * \@title Option groups autocomplete
  */
@@ -331,33 +326,24 @@ class AutocompleteOptgroupExample {
      * @return {?}
      */
     ngOnInit() {
-        this.stateGroupOptions = /** @type {?} */ ((this.stateForm.get('stateGroup'))).valueChanges.pipe(startWith(''), map(val => this.filterGroup(val)));
+        this.stateGroupOptions = /** @type {?} */ ((this.stateForm.get('stateGroup'))).valueChanges.pipe(startWith(''), map(value => this._filterGroup(value)));
     }
     /**
-     * @param {?} val
+     * @param {?} value
      * @return {?}
      */
-    filterGroup(val) {
-        if (val) {
+    _filterGroup(value) {
+        if (value) {
             return this.stateGroups
-                .map(group => ({ letter: group.letter, names: this._filter(group.names, val) }))
+                .map(group => ({ letter: group.letter, names: _filter(group.names, value) }))
                 .filter(group => group.names.length > 0);
         }
         return this.stateGroups;
     }
-    /**
-     * @param {?} opt
-     * @param {?} val
-     * @return {?}
-     */
-    _filter(opt, val) {
-        const /** @type {?} */ filterValue = val.toLowerCase();
-        return opt.filter(item => item.toLowerCase().startsWith(filterValue));
-    }
 }
 AutocompleteOptgroupExample.decorators = [
     { type: Component, args: [{
-                template: "<form [formGroup]=\"stateForm\"><mat-form-field><input type=\"text\" matInput placeholder=\"States Group\" formControlName=\"stateGroup\" required [matAutocomplete]=\"autoGroup\"><mat-autocomplete #autoGroup=\"matAutocomplete\"><mat-optgroup *ngFor=\"let group of stateGroupOptions | async\" [label]=\"group.letter\"><mat-option *ngFor=\"let name of group.names\" [value]=\"name\">{{ name }}</mat-option></mat-optgroup></mat-autocomplete></mat-form-field></form>",
+                template: "<form [formGroup]=\"stateForm\"><mat-form-field><input type=\"text\" matInput placeholder=\"States Group\" formControlName=\"stateGroup\" required [matAutocomplete]=\"autoGroup\"><mat-autocomplete #autoGroup=\"matAutocomplete\"><mat-optgroup *ngFor=\"let group of stateGroupOptions | async\" [label]=\"group.letter\"><mat-option *ngFor=\"let name of group.names\" [value]=\"name\">{{name}}</mat-option></mat-optgroup></mat-autocomplete></mat-form-field></form>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -375,6 +361,7 @@ AutocompleteOptgroupExample.ctorParameters = () => [
  */
 class AutocompleteOverviewExample {
     constructor() {
+        this.stateCtrl = new FormControl();
         this.states = [
             {
                 name: 'Arkansas',
@@ -401,23 +388,23 @@ class AutocompleteOverviewExample {
                 flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
             }
         ];
-        this.stateCtrl = new FormControl();
         this.filteredStates = this.stateCtrl.valueChanges
-            .pipe(startWith(''), map(state$$1 => state$$1 ? this.filterStates(state$$1) : this.states.slice()));
+            .pipe(startWith(''), map(state$$1 => state$$1 ? this._filterStates(state$$1) : this.states.slice()));
     }
     /**
-     * @param {?} name
+     * @param {?} value
      * @return {?}
      */
-    filterStates(name) {
-        return this.states.filter(state$$1 => state$$1.name.toLowerCase().indexOf(name.toLowerCase()) === 0);
+    _filterStates(value) {
+        const /** @type {?} */ filterValue = value.toLowerCase();
+        return this.states.filter(state$$1 => state$$1.name.toLowerCase().indexOf(filterValue) === 0);
     }
 }
 AutocompleteOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'autocomplete-overview-example',
-                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"State\" aria-label=\"State\" [matAutocomplete]=\"auto\" [formControl]=\"stateCtrl\"><mat-autocomplete #auto=\"matAutocomplete\"><mat-option *ngFor=\"let state of filteredStates | async\" [value]=\"state.name\"><img style=\"vertical-align:middle;\" aria-hidden src=\"{{state.flag}}\" height=\"25\"> <span>{{ state.name }}</span> | <small>Population: {{state.population}}</small></mat-option></mat-autocomplete></mat-form-field><br><mat-slide-toggle [checked]=\"stateCtrl.disabled\" (change)=\"stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()\">Disable Input?</mat-slide-toggle></form>",
-                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input matInput placeholder=\"State\" aria-label=\"State\" [matAutocomplete]=\"auto\" [formControl]=\"stateCtrl\"><mat-autocomplete #auto=\"matAutocomplete\"><mat-option *ngFor=\"let state of filteredStates | async\" [value]=\"state.name\"><img class=\"example-option-img\" aria-hidden [src]=\"state.flag\" height=\"25\"> <span>{{state.name}}</span> | <small>Population: {{state.population}}</small></mat-option></mat-autocomplete></mat-form-field><br><mat-slide-toggle [checked]=\"stateCtrl.disabled\" (change)=\"stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()\">Disable Input?</mat-slide-toggle></form>",
+                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } .example-option-img { vertical-align: middle; } "],
             },] },
 ];
 /** @nocollapse */
@@ -433,18 +420,14 @@ AutocompleteOverviewExample.ctorParameters = () => [];
 class AutocompleteSimpleExample {
     constructor() {
         this.myControl = new FormControl();
-        this.options = [
-            'One',
-            'Two',
-            'Three'
-        ];
+        this.options = ['One', 'Two', 'Three'];
     }
 }
 AutocompleteSimpleExample.decorators = [
     { type: Component, args: [{
                 selector: 'autocomplete-simple-example',
-                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete #auto=\"matAutocomplete\"><mat-option *ngFor=\"let option of options\" [value]=\"option\">{{ option }}</mat-option></mat-autocomplete></mat-form-field></form>",
-                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "]
+                template: "<form class=\"example-form\"><mat-form-field class=\"example-full-width\"><input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\"><mat-autocomplete #auto=\"matAutocomplete\"><mat-option *ngFor=\"let option of options\" [value]=\"option\">{{option}}</mat-option></mat-autocomplete></mat-form-field></form>",
+                styles: [".example-form { min-width: 150px; max-width: 500px; width: 100%; } .example-full-width { width: 100%; } "],
             },] },
 ];
 
@@ -461,7 +444,7 @@ BadgeOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'badge-overview-example',
                 template: "<p><span matBadge=\"4\" matBadgeOverlap=\"false\">Text with a badge</span></p><p>Button with a badge on the left <button mat-raised-button color=\"primary\" matBadge=\"8\" matBadgePosition=\"before\" matBadgeColor=\"accent\">Action</button></p><p>Icon with a badge<mat-icon matBadge=\"15\" matBadgeColor=\"warn\">home</mat-icon></p>",
-                styles: ["/** No CSS for this example */ "]
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 
@@ -630,6 +613,18 @@ CardOverviewExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+const /** @type {?} */ ELEMENT_DATA = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
 /**
  * \@title Basic use of `<cdk-table>` (uses display flex)
  */
@@ -645,18 +640,6 @@ CdkTableBasicFlexExample.decorators = [
                 styles: ["/** * Add basic flex styling so that the cells evenly space themselves in the row. */ cdk-row, cdk-header-row, cdk-footer-row { display: flex; } cdk-cell, cdk-header-cell, cdk-footer-cell { flex: 1; } "],
                 template: "<cdk-table [dataSource]=\"dataSource\"><ng-container cdkColumnDef=\"position\"><cdk-header-cell *cdkHeaderCellDef>No.</cdk-header-cell><cdk-cell *cdkCellDef=\"let element\">{{element.position}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"name\"><cdk-header-cell *cdkHeaderCellDef>Name</cdk-header-cell><cdk-cell *cdkCellDef=\"let element\">{{element.name}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"weight\"><cdk-header-cell *cdkHeaderCellDef>Weight</cdk-header-cell><cdk-cell *cdkCellDef=\"let element\">{{element.weight}}</cdk-cell></ng-container><ng-container cdkColumnDef=\"symbol\"><cdk-header-cell *cdkHeaderCellDef>Symbol</cdk-header-cell><cdk-cell *cdkCellDef=\"let element\">{{element.symbol}}</cdk-cell></ng-container><cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></cdk-header-row><cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></cdk-row></cdk-table>",
             },] },
-];
-const /** @type {?} */ ELEMENT_DATA = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
@@ -690,6 +673,18 @@ class ExampleDataSource extends DataSource {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+const /** @type {?} */ ELEMENT_DATA$1 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
 /**
  * \@title Basic CDK data-table
  */
@@ -705,18 +700,6 @@ CdkTableBasicExample.decorators = [
                 styles: ["table { width: 100%; } th { text-align: left; } "],
                 template: "<table cdk-table [dataSource]=\"dataSource\"><ng-container cdkColumnDef=\"position\"><th cdk-header-cell *cdkHeaderCellDef>No.</th><td cdk-cell *cdkCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container cdkColumnDef=\"name\"><th cdk-header-cell *cdkHeaderCellDef>Name</th><td cdk-cell *cdkCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container cdkColumnDef=\"weight\"><th cdk-header-cell *cdkHeaderCellDef>Weight</th><td cdk-cell *cdkCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container cdkColumnDef=\"symbol\"><th cdk-header-cell *cdkHeaderCellDef>Symbol</th><td cdk-cell *cdkCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></tr><tr cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
             },] },
-];
-const /** @type {?} */ ELEMENT_DATA$1 = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
@@ -760,46 +743,57 @@ class FileNode {
  * Flat node with expandable and level information
  */
 class FileFlatNode {
+    /**
+     * @param {?} expandable
+     * @param {?} filename
+     * @param {?} level
+     * @param {?} type
+     */
+    constructor(expandable, filename, level, type) {
+        this.expandable = expandable;
+        this.filename = filename;
+        this.level = level;
+        this.type = type;
+    }
 }
 /**
  * The file structure tree data in string. The data could be parsed into a Json object
  */
-const /** @type {?} */ TREE_DATA = `
-  {
-    "Documents": {
-      "angular": {
-        "src": {
-          "core": "ts",
-          "compiler": "ts"
-        }
-      },
-      "material2": {
-        "src": {
-          "button": "ts",
-          "checkbox": "ts",
-          "input": "ts"
-        }
-      }
+const /** @type {?} */ TREE_DATA = JSON.stringify({
+    Applications: {
+        Calendar: 'app',
+        Chrome: 'app',
+        Webstorm: 'app'
     },
-    "Downloads": {
-        "Tutorial": "html",
-        "November": "pdf",
-        "October": "pdf"
-    },
-    "Pictures": {
-        "Sun": "png",
-        "Woods": "jpg",
-        "Photo Booth Library": {
-          "Contents": "dir",
-          "Pictures": "dir"
+    Documents: {
+        angular: {
+            src: {
+                compiler: 'ts',
+                core: 'ts'
+            }
+        },
+        material2: {
+            src: {
+                button: 'ts',
+                checkbox: 'ts',
+                input: 'ts'
+            }
         }
     },
-    "Applications": {
-        "Chrome": "app",
-        "Calendar": "app",
-        "Webstorm": "app"
+    Downloads: {
+        October: 'pdf',
+        November: 'pdf',
+        Tutorial: 'html'
+    },
+    Pictures: {
+        'Photo Booth Library': {
+            Contents: 'dir',
+            Pictures: 'dir'
+        },
+        Sun: 'png',
+        Woods: 'jpg'
     }
-}`;
+});
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -831,28 +825,25 @@ class FileDatabase {
     /**
      * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
      * The return value is the list of `FileNode`.
-     * @param {?} value
+     * @param {?} obj
      * @param {?} level
      * @return {?}
      */
-    buildFileTree(value, level) {
-        let /** @type {?} */ data = [];
-        for (let /** @type {?} */ k in value) {
-            let /** @type {?} */ v = value[k];
-            let /** @type {?} */ node = new FileNode();
-            node.filename = `${k}`;
-            if (v === null || v === undefined) {
-                // no action
+    buildFileTree(obj, level) {
+        return Object.keys(obj).reduce((accumulator, key) => {
+            const /** @type {?} */ value = obj[key];
+            const /** @type {?} */ node = new FileNode();
+            node.filename = key;
+            if (value != null) {
+                if (typeof value === 'object') {
+                    node.children = this.buildFileTree(value, level + 1);
+                }
+                else {
+                    node.type = value;
+                }
             }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.type = v;
-            }
-            data.push(node);
-        }
-        return data;
+            return accumulator.concat(node);
+        }, []);
     }
 }
 FileDatabase.decorators = [
@@ -868,20 +859,13 @@ class CdkTreeFlatExample {
      * @param {?} database
      */
     constructor(database) {
+        this.hasChild = (_, _nodeData) => _nodeData.expandable;
         this.transformer = (node, level) => {
-            let /** @type {?} */ flatNode = new FileFlatNode();
-            flatNode.filename = node.filename;
-            flatNode.type = node.type;
-            flatNode.level = level;
-            flatNode.expandable = !!node.children;
-            return flatNode;
+            return new FileFlatNode(!!node.children, node.filename, level, node.type);
         };
-        this._getLevel = (node) => { return node.level; };
-        this._isExpandable = (node) => { return node.expandable; };
-        this._getChildren = (node) => {
-            return of(node.children);
-        };
-        this.hasChild = (_, _nodeData) => { return _nodeData.expandable; };
+        this._getLevel = (node) => node.level;
+        this._isExpandable = (node) => node.expandable;
+        this._getChildren = (node) => of(node.children);
         this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
         this.treeControl = new FlatTreeControl(this._getLevel, this._isExpandable);
         this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
@@ -893,8 +877,8 @@ class CdkTreeFlatExample {
 CdkTreeFlatExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-tree-flat-example',
-                template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding class=\"demo-tree-node\"><button mat-icon-button disabled=\"disabled\"></button> {{node.filename}}: {{node.type}}</cdk-tree-node><cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding class=\"demo-tree-node\"><button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" cdkTreeNodeToggle><mat-icon class=\"mat-icon-rtl-mirror\">{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}: {{node.type}}</cdk-tree-node></cdk-tree>",
-                styles: [".demo-tree-node { display: flex; align-items: center; } "],
+                template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding class=\"example-tree-node\"><button mat-icon-button disabled=\"disabled\"></button> {{node.filename}}: {{node.type}}</cdk-tree-node><cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding class=\"example-tree-node\"><button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" cdkTreeNodeToggle><mat-icon class=\"mat-icon-rtl-mirror\">{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button> {{node.filename}}: {{node.type}}</cdk-tree-node></cdk-tree>",
+                styles: [".example-tree-node { display: flex; align-items: center; } "],
                 providers: [FileDatabase]
             },] },
 ];
@@ -915,42 +899,41 @@ let FileNode$1 = class FileNode {
 /**
  * The Json tree data in string. The data could be parsed into Json object
  */
-const /** @type {?} */ TREE_DATA$1 = `
-  {
-    "Documents": {
-      "angular": {
-        "src": {
-          "core": "ts",
-          "compiler": "ts"
-        }
-      },
-      "material2": {
-        "src": {
-          "button": "ts",
-          "checkbox": "ts",
-          "input": "ts"
-        }
-      }
+const /** @type {?} */ TREE_DATA$1 = JSON.stringify({
+    Applications: {
+        Calendar: 'app',
+        Chrome: 'app',
+        Webstorm: 'app'
     },
-    "Downloads": {
-        "Tutorial": "html",
-        "November": "pdf",
-        "October": "pdf"
-    },
-    "Pictures": {
-        "Sun": "png",
-        "Woods": "jpg",
-        "Photo Booth Library": {
-          "Contents": "dir",
-          "Pictures": "dir"
+    Documents: {
+        angular: {
+            src: {
+                compiler: 'ts',
+                core: 'ts'
+            }
+        },
+        material2: {
+            src: {
+                button: 'ts',
+                checkbox: 'ts',
+                input: 'ts'
+            }
         }
     },
-    "Applications": {
-        "Chrome": "app",
-        "Calendar": "app",
-        "Webstorm": "app"
+    Downloads: {
+        October: 'pdf',
+        November: 'pdf',
+        Tutorial: 'html'
+    },
+    Pictures: {
+        'Photo Booth Library': {
+            Contents: 'dir',
+            Pictures: 'dir'
+        },
+        Sun: 'png',
+        Woods: 'jpg'
     }
-  }`;
+});
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -982,28 +965,25 @@ let FileDatabase$1 = class FileDatabase {
     /**
      * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
      * The return value is the list of `FileNode`.
-     * @param {?} value
+     * @param {?} obj
      * @param {?} level
      * @return {?}
      */
-    buildFileTree(value, level) {
-        let /** @type {?} */ data = [];
-        for (let /** @type {?} */ k in value) {
-            let /** @type {?} */ v = value[k];
-            let /** @type {?} */ node = new FileNode$1();
-            node.filename = `${k}`;
-            if (v === null || v === undefined) {
-                // no action
+    buildFileTree(obj, level) {
+        return Object.keys(obj).reduce((accumulator, key) => {
+            const /** @type {?} */ value = obj[key];
+            const /** @type {?} */ node = new FileNode$1();
+            node.filename = key;
+            if (value != null) {
+                if (typeof value === 'object') {
+                    node.children = this.buildFileTree(value, level + 1);
+                }
+                else {
+                    node.type = value;
+                }
             }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.type = v;
-            }
-            data.push(node);
-        }
-        return data;
+            return accumulator.concat(node);
+        }, []);
     }
 };
 FileDatabase$1.decorators = [
@@ -1019,8 +999,8 @@ class CdkTreeNestedExample {
      * @param {?} database
      */
     constructor(database) {
-        this._getChildren = (node) => { return of(node.children); };
-        this.hasNestedChild = (_, nodeData) => { return !(nodeData.type); };
+        this.hasNestedChild = (_, nodeData) => !nodeData.type;
+        this._getChildren = (node) => of(node.children);
         this.nestedTreeControl = new NestedTreeControl(this._getChildren);
         this.nestedDataSource = new MatTreeNestedDataSource();
         database.dataChange.subscribe(data => this.nestedDataSource.data = data);
@@ -1094,17 +1074,9 @@ class ChipsAutocompleteExample {
         this.addOnBlur = false;
         this.separatorKeysCodes = [ENTER, COMMA];
         this.fruitCtrl = new FormControl();
-        this.fruits = [
-            'Lemon',
-        ];
-        this.allFruits = [
-            'Apple',
-            'Lemon',
-            'Lime',
-            'Orange',
-            'Strawberry'
-        ];
-        this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith(null), map((fruit) => fruit ? this.filter(fruit) : this.allFruits.slice()));
+        this.fruits = ['Lemon'];
+        this.allFruits = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+        this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith(null), map((fruit) => fruit ? this._filter(fruit) : this.allFruits.slice()));
     }
     /**
      * @param {?} event
@@ -1134,13 +1106,6 @@ class ChipsAutocompleteExample {
         }
     }
     /**
-     * @param {?} name
-     * @return {?}
-     */
-    filter(name) {
-        return this.allFruits.filter(fruit => fruit.toLowerCase().indexOf(name.toLowerCase()) === 0);
-    }
-    /**
      * @param {?} event
      * @return {?}
      */
@@ -1149,12 +1114,20 @@ class ChipsAutocompleteExample {
         this.fruitInput.nativeElement.value = '';
         this.fruitCtrl.setValue(null);
     }
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+    _filter(value) {
+        const /** @type {?} */ filterValue = value.toLowerCase();
+        return this.allFruits.filter(fruit => fruit.toLowerCase().indexOf(filterValue) === 0);
+    }
 }
 ChipsAutocompleteExample.decorators = [
     { type: Component, args: [{
                 selector: 'chips-autocomplete-example',
-                template: "<mat-form-field class=\"demo-chip-list\"><mat-chip-list #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (removed)=\"remove(fruit)\">{{fruit}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip><input placeholder=\"New fruit...\" #fruitInput [formControl]=\"fruitCtrl\" [matAutocomplete]=\"auto\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-chip-list><mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\"><mat-option *ngFor=\"let fruit of filteredFruits | async\" [value]=\"fruit\">{{ fruit }}</mat-option></mat-autocomplete></mat-form-field>",
-                styles: [".demo-chip-list { width: 100%; } "]
+                template: "<mat-form-field class=\"example-chip-list\"><mat-chip-list #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (removed)=\"remove(fruit)\">{{fruit}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip><input placeholder=\"New fruit...\" #fruitInput [formControl]=\"fruitCtrl\" [matAutocomplete]=\"auto\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-chip-list><mat-autocomplete #auto=\"matAutocomplete\" (optionSelected)=\"selected($event)\"><mat-option *ngFor=\"let fruit of filteredFruits | async\" [value]=\"fruit\">{{fruit}}</mat-option></mat-autocomplete></mat-form-field>",
+                styles: [".example-chip-list { width: 100%; } "],
             },] },
 ];
 /** @nocollapse */
@@ -1176,7 +1149,6 @@ class ChipsInputExample {
         this.selectable = true;
         this.removable = true;
         this.addOnBlur = true;
-        // Enter, comma
         this.separatorKeysCodes = [ENTER, COMMA];
         this.fruits = [
             { name: 'Lemon' },
@@ -1189,8 +1161,8 @@ class ChipsInputExample {
      * @return {?}
      */
     add(event) {
-        let /** @type {?} */ input = event.input;
-        let /** @type {?} */ value = event.value;
+        const /** @type {?} */ input = event.input;
+        const /** @type {?} */ value = event.value;
         // Add our fruit
         if ((value || '').trim()) {
             this.fruits.push({ name: value.trim() });
@@ -1205,7 +1177,7 @@ class ChipsInputExample {
      * @return {?}
      */
     remove(fruit) {
-        let /** @type {?} */ index = this.fruits.indexOf(fruit);
+        const /** @type {?} */ index = this.fruits.indexOf(fruit);
         if (index >= 0) {
             this.fruits.splice(index, 1);
         }
@@ -1214,8 +1186,8 @@ class ChipsInputExample {
 ChipsInputExample.decorators = [
     { type: Component, args: [{
                 selector: 'chips-input-example',
-                template: "<mat-form-field class=\"demo-chip-list\"><mat-chip-list #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (removed)=\"remove(fruit)\">{{fruit.name}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip><input placeholder=\"New fruit...\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-chip-list></mat-form-field>",
-                styles: [".demo-chip-list { width: 100%; } "]
+                template: "<mat-form-field class=\"example-chip-list\"><mat-chip-list #chipList><mat-chip *ngFor=\"let fruit of fruits\" [selectable]=\"selectable\" [removable]=\"removable\" (removed)=\"remove(fruit)\">{{fruit.name}}<mat-icon matChipRemove *ngIf=\"removable\">cancel</mat-icon></mat-chip><input placeholder=\"New fruit...\" [matChipInputFor]=\"chipList\" [matChipInputSeparatorKeyCodes]=\"separatorKeysCodes\" [matChipInputAddOnBlur]=\"addOnBlur\" (matChipInputTokenEnd)=\"add($event)\"></mat-chip-list></mat-form-field>",
+                styles: [".example-chip-list { width: 100%; } "],
             },] },
 ];
 
@@ -1231,7 +1203,7 @@ class ChipsOverviewExample {
 ChipsOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'chips-overview-example',
-                template: "<mat-chip-list><mat-chip>One fish</mat-chip><mat-chip>Two fish</mat-chip><mat-chip color=\"primary\" selected=\"true\">Primary fish</mat-chip><mat-chip color=\"accent\" selected=\"true\">Accent fish</mat-chip></mat-chip-list>",
+                template: "<mat-chip-list><mat-chip>One fish</mat-chip><mat-chip>Two fish</mat-chip><mat-chip color=\"primary\" selected=\"selected\">Primary fish</mat-chip><mat-chip color=\"accent\" selected=\"selected\">Accent fish</mat-chip></mat-chip-list>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -1246,7 +1218,7 @@ ChipsOverviewExample.decorators = [
 class ChipsStackedExample {
     constructor() {
         this.availableColors = [
-            { name: 'none', color: '' },
+            { name: 'none', color: undefined },
             { name: 'Primary', color: 'primary' },
             { name: 'Accent', color: 'accent' },
             { name: 'Warn', color: 'warn' }
@@ -1256,7 +1228,7 @@ class ChipsStackedExample {
 ChipsStackedExample.decorators = [
     { type: Component, args: [{
                 selector: 'chips-stacked-example',
-                template: "<mat-chip-list class=\"mat-chip-list-stacked\"><mat-chip *ngFor=\"let chip of availableColors\" selected=\"true\" [color]=\"chip.color\">{{chip.name}}</mat-chip></mat-chip-list>",
+                template: "<mat-chip-list class=\"mat-chip-list-stacked\"><mat-chip *ngFor=\"let chip of availableColors\" selected=\"selected\" [color]=\"chip.color\">{{chip.name}}</mat-chip></mat-chip-list>",
                 styles: ["mat-chip { max-width: 200px; } "],
             },] },
 ];
@@ -1312,7 +1284,6 @@ DatepickerCustomHeaderExample.decorators = [
                 selector: 'datepicker-custom-header-example',
                 template: "<mat-form-field><mat-label>Custom calendar header</mat-label><input matInput [matDatepicker]=\"picker\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker [calendarHeaderComponent]=\"exampleHeader\"></mat-datepicker></mat-form-field>",
                 styles: [".example-header { display: flex; align-items: center; padding: 0.5em; } .example-header-label { flex: 1; height: 1em; font-weight: bold; text-align: center; } .example-double-arrow .mat-icon { margin: -22%; } "],
-                encapsulation: ViewEncapsulation.None,
                 changeDetection: ChangeDetectionStrategy.OnPush,
             },] },
 ];
@@ -1356,7 +1327,7 @@ class ExampleHeader {
      * @return {?}
      */
     previousClicked(mode) {
-        this.calendar.activeDate = mode == 'month' ?
+        this.calendar.activeDate = mode === 'month' ?
             this.dateAdapter.addCalendarMonths(this.calendar.activeDate, -1) :
             this.dateAdapter.addCalendarYears(this.calendar.activeDate, -1);
     }
@@ -1365,7 +1336,7 @@ class ExampleHeader {
      * @return {?}
      */
     nextClicked(mode) {
-        this.calendar.activeDate = mode == 'month' ?
+        this.calendar.activeDate = mode === 'month' ?
             this.dateAdapter.addCalendarMonths(this.calendar.activeDate, 1) :
             this.dateAdapter.addCalendarYears(this.calendar.activeDate, 1);
     }
@@ -1392,7 +1363,6 @@ ExampleHeader.decorators = [
       </button>
     </div>
   `,
-                encapsulation: ViewEncapsulation.None,
                 changeDetection: ChangeDetectionStrategy.OnPush,
             },] },
 ];
@@ -1675,7 +1645,7 @@ class DatepickerTouchExample {
 DatepickerTouchExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-touch-example',
-                template: "<mat-form-field class=\"example-full-width\"><input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker touchUi=\"true\" #picker></mat-datepicker></mat-form-field>",
+                template: "<mat-form-field class=\"example-full-width\"><input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker touchUi #picker></mat-datepicker></mat-form-field>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -1752,7 +1722,6 @@ DatepickerViewsSelectionExample.decorators = [
                 selector: 'datepicker-views-selection-example',
                 template: "<mat-form-field><input matInput [matDatepicker]=\"dp\" placeholder=\"Month and Year\" [formControl]=\"date\"><mat-datepicker-toggle matSuffix [for]=\"dp\"></mat-datepicker-toggle><mat-datepicker #dp startView=\"multi-year\" (yearSelected)=\"chosenYearHandler($event)\" (monthSelected)=\"chosenMonthHandler($event, dp)\" panelClass=\"example-month-picker\"></mat-datepicker></mat-form-field>",
                 styles: [".example-month-picker .mat-calendar-period-button { pointer-events: none; } .example-month-picker .mat-calendar-arrow { display: none; } "],
-                encapsulation: ViewEncapsulation.None,
                 providers: [
                     // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
                     // application's root module. We provide it at the component level here, due to limitations of
@@ -1838,7 +1807,7 @@ DialogDataExample.decorators = [
     { type: Component, args: [{
                 selector: 'dialog-data-example',
                 template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>",
-                styles: ["/** No CSS for this example */ "]
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -1923,7 +1892,7 @@ class DialogOverviewExample {
      * @return {?}
      */
     openDialog() {
-        let /** @type {?} */ dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+        const /** @type {?} */ dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
             width: '250px',
             data: { name: this.name, animal: this.animal }
         });
@@ -2021,8 +1990,8 @@ class ExpansionExpandCollapseAllExample {
 ExpansionExpandCollapseAllExample.decorators = [
     { type: Component, args: [{
                 selector: 'expansion-toggle-all-example',
-                template: "<div class=\"example-action-buttons\"><button mat-button (click)=\"accordion.openAll()\">Expand All</button> <button mat-button (click)=\"accordion.closeAll()\">Collapse All</button></div><mat-accordion class=\"example-headers-align\" [multi]=\"true\"><mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age<mat-icon>account_circle</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput type=\"number\" min=\"1\" placeholder=\"Age\"></mat-form-field></mat-expansion-panel><mat-expansion-panel [disabled]=\"true\"><mat-expansion-panel-header><mat-panel-title>Destination</mat-panel-title><mat-panel-description>Type the country name<mat-icon>map</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Country\"></mat-form-field></mat-expansion-panel><mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Day of the trip</mat-panel-title><mat-panel-description>Inform the date you wish to travel<mat-icon>date_range</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Date\" [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></mat-form-field><mat-datepicker #picker></mat-datepicker></mat-expansion-panel></mat-accordion>",
-                styles: [".example-action-buttons { padding-bottom: 20px; } .example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
+                template: "<div class=\"example-action-buttons\"><button mat-button (click)=\"accordion.openAll()\">Expand All</button> <button mat-button (click)=\"accordion.closeAll()\">Collapse All</button></div><mat-accordion class=\"example-headers-align\" multi><mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age<mat-icon>account_circle</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput type=\"number\" min=\"1\" placeholder=\"Age\"></mat-form-field></mat-expansion-panel><mat-expansion-panel disabled=\"disabled\"><mat-expansion-panel-header><mat-panel-title>Destination</mat-panel-title><mat-panel-description>Type the country name<mat-icon>map</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Country\"></mat-form-field></mat-expansion-panel><mat-expansion-panel><mat-expansion-panel-header><mat-panel-title>Day of the trip</mat-panel-title><mat-panel-description>Inform the date you wish to travel<mat-icon>date_range</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Date\" [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></mat-form-field><mat-datepicker #picker></mat-datepicker></mat-expansion-panel></mat-accordion>",
+                styles: [".example-action-buttons { padding-bottom: 20px; } .example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "],
             },] },
 ];
 /** @nocollapse */
@@ -2084,8 +2053,8 @@ class ExpansionStepsExample {
 ExpansionStepsExample.decorators = [
     { type: Component, args: [{
                 selector: 'expansion-steps-example',
-                template: "<mat-accordion class=\"example-headers-align\"><mat-expansion-panel [expanded]=\"step === 0\" (opened)=\"setStep(0)\" hideToggle=\"true\"><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age<mat-icon>account_circle</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput type=\"number\" min=\"1\" placeholder=\"Age\"></mat-form-field><mat-action-row><button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button></mat-action-row></mat-expansion-panel><mat-expansion-panel [expanded]=\"step === 1\" (opened)=\"setStep(1)\" hideToggle=\"true\"><mat-expansion-panel-header><mat-panel-title>Destination</mat-panel-title><mat-panel-description>Type the country name<mat-icon>map</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Country\"></mat-form-field><mat-action-row><button mat-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button></mat-action-row></mat-expansion-panel><mat-expansion-panel [expanded]=\"step === 2\" (opened)=\"setStep(2)\" hideToggle=\"true\"><mat-expansion-panel-header><mat-panel-title>Day of the trip</mat-panel-title><mat-panel-description>Inform the date you wish to travel<mat-icon>date_range</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Date\" [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></mat-form-field><mat-datepicker #picker></mat-datepicker><mat-action-row><button mat-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button mat-button color=\"primary\" (click)=\"nextStep()\">End</button></mat-action-row></mat-expansion-panel></mat-accordion>",
-                styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "]
+                template: "<mat-accordion class=\"example-headers-align\"><mat-expansion-panel [expanded]=\"step === 0\" (opened)=\"setStep(0)\" hideToggle><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age<mat-icon>account_circle</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput type=\"number\" min=\"1\" placeholder=\"Age\"></mat-form-field><mat-action-row><button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button></mat-action-row></mat-expansion-panel><mat-expansion-panel [expanded]=\"step === 1\" (opened)=\"setStep(1)\" hideToggle><mat-expansion-panel-header><mat-panel-title>Destination</mat-panel-title><mat-panel-description>Type the country name<mat-icon>map</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Country\"></mat-form-field><mat-action-row><button mat-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button></mat-action-row></mat-expansion-panel><mat-expansion-panel [expanded]=\"step === 2\" (opened)=\"setStep(2)\" hideToggle><mat-expansion-panel-header><mat-panel-title>Day of the trip</mat-panel-title><mat-panel-description>Inform the date you wish to travel<mat-icon>date_range</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Date\" [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></mat-form-field><mat-datepicker #picker></mat-datepicker><mat-action-row><button mat-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button mat-button color=\"primary\" (click)=\"nextStep()\">End</button></mat-action-row></mat-expansion-panel></mat-accordion>",
+                styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "],
             },] },
 ];
 
@@ -2275,7 +2244,7 @@ FormFieldAppearanceExample.decorators = [
     { type: Component, args: [{
                 selector: 'form-field-appearance-example',
                 template: "<p><mat-form-field appearance=\"legacy\"><mat-label>Legacy form field</mat-label><input matInput placeholder=\"Placeholder\"><mat-icon matSuffix>sentiment_very_satisfied</mat-icon><mat-hint>Hint</mat-hint></mat-form-field></p><p><mat-form-field appearance=\"standard\"><mat-label>Standard form field</mat-label><input matInput placeholder=\"Placeholder\"><mat-icon matSuffix>sentiment_very_satisfied</mat-icon><mat-hint>Hint</mat-hint></mat-form-field></p><p><mat-form-field appearance=\"fill\"><mat-label>Fill form field</mat-label><input matInput placeholder=\"Placeholder\"><mat-icon matSuffix>sentiment_very_satisfied</mat-icon><mat-hint>Hint</mat-hint></mat-form-field></p><p><mat-form-field appearance=\"outline\"><mat-label>Outline form field</mat-label><input matInput placeholder=\"Placeholder\"><mat-icon matSuffix>sentiment_very_satisfied</mat-icon><mat-hint>Hint</mat-hint></mat-form-field></p>",
-                styles: ["/** No CSS for this example */ "]
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 
@@ -2320,11 +2289,11 @@ class MyTelInput {
         this._required = false;
         this._disabled = false;
         this.parts = fb.group({
-            'area': '',
-            'exchange': '',
-            'subscriber': '',
+            area: '',
+            exchange: '',
+            subscriber: '',
         });
-        fm.monitor(elRef.nativeElement, true).subscribe((origin) => {
+        fm.monitor(elRef.nativeElement, true).subscribe(origin => {
             this.focused = !!origin;
             this.stateChanges.next();
         });
@@ -2333,8 +2302,8 @@ class MyTelInput {
      * @return {?}
      */
     get empty() {
-        let /** @type {?} */ n = this.parts.value;
-        return !n.area && !n.exchange && !n.subscriber;
+        const { value: { area, exchange, subscriber } } = this.parts;
+        return !area && !exchange && !subscriber;
     }
     /**
      * @return {?}
@@ -2345,11 +2314,11 @@ class MyTelInput {
      */
     get placeholder() { return this._placeholder; }
     /**
-     * @param {?} plh
+     * @param {?} value
      * @return {?}
      */
-    set placeholder(plh) {
-        this._placeholder = plh;
+    set placeholder(value) {
+        this._placeholder = value;
         this.stateChanges.next();
     }
     /**
@@ -2357,11 +2326,11 @@ class MyTelInput {
      */
     get required() { return this._required; }
     /**
-     * @param {?} req
+     * @param {?} value
      * @return {?}
      */
-    set required(req) {
-        this._required = coerceBooleanProperty(req);
+    set required(value) {
+        this._required = coerceBooleanProperty(value);
         this.stateChanges.next();
     }
     /**
@@ -2369,20 +2338,20 @@ class MyTelInput {
      */
     get disabled() { return this._disabled; }
     /**
-     * @param {?} dis
+     * @param {?} value
      * @return {?}
      */
-    set disabled(dis) {
-        this._disabled = coerceBooleanProperty(dis);
+    set disabled(value) {
+        this._disabled = coerceBooleanProperty(value);
         this.stateChanges.next();
     }
     /**
      * @return {?}
      */
     get value() {
-        let /** @type {?} */ n = this.parts.value;
-        if (n.area.length == 3 && n.exchange.length == 3 && n.subscriber.length == 4) {
-            return new MyTel(n.area, n.exchange, n.subscriber);
+        const { value: { area, exchange, subscriber } } = this.parts;
+        if (area.length === 3 && exchange.length === 3 && subscriber.length === 4) {
+            return new MyTel(area, exchange, subscriber);
         }
         return null;
     }
@@ -2391,8 +2360,8 @@ class MyTelInput {
      * @return {?}
      */
     set value(tel) {
-        tel = tel || new MyTel('', '', '');
-        this.parts.setValue({ area: tel.area, exchange: tel.exchange, subscriber: tel.subscriber });
+        const { area, exchange, subscriber } = tel || new MyTel('', '', '');
+        this.parts.setValue({ area, exchange, subscriber });
         this.stateChanges.next();
     }
     /**
@@ -2487,7 +2456,7 @@ FormFieldErrorExample.decorators = [
     { type: Component, args: [{
                 selector: 'form-field-error-example',
                 template: "<div class=\"example-container\"><mat-form-field><input matInput placeholder=\"Enter your email\" [formControl]=\"email\" required><mat-error *ngIf=\"email.invalid\">{{getErrorMessage()}}</mat-error></mat-form-field></div>",
-                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
+                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "],
             },] },
 ];
 
@@ -2504,7 +2473,7 @@ FormFieldHintExample.decorators = [
     { type: Component, args: [{
                 selector: 'form-field-hint-example',
                 template: "<div class=\"example-container\"><mat-form-field hintLabel=\"Max 10 characters\"><input matInput #input maxlength=\"10\" placeholder=\"Enter some input\"><mat-hint align=\"end\">{{input.value?.length || 0}}/10</mat-hint></mat-form-field><mat-form-field><mat-select placeholder=\"Select me\"><mat-option value=\"option\">Option</mat-option></mat-select><mat-hint align=\"end\">Here's the dropdown arrow ^</mat-hint></mat-form-field></div>",
-                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
+                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "],
             },] },
 ];
 
@@ -2530,7 +2499,7 @@ FormFieldLabelExample.decorators = [
     { type: Component, args: [{
                 selector: 'form-field-label-example',
                 template: "<div class=\"example-container\"><form class=\"example-container\" [formGroup]=\"options\"><mat-checkbox formControlName=\"hideRequired\">Hide required marker</mat-checkbox><div><label>Float label:</label><mat-radio-group formControlName=\"floatLabel\"><mat-radio-button value=\"auto\">Auto</mat-radio-button><mat-radio-button value=\"always\">Always</mat-radio-button><mat-radio-button value=\"never\">Never</mat-radio-button></mat-radio-group></div></form><mat-form-field [hideRequiredMarker]=\"options.value.hideRequired\" [floatLabel]=\"options.value.floatLabel\"><input matInput placeholder=\"Simple placeholder\" required></mat-form-field><mat-form-field [floatLabel]=\"options.value.floatLabel\"><mat-label>Both a label and a placeholder</mat-label><input matInput placeholder=\"Simple placeholder\"></mat-form-field><mat-form-field [hideRequiredMarker]=\"options.value.hideRequired\" [floatLabel]=\"options.value.floatLabel\"><mat-select required><mat-option>-- None --</mat-option><mat-option value=\"option\">Option</mat-option></mat-select><mat-label><mat-icon>favorite</mat-icon><b>Fancy</b> <i>label</i></mat-label></mat-form-field></div>",
-                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-container form { margin-bottom: 20px; } .example-container form > * { margin: 5px 0; } .example-container .mat-radio-button { margin: 0 5px; } "]
+                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-container form { margin-bottom: 20px; } .example-container form > * { margin: 5px 0; } .example-container .mat-radio-button { margin: 0 5px; } "],
             },] },
 ];
 /** @nocollapse */
@@ -2551,7 +2520,7 @@ FormFieldOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'form-field-overview-example',
                 template: "<div class=\"example-container\"><mat-form-field><input matInput placeholder=\"Input\"></mat-form-field><mat-form-field><textarea matInput placeholder=\"Textarea\"></textarea></mat-form-field><mat-form-field><mat-select placeholder=\"Select\"><mat-option value=\"option\">Option</mat-option></mat-select></mat-form-field></div>",
-                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
+                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "],
             },] },
 ];
 
@@ -2571,7 +2540,7 @@ FormFieldPrefixSuffixExample.decorators = [
     { type: Component, args: [{
                 selector: 'form-field-prefix-suffix-example',
                 template: "<div class=\"example-container\"><mat-form-field><input matInput placeholder=\"Enter your password\" [type]=\"hide ? 'password' : 'text'\"><mat-icon matSuffix (click)=\"hide = !hide\">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon></mat-form-field><mat-form-field><input matInput placeholder=\"Amount\" type=\"number\" class=\"example-right-align\"> <span matPrefix>$&nbsp;</span> <span matSuffix>.00</span></mat-form-field></div>",
-                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-right-align { text-align: right; } input.example-right-align::-webkit-outer-spin-button, input.example-right-align::-webkit-inner-spin-button { display: none; } input.example-right-align { -moz-appearance: textfield; } "]
+                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } .example-right-align { text-align: right; } input.example-right-align::-webkit-outer-spin-button, input.example-right-align::-webkit-inner-spin-button { display: none; } input.example-right-align { -moz-appearance: textfield; } "],
             },] },
 ];
 
@@ -2588,8 +2557,8 @@ class FormFieldThemingExample {
      */
     constructor(fb) {
         this.options = fb.group({
-            'color': 'primary',
-            'fontSize': [16, Validators.min(10)],
+            color: 'primary',
+            fontSize: [16, Validators.min(10)],
         });
     }
     /**
@@ -2603,7 +2572,7 @@ FormFieldThemingExample.decorators = [
     { type: Component, args: [{
                 selector: 'form-field-theming-example',
                 template: "<form class=\"example-container\" [formGroup]=\"options\" [style.fontSize.px]=\"getFontSize()\"><mat-form-field [color]=\"options.value.color\"><mat-select placeholder=\"Color\" formControlName=\"color\"><mat-option value=\"primary\">Primary</mat-option><mat-option value=\"accent\">Accent</mat-option><mat-option value=\"warn\">Warn</mat-option></mat-select></mat-form-field><mat-form-field [color]=\"options.value.color\"><input matInput type=\"number\" placeholder=\"Font size (px)\" formControlName=\"fontSize\" min=\"10\"><mat-error *ngIf=\"options.get('fontSize')?.invalid\">Min size: 10px</mat-error></mat-form-field></form>",
-                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "]
+                styles: [".example-container { display: flex; flex-direction: column; } .example-container > * { width: 100%; } "],
             },] },
 ];
 /** @nocollapse */
@@ -2666,7 +2635,7 @@ IconOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'icon-overview-example',
                 template: "<mat-icon>home</mat-icon>",
-                styles: ["/** No CSS for this example */ "]
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 
@@ -2975,7 +2944,7 @@ NestedMenuExample.decorators = [
     { type: Component, args: [{
                 selector: 'nested-menu-example',
                 template: "<button mat-button [matMenuTriggerFor]=\"animals\">Animal index</button><mat-menu #animals=\"matMenu\"><button mat-menu-item [matMenuTriggerFor]=\"vertebrates\">Vertebrates</button> <button mat-menu-item [matMenuTriggerFor]=\"invertebrates\">Invertebrates</button></mat-menu><mat-menu #vertebrates=\"matMenu\"><button mat-menu-item [matMenuTriggerFor]=\"fish\">Fishes</button> <button mat-menu-item [matMenuTriggerFor]=\"amphibians\">Amphibians</button> <button mat-menu-item [matMenuTriggerFor]=\"reptiles\">Reptiles</button> <button mat-menu-item>Birds</button> <button mat-menu-item>Mammals</button></mat-menu><mat-menu #invertebrates=\"matMenu\"><button mat-menu-item>Insects</button> <button mat-menu-item>Molluscs</button> <button mat-menu-item>Crustaceans</button> <button mat-menu-item>Corals</button> <button mat-menu-item>Arachnids</button> <button mat-menu-item>Velvet worms</button> <button mat-menu-item>Horseshoe crabs</button></mat-menu><mat-menu #fish=\"matMenu\"><button mat-menu-item>Baikal oilfish</button> <button mat-menu-item>Bala shark</button> <button mat-menu-item>Ballan wrasse</button> <button mat-menu-item>Bamboo shark</button> <button mat-menu-item>Banded killifish</button></mat-menu><mat-menu #amphibians=\"matMenu\"><button mat-menu-item>Sonoran desert toad</button> <button mat-menu-item>Western toad</button> <button mat-menu-item>Arroyo toad</button> <button mat-menu-item>Yosemite toad</button></mat-menu><mat-menu #reptiles=\"matMenu\"><button mat-menu-item>Banded Day Gecko</button> <button mat-menu-item>Banded Gila Monster</button> <button mat-menu-item>Black Tree Monitor</button> <button mat-menu-item>Blue Spiny Lizard</button> <button mat-menu-item disabled=\"disabled\">Velociraptor</button></mat-menu>",
-                styles: ["/** No CSS for this example */ "]
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 
@@ -3061,7 +3030,7 @@ class ProgressBarConfigurableExample {
 ProgressBarConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-configurable-example',
-                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Progress bar configuration</h2><section class=\"example-section\"><label class=\"example-margin\">Color:</label><mat-radio-group [(ngModel)]=\"color\"><mat-radio-button class=\"example-margin\" value=\"primary\">Primary</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"accent\">Accent</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"warn\">Warn</mat-radio-button></mat-radio-group></section><section class=\"example-section\"><label class=\"example-margin\">Mode:</label><mat-radio-group [(ngModel)]=\"mode\"><mat-radio-button class=\"example-margin\" value=\"determinate\">Determinate</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"indeterminate\">Indeterminate</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"buffer\">Buffer</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"query\">Query</mat-radio-button></mat-radio-group></section><section class=\"example-section\" *ngIf=\"mode == 'determinate' || mode == 'buffer'\"><label class=\"example-margin\">Progress:</label><mat-slider class=\"example-margin\" [(ngModel)]=\"value\"></mat-slider></section><section class=\"example-section\" *ngIf=\"mode == 'buffer'\"><label class=\"example-margin\">Buffer:</label><mat-slider class=\"example-margin\" [(ngModel)]=\"bufferValue\"></mat-slider></section></mat-card-content></mat-card><mat-card><mat-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><mat-progress-bar class=\"example-margin\" [color]=\"color\" [mode]=\"mode\" [value]=\"value\" [bufferValue]=\"bufferValue\"></mat-progress-bar></section></mat-card-content></mat-card>",
+                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Progress bar configuration</h2><section class=\"example-section\"><label class=\"example-margin\">Color:</label><mat-radio-group [(ngModel)]=\"color\"><mat-radio-button class=\"example-margin\" value=\"primary\">Primary</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"accent\">Accent</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"warn\">Warn</mat-radio-button></mat-radio-group></section><section class=\"example-section\"><label class=\"example-margin\">Mode:</label><mat-radio-group [(ngModel)]=\"mode\"><mat-radio-button class=\"example-margin\" value=\"determinate\">Determinate</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"indeterminate\">Indeterminate</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"buffer\">Buffer</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"query\">Query</mat-radio-button></mat-radio-group></section><section class=\"example-section\" *ngIf=\"mode === 'determinate' || mode === 'buffer'\"><label class=\"example-margin\">Progress:</label><mat-slider class=\"example-margin\" [(ngModel)]=\"value\"></mat-slider></section><section class=\"example-section\" *ngIf=\"mode === 'buffer'\"><label class=\"example-margin\">Buffer:</label><mat-slider class=\"example-margin\" [(ngModel)]=\"bufferValue\"></mat-slider></section></mat-card-content></mat-card><mat-card><mat-card-content><h2 class=\"example-h2\">Result</h2><section class=\"example-section\"><mat-progress-bar class=\"example-margin\" [color]=\"color\" [mode]=\"mode\" [value]=\"value\" [bufferValue]=\"bufferValue\"></mat-progress-bar></section></mat-card-content></mat-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
@@ -3134,7 +3103,7 @@ class ProgressSpinnerConfigurableExample {
 ProgressSpinnerConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-spinner-configurable-example',
-                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Progress spinner configuration</h2><section class=\"example-section\"><label class=\"example-margin\">Color:</label><mat-radio-group [(ngModel)]=\"color\"><mat-radio-button class=\"example-margin\" value=\"primary\">Primary</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"accent\">Accent</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"warn\">Warn</mat-radio-button></mat-radio-group></section><section class=\"example-section\"><label class=\"example-margin\">Mode:</label><mat-radio-group [(ngModel)]=\"mode\"><mat-radio-button class=\"example-margin\" value=\"determinate\">Determinate</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"indeterminate\">Indeterminate</mat-radio-button></mat-radio-group></section><section class=\"example-section\" *ngIf=\"mode == 'determinate'\"><label class=\"example-margin\">Progress:</label><mat-slider class=\"example-margin\" [(ngModel)]=\"value\"></mat-slider></section></mat-card-content></mat-card><mat-card><mat-card-content><h2 class=\"example-h2\">Result</h2><mat-progress-spinner class=\"example-margin\" [color]=\"color\" [mode]=\"mode\" [value]=\"value\"></mat-progress-spinner></mat-card-content></mat-card>",
+                template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Progress spinner configuration</h2><section class=\"example-section\"><label class=\"example-margin\">Color:</label><mat-radio-group [(ngModel)]=\"color\"><mat-radio-button class=\"example-margin\" value=\"primary\">Primary</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"accent\">Accent</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"warn\">Warn</mat-radio-button></mat-radio-group></section><section class=\"example-section\"><label class=\"example-margin\">Mode:</label><mat-radio-group [(ngModel)]=\"mode\"><mat-radio-button class=\"example-margin\" value=\"determinate\">Determinate</mat-radio-button><mat-radio-button class=\"example-margin\" value=\"indeterminate\">Indeterminate</mat-radio-button></mat-radio-group></section><section class=\"example-section\" *ngIf=\"mode === 'determinate'\"><label class=\"example-margin\">Progress:</label><mat-slider class=\"example-margin\" [(ngModel)]=\"value\"></mat-slider></section></mat-card-content></mat-card><mat-card><mat-card-content><h2 class=\"example-h2\">Result</h2><mat-progress-spinner class=\"example-margin\" [color]=\"color\" [mode]=\"mode\" [value]=\"value\"></mat-progress-spinner></mat-card-content></mat-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 0 10px; } "],
             },] },
 ];
@@ -3165,12 +3134,7 @@ ProgressSpinnerOverviewExample.decorators = [
  */
 class RadioNgModelExample {
     constructor() {
-        this.seasons = [
-            'Winter',
-            'Spring',
-            'Summer',
-            'Autumn',
-        ];
+        this.seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
     }
 }
 RadioNgModelExample.decorators = [
@@ -3414,7 +3378,7 @@ class SelectOptgroupExample {
 SelectOptgroupExample.decorators = [
     { type: Component, args: [{
                 selector: 'select-optgroup-example',
-                template: "<mat-form-field><mat-select placeholder=\"Pokemon\" [formControl]=\"pokemonControl\"><mat-option>-- None --</mat-option><mat-optgroup *ngFor=\"let group of pokemonGroups\" [label]=\"group.name\" [disabled]=\"group.disabled\"><mat-option *ngFor=\"let pokemon of group.pokemon\" [value]=\"pokemon.value\">{{ pokemon.viewValue }}</mat-option></mat-optgroup></mat-select></mat-form-field>",
+                template: "<mat-form-field><mat-select placeholder=\"Pokemon\" [formControl]=\"pokemonControl\"><mat-option>-- None --</mat-option><mat-optgroup *ngFor=\"let group of pokemonGroups\" [label]=\"group.name\" [disabled]=\"group.disabled\"><mat-option *ngFor=\"let pokemon of group.pokemon\" [value]=\"pokemon.value\">{{pokemon.viewValue}}</mat-option></mat-optgroup></mat-select></mat-form-field>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -3438,7 +3402,7 @@ class SelectOverviewExample {
 SelectOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'select-overview-example',
-                template: "<mat-form-field><mat-select placeholder=\"Favorite food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{ food.viewValue }}</mat-option></mat-select></mat-form-field>",
+                template: "<mat-form-field><mat-select placeholder=\"Favorite food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{food.viewValue}}</mat-option></mat-select></mat-form-field>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -3460,7 +3424,6 @@ SelectPanelClassExample.decorators = [
                 selector: 'select-panel-class-example',
                 template: "<mat-form-field><mat-select placeholder=\"Panel color\" [formControl]=\"panelColor\" panelClass=\"example-panel-{{panelColor.value}}\"><mat-option value=\"red\">Red</mat-option><mat-option value=\"green\">Green</mat-option><mat-option value=\"blue\">Blue</mat-option></mat-select></mat-form-field>",
                 styles: [".example-panel-red .mat-select-content { background: rgba(255, 0, 0, 0.5); } .example-panel-green .mat-select-content { background: rgba(0, 255, 0, 0.5); } .example-panel-blue .mat-select-content { background: rgba(0, 0, 255, 0.5); } "],
-                encapsulation: ViewEncapsulation.None,
             },] },
 ];
 
@@ -3594,7 +3557,7 @@ class SidenavDrawerOverviewExample {
 SidenavDrawerOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'sidenav-drawer-overview-example',
-                template: "<mat-drawer-container class=\"example-container\"><mat-drawer mode=\"side\" opened=\"true\">Drawer content</mat-drawer><mat-drawer-content>Main content</mat-drawer-content></mat-drawer-container>",
+                template: "<mat-drawer-container class=\"example-container\"><mat-drawer mode=\"side\" opened>Drawer content</mat-drawer><mat-drawer-content>Main content</mat-drawer-content></mat-drawer-container>",
                 styles: [".example-container { width: 400px; height: 200px; margin: 10px; border: 1px solid #555; } "],
             },] },
 ];
@@ -3613,16 +3576,16 @@ class SidenavFixedExample {
     constructor(fb) {
         this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
         this.options = fb.group({
-            'fixed': false,
-            'top': 0,
-            'bottom': 0,
+            bottom: 0,
+            fixed: false,
+            top: 0
         });
     }
 }
 SidenavFixedExample.decorators = [
     { type: Component, args: [{
                 selector: 'sidenav-fixed-example',
-                template: "<ng-container *ngIf=\"shouldRun\"><mat-toolbar class=\"example-header\">Header</mat-toolbar><mat-sidenav-container class=\"example-container\"><mat-sidenav #sidenav mode=\"side\" opened=\"true\" class=\"example-sidenav\" [fixedInViewport]=\"options.value.fixed\" [fixedTopGap]=\"options.value.top\" [fixedBottomGap]=\"options.value.bottom\">{{options.value.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav</mat-sidenav><mat-sidenav-content [formGroup]=\"options\"><p><mat-checkbox formControlName=\"fixed\">Fixed</mat-checkbox></p><p><mat-form-field><input matInput type=\"number\" formControlName=\"top\" placeholder=\"Top gap\"></mat-form-field></p><p><mat-form-field><input matInput type=\"number\" formControlName=\"bottom\" placeholder=\"Bottom gap\"></mat-form-field></p><p><button mat-button (click)=\"sidenav.toggle()\">Toggle</button></p></mat-sidenav-content></mat-sidenav-container><mat-toolbar class=\"example-footer\">Footer</mat-toolbar></ng-container><div *ngIf=\"!shouldRun\">Please open on Stackblitz to see result</div>",
+                template: "<ng-container *ngIf=\"shouldRun\"><mat-toolbar class=\"example-header\">Header</mat-toolbar><mat-sidenav-container class=\"example-container\"><mat-sidenav #sidenav mode=\"side\" opened class=\"example-sidenav\" [fixedInViewport]=\"options.value.fixed\" [fixedTopGap]=\"options.value.top\" [fixedBottomGap]=\"options.value.bottom\">{{options.value.fixed ? 'Fixed' : 'Non-fixed'}} Sidenav</mat-sidenav><mat-sidenav-content [formGroup]=\"options\"><p><mat-checkbox formControlName=\"fixed\">Fixed</mat-checkbox></p><p><mat-form-field><input matInput type=\"number\" formControlName=\"top\" placeholder=\"Top gap\"></mat-form-field></p><p><mat-form-field><input matInput type=\"number\" formControlName=\"bottom\" placeholder=\"Bottom gap\"></mat-form-field></p><p><button mat-button (click)=\"sidenav.toggle()\">Toggle</button></p></mat-sidenav-content></mat-sidenav-container><mat-toolbar class=\"example-footer\">Footer</mat-toolbar></ng-container><div *ngIf=\"!shouldRun\">Please open on Stackblitz to see result</div>",
                 styles: [".example-container { position: absolute; top: 60px; bottom: 60px; left: 0; right: 0; } .example-sidenav { display: flex; align-items: center; justify-content: center; width: 200px; background: rgba(255, 0, 0, 0.5); } .example-header { position: fixed; top: 0; left: 0; right: 0; } .example-footer { position: fixed; bottom: 0; left: 0; right: 0; } "],
             },] },
 ];
@@ -3726,8 +3689,8 @@ class SidenavResponsiveExample {
      * @param {?} media
      */
     constructor(changeDetectorRef, media) {
-        this.fillerNav = Array(50).fill(0).map((_, i) => `Nav Item ${i + 1}`);
-        this.fillerContent = Array(50).fill(0).map(() => `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        this.fillerNav = Array.from({ length: 50 }, (_, i) => `Nav Item ${i + 1}`);
+        this.fillerContent = Array.from({ length: 50 }, () => `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
@@ -3798,17 +3761,16 @@ class SlideToggleFormsExample {
         });
     }
     /**
-     * @param {?} formValue
      * @return {?}
      */
-    onFormSubmit(formValue) {
-        alert(JSON.stringify(formValue, null, 2));
+    onFormSubmit() {
+        alert(JSON.stringify(this.formGroup.value, null, 2));
     }
 }
 SlideToggleFormsExample.decorators = [
     { type: Component, args: [{
                 selector: 'slide-toggle-forms-example',
-                template: "<p>Slide Toggle using a simple NgModel.</p><mat-slide-toggle [(ngModel)]=\"isChecked\">Slide Toggle Checked: {{ isChecked }}</mat-slide-toggle><p>Slide Toggle inside of a Template-driven form</p><form class=\"example-form\" #form=\"ngForm\" (ngSubmit)=\"onFormSubmit(form.value)\" ngNativeValidate><mat-slide-toggle ngModel name=\"enableWifi\">Enable Wifi</mat-slide-toggle><mat-slide-toggle ngModel name=\"acceptTerms\" required>Accept Terms of Service</mat-slide-toggle><button mat-raised-button type=\"submit\">Save Settings</button></form><p>Slide Toggle inside of a Reactive form</p><form class=\"example-form\" [formGroup]=\"formGroup\" (ngSubmit)=\"onFormSubmit(formGroup.value)\" ngNativeValidate><mat-slide-toggle formControlName=\"enableWifi\">Enable Wifi</mat-slide-toggle><mat-slide-toggle formControlName=\"acceptTerms\">Accept Terms of Service</mat-slide-toggle><p>Form Group Status: {{ formGroup.status}}</p><button mat-rasied-button type=\"submit\">Save Settings</button></form>",
+                template: "<p>Slide Toggle using a simple NgModel.</p><mat-slide-toggle [(ngModel)]=\"isChecked\">Slide Toggle Checked: {{isChecked}}</mat-slide-toggle><p>Slide Toggle inside of a Template-driven form</p><form class=\"example-form\" #form=\"ngForm\" (ngSubmit)=\"onFormSubmit()\" ngNativeValidate><mat-slide-toggle ngModel name=\"enableWifi\">Enable Wifi</mat-slide-toggle><mat-slide-toggle ngModel name=\"acceptTerms\" required>Accept Terms of Service</mat-slide-toggle><button mat-raised-button type=\"submit\">Save Settings</button></form><p>Slide Toggle inside of a Reactive form</p><form class=\"example-form\" [formGroup]=\"formGroup\" (ngSubmit)=\"onFormSubmit()\" ngNativeValidate><mat-slide-toggle formControlName=\"enableWifi\">Enable Wifi</mat-slide-toggle><mat-slide-toggle formControlName=\"acceptTerms\">Accept Terms of Service</mat-slide-toggle><p>Form Group Status: {{formGroup.status}}</p><button mat-rasied-button type=\"submit\">Save Settings</button></form>",
                 styles: [".example-form mat-slide-toggle { margin: 8px 0; display: block; } "],
             },] },
 ];
@@ -3862,11 +3824,11 @@ class SliderConfigurableExample {
         return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
     }
     /**
-     * @param {?} v
+     * @param {?} value
      * @return {?}
      */
-    set tickInterval(v) {
-        this._tickInterval = Number(v);
+    set tickInterval(value) {
+        this._tickInterval = coerceNumberProperty(value);
     }
 }
 SliderConfigurableExample.decorators = [
@@ -3874,7 +3836,6 @@ SliderConfigurableExample.decorators = [
                 selector: 'slider-configurable-example',
                 template: "<mat-card><mat-card-content><h2 class=\"example-h2\">Slider configuration</h2><section class=\"example-section\"><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Value\" [(ngModel)]=\"value\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Min value\" [(ngModel)]=\"min\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Max value\" [(ngModel)]=\"max\"></mat-form-field><mat-form-field class=\"example-margin\"><input matInput type=\"number\" placeholder=\"Step size\" [(ngModel)]=\"step\"></mat-form-field></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"autoTicks\" *ngIf=\"showTicks\">Auto ticks</mat-checkbox><mat-form-field class=\"example-margin\" *ngIf=\"showTicks && !autoTicks\"><input matInput type=\"number\" placeholder=\"Tick interval\" [(ngModel)]=\"tickInterval\"></mat-form-field></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"vertical\">Vertical</mat-checkbox><mat-checkbox class=\"example-margin\" [(ngModel)]=\"invert\">Inverted</mat-checkbox></section><section class=\"example-section\"><mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox></section></mat-card-content></mat-card><mat-card class=\"result\"><mat-card-content><h2 class=\"example-h2\">Result</h2><mat-slider class=\"example-margin\" [disabled]=\"disabled\" [invert]=\"invert\" [max]=\"max\" [min]=\"min\" [step]=\"step\" [thumbLabel]=\"thumbLabel\" [tickInterval]=\"tickInterval\" [(ngModel)]=\"value\" [vertical]=\"vertical\"></mat-slider></mat-card-content></mat-card>",
                 styles: [".example-h2 { margin: 10px; } .example-section { display: flex; align-content: center; align-items: center; height: 60px; } .example-margin { margin: 10px; } .mat-slider-horizontal { width: 300px; } .mat-slider-vertical { height: 300px; } "],
-                encapsulation: ViewEncapsulation.None,
             },] },
 ];
 
@@ -3964,7 +3925,11 @@ PizzaPartyComponent.decorators = [
     { type: Component, args: [{
                 selector: 'snack-bar-component-example-snack',
                 template: "<span class=\"example-pizza-party\">Pizza party!!! 🍕</span>",
-                styles: [`.example-pizza-party { color: hotpink; }`],
+                styles: [`
+    .example-pizza-party {
+      color: hotpink;
+    }
+  `],
             },] },
 ];
 
@@ -4053,11 +4018,11 @@ SnackBarPositionExample.ctorParameters = () => [
 class SortOverviewExample {
     constructor() {
         this.desserts = [
-            { name: 'Frozen yogurt', calories: '159', fat: '6', carbs: '24', protein: '4' },
-            { name: 'Ice cream sandwich', calories: '237', fat: '9', carbs: '37', protein: '4' },
-            { name: 'Eclair', calories: '262', fat: '16', carbs: '24', protein: '6' },
-            { name: 'Cupcake', calories: '305', fat: '4', carbs: '67', protein: '4' },
-            { name: 'Gingerbread', calories: '356', fat: '16', carbs: '49', protein: '4' },
+            { name: 'Frozen yogurt', calories: 159, fat: 6, carbs: 24, protein: 4 },
+            { name: 'Ice cream sandwich', calories: 237, fat: 9, carbs: 37, protein: 4 },
+            { name: 'Eclair', calories: 262, fat: 16, carbs: 24, protein: 6 },
+            { name: 'Cupcake', calories: 305, fat: 4, carbs: 67, protein: 4 },
+            { name: 'Gingerbread', calories: 356, fat: 16, carbs: 49, protein: 4 },
         ];
         this.sortedData = this.desserts.slice();
     }
@@ -4067,18 +4032,18 @@ class SortOverviewExample {
      */
     sortData(sort) {
         const /** @type {?} */ data = this.desserts.slice();
-        if (!sort.active || sort.direction == '') {
+        if (!sort.active || sort.direction === '') {
             this.sortedData = data;
             return;
         }
         this.sortedData = data.sort((a, b) => {
-            let /** @type {?} */ isAsc = sort.direction == 'asc';
+            const /** @type {?} */ isAsc = sort.direction === 'asc';
             switch (sort.active) {
                 case 'name': return compare(a.name, b.name, isAsc);
-                case 'calories': return compare(+a.calories, +b.calories, isAsc);
-                case 'fat': return compare(+a.fat, +b.fat, isAsc);
-                case 'carbs': return compare(+a.carbs, +b.carbs, isAsc);
-                case 'protein': return compare(+a.protein, +b.protein, isAsc);
+                case 'calories': return compare(a.calories, b.calories, isAsc);
+                case 'fat': return compare(a.fat, b.fat, isAsc);
+                case 'carbs': return compare(a.carbs, b.carbs, isAsc);
+                case 'protein': return compare(a.protein, b.protein, isAsc);
                 default: return 0;
             }
         });
@@ -4133,7 +4098,7 @@ class StepperEditableExample {
 StepperEditableExample.decorators = [
     { type: Component, args: [{
                 selector: 'stepper-editable-example',
-                template: "<button mat-raised-button (click)=\"isEditable = !isEditable\">{{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}</button><mat-horizontal-stepper [linear]=\"true\" #stepper><mat-step [stepControl]=\"firstFormGroup\" [editable]=\"isEditable\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" [editable]=\"isEditable\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                template: "<button mat-raised-button (click)=\"isEditable = !isEditable\">{{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}</button><mat-horizontal-stepper linear #stepper><mat-step [stepControl]=\"firstFormGroup\" [editable]=\"isEditable\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" [editable]=\"isEditable\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
@@ -4172,7 +4137,7 @@ class StepperOptionalExample {
 StepperOptionalExample.decorators = [
     { type: Component, args: [{
                 selector: 'stepper-optional-example',
-                template: "<button mat-raised-button (click)=\"isOptional = !isOptional\">{{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}</button><mat-horizontal-stepper [linear]=\"true\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" [optional]=\"isOptional\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                template: "<button mat-raised-button (click)=\"isOptional = !isOptional\">{{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}</button><mat-horizontal-stepper linear #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" [optional]=\"isOptional\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
                 styles: ["/** No CSS for this example */ "]
             },] },
 ];
@@ -4212,7 +4177,7 @@ StepperOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'stepper-overview-example',
                 template: "<button mat-raised-button (click)=\"isLinear = !isLinear\" id=\"toggle-linear\">{{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}</button><mat-horizontal-stepper [linear]=\"isLinear\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
-                styles: ["/** No CSS for this example */ "]
+                styles: ["/** No CSS for this example */ "],
             },] },
 ];
 /** @nocollapse */
@@ -4482,7 +4447,7 @@ class TabNavBarBasicExample {
 TabNavBarBasicExample.decorators = [
     { type: Component, args: [{
                 selector: 'tab-nav-bar-basic-example',
-                template: "<button mat-raised-button class=\"example-action-button\" (click)=\"toggleBackground()\">Toggle background</button><nav mat-tab-nav-bar [backgroundColor]=\"background\"><a mat-tab-link *ngFor=\"let link of links\" (click)=\"activeLink = link\" [active]=\"activeLink == link\">{{ link }} </a><a mat-tab-link disabled=\"disabled\">Disabled Link</a></nav>",
+                template: "<button mat-raised-button class=\"example-action-button\" (click)=\"toggleBackground()\">Toggle background</button><nav mat-tab-nav-bar [backgroundColor]=\"background\"><a mat-tab-link *ngFor=\"let link of links\" (click)=\"activeLink = link\" [active]=\"activeLink == link\">{{link}} </a><a mat-tab-link disabled=\"disabled\">Disabled Link</a></nav>",
                 styles: [".example-action-button { margin-bottom: 8px; } "],
             },] },
 ];
@@ -4491,6 +4456,18 @@ TabNavBarBasicExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+const /** @type {?} */ ELEMENT_DATA$2 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
 /**
  * \@title Basic use of `<mat-table>` (uses display flex)
  */
@@ -4507,7 +4484,12 @@ TableBasicFlexExample.decorators = [
                 template: "<mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"position\"><mat-header-cell *matHeaderCellDef>No.</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.position}}</mat-cell></ng-container><ng-container matColumnDef=\"name\"><mat-header-cell *matHeaderCellDef>Name</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.name}}</mat-cell></ng-container><ng-container matColumnDef=\"weight\"><mat-header-cell *matHeaderCellDef>Weight</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.weight}}</mat-cell></ng-container><ng-container matColumnDef=\"symbol\"><mat-header-cell *matHeaderCellDef>Symbol</mat-header-cell><mat-cell *matCellDef=\"let element\">{{element.symbol}}</mat-cell></ng-container><mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row><mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row></mat-table>",
             },] },
 ];
-const /** @type {?} */ ELEMENT_DATA$2 = [
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+const /** @type {?} */ ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4519,11 +4501,6 @@ const /** @type {?} */ ELEMENT_DATA$2 = [
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
 /**
  * \@title Basic use of `<table mat-table>`
  */
@@ -4540,7 +4517,12 @@ TableBasicExample.decorators = [
                 template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
             },] },
 ];
-const /** @type {?} */ ELEMENT_DATA$3 = [
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+const /** @type {?} */ ELEMENT_DATA$4 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4552,26 +4534,21 @@ const /** @type {?} */ ELEMENT_DATA$3 = [
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
 /**
  * \@title Table dynamically changing the columns displayed
  */
 class TableDynamicColumnsExample {
     constructor() {
-        this.definedColumns = ['name', 'weight', 'symbol', 'position'];
-        this.columnsToDisplay = this.definedColumns.slice();
+        this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
+        this.columnsToDisplay = this.displayedColumns.slice();
         this.data = ELEMENT_DATA$4;
     }
     /**
      * @return {?}
      */
     addColumn() {
-        const /** @type {?} */ randomColumn = Math.floor(Math.random() * this.definedColumns.length);
-        this.columnsToDisplay.push(this.definedColumns[randomColumn]);
+        const /** @type {?} */ randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
+        this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
     }
     /**
      * @return {?}
@@ -4600,20 +4577,8 @@ TableDynamicColumnsExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-dynamic-columns-example',
                 styles: ["table { width: 100%; } button { margin: 16px 8px; } "],
-                template: "<button mat-raised-button (click)=\"addColumn()\">Add column</button> <button mat-raised-button (click)=\"removeColumn()\">Remove column</button> <button mat-raised-button (click)=\"shuffle()\">Shuffle</button><table mat-table [dataSource]=\"data\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"{{column}}\" *ngFor=\"let column of definedColumns\"><th mat-header-cell *matHeaderCellDef>{{column}}</th><td mat-cell *matCellDef=\"let element\">{{element[column]}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr><tr mat-row *matRowDef=\"let row; columns: columnsToDisplay;\"></tr></table>",
+                template: "<button mat-raised-button (click)=\"addColumn()\">Add column</button> <button mat-raised-button (click)=\"removeColumn()\">Remove column</button> <button mat-raised-button (click)=\"shuffle()\">Shuffle</button><table mat-table [dataSource]=\"data\" class=\"mat-elevation-z8\"><ng-container [matColumnDef]=\"column\" *ngFor=\"let column of displayedColumns\"><th mat-header-cell *matHeaderCellDef>{{column}}</th><td mat-cell *matCellDef=\"let element\">{{element[column]}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr><tr mat-row *matRowDef=\"let row; columns: columnsToDisplay;\"></tr></table>",
             },] },
-];
-const /** @type {?} */ ELEMENT_DATA$4 = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
 /**
@@ -4729,6 +4694,18 @@ const /** @type {?} */ ELEMENT_DATA$5 = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+const /** @type {?} */ ELEMENT_DATA$6 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
 /**
  * \@title Table with filtering
  */
@@ -4742,9 +4719,7 @@ class TableFilteringExample {
      * @return {?}
      */
     applyFilter(filterValue) {
-        filterValue = filterValue.trim(); // Remove whitespace
-        filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
-        this.dataSource.filter = filterValue;
+        this.dataSource.filter = filterValue.trim().toLowerCase();
     }
 }
 TableFilteringExample.decorators = [
@@ -4753,18 +4728,6 @@ TableFilteringExample.decorators = [
                 styles: ["/* Structure */ table { width: 100%; } .mat-form-field { font-size: 14px; width: 100%; } "],
                 template: "<mat-form-field><input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\"></mat-form-field><table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
             },] },
-];
-const /** @type {?} */ ELEMENT_DATA$6 = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
 /**
@@ -4850,7 +4813,7 @@ TableHttpExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-http-example',
                 styles: ["/* Structure */ .example-container { position: relative; } .example-table-container { position: relative; max-height: 400px; overflow: auto; } table { width: 100%; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><div class=\"example-table-container\"><table mat-table [dataSource]=\"data\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><th mat-header-cell *matHeaderCellDef>#</th><td mat-cell *matCellDef=\"let row\">{{ row.number }}</td></ng-container><ng-container matColumnDef=\"title\"><th mat-header-cell *matHeaderCellDef>Title</th><td mat-cell *matCellDef=\"let row\">{{ row.title }}</td></ng-container><ng-container matColumnDef=\"state\"><th mat-header-cell *matHeaderCellDef>State</th><td mat-cell *matCellDef=\"let row\">{{ row.state }}</td></ng-container><ng-container matColumnDef=\"created\"><th mat-header-cell *matHeaderCellDef mat-sort-header disableClear=\"true\">Created</th><td mat-cell *matCellDef=\"let row\">{{ row.created_at | date }}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
+                template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><div class=\"example-table-container\"><table mat-table [dataSource]=\"data\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><th mat-header-cell *matHeaderCellDef>#</th><td mat-cell *matCellDef=\"let row\">{{row.number}}</td></ng-container><ng-container matColumnDef=\"title\"><th mat-header-cell *matHeaderCellDef>Title</th><td mat-cell *matCellDef=\"let row\">{{row.title}}</td></ng-container><ng-container matColumnDef=\"state\"><th mat-header-cell *matHeaderCellDef>State</th><td mat-cell *matCellDef=\"let row\">{{row.state}}</td></ng-container><ng-container matColumnDef=\"created\"><th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>Created</th><td mat-cell *matCellDef=\"let row\">{{row.created_at | date}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
             },] },
 ];
 /** @nocollapse */
@@ -4924,16 +4887,21 @@ TableMultipleHeaderFooterExample.decorators = [
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * Constants used to fill up our data base.
+ */
+const /** @type {?} */ COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
+const /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
+    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+/**
  * \@title Data table with sorting, pagination, and filtering.
  */
 class TableOverviewExample {
     constructor() {
         this.displayedColumns = ['id', 'name', 'progress', 'color'];
         // Create 100 users
-        const /** @type {?} */ users = [];
-        for (let /** @type {?} */ i = 1; i <= 100; i++) {
-            users.push(createNewUser(i));
-        }
+        const /** @type {?} */ users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
         // Assign the data to the data source for the table to render
         this.dataSource = new MatTableDataSource(users);
     }
@@ -4949,9 +4917,7 @@ class TableOverviewExample {
      * @return {?}
      */
     applyFilter(filterValue) {
-        filterValue = filterValue.trim(); // Remove whitespace
-        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
-        this.dataSource.filter = filterValue;
+        this.dataSource.filter = filterValue.trim().toLowerCase();
         if (this.dataSource.paginator) {
             this.dataSource.paginator.firstPage();
         }
@@ -4985,14 +4951,6 @@ function createNewUser(id) {
         color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
     };
 }
-/**
- * Constants used to fill up our data base.
- */
-const /** @type {?} */ COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 
 /**
  * @fileoverview added by tsickle
@@ -5072,6 +5030,18 @@ TableRowContextExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
+const /** @type {?} */ ELEMENT_DATA$8 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
 /**
  * \@title Table with selection
  */
@@ -5107,7 +5077,12 @@ TableSelectionExample.decorators = [
                 template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"><ng-container matColumnDef=\"select\"><th mat-header-cell *matHeaderCellDef><mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"selection.hasValue() && isAllSelected()\" [indeterminate]=\"selection.hasValue() && !isAllSelected()\"></mat-checkbox></th><td mat-cell *matCellDef=\"let row\"><mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row) : null\" [checked]=\"selection.isSelected(row)\"></mat-checkbox></td></ng-container><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\" (click)=\"selection.toggle(row)\"></tr></table>",
             },] },
 ];
-const /** @type {?} */ ELEMENT_DATA$8 = [
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+const /** @type {?} */ ELEMENT_DATA$9 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5119,11 +5094,6 @@ const /** @type {?} */ ELEMENT_DATA$8 = [
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
 /**
  * \@title Table with sorting
  */
@@ -5150,18 +5120,6 @@ TableSortingExample.decorators = [
 TableSortingExample.propDecorators = {
     "sort": [{ type: ViewChild, args: [MatSort,] },],
 };
-const /** @type {?} */ ELEMENT_DATA$9 = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-];
 
 /**
  * @fileoverview added by tsickle
@@ -5331,7 +5289,7 @@ TableStickyFooterExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-sticky-footer-example',
                 styles: [".example-container { height: 270px; overflow: auto; } table { width: 100%; } tr.mat-footer-row { font-weight: bold; } .mat-table-sticky { border-top: 1px solid #e0e0e0; } "],
-                template: "<div class=\"example-container mat-elevation-z8\"><table mat-table [dataSource]=\"transactions\"><ng-container matColumnDef=\"item\"><th mat-header-cell *matHeaderCellDef>Item</th><td mat-cell *matCellDef=\"let transaction\">{{transaction.item}}</td><td mat-footer-cell *matFooterCellDef>Total</td></ng-container><ng-container matColumnDef=\"cost\"><th mat-header-cell *matHeaderCellDef>Cost</th><td mat-cell *matCellDef=\"let transaction\">{{transaction.cost | currency}}</td><td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr><tr mat-footer-row *matFooterRowDef=\"displayedColumns sticky: true\"></tr></table></div>",
+                template: "<div class=\"example-container mat-elevation-z8\"><table mat-table [dataSource]=\"transactions\"><ng-container matColumnDef=\"item\"><th mat-header-cell *matHeaderCellDef>Item</th><td mat-cell *matCellDef=\"let transaction\">{{transaction.item}}</td><td mat-footer-cell *matFooterCellDef>Total</td></ng-container><ng-container matColumnDef=\"cost\"><th mat-header-cell *matHeaderCellDef>Cost</th><td mat-cell *matCellDef=\"let transaction\">{{transaction.cost | currency}}</td><td mat-footer-cell *matFooterCellDef>{{getTotalCost() | currency}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr><tr mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: true\"></tr></table></div>",
             },] },
 ];
 
@@ -5684,7 +5642,7 @@ class TooltipPositionExample {
 TooltipPositionExample.decorators = [
     { type: Component, args: [{
                 selector: 'tooltip-position-example',
-                template: "<mat-form-field class=\"example-user-input\"><mat-select placeholder=\"Tooltip position\" [formControl]=\"position\"><mat-option *ngFor=\"let positionOption of positionOptions\" [value]=\"positionOption\">{{ positionOption }}</mat-option></mat-select></mat-form-field><button mat-raised-button matTooltip=\"Info about the action\" [matTooltipPosition]=\"position.value\" aria-label=\"Button that displays a tooltip in various positions\">Action</button>",
+                template: "<mat-form-field class=\"example-user-input\"><mat-select placeholder=\"Tooltip position\" [formControl]=\"position\"><mat-option *ngFor=\"let positionOption of positionOptions\" [value]=\"positionOption\">{{positionOption}}</mat-option></mat-select></mat-form-field><button mat-raised-button matTooltip=\"Info about the action\" [matTooltipPosition]=\"position.value\" aria-label=\"Button that displays a tooltip in various positions\">Action</button>",
                 styles: [".example-user-input { margin-right: 8px; } "],
             },] },
 ];
@@ -5707,21 +5665,21 @@ class TodoItemFlatNode {
  * The Json object for to-do list data.
  */
 const /** @type {?} */ TREE_DATA$2 = {
-    'Reminders': [
+    Groceries: {
+        'Almond Meal flour': null,
+        'Organic eggs': null,
+        'Protein Powder': null,
+        Fruits: {
+            Apple: null,
+            Berries: ['Blueberry', 'Raspberry'],
+            Orange: null
+        }
+    },
+    Reminders: [
         'Cook dinner',
         'Read the Material Design spec',
         'Upgrade Application to Angular'
-    ],
-    'Groceries': {
-        'Organic eggs': null,
-        'Protein Powder': null,
-        'Almond Meal flour': null,
-        'Fruits': {
-            'Apple': null,
-            'Orange': null,
-            'Berries': ['Blueberry', 'Raspberry']
-        }
-    }
+    ]
 };
 /**
  * Checklist database, it can build a tree structured Json object.
@@ -5750,28 +5708,25 @@ class ChecklistDatabase {
     /**
      * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
      * The return value is the list of `TodoItemNode`.
-     * @param {?} value
+     * @param {?} obj
      * @param {?} level
      * @return {?}
      */
-    buildFileTree(value, level) {
-        let /** @type {?} */ data = [];
-        for (let /** @type {?} */ k in value) {
-            let /** @type {?} */ v = value[k];
-            let /** @type {?} */ node = new TodoItemNode();
-            node.item = `${k}`;
-            if (v === null || v === undefined) {
-                // no action
+    buildFileTree(obj, level) {
+        return Object.keys(obj).reduce((accumulator, key) => {
+            const /** @type {?} */ value = obj[key];
+            const /** @type {?} */ node = new TodoItemNode();
+            node.item = key;
+            if (value != null) {
+                if (typeof value === 'object') {
+                    node.children = this.buildFileTree(value, level + 1);
+                }
+                else {
+                    node.item = value;
+                }
             }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.item = v;
-            }
-            data.push(node);
-        }
-        return data;
+            return accumulator.concat(node);
+        }, []);
     }
     /**
      * Add an item to to-do list
@@ -5780,9 +5735,8 @@ class ChecklistDatabase {
      * @return {?}
      */
     insertItem(parent, name) {
-        const /** @type {?} */ child = /** @type {?} */ ({ item: name });
         if (parent.children) {
-            parent.children.push(child);
+            parent.children.push(/** @type {?} */ ({ item: name }));
             this.dataChange.next(this.data);
         }
     }
@@ -5830,19 +5784,18 @@ class TreeChecklistExample {
          * The selection for checklist
          */
         this.checklistSelection = new SelectionModel(true /* multiple */);
-        this.getLevel = (node) => { return node.level; };
-        this.isExpandable = (node) => { return node.expandable; };
-        this.getChildren = (node) => {
-            return of(node.children);
-        };
-        this.hasChild = (_, _nodeData) => { return _nodeData.expandable; };
-        this.hasNoContent = (_, _nodeData) => { return _nodeData.item === ''; };
+        this.getLevel = (node) => node.level;
+        this.isExpandable = (node) => node.expandable;
+        this.getChildren = (node) => of(node.children);
+        this.hasChild = (_, _nodeData) => _nodeData.expandable;
+        this.hasNoContent = (_, _nodeData) => _nodeData.item === '';
         /**
          * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
          */
         this.transformer = (node, level) => {
-            let /** @type {?} */ flatNode = this.nestedNodeMap.has(node) && /** @type {?} */ ((this.nestedNodeMap.get(node))).item === node.item
-                ? /** @type {?} */ ((this.nestedNodeMap.get(node)))
+            const /** @type {?} */ existingNode = this.nestedNodeMap.get(node);
+            const /** @type {?} */ flatNode = existingNode && existingNode.item === node.item
+                ? existingNode
                 : new TodoItemFlatNode();
             flatNode.item = node.item;
             flatNode.level = level;
@@ -6029,10 +5982,10 @@ class DynamicDataSource {
      */
     handleTreeControl(change) {
         if (change.added) {
-            change.added.forEach((node) => this.toggleNode(node, true));
+            change.added.forEach(node => this.toggleNode(node, true));
         }
         if (change.removed) {
-            change.removed.reverse().forEach((node) => this.toggleNode(node, false));
+            change.removed.slice().reverse().forEach(node => this.toggleNode(node, false));
         }
     }
     /**
@@ -6082,9 +6035,9 @@ class TreeDynamicExample {
      * @param {?} database
      */
     constructor(database) {
-        this.getLevel = (node) => { return node.level; };
-        this.isExpandable = (node) => { return node.expandable; };
-        this.hasChild = (_, _nodeData) => { return _nodeData.expandable; };
+        this.getLevel = (node) => node.level;
+        this.isExpandable = (node) => node.expandable;
+        this.hasChild = (_, _nodeData) => _nodeData.expandable;
         this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
         this.dataSource = new DynamicDataSource(this.treeControl, database);
         this.dataSource.data = database.initialData();
@@ -6117,46 +6070,57 @@ let FileNode$2 = class FileNode {
  * Flat node with expandable and level information
  */
 let FileFlatNode$1 = class FileFlatNode {
+    /**
+     * @param {?} expandable
+     * @param {?} filename
+     * @param {?} level
+     * @param {?} type
+     */
+    constructor(expandable, filename, level, type) {
+        this.expandable = expandable;
+        this.filename = filename;
+        this.level = level;
+        this.type = type;
+    }
 };
 /**
  * The file structure tree data in string. The data could be parsed into a Json object
  */
-const /** @type {?} */ TREE_DATA$3 = `
-  {
-    "Documents": {
-      "angular": {
-        "src": {
-          "core": "ts",
-          "compiler": "ts"
-        }
-      },
-      "material2": {
-        "src": {
-          "button": "ts",
-          "checkbox": "ts",
-          "input": "ts"
-        }
-      }
+const /** @type {?} */ TREE_DATA$3 = JSON.stringify({
+    Applications: {
+        Calendar: 'app',
+        Chrome: 'app',
+        Webstorm: 'app'
     },
-    "Downloads": {
-        "Tutorial": "html",
-        "November": "pdf",
-        "October": "pdf"
-    },
-    "Pictures": {
-        "Sun": "png",
-        "Woods": "jpg",
-        "Photo Booth Library": {
-          "Contents": "dir",
-          "Pictures": "dir"
+    Documents: {
+        angular: {
+            src: {
+                compiler: 'ts',
+                core: 'ts'
+            }
+        },
+        material2: {
+            src: {
+                button: 'ts',
+                checkbox: 'ts',
+                input: 'ts'
+            }
         }
     },
-    "Applications": {
-        "Chrome": "app",
-        "Calendar": "app",
-        "Webstorm": "app"
+    Downloads: {
+        October: 'pdf',
+        November: 'pdf',
+        Tutorial: 'html'
+    },
+    Pictures: {
+        'Photo Booth Library': {
+            Contents: 'dir',
+            Pictures: 'dir'
+        },
+        Sun: 'png',
+        Woods: 'jpg'
     }
-}`;
+});
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -6188,28 +6152,25 @@ let FileDatabase$2 = class FileDatabase {
     /**
      * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
      * The return value is the list of `FileNode`.
-     * @param {?} value
+     * @param {?} obj
      * @param {?} level
      * @return {?}
      */
-    buildFileTree(value, level) {
-        let /** @type {?} */ data = [];
-        for (let /** @type {?} */ k in value) {
-            let /** @type {?} */ v = value[k];
-            let /** @type {?} */ node = new FileNode$2();
-            node.filename = `${k}`;
-            if (v === null || v === undefined) {
-                // no action
+    buildFileTree(obj, level) {
+        return Object.keys(obj).reduce((accumulator, key) => {
+            const /** @type {?} */ value = obj[key];
+            const /** @type {?} */ node = new FileNode$2();
+            node.filename = key;
+            if (value != null) {
+                if (typeof value === 'object') {
+                    node.children = this.buildFileTree(value, level + 1);
+                }
+                else {
+                    node.type = value;
+                }
             }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.type = v;
-            }
-            data.push(node);
-        }
-        return data;
+            return accumulator.concat(node);
+        }, []);
     }
 };
 FileDatabase$2.decorators = [
@@ -6226,25 +6187,16 @@ class TreeFlatOverviewExample {
      */
     constructor(database) {
         this.transformer = (node, level) => {
-            let /** @type {?} */ flatNode = new FileFlatNode$1();
-            flatNode.filename = node.filename;
-            flatNode.type = node.type;
-            flatNode.level = level;
-            flatNode.expandable = !!node.children;
-            return flatNode;
+            return new FileFlatNode$1(!!node.children, node.filename, level, node.type);
         };
-        this._getLevel = (node) => { return node.level; };
-        this._isExpandable = (node) => { return node.expandable; };
-        this._getChildren = (node) => {
-            return of(node.children);
-        };
-        this.hasChild = (_, _nodeData) => { return _nodeData.expandable; };
+        this._getLevel = (node) => node.level;
+        this._isExpandable = (node) => node.expandable;
+        this._getChildren = (node) => of(node.children);
+        this.hasChild = (_, _nodeData) => _nodeData.expandable;
         this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
         this.treeControl = new FlatTreeControl(this._getLevel, this._isExpandable);
         this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe(data => {
-            this.dataSource.data = data;
-        });
+        database.dataChange.subscribe(data => this.dataSource.data = data);
     }
 }
 TreeFlatOverviewExample.decorators = [
@@ -6347,7 +6299,7 @@ class LoadmoreDatabase {
             return;
         }
         const /** @type {?} */ newChildrenNumber = /** @type {?} */ ((parent.children)).length + this.batchNumber;
-        let /** @type {?} */ nodes = children.slice(0, newChildrenNumber)
+        const /** @type {?} */ nodes = children.slice(0, newChildrenNumber)
             .map(name => this._generateNode(name));
         if (newChildrenNumber < children.length) {
             // Need a new load more node
@@ -6382,19 +6334,20 @@ class TreeLoadmoreExample {
     constructor(database) {
         this.database = database;
         this.nodeMap = new Map();
-        this.getChildren = (node) => { return node.childrenChange; };
+        this.getChildren = (node) => node.childrenChange;
         this.transformer = (node, level) => {
-            if (this.nodeMap.has(node.item)) {
-                return /** @type {?} */ ((this.nodeMap.get(node.item)));
+            const /** @type {?} */ existingNode = this.nodeMap.get(node.item);
+            if (existingNode) {
+                return existingNode;
             }
-            let /** @type {?} */ newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
+            const /** @type {?} */ newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
             this.nodeMap.set(node.item, newNode);
             return newNode;
         };
-        this.getLevel = (node) => { return node.level; };
-        this.isExpandable = (node) => { return node.expandable; };
-        this.hasChild = (_, _nodeData) => { return _nodeData.expandable; };
-        this.isLoadMore = (_, _nodeData) => { return _nodeData.item === LOAD_MORE; };
+        this.getLevel = (node) => node.level;
+        this.isExpandable = (node) => node.expandable;
+        this.hasChild = (_, _nodeData) => _nodeData.expandable;
+        this.isLoadMore = (_, _nodeData) => _nodeData.item === LOAD_MORE;
         this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
         this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
         this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
@@ -6444,42 +6397,41 @@ let FileNode$3 = class FileNode {
 /**
  * The Json tree data in string. The data could be parsed into Json object
  */
-const /** @type {?} */ TREE_DATA$4 = `
-  {
-    "Documents": {
-      "angular": {
-        "src": {
-          "core": "ts",
-          "compiler": "ts"
-        }
-      },
-      "material2": {
-        "src": {
-          "button": "ts",
-          "checkbox": "ts",
-          "input": "ts"
-        }
-      }
+const /** @type {?} */ TREE_DATA$4 = JSON.stringify({
+    Applications: {
+        Calendar: 'app',
+        Chrome: 'app',
+        Webstorm: 'app'
     },
-    "Downloads": {
-        "Tutorial": "html",
-        "November": "pdf",
-        "October": "pdf"
-    },
-    "Pictures": {
-        "Sun": "png",
-        "Woods": "jpg",
-        "Photo Booth Library": {
-          "Contents": "dir",
-          "Pictures": "dir"
+    Documents: {
+        angular: {
+            src: {
+                compiler: 'ts',
+                core: 'ts'
+            }
+        },
+        material2: {
+            src: {
+                button: 'ts',
+                checkbox: 'ts',
+                input: 'ts'
+            }
         }
     },
-    "Applications": {
-        "Chrome": "app",
-        "Calendar": "app",
-        "Webstorm": "app"
+    Downloads: {
+        October: 'pdf',
+        November: 'pdf',
+        Tutorial: 'html'
+    },
+    Pictures: {
+        'Photo Booth Library': {
+            Contents: 'dir',
+            Pictures: 'dir'
+        },
+        Sun: 'png',
+        Woods: 'jpg'
     }
-  }`;
+});
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -6511,28 +6463,25 @@ let FileDatabase$3 = class FileDatabase {
     /**
      * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
      * The return value is the list of `FileNode`.
-     * @param {?} value
+     * @param {?} obj
      * @param {?} level
      * @return {?}
      */
-    buildFileTree(value, level) {
-        let /** @type {?} */ data = [];
-        for (let /** @type {?} */ k in value) {
-            let /** @type {?} */ v = value[k];
-            let /** @type {?} */ node = new FileNode$3();
-            node.filename = `${k}`;
-            if (v === null || v === undefined) {
-                // no action
+    buildFileTree(obj, level) {
+        return Object.keys(obj).reduce((accumulator, key) => {
+            const /** @type {?} */ value = obj[key];
+            const /** @type {?} */ node = new FileNode$3();
+            node.filename = key;
+            if (value != null) {
+                if (typeof value === 'object') {
+                    node.children = this.buildFileTree(value, level + 1);
+                }
+                else {
+                    node.type = value;
+                }
             }
-            else if (typeof v === 'object') {
-                node.children = this.buildFileTree(v, level + 1);
-            }
-            else {
-                node.type = v;
-            }
-            data.push(node);
-        }
-        return data;
+            return accumulator.concat(node);
+        }, []);
     }
 };
 FileDatabase$3.decorators = [
@@ -6548,8 +6497,8 @@ class TreeNestedOverviewExample {
      * @param {?} database
      */
     constructor(database) {
-        this._getChildren = (node) => { return of(node.children); };
-        this.hasNestedChild = (_, nodeData) => { return !(nodeData.type); };
+        this.hasNestedChild = (_, nodeData) => !nodeData.type;
+        this._getChildren = (node) => of(node.children);
         this.nestedTreeControl = new NestedTreeControl(this._getChildren);
         this.nestedDataSource = new MatTreeNestedDataSource();
         database.dataChange.subscribe(data => this.nestedDataSource.data = data);

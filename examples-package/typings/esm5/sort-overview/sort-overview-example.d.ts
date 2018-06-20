@@ -1,16 +1,17 @@
 import { Sort } from '@angular/material';
+export interface Dessert {
+    calories: number;
+    carbs: number;
+    fat: number;
+    name: string;
+    protein: number;
+}
 /**
  * @title Sorting overview
  */
 export declare class SortOverviewExample {
-    desserts: {
-        name: string;
-        calories: string;
-        fat: string;
-        carbs: string;
-        protein: string;
-    }[];
-    sortedData: any;
+    desserts: Dessert[];
+    sortedData: Dessert[];
     constructor();
     sortData(sort: Sort): void;
 }

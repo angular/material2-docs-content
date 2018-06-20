@@ -1,25 +1,6 @@
 <span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatSort, MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
-<span class="hljs-comment">/**
- * @title Table with sorting
- */</span>
-<span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'table-sorting-example'</span>,
-  styleUrls: [<span class="hljs-string">'table-sorting-example.css'</span>],
-  templateUrl: <span class="hljs-string">'table-sorting-example.html'</span>,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableSortingExample <span class="hljs-keyword">implements</span> OnInit {
-  displayedColumns = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(ELEMENT_DATA);
-
-  <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
-
-  ngOnInit() {
-    <span class="hljs-keyword">this</span>.dataSource.sort = <span class="hljs-keyword">this</span>.sort;
-  }
-}
-
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   name: <span class="hljs-built_in">string</span>;
   position: <span class="hljs-built_in">number</span>;
@@ -39,3 +20,22 @@
   {position: <span class="hljs-number">9</span>, name: <span class="hljs-string">'Fluorine'</span>, weight: <span class="hljs-number">18.9984</span>, symbol: <span class="hljs-string">'F'</span>},
   {position: <span class="hljs-number">10</span>, name: <span class="hljs-string">'Neon'</span>, weight: <span class="hljs-number">20.1797</span>, symbol: <span class="hljs-string">'Ne'</span>},
 ];
+
+<span class="hljs-comment">/**
+ * @title Table with sorting
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'table-sorting-example'</span>,
+  styleUrls: [<span class="hljs-string">'table-sorting-example.css'</span>],
+  templateUrl: <span class="hljs-string">'table-sorting-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableSortingExample <span class="hljs-keyword">implements</span> OnInit {
+  displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
+  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(ELEMENT_DATA);
+
+  <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
+
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.dataSource.sort = <span class="hljs-keyword">this</span>.sort;
+  }
+}

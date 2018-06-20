@@ -1,9 +1,8 @@
 import { OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
-export declare class User {
+export interface User {
     name: string;
-    constructor(name: string);
 }
 /**
  * @title Display value autocomplete
@@ -13,6 +12,6 @@ export declare class AutocompleteDisplayExample implements OnInit {
     options: User[];
     filteredOptions: Observable<User[]>;
     ngOnInit(): void;
-    filter(name: string): User[];
     displayFn(user?: User): string | undefined;
+    private _filter(name);
 }

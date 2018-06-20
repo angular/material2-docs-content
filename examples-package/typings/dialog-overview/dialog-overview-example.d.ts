@@ -1,4 +1,8 @@
 import { MatDialog, MatDialogRef } from '@angular/material';
+export interface DialogData {
+    animal: string;
+    name: string;
+}
 /**
  * @title Dialog Overview
  */
@@ -11,7 +15,7 @@ export declare class DialogOverviewExample {
 }
 export declare class DialogOverviewExampleDialog {
     dialogRef: MatDialogRef<DialogOverviewExampleDialog>;
-    data: any;
-    constructor(dialogRef: MatDialogRef<DialogOverviewExampleDialog>, data: any);
+    data: DialogData;
+    constructor(dialogRef: MatDialogRef<DialogOverviewExampleDialog>, data: DialogData);
     onNoClick(): void;
 }

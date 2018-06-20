@@ -19,8 +19,8 @@
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'element'</span>) element: ElementRef;
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'subtree'</span>) subtree: ElementRef;
 
-  elementOrigin: <span class="hljs-built_in">string</span> = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
-  subtreeOrigin: <span class="hljs-built_in">string</span> = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
+  elementOrigin = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
+  subtreeOrigin = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> focusMonitor: FocusMonitor,
               <span class="hljs-keyword">private</span> cdr: ChangeDetectorRef,

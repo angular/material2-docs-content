@@ -1,10 +1,11 @@
 import { OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 export interface StateGroup {
     letter: string;
     names: string[];
 }
+export declare const _filter: (opt: string[], value: string) => string[];
 /**
  * @title Option groups autocomplete
  */
@@ -15,6 +16,5 @@ export declare class AutocompleteOptgroupExample implements OnInit {
     stateGroupOptions: Observable<StateGroup[]>;
     constructor(fb: FormBuilder);
     ngOnInit(): void;
-    filterGroup(val: string): StateGroup[];
-    private _filter(opt, val);
+    private _filterGroup(value);
 }

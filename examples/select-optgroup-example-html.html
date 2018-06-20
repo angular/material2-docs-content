@@ -4,7 +4,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-optgroup</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let group of pokemonGroups"</span> [<span class="hljs-attr">label</span>]=<span class="hljs-string">"group.name"</span>
                   [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"group.disabled"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let pokemon of group.pokemon"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"pokemon.value"</span>&gt;</span>
-        {{ pokemon.viewValue }}
+        {{pokemon.viewValue}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">mat-optgroup</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>

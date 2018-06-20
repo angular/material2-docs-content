@@ -7,14 +7,14 @@
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'stepper-overview-example'</span>,
   templateUrl: <span class="hljs-string">'stepper-overview-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'stepper-overview-example.css'</span>]
+  styleUrls: [<span class="hljs-string">'stepper-overview-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperOverviewExample <span class="hljs-keyword">implements</span> OnInit {
   isLinear = <span class="hljs-literal">false</span>;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>) { }
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>) {}
 
   ngOnInit() {
     <span class="hljs-keyword">this</span>.firstFormGroup = <span class="hljs-keyword">this</span>._formBuilder.group({

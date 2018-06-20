@@ -1,36 +1,33 @@
-<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
 <span class="hljs-keyword">import</span> {CollectionViewer, SelectionChange} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject, Observable, merge} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
+<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject, merge, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 <span class="hljs-keyword">import</span> {map} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
-
 
 <span class="hljs-comment">/** Flat node with expandable and level information */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DynamicFlatNode {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> item: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> level: <span class="hljs-built_in">number</span> = 1, <span class="hljs-keyword">public</span> expandable: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>,
-              <span class="hljs-keyword">public</span> isLoading: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span></span>) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> item: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> level = 1, <span class="hljs-keyword">public</span> expandable = <span class="hljs-literal">false</span>,
+              <span class="hljs-keyword">public</span> isLoading = <span class="hljs-literal">false</span></span>) {}
 }
-
 
 <span class="hljs-comment">/**
  * Database for dynamic data. When expanding a node in the tree, the data source will need to fetch
  * the descendants data from the database.
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DynamicDatabase {
-  dataMap = <span class="hljs-keyword">new</span> Map([
+  dataMap = <span class="hljs-keyword">new</span> Map&lt;<span class="hljs-built_in">string</span>, <span class="hljs-built_in">string</span>[]&gt;([
     [<span class="hljs-string">'Fruits'</span>, [<span class="hljs-string">'Apple'</span>, <span class="hljs-string">'Orange'</span>, <span class="hljs-string">'Banana'</span>]],
     [<span class="hljs-string">'Vegetables'</span>, [<span class="hljs-string">'Tomato'</span>, <span class="hljs-string">'Potato'</span>, <span class="hljs-string">'Onion'</span>]],
     [<span class="hljs-string">'Apple'</span>, [<span class="hljs-string">'Fuji'</span>, <span class="hljs-string">'Macintosh'</span>]],
     [<span class="hljs-string">'Onion'</span>, [<span class="hljs-string">'Yellow'</span>, <span class="hljs-string">'White'</span>, <span class="hljs-string">'Purple'</span>]]
   ]);
 
-  rootLevelNodes = [<span class="hljs-string">'Fruits'</span>, <span class="hljs-string">'Vegetables'</span>];
+  rootLevelNodes: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'Fruits'</span>, <span class="hljs-string">'Vegetables'</span>];
 
   <span class="hljs-comment">/** Initial data from database */</span>
   initialData(): DynamicFlatNode[] {
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.rootLevelNodes.map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> <span class="hljs-keyword">new</span> DynamicFlatNode(name, <span class="hljs-number">0</span>, <span class="hljs-literal">true</span>));
   }
-
 
   getChildren(node: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">string</span>[] | <span class="hljs-literal">undefined</span> {
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dataMap.get(node);
@@ -50,7 +47,7 @@
 <span class="hljs-meta">@Injectable</span>()
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DynamicDataSource {
 
-  dataChange: BehaviorSubject&lt;DynamicFlatNode[]&gt; = <span class="hljs-keyword">new</span> BehaviorSubject&lt;DynamicFlatNode[]&gt;([]);
+  dataChange = <span class="hljs-keyword">new</span> BehaviorSubject&lt;DynamicFlatNode[]&gt;([]);
 
   <span class="hljs-keyword">get</span> data(): DynamicFlatNode[] { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dataChange.value; }
   <span class="hljs-keyword">set</span> data(value: DynamicFlatNode[]) {
@@ -75,10 +72,10 @@
   <span class="hljs-comment">/** Handle expand/collapse behaviors */</span>
   handleTreeControl(change: SelectionChange&lt;DynamicFlatNode&gt;) {
     <span class="hljs-keyword">if</span> (change.added) {
-      change.added.forEach(<span class="hljs-function">(<span class="hljs-params">node</span>) =&gt;</span> <span class="hljs-keyword">this</span>.toggleNode(node, <span class="hljs-literal">true</span>));
+      change.added.forEach(<span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> <span class="hljs-keyword">this</span>.toggleNode(node, <span class="hljs-literal">true</span>));
     }
     <span class="hljs-keyword">if</span> (change.removed) {
-      change.removed.reverse().forEach(<span class="hljs-function">(<span class="hljs-params">node</span>) =&gt;</span> <span class="hljs-keyword">this</span>.toggleNode(node, <span class="hljs-literal">false</span>));
+      change.removed.slice().reverse().forEach(<span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> <span class="hljs-keyword">this</span>.toggleNode(node, <span class="hljs-literal">false</span>));
     }
   }
 
@@ -123,7 +120,6 @@
   providers: [DynamicDatabase]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TreeDynamicExample {
-
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">database: DynamicDatabase</span>) {
     <span class="hljs-keyword">this</span>.treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;DynamicFlatNode&gt;(<span class="hljs-keyword">this</span>.getLevel, <span class="hljs-keyword">this</span>.isExpandable);
     <span class="hljs-keyword">this</span>.dataSource = <span class="hljs-keyword">new</span> DynamicDataSource(<span class="hljs-keyword">this</span>.treeControl, database);
@@ -135,9 +131,9 @@
 
   dataSource: DynamicDataSource;
 
-  getLevel = <span class="hljs-function">(<span class="hljs-params">node: DynamicFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> node.level; };
+  getLevel = <span class="hljs-function">(<span class="hljs-params">node: DynamicFlatNode</span>) =&gt;</span> node.level;
 
-  isExpandable = <span class="hljs-function">(<span class="hljs-params">node: DynamicFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> node.expandable; };
+  isExpandable = <span class="hljs-function">(<span class="hljs-params">node: DynamicFlatNode</span>) =&gt;</span> node.expandable;
 
-  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, _nodeData: DynamicFlatNode</span>) =&gt;</span> { <span class="hljs-keyword">return</span> _nodeData.expandable; };
+  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, _nodeData: DynamicFlatNode</span>) =&gt;</span> _nodeData.expandable;
 }

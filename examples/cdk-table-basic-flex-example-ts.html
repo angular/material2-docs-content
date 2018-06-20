@@ -2,24 +2,11 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 
-<span class="hljs-comment">/**
- * @title Basic use of `&lt;cdk-table&gt;` (uses display flex)
- */</span>
-<span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'cdk-table-basic-flex-example'</span>,
-  styleUrls: [<span class="hljs-string">'cdk-table-basic-flex-example.css'</span>],
-  templateUrl: <span class="hljs-string">'cdk-table-basic-flex-example.html'</span>,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkTableBasicFlexExample {
-  displayedColumns = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
-  dataSource = <span class="hljs-keyword">new</span> ExampleDataSource();
-}
-
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   name: <span class="hljs-built_in">string</span>;
   position: <span class="hljs-built_in">number</span>;
-  weight: <span class="hljs-built_in">number</span>;
   symbol: <span class="hljs-built_in">string</span>;
+  weight: <span class="hljs-built_in">number</span>;
 }
 
 <span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
@@ -36,6 +23,19 @@
 ];
 
 <span class="hljs-comment">/**
+ * @title Basic use of `&lt;cdk-table&gt;` (uses display flex)
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-table-basic-flex-example'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-table-basic-flex-example.css'</span>],
+  templateUrl: <span class="hljs-string">'cdk-table-basic-flex-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkTableBasicFlexExample {
+  displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
+  dataSource = <span class="hljs-keyword">new</span> ExampleDataSource();
+}
+
+<span class="hljs-comment">/**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
  * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
@@ -44,7 +44,7 @@
  */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleDataSource <span class="hljs-keyword">extends</span> DataSource&lt;PeriodicElement&gt; {
   <span class="hljs-comment">/** Stream of data that is provided to the table. */</span>
-  data: BehaviorSubject&lt;PeriodicElement[]&gt; = <span class="hljs-keyword">new</span> BehaviorSubject&lt;PeriodicElement[]&gt;(ELEMENT_DATA);
+  data = <span class="hljs-keyword">new</span> BehaviorSubject&lt;PeriodicElement[]&gt;(ELEMENT_DATA);
 
   <span class="hljs-comment">/** Connect function called by the table to retrieve one stream containing the data to render. */</span>
   connect(): Observable&lt;PeriodicElement[]&gt; {

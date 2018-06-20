@@ -1,5 +1,10 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Section {
+  name: <span class="hljs-built_in">string</span>;
+  updated: <span class="hljs-built_in">Date</span>;
+}
+
 <span class="hljs-comment">/**
  * @title List with sections
  */</span>
@@ -9,7 +14,7 @@
   templateUrl: <span class="hljs-string">'list-sections-example.html'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ListSectionsExample {
-  folders = [
+  folders: Section[] = [
     {
       name: <span class="hljs-string">'Photos'</span>,
       updated: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">'1/1/16'</span>),
@@ -23,7 +28,7 @@
       updated: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">'1/28/16'</span>),
     }
   ];
-  notes = [
+  notes: Section[] = [
     {
       name: <span class="hljs-string">'Vacation Itinerary'</span>,
       updated: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">'2/20/16'</span>),

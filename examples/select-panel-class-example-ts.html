@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
 <span class="hljs-comment">/**
@@ -8,7 +8,6 @@
   selector: <span class="hljs-string">'select-panel-class-example'</span>,
   templateUrl: <span class="hljs-string">'select-panel-class-example.html'</span>,
   styleUrls: [<span class="hljs-string">'select-panel-class-example.css'</span>],
-  encapsulation: ViewEncapsulation.None,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectPanelClassExample {
   panelColor = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">'red'</span>);

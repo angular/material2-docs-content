@@ -1,4 +1,5 @@
-<span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {coerceNumberProperty} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/coercion'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
 <span class="hljs-comment">/**
  * @title Configurable slider
@@ -7,7 +8,6 @@
   selector: <span class="hljs-string">'slider-configurable-example'</span>,
   templateUrl: <span class="hljs-string">'slider-configurable-example.html'</span>,
   styleUrls: [<span class="hljs-string">'slider-configurable-example.css'</span>],
-  encapsulation: ViewEncapsulation.None,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SliderConfigurableExample {
   autoTicks = <span class="hljs-literal">false</span>;
@@ -24,8 +24,8 @@
   <span class="hljs-keyword">get</span> tickInterval(): <span class="hljs-built_in">number</span> | <span class="hljs-string">'auto'</span> {
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.showTicks ? (<span class="hljs-keyword">this</span>.autoTicks ? <span class="hljs-string">'auto'</span> : <span class="hljs-keyword">this</span>._tickInterval) : <span class="hljs-number">0</span>;
   }
-  <span class="hljs-keyword">set</span> tickInterval(v) {
-    <span class="hljs-keyword">this</span>._tickInterval = <span class="hljs-built_in">Number</span>(v);
+  <span class="hljs-keyword">set</span> tickInterval(value) {
+    <span class="hljs-keyword">this</span>._tickInterval = coerceNumberProperty(value);
   }
   <span class="hljs-keyword">private</span> _tickInterval = <span class="hljs-number">1</span>;
 }

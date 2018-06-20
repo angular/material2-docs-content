@@ -9,5 +9,5 @@ export declare class AutocompleteFilterExample implements OnInit {
     options: string[];
     filteredOptions: Observable<string[]>;
     ngOnInit(): void;
-    filter(val: string): string[];
+    private _filter(value);
 }

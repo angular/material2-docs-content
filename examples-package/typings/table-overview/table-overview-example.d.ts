@@ -1,5 +1,11 @@
 import { OnInit } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+export interface UserData {
+    id: string;
+    name: string;
+    progress: string;
+    color: string;
+}
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
@@ -11,10 +17,4 @@ export declare class TableOverviewExample implements OnInit {
     constructor();
     ngOnInit(): void;
     applyFilter(filterValue: string): void;
-}
-export interface UserData {
-    id: string;
-    name: string;
-    progress: string;
-    color: string;
 }

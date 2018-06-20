@@ -1,4 +1,7 @@
 import { MatChipInputEvent } from '@angular/material';
+export interface Fruit {
+    name: string;
+}
 /**
  * @title Chips with input
  */
@@ -8,9 +11,7 @@ export declare class ChipsInputExample {
     removable: boolean;
     addOnBlur: boolean;
     separatorKeysCodes: number[];
-    fruits: {
-        name: string;
-    }[];
+    fruits: Fruit[];
     add(event: MatChipInputEvent): void;
-    remove(fruit: any): void;
+    remove(fruit: Fruit): void;
 }

@@ -1,4 +1,7 @@
 import { MatDialog } from '@angular/material';
+export interface DialogData {
+    animal: 'panda' | 'unicorn' | 'lion';
+}
 /**
  * @title Injecting data when opening a dialog
  */
@@ -8,6 +11,6 @@ export declare class DialogDataExample {
     openDialog(): void;
 }
 export declare class DialogDataExampleDialog {
-    data: any;
-    constructor(data: any);
+    data: DialogData;
+    constructor(data: DialogData);
 }

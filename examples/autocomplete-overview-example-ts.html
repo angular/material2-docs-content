@@ -1,11 +1,12 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-
 <span class="hljs-keyword">import</span> {Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 <span class="hljs-keyword">import</span> {map, startWith} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> State {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> name: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> population: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> flag: <span class="hljs-built_in">string</span></span>) { }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> State {
+  flag: <span class="hljs-built_in">string</span>;
+  name: <span class="hljs-built_in">string</span>;
+  population: <span class="hljs-built_in">string</span>;
 }
 
 <span class="hljs-comment">/**
@@ -14,11 +15,11 @@
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'autocomplete-overview-example'</span>,
   templateUrl: <span class="hljs-string">'autocomplete-overview-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'autocomplete-overview-example.css'</span>]
+  styleUrls: [<span class="hljs-string">'autocomplete-overview-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AutocompleteOverviewExample {
-  stateCtrl: FormControl;
-  filteredStates: Observable&lt;<span class="hljs-built_in">any</span>[]&gt;;
+  stateCtrl = <span class="hljs-keyword">new</span> FormControl();
+  filteredStates: Observable&lt;State[]&gt;;
 
   states: State[] = [
     {
@@ -48,17 +49,16 @@
   ];
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-keyword">this</span>.stateCtrl = <span class="hljs-keyword">new</span> FormControl();
     <span class="hljs-keyword">this</span>.filteredStates = <span class="hljs-keyword">this</span>.stateCtrl.valueChanges
       .pipe(
         startWith(<span class="hljs-string">''</span>),
-        map(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state ? <span class="hljs-keyword">this</span>.filterStates(state) : <span class="hljs-keyword">this</span>.states.slice())
+        map(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state ? <span class="hljs-keyword">this</span>._filterStates(state) : <span class="hljs-keyword">this</span>.states.slice())
       );
   }
 
-  filterStates(name: <span class="hljs-built_in">string</span>) {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.states.filter(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span>
-      state.name.toLowerCase().indexOf(name.toLowerCase()) === <span class="hljs-number">0</span>);
-  }
+  <span class="hljs-keyword">private</span> _filterStates(value: <span class="hljs-built_in">string</span>): State[] {
+    <span class="hljs-keyword">const</span> filterValue = value.toLowerCase();
 
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.states.filter(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.name.toLowerCase().indexOf(filterValue) === <span class="hljs-number">0</span>);
+  }
 }

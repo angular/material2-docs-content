@@ -1,10 +1,11 @@
+import { ThemePalette } from '@angular/material/core';
+export interface ChipColor {
+    name: string;
+    color: ThemePalette;
+}
 /**
  * @title Stacked chips
  */
 export declare class ChipsStackedExample {
-    color: string;
-    availableColors: {
-        name: string;
-        color: string;
-    }[];
+    availableColors: ChipColor[];
 }

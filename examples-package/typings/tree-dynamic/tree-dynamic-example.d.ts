@@ -1,5 +1,5 @@
-import { FlatTreeControl } from '@angular/cdk/tree';
 import { CollectionViewer, SelectionChange } from '@angular/cdk/collections';
+import { FlatTreeControl } from '@angular/cdk/tree';
 import { BehaviorSubject, Observable } from 'rxjs';
 /** Flat node with expandable and level information */
 export declare class DynamicFlatNode {

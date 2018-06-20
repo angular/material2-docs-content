@@ -12,9 +12,9 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperEditableExample <span class="hljs-keyword">implements</span> OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
-  isEditable: <span class="hljs-built_in">boolean</span> = <span class="hljs-literal">false</span>;
+  isEditable = <span class="hljs-literal">false</span>;
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>) { }
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>) {}
 
   ngOnInit() {
     <span class="hljs-keyword">this</span>.firstFormGroup = <span class="hljs-keyword">this</span>._formBuilder.group({

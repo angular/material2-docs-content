@@ -1,7 +1,7 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { FlatTreeControl } from '@angular/cdk/tree';
-import { MatTreeFlattener, MatTreeFlatDataSource } from '@angular/material/tree';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
+import { BehaviorSubject, Observable } from 'rxjs';
 /**
  * Node for to-do item
  */
@@ -29,7 +29,7 @@ export declare class ChecklistDatabase {
      * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
      * The return value is the list of `TodoItemNode`.
      */
-    buildFileTree(value: any, level: number): any[];
+    buildFileTree(obj: object, level: number): TodoItemNode[];
     /** Add an item to to-do list */
     insertItem(parent: TodoItemNode, name: string): void;
     updateItem(node: TodoItemNode, name: string): void;

@@ -1,17 +1,17 @@
 import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, Observable } from 'rxjs';
+export interface PeriodicElement {
+    name: string;
+    position: number;
+    symbol: string;
+    weight: number;
+}
 /**
  * @title Basic use of `<cdk-table>` (uses display flex)
  */
 export declare class CdkTableBasicFlexExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource;
-}
-export interface PeriodicElement {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

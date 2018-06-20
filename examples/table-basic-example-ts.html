@@ -1,18 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
-<span class="hljs-comment">/**
- * @title Basic use of `&lt;table mat-table&gt;`
- */</span>
-<span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'table-basic-example'</span>,
-  styleUrls: [<span class="hljs-string">'table-basic-example.css'</span>],
-  templateUrl: <span class="hljs-string">'table-basic-example.html'</span>,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableBasicExample {
-  displayedColumns = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
-  dataSource = ELEMENT_DATA;
-}
-
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   name: <span class="hljs-built_in">string</span>;
   position: <span class="hljs-built_in">number</span>;
@@ -32,3 +19,16 @@
   {position: <span class="hljs-number">9</span>, name: <span class="hljs-string">'Fluorine'</span>, weight: <span class="hljs-number">18.9984</span>, symbol: <span class="hljs-string">'F'</span>},
   {position: <span class="hljs-number">10</span>, name: <span class="hljs-string">'Neon'</span>, weight: <span class="hljs-number">20.1797</span>, symbol: <span class="hljs-string">'Ne'</span>},
 ];
+
+<span class="hljs-comment">/**
+ * @title Basic use of `&lt;table mat-table&gt;`
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'table-basic-example'</span>,
+  styleUrls: [<span class="hljs-string">'table-basic-example.css'</span>],
+  templateUrl: <span class="hljs-string">'table-basic-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableBasicExample {
+  displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
+  dataSource = ELEMENT_DATA;
+}

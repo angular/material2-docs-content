@@ -25,7 +25,7 @@ export declare class FileDatabase {
      * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
      * The return value is the list of `FileNode`.
      */
-    buildFileTree(value: any, level: number): FileNode[];
+    buildFileTree(obj: object, level: number): FileNode[];
 }
 /**
  * @title Tree with nested nodes
@@ -34,6 +34,6 @@ export declare class CdkTreeNestedExample {
     nestedTreeControl: NestedTreeControl<FileNode>;
     nestedDataSource: MatTreeNestedDataSource<FileNode>;
     constructor(database: FileDatabase);
-    private _getChildren;
     hasNestedChild: (_: number, nodeData: FileNode) => boolean;
+    private _getChildren;
 }

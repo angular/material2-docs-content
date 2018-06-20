@@ -15,7 +15,7 @@
   templateUrl: <span class="hljs-string">'table-multiple-header-footer-example.html'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableMultipleHeaderFooterExample {
-  displayedColumns = [<span class="hljs-string">'item'</span>, <span class="hljs-string">'cost'</span>];
+  displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'item'</span>, <span class="hljs-string">'cost'</span>];
   transactions: Transaction[] = [
     {item: <span class="hljs-string">'Beach ball'</span>, cost: <span class="hljs-number">4</span>},
     {item: <span class="hljs-string">'Towel'</span>, cost: <span class="hljs-number">5</span>},

@@ -1,34 +1,6 @@
+<span class="hljs-keyword">import</span> {SelectionModel} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatTableDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
-<span class="hljs-keyword">import</span> {SelectionModel} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
-
-<span class="hljs-comment">/**
- * @title Table with selection
- */</span>
-<span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'table-selection-example'</span>,
-  styleUrls: [<span class="hljs-string">'table-selection-example.css'</span>],
-  templateUrl: <span class="hljs-string">'table-selection-example.html'</span>,
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableSelectionExample {
-  displayedColumns = [<span class="hljs-string">'select'</span>, <span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
-  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
-  selection = <span class="hljs-keyword">new</span> SelectionModel&lt;PeriodicElement&gt;(<span class="hljs-literal">true</span>, []);
-
-  <span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>
-  isAllSelected() {
-    <span class="hljs-keyword">const</span> numSelected = <span class="hljs-keyword">this</span>.selection.selected.length;
-    <span class="hljs-keyword">const</span> numRows = <span class="hljs-keyword">this</span>.dataSource.data.length;
-    <span class="hljs-keyword">return</span> numSelected === numRows;
-  }
-
-  <span class="hljs-comment">/** Selects all rows if they are not all selected; otherwise clear selection. */</span>
-  masterToggle() {
-    <span class="hljs-keyword">this</span>.isAllSelected() ?
-        <span class="hljs-keyword">this</span>.selection.clear() :
-        <span class="hljs-keyword">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-keyword">this</span>.selection.select(row));
-  }
-}
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
   name: <span class="hljs-built_in">string</span>;
@@ -49,3 +21,31 @@
   {position: <span class="hljs-number">9</span>, name: <span class="hljs-string">'Fluorine'</span>, weight: <span class="hljs-number">18.9984</span>, symbol: <span class="hljs-string">'F'</span>},
   {position: <span class="hljs-number">10</span>, name: <span class="hljs-string">'Neon'</span>, weight: <span class="hljs-number">20.1797</span>, symbol: <span class="hljs-string">'Ne'</span>},
 ];
+
+<span class="hljs-comment">/**
+ * @title Table with selection
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'table-selection-example'</span>,
+  styleUrls: [<span class="hljs-string">'table-selection-example.css'</span>],
+  templateUrl: <span class="hljs-string">'table-selection-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableSelectionExample {
+  displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'select'</span>, <span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
+  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
+  selection = <span class="hljs-keyword">new</span> SelectionModel&lt;PeriodicElement&gt;(<span class="hljs-literal">true</span>, []);
+
+  <span class="hljs-comment">/** Whether the number of selected elements matches the total number of rows. */</span>
+  isAllSelected() {
+    <span class="hljs-keyword">const</span> numSelected = <span class="hljs-keyword">this</span>.selection.selected.length;
+    <span class="hljs-keyword">const</span> numRows = <span class="hljs-keyword">this</span>.dataSource.data.length;
+    <span class="hljs-keyword">return</span> numSelected === numRows;
+  }
+
+  <span class="hljs-comment">/** Selects all rows if they are not all selected; otherwise clear selection. */</span>
+  masterToggle() {
+    <span class="hljs-keyword">this</span>.isAllSelected() ?
+        <span class="hljs-keyword">this</span>.selection.clear() :
+        <span class="hljs-keyword">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-keyword">this</span>.selection.select(row));
+  }
+}

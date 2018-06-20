@@ -12,13 +12,13 @@ export declare class ChipsAutocompleteExample {
     addOnBlur: boolean;
     separatorKeysCodes: number[];
     fruitCtrl: FormControl;
-    filteredFruits: Observable<any[]>;
+    filteredFruits: Observable<string[]>;
     fruits: string[];
     allFruits: string[];
     fruitInput: ElementRef;
     constructor();
     add(event: MatChipInputEvent): void;
-    remove(fruit: any): void;
-    filter(name: string): string[];
+    remove(fruit: string): void;
     selected(event: MatAutocompleteSelectedEvent): void;
+    private _filter(value);
 }

@@ -6,5 +6,5 @@ export declare class SlideToggleFormsExample {
     isChecked: boolean;
     formGroup: FormGroup;
     constructor(formBuilder: FormBuilder);
-    onFormSubmit(formValue: any): void;
+    onFormSubmit(): void;
 }
