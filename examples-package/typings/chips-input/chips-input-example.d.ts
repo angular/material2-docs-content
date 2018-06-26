@@ -10,7 +10,7 @@ export declare class ChipsInputExample {
     selectable: boolean;
     removable: boolean;
     addOnBlur: boolean;
-    separatorKeysCodes: number[];
+    readonly separatorKeysCodes: number[];
     fruits: Fruit[];
     add(event: MatChipInputEvent): void;
     remove(fruit: Fruit): void;
