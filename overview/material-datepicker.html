@@ -22,7 +22,13 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyComponent {
   <span class="hljs-meta">@ViewChild</span>(MatDatepicker) datepicker: MatDatepicker&lt;<span class="hljs-built_in">Date</span>&gt;;
 }
-</code></pre><div material-docs-example="datepicker-moment"></div><p class="docs-markdown-p">It is also possible to create your own <code class="docs-markdown-code">DateAdapter</code> that works with any date format your app requires. This is accomplished by subclassing <code class="docs-markdown-code">DateAdapter</code> and providing your subclass as the <code class="docs-markdown-code">DateAdapter</code> implementation. You will also want to make sure that the <code class="docs-markdown-code">MAT_DATE_FORMATS</code> provided in your app are formats that can be understood by your date implementation. See <a href="#customizing-the-parse-and-display-formats" class="docs-markdown-a"><em>Customizing the parse and display formats</em></a>for more information about <code class="docs-markdown-code">MAT_DATE_FORMATS</code>.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+</code></pre><div material-docs-example="datepicker-moment"></div><p class="docs-markdown-p">By default the <code class="docs-markdown-code">MomentDateAdapter</code> will creates dates in your time zone specific locale. You can change the default behaviour to parse dates as UTC by providing the <code class="docs-markdown-code">MAT_MOMENT_DATA_ADAPTER_OPTIONS</code> and setting it to <code class="docs-markdown-code">useUtc: true</code>.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  imports: [MatDatepickerModule, MatMomentDateModule],
+  providers: [
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: <span class="hljs-literal">true</span> } }
+  ]
+})
+</code></pre><p class="docs-markdown-p">It is also possible to create your own <code class="docs-markdown-code">DateAdapter</code> that works with any date format your app requires. This is accomplished by subclassing <code class="docs-markdown-code">DateAdapter</code> and providing your subclass as the <code class="docs-markdown-code">DateAdapter</code> implementation. You will also want to make sure that the <code class="docs-markdown-code">MAT_DATE_FORMATS</code> provided in your app are formats that can be understood by your date implementation. See <a href="#customizing-the-parse-and-display-formats" class="docs-markdown-a"><em>Customizing the parse and display formats</em></a>for more information about <code class="docs-markdown-code">MAT_DATE_FORMATS</code>.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
   imports: [MatDatepickerModule],
   providers: [
     {provide: DateAdapter, useClass: MyDateAdapter},
