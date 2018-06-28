@@ -5786,7 +5786,7 @@ class TreeChecklistExample {
         this.checklistSelection = new SelectionModel(true /* multiple */);
         this.getLevel = (node) => node.level;
         this.isExpandable = (node) => node.expandable;
-        this.getChildren = (node) => of(node.children);
+        this.getChildren = (node) => node.children;
         this.hasChild = (_, _nodeData) => _nodeData.expandable;
         this.hasNoContent = (_, _nodeData) => _nodeData.item === '';
         /**
@@ -6498,7 +6498,7 @@ class TreeNestedOverviewExample {
      */
     constructor(database) {
         this.hasNestedChild = (_, nodeData) => !nodeData.type;
-        this._getChildren = (node) => of(node.children);
+        this._getChildren = (node) => node.children;
         this.nestedTreeControl = new NestedTreeControl(this._getChildren);
         this.nestedDataSource = new MatTreeNestedDataSource();
         database.dataChange.subscribe(data => this.nestedDataSource.data = data);

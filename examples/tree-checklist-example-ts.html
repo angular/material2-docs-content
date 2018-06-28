@@ -2,7 +2,7 @@
 <span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
 <span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatTreeFlatDataSource, MatTreeFlattener} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject, Observable, of <span class="hljs-keyword">as</span> observableOf} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 
 <span class="hljs-comment">/**
  * Node for to-do item
@@ -146,7 +146,7 @@
 
   isExpandable = <span class="hljs-function">(<span class="hljs-params">node: TodoItemFlatNode</span>) =&gt;</span> node.expandable;
 
-  getChildren = (node: TodoItemNode): Observable&lt;TodoItemNode[]&gt; =&gt; observableOf(node.children);
+  getChildren = (node: TodoItemNode): TodoItemNode[] =&gt; node.children;
 
   hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, _nodeData: TodoItemFlatNode</span>) =&gt;</span> _nodeData.expandable;
 

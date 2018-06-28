@@ -6440,7 +6440,7 @@ var TreeChecklistExample = /** @class */ (function () {
         this.checklistSelection = new SelectionModel(true /* multiple */);
         this.getLevel = function (node) { return node.level; };
         this.isExpandable = function (node) { return node.expandable; };
-        this.getChildren = function (node) { return of(node.children); };
+        this.getChildren = function (node) { return node.children; };
         this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
         this.hasNoContent = function (_, _nodeData) { return _nodeData.item === ''; };
         /**
@@ -7311,7 +7311,7 @@ var TreeNestedOverviewExample = /** @class */ (function () {
     function TreeNestedOverviewExample(database) {
         var _this = this;
         this.hasNestedChild = function (_, nodeData) { return !nodeData.type; };
-        this._getChildren = function (node) { return of(node.children); };
+        this._getChildren = function (node) { return node.children; };
         this.nestedTreeControl = new NestedTreeControl(this._getChildren);
         this.nestedDataSource = new MatTreeNestedDataSource();
         database.dataChange.subscribe(function (data) { return _this.nestedDataSource.data = data; });

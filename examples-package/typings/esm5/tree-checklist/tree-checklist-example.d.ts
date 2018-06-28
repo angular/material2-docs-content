@@ -1,7 +1,7 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 /**
  * Node for to-do item
  */
@@ -55,7 +55,7 @@ export declare class TreeChecklistExample {
     constructor(database: ChecklistDatabase);
     getLevel: (node: TodoItemFlatNode) => number;
     isExpandable: (node: TodoItemFlatNode) => boolean;
-    getChildren: (node: TodoItemNode) => Observable<TodoItemNode[]>;
+    getChildren: (node: TodoItemNode) => TodoItemNode[];
     hasChild: (_: number, _nodeData: TodoItemFlatNode) => boolean;
     hasNoContent: (_: number, _nodeData: TodoItemFlatNode) => boolean;
     /**
