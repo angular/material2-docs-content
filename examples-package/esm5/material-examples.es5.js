@@ -3573,7 +3573,7 @@ var SelectCustomTriggerExample = /** @class */ (function () {
     SelectCustomTriggerExample.decorators = [
         { type: Component, args: [{
                     selector: 'select-custom-trigger-example',
-                    template: "<mat-form-field><mat-select placeholder=\"Toppings\" [formControl]=\"toppings\" multiple=\"multiple\"><mat-select-trigger>{{toppings.value ? toppings.value[0] : ''}} <span *ngIf=\"toppings.value?.length > 1\" class=\"example-additional-selection\">(+{{toppings.value.length - 1}} others)</span></mat-select-trigger><mat-option *ngFor=\"let topping of toppingList\" [value]=\"topping\">{{topping}}</mat-option></mat-select></mat-form-field>",
+                    template: "<mat-form-field><mat-select placeholder=\"Toppings\" [formControl]=\"toppings\" multiple=\"multiple\"><mat-select-trigger>{{toppings.value ? toppings.value[0] : ''}} <span *ngIf=\"toppings.value?.length > 1\" class=\"example-additional-selection\">(+{{toppings.value.length - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})</span></mat-select-trigger><mat-option *ngFor=\"let topping of toppingList\" [value]=\"topping\">{{topping}}</mat-option></mat-select></mat-form-field>",
                     styles: [".example-additional-selection { opacity: 0.75; font-size: 0.75em; } "],
                 },] },
     ];
@@ -3841,6 +3841,9 @@ var SelectPanelClassExample = /** @class */ (function () {
                     selector: 'select-panel-class-example',
                     template: "<mat-form-field><mat-select placeholder=\"Panel color\" [formControl]=\"panelColor\" panelClass=\"example-panel-{{panelColor.value}}\"><mat-option value=\"red\">Red</mat-option><mat-option value=\"green\">Green</mat-option><mat-option value=\"blue\">Blue</mat-option></mat-select></mat-form-field>",
                     styles: [".example-panel-red .mat-select-content { background: rgba(255, 0, 0, 0.5); } .example-panel-green .mat-select-content { background: rgba(0, 255, 0, 0.5); } .example-panel-blue .mat-select-content { background: rgba(0, 0, 255, 0.5); } "],
+                    // Encapsulation has to be disabled in order for the
+                    // component style to apply to the select panel.
+                    encapsulation: ViewEncapsulation.None,
                 },] },
     ];
     return SelectPanelClassExample;
