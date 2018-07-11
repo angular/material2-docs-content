@@ -3574,6 +3574,29 @@ var RadioOverviewExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title MatRipple basic usage
+ */
+var RippleOverviewExample = /** @class */ (function () {
+    function RippleOverviewExample() {
+        this.centered = false;
+        this.disabled = false;
+        this.unbounded = false;
+    }
+    RippleOverviewExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'ripple-overview-example',
+                    template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox><mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox><mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox><mat-form-field class=\"example-ripple-form-field\"><input matInput [(ngModel)]=\"radius\" type=\"number\" placeholder=\"Radius\"></mat-form-field><mat-form-field class=\"example-ripple-form-field\"><input matInput [(ngModel)]=\"color\" type=\"text\" placeholder=\"Color\"></mat-form-field><div class=\"example-ripple-container mat-elevation-z4\" matRipple [matRippleCentered]=\"centered\" [matRippleDisabled]=\"disabled\" [matRippleUnbounded]=\"unbounded\" [matRippleRadius]=\"radius\" [matRippleColor]=\"color\">Click me</div>",
+                    styles: [".example-ripple-container { /** Necessary until: https://github.com/angular/material2/pull/11913*/ position: relative; cursor: pointer; text-align: center; width: 300px; height: 300px; line-height: 300px; } /** Styles to make the demo look better. */ .example-ripple-checkbox { margin: 6px 12px 6px 0; } .example-ripple-form-field { margin: 0 12px 0 0; } "],
+                },] },
+    ];
+    return RippleOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
  * \@title Select with custom trigger text
  */
 var SelectCustomTriggerExample = /** @class */ (function () {
@@ -7715,6 +7738,10 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Basic radios',
         component: RadioOverviewExample
     },
+    'ripple-overview': {
+        title: 'MatRipple basic usage',
+        component: RippleOverviewExample
+    },
     'select-custom-trigger': {
         title: 'Select with custom trigger text',
         component: SelectCustomTriggerExample
@@ -8139,6 +8166,7 @@ var /** @type {?} */ EXAMPLE_LIST = [
     ProgressSpinnerOverviewExample,
     RadioNgModelExample,
     RadioOverviewExample,
+    RippleOverviewExample,
     SelectCustomTriggerExample,
     SelectDisabledExample,
     SelectErrorStateMatcherExample,
@@ -8366,7 +8394,7 @@ exports.ɵcy = InputOverviewExample;
 exports.ɵcz = InputPrefixSuffixExample;
 exports.ɵda = ListSectionsExample;
 exports.ɵdb = ListSelectionExample;
-exports.ɵha = ExampleMaterialModule;
+exports.ɵhb = ExampleMaterialModule;
 exports.ɵdc = MenuIconsExample;
 exports.ɵdd = MenuOverviewExample;
 exports.ɵde = NestedMenuExample;
@@ -8381,94 +8409,95 @@ exports.ɵdm = ProgressSpinnerConfigurableExample;
 exports.ɵdn = ProgressSpinnerOverviewExample;
 exports.ɵdo = RadioNgModelExample;
 exports.ɵdp = RadioOverviewExample;
-exports.ɵdq = SelectCustomTriggerExample;
-exports.ɵdr = SelectDisabledExample;
-exports.ɵds = SelectErrorStateMatcherExample;
-exports.ɵdt = SelectFormExample;
-exports.ɵdu = SelectHintErrorExample;
-exports.ɵdv = SelectMultipleExample;
-exports.ɵdw = SelectNoRippleExample;
-exports.ɵdx = SelectOptgroupExample;
-exports.ɵdy = SelectOverviewExample;
-exports.ɵdz = SelectPanelClassExample;
-exports.ɵea = SelectResetExample;
-exports.ɵeb = SelectValueBindingExample;
-exports.ɵec = SidenavAutosizeExample;
-exports.ɵed = SidenavBackdropExample;
-exports.ɵee = SidenavDisableCloseExample;
-exports.ɵef = SidenavDrawerOverviewExample;
-exports.ɵeg = SidenavFixedExample;
-exports.ɵeh = SidenavModeExample;
-exports.ɵei = SidenavOpenCloseExample;
-exports.ɵej = SidenavOverviewExample;
-exports.ɵek = SidenavPositionExample;
-exports.ɵel = SidenavResponsiveExample;
-exports.ɵem = SlideToggleConfigurableExample;
-exports.ɵen = SlideToggleFormsExample;
-exports.ɵeo = SlideToggleOverviewExample;
-exports.ɵep = SliderConfigurableExample;
-exports.ɵeq = SliderFormattingExample;
-exports.ɵer = SliderOverviewExample;
-exports.ɵet = PizzaPartyComponent;
-exports.ɵes = SnackBarComponentExample;
-exports.ɵeu = SnackBarOverviewExample;
-exports.ɵev = SnackBarPositionExample;
-exports.ɵew = SortOverviewExample;
-exports.ɵex = StepperEditableExample;
-exports.ɵey = StepperOptionalExample;
-exports.ɵez = StepperVerticalExample;
-exports.ɵfa = TabGroupAsyncExample;
-exports.ɵfb = TabGroupBasicExample;
-exports.ɵfc = TabGroupCustomLabelExample;
-exports.ɵfd = TabGroupDynamicHeightExample;
-exports.ɵfe = TabGroupDynamicExample;
-exports.ɵff = TabGroupHeaderBelowExample;
-exports.ɵfg = TabGroupLazyLoadedExample;
-exports.ɵfh = TabGroupStretchedExample;
-exports.ɵfi = TabGroupThemeExample;
-exports.ɵfj = TabNavBarBasicExample;
-exports.ɵfk = TableBasicFlexExample;
-exports.ɵfl = TableBasicExample;
-exports.ɵfm = TableDynamicColumnsExample;
-exports.ɵfn = TableExpandableRowsExample;
-exports.ɵfo = TableFilteringExample;
-exports.ɵfp = TableFooterRowExample;
-exports.ɵfq = TableHttpExample;
-exports.ɵfr = TableMultipleHeaderFooterExample;
-exports.ɵfs = TableOverviewExample;
-exports.ɵft = TablePaginationExample;
-exports.ɵfu = TableRowContextExample;
-exports.ɵfv = TableSelectionExample;
-exports.ɵfw = TableSortingExample;
-exports.ɵfx = TableStickyColumnsExample;
-exports.ɵfy = TableStickyComplexFlexExample;
-exports.ɵfz = TableStickyComplexExample;
-exports.ɵga = TableStickyFooterExample;
-exports.ɵgb = TableStickyHeaderExample;
-exports.ɵgc = TextFieldAutofillDirectiveExample;
-exports.ɵgd = TextFieldAutofillMonitorExample;
-exports.ɵge = TextFieldAutosizeTextareaExample;
-exports.ɵgf = ToolbarOverviewExample;
-exports.ɵgg = TooltipAutoHideExample;
-exports.ɵgh = TooltipCustomClassExample;
-exports.ɵgi = TooltipDelayExample;
-exports.ɵgj = TooltipDisabledExample;
-exports.ɵgk = TooltipManualExample;
-exports.ɵgl = TooltipMessageExample;
-exports.ɵgn = TooltipModifiedDefaultsExample;
-exports.ɵgm = myCustomTooltipDefaults;
-exports.ɵgo = TooltipOverviewExample;
-exports.ɵgp = TooltipPositionExample;
-exports.ɵgq = ChecklistDatabase;
-exports.ɵgr = TreeChecklistExample;
-exports.ɵgs = DynamicDatabase;
-exports.ɵgt = TreeDynamicExample;
-exports.ɵgu = FileDatabase$2;
-exports.ɵgv = TreeFlatOverviewExample;
-exports.ɵgw = LoadmoreDatabase;
-exports.ɵgx = TreeLoadmoreExample;
-exports.ɵgy = FileDatabase$3;
-exports.ɵgz = TreeNestedOverviewExample;
+exports.ɵdq = RippleOverviewExample;
+exports.ɵdr = SelectCustomTriggerExample;
+exports.ɵds = SelectDisabledExample;
+exports.ɵdt = SelectErrorStateMatcherExample;
+exports.ɵdu = SelectFormExample;
+exports.ɵdv = SelectHintErrorExample;
+exports.ɵdw = SelectMultipleExample;
+exports.ɵdx = SelectNoRippleExample;
+exports.ɵdy = SelectOptgroupExample;
+exports.ɵdz = SelectOverviewExample;
+exports.ɵea = SelectPanelClassExample;
+exports.ɵeb = SelectResetExample;
+exports.ɵec = SelectValueBindingExample;
+exports.ɵed = SidenavAutosizeExample;
+exports.ɵee = SidenavBackdropExample;
+exports.ɵef = SidenavDisableCloseExample;
+exports.ɵeg = SidenavDrawerOverviewExample;
+exports.ɵeh = SidenavFixedExample;
+exports.ɵei = SidenavModeExample;
+exports.ɵej = SidenavOpenCloseExample;
+exports.ɵek = SidenavOverviewExample;
+exports.ɵel = SidenavPositionExample;
+exports.ɵem = SidenavResponsiveExample;
+exports.ɵen = SlideToggleConfigurableExample;
+exports.ɵeo = SlideToggleFormsExample;
+exports.ɵep = SlideToggleOverviewExample;
+exports.ɵeq = SliderConfigurableExample;
+exports.ɵer = SliderFormattingExample;
+exports.ɵes = SliderOverviewExample;
+exports.ɵeu = PizzaPartyComponent;
+exports.ɵet = SnackBarComponentExample;
+exports.ɵev = SnackBarOverviewExample;
+exports.ɵew = SnackBarPositionExample;
+exports.ɵex = SortOverviewExample;
+exports.ɵey = StepperEditableExample;
+exports.ɵez = StepperOptionalExample;
+exports.ɵfa = StepperVerticalExample;
+exports.ɵfb = TabGroupAsyncExample;
+exports.ɵfc = TabGroupBasicExample;
+exports.ɵfd = TabGroupCustomLabelExample;
+exports.ɵfe = TabGroupDynamicHeightExample;
+exports.ɵff = TabGroupDynamicExample;
+exports.ɵfg = TabGroupHeaderBelowExample;
+exports.ɵfh = TabGroupLazyLoadedExample;
+exports.ɵfi = TabGroupStretchedExample;
+exports.ɵfj = TabGroupThemeExample;
+exports.ɵfk = TabNavBarBasicExample;
+exports.ɵfl = TableBasicFlexExample;
+exports.ɵfm = TableBasicExample;
+exports.ɵfn = TableDynamicColumnsExample;
+exports.ɵfo = TableExpandableRowsExample;
+exports.ɵfp = TableFilteringExample;
+exports.ɵfq = TableFooterRowExample;
+exports.ɵfr = TableHttpExample;
+exports.ɵfs = TableMultipleHeaderFooterExample;
+exports.ɵft = TableOverviewExample;
+exports.ɵfu = TablePaginationExample;
+exports.ɵfv = TableRowContextExample;
+exports.ɵfw = TableSelectionExample;
+exports.ɵfx = TableSortingExample;
+exports.ɵfy = TableStickyColumnsExample;
+exports.ɵfz = TableStickyComplexFlexExample;
+exports.ɵga = TableStickyComplexExample;
+exports.ɵgb = TableStickyFooterExample;
+exports.ɵgc = TableStickyHeaderExample;
+exports.ɵgd = TextFieldAutofillDirectiveExample;
+exports.ɵge = TextFieldAutofillMonitorExample;
+exports.ɵgf = TextFieldAutosizeTextareaExample;
+exports.ɵgg = ToolbarOverviewExample;
+exports.ɵgh = TooltipAutoHideExample;
+exports.ɵgi = TooltipCustomClassExample;
+exports.ɵgj = TooltipDelayExample;
+exports.ɵgk = TooltipDisabledExample;
+exports.ɵgl = TooltipManualExample;
+exports.ɵgm = TooltipMessageExample;
+exports.ɵgo = TooltipModifiedDefaultsExample;
+exports.ɵgn = myCustomTooltipDefaults;
+exports.ɵgp = TooltipOverviewExample;
+exports.ɵgq = TooltipPositionExample;
+exports.ɵgr = ChecklistDatabase;
+exports.ɵgs = TreeChecklistExample;
+exports.ɵgt = DynamicDatabase;
+exports.ɵgu = TreeDynamicExample;
+exports.ɵgv = FileDatabase$2;
+exports.ɵgw = TreeFlatOverviewExample;
+exports.ɵgx = LoadmoreDatabase;
+exports.ɵgy = TreeLoadmoreExample;
+exports.ɵgz = FileDatabase$3;
+exports.ɵha = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -93,6 +93,7 @@ import {ProgressSpinnerConfigurableExample} from './progress-spinner-configurabl
 import {ProgressSpinnerOverviewExample} from './progress-spinner-overview/progress-spinner-overview-example';
 import {RadioNgModelExample} from './radio-ng-model/radio-ng-model-example';
 import {RadioOverviewExample} from './radio-overview/radio-overview-example';
+import {RippleOverviewExample} from './ripple-overview/ripple-overview-example';
 import {SelectCustomTriggerExample} from './select-custom-trigger/select-custom-trigger-example';
 import {SelectDisabledExample} from './select-disabled/select-disabled-example';
 import {SelectErrorStateMatcherExample} from './select-error-state-matcher/select-error-state-matcher-example';
@@ -550,6 +551,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Basic radios',
     component: RadioOverviewExample
   },
+  'ripple-overview': {
+    title: 'MatRipple basic usage',
+    component: RippleOverviewExample
+  },
   'select-custom-trigger': {
     title: 'Select with custom trigger text',
     component: SelectCustomTriggerExample
@@ -975,6 +980,7 @@ export const EXAMPLE_LIST = [
   ProgressSpinnerOverviewExample,
   RadioNgModelExample,
   RadioOverviewExample,
+  RippleOverviewExample,
   SelectCustomTriggerExample,
   SelectDisabledExample,
   SelectErrorStateMatcherExample,
