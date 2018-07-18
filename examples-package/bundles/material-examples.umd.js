@@ -4823,7 +4823,7 @@ var TabGroupDynamicHeightExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Tag group with dynamically changing tabs
+ * \@title Tab group with dynamically changing tabs
  */
 var TabGroupDynamicExample = /** @class */ (function () {
     function TabGroupDynamicExample() {
@@ -7905,7 +7905,7 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         component: TabGroupDynamicHeightExample
     },
     'tab-group-dynamic': {
-        title: 'Tag group with dynamically changing tabs',
+        title: 'Tab group with dynamically changing tabs',
         component: TabGroupDynamicExample
     },
     'tab-group-header-below': {

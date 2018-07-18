@@ -4335,7 +4335,7 @@ TabGroupDynamicHeightExample.decorators = [
  * @suppress {checkTypes} checked by tsc
  */
 /**
- * \@title Tag group with dynamically changing tabs
+ * \@title Tab group with dynamically changing tabs
  */
 class TabGroupDynamicExample {
     constructor() {
@@ -7079,7 +7079,7 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         component: TabGroupDynamicHeightExample
     },
     'tab-group-dynamic': {
-        title: 'Tag group with dynamically changing tabs',
+        title: 'Tab group with dynamically changing tabs',
         component: TabGroupDynamicExample
     },
     'tab-group-header-below': {

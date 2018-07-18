@@ -1,6 +1,6 @@
 import { FormControl } from '@angular/forms';
 /**
- * @title Tag group with dynamically changing tabs
+ * @title Tab group with dynamically changing tabs
  */
 export declare class TabGroupDynamicExample {
     tabs: string[];

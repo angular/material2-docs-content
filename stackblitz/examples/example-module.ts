@@ -718,7 +718,7 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     component: TabGroupDynamicHeightExample
   },
   'tab-group-dynamic': {
-    title: 'Tag group with dynamically changing tabs',
+    title: 'Tab group with dynamically changing tabs',
     component: TabGroupDynamicExample
   },
   'tab-group-header-below': {
