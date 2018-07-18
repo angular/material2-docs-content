@@ -1283,7 +1283,6 @@ DatepickerCustomHeaderExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-custom-header-example',
                 template: "<mat-form-field><mat-label>Custom calendar header</mat-label><input matInput [matDatepicker]=\"picker\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker [calendarHeaderComponent]=\"exampleHeader\"></mat-datepicker></mat-form-field>",
-                styles: [".example-header { display: flex; align-items: center; padding: 0.5em; } .example-header-label { flex: 1; height: 1em; font-weight: bold; text-align: center; } .example-double-arrow .mat-icon { margin: -22%; } "],
                 changeDetection: ChangeDetectionStrategy.OnPush,
             },] },
 ];
@@ -1344,6 +1343,24 @@ class ExampleHeader {
 ExampleHeader.decorators = [
     { type: Component, args: [{
                 selector: 'example-header',
+                styles: [`
+    .example-header {
+      display: flex;
+      align-items: center;
+      padding: 0.5em;
+    }
+
+    .example-header-label {
+      flex: 1;
+      height: 1em;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .example-double-arrow .mat-icon {
+      margin: -22%;
+    }
+  `],
                 template: `
     <div class="example-header">
       <button mat-icon-button class="example-double-arrow" (click)="previousClicked('year')">
