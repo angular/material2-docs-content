@@ -31,5 +31,8 @@
   },
   "dependencies": {
     "tslib": "^1.7.1"
-  }
+  },
+  "releaseGitCommitSha": "f5f7f1c3d110dbfedb82b46454f4aaee30668b31",
+  "releaseGitBranch": "",
+  "releaseGitUser": "Travis CI User <travis@example.org>"
 }
