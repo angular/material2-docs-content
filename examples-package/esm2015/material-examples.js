@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import { NgModule, Component, Injectable, ElementRef, ViewChild, ChangeDetectionStrategy, ChangeDetectorRef, Host, Inject, NgZone, Input, ViewEncapsulation } from '@angular/core';
-import { ScrollDispatchModule } from '@angular/cdk/scrolling';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
@@ -77,7 +77,7 @@ ExampleMaterialModule.decorators = [
                     MatToolbarModule,
                     MatTooltipModule,
                     MatTreeModule,
-                    ScrollDispatchModule,
+                    ScrollingModule,
                 ],
                 exports: [
                     A11yModule,
@@ -118,7 +118,7 @@ ExampleMaterialModule.decorators = [
                     MatToolbarModule,
                     MatTooltipModule,
                     MatTreeModule,
-                    ScrollDispatchModule,
+                    ScrollingModule,
                 ]
             },] },
 ];

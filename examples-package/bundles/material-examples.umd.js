@@ -90,7 +90,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                         material.MatToolbarModule,
                         material.MatTooltipModule,
                         material.MatTreeModule,
-                        scrolling.ScrollDispatchModule,
+                        scrolling.ScrollingModule,
                     ],
                     exports: [
                         a11y.A11yModule,
@@ -131,7 +131,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                         material.MatToolbarModule,
                         material.MatTooltipModule,
                         material.MatTreeModule,
-                        scrolling.ScrollDispatchModule,
+                        scrolling.ScrollingModule,
                     ]
                 },] },
     ];
