@@ -90,7 +90,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                         material.MatToolbarModule,
                         material.MatTooltipModule,
                         material.MatTreeModule,
-                        scrolling.ScrollingModule,
+                        scrolling.ScrollDispatchModule,
                     ],
                     exports: [
                         a11y.A11yModule,
@@ -131,7 +131,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                         material.MatToolbarModule,
                         material.MatTooltipModule,
                         material.MatTreeModule,
-                        scrolling.ScrollingModule,
+                        scrolling.ScrollDispatchModule,
                     ]
                 },] },
     ];
@@ -1493,6 +1493,7 @@ var DatepickerCustomHeaderExample = /** @class */ (function () {
         { type: core.Component, args: [{
                     selector: 'datepicker-custom-header-example',
                     template: "<mat-form-field><mat-label>Custom calendar header</mat-label><input matInput [matDatepicker]=\"picker\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker [calendarHeaderComponent]=\"exampleHeader\"></mat-datepicker></mat-form-field>",
+                    styles: [".example-header { display: flex; align-items: center; padding: 0.5em; } .example-header-label { flex: 1; height: 1em; font-weight: bold; text-align: center; } .example-double-arrow .mat-icon { margin: -22%; } "],
                     changeDetection: core.ChangeDetectionStrategy.OnPush,
                 },] },
     ];
@@ -1563,7 +1564,6 @@ var ExampleHeader = /** @class */ (function () {
     ExampleHeader.decorators = [
         { type: core.Component, args: [{
                     selector: 'example-header',
-                    styles: ["\n    .example-header {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow .mat-icon {\n      margin: -22%;\n    }\n  "],
                     template: "\n    <div class=\"example-header\">\n      <button mat-icon-button class=\"example-double-arrow\" (click)=\"previousClicked('year')\">\n        <mat-icon>keyboard_arrow_left</mat-icon>\n        <mat-icon>keyboard_arrow_left</mat-icon>\n      </button>\n      <button mat-icon-button (click)=\"previousClicked('month')\">\n        <mat-icon>keyboard_arrow_left</mat-icon>\n      </button>\n      <span class=\"example-header-label\">{{periodLabel}}</span>\n      <button mat-icon-button (click)=\"nextClicked('month')\">\n        <mat-icon>keyboard_arrow_right</mat-icon>\n      </button>\n      <button mat-icon-button class=\"example-double-arrow\" (click)=\"nextClicked('year')\">\n        <mat-icon>keyboard_arrow_right</mat-icon>\n        <mat-icon>keyboard_arrow_right</mat-icon>\n      </button>\n    </div>\n  ",
                     changeDetection: core.ChangeDetectionStrategy.OnPush,
                 },] },
@@ -3584,7 +3584,7 @@ var RippleOverviewExample = /** @class */ (function () {
         { type: core.Component, args: [{
                     selector: 'ripple-overview-example',
                     template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox><mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox><mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox><mat-form-field class=\"example-ripple-form-field\"><input matInput [(ngModel)]=\"radius\" type=\"number\" placeholder=\"Radius\"></mat-form-field><mat-form-field class=\"example-ripple-form-field\"><input matInput [(ngModel)]=\"color\" type=\"text\" placeholder=\"Color\"></mat-form-field><div class=\"example-ripple-container mat-elevation-z4\" matRipple [matRippleCentered]=\"centered\" [matRippleDisabled]=\"disabled\" [matRippleUnbounded]=\"unbounded\" [matRippleRadius]=\"radius\" [matRippleColor]=\"color\">Click me</div>",
-                    styles: [".example-ripple-container { cursor: pointer; text-align: center; width: 300px; height: 300px; line-height: 300px; } /** Styles to make the demo look better. */ .example-ripple-checkbox { margin: 6px 12px 6px 0; } .example-ripple-form-field { margin: 0 12px 0 0; } "],
+                    styles: [".example-ripple-container { /** Necessary until: https://github.com/angular/material2/pull/11913*/ position: relative; cursor: pointer; text-align: center; width: 300px; height: 300px; line-height: 300px; } /** Styles to make the demo look better. */ .example-ripple-checkbox { margin: 6px 12px 6px 0; } .example-ripple-form-field { margin: 0 12px 0 0; } "],
                 },] },
     ];
     return RippleOverviewExample;
@@ -4713,7 +4713,7 @@ var StepperVerticalExample = /** @class */ (function () {
     };
     StepperVerticalExample.decorators = [
         { type: core.Component, args: [{
-                    selector: 'stepper-vertical-example',
+                    selector: 'stepper-vertical',
                     template: "<button mat-raised-button (click)=\"isLinear = !isLinear\" id=\"toggle-linear\">{{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}</button><mat-vertical-stepper [linear]=\"isLinear\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-vertical-stepper>",
                     styles: ["/** No CSS for this example */ "]
                 },] },
