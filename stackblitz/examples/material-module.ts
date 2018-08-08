@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 
-import {ScrollingModule} from '@angular/cdk/scrolling';
+import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import {A11yModule} from '@angular/cdk/a11y';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
@@ -54,7 +54,7 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    ScrollingModule,
+    ScrollDispatchModule,
   ],
   exports: [
     A11yModule,
@@ -95,7 +95,7 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    ScrollingModule,
+    ScrollDispatchModule,
   ]
 })
 export class ExampleMaterialModule {}
