@@ -15,6 +15,7 @@
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'datepicker-custom-header-example'</span>,
   templateUrl: <span class="hljs-string">'datepicker-custom-header-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'datepicker-custom-header-example.css'</span>],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatepickerCustomHeaderExample {
@@ -24,24 +25,6 @@
 <span class="hljs-comment">/** Custom header component for datepicker. */</span>
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'example-header'</span>,
-  styles: [<span class="hljs-string">`
-    .example-header {
-      display: flex;
-      align-items: center;
-      padding: 0.5em;
-    }
-
-    .example-header-label {
-      flex: 1;
-      height: 1em;
-      font-weight: 500;
-      text-align: center;
-    }
-
-    .example-double-arrow .mat-icon {
-      margin: -22%;
-    }
-  `</span>],
   template: <span class="hljs-string">`
     &lt;div class="example-header"&gt;
       &lt;button mat-icon-button class="example-double-arrow" (click)="previousClicked('year')"&gt;
