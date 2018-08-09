@@ -1,6 +1,6 @@
 {
   "name": "@angular/material-examples",
-  "version": "6.4.2",
+  "version": "6.4.3",
   "description": "Angular Material Examples",
   "main": "./bundles/material-examples.umd.js",
   "module": "./esm5/material-examples.es5.js",
@@ -23,16 +23,16 @@
   },
   "homepage": "https://github.com/angular/material2#readme",
   "peerDependencies": {
-    "@angular/cdk": "6.4.2",
+    "@angular/cdk": "6.4.3",
     "@angular/core": ">=6.0.0-beta.0 <7.0.0",
     "@angular/common": ">=6.0.0-beta.0 <7.0.0",
-    "@angular/material": "6.4.2",
-    "@angular/material-moment-adapter": "6.4.2"
+    "@angular/material": "6.4.3",
+    "@angular/material-moment-adapter": "6.4.3"
   },
   "dependencies": {
     "tslib": "^1.7.1"
   },
-  "releaseGitCommitSha": "ea10d948923c59ea40e3192438b4a8c1649b7444",
+  "releaseGitCommitSha": "11b97e407f74a6c9ae5fadaa04aa83cb3cdbc8f5",
   "releaseGitBranch": "",
   "releaseGitUser": "Travis CI User <travis@example.org>"
 }
