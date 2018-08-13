@@ -5,7 +5,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
  * @title Stepper vertical
  */
 @Component({
-  selector: 'stepper-vertical-example',
+  selector: 'stepper-vertical',
   templateUrl: 'stepper-vertical-example.html',
   styleUrls: ['stepper-vertical-example.css']
 })
