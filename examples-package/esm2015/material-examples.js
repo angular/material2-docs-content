@@ -6,7 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import { NgModule, Component, Injectable, ElementRef, ViewChild, ChangeDetectionStrategy, ChangeDetectorRef, Host, Inject, NgZone, Input, ViewEncapsulation } from '@angular/core';
-import { ScrollingModule } from '@angular/cdk/scrolling';
+import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
@@ -77,7 +77,7 @@ ExampleMaterialModule.decorators = [
                     MatToolbarModule,
                     MatTooltipModule,
                     MatTreeModule,
-                    ScrollingModule,
+                    ScrollDispatchModule,
                 ],
                 exports: [
                     A11yModule,
@@ -118,7 +118,7 @@ ExampleMaterialModule.decorators = [
                     MatToolbarModule,
                     MatTooltipModule,
                     MatTreeModule,
-                    ScrollingModule,
+                    ScrollDispatchModule,
                 ]
             },] },
 ];
@@ -1283,6 +1283,7 @@ DatepickerCustomHeaderExample.decorators = [
     { type: Component, args: [{
                 selector: 'datepicker-custom-header-example',
                 template: "<mat-form-field><mat-label>Custom calendar header</mat-label><input matInput [matDatepicker]=\"picker\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker #picker [calendarHeaderComponent]=\"exampleHeader\"></mat-datepicker></mat-form-field>",
+                styles: [".example-header { display: flex; align-items: center; padding: 0.5em; } .example-header-label { flex: 1; height: 1em; font-weight: bold; text-align: center; } .example-double-arrow .mat-icon { margin: -22%; } "],
                 changeDetection: ChangeDetectionStrategy.OnPush,
             },] },
 ];
@@ -1343,24 +1344,6 @@ class ExampleHeader {
 ExampleHeader.decorators = [
     { type: Component, args: [{
                 selector: 'example-header',
-                styles: [`
-    .example-header {
-      display: flex;
-      align-items: center;
-      padding: 0.5em;
-    }
-
-    .example-header-label {
-      flex: 1;
-      height: 1em;
-      font-weight: 500;
-      text-align: center;
-    }
-
-    .example-double-arrow .mat-icon {
-      margin: -22%;
-    }
-  `],
                 template: `
     <div class="example-header">
       <button mat-icon-button class="example-double-arrow" (click)="previousClicked('year')">
@@ -3195,7 +3178,7 @@ RippleOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'ripple-overview-example',
                 template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox><mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox><mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox><mat-form-field class=\"example-ripple-form-field\"><input matInput [(ngModel)]=\"radius\" type=\"number\" placeholder=\"Radius\"></mat-form-field><mat-form-field class=\"example-ripple-form-field\"><input matInput [(ngModel)]=\"color\" type=\"text\" placeholder=\"Color\"></mat-form-field><div class=\"example-ripple-container mat-elevation-z4\" matRipple [matRippleCentered]=\"centered\" [matRippleDisabled]=\"disabled\" [matRippleUnbounded]=\"unbounded\" [matRippleRadius]=\"radius\" [matRippleColor]=\"color\">Click me</div>",
-                styles: [".example-ripple-container { cursor: pointer; text-align: center; width: 300px; height: 300px; line-height: 300px; } /** Styles to make the demo look better. */ .example-ripple-checkbox { margin: 6px 12px 6px 0; } .example-ripple-form-field { margin: 0 12px 0 0; } "],
+                styles: [".example-ripple-container { /** Necessary until: https://github.com/angular/material2/pull/11913*/ position: relative; cursor: pointer; text-align: center; width: 300px; height: 300px; line-height: 300px; } /** Styles to make the demo look better. */ .example-ripple-checkbox { margin: 6px 12px 6px 0; } .example-ripple-form-field { margin: 0 12px 0 0; } "],
             },] },
 ];
 
@@ -4254,7 +4237,7 @@ class StepperVerticalExample {
 }
 StepperVerticalExample.decorators = [
     { type: Component, args: [{
-                selector: 'stepper-vertical-example',
+                selector: 'stepper-vertical',
                 template: "<button mat-raised-button (click)=\"isLinear = !isLinear\" id=\"toggle-linear\">{{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}</button><mat-vertical-stepper [linear]=\"isLinear\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-vertical-stepper>",
                 styles: ["/** No CSS for this example */ "]
             },] },
