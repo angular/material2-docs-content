@@ -27,12 +27,12 @@
               <span class="hljs-keyword">private</span> ngZone: NgZone</span>) {}
 
   ngOnInit() {
-    <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.element.nativeElement)
+    <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.element)
         .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-keyword">this</span>.ngZone.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
           <span class="hljs-keyword">this</span>.elementOrigin = <span class="hljs-keyword">this</span>.formatOrigin(origin);
           <span class="hljs-keyword">this</span>.cdr.markForCheck();
         }));
-    <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.subtree.nativeElement, <span class="hljs-literal">true</span>)
+    <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.subtree, <span class="hljs-literal">true</span>)
         .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-keyword">this</span>.ngZone.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
           <span class="hljs-keyword">this</span>.subtreeOrigin = <span class="hljs-keyword">this</span>.formatOrigin(origin);
           <span class="hljs-keyword">this</span>.cdr.markForCheck();
@@ -40,8 +40,8 @@
   }
 
   ngOnDestroy() {
-    <span class="hljs-keyword">this</span>.focusMonitor.stopMonitoring(<span class="hljs-keyword">this</span>.element.nativeElement);
-    <span class="hljs-keyword">this</span>.focusMonitor.stopMonitoring(<span class="hljs-keyword">this</span>.subtree.nativeElement);
+    <span class="hljs-keyword">this</span>.focusMonitor.stopMonitoring(<span class="hljs-keyword">this</span>.element);
+    <span class="hljs-keyword">this</span>.focusMonitor.stopMonitoring(<span class="hljs-keyword">this</span>.subtree);
   }
 
   formatOrigin(origin: FocusOrigin): <span class="hljs-built_in">string</span> {

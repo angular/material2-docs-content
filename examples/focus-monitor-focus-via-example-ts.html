@@ -25,7 +25,7 @@
               <span class="hljs-keyword">private</span> ngZone: NgZone</span>) {}
 
   ngOnInit() {
-    <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.monitoredEl.nativeElement)
+    <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.monitoredEl)
         .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-keyword">this</span>.ngZone.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
           <span class="hljs-keyword">this</span>.origin = <span class="hljs-keyword">this</span>.formatOrigin(origin);
           <span class="hljs-keyword">this</span>.cdr.markForCheck();
@@ -33,7 +33,7 @@
   }
 
   ngOnDestroy() {
-    <span class="hljs-keyword">this</span>.focusMonitor.stopMonitoring(<span class="hljs-keyword">this</span>.monitoredEl.nativeElement);
+    <span class="hljs-keyword">this</span>.focusMonitor.stopMonitoring(<span class="hljs-keyword">this</span>.monitoredEl);
   }
 
   formatOrigin(origin: FocusOrigin): <span class="hljs-built_in">string</span> {

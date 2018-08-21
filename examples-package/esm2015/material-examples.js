@@ -2141,7 +2141,7 @@ class FocusMonitorFocusViaExample {
      * @return {?}
      */
     ngOnInit() {
-        this.focusMonitor.monitor(this.monitoredEl.nativeElement)
+        this.focusMonitor.monitor(this.monitoredEl)
             .subscribe(origin => this.ngZone.run(() => {
             this.origin = this.formatOrigin(origin);
             this.cdr.markForCheck();
@@ -2151,7 +2151,7 @@ class FocusMonitorFocusViaExample {
      * @return {?}
      */
     ngOnDestroy() {
-        this.focusMonitor.stopMonitoring(this.monitoredEl.nativeElement);
+        this.focusMonitor.stopMonitoring(this.monitoredEl);
     }
     /**
      * @param {?} origin
@@ -2202,12 +2202,12 @@ class FocusMonitorOverviewExample {
      * @return {?}
      */
     ngOnInit() {
-        this.focusMonitor.monitor(this.element.nativeElement)
+        this.focusMonitor.monitor(this.element)
             .subscribe(origin => this.ngZone.run(() => {
             this.elementOrigin = this.formatOrigin(origin);
             this.cdr.markForCheck();
         }));
-        this.focusMonitor.monitor(this.subtree.nativeElement, true)
+        this.focusMonitor.monitor(this.subtree, true)
             .subscribe(origin => this.ngZone.run(() => {
             this.subtreeOrigin = this.formatOrigin(origin);
             this.cdr.markForCheck();
@@ -2217,8 +2217,8 @@ class FocusMonitorOverviewExample {
      * @return {?}
      */
     ngOnDestroy() {
-        this.focusMonitor.stopMonitoring(this.element.nativeElement);
-        this.focusMonitor.stopMonitoring(this.subtree.nativeElement);
+        this.focusMonitor.stopMonitoring(this.element);
+        this.focusMonitor.stopMonitoring(this.subtree);
     }
     /**
      * @param {?} origin
@@ -2308,7 +2308,7 @@ class MyTelInput {
             exchange: '',
             subscriber: '',
         });
-        fm.monitor(elRef.nativeElement, true).subscribe(origin => {
+        fm.monitor(elRef, true).subscribe(origin => {
             this.focused = !!origin;
             this.stateChanges.next();
         });
@@ -2384,7 +2384,7 @@ class MyTelInput {
      */
     ngOnDestroy() {
         this.stateChanges.complete();
-        this.fm.stopMonitoring(this.elRef.nativeElement);
+        this.fm.stopMonitoring(this.elRef);
     }
     /**
      * @param {?} ids

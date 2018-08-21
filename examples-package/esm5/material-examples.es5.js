@@ -2385,7 +2385,7 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
      */
     function () {
         var _this = this;
-        this.focusMonitor.monitor(this.monitoredEl.nativeElement)
+        this.focusMonitor.monitor(this.monitoredEl)
             .subscribe(function (origin) {
             return _this.ngZone.run(function () {
                 _this.origin = _this.formatOrigin(origin);
@@ -2400,7 +2400,7 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        this.focusMonitor.stopMonitoring(this.monitoredEl.nativeElement);
+        this.focusMonitor.stopMonitoring(this.monitoredEl);
     };
     /**
      * @param {?} origin
@@ -2455,14 +2455,14 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
      */
     function () {
         var _this = this;
-        this.focusMonitor.monitor(this.element.nativeElement)
+        this.focusMonitor.monitor(this.element)
             .subscribe(function (origin) {
             return _this.ngZone.run(function () {
                 _this.elementOrigin = _this.formatOrigin(origin);
                 _this.cdr.markForCheck();
             });
         });
-        this.focusMonitor.monitor(this.subtree.nativeElement, true)
+        this.focusMonitor.monitor(this.subtree, true)
             .subscribe(function (origin) {
             return _this.ngZone.run(function () {
                 _this.subtreeOrigin = _this.formatOrigin(origin);
@@ -2477,8 +2477,8 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        this.focusMonitor.stopMonitoring(this.element.nativeElement);
-        this.focusMonitor.stopMonitoring(this.subtree.nativeElement);
+        this.focusMonitor.stopMonitoring(this.element);
+        this.focusMonitor.stopMonitoring(this.subtree);
     };
     /**
      * @param {?} origin
@@ -2571,7 +2571,7 @@ var MyTelInput = /** @class */ (function () {
             exchange: '',
             subscriber: '',
         });
-        fm.monitor(elRef.nativeElement, true).subscribe(function (origin) {
+        fm.monitor(elRef, true).subscribe(function (origin) {
             _this.focused = !!origin;
             _this.stateChanges.next();
         });
@@ -2674,7 +2674,7 @@ var MyTelInput = /** @class */ (function () {
      */
     function () {
         this.stateChanges.complete();
-        this.fm.stopMonitoring(this.elRef.nativeElement);
+        this.fm.stopMonitoring(this.elRef);
     };
     /**
      * @param {?} ids
