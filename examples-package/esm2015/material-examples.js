@@ -5401,17 +5401,17 @@ class TextFieldAutofillMonitorExample {
      * @return {?}
      */
     ngOnInit() {
-        this.autofill.monitor(this.firstName.nativeElement)
+        this.autofill.monitor(this.firstName)
             .subscribe(e => this.firstNameAutofilled = e.isAutofilled);
-        this.autofill.monitor(this.lastName.nativeElement)
+        this.autofill.monitor(this.lastName)
             .subscribe(e => this.lastNameAutofilled = e.isAutofilled);
     }
     /**
      * @return {?}
      */
     ngOnDestroy() {
-        this.autofill.stopMonitoring(this.firstName.nativeElement);
-        this.autofill.stopMonitoring(this.lastName.nativeElement);
+        this.autofill.stopMonitoring(this.firstName);
+        this.autofill.stopMonitoring(this.lastName);
     }
 }
 TextFieldAutofillMonitorExample.decorators = [

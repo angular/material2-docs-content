@@ -16,14 +16,14 @@
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> autofill: AutofillMonitor</span>) {}
 
   ngOnInit() {
-    <span class="hljs-keyword">this</span>.autofill.monitor(<span class="hljs-keyword">this</span>.firstName.nativeElement)
+    <span class="hljs-keyword">this</span>.autofill.monitor(<span class="hljs-keyword">this</span>.firstName)
         .subscribe(<span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> <span class="hljs-keyword">this</span>.firstNameAutofilled = e.isAutofilled);
-    <span class="hljs-keyword">this</span>.autofill.monitor(<span class="hljs-keyword">this</span>.lastName.nativeElement)
+    <span class="hljs-keyword">this</span>.autofill.monitor(<span class="hljs-keyword">this</span>.lastName)
         .subscribe(<span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> <span class="hljs-keyword">this</span>.lastNameAutofilled = e.isAutofilled);
   }
 
   ngOnDestroy() {
-    <span class="hljs-keyword">this</span>.autofill.stopMonitoring(<span class="hljs-keyword">this</span>.firstName.nativeElement);
-    <span class="hljs-keyword">this</span>.autofill.stopMonitoring(<span class="hljs-keyword">this</span>.lastName.nativeElement);
+    <span class="hljs-keyword">this</span>.autofill.stopMonitoring(<span class="hljs-keyword">this</span>.firstName);
+    <span class="hljs-keyword">this</span>.autofill.stopMonitoring(<span class="hljs-keyword">this</span>.lastName);
   }
 }
