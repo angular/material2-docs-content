@@ -1,0 +1,16 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>To do<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-drop</span> #<span class="hljs-attr">todoList</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"todo"</span> [<span class="hljs-attr">connectedTo</span>]=<span class="hljs-string">"[doneList]"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list"</span> (<span class="hljs-attr">dropped</span>)=<span class="hljs-string">"drop($event)"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of todo"</span> <span class="hljs-attr">cdkDrag</span>&gt;</span>{{item}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-drop</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Done<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">cdk-drop</span> #<span class="hljs-attr">doneList</span> [<span class="hljs-attr">data</span>]=<span class="hljs-string">"done"</span> [<span class="hljs-attr">connectedTo</span>]=<span class="hljs-string">"[todoList]"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"list"</span> (<span class="hljs-attr">dropped</span>)=<span class="hljs-string">"drop($event)"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of done"</span> <span class="hljs-attr">cdkDrag</span>&gt;</span>{{item}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">cdk-drop</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+

@@ -1,0 +1,24 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDrop, moveItemInArray} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
+
+<span class="hljs-comment">/**
+ * @title Drag&amp;Drop horizontal sorting
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-drag-drop-horizontal-sorting-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-drag-drop-horizontal-sorting-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-drag-drop-horizontal-sorting-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkDragDropHorizontalSortingExample {
+  timePeriods = [
+    <span class="hljs-string">'Bronze age'</span>,
+    <span class="hljs-string">'Iron age'</span>,
+    <span class="hljs-string">'Middle ages'</span>,
+    <span class="hljs-string">'Early modern period'</span>,
+    <span class="hljs-string">'Long nineteenth century'</span>
+  ];
+
+  drop(event: CdkDragDrop&lt;<span class="hljs-built_in">string</span>[]&gt;) {
+    moveItemInArray(<span class="hljs-keyword">this</span>.timePeriods, event.previousIndex, event.currentIndex);
+  }
+}

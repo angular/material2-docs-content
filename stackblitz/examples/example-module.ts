@@ -19,6 +19,13 @@ import {ButtonToggleOverviewExample} from './button-toggle-overview/button-toggl
 import {ButtonTypesExample} from './button-types/button-types-example';
 import {CardFancyExample} from './card-fancy/card-fancy-example';
 import {CardOverviewExample} from './card-overview/card-overview-example';
+import {CdkDragDropAxisLockExample} from './cdk-drag-drop-axis-lock/cdk-drag-drop-axis-lock-example';
+import {CdkDragDropConnectedSortingExample} from './cdk-drag-drop-connected-sorting/cdk-drag-drop-connected-sorting-example';
+import {CdkDragDropCustomPreviewExample} from './cdk-drag-drop-custom-preview/cdk-drag-drop-custom-preview-example';
+import {CdkDragDropHandleExample} from './cdk-drag-drop-handle/cdk-drag-drop-handle-example';
+import {CdkDragDropHorizontalSortingExample} from './cdk-drag-drop-horizontal-sorting/cdk-drag-drop-horizontal-sorting-example';
+import {CdkDragDropOverviewExample} from './cdk-drag-drop-overview/cdk-drag-drop-overview-example';
+import {CdkDragDropSortingExample} from './cdk-drag-drop-sorting/cdk-drag-drop-sorting-example';
 import {CdkTableBasicFlexExample} from './cdk-table-basic-flex/cdk-table-basic-flex-example';
 import {CdkTableBasicExample} from './cdk-table-basic/cdk-table-basic-example';
 import {CdkTreeFlatExample} from './cdk-tree-flat/cdk-tree-flat-example';
@@ -243,6 +250,34 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'card-overview': {
     title: 'Basic cards',
     component: CardOverviewExample
+  },
+  'cdk-drag-drop-axis-lock': {
+    title: 'Drag&Drop position locking',
+    component: CdkDragDropAxisLockExample
+  },
+  'cdk-drag-drop-connected-sorting': {
+    title: 'Drag&Drop connected sorting',
+    component: CdkDragDropConnectedSortingExample
+  },
+  'cdk-drag-drop-custom-preview': {
+    title: 'Drag&Drop custom preview',
+    component: CdkDragDropCustomPreviewExample
+  },
+  'cdk-drag-drop-handle': {
+    title: 'Drag&Drop with a handle',
+    component: CdkDragDropHandleExample
+  },
+  'cdk-drag-drop-horizontal-sorting': {
+    title: 'Drag&Drop horizontal sorting',
+    component: CdkDragDropHorizontalSortingExample
+  },
+  'cdk-drag-drop-overview': {
+    title: 'Basic Drag&Drop',
+    component: CdkDragDropOverviewExample
+  },
+  'cdk-drag-drop-sorting': {
+    title: 'Drag&Drop sorting',
+    component: CdkDragDropSortingExample
   },
   'cdk-table-basic-flex': {
     title: 'Basic use of `<cdk-table>` (uses display flex)',
@@ -906,6 +941,13 @@ export const EXAMPLE_LIST = [
   ButtonTypesExample,
   CardFancyExample,
   CardOverviewExample,
+  CdkDragDropAxisLockExample,
+  CdkDragDropConnectedSortingExample,
+  CdkDragDropCustomPreviewExample,
+  CdkDragDropHandleExample,
+  CdkDragDropHorizontalSortingExample,
+  CdkDragDropOverviewExample,
+  CdkDragDropSortingExample,
   CdkTableBasicFlexExample,
   CdkTableBasicExample,
   CdkTreeFlatExample,

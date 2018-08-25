@@ -10,6 +10,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
+import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
 import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { map, startWith, takeUntil, catchError, switchMap, take } from 'rxjs/operators';
@@ -42,6 +43,7 @@ ExampleMaterialModule.decorators = [
                     A11yModule,
                     CdkTableModule,
                     CdkTreeModule,
+                    DragDropModule,
                     MatAutocompleteModule,
                     MatBadgeModule,
                     MatBottomSheetModule,
@@ -83,6 +85,7 @@ ExampleMaterialModule.decorators = [
                     A11yModule,
                     CdkTableModule,
                     CdkTreeModule,
+                    DragDropModule,
                     MatAutocompleteModule,
                     MatBadgeModule,
                     MatBottomSheetModule,
@@ -606,6 +609,231 @@ CardOverviewExample.decorators = [
                 selector: 'card-overview-example',
                 template: "<mat-card>Simple card</mat-card>",
                 styles: ["/** No CSS for this example */ "],
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop position locking
+ */
+class CdkDragDropAxisLockExample {
+}
+CdkDragDropAxisLockExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-drag-drop-axis-lock-example',
+                template: "<div class=\"box\" cdkDragLockAxis=\"y\" cdkDrag>I can only be dragged up/down</div><div class=\"box\" cdkDragLockAxis=\"x\" cdkDrag>I can only be dragged left/right</div>",
+                styles: [".box { width: 200px; height: 200px; border: solid 1px #ccc; cursor: move; display: inline-flex; justify-content: center; align-items: center; background: #fff; border-radius: 4px; margin-right: 25px; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop connected sorting
+ */
+class CdkDragDropConnectedSortingExample {
+    constructor() {
+        this.todo = [
+            'Get to work',
+            'Pick up groceries',
+            'Go home',
+            'Fall asleep'
+        ];
+        this.done = [
+            'Get up',
+            'Brush teeth',
+            'Take a shower',
+            'Check e-mail',
+            'Walk dog'
+        ];
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    drop(event) {
+        if (event.previousContainer === event.container) {
+            moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+        }
+        else {
+            transferArrayItem(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
+        }
+    }
+}
+CdkDragDropConnectedSortingExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-drag-drop-connected-sorting-example',
+                template: "<div class=\"container\"><h2>To do</h2><cdk-drop #todoList [data]=\"todo\" [connectedTo]=\"[doneList]\" class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div></cdk-drop></div><div class=\"container\"><h2>Done</h2><cdk-drop #doneList [data]=\"done\" [connectedTo]=\"[todoList]\" class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div></cdk-drop></div>",
+                styles: [".container { width: 400px; max-width: 100%; margin: 0 25px 25px 0; display: inline-block; vertical-align: top; } .list { border: solid 1px #ccc; min-height: 60px; background: white; border-radius: 4px; overflow: hidden; display: block; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop custom preview
+ */
+class CdkDragDropCustomPreviewExample {
+    constructor() {
+        // tslint:disable:max-line-length
+        this.movies = [
+            {
+                title: 'Episode I - The Phantom Menace',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/4/40/Star_Wars_Phantom_Menace_poster.jpg'
+            },
+            {
+                title: 'Episode II - Attack of the Clones',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/3/32/Star_Wars_-_Episode_II_Attack_of_the_Clones_%28movie_poster%29.jpg'
+            },
+            {
+                title: 'Episode III - Revenge of the Sith',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/9/93/Star_Wars_Episode_III_Revenge_of_the_Sith_poster.jpg'
+            },
+            {
+                title: 'Episode IV - A New Hope',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg'
+            },
+            {
+                title: 'Episode V - The Empire Strikes Back',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/3/3c/SW_-_Empire_Strikes_Back.jpg'
+            },
+            {
+                title: 'Episode VI - Return of the Jedi',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/b/b2/ReturnOfTheJediPoster1983.jpg'
+            },
+            {
+                title: 'Episode VII - The Force Awakens',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/a/a2/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg'
+            },
+            {
+                title: 'Episode VIII - The Last Jedi',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/7/7f/Star_Wars_The_Last_Jedi.jpg'
+            }
+        ];
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    drop(event) {
+        moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
+    }
+}
+CdkDragDropCustomPreviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-drag-drop-custom-preview-example',
+                template: "<cdk-drop class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie.title}} <img *cdkDragPreview [src]=\"movie.poster\" [alt]=\"movie.title\"></div></cdk-drop>",
+                styles: [".list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop with a handle
+ */
+class CdkDragDropHandleExample {
+}
+CdkDragDropHandleExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-drag-drop-handle-example',
+                template: "<div class=\"box\" cdkDrag>I can only be dragged using the handle<div class=\"handle\" cdkDragHandle><svg width=\"24px\" fill=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z\"></path><path d=\"M0 0h24v24H0z\" fill=\"none\"></path></svg></div></div>",
+                styles: [".box { width: 200px; height: 200px; padding: 10px; box-sizing: border-box; border: solid 1px #ccc; display: flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; position: relative; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .handle { position: absolute; top: 10px; right: 10px; color: #ccc; cursor: move; } "],
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop horizontal sorting
+ */
+class CdkDragDropHorizontalSortingExample {
+    constructor() {
+        this.timePeriods = [
+            'Bronze age',
+            'Iron age',
+            'Middle ages',
+            'Early modern period',
+            'Long nineteenth century'
+        ];
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    drop(event) {
+        moveItemInArray(this.timePeriods, event.previousIndex, event.currentIndex);
+    }
+}
+CdkDragDropHorizontalSortingExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-drag-drop-horizontal-sorting-example',
+                template: "<cdk-drop orientation=\"horizontal\" class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let timePeriod of timePeriods\" cdkDrag>{{timePeriod}}</div></cdk-drop>",
+                styles: [".list { width: 1000px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: flex; flex-direction: row; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-right: solid 1px #ccc; display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; flex-grow: 1; flex-basis: 0; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Basic Drag&Drop
+ */
+class CdkDragDropOverviewExample {
+}
+CdkDragDropOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-drag-drop-overview-example',
+                template: "<div class=\"box\" cdkDrag>Drag me around</div>",
+                styles: [".box { width: 200px; height: 200px; border: solid 1px #ccc; cursor: move; display: flex; justify-content: center; align-items: center; background: #fff; border-radius: 4px; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop sorting
+ */
+class CdkDragDropSortingExample {
+    constructor() {
+        this.movies = [
+            'Episode I - The Phantom Menace',
+            'Episode II - Attack of the Clones',
+            'Episode III - Revenge of the Sith',
+            'Episode IV - A New Hope',
+            'Episode V - The Empire Strikes Back',
+            'Episode VI - Return of the Jedi',
+            'Episode VII - The Force Awakens',
+            'Episode VIII - The Last Jedi'
+        ];
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    drop(event) {
+        moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
+    }
+}
+CdkDragDropSortingExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-drag-drop-sorting-example',
+                template: "<cdk-drop class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie}}</div></cdk-drop>",
+                styles: [".list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
             },] },
 ];
 
@@ -6620,6 +6848,34 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Basic cards',
         component: CardOverviewExample
     },
+    'cdk-drag-drop-axis-lock': {
+        title: 'Drag&Drop position locking',
+        component: CdkDragDropAxisLockExample
+    },
+    'cdk-drag-drop-connected-sorting': {
+        title: 'Drag&Drop connected sorting',
+        component: CdkDragDropConnectedSortingExample
+    },
+    'cdk-drag-drop-custom-preview': {
+        title: 'Drag&Drop custom preview',
+        component: CdkDragDropCustomPreviewExample
+    },
+    'cdk-drag-drop-handle': {
+        title: 'Drag&Drop with a handle',
+        component: CdkDragDropHandleExample
+    },
+    'cdk-drag-drop-horizontal-sorting': {
+        title: 'Drag&Drop horizontal sorting',
+        component: CdkDragDropHorizontalSortingExample
+    },
+    'cdk-drag-drop-overview': {
+        title: 'Basic Drag&Drop',
+        component: CdkDragDropOverviewExample
+    },
+    'cdk-drag-drop-sorting': {
+        title: 'Drag&Drop sorting',
+        component: CdkDragDropSortingExample
+    },
     'cdk-table-basic-flex': {
         title: 'Basic use of `<cdk-table>` (uses display flex)',
         component: CdkTableBasicFlexExample
@@ -7281,6 +7537,13 @@ const /** @type {?} */ EXAMPLE_LIST = [
     ButtonTypesExample,
     CardFancyExample,
     CardOverviewExample,
+    CdkDragDropAxisLockExample,
+    CdkDragDropConnectedSortingExample,
+    CdkDragDropCustomPreviewExample,
+    CdkDragDropHandleExample,
+    CdkDragDropHorizontalSortingExample,
+    CdkDragDropOverviewExample,
+    CdkDragDropSortingExample,
     CdkTableBasicFlexExample,
     CdkTableBasicExample,
     CdkTreeFlatExample,
@@ -7496,5 +7759,5 @@ class ExampleData {
  * @suppress {checkTypes} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleExclusiveExample as ɵk, ButtonTypesExample as ɵl, CardOverviewExample as ɵm, CdkTableBasicFlexExample as ɵn, CdkTableBasicExample as ɵo, CdkTreeFlatExample as ɵq, FileDatabase as ɵp, CdkTreeNestedExample as ɵs, FileDatabase$1 as ɵr, CheckboxConfigurableExample as ɵt, CheckboxOverviewExample as ɵu, ChipsAutocompleteExample as ɵv, ChipsInputExample as ɵw, ChipsOverviewExample as ɵx, ChipsStackedExample as ɵy, DatepickerApiExample as ɵz, DatepickerColorExample as ɵba, DatepickerCustomHeaderExample as ɵbb, ExampleHeader as ɵbc, DatepickerCustomIconExample as ɵbd, DatepickerDisabledExample as ɵbe, DatepickerEventsExample as ɵbf, DatepickerFilterExample as ɵbg, DatepickerFormatsExample as ɵbi, MY_FORMATS as ɵbh, DatepickerLocaleExample as ɵbj, DatepickerMinMaxExample as ɵbk, DatepickerMomentExample as ɵbl, DatepickerStartViewExample as ɵbm, DatepickerTouchExample as ɵbn, DatepickerValueExample as ɵbo, DatepickerViewsSelectionExample as ɵbq, MY_FORMATS$1 as ɵbp, DialogContentExample as ɵbr, DialogContentExampleDialog as ɵbs, DialogDataExample as ɵbt, DialogDataExampleDialog as ɵbu, DialogElementsExample as ɵbv, DialogElementsExampleDialog as ɵbw, DialogOverviewExample as ɵbx, DialogOverviewExampleDialog as ɵby, DividerOverviewExample as ɵbz, ElevationOverviewExample as ɵca, ExpansionExpandCollapseAllExample as ɵcb, ExpansionStepsExample as ɵcc, FocusMonitorDirectivesExample as ɵcd, FocusMonitorFocusViaExample as ɵce, FocusMonitorOverviewExample as ɵcf, FormFieldAppearanceExample as ɵcg, FormFieldCustomControlExample as ɵci, MyTelInput as ɵch, FormFieldErrorExample as ɵcj, FormFieldHintExample as ɵck, FormFieldLabelExample as ɵcl, FormFieldOverviewExample as ɵcm, FormFieldPrefixSuffixExample as ɵcn, FormFieldThemingExample as ɵco, GridListDynamicExample as ɵcp, GridListOverviewExample as ɵcq, IconOverviewExample as ɵcr, IconSvgExample as ɵcs, InputClearableExample as ɵct, InputErrorStateMatcherExample as ɵcu, InputErrorsExample as ɵcv, InputFormExample as ɵcw, InputHintExample as ɵcx, InputOverviewExample as ɵcy, InputPrefixSuffixExample as ɵcz, ListSectionsExample as ɵda, ListSelectionExample as ɵdb, ExampleMaterialModule as ɵhb, MenuIconsExample as ɵdc, MenuOverviewExample as ɵdd, NestedMenuExample as ɵde, PaginatorConfigurableExample as ɵdf, PaginatorOverviewExample as ɵdg, ProgressBarBufferExample as ɵdh, ProgressBarConfigurableExample as ɵdi, ProgressBarDeterminateExample as ɵdj, ProgressBarIndeterminateExample as ɵdk, ProgressBarQueryExample as ɵdl, ProgressSpinnerConfigurableExample as ɵdm, ProgressSpinnerOverviewExample as ɵdn, RadioNgModelExample as ɵdo, RadioOverviewExample as ɵdp, RippleOverviewExample as ɵdq, SelectCustomTriggerExample as ɵdr, SelectDisabledExample as ɵds, SelectErrorStateMatcherExample as ɵdt, SelectFormExample as ɵdu, SelectHintErrorExample as ɵdv, SelectMultipleExample as ɵdw, SelectNoRippleExample as ɵdx, SelectOptgroupExample as ɵdy, SelectOverviewExample as ɵdz, SelectPanelClassExample as ɵea, SelectResetExample as ɵeb, SelectValueBindingExample as ɵec, SidenavAutosizeExample as ɵed, SidenavBackdropExample as ɵee, SidenavDisableCloseExample as ɵef, SidenavDrawerOverviewExample as ɵeg, SidenavFixedExample as ɵeh, SidenavModeExample as ɵei, SidenavOpenCloseExample as ɵej, SidenavOverviewExample as ɵek, SidenavPositionExample as ɵel, SidenavResponsiveExample as ɵem, SlideToggleConfigurableExample as ɵen, SlideToggleFormsExample as ɵeo, SlideToggleOverviewExample as ɵep, SliderConfigurableExample as ɵeq, SliderFormattingExample as ɵer, SliderOverviewExample as ɵes, PizzaPartyComponent as ɵeu, SnackBarComponentExample as ɵet, SnackBarOverviewExample as ɵev, SnackBarPositionExample as ɵew, SortOverviewExample as ɵex, StepperEditableExample as ɵey, StepperOptionalExample as ɵez, StepperVerticalExample as ɵfa, TabGroupAsyncExample as ɵfb, TabGroupBasicExample as ɵfc, TabGroupCustomLabelExample as ɵfd, TabGroupDynamicHeightExample as ɵfe, TabGroupDynamicExample as ɵff, TabGroupHeaderBelowExample as ɵfg, TabGroupLazyLoadedExample as ɵfh, TabGroupStretchedExample as ɵfi, TabGroupThemeExample as ɵfj, TabNavBarBasicExample as ɵfk, TableBasicFlexExample as ɵfl, TableBasicExample as ɵfm, TableDynamicColumnsExample as ɵfn, TableExpandableRowsExample as ɵfo, TableFilteringExample as ɵfp, TableFooterRowExample as ɵfq, TableHttpExample as ɵfr, TableMultipleHeaderFooterExample as ɵfs, TableOverviewExample as ɵft, TablePaginationExample as ɵfu, TableRowContextExample as ɵfv, TableSelectionExample as ɵfw, TableSortingExample as ɵfx, TableStickyColumnsExample as ɵfy, TableStickyComplexFlexExample as ɵfz, TableStickyComplexExample as ɵga, TableStickyFooterExample as ɵgb, TableStickyHeaderExample as ɵgc, TextFieldAutofillDirectiveExample as ɵgd, TextFieldAutofillMonitorExample as ɵge, TextFieldAutosizeTextareaExample as ɵgf, ToolbarOverviewExample as ɵgg, TooltipAutoHideExample as ɵgh, TooltipCustomClassExample as ɵgi, TooltipDelayExample as ɵgj, TooltipDisabledExample as ɵgk, TooltipManualExample as ɵgl, TooltipMessageExample as ɵgm, TooltipModifiedDefaultsExample as ɵgo, myCustomTooltipDefaults as ɵgn, TooltipOverviewExample as ɵgp, TooltipPositionExample as ɵgq, ChecklistDatabase as ɵgr, TreeChecklistExample as ɵgs, DynamicDatabase as ɵgt, TreeDynamicExample as ɵgu, FileDatabase$2 as ɵgv, TreeFlatOverviewExample as ɵgw, LoadmoreDatabase as ɵgx, TreeLoadmoreExample as ɵgy, FileDatabase$3 as ɵgz, TreeNestedOverviewExample as ɵha };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleExclusiveExample as ɵk, ButtonTypesExample as ɵl, CardOverviewExample as ɵm, CdkDragDropAxisLockExample as ɵn, CdkDragDropConnectedSortingExample as ɵo, CdkDragDropCustomPreviewExample as ɵp, CdkDragDropHandleExample as ɵq, CdkDragDropHorizontalSortingExample as ɵr, CdkDragDropOverviewExample as ɵs, CdkDragDropSortingExample as ɵt, CdkTableBasicFlexExample as ɵu, CdkTableBasicExample as ɵv, CdkTreeFlatExample as ɵx, FileDatabase as ɵw, CdkTreeNestedExample as ɵz, FileDatabase$1 as ɵy, CheckboxConfigurableExample as ɵba, CheckboxOverviewExample as ɵbb, ChipsAutocompleteExample as ɵbc, ChipsInputExample as ɵbd, ChipsOverviewExample as ɵbe, ChipsStackedExample as ɵbf, DatepickerApiExample as ɵbg, DatepickerColorExample as ɵbh, DatepickerCustomHeaderExample as ɵbi, ExampleHeader as ɵbj, DatepickerCustomIconExample as ɵbk, DatepickerDisabledExample as ɵbl, DatepickerEventsExample as ɵbm, DatepickerFilterExample as ɵbn, DatepickerFormatsExample as ɵbp, MY_FORMATS as ɵbo, DatepickerLocaleExample as ɵbq, DatepickerMinMaxExample as ɵbr, DatepickerMomentExample as ɵbs, DatepickerStartViewExample as ɵbt, DatepickerTouchExample as ɵbu, DatepickerValueExample as ɵbv, DatepickerViewsSelectionExample as ɵbx, MY_FORMATS$1 as ɵbw, DialogContentExample as ɵby, DialogContentExampleDialog as ɵbz, DialogDataExample as ɵca, DialogDataExampleDialog as ɵcb, DialogElementsExample as ɵcc, DialogElementsExampleDialog as ɵcd, DialogOverviewExample as ɵce, DialogOverviewExampleDialog as ɵcf, DividerOverviewExample as ɵcg, ElevationOverviewExample as ɵch, ExpansionExpandCollapseAllExample as ɵci, ExpansionStepsExample as ɵcj, FocusMonitorDirectivesExample as ɵck, FocusMonitorFocusViaExample as ɵcl, FocusMonitorOverviewExample as ɵcm, FormFieldAppearanceExample as ɵcn, FormFieldCustomControlExample as ɵcp, MyTelInput as ɵco, FormFieldErrorExample as ɵcq, FormFieldHintExample as ɵcr, FormFieldLabelExample as ɵcs, FormFieldOverviewExample as ɵct, FormFieldPrefixSuffixExample as ɵcu, FormFieldThemingExample as ɵcv, GridListDynamicExample as ɵcw, GridListOverviewExample as ɵcx, IconOverviewExample as ɵcy, IconSvgExample as ɵcz, InputClearableExample as ɵda, InputErrorStateMatcherExample as ɵdb, InputErrorsExample as ɵdc, InputFormExample as ɵdd, InputHintExample as ɵde, InputOverviewExample as ɵdf, InputPrefixSuffixExample as ɵdg, ListSectionsExample as ɵdh, ListSelectionExample as ɵdi, ExampleMaterialModule as ɵhi, MenuIconsExample as ɵdj, MenuOverviewExample as ɵdk, NestedMenuExample as ɵdl, PaginatorConfigurableExample as ɵdm, PaginatorOverviewExample as ɵdn, ProgressBarBufferExample as ɵdo, ProgressBarConfigurableExample as ɵdp, ProgressBarDeterminateExample as ɵdq, ProgressBarIndeterminateExample as ɵdr, ProgressBarQueryExample as ɵds, ProgressSpinnerConfigurableExample as ɵdt, ProgressSpinnerOverviewExample as ɵdu, RadioNgModelExample as ɵdv, RadioOverviewExample as ɵdw, RippleOverviewExample as ɵdx, SelectCustomTriggerExample as ɵdy, SelectDisabledExample as ɵdz, SelectErrorStateMatcherExample as ɵea, SelectFormExample as ɵeb, SelectHintErrorExample as ɵec, SelectMultipleExample as ɵed, SelectNoRippleExample as ɵee, SelectOptgroupExample as ɵef, SelectOverviewExample as ɵeg, SelectPanelClassExample as ɵeh, SelectResetExample as ɵei, SelectValueBindingExample as ɵej, SidenavAutosizeExample as ɵek, SidenavBackdropExample as ɵel, SidenavDisableCloseExample as ɵem, SidenavDrawerOverviewExample as ɵen, SidenavFixedExample as ɵeo, SidenavModeExample as ɵep, SidenavOpenCloseExample as ɵeq, SidenavOverviewExample as ɵer, SidenavPositionExample as ɵes, SidenavResponsiveExample as ɵet, SlideToggleConfigurableExample as ɵeu, SlideToggleFormsExample as ɵev, SlideToggleOverviewExample as ɵew, SliderConfigurableExample as ɵex, SliderFormattingExample as ɵey, SliderOverviewExample as ɵez, PizzaPartyComponent as ɵfb, SnackBarComponentExample as ɵfa, SnackBarOverviewExample as ɵfc, SnackBarPositionExample as ɵfd, SortOverviewExample as ɵfe, StepperEditableExample as ɵff, StepperOptionalExample as ɵfg, StepperVerticalExample as ɵfh, TabGroupAsyncExample as ɵfi, TabGroupBasicExample as ɵfj, TabGroupCustomLabelExample as ɵfk, TabGroupDynamicHeightExample as ɵfl, TabGroupDynamicExample as ɵfm, TabGroupHeaderBelowExample as ɵfn, TabGroupLazyLoadedExample as ɵfo, TabGroupStretchedExample as ɵfp, TabGroupThemeExample as ɵfq, TabNavBarBasicExample as ɵfr, TableBasicFlexExample as ɵfs, TableBasicExample as ɵft, TableDynamicColumnsExample as ɵfu, TableExpandableRowsExample as ɵfv, TableFilteringExample as ɵfw, TableFooterRowExample as ɵfx, TableHttpExample as ɵfy, TableMultipleHeaderFooterExample as ɵfz, TableOverviewExample as ɵga, TablePaginationExample as ɵgb, TableRowContextExample as ɵgc, TableSelectionExample as ɵgd, TableSortingExample as ɵge, TableStickyColumnsExample as ɵgf, TableStickyComplexFlexExample as ɵgg, TableStickyComplexExample as ɵgh, TableStickyFooterExample as ɵgi, TableStickyHeaderExample as ɵgj, TextFieldAutofillDirectiveExample as ɵgk, TextFieldAutofillMonitorExample as ɵgl, TextFieldAutosizeTextareaExample as ɵgm, ToolbarOverviewExample as ɵgn, TooltipAutoHideExample as ɵgo, TooltipCustomClassExample as ɵgp, TooltipDelayExample as ɵgq, TooltipDisabledExample as ɵgr, TooltipManualExample as ɵgs, TooltipMessageExample as ɵgt, TooltipModifiedDefaultsExample as ɵgv, myCustomTooltipDefaults as ɵgu, TooltipOverviewExample as ɵgw, TooltipPositionExample as ɵgx, ChecklistDatabase as ɵgy, TreeChecklistExample as ɵgz, DynamicDatabase as ɵha, TreeDynamicExample as ɵhb, FileDatabase$2 as ɵhc, TreeFlatOverviewExample as ɵhd, LoadmoreDatabase as ɵhe, TreeLoadmoreExample as ɵhf, FileDatabase$3 as ɵhg, TreeNestedOverviewExample as ɵhh };
 //# sourceMappingURL=material-examples.js.map

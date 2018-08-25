@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.a11y,global.ng.cdk.table,global.ng.cdk.tree,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
-}(this, (function (exports,core,scrolling,a11y,table,tree,material,forms,operators,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,coercion,platformBrowser,sidenav,layout,animations,http,textField,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.a11y,global.ng.cdk.table,global.ng.cdk.tree,global.ng.cdk.dragDrop,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
+}(this, (function (exports,core,scrolling,a11y,table,tree,dragDrop,material,forms,operators,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,coercion,platformBrowser,sidenav,layout,animations,http,textField,common) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -55,6 +55,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                         a11y.A11yModule,
                         table.CdkTableModule,
                         tree.CdkTreeModule,
+                        dragDrop.DragDropModule,
                         material.MatAutocompleteModule,
                         material.MatBadgeModule,
                         material.MatBottomSheetModule,
@@ -96,6 +97,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                         a11y.A11yModule,
                         table.CdkTableModule,
                         tree.CdkTreeModule,
+                        dragDrop.DragDropModule,
                         material.MatAutocompleteModule,
                         material.MatBadgeModule,
                         material.MatBottomSheetModule,
@@ -690,6 +692,261 @@ var CardOverviewExample = /** @class */ (function () {
                 },] },
     ];
     return CardOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop position locking
+ */
+var CdkDragDropAxisLockExample = /** @class */ (function () {
+    function CdkDragDropAxisLockExample() {
+    }
+    CdkDragDropAxisLockExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-drag-drop-axis-lock-example',
+                    template: "<div class=\"box\" cdkDragLockAxis=\"y\" cdkDrag>I can only be dragged up/down</div><div class=\"box\" cdkDragLockAxis=\"x\" cdkDrag>I can only be dragged left/right</div>",
+                    styles: [".box { width: 200px; height: 200px; border: solid 1px #ccc; cursor: move; display: inline-flex; justify-content: center; align-items: center; background: #fff; border-radius: 4px; margin-right: 25px; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+                },] },
+    ];
+    return CdkDragDropAxisLockExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop connected sorting
+ */
+var CdkDragDropConnectedSortingExample = /** @class */ (function () {
+    function CdkDragDropConnectedSortingExample() {
+        this.todo = [
+            'Get to work',
+            'Pick up groceries',
+            'Go home',
+            'Fall asleep'
+        ];
+        this.done = [
+            'Get up',
+            'Brush teeth',
+            'Take a shower',
+            'Check e-mail',
+            'Walk dog'
+        ];
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    CdkDragDropConnectedSortingExample.prototype.drop = /**
+     * @param {?} event
+     * @return {?}
+     */
+    function (event) {
+        if (event.previousContainer === event.container) {
+            dragDrop.moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+        }
+        else {
+            dragDrop.transferArrayItem(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
+        }
+    };
+    CdkDragDropConnectedSortingExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-drag-drop-connected-sorting-example',
+                    template: "<div class=\"container\"><h2>To do</h2><cdk-drop #todoList [data]=\"todo\" [connectedTo]=\"[doneList]\" class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div></cdk-drop></div><div class=\"container\"><h2>Done</h2><cdk-drop #doneList [data]=\"done\" [connectedTo]=\"[todoList]\" class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div></cdk-drop></div>",
+                    styles: [".container { width: 400px; max-width: 100%; margin: 0 25px 25px 0; display: inline-block; vertical-align: top; } .list { border: solid 1px #ccc; min-height: 60px; background: white; border-radius: 4px; overflow: hidden; display: block; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                },] },
+    ];
+    return CdkDragDropConnectedSortingExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop custom preview
+ */
+var CdkDragDropCustomPreviewExample = /** @class */ (function () {
+    function CdkDragDropCustomPreviewExample() {
+        // tslint:disable:max-line-length
+        this.movies = [
+            {
+                title: 'Episode I - The Phantom Menace',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/4/40/Star_Wars_Phantom_Menace_poster.jpg'
+            },
+            {
+                title: 'Episode II - Attack of the Clones',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/3/32/Star_Wars_-_Episode_II_Attack_of_the_Clones_%28movie_poster%29.jpg'
+            },
+            {
+                title: 'Episode III - Revenge of the Sith',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/9/93/Star_Wars_Episode_III_Revenge_of_the_Sith_poster.jpg'
+            },
+            {
+                title: 'Episode IV - A New Hope',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg'
+            },
+            {
+                title: 'Episode V - The Empire Strikes Back',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/3/3c/SW_-_Empire_Strikes_Back.jpg'
+            },
+            {
+                title: 'Episode VI - Return of the Jedi',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/b/b2/ReturnOfTheJediPoster1983.jpg'
+            },
+            {
+                title: 'Episode VII - The Force Awakens',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/a/a2/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg'
+            },
+            {
+                title: 'Episode VIII - The Last Jedi',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/7/7f/Star_Wars_The_Last_Jedi.jpg'
+            }
+        ];
+    }
+    // tslint:enable:max-line-length
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    CdkDragDropCustomPreviewExample.prototype.drop = /**
+     * @param {?} event
+     * @return {?}
+     */
+    function (event) {
+        dragDrop.moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
+    };
+    CdkDragDropCustomPreviewExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-drag-drop-custom-preview-example',
+                    template: "<cdk-drop class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie.title}} <img *cdkDragPreview [src]=\"movie.poster\" [alt]=\"movie.title\"></div></cdk-drop>",
+                    styles: [".list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                },] },
+    ];
+    return CdkDragDropCustomPreviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop with a handle
+ */
+var CdkDragDropHandleExample = /** @class */ (function () {
+    function CdkDragDropHandleExample() {
+    }
+    CdkDragDropHandleExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-drag-drop-handle-example',
+                    template: "<div class=\"box\" cdkDrag>I can only be dragged using the handle<div class=\"handle\" cdkDragHandle><svg width=\"24px\" fill=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z\"></path><path d=\"M0 0h24v24H0z\" fill=\"none\"></path></svg></div></div>",
+                    styles: [".box { width: 200px; height: 200px; padding: 10px; box-sizing: border-box; border: solid 1px #ccc; display: flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; position: relative; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .handle { position: absolute; top: 10px; right: 10px; color: #ccc; cursor: move; } "],
+                },] },
+    ];
+    return CdkDragDropHandleExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop horizontal sorting
+ */
+var CdkDragDropHorizontalSortingExample = /** @class */ (function () {
+    function CdkDragDropHorizontalSortingExample() {
+        this.timePeriods = [
+            'Bronze age',
+            'Iron age',
+            'Middle ages',
+            'Early modern period',
+            'Long nineteenth century'
+        ];
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    CdkDragDropHorizontalSortingExample.prototype.drop = /**
+     * @param {?} event
+     * @return {?}
+     */
+    function (event) {
+        dragDrop.moveItemInArray(this.timePeriods, event.previousIndex, event.currentIndex);
+    };
+    CdkDragDropHorizontalSortingExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-drag-drop-horizontal-sorting-example',
+                    template: "<cdk-drop orientation=\"horizontal\" class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let timePeriod of timePeriods\" cdkDrag>{{timePeriod}}</div></cdk-drop>",
+                    styles: [".list { width: 1000px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: flex; flex-direction: row; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-right: solid 1px #ccc; display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; flex-grow: 1; flex-basis: 0; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                },] },
+    ];
+    return CdkDragDropHorizontalSortingExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Basic Drag&Drop
+ */
+var CdkDragDropOverviewExample = /** @class */ (function () {
+    function CdkDragDropOverviewExample() {
+    }
+    CdkDragDropOverviewExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-drag-drop-overview-example',
+                    template: "<div class=\"box\" cdkDrag>Drag me around</div>",
+                    styles: [".box { width: 200px; height: 200px; border: solid 1px #ccc; cursor: move; display: flex; justify-content: center; align-items: center; background: #fff; border-radius: 4px; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+                },] },
+    ];
+    return CdkDragDropOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * \@title Drag&Drop sorting
+ */
+var CdkDragDropSortingExample = /** @class */ (function () {
+    function CdkDragDropSortingExample() {
+        this.movies = [
+            'Episode I - The Phantom Menace',
+            'Episode II - Attack of the Clones',
+            'Episode III - Revenge of the Sith',
+            'Episode IV - A New Hope',
+            'Episode V - The Empire Strikes Back',
+            'Episode VI - Return of the Jedi',
+            'Episode VII - The Force Awakens',
+            'Episode VIII - The Last Jedi'
+        ];
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    CdkDragDropSortingExample.prototype.drop = /**
+     * @param {?} event
+     * @return {?}
+     */
+    function (event) {
+        dragDrop.moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
+    };
+    CdkDragDropSortingExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-drag-drop-sorting-example',
+                    template: "<cdk-drop class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie}}</div></cdk-drop>",
+                    styles: [".list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                },] },
+    ];
+    return CdkDragDropSortingExample;
 }());
 
 /**
@@ -7429,6 +7686,34 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         title: 'Basic cards',
         component: CardOverviewExample
     },
+    'cdk-drag-drop-axis-lock': {
+        title: 'Drag&Drop position locking',
+        component: CdkDragDropAxisLockExample
+    },
+    'cdk-drag-drop-connected-sorting': {
+        title: 'Drag&Drop connected sorting',
+        component: CdkDragDropConnectedSortingExample
+    },
+    'cdk-drag-drop-custom-preview': {
+        title: 'Drag&Drop custom preview',
+        component: CdkDragDropCustomPreviewExample
+    },
+    'cdk-drag-drop-handle': {
+        title: 'Drag&Drop with a handle',
+        component: CdkDragDropHandleExample
+    },
+    'cdk-drag-drop-horizontal-sorting': {
+        title: 'Drag&Drop horizontal sorting',
+        component: CdkDragDropHorizontalSortingExample
+    },
+    'cdk-drag-drop-overview': {
+        title: 'Basic Drag&Drop',
+        component: CdkDragDropOverviewExample
+    },
+    'cdk-drag-drop-sorting': {
+        title: 'Drag&Drop sorting',
+        component: CdkDragDropSortingExample
+    },
     'cdk-table-basic-flex': {
         title: 'Basic use of `<cdk-table>` (uses display flex)',
         component: CdkTableBasicFlexExample
@@ -8090,6 +8375,13 @@ var /** @type {?} */ EXAMPLE_LIST = [
     ButtonTypesExample,
     CardFancyExample,
     CardOverviewExample,
+    CdkDragDropAxisLockExample,
+    CdkDragDropConnectedSortingExample,
+    CdkDragDropCustomPreviewExample,
+    CdkDragDropHandleExample,
+    CdkDragDropHorizontalSortingExample,
+    CdkDragDropOverviewExample,
+    CdkDragDropSortingExample,
     CdkTableBasicFlexExample,
     CdkTableBasicExample,
     CdkTreeFlatExample,
@@ -8325,177 +8617,184 @@ exports.ɵj = ButtonOverviewExample;
 exports.ɵk = ButtonToggleExclusiveExample;
 exports.ɵl = ButtonTypesExample;
 exports.ɵm = CardOverviewExample;
-exports.ɵn = CdkTableBasicFlexExample;
-exports.ɵo = CdkTableBasicExample;
-exports.ɵq = CdkTreeFlatExample;
-exports.ɵp = FileDatabase;
-exports.ɵs = CdkTreeNestedExample;
-exports.ɵr = FileDatabase$1;
-exports.ɵt = CheckboxConfigurableExample;
-exports.ɵu = CheckboxOverviewExample;
-exports.ɵv = ChipsAutocompleteExample;
-exports.ɵw = ChipsInputExample;
-exports.ɵx = ChipsOverviewExample;
-exports.ɵy = ChipsStackedExample;
-exports.ɵz = DatepickerApiExample;
-exports.ɵba = DatepickerColorExample;
-exports.ɵbb = DatepickerCustomHeaderExample;
-exports.ɵbc = ExampleHeader;
-exports.ɵbd = DatepickerCustomIconExample;
-exports.ɵbe = DatepickerDisabledExample;
-exports.ɵbf = DatepickerEventsExample;
-exports.ɵbg = DatepickerFilterExample;
-exports.ɵbi = DatepickerFormatsExample;
-exports.ɵbh = MY_FORMATS;
-exports.ɵbj = DatepickerLocaleExample;
-exports.ɵbk = DatepickerMinMaxExample;
-exports.ɵbl = DatepickerMomentExample;
-exports.ɵbm = DatepickerStartViewExample;
-exports.ɵbn = DatepickerTouchExample;
-exports.ɵbo = DatepickerValueExample;
-exports.ɵbq = DatepickerViewsSelectionExample;
-exports.ɵbp = MY_FORMATS$1;
-exports.ɵbr = DialogContentExample;
-exports.ɵbs = DialogContentExampleDialog;
-exports.ɵbt = DialogDataExample;
-exports.ɵbu = DialogDataExampleDialog;
-exports.ɵbv = DialogElementsExample;
-exports.ɵbw = DialogElementsExampleDialog;
-exports.ɵbx = DialogOverviewExample;
-exports.ɵby = DialogOverviewExampleDialog;
-exports.ɵbz = DividerOverviewExample;
-exports.ɵca = ElevationOverviewExample;
-exports.ɵcb = ExpansionExpandCollapseAllExample;
-exports.ɵcc = ExpansionStepsExample;
-exports.ɵcd = FocusMonitorDirectivesExample;
-exports.ɵce = FocusMonitorFocusViaExample;
-exports.ɵcf = FocusMonitorOverviewExample;
-exports.ɵcg = FormFieldAppearanceExample;
-exports.ɵci = FormFieldCustomControlExample;
-exports.ɵch = MyTelInput;
-exports.ɵcj = FormFieldErrorExample;
-exports.ɵck = FormFieldHintExample;
-exports.ɵcl = FormFieldLabelExample;
-exports.ɵcm = FormFieldOverviewExample;
-exports.ɵcn = FormFieldPrefixSuffixExample;
-exports.ɵco = FormFieldThemingExample;
-exports.ɵcp = GridListDynamicExample;
-exports.ɵcq = GridListOverviewExample;
-exports.ɵcr = IconOverviewExample;
-exports.ɵcs = IconSvgExample;
-exports.ɵct = InputClearableExample;
-exports.ɵcu = InputErrorStateMatcherExample;
-exports.ɵcv = InputErrorsExample;
-exports.ɵcw = InputFormExample;
-exports.ɵcx = InputHintExample;
-exports.ɵcy = InputOverviewExample;
-exports.ɵcz = InputPrefixSuffixExample;
-exports.ɵda = ListSectionsExample;
-exports.ɵdb = ListSelectionExample;
-exports.ɵhb = ExampleMaterialModule;
-exports.ɵdc = MenuIconsExample;
-exports.ɵdd = MenuOverviewExample;
-exports.ɵde = NestedMenuExample;
-exports.ɵdf = PaginatorConfigurableExample;
-exports.ɵdg = PaginatorOverviewExample;
-exports.ɵdh = ProgressBarBufferExample;
-exports.ɵdi = ProgressBarConfigurableExample;
-exports.ɵdj = ProgressBarDeterminateExample;
-exports.ɵdk = ProgressBarIndeterminateExample;
-exports.ɵdl = ProgressBarQueryExample;
-exports.ɵdm = ProgressSpinnerConfigurableExample;
-exports.ɵdn = ProgressSpinnerOverviewExample;
-exports.ɵdo = RadioNgModelExample;
-exports.ɵdp = RadioOverviewExample;
-exports.ɵdq = RippleOverviewExample;
-exports.ɵdr = SelectCustomTriggerExample;
-exports.ɵds = SelectDisabledExample;
-exports.ɵdt = SelectErrorStateMatcherExample;
-exports.ɵdu = SelectFormExample;
-exports.ɵdv = SelectHintErrorExample;
-exports.ɵdw = SelectMultipleExample;
-exports.ɵdx = SelectNoRippleExample;
-exports.ɵdy = SelectOptgroupExample;
-exports.ɵdz = SelectOverviewExample;
-exports.ɵea = SelectPanelClassExample;
-exports.ɵeb = SelectResetExample;
-exports.ɵec = SelectValueBindingExample;
-exports.ɵed = SidenavAutosizeExample;
-exports.ɵee = SidenavBackdropExample;
-exports.ɵef = SidenavDisableCloseExample;
-exports.ɵeg = SidenavDrawerOverviewExample;
-exports.ɵeh = SidenavFixedExample;
-exports.ɵei = SidenavModeExample;
-exports.ɵej = SidenavOpenCloseExample;
-exports.ɵek = SidenavOverviewExample;
-exports.ɵel = SidenavPositionExample;
-exports.ɵem = SidenavResponsiveExample;
-exports.ɵen = SlideToggleConfigurableExample;
-exports.ɵeo = SlideToggleFormsExample;
-exports.ɵep = SlideToggleOverviewExample;
-exports.ɵeq = SliderConfigurableExample;
-exports.ɵer = SliderFormattingExample;
-exports.ɵes = SliderOverviewExample;
-exports.ɵeu = PizzaPartyComponent;
-exports.ɵet = SnackBarComponentExample;
-exports.ɵev = SnackBarOverviewExample;
-exports.ɵew = SnackBarPositionExample;
-exports.ɵex = SortOverviewExample;
-exports.ɵey = StepperEditableExample;
-exports.ɵez = StepperOptionalExample;
-exports.ɵfa = StepperVerticalExample;
-exports.ɵfb = TabGroupAsyncExample;
-exports.ɵfc = TabGroupBasicExample;
-exports.ɵfd = TabGroupCustomLabelExample;
-exports.ɵfe = TabGroupDynamicHeightExample;
-exports.ɵff = TabGroupDynamicExample;
-exports.ɵfg = TabGroupHeaderBelowExample;
-exports.ɵfh = TabGroupLazyLoadedExample;
-exports.ɵfi = TabGroupStretchedExample;
-exports.ɵfj = TabGroupThemeExample;
-exports.ɵfk = TabNavBarBasicExample;
-exports.ɵfl = TableBasicFlexExample;
-exports.ɵfm = TableBasicExample;
-exports.ɵfn = TableDynamicColumnsExample;
-exports.ɵfo = TableExpandableRowsExample;
-exports.ɵfp = TableFilteringExample;
-exports.ɵfq = TableFooterRowExample;
-exports.ɵfr = TableHttpExample;
-exports.ɵfs = TableMultipleHeaderFooterExample;
-exports.ɵft = TableOverviewExample;
-exports.ɵfu = TablePaginationExample;
-exports.ɵfv = TableRowContextExample;
-exports.ɵfw = TableSelectionExample;
-exports.ɵfx = TableSortingExample;
-exports.ɵfy = TableStickyColumnsExample;
-exports.ɵfz = TableStickyComplexFlexExample;
-exports.ɵga = TableStickyComplexExample;
-exports.ɵgb = TableStickyFooterExample;
-exports.ɵgc = TableStickyHeaderExample;
-exports.ɵgd = TextFieldAutofillDirectiveExample;
-exports.ɵge = TextFieldAutofillMonitorExample;
-exports.ɵgf = TextFieldAutosizeTextareaExample;
-exports.ɵgg = ToolbarOverviewExample;
-exports.ɵgh = TooltipAutoHideExample;
-exports.ɵgi = TooltipCustomClassExample;
-exports.ɵgj = TooltipDelayExample;
-exports.ɵgk = TooltipDisabledExample;
-exports.ɵgl = TooltipManualExample;
-exports.ɵgm = TooltipMessageExample;
-exports.ɵgo = TooltipModifiedDefaultsExample;
-exports.ɵgn = myCustomTooltipDefaults;
-exports.ɵgp = TooltipOverviewExample;
-exports.ɵgq = TooltipPositionExample;
-exports.ɵgr = ChecklistDatabase;
-exports.ɵgs = TreeChecklistExample;
-exports.ɵgt = DynamicDatabase;
-exports.ɵgu = TreeDynamicExample;
-exports.ɵgv = FileDatabase$2;
-exports.ɵgw = TreeFlatOverviewExample;
-exports.ɵgx = LoadmoreDatabase;
-exports.ɵgy = TreeLoadmoreExample;
-exports.ɵgz = FileDatabase$3;
-exports.ɵha = TreeNestedOverviewExample;
+exports.ɵn = CdkDragDropAxisLockExample;
+exports.ɵo = CdkDragDropConnectedSortingExample;
+exports.ɵp = CdkDragDropCustomPreviewExample;
+exports.ɵq = CdkDragDropHandleExample;
+exports.ɵr = CdkDragDropHorizontalSortingExample;
+exports.ɵs = CdkDragDropOverviewExample;
+exports.ɵt = CdkDragDropSortingExample;
+exports.ɵu = CdkTableBasicFlexExample;
+exports.ɵv = CdkTableBasicExample;
+exports.ɵx = CdkTreeFlatExample;
+exports.ɵw = FileDatabase;
+exports.ɵz = CdkTreeNestedExample;
+exports.ɵy = FileDatabase$1;
+exports.ɵba = CheckboxConfigurableExample;
+exports.ɵbb = CheckboxOverviewExample;
+exports.ɵbc = ChipsAutocompleteExample;
+exports.ɵbd = ChipsInputExample;
+exports.ɵbe = ChipsOverviewExample;
+exports.ɵbf = ChipsStackedExample;
+exports.ɵbg = DatepickerApiExample;
+exports.ɵbh = DatepickerColorExample;
+exports.ɵbi = DatepickerCustomHeaderExample;
+exports.ɵbj = ExampleHeader;
+exports.ɵbk = DatepickerCustomIconExample;
+exports.ɵbl = DatepickerDisabledExample;
+exports.ɵbm = DatepickerEventsExample;
+exports.ɵbn = DatepickerFilterExample;
+exports.ɵbp = DatepickerFormatsExample;
+exports.ɵbo = MY_FORMATS;
+exports.ɵbq = DatepickerLocaleExample;
+exports.ɵbr = DatepickerMinMaxExample;
+exports.ɵbs = DatepickerMomentExample;
+exports.ɵbt = DatepickerStartViewExample;
+exports.ɵbu = DatepickerTouchExample;
+exports.ɵbv = DatepickerValueExample;
+exports.ɵbx = DatepickerViewsSelectionExample;
+exports.ɵbw = MY_FORMATS$1;
+exports.ɵby = DialogContentExample;
+exports.ɵbz = DialogContentExampleDialog;
+exports.ɵca = DialogDataExample;
+exports.ɵcb = DialogDataExampleDialog;
+exports.ɵcc = DialogElementsExample;
+exports.ɵcd = DialogElementsExampleDialog;
+exports.ɵce = DialogOverviewExample;
+exports.ɵcf = DialogOverviewExampleDialog;
+exports.ɵcg = DividerOverviewExample;
+exports.ɵch = ElevationOverviewExample;
+exports.ɵci = ExpansionExpandCollapseAllExample;
+exports.ɵcj = ExpansionStepsExample;
+exports.ɵck = FocusMonitorDirectivesExample;
+exports.ɵcl = FocusMonitorFocusViaExample;
+exports.ɵcm = FocusMonitorOverviewExample;
+exports.ɵcn = FormFieldAppearanceExample;
+exports.ɵcp = FormFieldCustomControlExample;
+exports.ɵco = MyTelInput;
+exports.ɵcq = FormFieldErrorExample;
+exports.ɵcr = FormFieldHintExample;
+exports.ɵcs = FormFieldLabelExample;
+exports.ɵct = FormFieldOverviewExample;
+exports.ɵcu = FormFieldPrefixSuffixExample;
+exports.ɵcv = FormFieldThemingExample;
+exports.ɵcw = GridListDynamicExample;
+exports.ɵcx = GridListOverviewExample;
+exports.ɵcy = IconOverviewExample;
+exports.ɵcz = IconSvgExample;
+exports.ɵda = InputClearableExample;
+exports.ɵdb = InputErrorStateMatcherExample;
+exports.ɵdc = InputErrorsExample;
+exports.ɵdd = InputFormExample;
+exports.ɵde = InputHintExample;
+exports.ɵdf = InputOverviewExample;
+exports.ɵdg = InputPrefixSuffixExample;
+exports.ɵdh = ListSectionsExample;
+exports.ɵdi = ListSelectionExample;
+exports.ɵhi = ExampleMaterialModule;
+exports.ɵdj = MenuIconsExample;
+exports.ɵdk = MenuOverviewExample;
+exports.ɵdl = NestedMenuExample;
+exports.ɵdm = PaginatorConfigurableExample;
+exports.ɵdn = PaginatorOverviewExample;
+exports.ɵdo = ProgressBarBufferExample;
+exports.ɵdp = ProgressBarConfigurableExample;
+exports.ɵdq = ProgressBarDeterminateExample;
+exports.ɵdr = ProgressBarIndeterminateExample;
+exports.ɵds = ProgressBarQueryExample;
+exports.ɵdt = ProgressSpinnerConfigurableExample;
+exports.ɵdu = ProgressSpinnerOverviewExample;
+exports.ɵdv = RadioNgModelExample;
+exports.ɵdw = RadioOverviewExample;
+exports.ɵdx = RippleOverviewExample;
+exports.ɵdy = SelectCustomTriggerExample;
+exports.ɵdz = SelectDisabledExample;
+exports.ɵea = SelectErrorStateMatcherExample;
+exports.ɵeb = SelectFormExample;
+exports.ɵec = SelectHintErrorExample;
+exports.ɵed = SelectMultipleExample;
+exports.ɵee = SelectNoRippleExample;
+exports.ɵef = SelectOptgroupExample;
+exports.ɵeg = SelectOverviewExample;
+exports.ɵeh = SelectPanelClassExample;
+exports.ɵei = SelectResetExample;
+exports.ɵej = SelectValueBindingExample;
+exports.ɵek = SidenavAutosizeExample;
+exports.ɵel = SidenavBackdropExample;
+exports.ɵem = SidenavDisableCloseExample;
+exports.ɵen = SidenavDrawerOverviewExample;
+exports.ɵeo = SidenavFixedExample;
+exports.ɵep = SidenavModeExample;
+exports.ɵeq = SidenavOpenCloseExample;
+exports.ɵer = SidenavOverviewExample;
+exports.ɵes = SidenavPositionExample;
+exports.ɵet = SidenavResponsiveExample;
+exports.ɵeu = SlideToggleConfigurableExample;
+exports.ɵev = SlideToggleFormsExample;
+exports.ɵew = SlideToggleOverviewExample;
+exports.ɵex = SliderConfigurableExample;
+exports.ɵey = SliderFormattingExample;
+exports.ɵez = SliderOverviewExample;
+exports.ɵfb = PizzaPartyComponent;
+exports.ɵfa = SnackBarComponentExample;
+exports.ɵfc = SnackBarOverviewExample;
+exports.ɵfd = SnackBarPositionExample;
+exports.ɵfe = SortOverviewExample;
+exports.ɵff = StepperEditableExample;
+exports.ɵfg = StepperOptionalExample;
+exports.ɵfh = StepperVerticalExample;
+exports.ɵfi = TabGroupAsyncExample;
+exports.ɵfj = TabGroupBasicExample;
+exports.ɵfk = TabGroupCustomLabelExample;
+exports.ɵfl = TabGroupDynamicHeightExample;
+exports.ɵfm = TabGroupDynamicExample;
+exports.ɵfn = TabGroupHeaderBelowExample;
+exports.ɵfo = TabGroupLazyLoadedExample;
+exports.ɵfp = TabGroupStretchedExample;
+exports.ɵfq = TabGroupThemeExample;
+exports.ɵfr = TabNavBarBasicExample;
+exports.ɵfs = TableBasicFlexExample;
+exports.ɵft = TableBasicExample;
+exports.ɵfu = TableDynamicColumnsExample;
+exports.ɵfv = TableExpandableRowsExample;
+exports.ɵfw = TableFilteringExample;
+exports.ɵfx = TableFooterRowExample;
+exports.ɵfy = TableHttpExample;
+exports.ɵfz = TableMultipleHeaderFooterExample;
+exports.ɵga = TableOverviewExample;
+exports.ɵgb = TablePaginationExample;
+exports.ɵgc = TableRowContextExample;
+exports.ɵgd = TableSelectionExample;
+exports.ɵge = TableSortingExample;
+exports.ɵgf = TableStickyColumnsExample;
+exports.ɵgg = TableStickyComplexFlexExample;
+exports.ɵgh = TableStickyComplexExample;
+exports.ɵgi = TableStickyFooterExample;
+exports.ɵgj = TableStickyHeaderExample;
+exports.ɵgk = TextFieldAutofillDirectiveExample;
+exports.ɵgl = TextFieldAutofillMonitorExample;
+exports.ɵgm = TextFieldAutosizeTextareaExample;
+exports.ɵgn = ToolbarOverviewExample;
+exports.ɵgo = TooltipAutoHideExample;
+exports.ɵgp = TooltipCustomClassExample;
+exports.ɵgq = TooltipDelayExample;
+exports.ɵgr = TooltipDisabledExample;
+exports.ɵgs = TooltipManualExample;
+exports.ɵgt = TooltipMessageExample;
+exports.ɵgv = TooltipModifiedDefaultsExample;
+exports.ɵgu = myCustomTooltipDefaults;
+exports.ɵgw = TooltipOverviewExample;
+exports.ɵgx = TooltipPositionExample;
+exports.ɵgy = ChecklistDatabase;
+exports.ɵgz = TreeChecklistExample;
+exports.ɵha = DynamicDatabase;
+exports.ɵhb = TreeDynamicExample;
+exports.ɵhc = FileDatabase$2;
+exports.ɵhd = TreeFlatOverviewExample;
+exports.ɵhe = LoadmoreDatabase;
+exports.ɵhf = TreeLoadmoreExample;
+exports.ɵhg = FileDatabase$3;
+exports.ɵhh = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
