@@ -13,5 +13,5 @@ export declare class AutocompleteDisplayExample implements OnInit {
     filteredOptions: Observable<User[]>;
     ngOnInit(): void;
     displayFn(user?: User): string | undefined;
-    private _filter(name);
+    private _filter;
 }

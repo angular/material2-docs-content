@@ -13,5 +13,5 @@ export declare class AutocompleteOverviewExample {
     filteredStates: Observable<State[]>;
     states: State[];
     constructor();
-    private _filterStates(value);
+    private _filterStates;
 }

@@ -9,5 +9,5 @@ export declare class AutocompleteAutoActiveFirstOptionExample implements OnInit 
     options: string[];
     filteredOptions: Observable<string[]>;
     ngOnInit(): void;
-    private _filter(value);
+    private _filter;
 }

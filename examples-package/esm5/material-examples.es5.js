@@ -161,7 +161,8 @@ var AutocompleteAutoActiveFirstOptionExample = /** @class */ (function () {
      * @return {?}
      */
     function (value) {
-        var /** @type {?} */ filterValue = value.toLowerCase();
+        /** @type {?} */
+        var filterValue = value.toLowerCase();
         return this.options.filter(function (option) { return option.toLowerCase().indexOf(filterValue) === 0; });
     };
     AutocompleteAutoActiveFirstOptionExample.decorators = [
@@ -221,7 +222,8 @@ var AutocompleteDisplayExample = /** @class */ (function () {
      * @return {?}
      */
     function (name) {
-        var /** @type {?} */ filterValue = name.toLowerCase();
+        /** @type {?} */
+        var filterValue = name.toLowerCase();
         return this.options.filter(function (option) { return option.name.toLowerCase().indexOf(filterValue) === 0; });
     };
     AutocompleteDisplayExample.decorators = [
@@ -266,7 +268,8 @@ var AutocompleteFilterExample = /** @class */ (function () {
      * @return {?}
      */
     function (value) {
-        var /** @type {?} */ filterValue = value.toLowerCase();
+        /** @type {?} */
+        var filterValue = value.toLowerCase();
         return this.options.filter(function (option) { return option.toLowerCase().includes(filterValue); });
     };
     AutocompleteFilterExample.decorators = [
@@ -283,8 +286,10 @@ var AutocompleteFilterExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ _filter = function (opt, value) {
-    var /** @type {?} */ filterValue = value.toLowerCase();
+/** @type {?} */
+var _filter = function (opt, value) {
+    /** @type {?} */
+    var filterValue = value.toLowerCase();
     return opt.filter(function (item) { return item.toLowerCase().indexOf(filterValue) === 0; });
 };
 /**
@@ -391,7 +396,7 @@ var AutocompleteOptgroupExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     AutocompleteOptgroupExample.ctorParameters = function () { return [
-        { type: FormBuilder, },
+        { type: FormBuilder }
     ]; };
     return AutocompleteOptgroupExample;
 }());
@@ -445,7 +450,8 @@ var AutocompleteOverviewExample = /** @class */ (function () {
      * @return {?}
      */
     function (value) {
-        var /** @type {?} */ filterValue = value.toLowerCase();
+        /** @type {?} */
+        var filterValue = value.toLowerCase();
         return this.states.filter(function (state$$1) { return state$$1.name.toLowerCase().indexOf(filterValue) === 0; });
     };
     AutocompleteOverviewExample.decorators = [
@@ -531,7 +537,7 @@ var BottomSheetOverviewExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     BottomSheetOverviewExample.ctorParameters = function () { return [
-        { type: MatBottomSheet, },
+        { type: MatBottomSheet }
     ]; };
     return BottomSheetOverviewExample;
 }());
@@ -559,7 +565,7 @@ var BottomSheetOverviewExampleSheet = /** @class */ (function () {
     ];
     /** @nocollapse */
     BottomSheetOverviewExampleSheet.ctorParameters = function () { return [
-        { type: MatBottomSheetRef, },
+        { type: MatBottomSheetRef }
     ]; };
     return BottomSheetOverviewExampleSheet;
 }());
@@ -943,7 +949,8 @@ var CdkDragDropSortingExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ ELEMENT_DATA = [
+/** @type {?} */
+var ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1022,7 +1029,8 @@ ExampleDataSource = /** @class */ (function (_super) {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ ELEMENT_DATA$1 = [
+/** @type {?} */
+var ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1129,10 +1137,10 @@ FileFlatNode = /** @class */ (function () {
     }
     return FileFlatNode;
 }());
-/**
+/** *
  * The file structure tree data in string. The data could be parsed into a Json object
- */
-var /** @type {?} */ TREE_DATA = JSON.stringify({
+  @type {?} */
+var TREE_DATA = JSON.stringify({
     Applications: {
         Calendar: 'app',
         Chrome: 'app',
@@ -1194,11 +1202,10 @@ var FileDatabase = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        // Parse the string to json object.
-        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        /** @type {?} */
+        var dataObject = JSON.parse(TREE_DATA);
+        /** @type {?} */
+        var data = this.buildFileTree(dataObject, 0);
         // Notify the change.
         this.dataChange.next(data);
     };
@@ -1223,8 +1230,10 @@ var FileDatabase = /** @class */ (function () {
     function (obj, level) {
         var _this = this;
         return Object.keys(obj).reduce(function (accumulator, key) {
-            var /** @type {?} */ value = obj[key];
-            var /** @type {?} */ node = new FileNode();
+            /** @type {?} */
+            var value = obj[key];
+            /** @type {?} */
+            var node = new FileNode();
             node.filename = key;
             if (value != null) {
                 if (typeof value === 'object') {
@@ -1274,7 +1283,7 @@ var CdkTreeFlatExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     CdkTreeFlatExample.ctorParameters = function () { return [
-        { type: FileDatabase, },
+        { type: FileDatabase }
     ]; };
     return CdkTreeFlatExample;
 }());
@@ -1294,10 +1303,10 @@ FileNode$1 = /** @class */ (function () {
     }
     return FileNode;
 }());
-/**
+/** *
  * The Json tree data in string. The data could be parsed into Json object
- */
-var /** @type {?} */ TREE_DATA$1 = JSON.stringify({
+  @type {?} */
+var TREE_DATA$1 = JSON.stringify({
     Applications: {
         Calendar: 'app',
         Chrome: 'app',
@@ -1359,11 +1368,10 @@ var FileDatabase$1 = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        // Parse the string to json object.
-        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$1);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        /** @type {?} */
+        var dataObject = JSON.parse(TREE_DATA$1);
+        /** @type {?} */
+        var data = this.buildFileTree(dataObject, 0);
         // Notify the change.
         this.dataChange.next(data);
     };
@@ -1388,8 +1396,10 @@ var FileDatabase$1 = /** @class */ (function () {
     function (obj, level) {
         var _this = this;
         return Object.keys(obj).reduce(function (accumulator, key) {
-            var /** @type {?} */ value = obj[key];
-            var /** @type {?} */ node = new FileNode$1();
+            /** @type {?} */
+            var value = obj[key];
+            /** @type {?} */
+            var node = new FileNode$1();
             node.filename = key;
             if (value != null) {
                 if (typeof value === 'object') {
@@ -1431,7 +1441,7 @@ var CdkTreeNestedExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     CdkTreeNestedExample.ctorParameters = function () { return [
-        { type: FileDatabase$1, },
+        { type: FileDatabase$1 }
     ]; };
     return CdkTreeNestedExample;
 }());
@@ -1509,8 +1519,10 @@ var ChipsAutocompleteExample = /** @class */ (function () {
      * @return {?}
      */
     function (event) {
-        var /** @type {?} */ input = event.input;
-        var /** @type {?} */ value = event.value;
+        /** @type {?} */
+        var input = event.input;
+        /** @type {?} */
+        var value = event.value;
         // Add our fruit
         if ((value || '').trim()) {
             this.fruits.push(value.trim());
@@ -1530,7 +1542,8 @@ var ChipsAutocompleteExample = /** @class */ (function () {
      * @return {?}
      */
     function (fruit) {
-        var /** @type {?} */ index = this.fruits.indexOf(fruit);
+        /** @type {?} */
+        var index = this.fruits.indexOf(fruit);
         if (index >= 0) {
             this.fruits.splice(index, 1);
         }
@@ -1557,7 +1570,8 @@ var ChipsAutocompleteExample = /** @class */ (function () {
      * @return {?}
      */
     function (value) {
-        var /** @type {?} */ filterValue = value.toLowerCase();
+        /** @type {?} */
+        var filterValue = value.toLowerCase();
         return this.allFruits.filter(function (fruit) { return fruit.toLowerCase().indexOf(filterValue) === 0; });
     };
     ChipsAutocompleteExample.decorators = [
@@ -1570,7 +1584,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
     /** @nocollapse */
     ChipsAutocompleteExample.ctorParameters = function () { return []; };
     ChipsAutocompleteExample.propDecorators = {
-        "fruitInput": [{ type: ViewChild, args: ['fruitInput',] },],
+        fruitInput: [{ type: ViewChild, args: ['fruitInput',] }]
     };
     return ChipsAutocompleteExample;
 }());
@@ -1604,8 +1618,10 @@ var ChipsInputExample = /** @class */ (function () {
      * @return {?}
      */
     function (event) {
-        var /** @type {?} */ input = event.input;
-        var /** @type {?} */ value = event.value;
+        /** @type {?} */
+        var input = event.input;
+        /** @type {?} */
+        var value = event.value;
         // Add our fruit
         if ((value || '').trim()) {
             this.fruits.push({ name: value.trim() });
@@ -1624,7 +1640,8 @@ var ChipsInputExample = /** @class */ (function () {
      * @return {?}
      */
     function (fruit) {
-        var /** @type {?} */ index = this.fruits.indexOf(fruit);
+        /** @type {?} */
+        var index = this.fruits.indexOf(fruit);
         if (index >= 0) {
             this.fruits.splice(index, 1);
         }
@@ -1817,10 +1834,10 @@ var ExampleHeader = /** @class */ (function () {
     ];
     /** @nocollapse */
     ExampleHeader.ctorParameters = function () { return [
-        { type: MatCalendar, decorators: [{ type: Host },] },
-        { type: DateAdapter, },
-        { type: undefined, decorators: [{ type: Inject, args: [MAT_DATE_FORMATS,] },] },
-        { type: ChangeDetectorRef, },
+        { type: MatCalendar, decorators: [{ type: Host }] },
+        { type: DateAdapter },
+        { type: undefined, decorators: [{ type: Inject, args: [MAT_DATE_FORMATS,] }] },
+        { type: ChangeDetectorRef }
     ]; };
     return ExampleHeader;
 }());
@@ -1909,7 +1926,8 @@ var DatepickerEventsExample = /** @class */ (function () {
 var DatepickerFilterExample = /** @class */ (function () {
     function DatepickerFilterExample() {
         this.myFilter = function (d) {
-            var /** @type {?} */ day = d.getDay();
+            /** @type {?} */
+            var day = d.getDay();
             // Prevent Saturday and Sunday from being selected.
             return day !== 0 && day !== 6;
         };
@@ -1928,10 +1946,10 @@ var DatepickerFilterExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ moment = _rollupMoment__default || _rollupMoment;
-// See the Moment.js docs for the meaning of these formats:
-// https://momentjs.com/docs/#/displaying/format/
-var /** @type {?} */ MY_FORMATS = {
+/** @type {?} */
+var moment = _rollupMoment__default || _rollupMoment;
+/** @type {?} */
+var MY_FORMATS = {
     parse: {
         dateInput: 'LL',
     },
@@ -2006,7 +2024,7 @@ var DatepickerLocaleExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     DatepickerLocaleExample.ctorParameters = function () { return [
-        { type: DateAdapter, },
+        { type: DateAdapter }
     ]; };
     return DatepickerLocaleExample;
 }());
@@ -2037,7 +2055,8 @@ var DatepickerMinMaxExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ moment$1 = _rollupMoment__default || _rollupMoment;
+/** @type {?} */
+var moment$1 = _rollupMoment__default || _rollupMoment;
 var ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker that uses Moment.js dates
@@ -2151,10 +2170,10 @@ var DatepickerValueExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ moment$2 = _rollupMoment__default || _rollupMoment;
-// See the Moment.js docs for the meaning of these formats:
-// https://momentjs.com/docs/#/displaying/format/
-var /** @type {?} */ MY_FORMATS$1 = {
+/** @type {?} */
+var moment$2 = _rollupMoment__default || _rollupMoment;
+/** @type {?} */
+var MY_FORMATS$1 = {
     parse: {
         dateInput: 'MM/YYYY',
     },
@@ -2181,7 +2200,8 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
      * @return {?}
      */
     function (normalizedYear) {
-        var /** @type {?} */ ctrlValue = this.date.value;
+        /** @type {?} */
+        var ctrlValue = this.date.value;
         ctrlValue.year(normalizedYear.year());
         this.date.setValue(ctrlValue);
     };
@@ -2196,7 +2216,8 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
      * @return {?}
      */
     function (normlizedMonth, datepicker) {
-        var /** @type {?} */ ctrlValue = this.date.value;
+        /** @type {?} */
+        var ctrlValue = this.date.value;
         ctrlValue.month(normlizedMonth.month());
         this.date.setValue(ctrlValue);
         datepicker.close();
@@ -2236,7 +2257,8 @@ var DialogContentExample = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        var /** @type {?} */ dialogRef = this.dialog.open(DialogContentExampleDialog);
+        /** @type {?} */
+        var dialogRef = this.dialog.open(DialogContentExampleDialog);
         dialogRef.afterClosed().subscribe(function (result) {
             console.log("Dialog result: " + result);
         });
@@ -2250,7 +2272,7 @@ var DialogContentExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     DialogContentExample.ctorParameters = function () { return [
-        { type: MatDialog, },
+        { type: MatDialog }
     ]; };
     return DialogContentExample;
 }());
@@ -2299,7 +2321,7 @@ var DialogDataExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     DialogDataExample.ctorParameters = function () { return [
-        { type: MatDialog, },
+        { type: MatDialog }
     ]; };
     return DialogDataExample;
 }());
@@ -2315,7 +2337,7 @@ var DialogDataExampleDialog = /** @class */ (function () {
     ];
     /** @nocollapse */
     DialogDataExampleDialog.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] },] },
+        { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] }] }
     ]; };
     return DialogDataExampleDialog;
 }());
@@ -2349,7 +2371,7 @@ var DialogElementsExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     DialogElementsExample.ctorParameters = function () { return [
-        { type: MatDialog, },
+        { type: MatDialog }
     ]; };
     return DialogElementsExample;
 }());
@@ -2384,7 +2406,8 @@ var DialogOverviewExample = /** @class */ (function () {
      */
     function () {
         var _this = this;
-        var /** @type {?} */ dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+        /** @type {?} */
+        var dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
             width: '250px',
             data: { name: this.name, animal: this.animal }
         });
@@ -2402,7 +2425,7 @@ var DialogOverviewExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     DialogOverviewExample.ctorParameters = function () { return [
-        { type: MatDialog, },
+        { type: MatDialog }
     ]; };
     return DialogOverviewExample;
 }());
@@ -2428,8 +2451,8 @@ var DialogOverviewExampleDialog = /** @class */ (function () {
     ];
     /** @nocollapse */
     DialogOverviewExampleDialog.ctorParameters = function () { return [
-        { type: MatDialogRef, },
-        { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] },] },
+        { type: MatDialogRef },
+        { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] }] }
     ]; };
     return DialogOverviewExampleDialog;
 }());
@@ -2492,9 +2515,8 @@ var ExpansionExpandCollapseAllExample = /** @class */ (function () {
                     styles: [".example-action-buttons { padding-bottom: 20px; } .example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "],
                 },] },
     ];
-    /** @nocollapse */
     ExpansionExpandCollapseAllExample.propDecorators = {
-        "accordion": [{ type: ViewChild, args: [MatAccordion,] },],
+        accordion: [{ type: ViewChild, args: [MatAccordion,] }]
     };
     return ExpansionExpandCollapseAllExample;
 }());
@@ -2615,8 +2637,8 @@ var FocusMonitorDirectivesExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     FocusMonitorDirectivesExample.ctorParameters = function () { return [
-        { type: NgZone, },
-        { type: ChangeDetectorRef, },
+        { type: NgZone },
+        { type: ChangeDetectorRef }
     ]; };
     return FocusMonitorDirectivesExample;
 }());
@@ -2644,12 +2666,10 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
     function () {
         var _this = this;
         this.focusMonitor.monitor(this.monitoredEl)
-            .subscribe(function (origin) {
-            return _this.ngZone.run(function () {
-                _this.origin = _this.formatOrigin(origin);
-                _this.cdr.markForCheck();
-            });
-        });
+            .subscribe(function (origin) { return _this.ngZone.run(function () {
+            _this.origin = _this.formatOrigin(origin);
+            _this.cdr.markForCheck();
+        }); });
     };
     /**
      * @return {?}
@@ -2680,12 +2700,12 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     FocusMonitorFocusViaExample.ctorParameters = function () { return [
-        { type: FocusMonitor, },
-        { type: ChangeDetectorRef, },
-        { type: NgZone, },
+        { type: FocusMonitor },
+        { type: ChangeDetectorRef },
+        { type: NgZone }
     ]; };
     FocusMonitorFocusViaExample.propDecorators = {
-        "monitoredEl": [{ type: ViewChild, args: ['monitored',] },],
+        monitoredEl: [{ type: ViewChild, args: ['monitored',] }]
     };
     return FocusMonitorFocusViaExample;
 }());
@@ -2714,19 +2734,15 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
     function () {
         var _this = this;
         this.focusMonitor.monitor(this.element)
-            .subscribe(function (origin) {
-            return _this.ngZone.run(function () {
-                _this.elementOrigin = _this.formatOrigin(origin);
-                _this.cdr.markForCheck();
-            });
-        });
+            .subscribe(function (origin) { return _this.ngZone.run(function () {
+            _this.elementOrigin = _this.formatOrigin(origin);
+            _this.cdr.markForCheck();
+        }); });
         this.focusMonitor.monitor(this.subtree, true)
-            .subscribe(function (origin) {
-            return _this.ngZone.run(function () {
-                _this.subtreeOrigin = _this.formatOrigin(origin);
-                _this.cdr.markForCheck();
-            });
-        });
+            .subscribe(function (origin) { return _this.ngZone.run(function () {
+            _this.subtreeOrigin = _this.formatOrigin(origin);
+            _this.cdr.markForCheck();
+        }); });
     };
     /**
      * @return {?}
@@ -2758,13 +2774,13 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     FocusMonitorOverviewExample.ctorParameters = function () { return [
-        { type: FocusMonitor, },
-        { type: ChangeDetectorRef, },
-        { type: NgZone, },
+        { type: FocusMonitor },
+        { type: ChangeDetectorRef },
+        { type: NgZone }
     ]; };
     FocusMonitorOverviewExample.propDecorators = {
-        "element": [{ type: ViewChild, args: ['element',] },],
-        "subtree": [{ type: ViewChild, args: ['subtree',] },],
+        element: [{ type: ViewChild, args: ['element',] }],
+        subtree: [{ type: ViewChild, args: ['subtree',] }]
     };
     return FocusMonitorOverviewExample;
 }());
@@ -2974,15 +2990,15 @@ var MyTelInput = /** @class */ (function () {
     ];
     /** @nocollapse */
     MyTelInput.ctorParameters = function () { return [
-        { type: FormBuilder, },
-        { type: FocusMonitor, },
-        { type: ElementRef, },
+        { type: FormBuilder },
+        { type: FocusMonitor },
+        { type: ElementRef }
     ]; };
     MyTelInput.propDecorators = {
-        "placeholder": [{ type: Input },],
-        "required": [{ type: Input },],
-        "disabled": [{ type: Input },],
-        "value": [{ type: Input },],
+        placeholder: [{ type: Input }],
+        required: [{ type: Input }],
+        disabled: [{ type: Input }],
+        value: [{ type: Input }]
     };
     return MyTelInput;
 }());
@@ -3076,7 +3092,7 @@ var FormFieldLabelExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     FormFieldLabelExample.ctorParameters = function () { return [
-        { type: FormBuilder, },
+        { type: FormBuilder }
     ]; };
     return FormFieldLabelExample;
 }());
@@ -3154,7 +3170,7 @@ var FormFieldThemingExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     FormFieldThemingExample.ctorParameters = function () { return [
-        { type: FormBuilder, },
+        { type: FormBuilder }
     ]; };
     return FormFieldThemingExample;
 }());
@@ -3245,8 +3261,8 @@ var IconSvgExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     IconSvgExample.ctorParameters = function () { return [
-        { type: MatIconRegistry, },
-        { type: DomSanitizer, },
+        { type: MatIconRegistry },
+        { type: DomSanitizer }
     ]; };
     return IconSvgExample;
 }());
@@ -3296,7 +3312,8 @@ MyErrorStateMatcher = /** @class */ (function () {
      * @return {?}
      */
     function (control, form) {
-        var /** @type {?} */ isSubmitted = form && form.submitted;
+        /** @type {?} */
+        var isSubmitted = form && form.submitted;
         return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
     };
     return MyErrorStateMatcher;
@@ -3904,7 +3921,8 @@ MyErrorStateMatcher$1 = /** @class */ (function () {
      * @return {?}
      */
     function (control, form) {
-        var /** @type {?} */ isSubmitted = form && form.submitted;
+        /** @type {?} */
+        var isSubmitted = form && form.submitted;
         return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
     };
     return MyErrorStateMatcher;
@@ -4250,9 +4268,8 @@ var SidenavDisableCloseExample = /** @class */ (function () {
                     styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
                 },] },
     ];
-    /** @nocollapse */
     SidenavDisableCloseExample.propDecorators = {
-        "sidenav": [{ type: ViewChild, args: ['sidenav',] },],
+        sidenav: [{ type: ViewChild, args: ['sidenav',] }]
     };
     return SidenavDisableCloseExample;
 }());
@@ -4302,7 +4319,7 @@ var SidenavFixedExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     SidenavFixedExample.ctorParameters = function () { return [
-        { type: FormBuilder, },
+        { type: FormBuilder }
     ]; };
     return SidenavFixedExample;
 }());
@@ -4429,8 +4446,8 @@ var SidenavResponsiveExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     SidenavResponsiveExample.ctorParameters = function () { return [
-        { type: ChangeDetectorRef, },
-        { type: MediaMatcher, },
+        { type: ChangeDetectorRef },
+        { type: MediaMatcher }
     ]; };
     return SidenavResponsiveExample;
 }());
@@ -4491,7 +4508,7 @@ var SlideToggleFormsExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     SlideToggleFormsExample.ctorParameters = function () { return [
-        { type: FormBuilder, },
+        { type: FormBuilder }
     ]; };
     return SlideToggleFormsExample;
 }());
@@ -4651,7 +4668,7 @@ var SnackBarComponentExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     SnackBarComponentExample.ctorParameters = function () { return [
-        { type: MatSnackBar, },
+        { type: MatSnackBar }
     ]; };
     return SnackBarComponentExample;
 }());
@@ -4703,7 +4720,7 @@ var SnackBarOverviewExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     SnackBarOverviewExample.ctorParameters = function () { return [
-        { type: MatSnackBar, },
+        { type: MatSnackBar }
     ]; };
     return SnackBarOverviewExample;
 }());
@@ -4742,7 +4759,7 @@ var SnackBarPositionExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     SnackBarPositionExample.ctorParameters = function () { return [
-        { type: MatSnackBar, },
+        { type: MatSnackBar }
     ]; };
     return SnackBarPositionExample;
 }());
@@ -4774,13 +4791,15 @@ var SortOverviewExample = /** @class */ (function () {
      * @return {?}
      */
     function (sort) {
-        var /** @type {?} */ data = this.desserts.slice();
+        /** @type {?} */
+        var data = this.desserts.slice();
         if (!sort.active || sort.direction === '') {
             this.sortedData = data;
             return;
         }
         this.sortedData = data.sort(function (a, b) {
-            var /** @type {?} */ isAsc = sort.direction === 'asc';
+            /** @type {?} */
+            var isAsc = sort.direction === 'asc';
             switch (sort.active) {
                 case 'name': return compare(a.name, b.name, isAsc);
                 case 'calories': return compare(a.calories, b.calories, isAsc);
@@ -4847,7 +4866,7 @@ var StepperEditableExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     StepperEditableExample.ctorParameters = function () { return [
-        { type: FormBuilder, },
+        { type: FormBuilder }
     ]; };
     return StepperEditableExample;
 }());
@@ -4887,7 +4906,7 @@ var StepperOptionalExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     StepperOptionalExample.ctorParameters = function () { return [
-        { type: FormBuilder, },
+        { type: FormBuilder }
     ]; };
     return StepperOptionalExample;
 }());
@@ -4927,7 +4946,7 @@ var StepperOverviewExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     StepperOverviewExample.ctorParameters = function () { return [
-        { type: FormBuilder, },
+        { type: FormBuilder }
     ]; };
     return StepperOverviewExample;
 }());
@@ -4967,7 +4986,7 @@ var StepperVerticalExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     StepperVerticalExample.ctorParameters = function () { return [
-        { type: FormBuilder, },
+        { type: FormBuilder }
     ]; };
     return StepperVerticalExample;
 }());
@@ -5241,7 +5260,8 @@ var TabNavBarBasicExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ ELEMENT_DATA$2 = [
+/** @type {?} */
+var ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5275,7 +5295,8 @@ var TableBasicFlexExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ ELEMENT_DATA$3 = [
+/** @type {?} */
+var ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5309,7 +5330,8 @@ var TableBasicExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ ELEMENT_DATA$4 = [
+/** @type {?} */
+var ELEMENT_DATA$4 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5337,7 +5359,8 @@ var TableDynamicColumnsExample = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        var /** @type {?} */ randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
+        /** @type {?} */
+        var randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
         this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
     };
     /**
@@ -5358,12 +5381,14 @@ var TableDynamicColumnsExample = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        var /** @type {?} */ currentIndex = this.columnsToDisplay.length;
+        /** @type {?} */
+        var currentIndex = this.columnsToDisplay.length;
         while (0 !== currentIndex) {
-            var /** @type {?} */ randomIndex = Math.floor(Math.random() * currentIndex);
+            /** @type {?} */
+            var randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex -= 1;
-            // Swap
-            var /** @type {?} */ temp = this.columnsToDisplay[currentIndex];
+            /** @type {?} */
+            var temp = this.columnsToDisplay[currentIndex];
             this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
             this.columnsToDisplay[randomIndex] = temp;
         }
@@ -5406,7 +5431,8 @@ var TableExpandableRowsExample = /** @class */ (function () {
     ];
     return TableExpandableRowsExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$5 = [
+/** @type {?} */
+var ELEMENT_DATA$5 = [
     {
         position: 1,
         name: 'Hydrogen',
@@ -5474,7 +5500,8 @@ var /** @type {?} */ ELEMENT_DATA$5 = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ ELEMENT_DATA$6 = [
+/** @type {?} */
+var ELEMENT_DATA$6 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5611,11 +5638,11 @@ var TableHttpExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     TableHttpExample.ctorParameters = function () { return [
-        { type: HttpClient, },
+        { type: HttpClient }
     ]; };
     TableHttpExample.propDecorators = {
-        "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
-        "sort": [{ type: ViewChild, args: [MatSort,] },],
+        paginator: [{ type: ViewChild, args: [MatPaginator,] }],
+        sort: [{ type: ViewChild, args: [MatSort,] }]
     };
     return TableHttpExample;
 }());
@@ -5642,8 +5669,10 @@ ExampleHttpDao = /** @class */ (function () {
      * @return {?}
      */
     function (sort, order, page) {
-        var /** @type {?} */ href = 'https://api.github.com/search/issues';
-        var /** @type {?} */ requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
+        /** @type {?} */
+        var href = 'https://api.github.com/search/issues';
+        /** @type {?} */
+        var requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
         return this.http.get(requestUrl);
     };
     return ExampleHttpDao;
@@ -5694,12 +5723,13 @@ var TableMultipleHeaderFooterExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-/**
+/** *
  * Constants used to fill up our data base.
- */
-var /** @type {?} */ COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+  @type {?} */
+var COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+/** @type {?} */
+var NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 /**
@@ -5708,8 +5738,8 @@ var /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'J
 var TableOverviewExample = /** @class */ (function () {
     function TableOverviewExample() {
         this.displayedColumns = ['id', 'name', 'progress', 'color'];
-        // Create 100 users
-        var /** @type {?} */ users = Array.from({ length: 100 }, function (_, k) { return createNewUser(k + 1); });
+        /** @type {?} */
+        var users = Array.from({ length: 100 }, function (_, k) { return createNewUser(k + 1); });
         // Assign the data to the data source for the table to render
         this.dataSource = new MatTableDataSource(users);
     }
@@ -5747,8 +5777,8 @@ var TableOverviewExample = /** @class */ (function () {
     /** @nocollapse */
     TableOverviewExample.ctorParameters = function () { return []; };
     TableOverviewExample.propDecorators = {
-        "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
-        "sort": [{ type: ViewChild, args: [MatSort,] },],
+        paginator: [{ type: ViewChild, args: [MatPaginator,] }],
+        sort: [{ type: ViewChild, args: [MatSort,] }]
     };
     return TableOverviewExample;
 }());
@@ -5758,7 +5788,8 @@ var TableOverviewExample = /** @class */ (function () {
  * @return {?}
  */
 function createNewUser(id) {
-    var /** @type {?} */ name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
+    /** @type {?} */
+    var name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
         NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
     return {
         id: id.toString(),
@@ -5796,13 +5827,13 @@ var TablePaginationExample = /** @class */ (function () {
                     template: "<div class=\"mat-elevation-z8\"><table mat-table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table><mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator></div>",
                 },] },
     ];
-    /** @nocollapse */
     TablePaginationExample.propDecorators = {
-        "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
+        paginator: [{ type: ViewChild, args: [MatPaginator,] }]
     };
     return TablePaginationExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$7 = [
+/** @type {?} */
+var ELEMENT_DATA$7 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5851,7 +5882,8 @@ var TableRowContextExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ ELEMENT_DATA$8 = [
+/** @type {?} */
+var ELEMENT_DATA$8 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5882,8 +5914,10 @@ var TableSelectionExample = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        var /** @type {?} */ numSelected = this.selection.selected.length;
-        var /** @type {?} */ numRows = this.dataSource.data.length;
+        /** @type {?} */
+        var numSelected = this.selection.selected.length;
+        /** @type {?} */
+        var numRows = this.dataSource.data.length;
         return numSelected === numRows;
     };
     /** Selects all rows if they are not all selected; otherwise clear selection. */
@@ -5915,7 +5949,8 @@ var TableSelectionExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ ELEMENT_DATA$9 = [
+/** @type {?} */
+var ELEMENT_DATA$9 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5951,9 +5986,8 @@ var TableSortingExample = /** @class */ (function () {
                     template: "<table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z8\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
                 },] },
     ];
-    /** @nocollapse */
     TableSortingExample.propDecorators = {
-        "sort": [{ type: ViewChild, args: [MatSort,] },],
+        sort: [{ type: ViewChild, args: [MatSort,] }]
     };
     return TableSortingExample;
 }());
@@ -5979,7 +6013,8 @@ var TableStickyColumnsExample = /** @class */ (function () {
     ];
     return TableStickyColumnsExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$10 = [
+/** @type {?} */
+var ELEMENT_DATA$10 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6039,7 +6074,8 @@ var TableStickyComplexFlexExample = /** @class */ (function () {
     TableStickyComplexFlexExample.ctorParameters = function () { return []; };
     return TableStickyComplexFlexExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$11 = [
+/** @type {?} */
+var ELEMENT_DATA$11 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6099,7 +6135,8 @@ var TableStickyComplexExample = /** @class */ (function () {
     TableStickyComplexExample.ctorParameters = function () { return []; };
     return TableStickyComplexExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$12 = [
+/** @type {?} */
+var ELEMENT_DATA$12 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6174,7 +6211,8 @@ var TableStickyHeaderExample = /** @class */ (function () {
     ];
     return TableStickyHeaderExample;
 }());
-var /** @type {?} */ ELEMENT_DATA$13 = [
+/** @type {?} */
+var ELEMENT_DATA$13 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6250,11 +6288,11 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     TextFieldAutofillMonitorExample.ctorParameters = function () { return [
-        { type: AutofillMonitor, },
+        { type: AutofillMonitor }
     ]; };
     TextFieldAutofillMonitorExample.propDecorators = {
-        "firstName": [{ type: ViewChild, args: ['first', { read: ElementRef },] },],
-        "lastName": [{ type: ViewChild, args: ['last', { read: ElementRef },] },],
+        firstName: [{ type: ViewChild, args: ['first', { read: ElementRef },] }],
+        lastName: [{ type: ViewChild, args: ['last', { read: ElementRef },] }]
     };
     return TextFieldAutofillMonitorExample;
 }());
@@ -6291,10 +6329,10 @@ var TextFieldAutosizeTextareaExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     TextFieldAutosizeTextareaExample.ctorParameters = function () { return [
-        { type: NgZone, },
+        { type: NgZone }
     ]; };
     TextFieldAutosizeTextareaExample.propDecorators = {
-        "autosize": [{ type: ViewChild, args: ['autosize',] },],
+        autosize: [{ type: ViewChild, args: ['autosize',] }]
     };
     return TextFieldAutosizeTextareaExample;
 }());
@@ -6472,10 +6510,10 @@ var TooltipMessageExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-/**
+/** *
  * Custom options the configure the tooltip's default show/hide delays.
- */
-var /** @type {?} */ myCustomTooltipDefaults = {
+  @type {?} */
+var myCustomTooltipDefaults = {
     showDelay: 1000,
     hideDelay: 1000,
     touchendHideDelay: 1000,
@@ -6567,10 +6605,10 @@ TodoItemFlatNode = /** @class */ (function () {
     }
     return TodoItemFlatNode;
 }());
-/**
+/** *
  * The Json object for to-do list data.
- */
-var /** @type {?} */ TREE_DATA$2 = {
+  @type {?} */
+var TREE_DATA$2 = {
     Groceries: {
         'Almond Meal flour': null,
         'Organic eggs': null,
@@ -6612,9 +6650,8 @@ var ChecklistDatabase = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        // Build the tree nodes from Json object. The result is a list of `TodoItemNode` with nested
-        //     file node as children.
-        var /** @type {?} */ data = this.buildFileTree(TREE_DATA$2, 0);
+        /** @type {?} */
+        var data = this.buildFileTree(TREE_DATA$2, 0);
         // Notify the change.
         this.dataChange.next(data);
     };
@@ -6639,8 +6676,10 @@ var ChecklistDatabase = /** @class */ (function () {
     function (obj, level) {
         var _this = this;
         return Object.keys(obj).reduce(function (accumulator, key) {
-            var /** @type {?} */ value = obj[key];
-            var /** @type {?} */ node = new TodoItemNode();
+            /** @type {?} */
+            var value = obj[key];
+            /** @type {?} */
+            var node = new TodoItemNode();
             node.item = key;
             if (value != null) {
                 if (typeof value === 'object') {
@@ -6729,8 +6768,10 @@ var TreeChecklistExample = /** @class */ (function () {
          * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
          */
         this.transformer = function (node, level) {
-            var /** @type {?} */ existingNode = _this.nestedNodeMap.get(node);
-            var /** @type {?} */ flatNode = existingNode && existingNode.item === node.item
+            /** @type {?} */
+            var existingNode = _this.nestedNodeMap.get(node);
+            /** @type {?} */
+            var flatNode = existingNode && existingNode.item === node.item
                 ? existingNode
                 : new TodoItemFlatNode();
             flatNode.item = node.item;
@@ -6760,7 +6801,8 @@ var TreeChecklistExample = /** @class */ (function () {
      */
     function (node) {
         var _this = this;
-        var /** @type {?} */ descendants = this.treeControl.getDescendants(node);
+        /** @type {?} */
+        var descendants = this.treeControl.getDescendants(node);
         return descendants.every(function (child) { return _this.checklistSelection.isSelected(child); });
     };
     /** Whether part of the descendants are selected */
@@ -6776,8 +6818,10 @@ var TreeChecklistExample = /** @class */ (function () {
      */
     function (node) {
         var _this = this;
-        var /** @type {?} */ descendants = this.treeControl.getDescendants(node);
-        var /** @type {?} */ result = descendants.some(function (child) { return _this.checklistSelection.isSelected(child); });
+        /** @type {?} */
+        var descendants = this.treeControl.getDescendants(node);
+        /** @type {?} */
+        var result = descendants.some(function (child) { return _this.checklistSelection.isSelected(child); });
         return result && !this.descendantsAllSelected(node);
     };
     /** Toggle the to-do item selection. Select/deselect all the descendants node */
@@ -6792,11 +6836,12 @@ var TreeChecklistExample = /** @class */ (function () {
      * @return {?}
      */
     function (node) {
+        var _a, _b;
         this.checklistSelection.toggle(node);
-        var /** @type {?} */ descendants = this.treeControl.getDescendants(node);
+        /** @type {?} */
+        var descendants = this.treeControl.getDescendants(node);
         this.checklistSelection.isSelected(node)
             ? (_a = this.checklistSelection).select.apply(_a, descendants) : (_b = this.checklistSelection).deselect.apply(_b, descendants);
-        var _a, _b;
     };
     /** Select the category so we can insert the new item. */
     /**
@@ -6810,7 +6855,8 @@ var TreeChecklistExample = /** @class */ (function () {
      * @return {?}
      */
     function (node) {
-        var /** @type {?} */ parentNode = this.flatNodeMap.get(node);
+        /** @type {?} */
+        var parentNode = this.flatNodeMap.get(node);
         this.database.insertItem(/** @type {?} */ ((parentNode)), '');
         this.treeControl.expand(node);
     };
@@ -6828,7 +6874,8 @@ var TreeChecklistExample = /** @class */ (function () {
      * @return {?}
      */
     function (node, itemValue) {
-        var /** @type {?} */ nestedNode = this.flatNodeMap.get(node);
+        /** @type {?} */
+        var nestedNode = this.flatNodeMap.get(node);
         this.database.updateItem(/** @type {?} */ ((nestedNode)), itemValue);
     };
     TreeChecklistExample.decorators = [
@@ -6841,7 +6888,7 @@ var TreeChecklistExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     TreeChecklistExample.ctorParameters = function () { return [
-        { type: ChecklistDatabase, },
+        { type: ChecklistDatabase }
     ]; };
     return TreeChecklistExample;
 }());
@@ -7006,23 +7053,28 @@ var DynamicDataSource = /** @class */ (function () {
      */
     function (node, expand) {
         var _this = this;
-        var /** @type {?} */ children = this.database.getChildren(node.item);
-        var /** @type {?} */ index = this.data.indexOf(node);
-        if (!children || index < 0) {
+        /** @type {?} */
+        var children = this.database.getChildren(node.item);
+        /** @type {?} */
+        var index = this.data.indexOf(node);
+        if (!children || index < 0) { // If no children, or cannot find the node, no op
             // If no children, or cannot find the node, no op
             return;
         }
         node.isLoading = true;
         setTimeout(function () {
+            var _a;
             if (expand) {
-                var /** @type {?} */ nodes = children.map(function (name) {
+                /** @type {?} */
+                var nodes = children.map(function (name) {
                     return new DynamicFlatNode(name, node.level + 1, _this.database.isExpandable(name));
                 });
                 (_a = _this.data).splice.apply(_a, [index + 1, 0].concat(nodes));
             }
             else {
-                var /** @type {?} */ count = 0;
-                for (var /** @type {?} */ i = index + 1; i < _this.data.length
+                /** @type {?} */
+                var count = 0;
+                for (var i = index + 1; i < _this.data.length
                     && _this.data[i].level > node.level; i++, count++) { }
                 _this.data.splice(index + 1, count);
             }
@@ -7030,7 +7082,6 @@ var DynamicDataSource = /** @class */ (function () {
             // notify the change
             _this.dataChange.next(_this.data);
             node.isLoading = false;
-            var _a;
         }, 1000);
     };
     DynamicDataSource.decorators = [
@@ -7038,8 +7089,8 @@ var DynamicDataSource = /** @class */ (function () {
     ];
     /** @nocollapse */
     DynamicDataSource.ctorParameters = function () { return [
-        { type: FlatTreeControl, },
-        { type: DynamicDatabase, },
+        { type: FlatTreeControl },
+        { type: DynamicDatabase }
     ]; };
     return DynamicDataSource;
 }());
@@ -7065,7 +7116,7 @@ var TreeDynamicExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     TreeDynamicExample.ctorParameters = function () { return [
-        { type: DynamicDatabase, },
+        { type: DynamicDatabase }
     ]; };
     return TreeDynamicExample;
 }());
@@ -7102,10 +7153,10 @@ FileFlatNode$1 = /** @class */ (function () {
     }
     return FileFlatNode;
 }());
-/**
+/** *
  * The file structure tree data in string. The data could be parsed into a Json object
- */
-var /** @type {?} */ TREE_DATA$3 = JSON.stringify({
+  @type {?} */
+var TREE_DATA$3 = JSON.stringify({
     Applications: {
         Calendar: 'app',
         Chrome: 'app',
@@ -7167,11 +7218,10 @@ var FileDatabase$2 = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        // Parse the string to json object.
-        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$3);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        /** @type {?} */
+        var dataObject = JSON.parse(TREE_DATA$3);
+        /** @type {?} */
+        var data = this.buildFileTree(dataObject, 0);
         // Notify the change.
         this.dataChange.next(data);
     };
@@ -7196,8 +7246,10 @@ var FileDatabase$2 = /** @class */ (function () {
     function (obj, level) {
         var _this = this;
         return Object.keys(obj).reduce(function (accumulator, key) {
-            var /** @type {?} */ value = obj[key];
-            var /** @type {?} */ node = new FileNode$2();
+            /** @type {?} */
+            var value = obj[key];
+            /** @type {?} */
+            var node = new FileNode$2();
             node.filename = key;
             if (value != null) {
                 if (typeof value === 'object') {
@@ -7245,7 +7297,7 @@ var TreeFlatOverviewExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     TreeFlatOverviewExample.ctorParameters = function () { return [
-        { type: FileDatabase$2, },
+        { type: FileDatabase$2 }
     ]; };
     return TreeFlatOverviewExample;
 }());
@@ -7254,7 +7306,8 @@ var TreeFlatOverviewExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ LOAD_MORE = 'LOAD_MORE';
+/** @type {?} */
+var LOAD_MORE = 'LOAD_MORE';
 /**
  * Nested node
  */
@@ -7328,7 +7381,8 @@ var LoadmoreDatabase = /** @class */ (function () {
      */
     function () {
         var _this = this;
-        var /** @type {?} */ data = this.rootLevelNodes.map(function (name) { return _this._generateNode(name); });
+        /** @type {?} */
+        var data = this.rootLevelNodes.map(function (name) { return _this._generateNode(name); });
         this.dataChange.next(data);
     };
     /** Expand a node whose children are not loaded */
@@ -7350,13 +7404,17 @@ var LoadmoreDatabase = /** @class */ (function () {
         if (!this.nodeMap.has(item) || !this.dataMap.has(item)) {
             return;
         }
-        var /** @type {?} */ parent = /** @type {?} */ ((this.nodeMap.get(item)));
-        var /** @type {?} */ children = /** @type {?} */ ((this.dataMap.get(item)));
+        /** @type {?} */
+        var parent = /** @type {?} */ ((this.nodeMap.get(item)));
+        /** @type {?} */
+        var children = /** @type {?} */ ((this.dataMap.get(item)));
         if (onlyFirstTime && /** @type {?} */ ((parent.children)).length > 0) {
             return;
         }
-        var /** @type {?} */ newChildrenNumber = /** @type {?} */ ((parent.children)).length + this.batchNumber;
-        var /** @type {?} */ nodes = children.slice(0, newChildrenNumber)
+        /** @type {?} */
+        var newChildrenNumber = /** @type {?} */ ((parent.children)).length + this.batchNumber;
+        /** @type {?} */
+        var nodes = children.slice(0, newChildrenNumber)
             .map(function (name) { return _this._generateNode(name); });
         if (newChildrenNumber < children.length) {
             // Need a new load more node
@@ -7377,7 +7435,8 @@ var LoadmoreDatabase = /** @class */ (function () {
         if (this.nodeMap.has(item)) {
             return /** @type {?} */ ((this.nodeMap.get(item)));
         }
-        var /** @type {?} */ result = new LoadmoreNode(item, this.dataMap.has(item));
+        /** @type {?} */
+        var result = new LoadmoreNode(item, this.dataMap.has(item));
         this.nodeMap.set(item, result);
         return result;
     };
@@ -7396,11 +7455,13 @@ var TreeLoadmoreExample = /** @class */ (function () {
         this.nodeMap = new Map();
         this.getChildren = function (node) { return node.childrenChange; };
         this.transformer = function (node, level) {
-            var /** @type {?} */ existingNode = _this.nodeMap.get(node.item);
+            /** @type {?} */
+            var existingNode = _this.nodeMap.get(node.item);
             if (existingNode) {
                 return existingNode;
             }
-            var /** @type {?} */ newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
+            /** @type {?} */
+            var newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
             _this.nodeMap.set(node.item, newNode);
             return newNode;
         };
@@ -7451,7 +7512,7 @@ var TreeLoadmoreExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     TreeLoadmoreExample.ctorParameters = function () { return [
-        { type: LoadmoreDatabase, },
+        { type: LoadmoreDatabase }
     ]; };
     return TreeLoadmoreExample;
 }());
@@ -7471,10 +7532,10 @@ FileNode$3 = /** @class */ (function () {
     }
     return FileNode;
 }());
-/**
+/** *
  * The Json tree data in string. The data could be parsed into Json object
- */
-var /** @type {?} */ TREE_DATA$4 = JSON.stringify({
+  @type {?} */
+var TREE_DATA$4 = JSON.stringify({
     Applications: {
         Calendar: 'app',
         Chrome: 'app',
@@ -7536,11 +7597,10 @@ var FileDatabase$3 = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        // Parse the string to json object.
-        var /** @type {?} */ dataObject = JSON.parse(TREE_DATA$4);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        var /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        /** @type {?} */
+        var dataObject = JSON.parse(TREE_DATA$4);
+        /** @type {?} */
+        var data = this.buildFileTree(dataObject, 0);
         // Notify the change.
         this.dataChange.next(data);
     };
@@ -7565,8 +7625,10 @@ var FileDatabase$3 = /** @class */ (function () {
     function (obj, level) {
         var _this = this;
         return Object.keys(obj).reduce(function (accumulator, key) {
-            var /** @type {?} */ value = obj[key];
-            var /** @type {?} */ node = new FileNode$3();
+            /** @type {?} */
+            var value = obj[key];
+            /** @type {?} */
+            var node = new FileNode$3();
             node.filename = key;
             if (value != null) {
                 if (typeof value === 'object') {
@@ -7608,7 +7670,7 @@ var TreeNestedOverviewExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     TreeNestedOverviewExample.ctorParameters = function () { return [
-        { type: FileDatabase$3, },
+        { type: FileDatabase$3 }
     ]; };
     return TreeNestedOverviewExample;
 }());
@@ -7617,7 +7679,8 @@ var TreeNestedOverviewExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-var /** @type {?} */ EXAMPLE_COMPONENTS = {
+/** @type {?} */
+var EXAMPLE_COMPONENTS = {
     'autocomplete-auto-active-first-option': {
         title: 'Highlight the first autocomplete option',
         component: AutocompleteAutoActiveFirstOptionExample
@@ -8350,7 +8413,8 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
         component: TreeNestedOverviewExample
     },
 };
-var /** @type {?} */ EXAMPLE_LIST = [
+/** @type {?} */
+var EXAMPLE_LIST = [
     AutocompleteAutoActiveFirstOptionExample,
     AutocompleteDisplayExample,
     AutocompleteFilterExample,
@@ -8563,10 +8627,12 @@ var  /**
  */
 ExampleData = /** @class */ (function () {
     function ExampleData(example) {
+        var _a;
         if (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
             return;
         }
-        var /** @type {?} */ exampleConfig = EXAMPLE_COMPONENTS[example];
+        /** @type {?} */
+        var exampleConfig = EXAMPLE_COMPONENTS[example];
         // TODO(tinayuangao): Do not hard-code extensions
         this.exampleFiles = ['html', 'ts', 'css'].map(function (extension) { return example + "-example." + extension; });
         this.examplePath = "/assets/stackblitz/examples/" + example + "/";
@@ -8574,11 +8640,11 @@ ExampleData = /** @class */ (function () {
         if (exampleConfig.additionalFiles) {
             (_a = this.exampleFiles).push.apply(_a, exampleConfig.additionalFiles);
         }
-        var /** @type {?} */ exampleName = example.replace(/(?:^\w|\b\w)/g, function (letter) { return letter.toUpperCase(); });
+        /** @type {?} */
+        var exampleName = example.replace(/(?:^\w|\b\w)/g, function (letter) { return letter.toUpperCase(); });
         this.description = exampleConfig.title || exampleName.replace(/[\-]+/g, ' ') + ' Example';
         this.componentName = exampleConfig.selectorName ||
             exampleName.replace(/[\-]+/g, '') + 'Example';
-        var _a;
     }
     return ExampleData;
 }());

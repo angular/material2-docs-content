@@ -149,7 +149,8 @@ class AutocompleteAutoActiveFirstOptionExample {
      * @return {?}
      */
     _filter(value) {
-        const /** @type {?} */ filterValue = value.toLowerCase();
+        /** @type {?} */
+        const filterValue = value.toLowerCase();
         return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
     }
 }
@@ -196,7 +197,8 @@ class AutocompleteDisplayExample {
      * @return {?}
      */
     _filter(name) {
-        const /** @type {?} */ filterValue = name.toLowerCase();
+        /** @type {?} */
+        const filterValue = name.toLowerCase();
         return this.options.filter(option => option.name.toLowerCase().indexOf(filterValue) === 0);
     }
 }
@@ -232,7 +234,8 @@ class AutocompleteFilterExample {
      * @return {?}
      */
     _filter(value) {
-        const /** @type {?} */ filterValue = value.toLowerCase();
+        /** @type {?} */
+        const filterValue = value.toLowerCase();
         return this.options.filter(option => option.toLowerCase().includes(filterValue));
     }
 }
@@ -248,8 +251,10 @@ AutocompleteFilterExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ _filter = (opt, value) => {
-    const /** @type {?} */ filterValue = value.toLowerCase();
+/** @type {?} */
+const _filter = (opt, value) => {
+    /** @type {?} */
+    const filterValue = value.toLowerCase();
     return opt.filter(item => item.toLowerCase().indexOf(filterValue) === 0);
 };
 /**
@@ -352,7 +357,7 @@ AutocompleteOptgroupExample.decorators = [
 ];
 /** @nocollapse */
 AutocompleteOptgroupExample.ctorParameters = () => [
-    { type: FormBuilder, },
+    { type: FormBuilder }
 ];
 
 /**
@@ -399,7 +404,8 @@ class AutocompleteOverviewExample {
      * @return {?}
      */
     _filterStates(value) {
-        const /** @type {?} */ filterValue = value.toLowerCase();
+        /** @type {?} */
+        const filterValue = value.toLowerCase();
         return this.states.filter(state$$1 => state$$1.name.toLowerCase().indexOf(filterValue) === 0);
     }
 }
@@ -481,7 +487,7 @@ BottomSheetOverviewExample.decorators = [
 ];
 /** @nocollapse */
 BottomSheetOverviewExample.ctorParameters = () => [
-    { type: MatBottomSheet, },
+    { type: MatBottomSheet }
 ];
 class BottomSheetOverviewExampleSheet {
     /**
@@ -507,7 +513,7 @@ BottomSheetOverviewExampleSheet.decorators = [
 ];
 /** @nocollapse */
 BottomSheetOverviewExampleSheet.ctorParameters = () => [
-    { type: MatBottomSheetRef, },
+    { type: MatBottomSheetRef }
 ];
 
 /**
@@ -841,7 +847,8 @@ CdkDragDropSortingExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ ELEMENT_DATA = [
+/** @type {?} */
+const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -901,7 +908,8 @@ class ExampleDataSource extends DataSource {
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ ELEMENT_DATA$1 = [
+/** @type {?} */
+const ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -984,10 +992,10 @@ class FileFlatNode {
         this.type = type;
     }
 }
-/**
+/** *
  * The file structure tree data in string. The data could be parsed into a Json object
- */
-const /** @type {?} */ TREE_DATA = JSON.stringify({
+  @type {?} */
+const TREE_DATA = JSON.stringify({
     Applications: {
         Calendar: 'app',
         Chrome: 'app',
@@ -1042,11 +1050,10 @@ class FileDatabase {
      * @return {?}
      */
     initialize() {
-        // Parse the string to json object.
-        const /** @type {?} */ dataObject = JSON.parse(TREE_DATA);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        const /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        /** @type {?} */
+        const dataObject = JSON.parse(TREE_DATA);
+        /** @type {?} */
+        const data = this.buildFileTree(dataObject, 0);
         // Notify the change.
         this.dataChange.next(data);
     }
@@ -1059,8 +1066,10 @@ class FileDatabase {
      */
     buildFileTree(obj, level) {
         return Object.keys(obj).reduce((accumulator, key) => {
-            const /** @type {?} */ value = obj[key];
-            const /** @type {?} */ node = new FileNode();
+            /** @type {?} */
+            const value = obj[key];
+            /** @type {?} */
+            const node = new FileNode();
             node.filename = key;
             if (value != null) {
                 if (typeof value === 'object') {
@@ -1112,7 +1121,7 @@ CdkTreeFlatExample.decorators = [
 ];
 /** @nocollapse */
 CdkTreeFlatExample.ctorParameters = () => [
-    { type: FileDatabase, },
+    { type: FileDatabase }
 ];
 
 /**
@@ -1124,10 +1133,10 @@ CdkTreeFlatExample.ctorParameters = () => [
  */
 let FileNode$1 = class FileNode {
 };
-/**
+/** *
  * The Json tree data in string. The data could be parsed into Json object
- */
-const /** @type {?} */ TREE_DATA$1 = JSON.stringify({
+  @type {?} */
+const TREE_DATA$1 = JSON.stringify({
     Applications: {
         Calendar: 'app',
         Chrome: 'app',
@@ -1182,11 +1191,10 @@ let FileDatabase$1 = class FileDatabase {
      * @return {?}
      */
     initialize() {
-        // Parse the string to json object.
-        const /** @type {?} */ dataObject = JSON.parse(TREE_DATA$1);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        const /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        /** @type {?} */
+        const dataObject = JSON.parse(TREE_DATA$1);
+        /** @type {?} */
+        const data = this.buildFileTree(dataObject, 0);
         // Notify the change.
         this.dataChange.next(data);
     }
@@ -1199,8 +1207,10 @@ let FileDatabase$1 = class FileDatabase {
      */
     buildFileTree(obj, level) {
         return Object.keys(obj).reduce((accumulator, key) => {
-            const /** @type {?} */ value = obj[key];
-            const /** @type {?} */ node = new FileNode$1();
+            /** @type {?} */
+            const value = obj[key];
+            /** @type {?} */
+            const node = new FileNode$1();
             node.filename = key;
             if (value != null) {
                 if (typeof value === 'object') {
@@ -1244,7 +1254,7 @@ CdkTreeNestedExample.decorators = [
 ];
 /** @nocollapse */
 CdkTreeNestedExample.ctorParameters = () => [
-    { type: FileDatabase$1, },
+    { type: FileDatabase$1 }
 ];
 
 /**
@@ -1311,8 +1321,10 @@ class ChipsAutocompleteExample {
      * @return {?}
      */
     add(event) {
-        const /** @type {?} */ input = event.input;
-        const /** @type {?} */ value = event.value;
+        /** @type {?} */
+        const input = event.input;
+        /** @type {?} */
+        const value = event.value;
         // Add our fruit
         if ((value || '').trim()) {
             this.fruits.push(value.trim());
@@ -1328,7 +1340,8 @@ class ChipsAutocompleteExample {
      * @return {?}
      */
     remove(fruit) {
-        const /** @type {?} */ index = this.fruits.indexOf(fruit);
+        /** @type {?} */
+        const index = this.fruits.indexOf(fruit);
         if (index >= 0) {
             this.fruits.splice(index, 1);
         }
@@ -1347,7 +1360,8 @@ class ChipsAutocompleteExample {
      * @return {?}
      */
     _filter(value) {
-        const /** @type {?} */ filterValue = value.toLowerCase();
+        /** @type {?} */
+        const filterValue = value.toLowerCase();
         return this.allFruits.filter(fruit => fruit.toLowerCase().indexOf(filterValue) === 0);
     }
 }
@@ -1361,7 +1375,7 @@ ChipsAutocompleteExample.decorators = [
 /** @nocollapse */
 ChipsAutocompleteExample.ctorParameters = () => [];
 ChipsAutocompleteExample.propDecorators = {
-    "fruitInput": [{ type: ViewChild, args: ['fruitInput',] },],
+    fruitInput: [{ type: ViewChild, args: ['fruitInput',] }]
 };
 
 /**
@@ -1389,8 +1403,10 @@ class ChipsInputExample {
      * @return {?}
      */
     add(event) {
-        const /** @type {?} */ input = event.input;
-        const /** @type {?} */ value = event.value;
+        /** @type {?} */
+        const input = event.input;
+        /** @type {?} */
+        const value = event.value;
         // Add our fruit
         if ((value || '').trim()) {
             this.fruits.push({ name: value.trim() });
@@ -1405,7 +1421,8 @@ class ChipsInputExample {
      * @return {?}
      */
     remove(fruit) {
-        const /** @type {?} */ index = this.fruits.indexOf(fruit);
+        /** @type {?} */
+        const index = this.fruits.indexOf(fruit);
         if (index >= 0) {
             this.fruits.splice(index, 1);
         }
@@ -1613,10 +1630,10 @@ ExampleHeader.decorators = [
 ];
 /** @nocollapse */
 ExampleHeader.ctorParameters = () => [
-    { type: MatCalendar, decorators: [{ type: Host },] },
-    { type: DateAdapter, },
-    { type: undefined, decorators: [{ type: Inject, args: [MAT_DATE_FORMATS,] },] },
-    { type: ChangeDetectorRef, },
+    { type: MatCalendar, decorators: [{ type: Host }] },
+    { type: DateAdapter },
+    { type: undefined, decorators: [{ type: Inject, args: [MAT_DATE_FORMATS,] }] },
+    { type: ChangeDetectorRef }
 ];
 
 /**
@@ -1691,7 +1708,8 @@ DatepickerEventsExample.decorators = [
 class DatepickerFilterExample {
     constructor() {
         this.myFilter = (d) => {
-            const /** @type {?} */ day = d.getDay();
+            /** @type {?} */
+            const day = d.getDay();
             // Prevent Saturday and Sunday from being selected.
             return day !== 0 && day !== 6;
         };
@@ -1709,10 +1727,10 @@ DatepickerFilterExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ moment = _rollupMoment__default || _rollupMoment;
-// See the Moment.js docs for the meaning of these formats:
-// https://momentjs.com/docs/#/displaying/format/
-const /** @type {?} */ MY_FORMATS = {
+/** @type {?} */
+const moment = _rollupMoment__default || _rollupMoment;
+/** @type {?} */
+const MY_FORMATS = {
     parse: {
         dateInput: 'LL',
     },
@@ -1787,7 +1805,7 @@ DatepickerLocaleExample.decorators = [
 ];
 /** @nocollapse */
 DatepickerLocaleExample.ctorParameters = () => [
-    { type: DateAdapter, },
+    { type: DateAdapter }
 ];
 
 /**
@@ -1815,7 +1833,8 @@ DatepickerMinMaxExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ moment$1 = _rollupMoment__default || _rollupMoment;
+/** @type {?} */
+const moment$1 = _rollupMoment__default || _rollupMoment;
 const ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker that uses Moment.js dates
@@ -1920,10 +1939,10 @@ DatepickerValueExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ moment$2 = _rollupMoment__default || _rollupMoment;
-// See the Moment.js docs for the meaning of these formats:
-// https://momentjs.com/docs/#/displaying/format/
-const /** @type {?} */ MY_FORMATS$1 = {
+/** @type {?} */
+const moment$2 = _rollupMoment__default || _rollupMoment;
+/** @type {?} */
+const MY_FORMATS$1 = {
     parse: {
         dateInput: 'MM/YYYY',
     },
@@ -1946,7 +1965,8 @@ class DatepickerViewsSelectionExample {
      * @return {?}
      */
     chosenYearHandler(normalizedYear) {
-        const /** @type {?} */ ctrlValue = this.date.value;
+        /** @type {?} */
+        const ctrlValue = this.date.value;
         ctrlValue.year(normalizedYear.year());
         this.date.setValue(ctrlValue);
     }
@@ -1956,7 +1976,8 @@ class DatepickerViewsSelectionExample {
      * @return {?}
      */
     chosenMonthHandler(normlizedMonth, datepicker) {
-        const /** @type {?} */ ctrlValue = this.date.value;
+        /** @type {?} */
+        const ctrlValue = this.date.value;
         ctrlValue.month(normlizedMonth.month());
         this.date.setValue(ctrlValue);
         datepicker.close();
@@ -1995,7 +2016,8 @@ class DialogContentExample {
      * @return {?}
      */
     openDialog() {
-        const /** @type {?} */ dialogRef = this.dialog.open(DialogContentExampleDialog);
+        /** @type {?} */
+        const dialogRef = this.dialog.open(DialogContentExampleDialog);
         dialogRef.afterClosed().subscribe(result => {
             console.log(`Dialog result: ${result}`);
         });
@@ -2010,7 +2032,7 @@ DialogContentExample.decorators = [
 ];
 /** @nocollapse */
 DialogContentExample.ctorParameters = () => [
-    { type: MatDialog, },
+    { type: MatDialog }
 ];
 class DialogContentExampleDialog {
 }
@@ -2055,7 +2077,7 @@ DialogDataExample.decorators = [
 ];
 /** @nocollapse */
 DialogDataExample.ctorParameters = () => [
-    { type: MatDialog, },
+    { type: MatDialog }
 ];
 class DialogDataExampleDialog {
     /**
@@ -2073,7 +2095,7 @@ DialogDataExampleDialog.decorators = [
 ];
 /** @nocollapse */
 DialogDataExampleDialog.ctorParameters = () => [
-    { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] },] },
+    { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] }] }
 ];
 
 /**
@@ -2106,7 +2128,7 @@ DialogElementsExample.decorators = [
 ];
 /** @nocollapse */
 DialogElementsExample.ctorParameters = () => [
-    { type: MatDialog, },
+    { type: MatDialog }
 ];
 class DialogElementsExampleDialog {
 }
@@ -2135,7 +2157,8 @@ class DialogOverviewExample {
      * @return {?}
      */
     openDialog() {
-        const /** @type {?} */ dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+        /** @type {?} */
+        const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
             width: '250px',
             data: { name: this.name, animal: this.animal }
         });
@@ -2154,7 +2177,7 @@ DialogOverviewExample.decorators = [
 ];
 /** @nocollapse */
 DialogOverviewExample.ctorParameters = () => [
-    { type: MatDialog, },
+    { type: MatDialog }
 ];
 class DialogOverviewExampleDialog {
     /**
@@ -2180,8 +2203,8 @@ DialogOverviewExampleDialog.decorators = [
 ];
 /** @nocollapse */
 DialogOverviewExampleDialog.ctorParameters = () => [
-    { type: MatDialogRef, },
-    { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] },] },
+    { type: MatDialogRef },
+    { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] }] }
 ];
 
 /**
@@ -2237,9 +2260,8 @@ ExpansionExpandCollapseAllExample.decorators = [
                 styles: [".example-action-buttons { padding-bottom: 20px; } .example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "],
             },] },
 ];
-/** @nocollapse */
 ExpansionExpandCollapseAllExample.propDecorators = {
-    "accordion": [{ type: ViewChild, args: [MatAccordion,] },],
+    accordion: [{ type: ViewChild, args: [MatAccordion,] }]
 };
 
 /**
@@ -2342,8 +2364,8 @@ FocusMonitorDirectivesExample.decorators = [
 ];
 /** @nocollapse */
 FocusMonitorDirectivesExample.ctorParameters = () => [
-    { type: NgZone, },
-    { type: ChangeDetectorRef, },
+    { type: NgZone },
+    { type: ChangeDetectorRef }
 ];
 
 /**
@@ -2398,12 +2420,12 @@ FocusMonitorFocusViaExample.decorators = [
 ];
 /** @nocollapse */
 FocusMonitorFocusViaExample.ctorParameters = () => [
-    { type: FocusMonitor, },
-    { type: ChangeDetectorRef, },
-    { type: NgZone, },
+    { type: FocusMonitor },
+    { type: ChangeDetectorRef },
+    { type: NgZone }
 ];
 FocusMonitorFocusViaExample.propDecorators = {
-    "monitoredEl": [{ type: ViewChild, args: ['monitored',] },],
+    monitoredEl: [{ type: ViewChild, args: ['monitored',] }]
 };
 
 /**
@@ -2465,13 +2487,13 @@ FocusMonitorOverviewExample.decorators = [
 ];
 /** @nocollapse */
 FocusMonitorOverviewExample.ctorParameters = () => [
-    { type: FocusMonitor, },
-    { type: ChangeDetectorRef, },
-    { type: NgZone, },
+    { type: FocusMonitor },
+    { type: ChangeDetectorRef },
+    { type: NgZone }
 ];
 FocusMonitorOverviewExample.propDecorators = {
-    "element": [{ type: ViewChild, args: ['element',] },],
-    "subtree": [{ type: ViewChild, args: ['subtree',] },],
+    element: [{ type: ViewChild, args: ['element',] }],
+    subtree: [{ type: ViewChild, args: ['subtree',] }]
 };
 
 /**
@@ -2647,15 +2669,15 @@ MyTelInput.decorators = [
 ];
 /** @nocollapse */
 MyTelInput.ctorParameters = () => [
-    { type: FormBuilder, },
-    { type: FocusMonitor, },
-    { type: ElementRef, },
+    { type: FormBuilder },
+    { type: FocusMonitor },
+    { type: ElementRef }
 ];
 MyTelInput.propDecorators = {
-    "placeholder": [{ type: Input },],
-    "required": [{ type: Input },],
-    "disabled": [{ type: Input },],
-    "value": [{ type: Input },],
+    placeholder: [{ type: Input }],
+    required: [{ type: Input }],
+    disabled: [{ type: Input }],
+    value: [{ type: Input }]
 };
 /**
  * \@title Form field with custom telephone number input control.
@@ -2747,7 +2769,7 @@ FormFieldLabelExample.decorators = [
 ];
 /** @nocollapse */
 FormFieldLabelExample.ctorParameters = () => [
-    { type: FormBuilder, },
+    { type: FormBuilder }
 ];
 
 /**
@@ -2820,7 +2842,7 @@ FormFieldThemingExample.decorators = [
 ];
 /** @nocollapse */
 FormFieldThemingExample.ctorParameters = () => [
-    { type: FormBuilder, },
+    { type: FormBuilder }
 ];
 
 /**
@@ -2907,8 +2929,8 @@ IconSvgExample.decorators = [
 ];
 /** @nocollapse */
 IconSvgExample.ctorParameters = () => [
-    { type: MatIconRegistry, },
-    { type: DomSanitizer, },
+    { type: MatIconRegistry },
+    { type: DomSanitizer }
 ];
 
 /**
@@ -2945,7 +2967,8 @@ class MyErrorStateMatcher {
      * @return {?}
      */
     isErrorState(control, form) {
-        const /** @type {?} */ isSubmitted = form && form.submitted;
+        /** @type {?} */
+        const isSubmitted = form && form.submitted;
         return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
     }
 }
@@ -3482,7 +3505,8 @@ let MyErrorStateMatcher$1 = class MyErrorStateMatcher {
      * @return {?}
      */
     isErrorState(control, form) {
-        const /** @type {?} */ isSubmitted = form && form.submitted;
+        /** @type {?} */
+        const isSubmitted = form && form.submitted;
         return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
     }
 };
@@ -3808,9 +3832,8 @@ SidenavDisableCloseExample.decorators = [
                 styles: [".example-container { position: absolute; top: 0; bottom: 0; left: 0; right: 0; } "],
             },] },
 ];
-/** @nocollapse */
 SidenavDisableCloseExample.propDecorators = {
-    "sidenav": [{ type: ViewChild, args: ['sidenav',] },],
+    sidenav: [{ type: ViewChild, args: ['sidenav',] }]
 };
 
 /**
@@ -3859,7 +3882,7 @@ SidenavFixedExample.decorators = [
 ];
 /** @nocollapse */
 SidenavFixedExample.ctorParameters = () => [
-    { type: FormBuilder, },
+    { type: FormBuilder }
 ];
 
 /**
@@ -3984,8 +4007,8 @@ SidenavResponsiveExample.decorators = [
 ];
 /** @nocollapse */
 SidenavResponsiveExample.ctorParameters = () => [
-    { type: ChangeDetectorRef, },
-    { type: MediaMatcher, },
+    { type: ChangeDetectorRef },
+    { type: MediaMatcher }
 ];
 
 /**
@@ -4044,7 +4067,7 @@ SlideToggleFormsExample.decorators = [
 ];
 /** @nocollapse */
 SlideToggleFormsExample.ctorParameters = () => [
-    { type: FormBuilder, },
+    { type: FormBuilder }
 ];
 
 /**
@@ -4185,7 +4208,7 @@ SnackBarComponentExample.decorators = [
 ];
 /** @nocollapse */
 SnackBarComponentExample.ctorParameters = () => [
-    { type: MatSnackBar, },
+    { type: MatSnackBar }
 ];
 class PizzaPartyComponent {
 }
@@ -4235,7 +4258,7 @@ SnackBarOverviewExample.decorators = [
 ];
 /** @nocollapse */
 SnackBarOverviewExample.ctorParameters = () => [
-    { type: MatSnackBar, },
+    { type: MatSnackBar }
 ];
 
 /**
@@ -4273,7 +4296,7 @@ SnackBarPositionExample.decorators = [
 ];
 /** @nocollapse */
 SnackBarPositionExample.ctorParameters = () => [
-    { type: MatSnackBar, },
+    { type: MatSnackBar }
 ];
 
 /**
@@ -4299,13 +4322,15 @@ class SortOverviewExample {
      * @return {?}
      */
     sortData(sort) {
-        const /** @type {?} */ data = this.desserts.slice();
+        /** @type {?} */
+        const data = this.desserts.slice();
         if (!sort.active || sort.direction === '') {
             this.sortedData = data;
             return;
         }
         this.sortedData = data.sort((a, b) => {
-            const /** @type {?} */ isAsc = sort.direction === 'asc';
+            /** @type {?} */
+            const isAsc = sort.direction === 'asc';
             switch (sort.active) {
                 case 'name': return compare(a.name, b.name, isAsc);
                 case 'calories': return compare(a.calories, b.calories, isAsc);
@@ -4372,7 +4397,7 @@ StepperEditableExample.decorators = [
 ];
 /** @nocollapse */
 StepperEditableExample.ctorParameters = () => [
-    { type: FormBuilder, },
+    { type: FormBuilder }
 ];
 
 /**
@@ -4411,7 +4436,7 @@ StepperOptionalExample.decorators = [
 ];
 /** @nocollapse */
 StepperOptionalExample.ctorParameters = () => [
-    { type: FormBuilder, },
+    { type: FormBuilder }
 ];
 
 /**
@@ -4450,7 +4475,7 @@ StepperOverviewExample.decorators = [
 ];
 /** @nocollapse */
 StepperOverviewExample.ctorParameters = () => [
-    { type: FormBuilder, },
+    { type: FormBuilder }
 ];
 
 /**
@@ -4489,7 +4514,7 @@ StepperVerticalExample.decorators = [
 ];
 /** @nocollapse */
 StepperVerticalExample.ctorParameters = () => [
-    { type: FormBuilder, },
+    { type: FormBuilder }
 ];
 
 /**
@@ -4724,7 +4749,8 @@ TabNavBarBasicExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ ELEMENT_DATA$2 = [
+/** @type {?} */
+const ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4757,7 +4783,8 @@ TableBasicFlexExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ ELEMENT_DATA$3 = [
+/** @type {?} */
+const ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4790,7 +4817,8 @@ TableBasicExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ ELEMENT_DATA$4 = [
+/** @type {?} */
+const ELEMENT_DATA$4 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4815,7 +4843,8 @@ class TableDynamicColumnsExample {
      * @return {?}
      */
     addColumn() {
-        const /** @type {?} */ randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
+        /** @type {?} */
+        const randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
         this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
     }
     /**
@@ -4830,12 +4859,14 @@ class TableDynamicColumnsExample {
      * @return {?}
      */
     shuffle() {
-        let /** @type {?} */ currentIndex = this.columnsToDisplay.length;
+        /** @type {?} */
+        let currentIndex = this.columnsToDisplay.length;
         while (0 !== currentIndex) {
-            let /** @type {?} */ randomIndex = Math.floor(Math.random() * currentIndex);
+            /** @type {?} */
+            let randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex -= 1;
-            // Swap
-            let /** @type {?} */ temp = this.columnsToDisplay[currentIndex];
+            /** @type {?} */
+            let temp = this.columnsToDisplay[currentIndex];
             this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
             this.columnsToDisplay[randomIndex] = temp;
         }
@@ -4876,7 +4907,8 @@ TableExpandableRowsExample.decorators = [
                 ],
             },] },
 ];
-const /** @type {?} */ ELEMENT_DATA$5 = [
+/** @type {?} */
+const ELEMENT_DATA$5 = [
     {
         position: 1,
         name: 'Hydrogen',
@@ -4962,7 +4994,8 @@ const /** @type {?} */ ELEMENT_DATA$5 = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ ELEMENT_DATA$6 = [
+/** @type {?} */
+const ELEMENT_DATA$6 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5086,11 +5119,11 @@ TableHttpExample.decorators = [
 ];
 /** @nocollapse */
 TableHttpExample.ctorParameters = () => [
-    { type: HttpClient, },
+    { type: HttpClient }
 ];
 TableHttpExample.propDecorators = {
-    "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
-    "sort": [{ type: ViewChild, args: [MatSort,] },],
+    paginator: [{ type: ViewChild, args: [MatPaginator,] }],
+    sort: [{ type: ViewChild, args: [MatSort,] }]
 };
 /**
  * An example database that the data source uses to retrieve data for the table.
@@ -5109,8 +5142,10 @@ class ExampleHttpDao {
      * @return {?}
      */
     getRepoIssues(sort, order, page) {
-        const /** @type {?} */ href = 'https://api.github.com/search/issues';
-        const /** @type {?} */ requestUrl = `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
+        /** @type {?} */
+        const href = 'https://api.github.com/search/issues';
+        /** @type {?} */
+        const requestUrl = `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
         return this.http.get(requestUrl);
     }
 }
@@ -5154,12 +5189,13 @@ TableMultipleHeaderFooterExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-/**
+/** *
  * Constants used to fill up our data base.
- */
-const /** @type {?} */ COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+  @type {?} */
+const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
+/** @type {?} */
+const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
     'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
     'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 /**
@@ -5168,8 +5204,8 @@ const /** @type {?} */ NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 
 class TableOverviewExample {
     constructor() {
         this.displayedColumns = ['id', 'name', 'progress', 'color'];
-        // Create 100 users
-        const /** @type {?} */ users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
+        /** @type {?} */
+        const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
         // Assign the data to the data source for the table to render
         this.dataSource = new MatTableDataSource(users);
     }
@@ -5201,8 +5237,8 @@ TableOverviewExample.decorators = [
 /** @nocollapse */
 TableOverviewExample.ctorParameters = () => [];
 TableOverviewExample.propDecorators = {
-    "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
-    "sort": [{ type: ViewChild, args: [MatSort,] },],
+    paginator: [{ type: ViewChild, args: [MatPaginator,] }],
+    sort: [{ type: ViewChild, args: [MatSort,] }]
 };
 /**
  * Builds and returns a new User.
@@ -5210,7 +5246,8 @@ TableOverviewExample.propDecorators = {
  * @return {?}
  */
 function createNewUser(id) {
-    const /** @type {?} */ name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
+    /** @type {?} */
+    const name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
         NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
     return {
         id: id.toString(),
@@ -5246,11 +5283,11 @@ TablePaginationExample.decorators = [
                 template: "<div class=\"mat-elevation-z8\"><table mat-table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table><mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator></div>",
             },] },
 ];
-/** @nocollapse */
 TablePaginationExample.propDecorators = {
-    "paginator": [{ type: ViewChild, args: [MatPaginator,] },],
+    paginator: [{ type: ViewChild, args: [MatPaginator,] }]
 };
-const /** @type {?} */ ELEMENT_DATA$7 = [
+/** @type {?} */
+const ELEMENT_DATA$7 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5298,7 +5335,8 @@ TableRowContextExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ ELEMENT_DATA$8 = [
+/** @type {?} */
+const ELEMENT_DATA$8 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5324,8 +5362,10 @@ class TableSelectionExample {
      * @return {?}
      */
     isAllSelected() {
-        const /** @type {?} */ numSelected = this.selection.selected.length;
-        const /** @type {?} */ numRows = this.dataSource.data.length;
+        /** @type {?} */
+        const numSelected = this.selection.selected.length;
+        /** @type {?} */
+        const numRows = this.dataSource.data.length;
         return numSelected === numRows;
     }
     /**
@@ -5350,7 +5390,8 @@ TableSelectionExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ ELEMENT_DATA$9 = [
+/** @type {?} */
+const ELEMENT_DATA$9 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5384,9 +5425,8 @@ TableSortingExample.decorators = [
                 template: "<table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z8\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table>",
             },] },
 ];
-/** @nocollapse */
 TableSortingExample.propDecorators = {
-    "sort": [{ type: ViewChild, args: [MatSort,] },],
+    sort: [{ type: ViewChild, args: [MatSort,] }]
 };
 
 /**
@@ -5409,7 +5449,8 @@ TableStickyColumnsExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><table mat-table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"name\" sticky><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><ng-container matColumnDef=\"star\" stickyEnd><th mat-header-cell *matHeaderCellDef></th><td mat-cell *matCellDef=\"let element\"><mat-icon>more_vert</mat-icon></td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
             },] },
 ];
-const /** @type {?} */ ELEMENT_DATA$10 = [
+/** @type {?} */
+const ELEMENT_DATA$10 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5461,7 +5502,8 @@ TableStickyComplexFlexExample.decorators = [
 ];
 /** @nocollapse */
 TableStickyComplexFlexExample.ctorParameters = () => [];
-const /** @type {?} */ ELEMENT_DATA$11 = [
+/** @type {?} */
+const ELEMENT_DATA$11 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5513,7 +5555,8 @@ TableStickyComplexExample.decorators = [
 ];
 /** @nocollapse */
 TableStickyComplexExample.ctorParameters = () => [];
-const /** @type {?} */ ELEMENT_DATA$12 = [
+/** @type {?} */
+const ELEMENT_DATA$12 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5581,7 +5624,8 @@ TableStickyHeaderExample.decorators = [
                 template: "<div class=\"example-container mat-elevation-z8\"><table mat-table [dataSource]=\"dataSource\"><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div>",
             },] },
 ];
-const /** @type {?} */ ELEMENT_DATA$13 = [
+/** @type {?} */
+const ELEMENT_DATA$13 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5651,11 +5695,11 @@ TextFieldAutofillMonitorExample.decorators = [
 ];
 /** @nocollapse */
 TextFieldAutofillMonitorExample.ctorParameters = () => [
-    { type: AutofillMonitor, },
+    { type: AutofillMonitor }
 ];
 TextFieldAutofillMonitorExample.propDecorators = {
-    "firstName": [{ type: ViewChild, args: ['first', { read: ElementRef },] },],
-    "lastName": [{ type: ViewChild, args: ['last', { read: ElementRef },] },],
+    firstName: [{ type: ViewChild, args: ['first', { read: ElementRef },] }],
+    lastName: [{ type: ViewChild, args: ['last', { read: ElementRef },] }]
 };
 
 /**
@@ -5690,10 +5734,10 @@ TextFieldAutosizeTextareaExample.decorators = [
 ];
 /** @nocollapse */
 TextFieldAutosizeTextareaExample.ctorParameters = () => [
-    { type: NgZone, },
+    { type: NgZone }
 ];
 TextFieldAutosizeTextareaExample.propDecorators = {
-    "autosize": [{ type: ViewChild, args: ['autosize',] },],
+    autosize: [{ type: ViewChild, args: ['autosize',] }]
 };
 
 /**
@@ -5853,10 +5897,10 @@ TooltipMessageExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-/**
+/** *
  * Custom options the configure the tooltip's default show/hide delays.
- */
-const /** @type {?} */ myCustomTooltipDefaults = {
+  @type {?} */
+const myCustomTooltipDefaults = {
     showDelay: 1000,
     hideDelay: 1000,
     touchendHideDelay: 1000,
@@ -5929,10 +5973,10 @@ class TodoItemNode {
  */
 class TodoItemFlatNode {
 }
-/**
+/** *
  * The Json object for to-do list data.
- */
-const /** @type {?} */ TREE_DATA$2 = {
+  @type {?} */
+const TREE_DATA$2 = {
     Groceries: {
         'Almond Meal flour': null,
         'Organic eggs': null,
@@ -5967,9 +6011,8 @@ class ChecklistDatabase {
      * @return {?}
      */
     initialize() {
-        // Build the tree nodes from Json object. The result is a list of `TodoItemNode` with nested
-        //     file node as children.
-        const /** @type {?} */ data = this.buildFileTree(TREE_DATA$2, 0);
+        /** @type {?} */
+        const data = this.buildFileTree(TREE_DATA$2, 0);
         // Notify the change.
         this.dataChange.next(data);
     }
@@ -5982,8 +6025,10 @@ class ChecklistDatabase {
      */
     buildFileTree(obj, level) {
         return Object.keys(obj).reduce((accumulator, key) => {
-            const /** @type {?} */ value = obj[key];
-            const /** @type {?} */ node = new TodoItemNode();
+            /** @type {?} */
+            const value = obj[key];
+            /** @type {?} */
+            const node = new TodoItemNode();
             node.item = key;
             if (value != null) {
                 if (typeof value === 'object') {
@@ -6061,8 +6106,10 @@ class TreeChecklistExample {
          * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
          */
         this.transformer = (node, level) => {
-            const /** @type {?} */ existingNode = this.nestedNodeMap.get(node);
-            const /** @type {?} */ flatNode = existingNode && existingNode.item === node.item
+            /** @type {?} */
+            const existingNode = this.nestedNodeMap.get(node);
+            /** @type {?} */
+            const flatNode = existingNode && existingNode.item === node.item
                 ? existingNode
                 : new TodoItemFlatNode();
             flatNode.item = node.item;
@@ -6085,7 +6132,8 @@ class TreeChecklistExample {
      * @return {?}
      */
     descendantsAllSelected(node) {
-        const /** @type {?} */ descendants = this.treeControl.getDescendants(node);
+        /** @type {?} */
+        const descendants = this.treeControl.getDescendants(node);
         return descendants.every(child => this.checklistSelection.isSelected(child));
     }
     /**
@@ -6094,8 +6142,10 @@ class TreeChecklistExample {
      * @return {?}
      */
     descendantsPartiallySelected(node) {
-        const /** @type {?} */ descendants = this.treeControl.getDescendants(node);
-        const /** @type {?} */ result = descendants.some(child => this.checklistSelection.isSelected(child));
+        /** @type {?} */
+        const descendants = this.treeControl.getDescendants(node);
+        /** @type {?} */
+        const result = descendants.some(child => this.checklistSelection.isSelected(child));
         return result && !this.descendantsAllSelected(node);
     }
     /**
@@ -6105,7 +6155,8 @@ class TreeChecklistExample {
      */
     todoItemSelectionToggle(node) {
         this.checklistSelection.toggle(node);
-        const /** @type {?} */ descendants = this.treeControl.getDescendants(node);
+        /** @type {?} */
+        const descendants = this.treeControl.getDescendants(node);
         this.checklistSelection.isSelected(node)
             ? this.checklistSelection.select(...descendants)
             : this.checklistSelection.deselect(...descendants);
@@ -6116,7 +6167,8 @@ class TreeChecklistExample {
      * @return {?}
      */
     addNewItem(node) {
-        const /** @type {?} */ parentNode = this.flatNodeMap.get(node);
+        /** @type {?} */
+        const parentNode = this.flatNodeMap.get(node);
         this.database.insertItem(/** @type {?} */ ((parentNode)), '');
         this.treeControl.expand(node);
     }
@@ -6127,7 +6179,8 @@ class TreeChecklistExample {
      * @return {?}
      */
     saveNode(node, itemValue) {
-        const /** @type {?} */ nestedNode = this.flatNodeMap.get(node);
+        /** @type {?} */
+        const nestedNode = this.flatNodeMap.get(node);
         this.database.updateItem(/** @type {?} */ ((nestedNode)), itemValue);
     }
 }
@@ -6141,7 +6194,7 @@ TreeChecklistExample.decorators = [
 ];
 /** @nocollapse */
 TreeChecklistExample.ctorParameters = () => [
-    { type: ChecklistDatabase, },
+    { type: ChecklistDatabase }
 ];
 
 /**
@@ -6263,21 +6316,25 @@ class DynamicDataSource {
      * @return {?}
      */
     toggleNode(node, expand) {
-        const /** @type {?} */ children = this.database.getChildren(node.item);
-        const /** @type {?} */ index = this.data.indexOf(node);
-        if (!children || index < 0) {
+        /** @type {?} */
+        const children = this.database.getChildren(node.item);
+        /** @type {?} */
+        const index = this.data.indexOf(node);
+        if (!children || index < 0) { // If no children, or cannot find the node, no op
             // If no children, or cannot find the node, no op
             return;
         }
         node.isLoading = true;
         setTimeout(() => {
             if (expand) {
-                const /** @type {?} */ nodes = children.map(name => new DynamicFlatNode(name, node.level + 1, this.database.isExpandable(name)));
+                /** @type {?} */
+                const nodes = children.map(name => new DynamicFlatNode(name, node.level + 1, this.database.isExpandable(name)));
                 this.data.splice(index + 1, 0, ...nodes);
             }
             else {
-                let /** @type {?} */ count = 0;
-                for (let /** @type {?} */ i = index + 1; i < this.data.length
+                /** @type {?} */
+                let count = 0;
+                for (let i = index + 1; i < this.data.length
                     && this.data[i].level > node.level; i++, count++) { }
                 this.data.splice(index + 1, count);
             }
@@ -6292,8 +6349,8 @@ DynamicDataSource.decorators = [
 ];
 /** @nocollapse */
 DynamicDataSource.ctorParameters = () => [
-    { type: FlatTreeControl, },
-    { type: DynamicDatabase, },
+    { type: FlatTreeControl },
+    { type: DynamicDatabase }
 ];
 /**
  * \@title Tree with dynamic data
@@ -6321,7 +6378,7 @@ TreeDynamicExample.decorators = [
 ];
 /** @nocollapse */
 TreeDynamicExample.ctorParameters = () => [
-    { type: DynamicDatabase, },
+    { type: DynamicDatabase }
 ];
 
 /**
@@ -6351,10 +6408,10 @@ let FileFlatNode$1 = class FileFlatNode {
         this.type = type;
     }
 };
-/**
+/** *
  * The file structure tree data in string. The data could be parsed into a Json object
- */
-const /** @type {?} */ TREE_DATA$3 = JSON.stringify({
+  @type {?} */
+const TREE_DATA$3 = JSON.stringify({
     Applications: {
         Calendar: 'app',
         Chrome: 'app',
@@ -6409,11 +6466,10 @@ let FileDatabase$2 = class FileDatabase {
      * @return {?}
      */
     initialize() {
-        // Parse the string to json object.
-        const /** @type {?} */ dataObject = JSON.parse(TREE_DATA$3);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        const /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        /** @type {?} */
+        const dataObject = JSON.parse(TREE_DATA$3);
+        /** @type {?} */
+        const data = this.buildFileTree(dataObject, 0);
         // Notify the change.
         this.dataChange.next(data);
     }
@@ -6426,8 +6482,10 @@ let FileDatabase$2 = class FileDatabase {
      */
     buildFileTree(obj, level) {
         return Object.keys(obj).reduce((accumulator, key) => {
-            const /** @type {?} */ value = obj[key];
-            const /** @type {?} */ node = new FileNode$2();
+            /** @type {?} */
+            const value = obj[key];
+            /** @type {?} */
+            const node = new FileNode$2();
             node.filename = key;
             if (value != null) {
                 if (typeof value === 'object') {
@@ -6477,14 +6535,15 @@ TreeFlatOverviewExample.decorators = [
 ];
 /** @nocollapse */
 TreeFlatOverviewExample.ctorParameters = () => [
-    { type: FileDatabase$2, },
+    { type: FileDatabase$2 }
 ];
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ LOAD_MORE = 'LOAD_MORE';
+/** @type {?} */
+const LOAD_MORE = 'LOAD_MORE';
 /**
  * Nested node
  */
@@ -6548,7 +6607,8 @@ class LoadmoreDatabase {
      * @return {?}
      */
     initialize() {
-        const /** @type {?} */ data = this.rootLevelNodes.map(name => this._generateNode(name));
+        /** @type {?} */
+        const data = this.rootLevelNodes.map(name => this._generateNode(name));
         this.dataChange.next(data);
     }
     /**
@@ -6561,13 +6621,17 @@ class LoadmoreDatabase {
         if (!this.nodeMap.has(item) || !this.dataMap.has(item)) {
             return;
         }
-        const /** @type {?} */ parent = /** @type {?} */ ((this.nodeMap.get(item)));
-        const /** @type {?} */ children = /** @type {?} */ ((this.dataMap.get(item)));
+        /** @type {?} */
+        const parent = /** @type {?} */ ((this.nodeMap.get(item)));
+        /** @type {?} */
+        const children = /** @type {?} */ ((this.dataMap.get(item)));
         if (onlyFirstTime && /** @type {?} */ ((parent.children)).length > 0) {
             return;
         }
-        const /** @type {?} */ newChildrenNumber = /** @type {?} */ ((parent.children)).length + this.batchNumber;
-        const /** @type {?} */ nodes = children.slice(0, newChildrenNumber)
+        /** @type {?} */
+        const newChildrenNumber = /** @type {?} */ ((parent.children)).length + this.batchNumber;
+        /** @type {?} */
+        const nodes = children.slice(0, newChildrenNumber)
             .map(name => this._generateNode(name));
         if (newChildrenNumber < children.length) {
             // Need a new load more node
@@ -6584,7 +6648,8 @@ class LoadmoreDatabase {
         if (this.nodeMap.has(item)) {
             return /** @type {?} */ ((this.nodeMap.get(item)));
         }
-        const /** @type {?} */ result = new LoadmoreNode(item, this.dataMap.has(item));
+        /** @type {?} */
+        const result = new LoadmoreNode(item, this.dataMap.has(item));
         this.nodeMap.set(item, result);
         return result;
     }
@@ -6604,11 +6669,13 @@ class TreeLoadmoreExample {
         this.nodeMap = new Map();
         this.getChildren = (node) => node.childrenChange;
         this.transformer = (node, level) => {
-            const /** @type {?} */ existingNode = this.nodeMap.get(node.item);
+            /** @type {?} */
+            const existingNode = this.nodeMap.get(node.item);
             if (existingNode) {
                 return existingNode;
             }
-            const /** @type {?} */ newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
+            /** @type {?} */
+            const newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
             this.nodeMap.set(node.item, newNode);
             return newNode;
         };
@@ -6650,7 +6717,7 @@ TreeLoadmoreExample.decorators = [
 ];
 /** @nocollapse */
 TreeLoadmoreExample.ctorParameters = () => [
-    { type: LoadmoreDatabase, },
+    { type: LoadmoreDatabase }
 ];
 
 /**
@@ -6662,10 +6729,10 @@ TreeLoadmoreExample.ctorParameters = () => [
  */
 let FileNode$3 = class FileNode {
 };
-/**
+/** *
  * The Json tree data in string. The data could be parsed into Json object
- */
-const /** @type {?} */ TREE_DATA$4 = JSON.stringify({
+  @type {?} */
+const TREE_DATA$4 = JSON.stringify({
     Applications: {
         Calendar: 'app',
         Chrome: 'app',
@@ -6720,11 +6787,10 @@ let FileDatabase$3 = class FileDatabase {
      * @return {?}
      */
     initialize() {
-        // Parse the string to json object.
-        const /** @type {?} */ dataObject = JSON.parse(TREE_DATA$4);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        const /** @type {?} */ data = this.buildFileTree(dataObject, 0);
+        /** @type {?} */
+        const dataObject = JSON.parse(TREE_DATA$4);
+        /** @type {?} */
+        const data = this.buildFileTree(dataObject, 0);
         // Notify the change.
         this.dataChange.next(data);
     }
@@ -6737,8 +6803,10 @@ let FileDatabase$3 = class FileDatabase {
      */
     buildFileTree(obj, level) {
         return Object.keys(obj).reduce((accumulator, key) => {
-            const /** @type {?} */ value = obj[key];
-            const /** @type {?} */ node = new FileNode$3();
+            /** @type {?} */
+            const value = obj[key];
+            /** @type {?} */
+            const node = new FileNode$3();
             node.filename = key;
             if (value != null) {
                 if (typeof value === 'object') {
@@ -6782,14 +6850,15 @@ TreeNestedOverviewExample.decorators = [
 ];
 /** @nocollapse */
 TreeNestedOverviewExample.ctorParameters = () => [
-    { type: FileDatabase$3, },
+    { type: FileDatabase$3 }
 ];
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes} checked by tsc
  */
-const /** @type {?} */ EXAMPLE_COMPONENTS = {
+/** @type {?} */
+const EXAMPLE_COMPONENTS = {
     'autocomplete-auto-active-first-option': {
         title: 'Highlight the first autocomplete option',
         component: AutocompleteAutoActiveFirstOptionExample
@@ -7522,7 +7591,8 @@ const /** @type {?} */ EXAMPLE_COMPONENTS = {
         component: TreeNestedOverviewExample
     },
 };
-const /** @type {?} */ EXAMPLE_LIST = [
+/** @type {?} */
+const EXAMPLE_LIST = [
     AutocompleteAutoActiveFirstOptionExample,
     AutocompleteDisplayExample,
     AutocompleteFilterExample,
@@ -7734,7 +7804,8 @@ class ExampleData {
         if (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
             return;
         }
-        const /** @type {?} */ exampleConfig = EXAMPLE_COMPONENTS[example];
+        /** @type {?} */
+        const exampleConfig = EXAMPLE_COMPONENTS[example];
         // TODO(tinayuangao): Do not hard-code extensions
         this.exampleFiles = ['html', 'ts', 'css'].map(extension => `${example}-example.${extension}`);
         this.examplePath = `/assets/stackblitz/examples/${example}/`;
@@ -7742,7 +7813,8 @@ class ExampleData {
         if (exampleConfig.additionalFiles) {
             this.exampleFiles.push(...exampleConfig.additionalFiles);
         }
-        const /** @type {?} */ exampleName = example.replace(/(?:^\w|\b\w)/g, letter => letter.toUpperCase());
+        /** @type {?} */
+        const exampleName = example.replace(/(?:^\w|\b\w)/g, letter => letter.toUpperCase());
         this.description = exampleConfig.title || exampleName.replace(/[\-]+/g, ' ') + ' Example';
         this.componentName = exampleConfig.selectorName ||
             exampleName.replace(/[\-]+/g, '') + 'Example';

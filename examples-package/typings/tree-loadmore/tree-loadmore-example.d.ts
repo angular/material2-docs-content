@@ -39,7 +39,7 @@ export declare class LoadmoreDatabase {
     initialize(): void;
     /** Expand a node whose children are not loaded */
     loadMore(item: string, onlyFirstTime?: boolean): void;
-    private _generateNode(item);
+    private _generateNode;
 }
 /**
  * @title Tree with partially loaded data

@@ -16,5 +16,5 @@ export declare class AutocompleteOptgroupExample implements OnInit {
     stateGroupOptions: Observable<StateGroup[]>;
     constructor(fb: FormBuilder);
     ngOnInit(): void;
-    private _filterGroup(value);
+    private _filterGroup;
 }

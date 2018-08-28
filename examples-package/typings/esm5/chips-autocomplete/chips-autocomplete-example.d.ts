@@ -20,5 +20,5 @@ export declare class ChipsAutocompleteExample {
     add(event: MatChipInputEvent): void;
     remove(fruit: string): void;
     selected(event: MatAutocompleteSelectedEvent): void;
-    private _filter(value);
+    private _filter;
 }
