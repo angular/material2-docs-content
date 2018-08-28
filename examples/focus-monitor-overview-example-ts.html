@@ -16,8 +16,8 @@
   styleUrls: [<span class="hljs-string">'focus-monitor-overview-example.css'</span>]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FocusMonitorOverviewExample <span class="hljs-keyword">implements</span> OnDestroy, OnInit {
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'element'</span>) element: ElementRef;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'subtree'</span>) subtree: ElementRef;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'element'</span>) element: ElementRef&lt;HTMLElement&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'subtree'</span>) subtree: ElementRef&lt;HTMLElement&gt;;
 
   elementOrigin = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
   subtreeOrigin = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);

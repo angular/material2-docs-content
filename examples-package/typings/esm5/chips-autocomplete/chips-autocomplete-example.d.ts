@@ -15,7 +15,7 @@ export declare class ChipsAutocompleteExample {
     filteredFruits: Observable<string[]>;
     fruits: string[];
     allFruits: string[];
-    fruitInput: ElementRef;
+    fruitInput: ElementRef<HTMLInputElement>;
     constructor();
     add(event: MatChipInputEvent): void;
     remove(fruit: string): void;

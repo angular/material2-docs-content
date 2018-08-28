@@ -32,7 +32,7 @@ export declare class MyTelInput implements MatFormFieldControl<MyTel>, OnDestroy
     disabled: boolean;
     private _disabled;
     value: MyTel | null;
-    constructor(fb: FormBuilder, fm: FocusMonitor, elRef: ElementRef);
+    constructor(fb: FormBuilder, fm: FocusMonitor, elRef: ElementRef<HTMLElement>);
     ngOnDestroy(): void;
     setDescribedByIds(ids: string[]): void;
     onContainerClick(event: MouseEvent): void;

@@ -2971,7 +2971,7 @@ var MyTelInput = /** @class */ (function () {
      */
     function (event) {
         if ((/** @type {?} */ (event.target)).tagName.toLowerCase() != 'input') {
-            this.elRef.nativeElement.querySelector('input').focus();
+            /** @type {?} */ ((this.elRef.nativeElement.querySelector('input'))).focus();
         }
     };
     MyTelInput.nextId = 0;
