@@ -81,7 +81,7 @@
     <span class="hljs-keyword">this</span>.stateChanges.next();
   }
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder, <span class="hljs-keyword">private</span> fm: FocusMonitor, <span class="hljs-keyword">private</span> elRef: ElementRef</span>) {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder, <span class="hljs-keyword">private</span> fm: FocusMonitor, <span class="hljs-keyword">private</span> elRef: ElementRef&lt;HTMLElement&gt;</span>) {
     <span class="hljs-keyword">this</span>.parts = fb.group({
       area: <span class="hljs-string">''</span>,
       exchange: <span class="hljs-string">''</span>,
@@ -105,7 +105,7 @@
 
   onContainerClick(event: MouseEvent) {
     <span class="hljs-keyword">if</span> ((event.target <span class="hljs-keyword">as</span> Element).tagName.toLowerCase() != <span class="hljs-string">'input'</span>) {
-      <span class="hljs-keyword">this</span>.elRef.nativeElement.querySelector(<span class="hljs-string">'input'</span>).focus();
+      <span class="hljs-keyword">this</span>.elRef.nativeElement.querySelector(<span class="hljs-string">'input'</span>)!.focus();
     }
   }
 }

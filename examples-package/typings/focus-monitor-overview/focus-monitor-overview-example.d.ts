@@ -5,8 +5,8 @@ export declare class FocusMonitorOverviewExample implements OnDestroy, OnInit {
     private focusMonitor;
     private cdr;
     private ngZone;
-    element: ElementRef;
-    subtree: ElementRef;
+    element: ElementRef<HTMLElement>;
+    subtree: ElementRef<HTMLElement>;
     elementOrigin: string;
     subtreeOrigin: string;
     constructor(focusMonitor: FocusMonitor, cdr: ChangeDetectorRef, ngZone: NgZone);

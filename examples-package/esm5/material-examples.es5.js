@@ -2697,7 +2697,7 @@ var MyTelInput = /** @class */ (function () {
      */
     function (event) {
         if ((/** @type {?} */ (event.target)).tagName.toLowerCase() != 'input') {
-            this.elRef.nativeElement.querySelector('input').focus();
+            /** @type {?} */ ((this.elRef.nativeElement.querySelector('input'))).focus();
         }
     };
     MyTelInput.nextId = 0;
@@ -5968,9 +5968,9 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
      */
     function () {
         var _this = this;
-        this.autofill.monitor(this.firstName.nativeElement)
+        this.autofill.monitor(this.firstName)
             .subscribe(function (e) { return _this.firstNameAutofilled = e.isAutofilled; });
-        this.autofill.monitor(this.lastName.nativeElement)
+        this.autofill.monitor(this.lastName)
             .subscribe(function (e) { return _this.lastNameAutofilled = e.isAutofilled; });
     };
     /**
@@ -5980,8 +5980,8 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
      * @return {?}
      */
     function () {
-        this.autofill.stopMonitoring(this.firstName.nativeElement);
-        this.autofill.stopMonitoring(this.lastName.nativeElement);
+        this.autofill.stopMonitoring(this.firstName);
+        this.autofill.stopMonitoring(this.lastName);
     };
     TextFieldAutofillMonitorExample.decorators = [
         { type: Component, args: [{

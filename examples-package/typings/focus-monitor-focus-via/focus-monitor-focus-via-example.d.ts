@@ -5,7 +5,7 @@ export declare class FocusMonitorFocusViaExample implements OnDestroy, OnInit {
     focusMonitor: FocusMonitor;
     private cdr;
     private ngZone;
-    monitoredEl: ElementRef;
+    monitoredEl: ElementRef<HTMLElement>;
     origin: string;
     constructor(focusMonitor: FocusMonitor, cdr: ChangeDetectorRef, ngZone: NgZone);
     ngOnInit(): void;
