@@ -33,7 +33,7 @@ import { CommonModule } from '@angular/common';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 class ExampleMaterialModule {
 }
@@ -128,7 +128,7 @@ ExampleMaterialModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Highlight the first autocomplete option
@@ -164,7 +164,7 @@ AutocompleteAutoActiveFirstOptionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Display value autocomplete
@@ -212,7 +212,7 @@ AutocompleteDisplayExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Filter autocomplete
@@ -249,7 +249,7 @@ AutocompleteFilterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const _filter = (opt, value) => {
@@ -362,7 +362,7 @@ AutocompleteOptgroupExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Autocomplete overview
@@ -421,7 +421,7 @@ AutocompleteOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Simple autocomplete
@@ -442,7 +442,7 @@ AutocompleteSimpleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Badge overview
@@ -459,7 +459,7 @@ BadgeOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Bottom Sheet Overview
@@ -518,7 +518,7 @@ BottomSheetOverviewExampleSheet.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic buttons
@@ -535,7 +535,7 @@ ButtonOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Exclusive selection
@@ -552,7 +552,7 @@ ButtonToggleExclusiveExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic button-toggles
@@ -569,7 +569,7 @@ ButtonToggleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Button varieties
@@ -586,7 +586,7 @@ ButtonTypesExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Card with multiple sections
@@ -603,7 +603,7 @@ CardFancyExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic cards
@@ -620,7 +620,7 @@ CardOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop position locking
@@ -637,7 +637,7 @@ CdkDragDropAxisLockExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop connected sorting
@@ -681,7 +681,7 @@ CdkDragDropConnectedSortingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop custom preview
@@ -742,7 +742,7 @@ CdkDragDropCustomPreviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop with a handle
@@ -759,7 +759,7 @@ CdkDragDropHandleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop horizontal sorting
@@ -792,7 +792,7 @@ CdkDragDropHorizontalSortingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic Drag&Drop
@@ -809,7 +809,7 @@ CdkDragDropOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop sorting
@@ -845,7 +845,7 @@ CdkDragDropSortingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA = [
@@ -906,7 +906,7 @@ class ExampleDataSource extends DataSource {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$1 = [
@@ -967,7 +967,7 @@ let ExampleDataSource$1 = class ExampleDataSource extends DataSource {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * File node data with nested structure.
@@ -1126,7 +1126,7 @@ CdkTreeFlatExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
@@ -1259,7 +1259,7 @@ CdkTreeNestedExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable checkbox
@@ -1282,7 +1282,7 @@ CheckboxConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic checkboxes
@@ -1299,7 +1299,7 @@ CheckboxOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Chips Autocomplete
@@ -1380,7 +1380,7 @@ ChipsAutocompleteExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Chips with input
@@ -1438,7 +1438,7 @@ ChipsInputExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic chips
@@ -1455,7 +1455,7 @@ ChipsOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Stacked chips
@@ -1480,7 +1480,7 @@ ChipsStackedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker open method
@@ -1497,7 +1497,7 @@ DatepickerApiExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker palette colors
@@ -1514,7 +1514,7 @@ DatepickerColorExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom calendar header
@@ -1638,7 +1638,7 @@ ExampleHeader.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom icon
@@ -1655,7 +1655,7 @@ DatepickerCustomIconExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled datepicker
@@ -1672,7 +1672,7 @@ DatepickerDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker input and change events
@@ -1700,7 +1700,7 @@ DatepickerEventsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with filter validation
@@ -1725,7 +1725,7 @@ DatepickerFilterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const moment = _rollupMoment__default || _rollupMoment;
@@ -1766,7 +1766,7 @@ DatepickerFormatsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 const ɵ0 = MAT_MOMENT_DATE_FORMATS;
 /**
@@ -1810,7 +1810,7 @@ DatepickerLocaleExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with min & max validation
@@ -1831,7 +1831,7 @@ DatepickerMinMaxExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const moment$1 = _rollupMoment__default || _rollupMoment;
@@ -1862,7 +1862,7 @@ DatepickerMomentExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic datepicker
@@ -1879,7 +1879,7 @@ DatepickerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker start date
@@ -1899,7 +1899,7 @@ DatepickerStartViewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker touch UI
@@ -1916,7 +1916,7 @@ DatepickerTouchExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker selected value
@@ -1937,7 +1937,7 @@ DatepickerValueExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const moment$2 = _rollupMoment__default || _rollupMoment;
@@ -2000,7 +2000,7 @@ DatepickerViewsSelectionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog with header, scrollable content and actions
@@ -2045,7 +2045,7 @@ DialogContentExampleDialog.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Injecting data when opening a dialog
@@ -2100,7 +2100,7 @@ DialogDataExampleDialog.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog elements
@@ -2141,7 +2141,7 @@ DialogElementsExampleDialog.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog Overview
@@ -2209,7 +2209,7 @@ DialogOverviewExampleDialog.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic divider
@@ -2226,7 +2226,7 @@ DividerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Elevation CSS classes
@@ -2246,7 +2246,7 @@ ElevationOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Accordion with expand/collapse all toggles
@@ -2266,7 +2266,7 @@ ExpansionExpandCollapseAllExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic expansion panel
@@ -2286,7 +2286,7 @@ ExpansionOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Expansion panel as accordion
@@ -2325,7 +2325,7 @@ ExpansionStepsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -2370,7 +2370,7 @@ FocusMonitorDirectivesExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Focusing with a specific FocusOrigin
@@ -2430,7 +2430,7 @@ FocusMonitorFocusViaExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -2498,7 +2498,7 @@ FocusMonitorOverviewExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field appearance variants
@@ -2515,7 +2515,7 @@ FormFieldAppearanceExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Data structure for holding telephone number.
@@ -2699,7 +2699,7 @@ FormFieldCustomControlExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with error messages
@@ -2727,7 +2727,7 @@ FormFieldErrorExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with hints
@@ -2744,7 +2744,7 @@ FormFieldHintExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with label
@@ -2774,7 +2774,7 @@ FormFieldLabelExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Simple form field
@@ -2791,7 +2791,7 @@ FormFieldOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with prefix & suffix
@@ -2811,7 +2811,7 @@ FormFieldPrefixSuffixExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field theming
@@ -2847,7 +2847,7 @@ FormFieldThemingExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Dynamic grid-list
@@ -2872,7 +2872,7 @@ GridListDynamicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic grid-list
@@ -2889,7 +2889,7 @@ GridListOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic icons
@@ -2906,7 +2906,7 @@ IconOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title SVG icons
@@ -2935,7 +2935,7 @@ IconSvgExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Input with a clear button
@@ -2955,7 +2955,7 @@ InputClearableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Error when invalid control is dirty, touched, or submitted.
@@ -2994,7 +2994,7 @@ InputErrorStateMatcherExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Input with error messages
@@ -3017,7 +3017,7 @@ InputErrorsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Inputs in a form
@@ -3034,7 +3034,7 @@ InputFormExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Input with hints
@@ -3051,7 +3051,7 @@ InputHintExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic Inputs
@@ -3068,7 +3068,7 @@ InputOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Inputs with prefixes and suffixes
@@ -3085,7 +3085,7 @@ InputPrefixSuffixExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic list
@@ -3102,7 +3102,7 @@ ListOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title List with sections
@@ -3145,7 +3145,7 @@ ListSectionsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title List with selection
@@ -3165,7 +3165,7 @@ ListSelectionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Menu with icons
@@ -3182,7 +3182,7 @@ MenuIconsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic menu
@@ -3199,7 +3199,7 @@ MenuOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Nested menu
@@ -3216,7 +3216,7 @@ NestedMenuExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable paginator
@@ -3246,7 +3246,7 @@ PaginatorConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Paginator
@@ -3263,7 +3263,7 @@ PaginatorOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Buffer progress-bar
@@ -3280,7 +3280,7 @@ ProgressBarBufferExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable progress-bar
@@ -3303,7 +3303,7 @@ ProgressBarConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Determinate progress-bar
@@ -3320,7 +3320,7 @@ ProgressBarDeterminateExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Indeterminate progress-bar
@@ -3337,7 +3337,7 @@ ProgressBarIndeterminateExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Query progress-bar
@@ -3354,7 +3354,7 @@ ProgressBarQueryExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable progress spinner
@@ -3376,7 +3376,7 @@ ProgressSpinnerConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic progress-spinner
@@ -3393,7 +3393,7 @@ ProgressSpinnerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Radios with ngModel
@@ -3413,7 +3413,7 @@ RadioNgModelExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic radios
@@ -3430,7 +3430,7 @@ RadioOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title MatRipple basic usage
@@ -3452,7 +3452,7 @@ RippleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom trigger text
@@ -3473,7 +3473,7 @@ SelectCustomTriggerExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled select
@@ -3493,7 +3493,7 @@ SelectDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Error when invalid control is dirty, touched, or submitted.
@@ -3532,7 +3532,7 @@ SelectErrorStateMatcherExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select in a form
@@ -3556,7 +3556,7 @@ SelectFormExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with form field features
@@ -3582,7 +3582,7 @@ SelectHintErrorExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with multiple selection
@@ -3603,7 +3603,7 @@ SelectMultipleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with no option ripple
@@ -3620,7 +3620,7 @@ SelectNoRippleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with option groups
@@ -3674,7 +3674,7 @@ SelectOptgroupExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic select
@@ -3698,7 +3698,7 @@ SelectOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom panel styling
@@ -3721,7 +3721,7 @@ SelectPanelClassExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with reset option
@@ -3749,7 +3749,7 @@ SelectResetExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with 2-way value binding
@@ -3769,7 +3769,7 @@ SelectValueBindingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Autosize sidenav
@@ -3789,7 +3789,7 @@ SidenavAutosizeExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drawer with explicit backdrop setting
@@ -3806,7 +3806,7 @@ SidenavBackdropExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav with custom escape and backdrop click behavior
@@ -3838,7 +3838,7 @@ SidenavDisableCloseExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic drawer
@@ -3855,7 +3855,7 @@ SidenavDrawerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Fixed sidenav
@@ -3887,7 +3887,7 @@ SidenavFixedExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav with configurable mode
@@ -3908,7 +3908,7 @@ SidenavModeExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav open & close behavior
@@ -3929,7 +3929,7 @@ SidenavOpenCloseExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic sidenav
@@ -3949,7 +3949,7 @@ SidenavOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Implicit main content with two sidenavs
@@ -3969,7 +3969,7 @@ SidenavPositionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Responsive sidenav
@@ -4013,7 +4013,7 @@ SidenavResponsiveExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable slide-toggle
@@ -4035,7 +4035,7 @@ SlideToggleConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Slide-toggle with forms
@@ -4072,7 +4072,7 @@ SlideToggleFormsExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic slide-toggles
@@ -4089,7 +4089,7 @@ SlideToggleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable slider
@@ -4132,7 +4132,7 @@ SliderConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Slider with custom thumb label formatting.
@@ -4162,7 +4162,7 @@ SliderFormattingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic slider
@@ -4179,7 +4179,7 @@ SliderOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Snack-bar with a custom component
@@ -4226,7 +4226,7 @@ PizzaPartyComponent.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic snack-bar
@@ -4263,7 +4263,7 @@ SnackBarOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Snack-bar with configurable position
@@ -4301,7 +4301,7 @@ SnackBarPositionExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Sorting overview
@@ -4363,7 +4363,7 @@ function compare(a, b, isAsc) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper with editable steps
@@ -4402,7 +4402,7 @@ StepperEditableExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper with optional steps
@@ -4441,7 +4441,7 @@ StepperOptionalExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper overview
@@ -4480,7 +4480,7 @@ StepperOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper vertical
@@ -4519,7 +4519,7 @@ StepperVerticalExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with asynchronously loading tab contents
@@ -4549,7 +4549,7 @@ TabGroupAsyncExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab group
@@ -4566,7 +4566,7 @@ TabGroupBasicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Using tabs with a custom label template
@@ -4583,7 +4583,7 @@ TabGroupCustomLabelExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tag group with dynamic height based on tab contents
@@ -4600,7 +4600,7 @@ TabGroupDynamicHeightExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with dynamically changing tabs
@@ -4638,7 +4638,7 @@ TabGroupDynamicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with the headers on the bottom
@@ -4655,7 +4655,7 @@ TabGroupHeaderBelowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group where the tab content is loaded lazily (when activated)
@@ -4685,7 +4685,7 @@ TabGroupLazyLoadedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with stretched labels
@@ -4702,7 +4702,7 @@ TabGroupStretchedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Customizing the theme options on the tab group
@@ -4719,7 +4719,7 @@ TabGroupThemeExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab nav bar
@@ -4747,7 +4747,7 @@ TabNavBarBasicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$2 = [
@@ -4781,7 +4781,7 @@ TableBasicFlexExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$3 = [
@@ -4815,7 +4815,7 @@ TableBasicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$4 = [
@@ -4882,7 +4882,7 @@ TableDynamicColumnsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with expandable rows
@@ -4992,7 +4992,7 @@ const ELEMENT_DATA$5 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$6 = [
@@ -5033,7 +5033,7 @@ TableFilteringExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Footer row table
@@ -5068,7 +5068,7 @@ TableFooterRowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table retrieving data through HTTP
@@ -5152,7 +5152,7 @@ class ExampleHttpDao {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with multiple header and footer rows
@@ -5187,7 +5187,7 @@ TableMultipleHeaderFooterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** *
  * Constants used to fill up our data base.
@@ -5259,7 +5259,7 @@ function createNewUser(id) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with pagination
@@ -5312,7 +5312,7 @@ const ELEMENT_DATA$7 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table showing each row context properties.
@@ -5333,7 +5333,7 @@ TableRowContextExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$8 = [
@@ -5388,7 +5388,7 @@ TableSelectionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$9 = [
@@ -5431,7 +5431,7 @@ TableSortingExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with a sticky columns
@@ -5465,7 +5465,7 @@ const ELEMENT_DATA$10 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Flex-layout tables with toggle-able sticky headers, footers, and columns
@@ -5518,7 +5518,7 @@ const ELEMENT_DATA$11 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tables with toggle-able sticky headers, footers, and columns
@@ -5571,7 +5571,7 @@ const ELEMENT_DATA$12 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with a sticky footer
@@ -5606,7 +5606,7 @@ TableStickyFooterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with sticky header
@@ -5640,7 +5640,7 @@ const ELEMENT_DATA$13 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring autofill state with cdkAutofill
@@ -5657,7 +5657,7 @@ TextFieldAutofillDirectiveExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring autofill state with AutofillMonitor
@@ -5704,7 +5704,7 @@ TextFieldAutofillMonitorExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Auto-resizing textarea
@@ -5742,7 +5742,7 @@ TextFieldAutosizeTextareaExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Multi-row toolbar
@@ -5759,7 +5759,7 @@ ToolbarMultirowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic toolbar
@@ -5776,7 +5776,7 @@ ToolbarOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
@@ -5797,7 +5797,7 @@ TooltipAutoHideExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can have a custom class applied.
@@ -5817,7 +5817,7 @@ TooltipCustomClassExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a show and hide delay
@@ -5838,7 +5838,7 @@ TooltipDelayExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can be disabled
@@ -5858,7 +5858,7 @@ TooltipDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can be manually shown/hidden.
@@ -5875,7 +5875,7 @@ TooltipManualExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a changing message
@@ -5895,7 +5895,7 @@ TooltipMessageExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** *
  * Custom options the configure the tooltip's default show/hide delays.
@@ -5923,7 +5923,7 @@ TooltipModifiedDefaultsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic tooltip
@@ -5940,7 +5940,7 @@ TooltipOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a custom position
@@ -5961,7 +5961,7 @@ TooltipPositionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Node for to-do item
@@ -6199,7 +6199,7 @@ TreeChecklistExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Flat node with expandable and level information
@@ -6383,7 +6383,7 @@ TreeDynamicExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * File node data with nested structure.
@@ -6540,7 +6540,7 @@ TreeFlatOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const LOAD_MORE = 'LOAD_MORE';
@@ -6722,7 +6722,7 @@ TreeLoadmoreExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
@@ -6855,7 +6855,7 @@ TreeNestedOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLE_COMPONENTS = {
@@ -7790,7 +7790,7 @@ ExampleModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Example data
@@ -7823,12 +7823,12 @@ class ExampleData {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 
 export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleExclusiveExample as ɵk, ButtonTypesExample as ɵl, CardOverviewExample as ɵm, CdkDragDropAxisLockExample as ɵn, CdkDragDropConnectedSortingExample as ɵo, CdkDragDropCustomPreviewExample as ɵp, CdkDragDropHandleExample as ɵq, CdkDragDropHorizontalSortingExample as ɵr, CdkDragDropOverviewExample as ɵs, CdkDragDropSortingExample as ɵt, CdkTableBasicFlexExample as ɵu, CdkTableBasicExample as ɵv, CdkTreeFlatExample as ɵx, FileDatabase as ɵw, CdkTreeNestedExample as ɵz, FileDatabase$1 as ɵy, CheckboxConfigurableExample as ɵba, CheckboxOverviewExample as ɵbb, ChipsAutocompleteExample as ɵbc, ChipsInputExample as ɵbd, ChipsOverviewExample as ɵbe, ChipsStackedExample as ɵbf, DatepickerApiExample as ɵbg, DatepickerColorExample as ɵbh, DatepickerCustomHeaderExample as ɵbi, ExampleHeader as ɵbj, DatepickerCustomIconExample as ɵbk, DatepickerDisabledExample as ɵbl, DatepickerEventsExample as ɵbm, DatepickerFilterExample as ɵbn, DatepickerFormatsExample as ɵbp, MY_FORMATS as ɵbo, DatepickerLocaleExample as ɵbq, DatepickerMinMaxExample as ɵbr, DatepickerMomentExample as ɵbs, DatepickerStartViewExample as ɵbt, DatepickerTouchExample as ɵbu, DatepickerValueExample as ɵbv, DatepickerViewsSelectionExample as ɵbx, MY_FORMATS$1 as ɵbw, DialogContentExample as ɵby, DialogContentExampleDialog as ɵbz, DialogDataExample as ɵca, DialogDataExampleDialog as ɵcb, DialogElementsExample as ɵcc, DialogElementsExampleDialog as ɵcd, DialogOverviewExample as ɵce, DialogOverviewExampleDialog as ɵcf, DividerOverviewExample as ɵcg, ElevationOverviewExample as ɵch, ExpansionExpandCollapseAllExample as ɵci, ExpansionStepsExample as ɵcj, FocusMonitorDirectivesExample as ɵck, FocusMonitorFocusViaExample as ɵcl, FocusMonitorOverviewExample as ɵcm, FormFieldAppearanceExample as ɵcn, FormFieldCustomControlExample as ɵcp, MyTelInput as ɵco, FormFieldErrorExample as ɵcq, FormFieldHintExample as ɵcr, FormFieldLabelExample as ɵcs, FormFieldOverviewExample as ɵct, FormFieldPrefixSuffixExample as ɵcu, FormFieldThemingExample as ɵcv, GridListDynamicExample as ɵcw, GridListOverviewExample as ɵcx, IconOverviewExample as ɵcy, IconSvgExample as ɵcz, InputClearableExample as ɵda, InputErrorStateMatcherExample as ɵdb, InputErrorsExample as ɵdc, InputFormExample as ɵdd, InputHintExample as ɵde, InputOverviewExample as ɵdf, InputPrefixSuffixExample as ɵdg, ListSectionsExample as ɵdh, ListSelectionExample as ɵdi, ExampleMaterialModule as ɵhi, MenuIconsExample as ɵdj, MenuOverviewExample as ɵdk, NestedMenuExample as ɵdl, PaginatorConfigurableExample as ɵdm, PaginatorOverviewExample as ɵdn, ProgressBarBufferExample as ɵdo, ProgressBarConfigurableExample as ɵdp, ProgressBarDeterminateExample as ɵdq, ProgressBarIndeterminateExample as ɵdr, ProgressBarQueryExample as ɵds, ProgressSpinnerConfigurableExample as ɵdt, ProgressSpinnerOverviewExample as ɵdu, RadioNgModelExample as ɵdv, RadioOverviewExample as ɵdw, RippleOverviewExample as ɵdx, SelectCustomTriggerExample as ɵdy, SelectDisabledExample as ɵdz, SelectErrorStateMatcherExample as ɵea, SelectFormExample as ɵeb, SelectHintErrorExample as ɵec, SelectMultipleExample as ɵed, SelectNoRippleExample as ɵee, SelectOptgroupExample as ɵef, SelectOverviewExample as ɵeg, SelectPanelClassExample as ɵeh, SelectResetExample as ɵei, SelectValueBindingExample as ɵej, SidenavAutosizeExample as ɵek, SidenavBackdropExample as ɵel, SidenavDisableCloseExample as ɵem, SidenavDrawerOverviewExample as ɵen, SidenavFixedExample as ɵeo, SidenavModeExample as ɵep, SidenavOpenCloseExample as ɵeq, SidenavOverviewExample as ɵer, SidenavPositionExample as ɵes, SidenavResponsiveExample as ɵet, SlideToggleConfigurableExample as ɵeu, SlideToggleFormsExample as ɵev, SlideToggleOverviewExample as ɵew, SliderConfigurableExample as ɵex, SliderFormattingExample as ɵey, SliderOverviewExample as ɵez, PizzaPartyComponent as ɵfb, SnackBarComponentExample as ɵfa, SnackBarOverviewExample as ɵfc, SnackBarPositionExample as ɵfd, SortOverviewExample as ɵfe, StepperEditableExample as ɵff, StepperOptionalExample as ɵfg, StepperVerticalExample as ɵfh, TabGroupAsyncExample as ɵfi, TabGroupBasicExample as ɵfj, TabGroupCustomLabelExample as ɵfk, TabGroupDynamicHeightExample as ɵfl, TabGroupDynamicExample as ɵfm, TabGroupHeaderBelowExample as ɵfn, TabGroupLazyLoadedExample as ɵfo, TabGroupStretchedExample as ɵfp, TabGroupThemeExample as ɵfq, TabNavBarBasicExample as ɵfr, TableBasicFlexExample as ɵfs, TableBasicExample as ɵft, TableDynamicColumnsExample as ɵfu, TableExpandableRowsExample as ɵfv, TableFilteringExample as ɵfw, TableFooterRowExample as ɵfx, TableHttpExample as ɵfy, TableMultipleHeaderFooterExample as ɵfz, TableOverviewExample as ɵga, TablePaginationExample as ɵgb, TableRowContextExample as ɵgc, TableSelectionExample as ɵgd, TableSortingExample as ɵge, TableStickyColumnsExample as ɵgf, TableStickyComplexFlexExample as ɵgg, TableStickyComplexExample as ɵgh, TableStickyFooterExample as ɵgi, TableStickyHeaderExample as ɵgj, TextFieldAutofillDirectiveExample as ɵgk, TextFieldAutofillMonitorExample as ɵgl, TextFieldAutosizeTextareaExample as ɵgm, ToolbarOverviewExample as ɵgn, TooltipAutoHideExample as ɵgo, TooltipCustomClassExample as ɵgp, TooltipDelayExample as ɵgq, TooltipDisabledExample as ɵgr, TooltipManualExample as ɵgs, TooltipMessageExample as ɵgt, TooltipModifiedDefaultsExample as ɵgv, myCustomTooltipDefaults as ɵgu, TooltipOverviewExample as ɵgw, TooltipPositionExample as ɵgx, ChecklistDatabase as ɵgy, TreeChecklistExample as ɵgz, DynamicDatabase as ɵha, TreeDynamicExample as ɵhb, FileDatabase$2 as ɵhc, TreeFlatOverviewExample as ɵhd, LoadmoreDatabase as ɵhe, TreeLoadmoreExample as ɵhf, FileDatabase$3 as ɵhg, TreeNestedOverviewExample as ɵhh };

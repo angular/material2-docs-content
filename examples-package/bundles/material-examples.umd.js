@@ -44,7 +44,7 @@ function __extends(d, b) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 var ExampleMaterialModule = /** @class */ (function () {
     function ExampleMaterialModule() {
@@ -142,7 +142,7 @@ var ExampleMaterialModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Highlight the first autocomplete option
@@ -187,7 +187,7 @@ var AutocompleteAutoActiveFirstOptionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Display value autocomplete
@@ -248,7 +248,7 @@ var AutocompleteDisplayExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Filter autocomplete
@@ -294,7 +294,7 @@ var AutocompleteFilterExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var _filter = function (opt, value) {
@@ -413,7 +413,7 @@ var AutocompleteOptgroupExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Autocomplete overview
@@ -478,7 +478,7 @@ var AutocompleteOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Simple autocomplete
@@ -500,7 +500,7 @@ var AutocompleteSimpleExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Badge overview
@@ -520,7 +520,7 @@ var BadgeOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Bottom Sheet Overview
@@ -582,7 +582,7 @@ var BottomSheetOverviewExampleSheet = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic buttons
@@ -602,7 +602,7 @@ var ButtonOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Exclusive selection
@@ -622,7 +622,7 @@ var ButtonToggleExclusiveExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic button-toggles
@@ -642,7 +642,7 @@ var ButtonToggleOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Button varieties
@@ -662,7 +662,7 @@ var ButtonTypesExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Card with multiple sections
@@ -682,7 +682,7 @@ var CardFancyExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic cards
@@ -702,7 +702,7 @@ var CardOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop position locking
@@ -722,7 +722,7 @@ var CdkDragDropAxisLockExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop connected sorting
@@ -771,7 +771,7 @@ var CdkDragDropConnectedSortingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop custom preview
@@ -838,7 +838,7 @@ var CdkDragDropCustomPreviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop with a handle
@@ -858,7 +858,7 @@ var CdkDragDropHandleExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop horizontal sorting
@@ -896,7 +896,7 @@ var CdkDragDropHorizontalSortingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic Drag&Drop
@@ -916,7 +916,7 @@ var CdkDragDropOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop sorting
@@ -957,7 +957,7 @@ var CdkDragDropSortingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA = [
@@ -1037,7 +1037,7 @@ ExampleDataSource = /** @class */ (function (_super) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$1 = [
@@ -1117,7 +1117,7 @@ ExampleDataSource$1 = /** @class */ (function (_super) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * File node data with nested structure.
@@ -1300,7 +1300,7 @@ var CdkTreeFlatExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
@@ -1458,7 +1458,7 @@ var CdkTreeNestedExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable checkbox
@@ -1482,7 +1482,7 @@ var CheckboxConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic checkboxes
@@ -1502,7 +1502,7 @@ var CheckboxOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Chips Autocomplete
@@ -1601,7 +1601,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Chips with input
@@ -1668,7 +1668,7 @@ var ChipsInputExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic chips
@@ -1688,7 +1688,7 @@ var ChipsOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Stacked chips
@@ -1714,7 +1714,7 @@ var ChipsStackedExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker open method
@@ -1734,7 +1734,7 @@ var DatepickerApiExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker palette colors
@@ -1754,7 +1754,7 @@ var DatepickerColorExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom calendar header
@@ -1854,7 +1854,7 @@ var ExampleHeader = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom icon
@@ -1874,7 +1874,7 @@ var DatepickerCustomIconExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled datepicker
@@ -1894,7 +1894,7 @@ var DatepickerDisabledExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker input and change events
@@ -1928,7 +1928,7 @@ var DatepickerEventsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with filter validation
@@ -1954,7 +1954,7 @@ var DatepickerFilterExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var moment = _rollupMoment__default__default || _rollupMoment__default;
@@ -1996,7 +1996,7 @@ var DatepickerFormatsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 var ɵ0 = materialMomentAdapter.MAT_MOMENT_DATE_FORMATS;
 /**
@@ -2041,7 +2041,7 @@ var DatepickerLocaleExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with min & max validation
@@ -2063,7 +2063,7 @@ var DatepickerMinMaxExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var moment$1 = _rollupMoment__default__default || _rollupMoment__default;
@@ -2095,7 +2095,7 @@ var DatepickerMomentExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic datepicker
@@ -2115,7 +2115,7 @@ var DatepickerOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker start date
@@ -2136,7 +2136,7 @@ var DatepickerStartViewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker touch UI
@@ -2156,7 +2156,7 @@ var DatepickerTouchExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker selected value
@@ -2178,7 +2178,7 @@ var DatepickerValueExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var moment$2 = _rollupMoment__default__default || _rollupMoment__default;
@@ -2251,7 +2251,7 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog with header, scrollable content and actions
@@ -2300,7 +2300,7 @@ var DialogContentExampleDialog = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Injecting data when opening a dialog
@@ -2354,7 +2354,7 @@ var DialogDataExampleDialog = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog elements
@@ -2399,7 +2399,7 @@ var DialogElementsExampleDialog = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog Overview
@@ -2469,7 +2469,7 @@ var DialogOverviewExampleDialog = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic divider
@@ -2489,7 +2489,7 @@ var DividerOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Elevation CSS classes
@@ -2510,7 +2510,7 @@ var ElevationOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Accordion with expand/collapse all toggles
@@ -2533,7 +2533,7 @@ var ExpansionExpandCollapseAllExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic expansion panel
@@ -2554,7 +2554,7 @@ var ExpansionOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Expansion panel as accordion
@@ -2604,7 +2604,7 @@ var ExpansionStepsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -2655,7 +2655,7 @@ var FocusMonitorDirectivesExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Focusing with a specific FocusOrigin
@@ -2722,7 +2722,7 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -2797,7 +2797,7 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field appearance variants
@@ -2817,7 +2817,7 @@ var FormFieldAppearanceExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Data structure for holding telephone number.
@@ -3029,7 +3029,7 @@ var FormFieldCustomControlExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with error messages
@@ -3061,7 +3061,7 @@ var FormFieldErrorExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with hints
@@ -3081,7 +3081,7 @@ var FormFieldHintExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with label
@@ -3109,7 +3109,7 @@ var FormFieldLabelExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Simple form field
@@ -3129,7 +3129,7 @@ var FormFieldOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with prefix & suffix
@@ -3150,7 +3150,7 @@ var FormFieldPrefixSuffixExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Form field theming
@@ -3187,7 +3187,7 @@ var FormFieldThemingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Dynamic grid-list
@@ -3213,7 +3213,7 @@ var GridListDynamicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic grid-list
@@ -3233,7 +3233,7 @@ var GridListOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic icons
@@ -3253,7 +3253,7 @@ var IconOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title SVG icons
@@ -3279,7 +3279,7 @@ var IconSvgExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Input with a clear button
@@ -3300,7 +3300,7 @@ var InputClearableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Error when invalid control is dirty, touched, or submitted.
@@ -3351,7 +3351,7 @@ var InputErrorStateMatcherExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Input with error messages
@@ -3375,7 +3375,7 @@ var InputErrorsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Inputs in a form
@@ -3395,7 +3395,7 @@ var InputFormExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Input with hints
@@ -3415,7 +3415,7 @@ var InputHintExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic Inputs
@@ -3435,7 +3435,7 @@ var InputOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Inputs with prefixes and suffixes
@@ -3455,7 +3455,7 @@ var InputPrefixSuffixExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic list
@@ -3475,7 +3475,7 @@ var ListOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title List with sections
@@ -3519,7 +3519,7 @@ var ListSectionsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title List with selection
@@ -3540,7 +3540,7 @@ var ListSelectionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Menu with icons
@@ -3560,7 +3560,7 @@ var MenuIconsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic menu
@@ -3580,7 +3580,7 @@ var MenuOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Nested menu
@@ -3600,7 +3600,7 @@ var NestedMenuExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable paginator
@@ -3635,7 +3635,7 @@ var PaginatorConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Paginator
@@ -3655,7 +3655,7 @@ var PaginatorOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Buffer progress-bar
@@ -3675,7 +3675,7 @@ var ProgressBarBufferExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable progress-bar
@@ -3699,7 +3699,7 @@ var ProgressBarConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Determinate progress-bar
@@ -3719,7 +3719,7 @@ var ProgressBarDeterminateExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Indeterminate progress-bar
@@ -3739,7 +3739,7 @@ var ProgressBarIndeterminateExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Query progress-bar
@@ -3759,7 +3759,7 @@ var ProgressBarQueryExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable progress spinner
@@ -3782,7 +3782,7 @@ var ProgressSpinnerConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic progress-spinner
@@ -3802,7 +3802,7 @@ var ProgressSpinnerOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Radios with ngModel
@@ -3823,7 +3823,7 @@ var RadioNgModelExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic radios
@@ -3843,7 +3843,7 @@ var RadioOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title MatRipple basic usage
@@ -3866,7 +3866,7 @@ var RippleOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom trigger text
@@ -3888,7 +3888,7 @@ var SelectCustomTriggerExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled select
@@ -3909,7 +3909,7 @@ var SelectDisabledExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Error when invalid control is dirty, touched, or submitted.
@@ -3960,7 +3960,7 @@ var SelectErrorStateMatcherExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select in a form
@@ -3985,7 +3985,7 @@ var SelectFormExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with form field features
@@ -4012,7 +4012,7 @@ var SelectHintErrorExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with multiple selection
@@ -4034,7 +4034,7 @@ var SelectMultipleExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with no option ripple
@@ -4054,7 +4054,7 @@ var SelectNoRippleExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with option groups
@@ -4109,7 +4109,7 @@ var SelectOptgroupExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic select
@@ -4134,7 +4134,7 @@ var SelectOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom panel styling
@@ -4158,7 +4158,7 @@ var SelectPanelClassExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with reset option
@@ -4187,7 +4187,7 @@ var SelectResetExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Select with 2-way value binding
@@ -4208,7 +4208,7 @@ var SelectValueBindingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Autosize sidenav
@@ -4229,7 +4229,7 @@ var SidenavAutosizeExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Drawer with explicit backdrop setting
@@ -4249,7 +4249,7 @@ var SidenavBackdropExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav with custom escape and backdrop click behavior
@@ -4286,7 +4286,7 @@ var SidenavDisableCloseExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic drawer
@@ -4306,7 +4306,7 @@ var SidenavDrawerOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Fixed sidenav
@@ -4336,7 +4336,7 @@ var SidenavFixedExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav with configurable mode
@@ -4358,7 +4358,7 @@ var SidenavModeExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav open & close behavior
@@ -4380,7 +4380,7 @@ var SidenavOpenCloseExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic sidenav
@@ -4401,7 +4401,7 @@ var SidenavOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Implicit main content with two sidenavs
@@ -4422,7 +4422,7 @@ var SidenavPositionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Responsive sidenav
@@ -4464,7 +4464,7 @@ var SidenavResponsiveExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable slide-toggle
@@ -4487,7 +4487,7 @@ var SlideToggleConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Slide-toggle with forms
@@ -4525,7 +4525,7 @@ var SlideToggleFormsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic slide-toggles
@@ -4545,7 +4545,7 @@ var SlideToggleOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable slider
@@ -4593,7 +4593,7 @@ var SliderConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Slider with custom thumb label formatting.
@@ -4630,7 +4630,7 @@ var SliderFormattingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic slider
@@ -4650,7 +4650,7 @@ var SliderOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Snack-bar with a custom component
@@ -4697,7 +4697,7 @@ var PizzaPartyComponent = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic snack-bar
@@ -4737,7 +4737,7 @@ var SnackBarOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Snack-bar with configurable position
@@ -4776,7 +4776,7 @@ var SnackBarPositionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Sorting overview
@@ -4843,7 +4843,7 @@ function compare(a, b, isAsc) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper with editable steps
@@ -4883,7 +4883,7 @@ var StepperEditableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper with optional steps
@@ -4923,7 +4923,7 @@ var StepperOptionalExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper overview
@@ -4963,7 +4963,7 @@ var StepperOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper vertical
@@ -5003,7 +5003,7 @@ var StepperVerticalExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with asynchronously loading tab contents
@@ -5034,7 +5034,7 @@ var TabGroupAsyncExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab group
@@ -5054,7 +5054,7 @@ var TabGroupBasicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Using tabs with a custom label template
@@ -5074,7 +5074,7 @@ var TabGroupCustomLabelExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tag group with dynamic height based on tab contents
@@ -5094,7 +5094,7 @@ var TabGroupDynamicHeightExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with dynamically changing tabs
@@ -5141,7 +5141,7 @@ var TabGroupDynamicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with the headers on the bottom
@@ -5161,7 +5161,7 @@ var TabGroupHeaderBelowExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group where the tab content is loaded lazily (when activated)
@@ -5196,7 +5196,7 @@ var TabGroupLazyLoadedExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with stretched labels
@@ -5216,7 +5216,7 @@ var TabGroupStretchedExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Customizing the theme options on the tab group
@@ -5236,7 +5236,7 @@ var TabGroupThemeExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab nav bar
@@ -5268,7 +5268,7 @@ var TabNavBarBasicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$2 = [
@@ -5303,7 +5303,7 @@ var TableBasicFlexExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$3 = [
@@ -5338,7 +5338,7 @@ var TableBasicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$4 = [
@@ -5415,7 +5415,7 @@ var TableDynamicColumnsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with expandable rows
@@ -5508,7 +5508,7 @@ var ELEMENT_DATA$5 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$6 = [
@@ -5554,7 +5554,7 @@ var TableFilteringExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Footer row table
@@ -5595,7 +5595,7 @@ var TableFooterRowExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table retrieving data through HTTP
@@ -5690,7 +5690,7 @@ ExampleHttpDao = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with multiple header and footer rows
@@ -5731,7 +5731,7 @@ var TableMultipleHeaderFooterExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** *
  * Constants used to fill up our data base.
@@ -5811,7 +5811,7 @@ function createNewUser(id) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with pagination
@@ -5868,7 +5868,7 @@ var ELEMENT_DATA$7 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table showing each row context properties.
@@ -5890,7 +5890,7 @@ var TableRowContextExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$8 = [
@@ -5957,7 +5957,7 @@ var TableSelectionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$9 = [
@@ -6004,7 +6004,7 @@ var TableSortingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with a sticky columns
@@ -6039,7 +6039,7 @@ var ELEMENT_DATA$10 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Flex-layout tables with toggle-able sticky headers, footers, and columns
@@ -6100,7 +6100,7 @@ var ELEMENT_DATA$11 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tables with toggle-able sticky headers, footers, and columns
@@ -6161,7 +6161,7 @@ var ELEMENT_DATA$12 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with a sticky footer
@@ -6202,7 +6202,7 @@ var TableStickyFooterExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Table with sticky header
@@ -6237,7 +6237,7 @@ var ELEMENT_DATA$13 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring autofill state with cdkAutofill
@@ -6257,7 +6257,7 @@ var TextFieldAutofillDirectiveExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring autofill state with AutofillMonitor
@@ -6309,7 +6309,7 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Auto-resizing textarea
@@ -6349,7 +6349,7 @@ var TextFieldAutosizeTextareaExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Multi-row toolbar
@@ -6369,7 +6369,7 @@ var ToolbarMultirowExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic toolbar
@@ -6389,7 +6389,7 @@ var ToolbarOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
@@ -6411,7 +6411,7 @@ var TooltipAutoHideExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can have a custom class applied.
@@ -6434,7 +6434,7 @@ var TooltipCustomClassExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a show and hide delay
@@ -6456,7 +6456,7 @@ var TooltipDelayExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can be disabled
@@ -6477,7 +6477,7 @@ var TooltipDisabledExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can be manually shown/hidden.
@@ -6497,7 +6497,7 @@ var TooltipManualExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a changing message
@@ -6518,7 +6518,7 @@ var TooltipMessageExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** *
  * Custom options the configure the tooltip's default show/hide delays.
@@ -6549,7 +6549,7 @@ var TooltipModifiedDefaultsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Basic tooltip
@@ -6569,7 +6569,7 @@ var TooltipOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a custom position
@@ -6591,7 +6591,7 @@ var TooltipPositionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Node for to-do item
@@ -6905,7 +6905,7 @@ var TreeChecklistExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Flat node with expandable and level information
@@ -7133,7 +7133,7 @@ var TreeDynamicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * File node data with nested structure.
@@ -7314,7 +7314,7 @@ var TreeFlatOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var LOAD_MORE = 'LOAD_MORE';
@@ -7529,7 +7529,7 @@ var TreeLoadmoreExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
@@ -7687,7 +7687,7 @@ var TreeNestedOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
 var EXAMPLE_COMPONENTS = {
@@ -8625,7 +8625,7 @@ var ExampleModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
  * Example data
