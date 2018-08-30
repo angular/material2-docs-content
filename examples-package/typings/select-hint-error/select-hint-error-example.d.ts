@@ -6,5 +6,6 @@ export interface Animal {
 /** @title Select with form field features */
 export declare class SelectHintErrorExample {
     animalControl: FormControl;
+    selectFormControl: FormControl;
     animals: Animal[];
 }

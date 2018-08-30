@@ -22,5 +22,15 @@
     Validators.pattern(<span class="hljs-string">'valid'</span>),
   ]);
 
+  selectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">'valid'</span>, [
+    Validators.required,
+    Validators.pattern(<span class="hljs-string">'valid'</span>),
+  ]);
+
+  nativeSelectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">'valid'</span>, [
+    Validators.required,
+    Validators.pattern(<span class="hljs-string">'valid'</span>),
+  ]);
+
   matcher = <span class="hljs-keyword">new</span> MyErrorStateMatcher();
 }

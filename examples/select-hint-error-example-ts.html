@@ -14,6 +14,7 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectHintErrorExample {
   animalControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [Validators.required]);
+  selectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, Validators.required);
   animals: Animal[] = [
     {name: <span class="hljs-string">'Dog'</span>, sound: <span class="hljs-string">'Woof!'</span>},
     {name: <span class="hljs-string">'Cat'</span>, sound: <span class="hljs-string">'Meow!'</span>},

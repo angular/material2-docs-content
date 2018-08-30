@@ -7,5 +7,7 @@ export declare class MyErrorStateMatcher implements ErrorStateMatcher {
 /** @title Select with a custom ErrorStateMatcher */
 export declare class SelectErrorStateMatcherExample {
     selected: FormControl;
+    selectFormControl: FormControl;
+    nativeSelectFormControl: FormControl;
     matcher: MyErrorStateMatcher;
 }

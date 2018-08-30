@@ -1,0 +1,43 @@
+<span class="hljs-keyword">import</span> {
+  Component,
+  ViewChild,
+  TemplateRef,
+  AfterViewInit,
+  ViewContainerRef,
+  OnDestroy,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Overlay, OverlayRef} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/overlay'</span>;
+<span class="hljs-keyword">import</span> {TemplatePortal} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/portal'</span>;
+
+<span class="hljs-comment">/**
+ * @title Drag&amp;Drop with alternate root element
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-drag-drop-root-element-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-drag-drop-root-element-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-drag-drop-root-element-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkDragDropRootElementExample <span class="hljs-keyword">implements</span> AfterViewInit, OnDestroy {
+  <span class="hljs-meta">@ViewChild</span>(TemplateRef) _dialogTemplate: TemplateRef&lt;<span class="hljs-built_in">any</span>&gt;;
+  <span class="hljs-keyword">private</span> _overlayRef: OverlayRef;
+  <span class="hljs-keyword">private</span> _portal: TemplatePortal;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _overlay: Overlay, <span class="hljs-keyword">private</span> _viewContainerRef: ViewContainerRef</span>) {}
+
+  ngAfterViewInit() {
+    <span class="hljs-keyword">this</span>._portal = <span class="hljs-keyword">new</span> TemplatePortal(<span class="hljs-keyword">this</span>._dialogTemplate, <span class="hljs-keyword">this</span>._viewContainerRef);
+    <span class="hljs-keyword">this</span>._overlayRef = <span class="hljs-keyword">this</span>._overlay.create({
+      positionStrategy: <span class="hljs-keyword">this</span>._overlay.position().global().centerHorizontally().centerVertically(),
+      hasBackdrop: <span class="hljs-literal">true</span>
+    });
+    <span class="hljs-keyword">this</span>._overlayRef.backdropClick().subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>._overlayRef.detach());
+  }
+
+  ngOnDestroy() {
+    <span class="hljs-keyword">this</span>._overlayRef.dispose();
+  }
+
+  openDialog() {
+    <span class="hljs-keyword">this</span>._overlayRef.attach(<span class="hljs-keyword">this</span>._portal);
+  }
+}

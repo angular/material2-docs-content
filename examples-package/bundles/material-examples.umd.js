@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.a11y,global.ng.cdk.table,global.ng.cdk.tree,global.ng.cdk.dragDrop,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
-}(this, (function (exports,core,scrolling,a11y,table,tree,dragDrop,material,forms,operators,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,coercion,platformBrowser,sidenav,layout,animations,http,textField,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/portal'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/portal', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.a11y,global.ng.cdk.table,global.ng.cdk.tree,global.ng.cdk.dragDrop,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.overlay,global.ng.cdk.portal,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
+}(this, (function (exports,core,scrolling,a11y,table,tree,dragDrop,material,forms,operators,overlay,portal,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,coercion,platformBrowser,sidenav,layout,animations,http,textField,common) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -912,6 +912,69 @@ var CdkDragDropOverviewExample = /** @class */ (function () {
                 },] },
     ];
     return CdkDragDropOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
+ * \@title Drag&Drop with alternate root element
+ */
+var CdkDragDropRootElementExample = /** @class */ (function () {
+    function CdkDragDropRootElementExample(_overlay, _viewContainerRef) {
+        this._overlay = _overlay;
+        this._viewContainerRef = _viewContainerRef;
+    }
+    /**
+     * @return {?}
+     */
+    CdkDragDropRootElementExample.prototype.ngAfterViewInit = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this._portal = new portal.TemplatePortal(this._dialogTemplate, this._viewContainerRef);
+        this._overlayRef = this._overlay.create({
+            positionStrategy: this._overlay.position().global().centerHorizontally().centerVertically(),
+            hasBackdrop: true
+        });
+        this._overlayRef.backdropClick().subscribe(function () { return _this._overlayRef.detach(); });
+    };
+    /**
+     * @return {?}
+     */
+    CdkDragDropRootElementExample.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () {
+        this._overlayRef.dispose();
+    };
+    /**
+     * @return {?}
+     */
+    CdkDragDropRootElementExample.prototype.openDialog = /**
+     * @return {?}
+     */
+    function () {
+        this._overlayRef.attach(this._portal);
+    };
+    CdkDragDropRootElementExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-drag-drop-root-element-example',
+                    template: "<button (click)=\"openDialog()\">Open a draggable dialog</button><ng-template><div class=\"dialog-content\" cdkDrag cdkDragRootElement=\".cdk-overlay-pane\">Drag the dialog around!</div></ng-template>",
+                    styles: [".dialog-content { width: 200px; height: 200px; border: solid 1px #ccc; cursor: move; display: flex; justify-content: center; align-items: center; background: #fff; border-radius: 4px; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .dialog-content:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+                },] },
+    ];
+    /** @nocollapse */
+    CdkDragDropRootElementExample.ctorParameters = function () { return [
+        { type: overlay.Overlay },
+        { type: core.ViewContainerRef }
+    ]; };
+    CdkDragDropRootElementExample.propDecorators = {
+        _dialogTemplate: [{ type: core.ViewChild, args: [core.TemplateRef,] }]
+    };
+    return CdkDragDropRootElementExample;
 }());
 
 /**
@@ -3900,7 +3963,7 @@ var SelectDisabledExample = /** @class */ (function () {
     SelectDisabledExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'select-disabled-example',
-                    template: "<p><mat-checkbox [formControl]=\"disableSelect\">Disable select</mat-checkbox></p><p><mat-form-field><mat-select placeholder=\"Choose an option\" [disabled]=\"disableSelect.value\"><mat-option value=\"option1\">Option 1</mat-option><mat-option value=\"option2\" disabled=\"disabled\">Option 2 (disabled)</mat-option><mat-option value=\"option3\">Option 3</mat-option></mat-select></mat-form-field></p>",
+                    template: "<p><mat-checkbox [formControl]=\"disableSelect\">Disable select</mat-checkbox></p><h4>mat-select</h4><mat-form-field><mat-select placeholder=\"Choose an option\" [disabled]=\"disableSelect.value\"><mat-option value=\"option1\">Option 1</mat-option><mat-option value=\"option2\" disabled=\"disabled\">Option 2 (disabled)</mat-option><mat-option value=\"option3\">Option 3</mat-option></mat-select></mat-form-field><h4>native html select</h4><mat-form-field><select matNativeControl placeholder=\"Choose an option\" [disabled]=\"disableSelect.value\"><option value=\"\" disabled=\"disabled\" selected=\"selected\"></option><option value=\"volvo\">Volvo</option><option value=\"saab\" disabled=\"disabled\">Saab</option><option value=\"mercedes\">Mercedes</option><option value=\"audi\">Audi</option></select></mat-form-field>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
@@ -3946,12 +4009,20 @@ var SelectErrorStateMatcherExample = /** @class */ (function () {
             forms.Validators.required,
             forms.Validators.pattern('valid'),
         ]);
+        this.selectFormControl = new forms.FormControl('valid', [
+            forms.Validators.required,
+            forms.Validators.pattern('valid'),
+        ]);
+        this.nativeSelectFormControl = new forms.FormControl('valid', [
+            forms.Validators.required,
+            forms.Validators.pattern('valid'),
+        ]);
         this.matcher = new MyErrorStateMatcher$1();
     }
     SelectErrorStateMatcherExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'select-error-state-matcher-example',
-                    template: "<mat-form-field><mat-select placeholder=\"Choose one\" [formControl]=\"selected\" [errorStateMatcher]=\"matcher\"><mat-option>Clear</mat-option><mat-option value=\"valid\">Valid option</mat-option><mat-option value=\"invalid\">Invalid option</mat-option></mat-select><mat-hint>Errors appear instantly!</mat-hint><mat-error *ngIf=\"selected.hasError('required')\">You must make a selection</mat-error><mat-error *ngIf=\"selected.hasError('pattern') && !selected.hasError('required')\">Your selection is invalid</mat-error></mat-form-field>",
+                    template: "<h4>mat-select</h4><mat-form-field><mat-select placeholder=\"Choose one\" [formControl]=\"selected\" [errorStateMatcher]=\"matcher\"><mat-option>Clear</mat-option><mat-option value=\"valid\">Valid option</mat-option><mat-option value=\"invalid\">Invalid option</mat-option></mat-select><mat-hint>Errors appear instantly!</mat-hint><mat-error *ngIf=\"selected.hasError('required')\">You must make a selection</mat-error><mat-error *ngIf=\"selected.hasError('pattern') && !selected.hasError('required')\">Your selection is invalid</mat-error></mat-form-field><h4>native html select</h4><mat-form-field class=\"demo-full-width\"><select matNativeControl placeholder=\"Choose one\" [formControl]=\"nativeSelectFormControl\" [errorStateMatcher]=\"matcher\"><option value=\"\"></option><option value=\"valid\" selected=\"selected\">Valid option</option><option value=\"invalid\">Invalid option</option></select><mat-error *ngIf=\"nativeSelectFormControl.hasError('required')\">You must make a selection</mat-error><mat-error *ngIf=\"nativeSelectFormControl.hasError('pattern') && !nativeSelectFormControl.hasError('required')\">Your selection is invalid</mat-error></mat-form-field>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
@@ -3972,11 +4043,16 @@ var SelectFormExample = /** @class */ (function () {
             { value: 'pizza-1', viewValue: 'Pizza' },
             { value: 'tacos-2', viewValue: 'Tacos' }
         ];
+        this.cars = [
+            { value: 'volvo', viewValue: 'Volvo' },
+            { value: 'saab', viewValue: 'Saab' },
+            { value: 'mercedes', viewValue: 'Mercedes' }
+        ];
     }
     SelectFormExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'select-form-example',
-                    template: "<form><mat-form-field><mat-select placeholder=\"Favorite food\" [(ngModel)]=\"selectedValue\" name=\"food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{food.viewValue}}</mat-option></mat-select></mat-form-field><p>Selected value: {{selectedValue}}</p></form>",
+                    template: "<form><h4>mat-select</h4><mat-form-field><mat-select placeholder=\"Favorite food\" [(ngModel)]=\"selectedValue\" name=\"food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{food.viewValue}}</mat-option></mat-select></mat-form-field><p>Selected food: {{selectedValue}}</p><h4>native html select</h4><mat-form-field><select matNativeControl placeholder=\"Favorite car\" [(ngModel)]=\"selectedCar\" name=\"car\"><option value=\"\" disabled=\"disabled\" selected=\"selected\"></option><option *ngFor=\"let car of cars\" [value]=\"car.value\">{{car.viewValue}}</option></select></mat-form-field><p>Selected car: {{selectedCar}}</p></form>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
@@ -3993,6 +4069,7 @@ var SelectFormExample = /** @class */ (function () {
 var SelectHintErrorExample = /** @class */ (function () {
     function SelectHintErrorExample() {
         this.animalControl = new forms.FormControl('', [forms.Validators.required]);
+        this.selectFormControl = new forms.FormControl('', forms.Validators.required);
         this.animals = [
             { name: 'Dog', sound: 'Woof!' },
             { name: 'Cat', sound: 'Meow!' },
@@ -4003,7 +4080,7 @@ var SelectHintErrorExample = /** @class */ (function () {
     SelectHintErrorExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'select-hint-error-example',
-                    template: "<mat-form-field><mat-select placeholder=\"Favorite animal\" [formControl]=\"animalControl\" required><mat-option>--</mat-option><mat-option *ngFor=\"let animal of animals\" [value]=\"animal\">{{animal.name}}</mat-option></mat-select><mat-error *ngIf=\"animalControl.hasError('required')\">Please choose an animal</mat-error><mat-hint>{{animalControl.value?.sound}}</mat-hint></mat-form-field>",
+                    template: "<h4>mat select</h4><mat-form-field><mat-select placeholder=\"Favorite animal\" [formControl]=\"animalControl\" required><mat-option>--</mat-option><mat-option *ngFor=\"let animal of animals\" [value]=\"animal\">{{animal.name}}</mat-option></mat-select><mat-error *ngIf=\"animalControl.hasError('required')\">Please choose an animal</mat-error><mat-hint>{{animalControl.value?.sound}}</mat-hint></mat-form-field><h4>native html select</h4><mat-form-field><mat-label>Select your car (required)</mat-label><select matNativeControl required [formControl]=\"selectFormControl\"><option label=\"--select something --\"></option><option value=\"saab\">Saab</option><option value=\"mercedes\">Mercedes</option><option value=\"audi\">Audi</option></select><mat-error *ngIf=\"selectFormControl.hasError('required')\">This field is required</mat-error><mat-hint>You can pick up your favorite car here</mat-hint></mat-form-field>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
@@ -4100,7 +4177,7 @@ var SelectOptgroupExample = /** @class */ (function () {
     SelectOptgroupExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'select-optgroup-example',
-                    template: "<mat-form-field><mat-select placeholder=\"Pokemon\" [formControl]=\"pokemonControl\"><mat-option>-- None --</mat-option><mat-optgroup *ngFor=\"let group of pokemonGroups\" [label]=\"group.name\" [disabled]=\"group.disabled\"><mat-option *ngFor=\"let pokemon of group.pokemon\" [value]=\"pokemon.value\">{{pokemon.viewValue}}</mat-option></mat-optgroup></mat-select></mat-form-field>",
+                    template: "<h4>mat-select</h4><mat-form-field><mat-select placeholder=\"Pokemon\" [formControl]=\"pokemonControl\"><mat-option>-- None --</mat-option><mat-optgroup *ngFor=\"let group of pokemonGroups\" [label]=\"group.name\" [disabled]=\"group.disabled\"><mat-option *ngFor=\"let pokemon of group.pokemon\" [value]=\"pokemon.value\">{{pokemon.viewValue}}</mat-option></mat-optgroup></mat-select></mat-form-field><h4>native html select</h4><mat-form-field><select matNativeControl><optgroup label=\"Swedish Cars\"><option value=\"volvo\">volvo</option><option value=\"saab\">Saab</option></optgroup><optgroup label=\"German Cars\"><option value=\"mercedes\">Mercedes</option><option value=\"audi\">Audi</option></optgroup></select></mat-form-field>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
@@ -4125,7 +4202,7 @@ var SelectOverviewExample = /** @class */ (function () {
     SelectOverviewExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'select-overview-example',
-                    template: "<mat-form-field><mat-select placeholder=\"Favorite food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{food.viewValue}}</mat-option></mat-select></mat-form-field>",
+                    template: "<h4>Basic mat-select</h4><mat-form-field><mat-select placeholder=\"Favorite food\"><mat-option *ngFor=\"let food of foods\" [value]=\"food.value\">{{food.viewValue}}</mat-option></mat-select></mat-form-field><h4>Basic native select</h4><mat-form-field><select matNativeControl required><option value=\"volvo\">Volvo</option><option value=\"saab\">Saab</option><option value=\"mercedes\">Mercedes</option><option value=\"audi\">Audi</option></select></mat-form-field>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
@@ -4178,7 +4255,7 @@ var SelectResetExample = /** @class */ (function () {
     SelectResetExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'select-reset-example',
-                    template: "<mat-form-field><mat-select placeholder=\"State\"><mat-option>None</mat-option><mat-option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</mat-option></mat-select></mat-form-field>",
+                    template: "<h4>mat-select</h4><mat-form-field><mat-select placeholder=\"State\"><mat-option>None</mat-option><mat-option *ngFor=\"let state of states\" [value]=\"state\">{{state}}</mat-option></mat-select></mat-form-field><h4>native html select</h4><mat-form-field><mat-label>Select your car</mat-label><select matNativeControl id=\"mySelectId\"><option value=\"\" disabled=\"disabled\" selected=\"selected\"></option><option value=\"volvo\">Volvo</option><option value=\"saab\">Saab</option><option value=\"mercedes\">Mercedes</option><option value=\"audi\">Audi</option></select></mat-form-field>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
@@ -7773,6 +7850,10 @@ var EXAMPLE_COMPONENTS = {
         title: 'Basic Drag&Drop',
         component: CdkDragDropOverviewExample
     },
+    'cdk-drag-drop-root-element': {
+        title: 'Drag&Drop with alternate root element',
+        component: CdkDragDropRootElementExample
+    },
     'cdk-drag-drop-sorting': {
         title: 'Drag&Drop sorting',
         component: CdkDragDropSortingExample
@@ -8445,6 +8526,7 @@ var EXAMPLE_LIST = [
     CdkDragDropHandleExample,
     CdkDragDropHorizontalSortingExample,
     CdkDragDropOverviewExample,
+    CdkDragDropRootElementExample,
     CdkDragDropSortingExample,
     CdkTableBasicFlexExample,
     CdkTableBasicExample,
@@ -8689,178 +8771,179 @@ exports.ɵp = CdkDragDropCustomPreviewExample;
 exports.ɵq = CdkDragDropHandleExample;
 exports.ɵr = CdkDragDropHorizontalSortingExample;
 exports.ɵs = CdkDragDropOverviewExample;
-exports.ɵt = CdkDragDropSortingExample;
-exports.ɵu = CdkTableBasicFlexExample;
-exports.ɵv = CdkTableBasicExample;
-exports.ɵx = CdkTreeFlatExample;
-exports.ɵw = FileDatabase;
-exports.ɵz = CdkTreeNestedExample;
-exports.ɵy = FileDatabase$1;
-exports.ɵba = CheckboxConfigurableExample;
-exports.ɵbb = CheckboxOverviewExample;
-exports.ɵbc = ChipsAutocompleteExample;
-exports.ɵbd = ChipsInputExample;
-exports.ɵbe = ChipsOverviewExample;
-exports.ɵbf = ChipsStackedExample;
-exports.ɵbg = DatepickerApiExample;
-exports.ɵbh = DatepickerColorExample;
-exports.ɵbi = DatepickerCustomHeaderExample;
-exports.ɵbj = ExampleHeader;
-exports.ɵbk = DatepickerCustomIconExample;
-exports.ɵbl = DatepickerDisabledExample;
-exports.ɵbm = DatepickerEventsExample;
-exports.ɵbn = DatepickerFilterExample;
-exports.ɵbp = DatepickerFormatsExample;
-exports.ɵbo = MY_FORMATS;
-exports.ɵbq = DatepickerLocaleExample;
-exports.ɵbr = DatepickerMinMaxExample;
-exports.ɵbs = DatepickerMomentExample;
-exports.ɵbt = DatepickerStartViewExample;
-exports.ɵbu = DatepickerTouchExample;
-exports.ɵbv = DatepickerValueExample;
-exports.ɵbx = DatepickerViewsSelectionExample;
-exports.ɵbw = MY_FORMATS$1;
-exports.ɵby = DialogContentExample;
-exports.ɵbz = DialogContentExampleDialog;
-exports.ɵca = DialogDataExample;
-exports.ɵcb = DialogDataExampleDialog;
-exports.ɵcc = DialogElementsExample;
-exports.ɵcd = DialogElementsExampleDialog;
-exports.ɵce = DialogOverviewExample;
-exports.ɵcf = DialogOverviewExampleDialog;
-exports.ɵcg = DividerOverviewExample;
-exports.ɵch = ElevationOverviewExample;
-exports.ɵci = ExpansionExpandCollapseAllExample;
-exports.ɵcj = ExpansionStepsExample;
-exports.ɵck = FocusMonitorDirectivesExample;
-exports.ɵcl = FocusMonitorFocusViaExample;
-exports.ɵcm = FocusMonitorOverviewExample;
-exports.ɵcn = FormFieldAppearanceExample;
-exports.ɵcp = FormFieldCustomControlExample;
-exports.ɵco = MyTelInput;
-exports.ɵcq = FormFieldErrorExample;
-exports.ɵcr = FormFieldHintExample;
-exports.ɵcs = FormFieldLabelExample;
-exports.ɵct = FormFieldOverviewExample;
-exports.ɵcu = FormFieldPrefixSuffixExample;
-exports.ɵcv = FormFieldThemingExample;
-exports.ɵcw = GridListDynamicExample;
-exports.ɵcx = GridListOverviewExample;
-exports.ɵcy = IconOverviewExample;
-exports.ɵcz = IconSvgExample;
-exports.ɵda = InputClearableExample;
-exports.ɵdb = InputErrorStateMatcherExample;
-exports.ɵdc = InputErrorsExample;
-exports.ɵdd = InputFormExample;
-exports.ɵde = InputHintExample;
-exports.ɵdf = InputOverviewExample;
-exports.ɵdg = InputPrefixSuffixExample;
-exports.ɵdh = ListSectionsExample;
-exports.ɵdi = ListSelectionExample;
-exports.ɵhi = ExampleMaterialModule;
-exports.ɵdj = MenuIconsExample;
-exports.ɵdk = MenuOverviewExample;
-exports.ɵdl = NestedMenuExample;
-exports.ɵdm = PaginatorConfigurableExample;
-exports.ɵdn = PaginatorOverviewExample;
-exports.ɵdo = ProgressBarBufferExample;
-exports.ɵdp = ProgressBarConfigurableExample;
-exports.ɵdq = ProgressBarDeterminateExample;
-exports.ɵdr = ProgressBarIndeterminateExample;
-exports.ɵds = ProgressBarQueryExample;
-exports.ɵdt = ProgressSpinnerConfigurableExample;
-exports.ɵdu = ProgressSpinnerOverviewExample;
-exports.ɵdv = RadioNgModelExample;
-exports.ɵdw = RadioOverviewExample;
-exports.ɵdx = RippleOverviewExample;
-exports.ɵdy = SelectCustomTriggerExample;
-exports.ɵdz = SelectDisabledExample;
-exports.ɵea = SelectErrorStateMatcherExample;
-exports.ɵeb = SelectFormExample;
-exports.ɵec = SelectHintErrorExample;
-exports.ɵed = SelectMultipleExample;
-exports.ɵee = SelectNoRippleExample;
-exports.ɵef = SelectOptgroupExample;
-exports.ɵeg = SelectOverviewExample;
-exports.ɵeh = SelectPanelClassExample;
-exports.ɵei = SelectResetExample;
-exports.ɵej = SelectValueBindingExample;
-exports.ɵek = SidenavAutosizeExample;
-exports.ɵel = SidenavBackdropExample;
-exports.ɵem = SidenavDisableCloseExample;
-exports.ɵen = SidenavDrawerOverviewExample;
-exports.ɵeo = SidenavFixedExample;
-exports.ɵep = SidenavModeExample;
-exports.ɵeq = SidenavOpenCloseExample;
-exports.ɵer = SidenavOverviewExample;
-exports.ɵes = SidenavPositionExample;
-exports.ɵet = SidenavResponsiveExample;
-exports.ɵeu = SlideToggleConfigurableExample;
-exports.ɵev = SlideToggleFormsExample;
-exports.ɵew = SlideToggleOverviewExample;
-exports.ɵex = SliderConfigurableExample;
-exports.ɵey = SliderFormattingExample;
-exports.ɵez = SliderOverviewExample;
-exports.ɵfb = PizzaPartyComponent;
-exports.ɵfa = SnackBarComponentExample;
-exports.ɵfc = SnackBarOverviewExample;
-exports.ɵfd = SnackBarPositionExample;
-exports.ɵfe = SortOverviewExample;
-exports.ɵff = StepperEditableExample;
-exports.ɵfg = StepperOptionalExample;
-exports.ɵfh = StepperVerticalExample;
-exports.ɵfi = TabGroupAsyncExample;
-exports.ɵfj = TabGroupBasicExample;
-exports.ɵfk = TabGroupCustomLabelExample;
-exports.ɵfl = TabGroupDynamicHeightExample;
-exports.ɵfm = TabGroupDynamicExample;
-exports.ɵfn = TabGroupHeaderBelowExample;
-exports.ɵfo = TabGroupLazyLoadedExample;
-exports.ɵfp = TabGroupStretchedExample;
-exports.ɵfq = TabGroupThemeExample;
-exports.ɵfr = TabNavBarBasicExample;
-exports.ɵfs = TableBasicFlexExample;
-exports.ɵft = TableBasicExample;
-exports.ɵfu = TableDynamicColumnsExample;
-exports.ɵfv = TableExpandableRowsExample;
-exports.ɵfw = TableFilteringExample;
-exports.ɵfx = TableFooterRowExample;
-exports.ɵfy = TableHttpExample;
-exports.ɵfz = TableMultipleHeaderFooterExample;
-exports.ɵga = TableOverviewExample;
-exports.ɵgb = TablePaginationExample;
-exports.ɵgc = TableRowContextExample;
-exports.ɵgd = TableSelectionExample;
-exports.ɵge = TableSortingExample;
-exports.ɵgf = TableStickyColumnsExample;
-exports.ɵgg = TableStickyComplexFlexExample;
-exports.ɵgh = TableStickyComplexExample;
-exports.ɵgi = TableStickyFooterExample;
-exports.ɵgj = TableStickyHeaderExample;
-exports.ɵgk = TextFieldAutofillDirectiveExample;
-exports.ɵgl = TextFieldAutofillMonitorExample;
-exports.ɵgm = TextFieldAutosizeTextareaExample;
-exports.ɵgn = ToolbarOverviewExample;
-exports.ɵgo = TooltipAutoHideExample;
-exports.ɵgp = TooltipCustomClassExample;
-exports.ɵgq = TooltipDelayExample;
-exports.ɵgr = TooltipDisabledExample;
-exports.ɵgs = TooltipManualExample;
-exports.ɵgt = TooltipMessageExample;
-exports.ɵgv = TooltipModifiedDefaultsExample;
-exports.ɵgu = myCustomTooltipDefaults;
-exports.ɵgw = TooltipOverviewExample;
-exports.ɵgx = TooltipPositionExample;
-exports.ɵgy = ChecklistDatabase;
-exports.ɵgz = TreeChecklistExample;
-exports.ɵha = DynamicDatabase;
-exports.ɵhb = TreeDynamicExample;
-exports.ɵhc = FileDatabase$2;
-exports.ɵhd = TreeFlatOverviewExample;
-exports.ɵhe = LoadmoreDatabase;
-exports.ɵhf = TreeLoadmoreExample;
-exports.ɵhg = FileDatabase$3;
-exports.ɵhh = TreeNestedOverviewExample;
+exports.ɵt = CdkDragDropRootElementExample;
+exports.ɵu = CdkDragDropSortingExample;
+exports.ɵv = CdkTableBasicFlexExample;
+exports.ɵw = CdkTableBasicExample;
+exports.ɵy = CdkTreeFlatExample;
+exports.ɵx = FileDatabase;
+exports.ɵba = CdkTreeNestedExample;
+exports.ɵz = FileDatabase$1;
+exports.ɵbb = CheckboxConfigurableExample;
+exports.ɵbc = CheckboxOverviewExample;
+exports.ɵbd = ChipsAutocompleteExample;
+exports.ɵbe = ChipsInputExample;
+exports.ɵbf = ChipsOverviewExample;
+exports.ɵbg = ChipsStackedExample;
+exports.ɵbh = DatepickerApiExample;
+exports.ɵbi = DatepickerColorExample;
+exports.ɵbj = DatepickerCustomHeaderExample;
+exports.ɵbk = ExampleHeader;
+exports.ɵbl = DatepickerCustomIconExample;
+exports.ɵbm = DatepickerDisabledExample;
+exports.ɵbn = DatepickerEventsExample;
+exports.ɵbo = DatepickerFilterExample;
+exports.ɵbq = DatepickerFormatsExample;
+exports.ɵbp = MY_FORMATS;
+exports.ɵbr = DatepickerLocaleExample;
+exports.ɵbs = DatepickerMinMaxExample;
+exports.ɵbt = DatepickerMomentExample;
+exports.ɵbu = DatepickerStartViewExample;
+exports.ɵbv = DatepickerTouchExample;
+exports.ɵbw = DatepickerValueExample;
+exports.ɵby = DatepickerViewsSelectionExample;
+exports.ɵbx = MY_FORMATS$1;
+exports.ɵbz = DialogContentExample;
+exports.ɵca = DialogContentExampleDialog;
+exports.ɵcb = DialogDataExample;
+exports.ɵcc = DialogDataExampleDialog;
+exports.ɵcd = DialogElementsExample;
+exports.ɵce = DialogElementsExampleDialog;
+exports.ɵcf = DialogOverviewExample;
+exports.ɵcg = DialogOverviewExampleDialog;
+exports.ɵch = DividerOverviewExample;
+exports.ɵci = ElevationOverviewExample;
+exports.ɵcj = ExpansionExpandCollapseAllExample;
+exports.ɵck = ExpansionStepsExample;
+exports.ɵcl = FocusMonitorDirectivesExample;
+exports.ɵcm = FocusMonitorFocusViaExample;
+exports.ɵcn = FocusMonitorOverviewExample;
+exports.ɵco = FormFieldAppearanceExample;
+exports.ɵcq = FormFieldCustomControlExample;
+exports.ɵcp = MyTelInput;
+exports.ɵcr = FormFieldErrorExample;
+exports.ɵcs = FormFieldHintExample;
+exports.ɵct = FormFieldLabelExample;
+exports.ɵcu = FormFieldOverviewExample;
+exports.ɵcv = FormFieldPrefixSuffixExample;
+exports.ɵcw = FormFieldThemingExample;
+exports.ɵcx = GridListDynamicExample;
+exports.ɵcy = GridListOverviewExample;
+exports.ɵcz = IconOverviewExample;
+exports.ɵda = IconSvgExample;
+exports.ɵdb = InputClearableExample;
+exports.ɵdc = InputErrorStateMatcherExample;
+exports.ɵdd = InputErrorsExample;
+exports.ɵde = InputFormExample;
+exports.ɵdf = InputHintExample;
+exports.ɵdg = InputOverviewExample;
+exports.ɵdh = InputPrefixSuffixExample;
+exports.ɵdi = ListSectionsExample;
+exports.ɵdj = ListSelectionExample;
+exports.ɵhj = ExampleMaterialModule;
+exports.ɵdk = MenuIconsExample;
+exports.ɵdl = MenuOverviewExample;
+exports.ɵdm = NestedMenuExample;
+exports.ɵdn = PaginatorConfigurableExample;
+exports.ɵdo = PaginatorOverviewExample;
+exports.ɵdp = ProgressBarBufferExample;
+exports.ɵdq = ProgressBarConfigurableExample;
+exports.ɵdr = ProgressBarDeterminateExample;
+exports.ɵds = ProgressBarIndeterminateExample;
+exports.ɵdt = ProgressBarQueryExample;
+exports.ɵdu = ProgressSpinnerConfigurableExample;
+exports.ɵdv = ProgressSpinnerOverviewExample;
+exports.ɵdw = RadioNgModelExample;
+exports.ɵdx = RadioOverviewExample;
+exports.ɵdy = RippleOverviewExample;
+exports.ɵdz = SelectCustomTriggerExample;
+exports.ɵea = SelectDisabledExample;
+exports.ɵeb = SelectErrorStateMatcherExample;
+exports.ɵec = SelectFormExample;
+exports.ɵed = SelectHintErrorExample;
+exports.ɵee = SelectMultipleExample;
+exports.ɵef = SelectNoRippleExample;
+exports.ɵeg = SelectOptgroupExample;
+exports.ɵeh = SelectOverviewExample;
+exports.ɵei = SelectPanelClassExample;
+exports.ɵej = SelectResetExample;
+exports.ɵek = SelectValueBindingExample;
+exports.ɵel = SidenavAutosizeExample;
+exports.ɵem = SidenavBackdropExample;
+exports.ɵen = SidenavDisableCloseExample;
+exports.ɵeo = SidenavDrawerOverviewExample;
+exports.ɵep = SidenavFixedExample;
+exports.ɵeq = SidenavModeExample;
+exports.ɵer = SidenavOpenCloseExample;
+exports.ɵes = SidenavOverviewExample;
+exports.ɵet = SidenavPositionExample;
+exports.ɵeu = SidenavResponsiveExample;
+exports.ɵev = SlideToggleConfigurableExample;
+exports.ɵew = SlideToggleFormsExample;
+exports.ɵex = SlideToggleOverviewExample;
+exports.ɵey = SliderConfigurableExample;
+exports.ɵez = SliderFormattingExample;
+exports.ɵfa = SliderOverviewExample;
+exports.ɵfc = PizzaPartyComponent;
+exports.ɵfb = SnackBarComponentExample;
+exports.ɵfd = SnackBarOverviewExample;
+exports.ɵfe = SnackBarPositionExample;
+exports.ɵff = SortOverviewExample;
+exports.ɵfg = StepperEditableExample;
+exports.ɵfh = StepperOptionalExample;
+exports.ɵfi = StepperVerticalExample;
+exports.ɵfj = TabGroupAsyncExample;
+exports.ɵfk = TabGroupBasicExample;
+exports.ɵfl = TabGroupCustomLabelExample;
+exports.ɵfm = TabGroupDynamicHeightExample;
+exports.ɵfn = TabGroupDynamicExample;
+exports.ɵfo = TabGroupHeaderBelowExample;
+exports.ɵfp = TabGroupLazyLoadedExample;
+exports.ɵfq = TabGroupStretchedExample;
+exports.ɵfr = TabGroupThemeExample;
+exports.ɵfs = TabNavBarBasicExample;
+exports.ɵft = TableBasicFlexExample;
+exports.ɵfu = TableBasicExample;
+exports.ɵfv = TableDynamicColumnsExample;
+exports.ɵfw = TableExpandableRowsExample;
+exports.ɵfx = TableFilteringExample;
+exports.ɵfy = TableFooterRowExample;
+exports.ɵfz = TableHttpExample;
+exports.ɵga = TableMultipleHeaderFooterExample;
+exports.ɵgb = TableOverviewExample;
+exports.ɵgc = TablePaginationExample;
+exports.ɵgd = TableRowContextExample;
+exports.ɵge = TableSelectionExample;
+exports.ɵgf = TableSortingExample;
+exports.ɵgg = TableStickyColumnsExample;
+exports.ɵgh = TableStickyComplexFlexExample;
+exports.ɵgi = TableStickyComplexExample;
+exports.ɵgj = TableStickyFooterExample;
+exports.ɵgk = TableStickyHeaderExample;
+exports.ɵgl = TextFieldAutofillDirectiveExample;
+exports.ɵgm = TextFieldAutofillMonitorExample;
+exports.ɵgn = TextFieldAutosizeTextareaExample;
+exports.ɵgo = ToolbarOverviewExample;
+exports.ɵgp = TooltipAutoHideExample;
+exports.ɵgq = TooltipCustomClassExample;
+exports.ɵgr = TooltipDelayExample;
+exports.ɵgs = TooltipDisabledExample;
+exports.ɵgt = TooltipManualExample;
+exports.ɵgu = TooltipMessageExample;
+exports.ɵgw = TooltipModifiedDefaultsExample;
+exports.ɵgv = myCustomTooltipDefaults;
+exports.ɵgx = TooltipOverviewExample;
+exports.ɵgy = TooltipPositionExample;
+exports.ɵgz = ChecklistDatabase;
+exports.ɵha = TreeChecklistExample;
+exports.ɵhb = DynamicDatabase;
+exports.ɵhc = TreeDynamicExample;
+exports.ɵhd = FileDatabase$2;
+exports.ɵhe = TreeFlatOverviewExample;
+exports.ɵhf = LoadmoreDatabase;
+exports.ɵhg = TreeLoadmoreExample;
+exports.ɵhh = FileDatabase$3;
+exports.ɵhi = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

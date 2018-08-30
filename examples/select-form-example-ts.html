@@ -5,6 +5,11 @@
   viewValue: <span class="hljs-built_in">string</span>;
 }
 
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Car {
+  value: <span class="hljs-built_in">string</span>;
+  viewValue: <span class="hljs-built_in">string</span>;
+}
+
 <span class="hljs-comment">/**
  * @title Select in a form
  */</span>
@@ -15,10 +20,17 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectFormExample {
   selectedValue: <span class="hljs-built_in">string</span>;
+  selectedCar: <span class="hljs-built_in">string</span>;
 
   foods: Food[] = [
     {value: <span class="hljs-string">'steak-0'</span>, viewValue: <span class="hljs-string">'Steak'</span>},
     {value: <span class="hljs-string">'pizza-1'</span>, viewValue: <span class="hljs-string">'Pizza'</span>},
     {value: <span class="hljs-string">'tacos-2'</span>, viewValue: <span class="hljs-string">'Tacos'</span>}
+  ];
+
+  cars: Car[] = [
+    {value: <span class="hljs-string">'volvo'</span>, viewValue: <span class="hljs-string">'Volvo'</span>},
+    {value: <span class="hljs-string">'saab'</span>, viewValue: <span class="hljs-string">'Saab'</span>},
+    {value: <span class="hljs-string">'mercedes'</span>, viewValue: <span class="hljs-string">'Mercedes'</span>}
   ];
 }
