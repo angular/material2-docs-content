@@ -1568,7 +1568,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
         this.visible = true;
         this.selectable = true;
         this.removable = true;
-        this.addOnBlur = false;
+        this.addOnBlur = true;
         this.separatorKeysCodes = [ENTER, COMMA];
         this.fruitCtrl = new FormControl();
         this.fruits = ['Lemon'];
@@ -1584,19 +1584,23 @@ var ChipsAutocompleteExample = /** @class */ (function () {
      * @return {?}
      */
     function (event) {
-        /** @type {?} */
-        var input = event.input;
-        /** @type {?} */
-        var value = event.value;
-        // Add our fruit
-        if ((value || '').trim()) {
-            this.fruits.push(value.trim());
+        // Add fruit only when MatAutocomplete is not open
+        // To make sure this does not conflict with OptionSelected Event
+        if (!this.matAutocomplete.isOpen) {
+            /** @type {?} */
+            var input = event.input;
+            /** @type {?} */
+            var value = event.value;
+            // Add our fruit
+            if ((value || '').trim()) {
+                this.fruits.push(value.trim());
+            }
+            // Reset the input value
+            if (input) {
+                input.value = '';
+            }
+            this.fruitCtrl.setValue(null);
         }
-        // Reset the input value
-        if (input) {
-            input.value = '';
-        }
-        this.fruitCtrl.setValue(null);
     };
     /**
      * @param {?} fruit
@@ -1649,7 +1653,8 @@ var ChipsAutocompleteExample = /** @class */ (function () {
     /** @nocollapse */
     ChipsAutocompleteExample.ctorParameters = function () { return []; };
     ChipsAutocompleteExample.propDecorators = {
-        fruitInput: [{ type: ViewChild, args: ['fruitInput',] }]
+        fruitInput: [{ type: ViewChild, args: ['fruitInput',] }],
+        matAutocomplete: [{ type: ViewChild, args: ['auto',] }]
     };
     return ChipsAutocompleteExample;
 }());
