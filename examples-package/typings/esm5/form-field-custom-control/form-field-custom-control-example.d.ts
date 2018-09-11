@@ -3,6 +3,9 @@ import { ElementRef, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatFormFieldControl } from '@angular/material';
 import { Subject } from 'rxjs';
+/** @title Form field with custom telephone number input control. */
+export declare class FormFieldCustomControlExample {
+}
 /** Data structure for holding telephone number. */
 export declare class MyTel {
     area: string;
@@ -36,7 +39,4 @@ export declare class MyTelInput implements MatFormFieldControl<MyTel>, OnDestroy
     ngOnDestroy(): void;
     setDescribedByIds(ids: string[]): void;
     onContainerClick(event: MouseEvent): void;
-}
-/** @title Form field with custom telephone number input control. */
-export declare class FormFieldCustomControlExample {
 }

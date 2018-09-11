@@ -59,7 +59,7 @@ export { FocusMonitorDirectivesExample as ɵcl } from './focus-monitor-directive
 export { FocusMonitorFocusViaExample as ɵcm } from './focus-monitor-focus-via/focus-monitor-focus-via-example';
 export { FocusMonitorOverviewExample as ɵcn } from './focus-monitor-overview/focus-monitor-overview-example';
 export { FormFieldAppearanceExample as ɵco } from './form-field-appearance/form-field-appearance-example';
-export { FormFieldCustomControlExample as ɵcq, MyTelInput as ɵcp } from './form-field-custom-control/form-field-custom-control-example';
+export { FormFieldCustomControlExample as ɵcp, MyTelInput as ɵcq } from './form-field-custom-control/form-field-custom-control-example';
 export { FormFieldErrorExample as ɵcr } from './form-field-error/form-field-error-example';
 export { FormFieldHintExample as ɵcs } from './form-field-hint/form-field-hint-example';
 export { FormFieldLabelExample as ɵct } from './form-field-label/form-field-label-example';

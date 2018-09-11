@@ -5,17 +5,24 @@
 <span class="hljs-keyword">import</span> {MatFormFieldControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 
+<span class="hljs-comment">/** @title Form field with custom telephone number input control. */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'form-field-custom-control-example'</span>,
+  templateUrl: <span class="hljs-string">'form-field-custom-control-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'form-field-custom-control-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldCustomControlExample {}
+
 <span class="hljs-comment">/** Data structure for holding telephone number. */</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyTel {
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> area: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> exchange: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> subscriber: <span class="hljs-built_in">string</span></span>) {}
 }
 
-
 <span class="hljs-comment">/** Custom `MatFormFieldControl` for telephone number input. */</span>
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'my-tel-input'</span>,
-  templateUrl: <span class="hljs-string">'form-field-custom-control-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'form-field-custom-control-example.css'</span>],
+  templateUrl: <span class="hljs-string">'my-tel-input-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'my-tel-input-example.css'</span>],
   providers: [{provide: MatFormFieldControl, useExisting: MyTelInput}],
   host: {
     <span class="hljs-string">'[class.floating]'</span>: <span class="hljs-string">'shouldLabelFloat'</span>,
@@ -109,17 +116,3 @@
     }
   }
 }
-
-
-<span class="hljs-comment">/** @title Form field with custom telephone number input control. */</span>
-<span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'form-field-custom-control-example'</span>,
-  template: <span class="hljs-string">`
-    &lt;mat-form-field&gt;
-      &lt;my-tel-input placeholder="Phone number" required&gt;&lt;/my-tel-input&gt;
-      &lt;mat-icon matSuffix&gt;phone&lt;/mat-icon&gt;
-      &lt;mat-hint&gt;Include area code&lt;/mat-hint&gt;
-    &lt;/mat-form-field&gt;
-  `</span>
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldCustomControlExample {}

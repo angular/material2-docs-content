@@ -2883,6 +2883,21 @@ var FormFieldAppearanceExample = /** @class */ (function () {
  * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
+ * \@title Form field with custom telephone number input control.
+ */
+var FormFieldCustomControlExample = /** @class */ (function () {
+    function FormFieldCustomControlExample() {
+    }
+    FormFieldCustomControlExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'form-field-custom-control-example',
+                    template: "<mat-form-field><my-tel-input placeholder=\"Phone number\" required></my-tel-input><mat-icon matSuffix>phone</mat-icon><mat-hint>Include area code</mat-hint></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    return FormFieldCustomControlExample;
+}());
+/**
  * Data structure for holding telephone number.
  */
 var /**
@@ -3051,8 +3066,8 @@ var MyTelInput = /** @class */ (function () {
     MyTelInput.decorators = [
         { type: core.Component, args: [{
                     selector: 'my-tel-input',
-                    template: "<div [formGroup]=\"parts\"><input class=\"area\" formControlName=\"area\" size=\"3\"> <span>&ndash;</span> <input class=\"exchange\" formControlName=\"exchange\" size=\"3\"> <span>&ndash;</span> <input class=\"subscriber\" formControlName=\"subscriber\" size=\"4\"></div>",
-                    styles: ["div { display: flex; } input { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } span { opacity: 0; transition: opacity 200ms; } :host.floating span { opacity: 1; } "],
+                    template: "<div [formGroup]=\"parts\" class=\"my-tel-input-container\"><input class=\"my-tel-input-element\" formControlName=\"area\" size=\"3\"> <span class=\"my-tel-input-spacer\">&ndash;</span> <input class=\"my-tel-input-element\" formControlName=\"exchange\" size=\"3\"> <span class=\"my-tel-input-spacer\">&ndash;</span> <input class=\"my-tel-input-element\" formControlName=\"subscriber\" size=\"4\"></div>",
+                    styles: [".my-tel-input-container { display: flex; } .my-tel-input-element { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } .my-tel-input-spacer { opacity: 0; transition: opacity 200ms; } :host.floating .my-tel-input-spacer { opacity: 1; } "],
                     providers: [{ provide: material.MatFormFieldControl, useExisting: MyTelInput }],
                     host: {
                         '[class.floating]': 'shouldLabelFloat',
@@ -3074,20 +3089,6 @@ var MyTelInput = /** @class */ (function () {
         value: [{ type: core.Input }]
     };
     return MyTelInput;
-}());
-/**
- * \@title Form field with custom telephone number input control.
- */
-var FormFieldCustomControlExample = /** @class */ (function () {
-    function FormFieldCustomControlExample() {
-    }
-    FormFieldCustomControlExample.decorators = [
-        { type: core.Component, args: [{
-                    selector: 'form-field-custom-control-example',
-                    template: "\n    <mat-form-field>\n      <my-tel-input placeholder=\"Phone number\" required></my-tel-input>\n      <mat-icon matSuffix>phone</mat-icon>\n      <mat-hint>Include area code</mat-hint>\n    </mat-form-field>\n  "
-                },] },
-    ];
-    return FormFieldCustomControlExample;
 }());
 
 /**
@@ -8026,7 +8027,7 @@ var EXAMPLE_COMPONENTS = {
     'form-field-custom-control': {
         title: 'Form field with custom telephone number input control.',
         component: FormFieldCustomControlExample,
-        additionalFiles: ["form-field-custom-control-example.html"],
+        additionalFiles: ["my-tel-input-example.html", "my-tel-input-example.css"],
         selectorName: 'FormFieldCustomControlExample, MyTelInput'
     },
     'form-field-error': {
@@ -8819,8 +8820,8 @@ exports.ɵcl = FocusMonitorDirectivesExample;
 exports.ɵcm = FocusMonitorFocusViaExample;
 exports.ɵcn = FocusMonitorOverviewExample;
 exports.ɵco = FormFieldAppearanceExample;
-exports.ɵcq = FormFieldCustomControlExample;
-exports.ɵcp = MyTelInput;
+exports.ɵcp = FormFieldCustomControlExample;
+exports.ɵcq = MyTelInput;
 exports.ɵcr = FormFieldErrorExample;
 exports.ɵcs = FormFieldHintExample;
 exports.ɵct = FormFieldLabelExample;
