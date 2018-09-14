@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/portal'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/portal', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.a11y,global.ng.cdk.table,global.ng.cdk.tree,global.ng.cdk.dragDrop,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.overlay,global.ng.cdk.portal,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
-}(this, (function (exports,core,scrolling,a11y,table,tree,dragDrop,material,forms,operators,overlay,portal,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,coercion,platformBrowser,sidenav,layout,animations,http,textField,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/portal'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/cdk/stepper'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/portal', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/cdk/stepper', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.a11y,global.ng.cdk.table,global.ng.cdk.tree,global.ng.cdk.dragDrop,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.overlay,global.ng.cdk.portal,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.cdk.stepper,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
+}(this, (function (exports,core,scrolling,a11y,table,tree,dragDrop,material,forms,operators,overlay,portal,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,coercion,platformBrowser,sidenav,layout,stepper,animations,http,textField,common) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -4968,6 +4968,49 @@ var StepperEditableExample = /** @class */ (function () {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
+var ɵ0$2 = { showError: true };
+/**
+ * \@title Stepper that displays errors in the steps
+ */
+var StepperErrorsExample = /** @class */ (function () {
+    function StepperErrorsExample(_formBuilder) {
+        this._formBuilder = _formBuilder;
+    }
+    /**
+     * @return {?}
+     */
+    StepperErrorsExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', forms.Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', forms.Validators.required]
+        });
+    };
+    StepperErrorsExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'stepper-errors-example',
+                    template: "<mat-horizontal-stepper linear #stepper><mat-step [stepControl]=\"firstFormGroup\" errorMessage=\"Name is required.\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" errorMessage=\"Address is required.\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                    styles: [""],
+                    providers: [{
+                            provide: stepper.MAT_STEPPER_GLOBAL_OPTIONS, useValue: ɵ0$2
+                        }]
+                },] },
+    ];
+    /** @nocollapse */
+    StepperErrorsExample.ctorParameters = function () { return [
+        { type: forms.FormBuilder }
+    ]; };
+    return StepperErrorsExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
 /**
  * \@title Stepper with optional steps
  */
@@ -5042,6 +5085,49 @@ var StepperOverviewExample = /** @class */ (function () {
         { type: forms.FormBuilder }
     ]; };
     return StepperOverviewExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+var ɵ0$3 = { displayDefaultIndicatorType: false };
+/**
+ * \@title Stepper with customized states
+ */
+var StepperStatesExample = /** @class */ (function () {
+    function StepperStatesExample(_formBuilder) {
+        this._formBuilder = _formBuilder;
+    }
+    /**
+     * @return {?}
+     */
+    StepperStatesExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', forms.Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', forms.Validators.required]
+        });
+    };
+    StepperStatesExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'stepper-states-example',
+                    template: "<mat-horizontal-stepper #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\"><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper><mat-horizontal-stepper><mat-step label=\"Step 1\" state=\"phone\"><p>Put down your phones.</p><div><button mat-button matStepperNext>Next</button></div></mat-step><mat-step label=\"Step 2\" state=\"chat\"><p>Socialize with each other.</p><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></mat-step><mat-step label=\"Step 3\"><p>You're welcome.</p></mat-step><ng-template matStepperIcon=\"phone\"><mat-icon>call_end</mat-icon></ng-template><ng-template matStepperIcon=\"chat\"><mat-icon>forum</mat-icon></ng-template></mat-horizontal-stepper>",
+                    styles: [""],
+                    providers: [{
+                            provide: stepper.MAT_STEPPER_GLOBAL_OPTIONS, useValue: ɵ0$3
+                        }]
+                },] },
+    ];
+    /** @nocollapse */
+    StepperStatesExample.ctorParameters = function () { return [
+        { type: forms.FormBuilder }
+    ]; };
+    return StepperStatesExample;
 }());
 
 /**
@@ -8309,6 +8395,10 @@ var EXAMPLE_COMPONENTS = {
         title: 'Stepper with editable steps',
         component: StepperEditableExample
     },
+    'stepper-errors': {
+        title: 'Stepper that displays errors in the steps',
+        component: StepperErrorsExample
+    },
     'stepper-optional': {
         title: 'Stepper with optional steps',
         component: StepperOptionalExample
@@ -8316,6 +8406,10 @@ var EXAMPLE_COMPONENTS = {
     'stepper-overview': {
         title: 'Stepper overview',
         component: StepperOverviewExample
+    },
+    'stepper-states': {
+        title: 'Stepper with customized states',
+        component: StepperStatesExample
     },
     'stepper-vertical': {
         title: 'Stepper vertical',
@@ -8642,8 +8736,10 @@ var EXAMPLE_LIST = [
     SnackBarPositionExample,
     SortOverviewExample,
     StepperEditableExample,
+    StepperErrorsExample,
     StepperOptionalExample,
     StepperOverviewExample,
+    StepperStatesExample,
     StepperVerticalExample,
     TabGroupAsyncExample,
     TabGroupBasicExample,
@@ -8846,7 +8942,7 @@ exports.ɵdg = InputOverviewExample;
 exports.ɵdh = InputPrefixSuffixExample;
 exports.ɵdi = ListSectionsExample;
 exports.ɵdj = ListSelectionExample;
-exports.ɵhj = ExampleMaterialModule;
+exports.ɵhl = ExampleMaterialModule;
 exports.ɵdk = MenuIconsExample;
 exports.ɵdl = MenuOverviewExample;
 exports.ɵdm = NestedMenuExample;
@@ -8896,60 +8992,62 @@ exports.ɵfd = SnackBarOverviewExample;
 exports.ɵfe = SnackBarPositionExample;
 exports.ɵff = SortOverviewExample;
 exports.ɵfg = StepperEditableExample;
-exports.ɵfh = StepperOptionalExample;
-exports.ɵfi = StepperVerticalExample;
-exports.ɵfj = TabGroupAsyncExample;
-exports.ɵfk = TabGroupBasicExample;
-exports.ɵfl = TabGroupCustomLabelExample;
-exports.ɵfm = TabGroupDynamicHeightExample;
-exports.ɵfn = TabGroupDynamicExample;
-exports.ɵfo = TabGroupHeaderBelowExample;
-exports.ɵfp = TabGroupLazyLoadedExample;
-exports.ɵfq = TabGroupStretchedExample;
-exports.ɵfr = TabGroupThemeExample;
-exports.ɵfs = TabNavBarBasicExample;
-exports.ɵft = TableBasicFlexExample;
-exports.ɵfu = TableBasicExample;
-exports.ɵfv = TableDynamicColumnsExample;
-exports.ɵfw = TableExpandableRowsExample;
-exports.ɵfx = TableFilteringExample;
-exports.ɵfy = TableFooterRowExample;
-exports.ɵfz = TableHttpExample;
-exports.ɵga = TableMultipleHeaderFooterExample;
-exports.ɵgb = TableOverviewExample;
-exports.ɵgc = TablePaginationExample;
-exports.ɵgd = TableRowContextExample;
-exports.ɵge = TableSelectionExample;
-exports.ɵgf = TableSortingExample;
-exports.ɵgg = TableStickyColumnsExample;
-exports.ɵgh = TableStickyComplexFlexExample;
-exports.ɵgi = TableStickyComplexExample;
-exports.ɵgj = TableStickyFooterExample;
-exports.ɵgk = TableStickyHeaderExample;
-exports.ɵgl = TextFieldAutofillDirectiveExample;
-exports.ɵgm = TextFieldAutofillMonitorExample;
-exports.ɵgn = TextFieldAutosizeTextareaExample;
-exports.ɵgo = ToolbarOverviewExample;
-exports.ɵgp = TooltipAutoHideExample;
-exports.ɵgq = TooltipCustomClassExample;
-exports.ɵgr = TooltipDelayExample;
-exports.ɵgs = TooltipDisabledExample;
-exports.ɵgt = TooltipManualExample;
-exports.ɵgu = TooltipMessageExample;
-exports.ɵgw = TooltipModifiedDefaultsExample;
-exports.ɵgv = myCustomTooltipDefaults;
-exports.ɵgx = TooltipOverviewExample;
-exports.ɵgy = TooltipPositionExample;
-exports.ɵgz = ChecklistDatabase;
-exports.ɵha = TreeChecklistExample;
-exports.ɵhb = DynamicDatabase;
-exports.ɵhc = TreeDynamicExample;
-exports.ɵhd = FileDatabase$2;
-exports.ɵhe = TreeFlatOverviewExample;
-exports.ɵhf = LoadmoreDatabase;
-exports.ɵhg = TreeLoadmoreExample;
-exports.ɵhh = FileDatabase$3;
-exports.ɵhi = TreeNestedOverviewExample;
+exports.ɵfh = StepperErrorsExample;
+exports.ɵfi = StepperOptionalExample;
+exports.ɵfj = StepperStatesExample;
+exports.ɵfk = StepperVerticalExample;
+exports.ɵfl = TabGroupAsyncExample;
+exports.ɵfm = TabGroupBasicExample;
+exports.ɵfn = TabGroupCustomLabelExample;
+exports.ɵfo = TabGroupDynamicHeightExample;
+exports.ɵfp = TabGroupDynamicExample;
+exports.ɵfq = TabGroupHeaderBelowExample;
+exports.ɵfr = TabGroupLazyLoadedExample;
+exports.ɵfs = TabGroupStretchedExample;
+exports.ɵft = TabGroupThemeExample;
+exports.ɵfu = TabNavBarBasicExample;
+exports.ɵfv = TableBasicFlexExample;
+exports.ɵfw = TableBasicExample;
+exports.ɵfx = TableDynamicColumnsExample;
+exports.ɵfy = TableExpandableRowsExample;
+exports.ɵfz = TableFilteringExample;
+exports.ɵga = TableFooterRowExample;
+exports.ɵgb = TableHttpExample;
+exports.ɵgc = TableMultipleHeaderFooterExample;
+exports.ɵgd = TableOverviewExample;
+exports.ɵge = TablePaginationExample;
+exports.ɵgf = TableRowContextExample;
+exports.ɵgg = TableSelectionExample;
+exports.ɵgh = TableSortingExample;
+exports.ɵgi = TableStickyColumnsExample;
+exports.ɵgj = TableStickyComplexFlexExample;
+exports.ɵgk = TableStickyComplexExample;
+exports.ɵgl = TableStickyFooterExample;
+exports.ɵgm = TableStickyHeaderExample;
+exports.ɵgn = TextFieldAutofillDirectiveExample;
+exports.ɵgo = TextFieldAutofillMonitorExample;
+exports.ɵgp = TextFieldAutosizeTextareaExample;
+exports.ɵgq = ToolbarOverviewExample;
+exports.ɵgr = TooltipAutoHideExample;
+exports.ɵgs = TooltipCustomClassExample;
+exports.ɵgt = TooltipDelayExample;
+exports.ɵgu = TooltipDisabledExample;
+exports.ɵgv = TooltipManualExample;
+exports.ɵgw = TooltipMessageExample;
+exports.ɵgy = TooltipModifiedDefaultsExample;
+exports.ɵgx = myCustomTooltipDefaults;
+exports.ɵgz = TooltipOverviewExample;
+exports.ɵha = TooltipPositionExample;
+exports.ɵhb = ChecklistDatabase;
+exports.ɵhc = TreeChecklistExample;
+exports.ɵhd = DynamicDatabase;
+exports.ɵhe = TreeDynamicExample;
+exports.ɵhf = FileDatabase$2;
+exports.ɵhg = TreeFlatOverviewExample;
+exports.ɵhh = LoadmoreDatabase;
+exports.ɵhi = TreeLoadmoreExample;
+exports.ɵhj = FileDatabase$3;
+exports.ɵhk = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

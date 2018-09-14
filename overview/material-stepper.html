@@ -67,7 +67,49 @@
 
   <span class="hljs-comment">&lt;!-- Stepper steps go here --&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-vertical-stepper</span>&gt;</span>
-</code></pre><p class="docs-markdown-p">Note that you aren't limited to using the <code class="docs-markdown-code">mat-icon</code> component when providing custom icons.</p><h3 id="keyboard-interaction" class="docs-header-link docs-markdown-h3"><span header-link="keyboard-interaction"></span> Keyboard interaction</h3><ul class="docs-markdown-ul"><li class="docs-markdown-li"><kbd>LEFT_ARROW</kbd>: Focuses the previous step header</li><li class="docs-markdown-li"><kbd>RIGHT_ARROW</kbd>: Focuses the next step header</li><li class="docs-markdown-li"><kbd>ENTER</kbd>, <kbd>SPACE</kbd>: Selects the step that the focus is currently on</li><li class="docs-markdown-li"><kbd>TAB</kbd>: Focuses the next tabbable element</li><li class="docs-markdown-li"><kbd>TAB</kbd>+<kbd>SHIFT</kbd>: Focuses the previous tabbable element</li></ul><h3 id="localizing-labels" class="docs-header-link docs-markdown-h3"><span header-link="localizing-labels"></span> Localizing labels</h3><p class="docs-markdown-p">Labels used by the stepper are provided through <code class="docs-markdown-code">MatStepperIntl</code>. Localization of these messages can be done by providing a subclass with translated values in your application root module.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+</code></pre><p class="docs-markdown-p">Note that you aren't limited to using the <code class="docs-markdown-code">mat-icon</code> component when providing custom icons.</p><h4 id="step-states" class="docs-header-link docs-markdown-h4"><span header-link="step-states"></span> Step States</h4><p class="docs-markdown-p">You can set the state of a step to whatever you want. The given state by default maps to an icon. However, it can be overridden the same way as mentioned above.</p><pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Step 1"</span> <span class="hljs-attr">state</span>=<span class="hljs-string">"phone"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Put down your phones.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Step 2"</span> <span class="hljs-attr">state</span>=<span class="hljs-string">"chat"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Socialize with each other.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperPrevious</span>&gt;</span>Back<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matStepperNext</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-step</span> <span class="hljs-attr">label</span>=<span class="hljs-string">"Step 3"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You're welcome.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-step</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Icon overrides. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matStepperIcon</span>=<span class="hljs-string">"phone"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>call_end<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matStepperIcon</span>=<span class="hljs-string">"chat"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>forum<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-horizontal-stepper</span>&gt;</span>
+</code></pre><p class="docs-markdown-p">In order to use the custom step states, you must add the <code class="docs-markdown-code">displayDefaultIndicatorType</code> option to the global default stepper options which can be specified by providing a value for <code class="docs-markdown-code">MAT_STEPPER_GLOBAL_OPTIONS</code> in your application's root module.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  providers: [
+    {
+      provide: MAT_STEPPER_GLOBAL_OPTIONS,
+      useValue: { displayDefaultIndicatorType: <span class="hljs-literal">false</span> }
+    }
+  ]
+})
+</code></pre><div material-docs-example="stepper-states"></div><h3 id="error-state" class="docs-header-link docs-markdown-h3"><span header-link="error-state"></span> Error State</h3><p class="docs-markdown-p">The stepper can now show error states by simply providing the <code class="docs-markdown-code">showError</code> option to the <code class="docs-markdown-code">MAT_STEPPER_GLOBAL_OPTIONS</code> in your application's root module as mentioned above.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
+  providers: [
+    {
+      provide: MAT_STEPPER_GLOBAL_OPTIONS,
+      useValue: { showError: <span class="hljs-literal">true</span> }
+    }
+  ]
+})
+</code></pre><div material-docs-example="stepper-errors"></div><h3 id="keyboard-interaction" class="docs-header-link docs-markdown-h3"><span header-link="keyboard-interaction"></span> Keyboard interaction</h3><ul class="docs-markdown-ul"><li class="docs-markdown-li"><kbd>LEFT_ARROW</kbd>: Focuses the previous step header</li><li class="docs-markdown-li"><kbd>RIGHT_ARROW</kbd>: Focuses the next step header</li><li class="docs-markdown-li"><kbd>ENTER</kbd>, <kbd>SPACE</kbd>: Selects the step that the focus is currently on</li><li class="docs-markdown-li"><kbd>TAB</kbd>: Focuses the next tabbable element</li><li class="docs-markdown-li"><kbd>TAB</kbd>+<kbd>SHIFT</kbd>: Focuses the previous tabbable element</li></ul><h3 id="localizing-labels" class="docs-header-link docs-markdown-h3"><span header-link="localizing-labels"></span> Localizing labels</h3><p class="docs-markdown-p">Labels used by the stepper are provided through <code class="docs-markdown-code">MatStepperIntl</code>. Localization of these messages can be done by providing a subclass with translated values in your application root module.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
   imports: [MatStepperModule],
   providers: [
     {provide: MatStepperIntl, useClass: MyIntl},

@@ -135,8 +135,10 @@ import {SnackBarOverviewExample} from './snack-bar-overview/snack-bar-overview-e
 import {SnackBarPositionExample} from './snack-bar-position/snack-bar-position-example';
 import {SortOverviewExample} from './sort-overview/sort-overview-example';
 import {StepperEditableExample} from './stepper-editable/stepper-editable-example';
+import {StepperErrorsExample} from './stepper-errors/stepper-errors-example';
 import {StepperOptionalExample} from './stepper-optional/stepper-optional-example';
 import {StepperOverviewExample} from './stepper-overview/stepper-overview-example';
+import {StepperStatesExample} from './stepper-states/stepper-states-example';
 import {StepperVerticalExample} from './stepper-vertical/stepper-vertical-example';
 import {TabGroupAsyncExample} from './tab-group-async/tab-group-async-example';
 import {TabGroupBasicExample} from './tab-group-basic/tab-group-basic-example';
@@ -729,6 +731,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Stepper with editable steps',
     component: StepperEditableExample
   },
+  'stepper-errors': {
+    title: 'Stepper that displays errors in the steps',
+    component: StepperErrorsExample
+  },
   'stepper-optional': {
     title: 'Stepper with optional steps',
     component: StepperOptionalExample
@@ -736,6 +742,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'stepper-overview': {
     title: 'Stepper overview',
     component: StepperOverviewExample
+  },
+  'stepper-states': {
+    title: 'Stepper with customized states',
+    component: StepperStatesExample
   },
   'stepper-vertical': {
     title: 'Stepper vertical',
@@ -1062,8 +1072,10 @@ export const EXAMPLE_LIST = [
   SnackBarPositionExample,
   SortOverviewExample,
   StepperEditableExample,
+  StepperErrorsExample,
   StepperOptionalExample,
   StepperOverviewExample,
+  StepperStatesExample,
   StepperVerticalExample,
   TabGroupAsyncExample,
   TabGroupBasicExample,
