@@ -1235,7 +1235,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
         this.visible = true;
         this.selectable = true;
         this.removable = true;
-        this.addOnBlur = false;
+        this.addOnBlur = true;
         this.separatorKeysCodes = [ENTER, COMMA];
         this.fruitCtrl = new FormControl();
         this.fruits = ['Lemon'];
@@ -1251,17 +1251,21 @@ var ChipsAutocompleteExample = /** @class */ (function () {
      * @return {?}
      */
     function (event) {
-        var /** @type {?} */ input = event.input;
-        var /** @type {?} */ value = event.value;
-        // Add our fruit
-        if ((value || '').trim()) {
-            this.fruits.push(value.trim());
+        // Add fruit only when MatAutocomplete is not open
+        // To make sure this does not conflict with OptionSelected Event
+        if (!this.matAutocomplete.isOpen) {
+            var /** @type {?} */ input = event.input;
+            var /** @type {?} */ value = event.value;
+            // Add our fruit
+            if ((value || '').trim()) {
+                this.fruits.push(value.trim());
+            }
+            // Reset the input value
+            if (input) {
+                input.value = '';
+            }
+            this.fruitCtrl.setValue(null);
         }
-        // Reset the input value
-        if (input) {
-            input.value = '';
-        }
-        this.fruitCtrl.setValue(null);
     };
     /**
      * @param {?} fruit
@@ -1313,6 +1317,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
     ChipsAutocompleteExample.ctorParameters = function () { return []; };
     ChipsAutocompleteExample.propDecorators = {
         "fruitInput": [{ type: ViewChild, args: ['fruitInput',] },],
+        "matAutocomplete": [{ type: ViewChild, args: ['auto',] },],
     };
     return ChipsAutocompleteExample;
 }());
@@ -2306,7 +2311,7 @@ var ExpansionStepsExample = /** @class */ (function () {
         { type: Component, args: [{
                     selector: 'expansion-steps-example',
                     template: "<mat-accordion class=\"example-headers-align\"><mat-expansion-panel [expanded]=\"step === 0\" (opened)=\"setStep(0)\" hideToggle><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age<mat-icon>account_circle</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput type=\"number\" min=\"1\" placeholder=\"Age\"></mat-form-field><mat-action-row><button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button></mat-action-row></mat-expansion-panel><mat-expansion-panel [expanded]=\"step === 1\" (opened)=\"setStep(1)\" hideToggle><mat-expansion-panel-header><mat-panel-title>Destination</mat-panel-title><mat-panel-description>Type the country name<mat-icon>map</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Country\"></mat-form-field><mat-action-row><button mat-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button></mat-action-row></mat-expansion-panel><mat-expansion-panel [expanded]=\"step === 2\" (opened)=\"setStep(2)\" hideToggle><mat-expansion-panel-header><mat-panel-title>Day of the trip</mat-panel-title><mat-panel-description>Inform the date you wish to travel<mat-icon>date_range</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Date\" [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></mat-form-field><mat-datepicker #picker></mat-datepicker><mat-action-row><button mat-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button mat-button color=\"primary\" (click)=\"nextStep()\">End</button></mat-action-row></mat-expansion-panel></mat-accordion>",
-                    styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "],
+                    styles: [".example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "],
                 },] },
     ];
     return ExpansionStepsExample;
@@ -2536,6 +2541,21 @@ var FormFieldAppearanceExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Form field with custom telephone number input control.
+ */
+var FormFieldCustomControlExample = /** @class */ (function () {
+    function FormFieldCustomControlExample() {
+    }
+    FormFieldCustomControlExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'form-field-custom-control-example',
+                    template: "<mat-form-field><my-tel-input placeholder=\"Phone number\" required></my-tel-input><mat-icon matSuffix>phone</mat-icon><mat-hint>Include area code</mat-hint></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    return FormFieldCustomControlExample;
+}());
+/**
  * Data structure for holding telephone number.
  */
 var /**
@@ -2704,8 +2724,8 @@ var MyTelInput = /** @class */ (function () {
     MyTelInput.decorators = [
         { type: Component, args: [{
                     selector: 'my-tel-input',
-                    template: "<div [formGroup]=\"parts\"><input class=\"area\" formControlName=\"area\" size=\"3\"> <span>&ndash;</span> <input class=\"exchange\" formControlName=\"exchange\" size=\"3\"> <span>&ndash;</span> <input class=\"subscriber\" formControlName=\"subscriber\" size=\"4\"></div>",
-                    styles: ["div { display: flex; } input { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } span { opacity: 0; transition: opacity 200ms; } :host.floating span { opacity: 1; } "],
+                    template: "<div [formGroup]=\"parts\" class=\"my-tel-input-container\"><input class=\"my-tel-input-element\" formControlName=\"area\" size=\"3\"> <span class=\"my-tel-input-spacer\">&ndash;</span> <input class=\"my-tel-input-element\" formControlName=\"exchange\" size=\"3\"> <span class=\"my-tel-input-spacer\">&ndash;</span> <input class=\"my-tel-input-element\" formControlName=\"subscriber\" size=\"4\"></div>",
+                    styles: [".my-tel-input-container { display: flex; } .my-tel-input-element { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } .my-tel-input-spacer { opacity: 0; transition: opacity 200ms; } :host.floating .my-tel-input-spacer { opacity: 1; } "],
                     providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }],
                     host: {
                         '[class.floating]': 'shouldLabelFloat',
@@ -2727,20 +2747,6 @@ var MyTelInput = /** @class */ (function () {
         "value": [{ type: Input },],
     };
     return MyTelInput;
-}());
-/**
- * \@title Form field with custom telephone number input control.
- */
-var FormFieldCustomControlExample = /** @class */ (function () {
-    function FormFieldCustomControlExample() {
-    }
-    FormFieldCustomControlExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'form-field-custom-control-example',
-                    template: "\n    <mat-form-field>\n      <my-tel-input placeholder=\"Phone number\" required></my-tel-input>\n      <mat-icon matSuffix>phone</mat-icon>\n      <mat-hint>Include area code</mat-hint>\n    </mat-form-field>\n  "
-                },] },
-    ];
-    return FormFieldCustomControlExample;
 }());
 
 /**
@@ -7586,7 +7592,7 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
     'form-field-custom-control': {
         title: 'Form field with custom telephone number input control.',
         component: FormFieldCustomControlExample,
-        additionalFiles: ["form-field-custom-control-example.html"],
+        additionalFiles: ["my-tel-input-example.html", "my-tel-input-example.css"],
         selectorName: 'FormFieldCustomControlExample, MyTelInput'
     },
     'form-field-error': {
@@ -8300,5 +8306,5 @@ ExampleData = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleExclusiveExample as ɵk, ButtonTypesExample as ɵl, CardOverviewExample as ɵm, CdkTableBasicFlexExample as ɵn, CdkTableBasicExample as ɵo, CdkTreeFlatExample as ɵq, FileDatabase as ɵp, CdkTreeNestedExample as ɵs, FileDatabase$1 as ɵr, CheckboxConfigurableExample as ɵt, CheckboxOverviewExample as ɵu, ChipsAutocompleteExample as ɵv, ChipsInputExample as ɵw, ChipsOverviewExample as ɵx, ChipsStackedExample as ɵy, DatepickerApiExample as ɵz, DatepickerColorExample as ɵba, DatepickerCustomHeaderExample as ɵbb, ExampleHeader as ɵbc, DatepickerCustomIconExample as ɵbd, DatepickerDisabledExample as ɵbe, DatepickerEventsExample as ɵbf, DatepickerFilterExample as ɵbg, DatepickerFormatsExample as ɵbi, MY_FORMATS as ɵbh, DatepickerLocaleExample as ɵbj, DatepickerMinMaxExample as ɵbk, DatepickerMomentExample as ɵbl, DatepickerStartViewExample as ɵbm, DatepickerTouchExample as ɵbn, DatepickerValueExample as ɵbo, DatepickerViewsSelectionExample as ɵbq, MY_FORMATS$1 as ɵbp, DialogContentExample as ɵbr, DialogContentExampleDialog as ɵbs, DialogDataExample as ɵbt, DialogDataExampleDialog as ɵbu, DialogElementsExample as ɵbv, DialogElementsExampleDialog as ɵbw, DialogOverviewExample as ɵbx, DialogOverviewExampleDialog as ɵby, DividerOverviewExample as ɵbz, ElevationOverviewExample as ɵca, ExpansionExpandCollapseAllExample as ɵcb, ExpansionStepsExample as ɵcc, FocusMonitorDirectivesExample as ɵcd, FocusMonitorFocusViaExample as ɵce, FocusMonitorOverviewExample as ɵcf, FormFieldAppearanceExample as ɵcg, FormFieldCustomControlExample as ɵci, MyTelInput as ɵch, FormFieldErrorExample as ɵcj, FormFieldHintExample as ɵck, FormFieldLabelExample as ɵcl, FormFieldOverviewExample as ɵcm, FormFieldPrefixSuffixExample as ɵcn, FormFieldThemingExample as ɵco, GridListDynamicExample as ɵcp, GridListOverviewExample as ɵcq, IconOverviewExample as ɵcr, IconSvgExample as ɵcs, InputClearableExample as ɵct, InputErrorStateMatcherExample as ɵcu, InputErrorsExample as ɵcv, InputFormExample as ɵcw, InputHintExample as ɵcx, InputOverviewExample as ɵcy, InputPrefixSuffixExample as ɵcz, ListSectionsExample as ɵda, ListSelectionExample as ɵdb, ExampleMaterialModule as ɵhb, MenuIconsExample as ɵdc, MenuOverviewExample as ɵdd, NestedMenuExample as ɵde, PaginatorConfigurableExample as ɵdf, PaginatorOverviewExample as ɵdg, ProgressBarBufferExample as ɵdh, ProgressBarConfigurableExample as ɵdi, ProgressBarDeterminateExample as ɵdj, ProgressBarIndeterminateExample as ɵdk, ProgressBarQueryExample as ɵdl, ProgressSpinnerConfigurableExample as ɵdm, ProgressSpinnerOverviewExample as ɵdn, RadioNgModelExample as ɵdo, RadioOverviewExample as ɵdp, RippleOverviewExample as ɵdq, SelectCustomTriggerExample as ɵdr, SelectDisabledExample as ɵds, SelectErrorStateMatcherExample as ɵdt, SelectFormExample as ɵdu, SelectHintErrorExample as ɵdv, SelectMultipleExample as ɵdw, SelectNoRippleExample as ɵdx, SelectOptgroupExample as ɵdy, SelectOverviewExample as ɵdz, SelectPanelClassExample as ɵea, SelectResetExample as ɵeb, SelectValueBindingExample as ɵec, SidenavAutosizeExample as ɵed, SidenavBackdropExample as ɵee, SidenavDisableCloseExample as ɵef, SidenavDrawerOverviewExample as ɵeg, SidenavFixedExample as ɵeh, SidenavModeExample as ɵei, SidenavOpenCloseExample as ɵej, SidenavOverviewExample as ɵek, SidenavPositionExample as ɵel, SidenavResponsiveExample as ɵem, SlideToggleConfigurableExample as ɵen, SlideToggleFormsExample as ɵeo, SlideToggleOverviewExample as ɵep, SliderConfigurableExample as ɵeq, SliderFormattingExample as ɵer, SliderOverviewExample as ɵes, PizzaPartyComponent as ɵeu, SnackBarComponentExample as ɵet, SnackBarOverviewExample as ɵev, SnackBarPositionExample as ɵew, SortOverviewExample as ɵex, StepperEditableExample as ɵey, StepperOptionalExample as ɵez, StepperVerticalExample as ɵfa, TabGroupAsyncExample as ɵfb, TabGroupBasicExample as ɵfc, TabGroupCustomLabelExample as ɵfd, TabGroupDynamicHeightExample as ɵfe, TabGroupDynamicExample as ɵff, TabGroupHeaderBelowExample as ɵfg, TabGroupLazyLoadedExample as ɵfh, TabGroupStretchedExample as ɵfi, TabGroupThemeExample as ɵfj, TabNavBarBasicExample as ɵfk, TableBasicFlexExample as ɵfl, TableBasicExample as ɵfm, TableDynamicColumnsExample as ɵfn, TableExpandableRowsExample as ɵfo, TableFilteringExample as ɵfp, TableFooterRowExample as ɵfq, TableHttpExample as ɵfr, TableMultipleHeaderFooterExample as ɵfs, TableOverviewExample as ɵft, TablePaginationExample as ɵfu, TableRowContextExample as ɵfv, TableSelectionExample as ɵfw, TableSortingExample as ɵfx, TableStickyColumnsExample as ɵfy, TableStickyComplexFlexExample as ɵfz, TableStickyComplexExample as ɵga, TableStickyFooterExample as ɵgb, TableStickyHeaderExample as ɵgc, TextFieldAutofillDirectiveExample as ɵgd, TextFieldAutofillMonitorExample as ɵge, TextFieldAutosizeTextareaExample as ɵgf, ToolbarOverviewExample as ɵgg, TooltipAutoHideExample as ɵgh, TooltipCustomClassExample as ɵgi, TooltipDelayExample as ɵgj, TooltipDisabledExample as ɵgk, TooltipManualExample as ɵgl, TooltipMessageExample as ɵgm, TooltipModifiedDefaultsExample as ɵgo, myCustomTooltipDefaults as ɵgn, TooltipOverviewExample as ɵgp, TooltipPositionExample as ɵgq, ChecklistDatabase as ɵgr, TreeChecklistExample as ɵgs, DynamicDatabase as ɵgt, TreeDynamicExample as ɵgu, FileDatabase$2 as ɵgv, TreeFlatOverviewExample as ɵgw, LoadmoreDatabase as ɵgx, TreeLoadmoreExample as ɵgy, FileDatabase$3 as ɵgz, TreeNestedOverviewExample as ɵha };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleExclusiveExample as ɵk, ButtonTypesExample as ɵl, CardOverviewExample as ɵm, CdkTableBasicFlexExample as ɵn, CdkTableBasicExample as ɵo, CdkTreeFlatExample as ɵq, FileDatabase as ɵp, CdkTreeNestedExample as ɵs, FileDatabase$1 as ɵr, CheckboxConfigurableExample as ɵt, CheckboxOverviewExample as ɵu, ChipsAutocompleteExample as ɵv, ChipsInputExample as ɵw, ChipsOverviewExample as ɵx, ChipsStackedExample as ɵy, DatepickerApiExample as ɵz, DatepickerColorExample as ɵba, DatepickerCustomHeaderExample as ɵbb, ExampleHeader as ɵbc, DatepickerCustomIconExample as ɵbd, DatepickerDisabledExample as ɵbe, DatepickerEventsExample as ɵbf, DatepickerFilterExample as ɵbg, DatepickerFormatsExample as ɵbi, MY_FORMATS as ɵbh, DatepickerLocaleExample as ɵbj, DatepickerMinMaxExample as ɵbk, DatepickerMomentExample as ɵbl, DatepickerStartViewExample as ɵbm, DatepickerTouchExample as ɵbn, DatepickerValueExample as ɵbo, DatepickerViewsSelectionExample as ɵbq, MY_FORMATS$1 as ɵbp, DialogContentExample as ɵbr, DialogContentExampleDialog as ɵbs, DialogDataExample as ɵbt, DialogDataExampleDialog as ɵbu, DialogElementsExample as ɵbv, DialogElementsExampleDialog as ɵbw, DialogOverviewExample as ɵbx, DialogOverviewExampleDialog as ɵby, DividerOverviewExample as ɵbz, ElevationOverviewExample as ɵca, ExpansionExpandCollapseAllExample as ɵcb, ExpansionStepsExample as ɵcc, FocusMonitorDirectivesExample as ɵcd, FocusMonitorFocusViaExample as ɵce, FocusMonitorOverviewExample as ɵcf, FormFieldAppearanceExample as ɵcg, FormFieldCustomControlExample as ɵch, MyTelInput as ɵci, FormFieldErrorExample as ɵcj, FormFieldHintExample as ɵck, FormFieldLabelExample as ɵcl, FormFieldOverviewExample as ɵcm, FormFieldPrefixSuffixExample as ɵcn, FormFieldThemingExample as ɵco, GridListDynamicExample as ɵcp, GridListOverviewExample as ɵcq, IconOverviewExample as ɵcr, IconSvgExample as ɵcs, InputClearableExample as ɵct, InputErrorStateMatcherExample as ɵcu, InputErrorsExample as ɵcv, InputFormExample as ɵcw, InputHintExample as ɵcx, InputOverviewExample as ɵcy, InputPrefixSuffixExample as ɵcz, ListSectionsExample as ɵda, ListSelectionExample as ɵdb, ExampleMaterialModule as ɵhb, MenuIconsExample as ɵdc, MenuOverviewExample as ɵdd, NestedMenuExample as ɵde, PaginatorConfigurableExample as ɵdf, PaginatorOverviewExample as ɵdg, ProgressBarBufferExample as ɵdh, ProgressBarConfigurableExample as ɵdi, ProgressBarDeterminateExample as ɵdj, ProgressBarIndeterminateExample as ɵdk, ProgressBarQueryExample as ɵdl, ProgressSpinnerConfigurableExample as ɵdm, ProgressSpinnerOverviewExample as ɵdn, RadioNgModelExample as ɵdo, RadioOverviewExample as ɵdp, RippleOverviewExample as ɵdq, SelectCustomTriggerExample as ɵdr, SelectDisabledExample as ɵds, SelectErrorStateMatcherExample as ɵdt, SelectFormExample as ɵdu, SelectHintErrorExample as ɵdv, SelectMultipleExample as ɵdw, SelectNoRippleExample as ɵdx, SelectOptgroupExample as ɵdy, SelectOverviewExample as ɵdz, SelectPanelClassExample as ɵea, SelectResetExample as ɵeb, SelectValueBindingExample as ɵec, SidenavAutosizeExample as ɵed, SidenavBackdropExample as ɵee, SidenavDisableCloseExample as ɵef, SidenavDrawerOverviewExample as ɵeg, SidenavFixedExample as ɵeh, SidenavModeExample as ɵei, SidenavOpenCloseExample as ɵej, SidenavOverviewExample as ɵek, SidenavPositionExample as ɵel, SidenavResponsiveExample as ɵem, SlideToggleConfigurableExample as ɵen, SlideToggleFormsExample as ɵeo, SlideToggleOverviewExample as ɵep, SliderConfigurableExample as ɵeq, SliderFormattingExample as ɵer, SliderOverviewExample as ɵes, PizzaPartyComponent as ɵeu, SnackBarComponentExample as ɵet, SnackBarOverviewExample as ɵev, SnackBarPositionExample as ɵew, SortOverviewExample as ɵex, StepperEditableExample as ɵey, StepperOptionalExample as ɵez, StepperVerticalExample as ɵfa, TabGroupAsyncExample as ɵfb, TabGroupBasicExample as ɵfc, TabGroupCustomLabelExample as ɵfd, TabGroupDynamicHeightExample as ɵfe, TabGroupDynamicExample as ɵff, TabGroupHeaderBelowExample as ɵfg, TabGroupLazyLoadedExample as ɵfh, TabGroupStretchedExample as ɵfi, TabGroupThemeExample as ɵfj, TabNavBarBasicExample as ɵfk, TableBasicFlexExample as ɵfl, TableBasicExample as ɵfm, TableDynamicColumnsExample as ɵfn, TableExpandableRowsExample as ɵfo, TableFilteringExample as ɵfp, TableFooterRowExample as ɵfq, TableHttpExample as ɵfr, TableMultipleHeaderFooterExample as ɵfs, TableOverviewExample as ɵft, TablePaginationExample as ɵfu, TableRowContextExample as ɵfv, TableSelectionExample as ɵfw, TableSortingExample as ɵfx, TableStickyColumnsExample as ɵfy, TableStickyComplexFlexExample as ɵfz, TableStickyComplexExample as ɵga, TableStickyFooterExample as ɵgb, TableStickyHeaderExample as ɵgc, TextFieldAutofillDirectiveExample as ɵgd, TextFieldAutofillMonitorExample as ɵge, TextFieldAutosizeTextareaExample as ɵgf, ToolbarOverviewExample as ɵgg, TooltipAutoHideExample as ɵgh, TooltipCustomClassExample as ɵgi, TooltipDelayExample as ɵgj, TooltipDisabledExample as ɵgk, TooltipManualExample as ɵgl, TooltipMessageExample as ɵgm, TooltipModifiedDefaultsExample as ɵgo, myCustomTooltipDefaults as ɵgn, TooltipOverviewExample as ɵgp, TooltipPositionExample as ɵgq, ChecklistDatabase as ɵgr, TreeChecklistExample as ɵgs, DynamicDatabase as ɵgt, TreeDynamicExample as ɵgu, FileDatabase$2 as ɵgv, TreeFlatOverviewExample as ɵgw, LoadmoreDatabase as ɵgx, TreeLoadmoreExample as ɵgy, FileDatabase$3 as ɵgz, TreeNestedOverviewExample as ɵha };
 //# sourceMappingURL=material-examples.es5.js.map

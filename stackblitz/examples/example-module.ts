@@ -412,7 +412,7 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'form-field-custom-control': {
     title: 'Form field with custom telephone number input control.',
     component: FormFieldCustomControlExample,
-    additionalFiles: ["form-field-custom-control-example.html"],
+    additionalFiles: ["my-tel-input-example.html","my-tel-input-example.css"],
     selectorName: 'FormFieldCustomControlExample, MyTelInput'
   },
   'form-field-error': {

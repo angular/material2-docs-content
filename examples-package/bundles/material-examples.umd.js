@@ -29,12 +29,9 @@ and limitations under the License.
 ***************************************************************************** */
 /* global Reflect, Promise */
 
-var extendStatics = function(d, b) {
-    extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return extendStatics(d, b);
-};
+var extendStatics = Object.setPrototypeOf ||
+    ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+    function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
 
 function __extends(d, b) {
     extendStatics(d, b);
@@ -1246,7 +1243,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
         this.visible = true;
         this.selectable = true;
         this.removable = true;
-        this.addOnBlur = false;
+        this.addOnBlur = true;
         this.separatorKeysCodes = [keycodes.ENTER, keycodes.COMMA];
         this.fruitCtrl = new forms.FormControl();
         this.fruits = ['Lemon'];
@@ -1262,17 +1259,21 @@ var ChipsAutocompleteExample = /** @class */ (function () {
      * @return {?}
      */
     function (event) {
-        var /** @type {?} */ input = event.input;
-        var /** @type {?} */ value = event.value;
-        // Add our fruit
-        if ((value || '').trim()) {
-            this.fruits.push(value.trim());
+        // Add fruit only when MatAutocomplete is not open
+        // To make sure this does not conflict with OptionSelected Event
+        if (!this.matAutocomplete.isOpen) {
+            var /** @type {?} */ input = event.input;
+            var /** @type {?} */ value = event.value;
+            // Add our fruit
+            if ((value || '').trim()) {
+                this.fruits.push(value.trim());
+            }
+            // Reset the input value
+            if (input) {
+                input.value = '';
+            }
+            this.fruitCtrl.setValue(null);
         }
-        // Reset the input value
-        if (input) {
-            input.value = '';
-        }
-        this.fruitCtrl.setValue(null);
     };
     /**
      * @param {?} fruit
@@ -1324,6 +1325,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
     ChipsAutocompleteExample.ctorParameters = function () { return []; };
     ChipsAutocompleteExample.propDecorators = {
         "fruitInput": [{ type: core.ViewChild, args: ['fruitInput',] },],
+        "matAutocomplete": [{ type: core.ViewChild, args: ['auto',] },],
     };
     return ChipsAutocompleteExample;
 }());
@@ -2317,7 +2319,7 @@ var ExpansionStepsExample = /** @class */ (function () {
         { type: core.Component, args: [{
                     selector: 'expansion-steps-example',
                     template: "<mat-accordion class=\"example-headers-align\"><mat-expansion-panel [expanded]=\"step === 0\" (opened)=\"setStep(0)\" hideToggle><mat-expansion-panel-header><mat-panel-title>Personal data</mat-panel-title><mat-panel-description>Type your name and age<mat-icon>account_circle</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"First name\"></mat-form-field><mat-form-field><input matInput type=\"number\" min=\"1\" placeholder=\"Age\"></mat-form-field><mat-action-row><button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button></mat-action-row></mat-expansion-panel><mat-expansion-panel [expanded]=\"step === 1\" (opened)=\"setStep(1)\" hideToggle><mat-expansion-panel-header><mat-panel-title>Destination</mat-panel-title><mat-panel-description>Type the country name<mat-icon>map</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Country\"></mat-form-field><mat-action-row><button mat-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button mat-button color=\"primary\" (click)=\"nextStep()\">Next</button></mat-action-row></mat-expansion-panel><mat-expansion-panel [expanded]=\"step === 2\" (opened)=\"setStep(2)\" hideToggle><mat-expansion-panel-header><mat-panel-title>Day of the trip</mat-panel-title><mat-panel-description>Inform the date you wish to travel<mat-icon>date_range</mat-icon></mat-panel-description></mat-expansion-panel-header><mat-form-field><input matInput placeholder=\"Date\" [matDatepicker]=\"picker\" (focus)=\"picker.open()\" readonly=\"readonly\"></mat-form-field><mat-datepicker #picker></mat-datepicker><mat-action-row><button mat-button color=\"warn\" (click)=\"prevStep()\">Previous</button> <button mat-button color=\"primary\" (click)=\"nextStep()\">End</button></mat-action-row></mat-expansion-panel></mat-accordion>",
-                    styles: [".example-headers-align .mat-expansion-panel-header-title,  .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "],
+                    styles: [".example-headers-align .mat-expansion-panel-header-title, .example-headers-align .mat-expansion-panel-header-description { flex-basis: 0; } .example-headers-align .mat-expansion-panel-header-description { justify-content: space-between; align-items: center; } "],
                 },] },
     ];
     return ExpansionStepsExample;
@@ -2547,6 +2549,21 @@ var FormFieldAppearanceExample = /** @class */ (function () {
  * @suppress {checkTypes} checked by tsc
  */
 /**
+ * \@title Form field with custom telephone number input control.
+ */
+var FormFieldCustomControlExample = /** @class */ (function () {
+    function FormFieldCustomControlExample() {
+    }
+    FormFieldCustomControlExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'form-field-custom-control-example',
+                    template: "<mat-form-field><my-tel-input placeholder=\"Phone number\" required></my-tel-input><mat-icon matSuffix>phone</mat-icon><mat-hint>Include area code</mat-hint></mat-form-field>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    return FormFieldCustomControlExample;
+}());
+/**
  * Data structure for holding telephone number.
  */
 var /**
@@ -2715,8 +2732,8 @@ var MyTelInput = /** @class */ (function () {
     MyTelInput.decorators = [
         { type: core.Component, args: [{
                     selector: 'my-tel-input',
-                    template: "<div [formGroup]=\"parts\"><input class=\"area\" formControlName=\"area\" size=\"3\"> <span>&ndash;</span> <input class=\"exchange\" formControlName=\"exchange\" size=\"3\"> <span>&ndash;</span> <input class=\"subscriber\" formControlName=\"subscriber\" size=\"4\"></div>",
-                    styles: ["div { display: flex; } input { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } span { opacity: 0; transition: opacity 200ms; } :host.floating span { opacity: 1; } "],
+                    template: "<div [formGroup]=\"parts\" class=\"my-tel-input-container\"><input class=\"my-tel-input-element\" formControlName=\"area\" size=\"3\"> <span class=\"my-tel-input-spacer\">&ndash;</span> <input class=\"my-tel-input-element\" formControlName=\"exchange\" size=\"3\"> <span class=\"my-tel-input-spacer\">&ndash;</span> <input class=\"my-tel-input-element\" formControlName=\"subscriber\" size=\"4\"></div>",
+                    styles: [".my-tel-input-container { display: flex; } .my-tel-input-element { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } .my-tel-input-spacer { opacity: 0; transition: opacity 200ms; } :host.floating .my-tel-input-spacer { opacity: 1; } "],
                     providers: [{ provide: material.MatFormFieldControl, useExisting: MyTelInput }],
                     host: {
                         '[class.floating]': 'shouldLabelFloat',
@@ -2738,20 +2755,6 @@ var MyTelInput = /** @class */ (function () {
         "value": [{ type: core.Input },],
     };
     return MyTelInput;
-}());
-/**
- * \@title Form field with custom telephone number input control.
- */
-var FormFieldCustomControlExample = /** @class */ (function () {
-    function FormFieldCustomControlExample() {
-    }
-    FormFieldCustomControlExample.decorators = [
-        { type: core.Component, args: [{
-                    selector: 'form-field-custom-control-example',
-                    template: "\n    <mat-form-field>\n      <my-tel-input placeholder=\"Phone number\" required></my-tel-input>\n      <mat-icon matSuffix>phone</mat-icon>\n      <mat-hint>Include area code</mat-hint>\n    </mat-form-field>\n  "
-                },] },
-    ];
-    return FormFieldCustomControlExample;
 }());
 
 /**
@@ -7597,7 +7600,7 @@ var /** @type {?} */ EXAMPLE_COMPONENTS = {
     'form-field-custom-control': {
         title: 'Form field with custom telephone number input control.',
         component: FormFieldCustomControlExample,
-        additionalFiles: ["form-field-custom-control-example.html"],
+        additionalFiles: ["my-tel-input-example.html", "my-tel-input-example.css"],
         selectorName: 'FormFieldCustomControlExample, MyTelInput'
     },
     'form-field-error': {
@@ -8371,8 +8374,8 @@ exports.ɵcd = FocusMonitorDirectivesExample;
 exports.ɵce = FocusMonitorFocusViaExample;
 exports.ɵcf = FocusMonitorOverviewExample;
 exports.ɵcg = FormFieldAppearanceExample;
-exports.ɵci = FormFieldCustomControlExample;
-exports.ɵch = MyTelInput;
+exports.ɵch = FormFieldCustomControlExample;
+exports.ɵci = MyTelInput;
 exports.ɵcj = FormFieldErrorExample;
 exports.ɵck = FormFieldHintExample;
 exports.ɵcl = FormFieldLabelExample;
