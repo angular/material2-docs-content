@@ -136,6 +136,7 @@ import {SnackBarPositionExample} from './snack-bar-position/snack-bar-position-e
 import {SortOverviewExample} from './sort-overview/sort-overview-example';
 import {StepperEditableExample} from './stepper-editable/stepper-editable-example';
 import {StepperErrorsExample} from './stepper-errors/stepper-errors-example';
+import {StepperLabelPositionBottomExample} from './stepper-label-position-bottom/stepper-label-position-bottom-example';
 import {StepperOptionalExample} from './stepper-optional/stepper-optional-example';
 import {StepperOverviewExample} from './stepper-overview/stepper-overview-example';
 import {StepperStatesExample} from './stepper-states/stepper-states-example';
@@ -735,6 +736,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Stepper that displays errors in the steps',
     component: StepperErrorsExample
   },
+  'stepper-label-position-bottom': {
+    title: 'Stepper label bottom position',
+    component: StepperLabelPositionBottomExample
+  },
   'stepper-optional': {
     title: 'Stepper with optional steps',
     component: StepperOptionalExample
@@ -1073,6 +1078,7 @@ export const EXAMPLE_LIST = [
   SortOverviewExample,
   StepperEditableExample,
   StepperErrorsExample,
+  StepperLabelPositionBottomExample,
   StepperOptionalExample,
   StepperOverviewExample,
   StepperStatesExample,

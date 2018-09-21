@@ -5013,6 +5013,45 @@ var StepperErrorsExample = /** @class */ (function () {
  * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
+ * \@title Stepper label bottom position
+ */
+var StepperLabelPositionBottomExample = /** @class */ (function () {
+    function StepperLabelPositionBottomExample(_formBuilder) {
+        this._formBuilder = _formBuilder;
+    }
+    /**
+     * @return {?}
+     */
+    StepperLabelPositionBottomExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.firstFormGroup = this._formBuilder.group({
+            firstCtrl: ['', forms.Validators.required]
+        });
+        this.secondFormGroup = this._formBuilder.group({
+            secondCtrl: ['', forms.Validators.required]
+        });
+    };
+    StepperLabelPositionBottomExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'stepper-label-position-bottom-example',
+                    template: "<mat-horizontal-stepper labelPosition=\"bottom\" #stepper><mat-step [stepControl]=\"firstFormGroup\"><form [formGroup]=\"firstFormGroup\"><ng-template matStepLabel>Fill out your name</ng-template><mat-form-field><input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required></mat-form-field><div><button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step [stepControl]=\"secondFormGroup\" optional><form [formGroup]=\"secondFormGroup\"><ng-template matStepLabel>Fill out your address</ng-template><mat-form-field><input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required></mat-form-field><div><button mat-button matStepperPrevious>Back</button> <button mat-button matStepperNext>Next</button></div></form></mat-step><mat-step><ng-template matStepLabel>Done</ng-template>You are now done.<div><button mat-button matStepperPrevious>Back</button> <button mat-button (click)=\"stepper.reset()\">Reset</button></div></mat-step></mat-horizontal-stepper>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    StepperLabelPositionBottomExample.ctorParameters = function () { return [
+        { type: forms.FormBuilder }
+    ]; };
+    return StepperLabelPositionBottomExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
  * \@title Stepper with optional steps
  */
 var StepperOptionalExample = /** @class */ (function () {
@@ -8400,6 +8439,10 @@ var EXAMPLE_COMPONENTS = {
         title: 'Stepper that displays errors in the steps',
         component: StepperErrorsExample
     },
+    'stepper-label-position-bottom': {
+        title: 'Stepper label bottom position',
+        component: StepperLabelPositionBottomExample
+    },
     'stepper-optional': {
         title: 'Stepper with optional steps',
         component: StepperOptionalExample
@@ -8738,6 +8781,7 @@ var EXAMPLE_LIST = [
     SortOverviewExample,
     StepperEditableExample,
     StepperErrorsExample,
+    StepperLabelPositionBottomExample,
     StepperOptionalExample,
     StepperOverviewExample,
     StepperStatesExample,
@@ -8943,7 +8987,7 @@ exports.ɵdg = InputOverviewExample;
 exports.ɵdh = InputPrefixSuffixExample;
 exports.ɵdi = ListSectionsExample;
 exports.ɵdj = ListSelectionExample;
-exports.ɵhl = ExampleMaterialModule;
+exports.ɵhm = ExampleMaterialModule;
 exports.ɵdk = MenuIconsExample;
 exports.ɵdl = MenuOverviewExample;
 exports.ɵdm = NestedMenuExample;
@@ -8994,61 +9038,62 @@ exports.ɵfe = SnackBarPositionExample;
 exports.ɵff = SortOverviewExample;
 exports.ɵfg = StepperEditableExample;
 exports.ɵfh = StepperErrorsExample;
-exports.ɵfi = StepperOptionalExample;
-exports.ɵfj = StepperStatesExample;
-exports.ɵfk = StepperVerticalExample;
-exports.ɵfl = TabGroupAsyncExample;
-exports.ɵfm = TabGroupBasicExample;
-exports.ɵfn = TabGroupCustomLabelExample;
-exports.ɵfo = TabGroupDynamicHeightExample;
-exports.ɵfp = TabGroupDynamicExample;
-exports.ɵfq = TabGroupHeaderBelowExample;
-exports.ɵfr = TabGroupLazyLoadedExample;
-exports.ɵfs = TabGroupStretchedExample;
-exports.ɵft = TabGroupThemeExample;
-exports.ɵfu = TabNavBarBasicExample;
-exports.ɵfv = TableBasicFlexExample;
-exports.ɵfw = TableBasicExample;
-exports.ɵfx = TableDynamicColumnsExample;
-exports.ɵfy = TableExpandableRowsExample;
-exports.ɵfz = TableFilteringExample;
-exports.ɵga = TableFooterRowExample;
-exports.ɵgb = TableHttpExample;
-exports.ɵgc = TableMultipleHeaderFooterExample;
-exports.ɵgd = TableOverviewExample;
-exports.ɵge = TablePaginationExample;
-exports.ɵgf = TableRowContextExample;
-exports.ɵgg = TableSelectionExample;
-exports.ɵgh = TableSortingExample;
-exports.ɵgi = TableStickyColumnsExample;
-exports.ɵgj = TableStickyComplexFlexExample;
-exports.ɵgk = TableStickyComplexExample;
-exports.ɵgl = TableStickyFooterExample;
-exports.ɵgm = TableStickyHeaderExample;
-exports.ɵgn = TextFieldAutofillDirectiveExample;
-exports.ɵgo = TextFieldAutofillMonitorExample;
-exports.ɵgp = TextFieldAutosizeTextareaExample;
-exports.ɵgq = ToolbarOverviewExample;
-exports.ɵgr = TooltipAutoHideExample;
-exports.ɵgs = TooltipCustomClassExample;
-exports.ɵgt = TooltipDelayExample;
-exports.ɵgu = TooltipDisabledExample;
-exports.ɵgv = TooltipManualExample;
-exports.ɵgw = TooltipMessageExample;
-exports.ɵgy = TooltipModifiedDefaultsExample;
-exports.ɵgx = myCustomTooltipDefaults;
-exports.ɵgz = TooltipOverviewExample;
-exports.ɵha = TooltipPositionExample;
-exports.ɵhb = ChecklistDatabase;
-exports.ɵhc = TreeChecklistExample;
-exports.ɵhd = DynamicDatabase;
-exports.ɵhe = TreeDynamicExample;
-exports.ɵhf = FileDatabase$2;
-exports.ɵhg = TreeFlatOverviewExample;
-exports.ɵhh = LoadmoreDatabase;
-exports.ɵhi = TreeLoadmoreExample;
-exports.ɵhj = FileDatabase$3;
-exports.ɵhk = TreeNestedOverviewExample;
+exports.ɵfi = StepperLabelPositionBottomExample;
+exports.ɵfj = StepperOptionalExample;
+exports.ɵfk = StepperStatesExample;
+exports.ɵfl = StepperVerticalExample;
+exports.ɵfm = TabGroupAsyncExample;
+exports.ɵfn = TabGroupBasicExample;
+exports.ɵfo = TabGroupCustomLabelExample;
+exports.ɵfp = TabGroupDynamicHeightExample;
+exports.ɵfq = TabGroupDynamicExample;
+exports.ɵfr = TabGroupHeaderBelowExample;
+exports.ɵfs = TabGroupLazyLoadedExample;
+exports.ɵft = TabGroupStretchedExample;
+exports.ɵfu = TabGroupThemeExample;
+exports.ɵfv = TabNavBarBasicExample;
+exports.ɵfw = TableBasicFlexExample;
+exports.ɵfx = TableBasicExample;
+exports.ɵfy = TableDynamicColumnsExample;
+exports.ɵfz = TableExpandableRowsExample;
+exports.ɵga = TableFilteringExample;
+exports.ɵgb = TableFooterRowExample;
+exports.ɵgc = TableHttpExample;
+exports.ɵgd = TableMultipleHeaderFooterExample;
+exports.ɵge = TableOverviewExample;
+exports.ɵgf = TablePaginationExample;
+exports.ɵgg = TableRowContextExample;
+exports.ɵgh = TableSelectionExample;
+exports.ɵgi = TableSortingExample;
+exports.ɵgj = TableStickyColumnsExample;
+exports.ɵgk = TableStickyComplexFlexExample;
+exports.ɵgl = TableStickyComplexExample;
+exports.ɵgm = TableStickyFooterExample;
+exports.ɵgn = TableStickyHeaderExample;
+exports.ɵgo = TextFieldAutofillDirectiveExample;
+exports.ɵgp = TextFieldAutofillMonitorExample;
+exports.ɵgq = TextFieldAutosizeTextareaExample;
+exports.ɵgr = ToolbarOverviewExample;
+exports.ɵgs = TooltipAutoHideExample;
+exports.ɵgt = TooltipCustomClassExample;
+exports.ɵgu = TooltipDelayExample;
+exports.ɵgv = TooltipDisabledExample;
+exports.ɵgw = TooltipManualExample;
+exports.ɵgx = TooltipMessageExample;
+exports.ɵgz = TooltipModifiedDefaultsExample;
+exports.ɵgy = myCustomTooltipDefaults;
+exports.ɵha = TooltipOverviewExample;
+exports.ɵhb = TooltipPositionExample;
+exports.ɵhc = ChecklistDatabase;
+exports.ɵhd = TreeChecklistExample;
+exports.ɵhe = DynamicDatabase;
+exports.ɵhf = TreeDynamicExample;
+exports.ɵhg = FileDatabase$2;
+exports.ɵhh = TreeFlatOverviewExample;
+exports.ɵhi = LoadmoreDatabase;
+exports.ɵhj = TreeLoadmoreExample;
+exports.ɵhk = FileDatabase$3;
+exports.ɵhl = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
