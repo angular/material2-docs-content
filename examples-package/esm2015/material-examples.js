@@ -354,7 +354,6 @@ class AutocompleteOptgroupExample {
 }
 AutocompleteOptgroupExample.decorators = [
     { type: Component, args: [{
-                selector: 'autocomplete-optgroup-example',
                 template: "<form [formGroup]=\"stateForm\"><mat-form-field><input type=\"text\" matInput placeholder=\"States Group\" formControlName=\"stateGroup\" required [matAutocomplete]=\"autoGroup\"><mat-autocomplete #autoGroup=\"matAutocomplete\"><mat-optgroup *ngFor=\"let group of stateGroupOptions | async\" [label]=\"group.letter\"><mat-option *ngFor=\"let name of group.names\" [value]=\"name\">{{name}}</mat-option></mat-optgroup></mat-autocomplete></mat-form-field></form>",
                 styles: ["/** No CSS for this example */ "],
             },] },
