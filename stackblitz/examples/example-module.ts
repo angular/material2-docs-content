@@ -141,6 +141,7 @@ import {StepperOptionalExample} from './stepper-optional/stepper-optional-exampl
 import {StepperOverviewExample} from './stepper-overview/stepper-overview-example';
 import {StepperStatesExample} from './stepper-states/stepper-states-example';
 import {StepperVerticalExample} from './stepper-vertical/stepper-vertical-example';
+import {TabGroupAlignExample} from './tab-group-align/tab-group-align-example';
 import {TabGroupAsyncExample} from './tab-group-async/tab-group-async-example';
 import {TabGroupBasicExample} from './tab-group-basic/tab-group-basic-example';
 import {TabGroupCustomLabelExample} from './tab-group-custom-label/tab-group-custom-label-example';
@@ -756,6 +757,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Stepper vertical',
     component: StepperVerticalExample
   },
+  'tab-group-align': {
+    title: 'Tab group with aligned labels',
+    component: TabGroupAlignExample
+  },
   'tab-group-async': {
     title: 'Tab group with asynchronously loading tab contents',
     component: TabGroupAsyncExample
@@ -1083,6 +1088,7 @@ export const EXAMPLE_LIST = [
   StepperOverviewExample,
   StepperStatesExample,
   StepperVerticalExample,
+  TabGroupAlignExample,
   TabGroupAsyncExample,
   TabGroupBasicExample,
   TabGroupCustomLabelExample,
