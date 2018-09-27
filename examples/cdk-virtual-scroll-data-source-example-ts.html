@@ -1,0 +1,57 @@
+<span class="hljs-keyword">import</span> {CollectionViewer, DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {BehaviorSubject, Observable, Subscription} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+
+<span class="hljs-comment">/** @title Virtual scroll with a custom data source */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-virtual-scroll-data-source-example'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-virtual-scroll-data-source-example.css'</span>],
+  templateUrl: <span class="hljs-string">'cdk-virtual-scroll-data-source-example.html'</span>,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkVirtualScrollDataSourceExample {
+  ds = <span class="hljs-keyword">new</span> MyDataSource();
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyDataSource <span class="hljs-keyword">extends</span> DataSource&lt;<span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span>&gt; {
+  <span class="hljs-keyword">private</span> length = <span class="hljs-number">100000</span>;
+  <span class="hljs-keyword">private</span> pageSize = <span class="hljs-number">100</span>;
+  <span class="hljs-keyword">private</span> cachedData = <span class="hljs-built_in">Array</span>.from&lt;<span class="hljs-built_in">string</span>&gt;({length: <span class="hljs-keyword">this</span>.length});
+  <span class="hljs-keyword">private</span> fetchedPages = <span class="hljs-keyword">new</span> Set&lt;<span class="hljs-built_in">number</span>&gt;();
+  <span class="hljs-keyword">private</span> dataStream = <span class="hljs-keyword">new</span> BehaviorSubject&lt;(<span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span>)[]&gt;(<span class="hljs-keyword">this</span>.cachedData);
+  <span class="hljs-keyword">private</span> subscription = <span class="hljs-keyword">new</span> Subscription();
+
+  connect(collectionViewer: CollectionViewer): Observable&lt;(<span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span>)[]&gt; {
+    <span class="hljs-keyword">this</span>.subscription.add(collectionViewer.viewChange.subscribe(<span class="hljs-function"><span class="hljs-params">range</span> =&gt;</span> {
+      <span class="hljs-keyword">const</span> startPage = <span class="hljs-keyword">this</span>.getPageForIndex(range.start);
+      <span class="hljs-keyword">const</span> endPage = <span class="hljs-keyword">this</span>.getPageForIndex(range.end - <span class="hljs-number">1</span>);
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = startPage; i &lt;= endPage; i++) {
+        <span class="hljs-keyword">this</span>.fetchPage(i);
+      }
+    }));
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dataStream;
+  }
+
+  disconnect(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">this</span>.subscription.unsubscribe();
+  }
+
+  <span class="hljs-keyword">private</span> getPageForIndex(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">number</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.floor(index / <span class="hljs-keyword">this</span>.pageSize);
+  }
+
+  <span class="hljs-keyword">private</span> fetchPage(page: <span class="hljs-built_in">number</span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.fetchedPages.has(page)) {
+      <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">this</span>.fetchedPages.add(page);
+
+    <span class="hljs-comment">// Use `setTimeout` to simulate fetching data from server.</span>
+    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      <span class="hljs-keyword">this</span>.cachedData.splice(page * <span class="hljs-keyword">this</span>.pageSize, <span class="hljs-keyword">this</span>.pageSize,
+          ...Array.from({length: <span class="hljs-keyword">this</span>.pageSize})
+              .map(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Item #<span class="hljs-subst">${page * this.pageSize + i}</span>`</span>));
+      <span class="hljs-keyword">this</span>.dataStream.next(<span class="hljs-keyword">this</span>.cachedData);
+    }, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">1000</span> + <span class="hljs-number">200</span>);
+  }
+}

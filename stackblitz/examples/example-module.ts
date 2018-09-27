@@ -31,6 +31,13 @@ import {CdkTableBasicFlexExample} from './cdk-table-basic-flex/cdk-table-basic-f
 import {CdkTableBasicExample} from './cdk-table-basic/cdk-table-basic-example';
 import {CdkTreeFlatExample} from './cdk-tree-flat/cdk-tree-flat-example';
 import {CdkTreeNestedExample} from './cdk-tree-nested/cdk-tree-nested-example';
+import {CdkVirtualScrollContextExample} from './cdk-virtual-scroll-context/cdk-virtual-scroll-context-example';
+import {CdkVirtualScrollDataSourceExample} from './cdk-virtual-scroll-data-source/cdk-virtual-scroll-data-source-example';
+import {CdkVirtualScrollDlExample} from './cdk-virtual-scroll-dl/cdk-virtual-scroll-dl-example';
+import {CdkVirtualScrollFixedBufferExample} from './cdk-virtual-scroll-fixed-buffer/cdk-virtual-scroll-fixed-buffer-example';
+import {CdkVirtualScrollHorizontalExample} from './cdk-virtual-scroll-horizontal/cdk-virtual-scroll-horizontal-example';
+import {CdkVirtualScrollOverviewExample} from './cdk-virtual-scroll-overview/cdk-virtual-scroll-overview-example';
+import {CdkVirtualScrollTemplateCacheExample} from './cdk-virtual-scroll-template-cache/cdk-virtual-scroll-template-cache-example';
 import {CheckboxConfigurableExample} from './checkbox-configurable/checkbox-configurable-example';
 import {CheckboxOverviewExample} from './checkbox-overview/checkbox-overview-example';
 import {ChipsAutocompleteExample} from './chips-autocomplete/chips-autocomplete-example';
@@ -303,6 +310,34 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'cdk-tree-nested': {
     title: 'Tree with nested nodes',
     component: CdkTreeNestedExample
+  },
+  'cdk-virtual-scroll-context': {
+    title: 'Virtual scroll context variables',
+    component: CdkVirtualScrollContextExample
+  },
+  'cdk-virtual-scroll-data-source': {
+    title: 'Virtual scroll with a custom data source',
+    component: CdkVirtualScrollDataSourceExample
+  },
+  'cdk-virtual-scroll-dl': {
+    title: 'Virtual scrolling `<dl>`',
+    component: CdkVirtualScrollDlExample
+  },
+  'cdk-virtual-scroll-fixed-buffer': {
+    title: 'Fixed size virtual scroll with custom buffer parameters',
+    component: CdkVirtualScrollFixedBufferExample
+  },
+  'cdk-virtual-scroll-horizontal': {
+    title: 'Horizontal virtual scroll',
+    component: CdkVirtualScrollHorizontalExample
+  },
+  'cdk-virtual-scroll-overview': {
+    title: 'Basic virtual scroll',
+    component: CdkVirtualScrollOverviewExample
+  },
+  'cdk-virtual-scroll-template-cache': {
+    title: 'Virtual scroll with no template caching',
+    component: CdkVirtualScrollTemplateCacheExample
   },
   'checkbox-configurable': {
     title: 'Configurable checkbox',
@@ -978,6 +1013,13 @@ export const EXAMPLE_LIST = [
   CdkTableBasicExample,
   CdkTreeFlatExample,
   CdkTreeNestedExample,
+  CdkVirtualScrollContextExample,
+  CdkVirtualScrollDataSourceExample,
+  CdkVirtualScrollDlExample,
+  CdkVirtualScrollFixedBufferExample,
+  CdkVirtualScrollHorizontalExample,
+  CdkVirtualScrollOverviewExample,
+  CdkVirtualScrollTemplateCacheExample,
   CheckboxConfigurableExample,
   CheckboxOverviewExample,
   ChipsAutocompleteExample,

@@ -1,0 +1,17 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">cdk-virtual-scroll-viewport</span> [<span class="hljs-attr">itemSize</span>]=<span class="hljs-string">"18 * 7"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-viewport"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> *<span class="hljs-attr">cdkVirtualFor</span>=<span class="hljs-string">"let item of items;
+                       let index = index;
+                       let count = count;
+                       let first = first;
+                       let last = last;
+                       let even = even;
+                       let odd = odd;"</span> [<span class="hljs-attr">class.example-alternate</span>]=<span class="hljs-string">"odd"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-item-detail"</span>&gt;</span>Item: {{item}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-item-detail"</span>&gt;</span>Index: {{index}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-item-detail"</span>&gt;</span>Count: {{count}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-item-detail"</span>&gt;</span>First: {{first ? 'Yes' : 'No'}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-item-detail"</span>&gt;</span>Last: {{last ? 'Yes' : 'No'}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-item-detail"</span>&gt;</span>Event: {{even ? 'Yes' : 'No'}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-item-detail"</span>&gt;</span>Odd: {{odd ? 'Yes' : 'No'}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">cdk-virtual-scroll-viewport</span>&gt;</span>

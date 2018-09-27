@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule, Component, ViewChild, TemplateRef, ViewContainerRef, Injectable, ElementRef, ChangeDetectionStrategy, ChangeDetectorRef, Host, Inject, NgZone, Input, ViewEncapsulation } from '@angular/core';
+import { NgModule, Component, ViewChild, TemplateRef, ViewContainerRef, Injectable, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, ChangeDetectorRef, Host, Inject, NgZone, Input } from '@angular/core';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -17,7 +17,7 @@ import { map, startWith, takeUntil, catchError, switchMap, take } from 'rxjs/ope
 import { Overlay } from '@angular/cdk/overlay';
 import { TemplatePortal } from '@angular/cdk/portal';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
-import { BehaviorSubject, of, Subject, Observable, merge } from 'rxjs';
+import { BehaviorSubject, of, Subscription, Subject, Observable, merge } from 'rxjs';
 import { MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource } from '@angular/material/tree';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
@@ -1315,6 +1315,261 @@ CdkTreeNestedExample.decorators = [
 /** @nocollapse */
 CdkTreeNestedExample.ctorParameters = () => [
     { type: FileDatabase$1 }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
+ * \@title Virtual scroll context variables
+ */
+class CdkVirtualScrollContextExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+    }
+}
+CdkVirtualScrollContextExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-virtual-scroll-context-example',
+                styles: [".example-viewport { height: 200px; width: 200px; border: 1px solid black; } .example-item-detail { height: 18px; } .example-alternate { background: rgba(127, 127, 127, 0.3); } "],
+                template: "<cdk-virtual-scroll-viewport [itemSize]=\"18 * 7\" class=\"example-viewport\"><div *cdkVirtualFor=\"let item of items; let index = index; let count = count; let first = first; let last = last; let even = even; let odd = odd;\" [class.example-alternate]=\"odd\"><div class=\"example-item-detail\">Item: {{item}}</div><div class=\"example-item-detail\">Index: {{index}}</div><div class=\"example-item-detail\">Count: {{count}}</div><div class=\"example-item-detail\">First: {{first ? 'Yes' : 'No'}}</div><div class=\"example-item-detail\">Last: {{last ? 'Yes' : 'No'}}</div><div class=\"example-item-detail\">Event: {{even ? 'Yes' : 'No'}}</div><div class=\"example-item-detail\">Odd: {{odd ? 'Yes' : 'No'}}</div></div></cdk-virtual-scroll-viewport>",
+                changeDetection: ChangeDetectionStrategy.OnPush,
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
+ * \@title Virtual scroll with a custom data source
+ */
+class CdkVirtualScrollDataSourceExample {
+    constructor() {
+        this.ds = new MyDataSource();
+    }
+}
+CdkVirtualScrollDataSourceExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-virtual-scroll-data-source-example',
+                styles: [".example-viewport { height: 200px; width: 200px; border: 1px solid black; } .example-item { height: 50px; } "],
+                template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\"><div *cdkVirtualFor=\"let item of ds\" class=\"example-item\">{{item || 'Loading...'}}</div></cdk-virtual-scroll-viewport>",
+                changeDetection: ChangeDetectionStrategy.OnPush,
+            },] },
+];
+class MyDataSource extends DataSource {
+    constructor() {
+        super(...arguments);
+        this.length = 100000;
+        this.pageSize = 100;
+        this.cachedData = Array.from({ length: this.length });
+        this.fetchedPages = new Set();
+        this.dataStream = new BehaviorSubject(this.cachedData);
+        this.subscription = new Subscription();
+    }
+    /**
+     * @param {?} collectionViewer
+     * @return {?}
+     */
+    connect(collectionViewer) {
+        this.subscription.add(collectionViewer.viewChange.subscribe(range => {
+            /** @type {?} */
+            const startPage = this.getPageForIndex(range.start);
+            /** @type {?} */
+            const endPage = this.getPageForIndex(range.end - 1);
+            for (let i = startPage; i <= endPage; i++) {
+                this.fetchPage(i);
+            }
+        }));
+        return this.dataStream;
+    }
+    /**
+     * @return {?}
+     */
+    disconnect() {
+        this.subscription.unsubscribe();
+    }
+    /**
+     * @param {?} index
+     * @return {?}
+     */
+    getPageForIndex(index) {
+        return Math.floor(index / this.pageSize);
+    }
+    /**
+     * @param {?} page
+     * @return {?}
+     */
+    fetchPage(page) {
+        if (this.fetchedPages.has(page)) {
+            return;
+        }
+        this.fetchedPages.add(page);
+        // Use `setTimeout` to simulate fetching data from server.
+        setTimeout(() => {
+            this.cachedData.splice(page * this.pageSize, this.pageSize, ...Array.from({ length: this.pageSize })
+                .map((_, i) => `Item #${page * this.pageSize + i}`));
+            this.dataStream.next(this.cachedData);
+        }, Math.random() * 1000 + 200);
+    }
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
+ * \@title Virtual scrolling `<dl>`
+ */
+class CdkVirtualScrollDlExample {
+    constructor() {
+        this.states = [
+            { name: 'Alabama', capital: 'Montgomery' },
+            { name: 'Alaska', capital: 'Juneau' },
+            { name: 'Arizona', capital: 'Phoenix' },
+            { name: 'Arkansas', capital: 'Little Rock' },
+            { name: 'California', capital: 'Sacramento' },
+            { name: 'Colorado', capital: 'Denver' },
+            { name: 'Connecticut', capital: 'Hartford' },
+            { name: 'Delaware', capital: 'Dover' },
+            { name: 'Florida', capital: 'Tallahassee' },
+            { name: 'Georgia', capital: 'Atlanta' },
+            { name: 'Hawaii', capital: 'Honolulu' },
+            { name: 'Idaho', capital: 'Boise' },
+            { name: 'Illinois', capital: 'Springfield' },
+            { name: 'Indiana', capital: 'Indianapolis' },
+            { name: 'Iowa', capital: 'Des Moines' },
+            { name: 'Kansas', capital: 'Topeka' },
+            { name: 'Kentucky', capital: 'Frankfort' },
+            { name: 'Louisiana', capital: 'Baton Rouge' },
+            { name: 'Maine', capital: 'Augusta' },
+            { name: 'Maryland', capital: 'Annapolis' },
+            { name: 'Massachusetts', capital: 'Boston' },
+            { name: 'Michigan', capital: 'Lansing' },
+            { name: 'Minnesota', capital: 'St. Paul' },
+            { name: 'Mississippi', capital: 'Jackson' },
+            { name: 'Missouri', capital: 'Jefferson City' },
+            { name: 'Montana', capital: 'Helena' },
+            { name: 'Nebraska', capital: 'Lincoln' },
+            { name: 'Nevada', capital: 'Carson City' },
+            { name: 'New Hampshire', capital: 'Concord' },
+            { name: 'New Jersey', capital: 'Trenton' },
+            { name: 'New Mexico', capital: 'Santa Fe' },
+            { name: 'New York', capital: 'Albany' },
+            { name: 'North Carolina', capital: 'Raleigh' },
+            { name: 'North Dakota', capital: 'Bismarck' },
+            { name: 'Ohio', capital: 'Columbus' },
+            { name: 'Oklahoma', capital: 'Oklahoma City' },
+            { name: 'Oregon', capital: 'Salem' },
+            { name: 'Pennsylvania', capital: 'Harrisburg' },
+            { name: 'Rhode Island', capital: 'Providence' },
+            { name: 'South Carolina', capital: 'Columbia' },
+            { name: 'South Dakota', capital: 'Pierre' },
+            { name: 'Tennessee', capital: 'Nashville' },
+            { name: 'Texas', capital: 'Austin' },
+            { name: 'Utah', capital: 'Salt Lake City' },
+            { name: 'Vermont', capital: 'Montpelier' },
+            { name: 'Virginia', capital: 'Richmond' },
+            { name: 'Washington', capital: 'Olympia' },
+            { name: 'West Virginia', capital: 'Charleston' },
+            { name: 'Wisconsin', capital: 'Madison' },
+            { name: 'Wyoming', capital: 'Cheyenne' },
+        ];
+    }
+}
+CdkVirtualScrollDlExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-virtual-scroll-dl-example',
+                styles: [".example-viewport { height: 200px; width: 200px; border: 1px solid black; } .example-dt { height: 30px; font-weight: bold; } .example-dd { height: 30px; } "],
+                template: "<cdk-virtual-scroll-viewport class=\"example-viewport\" itemSize=\"60\"><dl class=\"example-dl\"><ng-container *cdkVirtualFor=\"let state of states\"><dt class=\"example-dt\">{{state.name}}</dt><dd class=\"example-dd\">{{state.capital}}</dd></ng-container></dl></cdk-virtual-scroll-viewport>",
+                changeDetection: ChangeDetectionStrategy.OnPush,
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
+ * \@title Fixed size virtual scroll with custom buffer parameters
+ */
+class CdkVirtualScrollFixedBufferExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+    }
+}
+CdkVirtualScrollFixedBufferExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-virtual-scroll-fixed-buffer-example',
+                styles: [".example-viewport { height: 200px; width: 200px; border: 1px solid black; } .example-item { height: 50px; } "],
+                template: "<cdk-virtual-scroll-viewport itemSize=\"50\" minBufferPx=\"200\" maxBufferPx=\"400\" class=\"example-viewport\"><div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div></cdk-virtual-scroll-viewport>",
+                changeDetection: ChangeDetectionStrategy.OnPush,
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
+ * \@title Horizontal virtual scroll
+ */
+class CdkVirtualScrollHorizontalExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+    }
+}
+CdkVirtualScrollHorizontalExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-virtual-scroll-horizontal-example',
+                styles: [".cdk-virtual-scroll-data-source-example .example-viewport { height: 200px; width: 200px; border: 1px solid black; } .cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper { display: flex; flex-direction: row; } .cdk-virtual-scroll-data-source-example .example-item { width: 50px; height: 100%; writing-mode: vertical-lr; } "],
+                template: "<div class=\"cdk-virtual-scroll-data-source-example\"><cdk-virtual-scroll-viewport orientation=\"horizontal\" itemSize=\"50\" class=\"example-viewport\"><div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div></cdk-virtual-scroll-viewport></div>",
+                encapsulation: ViewEncapsulation.None,
+                changeDetection: ChangeDetectionStrategy.OnPush,
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
+ * \@title Basic virtual scroll
+ */
+class CdkVirtualScrollOverviewExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+    }
+}
+CdkVirtualScrollOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-virtual-scroll-overview-example',
+                styles: [".example-viewport { height: 200px; width: 200px; border: 1px solid black; } .example-item { height: 50px; } "],
+                template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\"><div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div></cdk-virtual-scroll-viewport>",
+                changeDetection: ChangeDetectionStrategy.OnPush,
+            },] },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
+ * \@title Virtual scroll with no template caching
+ */
+class CdkVirtualScrollTemplateCacheExample {
+    constructor() {
+        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+    }
+}
+CdkVirtualScrollTemplateCacheExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-virtual-scroll-template-cache-example',
+                styles: [".example-viewport { height: 200px; width: 200px; border: 1px solid black; } .example-item { height: 50px; } "],
+                template: "<cdk-virtual-scroll-viewport itemSize=\"50\" class=\"example-viewport\"><div *cdkVirtualFor=\"let item of items; templateCacheSize: 0\" class=\"example-item\">{{item}}</div></cdk-virtual-scroll-viewport>",
+                changeDetection: ChangeDetectionStrategy.OnPush,
+            },] },
 ];
 
 /**
@@ -7178,6 +7433,34 @@ const EXAMPLE_COMPONENTS = {
         title: 'Tree with nested nodes',
         component: CdkTreeNestedExample
     },
+    'cdk-virtual-scroll-context': {
+        title: 'Virtual scroll context variables',
+        component: CdkVirtualScrollContextExample
+    },
+    'cdk-virtual-scroll-data-source': {
+        title: 'Virtual scroll with a custom data source',
+        component: CdkVirtualScrollDataSourceExample
+    },
+    'cdk-virtual-scroll-dl': {
+        title: 'Virtual scrolling `<dl>`',
+        component: CdkVirtualScrollDlExample
+    },
+    'cdk-virtual-scroll-fixed-buffer': {
+        title: 'Fixed size virtual scroll with custom buffer parameters',
+        component: CdkVirtualScrollFixedBufferExample
+    },
+    'cdk-virtual-scroll-horizontal': {
+        title: 'Horizontal virtual scroll',
+        component: CdkVirtualScrollHorizontalExample
+    },
+    'cdk-virtual-scroll-overview': {
+        title: 'Basic virtual scroll',
+        component: CdkVirtualScrollOverviewExample
+    },
+    'cdk-virtual-scroll-template-cache': {
+        title: 'Virtual scroll with no template caching',
+        component: CdkVirtualScrollTemplateCacheExample
+    },
     'checkbox-configurable': {
         title: 'Configurable checkbox',
         component: CheckboxConfigurableExample
@@ -7852,6 +8135,13 @@ const EXAMPLE_LIST = [
     CdkTableBasicExample,
     CdkTreeFlatExample,
     CdkTreeNestedExample,
+    CdkVirtualScrollContextExample,
+    CdkVirtualScrollDataSourceExample,
+    CdkVirtualScrollDlExample,
+    CdkVirtualScrollFixedBufferExample,
+    CdkVirtualScrollHorizontalExample,
+    CdkVirtualScrollOverviewExample,
+    CdkVirtualScrollTemplateCacheExample,
     CheckboxConfigurableExample,
     CheckboxOverviewExample,
     ChipsAutocompleteExample,
@@ -8069,5 +8359,5 @@ class ExampleData {
  * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleExclusiveExample as ɵk, ButtonTypesExample as ɵl, CardOverviewExample as ɵm, CdkDragDropAxisLockExample as ɵn, CdkDragDropConnectedSortingExample as ɵo, CdkDragDropCustomPreviewExample as ɵp, CdkDragDropHandleExample as ɵq, CdkDragDropHorizontalSortingExample as ɵr, CdkDragDropOverviewExample as ɵs, CdkDragDropRootElementExample as ɵt, CdkDragDropSortingExample as ɵu, CdkTableBasicFlexExample as ɵv, CdkTableBasicExample as ɵw, CdkTreeFlatExample as ɵy, FileDatabase as ɵx, CdkTreeNestedExample as ɵba, FileDatabase$1 as ɵz, CheckboxConfigurableExample as ɵbb, CheckboxOverviewExample as ɵbc, ChipsAutocompleteExample as ɵbd, ChipsInputExample as ɵbe, ChipsOverviewExample as ɵbf, ChipsStackedExample as ɵbg, DatepickerApiExample as ɵbh, DatepickerColorExample as ɵbi, DatepickerCustomHeaderExample as ɵbj, ExampleHeader as ɵbk, DatepickerCustomIconExample as ɵbl, DatepickerDisabledExample as ɵbm, DatepickerEventsExample as ɵbn, DatepickerFilterExample as ɵbo, DatepickerFormatsExample as ɵbq, MY_FORMATS as ɵbp, DatepickerLocaleExample as ɵbr, DatepickerMinMaxExample as ɵbs, DatepickerMomentExample as ɵbt, DatepickerStartViewExample as ɵbu, DatepickerTouchExample as ɵbv, DatepickerValueExample as ɵbw, DatepickerViewsSelectionExample as ɵby, MY_FORMATS$1 as ɵbx, DialogContentExample as ɵbz, DialogContentExampleDialog as ɵca, DialogDataExample as ɵcb, DialogDataExampleDialog as ɵcc, DialogElementsExample as ɵcd, DialogElementsExampleDialog as ɵce, DialogOverviewExample as ɵcf, DialogOverviewExampleDialog as ɵcg, DividerOverviewExample as ɵch, ElevationOverviewExample as ɵci, ExpansionExpandCollapseAllExample as ɵcj, ExpansionStepsExample as ɵck, FocusMonitorDirectivesExample as ɵcl, FocusMonitorFocusViaExample as ɵcm, FocusMonitorOverviewExample as ɵcn, FormFieldAppearanceExample as ɵco, FormFieldCustomControlExample as ɵcp, MyTelInput as ɵcq, FormFieldErrorExample as ɵcr, FormFieldHintExample as ɵcs, FormFieldLabelExample as ɵct, FormFieldOverviewExample as ɵcu, FormFieldPrefixSuffixExample as ɵcv, FormFieldThemingExample as ɵcw, GridListDynamicExample as ɵcx, GridListOverviewExample as ɵcy, IconOverviewExample as ɵcz, IconSvgExample as ɵda, InputClearableExample as ɵdb, InputErrorStateMatcherExample as ɵdc, InputErrorsExample as ɵdd, InputFormExample as ɵde, InputHintExample as ɵdf, InputOverviewExample as ɵdg, InputPrefixSuffixExample as ɵdh, ListSectionsExample as ɵdi, ListSelectionExample as ɵdj, ExampleMaterialModule as ɵhn, MenuIconsExample as ɵdk, MenuOverviewExample as ɵdl, NestedMenuExample as ɵdm, PaginatorConfigurableExample as ɵdn, PaginatorOverviewExample as ɵdo, ProgressBarBufferExample as ɵdp, ProgressBarConfigurableExample as ɵdq, ProgressBarDeterminateExample as ɵdr, ProgressBarIndeterminateExample as ɵds, ProgressBarQueryExample as ɵdt, ProgressSpinnerConfigurableExample as ɵdu, ProgressSpinnerOverviewExample as ɵdv, RadioNgModelExample as ɵdw, RadioOverviewExample as ɵdx, RippleOverviewExample as ɵdy, SelectCustomTriggerExample as ɵdz, SelectDisabledExample as ɵea, SelectErrorStateMatcherExample as ɵeb, SelectFormExample as ɵec, SelectHintErrorExample as ɵed, SelectMultipleExample as ɵee, SelectNoRippleExample as ɵef, SelectOptgroupExample as ɵeg, SelectOverviewExample as ɵeh, SelectPanelClassExample as ɵei, SelectResetExample as ɵej, SelectValueBindingExample as ɵek, SidenavAutosizeExample as ɵel, SidenavBackdropExample as ɵem, SidenavDisableCloseExample as ɵen, SidenavDrawerOverviewExample as ɵeo, SidenavFixedExample as ɵep, SidenavModeExample as ɵeq, SidenavOpenCloseExample as ɵer, SidenavOverviewExample as ɵes, SidenavPositionExample as ɵet, SidenavResponsiveExample as ɵeu, SlideToggleConfigurableExample as ɵev, SlideToggleFormsExample as ɵew, SlideToggleOverviewExample as ɵex, SliderConfigurableExample as ɵey, SliderFormattingExample as ɵez, SliderOverviewExample as ɵfa, PizzaPartyComponent as ɵfc, SnackBarComponentExample as ɵfb, SnackBarOverviewExample as ɵfd, SnackBarPositionExample as ɵfe, SortOverviewExample as ɵff, StepperEditableExample as ɵfg, StepperErrorsExample as ɵfh, StepperLabelPositionBottomExample as ɵfi, StepperOptionalExample as ɵfj, StepperStatesExample as ɵfk, StepperVerticalExample as ɵfl, TabGroupAlignExample as ɵfm, TabGroupAsyncExample as ɵfn, TabGroupBasicExample as ɵfo, TabGroupCustomLabelExample as ɵfp, TabGroupDynamicHeightExample as ɵfq, TabGroupDynamicExample as ɵfr, TabGroupHeaderBelowExample as ɵfs, TabGroupLazyLoadedExample as ɵft, TabGroupStretchedExample as ɵfu, TabGroupThemeExample as ɵfv, TabNavBarBasicExample as ɵfw, TableBasicFlexExample as ɵfx, TableBasicExample as ɵfy, TableDynamicColumnsExample as ɵfz, TableExpandableRowsExample as ɵga, TableFilteringExample as ɵgb, TableFooterRowExample as ɵgc, TableHttpExample as ɵgd, TableMultipleHeaderFooterExample as ɵge, TableOverviewExample as ɵgf, TablePaginationExample as ɵgg, TableRowContextExample as ɵgh, TableSelectionExample as ɵgi, TableSortingExample as ɵgj, TableStickyColumnsExample as ɵgk, TableStickyComplexFlexExample as ɵgl, TableStickyComplexExample as ɵgm, TableStickyFooterExample as ɵgn, TableStickyHeaderExample as ɵgo, TextFieldAutofillDirectiveExample as ɵgp, TextFieldAutofillMonitorExample as ɵgq, TextFieldAutosizeTextareaExample as ɵgr, ToolbarOverviewExample as ɵgs, TooltipAutoHideExample as ɵgt, TooltipCustomClassExample as ɵgu, TooltipDelayExample as ɵgv, TooltipDisabledExample as ɵgw, TooltipManualExample as ɵgx, TooltipMessageExample as ɵgy, TooltipModifiedDefaultsExample as ɵha, myCustomTooltipDefaults as ɵgz, TooltipOverviewExample as ɵhb, TooltipPositionExample as ɵhc, ChecklistDatabase as ɵhd, TreeChecklistExample as ɵhe, DynamicDatabase as ɵhf, TreeDynamicExample as ɵhg, FileDatabase$2 as ɵhh, TreeFlatOverviewExample as ɵhi, LoadmoreDatabase as ɵhj, TreeLoadmoreExample as ɵhk, FileDatabase$3 as ɵhl, TreeNestedOverviewExample as ɵhm };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleExclusiveExample as ɵk, ButtonTypesExample as ɵl, CardOverviewExample as ɵm, CdkDragDropAxisLockExample as ɵn, CdkDragDropConnectedSortingExample as ɵo, CdkDragDropCustomPreviewExample as ɵp, CdkDragDropHandleExample as ɵq, CdkDragDropHorizontalSortingExample as ɵr, CdkDragDropOverviewExample as ɵs, CdkDragDropRootElementExample as ɵt, CdkDragDropSortingExample as ɵu, CdkTableBasicFlexExample as ɵv, CdkTableBasicExample as ɵw, CdkTreeFlatExample as ɵy, FileDatabase as ɵx, CdkTreeNestedExample as ɵba, FileDatabase$1 as ɵz, CdkVirtualScrollContextExample as ɵbb, CdkVirtualScrollDataSourceExample as ɵbc, CdkVirtualScrollDlExample as ɵbd, CdkVirtualScrollFixedBufferExample as ɵbe, CdkVirtualScrollHorizontalExample as ɵbf, CdkVirtualScrollOverviewExample as ɵbg, CdkVirtualScrollTemplateCacheExample as ɵbh, CheckboxConfigurableExample as ɵbi, CheckboxOverviewExample as ɵbj, ChipsAutocompleteExample as ɵbk, ChipsInputExample as ɵbl, ChipsOverviewExample as ɵbm, ChipsStackedExample as ɵbn, DatepickerApiExample as ɵbo, DatepickerColorExample as ɵbp, DatepickerCustomHeaderExample as ɵbq, ExampleHeader as ɵbr, DatepickerCustomIconExample as ɵbs, DatepickerDisabledExample as ɵbt, DatepickerEventsExample as ɵbu, DatepickerFilterExample as ɵbv, DatepickerFormatsExample as ɵbx, MY_FORMATS as ɵbw, DatepickerLocaleExample as ɵby, DatepickerMinMaxExample as ɵbz, DatepickerMomentExample as ɵca, DatepickerStartViewExample as ɵcb, DatepickerTouchExample as ɵcc, DatepickerValueExample as ɵcd, DatepickerViewsSelectionExample as ɵcf, MY_FORMATS$1 as ɵce, DialogContentExample as ɵcg, DialogContentExampleDialog as ɵch, DialogDataExample as ɵci, DialogDataExampleDialog as ɵcj, DialogElementsExample as ɵck, DialogElementsExampleDialog as ɵcl, DialogOverviewExample as ɵcm, DialogOverviewExampleDialog as ɵcn, DividerOverviewExample as ɵco, ElevationOverviewExample as ɵcp, ExpansionExpandCollapseAllExample as ɵcq, ExpansionStepsExample as ɵcr, FocusMonitorDirectivesExample as ɵcs, FocusMonitorFocusViaExample as ɵct, FocusMonitorOverviewExample as ɵcu, FormFieldAppearanceExample as ɵcv, FormFieldCustomControlExample as ɵcw, MyTelInput as ɵcx, FormFieldErrorExample as ɵcy, FormFieldHintExample as ɵcz, FormFieldLabelExample as ɵda, FormFieldOverviewExample as ɵdb, FormFieldPrefixSuffixExample as ɵdc, FormFieldThemingExample as ɵdd, GridListDynamicExample as ɵde, GridListOverviewExample as ɵdf, IconOverviewExample as ɵdg, IconSvgExample as ɵdh, InputClearableExample as ɵdi, InputErrorStateMatcherExample as ɵdj, InputErrorsExample as ɵdk, InputFormExample as ɵdl, InputHintExample as ɵdm, InputOverviewExample as ɵdn, InputPrefixSuffixExample as ɵdo, ListSectionsExample as ɵdp, ListSelectionExample as ɵdq, ExampleMaterialModule as ɵhu, MenuIconsExample as ɵdr, MenuOverviewExample as ɵds, NestedMenuExample as ɵdt, PaginatorConfigurableExample as ɵdu, PaginatorOverviewExample as ɵdv, ProgressBarBufferExample as ɵdw, ProgressBarConfigurableExample as ɵdx, ProgressBarDeterminateExample as ɵdy, ProgressBarIndeterminateExample as ɵdz, ProgressBarQueryExample as ɵea, ProgressSpinnerConfigurableExample as ɵeb, ProgressSpinnerOverviewExample as ɵec, RadioNgModelExample as ɵed, RadioOverviewExample as ɵee, RippleOverviewExample as ɵef, SelectCustomTriggerExample as ɵeg, SelectDisabledExample as ɵeh, SelectErrorStateMatcherExample as ɵei, SelectFormExample as ɵej, SelectHintErrorExample as ɵek, SelectMultipleExample as ɵel, SelectNoRippleExample as ɵem, SelectOptgroupExample as ɵen, SelectOverviewExample as ɵeo, SelectPanelClassExample as ɵep, SelectResetExample as ɵeq, SelectValueBindingExample as ɵer, SidenavAutosizeExample as ɵes, SidenavBackdropExample as ɵet, SidenavDisableCloseExample as ɵeu, SidenavDrawerOverviewExample as ɵev, SidenavFixedExample as ɵew, SidenavModeExample as ɵex, SidenavOpenCloseExample as ɵey, SidenavOverviewExample as ɵez, SidenavPositionExample as ɵfa, SidenavResponsiveExample as ɵfb, SlideToggleConfigurableExample as ɵfc, SlideToggleFormsExample as ɵfd, SlideToggleOverviewExample as ɵfe, SliderConfigurableExample as ɵff, SliderFormattingExample as ɵfg, SliderOverviewExample as ɵfh, PizzaPartyComponent as ɵfj, SnackBarComponentExample as ɵfi, SnackBarOverviewExample as ɵfk, SnackBarPositionExample as ɵfl, SortOverviewExample as ɵfm, StepperEditableExample as ɵfn, StepperErrorsExample as ɵfo, StepperLabelPositionBottomExample as ɵfp, StepperOptionalExample as ɵfq, StepperStatesExample as ɵfr, StepperVerticalExample as ɵfs, TabGroupAlignExample as ɵft, TabGroupAsyncExample as ɵfu, TabGroupBasicExample as ɵfv, TabGroupCustomLabelExample as ɵfw, TabGroupDynamicHeightExample as ɵfx, TabGroupDynamicExample as ɵfy, TabGroupHeaderBelowExample as ɵfz, TabGroupLazyLoadedExample as ɵga, TabGroupStretchedExample as ɵgb, TabGroupThemeExample as ɵgc, TabNavBarBasicExample as ɵgd, TableBasicFlexExample as ɵge, TableBasicExample as ɵgf, TableDynamicColumnsExample as ɵgg, TableExpandableRowsExample as ɵgh, TableFilteringExample as ɵgi, TableFooterRowExample as ɵgj, TableHttpExample as ɵgk, TableMultipleHeaderFooterExample as ɵgl, TableOverviewExample as ɵgm, TablePaginationExample as ɵgn, TableRowContextExample as ɵgo, TableSelectionExample as ɵgp, TableSortingExample as ɵgq, TableStickyColumnsExample as ɵgr, TableStickyComplexFlexExample as ɵgs, TableStickyComplexExample as ɵgt, TableStickyFooterExample as ɵgu, TableStickyHeaderExample as ɵgv, TextFieldAutofillDirectiveExample as ɵgw, TextFieldAutofillMonitorExample as ɵgx, TextFieldAutosizeTextareaExample as ɵgy, ToolbarOverviewExample as ɵgz, TooltipAutoHideExample as ɵha, TooltipCustomClassExample as ɵhb, TooltipDelayExample as ɵhc, TooltipDisabledExample as ɵhd, TooltipManualExample as ɵhe, TooltipMessageExample as ɵhf, TooltipModifiedDefaultsExample as ɵhh, myCustomTooltipDefaults as ɵhg, TooltipOverviewExample as ɵhi, TooltipPositionExample as ɵhj, ChecklistDatabase as ɵhk, TreeChecklistExample as ɵhl, DynamicDatabase as ɵhm, TreeDynamicExample as ɵhn, FileDatabase$2 as ɵho, TreeFlatOverviewExample as ɵhp, LoadmoreDatabase as ɵhq, TreeLoadmoreExample as ɵhr, FileDatabase$3 as ɵhs, TreeNestedOverviewExample as ɵht };
 //# sourceMappingURL=material-examples.js.map

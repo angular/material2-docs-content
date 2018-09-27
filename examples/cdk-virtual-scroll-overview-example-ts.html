@@ -1,0 +1,12 @@
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/** @title Basic virtual scroll */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-virtual-scroll-overview-example'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-virtual-scroll-overview-example.css'</span>],
+  templateUrl: <span class="hljs-string">'cdk-virtual-scroll-overview-example.html'</span>,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkVirtualScrollOverviewExample {
+  items = <span class="hljs-built_in">Array</span>.from({length: <span class="hljs-number">100000</span>}).map(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Item #<span class="hljs-subst">${i}</span>`</span>);
+}

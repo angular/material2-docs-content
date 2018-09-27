@@ -31,6 +31,13 @@
 <span class="hljs-keyword">import</span> {CdkTableBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-table-basic/cdk-table-basic-example'</span>;
 <span class="hljs-keyword">import</span> {CdkTreeFlatExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-tree-flat/cdk-tree-flat-example'</span>;
 <span class="hljs-keyword">import</span> {CdkTreeNestedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-tree-nested/cdk-tree-nested-example'</span>;
+<span class="hljs-keyword">import</span> {CdkVirtualScrollContextExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-virtual-scroll-context/cdk-virtual-scroll-context-example'</span>;
+<span class="hljs-keyword">import</span> {CdkVirtualScrollDataSourceExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-virtual-scroll-data-source/cdk-virtual-scroll-data-source-example'</span>;
+<span class="hljs-keyword">import</span> {CdkVirtualScrollDlExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-virtual-scroll-dl/cdk-virtual-scroll-dl-example'</span>;
+<span class="hljs-keyword">import</span> {CdkVirtualScrollFixedBufferExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-virtual-scroll-fixed-buffer/cdk-virtual-scroll-fixed-buffer-example'</span>;
+<span class="hljs-keyword">import</span> {CdkVirtualScrollHorizontalExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-virtual-scroll-horizontal/cdk-virtual-scroll-horizontal-example'</span>;
+<span class="hljs-keyword">import</span> {CdkVirtualScrollOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-virtual-scroll-overview/cdk-virtual-scroll-overview-example'</span>;
+<span class="hljs-keyword">import</span> {CdkVirtualScrollTemplateCacheExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-virtual-scroll-template-cache/cdk-virtual-scroll-template-cache-example'</span>;
 <span class="hljs-keyword">import</span> {CheckboxConfigurableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./checkbox-configurable/checkbox-configurable-example'</span>;
 <span class="hljs-keyword">import</span> {CheckboxOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./checkbox-overview/checkbox-overview-example'</span>;
 <span class="hljs-keyword">import</span> {ChipsAutocompleteExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./chips-autocomplete/chips-autocomplete-example'</span>;
@@ -303,6 +310,34 @@
   <span class="hljs-string">'cdk-tree-nested'</span>: {
     title: <span class="hljs-string">'Tree with nested nodes'</span>,
     component: CdkTreeNestedExample
+  },
+  <span class="hljs-string">'cdk-virtual-scroll-context'</span>: {
+    title: <span class="hljs-string">'Virtual scroll context variables'</span>,
+    component: CdkVirtualScrollContextExample
+  },
+  <span class="hljs-string">'cdk-virtual-scroll-data-source'</span>: {
+    title: <span class="hljs-string">'Virtual scroll with a custom data source'</span>,
+    component: CdkVirtualScrollDataSourceExample
+  },
+  <span class="hljs-string">'cdk-virtual-scroll-dl'</span>: {
+    title: <span class="hljs-string">'Virtual scrolling `&lt;dl&gt;`'</span>,
+    component: CdkVirtualScrollDlExample
+  },
+  <span class="hljs-string">'cdk-virtual-scroll-fixed-buffer'</span>: {
+    title: <span class="hljs-string">'Fixed size virtual scroll with custom buffer parameters'</span>,
+    component: CdkVirtualScrollFixedBufferExample
+  },
+  <span class="hljs-string">'cdk-virtual-scroll-horizontal'</span>: {
+    title: <span class="hljs-string">'Horizontal virtual scroll'</span>,
+    component: CdkVirtualScrollHorizontalExample
+  },
+  <span class="hljs-string">'cdk-virtual-scroll-overview'</span>: {
+    title: <span class="hljs-string">'Basic virtual scroll'</span>,
+    component: CdkVirtualScrollOverviewExample
+  },
+  <span class="hljs-string">'cdk-virtual-scroll-template-cache'</span>: {
+    title: <span class="hljs-string">'Virtual scroll with no template caching'</span>,
+    component: CdkVirtualScrollTemplateCacheExample
   },
   <span class="hljs-string">'checkbox-configurable'</span>: {
     title: <span class="hljs-string">'Configurable checkbox'</span>,
@@ -978,6 +1013,13 @@
   CdkTableBasicExample,
   CdkTreeFlatExample,
   CdkTreeNestedExample,
+  CdkVirtualScrollContextExample,
+  CdkVirtualScrollDataSourceExample,
+  CdkVirtualScrollDlExample,
+  CdkVirtualScrollFixedBufferExample,
+  CdkVirtualScrollHorizontalExample,
+  CdkVirtualScrollOverviewExample,
+  CdkVirtualScrollTemplateCacheExample,
   CheckboxConfigurableExample,
   CheckboxOverviewExample,
   ChipsAutocompleteExample,
