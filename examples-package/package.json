@@ -24,15 +24,15 @@
   "homepage": "https://github.com/angular/material2#readme",
   "peerDependencies": {
     "@angular/cdk": "7.0.0-beta.2",
-    "@angular/core": ">=7.0.0-beta.5",
-    "@angular/common": ">=7.0.0-beta.5",
+    "@angular/core": ">=7.0.0-beta.7",
+    "@angular/common": ">=7.0.0-beta.7",
     "@angular/material": "7.0.0-beta.2",
     "@angular/material-moment-adapter": "7.0.0-beta.2"
   },
   "dependencies": {
     "tslib": "^1.7.1"
   },
-  "releaseGitCommitSha": "04234f06bf80dba970b4d394519558d46ca4d26c",
+  "releaseGitCommitSha": "8ed0129906874b9c452a6fb5495b12a5cd18110b",
   "releaseGitBranch": "",
   "releaseGitUser": "Travis CI User <travis@example.org>"
 }
