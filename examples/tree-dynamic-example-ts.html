@@ -59,7 +59,7 @@
               <span class="hljs-keyword">private</span> database: DynamicDatabase</span>) {}
 
   connect(collectionViewer: CollectionViewer): Observable&lt;DynamicFlatNode[]&gt; {
-    <span class="hljs-keyword">this</span>.treeControl.expansionModel.onChange!.subscribe(<span class="hljs-function"><span class="hljs-params">change</span> =&gt;</span> {
+    <span class="hljs-keyword">this</span>.treeControl.expansionModel.onChange.subscribe(<span class="hljs-function"><span class="hljs-params">change</span> =&gt;</span> {
       <span class="hljs-keyword">if</span> ((change <span class="hljs-keyword">as</span> SelectionChange&lt;DynamicFlatNode&gt;).added ||
         (change <span class="hljs-keyword">as</span> SelectionChange&lt;DynamicFlatNode&gt;).removed) {
         <span class="hljs-keyword">this</span>.handleTreeControl(change <span class="hljs-keyword">as</span> SelectionChange&lt;DynamicFlatNode&gt;);

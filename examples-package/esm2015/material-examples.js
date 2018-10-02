@@ -6756,7 +6756,7 @@ class DynamicDataSource {
      * @return {?}
      */
     connect(collectionViewer) {
-        /** @type {?} */ ((this.treeControl.expansionModel.onChange)).subscribe(change => {
+        this.treeControl.expansionModel.onChange.subscribe(change => {
             if ((/** @type {?} */ (change)).added ||
                 (/** @type {?} */ (change)).removed) {
                 this.handleTreeControl(/** @type {?} */ (change));

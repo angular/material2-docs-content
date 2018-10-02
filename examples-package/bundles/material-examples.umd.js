@@ -7528,7 +7528,7 @@ var DynamicDataSource = /** @class */ (function () {
      */
     function (collectionViewer) {
         var _this = this;
-        /** @type {?} */ ((this.treeControl.expansionModel.onChange)).subscribe(function (change) {
+        this.treeControl.expansionModel.onChange.subscribe(function (change) {
             if ((/** @type {?} */ (change)).added ||
                 (/** @type {?} */ (change)).removed) {
                 _this.handleTreeControl(/** @type {?} */ (change));
