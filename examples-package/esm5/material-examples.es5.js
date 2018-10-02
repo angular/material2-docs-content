@@ -6131,14 +6131,12 @@ var TableHttpExample = /** @class */ (function () {
             return /** @type {?} */ ((_this.exampleDatabase)).getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
         }), map(function (data) {
             // Flip flag to show that loading has finished.
-            // Flip flag to show that loading has finished.
             _this.isLoadingResults = false;
             _this.isRateLimitReached = false;
             _this.resultsLength = data.total_count;
             return data.items;
         }), catchError(function () {
             _this.isLoadingResults = false;
-            // Catch if the GitHub API has reached its rate limit. Return empty data.
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             _this.isRateLimitReached = true;
             return of([]);
@@ -7593,7 +7591,6 @@ var DynamicDataSource = /** @class */ (function () {
                     && _this.data[i].level > node.level; i++, count++) { }
                 _this.data.splice(index + 1, count);
             }
-            // notify the change
             // notify the change
             _this.dataChange.next(_this.data);
             node.isLoading = false;
