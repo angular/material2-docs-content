@@ -542,7 +542,7 @@ var BottomSheetOverviewExample = /** @class */ (function () {
     BottomSheetOverviewExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'bottom-sheet-overview-example',
-                    template: "<p>You have receive a file called \"cat-picture.jpeg\".</p><button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>",
+                    template: "<p>You have received a file called \"cat-picture.jpeg\".</p><button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
