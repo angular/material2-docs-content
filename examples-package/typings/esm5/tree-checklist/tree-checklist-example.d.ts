@@ -29,7 +29,9 @@ export declare class ChecklistDatabase {
      * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
      * The return value is the list of `TodoItemNode`.
      */
-    buildFileTree(obj: object, level: number): TodoItemNode[];
+    buildFileTree(obj: {
+        [key: string]: any;
+    }, level: number): TodoItemNode[];
     /** Add an item to to-do list */
     insertItem(parent: TodoItemNode, name: string): void;
     updateItem(node: TodoItemNode, name: string): void;

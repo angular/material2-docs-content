@@ -68,7 +68,7 @@
    * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
    * The return value is the list of `TodoItemNode`.
    */</span>
-  buildFileTree(obj: object, level: <span class="hljs-built_in">number</span>): TodoItemNode[] {
+  buildFileTree(obj: {[key: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>}, level: <span class="hljs-built_in">number</span>): TodoItemNode[] {
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(obj).reduce&lt;TodoItemNode[]&gt;<span class="hljs-function">(<span class="hljs-params">(<span class="hljs-params">accumulator, key</span>) =&gt; {
       <span class="hljs-keyword">const</span> value = obj[key];
       <span class="hljs-keyword">const</span> node = <span class="hljs-keyword">new</span> TodoItemNode(<span class="hljs-params"></span>);
