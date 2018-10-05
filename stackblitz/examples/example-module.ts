@@ -14,6 +14,7 @@ import {AutocompleteSimpleExample} from './autocomplete-simple/autocomplete-simp
 import {BadgeOverviewExample} from './badge-overview/badge-overview-example';
 import {BottomSheetOverviewExampleSheet,BottomSheetOverviewExample} from './bottom-sheet-overview/bottom-sheet-overview-example';
 import {ButtonOverviewExample} from './button-overview/button-overview-example';
+import {ButtonToggleAppearanceExample} from './button-toggle-appearance/button-toggle-appearance-example';
 import {ButtonToggleExclusiveExample} from './button-toggle-exclusive/button-toggle-exclusive-example';
 import {ButtonToggleOverviewExample} from './button-toggle-overview/button-toggle-overview-example';
 import {ButtonTypesExample} from './button-types/button-types-example';
@@ -242,6 +243,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'button-overview': {
     title: 'Basic buttons',
     component: ButtonOverviewExample
+  },
+  'button-toggle-appearance': {
+    title: 'Button toggle appearance',
+    component: ButtonToggleAppearanceExample
   },
   'button-toggle-exclusive': {
     title: 'Exclusive selection',
@@ -996,6 +1001,7 @@ export const EXAMPLE_LIST = [
   BadgeOverviewExample,
   BottomSheetOverviewExampleSheet,BottomSheetOverviewExample,
   ButtonOverviewExample,
+  ButtonToggleAppearanceExample,
   ButtonToggleExclusiveExample,
   ButtonToggleOverviewExample,
   ButtonTypesExample,
