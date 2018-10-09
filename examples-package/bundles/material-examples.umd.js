@@ -783,7 +783,7 @@ var CdkDragDropConnectedSortingExample = /** @class */ (function () {
     CdkDragDropConnectedSortingExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-connected-sorting-example',
-                    template: "<div class=\"container\"><h2>To do</h2><cdk-drop #todoList [data]=\"todo\" [connectedTo]=\"[doneList]\" class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div></cdk-drop></div><div class=\"container\"><h2>Done</h2><cdk-drop #doneList [data]=\"done\" [connectedTo]=\"[todoList]\" class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div></cdk-drop></div>",
+                    template: "<div class=\"container\"><h2>To do</h2><div cdkDrop #todoList=\"cdkDrop\" [cdkDropData]=\"todo\" [cdkDropConnectedTo]=\"[doneList]\" class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div></div></div><div class=\"container\"><h2>Done</h2><div cdkDrop #doneList=\"cdkDrop\" [cdkDropData]=\"done\" [cdkDropConnectedTo]=\"[todoList]\" class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div></div></div>",
                     styles: [".container { width: 400px; max-width: 100%; margin: 0 25px 25px 0; display: inline-block; vertical-align: top; } .list { border: solid 1px #ccc; min-height: 60px; background: white; border-radius: 4px; overflow: hidden; display: block; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
@@ -850,7 +850,7 @@ var CdkDragDropCustomPreviewExample = /** @class */ (function () {
     CdkDragDropCustomPreviewExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-custom-preview-example',
-                    template: "<cdk-drop class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie.title}} <img *cdkDragPreview [src]=\"movie.poster\" [alt]=\"movie.title\"></div></cdk-drop>",
+                    template: "<div cdkDrop class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie.title}} <img *cdkDragPreview [src]=\"movie.poster\" [alt]=\"movie.title\"></div></div>",
                     styles: [".list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
@@ -908,7 +908,7 @@ var CdkDragDropHorizontalSortingExample = /** @class */ (function () {
     CdkDragDropHorizontalSortingExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-horizontal-sorting-example',
-                    template: "<cdk-drop orientation=\"horizontal\" class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let timePeriod of timePeriods\" cdkDrag>{{timePeriod}}</div></cdk-drop>",
+                    template: "<div cdkDrop cdkDropOrientation=\"horizontal\" class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let timePeriod of timePeriods\" cdkDrag>{{timePeriod}}</div></div>",
                     styles: [".list { width: 1000px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: flex; flex-direction: row; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-right: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; flex-grow: 1; flex-basis: 0; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
@@ -1032,7 +1032,7 @@ var CdkDragDropSortingExample = /** @class */ (function () {
     CdkDragDropSortingExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-sorting-example',
-                    template: "<cdk-drop class=\"list\" (dropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie}}</div></cdk-drop>",
+                    template: "<div cdkDrop class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie}}</div></div>",
                     styles: [".list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
