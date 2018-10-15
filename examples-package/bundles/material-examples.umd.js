@@ -674,8 +674,8 @@ var ButtonTypesExample = /** @class */ (function () {
     ButtonTypesExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'button-types-example',
-                    template: "<h3>Basic Buttons</h3><div class=\"button-row\"><button mat-button>Basic</button> <button mat-button color=\"primary\">Primary</button> <button mat-button color=\"accent\">Accent</button> <button mat-button color=\"warn\">Warn</button> <button mat-button disabled=\"disabled\">Disabled</button> <a mat-button routerLink=\".\">Link</a></div><h3>Raised Buttons</h3><div class=\"button-row\"><button mat-raised-button>Basic</button> <button mat-raised-button color=\"primary\">Primary</button> <button mat-raised-button color=\"accent\">Accent</button> <button mat-raised-button color=\"warn\">Warn</button> <button mat-raised-button disabled=\"disabled\">Disabled</button> <a mat-raised-button routerLink=\".\">Link</a></div><h3>Stroked Buttons</h3><div class=\"button-row\"><button mat-stroked-button>Basic</button> <button mat-stroked-button color=\"primary\">Primary</button> <button mat-stroked-button color=\"accent\">Accent</button> <button mat-stroked-button color=\"warn\">Warn</button> <button mat-stroked-button disabled=\"disabled\">Disabled</button> <a mat-stroked-button routerLink=\".\">Link</a></div><h3>Flat Buttons</h3><div class=\"button-row\"><button mat-flat-button>Basic</button> <button mat-flat-button color=\"primary\">Primary</button> <button mat-flat-button color=\"accent\">Accent</button> <button mat-flat-button color=\"warn\">Warn</button> <button mat-flat-button disabled=\"disabled\">Disabled</button> <a mat-flat-button routerLink=\".\">Link</a></div><h3>Icon Buttons</h3><div class=\"button-row\"><button mat-icon-button><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"primary\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"accent\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"warn\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button disabled=\"disabled\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button></div><h3>Fab Buttons</h3><div class=\"button-row\"><button mat-fab>Basic</button> <button mat-fab color=\"primary\">Primary</button> <button mat-fab color=\"accent\">Accent</button> <button mat-fab color=\"warn\">Warn</button> <button mat-fab disabled=\"disabled\">Disabled</button> <button mat-fab><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <a mat-fab routerLink=\".\">Link</a></div><h3>Mini Fab Buttons</h3><div class=\"button-row\"><button mat-mini-fab>Basic</button> <button mat-mini-fab color=\"primary\">Primary</button> <button mat-mini-fab color=\"accent\">Accent</button> <button mat-mini-fab color=\"warn\">Warn</button> <button mat-mini-fab disabled=\"disabled\">Disabled</button> <button mat-mini-fab><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <a mat-mini-fab routerLink=\".\">Link</a></div>",
-                    styles: [".button-row button, .button-row a { margin-right: 8px; } "],
+                    template: "<h3>Basic Buttons</h3><div class=\"example-button-row\"><button mat-button>Basic</button> <button mat-button color=\"primary\">Primary</button> <button mat-button color=\"accent\">Accent</button> <button mat-button color=\"warn\">Warn</button> <button mat-button disabled=\"disabled\">Disabled</button> <a mat-button routerLink=\".\">Link</a></div><h3>Raised Buttons</h3><div class=\"example-button-row\"><button mat-raised-button>Basic</button> <button mat-raised-button color=\"primary\">Primary</button> <button mat-raised-button color=\"accent\">Accent</button> <button mat-raised-button color=\"warn\">Warn</button> <button mat-raised-button disabled=\"disabled\">Disabled</button> <a mat-raised-button routerLink=\".\">Link</a></div><h3>Stroked Buttons</h3><div class=\"example-button-row\"><button mat-stroked-button>Basic</button> <button mat-stroked-button color=\"primary\">Primary</button> <button mat-stroked-button color=\"accent\">Accent</button> <button mat-stroked-button color=\"warn\">Warn</button> <button mat-stroked-button disabled=\"disabled\">Disabled</button> <a mat-stroked-button routerLink=\".\">Link</a></div><h3>Flat Buttons</h3><div class=\"example-button-row\"><button mat-flat-button>Basic</button> <button mat-flat-button color=\"primary\">Primary</button> <button mat-flat-button color=\"accent\">Accent</button> <button mat-flat-button color=\"warn\">Warn</button> <button mat-flat-button disabled=\"disabled\">Disabled</button> <a mat-flat-button routerLink=\".\">Link</a></div><h3>Icon Buttons</h3><div class=\"example-button-row\"><button mat-icon-button><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"primary\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"accent\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"warn\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button disabled=\"disabled\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button></div><h3>Fab Buttons</h3><div class=\"example-button-row\"><button mat-fab>Basic</button> <button mat-fab color=\"primary\">Primary</button> <button mat-fab color=\"accent\">Accent</button> <button mat-fab color=\"warn\">Warn</button> <button mat-fab disabled=\"disabled\">Disabled</button> <button mat-fab><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <a mat-fab routerLink=\".\">Link</a></div><h3>Mini Fab Buttons</h3><div class=\"example-button-row\"><button mat-mini-fab>Basic</button> <button mat-mini-fab color=\"primary\">Primary</button> <button mat-mini-fab color=\"accent\">Accent</button> <button mat-mini-fab color=\"warn\">Warn</button> <button mat-mini-fab disabled=\"disabled\">Disabled</button> <button mat-mini-fab><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <a mat-mini-fab routerLink=\".\">Link</a></div>",
+                    styles: [".example-button-row button, .example-button-row a { margin-right: 8px; } "],
                 },] },
     ];
     return ButtonTypesExample;
@@ -734,8 +734,8 @@ var CdkDragDropAxisLockExample = /** @class */ (function () {
     CdkDragDropAxisLockExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-axis-lock-example',
-                    template: "<div class=\"box\" cdkDragLockAxis=\"y\" cdkDrag>I can only be dragged up/down</div><div class=\"box\" cdkDragLockAxis=\"x\" cdkDrag>I can only be dragged left/right</div>",
-                    styles: [".box { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: inline-flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; margin-right: 25px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+                    template: "<div class=\"example-box\" cdkDragLockAxis=\"y\" cdkDrag>I can only be dragged up/down</div><div class=\"example-box\" cdkDragLockAxis=\"x\" cdkDrag>I can only be dragged left/right</div>",
+                    styles: [".example-box { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: inline-flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; margin-right: 25px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .example-box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
                 },] },
     ];
     return CdkDragDropAxisLockExample;
@@ -783,8 +783,8 @@ var CdkDragDropConnectedSortingExample = /** @class */ (function () {
     CdkDragDropConnectedSortingExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-connected-sorting-example',
-                    template: "<div class=\"container\"><h2>To do</h2><div cdkDrop #todoList=\"cdkDrop\" [cdkDropData]=\"todo\" [cdkDropConnectedTo]=\"[doneList]\" class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div></div></div><div class=\"container\"><h2>Done</h2><div cdkDrop #doneList=\"cdkDrop\" [cdkDropData]=\"done\" [cdkDropConnectedTo]=\"[todoList]\" class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div></div></div>",
-                    styles: [".container { width: 400px; max-width: 100%; margin: 0 25px 25px 0; display: inline-block; vertical-align: top; } .list { border: solid 1px #ccc; min-height: 60px; background: white; border-radius: 4px; overflow: hidden; display: block; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                    template: "<div class=\"example-container\"><h2>To do</h2><div cdkDrop #todoList=\"cdkDrop\" [cdkDropData]=\"todo\" [cdkDropConnectedTo]=\"[doneList]\" class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div></div></div><div class=\"example-container\"><h2>Done</h2><div cdkDrop #doneList=\"cdkDrop\" [cdkDropData]=\"done\" [cdkDropConnectedTo]=\"[todoList]\" class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div></div></div>",
+                    styles: [".example-container { width: 400px; max-width: 100%; margin: 0 25px 25px 0; display: inline-block; vertical-align: top; } .example-list { border: solid 1px #ccc; min-height: 60px; background: white; border-radius: 4px; overflow: hidden; display: block; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
     return CdkDragDropConnectedSortingExample;
@@ -850,8 +850,8 @@ var CdkDragDropCustomPreviewExample = /** @class */ (function () {
     CdkDragDropCustomPreviewExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-custom-preview-example',
-                    template: "<div cdkDrop class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie.title}} <img *cdkDragPreview [src]=\"movie.poster\" [alt]=\"movie.title\"></div></div>",
-                    styles: [".list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                    template: "<div cdkDrop class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie.title}} <img *cdkDragPreview [src]=\"movie.poster\" [alt]=\"movie.title\"></div></div>",
+                    styles: [".example-list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
     return CdkDragDropCustomPreviewExample;
@@ -870,8 +870,8 @@ var CdkDragDropHandleExample = /** @class */ (function () {
     CdkDragDropHandleExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-handle-example',
-                    template: "<div class=\"box\" cdkDrag>I can only be dragged using the handle<div class=\"handle\" cdkDragHandle><svg width=\"24px\" fill=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z\"></path><path d=\"M0 0h24v24H0z\" fill=\"none\"></path></svg></div></div>",
-                    styles: [".box { width: 200px; height: 200px; padding: 10px; box-sizing: border-box; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .handle { position: absolute; top: 10px; right: 10px; color: #ccc; cursor: move; width: 24px; height: 24px; } "],
+                    template: "<div class=\"example-box\" cdkDrag>I can only be dragged using the handle<div class=\"example-handle\" cdkDragHandle><svg width=\"24px\" fill=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z\"></path><path d=\"M0 0h24v24H0z\" fill=\"none\"></path></svg></div></div>",
+                    styles: [".example-box { width: 200px; height: 200px; padding: 10px; box-sizing: border-box; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .example-box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .example-handle { position: absolute; top: 10px; right: 10px; color: #ccc; cursor: move; width: 24px; height: 24px; } "],
                 },] },
     ];
     return CdkDragDropHandleExample;
@@ -908,8 +908,8 @@ var CdkDragDropHorizontalSortingExample = /** @class */ (function () {
     CdkDragDropHorizontalSortingExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-horizontal-sorting-example',
-                    template: "<div cdkDrop cdkDropOrientation=\"horizontal\" class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let timePeriod of timePeriods\" cdkDrag>{{timePeriod}}</div></div>",
-                    styles: [".list { width: 1000px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: flex; flex-direction: row; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-right: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; flex-grow: 1; flex-basis: 0; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                    template: "<div cdkDrop cdkDropOrientation=\"horizontal\" class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let timePeriod of timePeriods\" cdkDrag>{{timePeriod}}</div></div>",
+                    styles: [".example-list { width: 1000px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: flex; flex-direction: row; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-right: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; flex-grow: 1; flex-basis: 0; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
     return CdkDragDropHorizontalSortingExample;
@@ -928,8 +928,8 @@ var CdkDragDropOverviewExample = /** @class */ (function () {
     CdkDragDropOverviewExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-overview-example',
-                    template: "<div class=\"box\" cdkDrag>Drag me around</div>",
-                    styles: [".box { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+                    template: "<div class=\"example-box\" cdkDrag>Drag me around</div>",
+                    styles: [".example-box { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .example-box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
                 },] },
     ];
     return CdkDragDropOverviewExample;
@@ -983,8 +983,8 @@ var CdkDragDropRootElementExample = /** @class */ (function () {
     CdkDragDropRootElementExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-root-element-example',
-                    template: "<button (click)=\"openDialog()\">Open a draggable dialog</button><ng-template><div class=\"dialog-content\" cdkDrag cdkDragRootElement=\".cdk-overlay-pane\">Drag the dialog around!</div></ng-template>",
-                    styles: [".dialog-content { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: flex; justify-content: center; align-items: center; background: #fff; border-radius: 4px; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .dialog-content:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+                    template: "<button (click)=\"openDialog()\">Open a draggable dialog</button><ng-template><div class=\"example-dialog-content\" cdkDrag cdkDragRootElement=\".cdk-overlay-pane\">Drag the dialog around!</div></ng-template>",
+                    styles: [".example-dialog-content { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: flex; justify-content: center; align-items: center; background: #fff; border-radius: 4px; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .example-dialog-content:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
                 },] },
     ];
     /** @nocollapse */
@@ -1032,8 +1032,8 @@ var CdkDragDropSortingExample = /** @class */ (function () {
     CdkDragDropSortingExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-sorting-example',
-                    template: "<div cdkDrop class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie}}</div></div>",
-                    styles: [".list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                    template: "<div cdkDrop class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie}}</div></div>",
+                    styles: [".example-list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
     return CdkDragDropSortingExample;
@@ -3200,7 +3200,7 @@ var FormFieldCustomControlExample = /** @class */ (function () {
     FormFieldCustomControlExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'form-field-custom-control-example',
-                    template: "<mat-form-field><my-tel-input placeholder=\"Phone number\" required></my-tel-input><mat-icon matSuffix>phone</mat-icon><mat-hint>Include area code</mat-hint></mat-form-field>",
+                    template: "<mat-form-field><example-tel-input placeholder=\"Phone number\" required></example-tel-input><mat-icon matSuffix>phone</mat-icon><mat-hint>Include area code</mat-hint></mat-form-field>",
                     styles: ["/** No CSS for this example */ "],
                 },] },
     ];
@@ -3232,8 +3232,8 @@ var MyTelInput = /** @class */ (function () {
         this.focused = false;
         this.ngControl = null;
         this.errorState = false;
-        this.controlType = 'my-tel-input';
-        this.id = "my-tel-input-" + MyTelInput.nextId++;
+        this.controlType = 'example-tel-input';
+        this.id = "example-tel-input-" + MyTelInput.nextId++;
         this.describedBy = '';
         this._required = false;
         this._disabled = false;
@@ -3374,12 +3374,12 @@ var MyTelInput = /** @class */ (function () {
     MyTelInput.nextId = 0;
     MyTelInput.decorators = [
         { type: core.Component, args: [{
-                    selector: 'my-tel-input',
-                    template: "<div [formGroup]=\"parts\" class=\"my-tel-input-container\"><input class=\"my-tel-input-element\" formControlName=\"area\" size=\"3\"> <span class=\"my-tel-input-spacer\">&ndash;</span> <input class=\"my-tel-input-element\" formControlName=\"exchange\" size=\"3\"> <span class=\"my-tel-input-spacer\">&ndash;</span> <input class=\"my-tel-input-element\" formControlName=\"subscriber\" size=\"4\"></div>",
-                    styles: [".my-tel-input-container { display: flex; } .my-tel-input-element { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } .my-tel-input-spacer { opacity: 0; transition: opacity 200ms; } :host.floating .my-tel-input-spacer { opacity: 1; } "],
+                    selector: 'example-tel-input',
+                    template: "<div [formGroup]=\"parts\" class=\"example-tel-input-container\"><input class=\"example-tel-input-element\" formControlName=\"area\" size=\"3\"> <span class=\"example-tel-input-spacer\">&ndash;</span> <input class=\"example-tel-input-element\" formControlName=\"exchange\" size=\"3\"> <span class=\"example-tel-input-spacer\">&ndash;</span> <input class=\"example-tel-input-element\" formControlName=\"subscriber\" size=\"4\"></div>",
+                    styles: [".example-tel-input-container { display: flex; } .example-tel-input-element { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } .example-tel-input-spacer { opacity: 0; transition: opacity 200ms; } :host.example-floating .example-tel-input-spacer { opacity: 1; } "],
                     providers: [{ provide: material.MatFormFieldControl, useExisting: MyTelInput }],
                     host: {
-                        '[class.floating]': 'shouldLabelFloat',
+                        '[class.example-floating]': 'shouldLabelFloat',
                         '[id]': 'id',
                         '[attr.aria-describedby]': 'describedBy',
                     }
@@ -6503,12 +6503,173 @@ var ELEMENT_DATA$9 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
+ * \@title Table with a custom column component for easy column definition reuse.
+ */
+var TableSimpleColumnExample = /** @class */ (function () {
+    function TableSimpleColumnExample() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$9);
+        this.getWeight = function (data) { return '~' + data.weight; };
+    }
+    /**
+     * @return {?}
+     */
+    TableSimpleColumnExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.dataSource.sort = this.sort;
+    };
+    TableSimpleColumnExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'table-simple-column-example',
+                    styles: ["table { width: 100%; } "],
+                    template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\" matSort #sort=\"matSort\"><simple-column name=\"name\" sortable></simple-column><simple-column name=\"position\"></simple-column><simple-column name=\"weight\" [dataAccessor]=\"getWeight\"></simple-column><simple-column name=\"symbol\" label=\"SYMBOL!\"></simple-column><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let data; columns: displayedColumns;\"></tr></table>",
+                },] },
+    ];
+    TableSimpleColumnExample.propDecorators = {
+        sort: [{ type: core.ViewChild, args: ['sort',] }]
+    };
+    return TableSimpleColumnExample;
+}());
+/**
+ * Column that shows simply shows text content for the header and row
+ * cells. By default, the name of this column will be assumed to be both the header
+ * text and data property used to access the data value to show in cells. To override
+ * the header text, provide a label text. To override the data cell values,
+ * provide a dataAccessor function that provides the string to display for each row's cell.
+ *
+ * Note that this component sets itself as visually hidden since it will show up in the `mat-table`
+ * DOM because it is an empty element with an ng-container (nothing rendered). It should not
+ * interfere with screen readers.
+ * @template T
+ */
+var SimpleColumn = /** @class */ (function () {
+    function SimpleColumn(table$$1) {
+        this.table = table$$1;
+        /**
+         * Alignment of the cell values.
+         */
+        this.align = 'before';
+    }
+    Object.defineProperty(SimpleColumn.prototype, "name", {
+        /** Column name that should be used to reference this column. */
+        get: /**
+         * Column name that should be used to reference this column.
+         * @return {?}
+         */
+        function () { return this._name; },
+        set: /**
+         * @param {?} name
+         * @return {?}
+         */
+        function (name) {
+            this._name = name;
+            this.columnDef.name = name;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(SimpleColumn.prototype, "sortable", {
+        /** Whether the column is sortable */
+        get: /**
+         * Whether the column is sortable
+         * @return {?}
+         */
+        function () { return this._sortable; },
+        set: /**
+         * @param {?} sortable
+         * @return {?}
+         */
+        function (sortable) {
+            this._sortable = coercion.coerceBooleanProperty(sortable);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    /**
+     * @return {?}
+     */
+    SimpleColumn.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        if (this.table) {
+            this.table.addColumnDef(this.columnDef);
+        }
+    };
+    /**
+     * @return {?}
+     */
+    SimpleColumn.prototype.ngOnDestroy = /**
+     * @return {?}
+     */
+    function () {
+        if (this.table) {
+            this.table.removeColumnDef(this.columnDef);
+        }
+    };
+    /**
+     * @param {?} data
+     * @return {?}
+     */
+    SimpleColumn.prototype.getData = /**
+     * @param {?} data
+     * @return {?}
+     */
+    function (data) {
+        return this.dataAccessor ? this.dataAccessor(data, this.name) : (/** @type {?} */ (data))[this.name];
+    };
+    SimpleColumn.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'simple-column',
+                    template: "\n    <ng-container matColumnDef>\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{label || name}} </th>\n      <td mat-cell *matCellDef=\"let data\"> {{getData(data)}}</td>\n    </ng-container>\n  ",
+                    host: {
+                        'class': 'simple-column cdk-visually-hidden',
+                        '[attr.ariaHidden]': 'true',
+                    }
+                },] },
+    ];
+    /** @nocollapse */
+    SimpleColumn.ctorParameters = function () { return [
+        { type: material.MatTable, decorators: [{ type: core.Optional }] }
+    ]; };
+    SimpleColumn.propDecorators = {
+        name: [{ type: core.Input }],
+        label: [{ type: core.Input }],
+        dataAccessor: [{ type: core.Input }],
+        align: [{ type: core.Input }],
+        sortable: [{ type: core.Input }],
+        columnDef: [{ type: core.ViewChild, args: [material.MatColumnDef,] }],
+        sortHeader: [{ type: core.ViewChild, args: [material.MatSortHeader,] }]
+    };
+    return SimpleColumn;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/** @type {?} */
+var ELEMENT_DATA$10 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
  * \@title Table with sorting
  */
 var TableSortingExample = /** @class */ (function () {
     function TableSortingExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$9);
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$10);
     }
     /**
      * @return {?}
@@ -6542,7 +6703,7 @@ var TableSortingExample = /** @class */ (function () {
 var TableStickyColumnsExample = /** @class */ (function () {
     function TableStickyColumnsExample() {
         this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-        this.dataSource = ELEMENT_DATA$10;
+        this.dataSource = ELEMENT_DATA$11;
     }
     TableStickyColumnsExample.decorators = [
         { type: core.Component, args: [{
@@ -6554,7 +6715,7 @@ var TableStickyColumnsExample = /** @class */ (function () {
     return TableStickyColumnsExample;
 }());
 /** @type {?} */
-var ELEMENT_DATA$10 = [
+var ELEMENT_DATA$11 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6577,7 +6738,7 @@ var ELEMENT_DATA$10 = [
 var TableStickyComplexFlexExample = /** @class */ (function () {
     function TableStickyComplexFlexExample() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$11;
+        this.dataSource = ELEMENT_DATA$12;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -6615,7 +6776,7 @@ var TableStickyComplexFlexExample = /** @class */ (function () {
     return TableStickyComplexFlexExample;
 }());
 /** @type {?} */
-var ELEMENT_DATA$11 = [
+var ELEMENT_DATA$12 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6638,7 +6799,7 @@ var ELEMENT_DATA$11 = [
 var TableStickyComplexExample = /** @class */ (function () {
     function TableStickyComplexExample() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$12;
+        this.dataSource = ELEMENT_DATA$13;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -6676,7 +6837,7 @@ var TableStickyComplexExample = /** @class */ (function () {
     return TableStickyComplexExample;
 }());
 /** @type {?} */
-var ELEMENT_DATA$12 = [
+var ELEMENT_DATA$13 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6740,7 +6901,7 @@ var TableStickyFooterExample = /** @class */ (function () {
 var TableStickyHeaderExample = /** @class */ (function () {
     function TableStickyHeaderExample() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$13;
+        this.dataSource = ELEMENT_DATA$14;
     }
     TableStickyHeaderExample.decorators = [
         { type: core.Component, args: [{
@@ -6752,7 +6913,7 @@ var TableStickyHeaderExample = /** @class */ (function () {
     return TableStickyHeaderExample;
 }());
 /** @type {?} */
-var ELEMENT_DATA$13 = [
+var ELEMENT_DATA$14 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6764,6 +6925,90 @@ var ELEMENT_DATA$13 = [
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/** @type {?} */
+var ELEMENT_DATA$15 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
+ * \@title Table example that shows how to wrap a table component for definition and behavior reuse.
+ */
+var TableWrappedExample = /** @class */ (function () {
+    function TableWrappedExample() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$15);
+    }
+    /**
+     * @return {?}
+     */
+    TableWrappedExample.prototype.ngOnInit = /**
+     * @return {?}
+     */
+    function () {
+        this.dataSource.sort = this.sort;
+    };
+    TableWrappedExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'table-wrapped-example',
+                    styles: ["table { width: 100%; } "],
+                    template: "<wrapper-table [dataSource]=\"dataSource\" [columns]=\"displayedColumns\" matSort #sort=\"matSort\"><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns; \"></tr></wrapper-table>",
+                },] },
+    ];
+    TableWrappedExample.propDecorators = {
+        sort: [{ type: core.ViewChild, args: ['sort',] }]
+    };
+    return TableWrappedExample;
+}());
+/**
+ * Table component that accepts column and row definitions in its content to be registered to the
+ * table.
+ * @template T
+ */
+var WrapperTable = /** @class */ (function () {
+    function WrapperTable() {
+    }
+    /**
+     * @return {?}
+     */
+    WrapperTable.prototype.ngAfterContentInit = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.columnDefs.forEach(function (columnDef) { return _this.table.addColumnDef(columnDef); });
+        this.rowDefs.forEach(function (rowDef) { return _this.table.addRowDef(rowDef); });
+        this.headerRowDefs.forEach(function (headerRowDef) { return _this.table.addHeaderRowDef(headerRowDef); });
+    };
+    WrapperTable.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'wrapper-table',
+                    template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"><ng-content></ng-content><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container></table>",
+                    styles: ["\n    table {\n      width: 100%;\n    }\n  "]
+                },] },
+    ];
+    WrapperTable.propDecorators = {
+        headerRowDefs: [{ type: core.ContentChildren, args: [material.MatHeaderRowDef,] }],
+        rowDefs: [{ type: core.ContentChildren, args: [material.MatRowDef,] }],
+        columnDefs: [{ type: core.ContentChildren, args: [material.MatColumnDef,] }],
+        table: [{ type: core.ViewChild, args: [material.MatTable,] }],
+        columns: [{ type: core.Input }],
+        dataSource: [{ type: core.Input }]
+    };
+    return WrapperTable;
+}());
 
 /**
  * @fileoverview added by tsickle
@@ -8510,7 +8755,7 @@ var EXAMPLE_COMPONENTS = {
     'form-field-custom-control': {
         title: 'Form field with custom telephone number input control.',
         component: FormFieldCustomControlExample,
-        additionalFiles: ["my-tel-input-example.html", "my-tel-input-example.css"],
+        additionalFiles: ["example-tel-input-example.html", "example-tel-input-example.css"],
         selectorName: 'FormFieldCustomControlExample, MyTelInput'
     },
     'form-field-error': {
@@ -8903,6 +9148,11 @@ var EXAMPLE_COMPONENTS = {
         title: 'Table with selection',
         component: TableSelectionExample
     },
+    'table-simple-column': {
+        title: 'Table with a custom column component for easy column definition reuse.',
+        component: TableSimpleColumnExample,
+        selectorName: 'TableSimpleColumnExample, SimpleColumn'
+    },
     'table-sorting': {
         title: 'Table with sorting',
         component: TableSortingExample
@@ -8926,6 +9176,12 @@ var EXAMPLE_COMPONENTS = {
     'table-sticky-header': {
         title: 'Table with sticky header',
         component: TableStickyHeaderExample
+    },
+    'table-wrapped': {
+        title: 'Table example that shows how to wrap a table component for definition and behavior reuse.',
+        component: TableWrappedExample,
+        additionalFiles: ["wrapper-table.html"],
+        selectorName: 'TableWrappedExample, WrapperTable'
     },
     'text-field-autofill-directive': {
         title: 'Monitoring autofill state with cdkAutofill',
@@ -9173,12 +9429,14 @@ var EXAMPLE_LIST = [
     TablePaginationExample,
     TableRowContextExample,
     TableSelectionExample,
+    SimpleColumn, TableSimpleColumnExample,
     TableSortingExample,
     TableStickyColumnsExample,
     TableStickyComplexFlexExample,
     TableStickyComplexExample,
     TableStickyFooterExample,
     TableStickyHeaderExample,
+    WrapperTable, TableWrappedExample,
     TextFieldAutofillDirectiveExample,
     TextFieldAutofillMonitorExample,
     TextFieldAutosizeTextareaExample,
@@ -9360,7 +9618,7 @@ exports.ɵdo = InputOverviewExample;
 exports.ɵdp = InputPrefixSuffixExample;
 exports.ɵdq = ListSectionsExample;
 exports.ɵdr = ListSelectionExample;
-exports.ɵhv = ExampleMaterialModule;
+exports.ɵhz = ExampleMaterialModule;
 exports.ɵds = MenuIconsExample;
 exports.ɵdt = MenuOverviewExample;
 exports.ɵdu = NestedMenuExample;
@@ -9438,36 +9696,40 @@ exports.ɵgn = TableOverviewExample;
 exports.ɵgo = TablePaginationExample;
 exports.ɵgp = TableRowContextExample;
 exports.ɵgq = TableSelectionExample;
-exports.ɵgr = TableSortingExample;
-exports.ɵgs = TableStickyColumnsExample;
-exports.ɵgt = TableStickyComplexFlexExample;
-exports.ɵgu = TableStickyComplexExample;
-exports.ɵgv = TableStickyFooterExample;
-exports.ɵgw = TableStickyHeaderExample;
-exports.ɵgx = TextFieldAutofillDirectiveExample;
-exports.ɵgy = TextFieldAutofillMonitorExample;
-exports.ɵgz = TextFieldAutosizeTextareaExample;
-exports.ɵha = ToolbarOverviewExample;
-exports.ɵhb = TooltipAutoHideExample;
-exports.ɵhc = TooltipCustomClassExample;
-exports.ɵhd = TooltipDelayExample;
-exports.ɵhe = TooltipDisabledExample;
-exports.ɵhf = TooltipManualExample;
-exports.ɵhg = TooltipMessageExample;
-exports.ɵhi = TooltipModifiedDefaultsExample;
-exports.ɵhh = myCustomTooltipDefaults;
-exports.ɵhj = TooltipOverviewExample;
-exports.ɵhk = TooltipPositionExample;
-exports.ɵhl = ChecklistDatabase;
-exports.ɵhm = TreeChecklistExample;
-exports.ɵhn = DynamicDatabase;
-exports.ɵho = TreeDynamicExample;
-exports.ɵhp = FileDatabase$2;
-exports.ɵhq = TreeFlatOverviewExample;
-exports.ɵhr = LoadmoreDatabase;
-exports.ɵhs = TreeLoadmoreExample;
-exports.ɵht = FileDatabase$3;
-exports.ɵhu = TreeNestedOverviewExample;
+exports.ɵgs = SimpleColumn;
+exports.ɵgr = TableSimpleColumnExample;
+exports.ɵgt = TableSortingExample;
+exports.ɵgu = TableStickyColumnsExample;
+exports.ɵgv = TableStickyComplexFlexExample;
+exports.ɵgw = TableStickyComplexExample;
+exports.ɵgx = TableStickyFooterExample;
+exports.ɵgy = TableStickyHeaderExample;
+exports.ɵgz = TableWrappedExample;
+exports.ɵha = WrapperTable;
+exports.ɵhb = TextFieldAutofillDirectiveExample;
+exports.ɵhc = TextFieldAutofillMonitorExample;
+exports.ɵhd = TextFieldAutosizeTextareaExample;
+exports.ɵhe = ToolbarOverviewExample;
+exports.ɵhf = TooltipAutoHideExample;
+exports.ɵhg = TooltipCustomClassExample;
+exports.ɵhh = TooltipDelayExample;
+exports.ɵhi = TooltipDisabledExample;
+exports.ɵhj = TooltipManualExample;
+exports.ɵhk = TooltipMessageExample;
+exports.ɵhm = TooltipModifiedDefaultsExample;
+exports.ɵhl = myCustomTooltipDefaults;
+exports.ɵhn = TooltipOverviewExample;
+exports.ɵho = TooltipPositionExample;
+exports.ɵhp = ChecklistDatabase;
+exports.ɵhq = TreeChecklistExample;
+exports.ɵhr = DynamicDatabase;
+exports.ɵhs = TreeDynamicExample;
+exports.ɵht = FileDatabase$2;
+exports.ɵhu = TreeFlatOverviewExample;
+exports.ɵhv = LoadmoreDatabase;
+exports.ɵhw = TreeLoadmoreExample;
+exports.ɵhx = FileDatabase$3;
+exports.ɵhy = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

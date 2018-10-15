@@ -20,12 +20,12 @@
 
 <span class="hljs-comment">/** Custom `MatFormFieldControl` for telephone number input. */</span>
 <span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'my-tel-input'</span>,
-  templateUrl: <span class="hljs-string">'my-tel-input-example.html'</span>,
-  styleUrls: [<span class="hljs-string">'my-tel-input-example.css'</span>],
+  selector: <span class="hljs-string">'example-tel-input'</span>,
+  templateUrl: <span class="hljs-string">'example-tel-input-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'example-tel-input-example.css'</span>],
   providers: [{provide: MatFormFieldControl, useExisting: MyTelInput}],
   host: {
-    <span class="hljs-string">'[class.floating]'</span>: <span class="hljs-string">'shouldLabelFloat'</span>,
+    <span class="hljs-string">'[class.example-floating]'</span>: <span class="hljs-string">'shouldLabelFloat'</span>,
     <span class="hljs-string">'[id]'</span>: <span class="hljs-string">'id'</span>,
     <span class="hljs-string">'[attr.aria-describedby]'</span>: <span class="hljs-string">'describedBy'</span>,
   }
@@ -38,8 +38,8 @@
   focused = <span class="hljs-literal">false</span>;
   ngControl = <span class="hljs-literal">null</span>;
   errorState = <span class="hljs-literal">false</span>;
-  controlType = <span class="hljs-string">'my-tel-input'</span>;
-  id = <span class="hljs-string">`my-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;
+  controlType = <span class="hljs-string">'example-tel-input'</span>;
+  id = <span class="hljs-string">`example-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;
   describedBy = <span class="hljs-string">''</span>;
 
   <span class="hljs-keyword">get</span> empty() {

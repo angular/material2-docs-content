@@ -172,12 +172,14 @@ import {TableOverviewExample} from './table-overview/table-overview-example';
 import {TablePaginationExample} from './table-pagination/table-pagination-example';
 import {TableRowContextExample} from './table-row-context/table-row-context-example';
 import {TableSelectionExample} from './table-selection/table-selection-example';
+import {SimpleColumn,TableSimpleColumnExample} from './table-simple-column/table-simple-column-example';
 import {TableSortingExample} from './table-sorting/table-sorting-example';
 import {TableStickyColumnsExample} from './table-sticky-columns/table-sticky-columns-example';
 import {TableStickyComplexFlexExample} from './table-sticky-complex-flex/table-sticky-complex-flex-example';
 import {TableStickyComplexExample} from './table-sticky-complex/table-sticky-complex-example';
 import {TableStickyFooterExample} from './table-sticky-footer/table-sticky-footer-example';
 import {TableStickyHeaderExample} from './table-sticky-header/table-sticky-header-example';
+import {WrapperTable,TableWrappedExample} from './table-wrapped/table-wrapped-example';
 import {TextFieldAutofillDirectiveExample} from './text-field-autofill-directive/text-field-autofill-directive-example';
 import {TextFieldAutofillMonitorExample} from './text-field-autofill-monitor/text-field-autofill-monitor-example';
 import {TextFieldAutosizeTextareaExample} from './text-field-autosize-textarea/text-field-autosize-textarea-example';
@@ -496,7 +498,7 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'form-field-custom-control': {
     title: 'Form field with custom telephone number input control.',
     component: FormFieldCustomControlExample,
-    additionalFiles: ["my-tel-input-example.html","my-tel-input-example.css"],
+    additionalFiles: ["example-tel-input-example.html","example-tel-input-example.css"],
     selectorName: 'FormFieldCustomControlExample, MyTelInput'
   },
   'form-field-error': {
@@ -889,6 +891,11 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Table with selection',
     component: TableSelectionExample
   },
+  'table-simple-column': {
+    title: 'Table with a custom column component for easy column definition reuse.',
+    component: TableSimpleColumnExample,
+    selectorName: 'TableSimpleColumnExample, SimpleColumn'
+  },
   'table-sorting': {
     title: 'Table with sorting',
     component: TableSortingExample
@@ -912,6 +919,12 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'table-sticky-header': {
     title: 'Table with sticky header',
     component: TableStickyHeaderExample
+  },
+  'table-wrapped': {
+    title: 'Table example that shows how to wrap a table component for definition and behavior reuse.',
+    component: TableWrappedExample,
+    additionalFiles: ["wrapper-table.html"],
+    selectorName: 'TableWrappedExample, WrapperTable'
   },
   'text-field-autofill-directive': {
     title: 'Monitoring autofill state with cdkAutofill',
@@ -1159,12 +1172,14 @@ export const EXAMPLE_LIST = [
   TablePaginationExample,
   TableRowContextExample,
   TableSelectionExample,
+  SimpleColumn,TableSimpleColumnExample,
   TableSortingExample,
   TableStickyColumnsExample,
   TableStickyComplexFlexExample,
   TableStickyComplexExample,
   TableStickyFooterExample,
   TableStickyHeaderExample,
+  WrapperTable,TableWrappedExample,
   TextFieldAutofillDirectiveExample,
   TextFieldAutofillMonitorExample,
   TextFieldAutosizeTextareaExample,

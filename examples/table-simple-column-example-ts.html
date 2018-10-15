@@ -1,0 +1,131 @@
+<span class="hljs-keyword">import</span> {Component, Input, OnDestroy, OnInit, Optional, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {coerceBooleanProperty} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/coercion'</span>;
+<span class="hljs-keyword">import</span> {
+    MatColumnDef,
+    MatSort,
+    MatSortHeader,
+    MatTable,
+    MatTableDataSource
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
+  name: <span class="hljs-built_in">string</span>;
+  position: <span class="hljs-built_in">number</span>;
+  weight: <span class="hljs-built_in">number</span>;
+  symbol: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">const</span> ELEMENT_DATA: PeriodicElement[] = [
+  {position: <span class="hljs-number">1</span>, name: <span class="hljs-string">'Hydrogen'</span>, weight: <span class="hljs-number">1.0079</span>, symbol: <span class="hljs-string">'H'</span>},
+  {position: <span class="hljs-number">2</span>, name: <span class="hljs-string">'Helium'</span>, weight: <span class="hljs-number">4.0026</span>, symbol: <span class="hljs-string">'He'</span>},
+  {position: <span class="hljs-number">3</span>, name: <span class="hljs-string">'Lithium'</span>, weight: <span class="hljs-number">6.941</span>, symbol: <span class="hljs-string">'Li'</span>},
+  {position: <span class="hljs-number">4</span>, name: <span class="hljs-string">'Beryllium'</span>, weight: <span class="hljs-number">9.0122</span>, symbol: <span class="hljs-string">'Be'</span>},
+  {position: <span class="hljs-number">5</span>, name: <span class="hljs-string">'Boron'</span>, weight: <span class="hljs-number">10.811</span>, symbol: <span class="hljs-string">'B'</span>},
+  {position: <span class="hljs-number">6</span>, name: <span class="hljs-string">'Carbon'</span>, weight: <span class="hljs-number">12.0107</span>, symbol: <span class="hljs-string">'C'</span>},
+  {position: <span class="hljs-number">7</span>, name: <span class="hljs-string">'Nitrogen'</span>, weight: <span class="hljs-number">14.0067</span>, symbol: <span class="hljs-string">'N'</span>},
+  {position: <span class="hljs-number">8</span>, name: <span class="hljs-string">'Oxygen'</span>, weight: <span class="hljs-number">15.9994</span>, symbol: <span class="hljs-string">'O'</span>},
+  {position: <span class="hljs-number">9</span>, name: <span class="hljs-string">'Fluorine'</span>, weight: <span class="hljs-number">18.9984</span>, symbol: <span class="hljs-string">'F'</span>},
+  {position: <span class="hljs-number">10</span>, name: <span class="hljs-string">'Neon'</span>, weight: <span class="hljs-number">20.1797</span>, symbol: <span class="hljs-string">'Ne'</span>},
+];
+
+<span class="hljs-comment">/**
+ * @title Table with a custom column component for easy column definition reuse.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'table-simple-column-example'</span>,
+  styleUrls: [<span class="hljs-string">'table-simple-column-example.css'</span>],
+  templateUrl: <span class="hljs-string">'table-simple-column-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableSimpleColumnExample <span class="hljs-keyword">implements</span> OnInit {
+  displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
+  dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
+  getWeight = <span class="hljs-function">(<span class="hljs-params">data: PeriodicElement</span>) =&gt;</span> <span class="hljs-string">'~'</span> + data.weight;
+
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'sort'</span>) sort: MatSort;
+
+  ngOnInit() {
+    <span class="hljs-keyword">this</span>.dataSource.sort = <span class="hljs-keyword">this</span>.sort;
+  }
+}
+
+<span class="hljs-comment">/**
+ * Column that shows simply shows text content for the header and row
+ * cells. By default, the name of this column will be assumed to be both the header
+ * text and data property used to access the data value to show in cells. To override
+ * the header text, provide a label text. To override the data cell values,
+ * provide a dataAccessor function that provides the string to display for each row's cell.
+ *
+ * Note that this component sets itself as visually hidden since it will show up in the `mat-table`
+ * DOM because it is an empty element with an ng-container (nothing rendered). It should not
+ * interfere with screen readers.
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'simple-column'</span>,
+  template: <span class="hljs-string">`
+    &lt;ng-container matColumnDef&gt;
+      &lt;th mat-header-cell *matHeaderCellDef mat-sort-header&gt; {{label || name}} &lt;/th&gt;
+      &lt;td mat-cell *matCellDef="let data"&gt; {{getData(data)}}&lt;/td&gt;
+    &lt;/ng-container&gt;
+  `</span>,
+  host: {
+    <span class="hljs-string">'class'</span>: <span class="hljs-string">'simple-column cdk-visually-hidden'</span>,
+    <span class="hljs-string">'[attr.ariaHidden]'</span>: <span class="hljs-string">'true'</span>,
+  }
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SimpleColumn&lt;T&gt; <span class="hljs-keyword">implements</span> OnDestroy, OnInit {
+  <span class="hljs-comment">/** Column name that should be used to reference this column. */</span>
+  <span class="hljs-meta">@Input</span>()
+  <span class="hljs-keyword">get</span> name(): <span class="hljs-built_in">string</span> { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._name; }
+  <span class="hljs-keyword">set</span> name(name: <span class="hljs-built_in">string</span>) {
+    <span class="hljs-keyword">this</span>._name = name;
+    <span class="hljs-keyword">this</span>.columnDef.name = name;
+  }
+  _name: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-comment">/**
+   * Text label that should be used for the column header. If this property is not
+   * set, the header text will default to the column name.
+   */</span>
+  <span class="hljs-meta">@Input</span>() label: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-comment">/**
+   * Accessor function to retrieve the data should be provided to the cell. If this
+   * property is not set, the data cells will assume that the column name is the same
+   * as the data property the cells should display.
+   */</span>
+  <span class="hljs-meta">@Input</span>() dataAccessor: <span class="hljs-function">(<span class="hljs-params">(<span class="hljs-params">data: T, name: <span class="hljs-built_in">string</span></span>) =&gt; <span class="hljs-built_in">string</span></span>);
+
+  /** <span class="hljs-params">Alignment</span> <span class="hljs-params">of</span> <span class="hljs-params">the</span> <span class="hljs-params">cell</span> <span class="hljs-params">values</span>. */
+  @<span class="hljs-params">Input</span><span class="hljs-params">()</span> <span class="hljs-params">align</span>: '<span class="hljs-params">before</span>' | '<span class="hljs-params">after</span>' = '<span class="hljs-params">before</span>';
+
+  /** <span class="hljs-params">Whether</span> <span class="hljs-params">the</span> <span class="hljs-params">column</span> <span class="hljs-params">is</span> <span class="hljs-params">sortable</span> */
+  @<span class="hljs-params">Input</span><span class="hljs-params">()</span>
+  <span class="hljs-params">get</span> <span class="hljs-params">sortable</span><span class="hljs-params">()</span>: <span class="hljs-params">boolean</span> { <span class="hljs-params">return</span> <span class="hljs-params">this</span>._<span class="hljs-params">sortable</span>; }
+  <span class="hljs-params">set</span> <span class="hljs-params">sortable</span>(<span class="hljs-params">sortable: <span class="hljs-built_in">boolean</span></span>) {
+    <span class="hljs-params">this</span>._<span class="hljs-params">sortable</span> = <span class="hljs-params">coerceBooleanProperty</span>(<span class="hljs-params">sortable</span>);
+  }
+  _<span class="hljs-params">sortable</span>: <span class="hljs-params">boolean</span>;
+
+  @<span class="hljs-params">ViewChild</span>(<span class="hljs-params">MatColumnDef</span>) <span class="hljs-params">columnDef</span>: <span class="hljs-params">MatColumnDef</span>;
+
+  @<span class="hljs-params">ViewChild</span>(<span class="hljs-params">MatSortHeader</span>) <span class="hljs-params">sortHeader</span>: <span class="hljs-params">MatSortHeader</span>;
+
+  <span class="hljs-params">constructor</span>(<span class="hljs-params">@Optional(<span class="hljs-params"></span>) <span class="hljs-keyword">public</span> table: MatTable&lt;<span class="hljs-built_in">any</span>&gt;</span>) { }
+
+  <span class="hljs-params">ngOnInit</span><span class="hljs-params">()</span> {
+    <span class="hljs-params">if</span> (<span class="hljs-params"><span class="hljs-keyword">this</span>.table</span>) {
+      <span class="hljs-params">this</span>.<span class="hljs-params">table</span>.<span class="hljs-params">addColumnDef</span>(<span class="hljs-params"><span class="hljs-keyword">this</span>.columnDef</span>);
+    }
+  }
+
+  <span class="hljs-params">ngOnDestroy</span><span class="hljs-params">()</span> {
+    <span class="hljs-params">if</span> (<span class="hljs-params"><span class="hljs-keyword">this</span>.table</span>) {
+      <span class="hljs-params">this</span>.<span class="hljs-params">table</span>.<span class="hljs-params">removeColumnDef</span>(<span class="hljs-params"><span class="hljs-keyword">this</span>.columnDef</span>);
+    }
+  }
+
+  <span class="hljs-params">getData</span>(<span class="hljs-params">data: T</span>): <span class="hljs-params">any</span> {
+    <span class="hljs-params">return</span> <span class="hljs-params">this</span>.<span class="hljs-params">dataAccessor</span> ? <span class="hljs-params">this</span>.<span class="hljs-params">dataAccessor</span>(<span class="hljs-params">data, <span class="hljs-keyword">this</span>.name</span>) : (<span class="hljs-params">data <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span></span>)[<span class="hljs-params">this</span>.<span class="hljs-params">name</span>];
+  }
+}
+</span>

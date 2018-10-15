@@ -172,12 +172,14 @@
 <span class="hljs-keyword">import</span> {TablePaginationExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-pagination/table-pagination-example'</span>;
 <span class="hljs-keyword">import</span> {TableRowContextExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-row-context/table-row-context-example'</span>;
 <span class="hljs-keyword">import</span> {TableSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-selection/table-selection-example'</span>;
+<span class="hljs-keyword">import</span> {SimpleColumn,TableSimpleColumnExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-simple-column/table-simple-column-example'</span>;
 <span class="hljs-keyword">import</span> {TableSortingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sorting/table-sorting-example'</span>;
 <span class="hljs-keyword">import</span> {TableStickyColumnsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-columns/table-sticky-columns-example'</span>;
 <span class="hljs-keyword">import</span> {TableStickyComplexFlexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-complex-flex/table-sticky-complex-flex-example'</span>;
 <span class="hljs-keyword">import</span> {TableStickyComplexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-complex/table-sticky-complex-example'</span>;
 <span class="hljs-keyword">import</span> {TableStickyFooterExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-footer/table-sticky-footer-example'</span>;
 <span class="hljs-keyword">import</span> {TableStickyHeaderExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-header/table-sticky-header-example'</span>;
+<span class="hljs-keyword">import</span> {WrapperTable,TableWrappedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-wrapped/table-wrapped-example'</span>;
 <span class="hljs-keyword">import</span> {TextFieldAutofillDirectiveExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./text-field-autofill-directive/text-field-autofill-directive-example'</span>;
 <span class="hljs-keyword">import</span> {TextFieldAutofillMonitorExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./text-field-autofill-monitor/text-field-autofill-monitor-example'</span>;
 <span class="hljs-keyword">import</span> {TextFieldAutosizeTextareaExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./text-field-autosize-textarea/text-field-autosize-textarea-example'</span>;
@@ -496,7 +498,7 @@
   <span class="hljs-string">'form-field-custom-control'</span>: {
     title: <span class="hljs-string">'Form field with custom telephone number input control.'</span>,
     component: FormFieldCustomControlExample,
-    additionalFiles: [<span class="hljs-string">"my-tel-input-example.html"</span>,<span class="hljs-string">"my-tel-input-example.css"</span>],
+    additionalFiles: [<span class="hljs-string">"example-tel-input-example.html"</span>,<span class="hljs-string">"example-tel-input-example.css"</span>],
     selectorName: <span class="hljs-string">'FormFieldCustomControlExample, MyTelInput'</span>
   },
   <span class="hljs-string">'form-field-error'</span>: {
@@ -889,6 +891,11 @@
     title: <span class="hljs-string">'Table with selection'</span>,
     component: TableSelectionExample
   },
+  <span class="hljs-string">'table-simple-column'</span>: {
+    title: <span class="hljs-string">'Table with a custom column component for easy column definition reuse.'</span>,
+    component: TableSimpleColumnExample,
+    selectorName: <span class="hljs-string">'TableSimpleColumnExample, SimpleColumn'</span>
+  },
   <span class="hljs-string">'table-sorting'</span>: {
     title: <span class="hljs-string">'Table with sorting'</span>,
     component: TableSortingExample
@@ -912,6 +919,12 @@
   <span class="hljs-string">'table-sticky-header'</span>: {
     title: <span class="hljs-string">'Table with sticky header'</span>,
     component: TableStickyHeaderExample
+  },
+  <span class="hljs-string">'table-wrapped'</span>: {
+    title: <span class="hljs-string">'Table example that shows how to wrap a table component for definition and behavior reuse.'</span>,
+    component: TableWrappedExample,
+    additionalFiles: [<span class="hljs-string">"wrapper-table.html"</span>],
+    selectorName: <span class="hljs-string">'TableWrappedExample, WrapperTable'</span>
   },
   <span class="hljs-string">'text-field-autofill-directive'</span>: {
     title: <span class="hljs-string">'Monitoring autofill state with cdkAutofill'</span>,
@@ -1159,12 +1172,14 @@
   TablePaginationExample,
   TableRowContextExample,
   TableSelectionExample,
+  SimpleColumn,TableSimpleColumnExample,
   TableSortingExample,
   TableStickyColumnsExample,
   TableStickyComplexFlexExample,
   TableStickyComplexExample,
   TableStickyFooterExample,
   TableStickyHeaderExample,
+  WrapperTable,TableWrappedExample,
   TextFieldAutofillDirectiveExample,
   TextFieldAutofillMonitorExample,
   TextFieldAutosizeTextareaExample,

@@ -5,13 +5,13 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-import { NgModule, Component, ViewChild, TemplateRef, ViewContainerRef, Injectable, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, ChangeDetectorRef, Host, Inject, NgZone, Input } from '@angular/core';
+import { NgModule, Component, ViewChild, TemplateRef, ViewContainerRef, Injectable, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, ChangeDetectorRef, Host, Inject, NgZone, Input, Optional, ContentChildren } from '@angular/core';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
 import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
+import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MatColumnDef, MatSortHeader, MatTable, MatHeaderRowDef, MatRowDef, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
 import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { map, startWith, takeUntil, catchError, switchMap, take } from 'rxjs/operators';
 import { Overlay } from '@angular/cdk/overlay';
@@ -600,8 +600,8 @@ class ButtonTypesExample {
 ButtonTypesExample.decorators = [
     { type: Component, args: [{
                 selector: 'button-types-example',
-                template: "<h3>Basic Buttons</h3><div class=\"button-row\"><button mat-button>Basic</button> <button mat-button color=\"primary\">Primary</button> <button mat-button color=\"accent\">Accent</button> <button mat-button color=\"warn\">Warn</button> <button mat-button disabled=\"disabled\">Disabled</button> <a mat-button routerLink=\".\">Link</a></div><h3>Raised Buttons</h3><div class=\"button-row\"><button mat-raised-button>Basic</button> <button mat-raised-button color=\"primary\">Primary</button> <button mat-raised-button color=\"accent\">Accent</button> <button mat-raised-button color=\"warn\">Warn</button> <button mat-raised-button disabled=\"disabled\">Disabled</button> <a mat-raised-button routerLink=\".\">Link</a></div><h3>Stroked Buttons</h3><div class=\"button-row\"><button mat-stroked-button>Basic</button> <button mat-stroked-button color=\"primary\">Primary</button> <button mat-stroked-button color=\"accent\">Accent</button> <button mat-stroked-button color=\"warn\">Warn</button> <button mat-stroked-button disabled=\"disabled\">Disabled</button> <a mat-stroked-button routerLink=\".\">Link</a></div><h3>Flat Buttons</h3><div class=\"button-row\"><button mat-flat-button>Basic</button> <button mat-flat-button color=\"primary\">Primary</button> <button mat-flat-button color=\"accent\">Accent</button> <button mat-flat-button color=\"warn\">Warn</button> <button mat-flat-button disabled=\"disabled\">Disabled</button> <a mat-flat-button routerLink=\".\">Link</a></div><h3>Icon Buttons</h3><div class=\"button-row\"><button mat-icon-button><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"primary\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"accent\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"warn\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button disabled=\"disabled\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button></div><h3>Fab Buttons</h3><div class=\"button-row\"><button mat-fab>Basic</button> <button mat-fab color=\"primary\">Primary</button> <button mat-fab color=\"accent\">Accent</button> <button mat-fab color=\"warn\">Warn</button> <button mat-fab disabled=\"disabled\">Disabled</button> <button mat-fab><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <a mat-fab routerLink=\".\">Link</a></div><h3>Mini Fab Buttons</h3><div class=\"button-row\"><button mat-mini-fab>Basic</button> <button mat-mini-fab color=\"primary\">Primary</button> <button mat-mini-fab color=\"accent\">Accent</button> <button mat-mini-fab color=\"warn\">Warn</button> <button mat-mini-fab disabled=\"disabled\">Disabled</button> <button mat-mini-fab><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <a mat-mini-fab routerLink=\".\">Link</a></div>",
-                styles: [".button-row button, .button-row a { margin-right: 8px; } "],
+                template: "<h3>Basic Buttons</h3><div class=\"example-button-row\"><button mat-button>Basic</button> <button mat-button color=\"primary\">Primary</button> <button mat-button color=\"accent\">Accent</button> <button mat-button color=\"warn\">Warn</button> <button mat-button disabled=\"disabled\">Disabled</button> <a mat-button routerLink=\".\">Link</a></div><h3>Raised Buttons</h3><div class=\"example-button-row\"><button mat-raised-button>Basic</button> <button mat-raised-button color=\"primary\">Primary</button> <button mat-raised-button color=\"accent\">Accent</button> <button mat-raised-button color=\"warn\">Warn</button> <button mat-raised-button disabled=\"disabled\">Disabled</button> <a mat-raised-button routerLink=\".\">Link</a></div><h3>Stroked Buttons</h3><div class=\"example-button-row\"><button mat-stroked-button>Basic</button> <button mat-stroked-button color=\"primary\">Primary</button> <button mat-stroked-button color=\"accent\">Accent</button> <button mat-stroked-button color=\"warn\">Warn</button> <button mat-stroked-button disabled=\"disabled\">Disabled</button> <a mat-stroked-button routerLink=\".\">Link</a></div><h3>Flat Buttons</h3><div class=\"example-button-row\"><button mat-flat-button>Basic</button> <button mat-flat-button color=\"primary\">Primary</button> <button mat-flat-button color=\"accent\">Accent</button> <button mat-flat-button color=\"warn\">Warn</button> <button mat-flat-button disabled=\"disabled\">Disabled</button> <a mat-flat-button routerLink=\".\">Link</a></div><h3>Icon Buttons</h3><div class=\"example-button-row\"><button mat-icon-button><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"primary\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"accent\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button color=\"warn\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <button mat-icon-button disabled=\"disabled\"><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button></div><h3>Fab Buttons</h3><div class=\"example-button-row\"><button mat-fab>Basic</button> <button mat-fab color=\"primary\">Primary</button> <button mat-fab color=\"accent\">Accent</button> <button mat-fab color=\"warn\">Warn</button> <button mat-fab disabled=\"disabled\">Disabled</button> <button mat-fab><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <a mat-fab routerLink=\".\">Link</a></div><h3>Mini Fab Buttons</h3><div class=\"example-button-row\"><button mat-mini-fab>Basic</button> <button mat-mini-fab color=\"primary\">Primary</button> <button mat-mini-fab color=\"accent\">Accent</button> <button mat-mini-fab color=\"warn\">Warn</button> <button mat-mini-fab disabled=\"disabled\">Disabled</button> <button mat-mini-fab><mat-icon aria-label=\"Example icon-button with a heart icon\">favorite</mat-icon></button> <a mat-mini-fab routerLink=\".\">Link</a></div>",
+                styles: [".example-button-row button, .example-button-row a { margin-right: 8px; } "],
             },] },
 ];
 
@@ -651,8 +651,8 @@ class CdkDragDropAxisLockExample {
 CdkDragDropAxisLockExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-drag-drop-axis-lock-example',
-                template: "<div class=\"box\" cdkDragLockAxis=\"y\" cdkDrag>I can only be dragged up/down</div><div class=\"box\" cdkDragLockAxis=\"x\" cdkDrag>I can only be dragged left/right</div>",
-                styles: [".box { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: inline-flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; margin-right: 25px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+                template: "<div class=\"example-box\" cdkDragLockAxis=\"y\" cdkDrag>I can only be dragged up/down</div><div class=\"example-box\" cdkDragLockAxis=\"x\" cdkDrag>I can only be dragged left/right</div>",
+                styles: [".example-box { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: inline-flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; margin-right: 25px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .example-box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
             },] },
 ];
 
@@ -695,8 +695,8 @@ class CdkDragDropConnectedSortingExample {
 CdkDragDropConnectedSortingExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-drag-drop-connected-sorting-example',
-                template: "<div class=\"container\"><h2>To do</h2><div cdkDrop #todoList=\"cdkDrop\" [cdkDropData]=\"todo\" [cdkDropConnectedTo]=\"[doneList]\" class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div></div></div><div class=\"container\"><h2>Done</h2><div cdkDrop #doneList=\"cdkDrop\" [cdkDropData]=\"done\" [cdkDropConnectedTo]=\"[todoList]\" class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div></div></div>",
-                styles: [".container { width: 400px; max-width: 100%; margin: 0 25px 25px 0; display: inline-block; vertical-align: top; } .list { border: solid 1px #ccc; min-height: 60px; background: white; border-radius: 4px; overflow: hidden; display: block; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                template: "<div class=\"example-container\"><h2>To do</h2><div cdkDrop #todoList=\"cdkDrop\" [cdkDropData]=\"todo\" [cdkDropConnectedTo]=\"[doneList]\" class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div></div></div><div class=\"example-container\"><h2>Done</h2><div cdkDrop #doneList=\"cdkDrop\" [cdkDropData]=\"done\" [cdkDropConnectedTo]=\"[todoList]\" class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div></div></div>",
+                styles: [".example-container { width: 400px; max-width: 100%; margin: 0 25px 25px 0; display: inline-block; vertical-align: top; } .example-list { border: solid 1px #ccc; min-height: 60px; background: white; border-radius: 4px; overflow: hidden; display: block; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
             },] },
 ];
 
@@ -756,8 +756,8 @@ class CdkDragDropCustomPreviewExample {
 CdkDragDropCustomPreviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-drag-drop-custom-preview-example',
-                template: "<div cdkDrop class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie.title}} <img *cdkDragPreview [src]=\"movie.poster\" [alt]=\"movie.title\"></div></div>",
-                styles: [".list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                template: "<div cdkDrop class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie.title}} <img *cdkDragPreview [src]=\"movie.poster\" [alt]=\"movie.title\"></div></div>",
+                styles: [".example-list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
             },] },
 ];
 
@@ -773,8 +773,8 @@ class CdkDragDropHandleExample {
 CdkDragDropHandleExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-drag-drop-handle-example',
-                template: "<div class=\"box\" cdkDrag>I can only be dragged using the handle<div class=\"handle\" cdkDragHandle><svg width=\"24px\" fill=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z\"></path><path d=\"M0 0h24v24H0z\" fill=\"none\"></path></svg></div></div>",
-                styles: [".box { width: 200px; height: 200px; padding: 10px; box-sizing: border-box; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .handle { position: absolute; top: 10px; right: 10px; color: #ccc; cursor: move; width: 24px; height: 24px; } "],
+                template: "<div class=\"example-box\" cdkDrag>I can only be dragged using the handle<div class=\"example-handle\" cdkDragHandle><svg width=\"24px\" fill=\"currentColor\" viewBox=\"0 0 24 24\"><path d=\"M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z\"></path><path d=\"M0 0h24v24H0z\" fill=\"none\"></path></svg></div></div>",
+                styles: [".example-box { width: 200px; height: 200px; padding: 10px; box-sizing: border-box; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .example-box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .example-handle { position: absolute; top: 10px; right: 10px; color: #ccc; cursor: move; width: 24px; height: 24px; } "],
             },] },
 ];
 
@@ -806,8 +806,8 @@ class CdkDragDropHorizontalSortingExample {
 CdkDragDropHorizontalSortingExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-drag-drop-horizontal-sorting-example',
-                template: "<div cdkDrop cdkDropOrientation=\"horizontal\" class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let timePeriod of timePeriods\" cdkDrag>{{timePeriod}}</div></div>",
-                styles: [".list { width: 1000px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: flex; flex-direction: row; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-right: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; flex-grow: 1; flex-basis: 0; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                template: "<div cdkDrop cdkDropOrientation=\"horizontal\" class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let timePeriod of timePeriods\" cdkDrag>{{timePeriod}}</div></div>",
+                styles: [".example-list { width: 1000px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: flex; flex-direction: row; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-right: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; flex-grow: 1; flex-basis: 0; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
             },] },
 ];
 
@@ -823,8 +823,8 @@ class CdkDragDropOverviewExample {
 CdkDragDropOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-drag-drop-overview-example',
-                template: "<div class=\"box\" cdkDrag>Drag me around</div>",
-                styles: [".box { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+                template: "<div class=\"example-box\" cdkDrag>Drag me around</div>",
+                styles: [".example-box { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; position: relative; z-index: 1; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .example-box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
             },] },
 ];
 
@@ -871,8 +871,8 @@ class CdkDragDropRootElementExample {
 CdkDragDropRootElementExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-drag-drop-root-element-example',
-                template: "<button (click)=\"openDialog()\">Open a draggable dialog</button><ng-template><div class=\"dialog-content\" cdkDrag cdkDragRootElement=\".cdk-overlay-pane\">Drag the dialog around!</div></ng-template>",
-                styles: [".dialog-content { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: flex; justify-content: center; align-items: center; background: #fff; border-radius: 4px; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .dialog-content:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
+                template: "<button (click)=\"openDialog()\">Open a draggable dialog</button><ng-template><div class=\"example-dialog-content\" cdkDrag cdkDragRootElement=\".cdk-overlay-pane\">Drag the dialog around!</div></ng-template>",
+                styles: [".example-dialog-content { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: flex; justify-content: center; align-items: center; background: #fff; border-radius: 4px; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .example-dialog-content:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } "],
             },] },
 ];
 /** @nocollapse */
@@ -915,8 +915,8 @@ class CdkDragDropSortingExample {
 CdkDragDropSortingExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-drag-drop-sorting-example',
-                template: "<div cdkDrop class=\"list\" (cdkDropDropped)=\"drop($event)\"><div class=\"box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie}}</div></div>",
-                styles: [".list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .box:last-child { border: none; } .list.cdk-drop-dragging .box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                template: "<div cdkDrop class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie}}</div></div>",
+                styles: [".example-list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
             },] },
 ];
 
@@ -2862,7 +2862,7 @@ class FormFieldCustomControlExample {
 FormFieldCustomControlExample.decorators = [
     { type: Component, args: [{
                 selector: 'form-field-custom-control-example',
-                template: "<mat-form-field><my-tel-input placeholder=\"Phone number\" required></my-tel-input><mat-icon matSuffix>phone</mat-icon><mat-hint>Include area code</mat-hint></mat-form-field>",
+                template: "<mat-form-field><example-tel-input placeholder=\"Phone number\" required></example-tel-input><mat-icon matSuffix>phone</mat-icon><mat-hint>Include area code</mat-hint></mat-form-field>",
                 styles: ["/** No CSS for this example */ "],
             },] },
 ];
@@ -2897,8 +2897,8 @@ class MyTelInput {
         this.focused = false;
         this.ngControl = null;
         this.errorState = false;
-        this.controlType = 'my-tel-input';
-        this.id = `my-tel-input-${MyTelInput.nextId++}`;
+        this.controlType = 'example-tel-input';
+        this.id = `example-tel-input-${MyTelInput.nextId++}`;
         this.describedBy = '';
         this._required = false;
         this._disabled = false;
@@ -3005,12 +3005,12 @@ class MyTelInput {
 MyTelInput.nextId = 0;
 MyTelInput.decorators = [
     { type: Component, args: [{
-                selector: 'my-tel-input',
-                template: "<div [formGroup]=\"parts\" class=\"my-tel-input-container\"><input class=\"my-tel-input-element\" formControlName=\"area\" size=\"3\"> <span class=\"my-tel-input-spacer\">&ndash;</span> <input class=\"my-tel-input-element\" formControlName=\"exchange\" size=\"3\"> <span class=\"my-tel-input-spacer\">&ndash;</span> <input class=\"my-tel-input-element\" formControlName=\"subscriber\" size=\"4\"></div>",
-                styles: [".my-tel-input-container { display: flex; } .my-tel-input-element { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } .my-tel-input-spacer { opacity: 0; transition: opacity 200ms; } :host.floating .my-tel-input-spacer { opacity: 1; } "],
+                selector: 'example-tel-input',
+                template: "<div [formGroup]=\"parts\" class=\"example-tel-input-container\"><input class=\"example-tel-input-element\" formControlName=\"area\" size=\"3\"> <span class=\"example-tel-input-spacer\">&ndash;</span> <input class=\"example-tel-input-element\" formControlName=\"exchange\" size=\"3\"> <span class=\"example-tel-input-spacer\">&ndash;</span> <input class=\"example-tel-input-element\" formControlName=\"subscriber\" size=\"4\"></div>",
+                styles: [".example-tel-input-container { display: flex; } .example-tel-input-element { border: none; background: none; padding: 0; outline: none; font: inherit; text-align: center; } .example-tel-input-spacer { opacity: 0; transition: opacity 200ms; } :host.example-floating .example-tel-input-spacer { opacity: 1; } "],
                 providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }],
                 host: {
-                    '[class.floating]': 'shouldLabelFloat',
+                    '[class.example-floating]': 'shouldLabelFloat',
                     '[id]': 'id',
                     '[attr.aria-describedby]': 'describedBy',
                 }
@@ -5889,12 +5889,156 @@ const ELEMENT_DATA$9 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
+ * \@title Table with a custom column component for easy column definition reuse.
+ */
+class TableSimpleColumnExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$9);
+        this.getWeight = (data) => '~' + data.weight;
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.dataSource.sort = this.sort;
+    }
+}
+TableSimpleColumnExample.decorators = [
+    { type: Component, args: [{
+                selector: 'table-simple-column-example',
+                styles: ["table { width: 100%; } "],
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\" matSort #sort=\"matSort\"><simple-column name=\"name\" sortable></simple-column><simple-column name=\"position\"></simple-column><simple-column name=\"weight\" [dataAccessor]=\"getWeight\"></simple-column><simple-column name=\"symbol\" label=\"SYMBOL!\"></simple-column><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let data; columns: displayedColumns;\"></tr></table>",
+            },] },
+];
+TableSimpleColumnExample.propDecorators = {
+    sort: [{ type: ViewChild, args: ['sort',] }]
+};
+/**
+ * Column that shows simply shows text content for the header and row
+ * cells. By default, the name of this column will be assumed to be both the header
+ * text and data property used to access the data value to show in cells. To override
+ * the header text, provide a label text. To override the data cell values,
+ * provide a dataAccessor function that provides the string to display for each row's cell.
+ *
+ * Note that this component sets itself as visually hidden since it will show up in the `mat-table`
+ * DOM because it is an empty element with an ng-container (nothing rendered). It should not
+ * interfere with screen readers.
+ * @template T
+ */
+class SimpleColumn {
+    /**
+     * @param {?} table
+     */
+    constructor(table) {
+        this.table = table;
+        /**
+         * Alignment of the cell values.
+         */
+        this.align = 'before';
+    }
+    /**
+     * Column name that should be used to reference this column.
+     * @return {?}
+     */
+    get name() { return this._name; }
+    /**
+     * @param {?} name
+     * @return {?}
+     */
+    set name(name) {
+        this._name = name;
+        this.columnDef.name = name;
+    }
+    /**
+     * Whether the column is sortable
+     * @return {?}
+     */
+    get sortable() { return this._sortable; }
+    /**
+     * @param {?} sortable
+     * @return {?}
+     */
+    set sortable(sortable) {
+        this._sortable = coerceBooleanProperty(sortable);
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        if (this.table) {
+            this.table.addColumnDef(this.columnDef);
+        }
+    }
+    /**
+     * @return {?}
+     */
+    ngOnDestroy() {
+        if (this.table) {
+            this.table.removeColumnDef(this.columnDef);
+        }
+    }
+    /**
+     * @param {?} data
+     * @return {?}
+     */
+    getData(data) {
+        return this.dataAccessor ? this.dataAccessor(data, this.name) : (/** @type {?} */ (data))[this.name];
+    }
+}
+SimpleColumn.decorators = [
+    { type: Component, args: [{
+                selector: 'simple-column',
+                template: `
+    <ng-container matColumnDef>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{label || name}} </th>
+      <td mat-cell *matCellDef="let data"> {{getData(data)}}</td>
+    </ng-container>
+  `,
+                host: {
+                    'class': 'simple-column cdk-visually-hidden',
+                    '[attr.ariaHidden]': 'true',
+                }
+            },] },
+];
+/** @nocollapse */
+SimpleColumn.ctorParameters = () => [
+    { type: MatTable, decorators: [{ type: Optional }] }
+];
+SimpleColumn.propDecorators = {
+    name: [{ type: Input }],
+    label: [{ type: Input }],
+    dataAccessor: [{ type: Input }],
+    align: [{ type: Input }],
+    sortable: [{ type: Input }],
+    columnDef: [{ type: ViewChild, args: [MatColumnDef,] }],
+    sortHeader: [{ type: ViewChild, args: [MatSortHeader,] }]
+};
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const ELEMENT_DATA$10 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
  * \@title Table with sorting
  */
 class TableSortingExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$9);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$10);
     }
     /**
      * @return {?}
@@ -5924,7 +6068,7 @@ TableSortingExample.propDecorators = {
 class TableStickyColumnsExample {
     constructor() {
         this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-        this.dataSource = ELEMENT_DATA$10;
+        this.dataSource = ELEMENT_DATA$11;
     }
 }
 TableStickyColumnsExample.decorators = [
@@ -5935,7 +6079,7 @@ TableStickyColumnsExample.decorators = [
             },] },
 ];
 /** @type {?} */
-const ELEMENT_DATA$10 = [
+const ELEMENT_DATA$11 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5958,7 +6102,7 @@ const ELEMENT_DATA$10 = [
 class TableStickyComplexFlexExample {
     constructor() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$11;
+        this.dataSource = ELEMENT_DATA$12;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -5988,7 +6132,7 @@ TableStickyComplexFlexExample.decorators = [
 /** @nocollapse */
 TableStickyComplexFlexExample.ctorParameters = () => [];
 /** @type {?} */
-const ELEMENT_DATA$11 = [
+const ELEMENT_DATA$12 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6011,7 +6155,7 @@ const ELEMENT_DATA$11 = [
 class TableStickyComplexExample {
     constructor() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$12;
+        this.dataSource = ELEMENT_DATA$13;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -6041,7 +6185,7 @@ TableStickyComplexExample.decorators = [
 /** @nocollapse */
 TableStickyComplexExample.ctorParameters = () => [];
 /** @type {?} */
-const ELEMENT_DATA$12 = [
+const ELEMENT_DATA$13 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6099,7 +6243,7 @@ TableStickyFooterExample.decorators = [
 class TableStickyHeaderExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$13;
+        this.dataSource = ELEMENT_DATA$14;
     }
 }
 TableStickyHeaderExample.decorators = [
@@ -6110,7 +6254,7 @@ TableStickyHeaderExample.decorators = [
             },] },
 ];
 /** @type {?} */
-const ELEMENT_DATA$13 = [
+const ELEMENT_DATA$14 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6122,6 +6266,83 @@ const ELEMENT_DATA$13 = [
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const ELEMENT_DATA$15 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
+ * \@title Table example that shows how to wrap a table component for definition and behavior reuse.
+ */
+class TableWrappedExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$15);
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.dataSource.sort = this.sort;
+    }
+}
+TableWrappedExample.decorators = [
+    { type: Component, args: [{
+                selector: 'table-wrapped-example',
+                styles: ["table { width: 100%; } "],
+                template: "<wrapper-table [dataSource]=\"dataSource\" [columns]=\"displayedColumns\" matSort #sort=\"matSort\"><ng-container matColumnDef=\"name\"><th mat-header-cell *matHeaderCellDef>Name</th><td mat-cell *matCellDef=\"let element\">{{element.name}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns; \"></tr></wrapper-table>",
+            },] },
+];
+TableWrappedExample.propDecorators = {
+    sort: [{ type: ViewChild, args: ['sort',] }]
+};
+/**
+ * Table component that accepts column and row definitions in its content to be registered to the
+ * table.
+ * @template T
+ */
+class WrapperTable {
+    /**
+     * @return {?}
+     */
+    ngAfterContentInit() {
+        this.columnDefs.forEach(columnDef => this.table.addColumnDef(columnDef));
+        this.rowDefs.forEach(rowDef => this.table.addRowDef(rowDef));
+        this.headerRowDefs.forEach(headerRowDef => this.table.addHeaderRowDef(headerRowDef));
+    }
+}
+WrapperTable.decorators = [
+    { type: Component, args: [{
+                selector: 'wrapper-table',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"><ng-content></ng-content><ng-container matColumnDef=\"position\"><th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th><td mat-cell *matCellDef=\"let element\">{{element.position}}</td></ng-container><ng-container matColumnDef=\"weight\"><th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th><td mat-cell *matCellDef=\"let element\">{{element.weight}}</td></ng-container><ng-container matColumnDef=\"symbol\"><th mat-header-cell *matHeaderCellDef>Symbol</th><td mat-cell *matCellDef=\"let element\">{{element.symbol}}</td></ng-container></table>",
+                styles: [`
+    table {
+      width: 100%;
+    }
+  `]
+            },] },
+];
+WrapperTable.propDecorators = {
+    headerRowDefs: [{ type: ContentChildren, args: [MatHeaderRowDef,] }],
+    rowDefs: [{ type: ContentChildren, args: [MatRowDef,] }],
+    columnDefs: [{ type: ContentChildren, args: [MatColumnDef,] }],
+    table: [{ type: ViewChild, args: [MatTable,] }],
+    columns: [{ type: Input }],
+    dataSource: [{ type: Input }]
+};
 
 /**
  * @fileoverview added by tsickle
@@ -7634,7 +7855,7 @@ const EXAMPLE_COMPONENTS = {
     'form-field-custom-control': {
         title: 'Form field with custom telephone number input control.',
         component: FormFieldCustomControlExample,
-        additionalFiles: ["my-tel-input-example.html", "my-tel-input-example.css"],
+        additionalFiles: ["example-tel-input-example.html", "example-tel-input-example.css"],
         selectorName: 'FormFieldCustomControlExample, MyTelInput'
     },
     'form-field-error': {
@@ -8027,6 +8248,11 @@ const EXAMPLE_COMPONENTS = {
         title: 'Table with selection',
         component: TableSelectionExample
     },
+    'table-simple-column': {
+        title: 'Table with a custom column component for easy column definition reuse.',
+        component: TableSimpleColumnExample,
+        selectorName: 'TableSimpleColumnExample, SimpleColumn'
+    },
     'table-sorting': {
         title: 'Table with sorting',
         component: TableSortingExample
@@ -8050,6 +8276,12 @@ const EXAMPLE_COMPONENTS = {
     'table-sticky-header': {
         title: 'Table with sticky header',
         component: TableStickyHeaderExample
+    },
+    'table-wrapped': {
+        title: 'Table example that shows how to wrap a table component for definition and behavior reuse.',
+        component: TableWrappedExample,
+        additionalFiles: ["wrapper-table.html"],
+        selectorName: 'TableWrappedExample, WrapperTable'
     },
     'text-field-autofill-directive': {
         title: 'Monitoring autofill state with cdkAutofill',
@@ -8297,12 +8529,14 @@ const EXAMPLE_LIST = [
     TablePaginationExample,
     TableRowContextExample,
     TableSelectionExample,
+    SimpleColumn, TableSimpleColumnExample,
     TableSortingExample,
     TableStickyColumnsExample,
     TableStickyComplexFlexExample,
     TableStickyComplexExample,
     TableStickyFooterExample,
     TableStickyHeaderExample,
+    WrapperTable, TableWrappedExample,
     TextFieldAutofillDirectiveExample,
     TextFieldAutofillMonitorExample,
     TextFieldAutosizeTextareaExample,
@@ -8381,5 +8615,5 @@ class ExampleData {
  * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleAppearanceExample as ɵk, ButtonToggleExclusiveExample as ɵl, ButtonTypesExample as ɵm, CardOverviewExample as ɵn, CdkDragDropAxisLockExample as ɵo, CdkDragDropConnectedSortingExample as ɵp, CdkDragDropCustomPreviewExample as ɵq, CdkDragDropHandleExample as ɵr, CdkDragDropHorizontalSortingExample as ɵs, CdkDragDropOverviewExample as ɵt, CdkDragDropRootElementExample as ɵu, CdkDragDropSortingExample as ɵv, CdkTableBasicFlexExample as ɵw, CdkTableBasicExample as ɵx, CdkTreeFlatExample as ɵz, FileDatabase as ɵy, CdkTreeNestedExample as ɵbb, FileDatabase$1 as ɵba, CdkVirtualScrollContextExample as ɵbc, CdkVirtualScrollDataSourceExample as ɵbd, CdkVirtualScrollDlExample as ɵbe, CdkVirtualScrollFixedBufferExample as ɵbf, CdkVirtualScrollHorizontalExample as ɵbg, CdkVirtualScrollOverviewExample as ɵbh, CdkVirtualScrollTemplateCacheExample as ɵbi, CheckboxConfigurableExample as ɵbj, CheckboxOverviewExample as ɵbk, ChipsAutocompleteExample as ɵbl, ChipsInputExample as ɵbm, ChipsOverviewExample as ɵbn, ChipsStackedExample as ɵbo, DatepickerApiExample as ɵbp, DatepickerColorExample as ɵbq, DatepickerCustomHeaderExample as ɵbr, ExampleHeader as ɵbs, DatepickerCustomIconExample as ɵbt, DatepickerDisabledExample as ɵbu, DatepickerEventsExample as ɵbv, DatepickerFilterExample as ɵbw, DatepickerFormatsExample as ɵby, MY_FORMATS as ɵbx, DatepickerLocaleExample as ɵbz, DatepickerMinMaxExample as ɵca, DatepickerMomentExample as ɵcb, DatepickerStartViewExample as ɵcc, DatepickerTouchExample as ɵcd, DatepickerValueExample as ɵce, DatepickerViewsSelectionExample as ɵcg, MY_FORMATS$1 as ɵcf, DialogContentExample as ɵch, DialogContentExampleDialog as ɵci, DialogDataExample as ɵcj, DialogDataExampleDialog as ɵck, DialogElementsExample as ɵcl, DialogElementsExampleDialog as ɵcm, DialogOverviewExample as ɵcn, DialogOverviewExampleDialog as ɵco, DividerOverviewExample as ɵcp, ElevationOverviewExample as ɵcq, ExpansionExpandCollapseAllExample as ɵcr, ExpansionStepsExample as ɵcs, FocusMonitorDirectivesExample as ɵct, FocusMonitorFocusViaExample as ɵcu, FocusMonitorOverviewExample as ɵcv, FormFieldAppearanceExample as ɵcw, FormFieldCustomControlExample as ɵcx, MyTelInput as ɵcy, FormFieldErrorExample as ɵcz, FormFieldHintExample as ɵda, FormFieldLabelExample as ɵdb, FormFieldOverviewExample as ɵdc, FormFieldPrefixSuffixExample as ɵdd, FormFieldThemingExample as ɵde, GridListDynamicExample as ɵdf, GridListOverviewExample as ɵdg, IconOverviewExample as ɵdh, IconSvgExample as ɵdi, InputClearableExample as ɵdj, InputErrorStateMatcherExample as ɵdk, InputErrorsExample as ɵdl, InputFormExample as ɵdm, InputHintExample as ɵdn, InputOverviewExample as ɵdo, InputPrefixSuffixExample as ɵdp, ListSectionsExample as ɵdq, ListSelectionExample as ɵdr, ExampleMaterialModule as ɵhv, MenuIconsExample as ɵds, MenuOverviewExample as ɵdt, NestedMenuExample as ɵdu, PaginatorConfigurableExample as ɵdv, PaginatorOverviewExample as ɵdw, ProgressBarBufferExample as ɵdx, ProgressBarConfigurableExample as ɵdy, ProgressBarDeterminateExample as ɵdz, ProgressBarIndeterminateExample as ɵea, ProgressBarQueryExample as ɵeb, ProgressSpinnerConfigurableExample as ɵec, ProgressSpinnerOverviewExample as ɵed, RadioNgModelExample as ɵee, RadioOverviewExample as ɵef, RippleOverviewExample as ɵeg, SelectCustomTriggerExample as ɵeh, SelectDisabledExample as ɵei, SelectErrorStateMatcherExample as ɵej, SelectFormExample as ɵek, SelectHintErrorExample as ɵel, SelectMultipleExample as ɵem, SelectNoRippleExample as ɵen, SelectOptgroupExample as ɵeo, SelectOverviewExample as ɵep, SelectPanelClassExample as ɵeq, SelectResetExample as ɵer, SelectValueBindingExample as ɵes, SidenavAutosizeExample as ɵet, SidenavBackdropExample as ɵeu, SidenavDisableCloseExample as ɵev, SidenavDrawerOverviewExample as ɵew, SidenavFixedExample as ɵex, SidenavModeExample as ɵey, SidenavOpenCloseExample as ɵez, SidenavOverviewExample as ɵfa, SidenavPositionExample as ɵfb, SidenavResponsiveExample as ɵfc, SlideToggleConfigurableExample as ɵfd, SlideToggleFormsExample as ɵfe, SlideToggleOverviewExample as ɵff, SliderConfigurableExample as ɵfg, SliderFormattingExample as ɵfh, SliderOverviewExample as ɵfi, PizzaPartyComponent as ɵfk, SnackBarComponentExample as ɵfj, SnackBarOverviewExample as ɵfl, SnackBarPositionExample as ɵfm, SortOverviewExample as ɵfn, StepperEditableExample as ɵfo, StepperErrorsExample as ɵfp, StepperLabelPositionBottomExample as ɵfq, StepperOptionalExample as ɵfr, StepperStatesExample as ɵfs, StepperVerticalExample as ɵft, TabGroupAlignExample as ɵfu, TabGroupAsyncExample as ɵfv, TabGroupBasicExample as ɵfw, TabGroupCustomLabelExample as ɵfx, TabGroupDynamicHeightExample as ɵfy, TabGroupDynamicExample as ɵfz, TabGroupHeaderBelowExample as ɵga, TabGroupLazyLoadedExample as ɵgb, TabGroupStretchedExample as ɵgc, TabGroupThemeExample as ɵgd, TabNavBarBasicExample as ɵge, TableBasicFlexExample as ɵgf, TableBasicExample as ɵgg, TableDynamicColumnsExample as ɵgh, TableExpandableRowsExample as ɵgi, TableFilteringExample as ɵgj, TableFooterRowExample as ɵgk, TableHttpExample as ɵgl, TableMultipleHeaderFooterExample as ɵgm, TableOverviewExample as ɵgn, TablePaginationExample as ɵgo, TableRowContextExample as ɵgp, TableSelectionExample as ɵgq, TableSortingExample as ɵgr, TableStickyColumnsExample as ɵgs, TableStickyComplexFlexExample as ɵgt, TableStickyComplexExample as ɵgu, TableStickyFooterExample as ɵgv, TableStickyHeaderExample as ɵgw, TextFieldAutofillDirectiveExample as ɵgx, TextFieldAutofillMonitorExample as ɵgy, TextFieldAutosizeTextareaExample as ɵgz, ToolbarOverviewExample as ɵha, TooltipAutoHideExample as ɵhb, TooltipCustomClassExample as ɵhc, TooltipDelayExample as ɵhd, TooltipDisabledExample as ɵhe, TooltipManualExample as ɵhf, TooltipMessageExample as ɵhg, TooltipModifiedDefaultsExample as ɵhi, myCustomTooltipDefaults as ɵhh, TooltipOverviewExample as ɵhj, TooltipPositionExample as ɵhk, ChecklistDatabase as ɵhl, TreeChecklistExample as ɵhm, DynamicDatabase as ɵhn, TreeDynamicExample as ɵho, FileDatabase$2 as ɵhp, TreeFlatOverviewExample as ɵhq, LoadmoreDatabase as ɵhr, TreeLoadmoreExample as ɵhs, FileDatabase$3 as ɵht, TreeNestedOverviewExample as ɵhu };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleAppearanceExample as ɵk, ButtonToggleExclusiveExample as ɵl, ButtonTypesExample as ɵm, CardOverviewExample as ɵn, CdkDragDropAxisLockExample as ɵo, CdkDragDropConnectedSortingExample as ɵp, CdkDragDropCustomPreviewExample as ɵq, CdkDragDropHandleExample as ɵr, CdkDragDropHorizontalSortingExample as ɵs, CdkDragDropOverviewExample as ɵt, CdkDragDropRootElementExample as ɵu, CdkDragDropSortingExample as ɵv, CdkTableBasicFlexExample as ɵw, CdkTableBasicExample as ɵx, CdkTreeFlatExample as ɵz, FileDatabase as ɵy, CdkTreeNestedExample as ɵbb, FileDatabase$1 as ɵba, CdkVirtualScrollContextExample as ɵbc, CdkVirtualScrollDataSourceExample as ɵbd, CdkVirtualScrollDlExample as ɵbe, CdkVirtualScrollFixedBufferExample as ɵbf, CdkVirtualScrollHorizontalExample as ɵbg, CdkVirtualScrollOverviewExample as ɵbh, CdkVirtualScrollTemplateCacheExample as ɵbi, CheckboxConfigurableExample as ɵbj, CheckboxOverviewExample as ɵbk, ChipsAutocompleteExample as ɵbl, ChipsInputExample as ɵbm, ChipsOverviewExample as ɵbn, ChipsStackedExample as ɵbo, DatepickerApiExample as ɵbp, DatepickerColorExample as ɵbq, DatepickerCustomHeaderExample as ɵbr, ExampleHeader as ɵbs, DatepickerCustomIconExample as ɵbt, DatepickerDisabledExample as ɵbu, DatepickerEventsExample as ɵbv, DatepickerFilterExample as ɵbw, DatepickerFormatsExample as ɵby, MY_FORMATS as ɵbx, DatepickerLocaleExample as ɵbz, DatepickerMinMaxExample as ɵca, DatepickerMomentExample as ɵcb, DatepickerStartViewExample as ɵcc, DatepickerTouchExample as ɵcd, DatepickerValueExample as ɵce, DatepickerViewsSelectionExample as ɵcg, MY_FORMATS$1 as ɵcf, DialogContentExample as ɵch, DialogContentExampleDialog as ɵci, DialogDataExample as ɵcj, DialogDataExampleDialog as ɵck, DialogElementsExample as ɵcl, DialogElementsExampleDialog as ɵcm, DialogOverviewExample as ɵcn, DialogOverviewExampleDialog as ɵco, DividerOverviewExample as ɵcp, ElevationOverviewExample as ɵcq, ExpansionExpandCollapseAllExample as ɵcr, ExpansionStepsExample as ɵcs, FocusMonitorDirectivesExample as ɵct, FocusMonitorFocusViaExample as ɵcu, FocusMonitorOverviewExample as ɵcv, FormFieldAppearanceExample as ɵcw, FormFieldCustomControlExample as ɵcx, MyTelInput as ɵcy, FormFieldErrorExample as ɵcz, FormFieldHintExample as ɵda, FormFieldLabelExample as ɵdb, FormFieldOverviewExample as ɵdc, FormFieldPrefixSuffixExample as ɵdd, FormFieldThemingExample as ɵde, GridListDynamicExample as ɵdf, GridListOverviewExample as ɵdg, IconOverviewExample as ɵdh, IconSvgExample as ɵdi, InputClearableExample as ɵdj, InputErrorStateMatcherExample as ɵdk, InputErrorsExample as ɵdl, InputFormExample as ɵdm, InputHintExample as ɵdn, InputOverviewExample as ɵdo, InputPrefixSuffixExample as ɵdp, ListSectionsExample as ɵdq, ListSelectionExample as ɵdr, ExampleMaterialModule as ɵhz, MenuIconsExample as ɵds, MenuOverviewExample as ɵdt, NestedMenuExample as ɵdu, PaginatorConfigurableExample as ɵdv, PaginatorOverviewExample as ɵdw, ProgressBarBufferExample as ɵdx, ProgressBarConfigurableExample as ɵdy, ProgressBarDeterminateExample as ɵdz, ProgressBarIndeterminateExample as ɵea, ProgressBarQueryExample as ɵeb, ProgressSpinnerConfigurableExample as ɵec, ProgressSpinnerOverviewExample as ɵed, RadioNgModelExample as ɵee, RadioOverviewExample as ɵef, RippleOverviewExample as ɵeg, SelectCustomTriggerExample as ɵeh, SelectDisabledExample as ɵei, SelectErrorStateMatcherExample as ɵej, SelectFormExample as ɵek, SelectHintErrorExample as ɵel, SelectMultipleExample as ɵem, SelectNoRippleExample as ɵen, SelectOptgroupExample as ɵeo, SelectOverviewExample as ɵep, SelectPanelClassExample as ɵeq, SelectResetExample as ɵer, SelectValueBindingExample as ɵes, SidenavAutosizeExample as ɵet, SidenavBackdropExample as ɵeu, SidenavDisableCloseExample as ɵev, SidenavDrawerOverviewExample as ɵew, SidenavFixedExample as ɵex, SidenavModeExample as ɵey, SidenavOpenCloseExample as ɵez, SidenavOverviewExample as ɵfa, SidenavPositionExample as ɵfb, SidenavResponsiveExample as ɵfc, SlideToggleConfigurableExample as ɵfd, SlideToggleFormsExample as ɵfe, SlideToggleOverviewExample as ɵff, SliderConfigurableExample as ɵfg, SliderFormattingExample as ɵfh, SliderOverviewExample as ɵfi, PizzaPartyComponent as ɵfk, SnackBarComponentExample as ɵfj, SnackBarOverviewExample as ɵfl, SnackBarPositionExample as ɵfm, SortOverviewExample as ɵfn, StepperEditableExample as ɵfo, StepperErrorsExample as ɵfp, StepperLabelPositionBottomExample as ɵfq, StepperOptionalExample as ɵfr, StepperStatesExample as ɵfs, StepperVerticalExample as ɵft, TabGroupAlignExample as ɵfu, TabGroupAsyncExample as ɵfv, TabGroupBasicExample as ɵfw, TabGroupCustomLabelExample as ɵfx, TabGroupDynamicHeightExample as ɵfy, TabGroupDynamicExample as ɵfz, TabGroupHeaderBelowExample as ɵga, TabGroupLazyLoadedExample as ɵgb, TabGroupStretchedExample as ɵgc, TabGroupThemeExample as ɵgd, TabNavBarBasicExample as ɵge, TableBasicFlexExample as ɵgf, TableBasicExample as ɵgg, TableDynamicColumnsExample as ɵgh, TableExpandableRowsExample as ɵgi, TableFilteringExample as ɵgj, TableFooterRowExample as ɵgk, TableHttpExample as ɵgl, TableMultipleHeaderFooterExample as ɵgm, TableOverviewExample as ɵgn, TablePaginationExample as ɵgo, TableRowContextExample as ɵgp, TableSelectionExample as ɵgq, SimpleColumn as ɵgs, TableSimpleColumnExample as ɵgr, TableSortingExample as ɵgt, TableStickyColumnsExample as ɵgu, TableStickyComplexFlexExample as ɵgv, TableStickyComplexExample as ɵgw, TableStickyFooterExample as ɵgx, TableStickyHeaderExample as ɵgy, TableWrappedExample as ɵgz, WrapperTable as ɵha, TextFieldAutofillDirectiveExample as ɵhb, TextFieldAutofillMonitorExample as ɵhc, TextFieldAutosizeTextareaExample as ɵhd, ToolbarOverviewExample as ɵhe, TooltipAutoHideExample as ɵhf, TooltipCustomClassExample as ɵhg, TooltipDelayExample as ɵhh, TooltipDisabledExample as ɵhi, TooltipManualExample as ɵhj, TooltipMessageExample as ɵhk, TooltipModifiedDefaultsExample as ɵhm, myCustomTooltipDefaults as ɵhl, TooltipOverviewExample as ɵhn, TooltipPositionExample as ɵho, ChecklistDatabase as ɵhp, TreeChecklistExample as ɵhq, DynamicDatabase as ɵhr, TreeDynamicExample as ɵhs, FileDatabase$2 as ɵht, TreeFlatOverviewExample as ɵhu, LoadmoreDatabase as ɵhv, TreeLoadmoreExample as ɵhw, FileDatabase$3 as ɵhx, TreeNestedOverviewExample as ɵhy };
 //# sourceMappingURL=material-examples.js.map
