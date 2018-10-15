@@ -1,0 +1,20 @@
+<span class="hljs-keyword">import</span> {FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/scrolling'</span>;
+<span class="hljs-keyword">import</span> {ChangeDetectionStrategy, Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CustomVirtualScrollStrategy <span class="hljs-keyword">extends</span> FixedSizeVirtualScrollStrategy {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">super</span>(<span class="hljs-number">50</span>, <span class="hljs-number">250</span>, <span class="hljs-number">500</span>);
+  }
+}
+
+<span class="hljs-comment">/** @title Virtual scroll with a custom strategy */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-virtual-scroll-custom-strategy-example'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-virtual-scroll-custom-strategy-example.css'</span>],
+  templateUrl: <span class="hljs-string">'cdk-virtual-scroll-custom-strategy-example.html'</span>,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [{provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy}]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkVirtualScrollCustomStrategyExample {
+  items = <span class="hljs-built_in">Array</span>.from({length: <span class="hljs-number">100000</span>}).map(<span class="hljs-function">(<span class="hljs-params">_, i</span>) =&gt;</span> <span class="hljs-string">`Item #<span class="hljs-subst">${i}</span>`</span>);
+}
