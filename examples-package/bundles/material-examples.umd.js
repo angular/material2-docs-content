@@ -783,8 +783,8 @@ var CdkDragDropConnectedSortingExample = /** @class */ (function () {
     CdkDragDropConnectedSortingExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-connected-sorting-example',
-                    template: "<div class=\"example-container\"><h2>To do</h2><div cdkDrop #todoList=\"cdkDrop\" [cdkDropData]=\"todo\" [cdkDropConnectedTo]=\"[doneList]\" class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div></div></div><div class=\"example-container\"><h2>Done</h2><div cdkDrop #doneList=\"cdkDrop\" [cdkDropData]=\"done\" [cdkDropConnectedTo]=\"[todoList]\" class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div></div></div>",
-                    styles: [".example-container { width: 400px; max-width: 100%; margin: 0 25px 25px 0; display: inline-block; vertical-align: top; } .example-list { border: solid 1px #ccc; min-height: 60px; background: white; border-radius: 4px; overflow: hidden; display: block; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                    template: "<div class=\"example-container\"><h2>To do</h2><div cdkDropList #todoList=\"cdkDropList\" [cdkDropListData]=\"todo\" [cdkDropListConnectedTo]=\"[doneList]\" class=\"example-list\" (cdkDropListDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let item of todo\" cdkDrag>{{item}}</div></div></div><div class=\"example-container\"><h2>Done</h2><div cdkDropList #doneList=\"cdkDropList\" [cdkDropListData]=\"done\" [cdkDropListConnectedTo]=\"[todoList]\" class=\"example-list\" (cdkDropListDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let item of done\" cdkDrag>{{item}}</div></div></div>",
+                    styles: [".example-container { width: 400px; max-width: 100%; margin: 0 25px 25px 0; display: inline-block; vertical-align: top; } .example-list { border: solid 1px #ccc; min-height: 60px; background: white; border-radius: 4px; overflow: hidden; display: block; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
     return CdkDragDropConnectedSortingExample;
@@ -850,8 +850,8 @@ var CdkDragDropCustomPreviewExample = /** @class */ (function () {
     CdkDragDropCustomPreviewExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-custom-preview-example',
-                    template: "<div cdkDrop class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie.title}} <img *cdkDragPreview [src]=\"movie.poster\" [alt]=\"movie.title\"></div></div>",
-                    styles: [".example-list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                    template: "<div cdkDropList class=\"example-list\" (cdkDropListDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie.title}} <img *cdkDragPreview [src]=\"movie.poster\" [alt]=\"movie.title\"></div></div>",
+                    styles: [".example-list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
     return CdkDragDropCustomPreviewExample;
@@ -908,8 +908,8 @@ var CdkDragDropHorizontalSortingExample = /** @class */ (function () {
     CdkDragDropHorizontalSortingExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-horizontal-sorting-example',
-                    template: "<div cdkDrop cdkDropOrientation=\"horizontal\" class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let timePeriod of timePeriods\" cdkDrag>{{timePeriod}}</div></div>",
-                    styles: [".example-list { width: 1000px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: flex; flex-direction: row; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-right: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; flex-grow: 1; flex-basis: 0; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                    template: "<div cdkDropList cdkDropOrientation=\"horizontal\" class=\"example-list\" (cdkDropListDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let timePeriod of timePeriods\" cdkDrag>{{timePeriod}}</div></div>",
+                    styles: [".example-list { width: 1000px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: flex; flex-direction: row; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-right: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; flex-grow: 1; flex-basis: 0; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
     return CdkDragDropHorizontalSortingExample;
@@ -1032,8 +1032,8 @@ var CdkDragDropSortingExample = /** @class */ (function () {
     CdkDragDropSortingExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'cdk-drag-drop-sorting-example',
-                    template: "<div cdkDrop class=\"example-list\" (cdkDropDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie}}</div></div>",
-                    styles: [".example-list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                    template: "<div cdkDropList class=\"example-list\" (cdkDropListDropped)=\"drop($event)\"><div class=\"example-box\" *ngFor=\"let movie of movies\" cdkDrag>{{movie}}</div></div>",
+                    styles: [".example-list { width: 500px; max-width: 100%; border: solid 1px #ccc; min-height: 60px; display: block; background: white; border-radius: 4px; overflow: hidden; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
                 },] },
     ];
     return CdkDragDropSortingExample;
@@ -1560,6 +1560,36 @@ var CdkVirtualScrollContextExample = /** @class */ (function () {
                 },] },
     ];
     return CdkVirtualScrollContextExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+var CustomVirtualScrollStrategy = /** @class */ (function (_super) {
+    __extends(CustomVirtualScrollStrategy, _super);
+    function CustomVirtualScrollStrategy() {
+        return _super.call(this, 50, 250, 500) || this;
+    }
+    return CustomVirtualScrollStrategy;
+}(scrolling.FixedSizeVirtualScrollStrategy));
+/**
+ * \@title Virtual scroll with a custom strategy
+ */
+var CdkVirtualScrollCustomStrategyExample = /** @class */ (function () {
+    function CdkVirtualScrollCustomStrategyExample() {
+        this.items = Array.from({ length: 100000 }).map(function (_, i) { return "Item #" + i; });
+    }
+    CdkVirtualScrollCustomStrategyExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-virtual-scroll-custom-strategy-example',
+                    styles: [".example-viewport { height: 200px; width: 200px; border: 1px solid black; } .example-item { height: 50px; } "],
+                    template: "<cdk-virtual-scroll-viewport class=\"example-viewport\"><div *cdkVirtualFor=\"let item of items\" class=\"example-item\">{{item}}</div></cdk-virtual-scroll-viewport>",
+                    changeDetection: core.ChangeDetectionStrategy.OnPush,
+                    providers: [{ provide: scrolling.VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }]
+                },] },
+    ];
+    return CdkVirtualScrollCustomStrategyExample;
 }());
 
 /**
@@ -8579,6 +8609,10 @@ var EXAMPLE_COMPONENTS = {
         title: 'Virtual scroll context variables',
         component: CdkVirtualScrollContextExample
     },
+    'cdk-virtual-scroll-custom-strategy': {
+        title: 'Virtual scroll with a custom strategy',
+        component: CdkVirtualScrollCustomStrategyExample
+    },
     'cdk-virtual-scroll-data-source': {
         title: 'Virtual scroll with a custom data source',
         component: CdkVirtualScrollDataSourceExample
@@ -9290,6 +9324,7 @@ var EXAMPLE_LIST = [
     CdkTreeFlatExample,
     CdkTreeNestedExample,
     CdkVirtualScrollContextExample,
+    CdkVirtualScrollCustomStrategyExample,
     CdkVirtualScrollDataSourceExample,
     CdkVirtualScrollDlExample,
     CdkVirtualScrollFixedBufferExample,
@@ -9551,185 +9586,187 @@ exports.ɵy = FileDatabase;
 exports.ɵbb = CdkTreeNestedExample;
 exports.ɵba = FileDatabase$1;
 exports.ɵbc = CdkVirtualScrollContextExample;
-exports.ɵbd = CdkVirtualScrollDataSourceExample;
-exports.ɵbe = CdkVirtualScrollDlExample;
-exports.ɵbf = CdkVirtualScrollFixedBufferExample;
-exports.ɵbg = CdkVirtualScrollHorizontalExample;
-exports.ɵbh = CdkVirtualScrollOverviewExample;
-exports.ɵbi = CdkVirtualScrollTemplateCacheExample;
-exports.ɵbj = CheckboxConfigurableExample;
-exports.ɵbk = CheckboxOverviewExample;
-exports.ɵbl = ChipsAutocompleteExample;
-exports.ɵbm = ChipsInputExample;
-exports.ɵbn = ChipsOverviewExample;
-exports.ɵbo = ChipsStackedExample;
-exports.ɵbp = DatepickerApiExample;
-exports.ɵbq = DatepickerColorExample;
-exports.ɵbr = DatepickerCustomHeaderExample;
-exports.ɵbs = ExampleHeader;
-exports.ɵbt = DatepickerCustomIconExample;
-exports.ɵbu = DatepickerDisabledExample;
-exports.ɵbv = DatepickerEventsExample;
-exports.ɵbw = DatepickerFilterExample;
-exports.ɵby = DatepickerFormatsExample;
-exports.ɵbx = MY_FORMATS;
-exports.ɵbz = DatepickerLocaleExample;
-exports.ɵca = DatepickerMinMaxExample;
-exports.ɵcb = DatepickerMomentExample;
-exports.ɵcc = DatepickerStartViewExample;
-exports.ɵcd = DatepickerTouchExample;
-exports.ɵce = DatepickerValueExample;
-exports.ɵcg = DatepickerViewsSelectionExample;
-exports.ɵcf = MY_FORMATS$1;
-exports.ɵch = DialogContentExample;
-exports.ɵci = DialogContentExampleDialog;
-exports.ɵcj = DialogDataExample;
-exports.ɵck = DialogDataExampleDialog;
-exports.ɵcl = DialogElementsExample;
-exports.ɵcm = DialogElementsExampleDialog;
-exports.ɵcn = DialogOverviewExample;
-exports.ɵco = DialogOverviewExampleDialog;
-exports.ɵcp = DividerOverviewExample;
-exports.ɵcq = ElevationOverviewExample;
-exports.ɵcr = ExpansionExpandCollapseAllExample;
-exports.ɵcs = ExpansionStepsExample;
-exports.ɵct = FocusMonitorDirectivesExample;
-exports.ɵcu = FocusMonitorFocusViaExample;
-exports.ɵcv = FocusMonitorOverviewExample;
-exports.ɵcw = FormFieldAppearanceExample;
-exports.ɵcx = FormFieldCustomControlExample;
-exports.ɵcy = MyTelInput;
-exports.ɵcz = FormFieldErrorExample;
-exports.ɵda = FormFieldHintExample;
-exports.ɵdb = FormFieldLabelExample;
-exports.ɵdc = FormFieldOverviewExample;
-exports.ɵdd = FormFieldPrefixSuffixExample;
-exports.ɵde = FormFieldThemingExample;
-exports.ɵdf = GridListDynamicExample;
-exports.ɵdg = GridListOverviewExample;
-exports.ɵdh = IconOverviewExample;
-exports.ɵdi = IconSvgExample;
-exports.ɵdj = InputClearableExample;
-exports.ɵdk = InputErrorStateMatcherExample;
-exports.ɵdl = InputErrorsExample;
-exports.ɵdm = InputFormExample;
-exports.ɵdn = InputHintExample;
-exports.ɵdo = InputOverviewExample;
-exports.ɵdp = InputPrefixSuffixExample;
-exports.ɵdq = ListSectionsExample;
-exports.ɵdr = ListSelectionExample;
-exports.ɵhz = ExampleMaterialModule;
-exports.ɵds = MenuIconsExample;
-exports.ɵdt = MenuOverviewExample;
-exports.ɵdu = NestedMenuExample;
-exports.ɵdv = PaginatorConfigurableExample;
-exports.ɵdw = PaginatorOverviewExample;
-exports.ɵdx = ProgressBarBufferExample;
-exports.ɵdy = ProgressBarConfigurableExample;
-exports.ɵdz = ProgressBarDeterminateExample;
-exports.ɵea = ProgressBarIndeterminateExample;
-exports.ɵeb = ProgressBarQueryExample;
-exports.ɵec = ProgressSpinnerConfigurableExample;
-exports.ɵed = ProgressSpinnerOverviewExample;
-exports.ɵee = RadioNgModelExample;
-exports.ɵef = RadioOverviewExample;
-exports.ɵeg = RippleOverviewExample;
-exports.ɵeh = SelectCustomTriggerExample;
-exports.ɵei = SelectDisabledExample;
-exports.ɵej = SelectErrorStateMatcherExample;
-exports.ɵek = SelectFormExample;
-exports.ɵel = SelectHintErrorExample;
-exports.ɵem = SelectMultipleExample;
-exports.ɵen = SelectNoRippleExample;
-exports.ɵeo = SelectOptgroupExample;
-exports.ɵep = SelectOverviewExample;
-exports.ɵeq = SelectPanelClassExample;
-exports.ɵer = SelectResetExample;
-exports.ɵes = SelectValueBindingExample;
-exports.ɵet = SidenavAutosizeExample;
-exports.ɵeu = SidenavBackdropExample;
-exports.ɵev = SidenavDisableCloseExample;
-exports.ɵew = SidenavDrawerOverviewExample;
-exports.ɵex = SidenavFixedExample;
-exports.ɵey = SidenavModeExample;
-exports.ɵez = SidenavOpenCloseExample;
-exports.ɵfa = SidenavOverviewExample;
-exports.ɵfb = SidenavPositionExample;
-exports.ɵfc = SidenavResponsiveExample;
-exports.ɵfd = SlideToggleConfigurableExample;
-exports.ɵfe = SlideToggleFormsExample;
-exports.ɵff = SlideToggleOverviewExample;
-exports.ɵfg = SliderConfigurableExample;
-exports.ɵfh = SliderFormattingExample;
-exports.ɵfi = SliderOverviewExample;
-exports.ɵfk = PizzaPartyComponent;
-exports.ɵfj = SnackBarComponentExample;
-exports.ɵfl = SnackBarOverviewExample;
-exports.ɵfm = SnackBarPositionExample;
-exports.ɵfn = SortOverviewExample;
-exports.ɵfo = StepperEditableExample;
-exports.ɵfp = StepperErrorsExample;
-exports.ɵfq = StepperLabelPositionBottomExample;
-exports.ɵfr = StepperOptionalExample;
-exports.ɵfs = StepperStatesExample;
-exports.ɵft = StepperVerticalExample;
-exports.ɵfu = TabGroupAlignExample;
-exports.ɵfv = TabGroupAsyncExample;
-exports.ɵfw = TabGroupBasicExample;
-exports.ɵfx = TabGroupCustomLabelExample;
-exports.ɵfy = TabGroupDynamicHeightExample;
-exports.ɵfz = TabGroupDynamicExample;
-exports.ɵga = TabGroupHeaderBelowExample;
-exports.ɵgb = TabGroupLazyLoadedExample;
-exports.ɵgc = TabGroupStretchedExample;
-exports.ɵgd = TabGroupThemeExample;
-exports.ɵge = TabNavBarBasicExample;
-exports.ɵgf = TableBasicFlexExample;
-exports.ɵgg = TableBasicExample;
-exports.ɵgh = TableDynamicColumnsExample;
-exports.ɵgi = TableExpandableRowsExample;
-exports.ɵgj = TableFilteringExample;
-exports.ɵgk = TableFooterRowExample;
-exports.ɵgl = TableHttpExample;
-exports.ɵgm = TableMultipleHeaderFooterExample;
-exports.ɵgn = TableOverviewExample;
-exports.ɵgo = TablePaginationExample;
-exports.ɵgp = TableRowContextExample;
-exports.ɵgq = TableSelectionExample;
-exports.ɵgs = SimpleColumn;
-exports.ɵgr = TableSimpleColumnExample;
-exports.ɵgt = TableSortingExample;
-exports.ɵgu = TableStickyColumnsExample;
-exports.ɵgv = TableStickyComplexFlexExample;
-exports.ɵgw = TableStickyComplexExample;
-exports.ɵgx = TableStickyFooterExample;
-exports.ɵgy = TableStickyHeaderExample;
-exports.ɵgz = TableWrappedExample;
-exports.ɵha = WrapperTable;
-exports.ɵhb = TextFieldAutofillDirectiveExample;
-exports.ɵhc = TextFieldAutofillMonitorExample;
-exports.ɵhd = TextFieldAutosizeTextareaExample;
-exports.ɵhe = ToolbarOverviewExample;
-exports.ɵhf = TooltipAutoHideExample;
-exports.ɵhg = TooltipCustomClassExample;
-exports.ɵhh = TooltipDelayExample;
-exports.ɵhi = TooltipDisabledExample;
-exports.ɵhj = TooltipManualExample;
-exports.ɵhk = TooltipMessageExample;
-exports.ɵhm = TooltipModifiedDefaultsExample;
-exports.ɵhl = myCustomTooltipDefaults;
-exports.ɵhn = TooltipOverviewExample;
-exports.ɵho = TooltipPositionExample;
-exports.ɵhp = ChecklistDatabase;
-exports.ɵhq = TreeChecklistExample;
-exports.ɵhr = DynamicDatabase;
-exports.ɵhs = TreeDynamicExample;
-exports.ɵht = FileDatabase$2;
-exports.ɵhu = TreeFlatOverviewExample;
-exports.ɵhv = LoadmoreDatabase;
-exports.ɵhw = TreeLoadmoreExample;
-exports.ɵhx = FileDatabase$3;
-exports.ɵhy = TreeNestedOverviewExample;
+exports.ɵbe = CdkVirtualScrollCustomStrategyExample;
+exports.ɵbd = CustomVirtualScrollStrategy;
+exports.ɵbf = CdkVirtualScrollDataSourceExample;
+exports.ɵbg = CdkVirtualScrollDlExample;
+exports.ɵbh = CdkVirtualScrollFixedBufferExample;
+exports.ɵbi = CdkVirtualScrollHorizontalExample;
+exports.ɵbj = CdkVirtualScrollOverviewExample;
+exports.ɵbk = CdkVirtualScrollTemplateCacheExample;
+exports.ɵbl = CheckboxConfigurableExample;
+exports.ɵbm = CheckboxOverviewExample;
+exports.ɵbn = ChipsAutocompleteExample;
+exports.ɵbo = ChipsInputExample;
+exports.ɵbp = ChipsOverviewExample;
+exports.ɵbq = ChipsStackedExample;
+exports.ɵbr = DatepickerApiExample;
+exports.ɵbs = DatepickerColorExample;
+exports.ɵbt = DatepickerCustomHeaderExample;
+exports.ɵbu = ExampleHeader;
+exports.ɵbv = DatepickerCustomIconExample;
+exports.ɵbw = DatepickerDisabledExample;
+exports.ɵbx = DatepickerEventsExample;
+exports.ɵby = DatepickerFilterExample;
+exports.ɵca = DatepickerFormatsExample;
+exports.ɵbz = MY_FORMATS;
+exports.ɵcb = DatepickerLocaleExample;
+exports.ɵcc = DatepickerMinMaxExample;
+exports.ɵcd = DatepickerMomentExample;
+exports.ɵce = DatepickerStartViewExample;
+exports.ɵcf = DatepickerTouchExample;
+exports.ɵcg = DatepickerValueExample;
+exports.ɵci = DatepickerViewsSelectionExample;
+exports.ɵch = MY_FORMATS$1;
+exports.ɵcj = DialogContentExample;
+exports.ɵck = DialogContentExampleDialog;
+exports.ɵcl = DialogDataExample;
+exports.ɵcm = DialogDataExampleDialog;
+exports.ɵcn = DialogElementsExample;
+exports.ɵco = DialogElementsExampleDialog;
+exports.ɵcp = DialogOverviewExample;
+exports.ɵcq = DialogOverviewExampleDialog;
+exports.ɵcr = DividerOverviewExample;
+exports.ɵcs = ElevationOverviewExample;
+exports.ɵct = ExpansionExpandCollapseAllExample;
+exports.ɵcu = ExpansionStepsExample;
+exports.ɵcv = FocusMonitorDirectivesExample;
+exports.ɵcw = FocusMonitorFocusViaExample;
+exports.ɵcx = FocusMonitorOverviewExample;
+exports.ɵcy = FormFieldAppearanceExample;
+exports.ɵcz = FormFieldCustomControlExample;
+exports.ɵda = MyTelInput;
+exports.ɵdb = FormFieldErrorExample;
+exports.ɵdc = FormFieldHintExample;
+exports.ɵdd = FormFieldLabelExample;
+exports.ɵde = FormFieldOverviewExample;
+exports.ɵdf = FormFieldPrefixSuffixExample;
+exports.ɵdg = FormFieldThemingExample;
+exports.ɵdh = GridListDynamicExample;
+exports.ɵdi = GridListOverviewExample;
+exports.ɵdj = IconOverviewExample;
+exports.ɵdk = IconSvgExample;
+exports.ɵdl = InputClearableExample;
+exports.ɵdm = InputErrorStateMatcherExample;
+exports.ɵdn = InputErrorsExample;
+exports.ɵdo = InputFormExample;
+exports.ɵdp = InputHintExample;
+exports.ɵdq = InputOverviewExample;
+exports.ɵdr = InputPrefixSuffixExample;
+exports.ɵds = ListSectionsExample;
+exports.ɵdt = ListSelectionExample;
+exports.ɵib = ExampleMaterialModule;
+exports.ɵdu = MenuIconsExample;
+exports.ɵdv = MenuOverviewExample;
+exports.ɵdw = NestedMenuExample;
+exports.ɵdx = PaginatorConfigurableExample;
+exports.ɵdy = PaginatorOverviewExample;
+exports.ɵdz = ProgressBarBufferExample;
+exports.ɵea = ProgressBarConfigurableExample;
+exports.ɵeb = ProgressBarDeterminateExample;
+exports.ɵec = ProgressBarIndeterminateExample;
+exports.ɵed = ProgressBarQueryExample;
+exports.ɵee = ProgressSpinnerConfigurableExample;
+exports.ɵef = ProgressSpinnerOverviewExample;
+exports.ɵeg = RadioNgModelExample;
+exports.ɵeh = RadioOverviewExample;
+exports.ɵei = RippleOverviewExample;
+exports.ɵej = SelectCustomTriggerExample;
+exports.ɵek = SelectDisabledExample;
+exports.ɵel = SelectErrorStateMatcherExample;
+exports.ɵem = SelectFormExample;
+exports.ɵen = SelectHintErrorExample;
+exports.ɵeo = SelectMultipleExample;
+exports.ɵep = SelectNoRippleExample;
+exports.ɵeq = SelectOptgroupExample;
+exports.ɵer = SelectOverviewExample;
+exports.ɵes = SelectPanelClassExample;
+exports.ɵet = SelectResetExample;
+exports.ɵeu = SelectValueBindingExample;
+exports.ɵev = SidenavAutosizeExample;
+exports.ɵew = SidenavBackdropExample;
+exports.ɵex = SidenavDisableCloseExample;
+exports.ɵey = SidenavDrawerOverviewExample;
+exports.ɵez = SidenavFixedExample;
+exports.ɵfa = SidenavModeExample;
+exports.ɵfb = SidenavOpenCloseExample;
+exports.ɵfc = SidenavOverviewExample;
+exports.ɵfd = SidenavPositionExample;
+exports.ɵfe = SidenavResponsiveExample;
+exports.ɵff = SlideToggleConfigurableExample;
+exports.ɵfg = SlideToggleFormsExample;
+exports.ɵfh = SlideToggleOverviewExample;
+exports.ɵfi = SliderConfigurableExample;
+exports.ɵfj = SliderFormattingExample;
+exports.ɵfk = SliderOverviewExample;
+exports.ɵfm = PizzaPartyComponent;
+exports.ɵfl = SnackBarComponentExample;
+exports.ɵfn = SnackBarOverviewExample;
+exports.ɵfo = SnackBarPositionExample;
+exports.ɵfp = SortOverviewExample;
+exports.ɵfq = StepperEditableExample;
+exports.ɵfr = StepperErrorsExample;
+exports.ɵfs = StepperLabelPositionBottomExample;
+exports.ɵft = StepperOptionalExample;
+exports.ɵfu = StepperStatesExample;
+exports.ɵfv = StepperVerticalExample;
+exports.ɵfw = TabGroupAlignExample;
+exports.ɵfx = TabGroupAsyncExample;
+exports.ɵfy = TabGroupBasicExample;
+exports.ɵfz = TabGroupCustomLabelExample;
+exports.ɵga = TabGroupDynamicHeightExample;
+exports.ɵgb = TabGroupDynamicExample;
+exports.ɵgc = TabGroupHeaderBelowExample;
+exports.ɵgd = TabGroupLazyLoadedExample;
+exports.ɵge = TabGroupStretchedExample;
+exports.ɵgf = TabGroupThemeExample;
+exports.ɵgg = TabNavBarBasicExample;
+exports.ɵgh = TableBasicFlexExample;
+exports.ɵgi = TableBasicExample;
+exports.ɵgj = TableDynamicColumnsExample;
+exports.ɵgk = TableExpandableRowsExample;
+exports.ɵgl = TableFilteringExample;
+exports.ɵgm = TableFooterRowExample;
+exports.ɵgn = TableHttpExample;
+exports.ɵgo = TableMultipleHeaderFooterExample;
+exports.ɵgp = TableOverviewExample;
+exports.ɵgq = TablePaginationExample;
+exports.ɵgr = TableRowContextExample;
+exports.ɵgs = TableSelectionExample;
+exports.ɵgu = SimpleColumn;
+exports.ɵgt = TableSimpleColumnExample;
+exports.ɵgv = TableSortingExample;
+exports.ɵgw = TableStickyColumnsExample;
+exports.ɵgx = TableStickyComplexFlexExample;
+exports.ɵgy = TableStickyComplexExample;
+exports.ɵgz = TableStickyFooterExample;
+exports.ɵha = TableStickyHeaderExample;
+exports.ɵhb = TableWrappedExample;
+exports.ɵhc = WrapperTable;
+exports.ɵhd = TextFieldAutofillDirectiveExample;
+exports.ɵhe = TextFieldAutofillMonitorExample;
+exports.ɵhf = TextFieldAutosizeTextareaExample;
+exports.ɵhg = ToolbarOverviewExample;
+exports.ɵhh = TooltipAutoHideExample;
+exports.ɵhi = TooltipCustomClassExample;
+exports.ɵhj = TooltipDelayExample;
+exports.ɵhk = TooltipDisabledExample;
+exports.ɵhl = TooltipManualExample;
+exports.ɵhm = TooltipMessageExample;
+exports.ɵho = TooltipModifiedDefaultsExample;
+exports.ɵhn = myCustomTooltipDefaults;
+exports.ɵhp = TooltipOverviewExample;
+exports.ɵhq = TooltipPositionExample;
+exports.ɵhr = ChecklistDatabase;
+exports.ɵhs = TreeChecklistExample;
+exports.ɵht = DynamicDatabase;
+exports.ɵhu = TreeDynamicExample;
+exports.ɵhv = FileDatabase$2;
+exports.ɵhw = TreeFlatOverviewExample;
+exports.ɵhx = LoadmoreDatabase;
+exports.ɵhy = TreeLoadmoreExample;
+exports.ɵhz = FileDatabase$3;
+exports.ɵia = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

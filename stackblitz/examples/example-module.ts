@@ -33,6 +33,7 @@ import {CdkTableBasicExample} from './cdk-table-basic/cdk-table-basic-example';
 import {CdkTreeFlatExample} from './cdk-tree-flat/cdk-tree-flat-example';
 import {CdkTreeNestedExample} from './cdk-tree-nested/cdk-tree-nested-example';
 import {CdkVirtualScrollContextExample} from './cdk-virtual-scroll-context/cdk-virtual-scroll-context-example';
+import {CdkVirtualScrollCustomStrategyExample} from './cdk-virtual-scroll-custom-strategy/cdk-virtual-scroll-custom-strategy-example';
 import {CdkVirtualScrollDataSourceExample} from './cdk-virtual-scroll-data-source/cdk-virtual-scroll-data-source-example';
 import {CdkVirtualScrollDlExample} from './cdk-virtual-scroll-dl/cdk-virtual-scroll-dl-example';
 import {CdkVirtualScrollFixedBufferExample} from './cdk-virtual-scroll-fixed-buffer/cdk-virtual-scroll-fixed-buffer-example';
@@ -321,6 +322,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'cdk-virtual-scroll-context': {
     title: 'Virtual scroll context variables',
     component: CdkVirtualScrollContextExample
+  },
+  'cdk-virtual-scroll-custom-strategy': {
+    title: 'Virtual scroll with a custom strategy',
+    component: CdkVirtualScrollCustomStrategyExample
   },
   'cdk-virtual-scroll-data-source': {
     title: 'Virtual scroll with a custom data source',
@@ -1033,6 +1038,7 @@ export const EXAMPLE_LIST = [
   CdkTreeFlatExample,
   CdkTreeNestedExample,
   CdkVirtualScrollContextExample,
+  CdkVirtualScrollCustomStrategyExample,
   CdkVirtualScrollDataSourceExample,
   CdkVirtualScrollDlExample,
   CdkVirtualScrollFixedBufferExample,
