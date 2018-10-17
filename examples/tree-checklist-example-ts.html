@@ -168,10 +168,13 @@
     <span class="hljs-keyword">return</span> flatNode;
   }
 
-  <span class="hljs-comment">/** Whether all the descendants of the node are selected */</span>
+  <span class="hljs-comment">/** Whether all the descendants of the node are selected. */</span>
   descendantsAllSelected(node: TodoItemFlatNode): <span class="hljs-built_in">boolean</span> {
     <span class="hljs-keyword">const</span> descendants = <span class="hljs-keyword">this</span>.treeControl.getDescendants(node);
-    <span class="hljs-keyword">return</span> descendants.every(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span> <span class="hljs-keyword">this</span>.checklistSelection.isSelected(child));
+    <span class="hljs-keyword">const</span> descAllSelected = descendants.every(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span>
+      <span class="hljs-keyword">this</span>.checklistSelection.isSelected(child)
+    );
+    <span class="hljs-keyword">return</span> descAllSelected;
   }
 
   <span class="hljs-comment">/** Whether part of the descendants are selected */</span>
@@ -188,6 +191,61 @@
     <span class="hljs-keyword">this</span>.checklistSelection.isSelected(node)
       ? <span class="hljs-keyword">this</span>.checklistSelection.select(...descendants)
       : <span class="hljs-keyword">this</span>.checklistSelection.deselect(...descendants);
+
+    <span class="hljs-comment">// Force update for the parent</span>
+    descendants.every(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span>
+      <span class="hljs-keyword">this</span>.checklistSelection.isSelected(child)
+    );
+    <span class="hljs-keyword">this</span>.checkAllParentsSelection(node);
+  }
+
+  <span class="hljs-comment">/** Toggle a leaf to-do item selection. Check all the parents to see if they changed */</span>
+  todoLeafItemSelectionToggle(node: TodoItemFlatNode): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">this</span>.checklistSelection.toggle(node);
+    <span class="hljs-keyword">this</span>.checkAllParentsSelection(node);
+  }
+
+  <span class="hljs-comment">/* Checks all the parents when a leaf node is selected/unselected */</span>
+  checkAllParentsSelection(node: TodoItemFlatNode): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">let</span> parent: TodoItemFlatNode | <span class="hljs-literal">null</span> = <span class="hljs-keyword">this</span>.getParentNode(node);
+    <span class="hljs-keyword">while</span> (parent) {
+      <span class="hljs-keyword">this</span>.checkRootNodeSelection(parent);
+      parent = <span class="hljs-keyword">this</span>.getParentNode(parent);
+    }
+  }
+
+  <span class="hljs-comment">/** Check root node checked state and change it accordingly */</span>
+  checkRootNodeSelection(node: TodoItemFlatNode): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> nodeSelected = <span class="hljs-keyword">this</span>.checklistSelection.isSelected(node);
+    <span class="hljs-keyword">const</span> descendants = <span class="hljs-keyword">this</span>.treeControl.getDescendants(node);
+    <span class="hljs-keyword">const</span> descAllSelected = descendants.every(<span class="hljs-function"><span class="hljs-params">child</span> =&gt;</span>
+      <span class="hljs-keyword">this</span>.checklistSelection.isSelected(child)
+    );
+    <span class="hljs-keyword">if</span> (nodeSelected &amp;&amp; !descAllSelected) {
+      <span class="hljs-keyword">this</span>.checklistSelection.deselect(node);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!nodeSelected &amp;&amp; descAllSelected) {
+      <span class="hljs-keyword">this</span>.checklistSelection.select(node);
+    }
+  }
+
+  <span class="hljs-comment">/* Get the parent node of a node */</span>
+  getParentNode(node: TodoItemFlatNode): TodoItemFlatNode | <span class="hljs-literal">null</span> {
+    <span class="hljs-keyword">const</span> currentLevel = <span class="hljs-keyword">this</span>.getLevel(node);
+
+    <span class="hljs-keyword">if</span> (currentLevel &lt; <span class="hljs-number">1</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    }
+
+    <span class="hljs-keyword">const</span> startIndex = <span class="hljs-keyword">this</span>.treeControl.dataNodes.indexOf(node) - <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = startIndex; i &gt;= <span class="hljs-number">0</span>; i--) {
+      <span class="hljs-keyword">const</span> currentNode = <span class="hljs-keyword">this</span>.treeControl.dataNodes[i];
+
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.getLevel(currentNode) &lt; currentLevel) {
+        <span class="hljs-keyword">return</span> currentNode;
+      }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
   }
 
   <span class="hljs-comment">/** Select the category so we can insert the new item. */</span>

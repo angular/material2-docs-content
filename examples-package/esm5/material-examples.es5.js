@@ -7596,14 +7596,14 @@ var TreeChecklistExample = /** @class */ (function () {
             _this.dataSource.data = data;
         });
     }
-    /** Whether all the descendants of the node are selected */
+    /** Whether all the descendants of the node are selected. */
     /**
-     * Whether all the descendants of the node are selected
+     * Whether all the descendants of the node are selected.
      * @param {?} node
      * @return {?}
      */
     TreeChecklistExample.prototype.descendantsAllSelected = /**
-     * Whether all the descendants of the node are selected
+     * Whether all the descendants of the node are selected.
      * @param {?} node
      * @return {?}
      */
@@ -7611,7 +7611,11 @@ var TreeChecklistExample = /** @class */ (function () {
         var _this = this;
         /** @type {?} */
         var descendants = this.treeControl.getDescendants(node);
-        return descendants.every(function (child) { return _this.checklistSelection.isSelected(child); });
+        /** @type {?} */
+        var descAllSelected = descendants.every(function (child) {
+            return _this.checklistSelection.isSelected(child);
+        });
+        return descAllSelected;
     };
     /** Whether part of the descendants are selected */
     /**
@@ -7644,12 +7648,104 @@ var TreeChecklistExample = /** @class */ (function () {
      * @return {?}
      */
     function (node) {
+        var _this = this;
         var _a, _b;
         this.checklistSelection.toggle(node);
         /** @type {?} */
         var descendants = this.treeControl.getDescendants(node);
         this.checklistSelection.isSelected(node)
             ? (_a = this.checklistSelection).select.apply(_a, descendants) : (_b = this.checklistSelection).deselect.apply(_b, descendants);
+        // Force update for the parent
+        descendants.every(function (child) {
+            return _this.checklistSelection.isSelected(child);
+        });
+        this.checkAllParentsSelection(node);
+    };
+    /** Toggle a leaf to-do item selection. Check all the parents to see if they changed */
+    /**
+     * Toggle a leaf to-do item selection. Check all the parents to see if they changed
+     * @param {?} node
+     * @return {?}
+     */
+    TreeChecklistExample.prototype.todoLeafItemSelectionToggle = /**
+     * Toggle a leaf to-do item selection. Check all the parents to see if they changed
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        this.checklistSelection.toggle(node);
+        this.checkAllParentsSelection(node);
+    };
+    /* Checks all the parents when a leaf node is selected/unselected */
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    TreeChecklistExample.prototype.checkAllParentsSelection = /**
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        /** @type {?} */
+        var parent = this.getParentNode(node);
+        while (parent) {
+            this.checkRootNodeSelection(parent);
+            parent = this.getParentNode(parent);
+        }
+    };
+    /** Check root node checked state and change it accordingly */
+    /**
+     * Check root node checked state and change it accordingly
+     * @param {?} node
+     * @return {?}
+     */
+    TreeChecklistExample.prototype.checkRootNodeSelection = /**
+     * Check root node checked state and change it accordingly
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        var _this = this;
+        /** @type {?} */
+        var nodeSelected = this.checklistSelection.isSelected(node);
+        /** @type {?} */
+        var descendants = this.treeControl.getDescendants(node);
+        /** @type {?} */
+        var descAllSelected = descendants.every(function (child) {
+            return _this.checklistSelection.isSelected(child);
+        });
+        if (nodeSelected && !descAllSelected) {
+            this.checklistSelection.deselect(node);
+        }
+        else if (!nodeSelected && descAllSelected) {
+            this.checklistSelection.select(node);
+        }
+    };
+    /* Get the parent node of a node */
+    /**
+     * @param {?} node
+     * @return {?}
+     */
+    TreeChecklistExample.prototype.getParentNode = /**
+     * @param {?} node
+     * @return {?}
+     */
+    function (node) {
+        /** @type {?} */
+        var currentLevel = this.getLevel(node);
+        if (currentLevel < 1) {
+            return null;
+        }
+        /** @type {?} */
+        var startIndex = this.treeControl.dataNodes.indexOf(node) - 1;
+        for (var i = startIndex; i >= 0; i--) {
+            /** @type {?} */
+            var currentNode = this.treeControl.dataNodes[i];
+            if (this.getLevel(currentNode) < currentLevel) {
+                return currentNode;
+            }
+        }
+        return null;
     };
     /** Select the category so we can insert the new item. */
     /**
@@ -7689,7 +7785,7 @@ var TreeChecklistExample = /** @class */ (function () {
     TreeChecklistExample.decorators = [
         { type: Component, args: [{
                     selector: 'tree-checklist-example',
-                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button><mat-checkbox class=\"checklist-leaf-node\" [checked]=\"checklistSelection.isSelected(node)\" (change)=\"checklistSelection.toggle(node);\">{{node.item}}</mat-checkbox></mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasNoContent\" matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button><mat-form-field><input matInput #itemValue placeholder=\"New item...\"></mat-form-field><button mat-button (click)=\"saveNode(node, itemValue.value)\">Save</button></mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon class=\"mat-icon-rtl-mirror\">{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button><mat-checkbox [checked]=\"descendantsAllSelected(node)\" [indeterminate]=\"descendantsPartiallySelected(node)\" (change)=\"todoItemSelectionToggle(node)\">{{node.item}}</mat-checkbox><button mat-icon-button (click)=\"addNewItem(node)\"><mat-icon>add</mat-icon></button></mat-tree-node></mat-tree>",
+                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\"><mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button><mat-checkbox class=\"checklist-leaf-node\" [checked]=\"checklistSelection.isSelected(node)\" (change)=\"todoLeafItemSelectionToggle(node)\">{{node.item}}</mat-checkbox></mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasNoContent\" matTreeNodePadding><button mat-icon-button disabled=\"disabled\"></button><mat-form-field><input matInput #itemValue placeholder=\"New item...\"></mat-form-field><button mat-button (click)=\"saveNode(node, itemValue.value)\">Save</button></mat-tree-node><mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding><button mat-icon-button matTreeNodeToggle [attr.aria-label]=\"'toggle ' + node.filename\"><mat-icon class=\"mat-icon-rtl-mirror\">{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}</mat-icon></button><mat-checkbox [checked]=\"descendantsAllSelected(node)\" [indeterminate]=\"descendantsPartiallySelected(node)\" (change)=\"todoItemSelectionToggle(node)\">{{node.item}}</mat-checkbox><button mat-icon-button (click)=\"addNewItem(node)\"><mat-icon>add</mat-icon></button></mat-tree-node></mat-tree>",
                     styles: [""],
                     providers: [ChecklistDatabase]
                 },] },

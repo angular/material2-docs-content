@@ -64,12 +64,18 @@ export declare class TreeChecklistExample {
      * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
      */
     transformer: (node: TodoItemNode, level: number) => TodoItemFlatNode;
-    /** Whether all the descendants of the node are selected */
+    /** Whether all the descendants of the node are selected. */
     descendantsAllSelected(node: TodoItemFlatNode): boolean;
     /** Whether part of the descendants are selected */
     descendantsPartiallySelected(node: TodoItemFlatNode): boolean;
     /** Toggle the to-do item selection. Select/deselect all the descendants node */
     todoItemSelectionToggle(node: TodoItemFlatNode): void;
+    /** Toggle a leaf to-do item selection. Check all the parents to see if they changed */
+    todoLeafItemSelectionToggle(node: TodoItemFlatNode): void;
+    checkAllParentsSelection(node: TodoItemFlatNode): void;
+    /** Check root node checked state and change it accordingly */
+    checkRootNodeSelection(node: TodoItemFlatNode): void;
+    getParentNode(node: TodoItemFlatNode): TodoItemFlatNode | null;
     /** Select the category so we can insert the new item. */
     addNewItem(node: TodoItemFlatNode): void;
     /** Save the node to database */
