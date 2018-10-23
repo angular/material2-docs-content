@@ -5568,6 +5568,26 @@ var TabGroupAlignExample = /** @class */ (function () {
  * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
+ * \@title Tab group animations
+ */
+var TabGroupAnimationsExample = /** @class */ (function () {
+    function TabGroupAnimationsExample() {
+    }
+    TabGroupAnimationsExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'tab-group-animations-example',
+                    template: "<h3>No animation</h3><mat-tab-group animationDuration=\"0ms\"><mat-tab label=\"First\">Content 1</mat-tab><mat-tab label=\"Second\">Content 2</mat-tab><mat-tab label=\"Third\">Content 3</mat-tab></mat-tab-group><h3>Very slow animation</h3><mat-tab-group animationDuration=\"2000ms\"><mat-tab label=\"First\">Content 1</mat-tab><mat-tab label=\"Second\">Content 2</mat-tab><mat-tab label=\"Third\">Content 3</mat-tab></mat-tab-group>",
+                    styles: [".mat-tab-group { margin-bottom: 48px; } "],
+                },] },
+    ];
+    return TabGroupAnimationsExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
  * \@title Tab group with asynchronously loading tab contents
  */
 var TabGroupAsyncExample = /** @class */ (function () {
@@ -9190,6 +9210,10 @@ var EXAMPLE_COMPONENTS = {
         title: 'Tab group with aligned labels',
         component: TabGroupAlignExample
     },
+    'tab-group-animations': {
+        title: 'Tab group animations',
+        component: TabGroupAnimationsExample
+    },
     'tab-group-async': {
         title: 'Tab group with asynchronously loading tab contents',
         component: TabGroupAsyncExample
@@ -9538,6 +9562,7 @@ var EXAMPLE_LIST = [
     StepperStatesExample,
     StepperVerticalExample,
     TabGroupAlignExample,
+    TabGroupAnimationsExample,
     TabGroupAsyncExample,
     TabGroupBasicExample,
     TabGroupCustomLabelExample,
@@ -9751,7 +9776,7 @@ exports.ɵdq = InputOverviewExample;
 exports.ɵdr = InputPrefixSuffixExample;
 exports.ɵds = ListSectionsExample;
 exports.ɵdt = ListSelectionExample;
-exports.ɵib = ExampleMaterialModule;
+exports.ɵic = ExampleMaterialModule;
 exports.ɵdu = MenuIconsExample;
 exports.ɵdv = MenuOverviewExample;
 exports.ɵdw = NestedMenuExample;
@@ -9807,62 +9832,63 @@ exports.ɵft = StepperOptionalExample;
 exports.ɵfu = StepperStatesExample;
 exports.ɵfv = StepperVerticalExample;
 exports.ɵfw = TabGroupAlignExample;
-exports.ɵfx = TabGroupAsyncExample;
-exports.ɵfy = TabGroupBasicExample;
-exports.ɵfz = TabGroupCustomLabelExample;
-exports.ɵga = TabGroupDynamicHeightExample;
-exports.ɵgb = TabGroupDynamicExample;
-exports.ɵgc = TabGroupHeaderBelowExample;
-exports.ɵgd = TabGroupLazyLoadedExample;
-exports.ɵge = TabGroupStretchedExample;
-exports.ɵgf = TabGroupThemeExample;
-exports.ɵgg = TabNavBarBasicExample;
-exports.ɵgh = TableBasicFlexExample;
-exports.ɵgi = TableBasicExample;
-exports.ɵgj = TableDynamicColumnsExample;
-exports.ɵgk = TableExpandableRowsExample;
-exports.ɵgl = TableFilteringExample;
-exports.ɵgm = TableFooterRowExample;
-exports.ɵgn = TableHttpExample;
-exports.ɵgo = TableMultipleHeaderFooterExample;
-exports.ɵgp = TableOverviewExample;
-exports.ɵgq = TablePaginationExample;
-exports.ɵgr = TableRowContextExample;
-exports.ɵgs = TableSelectionExample;
-exports.ɵgu = SimpleColumn;
-exports.ɵgt = TableSimpleColumnExample;
-exports.ɵgv = TableSortingExample;
-exports.ɵgw = TableStickyColumnsExample;
-exports.ɵgx = TableStickyComplexFlexExample;
-exports.ɵgy = TableStickyComplexExample;
-exports.ɵgz = TableStickyFooterExample;
-exports.ɵha = TableStickyHeaderExample;
-exports.ɵhb = TableWrappedExample;
-exports.ɵhc = WrapperTable;
-exports.ɵhd = TextFieldAutofillDirectiveExample;
-exports.ɵhe = TextFieldAutofillMonitorExample;
-exports.ɵhf = TextFieldAutosizeTextareaExample;
-exports.ɵhg = ToolbarOverviewExample;
-exports.ɵhh = TooltipAutoHideExample;
-exports.ɵhi = TooltipCustomClassExample;
-exports.ɵhj = TooltipDelayExample;
-exports.ɵhk = TooltipDisabledExample;
-exports.ɵhl = TooltipManualExample;
-exports.ɵhm = TooltipMessageExample;
-exports.ɵho = TooltipModifiedDefaultsExample;
-exports.ɵhn = myCustomTooltipDefaults;
-exports.ɵhp = TooltipOverviewExample;
-exports.ɵhq = TooltipPositionExample;
-exports.ɵhr = ChecklistDatabase;
-exports.ɵhs = TreeChecklistExample;
-exports.ɵht = DynamicDatabase;
-exports.ɵhu = TreeDynamicExample;
-exports.ɵhv = FileDatabase$2;
-exports.ɵhw = TreeFlatOverviewExample;
-exports.ɵhx = LoadmoreDatabase;
-exports.ɵhy = TreeLoadmoreExample;
-exports.ɵhz = FileDatabase$3;
-exports.ɵia = TreeNestedOverviewExample;
+exports.ɵfx = TabGroupAnimationsExample;
+exports.ɵfy = TabGroupAsyncExample;
+exports.ɵfz = TabGroupBasicExample;
+exports.ɵga = TabGroupCustomLabelExample;
+exports.ɵgb = TabGroupDynamicHeightExample;
+exports.ɵgc = TabGroupDynamicExample;
+exports.ɵgd = TabGroupHeaderBelowExample;
+exports.ɵge = TabGroupLazyLoadedExample;
+exports.ɵgf = TabGroupStretchedExample;
+exports.ɵgg = TabGroupThemeExample;
+exports.ɵgh = TabNavBarBasicExample;
+exports.ɵgi = TableBasicFlexExample;
+exports.ɵgj = TableBasicExample;
+exports.ɵgk = TableDynamicColumnsExample;
+exports.ɵgl = TableExpandableRowsExample;
+exports.ɵgm = TableFilteringExample;
+exports.ɵgn = TableFooterRowExample;
+exports.ɵgo = TableHttpExample;
+exports.ɵgp = TableMultipleHeaderFooterExample;
+exports.ɵgq = TableOverviewExample;
+exports.ɵgr = TablePaginationExample;
+exports.ɵgs = TableRowContextExample;
+exports.ɵgt = TableSelectionExample;
+exports.ɵgv = SimpleColumn;
+exports.ɵgu = TableSimpleColumnExample;
+exports.ɵgw = TableSortingExample;
+exports.ɵgx = TableStickyColumnsExample;
+exports.ɵgy = TableStickyComplexFlexExample;
+exports.ɵgz = TableStickyComplexExample;
+exports.ɵha = TableStickyFooterExample;
+exports.ɵhb = TableStickyHeaderExample;
+exports.ɵhc = TableWrappedExample;
+exports.ɵhd = WrapperTable;
+exports.ɵhe = TextFieldAutofillDirectiveExample;
+exports.ɵhf = TextFieldAutofillMonitorExample;
+exports.ɵhg = TextFieldAutosizeTextareaExample;
+exports.ɵhh = ToolbarOverviewExample;
+exports.ɵhi = TooltipAutoHideExample;
+exports.ɵhj = TooltipCustomClassExample;
+exports.ɵhk = TooltipDelayExample;
+exports.ɵhl = TooltipDisabledExample;
+exports.ɵhm = TooltipManualExample;
+exports.ɵhn = TooltipMessageExample;
+exports.ɵhp = TooltipModifiedDefaultsExample;
+exports.ɵho = myCustomTooltipDefaults;
+exports.ɵhq = TooltipOverviewExample;
+exports.ɵhr = TooltipPositionExample;
+exports.ɵhs = ChecklistDatabase;
+exports.ɵht = TreeChecklistExample;
+exports.ɵhu = DynamicDatabase;
+exports.ɵhv = TreeDynamicExample;
+exports.ɵhw = FileDatabase$2;
+exports.ɵhx = TreeFlatOverviewExample;
+exports.ɵhy = LoadmoreDatabase;
+exports.ɵhz = TreeLoadmoreExample;
+exports.ɵia = FileDatabase$3;
+exports.ɵib = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
