@@ -1,0 +1,27 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDrop, moveItemInArray} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
+
+<span class="hljs-comment">/**
+ * @title Drag&amp;Drop custom placeholer
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-drag-drop-custom-placeholder-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-drag-drop-custom-placeholder-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-drag-drop-custom-placeholder-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkDragDropCustomPlaceholderExample {
+  movies = [
+    <span class="hljs-string">'Episode I - The Phantom Menace'</span>,
+    <span class="hljs-string">'Episode II - Attack of the Clones'</span>,
+    <span class="hljs-string">'Episode III - Revenge of the Sith'</span>,
+    <span class="hljs-string">'Episode IV - A New Hope'</span>,
+    <span class="hljs-string">'Episode V - The Empire Strikes Back'</span>,
+    <span class="hljs-string">'Episode VI - Return of the Jedi'</span>,
+    <span class="hljs-string">'Episode VII - The Force Awakens'</span>,
+    <span class="hljs-string">'Episode VIII - The Last Jedi'</span>
+  ];
+
+  drop(event: CdkDragDrop&lt;<span class="hljs-built_in">string</span>[]&gt;) {
+    moveItemInArray(<span class="hljs-keyword">this</span>.movies, event.previousIndex, event.currentIndex);
+  }
+}
