@@ -22,7 +22,6 @@ import {CardFancyExample} from './card-fancy/card-fancy-example';
 import {CardOverviewExample} from './card-overview/card-overview-example';
 import {CdkDragDropAxisLockExample} from './cdk-drag-drop-axis-lock/cdk-drag-drop-axis-lock-example';
 import {CdkDragDropConnectedSortingExample} from './cdk-drag-drop-connected-sorting/cdk-drag-drop-connected-sorting-example';
-import {CdkDragDropCustomPlaceholderExample} from './cdk-drag-drop-custom-placeholder/cdk-drag-drop-custom-placeholder-example';
 import {CdkDragDropCustomPreviewExample} from './cdk-drag-drop-custom-preview/cdk-drag-drop-custom-preview-example';
 import {CdkDragDropHandleExample} from './cdk-drag-drop-handle/cdk-drag-drop-handle-example';
 import {CdkDragDropHorizontalSortingExample} from './cdk-drag-drop-horizontal-sorting/cdk-drag-drop-horizontal-sorting-example';
@@ -280,10 +279,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'cdk-drag-drop-connected-sorting': {
     title: 'Drag&Drop connected sorting',
     component: CdkDragDropConnectedSortingExample
-  },
-  'cdk-drag-drop-custom-placeholder': {
-    title: 'Drag&Drop custom placeholer',
-    component: CdkDragDropCustomPlaceholderExample
   },
   'cdk-drag-drop-custom-preview': {
     title: 'Drag&Drop custom preview',
@@ -1037,7 +1032,6 @@ export const EXAMPLE_LIST = [
   CardOverviewExample,
   CdkDragDropAxisLockExample,
   CdkDragDropConnectedSortingExample,
-  CdkDragDropCustomPlaceholderExample,
   CdkDragDropCustomPreviewExample,
   CdkDragDropHandleExample,
   CdkDragDropHorizontalSortingExample,
