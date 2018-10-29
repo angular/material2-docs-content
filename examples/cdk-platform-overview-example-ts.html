@@ -1,0 +1,23 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {
+  getSupportedInputTypes,
+  Platform,
+  supportsPassiveEventListeners,
+  supportsScrollBehavior,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/platform'</span>;
+
+<span class="hljs-comment">/**
+ * @title Platform overview
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-platform-overview-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-platform-overview-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-platform-overview-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkPlatformOverviewExample {
+  supportedInputTypes = <span class="hljs-built_in">Array</span>.from(getSupportedInputTypes()).join(<span class="hljs-string">', '</span>);
+  supportsPassiveEventListeners = supportsPassiveEventListeners();
+  supportsScrollBehavior = supportsScrollBehavior();
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> platform: Platform</span>) {}
+}

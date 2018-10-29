@@ -29,6 +29,7 @@ import {CdkDragDropHorizontalSortingExample} from './cdk-drag-drop-horizontal-so
 import {CdkDragDropOverviewExample} from './cdk-drag-drop-overview/cdk-drag-drop-overview-example';
 import {CdkDragDropRootElementExample} from './cdk-drag-drop-root-element/cdk-drag-drop-root-element-example';
 import {CdkDragDropSortingExample} from './cdk-drag-drop-sorting/cdk-drag-drop-sorting-example';
+import {CdkPlatformOverviewExample} from './cdk-platform-overview/cdk-platform-overview-example';
 import {CdkTableBasicFlexExample} from './cdk-table-basic-flex/cdk-table-basic-flex-example';
 import {CdkTableBasicExample} from './cdk-table-basic/cdk-table-basic-example';
 import {CdkTreeFlatExample} from './cdk-tree-flat/cdk-tree-flat-example';
@@ -308,6 +309,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'cdk-drag-drop-sorting': {
     title: 'Drag&Drop sorting',
     component: CdkDragDropSortingExample
+  },
+  'cdk-platform-overview': {
+    title: 'Platform overview',
+    component: CdkPlatformOverviewExample
   },
   'cdk-table-basic-flex': {
     title: 'Basic use of `<cdk-table>` (uses display flex)',
@@ -1044,6 +1049,7 @@ export const EXAMPLE_LIST = [
   CdkDragDropOverviewExample,
   CdkDragDropRootElementExample,
   CdkDragDropSortingExample,
+  CdkPlatformOverviewExample,
   CdkTableBasicFlexExample,
   CdkTableBasicExample,
   CdkTreeFlatExample,
