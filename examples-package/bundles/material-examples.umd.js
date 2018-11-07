@@ -2348,6 +2348,33 @@ var DatepickerCustomIconExample = /** @class */ (function () {
  * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
+ * \@title Datepicker with custom date classes
+ */
+var DatepickerDateClassExample = /** @class */ (function () {
+    function DatepickerDateClassExample() {
+        this.dateClass = function (d) {
+            /** @type {?} */
+            var date = d.getDate();
+            // Highlight the 1st and 20th day of each month.
+            return (date === 1 || date === 20) ? 'example-custom-date-class' : undefined;
+        };
+    }
+    DatepickerDateClassExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'datepicker-date-class-example',
+                    template: "<mat-form-field class=\"example-full-width\"><input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\"><mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle><mat-datepicker [dateClass]=\"dateClass\" #picker></mat-datepicker></mat-form-field>",
+                    styles: [".example-custom-date-class { background: orange; border-radius: 100%; } "],
+                    encapsulation: core.ViewEncapsulation.None,
+                },] },
+    ];
+    return DatepickerDateClassExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
  * \@title Disabled datepicker
  */
 var DatepickerDisabledExample = /** @class */ (function () {
@@ -8871,6 +8898,10 @@ var EXAMPLE_COMPONENTS = {
         title: 'Datepicker with custom icon',
         component: DatepickerCustomIconExample
     },
+    'datepicker-date-class': {
+        title: 'Datepicker with custom date classes',
+        component: DatepickerDateClassExample
+    },
     'datepicker-disabled': {
         title: 'Disabled datepicker',
         component: DatepickerDisabledExample
@@ -9492,7 +9523,7 @@ var EXAMPLE_COMPONENTS = {
     }
 };
 /** @type {?} */
-var EXAMPLE_LIST = [AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompleteSimpleExample, BadgeOverviewExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, ButtonOverviewExample, ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonTypesExample, CardFancyExample, CardOverviewExample, CdkDragDropAxisLockExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkPlatformOverviewExample, CdkTableBasicFlexExample, CdkTableBasicExample, CdkTreeFlatExample, CdkTreeNestedExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CheckboxConfigurableExample, CheckboxOverviewExample, ChipsAutocompleteExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, ExampleHeader, DatepickerCustomIconExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog, DividerOverviewExample, ElevationOverviewExample, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, FormFieldAppearanceExample, FormFieldCustomControlExample, MyTelInput, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, GridListDynamicExample, GridListOverviewExample, IconOverviewExample, IconSvgExample, InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, MenuIconsExample, MenuOverviewExample, NestedMenuExample, PaginatorConfigurableExample, PaginatorOverviewExample, ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, RadioNgModelExample, RadioOverviewExample, RippleOverviewExample, SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SnackBarComponentExample, PizzaPartyComponent, SnackBarOverviewExample, SnackBarPositionExample, SortOverviewExample, StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSimpleColumnExample, SimpleColumn, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableWrappedExample, WrapperTable, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, ToolbarMultirowExample, ToolbarOverviewExample, TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample];
+var EXAMPLE_LIST = [AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompleteSimpleExample, BadgeOverviewExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, ButtonOverviewExample, ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonTypesExample, CardFancyExample, CardOverviewExample, CdkDragDropAxisLockExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkPlatformOverviewExample, CdkTableBasicFlexExample, CdkTableBasicExample, CdkTreeFlatExample, CdkTreeNestedExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CheckboxConfigurableExample, CheckboxOverviewExample, ChipsAutocompleteExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, ExampleHeader, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog, DividerOverviewExample, ElevationOverviewExample, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, FormFieldAppearanceExample, FormFieldCustomControlExample, MyTelInput, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, GridListDynamicExample, GridListOverviewExample, IconOverviewExample, IconSvgExample, InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, MenuIconsExample, MenuOverviewExample, NestedMenuExample, PaginatorConfigurableExample, PaginatorOverviewExample, ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, RadioNgModelExample, RadioOverviewExample, RippleOverviewExample, SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SnackBarComponentExample, PizzaPartyComponent, SnackBarOverviewExample, SnackBarPositionExample, SortOverviewExample, StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSimpleColumnExample, SimpleColumn, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableWrappedExample, WrapperTable, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, ToolbarMultirowExample, ToolbarOverviewExample, TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample];
 var ExampleModule = /** @class */ (function () {
     function ExampleModule() {
     }
@@ -9608,169 +9639,170 @@ exports.ɵbu = DatepickerColorExample;
 exports.ɵbv = DatepickerCustomHeaderExample;
 exports.ɵbw = ExampleHeader;
 exports.ɵbx = DatepickerCustomIconExample;
-exports.ɵby = DatepickerDisabledExample;
-exports.ɵbz = DatepickerEventsExample;
-exports.ɵca = DatepickerFilterExample;
-exports.ɵcc = DatepickerFormatsExample;
-exports.ɵcb = MY_FORMATS;
-exports.ɵcd = DatepickerLocaleExample;
-exports.ɵce = DatepickerMinMaxExample;
-exports.ɵcf = DatepickerMomentExample;
-exports.ɵcg = DatepickerStartViewExample;
-exports.ɵch = DatepickerTouchExample;
-exports.ɵci = DatepickerValueExample;
-exports.ɵck = DatepickerViewsSelectionExample;
-exports.ɵcj = MY_FORMATS$1;
-exports.ɵcl = DialogContentExample;
-exports.ɵcm = DialogContentExampleDialog;
-exports.ɵcn = DialogDataExample;
-exports.ɵco = DialogDataExampleDialog;
-exports.ɵcp = DialogElementsExample;
-exports.ɵcq = DialogElementsExampleDialog;
-exports.ɵcr = DialogOverviewExample;
-exports.ɵcs = DialogOverviewExampleDialog;
-exports.ɵct = DividerOverviewExample;
-exports.ɵcu = ElevationOverviewExample;
-exports.ɵcv = ExpansionExpandCollapseAllExample;
-exports.ɵcw = ExpansionStepsExample;
-exports.ɵcx = FocusMonitorDirectivesExample;
-exports.ɵcy = FocusMonitorFocusViaExample;
-exports.ɵcz = FocusMonitorOverviewExample;
-exports.ɵda = FormFieldAppearanceExample;
-exports.ɵdb = FormFieldCustomControlExample;
-exports.ɵdc = MyTelInput;
-exports.ɵdd = FormFieldErrorExample;
-exports.ɵde = FormFieldHintExample;
-exports.ɵdf = FormFieldLabelExample;
-exports.ɵdg = FormFieldOverviewExample;
-exports.ɵdh = FormFieldPrefixSuffixExample;
-exports.ɵdi = FormFieldThemingExample;
-exports.ɵdj = GridListDynamicExample;
-exports.ɵdk = GridListOverviewExample;
-exports.ɵdl = IconOverviewExample;
-exports.ɵdm = IconSvgExample;
-exports.ɵdn = InputClearableExample;
-exports.ɵdo = InputErrorStateMatcherExample;
-exports.ɵdp = InputErrorsExample;
-exports.ɵdq = InputFormExample;
-exports.ɵdr = InputHintExample;
-exports.ɵds = InputOverviewExample;
-exports.ɵdt = InputPrefixSuffixExample;
-exports.ɵdu = ListSectionsExample;
-exports.ɵdv = ListSelectionExample;
-exports.ɵie = ExampleMaterialModule;
-exports.ɵdw = MenuIconsExample;
-exports.ɵdx = MenuOverviewExample;
-exports.ɵdy = NestedMenuExample;
-exports.ɵdz = PaginatorConfigurableExample;
-exports.ɵea = PaginatorOverviewExample;
-exports.ɵeb = ProgressBarBufferExample;
-exports.ɵec = ProgressBarConfigurableExample;
-exports.ɵed = ProgressBarDeterminateExample;
-exports.ɵee = ProgressBarIndeterminateExample;
-exports.ɵef = ProgressBarQueryExample;
-exports.ɵeg = ProgressSpinnerConfigurableExample;
-exports.ɵeh = ProgressSpinnerOverviewExample;
-exports.ɵei = RadioNgModelExample;
-exports.ɵej = RadioOverviewExample;
-exports.ɵek = RippleOverviewExample;
-exports.ɵel = SelectCustomTriggerExample;
-exports.ɵem = SelectDisabledExample;
-exports.ɵen = SelectErrorStateMatcherExample;
-exports.ɵeo = SelectFormExample;
-exports.ɵep = SelectHintErrorExample;
-exports.ɵeq = SelectMultipleExample;
-exports.ɵer = SelectNoRippleExample;
-exports.ɵes = SelectOptgroupExample;
-exports.ɵet = SelectOverviewExample;
-exports.ɵeu = SelectPanelClassExample;
-exports.ɵev = SelectResetExample;
-exports.ɵew = SelectValueBindingExample;
-exports.ɵex = SidenavAutosizeExample;
-exports.ɵey = SidenavBackdropExample;
-exports.ɵez = SidenavDisableCloseExample;
-exports.ɵfa = SidenavDrawerOverviewExample;
-exports.ɵfb = SidenavFixedExample;
-exports.ɵfc = SidenavModeExample;
-exports.ɵfd = SidenavOpenCloseExample;
-exports.ɵfe = SidenavOverviewExample;
-exports.ɵff = SidenavPositionExample;
-exports.ɵfg = SidenavResponsiveExample;
-exports.ɵfh = SlideToggleConfigurableExample;
-exports.ɵfi = SlideToggleFormsExample;
-exports.ɵfj = SlideToggleOverviewExample;
-exports.ɵfk = SliderConfigurableExample;
-exports.ɵfl = SliderFormattingExample;
-exports.ɵfm = SliderOverviewExample;
-exports.ɵfo = PizzaPartyComponent;
-exports.ɵfn = SnackBarComponentExample;
-exports.ɵfp = SnackBarOverviewExample;
-exports.ɵfq = SnackBarPositionExample;
-exports.ɵfr = SortOverviewExample;
-exports.ɵfs = StepperEditableExample;
-exports.ɵft = StepperErrorsExample;
-exports.ɵfu = StepperLabelPositionBottomExample;
-exports.ɵfv = StepperOptionalExample;
-exports.ɵfw = StepperStatesExample;
-exports.ɵfx = StepperVerticalExample;
-exports.ɵfy = TabGroupAlignExample;
-exports.ɵfz = TabGroupAnimationsExample;
-exports.ɵga = TabGroupAsyncExample;
-exports.ɵgb = TabGroupBasicExample;
-exports.ɵgc = TabGroupCustomLabelExample;
-exports.ɵgd = TabGroupDynamicHeightExample;
-exports.ɵge = TabGroupDynamicExample;
-exports.ɵgf = TabGroupHeaderBelowExample;
-exports.ɵgg = TabGroupLazyLoadedExample;
-exports.ɵgh = TabGroupStretchedExample;
-exports.ɵgi = TabGroupThemeExample;
-exports.ɵgj = TabNavBarBasicExample;
-exports.ɵgk = TableBasicFlexExample;
-exports.ɵgl = TableBasicExample;
-exports.ɵgm = TableDynamicColumnsExample;
-exports.ɵgn = TableExpandableRowsExample;
-exports.ɵgo = TableFilteringExample;
-exports.ɵgp = TableFooterRowExample;
-exports.ɵgq = TableHttpExample;
-exports.ɵgr = TableMultipleHeaderFooterExample;
-exports.ɵgs = TableOverviewExample;
-exports.ɵgt = TablePaginationExample;
-exports.ɵgu = TableRowContextExample;
-exports.ɵgv = TableSelectionExample;
-exports.ɵgx = SimpleColumn;
-exports.ɵgw = TableSimpleColumnExample;
-exports.ɵgy = TableSortingExample;
-exports.ɵgz = TableStickyColumnsExample;
-exports.ɵha = TableStickyComplexFlexExample;
-exports.ɵhb = TableStickyComplexExample;
-exports.ɵhc = TableStickyFooterExample;
-exports.ɵhd = TableStickyHeaderExample;
-exports.ɵhe = TableWrappedExample;
-exports.ɵhf = WrapperTable;
-exports.ɵhg = TextFieldAutofillDirectiveExample;
-exports.ɵhh = TextFieldAutofillMonitorExample;
-exports.ɵhi = TextFieldAutosizeTextareaExample;
-exports.ɵhj = ToolbarOverviewExample;
-exports.ɵhk = TooltipAutoHideExample;
-exports.ɵhl = TooltipCustomClassExample;
-exports.ɵhm = TooltipDelayExample;
-exports.ɵhn = TooltipDisabledExample;
-exports.ɵho = TooltipManualExample;
-exports.ɵhp = TooltipMessageExample;
-exports.ɵhr = TooltipModifiedDefaultsExample;
-exports.ɵhq = myCustomTooltipDefaults;
-exports.ɵhs = TooltipOverviewExample;
-exports.ɵht = TooltipPositionExample;
-exports.ɵhu = ChecklistDatabase;
-exports.ɵhv = TreeChecklistExample;
-exports.ɵhw = DynamicDatabase;
-exports.ɵhx = TreeDynamicExample;
-exports.ɵhy = FileDatabase$2;
-exports.ɵhz = TreeFlatOverviewExample;
-exports.ɵia = LoadmoreDatabase;
-exports.ɵib = TreeLoadmoreExample;
-exports.ɵic = FileDatabase$3;
-exports.ɵid = TreeNestedOverviewExample;
+exports.ɵby = DatepickerDateClassExample;
+exports.ɵbz = DatepickerDisabledExample;
+exports.ɵca = DatepickerEventsExample;
+exports.ɵcb = DatepickerFilterExample;
+exports.ɵcd = DatepickerFormatsExample;
+exports.ɵcc = MY_FORMATS;
+exports.ɵce = DatepickerLocaleExample;
+exports.ɵcf = DatepickerMinMaxExample;
+exports.ɵcg = DatepickerMomentExample;
+exports.ɵch = DatepickerStartViewExample;
+exports.ɵci = DatepickerTouchExample;
+exports.ɵcj = DatepickerValueExample;
+exports.ɵcl = DatepickerViewsSelectionExample;
+exports.ɵck = MY_FORMATS$1;
+exports.ɵcm = DialogContentExample;
+exports.ɵcn = DialogContentExampleDialog;
+exports.ɵco = DialogDataExample;
+exports.ɵcp = DialogDataExampleDialog;
+exports.ɵcq = DialogElementsExample;
+exports.ɵcr = DialogElementsExampleDialog;
+exports.ɵcs = DialogOverviewExample;
+exports.ɵct = DialogOverviewExampleDialog;
+exports.ɵcu = DividerOverviewExample;
+exports.ɵcv = ElevationOverviewExample;
+exports.ɵcw = ExpansionExpandCollapseAllExample;
+exports.ɵcx = ExpansionStepsExample;
+exports.ɵcy = FocusMonitorDirectivesExample;
+exports.ɵcz = FocusMonitorFocusViaExample;
+exports.ɵda = FocusMonitorOverviewExample;
+exports.ɵdb = FormFieldAppearanceExample;
+exports.ɵdc = FormFieldCustomControlExample;
+exports.ɵdd = MyTelInput;
+exports.ɵde = FormFieldErrorExample;
+exports.ɵdf = FormFieldHintExample;
+exports.ɵdg = FormFieldLabelExample;
+exports.ɵdh = FormFieldOverviewExample;
+exports.ɵdi = FormFieldPrefixSuffixExample;
+exports.ɵdj = FormFieldThemingExample;
+exports.ɵdk = GridListDynamicExample;
+exports.ɵdl = GridListOverviewExample;
+exports.ɵdm = IconOverviewExample;
+exports.ɵdn = IconSvgExample;
+exports.ɵdo = InputClearableExample;
+exports.ɵdp = InputErrorStateMatcherExample;
+exports.ɵdq = InputErrorsExample;
+exports.ɵdr = InputFormExample;
+exports.ɵds = InputHintExample;
+exports.ɵdt = InputOverviewExample;
+exports.ɵdu = InputPrefixSuffixExample;
+exports.ɵdv = ListSectionsExample;
+exports.ɵdw = ListSelectionExample;
+exports.ɵif = ExampleMaterialModule;
+exports.ɵdx = MenuIconsExample;
+exports.ɵdy = MenuOverviewExample;
+exports.ɵdz = NestedMenuExample;
+exports.ɵea = PaginatorConfigurableExample;
+exports.ɵeb = PaginatorOverviewExample;
+exports.ɵec = ProgressBarBufferExample;
+exports.ɵed = ProgressBarConfigurableExample;
+exports.ɵee = ProgressBarDeterminateExample;
+exports.ɵef = ProgressBarIndeterminateExample;
+exports.ɵeg = ProgressBarQueryExample;
+exports.ɵeh = ProgressSpinnerConfigurableExample;
+exports.ɵei = ProgressSpinnerOverviewExample;
+exports.ɵej = RadioNgModelExample;
+exports.ɵek = RadioOverviewExample;
+exports.ɵel = RippleOverviewExample;
+exports.ɵem = SelectCustomTriggerExample;
+exports.ɵen = SelectDisabledExample;
+exports.ɵeo = SelectErrorStateMatcherExample;
+exports.ɵep = SelectFormExample;
+exports.ɵeq = SelectHintErrorExample;
+exports.ɵer = SelectMultipleExample;
+exports.ɵes = SelectNoRippleExample;
+exports.ɵet = SelectOptgroupExample;
+exports.ɵeu = SelectOverviewExample;
+exports.ɵev = SelectPanelClassExample;
+exports.ɵew = SelectResetExample;
+exports.ɵex = SelectValueBindingExample;
+exports.ɵey = SidenavAutosizeExample;
+exports.ɵez = SidenavBackdropExample;
+exports.ɵfa = SidenavDisableCloseExample;
+exports.ɵfb = SidenavDrawerOverviewExample;
+exports.ɵfc = SidenavFixedExample;
+exports.ɵfd = SidenavModeExample;
+exports.ɵfe = SidenavOpenCloseExample;
+exports.ɵff = SidenavOverviewExample;
+exports.ɵfg = SidenavPositionExample;
+exports.ɵfh = SidenavResponsiveExample;
+exports.ɵfi = SlideToggleConfigurableExample;
+exports.ɵfj = SlideToggleFormsExample;
+exports.ɵfk = SlideToggleOverviewExample;
+exports.ɵfl = SliderConfigurableExample;
+exports.ɵfm = SliderFormattingExample;
+exports.ɵfn = SliderOverviewExample;
+exports.ɵfp = PizzaPartyComponent;
+exports.ɵfo = SnackBarComponentExample;
+exports.ɵfq = SnackBarOverviewExample;
+exports.ɵfr = SnackBarPositionExample;
+exports.ɵfs = SortOverviewExample;
+exports.ɵft = StepperEditableExample;
+exports.ɵfu = StepperErrorsExample;
+exports.ɵfv = StepperLabelPositionBottomExample;
+exports.ɵfw = StepperOptionalExample;
+exports.ɵfx = StepperStatesExample;
+exports.ɵfy = StepperVerticalExample;
+exports.ɵfz = TabGroupAlignExample;
+exports.ɵga = TabGroupAnimationsExample;
+exports.ɵgb = TabGroupAsyncExample;
+exports.ɵgc = TabGroupBasicExample;
+exports.ɵgd = TabGroupCustomLabelExample;
+exports.ɵge = TabGroupDynamicHeightExample;
+exports.ɵgf = TabGroupDynamicExample;
+exports.ɵgg = TabGroupHeaderBelowExample;
+exports.ɵgh = TabGroupLazyLoadedExample;
+exports.ɵgi = TabGroupStretchedExample;
+exports.ɵgj = TabGroupThemeExample;
+exports.ɵgk = TabNavBarBasicExample;
+exports.ɵgl = TableBasicFlexExample;
+exports.ɵgm = TableBasicExample;
+exports.ɵgn = TableDynamicColumnsExample;
+exports.ɵgo = TableExpandableRowsExample;
+exports.ɵgp = TableFilteringExample;
+exports.ɵgq = TableFooterRowExample;
+exports.ɵgr = TableHttpExample;
+exports.ɵgs = TableMultipleHeaderFooterExample;
+exports.ɵgt = TableOverviewExample;
+exports.ɵgu = TablePaginationExample;
+exports.ɵgv = TableRowContextExample;
+exports.ɵgw = TableSelectionExample;
+exports.ɵgy = SimpleColumn;
+exports.ɵgx = TableSimpleColumnExample;
+exports.ɵgz = TableSortingExample;
+exports.ɵha = TableStickyColumnsExample;
+exports.ɵhb = TableStickyComplexFlexExample;
+exports.ɵhc = TableStickyComplexExample;
+exports.ɵhd = TableStickyFooterExample;
+exports.ɵhe = TableStickyHeaderExample;
+exports.ɵhf = TableWrappedExample;
+exports.ɵhg = WrapperTable;
+exports.ɵhh = TextFieldAutofillDirectiveExample;
+exports.ɵhi = TextFieldAutofillMonitorExample;
+exports.ɵhj = TextFieldAutosizeTextareaExample;
+exports.ɵhk = ToolbarOverviewExample;
+exports.ɵhl = TooltipAutoHideExample;
+exports.ɵhm = TooltipCustomClassExample;
+exports.ɵhn = TooltipDelayExample;
+exports.ɵho = TooltipDisabledExample;
+exports.ɵhp = TooltipManualExample;
+exports.ɵhq = TooltipMessageExample;
+exports.ɵhs = TooltipModifiedDefaultsExample;
+exports.ɵhr = myCustomTooltipDefaults;
+exports.ɵht = TooltipOverviewExample;
+exports.ɵhu = TooltipPositionExample;
+exports.ɵhv = ChecklistDatabase;
+exports.ɵhw = TreeChecklistExample;
+exports.ɵhx = DynamicDatabase;
+exports.ɵhy = TreeDynamicExample;
+exports.ɵhz = FileDatabase$2;
+exports.ɵia = TreeFlatOverviewExample;
+exports.ɵib = LoadmoreDatabase;
+exports.ɵic = TreeLoadmoreExample;
+exports.ɵid = FileDatabase$3;
+exports.ɵie = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

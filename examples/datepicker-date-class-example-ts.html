@@ -1,0 +1,17 @@
+<span class="hljs-keyword">import</span> {Component, ViewEncapsulation} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/** @title Datepicker with custom date classes */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'datepicker-date-class-example'</span>,
+  templateUrl: <span class="hljs-string">'datepicker-date-class-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'datepicker-date-class-example.css'</span>],
+  encapsulation: ViewEncapsulation.None,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatepickerDateClassExample {
+  dateClass = <span class="hljs-function">(<span class="hljs-params">d: <span class="hljs-built_in">Date</span></span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> date = d.getDate();
+
+    <span class="hljs-comment">// Highlight the 1st and 20th day of each month.</span>
+    <span class="hljs-keyword">return</span> (date === <span class="hljs-number">1</span> || date === <span class="hljs-number">20</span>) ? <span class="hljs-string">'example-custom-date-class'</span> : <span class="hljs-literal">undefined</span>;
+  }
+}
