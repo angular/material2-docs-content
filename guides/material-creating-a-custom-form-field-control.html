@@ -86,14 +86,32 @@ ngOnDestroy() {
   @Optional() @Self() public ngControl: NgControl,
   ...,
 ) { }
-</code></pre><p class="docs-markdown-p">Note that if your component implements <code class="docs-markdown-code">ControlValueAccessor</code>, it may already be set up to provide <code class="docs-markdown-code">NG_VALUE_ACCESSOR</code> (in the <code class="docs-markdown-code">providers</code> part of the component's decorator, or possibly in a module declaration). If so you may get a <em>cannot instantiate cyclic dependency</em> error.</p><p class="docs-markdown-p">To resolve this, remove the <code class="docs-markdown-code">NG_VALUE_ACCESSOR</code> provider and instead set the value accessor directly:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">constructor(
+</code></pre><p class="docs-markdown-p">Note that if your component implements <code class="docs-markdown-code">ControlValueAccessor</code>, it may already be set up to provide <code class="docs-markdown-code">NG_VALUE_ACCESSOR</code> (in the <code class="docs-markdown-code">providers</code> part of the component's decorator, or possibly in a module declaration). If so you may get a <em>cannot instantiate cyclic dependency</em> error.</p><p class="docs-markdown-p">To resolve this, remove the <code class="docs-markdown-code">NG_VALUE_ACCESSOR</code> provider and instead set the value accessor directly:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">@Component({
   ...,
-  @Optional() @Self() public ngControl: NgControl,
-  ...,
-) {
-  // Setting the value accessor directly (instead of using
-  // the providers) to avoid running into a circular import.
-  if (this.ngControl != null) { this.ngControl.valueAccessor = this; }
+  providers: [
+    ...,
+    // Remove this.
+    // {
+    //   provide: NG_VALUE_ACCESSOR,
+    //   useExisting: forwardRef(() =&gt; MatFormFieldControl),
+    //   multi: true,
+    // },
+  ],
+})
+class MyTelInput implements MatFormFieldControl&lt;MyTel&gt; {
+  constructor(
+    ...,
+    @Optional() @Self() public ngControl: NgControl,
+    ...,
+  ) {
+
+    // Replace the provider from above with this.
+    if (this.ngControl != null) {
+      // Setting the value accessor directly (instead of using
+      // the providers) to avoid running into a circular import.
+      this.ngControl.valueAccessor = this;
+    }
+  }
 }
 </code></pre><p class="docs-markdown-p">For additional information about <code class="docs-markdown-code">ControlValueAccessor</code> see the <a href="https://angular.io/api/forms/ControlValueAccessor" class="docs-markdown-a">API docs</a>.</p><h4 id="-code-focused-code-" class="docs-header-link docs-markdown-h4"><span header-link="-code-focused-code-"></span> <code class="docs-markdown-code">focused</code></h4><p class="docs-markdown-p">This property indicates whether or not the form field control should be considered to be in a focused state. When it is in a focused state, the form field is displayed with a solid color underline. For the purposes of our component, we want to consider it focused if any of the part inputs are focused. We can use the <code class="docs-markdown-code">FocusMonitor</code> from <code class="docs-markdown-code">@angular/cdk</code> to easily check this. We also need to remember to emit on the <code class="docs-markdown-code">stateChanges</code> stream so change detection can happen.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">focused = <span class="hljs-literal">false</span>;
 
