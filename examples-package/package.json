@@ -32,7 +32,7 @@
   "dependencies": {
     "tslib": "^1.7.1"
   },
-  "releaseGitCommitSha": "4d5625bf21256e2bb0e9e2491d7262967ee472a7",
+  "releaseGitCommitSha": "6c0fd37a29a3f5375c0783b4baffc3cc12245cb0",
   "releaseGitBranch": "master",
   "releaseGitUser": " <>"
 }
