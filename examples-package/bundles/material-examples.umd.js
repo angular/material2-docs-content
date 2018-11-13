@@ -6,10 +6,10 @@
  * found in the LICENSE file at https://angular.io/license
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/portal'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/cdk/stepper'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
-	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/portal', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/cdk/stepper', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
-	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.a11y,global.ng.cdk.table,global.ng.cdk.tree,global.ng.cdk.dragDrop,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.overlay,global.ng.cdk.portal,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.cdk.stepper,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
-}(this, (function (exports,core,scrolling,a11y,table,tree,dragDrop,material,forms,operators,overlay,portal,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,coercion,platformBrowser,sidenav,layout,stepper,animations,http,textField,common) { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/portal'), require('@angular/cdk/platform'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/material/tree'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('@angular/material-moment-adapter'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/cdk/stepper'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/common')) :
+	typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/portal', '@angular/cdk/platform', '@angular/cdk/collections', 'rxjs', '@angular/material/tree', '@angular/cdk/keycodes', '@angular/material/core', '@angular/material-moment-adapter', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/cdk/stepper', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/common'], factory) :
+	(factory((global.ng = global.ng || {}, global.ng['material-examples'] = {}),global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.a11y,global.ng.cdk.table,global.ng.cdk.tree,global.ng.cdk.dragDrop,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.overlay,global.ng.cdk.portal,global.ng.cdk.platform,global.ng.cdk.collections,global.rxjs,global.ng.material.tree,global.ng.cdk.keycodes,global.ng.material.core,global.ng.materialMomentAdapter,global.moment,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.cdk.stepper,global.ng.animations,global.ng.common.http,global.ng.cdk.textField,global.ng.common));
+}(this, (function (exports,core,scrolling,a11y,table,tree,dragDrop,material,forms,operators,overlay,portal,platform,collections,rxjs,tree$1,keycodes,core$1,materialMomentAdapter,_rollupMoment__default,coercion,platformBrowser,sidenav,layout,stepper,animations,http,textField,common) { 'use strict';
 
 var _rollupMoment__default__default = _rollupMoment__default['default'];
 
@@ -903,6 +903,70 @@ var CdkDragDropCustomPreviewExample = /** @class */ (function () {
  * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /**
+ * \@title Drag&Drop enter predicate
+ */
+var CdkDragDropEnterPredicateExample = /** @class */ (function () {
+    function CdkDragDropEnterPredicateExample() {
+        this.all = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        this.even = [10];
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    CdkDragDropEnterPredicateExample.prototype.drop = /**
+     * @param {?} event
+     * @return {?}
+     */
+    function (event) {
+        if (event.previousContainer === event.container) {
+            dragDrop.moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+        }
+        else {
+            dragDrop.transferArrayItem(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
+        }
+    };
+    /** Predicate function that only allows even numbers to be dropped into a list. */
+    /**
+     * Predicate function that only allows even numbers to be dropped into a list.
+     * @param {?} item
+     * @return {?}
+     */
+    CdkDragDropEnterPredicateExample.prototype.evenPredicate = /**
+     * Predicate function that only allows even numbers to be dropped into a list.
+     * @param {?} item
+     * @return {?}
+     */
+    function (item) {
+        return item.data % 2 === 0;
+    };
+    /** Predicate function that doesn't allow items to be dropped into a list. */
+    /**
+     * Predicate function that doesn't allow items to be dropped into a list.
+     * @return {?}
+     */
+    CdkDragDropEnterPredicateExample.prototype.noReturnPredicate = /**
+     * Predicate function that doesn't allow items to be dropped into a list.
+     * @return {?}
+     */
+    function () {
+        return false;
+    };
+    CdkDragDropEnterPredicateExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-drag-drop-enter-predicate-example',
+                    template: "<div class=\"example-container\"><h2>Available numbers</h2><div id=\"all\" cdkDropList [cdkDropListData]=\"all\" cdkDropListConnectedTo=\"even\" class=\"example-list\" (cdkDropListDropped)=\"drop($event)\" [cdkDropListEnterPredicate]=\"noReturnPredicate\"><div class=\"example-box\" *ngFor=\"let number of all\" [cdkDragData]=\"number\" cdkDrag>{{number}}</div></div></div><div class=\"example-container\"><h2>Even numbers</h2><div id=\"even\" cdkDropList [cdkDropListData]=\"even\" cdkDropListConnectedTo=\"all\" class=\"example-list\" (cdkDropListDropped)=\"drop($event)\" [cdkDropListEnterPredicate]=\"evenPredicate\"><div class=\"example-box\" *ngFor=\"let number of even\" cdkDrag [cdkDragData]=\"number\">{{number}}</div></div></div>",
+                    styles: [".example-container { width: 400px; max-width: 100%; margin: 0 25px 25px 0; display: inline-block; vertical-align: top; } .example-list { border: solid 1px #ccc; min-height: 60px; background: white; border-radius: 4px; overflow: hidden; display: block; } .example-box { padding: 20px 10px; border-bottom: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); display: flex; flex-direction: row; align-items: center; justify-content: space-between; box-sizing: border-box; cursor: move; background: white; font-size: 14px; } .cdk-drag-preview { box-sizing: border-box; border-radius: 4px; box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .cdk-drag-placeholder { opacity: 0; } .cdk-drag-animating { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } .example-box:last-child { border: none; } .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) { transition: transform 250ms cubic-bezier(0, 0, 0.2, 1); } "],
+                },] },
+    ];
+    return CdkDragDropEnterPredicateExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
  * \@title Drag&Drop with a handle
  */
 var CdkDragDropHandleExample = /** @class */ (function () {
@@ -1078,6 +1142,34 @@ var CdkDragDropSortingExample = /** @class */ (function () {
                 },] },
     ];
     return CdkDragDropSortingExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/**
+ * \@title Platform overview
+ */
+var CdkPlatformOverviewExample = /** @class */ (function () {
+    function CdkPlatformOverviewExample(platform$$1) {
+        this.platform = platform$$1;
+        this.supportedInputTypes = Array.from(platform.getSupportedInputTypes()).join(', ');
+        this.supportsPassiveEventListeners = platform.supportsPassiveEventListeners();
+        this.supportsScrollBehavior = platform.supportsScrollBehavior();
+    }
+    CdkPlatformOverviewExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-platform-overview-example',
+                    template: "<h3>Platform information:</h3><p>Is Android: {{platform.ANDROID}}</p><p>Is iOS: {{platform.IOS}}</p><p>Is Firefox: {{platform.FIREFOX}}</p><p>Is Blink: {{platform.BLINK}}</p><p>Is Webkit: {{platform.WEBKIT}}</p><p>Is Trident: {{platform.TRIDENT}}</p><p>Is Edge: {{platform.EDGE}}</p><p>Supported input types: {{supportedInputTypes}}</p><p>Supports passive event listeners: {{supportsPassiveEventListeners}}</p><p>Supports scroll behavior: {{supportsScrollBehavior}}</p>",
+                    styles: ["/** No CSS for this example */ "],
+                },] },
+    ];
+    /** @nocollapse */
+    CdkPlatformOverviewExample.ctorParameters = function () { return [
+        { type: platform.Platform }
+    ]; };
+    return CdkPlatformOverviewExample;
 }());
 
 /**
@@ -1596,7 +1688,7 @@ var CdkVirtualScrollContextExample = /** @class */ (function () {
         { type: core.Component, args: [{
                     selector: 'cdk-virtual-scroll-context-example',
                     styles: [".example-viewport { height: 200px; width: 200px; border: 1px solid black; } .example-item-detail { height: 18px; } .example-alternate { background: rgba(127, 127, 127, 0.3); } "],
-                    template: "<cdk-virtual-scroll-viewport [itemSize]=\"18 * 7\" class=\"example-viewport\"><div *cdkVirtualFor=\"let item of items; let index = index; let count = count; let first = first; let last = last; let even = even; let odd = odd;\" [class.example-alternate]=\"odd\"><div class=\"example-item-detail\">Item: {{item}}</div><div class=\"example-item-detail\">Index: {{index}}</div><div class=\"example-item-detail\">Count: {{count}}</div><div class=\"example-item-detail\">First: {{first ? 'Yes' : 'No'}}</div><div class=\"example-item-detail\">Last: {{last ? 'Yes' : 'No'}}</div><div class=\"example-item-detail\">Event: {{even ? 'Yes' : 'No'}}</div><div class=\"example-item-detail\">Odd: {{odd ? 'Yes' : 'No'}}</div></div></cdk-virtual-scroll-viewport>",
+                    template: "<cdk-virtual-scroll-viewport [itemSize]=\"18 * 7\" class=\"example-viewport\"><div *cdkVirtualFor=\"let item of items; let index = index; let count = count; let first = first; let last = last; let even = even; let odd = odd;\" [class.example-alternate]=\"odd\"><div class=\"example-item-detail\">Item: {{item}}</div><div class=\"example-item-detail\">Index: {{index}}</div><div class=\"example-item-detail\">Count: {{count}}</div><div class=\"example-item-detail\">First: {{first ? 'Yes' : 'No'}}</div><div class=\"example-item-detail\">Last: {{last ? 'Yes' : 'No'}}</div><div class=\"example-item-detail\">Even: {{even ? 'Yes' : 'No'}}</div><div class=\"example-item-detail\">Odd: {{odd ? 'Yes' : 'No'}}</div></div></cdk-virtual-scroll-viewport>",
                     changeDetection: core.ChangeDetectionStrategy.OnPush,
                 },] },
     ];
@@ -4605,7 +4697,7 @@ var SelectPanelClassExample = /** @class */ (function () {
         { type: core.Component, args: [{
                     selector: 'select-panel-class-example',
                     template: "<mat-form-field><mat-select placeholder=\"Panel color\" [formControl]=\"panelColor\" panelClass=\"example-panel-{{panelColor.value}}\"><mat-option value=\"red\">Red</mat-option><mat-option value=\"green\">Green</mat-option><mat-option value=\"blue\">Blue</mat-option></mat-select></mat-form-field>",
-                    styles: [".example-panel-red .mat-select-panel { background: rgba(255, 0, 0, 0.5); } .example-panel-green .mat-select-panel { background: rgba(0, 255, 0, 0.5); } .example-panel-blue .mat-select-panel { background: rgba(0, 0, 255, 0.5); } "],
+                    styles: [".example-panel-red.mat-select-panel { background: rgba(255, 0, 0, 0.5); } .example-panel-green.mat-select-panel { background: rgba(0, 255, 0, 0.5); } .example-panel-blue.mat-select-panel { background: rgba(0, 0, 255, 0.5); } "],
                     // Encapsulation has to be disabled in order for the
                     // component style to apply to the select panel.
                     encapsulation: core.ViewEncapsulation.None,
@@ -8631,1009 +8723,9 @@ var TreeNestedOverviewExample = /** @class */ (function () {
  * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
  */
 /** @type {?} */
-var EXAMPLE_COMPONENTS = {
-    'autocomplete-auto-active-first-option': {
-        title: 'Highlight the first autocomplete option',
-        component: AutocompleteAutoActiveFirstOptionExample
-    },
-    'autocomplete-display': {
-        title: 'Display value autocomplete',
-        component: AutocompleteDisplayExample
-    },
-    'autocomplete-filter': {
-        title: 'Filter autocomplete',
-        component: AutocompleteFilterExample
-    },
-    'autocomplete-optgroup': {
-        title: 'Option groups autocomplete',
-        component: AutocompleteOptgroupExample
-    },
-    'autocomplete-overview': {
-        title: 'Autocomplete overview',
-        component: AutocompleteOverviewExample
-    },
-    'autocomplete-simple': {
-        title: 'Simple autocomplete',
-        component: AutocompleteSimpleExample
-    },
-    'badge-overview': {
-        title: 'Badge overview',
-        component: BadgeOverviewExample
-    },
-    'bottom-sheet-overview': {
-        title: 'Bottom Sheet Overview',
-        component: BottomSheetOverviewExample,
-        additionalFiles: ["bottom-sheet-overview-example-sheet.html"],
-        selectorName: 'BottomSheetOverviewExample, BottomSheetOverviewExampleSheet'
-    },
-    'button-overview': {
-        title: 'Basic buttons',
-        component: ButtonOverviewExample
-    },
-    'button-toggle-appearance': {
-        title: 'Button toggle appearance',
-        component: ButtonToggleAppearanceExample
-    },
-    'button-toggle-exclusive': {
-        title: 'Exclusive selection',
-        component: ButtonToggleExclusiveExample
-    },
-    'button-toggle-overview': {
-        title: 'Basic button-toggles',
-        component: ButtonToggleOverviewExample
-    },
-    'button-types': {
-        title: 'Button varieties',
-        component: ButtonTypesExample
-    },
-    'card-fancy': {
-        title: 'Card with multiple sections',
-        component: CardFancyExample
-    },
-    'card-overview': {
-        title: 'Basic cards',
-        component: CardOverviewExample
-    },
-    'cdk-drag-drop-axis-lock': {
-        title: 'Drag&Drop position locking',
-        component: CdkDragDropAxisLockExample
-    },
-    'cdk-drag-drop-connected-sorting': {
-        title: 'Drag&Drop connected sorting',
-        component: CdkDragDropConnectedSortingExample
-    },
-    'cdk-drag-drop-custom-placeholder': {
-        title: 'Drag&Drop custom placeholer',
-        component: CdkDragDropCustomPlaceholderExample
-    },
-    'cdk-drag-drop-custom-preview': {
-        title: 'Drag&Drop custom preview',
-        component: CdkDragDropCustomPreviewExample
-    },
-    'cdk-drag-drop-handle': {
-        title: 'Drag&Drop with a handle',
-        component: CdkDragDropHandleExample
-    },
-    'cdk-drag-drop-horizontal-sorting': {
-        title: 'Drag&Drop horizontal sorting',
-        component: CdkDragDropHorizontalSortingExample
-    },
-    'cdk-drag-drop-overview': {
-        title: 'Basic Drag&Drop',
-        component: CdkDragDropOverviewExample
-    },
-    'cdk-drag-drop-root-element': {
-        title: 'Drag&Drop with alternate root element',
-        component: CdkDragDropRootElementExample
-    },
-    'cdk-drag-drop-sorting': {
-        title: 'Drag&Drop sorting',
-        component: CdkDragDropSortingExample
-    },
-    'cdk-table-basic-flex': {
-        title: 'Basic use of `<cdk-table>` (uses display flex)',
-        component: CdkTableBasicFlexExample
-    },
-    'cdk-table-basic': {
-        title: 'Basic CDK data-table',
-        component: CdkTableBasicExample
-    },
-    'cdk-tree-flat': {
-        title: 'Tree with flat nodes',
-        component: CdkTreeFlatExample
-    },
-    'cdk-tree-nested': {
-        title: 'Tree with nested nodes',
-        component: CdkTreeNestedExample
-    },
-    'cdk-virtual-scroll-context': {
-        title: 'Virtual scroll context variables',
-        component: CdkVirtualScrollContextExample
-    },
-    'cdk-virtual-scroll-custom-strategy': {
-        title: 'Virtual scroll with a custom strategy',
-        component: CdkVirtualScrollCustomStrategyExample
-    },
-    'cdk-virtual-scroll-data-source': {
-        title: 'Virtual scroll with a custom data source',
-        component: CdkVirtualScrollDataSourceExample
-    },
-    'cdk-virtual-scroll-dl': {
-        title: 'Virtual scrolling `<dl>`',
-        component: CdkVirtualScrollDlExample
-    },
-    'cdk-virtual-scroll-fixed-buffer': {
-        title: 'Fixed size virtual scroll with custom buffer parameters',
-        component: CdkVirtualScrollFixedBufferExample
-    },
-    'cdk-virtual-scroll-horizontal': {
-        title: 'Horizontal virtual scroll',
-        component: CdkVirtualScrollHorizontalExample
-    },
-    'cdk-virtual-scroll-overview': {
-        title: 'Basic virtual scroll',
-        component: CdkVirtualScrollOverviewExample
-    },
-    'cdk-virtual-scroll-template-cache': {
-        title: 'Virtual scroll with no template caching',
-        component: CdkVirtualScrollTemplateCacheExample
-    },
-    'checkbox-configurable': {
-        title: 'Configurable checkbox',
-        component: CheckboxConfigurableExample
-    },
-    'checkbox-overview': {
-        title: 'Basic checkboxes',
-        component: CheckboxOverviewExample
-    },
-    'chips-autocomplete': {
-        title: 'Chips Autocomplete',
-        component: ChipsAutocompleteExample
-    },
-    'chips-input': {
-        title: 'Chips with input',
-        component: ChipsInputExample
-    },
-    'chips-overview': {
-        title: 'Basic chips',
-        component: ChipsOverviewExample
-    },
-    'chips-stacked': {
-        title: 'Stacked chips',
-        component: ChipsStackedExample
-    },
-    'datepicker-api': {
-        title: 'Datepicker open method',
-        component: DatepickerApiExample
-    },
-    'datepicker-color': {
-        title: 'Datepicker palette colors',
-        component: DatepickerColorExample
-    },
-    'datepicker-custom-header': {
-        title: 'Datepicker with custom calendar header',
-        component: DatepickerCustomHeaderExample,
-        selectorName: 'DatepickerCustomHeaderExample, ExampleHeader'
-    },
-    'datepicker-custom-icon': {
-        title: 'Datepicker with custom icon',
-        component: DatepickerCustomIconExample
-    },
-    'datepicker-disabled': {
-        title: 'Disabled datepicker',
-        component: DatepickerDisabledExample
-    },
-    'datepicker-events': {
-        title: 'Datepicker input and change events',
-        component: DatepickerEventsExample
-    },
-    'datepicker-filter': {
-        title: 'Datepicker with filter validation',
-        component: DatepickerFilterExample
-    },
-    'datepicker-formats': {
-        title: 'Datepicker with custom formats',
-        component: DatepickerFormatsExample
-    },
-    'datepicker-locale': {
-        title: 'Datepicker with different locale',
-        component: DatepickerLocaleExample
-    },
-    'datepicker-min-max': {
-        title: 'Datepicker with min & max validation',
-        component: DatepickerMinMaxExample
-    },
-    'datepicker-moment': {
-        title: 'Datepicker that uses Moment.js dates',
-        component: DatepickerMomentExample
-    },
-    'datepicker-overview': {
-        title: 'Basic datepicker',
-        component: DatepickerOverviewExample
-    },
-    'datepicker-start-view': {
-        title: 'Datepicker start date',
-        component: DatepickerStartViewExample
-    },
-    'datepicker-touch': {
-        title: 'Datepicker touch UI',
-        component: DatepickerTouchExample
-    },
-    'datepicker-value': {
-        title: 'Datepicker selected value',
-        component: DatepickerValueExample
-    },
-    'datepicker-views-selection': {
-        title: 'Datepicker emulating a Year and month picker',
-        component: DatepickerViewsSelectionExample
-    },
-    'dialog-content': {
-        title: 'Dialog with header, scrollable content and actions',
-        component: DialogContentExample,
-        additionalFiles: ["dialog-content-example-dialog.html"],
-        selectorName: 'DialogContentExample, DialogContentExampleDialog'
-    },
-    'dialog-data': {
-        title: 'Injecting data when opening a dialog',
-        component: DialogDataExample,
-        additionalFiles: ["dialog-data-example-dialog.html"],
-        selectorName: 'DialogDataExample, DialogDataExampleDialog'
-    },
-    'dialog-elements': {
-        title: 'Dialog elements',
-        component: DialogElementsExample,
-        additionalFiles: ["dialog-elements-example-dialog.html"],
-        selectorName: 'DialogElementsExample, DialogElementsExampleDialog'
-    },
-    'dialog-overview': {
-        title: 'Dialog Overview',
-        component: DialogOverviewExample,
-        additionalFiles: ["dialog-overview-example-dialog.html"],
-        selectorName: 'DialogOverviewExample, DialogOverviewExampleDialog'
-    },
-    'divider-overview': {
-        title: 'Basic divider',
-        component: DividerOverviewExample
-    },
-    'elevation-overview': {
-        title: 'Elevation CSS classes',
-        component: ElevationOverviewExample
-    },
-    'expansion-expand-collapse-all': {
-        title: 'Accordion with expand/collapse all toggles',
-        component: ExpansionExpandCollapseAllExample
-    },
-    'expansion-overview': {
-        title: 'Basic expansion panel',
-        component: ExpansionOverviewExample
-    },
-    'expansion-steps': {
-        title: 'Expansion panel as accordion',
-        component: ExpansionStepsExample
-    },
-    'focus-monitor-directives': {
-        title: 'Monitoring focus with FocusMonitor',
-        component: FocusMonitorDirectivesExample
-    },
-    'focus-monitor-focus-via': {
-        title: 'Focusing with a specific FocusOrigin',
-        component: FocusMonitorFocusViaExample
-    },
-    'focus-monitor-overview': {
-        title: 'Monitoring focus with FocusMonitor',
-        component: FocusMonitorOverviewExample
-    },
-    'form-field-appearance': {
-        title: 'Form field appearance variants',
-        component: FormFieldAppearanceExample
-    },
-    'form-field-custom-control': {
-        title: 'Form field with custom telephone number input control.',
-        component: FormFieldCustomControlExample,
-        additionalFiles: ["example-tel-input-example.html", "example-tel-input-example.css"],
-        selectorName: 'FormFieldCustomControlExample, MyTelInput'
-    },
-    'form-field-error': {
-        title: 'Form field with error messages',
-        component: FormFieldErrorExample
-    },
-    'form-field-hint': {
-        title: 'Form field with hints',
-        component: FormFieldHintExample
-    },
-    'form-field-label': {
-        title: 'Form field with label',
-        component: FormFieldLabelExample
-    },
-    'form-field-overview': {
-        title: 'Simple form field',
-        component: FormFieldOverviewExample
-    },
-    'form-field-prefix-suffix': {
-        title: 'Form field with prefix & suffix',
-        component: FormFieldPrefixSuffixExample
-    },
-    'form-field-theming': {
-        title: 'Form field theming',
-        component: FormFieldThemingExample
-    },
-    'grid-list-dynamic': {
-        title: 'Dynamic grid-list',
-        component: GridListDynamicExample
-    },
-    'grid-list-overview': {
-        title: 'Basic grid-list',
-        component: GridListOverviewExample
-    },
-    'icon-overview': {
-        title: 'Basic icons',
-        component: IconOverviewExample
-    },
-    'icon-svg': {
-        title: 'SVG icons',
-        component: IconSvgExample
-    },
-    'input-clearable': {
-        title: 'Input with a clear button',
-        component: InputClearableExample
-    },
-    'input-error-state-matcher': {
-        title: 'Input with a custom ErrorStateMatcher',
-        component: InputErrorStateMatcherExample
-    },
-    'input-errors': {
-        title: 'Input with error messages',
-        component: InputErrorsExample
-    },
-    'input-form': {
-        title: 'Inputs in a form',
-        component: InputFormExample
-    },
-    'input-hint': {
-        title: 'Input with hints',
-        component: InputHintExample
-    },
-    'input-overview': {
-        title: 'Basic Inputs',
-        component: InputOverviewExample
-    },
-    'input-prefix-suffix': {
-        title: 'Inputs with prefixes and suffixes',
-        component: InputPrefixSuffixExample
-    },
-    'list-overview': {
-        title: 'Basic list',
-        component: ListOverviewExample
-    },
-    'list-sections': {
-        title: 'List with sections',
-        component: ListSectionsExample
-    },
-    'list-selection': {
-        title: 'List with selection',
-        component: ListSelectionExample
-    },
-    'menu-icons': {
-        title: 'Menu with icons',
-        component: MenuIconsExample
-    },
-    'menu-overview': {
-        title: 'Basic menu',
-        component: MenuOverviewExample
-    },
-    'nested-menu': {
-        title: 'Nested menu',
-        component: NestedMenuExample
-    },
-    'paginator-configurable': {
-        title: 'Configurable paginator',
-        component: PaginatorConfigurableExample
-    },
-    'paginator-overview': {
-        title: 'Paginator',
-        component: PaginatorOverviewExample
-    },
-    'progress-bar-buffer': {
-        title: 'Buffer progress-bar',
-        component: ProgressBarBufferExample
-    },
-    'progress-bar-configurable': {
-        title: 'Configurable progress-bar',
-        component: ProgressBarConfigurableExample
-    },
-    'progress-bar-determinate': {
-        title: 'Determinate progress-bar',
-        component: ProgressBarDeterminateExample
-    },
-    'progress-bar-indeterminate': {
-        title: 'Indeterminate progress-bar',
-        component: ProgressBarIndeterminateExample
-    },
-    'progress-bar-query': {
-        title: 'Query progress-bar',
-        component: ProgressBarQueryExample
-    },
-    'progress-spinner-configurable': {
-        title: 'Configurable progress spinner',
-        component: ProgressSpinnerConfigurableExample
-    },
-    'progress-spinner-overview': {
-        title: 'Basic progress-spinner',
-        component: ProgressSpinnerOverviewExample
-    },
-    'radio-ng-model': {
-        title: 'Radios with ngModel',
-        component: RadioNgModelExample
-    },
-    'radio-overview': {
-        title: 'Basic radios',
-        component: RadioOverviewExample
-    },
-    'ripple-overview': {
-        title: 'MatRipple basic usage',
-        component: RippleOverviewExample
-    },
-    'select-custom-trigger': {
-        title: 'Select with custom trigger text',
-        component: SelectCustomTriggerExample
-    },
-    'select-disabled': {
-        title: 'Disabled select',
-        component: SelectDisabledExample
-    },
-    'select-error-state-matcher': {
-        title: 'Select with a custom ErrorStateMatcher',
-        component: SelectErrorStateMatcherExample
-    },
-    'select-form': {
-        title: 'Select in a form',
-        component: SelectFormExample
-    },
-    'select-hint-error': {
-        title: 'Select with form field features',
-        component: SelectHintErrorExample
-    },
-    'select-multiple': {
-        title: 'Select with multiple selection',
-        component: SelectMultipleExample
-    },
-    'select-no-ripple': {
-        title: 'Select with no option ripple',
-        component: SelectNoRippleExample
-    },
-    'select-optgroup': {
-        title: 'Select with option groups',
-        component: SelectOptgroupExample
-    },
-    'select-overview': {
-        title: 'Basic select',
-        component: SelectOverviewExample
-    },
-    'select-panel-class': {
-        title: 'Select with custom panel styling',
-        component: SelectPanelClassExample
-    },
-    'select-reset': {
-        title: 'Select with reset option',
-        component: SelectResetExample
-    },
-    'select-value-binding': {
-        title: 'Select with 2-way value binding',
-        component: SelectValueBindingExample
-    },
-    'sidenav-autosize': {
-        title: 'Autosize sidenav',
-        component: SidenavAutosizeExample
-    },
-    'sidenav-backdrop': {
-        title: 'Drawer with explicit backdrop setting',
-        component: SidenavBackdropExample
-    },
-    'sidenav-disable-close': {
-        title: 'Sidenav with custom escape and backdrop click behavior',
-        component: SidenavDisableCloseExample
-    },
-    'sidenav-drawer-overview': {
-        title: 'Basic drawer',
-        component: SidenavDrawerOverviewExample
-    },
-    'sidenav-fixed': {
-        title: 'Fixed sidenav',
-        component: SidenavFixedExample
-    },
-    'sidenav-mode': {
-        title: 'Sidenav with configurable mode',
-        component: SidenavModeExample
-    },
-    'sidenav-open-close': {
-        title: 'Sidenav open & close behavior',
-        component: SidenavOpenCloseExample
-    },
-    'sidenav-overview': {
-        title: 'Basic sidenav',
-        component: SidenavOverviewExample
-    },
-    'sidenav-position': {
-        title: 'Implicit main content with two sidenavs',
-        component: SidenavPositionExample
-    },
-    'sidenav-responsive': {
-        title: 'Responsive sidenav',
-        component: SidenavResponsiveExample
-    },
-    'slide-toggle-configurable': {
-        title: 'Configurable slide-toggle',
-        component: SlideToggleConfigurableExample
-    },
-    'slide-toggle-forms': {
-        title: 'Slide-toggle with forms',
-        component: SlideToggleFormsExample
-    },
-    'slide-toggle-overview': {
-        title: 'Basic slide-toggles',
-        component: SlideToggleOverviewExample
-    },
-    'slider-configurable': {
-        title: 'Configurable slider',
-        component: SliderConfigurableExample
-    },
-    'slider-formatting': {
-        title: 'Slider with custom thumb label formatting.',
-        component: SliderFormattingExample
-    },
-    'slider-overview': {
-        title: 'Basic slider',
-        component: SliderOverviewExample
-    },
-    'snack-bar-component': {
-        title: 'Snack-bar with a custom component',
-        component: SnackBarComponentExample,
-        additionalFiles: ["snack-bar-component-example-snack.html"],
-        selectorName: 'SnackBarComponentExample, PizzaPartyComponent'
-    },
-    'snack-bar-overview': {
-        title: 'Basic snack-bar',
-        component: SnackBarOverviewExample
-    },
-    'snack-bar-position': {
-        title: 'Snack-bar with configurable position',
-        component: SnackBarPositionExample
-    },
-    'sort-overview': {
-        title: 'Sorting overview',
-        component: SortOverviewExample
-    },
-    'stepper-editable': {
-        title: 'Stepper with editable steps',
-        component: StepperEditableExample
-    },
-    'stepper-errors': {
-        title: 'Stepper that displays errors in the steps',
-        component: StepperErrorsExample
-    },
-    'stepper-label-position-bottom': {
-        title: 'Stepper label bottom position',
-        component: StepperLabelPositionBottomExample
-    },
-    'stepper-optional': {
-        title: 'Stepper with optional steps',
-        component: StepperOptionalExample
-    },
-    'stepper-overview': {
-        title: 'Stepper overview',
-        component: StepperOverviewExample
-    },
-    'stepper-states': {
-        title: 'Stepper with customized states',
-        component: StepperStatesExample
-    },
-    'stepper-vertical': {
-        title: 'Stepper vertical',
-        component: StepperVerticalExample
-    },
-    'tab-group-align': {
-        title: 'Tab group with aligned labels',
-        component: TabGroupAlignExample
-    },
-    'tab-group-async': {
-        title: 'Tab group with asynchronously loading tab contents',
-        component: TabGroupAsyncExample
-    },
-    'tab-group-basic': {
-        title: 'Basic use of the tab group',
-        component: TabGroupBasicExample
-    },
-    'tab-group-custom-label': {
-        title: 'Using tabs with a custom label template',
-        component: TabGroupCustomLabelExample
-    },
-    'tab-group-dynamic-height': {
-        title: 'Tag group with dynamic height based on tab contents',
-        component: TabGroupDynamicHeightExample
-    },
-    'tab-group-dynamic': {
-        title: 'Tab group with dynamically changing tabs',
-        component: TabGroupDynamicExample
-    },
-    'tab-group-header-below': {
-        title: 'Tab group with the headers on the bottom',
-        component: TabGroupHeaderBelowExample
-    },
-    'tab-group-lazy-loaded': {
-        title: 'Tab group where the tab content is loaded lazily (when activated)',
-        component: TabGroupLazyLoadedExample
-    },
-    'tab-group-stretched': {
-        title: 'Tab group with stretched labels',
-        component: TabGroupStretchedExample
-    },
-    'tab-group-theme': {
-        title: 'Customizing the theme options on the tab group',
-        component: TabGroupThemeExample
-    },
-    'tab-nav-bar-basic': {
-        title: 'Basic use of the tab nav bar',
-        component: TabNavBarBasicExample
-    },
-    'table-basic-flex': {
-        title: 'Basic use of `<mat-table>` (uses display flex)',
-        component: TableBasicFlexExample
-    },
-    'table-basic': {
-        title: 'Basic use of `<table mat-table>`',
-        component: TableBasicExample
-    },
-    'table-dynamic-columns': {
-        title: 'Table dynamically changing the columns displayed',
-        component: TableDynamicColumnsExample
-    },
-    'table-expandable-rows': {
-        title: 'Table with expandable rows',
-        component: TableExpandableRowsExample
-    },
-    'table-filtering': {
-        title: 'Table with filtering',
-        component: TableFilteringExample
-    },
-    'table-footer-row': {
-        title: 'Footer row table',
-        component: TableFooterRowExample
-    },
-    'table-http': {
-        title: 'Table retrieving data through HTTP',
-        component: TableHttpExample
-    },
-    'table-multiple-header-footer': {
-        title: 'Table with multiple header and footer rows',
-        component: TableMultipleHeaderFooterExample
-    },
-    'table-overview': {
-        title: 'Data table with sorting, pagination, and filtering.',
-        component: TableOverviewExample
-    },
-    'table-pagination': {
-        title: 'Table with pagination',
-        component: TablePaginationExample
-    },
-    'table-row-context': {
-        title: 'Table showing each row context properties.',
-        component: TableRowContextExample
-    },
-    'table-selection': {
-        title: 'Table with selection',
-        component: TableSelectionExample
-    },
-    'table-simple-column': {
-        title: 'Table with a custom column component for easy column definition reuse.',
-        component: TableSimpleColumnExample,
-        selectorName: 'TableSimpleColumnExample, SimpleColumn'
-    },
-    'table-sorting': {
-        title: 'Table with sorting',
-        component: TableSortingExample
-    },
-    'table-sticky-columns': {
-        title: 'Table with a sticky columns',
-        component: TableStickyColumnsExample
-    },
-    'table-sticky-complex-flex': {
-        title: 'Flex-layout tables with toggle-able sticky headers, footers, and columns',
-        component: TableStickyComplexFlexExample
-    },
-    'table-sticky-complex': {
-        title: 'Tables with toggle-able sticky headers, footers, and columns',
-        component: TableStickyComplexExample
-    },
-    'table-sticky-footer': {
-        title: 'Table with a sticky footer',
-        component: TableStickyFooterExample
-    },
-    'table-sticky-header': {
-        title: 'Table with sticky header',
-        component: TableStickyHeaderExample
-    },
-    'table-wrapped': {
-        title: 'Table example that shows how to wrap a table component for definition and behavior reuse.',
-        component: TableWrappedExample,
-        additionalFiles: ["wrapper-table.html"],
-        selectorName: 'TableWrappedExample, WrapperTable'
-    },
-    'text-field-autofill-directive': {
-        title: 'Monitoring autofill state with cdkAutofill',
-        component: TextFieldAutofillDirectiveExample
-    },
-    'text-field-autofill-monitor': {
-        title: 'Monitoring autofill state with AutofillMonitor',
-        component: TextFieldAutofillMonitorExample
-    },
-    'text-field-autosize-textarea': {
-        title: 'Auto-resizing textarea',
-        component: TextFieldAutosizeTextareaExample
-    },
-    'toolbar-multirow': {
-        title: 'Multi-row toolbar',
-        component: ToolbarMultirowExample
-    },
-    'toolbar-overview': {
-        title: 'Basic toolbar',
-        component: ToolbarOverviewExample
-    },
-    'tooltip-auto-hide': {
-        title: 'Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.',
-        component: TooltipAutoHideExample
-    },
-    'tooltip-custom-class': {
-        title: 'Tooltip that can have a custom class applied.',
-        component: TooltipCustomClassExample
-    },
-    'tooltip-delay': {
-        title: 'Tooltip with a show and hide delay',
-        component: TooltipDelayExample
-    },
-    'tooltip-disabled': {
-        title: 'Tooltip that can be disabled',
-        component: TooltipDisabledExample
-    },
-    'tooltip-manual': {
-        title: 'Tooltip that can be manually shown/hidden.',
-        component: TooltipManualExample
-    },
-    'tooltip-message': {
-        title: 'Tooltip with a changing message',
-        component: TooltipMessageExample
-    },
-    'tooltip-modified-defaults': {
-        title: 'Tooltip with a show and hide delay',
-        component: TooltipModifiedDefaultsExample
-    },
-    'tooltip-overview': {
-        title: 'Basic tooltip',
-        component: TooltipOverviewExample
-    },
-    'tooltip-position': {
-        title: 'Tooltip with a custom position',
-        component: TooltipPositionExample
-    },
-    'tree-checklist': {
-        title: 'Tree with checkboxes',
-        component: TreeChecklistExample
-    },
-    'tree-dynamic': {
-        title: 'Tree with dynamic data',
-        component: TreeDynamicExample
-    },
-    'tree-flat-overview': {
-        title: 'Tree with flat nodes',
-        component: TreeFlatOverviewExample
-    },
-    'tree-loadmore': {
-        title: 'Tree with partially loaded data',
-        component: TreeLoadmoreExample
-    },
-    'tree-nested-overview': {
-        title: 'Tree with nested nodes',
-        component: TreeNestedOverviewExample
-    },
-};
+var EXAMPLE_COMPONENTS = { "autocomplete-auto-active-first-option": { "title": "Highlight the first autocomplete option", "component": AutocompleteAutoActiveFirstOptionExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-display": { "title": "Display value autocomplete", "component": AutocompleteDisplayExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-filter": { "title": "Filter autocomplete", "component": AutocompleteFilterExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-optgroup": { "title": "Option groups autocomplete", "component": AutocompleteOptgroupExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-overview": { "title": "Autocomplete overview", "component": AutocompleteOverviewExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-simple": { "title": "Simple autocomplete", "component": AutocompleteSimpleExample, "additionalFiles": [], "selectorName": "" }, "badge-overview": { "title": "Badge overview", "component": BadgeOverviewExample, "additionalFiles": [], "selectorName": "" }, "bottom-sheet-overview": { "title": "Bottom Sheet Overview", "component": BottomSheetOverviewExample, "additionalFiles": ["bottom-sheet-overview-example-sheet.html"], "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet" }, "button-overview": { "title": "Basic buttons", "component": ButtonOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-appearance": { "title": "Button toggle appearance", "component": ButtonToggleAppearanceExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-exclusive": { "title": "Exclusive selection", "component": ButtonToggleExclusiveExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-overview": { "title": "Basic button-toggles", "component": ButtonToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-types": { "title": "Button varieties", "component": ButtonTypesExample, "additionalFiles": [], "selectorName": "" }, "card-fancy": { "title": "Card with multiple sections", "component": CardFancyExample, "additionalFiles": [], "selectorName": "" }, "card-overview": { "title": "Basic cards", "component": CardOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-axis-lock": { "title": "Drag&Drop position locking", "component": CdkDragDropAxisLockExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting": { "title": "Drag&Drop connected sorting", "component": CdkDragDropConnectedSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-placeholder": { "title": "Drag&Drop custom placeholer", "component": CdkDragDropCustomPlaceholderExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-preview": { "title": "Drag&Drop custom preview", "component": CdkDragDropCustomPreviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-enter-predicate": { "title": "Drag&Drop enter predicate", "component": CdkDragDropEnterPredicateExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-handle": { "title": "Drag&Drop with a handle", "component": CdkDragDropHandleExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-horizontal-sorting": { "title": "Drag&Drop horizontal sorting", "component": CdkDragDropHorizontalSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-overview": { "title": "Basic Drag&Drop", "component": CdkDragDropOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-root-element": { "title": "Drag&Drop with alternate root element", "component": CdkDragDropRootElementExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-sorting": { "title": "Drag&Drop sorting", "component": CdkDragDropSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-platform-overview": { "title": "Platform overview", "component": CdkPlatformOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic-flex": { "title": "Basic use of `<cdk-table>` (uses display flex)", "component": CdkTableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic": { "title": "Basic CDK data-table", "component": CdkTableBasicExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-flat": { "title": "Tree with flat nodes", "component": CdkTreeFlatExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-nested": { "title": "Tree with nested nodes", "component": CdkTreeNestedExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-context": { "title": "Virtual scroll context variables", "component": CdkVirtualScrollContextExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-custom-strategy": { "title": "Virtual scroll with a custom strategy", "component": CdkVirtualScrollCustomStrategyExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-data-source": { "title": "Virtual scroll with a custom data source", "component": CdkVirtualScrollDataSourceExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-dl": { "title": "Virtual scrolling `<dl>`", "component": CdkVirtualScrollDlExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-fixed-buffer": { "title": "Fixed size virtual scroll with custom buffer parameters", "component": CdkVirtualScrollFixedBufferExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-horizontal": { "title": "Horizontal virtual scroll", "component": CdkVirtualScrollHorizontalExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-overview": { "title": "Basic virtual scroll", "component": CdkVirtualScrollOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-template-cache": { "title": "Virtual scroll with no template caching", "component": CdkVirtualScrollTemplateCacheExample, "additionalFiles": [], "selectorName": "" }, "checkbox-configurable": { "title": "Configurable checkbox", "component": CheckboxConfigurableExample, "additionalFiles": [], "selectorName": "" }, "checkbox-overview": { "title": "Basic checkboxes", "component": CheckboxOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-autocomplete": { "title": "Chips Autocomplete", "component": ChipsAutocompleteExample, "additionalFiles": [], "selectorName": "" }, "chips-input": { "title": "Chips with input", "component": ChipsInputExample, "additionalFiles": [], "selectorName": "" }, "chips-overview": { "title": "Basic chips", "component": ChipsOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-stacked": { "title": "Stacked chips", "component": ChipsStackedExample, "additionalFiles": [], "selectorName": "" }, "datepicker-api": { "title": "Datepicker open method", "component": DatepickerApiExample, "additionalFiles": [], "selectorName": "" }, "datepicker-color": { "title": "Datepicker palette colors", "component": DatepickerColorExample, "additionalFiles": [], "selectorName": "" }, "datepicker-custom-header": { "title": "Datepicker with custom calendar header", "component": DatepickerCustomHeaderExample, "additionalFiles": [], "selectorName": "DatepickerCustomHeaderExample, ExampleHeader" }, "datepicker-custom-icon": { "title": "Datepicker with custom icon", "component": DatepickerCustomIconExample, "additionalFiles": [], "selectorName": "" }, "datepicker-disabled": { "title": "Disabled datepicker", "component": DatepickerDisabledExample, "additionalFiles": [], "selectorName": "" }, "datepicker-events": { "title": "Datepicker input and change events", "component": DatepickerEventsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-filter": { "title": "Datepicker with filter validation", "component": DatepickerFilterExample, "additionalFiles": [], "selectorName": "" }, "datepicker-formats": { "title": "Datepicker with custom formats", "component": DatepickerFormatsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-locale": { "title": "Datepicker with different locale", "component": DatepickerLocaleExample, "additionalFiles": [], "selectorName": "" }, "datepicker-min-max": { "title": "Datepicker with min & max validation", "component": DatepickerMinMaxExample, "additionalFiles": [], "selectorName": "" }, "datepicker-moment": { "title": "Datepicker that uses Moment.js dates", "component": DatepickerMomentExample, "additionalFiles": [], "selectorName": "" }, "datepicker-overview": { "title": "Basic datepicker", "component": DatepickerOverviewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-start-view": { "title": "Datepicker start date", "component": DatepickerStartViewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-touch": { "title": "Datepicker touch UI", "component": DatepickerTouchExample, "additionalFiles": [], "selectorName": "" }, "datepicker-value": { "title": "Datepicker selected value", "component": DatepickerValueExample, "additionalFiles": [], "selectorName": "" }, "datepicker-views-selection": { "title": "Datepicker emulating a Year and month picker", "component": DatepickerViewsSelectionExample, "additionalFiles": [], "selectorName": "" }, "dialog-content": { "title": "Dialog with header, scrollable content and actions", "component": DialogContentExample, "additionalFiles": ["dialog-content-example-dialog.html"], "selectorName": "DialogContentExample, DialogContentExampleDialog" }, "dialog-data": { "title": "Injecting data when opening a dialog", "component": DialogDataExample, "additionalFiles": ["dialog-data-example-dialog.html"], "selectorName": "DialogDataExample, DialogDataExampleDialog" }, "dialog-elements": { "title": "Dialog elements", "component": DialogElementsExample, "additionalFiles": ["dialog-elements-example-dialog.html"], "selectorName": "DialogElementsExample, DialogElementsExampleDialog" }, "dialog-overview": { "title": "Dialog Overview", "component": DialogOverviewExample, "additionalFiles": ["dialog-overview-example-dialog.html"], "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog" }, "divider-overview": { "title": "Basic divider", "component": DividerOverviewExample, "additionalFiles": [], "selectorName": "" }, "elevation-overview": { "title": "Elevation CSS classes", "component": ElevationOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-expand-collapse-all": { "title": "Accordion with expand/collapse all toggles", "component": ExpansionExpandCollapseAllExample, "additionalFiles": [], "selectorName": "" }, "expansion-overview": { "title": "Basic expansion panel", "component": ExpansionOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-steps": { "title": "Expansion panel as accordion", "component": ExpansionStepsExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-directives": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorDirectivesExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-focus-via": { "title": "Focusing with a specific FocusOrigin", "component": FocusMonitorFocusViaExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-overview": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-appearance": { "title": "Form field appearance variants", "component": FormFieldAppearanceExample, "additionalFiles": [], "selectorName": "" }, "form-field-custom-control": { "title": "Form field with custom telephone number input control.", "component": FormFieldCustomControlExample, "additionalFiles": ["example-tel-input-example.html", "example-tel-input-example.css"], "selectorName": "FormFieldCustomControlExample, MyTelInput" }, "form-field-error": { "title": "Form field with error messages", "component": FormFieldErrorExample, "additionalFiles": [], "selectorName": "" }, "form-field-hint": { "title": "Form field with hints", "component": FormFieldHintExample, "additionalFiles": [], "selectorName": "" }, "form-field-label": { "title": "Form field with label", "component": FormFieldLabelExample, "additionalFiles": [], "selectorName": "" }, "form-field-overview": { "title": "Simple form field", "component": FormFieldOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-prefix-suffix": { "title": "Form field with prefix & suffix", "component": FormFieldPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "form-field-theming": { "title": "Form field theming", "component": FormFieldThemingExample, "additionalFiles": [], "selectorName": "" }, "grid-list-dynamic": { "title": "Dynamic grid-list", "component": GridListDynamicExample, "additionalFiles": [], "selectorName": "" }, "grid-list-overview": { "title": "Basic grid-list", "component": GridListOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-overview": { "title": "Basic icons", "component": IconOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-svg": { "title": "SVG icons", "component": IconSvgExample, "additionalFiles": [], "selectorName": "" }, "input-clearable": { "title": "Input with a clear button", "component": InputClearableExample, "additionalFiles": [], "selectorName": "" }, "input-error-state-matcher": { "title": "Input with a custom ErrorStateMatcher", "component": InputErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "input-errors": { "title": "Input with error messages", "component": InputErrorsExample, "additionalFiles": [], "selectorName": "" }, "input-form": { "title": "Inputs in a form", "component": InputFormExample, "additionalFiles": [], "selectorName": "" }, "input-hint": { "title": "Input with hints", "component": InputHintExample, "additionalFiles": [], "selectorName": "" }, "input-overview": { "title": "Basic Inputs", "component": InputOverviewExample, "additionalFiles": [], "selectorName": "" }, "input-prefix-suffix": { "title": "Inputs with prefixes and suffixes", "component": InputPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "list-overview": { "title": "Basic list", "component": ListOverviewExample, "additionalFiles": [], "selectorName": "" }, "list-sections": { "title": "List with sections", "component": ListSectionsExample, "additionalFiles": [], "selectorName": "" }, "list-selection": { "title": "List with selection", "component": ListSelectionExample, "additionalFiles": [], "selectorName": "" }, "menu-icons": { "title": "Menu with icons", "component": MenuIconsExample, "additionalFiles": [], "selectorName": "" }, "menu-overview": { "title": "Basic menu", "component": MenuOverviewExample, "additionalFiles": [], "selectorName": "" }, "nested-menu": { "title": "Nested menu", "component": NestedMenuExample, "additionalFiles": [], "selectorName": "" }, "paginator-configurable": { "title": "Configurable paginator", "component": PaginatorConfigurableExample, "additionalFiles": [], "selectorName": "" }, "paginator-overview": { "title": "Paginator", "component": PaginatorOverviewExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-buffer": { "title": "Buffer progress-bar", "component": ProgressBarBufferExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-configurable": { "title": "Configurable progress-bar", "component": ProgressBarConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-determinate": { "title": "Determinate progress-bar", "component": ProgressBarDeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-indeterminate": { "title": "Indeterminate progress-bar", "component": ProgressBarIndeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-query": { "title": "Query progress-bar", "component": ProgressBarQueryExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-configurable": { "title": "Configurable progress spinner", "component": ProgressSpinnerConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-overview": { "title": "Basic progress-spinner", "component": ProgressSpinnerOverviewExample, "additionalFiles": [], "selectorName": "" }, "radio-ng-model": { "title": "Radios with ngModel", "component": RadioNgModelExample, "additionalFiles": [], "selectorName": "" }, "radio-overview": { "title": "Basic radios", "component": RadioOverviewExample, "additionalFiles": [], "selectorName": "" }, "ripple-overview": { "title": "MatRipple basic usage", "component": RippleOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-custom-trigger": { "title": "Select with custom trigger text", "component": SelectCustomTriggerExample, "additionalFiles": [], "selectorName": "" }, "select-disabled": { "title": "Disabled select", "component": SelectDisabledExample, "additionalFiles": [], "selectorName": "" }, "select-error-state-matcher": { "title": "Select with a custom ErrorStateMatcher", "component": SelectErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "select-form": { "title": "Select in a form", "component": SelectFormExample, "additionalFiles": [], "selectorName": "" }, "select-hint-error": { "title": "Select with form field features", "component": SelectHintErrorExample, "additionalFiles": [], "selectorName": "" }, "select-multiple": { "title": "Select with multiple selection", "component": SelectMultipleExample, "additionalFiles": [], "selectorName": "" }, "select-no-ripple": { "title": "Select with no option ripple", "component": SelectNoRippleExample, "additionalFiles": [], "selectorName": "" }, "select-optgroup": { "title": "Select with option groups", "component": SelectOptgroupExample, "additionalFiles": [], "selectorName": "" }, "select-overview": { "title": "Basic select", "component": SelectOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-panel-class": { "title": "Select with custom panel styling", "component": SelectPanelClassExample, "additionalFiles": [], "selectorName": "" }, "select-reset": { "title": "Select with reset option", "component": SelectResetExample, "additionalFiles": [], "selectorName": "" }, "select-value-binding": { "title": "Select with 2-way value binding", "component": SelectValueBindingExample, "additionalFiles": [], "selectorName": "" }, "sidenav-autosize": { "title": "Autosize sidenav", "component": SidenavAutosizeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-backdrop": { "title": "Drawer with explicit backdrop setting", "component": SidenavBackdropExample, "additionalFiles": [], "selectorName": "" }, "sidenav-disable-close": { "title": "Sidenav with custom escape and backdrop click behavior", "component": SidenavDisableCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-drawer-overview": { "title": "Basic drawer", "component": SidenavDrawerOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-fixed": { "title": "Fixed sidenav", "component": SidenavFixedExample, "additionalFiles": [], "selectorName": "" }, "sidenav-mode": { "title": "Sidenav with configurable mode", "component": SidenavModeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-open-close": { "title": "Sidenav open & close behavior", "component": SidenavOpenCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-overview": { "title": "Basic sidenav", "component": SidenavOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-position": { "title": "Implicit main content with two sidenavs", "component": SidenavPositionExample, "additionalFiles": [], "selectorName": "" }, "sidenav-responsive": { "title": "Responsive sidenav", "component": SidenavResponsiveExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-configurable": { "title": "Configurable slide-toggle", "component": SlideToggleConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-forms": { "title": "Slide-toggle with forms", "component": SlideToggleFormsExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-overview": { "title": "Basic slide-toggles", "component": SlideToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "slider-configurable": { "title": "Configurable slider", "component": SliderConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slider-formatting": { "title": "Slider with custom thumb label formatting.", "component": SliderFormattingExample, "additionalFiles": [], "selectorName": "" }, "slider-overview": { "title": "Basic slider", "component": SliderOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-component": { "title": "Snack-bar with a custom component", "component": SnackBarComponentExample, "additionalFiles": ["snack-bar-component-example-snack.html"], "selectorName": "SnackBarComponentExample, PizzaPartyComponent" }, "snack-bar-overview": { "title": "Basic snack-bar", "component": SnackBarOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-position": { "title": "Snack-bar with configurable position", "component": SnackBarPositionExample, "additionalFiles": [], "selectorName": "" }, "sort-overview": { "title": "Sorting overview", "component": SortOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-editable": { "title": "Stepper with editable steps", "component": StepperEditableExample, "additionalFiles": [], "selectorName": "" }, "stepper-errors": { "title": "Stepper that displays errors in the steps", "component": StepperErrorsExample, "additionalFiles": [], "selectorName": "" }, "stepper-label-position-bottom": { "title": "Stepper label bottom position", "component": StepperLabelPositionBottomExample, "additionalFiles": [], "selectorName": "" }, "stepper-optional": { "title": "Stepper with optional steps", "component": StepperOptionalExample, "additionalFiles": [], "selectorName": "" }, "stepper-overview": { "title": "Stepper overview", "component": StepperOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-states": { "title": "Stepper with customized states", "component": StepperStatesExample, "additionalFiles": [], "selectorName": "" }, "stepper-vertical": { "title": "Stepper vertical", "component": StepperVerticalExample, "additionalFiles": [], "selectorName": "" }, "tab-group-align": { "title": "Tab group with aligned labels", "component": TabGroupAlignExample, "additionalFiles": [], "selectorName": "" }, "tab-group-async": { "title": "Tab group with asynchronously loading tab contents", "component": TabGroupAsyncExample, "additionalFiles": [], "selectorName": "" }, "tab-group-basic": { "title": "Basic use of the tab group", "component": TabGroupBasicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-custom-label": { "title": "Using tabs with a custom label template", "component": TabGroupCustomLabelExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic-height": { "title": "Tag group with dynamic height based on tab contents", "component": TabGroupDynamicHeightExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic": { "title": "Tab group with dynamically changing tabs", "component": TabGroupDynamicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-header-below": { "title": "Tab group with the headers on the bottom", "component": TabGroupHeaderBelowExample, "additionalFiles": [], "selectorName": "" }, "tab-group-lazy-loaded": { "title": "Tab group where the tab content is loaded lazily (when activated)", "component": TabGroupLazyLoadedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-stretched": { "title": "Tab group with stretched labels", "component": TabGroupStretchedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-theme": { "title": "Customizing the theme options on the tab group", "component": TabGroupThemeExample, "additionalFiles": [], "selectorName": "" }, "tab-nav-bar-basic": { "title": "Basic use of the tab nav bar", "component": TabNavBarBasicExample, "additionalFiles": [], "selectorName": "" }, "table-basic-flex": { "title": "Basic use of `<mat-table>` (uses display flex)", "component": TableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "table-basic": { "title": "Basic use of `<table mat-table>`", "component": TableBasicExample, "additionalFiles": [], "selectorName": "" }, "table-dynamic-columns": { "title": "Table dynamically changing the columns displayed", "component": TableDynamicColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-expandable-rows": { "title": "Table with expandable rows", "component": TableExpandableRowsExample, "additionalFiles": [], "selectorName": "" }, "table-filtering": { "title": "Table with filtering", "component": TableFilteringExample, "additionalFiles": [], "selectorName": "" }, "table-footer-row": { "title": "Footer row table", "component": TableFooterRowExample, "additionalFiles": [], "selectorName": "" }, "table-http": { "title": "Table retrieving data through HTTP", "component": TableHttpExample, "additionalFiles": [], "selectorName": "" }, "table-multiple-header-footer": { "title": "Table with multiple header and footer rows", "component": TableMultipleHeaderFooterExample, "additionalFiles": [], "selectorName": "" }, "table-overview": { "title": "Data table with sorting, pagination, and filtering.", "component": TableOverviewExample, "additionalFiles": [], "selectorName": "" }, "table-pagination": { "title": "Table with pagination", "component": TablePaginationExample, "additionalFiles": [], "selectorName": "" }, "table-row-context": { "title": "Table showing each row context properties.", "component": TableRowContextExample, "additionalFiles": [], "selectorName": "" }, "table-selection": { "title": "Table with selection", "component": TableSelectionExample, "additionalFiles": [], "selectorName": "" }, "table-simple-column": { "title": "Table with a custom column component for easy column definition reuse.", "component": TableSimpleColumnExample, "additionalFiles": [], "selectorName": "TableSimpleColumnExample, SimpleColumn" }, "table-sorting": { "title": "Table with sorting", "component": TableSortingExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-columns": { "title": "Table with a sticky columns", "component": TableStickyColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex-flex": { "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexFlexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex": { "title": "Tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-footer": { "title": "Table with a sticky footer", "component": TableStickyFooterExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-header": { "title": "Table with sticky header", "component": TableStickyHeaderExample, "additionalFiles": [], "selectorName": "" }, "table-wrapped": { "title": "Table example that shows how to wrap a table component for definition and behavior reuse.", "component": TableWrappedExample, "additionalFiles": ["wrapper-table.html"], "selectorName": "TableWrappedExample, WrapperTable" }, "text-field-autofill-directive": { "title": "Monitoring autofill state with cdkAutofill", "component": TextFieldAutofillDirectiveExample, "additionalFiles": [], "selectorName": "" }, "text-field-autofill-monitor": { "title": "Monitoring autofill state with AutofillMonitor", "component": TextFieldAutofillMonitorExample, "additionalFiles": [], "selectorName": "" }, "text-field-autosize-textarea": { "title": "Auto-resizing textarea", "component": TextFieldAutosizeTextareaExample, "additionalFiles": [], "selectorName": "" }, "toolbar-multirow": { "title": "Multi-row toolbar", "component": ToolbarMultirowExample, "additionalFiles": [], "selectorName": "" }, "toolbar-overview": { "title": "Basic toolbar", "component": ToolbarOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-auto-hide": { "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.", "component": TooltipAutoHideExample, "additionalFiles": [], "selectorName": "" }, "tooltip-custom-class": { "title": "Tooltip that can have a custom class applied.", "component": TooltipCustomClassExample, "additionalFiles": [], "selectorName": "" }, "tooltip-delay": { "title": "Tooltip with a show and hide delay", "component": TooltipDelayExample, "additionalFiles": [], "selectorName": "" }, "tooltip-disabled": { "title": "Tooltip that can be disabled", "component": TooltipDisabledExample, "additionalFiles": [], "selectorName": "" }, "tooltip-manual": { "title": "Tooltip that can be manually shown/hidden.", "component": TooltipManualExample, "additionalFiles": [], "selectorName": "" }, "tooltip-message": { "title": "Tooltip with a changing message", "component": TooltipMessageExample, "additionalFiles": [], "selectorName": "" }, "tooltip-modified-defaults": { "title": "Tooltip with a show and hide delay", "component": TooltipModifiedDefaultsExample, "additionalFiles": [], "selectorName": "" }, "tooltip-overview": { "title": "Basic tooltip", "component": TooltipOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-position": { "title": "Tooltip with a custom position", "component": TooltipPositionExample, "additionalFiles": [], "selectorName": "" }, "tree-checklist": { "title": "Tree with checkboxes", "component": TreeChecklistExample, "additionalFiles": [], "selectorName": "" }, "tree-dynamic": { "title": "Tree with dynamic data", "component": TreeDynamicExample, "additionalFiles": [], "selectorName": "" }, "tree-flat-overview": { "title": "Tree with flat nodes", "component": TreeFlatOverviewExample, "additionalFiles": [], "selectorName": "" }, "tree-loadmore": { "title": "Tree with partially loaded data", "component": TreeLoadmoreExample, "additionalFiles": [], "selectorName": "" }, "tree-nested-overview": { "title": "Tree with nested nodes", "component": TreeNestedOverviewExample, "additionalFiles": [], "selectorName": "" } };
 /** @type {?} */
-var EXAMPLE_LIST = [
-    AutocompleteAutoActiveFirstOptionExample,
-    AutocompleteDisplayExample,
-    AutocompleteFilterExample,
-    AutocompleteOptgroupExample,
-    AutocompleteOverviewExample,
-    AutocompleteSimpleExample,
-    BadgeOverviewExample,
-    BottomSheetOverviewExampleSheet, BottomSheetOverviewExample,
-    ButtonOverviewExample,
-    ButtonToggleAppearanceExample,
-    ButtonToggleExclusiveExample,
-    ButtonToggleOverviewExample,
-    ButtonTypesExample,
-    CardFancyExample,
-    CardOverviewExample,
-    CdkDragDropAxisLockExample,
-    CdkDragDropConnectedSortingExample,
-    CdkDragDropCustomPlaceholderExample,
-    CdkDragDropCustomPreviewExample,
-    CdkDragDropHandleExample,
-    CdkDragDropHorizontalSortingExample,
-    CdkDragDropOverviewExample,
-    CdkDragDropRootElementExample,
-    CdkDragDropSortingExample,
-    CdkTableBasicFlexExample,
-    CdkTableBasicExample,
-    CdkTreeFlatExample,
-    CdkTreeNestedExample,
-    CdkVirtualScrollContextExample,
-    CdkVirtualScrollCustomStrategyExample,
-    CdkVirtualScrollDataSourceExample,
-    CdkVirtualScrollDlExample,
-    CdkVirtualScrollFixedBufferExample,
-    CdkVirtualScrollHorizontalExample,
-    CdkVirtualScrollOverviewExample,
-    CdkVirtualScrollTemplateCacheExample,
-    CheckboxConfigurableExample,
-    CheckboxOverviewExample,
-    ChipsAutocompleteExample,
-    ChipsInputExample,
-    ChipsOverviewExample,
-    ChipsStackedExample,
-    DatepickerApiExample,
-    DatepickerColorExample,
-    ExampleHeader, DatepickerCustomHeaderExample,
-    DatepickerCustomIconExample,
-    DatepickerDisabledExample,
-    DatepickerEventsExample,
-    DatepickerFilterExample,
-    DatepickerFormatsExample,
-    DatepickerLocaleExample,
-    DatepickerMinMaxExample,
-    DatepickerMomentExample,
-    DatepickerOverviewExample,
-    DatepickerStartViewExample,
-    DatepickerTouchExample,
-    DatepickerValueExample,
-    DatepickerViewsSelectionExample,
-    DialogContentExampleDialog, DialogContentExample,
-    DialogDataExampleDialog, DialogDataExample,
-    DialogElementsExampleDialog, DialogElementsExample,
-    DialogOverviewExampleDialog, DialogOverviewExample,
-    DividerOverviewExample,
-    ElevationOverviewExample,
-    ExpansionExpandCollapseAllExample,
-    ExpansionOverviewExample,
-    ExpansionStepsExample,
-    FocusMonitorDirectivesExample,
-    FocusMonitorFocusViaExample,
-    FocusMonitorOverviewExample,
-    FormFieldAppearanceExample,
-    MyTelInput, FormFieldCustomControlExample,
-    FormFieldErrorExample,
-    FormFieldHintExample,
-    FormFieldLabelExample,
-    FormFieldOverviewExample,
-    FormFieldPrefixSuffixExample,
-    FormFieldThemingExample,
-    GridListDynamicExample,
-    GridListOverviewExample,
-    IconOverviewExample,
-    IconSvgExample,
-    InputClearableExample,
-    InputErrorStateMatcherExample,
-    InputErrorsExample,
-    InputFormExample,
-    InputHintExample,
-    InputOverviewExample,
-    InputPrefixSuffixExample,
-    ListOverviewExample,
-    ListSectionsExample,
-    ListSelectionExample,
-    MenuIconsExample,
-    MenuOverviewExample,
-    NestedMenuExample,
-    PaginatorConfigurableExample,
-    PaginatorOverviewExample,
-    ProgressBarBufferExample,
-    ProgressBarConfigurableExample,
-    ProgressBarDeterminateExample,
-    ProgressBarIndeterminateExample,
-    ProgressBarQueryExample,
-    ProgressSpinnerConfigurableExample,
-    ProgressSpinnerOverviewExample,
-    RadioNgModelExample,
-    RadioOverviewExample,
-    RippleOverviewExample,
-    SelectCustomTriggerExample,
-    SelectDisabledExample,
-    SelectErrorStateMatcherExample,
-    SelectFormExample,
-    SelectHintErrorExample,
-    SelectMultipleExample,
-    SelectNoRippleExample,
-    SelectOptgroupExample,
-    SelectOverviewExample,
-    SelectPanelClassExample,
-    SelectResetExample,
-    SelectValueBindingExample,
-    SidenavAutosizeExample,
-    SidenavBackdropExample,
-    SidenavDisableCloseExample,
-    SidenavDrawerOverviewExample,
-    SidenavFixedExample,
-    SidenavModeExample,
-    SidenavOpenCloseExample,
-    SidenavOverviewExample,
-    SidenavPositionExample,
-    SidenavResponsiveExample,
-    SlideToggleConfigurableExample,
-    SlideToggleFormsExample,
-    SlideToggleOverviewExample,
-    SliderConfigurableExample,
-    SliderFormattingExample,
-    SliderOverviewExample,
-    PizzaPartyComponent, SnackBarComponentExample,
-    SnackBarOverviewExample,
-    SnackBarPositionExample,
-    SortOverviewExample,
-    StepperEditableExample,
-    StepperErrorsExample,
-    StepperLabelPositionBottomExample,
-    StepperOptionalExample,
-    StepperOverviewExample,
-    StepperStatesExample,
-    StepperVerticalExample,
-    TabGroupAlignExample,
-    TabGroupAsyncExample,
-    TabGroupBasicExample,
-    TabGroupCustomLabelExample,
-    TabGroupDynamicHeightExample,
-    TabGroupDynamicExample,
-    TabGroupHeaderBelowExample,
-    TabGroupLazyLoadedExample,
-    TabGroupStretchedExample,
-    TabGroupThemeExample,
-    TabNavBarBasicExample,
-    TableBasicFlexExample,
-    TableBasicExample,
-    TableDynamicColumnsExample,
-    TableExpandableRowsExample,
-    TableFilteringExample,
-    TableFooterRowExample,
-    TableHttpExample,
-    TableMultipleHeaderFooterExample,
-    TableOverviewExample,
-    TablePaginationExample,
-    TableRowContextExample,
-    TableSelectionExample,
-    SimpleColumn, TableSimpleColumnExample,
-    TableSortingExample,
-    TableStickyColumnsExample,
-    TableStickyComplexFlexExample,
-    TableStickyComplexExample,
-    TableStickyFooterExample,
-    TableStickyHeaderExample,
-    WrapperTable, TableWrappedExample,
-    TextFieldAutofillDirectiveExample,
-    TextFieldAutofillMonitorExample,
-    TextFieldAutosizeTextareaExample,
-    ToolbarMultirowExample,
-    ToolbarOverviewExample,
-    TooltipAutoHideExample,
-    TooltipCustomClassExample,
-    TooltipDelayExample,
-    TooltipDisabledExample,
-    TooltipManualExample,
-    TooltipMessageExample,
-    TooltipModifiedDefaultsExample,
-    TooltipOverviewExample,
-    TooltipPositionExample,
-    TreeChecklistExample,
-    TreeDynamicExample,
-    TreeFlatOverviewExample,
-    TreeLoadmoreExample,
-    TreeNestedOverviewExample,
-];
+var EXAMPLE_LIST = [AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompleteSimpleExample, BadgeOverviewExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, ButtonOverviewExample, ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonTypesExample, CardFancyExample, CardOverviewExample, CdkDragDropAxisLockExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropEnterPredicateExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkPlatformOverviewExample, CdkTableBasicFlexExample, CdkTableBasicExample, CdkTreeFlatExample, CdkTreeNestedExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CheckboxConfigurableExample, CheckboxOverviewExample, ChipsAutocompleteExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, ExampleHeader, DatepickerCustomIconExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog, DividerOverviewExample, ElevationOverviewExample, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, FormFieldAppearanceExample, FormFieldCustomControlExample, MyTelInput, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, GridListDynamicExample, GridListOverviewExample, IconOverviewExample, IconSvgExample, InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, MenuIconsExample, MenuOverviewExample, NestedMenuExample, PaginatorConfigurableExample, PaginatorOverviewExample, ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, RadioNgModelExample, RadioOverviewExample, RippleOverviewExample, SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SnackBarComponentExample, PizzaPartyComponent, SnackBarOverviewExample, SnackBarPositionExample, SortOverviewExample, StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, TabGroupAlignExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSimpleColumnExample, SimpleColumn, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableWrappedExample, WrapperTable, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, ToolbarMultirowExample, ToolbarOverviewExample, TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample];
 var ExampleModule = /** @class */ (function () {
     function ExampleModule() {
     }
@@ -9717,199 +8809,201 @@ exports.ɵo = CdkDragDropAxisLockExample;
 exports.ɵp = CdkDragDropConnectedSortingExample;
 exports.ɵq = CdkDragDropCustomPlaceholderExample;
 exports.ɵr = CdkDragDropCustomPreviewExample;
-exports.ɵs = CdkDragDropHandleExample;
-exports.ɵt = CdkDragDropHorizontalSortingExample;
-exports.ɵu = CdkDragDropOverviewExample;
-exports.ɵv = CdkDragDropRootElementExample;
-exports.ɵw = CdkDragDropSortingExample;
-exports.ɵx = CdkTableBasicFlexExample;
-exports.ɵy = CdkTableBasicExample;
-exports.ɵba = CdkTreeFlatExample;
-exports.ɵz = FileDatabase;
-exports.ɵbc = CdkTreeNestedExample;
-exports.ɵbb = FileDatabase$1;
-exports.ɵbd = CdkVirtualScrollContextExample;
-exports.ɵbf = CdkVirtualScrollCustomStrategyExample;
-exports.ɵbe = CustomVirtualScrollStrategy;
-exports.ɵbg = CdkVirtualScrollDataSourceExample;
-exports.ɵbh = CdkVirtualScrollDlExample;
-exports.ɵbi = CdkVirtualScrollFixedBufferExample;
-exports.ɵbj = CdkVirtualScrollHorizontalExample;
-exports.ɵbk = CdkVirtualScrollOverviewExample;
-exports.ɵbl = CdkVirtualScrollTemplateCacheExample;
-exports.ɵbm = CheckboxConfigurableExample;
-exports.ɵbn = CheckboxOverviewExample;
-exports.ɵbo = ChipsAutocompleteExample;
-exports.ɵbp = ChipsInputExample;
-exports.ɵbq = ChipsOverviewExample;
-exports.ɵbr = ChipsStackedExample;
-exports.ɵbs = DatepickerApiExample;
-exports.ɵbt = DatepickerColorExample;
-exports.ɵbu = DatepickerCustomHeaderExample;
-exports.ɵbv = ExampleHeader;
-exports.ɵbw = DatepickerCustomIconExample;
-exports.ɵbx = DatepickerDisabledExample;
-exports.ɵby = DatepickerEventsExample;
-exports.ɵbz = DatepickerFilterExample;
-exports.ɵcb = DatepickerFormatsExample;
-exports.ɵca = MY_FORMATS;
-exports.ɵcc = DatepickerLocaleExample;
-exports.ɵcd = DatepickerMinMaxExample;
-exports.ɵce = DatepickerMomentExample;
-exports.ɵcf = DatepickerStartViewExample;
-exports.ɵcg = DatepickerTouchExample;
-exports.ɵch = DatepickerValueExample;
-exports.ɵcj = DatepickerViewsSelectionExample;
-exports.ɵci = MY_FORMATS$1;
-exports.ɵck = DialogContentExample;
-exports.ɵcl = DialogContentExampleDialog;
-exports.ɵcm = DialogDataExample;
-exports.ɵcn = DialogDataExampleDialog;
-exports.ɵco = DialogElementsExample;
-exports.ɵcp = DialogElementsExampleDialog;
-exports.ɵcq = DialogOverviewExample;
-exports.ɵcr = DialogOverviewExampleDialog;
-exports.ɵcs = DividerOverviewExample;
-exports.ɵct = ElevationOverviewExample;
-exports.ɵcu = ExpansionExpandCollapseAllExample;
-exports.ɵcv = ExpansionStepsExample;
-exports.ɵcw = FocusMonitorDirectivesExample;
-exports.ɵcx = FocusMonitorFocusViaExample;
-exports.ɵcy = FocusMonitorOverviewExample;
-exports.ɵcz = FormFieldAppearanceExample;
-exports.ɵda = FormFieldCustomControlExample;
-exports.ɵdb = MyTelInput;
-exports.ɵdc = FormFieldErrorExample;
-exports.ɵdd = FormFieldHintExample;
-exports.ɵde = FormFieldLabelExample;
-exports.ɵdf = FormFieldOverviewExample;
-exports.ɵdg = FormFieldPrefixSuffixExample;
-exports.ɵdh = FormFieldThemingExample;
-exports.ɵdi = GridListDynamicExample;
-exports.ɵdj = GridListOverviewExample;
-exports.ɵdk = IconOverviewExample;
-exports.ɵdl = IconSvgExample;
-exports.ɵdm = InputClearableExample;
-exports.ɵdn = InputErrorStateMatcherExample;
-exports.ɵdo = InputErrorsExample;
-exports.ɵdp = InputFormExample;
-exports.ɵdq = InputHintExample;
-exports.ɵdr = InputOverviewExample;
-exports.ɵds = InputPrefixSuffixExample;
-exports.ɵdt = ListSectionsExample;
-exports.ɵdu = ListSelectionExample;
-exports.ɵic = ExampleMaterialModule;
-exports.ɵdv = MenuIconsExample;
-exports.ɵdw = MenuOverviewExample;
-exports.ɵdx = NestedMenuExample;
-exports.ɵdy = PaginatorConfigurableExample;
-exports.ɵdz = PaginatorOverviewExample;
-exports.ɵea = ProgressBarBufferExample;
-exports.ɵeb = ProgressBarConfigurableExample;
-exports.ɵec = ProgressBarDeterminateExample;
-exports.ɵed = ProgressBarIndeterminateExample;
-exports.ɵee = ProgressBarQueryExample;
-exports.ɵef = ProgressSpinnerConfigurableExample;
-exports.ɵeg = ProgressSpinnerOverviewExample;
-exports.ɵeh = RadioNgModelExample;
-exports.ɵei = RadioOverviewExample;
-exports.ɵej = RippleOverviewExample;
-exports.ɵek = SelectCustomTriggerExample;
-exports.ɵel = SelectDisabledExample;
-exports.ɵem = SelectErrorStateMatcherExample;
-exports.ɵen = SelectFormExample;
-exports.ɵeo = SelectHintErrorExample;
-exports.ɵep = SelectMultipleExample;
-exports.ɵeq = SelectNoRippleExample;
-exports.ɵer = SelectOptgroupExample;
-exports.ɵes = SelectOverviewExample;
-exports.ɵet = SelectPanelClassExample;
-exports.ɵeu = SelectResetExample;
-exports.ɵev = SelectValueBindingExample;
-exports.ɵew = SidenavAutosizeExample;
-exports.ɵex = SidenavBackdropExample;
-exports.ɵey = SidenavDisableCloseExample;
-exports.ɵez = SidenavDrawerOverviewExample;
-exports.ɵfa = SidenavFixedExample;
-exports.ɵfb = SidenavModeExample;
-exports.ɵfc = SidenavOpenCloseExample;
-exports.ɵfd = SidenavOverviewExample;
-exports.ɵfe = SidenavPositionExample;
-exports.ɵff = SidenavResponsiveExample;
-exports.ɵfg = SlideToggleConfigurableExample;
-exports.ɵfh = SlideToggleFormsExample;
-exports.ɵfi = SlideToggleOverviewExample;
-exports.ɵfj = SliderConfigurableExample;
-exports.ɵfk = SliderFormattingExample;
-exports.ɵfl = SliderOverviewExample;
-exports.ɵfn = PizzaPartyComponent;
-exports.ɵfm = SnackBarComponentExample;
-exports.ɵfo = SnackBarOverviewExample;
-exports.ɵfp = SnackBarPositionExample;
-exports.ɵfq = SortOverviewExample;
-exports.ɵfr = StepperEditableExample;
-exports.ɵfs = StepperErrorsExample;
-exports.ɵft = StepperLabelPositionBottomExample;
-exports.ɵfu = StepperOptionalExample;
-exports.ɵfv = StepperStatesExample;
-exports.ɵfw = StepperVerticalExample;
-exports.ɵfx = TabGroupAlignExample;
-exports.ɵfy = TabGroupAsyncExample;
-exports.ɵfz = TabGroupBasicExample;
-exports.ɵga = TabGroupCustomLabelExample;
-exports.ɵgb = TabGroupDynamicHeightExample;
-exports.ɵgc = TabGroupDynamicExample;
-exports.ɵgd = TabGroupHeaderBelowExample;
-exports.ɵge = TabGroupLazyLoadedExample;
-exports.ɵgf = TabGroupStretchedExample;
-exports.ɵgg = TabGroupThemeExample;
-exports.ɵgh = TabNavBarBasicExample;
-exports.ɵgi = TableBasicFlexExample;
-exports.ɵgj = TableBasicExample;
-exports.ɵgk = TableDynamicColumnsExample;
-exports.ɵgl = TableExpandableRowsExample;
-exports.ɵgm = TableFilteringExample;
-exports.ɵgn = TableFooterRowExample;
-exports.ɵgo = TableHttpExample;
-exports.ɵgp = TableMultipleHeaderFooterExample;
-exports.ɵgq = TableOverviewExample;
-exports.ɵgr = TablePaginationExample;
-exports.ɵgs = TableRowContextExample;
-exports.ɵgt = TableSelectionExample;
-exports.ɵgv = SimpleColumn;
-exports.ɵgu = TableSimpleColumnExample;
-exports.ɵgw = TableSortingExample;
-exports.ɵgx = TableStickyColumnsExample;
-exports.ɵgy = TableStickyComplexFlexExample;
-exports.ɵgz = TableStickyComplexExample;
-exports.ɵha = TableStickyFooterExample;
-exports.ɵhb = TableStickyHeaderExample;
-exports.ɵhc = TableWrappedExample;
-exports.ɵhd = WrapperTable;
-exports.ɵhe = TextFieldAutofillDirectiveExample;
-exports.ɵhf = TextFieldAutofillMonitorExample;
-exports.ɵhg = TextFieldAutosizeTextareaExample;
-exports.ɵhh = ToolbarOverviewExample;
-exports.ɵhi = TooltipAutoHideExample;
-exports.ɵhj = TooltipCustomClassExample;
-exports.ɵhk = TooltipDelayExample;
-exports.ɵhl = TooltipDisabledExample;
-exports.ɵhm = TooltipManualExample;
-exports.ɵhn = TooltipMessageExample;
-exports.ɵhp = TooltipModifiedDefaultsExample;
-exports.ɵho = myCustomTooltipDefaults;
-exports.ɵhq = TooltipOverviewExample;
-exports.ɵhr = TooltipPositionExample;
-exports.ɵhs = ChecklistDatabase;
-exports.ɵht = TreeChecklistExample;
-exports.ɵhu = DynamicDatabase;
-exports.ɵhv = TreeDynamicExample;
-exports.ɵhw = FileDatabase$2;
-exports.ɵhx = TreeFlatOverviewExample;
-exports.ɵhy = LoadmoreDatabase;
-exports.ɵhz = TreeLoadmoreExample;
-exports.ɵia = FileDatabase$3;
-exports.ɵib = TreeNestedOverviewExample;
+exports.ɵs = CdkDragDropEnterPredicateExample;
+exports.ɵt = CdkDragDropHandleExample;
+exports.ɵu = CdkDragDropHorizontalSortingExample;
+exports.ɵv = CdkDragDropOverviewExample;
+exports.ɵw = CdkDragDropRootElementExample;
+exports.ɵx = CdkDragDropSortingExample;
+exports.ɵy = CdkPlatformOverviewExample;
+exports.ɵz = CdkTableBasicFlexExample;
+exports.ɵba = CdkTableBasicExample;
+exports.ɵbc = CdkTreeFlatExample;
+exports.ɵbb = FileDatabase;
+exports.ɵbe = CdkTreeNestedExample;
+exports.ɵbd = FileDatabase$1;
+exports.ɵbf = CdkVirtualScrollContextExample;
+exports.ɵbh = CdkVirtualScrollCustomStrategyExample;
+exports.ɵbg = CustomVirtualScrollStrategy;
+exports.ɵbi = CdkVirtualScrollDataSourceExample;
+exports.ɵbj = CdkVirtualScrollDlExample;
+exports.ɵbk = CdkVirtualScrollFixedBufferExample;
+exports.ɵbl = CdkVirtualScrollHorizontalExample;
+exports.ɵbm = CdkVirtualScrollOverviewExample;
+exports.ɵbn = CdkVirtualScrollTemplateCacheExample;
+exports.ɵbo = CheckboxConfigurableExample;
+exports.ɵbp = CheckboxOverviewExample;
+exports.ɵbq = ChipsAutocompleteExample;
+exports.ɵbr = ChipsInputExample;
+exports.ɵbs = ChipsOverviewExample;
+exports.ɵbt = ChipsStackedExample;
+exports.ɵbu = DatepickerApiExample;
+exports.ɵbv = DatepickerColorExample;
+exports.ɵbw = DatepickerCustomHeaderExample;
+exports.ɵbx = ExampleHeader;
+exports.ɵby = DatepickerCustomIconExample;
+exports.ɵbz = DatepickerDisabledExample;
+exports.ɵca = DatepickerEventsExample;
+exports.ɵcb = DatepickerFilterExample;
+exports.ɵcd = DatepickerFormatsExample;
+exports.ɵcc = MY_FORMATS;
+exports.ɵce = DatepickerLocaleExample;
+exports.ɵcf = DatepickerMinMaxExample;
+exports.ɵcg = DatepickerMomentExample;
+exports.ɵch = DatepickerStartViewExample;
+exports.ɵci = DatepickerTouchExample;
+exports.ɵcj = DatepickerValueExample;
+exports.ɵcl = DatepickerViewsSelectionExample;
+exports.ɵck = MY_FORMATS$1;
+exports.ɵcm = DialogContentExample;
+exports.ɵcn = DialogContentExampleDialog;
+exports.ɵco = DialogDataExample;
+exports.ɵcp = DialogDataExampleDialog;
+exports.ɵcq = DialogElementsExample;
+exports.ɵcr = DialogElementsExampleDialog;
+exports.ɵcs = DialogOverviewExample;
+exports.ɵct = DialogOverviewExampleDialog;
+exports.ɵcu = DividerOverviewExample;
+exports.ɵcv = ElevationOverviewExample;
+exports.ɵcw = ExpansionExpandCollapseAllExample;
+exports.ɵcx = ExpansionStepsExample;
+exports.ɵcy = FocusMonitorDirectivesExample;
+exports.ɵcz = FocusMonitorFocusViaExample;
+exports.ɵda = FocusMonitorOverviewExample;
+exports.ɵdb = FormFieldAppearanceExample;
+exports.ɵdc = FormFieldCustomControlExample;
+exports.ɵdd = MyTelInput;
+exports.ɵde = FormFieldErrorExample;
+exports.ɵdf = FormFieldHintExample;
+exports.ɵdg = FormFieldLabelExample;
+exports.ɵdh = FormFieldOverviewExample;
+exports.ɵdi = FormFieldPrefixSuffixExample;
+exports.ɵdj = FormFieldThemingExample;
+exports.ɵdk = GridListDynamicExample;
+exports.ɵdl = GridListOverviewExample;
+exports.ɵdm = IconOverviewExample;
+exports.ɵdn = IconSvgExample;
+exports.ɵdo = InputClearableExample;
+exports.ɵdp = InputErrorStateMatcherExample;
+exports.ɵdq = InputErrorsExample;
+exports.ɵdr = InputFormExample;
+exports.ɵds = InputHintExample;
+exports.ɵdt = InputOverviewExample;
+exports.ɵdu = InputPrefixSuffixExample;
+exports.ɵdv = ListSectionsExample;
+exports.ɵdw = ListSelectionExample;
+exports.ɵie = ExampleMaterialModule;
+exports.ɵdx = MenuIconsExample;
+exports.ɵdy = MenuOverviewExample;
+exports.ɵdz = NestedMenuExample;
+exports.ɵea = PaginatorConfigurableExample;
+exports.ɵeb = PaginatorOverviewExample;
+exports.ɵec = ProgressBarBufferExample;
+exports.ɵed = ProgressBarConfigurableExample;
+exports.ɵee = ProgressBarDeterminateExample;
+exports.ɵef = ProgressBarIndeterminateExample;
+exports.ɵeg = ProgressBarQueryExample;
+exports.ɵeh = ProgressSpinnerConfigurableExample;
+exports.ɵei = ProgressSpinnerOverviewExample;
+exports.ɵej = RadioNgModelExample;
+exports.ɵek = RadioOverviewExample;
+exports.ɵel = RippleOverviewExample;
+exports.ɵem = SelectCustomTriggerExample;
+exports.ɵen = SelectDisabledExample;
+exports.ɵeo = SelectErrorStateMatcherExample;
+exports.ɵep = SelectFormExample;
+exports.ɵeq = SelectHintErrorExample;
+exports.ɵer = SelectMultipleExample;
+exports.ɵes = SelectNoRippleExample;
+exports.ɵet = SelectOptgroupExample;
+exports.ɵeu = SelectOverviewExample;
+exports.ɵev = SelectPanelClassExample;
+exports.ɵew = SelectResetExample;
+exports.ɵex = SelectValueBindingExample;
+exports.ɵey = SidenavAutosizeExample;
+exports.ɵez = SidenavBackdropExample;
+exports.ɵfa = SidenavDisableCloseExample;
+exports.ɵfb = SidenavDrawerOverviewExample;
+exports.ɵfc = SidenavFixedExample;
+exports.ɵfd = SidenavModeExample;
+exports.ɵfe = SidenavOpenCloseExample;
+exports.ɵff = SidenavOverviewExample;
+exports.ɵfg = SidenavPositionExample;
+exports.ɵfh = SidenavResponsiveExample;
+exports.ɵfi = SlideToggleConfigurableExample;
+exports.ɵfj = SlideToggleFormsExample;
+exports.ɵfk = SlideToggleOverviewExample;
+exports.ɵfl = SliderConfigurableExample;
+exports.ɵfm = SliderFormattingExample;
+exports.ɵfn = SliderOverviewExample;
+exports.ɵfp = PizzaPartyComponent;
+exports.ɵfo = SnackBarComponentExample;
+exports.ɵfq = SnackBarOverviewExample;
+exports.ɵfr = SnackBarPositionExample;
+exports.ɵfs = SortOverviewExample;
+exports.ɵft = StepperEditableExample;
+exports.ɵfu = StepperErrorsExample;
+exports.ɵfv = StepperLabelPositionBottomExample;
+exports.ɵfw = StepperOptionalExample;
+exports.ɵfx = StepperStatesExample;
+exports.ɵfy = StepperVerticalExample;
+exports.ɵfz = TabGroupAlignExample;
+exports.ɵga = TabGroupAsyncExample;
+exports.ɵgb = TabGroupBasicExample;
+exports.ɵgc = TabGroupCustomLabelExample;
+exports.ɵgd = TabGroupDynamicHeightExample;
+exports.ɵge = TabGroupDynamicExample;
+exports.ɵgf = TabGroupHeaderBelowExample;
+exports.ɵgg = TabGroupLazyLoadedExample;
+exports.ɵgh = TabGroupStretchedExample;
+exports.ɵgi = TabGroupThemeExample;
+exports.ɵgj = TabNavBarBasicExample;
+exports.ɵgk = TableBasicFlexExample;
+exports.ɵgl = TableBasicExample;
+exports.ɵgm = TableDynamicColumnsExample;
+exports.ɵgn = TableExpandableRowsExample;
+exports.ɵgo = TableFilteringExample;
+exports.ɵgp = TableFooterRowExample;
+exports.ɵgq = TableHttpExample;
+exports.ɵgr = TableMultipleHeaderFooterExample;
+exports.ɵgs = TableOverviewExample;
+exports.ɵgt = TablePaginationExample;
+exports.ɵgu = TableRowContextExample;
+exports.ɵgv = TableSelectionExample;
+exports.ɵgx = SimpleColumn;
+exports.ɵgw = TableSimpleColumnExample;
+exports.ɵgy = TableSortingExample;
+exports.ɵgz = TableStickyColumnsExample;
+exports.ɵha = TableStickyComplexFlexExample;
+exports.ɵhb = TableStickyComplexExample;
+exports.ɵhc = TableStickyFooterExample;
+exports.ɵhd = TableStickyHeaderExample;
+exports.ɵhe = TableWrappedExample;
+exports.ɵhf = WrapperTable;
+exports.ɵhg = TextFieldAutofillDirectiveExample;
+exports.ɵhh = TextFieldAutofillMonitorExample;
+exports.ɵhi = TextFieldAutosizeTextareaExample;
+exports.ɵhj = ToolbarOverviewExample;
+exports.ɵhk = TooltipAutoHideExample;
+exports.ɵhl = TooltipCustomClassExample;
+exports.ɵhm = TooltipDelayExample;
+exports.ɵhn = TooltipDisabledExample;
+exports.ɵho = TooltipManualExample;
+exports.ɵhp = TooltipMessageExample;
+exports.ɵhr = TooltipModifiedDefaultsExample;
+exports.ɵhq = myCustomTooltipDefaults;
+exports.ɵhs = TooltipOverviewExample;
+exports.ɵht = TooltipPositionExample;
+exports.ɵhu = ChecklistDatabase;
+exports.ɵhv = TreeChecklistExample;
+exports.ɵhw = DynamicDatabase;
+exports.ɵhx = TreeDynamicExample;
+exports.ɵhy = FileDatabase$2;
+exports.ɵhz = TreeFlatOverviewExample;
+exports.ɵia = LoadmoreDatabase;
+exports.ɵib = TreeLoadmoreExample;
+exports.ɵic = FileDatabase$3;
+exports.ɵid = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
