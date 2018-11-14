@@ -1,0 +1,22 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDrop, moveItemInArray} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
+
+<span class="hljs-comment">/**
+ * @title Drag&amp;Drop disabled
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-drag-drop-disabled-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-drag-drop-disabled-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-drag-drop-disabled-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkDragDropDisabledExample {
+  items = [
+    {value: <span class="hljs-string">'I can be dragged'</span>, disabled: <span class="hljs-literal">false</span>},
+    {value: <span class="hljs-string">'I cannot be dragged'</span>, disabled: <span class="hljs-literal">true</span>},
+    {value: <span class="hljs-string">'I can also be dragged'</span>, disabled: <span class="hljs-literal">false</span>}
+  ];
+
+  drop(event: CdkDragDrop&lt;<span class="hljs-built_in">string</span>[]&gt;) {
+    moveItemInArray(<span class="hljs-keyword">this</span>.items, event.previousIndex, event.currentIndex);
+  }
+}
