@@ -9,15 +9,15 @@ bottomSheetRef.dismiss();
 </code></pre><h3 id="sharing-data-with-the-bottom-sheet-component-" class="docs-header-link docs-markdown-h3"><span header-link="sharing-data-with-the-bottom-sheet-component-"></span> Sharing data with the bottom sheet component.</h3><p class="docs-markdown-p">If you want to pass in some data to the bottom sheet, you can do so using the <code class="docs-markdown-code">data</code> property:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">const</span> bottomSheetRef = bottomSheet.open(HobbitSheet, {
   data: { names: [<span class="hljs-string">'Frodo'</span>, <span class="hljs-string">'Bilbo'</span>] },
 });
-</code></pre><p class="docs-markdown-p">Afterwards you can access the injected data using the <code class="docs-markdown-code">MAT_BOTTOM_SHEET_DATA</code> injection token:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MAT_BOTTOM_SHEET_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+</code></pre><p class="docs-markdown-p">Afterwards you can access the injected data using the <code class="docs-markdown-code">MAT_BOTTOM_SHEET_DATA</code> injection token:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">import {Component, Inject} from '@angular/core';
+import {MAT_BOTTOM_SHEET_DATA} from '@angular/material';
 
-<span class="hljs-meta">@Component</span>({
-  selector: <span class="hljs-string">'hobbit-sheet'</span>,
-  template: <span class="hljs-string">'passed in {{ data.names }}'</span>,
+@Component({
+  selector: 'hobbit-sheet',
+  template: 'passed in {{ data.names }}',
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> HobbitSheet {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_BOTTOM_SHEET_DATA) <span class="hljs-keyword">public</span> data: <span class="hljs-built_in">any</span></span>) { }
+export class HobbitSheet {
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any) { }
 }
 </code></pre><h3 id="configuring-bottom-sheet-content-via-code-entrycomponents-code-" class="docs-header-link docs-markdown-h3"><span header-link="configuring-bottom-sheet-content-via-code-entrycomponents-code-"></span> Configuring bottom sheet content via <code class="docs-markdown-code">entryComponents</code></h3><p class="docs-markdown-p">Similarly to <code class="docs-markdown-code">MatDialog</code>, <code class="docs-markdown-code">MatBottomSheet</code> instantiates components at run-time. In order for it to work, the Angular compiler needs extra information to create the necessary <code class="docs-markdown-code">ComponentFactory</code> for your bottom sheet content component.</p><p class="docs-markdown-p">Any components that are include inside of a bottom sheet have to be added to the <code class="docs-markdown-code">entryComponents</code> inside your <code class="docs-markdown-code">NgModule</code>.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
   imports: [

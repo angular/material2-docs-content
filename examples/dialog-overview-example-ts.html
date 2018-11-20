@@ -43,7 +43,7 @@
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
     <span class="hljs-keyword">public</span> dialogRef: MatDialogRef&lt;DialogOverviewExampleDialog&gt;,
-    <span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: DialogData</span>) {}
+    @Inject(MAT_DIALOG_DATA</span>) public data: DialogData) {}
 
   onNoClick(): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">this</span>.dialogRef.close();
