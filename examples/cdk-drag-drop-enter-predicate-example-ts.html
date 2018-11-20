@@ -1,0 +1,36 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
+
+<span class="hljs-comment">/**
+ * @title Drag&amp;Drop enter predicate
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-drag-drop-enter-predicate-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-drag-drop-enter-predicate-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-drag-drop-enter-predicate-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkDragDropEnterPredicateExample {
+  all = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+  even = [<span class="hljs-number">10</span>];
+
+  drop(event: CdkDragDrop&lt;<span class="hljs-built_in">string</span>[]&gt;) {
+    <span class="hljs-keyword">if</span> (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } <span class="hljs-keyword">else</span> {
+      transferArrayItem(event.previousContainer.data,
+                        event.container.data,
+                        event.previousIndex,
+                        event.currentIndex);
+    }
+  }
+
+  <span class="hljs-comment">/** Predicate function that only allows even numbers to be dropped into a list. */</span>
+  evenPredicate(item: CdkDrag&lt;<span class="hljs-built_in">number</span>&gt;) {
+    <span class="hljs-keyword">return</span> item.data % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>;
+  }
+
+  <span class="hljs-comment">/** Predicate function that doesn't allow items to be dropped into a list. */</span>
+  noReturnPredicate() {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+}
