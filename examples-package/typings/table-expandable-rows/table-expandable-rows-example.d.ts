@@ -4,7 +4,7 @@
 export declare class TableExpandableRowsExample {
     dataSource: PeriodicElement[];
     columnsToDisplay: string[];
-    expandedElement: PeriodicElement;
+    expandedElement: PeriodicElement | null;
 }
 export interface PeriodicElement {
     name: string;
