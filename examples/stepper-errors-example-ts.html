@@ -1,6 +1,6 @@
 <span class="hljs-keyword">import</span> {Component, OnInit} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormBuilder, FormGroup, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {STEPPER_GLOBAL_OPTIONS} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/stepper'</span>;
+<span class="hljs-keyword">import</span> {MAT_STEPPER_GLOBAL_OPTIONS} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/stepper'</span>;
 
 <span class="hljs-comment">/**
  * @title Stepper that displays errors in the steps
@@ -10,7 +10,7 @@
   templateUrl: <span class="hljs-string">'stepper-errors-example.html'</span>,
   styleUrls: [<span class="hljs-string">'stepper-errors-example.css'</span>],
   providers: [{
-    provide: STEPPER_GLOBAL_OPTIONS, useValue: {showError: <span class="hljs-literal">true</span>}
+    provide: MAT_STEPPER_GLOBAL_OPTIONS, useValue: {showError: <span class="hljs-literal">true</span>}
   }]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperErrorsExample <span class="hljs-keyword">implements</span> OnInit {
