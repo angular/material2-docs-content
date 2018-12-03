@@ -29,7 +29,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let element; columns: columnsToDisplay;"</span>
       <span class="hljs-attr">class</span>=<span class="hljs-string">"example-element-row"</span>
       [<span class="hljs-attr">class.example-expanded-row</span>]=<span class="hljs-string">"expandedElement === element"</span>
-      (<span class="hljs-attr">click</span>)=<span class="hljs-string">"expandedElement = element"</span>&gt;</span>
+      (<span class="hljs-attr">click</span>)=<span class="hljs-string">"expandedElement = expandedElement === element ? null : element"</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let row; columns: ['expandedDetail']"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-detail-row"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>

@@ -37,7 +37,7 @@ import { CommonModule } from '@angular/common';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class ExampleMaterialModule {
 }
@@ -132,7 +132,7 @@ ExampleMaterialModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Highlight the first autocomplete option
@@ -149,6 +149,7 @@ class AutocompleteAutoActiveFirstOptionExample {
         this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => this._filter(value)));
     }
     /**
+     * @private
      * @param {?} value
      * @return {?}
      */
@@ -168,7 +169,7 @@ AutocompleteAutoActiveFirstOptionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Display value autocomplete
@@ -197,6 +198,7 @@ class AutocompleteDisplayExample {
         return user ? user.name : undefined;
     }
     /**
+     * @private
      * @param {?} name
      * @return {?}
      */
@@ -216,7 +218,7 @@ AutocompleteDisplayExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Filter autocomplete
@@ -234,6 +236,7 @@ class AutocompleteFilterExample {
             .pipe(startWith(''), map(value => this._filter(value)));
     }
     /**
+     * @private
      * @param {?} value
      * @return {?}
      */
@@ -253,7 +256,7 @@ AutocompleteFilterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const _filter = (opt, value) => {
@@ -338,9 +341,11 @@ class AutocompleteOptgroupExample {
      * @return {?}
      */
     ngOnInit() {
-        this.stateGroupOptions = /** @type {?} */ ((this.stateForm.get('stateGroup'))).valueChanges.pipe(startWith(''), map(value => this._filterGroup(value)));
+        this.stateGroupOptions = (/** @type {?} */ (this.stateForm.get('stateGroup'))).valueChanges
+            .pipe(startWith(''), map(value => this._filterGroup(value)));
     }
     /**
+     * @private
      * @param {?} value
      * @return {?}
      */
@@ -367,7 +372,7 @@ AutocompleteOptgroupExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Autocomplete overview
@@ -405,6 +410,7 @@ class AutocompleteOverviewExample {
             .pipe(startWith(''), map(state$$1 => state$$1 ? this._filterStates(state$$1) : this.states.slice()));
     }
     /**
+     * @private
      * @param {?} value
      * @return {?}
      */
@@ -426,7 +432,7 @@ AutocompleteOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Simple autocomplete
@@ -447,7 +453,7 @@ AutocompleteSimpleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Badge overview
@@ -464,7 +470,7 @@ BadgeOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Bottom Sheet Overview
@@ -523,7 +529,7 @@ BottomSheetOverviewExampleSheet.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic buttons
@@ -540,7 +546,7 @@ ButtonOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Button toggle appearance
@@ -557,7 +563,7 @@ ButtonToggleAppearanceExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Exclusive selection
@@ -574,7 +580,7 @@ ButtonToggleExclusiveExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic button-toggles
@@ -591,7 +597,7 @@ ButtonToggleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Button varieties
@@ -608,7 +614,7 @@ ButtonTypesExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Card with multiple sections
@@ -625,7 +631,7 @@ CardFancyExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic cards
@@ -642,7 +648,7 @@ CardOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop position locking
@@ -659,7 +665,7 @@ CdkDragDropAxisLockExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop connected sorting
@@ -703,7 +709,7 @@ CdkDragDropConnectedSortingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop custom placeholer
@@ -739,7 +745,7 @@ CdkDragDropCustomPlaceholderExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop custom preview
@@ -782,6 +788,7 @@ class CdkDragDropCustomPreviewExample {
             }
         ];
     }
+    // tslint:enable:max-line-length
     /**
      * @param {?} event
      * @return {?}
@@ -800,7 +807,7 @@ CdkDragDropCustomPreviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop disabled
@@ -831,7 +838,7 @@ CdkDragDropDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop enter predicate
@@ -879,7 +886,7 @@ CdkDragDropEnterPredicateExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop with a handle
@@ -896,7 +903,7 @@ CdkDragDropHandleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop horizontal sorting
@@ -929,7 +936,7 @@ CdkDragDropHorizontalSortingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic Drag&Drop
@@ -946,7 +953,7 @@ CdkDragDropOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop with alternate root element
@@ -1002,7 +1009,7 @@ CdkDragDropRootElementExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop sorting
@@ -1038,7 +1045,7 @@ CdkDragDropSortingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Platform overview
@@ -1068,7 +1075,7 @@ CdkPlatformOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA = [
@@ -1129,7 +1136,7 @@ class ExampleDataSource extends DataSource {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$1 = [
@@ -1190,7 +1197,7 @@ let ExampleDataSource$1 = class ExampleDataSource extends DataSource {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * File node data with nested structure.
@@ -1215,9 +1222,10 @@ class FileFlatNode {
         this.type = type;
     }
 }
-/** *
+/**
  * The file structure tree data in string. The data could be parsed into a Json object
-  @type {?} */
+ * @type {?}
+ */
 const TREE_DATA = JSON.stringify({
     Applications: {
         Calendar: 'app',
@@ -1273,8 +1281,11 @@ class FileDatabase {
      * @return {?}
      */
     initialize() {
+        // Parse the string to json object.
         /** @type {?} */
         const dataObject = JSON.parse(TREE_DATA);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
         /** @type {?} */
         const data = this.buildFileTree(dataObject, 0);
         // Notify the change.
@@ -1349,16 +1360,17 @@ CdkTreeFlatExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
  */
 let FileNode$1 = class FileNode {
 };
-/** *
+/**
  * The Json tree data in string. The data could be parsed into Json object
-  @type {?} */
+ * @type {?}
+ */
 const TREE_DATA$1 = JSON.stringify({
     Applications: {
         Calendar: 'app',
@@ -1414,8 +1426,11 @@ let FileDatabase$1 = class FileDatabase {
      * @return {?}
      */
     initialize() {
+        // Parse the string to json object.
         /** @type {?} */
         const dataObject = JSON.parse(TREE_DATA$1);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
         /** @type {?} */
         const data = this.buildFileTree(dataObject, 0);
         // Notify the change.
@@ -1482,7 +1497,7 @@ CdkTreeNestedExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scroll context variables
@@ -1503,7 +1518,7 @@ CdkVirtualScrollContextExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
     constructor() {
@@ -1530,7 +1545,7 @@ CdkVirtualScrollCustomStrategyExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scroll with a custom data source
@@ -1581,6 +1596,7 @@ class MyDataSource extends DataSource {
         this.subscription.unsubscribe();
     }
     /**
+     * @private
      * @param {?} index
      * @return {?}
      */
@@ -1588,6 +1604,7 @@ class MyDataSource extends DataSource {
         return Math.floor(index / this.pageSize);
     }
     /**
+     * @private
      * @param {?} page
      * @return {?}
      */
@@ -1607,7 +1624,7 @@ class MyDataSource extends DataSource {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scrolling `<dl>`
@@ -1679,7 +1696,7 @@ CdkVirtualScrollDlExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Fixed size virtual scroll with custom buffer parameters
@@ -1700,7 +1717,7 @@ CdkVirtualScrollFixedBufferExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Horizontal virtual scroll
@@ -1722,7 +1739,7 @@ CdkVirtualScrollHorizontalExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic virtual scroll
@@ -1743,7 +1760,7 @@ CdkVirtualScrollOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scroll with no template caching
@@ -1764,7 +1781,7 @@ CdkVirtualScrollTemplateCacheExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable checkbox
@@ -1787,7 +1804,7 @@ CheckboxConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic checkboxes
@@ -1804,7 +1821,7 @@ CheckboxOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Chips Autocomplete
@@ -1865,6 +1882,7 @@ class ChipsAutocompleteExample {
         this.fruitCtrl.setValue(null);
     }
     /**
+     * @private
      * @param {?} value
      * @return {?}
      */
@@ -1890,7 +1908,7 @@ ChipsAutocompleteExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Chips with input
@@ -1948,7 +1966,7 @@ ChipsInputExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic chips
@@ -1965,7 +1983,7 @@ ChipsOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stacked chips
@@ -1990,7 +2008,7 @@ ChipsStackedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker open method
@@ -2007,7 +2025,7 @@ DatepickerApiExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker palette colors
@@ -2024,7 +2042,7 @@ DatepickerColorExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom calendar header
@@ -2148,7 +2166,7 @@ ExampleHeader.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom icon
@@ -2165,7 +2183,7 @@ DatepickerCustomIconExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom date classes
@@ -2191,7 +2209,7 @@ DatepickerDateClassExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled datepicker
@@ -2208,7 +2226,7 @@ DatepickerDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker input and change events
@@ -2236,7 +2254,7 @@ DatepickerEventsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with filter validation
@@ -2261,10 +2279,12 @@ DatepickerFilterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const moment = _rollupMoment__default || _rollupMoment;
+// See the Moment.js docs for the meaning of these formats:
+// https://momentjs.com/docs/#/displaying/format/
 /** @type {?} */
 const MY_FORMATS = {
     parse: {
@@ -2302,7 +2322,7 @@ DatepickerFormatsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const ɵ0 = MAT_MOMENT_DATE_FORMATS;
 /**
@@ -2346,7 +2366,7 @@ DatepickerLocaleExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with min & max validation
@@ -2367,7 +2387,7 @@ DatepickerMinMaxExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const moment$1 = _rollupMoment__default || _rollupMoment;
@@ -2398,7 +2418,7 @@ DatepickerMomentExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic datepicker
@@ -2415,7 +2435,7 @@ DatepickerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker start date
@@ -2435,7 +2455,7 @@ DatepickerStartViewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker touch UI
@@ -2452,7 +2472,7 @@ DatepickerTouchExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker selected value
@@ -2473,10 +2493,12 @@ DatepickerValueExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const moment$2 = _rollupMoment__default || _rollupMoment;
+// See the Moment.js docs for the meaning of these formats:
+// https://momentjs.com/docs/#/displaying/format/
 /** @type {?} */
 const MY_FORMATS$1 = {
     parse: {
@@ -2536,7 +2558,7 @@ DatepickerViewsSelectionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog with header, scrollable content and actions
@@ -2581,7 +2603,7 @@ DialogContentExampleDialog.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Injecting data when opening a dialog
@@ -2636,7 +2658,7 @@ DialogDataExampleDialog.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog elements
@@ -2677,7 +2699,7 @@ DialogElementsExampleDialog.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog Overview
@@ -2745,7 +2767,7 @@ DialogOverviewExampleDialog.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic divider
@@ -2762,7 +2784,7 @@ DividerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Elevation CSS classes
@@ -2782,7 +2804,7 @@ ElevationOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Accordion with expand/collapse all toggles
@@ -2802,7 +2824,7 @@ ExpansionExpandCollapseAllExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic expansion panel
@@ -2822,7 +2844,7 @@ ExpansionOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Expansion panel as accordion
@@ -2861,7 +2883,7 @@ ExpansionStepsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -2884,6 +2906,7 @@ class FocusMonitorDirectivesExample {
     formatOrigin(origin) {
         return origin ? origin + ' focused' : 'blurred';
     }
+    // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
     /**
      * @return {?}
      */
@@ -2906,7 +2929,7 @@ FocusMonitorDirectivesExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Focusing with a specific FocusOrigin
@@ -2966,7 +2989,7 @@ FocusMonitorFocusViaExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -3034,7 +3057,7 @@ FocusMonitorOverviewExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field appearance variants
@@ -3051,7 +3074,7 @@ FormFieldAppearanceExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with custom telephone number input control.
@@ -3196,8 +3219,8 @@ class MyTelInput {
      * @return {?}
      */
     onContainerClick(event) {
-        if ((/** @type {?} */ (event.target)).tagName.toLowerCase() != 'input') {
-            /** @type {?} */ ((this.elRef.nativeElement.querySelector('input'))).focus();
+        if (((/** @type {?} */ (event.target))).tagName.toLowerCase() != 'input') {
+            (/** @type {?} */ (this.elRef.nativeElement.querySelector('input'))).focus();
         }
     }
 }
@@ -3230,7 +3253,7 @@ MyTelInput.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with error messages
@@ -3258,7 +3281,7 @@ FormFieldErrorExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with hints
@@ -3275,7 +3298,7 @@ FormFieldHintExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with label
@@ -3305,7 +3328,7 @@ FormFieldLabelExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Simple form field
@@ -3322,7 +3345,7 @@ FormFieldOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with prefix & suffix
@@ -3342,7 +3365,7 @@ FormFieldPrefixSuffixExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field theming
@@ -3378,7 +3401,7 @@ FormFieldThemingExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dynamic grid-list
@@ -3403,7 +3426,7 @@ GridListDynamicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic grid-list
@@ -3420,7 +3443,7 @@ GridListOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic icons
@@ -3437,7 +3460,7 @@ IconOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title SVG icons
@@ -3466,7 +3489,7 @@ IconSvgExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Input with a clear button
@@ -3486,7 +3509,7 @@ InputClearableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Error when invalid control is dirty, touched, or submitted.
@@ -3525,7 +3548,7 @@ InputErrorStateMatcherExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Input with error messages
@@ -3548,7 +3571,7 @@ InputErrorsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Inputs in a form
@@ -3565,7 +3588,7 @@ InputFormExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Input with hints
@@ -3582,7 +3605,7 @@ InputHintExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic Inputs
@@ -3599,7 +3622,7 @@ InputOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Inputs with prefixes and suffixes
@@ -3616,7 +3639,7 @@ InputPrefixSuffixExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic list
@@ -3633,7 +3656,7 @@ ListOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title List with sections
@@ -3676,7 +3699,7 @@ ListSectionsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title List with selection
@@ -3696,7 +3719,7 @@ ListSelectionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Menu with icons
@@ -3713,7 +3736,7 @@ MenuIconsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic menu
@@ -3730,7 +3753,7 @@ MenuOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Nested menu
@@ -3747,7 +3770,7 @@ NestedMenuExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable paginator
@@ -3777,7 +3800,7 @@ PaginatorConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Paginator
@@ -3794,7 +3817,7 @@ PaginatorOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Buffer progress-bar
@@ -3811,7 +3834,7 @@ ProgressBarBufferExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable progress-bar
@@ -3834,7 +3857,7 @@ ProgressBarConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Determinate progress-bar
@@ -3851,7 +3874,7 @@ ProgressBarDeterminateExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Indeterminate progress-bar
@@ -3868,7 +3891,7 @@ ProgressBarIndeterminateExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Query progress-bar
@@ -3885,7 +3908,7 @@ ProgressBarQueryExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable progress spinner
@@ -3907,7 +3930,7 @@ ProgressSpinnerConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic progress-spinner
@@ -3924,7 +3947,7 @@ ProgressSpinnerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Radios with ngModel
@@ -3944,7 +3967,7 @@ RadioNgModelExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic radios
@@ -3961,7 +3984,7 @@ RadioOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title MatRipple basic usage
@@ -3983,7 +4006,7 @@ RippleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom trigger text
@@ -4004,7 +4027,7 @@ SelectCustomTriggerExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled select
@@ -4024,7 +4047,7 @@ SelectDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Error when invalid control is dirty, touched, or submitted.
@@ -4071,7 +4094,7 @@ SelectErrorStateMatcherExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select in a form
@@ -4100,7 +4123,7 @@ SelectFormExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with form field features
@@ -4127,7 +4150,7 @@ SelectHintErrorExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with multiple selection
@@ -4148,7 +4171,7 @@ SelectMultipleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with no option ripple
@@ -4165,7 +4188,7 @@ SelectNoRippleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with option groups
@@ -4219,7 +4242,7 @@ SelectOptgroupExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic select
@@ -4243,7 +4266,7 @@ SelectOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom panel styling
@@ -4266,7 +4289,7 @@ SelectPanelClassExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with reset option
@@ -4294,7 +4317,7 @@ SelectResetExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with 2-way value binding
@@ -4314,7 +4337,7 @@ SelectValueBindingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Autosize sidenav
@@ -4334,7 +4357,7 @@ SidenavAutosizeExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drawer with explicit backdrop setting
@@ -4351,7 +4374,7 @@ SidenavBackdropExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav with custom escape and backdrop click behavior
@@ -4383,7 +4406,7 @@ SidenavDisableCloseExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic drawer
@@ -4400,7 +4423,7 @@ SidenavDrawerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Fixed sidenav
@@ -4432,7 +4455,7 @@ SidenavFixedExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav with configurable mode
@@ -4453,7 +4476,7 @@ SidenavModeExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav open & close behavior
@@ -4474,7 +4497,7 @@ SidenavOpenCloseExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic sidenav
@@ -4494,7 +4517,7 @@ SidenavOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Implicit main content with two sidenavs
@@ -4514,7 +4537,7 @@ SidenavPositionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Responsive sidenav
@@ -4558,7 +4581,7 @@ SidenavResponsiveExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable slide-toggle
@@ -4580,7 +4603,7 @@ SlideToggleConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Slide-toggle with forms
@@ -4617,7 +4640,7 @@ SlideToggleFormsExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic slide-toggles
@@ -4634,7 +4657,7 @@ SlideToggleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable slider
@@ -4677,7 +4700,7 @@ SliderConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Slider with custom thumb label formatting.
@@ -4707,7 +4730,7 @@ SliderFormattingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic slider
@@ -4724,7 +4747,7 @@ SliderOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Snack-bar with a custom component
@@ -4771,7 +4794,7 @@ PizzaPartyComponent.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic snack-bar
@@ -4808,7 +4831,7 @@ SnackBarOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Snack-bar with configurable position
@@ -4846,7 +4869,7 @@ SnackBarPositionExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sorting overview
@@ -4908,7 +4931,7 @@ function compare(a, b, isAsc) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper with editable steps
@@ -4947,7 +4970,7 @@ StepperEditableExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const ɵ0$2 = { showError: true };
 /**
@@ -4989,7 +5012,7 @@ StepperErrorsExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper label bottom position
@@ -5027,7 +5050,7 @@ StepperLabelPositionBottomExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper with optional steps
@@ -5066,7 +5089,7 @@ StepperOptionalExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper overview
@@ -5105,7 +5128,7 @@ StepperOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const ɵ0$3 = { displayDefaultIndicatorType: false };
 /**
@@ -5147,7 +5170,7 @@ StepperStatesExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper vertical
@@ -5186,7 +5209,7 @@ StepperVerticalExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with aligned labels
@@ -5203,7 +5226,7 @@ TabGroupAlignExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group animations
@@ -5220,7 +5243,7 @@ TabGroupAnimationsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with asynchronously loading tab contents
@@ -5250,7 +5273,7 @@ TabGroupAsyncExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab group
@@ -5267,7 +5290,7 @@ TabGroupBasicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Using tabs with a custom label template
@@ -5284,7 +5307,7 @@ TabGroupCustomLabelExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tag group with dynamic height based on tab contents
@@ -5301,7 +5324,7 @@ TabGroupDynamicHeightExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with dynamically changing tabs
@@ -5339,7 +5362,7 @@ TabGroupDynamicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with the headers on the bottom
@@ -5356,7 +5379,7 @@ TabGroupHeaderBelowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group where the tab content is loaded lazily (when activated)
@@ -5386,7 +5409,7 @@ TabGroupLazyLoadedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with stretched labels
@@ -5403,7 +5426,7 @@ TabGroupStretchedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Customizing the theme options on the tab group
@@ -5420,7 +5443,7 @@ TabGroupThemeExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab nav bar
@@ -5448,7 +5471,7 @@ TabNavBarBasicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$2 = [
@@ -5482,7 +5505,7 @@ TableBasicFlexExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$3 = [
@@ -5516,7 +5539,7 @@ TableBasicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$4 = [
@@ -5566,6 +5589,7 @@ class TableDynamicColumnsExample {
             /** @type {?} */
             let randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex -= 1;
+            // Swap
             /** @type {?} */
             let temp = this.columnsToDisplay[currentIndex];
             this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
@@ -5583,7 +5607,7 @@ TableDynamicColumnsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with expandable rows
@@ -5598,7 +5622,7 @@ TableExpandableRowsExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-expandable-rows-example',
                 styles: ["table { width: 100%; } tr.example-detail-row { height: 0; } tr.example-element-row:not(.example-expanded-row):hover { background: #f5f5f5; } tr.example-element-row:not(.example-expanded-row):active { background: #efefef; } .example-element-row td { border-bottom-width: 0; } .example-element-detail { overflow: hidden; display: flex; } .example-element-diagram { min-width: 80px; border: 2px solid black; padding: 8px; font-weight: lighter; margin: 8px 0; height: 104px; } .example-element-symbol { font-weight: bold; font-size: 40px; line-height: normal; } .example-element-description { padding: 16px; } .example-element-description-attribution { opacity: 0.5; } "],
-                template: "<table mat-table [dataSource]=\"dataSource\" multiTemplateDataRows class=\"mat-elevation-z8\"><ng-container matColumnDef=\"{{column}}\" *ngFor=\"let column of columnsToDisplay\"><th mat-header-cell *matHeaderCellDef>{{column}}</th><td mat-cell *matCellDef=\"let element\">{{element[column]}}</td></ng-container><ng-container matColumnDef=\"expandedDetail\"><td mat-cell *matCellDef=\"let element\" [attr.colspan]=\"columnsToDisplay.length\"><div class=\"example-element-detail\" [@detailExpand]=\"element == expandedElement ? 'expanded' : 'collapsed'\"><div class=\"example-element-diagram\"><div class=\"example-element-position\">{{element.position}}</div><div class=\"example-element-symbol\">{{element.symbol}}</div><div class=\"example-element-name\">{{element.name}}</div><div class=\"example-element-weight\">{{element.weight}}</div></div><div class=\"example-element-description\">{{element.description}} <span class=\"example-element-description-attribution\">-- Wikipedia</span></div></div></td></ng-container><tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr><tr mat-row *matRowDef=\"let element; columns: columnsToDisplay;\" class=\"example-element-row\" [class.example-expanded-row]=\"expandedElement === element\" (click)=\"expandedElement = element\"></tr><tr mat-row *matRowDef=\"let row; columns: ['expandedDetail']\" class=\"example-detail-row\"></tr></table>",
+                template: "<table mat-table [dataSource]=\"dataSource\" multiTemplateDataRows class=\"mat-elevation-z8\"><ng-container matColumnDef=\"{{column}}\" *ngFor=\"let column of columnsToDisplay\"><th mat-header-cell *matHeaderCellDef>{{column}}</th><td mat-cell *matCellDef=\"let element\">{{element[column]}}</td></ng-container><ng-container matColumnDef=\"expandedDetail\"><td mat-cell *matCellDef=\"let element\" [attr.colspan]=\"columnsToDisplay.length\"><div class=\"example-element-detail\" [@detailExpand]=\"element == expandedElement ? 'expanded' : 'collapsed'\"><div class=\"example-element-diagram\"><div class=\"example-element-position\">{{element.position}}</div><div class=\"example-element-symbol\">{{element.symbol}}</div><div class=\"example-element-name\">{{element.name}}</div><div class=\"example-element-weight\">{{element.weight}}</div></div><div class=\"example-element-description\">{{element.description}} <span class=\"example-element-description-attribution\">-- Wikipedia</span></div></div></td></ng-container><tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr><tr mat-row *matRowDef=\"let element; columns: columnsToDisplay;\" class=\"example-element-row\" [class.example-expanded-row]=\"expandedElement === element\" (click)=\"expandedElement = expandedElement === element ? null : element\"></tr><tr mat-row *matRowDef=\"let row; columns: ['expandedDetail']\" class=\"example-detail-row\"></tr></table>",
                 animations: [
                     trigger('detailExpand', [
                         state('collapsed', style({ height: '0px', minHeight: '0', display: 'none' })),
@@ -5693,7 +5717,7 @@ const ELEMENT_DATA$5 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$6 = [
@@ -5734,7 +5758,7 @@ TableFilteringExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Footer row table
@@ -5769,7 +5793,7 @@ TableFooterRowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table retrieving data through HTTP
@@ -5796,7 +5820,7 @@ class TableHttpExample {
         merge(this.sort.sortChange, this.paginator.page)
             .pipe(startWith({}), switchMap(() => {
             this.isLoadingResults = true;
-            return /** @type {?} */ ((this.exampleDatabase)).getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
+            return (/** @type {?} */ (this.exampleDatabase)).getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
         }), map(data => {
             // Flip flag to show that loading has finished.
             this.isLoadingResults = false;
@@ -5853,7 +5877,7 @@ class ExampleHttpDao {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with multiple header and footer rows
@@ -5888,11 +5912,12 @@ TableMultipleHeaderFooterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-/** *
+/**
  * Constants used to fill up our data base.
-  @type {?} */
+ * @type {?}
+ */
 const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
 /** @type {?} */
@@ -5905,6 +5930,7 @@ const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
 class TableOverviewExample {
     constructor() {
         this.displayedColumns = ['id', 'name', 'progress', 'color'];
+        // Create 100 users
         /** @type {?} */
         const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
         // Assign the data to the data source for the table to render
@@ -5960,7 +5986,7 @@ function createNewUser(id) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with pagination
@@ -6013,7 +6039,7 @@ const ELEMENT_DATA$7 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table showing each row context properties.
@@ -6034,7 +6060,7 @@ TableRowContextExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$8 = [
@@ -6089,7 +6115,7 @@ TableSelectionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$9 = [
@@ -6199,7 +6225,7 @@ class SimpleColumn {
      * @return {?}
      */
     getData(data) {
-        return this.dataAccessor ? this.dataAccessor(data, this.name) : (/** @type {?} */ (data))[this.name];
+        return this.dataAccessor ? this.dataAccessor(data, this.name) : ((/** @type {?} */ (data)))[this.name];
     }
 }
 SimpleColumn.decorators = [
@@ -6233,7 +6259,7 @@ SimpleColumn.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$10 = [
@@ -6276,7 +6302,7 @@ TableSortingExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with a sticky columns
@@ -6310,7 +6336,7 @@ const ELEMENT_DATA$11 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Flex-layout tables with toggle-able sticky headers, footers, and columns
@@ -6363,7 +6389,7 @@ const ELEMENT_DATA$12 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tables with toggle-able sticky headers, footers, and columns
@@ -6416,7 +6442,7 @@ const ELEMENT_DATA$13 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with a sticky footer
@@ -6451,7 +6477,7 @@ TableStickyFooterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with sticky header
@@ -6485,7 +6511,7 @@ const ELEMENT_DATA$14 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$15 = [
@@ -6562,7 +6588,7 @@ WrapperTable.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring autofill state with cdkAutofill
@@ -6579,7 +6605,7 @@ TextFieldAutofillDirectiveExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring autofill state with AutofillMonitor
@@ -6626,7 +6652,7 @@ TextFieldAutofillMonitorExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Auto-resizing textarea
@@ -6664,7 +6690,7 @@ TextFieldAutosizeTextareaExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Multi-row toolbar
@@ -6681,7 +6707,7 @@ ToolbarMultirowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic toolbar
@@ -6698,7 +6724,7 @@ ToolbarOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
@@ -6719,7 +6745,7 @@ TooltipAutoHideExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can have a custom class applied.
@@ -6739,7 +6765,7 @@ TooltipCustomClassExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a show and hide delay
@@ -6760,7 +6786,7 @@ TooltipDelayExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can be disabled
@@ -6780,7 +6806,7 @@ TooltipDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can be manually shown/hidden.
@@ -6797,7 +6823,7 @@ TooltipManualExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a changing message
@@ -6817,11 +6843,12 @@ TooltipMessageExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-/** *
+/**
  * Custom options the configure the tooltip's default show/hide delays.
-  @type {?} */
+ * @type {?}
+ */
 const myCustomTooltipDefaults = {
     showDelay: 1000,
     hideDelay: 1000,
@@ -6845,7 +6872,7 @@ TooltipModifiedDefaultsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic tooltip
@@ -6862,7 +6889,7 @@ TooltipOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a custom position
@@ -6883,7 +6910,7 @@ TooltipPositionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Node for to-do item
@@ -6895,9 +6922,10 @@ class TodoItemNode {
  */
 class TodoItemFlatNode {
 }
-/** *
+/**
  * The Json object for to-do list data.
-  @type {?} */
+ * @type {?}
+ */
 const TREE_DATA$2 = {
     Groceries: {
         'Almond Meal flour': null,
@@ -6933,6 +6961,8 @@ class ChecklistDatabase {
      * @return {?}
      */
     initialize() {
+        // Build the tree nodes from Json object. The result is a list of `TodoItemNode` with nested
+        //     file node as children.
         /** @type {?} */
         const data = this.buildFileTree(TREE_DATA$2, 0);
         // Notify the change.
@@ -6971,7 +7001,7 @@ class ChecklistDatabase {
      */
     insertItem(parent, name) {
         if (parent.children) {
-            parent.children.push(/** @type {?} */ ({ item: name }));
+            parent.children.push((/** @type {?} */ ({ item: name })));
             this.dataChange.next(this.data);
         }
     }
@@ -7097,6 +7127,7 @@ class TreeChecklistExample {
         this.checklistSelection.toggle(node);
         this.checkAllParentsSelection(node);
     }
+    /* Checks all the parents when a leaf node is selected/unselected */
     /**
      * @param {?} node
      * @return {?}
@@ -7128,6 +7159,7 @@ class TreeChecklistExample {
             this.checklistSelection.select(node);
         }
     }
+    /* Get the parent node of a node */
     /**
      * @param {?} node
      * @return {?}
@@ -7157,7 +7189,7 @@ class TreeChecklistExample {
     addNewItem(node) {
         /** @type {?} */
         const parentNode = this.flatNodeMap.get(node);
-        this.database.insertItem(/** @type {?} */ ((parentNode)), '');
+        this.database.insertItem((/** @type {?} */ (parentNode)), '');
         this.treeControl.expand(node);
     }
     /**
@@ -7169,7 +7201,7 @@ class TreeChecklistExample {
     saveNode(node, itemValue) {
         /** @type {?} */
         const nestedNode = this.flatNodeMap.get(node);
-        this.database.updateItem(/** @type {?} */ ((nestedNode)), itemValue);
+        this.database.updateItem((/** @type {?} */ (nestedNode)), itemValue);
     }
 }
 TreeChecklistExample.decorators = [
@@ -7187,7 +7219,7 @@ TreeChecklistExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Flat node with expandable and level information
@@ -7277,9 +7309,9 @@ class DynamicDataSource {
      */
     connect(collectionViewer) {
         this.treeControl.expansionModel.onChange.subscribe(change => {
-            if ((/** @type {?} */ (change)).added ||
-                (/** @type {?} */ (change)).removed) {
-                this.handleTreeControl(/** @type {?} */ (change));
+            if (((/** @type {?} */ (change))).added ||
+                ((/** @type {?} */ (change))).removed) {
+                this.handleTreeControl((/** @type {?} */ (change)));
             }
         });
         return merge(collectionViewer.viewChange, this.dataChange).pipe(map(() => this.data));
@@ -7309,7 +7341,6 @@ class DynamicDataSource {
         /** @type {?} */
         const index = this.data.indexOf(node);
         if (!children || index < 0) { // If no children, or cannot find the node, no op
-            // If no children, or cannot find the node, no op
             return;
         }
         node.isLoading = true;
@@ -7371,7 +7402,7 @@ TreeDynamicExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * File node data with nested structure.
@@ -7396,9 +7427,10 @@ let FileFlatNode$1 = class FileFlatNode {
         this.type = type;
     }
 };
-/** *
+/**
  * The file structure tree data in string. The data could be parsed into a Json object
-  @type {?} */
+ * @type {?}
+ */
 const TREE_DATA$3 = JSON.stringify({
     Applications: {
         Calendar: 'app',
@@ -7454,8 +7486,11 @@ let FileDatabase$2 = class FileDatabase {
      * @return {?}
      */
     initialize() {
+        // Parse the string to json object.
         /** @type {?} */
         const dataObject = JSON.parse(TREE_DATA$3);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
         /** @type {?} */
         const data = this.buildFileTree(dataObject, 0);
         // Notify the change.
@@ -7528,7 +7563,7 @@ TreeFlatOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const LOAD_MORE = 'LOAD_MORE';
@@ -7610,14 +7645,14 @@ class LoadmoreDatabase {
             return;
         }
         /** @type {?} */
-        const parent = /** @type {?} */ ((this.nodeMap.get(item)));
+        const parent = (/** @type {?} */ (this.nodeMap.get(item)));
         /** @type {?} */
-        const children = /** @type {?} */ ((this.dataMap.get(item)));
-        if (onlyFirstTime && /** @type {?} */ ((parent.children)).length > 0) {
+        const children = (/** @type {?} */ (this.dataMap.get(item)));
+        if (onlyFirstTime && (/** @type {?} */ (parent.children)).length > 0) {
             return;
         }
         /** @type {?} */
-        const newChildrenNumber = /** @type {?} */ ((parent.children)).length + this.batchNumber;
+        const newChildrenNumber = (/** @type {?} */ (parent.children)).length + this.batchNumber;
         /** @type {?} */
         const nodes = children.slice(0, newChildrenNumber)
             .map(name => this._generateNode(name));
@@ -7629,12 +7664,13 @@ class LoadmoreDatabase {
         this.dataChange.next(this.dataChange.value);
     }
     /**
+     * @private
      * @param {?} item
      * @return {?}
      */
     _generateNode(item) {
         if (this.nodeMap.has(item)) {
-            return /** @type {?} */ ((this.nodeMap.get(item)));
+            return (/** @type {?} */ (this.nodeMap.get(item)));
         }
         /** @type {?} */
         const result = new LoadmoreNode(item, this.dataMap.has(item));
@@ -7710,16 +7746,17 @@ TreeLoadmoreExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
  */
 let FileNode$3 = class FileNode {
 };
-/** *
+/**
  * The Json tree data in string. The data could be parsed into Json object
-  @type {?} */
+ * @type {?}
+ */
 const TREE_DATA$4 = JSON.stringify({
     Applications: {
         Calendar: 'app',
@@ -7775,8 +7812,11 @@ let FileDatabase$3 = class FileDatabase {
      * @return {?}
      */
     initialize() {
+        // Parse the string to json object.
         /** @type {?} */
         const dataObject = JSON.parse(TREE_DATA$4);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
         /** @type {?} */
         const data = this.buildFileTree(dataObject, 0);
         // Notify the change.
@@ -7843,12 +7883,1448 @@ TreeNestedOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const EXAMPLE_COMPONENTS = { "autocomplete-auto-active-first-option": { "title": "Highlight the first autocomplete option", "component": AutocompleteAutoActiveFirstOptionExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-display": { "title": "Display value autocomplete", "component": AutocompleteDisplayExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-filter": { "title": "Filter autocomplete", "component": AutocompleteFilterExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-optgroup": { "title": "Option groups autocomplete", "component": AutocompleteOptgroupExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-overview": { "title": "Autocomplete overview", "component": AutocompleteOverviewExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-simple": { "title": "Simple autocomplete", "component": AutocompleteSimpleExample, "additionalFiles": [], "selectorName": "" }, "badge-overview": { "title": "Badge overview", "component": BadgeOverviewExample, "additionalFiles": [], "selectorName": "" }, "bottom-sheet-overview": { "title": "Bottom Sheet Overview", "component": BottomSheetOverviewExample, "additionalFiles": ["bottom-sheet-overview-example-sheet.html"], "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet" }, "button-overview": { "title": "Basic buttons", "component": ButtonOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-appearance": { "title": "Button toggle appearance", "component": ButtonToggleAppearanceExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-exclusive": { "title": "Exclusive selection", "component": ButtonToggleExclusiveExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-overview": { "title": "Basic button-toggles", "component": ButtonToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-types": { "title": "Button varieties", "component": ButtonTypesExample, "additionalFiles": [], "selectorName": "" }, "card-fancy": { "title": "Card with multiple sections", "component": CardFancyExample, "additionalFiles": [], "selectorName": "" }, "card-overview": { "title": "Basic cards", "component": CardOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-axis-lock": { "title": "Drag&Drop position locking", "component": CdkDragDropAxisLockExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting": { "title": "Drag&Drop connected sorting", "component": CdkDragDropConnectedSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-placeholder": { "title": "Drag&Drop custom placeholer", "component": CdkDragDropCustomPlaceholderExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-preview": { "title": "Drag&Drop custom preview", "component": CdkDragDropCustomPreviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled": { "title": "Drag&Drop disabled", "component": CdkDragDropDisabledExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-enter-predicate": { "title": "Drag&Drop enter predicate", "component": CdkDragDropEnterPredicateExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-handle": { "title": "Drag&Drop with a handle", "component": CdkDragDropHandleExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-horizontal-sorting": { "title": "Drag&Drop horizontal sorting", "component": CdkDragDropHorizontalSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-overview": { "title": "Basic Drag&Drop", "component": CdkDragDropOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-root-element": { "title": "Drag&Drop with alternate root element", "component": CdkDragDropRootElementExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-sorting": { "title": "Drag&Drop sorting", "component": CdkDragDropSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-platform-overview": { "title": "Platform overview", "component": CdkPlatformOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic-flex": { "title": "Basic use of `<cdk-table>` (uses display flex)", "component": CdkTableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic": { "title": "Basic CDK data-table", "component": CdkTableBasicExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-flat": { "title": "Tree with flat nodes", "component": CdkTreeFlatExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-nested": { "title": "Tree with nested nodes", "component": CdkTreeNestedExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-context": { "title": "Virtual scroll context variables", "component": CdkVirtualScrollContextExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-custom-strategy": { "title": "Virtual scroll with a custom strategy", "component": CdkVirtualScrollCustomStrategyExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-data-source": { "title": "Virtual scroll with a custom data source", "component": CdkVirtualScrollDataSourceExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-dl": { "title": "Virtual scrolling `<dl>`", "component": CdkVirtualScrollDlExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-fixed-buffer": { "title": "Fixed size virtual scroll with custom buffer parameters", "component": CdkVirtualScrollFixedBufferExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-horizontal": { "title": "Horizontal virtual scroll", "component": CdkVirtualScrollHorizontalExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-overview": { "title": "Basic virtual scroll", "component": CdkVirtualScrollOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-template-cache": { "title": "Virtual scroll with no template caching", "component": CdkVirtualScrollTemplateCacheExample, "additionalFiles": [], "selectorName": "" }, "checkbox-configurable": { "title": "Configurable checkbox", "component": CheckboxConfigurableExample, "additionalFiles": [], "selectorName": "" }, "checkbox-overview": { "title": "Basic checkboxes", "component": CheckboxOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-autocomplete": { "title": "Chips Autocomplete", "component": ChipsAutocompleteExample, "additionalFiles": [], "selectorName": "" }, "chips-input": { "title": "Chips with input", "component": ChipsInputExample, "additionalFiles": [], "selectorName": "" }, "chips-overview": { "title": "Basic chips", "component": ChipsOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-stacked": { "title": "Stacked chips", "component": ChipsStackedExample, "additionalFiles": [], "selectorName": "" }, "datepicker-api": { "title": "Datepicker open method", "component": DatepickerApiExample, "additionalFiles": [], "selectorName": "" }, "datepicker-color": { "title": "Datepicker palette colors", "component": DatepickerColorExample, "additionalFiles": [], "selectorName": "" }, "datepicker-custom-header": { "title": "Datepicker with custom calendar header", "component": DatepickerCustomHeaderExample, "additionalFiles": [], "selectorName": "DatepickerCustomHeaderExample, ExampleHeader" }, "datepicker-custom-icon": { "title": "Datepicker with custom icon", "component": DatepickerCustomIconExample, "additionalFiles": [], "selectorName": "" }, "datepicker-date-class": { "title": "Datepicker with custom date classes", "component": DatepickerDateClassExample, "additionalFiles": [], "selectorName": "" }, "datepicker-disabled": { "title": "Disabled datepicker", "component": DatepickerDisabledExample, "additionalFiles": [], "selectorName": "" }, "datepicker-events": { "title": "Datepicker input and change events", "component": DatepickerEventsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-filter": { "title": "Datepicker with filter validation", "component": DatepickerFilterExample, "additionalFiles": [], "selectorName": "" }, "datepicker-formats": { "title": "Datepicker with custom formats", "component": DatepickerFormatsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-locale": { "title": "Datepicker with different locale", "component": DatepickerLocaleExample, "additionalFiles": [], "selectorName": "" }, "datepicker-min-max": { "title": "Datepicker with min & max validation", "component": DatepickerMinMaxExample, "additionalFiles": [], "selectorName": "" }, "datepicker-moment": { "title": "Datepicker that uses Moment.js dates", "component": DatepickerMomentExample, "additionalFiles": [], "selectorName": "" }, "datepicker-overview": { "title": "Basic datepicker", "component": DatepickerOverviewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-start-view": { "title": "Datepicker start date", "component": DatepickerStartViewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-touch": { "title": "Datepicker touch UI", "component": DatepickerTouchExample, "additionalFiles": [], "selectorName": "" }, "datepicker-value": { "title": "Datepicker selected value", "component": DatepickerValueExample, "additionalFiles": [], "selectorName": "" }, "datepicker-views-selection": { "title": "Datepicker emulating a Year and month picker", "component": DatepickerViewsSelectionExample, "additionalFiles": [], "selectorName": "" }, "dialog-content": { "title": "Dialog with header, scrollable content and actions", "component": DialogContentExample, "additionalFiles": ["dialog-content-example-dialog.html"], "selectorName": "DialogContentExample, DialogContentExampleDialog" }, "dialog-data": { "title": "Injecting data when opening a dialog", "component": DialogDataExample, "additionalFiles": ["dialog-data-example-dialog.html"], "selectorName": "DialogDataExample, DialogDataExampleDialog" }, "dialog-elements": { "title": "Dialog elements", "component": DialogElementsExample, "additionalFiles": ["dialog-elements-example-dialog.html"], "selectorName": "DialogElementsExample, DialogElementsExampleDialog" }, "dialog-overview": { "title": "Dialog Overview", "component": DialogOverviewExample, "additionalFiles": ["dialog-overview-example-dialog.html"], "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog" }, "divider-overview": { "title": "Basic divider", "component": DividerOverviewExample, "additionalFiles": [], "selectorName": "" }, "elevation-overview": { "title": "Elevation CSS classes", "component": ElevationOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-expand-collapse-all": { "title": "Accordion with expand/collapse all toggles", "component": ExpansionExpandCollapseAllExample, "additionalFiles": [], "selectorName": "" }, "expansion-overview": { "title": "Basic expansion panel", "component": ExpansionOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-steps": { "title": "Expansion panel as accordion", "component": ExpansionStepsExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-directives": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorDirectivesExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-focus-via": { "title": "Focusing with a specific FocusOrigin", "component": FocusMonitorFocusViaExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-overview": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-appearance": { "title": "Form field appearance variants", "component": FormFieldAppearanceExample, "additionalFiles": [], "selectorName": "" }, "form-field-custom-control": { "title": "Form field with custom telephone number input control.", "component": FormFieldCustomControlExample, "additionalFiles": ["example-tel-input-example.html", "example-tel-input-example.css"], "selectorName": "FormFieldCustomControlExample, MyTelInput" }, "form-field-error": { "title": "Form field with error messages", "component": FormFieldErrorExample, "additionalFiles": [], "selectorName": "" }, "form-field-hint": { "title": "Form field with hints", "component": FormFieldHintExample, "additionalFiles": [], "selectorName": "" }, "form-field-label": { "title": "Form field with label", "component": FormFieldLabelExample, "additionalFiles": [], "selectorName": "" }, "form-field-overview": { "title": "Simple form field", "component": FormFieldOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-prefix-suffix": { "title": "Form field with prefix & suffix", "component": FormFieldPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "form-field-theming": { "title": "Form field theming", "component": FormFieldThemingExample, "additionalFiles": [], "selectorName": "" }, "grid-list-dynamic": { "title": "Dynamic grid-list", "component": GridListDynamicExample, "additionalFiles": [], "selectorName": "" }, "grid-list-overview": { "title": "Basic grid-list", "component": GridListOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-overview": { "title": "Basic icons", "component": IconOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-svg": { "title": "SVG icons", "component": IconSvgExample, "additionalFiles": [], "selectorName": "" }, "input-clearable": { "title": "Input with a clear button", "component": InputClearableExample, "additionalFiles": [], "selectorName": "" }, "input-error-state-matcher": { "title": "Input with a custom ErrorStateMatcher", "component": InputErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "input-errors": { "title": "Input with error messages", "component": InputErrorsExample, "additionalFiles": [], "selectorName": "" }, "input-form": { "title": "Inputs in a form", "component": InputFormExample, "additionalFiles": [], "selectorName": "" }, "input-hint": { "title": "Input with hints", "component": InputHintExample, "additionalFiles": [], "selectorName": "" }, "input-overview": { "title": "Basic Inputs", "component": InputOverviewExample, "additionalFiles": [], "selectorName": "" }, "input-prefix-suffix": { "title": "Inputs with prefixes and suffixes", "component": InputPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "list-overview": { "title": "Basic list", "component": ListOverviewExample, "additionalFiles": [], "selectorName": "" }, "list-sections": { "title": "List with sections", "component": ListSectionsExample, "additionalFiles": [], "selectorName": "" }, "list-selection": { "title": "List with selection", "component": ListSelectionExample, "additionalFiles": [], "selectorName": "" }, "menu-icons": { "title": "Menu with icons", "component": MenuIconsExample, "additionalFiles": [], "selectorName": "" }, "menu-overview": { "title": "Basic menu", "component": MenuOverviewExample, "additionalFiles": [], "selectorName": "" }, "nested-menu": { "title": "Nested menu", "component": NestedMenuExample, "additionalFiles": [], "selectorName": "" }, "paginator-configurable": { "title": "Configurable paginator", "component": PaginatorConfigurableExample, "additionalFiles": [], "selectorName": "" }, "paginator-overview": { "title": "Paginator", "component": PaginatorOverviewExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-buffer": { "title": "Buffer progress-bar", "component": ProgressBarBufferExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-configurable": { "title": "Configurable progress-bar", "component": ProgressBarConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-determinate": { "title": "Determinate progress-bar", "component": ProgressBarDeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-indeterminate": { "title": "Indeterminate progress-bar", "component": ProgressBarIndeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-query": { "title": "Query progress-bar", "component": ProgressBarQueryExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-configurable": { "title": "Configurable progress spinner", "component": ProgressSpinnerConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-overview": { "title": "Basic progress-spinner", "component": ProgressSpinnerOverviewExample, "additionalFiles": [], "selectorName": "" }, "radio-ng-model": { "title": "Radios with ngModel", "component": RadioNgModelExample, "additionalFiles": [], "selectorName": "" }, "radio-overview": { "title": "Basic radios", "component": RadioOverviewExample, "additionalFiles": [], "selectorName": "" }, "ripple-overview": { "title": "MatRipple basic usage", "component": RippleOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-custom-trigger": { "title": "Select with custom trigger text", "component": SelectCustomTriggerExample, "additionalFiles": [], "selectorName": "" }, "select-disabled": { "title": "Disabled select", "component": SelectDisabledExample, "additionalFiles": [], "selectorName": "" }, "select-error-state-matcher": { "title": "Select with a custom ErrorStateMatcher", "component": SelectErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "select-form": { "title": "Select in a form", "component": SelectFormExample, "additionalFiles": [], "selectorName": "" }, "select-hint-error": { "title": "Select with form field features", "component": SelectHintErrorExample, "additionalFiles": [], "selectorName": "" }, "select-multiple": { "title": "Select with multiple selection", "component": SelectMultipleExample, "additionalFiles": [], "selectorName": "" }, "select-no-ripple": { "title": "Select with no option ripple", "component": SelectNoRippleExample, "additionalFiles": [], "selectorName": "" }, "select-optgroup": { "title": "Select with option groups", "component": SelectOptgroupExample, "additionalFiles": [], "selectorName": "" }, "select-overview": { "title": "Basic select", "component": SelectOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-panel-class": { "title": "Select with custom panel styling", "component": SelectPanelClassExample, "additionalFiles": [], "selectorName": "" }, "select-reset": { "title": "Select with reset option", "component": SelectResetExample, "additionalFiles": [], "selectorName": "" }, "select-value-binding": { "title": "Select with 2-way value binding", "component": SelectValueBindingExample, "additionalFiles": [], "selectorName": "" }, "sidenav-autosize": { "title": "Autosize sidenav", "component": SidenavAutosizeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-backdrop": { "title": "Drawer with explicit backdrop setting", "component": SidenavBackdropExample, "additionalFiles": [], "selectorName": "" }, "sidenav-disable-close": { "title": "Sidenav with custom escape and backdrop click behavior", "component": SidenavDisableCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-drawer-overview": { "title": "Basic drawer", "component": SidenavDrawerOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-fixed": { "title": "Fixed sidenav", "component": SidenavFixedExample, "additionalFiles": [], "selectorName": "" }, "sidenav-mode": { "title": "Sidenav with configurable mode", "component": SidenavModeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-open-close": { "title": "Sidenav open & close behavior", "component": SidenavOpenCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-overview": { "title": "Basic sidenav", "component": SidenavOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-position": { "title": "Implicit main content with two sidenavs", "component": SidenavPositionExample, "additionalFiles": [], "selectorName": "" }, "sidenav-responsive": { "title": "Responsive sidenav", "component": SidenavResponsiveExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-configurable": { "title": "Configurable slide-toggle", "component": SlideToggleConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-forms": { "title": "Slide-toggle with forms", "component": SlideToggleFormsExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-overview": { "title": "Basic slide-toggles", "component": SlideToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "slider-configurable": { "title": "Configurable slider", "component": SliderConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slider-formatting": { "title": "Slider with custom thumb label formatting.", "component": SliderFormattingExample, "additionalFiles": [], "selectorName": "" }, "slider-overview": { "title": "Basic slider", "component": SliderOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-component": { "title": "Snack-bar with a custom component", "component": SnackBarComponentExample, "additionalFiles": ["snack-bar-component-example-snack.html"], "selectorName": "SnackBarComponentExample, PizzaPartyComponent" }, "snack-bar-overview": { "title": "Basic snack-bar", "component": SnackBarOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-position": { "title": "Snack-bar with configurable position", "component": SnackBarPositionExample, "additionalFiles": [], "selectorName": "" }, "sort-overview": { "title": "Sorting overview", "component": SortOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-editable": { "title": "Stepper with editable steps", "component": StepperEditableExample, "additionalFiles": [], "selectorName": "" }, "stepper-errors": { "title": "Stepper that displays errors in the steps", "component": StepperErrorsExample, "additionalFiles": [], "selectorName": "" }, "stepper-label-position-bottom": { "title": "Stepper label bottom position", "component": StepperLabelPositionBottomExample, "additionalFiles": [], "selectorName": "" }, "stepper-optional": { "title": "Stepper with optional steps", "component": StepperOptionalExample, "additionalFiles": [], "selectorName": "" }, "stepper-overview": { "title": "Stepper overview", "component": StepperOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-states": { "title": "Stepper with customized states", "component": StepperStatesExample, "additionalFiles": [], "selectorName": "" }, "stepper-vertical": { "title": "Stepper vertical", "component": StepperVerticalExample, "additionalFiles": [], "selectorName": "" }, "tab-group-align": { "title": "Tab group with aligned labels", "component": TabGroupAlignExample, "additionalFiles": [], "selectorName": "" }, "tab-group-animations": { "title": "Tab group animations", "component": TabGroupAnimationsExample, "additionalFiles": [], "selectorName": "" }, "tab-group-async": { "title": "Tab group with asynchronously loading tab contents", "component": TabGroupAsyncExample, "additionalFiles": [], "selectorName": "" }, "tab-group-basic": { "title": "Basic use of the tab group", "component": TabGroupBasicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-custom-label": { "title": "Using tabs with a custom label template", "component": TabGroupCustomLabelExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic-height": { "title": "Tag group with dynamic height based on tab contents", "component": TabGroupDynamicHeightExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic": { "title": "Tab group with dynamically changing tabs", "component": TabGroupDynamicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-header-below": { "title": "Tab group with the headers on the bottom", "component": TabGroupHeaderBelowExample, "additionalFiles": [], "selectorName": "" }, "tab-group-lazy-loaded": { "title": "Tab group where the tab content is loaded lazily (when activated)", "component": TabGroupLazyLoadedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-stretched": { "title": "Tab group with stretched labels", "component": TabGroupStretchedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-theme": { "title": "Customizing the theme options on the tab group", "component": TabGroupThemeExample, "additionalFiles": [], "selectorName": "" }, "tab-nav-bar-basic": { "title": "Basic use of the tab nav bar", "component": TabNavBarBasicExample, "additionalFiles": [], "selectorName": "" }, "table-basic-flex": { "title": "Basic use of `<mat-table>` (uses display flex)", "component": TableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "table-basic": { "title": "Basic use of `<table mat-table>`", "component": TableBasicExample, "additionalFiles": [], "selectorName": "" }, "table-dynamic-columns": { "title": "Table dynamically changing the columns displayed", "component": TableDynamicColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-expandable-rows": { "title": "Table with expandable rows", "component": TableExpandableRowsExample, "additionalFiles": [], "selectorName": "" }, "table-filtering": { "title": "Table with filtering", "component": TableFilteringExample, "additionalFiles": [], "selectorName": "" }, "table-footer-row": { "title": "Footer row table", "component": TableFooterRowExample, "additionalFiles": [], "selectorName": "" }, "table-http": { "title": "Table retrieving data through HTTP", "component": TableHttpExample, "additionalFiles": [], "selectorName": "" }, "table-multiple-header-footer": { "title": "Table with multiple header and footer rows", "component": TableMultipleHeaderFooterExample, "additionalFiles": [], "selectorName": "" }, "table-overview": { "title": "Data table with sorting, pagination, and filtering.", "component": TableOverviewExample, "additionalFiles": [], "selectorName": "" }, "table-pagination": { "title": "Table with pagination", "component": TablePaginationExample, "additionalFiles": [], "selectorName": "" }, "table-row-context": { "title": "Table showing each row context properties.", "component": TableRowContextExample, "additionalFiles": [], "selectorName": "" }, "table-selection": { "title": "Table with selection", "component": TableSelectionExample, "additionalFiles": [], "selectorName": "" }, "table-simple-column": { "title": "Table with a custom column component for easy column definition reuse.", "component": TableSimpleColumnExample, "additionalFiles": [], "selectorName": "TableSimpleColumnExample, SimpleColumn" }, "table-sorting": { "title": "Table with sorting", "component": TableSortingExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-columns": { "title": "Table with a sticky columns", "component": TableStickyColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex-flex": { "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexFlexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex": { "title": "Tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-footer": { "title": "Table with a sticky footer", "component": TableStickyFooterExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-header": { "title": "Table with sticky header", "component": TableStickyHeaderExample, "additionalFiles": [], "selectorName": "" }, "table-wrapped": { "title": "Table example that shows how to wrap a table component for definition and behavior reuse.", "component": TableWrappedExample, "additionalFiles": ["wrapper-table.html"], "selectorName": "TableWrappedExample, WrapperTable" }, "text-field-autofill-directive": { "title": "Monitoring autofill state with cdkAutofill", "component": TextFieldAutofillDirectiveExample, "additionalFiles": [], "selectorName": "" }, "text-field-autofill-monitor": { "title": "Monitoring autofill state with AutofillMonitor", "component": TextFieldAutofillMonitorExample, "additionalFiles": [], "selectorName": "" }, "text-field-autosize-textarea": { "title": "Auto-resizing textarea", "component": TextFieldAutosizeTextareaExample, "additionalFiles": [], "selectorName": "" }, "toolbar-multirow": { "title": "Multi-row toolbar", "component": ToolbarMultirowExample, "additionalFiles": [], "selectorName": "" }, "toolbar-overview": { "title": "Basic toolbar", "component": ToolbarOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-auto-hide": { "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.", "component": TooltipAutoHideExample, "additionalFiles": [], "selectorName": "" }, "tooltip-custom-class": { "title": "Tooltip that can have a custom class applied.", "component": TooltipCustomClassExample, "additionalFiles": [], "selectorName": "" }, "tooltip-delay": { "title": "Tooltip with a show and hide delay", "component": TooltipDelayExample, "additionalFiles": [], "selectorName": "" }, "tooltip-disabled": { "title": "Tooltip that can be disabled", "component": TooltipDisabledExample, "additionalFiles": [], "selectorName": "" }, "tooltip-manual": { "title": "Tooltip that can be manually shown/hidden.", "component": TooltipManualExample, "additionalFiles": [], "selectorName": "" }, "tooltip-message": { "title": "Tooltip with a changing message", "component": TooltipMessageExample, "additionalFiles": [], "selectorName": "" }, "tooltip-modified-defaults": { "title": "Tooltip with a show and hide delay", "component": TooltipModifiedDefaultsExample, "additionalFiles": [], "selectorName": "" }, "tooltip-overview": { "title": "Basic tooltip", "component": TooltipOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-position": { "title": "Tooltip with a custom position", "component": TooltipPositionExample, "additionalFiles": [], "selectorName": "" }, "tree-checklist": { "title": "Tree with checkboxes", "component": TreeChecklistExample, "additionalFiles": [], "selectorName": "" }, "tree-dynamic": { "title": "Tree with dynamic data", "component": TreeDynamicExample, "additionalFiles": [], "selectorName": "" }, "tree-flat-overview": { "title": "Tree with flat nodes", "component": TreeFlatOverviewExample, "additionalFiles": [], "selectorName": "" }, "tree-loadmore": { "title": "Tree with partially loaded data", "component": TreeLoadmoreExample, "additionalFiles": [], "selectorName": "" }, "tree-nested-overview": { "title": "Tree with nested nodes", "component": TreeNestedOverviewExample, "additionalFiles": [], "selectorName": "" } };
+const EXAMPLE_COMPONENTS = {
+    "autocomplete-auto-active-first-option": {
+        "title": "Highlight the first autocomplete option",
+        "component": AutocompleteAutoActiveFirstOptionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "autocomplete-display": {
+        "title": "Display value autocomplete",
+        "component": AutocompleteDisplayExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "autocomplete-filter": {
+        "title": "Filter autocomplete",
+        "component": AutocompleteFilterExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "autocomplete-optgroup": {
+        "title": "Option groups autocomplete",
+        "component": AutocompleteOptgroupExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "autocomplete-overview": {
+        "title": "Autocomplete overview",
+        "component": AutocompleteOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "autocomplete-simple": {
+        "title": "Simple autocomplete",
+        "component": AutocompleteSimpleExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "badge-overview": {
+        "title": "Badge overview",
+        "component": BadgeOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "bottom-sheet-overview": {
+        "title": "Bottom Sheet Overview",
+        "component": BottomSheetOverviewExample,
+        "additionalFiles": [
+            "bottom-sheet-overview-example-sheet.html"
+        ],
+        "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet"
+    },
+    "button-overview": {
+        "title": "Basic buttons",
+        "component": ButtonOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "button-toggle-appearance": {
+        "title": "Button toggle appearance",
+        "component": ButtonToggleAppearanceExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "button-toggle-exclusive": {
+        "title": "Exclusive selection",
+        "component": ButtonToggleExclusiveExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "button-toggle-overview": {
+        "title": "Basic button-toggles",
+        "component": ButtonToggleOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "button-types": {
+        "title": "Button varieties",
+        "component": ButtonTypesExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "card-fancy": {
+        "title": "Card with multiple sections",
+        "component": CardFancyExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "card-overview": {
+        "title": "Basic cards",
+        "component": CardOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-axis-lock": {
+        "title": "Drag&Drop position locking",
+        "component": CdkDragDropAxisLockExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-connected-sorting": {
+        "title": "Drag&Drop connected sorting",
+        "component": CdkDragDropConnectedSortingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-custom-placeholder": {
+        "title": "Drag&Drop custom placeholer",
+        "component": CdkDragDropCustomPlaceholderExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-custom-preview": {
+        "title": "Drag&Drop custom preview",
+        "component": CdkDragDropCustomPreviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-disabled": {
+        "title": "Drag&Drop disabled",
+        "component": CdkDragDropDisabledExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-enter-predicate": {
+        "title": "Drag&Drop enter predicate",
+        "component": CdkDragDropEnterPredicateExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-handle": {
+        "title": "Drag&Drop with a handle",
+        "component": CdkDragDropHandleExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-horizontal-sorting": {
+        "title": "Drag&Drop horizontal sorting",
+        "component": CdkDragDropHorizontalSortingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-overview": {
+        "title": "Basic Drag&Drop",
+        "component": CdkDragDropOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-root-element": {
+        "title": "Drag&Drop with alternate root element",
+        "component": CdkDragDropRootElementExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-sorting": {
+        "title": "Drag&Drop sorting",
+        "component": CdkDragDropSortingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-platform-overview": {
+        "title": "Platform overview",
+        "component": CdkPlatformOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-table-basic-flex": {
+        "title": "Basic use of `<cdk-table>` (uses display flex)",
+        "component": CdkTableBasicFlexExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-table-basic": {
+        "title": "Basic CDK data-table",
+        "component": CdkTableBasicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-tree-flat": {
+        "title": "Tree with flat nodes",
+        "component": CdkTreeFlatExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-tree-nested": {
+        "title": "Tree with nested nodes",
+        "component": CdkTreeNestedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-context": {
+        "title": "Virtual scroll context variables",
+        "component": CdkVirtualScrollContextExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-custom-strategy": {
+        "title": "Virtual scroll with a custom strategy",
+        "component": CdkVirtualScrollCustomStrategyExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-data-source": {
+        "title": "Virtual scroll with a custom data source",
+        "component": CdkVirtualScrollDataSourceExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-dl": {
+        "title": "Virtual scrolling `<dl>`",
+        "component": CdkVirtualScrollDlExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-fixed-buffer": {
+        "title": "Fixed size virtual scroll with custom buffer parameters",
+        "component": CdkVirtualScrollFixedBufferExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-horizontal": {
+        "title": "Horizontal virtual scroll",
+        "component": CdkVirtualScrollHorizontalExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-overview": {
+        "title": "Basic virtual scroll",
+        "component": CdkVirtualScrollOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-template-cache": {
+        "title": "Virtual scroll with no template caching",
+        "component": CdkVirtualScrollTemplateCacheExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "checkbox-configurable": {
+        "title": "Configurable checkbox",
+        "component": CheckboxConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "checkbox-overview": {
+        "title": "Basic checkboxes",
+        "component": CheckboxOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "chips-autocomplete": {
+        "title": "Chips Autocomplete",
+        "component": ChipsAutocompleteExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "chips-input": {
+        "title": "Chips with input",
+        "component": ChipsInputExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "chips-overview": {
+        "title": "Basic chips",
+        "component": ChipsOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "chips-stacked": {
+        "title": "Stacked chips",
+        "component": ChipsStackedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-api": {
+        "title": "Datepicker open method",
+        "component": DatepickerApiExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-color": {
+        "title": "Datepicker palette colors",
+        "component": DatepickerColorExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-custom-header": {
+        "title": "Datepicker with custom calendar header",
+        "component": DatepickerCustomHeaderExample,
+        "additionalFiles": [],
+        "selectorName": "DatepickerCustomHeaderExample, ExampleHeader"
+    },
+    "datepicker-custom-icon": {
+        "title": "Datepicker with custom icon",
+        "component": DatepickerCustomIconExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-date-class": {
+        "title": "Datepicker with custom date classes",
+        "component": DatepickerDateClassExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-disabled": {
+        "title": "Disabled datepicker",
+        "component": DatepickerDisabledExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-events": {
+        "title": "Datepicker input and change events",
+        "component": DatepickerEventsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-filter": {
+        "title": "Datepicker with filter validation",
+        "component": DatepickerFilterExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-formats": {
+        "title": "Datepicker with custom formats",
+        "component": DatepickerFormatsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-locale": {
+        "title": "Datepicker with different locale",
+        "component": DatepickerLocaleExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-min-max": {
+        "title": "Datepicker with min & max validation",
+        "component": DatepickerMinMaxExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-moment": {
+        "title": "Datepicker that uses Moment.js dates",
+        "component": DatepickerMomentExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-overview": {
+        "title": "Basic datepicker",
+        "component": DatepickerOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-start-view": {
+        "title": "Datepicker start date",
+        "component": DatepickerStartViewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-touch": {
+        "title": "Datepicker touch UI",
+        "component": DatepickerTouchExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-value": {
+        "title": "Datepicker selected value",
+        "component": DatepickerValueExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-views-selection": {
+        "title": "Datepicker emulating a Year and month picker",
+        "component": DatepickerViewsSelectionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "dialog-content": {
+        "title": "Dialog with header, scrollable content and actions",
+        "component": DialogContentExample,
+        "additionalFiles": [
+            "dialog-content-example-dialog.html"
+        ],
+        "selectorName": "DialogContentExample, DialogContentExampleDialog"
+    },
+    "dialog-data": {
+        "title": "Injecting data when opening a dialog",
+        "component": DialogDataExample,
+        "additionalFiles": [
+            "dialog-data-example-dialog.html"
+        ],
+        "selectorName": "DialogDataExample, DialogDataExampleDialog"
+    },
+    "dialog-elements": {
+        "title": "Dialog elements",
+        "component": DialogElementsExample,
+        "additionalFiles": [
+            "dialog-elements-example-dialog.html"
+        ],
+        "selectorName": "DialogElementsExample, DialogElementsExampleDialog"
+    },
+    "dialog-overview": {
+        "title": "Dialog Overview",
+        "component": DialogOverviewExample,
+        "additionalFiles": [
+            "dialog-overview-example-dialog.html"
+        ],
+        "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog"
+    },
+    "divider-overview": {
+        "title": "Basic divider",
+        "component": DividerOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "elevation-overview": {
+        "title": "Elevation CSS classes",
+        "component": ElevationOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "expansion-expand-collapse-all": {
+        "title": "Accordion with expand/collapse all toggles",
+        "component": ExpansionExpandCollapseAllExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "expansion-overview": {
+        "title": "Basic expansion panel",
+        "component": ExpansionOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "expansion-steps": {
+        "title": "Expansion panel as accordion",
+        "component": ExpansionStepsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "focus-monitor-directives": {
+        "title": "Monitoring focus with FocusMonitor",
+        "component": FocusMonitorDirectivesExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "focus-monitor-focus-via": {
+        "title": "Focusing with a specific FocusOrigin",
+        "component": FocusMonitorFocusViaExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "focus-monitor-overview": {
+        "title": "Monitoring focus with FocusMonitor",
+        "component": FocusMonitorOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-appearance": {
+        "title": "Form field appearance variants",
+        "component": FormFieldAppearanceExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-custom-control": {
+        "title": "Form field with custom telephone number input control.",
+        "component": FormFieldCustomControlExample,
+        "additionalFiles": [
+            "example-tel-input-example.html",
+            "example-tel-input-example.css"
+        ],
+        "selectorName": "FormFieldCustomControlExample, MyTelInput"
+    },
+    "form-field-error": {
+        "title": "Form field with error messages",
+        "component": FormFieldErrorExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-hint": {
+        "title": "Form field with hints",
+        "component": FormFieldHintExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-label": {
+        "title": "Form field with label",
+        "component": FormFieldLabelExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-overview": {
+        "title": "Simple form field",
+        "component": FormFieldOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-prefix-suffix": {
+        "title": "Form field with prefix & suffix",
+        "component": FormFieldPrefixSuffixExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-theming": {
+        "title": "Form field theming",
+        "component": FormFieldThemingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "grid-list-dynamic": {
+        "title": "Dynamic grid-list",
+        "component": GridListDynamicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "grid-list-overview": {
+        "title": "Basic grid-list",
+        "component": GridListOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "icon-overview": {
+        "title": "Basic icons",
+        "component": IconOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "icon-svg": {
+        "title": "SVG icons",
+        "component": IconSvgExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-clearable": {
+        "title": "Input with a clear button",
+        "component": InputClearableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-error-state-matcher": {
+        "title": "Input with a custom ErrorStateMatcher",
+        "component": InputErrorStateMatcherExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-errors": {
+        "title": "Input with error messages",
+        "component": InputErrorsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-form": {
+        "title": "Inputs in a form",
+        "component": InputFormExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-hint": {
+        "title": "Input with hints",
+        "component": InputHintExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-overview": {
+        "title": "Basic Inputs",
+        "component": InputOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-prefix-suffix": {
+        "title": "Inputs with prefixes and suffixes",
+        "component": InputPrefixSuffixExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "list-overview": {
+        "title": "Basic list",
+        "component": ListOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "list-sections": {
+        "title": "List with sections",
+        "component": ListSectionsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "list-selection": {
+        "title": "List with selection",
+        "component": ListSelectionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "menu-icons": {
+        "title": "Menu with icons",
+        "component": MenuIconsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "menu-overview": {
+        "title": "Basic menu",
+        "component": MenuOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "nested-menu": {
+        "title": "Nested menu",
+        "component": NestedMenuExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "paginator-configurable": {
+        "title": "Configurable paginator",
+        "component": PaginatorConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "paginator-overview": {
+        "title": "Paginator",
+        "component": PaginatorOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-bar-buffer": {
+        "title": "Buffer progress-bar",
+        "component": ProgressBarBufferExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-bar-configurable": {
+        "title": "Configurable progress-bar",
+        "component": ProgressBarConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-bar-determinate": {
+        "title": "Determinate progress-bar",
+        "component": ProgressBarDeterminateExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-bar-indeterminate": {
+        "title": "Indeterminate progress-bar",
+        "component": ProgressBarIndeterminateExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-bar-query": {
+        "title": "Query progress-bar",
+        "component": ProgressBarQueryExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-spinner-configurable": {
+        "title": "Configurable progress spinner",
+        "component": ProgressSpinnerConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-spinner-overview": {
+        "title": "Basic progress-spinner",
+        "component": ProgressSpinnerOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "radio-ng-model": {
+        "title": "Radios with ngModel",
+        "component": RadioNgModelExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "radio-overview": {
+        "title": "Basic radios",
+        "component": RadioOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "ripple-overview": {
+        "title": "MatRipple basic usage",
+        "component": RippleOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-custom-trigger": {
+        "title": "Select with custom trigger text",
+        "component": SelectCustomTriggerExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-disabled": {
+        "title": "Disabled select",
+        "component": SelectDisabledExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-error-state-matcher": {
+        "title": "Select with a custom ErrorStateMatcher",
+        "component": SelectErrorStateMatcherExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-form": {
+        "title": "Select in a form",
+        "component": SelectFormExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-hint-error": {
+        "title": "Select with form field features",
+        "component": SelectHintErrorExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-multiple": {
+        "title": "Select with multiple selection",
+        "component": SelectMultipleExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-no-ripple": {
+        "title": "Select with no option ripple",
+        "component": SelectNoRippleExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-optgroup": {
+        "title": "Select with option groups",
+        "component": SelectOptgroupExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-overview": {
+        "title": "Basic select",
+        "component": SelectOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-panel-class": {
+        "title": "Select with custom panel styling",
+        "component": SelectPanelClassExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-reset": {
+        "title": "Select with reset option",
+        "component": SelectResetExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-value-binding": {
+        "title": "Select with 2-way value binding",
+        "component": SelectValueBindingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-autosize": {
+        "title": "Autosize sidenav",
+        "component": SidenavAutosizeExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-backdrop": {
+        "title": "Drawer with explicit backdrop setting",
+        "component": SidenavBackdropExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-disable-close": {
+        "title": "Sidenav with custom escape and backdrop click behavior",
+        "component": SidenavDisableCloseExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-drawer-overview": {
+        "title": "Basic drawer",
+        "component": SidenavDrawerOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-fixed": {
+        "title": "Fixed sidenav",
+        "component": SidenavFixedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-mode": {
+        "title": "Sidenav with configurable mode",
+        "component": SidenavModeExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-open-close": {
+        "title": "Sidenav open & close behavior",
+        "component": SidenavOpenCloseExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-overview": {
+        "title": "Basic sidenav",
+        "component": SidenavOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-position": {
+        "title": "Implicit main content with two sidenavs",
+        "component": SidenavPositionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-responsive": {
+        "title": "Responsive sidenav",
+        "component": SidenavResponsiveExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slide-toggle-configurable": {
+        "title": "Configurable slide-toggle",
+        "component": SlideToggleConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slide-toggle-forms": {
+        "title": "Slide-toggle with forms",
+        "component": SlideToggleFormsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slide-toggle-overview": {
+        "title": "Basic slide-toggles",
+        "component": SlideToggleOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slider-configurable": {
+        "title": "Configurable slider",
+        "component": SliderConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slider-formatting": {
+        "title": "Slider with custom thumb label formatting.",
+        "component": SliderFormattingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slider-overview": {
+        "title": "Basic slider",
+        "component": SliderOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "snack-bar-component": {
+        "title": "Snack-bar with a custom component",
+        "component": SnackBarComponentExample,
+        "additionalFiles": [
+            "snack-bar-component-example-snack.html"
+        ],
+        "selectorName": "SnackBarComponentExample, PizzaPartyComponent"
+    },
+    "snack-bar-overview": {
+        "title": "Basic snack-bar",
+        "component": SnackBarOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "snack-bar-position": {
+        "title": "Snack-bar with configurable position",
+        "component": SnackBarPositionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sort-overview": {
+        "title": "Sorting overview",
+        "component": SortOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-editable": {
+        "title": "Stepper with editable steps",
+        "component": StepperEditableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-errors": {
+        "title": "Stepper that displays errors in the steps",
+        "component": StepperErrorsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-label-position-bottom": {
+        "title": "Stepper label bottom position",
+        "component": StepperLabelPositionBottomExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-optional": {
+        "title": "Stepper with optional steps",
+        "component": StepperOptionalExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-overview": {
+        "title": "Stepper overview",
+        "component": StepperOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-states": {
+        "title": "Stepper with customized states",
+        "component": StepperStatesExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-vertical": {
+        "title": "Stepper vertical",
+        "component": StepperVerticalExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-align": {
+        "title": "Tab group with aligned labels",
+        "component": TabGroupAlignExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-animations": {
+        "title": "Tab group animations",
+        "component": TabGroupAnimationsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-async": {
+        "title": "Tab group with asynchronously loading tab contents",
+        "component": TabGroupAsyncExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-basic": {
+        "title": "Basic use of the tab group",
+        "component": TabGroupBasicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-custom-label": {
+        "title": "Using tabs with a custom label template",
+        "component": TabGroupCustomLabelExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-dynamic-height": {
+        "title": "Tag group with dynamic height based on tab contents",
+        "component": TabGroupDynamicHeightExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-dynamic": {
+        "title": "Tab group with dynamically changing tabs",
+        "component": TabGroupDynamicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-header-below": {
+        "title": "Tab group with the headers on the bottom",
+        "component": TabGroupHeaderBelowExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-lazy-loaded": {
+        "title": "Tab group where the tab content is loaded lazily (when activated)",
+        "component": TabGroupLazyLoadedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-stretched": {
+        "title": "Tab group with stretched labels",
+        "component": TabGroupStretchedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-theme": {
+        "title": "Customizing the theme options on the tab group",
+        "component": TabGroupThemeExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-nav-bar-basic": {
+        "title": "Basic use of the tab nav bar",
+        "component": TabNavBarBasicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-basic-flex": {
+        "title": "Basic use of `<mat-table>` (uses display flex)",
+        "component": TableBasicFlexExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-basic": {
+        "title": "Basic use of `<table mat-table>`",
+        "component": TableBasicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-dynamic-columns": {
+        "title": "Table dynamically changing the columns displayed",
+        "component": TableDynamicColumnsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-expandable-rows": {
+        "title": "Table with expandable rows",
+        "component": TableExpandableRowsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-filtering": {
+        "title": "Table with filtering",
+        "component": TableFilteringExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-footer-row": {
+        "title": "Footer row table",
+        "component": TableFooterRowExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-http": {
+        "title": "Table retrieving data through HTTP",
+        "component": TableHttpExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-multiple-header-footer": {
+        "title": "Table with multiple header and footer rows",
+        "component": TableMultipleHeaderFooterExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-overview": {
+        "title": "Data table with sorting, pagination, and filtering.",
+        "component": TableOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-pagination": {
+        "title": "Table with pagination",
+        "component": TablePaginationExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-row-context": {
+        "title": "Table showing each row context properties.",
+        "component": TableRowContextExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-selection": {
+        "title": "Table with selection",
+        "component": TableSelectionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-simple-column": {
+        "title": "Table with a custom column component for easy column definition reuse.",
+        "component": TableSimpleColumnExample,
+        "additionalFiles": [],
+        "selectorName": "TableSimpleColumnExample, SimpleColumn"
+    },
+    "table-sorting": {
+        "title": "Table with sorting",
+        "component": TableSortingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-sticky-columns": {
+        "title": "Table with a sticky columns",
+        "component": TableStickyColumnsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-sticky-complex-flex": {
+        "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns",
+        "component": TableStickyComplexFlexExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-sticky-complex": {
+        "title": "Tables with toggle-able sticky headers, footers, and columns",
+        "component": TableStickyComplexExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-sticky-footer": {
+        "title": "Table with a sticky footer",
+        "component": TableStickyFooterExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-sticky-header": {
+        "title": "Table with sticky header",
+        "component": TableStickyHeaderExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-wrapped": {
+        "title": "Table example that shows how to wrap a table component for definition and behavior reuse.",
+        "component": TableWrappedExample,
+        "additionalFiles": [
+            "wrapper-table.html"
+        ],
+        "selectorName": "TableWrappedExample, WrapperTable"
+    },
+    "text-field-autofill-directive": {
+        "title": "Monitoring autofill state with cdkAutofill",
+        "component": TextFieldAutofillDirectiveExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "text-field-autofill-monitor": {
+        "title": "Monitoring autofill state with AutofillMonitor",
+        "component": TextFieldAutofillMonitorExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "text-field-autosize-textarea": {
+        "title": "Auto-resizing textarea",
+        "component": TextFieldAutosizeTextareaExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "toolbar-multirow": {
+        "title": "Multi-row toolbar",
+        "component": ToolbarMultirowExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "toolbar-overview": {
+        "title": "Basic toolbar",
+        "component": ToolbarOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-auto-hide": {
+        "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.",
+        "component": TooltipAutoHideExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-custom-class": {
+        "title": "Tooltip that can have a custom class applied.",
+        "component": TooltipCustomClassExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-delay": {
+        "title": "Tooltip with a show and hide delay",
+        "component": TooltipDelayExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-disabled": {
+        "title": "Tooltip that can be disabled",
+        "component": TooltipDisabledExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-manual": {
+        "title": "Tooltip that can be manually shown/hidden.",
+        "component": TooltipManualExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-message": {
+        "title": "Tooltip with a changing message",
+        "component": TooltipMessageExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-modified-defaults": {
+        "title": "Tooltip with a show and hide delay",
+        "component": TooltipModifiedDefaultsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-overview": {
+        "title": "Basic tooltip",
+        "component": TooltipOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-position": {
+        "title": "Tooltip with a custom position",
+        "component": TooltipPositionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tree-checklist": {
+        "title": "Tree with checkboxes",
+        "component": TreeChecklistExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tree-dynamic": {
+        "title": "Tree with dynamic data",
+        "component": TreeDynamicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tree-flat-overview": {
+        "title": "Tree with flat nodes",
+        "component": TreeFlatOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tree-loadmore": {
+        "title": "Tree with partially loaded data",
+        "component": TreeLoadmoreExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tree-nested-overview": {
+        "title": "Tree with nested nodes",
+        "component": TreeNestedOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    }
+};
 /** @type {?} */
-const EXAMPLE_LIST = [AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompleteSimpleExample, BadgeOverviewExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, ButtonOverviewExample, ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonTypesExample, CardFancyExample, CardOverviewExample, CdkDragDropAxisLockExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDisabledExample, CdkDragDropEnterPredicateExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkPlatformOverviewExample, CdkTableBasicFlexExample, CdkTableBasicExample, CdkTreeFlatExample, CdkTreeNestedExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CheckboxConfigurableExample, CheckboxOverviewExample, ChipsAutocompleteExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, ExampleHeader, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog, DividerOverviewExample, ElevationOverviewExample, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, FormFieldAppearanceExample, FormFieldCustomControlExample, MyTelInput, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, GridListDynamicExample, GridListOverviewExample, IconOverviewExample, IconSvgExample, InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, MenuIconsExample, MenuOverviewExample, NestedMenuExample, PaginatorConfigurableExample, PaginatorOverviewExample, ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, RadioNgModelExample, RadioOverviewExample, RippleOverviewExample, SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SnackBarComponentExample, PizzaPartyComponent, SnackBarOverviewExample, SnackBarPositionExample, SortOverviewExample, StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSimpleColumnExample, SimpleColumn, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableWrappedExample, WrapperTable, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, ToolbarMultirowExample, ToolbarOverviewExample, TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample];
+const EXAMPLE_LIST = [
+    AutocompleteAutoActiveFirstOptionExample,
+    AutocompleteDisplayExample,
+    AutocompleteFilterExample,
+    AutocompleteOptgroupExample,
+    AutocompleteOverviewExample,
+    AutocompleteSimpleExample,
+    BadgeOverviewExample,
+    BottomSheetOverviewExample,
+    BottomSheetOverviewExampleSheet,
+    ButtonOverviewExample,
+    ButtonToggleAppearanceExample,
+    ButtonToggleExclusiveExample,
+    ButtonToggleOverviewExample,
+    ButtonTypesExample,
+    CardFancyExample,
+    CardOverviewExample,
+    CdkDragDropAxisLockExample,
+    CdkDragDropConnectedSortingExample,
+    CdkDragDropCustomPlaceholderExample,
+    CdkDragDropCustomPreviewExample,
+    CdkDragDropDisabledExample,
+    CdkDragDropEnterPredicateExample,
+    CdkDragDropHandleExample,
+    CdkDragDropHorizontalSortingExample,
+    CdkDragDropOverviewExample,
+    CdkDragDropRootElementExample,
+    CdkDragDropSortingExample,
+    CdkPlatformOverviewExample,
+    CdkTableBasicFlexExample,
+    CdkTableBasicExample,
+    CdkTreeFlatExample,
+    CdkTreeNestedExample,
+    CdkVirtualScrollContextExample,
+    CdkVirtualScrollCustomStrategyExample,
+    CdkVirtualScrollDataSourceExample,
+    CdkVirtualScrollDlExample,
+    CdkVirtualScrollFixedBufferExample,
+    CdkVirtualScrollHorizontalExample,
+    CdkVirtualScrollOverviewExample,
+    CdkVirtualScrollTemplateCacheExample,
+    CheckboxConfigurableExample,
+    CheckboxOverviewExample,
+    ChipsAutocompleteExample,
+    ChipsInputExample,
+    ChipsOverviewExample,
+    ChipsStackedExample,
+    DatepickerApiExample,
+    DatepickerColorExample,
+    DatepickerCustomHeaderExample,
+    ExampleHeader,
+    DatepickerCustomIconExample,
+    DatepickerDateClassExample,
+    DatepickerDisabledExample,
+    DatepickerEventsExample,
+    DatepickerFilterExample,
+    DatepickerFormatsExample,
+    DatepickerLocaleExample,
+    DatepickerMinMaxExample,
+    DatepickerMomentExample,
+    DatepickerOverviewExample,
+    DatepickerStartViewExample,
+    DatepickerTouchExample,
+    DatepickerValueExample,
+    DatepickerViewsSelectionExample,
+    DialogContentExample,
+    DialogContentExampleDialog,
+    DialogDataExample,
+    DialogDataExampleDialog,
+    DialogElementsExample,
+    DialogElementsExampleDialog,
+    DialogOverviewExample,
+    DialogOverviewExampleDialog,
+    DividerOverviewExample,
+    ElevationOverviewExample,
+    ExpansionExpandCollapseAllExample,
+    ExpansionOverviewExample,
+    ExpansionStepsExample,
+    FocusMonitorDirectivesExample,
+    FocusMonitorFocusViaExample,
+    FocusMonitorOverviewExample,
+    FormFieldAppearanceExample,
+    FormFieldCustomControlExample,
+    MyTelInput,
+    FormFieldErrorExample,
+    FormFieldHintExample,
+    FormFieldLabelExample,
+    FormFieldOverviewExample,
+    FormFieldPrefixSuffixExample,
+    FormFieldThemingExample,
+    GridListDynamicExample,
+    GridListOverviewExample,
+    IconOverviewExample,
+    IconSvgExample,
+    InputClearableExample,
+    InputErrorStateMatcherExample,
+    InputErrorsExample,
+    InputFormExample,
+    InputHintExample,
+    InputOverviewExample,
+    InputPrefixSuffixExample,
+    ListOverviewExample,
+    ListSectionsExample,
+    ListSelectionExample,
+    MenuIconsExample,
+    MenuOverviewExample,
+    NestedMenuExample,
+    PaginatorConfigurableExample,
+    PaginatorOverviewExample,
+    ProgressBarBufferExample,
+    ProgressBarConfigurableExample,
+    ProgressBarDeterminateExample,
+    ProgressBarIndeterminateExample,
+    ProgressBarQueryExample,
+    ProgressSpinnerConfigurableExample,
+    ProgressSpinnerOverviewExample,
+    RadioNgModelExample,
+    RadioOverviewExample,
+    RippleOverviewExample,
+    SelectCustomTriggerExample,
+    SelectDisabledExample,
+    SelectErrorStateMatcherExample,
+    SelectFormExample,
+    SelectHintErrorExample,
+    SelectMultipleExample,
+    SelectNoRippleExample,
+    SelectOptgroupExample,
+    SelectOverviewExample,
+    SelectPanelClassExample,
+    SelectResetExample,
+    SelectValueBindingExample,
+    SidenavAutosizeExample,
+    SidenavBackdropExample,
+    SidenavDisableCloseExample,
+    SidenavDrawerOverviewExample,
+    SidenavFixedExample,
+    SidenavModeExample,
+    SidenavOpenCloseExample,
+    SidenavOverviewExample,
+    SidenavPositionExample,
+    SidenavResponsiveExample,
+    SlideToggleConfigurableExample,
+    SlideToggleFormsExample,
+    SlideToggleOverviewExample,
+    SliderConfigurableExample,
+    SliderFormattingExample,
+    SliderOverviewExample,
+    SnackBarComponentExample,
+    PizzaPartyComponent,
+    SnackBarOverviewExample,
+    SnackBarPositionExample,
+    SortOverviewExample,
+    StepperEditableExample,
+    StepperErrorsExample,
+    StepperLabelPositionBottomExample,
+    StepperOptionalExample,
+    StepperOverviewExample,
+    StepperStatesExample,
+    StepperVerticalExample,
+    TabGroupAlignExample,
+    TabGroupAnimationsExample,
+    TabGroupAsyncExample,
+    TabGroupBasicExample,
+    TabGroupCustomLabelExample,
+    TabGroupDynamicHeightExample,
+    TabGroupDynamicExample,
+    TabGroupHeaderBelowExample,
+    TabGroupLazyLoadedExample,
+    TabGroupStretchedExample,
+    TabGroupThemeExample,
+    TabNavBarBasicExample,
+    TableBasicFlexExample,
+    TableBasicExample,
+    TableDynamicColumnsExample,
+    TableExpandableRowsExample,
+    TableFilteringExample,
+    TableFooterRowExample,
+    TableHttpExample,
+    TableMultipleHeaderFooterExample,
+    TableOverviewExample,
+    TablePaginationExample,
+    TableRowContextExample,
+    TableSelectionExample,
+    TableSimpleColumnExample,
+    SimpleColumn,
+    TableSortingExample,
+    TableStickyColumnsExample,
+    TableStickyComplexFlexExample,
+    TableStickyComplexExample,
+    TableStickyFooterExample,
+    TableStickyHeaderExample,
+    TableWrappedExample,
+    WrapperTable,
+    TextFieldAutofillDirectiveExample,
+    TextFieldAutofillMonitorExample,
+    TextFieldAutosizeTextareaExample,
+    ToolbarMultirowExample,
+    ToolbarOverviewExample,
+    TooltipAutoHideExample,
+    TooltipCustomClassExample,
+    TooltipDelayExample,
+    TooltipDisabledExample,
+    TooltipManualExample,
+    TooltipMessageExample,
+    TooltipModifiedDefaultsExample,
+    TooltipOverviewExample,
+    TooltipPositionExample,
+    TreeChecklistExample,
+    TreeDynamicExample,
+    TreeFlatOverviewExample,
+    TreeLoadmoreExample,
+    TreeNestedOverviewExample
+];
 class ExampleModule {
 }
 ExampleModule.decorators = [
@@ -7866,7 +9342,7 @@ ExampleModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Example data
@@ -7899,12 +9375,12 @@ class ExampleData {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleAppearanceExample as ɵk, ButtonToggleExclusiveExample as ɵl, ButtonTypesExample as ɵm, CardOverviewExample as ɵn, CdkDragDropAxisLockExample as ɵo, CdkDragDropConnectedSortingExample as ɵp, CdkDragDropCustomPlaceholderExample as ɵq, CdkDragDropCustomPreviewExample as ɵr, CdkDragDropDisabledExample as ɵs, CdkDragDropEnterPredicateExample as ɵt, CdkDragDropHandleExample as ɵu, CdkDragDropHorizontalSortingExample as ɵv, CdkDragDropOverviewExample as ɵw, CdkDragDropRootElementExample as ɵx, CdkDragDropSortingExample as ɵy, CdkPlatformOverviewExample as ɵz, CdkTableBasicFlexExample as ɵba, CdkTableBasicExample as ɵbb, CdkTreeFlatExample as ɵbd, FileDatabase as ɵbc, CdkTreeNestedExample as ɵbf, FileDatabase$1 as ɵbe, CdkVirtualScrollContextExample as ɵbg, CdkVirtualScrollCustomStrategyExample as ɵbi, CustomVirtualScrollStrategy as ɵbh, CdkVirtualScrollDataSourceExample as ɵbj, CdkVirtualScrollDlExample as ɵbk, CdkVirtualScrollFixedBufferExample as ɵbl, CdkVirtualScrollHorizontalExample as ɵbm, CdkVirtualScrollOverviewExample as ɵbn, CdkVirtualScrollTemplateCacheExample as ɵbo, CheckboxConfigurableExample as ɵbp, CheckboxOverviewExample as ɵbq, ChipsAutocompleteExample as ɵbr, ChipsInputExample as ɵbs, ChipsOverviewExample as ɵbt, ChipsStackedExample as ɵbu, DatepickerApiExample as ɵbv, DatepickerColorExample as ɵbw, DatepickerCustomHeaderExample as ɵbx, ExampleHeader as ɵby, DatepickerCustomIconExample as ɵbz, DatepickerDateClassExample as ɵca, DatepickerDisabledExample as ɵcb, DatepickerEventsExample as ɵcc, DatepickerFilterExample as ɵcd, DatepickerFormatsExample as ɵcf, MY_FORMATS as ɵce, DatepickerLocaleExample as ɵcg, DatepickerMinMaxExample as ɵch, DatepickerMomentExample as ɵci, DatepickerStartViewExample as ɵcj, DatepickerTouchExample as ɵck, DatepickerValueExample as ɵcl, DatepickerViewsSelectionExample as ɵcn, MY_FORMATS$1 as ɵcm, DialogContentExample as ɵco, DialogContentExampleDialog as ɵcp, DialogDataExample as ɵcq, DialogDataExampleDialog as ɵcr, DialogElementsExample as ɵcs, DialogElementsExampleDialog as ɵct, DialogOverviewExample as ɵcu, DialogOverviewExampleDialog as ɵcv, DividerOverviewExample as ɵcw, ElevationOverviewExample as ɵcx, ExpansionExpandCollapseAllExample as ɵcy, ExpansionStepsExample as ɵcz, FocusMonitorDirectivesExample as ɵda, FocusMonitorFocusViaExample as ɵdb, FocusMonitorOverviewExample as ɵdc, FormFieldAppearanceExample as ɵdd, FormFieldCustomControlExample as ɵde, MyTelInput as ɵdf, FormFieldErrorExample as ɵdg, FormFieldHintExample as ɵdh, FormFieldLabelExample as ɵdi, FormFieldOverviewExample as ɵdj, FormFieldPrefixSuffixExample as ɵdk, FormFieldThemingExample as ɵdl, GridListDynamicExample as ɵdm, GridListOverviewExample as ɵdn, IconOverviewExample as ɵdo, IconSvgExample as ɵdp, InputClearableExample as ɵdq, InputErrorStateMatcherExample as ɵdr, InputErrorsExample as ɵds, InputFormExample as ɵdt, InputHintExample as ɵdu, InputOverviewExample as ɵdv, InputPrefixSuffixExample as ɵdw, ListSectionsExample as ɵdx, ListSelectionExample as ɵdy, ExampleMaterialModule as ɵih, MenuIconsExample as ɵdz, MenuOverviewExample as ɵea, NestedMenuExample as ɵeb, PaginatorConfigurableExample as ɵec, PaginatorOverviewExample as ɵed, ProgressBarBufferExample as ɵee, ProgressBarConfigurableExample as ɵef, ProgressBarDeterminateExample as ɵeg, ProgressBarIndeterminateExample as ɵeh, ProgressBarQueryExample as ɵei, ProgressSpinnerConfigurableExample as ɵej, ProgressSpinnerOverviewExample as ɵek, RadioNgModelExample as ɵel, RadioOverviewExample as ɵem, RippleOverviewExample as ɵen, SelectCustomTriggerExample as ɵeo, SelectDisabledExample as ɵep, SelectErrorStateMatcherExample as ɵeq, SelectFormExample as ɵer, SelectHintErrorExample as ɵes, SelectMultipleExample as ɵet, SelectNoRippleExample as ɵeu, SelectOptgroupExample as ɵev, SelectOverviewExample as ɵew, SelectPanelClassExample as ɵex, SelectResetExample as ɵey, SelectValueBindingExample as ɵez, SidenavAutosizeExample as ɵfa, SidenavBackdropExample as ɵfb, SidenavDisableCloseExample as ɵfc, SidenavDrawerOverviewExample as ɵfd, SidenavFixedExample as ɵfe, SidenavModeExample as ɵff, SidenavOpenCloseExample as ɵfg, SidenavOverviewExample as ɵfh, SidenavPositionExample as ɵfi, SidenavResponsiveExample as ɵfj, SlideToggleConfigurableExample as ɵfk, SlideToggleFormsExample as ɵfl, SlideToggleOverviewExample as ɵfm, SliderConfigurableExample as ɵfn, SliderFormattingExample as ɵfo, SliderOverviewExample as ɵfp, PizzaPartyComponent as ɵfr, SnackBarComponentExample as ɵfq, SnackBarOverviewExample as ɵfs, SnackBarPositionExample as ɵft, SortOverviewExample as ɵfu, StepperEditableExample as ɵfv, StepperErrorsExample as ɵfw, StepperLabelPositionBottomExample as ɵfx, StepperOptionalExample as ɵfy, StepperStatesExample as ɵfz, StepperVerticalExample as ɵga, TabGroupAlignExample as ɵgb, TabGroupAnimationsExample as ɵgc, TabGroupAsyncExample as ɵgd, TabGroupBasicExample as ɵge, TabGroupCustomLabelExample as ɵgf, TabGroupDynamicHeightExample as ɵgg, TabGroupDynamicExample as ɵgh, TabGroupHeaderBelowExample as ɵgi, TabGroupLazyLoadedExample as ɵgj, TabGroupStretchedExample as ɵgk, TabGroupThemeExample as ɵgl, TabNavBarBasicExample as ɵgm, TableBasicFlexExample as ɵgn, TableBasicExample as ɵgo, TableDynamicColumnsExample as ɵgp, TableExpandableRowsExample as ɵgq, TableFilteringExample as ɵgr, TableFooterRowExample as ɵgs, TableHttpExample as ɵgt, TableMultipleHeaderFooterExample as ɵgu, TableOverviewExample as ɵgv, TablePaginationExample as ɵgw, TableRowContextExample as ɵgx, TableSelectionExample as ɵgy, SimpleColumn as ɵha, TableSimpleColumnExample as ɵgz, TableSortingExample as ɵhb, TableStickyColumnsExample as ɵhc, TableStickyComplexFlexExample as ɵhd, TableStickyComplexExample as ɵhe, TableStickyFooterExample as ɵhf, TableStickyHeaderExample as ɵhg, TableWrappedExample as ɵhh, WrapperTable as ɵhi, TextFieldAutofillDirectiveExample as ɵhj, TextFieldAutofillMonitorExample as ɵhk, TextFieldAutosizeTextareaExample as ɵhl, ToolbarOverviewExample as ɵhm, TooltipAutoHideExample as ɵhn, TooltipCustomClassExample as ɵho, TooltipDelayExample as ɵhp, TooltipDisabledExample as ɵhq, TooltipManualExample as ɵhr, TooltipMessageExample as ɵhs, TooltipModifiedDefaultsExample as ɵhu, myCustomTooltipDefaults as ɵht, TooltipOverviewExample as ɵhv, TooltipPositionExample as ɵhw, ChecklistDatabase as ɵhx, TreeChecklistExample as ɵhy, DynamicDatabase as ɵhz, TreeDynamicExample as ɵia, FileDatabase$2 as ɵib, TreeFlatOverviewExample as ɵic, LoadmoreDatabase as ɵid, TreeLoadmoreExample as ɵie, FileDatabase$3 as ɵif, TreeNestedOverviewExample as ɵig };

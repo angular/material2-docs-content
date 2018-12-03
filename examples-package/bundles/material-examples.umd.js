@@ -44,7 +44,7 @@ function __extends(d, b) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var ExampleMaterialModule = /** @class */ (function () {
     function ExampleMaterialModule() {
@@ -142,7 +142,7 @@ var ExampleMaterialModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Highlight the first autocomplete option
@@ -163,10 +163,12 @@ var AutocompleteAutoActiveFirstOptionExample = /** @class */ (function () {
         this.filteredOptions = this.myControl.valueChanges.pipe(operators.startWith(''), operators.map(function (value) { return _this._filter(value); }));
     };
     /**
+     * @private
      * @param {?} value
      * @return {?}
      */
     AutocompleteAutoActiveFirstOptionExample.prototype._filter = /**
+     * @private
      * @param {?} value
      * @return {?}
      */
@@ -187,7 +189,7 @@ var AutocompleteAutoActiveFirstOptionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Display value autocomplete
@@ -224,10 +226,12 @@ var AutocompleteDisplayExample = /** @class */ (function () {
         return user ? user.name : undefined;
     };
     /**
+     * @private
      * @param {?} name
      * @return {?}
      */
     AutocompleteDisplayExample.prototype._filter = /**
+     * @private
      * @param {?} name
      * @return {?}
      */
@@ -248,7 +252,7 @@ var AutocompleteDisplayExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Filter autocomplete
@@ -270,10 +274,12 @@ var AutocompleteFilterExample = /** @class */ (function () {
             .pipe(operators.startWith(''), operators.map(function (value) { return _this._filter(value); }));
     };
     /**
+     * @private
      * @param {?} value
      * @return {?}
      */
     AutocompleteFilterExample.prototype._filter = /**
+     * @private
      * @param {?} value
      * @return {?}
      */
@@ -294,7 +300,7 @@ var AutocompleteFilterExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var _filter = function (opt, value) {
@@ -380,13 +386,16 @@ var AutocompleteOptgroupExample = /** @class */ (function () {
      */
     function () {
         var _this = this;
-        this.stateGroupOptions = /** @type {?} */ ((this.stateForm.get('stateGroup'))).valueChanges.pipe(operators.startWith(''), operators.map(function (value) { return _this._filterGroup(value); }));
+        this.stateGroupOptions = (/** @type {?} */ (this.stateForm.get('stateGroup'))).valueChanges
+            .pipe(operators.startWith(''), operators.map(function (value) { return _this._filterGroup(value); }));
     };
     /**
+     * @private
      * @param {?} value
      * @return {?}
      */
     AutocompleteOptgroupExample.prototype._filterGroup = /**
+     * @private
      * @param {?} value
      * @return {?}
      */
@@ -414,7 +423,7 @@ var AutocompleteOptgroupExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Autocomplete overview
@@ -453,10 +462,12 @@ var AutocompleteOverviewExample = /** @class */ (function () {
             .pipe(operators.startWith(''), operators.map(function (state$$1) { return state$$1 ? _this._filterStates(state$$1) : _this.states.slice(); }));
     }
     /**
+     * @private
      * @param {?} value
      * @return {?}
      */
     AutocompleteOverviewExample.prototype._filterStates = /**
+     * @private
      * @param {?} value
      * @return {?}
      */
@@ -479,7 +490,7 @@ var AutocompleteOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Simple autocomplete
@@ -501,7 +512,7 @@ var AutocompleteSimpleExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Badge overview
@@ -521,7 +532,7 @@ var BadgeOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Bottom Sheet Overview
@@ -583,7 +594,7 @@ var BottomSheetOverviewExampleSheet = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic buttons
@@ -603,7 +614,7 @@ var ButtonOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Button toggle appearance
@@ -623,7 +634,7 @@ var ButtonToggleAppearanceExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Exclusive selection
@@ -643,7 +654,7 @@ var ButtonToggleExclusiveExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic button-toggles
@@ -663,7 +674,7 @@ var ButtonToggleOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Button varieties
@@ -683,7 +694,7 @@ var ButtonTypesExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Card with multiple sections
@@ -703,7 +714,7 @@ var CardFancyExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic cards
@@ -723,7 +734,7 @@ var CardOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop position locking
@@ -743,7 +754,7 @@ var CdkDragDropAxisLockExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop connected sorting
@@ -792,7 +803,7 @@ var CdkDragDropConnectedSortingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop custom placeholer
@@ -833,7 +844,7 @@ var CdkDragDropCustomPlaceholderExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop custom preview
@@ -877,11 +888,14 @@ var CdkDragDropCustomPreviewExample = /** @class */ (function () {
         ];
     }
     // tslint:enable:max-line-length
+    // tslint:enable:max-line-length
     /**
      * @param {?} event
      * @return {?}
      */
-    CdkDragDropCustomPreviewExample.prototype.drop = /**
+    CdkDragDropCustomPreviewExample.prototype.drop = 
+    // tslint:enable:max-line-length
+    /**
      * @param {?} event
      * @return {?}
      */
@@ -900,7 +914,7 @@ var CdkDragDropCustomPreviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop disabled
@@ -936,7 +950,7 @@ var CdkDragDropDisabledExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop enter predicate
@@ -1000,7 +1014,7 @@ var CdkDragDropEnterPredicateExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop with a handle
@@ -1020,7 +1034,7 @@ var CdkDragDropHandleExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop horizontal sorting
@@ -1058,7 +1072,7 @@ var CdkDragDropHorizontalSortingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic Drag&Drop
@@ -1078,7 +1092,7 @@ var CdkDragDropOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop with alternate root element
@@ -1141,7 +1155,7 @@ var CdkDragDropRootElementExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop sorting
@@ -1182,7 +1196,7 @@ var CdkDragDropSortingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Platform overview
@@ -1210,7 +1224,7 @@ var CdkPlatformOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA = [
@@ -1290,7 +1304,7 @@ ExampleDataSource = /** @class */ (function (_super) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$1 = [
@@ -1370,7 +1384,7 @@ ExampleDataSource$1 = /** @class */ (function (_super) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * File node data with nested structure.
@@ -1400,9 +1414,10 @@ FileFlatNode = /** @class */ (function () {
     }
     return FileFlatNode;
 }());
-/** *
+/**
  * The file structure tree data in string. The data could be parsed into a Json object
-  @type {?} */
+ * @type {?}
+ */
 var TREE_DATA = JSON.stringify({
     Applications: {
         Calendar: 'app',
@@ -1465,8 +1480,11 @@ var FileDatabase = /** @class */ (function () {
      * @return {?}
      */
     function () {
+        // Parse the string to json object.
         /** @type {?} */
         var dataObject = JSON.parse(TREE_DATA);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
         /** @type {?} */
         var data = this.buildFileTree(dataObject, 0);
         // Notify the change.
@@ -1553,7 +1571,7 @@ var CdkTreeFlatExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
@@ -1566,9 +1584,10 @@ FileNode$1 = /** @class */ (function () {
     }
     return FileNode;
 }());
-/** *
+/**
  * The Json tree data in string. The data could be parsed into Json object
-  @type {?} */
+ * @type {?}
+ */
 var TREE_DATA$1 = JSON.stringify({
     Applications: {
         Calendar: 'app',
@@ -1631,8 +1650,11 @@ var FileDatabase$1 = /** @class */ (function () {
      * @return {?}
      */
     function () {
+        // Parse the string to json object.
         /** @type {?} */
         var dataObject = JSON.parse(TREE_DATA$1);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
         /** @type {?} */
         var data = this.buildFileTree(dataObject, 0);
         // Notify the change.
@@ -1711,7 +1733,7 @@ var CdkTreeNestedExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scroll context variables
@@ -1733,7 +1755,7 @@ var CdkVirtualScrollContextExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var CustomVirtualScrollStrategy = /** @class */ (function (_super) {
     __extends(CustomVirtualScrollStrategy, _super);
@@ -1763,7 +1785,7 @@ var CdkVirtualScrollCustomStrategyExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scroll with a custom data source
@@ -1825,10 +1847,12 @@ var MyDataSource = /** @class */ (function (_super) {
         this.subscription.unsubscribe();
     };
     /**
+     * @private
      * @param {?} index
      * @return {?}
      */
     MyDataSource.prototype.getPageForIndex = /**
+     * @private
      * @param {?} index
      * @return {?}
      */
@@ -1836,10 +1860,12 @@ var MyDataSource = /** @class */ (function (_super) {
         return Math.floor(index / this.pageSize);
     };
     /**
+     * @private
      * @param {?} page
      * @return {?}
      */
     MyDataSource.prototype.fetchPage = /**
+     * @private
      * @param {?} page
      * @return {?}
      */
@@ -1862,7 +1888,7 @@ var MyDataSource = /** @class */ (function (_super) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scrolling `<dl>`
@@ -1935,7 +1961,7 @@ var CdkVirtualScrollDlExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Fixed size virtual scroll with custom buffer parameters
@@ -1957,7 +1983,7 @@ var CdkVirtualScrollFixedBufferExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Horizontal virtual scroll
@@ -1980,7 +2006,7 @@ var CdkVirtualScrollHorizontalExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic virtual scroll
@@ -2002,7 +2028,7 @@ var CdkVirtualScrollOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scroll with no template caching
@@ -2024,7 +2050,7 @@ var CdkVirtualScrollTemplateCacheExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable checkbox
@@ -2048,7 +2074,7 @@ var CheckboxConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic checkboxes
@@ -2068,7 +2094,7 @@ var CheckboxOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Chips Autocomplete
@@ -2142,10 +2168,12 @@ var ChipsAutocompleteExample = /** @class */ (function () {
         this.fruitCtrl.setValue(null);
     };
     /**
+     * @private
      * @param {?} value
      * @return {?}
      */
     ChipsAutocompleteExample.prototype._filter = /**
+     * @private
      * @param {?} value
      * @return {?}
      */
@@ -2172,7 +2200,7 @@ var ChipsAutocompleteExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Chips with input
@@ -2239,7 +2267,7 @@ var ChipsInputExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic chips
@@ -2259,7 +2287,7 @@ var ChipsOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stacked chips
@@ -2285,7 +2313,7 @@ var ChipsStackedExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker open method
@@ -2305,7 +2333,7 @@ var DatepickerApiExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker palette colors
@@ -2325,7 +2353,7 @@ var DatepickerColorExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom calendar header
@@ -2425,7 +2453,7 @@ var ExampleHeader = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom icon
@@ -2445,7 +2473,7 @@ var DatepickerCustomIconExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom date classes
@@ -2472,7 +2500,7 @@ var DatepickerDateClassExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled datepicker
@@ -2492,7 +2520,7 @@ var DatepickerDisabledExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker input and change events
@@ -2526,7 +2554,7 @@ var DatepickerEventsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with filter validation
@@ -2552,10 +2580,12 @@ var DatepickerFilterExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var moment = _rollupMoment__default__default || _rollupMoment__default;
+// See the Moment.js docs for the meaning of these formats:
+// https://momentjs.com/docs/#/displaying/format/
 /** @type {?} */
 var MY_FORMATS = {
     parse: {
@@ -2594,7 +2624,7 @@ var DatepickerFormatsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var ɵ0 = materialMomentAdapter.MAT_MOMENT_DATE_FORMATS;
 /**
@@ -2639,7 +2669,7 @@ var DatepickerLocaleExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with min & max validation
@@ -2661,7 +2691,7 @@ var DatepickerMinMaxExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var moment$1 = _rollupMoment__default__default || _rollupMoment__default;
@@ -2693,7 +2723,7 @@ var DatepickerMomentExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic datepicker
@@ -2713,7 +2743,7 @@ var DatepickerOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker start date
@@ -2734,7 +2764,7 @@ var DatepickerStartViewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker touch UI
@@ -2754,7 +2784,7 @@ var DatepickerTouchExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker selected value
@@ -2776,10 +2806,12 @@ var DatepickerValueExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var moment$2 = _rollupMoment__default__default || _rollupMoment__default;
+// See the Moment.js docs for the meaning of these formats:
+// https://momentjs.com/docs/#/displaying/format/
 /** @type {?} */
 var MY_FORMATS$1 = {
     parse: {
@@ -2849,7 +2881,7 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog with header, scrollable content and actions
@@ -2898,7 +2930,7 @@ var DialogContentExampleDialog = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Injecting data when opening a dialog
@@ -2952,7 +2984,7 @@ var DialogDataExampleDialog = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog elements
@@ -2997,7 +3029,7 @@ var DialogElementsExampleDialog = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog Overview
@@ -3067,7 +3099,7 @@ var DialogOverviewExampleDialog = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic divider
@@ -3087,7 +3119,7 @@ var DividerOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Elevation CSS classes
@@ -3108,7 +3140,7 @@ var ElevationOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Accordion with expand/collapse all toggles
@@ -3131,7 +3163,7 @@ var ExpansionExpandCollapseAllExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic expansion panel
@@ -3152,7 +3184,7 @@ var ExpansionOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Expansion panel as accordion
@@ -3202,7 +3234,7 @@ var ExpansionStepsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -3226,10 +3258,13 @@ var FocusMonitorDirectivesExample = /** @class */ (function () {
         return origin ? origin + ' focused' : 'blurred';
     };
     // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
+    // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
     /**
      * @return {?}
      */
-    FocusMonitorDirectivesExample.prototype.markForCheck = /**
+    FocusMonitorDirectivesExample.prototype.markForCheck = 
+    // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
+    /**
      * @return {?}
      */
     function () {
@@ -3253,7 +3288,7 @@ var FocusMonitorDirectivesExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Focusing with a specific FocusOrigin
@@ -3320,7 +3355,7 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -3395,7 +3430,7 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field appearance variants
@@ -3415,7 +3450,7 @@ var FormFieldAppearanceExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with custom telephone number input control.
@@ -3593,8 +3628,8 @@ var MyTelInput = /** @class */ (function () {
      * @return {?}
      */
     function (event) {
-        if ((/** @type {?} */ (event.target)).tagName.toLowerCase() != 'input') {
-            /** @type {?} */ ((this.elRef.nativeElement.querySelector('input'))).focus();
+        if (((/** @type {?} */ (event.target))).tagName.toLowerCase() != 'input') {
+            (/** @type {?} */ (this.elRef.nativeElement.querySelector('input'))).focus();
         }
     };
     MyTelInput.nextId = 0;
@@ -3628,7 +3663,7 @@ var MyTelInput = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with error messages
@@ -3660,7 +3695,7 @@ var FormFieldErrorExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with hints
@@ -3680,7 +3715,7 @@ var FormFieldHintExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with label
@@ -3708,7 +3743,7 @@ var FormFieldLabelExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Simple form field
@@ -3728,7 +3763,7 @@ var FormFieldOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with prefix & suffix
@@ -3749,7 +3784,7 @@ var FormFieldPrefixSuffixExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field theming
@@ -3786,7 +3821,7 @@ var FormFieldThemingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dynamic grid-list
@@ -3812,7 +3847,7 @@ var GridListDynamicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic grid-list
@@ -3832,7 +3867,7 @@ var GridListOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic icons
@@ -3852,7 +3887,7 @@ var IconOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title SVG icons
@@ -3878,7 +3913,7 @@ var IconSvgExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Input with a clear button
@@ -3899,7 +3934,7 @@ var InputClearableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Error when invalid control is dirty, touched, or submitted.
@@ -3950,7 +3985,7 @@ var InputErrorStateMatcherExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Input with error messages
@@ -3974,7 +4009,7 @@ var InputErrorsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Inputs in a form
@@ -3994,7 +4029,7 @@ var InputFormExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Input with hints
@@ -4014,7 +4049,7 @@ var InputHintExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic Inputs
@@ -4034,7 +4069,7 @@ var InputOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Inputs with prefixes and suffixes
@@ -4054,7 +4089,7 @@ var InputPrefixSuffixExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic list
@@ -4074,7 +4109,7 @@ var ListOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title List with sections
@@ -4118,7 +4153,7 @@ var ListSectionsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title List with selection
@@ -4139,7 +4174,7 @@ var ListSelectionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Menu with icons
@@ -4159,7 +4194,7 @@ var MenuIconsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic menu
@@ -4179,7 +4214,7 @@ var MenuOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Nested menu
@@ -4199,7 +4234,7 @@ var NestedMenuExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable paginator
@@ -4234,7 +4269,7 @@ var PaginatorConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Paginator
@@ -4254,7 +4289,7 @@ var PaginatorOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Buffer progress-bar
@@ -4274,7 +4309,7 @@ var ProgressBarBufferExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable progress-bar
@@ -4298,7 +4333,7 @@ var ProgressBarConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Determinate progress-bar
@@ -4318,7 +4353,7 @@ var ProgressBarDeterminateExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Indeterminate progress-bar
@@ -4338,7 +4373,7 @@ var ProgressBarIndeterminateExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Query progress-bar
@@ -4358,7 +4393,7 @@ var ProgressBarQueryExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable progress spinner
@@ -4381,7 +4416,7 @@ var ProgressSpinnerConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic progress-spinner
@@ -4401,7 +4436,7 @@ var ProgressSpinnerOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Radios with ngModel
@@ -4422,7 +4457,7 @@ var RadioNgModelExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic radios
@@ -4442,7 +4477,7 @@ var RadioOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title MatRipple basic usage
@@ -4465,7 +4500,7 @@ var RippleOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom trigger text
@@ -4487,7 +4522,7 @@ var SelectCustomTriggerExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled select
@@ -4508,7 +4543,7 @@ var SelectDisabledExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Error when invalid control is dirty, touched, or submitted.
@@ -4567,7 +4602,7 @@ var SelectErrorStateMatcherExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select in a form
@@ -4597,7 +4632,7 @@ var SelectFormExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with form field features
@@ -4625,7 +4660,7 @@ var SelectHintErrorExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with multiple selection
@@ -4647,7 +4682,7 @@ var SelectMultipleExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with no option ripple
@@ -4667,7 +4702,7 @@ var SelectNoRippleExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with option groups
@@ -4722,7 +4757,7 @@ var SelectOptgroupExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic select
@@ -4747,7 +4782,7 @@ var SelectOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom panel styling
@@ -4771,7 +4806,7 @@ var SelectPanelClassExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with reset option
@@ -4800,7 +4835,7 @@ var SelectResetExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with 2-way value binding
@@ -4821,7 +4856,7 @@ var SelectValueBindingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Autosize sidenav
@@ -4842,7 +4877,7 @@ var SidenavAutosizeExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drawer with explicit backdrop setting
@@ -4862,7 +4897,7 @@ var SidenavBackdropExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav with custom escape and backdrop click behavior
@@ -4899,7 +4934,7 @@ var SidenavDisableCloseExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic drawer
@@ -4919,7 +4954,7 @@ var SidenavDrawerOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Fixed sidenav
@@ -4949,7 +4984,7 @@ var SidenavFixedExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav with configurable mode
@@ -4971,7 +5006,7 @@ var SidenavModeExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav open & close behavior
@@ -4993,7 +5028,7 @@ var SidenavOpenCloseExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic sidenav
@@ -5014,7 +5049,7 @@ var SidenavOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Implicit main content with two sidenavs
@@ -5035,7 +5070,7 @@ var SidenavPositionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Responsive sidenav
@@ -5077,7 +5112,7 @@ var SidenavResponsiveExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable slide-toggle
@@ -5100,7 +5135,7 @@ var SlideToggleConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Slide-toggle with forms
@@ -5138,7 +5173,7 @@ var SlideToggleFormsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic slide-toggles
@@ -5158,7 +5193,7 @@ var SlideToggleOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable slider
@@ -5206,7 +5241,7 @@ var SliderConfigurableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Slider with custom thumb label formatting.
@@ -5243,7 +5278,7 @@ var SliderFormattingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic slider
@@ -5263,7 +5298,7 @@ var SliderOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Snack-bar with a custom component
@@ -5310,7 +5345,7 @@ var PizzaPartyComponent = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic snack-bar
@@ -5350,7 +5385,7 @@ var SnackBarOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Snack-bar with configurable position
@@ -5389,7 +5424,7 @@ var SnackBarPositionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sorting overview
@@ -5456,7 +5491,7 @@ function compare(a, b, isAsc) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper with editable steps
@@ -5496,7 +5531,7 @@ var StepperEditableExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var ɵ0$2 = { showError: true };
 /**
@@ -5539,7 +5574,7 @@ var StepperErrorsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper label bottom position
@@ -5578,7 +5613,7 @@ var StepperLabelPositionBottomExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper with optional steps
@@ -5618,7 +5653,7 @@ var StepperOptionalExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper overview
@@ -5658,7 +5693,7 @@ var StepperOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 var ɵ0$3 = { displayDefaultIndicatorType: false };
 /**
@@ -5701,7 +5736,7 @@ var StepperStatesExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper vertical
@@ -5741,7 +5776,7 @@ var StepperVerticalExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with aligned labels
@@ -5761,7 +5796,7 @@ var TabGroupAlignExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group animations
@@ -5781,7 +5816,7 @@ var TabGroupAnimationsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with asynchronously loading tab contents
@@ -5812,7 +5847,7 @@ var TabGroupAsyncExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab group
@@ -5832,7 +5867,7 @@ var TabGroupBasicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Using tabs with a custom label template
@@ -5852,7 +5887,7 @@ var TabGroupCustomLabelExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tag group with dynamic height based on tab contents
@@ -5872,7 +5907,7 @@ var TabGroupDynamicHeightExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with dynamically changing tabs
@@ -5919,7 +5954,7 @@ var TabGroupDynamicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with the headers on the bottom
@@ -5939,7 +5974,7 @@ var TabGroupHeaderBelowExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group where the tab content is loaded lazily (when activated)
@@ -5974,7 +6009,7 @@ var TabGroupLazyLoadedExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with stretched labels
@@ -5994,7 +6029,7 @@ var TabGroupStretchedExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Customizing the theme options on the tab group
@@ -6014,7 +6049,7 @@ var TabGroupThemeExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab nav bar
@@ -6046,7 +6081,7 @@ var TabNavBarBasicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$2 = [
@@ -6081,7 +6116,7 @@ var TableBasicFlexExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$3 = [
@@ -6116,7 +6151,7 @@ var TableBasicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$4 = [
@@ -6175,6 +6210,7 @@ var TableDynamicColumnsExample = /** @class */ (function () {
             /** @type {?} */
             var randomIndex = Math.floor(Math.random() * currentIndex);
             currentIndex -= 1;
+            // Swap
             /** @type {?} */
             var temp = this.columnsToDisplay[currentIndex];
             this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
@@ -6193,7 +6229,7 @@ var TableDynamicColumnsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with expandable rows
@@ -6207,7 +6243,7 @@ var TableExpandableRowsExample = /** @class */ (function () {
         { type: core.Component, args: [{
                     selector: 'table-expandable-rows-example',
                     styles: ["table { width: 100%; } tr.example-detail-row { height: 0; } tr.example-element-row:not(.example-expanded-row):hover { background: #f5f5f5; } tr.example-element-row:not(.example-expanded-row):active { background: #efefef; } .example-element-row td { border-bottom-width: 0; } .example-element-detail { overflow: hidden; display: flex; } .example-element-diagram { min-width: 80px; border: 2px solid black; padding: 8px; font-weight: lighter; margin: 8px 0; height: 104px; } .example-element-symbol { font-weight: bold; font-size: 40px; line-height: normal; } .example-element-description { padding: 16px; } .example-element-description-attribution { opacity: 0.5; } "],
-                    template: "<table mat-table [dataSource]=\"dataSource\" multiTemplateDataRows class=\"mat-elevation-z8\"><ng-container matColumnDef=\"{{column}}\" *ngFor=\"let column of columnsToDisplay\"><th mat-header-cell *matHeaderCellDef>{{column}}</th><td mat-cell *matCellDef=\"let element\">{{element[column]}}</td></ng-container><ng-container matColumnDef=\"expandedDetail\"><td mat-cell *matCellDef=\"let element\" [attr.colspan]=\"columnsToDisplay.length\"><div class=\"example-element-detail\" [@detailExpand]=\"element == expandedElement ? 'expanded' : 'collapsed'\"><div class=\"example-element-diagram\"><div class=\"example-element-position\">{{element.position}}</div><div class=\"example-element-symbol\">{{element.symbol}}</div><div class=\"example-element-name\">{{element.name}}</div><div class=\"example-element-weight\">{{element.weight}}</div></div><div class=\"example-element-description\">{{element.description}} <span class=\"example-element-description-attribution\">-- Wikipedia</span></div></div></td></ng-container><tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr><tr mat-row *matRowDef=\"let element; columns: columnsToDisplay;\" class=\"example-element-row\" [class.example-expanded-row]=\"expandedElement === element\" (click)=\"expandedElement = element\"></tr><tr mat-row *matRowDef=\"let row; columns: ['expandedDetail']\" class=\"example-detail-row\"></tr></table>",
+                    template: "<table mat-table [dataSource]=\"dataSource\" multiTemplateDataRows class=\"mat-elevation-z8\"><ng-container matColumnDef=\"{{column}}\" *ngFor=\"let column of columnsToDisplay\"><th mat-header-cell *matHeaderCellDef>{{column}}</th><td mat-cell *matCellDef=\"let element\">{{element[column]}}</td></ng-container><ng-container matColumnDef=\"expandedDetail\"><td mat-cell *matCellDef=\"let element\" [attr.colspan]=\"columnsToDisplay.length\"><div class=\"example-element-detail\" [@detailExpand]=\"element == expandedElement ? 'expanded' : 'collapsed'\"><div class=\"example-element-diagram\"><div class=\"example-element-position\">{{element.position}}</div><div class=\"example-element-symbol\">{{element.symbol}}</div><div class=\"example-element-name\">{{element.name}}</div><div class=\"example-element-weight\">{{element.weight}}</div></div><div class=\"example-element-description\">{{element.description}} <span class=\"example-element-description-attribution\">-- Wikipedia</span></div></div></td></ng-container><tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr><tr mat-row *matRowDef=\"let element; columns: columnsToDisplay;\" class=\"example-element-row\" [class.example-expanded-row]=\"expandedElement === element\" (click)=\"expandedElement = expandedElement === element ? null : element\"></tr><tr mat-row *matRowDef=\"let row; columns: ['expandedDetail']\" class=\"example-detail-row\"></tr></table>",
                     animations: [
                         animations.trigger('detailExpand', [
                             animations.state('collapsed', animations.style({ height: '0px', minHeight: '0', display: 'none' })),
@@ -6286,7 +6322,7 @@ var ELEMENT_DATA$5 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$6 = [
@@ -6332,7 +6368,7 @@ var TableFilteringExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Footer row table
@@ -6373,7 +6409,7 @@ var TableFooterRowExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table retrieving data through HTTP
@@ -6401,7 +6437,7 @@ var TableHttpExample = /** @class */ (function () {
         rxjs.merge(this.sort.sortChange, this.paginator.page)
             .pipe(operators.startWith({}), operators.switchMap(function () {
             _this.isLoadingResults = true;
-            return /** @type {?} */ ((_this.exampleDatabase)).getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
+            return (/** @type {?} */ (_this.exampleDatabase)).getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
         }), operators.map(function (data) {
             // Flip flag to show that loading has finished.
             _this.isLoadingResults = false;
@@ -6466,7 +6502,7 @@ ExampleHttpDao = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with multiple header and footer rows
@@ -6507,11 +6543,12 @@ var TableMultipleHeaderFooterExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-/** *
+/**
  * Constants used to fill up our data base.
-  @type {?} */
+ * @type {?}
+ */
 var COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
     'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
 /** @type {?} */
@@ -6524,6 +6561,7 @@ var NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
 var TableOverviewExample = /** @class */ (function () {
     function TableOverviewExample() {
         this.displayedColumns = ['id', 'name', 'progress', 'color'];
+        // Create 100 users
         /** @type {?} */
         var users = Array.from({ length: 100 }, function (_, k) { return createNewUser(k + 1); });
         // Assign the data to the data source for the table to render
@@ -6587,7 +6625,7 @@ function createNewUser(id) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with pagination
@@ -6644,7 +6682,7 @@ var ELEMENT_DATA$7 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table showing each row context properties.
@@ -6666,7 +6704,7 @@ var TableRowContextExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$8 = [
@@ -6733,7 +6771,7 @@ var TableSelectionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$9 = [
@@ -6864,7 +6902,7 @@ var SimpleColumn = /** @class */ (function () {
      * @return {?}
      */
     function (data) {
-        return this.dataAccessor ? this.dataAccessor(data, this.name) : (/** @type {?} */ (data))[this.name];
+        return this.dataAccessor ? this.dataAccessor(data, this.name) : ((/** @type {?} */ (data)))[this.name];
     };
     SimpleColumn.decorators = [
         { type: core.Component, args: [{
@@ -6894,7 +6932,7 @@ var SimpleColumn = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$10 = [
@@ -6941,7 +6979,7 @@ var TableSortingExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with a sticky columns
@@ -6976,7 +7014,7 @@ var ELEMENT_DATA$11 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Flex-layout tables with toggle-able sticky headers, footers, and columns
@@ -7037,7 +7075,7 @@ var ELEMENT_DATA$12 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tables with toggle-able sticky headers, footers, and columns
@@ -7098,7 +7136,7 @@ var ELEMENT_DATA$13 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with a sticky footer
@@ -7139,7 +7177,7 @@ var TableStickyFooterExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with sticky header
@@ -7174,7 +7212,7 @@ var ELEMENT_DATA$14 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var ELEMENT_DATA$15 = [
@@ -7258,7 +7296,7 @@ var WrapperTable = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring autofill state with cdkAutofill
@@ -7278,7 +7316,7 @@ var TextFieldAutofillDirectiveExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring autofill state with AutofillMonitor
@@ -7330,7 +7368,7 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Auto-resizing textarea
@@ -7370,7 +7408,7 @@ var TextFieldAutosizeTextareaExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Multi-row toolbar
@@ -7390,7 +7428,7 @@ var ToolbarMultirowExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic toolbar
@@ -7410,7 +7448,7 @@ var ToolbarOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
@@ -7432,7 +7470,7 @@ var TooltipAutoHideExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can have a custom class applied.
@@ -7455,7 +7493,7 @@ var TooltipCustomClassExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a show and hide delay
@@ -7477,7 +7515,7 @@ var TooltipDelayExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can be disabled
@@ -7498,7 +7536,7 @@ var TooltipDisabledExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can be manually shown/hidden.
@@ -7518,7 +7556,7 @@ var TooltipManualExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a changing message
@@ -7539,11 +7577,12 @@ var TooltipMessageExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-/** *
+/**
  * Custom options the configure the tooltip's default show/hide delays.
-  @type {?} */
+ * @type {?}
+ */
 var myCustomTooltipDefaults = {
     showDelay: 1000,
     hideDelay: 1000,
@@ -7570,7 +7609,7 @@ var TooltipModifiedDefaultsExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic tooltip
@@ -7590,7 +7629,7 @@ var TooltipOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a custom position
@@ -7612,7 +7651,7 @@ var TooltipPositionExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Node for to-do item
@@ -7636,9 +7675,10 @@ TodoItemFlatNode = /** @class */ (function () {
     }
     return TodoItemFlatNode;
 }());
-/** *
+/**
  * The Json object for to-do list data.
-  @type {?} */
+ * @type {?}
+ */
 var TREE_DATA$2 = {
     Groceries: {
         'Almond Meal flour': null,
@@ -7681,6 +7721,8 @@ var ChecklistDatabase = /** @class */ (function () {
      * @return {?}
      */
     function () {
+        // Build the tree nodes from Json object. The result is a list of `TodoItemNode` with nested
+        //     file node as children.
         /** @type {?} */
         var data = this.buildFileTree(TREE_DATA$2, 0);
         // Notify the change.
@@ -7738,7 +7780,7 @@ var ChecklistDatabase = /** @class */ (function () {
      */
     function (parent, name) {
         if (parent.children) {
-            parent.children.push(/** @type {?} */ ({ item: name }));
+            parent.children.push((/** @type {?} */ ({ item: name })));
             this.dataChange.next(this.data);
         }
     };
@@ -7900,11 +7942,13 @@ var TreeChecklistExample = /** @class */ (function () {
         this.checkAllParentsSelection(node);
     };
     /* Checks all the parents when a leaf node is selected/unselected */
+    /* Checks all the parents when a leaf node is selected/unselected */
     /**
      * @param {?} node
      * @return {?}
      */
-    TreeChecklistExample.prototype.checkAllParentsSelection = /**
+    TreeChecklistExample.prototype.checkAllParentsSelection = /* Checks all the parents when a leaf node is selected/unselected */
+    /**
      * @param {?} node
      * @return {?}
      */
@@ -7945,11 +7989,13 @@ var TreeChecklistExample = /** @class */ (function () {
         }
     };
     /* Get the parent node of a node */
+    /* Get the parent node of a node */
     /**
      * @param {?} node
      * @return {?}
      */
-    TreeChecklistExample.prototype.getParentNode = /**
+    TreeChecklistExample.prototype.getParentNode = /* Get the parent node of a node */
+    /**
      * @param {?} node
      * @return {?}
      */
@@ -7984,7 +8030,7 @@ var TreeChecklistExample = /** @class */ (function () {
     function (node) {
         /** @type {?} */
         var parentNode = this.flatNodeMap.get(node);
-        this.database.insertItem(/** @type {?} */ ((parentNode)), '');
+        this.database.insertItem((/** @type {?} */ (parentNode)), '');
         this.treeControl.expand(node);
     };
     /** Save the node to database */
@@ -8003,7 +8049,7 @@ var TreeChecklistExample = /** @class */ (function () {
     function (node, itemValue) {
         /** @type {?} */
         var nestedNode = this.flatNodeMap.get(node);
-        this.database.updateItem(/** @type {?} */ ((nestedNode)), itemValue);
+        this.database.updateItem((/** @type {?} */ (nestedNode)), itemValue);
     };
     TreeChecklistExample.decorators = [
         { type: core.Component, args: [{
@@ -8022,7 +8068,7 @@ var TreeChecklistExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Flat node with expandable and level information
@@ -8136,9 +8182,9 @@ var DynamicDataSource = /** @class */ (function () {
     function (collectionViewer) {
         var _this = this;
         this.treeControl.expansionModel.onChange.subscribe(function (change) {
-            if ((/** @type {?} */ (change)).added ||
-                (/** @type {?} */ (change)).removed) {
-                _this.handleTreeControl(/** @type {?} */ (change));
+            if (((/** @type {?} */ (change))).added ||
+                ((/** @type {?} */ (change))).removed) {
+                _this.handleTreeControl((/** @type {?} */ (change)));
             }
         });
         return rxjs.merge(collectionViewer.viewChange, this.dataChange).pipe(operators.map(function () { return _this.data; }));
@@ -8185,7 +8231,6 @@ var DynamicDataSource = /** @class */ (function () {
         /** @type {?} */
         var index = this.data.indexOf(node);
         if (!children || index < 0) { // If no children, or cannot find the node, no op
-            // If no children, or cannot find the node, no op
             return;
         }
         node.isLoading = true;
@@ -8249,7 +8294,7 @@ var TreeDynamicExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * File node data with nested structure.
@@ -8279,9 +8324,10 @@ FileFlatNode$1 = /** @class */ (function () {
     }
     return FileFlatNode;
 }());
-/** *
+/**
  * The file structure tree data in string. The data could be parsed into a Json object
-  @type {?} */
+ * @type {?}
+ */
 var TREE_DATA$3 = JSON.stringify({
     Applications: {
         Calendar: 'app',
@@ -8344,8 +8390,11 @@ var FileDatabase$2 = /** @class */ (function () {
      * @return {?}
      */
     function () {
+        // Parse the string to json object.
         /** @type {?} */
         var dataObject = JSON.parse(TREE_DATA$3);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
         /** @type {?} */
         var data = this.buildFileTree(dataObject, 0);
         // Notify the change.
@@ -8430,7 +8479,7 @@ var TreeFlatOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 var LOAD_MORE = 'LOAD_MORE';
@@ -8531,14 +8580,14 @@ var LoadmoreDatabase = /** @class */ (function () {
             return;
         }
         /** @type {?} */
-        var parent = /** @type {?} */ ((this.nodeMap.get(item)));
+        var parent = (/** @type {?} */ (this.nodeMap.get(item)));
         /** @type {?} */
-        var children = /** @type {?} */ ((this.dataMap.get(item)));
-        if (onlyFirstTime && /** @type {?} */ ((parent.children)).length > 0) {
+        var children = (/** @type {?} */ (this.dataMap.get(item)));
+        if (onlyFirstTime && (/** @type {?} */ (parent.children)).length > 0) {
             return;
         }
         /** @type {?} */
-        var newChildrenNumber = /** @type {?} */ ((parent.children)).length + this.batchNumber;
+        var newChildrenNumber = (/** @type {?} */ (parent.children)).length + this.batchNumber;
         /** @type {?} */
         var nodes = children.slice(0, newChildrenNumber)
             .map(function (name) { return _this._generateNode(name); });
@@ -8550,16 +8599,18 @@ var LoadmoreDatabase = /** @class */ (function () {
         this.dataChange.next(this.dataChange.value);
     };
     /**
+     * @private
      * @param {?} item
      * @return {?}
      */
     LoadmoreDatabase.prototype._generateNode = /**
+     * @private
      * @param {?} item
      * @return {?}
      */
     function (item) {
         if (this.nodeMap.has(item)) {
-            return /** @type {?} */ ((this.nodeMap.get(item)));
+            return (/** @type {?} */ (this.nodeMap.get(item)));
         }
         /** @type {?} */
         var result = new LoadmoreNode(item, this.dataMap.has(item));
@@ -8645,7 +8696,7 @@ var TreeLoadmoreExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Json node data with nested structure. Each node has a filename and a value or a list of children
@@ -8658,9 +8709,10 @@ FileNode$3 = /** @class */ (function () {
     }
     return FileNode;
 }());
-/** *
+/**
  * The Json tree data in string. The data could be parsed into Json object
-  @type {?} */
+ * @type {?}
+ */
 var TREE_DATA$4 = JSON.stringify({
     Applications: {
         Calendar: 'app',
@@ -8723,8 +8775,11 @@ var FileDatabase$3 = /** @class */ (function () {
      * @return {?}
      */
     function () {
+        // Parse the string to json object.
         /** @type {?} */
         var dataObject = JSON.parse(TREE_DATA$4);
+        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
+        //     file node as children.
         /** @type {?} */
         var data = this.buildFileTree(dataObject, 0);
         // Notify the change.
@@ -8803,12 +8858,1448 @@ var TreeNestedOverviewExample = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-var EXAMPLE_COMPONENTS = { "autocomplete-auto-active-first-option": { "title": "Highlight the first autocomplete option", "component": AutocompleteAutoActiveFirstOptionExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-display": { "title": "Display value autocomplete", "component": AutocompleteDisplayExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-filter": { "title": "Filter autocomplete", "component": AutocompleteFilterExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-optgroup": { "title": "Option groups autocomplete", "component": AutocompleteOptgroupExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-overview": { "title": "Autocomplete overview", "component": AutocompleteOverviewExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-simple": { "title": "Simple autocomplete", "component": AutocompleteSimpleExample, "additionalFiles": [], "selectorName": "" }, "badge-overview": { "title": "Badge overview", "component": BadgeOverviewExample, "additionalFiles": [], "selectorName": "" }, "bottom-sheet-overview": { "title": "Bottom Sheet Overview", "component": BottomSheetOverviewExample, "additionalFiles": ["bottom-sheet-overview-example-sheet.html"], "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet" }, "button-overview": { "title": "Basic buttons", "component": ButtonOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-appearance": { "title": "Button toggle appearance", "component": ButtonToggleAppearanceExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-exclusive": { "title": "Exclusive selection", "component": ButtonToggleExclusiveExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-overview": { "title": "Basic button-toggles", "component": ButtonToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-types": { "title": "Button varieties", "component": ButtonTypesExample, "additionalFiles": [], "selectorName": "" }, "card-fancy": { "title": "Card with multiple sections", "component": CardFancyExample, "additionalFiles": [], "selectorName": "" }, "card-overview": { "title": "Basic cards", "component": CardOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-axis-lock": { "title": "Drag&Drop position locking", "component": CdkDragDropAxisLockExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting": { "title": "Drag&Drop connected sorting", "component": CdkDragDropConnectedSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-placeholder": { "title": "Drag&Drop custom placeholer", "component": CdkDragDropCustomPlaceholderExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-preview": { "title": "Drag&Drop custom preview", "component": CdkDragDropCustomPreviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled": { "title": "Drag&Drop disabled", "component": CdkDragDropDisabledExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-enter-predicate": { "title": "Drag&Drop enter predicate", "component": CdkDragDropEnterPredicateExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-handle": { "title": "Drag&Drop with a handle", "component": CdkDragDropHandleExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-horizontal-sorting": { "title": "Drag&Drop horizontal sorting", "component": CdkDragDropHorizontalSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-overview": { "title": "Basic Drag&Drop", "component": CdkDragDropOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-root-element": { "title": "Drag&Drop with alternate root element", "component": CdkDragDropRootElementExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-sorting": { "title": "Drag&Drop sorting", "component": CdkDragDropSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-platform-overview": { "title": "Platform overview", "component": CdkPlatformOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic-flex": { "title": "Basic use of `<cdk-table>` (uses display flex)", "component": CdkTableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic": { "title": "Basic CDK data-table", "component": CdkTableBasicExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-flat": { "title": "Tree with flat nodes", "component": CdkTreeFlatExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-nested": { "title": "Tree with nested nodes", "component": CdkTreeNestedExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-context": { "title": "Virtual scroll context variables", "component": CdkVirtualScrollContextExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-custom-strategy": { "title": "Virtual scroll with a custom strategy", "component": CdkVirtualScrollCustomStrategyExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-data-source": { "title": "Virtual scroll with a custom data source", "component": CdkVirtualScrollDataSourceExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-dl": { "title": "Virtual scrolling `<dl>`", "component": CdkVirtualScrollDlExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-fixed-buffer": { "title": "Fixed size virtual scroll with custom buffer parameters", "component": CdkVirtualScrollFixedBufferExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-horizontal": { "title": "Horizontal virtual scroll", "component": CdkVirtualScrollHorizontalExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-overview": { "title": "Basic virtual scroll", "component": CdkVirtualScrollOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-template-cache": { "title": "Virtual scroll with no template caching", "component": CdkVirtualScrollTemplateCacheExample, "additionalFiles": [], "selectorName": "" }, "checkbox-configurable": { "title": "Configurable checkbox", "component": CheckboxConfigurableExample, "additionalFiles": [], "selectorName": "" }, "checkbox-overview": { "title": "Basic checkboxes", "component": CheckboxOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-autocomplete": { "title": "Chips Autocomplete", "component": ChipsAutocompleteExample, "additionalFiles": [], "selectorName": "" }, "chips-input": { "title": "Chips with input", "component": ChipsInputExample, "additionalFiles": [], "selectorName": "" }, "chips-overview": { "title": "Basic chips", "component": ChipsOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-stacked": { "title": "Stacked chips", "component": ChipsStackedExample, "additionalFiles": [], "selectorName": "" }, "datepicker-api": { "title": "Datepicker open method", "component": DatepickerApiExample, "additionalFiles": [], "selectorName": "" }, "datepicker-color": { "title": "Datepicker palette colors", "component": DatepickerColorExample, "additionalFiles": [], "selectorName": "" }, "datepicker-custom-header": { "title": "Datepicker with custom calendar header", "component": DatepickerCustomHeaderExample, "additionalFiles": [], "selectorName": "DatepickerCustomHeaderExample, ExampleHeader" }, "datepicker-custom-icon": { "title": "Datepicker with custom icon", "component": DatepickerCustomIconExample, "additionalFiles": [], "selectorName": "" }, "datepicker-date-class": { "title": "Datepicker with custom date classes", "component": DatepickerDateClassExample, "additionalFiles": [], "selectorName": "" }, "datepicker-disabled": { "title": "Disabled datepicker", "component": DatepickerDisabledExample, "additionalFiles": [], "selectorName": "" }, "datepicker-events": { "title": "Datepicker input and change events", "component": DatepickerEventsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-filter": { "title": "Datepicker with filter validation", "component": DatepickerFilterExample, "additionalFiles": [], "selectorName": "" }, "datepicker-formats": { "title": "Datepicker with custom formats", "component": DatepickerFormatsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-locale": { "title": "Datepicker with different locale", "component": DatepickerLocaleExample, "additionalFiles": [], "selectorName": "" }, "datepicker-min-max": { "title": "Datepicker with min & max validation", "component": DatepickerMinMaxExample, "additionalFiles": [], "selectorName": "" }, "datepicker-moment": { "title": "Datepicker that uses Moment.js dates", "component": DatepickerMomentExample, "additionalFiles": [], "selectorName": "" }, "datepicker-overview": { "title": "Basic datepicker", "component": DatepickerOverviewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-start-view": { "title": "Datepicker start date", "component": DatepickerStartViewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-touch": { "title": "Datepicker touch UI", "component": DatepickerTouchExample, "additionalFiles": [], "selectorName": "" }, "datepicker-value": { "title": "Datepicker selected value", "component": DatepickerValueExample, "additionalFiles": [], "selectorName": "" }, "datepicker-views-selection": { "title": "Datepicker emulating a Year and month picker", "component": DatepickerViewsSelectionExample, "additionalFiles": [], "selectorName": "" }, "dialog-content": { "title": "Dialog with header, scrollable content and actions", "component": DialogContentExample, "additionalFiles": ["dialog-content-example-dialog.html"], "selectorName": "DialogContentExample, DialogContentExampleDialog" }, "dialog-data": { "title": "Injecting data when opening a dialog", "component": DialogDataExample, "additionalFiles": ["dialog-data-example-dialog.html"], "selectorName": "DialogDataExample, DialogDataExampleDialog" }, "dialog-elements": { "title": "Dialog elements", "component": DialogElementsExample, "additionalFiles": ["dialog-elements-example-dialog.html"], "selectorName": "DialogElementsExample, DialogElementsExampleDialog" }, "dialog-overview": { "title": "Dialog Overview", "component": DialogOverviewExample, "additionalFiles": ["dialog-overview-example-dialog.html"], "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog" }, "divider-overview": { "title": "Basic divider", "component": DividerOverviewExample, "additionalFiles": [], "selectorName": "" }, "elevation-overview": { "title": "Elevation CSS classes", "component": ElevationOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-expand-collapse-all": { "title": "Accordion with expand/collapse all toggles", "component": ExpansionExpandCollapseAllExample, "additionalFiles": [], "selectorName": "" }, "expansion-overview": { "title": "Basic expansion panel", "component": ExpansionOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-steps": { "title": "Expansion panel as accordion", "component": ExpansionStepsExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-directives": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorDirectivesExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-focus-via": { "title": "Focusing with a specific FocusOrigin", "component": FocusMonitorFocusViaExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-overview": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-appearance": { "title": "Form field appearance variants", "component": FormFieldAppearanceExample, "additionalFiles": [], "selectorName": "" }, "form-field-custom-control": { "title": "Form field with custom telephone number input control.", "component": FormFieldCustomControlExample, "additionalFiles": ["example-tel-input-example.html", "example-tel-input-example.css"], "selectorName": "FormFieldCustomControlExample, MyTelInput" }, "form-field-error": { "title": "Form field with error messages", "component": FormFieldErrorExample, "additionalFiles": [], "selectorName": "" }, "form-field-hint": { "title": "Form field with hints", "component": FormFieldHintExample, "additionalFiles": [], "selectorName": "" }, "form-field-label": { "title": "Form field with label", "component": FormFieldLabelExample, "additionalFiles": [], "selectorName": "" }, "form-field-overview": { "title": "Simple form field", "component": FormFieldOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-prefix-suffix": { "title": "Form field with prefix & suffix", "component": FormFieldPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "form-field-theming": { "title": "Form field theming", "component": FormFieldThemingExample, "additionalFiles": [], "selectorName": "" }, "grid-list-dynamic": { "title": "Dynamic grid-list", "component": GridListDynamicExample, "additionalFiles": [], "selectorName": "" }, "grid-list-overview": { "title": "Basic grid-list", "component": GridListOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-overview": { "title": "Basic icons", "component": IconOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-svg": { "title": "SVG icons", "component": IconSvgExample, "additionalFiles": [], "selectorName": "" }, "input-clearable": { "title": "Input with a clear button", "component": InputClearableExample, "additionalFiles": [], "selectorName": "" }, "input-error-state-matcher": { "title": "Input with a custom ErrorStateMatcher", "component": InputErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "input-errors": { "title": "Input with error messages", "component": InputErrorsExample, "additionalFiles": [], "selectorName": "" }, "input-form": { "title": "Inputs in a form", "component": InputFormExample, "additionalFiles": [], "selectorName": "" }, "input-hint": { "title": "Input with hints", "component": InputHintExample, "additionalFiles": [], "selectorName": "" }, "input-overview": { "title": "Basic Inputs", "component": InputOverviewExample, "additionalFiles": [], "selectorName": "" }, "input-prefix-suffix": { "title": "Inputs with prefixes and suffixes", "component": InputPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "list-overview": { "title": "Basic list", "component": ListOverviewExample, "additionalFiles": [], "selectorName": "" }, "list-sections": { "title": "List with sections", "component": ListSectionsExample, "additionalFiles": [], "selectorName": "" }, "list-selection": { "title": "List with selection", "component": ListSelectionExample, "additionalFiles": [], "selectorName": "" }, "menu-icons": { "title": "Menu with icons", "component": MenuIconsExample, "additionalFiles": [], "selectorName": "" }, "menu-overview": { "title": "Basic menu", "component": MenuOverviewExample, "additionalFiles": [], "selectorName": "" }, "nested-menu": { "title": "Nested menu", "component": NestedMenuExample, "additionalFiles": [], "selectorName": "" }, "paginator-configurable": { "title": "Configurable paginator", "component": PaginatorConfigurableExample, "additionalFiles": [], "selectorName": "" }, "paginator-overview": { "title": "Paginator", "component": PaginatorOverviewExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-buffer": { "title": "Buffer progress-bar", "component": ProgressBarBufferExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-configurable": { "title": "Configurable progress-bar", "component": ProgressBarConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-determinate": { "title": "Determinate progress-bar", "component": ProgressBarDeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-indeterminate": { "title": "Indeterminate progress-bar", "component": ProgressBarIndeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-query": { "title": "Query progress-bar", "component": ProgressBarQueryExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-configurable": { "title": "Configurable progress spinner", "component": ProgressSpinnerConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-overview": { "title": "Basic progress-spinner", "component": ProgressSpinnerOverviewExample, "additionalFiles": [], "selectorName": "" }, "radio-ng-model": { "title": "Radios with ngModel", "component": RadioNgModelExample, "additionalFiles": [], "selectorName": "" }, "radio-overview": { "title": "Basic radios", "component": RadioOverviewExample, "additionalFiles": [], "selectorName": "" }, "ripple-overview": { "title": "MatRipple basic usage", "component": RippleOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-custom-trigger": { "title": "Select with custom trigger text", "component": SelectCustomTriggerExample, "additionalFiles": [], "selectorName": "" }, "select-disabled": { "title": "Disabled select", "component": SelectDisabledExample, "additionalFiles": [], "selectorName": "" }, "select-error-state-matcher": { "title": "Select with a custom ErrorStateMatcher", "component": SelectErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "select-form": { "title": "Select in a form", "component": SelectFormExample, "additionalFiles": [], "selectorName": "" }, "select-hint-error": { "title": "Select with form field features", "component": SelectHintErrorExample, "additionalFiles": [], "selectorName": "" }, "select-multiple": { "title": "Select with multiple selection", "component": SelectMultipleExample, "additionalFiles": [], "selectorName": "" }, "select-no-ripple": { "title": "Select with no option ripple", "component": SelectNoRippleExample, "additionalFiles": [], "selectorName": "" }, "select-optgroup": { "title": "Select with option groups", "component": SelectOptgroupExample, "additionalFiles": [], "selectorName": "" }, "select-overview": { "title": "Basic select", "component": SelectOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-panel-class": { "title": "Select with custom panel styling", "component": SelectPanelClassExample, "additionalFiles": [], "selectorName": "" }, "select-reset": { "title": "Select with reset option", "component": SelectResetExample, "additionalFiles": [], "selectorName": "" }, "select-value-binding": { "title": "Select with 2-way value binding", "component": SelectValueBindingExample, "additionalFiles": [], "selectorName": "" }, "sidenav-autosize": { "title": "Autosize sidenav", "component": SidenavAutosizeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-backdrop": { "title": "Drawer with explicit backdrop setting", "component": SidenavBackdropExample, "additionalFiles": [], "selectorName": "" }, "sidenav-disable-close": { "title": "Sidenav with custom escape and backdrop click behavior", "component": SidenavDisableCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-drawer-overview": { "title": "Basic drawer", "component": SidenavDrawerOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-fixed": { "title": "Fixed sidenav", "component": SidenavFixedExample, "additionalFiles": [], "selectorName": "" }, "sidenav-mode": { "title": "Sidenav with configurable mode", "component": SidenavModeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-open-close": { "title": "Sidenav open & close behavior", "component": SidenavOpenCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-overview": { "title": "Basic sidenav", "component": SidenavOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-position": { "title": "Implicit main content with two sidenavs", "component": SidenavPositionExample, "additionalFiles": [], "selectorName": "" }, "sidenav-responsive": { "title": "Responsive sidenav", "component": SidenavResponsiveExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-configurable": { "title": "Configurable slide-toggle", "component": SlideToggleConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-forms": { "title": "Slide-toggle with forms", "component": SlideToggleFormsExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-overview": { "title": "Basic slide-toggles", "component": SlideToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "slider-configurable": { "title": "Configurable slider", "component": SliderConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slider-formatting": { "title": "Slider with custom thumb label formatting.", "component": SliderFormattingExample, "additionalFiles": [], "selectorName": "" }, "slider-overview": { "title": "Basic slider", "component": SliderOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-component": { "title": "Snack-bar with a custom component", "component": SnackBarComponentExample, "additionalFiles": ["snack-bar-component-example-snack.html"], "selectorName": "SnackBarComponentExample, PizzaPartyComponent" }, "snack-bar-overview": { "title": "Basic snack-bar", "component": SnackBarOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-position": { "title": "Snack-bar with configurable position", "component": SnackBarPositionExample, "additionalFiles": [], "selectorName": "" }, "sort-overview": { "title": "Sorting overview", "component": SortOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-editable": { "title": "Stepper with editable steps", "component": StepperEditableExample, "additionalFiles": [], "selectorName": "" }, "stepper-errors": { "title": "Stepper that displays errors in the steps", "component": StepperErrorsExample, "additionalFiles": [], "selectorName": "" }, "stepper-label-position-bottom": { "title": "Stepper label bottom position", "component": StepperLabelPositionBottomExample, "additionalFiles": [], "selectorName": "" }, "stepper-optional": { "title": "Stepper with optional steps", "component": StepperOptionalExample, "additionalFiles": [], "selectorName": "" }, "stepper-overview": { "title": "Stepper overview", "component": StepperOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-states": { "title": "Stepper with customized states", "component": StepperStatesExample, "additionalFiles": [], "selectorName": "" }, "stepper-vertical": { "title": "Stepper vertical", "component": StepperVerticalExample, "additionalFiles": [], "selectorName": "" }, "tab-group-align": { "title": "Tab group with aligned labels", "component": TabGroupAlignExample, "additionalFiles": [], "selectorName": "" }, "tab-group-animations": { "title": "Tab group animations", "component": TabGroupAnimationsExample, "additionalFiles": [], "selectorName": "" }, "tab-group-async": { "title": "Tab group with asynchronously loading tab contents", "component": TabGroupAsyncExample, "additionalFiles": [], "selectorName": "" }, "tab-group-basic": { "title": "Basic use of the tab group", "component": TabGroupBasicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-custom-label": { "title": "Using tabs with a custom label template", "component": TabGroupCustomLabelExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic-height": { "title": "Tag group with dynamic height based on tab contents", "component": TabGroupDynamicHeightExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic": { "title": "Tab group with dynamically changing tabs", "component": TabGroupDynamicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-header-below": { "title": "Tab group with the headers on the bottom", "component": TabGroupHeaderBelowExample, "additionalFiles": [], "selectorName": "" }, "tab-group-lazy-loaded": { "title": "Tab group where the tab content is loaded lazily (when activated)", "component": TabGroupLazyLoadedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-stretched": { "title": "Tab group with stretched labels", "component": TabGroupStretchedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-theme": { "title": "Customizing the theme options on the tab group", "component": TabGroupThemeExample, "additionalFiles": [], "selectorName": "" }, "tab-nav-bar-basic": { "title": "Basic use of the tab nav bar", "component": TabNavBarBasicExample, "additionalFiles": [], "selectorName": "" }, "table-basic-flex": { "title": "Basic use of `<mat-table>` (uses display flex)", "component": TableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "table-basic": { "title": "Basic use of `<table mat-table>`", "component": TableBasicExample, "additionalFiles": [], "selectorName": "" }, "table-dynamic-columns": { "title": "Table dynamically changing the columns displayed", "component": TableDynamicColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-expandable-rows": { "title": "Table with expandable rows", "component": TableExpandableRowsExample, "additionalFiles": [], "selectorName": "" }, "table-filtering": { "title": "Table with filtering", "component": TableFilteringExample, "additionalFiles": [], "selectorName": "" }, "table-footer-row": { "title": "Footer row table", "component": TableFooterRowExample, "additionalFiles": [], "selectorName": "" }, "table-http": { "title": "Table retrieving data through HTTP", "component": TableHttpExample, "additionalFiles": [], "selectorName": "" }, "table-multiple-header-footer": { "title": "Table with multiple header and footer rows", "component": TableMultipleHeaderFooterExample, "additionalFiles": [], "selectorName": "" }, "table-overview": { "title": "Data table with sorting, pagination, and filtering.", "component": TableOverviewExample, "additionalFiles": [], "selectorName": "" }, "table-pagination": { "title": "Table with pagination", "component": TablePaginationExample, "additionalFiles": [], "selectorName": "" }, "table-row-context": { "title": "Table showing each row context properties.", "component": TableRowContextExample, "additionalFiles": [], "selectorName": "" }, "table-selection": { "title": "Table with selection", "component": TableSelectionExample, "additionalFiles": [], "selectorName": "" }, "table-simple-column": { "title": "Table with a custom column component for easy column definition reuse.", "component": TableSimpleColumnExample, "additionalFiles": [], "selectorName": "TableSimpleColumnExample, SimpleColumn" }, "table-sorting": { "title": "Table with sorting", "component": TableSortingExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-columns": { "title": "Table with a sticky columns", "component": TableStickyColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex-flex": { "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexFlexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex": { "title": "Tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-footer": { "title": "Table with a sticky footer", "component": TableStickyFooterExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-header": { "title": "Table with sticky header", "component": TableStickyHeaderExample, "additionalFiles": [], "selectorName": "" }, "table-wrapped": { "title": "Table example that shows how to wrap a table component for definition and behavior reuse.", "component": TableWrappedExample, "additionalFiles": ["wrapper-table.html"], "selectorName": "TableWrappedExample, WrapperTable" }, "text-field-autofill-directive": { "title": "Monitoring autofill state with cdkAutofill", "component": TextFieldAutofillDirectiveExample, "additionalFiles": [], "selectorName": "" }, "text-field-autofill-monitor": { "title": "Monitoring autofill state with AutofillMonitor", "component": TextFieldAutofillMonitorExample, "additionalFiles": [], "selectorName": "" }, "text-field-autosize-textarea": { "title": "Auto-resizing textarea", "component": TextFieldAutosizeTextareaExample, "additionalFiles": [], "selectorName": "" }, "toolbar-multirow": { "title": "Multi-row toolbar", "component": ToolbarMultirowExample, "additionalFiles": [], "selectorName": "" }, "toolbar-overview": { "title": "Basic toolbar", "component": ToolbarOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-auto-hide": { "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.", "component": TooltipAutoHideExample, "additionalFiles": [], "selectorName": "" }, "tooltip-custom-class": { "title": "Tooltip that can have a custom class applied.", "component": TooltipCustomClassExample, "additionalFiles": [], "selectorName": "" }, "tooltip-delay": { "title": "Tooltip with a show and hide delay", "component": TooltipDelayExample, "additionalFiles": [], "selectorName": "" }, "tooltip-disabled": { "title": "Tooltip that can be disabled", "component": TooltipDisabledExample, "additionalFiles": [], "selectorName": "" }, "tooltip-manual": { "title": "Tooltip that can be manually shown/hidden.", "component": TooltipManualExample, "additionalFiles": [], "selectorName": "" }, "tooltip-message": { "title": "Tooltip with a changing message", "component": TooltipMessageExample, "additionalFiles": [], "selectorName": "" }, "tooltip-modified-defaults": { "title": "Tooltip with a show and hide delay", "component": TooltipModifiedDefaultsExample, "additionalFiles": [], "selectorName": "" }, "tooltip-overview": { "title": "Basic tooltip", "component": TooltipOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-position": { "title": "Tooltip with a custom position", "component": TooltipPositionExample, "additionalFiles": [], "selectorName": "" }, "tree-checklist": { "title": "Tree with checkboxes", "component": TreeChecklistExample, "additionalFiles": [], "selectorName": "" }, "tree-dynamic": { "title": "Tree with dynamic data", "component": TreeDynamicExample, "additionalFiles": [], "selectorName": "" }, "tree-flat-overview": { "title": "Tree with flat nodes", "component": TreeFlatOverviewExample, "additionalFiles": [], "selectorName": "" }, "tree-loadmore": { "title": "Tree with partially loaded data", "component": TreeLoadmoreExample, "additionalFiles": [], "selectorName": "" }, "tree-nested-overview": { "title": "Tree with nested nodes", "component": TreeNestedOverviewExample, "additionalFiles": [], "selectorName": "" } };
+var EXAMPLE_COMPONENTS = {
+    "autocomplete-auto-active-first-option": {
+        "title": "Highlight the first autocomplete option",
+        "component": AutocompleteAutoActiveFirstOptionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "autocomplete-display": {
+        "title": "Display value autocomplete",
+        "component": AutocompleteDisplayExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "autocomplete-filter": {
+        "title": "Filter autocomplete",
+        "component": AutocompleteFilterExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "autocomplete-optgroup": {
+        "title": "Option groups autocomplete",
+        "component": AutocompleteOptgroupExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "autocomplete-overview": {
+        "title": "Autocomplete overview",
+        "component": AutocompleteOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "autocomplete-simple": {
+        "title": "Simple autocomplete",
+        "component": AutocompleteSimpleExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "badge-overview": {
+        "title": "Badge overview",
+        "component": BadgeOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "bottom-sheet-overview": {
+        "title": "Bottom Sheet Overview",
+        "component": BottomSheetOverviewExample,
+        "additionalFiles": [
+            "bottom-sheet-overview-example-sheet.html"
+        ],
+        "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet"
+    },
+    "button-overview": {
+        "title": "Basic buttons",
+        "component": ButtonOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "button-toggle-appearance": {
+        "title": "Button toggle appearance",
+        "component": ButtonToggleAppearanceExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "button-toggle-exclusive": {
+        "title": "Exclusive selection",
+        "component": ButtonToggleExclusiveExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "button-toggle-overview": {
+        "title": "Basic button-toggles",
+        "component": ButtonToggleOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "button-types": {
+        "title": "Button varieties",
+        "component": ButtonTypesExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "card-fancy": {
+        "title": "Card with multiple sections",
+        "component": CardFancyExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "card-overview": {
+        "title": "Basic cards",
+        "component": CardOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-axis-lock": {
+        "title": "Drag&Drop position locking",
+        "component": CdkDragDropAxisLockExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-connected-sorting": {
+        "title": "Drag&Drop connected sorting",
+        "component": CdkDragDropConnectedSortingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-custom-placeholder": {
+        "title": "Drag&Drop custom placeholer",
+        "component": CdkDragDropCustomPlaceholderExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-custom-preview": {
+        "title": "Drag&Drop custom preview",
+        "component": CdkDragDropCustomPreviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-disabled": {
+        "title": "Drag&Drop disabled",
+        "component": CdkDragDropDisabledExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-enter-predicate": {
+        "title": "Drag&Drop enter predicate",
+        "component": CdkDragDropEnterPredicateExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-handle": {
+        "title": "Drag&Drop with a handle",
+        "component": CdkDragDropHandleExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-horizontal-sorting": {
+        "title": "Drag&Drop horizontal sorting",
+        "component": CdkDragDropHorizontalSortingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-overview": {
+        "title": "Basic Drag&Drop",
+        "component": CdkDragDropOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-root-element": {
+        "title": "Drag&Drop with alternate root element",
+        "component": CdkDragDropRootElementExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-drag-drop-sorting": {
+        "title": "Drag&Drop sorting",
+        "component": CdkDragDropSortingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-platform-overview": {
+        "title": "Platform overview",
+        "component": CdkPlatformOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-table-basic-flex": {
+        "title": "Basic use of `<cdk-table>` (uses display flex)",
+        "component": CdkTableBasicFlexExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-table-basic": {
+        "title": "Basic CDK data-table",
+        "component": CdkTableBasicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-tree-flat": {
+        "title": "Tree with flat nodes",
+        "component": CdkTreeFlatExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-tree-nested": {
+        "title": "Tree with nested nodes",
+        "component": CdkTreeNestedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-context": {
+        "title": "Virtual scroll context variables",
+        "component": CdkVirtualScrollContextExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-custom-strategy": {
+        "title": "Virtual scroll with a custom strategy",
+        "component": CdkVirtualScrollCustomStrategyExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-data-source": {
+        "title": "Virtual scroll with a custom data source",
+        "component": CdkVirtualScrollDataSourceExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-dl": {
+        "title": "Virtual scrolling `<dl>`",
+        "component": CdkVirtualScrollDlExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-fixed-buffer": {
+        "title": "Fixed size virtual scroll with custom buffer parameters",
+        "component": CdkVirtualScrollFixedBufferExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-horizontal": {
+        "title": "Horizontal virtual scroll",
+        "component": CdkVirtualScrollHorizontalExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-overview": {
+        "title": "Basic virtual scroll",
+        "component": CdkVirtualScrollOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "cdk-virtual-scroll-template-cache": {
+        "title": "Virtual scroll with no template caching",
+        "component": CdkVirtualScrollTemplateCacheExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "checkbox-configurable": {
+        "title": "Configurable checkbox",
+        "component": CheckboxConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "checkbox-overview": {
+        "title": "Basic checkboxes",
+        "component": CheckboxOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "chips-autocomplete": {
+        "title": "Chips Autocomplete",
+        "component": ChipsAutocompleteExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "chips-input": {
+        "title": "Chips with input",
+        "component": ChipsInputExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "chips-overview": {
+        "title": "Basic chips",
+        "component": ChipsOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "chips-stacked": {
+        "title": "Stacked chips",
+        "component": ChipsStackedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-api": {
+        "title": "Datepicker open method",
+        "component": DatepickerApiExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-color": {
+        "title": "Datepicker palette colors",
+        "component": DatepickerColorExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-custom-header": {
+        "title": "Datepicker with custom calendar header",
+        "component": DatepickerCustomHeaderExample,
+        "additionalFiles": [],
+        "selectorName": "DatepickerCustomHeaderExample, ExampleHeader"
+    },
+    "datepicker-custom-icon": {
+        "title": "Datepicker with custom icon",
+        "component": DatepickerCustomIconExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-date-class": {
+        "title": "Datepicker with custom date classes",
+        "component": DatepickerDateClassExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-disabled": {
+        "title": "Disabled datepicker",
+        "component": DatepickerDisabledExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-events": {
+        "title": "Datepicker input and change events",
+        "component": DatepickerEventsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-filter": {
+        "title": "Datepicker with filter validation",
+        "component": DatepickerFilterExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-formats": {
+        "title": "Datepicker with custom formats",
+        "component": DatepickerFormatsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-locale": {
+        "title": "Datepicker with different locale",
+        "component": DatepickerLocaleExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-min-max": {
+        "title": "Datepicker with min & max validation",
+        "component": DatepickerMinMaxExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-moment": {
+        "title": "Datepicker that uses Moment.js dates",
+        "component": DatepickerMomentExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-overview": {
+        "title": "Basic datepicker",
+        "component": DatepickerOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-start-view": {
+        "title": "Datepicker start date",
+        "component": DatepickerStartViewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-touch": {
+        "title": "Datepicker touch UI",
+        "component": DatepickerTouchExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-value": {
+        "title": "Datepicker selected value",
+        "component": DatepickerValueExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "datepicker-views-selection": {
+        "title": "Datepicker emulating a Year and month picker",
+        "component": DatepickerViewsSelectionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "dialog-content": {
+        "title": "Dialog with header, scrollable content and actions",
+        "component": DialogContentExample,
+        "additionalFiles": [
+            "dialog-content-example-dialog.html"
+        ],
+        "selectorName": "DialogContentExample, DialogContentExampleDialog"
+    },
+    "dialog-data": {
+        "title": "Injecting data when opening a dialog",
+        "component": DialogDataExample,
+        "additionalFiles": [
+            "dialog-data-example-dialog.html"
+        ],
+        "selectorName": "DialogDataExample, DialogDataExampleDialog"
+    },
+    "dialog-elements": {
+        "title": "Dialog elements",
+        "component": DialogElementsExample,
+        "additionalFiles": [
+            "dialog-elements-example-dialog.html"
+        ],
+        "selectorName": "DialogElementsExample, DialogElementsExampleDialog"
+    },
+    "dialog-overview": {
+        "title": "Dialog Overview",
+        "component": DialogOverviewExample,
+        "additionalFiles": [
+            "dialog-overview-example-dialog.html"
+        ],
+        "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog"
+    },
+    "divider-overview": {
+        "title": "Basic divider",
+        "component": DividerOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "elevation-overview": {
+        "title": "Elevation CSS classes",
+        "component": ElevationOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "expansion-expand-collapse-all": {
+        "title": "Accordion with expand/collapse all toggles",
+        "component": ExpansionExpandCollapseAllExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "expansion-overview": {
+        "title": "Basic expansion panel",
+        "component": ExpansionOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "expansion-steps": {
+        "title": "Expansion panel as accordion",
+        "component": ExpansionStepsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "focus-monitor-directives": {
+        "title": "Monitoring focus with FocusMonitor",
+        "component": FocusMonitorDirectivesExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "focus-monitor-focus-via": {
+        "title": "Focusing with a specific FocusOrigin",
+        "component": FocusMonitorFocusViaExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "focus-monitor-overview": {
+        "title": "Monitoring focus with FocusMonitor",
+        "component": FocusMonitorOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-appearance": {
+        "title": "Form field appearance variants",
+        "component": FormFieldAppearanceExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-custom-control": {
+        "title": "Form field with custom telephone number input control.",
+        "component": FormFieldCustomControlExample,
+        "additionalFiles": [
+            "example-tel-input-example.html",
+            "example-tel-input-example.css"
+        ],
+        "selectorName": "FormFieldCustomControlExample, MyTelInput"
+    },
+    "form-field-error": {
+        "title": "Form field with error messages",
+        "component": FormFieldErrorExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-hint": {
+        "title": "Form field with hints",
+        "component": FormFieldHintExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-label": {
+        "title": "Form field with label",
+        "component": FormFieldLabelExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-overview": {
+        "title": "Simple form field",
+        "component": FormFieldOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-prefix-suffix": {
+        "title": "Form field with prefix & suffix",
+        "component": FormFieldPrefixSuffixExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "form-field-theming": {
+        "title": "Form field theming",
+        "component": FormFieldThemingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "grid-list-dynamic": {
+        "title": "Dynamic grid-list",
+        "component": GridListDynamicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "grid-list-overview": {
+        "title": "Basic grid-list",
+        "component": GridListOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "icon-overview": {
+        "title": "Basic icons",
+        "component": IconOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "icon-svg": {
+        "title": "SVG icons",
+        "component": IconSvgExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-clearable": {
+        "title": "Input with a clear button",
+        "component": InputClearableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-error-state-matcher": {
+        "title": "Input with a custom ErrorStateMatcher",
+        "component": InputErrorStateMatcherExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-errors": {
+        "title": "Input with error messages",
+        "component": InputErrorsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-form": {
+        "title": "Inputs in a form",
+        "component": InputFormExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-hint": {
+        "title": "Input with hints",
+        "component": InputHintExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-overview": {
+        "title": "Basic Inputs",
+        "component": InputOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "input-prefix-suffix": {
+        "title": "Inputs with prefixes and suffixes",
+        "component": InputPrefixSuffixExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "list-overview": {
+        "title": "Basic list",
+        "component": ListOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "list-sections": {
+        "title": "List with sections",
+        "component": ListSectionsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "list-selection": {
+        "title": "List with selection",
+        "component": ListSelectionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "menu-icons": {
+        "title": "Menu with icons",
+        "component": MenuIconsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "menu-overview": {
+        "title": "Basic menu",
+        "component": MenuOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "nested-menu": {
+        "title": "Nested menu",
+        "component": NestedMenuExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "paginator-configurable": {
+        "title": "Configurable paginator",
+        "component": PaginatorConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "paginator-overview": {
+        "title": "Paginator",
+        "component": PaginatorOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-bar-buffer": {
+        "title": "Buffer progress-bar",
+        "component": ProgressBarBufferExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-bar-configurable": {
+        "title": "Configurable progress-bar",
+        "component": ProgressBarConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-bar-determinate": {
+        "title": "Determinate progress-bar",
+        "component": ProgressBarDeterminateExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-bar-indeterminate": {
+        "title": "Indeterminate progress-bar",
+        "component": ProgressBarIndeterminateExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-bar-query": {
+        "title": "Query progress-bar",
+        "component": ProgressBarQueryExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-spinner-configurable": {
+        "title": "Configurable progress spinner",
+        "component": ProgressSpinnerConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "progress-spinner-overview": {
+        "title": "Basic progress-spinner",
+        "component": ProgressSpinnerOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "radio-ng-model": {
+        "title": "Radios with ngModel",
+        "component": RadioNgModelExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "radio-overview": {
+        "title": "Basic radios",
+        "component": RadioOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "ripple-overview": {
+        "title": "MatRipple basic usage",
+        "component": RippleOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-custom-trigger": {
+        "title": "Select with custom trigger text",
+        "component": SelectCustomTriggerExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-disabled": {
+        "title": "Disabled select",
+        "component": SelectDisabledExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-error-state-matcher": {
+        "title": "Select with a custom ErrorStateMatcher",
+        "component": SelectErrorStateMatcherExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-form": {
+        "title": "Select in a form",
+        "component": SelectFormExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-hint-error": {
+        "title": "Select with form field features",
+        "component": SelectHintErrorExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-multiple": {
+        "title": "Select with multiple selection",
+        "component": SelectMultipleExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-no-ripple": {
+        "title": "Select with no option ripple",
+        "component": SelectNoRippleExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-optgroup": {
+        "title": "Select with option groups",
+        "component": SelectOptgroupExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-overview": {
+        "title": "Basic select",
+        "component": SelectOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-panel-class": {
+        "title": "Select with custom panel styling",
+        "component": SelectPanelClassExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-reset": {
+        "title": "Select with reset option",
+        "component": SelectResetExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-value-binding": {
+        "title": "Select with 2-way value binding",
+        "component": SelectValueBindingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-autosize": {
+        "title": "Autosize sidenav",
+        "component": SidenavAutosizeExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-backdrop": {
+        "title": "Drawer with explicit backdrop setting",
+        "component": SidenavBackdropExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-disable-close": {
+        "title": "Sidenav with custom escape and backdrop click behavior",
+        "component": SidenavDisableCloseExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-drawer-overview": {
+        "title": "Basic drawer",
+        "component": SidenavDrawerOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-fixed": {
+        "title": "Fixed sidenav",
+        "component": SidenavFixedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-mode": {
+        "title": "Sidenav with configurable mode",
+        "component": SidenavModeExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-open-close": {
+        "title": "Sidenav open & close behavior",
+        "component": SidenavOpenCloseExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-overview": {
+        "title": "Basic sidenav",
+        "component": SidenavOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-position": {
+        "title": "Implicit main content with two sidenavs",
+        "component": SidenavPositionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sidenav-responsive": {
+        "title": "Responsive sidenav",
+        "component": SidenavResponsiveExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slide-toggle-configurable": {
+        "title": "Configurable slide-toggle",
+        "component": SlideToggleConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slide-toggle-forms": {
+        "title": "Slide-toggle with forms",
+        "component": SlideToggleFormsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slide-toggle-overview": {
+        "title": "Basic slide-toggles",
+        "component": SlideToggleOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slider-configurable": {
+        "title": "Configurable slider",
+        "component": SliderConfigurableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slider-formatting": {
+        "title": "Slider with custom thumb label formatting.",
+        "component": SliderFormattingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "slider-overview": {
+        "title": "Basic slider",
+        "component": SliderOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "snack-bar-component": {
+        "title": "Snack-bar with a custom component",
+        "component": SnackBarComponentExample,
+        "additionalFiles": [
+            "snack-bar-component-example-snack.html"
+        ],
+        "selectorName": "SnackBarComponentExample, PizzaPartyComponent"
+    },
+    "snack-bar-overview": {
+        "title": "Basic snack-bar",
+        "component": SnackBarOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "snack-bar-position": {
+        "title": "Snack-bar with configurable position",
+        "component": SnackBarPositionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "sort-overview": {
+        "title": "Sorting overview",
+        "component": SortOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-editable": {
+        "title": "Stepper with editable steps",
+        "component": StepperEditableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-errors": {
+        "title": "Stepper that displays errors in the steps",
+        "component": StepperErrorsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-label-position-bottom": {
+        "title": "Stepper label bottom position",
+        "component": StepperLabelPositionBottomExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-optional": {
+        "title": "Stepper with optional steps",
+        "component": StepperOptionalExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-overview": {
+        "title": "Stepper overview",
+        "component": StepperOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-states": {
+        "title": "Stepper with customized states",
+        "component": StepperStatesExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "stepper-vertical": {
+        "title": "Stepper vertical",
+        "component": StepperVerticalExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-align": {
+        "title": "Tab group with aligned labels",
+        "component": TabGroupAlignExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-animations": {
+        "title": "Tab group animations",
+        "component": TabGroupAnimationsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-async": {
+        "title": "Tab group with asynchronously loading tab contents",
+        "component": TabGroupAsyncExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-basic": {
+        "title": "Basic use of the tab group",
+        "component": TabGroupBasicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-custom-label": {
+        "title": "Using tabs with a custom label template",
+        "component": TabGroupCustomLabelExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-dynamic-height": {
+        "title": "Tag group with dynamic height based on tab contents",
+        "component": TabGroupDynamicHeightExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-dynamic": {
+        "title": "Tab group with dynamically changing tabs",
+        "component": TabGroupDynamicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-header-below": {
+        "title": "Tab group with the headers on the bottom",
+        "component": TabGroupHeaderBelowExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-lazy-loaded": {
+        "title": "Tab group where the tab content is loaded lazily (when activated)",
+        "component": TabGroupLazyLoadedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-stretched": {
+        "title": "Tab group with stretched labels",
+        "component": TabGroupStretchedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-group-theme": {
+        "title": "Customizing the theme options on the tab group",
+        "component": TabGroupThemeExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tab-nav-bar-basic": {
+        "title": "Basic use of the tab nav bar",
+        "component": TabNavBarBasicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-basic-flex": {
+        "title": "Basic use of `<mat-table>` (uses display flex)",
+        "component": TableBasicFlexExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-basic": {
+        "title": "Basic use of `<table mat-table>`",
+        "component": TableBasicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-dynamic-columns": {
+        "title": "Table dynamically changing the columns displayed",
+        "component": TableDynamicColumnsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-expandable-rows": {
+        "title": "Table with expandable rows",
+        "component": TableExpandableRowsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-filtering": {
+        "title": "Table with filtering",
+        "component": TableFilteringExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-footer-row": {
+        "title": "Footer row table",
+        "component": TableFooterRowExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-http": {
+        "title": "Table retrieving data through HTTP",
+        "component": TableHttpExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-multiple-header-footer": {
+        "title": "Table with multiple header and footer rows",
+        "component": TableMultipleHeaderFooterExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-overview": {
+        "title": "Data table with sorting, pagination, and filtering.",
+        "component": TableOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-pagination": {
+        "title": "Table with pagination",
+        "component": TablePaginationExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-row-context": {
+        "title": "Table showing each row context properties.",
+        "component": TableRowContextExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-selection": {
+        "title": "Table with selection",
+        "component": TableSelectionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-simple-column": {
+        "title": "Table with a custom column component for easy column definition reuse.",
+        "component": TableSimpleColumnExample,
+        "additionalFiles": [],
+        "selectorName": "TableSimpleColumnExample, SimpleColumn"
+    },
+    "table-sorting": {
+        "title": "Table with sorting",
+        "component": TableSortingExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-sticky-columns": {
+        "title": "Table with a sticky columns",
+        "component": TableStickyColumnsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-sticky-complex-flex": {
+        "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns",
+        "component": TableStickyComplexFlexExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-sticky-complex": {
+        "title": "Tables with toggle-able sticky headers, footers, and columns",
+        "component": TableStickyComplexExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-sticky-footer": {
+        "title": "Table with a sticky footer",
+        "component": TableStickyFooterExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-sticky-header": {
+        "title": "Table with sticky header",
+        "component": TableStickyHeaderExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-wrapped": {
+        "title": "Table example that shows how to wrap a table component for definition and behavior reuse.",
+        "component": TableWrappedExample,
+        "additionalFiles": [
+            "wrapper-table.html"
+        ],
+        "selectorName": "TableWrappedExample, WrapperTable"
+    },
+    "text-field-autofill-directive": {
+        "title": "Monitoring autofill state with cdkAutofill",
+        "component": TextFieldAutofillDirectiveExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "text-field-autofill-monitor": {
+        "title": "Monitoring autofill state with AutofillMonitor",
+        "component": TextFieldAutofillMonitorExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "text-field-autosize-textarea": {
+        "title": "Auto-resizing textarea",
+        "component": TextFieldAutosizeTextareaExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "toolbar-multirow": {
+        "title": "Multi-row toolbar",
+        "component": ToolbarMultirowExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "toolbar-overview": {
+        "title": "Basic toolbar",
+        "component": ToolbarOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-auto-hide": {
+        "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.",
+        "component": TooltipAutoHideExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-custom-class": {
+        "title": "Tooltip that can have a custom class applied.",
+        "component": TooltipCustomClassExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-delay": {
+        "title": "Tooltip with a show and hide delay",
+        "component": TooltipDelayExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-disabled": {
+        "title": "Tooltip that can be disabled",
+        "component": TooltipDisabledExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-manual": {
+        "title": "Tooltip that can be manually shown/hidden.",
+        "component": TooltipManualExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-message": {
+        "title": "Tooltip with a changing message",
+        "component": TooltipMessageExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-modified-defaults": {
+        "title": "Tooltip with a show and hide delay",
+        "component": TooltipModifiedDefaultsExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-overview": {
+        "title": "Basic tooltip",
+        "component": TooltipOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tooltip-position": {
+        "title": "Tooltip with a custom position",
+        "component": TooltipPositionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tree-checklist": {
+        "title": "Tree with checkboxes",
+        "component": TreeChecklistExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tree-dynamic": {
+        "title": "Tree with dynamic data",
+        "component": TreeDynamicExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tree-flat-overview": {
+        "title": "Tree with flat nodes",
+        "component": TreeFlatOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tree-loadmore": {
+        "title": "Tree with partially loaded data",
+        "component": TreeLoadmoreExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "tree-nested-overview": {
+        "title": "Tree with nested nodes",
+        "component": TreeNestedOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    }
+};
 /** @type {?} */
-var EXAMPLE_LIST = [AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompleteSimpleExample, BadgeOverviewExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, ButtonOverviewExample, ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonTypesExample, CardFancyExample, CardOverviewExample, CdkDragDropAxisLockExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDisabledExample, CdkDragDropEnterPredicateExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkPlatformOverviewExample, CdkTableBasicFlexExample, CdkTableBasicExample, CdkTreeFlatExample, CdkTreeNestedExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CheckboxConfigurableExample, CheckboxOverviewExample, ChipsAutocompleteExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, ExampleHeader, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog, DividerOverviewExample, ElevationOverviewExample, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, FormFieldAppearanceExample, FormFieldCustomControlExample, MyTelInput, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, GridListDynamicExample, GridListOverviewExample, IconOverviewExample, IconSvgExample, InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, MenuIconsExample, MenuOverviewExample, NestedMenuExample, PaginatorConfigurableExample, PaginatorOverviewExample, ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, RadioNgModelExample, RadioOverviewExample, RippleOverviewExample, SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SnackBarComponentExample, PizzaPartyComponent, SnackBarOverviewExample, SnackBarPositionExample, SortOverviewExample, StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSimpleColumnExample, SimpleColumn, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableWrappedExample, WrapperTable, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, ToolbarMultirowExample, ToolbarOverviewExample, TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample];
+var EXAMPLE_LIST = [
+    AutocompleteAutoActiveFirstOptionExample,
+    AutocompleteDisplayExample,
+    AutocompleteFilterExample,
+    AutocompleteOptgroupExample,
+    AutocompleteOverviewExample,
+    AutocompleteSimpleExample,
+    BadgeOverviewExample,
+    BottomSheetOverviewExample,
+    BottomSheetOverviewExampleSheet,
+    ButtonOverviewExample,
+    ButtonToggleAppearanceExample,
+    ButtonToggleExclusiveExample,
+    ButtonToggleOverviewExample,
+    ButtonTypesExample,
+    CardFancyExample,
+    CardOverviewExample,
+    CdkDragDropAxisLockExample,
+    CdkDragDropConnectedSortingExample,
+    CdkDragDropCustomPlaceholderExample,
+    CdkDragDropCustomPreviewExample,
+    CdkDragDropDisabledExample,
+    CdkDragDropEnterPredicateExample,
+    CdkDragDropHandleExample,
+    CdkDragDropHorizontalSortingExample,
+    CdkDragDropOverviewExample,
+    CdkDragDropRootElementExample,
+    CdkDragDropSortingExample,
+    CdkPlatformOverviewExample,
+    CdkTableBasicFlexExample,
+    CdkTableBasicExample,
+    CdkTreeFlatExample,
+    CdkTreeNestedExample,
+    CdkVirtualScrollContextExample,
+    CdkVirtualScrollCustomStrategyExample,
+    CdkVirtualScrollDataSourceExample,
+    CdkVirtualScrollDlExample,
+    CdkVirtualScrollFixedBufferExample,
+    CdkVirtualScrollHorizontalExample,
+    CdkVirtualScrollOverviewExample,
+    CdkVirtualScrollTemplateCacheExample,
+    CheckboxConfigurableExample,
+    CheckboxOverviewExample,
+    ChipsAutocompleteExample,
+    ChipsInputExample,
+    ChipsOverviewExample,
+    ChipsStackedExample,
+    DatepickerApiExample,
+    DatepickerColorExample,
+    DatepickerCustomHeaderExample,
+    ExampleHeader,
+    DatepickerCustomIconExample,
+    DatepickerDateClassExample,
+    DatepickerDisabledExample,
+    DatepickerEventsExample,
+    DatepickerFilterExample,
+    DatepickerFormatsExample,
+    DatepickerLocaleExample,
+    DatepickerMinMaxExample,
+    DatepickerMomentExample,
+    DatepickerOverviewExample,
+    DatepickerStartViewExample,
+    DatepickerTouchExample,
+    DatepickerValueExample,
+    DatepickerViewsSelectionExample,
+    DialogContentExample,
+    DialogContentExampleDialog,
+    DialogDataExample,
+    DialogDataExampleDialog,
+    DialogElementsExample,
+    DialogElementsExampleDialog,
+    DialogOverviewExample,
+    DialogOverviewExampleDialog,
+    DividerOverviewExample,
+    ElevationOverviewExample,
+    ExpansionExpandCollapseAllExample,
+    ExpansionOverviewExample,
+    ExpansionStepsExample,
+    FocusMonitorDirectivesExample,
+    FocusMonitorFocusViaExample,
+    FocusMonitorOverviewExample,
+    FormFieldAppearanceExample,
+    FormFieldCustomControlExample,
+    MyTelInput,
+    FormFieldErrorExample,
+    FormFieldHintExample,
+    FormFieldLabelExample,
+    FormFieldOverviewExample,
+    FormFieldPrefixSuffixExample,
+    FormFieldThemingExample,
+    GridListDynamicExample,
+    GridListOverviewExample,
+    IconOverviewExample,
+    IconSvgExample,
+    InputClearableExample,
+    InputErrorStateMatcherExample,
+    InputErrorsExample,
+    InputFormExample,
+    InputHintExample,
+    InputOverviewExample,
+    InputPrefixSuffixExample,
+    ListOverviewExample,
+    ListSectionsExample,
+    ListSelectionExample,
+    MenuIconsExample,
+    MenuOverviewExample,
+    NestedMenuExample,
+    PaginatorConfigurableExample,
+    PaginatorOverviewExample,
+    ProgressBarBufferExample,
+    ProgressBarConfigurableExample,
+    ProgressBarDeterminateExample,
+    ProgressBarIndeterminateExample,
+    ProgressBarQueryExample,
+    ProgressSpinnerConfigurableExample,
+    ProgressSpinnerOverviewExample,
+    RadioNgModelExample,
+    RadioOverviewExample,
+    RippleOverviewExample,
+    SelectCustomTriggerExample,
+    SelectDisabledExample,
+    SelectErrorStateMatcherExample,
+    SelectFormExample,
+    SelectHintErrorExample,
+    SelectMultipleExample,
+    SelectNoRippleExample,
+    SelectOptgroupExample,
+    SelectOverviewExample,
+    SelectPanelClassExample,
+    SelectResetExample,
+    SelectValueBindingExample,
+    SidenavAutosizeExample,
+    SidenavBackdropExample,
+    SidenavDisableCloseExample,
+    SidenavDrawerOverviewExample,
+    SidenavFixedExample,
+    SidenavModeExample,
+    SidenavOpenCloseExample,
+    SidenavOverviewExample,
+    SidenavPositionExample,
+    SidenavResponsiveExample,
+    SlideToggleConfigurableExample,
+    SlideToggleFormsExample,
+    SlideToggleOverviewExample,
+    SliderConfigurableExample,
+    SliderFormattingExample,
+    SliderOverviewExample,
+    SnackBarComponentExample,
+    PizzaPartyComponent,
+    SnackBarOverviewExample,
+    SnackBarPositionExample,
+    SortOverviewExample,
+    StepperEditableExample,
+    StepperErrorsExample,
+    StepperLabelPositionBottomExample,
+    StepperOptionalExample,
+    StepperOverviewExample,
+    StepperStatesExample,
+    StepperVerticalExample,
+    TabGroupAlignExample,
+    TabGroupAnimationsExample,
+    TabGroupAsyncExample,
+    TabGroupBasicExample,
+    TabGroupCustomLabelExample,
+    TabGroupDynamicHeightExample,
+    TabGroupDynamicExample,
+    TabGroupHeaderBelowExample,
+    TabGroupLazyLoadedExample,
+    TabGroupStretchedExample,
+    TabGroupThemeExample,
+    TabNavBarBasicExample,
+    TableBasicFlexExample,
+    TableBasicExample,
+    TableDynamicColumnsExample,
+    TableExpandableRowsExample,
+    TableFilteringExample,
+    TableFooterRowExample,
+    TableHttpExample,
+    TableMultipleHeaderFooterExample,
+    TableOverviewExample,
+    TablePaginationExample,
+    TableRowContextExample,
+    TableSelectionExample,
+    TableSimpleColumnExample,
+    SimpleColumn,
+    TableSortingExample,
+    TableStickyColumnsExample,
+    TableStickyComplexFlexExample,
+    TableStickyComplexExample,
+    TableStickyFooterExample,
+    TableStickyHeaderExample,
+    TableWrappedExample,
+    WrapperTable,
+    TextFieldAutofillDirectiveExample,
+    TextFieldAutofillMonitorExample,
+    TextFieldAutosizeTextareaExample,
+    ToolbarMultirowExample,
+    ToolbarOverviewExample,
+    TooltipAutoHideExample,
+    TooltipCustomClassExample,
+    TooltipDelayExample,
+    TooltipDisabledExample,
+    TooltipManualExample,
+    TooltipMessageExample,
+    TooltipModifiedDefaultsExample,
+    TooltipOverviewExample,
+    TooltipPositionExample,
+    TreeChecklistExample,
+    TreeDynamicExample,
+    TreeFlatOverviewExample,
+    TreeLoadmoreExample,
+    TreeNestedOverviewExample
+];
 var ExampleModule = /** @class */ (function () {
     function ExampleModule() {
     }
@@ -8829,7 +10320,7 @@ var ExampleModule = /** @class */ (function () {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Example data
