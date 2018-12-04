@@ -32,7 +32,7 @@
   "dependencies": {
     "tslib": "^1.7.1"
   },
-  "releaseGitCommitSha": "bb9daed16fade9cb2a1c64fb74bb01da024e42d9",
+  "releaseGitCommitSha": "7516d91c3a0ef6778133892ddd5556f697ff26f3",
   "releaseGitBranch": "josephperrott-patch-1",
   "releaseGitUser": " <>"
 }
