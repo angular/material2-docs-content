@@ -22,15 +22,15 @@ snackBarRef.dismiss();
 </code></pre><h3 id="sharing-data-with-a-custom-snack-bar" class="docs-header-link docs-markdown-h3"><span header-link="sharing-data-with-a-custom-snack-bar"></span> Sharing data with a custom snack-bar</h3><p class="docs-markdown-p">You can share data with the custom snack-bar, that you opened via the <code class="docs-markdown-code">openFromComponent</code> method, by passing it through the <code class="docs-markdown-code">data</code> property.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">snackbar.openFromComponent(MessageArchivedComponent, {
   data: <span class="hljs-string">'some data'</span>
 });
-</code></pre><p class="docs-markdown-p">To access the data in your component, you have to use the <code class="docs-markdown-code">MAT_SNACK_BAR_DATA</code> injection token:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">import {Component, Inject} from '@angular/core';
-import {MAT_SNACK_BAR_DATA} from '@angular/material';
+</code></pre><p class="docs-markdown-p">To access the data in your component, you have to use the <code class="docs-markdown-code">MAT_SNACK_BAR_DATA</code> injection token:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MAT_SNACK_BAR_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
-@Component({
-  selector: 'your-snack-bar',
-  template: 'passed in {{ data }}',
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'your-snack-bar'</span>,
+  template: <span class="hljs-string">'passed in {{ data }}'</span>,
 })
-export class MessageArchivedComponent {
-  constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) { }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MessageArchivedComponent {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_SNACK_BAR_DATA) <span class="hljs-keyword">public</span> data: <span class="hljs-built_in">any</span></span>) { }
 }
 </code></pre><h3 id="setting-the-global-configuration-defaults" class="docs-header-link docs-markdown-h3"><span header-link="setting-the-global-configuration-defaults"></span> Setting the global configuration defaults</h3><p class="docs-markdown-p">If you want to override the default snack bar options, you can do so using the <code class="docs-markdown-code">MAT_SNACK_BAR_DEFAULT_OPTIONS</code> injection token.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-meta">@NgModule</span>({
   providers: [

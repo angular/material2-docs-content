@@ -23,15 +23,15 @@ dialogRef.close(<span class="hljs-string">'Pizza!'</span>);
 </code></pre><h3 id="sharing-data-with-the-dialog-component-" class="docs-header-link docs-markdown-h3"><span header-link="sharing-data-with-the-dialog-component-"></span> Sharing data with the Dialog component.</h3><p class="docs-markdown-p">If you want to share data with your dialog, you can use the <code class="docs-markdown-code">data</code> option to pass information to the dialog component.</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">let</span> dialogRef = dialog.open(YourDialog, {
   data: { name: <span class="hljs-string">'austin'</span> },
 });
-</code></pre><p class="docs-markdown-p">To access the data in your dialog component, you have to use the MAT_DIALOG_DATA injection token:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code">import {Component, Inject} from '@angular/core';
-import {MAT_DIALOG_DATA} from '@angular/material';
+</code></pre><p class="docs-markdown-p">To access the data in your dialog component, you have to use the MAT_DIALOG_DATA injection token:</p><pre class="docs-markdown-pre"><code class="lang-ts docs-markdown-code"><span class="hljs-keyword">import</span> {Component, Inject} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MAT_DIALOG_DATA} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 
-@Component({
-  selector: 'your-dialog',
-  template: 'passed in {{ data.name }}',
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'your-dialog'</span>,
+  template: <span class="hljs-string">'passed in {{ data.name }}'</span>,
 })
-export class YourDialog {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> YourDialog {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: <span class="hljs-built_in">any</span></span>) { }
 }
 </code></pre><div material-docs-example="dialog-data"></div><h3 id="dialog-content" class="docs-header-link docs-markdown-h3"><span header-link="dialog-content"></span> Dialog content</h3><p class="docs-markdown-p">Several directives are available to make it easier to structure your dialog content:</p><table class="docs-markdown-table"><thead><tr class="docs-markdown-tr"><th class="docs-markdown-th">Name</th><th class="docs-markdown-th">Description</th></tr></thead><tbody class="docs-markdown-tbody"><tr class="docs-markdown-tr"><td class="docs-markdown-td"><code class="docs-markdown-code">mat-dialog-title</code></td><td class="docs-markdown-td">[Attr] Dialog title, applied to a heading element (e.g., <code class="docs-markdown-code">&lt;h1&gt;</code>, <code class="docs-markdown-code">&lt;h2&gt;</code>)</td></tr><tr class="docs-markdown-tr"><td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-dialog-content&gt;</code></td><td class="docs-markdown-td">Primary scrollable content of the dialog</td></tr><tr class="docs-markdown-tr"><td class="docs-markdown-td"><code class="docs-markdown-code">&lt;mat-dialog-actions&gt;</code></td><td class="docs-markdown-td">Container for action buttons at the bottom of the dialog</td></tr><tr class="docs-markdown-tr"><td class="docs-markdown-td"><code class="docs-markdown-code">mat-dialog-close</code></td><td class="docs-markdown-td">[Attr] Added to a <code class="docs-markdown-code">&lt;button&gt;</code>, makes the button close the dialog with an optional result from the bound value.</td></tr></tbody></table><p class="docs-markdown-p">For example:</p><pre class="docs-markdown-pre"><code class="lang-html docs-markdown-code"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">mat-dialog-title</span>&gt;</span>Delete all<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-dialog-content</span>&gt;</span>Are you sure?<span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-content</span>&gt;</span>
