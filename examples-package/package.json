@@ -32,7 +32,7 @@
   "dependencies": {
     "tslib": "^1.7.1"
   },
-  "releaseGitCommitSha": "63be232283262615fa2130900c80dd570eff6cda",
-  "releaseGitBranch": "master",
+  "releaseGitCommitSha": "f6cf9464ff06d12dcdd4771f1a807a88c4c61ae9",
+  "releaseGitBranch": "revert-13814-fix/dynamically-changing-autocomplete",
   "releaseGitUser": " <>"
 }
