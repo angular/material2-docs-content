@@ -32,7 +32,7 @@
   "dependencies": {
     "tslib": "^1.7.1"
   },
-  "releaseGitCommitSha": "8f790f52c713d1b0ae6e4a711b1600f27039361b",
-  "releaseGitBranch": "master",
+  "releaseGitCommitSha": "9a5d408e82e9808e2aec5009388520bf5f450a81",
+  "releaseGitBranch": "revert-13959-13953/checkbox-focus-redirect",
   "releaseGitUser": " <>"
 }
