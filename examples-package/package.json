@@ -32,7 +32,7 @@
   "dependencies": {
     "tslib": "^1.7.1"
   },
-  "releaseGitCommitSha": "bc563b713adb8bc704b5822b872755a29246b4c1",
-  "releaseGitBranch": "master",
+  "releaseGitCommitSha": "45c27c2ae4d573b250449b49325ff4257645832e",
+  "releaseGitBranch": "revert-13956-13953/radio-non-focusable",
   "releaseGitUser": " <>"
 }
