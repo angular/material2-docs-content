@@ -8,7 +8,6 @@
     "stripInternal": false,
     "experimentalDecorators": true,
     "noUnusedParameters": true,
-    "noUnusedLocals": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "noImplicitAny": true,

@@ -11,7 +11,7 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>native html select<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">matNativeControl</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Favorite car"</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"selectedCar"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"car"</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">selected</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">""</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">selected</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let car of cars"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"car.value"</span>&gt;</span>
         {{car.viewValue}}
       <span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
