@@ -32,7 +32,7 @@
   "dependencies": {
     "tslib": "^1.7.1"
   },
-  "releaseGitCommitSha": "e9466a4ab7663d68d176eae4335c769ac2749052",
-  "releaseGitBranch": "master",
+  "releaseGitCommitSha": "553a0b7698a8c450cddc6dc6d4e420f14d59e398",
+  "releaseGitBranch": "revert-14414-13734/autocomplete-auto-active-final",
   "releaseGitUser": " <>"
 }
