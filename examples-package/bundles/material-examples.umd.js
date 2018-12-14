@@ -757,6 +757,26 @@ var CdkDragDropAxisLockExample = /** @class */ (function () {
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
+ * \@title Drag&Drop boundary
+ */
+var CdkDragDropBoundaryExample = /** @class */ (function () {
+    function CdkDragDropBoundaryExample() {
+    }
+    CdkDragDropBoundaryExample.decorators = [
+        { type: core.Component, args: [{
+                    selector: 'cdk-drag-drop-boundary-example',
+                    template: "<div class=\"example-boundary\"><div class=\"example-box\" cdkDragBoundary=\".example-boundary\" cdkDrag>I can only be dragged within the dotted container</div></div>",
+                    styles: [".example-box { width: 200px; height: 200px; border: solid 1px #ccc; color: rgba(0, 0, 0, 0.87); cursor: move; display: inline-flex; justify-content: center; align-items: center; text-align: center; background: #fff; border-radius: 4px; margin-right: 25px; position: relative; z-index: 1; box-sizing: border-box; padding: 10px; transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1); box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12); } .example-box:active { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12); } .example-boundary { width: 400px; height: 400px; max-width: 100%; border: dotted #ccc 2px; } "],
+                },] },
+    ];
+    return CdkDragDropBoundaryExample;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
  * \@title Drag&Drop connected sorting
  */
 var CdkDragDropConnectedSortingExample = /** @class */ (function () {
@@ -8960,6 +8980,12 @@ var EXAMPLE_COMPONENTS = {
         "additionalFiles": [],
         "selectorName": ""
     },
+    "cdk-drag-drop-boundary": {
+        "title": "Drag&Drop boundary",
+        "component": CdkDragDropBoundaryExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
     "cdk-drag-drop-connected-sorting": {
         "title": "Drag&Drop connected sorting",
         "component": CdkDragDropConnectedSortingExample,
@@ -10105,6 +10131,7 @@ var EXAMPLE_LIST = [
     CardFancyExample,
     CardOverviewExample,
     CdkDragDropAxisLockExample,
+    CdkDragDropBoundaryExample,
     CdkDragDropConnectedSortingExample,
     CdkDragDropCustomPlaceholderExample,
     CdkDragDropCustomPreviewExample,
@@ -10380,207 +10407,208 @@ exports.ɵl = ButtonToggleExclusiveExample;
 exports.ɵm = ButtonTypesExample;
 exports.ɵn = CardOverviewExample;
 exports.ɵo = CdkDragDropAxisLockExample;
-exports.ɵp = CdkDragDropConnectedSortingExample;
-exports.ɵq = CdkDragDropCustomPlaceholderExample;
-exports.ɵr = CdkDragDropCustomPreviewExample;
-exports.ɵs = CdkDragDropDisabledExample;
-exports.ɵt = CdkDragDropEnterPredicateExample;
-exports.ɵu = CdkDragDropHandleExample;
-exports.ɵv = CdkDragDropHorizontalSortingExample;
-exports.ɵw = CdkDragDropOverviewExample;
-exports.ɵx = CdkDragDropRootElementExample;
-exports.ɵy = CdkDragDropSortingExample;
-exports.ɵz = CdkPlatformOverviewExample;
-exports.ɵba = CdkTableBasicFlexExample;
-exports.ɵbb = CdkTableBasicExample;
-exports.ɵbd = CdkTreeFlatExample;
-exports.ɵbc = FileDatabase;
-exports.ɵbf = CdkTreeNestedExample;
-exports.ɵbe = FileDatabase$1;
-exports.ɵbg = CdkVirtualScrollContextExample;
-exports.ɵbi = CdkVirtualScrollCustomStrategyExample;
-exports.ɵbh = CustomVirtualScrollStrategy;
-exports.ɵbj = CdkVirtualScrollDataSourceExample;
-exports.ɵbk = CdkVirtualScrollDlExample;
-exports.ɵbl = CdkVirtualScrollFixedBufferExample;
-exports.ɵbm = CdkVirtualScrollHorizontalExample;
-exports.ɵbn = CdkVirtualScrollOverviewExample;
-exports.ɵbo = CdkVirtualScrollTemplateCacheExample;
-exports.ɵbp = CheckboxConfigurableExample;
-exports.ɵbq = CheckboxOverviewExample;
-exports.ɵbr = ChipsAutocompleteExample;
-exports.ɵbs = ChipsInputExample;
-exports.ɵbt = ChipsOverviewExample;
-exports.ɵbu = ChipsStackedExample;
-exports.ɵbv = DatepickerApiExample;
-exports.ɵbw = DatepickerColorExample;
-exports.ɵbx = DatepickerCustomHeaderExample;
-exports.ɵby = ExampleHeader;
-exports.ɵbz = DatepickerCustomIconExample;
-exports.ɵca = DatepickerDateClassExample;
-exports.ɵcb = DatepickerDisabledExample;
-exports.ɵcc = DatepickerEventsExample;
-exports.ɵcd = DatepickerFilterExample;
-exports.ɵcf = DatepickerFormatsExample;
-exports.ɵce = MY_FORMATS;
-exports.ɵcg = DatepickerLocaleExample;
-exports.ɵch = DatepickerMinMaxExample;
-exports.ɵci = DatepickerMomentExample;
-exports.ɵcj = DatepickerStartViewExample;
-exports.ɵck = DatepickerTouchExample;
-exports.ɵcl = DatepickerValueExample;
-exports.ɵcn = DatepickerViewsSelectionExample;
-exports.ɵcm = MY_FORMATS$1;
-exports.ɵco = DialogContentExample;
-exports.ɵcp = DialogContentExampleDialog;
-exports.ɵcq = DialogDataExample;
-exports.ɵcr = DialogDataExampleDialog;
-exports.ɵcs = DialogElementsExample;
-exports.ɵct = DialogElementsExampleDialog;
-exports.ɵcu = DialogOverviewExample;
-exports.ɵcv = DialogOverviewExampleDialog;
-exports.ɵcw = DividerOverviewExample;
-exports.ɵcx = ElevationOverviewExample;
-exports.ɵcy = ExpansionExpandCollapseAllExample;
-exports.ɵcz = ExpansionStepsExample;
-exports.ɵda = FocusMonitorDirectivesExample;
-exports.ɵdb = FocusMonitorFocusViaExample;
-exports.ɵdc = FocusMonitorOverviewExample;
-exports.ɵdd = FormFieldAppearanceExample;
-exports.ɵde = FormFieldCustomControlExample;
-exports.ɵdf = MyTelInput;
-exports.ɵdg = FormFieldErrorExample;
-exports.ɵdh = FormFieldHintExample;
-exports.ɵdi = FormFieldLabelExample;
-exports.ɵdj = FormFieldOverviewExample;
-exports.ɵdk = FormFieldPrefixSuffixExample;
-exports.ɵdl = FormFieldThemingExample;
-exports.ɵdm = GridListDynamicExample;
-exports.ɵdn = GridListOverviewExample;
-exports.ɵdo = IconOverviewExample;
-exports.ɵdp = IconSvgExample;
-exports.ɵdq = InputClearableExample;
-exports.ɵdr = InputErrorStateMatcherExample;
-exports.ɵds = InputErrorsExample;
-exports.ɵdt = InputFormExample;
-exports.ɵdu = InputHintExample;
-exports.ɵdv = InputOverviewExample;
-exports.ɵdw = InputPrefixSuffixExample;
-exports.ɵdx = ListSectionsExample;
-exports.ɵdy = ListSelectionExample;
-exports.ɵih = ExampleMaterialModule;
-exports.ɵdz = MenuIconsExample;
-exports.ɵea = MenuOverviewExample;
-exports.ɵeb = NestedMenuExample;
-exports.ɵec = PaginatorConfigurableExample;
-exports.ɵed = PaginatorOverviewExample;
-exports.ɵee = ProgressBarBufferExample;
-exports.ɵef = ProgressBarConfigurableExample;
-exports.ɵeg = ProgressBarDeterminateExample;
-exports.ɵeh = ProgressBarIndeterminateExample;
-exports.ɵei = ProgressBarQueryExample;
-exports.ɵej = ProgressSpinnerConfigurableExample;
-exports.ɵek = ProgressSpinnerOverviewExample;
-exports.ɵel = RadioNgModelExample;
-exports.ɵem = RadioOverviewExample;
-exports.ɵen = RippleOverviewExample;
-exports.ɵeo = SelectCustomTriggerExample;
-exports.ɵep = SelectDisabledExample;
-exports.ɵeq = SelectErrorStateMatcherExample;
-exports.ɵer = SelectFormExample;
-exports.ɵes = SelectHintErrorExample;
-exports.ɵet = SelectMultipleExample;
-exports.ɵeu = SelectNoRippleExample;
-exports.ɵev = SelectOptgroupExample;
-exports.ɵew = SelectOverviewExample;
-exports.ɵex = SelectPanelClassExample;
-exports.ɵey = SelectResetExample;
-exports.ɵez = SelectValueBindingExample;
-exports.ɵfa = SidenavAutosizeExample;
-exports.ɵfb = SidenavBackdropExample;
-exports.ɵfc = SidenavDisableCloseExample;
-exports.ɵfd = SidenavDrawerOverviewExample;
-exports.ɵfe = SidenavFixedExample;
-exports.ɵff = SidenavModeExample;
-exports.ɵfg = SidenavOpenCloseExample;
-exports.ɵfh = SidenavOverviewExample;
-exports.ɵfi = SidenavPositionExample;
-exports.ɵfj = SidenavResponsiveExample;
-exports.ɵfk = SlideToggleConfigurableExample;
-exports.ɵfl = SlideToggleFormsExample;
-exports.ɵfm = SlideToggleOverviewExample;
-exports.ɵfn = SliderConfigurableExample;
-exports.ɵfo = SliderFormattingExample;
-exports.ɵfp = SliderOverviewExample;
-exports.ɵfr = PizzaPartyComponent;
-exports.ɵfq = SnackBarComponentExample;
-exports.ɵfs = SnackBarOverviewExample;
-exports.ɵft = SnackBarPositionExample;
-exports.ɵfu = SortOverviewExample;
-exports.ɵfv = StepperEditableExample;
-exports.ɵfw = StepperErrorsExample;
-exports.ɵfx = StepperLabelPositionBottomExample;
-exports.ɵfy = StepperOptionalExample;
-exports.ɵfz = StepperStatesExample;
-exports.ɵga = StepperVerticalExample;
-exports.ɵgb = TabGroupAlignExample;
-exports.ɵgc = TabGroupAnimationsExample;
-exports.ɵgd = TabGroupAsyncExample;
-exports.ɵge = TabGroupBasicExample;
-exports.ɵgf = TabGroupCustomLabelExample;
-exports.ɵgg = TabGroupDynamicHeightExample;
-exports.ɵgh = TabGroupDynamicExample;
-exports.ɵgi = TabGroupHeaderBelowExample;
-exports.ɵgj = TabGroupLazyLoadedExample;
-exports.ɵgk = TabGroupStretchedExample;
-exports.ɵgl = TabGroupThemeExample;
-exports.ɵgm = TabNavBarBasicExample;
-exports.ɵgn = TableBasicFlexExample;
-exports.ɵgo = TableBasicExample;
-exports.ɵgp = TableDynamicColumnsExample;
-exports.ɵgq = TableExpandableRowsExample;
-exports.ɵgr = TableFilteringExample;
-exports.ɵgs = TableFooterRowExample;
-exports.ɵgt = TableHttpExample;
-exports.ɵgu = TableMultipleHeaderFooterExample;
-exports.ɵgv = TableOverviewExample;
-exports.ɵgw = TablePaginationExample;
-exports.ɵgx = TableRowContextExample;
-exports.ɵgy = TableSelectionExample;
-exports.ɵha = SimpleColumn;
-exports.ɵgz = TableSimpleColumnExample;
-exports.ɵhb = TableSortingExample;
-exports.ɵhc = TableStickyColumnsExample;
-exports.ɵhd = TableStickyComplexFlexExample;
-exports.ɵhe = TableStickyComplexExample;
-exports.ɵhf = TableStickyFooterExample;
-exports.ɵhg = TableStickyHeaderExample;
-exports.ɵhh = TableWrappedExample;
-exports.ɵhi = WrapperTable;
-exports.ɵhj = TextFieldAutofillDirectiveExample;
-exports.ɵhk = TextFieldAutofillMonitorExample;
-exports.ɵhl = TextFieldAutosizeTextareaExample;
-exports.ɵhm = ToolbarOverviewExample;
-exports.ɵhn = TooltipAutoHideExample;
-exports.ɵho = TooltipCustomClassExample;
-exports.ɵhp = TooltipDelayExample;
-exports.ɵhq = TooltipDisabledExample;
-exports.ɵhr = TooltipManualExample;
-exports.ɵhs = TooltipMessageExample;
-exports.ɵhu = TooltipModifiedDefaultsExample;
-exports.ɵht = myCustomTooltipDefaults;
-exports.ɵhv = TooltipOverviewExample;
-exports.ɵhw = TooltipPositionExample;
-exports.ɵhx = ChecklistDatabase;
-exports.ɵhy = TreeChecklistExample;
-exports.ɵhz = DynamicDatabase;
-exports.ɵia = TreeDynamicExample;
-exports.ɵib = FileDatabase$2;
-exports.ɵic = TreeFlatOverviewExample;
-exports.ɵid = LoadmoreDatabase;
-exports.ɵie = TreeLoadmoreExample;
-exports.ɵif = FileDatabase$3;
-exports.ɵig = TreeNestedOverviewExample;
+exports.ɵp = CdkDragDropBoundaryExample;
+exports.ɵq = CdkDragDropConnectedSortingExample;
+exports.ɵr = CdkDragDropCustomPlaceholderExample;
+exports.ɵs = CdkDragDropCustomPreviewExample;
+exports.ɵt = CdkDragDropDisabledExample;
+exports.ɵu = CdkDragDropEnterPredicateExample;
+exports.ɵv = CdkDragDropHandleExample;
+exports.ɵw = CdkDragDropHorizontalSortingExample;
+exports.ɵx = CdkDragDropOverviewExample;
+exports.ɵy = CdkDragDropRootElementExample;
+exports.ɵz = CdkDragDropSortingExample;
+exports.ɵba = CdkPlatformOverviewExample;
+exports.ɵbb = CdkTableBasicFlexExample;
+exports.ɵbc = CdkTableBasicExample;
+exports.ɵbe = CdkTreeFlatExample;
+exports.ɵbd = FileDatabase;
+exports.ɵbg = CdkTreeNestedExample;
+exports.ɵbf = FileDatabase$1;
+exports.ɵbh = CdkVirtualScrollContextExample;
+exports.ɵbj = CdkVirtualScrollCustomStrategyExample;
+exports.ɵbi = CustomVirtualScrollStrategy;
+exports.ɵbk = CdkVirtualScrollDataSourceExample;
+exports.ɵbl = CdkVirtualScrollDlExample;
+exports.ɵbm = CdkVirtualScrollFixedBufferExample;
+exports.ɵbn = CdkVirtualScrollHorizontalExample;
+exports.ɵbo = CdkVirtualScrollOverviewExample;
+exports.ɵbp = CdkVirtualScrollTemplateCacheExample;
+exports.ɵbq = CheckboxConfigurableExample;
+exports.ɵbr = CheckboxOverviewExample;
+exports.ɵbs = ChipsAutocompleteExample;
+exports.ɵbt = ChipsInputExample;
+exports.ɵbu = ChipsOverviewExample;
+exports.ɵbv = ChipsStackedExample;
+exports.ɵbw = DatepickerApiExample;
+exports.ɵbx = DatepickerColorExample;
+exports.ɵby = DatepickerCustomHeaderExample;
+exports.ɵbz = ExampleHeader;
+exports.ɵca = DatepickerCustomIconExample;
+exports.ɵcb = DatepickerDateClassExample;
+exports.ɵcc = DatepickerDisabledExample;
+exports.ɵcd = DatepickerEventsExample;
+exports.ɵce = DatepickerFilterExample;
+exports.ɵcg = DatepickerFormatsExample;
+exports.ɵcf = MY_FORMATS;
+exports.ɵch = DatepickerLocaleExample;
+exports.ɵci = DatepickerMinMaxExample;
+exports.ɵcj = DatepickerMomentExample;
+exports.ɵck = DatepickerStartViewExample;
+exports.ɵcl = DatepickerTouchExample;
+exports.ɵcm = DatepickerValueExample;
+exports.ɵco = DatepickerViewsSelectionExample;
+exports.ɵcn = MY_FORMATS$1;
+exports.ɵcp = DialogContentExample;
+exports.ɵcq = DialogContentExampleDialog;
+exports.ɵcr = DialogDataExample;
+exports.ɵcs = DialogDataExampleDialog;
+exports.ɵct = DialogElementsExample;
+exports.ɵcu = DialogElementsExampleDialog;
+exports.ɵcv = DialogOverviewExample;
+exports.ɵcw = DialogOverviewExampleDialog;
+exports.ɵcx = DividerOverviewExample;
+exports.ɵcy = ElevationOverviewExample;
+exports.ɵcz = ExpansionExpandCollapseAllExample;
+exports.ɵda = ExpansionStepsExample;
+exports.ɵdb = FocusMonitorDirectivesExample;
+exports.ɵdc = FocusMonitorFocusViaExample;
+exports.ɵdd = FocusMonitorOverviewExample;
+exports.ɵde = FormFieldAppearanceExample;
+exports.ɵdf = FormFieldCustomControlExample;
+exports.ɵdg = MyTelInput;
+exports.ɵdh = FormFieldErrorExample;
+exports.ɵdi = FormFieldHintExample;
+exports.ɵdj = FormFieldLabelExample;
+exports.ɵdk = FormFieldOverviewExample;
+exports.ɵdl = FormFieldPrefixSuffixExample;
+exports.ɵdm = FormFieldThemingExample;
+exports.ɵdn = GridListDynamicExample;
+exports.ɵdo = GridListOverviewExample;
+exports.ɵdp = IconOverviewExample;
+exports.ɵdq = IconSvgExample;
+exports.ɵdr = InputClearableExample;
+exports.ɵds = InputErrorStateMatcherExample;
+exports.ɵdt = InputErrorsExample;
+exports.ɵdu = InputFormExample;
+exports.ɵdv = InputHintExample;
+exports.ɵdw = InputOverviewExample;
+exports.ɵdx = InputPrefixSuffixExample;
+exports.ɵdy = ListSectionsExample;
+exports.ɵdz = ListSelectionExample;
+exports.ɵii = ExampleMaterialModule;
+exports.ɵea = MenuIconsExample;
+exports.ɵeb = MenuOverviewExample;
+exports.ɵec = NestedMenuExample;
+exports.ɵed = PaginatorConfigurableExample;
+exports.ɵee = PaginatorOverviewExample;
+exports.ɵef = ProgressBarBufferExample;
+exports.ɵeg = ProgressBarConfigurableExample;
+exports.ɵeh = ProgressBarDeterminateExample;
+exports.ɵei = ProgressBarIndeterminateExample;
+exports.ɵej = ProgressBarQueryExample;
+exports.ɵek = ProgressSpinnerConfigurableExample;
+exports.ɵel = ProgressSpinnerOverviewExample;
+exports.ɵem = RadioNgModelExample;
+exports.ɵen = RadioOverviewExample;
+exports.ɵeo = RippleOverviewExample;
+exports.ɵep = SelectCustomTriggerExample;
+exports.ɵeq = SelectDisabledExample;
+exports.ɵer = SelectErrorStateMatcherExample;
+exports.ɵes = SelectFormExample;
+exports.ɵet = SelectHintErrorExample;
+exports.ɵeu = SelectMultipleExample;
+exports.ɵev = SelectNoRippleExample;
+exports.ɵew = SelectOptgroupExample;
+exports.ɵex = SelectOverviewExample;
+exports.ɵey = SelectPanelClassExample;
+exports.ɵez = SelectResetExample;
+exports.ɵfa = SelectValueBindingExample;
+exports.ɵfb = SidenavAutosizeExample;
+exports.ɵfc = SidenavBackdropExample;
+exports.ɵfd = SidenavDisableCloseExample;
+exports.ɵfe = SidenavDrawerOverviewExample;
+exports.ɵff = SidenavFixedExample;
+exports.ɵfg = SidenavModeExample;
+exports.ɵfh = SidenavOpenCloseExample;
+exports.ɵfi = SidenavOverviewExample;
+exports.ɵfj = SidenavPositionExample;
+exports.ɵfk = SidenavResponsiveExample;
+exports.ɵfl = SlideToggleConfigurableExample;
+exports.ɵfm = SlideToggleFormsExample;
+exports.ɵfn = SlideToggleOverviewExample;
+exports.ɵfo = SliderConfigurableExample;
+exports.ɵfp = SliderFormattingExample;
+exports.ɵfq = SliderOverviewExample;
+exports.ɵfs = PizzaPartyComponent;
+exports.ɵfr = SnackBarComponentExample;
+exports.ɵft = SnackBarOverviewExample;
+exports.ɵfu = SnackBarPositionExample;
+exports.ɵfv = SortOverviewExample;
+exports.ɵfw = StepperEditableExample;
+exports.ɵfx = StepperErrorsExample;
+exports.ɵfy = StepperLabelPositionBottomExample;
+exports.ɵfz = StepperOptionalExample;
+exports.ɵga = StepperStatesExample;
+exports.ɵgb = StepperVerticalExample;
+exports.ɵgc = TabGroupAlignExample;
+exports.ɵgd = TabGroupAnimationsExample;
+exports.ɵge = TabGroupAsyncExample;
+exports.ɵgf = TabGroupBasicExample;
+exports.ɵgg = TabGroupCustomLabelExample;
+exports.ɵgh = TabGroupDynamicHeightExample;
+exports.ɵgi = TabGroupDynamicExample;
+exports.ɵgj = TabGroupHeaderBelowExample;
+exports.ɵgk = TabGroupLazyLoadedExample;
+exports.ɵgl = TabGroupStretchedExample;
+exports.ɵgm = TabGroupThemeExample;
+exports.ɵgn = TabNavBarBasicExample;
+exports.ɵgo = TableBasicFlexExample;
+exports.ɵgp = TableBasicExample;
+exports.ɵgq = TableDynamicColumnsExample;
+exports.ɵgr = TableExpandableRowsExample;
+exports.ɵgs = TableFilteringExample;
+exports.ɵgt = TableFooterRowExample;
+exports.ɵgu = TableHttpExample;
+exports.ɵgv = TableMultipleHeaderFooterExample;
+exports.ɵgw = TableOverviewExample;
+exports.ɵgx = TablePaginationExample;
+exports.ɵgy = TableRowContextExample;
+exports.ɵgz = TableSelectionExample;
+exports.ɵhb = SimpleColumn;
+exports.ɵha = TableSimpleColumnExample;
+exports.ɵhc = TableSortingExample;
+exports.ɵhd = TableStickyColumnsExample;
+exports.ɵhe = TableStickyComplexFlexExample;
+exports.ɵhf = TableStickyComplexExample;
+exports.ɵhg = TableStickyFooterExample;
+exports.ɵhh = TableStickyHeaderExample;
+exports.ɵhi = TableWrappedExample;
+exports.ɵhj = WrapperTable;
+exports.ɵhk = TextFieldAutofillDirectiveExample;
+exports.ɵhl = TextFieldAutofillMonitorExample;
+exports.ɵhm = TextFieldAutosizeTextareaExample;
+exports.ɵhn = ToolbarOverviewExample;
+exports.ɵho = TooltipAutoHideExample;
+exports.ɵhp = TooltipCustomClassExample;
+exports.ɵhq = TooltipDelayExample;
+exports.ɵhr = TooltipDisabledExample;
+exports.ɵhs = TooltipManualExample;
+exports.ɵht = TooltipMessageExample;
+exports.ɵhv = TooltipModifiedDefaultsExample;
+exports.ɵhu = myCustomTooltipDefaults;
+exports.ɵhw = TooltipOverviewExample;
+exports.ɵhx = TooltipPositionExample;
+exports.ɵhy = ChecklistDatabase;
+exports.ɵhz = TreeChecklistExample;
+exports.ɵia = DynamicDatabase;
+exports.ɵib = TreeDynamicExample;
+exports.ɵic = FileDatabase$2;
+exports.ɵid = TreeFlatOverviewExample;
+exports.ɵie = LoadmoreDatabase;
+exports.ɵif = TreeLoadmoreExample;
+exports.ɵig = FileDatabase$3;
+exports.ɵih = TreeNestedOverviewExample;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
