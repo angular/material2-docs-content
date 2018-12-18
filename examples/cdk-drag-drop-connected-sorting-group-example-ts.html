@@ -1,0 +1,38 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDrop, moveItemInArray, transferArrayItem} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
+
+<span class="hljs-comment">/**
+ * @title Drag&amp;Drop connected sorting group
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-drag-drop-connected-sorting-group-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-drag-drop-connected-sorting-group-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-drag-drop-connected-sorting-group-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkDragDropConnectedSortingGroupExample {
+  todo = [
+    <span class="hljs-string">'Get to work'</span>,
+    <span class="hljs-string">'Pick up groceries'</span>,
+    <span class="hljs-string">'Go home'</span>,
+    <span class="hljs-string">'Fall asleep'</span>
+  ];
+
+  done = [
+    <span class="hljs-string">'Get up'</span>,
+    <span class="hljs-string">'Brush teeth'</span>,
+    <span class="hljs-string">'Take a shower'</span>,
+    <span class="hljs-string">'Check e-mail'</span>,
+    <span class="hljs-string">'Walk dog'</span>
+  ];
+
+  drop(event: CdkDragDrop&lt;<span class="hljs-built_in">string</span>[]&gt;) {
+    <span class="hljs-keyword">if</span> (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } <span class="hljs-keyword">else</span> {
+      transferArrayItem(event.previousContainer.data,
+                        event.container.data,
+                        event.previousIndex,
+                        event.currentIndex);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropListGroup</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>To do<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+      <span class="hljs-attr">cdkDropList</span>
+      [<span class="hljs-attr">cdkDropListData</span>]=<span class="hljs-string">"todo"</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"example-list"</span>
+      (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">"drop($event)"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-box"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of todo"</span> <span class="hljs-attr">cdkDrag</span>&gt;</span>{{item}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Done<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+      <span class="hljs-attr">cdkDropList</span>
+      [<span class="hljs-attr">cdkDropListData</span>]=<span class="hljs-string">"done"</span>
+      <span class="hljs-attr">class</span>=<span class="hljs-string">"example-list"</span>
+      (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">"drop($event)"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-box"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of done"</span> <span class="hljs-attr">cdkDrag</span>&gt;</span>{{item}}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
