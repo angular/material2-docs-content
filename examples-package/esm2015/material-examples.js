@@ -4039,7 +4039,7 @@ RadioOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'radio-overview-example',
                 template: "<mat-radio-group><mat-radio-button value=\"1\">Option 1</mat-radio-button><mat-radio-button value=\"2\">Option 2</mat-radio-button></mat-radio-group>",
-                styles: [".mat-radio-button ~ .mat-radio-button { padding-right: 16px; } "],
+                styles: [".mat-radio-button ~ .mat-radio-button { margin-left: 16px; } "],
             },] },
 ];
 
