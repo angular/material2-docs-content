@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {HttpClient} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common/http'</span>;
-<span class="hljs-keyword">import</span> {Component, OnInit, ViewChild} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {Component, ViewChild, AfterViewInit} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {MatPaginator, MatSort} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
 <span class="hljs-keyword">import</span> {merge, Observable, of <span class="hljs-keyword">as</span> observableOf} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 <span class="hljs-keyword">import</span> {catchError, map, startWith, switchMap} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs/operators'</span>;
@@ -12,9 +12,9 @@
   styleUrls: [<span class="hljs-string">'table-http-example.css'</span>],
   templateUrl: <span class="hljs-string">'table-http-example.html'</span>,
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableHttpExample <span class="hljs-keyword">implements</span> OnInit {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableHttpExample <span class="hljs-keyword">implements</span> AfterViewInit {
   displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'created'</span>, <span class="hljs-string">'state'</span>, <span class="hljs-string">'number'</span>, <span class="hljs-string">'title'</span>];
-  exampleDatabase: ExampleHttpDao | <span class="hljs-literal">null</span>;
+  exampleDatabase: ExampleHttpDatabase | <span class="hljs-literal">null</span>;
   data: GithubIssue[] = [];
 
   resultsLength = <span class="hljs-number">0</span>;
@@ -26,8 +26,8 @@
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> http: HttpClient</span>) {}
 
-  ngOnInit() {
-    <span class="hljs-keyword">this</span>.exampleDatabase = <span class="hljs-keyword">new</span> ExampleHttpDao(<span class="hljs-keyword">this</span>.http);
+  ngAfterViewInit() {
+    <span class="hljs-keyword">this</span>.exampleDatabase = <span class="hljs-keyword">new</span> ExampleHttpDatabase(<span class="hljs-keyword">this</span>.http);
 
     <span class="hljs-comment">// If the user changes the sort order, reset back to the first page.</span>
     <span class="hljs-keyword">this</span>.sort.sortChange.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.paginator.pageIndex = <span class="hljs-number">0</span>);
@@ -71,7 +71,7 @@
 }
 
 <span class="hljs-comment">/** An example database that the data source uses to retrieve data for the table. */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleHttpDao {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleHttpDatabase {
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> http: HttpClient</span>) {}
 
   getRepoIssues(sort: <span class="hljs-built_in">string</span>, order: <span class="hljs-built_in">string</span>, page: <span class="hljs-built_in">number</span>): Observable&lt;GithubApi&gt; {

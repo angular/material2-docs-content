@@ -6497,12 +6497,12 @@ var TableHttpExample = /** @class */ (function () {
     /**
      * @return {?}
      */
-    TableHttpExample.prototype.ngOnInit = /**
+    TableHttpExample.prototype.ngAfterViewInit = /**
      * @return {?}
      */
     function () {
         var _this = this;
-        this.exampleDatabase = new ExampleHttpDao(this.http);
+        this.exampleDatabase = new ExampleHttpDatabase(this.http);
         // If the user changes the sort order, reset back to the first page.
         this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
         rxjs.merge(this.sort.sortChange, this.paginator.page)
@@ -6525,8 +6525,8 @@ var TableHttpExample = /** @class */ (function () {
     TableHttpExample.decorators = [
         { type: core.Component, args: [{
                     selector: 'table-http-example',
-                    styles: ["/* Structure */ .example-container { position: relative; } .example-table-container { position: relative; max-height: 400px; overflow: auto; } table { width: 100%; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } "],
-                    template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><div class=\"example-table-container\"><table mat-table [dataSource]=\"data\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"asc\"><ng-container matColumnDef=\"number\"><th mat-header-cell *matHeaderCellDef>#</th><td mat-cell *matCellDef=\"let row\">{{row.number}}</td></ng-container><ng-container matColumnDef=\"title\"><th mat-header-cell *matHeaderCellDef>Title</th><td mat-cell *matCellDef=\"let row\">{{row.title}}</td></ng-container><ng-container matColumnDef=\"state\"><th mat-header-cell *matHeaderCellDef>State</th><td mat-cell *matCellDef=\"let row\">{{row.state}}</td></ng-container><ng-container matColumnDef=\"created\"><th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>Created</th><td mat-cell *matCellDef=\"let row\">{{row.created_at | date}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
+                    styles: ["/* Structure */ .example-container { position: relative; min-height: 200px; } .example-table-container { position: relative; max-height: 400px; overflow: auto; } table { width: 100%; } .example-loading-shade { position: absolute; top: 0; left: 0; bottom: 56px; right: 0; background: rgba(0, 0, 0, 0.15); z-index: 1; display: flex; align-items: center; justify-content: center; } .example-rate-limit-reached { color: #980000; max-width: 360px; text-align: center; } /* Column Widths */ .mat-column-number, .mat-column-state { max-width: 64px; } .mat-column-created { max-width: 124px; } "],
+                    template: "<div class=\"example-container mat-elevation-z8\"><div class=\"example-loading-shade\" *ngIf=\"isLoadingResults || isRateLimitReached\"><mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner><div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">GitHub's API rate limit has been reached. It will be reset in one minute.</div></div><div class=\"example-table-container\"><table mat-table [dataSource]=\"data\" class=\"example-table\" matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"desc\"><ng-container matColumnDef=\"number\"><th mat-header-cell *matHeaderCellDef>#</th><td mat-cell *matCellDef=\"let row\">{{row.number}}</td></ng-container><ng-container matColumnDef=\"title\"><th mat-header-cell *matHeaderCellDef>Title</th><td mat-cell *matCellDef=\"let row\">{{row.title}}</td></ng-container><ng-container matColumnDef=\"state\"><th mat-header-cell *matHeaderCellDef>State</th><td mat-cell *matCellDef=\"let row\">{{row.state}}</td></ng-container><ng-container matColumnDef=\"created\"><th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>Created</th><td mat-cell *matCellDef=\"let row\">{{row.created_at | date}}</td></ng-container><tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr><tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr></table></div><mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator></div>",
                 },] },
     ];
     /** @nocollapse */
@@ -6545,8 +6545,8 @@ var TableHttpExample = /** @class */ (function () {
 var /**
  * An example database that the data source uses to retrieve data for the table.
  */
-ExampleHttpDao = /** @class */ (function () {
-    function ExampleHttpDao(http$$1) {
+ExampleHttpDatabase = /** @class */ (function () {
+    function ExampleHttpDatabase(http$$1) {
         this.http = http$$1;
     }
     /**
@@ -6555,7 +6555,7 @@ ExampleHttpDao = /** @class */ (function () {
      * @param {?} page
      * @return {?}
      */
-    ExampleHttpDao.prototype.getRepoIssues = /**
+    ExampleHttpDatabase.prototype.getRepoIssues = /**
      * @param {?} sort
      * @param {?} order
      * @param {?} page
@@ -6568,7 +6568,7 @@ ExampleHttpDao = /** @class */ (function () {
         var requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
         return this.http.get(requestUrl);
     };
-    return ExampleHttpDao;
+    return ExampleHttpDatabase;
 }());
 
 /**
