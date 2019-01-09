@@ -5391,6 +5391,7 @@ var SnackBarComponentExample = /** @class */ (function () {
         { type: core.Component, args: [{
                     selector: 'snack-bar-component-example',
                     template: "<button mat-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">Pizza party</button>",
+                    styles: ["/** No CSS for this example */ "],
                 },] },
     ];
     /** @nocollapse */
@@ -5482,6 +5483,7 @@ var SnackBarPositionExample = /** @class */ (function () {
         { type: core.Component, args: [{
                     selector: 'snack-bar-position-example',
                     template: "<mat-form-field><mat-select placeholder=\"Horizontal position\" [(value)]=\"horizontalPosition\"><mat-option value=\"start\">Start</mat-option><mat-option value=\"center\">Center</mat-option><mat-option value=\"end\">End</mat-option><mat-option value=\"left\">Left</mat-option><mat-option value=\"right\">Right</mat-option></mat-select></mat-form-field><mat-form-field><mat-select placeholder=\"Vertical position\" [(value)]=\"verticalPosition\"><mat-option value=\"top\">Top</mat-option><mat-option value=\"bottom\">Bottom</mat-option></mat-select></mat-form-field><button mat-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">Pool party!</button>",
+                    styles: ["/** No CSS for this example */ "],
                 },] },
     ];
     /** @nocollapse */

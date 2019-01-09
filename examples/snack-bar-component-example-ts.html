@@ -7,9 +7,10 @@
 <span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'snack-bar-component-example'</span>,
   templateUrl: <span class="hljs-string">'snack-bar-component-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'snack-bar-component-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SnackBarComponentExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> snackBar: MatSnackBar</span>) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> snackBar: MatSnackBar</span>) {}
 
   openSnackBar() {
     <span class="hljs-keyword">this</span>.snackBar.openFromComponent(PizzaPartyComponent, {
