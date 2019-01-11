@@ -11,6 +11,9 @@ export class ExampleData {
   /** Description of the example. */
   description: string;
 
+  /** Path to the example. This is based on the structure of the material.angular.io repo. */
+  examplePath: string;
+
   /** List of files that are part of this example. */
   exampleFiles: string[];
 
@@ -35,6 +38,7 @@ export class ExampleData {
 
     // TODO(tinayuangao): Do not hard-code extensions
     this.exampleFiles = ['html', 'ts', 'css'].map(extension => `${example}-example.${extension}`);
+    this.examplePath = `/assets/stackblitz/examples/${example}/`;
     this.selectorName = this.indexFilename = `${example}-example`;
 
     if (exampleConfig.additionalFiles) {

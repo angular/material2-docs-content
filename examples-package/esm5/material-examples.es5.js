@@ -10478,6 +10478,7 @@ ExampleData = /** @class */ (function () {
         var exampleConfig = EXAMPLE_COMPONENTS[example];
         // TODO(tinayuangao): Do not hard-code extensions
         this.exampleFiles = ['html', 'ts', 'css'].map(function (extension) { return example + "-example." + extension; });
+        this.examplePath = "/assets/stackblitz/examples/" + example + "/";
         this.selectorName = this.indexFilename = example + "-example";
         if (exampleConfig.additionalFiles) {
             (_a = this.exampleFiles).push.apply(_a, exampleConfig.additionalFiles);

@@ -11,6 +11,9 @@
   <span class="hljs-comment">/** Description of the example. */</span>
   description: <span class="hljs-built_in">string</span>;
 
+  <span class="hljs-comment">/** Path to the example. This is based on the structure of the material.angular.io repo. */</span>
+  examplePath: <span class="hljs-built_in">string</span>;
+
   <span class="hljs-comment">/** List of files that are part of this example. */</span>
   exampleFiles: <span class="hljs-built_in">string</span>[];
 
@@ -35,6 +38,7 @@
 
     <span class="hljs-comment">// TODO(tinayuangao): Do not hard-code extensions</span>
     <span class="hljs-keyword">this</span>.exampleFiles = [<span class="hljs-string">'html'</span>, <span class="hljs-string">'ts'</span>, <span class="hljs-string">'css'</span>].map(<span class="hljs-function"><span class="hljs-params">extension</span> =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example.<span class="hljs-subst">${extension}</span>`</span>);
+    <span class="hljs-keyword">this</span>.examplePath = <span class="hljs-string">`/assets/stackblitz/examples/<span class="hljs-subst">${example}</span>/`</span>;
     <span class="hljs-keyword">this</span>.selectorName = <span class="hljs-keyword">this</span>.indexFilename = <span class="hljs-string">`<span class="hljs-subst">${example}</span>-example`</span>;
 
     <span class="hljs-keyword">if</span> (exampleConfig.additionalFiles) {
