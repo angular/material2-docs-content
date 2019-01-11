@@ -1,0 +1,8 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>The portal outlet is below:<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-portal-outlet"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">cdkPortalOutlet</span>]=<span class="hljs-string">"selectedPortal"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">templatePortalContent</span>&gt;</span>Hello, this is a template portal<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"selectedPortal = componentPortal"</span>&gt;</span>Render component portal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"selectedPortal = templatePortal"</span>&gt;</span>Render template portal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
