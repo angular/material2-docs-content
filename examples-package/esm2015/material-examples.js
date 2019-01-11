@@ -11,11 +11,11 @@ import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
 import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { PortalModule, TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
 import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MatColumnDef, MatSortHeader, MatTable, MatHeaderRowDef, MatRowDef, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
 import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { map, startWith, takeUntil, catchError, switchMap, take } from 'rxjs/operators';
 import { Overlay } from '@angular/cdk/overlay';
-import { TemplatePortal } from '@angular/cdk/portal';
 import { getSupportedInputTypes, Platform, supportsPassiveEventListeners, supportsScrollBehavior } from '@angular/cdk/platform';
 import { DataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject, of, Subscription, Subject, Observable, merge } from 'rxjs';
@@ -84,6 +84,7 @@ ExampleMaterialModule.decorators = [
                     MatTooltipModule,
                     MatTreeModule,
                     ScrollingModule,
+                    PortalModule,
                 ],
                 exports: [
                     A11yModule,
@@ -126,6 +127,7 @@ ExampleMaterialModule.decorators = [
                     MatTooltipModule,
                     MatTreeModule,
                     ScrollingModule,
+                    PortalModule,
                 ]
             },] },
 ];
@@ -1132,6 +1134,51 @@ CdkPlatformOverviewExample.decorators = [
 /** @nocollapse */
 CdkPlatformOverviewExample.ctorParameters = () => [
     { type: Platform }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * \@title Portal overview
+ */
+class CdkPortalOverviewExample {
+    /**
+     * @param {?} _viewContainerRef
+     */
+    constructor(_viewContainerRef) {
+        this._viewContainerRef = _viewContainerRef;
+    }
+    /**
+     * @return {?}
+     */
+    ngAfterViewInit() {
+        this.componentPortal = new ComponentPortal(ComponentPortalExample);
+        this.templatePortal = new TemplatePortal(this.templatePortalContent, this._viewContainerRef);
+    }
+}
+CdkPortalOverviewExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-portal-overview-example',
+                template: "<h2>The portal outlet is below:</h2><div class=\"example-portal-outlet\"><ng-template [cdkPortalOutlet]=\"selectedPortal\"></ng-template></div><ng-template #templatePortalContent>Hello, this is a template portal</ng-template><button (click)=\"selectedPortal = componentPortal\">Render component portal</button> <button (click)=\"selectedPortal = templatePortal\">Render template portal</button>",
+                styles: [".example-portal-outlet { margin-bottom: 10px; padding: 10px; border: 1px dashed black; width: 250px; height: 250px; } "],
+            },] },
+];
+/** @nocollapse */
+CdkPortalOverviewExample.ctorParameters = () => [
+    { type: ViewContainerRef }
+];
+CdkPortalOverviewExample.propDecorators = {
+    templatePortalContent: [{ type: ViewChild, args: ['templatePortalContent',] }]
+};
+class ComponentPortalExample {
+}
+ComponentPortalExample.decorators = [
+    { type: Component, args: [{
+                selector: 'component-portal-example',
+                template: 'Hello, this is a component portal'
+            },] },
 ];
 
 /**
@@ -8126,6 +8173,12 @@ const EXAMPLE_COMPONENTS = {
         "additionalFiles": [],
         "selectorName": ""
     },
+    "cdk-portal-overview": {
+        "title": "Portal overview",
+        "component": CdkPortalOverviewExample,
+        "additionalFiles": [],
+        "selectorName": "CdkPortalOverviewExample, ComponentPortalExample"
+    },
     "cdk-table-basic-flex": {
         "title": "Basic use of `<cdk-table>` (uses display flex)",
         "component": CdkTableBasicFlexExample,
@@ -9218,6 +9271,8 @@ const EXAMPLE_LIST = [
     CdkDragDropRootElementExample,
     CdkDragDropSortingExample,
     CdkPlatformOverviewExample,
+    CdkPortalOverviewExample,
+    ComponentPortalExample,
     CdkTableBasicFlexExample,
     CdkTableBasicExample,
     CdkTreeFlatExample,
@@ -9437,7 +9492,6 @@ class ExampleData {
         const exampleConfig = EXAMPLE_COMPONENTS[example];
         // TODO(tinayuangao): Do not hard-code extensions
         this.exampleFiles = ['html', 'ts', 'css'].map(extension => `${example}-example.${extension}`);
-        this.examplePath = `/assets/stackblitz/examples/${example}/`;
         this.selectorName = this.indexFilename = `${example}-example`;
         if (exampleConfig.additionalFiles) {
             this.exampleFiles.push(...exampleConfig.additionalFiles);
@@ -9460,5 +9514,5 @@ class ExampleData {
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
-export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleAppearanceExample as ɵk, ButtonToggleExclusiveExample as ɵl, ButtonTypesExample as ɵm, CardOverviewExample as ɵn, CdkDragDropAxisLockExample as ɵo, CdkDragDropBoundaryExample as ɵp, CdkDragDropConnectedSortingGroupExample as ɵq, CdkDragDropConnectedSortingExample as ɵr, CdkDragDropCustomPlaceholderExample as ɵs, CdkDragDropCustomPreviewExample as ɵt, CdkDragDropDisabledExample as ɵu, CdkDragDropEnterPredicateExample as ɵv, CdkDragDropHandleExample as ɵw, CdkDragDropHorizontalSortingExample as ɵx, CdkDragDropOverviewExample as ɵy, CdkDragDropRootElementExample as ɵz, CdkDragDropSortingExample as ɵba, CdkPlatformOverviewExample as ɵbb, CdkTableBasicFlexExample as ɵbc, CdkTableBasicExample as ɵbd, CdkTreeFlatExample as ɵbf, FileDatabase as ɵbe, CdkTreeNestedExample as ɵbh, FileDatabase$1 as ɵbg, CdkVirtualScrollContextExample as ɵbi, CdkVirtualScrollCustomStrategyExample as ɵbk, CustomVirtualScrollStrategy as ɵbj, CdkVirtualScrollDataSourceExample as ɵbl, CdkVirtualScrollDlExample as ɵbm, CdkVirtualScrollFixedBufferExample as ɵbn, CdkVirtualScrollHorizontalExample as ɵbo, CdkVirtualScrollOverviewExample as ɵbp, CdkVirtualScrollTemplateCacheExample as ɵbq, CheckboxConfigurableExample as ɵbr, CheckboxOverviewExample as ɵbs, ChipsAutocompleteExample as ɵbt, ChipsInputExample as ɵbu, ChipsOverviewExample as ɵbv, ChipsStackedExample as ɵbw, DatepickerApiExample as ɵbx, DatepickerColorExample as ɵby, DatepickerCustomHeaderExample as ɵbz, ExampleHeader as ɵca, DatepickerCustomIconExample as ɵcb, DatepickerDateClassExample as ɵcc, DatepickerDisabledExample as ɵcd, DatepickerEventsExample as ɵce, DatepickerFilterExample as ɵcf, DatepickerFormatsExample as ɵch, MY_FORMATS as ɵcg, DatepickerLocaleExample as ɵci, DatepickerMinMaxExample as ɵcj, DatepickerMomentExample as ɵck, DatepickerStartViewExample as ɵcl, DatepickerTouchExample as ɵcm, DatepickerValueExample as ɵcn, DatepickerViewsSelectionExample as ɵcp, MY_FORMATS$1 as ɵco, DialogContentExample as ɵcq, DialogContentExampleDialog as ɵcr, DialogDataExample as ɵcs, DialogDataExampleDialog as ɵct, DialogElementsExample as ɵcu, DialogElementsExampleDialog as ɵcv, DialogOverviewExample as ɵcw, DialogOverviewExampleDialog as ɵcx, DividerOverviewExample as ɵcy, ElevationOverviewExample as ɵcz, ExpansionExpandCollapseAllExample as ɵda, ExpansionStepsExample as ɵdb, FocusMonitorDirectivesExample as ɵdc, FocusMonitorFocusViaExample as ɵdd, FocusMonitorOverviewExample as ɵde, FormFieldAppearanceExample as ɵdf, FormFieldCustomControlExample as ɵdg, MyTelInput as ɵdh, FormFieldErrorExample as ɵdi, FormFieldHintExample as ɵdj, FormFieldLabelExample as ɵdk, FormFieldOverviewExample as ɵdl, FormFieldPrefixSuffixExample as ɵdm, FormFieldThemingExample as ɵdn, GridListDynamicExample as ɵdo, GridListOverviewExample as ɵdp, IconOverviewExample as ɵdq, IconSvgExample as ɵdr, InputClearableExample as ɵds, InputErrorStateMatcherExample as ɵdt, InputErrorsExample as ɵdu, InputFormExample as ɵdv, InputHintExample as ɵdw, InputOverviewExample as ɵdx, InputPrefixSuffixExample as ɵdy, ListSectionsExample as ɵdz, ListSelectionExample as ɵea, ExampleMaterialModule as ɵij, MenuIconsExample as ɵeb, MenuOverviewExample as ɵec, NestedMenuExample as ɵed, PaginatorConfigurableExample as ɵee, PaginatorOverviewExample as ɵef, ProgressBarBufferExample as ɵeg, ProgressBarConfigurableExample as ɵeh, ProgressBarDeterminateExample as ɵei, ProgressBarIndeterminateExample as ɵej, ProgressBarQueryExample as ɵek, ProgressSpinnerConfigurableExample as ɵel, ProgressSpinnerOverviewExample as ɵem, RadioNgModelExample as ɵen, RadioOverviewExample as ɵeo, RippleOverviewExample as ɵep, SelectCustomTriggerExample as ɵeq, SelectDisabledExample as ɵer, SelectErrorStateMatcherExample as ɵes, SelectFormExample as ɵet, SelectHintErrorExample as ɵeu, SelectMultipleExample as ɵev, SelectNoRippleExample as ɵew, SelectOptgroupExample as ɵex, SelectOverviewExample as ɵey, SelectPanelClassExample as ɵez, SelectResetExample as ɵfa, SelectValueBindingExample as ɵfb, SidenavAutosizeExample as ɵfc, SidenavBackdropExample as ɵfd, SidenavDisableCloseExample as ɵfe, SidenavDrawerOverviewExample as ɵff, SidenavFixedExample as ɵfg, SidenavModeExample as ɵfh, SidenavOpenCloseExample as ɵfi, SidenavOverviewExample as ɵfj, SidenavPositionExample as ɵfk, SidenavResponsiveExample as ɵfl, SlideToggleConfigurableExample as ɵfm, SlideToggleFormsExample as ɵfn, SlideToggleOverviewExample as ɵfo, SliderConfigurableExample as ɵfp, SliderFormattingExample as ɵfq, SliderOverviewExample as ɵfr, PizzaPartyComponent as ɵft, SnackBarComponentExample as ɵfs, SnackBarOverviewExample as ɵfu, SnackBarPositionExample as ɵfv, SortOverviewExample as ɵfw, StepperEditableExample as ɵfx, StepperErrorsExample as ɵfy, StepperLabelPositionBottomExample as ɵfz, StepperOptionalExample as ɵga, StepperStatesExample as ɵgb, StepperVerticalExample as ɵgc, TabGroupAlignExample as ɵgd, TabGroupAnimationsExample as ɵge, TabGroupAsyncExample as ɵgf, TabGroupBasicExample as ɵgg, TabGroupCustomLabelExample as ɵgh, TabGroupDynamicHeightExample as ɵgi, TabGroupDynamicExample as ɵgj, TabGroupHeaderBelowExample as ɵgk, TabGroupLazyLoadedExample as ɵgl, TabGroupStretchedExample as ɵgm, TabGroupThemeExample as ɵgn, TabNavBarBasicExample as ɵgo, TableBasicFlexExample as ɵgp, TableBasicExample as ɵgq, TableDynamicColumnsExample as ɵgr, TableExpandableRowsExample as ɵgs, TableFilteringExample as ɵgt, TableFooterRowExample as ɵgu, TableHttpExample as ɵgv, TableMultipleHeaderFooterExample as ɵgw, TableOverviewExample as ɵgx, TablePaginationExample as ɵgy, TableRowContextExample as ɵgz, TableSelectionExample as ɵha, SimpleColumn as ɵhc, TableSimpleColumnExample as ɵhb, TableSortingExample as ɵhd, TableStickyColumnsExample as ɵhe, TableStickyComplexFlexExample as ɵhf, TableStickyComplexExample as ɵhg, TableStickyFooterExample as ɵhh, TableStickyHeaderExample as ɵhi, TableWrappedExample as ɵhj, WrapperTable as ɵhk, TextFieldAutofillDirectiveExample as ɵhl, TextFieldAutofillMonitorExample as ɵhm, TextFieldAutosizeTextareaExample as ɵhn, ToolbarOverviewExample as ɵho, TooltipAutoHideExample as ɵhp, TooltipCustomClassExample as ɵhq, TooltipDelayExample as ɵhr, TooltipDisabledExample as ɵhs, TooltipManualExample as ɵht, TooltipMessageExample as ɵhu, TooltipModifiedDefaultsExample as ɵhw, myCustomTooltipDefaults as ɵhv, TooltipOverviewExample as ɵhx, TooltipPositionExample as ɵhy, ChecklistDatabase as ɵhz, TreeChecklistExample as ɵia, DynamicDatabase as ɵib, TreeDynamicExample as ɵic, FileDatabase$2 as ɵid, TreeFlatOverviewExample as ɵie, LoadmoreDatabase as ɵif, TreeLoadmoreExample as ɵig, FileDatabase$3 as ɵih, TreeNestedOverviewExample as ɵii };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample, AutocompleteAutoActiveFirstOptionExample as ɵa, AutocompleteDisplayExample as ɵb, AutocompleteFilterExample as ɵc, AutocompleteOptgroupExample as ɵd, AutocompleteOverviewExample as ɵe, AutocompleteSimpleExample as ɵf, BadgeOverviewExample as ɵg, BottomSheetOverviewExample as ɵh, BottomSheetOverviewExampleSheet as ɵi, ButtonOverviewExample as ɵj, ButtonToggleAppearanceExample as ɵk, ButtonToggleExclusiveExample as ɵl, ButtonTypesExample as ɵm, CardOverviewExample as ɵn, CdkDragDropAxisLockExample as ɵo, CdkDragDropBoundaryExample as ɵp, CdkDragDropConnectedSortingGroupExample as ɵq, CdkDragDropConnectedSortingExample as ɵr, CdkDragDropCustomPlaceholderExample as ɵs, CdkDragDropCustomPreviewExample as ɵt, CdkDragDropDisabledExample as ɵu, CdkDragDropEnterPredicateExample as ɵv, CdkDragDropHandleExample as ɵw, CdkDragDropHorizontalSortingExample as ɵx, CdkDragDropOverviewExample as ɵy, CdkDragDropRootElementExample as ɵz, CdkDragDropSortingExample as ɵba, CdkPlatformOverviewExample as ɵbb, CdkPortalOverviewExample as ɵbc, ComponentPortalExample as ɵbd, CdkTableBasicFlexExample as ɵbe, CdkTableBasicExample as ɵbf, CdkTreeFlatExample as ɵbh, FileDatabase as ɵbg, CdkTreeNestedExample as ɵbj, FileDatabase$1 as ɵbi, CdkVirtualScrollContextExample as ɵbk, CdkVirtualScrollCustomStrategyExample as ɵbm, CustomVirtualScrollStrategy as ɵbl, CdkVirtualScrollDataSourceExample as ɵbn, CdkVirtualScrollDlExample as ɵbo, CdkVirtualScrollFixedBufferExample as ɵbp, CdkVirtualScrollHorizontalExample as ɵbq, CdkVirtualScrollOverviewExample as ɵbr, CdkVirtualScrollTemplateCacheExample as ɵbs, CheckboxConfigurableExample as ɵbt, CheckboxOverviewExample as ɵbu, ChipsAutocompleteExample as ɵbv, ChipsInputExample as ɵbw, ChipsOverviewExample as ɵbx, ChipsStackedExample as ɵby, DatepickerApiExample as ɵbz, DatepickerColorExample as ɵca, DatepickerCustomHeaderExample as ɵcb, ExampleHeader as ɵcc, DatepickerCustomIconExample as ɵcd, DatepickerDateClassExample as ɵce, DatepickerDisabledExample as ɵcf, DatepickerEventsExample as ɵcg, DatepickerFilterExample as ɵch, DatepickerFormatsExample as ɵcj, MY_FORMATS as ɵci, DatepickerLocaleExample as ɵck, DatepickerMinMaxExample as ɵcl, DatepickerMomentExample as ɵcm, DatepickerStartViewExample as ɵcn, DatepickerTouchExample as ɵco, DatepickerValueExample as ɵcp, DatepickerViewsSelectionExample as ɵcr, MY_FORMATS$1 as ɵcq, DialogContentExample as ɵcs, DialogContentExampleDialog as ɵct, DialogDataExample as ɵcu, DialogDataExampleDialog as ɵcv, DialogElementsExample as ɵcw, DialogElementsExampleDialog as ɵcx, DialogOverviewExample as ɵcy, DialogOverviewExampleDialog as ɵcz, DividerOverviewExample as ɵda, ElevationOverviewExample as ɵdb, ExpansionExpandCollapseAllExample as ɵdc, ExpansionStepsExample as ɵdd, FocusMonitorDirectivesExample as ɵde, FocusMonitorFocusViaExample as ɵdf, FocusMonitorOverviewExample as ɵdg, FormFieldAppearanceExample as ɵdh, FormFieldCustomControlExample as ɵdi, MyTelInput as ɵdj, FormFieldErrorExample as ɵdk, FormFieldHintExample as ɵdl, FormFieldLabelExample as ɵdm, FormFieldOverviewExample as ɵdn, FormFieldPrefixSuffixExample as ɵdo, FormFieldThemingExample as ɵdp, GridListDynamicExample as ɵdq, GridListOverviewExample as ɵdr, IconOverviewExample as ɵds, IconSvgExample as ɵdt, InputClearableExample as ɵdu, InputErrorStateMatcherExample as ɵdv, InputErrorsExample as ɵdw, InputFormExample as ɵdx, InputHintExample as ɵdy, InputOverviewExample as ɵdz, InputPrefixSuffixExample as ɵea, ListSectionsExample as ɵeb, ListSelectionExample as ɵec, ExampleMaterialModule as ɵil, MenuIconsExample as ɵed, MenuOverviewExample as ɵee, NestedMenuExample as ɵef, PaginatorConfigurableExample as ɵeg, PaginatorOverviewExample as ɵeh, ProgressBarBufferExample as ɵei, ProgressBarConfigurableExample as ɵej, ProgressBarDeterminateExample as ɵek, ProgressBarIndeterminateExample as ɵel, ProgressBarQueryExample as ɵem, ProgressSpinnerConfigurableExample as ɵen, ProgressSpinnerOverviewExample as ɵeo, RadioNgModelExample as ɵep, RadioOverviewExample as ɵeq, RippleOverviewExample as ɵer, SelectCustomTriggerExample as ɵes, SelectDisabledExample as ɵet, SelectErrorStateMatcherExample as ɵeu, SelectFormExample as ɵev, SelectHintErrorExample as ɵew, SelectMultipleExample as ɵex, SelectNoRippleExample as ɵey, SelectOptgroupExample as ɵez, SelectOverviewExample as ɵfa, SelectPanelClassExample as ɵfb, SelectResetExample as ɵfc, SelectValueBindingExample as ɵfd, SidenavAutosizeExample as ɵfe, SidenavBackdropExample as ɵff, SidenavDisableCloseExample as ɵfg, SidenavDrawerOverviewExample as ɵfh, SidenavFixedExample as ɵfi, SidenavModeExample as ɵfj, SidenavOpenCloseExample as ɵfk, SidenavOverviewExample as ɵfl, SidenavPositionExample as ɵfm, SidenavResponsiveExample as ɵfn, SlideToggleConfigurableExample as ɵfo, SlideToggleFormsExample as ɵfp, SlideToggleOverviewExample as ɵfq, SliderConfigurableExample as ɵfr, SliderFormattingExample as ɵfs, SliderOverviewExample as ɵft, PizzaPartyComponent as ɵfv, SnackBarComponentExample as ɵfu, SnackBarOverviewExample as ɵfw, SnackBarPositionExample as ɵfx, SortOverviewExample as ɵfy, StepperEditableExample as ɵfz, StepperErrorsExample as ɵga, StepperLabelPositionBottomExample as ɵgb, StepperOptionalExample as ɵgc, StepperStatesExample as ɵgd, StepperVerticalExample as ɵge, TabGroupAlignExample as ɵgf, TabGroupAnimationsExample as ɵgg, TabGroupAsyncExample as ɵgh, TabGroupBasicExample as ɵgi, TabGroupCustomLabelExample as ɵgj, TabGroupDynamicHeightExample as ɵgk, TabGroupDynamicExample as ɵgl, TabGroupHeaderBelowExample as ɵgm, TabGroupLazyLoadedExample as ɵgn, TabGroupStretchedExample as ɵgo, TabGroupThemeExample as ɵgp, TabNavBarBasicExample as ɵgq, TableBasicFlexExample as ɵgr, TableBasicExample as ɵgs, TableDynamicColumnsExample as ɵgt, TableExpandableRowsExample as ɵgu, TableFilteringExample as ɵgv, TableFooterRowExample as ɵgw, TableHttpExample as ɵgx, TableMultipleHeaderFooterExample as ɵgy, TableOverviewExample as ɵgz, TablePaginationExample as ɵha, TableRowContextExample as ɵhb, TableSelectionExample as ɵhc, SimpleColumn as ɵhe, TableSimpleColumnExample as ɵhd, TableSortingExample as ɵhf, TableStickyColumnsExample as ɵhg, TableStickyComplexFlexExample as ɵhh, TableStickyComplexExample as ɵhi, TableStickyFooterExample as ɵhj, TableStickyHeaderExample as ɵhk, TableWrappedExample as ɵhl, WrapperTable as ɵhm, TextFieldAutofillDirectiveExample as ɵhn, TextFieldAutofillMonitorExample as ɵho, TextFieldAutosizeTextareaExample as ɵhp, ToolbarOverviewExample as ɵhq, TooltipAutoHideExample as ɵhr, TooltipCustomClassExample as ɵhs, TooltipDelayExample as ɵht, TooltipDisabledExample as ɵhu, TooltipManualExample as ɵhv, TooltipMessageExample as ɵhw, TooltipModifiedDefaultsExample as ɵhy, myCustomTooltipDefaults as ɵhx, TooltipOverviewExample as ɵhz, TooltipPositionExample as ɵia, ChecklistDatabase as ɵib, TreeChecklistExample as ɵic, DynamicDatabase as ɵid, TreeDynamicExample as ɵie, FileDatabase$2 as ɵif, TreeFlatOverviewExample as ɵig, LoadmoreDatabase as ɵih, TreeLoadmoreExample as ɵii, FileDatabase$3 as ɵij, TreeNestedOverviewExample as ɵik };
 //# sourceMappingURL=material-examples.js.map
