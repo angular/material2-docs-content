@@ -9492,7 +9492,6 @@ class ExampleData {
         const exampleConfig = EXAMPLE_COMPONENTS[example];
         // TODO(tinayuangao): Do not hard-code extensions
         this.exampleFiles = ['html', 'ts', 'css'].map(extension => `${example}-example.${extension}`);
-        this.examplePath = `/assets/stackblitz/examples/${example}/`;
         this.selectorName = this.indexFilename = `${example}-example`;
         if (exampleConfig.additionalFiles) {
             this.exampleFiles.push(...exampleConfig.additionalFiles);
