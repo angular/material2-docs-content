@@ -5939,7 +5939,7 @@ var TabGroupAnimationsExample = /** @class */ (function () {
  */
 var TabGroupAsyncExample = /** @class */ (function () {
     function TabGroupAsyncExample() {
-        this.asyncTabs = Observable.create(function (observer) {
+        this.asyncTabs = new Observable(function (observer) {
             setTimeout(function () {
                 observer.next([
                     { label: 'First', content: 'Content 1' },

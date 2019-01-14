@@ -5945,7 +5945,7 @@ var TabGroupAnimationsExample = /** @class */ (function () {
  */
 var TabGroupAsyncExample = /** @class */ (function () {
     function TabGroupAsyncExample() {
-        this.asyncTabs = rxjs.Observable.create(function (observer) {
+        this.asyncTabs = new rxjs.Observable(function (observer) {
             setTimeout(function () {
                 observer.next([
                     { label: 'First', content: 'Content 1' },

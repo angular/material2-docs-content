@@ -5360,7 +5360,7 @@ TabGroupAnimationsExample.decorators = [
  */
 class TabGroupAsyncExample {
     constructor() {
-        this.asyncTabs = Observable.create((observer) => {
+        this.asyncTabs = new Observable((observer) => {
             setTimeout(() => {
                 observer.next([
                     { label: 'First', content: 'Content 1' },

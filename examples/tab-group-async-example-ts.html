@@ -18,7 +18,7 @@
   asyncTabs: Observable&lt;ExampleTab[]&gt;;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-keyword">this</span>.asyncTabs = Observable.create(<span class="hljs-function">(<span class="hljs-params">observer: Observer&lt;ExampleTab[]&gt;</span>) =&gt;</span> {
+    <span class="hljs-keyword">this</span>.asyncTabs = <span class="hljs-keyword">new</span> Observable(<span class="hljs-function">(<span class="hljs-params">observer: Observer&lt;ExampleTab[]&gt;</span>) =&gt;</span> {
       setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
         observer.next([
           {label: <span class="hljs-string">'First'</span>, content: <span class="hljs-string">'Content 1'</span>},
