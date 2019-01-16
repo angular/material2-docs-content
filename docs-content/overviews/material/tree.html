@@ -1,0 +1,98 @@
+<div class="docs-markdown"><p>The <code>mat-tree</code> provides a Material Design styled tree that can be used to display hierarchy
+data.</p>
+<p>This tree builds on the foundation of the CDK tree and uses a similar interface for its
+data source input and template, except that its element and attribute selectors will be prefixed
+with <code>mat-</code> instead of <code>cdk-</code>.</p>
+<p>There are two types of trees: Flat tree and nested tree. The DOM structures are different for these
+two types of trees.</p>
+
+        <h4 id="flat-tree" class="docs-header-link">
+          <span header-link="flat-tree"></span>
+          Flat tree
+        </h4>
+      <p>In a flat tree, the hierarchy is flattened; nodes are not rendered inside of each other,
+but instead are rendered as siblings in sequence. An instance of <code>TreeFlattener</code> is
+used to generate the flat list of items from hierarchical data. The &quot;level&quot; of each tree
+node is read through the <code>getLevel</code> method of the <code>TreeControl</code>; this level can be
+used to style the node such that it is indented to the appropriate level.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-tree</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span>&gt;</span> parent node <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span>&gt;</span> -- child node1 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-tree-node</span>&gt;</span> -- child node2 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree-node</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree</span>&gt;</span></code></pre>
+<div material-docs-example="tree-flat-overview"></div>
+
+<p>Flat trees are generally easier to style and inspect. They are also more friendly to
+scrolling variations, such as infinite or virtual scrolling</p>
+<!--TODO(tinayuangao): Add a flat tree example here -->
+
+
+        <h4 id="nested-tree" class="docs-header-link">
+          <span header-link="nested-tree"></span>
+          Nested tree
+        </h4>
+      <p>In Nested tree, children nodes are placed inside their parent node in DOM. The parent node has an
+outlet to keep all the children nodes.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-tree</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mat-nested-tree-node</span>&gt;</span>
+     parent node
+     <span class="hljs-tag">&lt;<span class="hljs-name">mat-nested-tree-node</span>&gt;</span> -- child node1 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-nested-tree-node</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-name">mat-nested-tree-node</span>&gt;</span> -- child node2 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-nested-tree-node</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-nested-tree-node</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-tree</span>&gt;</span></code></pre>
+<div material-docs-example="tree-nested-overview"></div>
+
+<p>Nested trees are easier to work with when hierarchical relationships are visually
+represented in ways that would be difficult to accomplish with flat nodes.</p>
+<!--TODO(tinayuangao): Add a nested tree example here -->
+
+
+        <h3 id="features" class="docs-header-link">
+          <span header-link="features"></span>
+          Features
+        </h3>
+      <p>The <code>&lt;mat-tree&gt;</code> itself only deals with the rendering of a tree structure.
+Additional features can be built on top of the tree by adding behavior inside node templates
+(e.g., padding and toggle). Interactions that affect the
+rendered data (such as expand/collapse) should be propagated through the table&#39;s data source.</p>
+
+        <h3 id="treecontrol" class="docs-header-link">
+          <span header-link="treecontrol"></span>
+          TreeControl
+        </h3>
+      <p>The <code>TreeControl</code> controls the expand/collapse state of tree nodes. Users can expand/collapse a tree
+node recursively through tree control. For nested tree node, <code>getChildren</code> function need to pass to
+the <code>NestedTreeControl</code> to make it work recursively. The <code>getChildren</code> function may return an 
+observable of children for a given node, or an array of children. 
+For flattened tree node, <code>getLevel</code> and <code>isExpandable</code> functions need to pass to the 
+<code>FlatTreeControl</code> to make it work recursively.</p>
+
+        <h3 id="toggle" class="docs-header-link">
+          <span header-link="toggle"></span>
+          Toggle
+        </h3>
+      <p>A <code>matTreeNodeToggle</code> can be added in the tree node template to expand/collapse the tree node. The
+toggle toggles the expand/collapse functions in <code>TreeControl</code> and is able to expand/collapse a
+tree node recursively by setting <code>[matTreeNodeToggleRecursive]</code> to <code>true</code>.</p>
+<p>The toggle can be placed anywhere in the tree node, and is only toggled by <code>click</code> action.</p>
+
+        <h3 id="padding-flat-tree-only-" class="docs-header-link">
+          <span header-link="padding-flat-tree-only-"></span>
+          Padding (Flat tree only)
+        </h3>
+      <p>The <code>matTreeNodePadding</code> can be placed in a flat tree&#39;s node template to display the <code>level</code>
+information of a flat tree node.</p>
+<p>Nested tree does not need this padding since padding can be easily added to the hierarchy
+structure in DOM.</p>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p>Trees without text or labels should be given a meaningful label via <code>aria-label</code> or
+<code>aria-labelledby</code>. The <code>aria-readonly</code> defaults to <code>true</code> if it&#39;s not set.</p>
+<p>Tree&#39;s role is <code>tree</code>.
+Parent nodes are given <code>role=&quot;group&quot;</code>, while leaf nodes are given <code>role=&quot;treeitem&quot;</code></p>
+<p><code>mat-tree</code> does not manage any focus/keyboard interaction on its own. Users can add desired
+focus/keyboard interactions in their application.</p>
+</div>

@@ -1,0 +1,13 @@
+<div class="docs-markdown"><p>The <code>observers</code> package provides convenience directives built on top of native web platform
+observers, such as MutationObserver.</p>
+
+        <h3 id="cdkobservecontent" class="docs-header-link">
+          <span header-link="cdkobservecontent"></span>
+          cdkObserveContent
+        </h3>
+      <p>A directive for observing when the content of the host element changes. An event is emitted when a
+mutation to the content is observed.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"projected-content-wrapper"</span> (<span class="hljs-attr">cdkObserveContent</span>)=<span class="hljs-string">"projectContentChanged()"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-content</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div>

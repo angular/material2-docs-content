@@ -1,0 +1,40 @@
+<div class="docs-markdown"><p>The <code>text-field</code> package provides useful utilities for working with text input fields such as
+<code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code>.</p>
+<h2>Automatically resizing a <code>&lt;textarea&gt;</code></h2><p>The <code>cdkTextareaAutosize</code> directive can be applied to any <code>&lt;textarea&gt;</code> to make it automatically
+resize to fit its content. The minimum and maximum number of rows to expand to can be set via the
+<code>cdkAutosizeMinRows</code> and <code>cdkAutosizeMaxRows</code> properties respectively.</p>
+<p>The resize logic can be triggered programmatically by calling <code>resizeToFitContent</code>. This method
+takes an optional boolean parameter <code>force</code> that defaults to <code>false</code>. Passing true will force the
+<code>&lt;textarea&gt;</code> to resize even if its text content has not changed, this can be useful if the styles
+affecting the <code>&lt;textarea&gt;</code> have changed.</p>
+<div material-docs-example="text-field-autosize-textarea"></div>
+
+<h2>Monitoring the autofill state of an <code>&lt;input&gt;</code></h2><p>The <code>AutofillMonitor</code> is an injectable service that allows the user to monitor the autofill state of
+an <code>&lt;input&gt;</code>. It has a <code>monitor</code> method that takes an element to monitor and returns an
+<code>Observable</code> of autofill event objects with a <code>target</code> and <code>isAutofilled</code> property. The observable
+emits every time the autofill state of the given <code>&lt;input&gt;</code> changes. Any element you monitor should
+eventually be unmonitored by calling <code>stopMonitoring</code> with the same element.</p>
+<div material-docs-example="text-field-autofill-monitor"></div>
+
+<p>To simplify this process, there is also a <code>cdkAutofill</code> directive that automatically handles
+monitoring and unmonitoring and doubles as an <code>@Output</code> binding that emits when the autofill state
+changes.</p>
+<div material-docs-example="text-field-autofill-directive"></div>
+
+<p>Note: This service requires some CSS to install animation hooks when the autofill statechanges. If
+you are using Angular Material, this CSS is included as part of the <code>mat-core</code> mixin. If you are not
+using Angular Material, you should include this CSS with the <code>cdk-text-field</code> mixin.</p>
+<pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/cdk/text-field/text-field'</span>; 
+
+@<span class="hljs-keyword">include</span> cdk-text-field();</code></pre>
+<h2>Styling the autofill state of an <code>&lt;input&gt;</code></h2><p>It can be difficult to override the browser default <code>background</code> and <code>color</code> properties on an
+autofilled <code>&lt;input&gt;</code>. To make this simpler, the CDK includes a mixin <code>cdk-text-field-autofill-color</code>
+which can be used to set these properties. It takes a <code>background</code> value as the first parameter and
+an optional <code>color</code> value as the second parameter.</p>
+<pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~@angular/cdk/text-field/text-field'</span>; 
+
+<span class="hljs-comment">// Set custom-autofill inputs to have no background and red text.</span>
+<span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.custom-autofill</span> {
+  @<span class="hljs-keyword">include</span> cdk-text-field-autofill-color(transparent, red);
+}</code></pre>
+</div>
