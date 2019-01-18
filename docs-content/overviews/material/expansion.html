@@ -1,0 +1,125 @@
+<div class="docs-markdown"><p><code>&lt;mat-expansion-panel&gt;</code> provides an expandable details-summary view.</p>
+<div material-docs-example="expansion-overview"></div>
+
+
+        <h3 id="expansion-panel-content" class="docs-header-link">
+          <span header-link="expansion-panel-content"></span>
+          Expansion-panel content
+        </h3>
+      <p>Each expansion-panel must include a header and may optionally include an action bar.</p>
+
+        <h4 id="header" class="docs-header-link">
+          <span header-link="header"></span>
+          Header
+        </h4>
+      <p>The <code>&lt;mat-expansion-panel-header&gt;</code> shows a summary of the panel content and acts
+as the control for expanding and collapsing. This header may optionally contain an
+<code>&lt;mat-panel-title&gt;</code> and an <code>&lt;mat-panel-description&gt;</code>, which format the content of the
+header to align with Material Design specifications.</p>
+<p>By default, the expansion-panel header includes a toggle icon at the end of the
+header to indicate the expansion state. This icon can be hidden via the
+<code>hideToggle</code> property.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-title</span>&gt;</span>
+      This is the expansion title
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-description</span>&gt;</span>
+      This is a summary of the content
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-description</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is the primary content of the panel.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel</span>&gt;</span></code></pre>
+
+        <h4 id="action-bar" class="docs-header-link">
+          <span header-link="action-bar"></span>
+          Action bar
+        </h4>
+      <p>Actions may optionally be included at the bottom of the panel, visible only when the expansion
+is in its expanded state.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+    This is the expansion title
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is the primary content of the panel.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-action-row</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-action-row</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel</span>&gt;</span></code></pre>
+
+        <h4 id="disabling-a-panel" class="docs-header-link">
+          <span header-link="disabling-a-panel"></span>
+          Disabling a panel
+        </h4>
+      <p>Expansion panels can be disabled using the <code>disabled</code> attribute. A disabled expansion panel can&#39;t
+be toggled by the user, but can still be manipulated programmatically.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"isDisabled"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+    This is the expansion title
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-panel-description</span>&gt;</span>
+    This is a summary of the content
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-panel-description</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel</span>&gt;</span></code></pre>
+
+        <h3 id="accordion" class="docs-header-link">
+          <span header-link="accordion"></span>
+          Accordion
+        </h3>
+      <p>Multiple expansion-panels can be combined into an accordion. The <code>multi=&quot;true&quot;</code> input allows the
+expansions state to be set independently of each other. When <code>multi=&quot;false&quot;</code> (default) just one
+panel can be expanded at a given time:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-accordion</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+      This is the expansion 1 title
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+
+    This the expansion 1 content
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+      This is the expansion 2 title
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+
+    This the expansion 2 content
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-accordion</span>&gt;</span></code></pre>
+
+        <h3 id="lazy-rendering" class="docs-header-link">
+          <span header-link="lazy-rendering"></span>
+          Lazy rendering
+        </h3>
+      <p>By default, the expansion panel content will be initialized even when the panel is closed.
+To instead defer initialization until the panel is open, the content should be provided as
+an <code>ng-template</code>:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+    This is the expansion title
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel-header</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">matExpansionPanelContent</span>&gt;</span>
+    Some deferred content
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-expansion-panel</span>&gt;</span></code></pre>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p>The expansion-panel aims to mimic the experience of the native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.
+The expansion panel header has <code>role=&quot;button&quot;</code> and also the attribute <code>aria-controls</code> with the
+expansion panel&#39;s id as value.</p>
+<p>The expansion panel headers are buttons. Users can use the keyboard to activate the expansion panel
+header to switch between expanded state and collapsed state. Because the header acts as a button,
+additional interactive elements should not be put inside of the header.</p>
+</div>

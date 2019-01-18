@@ -1,0 +1,85 @@
+<div class="docs-markdown"><p>The <code>portals</code> package provides a flexible system for rendering dynamic content into an application.</p>
+
+        <h3 id="portals" class="docs-header-link">
+          <span header-link="portals"></span>
+          Portals
+        </h3>
+      <p>A <code>Portal</code> is a piece of UI that can be dynamically rendered to an open slot on the page.</p>
+<p>The &quot;piece of UI&quot; can be either a <code>Component</code> or a <code>TemplateRef</code> and the &quot;open slot&quot; is
+a <code>PortalOutlet</code>.</p>
+<p>Portals and PortalOutlets are low-level building blocks that other concepts, such as overlays, are
+built upon.</p>
+<div material-docs-example="cdk-portal-overview"></div>
+
+<h5><code>Portal&lt;T&gt;</code></h5><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>attach(PortalOutlet): T</code></td>
+<td>Attaches the portal to a host.</td>
+</tr>
+<tr>
+<td><code>detach(): void</code></td>
+<td>Detaches the portal from its host.</td>
+</tr>
+<tr>
+<td><code>isAttached: boolean</code></td>
+<td>Whether the portal is attached.</td>
+</tr>
+</tbody></table>
+<h5><code>PortalOutlet</code></h5><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>attach(Portal): any</code></td>
+<td>Attaches a portal to the host.</td>
+</tr>
+<tr>
+<td><code>detach(): any</code></td>
+<td>Detaches the portal from the host.</td>
+</tr>
+<tr>
+<td><code>dispose(): void</code></td>
+<td>Permanently dispose the host.</td>
+</tr>
+<tr>
+<td><code>hasAttached: boolean</code></td>
+<td>Whether a portal is attached to the host.</td>
+</tr>
+</tbody></table>
+
+        <h4 id="portals-in-practice" class="docs-header-link">
+          <span header-link="portals-in-practice"></span>
+          Portals in practice
+        </h4>
+      <h5><code>CdkPortal</code></h5><p>Used to get a portal from an <code>&lt;ng-template&gt;</code>. <code>CdkPortal</code> <em>is</em> a <code>Portal</code>.</p>
+<p>Usage:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">cdkPortal</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>The content of this template is captured by the portal.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- OR --&gt;</span>
+
+<span class="hljs-comment">&lt;!-- This result here is identical to the syntax above --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> *<span class="hljs-attr">cdkPortal</span>&gt;</span>
+  The content of this template is captured by the portal.
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+<p>A component can use <code>@ViewChild</code> or <code>@ViewChildren</code> to get a reference to a
+<code>CdkPortal</code>.</p>
+<h5><code>ComponentPortal</code></h5><p>Used to create a portal from a component type. When a component is dynamically created using
+portals, it must be included in the <code>entryComponents</code> of its <code>NgModule</code>.</p>
+<p>Usage:</p>
+<pre><code class="language-ts"><span class="hljs-keyword">this</span>.userSettingsPortal = <span class="hljs-keyword">new</span> ComponentPortal(UserSettingsComponent);</code></pre>
+<h5><code>CdkPortalOutlet</code></h5><p>Used to add a portal outlet to a template. <code>CdkPortalOutlet</code> <em>is</em> a <code>PortalOutlet</code>.</p>
+<p>Usage:</p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Attaches the `userSettingsPortal` from the previous example. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> [<span class="hljs-attr">cdkPortalOutlet</span>]=<span class="hljs-string">"userSettingsPortal"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre>
+</div>

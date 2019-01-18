@@ -1,0 +1,42 @@
+<div class="docs-markdown"><h1>Angular Material bi-directionality</h1>
+        <h3 id="setting-a-text-direction-for-your-application" class="docs-header-link">
+          <span header-link="setting-a-text-direction-for-your-application"></span>
+          Setting a text-direction for your application
+        </h3>
+      <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir"><code>dir</code> attribute</a>
+is typically applied to <code>&lt;html&gt;</code> or <code>&lt;body&gt;</code> element of a page. However, it can be used on any
+element, within your Angular app, to apply a text-direction to a smaller subset of the page.</p>
+<p>All Angular Material components automatically reflect the LTR/RTL direction
+of their container.</p>
+
+        <h3 id="reading-the-text-direction-in-your-own-components" class="docs-header-link">
+          <span header-link="reading-the-text-direction-in-your-own-components"></span>
+          Reading the text-direction in your own components
+        </h3>
+      <p><code>@angular/cdk/bidi</code> provides a <code>Directionality</code> injectable that can be used by any component
+in your application. To consume it, you must import <code>BidiModule</code> from <code>@angular/cdk/bidi</code>.</p>
+<p><code>Directionality</code> provides two useful properties:</p>
+<ul>
+<li><code>value</code>: the current text direction, either <code>&#39;ltr&#39;</code> or <code>&#39;rtl&#39;</code>.</li>
+<li><code>change</code>: an <code>Observable</code> that emits whenever the text-direction changes. Note that this only
+captures changes from <code>dir</code> attributes <em>inside the Angular application context</em>. It will not
+emit for changes to <code>dir</code> on <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code>, as they are assumed to be static.</li>
+</ul>
+
+        <h4 id="example" class="docs-header-link">
+          <span header-link="example"></span>
+          Example
+        </h4>
+      <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({ <span class="hljs-comment">/* ... */</span> })
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyCustomComponent {
+  <span class="hljs-keyword">private</span> dir: Direction;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">directionality: Directionality</span>) {
+    <span class="hljs-keyword">this</span>.dir = directionality.value;
+
+    directionality.change.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+       <span class="hljs-keyword">this</span>.dir = directionality.value;
+    });
+  }
+}</code></pre>
+</div>

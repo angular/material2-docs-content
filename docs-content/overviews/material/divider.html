@@ -1,0 +1,51 @@
+<div class="docs-markdown"><p><code>&lt;mat-divider&gt;</code> is a component that allows for Material styling of a line separator with various orientation options.</p>
+<div material-docs-example="divider-overview"></div>
+
+
+
+        <h3 id="simple-divider" class="docs-header-link">
+          <span header-link="simple-divider"></span>
+          Simple divider
+        </h3>
+      <p>A <code>&lt;mat-divider&gt;</code> element can be used on its own to create a horizontal or vertical line styled with a Material theme</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-divider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-divider</span>&gt;</span></code></pre>
+
+        <h3 id="inset-divider" class="docs-header-link">
+          <span header-link="inset-divider"></span>
+          Inset divider
+        </h3>
+      <p>Add the <code>inset</code> attribute in order to set whether or not the divider is an inset divider.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-divider</span> [<span class="hljs-attr">inset</span>]=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-divider</span>&gt;</span></code></pre>
+
+        <h3 id="vertical-divider" class="docs-header-link">
+          <span header-link="vertical-divider"></span>
+          Vertical divider
+        </h3>
+      <p>Add the <code>vertical</code> attribute in order to set whether or not the divider is vertically-oriented.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-divider</span> [<span class="hljs-attr">vertical</span>]=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-divider</span>&gt;</span></code></pre>
+
+        <h3 id="lists-with-inset-dividers" class="docs-header-link">
+          <span header-link="lists-with-inset-dividers"></span>
+          Lists with inset dividers
+        </h3>
+      <p>Dividers can be added to lists as a means of separating content into distinct sections.
+Inset dividers can also be added to provide the appearance of distinct elements in a list without cluttering content
+like avatar images or icons. Make sure to avoid adding an inset divider to the last element
+in a list, because it will overlap with the section divider.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-list</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mat-subheader</span>&gt;</span>Folders<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let folder of folders; last as last"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">mat-list-icon</span>&gt;</span>folder<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">mat-line</span>&gt;</span>{{folder.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mat-line</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> {{folder.updated}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-divider</span> [<span class="hljs-attr">inset</span>]=<span class="hljs-string">"true"</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"!last"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-divider</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mat-divider</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-divider</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">mat-subheader</span>&gt;</span>Notes<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-item</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let note of notes"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">mat-list-icon</span>&gt;</span>note<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">mat-line</span>&gt;</span>{{note.name}}<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">mat-line</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"demo-2"</span>&gt;</span> {{note.updated}} <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-item</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-list</span>&gt;</span></code></pre>
+</div>

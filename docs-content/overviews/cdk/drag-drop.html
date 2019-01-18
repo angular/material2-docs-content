@@ -1,0 +1,232 @@
+<div class="docs-markdown"><p>The <code>@angular/cdk/drag-drop</code> module provides you with a way to easily and declaratively create
+drag-and-drop interfaces, with support for free dragging, sorting within a list, transferring items
+between lists, animations, touch devices, custom drag handles, previews, and placeholders,
+in addition to horizontal lists and locking along an axis.</p>
+
+        <h3 id="getting-started" class="docs-header-link">
+          <span header-link="getting-started"></span>
+          Getting started
+        </h3>
+      <p>Start by importing <code>DragDropModule</code> into the <code>NgModule</code> where you want to use drag-and-drop
+features. You can now add the <code>cdkDrag</code> directive to elements to make them draggable. When
+outside of a <code>cdkDropList</code> element, draggable elements can be freely moved around the page.
+You can add <code>cdkDropList</code> elements to constrain where elements may be dropped.</p>
+<div material-docs-example="cdk-drag-drop-overview"></div>
+
+
+        <h3 id="reordering-lists" class="docs-header-link">
+          <span header-link="reordering-lists"></span>
+          Reordering lists
+        </h3>
+      <p>Adding <code>cdkDropList</code> around a set of <code>cdkDrag</code> elements groups the draggables into a
+reorderable collection. Items will automatically rearrange as an element moves. Note
+that this will <em>not</em> update your data model; you can listen to the <code>cdkDropListDropped</code> event to
+update the data model once the user finishes dragging.</p>
+<div material-docs-example="cdk-drag-drop-sorting"></div>
+
+
+        <h3 id="transferring-items-between-lists" class="docs-header-link">
+          <span header-link="transferring-items-between-lists"></span>
+          Transferring items between lists
+        </h3>
+      <p>The <code>cdkDropList</code> directive supports transferring dragged items between connected drop zones.
+You can connect one or more <code>cdkDropList</code> instances together by setting the <code>cdkDropListConnectedTo</code>
+property or by wrapping the elements in an element with the <code>cdkDropListGroup</code> attribute.</p>
+<div material-docs-example="cdk-drag-drop-connected-sorting"></div>
+
+<p>Note that <code>cdkDropListConnectedTo</code> works both with a direct reference to another <code>cdkDropList</code>, or
+by referencing the <code>id</code> of another drop container:</p>
+<pre><code class="language-html"><span class="hljs-comment">&lt;!-- This is valid --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> #<span class="hljs-attr">listOne</span>=<span class="hljs-string">"cdkDropList"</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">"[listTwo]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> #<span class="hljs-attr">listTwo</span>=<span class="hljs-string">"cdkDropList"</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">"[listOne]"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- This is valid as well --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"list-one"</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">"['list-two']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"list-two"</span> [<span class="hljs-attr">cdkDropListConnectedTo</span>]=<span class="hljs-string">"['list-one']"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+<p>If you have an unknown number of connected drop lists, you can use the <code>cdkDropListGroup</code> directive
+to set up the connection automatically. Note that any new <code>cdkDropList</code> that is added under a group
+will be connected to all other lists automatically.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropListGroup</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- All lists in here will be connected. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let list of lists"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+<div material-docs-example="cdk-drag-drop-connected-sorting-group"></div>
+
+
+        <h3 id="attaching-data" class="docs-header-link">
+          <span header-link="attaching-data"></span>
+          Attaching data
+        </h3>
+      <p>You can associate some arbitrary data with both <code>cdkDrag</code> and <code>cdkDropList</code> by setting <code>cdkDragData</code>
+or <code>cdkDropListData</code>, respectively. Events fired from both directives include this data, allowing
+you to easily identify the origin of the drag or drop interaction.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDropList</span> [<span class="hljs-attr">cdkDropListData</span>]=<span class="hljs-string">"list"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let list of lists"</span> (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">"drop($event)"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">cdkDrag</span> [<span class="hljs-attr">cdkDragData</span>]=<span class="hljs-string">"item"</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let item of list"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+
+        <h3 id="styling" class="docs-header-link">
+          <span header-link="styling"></span>
+          Styling
+        </h3>
+      <p>The <code>cdkDrag</code> and <code>cdkDropList</code> directive include only those styles strictly necessary for
+functionality. The application can then customize the elements by styling CSS classes added
+by the directives:</p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.cdk-drop-list</code></td>
+<td>Corresponds to the <code>cdkDropList</code> container.</td>
+</tr>
+<tr>
+<td><code>.cdk-drag</code></td>
+<td>Corresponds to a <code>cdkDrag</code> instance.</td>
+</tr>
+<tr>
+<td><code>.cdk-drag-preview</code></td>
+<td>This is the element that will be rendered next to the user&#39;s cursor as they&#39;re dragging an item in a sortable list. By default the element looks exactly like the element that is being dragged.</td>
+</tr>
+<tr>
+<td><code>.cdk-drag-placeholder</code></td>
+<td>This is element that will be shown instead of the real element as it&#39;s being dragged inside a <code>cdkDropList</code>. By default this will look exactly like the element that is being sorted.</td>
+</tr>
+<tr>
+<td><code>.cdk-drop-list-dragging</code></td>
+<td>A class that is added to <code>cdkDropList</code> while the user is dragging an item.</td>
+</tr>
+<tr>
+<td><code>.cdk-drop-list-receiving</code></td>
+<td>A class that is added to <code>cdkDropList</code> when it can receive an item that is being dragged inside a connected drop list.</td>
+</tr>
+</tbody></table>
+
+        <h3 id="animations" class="docs-header-link">
+          <span header-link="animations"></span>
+          Animations
+        </h3>
+      <p>The drag-and-drop module supports animations both while sorting an element inside a list, as well as
+animating it from the position that the user dropped it to its final place in the list. To set up
+your animations, you have to define a <code>transition</code> that targets the <code>transform</code> property. The
+following classes can be used for animations:</p>
+<ul>
+<li><code>.cdk-drag</code> - If you add a <code>transition</code> to this class, it&#39;ll animate as the user is sorting
+  through a list.</li>
+<li><code>.cdk-drag-animating</code> - This class is added to a <code>cdkDrag</code> when the user has stopped dragging.
+  If you add a <code>transition</code> to it, the CDK will animate the element from its drop position to
+  the final position inside the <code>cdkDropList</code> container.</li>
+</ul>
+<p>Example animations:</p>
+<pre><code class="language-css"><span class="hljs-comment">/* Animate items as they're being sorted. */</span>
+<span class="hljs-selector-class">.cdk-drop-list-dragging</span> <span class="hljs-selector-class">.cdk-drag</span> {
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">250ms</span> <span class="hljs-built_in">cubic-bezier</span>(0, 0, 0.2, 1);
+}
+
+<span class="hljs-comment">/* Animate an item that has been dropped. */</span>
+<span class="hljs-selector-class">.cdk-drag-animating</span> {
+  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">300ms</span> <span class="hljs-built_in">cubic-bezier</span>(0, 0, 0.2, 1);
+}</code></pre>
+
+        <h3 id="customizing-the-drag-area-using-a-handle" class="docs-header-link">
+          <span header-link="customizing-the-drag-area-using-a-handle"></span>
+          Customizing the drag area using a handle
+        </h3>
+      <p>By default, the user can drag the entire <code>cdkDrag</code> element to move it around. If you want to
+restrict the user to only be able to do so using a handle element, you can do it by adding the
+<code>cdkDragHandle</code> directive to an element inside of <code>cdkDrag</code>. Note that you can have as many
+<code>cdkDragHandle</code> elements as you want:</p>
+<div material-docs-example="cdk-drag-drop-handle"></div>
+
+
+        <h3 id="customizing-the-drag-preview" class="docs-header-link">
+          <span header-link="customizing-the-drag-preview"></span>
+          Customizing the drag preview
+        </h3>
+      <p>When a <code>cdkDrag</code> element is picked up, it will create a preview element visible while dragging.
+By default, this will be a clone of the original element positioned next to the user&#39;s cursor.
+This preview can be customized, though, by providing a custom template via <code>*cdkDragPreview</code>.
+Note that the cloned element will remove its <code>id</code> attribute in order to avoid having multiple
+elements with the same <code>id</code> on the page. This will cause any CSS that targets that <code>id</code> not
+to be applied.</p>
+<div material-docs-example="cdk-drag-drop-custom-preview"></div>
+
+
+        <h3 id="customizing-the-drag-placeholder" class="docs-header-link">
+          <span header-link="customizing-the-drag-placeholder"></span>
+          Customizing the drag placeholder
+        </h3>
+      <p>While a <code>cdkDrag</code> element is being dragged, the CDK will create a placeholder element that will
+show where it will be placed when it&#39;s dropped. By default the placeholder is a clone of the element
+that is being dragged, however you can replace it with a custom one using the <code>*cdkDragPlaceholder</code>
+directive:</p>
+<div material-docs-example="cdk-drag-drop-custom-placeholder"></div>
+
+
+        <h3 id="list-orientation" class="docs-header-link">
+          <span header-link="list-orientation"></span>
+          List orientation
+        </h3>
+      <p>The <code>cdkDropList</code> directive assumes that lists are vertical by default. This can be
+changed by setting the <code>orientation</code> property to `&quot;horizontal&quot;.</p>
+<div material-docs-example="cdk-drag-drop-horizontal-sorting"></div>
+
+
+        <h3 id="restricting-movement-within-an-element" class="docs-header-link">
+          <span header-link="restricting-movement-within-an-element"></span>
+          Restricting movement within an element
+        </h3>
+      <p>If you want to stop the user from being able to drag a <code>cdkDrag</code> element outside of another element,
+you can pass a CSS selector to the <code>cdkDragBoundary</code> attribute. The attribute works by accepting a
+selector and looking up the DOM until it finds an element that matches it. If a match is found,
+it&#39;ll be used as the boundary outside of which the element can&#39;t be dragged. <code>cdkDragBoundary</code> can
+also be used when <code>cdkDrag</code> is placed inside a <code>cdkDropList</code>.</p>
+<div material-docs-example="cdk-drag-drop-boundary"></div>
+
+
+        <h3 id="restricting-movement-along-an-axis" class="docs-header-link">
+          <span header-link="restricting-movement-along-an-axis"></span>
+          Restricting movement along an axis
+        </h3>
+      <p>By default, <code>cdkDrag</code> allows free movement in all directions. To restrict dragging to a
+specific axis, you can set <code>cdkDragLockAxis</code> on <code>cdkDrag</code> or <code>cdkDropListLockAxis</code> on <code>cdkDropList</code>
+to either <code>&quot;x&quot;</code> or <code>&quot;y&quot;</code>.</p>
+<div material-docs-example="cdk-drag-drop-axis-lock"></div>
+
+
+        <h3 id="alternate-drag-root-element" class="docs-header-link">
+          <span header-link="alternate-drag-root-element"></span>
+          Alternate drag root element
+        </h3>
+      <p>If there&#39;s an element that you want to make draggable, but you don&#39;t have direct access to it, you
+can use the <code>cdkDragRootElement</code> attribute. The attribute works by accepting a selector and looking
+up the DOM until it finds an element that matches the selector. If an element is found, it&#39;ll become
+the element that is moved as the user is dragging. This is useful for cases like making a dialog
+draggable.</p>
+<div material-docs-example="cdk-drag-drop-root-element"></div>
+
+
+        <h3 id="controlling-which-items-can-be-moved-into-a-container" class="docs-header-link">
+          <span header-link="controlling-which-items-can-be-moved-into-a-container"></span>
+          Controlling which items can be moved into a container
+        </h3>
+      <p>By default, all <code>cdkDrag</code> items from one container can be moved into another connected container.
+If you want more fine-grained control over which items can be dropped, you can use the
+<code>cdkDropListEnterPredicate</code> which will be called whenever an item is about to enter a
+new container. Depending on whether the predicate returns <code>true</code> or <code>false</code>, the item may or may not
+be allowed into the new container.</p>
+<div material-docs-example="cdk-drag-drop-enter-predicate"></div>
+
+
+        <h3 id="disable-dragging" class="docs-header-link">
+          <span header-link="disable-dragging"></span>
+          Disable dragging
+        </h3>
+      <p>If you want to disable dragging for a particular drag item, you can do so by setting the
+<code>cdkDragDisabled</code> input on a <code>cdkDrag</code> item. Furthermore, you can disable an entire list
+using the <code>cdkDropListDisabled</code> input on a <code>cdkDropList</code> or a particular handle via
+<code>cdkDragHandleDisabled</code> on <code>cdkDragHandle</code>.</p>
+<div material-docs-example="cdk-drag-drop-disabled"></div>
+</div>

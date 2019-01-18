@@ -1,0 +1,73 @@
+<div class="docs-markdown"><p>Angular Material buttons are native <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> elements enhanced with Material Design
+styling and ink ripples.</p>
+<div material-docs-example="button-overview"></div>
+
+<p>Native <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements are always used in order to provide the most straightforward
+and accessible experience for users. A <code>&lt;button&gt;</code> element should be used whenever some <em>action</em>
+is performed. An <code>&lt;a&gt;</code> element should be used whenever the user will <em>navigate</em> to another view.</p>
+<p>There are several button variants, each applied as an attribute:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>mat-button</code></td>
+<td>Rectangular text button w/ no elevation</td>
+</tr>
+<tr>
+<td><code>mat-raised-button</code></td>
+<td>Rectangular contained button w/ elevation</td>
+</tr>
+<tr>
+<td><code>mat-flat-button</code></td>
+<td>Rectangular contained button w/ no elevation</td>
+</tr>
+<tr>
+<td><code>mat-stroked-button</code></td>
+<td>Rectangular outlined button w/ no elevation</td>
+</tr>
+<tr>
+<td><code>mat-icon-button</code></td>
+<td>Circular button with a transparent background, meant to contain an icon</td>
+</tr>
+<tr>
+<td><code>mat-fab</code></td>
+<td>Circular button w/ elevation, defaults to theme&#39;s accent color</td>
+</tr>
+<tr>
+<td><code>mat-mini-fab</code></td>
+<td>Same as <code>mat-fab</code> but smaller</td>
+</tr>
+</tbody></table>
+
+        <h3 id="theming" class="docs-header-link">
+          <span header-link="theming"></span>
+          Theming
+        </h3>
+      <p>Buttons can be colored in terms of the current theme using the <code>color</code> property to set the
+background color to <code>primary</code>, <code>accent</code>, or <code>warn</code>.</p>
+
+        <h3 id="capitalization" class="docs-header-link">
+          <span header-link="capitalization"></span>
+          Capitalization
+        </h3>
+      <p>According to the Material design spec button text has to be capitalized, however we have opted not
+to capitalize buttons automatically via <code>text-transform: uppercase</code>, because it can cause issues in
+certain locales. It is also worth noting that using ALL CAPS in the text itself causes issues for
+screen-readers, which will read the text character-by-character. We leave the decision of how to
+approach this to the consuming app.</p>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p>Angular Material uses native <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements to ensure an accessible experience by
+default. The <code>&lt;button&gt;</code> element should be used for any interaction that <em>performs an action on the
+current page</em>. The <code>&lt;a&gt;</code> element should be used for any interaction that <em>navigates to another
+view</em>.</p>
+<p>Buttons or links containing only icons (such as <code>mat-fab</code>, <code>mat-mini-fab</code>, and <code>mat-icon-button</code>)
+should be given a meaningful label via <code>aria-label</code> or <code>aria-labelledby</code>.</p>
+</div>

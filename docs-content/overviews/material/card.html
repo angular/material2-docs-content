@@ -1,0 +1,122 @@
+<div class="docs-markdown"><p><code>&lt;mat-card&gt;</code> is a content container for text, photos, and actions in the context of a single subject.</p>
+<div material-docs-example="card-overview"></div>
+
+
+
+        <h3 id="basic-card-sections" class="docs-header-link">
+          <span header-link="basic-card-sections"></span>
+          Basic card sections
+        </h3>
+      <p>The most basic card needs only an <code>&lt;mat-card&gt;</code> element with some content. However, Angular Material
+provides a number of preset sections that you can use inside of an <code>&lt;mat-card&gt;</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;mat-card-title&gt;</code></td>
+<td>Card title</td>
+</tr>
+<tr>
+<td><code>&lt;mat-card-subtitle&gt;</code></td>
+<td>Card subtitle</td>
+</tr>
+<tr>
+<td><code>&lt;mat-card-content&gt;</code></td>
+<td>Primary card content. Intended for blocks of text</td>
+</tr>
+<tr>
+<td><code>&lt;img mat-card-image&gt;</code></td>
+<td>Card image. Stretches the image to the container width</td>
+</tr>
+<tr>
+<td><code>&lt;mat-card-actions&gt;</code></td>
+<td>Container for buttons at the bottom of the card</td>
+</tr>
+<tr>
+<td><code>&lt;mat-card-footer&gt;</code></td>
+<td>Section anchored to the bottom of the card</td>
+</tr>
+</tbody></table>
+<p>These elements primary serve as pre-styled content containers without any additional APIs. 
+However, the <code>align</code> property on <code>&lt;mat-card-actions&gt;</code> can be used to position the actions at the 
+<code>&#39;start&#39;</code> or <code>&#39;end&#39;</code> of the container.  </p>
+
+        <h3 id="card-headers" class="docs-header-link">
+          <span header-link="card-headers"></span>
+          Card headers
+        </h3>
+      <p>In addition to the aforementioned sections, <code>&lt;mat-card-header&gt;</code> gives the ability to add a rich
+header to a card. This header can contain:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;mat-card-title&gt;</code></td>
+<td>A title within the header</td>
+</tr>
+<tr>
+<td><code>&lt;mat-card-subtitle&gt;</code></td>
+<td>A subtitle within the header</td>
+</tr>
+<tr>
+<td><code>&lt;img mat-card-avatar&gt;</code></td>
+<td>An image used as an avatar within the header</td>
+</tr>
+</tbody></table>
+
+        <h3 id="title-groups" class="docs-header-link">
+          <span header-link="title-groups"></span>
+          Title groups
+        </h3>
+      <p><code>&lt;mat-card-title-group&gt;</code> can be used to combine a title, subtitle, and image into a single section.
+This element can contain:</p>
+<ul>
+<li><code>&lt;mat-card-title&gt;</code></li>
+<li><code>&lt;mat-card-subtitle&gt;</code></li>
+<li>One of:<ul>
+<li><code>&lt;img mat-card-sm-image&gt;</code></li>
+<li><code>&lt;img mat-card-md-image&gt;</code></li>
+<li><code>&lt;img mat-card-lg-image&gt;</code></li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="accessibility" class="docs-header-link">
+          <span header-link="accessibility"></span>
+          Accessibility
+        </h3>
+      <p>Cards can be used in a wide variety of scenarios and can contain many different types of content.
+Due to this dynamic nature, the appropriate accessibility treatment depends on how <code>&lt;mat-card&gt;</code> is
+used.</p>
+
+        <h4 id="group-region-and-landmarks" class="docs-header-link">
+          <span header-link="group-region-and-landmarks"></span>
+          Group, region, and landmarks
+        </h4>
+      <p>There are several ARIA roles that communicate that a portion of the UI represents some semantically
+meaningful whole. Depending on what the content of the card means to your application,
+<a href="https://www.w3.org/TR/wai-aria/#group"><code>role=&quot;group&quot;</code></a>, <a href="https://www.w3.org/TR/wai-aria/#region"><code>role=&quot;region&quot;</code></a>, or <a href="https://www.w3.org/TR/wai-aria/#landmark">one of the landmark roles</a> should typically be
+applied to the <code>&lt;mat-card&gt;</code> element.</p>
+<p>A role is not necessary when the card is used as a purely decorative container that does not
+convey a meaningful grouping of related content for a single subject. In these cases, the content
+of the card should follow standard practices for document content.</p>
+
+        <h4 id="focus" class="docs-header-link">
+          <span header-link="focus"></span>
+          Focus
+        </h4>
+      <p>Depending on how cards are used, it may be appropriate to apply a <code>tabindex</code> to the <code>&lt;mat-card&gt;</code>
+element. If cards are a primary mechanism through which user interact with the application,
+<code>tabindex=&quot;0&quot;</code> is appropriate. If attention can be sent to the card, but it&#39;s not part of the
+document flow, <code>tabindex=&quot;-1&quot;</code> is appropriate.</p>
+<p>If the card acts as a purely decorative container, it does not need to be tabbable. In this case,
+the card content should follow normal best practices for tab order.</p>
+</div>

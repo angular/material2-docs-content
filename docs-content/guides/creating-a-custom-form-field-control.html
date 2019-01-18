@@ -1,0 +1,361 @@
+<div class="docs-markdown"><h1>Creating a custom form field control</h1><p>It is possible to create custom form field controls that can be used inside <code>&lt;mat-form-field&gt;</code>. This
+can be useful if you need to create a component that shares a lot of common behavior with a form
+field, but adds some additional logic.</p>
+<p>For example in this guide we&#39;ll learn how to create a custom input for inputting US telephone
+numbers and hook it up to work with <code>&lt;mat-form-field&gt;</code>. Here is what we&#39;ll build by the end of this
+guide:</p>
+<div material-docs-example="form-field-custom-control"></div>
+
+<p>In order to learn how to build custom form field controls, let&#39;s start with a simple input component
+that we want to work inside the form field. For example, a phone number input that segments the
+parts of the number into their own inputs. (Note: this is not intended to be a robust component,
+just a starting point for us to learn.)</p>
+<pre><code class="language-ts"><span class="hljs-keyword">class</span> MyTel {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> area: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> exchange: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> subscriber: <span class="hljs-built_in">string</span></span>) {}
+}
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'example-tel-input'</span>,
+  template: <span class="hljs-string">`
+    &lt;div [formGroup]="parts"&gt;
+      &lt;input class="area" formControlName="area" size="3"&gt;
+      &lt;span&gt;&amp;ndash;&lt;/span&gt;
+      &lt;input class="exchange" formControlName="exchange" size="3"&gt;
+      &lt;span&gt;&amp;ndash;&lt;/span&gt;
+      &lt;input class="subscriber" formControlName="subscriber" size="4"&gt;
+    &lt;/div&gt;
+  `</span>,
+  styles: [<span class="hljs-string">`
+    div {
+      display: flex;
+    }
+    input {
+      border: none;
+      background: none;
+      padding: 0;
+      outline: none;
+      font: inherit;
+      text-align: center;
+    }
+  `</span>],
+})
+<span class="hljs-keyword">class</span> MyTelInput {
+  parts: FormGroup;
+
+  <span class="hljs-meta">@Input</span>()
+  <span class="hljs-keyword">get</span> value(): MyTel | <span class="hljs-literal">null</span> {
+    <span class="hljs-keyword">let</span> n = <span class="hljs-keyword">this</span>.parts.value;
+    <span class="hljs-keyword">if</span> (n.area.length == <span class="hljs-number">3</span> &amp;&amp; n.exchange.length == <span class="hljs-number">3</span> &amp;&amp; n.subscriber.length == <span class="hljs-number">4</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MyTel(n.area, n.exchange, n.subscriber);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  }
+  <span class="hljs-keyword">set</span> value(tel: MyTel | <span class="hljs-literal">null</span>) {
+    tel = tel || <span class="hljs-keyword">new</span> MyTel(<span class="hljs-string">''</span>, <span class="hljs-string">''</span>, <span class="hljs-string">''</span>);
+    <span class="hljs-keyword">this</span>.parts.setValue({area: tel.area, exchange: tel.exchange, subscriber: tel.subscriber});
+  }
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder</span>) {
+    <span class="hljs-keyword">this</span>.parts =  fb.group({
+      <span class="hljs-string">'area'</span>: <span class="hljs-string">''</span>,
+      <span class="hljs-string">'exchange'</span>: <span class="hljs-string">''</span>,
+      <span class="hljs-string">'subscriber'</span>: <span class="hljs-string">''</span>,
+    });
+  }
+}</code></pre>
+
+        <h3 id="providing-our-component-as-a-matformfieldcontrol" class="docs-header-link">
+          <span header-link="providing-our-component-as-a-matformfieldcontrol"></span>
+          Providing our component as a MatFormFieldControl
+        </h3>
+      <p>The first step is to provide our new component as an implementation of the <code>MatFormFieldControl</code>
+interface that the <code>&lt;mat-form-field&gt;</code> knows how to work with. To do this, we will have our class
+implement <code>MatFormFieldControl</code>. Since this is a generic interface, we&#39;ll need to include a type
+parameter indicating the type of data our control will work with, in this case <code>MyTel</code>. We then add
+a provider to our component so that the form field will be able to inject it as a
+<code>MatFormFieldControl</code>.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@Component</span>({
+  ...
+  providers: [{provide: MatFormFieldControl, useExisting: MyTelInput}],
+})
+<span class="hljs-keyword">class</span> MyTelInput <span class="hljs-keyword">implements</span> MatFormFieldControl&lt;MyTel&gt; {
+  ...
+}</code></pre>
+<p>This sets up our component so it can work with <code>&lt;mat-form-field&gt;</code>, but now we need to implement the
+various methods and properties declared by the interface we just implemented. To learn more about
+the <code>MatFormFieldControl</code> interface, see the
+<a href="https://material.angular.io/components/form-field/api">form field API documentation</a>.</p>
+
+        <h3 id="implementing-the-methods-and-properties-of-matformfieldcontrol" class="docs-header-link">
+          <span header-link="implementing-the-methods-and-properties-of-matformfieldcontrol"></span>
+          Implementing the methods and properties of MatFormFieldControl
+        </h3>
+      
+        <h4 id="-code-value-code-" class="docs-header-link">
+          <span header-link="-code-value-code-"></span>
+          <code>value</code>
+        </h4>
+      <p>This property allows someone to set or get the value of our control. Its type should be the same
+type we used for the type parameter when we implemented <code>MatFormFieldControl</code>. Since our component
+already has a value property, we don&#39;t need to do anything for this one.</p>
+
+        <h4 id="-code-statechanges-code-" class="docs-header-link">
+          <span header-link="-code-statechanges-code-"></span>
+          <code>stateChanges</code>
+        </h4>
+      <p>Because the <code>&lt;mat-form-field&gt;</code> uses the <code>OnPush</code> change detection strategy, we need to let it know
+when something happens in the form field control that may require the form field to run change
+detection. We do this via the <code>stateChanges</code> property. So far the only thing the form field needs to
+know about is when the value changes. We&#39;ll need to emit on the stateChanges stream when that
+happens, and as we continue flushing out these properties we&#39;ll likely find more places we need to
+emit. We should also make sure to complete <code>stateChanges</code> when our component is destroyed.</p>
+<pre><code class="language-ts">stateChanges = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();
+
+<span class="hljs-keyword">set</span> value(tel: MyTel | <span class="hljs-literal">null</span>) {
+  ...
+  <span class="hljs-keyword">this</span>.stateChanges.next();
+}
+
+ngOnDestroy() {
+  <span class="hljs-keyword">this</span>.stateChanges.complete();
+}</code></pre>
+
+        <h4 id="-code-id-code-" class="docs-header-link">
+          <span header-link="-code-id-code-"></span>
+          <code>id</code>
+        </h4>
+      <p>This property should return the ID of an element in the component&#39;s template that we want the
+<code>&lt;mat-form-field&gt;</code> to associate all of its labels and hints with. In this case, we&#39;ll use the host
+element and just generate a unique ID for it.</p>
+<pre><code class="language-ts"><span class="hljs-keyword">static</span> nextId = <span class="hljs-number">0</span>;
+
+<span class="hljs-meta">@HostBinding</span>() id = <span class="hljs-string">`example-tel-input-<span class="hljs-subst">${MyTelInput.nextId++}</span>`</span>;</code></pre>
+
+        <h4 id="-code-placeholder-code-" class="docs-header-link">
+          <span header-link="-code-placeholder-code-"></span>
+          <code>placeholder</code>
+        </h4>
+      <p>This property allows us to tell the <code>&lt;mat-form-field&gt;</code> what to use as a placeholder. In this
+example, we&#39;ll do the same thing as <code>matInput</code> and <code>&lt;mat-select&gt;</code> and allow the user to specify it
+via an <code>@Input()</code>. Since the value of the placeholder may change over time, we need to make sure to
+trigger change detection in the parent form field by emitting on the <code>stateChanges</code> stream when the
+placeholder changes.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@Input</span>()
+<span class="hljs-keyword">get</span> placeholder() {
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._placeholder;
+}
+<span class="hljs-keyword">set</span> placeholder(plh) {
+  <span class="hljs-keyword">this</span>._placeholder = plh;
+  <span class="hljs-keyword">this</span>.stateChanges.next();
+}
+<span class="hljs-keyword">private</span> _placeholder: <span class="hljs-built_in">string</span>;</code></pre>
+
+        <h4 id="-code-ngcontrol-code-" class="docs-header-link">
+          <span header-link="-code-ngcontrol-code-"></span>
+          <code>ngControl</code>
+        </h4>
+      <p>This property allows the form field control to specify the <code>@angular/forms</code> control that is bound
+to this component. Since we haven&#39;t set up our component to act as a <code>ControlValueAccessor</code>, we&#39;ll
+just set this to <code>null</code> in our component.</p>
+<pre><code class="language-ts">ngControl: NgControl = <span class="hljs-literal">null</span>;</code></pre>
+<p>It is likely you will want to implement <code>ControlValueAccessor</code> so that your component can work with
+<code>formControl</code> and <code>ngModel</code>. If you do implement <code>ControlValueAccessor</code> you will need to get a
+reference to the <code>NgControl</code> associated with your control and make it publicly available.</p>
+<p>The easy way is to add it as a public property to your constructor and let dependency injection
+handle it:</p>
+<pre><code class="language-ts"><span class="hljs-keyword">constructor</span>(<span class="hljs-params">
+  ...,
+  <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
+  ...,
+</span>) { }</code></pre>
+<p>Note that if your component implements <code>ControlValueAccessor</code>, it may already be set up to provide
+<code>NG_VALUE_ACCESSOR</code> (in the <code>providers</code> part of the component&#39;s decorator, or possibly in a module
+declaration). If so you may get a <em>cannot instantiate cyclic dependency</em> error.</p>
+<p>To resolve this, remove the <code>NG_VALUE_ACCESSOR</code> provider and instead set the value accessor directly:</p>
+<pre><code class="language-ts"><span class="hljs-meta">@Component</span>({
+  ...,
+  providers: [
+    ...,
+    <span class="hljs-comment">// Remove this.</span>
+    <span class="hljs-comment">// {</span>
+    <span class="hljs-comment">//   provide: NG_VALUE_ACCESSOR,</span>
+    <span class="hljs-comment">//   useExisting: forwardRef(() =&gt; MatFormFieldControl),</span>
+    <span class="hljs-comment">//   multi: true,</span>
+    <span class="hljs-comment">// },</span>
+  ],
+})
+<span class="hljs-keyword">class</span> MyTelInput <span class="hljs-keyword">implements</span> MatFormFieldControl&lt;MyTel&gt; {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
+    ...,
+    <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl,
+    ...,
+  </span>) {
+
+    <span class="hljs-comment">// Replace the provider from above with this.</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.ngControl != <span class="hljs-literal">null</span>) {
+      <span class="hljs-comment">// Setting the value accessor directly (instead of using</span>
+      <span class="hljs-comment">// the providers) to avoid running into a circular import.</span>
+      <span class="hljs-keyword">this</span>.ngControl.valueAccessor = <span class="hljs-keyword">this</span>;
+    }
+  }
+}</code></pre>
+<p>For additional information about <code>ControlValueAccessor</code> see the <a href="https://angular.io/api/forms/ControlValueAccessor">API docs</a>.</p>
+
+        <h4 id="-code-focused-code-" class="docs-header-link">
+          <span header-link="-code-focused-code-"></span>
+          <code>focused</code>
+        </h4>
+      <p>This property indicates whether or not the form field control should be considered to be in a
+focused state. When it is in a focused state, the form field is displayed with a solid color
+underline. For the purposes of our component, we want to consider it focused if any of the part
+inputs are focused. We can use the <code>FocusMonitor</code> from <code>@angular/cdk</code> to easily check this. We also
+need to remember to emit on the <code>stateChanges</code> stream so change detection can happen.</p>
+<pre><code class="language-ts">focused = <span class="hljs-literal">false</span>;
+
+<span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder, <span class="hljs-keyword">private</span> fm: FocusMonitor, <span class="hljs-keyword">private</span> elRef: ElementRef&lt;HTMLElement&gt;</span>) {
+  ...
+  fm.monitor(elRef.nativeElement, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
+    <span class="hljs-keyword">this</span>.focused = !!origin;
+    <span class="hljs-keyword">this</span>.stateChanges.next();
+  });
+}
+
+ngOnDestroy() {
+  ...
+  <span class="hljs-keyword">this</span>.fm.stopMonitoring(<span class="hljs-keyword">this</span>.elRef.nativeElement);
+}</code></pre>
+
+        <h4 id="-code-empty-code-" class="docs-header-link">
+          <span header-link="-code-empty-code-"></span>
+          <code>empty</code>
+        </h4>
+      <p>This property indicates whether the form field control is empty. For our control, we&#39;ll consider it
+empty if all of the parts are empty.</p>
+<pre><code class="language-ts"><span class="hljs-keyword">get</span> empty() {
+  <span class="hljs-keyword">let</span> n = <span class="hljs-keyword">this</span>.parts.value;
+  <span class="hljs-keyword">return</span> !n.area &amp;&amp; !n.exchange &amp;&amp; !n.subscriber;
+}</code></pre>
+
+        <h4 id="-code-shouldlabelfloat-code-" class="docs-header-link">
+          <span header-link="-code-shouldlabelfloat-code-"></span>
+          <code>shouldLabelFloat</code>
+        </h4>
+      <p>This property is used to indicate whether the label should be in the floating position. We&#39;ll
+use the same logic as <code>matInput</code> and float the placeholder when the input is focused or non-empty.
+Since the placeholder will be overlapping our control when when it&#39;s not floating, we should hide
+the <code>–</code> characters when it&#39;s not floating.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@HostBinding</span>(<span class="hljs-string">'class.floating'</span>)
+<span class="hljs-keyword">get</span> shouldLabelFloat() {
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.focused || !<span class="hljs-keyword">this</span>.empty;
+}</code></pre>
+<pre><code class="language-css"><span class="hljs-selector-tag">span</span> {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">transition</span>: opacity <span class="hljs-number">200ms</span>;
+}
+<span class="hljs-selector-pseudo">:host.floating</span> <span class="hljs-selector-tag">span</span> {
+  <span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+}</code></pre>
+
+        <h4 id="-code-required-code-" class="docs-header-link">
+          <span header-link="-code-required-code-"></span>
+          <code>required</code>
+        </h4>
+      <p>This property is used to indicate whether the input is required. <code>&lt;mat-form-field&gt;</code> uses this
+information to add a required indicator to the placeholder. Again, we&#39;ll want to make sure we run
+change detection if the required state changes.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@Input</span>()
+<span class="hljs-keyword">get</span> required() {
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._required;
+}
+<span class="hljs-keyword">set</span> required(req) {
+  <span class="hljs-keyword">this</span>._required = coerceBooleanProperty(req);
+  <span class="hljs-keyword">this</span>.stateChanges.next();
+}
+<span class="hljs-keyword">private</span> _required = <span class="hljs-literal">false</span>;</code></pre>
+
+        <h4 id="-code-disabled-code-" class="docs-header-link">
+          <span header-link="-code-disabled-code-"></span>
+          <code>disabled</code>
+        </h4>
+      <p>This property tells the form field when it should be in the disabled state. In addition to reporting
+the right state to the form field, we need to set the disabled state on the individual inputs that
+make up our component.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@Input</span>()
+<span class="hljs-keyword">get</span> disabled() {
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._disabled;
+}
+<span class="hljs-keyword">set</span> disabled(dis) {
+  <span class="hljs-keyword">this</span>._disabled = coerceBooleanProperty(dis);
+  <span class="hljs-keyword">this</span>.stateChanges.next();
+}
+<span class="hljs-keyword">private</span> _disabled = <span class="hljs-literal">false</span>;</code></pre>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"area"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"area"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"3"</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"disabled"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&amp;ndash;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"exchange"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"exchange"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"3"</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"disabled"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&amp;ndash;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subscriber"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"subscriber"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"4"</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"disabled"</span>&gt;</span></code></pre>
+
+        <h4 id="-code-errorstate-code-" class="docs-header-link">
+          <span header-link="-code-errorstate-code-"></span>
+          <code>errorState</code>
+        </h4>
+      <p>This property indicates whether the associated <code>NgControl</code> is in an error state. Since we&#39;re not
+using an <code>NgControl</code> in this example, we don&#39;t need to do anything other than just set it to <code>false</code>.</p>
+<pre><code class="language-ts">errorState = <span class="hljs-literal">false</span>;</code></pre>
+
+        <h4 id="-code-controltype-code-" class="docs-header-link">
+          <span header-link="-code-controltype-code-"></span>
+          <code>controlType</code>
+        </h4>
+      <p>This property allows us to specify a unique string for the type of control in form field. The
+<code>&lt;mat-form-field&gt;</code> will add an additional class based on this type that can be used to easily apply
+special styles to a <code>&lt;mat-form-field&gt;</code> that contains a specific type of control. In this example
+we&#39;ll use <code>example-tel-input</code> as our control type which will result in the form field adding the
+class <code>mat-form-field-example-tel-input</code>.</p>
+<pre><code class="language-ts">controlType = <span class="hljs-string">'example-tel-input'</span>;</code></pre>
+
+        <h4 id="-code-setdescribedbyids-ids-string-code-" class="docs-header-link">
+          <span header-link="-code-setdescribedbyids-ids-string-code-"></span>
+          <code>setDescribedByIds(ids: string[])</code>
+        </h4>
+      <p>This method is used by the <code>&lt;mat-form-field&gt;</code> to specify the IDs that should be used for the
+<code>aria-describedby</code> attribute of your component. The method has one parameter, the list of IDs, we
+just need to apply the given IDs to our host element.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@HostBinding</span>(<span class="hljs-string">'attr.aria-describedby'</span>) describedBy = <span class="hljs-string">''</span>;
+
+setDescribedByIds(ids: <span class="hljs-built_in">string</span>[]) {
+  <span class="hljs-keyword">this</span>.describedBy = ids.join(<span class="hljs-string">' '</span>);
+}</code></pre>
+
+        <h4 id="-code-oncontainerclick-event-mouseevent-code-" class="docs-header-link">
+          <span header-link="-code-oncontainerclick-event-mouseevent-code-"></span>
+          <code>onContainerClick(event: MouseEvent)</code>
+        </h4>
+      <p>This method will be called when the form field is clicked on. It allows your component to hook in
+and handle that click however it wants. The method has one parameter, the <code>MouseEvent</code> for the
+click. In our case we&#39;ll just focus the first <code>&lt;input&gt;</code> if the user isn&#39;t about to click an
+<code>&lt;input&gt;</code> anyways.</p>
+<pre><code class="language-ts">onContainerClick(event: MouseEvent) {
+  <span class="hljs-keyword">if</span> ((event.target <span class="hljs-keyword">as</span> Element).tagName.toLowerCase() != <span class="hljs-string">'input'</span>) {
+    <span class="hljs-keyword">this</span>.elRef.nativeElement.querySelector(<span class="hljs-string">'input'</span>).focus();
+  }
+}</code></pre>
+
+        <h3 id="trying-it-out" class="docs-header-link">
+          <span header-link="trying-it-out"></span>
+          Trying it out
+        </h3>
+      <p>Now that we&#39;ve fully implemented the interface, we&#39;re ready to try our component out! All we need to
+do is place it inside of a <code>&lt;mat-form-field&gt;</code></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">example-tel-input</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-tel-input</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre>
+<p>We also get all of the features that come with <code>&lt;mat-form-field&gt;</code> such as floating placeholder,
+prefix, suffix, hints, and errors (if we&#39;ve given the form field an <code>NgControl</code> and correctly report
+the error state).</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">example-tel-input</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Phone number"</span> <span class="hljs-attr">required</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">example-tel-input</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">matPrefix</span>&gt;</span>phone<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-hint</span>&gt;</span>Include area code<span class="hljs-tag">&lt;/<span class="hljs-name">mat-hint</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span></code></pre>
+</div>
