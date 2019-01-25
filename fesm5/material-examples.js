@@ -1,5 +1,5 @@
 import { __decorate, __metadata, __extends, __param, __spread } from 'tslib';
-import { NgModule, Component, ChangeDetectorRef, ViewChild, TemplateRef, ViewContainerRef, Injectable, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, Host, Inject, Optional, InjectionToken, NgZone, Input, ContentChildren, QueryList } from '@angular/core';
+import { NgModule, Component, ChangeDetectorRef, ViewChild, TemplateRef, ViewContainerRef, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, Host, Inject, Injectable, Optional, InjectionToken, NgZone, Input, ContentChildren, QueryList } from '@angular/core';
 import { ScrollingModule, FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -13,9 +13,8 @@ import { map, startWith, takeUntil, catchError, switchMap, take } from 'rxjs/ope
 import { Directionality } from '@angular/cdk/bidi';
 import { Overlay } from '@angular/cdk/overlay';
 import { getSupportedInputTypes, Platform, supportsPassiveEventListeners, supportsScrollBehavior } from '@angular/cdk/platform';
-import { DataSource, SelectionModel } from '@angular/cdk/collections';
-import { BehaviorSubject, of, Subscription, Subject, Observable, merge } from 'rxjs';
-import { MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource } from '@angular/material/tree';
+import { DataSource, ArrayDataSource, SelectionModel } from '@angular/cdk/collections';
+import { BehaviorSubject, Subscription, Subject, Observable, merge, of } from 'rxjs';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import * as _rollupMoment from 'moment';
@@ -27,6 +26,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { AutofillMonitor, CdkTextareaAutosize } from '@angular/cdk/text-field';
+import { MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource } from '@angular/material/tree';
 import { CommonModule } from '@angular/common';
 
 var ExampleMaterialModule = /** @class */ (function () {
@@ -1118,267 +1118,127 @@ var ExampleDataSource$1 = /** @class */ (function (_super) {
     return ExampleDataSource;
 }(DataSource));
 
-/**
- * File node data with nested structure.
- * Each node has a filename, and a type or a list of children.
- */
-var FileNode = /** @class */ (function () {
-    function FileNode() {
+var TREE_DATA = [
+    {
+        name: 'Fruit',
+        expandable: true,
+        level: 0,
+    }, {
+        name: 'Apple',
+        expandable: false,
+        level: 1,
+    }, {
+        name: 'Banana',
+        expandable: false,
+        level: 1,
+    }, {
+        name: 'Fruit loops',
+        expandable: false,
+        level: 1,
+    }, {
+        name: 'Vegetables',
+        expandable: true,
+        level: 0,
+    }, {
+        name: 'Green',
+        expandable: true,
+        level: 1,
+    }, {
+        name: 'Broccoli',
+        expandable: false,
+        level: 2,
+    }, {
+        name: 'Brussel sprouts',
+        expandable: false,
+        level: 2,
+    }, {
+        name: 'Orange',
+        expandable: true,
+        level: 1,
+    }, {
+        name: 'Pumpkins',
+        expandable: false,
+        level: 2,
+    }, {
+        name: 'Carrots',
+        expandable: false,
+        level: 2,
     }
-    return FileNode;
-}());
-/** Flat node with expandable and level information */
-var FileFlatNode = /** @class */ (function () {
-    function FileFlatNode(expandable, filename, level, type) {
-        this.expandable = expandable;
-        this.filename = filename;
-        this.level = level;
-        this.type = type;
-    }
-    return FileFlatNode;
-}());
-/**
- * The file structure tree data in string. The data could be parsed into a Json object
- */
-var TREE_DATA = JSON.stringify({
-    Applications: {
-        Calendar: 'app',
-        Chrome: 'app',
-        Webstorm: 'app'
-    },
-    Documents: {
-        angular: {
-            src: {
-                compiler: 'ts',
-                core: 'ts'
-            }
-        },
-        material2: {
-            src: {
-                button: 'ts',
-                checkbox: 'ts',
-                input: 'ts'
-            }
-        }
-    },
-    Downloads: {
-        October: 'pdf',
-        November: 'pdf',
-        Tutorial: 'html'
-    },
-    Pictures: {
-        'Photo Booth Library': {
-            Contents: 'dir',
-            Pictures: 'dir'
-        },
-        Sun: 'png',
-        Woods: 'jpg'
-    }
-});
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-var FileDatabase = /** @class */ (function () {
-    function FileDatabase() {
-        this.dataChange = new BehaviorSubject([]);
-        this.initialize();
-    }
-    Object.defineProperty(FileDatabase.prototype, "data", {
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    FileDatabase.prototype.initialize = function () {
-        // Parse the string to json object.
-        var dataObject = JSON.parse(TREE_DATA);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        var data = this.buildFileTree(dataObject, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    };
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     */
-    FileDatabase.prototype.buildFileTree = function (obj, level) {
-        var _this = this;
-        return Object.keys(obj).reduce(function (accumulator, key) {
-            var value = obj[key];
-            var node = new FileNode();
-            node.filename = key;
-            if (value != null) {
-                if (typeof value === 'object') {
-                    node.children = _this.buildFileTree(value, level + 1);
-                }
-                else {
-                    node.type = value;
-                }
-            }
-            return accumulator.concat(node);
-        }, []);
-    };
-    FileDatabase = __decorate([
-        Injectable(),
-        __metadata("design:paramtypes", [])
-    ], FileDatabase);
-    return FileDatabase;
-}());
+];
 /**
  * @title Tree with flat nodes
  */
 var CdkTreeFlatExample = /** @class */ (function () {
-    function CdkTreeFlatExample(database) {
-        var _this = this;
-        this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
-        this.transformer = function (node, level) {
-            return new FileFlatNode(!!node.children, node.filename, level, node.type);
-        };
-        this._getLevel = function (node) { return node.level; };
-        this._isExpandable = function (node) { return node.expandable; };
-        this._getChildren = function (node) { return of(node.children); };
-        this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
-        this.treeControl = new FlatTreeControl(this._getLevel, this._isExpandable);
-        this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe(function (data) {
-            _this.dataSource.data = data;
-        });
+    function CdkTreeFlatExample() {
+        this.treeControl = new FlatTreeControl(function (node) { return node.level; }, function (node) { return node.expandable; });
+        this.dataSource = new ArrayDataSource(TREE_DATA);
+        this.hasChild = function (_, node) { return node.expandable; };
     }
+    CdkTreeFlatExample.prototype.getParentNode = function (node) {
+        var nodeIndex = TREE_DATA.indexOf(node);
+        for (var i = nodeIndex - 1; i >= 0; i--) {
+            if (TREE_DATA[i].level === node.level - 1) {
+                return TREE_DATA[i];
+            }
+        }
+        return null;
+    };
+    CdkTreeFlatExample.prototype.shouldRender = function (node) {
+        var parent = this.getParentNode(node);
+        return !parent || parent.isExpanded;
+    };
     CdkTreeFlatExample = __decorate([
         Component({
             selector: 'cdk-tree-flat-example',
-            template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding class=\"example-tree-node\">\n    <button mat-icon-button disabled></button>\n    {{node.filename}}:  {{node.type}}\n  </cdk-tree-node>\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding class=\"example-tree-node\">\n    <button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.filename}}:  {{node.type}}\n  </cdk-tree-node>\n</cdk-tree>\n",
-            providers: [FileDatabase],
+            template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.filename\"\n            (click)=\"node.isExpanded = !node.isExpanded\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n",
             styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
-        }),
-        __metadata("design:paramtypes", [FileDatabase])
+        })
     ], CdkTreeFlatExample);
     return CdkTreeFlatExample;
 }());
 
-/**
- * Json node data with nested structure. Each node has a filename and a value or a list of children
- */
-var FileNode$1 = /** @class */ (function () {
-    function FileNode() {
-    }
-    return FileNode;
-}());
-/**
- * The Json tree data in string. The data could be parsed into Json object
- */
-var TREE_DATA$1 = JSON.stringify({
-    Applications: {
-        Calendar: 'app',
-        Chrome: 'app',
-        Webstorm: 'app'
+var TREE_DATA$1 = [
+    {
+        name: 'Fruit',
+        children: [
+            { name: 'Apple' },
+            { name: 'Banana' },
+            { name: 'Fruit loops' },
+        ]
+    }, {
+        name: 'Vegetables',
+        children: [
+            {
+                name: 'Green',
+                children: [
+                    { name: 'Broccoli' },
+                    { name: 'Brussel sprouts' },
+                ]
+            }, {
+                name: 'Orange',
+                children: [
+                    { name: 'Pumpkins' },
+                    { name: 'Carrots' },
+                ]
+            },
+        ]
     },
-    Documents: {
-        angular: {
-            src: {
-                compiler: 'ts',
-                core: 'ts'
-            }
-        },
-        material2: {
-            src: {
-                button: 'ts',
-                checkbox: 'ts',
-                input: 'ts'
-            }
-        }
-    },
-    Downloads: {
-        October: 'pdf',
-        November: 'pdf',
-        Tutorial: 'html'
-    },
-    Pictures: {
-        'Photo Booth Library': {
-            Contents: 'dir',
-            Pictures: 'dir'
-        },
-        Sun: 'png',
-        Woods: 'jpg'
-    }
-});
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-var FileDatabase$1 = /** @class */ (function () {
-    function FileDatabase() {
-        this.dataChange = new BehaviorSubject([]);
-        this.initialize();
-    }
-    Object.defineProperty(FileDatabase.prototype, "data", {
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    FileDatabase.prototype.initialize = function () {
-        // Parse the string to json object.
-        var dataObject = JSON.parse(TREE_DATA$1);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        var data = this.buildFileTree(dataObject, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    };
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     */
-    FileDatabase.prototype.buildFileTree = function (obj, level) {
-        var _this = this;
-        return Object.keys(obj).reduce(function (accumulator, key) {
-            var value = obj[key];
-            var node = new FileNode$1();
-            node.filename = key;
-            if (value != null) {
-                if (typeof value === 'object') {
-                    node.children = _this.buildFileTree(value, level + 1);
-                }
-                else {
-                    node.type = value;
-                }
-            }
-            return accumulator.concat(node);
-        }, []);
-    };
-    FileDatabase = __decorate([
-        Injectable(),
-        __metadata("design:paramtypes", [])
-    ], FileDatabase);
-    return FileDatabase;
-}());
+];
 /**
  * @title Tree with nested nodes
  */
 var CdkTreeNestedExample = /** @class */ (function () {
-    function CdkTreeNestedExample(database) {
-        var _this = this;
-        this.hasNestedChild = function (_, nodeData) { return !nodeData.type; };
-        this._getChildren = function (node) { return of(node.children); };
-        this.nestedTreeControl = new NestedTreeControl(this._getChildren);
-        this.nestedDataSource = new MatTreeNestedDataSource();
-        database.dataChange.subscribe(function (data) { return _this.nestedDataSource.data = data; });
+    function CdkTreeNestedExample() {
+        this.treeControl = new NestedTreeControl(function (node) { return node.children; });
+        this.dataSource = new ArrayDataSource(TREE_DATA$1);
+        this.hasChild = function (_, node) { return !!node.children && node.children.length > 0; };
     }
     CdkTreeNestedExample = __decorate([
         Component({
             selector: 'cdk-tree-nested-example',
-            template: "<cdk-tree [dataSource]=\"nestedDataSource\" [treeControl]=\"nestedTreeControl\">\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node\" class=\"example-tree-node\">\n    <button mat-icon-button disabled></button>\n    {{node.filename}}:  {{node.type}}\n  </cdk-nested-tree-node>\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node; when: hasNestedChild\" class=\"example-tree-node\">\n    <button mat-icon-button [attr.aria-label]=\"'toggle ' + node.filename\" cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.filename}}:  {{node.type}}\n    <div [class.example-tree-invisible]=\"!nestedTreeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n",
-            providers: [FileDatabase$1],
-            styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n\n.example-tree-node {\n  display: block;\n  padding-left: 40px;\n}\n"]
-        }),
-        __metadata("design:paramtypes", [FileDatabase$1])
+            template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node\" class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" class=\"example-tree-node\">\n    <button mat-icon-button [attr.aria-label]=\"'toggle ' + node.name\" cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n",
+            styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n"]
+        })
     ], CdkTreeNestedExample);
     return CdkTreeNestedExample;
 }());
@@ -6352,142 +6212,58 @@ var TreeDynamicExample = /** @class */ (function () {
     return TreeDynamicExample;
 }());
 
-/**
- * File node data with nested structure.
- * Each node has a filename, and a type or a list of children.
- */
-var FileNode$2 = /** @class */ (function () {
-    function FileNode() {
-    }
-    return FileNode;
-}());
-/** Flat node with expandable and level information */
-var FileFlatNode$1 = /** @class */ (function () {
-    function FileFlatNode(expandable, filename, level, type) {
-        this.expandable = expandable;
-        this.filename = filename;
-        this.level = level;
-        this.type = type;
-    }
-    return FileFlatNode;
-}());
-/**
- * The file structure tree data in string. The data could be parsed into a Json object
- */
-var TREE_DATA$3 = JSON.stringify({
-    Applications: {
-        Calendar: 'app',
-        Chrome: 'app',
-        Webstorm: 'app'
+var TREE_DATA$3 = [
+    {
+        name: 'Fruit',
+        children: [
+            { name: 'Apple' },
+            { name: 'Banana' },
+            { name: 'Fruit loops' },
+        ]
+    }, {
+        name: 'Vegetables',
+        children: [
+            {
+                name: 'Green',
+                children: [
+                    { name: 'Broccoli' },
+                    { name: 'Brussel sprouts' },
+                ]
+            }, {
+                name: 'Orange',
+                children: [
+                    { name: 'Pumpkins' },
+                    { name: 'Carrots' },
+                ]
+            },
+        ]
     },
-    Documents: {
-        angular: {
-            src: {
-                compiler: 'ts',
-                core: 'ts'
-            }
-        },
-        material2: {
-            src: {
-                button: 'ts',
-                checkbox: 'ts',
-                input: 'ts'
-            }
-        }
-    },
-    Downloads: {
-        October: 'pdf',
-        November: 'pdf',
-        Tutorial: 'html'
-    },
-    Pictures: {
-        'Photo Booth Library': {
-            Contents: 'dir',
-            Pictures: 'dir'
-        },
-        Sun: 'png',
-        Woods: 'jpg'
-    }
-});
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-var FileDatabase$2 = /** @class */ (function () {
-    function FileDatabase() {
-        this.dataChange = new BehaviorSubject([]);
-        this.initialize();
-    }
-    Object.defineProperty(FileDatabase.prototype, "data", {
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    FileDatabase.prototype.initialize = function () {
-        // Parse the string to json object.
-        var dataObject = JSON.parse(TREE_DATA$3);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        var data = this.buildFileTree(dataObject, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    };
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     */
-    FileDatabase.prototype.buildFileTree = function (obj, level) {
-        var _this = this;
-        return Object.keys(obj).reduce(function (accumulator, key) {
-            var value = obj[key];
-            var node = new FileNode$2();
-            node.filename = key;
-            if (value != null) {
-                if (typeof value === 'object') {
-                    node.children = _this.buildFileTree(value, level + 1);
-                }
-                else {
-                    node.type = value;
-                }
-            }
-            return accumulator.concat(node);
-        }, []);
-    };
-    FileDatabase = __decorate([
-        Injectable(),
-        __metadata("design:paramtypes", [])
-    ], FileDatabase);
-    return FileDatabase;
-}());
+];
 /**
  * @title Tree with flat nodes
  */
 var TreeFlatOverviewExample = /** @class */ (function () {
-    function TreeFlatOverviewExample(database) {
-        var _this = this;
+    function TreeFlatOverviewExample() {
         this.transformer = function (node, level) {
-            return new FileFlatNode$1(!!node.children, node.filename, level, node.type);
+            return {
+                expandable: !!node.children && node.children.length > 0,
+                name: node.name,
+                level: level,
+            };
         };
-        this._getLevel = function (node) { return node.level; };
-        this._isExpandable = function (node) { return node.expandable; };
-        this._getChildren = function (node) { return of(node.children); };
-        this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
-        this.treeFlattener = new MatTreeFlattener(this.transformer, this._getLevel, this._isExpandable, this._getChildren);
-        this.treeControl = new FlatTreeControl(this._getLevel, this._isExpandable);
+        this.treeControl = new FlatTreeControl(function (node) { return node.level; }, function (node) { return node.expandable; });
+        this.treeFlattener = new MatTreeFlattener(this.transformer, function (node) { return node.level; }, function (node) { return node.expandable; }, function (node) { return node.children; });
         this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe(function (data) { return _this.dataSource.data = data; });
+        this.hasChild = function (_, node) { return node.expandable; };
+        this.dataSource.data = TREE_DATA$3;
     }
     TreeFlatOverviewExample = __decorate([
         Component({
             selector: 'tree-flat-overview-example',
-            template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding>\n    <button mat-icon-button disabled></button>\n    {{node.filename}} : {{node.type}}\n  </mat-tree-node>\n\n  <mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding>\n    <button mat-icon-button matTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.filename\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.filename}} : {{node.type}}\n  </mat-tree-node>\n</mat-tree>\n",
-            providers: [FileDatabase$2],
+            template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding>\n    <button mat-icon-button matTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n",
             styles: [""]
         }),
-        __metadata("design:paramtypes", [FileDatabase$2])
+        __metadata("design:paramtypes", [])
     ], TreeFlatOverviewExample);
     return TreeFlatOverviewExample;
 }());
@@ -6632,125 +6408,50 @@ var TreeLoadmoreExample = /** @class */ (function () {
     return TreeLoadmoreExample;
 }());
 
-/**
- * Json node data with nested structure. Each node has a filename and a value or a list of children
- */
-var FileNode$3 = /** @class */ (function () {
-    function FileNode() {
-    }
-    return FileNode;
-}());
-/**
- * The Json tree data in string. The data could be parsed into Json object
- */
-var TREE_DATA$4 = JSON.stringify({
-    Applications: {
-        Calendar: 'app',
-        Chrome: 'app',
-        Webstorm: 'app'
+var TREE_DATA$4 = [
+    {
+        name: 'Fruit',
+        children: [
+            { name: 'Apple' },
+            { name: 'Banana' },
+            { name: 'Fruit loops' },
+        ]
+    }, {
+        name: 'Vegetables',
+        children: [
+            {
+                name: 'Green',
+                children: [
+                    { name: 'Broccoli' },
+                    { name: 'Brussel sprouts' },
+                ]
+            }, {
+                name: 'Orange',
+                children: [
+                    { name: 'Pumpkins' },
+                    { name: 'Carrots' },
+                ]
+            },
+        ]
     },
-    Documents: {
-        angular: {
-            src: {
-                compiler: 'ts',
-                core: 'ts'
-            }
-        },
-        material2: {
-            src: {
-                button: 'ts',
-                checkbox: 'ts',
-                input: 'ts'
-            }
-        }
-    },
-    Downloads: {
-        October: 'pdf',
-        November: 'pdf',
-        Tutorial: 'html'
-    },
-    Pictures: {
-        'Photo Booth Library': {
-            Contents: 'dir',
-            Pictures: 'dir'
-        },
-        Sun: 'png',
-        Woods: 'jpg'
-    }
-});
-/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */
-var FileDatabase$3 = /** @class */ (function () {
-    function FileDatabase() {
-        this.dataChange = new BehaviorSubject([]);
-        this.initialize();
-    }
-    Object.defineProperty(FileDatabase.prototype, "data", {
-        get: function () { return this.dataChange.value; },
-        enumerable: true,
-        configurable: true
-    });
-    FileDatabase.prototype.initialize = function () {
-        // Parse the string to json object.
-        var dataObject = JSON.parse(TREE_DATA$4);
-        // Build the tree nodes from Json object. The result is a list of `FileNode` with nested
-        //     file node as children.
-        var data = this.buildFileTree(dataObject, 0);
-        // Notify the change.
-        this.dataChange.next(data);
-    };
-    /**
-     * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-     * The return value is the list of `FileNode`.
-     */
-    FileDatabase.prototype.buildFileTree = function (obj, level) {
-        var _this = this;
-        return Object.keys(obj).reduce(function (accumulator, key) {
-            var value = obj[key];
-            var node = new FileNode$3();
-            node.filename = key;
-            if (value != null) {
-                if (typeof value === 'object') {
-                    node.children = _this.buildFileTree(value, level + 1);
-                }
-                else {
-                    node.type = value;
-                }
-            }
-            return accumulator.concat(node);
-        }, []);
-    };
-    FileDatabase = __decorate([
-        Injectable(),
-        __metadata("design:paramtypes", [])
-    ], FileDatabase);
-    return FileDatabase;
-}());
+];
 /**
  * @title Tree with nested nodes
  */
 var TreeNestedOverviewExample = /** @class */ (function () {
-    function TreeNestedOverviewExample(database) {
-        var _this = this;
-        this.hasNestedChild = function (_, nodeData) { return !nodeData.type; };
-        this._getChildren = function (node) { return node.children; };
-        this.nestedTreeControl = new NestedTreeControl(this._getChildren);
-        this.nestedDataSource = new MatTreeNestedDataSource();
-        database.dataChange.subscribe(function (data) { return _this.nestedDataSource.data = data; });
+    function TreeNestedOverviewExample() {
+        this.treeControl = new NestedTreeControl(function (node) { return node.children; });
+        this.dataSource = new MatTreeNestedDataSource();
+        this.hasChild = function (_, node) { return !!node.children && node.children.length > 0; };
+        this.dataSource.data = TREE_DATA$4;
     }
     TreeNestedOverviewExample = __decorate([
         Component({
             selector: 'tree-nested-overview-example',
-            template: "<mat-tree [dataSource]=\"nestedDataSource\" [treeControl]=\"nestedTreeControl\" class=\"example-tree\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle>\n    <li class=\"mat-tree-node\">\n      <button mat-icon-button disabled></button>\n      {{node.filename}}:  {{node.type}}\n    </li>\n  </mat-tree-node>\n\n  <mat-nested-tree-node *matTreeNodeDef=\"let node; when: hasNestedChild\">\n    <li>\n      <div class=\"mat-tree-node\">\n        <button mat-icon-button matTreeNodeToggle\n                [attr.aria-label]=\"'toggle ' + node.filename\">\n          <mat-icon class=\"mat-icon-rtl-mirror\">\n            {{nestedTreeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n          </mat-icon>\n        </button>\n        {{node.filename}}\n      </div>\n      <ul [class.example-tree-invisible]=\"!nestedTreeControl.isExpanded(node)\">\n        <ng-container matTreeNodeOutlet></ng-container>\n      </ul>\n    </li>\n  </mat-nested-tree-node>\n</mat-tree>\n",
-            providers: [FileDatabase$3],
+            template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\" class=\"example-tree\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle>\n    <li class=\"mat-tree-node\">\n      <!-- use a disabled button to provide padding for tree leaf -->\n      <button mat-icon-button disabled></button>\n      {{node.name}}\n    </li>\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-nested-tree-node *matTreeNodeDef=\"let node; when: hasChild\">\n    <li>\n      <div class=\"mat-tree-node\">\n        <button mat-icon-button matTreeNodeToggle\n                [attr.aria-label]=\"'toggle ' + node.name\">\n          <mat-icon class=\"mat-icon-rtl-mirror\">\n            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n          </mat-icon>\n        </button>\n        {{node.name}}\n      </div>\n      <ul [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n        <ng-container matTreeNodeOutlet></ng-container>\n      </ul>\n    </li>\n  </mat-nested-tree-node>\n</mat-tree>\n",
             styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n"]
         }),
-        __metadata("design:paramtypes", [FileDatabase$3])
+        __metadata("design:paramtypes", [])
     ], TreeNestedOverviewExample);
     return TreeNestedOverviewExample;
 }());
@@ -8274,5 +7975,5 @@ var ExampleData = /** @class */ (function () {
  * Generated bundle index. Do not edit.
  */
 
-export { AutocompleteAutoActiveFirstOptionExample as ɵangular_material_src_material_examples_examples_a, AutocompleteDisplayExample as ɵangular_material_src_material_examples_examples_b, AutocompleteFilterExample as ɵangular_material_src_material_examples_examples_c, AutocompleteOptgroupExample as ɵangular_material_src_material_examples_examples_d, AutocompleteOverviewExample as ɵangular_material_src_material_examples_examples_e, AutocompleteSimpleExample as ɵangular_material_src_material_examples_examples_f, BadgeOverviewExample as ɵangular_material_src_material_examples_examples_g, BottomSheetOverviewExample as ɵangular_material_src_material_examples_examples_h, BottomSheetOverviewExampleSheet as ɵangular_material_src_material_examples_examples_i, ButtonOverviewExample as ɵangular_material_src_material_examples_examples_j, ButtonToggleAppearanceExample as ɵangular_material_src_material_examples_examples_k, ButtonToggleExclusiveExample as ɵangular_material_src_material_examples_examples_l, ButtonTypesExample as ɵangular_material_src_material_examples_examples_m, CardOverviewExample as ɵangular_material_src_material_examples_examples_n, CdkCustomStepperWithoutFormExample as ɵangular_material_src_material_examples_examples_o, CustomStepper as ɵangular_material_src_material_examples_examples_p, CdkDragDropAxisLockExample as ɵangular_material_src_material_examples_examples_q, CdkDragDropBoundaryExample as ɵangular_material_src_material_examples_examples_r, CdkDragDropConnectedSortingGroupExample as ɵangular_material_src_material_examples_examples_s, CdkDragDropConnectedSortingExample as ɵangular_material_src_material_examples_examples_t, CdkDragDropCustomPlaceholderExample as ɵangular_material_src_material_examples_examples_u, CdkDragDropCustomPreviewExample as ɵangular_material_src_material_examples_examples_v, CdkDragDropDisabledExample as ɵangular_material_src_material_examples_examples_w, CdkDragDropEnterPredicateExample as ɵangular_material_src_material_examples_examples_x, CdkDragDropHandleExample as ɵangular_material_src_material_examples_examples_y, CdkDragDropHorizontalSortingExample as ɵangular_material_src_material_examples_examples_z, CdkDragDropOverviewExample as ɵangular_material_src_material_examples_examples_ba, CdkDragDropRootElementExample as ɵangular_material_src_material_examples_examples_bb, CdkDragDropSortingExample as ɵangular_material_src_material_examples_examples_bc, CdkPlatformOverviewExample as ɵangular_material_src_material_examples_examples_bd, CdkPortalOverviewExample as ɵangular_material_src_material_examples_examples_be, ComponentPortalExample as ɵangular_material_src_material_examples_examples_bf, CdkTableBasicFlexExample as ɵangular_material_src_material_examples_examples_bg, CdkTableBasicExample as ɵangular_material_src_material_examples_examples_bh, CdkTreeFlatExample as ɵangular_material_src_material_examples_examples_bj, FileDatabase as ɵangular_material_src_material_examples_examples_bi, CdkTreeNestedExample as ɵangular_material_src_material_examples_examples_bl, FileDatabase$1 as ɵangular_material_src_material_examples_examples_bk, CdkVirtualScrollContextExample as ɵangular_material_src_material_examples_examples_bm, CdkVirtualScrollCustomStrategyExample as ɵangular_material_src_material_examples_examples_bo, CustomVirtualScrollStrategy as ɵangular_material_src_material_examples_examples_bn, CdkVirtualScrollDataSourceExample as ɵangular_material_src_material_examples_examples_bp, CdkVirtualScrollDlExample as ɵangular_material_src_material_examples_examples_bq, CdkVirtualScrollFixedBufferExample as ɵangular_material_src_material_examples_examples_br, CdkVirtualScrollHorizontalExample as ɵangular_material_src_material_examples_examples_bs, CdkVirtualScrollOverviewExample as ɵangular_material_src_material_examples_examples_bt, CdkVirtualScrollTemplateCacheExample as ɵangular_material_src_material_examples_examples_bu, CheckboxConfigurableExample as ɵangular_material_src_material_examples_examples_bv, CheckboxOverviewExample as ɵangular_material_src_material_examples_examples_bw, ChipsAutocompleteExample as ɵangular_material_src_material_examples_examples_bx, ChipsInputExample as ɵangular_material_src_material_examples_examples_by, ChipsOverviewExample as ɵangular_material_src_material_examples_examples_bz, ChipsStackedExample as ɵangular_material_src_material_examples_examples_ca, DatepickerApiExample as ɵangular_material_src_material_examples_examples_cb, DatepickerColorExample as ɵangular_material_src_material_examples_examples_cc, DatepickerCustomHeaderExample as ɵangular_material_src_material_examples_examples_cd, ExampleHeader as ɵangular_material_src_material_examples_examples_ce, DatepickerCustomIconExample as ɵangular_material_src_material_examples_examples_cf, DatepickerDateClassExample as ɵangular_material_src_material_examples_examples_cg, DatepickerDisabledExample as ɵangular_material_src_material_examples_examples_ch, DatepickerEventsExample as ɵangular_material_src_material_examples_examples_ci, DatepickerFilterExample as ɵangular_material_src_material_examples_examples_cj, DatepickerFormatsExample as ɵangular_material_src_material_examples_examples_cl, MY_FORMATS as ɵangular_material_src_material_examples_examples_ck, DatepickerLocaleExample as ɵangular_material_src_material_examples_examples_cm, DatepickerMinMaxExample as ɵangular_material_src_material_examples_examples_cn, DatepickerMomentExample as ɵangular_material_src_material_examples_examples_co, DatepickerStartViewExample as ɵangular_material_src_material_examples_examples_cp, DatepickerTouchExample as ɵangular_material_src_material_examples_examples_cq, DatepickerValueExample as ɵangular_material_src_material_examples_examples_cr, DatepickerViewsSelectionExample as ɵangular_material_src_material_examples_examples_ct, MY_FORMATS$1 as ɵangular_material_src_material_examples_examples_cs, DialogContentExample as ɵangular_material_src_material_examples_examples_cu, DialogContentExampleDialog as ɵangular_material_src_material_examples_examples_cv, DialogDataExample as ɵangular_material_src_material_examples_examples_cw, DialogDataExampleDialog as ɵangular_material_src_material_examples_examples_cx, DialogElementsExample as ɵangular_material_src_material_examples_examples_cy, DialogElementsExampleDialog as ɵangular_material_src_material_examples_examples_cz, DialogOverviewExample as ɵangular_material_src_material_examples_examples_da, DialogOverviewExampleDialog as ɵangular_material_src_material_examples_examples_db, DividerOverviewExample as ɵangular_material_src_material_examples_examples_dc, ElevationOverviewExample as ɵangular_material_src_material_examples_examples_dd, ExpansionExpandCollapseAllExample as ɵangular_material_src_material_examples_examples_de, ExpansionStepsExample as ɵangular_material_src_material_examples_examples_df, FocusMonitorDirectivesExample as ɵangular_material_src_material_examples_examples_dg, FocusMonitorFocusViaExample as ɵangular_material_src_material_examples_examples_dh, FocusMonitorOverviewExample as ɵangular_material_src_material_examples_examples_di, FormFieldAppearanceExample as ɵangular_material_src_material_examples_examples_dj, FormFieldCustomControlExample as ɵangular_material_src_material_examples_examples_dk, MyTelInput as ɵangular_material_src_material_examples_examples_dl, FormFieldErrorExample as ɵangular_material_src_material_examples_examples_dm, FormFieldHintExample as ɵangular_material_src_material_examples_examples_dn, FormFieldLabelExample as ɵangular_material_src_material_examples_examples_do, FormFieldOverviewExample as ɵangular_material_src_material_examples_examples_dp, FormFieldPrefixSuffixExample as ɵangular_material_src_material_examples_examples_dq, FormFieldThemingExample as ɵangular_material_src_material_examples_examples_dr, GridListDynamicExample as ɵangular_material_src_material_examples_examples_ds, GridListOverviewExample as ɵangular_material_src_material_examples_examples_dt, IconOverviewExample as ɵangular_material_src_material_examples_examples_du, IconSvgExample as ɵangular_material_src_material_examples_examples_dv, InputClearableExample as ɵangular_material_src_material_examples_examples_dw, InputErrorStateMatcherExample as ɵangular_material_src_material_examples_examples_dx, InputErrorsExample as ɵangular_material_src_material_examples_examples_dy, InputFormExample as ɵangular_material_src_material_examples_examples_dz, InputHintExample as ɵangular_material_src_material_examples_examples_ea, InputOverviewExample as ɵangular_material_src_material_examples_examples_eb, InputPrefixSuffixExample as ɵangular_material_src_material_examples_examples_ec, ListSectionsExample as ɵangular_material_src_material_examples_examples_ed, ListSelectionExample as ɵangular_material_src_material_examples_examples_ee, ExampleMaterialModule as ɵangular_material_src_material_examples_examples_in, MenuIconsExample as ɵangular_material_src_material_examples_examples_ef, MenuOverviewExample as ɵangular_material_src_material_examples_examples_eg, NestedMenuExample as ɵangular_material_src_material_examples_examples_eh, PaginatorConfigurableExample as ɵangular_material_src_material_examples_examples_ei, PaginatorOverviewExample as ɵangular_material_src_material_examples_examples_ej, ProgressBarBufferExample as ɵangular_material_src_material_examples_examples_ek, ProgressBarConfigurableExample as ɵangular_material_src_material_examples_examples_el, ProgressBarDeterminateExample as ɵangular_material_src_material_examples_examples_em, ProgressBarIndeterminateExample as ɵangular_material_src_material_examples_examples_en, ProgressBarQueryExample as ɵangular_material_src_material_examples_examples_eo, ProgressSpinnerConfigurableExample as ɵangular_material_src_material_examples_examples_ep, ProgressSpinnerOverviewExample as ɵangular_material_src_material_examples_examples_eq, RadioNgModelExample as ɵangular_material_src_material_examples_examples_er, RadioOverviewExample as ɵangular_material_src_material_examples_examples_es, RippleOverviewExample as ɵangular_material_src_material_examples_examples_et, SelectCustomTriggerExample as ɵangular_material_src_material_examples_examples_eu, SelectDisabledExample as ɵangular_material_src_material_examples_examples_ev, SelectErrorStateMatcherExample as ɵangular_material_src_material_examples_examples_ew, SelectFormExample as ɵangular_material_src_material_examples_examples_ex, SelectHintErrorExample as ɵangular_material_src_material_examples_examples_ey, SelectMultipleExample as ɵangular_material_src_material_examples_examples_ez, SelectNoRippleExample as ɵangular_material_src_material_examples_examples_fa, SelectOptgroupExample as ɵangular_material_src_material_examples_examples_fb, SelectOverviewExample as ɵangular_material_src_material_examples_examples_fc, SelectPanelClassExample as ɵangular_material_src_material_examples_examples_fd, SelectResetExample as ɵangular_material_src_material_examples_examples_fe, SelectValueBindingExample as ɵangular_material_src_material_examples_examples_ff, SidenavAutosizeExample as ɵangular_material_src_material_examples_examples_fg, SidenavBackdropExample as ɵangular_material_src_material_examples_examples_fh, SidenavDisableCloseExample as ɵangular_material_src_material_examples_examples_fi, SidenavDrawerOverviewExample as ɵangular_material_src_material_examples_examples_fj, SidenavFixedExample as ɵangular_material_src_material_examples_examples_fk, SidenavModeExample as ɵangular_material_src_material_examples_examples_fl, SidenavOpenCloseExample as ɵangular_material_src_material_examples_examples_fm, SidenavOverviewExample as ɵangular_material_src_material_examples_examples_fn, SidenavPositionExample as ɵangular_material_src_material_examples_examples_fo, SidenavResponsiveExample as ɵangular_material_src_material_examples_examples_fp, SlideToggleConfigurableExample as ɵangular_material_src_material_examples_examples_fq, SlideToggleFormsExample as ɵangular_material_src_material_examples_examples_fr, SlideToggleOverviewExample as ɵangular_material_src_material_examples_examples_fs, SliderConfigurableExample as ɵangular_material_src_material_examples_examples_ft, SliderFormattingExample as ɵangular_material_src_material_examples_examples_fu, SliderOverviewExample as ɵangular_material_src_material_examples_examples_fv, PizzaPartyComponent as ɵangular_material_src_material_examples_examples_fx, SnackBarComponentExample as ɵangular_material_src_material_examples_examples_fw, SnackBarOverviewExample as ɵangular_material_src_material_examples_examples_fy, SnackBarPositionExample as ɵangular_material_src_material_examples_examples_fz, SortOverviewExample as ɵangular_material_src_material_examples_examples_ga, StepperEditableExample as ɵangular_material_src_material_examples_examples_gb, StepperErrorsExample as ɵangular_material_src_material_examples_examples_gc, StepperLabelPositionBottomExample as ɵangular_material_src_material_examples_examples_gd, StepperOptionalExample as ɵangular_material_src_material_examples_examples_ge, StepperStatesExample as ɵangular_material_src_material_examples_examples_gf, StepperVerticalExample as ɵangular_material_src_material_examples_examples_gg, TabGroupAlignExample as ɵangular_material_src_material_examples_examples_gh, TabGroupAnimationsExample as ɵangular_material_src_material_examples_examples_gi, TabGroupAsyncExample as ɵangular_material_src_material_examples_examples_gj, TabGroupBasicExample as ɵangular_material_src_material_examples_examples_gk, TabGroupCustomLabelExample as ɵangular_material_src_material_examples_examples_gl, TabGroupDynamicHeightExample as ɵangular_material_src_material_examples_examples_gm, TabGroupDynamicExample as ɵangular_material_src_material_examples_examples_gn, TabGroupHeaderBelowExample as ɵangular_material_src_material_examples_examples_go, TabGroupLazyLoadedExample as ɵangular_material_src_material_examples_examples_gp, TabGroupStretchedExample as ɵangular_material_src_material_examples_examples_gq, TabGroupThemeExample as ɵangular_material_src_material_examples_examples_gr, TabNavBarBasicExample as ɵangular_material_src_material_examples_examples_gs, TableBasicFlexExample as ɵangular_material_src_material_examples_examples_gt, TableBasicExample as ɵangular_material_src_material_examples_examples_gu, TableDynamicColumnsExample as ɵangular_material_src_material_examples_examples_gv, TableExpandableRowsExample as ɵangular_material_src_material_examples_examples_gw, TableFilteringExample as ɵangular_material_src_material_examples_examples_gx, TableFooterRowExample as ɵangular_material_src_material_examples_examples_gy, TableHttpExample as ɵangular_material_src_material_examples_examples_gz, TableMultipleHeaderFooterExample as ɵangular_material_src_material_examples_examples_ha, TableOverviewExample as ɵangular_material_src_material_examples_examples_hb, TablePaginationExample as ɵangular_material_src_material_examples_examples_hc, TableRowContextExample as ɵangular_material_src_material_examples_examples_hd, TableSelectionExample as ɵangular_material_src_material_examples_examples_he, SimpleColumn as ɵangular_material_src_material_examples_examples_hg, TableSimpleColumnExample as ɵangular_material_src_material_examples_examples_hf, TableSortingExample as ɵangular_material_src_material_examples_examples_hh, TableStickyColumnsExample as ɵangular_material_src_material_examples_examples_hi, TableStickyComplexFlexExample as ɵangular_material_src_material_examples_examples_hj, TableStickyComplexExample as ɵangular_material_src_material_examples_examples_hk, TableStickyFooterExample as ɵangular_material_src_material_examples_examples_hl, TableStickyHeaderExample as ɵangular_material_src_material_examples_examples_hm, TableWrappedExample as ɵangular_material_src_material_examples_examples_hn, WrapperTable as ɵangular_material_src_material_examples_examples_ho, TextFieldAutofillDirectiveExample as ɵangular_material_src_material_examples_examples_hp, TextFieldAutofillMonitorExample as ɵangular_material_src_material_examples_examples_hq, TextFieldAutosizeTextareaExample as ɵangular_material_src_material_examples_examples_hr, ToolbarOverviewExample as ɵangular_material_src_material_examples_examples_hs, TooltipAutoHideExample as ɵangular_material_src_material_examples_examples_ht, TooltipCustomClassExample as ɵangular_material_src_material_examples_examples_hu, TooltipDelayExample as ɵangular_material_src_material_examples_examples_hv, TooltipDisabledExample as ɵangular_material_src_material_examples_examples_hw, TooltipManualExample as ɵangular_material_src_material_examples_examples_hx, TooltipMessageExample as ɵangular_material_src_material_examples_examples_hy, TooltipModifiedDefaultsExample as ɵangular_material_src_material_examples_examples_ia, myCustomTooltipDefaults as ɵangular_material_src_material_examples_examples_hz, TooltipOverviewExample as ɵangular_material_src_material_examples_examples_ib, TooltipPositionExample as ɵangular_material_src_material_examples_examples_ic, ChecklistDatabase as ɵangular_material_src_material_examples_examples_id, TreeChecklistExample as ɵangular_material_src_material_examples_examples_ie, DynamicDatabase as ɵangular_material_src_material_examples_examples_if, TreeDynamicExample as ɵangular_material_src_material_examples_examples_ig, FileDatabase$2 as ɵangular_material_src_material_examples_examples_ih, TreeFlatOverviewExample as ɵangular_material_src_material_examples_examples_ii, LoadmoreDatabase as ɵangular_material_src_material_examples_examples_ij, TreeLoadmoreExample as ɵangular_material_src_material_examples_examples_ik, FileDatabase$3 as ɵangular_material_src_material_examples_examples_il, TreeNestedOverviewExample as ɵangular_material_src_material_examples_examples_im, ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample };
+export { AutocompleteAutoActiveFirstOptionExample as ɵangular_material_src_material_examples_examples_a, AutocompleteDisplayExample as ɵangular_material_src_material_examples_examples_b, AutocompleteFilterExample as ɵangular_material_src_material_examples_examples_c, AutocompleteOptgroupExample as ɵangular_material_src_material_examples_examples_d, AutocompleteOverviewExample as ɵangular_material_src_material_examples_examples_e, AutocompleteSimpleExample as ɵangular_material_src_material_examples_examples_f, BadgeOverviewExample as ɵangular_material_src_material_examples_examples_g, BottomSheetOverviewExample as ɵangular_material_src_material_examples_examples_h, BottomSheetOverviewExampleSheet as ɵangular_material_src_material_examples_examples_i, ButtonOverviewExample as ɵangular_material_src_material_examples_examples_j, ButtonToggleAppearanceExample as ɵangular_material_src_material_examples_examples_k, ButtonToggleExclusiveExample as ɵangular_material_src_material_examples_examples_l, ButtonTypesExample as ɵangular_material_src_material_examples_examples_m, CardOverviewExample as ɵangular_material_src_material_examples_examples_n, CdkCustomStepperWithoutFormExample as ɵangular_material_src_material_examples_examples_o, CustomStepper as ɵangular_material_src_material_examples_examples_p, CdkDragDropAxisLockExample as ɵangular_material_src_material_examples_examples_q, CdkDragDropBoundaryExample as ɵangular_material_src_material_examples_examples_r, CdkDragDropConnectedSortingGroupExample as ɵangular_material_src_material_examples_examples_s, CdkDragDropConnectedSortingExample as ɵangular_material_src_material_examples_examples_t, CdkDragDropCustomPlaceholderExample as ɵangular_material_src_material_examples_examples_u, CdkDragDropCustomPreviewExample as ɵangular_material_src_material_examples_examples_v, CdkDragDropDisabledExample as ɵangular_material_src_material_examples_examples_w, CdkDragDropEnterPredicateExample as ɵangular_material_src_material_examples_examples_x, CdkDragDropHandleExample as ɵangular_material_src_material_examples_examples_y, CdkDragDropHorizontalSortingExample as ɵangular_material_src_material_examples_examples_z, CdkDragDropOverviewExample as ɵangular_material_src_material_examples_examples_ba, CdkDragDropRootElementExample as ɵangular_material_src_material_examples_examples_bb, CdkDragDropSortingExample as ɵangular_material_src_material_examples_examples_bc, CdkPlatformOverviewExample as ɵangular_material_src_material_examples_examples_bd, CdkPortalOverviewExample as ɵangular_material_src_material_examples_examples_be, ComponentPortalExample as ɵangular_material_src_material_examples_examples_bf, CdkTableBasicFlexExample as ɵangular_material_src_material_examples_examples_bg, CdkTableBasicExample as ɵangular_material_src_material_examples_examples_bh, CdkTreeFlatExample as ɵangular_material_src_material_examples_examples_bi, CdkTreeNestedExample as ɵangular_material_src_material_examples_examples_bj, CdkVirtualScrollContextExample as ɵangular_material_src_material_examples_examples_bk, CdkVirtualScrollCustomStrategyExample as ɵangular_material_src_material_examples_examples_bm, CustomVirtualScrollStrategy as ɵangular_material_src_material_examples_examples_bl, CdkVirtualScrollDataSourceExample as ɵangular_material_src_material_examples_examples_bn, CdkVirtualScrollDlExample as ɵangular_material_src_material_examples_examples_bo, CdkVirtualScrollFixedBufferExample as ɵangular_material_src_material_examples_examples_bp, CdkVirtualScrollHorizontalExample as ɵangular_material_src_material_examples_examples_bq, CdkVirtualScrollOverviewExample as ɵangular_material_src_material_examples_examples_br, CdkVirtualScrollTemplateCacheExample as ɵangular_material_src_material_examples_examples_bs, CheckboxConfigurableExample as ɵangular_material_src_material_examples_examples_bt, CheckboxOverviewExample as ɵangular_material_src_material_examples_examples_bu, ChipsAutocompleteExample as ɵangular_material_src_material_examples_examples_bv, ChipsInputExample as ɵangular_material_src_material_examples_examples_bw, ChipsOverviewExample as ɵangular_material_src_material_examples_examples_bx, ChipsStackedExample as ɵangular_material_src_material_examples_examples_by, DatepickerApiExample as ɵangular_material_src_material_examples_examples_bz, DatepickerColorExample as ɵangular_material_src_material_examples_examples_ca, DatepickerCustomHeaderExample as ɵangular_material_src_material_examples_examples_cb, ExampleHeader as ɵangular_material_src_material_examples_examples_cc, DatepickerCustomIconExample as ɵangular_material_src_material_examples_examples_cd, DatepickerDateClassExample as ɵangular_material_src_material_examples_examples_ce, DatepickerDisabledExample as ɵangular_material_src_material_examples_examples_cf, DatepickerEventsExample as ɵangular_material_src_material_examples_examples_cg, DatepickerFilterExample as ɵangular_material_src_material_examples_examples_ch, DatepickerFormatsExample as ɵangular_material_src_material_examples_examples_cj, MY_FORMATS as ɵangular_material_src_material_examples_examples_ci, DatepickerLocaleExample as ɵangular_material_src_material_examples_examples_ck, DatepickerMinMaxExample as ɵangular_material_src_material_examples_examples_cl, DatepickerMomentExample as ɵangular_material_src_material_examples_examples_cm, DatepickerStartViewExample as ɵangular_material_src_material_examples_examples_cn, DatepickerTouchExample as ɵangular_material_src_material_examples_examples_co, DatepickerValueExample as ɵangular_material_src_material_examples_examples_cp, DatepickerViewsSelectionExample as ɵangular_material_src_material_examples_examples_cr, MY_FORMATS$1 as ɵangular_material_src_material_examples_examples_cq, DialogContentExample as ɵangular_material_src_material_examples_examples_cs, DialogContentExampleDialog as ɵangular_material_src_material_examples_examples_ct, DialogDataExample as ɵangular_material_src_material_examples_examples_cu, DialogDataExampleDialog as ɵangular_material_src_material_examples_examples_cv, DialogElementsExample as ɵangular_material_src_material_examples_examples_cw, DialogElementsExampleDialog as ɵangular_material_src_material_examples_examples_cx, DialogOverviewExample as ɵangular_material_src_material_examples_examples_cy, DialogOverviewExampleDialog as ɵangular_material_src_material_examples_examples_cz, DividerOverviewExample as ɵangular_material_src_material_examples_examples_da, ElevationOverviewExample as ɵangular_material_src_material_examples_examples_db, ExpansionExpandCollapseAllExample as ɵangular_material_src_material_examples_examples_dc, ExpansionStepsExample as ɵangular_material_src_material_examples_examples_dd, FocusMonitorDirectivesExample as ɵangular_material_src_material_examples_examples_de, FocusMonitorFocusViaExample as ɵangular_material_src_material_examples_examples_df, FocusMonitorOverviewExample as ɵangular_material_src_material_examples_examples_dg, FormFieldAppearanceExample as ɵangular_material_src_material_examples_examples_dh, FormFieldCustomControlExample as ɵangular_material_src_material_examples_examples_di, MyTelInput as ɵangular_material_src_material_examples_examples_dj, FormFieldErrorExample as ɵangular_material_src_material_examples_examples_dk, FormFieldHintExample as ɵangular_material_src_material_examples_examples_dl, FormFieldLabelExample as ɵangular_material_src_material_examples_examples_dm, FormFieldOverviewExample as ɵangular_material_src_material_examples_examples_dn, FormFieldPrefixSuffixExample as ɵangular_material_src_material_examples_examples_do, FormFieldThemingExample as ɵangular_material_src_material_examples_examples_dp, GridListDynamicExample as ɵangular_material_src_material_examples_examples_dq, GridListOverviewExample as ɵangular_material_src_material_examples_examples_dr, IconOverviewExample as ɵangular_material_src_material_examples_examples_ds, IconSvgExample as ɵangular_material_src_material_examples_examples_dt, InputClearableExample as ɵangular_material_src_material_examples_examples_du, InputErrorStateMatcherExample as ɵangular_material_src_material_examples_examples_dv, InputErrorsExample as ɵangular_material_src_material_examples_examples_dw, InputFormExample as ɵangular_material_src_material_examples_examples_dx, InputHintExample as ɵangular_material_src_material_examples_examples_dy, InputOverviewExample as ɵangular_material_src_material_examples_examples_dz, InputPrefixSuffixExample as ɵangular_material_src_material_examples_examples_ea, ListSectionsExample as ɵangular_material_src_material_examples_examples_eb, ListSelectionExample as ɵangular_material_src_material_examples_examples_ec, ExampleMaterialModule as ɵangular_material_src_material_examples_examples_ij, MenuIconsExample as ɵangular_material_src_material_examples_examples_ed, MenuOverviewExample as ɵangular_material_src_material_examples_examples_ee, NestedMenuExample as ɵangular_material_src_material_examples_examples_ef, PaginatorConfigurableExample as ɵangular_material_src_material_examples_examples_eg, PaginatorOverviewExample as ɵangular_material_src_material_examples_examples_eh, ProgressBarBufferExample as ɵangular_material_src_material_examples_examples_ei, ProgressBarConfigurableExample as ɵangular_material_src_material_examples_examples_ej, ProgressBarDeterminateExample as ɵangular_material_src_material_examples_examples_ek, ProgressBarIndeterminateExample as ɵangular_material_src_material_examples_examples_el, ProgressBarQueryExample as ɵangular_material_src_material_examples_examples_em, ProgressSpinnerConfigurableExample as ɵangular_material_src_material_examples_examples_en, ProgressSpinnerOverviewExample as ɵangular_material_src_material_examples_examples_eo, RadioNgModelExample as ɵangular_material_src_material_examples_examples_ep, RadioOverviewExample as ɵangular_material_src_material_examples_examples_eq, RippleOverviewExample as ɵangular_material_src_material_examples_examples_er, SelectCustomTriggerExample as ɵangular_material_src_material_examples_examples_es, SelectDisabledExample as ɵangular_material_src_material_examples_examples_et, SelectErrorStateMatcherExample as ɵangular_material_src_material_examples_examples_eu, SelectFormExample as ɵangular_material_src_material_examples_examples_ev, SelectHintErrorExample as ɵangular_material_src_material_examples_examples_ew, SelectMultipleExample as ɵangular_material_src_material_examples_examples_ex, SelectNoRippleExample as ɵangular_material_src_material_examples_examples_ey, SelectOptgroupExample as ɵangular_material_src_material_examples_examples_ez, SelectOverviewExample as ɵangular_material_src_material_examples_examples_fa, SelectPanelClassExample as ɵangular_material_src_material_examples_examples_fb, SelectResetExample as ɵangular_material_src_material_examples_examples_fc, SelectValueBindingExample as ɵangular_material_src_material_examples_examples_fd, SidenavAutosizeExample as ɵangular_material_src_material_examples_examples_fe, SidenavBackdropExample as ɵangular_material_src_material_examples_examples_ff, SidenavDisableCloseExample as ɵangular_material_src_material_examples_examples_fg, SidenavDrawerOverviewExample as ɵangular_material_src_material_examples_examples_fh, SidenavFixedExample as ɵangular_material_src_material_examples_examples_fi, SidenavModeExample as ɵangular_material_src_material_examples_examples_fj, SidenavOpenCloseExample as ɵangular_material_src_material_examples_examples_fk, SidenavOverviewExample as ɵangular_material_src_material_examples_examples_fl, SidenavPositionExample as ɵangular_material_src_material_examples_examples_fm, SidenavResponsiveExample as ɵangular_material_src_material_examples_examples_fn, SlideToggleConfigurableExample as ɵangular_material_src_material_examples_examples_fo, SlideToggleFormsExample as ɵangular_material_src_material_examples_examples_fp, SlideToggleOverviewExample as ɵangular_material_src_material_examples_examples_fq, SliderConfigurableExample as ɵangular_material_src_material_examples_examples_fr, SliderFormattingExample as ɵangular_material_src_material_examples_examples_fs, SliderOverviewExample as ɵangular_material_src_material_examples_examples_ft, PizzaPartyComponent as ɵangular_material_src_material_examples_examples_fv, SnackBarComponentExample as ɵangular_material_src_material_examples_examples_fu, SnackBarOverviewExample as ɵangular_material_src_material_examples_examples_fw, SnackBarPositionExample as ɵangular_material_src_material_examples_examples_fx, SortOverviewExample as ɵangular_material_src_material_examples_examples_fy, StepperEditableExample as ɵangular_material_src_material_examples_examples_fz, StepperErrorsExample as ɵangular_material_src_material_examples_examples_ga, StepperLabelPositionBottomExample as ɵangular_material_src_material_examples_examples_gb, StepperOptionalExample as ɵangular_material_src_material_examples_examples_gc, StepperStatesExample as ɵangular_material_src_material_examples_examples_gd, StepperVerticalExample as ɵangular_material_src_material_examples_examples_ge, TabGroupAlignExample as ɵangular_material_src_material_examples_examples_gf, TabGroupAnimationsExample as ɵangular_material_src_material_examples_examples_gg, TabGroupAsyncExample as ɵangular_material_src_material_examples_examples_gh, TabGroupBasicExample as ɵangular_material_src_material_examples_examples_gi, TabGroupCustomLabelExample as ɵangular_material_src_material_examples_examples_gj, TabGroupDynamicHeightExample as ɵangular_material_src_material_examples_examples_gk, TabGroupDynamicExample as ɵangular_material_src_material_examples_examples_gl, TabGroupHeaderBelowExample as ɵangular_material_src_material_examples_examples_gm, TabGroupLazyLoadedExample as ɵangular_material_src_material_examples_examples_gn, TabGroupStretchedExample as ɵangular_material_src_material_examples_examples_go, TabGroupThemeExample as ɵangular_material_src_material_examples_examples_gp, TabNavBarBasicExample as ɵangular_material_src_material_examples_examples_gq, TableBasicFlexExample as ɵangular_material_src_material_examples_examples_gr, TableBasicExample as ɵangular_material_src_material_examples_examples_gs, TableDynamicColumnsExample as ɵangular_material_src_material_examples_examples_gt, TableExpandableRowsExample as ɵangular_material_src_material_examples_examples_gu, TableFilteringExample as ɵangular_material_src_material_examples_examples_gv, TableFooterRowExample as ɵangular_material_src_material_examples_examples_gw, TableHttpExample as ɵangular_material_src_material_examples_examples_gx, TableMultipleHeaderFooterExample as ɵangular_material_src_material_examples_examples_gy, TableOverviewExample as ɵangular_material_src_material_examples_examples_gz, TablePaginationExample as ɵangular_material_src_material_examples_examples_ha, TableRowContextExample as ɵangular_material_src_material_examples_examples_hb, TableSelectionExample as ɵangular_material_src_material_examples_examples_hc, SimpleColumn as ɵangular_material_src_material_examples_examples_he, TableSimpleColumnExample as ɵangular_material_src_material_examples_examples_hd, TableSortingExample as ɵangular_material_src_material_examples_examples_hf, TableStickyColumnsExample as ɵangular_material_src_material_examples_examples_hg, TableStickyComplexFlexExample as ɵangular_material_src_material_examples_examples_hh, TableStickyComplexExample as ɵangular_material_src_material_examples_examples_hi, TableStickyFooterExample as ɵangular_material_src_material_examples_examples_hj, TableStickyHeaderExample as ɵangular_material_src_material_examples_examples_hk, TableWrappedExample as ɵangular_material_src_material_examples_examples_hl, WrapperTable as ɵangular_material_src_material_examples_examples_hm, TextFieldAutofillDirectiveExample as ɵangular_material_src_material_examples_examples_hn, TextFieldAutofillMonitorExample as ɵangular_material_src_material_examples_examples_ho, TextFieldAutosizeTextareaExample as ɵangular_material_src_material_examples_examples_hp, ToolbarOverviewExample as ɵangular_material_src_material_examples_examples_hq, TooltipAutoHideExample as ɵangular_material_src_material_examples_examples_hr, TooltipCustomClassExample as ɵangular_material_src_material_examples_examples_hs, TooltipDelayExample as ɵangular_material_src_material_examples_examples_ht, TooltipDisabledExample as ɵangular_material_src_material_examples_examples_hu, TooltipManualExample as ɵangular_material_src_material_examples_examples_hv, TooltipMessageExample as ɵangular_material_src_material_examples_examples_hw, TooltipModifiedDefaultsExample as ɵangular_material_src_material_examples_examples_hy, myCustomTooltipDefaults as ɵangular_material_src_material_examples_examples_hx, TooltipOverviewExample as ɵangular_material_src_material_examples_examples_hz, TooltipPositionExample as ɵangular_material_src_material_examples_examples_ia, ChecklistDatabase as ɵangular_material_src_material_examples_examples_ib, TreeChecklistExample as ɵangular_material_src_material_examples_examples_ic, DynamicDatabase as ɵangular_material_src_material_examples_examples_id, TreeDynamicExample as ɵangular_material_src_material_examples_examples_ie, TreeFlatOverviewExample as ɵangular_material_src_material_examples_examples_if, LoadmoreDatabase as ɵangular_material_src_material_examples_examples_ig, TreeLoadmoreExample as ɵangular_material_src_material_examples_examples_ih, TreeNestedOverviewExample as ɵangular_material_src_material_examples_examples_ii, ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample };
 //# sourceMappingURL=material-examples.js.map

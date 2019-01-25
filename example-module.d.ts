@@ -4,8 +4,6 @@ import { CustomStepper } from './cdk-custom-stepper-without-form/cdk-custom-step
 import { CdkDragDropRootElementExample } from './cdk-drag-drop-root-element/cdk-drag-drop-root-element-example';
 import { CdkPlatformOverviewExample } from './cdk-platform-overview/cdk-platform-overview-example';
 import { CdkPortalOverviewExample } from './cdk-portal-overview/cdk-portal-overview-example';
-import { CdkTreeFlatExample } from './cdk-tree-flat/cdk-tree-flat-example';
-import { CdkTreeNestedExample } from './cdk-tree-nested/cdk-tree-nested-example';
 import { ExampleHeader } from './datepicker-custom-header/datepicker-custom-header-example';
 import { DatepickerLocaleExample } from './datepicker-locale/datepicker-locale-example';
 import { DialogContentExample } from './dialog-content/dialog-content-example';
@@ -35,9 +33,7 @@ import { TextFieldAutofillMonitorExample } from './text-field-autofill-monitor/t
 import { TextFieldAutosizeTextareaExample } from './text-field-autosize-textarea/text-field-autosize-textarea-example';
 import { TreeChecklistExample } from './tree-checklist/tree-checklist-example';
 import { TreeDynamicExample } from './tree-dynamic/tree-dynamic-example';
-import { TreeFlatOverviewExample } from './tree-flat-overview/tree-flat-overview-example';
 import { TreeLoadmoreExample } from './tree-loadmore/tree-loadmore-example';
-import { TreeNestedOverviewExample } from './tree-nested-overview/tree-nested-overview-example';
 export interface LiveExample {
     title: string;
     component: any;
@@ -47,6 +43,6 @@ export interface LiveExample {
 export declare const EXAMPLE_COMPONENTS: {
     [key: string]: LiveExample;
 };
-export declare const EXAMPLE_LIST: (typeof AutocompleteOptgroupExample | typeof BottomSheetOverviewExample | typeof BottomSheetOverviewExampleSheet | typeof CustomStepper | typeof CdkDragDropRootElementExample | typeof CdkPlatformOverviewExample | typeof CdkPortalOverviewExample | typeof CdkTreeFlatExample | typeof CdkTreeNestedExample | typeof ExampleHeader | typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogDataExampleDialog | typeof DialogOverviewExampleDialog | typeof FocusMonitorDirectivesExample | typeof FocusMonitorFocusViaExample | typeof FocusMonitorOverviewExample | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarComponentExample | typeof SnackBarOverviewExample | typeof SnackBarPositionExample | typeof StepperEditableExample | typeof StepperErrorsExample | typeof StepperLabelPositionBottomExample | typeof StepperOptionalExample | typeof StepperOverviewExample | typeof StepperStatesExample | typeof StepperVerticalExample | typeof TableHttpExample | typeof SimpleColumn | typeof TextFieldAutofillMonitorExample | typeof TextFieldAutosizeTextareaExample | typeof TreeChecklistExample | typeof TreeDynamicExample | typeof TreeFlatOverviewExample | typeof TreeLoadmoreExample | typeof TreeNestedOverviewExample)[];
+export declare const EXAMPLE_LIST: (typeof AutocompleteOptgroupExample | typeof BottomSheetOverviewExample | typeof BottomSheetOverviewExampleSheet | typeof CustomStepper | typeof CdkDragDropRootElementExample | typeof CdkPlatformOverviewExample | typeof CdkPortalOverviewExample | typeof ExampleHeader | typeof DatepickerLocaleExample | typeof DialogContentExample | typeof DialogDataExampleDialog | typeof DialogOverviewExampleDialog | typeof FocusMonitorDirectivesExample | typeof FocusMonitorFocusViaExample | typeof FocusMonitorOverviewExample | typeof MyTelInput | typeof FormFieldLabelExample | typeof IconSvgExample | typeof SidenavResponsiveExample | typeof SlideToggleFormsExample | typeof SnackBarComponentExample | typeof SnackBarOverviewExample | typeof SnackBarPositionExample | typeof StepperEditableExample | typeof StepperErrorsExample | typeof StepperLabelPositionBottomExample | typeof StepperOptionalExample | typeof StepperOverviewExample | typeof StepperStatesExample | typeof StepperVerticalExample | typeof TableHttpExample | typeof SimpleColumn | typeof TextFieldAutofillMonitorExample | typeof TextFieldAutosizeTextareaExample | typeof TreeChecklistExample | typeof TreeDynamicExample | typeof TreeLoadmoreExample)[];
 export declare class ExampleModule {
 }
