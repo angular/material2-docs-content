@@ -1,149 +1,94 @@
+<span class="hljs-keyword">import</span> {ArrayDataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
 <span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
-<span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MatTreeFlatDataSource, MatTreeFlattener} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
-<span class="hljs-keyword">import</span> {BehaviorSubject, Observable, of <span class="hljs-keyword">as</span> observableOf} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
-<span class="hljs-comment">/**
- * File node data with nested structure.
- * Each node has a filename, and a type or a list of children.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FileNode {
-  children: FileNode[];
-  filename: <span class="hljs-built_in">string</span>;
-  <span class="hljs-keyword">type</span>: <span class="hljs-built_in">any</span>;
-}
+
+<span class="hljs-keyword">const</span> TREE_DATA: ExampleFlatNode[] = [
+  {
+    name: <span class="hljs-string">'Fruit'</span>,
+    expandable: <span class="hljs-literal">true</span>,
+    level: <span class="hljs-number">0</span>,
+  }, {
+    name: <span class="hljs-string">'Apple'</span>,
+    expandable: <span class="hljs-literal">false</span>,
+    level: <span class="hljs-number">1</span>,
+  }, {
+    name: <span class="hljs-string">'Banana'</span>,
+    expandable: <span class="hljs-literal">false</span>,
+    level: <span class="hljs-number">1</span>,
+  }, {
+    name: <span class="hljs-string">'Fruit loops'</span>,
+    expandable: <span class="hljs-literal">false</span>,
+    level: <span class="hljs-number">1</span>,
+  }, {
+    name: <span class="hljs-string">'Vegetables'</span>,
+    expandable: <span class="hljs-literal">true</span>,
+    level: <span class="hljs-number">0</span>,
+  }, {
+    name: <span class="hljs-string">'Green'</span>,
+    expandable: <span class="hljs-literal">true</span>,
+    level: <span class="hljs-number">1</span>,
+  }, {
+    name: <span class="hljs-string">'Broccoli'</span>,
+    expandable: <span class="hljs-literal">false</span>,
+    level: <span class="hljs-number">2</span>,
+  }, {
+    name: <span class="hljs-string">'Brussel sprouts'</span>,
+    expandable: <span class="hljs-literal">false</span>,
+    level: <span class="hljs-number">2</span>,
+  }, {
+    name: <span class="hljs-string">'Orange'</span>,
+    expandable: <span class="hljs-literal">true</span>,
+    level: <span class="hljs-number">1</span>,
+  }, {
+    name: <span class="hljs-string">'Pumpkins'</span>,
+    expandable: <span class="hljs-literal">false</span>,
+    level: <span class="hljs-number">2</span>,
+  }, {
+    name: <span class="hljs-string">'Carrots'</span>,
+    expandable: <span class="hljs-literal">false</span>,
+    level: <span class="hljs-number">2</span>,
+  }
+];
 
 <span class="hljs-comment">/** Flat node with expandable and level information */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FileFlatNode {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
-    <span class="hljs-keyword">public</span> expandable: <span class="hljs-built_in">boolean</span>, <span class="hljs-keyword">public</span> filename: <span class="hljs-built_in">string</span>, <span class="hljs-keyword">public</span> level: <span class="hljs-built_in">number</span>, <span class="hljs-keyword">public</span> <span class="hljs-keyword">type</span>: <span class="hljs-built_in">any</span></span>) {}
+<span class="hljs-keyword">interface</span> ExampleFlatNode {
+  expandable: <span class="hljs-built_in">boolean</span>;
+  name: <span class="hljs-built_in">string</span>;
+  level: <span class="hljs-built_in">number</span>;
+  isExpanded?: <span class="hljs-built_in">boolean</span>;
 }
 
 <span class="hljs-comment">/**
- * The file structure tree data in string. The data could be parsed into a Json object
+ * @title Tree with flat nodes
  */</span>
-<span class="hljs-keyword">const</span> TREE_DATA = <span class="hljs-built_in">JSON</span>.stringify({
-  Applications: {
-    Calendar: <span class="hljs-string">'app'</span>,
-    Chrome: <span class="hljs-string">'app'</span>,
-    Webstorm: <span class="hljs-string">'app'</span>
-  },
-  Documents: {
-    angular: {
-      src: {
-        compiler: <span class="hljs-string">'ts'</span>,
-        core: <span class="hljs-string">'ts'</span>
-      }
-    },
-    material2: {
-      src: {
-        button: <span class="hljs-string">'ts'</span>,
-        checkbox: <span class="hljs-string">'ts'</span>,
-        input: <span class="hljs-string">'ts'</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-tree-flat-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-tree-flat-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-tree-flat-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkTreeFlatExample {
+  treeControl = <span class="hljs-keyword">new</span> FlatTreeControl&lt;ExampleFlatNode&gt;(
+      <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable);
+
+  dataSource = <span class="hljs-keyword">new</span> ArrayDataSource(TREE_DATA);
+
+  hasChild = <span class="hljs-function">(<span class="hljs-params">_: <span class="hljs-built_in">number</span>, node: ExampleFlatNode</span>) =&gt;</span> node.expandable;
+
+  getParentNode(node: ExampleFlatNode) {
+    <span class="hljs-keyword">const</span> nodeIndex = TREE_DATA.indexOf(node);
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = nodeIndex - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+      <span class="hljs-keyword">if</span> (TREE_DATA[i].level === node.level - <span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> TREE_DATA[i];
       }
     }
-  },
-  Downloads: {
-    October: <span class="hljs-string">'pdf'</span>,
-    November: <span class="hljs-string">'pdf'</span>,
-    Tutorial: <span class="hljs-string">'html'</span>
-  },
-  Pictures: {
-    <span class="hljs-string">'Photo Booth Library'</span>: {
-      Contents: <span class="hljs-string">'dir'</span>,
-      Pictures: <span class="hljs-string">'dir'</span>
-    },
-    Sun: <span class="hljs-string">'png'</span>,
-    Woods: <span class="hljs-string">'jpg'</span>
-  }
-});
 
-<span class="hljs-comment">/**
- * File database, it can build a tree structured Json object from string.
- * Each node in Json object represents a file or a directory. For a file, it has filename and type.
- * For a directory, it has filename and children (a list of files or directories).
- * The input will be a json object string, and the output is a list of `FileNode` with nested
- * structure.
- */</span>
-<span class="hljs-meta">@Injectable</span>()
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FileDatabase {
-  dataChange = <span class="hljs-keyword">new</span> BehaviorSubject&lt;FileNode[]&gt;([]);
-
-  <span class="hljs-keyword">get</span> data(): FileNode[] { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dataChange.value; }
-
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-keyword">this</span>.initialize();
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
   }
 
-  initialize() {
-    <span class="hljs-comment">// Parse the string to json object.</span>
-    <span class="hljs-keyword">const</span> dataObject = <span class="hljs-built_in">JSON</span>.parse(TREE_DATA);
-
-    <span class="hljs-comment">// Build the tree nodes from Json object. The result is a list of `FileNode` with nested</span>
-    <span class="hljs-comment">//     file node as children.</span>
-    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">this</span>.buildFileTree(dataObject, <span class="hljs-number">0</span>);
-
-    <span class="hljs-comment">// Notify the change.</span>
-    <span class="hljs-keyword">this</span>.dataChange.next(data);
+  shouldRender(node: ExampleFlatNode) {
+    <span class="hljs-keyword">const</span> parent = <span class="hljs-keyword">this</span>.getParentNode(node);
+    <span class="hljs-keyword">return</span> !parent || parent.isExpanded;
   }
-
-  <span class="hljs-comment">/**
-   * Build the file structure tree. The `value` is the Json object, or a sub-tree of a Json object.
-   * The return value is the list of `FileNode`.
-   */</span>
-  buildFileTree(obj: {[key: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">any</span>}, level: <span class="hljs-built_in">number</span>): FileNode[] {
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(obj).reduce&lt;FileNode[]&gt;<span class="hljs-function">(<span class="hljs-params">(<span class="hljs-params">accumulator, key</span>) =&gt; {
-      <span class="hljs-keyword">const</span> value = obj[key];
-      <span class="hljs-keyword">const</span> node = <span class="hljs-keyword">new</span> FileNode(<span class="hljs-params"></span>);
-      node.filename = key;
-
-      <span class="hljs-keyword">if</span> (<span class="hljs-params">value != <span class="hljs-literal">null</span></span>) {
-        <span class="hljs-keyword">if</span> (<span class="hljs-params"><span class="hljs-keyword">typeof</span> value === 'object'</span>) {
-          node.children = <span class="hljs-keyword">this</span>.buildFileTree(<span class="hljs-params">value, level + 1</span>);
-        } <span class="hljs-keyword">else</span> {
-          node.<span class="hljs-keyword">type</span> = value;
-        }
-      }
-
-      <span class="hljs-keyword">return</span> accumulator.concat(<span class="hljs-params">node</span>);
-    }, []</span>);
-  }
-}
-
-/**
- * @<span class="hljs-params">title</span> <span class="hljs-params">Tree</span> <span class="hljs-params">with</span> <span class="hljs-params">flat</span> <span class="hljs-params">nodes</span>
- */
-@<span class="hljs-params">Component</span>(<span class="hljs-params">{
-  selector: 'cdk-tree-flat-example',
-  templateUrl: 'cdk-tree-flat-example.html',
-  styleUrls: ['cdk-tree-flat-example.css'],
-  providers: [FileDatabase]
-}</span>)
-<span class="hljs-params">export</span> <span class="hljs-params">class</span> <span class="hljs-params">CdkTreeFlatExample</span> {
-  <span class="hljs-params">treeControl</span>: <span class="hljs-params">FlatTreeControl</span>&lt;<span class="hljs-params">FileFlatNode</span>&gt;;
-  <span class="hljs-params">treeFlattener</span>: <span class="hljs-params">MatTreeFlattener</span>&lt;<span class="hljs-params">FileNode</span>, <span class="hljs-params">FileFlatNode</span>&gt;;
-  <span class="hljs-params">dataSource</span>: <span class="hljs-params">MatTreeFlatDataSource</span>&lt;<span class="hljs-params">FileNode</span>, <span class="hljs-params">FileFlatNode</span>&gt;;
-
-  <span class="hljs-params">constructor</span>(<span class="hljs-params">database: FileDatabase</span>) {
-    <span class="hljs-params">this</span>.<span class="hljs-params">treeFlattener</span> = <span class="hljs-params">new</span> <span class="hljs-params">MatTreeFlattener</span>(<span class="hljs-params"><span class="hljs-keyword">this</span>.transformer, <span class="hljs-keyword">this</span>._getLevel,
-      <span class="hljs-keyword">this</span>._isExpandable, <span class="hljs-keyword">this</span>._getChildren</span>);
-    <span class="hljs-params">this</span>.<span class="hljs-params">treeControl</span> = <span class="hljs-params">new</span> <span class="hljs-params">FlatTreeControl</span>&lt;<span class="hljs-params">FileFlatNode</span>&gt;(<span class="hljs-params"><span class="hljs-keyword">this</span>._getLevel, <span class="hljs-keyword">this</span>._isExpandable</span>);
-    <span class="hljs-params">this</span>.<span class="hljs-params">dataSource</span> = <span class="hljs-params">new</span> <span class="hljs-params">MatTreeFlatDataSource</span>(<span class="hljs-params"><span class="hljs-keyword">this</span>.treeControl, <span class="hljs-keyword">this</span>.treeFlattener</span>);
-
-    <span class="hljs-params">database</span>.<span class="hljs-params">dataChange</span>.<span class="hljs-params">subscribe</span>(<span class="hljs-params">data =&gt; {
-      <span class="hljs-keyword">this</span>.dataSource.data = data;
-    }</span>);
-  }
-
-  <span class="hljs-params">hasChild</span> = (<span class="hljs-params">_: <span class="hljs-built_in">number</span>, _nodeData: FileFlatNode</span>) =&gt;</span> _nodeData.expandable;
-
-  transformer = <span class="hljs-function">(<span class="hljs-params">node: FileNode, level: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> FileFlatNode(!!node.children, node.filename, level, node.type);
-  }
-
-  <span class="hljs-keyword">private</span> _getLevel = <span class="hljs-function">(<span class="hljs-params">node: FileFlatNode</span>) =&gt;</span> node.level;
-
-  <span class="hljs-keyword">private</span> _isExpandable = <span class="hljs-function">(<span class="hljs-params">node: FileFlatNode</span>) =&gt;</span> node.expandable;
-
-  <span class="hljs-keyword">private</span> _getChildren = (node: FileNode): Observable&lt;FileNode[]&gt; =&gt; observableOf(node.children);
 }
