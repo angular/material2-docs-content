@@ -24,7 +24,141 @@
     <code>
       import {DragDropModule} from '@angular/cdk/drag-drop';
     </code>
-  </p><h3 id="directives" class="docs-header-link docs-api-h3">
+  </p><h3 id="services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      Services
+    </h3>
+    
+      
+
+<h4 id="DragDrop" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="DragDrop"></span>
+  <code>DragDrop</code>
+  
+</h4><p class="docs-api-class-description"><p>Service that allows for drag-and-drop functionality to be attached to DOM elements.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">createDrag
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Turns an element into a draggable item.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        element</p>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Element to which to attach the dragging functionality.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config</p>
+      <code class="docs-api-method-parameter-type">DragRefConfig = DEFAULT_CONFIG</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Object used to configure the dragging behavior.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">DragRef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">createDropList
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Turns an element into a drop list.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        element</p>
+      <code class="docs-api-method-parameter-type">HTMLElement | ElementRef&lt;HTMLElement&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>Element to which to attach the drop list functionality.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">DropListRef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    <h3 id="directives" class="docs-header-link docs-api-h3">
       <span header-link="directives"></span>
       Directives
     </h3>
@@ -217,7 +351,8 @@ by dragging it into another container.</p>
       <code>element: ElementRef&lt;HTMLElement&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Element that the drop list is attached to.</p>
+</td>
 </tr>
 
 
@@ -994,6 +1129,55 @@ it is being dragged. The placeholder is displayed in place of the element being 
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
+    
+      
+
+<h4 id="DragRefConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="DragRefConfig"></span>
+  <code>DragRefConfig</code>
+</h4><p class="docs-api-interface-description"><p>Object that can be used to configure the behavior of DragRef.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dragStartThreshold: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Minimum amount of pixels that the user should
+drag, before the CDK initiates a drag sequence.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>pointerDirectionChangeThreshold: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Amount the pixels the user should drag before the CDK
+considers them to have changed the drag direction.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
     
       
 
