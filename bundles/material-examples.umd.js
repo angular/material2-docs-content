@@ -2745,6 +2745,7 @@
             get: function () { return this._disabled; },
             set: function (value) {
                 this._disabled = coercion.coerceBooleanProperty(value);
+                this._disabled ? this.parts.disable() : this.parts.enable();
                 this.stateChanges.next();
             },
             enumerable: true,

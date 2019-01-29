@@ -3514,6 +3514,7 @@ class MyTelInput {
      */
     set disabled(value) {
         this._disabled = coerceBooleanProperty(value);
+        this._disabled ? this.parts.disable() : this.parts.enable();
         this.stateChanges.next();
     }
     /**
