@@ -1,6 +1,5 @@
-<span class="hljs-keyword">import</span> {Component, QueryList, ChangeDetectorRef} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {CdkStepper, CdkStep} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/stepper'</span>;
-<span class="hljs-keyword">import</span> {Directionality} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/bidi'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkStepper} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/stepper'</span>;
 
 <span class="hljs-comment">/** @title A custom CDK stepper without a form */</span>
 <span class="hljs-meta">@Component</span>({
@@ -15,22 +14,9 @@
   selector: <span class="hljs-string">'example-custom-stepper'</span>,
   templateUrl: <span class="hljs-string">'./example-custom-stepper.html'</span>,
   styleUrls: [<span class="hljs-string">'./example-custom-stepper.css'</span>],
-  providers: [{ provide: CdkStepper, useExisting: CustomStepper }],
+  providers: [{ provide: CdkStepper, useExisting: CustomStepper }]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CustomStepper <span class="hljs-keyword">extends</span> CdkStepper {
-  <span class="hljs-comment">/** Whether the validity of previous steps should be checked or not */</span>
-  linear: <span class="hljs-built_in">boolean</span>;
-
-  <span class="hljs-comment">/** The index of the selected step. */</span>
-  selectedIndex: <span class="hljs-built_in">number</span>;
-
-  <span class="hljs-comment">/** The list of step components that the stepper is holding. */</span>
-  steps: QueryList&lt;CdkStep&gt;;
-
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">dir: Directionality, changeDetectorRef: ChangeDetectorRef</span>) {
-    <span class="hljs-keyword">super</span>(dir, changeDetectorRef);
-  }
-
   onClick(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">this</span>.selectedIndex = index;
   }

@@ -1,4 +1,6 @@
-import { NgModule, Component, ChangeDetectorRef, ViewChild, TemplateRef, ViewContainerRef, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, Host, Inject, Injectable, Optional, InjectionToken, NgZone, Input, ContentChildren } from '@angular/core';
+import { NgModule, Component, ViewContainerRef, ViewChild, TemplateRef, ChangeDetectionStrategy, ViewEncapsulation, Host, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, ElementRef, Input, ContentChildren } from '@angular/core';
+import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { ScrollingModule, FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
@@ -6,15 +8,13 @@ import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/
 import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { CdkStepperModule, CdkStepper, STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { PortalModule, TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
-import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSliderModule, MatSlideToggleModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MatColumnDef, MatSortHeader, MatTable, MatHeaderRowDef, MatRowDef, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
-import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { map, startWith, takeUntil, catchError, switchMap, take } from 'rxjs/operators';
-import { Directionality } from '@angular/cdk/bidi';
+import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MatTable, MatColumnDef, MatSortHeader, MatHeaderRowDef, MatRowDef, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
+import { startWith, map, takeUntil, switchMap, catchError, take } from 'rxjs/operators';
 import { Overlay } from '@angular/cdk/overlay';
-import { getSupportedInputTypes, Platform, supportsPassiveEventListeners, supportsScrollBehavior } from '@angular/cdk/platform';
+import { getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior, Platform } from '@angular/cdk/platform';
 import { DataSource, ArrayDataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject, Subscription, Subject, Observable, merge, of } from 'rxjs';
-import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { ENTER, COMMA } from '@angular/cdk/keycodes';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
 import * as _rollupMoment from 'moment';
 import _rollupMoment__default, {  } from 'moment';
@@ -22,11 +22,10 @@ import { coerceBooleanProperty, coerceNumberProperty } from '@angular/cdk/coerci
 import { DomSanitizer } from '@angular/platform-browser';
 import '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { AutofillMonitor } from '@angular/cdk/text-field';
-import { MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource } from '@angular/material/tree';
-import { CommonModule } from '@angular/common';
+import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
 
 /**
  * @fileoverview added by tsickle
@@ -655,7 +654,7 @@ class CdkCustomStepperWithoutFormExample {
 CdkCustomStepperWithoutFormExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-custom-stepper-without-form-example',
-                template: "<example-custom-stepper>\n  <cdk-step>\n    <p>This is any content of \"Step 1\"</p>\n  </cdk-step>\n  <cdk-step>\n      <p>This is any content of \"Step 2\"</p>\n  </cdk-step>\n</example-custom-stepper>",
+                template: "<example-custom-stepper>\n  <cdk-step> <p>This is any content of \"Step 1\"</p> </cdk-step>\n  <cdk-step> <p>This is any content of \"Step 2\"</p> </cdk-step>\n</example-custom-stepper>\n",
                 styles: [""]
             }] }
 ];
@@ -663,13 +662,6 @@ CdkCustomStepperWithoutFormExample.decorators = [
  * Custom CDK stepper component
  */
 class CustomStepper extends CdkStepper {
-    /**
-     * @param {?} dir
-     * @param {?} changeDetectorRef
-     */
-    constructor(dir, changeDetectorRef) {
-        super(dir, changeDetectorRef);
-    }
     /**
      * @param {?} index
      * @return {?}
@@ -681,15 +673,10 @@ class CustomStepper extends CdkStepper {
 CustomStepper.decorators = [
     { type: Component, args: [{
                 selector: 'example-custom-stepper',
-                template: "<section class=\"example-container\">\n  <header>\n    <h2>Step {{selectedIndex + 1}}/{{steps.length}}</h2>\n  </header>\n  \n  <section *ngFor=\"let step of steps; let i = index; let isLast = last\">\n      <div [style.display]=\"selectedIndex === i ? 'block' : 'none'\">\n        <ng-container [ngTemplateOutlet]=\"step.content\"></ng-container>\n      </div>\n  </section>\n  \n  <footer class=\"example-step-navigation-bar\">\n    <button class=\"example-nav-button\" cdkStepperPrevious>&larr;</button>\n    <button class=\"example-step\" *ngFor=\"let step of steps; let i = index;\" [ngClass]=\"{'example-active': selectedIndex === i}\" (click)=\"onClick(i)\">Step {{i + 1}}</button>\n    <button class=\"example-nav-button\" cdkStepperNext>&rarr;</button>\n  </footer>\n</section>",
+                template: "<section class=\"example-container\">\n  <header>\n    <h2>Step {{ selectedIndex + 1 }}/{{ steps.length }}</h2>\n  </header>\n\n  <div [style.display]=\"selected ? 'block' : 'none'\">\n    <ng-container [ngTemplateOutlet]=\"selected.content\"></ng-container>\n  </div>\n\n  <footer class=\"example-step-navigation-bar\">\n    <button class=\"example-nav-button\" cdkStepperPrevious>&larr;</button>\n    <button\n      class=\"example-step\"\n      *ngFor=\"let step of steps; let i = index\"\n      [ngClass]=\"{ 'example-active': selectedIndex === i }\"\n      (click)=\"onClick(i)\"\n    >\n      Step {{ i + 1 }}\n    </button>\n    <button class=\"example-nav-button\" cdkStepperNext>&rarr;</button>\n  </footer>\n</section>\n",
                 providers: [{ provide: CdkStepper, useExisting: CustomStepper }],
                 styles: [".example-container {\n  border: 1px solid black;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-active {\n  color: blue;\n}\n\n.example-step {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: black;\n}\n\n.example-step.example-active {\n  color: blue;\n  border-bottom: 1px solid blue;\n}\n\n.example-nav-button {\n  background: transparent;\n  border: 0;\n}\n"]
             }] }
-];
-/** @nocollapse */
-CustomStepper.ctorParameters = () => [
-    { type: Directionality },
-    { type: ChangeDetectorRef }
 ];
 
 /**
@@ -3514,6 +3501,7 @@ class MyTelInput {
      */
     set disabled(value) {
         this._disabled = coerceBooleanProperty(value);
+        this._disabled ? this.parts.disable() : this.parts.enable();
         this.stateChanges.next();
     }
     /**

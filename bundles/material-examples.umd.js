@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/cdk/stepper'), require('@angular/cdk/portal'), require('@angular/material'), require('@angular/forms'), require('rxjs/operators'), require('@angular/cdk/bidi'), require('@angular/cdk/overlay'), require('@angular/cdk/platform'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/material/tree'), require('@angular/common')) :
-    typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', 'tslib', '@angular/core', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/cdk/stepper', '@angular/cdk/portal', '@angular/material', '@angular/forms', 'rxjs/operators', '@angular/cdk/bidi', '@angular/cdk/overlay', '@angular/cdk/platform', '@angular/cdk/collections', 'rxjs', '@angular/cdk/keycodes', '@angular/material/core', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/material/tree', '@angular/common'], factory) :
-    (factory((global.ng = global.ng || {}, global.ng.materialExamples = {}),global.tslib,global.ng.core,global.ng.cdk.scrolling,global.ng.cdk.a11y,global.ng.cdk.table,global.ng.cdk.tree,global.ng.cdk['drag-drop'],global.ng.cdk.stepper,global.ng.cdk.portal,global.ng.material,global.ng.forms,global.rxjs.operators,global.ng.cdk.bidi,global.ng.cdk.overlay,global.ng.cdk.platform,global.ng.cdk.collections,global.rxjs,global.ng.cdk.keycodes,global.ng.material.core,global.moment,global.ng.cdk.coercion,global.ng.platformBrowser,global.ng.material.sidenav,global.ng.cdk.layout,global.ng.animations,global.ng.common.http,global.ng.cdk['text-field'],global.ng.material.tree,global.ng.common));
-}(this, (function (exports,tslib_1,core,scrolling,a11y,table,tree,dragDrop,stepper,portal,material,forms,operators,bidi,overlay,platform,collections,rxjs,keycodes,core$1,_rollupMoment,coercion,platformBrowser,sidenav,layout,animations,http,textField,tree$1,common) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/cdk/stepper'), require('@angular/cdk/portal'), require('@angular/material'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/platform'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/material/tree')) :
+    typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', 'tslib', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/cdk/stepper', '@angular/cdk/portal', '@angular/material', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/platform', '@angular/cdk/collections', 'rxjs', '@angular/cdk/keycodes', '@angular/material/core', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/material/tree'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = {}), global.tslib, global.ng.core, global.ng.forms, global.ng.common, global.ng.cdk.scrolling, global.ng.cdk.a11y, global.ng.cdk.table, global.ng.cdk.tree, global.ng.cdk['drag-drop'], global.ng.cdk.stepper, global.ng.cdk.portal, global.ng.material, global.rxjs.operators, global.ng.cdk.overlay, global.ng.cdk.platform, global.ng.cdk.collections, global.rxjs, global.ng.cdk.keycodes, global.ng.material.core, global.moment, global.ng.cdk.coercion, global.ng.platformBrowser, global.ng.material.sidenav, global.ng.cdk.layout, global.ng.animations, global.ng.common.http, global.ng.cdk['text-field'], global.ng.material.tree));
+}(this, function (exports, tslib_1, core, forms, common, scrolling, a11y, table, tree, dragDrop, stepper, portal, material, operators, overlay, platform, collections, rxjs, keycodes, core$1, _rollupMoment, coercion, platformBrowser, sidenav, layout, animations, http, textField, tree$1) { 'use strict';
 
     var _rollupMoment__default = 'default' in _rollupMoment ? _rollupMoment['default'] : _rollupMoment;
 
@@ -531,7 +531,7 @@
         CdkCustomStepperWithoutFormExample = tslib_1.__decorate([
             core.Component({
                 selector: 'cdk-custom-stepper-without-form-example',
-                template: "<example-custom-stepper>\n  <cdk-step>\n    <p>This is any content of \"Step 1\"</p>\n  </cdk-step>\n  <cdk-step>\n      <p>This is any content of \"Step 2\"</p>\n  </cdk-step>\n</example-custom-stepper>",
+                template: "<example-custom-stepper>\n  <cdk-step> <p>This is any content of \"Step 1\"</p> </cdk-step>\n  <cdk-step> <p>This is any content of \"Step 2\"</p> </cdk-step>\n</example-custom-stepper>\n",
                 styles: [""]
             })
         ], CdkCustomStepperWithoutFormExample);
@@ -540,8 +540,8 @@
     /** Custom CDK stepper component */
     var CustomStepper = /** @class */ (function (_super) {
         tslib_1.__extends(CustomStepper, _super);
-        function CustomStepper(dir, changeDetectorRef) {
-            return _super.call(this, dir, changeDetectorRef) || this;
+        function CustomStepper() {
+            return _super !== null && _super.apply(this, arguments) || this;
         }
         CustomStepper_1 = CustomStepper;
         CustomStepper.prototype.onClick = function (index) {
@@ -551,11 +551,10 @@
         CustomStepper = CustomStepper_1 = tslib_1.__decorate([
             core.Component({
                 selector: 'example-custom-stepper',
-                template: "<section class=\"example-container\">\n  <header>\n    <h2>Step {{selectedIndex + 1}}/{{steps.length}}</h2>\n  </header>\n  \n  <section *ngFor=\"let step of steps; let i = index; let isLast = last\">\n      <div [style.display]=\"selectedIndex === i ? 'block' : 'none'\">\n        <ng-container [ngTemplateOutlet]=\"step.content\"></ng-container>\n      </div>\n  </section>\n  \n  <footer class=\"example-step-navigation-bar\">\n    <button class=\"example-nav-button\" cdkStepperPrevious>&larr;</button>\n    <button class=\"example-step\" *ngFor=\"let step of steps; let i = index;\" [ngClass]=\"{'example-active': selectedIndex === i}\" (click)=\"onClick(i)\">Step {{i + 1}}</button>\n    <button class=\"example-nav-button\" cdkStepperNext>&rarr;</button>\n  </footer>\n</section>",
+                template: "<section class=\"example-container\">\n  <header>\n    <h2>Step {{ selectedIndex + 1 }}/{{ steps.length }}</h2>\n  </header>\n\n  <div [style.display]=\"selected ? 'block' : 'none'\">\n    <ng-container [ngTemplateOutlet]=\"selected.content\"></ng-container>\n  </div>\n\n  <footer class=\"example-step-navigation-bar\">\n    <button class=\"example-nav-button\" cdkStepperPrevious>&larr;</button>\n    <button\n      class=\"example-step\"\n      *ngFor=\"let step of steps; let i = index\"\n      [ngClass]=\"{ 'example-active': selectedIndex === i }\"\n      (click)=\"onClick(i)\"\n    >\n      Step {{ i + 1 }}\n    </button>\n    <button class=\"example-nav-button\" cdkStepperNext>&rarr;</button>\n  </footer>\n</section>\n",
                 providers: [{ provide: stepper.CdkStepper, useExisting: CustomStepper_1 }],
                 styles: [".example-container {\n  border: 1px solid black;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-active {\n  color: blue;\n}\n\n.example-step {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: black;\n}\n\n.example-step.example-active {\n  color: blue;\n  border-bottom: 1px solid blue;\n}\n\n.example-nav-button {\n  background: transparent;\n  border: 0;\n}\n"]
-            }),
-            tslib_1.__metadata("design:paramtypes", [bidi.Directionality, core.ChangeDetectorRef])
+            })
         ], CustomStepper);
         return CustomStepper;
     }(stepper.CdkStepper));
@@ -2745,6 +2744,7 @@
             get: function () { return this._disabled; },
             set: function (value) {
                 this._disabled = coercion.coerceBooleanProperty(value);
+                this._disabled ? this.parts.disable() : this.parts.enable();
                 this.stateChanges.next();
             },
             enumerable: true,
@@ -8184,5 +8184,5 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
 //# sourceMappingURL=material-examples.umd.js.map

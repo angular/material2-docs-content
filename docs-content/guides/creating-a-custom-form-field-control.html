@@ -281,19 +281,13 @@ change detection if the required state changes.</p>
 the right state to the form field, we need to set the disabled state on the individual inputs that
 make up our component.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Input</span>()
-<span class="hljs-keyword">get</span> disabled() {
-  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._disabled;
-}
-<span class="hljs-keyword">set</span> disabled(dis) {
-  <span class="hljs-keyword">this</span>._disabled = coerceBooleanProperty(dis);
+<span class="hljs-keyword">get</span> disabled(): <span class="hljs-built_in">boolean</span> { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._disabled; }
+<span class="hljs-keyword">set</span> disabled(value: <span class="hljs-built_in">boolean</span>) {
+  <span class="hljs-keyword">this</span>._disabled = coerceBooleanProperty(value);
+  <span class="hljs-keyword">this</span>._disabled ? <span class="hljs-keyword">this</span>.parts.disable() : <span class="hljs-keyword">this</span>.parts.enable();
   <span class="hljs-keyword">this</span>.stateChanges.next();
 }
 <span class="hljs-keyword">private</span> _disabled = <span class="hljs-literal">false</span>;</code></pre>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"area"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"area"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"3"</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"disabled"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&amp;ndash;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"exchange"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"exchange"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"3"</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"disabled"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&amp;ndash;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"subscriber"</span> <span class="hljs-attr">formControlName</span>=<span class="hljs-string">"subscriber"</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"4"</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"disabled"</span>&gt;</span></code></pre>
 
         <h4 id="-code-errorstate-code-" class="docs-header-link">
           <span header-link="-code-errorstate-code-"></span>

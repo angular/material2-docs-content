@@ -13,15 +13,6 @@
   providers: [{ provide: CdkStepper, useExisting: CustomStepperComponent }]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CustomStepperComponent <span class="hljs-keyword">extends</span> CdkStepper {
-  <span class="hljs-comment">/** Whether the validity of previous steps should be checked or not */</span>
-  linear: <span class="hljs-built_in">boolean</span>;
-
-  <span class="hljs-comment">/** The index of the selected step. */</span>
-  selectedIndex: <span class="hljs-built_in">number</span>;
-
-  <span class="hljs-comment">/** The list of step components that the stepper is holding. */</span>
-  steps: QueryList&lt;CdkStep&gt;;
-
   onClick(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">this</span>.selectedIndex = index;
   }
@@ -32,12 +23,10 @@
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Step {{selectedIndex + 1}}/{{steps.length}}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
 
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let step of steps; let i = index;"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">style.display</span>]=<span class="hljs-string">"selectedIndex === i ? 'block' : 'none'"</span>&gt;</span>
-      <span class="hljs-comment">&lt;!-- Content from the CdkStep is projected here --&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> [<span class="hljs-attr">ngTemplateOutlet</span>]=<span class="hljs-string">"step.content"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">style.display</span>]=<span class="hljs-string">"selected ? 'block' : 'none'"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Content from the CdkStep is projected here --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> [<span class="hljs-attr">ngTemplateOutlet</span>]=<span class="hljs-string">"selected.content"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"step-navigation-bar"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"nav-button"</span> <span class="hljs-attr">cdkStepperPrevious</span>&gt;</span>&amp;larr;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>

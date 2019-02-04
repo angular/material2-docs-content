@@ -70,6 +70,7 @@
   <span class="hljs-keyword">get</span> disabled(): <span class="hljs-built_in">boolean</span> { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._disabled; }
   <span class="hljs-keyword">set</span> disabled(value: <span class="hljs-built_in">boolean</span>) {
     <span class="hljs-keyword">this</span>._disabled = coerceBooleanProperty(value);
+    <span class="hljs-keyword">this</span>._disabled ? <span class="hljs-keyword">this</span>.parts.disable() : <span class="hljs-keyword">this</span>.parts.enable();
     <span class="hljs-keyword">this</span>.stateChanges.next();
   }
   <span class="hljs-keyword">private</span> _disabled = <span class="hljs-literal">false</span>;
