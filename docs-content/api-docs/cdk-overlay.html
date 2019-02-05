@@ -1706,6 +1706,41 @@ required around the overlay pane.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateScrollStrategy
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Switches to a new scroll strategy.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        strategy</p>
+      <code class="docs-api-method-parameter-type">ScrollStrategy</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell">updateSize
       </th>
     </tr>
@@ -3838,6 +3873,18 @@ the <code>HashLocationStrategy</code>).</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">detach
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell">disable
       </th>
     </tr>
@@ -3923,6 +3970,18 @@ the <code>HashLocationStrategy</code>).</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">detach
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell">disable
       </th>
     </tr>
@@ -3963,7 +4022,27 @@ the <code>HashLocationStrategy</code>).</p>
   <code>NoopScrollStrategy</code>
   
 </h4><p class="docs-api-class-description"><p>Scroll strategy that doesn&#39;t do anything.</p>
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>detach: () =&gt; void</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Detaches the scroll strategy from the current overlay.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -4030,7 +4109,27 @@ the <code>HashLocationStrategy</code>).</p>
   <code>BlockScrollStrategy</code>
   
 </h4><p class="docs-api-class-description"><p>Strategy that will prevent the user from scrolling while the overlay is visible.</p>
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>detach: () =&gt; void</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Detaches the scroll strategy from the current overlay.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -4516,6 +4615,19 @@ the <code>HashLocationStrategy</code>).</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Attaches this <code>ScrollStrategy</code> to an overlay.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>detach: () =&gt; void</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Detaches the scroll strategy from the current overlay.</p>
 </td>
 </tr>
 
