@@ -5285,7 +5285,7 @@
     }());
 
     /**
-     * @title Table with a sticky columns
+     * @title Table with sticky columns
      */
     var TableStickyColumnsExample = /** @class */ (function () {
         function TableStickyColumnsExample() {
@@ -7534,7 +7534,7 @@
             "selectorName": ""
         },
         "table-sticky-columns": {
-            "title": "Table with a sticky columns",
+            "title": "Table with sticky columns",
             "component": TableStickyColumnsExample,
             "additionalFiles": [],
             "selectorName": ""
