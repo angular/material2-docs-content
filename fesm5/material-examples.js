@@ -5307,7 +5307,7 @@ var TableSortingExample = /** @class */ (function () {
 }());
 
 /**
- * @title Table with sticky columns
+ * @title Table with a sticky columns
  */
 var TableStickyColumnsExample = /** @class */ (function () {
     function TableStickyColumnsExample() {
@@ -7556,7 +7556,7 @@ var EXAMPLE_COMPONENTS = {
         "selectorName": ""
     },
     "table-sticky-columns": {
-        "title": "Table with sticky columns",
+        "title": "Table with a sticky columns",
         "component": TableStickyColumnsExample,
         "additionalFiles": [],
         "selectorName": ""

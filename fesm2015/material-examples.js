@@ -6630,7 +6630,7 @@ TableSortingExample.propDecorators = {
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
- * \@title Table with sticky columns
+ * \@title Table with a sticky columns
  */
 class TableStickyColumnsExample {
     constructor() {
@@ -9127,7 +9127,7 @@ const EXAMPLE_COMPONENTS = {
         "selectorName": ""
     },
     "table-sticky-columns": {
-        "title": "Table with sticky columns",
+        "title": "Table with a sticky columns",
         "component": TableStickyColumnsExample,
         "additionalFiles": [],
         "selectorName": ""
