@@ -4072,16 +4072,17 @@ var SliderOverviewExample = /** @class */ (function () {
 var SnackBarComponentExample = /** @class */ (function () {
     function SnackBarComponentExample(snackBar) {
         this.snackBar = snackBar;
+        this.durationInSeconds = 5;
     }
     SnackBarComponentExample.prototype.openSnackBar = function () {
         this.snackBar.openFromComponent(PizzaPartyComponent, {
-            duration: 500,
+            duration: this.durationInSeconds * 1000,
         });
     };
     SnackBarComponentExample = __decorate([
         Component({
             selector: 'snack-bar-component-example',
-            template: "<button mat-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">\n  Pizza party\n</button>\n",
+            template: "<mat-form-field>\n  <mat-label>Snack bar duration (seconds)</mat-label>\n  <input type=\"number\" [(ngModel)]=\"durationInSeconds\" matInput>\n</mat-form-field>\n\n<button mat-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">\n  Pizza party\n</button>\n",
             styles: ["/** No CSS for this example */\n"]
         }),
         __metadata("design:paramtypes", [MatSnackBar])

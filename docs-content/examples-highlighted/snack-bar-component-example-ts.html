@@ -10,11 +10,13 @@
   styleUrls: [<span class="hljs-string">'snack-bar-component-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SnackBarComponentExample {
+  durationInSeconds = <span class="hljs-number">5</span>;
+
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> snackBar: MatSnackBar</span>) {}
 
   openSnackBar() {
     <span class="hljs-keyword">this</span>.snackBar.openFromComponent(PizzaPartyComponent, {
-      duration: <span class="hljs-number">500</span>,
+      duration: <span class="hljs-keyword">this</span>.durationInSeconds * <span class="hljs-number">1000</span>,
     });
   }
 }

@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material';
  */
 export declare class SnackBarComponentExample {
     private snackBar;
+    durationInSeconds: number;
     constructor(snackBar: MatSnackBar);
     openSnackBar(): void;
 }
