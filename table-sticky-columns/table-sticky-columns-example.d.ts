@@ -1,5 +1,5 @@
 /**
- * @title Table with a sticky columns
+ * @title Table with sticky columns
  */
 export declare class TableStickyColumnsExample {
     displayedColumns: string[];
