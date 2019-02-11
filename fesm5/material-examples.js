@@ -3434,8 +3434,8 @@ var RadioNgModelExample = /** @class */ (function () {
     RadioNgModelExample = __decorate([
         Component({
             selector: 'radio-ng-model-example',
-            template: "<mat-radio-group class=\"example-radio-group\" [(ngModel)]=\"favoriteSeason\">\n  <mat-radio-button class=\"example-radio-button\" *ngFor=\"let season of seasons\" [value]=\"season\">\n    {{season}}\n  </mat-radio-button>\n</mat-radio-group>\n<div class=\"example-selected-value\">Your favorite season is: {{favoriteSeason}}</div>\n",
-            styles: [".example-radio-group {\n  display: inline-flex;\n  flex-direction: column;\n}\n\n.example-radio-button {\n  margin: 5px;\n}\n\n.example-selected-value {\n  margin: 15px 0;\n}\n"]
+            template: "<label id=\"example-radio-group-label\">Pick your favorite season</label>\n<mat-radio-group\n  aria-labelledby=\"example-radio-group-label\"\n  class=\"example-radio-group\"\n  [(ngModel)]=\"favoriteSeason\">\n  <mat-radio-button class=\"example-radio-button\" *ngFor=\"let season of seasons\" [value]=\"season\">\n    {{season}}\n  </mat-radio-button>\n</mat-radio-group>\n<div>Your favorite season is: {{favoriteSeason}}</div>\n",
+            styles: [".example-radio-group {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.example-radio-button {\n  margin: 5px;\n}\n"]
         })
     ], RadioNgModelExample);
     return RadioNgModelExample;
@@ -3450,7 +3450,7 @@ var RadioOverviewExample = /** @class */ (function () {
     RadioOverviewExample = __decorate([
         Component({
             selector: 'radio-overview-example',
-            template: "<mat-radio-group>\n  <mat-radio-button value=\"1\">Option 1</mat-radio-button>\n  <mat-radio-button value=\"2\">Option 2</mat-radio-button>\n</mat-radio-group>\n",
+            template: "<mat-radio-group aria-label=\"Select an option\">\n  <mat-radio-button value=\"1\">Option 1</mat-radio-button>\n  <mat-radio-button value=\"2\">Option 2</mat-radio-button>\n</mat-radio-group>\n",
             styles: [".mat-radio-button ~ .mat-radio-button {\n  margin-left: 16px;\n}\n"]
         })
     ], RadioOverviewExample);
