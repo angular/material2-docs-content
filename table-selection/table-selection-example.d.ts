@@ -17,4 +17,6 @@ export declare class TableSelectionExample {
     isAllSelected(): boolean;
     /** Selects all rows if they are not all selected; otherwise clear selection. */
     masterToggle(): void;
+    /** The label for the checkbox on the passed row */
+    checkboxLabel(row?: PeriodicElement): string;
 }
