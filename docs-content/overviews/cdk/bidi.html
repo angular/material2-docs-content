@@ -24,7 +24,7 @@ text direction (RTL or LTR);</p>
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">dir: Directionality</span>) {
     <span class="hljs-keyword">this</span>.isRtl = dir.value === <span class="hljs-string">'rtl'</span>;
 
-    _dirChangeSubscription = dir.change.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">this</span>._dirChangeSubscription = dir.change.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
       <span class="hljs-keyword">this</span>.flipDirection();
     });
   }

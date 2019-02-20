@@ -48,4 +48,12 @@
         <span class="hljs-keyword">this</span>.selection.clear() :
         <span class="hljs-keyword">this</span>.dataSource.data.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> <span class="hljs-keyword">this</span>.selection.select(row));
   }
+
+  <span class="hljs-comment">/** The label for the checkbox on the passed row */</span>
+  checkboxLabel(row?: PeriodicElement): <span class="hljs-built_in">string</span> {
+    <span class="hljs-keyword">if</span> (!row) {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${this.isAllSelected() ? 'select' : 'deselect'}</span> all`</span>;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${this.selection.isSelected(row) ? 'deselect' : 'select'}</span> row <span class="hljs-subst">${row.position + 1}</span>`</span>;
+  }
 }

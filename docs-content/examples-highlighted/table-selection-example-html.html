@@ -5,13 +5,15 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">"$event ? masterToggle() : null"</span>
                     [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"selection.hasValue() &amp;&amp; isAllSelected()"</span>
-                    [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"selection.hasValue() &amp;&amp; !isAllSelected()"</span>&gt;</span>
+                    [<span class="hljs-attr">indeterminate</span>]=<span class="hljs-string">"selection.hasValue() &amp;&amp; !isAllSelected()"</span>
+                    [<span class="hljs-attr">aria-label</span>]=<span class="hljs-string">"checkboxLabel()"</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let row"</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"$event.stopPropagation()"</span>
                     (<span class="hljs-attr">change</span>)=<span class="hljs-string">"$event ? selection.toggle(row) : null"</span>
-                    [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"selection.isSelected(row)"</span>&gt;</span>
+                    [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"selection.isSelected(row)"</span>
+                    [<span class="hljs-attr">aria-label</span>]=<span class="hljs-string">"checkboxLabel(row)"</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
