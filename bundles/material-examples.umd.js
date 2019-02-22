@@ -2919,7 +2919,7 @@
         FormFieldPrefixSuffixExample = tslib_1.__decorate([
             core.Component({
                 selector: 'form-field-prefix-suffix-example',
-                template: "<div class=\"example-container\">\n  <mat-form-field>\n    <input matInput placeholder=\"Enter your password\" [type]=\"hide ? 'password' : 'text'\">\n    <mat-icon matSuffix (click)=\"hide = !hide\">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n  </mat-form-field>\n\n  <mat-form-field>\n    <input matInput placeholder=\"Amount\" type=\"number\" class=\"example-right-align\">\n    <span matPrefix>$&nbsp;</span>\n    <span matSuffix>.00</span>\n  </mat-form-field>\n</div>\n",
+                template: "<div class=\"example-container\">\n  <mat-form-field>\n    <input matInput placeholder=\"Enter your password\" [type]=\"hide ? 'password' : 'text'\">\n    <button mat-icon-button matSuffix (click)=\"hide = !hide\" [attr.aria-label]=\"'Hide password'\" [attr.aria-pressed]=\"hide\">\n    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>\n    </button>\n  </mat-form-field>\n\n  <mat-form-field>\n    <input matInput placeholder=\"Amount\" type=\"number\" class=\"example-right-align\">\n    <span matPrefix>$&nbsp;</span>\n    <span matSuffix>.00</span>\n  </mat-form-field>\n</div>\n",
                 styles: [".example-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container > * {\n  width: 100%;\n}\n\n.example-right-align {\n  text-align: right;\n}\n\ninput.example-right-align::-webkit-outer-spin-button,\ninput.example-right-align::-webkit-inner-spin-button {\n  display: none;\n}\n\ninput.example-right-align {\n  -moz-appearance: textfield;\n}\n"]
             })
         ], FormFieldPrefixSuffixExample);
@@ -2995,7 +2995,7 @@
         IconOverviewExample = tslib_1.__decorate([
             core.Component({
                 selector: 'icon-overview-example',
-                template: "<mat-icon>home</mat-icon>\n",
+                template: "<mat-icon aria-hidden=\"false\" aria-label=\"Example home icon\">home</mat-icon>\n",
                 styles: ["/** No CSS for this example */\n"]
             })
         ], IconOverviewExample);
@@ -3012,7 +3012,7 @@
         IconSvgExample = tslib_1.__decorate([
             core.Component({
                 selector: 'icon-svg-example',
-                template: "<mat-icon svgIcon=\"thumbs-up\"></mat-icon>\n",
+                template: "<mat-icon svgIcon=\"thumbs-up\" aria-hidden=\"false\" aria-label=\"Example thumbs up SVG icon\"></mat-icon>\n",
                 styles: ["/** No CSS for this example */\n"]
             }),
             tslib_1.__metadata("design:paramtypes", [material.MatIconRegistry, platformBrowser.DomSanitizer])
