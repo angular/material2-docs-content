@@ -1,5 +1,5 @@
-import { NgModule, Component, ViewContainerRef, ViewChild, TemplateRef, ChangeDetectionStrategy, ViewEncapsulation, Host, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, ElementRef, Input, ContentChildren } from '@angular/core';
-import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgModule, Component, ViewContainerRef, ViewChild, TemplateRef, ChangeDetectionStrategy, ViewEncapsulation, Host, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, ElementRef, Self, Input, ContentChildren } from '@angular/core';
+import { FormControl, FormBuilder, NgControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ScrollingModule, FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
@@ -3433,17 +3433,20 @@ class MyTelInput {
      * @param {?} fb
      * @param {?} fm
      * @param {?} elRef
+     * @param {?} ngControl
      */
-    constructor(fb, fm, elRef) {
+    constructor(fb, fm, elRef, ngControl) {
         this.fm = fm;
         this.elRef = elRef;
+        this.ngControl = ngControl;
         this.stateChanges = new Subject();
         this.focused = false;
-        this.ngControl = null;
         this.errorState = false;
         this.controlType = 'example-tel-input';
         this.id = `example-tel-input-${MyTelInput.nextId++}`;
         this.describedBy = '';
+        this.onChange = (_) => { };
+        this.onTouched = () => { };
         this._required = false;
         this._disabled = false;
         this.parts = fb.group({
@@ -3452,9 +3455,15 @@ class MyTelInput {
             subscriber: '',
         });
         fm.monitor(elRef, true).subscribe(origin => {
+            if (this.focused && !origin) {
+                this.onTouched();
+            }
             this.focused = !!origin;
             this.stateChanges.next();
         });
+        if (this.ngControl != null) {
+            this.ngControl.valueAccessor = this;
+        }
     }
     /**
      * @return {?}
@@ -3546,12 +3555,46 @@ class MyTelInput {
             (/** @type {?} */ (this.elRef.nativeElement.querySelector('input'))).focus();
         }
     }
+    /**
+     * @param {?} tel
+     * @return {?}
+     */
+    writeValue(tel) {
+        this.value = tel;
+    }
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    registerOnChange(fn) {
+        this.onChange = fn;
+    }
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    registerOnTouched(fn) {
+        this.onTouched = fn;
+    }
+    /**
+     * @param {?} isDisabled
+     * @return {?}
+     */
+    setDisabledState(isDisabled) {
+        this.disabled = isDisabled;
+    }
+    /**
+     * @return {?}
+     */
+    _handleInput() {
+        this.onChange(this.parts.value);
+    }
 }
 MyTelInput.nextId = 0;
 MyTelInput.decorators = [
     { type: Component, args: [{
                 selector: 'example-tel-input',
-                template: "<div [formGroup]=\"parts\" class=\"example-tel-input-container\">\n  <input class=\"example-tel-input-element\" formControlName=\"area\" size=\"3\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\" formControlName=\"exchange\" size=\"3\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\" formControlName=\"subscriber\" size=\"4\">\n</div>\n",
+                template: "<div [formGroup]=\"parts\" class=\"example-tel-input-container\">\n  <input class=\"example-tel-input-element\" formControlName=\"area\" size=\"3\" (input)=\"_handleInput()\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\" formControlName=\"exchange\" size=\"3\" (input)=\"_handleInput()\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\" formControlName=\"subscriber\" size=\"4\" (input)=\"_handleInput()\">\n</div>\n",
                 providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }],
                 host: {
                     '[class.example-floating]': 'shouldLabelFloat',
@@ -3565,7 +3608,8 @@ MyTelInput.decorators = [
 MyTelInput.ctorParameters = () => [
     { type: FormBuilder },
     { type: FocusMonitor },
-    { type: ElementRef }
+    { type: ElementRef },
+    { type: NgControl, decorators: [{ type: Optional }, { type: Self }] }
 ];
 MyTelInput.propDecorators = {
     placeholder: [{ type: Input }],

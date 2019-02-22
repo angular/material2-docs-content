@@ -1,6 +1,6 @@
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { ElementRef, OnDestroy } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ControlValueAccessor, NgControl } from '@angular/forms';
 import { MatFormFieldControl } from '@angular/material';
 import { Subject } from 'rxjs';
 /** @title Form field with custom telephone number input control. */
@@ -14,18 +14,20 @@ export declare class MyTel {
     constructor(area: string, exchange: string, subscriber: string);
 }
 /** Custom `MatFormFieldControl` for telephone number input. */
-export declare class MyTelInput implements MatFormFieldControl<MyTel>, OnDestroy {
+export declare class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyTel>, OnDestroy {
     private fm;
     private elRef;
+    ngControl: NgControl;
     static nextId: number;
     parts: FormGroup;
     stateChanges: Subject<void>;
     focused: boolean;
-    ngControl: null;
     errorState: boolean;
     controlType: string;
     id: string;
     describedBy: string;
+    onChange: (_: any) => void;
+    onTouched: () => void;
     readonly empty: boolean;
     readonly shouldLabelFloat: boolean;
     placeholder: string;
@@ -35,8 +37,13 @@ export declare class MyTelInput implements MatFormFieldControl<MyTel>, OnDestroy
     disabled: boolean;
     private _disabled;
     value: MyTel | null;
-    constructor(fb: FormBuilder, fm: FocusMonitor, elRef: ElementRef<HTMLElement>);
+    constructor(fb: FormBuilder, fm: FocusMonitor, elRef: ElementRef<HTMLElement>, ngControl: NgControl);
     ngOnDestroy(): void;
     setDescribedByIds(ids: string[]): void;
     onContainerClick(event: MouseEvent): void;
+    writeValue(tel: MyTel | null): void;
+    registerOnChange(fn: any): void;
+    registerOnTouched(fn: any): void;
+    setDisabledState(isDisabled: boolean): void;
+    _handleInput(): void;
 }

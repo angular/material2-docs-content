@@ -2685,17 +2685,19 @@
     }());
     /** Custom `MatFormFieldControl` for telephone number input. */
     var MyTelInput = /** @class */ (function () {
-        function MyTelInput(fb, fm, elRef) {
+        function MyTelInput(fb, fm, elRef, ngControl) {
             var _this = this;
             this.fm = fm;
             this.elRef = elRef;
+            this.ngControl = ngControl;
             this.stateChanges = new rxjs.Subject();
             this.focused = false;
-            this.ngControl = null;
             this.errorState = false;
             this.controlType = 'example-tel-input';
             this.id = "example-tel-input-" + MyTelInput_1.nextId++;
             this.describedBy = '';
+            this.onChange = function (_) { };
+            this.onTouched = function () { };
             this._required = false;
             this._disabled = false;
             this.parts = fb.group({
@@ -2704,9 +2706,15 @@
                 subscriber: '',
             });
             fm.monitor(elRef, true).subscribe(function (origin) {
+                if (_this.focused && !origin) {
+                    _this.onTouched();
+                }
                 _this.focused = !!origin;
                 _this.stateChanges.next();
             });
+            if (this.ngControl != null) {
+                this.ngControl.valueAccessor = this;
+            }
         }
         MyTelInput_1 = MyTelInput;
         Object.defineProperty(MyTelInput.prototype, "empty", {
@@ -2778,6 +2786,21 @@
                 this.elRef.nativeElement.querySelector('input').focus();
             }
         };
+        MyTelInput.prototype.writeValue = function (tel) {
+            this.value = tel;
+        };
+        MyTelInput.prototype.registerOnChange = function (fn) {
+            this.onChange = fn;
+        };
+        MyTelInput.prototype.registerOnTouched = function (fn) {
+            this.onTouched = fn;
+        };
+        MyTelInput.prototype.setDisabledState = function (isDisabled) {
+            this.disabled = isDisabled;
+        };
+        MyTelInput.prototype._handleInput = function () {
+            this.onChange(this.parts.value);
+        };
         var MyTelInput_1;
         MyTelInput.nextId = 0;
         tslib_1.__decorate([
@@ -2803,7 +2826,7 @@
         MyTelInput = MyTelInput_1 = tslib_1.__decorate([
             core.Component({
                 selector: 'example-tel-input',
-                template: "<div [formGroup]=\"parts\" class=\"example-tel-input-container\">\n  <input class=\"example-tel-input-element\" formControlName=\"area\" size=\"3\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\" formControlName=\"exchange\" size=\"3\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\" formControlName=\"subscriber\" size=\"4\">\n</div>\n",
+                template: "<div [formGroup]=\"parts\" class=\"example-tel-input-container\">\n  <input class=\"example-tel-input-element\" formControlName=\"area\" size=\"3\" (input)=\"_handleInput()\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\" formControlName=\"exchange\" size=\"3\" (input)=\"_handleInput()\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\" formControlName=\"subscriber\" size=\"4\" (input)=\"_handleInput()\">\n</div>\n",
                 providers: [{ provide: material.MatFormFieldControl, useExisting: MyTelInput_1 }],
                 host: {
                     '[class.example-floating]': 'shouldLabelFloat',
@@ -2812,7 +2835,11 @@
                 },
                 styles: [".example-tel-input-container {\n  display: flex;\n}\n\n.example-tel-input-element {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n:host.example-floating .example-tel-input-spacer {\n  opacity: 1;\n}\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [forms.FormBuilder, a11y.FocusMonitor, core.ElementRef])
+            tslib_1.__param(3, core.Optional()), tslib_1.__param(3, core.Self()),
+            tslib_1.__metadata("design:paramtypes", [forms.FormBuilder,
+                a11y.FocusMonitor,
+                core.ElementRef,
+                forms.NgControl])
         ], MyTelInput);
         return MyTelInput;
     }());
