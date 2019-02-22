@@ -1,5 +1,5 @@
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-chip-list"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-list</span> #<span class="hljs-attr">chipList</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-list</span> #<span class="hljs-attr">chipList</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Fruit selection"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let fruit of fruits"</span> [<span class="hljs-attr">selectable</span>]=<span class="hljs-string">"selectable"</span>
              [<span class="hljs-attr">removable</span>]=<span class="hljs-string">"removable"</span> (<span class="hljs-attr">removed</span>)=<span class="hljs-string">"remove(fruit)"</span>&gt;</span>
       {{fruit.name}}
