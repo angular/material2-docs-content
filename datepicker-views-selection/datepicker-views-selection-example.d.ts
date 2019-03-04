@@ -16,5 +16,5 @@ export declare const MY_FORMATS: {
 export declare class DatepickerViewsSelectionExample {
     date: FormControl;
     chosenYearHandler(normalizedYear: Moment): void;
-    chosenMonthHandler(normlizedMonth: Moment, datepicker: MatDatepicker<Moment>): void;
+    chosenMonthHandler(normalizedMonth: Moment, datepicker: MatDatepicker<Moment>): void;
 }
