@@ -4483,7 +4483,7 @@ var TabGroupCustomLabelExample = /** @class */ (function () {
 }());
 
 /**
- * @title Tag group with dynamic height based on tab contents
+ * @title Tab group with dynamic height based on tab contents
  */
 var TabGroupDynamicHeightExample = /** @class */ (function () {
     function TabGroupDynamicHeightExample() {
@@ -7438,7 +7438,7 @@ var EXAMPLE_COMPONENTS = {
         "selectorName": ""
     },
     "tab-group-dynamic-height": {
-        "title": "Tag group with dynamic height based on tab contents",
+        "title": "Tab group with dynamic height based on tab contents",
         "component": TabGroupDynamicHeightExample,
         "additionalFiles": [],
         "selectorName": ""

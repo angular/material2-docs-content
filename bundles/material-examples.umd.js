@@ -4461,7 +4461,7 @@
     }());
 
     /**
-     * @title Tag group with dynamic height based on tab contents
+     * @title Tab group with dynamic height based on tab contents
      */
     var TabGroupDynamicHeightExample = /** @class */ (function () {
         function TabGroupDynamicHeightExample() {
@@ -7416,7 +7416,7 @@
             "selectorName": ""
         },
         "tab-group-dynamic-height": {
-            "title": "Tag group with dynamic height based on tab contents",
+            "title": "Tab group with dynamic height based on tab contents",
             "component": TabGroupDynamicHeightExample,
             "additionalFiles": [],
             "selectorName": ""

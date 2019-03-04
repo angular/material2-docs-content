@@ -5636,7 +5636,7 @@ TabGroupCustomLabelExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
- * \@title Tag group with dynamic height based on tab contents
+ * \@title Tab group with dynamic height based on tab contents
  */
 class TabGroupDynamicHeightExample {
 }
@@ -9013,7 +9013,7 @@ const EXAMPLE_COMPONENTS = {
         "selectorName": ""
     },
     "tab-group-dynamic-height": {
-        "title": "Tag group with dynamic height based on tab contents",
+        "title": "Tab group with dynamic height based on tab contents",
         "component": TabGroupDynamicHeightExample,
         "additionalFiles": [],
         "selectorName": ""
