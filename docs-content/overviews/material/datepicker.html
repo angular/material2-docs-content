@@ -63,7 +63,7 @@ year, emitted by <code>yearSelected</code> output, will not cause any change in 
 associated <code>&lt;input&gt;</code>.</p>
 <p>The following example uses <code>yearSelected</code> and <code>monthSelected</code> outputs to emulate a month and year
 picker (if you&#39;re not familiar with the usage of <code>MomentDateAdapter</code> and <code>MAT_DATE_FORMATS</code>
-you can <a href="guide/#choosing-a-date-implementation-and-date-format-settings">read more about them</a> below in
+you can <a href="#choosing-a-date-implementation-and-date-format-settings">read more about them</a> below in
 this document to fully understand the example).</p>
 <div material-docs-example="datepicker-views-selection"></div>
 
@@ -77,7 +77,7 @@ application. The <code>NativeDateAdapter</code>, for example, works directly wit
 objects. When using the <code>MomentDateAdapter</code>, however, the values will all be Moment.js instances.
 This use of the adapter pattern allows the datepicker component to work with any arbitrary date
 representation with a custom <code>DateAdapter</code>.
-See <a href="guide/#choosing-a-date-implementation-and-date-format-settings"><em>Choosing a date implementation</em></a>
+See <a href="#choosing-a-date-implementation-and-date-format-settings"><em>Choosing a date implementation</em></a>
 for more information.</p>
 <p>Depending on the <code>DateAdapter</code> being used, the datepicker may automatically deserialize certain date
 formats for you as well. For example, both the <code>NativeDateAdapter</code> and <code>MomentDateAdapter</code> allow
@@ -115,7 +115,7 @@ from advancing the calendar past the <code>month</code> or <code>year</code> (de
 <p>The second way to add date validation is using the <code>matDatepickerFilter</code> property of the datepicker
 input. This property accepts a function of <code>&lt;D&gt; =&gt; boolean</code> (where <code>&lt;D&gt;</code> is the date type used by
 the datepicker, see
-<a href="guide/#choosing-a-date-implementation-and-date-format-settings"><em>Choosing a date implementation</em></a>).
+<a href="#choosing-a-date-implementation-and-date-format-settings"><em>Choosing a date implementation</em></a>).
 A result of <code>true</code> indicates that the date is valid and a result of <code>false</code> indicates that it is
 not. Again this will also disable the dates on the calendar that are invalid. However, one important
 difference between using <code>matDatepickerFilter</code> vs using <code>min</code> or <code>max</code> is that filtering out all
@@ -272,7 +272,7 @@ example:</p>
 requires. This is accomplished by subclassing <code>DateAdapter</code> and providing your subclass as the
 <code>DateAdapter</code> implementation. You will also want to make sure that the <code>MAT_DATE_FORMATS</code> provided
 in your app are formats that can be understood by your date implementation. See
-<a href="guide/#customizing-the-parse-and-display-formats"><em>Customizing the parse and display formats</em></a>for more
+<a href="#customizing-the-parse-and-display-formats"><em>Customizing the parse and display formats</em></a>for more
 information about <code>MAT_DATE_FORMATS</code>. <!-- TODO(mmalerba): Add a guide about this --></p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   imports: [MatDatepickerModule],
@@ -549,7 +549,7 @@ should have a placeholder or be given a meaningful label via <code>aria-label</c
       <p>This error is thrown if you have not provided all of the injectables the datepicker needs to work.
 The easiest way to resolve this is to import the <code>MatNativeDateModule</code> or <code>MatMomentDateModule</code> in
 your application&#39;s root module. See
-<a href="guide/#choosing-a-date-implementation-and-date-format-settings"><em>Choosing a date implementation</em></a>) for
+<a href="#choosing-a-date-implementation-and-date-format-settings"><em>Choosing a date implementation</em></a>) for
 more information.</p>
 
         <h4 id="error-a-matdatepicker-can-only-be-associated-with-a-single-input" class="docs-header-link">
