@@ -35,7 +35,7 @@ TextFieldAutofillMonitorExample.decorators = [
     { type: Component, args: [{
                 selector: 'text-field-autofill-monitor-example',
                 template: "<form>\n  <mat-form-field>\n    <mat-label>First name</mat-label>\n    <input matInput #first>\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field>\n    <mat-label>Last name</mat-label>\n    <input matInput #last>\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n",
-                styles: ["/** No CSS for this example */\n"]
+                styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }] }
 ];
 /** @nocollapse */

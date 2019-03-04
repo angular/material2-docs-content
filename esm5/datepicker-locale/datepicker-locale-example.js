@@ -25,7 +25,7 @@ var DatepickerLocaleExample = /** @class */ (function () {
                 { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
                 { provide: MAT_DATE_FORMATS, useValue: ɵ0 },
             ],
-            styles: ["/** No CSS for this example */\n"]
+            styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
         }),
         tslib_1.__metadata("design:paramtypes", [DateAdapter])
     ], DatepickerLocaleExample);

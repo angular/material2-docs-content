@@ -8,7 +8,7 @@ var DatepickerApiExample = /** @class */ (function () {
         Component({
             selector: 'datepicker-api-example',
             template: "<mat-form-field class=\"example-full-width\">\n  <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a date\">\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>\n<button mat-raised-button (click)=\"picker.open()\">Open</button>\n",
-            styles: ["/** No CSS for this example */\n"]
+            styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
         })
     ], DatepickerApiExample);
     return DatepickerApiExample;

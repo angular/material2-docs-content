@@ -12,7 +12,7 @@ TextFieldAutofillDirectiveExample.decorators = [
     { type: Component, args: [{
                 selector: 'text-field-autofill-directive-example',
                 template: "<form>\n  <mat-form-field>\n    <mat-label>First name</mat-label>\n    <input matInput (cdkAutofill)=\"firstNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field>\n    <mat-label>Last name</mat-label>\n    <input matInput (cdkAutofill)=\"lastNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n",
-                styles: ["/** No CSS for this example */\n"]
+                styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }] }
 ];
 if (false) {

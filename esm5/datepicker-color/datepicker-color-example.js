@@ -8,7 +8,7 @@ var DatepickerColorExample = /** @class */ (function () {
         Component({
             selector: 'datepicker-color-example',
             template: "<mat-form-field color=\"accent\">\n  <mat-label>Inherited calendar color</mat-label>\n  <input matInput [matDatepicker]=\"picker1\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker1\"></mat-datepicker-toggle>\n  <mat-datepicker #picker1></mat-datepicker>\n</mat-form-field>\n\n<mat-form-field color=\"accent\">\n  <mat-label>Custom calendar color</mat-label>\n  <input matInput [matDatepicker]=\"picker2\">\n  <mat-datepicker-toggle matSuffix [for]=\"picker2\"></mat-datepicker-toggle>\n  <mat-datepicker #picker2 color=\"primary\"></mat-datepicker>\n</mat-form-field>\n",
-            styles: ["/** No CSS for this example */\n"]
+            styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
         })
     ], DatepickerColorExample);
     return DatepickerColorExample;

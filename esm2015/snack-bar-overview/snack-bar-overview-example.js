@@ -29,7 +29,7 @@ SnackBarOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'snack-bar-overview-example',
                 template: "<mat-form-field>\n  <input matInput value=\"Disco party!\" placeholder=\"Message\" #message>\n</mat-form-field>\n\n<mat-form-field>\n  <input matInput value=\"Dance\" placeholder=\"Action\" #action>\n</mat-form-field>\n\n<button mat-button (click)=\"openSnackBar(message.value, action.value)\">Show snack-bar</button>\n",
-                styles: ["/** No CSS for this example */\n"]
+                styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }] }
 ];
 /** @nocollapse */
