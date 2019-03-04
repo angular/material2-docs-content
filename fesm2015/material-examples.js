@@ -2851,14 +2851,14 @@ class DatepickerViewsSelectionExample {
         this.date.setValue(ctrlValue);
     }
     /**
-     * @param {?} normlizedMonth
+     * @param {?} normalizedMonth
      * @param {?} datepicker
      * @return {?}
      */
-    chosenMonthHandler(normlizedMonth, datepicker) {
+    chosenMonthHandler(normalizedMonth, datepicker) {
         /** @type {?} */
         const ctrlValue = this.date.value;
-        ctrlValue.month(normlizedMonth.month());
+        ctrlValue.month(normalizedMonth.month());
         this.date.setValue(ctrlValue);
         datepicker.close();
     }

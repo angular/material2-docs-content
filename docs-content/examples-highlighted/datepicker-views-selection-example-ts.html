@@ -51,9 +51,9 @@
     <span class="hljs-keyword">this</span>.date.setValue(ctrlValue);
   }
 
-  chosenMonthHandler(normlizedMonth: Moment, datepicker: MatDatepicker&lt;Moment&gt;) {
+  chosenMonthHandler(normalizedMonth: Moment, datepicker: MatDatepicker&lt;Moment&gt;) {
     <span class="hljs-keyword">const</span> ctrlValue = <span class="hljs-keyword">this</span>.date.value;
-    ctrlValue.month(normlizedMonth.month());
+    ctrlValue.month(normalizedMonth.month());
     <span class="hljs-keyword">this</span>.date.setValue(ctrlValue);
     datepicker.close();
   }

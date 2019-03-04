@@ -2281,9 +2281,9 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
         ctrlValue.year(normalizedYear.year());
         this.date.setValue(ctrlValue);
     };
-    DatepickerViewsSelectionExample.prototype.chosenMonthHandler = function (normlizedMonth, datepicker) {
+    DatepickerViewsSelectionExample.prototype.chosenMonthHandler = function (normalizedMonth, datepicker) {
         var ctrlValue = this.date.value;
-        ctrlValue.month(normlizedMonth.month());
+        ctrlValue.month(normalizedMonth.month());
         this.date.setValue(ctrlValue);
         datepicker.close();
     };
