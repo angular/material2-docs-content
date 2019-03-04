@@ -10,7 +10,7 @@ var ButtonToggleAppearanceExample = /** @class */ (function () {
         Component({
             selector: 'button-toggle-appearance-example',
             template: "<p>\n  Default appearance:\n  <mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n\n<p>\n  Legacy appearance:\n  <mat-button-toggle-group appearance=\"legacy\" name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n",
-            styles: ["/** No CSS for this example */\n"]
+            styles: ["mat-button-toggle-group {\n  margin-left: 12px;\n}\n"]
         })
     ], ButtonToggleAppearanceExample);
     return ButtonToggleAppearanceExample;
