@@ -1,0 +1,29 @@
+<span class="hljs-keyword">import</span> {CdkDragDrop, moveItemInArray} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Vegetable {
+  name: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-comment">/**
+ * @title Chips Drag and Drop
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'chips-drag-drop-example'</span>,
+  templateUrl: <span class="hljs-string">'chips-drag-drop-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'chips-drag-drop-example.css'</span>]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ChipsDragDropExample {
+  vegetables: Vegetable[] = [
+    {name: <span class="hljs-string">'apple'</span>},
+    {name: <span class="hljs-string">'banana'</span>},
+    {name: <span class="hljs-string">'strawberry'</span>},
+    {name: <span class="hljs-string">'orange'</span>},
+    {name: <span class="hljs-string">'kiwi'</span>},
+    {name: <span class="hljs-string">'cherry'</span>},
+  ];
+
+  drop(event: CdkDragDrop&lt;Vegetable[]&gt;) {
+    moveItemInArray(<span class="hljs-keyword">this</span>.vegetables, event.previousIndex, event.currentIndex);
+  }
+}
