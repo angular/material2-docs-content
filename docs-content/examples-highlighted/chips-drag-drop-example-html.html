@@ -1,0 +1,12 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-chip-list</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">"example-chip"</span>
+  <span class="hljs-attr">cdkDropList</span> 
+  <span class="hljs-attr">cdkDropListOrientation</span>=<span class="hljs-string">"horizontal"</span>
+  (<span class="hljs-attr">cdkDropListDropped</span>)=<span class="hljs-string">"drop($event)"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-chip</span>
+    <span class="hljs-attr">class</span>=<span class="hljs-string">"example-box"</span>
+    <span class="hljs-attr">cdkDrag</span>
+    *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let vegetable of vegetables"</span>&gt;</span>
+    {{vegetable.name}}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-chip-list</span>&gt;</span>
