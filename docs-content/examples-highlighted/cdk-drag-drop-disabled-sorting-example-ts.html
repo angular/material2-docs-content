@@ -1,0 +1,37 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDrop, moveItemInArray, transferArrayItem} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
+
+<span class="hljs-comment">/**
+ * @title Drag&amp;Drop disabled sorting
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-drag-drop-disabled-sorting-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-drag-drop-disabled-sorting-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-drag-drop-disabled-sorting-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkDragDropDisabledSortingExample {
+  items = [
+    <span class="hljs-string">'Carrots'</span>,
+    <span class="hljs-string">'Tomatoes'</span>,
+    <span class="hljs-string">'Onions'</span>,
+    <span class="hljs-string">'Apples'</span>,
+    <span class="hljs-string">'Avocados'</span>
+  ];
+
+  basket = [
+    <span class="hljs-string">'Oranges'</span>,
+    <span class="hljs-string">'Bananas'</span>,
+    <span class="hljs-string">'Cucumbers'</span>
+  ];
+
+  drop(event: CdkDragDrop&lt;<span class="hljs-built_in">string</span>[]&gt;) {
+    <span class="hljs-keyword">if</span> (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } <span class="hljs-keyword">else</span> {
+      transferArrayItem(event.previousContainer.data,
+                        event.container.data,
+                        event.previousIndex,
+                        event.currentIndex);
+    }
+  }
+}

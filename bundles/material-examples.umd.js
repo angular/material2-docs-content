@@ -750,6 +750,42 @@
     }());
 
     /**
+     * @title Drag&Drop disabled sorting
+     */
+    var CdkDragDropDisabledSortingExample = /** @class */ (function () {
+        function CdkDragDropDisabledSortingExample() {
+            this.items = [
+                'Carrots',
+                'Tomatoes',
+                'Onions',
+                'Apples',
+                'Avocados'
+            ];
+            this.basket = [
+                'Oranges',
+                'Bananas',
+                'Cucumbers'
+            ];
+        }
+        CdkDragDropDisabledSortingExample.prototype.drop = function (event) {
+            if (event.previousContainer === event.container) {
+                dragDrop.moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+            }
+            else {
+                dragDrop.transferArrayItem(event.previousContainer.data, event.container.data, event.previousIndex, event.currentIndex);
+            }
+        };
+        CdkDragDropDisabledSortingExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-drag-drop-disabled-sorting-example',
+                template: "<div cdkDropListGroup>\n  <div class=\"example-container\">\n    <h2>Available items</h2>\n\n    <div\n      cdkDropList\n      [cdkDropListData]=\"items\"\n      class=\"example-list\"\n      cdkDropListSortingDisabled\n      (cdkDropListDropped)=\"drop($event)\">\n      <div class=\"example-box\" *ngFor=\"let item of items\" cdkDrag>{{item}}</div>\n    </div>\n  </div>\n\n  <div class=\"example-container\">\n    <h2>Shopping basket</h2>\n\n    <div\n      cdkDropList\n      [cdkDropListData]=\"basket\"\n      class=\"example-list\"\n      (cdkDropListDropped)=\"drop($event)\">\n      <div class=\"example-box\" *ngFor=\"let item of basket\" cdkDrag>{{item}}</div>\n    </div>\n  </div>\n</div>\n",
+                styles: [".example-container {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
+            })
+        ], CdkDragDropDisabledSortingExample);
+        return CdkDragDropDisabledSortingExample;
+    }());
+
+    /**
      * @title Drag&Drop disabled
      */
     var CdkDragDropDisabledExample = /** @class */ (function () {
@@ -6634,6 +6670,12 @@
             "additionalFiles": [],
             "selectorName": ""
         },
+        "cdk-drag-drop-disabled-sorting": {
+            "title": "Drag&Drop disabled sorting",
+            "component": CdkDragDropDisabledSortingExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
         "cdk-drag-drop-disabled": {
             "title": "Drag&Drop disabled",
             "component": CdkDragDropDisabledExample,
@@ -7779,6 +7821,7 @@
         CdkDragDropConnectedSortingExample,
         CdkDragDropCustomPlaceholderExample,
         CdkDragDropCustomPreviewExample,
+        CdkDragDropDisabledSortingExample,
         CdkDragDropDisabledExample,
         CdkDragDropEnterPredicateExample,
         CdkDragDropHandleExample,
@@ -8043,203 +8086,204 @@
     exports.ɵangular_material_src_material_examples_examples_t = CdkDragDropConnectedSortingExample;
     exports.ɵangular_material_src_material_examples_examples_u = CdkDragDropCustomPlaceholderExample;
     exports.ɵangular_material_src_material_examples_examples_v = CdkDragDropCustomPreviewExample;
-    exports.ɵangular_material_src_material_examples_examples_w = CdkDragDropDisabledExample;
-    exports.ɵangular_material_src_material_examples_examples_x = CdkDragDropEnterPredicateExample;
-    exports.ɵangular_material_src_material_examples_examples_y = CdkDragDropHandleExample;
-    exports.ɵangular_material_src_material_examples_examples_z = CdkDragDropHorizontalSortingExample;
-    exports.ɵangular_material_src_material_examples_examples_ba = CdkDragDropOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_bb = CdkDragDropRootElementExample;
-    exports.ɵangular_material_src_material_examples_examples_bc = CdkDragDropSortingExample;
-    exports.ɵangular_material_src_material_examples_examples_bd = CdkPlatformOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_be = CdkPortalOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_bf = ComponentPortalExample;
-    exports.ɵangular_material_src_material_examples_examples_bg = CdkTableBasicFlexExample;
-    exports.ɵangular_material_src_material_examples_examples_bh = CdkTableBasicExample;
-    exports.ɵangular_material_src_material_examples_examples_bi = CdkTreeFlatExample;
-    exports.ɵangular_material_src_material_examples_examples_bj = CdkTreeNestedExample;
-    exports.ɵangular_material_src_material_examples_examples_bk = CdkVirtualScrollContextExample;
-    exports.ɵangular_material_src_material_examples_examples_bm = CdkVirtualScrollCustomStrategyExample;
-    exports.ɵangular_material_src_material_examples_examples_bl = CustomVirtualScrollStrategy;
-    exports.ɵangular_material_src_material_examples_examples_bn = CdkVirtualScrollDataSourceExample;
-    exports.ɵangular_material_src_material_examples_examples_bo = CdkVirtualScrollDlExample;
-    exports.ɵangular_material_src_material_examples_examples_bp = CdkVirtualScrollFixedBufferExample;
-    exports.ɵangular_material_src_material_examples_examples_bq = CdkVirtualScrollHorizontalExample;
-    exports.ɵangular_material_src_material_examples_examples_br = CdkVirtualScrollOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_bs = CdkVirtualScrollTemplateCacheExample;
-    exports.ɵangular_material_src_material_examples_examples_bt = CheckboxConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_bu = CheckboxOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_bv = ChipsAutocompleteExample;
-    exports.ɵangular_material_src_material_examples_examples_bw = ChipsDragDropExample;
-    exports.ɵangular_material_src_material_examples_examples_bx = ChipsInputExample;
-    exports.ɵangular_material_src_material_examples_examples_by = ChipsOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_bz = ChipsStackedExample;
-    exports.ɵangular_material_src_material_examples_examples_ca = DatepickerApiExample;
-    exports.ɵangular_material_src_material_examples_examples_cb = DatepickerColorExample;
-    exports.ɵangular_material_src_material_examples_examples_cc = DatepickerCustomHeaderExample;
-    exports.ɵangular_material_src_material_examples_examples_cd = ExampleHeader;
-    exports.ɵangular_material_src_material_examples_examples_ce = DatepickerCustomIconExample;
-    exports.ɵangular_material_src_material_examples_examples_cf = DatepickerDateClassExample;
-    exports.ɵangular_material_src_material_examples_examples_cg = DatepickerDisabledExample;
-    exports.ɵangular_material_src_material_examples_examples_ch = DatepickerEventsExample;
-    exports.ɵangular_material_src_material_examples_examples_ci = DatepickerFilterExample;
-    exports.ɵangular_material_src_material_examples_examples_ck = DatepickerFormatsExample;
-    exports.ɵangular_material_src_material_examples_examples_cj = MY_FORMATS;
-    exports.ɵangular_material_src_material_examples_examples_cl = DatepickerLocaleExample;
-    exports.ɵangular_material_src_material_examples_examples_cm = DatepickerMinMaxExample;
-    exports.ɵangular_material_src_material_examples_examples_cn = DatepickerMomentExample;
-    exports.ɵangular_material_src_material_examples_examples_co = DatepickerStartViewExample;
-    exports.ɵangular_material_src_material_examples_examples_cp = DatepickerTouchExample;
-    exports.ɵangular_material_src_material_examples_examples_cq = DatepickerValueExample;
-    exports.ɵangular_material_src_material_examples_examples_cs = DatepickerViewsSelectionExample;
-    exports.ɵangular_material_src_material_examples_examples_cr = MY_FORMATS$1;
-    exports.ɵangular_material_src_material_examples_examples_ct = DialogContentExample;
-    exports.ɵangular_material_src_material_examples_examples_cu = DialogContentExampleDialog;
-    exports.ɵangular_material_src_material_examples_examples_cv = DialogDataExample;
-    exports.ɵangular_material_src_material_examples_examples_cw = DialogDataExampleDialog;
-    exports.ɵangular_material_src_material_examples_examples_cx = DialogElementsExample;
-    exports.ɵangular_material_src_material_examples_examples_cy = DialogElementsExampleDialog;
-    exports.ɵangular_material_src_material_examples_examples_cz = DialogOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_da = DialogOverviewExampleDialog;
-    exports.ɵangular_material_src_material_examples_examples_db = DividerOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_dc = ElevationOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_dd = ExpansionExpandCollapseAllExample;
-    exports.ɵangular_material_src_material_examples_examples_de = ExpansionStepsExample;
-    exports.ɵangular_material_src_material_examples_examples_df = FocusMonitorDirectivesExample;
-    exports.ɵangular_material_src_material_examples_examples_dg = FocusMonitorFocusViaExample;
-    exports.ɵangular_material_src_material_examples_examples_dh = FocusMonitorOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_di = FormFieldAppearanceExample;
-    exports.ɵangular_material_src_material_examples_examples_dj = FormFieldCustomControlExample;
-    exports.ɵangular_material_src_material_examples_examples_dk = MyTelInput;
-    exports.ɵangular_material_src_material_examples_examples_dl = FormFieldErrorExample;
-    exports.ɵangular_material_src_material_examples_examples_dm = FormFieldHintExample;
-    exports.ɵangular_material_src_material_examples_examples_dn = FormFieldLabelExample;
-    exports.ɵangular_material_src_material_examples_examples_do = FormFieldOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_dp = FormFieldPrefixSuffixExample;
-    exports.ɵangular_material_src_material_examples_examples_dq = FormFieldThemingExample;
-    exports.ɵangular_material_src_material_examples_examples_dr = GridListDynamicExample;
-    exports.ɵangular_material_src_material_examples_examples_ds = GridListOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_dt = IconOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_du = IconSvgExample;
-    exports.ɵangular_material_src_material_examples_examples_dv = InputClearableExample;
-    exports.ɵangular_material_src_material_examples_examples_dw = InputErrorStateMatcherExample;
-    exports.ɵangular_material_src_material_examples_examples_dx = InputErrorsExample;
-    exports.ɵangular_material_src_material_examples_examples_dy = InputFormExample;
-    exports.ɵangular_material_src_material_examples_examples_dz = InputHintExample;
-    exports.ɵangular_material_src_material_examples_examples_ea = InputOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_eb = InputPrefixSuffixExample;
-    exports.ɵangular_material_src_material_examples_examples_ec = ListSectionsExample;
-    exports.ɵangular_material_src_material_examples_examples_ed = ListSelectionExample;
-    exports.ɵangular_material_src_material_examples_examples_ik = ExampleMaterialModule;
-    exports.ɵangular_material_src_material_examples_examples_ee = MenuIconsExample;
-    exports.ɵangular_material_src_material_examples_examples_ef = MenuOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_eg = NestedMenuExample;
-    exports.ɵangular_material_src_material_examples_examples_eh = PaginatorConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_ei = PaginatorOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ej = ProgressBarBufferExample;
-    exports.ɵangular_material_src_material_examples_examples_ek = ProgressBarConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_el = ProgressBarDeterminateExample;
-    exports.ɵangular_material_src_material_examples_examples_em = ProgressBarIndeterminateExample;
-    exports.ɵangular_material_src_material_examples_examples_en = ProgressBarQueryExample;
-    exports.ɵangular_material_src_material_examples_examples_eo = ProgressSpinnerConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_ep = ProgressSpinnerOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_eq = RadioNgModelExample;
-    exports.ɵangular_material_src_material_examples_examples_er = RadioOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_es = RippleOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_et = SelectCustomTriggerExample;
-    exports.ɵangular_material_src_material_examples_examples_eu = SelectDisabledExample;
-    exports.ɵangular_material_src_material_examples_examples_ev = SelectErrorStateMatcherExample;
-    exports.ɵangular_material_src_material_examples_examples_ew = SelectFormExample;
-    exports.ɵangular_material_src_material_examples_examples_ex = SelectHintErrorExample;
-    exports.ɵangular_material_src_material_examples_examples_ey = SelectMultipleExample;
-    exports.ɵangular_material_src_material_examples_examples_ez = SelectNoRippleExample;
-    exports.ɵangular_material_src_material_examples_examples_fa = SelectOptgroupExample;
-    exports.ɵangular_material_src_material_examples_examples_fb = SelectOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fc = SelectPanelClassExample;
-    exports.ɵangular_material_src_material_examples_examples_fd = SelectResetExample;
-    exports.ɵangular_material_src_material_examples_examples_fe = SelectValueBindingExample;
-    exports.ɵangular_material_src_material_examples_examples_ff = SidenavAutosizeExample;
-    exports.ɵangular_material_src_material_examples_examples_fg = SidenavBackdropExample;
-    exports.ɵangular_material_src_material_examples_examples_fh = SidenavDisableCloseExample;
-    exports.ɵangular_material_src_material_examples_examples_fi = SidenavDrawerOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fj = SidenavFixedExample;
-    exports.ɵangular_material_src_material_examples_examples_fk = SidenavModeExample;
-    exports.ɵangular_material_src_material_examples_examples_fl = SidenavOpenCloseExample;
-    exports.ɵangular_material_src_material_examples_examples_fm = SidenavOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fn = SidenavPositionExample;
-    exports.ɵangular_material_src_material_examples_examples_fo = SidenavResponsiveExample;
-    exports.ɵangular_material_src_material_examples_examples_fp = SlideToggleConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_fq = SlideToggleFormsExample;
-    exports.ɵangular_material_src_material_examples_examples_fr = SlideToggleOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fs = SliderConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_ft = SliderFormattingExample;
-    exports.ɵangular_material_src_material_examples_examples_fu = SliderOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fw = PizzaPartyComponent;
-    exports.ɵangular_material_src_material_examples_examples_fv = SnackBarComponentExample;
-    exports.ɵangular_material_src_material_examples_examples_fx = SnackBarOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fy = SnackBarPositionExample;
-    exports.ɵangular_material_src_material_examples_examples_fz = SortOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ga = StepperEditableExample;
-    exports.ɵangular_material_src_material_examples_examples_gb = StepperErrorsExample;
-    exports.ɵangular_material_src_material_examples_examples_gc = StepperLabelPositionBottomExample;
-    exports.ɵangular_material_src_material_examples_examples_gd = StepperOptionalExample;
-    exports.ɵangular_material_src_material_examples_examples_ge = StepperStatesExample;
-    exports.ɵangular_material_src_material_examples_examples_gf = StepperVerticalExample;
-    exports.ɵangular_material_src_material_examples_examples_gg = TabGroupAlignExample;
-    exports.ɵangular_material_src_material_examples_examples_gh = TabGroupAnimationsExample;
-    exports.ɵangular_material_src_material_examples_examples_gi = TabGroupAsyncExample;
-    exports.ɵangular_material_src_material_examples_examples_gj = TabGroupBasicExample;
-    exports.ɵangular_material_src_material_examples_examples_gk = TabGroupCustomLabelExample;
-    exports.ɵangular_material_src_material_examples_examples_gl = TabGroupDynamicHeightExample;
-    exports.ɵangular_material_src_material_examples_examples_gm = TabGroupDynamicExample;
-    exports.ɵangular_material_src_material_examples_examples_gn = TabGroupHeaderBelowExample;
-    exports.ɵangular_material_src_material_examples_examples_go = TabGroupLazyLoadedExample;
-    exports.ɵangular_material_src_material_examples_examples_gp = TabGroupStretchedExample;
-    exports.ɵangular_material_src_material_examples_examples_gq = TabGroupThemeExample;
-    exports.ɵangular_material_src_material_examples_examples_gr = TabNavBarBasicExample;
-    exports.ɵangular_material_src_material_examples_examples_gs = TableBasicFlexExample;
-    exports.ɵangular_material_src_material_examples_examples_gt = TableBasicExample;
-    exports.ɵangular_material_src_material_examples_examples_gu = TableDynamicColumnsExample;
-    exports.ɵangular_material_src_material_examples_examples_gv = TableExpandableRowsExample;
-    exports.ɵangular_material_src_material_examples_examples_gw = TableFilteringExample;
-    exports.ɵangular_material_src_material_examples_examples_gx = TableFooterRowExample;
-    exports.ɵangular_material_src_material_examples_examples_gy = TableHttpExample;
-    exports.ɵangular_material_src_material_examples_examples_gz = TableMultipleHeaderFooterExample;
-    exports.ɵangular_material_src_material_examples_examples_ha = TableOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_hb = TablePaginationExample;
-    exports.ɵangular_material_src_material_examples_examples_hc = TableRowContextExample;
-    exports.ɵangular_material_src_material_examples_examples_hd = TableSelectionExample;
-    exports.ɵangular_material_src_material_examples_examples_hf = SimpleColumn;
-    exports.ɵangular_material_src_material_examples_examples_he = TableSimpleColumnExample;
-    exports.ɵangular_material_src_material_examples_examples_hg = TableSortingExample;
-    exports.ɵangular_material_src_material_examples_examples_hh = TableStickyColumnsExample;
-    exports.ɵangular_material_src_material_examples_examples_hi = TableStickyComplexFlexExample;
-    exports.ɵangular_material_src_material_examples_examples_hj = TableStickyComplexExample;
-    exports.ɵangular_material_src_material_examples_examples_hk = TableStickyFooterExample;
-    exports.ɵangular_material_src_material_examples_examples_hl = TableStickyHeaderExample;
-    exports.ɵangular_material_src_material_examples_examples_hm = TableWrappedExample;
-    exports.ɵangular_material_src_material_examples_examples_hn = WrapperTable;
-    exports.ɵangular_material_src_material_examples_examples_ho = TextFieldAutofillDirectiveExample;
-    exports.ɵangular_material_src_material_examples_examples_hp = TextFieldAutofillMonitorExample;
-    exports.ɵangular_material_src_material_examples_examples_hq = TextFieldAutosizeTextareaExample;
-    exports.ɵangular_material_src_material_examples_examples_hr = ToolbarOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_hs = TooltipAutoHideExample;
-    exports.ɵangular_material_src_material_examples_examples_ht = TooltipCustomClassExample;
-    exports.ɵangular_material_src_material_examples_examples_hu = TooltipDelayExample;
-    exports.ɵangular_material_src_material_examples_examples_hv = TooltipDisabledExample;
-    exports.ɵangular_material_src_material_examples_examples_hw = TooltipManualExample;
-    exports.ɵangular_material_src_material_examples_examples_hx = TooltipMessageExample;
-    exports.ɵangular_material_src_material_examples_examples_hz = TooltipModifiedDefaultsExample;
-    exports.ɵangular_material_src_material_examples_examples_hy = myCustomTooltipDefaults;
-    exports.ɵangular_material_src_material_examples_examples_ia = TooltipOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ib = TooltipPositionExample;
-    exports.ɵangular_material_src_material_examples_examples_ic = ChecklistDatabase;
-    exports.ɵangular_material_src_material_examples_examples_id = TreeChecklistExample;
-    exports.ɵangular_material_src_material_examples_examples_ie = DynamicDatabase;
-    exports.ɵangular_material_src_material_examples_examples_if = TreeDynamicExample;
-    exports.ɵangular_material_src_material_examples_examples_ig = TreeFlatOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ih = LoadmoreDatabase;
-    exports.ɵangular_material_src_material_examples_examples_ii = TreeLoadmoreExample;
-    exports.ɵangular_material_src_material_examples_examples_ij = TreeNestedOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_w = CdkDragDropDisabledSortingExample;
+    exports.ɵangular_material_src_material_examples_examples_x = CdkDragDropDisabledExample;
+    exports.ɵangular_material_src_material_examples_examples_y = CdkDragDropEnterPredicateExample;
+    exports.ɵangular_material_src_material_examples_examples_z = CdkDragDropHandleExample;
+    exports.ɵangular_material_src_material_examples_examples_ba = CdkDragDropHorizontalSortingExample;
+    exports.ɵangular_material_src_material_examples_examples_bb = CdkDragDropOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_bc = CdkDragDropRootElementExample;
+    exports.ɵangular_material_src_material_examples_examples_bd = CdkDragDropSortingExample;
+    exports.ɵangular_material_src_material_examples_examples_be = CdkPlatformOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_bf = CdkPortalOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_bg = ComponentPortalExample;
+    exports.ɵangular_material_src_material_examples_examples_bh = CdkTableBasicFlexExample;
+    exports.ɵangular_material_src_material_examples_examples_bi = CdkTableBasicExample;
+    exports.ɵangular_material_src_material_examples_examples_bj = CdkTreeFlatExample;
+    exports.ɵangular_material_src_material_examples_examples_bk = CdkTreeNestedExample;
+    exports.ɵangular_material_src_material_examples_examples_bl = CdkVirtualScrollContextExample;
+    exports.ɵangular_material_src_material_examples_examples_bn = CdkVirtualScrollCustomStrategyExample;
+    exports.ɵangular_material_src_material_examples_examples_bm = CustomVirtualScrollStrategy;
+    exports.ɵangular_material_src_material_examples_examples_bo = CdkVirtualScrollDataSourceExample;
+    exports.ɵangular_material_src_material_examples_examples_bp = CdkVirtualScrollDlExample;
+    exports.ɵangular_material_src_material_examples_examples_bq = CdkVirtualScrollFixedBufferExample;
+    exports.ɵangular_material_src_material_examples_examples_br = CdkVirtualScrollHorizontalExample;
+    exports.ɵangular_material_src_material_examples_examples_bs = CdkVirtualScrollOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_bt = CdkVirtualScrollTemplateCacheExample;
+    exports.ɵangular_material_src_material_examples_examples_bu = CheckboxConfigurableExample;
+    exports.ɵangular_material_src_material_examples_examples_bv = CheckboxOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_bw = ChipsAutocompleteExample;
+    exports.ɵangular_material_src_material_examples_examples_bx = ChipsDragDropExample;
+    exports.ɵangular_material_src_material_examples_examples_by = ChipsInputExample;
+    exports.ɵangular_material_src_material_examples_examples_bz = ChipsOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_ca = ChipsStackedExample;
+    exports.ɵangular_material_src_material_examples_examples_cb = DatepickerApiExample;
+    exports.ɵangular_material_src_material_examples_examples_cc = DatepickerColorExample;
+    exports.ɵangular_material_src_material_examples_examples_cd = DatepickerCustomHeaderExample;
+    exports.ɵangular_material_src_material_examples_examples_ce = ExampleHeader;
+    exports.ɵangular_material_src_material_examples_examples_cf = DatepickerCustomIconExample;
+    exports.ɵangular_material_src_material_examples_examples_cg = DatepickerDateClassExample;
+    exports.ɵangular_material_src_material_examples_examples_ch = DatepickerDisabledExample;
+    exports.ɵangular_material_src_material_examples_examples_ci = DatepickerEventsExample;
+    exports.ɵangular_material_src_material_examples_examples_cj = DatepickerFilterExample;
+    exports.ɵangular_material_src_material_examples_examples_cl = DatepickerFormatsExample;
+    exports.ɵangular_material_src_material_examples_examples_ck = MY_FORMATS;
+    exports.ɵangular_material_src_material_examples_examples_cm = DatepickerLocaleExample;
+    exports.ɵangular_material_src_material_examples_examples_cn = DatepickerMinMaxExample;
+    exports.ɵangular_material_src_material_examples_examples_co = DatepickerMomentExample;
+    exports.ɵangular_material_src_material_examples_examples_cp = DatepickerStartViewExample;
+    exports.ɵangular_material_src_material_examples_examples_cq = DatepickerTouchExample;
+    exports.ɵangular_material_src_material_examples_examples_cr = DatepickerValueExample;
+    exports.ɵangular_material_src_material_examples_examples_ct = DatepickerViewsSelectionExample;
+    exports.ɵangular_material_src_material_examples_examples_cs = MY_FORMATS$1;
+    exports.ɵangular_material_src_material_examples_examples_cu = DialogContentExample;
+    exports.ɵangular_material_src_material_examples_examples_cv = DialogContentExampleDialog;
+    exports.ɵangular_material_src_material_examples_examples_cw = DialogDataExample;
+    exports.ɵangular_material_src_material_examples_examples_cx = DialogDataExampleDialog;
+    exports.ɵangular_material_src_material_examples_examples_cy = DialogElementsExample;
+    exports.ɵangular_material_src_material_examples_examples_cz = DialogElementsExampleDialog;
+    exports.ɵangular_material_src_material_examples_examples_da = DialogOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_db = DialogOverviewExampleDialog;
+    exports.ɵangular_material_src_material_examples_examples_dc = DividerOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_dd = ElevationOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_de = ExpansionExpandCollapseAllExample;
+    exports.ɵangular_material_src_material_examples_examples_df = ExpansionStepsExample;
+    exports.ɵangular_material_src_material_examples_examples_dg = FocusMonitorDirectivesExample;
+    exports.ɵangular_material_src_material_examples_examples_dh = FocusMonitorFocusViaExample;
+    exports.ɵangular_material_src_material_examples_examples_di = FocusMonitorOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_dj = FormFieldAppearanceExample;
+    exports.ɵangular_material_src_material_examples_examples_dk = FormFieldCustomControlExample;
+    exports.ɵangular_material_src_material_examples_examples_dl = MyTelInput;
+    exports.ɵangular_material_src_material_examples_examples_dm = FormFieldErrorExample;
+    exports.ɵangular_material_src_material_examples_examples_dn = FormFieldHintExample;
+    exports.ɵangular_material_src_material_examples_examples_do = FormFieldLabelExample;
+    exports.ɵangular_material_src_material_examples_examples_dp = FormFieldOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_dq = FormFieldPrefixSuffixExample;
+    exports.ɵangular_material_src_material_examples_examples_dr = FormFieldThemingExample;
+    exports.ɵangular_material_src_material_examples_examples_ds = GridListDynamicExample;
+    exports.ɵangular_material_src_material_examples_examples_dt = GridListOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_du = IconOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_dv = IconSvgExample;
+    exports.ɵangular_material_src_material_examples_examples_dw = InputClearableExample;
+    exports.ɵangular_material_src_material_examples_examples_dx = InputErrorStateMatcherExample;
+    exports.ɵangular_material_src_material_examples_examples_dy = InputErrorsExample;
+    exports.ɵangular_material_src_material_examples_examples_dz = InputFormExample;
+    exports.ɵangular_material_src_material_examples_examples_ea = InputHintExample;
+    exports.ɵangular_material_src_material_examples_examples_eb = InputOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_ec = InputPrefixSuffixExample;
+    exports.ɵangular_material_src_material_examples_examples_ed = ListSectionsExample;
+    exports.ɵangular_material_src_material_examples_examples_ee = ListSelectionExample;
+    exports.ɵangular_material_src_material_examples_examples_il = ExampleMaterialModule;
+    exports.ɵangular_material_src_material_examples_examples_ef = MenuIconsExample;
+    exports.ɵangular_material_src_material_examples_examples_eg = MenuOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_eh = NestedMenuExample;
+    exports.ɵangular_material_src_material_examples_examples_ei = PaginatorConfigurableExample;
+    exports.ɵangular_material_src_material_examples_examples_ej = PaginatorOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_ek = ProgressBarBufferExample;
+    exports.ɵangular_material_src_material_examples_examples_el = ProgressBarConfigurableExample;
+    exports.ɵangular_material_src_material_examples_examples_em = ProgressBarDeterminateExample;
+    exports.ɵangular_material_src_material_examples_examples_en = ProgressBarIndeterminateExample;
+    exports.ɵangular_material_src_material_examples_examples_eo = ProgressBarQueryExample;
+    exports.ɵangular_material_src_material_examples_examples_ep = ProgressSpinnerConfigurableExample;
+    exports.ɵangular_material_src_material_examples_examples_eq = ProgressSpinnerOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_er = RadioNgModelExample;
+    exports.ɵangular_material_src_material_examples_examples_es = RadioOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_et = RippleOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_eu = SelectCustomTriggerExample;
+    exports.ɵangular_material_src_material_examples_examples_ev = SelectDisabledExample;
+    exports.ɵangular_material_src_material_examples_examples_ew = SelectErrorStateMatcherExample;
+    exports.ɵangular_material_src_material_examples_examples_ex = SelectFormExample;
+    exports.ɵangular_material_src_material_examples_examples_ey = SelectHintErrorExample;
+    exports.ɵangular_material_src_material_examples_examples_ez = SelectMultipleExample;
+    exports.ɵangular_material_src_material_examples_examples_fa = SelectNoRippleExample;
+    exports.ɵangular_material_src_material_examples_examples_fb = SelectOptgroupExample;
+    exports.ɵangular_material_src_material_examples_examples_fc = SelectOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_fd = SelectPanelClassExample;
+    exports.ɵangular_material_src_material_examples_examples_fe = SelectResetExample;
+    exports.ɵangular_material_src_material_examples_examples_ff = SelectValueBindingExample;
+    exports.ɵangular_material_src_material_examples_examples_fg = SidenavAutosizeExample;
+    exports.ɵangular_material_src_material_examples_examples_fh = SidenavBackdropExample;
+    exports.ɵangular_material_src_material_examples_examples_fi = SidenavDisableCloseExample;
+    exports.ɵangular_material_src_material_examples_examples_fj = SidenavDrawerOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_fk = SidenavFixedExample;
+    exports.ɵangular_material_src_material_examples_examples_fl = SidenavModeExample;
+    exports.ɵangular_material_src_material_examples_examples_fm = SidenavOpenCloseExample;
+    exports.ɵangular_material_src_material_examples_examples_fn = SidenavOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_fo = SidenavPositionExample;
+    exports.ɵangular_material_src_material_examples_examples_fp = SidenavResponsiveExample;
+    exports.ɵangular_material_src_material_examples_examples_fq = SlideToggleConfigurableExample;
+    exports.ɵangular_material_src_material_examples_examples_fr = SlideToggleFormsExample;
+    exports.ɵangular_material_src_material_examples_examples_fs = SlideToggleOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_ft = SliderConfigurableExample;
+    exports.ɵangular_material_src_material_examples_examples_fu = SliderFormattingExample;
+    exports.ɵangular_material_src_material_examples_examples_fv = SliderOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_fx = PizzaPartyComponent;
+    exports.ɵangular_material_src_material_examples_examples_fw = SnackBarComponentExample;
+    exports.ɵangular_material_src_material_examples_examples_fy = SnackBarOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_fz = SnackBarPositionExample;
+    exports.ɵangular_material_src_material_examples_examples_ga = SortOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_gb = StepperEditableExample;
+    exports.ɵangular_material_src_material_examples_examples_gc = StepperErrorsExample;
+    exports.ɵangular_material_src_material_examples_examples_gd = StepperLabelPositionBottomExample;
+    exports.ɵangular_material_src_material_examples_examples_ge = StepperOptionalExample;
+    exports.ɵangular_material_src_material_examples_examples_gf = StepperStatesExample;
+    exports.ɵangular_material_src_material_examples_examples_gg = StepperVerticalExample;
+    exports.ɵangular_material_src_material_examples_examples_gh = TabGroupAlignExample;
+    exports.ɵangular_material_src_material_examples_examples_gi = TabGroupAnimationsExample;
+    exports.ɵangular_material_src_material_examples_examples_gj = TabGroupAsyncExample;
+    exports.ɵangular_material_src_material_examples_examples_gk = TabGroupBasicExample;
+    exports.ɵangular_material_src_material_examples_examples_gl = TabGroupCustomLabelExample;
+    exports.ɵangular_material_src_material_examples_examples_gm = TabGroupDynamicHeightExample;
+    exports.ɵangular_material_src_material_examples_examples_gn = TabGroupDynamicExample;
+    exports.ɵangular_material_src_material_examples_examples_go = TabGroupHeaderBelowExample;
+    exports.ɵangular_material_src_material_examples_examples_gp = TabGroupLazyLoadedExample;
+    exports.ɵangular_material_src_material_examples_examples_gq = TabGroupStretchedExample;
+    exports.ɵangular_material_src_material_examples_examples_gr = TabGroupThemeExample;
+    exports.ɵangular_material_src_material_examples_examples_gs = TabNavBarBasicExample;
+    exports.ɵangular_material_src_material_examples_examples_gt = TableBasicFlexExample;
+    exports.ɵangular_material_src_material_examples_examples_gu = TableBasicExample;
+    exports.ɵangular_material_src_material_examples_examples_gv = TableDynamicColumnsExample;
+    exports.ɵangular_material_src_material_examples_examples_gw = TableExpandableRowsExample;
+    exports.ɵangular_material_src_material_examples_examples_gx = TableFilteringExample;
+    exports.ɵangular_material_src_material_examples_examples_gy = TableFooterRowExample;
+    exports.ɵangular_material_src_material_examples_examples_gz = TableHttpExample;
+    exports.ɵangular_material_src_material_examples_examples_ha = TableMultipleHeaderFooterExample;
+    exports.ɵangular_material_src_material_examples_examples_hb = TableOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_hc = TablePaginationExample;
+    exports.ɵangular_material_src_material_examples_examples_hd = TableRowContextExample;
+    exports.ɵangular_material_src_material_examples_examples_he = TableSelectionExample;
+    exports.ɵangular_material_src_material_examples_examples_hg = SimpleColumn;
+    exports.ɵangular_material_src_material_examples_examples_hf = TableSimpleColumnExample;
+    exports.ɵangular_material_src_material_examples_examples_hh = TableSortingExample;
+    exports.ɵangular_material_src_material_examples_examples_hi = TableStickyColumnsExample;
+    exports.ɵangular_material_src_material_examples_examples_hj = TableStickyComplexFlexExample;
+    exports.ɵangular_material_src_material_examples_examples_hk = TableStickyComplexExample;
+    exports.ɵangular_material_src_material_examples_examples_hl = TableStickyFooterExample;
+    exports.ɵangular_material_src_material_examples_examples_hm = TableStickyHeaderExample;
+    exports.ɵangular_material_src_material_examples_examples_hn = TableWrappedExample;
+    exports.ɵangular_material_src_material_examples_examples_ho = WrapperTable;
+    exports.ɵangular_material_src_material_examples_examples_hp = TextFieldAutofillDirectiveExample;
+    exports.ɵangular_material_src_material_examples_examples_hq = TextFieldAutofillMonitorExample;
+    exports.ɵangular_material_src_material_examples_examples_hr = TextFieldAutosizeTextareaExample;
+    exports.ɵangular_material_src_material_examples_examples_hs = ToolbarOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_ht = TooltipAutoHideExample;
+    exports.ɵangular_material_src_material_examples_examples_hu = TooltipCustomClassExample;
+    exports.ɵangular_material_src_material_examples_examples_hv = TooltipDelayExample;
+    exports.ɵangular_material_src_material_examples_examples_hw = TooltipDisabledExample;
+    exports.ɵangular_material_src_material_examples_examples_hx = TooltipManualExample;
+    exports.ɵangular_material_src_material_examples_examples_hy = TooltipMessageExample;
+    exports.ɵangular_material_src_material_examples_examples_ia = TooltipModifiedDefaultsExample;
+    exports.ɵangular_material_src_material_examples_examples_hz = myCustomTooltipDefaults;
+    exports.ɵangular_material_src_material_examples_examples_ib = TooltipOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_ic = TooltipPositionExample;
+    exports.ɵangular_material_src_material_examples_examples_id = ChecklistDatabase;
+    exports.ɵangular_material_src_material_examples_examples_ie = TreeChecklistExample;
+    exports.ɵangular_material_src_material_examples_examples_if = DynamicDatabase;
+    exports.ɵangular_material_src_material_examples_examples_ig = TreeDynamicExample;
+    exports.ɵangular_material_src_material_examples_examples_ih = TreeFlatOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_ii = LoadmoreDatabase;
+    exports.ɵangular_material_src_material_examples_examples_ij = TreeLoadmoreExample;
+    exports.ɵangular_material_src_material_examples_examples_ik = TreeNestedOverviewExample;
     exports.ExampleData = ExampleData;
     exports.EXAMPLE_COMPONENTS = EXAMPLE_COMPONENTS;
     exports.EXAMPLE_LIST = EXAMPLE_LIST;

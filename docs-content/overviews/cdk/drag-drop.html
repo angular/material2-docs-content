@@ -237,4 +237,16 @@ be allowed into the new container.</p>
 using the <code>cdkDropListDisabled</code> input on a <code>cdkDropList</code> or a particular handle via
 <code>cdkDragHandleDisabled</code> on <code>cdkDragHandle</code>.</p>
 <div material-docs-example="cdk-drag-drop-disabled"></div>
+
+
+        <h3 id="disabled-sorting" class="docs-header-link">
+          <span header-link="disabled-sorting"></span>
+          Disabled sorting
+        </h3>
+      <p>There are cases where draggable items can be dragged out of one list into another, however
+the user shouldn&#39;t be able to sort them within the source list. For these cases you can set the
+<code>cdkDropListSortingDisabled</code> input which will prevent the items in a <code>cdkDropList</code> from sorting,
+in addition to preserving the dragged item&#39;s initial position in the source list, if the user
+decides to return the item.</p>
+<div material-docs-example="cdk-drag-drop-disabled-sorting"></div>
 </div>
