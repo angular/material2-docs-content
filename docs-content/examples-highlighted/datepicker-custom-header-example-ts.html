@@ -2,7 +2,6 @@
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
-  Host,
   Inject,
   OnDestroy
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
@@ -66,10 +65,9 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ExampleHeader&lt;D&gt; <span class="hljs-keyword">implements</span> OnDestroy {
   <span class="hljs-keyword">private</span> destroyed = <span class="hljs-keyword">new</span> Subject&lt;<span class="hljs-built_in">void</span>&gt;();
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Host</span>() <span class="hljs-keyword">private</span> calendar: MatCalendar&lt;D&gt;,
-              <span class="hljs-keyword">private</span> dateAdapter: DateAdapter&lt;D&gt;,
-              <span class="hljs-meta">@Inject</span>(MAT_DATE_FORMATS) <span class="hljs-keyword">private</span> dateFormats: MatDateFormats,
-              cdr: ChangeDetectorRef</span>) {
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
+      <span class="hljs-keyword">private</span> calendar: MatCalendar&lt;D&gt;, <span class="hljs-keyword">private</span> dateAdapter: DateAdapter&lt;D&gt;,
+      <span class="hljs-meta">@Inject</span>(MAT_DATE_FORMATS) <span class="hljs-keyword">private</span> dateFormats: MatDateFormats, cdr: ChangeDetectorRef</span>) {
     calendar.stateChanges
         .pipe(takeUntil(<span class="hljs-keyword">this</span>.destroyed))
         .subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> cdr.markForCheck());
