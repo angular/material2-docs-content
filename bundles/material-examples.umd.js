@@ -5040,11 +5040,14 @@
     }());
 
     /** Constants used to fill up our data base. */
-    var COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-        'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-    var NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-        'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-        'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+    var COLORS = [
+        'maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple', 'fuchsia', 'lime', 'teal',
+        'aqua', 'blue', 'navy', 'black', 'gray'
+    ];
+    var NAMES = [
+        'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
+        'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
+    ];
     /**
      * @title Data table with sorting, pagination, and filtering.
      */
@@ -5067,11 +5070,11 @@
             }
         };
         tslib_1.__decorate([
-            core.ViewChild(material.MatPaginator),
+            core.ViewChild(material.MatPaginator, { static: true }),
             tslib_1.__metadata("design:type", material.MatPaginator)
         ], TableOverviewExample.prototype, "paginator", void 0);
         tslib_1.__decorate([
-            core.ViewChild(material.MatSort),
+            core.ViewChild(material.MatSort, { static: true }),
             tslib_1.__metadata("design:type", material.MatSort)
         ], TableOverviewExample.prototype, "sort", void 0);
         TableOverviewExample = tslib_1.__decorate([
@@ -5108,7 +5111,7 @@
             this.dataSource.paginator = this.paginator;
         };
         tslib_1.__decorate([
-            core.ViewChild(material.MatPaginator),
+            core.ViewChild(material.MatPaginator, { static: true }),
             tslib_1.__metadata("design:type", material.MatPaginator)
         ], TablePaginationExample.prototype, "paginator", void 0);
         TablePaginationExample = tslib_1.__decorate([
@@ -5237,7 +5240,7 @@
             this.dataSource.sort = this.sort;
         };
         tslib_1.__decorate([
-            core.ViewChild('sort'),
+            core.ViewChild('sort', { static: true }),
             tslib_1.__metadata("design:type", material.MatSort)
         ], TableSimpleColumnExample.prototype, "sort", void 0);
         TableSimpleColumnExample = tslib_1.__decorate([
@@ -5268,7 +5271,9 @@
         }
         Object.defineProperty(SimpleColumn.prototype, "name", {
             /** Column name that should be used to reference this column. */
-            get: function () { return this._name; },
+            get: function () {
+                return this._name;
+            },
             set: function (name) {
                 this._name = name;
                 this.columnDef.name = name;
@@ -5278,7 +5283,9 @@
         });
         Object.defineProperty(SimpleColumn.prototype, "sortable", {
             /** Whether the column is sortable */
-            get: function () { return this._sortable; },
+            get: function () {
+                return this._sortable;
+            },
             set: function (sortable) {
                 this._sortable = coercion.coerceBooleanProperty(sortable);
             },
@@ -5321,7 +5328,7 @@
             tslib_1.__metadata("design:paramtypes", [Boolean])
         ], SimpleColumn.prototype, "sortable", null);
         tslib_1.__decorate([
-            core.ViewChild(material.MatColumnDef),
+            core.ViewChild(material.MatColumnDef, { static: true }),
             tslib_1.__metadata("design:type", material.MatColumnDef)
         ], SimpleColumn.prototype, "columnDef", void 0);
         tslib_1.__decorate([
@@ -5367,7 +5374,7 @@
             this.dataSource.sort = this.sort;
         };
         tslib_1.__decorate([
-            core.ViewChild(material.MatSort),
+            core.ViewChild(material.MatSort, { static: true }),
             tslib_1.__metadata("design:type", material.MatSort)
         ], TableSortingExample.prototype, "sort", void 0);
         TableSortingExample = tslib_1.__decorate([
@@ -5579,7 +5586,7 @@
             this.dataSource.sort = this.sort;
         };
         tslib_1.__decorate([
-            core.ViewChild('sort'),
+            core.ViewChild('sort', { static: true }),
             tslib_1.__metadata("design:type", material.MatSort)
         ], TableWrappedExample.prototype, "sort", void 0);
         TableWrappedExample = tslib_1.__decorate([
@@ -5617,7 +5624,7 @@
             tslib_1.__metadata("design:type", core.QueryList)
         ], WrapperTable.prototype, "columnDefs", void 0);
         tslib_1.__decorate([
-            core.ViewChild(material.MatTable),
+            core.ViewChild(material.MatTable, { static: true }),
             tslib_1.__metadata("design:type", material.MatTable)
         ], WrapperTable.prototype, "table", void 0);
         tslib_1.__decorate([

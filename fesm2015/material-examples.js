@@ -6365,12 +6365,15 @@ TableMultipleHeaderFooterExample.decorators = [
  * Constants used to fill up our data base.
  * @type {?}
  */
-const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
+const COLORS = [
+    'maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple', 'fuchsia', 'lime', 'teal',
+    'aqua', 'blue', 'navy', 'black', 'gray'
+];
 /** @type {?} */
-const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+const NAMES = [
+    'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
+    'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
+];
 /**
  * \@title Data table with sorting, pagination, and filtering.
  */
@@ -6411,8 +6414,8 @@ TableOverviewExample.decorators = [
 /** @nocollapse */
 TableOverviewExample.ctorParameters = () => [];
 TableOverviewExample.propDecorators = {
-    paginator: [{ type: ViewChild, args: [MatPaginator,] }],
-    sort: [{ type: ViewChild, args: [MatSort,] }]
+    paginator: [{ type: ViewChild, args: [MatPaginator, { static: true },] }],
+    sort: [{ type: ViewChild, args: [MatSort, { static: true },] }]
 };
 /**
  * Builds and returns a new User.
@@ -6458,7 +6461,7 @@ TablePaginationExample.decorators = [
             }] }
 ];
 TablePaginationExample.propDecorators = {
-    paginator: [{ type: ViewChild, args: [MatPaginator,] }]
+    paginator: [{ type: ViewChild, args: [MatPaginator, { static: true },] }]
 };
 /** @type {?} */
 const ELEMENT_DATA$7 = [
@@ -6612,7 +6615,7 @@ TableSimpleColumnExample.decorators = [
             }] }
 ];
 TableSimpleColumnExample.propDecorators = {
-    sort: [{ type: ViewChild, args: ['sort',] }]
+    sort: [{ type: ViewChild, args: ['sort', { static: true },] }]
 };
 /**
  * Column that shows simply shows text content for the header and row
@@ -6641,7 +6644,9 @@ class SimpleColumn {
      * Column name that should be used to reference this column.
      * @return {?}
      */
-    get name() { return this._name; }
+    get name() {
+        return this._name;
+    }
     /**
      * @param {?} name
      * @return {?}
@@ -6654,7 +6659,9 @@ class SimpleColumn {
      * Whether the column is sortable
      * @return {?}
      */
-    get sortable() { return this._sortable; }
+    get sortable() {
+        return this._sortable;
+    }
     /**
      * @param {?} sortable
      * @return {?}
@@ -6711,7 +6718,7 @@ SimpleColumn.propDecorators = {
     dataAccessor: [{ type: Input }],
     align: [{ type: Input }],
     sortable: [{ type: Input }],
-    columnDef: [{ type: ViewChild, args: [MatColumnDef,] }],
+    columnDef: [{ type: ViewChild, args: [MatColumnDef, { static: true },] }],
     sortHeader: [{ type: ViewChild, args: [MatSortHeader,] }]
 };
 
@@ -6755,7 +6762,7 @@ TableSortingExample.decorators = [
             }] }
 ];
 TableSortingExample.propDecorators = {
-    sort: [{ type: ViewChild, args: [MatSort,] }]
+    sort: [{ type: ViewChild, args: [MatSort, { static: true },] }]
 };
 
 /**
@@ -7007,7 +7014,7 @@ TableWrappedExample.decorators = [
             }] }
 ];
 TableWrappedExample.propDecorators = {
-    sort: [{ type: ViewChild, args: ['sort',] }]
+    sort: [{ type: ViewChild, args: ['sort', { static: true },] }]
 };
 /**
  * Table component that accepts column and row definitions in its content to be registered to the
@@ -7039,7 +7046,7 @@ WrapperTable.propDecorators = {
     headerRowDefs: [{ type: ContentChildren, args: [MatHeaderRowDef,] }],
     rowDefs: [{ type: ContentChildren, args: [MatRowDef,] }],
     columnDefs: [{ type: ContentChildren, args: [MatColumnDef,] }],
-    table: [{ type: ViewChild, args: [MatTable,] }],
+    table: [{ type: ViewChild, args: [MatTable, { static: true },] }],
     columns: [{ type: Input }],
     dataSource: [{ type: Input }]
 };

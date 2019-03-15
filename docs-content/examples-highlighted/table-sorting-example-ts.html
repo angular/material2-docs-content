@@ -33,7 +33,7 @@
   displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
   dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(ELEMENT_DATA);
 
-  <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
+  <span class="hljs-meta">@ViewChild</span>(MatSort, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">true</span>}) sort: MatSort;
 
   ngOnInit() {
     <span class="hljs-keyword">this</span>.dataSource.sort = <span class="hljs-keyword">this</span>.sort;

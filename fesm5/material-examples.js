@@ -5062,11 +5062,14 @@ var TableMultipleHeaderFooterExample = /** @class */ (function () {
 }());
 
 /** Constants used to fill up our data base. */
-var COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-    'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-var NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-    'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-    'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+var COLORS = [
+    'maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple', 'fuchsia', 'lime', 'teal',
+    'aqua', 'blue', 'navy', 'black', 'gray'
+];
+var NAMES = [
+    'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
+    'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
+];
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
@@ -5089,11 +5092,11 @@ var TableOverviewExample = /** @class */ (function () {
         }
     };
     __decorate([
-        ViewChild(MatPaginator),
+        ViewChild(MatPaginator, { static: true }),
         __metadata("design:type", MatPaginator)
     ], TableOverviewExample.prototype, "paginator", void 0);
     __decorate([
-        ViewChild(MatSort),
+        ViewChild(MatSort, { static: true }),
         __metadata("design:type", MatSort)
     ], TableOverviewExample.prototype, "sort", void 0);
     TableOverviewExample = __decorate([
@@ -5130,7 +5133,7 @@ var TablePaginationExample = /** @class */ (function () {
         this.dataSource.paginator = this.paginator;
     };
     __decorate([
-        ViewChild(MatPaginator),
+        ViewChild(MatPaginator, { static: true }),
         __metadata("design:type", MatPaginator)
     ], TablePaginationExample.prototype, "paginator", void 0);
     TablePaginationExample = __decorate([
@@ -5259,7 +5262,7 @@ var TableSimpleColumnExample = /** @class */ (function () {
         this.dataSource.sort = this.sort;
     };
     __decorate([
-        ViewChild('sort'),
+        ViewChild('sort', { static: true }),
         __metadata("design:type", MatSort)
     ], TableSimpleColumnExample.prototype, "sort", void 0);
     TableSimpleColumnExample = __decorate([
@@ -5290,7 +5293,9 @@ var SimpleColumn = /** @class */ (function () {
     }
     Object.defineProperty(SimpleColumn.prototype, "name", {
         /** Column name that should be used to reference this column. */
-        get: function () { return this._name; },
+        get: function () {
+            return this._name;
+        },
         set: function (name) {
             this._name = name;
             this.columnDef.name = name;
@@ -5300,7 +5305,9 @@ var SimpleColumn = /** @class */ (function () {
     });
     Object.defineProperty(SimpleColumn.prototype, "sortable", {
         /** Whether the column is sortable */
-        get: function () { return this._sortable; },
+        get: function () {
+            return this._sortable;
+        },
         set: function (sortable) {
             this._sortable = coerceBooleanProperty(sortable);
         },
@@ -5343,7 +5350,7 @@ var SimpleColumn = /** @class */ (function () {
         __metadata("design:paramtypes", [Boolean])
     ], SimpleColumn.prototype, "sortable", null);
     __decorate([
-        ViewChild(MatColumnDef),
+        ViewChild(MatColumnDef, { static: true }),
         __metadata("design:type", MatColumnDef)
     ], SimpleColumn.prototype, "columnDef", void 0);
     __decorate([
@@ -5389,7 +5396,7 @@ var TableSortingExample = /** @class */ (function () {
         this.dataSource.sort = this.sort;
     };
     __decorate([
-        ViewChild(MatSort),
+        ViewChild(MatSort, { static: true }),
         __metadata("design:type", MatSort)
     ], TableSortingExample.prototype, "sort", void 0);
     TableSortingExample = __decorate([
@@ -5601,7 +5608,7 @@ var TableWrappedExample = /** @class */ (function () {
         this.dataSource.sort = this.sort;
     };
     __decorate([
-        ViewChild('sort'),
+        ViewChild('sort', { static: true }),
         __metadata("design:type", MatSort)
     ], TableWrappedExample.prototype, "sort", void 0);
     TableWrappedExample = __decorate([
@@ -5639,7 +5646,7 @@ var WrapperTable = /** @class */ (function () {
         __metadata("design:type", QueryList)
     ], WrapperTable.prototype, "columnDefs", void 0);
     __decorate([
-        ViewChild(MatTable),
+        ViewChild(MatTable, { static: true }),
         __metadata("design:type", MatTable)
     ], WrapperTable.prototype, "table", void 0);
     __decorate([

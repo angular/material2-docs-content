@@ -13,7 +13,7 @@
   displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
   dataSource = <span class="hljs-keyword">new</span> MatTableDataSource&lt;PeriodicElement&gt;(ELEMENT_DATA);
 
-  <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
+  <span class="hljs-meta">@ViewChild</span>(MatPaginator, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">true</span>}) paginator: MatPaginator;
 
   ngOnInit() {
     <span class="hljs-keyword">this</span>.dataSource.paginator = <span class="hljs-keyword">this</span>.paginator;
