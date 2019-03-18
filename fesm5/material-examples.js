@@ -1,5 +1,5 @@
 import { __decorate, __metadata, __extends, __spread, __param } from 'tslib';
-import { NgModule, Component, ViewChild, TemplateRef, ViewContainerRef, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, Host, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, Input, ContentChildren, QueryList } from '@angular/core';
+import { NgModule, Component, ViewChild, TemplateRef, ViewContainerRef, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, Input, ContentChildren, QueryList } from '@angular/core';
 import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ScrollingModule, FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
@@ -1769,10 +1769,8 @@ var ExampleHeader = /** @class */ (function () {
             changeDetection: ChangeDetectionStrategy.OnPush,
             styles: ["\n    .example-header {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow .mat-icon {\n      margin: -22%;\n    }\n  "]
         }),
-        __param(0, Host()),
         __param(2, Inject(MAT_DATE_FORMATS)),
-        __metadata("design:paramtypes", [MatCalendar,
-            DateAdapter, Object, ChangeDetectorRef])
+        __metadata("design:paramtypes", [MatCalendar, DateAdapter, Object, ChangeDetectorRef])
     ], ExampleHeader);
     return ExampleHeader;
 }());
@@ -2615,7 +2613,7 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
         this.ngZone = ngZone;
         this.origin = this.formatOrigin(null);
     }
-    FocusMonitorFocusViaExample.prototype.ngOnInit = function () {
+    FocusMonitorFocusViaExample.prototype.ngAfterViewInit = function () {
         var _this = this;
         this.focusMonitor.monitor(this.monitoredEl)
             .subscribe(function (origin) { return _this.ngZone.run(function () {
@@ -2655,7 +2653,7 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
         this.elementOrigin = this.formatOrigin(null);
         this.subtreeOrigin = this.formatOrigin(null);
     }
-    FocusMonitorOverviewExample.prototype.ngOnInit = function () {
+    FocusMonitorOverviewExample.prototype.ngAfterViewInit = function () {
         var _this = this;
         this.focusMonitor.monitor(this.element)
             .subscribe(function (origin) { return _this.ngZone.run(function () {

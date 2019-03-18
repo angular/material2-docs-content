@@ -1,4 +1,4 @@
-import { NgModule, Component, ViewContainerRef, ViewChild, TemplateRef, ChangeDetectionStrategy, ViewEncapsulation, Host, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, ElementRef, Input, ContentChildren } from '@angular/core';
+import { NgModule, Component, ViewContainerRef, ViewChild, TemplateRef, ChangeDetectionStrategy, ViewEncapsulation, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, ElementRef, Input, ContentChildren } from '@angular/core';
 import { FormControl, FormBuilder, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ScrollingModule, FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
@@ -2174,7 +2174,7 @@ ExampleHeader.decorators = [
 ];
 /** @nocollapse */
 ExampleHeader.ctorParameters = () => [
-    { type: MatCalendar, decorators: [{ type: Host }] },
+    { type: MatCalendar },
     { type: DateAdapter },
     { type: undefined, decorators: [{ type: Inject, args: [MAT_DATE_FORMATS,] }] },
     { type: ChangeDetectorRef }
@@ -3305,7 +3305,7 @@ class FocusMonitorFocusViaExample {
     /**
      * @return {?}
      */
-    ngOnInit() {
+    ngAfterViewInit() {
         this.focusMonitor.monitor(this.monitoredEl)
             .subscribe(origin => this.ngZone.run(() => {
             this.origin = this.formatOrigin(origin);
@@ -3366,7 +3366,7 @@ class FocusMonitorOverviewExample {
     /**
      * @return {?}
      */
-    ngOnInit() {
+    ngAfterViewInit() {
         this.focusMonitor.monitor(this.element)
             .subscribe(origin => this.ngZone.run(() => {
             this.elementOrigin = this.formatOrigin(origin);

@@ -1,14 +1,14 @@
 import { FocusMonitor, FocusOrigin } from '@angular/cdk/a11y';
-import { ChangeDetectorRef, ElementRef, NgZone, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, ElementRef, NgZone, OnDestroy } from '@angular/core';
 /** @title Focusing with a specific FocusOrigin */
-export declare class FocusMonitorFocusViaExample implements OnDestroy, OnInit {
+export declare class FocusMonitorFocusViaExample implements OnDestroy, AfterViewInit {
     focusMonitor: FocusMonitor;
     private cdr;
     private ngZone;
     monitoredEl: ElementRef<HTMLElement>;
     origin: string;
     constructor(focusMonitor: FocusMonitor, cdr: ChangeDetectorRef, ngZone: NgZone);
-    ngOnInit(): void;
+    ngAfterViewInit(): void;
     ngOnDestroy(): void;
     formatOrigin(origin: FocusOrigin): string;
 }

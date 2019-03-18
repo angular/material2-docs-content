@@ -1747,10 +1747,8 @@
                 changeDetection: core.ChangeDetectionStrategy.OnPush,
                 styles: ["\n    .example-header {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow .mat-icon {\n      margin: -22%;\n    }\n  "]
             }),
-            tslib_1.__param(0, core.Host()),
             tslib_1.__param(2, core.Inject(core$1.MAT_DATE_FORMATS)),
-            tslib_1.__metadata("design:paramtypes", [material.MatCalendar,
-                core$1.DateAdapter, Object, core.ChangeDetectorRef])
+            tslib_1.__metadata("design:paramtypes", [material.MatCalendar, core$1.DateAdapter, Object, core.ChangeDetectorRef])
         ], ExampleHeader);
         return ExampleHeader;
     }());
@@ -2593,7 +2591,7 @@
             this.ngZone = ngZone;
             this.origin = this.formatOrigin(null);
         }
-        FocusMonitorFocusViaExample.prototype.ngOnInit = function () {
+        FocusMonitorFocusViaExample.prototype.ngAfterViewInit = function () {
             var _this = this;
             this.focusMonitor.monitor(this.monitoredEl)
                 .subscribe(function (origin) { return _this.ngZone.run(function () {
@@ -2633,7 +2631,7 @@
             this.elementOrigin = this.formatOrigin(null);
             this.subtreeOrigin = this.formatOrigin(null);
         }
-        FocusMonitorOverviewExample.prototype.ngOnInit = function () {
+        FocusMonitorOverviewExample.prototype.ngAfterViewInit = function () {
             var _this = this;
             this.focusMonitor.monitor(this.element)
                 .subscribe(function (origin) { return _this.ngZone.run(function () {

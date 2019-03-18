@@ -43,7 +43,8 @@ MAT_DIALOG_DEFAULT_OPTIONS in your application&#39;s root module.</p>
           <span header-link="sharing-data-with-the-dialog-component-"></span>
           Sharing data with the Dialog component.
         </h3>
-      <p>If you want to share data with your dialog, you can use the <code>data</code> option to pass information to the dialog component.</p>
+      <p>If you want to share data with your dialog, you can use the <code>data</code>
+option to pass information to the dialog component.</p>
 <pre><code class="language-ts"><span class="hljs-keyword">let</span> dialogRef = dialog.open(YourDialog, {
   data: { name: <span class="hljs-string">'austin'</span> },
 });</code></pre>
@@ -79,11 +80,11 @@ MAT_DIALOG_DEFAULT_OPTIONS in your application&#39;s root module.</p>
 </tr>
 <tr>
 <td><code>&lt;mat-dialog-content&gt;</code></td>
-<td>Primary scrollable content of the dialog</td>
+<td>Primary scrollable content of the dialog.</td>
 </tr>
 <tr>
 <td><code>&lt;mat-dialog-actions&gt;</code></td>
-<td>Container for action buttons at the bottom of the dialog</td>
+<td>Container for action buttons at the bottom of the dialog. Button alignment can be controlled via the <code>align</code> attribute which can be set to <code>end</code> and <code>center</code>.</td>
 </tr>
 <tr>
 <td><code>mat-dialog-close</code></td>

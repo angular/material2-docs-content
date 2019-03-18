@@ -1,11 +1,11 @@
 <span class="hljs-keyword">import</span> {FocusMonitor, FocusOrigin} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/a11y'</span>;
 <span class="hljs-keyword">import</span> {
+  AfterViewInit,
   ChangeDetectorRef,
   Component,
   ElementRef,
   NgZone,
   OnDestroy,
-  OnInit,
   ViewChild
 } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
@@ -15,7 +15,7 @@
   templateUrl: <span class="hljs-string">'focus-monitor-focus-via-example.html'</span>,
   styleUrls: [<span class="hljs-string">'focus-monitor-focus-via-example.css'</span>]
 })
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FocusMonitorFocusViaExample <span class="hljs-keyword">implements</span> OnDestroy, OnInit {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FocusMonitorFocusViaExample <span class="hljs-keyword">implements</span> OnDestroy, AfterViewInit {
   <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'monitored'</span>) monitoredEl: ElementRef&lt;HTMLElement&gt;;
 
   origin = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
@@ -24,7 +24,7 @@
               <span class="hljs-keyword">private</span> cdr: ChangeDetectorRef,
               <span class="hljs-keyword">private</span> ngZone: NgZone</span>) {}
 
-  ngOnInit() {
+  ngAfterViewInit() {
     <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.monitoredEl)
         .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-keyword">this</span>.ngZone.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
           <span class="hljs-keyword">this</span>.origin = <span class="hljs-keyword">this</span>.formatOrigin(origin);
