@@ -54,6 +54,7 @@
                     material.MatTreeModule,
                     scrolling.ScrollingModule,
                     portal.PortalModule,
+                    material.MatNativeDateModule,
                 ],
                 exports: [
                     a11y.A11yModule,
@@ -98,6 +99,7 @@
                     material.MatTreeModule,
                     scrolling.ScrollingModule,
                     portal.PortalModule,
+                    material.MatNativeDateModule,
                 ]
             })
         ], ExampleMaterialModule);
