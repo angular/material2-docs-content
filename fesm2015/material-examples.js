@@ -7087,7 +7087,7 @@ class TextFieldAutofillMonitorExample {
     /**
      * @return {?}
      */
-    ngOnInit() {
+    ngAfterViewInit() {
         this.autofill.monitor(this.firstName)
             .subscribe(e => this.firstNameAutofilled = e.isAutofilled);
         this.autofill.monitor(this.lastName)

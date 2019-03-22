@@ -5666,7 +5666,7 @@
         function TextFieldAutofillMonitorExample(autofill) {
             this.autofill = autofill;
         }
-        TextFieldAutofillMonitorExample.prototype.ngOnInit = function () {
+        TextFieldAutofillMonitorExample.prototype.ngAfterViewInit = function () {
             var _this = this;
             this.autofill.monitor(this.firstName)
                 .subscribe(function (e) { return _this.firstNameAutofilled = e.isAutofilled; });
