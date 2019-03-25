@@ -9,7 +9,7 @@ import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/
 import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { CdkStepperModule, CdkStepper, STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { PortalModule, TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
-import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatBottomSheet, MatBottomSheetRef, MatAutocomplete, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MatColumnDef, MatSortHeader, MatTable, MatHeaderRowDef, MatRowDef, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
+import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatNativeDateModule, MatBottomSheet, MatBottomSheetRef, MatAutocomplete, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MatColumnDef, MatSortHeader, MatTable, MatHeaderRowDef, MatRowDef, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
 import { startWith, map, takeUntil, switchMap, catchError, take } from 'rxjs/operators';
 import { Overlay } from '@angular/cdk/overlay';
 import { Platform, getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior } from '@angular/cdk/platform';
@@ -76,6 +76,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                 MatTreeModule,
                 ScrollingModule,
                 PortalModule,
+                MatNativeDateModule,
             ],
             exports: [
                 A11yModule,
@@ -120,6 +121,7 @@ var ExampleMaterialModule = /** @class */ (function () {
                 MatTreeModule,
                 ScrollingModule,
                 PortalModule,
+                MatNativeDateModule,
             ]
         })
     ], ExampleMaterialModule);
@@ -5616,7 +5618,7 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
     function TextFieldAutofillMonitorExample(autofill) {
         this.autofill = autofill;
     }
-    TextFieldAutofillMonitorExample.prototype.ngOnInit = function () {
+    TextFieldAutofillMonitorExample.prototype.ngAfterViewInit = function () {
         var _this = this;
         this.autofill.monitor(this.firstName)
             .subscribe(function (e) { return _this.firstNameAutofilled = e.isAutofilled; });
@@ -5785,7 +5787,7 @@ var TooltipManualExample = /** @class */ (function () {
     TooltipManualExample = __decorate([
         Component({
             selector: 'tooltip-manual-example',
-            template: "<div>\n  <span> Mouse over to </span>\n  <button mat-button\n          (mouseenter)=\"tooltip.show()\"\n          aria-label=\"Button that progamatically shows a tooltip on another button\"\n          class=\"example-action-button\">\n    show\n  </button>\n  <button mat-button\n          (mouseenter)=\"tooltip.hide()\"\n          aria-label=\"Button that progamatically hides a tooltip on another button\"\n          class=\"example-action-button\">\n    hide\n  </button>\n  <button mat-button\n          (mouseenter)=\"tooltip.toggle()\"\n          aria-label=\"Button that progamatically toggles a tooltip on another button to show/hide\"\n          class=\"example-action-button\">\n    toggle show/hide\n  </button>\n</div>\n\n<button mat-raised-button #tooltip=\"matTooltip\"\n        matTooltip=\"Info about the action\"\n        matTooltipPosition=\"right\"\n        aria-tooltip=\"Button that displays and hides a tooltip triggered by other buttons\">\n  Action\n</button>\n",
+            template: "<div>\n  <span> Click the following buttons to... </span>\n  <button mat-button\n          (click)=\"tooltip.show()\"\n          aria-label=\"Show tooltip on the button at the end of this section\"\n          class=\"example-action-button\">\n    show\n  </button>\n  <button mat-button\n          (click)=\"tooltip.hide()\"\n          aria-label=\"Hide tooltip on the button at the end of this section\"\n          class=\"example-action-button\">\n    hide\n  </button>\n  <button mat-button\n          (click)=\"tooltip.toggle()\"\n          aria-label=\"Show/Hide tooltip on the button at the end of this section\"\n          class=\"example-action-button\">\n    toggle show/hide\n  </button>\n</div>\n\n<button mat-raised-button #tooltip=\"matTooltip\"\n        matTooltip=\"Info about the action\"\n        matTooltipPosition=\"right\"\n        aria-tooltip=\"Button that displays and hides a tooltip triggered by other buttons\">\n  Action\n</button>",
             styles: [".example-action-button {\n  margin-top: 16px;\n}\n"]
         })
     ], TooltipManualExample);
