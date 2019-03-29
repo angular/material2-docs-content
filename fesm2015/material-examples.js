@@ -1,7 +1,7 @@
 import { NgModule, Component, ViewContainerRef, ViewChild, TemplateRef, ChangeDetectionStrategy, ViewEncapsulation, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, ElementRef, Self, Input, ContentChildren } from '@angular/core';
 import { FormControl, FormBuilder, NgControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ScrollingModule, FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
+import { ScrollingModule, VIRTUAL_SCROLL_STRATEGY, FixedSizeVirtualScrollStrategy } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
@@ -29,7 +29,7 @@ import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class ExampleMaterialModule {
 }
@@ -130,7 +130,7 @@ ExampleMaterialModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Highlight the first autocomplete option
@@ -144,7 +144,11 @@ class AutocompleteAutoActiveFirstOptionExample {
      * @return {?}
      */
     ngOnInit() {
-        this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(value => this._filter(value)));
+        this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map((/**
+         * @param {?} value
+         * @return {?}
+         */
+        value => this._filter(value))));
     }
     /**
      * @private
@@ -154,7 +158,11 @@ class AutocompleteAutoActiveFirstOptionExample {
     _filter(value) {
         /** @type {?} */
         const filterValue = value.toLowerCase();
-        return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
+        return this.options.filter((/**
+         * @param {?} option
+         * @return {?}
+         */
+        option => option.toLowerCase().indexOf(filterValue) === 0));
     }
 }
 AutocompleteAutoActiveFirstOptionExample.decorators = [
@@ -167,7 +175,7 @@ AutocompleteAutoActiveFirstOptionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Display value autocomplete
@@ -186,7 +194,15 @@ class AutocompleteDisplayExample {
      */
     ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith(''), map(value => typeof value === 'string' ? value : value.name), map(name => name ? this._filter(name) : this.options.slice()));
+            .pipe(startWith(''), map((/**
+         * @param {?} value
+         * @return {?}
+         */
+        value => typeof value === 'string' ? value : value.name)), map((/**
+         * @param {?} name
+         * @return {?}
+         */
+        name => name ? this._filter(name) : this.options.slice())));
     }
     /**
      * @param {?=} user
@@ -203,7 +219,11 @@ class AutocompleteDisplayExample {
     _filter(name) {
         /** @type {?} */
         const filterValue = name.toLowerCase();
-        return this.options.filter(option => option.name.toLowerCase().indexOf(filterValue) === 0);
+        return this.options.filter((/**
+         * @param {?} option
+         * @return {?}
+         */
+        option => option.name.toLowerCase().indexOf(filterValue) === 0));
     }
 }
 AutocompleteDisplayExample.decorators = [
@@ -216,7 +236,7 @@ AutocompleteDisplayExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Filter autocomplete
@@ -231,7 +251,11 @@ class AutocompleteFilterExample {
      */
     ngOnInit() {
         this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith(''), map(value => this._filter(value)));
+            .pipe(startWith(''), map((/**
+         * @param {?} value
+         * @return {?}
+         */
+        value => this._filter(value))));
     }
     /**
      * @private
@@ -241,7 +265,11 @@ class AutocompleteFilterExample {
     _filter(value) {
         /** @type {?} */
         const filterValue = value.toLowerCase();
-        return this.options.filter(option => option.toLowerCase().includes(filterValue));
+        return this.options.filter((/**
+         * @param {?} option
+         * @return {?}
+         */
+        option => option.toLowerCase().includes(filterValue)));
     }
 }
 AutocompleteFilterExample.decorators = [
@@ -254,14 +282,23 @@ AutocompleteFilterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const _filter = (opt, value) => {
+const _filter = (/**
+ * @param {?} opt
+ * @param {?} value
+ * @return {?}
+ */
+(opt, value) => {
     /** @type {?} */
     const filterValue = value.toLowerCase();
-    return opt.filter(item => item.toLowerCase().indexOf(filterValue) === 0);
-};
+    return opt.filter((/**
+     * @param {?} item
+     * @return {?}
+     */
+    item => item.toLowerCase().indexOf(filterValue) === 0));
+});
 /**
  * \@title Option groups autocomplete
  */
@@ -340,7 +377,11 @@ class AutocompleteOptgroupExample {
      */
     ngOnInit() {
         this.stateGroupOptions = (/** @type {?} */ (this.stateForm.get('stateGroup'))).valueChanges
-            .pipe(startWith(''), map(value => this._filterGroup(value)));
+            .pipe(startWith(''), map((/**
+         * @param {?} value
+         * @return {?}
+         */
+        value => this._filterGroup(value))));
     }
     /**
      * @private
@@ -350,8 +391,16 @@ class AutocompleteOptgroupExample {
     _filterGroup(value) {
         if (value) {
             return this.stateGroups
-                .map(group => ({ letter: group.letter, names: _filter(group.names, value) }))
-                .filter(group => group.names.length > 0);
+                .map((/**
+             * @param {?} group
+             * @return {?}
+             */
+            group => ({ letter: group.letter, names: _filter(group.names, value) })))
+                .filter((/**
+             * @param {?} group
+             * @return {?}
+             */
+            group => group.names.length > 0));
         }
         return this.stateGroups;
     }
@@ -370,7 +419,7 @@ AutocompleteOptgroupExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Autocomplete overview
@@ -405,7 +454,11 @@ class AutocompleteOverviewExample {
             }
         ];
         this.filteredStates = this.stateCtrl.valueChanges
-            .pipe(startWith(''), map(state$$1 => state$$1 ? this._filterStates(state$$1) : this.states.slice()));
+            .pipe(startWith(''), map((/**
+         * @param {?} state
+         * @return {?}
+         */
+        state => state ? this._filterStates(state) : this.states.slice())));
     }
     /**
      * @private
@@ -415,7 +468,11 @@ class AutocompleteOverviewExample {
     _filterStates(value) {
         /** @type {?} */
         const filterValue = value.toLowerCase();
-        return this.states.filter(state$$1 => state$$1.name.toLowerCase().indexOf(filterValue) === 0);
+        return this.states.filter((/**
+         * @param {?} state
+         * @return {?}
+         */
+        state => state.name.toLowerCase().indexOf(filterValue) === 0));
     }
 }
 AutocompleteOverviewExample.decorators = [
@@ -430,7 +487,7 @@ AutocompleteOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Simple autocomplete
@@ -451,7 +508,7 @@ AutocompleteSimpleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Badge overview
@@ -468,7 +525,7 @@ BadgeOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Bottom Sheet Overview
@@ -527,7 +584,7 @@ BottomSheetOverviewExampleSheet.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic buttons
@@ -544,7 +601,7 @@ ButtonOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Button toggle appearance
@@ -561,7 +618,7 @@ ButtonToggleAppearanceExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Exclusive selection
@@ -578,7 +635,7 @@ ButtonToggleExclusiveExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic button-toggles
@@ -595,7 +652,7 @@ ButtonToggleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Button varieties
@@ -612,7 +669,7 @@ ButtonTypesExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Card with multiple sections
@@ -629,7 +686,7 @@ CardFancyExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic cards
@@ -646,7 +703,7 @@ CardOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title A custom CDK stepper without a form
@@ -683,7 +740,7 @@ CustomStepper.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop position locking
@@ -700,7 +757,7 @@ CdkDragDropAxisLockExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop boundary
@@ -717,7 +774,7 @@ CdkDragDropBoundaryExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop connected sorting group
@@ -761,7 +818,7 @@ CdkDragDropConnectedSortingGroupExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop connected sorting
@@ -805,7 +862,7 @@ CdkDragDropConnectedSortingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop custom placeholer
@@ -841,7 +898,7 @@ CdkDragDropCustomPlaceholderExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop custom preview
@@ -903,7 +960,7 @@ CdkDragDropCustomPreviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop disabled sorting
@@ -946,7 +1003,7 @@ CdkDragDropDisabledSortingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop disabled
@@ -977,7 +1034,7 @@ CdkDragDropDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop enter predicate
@@ -1025,7 +1082,7 @@ CdkDragDropEnterPredicateExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop with a handle
@@ -1042,7 +1099,7 @@ CdkDragDropHandleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop horizontal sorting
@@ -1075,7 +1132,7 @@ CdkDragDropHorizontalSortingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic Drag&Drop
@@ -1092,7 +1149,7 @@ CdkDragDropOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop with alternate root element
@@ -1115,7 +1172,10 @@ class CdkDragDropRootElementExample {
             positionStrategy: this._overlay.position().global().centerHorizontally().centerVertically(),
             hasBackdrop: true
         });
-        this._overlayRef.backdropClick().subscribe(() => this._overlayRef.detach());
+        this._overlayRef.backdropClick().subscribe((/**
+         * @return {?}
+         */
+        () => this._overlayRef.detach()));
     }
     /**
      * @return {?}
@@ -1148,7 +1208,7 @@ CdkDragDropRootElementExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drag&Drop sorting
@@ -1184,7 +1244,7 @@ CdkDragDropSortingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Platform overview
@@ -1214,7 +1274,7 @@ CdkPlatformOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Portal overview
@@ -1259,7 +1319,7 @@ ComponentPortalExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA = [
@@ -1320,7 +1380,7 @@ class ExampleDataSource extends DataSource {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$1 = [
@@ -1381,7 +1441,7 @@ class ExampleDataSource$1 extends DataSource {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const TREE_DATA = [
@@ -1436,9 +1496,22 @@ const TREE_DATA = [
  */
 class CdkTreeFlatExample {
     constructor() {
-        this.treeControl = new FlatTreeControl(node => node.level, node => node.expandable);
+        this.treeControl = new FlatTreeControl((/**
+         * @param {?} node
+         * @return {?}
+         */
+        node => node.level), (/**
+         * @param {?} node
+         * @return {?}
+         */
+        node => node.expandable));
         this.dataSource = new ArrayDataSource(TREE_DATA);
-        this.hasChild = (_, node) => node.expandable;
+        this.hasChild = (/**
+         * @param {?} _
+         * @param {?} node
+         * @return {?}
+         */
+        (_, node) => node.expandable);
     }
     /**
      * @param {?} node
@@ -1474,7 +1547,7 @@ CdkTreeFlatExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const TREE_DATA$1 = [
@@ -1509,9 +1582,18 @@ const TREE_DATA$1 = [
  */
 class CdkTreeNestedExample {
     constructor() {
-        this.treeControl = new NestedTreeControl(node => node.children);
+        this.treeControl = new NestedTreeControl((/**
+         * @param {?} node
+         * @return {?}
+         */
+        node => node.children));
         this.dataSource = new ArrayDataSource(TREE_DATA$1);
-        this.hasChild = (_, node) => !!node.children && node.children.length > 0;
+        this.hasChild = (/**
+         * @param {?} _
+         * @param {?} node
+         * @return {?}
+         */
+        (_, node) => !!node.children && node.children.length > 0);
     }
 }
 CdkTreeNestedExample.decorators = [
@@ -1524,14 +1606,19 @@ CdkTreeNestedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scroll context variables
  */
 class CdkVirtualScrollContextExample {
     constructor() {
-        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+        this.items = Array.from({ length: 100000 }).map((/**
+         * @param {?} _
+         * @param {?} i
+         * @return {?}
+         */
+        (_, i) => `Item #${i}`));
     }
 }
 CdkVirtualScrollContextExample.decorators = [
@@ -1545,7 +1632,7 @@ CdkVirtualScrollContextExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
     constructor() {
@@ -1557,7 +1644,12 @@ class CustomVirtualScrollStrategy extends FixedSizeVirtualScrollStrategy {
  */
 class CdkVirtualScrollCustomStrategyExample {
     constructor() {
-        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+        this.items = Array.from({ length: 100000 }).map((/**
+         * @param {?} _
+         * @param {?} i
+         * @return {?}
+         */
+        (_, i) => `Item #${i}`));
     }
 }
 CdkVirtualScrollCustomStrategyExample.decorators = [
@@ -1572,7 +1664,7 @@ CdkVirtualScrollCustomStrategyExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scroll with a custom data source
@@ -1605,7 +1697,11 @@ class MyDataSource extends DataSource {
      * @return {?}
      */
     connect(collectionViewer) {
-        this.subscription.add(collectionViewer.viewChange.subscribe(range => {
+        this.subscription.add(collectionViewer.viewChange.subscribe((/**
+         * @param {?} range
+         * @return {?}
+         */
+        range => {
             /** @type {?} */
             const startPage = this.getPageForIndex(range.start);
             /** @type {?} */
@@ -1613,7 +1709,7 @@ class MyDataSource extends DataSource {
             for (let i = startPage; i <= endPage; i++) {
                 this.fetchPage(i);
             }
-        }));
+        })));
         return this.dataStream;
     }
     /**
@@ -1641,17 +1737,25 @@ class MyDataSource extends DataSource {
         }
         this.fetchedPages.add(page);
         // Use `setTimeout` to simulate fetching data from server.
-        setTimeout(() => {
+        setTimeout((/**
+         * @return {?}
+         */
+        () => {
             this.cachedData.splice(page * this.pageSize, this.pageSize, ...Array.from({ length: this.pageSize })
-                .map((_, i) => `Item #${page * this.pageSize + i}`));
+                .map((/**
+             * @param {?} _
+             * @param {?} i
+             * @return {?}
+             */
+            (_, i) => `Item #${page * this.pageSize + i}`)));
             this.dataStream.next(this.cachedData);
-        }, Math.random() * 1000 + 200);
+        }), Math.random() * 1000 + 200);
     }
 }
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scrolling `<dl>`
@@ -1723,14 +1827,19 @@ CdkVirtualScrollDlExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Fixed size virtual scroll with custom buffer parameters
  */
 class CdkVirtualScrollFixedBufferExample {
     constructor() {
-        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+        this.items = Array.from({ length: 100000 }).map((/**
+         * @param {?} _
+         * @param {?} i
+         * @return {?}
+         */
+        (_, i) => `Item #${i}`));
     }
 }
 CdkVirtualScrollFixedBufferExample.decorators = [
@@ -1744,14 +1853,19 @@ CdkVirtualScrollFixedBufferExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Horizontal virtual scroll
  */
 class CdkVirtualScrollHorizontalExample {
     constructor() {
-        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+        this.items = Array.from({ length: 100000 }).map((/**
+         * @param {?} _
+         * @param {?} i
+         * @return {?}
+         */
+        (_, i) => `Item #${i}`));
     }
 }
 CdkVirtualScrollHorizontalExample.decorators = [
@@ -1766,14 +1880,19 @@ CdkVirtualScrollHorizontalExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic virtual scroll
  */
 class CdkVirtualScrollOverviewExample {
     constructor() {
-        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+        this.items = Array.from({ length: 100000 }).map((/**
+         * @param {?} _
+         * @param {?} i
+         * @return {?}
+         */
+        (_, i) => `Item #${i}`));
     }
 }
 CdkVirtualScrollOverviewExample.decorators = [
@@ -1787,14 +1906,19 @@ CdkVirtualScrollOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Virtual scroll with no template caching
  */
 class CdkVirtualScrollTemplateCacheExample {
     constructor() {
-        this.items = Array.from({ length: 100000 }).map((_, i) => `Item #${i}`);
+        this.items = Array.from({ length: 100000 }).map((/**
+         * @param {?} _
+         * @param {?} i
+         * @return {?}
+         */
+        (_, i) => `Item #${i}`));
     }
 }
 CdkVirtualScrollTemplateCacheExample.decorators = [
@@ -1808,7 +1932,7 @@ CdkVirtualScrollTemplateCacheExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable checkbox
@@ -1831,7 +1955,7 @@ CheckboxConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic checkboxes
@@ -1848,7 +1972,7 @@ CheckboxOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Chips Autocomplete
@@ -1863,7 +1987,11 @@ class ChipsAutocompleteExample {
         this.fruitCtrl = new FormControl();
         this.fruits = ['Lemon'];
         this.allFruits = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
-        this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith(null), map((fruit) => fruit ? this._filter(fruit) : this.allFruits.slice()));
+        this.filteredFruits = this.fruitCtrl.valueChanges.pipe(startWith(null), map((/**
+         * @param {?} fruit
+         * @return {?}
+         */
+        (fruit) => fruit ? this._filter(fruit) : this.allFruits.slice())));
     }
     /**
      * @param {?} event
@@ -1916,7 +2044,11 @@ class ChipsAutocompleteExample {
     _filter(value) {
         /** @type {?} */
         const filterValue = value.toLowerCase();
-        return this.allFruits.filter(fruit => fruit.toLowerCase().indexOf(filterValue) === 0);
+        return this.allFruits.filter((/**
+         * @param {?} fruit
+         * @return {?}
+         */
+        fruit => fruit.toLowerCase().indexOf(filterValue) === 0));
     }
 }
 ChipsAutocompleteExample.decorators = [
@@ -1935,7 +2067,7 @@ ChipsAutocompleteExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Chips Drag and Drop
@@ -1969,7 +2101,7 @@ ChipsDragDropExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Chips with input
@@ -2027,7 +2159,7 @@ ChipsInputExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic chips
@@ -2044,7 +2176,7 @@ ChipsOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stacked chips
@@ -2069,7 +2201,7 @@ ChipsStackedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker open method
@@ -2086,7 +2218,7 @@ DatepickerApiExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker palette colors
@@ -2103,7 +2235,7 @@ DatepickerColorExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom calendar header
@@ -2138,7 +2270,10 @@ class ExampleHeader {
         this.destroyed = new Subject();
         calendar.stateChanges
             .pipe(takeUntil(this.destroyed))
-            .subscribe(() => cdr.markForCheck());
+            .subscribe((/**
+         * @return {?}
+         */
+        () => cdr.markForCheck()));
     }
     /**
      * @return {?}
@@ -2227,7 +2362,7 @@ ExampleHeader.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom icon
@@ -2244,19 +2379,23 @@ DatepickerCustomIconExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with custom date classes
  */
 class DatepickerDateClassExample {
     constructor() {
-        this.dateClass = (d) => {
+        this.dateClass = (/**
+         * @param {?} d
+         * @return {?}
+         */
+        (d) => {
             /** @type {?} */
             const date = d.getDate();
             // Highlight the 1st and 20th day of each month.
             return (date === 1 || date === 20) ? 'example-custom-date-class' : undefined;
-        };
+        });
     }
 }
 DatepickerDateClassExample.decorators = [
@@ -2270,7 +2409,7 @@ DatepickerDateClassExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled datepicker
@@ -2287,7 +2426,7 @@ DatepickerDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker input and change events
@@ -2315,19 +2454,23 @@ DatepickerEventsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with filter validation
  */
 class DatepickerFilterExample {
     constructor() {
-        this.myFilter = (d) => {
+        this.myFilter = (/**
+         * @param {?} d
+         * @return {?}
+         */
+        (d) => {
             /** @type {?} */
             const day = d.getDay();
             // Prevent Saturday and Sunday from being selected.
             return day !== 0 && day !== 6;
-        };
+        });
     }
 }
 DatepickerFilterExample.decorators = [
@@ -2340,7 +2483,7 @@ DatepickerFilterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const moment = _rollupMoment__default || _rollupMoment;
@@ -2401,7 +2544,11 @@ class MomentDateAdapter extends DateAdapter {
             firstDayOfWeek: momentLocaleData.firstDayOfWeek(),
             longMonths: momentLocaleData.months(),
             shortMonths: momentLocaleData.monthsShort(),
-            dates: range(31, (i) => this.createDate(2017, 0, i + 1).format('D')),
+            dates: range(31, (/**
+             * @param {?} i
+             * @return {?}
+             */
+            (i) => this.createDate(2017, 0, i + 1).format('D'))),
             longDaysOfWeek: momentLocaleData.weekdays(),
             shortDaysOfWeek: momentLocaleData.weekdaysShort(),
             narrowDaysOfWeek: momentLocaleData.weekdaysMin(),
@@ -2439,9 +2586,9 @@ class MomentDateAdapter extends DateAdapter {
      * @param {?} style
      * @return {?}
      */
-    getMonthNames(style$$1) {
+    getMonthNames(style) {
         // Moment.js doesn't support narrow month names, so we just use short if narrow is requested.
-        return style$$1 == 'long' ? this._localeData.longMonths : this._localeData.shortMonths;
+        return style == 'long' ? this._localeData.longMonths : this._localeData.shortMonths;
     }
     /**
      * @return {?}
@@ -2453,11 +2600,11 @@ class MomentDateAdapter extends DateAdapter {
      * @param {?} style
      * @return {?}
      */
-    getDayOfWeekNames(style$$1) {
-        if (style$$1 == 'long') {
+    getDayOfWeekNames(style) {
+        if (style == 'long') {
             return this._localeData.longDaysOfWeek;
         }
-        if (style$$1 == 'short') {
+        if (style == 'short') {
             return this._localeData.shortDaysOfWeek;
         }
         return this._localeData.narrowDaysOfWeek;
@@ -2641,7 +2788,7 @@ MomentDateAdapter.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * @license
@@ -2665,22 +2812,22 @@ const MAT_MOMENT_DATE_FORMATS = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const moment$1 = _rollupMoment__default || _rollupMoment;
@@ -2723,9 +2870,9 @@ DatepickerFormatsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
+const ɵ0 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker with different locale
  */
@@ -2755,7 +2902,7 @@ DatepickerLocaleExample.decorators = [
                     // `MatMomentDateModule` in your applications root module. We provide it at the component level
                     // here, due to limitations of our example generation script.
                     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                    { provide: MAT_DATE_FORMATS, useValue: ɵ0$1 },
+                    { provide: MAT_DATE_FORMATS, useValue: ɵ0 },
                 ],
                 styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }] }
@@ -2767,7 +2914,7 @@ DatepickerLocaleExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker with min & max validation
@@ -2788,11 +2935,11 @@ DatepickerMinMaxExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const moment$2 = _rollupMoment__default || _rollupMoment;
-const ɵ0$2 = MAT_MOMENT_DATE_FORMATS;
+const ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker that uses Moment.js dates
  */
@@ -2811,7 +2958,7 @@ DatepickerMomentExample.decorators = [
                     // `MatMomentDateModule` in your applications root module. We provide it at the component level
                     // here, due to limitations of our example generation script.
                     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                    { provide: MAT_DATE_FORMATS, useValue: ɵ0$2 },
+                    { provide: MAT_DATE_FORMATS, useValue: ɵ0$1 },
                 ],
                 styles: ["/** No CSS for this example */\n"]
             }] }
@@ -2819,7 +2966,7 @@ DatepickerMomentExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic datepicker
@@ -2836,7 +2983,7 @@ DatepickerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker start date
@@ -2856,7 +3003,7 @@ DatepickerStartViewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker touch UI
@@ -2873,7 +3020,7 @@ DatepickerTouchExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Datepicker selected value
@@ -2894,7 +3041,7 @@ DatepickerValueExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const moment$3 = _rollupMoment__default || _rollupMoment;
@@ -2959,7 +3106,7 @@ DatepickerViewsSelectionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog with header, scrollable content and actions
@@ -2977,9 +3124,13 @@ class DialogContentExample {
     openDialog() {
         /** @type {?} */
         const dialogRef = this.dialog.open(DialogContentExampleDialog);
-        dialogRef.afterClosed().subscribe(result => {
+        dialogRef.afterClosed().subscribe((/**
+         * @param {?} result
+         * @return {?}
+         */
+        result => {
             console.log(`Dialog result: ${result}`);
-        });
+        }));
     }
 }
 DialogContentExample.decorators = [
@@ -3004,7 +3155,7 @@ DialogContentExampleDialog.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Injecting data when opening a dialog
@@ -3059,7 +3210,7 @@ DialogDataExampleDialog.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog elements
@@ -3100,7 +3251,7 @@ DialogElementsExampleDialog.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dialog Overview
@@ -3121,10 +3272,14 @@ class DialogOverviewExample {
             width: '250px',
             data: { name: this.name, animal: this.animal }
         });
-        dialogRef.afterClosed().subscribe(result => {
+        dialogRef.afterClosed().subscribe((/**
+         * @param {?} result
+         * @return {?}
+         */
+        result => {
             console.log('The dialog was closed');
             this.animal = result;
-        });
+        }));
     }
 }
 DialogOverviewExample.decorators = [
@@ -3168,7 +3323,7 @@ DialogOverviewExampleDialog.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic divider
@@ -3185,7 +3340,7 @@ DividerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Elevation CSS classes
@@ -3205,7 +3360,7 @@ ElevationOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Accordion with expand/collapse all toggles
@@ -3225,7 +3380,7 @@ ExpansionExpandCollapseAllExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic expansion panel
@@ -3245,7 +3400,7 @@ ExpansionOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Expansion panel as accordion
@@ -3284,7 +3439,7 @@ ExpansionStepsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -3312,7 +3467,10 @@ class FocusMonitorDirectivesExample {
      * @return {?}
      */
     markForCheck() {
-        this.ngZone.run(() => this.cdr.markForCheck());
+        this.ngZone.run((/**
+         * @return {?}
+         */
+        () => this.cdr.markForCheck()));
     }
 }
 FocusMonitorDirectivesExample.decorators = [
@@ -3330,7 +3488,7 @@ FocusMonitorDirectivesExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Focusing with a specific FocusOrigin
@@ -3352,10 +3510,17 @@ class FocusMonitorFocusViaExample {
      */
     ngAfterViewInit() {
         this.focusMonitor.monitor(this.monitoredEl)
-            .subscribe(origin => this.ngZone.run(() => {
+            .subscribe((/**
+         * @param {?} origin
+         * @return {?}
+         */
+        origin => this.ngZone.run((/**
+         * @return {?}
+         */
+        () => {
             this.origin = this.formatOrigin(origin);
             this.cdr.markForCheck();
-        }));
+        }))));
     }
     /**
      * @return {?}
@@ -3390,7 +3555,7 @@ FocusMonitorFocusViaExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -3413,15 +3578,29 @@ class FocusMonitorOverviewExample {
      */
     ngAfterViewInit() {
         this.focusMonitor.monitor(this.element)
-            .subscribe(origin => this.ngZone.run(() => {
+            .subscribe((/**
+         * @param {?} origin
+         * @return {?}
+         */
+        origin => this.ngZone.run((/**
+         * @return {?}
+         */
+        () => {
             this.elementOrigin = this.formatOrigin(origin);
             this.cdr.markForCheck();
-        }));
+        }))));
         this.focusMonitor.monitor(this.subtree, true)
-            .subscribe(origin => this.ngZone.run(() => {
+            .subscribe((/**
+         * @param {?} origin
+         * @return {?}
+         */
+        origin => this.ngZone.run((/**
+         * @return {?}
+         */
+        () => {
             this.subtreeOrigin = this.formatOrigin(origin);
             this.cdr.markForCheck();
-        }));
+        }))));
     }
     /**
      * @return {?}
@@ -3458,7 +3637,7 @@ FocusMonitorOverviewExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field appearance variants
@@ -3475,7 +3654,7 @@ FormFieldAppearanceExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with custom telephone number input control.
@@ -3524,8 +3703,15 @@ class MyTelInput {
         this.controlType = 'example-tel-input';
         this.id = `example-tel-input-${MyTelInput.nextId++}`;
         this.describedBy = '';
-        this.onChange = (_) => { };
-        this.onTouched = () => { };
+        this.onChange = (/**
+         * @param {?} _
+         * @return {?}
+         */
+        (_) => { });
+        this.onTouched = (/**
+         * @return {?}
+         */
+        () => { });
         this._required = false;
         this._disabled = false;
         this.parts = fb.group({
@@ -3533,13 +3719,17 @@ class MyTelInput {
             exchange: '',
             subscriber: '',
         });
-        fm.monitor(elRef, true).subscribe(origin => {
+        fm.monitor(elRef, true).subscribe((/**
+         * @param {?} origin
+         * @return {?}
+         */
+        origin => {
             if (this.focused && !origin) {
                 this.onTouched();
             }
             this.focused = !!origin;
             this.stateChanges.next();
-        });
+        }));
         if (this.ngControl != null) {
             this.ngControl.valueAccessor = this;
         }
@@ -3699,7 +3889,7 @@ MyTelInput.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with error messages
@@ -3727,7 +3917,7 @@ FormFieldErrorExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with hints
@@ -3744,7 +3934,7 @@ FormFieldHintExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with label
@@ -3774,7 +3964,7 @@ FormFieldLabelExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Simple form field
@@ -3791,7 +3981,7 @@ FormFieldOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field with prefix & suffix
@@ -3811,7 +4001,7 @@ FormFieldPrefixSuffixExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Form field theming
@@ -3847,7 +4037,7 @@ FormFieldThemingExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Dynamic grid-list
@@ -3872,7 +4062,7 @@ GridListDynamicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic grid-list
@@ -3889,7 +4079,7 @@ GridListOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic icons
@@ -3906,7 +4096,7 @@ IconOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title SVG icons
@@ -3935,7 +4125,7 @@ IconSvgExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Input with a clear button
@@ -3955,7 +4145,7 @@ InputClearableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Error when invalid control is dirty, touched, or submitted.
@@ -3994,7 +4184,7 @@ InputErrorStateMatcherExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Input with error messages
@@ -4017,7 +4207,7 @@ InputErrorsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Inputs in a form
@@ -4034,7 +4224,7 @@ InputFormExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Input with hints
@@ -4051,7 +4241,7 @@ InputHintExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic Inputs
@@ -4068,7 +4258,7 @@ InputOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Inputs with prefixes and suffixes
@@ -4085,7 +4275,7 @@ InputPrefixSuffixExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic list
@@ -4102,7 +4292,7 @@ ListOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title List with sections
@@ -4145,7 +4335,7 @@ ListSectionsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title List with selection
@@ -4165,7 +4355,7 @@ ListSelectionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Menu with icons
@@ -4182,7 +4372,7 @@ MenuIconsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic menu
@@ -4199,7 +4389,24 @@ MenuOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * \@title Menu positioning
+ */
+class MenuPositionExample {
+}
+MenuPositionExample.decorators = [
+    { type: Component, args: [{
+                selector: 'menu-position-example',
+                template: "<button mat-button [matMenuTriggerFor]=\"aboveMenu\">Above</button>\n<mat-menu #aboveMenu=\"matMenu\" yPosition=\"above\">\n  <button mat-menu-item>Item 1</button>\n  <button mat-menu-item>Item 2</button>\n</mat-menu>\n\n<button mat-button [matMenuTriggerFor]=\"belowMenu\">Below</button>\n<mat-menu #belowMenu=\"matMenu\" yPosition=\"below\">\n  <button mat-menu-item>Item 1</button>\n  <button mat-menu-item>Item 2</button>\n</mat-menu>\n\n<button mat-button [matMenuTriggerFor]=\"beforeMenu\">Before</button>\n<mat-menu #beforeMenu=\"matMenu\" xPosition=\"before\">\n  <button mat-menu-item>Item 1</button>\n  <button mat-menu-item>Item 2</button>\n</mat-menu>\n\n\n<button mat-button [matMenuTriggerFor]=\"afterMenu\">After</button>\n<mat-menu #afterMenu=\"matMenu\" xPosition=\"after\">\n  <button mat-menu-item>Item 1</button>\n  <button mat-menu-item>Item 2</button>\n</mat-menu>\n",
+                styles: ["/** No CSS for this example */\n"]
+            }] }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Nested menu
@@ -4216,7 +4423,7 @@ NestedMenuExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable paginator
@@ -4233,7 +4440,11 @@ class PaginatorConfigurableExample {
      * @return {?}
      */
     setPageSizeOptions(setPageSizeOptionsInput) {
-        this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
+        this.pageSizeOptions = setPageSizeOptionsInput.split(',').map((/**
+         * @param {?} str
+         * @return {?}
+         */
+        str => +str));
     }
 }
 PaginatorConfigurableExample.decorators = [
@@ -4246,7 +4457,7 @@ PaginatorConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Paginator
@@ -4263,7 +4474,7 @@ PaginatorOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Buffer progress-bar
@@ -4280,7 +4491,7 @@ ProgressBarBufferExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable progress-bar
@@ -4303,7 +4514,7 @@ ProgressBarConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Determinate progress-bar
@@ -4320,7 +4531,7 @@ ProgressBarDeterminateExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Indeterminate progress-bar
@@ -4337,7 +4548,7 @@ ProgressBarIndeterminateExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Query progress-bar
@@ -4354,7 +4565,7 @@ ProgressBarQueryExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable progress spinner
@@ -4376,7 +4587,7 @@ ProgressSpinnerConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic progress-spinner
@@ -4393,7 +4604,7 @@ ProgressSpinnerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Radios with ngModel
@@ -4413,7 +4624,7 @@ RadioNgModelExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic radios
@@ -4430,7 +4641,7 @@ RadioOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title MatRipple basic usage
@@ -4452,7 +4663,7 @@ RippleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom trigger text
@@ -4473,7 +4684,7 @@ SelectCustomTriggerExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled select
@@ -4493,7 +4704,7 @@ SelectDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Error when invalid control is dirty, touched, or submitted.
@@ -4540,7 +4751,7 @@ SelectErrorStateMatcherExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select in a form
@@ -4569,7 +4780,7 @@ SelectFormExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with form field features
@@ -4596,7 +4807,7 @@ SelectHintErrorExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with multiple selection
@@ -4617,7 +4828,7 @@ SelectMultipleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with no option ripple
@@ -4634,7 +4845,7 @@ SelectNoRippleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with option groups
@@ -4688,7 +4899,7 @@ SelectOptgroupExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic select
@@ -4712,7 +4923,7 @@ SelectOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom panel styling
@@ -4735,7 +4946,7 @@ SelectPanelClassExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with reset option
@@ -4763,7 +4974,7 @@ SelectResetExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with 2-way value binding
@@ -4783,7 +4994,7 @@ SelectValueBindingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Autosize sidenav
@@ -4803,7 +5014,7 @@ SidenavAutosizeExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Drawer with explicit backdrop setting
@@ -4820,7 +5031,7 @@ SidenavBackdropExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav with custom escape and backdrop click behavior
@@ -4828,7 +5039,11 @@ SidenavBackdropExample.decorators = [
 class SidenavDisableCloseExample {
     constructor() {
         this.reason = '';
-        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some((/**
+         * @param {?} h
+         * @return {?}
+         */
+        h => h.test(window.location.host)));
     }
     /**
      * @param {?} reason
@@ -4852,7 +5067,7 @@ SidenavDisableCloseExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic drawer
@@ -4869,7 +5084,7 @@ SidenavDrawerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Fixed sidenav
@@ -4879,7 +5094,11 @@ class SidenavFixedExample {
      * @param {?} fb
      */
     constructor(fb) {
-        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some((/**
+         * @param {?} h
+         * @return {?}
+         */
+        h => h.test(window.location.host)));
         this.options = fb.group({
             bottom: 0,
             fixed: false,
@@ -4901,7 +5120,7 @@ SidenavFixedExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav with configurable mode
@@ -4909,7 +5128,11 @@ SidenavFixedExample.ctorParameters = () => [
 class SidenavModeExample {
     constructor() {
         this.mode = new FormControl('over');
-        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some((/**
+         * @param {?} h
+         * @return {?}
+         */
+        h => h.test(window.location.host)));
     }
 }
 SidenavModeExample.decorators = [
@@ -4922,7 +5145,7 @@ SidenavModeExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sidenav open & close behavior
@@ -4930,7 +5153,11 @@ SidenavModeExample.decorators = [
 class SidenavOpenCloseExample {
     constructor() {
         this.events = [];
-        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some((/**
+         * @param {?} h
+         * @return {?}
+         */
+        h => h.test(window.location.host)));
     }
 }
 SidenavOpenCloseExample.decorators = [
@@ -4943,14 +5170,18 @@ SidenavOpenCloseExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic sidenav
  */
 class SidenavOverviewExample {
     constructor() {
-        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some((/**
+         * @param {?} h
+         * @return {?}
+         */
+        h => h.test(window.location.host)));
     }
 }
 SidenavOverviewExample.decorators = [
@@ -4963,14 +5194,18 @@ SidenavOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Implicit main content with two sidenavs
  */
 class SidenavPositionExample {
     constructor() {
-        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some((/**
+         * @param {?} h
+         * @return {?}
+         */
+        h => h.test(window.location.host)));
     }
 }
 SidenavPositionExample.decorators = [
@@ -4983,7 +5218,7 @@ SidenavPositionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Responsive sidenav
@@ -4994,15 +5229,30 @@ class SidenavResponsiveExample {
      * @param {?} media
      */
     constructor(changeDetectorRef, media) {
-        this.fillerNav = Array.from({ length: 50 }, (_, i) => `Nav Item ${i + 1}`);
-        this.fillerContent = Array.from({ length: 50 }, () => `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        this.fillerNav = Array.from({ length: 50 }, (/**
+         * @param {?} _
+         * @param {?} i
+         * @return {?}
+         */
+        (_, i) => `Nav Item ${i + 1}`));
+        this.fillerContent = Array.from({ length: 50 }, (/**
+         * @return {?}
+         */
+        () => `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`);
-        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
+       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`));
+        this.shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some((/**
+         * @param {?} h
+         * @return {?}
+         */
+        h => h.test(window.location.host)));
         this.mobileQuery = media.matchMedia('(max-width: 600px)');
-        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+        this._mobileQueryListener = (/**
+         * @return {?}
+         */
+        () => changeDetectorRef.detectChanges());
         this.mobileQuery.addListener(this._mobileQueryListener);
     }
     /**
@@ -5027,7 +5277,7 @@ SidenavResponsiveExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable slide-toggle
@@ -5049,7 +5299,7 @@ SlideToggleConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Slide-toggle with forms
@@ -5086,7 +5336,7 @@ SlideToggleFormsExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic slide-toggles
@@ -5103,7 +5353,7 @@ SlideToggleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Configurable slider
@@ -5146,7 +5396,7 @@ SliderConfigurableExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Slider with custom thumb label formatting.
@@ -5176,7 +5426,7 @@ SliderFormattingExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic slider
@@ -5193,7 +5443,7 @@ SliderOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Snack-bar with a custom component
@@ -5242,7 +5492,7 @@ PizzaPartyComponent.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic snack-bar
@@ -5279,7 +5529,7 @@ SnackBarOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Snack-bar with configurable position
@@ -5318,7 +5568,7 @@ SnackBarPositionExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Sorting overview
@@ -5345,7 +5595,12 @@ class SortOverviewExample {
             this.sortedData = data;
             return;
         }
-        this.sortedData = data.sort((a, b) => {
+        this.sortedData = data.sort((/**
+         * @param {?} a
+         * @param {?} b
+         * @return {?}
+         */
+        (a, b) => {
             /** @type {?} */
             const isAsc = sort.direction === 'asc';
             switch (sort.active) {
@@ -5356,7 +5611,7 @@ class SortOverviewExample {
                 case 'protein': return compare(a.protein, b.protein, isAsc);
                 default: return 0;
             }
-        });
+        }));
     }
 }
 SortOverviewExample.decorators = [
@@ -5380,7 +5635,7 @@ function compare(a, b, isAsc) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper with editable steps
@@ -5419,9 +5674,9 @@ StepperEditableExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const ɵ0$3 = { showError: true };
+const ɵ0$2 = { showError: true };
 /**
  * \@title Stepper that displays errors in the steps
  */
@@ -5449,7 +5704,7 @@ StepperErrorsExample.decorators = [
                 selector: 'stepper-errors-example',
                 template: "<mat-horizontal-stepper linear #stepper>\n  <mat-step [stepControl]=\"firstFormGroup\" errorMessage=\"Name is required.\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"secondFormGroup\" errorMessage=\"Address is required.\">\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Fill out your address</ng-template>\n      <mat-form-field>\n        <input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    You are now done.\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-horizontal-stepper>\n",
                 providers: [{
-                        provide: STEPPER_GLOBAL_OPTIONS, useValue: ɵ0$3
+                        provide: STEPPER_GLOBAL_OPTIONS, useValue: ɵ0$2
                     }],
                 styles: [""]
             }] }
@@ -5461,7 +5716,7 @@ StepperErrorsExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper label bottom position
@@ -5499,7 +5754,7 @@ StepperLabelPositionBottomExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper with optional steps
@@ -5538,7 +5793,7 @@ StepperOptionalExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper overview
@@ -5577,9 +5832,9 @@ StepperOverviewExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const ɵ0$4 = { displayDefaultIndicatorType: false };
+const ɵ0$3 = { displayDefaultIndicatorType: false };
 /**
  * \@title Stepper with customized states
  */
@@ -5607,7 +5862,7 @@ StepperStatesExample.decorators = [
                 selector: 'stepper-states-example',
                 template: "<mat-horizontal-stepper #stepper>\n  <mat-step [stepControl]=\"firstFormGroup\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"secondFormGroup\">\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Fill out your address</ng-template>\n      <mat-form-field>\n        <input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    You are now done.\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-horizontal-stepper>\n\n<mat-horizontal-stepper>\n  <mat-step label=\"Step 1\" state=\"phone\">\n    <p>Put down your phones.</p>\n    <div>\n      <button mat-button matStepperNext>Next</button>\n    </div>\n  </mat-step>\n  <mat-step label=\"Step 2\" state=\"chat\">\n    <p>Socialize with each other.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button matStepperNext>Next</button>\n    </div>\n  </mat-step>\n  <mat-step label=\"Step 3\">\n    <p>You're welcome.</p>\n  </mat-step>\n\n  <!-- Icon overrides. -->\n  <ng-template matStepperIcon=\"phone\">\n    <mat-icon>call_end</mat-icon>\n  </ng-template>\n  <ng-template matStepperIcon=\"chat\">\n    <mat-icon>forum</mat-icon>\n  </ng-template>\n</mat-horizontal-stepper>\n",
                 providers: [{
-                        provide: STEPPER_GLOBAL_OPTIONS, useValue: ɵ0$4
+                        provide: STEPPER_GLOBAL_OPTIONS, useValue: ɵ0$3
                     }],
                 styles: [""]
             }] }
@@ -5619,7 +5874,7 @@ StepperStatesExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Stepper vertical
@@ -5658,7 +5913,7 @@ StepperVerticalExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with aligned labels
@@ -5675,7 +5930,7 @@ TabGroupAlignExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group animations
@@ -5692,22 +5947,29 @@ TabGroupAnimationsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with asynchronously loading tab contents
  */
 class TabGroupAsyncExample {
     constructor() {
-        this.asyncTabs = new Observable((observer) => {
-            setTimeout(() => {
+        this.asyncTabs = new Observable((/**
+         * @param {?} observer
+         * @return {?}
+         */
+        (observer) => {
+            setTimeout((/**
+             * @return {?}
+             */
+            () => {
                 observer.next([
                     { label: 'First', content: 'Content 1' },
                     { label: 'Second', content: 'Content 2' },
                     { label: 'Third', content: 'Content 3' },
                 ]);
-            }, 1000);
-        });
+            }), 1000);
+        }));
     }
 }
 TabGroupAsyncExample.decorators = [
@@ -5722,7 +5984,7 @@ TabGroupAsyncExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab group
@@ -5739,7 +6001,7 @@ TabGroupBasicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Using tabs with a custom label template
@@ -5756,7 +6018,7 @@ TabGroupCustomLabelExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with dynamic height based on tab contents
@@ -5773,7 +6035,7 @@ TabGroupDynamicHeightExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with dynamically changing tabs
@@ -5811,7 +6073,7 @@ TabGroupDynamicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with the headers on the bottom
@@ -5828,7 +6090,7 @@ TabGroupHeaderBelowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group where the tab content is loaded lazily (when activated)
@@ -5858,7 +6120,7 @@ TabGroupLazyLoadedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with stretched labels
@@ -5875,7 +6137,7 @@ TabGroupStretchedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Customizing the theme options on the tab group
@@ -5892,7 +6154,7 @@ TabGroupThemeExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab nav bar
@@ -5920,7 +6182,7 @@ TabNavBarBasicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$2 = [
@@ -5954,7 +6216,7 @@ TableBasicFlexExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$3 = [
@@ -5988,7 +6250,7 @@ TableBasicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$4 = [
@@ -6056,7 +6318,7 @@ TableDynamicColumnsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with expandable rows
@@ -6166,7 +6428,7 @@ const ELEMENT_DATA$5 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$6 = [
@@ -6207,7 +6469,7 @@ TableFilteringExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Footer row table
@@ -6229,7 +6491,16 @@ class TableFooterRowExample {
      * @return {?}
      */
     getTotalCost() {
-        return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
+        return this.transactions.map((/**
+         * @param {?} t
+         * @return {?}
+         */
+        t => t.cost)).reduce((/**
+         * @param {?} acc
+         * @param {?} value
+         * @return {?}
+         */
+        (acc, value) => acc + value), 0);
     }
 }
 TableFooterRowExample.decorators = [
@@ -6242,7 +6513,7 @@ TableFooterRowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table retrieving data through HTTP
@@ -6265,23 +6536,40 @@ class TableHttpExample {
     ngAfterViewInit() {
         this.exampleDatabase = new ExampleHttpDatabase(this.http);
         // If the user changes the sort order, reset back to the first page.
-        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+        this.sort.sortChange.subscribe((/**
+         * @return {?}
+         */
+        () => this.paginator.pageIndex = 0));
         merge(this.sort.sortChange, this.paginator.page)
-            .pipe(startWith({}), switchMap(() => {
+            .pipe(startWith({}), switchMap((/**
+         * @return {?}
+         */
+        () => {
             this.isLoadingResults = true;
             return (/** @type {?} */ (this.exampleDatabase)).getRepoIssues(this.sort.active, this.sort.direction, this.paginator.pageIndex);
-        }), map(data => {
+        })), map((/**
+         * @param {?} data
+         * @return {?}
+         */
+        data => {
             // Flip flag to show that loading has finished.
             this.isLoadingResults = false;
             this.isRateLimitReached = false;
             this.resultsLength = data.total_count;
             return data.items;
-        }), catchError(() => {
+        })), catchError((/**
+         * @return {?}
+         */
+        () => {
             this.isLoadingResults = false;
             // Catch if the GitHub API has reached its rate limit. Return empty data.
             this.isRateLimitReached = true;
             return of([]);
-        })).subscribe(data => this.data = data);
+        }))).subscribe((/**
+         * @param {?} data
+         * @return {?}
+         */
+        data => this.data = data));
     }
 }
 TableHttpExample.decorators = [
@@ -6326,7 +6614,7 @@ class ExampleHttpDatabase {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with multiple header and footer rows
@@ -6348,7 +6636,16 @@ class TableMultipleHeaderFooterExample {
      * @return {?}
      */
     getTotalCost() {
-        return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
+        return this.transactions.map((/**
+         * @param {?} t
+         * @return {?}
+         */
+        t => t.cost)).reduce((/**
+         * @param {?} acc
+         * @param {?} value
+         * @return {?}
+         */
+        (acc, value) => acc + value), 0);
     }
 }
 TableMultipleHeaderFooterExample.decorators = [
@@ -6361,7 +6658,7 @@ TableMultipleHeaderFooterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Constants used to fill up our data base.
@@ -6384,7 +6681,12 @@ class TableOverviewExample {
         this.displayedColumns = ['id', 'name', 'progress', 'color'];
         // Create 100 users
         /** @type {?} */
-        const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
+        const users = Array.from({ length: 100 }, (/**
+         * @param {?} _
+         * @param {?} k
+         * @return {?}
+         */
+        (_, k) => createNewUser(k + 1)));
         // Assign the data to the data source for the table to render
         this.dataSource = new MatTableDataSource(users);
     }
@@ -6438,7 +6740,7 @@ function createNewUser(id) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with pagination
@@ -6491,7 +6793,7 @@ const ELEMENT_DATA$7 = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table showing each row context properties.
@@ -6512,7 +6814,7 @@ TableRowContextExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$8 = [
@@ -6554,7 +6856,11 @@ class TableSelectionExample {
     masterToggle() {
         this.isAllSelected() ?
             this.selection.clear() :
-            this.dataSource.data.forEach(row => this.selection.select(row));
+            this.dataSource.data.forEach((/**
+             * @param {?} row
+             * @return {?}
+             */
+            row => this.selection.select(row)));
     }
     /**
      * The label for the checkbox on the passed row
@@ -6578,7 +6884,7 @@ TableSelectionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$9 = [
@@ -6600,7 +6906,11 @@ class TableSimpleColumnExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = new MatTableDataSource(ELEMENT_DATA$9);
-        this.getWeight = (data) => '~' + data.weight;
+        this.getWeight = (/**
+         * @param {?} data
+         * @return {?}
+         */
+        (data) => '~' + data.weight);
     }
     /**
      * @return {?}
@@ -6726,7 +7036,7 @@ SimpleColumn.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$a = [
@@ -6769,7 +7079,7 @@ TableSortingExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with sticky columns
@@ -6803,7 +7113,7 @@ const ELEMENT_DATA$b = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Flex-layout tables with toggle-able sticky headers, footers, and columns
@@ -6856,7 +7166,7 @@ const ELEMENT_DATA$c = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tables with toggle-able sticky headers, footers, and columns
@@ -6909,7 +7219,7 @@ const ELEMENT_DATA$d = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with a sticky footer
@@ -6931,7 +7241,16 @@ class TableStickyFooterExample {
      * @return {?}
      */
     getTotalCost() {
-        return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
+        return this.transactions.map((/**
+         * @param {?} t
+         * @return {?}
+         */
+        t => t.cost)).reduce((/**
+         * @param {?} acc
+         * @param {?} value
+         * @return {?}
+         */
+        (acc, value) => acc + value), 0);
     }
 }
 TableStickyFooterExample.decorators = [
@@ -6944,7 +7263,7 @@ TableStickyFooterExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Table with sticky header
@@ -6978,7 +7297,7 @@ const ELEMENT_DATA$e = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const ELEMENT_DATA$f = [
@@ -7028,9 +7347,21 @@ class WrapperTable {
      * @return {?}
      */
     ngAfterContentInit() {
-        this.columnDefs.forEach(columnDef => this.table.addColumnDef(columnDef));
-        this.rowDefs.forEach(rowDef => this.table.addRowDef(rowDef));
-        this.headerRowDefs.forEach(headerRowDef => this.table.addHeaderRowDef(headerRowDef));
+        this.columnDefs.forEach((/**
+         * @param {?} columnDef
+         * @return {?}
+         */
+        columnDef => this.table.addColumnDef(columnDef)));
+        this.rowDefs.forEach((/**
+         * @param {?} rowDef
+         * @return {?}
+         */
+        rowDef => this.table.addRowDef(rowDef)));
+        this.headerRowDefs.forEach((/**
+         * @param {?} headerRowDef
+         * @return {?}
+         */
+        headerRowDef => this.table.addHeaderRowDef(headerRowDef)));
     }
 }
 WrapperTable.decorators = [
@@ -7055,7 +7386,7 @@ WrapperTable.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring autofill state with cdkAutofill
@@ -7072,7 +7403,7 @@ TextFieldAutofillDirectiveExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring autofill state with AutofillMonitor
@@ -7089,9 +7420,17 @@ class TextFieldAutofillMonitorExample {
      */
     ngAfterViewInit() {
         this.autofill.monitor(this.firstName)
-            .subscribe(e => this.firstNameAutofilled = e.isAutofilled);
+            .subscribe((/**
+         * @param {?} e
+         * @return {?}
+         */
+        e => this.firstNameAutofilled = e.isAutofilled));
         this.autofill.monitor(this.lastName)
-            .subscribe(e => this.lastNameAutofilled = e.isAutofilled);
+            .subscribe((/**
+         * @param {?} e
+         * @return {?}
+         */
+        e => this.lastNameAutofilled = e.isAutofilled));
     }
     /**
      * @return {?}
@@ -7119,7 +7458,7 @@ TextFieldAutofillMonitorExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Auto-resizing textarea
@@ -7137,7 +7476,10 @@ class TextFieldAutosizeTextareaExample {
     triggerResize() {
         // Wait for changes to be applied, then trigger textarea resize.
         this.ngZone.onStable.pipe(take(1))
-            .subscribe(() => this.autosize.resizeToFitContent(true));
+            .subscribe((/**
+         * @return {?}
+         */
+        () => this.autosize.resizeToFitContent(true)));
     }
 }
 TextFieldAutosizeTextareaExample.decorators = [
@@ -7157,7 +7499,7 @@ TextFieldAutosizeTextareaExample.propDecorators = {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Multi-row toolbar
@@ -7174,7 +7516,7 @@ ToolbarMultirowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic toolbar
@@ -7191,7 +7533,7 @@ ToolbarOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.
@@ -7212,7 +7554,7 @@ TooltipAutoHideExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can have a custom class applied.
@@ -7232,7 +7574,7 @@ TooltipCustomClassExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a show and hide delay
@@ -7253,7 +7595,7 @@ TooltipDelayExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can be disabled
@@ -7273,7 +7615,7 @@ TooltipDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip that can be manually shown/hidden.
@@ -7290,7 +7632,7 @@ TooltipManualExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a changing message
@@ -7310,7 +7652,7 @@ TooltipMessageExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Custom options the configure the tooltip's default show/hide delays.
@@ -7339,7 +7681,7 @@ TooltipModifiedDefaultsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic tooltip
@@ -7356,7 +7698,7 @@ TooltipOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tooltip with a custom position
@@ -7377,7 +7719,7 @@ TooltipPositionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Node for to-do item
@@ -7443,7 +7785,12 @@ class ChecklistDatabase {
      * @return {?}
      */
     buildFileTree(obj, level) {
-        return Object.keys(obj).reduce((accumulator, key) => {
+        return Object.keys(obj).reduce((/**
+         * @param {?} accumulator
+         * @param {?} key
+         * @return {?}
+         */
+        (accumulator, key) => {
             /** @type {?} */
             const value = obj[key];
             /** @type {?} */
@@ -7458,7 +7805,7 @@ class ChecklistDatabase {
                 }
             }
             return accumulator.concat(node);
-        }, []);
+        }), []);
     }
     /**
      * Add an item to to-do list
@@ -7516,15 +7863,42 @@ class TreeChecklistExample {
          * The selection for checklist
          */
         this.checklistSelection = new SelectionModel(true /* multiple */);
-        this.getLevel = (node) => node.level;
-        this.isExpandable = (node) => node.expandable;
-        this.getChildren = (node) => node.children;
-        this.hasChild = (_, _nodeData) => _nodeData.expandable;
-        this.hasNoContent = (_, _nodeData) => _nodeData.item === '';
+        this.getLevel = (/**
+         * @param {?} node
+         * @return {?}
+         */
+        (node) => node.level);
+        this.isExpandable = (/**
+         * @param {?} node
+         * @return {?}
+         */
+        (node) => node.expandable);
+        this.getChildren = (/**
+         * @param {?} node
+         * @return {?}
+         */
+        (node) => node.children);
+        this.hasChild = (/**
+         * @param {?} _
+         * @param {?} _nodeData
+         * @return {?}
+         */
+        (_, _nodeData) => _nodeData.expandable);
+        this.hasNoContent = (/**
+         * @param {?} _
+         * @param {?} _nodeData
+         * @return {?}
+         */
+        (_, _nodeData) => _nodeData.item === '');
         /**
          * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
          */
-        this.transformer = (node, level) => {
+        this.transformer = (/**
+         * @param {?} node
+         * @param {?} level
+         * @return {?}
+         */
+        (node, level) => {
             /** @type {?} */
             const existingNode = this.nestedNodeMap.get(node);
             /** @type {?} */
@@ -7537,13 +7911,17 @@ class TreeChecklistExample {
             this.flatNodeMap.set(flatNode, node);
             this.nestedNodeMap.set(node, flatNode);
             return flatNode;
-        };
+        });
         this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
         this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
         this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe(data => {
+        database.dataChange.subscribe((/**
+         * @param {?} data
+         * @return {?}
+         */
+        data => {
             this.dataSource.data = data;
-        });
+        }));
     }
     /**
      * Whether all the descendants of the node are selected.
@@ -7554,7 +7932,11 @@ class TreeChecklistExample {
         /** @type {?} */
         const descendants = this.treeControl.getDescendants(node);
         /** @type {?} */
-        const descAllSelected = descendants.every(child => this.checklistSelection.isSelected(child));
+        const descAllSelected = descendants.every((/**
+         * @param {?} child
+         * @return {?}
+         */
+        child => this.checklistSelection.isSelected(child)));
         return descAllSelected;
     }
     /**
@@ -7566,7 +7948,11 @@ class TreeChecklistExample {
         /** @type {?} */
         const descendants = this.treeControl.getDescendants(node);
         /** @type {?} */
-        const result = descendants.some(child => this.checklistSelection.isSelected(child));
+        const result = descendants.some((/**
+         * @param {?} child
+         * @return {?}
+         */
+        child => this.checklistSelection.isSelected(child)));
         return result && !this.descendantsAllSelected(node);
     }
     /**
@@ -7582,7 +7968,11 @@ class TreeChecklistExample {
             ? this.checklistSelection.select(...descendants)
             : this.checklistSelection.deselect(...descendants);
         // Force update for the parent
-        descendants.every(child => this.checklistSelection.isSelected(child));
+        descendants.every((/**
+         * @param {?} child
+         * @return {?}
+         */
+        child => this.checklistSelection.isSelected(child)));
         this.checkAllParentsSelection(node);
     }
     /**
@@ -7618,7 +8008,11 @@ class TreeChecklistExample {
         /** @type {?} */
         const descendants = this.treeControl.getDescendants(node);
         /** @type {?} */
-        const descAllSelected = descendants.every(child => this.checklistSelection.isSelected(child));
+        const descAllSelected = descendants.every((/**
+         * @param {?} child
+         * @return {?}
+         */
+        child => this.checklistSelection.isSelected(child)));
         if (nodeSelected && !descAllSelected) {
             this.checklistSelection.deselect(node);
         }
@@ -7686,7 +8080,7 @@ TreeChecklistExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Flat node with expandable and level information
@@ -7724,7 +8118,11 @@ class DynamicDatabase {
      * @return {?}
      */
     initialData() {
-        return this.rootLevelNodes.map(name => new DynamicFlatNode(name, 0, true));
+        return this.rootLevelNodes.map((/**
+         * @param {?} name
+         * @return {?}
+         */
+        name => new DynamicFlatNode(name, 0, true)));
     }
     /**
      * @param {?} node
@@ -7775,13 +8173,20 @@ class DynamicDataSource {
      * @return {?}
      */
     connect(collectionViewer) {
-        this.treeControl.expansionModel.onChange.subscribe(change => {
+        this.treeControl.expansionModel.onChange.subscribe((/**
+         * @param {?} change
+         * @return {?}
+         */
+        change => {
             if (((/** @type {?} */ (change))).added ||
                 ((/** @type {?} */ (change))).removed) {
                 this.handleTreeControl((/** @type {?} */ (change)));
             }
-        });
-        return merge(collectionViewer.viewChange, this.dataChange).pipe(map(() => this.data));
+        }));
+        return merge(collectionViewer.viewChange, this.dataChange).pipe(map((/**
+         * @return {?}
+         */
+        () => this.data)));
     }
     /**
      * Handle expand/collapse behaviors
@@ -7790,10 +8195,18 @@ class DynamicDataSource {
      */
     handleTreeControl(change) {
         if (change.added) {
-            change.added.forEach(node => this.toggleNode(node, true));
+            change.added.forEach((/**
+             * @param {?} node
+             * @return {?}
+             */
+            node => this.toggleNode(node, true)));
         }
         if (change.removed) {
-            change.removed.slice().reverse().forEach(node => this.toggleNode(node, false));
+            change.removed.slice().reverse().forEach((/**
+             * @param {?} node
+             * @return {?}
+             */
+            node => this.toggleNode(node, false)));
         }
     }
     /**
@@ -7811,10 +8224,17 @@ class DynamicDataSource {
             return;
         }
         node.isLoading = true;
-        setTimeout(() => {
+        setTimeout((/**
+         * @return {?}
+         */
+        () => {
             if (expand) {
                 /** @type {?} */
-                const nodes = children.map(name => new DynamicFlatNode(name, node.level + 1, this.database.isExpandable(name)));
+                const nodes = children.map((/**
+                 * @param {?} name
+                 * @return {?}
+                 */
+                name => new DynamicFlatNode(name, node.level + 1, this.database.isExpandable(name))));
                 this.data.splice(index + 1, 0, ...nodes);
             }
             else {
@@ -7827,7 +8247,7 @@ class DynamicDataSource {
             // notify the change
             this.dataChange.next(this.data);
             node.isLoading = false;
-        }, 1000);
+        }), 1000);
     }
 }
 DynamicDataSource.decorators = [
@@ -7846,9 +8266,22 @@ class TreeDynamicExample {
      * @param {?} database
      */
     constructor(database) {
-        this.getLevel = (node) => node.level;
-        this.isExpandable = (node) => node.expandable;
-        this.hasChild = (_, _nodeData) => _nodeData.expandable;
+        this.getLevel = (/**
+         * @param {?} node
+         * @return {?}
+         */
+        (node) => node.level);
+        this.isExpandable = (/**
+         * @param {?} node
+         * @return {?}
+         */
+        (node) => node.expandable);
+        this.hasChild = (/**
+         * @param {?} _
+         * @param {?} _nodeData
+         * @return {?}
+         */
+        (_, _nodeData) => _nodeData.expandable);
         this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
         this.dataSource = new DynamicDataSource(this.treeControl, database);
         this.dataSource.data = database.initialData();
@@ -7869,7 +8302,7 @@ TreeDynamicExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const TREE_DATA$3 = [
@@ -7904,17 +8337,47 @@ const TREE_DATA$3 = [
  */
 class TreeFlatOverviewExample {
     constructor() {
-        this.transformer = (node, level) => {
+        this.transformer = (/**
+         * @param {?} node
+         * @param {?} level
+         * @return {?}
+         */
+        (node, level) => {
             return {
                 expandable: !!node.children && node.children.length > 0,
                 name: node.name,
                 level: level,
             };
-        };
-        this.treeControl = new FlatTreeControl(node => node.level, node => node.expandable);
-        this.treeFlattener = new MatTreeFlattener(this.transformer, node => node.level, node => node.expandable, node => node.children);
+        });
+        this.treeControl = new FlatTreeControl((/**
+         * @param {?} node
+         * @return {?}
+         */
+        node => node.level), (/**
+         * @param {?} node
+         * @return {?}
+         */
+        node => node.expandable));
+        this.treeFlattener = new MatTreeFlattener(this.transformer, (/**
+         * @param {?} node
+         * @return {?}
+         */
+        node => node.level), (/**
+         * @param {?} node
+         * @return {?}
+         */
+        node => node.expandable), (/**
+         * @param {?} node
+         * @return {?}
+         */
+        node => node.children));
         this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        this.hasChild = (_, node) => node.expandable;
+        this.hasChild = (/**
+         * @param {?} _
+         * @param {?} node
+         * @return {?}
+         */
+        (_, node) => node.expandable);
         this.dataSource.data = TREE_DATA$3;
     }
 }
@@ -7930,7 +8393,7 @@ TreeFlatOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const LOAD_MORE = 'LOAD_MORE';
@@ -7998,7 +8461,11 @@ class LoadmoreDatabase {
      */
     initialize() {
         /** @type {?} */
-        const data = this.rootLevelNodes.map(name => this._generateNode(name));
+        const data = this.rootLevelNodes.map((/**
+         * @param {?} name
+         * @return {?}
+         */
+        name => this._generateNode(name)));
         this.dataChange.next(data);
     }
     /**
@@ -8022,7 +8489,11 @@ class LoadmoreDatabase {
         const newChildrenNumber = (/** @type {?} */ (parent.children)).length + this.batchNumber;
         /** @type {?} */
         const nodes = children.slice(0, newChildrenNumber)
-            .map(name => this._generateNode(name));
+            .map((/**
+         * @param {?} name
+         * @return {?}
+         */
+        name => this._generateNode(name)));
         if (newChildrenNumber < children.length) {
             // Need a new load more node
             nodes.push(new LoadmoreNode(LOAD_MORE, false, item));
@@ -8058,8 +8529,17 @@ class TreeLoadmoreExample {
     constructor(database) {
         this.database = database;
         this.nodeMap = new Map();
-        this.getChildren = (node) => node.childrenChange;
-        this.transformer = (node, level) => {
+        this.getChildren = (/**
+         * @param {?} node
+         * @return {?}
+         */
+        (node) => node.childrenChange);
+        this.transformer = (/**
+         * @param {?} node
+         * @param {?} level
+         * @return {?}
+         */
+        (node, level) => {
             /** @type {?} */
             const existingNode = this.nodeMap.get(node.item);
             if (existingNode) {
@@ -8069,17 +8549,39 @@ class TreeLoadmoreExample {
             const newNode = new LoadmoreFlatNode(node.item, level, node.hasChildren, node.loadMoreParentItem);
             this.nodeMap.set(node.item, newNode);
             return newNode;
-        };
-        this.getLevel = (node) => node.level;
-        this.isExpandable = (node) => node.expandable;
-        this.hasChild = (_, _nodeData) => _nodeData.expandable;
-        this.isLoadMore = (_, _nodeData) => _nodeData.item === LOAD_MORE;
+        });
+        this.getLevel = (/**
+         * @param {?} node
+         * @return {?}
+         */
+        (node) => node.level);
+        this.isExpandable = (/**
+         * @param {?} node
+         * @return {?}
+         */
+        (node) => node.expandable);
+        this.hasChild = (/**
+         * @param {?} _
+         * @param {?} _nodeData
+         * @return {?}
+         */
+        (_, _nodeData) => _nodeData.expandable);
+        this.isLoadMore = (/**
+         * @param {?} _
+         * @param {?} _nodeData
+         * @return {?}
+         */
+        (_, _nodeData) => _nodeData.item === LOAD_MORE);
         this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
         this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
         this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe(data => {
+        database.dataChange.subscribe((/**
+         * @param {?} data
+         * @return {?}
+         */
+        data => {
             this.dataSource.data = data;
-        });
+        }));
         database.initialize();
     }
     /**
@@ -8113,7 +8615,7 @@ TreeLoadmoreExample.ctorParameters = () => [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const TREE_DATA$4 = [
@@ -8148,9 +8650,18 @@ const TREE_DATA$4 = [
  */
 class TreeNestedOverviewExample {
     constructor() {
-        this.treeControl = new NestedTreeControl(node => node.children);
+        this.treeControl = new NestedTreeControl((/**
+         * @param {?} node
+         * @return {?}
+         */
+        node => node.children));
         this.dataSource = new MatTreeNestedDataSource();
-        this.hasChild = (_, node) => !!node.children && node.children.length > 0;
+        this.hasChild = (/**
+         * @param {?} _
+         * @param {?} node
+         * @return {?}
+         */
+        (_, node) => !!node.children && node.children.length > 0);
         this.dataSource.data = TREE_DATA$4;
     }
 }
@@ -8166,7 +8677,7 @@ TreeNestedOverviewExample.ctorParameters = () => [];
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLE_COMPONENTS = {
@@ -8807,6 +9318,12 @@ const EXAMPLE_COMPONENTS = {
     "menu-overview": {
         "title": "Basic menu",
         "component": MenuOverviewExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "menu-position": {
+        "title": "Menu positioning",
+        "component": MenuPositionExample,
         "additionalFiles": [],
         "selectorName": ""
     },
@@ -9548,6 +10065,7 @@ const EXAMPLE_LIST = [
     ListSelectionExample,
     MenuIconsExample,
     MenuOverviewExample,
+    MenuPositionExample,
     NestedMenuExample,
     PaginatorConfigurableExample,
     PaginatorOverviewExample,
@@ -9672,7 +10190,7 @@ ExampleModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Example data
@@ -9689,13 +10207,21 @@ class ExampleData {
         /** @type {?} */
         const exampleConfig = EXAMPLE_COMPONENTS[example];
         // TODO(tinayuangao): Do not hard-code extensions
-        this.exampleFiles = ['html', 'ts', 'css'].map(extension => `${example}-example.${extension}`);
+        this.exampleFiles = ['html', 'ts', 'css'].map((/**
+         * @param {?} extension
+         * @return {?}
+         */
+        extension => `${example}-example.${extension}`));
         this.selectorName = this.indexFilename = `${example}-example`;
         if (exampleConfig.additionalFiles) {
             this.exampleFiles.push(...exampleConfig.additionalFiles);
         }
         /** @type {?} */
-        const exampleName = example.replace(/(?:^\w|\b\w)/g, letter => letter.toUpperCase());
+        const exampleName = example.replace(/(?:^\w|\b\w)/g, (/**
+         * @param {?} letter
+         * @return {?}
+         */
+        letter => letter.toUpperCase()));
         this.description = exampleConfig.title || exampleName.replace(/[\-]+/g, ' ') + ' Example';
         this.componentName = exampleConfig.selectorName ||
             exampleName.replace(/[\-]+/g, '') + 'Example';
@@ -9704,17 +10230,17 @@ class ExampleData {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { AutocompleteAutoActiveFirstOptionExample as ɵangular_material_src_material_examples_examples_a, AutocompleteDisplayExample as ɵangular_material_src_material_examples_examples_b, AutocompleteFilterExample as ɵangular_material_src_material_examples_examples_c, AutocompleteOptgroupExample as ɵangular_material_src_material_examples_examples_d, AutocompleteOverviewExample as ɵangular_material_src_material_examples_examples_e, AutocompleteSimpleExample as ɵangular_material_src_material_examples_examples_f, BadgeOverviewExample as ɵangular_material_src_material_examples_examples_g, BottomSheetOverviewExample as ɵangular_material_src_material_examples_examples_h, BottomSheetOverviewExampleSheet as ɵangular_material_src_material_examples_examples_i, ButtonOverviewExample as ɵangular_material_src_material_examples_examples_j, ButtonToggleAppearanceExample as ɵangular_material_src_material_examples_examples_k, ButtonToggleExclusiveExample as ɵangular_material_src_material_examples_examples_l, ButtonTypesExample as ɵangular_material_src_material_examples_examples_m, CardOverviewExample as ɵangular_material_src_material_examples_examples_n, CdkCustomStepperWithoutFormExample as ɵangular_material_src_material_examples_examples_o, CustomStepper as ɵangular_material_src_material_examples_examples_p, CdkDragDropAxisLockExample as ɵangular_material_src_material_examples_examples_q, CdkDragDropBoundaryExample as ɵangular_material_src_material_examples_examples_r, CdkDragDropConnectedSortingGroupExample as ɵangular_material_src_material_examples_examples_s, CdkDragDropConnectedSortingExample as ɵangular_material_src_material_examples_examples_t, CdkDragDropCustomPlaceholderExample as ɵangular_material_src_material_examples_examples_u, CdkDragDropCustomPreviewExample as ɵangular_material_src_material_examples_examples_v, CdkDragDropDisabledSortingExample as ɵangular_material_src_material_examples_examples_w, CdkDragDropDisabledExample as ɵangular_material_src_material_examples_examples_x, CdkDragDropEnterPredicateExample as ɵangular_material_src_material_examples_examples_y, CdkDragDropHandleExample as ɵangular_material_src_material_examples_examples_z, CdkDragDropHorizontalSortingExample as ɵangular_material_src_material_examples_examples_ba, CdkDragDropOverviewExample as ɵangular_material_src_material_examples_examples_bb, CdkDragDropRootElementExample as ɵangular_material_src_material_examples_examples_bc, CdkDragDropSortingExample as ɵangular_material_src_material_examples_examples_bd, CdkPlatformOverviewExample as ɵangular_material_src_material_examples_examples_be, CdkPortalOverviewExample as ɵangular_material_src_material_examples_examples_bf, ComponentPortalExample as ɵangular_material_src_material_examples_examples_bg, CdkTableBasicFlexExample as ɵangular_material_src_material_examples_examples_bh, CdkTableBasicExample as ɵangular_material_src_material_examples_examples_bi, CdkTreeFlatExample as ɵangular_material_src_material_examples_examples_bj, CdkTreeNestedExample as ɵangular_material_src_material_examples_examples_bk, CdkVirtualScrollContextExample as ɵangular_material_src_material_examples_examples_bl, CdkVirtualScrollCustomStrategyExample as ɵangular_material_src_material_examples_examples_bn, CustomVirtualScrollStrategy as ɵangular_material_src_material_examples_examples_bm, CdkVirtualScrollDataSourceExample as ɵangular_material_src_material_examples_examples_bo, CdkVirtualScrollDlExample as ɵangular_material_src_material_examples_examples_bp, CdkVirtualScrollFixedBufferExample as ɵangular_material_src_material_examples_examples_bq, CdkVirtualScrollHorizontalExample as ɵangular_material_src_material_examples_examples_br, CdkVirtualScrollOverviewExample as ɵangular_material_src_material_examples_examples_bs, CdkVirtualScrollTemplateCacheExample as ɵangular_material_src_material_examples_examples_bt, CheckboxConfigurableExample as ɵangular_material_src_material_examples_examples_bu, CheckboxOverviewExample as ɵangular_material_src_material_examples_examples_bv, ChipsAutocompleteExample as ɵangular_material_src_material_examples_examples_bw, ChipsDragDropExample as ɵangular_material_src_material_examples_examples_bx, ChipsInputExample as ɵangular_material_src_material_examples_examples_by, ChipsOverviewExample as ɵangular_material_src_material_examples_examples_bz, ChipsStackedExample as ɵangular_material_src_material_examples_examples_ca, DatepickerApiExample as ɵangular_material_src_material_examples_examples_cb, DatepickerColorExample as ɵangular_material_src_material_examples_examples_cc, DatepickerCustomHeaderExample as ɵangular_material_src_material_examples_examples_cd, ExampleHeader as ɵangular_material_src_material_examples_examples_ce, DatepickerCustomIconExample as ɵangular_material_src_material_examples_examples_cf, DatepickerDateClassExample as ɵangular_material_src_material_examples_examples_cg, DatepickerDisabledExample as ɵangular_material_src_material_examples_examples_ch, DatepickerEventsExample as ɵangular_material_src_material_examples_examples_ci, DatepickerFilterExample as ɵangular_material_src_material_examples_examples_cj, DatepickerFormatsExample as ɵangular_material_src_material_examples_examples_cl, MY_FORMATS as ɵangular_material_src_material_examples_examples_ck, DatepickerLocaleExample as ɵangular_material_src_material_examples_examples_cm, DatepickerMinMaxExample as ɵangular_material_src_material_examples_examples_cn, DatepickerMomentExample as ɵangular_material_src_material_examples_examples_co, DatepickerStartViewExample as ɵangular_material_src_material_examples_examples_cp, DatepickerTouchExample as ɵangular_material_src_material_examples_examples_cq, DatepickerValueExample as ɵangular_material_src_material_examples_examples_cr, DatepickerViewsSelectionExample as ɵangular_material_src_material_examples_examples_ct, MY_FORMATS$1 as ɵangular_material_src_material_examples_examples_cs, DialogContentExample as ɵangular_material_src_material_examples_examples_cu, DialogContentExampleDialog as ɵangular_material_src_material_examples_examples_cv, DialogDataExample as ɵangular_material_src_material_examples_examples_cw, DialogDataExampleDialog as ɵangular_material_src_material_examples_examples_cx, DialogElementsExample as ɵangular_material_src_material_examples_examples_cy, DialogElementsExampleDialog as ɵangular_material_src_material_examples_examples_cz, DialogOverviewExample as ɵangular_material_src_material_examples_examples_da, DialogOverviewExampleDialog as ɵangular_material_src_material_examples_examples_db, DividerOverviewExample as ɵangular_material_src_material_examples_examples_dc, ElevationOverviewExample as ɵangular_material_src_material_examples_examples_dd, ExpansionExpandCollapseAllExample as ɵangular_material_src_material_examples_examples_de, ExpansionStepsExample as ɵangular_material_src_material_examples_examples_df, FocusMonitorDirectivesExample as ɵangular_material_src_material_examples_examples_dg, FocusMonitorFocusViaExample as ɵangular_material_src_material_examples_examples_dh, FocusMonitorOverviewExample as ɵangular_material_src_material_examples_examples_di, FormFieldAppearanceExample as ɵangular_material_src_material_examples_examples_dj, FormFieldCustomControlExample as ɵangular_material_src_material_examples_examples_dk, MyTelInput as ɵangular_material_src_material_examples_examples_dl, FormFieldErrorExample as ɵangular_material_src_material_examples_examples_dm, FormFieldHintExample as ɵangular_material_src_material_examples_examples_dn, FormFieldLabelExample as ɵangular_material_src_material_examples_examples_do, FormFieldOverviewExample as ɵangular_material_src_material_examples_examples_dp, FormFieldPrefixSuffixExample as ɵangular_material_src_material_examples_examples_dq, FormFieldThemingExample as ɵangular_material_src_material_examples_examples_dr, GridListDynamicExample as ɵangular_material_src_material_examples_examples_ds, GridListOverviewExample as ɵangular_material_src_material_examples_examples_dt, IconOverviewExample as ɵangular_material_src_material_examples_examples_du, IconSvgExample as ɵangular_material_src_material_examples_examples_dv, InputClearableExample as ɵangular_material_src_material_examples_examples_dw, InputErrorStateMatcherExample as ɵangular_material_src_material_examples_examples_dx, InputErrorsExample as ɵangular_material_src_material_examples_examples_dy, InputFormExample as ɵangular_material_src_material_examples_examples_dz, InputHintExample as ɵangular_material_src_material_examples_examples_ea, InputOverviewExample as ɵangular_material_src_material_examples_examples_eb, InputPrefixSuffixExample as ɵangular_material_src_material_examples_examples_ec, ListSectionsExample as ɵangular_material_src_material_examples_examples_ed, ListSelectionExample as ɵangular_material_src_material_examples_examples_ee, ExampleMaterialModule as ɵangular_material_src_material_examples_examples_il, MenuIconsExample as ɵangular_material_src_material_examples_examples_ef, MenuOverviewExample as ɵangular_material_src_material_examples_examples_eg, NestedMenuExample as ɵangular_material_src_material_examples_examples_eh, PaginatorConfigurableExample as ɵangular_material_src_material_examples_examples_ei, PaginatorOverviewExample as ɵangular_material_src_material_examples_examples_ej, ProgressBarBufferExample as ɵangular_material_src_material_examples_examples_ek, ProgressBarConfigurableExample as ɵangular_material_src_material_examples_examples_el, ProgressBarDeterminateExample as ɵangular_material_src_material_examples_examples_em, ProgressBarIndeterminateExample as ɵangular_material_src_material_examples_examples_en, ProgressBarQueryExample as ɵangular_material_src_material_examples_examples_eo, ProgressSpinnerConfigurableExample as ɵangular_material_src_material_examples_examples_ep, ProgressSpinnerOverviewExample as ɵangular_material_src_material_examples_examples_eq, RadioNgModelExample as ɵangular_material_src_material_examples_examples_er, RadioOverviewExample as ɵangular_material_src_material_examples_examples_es, RippleOverviewExample as ɵangular_material_src_material_examples_examples_et, SelectCustomTriggerExample as ɵangular_material_src_material_examples_examples_eu, SelectDisabledExample as ɵangular_material_src_material_examples_examples_ev, SelectErrorStateMatcherExample as ɵangular_material_src_material_examples_examples_ew, SelectFormExample as ɵangular_material_src_material_examples_examples_ex, SelectHintErrorExample as ɵangular_material_src_material_examples_examples_ey, SelectMultipleExample as ɵangular_material_src_material_examples_examples_ez, SelectNoRippleExample as ɵangular_material_src_material_examples_examples_fa, SelectOptgroupExample as ɵangular_material_src_material_examples_examples_fb, SelectOverviewExample as ɵangular_material_src_material_examples_examples_fc, SelectPanelClassExample as ɵangular_material_src_material_examples_examples_fd, SelectResetExample as ɵangular_material_src_material_examples_examples_fe, SelectValueBindingExample as ɵangular_material_src_material_examples_examples_ff, SidenavAutosizeExample as ɵangular_material_src_material_examples_examples_fg, SidenavBackdropExample as ɵangular_material_src_material_examples_examples_fh, SidenavDisableCloseExample as ɵangular_material_src_material_examples_examples_fi, SidenavDrawerOverviewExample as ɵangular_material_src_material_examples_examples_fj, SidenavFixedExample as ɵangular_material_src_material_examples_examples_fk, SidenavModeExample as ɵangular_material_src_material_examples_examples_fl, SidenavOpenCloseExample as ɵangular_material_src_material_examples_examples_fm, SidenavOverviewExample as ɵangular_material_src_material_examples_examples_fn, SidenavPositionExample as ɵangular_material_src_material_examples_examples_fo, SidenavResponsiveExample as ɵangular_material_src_material_examples_examples_fp, SlideToggleConfigurableExample as ɵangular_material_src_material_examples_examples_fq, SlideToggleFormsExample as ɵangular_material_src_material_examples_examples_fr, SlideToggleOverviewExample as ɵangular_material_src_material_examples_examples_fs, SliderConfigurableExample as ɵangular_material_src_material_examples_examples_ft, SliderFormattingExample as ɵangular_material_src_material_examples_examples_fu, SliderOverviewExample as ɵangular_material_src_material_examples_examples_fv, PizzaPartyComponent as ɵangular_material_src_material_examples_examples_fx, SnackBarComponentExample as ɵangular_material_src_material_examples_examples_fw, SnackBarOverviewExample as ɵangular_material_src_material_examples_examples_fy, SnackBarPositionExample as ɵangular_material_src_material_examples_examples_fz, SortOverviewExample as ɵangular_material_src_material_examples_examples_ga, StepperEditableExample as ɵangular_material_src_material_examples_examples_gb, StepperErrorsExample as ɵangular_material_src_material_examples_examples_gc, StepperLabelPositionBottomExample as ɵangular_material_src_material_examples_examples_gd, StepperOptionalExample as ɵangular_material_src_material_examples_examples_ge, StepperStatesExample as ɵangular_material_src_material_examples_examples_gf, StepperVerticalExample as ɵangular_material_src_material_examples_examples_gg, TabGroupAlignExample as ɵangular_material_src_material_examples_examples_gh, TabGroupAnimationsExample as ɵangular_material_src_material_examples_examples_gi, TabGroupAsyncExample as ɵangular_material_src_material_examples_examples_gj, TabGroupBasicExample as ɵangular_material_src_material_examples_examples_gk, TabGroupCustomLabelExample as ɵangular_material_src_material_examples_examples_gl, TabGroupDynamicHeightExample as ɵangular_material_src_material_examples_examples_gm, TabGroupDynamicExample as ɵangular_material_src_material_examples_examples_gn, TabGroupHeaderBelowExample as ɵangular_material_src_material_examples_examples_go, TabGroupLazyLoadedExample as ɵangular_material_src_material_examples_examples_gp, TabGroupStretchedExample as ɵangular_material_src_material_examples_examples_gq, TabGroupThemeExample as ɵangular_material_src_material_examples_examples_gr, TabNavBarBasicExample as ɵangular_material_src_material_examples_examples_gs, TableBasicFlexExample as ɵangular_material_src_material_examples_examples_gt, TableBasicExample as ɵangular_material_src_material_examples_examples_gu, TableDynamicColumnsExample as ɵangular_material_src_material_examples_examples_gv, TableExpandableRowsExample as ɵangular_material_src_material_examples_examples_gw, TableFilteringExample as ɵangular_material_src_material_examples_examples_gx, TableFooterRowExample as ɵangular_material_src_material_examples_examples_gy, TableHttpExample as ɵangular_material_src_material_examples_examples_gz, TableMultipleHeaderFooterExample as ɵangular_material_src_material_examples_examples_ha, TableOverviewExample as ɵangular_material_src_material_examples_examples_hb, TablePaginationExample as ɵangular_material_src_material_examples_examples_hc, TableRowContextExample as ɵangular_material_src_material_examples_examples_hd, TableSelectionExample as ɵangular_material_src_material_examples_examples_he, SimpleColumn as ɵangular_material_src_material_examples_examples_hg, TableSimpleColumnExample as ɵangular_material_src_material_examples_examples_hf, TableSortingExample as ɵangular_material_src_material_examples_examples_hh, TableStickyColumnsExample as ɵangular_material_src_material_examples_examples_hi, TableStickyComplexFlexExample as ɵangular_material_src_material_examples_examples_hj, TableStickyComplexExample as ɵangular_material_src_material_examples_examples_hk, TableStickyFooterExample as ɵangular_material_src_material_examples_examples_hl, TableStickyHeaderExample as ɵangular_material_src_material_examples_examples_hm, TableWrappedExample as ɵangular_material_src_material_examples_examples_hn, WrapperTable as ɵangular_material_src_material_examples_examples_ho, TextFieldAutofillDirectiveExample as ɵangular_material_src_material_examples_examples_hp, TextFieldAutofillMonitorExample as ɵangular_material_src_material_examples_examples_hq, TextFieldAutosizeTextareaExample as ɵangular_material_src_material_examples_examples_hr, ToolbarOverviewExample as ɵangular_material_src_material_examples_examples_hs, TooltipAutoHideExample as ɵangular_material_src_material_examples_examples_ht, TooltipCustomClassExample as ɵangular_material_src_material_examples_examples_hu, TooltipDelayExample as ɵangular_material_src_material_examples_examples_hv, TooltipDisabledExample as ɵangular_material_src_material_examples_examples_hw, TooltipManualExample as ɵangular_material_src_material_examples_examples_hx, TooltipMessageExample as ɵangular_material_src_material_examples_examples_hy, TooltipModifiedDefaultsExample as ɵangular_material_src_material_examples_examples_ia, myCustomTooltipDefaults as ɵangular_material_src_material_examples_examples_hz, TooltipOverviewExample as ɵangular_material_src_material_examples_examples_ib, TooltipPositionExample as ɵangular_material_src_material_examples_examples_ic, ChecklistDatabase as ɵangular_material_src_material_examples_examples_id, TreeChecklistExample as ɵangular_material_src_material_examples_examples_ie, DynamicDatabase as ɵangular_material_src_material_examples_examples_if, TreeDynamicExample as ɵangular_material_src_material_examples_examples_ig, TreeFlatOverviewExample as ɵangular_material_src_material_examples_examples_ih, LoadmoreDatabase as ɵangular_material_src_material_examples_examples_ii, TreeLoadmoreExample as ɵangular_material_src_material_examples_examples_ij, TreeNestedOverviewExample as ɵangular_material_src_material_examples_examples_ik, ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample };
+export { ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample };
 //# sourceMappingURL=material-examples.js.map
