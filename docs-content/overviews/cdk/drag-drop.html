@@ -228,9 +228,9 @@ be allowed into the new container.</p>
 <div material-docs-example="cdk-drag-drop-enter-predicate"></div>
 
 
-        <h3 id="disable-dragging" class="docs-header-link">
-          <span header-link="disable-dragging"></span>
-          Disable dragging
+        <h3 id="disabled-dragging" class="docs-header-link">
+          <span header-link="disabled-dragging"></span>
+          Disabled dragging
         </h3>
       <p>If you want to disable dragging for a particular drag item, you can do so by setting the
 <code>cdkDragDisabled</code> input on a <code>cdkDrag</code> item. Furthermore, you can disable an entire list
@@ -249,4 +249,17 @@ the user shouldn&#39;t be able to sort them within the source list. For these ca
 in addition to preserving the dragged item&#39;s initial position in the source list, if the user
 decides to return the item.</p>
 <div material-docs-example="cdk-drag-drop-disabled-sorting"></div>
+
+
+        <h3 id="delayed-dragging" class="docs-header-link">
+          <span header-link="delayed-dragging"></span>
+          Delayed dragging
+        </h3>
+      <p>By default as soon as the user puts their pointer down on a <code>cdkDrag</code>, the dragging sequence will
+be started. This might not be desirable in cases like fullscreen draggable elements on touch
+devices where the user might accidentally trigger a drag as they&#39;re scrolling the page. For
+cases like these you can delay the dragging sequence using the <code>cdkDragStartDelay</code> input which
+will wait for the user to hold down their pointer for the specified number of milliseconds before
+moving the element.</p>
+<div material-docs-example="cdk-drag-drop-delay"></div>
 </div>

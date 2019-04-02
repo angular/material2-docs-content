@@ -774,6 +774,22 @@ var CdkDragDropCustomPreviewExample = /** @class */ (function () {
 }());
 
 /**
+ * @title Delayed dragging
+ */
+var CdkDragDropDelayExample = /** @class */ (function () {
+    function CdkDragDropDelayExample() {
+    }
+    CdkDragDropDelayExample = __decorate([
+        Component({
+            selector: 'cdk-drag-drop-delay-example',
+            template: "<div class=\"example-box\" cdkDrag [cdkDragStartDelay]=\"1000\">\n  Dragging starts after one second\n</div>\n",
+            styles: [".example-box {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  position: relative;\n  z-index: 1;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n"]
+        })
+    ], CdkDragDropDelayExample);
+    return CdkDragDropDelayExample;
+}());
+
+/**
  * @title Drag&Drop disabled sorting
  */
 var CdkDragDropDisabledSortingExample = /** @class */ (function () {
@@ -6715,6 +6731,12 @@ var EXAMPLE_COMPONENTS = {
         "additionalFiles": [],
         "selectorName": ""
     },
+    "cdk-drag-drop-delay": {
+        "title": "Delayed dragging",
+        "component": CdkDragDropDelayExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
     "cdk-drag-drop-disabled-sorting": {
         "title": "Drag&Drop disabled sorting",
         "component": CdkDragDropDisabledSortingExample,
@@ -7872,6 +7894,7 @@ var EXAMPLE_LIST = [
     CdkDragDropConnectedSortingExample,
     CdkDragDropCustomPlaceholderExample,
     CdkDragDropCustomPreviewExample,
+    CdkDragDropDelayExample,
     CdkDragDropDisabledSortingExample,
     CdkDragDropDisabledExample,
     CdkDragDropEnterPredicateExample,
