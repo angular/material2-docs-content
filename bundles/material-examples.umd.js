@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/cdk/stepper'), require('@angular/cdk/portal'), require('@angular/material'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/platform'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/material/tree')) :
-    typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', 'tslib', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/cdk/stepper', '@angular/cdk/portal', '@angular/material', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/platform', '@angular/cdk/collections', 'rxjs', '@angular/cdk/keycodes', '@angular/material/core', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/material/tree'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = {}), global.tslib, global.ng.core, global.ng.forms, global.ng.common, global.ng.cdk.scrolling, global.ng.cdk.a11y, global.ng.cdk.table, global.ng.cdk.tree, global.ng.cdk['drag-drop'], global.ng.cdk.stepper, global.ng.cdk.portal, global.ng.material, global.rxjs.operators, global.ng.cdk.overlay, global.ng.cdk.platform, global.ng.cdk.collections, global.rxjs, global.ng.cdk.keycodes, global.ng.material.core, global.moment, global.ng.cdk.coercion, global.ng.platformBrowser, global.ng.material.sidenav, global.ng.cdk.layout, global.ng.animations, global.ng.common.http, global.ng.cdk['text-field'], global.ng.material.tree));
-}(this, function (exports, tslib_1, core, forms, common, scrolling, a11y, table, tree, dragDrop, stepper, portal, material, operators, overlay, platform, collections, rxjs, keycodes, core$1, _rollupMoment, coercion, platformBrowser, sidenav, layout, animations, http, textField, tree$1) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk-experimental/popover-edit'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/cdk/stepper'), require('@angular/cdk/portal'), require('@angular/material'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/platform'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/material/tree')) :
+    typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', 'tslib', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk-experimental/popover-edit', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/cdk/stepper', '@angular/cdk/portal', '@angular/material', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/platform', '@angular/cdk/collections', 'rxjs', '@angular/cdk/keycodes', '@angular/material/core', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/material/tree'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = {}), global.tslib, global.ng.core, global.ng.forms, global.ng.common, global.ng.cdk.scrolling, global.ng.cdk.a11y, global.ng.cdkExperimental['popover-edit'], global.ng.cdk.table, global.ng.cdk.tree, global.ng.cdk['drag-drop'], global.ng.cdk.stepper, global.ng.cdk.portal, global.ng.material, global.rxjs.operators, global.ng.cdk.overlay, global.ng.cdk.platform, global.ng.cdk.collections, global.rxjs, global.ng.cdk.keycodes, global.ng.material.core, global.moment, global.ng.cdk.coercion, global.ng.platformBrowser, global.ng.material.sidenav, global.ng.cdk.layout, global.ng.animations, global.ng.common.http, global.ng.cdk['text-field'], global.ng.material.tree));
+}(this, function (exports, tslib_1, core, forms, common, scrolling, a11y, popoverEdit, table, tree, dragDrop, stepper, portal, material, operators, overlay, platform, collections, rxjs, keycodes, core$1, _rollupMoment, coercion, platformBrowser, sidenav, layout, animations, http, textField, tree$1) { 'use strict';
 
     var _rollupMoment__default = 'default' in _rollupMoment ? _rollupMoment['default'] : _rollupMoment;
 
@@ -13,6 +13,7 @@
             core.NgModule({
                 imports: [
                     a11y.A11yModule,
+                    popoverEdit.CdkPopoverEditModule,
                     table.CdkTableModule,
                     tree.CdkTreeModule,
                     stepper.CdkStepperModule,
@@ -58,6 +59,7 @@
                 ],
                 exports: [
                     a11y.A11yModule,
+                    popoverEdit.CdkPopoverEditModule,
                     table.CdkTableModule,
                     tree.CdkTreeModule,
                     stepper.CdkStepperModule,
@@ -1007,6 +1009,211 @@
         return CdkPlatformOverviewExample;
     }());
 
+    var ELEMENT_DATA = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+        { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+        { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+        { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+        { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+        { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+        { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+        { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+        { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+        { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+        { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+    ];
+    /**
+     * @title CDK Popover Edit on a flex cdk-table.
+     */
+    var CdkPopoverEditCdkTableFlexExample = /** @class */ (function () {
+        function CdkPopoverEditCdkTableFlexExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new ExampleDataSource();
+            this.preservedNameValues = new WeakMap();
+            this.preservedWeightValues = new WeakMap();
+        }
+        CdkPopoverEditCdkTableFlexExample.prototype.onSubmitName = function (element, f) {
+            if (!f.valid) {
+                return;
+            }
+            element.name = f.value.name;
+        };
+        CdkPopoverEditCdkTableFlexExample.prototype.onSubmitWeight = function (element, f) {
+            if (!f.valid) {
+                return;
+            }
+            element.weight = f.value.weight;
+        };
+        CdkPopoverEditCdkTableFlexExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-popover-edit-cdk-table-flex-example',
+                template: "<cdk-table class=\"example-table\" editable [dataSource]=\"dataSource\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div style=\"background-color: white;\">\n      <form #f=\"ngForm\"\n          cdkEditControl\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [cdkEditControlPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (cdkEditControlPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        Edit b:\n        <input type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n        <br>\n        <button type=\"submit\">Confirm</button>\n        <button cdkEditRevert>Revert</button>\n        <button cdkEditClose>Close</button>\n      </form>\n    </div>\n  </ng-template>\n\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <cdk-header-cell *cdkHeaderCellDef> No. </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </cdk-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <cdk-header-cell *cdkHeaderCellDef> Name </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"\n        [cdkPopoverEdit]=\"nameEdit\">\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div style=\"background-color: white;\">\n          <form #f=\"ngForm\"\n              cdkEditControl\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [cdkEditControlPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (cdkEditControlPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            Edit a:\n            <input [ngModel]=\"element.name\" name=\"name\" required>\n            <br>\n            <button type=\"submit\">Confirm</button>\n            <button cdkEditRevert>Revert</button>\n            <button cdkEditClose>Close</button>\n          </form>\n        </div>\n      </ng-template>\n\n      <span *cdkRowHoverContent>\n        <button cdkEditOpen>Edit</button>\n      </span>\n    </cdk-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <cdk-header-cell *cdkHeaderCellDef> Weight </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"\n        [cdkPopoverEdit]=\"weightEdit\" [cdkPopoverEditContext]=\"element\">\n      {{element.weight}}\n      \n      <span *cdkRowHoverContent>\n        <button cdkEditOpen>Edit</button>\n      </span>\n    </cdk-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <cdk-header-cell *cdkHeaderCellDef> Symbol </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </cdk-cell>\n  </ng-container>\n\n  <cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></cdk-header-row>\n  <cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></cdk-row>\n</cdk-table>\n",
+                styles: ["/**\n * Add basic flex styling so that the cells evenly space themselves in the row.\n */\n.example-table cdk-row, cdk-header-row, cdk-footer-row {\n  display: flex;\n}\n\n.example-table cdk-cell, cdk-header-cell, cdk-footer-cell {\n  flex: 1;\n}\n"]
+            })
+        ], CdkPopoverEditCdkTableFlexExample);
+        return CdkPopoverEditCdkTableFlexExample;
+    }());
+    /**
+     * Data source to provide what data should be rendered in the table. Note that the data source
+     * can retrieve its data in any way. In this case, the data source is provided a reference
+     * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+     * the underlying data. Instead, it only needs to take the data and send the table exactly what
+     * should be rendered.
+     */
+    var ExampleDataSource = /** @class */ (function (_super) {
+        tslib_1.__extends(ExampleDataSource, _super);
+        function ExampleDataSource() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            /** Stream of data that is provided to the table. */
+            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA);
+            return _this;
+        }
+        /** Connect function called by the table to retrieve one stream containing the data to render. */
+        ExampleDataSource.prototype.connect = function () {
+            return this.data;
+        };
+        ExampleDataSource.prototype.disconnect = function () { };
+        return ExampleDataSource;
+    }(collections.DataSource));
+
+    var ELEMENT_DATA$1 = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+        { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+        { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+        { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+        { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+        { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+        { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+        { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+        { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+        { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+        { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+    ];
+    /**
+     * @title CDK Popover Edit on a CDK data-table
+     */
+    var CdkPopoverEditCdkTableExample = /** @class */ (function () {
+        function CdkPopoverEditCdkTableExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new ExampleDataSource$1();
+            this.preservedNameValues = new WeakMap();
+            this.preservedWeightValues = new WeakMap();
+        }
+        CdkPopoverEditCdkTableExample.prototype.onSubmitName = function (element, f) {
+            if (!f.valid) {
+                return;
+            }
+            element.name = f.value.name;
+        };
+        CdkPopoverEditCdkTableExample.prototype.onSubmitWeight = function (element, f) {
+            if (!f.valid) {
+                return;
+            }
+            element.weight = f.value.weight;
+        };
+        CdkPopoverEditCdkTableExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-popover-edit-cdk-table-example',
+                template: "<table class=\"example-table\" cdk-table editable [dataSource]=\"dataSource\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div style=\"background-color: white;\">\n      <form #f=\"ngForm\"\n          cdkEditControl\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [cdkEditControlPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (cdkEditControlPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        Edit b:\n        <input type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n        <br>\n        <button type=\"submit\">Confirm</button>\n        <button cdkEditRevert cdkEditClose>Revert and close</button>\n      </form>\n    </div>\n  </ng-template>\n\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <th cdk-header-cell *cdkHeaderCellDef> No. </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <th cdk-header-cell *cdkHeaderCellDef> Name </th>\n    <td cdk-cell *cdkCellDef=\"let element\"\n        [cdkPopoverEdit]=\"nameEdit\">\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div style=\"background-color: white;\">\n          <form #f=\"ngForm\"\n              cdkEditControl\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [cdkEditControlPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (cdkEditControlPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            Edit a:\n            <input [ngModel]=\"element.name\" name=\"name\" required>\n            <br>\n            <button type=\"submit\">Confirm</button>\n            <button cdkEditRevert>Revert</button>\n            <button cdkEditClose>Close</button>\n          </form>\n        </div>\n      </ng-template>\n\n      <span *cdkRowHoverContent>\n        <button cdkEditOpen>Edit</button>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <th cdk-header-cell *cdkHeaderCellDef> Weight </th>\n    <td cdk-cell *cdkCellDef=\"let element\"\n        [cdkPopoverEdit]=\"weightEdit\" [cdkPopoverEditContext]=\"element\">\n      {{element.weight}}\n      \n      <span *cdkRowHoverContent>\n        <button cdkEditOpen>Edit</button>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <th cdk-header-cell *cdkHeaderCellDef> Symbol </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></tr>\n  <tr cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}\n"]
+            })
+        ], CdkPopoverEditCdkTableExample);
+        return CdkPopoverEditCdkTableExample;
+    }());
+    /**
+     * Data source to provide what data should be rendered in the table. Note that the data source
+     * can retrieve its data in any way. In this case, the data source is provided a reference
+     * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+     * the underlying data. Instead, it only needs to take the data and send the table exactly what
+     * should be rendered.
+     */
+    var ExampleDataSource$1 = /** @class */ (function (_super) {
+        tslib_1.__extends(ExampleDataSource, _super);
+        function ExampleDataSource() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            /** Stream of data that is provided to the table. */
+            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$1);
+            return _this;
+        }
+        /** Connect function called by the table to retrieve one stream containing the data to render. */
+        ExampleDataSource.prototype.connect = function () {
+            return this.data;
+        };
+        ExampleDataSource.prototype.disconnect = function () { };
+        return ExampleDataSource;
+    }(collections.DataSource));
+
+    var ELEMENT_DATA$2 = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+        { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+        { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+        { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+        { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+        { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+        { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+        { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+        { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+        { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+        { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+    ];
+    /**
+     * @title CDK Popover Edit on an HTML data-table
+     */
+    var CdkPopoverEditVanillaTableExample = /** @class */ (function () {
+        function CdkPopoverEditVanillaTableExample() {
+            this.preservedNameValues = new WeakMap();
+            this.preservedWeightValues = new WeakMap();
+            this.elements = ELEMENT_DATA$2;
+        }
+        CdkPopoverEditVanillaTableExample.prototype.onSubmitName = function (element, f) {
+            if (!f.valid) {
+                return;
+            }
+            element.name = f.value.name;
+        };
+        CdkPopoverEditVanillaTableExample.prototype.onSubmitWeight = function (element, f) {
+            if (!f.valid) {
+                return;
+            }
+            element.weight = f.value.weight;
+        };
+        CdkPopoverEditVanillaTableExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-popover-edit-vanilla-table-example',
+                template: "<table editable class=\"example-table\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div style=\"background-color: white;\">\n      <form #f=\"ngForm\"\n          cdkEditControl\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [cdkEditControlPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (cdkEditControlPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        Edit b:\n        <input type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n        <br>\n        <button type=\"submit\">Confirm</button>\n        <button cdkEditRevert>Revert</button>\n        <button cdkEditClose>Close</button>\n      </form>\n    </div>\n  </ng-template>\n  \n  <tr>\n    <th> No. </th>\n    <th> Name </th>\n    <th> Weight </th>\n    <th> Symbol </th>\n  </tr>\n  \n  <tr *ngFor=\"let element of elements\">\n    <td> {{element.position}} </td>\n    \n    <td [cdkPopoverEdit]=\"nameEdit\">\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div style=\"background-color: white;\">\n          <form #f=\"ngForm\"\n              cdkEditControl\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [cdkEditControlPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (cdkEditControlPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            Edit a:\n            <input [ngModel]=\"element.name\" name=\"name\" required>\n            <br>\n            <button type=\"submit\">Confirm</button>\n            <button cdkEditRevert>Revert</button>\n            <button cdkEditClose>Close</button>\n          </form>\n        </div>\n      </ng-template>\n\n      <span *cdkRowHoverContent>\n        <button cdkEditOpen>Edit</button>\n      </span>\n    </td>\n\n    <td [cdkPopoverEdit]=\"weightEdit\" [cdkPopoverEditContext]=\"element\">\n      {{element.weight}}\n      \n      <span *cdkRowHoverContent>\n        <button cdkEditOpen>Edit</button>\n      </span>\n    </td>\n\n    <td> {{element.symbol}} </td>\n  </tr>\n</table>\n",
+                styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}\n"]
+            })
+        ], CdkPopoverEditVanillaTableExample);
+        return CdkPopoverEditVanillaTableExample;
+    }());
+
     /**
      * @title Portal overview
      */
@@ -1044,7 +1251,7 @@
         return ComponentPortalExample;
     }());
 
-    var ELEMENT_DATA = [
+    var ELEMENT_DATA$3 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1062,7 +1269,7 @@
     var CdkTableBasicFlexExample = /** @class */ (function () {
         function CdkTableBasicFlexExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new ExampleDataSource();
+            this.dataSource = new ExampleDataSource$2();
         }
         CdkTableBasicFlexExample = tslib_1.__decorate([
             core.Component({
@@ -1080,12 +1287,12 @@
      * the underlying data. Instead, it only needs to take the data and send the table exactly what
      * should be rendered.
      */
-    var ExampleDataSource = /** @class */ (function (_super) {
+    var ExampleDataSource$2 = /** @class */ (function (_super) {
         tslib_1.__extends(ExampleDataSource, _super);
         function ExampleDataSource() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
             /** Stream of data that is provided to the table. */
-            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA);
+            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$3);
             return _this;
         }
         /** Connect function called by the table to retrieve one stream containing the data to render. */
@@ -1096,7 +1303,7 @@
         return ExampleDataSource;
     }(collections.DataSource));
 
-    var ELEMENT_DATA$1 = [
+    var ELEMENT_DATA$4 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1114,7 +1321,7 @@
     var CdkTableBasicExample = /** @class */ (function () {
         function CdkTableBasicExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new ExampleDataSource$1();
+            this.dataSource = new ExampleDataSource$3();
         }
         CdkTableBasicExample = tslib_1.__decorate([
             core.Component({
@@ -1132,12 +1339,12 @@
      * the underlying data. Instead, it only needs to take the data and send the table exactly what
      * should be rendered.
      */
-    var ExampleDataSource$1 = /** @class */ (function (_super) {
+    var ExampleDataSource$3 = /** @class */ (function (_super) {
         tslib_1.__extends(ExampleDataSource, _super);
         function ExampleDataSource() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
             /** Stream of data that is provided to the table. */
-            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$1);
+            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$4);
             return _this;
         }
         /** Connect function called by the table to retrieve one stream containing the data to render. */
@@ -4718,7 +4925,7 @@
         return TabNavBarBasicExample;
     }());
 
-    var ELEMENT_DATA$2 = [
+    var ELEMENT_DATA$5 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4736,7 +4943,7 @@
     var TableBasicFlexExample = /** @class */ (function () {
         function TableBasicFlexExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$2;
+            this.dataSource = ELEMENT_DATA$5;
         }
         TableBasicFlexExample = tslib_1.__decorate([
             core.Component({
@@ -4748,7 +4955,7 @@
         return TableBasicFlexExample;
     }());
 
-    var ELEMENT_DATA$3 = [
+    var ELEMENT_DATA$6 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4766,7 +4973,7 @@
     var TableBasicExample = /** @class */ (function () {
         function TableBasicExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$3;
+            this.dataSource = ELEMENT_DATA$6;
         }
         TableBasicExample = tslib_1.__decorate([
             core.Component({
@@ -4778,7 +4985,7 @@
         return TableBasicExample;
     }());
 
-    var ELEMENT_DATA$4 = [
+    var ELEMENT_DATA$7 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4797,7 +5004,7 @@
         function TableDynamicColumnsExample() {
             this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
             this.columnsToDisplay = this.displayedColumns.slice();
-            this.data = ELEMENT_DATA$4;
+            this.data = ELEMENT_DATA$7;
         }
         TableDynamicColumnsExample.prototype.addColumn = function () {
             var randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
@@ -4834,7 +5041,7 @@
      */
     var TableExpandableRowsExample = /** @class */ (function () {
         function TableExpandableRowsExample() {
-            this.dataSource = ELEMENT_DATA$5;
+            this.dataSource = ELEMENT_DATA$8;
             this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
         }
         TableExpandableRowsExample = tslib_1.__decorate([
@@ -4853,7 +5060,7 @@
         ], TableExpandableRowsExample);
         return TableExpandableRowsExample;
     }());
-    var ELEMENT_DATA$5 = [
+    var ELEMENT_DATA$8 = [
         {
             position: 1,
             name: 'Hydrogen',
@@ -4917,7 +5124,7 @@
         },
     ];
 
-    var ELEMENT_DATA$6 = [
+    var ELEMENT_DATA$9 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4935,7 +5142,7 @@
     var TableFilteringExample = /** @class */ (function () {
         function TableFilteringExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$6);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$9);
         }
         TableFilteringExample.prototype.applyFilter = function (filterValue) {
             this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -5139,7 +5346,7 @@
     var TablePaginationExample = /** @class */ (function () {
         function TablePaginationExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$7);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$a);
         }
         TablePaginationExample.prototype.ngOnInit = function () {
             this.dataSource.paginator = this.paginator;
@@ -5157,7 +5364,7 @@
         ], TablePaginationExample);
         return TablePaginationExample;
     }());
-    var ELEMENT_DATA$7 = [
+    var ELEMENT_DATA$a = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5198,7 +5405,7 @@
         return TableRowContextExample;
     }());
 
-    var ELEMENT_DATA$8 = [
+    var ELEMENT_DATA$b = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5216,7 +5423,7 @@
     var TableSelectionExample = /** @class */ (function () {
         function TableSelectionExample() {
             this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$8);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$b);
             this.selection = new collections.SelectionModel(true, []);
         }
         /** Whether the number of selected elements matches the total number of rows. */
@@ -5249,7 +5456,7 @@
         return TableSelectionExample;
     }());
 
-    var ELEMENT_DATA$9 = [
+    var ELEMENT_DATA$c = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5267,7 +5474,7 @@
     var TableSimpleColumnExample = /** @class */ (function () {
         function TableSimpleColumnExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$9);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$c);
             this.getWeight = function (data) { return '~' + data.weight; };
         }
         TableSimpleColumnExample.prototype.ngOnInit = function () {
@@ -5384,7 +5591,7 @@
         return SimpleColumn;
     }());
 
-    var ELEMENT_DATA$a = [
+    var ELEMENT_DATA$d = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5402,7 +5609,7 @@
     var TableSortingExample = /** @class */ (function () {
         function TableSortingExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$a);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$d);
         }
         TableSortingExample.prototype.ngOnInit = function () {
             this.dataSource.sort = this.sort;
@@ -5427,7 +5634,7 @@
     var TableStickyColumnsExample = /** @class */ (function () {
         function TableStickyColumnsExample() {
             this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-            this.dataSource = ELEMENT_DATA$b;
+            this.dataSource = ELEMENT_DATA$e;
         }
         TableStickyColumnsExample = tslib_1.__decorate([
             core.Component({
@@ -5438,7 +5645,7 @@
         ], TableStickyColumnsExample);
         return TableStickyColumnsExample;
     }());
-    var ELEMENT_DATA$b = [
+    var ELEMENT_DATA$e = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5457,7 +5664,7 @@
     var TableStickyComplexFlexExample = /** @class */ (function () {
         function TableStickyComplexFlexExample() {
             this.displayedColumns = [];
-            this.dataSource = ELEMENT_DATA$c;
+            this.dataSource = ELEMENT_DATA$f;
             this.tables = [0];
             this.displayedColumns.length = 24;
             this.displayedColumns.fill('filler');
@@ -5481,7 +5688,7 @@
         ], TableStickyComplexFlexExample);
         return TableStickyComplexFlexExample;
     }());
-    var ELEMENT_DATA$c = [
+    var ELEMENT_DATA$f = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5500,7 +5707,7 @@
     var TableStickyComplexExample = /** @class */ (function () {
         function TableStickyComplexExample() {
             this.displayedColumns = [];
-            this.dataSource = ELEMENT_DATA$d;
+            this.dataSource = ELEMENT_DATA$g;
             this.tables = [0];
             this.displayedColumns.length = 24;
             this.displayedColumns.fill('filler');
@@ -5524,7 +5731,7 @@
         ], TableStickyComplexExample);
         return TableStickyComplexExample;
     }());
-    var ELEMENT_DATA$d = [
+    var ELEMENT_DATA$g = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5572,7 +5779,7 @@
     var TableStickyHeaderExample = /** @class */ (function () {
         function TableStickyHeaderExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$e;
+            this.dataSource = ELEMENT_DATA$h;
         }
         TableStickyHeaderExample = tslib_1.__decorate([
             core.Component({
@@ -5583,7 +5790,7 @@
         ], TableStickyHeaderExample);
         return TableStickyHeaderExample;
     }());
-    var ELEMENT_DATA$e = [
+    var ELEMENT_DATA$h = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5596,7 +5803,7 @@
         { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
     ];
 
-    var ELEMENT_DATA$f = [
+    var ELEMENT_DATA$i = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5614,7 +5821,7 @@
     var TableWrappedExample = /** @class */ (function () {
         function TableWrappedExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$f);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$i);
         }
         TableWrappedExample.prototype.ngOnInit = function () {
             this.dataSource.sort = this.sort;
@@ -6769,6 +6976,24 @@
             "additionalFiles": [],
             "selectorName": ""
         },
+        "cdk-popover-edit-cdk-table-flex": {
+            "title": "CDK Popover Edit on a flex cdk-table.",
+            "component": CdkPopoverEditCdkTableFlexExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
+        "cdk-popover-edit-cdk-table": {
+            "title": "CDK Popover Edit on a CDK data-table",
+            "component": CdkPopoverEditCdkTableExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
+        "cdk-popover-edit-vanilla-table": {
+            "title": "CDK Popover Edit on an HTML data-table",
+            "component": CdkPopoverEditVanillaTableExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
         "cdk-portal-overview": {
             "title": "Portal overview",
             "component": CdkPortalOverviewExample,
@@ -7882,6 +8107,9 @@
         CdkDragDropRootElementExample,
         CdkDragDropSortingExample,
         CdkPlatformOverviewExample,
+        CdkPopoverEditCdkTableFlexExample,
+        CdkPopoverEditCdkTableExample,
+        CdkPopoverEditVanillaTableExample,
         CdkPortalOverviewExample,
         ComponentPortalExample,
         CdkTableBasicFlexExample,
