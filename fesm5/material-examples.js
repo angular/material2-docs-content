@@ -968,7 +968,7 @@ var CdkDragDropRootElementExample = /** @class */ (function () {
         this._overlayRef.attach(this._portal);
     };
     __decorate([
-        ViewChild(TemplateRef),
+        ViewChild(TemplateRef, { static: false }),
         __metadata("design:type", TemplateRef)
     ], CdkDragDropRootElementExample.prototype, "_dialogTemplate", void 0);
     CdkDragDropRootElementExample = __decorate([
@@ -1249,7 +1249,7 @@ var CdkPortalOverviewExample = /** @class */ (function () {
         this.templatePortal = new TemplatePortal(this.templatePortalContent, this._viewContainerRef);
     };
     __decorate([
-        ViewChild('templatePortalContent'),
+        ViewChild('templatePortalContent', { static: false }),
         __metadata("design:type", TemplateRef)
     ], CdkPortalOverviewExample.prototype, "templatePortalContent", void 0);
     CdkPortalOverviewExample = __decorate([
@@ -1821,11 +1821,11 @@ var ChipsAutocompleteExample = /** @class */ (function () {
         return this.allFruits.filter(function (fruit) { return fruit.toLowerCase().indexOf(filterValue) === 0; });
     };
     __decorate([
-        ViewChild('fruitInput'),
+        ViewChild('fruitInput', { static: false }),
         __metadata("design:type", ElementRef)
     ], ChipsAutocompleteExample.prototype, "fruitInput", void 0);
     __decorate([
-        ViewChild('auto'),
+        ViewChild('auto', { static: false }),
         __metadata("design:type", MatAutocomplete)
     ], ChipsAutocompleteExample.prototype, "matAutocomplete", void 0);
     ChipsAutocompleteExample = __decorate([
@@ -2784,7 +2784,7 @@ var ExpansionExpandCollapseAllExample = /** @class */ (function () {
     function ExpansionExpandCollapseAllExample() {
     }
     __decorate([
-        ViewChild(MatAccordion),
+        ViewChild(MatAccordion, { static: false }),
         __metadata("design:type", MatAccordion)
     ], ExpansionExpandCollapseAllExample.prototype, "accordion", void 0);
     ExpansionExpandCollapseAllExample = __decorate([
@@ -2890,7 +2890,7 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
         return origin ? origin + ' focused' : 'blurred';
     };
     __decorate([
-        ViewChild('monitored'),
+        ViewChild('monitored', { static: false }),
         __metadata("design:type", ElementRef)
     ], FocusMonitorFocusViaExample.prototype, "monitoredEl", void 0);
     FocusMonitorFocusViaExample = __decorate([
@@ -2936,11 +2936,11 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
         return origin ? origin + ' focused' : 'blurred';
     };
     __decorate([
-        ViewChild('element'),
+        ViewChild('element', { static: false }),
         __metadata("design:type", ElementRef)
     ], FocusMonitorOverviewExample.prototype, "element", void 0);
     __decorate([
-        ViewChild('subtree'),
+        ViewChild('subtree', { static: false }),
         __metadata("design:type", ElementRef)
     ], FocusMonitorOverviewExample.prototype, "subtree", void 0);
     FocusMonitorOverviewExample = __decorate([
@@ -4122,7 +4122,7 @@ var SidenavDisableCloseExample = /** @class */ (function () {
         this.sidenav.close();
     };
     __decorate([
-        ViewChild('sidenav'),
+        ViewChild('sidenav', { static: false }),
         __metadata("design:type", MatSidenav)
     ], SidenavDisableCloseExample.prototype, "sidenav", void 0);
     SidenavDisableCloseExample = __decorate([
@@ -5244,11 +5244,11 @@ var TableHttpExample = /** @class */ (function () {
         })).subscribe(function (data) { return _this.data = data; });
     };
     __decorate([
-        ViewChild(MatPaginator),
+        ViewChild(MatPaginator, { static: false }),
         __metadata("design:type", MatPaginator)
     ], TableHttpExample.prototype, "paginator", void 0);
     __decorate([
-        ViewChild(MatSort),
+        ViewChild(MatSort, { static: false }),
         __metadata("design:type", MatSort)
     ], TableHttpExample.prototype, "sort", void 0);
     TableHttpExample = __decorate([
@@ -5596,7 +5596,7 @@ var SimpleColumn = /** @class */ (function () {
         __metadata("design:type", MatColumnDef)
     ], SimpleColumn.prototype, "columnDef", void 0);
     __decorate([
-        ViewChild(MatSortHeader),
+        ViewChild(MatSortHeader, { static: false }),
         __metadata("design:type", MatSortHeader)
     ], SimpleColumn.prototype, "sortHeader", void 0);
     SimpleColumn = __decorate([
@@ -5940,11 +5940,11 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
         this.autofill.stopMonitoring(this.lastName);
     };
     __decorate([
-        ViewChild('first', { read: ElementRef }),
+        ViewChild('first', { read: ElementRef, static: false }),
         __metadata("design:type", ElementRef)
     ], TextFieldAutofillMonitorExample.prototype, "firstName", void 0);
     __decorate([
-        ViewChild('last', { read: ElementRef }),
+        ViewChild('last', { read: ElementRef, static: false }),
         __metadata("design:type", ElementRef)
     ], TextFieldAutofillMonitorExample.prototype, "lastName", void 0);
     TextFieldAutofillMonitorExample = __decorate([
@@ -5970,7 +5970,7 @@ var TextFieldAutosizeTextareaExample = /** @class */ (function () {
             .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
     };
     __decorate([
-        ViewChild('autosize'),
+        ViewChild('autosize', { static: false }),
         __metadata("design:type", CdkTextareaAutosize)
     ], TextFieldAutosizeTextareaExample.prototype, "autosize", void 0);
     TextFieldAutosizeTextareaExample = __decorate([

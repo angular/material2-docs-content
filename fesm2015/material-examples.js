@@ -1223,7 +1223,7 @@ CdkDragDropRootElementExample.ctorParameters = () => [
     { type: ViewContainerRef }
 ];
 CdkDragDropRootElementExample.propDecorators = {
-    _dialogTemplate: [{ type: ViewChild, args: [TemplateRef,] }]
+    _dialogTemplate: [{ type: ViewChild, args: [TemplateRef, { static: false },] }]
 };
 
 /**
@@ -1583,7 +1583,7 @@ CdkPortalOverviewExample.ctorParameters = () => [
     { type: ViewContainerRef }
 ];
 CdkPortalOverviewExample.propDecorators = {
-    templatePortalContent: [{ type: ViewChild, args: ['templatePortalContent',] }]
+    templatePortalContent: [{ type: ViewChild, args: ['templatePortalContent', { static: false },] }]
 };
 class ComponentPortalExample {
 }
@@ -2338,8 +2338,8 @@ ChipsAutocompleteExample.decorators = [
 /** @nocollapse */
 ChipsAutocompleteExample.ctorParameters = () => [];
 ChipsAutocompleteExample.propDecorators = {
-    fruitInput: [{ type: ViewChild, args: ['fruitInput',] }],
-    matAutocomplete: [{ type: ViewChild, args: ['auto',] }]
+    fruitInput: [{ type: ViewChild, args: ['fruitInput', { static: false },] }],
+    matAutocomplete: [{ type: ViewChild, args: ['auto', { static: false },] }]
 };
 
 /**
@@ -3652,7 +3652,7 @@ ExpansionExpandCollapseAllExample.decorators = [
             }] }
 ];
 ExpansionExpandCollapseAllExample.propDecorators = {
-    accordion: [{ type: ViewChild, args: [MatAccordion,] }]
+    accordion: [{ type: ViewChild, args: [MatAccordion, { static: false },] }]
 };
 
 /**
@@ -3827,7 +3827,7 @@ FocusMonitorFocusViaExample.ctorParameters = () => [
     { type: NgZone }
 ];
 FocusMonitorFocusViaExample.propDecorators = {
-    monitoredEl: [{ type: ViewChild, args: ['monitored',] }]
+    monitoredEl: [{ type: ViewChild, args: ['monitored', { static: false },] }]
 };
 
 /**
@@ -3908,8 +3908,8 @@ FocusMonitorOverviewExample.ctorParameters = () => [
     { type: NgZone }
 ];
 FocusMonitorOverviewExample.propDecorators = {
-    element: [{ type: ViewChild, args: ['element',] }],
-    subtree: [{ type: ViewChild, args: ['subtree',] }]
+    element: [{ type: ViewChild, args: ['element', { static: false },] }],
+    subtree: [{ type: ViewChild, args: ['subtree', { static: false },] }]
 };
 
 /**
@@ -5339,7 +5339,7 @@ SidenavDisableCloseExample.decorators = [
             }] }
 ];
 SidenavDisableCloseExample.propDecorators = {
-    sidenav: [{ type: ViewChild, args: ['sidenav',] }]
+    sidenav: [{ type: ViewChild, args: ['sidenav', { static: false },] }]
 };
 
 /**
@@ -6861,8 +6861,8 @@ TableHttpExample.ctorParameters = () => [
     { type: HttpClient }
 ];
 TableHttpExample.propDecorators = {
-    paginator: [{ type: ViewChild, args: [MatPaginator,] }],
-    sort: [{ type: ViewChild, args: [MatSort,] }]
+    paginator: [{ type: ViewChild, args: [MatPaginator, { static: false },] }],
+    sort: [{ type: ViewChild, args: [MatSort, { static: false },] }]
 };
 /**
  * An example database that the data source uses to retrieve data for the table.
@@ -7308,7 +7308,7 @@ SimpleColumn.propDecorators = {
     align: [{ type: Input }],
     sortable: [{ type: Input }],
     columnDef: [{ type: ViewChild, args: [MatColumnDef, { static: true },] }],
-    sortHeader: [{ type: ViewChild, args: [MatSortHeader,] }]
+    sortHeader: [{ type: ViewChild, args: [MatSortHeader, { static: false },] }]
 };
 
 /**
@@ -7729,8 +7729,8 @@ TextFieldAutofillMonitorExample.ctorParameters = () => [
     { type: AutofillMonitor }
 ];
 TextFieldAutofillMonitorExample.propDecorators = {
-    firstName: [{ type: ViewChild, args: ['first', { read: ElementRef },] }],
-    lastName: [{ type: ViewChild, args: ['last', { read: ElementRef },] }]
+    firstName: [{ type: ViewChild, args: ['first', { read: ElementRef, static: false },] }],
+    lastName: [{ type: ViewChild, args: ['last', { read: ElementRef, static: false },] }]
 };
 
 /**
@@ -7771,7 +7771,7 @@ TextFieldAutosizeTextareaExample.ctorParameters = () => [
     { type: NgZone }
 ];
 TextFieldAutosizeTextareaExample.propDecorators = {
-    autosize: [{ type: ViewChild, args: ['autosize',] }]
+    autosize: [{ type: ViewChild, args: ['autosize', { static: false },] }]
 };
 
 /**

@@ -945,7 +945,7 @@
             this._overlayRef.attach(this._portal);
         };
         tslib_1.__decorate([
-            core.ViewChild(core.TemplateRef),
+            core.ViewChild(core.TemplateRef, { static: false }),
             tslib_1.__metadata("design:type", core.TemplateRef)
         ], CdkDragDropRootElementExample.prototype, "_dialogTemplate", void 0);
         CdkDragDropRootElementExample = tslib_1.__decorate([
@@ -1226,7 +1226,7 @@
             this.templatePortal = new portal.TemplatePortal(this.templatePortalContent, this._viewContainerRef);
         };
         tslib_1.__decorate([
-            core.ViewChild('templatePortalContent'),
+            core.ViewChild('templatePortalContent', { static: false }),
             tslib_1.__metadata("design:type", core.TemplateRef)
         ], CdkPortalOverviewExample.prototype, "templatePortalContent", void 0);
         CdkPortalOverviewExample = tslib_1.__decorate([
@@ -1798,11 +1798,11 @@
             return this.allFruits.filter(function (fruit) { return fruit.toLowerCase().indexOf(filterValue) === 0; });
         };
         tslib_1.__decorate([
-            core.ViewChild('fruitInput'),
+            core.ViewChild('fruitInput', { static: false }),
             tslib_1.__metadata("design:type", core.ElementRef)
         ], ChipsAutocompleteExample.prototype, "fruitInput", void 0);
         tslib_1.__decorate([
-            core.ViewChild('auto'),
+            core.ViewChild('auto', { static: false }),
             tslib_1.__metadata("design:type", material.MatAutocomplete)
         ], ChipsAutocompleteExample.prototype, "matAutocomplete", void 0);
         ChipsAutocompleteExample = tslib_1.__decorate([
@@ -2761,7 +2761,7 @@
         function ExpansionExpandCollapseAllExample() {
         }
         tslib_1.__decorate([
-            core.ViewChild(material.MatAccordion),
+            core.ViewChild(material.MatAccordion, { static: false }),
             tslib_1.__metadata("design:type", material.MatAccordion)
         ], ExpansionExpandCollapseAllExample.prototype, "accordion", void 0);
         ExpansionExpandCollapseAllExample = tslib_1.__decorate([
@@ -2867,7 +2867,7 @@
             return origin ? origin + ' focused' : 'blurred';
         };
         tslib_1.__decorate([
-            core.ViewChild('monitored'),
+            core.ViewChild('monitored', { static: false }),
             tslib_1.__metadata("design:type", core.ElementRef)
         ], FocusMonitorFocusViaExample.prototype, "monitoredEl", void 0);
         FocusMonitorFocusViaExample = tslib_1.__decorate([
@@ -2913,11 +2913,11 @@
             return origin ? origin + ' focused' : 'blurred';
         };
         tslib_1.__decorate([
-            core.ViewChild('element'),
+            core.ViewChild('element', { static: false }),
             tslib_1.__metadata("design:type", core.ElementRef)
         ], FocusMonitorOverviewExample.prototype, "element", void 0);
         tslib_1.__decorate([
-            core.ViewChild('subtree'),
+            core.ViewChild('subtree', { static: false }),
             tslib_1.__metadata("design:type", core.ElementRef)
         ], FocusMonitorOverviewExample.prototype, "subtree", void 0);
         FocusMonitorOverviewExample = tslib_1.__decorate([
@@ -4099,7 +4099,7 @@
             this.sidenav.close();
         };
         tslib_1.__decorate([
-            core.ViewChild('sidenav'),
+            core.ViewChild('sidenav', { static: false }),
             tslib_1.__metadata("design:type", sidenav.MatSidenav)
         ], SidenavDisableCloseExample.prototype, "sidenav", void 0);
         SidenavDisableCloseExample = tslib_1.__decorate([
@@ -5221,11 +5221,11 @@
             })).subscribe(function (data) { return _this.data = data; });
         };
         tslib_1.__decorate([
-            core.ViewChild(material.MatPaginator),
+            core.ViewChild(material.MatPaginator, { static: false }),
             tslib_1.__metadata("design:type", material.MatPaginator)
         ], TableHttpExample.prototype, "paginator", void 0);
         tslib_1.__decorate([
-            core.ViewChild(material.MatSort),
+            core.ViewChild(material.MatSort, { static: false }),
             tslib_1.__metadata("design:type", material.MatSort)
         ], TableHttpExample.prototype, "sort", void 0);
         TableHttpExample = tslib_1.__decorate([
@@ -5573,7 +5573,7 @@
             tslib_1.__metadata("design:type", material.MatColumnDef)
         ], SimpleColumn.prototype, "columnDef", void 0);
         tslib_1.__decorate([
-            core.ViewChild(material.MatSortHeader),
+            core.ViewChild(material.MatSortHeader, { static: false }),
             tslib_1.__metadata("design:type", material.MatSortHeader)
         ], SimpleColumn.prototype, "sortHeader", void 0);
         SimpleColumn = tslib_1.__decorate([
@@ -5917,11 +5917,11 @@
             this.autofill.stopMonitoring(this.lastName);
         };
         tslib_1.__decorate([
-            core.ViewChild('first', { read: core.ElementRef }),
+            core.ViewChild('first', { read: core.ElementRef, static: false }),
             tslib_1.__metadata("design:type", core.ElementRef)
         ], TextFieldAutofillMonitorExample.prototype, "firstName", void 0);
         tslib_1.__decorate([
-            core.ViewChild('last', { read: core.ElementRef }),
+            core.ViewChild('last', { read: core.ElementRef, static: false }),
             tslib_1.__metadata("design:type", core.ElementRef)
         ], TextFieldAutofillMonitorExample.prototype, "lastName", void 0);
         TextFieldAutofillMonitorExample = tslib_1.__decorate([
@@ -5947,7 +5947,7 @@
                 .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
         };
         tslib_1.__decorate([
-            core.ViewChild('autosize'),
+            core.ViewChild('autosize', { static: false }),
             tslib_1.__metadata("design:type", textField.CdkTextareaAutosize)
         ], TextFieldAutosizeTextareaExample.prototype, "autosize", void 0);
         TextFieldAutosizeTextareaExample = tslib_1.__decorate([
