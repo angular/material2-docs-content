@@ -1,0 +1,70 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">editable</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-table"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!--
+    This edit lens is specified outside of the cell and must explicitly declare
+    its context. It could be reused in multiple cells.
+  --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">nameEdit</span> <span class="hljs-attr">let-ctx</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color: #ddd; width: 100%"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">f</span>=<span class="hljs-string">"ngForm"</span>
+          <span class="hljs-attr">cdkEditControl</span>
+          (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">"onSubmit(ctx.person, f)"</span>
+          [<span class="hljs-attr">cdkEditControlPreservedFormValue</span>]=<span class="hljs-string">"preservedValues.get(ctx.person)"</span>
+          (<span class="hljs-attr">cdkEditControlPreservedFormValueChange</span>)=<span class="hljs-string">"preservedValues.set(ctx.person, $event)"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-input-container"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">"ctx.person.firstName"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"firstName"</span> <span class="hljs-attr">required</span>
+              [<span class="hljs-attr">attr.cdkFocusInitial</span>]=<span class="hljs-string">"ctx.focus === 'firstName' || null"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">"ctx.person.middleName"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"middleName"</span>
+              [<span class="hljs-attr">attr.cdkFocusInitial</span>]=<span class="hljs-string">"ctx.focus === 'middleName' || null"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">"ctx.person.lastName"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lastName"</span> <span class="hljs-attr">required</span>
+              [<span class="hljs-attr">attr.cdkFocusInitial</span>]=<span class="hljs-string">"ctx.focus === 'lastName' || null"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Confirm<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditRevert</span>&gt;</span>Revert<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditClose</span>&gt;</span>Close<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+  
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> No. <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> First name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> Middle name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span> Last name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let person of persons"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span> {{person.id}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">"nameEdit"</span>
+        [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">"{person: person, focus: 'firstName'}"</span>
+        [<span class="hljs-attr">cdkPopoverEditColspan</span>]=<span class="hljs-string">"{after: 2}"</span>&gt;</span>
+      {{person.firstName}}
+      
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">"nameEdit"</span>
+        [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">"{person: person, focus: 'middleName'}"</span>
+        [<span class="hljs-attr">cdkPopoverEditColspan</span>]=<span class="hljs-string">"{before: 1, after: 1}"</span>&gt;</span>
+      {{person.middleName}}
+      
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+    
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> [<span class="hljs-attr">cdkPopoverEdit</span>]=<span class="hljs-string">"nameEdit"</span>
+        [<span class="hljs-attr">cdkPopoverEditContext</span>]=<span class="hljs-string">"{person: person, focus: 'lastName'}"</span>
+        [<span class="hljs-attr">cdkPopoverEditColspan</span>]=<span class="hljs-string">"{before: 2}"</span>&gt;</span>
+      {{person.lastName}}
+      
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">cdkRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">cdkEditOpen</span>&gt;</span>Edit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>

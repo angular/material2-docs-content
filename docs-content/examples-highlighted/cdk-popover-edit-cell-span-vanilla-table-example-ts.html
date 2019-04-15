@@ -1,0 +1,45 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {NgForm} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Person {
+  id: <span class="hljs-built_in">number</span>;
+  firstName: <span class="hljs-built_in">string</span>;
+  middleName: <span class="hljs-built_in">string</span>;
+  lastName: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">const</span> PERSON_DATA: Person[] = [
+  {id: <span class="hljs-number">1</span>, firstName: <span class="hljs-string">'Terra'</span>, middleName: <span class="hljs-string">'Maduin'</span>, lastName: <span class="hljs-string">'Branford'</span>},
+  {id: <span class="hljs-number">2</span>, firstName: <span class="hljs-string">'Locke'</span>, middleName: <span class="hljs-string">''</span>, lastName: <span class="hljs-string">'Cole'</span>},
+  {id: <span class="hljs-number">3</span>, firstName: <span class="hljs-string">'Celes'</span>, middleName: <span class="hljs-string">'Gestahl'</span>, lastName: <span class="hljs-string">'Chere'</span>},
+  {id: <span class="hljs-number">4</span>, firstName: <span class="hljs-string">'Edgar'</span>, middleName: <span class="hljs-string">'Roni'</span>, lastName: <span class="hljs-string">'Figaro'</span>},
+  {id: <span class="hljs-number">5</span>, firstName: <span class="hljs-string">'Sabin'</span>, middleName: <span class="hljs-string">'Rene'</span>, lastName: <span class="hljs-string">'Figaro'</span>},
+  {id: <span class="hljs-number">6</span>, firstName: <span class="hljs-string">'Clyde'</span>, middleName: <span class="hljs-string">'"Shadow"'</span>, lastName: <span class="hljs-string">'Arrowny'</span>},
+  {id: <span class="hljs-number">7</span>, firstName: <span class="hljs-string">'Setzer'</span>, middleName: <span class="hljs-string">''</span>, lastName: <span class="hljs-string">'Gabbiani'</span>},
+  {id: <span class="hljs-number">8</span>, firstName: <span class="hljs-string">'Cid'</span>, middleName: <span class="hljs-string">'Del Norte'</span>, lastName: <span class="hljs-string">'Marquez'</span>},
+  {id: <span class="hljs-number">9</span>, firstName: <span class="hljs-string">'Mog'</span>, middleName: <span class="hljs-string">''</span>, lastName: <span class="hljs-string">'McMoogle'</span>},
+];
+
+<span class="hljs-comment">/**
+ * @title CDK Popover Edit spanning multiple columns on an HTML data-table
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-popover-edit-cell-span-vanilla-table-example'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-popover-edit-cell-span-vanilla-table-example.css'</span>],
+  templateUrl: <span class="hljs-string">'cdk-popover-edit-cell-span-vanilla-table-example.html'</span>,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkPopoverEditCellSpanVanillaTableExample {
+  readonly preservedValues = <span class="hljs-keyword">new</span> WeakMap&lt;Person, <span class="hljs-built_in">any</span>&gt;();
+
+  readonly persons = PERSON_DATA;
+
+  onSubmit(person: Person, f: NgForm) {
+    <span class="hljs-keyword">if</span> (!f.valid) {
+      <span class="hljs-keyword">return</span>;
+    }
+
+    person.firstName = f.value[<span class="hljs-string">'firstName'</span>];
+    person.middleName = f.value[<span class="hljs-string">'middleName'</span>];
+    person.lastName = f.value[<span class="hljs-string">'lastName'</span>];
+  }
+}
