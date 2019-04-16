@@ -186,6 +186,30 @@ the <code>mat-core-theme</code> mixin as well, which contains theme-specific sty
 @<span class="hljs-keyword">include</span> mat-button-theme(<span class="hljs-variable">$candy-app-theme</span>);
 @<span class="hljs-keyword">include</span> mat-checkbox-theme(<span class="hljs-variable">$candy-app-theme</span>);</code></pre>
 
+        <h4 id="changing-styles-at-run-time" class="docs-header-link">
+          <span header-link="changing-styles-at-run-time"></span>
+          Changing styles at run-time
+        </h4>
+      <h5>Toggling classes</h5><p>You can use the mixins described above to define styles to customize any part of your application
+with standard CSS selectors. For example, let&#39;s say you want to toggle alternate colors on a button.
+You would first define a CSS class with the alternate colors.</p>
+<pre><code class="language-scss"><span class="hljs-selector-class">.alternate-button</span> {
+  @<span class="hljs-keyword">include</span> mat-button-theme(<span class="hljs-variable">$alternate-theme</span>);
+}</code></pre>
+<p>Then you can use normal Angular class bindings to toggle the alternate styles.</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> [<span class="hljs-attr">class.alternate-button</span>]=<span class="hljs-string">"isAlternateMode"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span>&gt;</span>Save changes<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+<p>You can use this approach to style any component inside of the region marked with the custom
+CSS class.</p>
+<h5>Swapping CSS files</h5><p>If you want to completely swap a theme without including all of the styles at once, you
+can swap the loaded theme file. The details will depend on your application, but the general
+idea looks like this:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"themeAsset"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/path/to/my/theme-name.css"</span>&gt;</span></code></pre>
+<pre><code class="language-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeTheme</span>(<span class="hljs-params">themeName</span>) </span>{
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'themeAsset'</span>).href = <span class="hljs-string">`/path/to/my/<span class="hljs-subst">${themeName}</span>.css`</span>;
+}</code></pre>
+
         <h3 id="theming-your-own-components" class="docs-header-link">
           <span header-link="theming-your-own-components"></span>
           Theming your own components
