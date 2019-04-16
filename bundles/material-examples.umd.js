@@ -1221,13 +1221,66 @@
         { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
     ];
     /**
+     * @title CDK Popover Edit with spreadsheet-like configuration on an HTML data-table
+     */
+    var CdkPopoverEditTabOutVanillaTableExample = /** @class */ (function () {
+        function CdkPopoverEditTabOutVanillaTableExample() {
+            this.preservedNameValues = new WeakMap();
+            this.preservedWeightValues = new WeakMap();
+            this.elements = ELEMENT_DATA$2;
+        }
+        CdkPopoverEditTabOutVanillaTableExample.prototype.onSubmitName = function (element, f) {
+            if (!f.valid) {
+                return;
+            }
+            element.name = f.value.name;
+        };
+        CdkPopoverEditTabOutVanillaTableExample.prototype.onSubmitWeight = function (element, f) {
+            if (!f.valid) {
+                return;
+            }
+            element.weight = f.value.weight;
+        };
+        CdkPopoverEditTabOutVanillaTableExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-popover-edit-tab-out-vanilla-table-example',
+                template: "<table editable class=\"example-table\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div style=\"background-color: white; width: 100%\">\n      <form #f=\"ngForm\"\n          cdkEditControl\n          cdkEditControlClickOutBehavior=\"submit\"\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [cdkEditControlPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (cdkEditControlPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        <input type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n      </form>\n    </div>\n  </ng-template>\n  \n  <tr>\n    <th> No. </th>\n    <th> Name </th>\n    <th> Weight </th>\n    <th> Symbol </th>\n  </tr>\n  \n  <tr *ngFor=\"let element of elements\">\n    <td> {{element.position}} </td>\n    \n    <td [cdkPopoverEdit]=\"nameEdit\" cdkPopoverEditTabOut cdkEditOpen>\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div style=\"background-color: white; width: 100%\">\n          <form #f=\"ngForm\"\n              cdkEditControl\n              cdkEditControlClickOutBehavior=\"submit\"\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [cdkEditControlPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (cdkEditControlPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            <input [ngModel]=\"element.name\" name=\"name\" required>\n            <br>\n            <button type=\"submit\">Confirm</button>\n          </form>\n        </div>\n      </ng-template>\n    </td>\n\n    <td [cdkPopoverEdit]=\"weightEdit\" [cdkPopoverEditContext]=\"element\"\n        cdkPopoverEditTabOut cdkEditOpen>\n      {{element.weight}}\n    </td>\n\n    <td> {{element.symbol}} </td>\n  </tr>\n</table>\n",
+                styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  min-width: 300px;\n  width: 25%;\n}\n"]
+            })
+        ], CdkPopoverEditTabOutVanillaTableExample);
+        return CdkPopoverEditTabOutVanillaTableExample;
+    }());
+
+    var ELEMENT_DATA$3 = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+        { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+        { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+        { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+        { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+        { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+        { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+        { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+        { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+        { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+        { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+    ];
+    /**
      * @title CDK Popover Edit on an HTML data-table
      */
     var CdkPopoverEditVanillaTableExample = /** @class */ (function () {
         function CdkPopoverEditVanillaTableExample() {
             this.preservedNameValues = new WeakMap();
             this.preservedWeightValues = new WeakMap();
-            this.elements = ELEMENT_DATA$2;
+            this.elements = ELEMENT_DATA$3;
         }
         CdkPopoverEditVanillaTableExample.prototype.onSubmitName = function (element, f) {
             if (!f.valid) {
@@ -1288,7 +1341,7 @@
         return ComponentPortalExample;
     }());
 
-    var ELEMENT_DATA$3 = [
+    var ELEMENT_DATA$4 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1329,7 +1382,7 @@
         function ExampleDataSource() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
             /** Stream of data that is provided to the table. */
-            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$3);
+            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$4);
             return _this;
         }
         /** Connect function called by the table to retrieve one stream containing the data to render. */
@@ -1340,7 +1393,7 @@
         return ExampleDataSource;
     }(collections.DataSource));
 
-    var ELEMENT_DATA$4 = [
+    var ELEMENT_DATA$5 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1381,7 +1434,7 @@
         function ExampleDataSource() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
             /** Stream of data that is provided to the table. */
-            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$4);
+            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$5);
             return _this;
         }
         /** Connect function called by the table to retrieve one stream containing the data to render. */
@@ -4962,7 +5015,7 @@
         return TabNavBarBasicExample;
     }());
 
-    var ELEMENT_DATA$5 = [
+    var ELEMENT_DATA$6 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -4980,7 +5033,7 @@
     var TableBasicFlexExample = /** @class */ (function () {
         function TableBasicFlexExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$5;
+            this.dataSource = ELEMENT_DATA$6;
         }
         TableBasicFlexExample = tslib_1.__decorate([
             core.Component({
@@ -4992,7 +5045,7 @@
         return TableBasicFlexExample;
     }());
 
-    var ELEMENT_DATA$6 = [
+    var ELEMENT_DATA$7 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5010,7 +5063,7 @@
     var TableBasicExample = /** @class */ (function () {
         function TableBasicExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$6;
+            this.dataSource = ELEMENT_DATA$7;
         }
         TableBasicExample = tslib_1.__decorate([
             core.Component({
@@ -5022,7 +5075,7 @@
         return TableBasicExample;
     }());
 
-    var ELEMENT_DATA$7 = [
+    var ELEMENT_DATA$8 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5041,7 +5094,7 @@
         function TableDynamicColumnsExample() {
             this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
             this.columnsToDisplay = this.displayedColumns.slice();
-            this.data = ELEMENT_DATA$7;
+            this.data = ELEMENT_DATA$8;
         }
         TableDynamicColumnsExample.prototype.addColumn = function () {
             var randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
@@ -5078,7 +5131,7 @@
      */
     var TableExpandableRowsExample = /** @class */ (function () {
         function TableExpandableRowsExample() {
-            this.dataSource = ELEMENT_DATA$8;
+            this.dataSource = ELEMENT_DATA$9;
             this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
         }
         TableExpandableRowsExample = tslib_1.__decorate([
@@ -5097,7 +5150,7 @@
         ], TableExpandableRowsExample);
         return TableExpandableRowsExample;
     }());
-    var ELEMENT_DATA$8 = [
+    var ELEMENT_DATA$9 = [
         {
             position: 1,
             name: 'Hydrogen',
@@ -5161,7 +5214,7 @@
         },
     ];
 
-    var ELEMENT_DATA$9 = [
+    var ELEMENT_DATA$a = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5179,7 +5232,7 @@
     var TableFilteringExample = /** @class */ (function () {
         function TableFilteringExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$9);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$a);
         }
         TableFilteringExample.prototype.applyFilter = function (filterValue) {
             this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -5383,7 +5436,7 @@
     var TablePaginationExample = /** @class */ (function () {
         function TablePaginationExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$a);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$b);
         }
         TablePaginationExample.prototype.ngOnInit = function () {
             this.dataSource.paginator = this.paginator;
@@ -5401,7 +5454,7 @@
         ], TablePaginationExample);
         return TablePaginationExample;
     }());
-    var ELEMENT_DATA$a = [
+    var ELEMENT_DATA$b = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5442,7 +5495,7 @@
         return TableRowContextExample;
     }());
 
-    var ELEMENT_DATA$b = [
+    var ELEMENT_DATA$c = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5460,7 +5513,7 @@
     var TableSelectionExample = /** @class */ (function () {
         function TableSelectionExample() {
             this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$b);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$c);
             this.selection = new collections.SelectionModel(true, []);
         }
         /** Whether the number of selected elements matches the total number of rows. */
@@ -5493,7 +5546,7 @@
         return TableSelectionExample;
     }());
 
-    var ELEMENT_DATA$c = [
+    var ELEMENT_DATA$d = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5511,7 +5564,7 @@
     var TableSimpleColumnExample = /** @class */ (function () {
         function TableSimpleColumnExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$c);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$d);
             this.getWeight = function (data) { return '~' + data.weight; };
         }
         TableSimpleColumnExample.prototype.ngOnInit = function () {
@@ -5628,7 +5681,7 @@
         return SimpleColumn;
     }());
 
-    var ELEMENT_DATA$d = [
+    var ELEMENT_DATA$e = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5646,7 +5699,7 @@
     var TableSortingExample = /** @class */ (function () {
         function TableSortingExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$d);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$e);
         }
         TableSortingExample.prototype.ngOnInit = function () {
             this.dataSource.sort = this.sort;
@@ -5671,7 +5724,7 @@
     var TableStickyColumnsExample = /** @class */ (function () {
         function TableStickyColumnsExample() {
             this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-            this.dataSource = ELEMENT_DATA$e;
+            this.dataSource = ELEMENT_DATA$f;
         }
         TableStickyColumnsExample = tslib_1.__decorate([
             core.Component({
@@ -5682,7 +5735,7 @@
         ], TableStickyColumnsExample);
         return TableStickyColumnsExample;
     }());
-    var ELEMENT_DATA$e = [
+    var ELEMENT_DATA$f = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5701,7 +5754,7 @@
     var TableStickyComplexFlexExample = /** @class */ (function () {
         function TableStickyComplexFlexExample() {
             this.displayedColumns = [];
-            this.dataSource = ELEMENT_DATA$f;
+            this.dataSource = ELEMENT_DATA$g;
             this.tables = [0];
             this.displayedColumns.length = 24;
             this.displayedColumns.fill('filler');
@@ -5725,7 +5778,7 @@
         ], TableStickyComplexFlexExample);
         return TableStickyComplexFlexExample;
     }());
-    var ELEMENT_DATA$f = [
+    var ELEMENT_DATA$g = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5744,7 +5797,7 @@
     var TableStickyComplexExample = /** @class */ (function () {
         function TableStickyComplexExample() {
             this.displayedColumns = [];
-            this.dataSource = ELEMENT_DATA$g;
+            this.dataSource = ELEMENT_DATA$h;
             this.tables = [0];
             this.displayedColumns.length = 24;
             this.displayedColumns.fill('filler');
@@ -5768,7 +5821,7 @@
         ], TableStickyComplexExample);
         return TableStickyComplexExample;
     }());
-    var ELEMENT_DATA$g = [
+    var ELEMENT_DATA$h = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5816,7 +5869,7 @@
     var TableStickyHeaderExample = /** @class */ (function () {
         function TableStickyHeaderExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$h;
+            this.dataSource = ELEMENT_DATA$i;
         }
         TableStickyHeaderExample = tslib_1.__decorate([
             core.Component({
@@ -5827,7 +5880,7 @@
         ], TableStickyHeaderExample);
         return TableStickyHeaderExample;
     }());
-    var ELEMENT_DATA$h = [
+    var ELEMENT_DATA$i = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5840,7 +5893,7 @@
         { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
     ];
 
-    var ELEMENT_DATA$i = [
+    var ELEMENT_DATA$j = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5858,7 +5911,7 @@
     var TableWrappedExample = /** @class */ (function () {
         function TableWrappedExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$i);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$j);
         }
         TableWrappedExample.prototype.ngOnInit = function () {
             this.dataSource.sort = this.sort;
@@ -7031,6 +7084,12 @@
             "additionalFiles": [],
             "selectorName": ""
         },
+        "cdk-popover-edit-tab-out-vanilla-table": {
+            "title": "CDK Popover Edit with spreadsheet-like configuration on an HTML data-table",
+            "component": CdkPopoverEditTabOutVanillaTableExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
         "cdk-popover-edit-vanilla-table": {
             "title": "CDK Popover Edit on an HTML data-table",
             "component": CdkPopoverEditVanillaTableExample,
@@ -8153,6 +8212,7 @@
         CdkPopoverEditCdkTableFlexExample,
         CdkPopoverEditCdkTableExample,
         CdkPopoverEditCellSpanVanillaTableExample,
+        CdkPopoverEditTabOutVanillaTableExample,
         CdkPopoverEditVanillaTableExample,
         CdkPortalOverviewExample,
         ComponentPortalExample,

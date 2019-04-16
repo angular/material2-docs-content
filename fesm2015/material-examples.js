@@ -1556,13 +1556,80 @@ const ELEMENT_DATA$2 = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 /**
+ * \@title CDK Popover Edit with spreadsheet-like configuration on an HTML data-table
+ */
+class CdkPopoverEditTabOutVanillaTableExample {
+    constructor() {
+        this.preservedNameValues = new WeakMap();
+        this.preservedWeightValues = new WeakMap();
+        this.elements = ELEMENT_DATA$2;
+    }
+    /**
+     * @param {?} element
+     * @param {?} f
+     * @return {?}
+     */
+    onSubmitName(element, f) {
+        if (!f.valid) {
+            return;
+        }
+        element.name = f.value.name;
+    }
+    /**
+     * @param {?} element
+     * @param {?} f
+     * @return {?}
+     */
+    onSubmitWeight(element, f) {
+        if (!f.valid) {
+            return;
+        }
+        element.weight = f.value.weight;
+    }
+}
+CdkPopoverEditTabOutVanillaTableExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-popover-edit-tab-out-vanilla-table-example',
+                template: "<table editable class=\"example-table\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div style=\"background-color: white; width: 100%\">\n      <form #f=\"ngForm\"\n          cdkEditControl\n          cdkEditControlClickOutBehavior=\"submit\"\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [cdkEditControlPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (cdkEditControlPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        <input type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n      </form>\n    </div>\n  </ng-template>\n  \n  <tr>\n    <th> No. </th>\n    <th> Name </th>\n    <th> Weight </th>\n    <th> Symbol </th>\n  </tr>\n  \n  <tr *ngFor=\"let element of elements\">\n    <td> {{element.position}} </td>\n    \n    <td [cdkPopoverEdit]=\"nameEdit\" cdkPopoverEditTabOut cdkEditOpen>\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div style=\"background-color: white; width: 100%\">\n          <form #f=\"ngForm\"\n              cdkEditControl\n              cdkEditControlClickOutBehavior=\"submit\"\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [cdkEditControlPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (cdkEditControlPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            <input [ngModel]=\"element.name\" name=\"name\" required>\n            <br>\n            <button type=\"submit\">Confirm</button>\n          </form>\n        </div>\n      </ng-template>\n    </td>\n\n    <td [cdkPopoverEdit]=\"weightEdit\" [cdkPopoverEditContext]=\"element\"\n        cdkPopoverEditTabOut cdkEditOpen>\n      {{element.weight}}\n    </td>\n\n    <td> {{element.symbol}} </td>\n  </tr>\n</table>\n",
+                styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  min-width: 300px;\n  width: 25%;\n}\n"]
+            }] }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const ELEMENT_DATA$3 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
+/**
  * \@title CDK Popover Edit on an HTML data-table
  */
 class CdkPopoverEditVanillaTableExample {
     constructor() {
         this.preservedNameValues = new WeakMap();
         this.preservedWeightValues = new WeakMap();
-        this.elements = ELEMENT_DATA$2;
+        this.elements = ELEMENT_DATA$3;
     }
     /**
      * @param {?} element
@@ -1645,7 +1712,7 @@ ComponentPortalExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$3 = [
+const ELEMENT_DATA$4 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1686,7 +1753,7 @@ class ExampleDataSource$2 extends DataSource {
         /**
          * Stream of data that is provided to the table.
          */
-        this.data = new BehaviorSubject(ELEMENT_DATA$3);
+        this.data = new BehaviorSubject(ELEMENT_DATA$4);
     }
     /**
      * Connect function called by the table to retrieve one stream containing the data to render.
@@ -1706,7 +1773,7 @@ class ExampleDataSource$2 extends DataSource {
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$4 = [
+const ELEMENT_DATA$5 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -1747,7 +1814,7 @@ class ExampleDataSource$3 extends DataSource {
         /**
          * Stream of data that is provided to the table.
          */
-        this.data = new BehaviorSubject(ELEMENT_DATA$4);
+        this.data = new BehaviorSubject(ELEMENT_DATA$5);
     }
     /**
      * Connect function called by the table to retrieve one stream containing the data to render.
@@ -6508,7 +6575,7 @@ TabNavBarBasicExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$5 = [
+const ELEMENT_DATA$6 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6526,47 +6593,13 @@ const ELEMENT_DATA$5 = [
 class TableBasicFlexExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$5;
+        this.dataSource = ELEMENT_DATA$6;
     }
 }
 TableBasicFlexExample.decorators = [
     { type: Component, args: [{
                 selector: 'table-basic-flex-example',
                 template: "<mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.position}} </mat-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.weight}} </mat-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.symbol}} </mat-cell>\n  </ng-container>\n\n  <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n  <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n</mat-table>",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            }] }
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
-const ELEMENT_DATA$6 = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-];
-/**
- * \@title Basic use of `<table mat-table>`
- */
-class TableBasicExample {
-    constructor() {
-        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$6;
-    }
-}
-TableBasicExample.decorators = [
-    { type: Component, args: [{
-                selector: 'table-basic-example',
-                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n  <!--- Note that these columns can be defined in any order.\n        The actual rendered columns are set as a property on the row definition\" -->\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n\n",
                 styles: ["table {\n  width: 100%;\n}\n"]
             }] }
 ];
@@ -6589,13 +6622,47 @@ const ELEMENT_DATA$7 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
+ * \@title Basic use of `<table mat-table>`
+ */
+class TableBasicExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = ELEMENT_DATA$7;
+    }
+}
+TableBasicExample.decorators = [
+    { type: Component, args: [{
+                selector: 'table-basic-example',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n  <!--- Note that these columns can be defined in any order.\n        The actual rendered columns are set as a property on the row definition\" -->\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            }] }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const ELEMENT_DATA$8 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
  * \@title Table dynamically changing the columns displayed
  */
 class TableDynamicColumnsExample {
     constructor() {
         this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
         this.columnsToDisplay = this.displayedColumns.slice();
-        this.data = ELEMENT_DATA$7;
+        this.data = ELEMENT_DATA$8;
     }
     /**
      * @return {?}
@@ -6648,7 +6715,7 @@ TableDynamicColumnsExample.decorators = [
  */
 class TableExpandableRowsExample {
     constructor() {
-        this.dataSource = ELEMENT_DATA$8;
+        this.dataSource = ELEMENT_DATA$9;
         this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
     }
 }
@@ -6667,7 +6734,7 @@ TableExpandableRowsExample.decorators = [
             }] }
 ];
 /** @type {?} */
-const ELEMENT_DATA$8 = [
+const ELEMENT_DATA$9 = [
     {
         position: 1,
         name: 'Hydrogen',
@@ -6754,7 +6821,7 @@ const ELEMENT_DATA$8 = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$9 = [
+const ELEMENT_DATA$a = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6772,7 +6839,7 @@ const ELEMENT_DATA$9 = [
 class TableFilteringExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$9);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$a);
     }
     /**
      * @param {?} filterValue
@@ -7071,7 +7138,7 @@ function createNewUser(id) {
 class TablePaginationExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$a);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$b);
     }
     /**
      * @return {?}
@@ -7091,7 +7158,7 @@ TablePaginationExample.propDecorators = {
     paginator: [{ type: ViewChild, args: [MatPaginator, { static: true },] }]
 };
 /** @type {?} */
-const ELEMENT_DATA$a = [
+const ELEMENT_DATA$b = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7140,7 +7207,7 @@ TableRowContextExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$b = [
+const ELEMENT_DATA$c = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7158,7 +7225,7 @@ const ELEMENT_DATA$b = [
 class TableSelectionExample {
     constructor() {
         this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$b);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$c);
         this.selection = new SelectionModel(true, []);
     }
     /**
@@ -7210,7 +7277,7 @@ TableSelectionExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$c = [
+const ELEMENT_DATA$d = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7228,7 +7295,7 @@ const ELEMENT_DATA$c = [
 class TableSimpleColumnExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$c);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$d);
         this.getWeight = (/**
          * @param {?} data
          * @return {?}
@@ -7362,7 +7429,7 @@ SimpleColumn.propDecorators = {
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$d = [
+const ELEMENT_DATA$e = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7380,7 +7447,7 @@ const ELEMENT_DATA$d = [
 class TableSortingExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$d);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$e);
     }
     /**
      * @return {?}
@@ -7410,7 +7477,7 @@ TableSortingExample.propDecorators = {
 class TableStickyColumnsExample {
     constructor() {
         this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-        this.dataSource = ELEMENT_DATA$e;
+        this.dataSource = ELEMENT_DATA$f;
     }
 }
 TableStickyColumnsExample.decorators = [
@@ -7421,7 +7488,7 @@ TableStickyColumnsExample.decorators = [
             }] }
 ];
 /** @type {?} */
-const ELEMENT_DATA$e = [
+const ELEMENT_DATA$f = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7444,7 +7511,7 @@ const ELEMENT_DATA$e = [
 class TableStickyComplexFlexExample {
     constructor() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$f;
+        this.dataSource = ELEMENT_DATA$g;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -7474,7 +7541,7 @@ TableStickyComplexFlexExample.decorators = [
 /** @nocollapse */
 TableStickyComplexFlexExample.ctorParameters = () => [];
 /** @type {?} */
-const ELEMENT_DATA$f = [
+const ELEMENT_DATA$g = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7497,7 +7564,7 @@ const ELEMENT_DATA$f = [
 class TableStickyComplexExample {
     constructor() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$g;
+        this.dataSource = ELEMENT_DATA$h;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -7527,7 +7594,7 @@ TableStickyComplexExample.decorators = [
 /** @nocollapse */
 TableStickyComplexExample.ctorParameters = () => [];
 /** @type {?} */
-const ELEMENT_DATA$g = [
+const ELEMENT_DATA$h = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7594,7 +7661,7 @@ TableStickyFooterExample.decorators = [
 class TableStickyHeaderExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$h;
+        this.dataSource = ELEMENT_DATA$i;
     }
 }
 TableStickyHeaderExample.decorators = [
@@ -7605,7 +7672,7 @@ TableStickyHeaderExample.decorators = [
             }] }
 ];
 /** @type {?} */
-const ELEMENT_DATA$h = [
+const ELEMENT_DATA$i = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7623,7 +7690,7 @@ const ELEMENT_DATA$h = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$i = [
+const ELEMENT_DATA$j = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7641,7 +7708,7 @@ const ELEMENT_DATA$i = [
 class TableWrappedExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$i);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$j);
     }
     /**
      * @return {?}
@@ -9219,6 +9286,12 @@ const EXAMPLE_COMPONENTS = {
         "additionalFiles": [],
         "selectorName": ""
     },
+    "cdk-popover-edit-tab-out-vanilla-table": {
+        "title": "CDK Popover Edit with spreadsheet-like configuration on an HTML data-table",
+        "component": CdkPopoverEditTabOutVanillaTableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
     "cdk-popover-edit-vanilla-table": {
         "title": "CDK Popover Edit on an HTML data-table",
         "component": CdkPopoverEditVanillaTableExample,
@@ -10342,6 +10415,7 @@ const EXAMPLE_LIST = [
     CdkPopoverEditCdkTableFlexExample,
     CdkPopoverEditCdkTableExample,
     CdkPopoverEditCellSpanVanillaTableExample,
+    CdkPopoverEditTabOutVanillaTableExample,
     CdkPopoverEditVanillaTableExample,
     CdkPortalOverviewExample,
     ComponentPortalExample,
