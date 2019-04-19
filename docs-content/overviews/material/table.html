@@ -57,7 +57,7 @@ render. </p>
 column list as inputs.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"columnsToDisplay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let myRowData; columns: columnsToDisplay"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></code></pre>
-<p>Note that this list of columns provided to the rows can be in any order, not necessary the order in
+<p>Note that this list of columns provided to the rows can be in any order, not necessarily the order in
 which you wrote the column definitions. Also, you do not necessarily have to include every column
 that was defined in your template.</p>
 <p>This means that by changing your column list provided to the rows, you can easily re-order and
