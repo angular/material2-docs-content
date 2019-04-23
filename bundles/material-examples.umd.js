@@ -5559,147 +5559,12 @@
         { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
     ];
     /**
-     * @title Table with a custom column component for easy column definition reuse.
-     */
-    var TableSimpleColumnExample = /** @class */ (function () {
-        function TableSimpleColumnExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$d);
-            this.getWeight = function (data) { return '~' + data.weight; };
-        }
-        TableSimpleColumnExample.prototype.ngOnInit = function () {
-            this.dataSource.sort = this.sort;
-        };
-        tslib_1.__decorate([
-            core.ViewChild('sort', { static: true }),
-            tslib_1.__metadata("design:type", material.MatSort)
-        ], TableSimpleColumnExample.prototype, "sort", void 0);
-        TableSimpleColumnExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-simple-column-example',
-                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"\n       matSort #sort=\"matSort\">\n  <!-- Basic column: name is used for header label AND data property -->\n  <simple-column name=\"name\" sortable></simple-column>\n  <simple-column name=\"position\"></simple-column>\n\n  <!-- Name doesn't match the data property (or transform needed); define a custom data accessor -->\n  <simple-column name=\"weight\" [dataAccessor]=\"getWeight\"></simple-column>\n\n  <!-- Name doesn't match desired header text; define a custom label -->\n  <simple-column name=\"symbol\" label=\"SYMBOL!\"></simple-column>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let data; columns: displayedColumns;\"></tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            })
-        ], TableSimpleColumnExample);
-        return TableSimpleColumnExample;
-    }());
-    /**
-     * Column that shows simply shows text content for the header and row
-     * cells. By default, the name of this column will be assumed to be both the header
-     * text and data property used to access the data value to show in cells. To override
-     * the header text, provide a label text. To override the data cell values,
-     * provide a dataAccessor function that provides the string to display for each row's cell.
-     *
-     * Note that this component sets itself as visually hidden since it will show up in the `mat-table`
-     * DOM because it is an empty element with an ng-container (nothing rendered). It should not
-     * interfere with screen readers.
-     */
-    var SimpleColumn = /** @class */ (function () {
-        function SimpleColumn(table) {
-            this.table = table;
-            /** Alignment of the cell values. */
-            this.align = 'before';
-        }
-        Object.defineProperty(SimpleColumn.prototype, "name", {
-            /** Column name that should be used to reference this column. */
-            get: function () {
-                return this._name;
-            },
-            set: function (name) {
-                this._name = name;
-                this.columnDef.name = name;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        Object.defineProperty(SimpleColumn.prototype, "sortable", {
-            /** Whether the column is sortable */
-            get: function () {
-                return this._sortable;
-            },
-            set: function (sortable) {
-                this._sortable = coercion.coerceBooleanProperty(sortable);
-            },
-            enumerable: true,
-            configurable: true
-        });
-        SimpleColumn.prototype.ngOnInit = function () {
-            if (this.table) {
-                this.table.addColumnDef(this.columnDef);
-            }
-        };
-        SimpleColumn.prototype.ngOnDestroy = function () {
-            if (this.table) {
-                this.table.removeColumnDef(this.columnDef);
-            }
-        };
-        SimpleColumn.prototype.getData = function (data) {
-            return this.dataAccessor ? this.dataAccessor(data, this.name) : data[this.name];
-        };
-        tslib_1.__decorate([
-            core.Input(),
-            tslib_1.__metadata("design:type", String),
-            tslib_1.__metadata("design:paramtypes", [String])
-        ], SimpleColumn.prototype, "name", null);
-        tslib_1.__decorate([
-            core.Input(),
-            tslib_1.__metadata("design:type", String)
-        ], SimpleColumn.prototype, "label", void 0);
-        tslib_1.__decorate([
-            core.Input(),
-            tslib_1.__metadata("design:type", Function)
-        ], SimpleColumn.prototype, "dataAccessor", void 0);
-        tslib_1.__decorate([
-            core.Input(),
-            tslib_1.__metadata("design:type", String)
-        ], SimpleColumn.prototype, "align", void 0);
-        tslib_1.__decorate([
-            core.Input(),
-            tslib_1.__metadata("design:type", Boolean),
-            tslib_1.__metadata("design:paramtypes", [Boolean])
-        ], SimpleColumn.prototype, "sortable", null);
-        tslib_1.__decorate([
-            core.ViewChild(material.MatColumnDef, { static: true }),
-            tslib_1.__metadata("design:type", material.MatColumnDef)
-        ], SimpleColumn.prototype, "columnDef", void 0);
-        tslib_1.__decorate([
-            core.ViewChild(material.MatSortHeader, { static: false }),
-            tslib_1.__metadata("design:type", material.MatSortHeader)
-        ], SimpleColumn.prototype, "sortHeader", void 0);
-        SimpleColumn = tslib_1.__decorate([
-            core.Component({
-                selector: 'simple-column',
-                template: "\n    <ng-container matColumnDef>\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{label || name}} </th>\n      <td mat-cell *matCellDef=\"let data\"> {{getData(data)}}</td>\n    </ng-container>\n  ",
-                host: {
-                    'class': 'simple-column cdk-visually-hidden',
-                    '[attr.ariaHidden]': 'true',
-                }
-            }),
-            tslib_1.__param(0, core.Optional()),
-            tslib_1.__metadata("design:paramtypes", [material.MatTable])
-        ], SimpleColumn);
-        return SimpleColumn;
-    }());
-
-    var ELEMENT_DATA$e = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
      * @title Table with sorting
      */
     var TableSortingExample = /** @class */ (function () {
         function TableSortingExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$e);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$d);
         }
         TableSortingExample.prototype.ngOnInit = function () {
             this.dataSource.sort = this.sort;
@@ -5724,7 +5589,7 @@
     var TableStickyColumnsExample = /** @class */ (function () {
         function TableStickyColumnsExample() {
             this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-            this.dataSource = ELEMENT_DATA$f;
+            this.dataSource = ELEMENT_DATA$e;
         }
         TableStickyColumnsExample = tslib_1.__decorate([
             core.Component({
@@ -5735,7 +5600,7 @@
         ], TableStickyColumnsExample);
         return TableStickyColumnsExample;
     }());
-    var ELEMENT_DATA$f = [
+    var ELEMENT_DATA$e = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5754,7 +5619,7 @@
     var TableStickyComplexFlexExample = /** @class */ (function () {
         function TableStickyComplexFlexExample() {
             this.displayedColumns = [];
-            this.dataSource = ELEMENT_DATA$g;
+            this.dataSource = ELEMENT_DATA$f;
             this.tables = [0];
             this.displayedColumns.length = 24;
             this.displayedColumns.fill('filler');
@@ -5778,7 +5643,7 @@
         ], TableStickyComplexFlexExample);
         return TableStickyComplexFlexExample;
     }());
-    var ELEMENT_DATA$g = [
+    var ELEMENT_DATA$f = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5797,7 +5662,7 @@
     var TableStickyComplexExample = /** @class */ (function () {
         function TableStickyComplexExample() {
             this.displayedColumns = [];
-            this.dataSource = ELEMENT_DATA$h;
+            this.dataSource = ELEMENT_DATA$g;
             this.tables = [0];
             this.displayedColumns.length = 24;
             this.displayedColumns.fill('filler');
@@ -5821,7 +5686,7 @@
         ], TableStickyComplexExample);
         return TableStickyComplexExample;
     }());
-    var ELEMENT_DATA$h = [
+    var ELEMENT_DATA$g = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5869,7 +5734,7 @@
     var TableStickyHeaderExample = /** @class */ (function () {
         function TableStickyHeaderExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$i;
+            this.dataSource = ELEMENT_DATA$h;
         }
         TableStickyHeaderExample = tslib_1.__decorate([
             core.Component({
@@ -5880,7 +5745,7 @@
         ], TableStickyHeaderExample);
         return TableStickyHeaderExample;
     }());
-    var ELEMENT_DATA$i = [
+    var ELEMENT_DATA$h = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5893,7 +5758,72 @@
         { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
     ];
 
+    var ELEMENT_DATA$i = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Use of 'mat-text-column' with various configurations of the interface.
+     */
+    var TableTextColumnAdvancedExample = /** @class */ (function () {
+        function TableTextColumnAdvancedExample() {
+            var _this = this;
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$i);
+            this.decimalPipe = new common.DecimalPipe('en-US');
+            /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
+            this.getWeight = function (data) { return _this.decimalPipe.transform(data.weight, '1.0-2'); };
+        }
+        TableTextColumnAdvancedExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-text-column-advanced-example',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <mat-text-column name=\"position\" [headerText]=\"headerText\"></mat-text-column>\n\n  <!-- Change the header text. -->\n  <mat-text-column name=\"name\" headerText=\"Element\"></mat-text-column>\n\n  <!-- Provide a data accessor for getting the cell text values. -->\n  <mat-text-column name=\"weight\" [dataAccessor]=\"getWeight\"></mat-text-column>\n\n  <!-- Justify the content of the cells to the cell end. -->\n  <mat-text-column name=\"symbol\" justify=\"end\"></mat-text-column>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            })
+        ], TableTextColumnAdvancedExample);
+        return TableTextColumnAdvancedExample;
+    }());
+
     var ELEMENT_DATA$j = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Use of `mat-text-column` which can be used for simple columns that only need to display
+     * a text value for the header and cells.
+     */
+    var TableTextColumnExample = /** @class */ (function () {
+        function TableTextColumnExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = ELEMENT_DATA$j;
+        }
+        TableTextColumnExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-text-column-example',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <mat-text-column name=\"position\"></mat-text-column>\n  <mat-text-column name=\"name\"></mat-text-column>\n  <mat-text-column name=\"weight\"></mat-text-column>\n  <mat-text-column name=\"symbol\"></mat-text-column>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            })
+        ], TableTextColumnExample);
+        return TableTextColumnExample;
+    }());
+
+    var ELEMENT_DATA$k = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
         { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -5911,7 +5841,7 @@
     var TableWrappedExample = /** @class */ (function () {
         function TableWrappedExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$j);
+            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$k);
         }
         TableWrappedExample.prototype.ngOnInit = function () {
             this.dataSource.sort = this.sort;
@@ -8009,12 +7939,6 @@
             "additionalFiles": [],
             "selectorName": ""
         },
-        "table-simple-column": {
-            "title": "Table with a custom column component for easy column definition reuse.",
-            "component": TableSimpleColumnExample,
-            "additionalFiles": [],
-            "selectorName": "TableSimpleColumnExample, SimpleColumn"
-        },
         "table-sorting": {
             "title": "Table with sorting",
             "component": TableSortingExample,
@@ -8048,6 +7972,18 @@
         "table-sticky-header": {
             "title": "Table with sticky header",
             "component": TableStickyHeaderExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
+        "table-text-column-advanced": {
+            "title": "Use of 'mat-text-column' with various configurations of the interface.",
+            "component": TableTextColumnAdvancedExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
+        "table-text-column": {
+            "title": "Use of `mat-text-column` which can be used for simple columns that only need to display\na text value for the header and cells.",
+            "component": TableTextColumnExample,
             "additionalFiles": [],
             "selectorName": ""
         },
@@ -8372,14 +8308,14 @@
         TablePaginationExample,
         TableRowContextExample,
         TableSelectionExample,
-        TableSimpleColumnExample,
-        SimpleColumn,
         TableSortingExample,
         TableStickyColumnsExample,
         TableStickyComplexFlexExample,
         TableStickyComplexExample,
         TableStickyFooterExample,
         TableStickyHeaderExample,
+        TableTextColumnAdvancedExample,
+        TableTextColumnExample,
         TableWrappedExample,
         WrapperTable,
         TextFieldAutofillDirectiveExample,

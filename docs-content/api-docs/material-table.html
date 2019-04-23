@@ -1256,6 +1256,105 @@ if there is no difference.</p>
 
 
 
+    
+      
+
+<h4 id="MatTextColumn" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTextColumn"></span>
+  <code>MatTextColumn</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/table/api#CdkTextColumn" class="docs-api-class-extends-type">
+      CdkTextColumn
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Column that simply shows text content for the header and row cells. Assumes that the table
+is using the native table implementation (<code>&lt;table&gt;</code>).</p>
+<p>By default, the name of this column will be the header text and data property accessor.
+The header text can be overridden with the <code>headerText</code> input. Cell values can be overridden with
+the <code>dataAccessor</code> input. Change the text justification to the start or end using the <code>justify</code>
+input.</p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">mat-text-column</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>dataAccessor: (data: T, name: string) =&gt; string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Accessor function to retrieve the data rendered for each cell. If this
+property is not set, the data cells will render the value found in the data&#39;s property matching
+the column&#39;s name. For example, if the column is named <code>id</code>, then the rendered value will be
+value defined by the data&#39;s <code>id</code> property.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>headerText: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Text label that should be used for the column header. If this property is not
+set, the header text will default to the column name with its first letter capitalized.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>justify: &#39;start&#39; | &#39;end&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Alignment of the cell values.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Column name that should be used to reference this column.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
     <h3 id="classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes

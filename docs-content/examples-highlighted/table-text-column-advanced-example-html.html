@@ -1,0 +1,15 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">mat-table</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-elevation-z8"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-text-column</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"position"</span> [<span class="hljs-attr">headerText</span>]=<span class="hljs-string">"headerText"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-text-column</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Change the header text. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-text-column</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">headerText</span>=<span class="hljs-string">"Element"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-text-column</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Provide a data accessor for getting the cell text values. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-text-column</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"weight"</span> [<span class="hljs-attr">dataAccessor</span>]=<span class="hljs-string">"getWeight"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-text-column</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Justify the content of the cells to the cell end. --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-text-column</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"symbol"</span> <span class="hljs-attr">justify</span>=<span class="hljs-string">"end"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-text-column</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>

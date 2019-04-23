@@ -1,6 +1,6 @@
 import { NgModule, Component, ViewContainerRef, ViewChild, TemplateRef, ChangeDetectionStrategy, ViewEncapsulation, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, ElementRef, Self, Input, ContentChildren } from '@angular/core';
 import { FormControl, FormBuilder, NgControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { DecimalPipe, CommonModule } from '@angular/common';
 import { ScrollingModule, VIRTUAL_SCROLL_STRATEGY, FixedSizeVirtualScrollStrategy } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { CdkPopoverEditModule } from '@angular/cdk-experimental/popover-edit';
@@ -9,7 +9,7 @@ import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/
 import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { CdkStepperModule, CdkStepper, STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { PortalModule, TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
-import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatNativeDateModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MatTable, MatColumnDef, MatSortHeader, MatHeaderRowDef, MatRowDef, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
+import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatNativeDateModule, MatBottomSheet, MatBottomSheetRef, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MatHeaderRowDef, MatRowDef, MatColumnDef, MatTable, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
 import { startWith, map, takeUntil, switchMap, catchError, take } from 'rxjs/operators';
 import { Overlay } from '@angular/cdk/overlay';
 import { getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior, Platform } from '@angular/cdk/platform';
@@ -7290,164 +7290,12 @@ const ELEMENT_DATA$d = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
- * \@title Table with a custom column component for easy column definition reuse.
- */
-class TableSimpleColumnExample {
-    constructor() {
-        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$d);
-        this.getWeight = (/**
-         * @param {?} data
-         * @return {?}
-         */
-        (data) => '~' + data.weight);
-    }
-    /**
-     * @return {?}
-     */
-    ngOnInit() {
-        this.dataSource.sort = this.sort;
-    }
-}
-TableSimpleColumnExample.decorators = [
-    { type: Component, args: [{
-                selector: 'table-simple-column-example',
-                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\"\n       matSort #sort=\"matSort\">\n  <!-- Basic column: name is used for header label AND data property -->\n  <simple-column name=\"name\" sortable></simple-column>\n  <simple-column name=\"position\"></simple-column>\n\n  <!-- Name doesn't match the data property (or transform needed); define a custom data accessor -->\n  <simple-column name=\"weight\" [dataAccessor]=\"getWeight\"></simple-column>\n\n  <!-- Name doesn't match desired header text; define a custom label -->\n  <simple-column name=\"symbol\" label=\"SYMBOL!\"></simple-column>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let data; columns: displayedColumns;\"></tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            }] }
-];
-TableSimpleColumnExample.propDecorators = {
-    sort: [{ type: ViewChild, args: ['sort', { static: true },] }]
-};
-/**
- * Column that shows simply shows text content for the header and row
- * cells. By default, the name of this column will be assumed to be both the header
- * text and data property used to access the data value to show in cells. To override
- * the header text, provide a label text. To override the data cell values,
- * provide a dataAccessor function that provides the string to display for each row's cell.
- *
- * Note that this component sets itself as visually hidden since it will show up in the `mat-table`
- * DOM because it is an empty element with an ng-container (nothing rendered). It should not
- * interfere with screen readers.
- * @template T
- */
-class SimpleColumn {
-    /**
-     * @param {?} table
-     */
-    constructor(table) {
-        this.table = table;
-        /**
-         * Alignment of the cell values.
-         */
-        this.align = 'before';
-    }
-    /**
-     * Column name that should be used to reference this column.
-     * @return {?}
-     */
-    get name() {
-        return this._name;
-    }
-    /**
-     * @param {?} name
-     * @return {?}
-     */
-    set name(name) {
-        this._name = name;
-        this.columnDef.name = name;
-    }
-    /**
-     * Whether the column is sortable
-     * @return {?}
-     */
-    get sortable() {
-        return this._sortable;
-    }
-    /**
-     * @param {?} sortable
-     * @return {?}
-     */
-    set sortable(sortable) {
-        this._sortable = coerceBooleanProperty(sortable);
-    }
-    /**
-     * @return {?}
-     */
-    ngOnInit() {
-        if (this.table) {
-            this.table.addColumnDef(this.columnDef);
-        }
-    }
-    /**
-     * @return {?}
-     */
-    ngOnDestroy() {
-        if (this.table) {
-            this.table.removeColumnDef(this.columnDef);
-        }
-    }
-    /**
-     * @param {?} data
-     * @return {?}
-     */
-    getData(data) {
-        return this.dataAccessor ? this.dataAccessor(data, this.name) : ((/** @type {?} */ (data)))[this.name];
-    }
-}
-SimpleColumn.decorators = [
-    { type: Component, args: [{
-                selector: 'simple-column',
-                template: `
-    <ng-container matColumnDef>
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{label || name}} </th>
-      <td mat-cell *matCellDef="let data"> {{getData(data)}}</td>
-    </ng-container>
-  `,
-                host: {
-                    'class': 'simple-column cdk-visually-hidden',
-                    '[attr.ariaHidden]': 'true',
-                }
-            }] }
-];
-/** @nocollapse */
-SimpleColumn.ctorParameters = () => [
-    { type: MatTable, decorators: [{ type: Optional }] }
-];
-SimpleColumn.propDecorators = {
-    name: [{ type: Input }],
-    label: [{ type: Input }],
-    dataAccessor: [{ type: Input }],
-    align: [{ type: Input }],
-    sortable: [{ type: Input }],
-    columnDef: [{ type: ViewChild, args: [MatColumnDef, { static: true },] }],
-    sortHeader: [{ type: ViewChild, args: [MatSortHeader, { static: false },] }]
-};
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
-const ELEMENT_DATA$e = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-];
-/**
  * \@title Table with sorting
  */
 class TableSortingExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$e);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$d);
     }
     /**
      * @return {?}
@@ -7477,7 +7325,7 @@ TableSortingExample.propDecorators = {
 class TableStickyColumnsExample {
     constructor() {
         this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-        this.dataSource = ELEMENT_DATA$f;
+        this.dataSource = ELEMENT_DATA$e;
     }
 }
 TableStickyColumnsExample.decorators = [
@@ -7488,7 +7336,7 @@ TableStickyColumnsExample.decorators = [
             }] }
 ];
 /** @type {?} */
-const ELEMENT_DATA$f = [
+const ELEMENT_DATA$e = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7511,7 +7359,7 @@ const ELEMENT_DATA$f = [
 class TableStickyComplexFlexExample {
     constructor() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$g;
+        this.dataSource = ELEMENT_DATA$f;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -7541,7 +7389,7 @@ TableStickyComplexFlexExample.decorators = [
 /** @nocollapse */
 TableStickyComplexFlexExample.ctorParameters = () => [];
 /** @type {?} */
-const ELEMENT_DATA$g = [
+const ELEMENT_DATA$f = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7564,7 +7412,7 @@ const ELEMENT_DATA$g = [
 class TableStickyComplexExample {
     constructor() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$h;
+        this.dataSource = ELEMENT_DATA$g;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -7594,7 +7442,7 @@ TableStickyComplexExample.decorators = [
 /** @nocollapse */
 TableStickyComplexExample.ctorParameters = () => [];
 /** @type {?} */
-const ELEMENT_DATA$h = [
+const ELEMENT_DATA$g = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7661,7 +7509,7 @@ TableStickyFooterExample.decorators = [
 class TableStickyHeaderExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$i;
+        this.dataSource = ELEMENT_DATA$h;
     }
 }
 TableStickyHeaderExample.decorators = [
@@ -7671,6 +7519,24 @@ TableStickyHeaderExample.decorators = [
                 styles: [".example-container {\n  height: 400px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n"]
             }] }
 ];
+/** @type {?} */
+const ELEMENT_DATA$h = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 /** @type {?} */
 const ELEMENT_DATA$i = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -7683,6 +7549,31 @@ const ELEMENT_DATA$i = [
     { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
     { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
+ * \@title Use of 'mat-text-column' with various configurations of the interface.
+ */
+class TableTextColumnAdvancedExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$i);
+        this.decimalPipe = new DecimalPipe('en-US');
+        /**
+         * Data accessor function that transforms the weight value to have at most 2 decimal digits.
+         */
+        this.getWeight = (/**
+         * @param {?} data
+         * @return {?}
+         */
+        (data) => this.decimalPipe.transform(data.weight, '1.0-2'));
+    }
+}
+TableTextColumnAdvancedExample.decorators = [
+    { type: Component, args: [{
+                selector: 'table-text-column-advanced-example',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <mat-text-column name=\"position\" [headerText]=\"headerText\"></mat-text-column>\n\n  <!-- Change the header text. -->\n  <mat-text-column name=\"name\" headerText=\"Element\"></mat-text-column>\n\n  <!-- Provide a data accessor for getting the cell text values. -->\n  <mat-text-column name=\"weight\" [dataAccessor]=\"getWeight\"></mat-text-column>\n\n  <!-- Justify the content of the cells to the cell end. -->\n  <mat-text-column name=\"symbol\" justify=\"end\"></mat-text-column>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            }] }
 ];
 
 /**
@@ -7703,12 +7594,47 @@ const ELEMENT_DATA$j = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 /**
+ * \@title Use of `mat-text-column` which can be used for simple columns that only need to display
+ * a text value for the header and cells.
+ */
+class TableTextColumnExample {
+    constructor() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = ELEMENT_DATA$j;
+    }
+}
+TableTextColumnExample.decorators = [
+    { type: Component, args: [{
+                selector: 'table-text-column-example',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <mat-text-column name=\"position\"></mat-text-column>\n  <mat-text-column name=\"name\"></mat-text-column>\n  <mat-text-column name=\"weight\"></mat-text-column>\n  <mat-text-column name=\"symbol\"></mat-text-column>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            }] }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const ELEMENT_DATA$k = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
  * \@title Table example that shows how to wrap a table component for definition and behavior reuse.
  */
 class TableWrappedExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$j);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$k);
     }
     /**
      * @return {?}
@@ -10211,12 +10137,6 @@ const EXAMPLE_COMPONENTS = {
         "additionalFiles": [],
         "selectorName": ""
     },
-    "table-simple-column": {
-        "title": "Table with a custom column component for easy column definition reuse.",
-        "component": TableSimpleColumnExample,
-        "additionalFiles": [],
-        "selectorName": "TableSimpleColumnExample, SimpleColumn"
-    },
     "table-sorting": {
         "title": "Table with sorting",
         "component": TableSortingExample,
@@ -10250,6 +10170,18 @@ const EXAMPLE_COMPONENTS = {
     "table-sticky-header": {
         "title": "Table with sticky header",
         "component": TableStickyHeaderExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-text-column-advanced": {
+        "title": "Use of 'mat-text-column' with various configurations of the interface.",
+        "component": TableTextColumnAdvancedExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "table-text-column": {
+        "title": "Use of `mat-text-column` which can be used for simple columns that only need to display\na text value for the header and cells.",
+        "component": TableTextColumnExample,
         "additionalFiles": [],
         "selectorName": ""
     },
@@ -10575,14 +10507,14 @@ const EXAMPLE_LIST = [
     TablePaginationExample,
     TableRowContextExample,
     TableSelectionExample,
-    TableSimpleColumnExample,
-    SimpleColumn,
     TableSortingExample,
     TableStickyColumnsExample,
     TableStickyComplexFlexExample,
     TableStickyComplexExample,
     TableStickyFooterExample,
     TableStickyHeaderExample,
+    TableTextColumnAdvancedExample,
+    TableTextColumnExample,
     TableWrappedExample,
     WrapperTable,
     TextFieldAutofillDirectiveExample,
