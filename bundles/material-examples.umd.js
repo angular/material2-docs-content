@@ -5335,7 +5335,7 @@
         }
         ExampleHttpDatabase.prototype.getRepoIssues = function (sort, order, page) {
             var href = 'https://api.github.com/search/issues';
-            var requestUrl = href + "?q=repo:angular/material2&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
+            var requestUrl = href + "?q=repo:angular/components&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
             return this.http.get(requestUrl);
         };
         return ExampleHttpDatabase;
