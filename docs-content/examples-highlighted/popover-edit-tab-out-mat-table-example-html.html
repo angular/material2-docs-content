@@ -1,0 +1,84 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-table"</span> <span class="hljs-attr">mat-table</span> <span class="hljs-attr">editable</span> [<span class="hljs-attr">dataSource</span>]=<span class="hljs-string">"dataSource"</span>&gt;</span>
+  <span class="hljs-comment">&lt;!--
+    This edit lens is specified outside of the cell and must explicitly declare
+    its context. It could be reused in multiple cells.
+  --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">weightEdit</span> <span class="hljs-attr">let-element</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">f</span>=<span class="hljs-string">"ngForm"</span>
+          <span class="hljs-attr">matEditLens</span>
+          <span class="hljs-attr">matEditLensClickOutBehavior</span>=<span class="hljs-string">"submit"</span>
+          (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">"onSubmitWeight(element, f)"</span>
+          [<span class="hljs-attr">matEditLensPreservedFormValue</span>]=<span class="hljs-string">"preservedWeightValues.get(element)"</span>
+          (<span class="hljs-attr">matEditLensPreservedFormValueChange</span>)=<span class="hljs-string">"preservedWeightValues.set(element, $event)"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-edit-content</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">"element.weight"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"weight"</span> <span class="hljs-attr">required</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Position Column --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"position"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> No. <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.position}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"name"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>
+        [<span class="hljs-attr">matPopoverEdit</span>]=<span class="hljs-string">"nameEdit"</span> <span class="hljs-attr">matPopoverEditTabOut</span>
+        <span class="hljs-attr">matEditOpen</span>&gt;</span>
+      {{element.name}}
+      
+      <span class="hljs-comment">&lt;!-- This edit is defined in the cell and can implicitly access element --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">nameEdit</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">f</span>=<span class="hljs-string">"ngForm"</span>
+              <span class="hljs-attr">matEditLens</span>
+              <span class="hljs-attr">matEditLensClickOutBehavior</span>=<span class="hljs-string">"submit"</span>
+              (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">"onSubmitName(element, f)"</span>
+              [<span class="hljs-attr">matEditLensPreservedFormValue</span>]=<span class="hljs-string">"preservedNameValues.get(element)"</span>
+              (<span class="hljs-attr">matEditLensPreservedFormValueChange</span>)=<span class="hljs-string">"preservedNameValues.set(element, $event)"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-edit-content</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">matInput</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">"element.name"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span> <span class="hljs-attr">required</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">matRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Weight Column --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"weight"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Weight <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>
+        [<span class="hljs-attr">matPopoverEdit</span>]=<span class="hljs-string">"weightEdit"</span> <span class="hljs-attr">matPopoverEditTabOut</span>
+        [<span class="hljs-attr">matPopoverEditContext</span>]=<span class="hljs-string">"element"</span>
+        <span class="hljs-attr">matEditOpen</span>&gt;</span>
+      {{element.weight}}
+      
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">matRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Symbol Column --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"symbol"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Symbol <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>&gt;</span> {{element.symbol}} <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>

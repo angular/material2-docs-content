@@ -1,9 +1,9 @@
-import { NgModule, Component, ViewContainerRef, ViewChild, TemplateRef, ChangeDetectionStrategy, ViewEncapsulation, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, ElementRef, Self, Input, ContentChildren } from '@angular/core';
+import { Directive, NgModule, Component, ViewContainerRef, ViewChild, TemplateRef, ChangeDetectionStrategy, ViewEncapsulation, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, ElementRef, Self, Input, ContentChildren } from '@angular/core';
 import { FormControl, FormBuilder, NgControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DecimalPipe, CommonModule } from '@angular/common';
+import { CommonModule, DecimalPipe } from '@angular/common';
 import { ScrollingModule, VIRTUAL_SCROLL_STRATEGY, FixedSizeVirtualScrollStrategy } from '@angular/cdk/scrolling';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
-import { CdkPopoverEditModule } from '@angular/cdk-experimental/popover-edit';
+import { CdkEditControl, EditRef, CdkEditRevert, CdkEditClose, CdkPopoverEdit, CdkPopoverEditTabOut, CdkRowHoverContent, CdkEditOpen, CdkEditOpenButton, CdkPopoverEditModule, CdkEditable } from '@angular/cdk-experimental/popover-edit';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
 import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
@@ -27,6 +27,264 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { HttpClient } from '@angular/common/http';
 import { AutofillMonitor } from '@angular/cdk/text-field';
 import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * A component that attaches to a form within the edit.
+ * It coordinates the form state with the table-wide edit system and handles
+ * closing the edit when the form is submitted or the user clicks
+ * out.
+ * @template FormValue
+ */
+class MatEditLens extends CdkEditControl {
+}
+MatEditLens.decorators = [
+    { type: Directive, args: [{
+                selector: 'form[matEditLens]',
+                host: {
+                    '(ngSubmit)': 'handleFormSubmit()',
+                    '(keydown.enter)': 'editRef.trackEnterPressForClose(true)',
+                    '(keyup.enter)': 'editRef.trackEnterPressForClose(false)',
+                    '(keyup.escape)': 'close()',
+                    '(document:click)': 'handlePossibleClickOut($event)',
+                    'class': 'mat-edit-lens',
+                },
+                inputs: [
+                    'clickOutBehavior: matEditLensClickOutBehavior',
+                    'preservedFormValue: matEditLensPreservedFormValue',
+                    'ignoreSubmitUnlessValid: matEditLensIgnoreSubmitUnlessValid',
+                ],
+                outputs: ['preservedFormValueChange: matEditLensPreservedFormValueChange'],
+                providers: [EditRef],
+            },] }
+];
+/**
+ * Reverts the form to its initial or previously submitted state on click.
+ * @template FormValue
+ */
+class MatEditRevert extends CdkEditRevert {
+}
+MatEditRevert.decorators = [
+    { type: Directive, args: [{
+                selector: 'button[matEditRevert]',
+                host: {
+                    '(click)': 'revertEdit()',
+                    'type': 'button',
+                }
+            },] }
+];
+/**
+ * Closes the lens on click.
+ * @template FormValue
+ */
+class MatEditClose extends CdkEditClose {
+}
+MatEditClose.decorators = [
+    { type: Directive, args: [{
+                selector: 'button[matEditClose]',
+                host: {
+                    '(click)': 'closeEdit()',
+                    'type': 'button',
+                }
+            },] }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const POPOVER_EDIT_HOST_BINDINGS = {
+    'tabIndex': '0',
+    'class': 'mat-popover-edit-cell',
+    '[attr.aria-haspopup]': 'true',
+};
+/** @type {?} */
+const POPOVER_EDIT_INPUTS = [
+    'template: matPopoverEdit',
+    'context: matPopoverEditContext',
+    'colspan: matPopoverEditColspan',
+];
+/** @type {?} */
+const EDIT_PANE_CLASS = 'mat-edit-pane';
+/**
+ * Attaches an ng-template to a cell and shows it when instructed to by the
+ * EditEventDispatcher service.
+ * Makes the cell focusable.
+ * @template C
+ */
+class MatPopoverEdit extends CdkPopoverEdit {
+    /**
+     * @protected
+     * @return {?}
+     */
+    panelClass() {
+        return EDIT_PANE_CLASS;
+    }
+}
+MatPopoverEdit.decorators = [
+    { type: Directive, args: [{
+                selector: '[matPopoverEdit]:not([matPopoverEditTabOut])',
+                host: POPOVER_EDIT_HOST_BINDINGS,
+                inputs: POPOVER_EDIT_INPUTS,
+            },] }
+];
+/**
+ * Attaches an ng-template to a cell and shows it when instructed to by the
+ * EditEventDispatcher service.
+ * Makes the cell focusable.
+ * @template C
+ */
+class MatPopoverEditTabOut extends CdkPopoverEditTabOut {
+    /**
+     * @protected
+     * @return {?}
+     */
+    panelClass() {
+        return EDIT_PANE_CLASS;
+    }
+}
+MatPopoverEditTabOut.decorators = [
+    { type: Directive, args: [{
+                selector: '[matPopoverEdit][matPopoverEditTabOut]',
+                host: POPOVER_EDIT_HOST_BINDINGS,
+                inputs: POPOVER_EDIT_INPUTS,
+            },] }
+];
+/**
+ * A structural directive that shows its contents when the table row containing
+ * it is hovered.
+ *
+ * Note that the contents of this directive are invisible to screen readers.
+ * Typically this is used to show a button that launches the edit popup, which
+ * is ok because screen reader users can trigger edit by pressing Enter on a focused
+ * table cell.
+ *
+ * If this directive contains buttons for functionality other than opening edit then
+ * care should be taken to make sure that this functionality is also exposed in
+ * an accessible way.
+ */
+class MatRowHoverContent extends CdkRowHoverContent {
+    /**
+     * @protected
+     * @param {?} element
+     * @return {?}
+     */
+    initElement(element) {
+        super.initElement(element);
+        element.classList.add('mat-row-hover-content');
+    }
+    /**
+     * @protected
+     * @param {?} element
+     * @return {?}
+     */
+    prepareElement(element) {
+        super.prepareElement(element);
+        /** @type {?} */
+        const RTL_CLASS = 'mat-row-hover-content-rtl';
+        if (this.services.directionality.value === 'rtl') {
+            element.classList.add(RTL_CLASS);
+        }
+        else {
+            element.classList.remove(RTL_CLASS);
+        }
+        /** @type {?} */
+        const ANIMATE_CLASS = 'mat-row-hover-content-visible';
+        element.classList.remove(ANIMATE_CLASS);
+        this.services.ngZone.runOutsideAngular((/**
+         * @return {?}
+         */
+        () => {
+            setTimeout((/**
+             * @return {?}
+             */
+            () => {
+                element.classList.add(ANIMATE_CLASS);
+            }));
+        }));
+    }
+}
+MatRowHoverContent.decorators = [
+    { type: Directive, args: [{
+                selector: '[matRowHoverContent]',
+            },] }
+];
+/**
+ * Opens the closest edit popover to this element, whether it's associated with this exact
+ * element or an ancestor element.
+ */
+class MatEditOpen extends CdkEditOpen {
+}
+MatEditOpen.decorators = [
+    { type: Directive, args: [{
+                // Specify :not(button) as we only need to add type: button on actual buttons.
+                selector: '[matEditOpen]:not(button)',
+                host: {
+                    '(click)': 'openEdit($event)',
+                }
+            },] }
+];
+/**
+ * Opens the closest edit popover to this element, whether it's associated with this exact
+ * element or an ancestor element.
+ */
+class MatEditOpenButton extends CdkEditOpenButton {
+}
+MatEditOpenButton.decorators = [
+    { type: Directive, args: [{
+                // Specify button as we only need to add type: button on actual buttons.
+                selector: 'button[matEditOpen]',
+                host: {
+                    '(click)': 'openEdit($event)',
+                    'type': 'button',
+                }
+            },] }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const EXPORTED_DECLARATIONS = [
+    MatPopoverEdit,
+    MatPopoverEditTabOut,
+    MatRowHoverContent,
+    MatEditLens,
+    MatEditRevert,
+    MatEditClose,
+    MatEditOpen,
+    MatEditOpenButton,
+];
+class MatPopoverEditModule {
+}
+MatPopoverEditModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [
+                    CdkPopoverEditModule,
+                    CommonModule,
+                ],
+                exports: [
+                    ...EXPORTED_DECLARATIONS,
+                    CdkEditable,
+                ],
+                declarations: EXPORTED_DECLARATIONS,
+            },] }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 
 /**
  * @fileoverview added by tsickle
@@ -62,6 +320,7 @@ ExampleMaterialModule.decorators = [
                     MatListModule,
                     MatMenuModule,
                     MatPaginatorModule,
+                    MatPopoverEditModule,
                     MatProgressBarModule,
                     MatProgressSpinnerModule,
                     MatRadioModule,
@@ -108,6 +367,7 @@ ExampleMaterialModule.decorators = [
                     MatListModule,
                     MatMenuModule,
                     MatPaginatorModule,
+                    MatPopoverEditModule,
                     MatProgressBarModule,
                     MatProgressSpinnerModule,
                     MatRadioModule,
@@ -4866,6 +5126,405 @@ PaginatorOverviewExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/** @type {?} */
+const PERSON_DATA$1 = [
+    { id: 1, firstName: 'Terra', middleName: 'Maduin', lastName: 'Branford' },
+    { id: 2, firstName: 'Locke', middleName: '', lastName: 'Cole' },
+    { id: 3, firstName: 'Celes', middleName: 'Gestahl', lastName: 'Chere' },
+    { id: 4, firstName: 'Edgar', middleName: 'Roni', lastName: 'Figaro' },
+    { id: 5, firstName: 'Sabin', middleName: 'Rene', lastName: 'Figaro' },
+    { id: 6, firstName: 'Clyde', middleName: '"Shadow"', lastName: 'Arrowny' },
+    { id: 7, firstName: 'Setzer', middleName: '', lastName: 'Gabbiani' },
+    { id: 8, firstName: 'Cid', middleName: 'Del Norte', lastName: 'Marquez' },
+    { id: 9, firstName: 'Mog', middleName: '', lastName: 'McMoogle' },
+];
+/**
+ * \@title Material Popover Edit spanning multiple columns on a Material data-table
+ */
+class PopoverEditCellSpanMatTableExample {
+    /**
+     * @param {?} iconRegistry
+     * @param {?} sanitizer
+     */
+    constructor(iconRegistry, sanitizer) {
+        this.displayedColumns = ['id', 'firstName', 'middleName', 'lastName'];
+        this.dataSource = new ExampleDataSource$4();
+        this.preservedValues = new WeakMap();
+        iconRegistry.addSvgIcon('edit', sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/edit-icon.svg'));
+    }
+    /**
+     * @param {?} person
+     * @param {?} f
+     * @return {?}
+     */
+    onSubmit(person, f) {
+        if (!f.valid) {
+            return;
+        }
+        person.firstName = f.value['firstName'];
+        person.middleName = f.value['middleName'];
+        person.lastName = f.value['lastName'];
+    }
+}
+PopoverEditCellSpanMatTableExample.decorators = [
+    { type: Component, args: [{
+                selector: 'popover-edit-cell-span-mat-table-example',
+                template: "<table class=\"example-table\" mat-table editable [dataSource]=\"dataSource\">\n  <ng-template #nameEdit let-ctx>\n    <div>\n      <form #f=\"ngForm\"\n          matEditLens\n          (ngSubmit)=\"onSubmit(ctx.person, f)\"\n          [matEditLensPreservedFormValue]=\"preservedValues.get(ctx.person)\"\n          (matEditLensPreservedFormValueChange)=\"preservedValues.set(ctx.person, $event)\">\n        <div mat-edit-content class=\"example-input-container\">\n          <mat-form-field>\n            <input matInput [ngModel]=\"ctx.person.firstName\" name=\"firstName\" required\n                [attr.cdkFocusInitial]=\"ctx.focus === 'firstName' || null\">\n          </mat-form-field>\n          <mat-form-field>\n            <input matInput [ngModel]=\"ctx.person.middleName\" name=\"middleName\"\n                [attr.cdkFocusInitial]=\"ctx.focus === 'middleName' || null\">\n          </mat-form-field>\n          <mat-form-field>\n            <input matInput [ngModel]=\"ctx.person.lastName\" name=\"lastName\" required\n                [attr.cdkFocusInitial]=\"ctx.focus === 'lastName' || null\">\n          </mat-form-field>\n        </div>\n\n        <div mat-edit-actions>\n          <button mat-button type=\"submit\">Confirm</button>\n          <button mat-button cdkEditRevert>Revert</button>\n          <button mat-button cdkEditClose>Close</button>\n        </div>\n      </form>\n    </div>\n  </ng-template>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"id\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let person\"> {{person.id}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"firstName\">\n    <th mat-header-cell *matHeaderCellDef> First Name </th>\n    <td mat-cell *matCellDef=\"let person\"\n        [matPopoverEdit]=\"nameEdit\"\n        [matPopoverEditContext]=\"{person: person, focus: 'firstName'}\"\n        [matPopoverEditColspan]=\"{after: 2}\">\n      {{person.firstName}}\n\n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"middleName\">\n    <th mat-header-cell *matHeaderCellDef> Middle Name </th>\n    <td mat-cell *matCellDef=\"let person\"\n        [matPopoverEdit]=\"nameEdit\"\n        [matPopoverEditContext]=\"{person: person, focus: 'middleName'}\"\n        [matPopoverEditColspan]=\"{before:1 , after: 1}\">\n      {{person.middleName}}\n\n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"lastName\">\n    <th mat-header-cell *matHeaderCellDef> Last Name </th>\n    <td mat-cell *matCellDef=\"let person\"\n        [matPopoverEdit]=\"nameEdit\"\n        [matPopoverEditContext]=\"{person: person, focus: 'lastName'}\"\n        [matPopoverEditColspan]=\"{before: 2}\">\n      {{person.lastName}}\n\n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  min-width: 300px;\n  width: 25%;\n}\n\n.example-input-container {\n  display: flex;\n  justify-content: stretch;\n}\n\n.example-input-container mat-form-field {\n  flex: 1;\n}\n"]
+            }] }
+];
+/** @nocollapse */
+PopoverEditCellSpanMatTableExample.ctorParameters = () => [
+    { type: MatIconRegistry },
+    { type: DomSanitizer }
+];
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+class ExampleDataSource$4 extends DataSource {
+    constructor() {
+        super(...arguments);
+        /**
+         * Stream of data that is provided to the table.
+         */
+        this.data = new BehaviorSubject(PERSON_DATA$1);
+    }
+    /**
+     * Connect function called by the table to retrieve one stream containing the data to render.
+     * @return {?}
+     */
+    connect() {
+        return this.data;
+    }
+    /**
+     * @return {?}
+     */
+    disconnect() { }
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const ELEMENT_DATA$6 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
+/**
+ * \@title Material Popover Edit on a flex Material data-table
+ */
+class PopoverEditMatTableFlexExample {
+    /**
+     * @param {?} iconRegistry
+     * @param {?} sanitizer
+     */
+    constructor(iconRegistry, sanitizer) {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new ExampleDataSource$5();
+        this.preservedNameValues = new WeakMap();
+        this.preservedWeightValues = new WeakMap();
+        iconRegistry.addSvgIcon('edit', sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/edit-icon.svg'));
+    }
+    /**
+     * @param {?} element
+     * @param {?} f
+     * @return {?}
+     */
+    onSubmitName(element, f) {
+        if (!f.valid) {
+            return;
+        }
+        element.name = f.value.name;
+    }
+    /**
+     * @param {?} element
+     * @param {?} f
+     * @return {?}
+     */
+    onSubmitWeight(element, f) {
+        if (!f.valid) {
+            return;
+        }
+        element.weight = f.value.weight;
+    }
+}
+PopoverEditMatTableFlexExample.decorators = [
+    { type: Component, args: [{
+                selector: 'popover-edit-mat-table-flex-example',
+                template: "<mat-table class=\"example-table\" editable [dataSource]=\"dataSource\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div>\n      <form #f=\"ngForm\"\n          matEditLens\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [matEditLensPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (matEditLensPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        <div mat-edit-content>\n          <mat-form-field>\n            <input matInput type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n          </mat-form-field>\n        </div>\n      </form>\n    </div>\n  </ng-template>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.position}} </mat-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"nameEdit\">\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div>\n          <form #f=\"ngForm\"\n              matEditLens\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [matEditLensPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (matEditLensPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            <h2 mat-edit-title>Name</h2>\n            <div mat-edit-content>\n              <mat-form-field>\n                <input matInput [ngModel]=\"element.name\" name=\"name\" required>\n              </mat-form-field>\n            </div>\n            <div mat-edit-actions>\n              <button mat-button type=\"submit\">Confirm</button>\n              <button mat-button matEditRevert>Revert</button>\n              <button mat-button matEditClose>Close</button>\n            </div>\n          </form>\n        </div>\n      </ng-template>\n\n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </mat-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"weightEdit\" [matPopoverEditContext]=\"element\">\n      {{element.weight}}\n      \n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n      </mat-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.symbol}} </mat-cell>\n  </ng-container>\n\n  <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n  <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n</mat-table>\n",
+                styles: [".example-table {\n  width: 100%;\n}\n\n/*.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}*/\n"]
+            }] }
+];
+/** @nocollapse */
+PopoverEditMatTableFlexExample.ctorParameters = () => [
+    { type: MatIconRegistry },
+    { type: DomSanitizer }
+];
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+class ExampleDataSource$5 extends DataSource {
+    constructor() {
+        super(...arguments);
+        /**
+         * Stream of data that is provided to the table.
+         */
+        this.data = new BehaviorSubject(ELEMENT_DATA$6);
+    }
+    /**
+     * Connect function called by the table to retrieve one stream containing the data to render.
+     * @return {?}
+     */
+    connect() {
+        return this.data;
+    }
+    /**
+     * @return {?}
+     */
+    disconnect() { }
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const ELEMENT_DATA$7 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
+/**
+ * \@title Material Popover Edit on a Material data-table
+ */
+class PopoverEditMatTableExample {
+    /**
+     * @param {?} iconRegistry
+     * @param {?} sanitizer
+     */
+    constructor(iconRegistry, sanitizer) {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new ExampleDataSource$6();
+        this.preservedNameValues = new WeakMap();
+        this.preservedWeightValues = new WeakMap();
+        iconRegistry.addSvgIcon('edit', sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/edit-icon.svg'));
+    }
+    /**
+     * @param {?} element
+     * @param {?} f
+     * @return {?}
+     */
+    onSubmitName(element, f) {
+        if (!f.valid) {
+            return;
+        }
+        element.name = f.value.name;
+    }
+    /**
+     * @param {?} element
+     * @param {?} f
+     * @return {?}
+     */
+    onSubmitWeight(element, f) {
+        if (!f.valid) {
+            return;
+        }
+        element.weight = f.value.weight;
+    }
+}
+PopoverEditMatTableExample.decorators = [
+    { type: Component, args: [{
+                selector: 'popover-edit-mat-table-example',
+                template: "<table class=\"example-table\" mat-table editable [dataSource]=\"dataSource\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div>\n      <form #f=\"ngForm\"\n          matEditLens\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [matEditLensPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (matEditLensPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        <div mat-edit-content>\n          <mat-form-field>\n            <input matInput type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n          </mat-form-field>\n        </div>\n      </form>\n    </div>\n  </ng-template>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"nameEdit\">\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div>\n          <form #f=\"ngForm\"\n              matEditLens\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [matEditLensPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (matEditLensPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            <h2 mat-edit-title>Name</h2>\n            <div mat-edit-content>\n              <mat-form-field>\n                <input matInput [ngModel]=\"element.name\" name=\"name\" required>\n              </mat-form-field>\n            </div>\n            <div mat-edit-actions>\n              <button mat-button type=\"submit\">Confirm</button>\n              <button mat-button matEditRevert>Revert</button>\n              <button mat-button matEditClose>Close</button>\n            </div>\n          </form>\n        </div>\n      </ng-template>\n\n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"weightEdit\" [matPopoverEditContext]=\"element\">\n      {{element.weight}}\n      \n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}\n"]
+            }] }
+];
+/** @nocollapse */
+PopoverEditMatTableExample.ctorParameters = () => [
+    { type: MatIconRegistry },
+    { type: DomSanitizer }
+];
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+class ExampleDataSource$6 extends DataSource {
+    constructor() {
+        super(...arguments);
+        /**
+         * Stream of data that is provided to the table.
+         */
+        this.data = new BehaviorSubject(ELEMENT_DATA$7);
+    }
+    /**
+     * Connect function called by the table to retrieve one stream containing the data to render.
+     * @return {?}
+     */
+    connect() {
+        return this.data;
+    }
+    /**
+     * @return {?}
+     */
+    disconnect() { }
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
+const ELEMENT_DATA$8 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+    { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+    { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+    { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+    { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+    { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+    { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+    { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+    { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+    { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+];
+/**
+ * \@title Material Popover Edit with spreadsheet-like configuration on a Material data-table
+ */
+class PopoverEditTabOutMatTableExample {
+    /**
+     * @param {?} iconRegistry
+     * @param {?} sanitizer
+     */
+    constructor(iconRegistry, sanitizer) {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new ExampleDataSource$7();
+        this.preservedNameValues = new WeakMap();
+        this.preservedWeightValues = new WeakMap();
+        iconRegistry.addSvgIcon('edit', sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/edit-icon.svg'));
+    }
+    /**
+     * @param {?} element
+     * @param {?} f
+     * @return {?}
+     */
+    onSubmitName(element, f) {
+        if (!f.valid) {
+            return;
+        }
+        element.name = f.value.name;
+    }
+    /**
+     * @param {?} element
+     * @param {?} f
+     * @return {?}
+     */
+    onSubmitWeight(element, f) {
+        if (!f.valid) {
+            return;
+        }
+        element.weight = f.value.weight;
+    }
+}
+PopoverEditTabOutMatTableExample.decorators = [
+    { type: Component, args: [{
+                selector: 'popover-edit-tab-out-mat-table-example',
+                template: "<table class=\"example-table\" mat-table editable [dataSource]=\"dataSource\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div>\n      <form #f=\"ngForm\"\n          matEditLens\n          matEditLensClickOutBehavior=\"submit\"\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [matEditLensPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (matEditLensPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        <div mat-edit-content>\n          <mat-form-field>\n            <input matInput type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n          </mat-form-field>\n        </div>\n      </form>\n    </div>\n  </ng-template>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"nameEdit\" matPopoverEditTabOut\n        matEditOpen>\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div>\n          <form #f=\"ngForm\"\n              matEditLens\n              matEditLensClickOutBehavior=\"submit\"\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [matEditLensPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (matEditLensPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            <div mat-edit-content>\n              <mat-form-field>\n                <input matInput [ngModel]=\"element.name\" name=\"name\" required>\n              </mat-form-field>\n            </div>\n          </form>\n        </div>\n      </ng-template>\n\n      <span *matRowHoverContent>\n        <mat-icon>edit</mat-icon>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"weightEdit\" matPopoverEditTabOut\n        [matPopoverEditContext]=\"element\"\n        matEditOpen>\n      {{element.weight}}\n      \n      <span *matRowHoverContent>\n        <mat-icon>edit</mat-icon>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}\n"]
+            }] }
+];
+/** @nocollapse */
+PopoverEditTabOutMatTableExample.ctorParameters = () => [
+    { type: MatIconRegistry },
+    { type: DomSanitizer }
+];
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+class ExampleDataSource$7 extends DataSource {
+    constructor() {
+        super(...arguments);
+        /**
+         * Stream of data that is provided to the table.
+         */
+        this.data = new BehaviorSubject(ELEMENT_DATA$8);
+    }
+    /**
+     * Connect function called by the table to retrieve one stream containing the data to render.
+     * @return {?}
+     */
+    connect() {
+        return this.data;
+    }
+    /**
+     * @return {?}
+     */
+    disconnect() { }
+}
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 /**
  * \@title Buffer progress-bar
  */
@@ -6575,7 +7234,7 @@ TabNavBarBasicExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$6 = [
+const ELEMENT_DATA$9 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6593,7 +7252,7 @@ const ELEMENT_DATA$6 = [
 class TableBasicFlexExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$6;
+        this.dataSource = ELEMENT_DATA$9;
     }
 }
 TableBasicFlexExample.decorators = [
@@ -6609,7 +7268,7 @@ TableBasicFlexExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$7 = [
+const ELEMENT_DATA$a = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6627,7 +7286,7 @@ const ELEMENT_DATA$7 = [
 class TableBasicExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$7;
+        this.dataSource = ELEMENT_DATA$a;
     }
 }
 TableBasicExample.decorators = [
@@ -6643,7 +7302,7 @@ TableBasicExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$8 = [
+const ELEMENT_DATA$b = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6662,7 +7321,7 @@ class TableDynamicColumnsExample {
     constructor() {
         this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
         this.columnsToDisplay = this.displayedColumns.slice();
-        this.data = ELEMENT_DATA$8;
+        this.data = ELEMENT_DATA$b;
     }
     /**
      * @return {?}
@@ -6715,7 +7374,7 @@ TableDynamicColumnsExample.decorators = [
  */
 class TableExpandableRowsExample {
     constructor() {
-        this.dataSource = ELEMENT_DATA$9;
+        this.dataSource = ELEMENT_DATA$c;
         this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
     }
 }
@@ -6734,7 +7393,7 @@ TableExpandableRowsExample.decorators = [
             }] }
 ];
 /** @type {?} */
-const ELEMENT_DATA$9 = [
+const ELEMENT_DATA$c = [
     {
         position: 1,
         name: 'Hydrogen',
@@ -6821,7 +7480,7 @@ const ELEMENT_DATA$9 = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$a = [
+const ELEMENT_DATA$d = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -6839,7 +7498,7 @@ const ELEMENT_DATA$a = [
 class TableFilteringExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$a);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$d);
     }
     /**
      * @param {?} filterValue
@@ -7138,7 +7797,7 @@ function createNewUser(id) {
 class TablePaginationExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$b);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$e);
     }
     /**
      * @return {?}
@@ -7158,7 +7817,7 @@ TablePaginationExample.propDecorators = {
     paginator: [{ type: ViewChild, args: [MatPaginator, { static: true },] }]
 };
 /** @type {?} */
-const ELEMENT_DATA$b = [
+const ELEMENT_DATA$e = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7207,7 +7866,7 @@ TableRowContextExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$c = [
+const ELEMENT_DATA$f = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7225,7 +7884,7 @@ const ELEMENT_DATA$c = [
 class TableSelectionExample {
     constructor() {
         this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$c);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$f);
         this.selection = new SelectionModel(true, []);
     }
     /**
@@ -7277,7 +7936,7 @@ TableSelectionExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$d = [
+const ELEMENT_DATA$g = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7295,7 +7954,7 @@ const ELEMENT_DATA$d = [
 class TableSortingExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$d);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$g);
     }
     /**
      * @return {?}
@@ -7325,7 +7984,7 @@ TableSortingExample.propDecorators = {
 class TableStickyColumnsExample {
     constructor() {
         this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-        this.dataSource = ELEMENT_DATA$e;
+        this.dataSource = ELEMENT_DATA$h;
     }
 }
 TableStickyColumnsExample.decorators = [
@@ -7336,7 +7995,7 @@ TableStickyColumnsExample.decorators = [
             }] }
 ];
 /** @type {?} */
-const ELEMENT_DATA$e = [
+const ELEMENT_DATA$h = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7359,7 +8018,7 @@ const ELEMENT_DATA$e = [
 class TableStickyComplexFlexExample {
     constructor() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$f;
+        this.dataSource = ELEMENT_DATA$i;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -7389,7 +8048,7 @@ TableStickyComplexFlexExample.decorators = [
 /** @nocollapse */
 TableStickyComplexFlexExample.ctorParameters = () => [];
 /** @type {?} */
-const ELEMENT_DATA$f = [
+const ELEMENT_DATA$i = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7412,7 +8071,7 @@ const ELEMENT_DATA$f = [
 class TableStickyComplexExample {
     constructor() {
         this.displayedColumns = [];
-        this.dataSource = ELEMENT_DATA$g;
+        this.dataSource = ELEMENT_DATA$j;
         this.tables = [0];
         this.displayedColumns.length = 24;
         this.displayedColumns.fill('filler');
@@ -7442,7 +8101,7 @@ TableStickyComplexExample.decorators = [
 /** @nocollapse */
 TableStickyComplexExample.ctorParameters = () => [];
 /** @type {?} */
-const ELEMENT_DATA$g = [
+const ELEMENT_DATA$j = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7509,7 +8168,7 @@ TableStickyFooterExample.decorators = [
 class TableStickyHeaderExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$h;
+        this.dataSource = ELEMENT_DATA$k;
     }
 }
 TableStickyHeaderExample.decorators = [
@@ -7520,7 +8179,7 @@ TableStickyHeaderExample.decorators = [
             }] }
 ];
 /** @type {?} */
-const ELEMENT_DATA$h = [
+const ELEMENT_DATA$k = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7538,7 +8197,7 @@ const ELEMENT_DATA$h = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$i = [
+const ELEMENT_DATA$l = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7556,7 +8215,7 @@ const ELEMENT_DATA$i = [
 class TableTextColumnAdvancedExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$i);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$l);
         this.decimalPipe = new DecimalPipe('en-US');
         /**
          * Data accessor function that transforms the weight value to have at most 2 decimal digits.
@@ -7581,7 +8240,7 @@ TableTextColumnAdvancedExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$j = [
+const ELEMENT_DATA$m = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7600,7 +8259,7 @@ const ELEMENT_DATA$j = [
 class TableTextColumnExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = ELEMENT_DATA$j;
+        this.dataSource = ELEMENT_DATA$m;
     }
 }
 TableTextColumnExample.decorators = [
@@ -7616,7 +8275,7 @@ TableTextColumnExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const ELEMENT_DATA$k = [
+const ELEMENT_DATA$n = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
     { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -7634,7 +8293,7 @@ const ELEMENT_DATA$k = [
 class TableWrappedExample {
     constructor() {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new MatTableDataSource(ELEMENT_DATA$k);
+        this.dataSource = new MatTableDataSource(ELEMENT_DATA$n);
     }
     /**
      * @return {?}
@@ -9697,6 +10356,30 @@ const EXAMPLE_COMPONENTS = {
         "additionalFiles": [],
         "selectorName": ""
     },
+    "popover-edit-cell-span-mat-table": {
+        "title": "Material Popover Edit spanning multiple columns on a Material data-table",
+        "component": PopoverEditCellSpanMatTableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "popover-edit-mat-table-flex": {
+        "title": "Material Popover Edit on a flex Material data-table",
+        "component": PopoverEditMatTableFlexExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "popover-edit-mat-table": {
+        "title": "Material Popover Edit on a Material data-table",
+        "component": PopoverEditMatTableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "popover-edit-tab-out-mat-table": {
+        "title": "Material Popover Edit with spreadsheet-like configuration on a Material data-table",
+        "component": PopoverEditTabOutMatTableExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
     "progress-bar-buffer": {
         "title": "Buffer progress-bar",
         "component": ProgressBarBufferExample,
@@ -10433,6 +11116,10 @@ const EXAMPLE_LIST = [
     NestedMenuExample,
     PaginatorConfigurableExample,
     PaginatorOverviewExample,
+    PopoverEditCellSpanMatTableExample,
+    PopoverEditMatTableFlexExample,
+    PopoverEditMatTableExample,
+    PopoverEditTabOutMatTableExample,
     ProgressBarBufferExample,
     ProgressBarConfigurableExample,
     ProgressBarDeterminateExample,
