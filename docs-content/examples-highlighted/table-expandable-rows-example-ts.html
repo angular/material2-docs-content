@@ -10,7 +10,7 @@
   templateUrl: <span class="hljs-string">'table-expandable-rows-example.html'</span>,
   animations: [
     trigger(<span class="hljs-string">'detailExpand'</span>, [
-      state(<span class="hljs-string">'collapsed'</span>, style({height: <span class="hljs-string">'0px'</span>, minHeight: <span class="hljs-string">'0'</span>, display: <span class="hljs-string">'none'</span>})),
+      state(<span class="hljs-string">'collapsed'</span>, style({height: <span class="hljs-string">'0px'</span>, minHeight: <span class="hljs-string">'0'</span>})),
       state(<span class="hljs-string">'expanded'</span>, style({height: <span class="hljs-string">'*'</span>})),
       transition(<span class="hljs-string">'expanded &lt;=&gt; collapsed'</span>, animate(<span class="hljs-string">'225ms cubic-bezier(0.4, 0.0, 0.2, 1)'</span>)),
     ]),
