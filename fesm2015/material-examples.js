@@ -1365,6 +1365,32 @@ CdkDragDropEnterPredicateExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
+ * \@title Programmatically setting the free drag position
+ */
+class CdkDragDropFreeDragPositionExample {
+    constructor() {
+        this.dragPosition = { x: 0, y: 0 };
+    }
+    /**
+     * @return {?}
+     */
+    changePosition() {
+        this.dragPosition = { x: this.dragPosition.x + 50, y: this.dragPosition.y + 50 };
+    }
+}
+CdkDragDropFreeDragPositionExample.decorators = [
+    { type: Component, args: [{
+                selector: 'cdk-drag-drop-free-drag-position-example',
+                template: "<p>\n  <button (click)=\"changePosition()\">Change element position</button>\n</p>\n\n<div class=\"example-box\" cdkDrag [cdkDragFreeDragPosition]=\"dragPosition\">\n  Drag me around\n</div>\n",
+                styles: [".example-box {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  position: relative;\n  z-index: 1;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n"]
+            }] }
+];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
  * \@title Drag&Drop with a handle
  */
 class CdkDragDropHandleExample {
@@ -9817,6 +9843,12 @@ const EXAMPLE_COMPONENTS = {
         "additionalFiles": [],
         "selectorName": ""
     },
+    "cdk-drag-drop-free-drag-position": {
+        "title": "Programmatically setting the free drag position",
+        "component": CdkDragDropFreeDragPositionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
     "cdk-drag-drop-handle": {
         "title": "Drag&Drop with a handle",
         "component": CdkDragDropHandleExample,
@@ -11021,6 +11053,7 @@ const EXAMPLE_LIST = [
     CdkDragDropDisabledSortingExample,
     CdkDragDropDisabledExample,
     CdkDragDropEnterPredicateExample,
+    CdkDragDropFreeDragPositionExample,
     CdkDragDropHandleExample,
     CdkDragDropHorizontalSortingExample,
     CdkDragDropOverviewExample,

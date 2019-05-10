@@ -1,0 +1,17 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-comment">/**
+ * @title Programmatically setting the free drag position
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'cdk-drag-drop-free-drag-position-example'</span>,
+  templateUrl: <span class="hljs-string">'cdk-drag-drop-free-drag-position-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'cdk-drag-drop-free-drag-position-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkDragDropFreeDragPositionExample {
+  dragPosition = {x: <span class="hljs-number">0</span>, y: <span class="hljs-number">0</span>};
+
+  changePosition() {
+    <span class="hljs-keyword">this</span>.dragPosition = {x: <span class="hljs-keyword">this</span>.dragPosition.x + <span class="hljs-number">50</span>, y: <span class="hljs-keyword">this</span>.dragPosition.y + <span class="hljs-number">50</span>};
+  }
+}
