@@ -616,6 +616,36 @@
     }());
 
     /**
+     * @title Plain input autocomplete
+     */
+    var PlainInputAutocompleteExample = /** @class */ (function () {
+        function PlainInputAutocompleteExample() {
+            this.control = new forms.FormControl();
+            this.streets = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+        }
+        PlainInputAutocompleteExample.prototype.ngOnInit = function () {
+            var _this = this;
+            this.filteredStreets = this.control.valueChanges.pipe(operators.startWith(''), operators.map(function (value) { return _this._filter(value); }));
+        };
+        PlainInputAutocompleteExample.prototype._filter = function (value) {
+            var _this = this;
+            var filterValue = this._normalizeValue(value);
+            return this.streets.filter(function (street) { return _this._normalizeValue(street).includes(filterValue); });
+        };
+        PlainInputAutocompleteExample.prototype._normalizeValue = function (value) {
+            return value.toLowerCase().replace(/\s/g, '');
+        };
+        PlainInputAutocompleteExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'autocomplete-plain-input-example',
+                template: "<form class=\"example-form\">\n  <input type=\"text\" placeholder=\"Search for a street\" [formControl]=\"control\" [matAutocomplete]=\"auto\">\n  <mat-autocomplete #auto=\"matAutocomplete\">\n    <mat-option *ngFor=\"let street of filteredStreets | async\" [value]=\"street\">\n      {{street}}\n    </mat-option>\n  </mat-autocomplete>\n</form>\n",
+                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+            })
+        ], PlainInputAutocompleteExample);
+        return PlainInputAutocompleteExample;
+    }());
+
+    /**
      * @title Simple autocomplete
      */
     var AutocompleteSimpleExample = /** @class */ (function () {
@@ -7416,6 +7446,12 @@
             "additionalFiles": [],
             "selectorName": ""
         },
+        "plain-input-autocomplete": {
+            "title": "Plain input autocomplete",
+            "component": PlainInputAutocompleteExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
         "autocomplete-simple": {
             "title": "Simple autocomplete",
             "component": AutocompleteSimpleExample,
@@ -8733,6 +8769,7 @@
         AutocompleteFilterExample,
         AutocompleteOptgroupExample,
         AutocompleteOverviewExample,
+        PlainInputAutocompleteExample,
         AutocompleteSimpleExample,
         BadgeOverviewExample,
         BottomSheetOverviewExample,
