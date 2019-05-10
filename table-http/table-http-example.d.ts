@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit } from '@angular/core';
-import { MatPaginator, MatSort } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { Observable } from 'rxjs';
 /**
  * @title Table retrieving data through HTTP

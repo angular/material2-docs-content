@@ -266,4 +266,15 @@ cases like these you can delay the dragging sequence using the <code>cdkDragStar
 will wait for the user to hold down their pointer for the specified number of milliseconds before
 moving the element.</p>
 <div material-docs-example="cdk-drag-drop-delay"></div>
+
+
+        <h3 id="changing-the-standalone-drag-position" class="docs-header-link">
+          <span header-link="changing-the-standalone-drag-position"></span>
+          Changing the standalone drag position
+        </h3>
+      <p>By default, standalone <code>cdkDrag</code> elements move from their normal DOM position only when manually
+moved by a user. The element&#39;s position can be explicitly set, however, via the
+<code>cdkDragFreeDragPosition</code> input. Applications commonly use this, for example, to restore a
+draggable&#39;s position after a user has navigated away and then returned.</p>
+<div material-docs-example="cdk-drag-drop-free-drag-position"></div>
 </div>

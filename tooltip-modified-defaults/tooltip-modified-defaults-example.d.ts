@@ -1,4 +1,4 @@
-import { MatTooltipDefaultOptions } from '@angular/material';
+import { MatTooltipDefaultOptions } from '@angular/material/tooltip';
 /** Custom options the configure the tooltip's default show/hide delays. */
 export declare const myCustomTooltipDefaults: MatTooltipDefaultOptions;
 /**

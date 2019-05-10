@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk/scrolling'), require('@angular/cdk/a11y'), require('@angular/cdk-experimental/popover-edit'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/cdk/drag-drop'), require('@angular/cdk/stepper'), require('@angular/cdk/portal'), require('@angular/material'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/platform'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/cdk/keycodes'), require('@angular/material/core'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field'), require('@angular/material/tree')) :
-    typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', 'tslib', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk/scrolling', '@angular/cdk/a11y', '@angular/cdk-experimental/popover-edit', '@angular/cdk/table', '@angular/cdk/tree', '@angular/cdk/drag-drop', '@angular/cdk/stepper', '@angular/cdk/portal', '@angular/material', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/platform', '@angular/cdk/collections', 'rxjs', '@angular/cdk/keycodes', '@angular/material/core', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field', '@angular/material/tree'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = {}), global.tslib, global.ng.core, global.ng.forms, global.ng.common, global.ng.cdk.scrolling, global.ng.cdk.a11y, global.ng.cdkExperimental['popover-edit'], global.ng.cdk.table, global.ng.cdk.tree, global.ng.cdk['drag-drop'], global.ng.cdk.stepper, global.ng.cdk.portal, global.ng.material, global.rxjs.operators, global.ng.cdk.overlay, global.ng.cdk.platform, global.ng.cdk.collections, global.rxjs, global.ng.cdk.keycodes, global.ng.material.core, global.moment, global.ng.cdk.coercion, global.ng.platformBrowser, global.ng.material.sidenav, global.ng.cdk.layout, global.ng.animations, global.ng.common.http, global.ng.cdk['text-field'], global.ng.material.tree));
-}(this, function (exports, tslib_1, core, forms, common, scrolling, a11y, popoverEdit, table, tree, dragDrop, stepper, portal, material, operators, overlay, platform, collections, rxjs, keycodes, core$1, _rollupMoment, coercion, platformBrowser, sidenav, layout, animations, http, textField, tree$1) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk-experimental/popover-edit'), require('@angular/cdk/a11y'), require('@angular/cdk/drag-drop'), require('@angular/cdk/portal'), require('@angular/cdk/scrolling'), require('@angular/cdk/stepper'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material/autocomplete'), require('@angular/material/badge'), require('@angular/material/bottom-sheet'), require('@angular/material/button'), require('@angular/material/button-toggle'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/chips'), require('@angular/material/core'), require('@angular/material/datepicker'), require('@angular/material/dialog'), require('@angular/material/divider'), require('@angular/material/expansion'), require('@angular/material/form-field'), require('@angular/material/grid-list'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/list'), require('@angular/material/menu'), require('@angular/material/paginator'), require('@angular/material/progress-bar'), require('@angular/material/progress-spinner'), require('@angular/material/radio'), require('@angular/material/select'), require('@angular/material/sidenav'), require('@angular/material/slide-toggle'), require('@angular/material/slider'), require('@angular/material/snack-bar'), require('@angular/material/sort'), require('@angular/material/stepper'), require('@angular/material/table'), require('@angular/material/tabs'), require('@angular/material/toolbar'), require('@angular/material/tooltip'), require('@angular/material/tree'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/platform'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/cdk/keycodes'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field')) :
+    typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', 'tslib', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk-experimental/popover-edit', '@angular/cdk/a11y', '@angular/cdk/drag-drop', '@angular/cdk/portal', '@angular/cdk/scrolling', '@angular/cdk/stepper', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material/autocomplete', '@angular/material/badge', '@angular/material/bottom-sheet', '@angular/material/button', '@angular/material/button-toggle', '@angular/material/card', '@angular/material/checkbox', '@angular/material/chips', '@angular/material/core', '@angular/material/datepicker', '@angular/material/dialog', '@angular/material/divider', '@angular/material/expansion', '@angular/material/form-field', '@angular/material/grid-list', '@angular/material/icon', '@angular/material/input', '@angular/material/list', '@angular/material/menu', '@angular/material/paginator', '@angular/material/progress-bar', '@angular/material/progress-spinner', '@angular/material/radio', '@angular/material/select', '@angular/material/sidenav', '@angular/material/slide-toggle', '@angular/material/slider', '@angular/material/snack-bar', '@angular/material/sort', '@angular/material/stepper', '@angular/material/table', '@angular/material/tabs', '@angular/material/toolbar', '@angular/material/tooltip', '@angular/material/tree', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/platform', '@angular/cdk/collections', 'rxjs', '@angular/cdk/keycodes', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = {}), global.tslib, global.ng.core, global.ng.forms, global.ng.common, global.ng.cdkExperimental['popover-edit'], global.ng.cdk.a11y, global.ng.cdk['drag-drop'], global.ng.cdk.portal, global.ng.cdk.scrolling, global.ng.cdk.stepper, global.ng.cdk.table, global.ng.cdk.tree, global.ng.material.autocomplete, global.ng.material.badge, global.ng.material['bottom-sheet'], global.ng.material.button, global.ng.material['button-toggle'], global.ng.material.card, global.ng.material.checkbox, global.ng.material.chips, global.ng.material.core, global.ng.material.datepicker, global.ng.material.dialog, global.ng.material.divider, global.ng.material.expansion, global.ng.material['form-field'], global.ng.material['grid-list'], global.ng.material.icon, global.ng.material.input, global.ng.material.list, global.ng.material.menu, global.ng.material.paginator, global.ng.material['progress-bar'], global.ng.material['progress-spinner'], global.ng.material.radio, global.ng.material.select, global.ng.material.sidenav, global.ng.material['slide-toggle'], global.ng.material.slider, global.ng.material['snack-bar'], global.ng.material.sort, global.ng.material.stepper, global.ng.material.table, global.ng.material.tabs, global.ng.material.toolbar, global.ng.material.tooltip, global.ng.material.tree, global.rxjs.operators, global.ng.cdk.overlay, global.ng.cdk.platform, global.ng.cdk.collections, global.rxjs, global.ng.cdk.keycodes, global.moment, global.ng.cdk.coercion, global.ng.platformBrowser, global.ng.cdk.layout, global.ng.animations, global.ng.common.http, global.ng.cdk['text-field']));
+}(this, function (exports, tslib_1, core, forms, common, popoverEdit, a11y, dragDrop, portal, scrolling, stepper, table, tree, autocomplete, badge, bottomSheet, button, buttonToggle, card, checkbox, chips, core$1, datepicker, dialog, divider, expansion, formField, gridList, icon, input, list, menu, paginator, progressBar, progressSpinner, radio, select, sidenav, slideToggle, slider, snackBar, sort, stepper$1, table$1, tabs, toolbar, tooltip, tree$1, operators, overlay, platform, collections, rxjs, keycodes, _rollupMoment, coercion, platformBrowser, layout, animations, http, textField) { 'use strict';
 
     var _rollupMoment__default = 'default' in _rollupMoment ? _rollupMoment['default'] : _rollupMoment;
 
@@ -287,45 +287,45 @@
                     tree.CdkTreeModule,
                     stepper.CdkStepperModule,
                     dragDrop.DragDropModule,
-                    material.MatAutocompleteModule,
-                    material.MatBadgeModule,
-                    material.MatBottomSheetModule,
-                    material.MatButtonModule,
-                    material.MatButtonToggleModule,
-                    material.MatCardModule,
-                    material.MatCheckboxModule,
-                    material.MatChipsModule,
-                    material.MatDatepickerModule,
-                    material.MatDialogModule,
-                    material.MatDividerModule,
-                    material.MatExpansionModule,
-                    material.MatFormFieldModule,
-                    material.MatGridListModule,
-                    material.MatIconModule,
-                    material.MatInputModule,
-                    material.MatListModule,
-                    material.MatMenuModule,
-                    material.MatPaginatorModule,
+                    autocomplete.MatAutocompleteModule,
+                    badge.MatBadgeModule,
+                    bottomSheet.MatBottomSheetModule,
+                    button.MatButtonModule,
+                    buttonToggle.MatButtonToggleModule,
+                    card.MatCardModule,
+                    checkbox.MatCheckboxModule,
+                    chips.MatChipsModule,
+                    datepicker.MatDatepickerModule,
+                    dialog.MatDialogModule,
+                    divider.MatDividerModule,
+                    expansion.MatExpansionModule,
+                    formField.MatFormFieldModule,
+                    gridList.MatGridListModule,
+                    icon.MatIconModule,
+                    input.MatInputModule,
+                    list.MatListModule,
+                    menu.MatMenuModule,
+                    paginator.MatPaginatorModule,
                     MatPopoverEditModule,
-                    material.MatProgressBarModule,
-                    material.MatProgressSpinnerModule,
-                    material.MatRadioModule,
-                    material.MatRippleModule,
-                    material.MatSelectModule,
-                    material.MatSidenavModule,
-                    material.MatSlideToggleModule,
-                    material.MatSliderModule,
-                    material.MatSnackBarModule,
-                    material.MatSortModule,
-                    material.MatStepperModule,
-                    material.MatTableModule,
-                    material.MatTabsModule,
-                    material.MatToolbarModule,
-                    material.MatTooltipModule,
-                    material.MatTreeModule,
+                    progressBar.MatProgressBarModule,
+                    progressSpinner.MatProgressSpinnerModule,
+                    radio.MatRadioModule,
+                    core$1.MatRippleModule,
+                    select.MatSelectModule,
+                    sidenav.MatSidenavModule,
+                    slideToggle.MatSlideToggleModule,
+                    slider.MatSliderModule,
+                    snackBar.MatSnackBarModule,
+                    sort.MatSortModule,
+                    stepper$1.MatStepperModule,
+                    table$1.MatTableModule,
+                    tabs.MatTabsModule,
+                    toolbar.MatToolbarModule,
+                    tooltip.MatTooltipModule,
+                    tree$1.MatTreeModule,
                     scrolling.ScrollingModule,
                     portal.PortalModule,
-                    material.MatNativeDateModule,
+                    core$1.MatNativeDateModule,
                 ],
                 exports: [
                     a11y.A11yModule,
@@ -334,45 +334,45 @@
                     tree.CdkTreeModule,
                     stepper.CdkStepperModule,
                     dragDrop.DragDropModule,
-                    material.MatAutocompleteModule,
-                    material.MatBadgeModule,
-                    material.MatBottomSheetModule,
-                    material.MatButtonModule,
-                    material.MatButtonToggleModule,
-                    material.MatCardModule,
-                    material.MatCheckboxModule,
-                    material.MatChipsModule,
-                    material.MatDatepickerModule,
-                    material.MatDialogModule,
-                    material.MatDividerModule,
-                    material.MatExpansionModule,
-                    material.MatFormFieldModule,
-                    material.MatGridListModule,
-                    material.MatIconModule,
-                    material.MatInputModule,
-                    material.MatListModule,
-                    material.MatMenuModule,
-                    material.MatPaginatorModule,
+                    autocomplete.MatAutocompleteModule,
+                    badge.MatBadgeModule,
+                    bottomSheet.MatBottomSheetModule,
+                    button.MatButtonModule,
+                    buttonToggle.MatButtonToggleModule,
+                    card.MatCardModule,
+                    checkbox.MatCheckboxModule,
+                    chips.MatChipsModule,
+                    datepicker.MatDatepickerModule,
+                    dialog.MatDialogModule,
+                    divider.MatDividerModule,
+                    expansion.MatExpansionModule,
+                    formField.MatFormFieldModule,
+                    gridList.MatGridListModule,
+                    icon.MatIconModule,
+                    input.MatInputModule,
+                    list.MatListModule,
+                    menu.MatMenuModule,
+                    paginator.MatPaginatorModule,
                     MatPopoverEditModule,
-                    material.MatProgressBarModule,
-                    material.MatProgressSpinnerModule,
-                    material.MatRadioModule,
-                    material.MatRippleModule,
-                    material.MatSelectModule,
-                    material.MatSidenavModule,
-                    material.MatSlideToggleModule,
-                    material.MatSliderModule,
-                    material.MatSnackBarModule,
-                    material.MatSortModule,
-                    material.MatStepperModule,
-                    material.MatTableModule,
-                    material.MatTabsModule,
-                    material.MatToolbarModule,
-                    material.MatTooltipModule,
-                    material.MatTreeModule,
+                    progressBar.MatProgressBarModule,
+                    progressSpinner.MatProgressSpinnerModule,
+                    radio.MatRadioModule,
+                    core$1.MatRippleModule,
+                    select.MatSelectModule,
+                    sidenav.MatSidenavModule,
+                    slideToggle.MatSlideToggleModule,
+                    slider.MatSliderModule,
+                    snackBar.MatSnackBarModule,
+                    sort.MatSortModule,
+                    stepper$1.MatStepperModule,
+                    table$1.MatTableModule,
+                    tabs.MatTabsModule,
+                    toolbar.MatToolbarModule,
+                    tooltip.MatTooltipModule,
+                    tree$1.MatTreeModule,
                     scrolling.ScrollingModule,
                     portal.PortalModule,
-                    material.MatNativeDateModule,
+                    core$1.MatNativeDateModule,
                 ]
             })
         ], ExampleMaterialModule);
@@ -665,7 +665,7 @@
                 template: "<p>You have received a file called \"cat-picture.jpeg\".</p>\n\n<button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>\n",
                 styles: ["/** No CSS for this example */\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatBottomSheet])
+            tslib_1.__metadata("design:paramtypes", [bottomSheet.MatBottomSheet])
         ], BottomSheetOverviewExample);
         return BottomSheetOverviewExample;
     }());
@@ -682,7 +682,7 @@
                 selector: 'bottom-sheet-overview-example-sheet',
                 template: "<mat-nav-list>\n  <a href=\"https://keep.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Keep</span>\n    <span mat-line>Add to a note</span>\n  </a>\n\n  <a href=\"https://docs.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Docs</span>\n    <span mat-line>Embed in a document</span>\n  </a>\n\n  <a href=\"https://plus.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Plus</span>\n    <span mat-line>Share with your friends</span>\n  </a>\n\n  <a href=\"https://hangouts.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Hangouts</span>\n    <span mat-line>Show to your coworkers</span>\n  </a>\n</mat-nav-list>\n"
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatBottomSheetRef])
+            tslib_1.__metadata("design:paramtypes", [bottomSheet.MatBottomSheetRef])
         ], BottomSheetOverviewExampleSheet);
         return BottomSheetOverviewExampleSheet;
     }());
@@ -1132,6 +1132,26 @@
             })
         ], CdkDragDropEnterPredicateExample);
         return CdkDragDropEnterPredicateExample;
+    }());
+
+    /**
+     * @title Programmatically setting the free drag position
+     */
+    var CdkDragDropFreeDragPositionExample = /** @class */ (function () {
+        function CdkDragDropFreeDragPositionExample() {
+            this.dragPosition = { x: 0, y: 0 };
+        }
+        CdkDragDropFreeDragPositionExample.prototype.changePosition = function () {
+            this.dragPosition = { x: this.dragPosition.x + 50, y: this.dragPosition.y + 50 };
+        };
+        CdkDragDropFreeDragPositionExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-drag-drop-free-drag-position-example',
+                template: "<p>\n  <button (click)=\"changePosition()\">Change element position</button>\n</p>\n\n<div class=\"example-box\" cdkDrag [cdkDragFreeDragPosition]=\"dragPosition\">\n  Drag me around\n</div>\n",
+                styles: [".example-box {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  position: relative;\n  z-index: 1;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n"]
+            })
+        ], CdkDragDropFreeDragPositionExample);
+        return CdkDragDropFreeDragPositionExample;
     }());
 
     /**
@@ -2164,7 +2184,7 @@
         ], ChipsAutocompleteExample.prototype, "fruitInput", void 0);
         tslib_1.__decorate([
             core.ViewChild('auto', { static: false }),
-            tslib_1.__metadata("design:type", material.MatAutocomplete)
+            tslib_1.__metadata("design:type", autocomplete.MatAutocomplete)
         ], ChipsAutocompleteExample.prototype, "matAutocomplete", void 0);
         ChipsAutocompleteExample = tslib_1.__decorate([
             core.Component({
@@ -2370,7 +2390,7 @@
                 styles: ["\n    .example-header {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow .mat-icon {\n      margin: -22%;\n    }\n  "]
             }),
             tslib_1.__param(2, core.Inject(core$1.MAT_DATE_FORMATS)),
-            tslib_1.__metadata("design:paramtypes", [material.MatCalendar, core$1.DateAdapter, Object, core.ChangeDetectorRef])
+            tslib_1.__metadata("design:paramtypes", [datepicker.MatCalendar, core$1.DateAdapter, Object, core.ChangeDetectorRef])
         ], ExampleHeader);
         return ExampleHeader;
     }());
@@ -2948,7 +2968,7 @@
                 template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>\n",
                 styles: ["/** No CSS for this example */\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatDialog])
+            tslib_1.__metadata("design:paramtypes", [dialog.MatDialog])
         ], DialogContentExample);
         return DialogContentExample;
     }());
@@ -2984,7 +3004,7 @@
                 template: "<button mat-button (click)=\"openDialog()\">Open dialog</button>\n",
                 styles: ["/** No CSS for this example */\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatDialog])
+            tslib_1.__metadata("design:paramtypes", [dialog.MatDialog])
         ], DialogDataExample);
         return DialogDataExample;
     }());
@@ -2997,7 +3017,7 @@
                 selector: 'dialog-data-example-dialog',
                 template: "<h1 mat-dialog-title>Favorite Animal</h1>\n<div mat-dialog-content>\n  My favorite animal is:\n  <ul>\n    <li>\n      <span *ngIf=\"data.animal === 'panda'\">&#10003;</span> Panda\n    </li>\n    <li>\n      <span *ngIf=\"data.animal === 'unicorn'\">&#10003;</span> Unicorn\n    </li>\n    <li>\n      <span *ngIf=\"data.animal === 'lion'\">&#10003;</span> Lion\n    </li>\n  </ul>\n</div>\n"
             }),
-            tslib_1.__param(0, core.Inject(material.MAT_DIALOG_DATA)),
+            tslib_1.__param(0, core.Inject(dialog.MAT_DIALOG_DATA)),
             tslib_1.__metadata("design:paramtypes", [Object])
         ], DialogDataExampleDialog);
         return DialogDataExampleDialog;
@@ -3019,7 +3039,7 @@
                 template: "<button mat-button (click)=\"openDialog()\">Launch dialog</button>\n",
                 styles: ["/** No CSS for this example */\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatDialog])
+            tslib_1.__metadata("design:paramtypes", [dialog.MatDialog])
         ], DialogElementsExample);
         return DialogElementsExample;
     }());
@@ -3059,7 +3079,7 @@
                 template: "<ol>\n  <li>\n    <mat-form-field>\n      <input matInput [(ngModel)]=\"name\" placeholder=\"What's your name?\">\n    </mat-form-field>\n  </li>\n  <li>\n    <button mat-raised-button (click)=\"openDialog()\">Pick one</button>\n  </li>\n  <li *ngIf=\"animal\">\n    You chose: <i>{{animal}}</i>\n  </li>\n</ol>\n",
                 styles: ["/** No CSS for this example */\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatDialog])
+            tslib_1.__metadata("design:paramtypes", [dialog.MatDialog])
         ], DialogOverviewExample);
         return DialogOverviewExample;
     }());
@@ -3076,8 +3096,8 @@
                 selector: 'dialog-overview-example-dialog',
                 template: "<h1 mat-dialog-title>Hi {{data.name}}</h1>\n<div mat-dialog-content>\n  <p>What's your favorite animal?</p>\n  <mat-form-field>\n    <input matInput [(ngModel)]=\"data.animal\">\n  </mat-form-field>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">No Thanks</button>\n  <button mat-button [mat-dialog-close]=\"data.animal\" cdkFocusInitial>Ok</button>\n</div>\n"
             }),
-            tslib_1.__param(1, core.Inject(material.MAT_DIALOG_DATA)),
-            tslib_1.__metadata("design:paramtypes", [material.MatDialogRef, Object])
+            tslib_1.__param(1, core.Inject(dialog.MAT_DIALOG_DATA)),
+            tslib_1.__metadata("design:paramtypes", [dialog.MatDialogRef, Object])
         ], DialogOverviewExampleDialog);
         return DialogOverviewExampleDialog;
     }());
@@ -3122,8 +3142,8 @@
         function ExpansionExpandCollapseAllExample() {
         }
         tslib_1.__decorate([
-            core.ViewChild(material.MatAccordion, { static: false }),
-            tslib_1.__metadata("design:type", material.MatAccordion)
+            core.ViewChild(expansion.MatAccordion, { static: false }),
+            tslib_1.__metadata("design:type", expansion.MatAccordion)
         ], ExpansionExpandCollapseAllExample.prototype, "accordion", void 0);
         ExpansionExpandCollapseAllExample = tslib_1.__decorate([
             core.Component({
@@ -3474,7 +3494,7 @@
             core.Component({
                 selector: 'example-tel-input',
                 template: "<div [formGroup]=\"parts\" class=\"example-tel-input-container\">\n  <input class=\"example-tel-input-element\" formControlName=\"area\" size=\"3\" aria-label=\"Area code\" (input)=\"_handleInput()\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\" formControlName=\"exchange\" size=\"3\" aria-label=\"Exchange code\" (input)=\"_handleInput()\">\n  <span class=\"example-tel-input-spacer\">&ndash;</span>\n  <input class=\"example-tel-input-element\" formControlName=\"subscriber\" size=\"4\" aria-label=\"Subscriber number\" (input)=\"_handleInput()\">\n</div>\n",
-                providers: [{ provide: material.MatFormFieldControl, useExisting: MyTelInput_1 }],
+                providers: [{ provide: formField.MatFormFieldControl, useExisting: MyTelInput_1 }],
                 host: {
                     '[class.example-floating]': 'shouldLabelFloat',
                     '[id]': 'id',
@@ -3662,7 +3682,7 @@
                 template: "<mat-icon svgIcon=\"thumbs-up\" aria-hidden=\"false\" aria-label=\"Example thumbs up SVG icon\"></mat-icon>\n",
                 styles: ["/** No CSS for this example */\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatIconRegistry, platformBrowser.DomSanitizer])
+            tslib_1.__metadata("design:paramtypes", [icon.MatIconRegistry, platformBrowser.DomSanitizer])
         ], IconSvgExample);
         return IconSvgExample;
     }());
@@ -4008,7 +4028,7 @@
                 template: "<table class=\"example-table\" mat-table editable [dataSource]=\"dataSource\">\n  <ng-template #nameEdit let-ctx>\n    <div>\n      <form #f=\"ngForm\"\n          matEditLens\n          (ngSubmit)=\"onSubmit(ctx.person, f)\"\n          [matEditLensPreservedFormValue]=\"preservedValues.get(ctx.person)\"\n          (matEditLensPreservedFormValueChange)=\"preservedValues.set(ctx.person, $event)\">\n        <div mat-edit-content class=\"example-input-container\">\n          <mat-form-field>\n            <input matInput [ngModel]=\"ctx.person.firstName\" name=\"firstName\" required\n                [attr.cdkFocusInitial]=\"ctx.focus === 'firstName' || null\">\n          </mat-form-field>\n          <mat-form-field>\n            <input matInput [ngModel]=\"ctx.person.middleName\" name=\"middleName\"\n                [attr.cdkFocusInitial]=\"ctx.focus === 'middleName' || null\">\n          </mat-form-field>\n          <mat-form-field>\n            <input matInput [ngModel]=\"ctx.person.lastName\" name=\"lastName\" required\n                [attr.cdkFocusInitial]=\"ctx.focus === 'lastName' || null\">\n          </mat-form-field>\n        </div>\n\n        <div mat-edit-actions>\n          <button mat-button type=\"submit\">Confirm</button>\n          <button mat-button cdkEditRevert>Revert</button>\n          <button mat-button cdkEditClose>Close</button>\n        </div>\n      </form>\n    </div>\n  </ng-template>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"id\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let person\"> {{person.id}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"firstName\">\n    <th mat-header-cell *matHeaderCellDef> First Name </th>\n    <td mat-cell *matCellDef=\"let person\"\n        [matPopoverEdit]=\"nameEdit\"\n        [matPopoverEditContext]=\"{person: person, focus: 'firstName'}\"\n        [matPopoverEditColspan]=\"{after: 2}\">\n      {{person.firstName}}\n\n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"middleName\">\n    <th mat-header-cell *matHeaderCellDef> Middle Name </th>\n    <td mat-cell *matCellDef=\"let person\"\n        [matPopoverEdit]=\"nameEdit\"\n        [matPopoverEditContext]=\"{person: person, focus: 'middleName'}\"\n        [matPopoverEditColspan]=\"{before:1 , after: 1}\">\n      {{person.middleName}}\n\n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"lastName\">\n    <th mat-header-cell *matHeaderCellDef> Last Name </th>\n    <td mat-cell *matCellDef=\"let person\"\n        [matPopoverEdit]=\"nameEdit\"\n        [matPopoverEditContext]=\"{person: person, focus: 'lastName'}\"\n        [matPopoverEditColspan]=\"{before: 2}\">\n      {{person.lastName}}\n\n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
                 styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  min-width: 300px;\n  width: 25%;\n}\n\n.example-input-container {\n  display: flex;\n  justify-content: stretch;\n}\n\n.example-input-container mat-form-field {\n  flex: 1;\n}\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatIconRegistry, platformBrowser.DomSanitizer])
+            tslib_1.__metadata("design:paramtypes", [icon.MatIconRegistry, platformBrowser.DomSanitizer])
         ], PopoverEditCellSpanMatTableExample);
         return PopoverEditCellSpanMatTableExample;
     }());
@@ -4086,7 +4106,7 @@
                 template: "<mat-table class=\"example-table\" editable [dataSource]=\"dataSource\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div>\n      <form #f=\"ngForm\"\n          matEditLens\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [matEditLensPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (matEditLensPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        <div mat-edit-content>\n          <mat-form-field>\n            <input matInput type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n          </mat-form-field>\n        </div>\n      </form>\n    </div>\n  </ng-template>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.position}} </mat-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"nameEdit\">\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div>\n          <form #f=\"ngForm\"\n              matEditLens\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [matEditLensPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (matEditLensPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            <h2 mat-edit-title>Name</h2>\n            <div mat-edit-content>\n              <mat-form-field>\n                <input matInput [ngModel]=\"element.name\" name=\"name\" required>\n              </mat-form-field>\n            </div>\n            <div mat-edit-actions>\n              <button mat-button type=\"submit\">Confirm</button>\n              <button mat-button matEditRevert>Revert</button>\n              <button mat-button matEditClose>Close</button>\n            </div>\n          </form>\n        </div>\n      </ng-template>\n\n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </mat-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"weightEdit\" [matPopoverEditContext]=\"element\">\n      {{element.weight}}\n      \n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n      </mat-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.symbol}} </mat-cell>\n  </ng-container>\n\n  <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n  <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n</mat-table>\n",
                 styles: [".example-table {\n  width: 100%;\n}\n\n/*.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}*/\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatIconRegistry, platformBrowser.DomSanitizer])
+            tslib_1.__metadata("design:paramtypes", [icon.MatIconRegistry, platformBrowser.DomSanitizer])
         ], PopoverEditMatTableFlexExample);
         return PopoverEditMatTableFlexExample;
     }());
@@ -4164,7 +4184,7 @@
                 template: "<table class=\"example-table\" mat-table editable [dataSource]=\"dataSource\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div>\n      <form #f=\"ngForm\"\n          matEditLens\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [matEditLensPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (matEditLensPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        <div mat-edit-content>\n          <mat-form-field>\n            <input matInput type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n          </mat-form-field>\n        </div>\n      </form>\n    </div>\n  </ng-template>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"nameEdit\">\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div>\n          <form #f=\"ngForm\"\n              matEditLens\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [matEditLensPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (matEditLensPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            <h2 mat-edit-title>Name</h2>\n            <div mat-edit-content>\n              <mat-form-field>\n                <input matInput [ngModel]=\"element.name\" name=\"name\" required>\n              </mat-form-field>\n            </div>\n            <div mat-edit-actions>\n              <button mat-button type=\"submit\">Confirm</button>\n              <button mat-button matEditRevert>Revert</button>\n              <button mat-button matEditClose>Close</button>\n            </div>\n          </form>\n        </div>\n      </ng-template>\n\n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"weightEdit\" [matPopoverEditContext]=\"element\">\n      {{element.weight}}\n      \n      <span *matRowHoverContent>\n        <button mat-icon-button matEditOpen><mat-icon>edit</mat-icon></button>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
                 styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatIconRegistry, platformBrowser.DomSanitizer])
+            tslib_1.__metadata("design:paramtypes", [icon.MatIconRegistry, platformBrowser.DomSanitizer])
         ], PopoverEditMatTableExample);
         return PopoverEditMatTableExample;
     }());
@@ -4242,7 +4262,7 @@
                 template: "<table class=\"example-table\" mat-table editable [dataSource]=\"dataSource\">\n  <!--\n    This edit lens is specified outside of the cell and must explicitly declare\n    its context. It could be reused in multiple cells.\n  -->\n  <ng-template #weightEdit let-element>\n    <div>\n      <form #f=\"ngForm\"\n          matEditLens\n          matEditLensClickOutBehavior=\"submit\"\n          (ngSubmit)=\"onSubmitWeight(element, f)\"\n          [matEditLensPreservedFormValue]=\"preservedWeightValues.get(element)\"\n          (matEditLensPreservedFormValueChange)=\"preservedWeightValues.set(element, $event)\">\n        <div mat-edit-content>\n          <mat-form-field>\n            <input matInput type=\"number\" [ngModel]=\"element.weight\" name=\"weight\" required>\n          </mat-form-field>\n        </div>\n      </form>\n    </div>\n  </ng-template>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"nameEdit\" matPopoverEditTabOut\n        matEditOpen>\n      {{element.name}}\n      \n      <!-- This edit is defined in the cell and can implicitly access element -->\n      <ng-template #nameEdit>\n        <div>\n          <form #f=\"ngForm\"\n              matEditLens\n              matEditLensClickOutBehavior=\"submit\"\n              (ngSubmit)=\"onSubmitName(element, f)\"\n              [matEditLensPreservedFormValue]=\"preservedNameValues.get(element)\"\n              (matEditLensPreservedFormValueChange)=\"preservedNameValues.set(element, $event)\">\n            <div mat-edit-content>\n              <mat-form-field>\n                <input matInput [ngModel]=\"element.name\" name=\"name\" required>\n              </mat-form-field>\n            </div>\n          </form>\n        </div>\n      </ng-template>\n\n      <span *matRowHoverContent>\n        <mat-icon>edit</mat-icon>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"\n        [matPopoverEdit]=\"weightEdit\" matPopoverEditTabOut\n        [matPopoverEditContext]=\"element\"\n        matEditOpen>\n      {{element.weight}}\n      \n      <span *matRowHoverContent>\n        <mat-icon>edit</mat-icon>\n      </span>\n    </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
                 styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatIconRegistry, platformBrowser.DomSanitizer])
+            tslib_1.__metadata("design:paramtypes", [icon.MatIconRegistry, platformBrowser.DomSanitizer])
         ], PopoverEditTabOutMatTableExample);
         return PopoverEditTabOutMatTableExample;
     }());
@@ -5049,7 +5069,7 @@
                 template: "<mat-form-field>\n  <mat-label>Snack bar duration (seconds)</mat-label>\n  <input type=\"number\" [(ngModel)]=\"durationInSeconds\" matInput>\n</mat-form-field>\n\n<button mat-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">\n  Pizza party\n</button>\n",
                 styles: ["/** No CSS for this example */\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatSnackBar])
+            tslib_1.__metadata("design:paramtypes", [snackBar.MatSnackBar])
         ], SnackBarComponentExample);
         return SnackBarComponentExample;
     }());
@@ -5084,7 +5104,7 @@
                 template: "<mat-form-field>\n  <input matInput value=\"Disco party!\" placeholder=\"Message\" #message>\n</mat-form-field>\n\n<mat-form-field>\n  <input matInput value=\"Dance\" placeholder=\"Action\" #action>\n</mat-form-field>\n\n<button mat-button (click)=\"openSnackBar(message.value, action.value)\">Show snack-bar</button>\n",
                 styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatSnackBar])
+            tslib_1.__metadata("design:paramtypes", [snackBar.MatSnackBar])
         ], SnackBarOverviewExample);
         return SnackBarOverviewExample;
     }());
@@ -5111,7 +5131,7 @@
                 template: "<mat-form-field>\n  <mat-select placeholder=\"Horizontal position\" [(value)]=\"horizontalPosition\">\n    <mat-option value=\"start\">Start</mat-option>\n    <mat-option value=\"center\">Center</mat-option>\n    <mat-option value=\"end\">End</mat-option>\n    <mat-option value=\"left\">Left</mat-option>\n    <mat-option value=\"right\">Right</mat-option>\n  </mat-select>\n</mat-form-field>\n<mat-form-field>\n  <mat-select placeholder=\"Vertical position\" [(value)]=\"verticalPosition\">\n    <mat-option value=\"top\">Top</mat-option>\n    <mat-option value=\"bottom\">Bottom</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<button mat-button (click)=\"openSnackBar()\" aria-label=\"Show an example snack-bar\">\n  Pool party!\n</button>\n",
                 styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [material.MatSnackBar])
+            tslib_1.__metadata("design:paramtypes", [snackBar.MatSnackBar])
         ], SnackBarPositionExample);
         return SnackBarPositionExample;
     }());
@@ -5799,7 +5819,7 @@
     var TableFilteringExample = /** @class */ (function () {
         function TableFilteringExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$d);
+            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$d);
         }
         TableFilteringExample.prototype.applyFilter = function (filterValue) {
             this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -5878,12 +5898,12 @@
             })).subscribe(function (data) { return _this.data = data; });
         };
         tslib_1.__decorate([
-            core.ViewChild(material.MatPaginator, { static: false }),
-            tslib_1.__metadata("design:type", material.MatPaginator)
+            core.ViewChild(paginator.MatPaginator, { static: false }),
+            tslib_1.__metadata("design:type", paginator.MatPaginator)
         ], TableHttpExample.prototype, "paginator", void 0);
         tslib_1.__decorate([
-            core.ViewChild(material.MatSort, { static: false }),
-            tslib_1.__metadata("design:type", material.MatSort)
+            core.ViewChild(sort.MatSort, { static: false }),
+            tslib_1.__metadata("design:type", sort.MatSort)
         ], TableHttpExample.prototype, "sort", void 0);
         TableHttpExample = tslib_1.__decorate([
             core.Component({
@@ -5955,7 +5975,7 @@
             // Create 100 users
             var users = Array.from({ length: 100 }, function (_, k) { return createNewUser(k + 1); });
             // Assign the data to the data source for the table to render
-            this.dataSource = new material.MatTableDataSource(users);
+            this.dataSource = new table$1.MatTableDataSource(users);
         }
         TableOverviewExample.prototype.ngOnInit = function () {
             this.dataSource.paginator = this.paginator;
@@ -5968,12 +5988,12 @@
             }
         };
         tslib_1.__decorate([
-            core.ViewChild(material.MatPaginator, { static: true }),
-            tslib_1.__metadata("design:type", material.MatPaginator)
+            core.ViewChild(paginator.MatPaginator, { static: true }),
+            tslib_1.__metadata("design:type", paginator.MatPaginator)
         ], TableOverviewExample.prototype, "paginator", void 0);
         tslib_1.__decorate([
-            core.ViewChild(material.MatSort, { static: true }),
-            tslib_1.__metadata("design:type", material.MatSort)
+            core.ViewChild(sort.MatSort, { static: true }),
+            tslib_1.__metadata("design:type", sort.MatSort)
         ], TableOverviewExample.prototype, "sort", void 0);
         TableOverviewExample = tslib_1.__decorate([
             core.Component({
@@ -6003,14 +6023,14 @@
     var TablePaginationExample = /** @class */ (function () {
         function TablePaginationExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$e);
+            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$e);
         }
         TablePaginationExample.prototype.ngOnInit = function () {
             this.dataSource.paginator = this.paginator;
         };
         tslib_1.__decorate([
-            core.ViewChild(material.MatPaginator, { static: true }),
-            tslib_1.__metadata("design:type", material.MatPaginator)
+            core.ViewChild(paginator.MatPaginator, { static: true }),
+            tslib_1.__metadata("design:type", paginator.MatPaginator)
         ], TablePaginationExample.prototype, "paginator", void 0);
         TablePaginationExample = tslib_1.__decorate([
             core.Component({
@@ -6080,7 +6100,7 @@
     var TableSelectionExample = /** @class */ (function () {
         function TableSelectionExample() {
             this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$f);
+            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$f);
             this.selection = new collections.SelectionModel(true, []);
         }
         /** Whether the number of selected elements matches the total number of rows. */
@@ -6131,14 +6151,14 @@
     var TableSortingExample = /** @class */ (function () {
         function TableSortingExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$g);
+            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$g);
         }
         TableSortingExample.prototype.ngOnInit = function () {
             this.dataSource.sort = this.sort;
         };
         tslib_1.__decorate([
-            core.ViewChild(material.MatSort, { static: true }),
-            tslib_1.__metadata("design:type", material.MatSort)
+            core.ViewChild(sort.MatSort, { static: true }),
+            tslib_1.__metadata("design:type", sort.MatSort)
         ], TableSortingExample.prototype, "sort", void 0);
         TableSortingExample = tslib_1.__decorate([
             core.Component({
@@ -6344,7 +6364,7 @@
         function TableTextColumnAdvancedExample() {
             var _this = this;
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$l);
+            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$l);
             this.decimalPipe = new common.DecimalPipe('en-US');
             /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
             this.getWeight = function (data) { return _this.decimalPipe.transform(data.weight, '1.0-2'); };
@@ -6408,14 +6428,14 @@
     var TableWrappedExample = /** @class */ (function () {
         function TableWrappedExample() {
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new material.MatTableDataSource(ELEMENT_DATA$n);
+            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$n);
         }
         TableWrappedExample.prototype.ngOnInit = function () {
             this.dataSource.sort = this.sort;
         };
         tslib_1.__decorate([
             core.ViewChild('sort', { static: true }),
-            tslib_1.__metadata("design:type", material.MatSort)
+            tslib_1.__metadata("design:type", sort.MatSort)
         ], TableWrappedExample.prototype, "sort", void 0);
         TableWrappedExample = tslib_1.__decorate([
             core.Component({
@@ -6440,20 +6460,20 @@
             this.headerRowDefs.forEach(function (headerRowDef) { return _this.table.addHeaderRowDef(headerRowDef); });
         };
         tslib_1.__decorate([
-            core.ContentChildren(material.MatHeaderRowDef),
+            core.ContentChildren(table$1.MatHeaderRowDef),
             tslib_1.__metadata("design:type", core.QueryList)
         ], WrapperTable.prototype, "headerRowDefs", void 0);
         tslib_1.__decorate([
-            core.ContentChildren(material.MatRowDef),
+            core.ContentChildren(table$1.MatRowDef),
             tslib_1.__metadata("design:type", core.QueryList)
         ], WrapperTable.prototype, "rowDefs", void 0);
         tslib_1.__decorate([
-            core.ContentChildren(material.MatColumnDef),
+            core.ContentChildren(table$1.MatColumnDef),
             tslib_1.__metadata("design:type", core.QueryList)
         ], WrapperTable.prototype, "columnDefs", void 0);
         tslib_1.__decorate([
-            core.ViewChild(material.MatTable, { static: true }),
-            tslib_1.__metadata("design:type", material.MatTable)
+            core.ViewChild(table$1.MatTable, { static: true }),
+            tslib_1.__metadata("design:type", table$1.MatTable)
         ], WrapperTable.prototype, "table", void 0);
         tslib_1.__decorate([
             core.Input(),
@@ -6702,7 +6722,7 @@
                 selector: 'tooltip-modified-defaults-example',
                 template: "<button mat-raised-button\n        matTooltip=\"By default, I delay\"\n        aria-label=\"Button that displays a tooltip that has custom delays through a default config\">\n  Button with delay-default tooltip\n</button>\n",
                 providers: [
-                    { provide: material.MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
+                    { provide: tooltip.MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
                 ],
                 styles: ["/** No CSS for this example */\n"]
             })
@@ -7524,6 +7544,12 @@
         "cdk-drag-drop-enter-predicate": {
             "title": "Drag&Drop enter predicate",
             "component": CdkDragDropEnterPredicateExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
+        "cdk-drag-drop-free-drag-position": {
+            "title": "Programmatically setting the free drag position",
+            "component": CdkDragDropFreeDragPositionExample,
             "additionalFiles": [],
             "selectorName": ""
         },
@@ -8730,6 +8756,7 @@
         CdkDragDropDisabledSortingExample,
         CdkDragDropDisabledExample,
         CdkDragDropEnterPredicateExample,
+        CdkDragDropFreeDragPositionExample,
         CdkDragDropHandleExample,
         CdkDragDropHorizontalSortingExample,
         CdkDragDropOverviewExample,

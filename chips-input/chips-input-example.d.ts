@@ -1,4 +1,4 @@
-import { MatChipInputEvent } from '@angular/material';
+import { MatChipInputEvent } from '@angular/material/chips';
 export interface Fruit {
     name: string;
 }

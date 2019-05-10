@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { MatCalendar } from '@angular/material';
+import { MatCalendar } from '@angular/material/datepicker';
 import { DateAdapter, MatDateFormats } from '@angular/material/core';
 /** @title Datepicker with custom calendar header */
 export declare class DatepickerCustomHeaderExample {

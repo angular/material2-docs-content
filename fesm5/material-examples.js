@@ -2,32 +2,63 @@ import { __extends, __decorate, __spread, __metadata, __param } from 'tslib';
 import { Directive, NgModule, Component, ViewChild, TemplateRef, ViewContainerRef, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, Input, Self, ContentChildren, QueryList } from '@angular/core';
 import { FormControl, FormBuilder, NgControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, DecimalPipe } from '@angular/common';
-import { ScrollingModule, FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
-import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { EditRef, CdkEditControl, CdkEditRevert, CdkEditClose, CdkPopoverEdit, CdkPopoverEditTabOut, CdkRowHoverContent, CdkEditOpen, CdkEditOpenButton, CdkPopoverEditModule, CdkEditable } from '@angular/cdk-experimental/popover-edit';
+import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
+import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { PortalModule, TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
+import { ScrollingModule, FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
+import { CdkStepperModule, CdkStepper, STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
-import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { CdkStepperModule, CdkStepper, STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { PortalModule, TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
-import { MatAutocompleteModule, MatBadgeModule, MatBottomSheetModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatCheckboxModule, MatChipsModule, MatDatepickerModule, MatDialogModule, MatDividerModule, MatExpansionModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatPaginatorModule, MatProgressBarModule, MatProgressSpinnerModule, MatRadioModule, MatRippleModule, MatSelectModule, MatSidenavModule, MatSlideToggleModule, MatSliderModule, MatSnackBarModule, MatSortModule, MatStepperModule, MatTableModule, MatTabsModule, MatToolbarModule, MatTooltipModule, MatTreeModule, MatNativeDateModule, MatBottomSheet, MatBottomSheetRef, MatAutocomplete, MatCalendar, MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatAccordion, MatFormFieldControl, MatIconRegistry, MatSnackBar, MatTableDataSource, MatPaginator, MatSort, MatHeaderRowDef, MatRowDef, MatColumnDef, MatTable, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material';
+import { MatAutocompleteModule, MatAutocomplete } from '@angular/material/autocomplete';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatBottomSheetModule, MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatRippleModule, MatNativeDateModule, MAT_DATE_FORMATS, DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatDatepickerModule, MatCalendar } from '@angular/material/datepicker';
+import { MatDialogModule, MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule, MatAccordion } from '@angular/material/expansion';
+import { MatFormFieldModule, MatFormFieldControl } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule, MatSidenav } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
+import { MatSortModule, MatSort } from '@angular/material/sort';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatTableModule, MatTableDataSource, MatHeaderRowDef, MatRowDef, MatColumnDef, MatTable } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
+import { MatTreeModule, MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
 import { startWith, map, takeUntil, switchMap, catchError, take } from 'rxjs/operators';
 import { Overlay } from '@angular/cdk/overlay';
 import { Platform, getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior } from '@angular/cdk/platform';
 import { DataSource, ArrayDataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject, Subscription, Subject, Observable, merge, of } from 'rxjs';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
-import { MAT_DATE_FORMATS, DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
 import * as _rollupMoment from 'moment';
 import _rollupMoment__default, {  } from 'moment';
 import { coerceBooleanProperty, coerceNumberProperty } from '@angular/cdk/coercion';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MatSidenav } from '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { AutofillMonitor, CdkTextareaAutosize } from '@angular/cdk/text-field';
-import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
 
 /**
  * @license
@@ -1155,6 +1186,26 @@ var CdkDragDropEnterPredicateExample = /** @class */ (function () {
         })
     ], CdkDragDropEnterPredicateExample);
     return CdkDragDropEnterPredicateExample;
+}());
+
+/**
+ * @title Programmatically setting the free drag position
+ */
+var CdkDragDropFreeDragPositionExample = /** @class */ (function () {
+    function CdkDragDropFreeDragPositionExample() {
+        this.dragPosition = { x: 0, y: 0 };
+    }
+    CdkDragDropFreeDragPositionExample.prototype.changePosition = function () {
+        this.dragPosition = { x: this.dragPosition.x + 50, y: this.dragPosition.y + 50 };
+    };
+    CdkDragDropFreeDragPositionExample = __decorate([
+        Component({
+            selector: 'cdk-drag-drop-free-drag-position-example',
+            template: "<p>\n  <button (click)=\"changePosition()\">Change element position</button>\n</p>\n\n<div class=\"example-box\" cdkDrag [cdkDragFreeDragPosition]=\"dragPosition\">\n  Drag me around\n</div>\n",
+            styles: [".example-box {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  position: relative;\n  z-index: 1;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n"]
+        })
+    ], CdkDragDropFreeDragPositionExample);
+    return CdkDragDropFreeDragPositionExample;
 }());
 
 /**
@@ -7550,6 +7601,12 @@ var EXAMPLE_COMPONENTS = {
         "additionalFiles": [],
         "selectorName": ""
     },
+    "cdk-drag-drop-free-drag-position": {
+        "title": "Programmatically setting the free drag position",
+        "component": CdkDragDropFreeDragPositionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
     "cdk-drag-drop-handle": {
         "title": "Drag&Drop with a handle",
         "component": CdkDragDropHandleExample,
@@ -8753,6 +8810,7 @@ var EXAMPLE_LIST = [
     CdkDragDropDisabledSortingExample,
     CdkDragDropDisabledExample,
     CdkDragDropEnterPredicateExample,
+    CdkDragDropFreeDragPositionExample,
     CdkDragDropHandleExample,
     CdkDragDropHorizontalSortingExample,
     CdkDragDropOverviewExample,

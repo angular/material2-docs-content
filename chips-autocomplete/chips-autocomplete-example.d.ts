@@ -1,6 +1,7 @@
 import { ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { MatAutocompleteSelectedEvent, MatChipInputEvent, MatAutocomplete } from '@angular/material';
+import { MatAutocompleteSelectedEvent, MatAutocomplete } from '@angular/material/autocomplete';
+import { MatChipInputEvent } from '@angular/material/chips';
 import { Observable } from 'rxjs';
 /**
  * @title Chips Autocomplete

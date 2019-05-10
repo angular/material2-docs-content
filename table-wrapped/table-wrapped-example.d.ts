@@ -1,6 +1,7 @@
 import { DataSource } from '@angular/cdk/collections';
 import { AfterContentInit, OnInit, QueryList } from '@angular/core';
-import { MatColumnDef, MatHeaderRowDef, MatRowDef, MatSort, MatTable, MatTableDataSource } from '@angular/material';
+import { MatSort } from '@angular/material/sort';
+import { MatColumnDef, MatHeaderRowDef, MatRowDef, MatTable, MatTableDataSource } from '@angular/material/table';
 export interface PeriodicElement {
     name: string;
     position: number;

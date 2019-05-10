@@ -1,7 +1,7 @@
 import { FocusMonitor } from '@angular/cdk/a11y';
 import { ElementRef, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, ControlValueAccessor, NgControl } from '@angular/forms';
-import { MatFormFieldControl } from '@angular/material';
+import { MatFormFieldControl } from '@angular/material/form-field';
 import { Subject } from 'rxjs';
 /** @title Form field with custom telephone number input control. */
 export declare class FormFieldCustomControlExample {

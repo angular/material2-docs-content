@@ -1,4 +1,4 @@
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 export interface DialogData {
     animal: 'panda' | 'unicorn' | 'lion';
 }

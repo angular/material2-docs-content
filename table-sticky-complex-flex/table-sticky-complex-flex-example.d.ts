@@ -1,4 +1,4 @@
-import { MatButtonToggleGroup } from '@angular/material';
+import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 /**
  * @title Flex-layout tables with toggle-able sticky headers, footers, and columns
  */

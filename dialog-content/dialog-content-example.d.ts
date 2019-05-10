@@ -1,4 +1,4 @@
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 /**
  * @title Dialog with header, scrollable content and actions
  */

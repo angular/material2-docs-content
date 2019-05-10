@@ -1,4 +1,4 @@
-import { Sort } from '@angular/material';
+import { Sort } from '@angular/material/sort';
 export interface Dessert {
     calories: number;
     carbs: number;
