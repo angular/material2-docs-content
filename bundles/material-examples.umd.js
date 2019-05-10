@@ -193,36 +193,12 @@
         }
         MatEditOpen = tslib_1.__decorate([
             core.Directive({
-                // Specify :not(button) as we only need to add type: button on actual buttons.
-                selector: '[matEditOpen]:not(button)',
-                host: {
-                    '(click)': 'openEdit($event)',
-                }
+                selector: '[matEditOpen]',
+                host: { '(click)': 'openEdit($event)' }
             })
         ], MatEditOpen);
         return MatEditOpen;
     }(popoverEdit.CdkEditOpen));
-    /**
-     * Opens the closest edit popover to this element, whether it's associated with this exact
-     * element or an ancestor element.
-     */
-    var MatEditOpenButton = /** @class */ (function (_super) {
-        tslib_1.__extends(MatEditOpenButton, _super);
-        function MatEditOpenButton() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        MatEditOpenButton = tslib_1.__decorate([
-            core.Directive({
-                // Specify button as we only need to add type: button on actual buttons.
-                selector: 'button[matEditOpen]',
-                host: {
-                    '(click)': 'openEdit($event)',
-                    'type': 'button',
-                }
-            })
-        ], MatEditOpenButton);
-        return MatEditOpenButton;
-    }(popoverEdit.CdkEditOpenButton));
 
     /**
      * @license
@@ -238,8 +214,7 @@
         MatEditLens,
         MatEditRevert,
         MatEditClose,
-        MatEditOpen,
-        MatEditOpenButton,
+        MatEditOpen
     ];
     var MatPopoverEditModule = /** @class */ (function () {
         function MatPopoverEditModule() {
@@ -613,6 +588,36 @@
             tslib_1.__metadata("design:paramtypes", [])
         ], AutocompleteOverviewExample);
         return AutocompleteOverviewExample;
+    }());
+
+    /**
+     * @title Plain input autocomplete
+     */
+    var PlainInputAutocompleteExample = /** @class */ (function () {
+        function PlainInputAutocompleteExample() {
+            this.control = new forms.FormControl();
+            this.streets = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+        }
+        PlainInputAutocompleteExample.prototype.ngOnInit = function () {
+            var _this = this;
+            this.filteredStreets = this.control.valueChanges.pipe(operators.startWith(''), operators.map(function (value) { return _this._filter(value); }));
+        };
+        PlainInputAutocompleteExample.prototype._filter = function (value) {
+            var _this = this;
+            var filterValue = this._normalizeValue(value);
+            return this.streets.filter(function (street) { return _this._normalizeValue(street).includes(filterValue); });
+        };
+        PlainInputAutocompleteExample.prototype._normalizeValue = function (value) {
+            return value.toLowerCase().replace(/\s/g, '');
+        };
+        PlainInputAutocompleteExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'autocomplete-plain-input-example',
+                template: "<form class=\"example-form\">\n  <input type=\"text\" placeholder=\"Search for a street\" [formControl]=\"control\" [matAutocomplete]=\"auto\">\n  <mat-autocomplete #auto=\"matAutocomplete\">\n    <mat-option *ngFor=\"let street of filteredStreets | async\" [value]=\"street\">\n      {{street}}\n    </mat-option>\n  </mat-autocomplete>\n</form>\n",
+                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+            })
+        ], PlainInputAutocompleteExample);
+        return PlainInputAutocompleteExample;
     }());
 
     /**
@@ -7416,6 +7421,12 @@
             "additionalFiles": [],
             "selectorName": ""
         },
+        "plain-input-autocomplete": {
+            "title": "Plain input autocomplete",
+            "component": PlainInputAutocompleteExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
         "autocomplete-simple": {
             "title": "Simple autocomplete",
             "component": AutocompleteSimpleExample,
@@ -8733,6 +8744,7 @@
         AutocompleteFilterExample,
         AutocompleteOptgroupExample,
         AutocompleteOverviewExample,
+        PlainInputAutocompleteExample,
         AutocompleteSimpleExample,
         BadgeOverviewExample,
         BottomSheetOverviewExample,

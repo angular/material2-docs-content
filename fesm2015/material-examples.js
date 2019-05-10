@@ -1,7 +1,7 @@
 import { Directive, NgModule, Component, ViewContainerRef, ViewChild, TemplateRef, ChangeDetectionStrategy, ViewEncapsulation, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, ElementRef, Self, Input, ContentChildren } from '@angular/core';
 import { FormControl, FormBuilder, NgControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule, DecimalPipe } from '@angular/common';
-import { CdkEditControl, EditRef, CdkEditRevert, CdkEditClose, CdkPopoverEdit, CdkPopoverEditTabOut, CdkRowHoverContent, CdkEditOpen, CdkEditOpenButton, CdkPopoverEditModule, CdkEditable } from '@angular/cdk-experimental/popover-edit';
+import { CdkEditControl, EditRef, CdkEditRevert, CdkEditClose, CdkPopoverEdit, CdkPopoverEditTabOut, CdkRowHoverContent, CdkEditOpen, CdkPopoverEditModule, CdkEditable } from '@angular/cdk-experimental/popover-edit';
 import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
 import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { PortalModule, TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
@@ -252,27 +252,8 @@ class MatEditOpen extends CdkEditOpen {
 }
 MatEditOpen.decorators = [
     { type: Directive, args: [{
-                // Specify :not(button) as we only need to add type: button on actual buttons.
-                selector: '[matEditOpen]:not(button)',
-                host: {
-                    '(click)': 'openEdit($event)',
-                }
-            },] }
-];
-/**
- * Opens the closest edit popover to this element, whether it's associated with this exact
- * element or an ancestor element.
- */
-class MatEditOpenButton extends CdkEditOpenButton {
-}
-MatEditOpenButton.decorators = [
-    { type: Directive, args: [{
-                // Specify button as we only need to add type: button on actual buttons.
-                selector: 'button[matEditOpen]',
-                host: {
-                    '(click)': 'openEdit($event)',
-                    'type': 'button',
-                }
+                selector: '[matEditOpen]',
+                host: { '(click)': 'openEdit($event)' }
             },] }
 ];
 
@@ -288,8 +269,7 @@ const EXPORTED_DECLARATIONS = [
     MatEditLens,
     MatEditRevert,
     MatEditClose,
-    MatEditOpen,
-    MatEditOpenButton,
+    MatEditOpen
 ];
 class MatPopoverEditModule {
 }
@@ -778,6 +758,59 @@ AutocompleteOverviewExample.decorators = [
 ];
 /** @nocollapse */
 AutocompleteOverviewExample.ctorParameters = () => [];
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * \@title Plain input autocomplete
+ */
+class PlainInputAutocompleteExample {
+    constructor() {
+        this.control = new FormControl();
+        this.streets = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+    }
+    /**
+     * @return {?}
+     */
+    ngOnInit() {
+        this.filteredStreets = this.control.valueChanges.pipe(startWith(''), map((/**
+         * @param {?} value
+         * @return {?}
+         */
+        value => this._filter(value))));
+    }
+    /**
+     * @private
+     * @param {?} value
+     * @return {?}
+     */
+    _filter(value) {
+        /** @type {?} */
+        const filterValue = this._normalizeValue(value);
+        return this.streets.filter((/**
+         * @param {?} street
+         * @return {?}
+         */
+        street => this._normalizeValue(street).includes(filterValue)));
+    }
+    /**
+     * @private
+     * @param {?} value
+     * @return {?}
+     */
+    _normalizeValue(value) {
+        return value.toLowerCase().replace(/\s/g, '');
+    }
+}
+PlainInputAutocompleteExample.decorators = [
+    { type: Component, args: [{
+                selector: 'autocomplete-plain-input-example',
+                template: "<form class=\"example-form\">\n  <input type=\"text\" placeholder=\"Search for a street\" [formControl]=\"control\" [matAutocomplete]=\"auto\">\n  <mat-autocomplete #auto=\"matAutocomplete\">\n    <mat-option *ngFor=\"let street of filteredStreets | async\" [value]=\"street\">\n      {{street}}\n    </mat-option>\n  </mat-autocomplete>\n</form>\n",
+                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+            }] }
+];
 
 /**
  * @fileoverview added by tsickle
@@ -9743,6 +9776,12 @@ const EXAMPLE_COMPONENTS = {
         "additionalFiles": [],
         "selectorName": ""
     },
+    "plain-input-autocomplete": {
+        "title": "Plain input autocomplete",
+        "component": PlainInputAutocompleteExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
     "autocomplete-simple": {
         "title": "Simple autocomplete",
         "component": AutocompleteSimpleExample,
@@ -11061,6 +11100,7 @@ const EXAMPLE_LIST = [
     AutocompleteFilterExample,
     AutocompleteOptgroupExample,
     AutocompleteOverviewExample,
+    PlainInputAutocompleteExample,
     AutocompleteSimpleExample,
     BadgeOverviewExample,
     BottomSheetOverviewExample,
