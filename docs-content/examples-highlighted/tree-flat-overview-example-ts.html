@@ -55,7 +55,7 @@
   styleUrls: [<span class="hljs-string">'tree-flat-overview-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TreeFlatOverviewExample {
-  <span class="hljs-keyword">private</span> transformer = <span class="hljs-function">(<span class="hljs-params">node: FoodNode, level: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
+  <span class="hljs-keyword">private</span> _transformer = <span class="hljs-function">(<span class="hljs-params">node: FoodNode, level: <span class="hljs-built_in">number</span></span>) =&gt;</span> {
     <span class="hljs-keyword">return</span> {
       expandable: !!node.children &amp;&amp; node.children.length &gt; <span class="hljs-number">0</span>,
       name: node.name,
@@ -67,7 +67,7 @@
       <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable);
 
   treeFlattener = <span class="hljs-keyword">new</span> MatTreeFlattener(
-      <span class="hljs-keyword">this</span>.transformer, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.children);
+      <span class="hljs-keyword">this</span>._transformer, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.level, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.expandable, <span class="hljs-function"><span class="hljs-params">node</span> =&gt;</span> node.children);
 
   dataSource = <span class="hljs-keyword">new</span> MatTreeFlatDataSource(<span class="hljs-keyword">this</span>.treeControl, <span class="hljs-keyword">this</span>.treeFlattener);
 

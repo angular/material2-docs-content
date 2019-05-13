@@ -449,9 +449,9 @@
      * @title Option groups autocomplete
      */
     var AutocompleteOptgroupExample = /** @class */ (function () {
-        function AutocompleteOptgroupExample(fb) {
-            this.fb = fb;
-            this.stateForm = this.fb.group({
+        function AutocompleteOptgroupExample(_formBuilder) {
+            this._formBuilder = _formBuilder;
+            this.stateForm = this._formBuilder.group({
                 stateGroup: '',
             });
             this.stateGroups = [{
@@ -658,11 +658,11 @@
      * @title Bottom Sheet Overview
      */
     var BottomSheetOverviewExample = /** @class */ (function () {
-        function BottomSheetOverviewExample(bottomSheet) {
-            this.bottomSheet = bottomSheet;
+        function BottomSheetOverviewExample(_bottomSheet) {
+            this._bottomSheet = _bottomSheet;
         }
         BottomSheetOverviewExample.prototype.openBottomSheet = function () {
-            this.bottomSheet.open(BottomSheetOverviewExampleSheet);
+            this._bottomSheet.open(BottomSheetOverviewExampleSheet);
         };
         BottomSheetOverviewExample = tslib_1.__decorate([
             core.Component({
@@ -675,11 +675,11 @@
         return BottomSheetOverviewExample;
     }());
     var BottomSheetOverviewExampleSheet = /** @class */ (function () {
-        function BottomSheetOverviewExampleSheet(bottomSheetRef) {
-            this.bottomSheetRef = bottomSheetRef;
+        function BottomSheetOverviewExampleSheet(_bottomSheetRef) {
+            this._bottomSheetRef = _bottomSheetRef;
         }
         BottomSheetOverviewExampleSheet.prototype.openLink = function (event) {
-            this.bottomSheetRef.dismiss();
+            this._bottomSheetRef.dismiss();
             event.preventDefault();
         };
         BottomSheetOverviewExampleSheet = tslib_1.__decorate([
@@ -1925,43 +1925,43 @@
         tslib_1.__extends(MyDataSource, _super);
         function MyDataSource() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
-            _this.length = 100000;
-            _this.pageSize = 100;
-            _this.cachedData = Array.from({ length: _this.length });
-            _this.fetchedPages = new Set();
-            _this.dataStream = new rxjs.BehaviorSubject(_this.cachedData);
-            _this.subscription = new rxjs.Subscription();
+            _this._length = 100000;
+            _this._pageSize = 100;
+            _this._cachedData = Array.from({ length: _this._length });
+            _this._fetchedPages = new Set();
+            _this._dataStream = new rxjs.BehaviorSubject(_this._cachedData);
+            _this._subscription = new rxjs.Subscription();
             return _this;
         }
         MyDataSource.prototype.connect = function (collectionViewer) {
             var _this = this;
-            this.subscription.add(collectionViewer.viewChange.subscribe(function (range) {
-                var startPage = _this.getPageForIndex(range.start);
-                var endPage = _this.getPageForIndex(range.end - 1);
+            this._subscription.add(collectionViewer.viewChange.subscribe(function (range) {
+                var startPage = _this._getPageForIndex(range.start);
+                var endPage = _this._getPageForIndex(range.end - 1);
                 for (var i = startPage; i <= endPage; i++) {
-                    _this.fetchPage(i);
+                    _this._fetchPage(i);
                 }
             }));
-            return this.dataStream;
+            return this._dataStream;
         };
         MyDataSource.prototype.disconnect = function () {
-            this.subscription.unsubscribe();
+            this._subscription.unsubscribe();
         };
-        MyDataSource.prototype.getPageForIndex = function (index) {
-            return Math.floor(index / this.pageSize);
+        MyDataSource.prototype._getPageForIndex = function (index) {
+            return Math.floor(index / this._pageSize);
         };
-        MyDataSource.prototype.fetchPage = function (page) {
+        MyDataSource.prototype._fetchPage = function (page) {
             var _this = this;
-            if (this.fetchedPages.has(page)) {
+            if (this._fetchedPages.has(page)) {
                 return;
             }
-            this.fetchedPages.add(page);
+            this._fetchedPages.add(page);
             // Use `setTimeout` to simulate fetching data from server.
             setTimeout(function () {
                 var _a;
-                (_a = _this.cachedData).splice.apply(_a, tslib_1.__spread([page * _this.pageSize, _this.pageSize], Array.from({ length: _this.pageSize })
-                    .map(function (_, i) { return "Item #" + (page * _this.pageSize + i); })));
-                _this.dataStream.next(_this.cachedData);
+                (_a = _this._cachedData).splice.apply(_a, tslib_1.__spread([page * _this._pageSize, _this._pageSize], Array.from({ length: _this._pageSize })
+                    .map(function (_, i) { return "Item #" + (page * _this._pageSize + i); })));
+                _this._dataStream.next(_this._cachedData);
             }, Math.random() * 1000 + 200);
         };
         return MyDataSource;
@@ -2355,37 +2355,37 @@
     }());
     /** Custom header component for datepicker. */
     var ExampleHeader = /** @class */ (function () {
-        function ExampleHeader(calendar, dateAdapter, dateFormats, cdr) {
-            this.calendar = calendar;
-            this.dateAdapter = dateAdapter;
-            this.dateFormats = dateFormats;
-            this.destroyed = new rxjs.Subject();
-            calendar.stateChanges
-                .pipe(operators.takeUntil(this.destroyed))
+        function ExampleHeader(_calendar, _dateAdapter, _dateFormats, cdr) {
+            this._calendar = _calendar;
+            this._dateAdapter = _dateAdapter;
+            this._dateFormats = _dateFormats;
+            this._destroyed = new rxjs.Subject();
+            _calendar.stateChanges
+                .pipe(operators.takeUntil(this._destroyed))
                 .subscribe(function () { return cdr.markForCheck(); });
         }
         ExampleHeader.prototype.ngOnDestroy = function () {
-            this.destroyed.next();
-            this.destroyed.complete();
+            this._destroyed.next();
+            this._destroyed.complete();
         };
         Object.defineProperty(ExampleHeader.prototype, "periodLabel", {
             get: function () {
-                return this.dateAdapter
-                    .format(this.calendar.activeDate, this.dateFormats.display.monthYearLabel)
+                return this._dateAdapter
+                    .format(this._calendar.activeDate, this._dateFormats.display.monthYearLabel)
                     .toLocaleUpperCase();
             },
             enumerable: true,
             configurable: true
         });
         ExampleHeader.prototype.previousClicked = function (mode) {
-            this.calendar.activeDate = mode === 'month' ?
-                this.dateAdapter.addCalendarMonths(this.calendar.activeDate, -1) :
-                this.dateAdapter.addCalendarYears(this.calendar.activeDate, -1);
+            this._calendar.activeDate = mode === 'month' ?
+                this._dateAdapter.addCalendarMonths(this._calendar.activeDate, -1) :
+                this._dateAdapter.addCalendarYears(this._calendar.activeDate, -1);
         };
         ExampleHeader.prototype.nextClicked = function (mode) {
-            this.calendar.activeDate = mode === 'month' ?
-                this.dateAdapter.addCalendarMonths(this.calendar.activeDate, 1) :
-                this.dateAdapter.addCalendarYears(this.calendar.activeDate, 1);
+            this._calendar.activeDate = mode === 'month' ?
+                this._dateAdapter.addCalendarMonths(this._calendar.activeDate, 1) :
+                this._dateAdapter.addCalendarYears(this._calendar.activeDate, 1);
         };
         ExampleHeader = tslib_1.__decorate([
             core.Component({
@@ -2515,9 +2515,9 @@
     /** Adapts Moment.js Dates for use with Angular Material. */
     var MomentDateAdapter = /** @class */ (function (_super) {
         tslib_1.__extends(MomentDateAdapter, _super);
-        function MomentDateAdapter(dateLocale, options) {
+        function MomentDateAdapter(dateLocale, _options) {
             var _this = _super.call(this) || this;
-            _this.options = options;
+            _this._options = _options;
             _this.setLocale(dateLocale || moment.locale());
             return _this;
         }
@@ -2659,7 +2659,7 @@
             for (var _i = 0; _i < arguments.length; _i++) {
                 args[_i] = arguments[_i];
             }
-            return (this.options && this.options.useUtc) ? moment.utc.apply(moment, tslib_1.__spread(args)) : moment.apply(void 0, tslib_1.__spread(args));
+            return (this._options && this._options.useUtc) ? moment.utc.apply(moment, tslib_1.__spread(args)) : moment.apply(void 0, tslib_1.__spread(args));
         };
         MomentDateAdapter = tslib_1.__decorate([
             core.Injectable(),
@@ -2780,11 +2780,11 @@
     var ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
     /** @title Datepicker with different locale */
     var DatepickerLocaleExample = /** @class */ (function () {
-        function DatepickerLocaleExample(adapter) {
-            this.adapter = adapter;
+        function DatepickerLocaleExample(_adapter) {
+            this._adapter = _adapter;
         }
         DatepickerLocaleExample.prototype.french = function () {
-            this.adapter.setLocale('fr');
+            this._adapter.setLocale('fr');
         };
         DatepickerLocaleExample = tslib_1.__decorate([
             core.Component({
@@ -3205,9 +3205,9 @@
 
     /** @title Monitoring focus with FocusMonitor */
     var FocusMonitorDirectivesExample = /** @class */ (function () {
-        function FocusMonitorDirectivesExample(ngZone, cdr) {
-            this.ngZone = ngZone;
-            this.cdr = cdr;
+        function FocusMonitorDirectivesExample(_ngZone, _cdr) {
+            this._ngZone = _ngZone;
+            this._cdr = _cdr;
             this.elementOrigin = this.formatOrigin(null);
             this.subtreeOrigin = this.formatOrigin(null);
         }
@@ -3217,7 +3217,7 @@
         // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
         FocusMonitorDirectivesExample.prototype.markForCheck = function () {
             var _this = this;
-            this.ngZone.run(function () { return _this.cdr.markForCheck(); });
+            this._ngZone.run(function () { return _this._cdr.markForCheck(); });
         };
         FocusMonitorDirectivesExample = tslib_1.__decorate([
             core.Component({
@@ -3232,18 +3232,18 @@
 
     /** @title Focusing with a specific FocusOrigin */
     var FocusMonitorFocusViaExample = /** @class */ (function () {
-        function FocusMonitorFocusViaExample(focusMonitor, cdr, ngZone) {
+        function FocusMonitorFocusViaExample(focusMonitor, _cdr, _ngZone) {
             this.focusMonitor = focusMonitor;
-            this.cdr = cdr;
-            this.ngZone = ngZone;
+            this._cdr = _cdr;
+            this._ngZone = _ngZone;
             this.origin = this.formatOrigin(null);
         }
         FocusMonitorFocusViaExample.prototype.ngAfterViewInit = function () {
             var _this = this;
             this.focusMonitor.monitor(this.monitoredEl)
-                .subscribe(function (origin) { return _this.ngZone.run(function () {
+                .subscribe(function (origin) { return _this._ngZone.run(function () {
                 _this.origin = _this.formatOrigin(origin);
-                _this.cdr.markForCheck();
+                _this._cdr.markForCheck();
             }); });
         };
         FocusMonitorFocusViaExample.prototype.ngOnDestroy = function () {
@@ -3271,29 +3271,29 @@
 
     /** @title Monitoring focus with FocusMonitor */
     var FocusMonitorOverviewExample = /** @class */ (function () {
-        function FocusMonitorOverviewExample(focusMonitor, cdr, ngZone) {
-            this.focusMonitor = focusMonitor;
-            this.cdr = cdr;
-            this.ngZone = ngZone;
+        function FocusMonitorOverviewExample(_focusMonitor, _cdr, _ngZone) {
+            this._focusMonitor = _focusMonitor;
+            this._cdr = _cdr;
+            this._ngZone = _ngZone;
             this.elementOrigin = this.formatOrigin(null);
             this.subtreeOrigin = this.formatOrigin(null);
         }
         FocusMonitorOverviewExample.prototype.ngAfterViewInit = function () {
             var _this = this;
-            this.focusMonitor.monitor(this.element)
-                .subscribe(function (origin) { return _this.ngZone.run(function () {
+            this._focusMonitor.monitor(this.element)
+                .subscribe(function (origin) { return _this._ngZone.run(function () {
                 _this.elementOrigin = _this.formatOrigin(origin);
-                _this.cdr.markForCheck();
+                _this._cdr.markForCheck();
             }); });
-            this.focusMonitor.monitor(this.subtree, true)
-                .subscribe(function (origin) { return _this.ngZone.run(function () {
+            this._focusMonitor.monitor(this.subtree, true)
+                .subscribe(function (origin) { return _this._ngZone.run(function () {
                 _this.subtreeOrigin = _this.formatOrigin(origin);
-                _this.cdr.markForCheck();
+                _this._cdr.markForCheck();
             }); });
         };
         FocusMonitorOverviewExample.prototype.ngOnDestroy = function () {
-            this.focusMonitor.stopMonitoring(this.element);
-            this.focusMonitor.stopMonitoring(this.subtree);
+            this._focusMonitor.stopMonitoring(this.element);
+            this._focusMonitor.stopMonitoring(this.subtree);
         };
         FocusMonitorOverviewExample.prototype.formatOrigin = function (origin) {
             return origin ? origin + ' focused' : 'blurred';
@@ -3357,10 +3357,10 @@
     }());
     /** Custom `MatFormFieldControl` for telephone number input. */
     var MyTelInput = /** @class */ (function () {
-        function MyTelInput(fb, fm, elRef, ngControl) {
+        function MyTelInput(formBuilder, _focusMonitor, _elementRef, ngControl) {
             var _this = this;
-            this.fm = fm;
-            this.elRef = elRef;
+            this._focusMonitor = _focusMonitor;
+            this._elementRef = _elementRef;
             this.ngControl = ngControl;
             this.stateChanges = new rxjs.Subject();
             this.focused = false;
@@ -3372,12 +3372,12 @@
             this.onTouched = function () { };
             this._required = false;
             this._disabled = false;
-            this.parts = fb.group({
+            this.parts = formBuilder.group({
                 area: '',
                 exchange: '',
                 subscriber: '',
             });
-            fm.monitor(elRef, true).subscribe(function (origin) {
+            _focusMonitor.monitor(_elementRef, true).subscribe(function (origin) {
                 if (_this.focused && !origin) {
                     _this.onTouched();
                 }
@@ -3448,14 +3448,14 @@
         });
         MyTelInput.prototype.ngOnDestroy = function () {
             this.stateChanges.complete();
-            this.fm.stopMonitoring(this.elRef);
+            this._focusMonitor.stopMonitoring(this._elementRef);
         };
         MyTelInput.prototype.setDescribedByIds = function (ids) {
             this.describedBy = ids.join(' ');
         };
         MyTelInput.prototype.onContainerClick = function (event) {
             if (event.target.tagName.toLowerCase() != 'input') {
-                this.elRef.nativeElement.querySelector('input').focus();
+                this._elementRef.nativeElement.querySelector('input').focus();
             }
         };
         MyTelInput.prototype.writeValue = function (tel) {
@@ -5059,12 +5059,12 @@
      * @title Snack-bar with a custom component
      */
     var SnackBarComponentExample = /** @class */ (function () {
-        function SnackBarComponentExample(snackBar) {
-            this.snackBar = snackBar;
+        function SnackBarComponentExample(_snackBar) {
+            this._snackBar = _snackBar;
             this.durationInSeconds = 5;
         }
         SnackBarComponentExample.prototype.openSnackBar = function () {
-            this.snackBar.openFromComponent(PizzaPartyComponent, {
+            this._snackBar.openFromComponent(PizzaPartyComponent, {
                 duration: this.durationInSeconds * 1000,
             });
         };
@@ -5095,11 +5095,11 @@
      * @title Basic snack-bar
      */
     var SnackBarOverviewExample = /** @class */ (function () {
-        function SnackBarOverviewExample(snackBar) {
-            this.snackBar = snackBar;
+        function SnackBarOverviewExample(_snackBar) {
+            this._snackBar = _snackBar;
         }
         SnackBarOverviewExample.prototype.openSnackBar = function (message, action) {
-            this.snackBar.open(message, action, {
+            this._snackBar.open(message, action, {
                 duration: 2000,
             });
         };
@@ -5118,13 +5118,13 @@
      * @title Snack-bar with configurable position
      */
     var SnackBarPositionExample = /** @class */ (function () {
-        function SnackBarPositionExample(snackBar) {
-            this.snackBar = snackBar;
+        function SnackBarPositionExample(_snackBar) {
+            this._snackBar = _snackBar;
             this.horizontalPosition = 'start';
             this.verticalPosition = 'bottom';
         }
         SnackBarPositionExample.prototype.openSnackBar = function () {
-            this.snackBar.open('Canonball!!', 'End now', {
+            this._snackBar.open('Canonball!!', 'End now', {
                 duration: 500,
                 horizontalPosition: this.horizontalPosition,
                 verticalPosition: this.verticalPosition,
@@ -5872,8 +5872,8 @@
      * @title Table retrieving data through HTTP
      */
     var TableHttpExample = /** @class */ (function () {
-        function TableHttpExample(http) {
-            this.http = http;
+        function TableHttpExample(_httpClient) {
+            this._httpClient = _httpClient;
             this.displayedColumns = ['created', 'state', 'number', 'title'];
             this.data = [];
             this.resultsLength = 0;
@@ -5882,7 +5882,7 @@
         }
         TableHttpExample.prototype.ngAfterViewInit = function () {
             var _this = this;
-            this.exampleDatabase = new ExampleHttpDatabase(this.http);
+            this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
             // If the user changes the sort order, reset back to the first page.
             this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
             rxjs.merge(this.sort.sortChange, this.paginator.page)
@@ -5922,13 +5922,13 @@
     }());
     /** An example database that the data source uses to retrieve data for the table. */
     var ExampleHttpDatabase = /** @class */ (function () {
-        function ExampleHttpDatabase(http) {
-            this.http = http;
+        function ExampleHttpDatabase(_httpClient) {
+            this._httpClient = _httpClient;
         }
         ExampleHttpDatabase.prototype.getRepoIssues = function (sort, order, page) {
             var href = 'https://api.github.com/search/issues';
             var requestUrl = href + "?q=repo:angular/components&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
-            return this.http.get(requestUrl);
+            return this._httpClient.get(requestUrl);
         };
         return ExampleHttpDatabase;
     }());
@@ -6514,19 +6514,19 @@
 
     /** @title Monitoring autofill state with AutofillMonitor */
     var TextFieldAutofillMonitorExample = /** @class */ (function () {
-        function TextFieldAutofillMonitorExample(autofill) {
-            this.autofill = autofill;
+        function TextFieldAutofillMonitorExample(_autofill) {
+            this._autofill = _autofill;
         }
         TextFieldAutofillMonitorExample.prototype.ngAfterViewInit = function () {
             var _this = this;
-            this.autofill.monitor(this.firstName)
+            this._autofill.monitor(this.firstName)
                 .subscribe(function (e) { return _this.firstNameAutofilled = e.isAutofilled; });
-            this.autofill.monitor(this.lastName)
+            this._autofill.monitor(this.lastName)
                 .subscribe(function (e) { return _this.lastNameAutofilled = e.isAutofilled; });
         };
         TextFieldAutofillMonitorExample.prototype.ngOnDestroy = function () {
-            this.autofill.stopMonitoring(this.firstName);
-            this.autofill.stopMonitoring(this.lastName);
+            this._autofill.stopMonitoring(this.firstName);
+            this._autofill.stopMonitoring(this.lastName);
         };
         tslib_1.__decorate([
             core.ViewChild('first', { read: core.ElementRef, static: false }),
@@ -6549,13 +6549,13 @@
 
     /** @title Auto-resizing textarea */
     var TextFieldAutosizeTextareaExample = /** @class */ (function () {
-        function TextFieldAutosizeTextareaExample(ngZone) {
-            this.ngZone = ngZone;
+        function TextFieldAutosizeTextareaExample(_ngZone) {
+            this._ngZone = _ngZone;
         }
         TextFieldAutosizeTextareaExample.prototype.triggerResize = function () {
             var _this = this;
             // Wait for changes to be applied, then trigger textarea resize.
-            this.ngZone.onStable.pipe(operators.take(1))
+            this._ngZone.onStable.pipe(operators.take(1))
                 .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
         };
         tslib_1.__decorate([
@@ -6867,9 +6867,9 @@
      * @title Tree with checkboxes
      */
     var TreeChecklistExample = /** @class */ (function () {
-        function TreeChecklistExample(database) {
+        function TreeChecklistExample(_database) {
             var _this = this;
-            this.database = database;
+            this._database = _database;
             /** Map from flat node to nested node. This helps us finding the nested node to be modified */
             this.flatNodeMap = new Map();
             /** Map from nested node to flattened node. This helps us to keep the same object for selection */
@@ -6903,7 +6903,7 @@
             this.treeFlattener = new tree$1.MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
             this.treeControl = new tree.FlatTreeControl(this.getLevel, this.isExpandable);
             this.dataSource = new tree$1.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-            database.dataChange.subscribe(function (data) {
+            _database.dataChange.subscribe(function (data) {
                 _this.dataSource.data = data;
             });
         }
@@ -6983,13 +6983,13 @@
         /** Select the category so we can insert the new item. */
         TreeChecklistExample.prototype.addNewItem = function (node) {
             var parentNode = this.flatNodeMap.get(node);
-            this.database.insertItem(parentNode, '');
+            this._database.insertItem(parentNode, '');
             this.treeControl.expand(node);
         };
         /** Save the node to database */
         TreeChecklistExample.prototype.saveNode = function (node, itemValue) {
             var nestedNode = this.flatNodeMap.get(node);
-            this.database.updateItem(nestedNode, itemValue);
+            this._database.updateItem(nestedNode, itemValue);
         };
         TreeChecklistExample = tslib_1.__decorate([
             core.Component({
@@ -7050,15 +7050,15 @@
      * structure.
      */
     var DynamicDataSource = /** @class */ (function () {
-        function DynamicDataSource(treeControl, database) {
-            this.treeControl = treeControl;
-            this.database = database;
+        function DynamicDataSource(_treeControl, _database) {
+            this._treeControl = _treeControl;
+            this._database = _database;
             this.dataChange = new rxjs.BehaviorSubject([]);
         }
         Object.defineProperty(DynamicDataSource.prototype, "data", {
             get: function () { return this.dataChange.value; },
             set: function (value) {
-                this.treeControl.dataNodes = value;
+                this._treeControl.dataNodes = value;
                 this.dataChange.next(value);
             },
             enumerable: true,
@@ -7066,7 +7066,7 @@
         });
         DynamicDataSource.prototype.connect = function (collectionViewer) {
             var _this = this;
-            this.treeControl.expansionModel.onChange.subscribe(function (change) {
+            this._treeControl.expansionModel.onChange.subscribe(function (change) {
                 if (change.added ||
                     change.removed) {
                     _this.handleTreeControl(change);
@@ -7089,7 +7089,7 @@
          */
         DynamicDataSource.prototype.toggleNode = function (node, expand) {
             var _this = this;
-            var children = this.database.getChildren(node.item);
+            var children = this._database.getChildren(node.item);
             var index = this.data.indexOf(node);
             if (!children || index < 0) { // If no children, or cannot find the node, no op
                 return;
@@ -7099,7 +7099,7 @@
                 var _a;
                 if (expand) {
                     var nodes = children.map(function (name) {
-                        return new DynamicFlatNode(name, node.level + 1, _this.database.isExpandable(name));
+                        return new DynamicFlatNode(name, node.level + 1, _this._database.isExpandable(name));
                     });
                     (_a = _this.data).splice.apply(_a, tslib_1.__spread([index + 1, 0], nodes));
                 }
@@ -7177,7 +7177,7 @@
      */
     var TreeFlatOverviewExample = /** @class */ (function () {
         function TreeFlatOverviewExample() {
-            this.transformer = function (node, level) {
+            this._transformer = function (node, level) {
                 return {
                     expandable: !!node.children && node.children.length > 0,
                     name: node.name,
@@ -7185,7 +7185,7 @@
                 };
             };
             this.treeControl = new tree.FlatTreeControl(function (node) { return node.level; }, function (node) { return node.expandable; });
-            this.treeFlattener = new tree$1.MatTreeFlattener(this.transformer, function (node) { return node.level; }, function (node) { return node.expandable; }, function (node) { return node.children; });
+            this.treeFlattener = new tree$1.MatTreeFlattener(this._transformer, function (node) { return node.level; }, function (node) { return node.expandable; }, function (node) { return node.children; });
             this.dataSource = new tree$1.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
             this.hasChild = function (_, node) { return node.expandable; };
             this.dataSource.data = TREE_DATA$3;
@@ -7296,9 +7296,9 @@
      * @title Tree with partially loaded data
      */
     var TreeLoadmoreExample = /** @class */ (function () {
-        function TreeLoadmoreExample(database) {
+        function TreeLoadmoreExample(_database) {
             var _this = this;
-            this.database = database;
+            this._database = _database;
             this.nodeMap = new Map();
             this.getChildren = function (node) { return node.childrenChange; };
             this.transformer = function (node, level) {
@@ -7317,17 +7317,17 @@
             this.treeFlattener = new tree$1.MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
             this.treeControl = new tree.FlatTreeControl(this.getLevel, this.isExpandable);
             this.dataSource = new tree$1.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-            database.dataChange.subscribe(function (data) {
+            _database.dataChange.subscribe(function (data) {
                 _this.dataSource.data = data;
             });
-            database.initialize();
+            _database.initialize();
         }
         /** Load more nodes from data source */
         TreeLoadmoreExample.prototype.loadMore = function (item) {
-            this.database.loadMore(item);
+            this._database.loadMore(item);
         };
         TreeLoadmoreExample.prototype.loadChildren = function (node) {
-            this.database.loadMore(node.item, true);
+            this._database.loadMore(node.item, true);
         };
         TreeLoadmoreExample = tslib_1.__decorate([
             core.Component({

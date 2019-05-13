@@ -5,14 +5,14 @@ export declare class CdkVirtualScrollDataSourceExample {
     ds: MyDataSource;
 }
 export declare class MyDataSource extends DataSource<string | undefined> {
-    private length;
-    private pageSize;
-    private cachedData;
-    private fetchedPages;
-    private dataStream;
-    private subscription;
+    private _length;
+    private _pageSize;
+    private _cachedData;
+    private _fetchedPages;
+    private _dataStream;
+    private _subscription;
     connect(collectionViewer: CollectionViewer): Observable<(string | undefined)[]>;
     disconnect(): void;
-    private getPageForIndex;
-    private fetchPage;
+    private _getPageForIndex;
+    private _fetchPage;
 }

@@ -3,12 +3,12 @@ import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-shee
  * @title Bottom Sheet Overview
  */
 export declare class BottomSheetOverviewExample {
-    private bottomSheet;
-    constructor(bottomSheet: MatBottomSheet);
+    private _bottomSheet;
+    constructor(_bottomSheet: MatBottomSheet);
     openBottomSheet(): void;
 }
 export declare class BottomSheetOverviewExampleSheet {
-    private bottomSheetRef;
-    constructor(bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>);
+    private _bottomSheetRef;
+    constructor(_bottomSheetRef: MatBottomSheetRef<BottomSheetOverviewExampleSheet>);
     openLink(event: MouseEvent): void;
 }

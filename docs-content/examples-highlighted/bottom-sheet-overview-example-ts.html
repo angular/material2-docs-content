@@ -10,10 +10,10 @@
   styleUrls: [<span class="hljs-string">'bottom-sheet-overview-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BottomSheetOverviewExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> bottomSheet: MatBottomSheet</span>) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _bottomSheet: MatBottomSheet</span>) {}
 
   openBottomSheet(): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">this</span>.bottomSheet.open(BottomSheetOverviewExampleSheet);
+    <span class="hljs-keyword">this</span>._bottomSheet.open(BottomSheetOverviewExampleSheet);
   }
 }
 
@@ -22,10 +22,10 @@
   templateUrl: <span class="hljs-string">'bottom-sheet-overview-example-sheet.html'</span>,
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BottomSheetOverviewExampleSheet {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> bottomSheetRef: MatBottomSheetRef&lt;BottomSheetOverviewExampleSheet&gt;</span>) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _bottomSheetRef: MatBottomSheetRef&lt;BottomSheetOverviewExampleSheet&gt;</span>) {}
 
   openLink(event: MouseEvent): <span class="hljs-built_in">void</span> {
-    <span class="hljs-keyword">this</span>.bottomSheetRef.dismiss();
+    <span class="hljs-keyword">this</span>._bottomSheetRef.dismiss();
     event.preventDefault();
   }
 }

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
  * @title Table retrieving data through HTTP
  */
 export declare class TableHttpExample implements AfterViewInit {
-    private http;
+    private _httpClient;
     displayedColumns: string[];
     exampleDatabase: ExampleHttpDatabase | null;
     data: GithubIssue[];
@@ -16,7 +16,7 @@ export declare class TableHttpExample implements AfterViewInit {
     isRateLimitReached: boolean;
     paginator: MatPaginator;
     sort: MatSort;
-    constructor(http: HttpClient);
+    constructor(_httpClient: HttpClient);
     ngAfterViewInit(): void;
 }
 export interface GithubApi {
@@ -31,7 +31,7 @@ export interface GithubIssue {
 }
 /** An example database that the data source uses to retrieve data for the table. */
 export declare class ExampleHttpDatabase {
-    private http;
-    constructor(http: HttpClient);
+    private _httpClient;
+    constructor(_httpClient: HttpClient);
     getRepoIssues(sort: string, order: string, page: number): Observable<GithubApi>;
 }

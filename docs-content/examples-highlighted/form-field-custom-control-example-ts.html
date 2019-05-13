@@ -91,18 +91,18 @@
   }
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">
-    fb: FormBuilder,
-    <span class="hljs-keyword">private</span> fm: FocusMonitor,
-    <span class="hljs-keyword">private</span> elRef: ElementRef&lt;HTMLElement&gt;,
+    formBuilder: FormBuilder,
+    <span class="hljs-keyword">private</span> _focusMonitor: FocusMonitor,
+    <span class="hljs-keyword">private</span> _elementRef: ElementRef&lt;HTMLElement&gt;,
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl</span>) {
 
-    <span class="hljs-keyword">this</span>.parts = fb.group({
+    <span class="hljs-keyword">this</span>.parts = formBuilder.group({
       area: <span class="hljs-string">''</span>,
       exchange: <span class="hljs-string">''</span>,
       subscriber: <span class="hljs-string">''</span>,
     });
 
-    fm.monitor(elRef, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
+    _focusMonitor.monitor(_elementRef, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {
       <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.focused &amp;&amp; !origin) {
         <span class="hljs-keyword">this</span>.onTouched();
       }
@@ -117,7 +117,7 @@
 
   ngOnDestroy() {
     <span class="hljs-keyword">this</span>.stateChanges.complete();
-    <span class="hljs-keyword">this</span>.fm.stopMonitoring(<span class="hljs-keyword">this</span>.elRef);
+    <span class="hljs-keyword">this</span>._focusMonitor.stopMonitoring(<span class="hljs-keyword">this</span>._elementRef);
   }
 
   setDescribedByIds(ids: <span class="hljs-built_in">string</span>[]) {
@@ -126,7 +126,7 @@
 
   onContainerClick(event: MouseEvent) {
     <span class="hljs-keyword">if</span> ((event.target <span class="hljs-keyword">as</span> Element).tagName.toLowerCase() != <span class="hljs-string">'input'</span>) {
-      <span class="hljs-keyword">this</span>.elRef.nativeElement.querySelector(<span class="hljs-string">'input'</span>)!.focus();
+      <span class="hljs-keyword">this</span>._elementRef.nativeElement.querySelector(<span class="hljs-string">'input'</span>)!.focus();
     }
   }
 
