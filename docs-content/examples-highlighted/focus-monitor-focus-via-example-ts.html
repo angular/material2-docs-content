@@ -21,14 +21,14 @@
   origin = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">public</span> focusMonitor: FocusMonitor,
-              <span class="hljs-keyword">private</span> cdr: ChangeDetectorRef,
-              <span class="hljs-keyword">private</span> ngZone: NgZone</span>) {}
+              <span class="hljs-keyword">private</span> _cdr: ChangeDetectorRef,
+              <span class="hljs-keyword">private</span> _ngZone: NgZone</span>) {}
 
   ngAfterViewInit() {
     <span class="hljs-keyword">this</span>.focusMonitor.monitor(<span class="hljs-keyword">this</span>.monitoredEl)
-        .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-keyword">this</span>.ngZone.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        .subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> <span class="hljs-keyword">this</span>._ngZone.run(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
           <span class="hljs-keyword">this</span>.origin = <span class="hljs-keyword">this</span>.formatOrigin(origin);
-          <span class="hljs-keyword">this</span>.cdr.markForCheck();
+          <span class="hljs-keyword">this</span>._cdr.markForCheck();
         }));
   }
 

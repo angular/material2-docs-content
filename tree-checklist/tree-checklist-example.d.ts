@@ -40,7 +40,7 @@ export declare class ChecklistDatabase {
  * @title Tree with checkboxes
  */
 export declare class TreeChecklistExample {
-    private database;
+    private _database;
     /** Map from flat node to nested node. This helps us finding the nested node to be modified */
     flatNodeMap: Map<TodoItemFlatNode, TodoItemNode>;
     /** Map from nested node to flattened node. This helps us to keep the same object for selection */
@@ -54,7 +54,7 @@ export declare class TreeChecklistExample {
     dataSource: MatTreeFlatDataSource<TodoItemNode, TodoItemFlatNode>;
     /** The selection for checklist */
     checklistSelection: SelectionModel<TodoItemFlatNode>;
-    constructor(database: ChecklistDatabase);
+    constructor(_database: ChecklistDatabase);
     getLevel: (node: TodoItemFlatNode) => number;
     isExpandable: (node: TodoItemFlatNode) => boolean;
     getChildren: (node: TodoItemNode) => TodoItemNode[];

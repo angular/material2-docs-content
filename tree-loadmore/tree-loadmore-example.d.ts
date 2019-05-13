@@ -45,12 +45,12 @@ export declare class LoadmoreDatabase {
  * @title Tree with partially loaded data
  */
 export declare class TreeLoadmoreExample {
-    private database;
+    private _database;
     nodeMap: Map<string, LoadmoreFlatNode>;
     treeControl: FlatTreeControl<LoadmoreFlatNode>;
     treeFlattener: MatTreeFlattener<LoadmoreNode, LoadmoreFlatNode>;
     dataSource: MatTreeFlatDataSource<LoadmoreNode, LoadmoreFlatNode>;
-    constructor(database: LoadmoreDatabase);
+    constructor(_database: LoadmoreDatabase);
     getChildren: (node: LoadmoreNode) => Observable<LoadmoreNode[]>;
     transformer: (node: LoadmoreNode, level: number) => LoadmoreFlatNode;
     getLevel: (node: LoadmoreFlatNode) => number;

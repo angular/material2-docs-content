@@ -578,11 +578,11 @@ const _filter = (/**
  */
 class AutocompleteOptgroupExample {
     /**
-     * @param {?} fb
+     * @param {?} _formBuilder
      */
-    constructor(fb) {
-        this.fb = fb;
-        this.stateForm = this.fb.group({
+    constructor(_formBuilder) {
+        this._formBuilder = _formBuilder;
+        this.stateForm = this._formBuilder.group({
             stateGroup: '',
         });
         this.stateGroups = [{
@@ -859,16 +859,16 @@ BadgeOverviewExample.decorators = [
  */
 class BottomSheetOverviewExample {
     /**
-     * @param {?} bottomSheet
+     * @param {?} _bottomSheet
      */
-    constructor(bottomSheet) {
-        this.bottomSheet = bottomSheet;
+    constructor(_bottomSheet) {
+        this._bottomSheet = _bottomSheet;
     }
     /**
      * @return {?}
      */
     openBottomSheet() {
-        this.bottomSheet.open(BottomSheetOverviewExampleSheet);
+        this._bottomSheet.open(BottomSheetOverviewExampleSheet);
     }
 }
 BottomSheetOverviewExample.decorators = [
@@ -884,17 +884,17 @@ BottomSheetOverviewExample.ctorParameters = () => [
 ];
 class BottomSheetOverviewExampleSheet {
     /**
-     * @param {?} bottomSheetRef
+     * @param {?} _bottomSheetRef
      */
-    constructor(bottomSheetRef) {
-        this.bottomSheetRef = bottomSheetRef;
+    constructor(_bottomSheetRef) {
+        this._bottomSheetRef = _bottomSheetRef;
     }
     /**
      * @param {?} event
      * @return {?}
      */
     openLink(event) {
-        this.bottomSheetRef.dismiss();
+        this._bottomSheetRef.dismiss();
         event.preventDefault();
     }
 }
@@ -2425,70 +2425,70 @@ CdkVirtualScrollDataSourceExample.decorators = [
 class MyDataSource extends DataSource {
     constructor() {
         super(...arguments);
-        this.length = 100000;
-        this.pageSize = 100;
-        this.cachedData = Array.from({ length: this.length });
-        this.fetchedPages = new Set();
-        this.dataStream = new BehaviorSubject(this.cachedData);
-        this.subscription = new Subscription();
+        this._length = 100000;
+        this._pageSize = 100;
+        this._cachedData = Array.from({ length: this._length });
+        this._fetchedPages = new Set();
+        this._dataStream = new BehaviorSubject(this._cachedData);
+        this._subscription = new Subscription();
     }
     /**
      * @param {?} collectionViewer
      * @return {?}
      */
     connect(collectionViewer) {
-        this.subscription.add(collectionViewer.viewChange.subscribe((/**
+        this._subscription.add(collectionViewer.viewChange.subscribe((/**
          * @param {?} range
          * @return {?}
          */
         range => {
             /** @type {?} */
-            const startPage = this.getPageForIndex(range.start);
+            const startPage = this._getPageForIndex(range.start);
             /** @type {?} */
-            const endPage = this.getPageForIndex(range.end - 1);
+            const endPage = this._getPageForIndex(range.end - 1);
             for (let i = startPage; i <= endPage; i++) {
-                this.fetchPage(i);
+                this._fetchPage(i);
             }
         })));
-        return this.dataStream;
+        return this._dataStream;
     }
     /**
      * @return {?}
      */
     disconnect() {
-        this.subscription.unsubscribe();
+        this._subscription.unsubscribe();
     }
     /**
      * @private
      * @param {?} index
      * @return {?}
      */
-    getPageForIndex(index) {
-        return Math.floor(index / this.pageSize);
+    _getPageForIndex(index) {
+        return Math.floor(index / this._pageSize);
     }
     /**
      * @private
      * @param {?} page
      * @return {?}
      */
-    fetchPage(page) {
-        if (this.fetchedPages.has(page)) {
+    _fetchPage(page) {
+        if (this._fetchedPages.has(page)) {
             return;
         }
-        this.fetchedPages.add(page);
+        this._fetchedPages.add(page);
         // Use `setTimeout` to simulate fetching data from server.
         setTimeout((/**
          * @return {?}
          */
         () => {
-            this.cachedData.splice(page * this.pageSize, this.pageSize, ...Array.from({ length: this.pageSize })
+            this._cachedData.splice(page * this._pageSize, this._pageSize, ...Array.from({ length: this._pageSize })
                 .map((/**
              * @param {?} _
              * @param {?} i
              * @return {?}
              */
-            (_, i) => `Item #${page * this.pageSize + i}`)));
-            this.dataStream.next(this.cachedData);
+            (_, i) => `Item #${page * this._pageSize + i}`)));
+            this._dataStream.next(this._cachedData);
         }), Math.random() * 1000 + 200);
     }
 }
@@ -2998,18 +2998,18 @@ DatepickerCustomHeaderExample.decorators = [
  */
 class ExampleHeader {
     /**
-     * @param {?} calendar
-     * @param {?} dateAdapter
-     * @param {?} dateFormats
+     * @param {?} _calendar
+     * @param {?} _dateAdapter
+     * @param {?} _dateFormats
      * @param {?} cdr
      */
-    constructor(calendar, dateAdapter, dateFormats, cdr) {
-        this.calendar = calendar;
-        this.dateAdapter = dateAdapter;
-        this.dateFormats = dateFormats;
-        this.destroyed = new Subject();
-        calendar.stateChanges
-            .pipe(takeUntil(this.destroyed))
+    constructor(_calendar, _dateAdapter, _dateFormats, cdr) {
+        this._calendar = _calendar;
+        this._dateAdapter = _dateAdapter;
+        this._dateFormats = _dateFormats;
+        this._destroyed = new Subject();
+        _calendar.stateChanges
+            .pipe(takeUntil(this._destroyed))
             .subscribe((/**
          * @return {?}
          */
@@ -3019,15 +3019,15 @@ class ExampleHeader {
      * @return {?}
      */
     ngOnDestroy() {
-        this.destroyed.next();
-        this.destroyed.complete();
+        this._destroyed.next();
+        this._destroyed.complete();
     }
     /**
      * @return {?}
      */
     get periodLabel() {
-        return this.dateAdapter
-            .format(this.calendar.activeDate, this.dateFormats.display.monthYearLabel)
+        return this._dateAdapter
+            .format(this._calendar.activeDate, this._dateFormats.display.monthYearLabel)
             .toLocaleUpperCase();
     }
     /**
@@ -3035,18 +3035,18 @@ class ExampleHeader {
      * @return {?}
      */
     previousClicked(mode) {
-        this.calendar.activeDate = mode === 'month' ?
-            this.dateAdapter.addCalendarMonths(this.calendar.activeDate, -1) :
-            this.dateAdapter.addCalendarYears(this.calendar.activeDate, -1);
+        this._calendar.activeDate = mode === 'month' ?
+            this._dateAdapter.addCalendarMonths(this._calendar.activeDate, -1) :
+            this._dateAdapter.addCalendarYears(this._calendar.activeDate, -1);
     }
     /**
      * @param {?} mode
      * @return {?}
      */
     nextClicked(mode) {
-        this.calendar.activeDate = mode === 'month' ?
-            this.dateAdapter.addCalendarMonths(this.calendar.activeDate, 1) :
-            this.dateAdapter.addCalendarYears(this.calendar.activeDate, 1);
+        this._calendar.activeDate = mode === 'month' ?
+            this._dateAdapter.addCalendarMonths(this._calendar.activeDate, 1) :
+            this._dateAdapter.addCalendarYears(this._calendar.activeDate, 1);
     }
 }
 ExampleHeader.decorators = [
@@ -3265,11 +3265,11 @@ function range(length, valueFunction) {
 class MomentDateAdapter extends DateAdapter {
     /**
      * @param {?} dateLocale
-     * @param {?=} options
+     * @param {?=} _options
      */
-    constructor(dateLocale, options) {
+    constructor(dateLocale, _options) {
         super();
-        this.options = options;
+        this._options = _options;
         this.setLocale(dateLocale || moment.locale());
     }
     /**
@@ -3514,7 +3514,7 @@ class MomentDateAdapter extends DateAdapter {
      * @return {?}
      */
     _createMoment(...args) {
-        return (this.options && this.options.useUtc) ? moment.utc(...args) : moment(...args);
+        return (this._options && this._options.useUtc) ? moment.utc(...args) : moment(...args);
     }
 }
 MomentDateAdapter.decorators = [
@@ -3618,16 +3618,16 @@ const ɵ0 = MAT_MOMENT_DATE_FORMATS;
  */
 class DatepickerLocaleExample {
     /**
-     * @param {?} adapter
+     * @param {?} _adapter
      */
-    constructor(adapter) {
-        this.adapter = adapter;
+    constructor(_adapter) {
+        this._adapter = _adapter;
     }
     /**
      * @return {?}
      */
     french() {
-        this.adapter.setLocale('fr');
+        this._adapter.setLocale('fr');
     }
 }
 DatepickerLocaleExample.decorators = [
@@ -4186,12 +4186,12 @@ ExpansionStepsExample.decorators = [
  */
 class FocusMonitorDirectivesExample {
     /**
-     * @param {?} ngZone
-     * @param {?} cdr
+     * @param {?} _ngZone
+     * @param {?} _cdr
      */
-    constructor(ngZone, cdr) {
-        this.ngZone = ngZone;
-        this.cdr = cdr;
+    constructor(_ngZone, _cdr) {
+        this._ngZone = _ngZone;
+        this._cdr = _cdr;
         this.elementOrigin = this.formatOrigin(null);
         this.subtreeOrigin = this.formatOrigin(null);
     }
@@ -4207,10 +4207,10 @@ class FocusMonitorDirectivesExample {
      * @return {?}
      */
     markForCheck() {
-        this.ngZone.run((/**
+        this._ngZone.run((/**
          * @return {?}
          */
-        () => this.cdr.markForCheck()));
+        () => this._cdr.markForCheck()));
     }
 }
 FocusMonitorDirectivesExample.decorators = [
@@ -4236,13 +4236,13 @@ FocusMonitorDirectivesExample.ctorParameters = () => [
 class FocusMonitorFocusViaExample {
     /**
      * @param {?} focusMonitor
-     * @param {?} cdr
-     * @param {?} ngZone
+     * @param {?} _cdr
+     * @param {?} _ngZone
      */
-    constructor(focusMonitor, cdr, ngZone) {
+    constructor(focusMonitor, _cdr, _ngZone) {
         this.focusMonitor = focusMonitor;
-        this.cdr = cdr;
-        this.ngZone = ngZone;
+        this._cdr = _cdr;
+        this._ngZone = _ngZone;
         this.origin = this.formatOrigin(null);
     }
     /**
@@ -4254,12 +4254,12 @@ class FocusMonitorFocusViaExample {
          * @param {?} origin
          * @return {?}
          */
-        origin => this.ngZone.run((/**
+        origin => this._ngZone.run((/**
          * @return {?}
          */
         () => {
             this.origin = this.formatOrigin(origin);
-            this.cdr.markForCheck();
+            this._cdr.markForCheck();
         }))));
     }
     /**
@@ -4302,14 +4302,14 @@ FocusMonitorFocusViaExample.propDecorators = {
  */
 class FocusMonitorOverviewExample {
     /**
-     * @param {?} focusMonitor
-     * @param {?} cdr
-     * @param {?} ngZone
+     * @param {?} _focusMonitor
+     * @param {?} _cdr
+     * @param {?} _ngZone
      */
-    constructor(focusMonitor, cdr, ngZone) {
-        this.focusMonitor = focusMonitor;
-        this.cdr = cdr;
-        this.ngZone = ngZone;
+    constructor(_focusMonitor, _cdr, _ngZone) {
+        this._focusMonitor = _focusMonitor;
+        this._cdr = _cdr;
+        this._ngZone = _ngZone;
         this.elementOrigin = this.formatOrigin(null);
         this.subtreeOrigin = this.formatOrigin(null);
     }
@@ -4317,37 +4317,37 @@ class FocusMonitorOverviewExample {
      * @return {?}
      */
     ngAfterViewInit() {
-        this.focusMonitor.monitor(this.element)
+        this._focusMonitor.monitor(this.element)
             .subscribe((/**
          * @param {?} origin
          * @return {?}
          */
-        origin => this.ngZone.run((/**
+        origin => this._ngZone.run((/**
          * @return {?}
          */
         () => {
             this.elementOrigin = this.formatOrigin(origin);
-            this.cdr.markForCheck();
+            this._cdr.markForCheck();
         }))));
-        this.focusMonitor.monitor(this.subtree, true)
+        this._focusMonitor.monitor(this.subtree, true)
             .subscribe((/**
          * @param {?} origin
          * @return {?}
          */
-        origin => this.ngZone.run((/**
+        origin => this._ngZone.run((/**
          * @return {?}
          */
         () => {
             this.subtreeOrigin = this.formatOrigin(origin);
-            this.cdr.markForCheck();
+            this._cdr.markForCheck();
         }))));
     }
     /**
      * @return {?}
      */
     ngOnDestroy() {
-        this.focusMonitor.stopMonitoring(this.element);
-        this.focusMonitor.stopMonitoring(this.subtree);
+        this._focusMonitor.stopMonitoring(this.element);
+        this._focusMonitor.stopMonitoring(this.subtree);
     }
     /**
      * @param {?} origin
@@ -4428,14 +4428,14 @@ class MyTel {
  */
 class MyTelInput {
     /**
-     * @param {?} fb
-     * @param {?} fm
-     * @param {?} elRef
+     * @param {?} formBuilder
+     * @param {?} _focusMonitor
+     * @param {?} _elementRef
      * @param {?} ngControl
      */
-    constructor(fb, fm, elRef, ngControl) {
-        this.fm = fm;
-        this.elRef = elRef;
+    constructor(formBuilder, _focusMonitor, _elementRef, ngControl) {
+        this._focusMonitor = _focusMonitor;
+        this._elementRef = _elementRef;
         this.ngControl = ngControl;
         this.stateChanges = new Subject();
         this.focused = false;
@@ -4454,12 +4454,12 @@ class MyTelInput {
         () => { });
         this._required = false;
         this._disabled = false;
-        this.parts = fb.group({
+        this.parts = formBuilder.group({
             area: '',
             exchange: '',
             subscriber: '',
         });
-        fm.monitor(elRef, true).subscribe((/**
+        _focusMonitor.monitor(_elementRef, true).subscribe((/**
          * @param {?} origin
          * @return {?}
          */
@@ -4546,7 +4546,7 @@ class MyTelInput {
      */
     ngOnDestroy() {
         this.stateChanges.complete();
-        this.fm.stopMonitoring(this.elRef);
+        this._focusMonitor.stopMonitoring(this._elementRef);
     }
     /**
      * @param {?} ids
@@ -4561,7 +4561,7 @@ class MyTelInput {
      */
     onContainerClick(event) {
         if (((/** @type {?} */ (event.target))).tagName.toLowerCase() != 'input') {
-            (/** @type {?} */ (this.elRef.nativeElement.querySelector('input'))).focus();
+            (/** @type {?} */ (this._elementRef.nativeElement.querySelector('input'))).focus();
         }
     }
     /**
@@ -6589,17 +6589,17 @@ SliderOverviewExample.decorators = [
  */
 class SnackBarComponentExample {
     /**
-     * @param {?} snackBar
+     * @param {?} _snackBar
      */
-    constructor(snackBar) {
-        this.snackBar = snackBar;
+    constructor(_snackBar) {
+        this._snackBar = _snackBar;
         this.durationInSeconds = 5;
     }
     /**
      * @return {?}
      */
     openSnackBar() {
-        this.snackBar.openFromComponent(PizzaPartyComponent, {
+        this._snackBar.openFromComponent(PizzaPartyComponent, {
             duration: this.durationInSeconds * 1000,
         });
     }
@@ -6638,10 +6638,10 @@ PizzaPartyComponent.decorators = [
  */
 class SnackBarOverviewExample {
     /**
-     * @param {?} snackBar
+     * @param {?} _snackBar
      */
-    constructor(snackBar) {
-        this.snackBar = snackBar;
+    constructor(_snackBar) {
+        this._snackBar = _snackBar;
     }
     /**
      * @param {?} message
@@ -6649,7 +6649,7 @@ class SnackBarOverviewExample {
      * @return {?}
      */
     openSnackBar(message, action) {
-        this.snackBar.open(message, action, {
+        this._snackBar.open(message, action, {
             duration: 2000,
         });
     }
@@ -6675,10 +6675,10 @@ SnackBarOverviewExample.ctorParameters = () => [
  */
 class SnackBarPositionExample {
     /**
-     * @param {?} snackBar
+     * @param {?} _snackBar
      */
-    constructor(snackBar) {
-        this.snackBar = snackBar;
+    constructor(_snackBar) {
+        this._snackBar = _snackBar;
         this.horizontalPosition = 'start';
         this.verticalPosition = 'bottom';
     }
@@ -6686,7 +6686,7 @@ class SnackBarPositionExample {
      * @return {?}
      */
     openSnackBar() {
-        this.snackBar.open('Canonball!!', 'End now', {
+        this._snackBar.open('Canonball!!', 'End now', {
             duration: 500,
             horizontalPosition: this.horizontalPosition,
             verticalPosition: this.verticalPosition,
@@ -7659,10 +7659,10 @@ TableFooterRowExample.decorators = [
  */
 class TableHttpExample {
     /**
-     * @param {?} http
+     * @param {?} _httpClient
      */
-    constructor(http) {
-        this.http = http;
+    constructor(_httpClient) {
+        this._httpClient = _httpClient;
         this.displayedColumns = ['created', 'state', 'number', 'title'];
         this.data = [];
         this.resultsLength = 0;
@@ -7673,7 +7673,7 @@ class TableHttpExample {
      * @return {?}
      */
     ngAfterViewInit() {
-        this.exampleDatabase = new ExampleHttpDatabase(this.http);
+        this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
         // If the user changes the sort order, reset back to the first page.
         this.sort.sortChange.subscribe((/**
          * @return {?}
@@ -7731,10 +7731,10 @@ TableHttpExample.propDecorators = {
  */
 class ExampleHttpDatabase {
     /**
-     * @param {?} http
+     * @param {?} _httpClient
      */
-    constructor(http) {
-        this.http = http;
+    constructor(_httpClient) {
+        this._httpClient = _httpClient;
     }
     /**
      * @param {?} sort
@@ -7747,7 +7747,7 @@ class ExampleHttpDatabase {
         const href = 'https://api.github.com/search/issues';
         /** @type {?} */
         const requestUrl = `${href}?q=repo:angular/components&sort=${sort}&order=${order}&page=${page + 1}`;
-        return this.http.get(requestUrl);
+        return this._httpClient.get(requestUrl);
     }
 }
 
@@ -8475,22 +8475,22 @@ TextFieldAutofillDirectiveExample.decorators = [
  */
 class TextFieldAutofillMonitorExample {
     /**
-     * @param {?} autofill
+     * @param {?} _autofill
      */
-    constructor(autofill) {
-        this.autofill = autofill;
+    constructor(_autofill) {
+        this._autofill = _autofill;
     }
     /**
      * @return {?}
      */
     ngAfterViewInit() {
-        this.autofill.monitor(this.firstName)
+        this._autofill.monitor(this.firstName)
             .subscribe((/**
          * @param {?} e
          * @return {?}
          */
         e => this.firstNameAutofilled = e.isAutofilled));
-        this.autofill.monitor(this.lastName)
+        this._autofill.monitor(this.lastName)
             .subscribe((/**
          * @param {?} e
          * @return {?}
@@ -8501,8 +8501,8 @@ class TextFieldAutofillMonitorExample {
      * @return {?}
      */
     ngOnDestroy() {
-        this.autofill.stopMonitoring(this.firstName);
-        this.autofill.stopMonitoring(this.lastName);
+        this._autofill.stopMonitoring(this.firstName);
+        this._autofill.stopMonitoring(this.lastName);
     }
 }
 TextFieldAutofillMonitorExample.decorators = [
@@ -8530,17 +8530,17 @@ TextFieldAutofillMonitorExample.propDecorators = {
  */
 class TextFieldAutosizeTextareaExample {
     /**
-     * @param {?} ngZone
+     * @param {?} _ngZone
      */
-    constructor(ngZone) {
-        this.ngZone = ngZone;
+    constructor(_ngZone) {
+        this._ngZone = _ngZone;
     }
     /**
      * @return {?}
      */
     triggerResize() {
         // Wait for changes to be applied, then trigger textarea resize.
-        this.ngZone.onStable.pipe(take(1))
+        this._ngZone.onStable.pipe(take(1))
             .subscribe((/**
          * @return {?}
          */
@@ -8904,10 +8904,10 @@ ChecklistDatabase.ctorParameters = () => [];
  */
 class TreeChecklistExample {
     /**
-     * @param {?} database
+     * @param {?} _database
      */
-    constructor(database) {
-        this.database = database;
+    constructor(_database) {
+        this._database = _database;
         /**
          * Map from flat node to nested node. This helps us finding the nested node to be modified
          */
@@ -8980,7 +8980,7 @@ class TreeChecklistExample {
         this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
         this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
         this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe((/**
+        _database.dataChange.subscribe((/**
          * @param {?} data
          * @return {?}
          */
@@ -9115,7 +9115,7 @@ class TreeChecklistExample {
     addNewItem(node) {
         /** @type {?} */
         const parentNode = this.flatNodeMap.get(node);
-        this.database.insertItem((/** @type {?} */ (parentNode)), '');
+        this._database.insertItem((/** @type {?} */ (parentNode)), '');
         this.treeControl.expand(node);
     }
     /**
@@ -9127,7 +9127,7 @@ class TreeChecklistExample {
     saveNode(node, itemValue) {
         /** @type {?} */
         const nestedNode = this.flatNodeMap.get(node);
-        this.database.updateItem((/** @type {?} */ (nestedNode)), itemValue);
+        this._database.updateItem((/** @type {?} */ (nestedNode)), itemValue);
     }
 }
 TreeChecklistExample.decorators = [
@@ -9213,12 +9213,12 @@ class DynamicDatabase {
  */
 class DynamicDataSource {
     /**
-     * @param {?} treeControl
-     * @param {?} database
+     * @param {?} _treeControl
+     * @param {?} _database
      */
-    constructor(treeControl, database) {
-        this.treeControl = treeControl;
-        this.database = database;
+    constructor(_treeControl, _database) {
+        this._treeControl = _treeControl;
+        this._database = _database;
         this.dataChange = new BehaviorSubject([]);
     }
     /**
@@ -9230,7 +9230,7 @@ class DynamicDataSource {
      * @return {?}
      */
     set data(value) {
-        this.treeControl.dataNodes = value;
+        this._treeControl.dataNodes = value;
         this.dataChange.next(value);
     }
     /**
@@ -9238,7 +9238,7 @@ class DynamicDataSource {
      * @return {?}
      */
     connect(collectionViewer) {
-        this.treeControl.expansionModel.onChange.subscribe((/**
+        this._treeControl.expansionModel.onChange.subscribe((/**
          * @param {?} change
          * @return {?}
          */
@@ -9282,7 +9282,7 @@ class DynamicDataSource {
      */
     toggleNode(node, expand) {
         /** @type {?} */
-        const children = this.database.getChildren(node.item);
+        const children = this._database.getChildren(node.item);
         /** @type {?} */
         const index = this.data.indexOf(node);
         if (!children || index < 0) { // If no children, or cannot find the node, no op
@@ -9299,7 +9299,7 @@ class DynamicDataSource {
                  * @param {?} name
                  * @return {?}
                  */
-                name => new DynamicFlatNode(name, node.level + 1, this.database.isExpandable(name))));
+                name => new DynamicFlatNode(name, node.level + 1, this._database.isExpandable(name))));
                 this.data.splice(index + 1, 0, ...nodes);
             }
             else {
@@ -9402,7 +9402,7 @@ const TREE_DATA$3 = [
  */
 class TreeFlatOverviewExample {
     constructor() {
-        this.transformer = (/**
+        this._transformer = (/**
          * @param {?} node
          * @param {?} level
          * @return {?}
@@ -9423,7 +9423,7 @@ class TreeFlatOverviewExample {
          * @return {?}
          */
         node => node.expandable));
-        this.treeFlattener = new MatTreeFlattener(this.transformer, (/**
+        this.treeFlattener = new MatTreeFlattener(this._transformer, (/**
          * @param {?} node
          * @return {?}
          */
@@ -9589,10 +9589,10 @@ LoadmoreDatabase.decorators = [
  */
 class TreeLoadmoreExample {
     /**
-     * @param {?} database
+     * @param {?} _database
      */
-    constructor(database) {
-        this.database = database;
+    constructor(_database) {
+        this._database = _database;
         this.nodeMap = new Map();
         this.getChildren = (/**
          * @param {?} node
@@ -9640,14 +9640,14 @@ class TreeLoadmoreExample {
         this.treeFlattener = new MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
         this.treeControl = new FlatTreeControl(this.getLevel, this.isExpandable);
         this.dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-        database.dataChange.subscribe((/**
+        _database.dataChange.subscribe((/**
          * @param {?} data
          * @return {?}
          */
         data => {
             this.dataSource.data = data;
         }));
-        database.initialize();
+        _database.initialize();
     }
     /**
      * Load more nodes from data source
@@ -9655,14 +9655,14 @@ class TreeLoadmoreExample {
      * @return {?}
      */
     loadMore(item) {
-        this.database.loadMore(item);
+        this._database.loadMore(item);
     }
     /**
      * @param {?} node
      * @return {?}
      */
     loadChildren(node) {
-        this.database.loadMore(node.item, true);
+        this._database.loadMore(node.item, true);
     }
 }
 TreeLoadmoreExample.decorators = [

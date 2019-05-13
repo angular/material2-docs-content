@@ -24,7 +24,7 @@
 })
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AutocompleteOptgroupExample <span class="hljs-keyword">implements</span> OnInit {
-  stateForm: FormGroup = <span class="hljs-keyword">this</span>.fb.group({
+  stateForm: FormGroup = <span class="hljs-keyword">this</span>._formBuilder.group({
     stateGroup: <span class="hljs-string">''</span>,
   });
 
@@ -91,7 +91,7 @@
 
   stateGroupOptions: Observable&lt;StateGroup[]&gt;;
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> fb: FormBuilder</span>) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _formBuilder: FormBuilder</span>) {}
 
   ngOnInit() {
     <span class="hljs-keyword">this</span>.stateGroupOptions = <span class="hljs-keyword">this</span>.stateForm.get(<span class="hljs-string">'stateGroup'</span>)!.valueChanges

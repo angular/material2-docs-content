@@ -10,10 +10,10 @@
   styleUrls: [<span class="hljs-string">'snack-bar-overview-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SnackBarOverviewExample {
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> snackBar: MatSnackBar</span>) {}
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _snackBar: MatSnackBar</span>) {}
 
   openSnackBar(message: <span class="hljs-built_in">string</span>, action: <span class="hljs-built_in">string</span>) {
-    <span class="hljs-keyword">this</span>.snackBar.open(message, action, {
+    <span class="hljs-keyword">this</span>._snackBar.open(message, action, {
       duration: <span class="hljs-number">2000</span>,
     });
   }

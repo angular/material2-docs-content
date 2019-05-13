@@ -131,13 +131,13 @@
   /** <span class="hljs-params">The</span> <span class="hljs-params">selection</span> <span class="hljs-params">for</span> <span class="hljs-params">checklist</span> */
   <span class="hljs-params">checklistSelection</span> = <span class="hljs-params">new</span> <span class="hljs-params">SelectionModel</span>&lt;<span class="hljs-params">TodoItemFlatNode</span>&gt;(<span class="hljs-params"><span class="hljs-literal">true</span> <span class="hljs-comment">/* multiple */</span></span>);
 
-  <span class="hljs-params">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> database: ChecklistDatabase</span>) {
+  <span class="hljs-params">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _database: ChecklistDatabase</span>) {
     <span class="hljs-params">this</span>.<span class="hljs-params">treeFlattener</span> = <span class="hljs-params">new</span> <span class="hljs-params">MatTreeFlattener</span>(<span class="hljs-params"><span class="hljs-keyword">this</span>.transformer, <span class="hljs-keyword">this</span>.getLevel,
       <span class="hljs-keyword">this</span>.isExpandable, <span class="hljs-keyword">this</span>.getChildren</span>);
     <span class="hljs-params">this</span>.<span class="hljs-params">treeControl</span> = <span class="hljs-params">new</span> <span class="hljs-params">FlatTreeControl</span>&lt;<span class="hljs-params">TodoItemFlatNode</span>&gt;(<span class="hljs-params"><span class="hljs-keyword">this</span>.getLevel, <span class="hljs-keyword">this</span>.isExpandable</span>);
     <span class="hljs-params">this</span>.<span class="hljs-params">dataSource</span> = <span class="hljs-params">new</span> <span class="hljs-params">MatTreeFlatDataSource</span>(<span class="hljs-params"><span class="hljs-keyword">this</span>.treeControl, <span class="hljs-keyword">this</span>.treeFlattener</span>);
 
-    <span class="hljs-params">database</span>.<span class="hljs-params">dataChange</span>.<span class="hljs-params">subscribe</span>(<span class="hljs-params">data =&gt; {
+    _<span class="hljs-params">database</span>.<span class="hljs-params">dataChange</span>.<span class="hljs-params">subscribe</span>(<span class="hljs-params">data =&gt; {
       <span class="hljs-keyword">this</span>.dataSource.data = data;
     }</span>);
   }
@@ -251,13 +251,13 @@
   <span class="hljs-comment">/** Select the category so we can insert the new item. */</span>
   addNewItem(node: TodoItemFlatNode) {
     <span class="hljs-keyword">const</span> parentNode = <span class="hljs-keyword">this</span>.flatNodeMap.get(node);
-    <span class="hljs-keyword">this</span>.database.insertItem(parentNode!, <span class="hljs-string">''</span>);
+    <span class="hljs-keyword">this</span>._database.insertItem(parentNode!, <span class="hljs-string">''</span>);
     <span class="hljs-keyword">this</span>.treeControl.expand(node);
   }
 
   <span class="hljs-comment">/** Save the node to database */</span>
   saveNode(node: TodoItemFlatNode, itemValue: <span class="hljs-built_in">string</span>) {
     <span class="hljs-keyword">const</span> nestedNode = <span class="hljs-keyword">this</span>.flatNodeMap.get(node);
-    <span class="hljs-keyword">this</span>.database.updateItem(nestedNode!, itemValue);
+    <span class="hljs-keyword">this</span>._database.updateItem(nestedNode!, itemValue);
   }
 }

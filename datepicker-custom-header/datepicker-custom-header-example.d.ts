@@ -7,11 +7,11 @@ export declare class DatepickerCustomHeaderExample {
 }
 /** Custom header component for datepicker. */
 export declare class ExampleHeader<D> implements OnDestroy {
-    private calendar;
-    private dateAdapter;
-    private dateFormats;
-    private destroyed;
-    constructor(calendar: MatCalendar<D>, dateAdapter: DateAdapter<D>, dateFormats: MatDateFormats, cdr: ChangeDetectorRef);
+    private _calendar;
+    private _dateAdapter;
+    private _dateFormats;
+    private _destroyed;
+    constructor(_calendar: MatCalendar<D>, _dateAdapter: DateAdapter<D>, _dateFormats: MatDateFormats, cdr: ChangeDetectorRef);
     ngOnDestroy(): void;
     readonly periodLabel: string;
     previousClicked(mode: 'month' | 'year'): void;

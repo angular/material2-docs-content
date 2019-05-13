@@ -18,7 +18,7 @@ interface ExampleFlatNode {
  * @title Tree with flat nodes
  */
 export declare class TreeFlatOverviewExample {
-    private transformer;
+    private _transformer;
     treeControl: FlatTreeControl<ExampleFlatNode>;
     treeFlattener: MatTreeFlattener<FoodNode, {
         expandable: boolean;

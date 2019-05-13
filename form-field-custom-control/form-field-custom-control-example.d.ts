@@ -15,8 +15,8 @@ export declare class MyTel {
 }
 /** Custom `MatFormFieldControl` for telephone number input. */
 export declare class MyTelInput implements ControlValueAccessor, MatFormFieldControl<MyTel>, OnDestroy {
-    private fm;
-    private elRef;
+    private _focusMonitor;
+    private _elementRef;
     ngControl: NgControl;
     static nextId: number;
     parts: FormGroup;
@@ -37,7 +37,7 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     disabled: boolean;
     private _disabled;
     value: MyTel | null;
-    constructor(fb: FormBuilder, fm: FocusMonitor, elRef: ElementRef<HTMLElement>, ngControl: NgControl);
+    constructor(formBuilder: FormBuilder, _focusMonitor: FocusMonitor, _elementRef: ElementRef<HTMLElement>, ngControl: NgControl);
     ngOnDestroy(): void;
     setDescribedByIds(ids: string[]): void;
     onContainerClick(event: MouseEvent): void;

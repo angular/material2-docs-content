@@ -3,9 +3,9 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition
  * @title Snack-bar with configurable position
  */
 export declare class SnackBarPositionExample {
-    private snackBar;
+    private _snackBar;
     horizontalPosition: MatSnackBarHorizontalPosition;
     verticalPosition: MatSnackBarVerticalPosition;
-    constructor(snackBar: MatSnackBar);
+    constructor(_snackBar: MatSnackBar);
     openSnackBar(): void;
 }

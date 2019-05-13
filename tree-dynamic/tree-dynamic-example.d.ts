@@ -29,11 +29,11 @@ export declare class DynamicDatabase {
  * structure.
  */
 export declare class DynamicDataSource {
-    private treeControl;
-    private database;
+    private _treeControl;
+    private _database;
     dataChange: BehaviorSubject<DynamicFlatNode[]>;
     data: DynamicFlatNode[];
-    constructor(treeControl: FlatTreeControl<DynamicFlatNode>, database: DynamicDatabase);
+    constructor(_treeControl: FlatTreeControl<DynamicFlatNode>, _database: DynamicDatabase);
     connect(collectionViewer: CollectionViewer): Observable<DynamicFlatNode[]>;
     /** Handle expand/collapse behaviors */
     handleTreeControl(change: SelectionChange<DynamicFlatNode>): void;
