@@ -28,11 +28,6 @@
             core.Directive({
                 selector: 'form[matEditLens]',
                 host: {
-                    '(ngSubmit)': 'handleFormSubmit()',
-                    '(keydown.enter)': 'editRef.trackEnterPressForClose(true)',
-                    '(keyup.enter)': 'editRef.trackEnterPressForClose(false)',
-                    '(keyup.escape)': 'close()',
-                    '(document:click)': 'handlePossibleClickOut($event)',
                     'class': 'mat-edit-lens',
                 },
                 inputs: [
@@ -56,7 +51,6 @@
             core.Directive({
                 selector: 'button[matEditRevert]',
                 host: {
-                    '(click)': 'revertEdit()',
                     'type': 'button',
                 }
             })
@@ -73,7 +67,6 @@
             core.Directive({
                 selector: 'button[matEditClose]',
                 host: {
-                    '(click)': 'closeEdit()',
                     'type': 'button',
                 }
             })
@@ -194,7 +187,6 @@
         MatEditOpen = tslib_1.__decorate([
             core.Directive({
                 selector: '[matEditOpen]',
-                host: { '(click)': 'openEdit($event)' }
             })
         ], MatEditOpen);
         return MatEditOpen;

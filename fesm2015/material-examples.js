@@ -76,11 +76,6 @@ MatEditLens.decorators = [
     { type: Directive, args: [{
                 selector: 'form[matEditLens]',
                 host: {
-                    '(ngSubmit)': 'handleFormSubmit()',
-                    '(keydown.enter)': 'editRef.trackEnterPressForClose(true)',
-                    '(keyup.enter)': 'editRef.trackEnterPressForClose(false)',
-                    '(keyup.escape)': 'close()',
-                    '(document:click)': 'handlePossibleClickOut($event)',
                     'class': 'mat-edit-lens',
                 },
                 inputs: [
@@ -102,7 +97,6 @@ MatEditRevert.decorators = [
     { type: Directive, args: [{
                 selector: 'button[matEditRevert]',
                 host: {
-                    '(click)': 'revertEdit()',
                     'type': 'button',
                 }
             },] }
@@ -117,7 +111,6 @@ MatEditClose.decorators = [
     { type: Directive, args: [{
                 selector: 'button[matEditClose]',
                 host: {
-                    '(click)': 'closeEdit()',
                     'type': 'button',
                 }
             },] }
@@ -253,7 +246,6 @@ class MatEditOpen extends CdkEditOpen {
 MatEditOpen.decorators = [
     { type: Directive, args: [{
                 selector: '[matEditOpen]',
-                host: { '(click)': 'openEdit($event)' }
             },] }
 ];
 

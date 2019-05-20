@@ -82,11 +82,6 @@ var MatEditLens = /** @class */ (function (_super) {
         Directive({
             selector: 'form[matEditLens]',
             host: {
-                '(ngSubmit)': 'handleFormSubmit()',
-                '(keydown.enter)': 'editRef.trackEnterPressForClose(true)',
-                '(keyup.enter)': 'editRef.trackEnterPressForClose(false)',
-                '(keyup.escape)': 'close()',
-                '(document:click)': 'handlePossibleClickOut($event)',
                 'class': 'mat-edit-lens',
             },
             inputs: [
@@ -110,7 +105,6 @@ var MatEditRevert = /** @class */ (function (_super) {
         Directive({
             selector: 'button[matEditRevert]',
             host: {
-                '(click)': 'revertEdit()',
                 'type': 'button',
             }
         })
@@ -127,7 +121,6 @@ var MatEditClose = /** @class */ (function (_super) {
         Directive({
             selector: 'button[matEditClose]',
             host: {
-                '(click)': 'closeEdit()',
                 'type': 'button',
             }
         })
@@ -248,7 +241,6 @@ var MatEditOpen = /** @class */ (function (_super) {
     MatEditOpen = __decorate([
         Directive({
             selector: '[matEditOpen]',
-            host: { '(click)': 'openEdit($event)' }
         })
     ], MatEditOpen);
     return MatEditOpen;
