@@ -51,10 +51,10 @@ via application of the <code>matMenuTriggerFor</code> directive:</p>
           <span header-link="customizing-menu-position"></span>
           Customizing menu position
         </h3>
-      <p>By default, the menu will display below (y-axis), after (x-axis), and overlapping its trigger.
-The position can be changed using the <code>xPosition</code> (<code>before | after</code>) and <code>yPosition</code>
-(<code>above | below</code>) attributes. The menu can be be forced to not overlap the trigger using
-<code>[overlapTrigger]=&quot;false&quot;</code> attribute.</p>
+      <p>By default, the menu will display below (y-axis), after (x-axis), without overlapping
+its trigger. The position can be changed using the <code>xPosition</code> (<code>before | after</code>) and <code>yPosition</code>
+(<code>above | below</code>) attributes. The menu can be forced to overlap the trigger using the
+<code>overlapTrigger</code> attribute.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-menu</span> #<span class="hljs-attr">appMenu</span>=<span class="hljs-string">"matMenu"</span> <span class="hljs-attr">yPosition</span>=<span class="hljs-string">"above"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Settings<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-menu-item</span>&gt;</span>Help<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
