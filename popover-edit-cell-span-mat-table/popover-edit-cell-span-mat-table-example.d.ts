@@ -1,7 +1,5 @@
 import { DataSource } from '@angular/cdk/collections';
-import { DomSanitizer } from '@angular/platform-browser';
 import { NgForm } from '@angular/forms';
-import { MatIconRegistry } from '@angular/material/icon';
 import { BehaviorSubject, Observable } from 'rxjs';
 export interface Person {
     id: number;
@@ -16,7 +14,6 @@ export declare class PopoverEditCellSpanMatTableExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource;
     readonly preservedValues: WeakMap<Person, any>;
-    constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer);
     onSubmit(person: Person, f: NgForm): void;
 }
 /**

@@ -1,8 +1,7 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
-<span class="hljs-keyword">import</span> {DomSanitizer} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser'</span>;
 <span class="hljs-keyword">import</span> {NgForm} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
-<span class="hljs-keyword">import</span> {MatIconRegistry} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatSnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/snack-bar'</span>;
 <span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PeriodicElement {
@@ -50,11 +49,7 @@
   readonly preservedNameValues = <span class="hljs-keyword">new</span> WeakMap&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
   readonly preservedWeightValues = <span class="hljs-keyword">new</span> WeakMap&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
 
-  <span class="hljs-keyword">constructor</span>(<span class="hljs-params">iconRegistry: MatIconRegistry, sanitizer: DomSanitizer</span>) {
-    iconRegistry.addSvgIcon(
-        <span class="hljs-string">'edit'</span>,
-        sanitizer.bypassSecurityTrustResourceUrl(<span class="hljs-string">'assets/img/examples/edit-icon.svg'</span>));
-  }
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> readonly _snackBar: MatSnackBar</span>) {}
 
   onSubmitName(element: PeriodicElement, f: NgForm) {
     <span class="hljs-keyword">if</span> (!f.valid) { <span class="hljs-keyword">return</span>; }
@@ -66,6 +61,15 @@
     <span class="hljs-keyword">if</span> (!f.valid) { <span class="hljs-keyword">return</span>; }
 
     element.weight = f.value.weight;
+  }
+
+  goodJob(element: PeriodicElement) {
+    <span class="hljs-keyword">this</span>._snackBar.open(<span class="hljs-string">`Way to go, <span class="hljs-subst">${element.name}</span>!`</span>, <span class="hljs-literal">undefined</span>, {duration: <span class="hljs-number">2000</span>});
+  }
+
+  badJob(element: PeriodicElement) {
+    <span class="hljs-keyword">this</span>._snackBar.open(<span class="hljs-string">`You have failed me for the last time, #<span class="hljs-subst">${element.position}</span>.`</span>, <span class="hljs-literal">undefined</span>,
+        {duration: <span class="hljs-number">2000</span>});
   }
 }
 

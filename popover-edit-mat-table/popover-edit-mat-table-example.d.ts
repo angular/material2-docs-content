@@ -1,7 +1,6 @@
 import { DataSource } from '@angular/cdk/collections';
-import { DomSanitizer } from '@angular/platform-browser';
 import { NgForm } from '@angular/forms';
-import { MatIconRegistry } from '@angular/material/icon';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { BehaviorSubject, Observable } from 'rxjs';
 export interface PeriodicElement {
     name: string;
@@ -13,13 +12,16 @@ export interface PeriodicElement {
  * @title Material Popover Edit on a Material data-table
  */
 export declare class PopoverEditMatTableExample {
+    private readonly _snackBar;
     displayedColumns: string[];
     dataSource: ExampleDataSource;
     readonly preservedNameValues: WeakMap<PeriodicElement, any>;
     readonly preservedWeightValues: WeakMap<PeriodicElement, any>;
-    constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer);
+    constructor(_snackBar: MatSnackBar);
     onSubmitName(element: PeriodicElement, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
+    goodJob(element: PeriodicElement): void;
+    badJob(element: PeriodicElement): void;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

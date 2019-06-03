@@ -1,7 +1,5 @@
 import { DataSource } from '@angular/cdk/collections';
-import { DomSanitizer } from '@angular/platform-browser';
 import { NgForm } from '@angular/forms';
-import { MatIconRegistry } from '@angular/material/icon';
 import { BehaviorSubject, Observable } from 'rxjs';
 export interface PeriodicElement {
     name: string;
@@ -17,7 +15,6 @@ export declare class PopoverEditTabOutMatTableExample {
     dataSource: ExampleDataSource;
     readonly preservedNameValues: WeakMap<PeriodicElement, any>;
     readonly preservedWeightValues: WeakMap<PeriodicElement, any>;
-    constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer);
     onSubmitName(element: PeriodicElement, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
 }
