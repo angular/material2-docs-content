@@ -8,7 +8,8 @@
       <form #f="ngForm"
           matEditLens
           (ngSubmit)="onSubmitWeight(element, f)"
-          [(matEditLensPreservedFormValue)]="weightValues.for(element).value">
+          [matEditLensPreservedFormValue]="preservedWeightValues.get(element)"
+          (matEditLensPreservedFormValueChange)="preservedWeightValues.set(element, $event)">
         <div mat-edit-content>
           <mat-form-field>
             <input matInput type="number" [ngModel]="element.weight" name="weight" required>
@@ -49,7 +50,8 @@
           <form #f="ngForm"
               matEditLens
               (ngSubmit)="onSubmitName(element, f)"
-              [(matEditLensPreservedFormValue)]="nameValues.for(element).value">
+              [matEditLensPreservedFormValue]="preservedNameValues.get(element)"
+              (matEditLensPreservedFormValueChange)="preservedNameValues.set(element, $event)">
             <h2 mat-edit-title>Name</h2>
             <div mat-edit-content>
               <mat-form-field>
