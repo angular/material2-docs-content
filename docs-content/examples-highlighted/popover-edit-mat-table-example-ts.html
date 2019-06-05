@@ -1,5 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
+<span class="hljs-keyword">import</span> {FormValueContainer} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk-experimental/popover-edit'</span>;
 <span class="hljs-keyword">import</span> {NgForm} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> {MatSnackBar} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/snack-bar'</span>;
 <span class="hljs-keyword">import</span> {BehaviorSubject, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
@@ -46,8 +47,8 @@
   displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
   dataSource = <span class="hljs-keyword">new</span> ExampleDataSource();
 
-  readonly preservedNameValues = <span class="hljs-keyword">new</span> WeakMap&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
-  readonly preservedWeightValues = <span class="hljs-keyword">new</span> WeakMap&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
+  readonly nameValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
+  readonly weightValues = <span class="hljs-keyword">new</span> FormValueContainer&lt;PeriodicElement, <span class="hljs-built_in">any</span>&gt;();
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> readonly _snackBar: MatSnackBar</span>) {}
 
