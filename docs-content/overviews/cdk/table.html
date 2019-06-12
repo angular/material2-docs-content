@@ -102,7 +102,7 @@ the class <code>cdk-column--nameColumn-</code>.    </p>
 it calls the DataSource&#39;s <code>connect()</code> method which returns an observable that emits an array of data.
 Whenever the data source emits data to this stream, the table will render an update.</p>
 <p>Because the <em>data source</em> provides this stream, it bears the responsibility of triggering table
-updates. This can be based on _anything_: websocket connections, user interaction, model updates,
+updates. This can be based on <em>anything</em>: websocket connections, user interaction, model updates,
 time-based intervals, etc. Most commonly, updates will be triggered by user interactions like
 sorting and pagination.</p>
 <h5><code>trackBy</code></h5><p>To improve performance, a <code>trackBy</code> function can be provided to the table similar to Angular’s
