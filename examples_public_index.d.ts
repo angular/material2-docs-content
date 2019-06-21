@@ -7,7 +7,7 @@ export { AutocompleteDisplayExample as ɵangular_material_src_material_examples_
 export { AutocompleteFilterExample as ɵangular_material_src_material_examples_examples_c } from './autocomplete-filter/autocomplete-filter-example';
 export { AutocompleteOptgroupExample as ɵangular_material_src_material_examples_examples_d } from './autocomplete-optgroup/autocomplete-optgroup-example';
 export { AutocompleteOverviewExample as ɵangular_material_src_material_examples_examples_e } from './autocomplete-overview/autocomplete-overview-example';
-export { PlainInputAutocompleteExample as ɵangular_material_src_material_examples_examples_f } from './autocomplete-plain-input/autocomplete-plain-input-example';
+export { AutocompletePlainInputExample as ɵangular_material_src_material_examples_examples_f } from './autocomplete-plain-input/autocomplete-plain-input-example';
 export { AutocompleteSimpleExample as ɵangular_material_src_material_examples_examples_g } from './autocomplete-simple/autocomplete-simple-example';
 export { BadgeOverviewExample as ɵangular_material_src_material_examples_examples_h } from './badge-overview/badge-overview-example';
 export { BottomSheetOverviewExample as ɵangular_material_src_material_examples_examples_i, BottomSheetOverviewExampleSheet as ɵangular_material_src_material_examples_examples_j } from './bottom-sheet-overview/bottom-sheet-overview-example';
