@@ -6,4 +6,5 @@ export declare class TabNavBarBasicExample {
     activeLink: string;
     background: string;
     toggleBackground(): void;
+    addLink(): void;
 }

@@ -5586,11 +5586,14 @@
         TabNavBarBasicExample.prototype.toggleBackground = function () {
             this.background = this.background ? '' : 'primary';
         };
+        TabNavBarBasicExample.prototype.addLink = function () {
+            this.links.push("Link " + (this.links.length + 1));
+        };
         TabNavBarBasicExample = tslib_1.__decorate([
             core.Component({
                 selector: 'tab-nav-bar-basic-example',
-                template: "<button mat-raised-button\n        class=\"example-action-button\"\n        (click)=\"toggleBackground()\">\n  Toggle background\n</button>\n\n<nav mat-tab-nav-bar [backgroundColor]=\"background\">\n  <a mat-tab-link *ngFor=\"let link of links\"\n     (click)=\"activeLink = link\"\n     [active]=\"activeLink == link\"> {{link}} </a>\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n",
-                styles: [".example-action-button {\n  margin-bottom: 8px;\n}\n"]
+                template: "<nav mat-tab-nav-bar [backgroundColor]=\"background\">\n  <a mat-tab-link *ngFor=\"let link of links\"\n     (click)=\"activeLink = link\"\n     [active]=\"activeLink == link\"> {{link}} </a>\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n\n<button mat-raised-button class=\"example-action-button\" (click)=\"toggleBackground()\">\n  Toggle background\n</button>\n<button mat-raised-button class=\"example-action-button\" (click)=\"addLink()\">\n  Add link\n</button>\n",
+                styles: [".example-action-button {\n  margin-top: 8px;\n  margin-right: 8px;\n}\n"]
             })
         ], TabNavBarBasicExample);
         return TabNavBarBasicExample;

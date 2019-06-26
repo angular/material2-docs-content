@@ -16,4 +16,8 @@
   toggleBackground() {
     <span class="hljs-keyword">this</span>.background = <span class="hljs-keyword">this</span>.background ? <span class="hljs-string">''</span> : <span class="hljs-string">'primary'</span>;
   }
+
+  addLink() {
+    <span class="hljs-keyword">this</span>.links.push(<span class="hljs-string">`Link <span class="hljs-subst">${this.links.length + 1}</span>`</span>);
+  }
 }
