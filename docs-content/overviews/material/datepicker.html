@@ -273,7 +273,7 @@ requires. This is accomplished by subclassing <code>DateAdapter</code> and provi
 <code>DateAdapter</code> implementation. You will also want to make sure that the <code>MAT_DATE_FORMATS</code> provided
 in your app are formats that can be understood by your date implementation. See
 <a href="#customizing-the-parse-and-display-formats"><em>Customizing the parse and display formats</em></a>for more
-information about <code>MAT_DATE_FORMATS</code>. <!-- TODO(mmalerba): Add a guide about this --></p>
+information about <code>MAT_DATE_FORMATS</code>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   imports: [MatDatepickerModule],
   providers: [
@@ -303,6 +303,30 @@ they do not include the default formats. For example:</p>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}</code></pre>
 <div material-docs-example="datepicker-formats"></div>
 
+<h5>MomentDateModule formats</h5><p>To use custom formats with the <code>MomentDateModule</code> you can pick from the parse formats documented
+<a href="https://momentjs.com/docs/#/parsing/string-format/">here</a> and the display formats documented
+<a href="https://momentjs.com/docs/#/displaying/format/">here</a>.</p>
+<p>It is also possible to support multiple parse formats. For example:</p>
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  imports: [MatDatepickerModule, MomentDateModule],
+  providers: [
+    {
+      provide: MAT_DATE_FORMATS,
+      useValue: {
+        parse: {
+          dateInput: [<span class="hljs-string">'l'</span>, <span class="hljs-string">'LL'</span>],
+        },
+        display: {
+          dateInput: <span class="hljs-string">'L'</span>,
+          monthYearLabel: <span class="hljs-string">'MMM YYYY'</span>,
+          dateA11yLabel: <span class="hljs-string">'LL'</span>,
+          monthYearA11yLabel: <span class="hljs-string">'MMMM YYYY'</span>,
+        },
+      },
+    },
+  ],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyApp {}</code></pre>
 
         <h4 id="customizing-the-calendar-header" class="docs-header-link">
           <span header-link="customizing-the-calendar-header"></span>
