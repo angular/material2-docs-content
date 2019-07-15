@@ -43,7 +43,7 @@ build should not be considered stable and may break between releases.</p>
           <span header-link="alternative-2-angular-devkit-6-"></span>
           Alternative 2: Angular Devkit 6+
         </h4>
-      <p>Using the Angular CLI <code>ng add</code> command will update your Angular project with the correct dependencies, perform configuration changes and execute initialization code. </p>
+      <p>Using the Angular CLI <code>ng add</code> command will update your Angular project with the correct dependencies, perform configuration changes and execute initialization code.</p>
 <pre><code class="language-bash">ng add @angular/material</code></pre>
 
         <h3 id="step-2-configure-animations" class="docs-header-link">
@@ -74,7 +74,8 @@ build should not be considered stable and may break between releases.</p>
           Step 3: Import the component modules
         </h3>
       <p>Import the NgModule for each component you want to use:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MatButtonModule, MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   ...
@@ -83,7 +84,8 @@ build should not be considered stable and may break between releases.</p>
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PizzaPartyAppModule { }</code></pre>
 <p>Alternatively, you can create a separate NgModule that imports and then re-exports all of the Angular Material components that you will use in your application. By exporting them again, other modules can simply include your <code>CustomMaterialModule</code> wherever Material components are needed, and automatically get all of the exported Material modules. A good place for importing/exporting the application-wide Material modules is the <a href="https://angular.io/guide/ngmodule-faq#sharedmodule">SharedModule</a>.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MatButtonModule, MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
 
 <span class="hljs-meta">@NgModule</span>({
   imports: [MatButtonModule, MatCheckboxModule],
