@@ -167,6 +167,13 @@ default.</p>
   <span header-link="MatNestedTreeNode"></span>
   <code>MatNestedTreeNode</code>
   
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/tree/api#CdkNestedTreeNode" class="docs-api-class-extends-type">
+      CdkNestedTreeNode
+    </a>
+  </span>
+  
 </h4><p class="docs-api-class-description"><p>Wrapper for the CdkTree nested node with Material design styles.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
@@ -186,10 +193,10 @@ default.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
+      <code>disabled: any</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+  <td class="docs-api-property-description"><p>Whether the node is disabled.</p>
 </td>
 </tr>
 
@@ -211,8 +218,60 @@ default.</p>
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>role: &#39;treeitem&#39; | &#39;group&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The role of the node should be &#39;group&#39; if it&#39;s an internal node,
+and &#39;treeitem&#39; if it&#39;s a leaf node.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>nodeOutlet: QueryList&lt;MatTreeNodeOutlet&gt;</code>
+      <code>data: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The tree node&#39;s data.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>isExpanded: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>level: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>nodeOutlet: QueryList&lt;CdkTreeNodeOutlet&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The children node placeholder.</p>
@@ -224,7 +283,60 @@ default.</p>
   </table>
 
 
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
 
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">focus
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the menu item. Implements for FocusableOption.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateChildrenNodes
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Add children dataNodes to the NodeOutlet</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        children<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">T[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
+
+
+  
 
 
 
