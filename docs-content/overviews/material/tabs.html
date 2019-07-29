@@ -125,6 +125,16 @@ duration can be configured globally using the <code>MAT_TABS_CONFIG</code> injec
           <span header-link="accessibility"></span>
           Accessibility
         </h3>
+      <p><code>&lt;mat-tab-group&gt;</code> and <code>&lt;mat-nav-tab-bar&gt;</code> use different interaction patterns. The
+<code>&lt;mat-tab-group&gt;</code> component combines <code>tablist</code>, <code>tab</code>, and <code>tabpanel</code> into a single component with
+the appropriate keyboard shortcuts. The <code>&lt;mat-nav-tab-bar&gt;</code>, however, use a <em>navigation</em> interaction
+pattern by using a <code>&lt;nav&gt;</code> element with anchor elements as the &quot;tabs&quot;. The difference
+between these two patterns comes from the fact one updates the page URL while the other does not.</p>
+
+        <h4 id="labels" class="docs-header-link">
+          <span header-link="labels"></span>
+          Labels
+        </h4>
       <p>Tabs without text or labels should be given a meaningful label via <code>aria-label</code> or
 <code>aria-labelledby</code>. For <code>MatTabNav</code>, the <code>&lt;nav&gt;</code> element should have a label as well.</p>
 
