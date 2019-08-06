@@ -2643,12 +2643,11 @@
             return moment.invalid();
         };
         /** Creates a Moment instance while respecting the current UTC settings. */
-        MomentDateAdapter.prototype._createMoment = function () {
-            var args = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                args[_i] = arguments[_i];
-            }
-            return (this._options && this._options.useUtc) ? moment.utc.apply(moment, tslib_1.__spread(args)) : moment.apply(void 0, tslib_1.__spread(args));
+        MomentDateAdapter.prototype._createMoment = function (date, format, locale) {
+            var _a = this._options || {}, strict = _a.strict, useUtc = _a.useUtc;
+            return useUtc
+                ? moment.utc(date, format, locale, strict)
+                : moment(date, format, locale, strict);
         };
         MomentDateAdapter = tslib_1.__decorate([
             core.Injectable(),

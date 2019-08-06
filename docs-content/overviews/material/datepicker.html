@@ -265,7 +265,18 @@ example:</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   imports: [MatDatepickerModule, MatMomentDateModule],
   providers: [
-    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: <span class="hljs-literal">true</span> } }
+    {provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {useUtc: <span class="hljs-literal">true</span>}}
+  ]
+})</code></pre>
+<p>By default the <code>MomentDateAdapter</code> will parse dates in a
+<a href="https://momentjs.com/guides/#/parsing/forgiving-mode/">forgiving way</a>. This may result in dates
+being parsed incorrectly. You can change the default behaviour to
+<a href="https://momentjs.com/guides/#/parsing/strict-mode/">parse dates strictly</a> by providing
+the <code>MAT_MOMENT_DATE_ADAPTER_OPTIONS</code> and setting it to <code>strict: true</code>.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  imports: [MatDatepickerModule, MatMomentDateModule],
+  providers: [
+    {provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {strict: <span class="hljs-literal">true</span>}}
   ]
 })</code></pre>
 <p>It is also possible to create your own <code>DateAdapter</code> that works with any date format your app

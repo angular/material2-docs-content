@@ -3505,11 +3505,16 @@ class MomentDateAdapter extends DateAdapter {
     /**
      * Creates a Moment instance while respecting the current UTC settings.
      * @private
-     * @param {...?} args
+     * @param {?} date
+     * @param {?=} format
+     * @param {?=} locale
      * @return {?}
      */
-    _createMoment(...args) {
-        return (this._options && this._options.useUtc) ? moment.utc(...args) : moment(...args);
+    _createMoment(date, format, locale) {
+        const { strict, useUtc } = this._options || {};
+        return useUtc
+            ? moment.utc(date, format, locale, strict)
+            : moment(date, format, locale, strict);
     }
 }
 MomentDateAdapter.decorators = [
