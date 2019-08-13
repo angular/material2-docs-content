@@ -441,11 +441,27 @@ AutocompleteAutoActiveFirstOptionExample.decorators = [
                 styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    AutocompleteAutoActiveFirstOptionExample.prototype.myControl;
+    /** @type {?} */
+    AutocompleteAutoActiveFirstOptionExample.prototype.options;
+    /** @type {?} */
+    AutocompleteAutoActiveFirstOptionExample.prototype.filteredOptions;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function User() { }
+if (false) {
+    /** @type {?} */
+    User.prototype.name;
+}
 /**
  * \@title Display value autocomplete
  */
@@ -502,6 +518,14 @@ AutocompleteDisplayExample.decorators = [
                 styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    AutocompleteDisplayExample.prototype.myControl;
+    /** @type {?} */
+    AutocompleteDisplayExample.prototype.options;
+    /** @type {?} */
+    AutocompleteDisplayExample.prototype.filteredOptions;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -548,11 +572,29 @@ AutocompleteFilterExample.decorators = [
                 styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    AutocompleteFilterExample.prototype.myControl;
+    /** @type {?} */
+    AutocompleteFilterExample.prototype.options;
+    /** @type {?} */
+    AutocompleteFilterExample.prototype.filteredOptions;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function StateGroup() { }
+if (false) {
+    /** @type {?} */
+    StateGroup.prototype.letter;
+    /** @type {?} */
+    StateGroup.prototype.names;
+}
 /** @type {?} */
 const _filter = (/**
  * @param {?} opt
@@ -685,11 +727,36 @@ AutocompleteOptgroupExample.decorators = [
 AutocompleteOptgroupExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    AutocompleteOptgroupExample.prototype.stateForm;
+    /** @type {?} */
+    AutocompleteOptgroupExample.prototype.stateGroups;
+    /** @type {?} */
+    AutocompleteOptgroupExample.prototype.stateGroupOptions;
+    /**
+     * @type {?}
+     * @private
+     */
+    AutocompleteOptgroupExample.prototype._formBuilder;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function State() { }
+if (false) {
+    /** @type {?} */
+    State.prototype.flag;
+    /** @type {?} */
+    State.prototype.name;
+    /** @type {?} */
+    State.prototype.population;
+}
 /**
  * \@title Autocomplete overview
  */
@@ -753,6 +820,14 @@ AutocompleteOverviewExample.decorators = [
 ];
 /** @nocollapse */
 AutocompleteOverviewExample.ctorParameters = () => [];
+if (false) {
+    /** @type {?} */
+    AutocompleteOverviewExample.prototype.stateCtrl;
+    /** @type {?} */
+    AutocompleteOverviewExample.prototype.filteredStates;
+    /** @type {?} */
+    AutocompleteOverviewExample.prototype.states;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -806,6 +881,14 @@ AutocompletePlainInputExample.decorators = [
                 styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    AutocompletePlainInputExample.prototype.control;
+    /** @type {?} */
+    AutocompletePlainInputExample.prototype.streets;
+    /** @type {?} */
+    AutocompletePlainInputExample.prototype.filteredStreets;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -827,6 +910,12 @@ AutocompleteSimpleExample.decorators = [
                 styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    AutocompleteSimpleExample.prototype.myControl;
+    /** @type {?} */
+    AutocompleteSimpleExample.prototype.options;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -877,6 +966,13 @@ BottomSheetOverviewExample.decorators = [
 BottomSheetOverviewExample.ctorParameters = () => [
     { type: MatBottomSheet }
 ];
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    BottomSheetOverviewExample.prototype._bottomSheet;
+}
 class BottomSheetOverviewExampleSheet {
     /**
      * @param {?} _bottomSheetRef
@@ -903,6 +999,13 @@ BottomSheetOverviewExampleSheet.decorators = [
 BottomSheetOverviewExampleSheet.ctorParameters = () => [
     { type: MatBottomSheetRef }
 ];
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    BottomSheetOverviewExampleSheet.prototype._bottomSheetRef;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1137,6 +1240,12 @@ CdkDragDropConnectedSortingGroupExample.decorators = [
                 styles: [".example-container {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkDragDropConnectedSortingGroupExample.prototype.todo;
+    /** @type {?} */
+    CdkDragDropConnectedSortingGroupExample.prototype.done;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1181,6 +1290,12 @@ CdkDragDropConnectedSortingExample.decorators = [
                 styles: [".example-container {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkDragDropConnectedSortingExample.prototype.todo;
+    /** @type {?} */
+    CdkDragDropConnectedSortingExample.prototype.done;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1217,6 +1332,10 @@ CdkDragDropCustomPlaceholderExample.decorators = [
                 styles: [".example-list {\n  width: 500px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: block;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-custom-placeholder {\n  background: #ccc;\n  border: dotted 3px #999;\n  min-height: 60px;\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkDragDropCustomPlaceholderExample.prototype.movies;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1279,6 +1398,10 @@ CdkDragDropCustomPreviewExample.decorators = [
                 styles: [".example-list {\n  width: 500px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: block;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkDragDropCustomPreviewExample.prototype.movies;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1339,6 +1462,12 @@ CdkDragDropDisabledSortingExample.decorators = [
                 styles: [".example-container {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkDragDropDisabledSortingExample.prototype.items;
+    /** @type {?} */
+    CdkDragDropDisabledSortingExample.prototype.basket;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1370,6 +1499,10 @@ CdkDragDropDisabledExample.decorators = [
                 styles: [".example-list {\n  width: 500px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: block;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.example-box.cdk-drag-disabled {\n  background: #ccc;\n  cursor: default;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkDragDropDisabledExample.prototype.items;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1418,6 +1551,12 @@ CdkDragDropEnterPredicateExample.decorators = [
                 styles: [".example-container {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkDragDropEnterPredicateExample.prototype.all;
+    /** @type {?} */
+    CdkDragDropEnterPredicateExample.prototype.even;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1444,6 +1583,10 @@ CdkDragDropFreeDragPositionExample.decorators = [
                 styles: [".example-box {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  position: relative;\n  z-index: 1;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkDragDropFreeDragPositionExample.prototype.dragPosition;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1494,6 +1637,10 @@ CdkDragDropHorizontalSortingExample.decorators = [
                 styles: [".example-list {\n  width: 1000px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: flex;\n  flex-direction: row;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-right: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n  flex-grow: 1;\n  flex-basis: 0;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkDragDropHorizontalSortingExample.prototype.timePeriods;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1570,6 +1717,30 @@ CdkDragDropRootElementExample.ctorParameters = () => [
 CdkDragDropRootElementExample.propDecorators = {
     _dialogTemplate: [{ type: ViewChild, args: [TemplateRef, { static: false },] }]
 };
+if (false) {
+    /** @type {?} */
+    CdkDragDropRootElementExample.prototype._dialogTemplate;
+    /**
+     * @type {?}
+     * @private
+     */
+    CdkDragDropRootElementExample.prototype._overlayRef;
+    /**
+     * @type {?}
+     * @private
+     */
+    CdkDragDropRootElementExample.prototype._portal;
+    /**
+     * @type {?}
+     * @private
+     */
+    CdkDragDropRootElementExample.prototype._overlay;
+    /**
+     * @type {?}
+     * @private
+     */
+    CdkDragDropRootElementExample.prototype._viewContainerRef;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1606,6 +1777,10 @@ CdkDragDropSortingExample.decorators = [
                 styles: [".example-list {\n  width: 500px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: block;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder {\n  opacity: 0;\n}\n\n.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkDragDropSortingExample.prototype.movies;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -1636,11 +1811,35 @@ CdkPlatformOverviewExample.decorators = [
 CdkPlatformOverviewExample.ctorParameters = () => [
     { type: Platform }
 ];
+if (false) {
+    /** @type {?} */
+    CdkPlatformOverviewExample.prototype.supportedInputTypes;
+    /** @type {?} */
+    CdkPlatformOverviewExample.prototype.supportsPassiveEventListeners;
+    /** @type {?} */
+    CdkPlatformOverviewExample.prototype.supportsScrollBehavior;
+    /** @type {?} */
+    CdkPlatformOverviewExample.prototype.platform;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement.prototype.name;
+    /** @type {?} */
+    PeriodicElement.prototype.position;
+    /** @type {?} */
+    PeriodicElement.prototype.weight;
+    /** @type {?} */
+    PeriodicElement.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -1704,6 +1903,16 @@ CdkPopoverEditCdkTableFlexExample.decorators = [
                 styles: ["/**\n * Add basic flex styling so that the cells evenly space themselves in the row.\n */\n.example-table cdk-row, cdk-header-row, cdk-footer-row {\n  display: flex;\n}\n\n.example-table cdk-cell, cdk-header-cell, cdk-footer-cell {\n  flex: 1;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkPopoverEditCdkTableFlexExample.prototype.displayedColumns;
+    /** @type {?} */
+    CdkPopoverEditCdkTableFlexExample.prototype.dataSource;
+    /** @type {?} */
+    CdkPopoverEditCdkTableFlexExample.prototype.preservedNameValues;
+    /** @type {?} */
+    CdkPopoverEditCdkTableFlexExample.prototype.preservedWeightValues;
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -1731,11 +1940,32 @@ class ExampleDataSource extends DataSource {
      */
     disconnect() { }
 }
+if (false) {
+    /**
+     * Stream of data that is provided to the table.
+     * @type {?}
+     */
+    ExampleDataSource.prototype.data;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$1() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$1.prototype.name;
+    /** @type {?} */
+    PeriodicElement$1.prototype.position;
+    /** @type {?} */
+    PeriodicElement$1.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$1.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -1799,6 +2029,16 @@ CdkPopoverEditCdkTableExample.decorators = [
                 styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkPopoverEditCdkTableExample.prototype.displayedColumns;
+    /** @type {?} */
+    CdkPopoverEditCdkTableExample.prototype.dataSource;
+    /** @type {?} */
+    CdkPopoverEditCdkTableExample.prototype.preservedNameValues;
+    /** @type {?} */
+    CdkPopoverEditCdkTableExample.prototype.preservedWeightValues;
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -1826,11 +2066,32 @@ class ExampleDataSource$1 extends DataSource {
      */
     disconnect() { }
 }
+if (false) {
+    /**
+     * Stream of data that is provided to the table.
+     * @type {?}
+     */
+    ExampleDataSource$1.prototype.data;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Person() { }
+if (false) {
+    /** @type {?} */
+    Person.prototype.id;
+    /** @type {?} */
+    Person.prototype.firstName;
+    /** @type {?} */
+    Person.prototype.middleName;
+    /** @type {?} */
+    Person.prototype.lastName;
+}
 /** @type {?} */
 const PERSON_DATA = [
     { id: 1, firstName: 'Terra', middleName: 'Maduin', lastName: 'Branford' },
@@ -1872,11 +2133,31 @@ CdkPopoverEditCellSpanVanillaTableExample.decorators = [
                 styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  min-width: 300px;\n  width: 25%;\n}\n\n.example-input-container {\n  display: flex;\n  justify-content: stretch;\n}\n\n.example-input-container input {\n  flex: 1;\n  font-size: 14px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkPopoverEditCellSpanVanillaTableExample.prototype.preservedValues;
+    /** @type {?} */
+    CdkPopoverEditCellSpanVanillaTableExample.prototype.persons;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$2() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$2.prototype.name;
+    /** @type {?} */
+    PeriodicElement$2.prototype.position;
+    /** @type {?} */
+    PeriodicElement$2.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$2.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -1939,11 +2220,33 @@ CdkPopoverEditTabOutVanillaTableExample.decorators = [
                 styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  min-width: 300px;\n  width: 25%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkPopoverEditTabOutVanillaTableExample.prototype.preservedNameValues;
+    /** @type {?} */
+    CdkPopoverEditTabOutVanillaTableExample.prototype.preservedWeightValues;
+    /** @type {?} */
+    CdkPopoverEditTabOutVanillaTableExample.prototype.elements;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$3() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$3.prototype.name;
+    /** @type {?} */
+    PeriodicElement$3.prototype.position;
+    /** @type {?} */
+    PeriodicElement$3.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$3.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$3 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -2006,6 +2309,14 @@ CdkPopoverEditVanillaTableExample.decorators = [
                 styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  min-width: 300px;\n  width: 25%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkPopoverEditVanillaTableExample.prototype.preservedNameValues;
+    /** @type {?} */
+    CdkPopoverEditVanillaTableExample.prototype.preservedWeightValues;
+    /** @type {?} */
+    CdkPopoverEditVanillaTableExample.prototype.elements;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2043,6 +2354,21 @@ CdkPortalOverviewExample.ctorParameters = () => [
 CdkPortalOverviewExample.propDecorators = {
     templatePortalContent: [{ type: ViewChild, args: ['templatePortalContent', { static: false },] }]
 };
+if (false) {
+    /** @type {?} */
+    CdkPortalOverviewExample.prototype.templatePortalContent;
+    /** @type {?} */
+    CdkPortalOverviewExample.prototype.selectedPortal;
+    /** @type {?} */
+    CdkPortalOverviewExample.prototype.componentPortal;
+    /** @type {?} */
+    CdkPortalOverviewExample.prototype.templatePortal;
+    /**
+     * @type {?}
+     * @private
+     */
+    CdkPortalOverviewExample.prototype._viewContainerRef;
+}
 class ComponentPortalExample {
 }
 ComponentPortalExample.decorators = [
@@ -2056,6 +2382,20 @@ ComponentPortalExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$4() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$4.prototype.name;
+    /** @type {?} */
+    PeriodicElement$4.prototype.position;
+    /** @type {?} */
+    PeriodicElement$4.prototype.symbol;
+    /** @type {?} */
+    PeriodicElement$4.prototype.weight;
+}
 /** @type {?} */
 const ELEMENT_DATA$4 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -2085,6 +2425,12 @@ CdkTableBasicFlexExample.decorators = [
                 styles: ["/**\n * Add basic flex styling so that the cells evenly space themselves in the row.\n */\ncdk-row, cdk-header-row, cdk-footer-row {\n  display: flex;\n}\n\ncdk-cell, cdk-header-cell, cdk-footer-cell {\n  flex: 1;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkTableBasicFlexExample.prototype.displayedColumns;
+    /** @type {?} */
+    CdkTableBasicFlexExample.prototype.dataSource;
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -2112,11 +2458,32 @@ class ExampleDataSource$2 extends DataSource {
      */
     disconnect() { }
 }
+if (false) {
+    /**
+     * Stream of data that is provided to the table.
+     * @type {?}
+     */
+    ExampleDataSource$2.prototype.data;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$5() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$5.prototype.name;
+    /** @type {?} */
+    PeriodicElement$5.prototype.position;
+    /** @type {?} */
+    PeriodicElement$5.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$5.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$5 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -2146,6 +2513,12 @@ CdkTableBasicExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n\nth {\n  text-align: left;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkTableBasicExample.prototype.displayedColumns;
+    /** @type {?} */
+    CdkTableBasicExample.prototype.dataSource;
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -2172,6 +2545,13 @@ class ExampleDataSource$3 extends DataSource {
      * @return {?}
      */
     disconnect() { }
+}
+if (false) {
+    /**
+     * Stream of data that is provided to the table.
+     * @type {?}
+     */
+    ExampleDataSource$3.prototype.data;
 }
 
 /**
@@ -2227,6 +2607,21 @@ const TREE_DATA = [
     }
 ];
 /**
+ * Flat node with expandable and level information
+ * @record
+ */
+function ExampleFlatNode() { }
+if (false) {
+    /** @type {?} */
+    ExampleFlatNode.prototype.expandable;
+    /** @type {?} */
+    ExampleFlatNode.prototype.name;
+    /** @type {?} */
+    ExampleFlatNode.prototype.level;
+    /** @type {?|undefined} */
+    ExampleFlatNode.prototype.isExpanded;
+}
+/**
  * \@title Tree with flat nodes
  */
 class CdkTreeFlatExample {
@@ -2279,11 +2674,31 @@ CdkTreeFlatExample.decorators = [
                 styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkTreeFlatExample.prototype.treeControl;
+    /** @type {?} */
+    CdkTreeFlatExample.prototype.dataSource;
+    /** @type {?} */
+    CdkTreeFlatExample.prototype.hasChild;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * Food data with nested structure.
+ * Each node has a name and an optiona list of children.
+ * @record
+ */
+function FoodNode() { }
+if (false) {
+    /** @type {?} */
+    FoodNode.prototype.name;
+    /** @type {?|undefined} */
+    FoodNode.prototype.children;
+}
 /** @type {?} */
 const TREE_DATA$1 = [
     {
@@ -2338,6 +2753,14 @@ CdkTreeNestedExample.decorators = [
                 styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkTreeNestedExample.prototype.treeControl;
+    /** @type {?} */
+    CdkTreeNestedExample.prototype.dataSource;
+    /** @type {?} */
+    CdkTreeNestedExample.prototype.hasChild;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2364,6 +2787,10 @@ CdkVirtualScrollContextExample.decorators = [
                 styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item-detail {\n  height: 18px;\n}\n\n.example-alternate {\n  background: rgba(127, 127, 127, 0.3);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkVirtualScrollContextExample.prototype.items;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2396,6 +2823,10 @@ CdkVirtualScrollCustomStrategyExample.decorators = [
                 styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkVirtualScrollCustomStrategyExample.prototype.items;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2417,6 +2848,10 @@ CdkVirtualScrollDataSourceExample.decorators = [
                 styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkVirtualScrollDataSourceExample.prototype.ds;
+}
 class MyDataSource extends DataSource {
     constructor() {
         super(...arguments);
@@ -2486,6 +2921,38 @@ class MyDataSource extends DataSource {
             this._dataStream.next(this._cachedData);
         }), Math.random() * 1000 + 200);
     }
+}
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    MyDataSource.prototype._length;
+    /**
+     * @type {?}
+     * @private
+     */
+    MyDataSource.prototype._pageSize;
+    /**
+     * @type {?}
+     * @private
+     */
+    MyDataSource.prototype._cachedData;
+    /**
+     * @type {?}
+     * @private
+     */
+    MyDataSource.prototype._fetchedPages;
+    /**
+     * @type {?}
+     * @private
+     */
+    MyDataSource.prototype._dataStream;
+    /**
+     * @type {?}
+     * @private
+     */
+    MyDataSource.prototype._subscription;
 }
 
 /**
@@ -2559,6 +3026,10 @@ CdkVirtualScrollDlExample.decorators = [
                 styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-dt {\n  height: 30px;\n  font-weight: bold;\n}\n\n.example-dd {\n  height: 30px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkVirtualScrollDlExample.prototype.states;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2585,6 +3056,10 @@ CdkVirtualScrollFixedBufferExample.decorators = [
                 styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkVirtualScrollFixedBufferExample.prototype.items;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2612,6 +3087,10 @@ CdkVirtualScrollHorizontalExample.decorators = [
                 styles: [".cdk-virtual-scroll-data-source-example .example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper {\n  display: flex;\n  flex-direction: row;\n}\n\n.cdk-virtual-scroll-data-source-example .example-item {\n  width: 50px;\n  height: 100%;\n  writing-mode: vertical-lr;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkVirtualScrollHorizontalExample.prototype.items;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2638,6 +3117,10 @@ CdkVirtualScrollOverviewExample.decorators = [
                 styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkVirtualScrollOverviewExample.prototype.items;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2664,6 +3147,10 @@ CdkVirtualScrollTemplateCacheExample.decorators = [
                 styles: [".example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item {\n  height: 50px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CdkVirtualScrollTemplateCacheExample.prototype.items;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2687,6 +3174,16 @@ CheckboxConfigurableExample.decorators = [
                 styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    CheckboxConfigurableExample.prototype.checked;
+    /** @type {?} */
+    CheckboxConfigurableExample.prototype.indeterminate;
+    /** @type {?} */
+    CheckboxConfigurableExample.prototype.labelPosition;
+    /** @type {?} */
+    CheckboxConfigurableExample.prototype.disabled;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2799,11 +3296,43 @@ ChipsAutocompleteExample.propDecorators = {
     fruitInput: [{ type: ViewChild, args: ['fruitInput', { static: false },] }],
     matAutocomplete: [{ type: ViewChild, args: ['auto', { static: false },] }]
 };
+if (false) {
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.visible;
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.selectable;
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.removable;
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.addOnBlur;
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.separatorKeysCodes;
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.fruitCtrl;
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.filteredFruits;
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.fruits;
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.allFruits;
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.fruitInput;
+    /** @type {?} */
+    ChipsAutocompleteExample.prototype.matAutocomplete;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Vegetable() { }
+if (false) {
+    /** @type {?} */
+    Vegetable.prototype.name;
+}
 /**
  * \@title Chips Drag and Drop
  */
@@ -2833,11 +3362,23 @@ ChipsDragDropExample.decorators = [
                 styles: [".example-box.cdk-drag-animating {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-chip .cdk-drop-list-dragging {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    ChipsDragDropExample.prototype.vegetables;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Fruit() { }
+if (false) {
+    /** @type {?} */
+    Fruit.prototype.name;
+}
 /**
  * \@title Chips with input
  */
@@ -2891,6 +3432,20 @@ ChipsInputExample.decorators = [
                 styles: [".example-chip-list {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    ChipsInputExample.prototype.visible;
+    /** @type {?} */
+    ChipsInputExample.prototype.selectable;
+    /** @type {?} */
+    ChipsInputExample.prototype.removable;
+    /** @type {?} */
+    ChipsInputExample.prototype.addOnBlur;
+    /** @type {?} */
+    ChipsInputExample.prototype.separatorKeysCodes;
+    /** @type {?} */
+    ChipsInputExample.prototype.fruits;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2914,6 +3469,16 @@ ChipsOverviewExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
+ * @record
+ */
+function ChipColor() { }
+if (false) {
+    /** @type {?} */
+    ChipColor.prototype.name;
+    /** @type {?} */
+    ChipColor.prototype.color;
+}
+/**
  * \@title Stacked chips
  */
 class ChipsStackedExample {
@@ -2933,6 +3498,10 @@ ChipsStackedExample.decorators = [
                 styles: ["mat-chip {\n  max-width: 200px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    ChipsStackedExample.prototype.availableColors;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -2987,6 +3556,10 @@ DatepickerCustomHeaderExample.decorators = [
                 changeDetection: ChangeDetectionStrategy.OnPush
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    DatepickerCustomHeaderExample.prototype.exampleHeader;
+}
 /**
  * Custom header component for datepicker.
  * @template D
@@ -3094,6 +3667,28 @@ ExampleHeader.ctorParameters = () => [
     { type: undefined, decorators: [{ type: Inject, args: [MAT_DATE_FORMATS,] }] },
     { type: ChangeDetectorRef }
 ];
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    ExampleHeader.prototype._destroyed;
+    /**
+     * @type {?}
+     * @private
+     */
+    ExampleHeader.prototype._calendar;
+    /**
+     * @type {?}
+     * @private
+     */
+    ExampleHeader.prototype._dateAdapter;
+    /**
+     * @type {?}
+     * @private
+     */
+    ExampleHeader.prototype._dateFormats;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3141,6 +3736,10 @@ DatepickerDateClassExample.decorators = [
                 styles: [".example-custom-date-class {\n  background: orange;\n  border-radius: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    DatepickerDateClassExample.prototype.dateClass;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3186,6 +3785,10 @@ DatepickerEventsExample.decorators = [
                 styles: [".example-events {\n  width: 400px;\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    DatepickerEventsExample.prototype.events;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3215,6 +3818,10 @@ DatepickerFilterExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    DatepickerFilterExample.prototype.myFilter;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3222,6 +3829,26 @@ DatepickerFilterExample.decorators = [
  */
 /** @type {?} */
 const moment = _rollupMoment__default || _rollupMoment;
+/**
+ * Configurable options for {\@see MomentDateAdapter}.
+ * @record
+ */
+function MatMomentDateAdapterOptions() { }
+if (false) {
+    /**
+     * When enabled, the dates have to match the format exactly.
+     * See https://momentjs.com/guides/#/parsing/strict-mode/.
+     * @type {?|undefined}
+     */
+    MatMomentDateAdapterOptions.prototype.strict;
+    /**
+     * Turns the use of utc dates on or off.
+     * Changing this will change how Angular Material components like DatePicker output dates.
+     * {\@default false}
+     * @type {?|undefined}
+     */
+    MatMomentDateAdapterOptions.prototype.useUtc;
+}
 /**
  * InjectionToken for moment date adapter to configure options.
  * @type {?}
@@ -3525,6 +4152,18 @@ MomentDateAdapter.ctorParameters = () => [
     { type: String, decorators: [{ type: Optional }, { type: Inject, args: [MAT_DATE_LOCALE,] }] },
     { type: undefined, decorators: [{ type: Optional }, { type: Inject, args: [MAT_MOMENT_DATE_ADAPTER_OPTIONS,] }] }
 ];
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    MomentDateAdapter.prototype._localeData;
+    /**
+     * @type {?}
+     * @private
+     */
+    MomentDateAdapter.prototype._options;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3554,6 +4193,28 @@ const MAT_MOMENT_DATE_FORMATS = {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+class MomentDateModule {
+}
+MomentDateModule.decorators = [
+    { type: NgModule, args: [{
+                providers: [
+                    {
+                        provide: DateAdapter,
+                        useClass: MomentDateAdapter,
+                        deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+                    }
+                ],
+            },] }
+];
+const ɵ0 = MAT_MOMENT_DATE_FORMATS;
+class MatMomentDateModule {
+}
+MatMomentDateModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [MomentDateModule],
+                providers: [{ provide: MAT_DATE_FORMATS, useValue: ɵ0 }],
+            },] }
+];
 
 /**
  * @fileoverview added by tsickle
@@ -3607,12 +4268,16 @@ DatepickerFormatsExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    DatepickerFormatsExample.prototype.date;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const ɵ0 = MAT_MOMENT_DATE_FORMATS;
+const ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker with different locale
  */
@@ -3642,7 +4307,7 @@ DatepickerLocaleExample.decorators = [
                     // `MatMomentDateModule` in your applications root module. We provide it at the component level
                     // here, due to limitations of our example generation script.
                     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                    { provide: MAT_DATE_FORMATS, useValue: ɵ0 },
+                    { provide: MAT_DATE_FORMATS, useValue: ɵ0$1 },
                 ],
                 styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }] }
@@ -3651,6 +4316,13 @@ DatepickerLocaleExample.decorators = [
 DatepickerLocaleExample.ctorParameters = () => [
     { type: DateAdapter }
 ];
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    DatepickerLocaleExample.prototype._adapter;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3672,6 +4344,12 @@ DatepickerMinMaxExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    DatepickerMinMaxExample.prototype.minDate;
+    /** @type {?} */
+    DatepickerMinMaxExample.prototype.maxDate;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3679,7 +4357,7 @@ DatepickerMinMaxExample.decorators = [
  */
 /** @type {?} */
 const moment$2 = _rollupMoment__default || _rollupMoment;
-const ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
+const ɵ0$2 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker that uses Moment.js dates
  */
@@ -3698,11 +4376,15 @@ DatepickerMomentExample.decorators = [
                     // `MatMomentDateModule` in your applications root module. We provide it at the component level
                     // here, due to limitations of our example generation script.
                     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                    { provide: MAT_DATE_FORMATS, useValue: ɵ0$1 },
+                    { provide: MAT_DATE_FORMATS, useValue: ɵ0$2 },
                 ],
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    DatepickerMomentExample.prototype.date;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3740,6 +4422,10 @@ DatepickerStartViewExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    DatepickerStartViewExample.prototype.startDate;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3778,6 +4464,12 @@ DatepickerValueExample.decorators = [
                 styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    DatepickerValueExample.prototype.date;
+    /** @type {?} */
+    DatepickerValueExample.prototype.serializedDate;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3843,6 +4535,10 @@ DatepickerViewsSelectionExample.decorators = [
                 styles: [".example-month-picker .mat-calendar-period-button {\n  pointer-events: none;\n}\n\n.example-month-picker .mat-calendar-arrow {\n  display: none;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    DatepickerViewsSelectionExample.prototype.date;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3884,6 +4580,10 @@ DialogContentExample.decorators = [
 DialogContentExample.ctorParameters = () => [
     { type: MatDialog }
 ];
+if (false) {
+    /** @type {?} */
+    DialogContentExample.prototype.dialog;
+}
 class DialogContentExampleDialog {
 }
 DialogContentExampleDialog.decorators = [
@@ -3897,6 +4597,14 @@ DialogContentExampleDialog.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function DialogData() { }
+if (false) {
+    /** @type {?} */
+    DialogData.prototype.animal;
+}
 /**
  * \@title Injecting data when opening a dialog
  */
@@ -3929,6 +4637,10 @@ DialogDataExample.decorators = [
 DialogDataExample.ctorParameters = () => [
     { type: MatDialog }
 ];
+if (false) {
+    /** @type {?} */
+    DialogDataExample.prototype.dialog;
+}
 class DialogDataExampleDialog {
     /**
      * @param {?} data
@@ -3947,6 +4659,10 @@ DialogDataExampleDialog.decorators = [
 DialogDataExampleDialog.ctorParameters = () => [
     { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] }] }
 ];
+if (false) {
+    /** @type {?} */
+    DialogDataExampleDialog.prototype.data;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -3980,6 +4696,10 @@ DialogElementsExample.decorators = [
 DialogElementsExample.ctorParameters = () => [
     { type: MatDialog }
 ];
+if (false) {
+    /** @type {?} */
+    DialogElementsExample.prototype.dialog;
+}
 class DialogElementsExampleDialog {
 }
 DialogElementsExampleDialog.decorators = [
@@ -3993,6 +4713,16 @@ DialogElementsExampleDialog.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function DialogData$1() { }
+if (false) {
+    /** @type {?} */
+    DialogData$1.prototype.animal;
+    /** @type {?} */
+    DialogData$1.prototype.name;
+}
 /**
  * \@title Dialog Overview
  */
@@ -4033,6 +4763,14 @@ DialogOverviewExample.decorators = [
 DialogOverviewExample.ctorParameters = () => [
     { type: MatDialog }
 ];
+if (false) {
+    /** @type {?} */
+    DialogOverviewExample.prototype.animal;
+    /** @type {?} */
+    DialogOverviewExample.prototype.name;
+    /** @type {?} */
+    DialogOverviewExample.prototype.dialog;
+}
 class DialogOverviewExampleDialog {
     /**
      * @param {?} dialogRef
@@ -4060,6 +4798,12 @@ DialogOverviewExampleDialog.ctorParameters = () => [
     { type: MatDialogRef },
     { type: undefined, decorators: [{ type: Inject, args: [MAT_DIALOG_DATA,] }] }
 ];
+if (false) {
+    /** @type {?} */
+    DialogOverviewExampleDialog.prototype.dialogRef;
+    /** @type {?} */
+    DialogOverviewExampleDialog.prototype.data;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4097,6 +4841,10 @@ ElevationOverviewExample.decorators = [
                 styles: [".example-container {\n  padding: 16px;\n  margin-bottom: 16px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    ElevationOverviewExample.prototype.isActive;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4117,6 +4865,10 @@ ExpansionExpandCollapseAllExample.decorators = [
 ExpansionExpandCollapseAllExample.propDecorators = {
     accordion: [{ type: ViewChild, args: [MatAccordion, { static: false },] }]
 };
+if (false) {
+    /** @type {?} */
+    ExpansionExpandCollapseAllExample.prototype.accordion;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4137,6 +4889,10 @@ ExpansionOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    ExpansionOverviewExample.prototype.panelOpenState;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4176,6 +4932,10 @@ ExpansionStepsExample.decorators = [
                 styles: [".example-headers-align .mat-expansion-panel-header-title,\n.example-headers-align .mat-expansion-panel-header-description {\n  flex-basis: 0;\n}\n\n.example-headers-align .mat-expansion-panel-header-description {\n  justify-content: space-between;\n  align-items: center;\n}\n\nmat-form-field {\n  margin-right: 12px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    ExpansionStepsExample.prototype.step;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4225,6 +4985,22 @@ FocusMonitorDirectivesExample.ctorParameters = () => [
     { type: NgZone },
     { type: ChangeDetectorRef }
 ];
+if (false) {
+    /** @type {?} */
+    FocusMonitorDirectivesExample.prototype.elementOrigin;
+    /** @type {?} */
+    FocusMonitorDirectivesExample.prototype.subtreeOrigin;
+    /**
+     * @type {?}
+     * @private
+     */
+    FocusMonitorDirectivesExample.prototype._ngZone;
+    /**
+     * @type {?}
+     * @private
+     */
+    FocusMonitorDirectivesExample.prototype._cdr;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4292,6 +5068,24 @@ FocusMonitorFocusViaExample.ctorParameters = () => [
 FocusMonitorFocusViaExample.propDecorators = {
     monitoredEl: [{ type: ViewChild, args: ['monitored', { static: false },] }]
 };
+if (false) {
+    /** @type {?} */
+    FocusMonitorFocusViaExample.prototype.monitoredEl;
+    /** @type {?} */
+    FocusMonitorFocusViaExample.prototype.origin;
+    /** @type {?} */
+    FocusMonitorFocusViaExample.prototype.focusMonitor;
+    /**
+     * @type {?}
+     * @private
+     */
+    FocusMonitorFocusViaExample.prototype._cdr;
+    /**
+     * @type {?}
+     * @private
+     */
+    FocusMonitorFocusViaExample.prototype._ngZone;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4374,6 +5168,31 @@ FocusMonitorOverviewExample.propDecorators = {
     element: [{ type: ViewChild, args: ['element', { static: false },] }],
     subtree: [{ type: ViewChild, args: ['subtree', { static: false },] }]
 };
+if (false) {
+    /** @type {?} */
+    FocusMonitorOverviewExample.prototype.element;
+    /** @type {?} */
+    FocusMonitorOverviewExample.prototype.subtree;
+    /** @type {?} */
+    FocusMonitorOverviewExample.prototype.elementOrigin;
+    /** @type {?} */
+    FocusMonitorOverviewExample.prototype.subtreeOrigin;
+    /**
+     * @type {?}
+     * @private
+     */
+    FocusMonitorOverviewExample.prototype._focusMonitor;
+    /**
+     * @type {?}
+     * @private
+     */
+    FocusMonitorOverviewExample.prototype._cdr;
+    /**
+     * @type {?}
+     * @private
+     */
+    FocusMonitorOverviewExample.prototype._ngZone;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4422,6 +5241,14 @@ class MyTel {
         this.exchange = exchange;
         this.subscriber = subscriber;
     }
+}
+if (false) {
+    /** @type {?} */
+    MyTel.prototype.area;
+    /** @type {?} */
+    MyTel.prototype.exchange;
+    /** @type {?} */
+    MyTel.prototype.subscriber;
 }
 /**
  * Custom `MatFormFieldControl` for telephone number input.
@@ -4626,6 +5453,55 @@ MyTelInput.propDecorators = {
     disabled: [{ type: Input }],
     value: [{ type: Input }]
 };
+if (false) {
+    /** @type {?} */
+    MyTelInput.nextId;
+    /** @type {?} */
+    MyTelInput.prototype.parts;
+    /** @type {?} */
+    MyTelInput.prototype.stateChanges;
+    /** @type {?} */
+    MyTelInput.prototype.focused;
+    /** @type {?} */
+    MyTelInput.prototype.errorState;
+    /** @type {?} */
+    MyTelInput.prototype.controlType;
+    /** @type {?} */
+    MyTelInput.prototype.id;
+    /** @type {?} */
+    MyTelInput.prototype.describedBy;
+    /** @type {?} */
+    MyTelInput.prototype.onChange;
+    /** @type {?} */
+    MyTelInput.prototype.onTouched;
+    /**
+     * @type {?}
+     * @private
+     */
+    MyTelInput.prototype._placeholder;
+    /**
+     * @type {?}
+     * @private
+     */
+    MyTelInput.prototype._required;
+    /**
+     * @type {?}
+     * @private
+     */
+    MyTelInput.prototype._disabled;
+    /**
+     * @type {?}
+     * @private
+     */
+    MyTelInput.prototype._focusMonitor;
+    /**
+     * @type {?}
+     * @private
+     */
+    MyTelInput.prototype._elementRef;
+    /** @type {?} */
+    MyTelInput.prototype.ngControl;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4654,6 +5530,10 @@ FormFieldErrorExample.decorators = [
                 styles: [".example-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container > * {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    FormFieldErrorExample.prototype.email;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4701,6 +5581,10 @@ FormFieldLabelExample.decorators = [
 FormFieldLabelExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    FormFieldLabelExample.prototype.options;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4738,6 +5622,10 @@ FormFieldPrefixSuffixExample.decorators = [
                 styles: [".example-container {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container > * {\n  width: 100%;\n}\n\n.example-right-align {\n  text-align: right;\n}\n\ninput.example-right-align::-webkit-outer-spin-button,\ninput.example-right-align::-webkit-inner-spin-button {\n  display: none;\n}\n\ninput.example-right-align {\n  -moz-appearance: textfield;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    FormFieldPrefixSuffixExample.prototype.hide;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4774,11 +5662,29 @@ FormFieldThemingExample.decorators = [
 FormFieldThemingExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    FormFieldThemingExample.prototype.options;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Tile() { }
+if (false) {
+    /** @type {?} */
+    Tile.prototype.color;
+    /** @type {?} */
+    Tile.prototype.cols;
+    /** @type {?} */
+    Tile.prototype.rows;
+    /** @type {?} */
+    Tile.prototype.text;
+}
 /**
  * \@title Dynamic grid-list
  */
@@ -4799,6 +5705,10 @@ GridListDynamicExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    GridListDynamicExample.prototype.tiles;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4882,6 +5792,10 @@ InputClearableExample.decorators = [
                 styles: [".example-form-field {\n  width: 200px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    InputClearableExample.prototype.value;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4921,6 +5835,12 @@ InputErrorStateMatcherExample.decorators = [
                 styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    InputErrorStateMatcherExample.prototype.emailFormControl;
+    /** @type {?} */
+    InputErrorStateMatcherExample.prototype.matcher;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -4944,6 +5864,10 @@ InputErrorsExample.decorators = [
                 styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    InputErrorsExample.prototype.emailFormControl;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5035,6 +5959,16 @@ ListOverviewExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
+ * @record
+ */
+function Section() { }
+if (false) {
+    /** @type {?} */
+    Section.prototype.name;
+    /** @type {?} */
+    Section.prototype.updated;
+}
+/**
  * \@title List with sections
  */
 class ListSectionsExample {
@@ -5072,6 +6006,12 @@ ListSectionsExample.decorators = [
                 styles: [".mat-list-icon {\n  color: rgba(0, 0, 0, 0.54);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    ListSectionsExample.prototype.folders;
+    /** @type {?} */
+    ListSectionsExample.prototype.notes;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5092,6 +6032,10 @@ ListSelectionExample.decorators = [
                 styles: ["/** No styles for this example. */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    ListSelectionExample.prototype.typesOfShoes;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5194,6 +6138,16 @@ PaginatorConfigurableExample.decorators = [
                 styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    PaginatorConfigurableExample.prototype.length;
+    /** @type {?} */
+    PaginatorConfigurableExample.prototype.pageSize;
+    /** @type {?} */
+    PaginatorConfigurableExample.prototype.pageSizeOptions;
+    /** @type {?} */
+    PaginatorConfigurableExample.prototype.pageEvent;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5216,6 +6170,20 @@ PaginatorOverviewExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Person$1() { }
+if (false) {
+    /** @type {?} */
+    Person$1.prototype.id;
+    /** @type {?} */
+    Person$1.prototype.firstName;
+    /** @type {?} */
+    Person$1.prototype.middleName;
+    /** @type {?} */
+    Person$1.prototype.lastName;
+}
 /** @type {?} */
 const PERSON_DATA$1 = [
     { id: 1, firstName: 'Terra', middleName: 'Maduin', lastName: 'Branford' },
@@ -5258,6 +6226,14 @@ PopoverEditCellSpanMatTableExample.decorators = [
                 styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  min-width: 300px;\n  width: 25%;\n}\n\n.example-input-container {\n  display: flex;\n  justify-content: stretch;\n}\n\n.example-input-container mat-form-field {\n  flex: 1;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    PopoverEditCellSpanMatTableExample.prototype.displayedColumns;
+    /** @type {?} */
+    PopoverEditCellSpanMatTableExample.prototype.dataSource;
+    /** @type {?} */
+    PopoverEditCellSpanMatTableExample.prototype.preservedValues;
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -5285,11 +6261,32 @@ class ExampleDataSource$4 extends DataSource {
      */
     disconnect() { }
 }
+if (false) {
+    /**
+     * Stream of data that is provided to the table.
+     * @type {?}
+     */
+    ExampleDataSource$4.prototype.data;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$6() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$6.prototype.name;
+    /** @type {?} */
+    PeriodicElement$6.prototype.position;
+    /** @type {?} */
+    PeriodicElement$6.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$6.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$6 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -5353,6 +6350,16 @@ PopoverEditMatTableFlexExample.decorators = [
                 styles: [".example-table {\n  width: 100%;\n}\n\n/*.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}*/\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    PopoverEditMatTableFlexExample.prototype.displayedColumns;
+    /** @type {?} */
+    PopoverEditMatTableFlexExample.prototype.dataSource;
+    /** @type {?} */
+    PopoverEditMatTableFlexExample.prototype.preservedNameValues;
+    /** @type {?} */
+    PopoverEditMatTableFlexExample.prototype.preservedWeightValues;
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -5380,11 +6387,32 @@ class ExampleDataSource$5 extends DataSource {
      */
     disconnect() { }
 }
+if (false) {
+    /**
+     * Stream of data that is provided to the table.
+     * @type {?}
+     */
+    ExampleDataSource$5.prototype.data;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$7() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$7.prototype.name;
+    /** @type {?} */
+    PeriodicElement$7.prototype.position;
+    /** @type {?} */
+    PeriodicElement$7.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$7.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$7 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -5470,6 +6498,21 @@ PopoverEditMatTableExample.decorators = [
 PopoverEditMatTableExample.ctorParameters = () => [
     { type: MatSnackBar }
 ];
+if (false) {
+    /** @type {?} */
+    PopoverEditMatTableExample.prototype.displayedColumns;
+    /** @type {?} */
+    PopoverEditMatTableExample.prototype.dataSource;
+    /** @type {?} */
+    PopoverEditMatTableExample.prototype.nameValues;
+    /** @type {?} */
+    PopoverEditMatTableExample.prototype.weightValues;
+    /**
+     * @type {?}
+     * @private
+     */
+    PopoverEditMatTableExample.prototype._snackBar;
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -5497,11 +6540,32 @@ class ExampleDataSource$6 extends DataSource {
      */
     disconnect() { }
 }
+if (false) {
+    /**
+     * Stream of data that is provided to the table.
+     * @type {?}
+     */
+    ExampleDataSource$6.prototype.data;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$8() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$8.prototype.name;
+    /** @type {?} */
+    PeriodicElement$8.prototype.position;
+    /** @type {?} */
+    PeriodicElement$8.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$8.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$8 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -5565,6 +6629,16 @@ PopoverEditTabOutMatTableExample.decorators = [
                 styles: [".example-table {\n  width: 100%;\n}\n\n.example-table th {\n  text-align: left;\n}\n\n.example-table td,\n.example-table th {\n  width: 25%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    PopoverEditTabOutMatTableExample.prototype.displayedColumns;
+    /** @type {?} */
+    PopoverEditTabOutMatTableExample.prototype.dataSource;
+    /** @type {?} */
+    PopoverEditTabOutMatTableExample.prototype.preservedNameValues;
+    /** @type {?} */
+    PopoverEditTabOutMatTableExample.prototype.preservedWeightValues;
+}
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -5591,6 +6665,13 @@ class ExampleDataSource$7 extends DataSource {
      * @return {?}
      */
     disconnect() { }
+}
+if (false) {
+    /**
+     * Stream of data that is provided to the table.
+     * @type {?}
+     */
+    ExampleDataSource$7.prototype.data;
 }
 
 /**
@@ -5632,6 +6713,16 @@ ProgressBarConfigurableExample.decorators = [
                 styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    ProgressBarConfigurableExample.prototype.color;
+    /** @type {?} */
+    ProgressBarConfigurableExample.prototype.mode;
+    /** @type {?} */
+    ProgressBarConfigurableExample.prototype.value;
+    /** @type {?} */
+    ProgressBarConfigurableExample.prototype.bufferValue;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5705,6 +6796,14 @@ ProgressSpinnerConfigurableExample.decorators = [
                 styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    ProgressSpinnerConfigurableExample.prototype.color;
+    /** @type {?} */
+    ProgressSpinnerConfigurableExample.prototype.mode;
+    /** @type {?} */
+    ProgressSpinnerConfigurableExample.prototype.value;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5742,6 +6841,12 @@ RadioNgModelExample.decorators = [
                 styles: [".example-radio-group {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.example-radio-button {\n  margin: 5px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    RadioNgModelExample.prototype.favoriteSeason;
+    /** @type {?} */
+    RadioNgModelExample.prototype.seasons;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5781,6 +6886,18 @@ RippleOverviewExample.decorators = [
                 styles: [".example-ripple-container {\n  cursor: pointer;\n  text-align: center;\n\n  width: 300px;\n  height: 300px;\n  line-height: 300px;\n\n  user-select: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n}\n\n/** Styles to make the demo look better. */\n.example-ripple-checkbox {\n  margin: 6px 12px 6px 0;\n}\n\n.example-ripple-form-field {\n  margin: 0 12px 0 0;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    RippleOverviewExample.prototype.centered;
+    /** @type {?} */
+    RippleOverviewExample.prototype.disabled;
+    /** @type {?} */
+    RippleOverviewExample.prototype.unbounded;
+    /** @type {?} */
+    RippleOverviewExample.prototype.radius;
+    /** @type {?} */
+    RippleOverviewExample.prototype.color;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5802,6 +6919,12 @@ SelectCustomTriggerExample.decorators = [
                 styles: [".example-additional-selection {\n  opacity: 0.75;\n  font-size: 0.75em;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectCustomTriggerExample.prototype.toppings;
+    /** @type {?} */
+    SelectCustomTriggerExample.prototype.toppingList;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5822,6 +6945,10 @@ SelectDisabledExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectDisabledExample.prototype.disableSelect;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5869,11 +6996,41 @@ SelectErrorStateMatcherExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectErrorStateMatcherExample.prototype.selected;
+    /** @type {?} */
+    SelectErrorStateMatcherExample.prototype.selectFormControl;
+    /** @type {?} */
+    SelectErrorStateMatcherExample.prototype.nativeSelectFormControl;
+    /** @type {?} */
+    SelectErrorStateMatcherExample.prototype.matcher;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Food() { }
+if (false) {
+    /** @type {?} */
+    Food.prototype.value;
+    /** @type {?} */
+    Food.prototype.viewValue;
+}
+/**
+ * @record
+ */
+function Car() { }
+if (false) {
+    /** @type {?} */
+    Car.prototype.value;
+    /** @type {?} */
+    Car.prototype.viewValue;
+}
 /**
  * \@title Select in a form
  */
@@ -5898,11 +7055,31 @@ SelectFormExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectFormExample.prototype.selectedValue;
+    /** @type {?} */
+    SelectFormExample.prototype.selectedCar;
+    /** @type {?} */
+    SelectFormExample.prototype.foods;
+    /** @type {?} */
+    SelectFormExample.prototype.cars;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Animal() { }
+if (false) {
+    /** @type {?} */
+    Animal.prototype.name;
+    /** @type {?} */
+    Animal.prototype.sound;
+}
 /**
  * \@title Select with form field features
  */
@@ -5925,6 +7102,14 @@ SelectHintErrorExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectHintErrorExample.prototype.animalControl;
+    /** @type {?} */
+    SelectHintErrorExample.prototype.selectFormControl;
+    /** @type {?} */
+    SelectHintErrorExample.prototype.animals;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5946,6 +7131,12 @@ SelectMultipleExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectMultipleExample.prototype.toppings;
+    /** @type {?} */
+    SelectMultipleExample.prototype.toppingList;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -5968,6 +7159,28 @@ SelectNoRippleExample.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Pokemon() { }
+if (false) {
+    /** @type {?} */
+    Pokemon.prototype.value;
+    /** @type {?} */
+    Pokemon.prototype.viewValue;
+}
+/**
+ * @record
+ */
+function PokemonGroup() { }
+if (false) {
+    /** @type {?|undefined} */
+    PokemonGroup.prototype.disabled;
+    /** @type {?} */
+    PokemonGroup.prototype.name;
+    /** @type {?} */
+    PokemonGroup.prototype.pokemon;
+}
 /**
  * \@title Select with option groups
  */
@@ -6017,11 +7230,27 @@ SelectOptgroupExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectOptgroupExample.prototype.pokemonControl;
+    /** @type {?} */
+    SelectOptgroupExample.prototype.pokemonGroups;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Food$1() { }
+if (false) {
+    /** @type {?} */
+    Food$1.prototype.value;
+    /** @type {?} */
+    Food$1.prototype.viewValue;
+}
 /**
  * \@title Basic select
  */
@@ -6041,6 +7270,10 @@ SelectOverviewExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectOverviewExample.prototype.foods;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6064,6 +7297,10 @@ SelectPanelClassExample.decorators = [
                 styles: [".example-panel-red.mat-select-panel {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-panel-green.mat-select-panel {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-panel-blue.mat-select-panel {\n  background: rgba(0, 0, 255, 0.5);\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectPanelClassExample.prototype.panelColor;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6092,6 +7329,10 @@ SelectResetExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectResetExample.prototype.states;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6112,6 +7353,10 @@ SelectValueBindingExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SelectValueBindingExample.prototype.selected;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6132,6 +7377,10 @@ SidenavAutosizeExample.decorators = [
                 styles: [".example-container {\n  width: 500px;\n  height: 300px;\n  border: 1px solid rgba(0, 0, 0, 0.5);\n}\n\n.example-sidenav-content {\n  display: flex;\n  height: 100%;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-sidenav {\n  padding: 20px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SidenavAutosizeExample.prototype.showFiller;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6185,6 +7434,14 @@ SidenavDisableCloseExample.decorators = [
 SidenavDisableCloseExample.propDecorators = {
     sidenav: [{ type: ViewChild, args: ['sidenav', { static: false },] }]
 };
+if (false) {
+    /** @type {?} */
+    SidenavDisableCloseExample.prototype.sidenav;
+    /** @type {?} */
+    SidenavDisableCloseExample.prototype.reason;
+    /** @type {?} */
+    SidenavDisableCloseExample.prototype.shouldRun;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6238,6 +7495,12 @@ SidenavFixedExample.decorators = [
 SidenavFixedExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    SidenavFixedExample.prototype.options;
+    /** @type {?} */
+    SidenavFixedExample.prototype.shouldRun;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6263,6 +7526,12 @@ SidenavModeExample.decorators = [
                 styles: [".example-container {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-radio-group {\n  display: block;\n  border: 1px solid #555;\n  margin: 20px;\n  padding: 10px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SidenavModeExample.prototype.mode;
+    /** @type {?} */
+    SidenavModeExample.prototype.shouldRun;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6288,6 +7557,14 @@ SidenavOpenCloseExample.decorators = [
                 styles: [".example-container {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-events {\n  width: 300px;\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #555;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SidenavOpenCloseExample.prototype.events;
+    /** @type {?} */
+    SidenavOpenCloseExample.prototype.opened;
+    /** @type {?} */
+    SidenavOpenCloseExample.prototype.shouldRun;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6312,6 +7589,10 @@ SidenavOverviewExample.decorators = [
                 styles: [".example-container {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: #eee;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SidenavOverviewExample.prototype.shouldRun;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6336,6 +7617,10 @@ SidenavPositionExample.decorators = [
                 styles: [".example-container {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SidenavPositionExample.prototype.shouldRun;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6395,6 +7680,21 @@ SidenavResponsiveExample.ctorParameters = () => [
     { type: ChangeDetectorRef },
     { type: MediaMatcher }
 ];
+if (false) {
+    /** @type {?} */
+    SidenavResponsiveExample.prototype.mobileQuery;
+    /** @type {?} */
+    SidenavResponsiveExample.prototype.fillerNav;
+    /** @type {?} */
+    SidenavResponsiveExample.prototype.fillerContent;
+    /**
+     * @type {?}
+     * @private
+     */
+    SidenavResponsiveExample.prototype._mobileQueryListener;
+    /** @type {?} */
+    SidenavResponsiveExample.prototype.shouldRun;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6417,6 +7717,14 @@ SlideToggleConfigurableExample.decorators = [
                 styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 10px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SlideToggleConfigurableExample.prototype.color;
+    /** @type {?} */
+    SlideToggleConfigurableExample.prototype.checked;
+    /** @type {?} */
+    SlideToggleConfigurableExample.prototype.disabled;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6454,6 +7762,12 @@ SlideToggleFormsExample.decorators = [
 SlideToggleFormsExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    SlideToggleFormsExample.prototype.isChecked;
+    /** @type {?} */
+    SlideToggleFormsExample.prototype.formGroup;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6514,6 +7828,33 @@ SliderConfigurableExample.decorators = [
                 styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 10px;\n}\n\n.mat-slider-horizontal {\n  width: 300px;\n}\n\n.mat-slider-vertical {\n  height: 300px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    SliderConfigurableExample.prototype.autoTicks;
+    /** @type {?} */
+    SliderConfigurableExample.prototype.disabled;
+    /** @type {?} */
+    SliderConfigurableExample.prototype.invert;
+    /** @type {?} */
+    SliderConfigurableExample.prototype.max;
+    /** @type {?} */
+    SliderConfigurableExample.prototype.min;
+    /** @type {?} */
+    SliderConfigurableExample.prototype.showTicks;
+    /** @type {?} */
+    SliderConfigurableExample.prototype.step;
+    /** @type {?} */
+    SliderConfigurableExample.prototype.thumbLabel;
+    /** @type {?} */
+    SliderConfigurableExample.prototype.value;
+    /** @type {?} */
+    SliderConfigurableExample.prototype.vertical;
+    /**
+     * @type {?}
+     * @private
+     */
+    SliderConfigurableExample.prototype._tickInterval;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6597,6 +7938,15 @@ SnackBarComponentExample.decorators = [
 SnackBarComponentExample.ctorParameters = () => [
     { type: MatSnackBar }
 ];
+if (false) {
+    /** @type {?} */
+    SnackBarComponentExample.prototype.durationInSeconds;
+    /**
+     * @type {?}
+     * @private
+     */
+    SnackBarComponentExample.prototype._snackBar;
+}
 class PizzaPartyComponent {
 }
 PizzaPartyComponent.decorators = [
@@ -6647,6 +7997,13 @@ SnackBarOverviewExample.decorators = [
 SnackBarOverviewExample.ctorParameters = () => [
     { type: MatSnackBar }
 ];
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    SnackBarOverviewExample.prototype._snackBar;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6686,11 +8043,38 @@ SnackBarPositionExample.decorators = [
 SnackBarPositionExample.ctorParameters = () => [
     { type: MatSnackBar }
 ];
+if (false) {
+    /** @type {?} */
+    SnackBarPositionExample.prototype.horizontalPosition;
+    /** @type {?} */
+    SnackBarPositionExample.prototype.verticalPosition;
+    /**
+     * @type {?}
+     * @private
+     */
+    SnackBarPositionExample.prototype._snackBar;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Dessert() { }
+if (false) {
+    /** @type {?} */
+    Dessert.prototype.calories;
+    /** @type {?} */
+    Dessert.prototype.carbs;
+    /** @type {?} */
+    Dessert.prototype.fat;
+    /** @type {?} */
+    Dessert.prototype.name;
+    /** @type {?} */
+    Dessert.prototype.protein;
+}
 /**
  * \@title Sorting overview
  */
@@ -6744,6 +8128,12 @@ SortOverviewExample.decorators = [
 ];
 /** @nocollapse */
 SortOverviewExample.ctorParameters = () => [];
+if (false) {
+    /** @type {?} */
+    SortOverviewExample.prototype.desserts;
+    /** @type {?} */
+    SortOverviewExample.prototype.sortedData;
+}
 /**
  * @param {?} a
  * @param {?} b
@@ -6792,12 +8182,25 @@ StepperEditableExample.decorators = [
 StepperEditableExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    StepperEditableExample.prototype.firstFormGroup;
+    /** @type {?} */
+    StepperEditableExample.prototype.secondFormGroup;
+    /** @type {?} */
+    StepperEditableExample.prototype.isEditable;
+    /**
+     * @type {?}
+     * @private
+     */
+    StepperEditableExample.prototype._formBuilder;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const ɵ0$2 = { showError: true };
+const ɵ0$3 = { showError: true };
 /**
  * \@title Stepper that displays errors in the steps
  */
@@ -6825,7 +8228,7 @@ StepperErrorsExample.decorators = [
                 selector: 'stepper-errors-example',
                 template: "<mat-horizontal-stepper linear #stepper>\n  <mat-step [stepControl]=\"firstFormGroup\" errorMessage=\"Name is required.\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"secondFormGroup\" errorMessage=\"Address is required.\">\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Fill out your address</ng-template>\n      <mat-form-field>\n        <input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    You are now done.\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-horizontal-stepper>\n",
                 providers: [{
-                        provide: STEPPER_GLOBAL_OPTIONS, useValue: ɵ0$2
+                        provide: STEPPER_GLOBAL_OPTIONS, useValue: ɵ0$3
                     }],
                 styles: [""]
             }] }
@@ -6834,6 +8237,17 @@ StepperErrorsExample.decorators = [
 StepperErrorsExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    StepperErrorsExample.prototype.firstFormGroup;
+    /** @type {?} */
+    StepperErrorsExample.prototype.secondFormGroup;
+    /**
+     * @type {?}
+     * @private
+     */
+    StepperErrorsExample.prototype._formBuilder;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6872,6 +8286,17 @@ StepperLabelPositionBottomExample.decorators = [
 StepperLabelPositionBottomExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    StepperLabelPositionBottomExample.prototype.firstFormGroup;
+    /** @type {?} */
+    StepperLabelPositionBottomExample.prototype.secondFormGroup;
+    /**
+     * @type {?}
+     * @private
+     */
+    StepperLabelPositionBottomExample.prototype._formBuilder;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6911,6 +8336,19 @@ StepperOptionalExample.decorators = [
 StepperOptionalExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    StepperOptionalExample.prototype.firstFormGroup;
+    /** @type {?} */
+    StepperOptionalExample.prototype.secondFormGroup;
+    /** @type {?} */
+    StepperOptionalExample.prototype.isOptional;
+    /**
+     * @type {?}
+     * @private
+     */
+    StepperOptionalExample.prototype._formBuilder;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -6950,12 +8388,25 @@ StepperOverviewExample.decorators = [
 StepperOverviewExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    StepperOverviewExample.prototype.isLinear;
+    /** @type {?} */
+    StepperOverviewExample.prototype.firstFormGroup;
+    /** @type {?} */
+    StepperOverviewExample.prototype.secondFormGroup;
+    /**
+     * @type {?}
+     * @private
+     */
+    StepperOverviewExample.prototype._formBuilder;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const ɵ0$3 = { displayDefaultIndicatorType: false };
+const ɵ0$4 = { displayDefaultIndicatorType: false };
 /**
  * \@title Stepper with customized states
  */
@@ -6983,7 +8434,7 @@ StepperStatesExample.decorators = [
                 selector: 'stepper-states-example',
                 template: "<mat-horizontal-stepper #stepper>\n  <mat-step [stepControl]=\"firstFormGroup\">\n    <form [formGroup]=\"firstFormGroup\">\n      <ng-template matStepLabel>Fill out your name</ng-template>\n      <mat-form-field>\n        <input matInput placeholder=\"Last name, First name\" formControlName=\"firstCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step [stepControl]=\"secondFormGroup\">\n    <form [formGroup]=\"secondFormGroup\">\n      <ng-template matStepLabel>Fill out your address</ng-template>\n      <mat-form-field>\n        <input matInput placeholder=\"Address\" formControlName=\"secondCtrl\" required>\n      </mat-form-field>\n      <div>\n        <button mat-button matStepperPrevious>Back</button>\n        <button mat-button matStepperNext>Next</button>\n      </div>\n    </form>\n  </mat-step>\n  <mat-step>\n    <ng-template matStepLabel>Done</ng-template>\n    You are now done.\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button (click)=\"stepper.reset()\">Reset</button>\n    </div>\n  </mat-step>\n</mat-horizontal-stepper>\n\n<mat-horizontal-stepper>\n  <mat-step label=\"Step 1\" state=\"phone\">\n    <p>Put down your phones.</p>\n    <div>\n      <button mat-button matStepperNext>Next</button>\n    </div>\n  </mat-step>\n  <mat-step label=\"Step 2\" state=\"chat\">\n    <p>Socialize with each other.</p>\n    <div>\n      <button mat-button matStepperPrevious>Back</button>\n      <button mat-button matStepperNext>Next</button>\n    </div>\n  </mat-step>\n  <mat-step label=\"Step 3\">\n    <p>You're welcome.</p>\n  </mat-step>\n\n  <!-- Icon overrides. -->\n  <ng-template matStepperIcon=\"phone\">\n    <mat-icon>call_end</mat-icon>\n  </ng-template>\n  <ng-template matStepperIcon=\"chat\">\n    <mat-icon>forum</mat-icon>\n  </ng-template>\n</mat-horizontal-stepper>\n",
                 providers: [{
-                        provide: STEPPER_GLOBAL_OPTIONS, useValue: ɵ0$3
+                        provide: STEPPER_GLOBAL_OPTIONS, useValue: ɵ0$4
                     }],
                 styles: [""]
             }] }
@@ -6992,6 +8443,17 @@ StepperStatesExample.decorators = [
 StepperStatesExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    StepperStatesExample.prototype.firstFormGroup;
+    /** @type {?} */
+    StepperStatesExample.prototype.secondFormGroup;
+    /**
+     * @type {?}
+     * @private
+     */
+    StepperStatesExample.prototype._formBuilder;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -7031,6 +8493,19 @@ StepperVerticalExample.decorators = [
 StepperVerticalExample.ctorParameters = () => [
     { type: FormBuilder }
 ];
+if (false) {
+    /** @type {?} */
+    StepperVerticalExample.prototype.isLinear;
+    /** @type {?} */
+    StepperVerticalExample.prototype.firstFormGroup;
+    /** @type {?} */
+    StepperVerticalExample.prototype.secondFormGroup;
+    /**
+     * @type {?}
+     * @private
+     */
+    StepperVerticalExample.prototype._formBuilder;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -7071,6 +8546,16 @@ TabGroupAnimationsExample.decorators = [
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
+ * @record
+ */
+function ExampleTab() { }
+if (false) {
+    /** @type {?} */
+    ExampleTab.prototype.label;
+    /** @type {?} */
+    ExampleTab.prototype.content;
+}
+/**
  * \@title Tab group with asynchronously loading tab contents
  */
 class TabGroupAsyncExample {
@@ -7102,6 +8587,10 @@ TabGroupAsyncExample.decorators = [
 ];
 /** @nocollapse */
 TabGroupAsyncExample.ctorParameters = () => [];
+if (false) {
+    /** @type {?} */
+    TabGroupAsyncExample.prototype.asyncTabs;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -7191,6 +8680,12 @@ TabGroupDynamicExample.decorators = [
                 styles: [".example-input-label,\n.example-add-tab-button,\n.example-delete-tab-button {\n  margin: 8px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TabGroupDynamicExample.prototype.tabs;
+    /** @type {?} */
+    TabGroupDynamicExample.prototype.selected;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -7238,6 +8733,10 @@ TabGroupLazyLoadedExample.decorators = [
                 styles: ["/** No CSS for this example */\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TabGroupLazyLoadedExample.prototype.tabLoadTimes;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -7306,11 +8805,33 @@ TabNavBarBasicExample.decorators = [
                 styles: [".example-action-button {\n  margin-top: 8px;\n  margin-right: 8px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TabNavBarBasicExample.prototype.links;
+    /** @type {?} */
+    TabNavBarBasicExample.prototype.activeLink;
+    /** @type {?} */
+    TabNavBarBasicExample.prototype.background;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$9() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$9.prototype.name;
+    /** @type {?} */
+    PeriodicElement$9.prototype.position;
+    /** @type {?} */
+    PeriodicElement$9.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$9.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$9 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -7340,11 +8861,31 @@ TableBasicFlexExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableBasicFlexExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableBasicFlexExample.prototype.dataSource;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$a() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$a.prototype.name;
+    /** @type {?} */
+    PeriodicElement$a.prototype.position;
+    /** @type {?} */
+    PeriodicElement$a.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$a.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$a = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -7374,11 +8915,31 @@ TableBasicExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableBasicExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableBasicExample.prototype.dataSource;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$b() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$b.prototype.name;
+    /** @type {?} */
+    PeriodicElement$b.prototype.position;
+    /** @type {?} */
+    PeriodicElement$b.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$b.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$b = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -7442,6 +9003,14 @@ TableDynamicColumnsExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n\nbutton {\n  margin: 16px 8px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableDynamicColumnsExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableDynamicColumnsExample.prototype.columnsToDisplay;
+    /** @type {?} */
+    TableDynamicColumnsExample.prototype.data;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -7470,6 +9039,30 @@ TableExpandableRowsExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n\ntr.example-detail-row {\n  height: 0;\n}\n\ntr.example-element-row:not(.example-expanded-row):hover {\n  background: #777;\n}\n\ntr.example-element-row:not(.example-expanded-row):active {\n  background: #efefef;\n}\n\n.example-element-row td {\n  border-bottom-width: 0;\n}\n\n.example-element-detail {\n  overflow: hidden;\n  display: flex;\n}\n\n.example-element-diagram {\n  min-width: 80px;\n  border: 2px solid black;\n  padding: 8px;\n  font-weight: lighter;\n  margin: 8px 0;\n  height: 104px;\n}\n\n.example-element-symbol {\n  font-weight: bold;\n  font-size: 40px;\n  line-height: normal;\n}\n\n.example-element-description {\n  padding: 16px;\n}\n\n.example-element-description-attribution {\n  opacity: 0.5;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableExpandableRowsExample.prototype.dataSource;
+    /** @type {?} */
+    TableExpandableRowsExample.prototype.columnsToDisplay;
+    /** @type {?} */
+    TableExpandableRowsExample.prototype.expandedElement;
+}
+/**
+ * @record
+ */
+function PeriodicElement$c() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$c.prototype.name;
+    /** @type {?} */
+    PeriodicElement$c.prototype.position;
+    /** @type {?} */
+    PeriodicElement$c.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$c.prototype.symbol;
+    /** @type {?} */
+    PeriodicElement$c.prototype.description;
+}
 /** @type {?} */
 const ELEMENT_DATA$c = [
     {
@@ -7557,6 +9150,20 @@ const ELEMENT_DATA$c = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$d() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$d.prototype.name;
+    /** @type {?} */
+    PeriodicElement$d.prototype.position;
+    /** @type {?} */
+    PeriodicElement$d.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$d.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$d = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -7593,11 +9200,27 @@ TableFilteringExample.decorators = [
                 styles: ["/* Structure */\ntable {\n  width: 100%;\n}\n\n.mat-form-field {\n  font-size: 14px;\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableFilteringExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableFilteringExample.prototype.dataSource;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Transaction() { }
+if (false) {
+    /** @type {?} */
+    Transaction.prototype.item;
+    /** @type {?} */
+    Transaction.prototype.cost;
+}
 /**
  * \@title Footer row table
  */
@@ -7637,6 +9260,12 @@ TableFooterRowExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n\ntr.mat-footer-row {\n  font-weight: bold;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableFooterRowExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableFooterRowExample.prototype.transactions;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -7714,6 +9343,53 @@ TableHttpExample.propDecorators = {
     paginator: [{ type: ViewChild, args: [MatPaginator, { static: false },] }],
     sort: [{ type: ViewChild, args: [MatSort, { static: false },] }]
 };
+if (false) {
+    /** @type {?} */
+    TableHttpExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableHttpExample.prototype.exampleDatabase;
+    /** @type {?} */
+    TableHttpExample.prototype.data;
+    /** @type {?} */
+    TableHttpExample.prototype.resultsLength;
+    /** @type {?} */
+    TableHttpExample.prototype.isLoadingResults;
+    /** @type {?} */
+    TableHttpExample.prototype.isRateLimitReached;
+    /** @type {?} */
+    TableHttpExample.prototype.paginator;
+    /** @type {?} */
+    TableHttpExample.prototype.sort;
+    /**
+     * @type {?}
+     * @private
+     */
+    TableHttpExample.prototype._httpClient;
+}
+/**
+ * @record
+ */
+function GithubApi() { }
+if (false) {
+    /** @type {?} */
+    GithubApi.prototype.items;
+    /** @type {?} */
+    GithubApi.prototype.total_count;
+}
+/**
+ * @record
+ */
+function GithubIssue() { }
+if (false) {
+    /** @type {?} */
+    GithubIssue.prototype.created_at;
+    /** @type {?} */
+    GithubIssue.prototype.number;
+    /** @type {?} */
+    GithubIssue.prototype.state;
+    /** @type {?} */
+    GithubIssue.prototype.title;
+}
 /**
  * An example database that the data source uses to retrieve data for the table.
  */
@@ -7738,11 +9414,28 @@ class ExampleHttpDatabase {
         return this._httpClient.get(requestUrl);
     }
 }
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    ExampleHttpDatabase.prototype._httpClient;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Transaction$1() { }
+if (false) {
+    /** @type {?} */
+    Transaction$1.prototype.item;
+    /** @type {?} */
+    Transaction$1.prototype.cost;
+}
 /**
  * \@title Table with multiple header and footer rows
  */
@@ -7782,11 +9475,31 @@ TableMultipleHeaderFooterExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n\n.example-first-header-row th {\n  border-bottom: none;\n}\n\n.example-second-header-row {\n  font-style: italic;\n}\n\n.example-first-footer-row {\n  font-weight: bold;\n}\n\n.example-second-footer-row td {\n  color: #900000;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableMultipleHeaderFooterExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableMultipleHeaderFooterExample.prototype.transactions;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function UserData() { }
+if (false) {
+    /** @type {?} */
+    UserData.prototype.id;
+    /** @type {?} */
+    UserData.prototype.name;
+    /** @type {?} */
+    UserData.prototype.progress;
+    /** @type {?} */
+    UserData.prototype.color;
+}
 /**
  * Constants used to fill up our data base.
  * @type {?}
@@ -7848,6 +9561,16 @@ TableOverviewExample.propDecorators = {
     paginator: [{ type: ViewChild, args: [MatPaginator, { static: true },] }],
     sort: [{ type: ViewChild, args: [MatSort, { static: true },] }]
 };
+if (false) {
+    /** @type {?} */
+    TableOverviewExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableOverviewExample.prototype.dataSource;
+    /** @type {?} */
+    TableOverviewExample.prototype.paginator;
+    /** @type {?} */
+    TableOverviewExample.prototype.sort;
+}
 /**
  * Builds and returns a new User.
  * @param {?} id
@@ -7894,6 +9617,28 @@ TablePaginationExample.decorators = [
 TablePaginationExample.propDecorators = {
     paginator: [{ type: ViewChild, args: [MatPaginator, { static: true },] }]
 };
+if (false) {
+    /** @type {?} */
+    TablePaginationExample.prototype.displayedColumns;
+    /** @type {?} */
+    TablePaginationExample.prototype.dataSource;
+    /** @type {?} */
+    TablePaginationExample.prototype.paginator;
+}
+/**
+ * @record
+ */
+function PeriodicElement$e() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$e.prototype.name;
+    /** @type {?} */
+    PeriodicElement$e.prototype.position;
+    /** @type {?} */
+    PeriodicElement$e.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$e.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$e = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -7938,11 +9683,31 @@ TableRowContextExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableRowContextExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableRowContextExample.prototype.data;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$f() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$f.prototype.name;
+    /** @type {?} */
+    PeriodicElement$f.prototype.position;
+    /** @type {?} */
+    PeriodicElement$f.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$f.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$f = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -8008,11 +9773,33 @@ TableSelectionExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableSelectionExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableSelectionExample.prototype.dataSource;
+    /** @type {?} */
+    TableSelectionExample.prototype.selection;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$g() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$g.prototype.name;
+    /** @type {?} */
+    PeriodicElement$g.prototype.position;
+    /** @type {?} */
+    PeriodicElement$g.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$g.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$g = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -8051,6 +9838,14 @@ TableSortingExample.decorators = [
 TableSortingExample.propDecorators = {
     sort: [{ type: ViewChild, args: [MatSort, { static: true },] }]
 };
+if (false) {
+    /** @type {?} */
+    TableSortingExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableSortingExample.prototype.dataSource;
+    /** @type {?} */
+    TableSortingExample.prototype.sort;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8072,6 +9867,26 @@ TableStickyColumnsExample.decorators = [
                 styles: [".example-container {\n  height: 400px;\n  width: 550px;\n  overflow: auto;\n}\n\ntable {\n  width: 800px;\n}\n\ntd.mat-column-star {\n  width: 20px;\n  padding-right: 8px;\n}\n\nth.mat-column-position, td.mat-column-position {\n  padding-left: 8px;\n}\n\n.mat-table-sticky:first-child {\n  border-right: 1px solid #e0e0e0;\n}\n\n.mat-table-sticky:last-child {\n  border-left: 1px solid #e0e0e0;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableStickyColumnsExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableStickyColumnsExample.prototype.dataSource;
+}
+/**
+ * @record
+ */
+function PeriodicElement$h() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$h.prototype.name;
+    /** @type {?} */
+    PeriodicElement$h.prototype.position;
+    /** @type {?} */
+    PeriodicElement$h.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$h.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$h = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -8125,6 +9940,28 @@ TableStickyComplexFlexExample.decorators = [
 ];
 /** @nocollapse */
 TableStickyComplexFlexExample.ctorParameters = () => [];
+if (false) {
+    /** @type {?} */
+    TableStickyComplexFlexExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableStickyComplexFlexExample.prototype.dataSource;
+    /** @type {?} */
+    TableStickyComplexFlexExample.prototype.tables;
+}
+/**
+ * @record
+ */
+function PeriodicElement$i() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$i.prototype.name;
+    /** @type {?} */
+    PeriodicElement$i.prototype.position;
+    /** @type {?} */
+    PeriodicElement$i.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$i.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$i = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -8178,6 +10015,28 @@ TableStickyComplexExample.decorators = [
 ];
 /** @nocollapse */
 TableStickyComplexExample.ctorParameters = () => [];
+if (false) {
+    /** @type {?} */
+    TableStickyComplexExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableStickyComplexExample.prototype.dataSource;
+    /** @type {?} */
+    TableStickyComplexExample.prototype.tables;
+}
+/**
+ * @record
+ */
+function PeriodicElement$j() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$j.prototype.name;
+    /** @type {?} */
+    PeriodicElement$j.prototype.position;
+    /** @type {?} */
+    PeriodicElement$j.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$j.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$j = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -8196,6 +10055,16 @@ const ELEMENT_DATA$j = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function Transaction$2() { }
+if (false) {
+    /** @type {?} */
+    Transaction$2.prototype.item;
+    /** @type {?} */
+    Transaction$2.prototype.cost;
+}
 /**
  * \@title Table with a sticky footer
  */
@@ -8235,6 +10104,12 @@ TableStickyFooterExample.decorators = [
                 styles: [".example-container {\n  height: 270px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n\ntr.mat-footer-row {\n  font-weight: bold;\n}\n\n.mat-table-sticky {\n  border-top: 1px solid #e0e0e0;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableStickyFooterExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableStickyFooterExample.prototype.transactions;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8256,6 +10131,26 @@ TableStickyHeaderExample.decorators = [
                 styles: [".example-container {\n  height: 400px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableStickyHeaderExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableStickyHeaderExample.prototype.dataSource;
+}
+/**
+ * @record
+ */
+function PeriodicElement$k() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$k.prototype.name;
+    /** @type {?} */
+    PeriodicElement$k.prototype.position;
+    /** @type {?} */
+    PeriodicElement$k.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$k.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$k = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -8274,6 +10169,20 @@ const ELEMENT_DATA$k = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$l() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$l.prototype.name;
+    /** @type {?} */
+    PeriodicElement$l.prototype.position;
+    /** @type {?} */
+    PeriodicElement$l.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$l.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$l = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -8312,11 +10221,40 @@ TableTextColumnAdvancedExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableTextColumnAdvancedExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableTextColumnAdvancedExample.prototype.dataSource;
+    /** @type {?} */
+    TableTextColumnAdvancedExample.prototype.headerText;
+    /** @type {?} */
+    TableTextColumnAdvancedExample.prototype.decimalPipe;
+    /**
+     * Data accessor function that transforms the weight value to have at most 2 decimal digits.
+     * @type {?}
+     */
+    TableTextColumnAdvancedExample.prototype.getWeight;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$m() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$m.prototype.name;
+    /** @type {?} */
+    PeriodicElement$m.prototype.position;
+    /** @type {?} */
+    PeriodicElement$m.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$m.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$m = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -8347,11 +10285,31 @@ TableTextColumnExample.decorators = [
                 styles: ["table {\n  width: 100%;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TableTextColumnExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableTextColumnExample.prototype.dataSource;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function PeriodicElement$n() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$n.prototype.name;
+    /** @type {?} */
+    PeriodicElement$n.prototype.position;
+    /** @type {?} */
+    PeriodicElement$n.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$n.prototype.symbol;
+}
 /** @type {?} */
 const ELEMENT_DATA$n = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -8390,6 +10348,14 @@ TableWrappedExample.decorators = [
 TableWrappedExample.propDecorators = {
     sort: [{ type: ViewChild, args: ['sort', { static: true },] }]
 };
+if (false) {
+    /** @type {?} */
+    TableWrappedExample.prototype.displayedColumns;
+    /** @type {?} */
+    TableWrappedExample.prototype.dataSource;
+    /** @type {?} */
+    TableWrappedExample.prototype.sort;
+}
 /**
  * Table component that accepts column and row definitions in its content to be registered to the
  * table.
@@ -8436,6 +10402,20 @@ WrapperTable.propDecorators = {
     columns: [{ type: Input }],
     dataSource: [{ type: Input }]
 };
+if (false) {
+    /** @type {?} */
+    WrapperTable.prototype.headerRowDefs;
+    /** @type {?} */
+    WrapperTable.prototype.rowDefs;
+    /** @type {?} */
+    WrapperTable.prototype.columnDefs;
+    /** @type {?} */
+    WrapperTable.prototype.table;
+    /** @type {?} */
+    WrapperTable.prototype.columns;
+    /** @type {?} */
+    WrapperTable.prototype.dataSource;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8453,6 +10433,12 @@ TextFieldAutofillDirectiveExample.decorators = [
                 styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TextFieldAutofillDirectiveExample.prototype.firstNameAutofilled;
+    /** @type {?} */
+    TextFieldAutofillDirectiveExample.prototype.lastNameAutofilled;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8508,6 +10494,21 @@ TextFieldAutofillMonitorExample.propDecorators = {
     firstName: [{ type: ViewChild, args: ['first', { read: ElementRef, static: false },] }],
     lastName: [{ type: ViewChild, args: ['last', { read: ElementRef, static: false },] }]
 };
+if (false) {
+    /** @type {?} */
+    TextFieldAutofillMonitorExample.prototype.firstName;
+    /** @type {?} */
+    TextFieldAutofillMonitorExample.prototype.lastName;
+    /** @type {?} */
+    TextFieldAutofillMonitorExample.prototype.firstNameAutofilled;
+    /** @type {?} */
+    TextFieldAutofillMonitorExample.prototype.lastNameAutofilled;
+    /**
+     * @type {?}
+     * @private
+     */
+    TextFieldAutofillMonitorExample.prototype._autofill;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8549,6 +10550,15 @@ TextFieldAutosizeTextareaExample.ctorParameters = () => [
 TextFieldAutosizeTextareaExample.propDecorators = {
     autosize: [{ type: ViewChild, args: ['autosize', { static: false },] }]
 };
+if (false) {
+    /** @type {?} */
+    TextFieldAutosizeTextareaExample.prototype.autosize;
+    /**
+     * @type {?}
+     * @private
+     */
+    TextFieldAutosizeTextareaExample.prototype._ngZone;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8604,6 +10614,12 @@ TooltipAutoHideExample.decorators = [
                 styles: [".example-button {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TooltipAutoHideExample.prototype.positionOptions;
+    /** @type {?} */
+    TooltipAutoHideExample.prototype.position;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8645,6 +10661,12 @@ TooltipDelayExample.decorators = [
                 styles: [".example-user-input {\n  display: block;\n  width: 150px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TooltipDelayExample.prototype.showDelay;
+    /** @type {?} */
+    TooltipDelayExample.prototype.hideDelay;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8665,6 +10687,10 @@ TooltipDisabledExample.decorators = [
                 styles: [".example-disabled-checkbox {\n  margin-left: 8px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TooltipDisabledExample.prototype.disabled;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8702,6 +10728,10 @@ TooltipMessageExample.decorators = [
                 styles: [".example-user-input {\n  margin-right: 8px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TooltipMessageExample.prototype.message;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8769,6 +10799,12 @@ TooltipPositionExample.decorators = [
                 styles: [".example-user-input {\n  margin-right: 8px;\n}\n"]
             }] }
 ];
+if (false) {
+    /** @type {?} */
+    TooltipPositionExample.prototype.positionOptions;
+    /** @type {?} */
+    TooltipPositionExample.prototype.position;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -8779,10 +10815,24 @@ TooltipPositionExample.decorators = [
  */
 class TodoItemNode {
 }
+if (false) {
+    /** @type {?} */
+    TodoItemNode.prototype.children;
+    /** @type {?} */
+    TodoItemNode.prototype.item;
+}
 /**
  * Flat to-do item node with expandable and level information
  */
 class TodoItemFlatNode {
+}
+if (false) {
+    /** @type {?} */
+    TodoItemFlatNode.prototype.item;
+    /** @type {?} */
+    TodoItemFlatNode.prototype.level;
+    /** @type {?} */
+    TodoItemFlatNode.prototype.expandable;
 }
 /**
  * The Json object for to-do list data.
@@ -8887,6 +10937,10 @@ ChecklistDatabase.decorators = [
 ];
 /** @nocollapse */
 ChecklistDatabase.ctorParameters = () => [];
+if (false) {
+    /** @type {?} */
+    ChecklistDatabase.prototype.dataChange;
+}
 /**
  * \@title Tree with checkboxes
  */
@@ -9130,6 +11184,59 @@ TreeChecklistExample.decorators = [
 TreeChecklistExample.ctorParameters = () => [
     { type: ChecklistDatabase }
 ];
+if (false) {
+    /**
+     * Map from flat node to nested node. This helps us finding the nested node to be modified
+     * @type {?}
+     */
+    TreeChecklistExample.prototype.flatNodeMap;
+    /**
+     * Map from nested node to flattened node. This helps us to keep the same object for selection
+     * @type {?}
+     */
+    TreeChecklistExample.prototype.nestedNodeMap;
+    /**
+     * A selected parent node to be inserted
+     * @type {?}
+     */
+    TreeChecklistExample.prototype.selectedParent;
+    /**
+     * The new item's name
+     * @type {?}
+     */
+    TreeChecklistExample.prototype.newItemName;
+    /** @type {?} */
+    TreeChecklistExample.prototype.treeControl;
+    /** @type {?} */
+    TreeChecklistExample.prototype.treeFlattener;
+    /** @type {?} */
+    TreeChecklistExample.prototype.dataSource;
+    /**
+     * The selection for checklist
+     * @type {?}
+     */
+    TreeChecklistExample.prototype.checklistSelection;
+    /** @type {?} */
+    TreeChecklistExample.prototype.getLevel;
+    /** @type {?} */
+    TreeChecklistExample.prototype.isExpandable;
+    /** @type {?} */
+    TreeChecklistExample.prototype.getChildren;
+    /** @type {?} */
+    TreeChecklistExample.prototype.hasChild;
+    /** @type {?} */
+    TreeChecklistExample.prototype.hasNoContent;
+    /**
+     * Transformer to convert nested node to flat node. Record the nodes in maps for later use.
+     * @type {?}
+     */
+    TreeChecklistExample.prototype.transformer;
+    /**
+     * @type {?}
+     * @private
+     */
+    TreeChecklistExample.prototype._database;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -9151,6 +11258,16 @@ class DynamicFlatNode {
         this.expandable = expandable;
         this.isLoading = isLoading;
     }
+}
+if (false) {
+    /** @type {?} */
+    DynamicFlatNode.prototype.item;
+    /** @type {?} */
+    DynamicFlatNode.prototype.level;
+    /** @type {?} */
+    DynamicFlatNode.prototype.expandable;
+    /** @type {?} */
+    DynamicFlatNode.prototype.isLoading;
 }
 /**
  * Database for dynamic data. When expanding a node in the tree, the data source will need to fetch
@@ -9191,6 +11308,12 @@ class DynamicDatabase {
     isExpandable(node) {
         return this.dataMap.has(node);
     }
+}
+if (false) {
+    /** @type {?} */
+    DynamicDatabase.prototype.dataMap;
+    /** @type {?} */
+    DynamicDatabase.prototype.rootLevelNodes;
 }
 /**
  * File database, it can build a tree structured Json object from string.
@@ -9311,6 +11434,20 @@ DynamicDataSource.ctorParameters = () => [
     { type: FlatTreeControl },
     { type: DynamicDatabase }
 ];
+if (false) {
+    /** @type {?} */
+    DynamicDataSource.prototype.dataChange;
+    /**
+     * @type {?}
+     * @private
+     */
+    DynamicDataSource.prototype._treeControl;
+    /**
+     * @type {?}
+     * @private
+     */
+    DynamicDataSource.prototype._database;
+}
 /**
  * \@title Tree with dynamic data
  */
@@ -9352,11 +11489,35 @@ TreeDynamicExample.decorators = [
 TreeDynamicExample.ctorParameters = () => [
     { type: DynamicDatabase }
 ];
+if (false) {
+    /** @type {?} */
+    TreeDynamicExample.prototype.treeControl;
+    /** @type {?} */
+    TreeDynamicExample.prototype.dataSource;
+    /** @type {?} */
+    TreeDynamicExample.prototype.getLevel;
+    /** @type {?} */
+    TreeDynamicExample.prototype.isExpandable;
+    /** @type {?} */
+    TreeDynamicExample.prototype.hasChild;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * Food data with nested structure.
+ * Each node has a name and an optiona list of children.
+ * @record
+ */
+function FoodNode$1() { }
+if (false) {
+    /** @type {?} */
+    FoodNode$1.prototype.name;
+    /** @type {?|undefined} */
+    FoodNode$1.prototype.children;
+}
 /** @type {?} */
 const TREE_DATA$3 = [
     {
@@ -9385,6 +11546,19 @@ const TREE_DATA$3 = [
         ]
     },
 ];
+/**
+ * Flat node with expandable and level information
+ * @record
+ */
+function ExampleFlatNode$1() { }
+if (false) {
+    /** @type {?} */
+    ExampleFlatNode$1.prototype.expandable;
+    /** @type {?} */
+    ExampleFlatNode$1.prototype.name;
+    /** @type {?} */
+    ExampleFlatNode$1.prototype.level;
+}
 /**
  * \@title Tree with flat nodes
  */
@@ -9443,6 +11617,21 @@ TreeFlatOverviewExample.decorators = [
 ];
 /** @nocollapse */
 TreeFlatOverviewExample.ctorParameters = () => [];
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    TreeFlatOverviewExample.prototype._transformer;
+    /** @type {?} */
+    TreeFlatOverviewExample.prototype.treeControl;
+    /** @type {?} */
+    TreeFlatOverviewExample.prototype.treeFlattener;
+    /** @type {?} */
+    TreeFlatOverviewExample.prototype.dataSource;
+    /** @type {?} */
+    TreeFlatOverviewExample.prototype.hasChild;
+}
 
 /**
  * @fileoverview added by tsickle
@@ -9472,6 +11661,16 @@ class LoadmoreNode {
         return this.childrenChange.value;
     }
 }
+if (false) {
+    /** @type {?} */
+    LoadmoreNode.prototype.childrenChange;
+    /** @type {?} */
+    LoadmoreNode.prototype.item;
+    /** @type {?} */
+    LoadmoreNode.prototype.hasChildren;
+    /** @type {?} */
+    LoadmoreNode.prototype.loadMoreParentItem;
+}
 /**
  * Flat node with expandable and level information
  */
@@ -9488,6 +11687,16 @@ class LoadmoreFlatNode {
         this.expandable = expandable;
         this.loadMoreParentItem = loadMoreParentItem;
     }
+}
+if (false) {
+    /** @type {?} */
+    LoadmoreFlatNode.prototype.item;
+    /** @type {?} */
+    LoadmoreFlatNode.prototype.level;
+    /** @type {?} */
+    LoadmoreFlatNode.prototype.expandable;
+    /** @type {?} */
+    LoadmoreFlatNode.prototype.loadMoreParentItem;
 }
 /**
  * A database that only load part of the data initially. After user clicks on the `Load more`
@@ -9572,6 +11781,21 @@ class LoadmoreDatabase {
 LoadmoreDatabase.decorators = [
     { type: Injectable }
 ];
+if (false) {
+    /** @type {?} */
+    LoadmoreDatabase.prototype.batchNumber;
+    /** @type {?} */
+    LoadmoreDatabase.prototype.dataChange;
+    /** @type {?} */
+    LoadmoreDatabase.prototype.nodeMap;
+    /**
+     * The data
+     * @type {?}
+     */
+    LoadmoreDatabase.prototype.rootLevelNodes;
+    /** @type {?} */
+    LoadmoreDatabase.prototype.dataMap;
+}
 /**
  * \@title Tree with partially loaded data
  */
@@ -9665,11 +11889,50 @@ TreeLoadmoreExample.decorators = [
 TreeLoadmoreExample.ctorParameters = () => [
     { type: LoadmoreDatabase }
 ];
+if (false) {
+    /** @type {?} */
+    TreeLoadmoreExample.prototype.nodeMap;
+    /** @type {?} */
+    TreeLoadmoreExample.prototype.treeControl;
+    /** @type {?} */
+    TreeLoadmoreExample.prototype.treeFlattener;
+    /** @type {?} */
+    TreeLoadmoreExample.prototype.dataSource;
+    /** @type {?} */
+    TreeLoadmoreExample.prototype.getChildren;
+    /** @type {?} */
+    TreeLoadmoreExample.prototype.transformer;
+    /** @type {?} */
+    TreeLoadmoreExample.prototype.getLevel;
+    /** @type {?} */
+    TreeLoadmoreExample.prototype.isExpandable;
+    /** @type {?} */
+    TreeLoadmoreExample.prototype.hasChild;
+    /** @type {?} */
+    TreeLoadmoreExample.prototype.isLoadMore;
+    /**
+     * @type {?}
+     * @private
+     */
+    TreeLoadmoreExample.prototype._database;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * Food data with nested structure.
+ * Each node has a name and an optiona list of children.
+ * @record
+ */
+function FoodNode$2() { }
+if (false) {
+    /** @type {?} */
+    FoodNode$2.prototype.name;
+    /** @type {?|undefined} */
+    FoodNode$2.prototype.children;
+}
 /** @type {?} */
 const TREE_DATA$4 = [
     {
@@ -9727,11 +11990,33 @@ TreeNestedOverviewExample.decorators = [
 ];
 /** @nocollapse */
 TreeNestedOverviewExample.ctorParameters = () => [];
+if (false) {
+    /** @type {?} */
+    TreeNestedOverviewExample.prototype.treeControl;
+    /** @type {?} */
+    TreeNestedOverviewExample.prototype.dataSource;
+    /** @type {?} */
+    TreeNestedOverviewExample.prototype.hasChild;
+}
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+/**
+ * @record
+ */
+function LiveExample() { }
+if (false) {
+    /** @type {?} */
+    LiveExample.prototype.title;
+    /** @type {?} */
+    LiveExample.prototype.component;
+    /** @type {?|undefined} */
+    LiveExample.prototype.additionalFiles;
+    /** @type {?|undefined} */
+    LiveExample.prototype.selectorName;
+}
 /** @type {?} */
 const EXAMPLE_COMPONENTS = { "autocomplete-auto-active-first-option": { "title": "Highlight the first autocomplete option", "component": AutocompleteAutoActiveFirstOptionExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-display": { "title": "Display value autocomplete", "component": AutocompleteDisplayExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-filter": { "title": "Filter autocomplete", "component": AutocompleteFilterExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-optgroup": { "title": "Option groups autocomplete", "component": AutocompleteOptgroupExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-overview": { "title": "Autocomplete overview", "component": AutocompleteOverviewExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-plain-input": { "title": "Plain input autocomplete", "component": AutocompletePlainInputExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-simple": { "title": "Simple autocomplete", "component": AutocompleteSimpleExample, "additionalFiles": [], "selectorName": "" }, "badge-overview": { "title": "Badge overview", "component": BadgeOverviewExample, "additionalFiles": [], "selectorName": "" }, "bottom-sheet-overview": { "title": "Bottom Sheet Overview", "component": BottomSheetOverviewExample, "additionalFiles": ["bottom-sheet-overview-example-sheet.html"], "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet" }, "button-overview": { "title": "Basic buttons", "component": ButtonOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-appearance": { "title": "Button toggle appearance", "component": ButtonToggleAppearanceExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-exclusive": { "title": "Exclusive selection", "component": ButtonToggleExclusiveExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-overview": { "title": "Basic button-toggles", "component": ButtonToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-types": { "title": "Button varieties", "component": ButtonTypesExample, "additionalFiles": [], "selectorName": "" }, "card-fancy": { "title": "Card with multiple sections", "component": CardFancyExample, "additionalFiles": [], "selectorName": "" }, "card-overview": { "title": "Basic cards", "component": CardOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-custom-stepper-without-form": { "title": "A custom CDK stepper without a form", "component": CdkCustomStepperWithoutFormExample, "additionalFiles": ["./example-custom-stepper.html", "./example-custom-stepper.css"], "selectorName": "CdkCustomStepperWithoutFormExample, CustomStepper" }, "cdk-drag-drop-axis-lock": { "title": "Drag&Drop position locking", "component": CdkDragDropAxisLockExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-boundary": { "title": "Drag&Drop boundary", "component": CdkDragDropBoundaryExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting-group": { "title": "Drag&Drop connected sorting group", "component": CdkDragDropConnectedSortingGroupExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting": { "title": "Drag&Drop connected sorting", "component": CdkDragDropConnectedSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-placeholder": { "title": "Drag&Drop custom placeholer", "component": CdkDragDropCustomPlaceholderExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-preview": { "title": "Drag&Drop custom preview", "component": CdkDragDropCustomPreviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-delay": { "title": "Delayed dragging", "component": CdkDragDropDelayExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled-sorting": { "title": "Drag&Drop disabled sorting", "component": CdkDragDropDisabledSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled": { "title": "Drag&Drop disabled", "component": CdkDragDropDisabledExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-enter-predicate": { "title": "Drag&Drop enter predicate", "component": CdkDragDropEnterPredicateExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-free-drag-position": { "title": "Programmatically setting the free drag position", "component": CdkDragDropFreeDragPositionExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-handle": { "title": "Drag&Drop with a handle", "component": CdkDragDropHandleExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-horizontal-sorting": { "title": "Drag&Drop horizontal sorting", "component": CdkDragDropHorizontalSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-overview": { "title": "Basic Drag&Drop", "component": CdkDragDropOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-root-element": { "title": "Drag&Drop with alternate root element", "component": CdkDragDropRootElementExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-sorting": { "title": "Drag&Drop sorting", "component": CdkDragDropSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-platform-overview": { "title": "Platform overview", "component": CdkPlatformOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cdk-table-flex": { "title": "CDK Popover Edit on a flex cdk-table.", "component": CdkPopoverEditCdkTableFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cdk-table": { "title": "CDK Popover Edit on a CDK data-table", "component": CdkPopoverEditCdkTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cell-span-vanilla-table": { "title": "CDK Popover Edit spanning multiple columns on an HTML data-table", "component": CdkPopoverEditCellSpanVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-tab-out-vanilla-table": { "title": "CDK Popover Edit with spreadsheet-like configuration on an HTML data-table", "component": CdkPopoverEditTabOutVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-vanilla-table": { "title": "CDK Popover Edit on an HTML data-table", "component": CdkPopoverEditVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-portal-overview": { "title": "Portal overview", "component": CdkPortalOverviewExample, "additionalFiles": [], "selectorName": "CdkPortalOverviewExample, ComponentPortalExample" }, "cdk-table-basic-flex": { "title": "Basic use of `<cdk-table>` (uses display flex)", "component": CdkTableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic": { "title": "Basic CDK data-table", "component": CdkTableBasicExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-flat": { "title": "Tree with flat nodes", "component": CdkTreeFlatExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-nested": { "title": "Tree with nested nodes", "component": CdkTreeNestedExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-context": { "title": "Virtual scroll context variables", "component": CdkVirtualScrollContextExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-custom-strategy": { "title": "Virtual scroll with a custom strategy", "component": CdkVirtualScrollCustomStrategyExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-data-source": { "title": "Virtual scroll with a custom data source", "component": CdkVirtualScrollDataSourceExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-dl": { "title": "Virtual scrolling `<dl>`", "component": CdkVirtualScrollDlExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-fixed-buffer": { "title": "Fixed size virtual scroll with custom buffer parameters", "component": CdkVirtualScrollFixedBufferExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-horizontal": { "title": "Horizontal virtual scroll", "component": CdkVirtualScrollHorizontalExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-overview": { "title": "Basic virtual scroll", "component": CdkVirtualScrollOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-template-cache": { "title": "Virtual scroll with no template caching", "component": CdkVirtualScrollTemplateCacheExample, "additionalFiles": [], "selectorName": "" }, "checkbox-configurable": { "title": "Configurable checkbox", "component": CheckboxConfigurableExample, "additionalFiles": [], "selectorName": "" }, "checkbox-overview": { "title": "Basic checkboxes", "component": CheckboxOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-autocomplete": { "title": "Chips Autocomplete", "component": ChipsAutocompleteExample, "additionalFiles": [], "selectorName": "" }, "chips-drag-drop": { "title": "Chips Drag and Drop", "component": ChipsDragDropExample, "additionalFiles": [], "selectorName": "" }, "chips-input": { "title": "Chips with input", "component": ChipsInputExample, "additionalFiles": [], "selectorName": "" }, "chips-overview": { "title": "Basic chips", "component": ChipsOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-stacked": { "title": "Stacked chips", "component": ChipsStackedExample, "additionalFiles": [], "selectorName": "" }, "datepicker-api": { "title": "Datepicker open method", "component": DatepickerApiExample, "additionalFiles": [], "selectorName": "" }, "datepicker-color": { "title": "Datepicker palette colors", "component": DatepickerColorExample, "additionalFiles": [], "selectorName": "" }, "datepicker-custom-header": { "title": "Datepicker with custom calendar header", "component": DatepickerCustomHeaderExample, "additionalFiles": [], "selectorName": "DatepickerCustomHeaderExample, ExampleHeader" }, "datepicker-custom-icon": { "title": "Datepicker with custom icon", "component": DatepickerCustomIconExample, "additionalFiles": [], "selectorName": "" }, "datepicker-date-class": { "title": "Datepicker with custom date classes", "component": DatepickerDateClassExample, "additionalFiles": [], "selectorName": "" }, "datepicker-disabled": { "title": "Disabled datepicker", "component": DatepickerDisabledExample, "additionalFiles": [], "selectorName": "" }, "datepicker-events": { "title": "Datepicker input and change events", "component": DatepickerEventsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-filter": { "title": "Datepicker with filter validation", "component": DatepickerFilterExample, "additionalFiles": [], "selectorName": "" }, "datepicker-formats": { "title": "Datepicker with custom formats", "component": DatepickerFormatsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-locale": { "title": "Datepicker with different locale", "component": DatepickerLocaleExample, "additionalFiles": [], "selectorName": "" }, "datepicker-min-max": { "title": "Datepicker with min & max validation", "component": DatepickerMinMaxExample, "additionalFiles": [], "selectorName": "" }, "datepicker-moment": { "title": "Datepicker that uses Moment.js dates", "component": DatepickerMomentExample, "additionalFiles": [], "selectorName": "" }, "datepicker-overview": { "title": "Basic datepicker", "component": DatepickerOverviewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-start-view": { "title": "Datepicker start date", "component": DatepickerStartViewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-touch": { "title": "Datepicker touch UI", "component": DatepickerTouchExample, "additionalFiles": [], "selectorName": "" }, "datepicker-value": { "title": "Datepicker selected value", "component": DatepickerValueExample, "additionalFiles": [], "selectorName": "" }, "datepicker-views-selection": { "title": "Datepicker emulating a Year and month picker", "component": DatepickerViewsSelectionExample, "additionalFiles": [], "selectorName": "" }, "dialog-content": { "title": "Dialog with header, scrollable content and actions", "component": DialogContentExample, "additionalFiles": ["dialog-content-example-dialog.html"], "selectorName": "DialogContentExample, DialogContentExampleDialog" }, "dialog-data": { "title": "Injecting data when opening a dialog", "component": DialogDataExample, "additionalFiles": ["dialog-data-example-dialog.html"], "selectorName": "DialogDataExample, DialogDataExampleDialog" }, "dialog-elements": { "title": "Dialog elements", "component": DialogElementsExample, "additionalFiles": ["dialog-elements-example-dialog.html"], "selectorName": "DialogElementsExample, DialogElementsExampleDialog" }, "dialog-overview": { "title": "Dialog Overview", "component": DialogOverviewExample, "additionalFiles": ["dialog-overview-example-dialog.html"], "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog" }, "divider-overview": { "title": "Basic divider", "component": DividerOverviewExample, "additionalFiles": [], "selectorName": "" }, "elevation-overview": { "title": "Elevation CSS classes", "component": ElevationOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-expand-collapse-all": { "title": "Accordion with expand/collapse all toggles", "component": ExpansionExpandCollapseAllExample, "additionalFiles": [], "selectorName": "" }, "expansion-overview": { "title": "Basic expansion panel", "component": ExpansionOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-steps": { "title": "Expansion panel as accordion", "component": ExpansionStepsExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-directives": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorDirectivesExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-focus-via": { "title": "Focusing with a specific FocusOrigin", "component": FocusMonitorFocusViaExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-overview": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-appearance": { "title": "Form field appearance variants", "component": FormFieldAppearanceExample, "additionalFiles": [], "selectorName": "" }, "form-field-custom-control": { "title": "Form field with custom telephone number input control.", "component": FormFieldCustomControlExample, "additionalFiles": ["example-tel-input-example.html", "example-tel-input-example.css"], "selectorName": "FormFieldCustomControlExample, MyTelInput" }, "form-field-error": { "title": "Form field with error messages", "component": FormFieldErrorExample, "additionalFiles": [], "selectorName": "" }, "form-field-hint": { "title": "Form field with hints", "component": FormFieldHintExample, "additionalFiles": [], "selectorName": "" }, "form-field-label": { "title": "Form field with label", "component": FormFieldLabelExample, "additionalFiles": [], "selectorName": "" }, "form-field-overview": { "title": "Simple form field", "component": FormFieldOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-prefix-suffix": { "title": "Form field with prefix & suffix", "component": FormFieldPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "form-field-theming": { "title": "Form field theming", "component": FormFieldThemingExample, "additionalFiles": [], "selectorName": "" }, "grid-list-dynamic": { "title": "Dynamic grid-list", "component": GridListDynamicExample, "additionalFiles": [], "selectorName": "" }, "grid-list-overview": { "title": "Basic grid-list", "component": GridListOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-overview": { "title": "Basic icons", "component": IconOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-svg": { "title": "SVG icons", "component": IconSvgExample, "additionalFiles": [], "selectorName": "" }, "input-clearable": { "title": "Input with a clear button", "component": InputClearableExample, "additionalFiles": [], "selectorName": "" }, "input-error-state-matcher": { "title": "Input with a custom ErrorStateMatcher", "component": InputErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "input-errors": { "title": "Input with error messages", "component": InputErrorsExample, "additionalFiles": [], "selectorName": "" }, "input-form": { "title": "Inputs in a form", "component": InputFormExample, "additionalFiles": [], "selectorName": "" }, "input-hint": { "title": "Input with hints", "component": InputHintExample, "additionalFiles": [], "selectorName": "" }, "input-overview": { "title": "Basic Inputs", "component": InputOverviewExample, "additionalFiles": [], "selectorName": "" }, "input-prefix-suffix": { "title": "Inputs with prefixes and suffixes", "component": InputPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "list-overview": { "title": "Basic list", "component": ListOverviewExample, "additionalFiles": [], "selectorName": "" }, "list-sections": { "title": "List with sections", "component": ListSectionsExample, "additionalFiles": [], "selectorName": "" }, "list-selection": { "title": "List with selection", "component": ListSelectionExample, "additionalFiles": [], "selectorName": "" }, "menu-icons": { "title": "Menu with icons", "component": MenuIconsExample, "additionalFiles": [], "selectorName": "" }, "menu-overview": { "title": "Basic menu", "component": MenuOverviewExample, "additionalFiles": [], "selectorName": "" }, "menu-position": { "title": "Menu positioning", "component": MenuPositionExample, "additionalFiles": [], "selectorName": "" }, "nested-menu": { "title": "Nested menu", "component": NestedMenuExample, "additionalFiles": [], "selectorName": "" }, "paginator-configurable": { "title": "Configurable paginator", "component": PaginatorConfigurableExample, "additionalFiles": [], "selectorName": "" }, "paginator-overview": { "title": "Paginator", "component": PaginatorOverviewExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-cell-span-mat-table": { "title": "Material Popover Edit spanning multiple columns on a Material data-table", "component": PopoverEditCellSpanMatTableExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-mat-table-flex": { "title": "Material Popover Edit on a flex Material data-table", "component": PopoverEditMatTableFlexExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-mat-table": { "title": "Material Popover Edit on a Material data-table", "component": PopoverEditMatTableExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-tab-out-mat-table": { "title": "Material Popover Edit with spreadsheet-like configuration on a Material data-table", "component": PopoverEditTabOutMatTableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-buffer": { "title": "Buffer progress-bar", "component": ProgressBarBufferExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-configurable": { "title": "Configurable progress-bar", "component": ProgressBarConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-determinate": { "title": "Determinate progress-bar", "component": ProgressBarDeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-indeterminate": { "title": "Indeterminate progress-bar", "component": ProgressBarIndeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-query": { "title": "Query progress-bar", "component": ProgressBarQueryExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-configurable": { "title": "Configurable progress spinner", "component": ProgressSpinnerConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-overview": { "title": "Basic progress-spinner", "component": ProgressSpinnerOverviewExample, "additionalFiles": [], "selectorName": "" }, "radio-ng-model": { "title": "Radios with ngModel", "component": RadioNgModelExample, "additionalFiles": [], "selectorName": "" }, "radio-overview": { "title": "Basic radios", "component": RadioOverviewExample, "additionalFiles": [], "selectorName": "" }, "ripple-overview": { "title": "MatRipple basic usage", "component": RippleOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-custom-trigger": { "title": "Select with custom trigger text", "component": SelectCustomTriggerExample, "additionalFiles": [], "selectorName": "" }, "select-disabled": { "title": "Disabled select", "component": SelectDisabledExample, "additionalFiles": [], "selectorName": "" }, "select-error-state-matcher": { "title": "Select with a custom ErrorStateMatcher", "component": SelectErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "select-form": { "title": "Select in a form", "component": SelectFormExample, "additionalFiles": [], "selectorName": "" }, "select-hint-error": { "title": "Select with form field features", "component": SelectHintErrorExample, "additionalFiles": [], "selectorName": "" }, "select-multiple": { "title": "Select with multiple selection", "component": SelectMultipleExample, "additionalFiles": [], "selectorName": "" }, "select-no-ripple": { "title": "Select with no option ripple", "component": SelectNoRippleExample, "additionalFiles": [], "selectorName": "" }, "select-optgroup": { "title": "Select with option groups", "component": SelectOptgroupExample, "additionalFiles": [], "selectorName": "" }, "select-overview": { "title": "Basic select", "component": SelectOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-panel-class": { "title": "Select with custom panel styling", "component": SelectPanelClassExample, "additionalFiles": [], "selectorName": "" }, "select-reset": { "title": "Select with reset option", "component": SelectResetExample, "additionalFiles": [], "selectorName": "" }, "select-value-binding": { "title": "Select with 2-way value binding", "component": SelectValueBindingExample, "additionalFiles": [], "selectorName": "" }, "sidenav-autosize": { "title": "Autosize sidenav", "component": SidenavAutosizeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-backdrop": { "title": "Drawer with explicit backdrop setting", "component": SidenavBackdropExample, "additionalFiles": [], "selectorName": "" }, "sidenav-disable-close": { "title": "Sidenav with custom escape and backdrop click behavior", "component": SidenavDisableCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-drawer-overview": { "title": "Basic drawer", "component": SidenavDrawerOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-fixed": { "title": "Fixed sidenav", "component": SidenavFixedExample, "additionalFiles": [], "selectorName": "" }, "sidenav-mode": { "title": "Sidenav with configurable mode", "component": SidenavModeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-open-close": { "title": "Sidenav open & close behavior", "component": SidenavOpenCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-overview": { "title": "Basic sidenav", "component": SidenavOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-position": { "title": "Implicit main content with two sidenavs", "component": SidenavPositionExample, "additionalFiles": [], "selectorName": "" }, "sidenav-responsive": { "title": "Responsive sidenav", "component": SidenavResponsiveExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-configurable": { "title": "Configurable slide-toggle", "component": SlideToggleConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-forms": { "title": "Slide-toggle with forms", "component": SlideToggleFormsExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-overview": { "title": "Basic slide-toggles", "component": SlideToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "slider-configurable": { "title": "Configurable slider", "component": SliderConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slider-formatting": { "title": "Slider with custom thumb label formatting.", "component": SliderFormattingExample, "additionalFiles": [], "selectorName": "" }, "slider-overview": { "title": "Basic slider", "component": SliderOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-component": { "title": "Snack-bar with a custom component", "component": SnackBarComponentExample, "additionalFiles": ["snack-bar-component-example-snack.html"], "selectorName": "SnackBarComponentExample, PizzaPartyComponent" }, "snack-bar-overview": { "title": "Basic snack-bar", "component": SnackBarOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-position": { "title": "Snack-bar with configurable position", "component": SnackBarPositionExample, "additionalFiles": [], "selectorName": "" }, "sort-overview": { "title": "Sorting overview", "component": SortOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-editable": { "title": "Stepper with editable steps", "component": StepperEditableExample, "additionalFiles": [], "selectorName": "" }, "stepper-errors": { "title": "Stepper that displays errors in the steps", "component": StepperErrorsExample, "additionalFiles": [], "selectorName": "" }, "stepper-label-position-bottom": { "title": "Stepper label bottom position", "component": StepperLabelPositionBottomExample, "additionalFiles": [], "selectorName": "" }, "stepper-optional": { "title": "Stepper with optional steps", "component": StepperOptionalExample, "additionalFiles": [], "selectorName": "" }, "stepper-overview": { "title": "Stepper overview", "component": StepperOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-states": { "title": "Stepper with customized states", "component": StepperStatesExample, "additionalFiles": [], "selectorName": "" }, "stepper-vertical": { "title": "Stepper vertical", "component": StepperVerticalExample, "additionalFiles": [], "selectorName": "" }, "tab-group-align": { "title": "Tab group with aligned labels", "component": TabGroupAlignExample, "additionalFiles": [], "selectorName": "" }, "tab-group-animations": { "title": "Tab group animations", "component": TabGroupAnimationsExample, "additionalFiles": [], "selectorName": "" }, "tab-group-async": { "title": "Tab group with asynchronously loading tab contents", "component": TabGroupAsyncExample, "additionalFiles": [], "selectorName": "" }, "tab-group-basic": { "title": "Basic use of the tab group", "component": TabGroupBasicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-custom-label": { "title": "Using tabs with a custom label template", "component": TabGroupCustomLabelExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic-height": { "title": "Tab group with dynamic height based on tab contents", "component": TabGroupDynamicHeightExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic": { "title": "Tab group with dynamically changing tabs", "component": TabGroupDynamicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-header-below": { "title": "Tab group with the headers on the bottom", "component": TabGroupHeaderBelowExample, "additionalFiles": [], "selectorName": "" }, "tab-group-lazy-loaded": { "title": "Tab group where the tab content is loaded lazily (when activated)", "component": TabGroupLazyLoadedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-stretched": { "title": "Tab group with stretched labels", "component": TabGroupStretchedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-theme": { "title": "Customizing the theme options on the tab group", "component": TabGroupThemeExample, "additionalFiles": [], "selectorName": "" }, "tab-nav-bar-basic": { "title": "Basic use of the tab nav bar", "component": TabNavBarBasicExample, "additionalFiles": [], "selectorName": "" }, "table-basic-flex": { "title": "Basic use of `<mat-table>` (uses display flex)", "component": TableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "table-basic": { "title": "Basic use of `<table mat-table>`", "component": TableBasicExample, "additionalFiles": [], "selectorName": "" }, "table-dynamic-columns": { "title": "Table dynamically changing the columns displayed", "component": TableDynamicColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-expandable-rows": { "title": "Table with expandable rows", "component": TableExpandableRowsExample, "additionalFiles": [], "selectorName": "" }, "table-filtering": { "title": "Table with filtering", "component": TableFilteringExample, "additionalFiles": [], "selectorName": "" }, "table-footer-row": { "title": "Footer row table", "component": TableFooterRowExample, "additionalFiles": [], "selectorName": "" }, "table-http": { "title": "Table retrieving data through HTTP", "component": TableHttpExample, "additionalFiles": [], "selectorName": "" }, "table-multiple-header-footer": { "title": "Table with multiple header and footer rows", "component": TableMultipleHeaderFooterExample, "additionalFiles": [], "selectorName": "" }, "table-overview": { "title": "Data table with sorting, pagination, and filtering.", "component": TableOverviewExample, "additionalFiles": [], "selectorName": "" }, "table-pagination": { "title": "Table with pagination", "component": TablePaginationExample, "additionalFiles": [], "selectorName": "" }, "table-row-context": { "title": "Table showing each row context properties.", "component": TableRowContextExample, "additionalFiles": [], "selectorName": "" }, "table-selection": { "title": "Table with selection", "component": TableSelectionExample, "additionalFiles": [], "selectorName": "" }, "table-sorting": { "title": "Table with sorting", "component": TableSortingExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-columns": { "title": "Table with sticky columns", "component": TableStickyColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex-flex": { "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexFlexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex": { "title": "Tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-footer": { "title": "Table with a sticky footer", "component": TableStickyFooterExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-header": { "title": "Table with sticky header", "component": TableStickyHeaderExample, "additionalFiles": [], "selectorName": "" }, "table-text-column-advanced": { "title": "Use of 'mat-text-column' with various configurations of the interface.", "component": TableTextColumnAdvancedExample, "additionalFiles": [], "selectorName": "" }, "table-text-column": { "title": "Use of `mat-text-column` which can be used for simple columns that only need to display\na text value for the header and cells.", "component": TableTextColumnExample, "additionalFiles": [], "selectorName": "" }, "table-wrapped": { "title": "Table example that shows how to wrap a table component for definition and behavior reuse.", "component": TableWrappedExample, "additionalFiles": ["wrapper-table.html"], "selectorName": "TableWrappedExample, WrapperTable" }, "text-field-autofill-directive": { "title": "Monitoring autofill state with cdkAutofill", "component": TextFieldAutofillDirectiveExample, "additionalFiles": [], "selectorName": "" }, "text-field-autofill-monitor": { "title": "Monitoring autofill state with AutofillMonitor", "component": TextFieldAutofillMonitorExample, "additionalFiles": [], "selectorName": "" }, "text-field-autosize-textarea": { "title": "Auto-resizing textarea", "component": TextFieldAutosizeTextareaExample, "additionalFiles": [], "selectorName": "" }, "toolbar-multirow": { "title": "Multi-row toolbar", "component": ToolbarMultirowExample, "additionalFiles": [], "selectorName": "" }, "toolbar-overview": { "title": "Basic toolbar", "component": ToolbarOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-auto-hide": { "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.", "component": TooltipAutoHideExample, "additionalFiles": [], "selectorName": "" }, "tooltip-custom-class": { "title": "Tooltip that can have a custom class applied.", "component": TooltipCustomClassExample, "additionalFiles": [], "selectorName": "" }, "tooltip-delay": { "title": "Tooltip with a show and hide delay", "component": TooltipDelayExample, "additionalFiles": [], "selectorName": "" }, "tooltip-disabled": { "title": "Tooltip that can be disabled", "component": TooltipDisabledExample, "additionalFiles": [], "selectorName": "" }, "tooltip-manual": { "title": "Tooltip that can be manually shown/hidden.", "component": TooltipManualExample, "additionalFiles": [], "selectorName": "" }, "tooltip-message": { "title": "Tooltip with a changing message", "component": TooltipMessageExample, "additionalFiles": [], "selectorName": "" }, "tooltip-modified-defaults": { "title": "Tooltip with a show and hide delay", "component": TooltipModifiedDefaultsExample, "additionalFiles": [], "selectorName": "" }, "tooltip-overview": { "title": "Basic tooltip", "component": TooltipOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-position": { "title": "Tooltip with a custom position", "component": TooltipPositionExample, "additionalFiles": [], "selectorName": "" }, "tree-checklist": { "title": "Tree with checkboxes", "component": TreeChecklistExample, "additionalFiles": [], "selectorName": "" }, "tree-dynamic": { "title": "Tree with dynamic data", "component": TreeDynamicExample, "additionalFiles": [], "selectorName": "" }, "tree-flat-overview": { "title": "Tree with flat nodes", "component": TreeFlatOverviewExample, "additionalFiles": [], "selectorName": "" }, "tree-loadmore": { "title": "Tree with partially loaded data", "component": TreeLoadmoreExample, "additionalFiles": [], "selectorName": "" }, "tree-nested-overview": { "title": "Tree with nested nodes", "component": TreeNestedOverviewExample, "additionalFiles": [], "selectorName": "" } };
 /** @type {?} */
@@ -9789,6 +12074,34 @@ class ExampleData {
         this.componentName = exampleConfig.selectorName ||
             exampleName.replace(/[\-]+/g, '') + 'Example';
     }
+}
+if (false) {
+    /**
+     * Description of the example.
+     * @type {?}
+     */
+    ExampleData.prototype.description;
+    /**
+     * List of files that are part of this example.
+     * @type {?}
+     */
+    ExampleData.prototype.exampleFiles;
+    /**
+     * Selector name of the example component.
+     * @type {?}
+     */
+    ExampleData.prototype.selectorName;
+    /**
+     * Name of the file that contains the example component.
+     * @type {?}
+     */
+    ExampleData.prototype.indexFilename;
+    /**
+     * Name of the example component. For examples with multiple components, this property will
+     * include multiple components that are comma separated (e.g. dialog-overview)
+     * @type {?}
+     */
+    ExampleData.prototype.componentName;
 }
 
 /**
