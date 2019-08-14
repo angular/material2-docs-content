@@ -6917,8 +6917,8 @@
         };
         /** Toggle the to-do item selection. Select/deselect all the descendants node */
         TreeChecklistExample.prototype.todoItemSelectionToggle = function (node) {
-            var _this = this;
             var _a, _b;
+            var _this = this;
             this.checklistSelection.toggle(node);
             var descendants = this.treeControl.getDescendants(node);
             this.checklistSelection.isSelected(node)

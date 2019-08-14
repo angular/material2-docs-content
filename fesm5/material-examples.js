@@ -47,7 +47,7 @@ import { MatTooltipModule, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material
 import { MatTreeModule, MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
 import { startWith, map, takeUntil, switchMap, catchError, take } from 'rxjs/operators';
 import { Overlay } from '@angular/cdk/overlay';
-import { Platform, getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior } from '@angular/cdk/platform';
+import { getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior, Platform } from '@angular/cdk/platform';
 import { DataSource, ArrayDataSource, SelectionModel } from '@angular/cdk/collections';
 import { BehaviorSubject, Subscription, Subject, Observable, merge, of } from 'rxjs';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
@@ -6971,8 +6971,8 @@ var TreeChecklistExample = /** @class */ (function () {
     };
     /** Toggle the to-do item selection. Select/deselect all the descendants node */
     TreeChecklistExample.prototype.todoItemSelectionToggle = function (node) {
-        var _this = this;
         var _a, _b;
+        var _this = this;
         this.checklistSelection.toggle(node);
         var descendants = this.treeControl.getDescendants(node);
         this.checklistSelection.isSelected(node)
