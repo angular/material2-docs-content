@@ -1,886 +1,180 @@
-import { __extends, __decorate, __spread, __metadata, __param } from 'tslib';
-import { Directive, NgModule, Component, ViewChild, TemplateRef, ViewContainerRef, ChangeDetectionStrategy, ViewEncapsulation, ElementRef, Inject, ChangeDetectorRef, InjectionToken, Injectable, Optional, NgZone, Input, Self, ContentChildren, QueryList } from '@angular/core';
-import { FormControl, FormBuilder, NgControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule, DecimalPipe } from '@angular/common';
-import { EditRef, CdkEditControl, CdkEditRevert, CdkEditClose, CdkPopoverEdit, CdkPopoverEditTabOut, _closest, _CELL_SELECTOR, CdkRowHoverContent, CdkEditOpen, CdkPopoverEditModule, CdkEditable, FormValueContainer } from '@angular/cdk-experimental/popover-edit';
-import { A11yModule, FocusMonitor } from '@angular/cdk/a11y';
-import { DragDropModule, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { PortalModule, TemplatePortal, ComponentPortal } from '@angular/cdk/portal';
-import { ScrollingModule, FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY } from '@angular/cdk/scrolling';
-import { CdkStepperModule, CdkStepper, STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
-import { CdkTableModule } from '@angular/cdk/table';
-import { CdkTreeModule, FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
-import { MatAutocompleteModule, MatAutocomplete } from '@angular/material/autocomplete';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatBottomSheetModule, MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
-import { MatButtonModule } from '@angular/material/button';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatCardModule } from '@angular/material/card';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatRippleModule, MatNativeDateModule, MAT_DATE_FORMATS, DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
-import { MatDatepickerModule, MatCalendar } from '@angular/material/datepicker';
-import { MatDialogModule, MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatExpansionModule, MatAccordion } from '@angular/material/expansion';
-import { MatFormFieldModule, MatFormFieldControl } from '@angular/material/form-field';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatListModule } from '@angular/material/list';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSelectModule } from '@angular/material/select';
-import { MatSidenavModule, MatSidenav } from '@angular/material/sidenav';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
-import { MatSortModule, MatSort } from '@angular/material/sort';
-import { MatStepperModule } from '@angular/material/stepper';
-import { MatTableModule, MatTableDataSource, MatHeaderRowDef, MatRowDef, MatColumnDef, MatTable } from '@angular/material/table';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTooltipModule, MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
-import { MatTreeModule, MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource } from '@angular/material/tree';
-import { startWith, map, takeUntil, switchMap, catchError, take } from 'rxjs/operators';
-import { Overlay } from '@angular/cdk/overlay';
-import { getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior, Platform } from '@angular/cdk/platform';
+import { __decorate, __metadata, __extends, __spread, __param } from 'tslib';
+import { Component, NgZone, ChangeDetectorRef, ViewChild, ElementRef, TemplateRef, ViewContainerRef, ChangeDetectionStrategy, ViewEncapsulation, Inject, InjectionToken, Injectable, Optional, NgModule, Input, Self, ContentChildren, QueryList, Directive } from '@angular/core';
+import { FocusMonitor, A11yModule } from '@angular/cdk/a11y';
+import { moveItemInArray, transferArrayItem, DragDropModule } from '@angular/cdk/drag-drop';
+import { Overlay, OverlayModule } from '@angular/cdk/overlay';
+import { TemplatePortal, ComponentPortal, PortalModule } from '@angular/cdk/portal';
+import { getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior, Platform, PlatformModule } from '@angular/cdk/platform';
 import { DataSource, ArrayDataSource, SelectionModel } from '@angular/cdk/collections';
-import { BehaviorSubject, Subscription, Subject, Observable, merge, of } from 'rxjs';
+import { BehaviorSubject, Subscription, Subject, merge, of, Observable } from 'rxjs';
+import { FixedSizeVirtualScrollStrategy, VIRTUAL_SCROLL_STRATEGY, ScrollingModule } from '@angular/cdk/scrolling';
+import { CdkStepper, STEPPER_GLOBAL_OPTIONS, CdkStepperModule } from '@angular/cdk/stepper';
+import { AutofillMonitor, CdkTextareaAutosize, TextFieldModule } from '@angular/cdk/text-field';
+import { take, startWith, map, takeUntil, switchMap, catchError } from 'rxjs/operators';
+import { FlatTreeControl, NestedTreeControl, CdkTreeModule } from '@angular/cdk/tree';
+import { FormControl, FormBuilder, NgControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatBottomSheet, MatBottomSheetRef, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
+import { MatAutocomplete, MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCalendar, MatDatepickerModule } from '@angular/material/datepicker';
+import { MAT_DATE_FORMATS, DateAdapter, MAT_DATE_LOCALE, MatRippleModule, MatNativeDateModule } from '@angular/material/core';
 import * as _rollupMoment from 'moment';
 import _rollupMoment__default, {  } from 'moment';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 import { coerceBooleanProperty, coerceNumberProperty } from '@angular/cdk/coercion';
+import { MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
 import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry, MatIconModule } from '@angular/material/icon';
+import { FormValueContainer, CdkPopoverEditModule, EditRef, CdkEditControl, CdkEditRevert, CdkEditClose, CdkPopoverEdit, CdkPopoverEditTabOut, _closest, _CELL_SELECTOR, CdkRowHoverContent, CdkEditOpen, CdkEditable } from '@angular/cdk-experimental/popover-edit';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { MatTableDataSource, MatHeaderRowDef, MatRowDef, MatColumnDef, MatTable, MatTableModule } from '@angular/material/table';
 import { HttpClient } from '@angular/common/http';
-import { AutofillMonitor, CdkTextareaAutosize } from '@angular/cdk/text-field';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { DecimalPipe, CommonModule } from '@angular/common';
+import { MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipModule } from '@angular/material/tooltip';
+import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource, MatTreeModule } from '@angular/material/tree';
+import { MatSelectModule } from '@angular/material/select';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatTabsModule } from '@angular/material/tabs';
 
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * A component that attaches to a form within the edit.
- * It coordinates the form state with the table-wide edit system and handles
- * closing the edit when the form is submitted or the user clicks
- * out.
- */
-var MatEditLens = /** @class */ (function (_super) {
-    __extends(MatEditLens, _super);
-    function MatEditLens() {
-        return _super !== null && _super.apply(this, arguments) || this;
+/** @title Monitoring focus with FocusMonitor */
+var FocusMonitorDirectivesExample = /** @class */ (function () {
+    function FocusMonitorDirectivesExample(_ngZone, _cdr) {
+        this._ngZone = _ngZone;
+        this._cdr = _cdr;
+        this.elementOrigin = this.formatOrigin(null);
+        this.subtreeOrigin = this.formatOrigin(null);
     }
-    MatEditLens = __decorate([
-        Directive({
-            selector: 'form[matEditLens]',
-            host: {
-                'class': 'mat-edit-lens',
-            },
-            inputs: [
-                'clickOutBehavior: matEditLensClickOutBehavior',
-                'preservedFormValue: matEditLensPreservedFormValue',
-                'ignoreSubmitUnlessValid: matEditLensIgnoreSubmitUnlessValid',
-            ],
-            outputs: ['preservedFormValueChange: matEditLensPreservedFormValueChange'],
-            providers: [EditRef],
-        })
-    ], MatEditLens);
-    return MatEditLens;
-}(CdkEditControl));
-/** Reverts the form to its initial or previously submitted state on click. */
-var MatEditRevert = /** @class */ (function (_super) {
-    __extends(MatEditRevert, _super);
-    function MatEditRevert() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    MatEditRevert = __decorate([
-        Directive({
-            selector: 'button[matEditRevert]',
-            host: {
-                'type': 'button',
-            }
-        })
-    ], MatEditRevert);
-    return MatEditRevert;
-}(CdkEditRevert));
-/** Closes the lens on click. */
-var MatEditClose = /** @class */ (function (_super) {
-    __extends(MatEditClose, _super);
-    function MatEditClose() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    MatEditClose = __decorate([
-        Directive({
-            selector: 'button[matEditClose]',
-            host: {
-                'type': 'button',
-            }
-        })
-    ], MatEditClose);
-    return MatEditClose;
-}(CdkEditClose));
-
-var POPOVER_EDIT_HOST_BINDINGS = {
-    'tabIndex': '0',
-    'class': 'mat-popover-edit-cell',
-    '[attr.aria-haspopup]': 'true',
-};
-var POPOVER_EDIT_INPUTS = [
-    'template: matPopoverEdit',
-    'context: matPopoverEditContext',
-    'colspan: matPopoverEditColspan',
-];
-var EDIT_PANE_CLASS = 'mat-edit-pane';
-var MAT_ROW_HOVER_CLASS = 'mat-row-hover-content';
-var MAT_ROW_HOVER_RTL_CLASS = MAT_ROW_HOVER_CLASS + '-rtl';
-var MAT_ROW_HOVER_ANIMATE_CLASS = MAT_ROW_HOVER_CLASS + '-visible';
-var MAT_ROW_HOVER_CELL_CLASS = MAT_ROW_HOVER_CLASS + '-host-cell';
-/**
- * Attaches an ng-template to a cell and shows it when instructed to by the
- * EditEventDispatcher service.
- * Makes the cell focusable.
- */
-var MatPopoverEdit = /** @class */ (function (_super) {
-    __extends(MatPopoverEdit, _super);
-    function MatPopoverEdit() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    MatPopoverEdit.prototype.panelClass = function () {
-        return EDIT_PANE_CLASS;
+    FocusMonitorDirectivesExample.prototype.formatOrigin = function (origin) {
+        return origin ? origin + ' focused' : 'blurred';
     };
-    MatPopoverEdit = __decorate([
-        Directive({
-            selector: '[matPopoverEdit]:not([matPopoverEditTabOut])',
-            host: POPOVER_EDIT_HOST_BINDINGS,
-            inputs: POPOVER_EDIT_INPUTS,
-        })
-    ], MatPopoverEdit);
-    return MatPopoverEdit;
-}(CdkPopoverEdit));
-/**
- * Attaches an ng-template to a cell and shows it when instructed to by the
- * EditEventDispatcher service.
- * Makes the cell focusable.
- */
-var MatPopoverEditTabOut = /** @class */ (function (_super) {
-    __extends(MatPopoverEditTabOut, _super);
-    function MatPopoverEditTabOut() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    MatPopoverEditTabOut.prototype.panelClass = function () {
-        return EDIT_PANE_CLASS;
-    };
-    MatPopoverEditTabOut = __decorate([
-        Directive({
-            selector: '[matPopoverEdit][matPopoverEditTabOut]',
-            host: POPOVER_EDIT_HOST_BINDINGS,
-            inputs: POPOVER_EDIT_INPUTS,
-        })
-    ], MatPopoverEditTabOut);
-    return MatPopoverEditTabOut;
-}(CdkPopoverEditTabOut));
-/**
- * A structural directive that shows its contents when the table row containing
- * it is hovered or when an element in the row has focus.
- */
-var MatRowHoverContent = /** @class */ (function (_super) {
-    __extends(MatRowHoverContent, _super);
-    function MatRowHoverContent() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    MatRowHoverContent.prototype.initElement = function (element) {
-        _super.prototype.initElement.call(this, element);
-        element.classList.add(MAT_ROW_HOVER_CLASS);
-    };
-    MatRowHoverContent.prototype.makeElementHiddenButFocusable = function (element) {
-        element.classList.remove(MAT_ROW_HOVER_ANIMATE_CLASS);
-    };
-    MatRowHoverContent.prototype.makeElementVisible = function (element) {
-        _closest(this.elementRef.nativeElement, _CELL_SELECTOR)
-            .classList.add(MAT_ROW_HOVER_CELL_CLASS);
-        if (this.services.directionality.value === 'rtl') {
-            element.classList.add(MAT_ROW_HOVER_RTL_CLASS);
-        }
-        else {
-            element.classList.remove(MAT_ROW_HOVER_RTL_CLASS);
-        }
-        element.classList.remove(MAT_ROW_HOVER_ANIMATE_CLASS);
-        this.services.ngZone.runOutsideAngular(function () {
-            setTimeout(function () {
-                element.classList.add(MAT_ROW_HOVER_ANIMATE_CLASS);
-            });
-        });
-    };
-    MatRowHoverContent = __decorate([
-        Directive({
-            selector: '[matRowHoverContent]',
-        })
-    ], MatRowHoverContent);
-    return MatRowHoverContent;
-}(CdkRowHoverContent));
-/**
- * Opens the closest edit popover to this element, whether it's associated with this exact
- * element or an ancestor element.
- */
-var MatEditOpen = /** @class */ (function (_super) {
-    __extends(MatEditOpen, _super);
-    function MatEditOpen() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    MatEditOpen = __decorate([
-        Directive({
-            selector: '[matEditOpen]',
-        })
-    ], MatEditOpen);
-    return MatEditOpen;
-}(CdkEditOpen));
-
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var EXPORTED_DECLARATIONS = [
-    MatPopoverEdit,
-    MatPopoverEditTabOut,
-    MatRowHoverContent,
-    MatEditLens,
-    MatEditRevert,
-    MatEditClose,
-    MatEditOpen
-];
-var MatPopoverEditModule = /** @class */ (function () {
-    function MatPopoverEditModule() {
-    }
-    MatPopoverEditModule = __decorate([
-        NgModule({
-            imports: [
-                CdkPopoverEditModule,
-                CommonModule,
-            ],
-            exports: __spread(EXPORTED_DECLARATIONS, [
-                CdkEditable,
-            ]),
-            declarations: EXPORTED_DECLARATIONS,
-        })
-    ], MatPopoverEditModule);
-    return MatPopoverEditModule;
-}());
-
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-var ExampleMaterialModule = /** @class */ (function () {
-    function ExampleMaterialModule() {
-    }
-    ExampleMaterialModule = __decorate([
-        NgModule({
-            imports: [
-                A11yModule,
-                CdkPopoverEditModule,
-                CdkTableModule,
-                CdkTreeModule,
-                CdkStepperModule,
-                DragDropModule,
-                MatAutocompleteModule,
-                MatBadgeModule,
-                MatBottomSheetModule,
-                MatButtonModule,
-                MatButtonToggleModule,
-                MatCardModule,
-                MatCheckboxModule,
-                MatChipsModule,
-                MatDatepickerModule,
-                MatDialogModule,
-                MatDividerModule,
-                MatExpansionModule,
-                MatFormFieldModule,
-                MatGridListModule,
-                MatIconModule,
-                MatInputModule,
-                MatListModule,
-                MatMenuModule,
-                MatPaginatorModule,
-                MatPopoverEditModule,
-                MatProgressBarModule,
-                MatProgressSpinnerModule,
-                MatRadioModule,
-                MatRippleModule,
-                MatSelectModule,
-                MatSidenavModule,
-                MatSlideToggleModule,
-                MatSliderModule,
-                MatSnackBarModule,
-                MatSortModule,
-                MatStepperModule,
-                MatTableModule,
-                MatTabsModule,
-                MatToolbarModule,
-                MatTooltipModule,
-                MatTreeModule,
-                ScrollingModule,
-                PortalModule,
-                MatNativeDateModule,
-            ],
-            exports: [
-                A11yModule,
-                CdkPopoverEditModule,
-                CdkTableModule,
-                CdkTreeModule,
-                CdkStepperModule,
-                DragDropModule,
-                MatAutocompleteModule,
-                MatBadgeModule,
-                MatBottomSheetModule,
-                MatButtonModule,
-                MatButtonToggleModule,
-                MatCardModule,
-                MatCheckboxModule,
-                MatChipsModule,
-                MatDatepickerModule,
-                MatDialogModule,
-                MatDividerModule,
-                MatExpansionModule,
-                MatFormFieldModule,
-                MatGridListModule,
-                MatIconModule,
-                MatInputModule,
-                MatListModule,
-                MatMenuModule,
-                MatPaginatorModule,
-                MatPopoverEditModule,
-                MatProgressBarModule,
-                MatProgressSpinnerModule,
-                MatRadioModule,
-                MatRippleModule,
-                MatSelectModule,
-                MatSidenavModule,
-                MatSlideToggleModule,
-                MatSliderModule,
-                MatSnackBarModule,
-                MatSortModule,
-                MatStepperModule,
-                MatTableModule,
-                MatTabsModule,
-                MatToolbarModule,
-                MatTooltipModule,
-                MatTreeModule,
-                ScrollingModule,
-                PortalModule,
-                MatNativeDateModule,
-            ]
-        })
-    ], ExampleMaterialModule);
-    return ExampleMaterialModule;
-}());
-
-/**
- * @title Highlight the first autocomplete option
- */
-var AutocompleteAutoActiveFirstOptionExample = /** @class */ (function () {
-    function AutocompleteAutoActiveFirstOptionExample() {
-        this.myControl = new FormControl();
-        this.options = ['One', 'Two', 'Three'];
-    }
-    AutocompleteAutoActiveFirstOptionExample.prototype.ngOnInit = function () {
+    // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
+    FocusMonitorDirectivesExample.prototype.markForCheck = function () {
         var _this = this;
-        this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(function (value) { return _this._filter(value); }));
+        this._ngZone.run(function () { return _this._cdr.markForCheck(); });
     };
-    AutocompleteAutoActiveFirstOptionExample.prototype._filter = function (value) {
-        var filterValue = value.toLowerCase();
-        return this.options.filter(function (option) { return option.toLowerCase().indexOf(filterValue) === 0; });
-    };
-    AutocompleteAutoActiveFirstOptionExample = __decorate([
+    FocusMonitorDirectivesExample = __decorate([
         Component({
-            selector: 'autocomplete-auto-active-first-option-example',
-            template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
-            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
-        })
-    ], AutocompleteAutoActiveFirstOptionExample);
-    return AutocompleteAutoActiveFirstOptionExample;
-}());
-
-/**
- * @title Display value autocomplete
- */
-var AutocompleteDisplayExample = /** @class */ (function () {
-    function AutocompleteDisplayExample() {
-        this.myControl = new FormControl();
-        this.options = [
-            { name: 'Mary' },
-            { name: 'Shelley' },
-            { name: 'Igor' }
-        ];
-    }
-    AutocompleteDisplayExample.prototype.ngOnInit = function () {
-        var _this = this;
-        this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith(''), map(function (value) { return typeof value === 'string' ? value : value.name; }), map(function (name) { return name ? _this._filter(name) : _this.options.slice(); }));
-    };
-    AutocompleteDisplayExample.prototype.displayFn = function (user) {
-        return user ? user.name : undefined;
-    };
-    AutocompleteDisplayExample.prototype._filter = function (name) {
-        var filterValue = name.toLowerCase();
-        return this.options.filter(function (option) { return option.name.toLowerCase().indexOf(filterValue) === 0; });
-    };
-    AutocompleteDisplayExample = __decorate([
-        Component({
-            selector: 'autocomplete-display-example',
-            template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Assignee\" aria-label=\"Assignee\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\" [displayWith]=\"displayFn\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option.name}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
-            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
-        })
-    ], AutocompleteDisplayExample);
-    return AutocompleteDisplayExample;
-}());
-
-/**
- * @title Filter autocomplete
- */
-var AutocompleteFilterExample = /** @class */ (function () {
-    function AutocompleteFilterExample() {
-        this.myControl = new FormControl();
-        this.options = ['One', 'Two', 'Three'];
-    }
-    AutocompleteFilterExample.prototype.ngOnInit = function () {
-        var _this = this;
-        this.filteredOptions = this.myControl.valueChanges
-            .pipe(startWith(''), map(function (value) { return _this._filter(value); }));
-    };
-    AutocompleteFilterExample.prototype._filter = function (value) {
-        var filterValue = value.toLowerCase();
-        return this.options.filter(function (option) { return option.toLowerCase().includes(filterValue); });
-    };
-    AutocompleteFilterExample = __decorate([
-        Component({
-            selector: 'autocomplete-filter-example',
-            template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
-            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
-        })
-    ], AutocompleteFilterExample);
-    return AutocompleteFilterExample;
-}());
-
-var _filter = function (opt, value) {
-    var filterValue = value.toLowerCase();
-    return opt.filter(function (item) { return item.toLowerCase().indexOf(filterValue) === 0; });
-};
-/**
- * @title Option groups autocomplete
- */
-var AutocompleteOptgroupExample = /** @class */ (function () {
-    function AutocompleteOptgroupExample(_formBuilder) {
-        this._formBuilder = _formBuilder;
-        this.stateForm = this._formBuilder.group({
-            stateGroup: '',
-        });
-        this.stateGroups = [{
-                letter: 'A',
-                names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
-            }, {
-                letter: 'C',
-                names: ['California', 'Colorado', 'Connecticut']
-            }, {
-                letter: 'D',
-                names: ['Delaware']
-            }, {
-                letter: 'F',
-                names: ['Florida']
-            }, {
-                letter: 'G',
-                names: ['Georgia']
-            }, {
-                letter: 'H',
-                names: ['Hawaii']
-            }, {
-                letter: 'I',
-                names: ['Idaho', 'Illinois', 'Indiana', 'Iowa']
-            }, {
-                letter: 'K',
-                names: ['Kansas', 'Kentucky']
-            }, {
-                letter: 'L',
-                names: ['Louisiana']
-            }, {
-                letter: 'M',
-                names: ['Maine', 'Maryland', 'Massachusetts', 'Michigan',
-                    'Minnesota', 'Mississippi', 'Missouri', 'Montana']
-            }, {
-                letter: 'N',
-                names: ['Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
-                    'New Mexico', 'New York', 'North Carolina', 'North Dakota']
-            }, {
-                letter: 'O',
-                names: ['Ohio', 'Oklahoma', 'Oregon']
-            }, {
-                letter: 'P',
-                names: ['Pennsylvania']
-            }, {
-                letter: 'R',
-                names: ['Rhode Island']
-            }, {
-                letter: 'S',
-                names: ['South Carolina', 'South Dakota']
-            }, {
-                letter: 'T',
-                names: ['Tennessee', 'Texas']
-            }, {
-                letter: 'U',
-                names: ['Utah']
-            }, {
-                letter: 'V',
-                names: ['Vermont', 'Virginia']
-            }, {
-                letter: 'W',
-                names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
-            }];
-    }
-    AutocompleteOptgroupExample.prototype.ngOnInit = function () {
-        var _this = this;
-        this.stateGroupOptions = this.stateForm.get('stateGroup').valueChanges
-            .pipe(startWith(''), map(function (value) { return _this._filterGroup(value); }));
-    };
-    AutocompleteOptgroupExample.prototype._filterGroup = function (value) {
-        if (value) {
-            return this.stateGroups
-                .map(function (group) { return ({ letter: group.letter, names: _filter(group.names, value) }); })
-                .filter(function (group) { return group.names.length > 0; });
-        }
-        return this.stateGroups;
-    };
-    AutocompleteOptgroupExample = __decorate([
-        Component({
-            selector: 'autocomplete-optgroup-example',
-            template: "<form [formGroup]=\"stateForm\">\n  <mat-form-field>\n    <input type=\"text\" matInput placeholder=\"States Group\" formControlName=\"stateGroup\" required [matAutocomplete]=\"autoGroup\">\n      <mat-autocomplete #autoGroup=\"matAutocomplete\">\n        <mat-optgroup *ngFor=\"let group of stateGroupOptions | async\" [label]=\"group.letter\">\n          <mat-option *ngFor=\"let name of group.names\" [value]=\"name\">\n            {{name}}\n          </mat-option>\n      </mat-optgroup>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
-            styles: ["/** No CSS for this example */\n"]
+            selector: 'focus-monitor-directives-example',
+            template: "<div class=\"example-focus-monitor\">\n  <button cdkMonitorSubtreeFocus\n          (cdkFocusChange)=\"elementOrigin = formatOrigin($event); markForCheck()\">\n    Focus Monitored Element ({{elementOrigin}})\n  </button>\n</div>\n\n<div class=\"example-focus-monitor\">\n  <div cdkMonitorSubtreeFocus\n       (cdkFocusChange)=\"subtreeOrigin = formatOrigin($event); markForCheck()\">\n    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>\n    <button>Child Button 1</button>\n    <button>Child Button 2</button>\n  </div>\n</div>\n",
+            styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton {\n  margin-right: 12px;\n}\n"]
         }),
-        __metadata("design:paramtypes", [FormBuilder])
-    ], AutocompleteOptgroupExample);
-    return AutocompleteOptgroupExample;
+        __metadata("design:paramtypes", [NgZone, ChangeDetectorRef])
+    ], FocusMonitorDirectivesExample);
+    return FocusMonitorDirectivesExample;
 }());
 
-/**
- * @title Autocomplete overview
- */
-var AutocompleteOverviewExample = /** @class */ (function () {
-    function AutocompleteOverviewExample() {
+/** @title Focusing with a specific FocusOrigin */
+var FocusMonitorFocusViaExample = /** @class */ (function () {
+    function FocusMonitorFocusViaExample(focusMonitor, _cdr, _ngZone) {
+        this.focusMonitor = focusMonitor;
+        this._cdr = _cdr;
+        this._ngZone = _ngZone;
+        this.origin = this.formatOrigin(null);
+    }
+    FocusMonitorFocusViaExample.prototype.ngAfterViewInit = function () {
         var _this = this;
-        this.stateCtrl = new FormControl();
-        this.states = [
-            {
-                name: 'Arkansas',
-                population: '2.978M',
-                // https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg
-                flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg'
-            },
-            {
-                name: 'California',
-                population: '39.14M',
-                // https://commons.wikimedia.org/wiki/File:Flag_of_California.svg
-                flag: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg'
-            },
-            {
-                name: 'Florida',
-                population: '20.27M',
-                // https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg
-                flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg'
-            },
-            {
-                name: 'Texas',
-                population: '27.47M',
-                // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
-                flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
-            }
-        ];
-        this.filteredStates = this.stateCtrl.valueChanges
-            .pipe(startWith(''), map(function (state) { return state ? _this._filterStates(state) : _this.states.slice(); }));
-    }
-    AutocompleteOverviewExample.prototype._filterStates = function (value) {
-        var filterValue = value.toLowerCase();
-        return this.states.filter(function (state) { return state.name.toLowerCase().indexOf(filterValue) === 0; });
+        this.focusMonitor.monitor(this.monitoredEl)
+            .subscribe(function (origin) { return _this._ngZone.run(function () {
+            _this.origin = _this.formatOrigin(origin);
+            _this._cdr.markForCheck();
+        }); });
     };
-    AutocompleteOverviewExample = __decorate([
+    FocusMonitorFocusViaExample.prototype.ngOnDestroy = function () {
+        this.focusMonitor.stopMonitoring(this.monitoredEl);
+    };
+    FocusMonitorFocusViaExample.prototype.formatOrigin = function (origin) {
+        return origin ? origin + ' focused' : 'blurred';
+    };
+    __decorate([
+        ViewChild('monitored', { static: false }),
+        __metadata("design:type", ElementRef)
+    ], FocusMonitorFocusViaExample.prototype, "monitoredEl", void 0);
+    FocusMonitorFocusViaExample = __decorate([
         Component({
-            selector: 'autocomplete-overview-example',
-            template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"State\" aria-label=\"State\" [matAutocomplete]=\"auto\" [formControl]=\"stateCtrl\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let state of filteredStates | async\" [value]=\"state.name\">\n        <img class=\"example-option-img\" aria-hidden [src]=\"state.flag\" height=\"25\">\n        <span>{{state.name}}</span> |\n        <small>Population: {{state.population}}</small>\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n\n  <br>\n\n  <mat-slide-toggle\n    [checked]=\"stateCtrl.disabled\"\n    (change)=\"stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()\">\n    Disable Input?\n  </mat-slide-toggle>\n</form>\n",
-            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n\n.example-option-img {\n  vertical-align: middle;\n  margin-right: 8px;\n}\n\n[dir='rtl'] .example-option-img {\n  margin-right: 0;\n  margin-left: 8px;\n}\n"]
+            selector: 'focus-monitor-focus-via-example',
+            template: "<div class=\"example-focus-monitor\">\n  <button #monitored>1. Focus Monitored Element ({{origin}})</button>\n  <button #unmonitored>2. Not Monitored</button>\n</div>\n\n<mat-form-field>\n  <mat-label>Simulated focus origin</mat-label>\n  <mat-select #simulatedOrigin value=\"mouse\">\n    <mat-option value=\"mouse\">Mouse</mat-option>\n    <mat-option value=\"keyboard\">Keyboard</mat-option>\n    <mat-option value=\"touch\">Touch</mat-option>\n    <mat-option value=\"program\">Programmatic</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<button (click)=\"focusMonitor.focusVia(monitored, simulatedOrigin.value)\">\n  Focus button #1\n</button>\n<button (click)=\"focusMonitor.focusVia(unmonitored, simulatedOrigin.value)\">\n  Focus button #2\n</button>\n",
+            styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\n.example-focus-monitor button:focus {\n  box-shadow: 0 0 30px cyan;\n}\n\nmat-form-field,\nbutton {\n  margin-right: 12px;\n}\n"]
         }),
-        __metadata("design:paramtypes", [])
-    ], AutocompleteOverviewExample);
-    return AutocompleteOverviewExample;
+        __metadata("design:paramtypes", [FocusMonitor,
+            ChangeDetectorRef,
+            NgZone])
+    ], FocusMonitorFocusViaExample);
+    return FocusMonitorFocusViaExample;
 }());
 
-/**
- * @title Plain input autocomplete
- */
-var AutocompletePlainInputExample = /** @class */ (function () {
-    function AutocompletePlainInputExample() {
-        this.control = new FormControl();
-        this.streets = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+/** @title Monitoring focus with FocusMonitor */
+var FocusMonitorOverviewExample = /** @class */ (function () {
+    function FocusMonitorOverviewExample(_focusMonitor, _cdr, _ngZone) {
+        this._focusMonitor = _focusMonitor;
+        this._cdr = _cdr;
+        this._ngZone = _ngZone;
+        this.elementOrigin = this.formatOrigin(null);
+        this.subtreeOrigin = this.formatOrigin(null);
     }
-    AutocompletePlainInputExample.prototype.ngOnInit = function () {
+    FocusMonitorOverviewExample.prototype.ngAfterViewInit = function () {
         var _this = this;
-        this.filteredStreets = this.control.valueChanges.pipe(startWith(''), map(function (value) { return _this._filter(value); }));
+        this._focusMonitor.monitor(this.element)
+            .subscribe(function (origin) { return _this._ngZone.run(function () {
+            _this.elementOrigin = _this.formatOrigin(origin);
+            _this._cdr.markForCheck();
+        }); });
+        this._focusMonitor.monitor(this.subtree, true)
+            .subscribe(function (origin) { return _this._ngZone.run(function () {
+            _this.subtreeOrigin = _this.formatOrigin(origin);
+            _this._cdr.markForCheck();
+        }); });
     };
-    AutocompletePlainInputExample.prototype._filter = function (value) {
-        var _this = this;
-        var filterValue = this._normalizeValue(value);
-        return this.streets.filter(function (street) { return _this._normalizeValue(street).includes(filterValue); });
+    FocusMonitorOverviewExample.prototype.ngOnDestroy = function () {
+        this._focusMonitor.stopMonitoring(this.element);
+        this._focusMonitor.stopMonitoring(this.subtree);
     };
-    AutocompletePlainInputExample.prototype._normalizeValue = function (value) {
-        return value.toLowerCase().replace(/\s/g, '');
+    FocusMonitorOverviewExample.prototype.formatOrigin = function (origin) {
+        return origin ? origin + ' focused' : 'blurred';
     };
-    AutocompletePlainInputExample = __decorate([
+    __decorate([
+        ViewChild('element', { static: false }),
+        __metadata("design:type", ElementRef)
+    ], FocusMonitorOverviewExample.prototype, "element", void 0);
+    __decorate([
+        ViewChild('subtree', { static: false }),
+        __metadata("design:type", ElementRef)
+    ], FocusMonitorOverviewExample.prototype, "subtree", void 0);
+    FocusMonitorOverviewExample = __decorate([
         Component({
-            selector: 'autocomplete-plain-input-example',
-            template: "<form class=\"example-form\">\n  <input type=\"text\" placeholder=\"Search for a street\" [formControl]=\"control\" [matAutocomplete]=\"auto\">\n  <mat-autocomplete #auto=\"matAutocomplete\">\n    <mat-option *ngFor=\"let street of filteredStreets | async\" [value]=\"street\">\n      {{street}}\n    </mat-option>\n  </mat-autocomplete>\n</form>\n",
-            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
-        })
-    ], AutocompletePlainInputExample);
-    return AutocompletePlainInputExample;
-}());
-
-/**
- * @title Simple autocomplete
- */
-var AutocompleteSimpleExample = /** @class */ (function () {
-    function AutocompleteSimpleExample() {
-        this.myControl = new FormControl();
-        this.options = ['One', 'Two', 'Three'];
-    }
-    AutocompleteSimpleExample = __decorate([
-        Component({
-            selector: 'autocomplete-simple-example',
-            template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of options\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
-            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
-        })
-    ], AutocompleteSimpleExample);
-    return AutocompleteSimpleExample;
-}());
-
-/**
- * @title Badge overview
- */
-var BadgeOverviewExample = /** @class */ (function () {
-    function BadgeOverviewExample() {
-    }
-    BadgeOverviewExample = __decorate([
-        Component({
-            selector: 'badge-overview-example',
-            template: "<p>\n  <span matBadge=\"4\" matBadgeOverlap=\"false\">Text with a badge</span>\n</p>\n\n<p>\n  Button with a badge on the left\n  <button mat-raised-button color=\"primary\"\n      matBadge=\"8\" matBadgePosition=\"before\" matBadgeColor=\"accent\">\n    Action\n  </button>\n</p>\n\n<p>\n  Icon with a badge\n  <mat-icon matBadge=\"15\" matBadgeColor=\"warn\">home</mat-icon>\n    <!-- Include text description of the icon's meaning for screen-readers -->\n    <span class=\"cdk-visually-hidden\">\n      Example with a home icon with overlaid badge showing the number 15\n    </span>\n</p>\n\n",
-            styles: ["/** No CSS for this example */\n"]
-        })
-    ], BadgeOverviewExample);
-    return BadgeOverviewExample;
-}());
-
-/**
- * @title Bottom Sheet Overview
- */
-var BottomSheetOverviewExample = /** @class */ (function () {
-    function BottomSheetOverviewExample(_bottomSheet) {
-        this._bottomSheet = _bottomSheet;
-    }
-    BottomSheetOverviewExample.prototype.openBottomSheet = function () {
-        this._bottomSheet.open(BottomSheetOverviewExampleSheet);
-    };
-    BottomSheetOverviewExample = __decorate([
-        Component({
-            selector: 'bottom-sheet-overview-example',
-            template: "<p>You have received a file called \"cat-picture.jpeg\".</p>\n\n<button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>\n",
-            styles: ["/** No CSS for this example */\n"]
+            selector: 'focus-monitor-overview-example',
+            template: "<div class=\"example-focus-monitor\">\n  <button #element>Focus Monitored Element ({{elementOrigin}})</button>\n</div>\n\n<div class=\"example-focus-monitor\">\n  <div #subtree>\n    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>\n    <button>Child Button 1</button>\n    <button>Child Button 2</button>\n  </div>\n</div>\n",
+            styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton {\n  margin-right: 12px;\n}\n"]
         }),
-        __metadata("design:paramtypes", [MatBottomSheet])
-    ], BottomSheetOverviewExample);
-    return BottomSheetOverviewExample;
+        __metadata("design:paramtypes", [FocusMonitor,
+            ChangeDetectorRef,
+            NgZone])
+    ], FocusMonitorOverviewExample);
+    return FocusMonitorOverviewExample;
 }());
-var BottomSheetOverviewExampleSheet = /** @class */ (function () {
-    function BottomSheetOverviewExampleSheet(_bottomSheetRef) {
-        this._bottomSheetRef = _bottomSheetRef;
-    }
-    BottomSheetOverviewExampleSheet.prototype.openLink = function (event) {
-        this._bottomSheetRef.dismiss();
-        event.preventDefault();
-    };
-    BottomSheetOverviewExampleSheet = __decorate([
-        Component({
-            selector: 'bottom-sheet-overview-example-sheet',
-            template: "<mat-nav-list>\n  <a href=\"https://keep.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Keep</span>\n    <span mat-line>Add to a note</span>\n  </a>\n\n  <a href=\"https://docs.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Docs</span>\n    <span mat-line>Embed in a document</span>\n  </a>\n\n  <a href=\"https://plus.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Plus</span>\n    <span mat-line>Share with your friends</span>\n  </a>\n\n  <a href=\"https://hangouts.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Hangouts</span>\n    <span mat-line>Show to your coworkers</span>\n  </a>\n</mat-nav-list>\n"
-        }),
-        __metadata("design:paramtypes", [MatBottomSheetRef])
-    ], BottomSheetOverviewExampleSheet);
-    return BottomSheetOverviewExampleSheet;
-}());
-
-/**
- * @title Basic buttons
- */
-var ButtonOverviewExample = /** @class */ (function () {
-    function ButtonOverviewExample() {
-    }
-    ButtonOverviewExample = __decorate([
-        Component({
-            selector: 'button-overview-example',
-            template: "<button mat-button>Click me!</button>\n",
-            styles: ["/** No CSS for this example */\n"]
-        })
-    ], ButtonOverviewExample);
-    return ButtonOverviewExample;
-}());
-
-/**
- * @title Button toggle appearance
- */
-var ButtonToggleAppearanceExample = /** @class */ (function () {
-    function ButtonToggleAppearanceExample() {
-    }
-    ButtonToggleAppearanceExample = __decorate([
-        Component({
-            selector: 'button-toggle-appearance-example',
-            template: "<p>\n  Default appearance:\n  <mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n\n<p>\n  Legacy appearance:\n  <mat-button-toggle-group appearance=\"legacy\" name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n",
-            styles: ["mat-button-toggle-group {\n  margin-left: 12px;\n}\n"]
-        })
-    ], ButtonToggleAppearanceExample);
-    return ButtonToggleAppearanceExample;
-}());
-
-/**
- * @title Exclusive selection
- */
-var ButtonToggleExclusiveExample = /** @class */ (function () {
-    function ButtonToggleExclusiveExample() {
-    }
-    ButtonToggleExclusiveExample = __decorate([
-        Component({
-            selector: 'button-toggle-exclusive-example',
-            template: "<mat-button-toggle-group #group=\"matButtonToggleGroup\">\n  <mat-button-toggle value=\"left\" aria-label=\"Text align left\">\n    <mat-icon>format_align_left</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"center\" aria-label=\"Text align center\">\n    <mat-icon>format_align_center</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"right\" aria-label=\"Text align right\">\n    <mat-icon>format_align_right</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"justify\" disabled aria-label=\"Text align justify\">\n    <mat-icon>format_align_justify</mat-icon>\n  </mat-button-toggle>\n</mat-button-toggle-group>\n<div class=\"example-selected-value\">Selected value: {{group.value}}</div>\n",
-            styles: [".example-selected-value {\n  margin: 15px 0;\n}\n"]
-        })
-    ], ButtonToggleExclusiveExample);
-    return ButtonToggleExclusiveExample;
-}());
-
-/**
- * @title Basic button-toggles
- */
-var ButtonToggleOverviewExample = /** @class */ (function () {
-    function ButtonToggleOverviewExample() {
-    }
-    ButtonToggleOverviewExample = __decorate([
-        Component({
-            selector: 'button-toggle-overview-example',
-            template: "<mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\n  <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n  <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n  <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n</mat-button-toggle-group>\n",
-            styles: ["/** No CSS for this example */\n"]
-        })
-    ], ButtonToggleOverviewExample);
-    return ButtonToggleOverviewExample;
-}());
-
-/**
- * @title Button varieties
- */
-var ButtonTypesExample = /** @class */ (function () {
-    function ButtonTypesExample() {
-    }
-    ButtonTypesExample = __decorate([
-        Component({
-            selector: 'button-types-example',
-            template: "<h3>Basic Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Raised Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>\n\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>\n\n<h3>Mini Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>\n",
-            styles: [".example-button-row button,\n.example-button-row a {\n  margin-right: 8px;\n}\n"]
-        })
-    ], ButtonTypesExample);
-    return ButtonTypesExample;
-}());
-
-/**
- * @title Card with multiple sections
- */
-var CardFancyExample = /** @class */ (function () {
-    function CardFancyExample() {
-    }
-    CardFancyExample = __decorate([
-        Component({
-            selector: 'card-fancy-example',
-            template: "<mat-card class=\"example-card\">\n  <mat-card-header>\n    <div mat-card-avatar class=\"example-header-image\"></div>\n    <mat-card-title>Shiba Inu</mat-card-title>\n    <mat-card-subtitle>Dog Breed</mat-card-subtitle>\n  </mat-card-header>\n  <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\">\n  <mat-card-content>\n    <p>\n      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.\n      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\n      bred for hunting.\n    </p>\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-button>LIKE</button>\n    <button mat-button>SHARE</button>\n  </mat-card-actions>\n</mat-card>\n",
-            styles: [".example-card {\n  max-width: 400px;\n}\n\n.example-header-image {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}\n"]
-        })
-    ], CardFancyExample);
-    return CardFancyExample;
-}());
-
-/**
- * @title Basic cards
- */
-var CardOverviewExample = /** @class */ (function () {
-    function CardOverviewExample() {
-    }
-    CardOverviewExample = __decorate([
-        Component({
-            selector: 'card-overview-example',
-            template: "<mat-card>Simple card</mat-card>\n",
-            styles: ["/** No CSS for this example */\n"]
-        })
-    ], CardOverviewExample);
-    return CardOverviewExample;
-}());
-
-/** @title A custom CDK stepper without a form */
-var CdkCustomStepperWithoutFormExample = /** @class */ (function () {
-    function CdkCustomStepperWithoutFormExample() {
-    }
-    CdkCustomStepperWithoutFormExample = __decorate([
-        Component({
-            selector: 'cdk-custom-stepper-without-form-example',
-            template: "<example-custom-stepper>\n  <cdk-step> <p>This is any content of \"Step 1\"</p> </cdk-step>\n  <cdk-step> <p>This is any content of \"Step 2\"</p> </cdk-step>\n</example-custom-stepper>\n",
-            styles: [""]
-        })
-    ], CdkCustomStepperWithoutFormExample);
-    return CdkCustomStepperWithoutFormExample;
-}());
-/** Custom CDK stepper component */
-var CustomStepper = /** @class */ (function (_super) {
-    __extends(CustomStepper, _super);
-    function CustomStepper() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    CustomStepper_1 = CustomStepper;
-    CustomStepper.prototype.onClick = function (index) {
-        this.selectedIndex = index;
-    };
-    var CustomStepper_1;
-    CustomStepper = CustomStepper_1 = __decorate([
-        Component({
-            selector: 'example-custom-stepper',
-            template: "<section class=\"example-container\">\n  <header>\n    <h2>Step {{ selectedIndex + 1 }}/{{ steps.length }}</h2>\n  </header>\n\n  <div [style.display]=\"selected ? 'block' : 'none'\">\n    <ng-container [ngTemplateOutlet]=\"selected.content\"></ng-container>\n  </div>\n\n  <footer class=\"example-step-navigation-bar\">\n    <button class=\"example-nav-button\" cdkStepperPrevious>&larr;</button>\n    <button\n      class=\"example-step\"\n      *ngFor=\"let step of steps; let i = index\"\n      [ngClass]=\"{ 'example-active': selectedIndex === i }\"\n      (click)=\"onClick(i)\"\n    >\n      Step {{ i + 1 }}\n    </button>\n    <button class=\"example-nav-button\" cdkStepperNext>&rarr;</button>\n  </footer>\n</section>\n",
-            providers: [{ provide: CdkStepper, useExisting: CustomStepper_1 }],
-            styles: [".example-container {\n  border: 1px solid black;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-active {\n  color: blue;\n}\n\n.example-step {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: black;\n}\n\n.example-step.example-active {\n  color: blue;\n  border-bottom: 1px solid blue;\n}\n\n.example-nav-button {\n  background: transparent;\n  border: 0;\n}\n"]
-        })
-    ], CustomStepper);
-    return CustomStepper;
-}(CdkStepper));
 
 /**
  * @title Drag&Drop position locking
@@ -1680,235 +974,6 @@ var ComponentPortalExample = /** @class */ (function () {
     return ComponentPortalExample;
 }());
 
-var ELEMENT_DATA$4 = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-];
-/**
- * @title Basic use of `<cdk-table>` (uses display flex)
- */
-var CdkTableBasicFlexExample = /** @class */ (function () {
-    function CdkTableBasicFlexExample() {
-        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new ExampleDataSource$2();
-    }
-    CdkTableBasicFlexExample = __decorate([
-        Component({
-            selector: 'cdk-table-basic-flex-example',
-            template: "<cdk-table [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <cdk-header-cell *cdkHeaderCellDef> No. </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </cdk-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <cdk-header-cell *cdkHeaderCellDef> Name </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </cdk-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <cdk-header-cell *cdkHeaderCellDef> Weight </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </cdk-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <cdk-header-cell *cdkHeaderCellDef> Symbol </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </cdk-cell>\n  </ng-container>\n\n  <cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></cdk-header-row>\n  <cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></cdk-row>\n</cdk-table>\n",
-            styles: ["/**\n * Add basic flex styling so that the cells evenly space themselves in the row.\n */\ncdk-row, cdk-header-row, cdk-footer-row {\n  display: flex;\n}\n\ncdk-cell, cdk-header-cell, cdk-footer-cell {\n  flex: 1;\n}\n"]
-        })
-    ], CdkTableBasicFlexExample);
-    return CdkTableBasicFlexExample;
-}());
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-var ExampleDataSource$2 = /** @class */ (function (_super) {
-    __extends(ExampleDataSource, _super);
-    function ExampleDataSource() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        /** Stream of data that is provided to the table. */
-        _this.data = new BehaviorSubject(ELEMENT_DATA$4);
-        return _this;
-    }
-    /** Connect function called by the table to retrieve one stream containing the data to render. */
-    ExampleDataSource.prototype.connect = function () {
-        return this.data;
-    };
-    ExampleDataSource.prototype.disconnect = function () { };
-    return ExampleDataSource;
-}(DataSource));
-
-var ELEMENT_DATA$5 = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-];
-/**
- * @title Basic CDK data-table
- */
-var CdkTableBasicExample = /** @class */ (function () {
-    function CdkTableBasicExample() {
-        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-        this.dataSource = new ExampleDataSource$3();
-    }
-    CdkTableBasicExample = __decorate([
-        Component({
-            selector: 'cdk-table-basic-example',
-            template: "<table cdk-table [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <th cdk-header-cell *cdkHeaderCellDef> No. </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <th cdk-header-cell *cdkHeaderCellDef> Name </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <th cdk-header-cell *cdkHeaderCellDef> Weight </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <th cdk-header-cell *cdkHeaderCellDef> Symbol </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></tr>\n  <tr cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
-            styles: ["table {\n  width: 100%;\n}\n\nth {\n  text-align: left;\n}\n"]
-        })
-    ], CdkTableBasicExample);
-    return CdkTableBasicExample;
-}());
-/**
- * Data source to provide what data should be rendered in the table. Note that the data source
- * can retrieve its data in any way. In this case, the data source is provided a reference
- * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
- * the underlying data. Instead, it only needs to take the data and send the table exactly what
- * should be rendered.
- */
-var ExampleDataSource$3 = /** @class */ (function (_super) {
-    __extends(ExampleDataSource, _super);
-    function ExampleDataSource() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        /** Stream of data that is provided to the table. */
-        _this.data = new BehaviorSubject(ELEMENT_DATA$5);
-        return _this;
-    }
-    /** Connect function called by the table to retrieve one stream containing the data to render. */
-    ExampleDataSource.prototype.connect = function () {
-        return this.data;
-    };
-    ExampleDataSource.prototype.disconnect = function () { };
-    return ExampleDataSource;
-}(DataSource));
-
-var TREE_DATA = [
-    {
-        name: 'Fruit',
-        expandable: true,
-        level: 0,
-    }, {
-        name: 'Apple',
-        expandable: false,
-        level: 1,
-    }, {
-        name: 'Banana',
-        expandable: false,
-        level: 1,
-    }, {
-        name: 'Fruit loops',
-        expandable: false,
-        level: 1,
-    }, {
-        name: 'Vegetables',
-        expandable: true,
-        level: 0,
-    }, {
-        name: 'Green',
-        expandable: true,
-        level: 1,
-    }, {
-        name: 'Broccoli',
-        expandable: false,
-        level: 2,
-    }, {
-        name: 'Brussel sprouts',
-        expandable: false,
-        level: 2,
-    }, {
-        name: 'Orange',
-        expandable: true,
-        level: 1,
-    }, {
-        name: 'Pumpkins',
-        expandable: false,
-        level: 2,
-    }, {
-        name: 'Carrots',
-        expandable: false,
-        level: 2,
-    }
-];
-/**
- * @title Tree with flat nodes
- */
-var CdkTreeFlatExample = /** @class */ (function () {
-    function CdkTreeFlatExample() {
-        this.treeControl = new FlatTreeControl(function (node) { return node.level; }, function (node) { return node.expandable; });
-        this.dataSource = new ArrayDataSource(TREE_DATA);
-        this.hasChild = function (_, node) { return node.expandable; };
-    }
-    CdkTreeFlatExample.prototype.getParentNode = function (node) {
-        var nodeIndex = TREE_DATA.indexOf(node);
-        for (var i = nodeIndex - 1; i >= 0; i--) {
-            if (TREE_DATA[i].level === node.level - 1) {
-                return TREE_DATA[i];
-            }
-        }
-        return null;
-    };
-    CdkTreeFlatExample.prototype.shouldRender = function (node) {
-        var parent = this.getParentNode(node);
-        return !parent || parent.isExpanded;
-    };
-    CdkTreeFlatExample = __decorate([
-        Component({
-            selector: 'cdk-tree-flat-example',
-            template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.filename\"\n            (click)=\"node.isExpanded = !node.isExpanded\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n",
-            styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
-        })
-    ], CdkTreeFlatExample);
-    return CdkTreeFlatExample;
-}());
-
-var TREE_DATA$1 = [
-    {
-        name: 'Fruit',
-        children: [
-            { name: 'Apple' },
-            { name: 'Banana' },
-            { name: 'Fruit loops' },
-        ]
-    }, {
-        name: 'Vegetables',
-        children: [
-            {
-                name: 'Green',
-                children: [
-                    { name: 'Broccoli' },
-                    { name: 'Brussel sprouts' },
-                ]
-            }, {
-                name: 'Orange',
-                children: [
-                    { name: 'Pumpkins' },
-                    { name: 'Carrots' },
-                ]
-            },
-        ]
-    },
-];
-/**
- * @title Tree with nested nodes
- */
-var CdkTreeNestedExample = /** @class */ (function () {
-    function CdkTreeNestedExample() {
-        this.treeControl = new NestedTreeControl(function (node) { return node.children; });
-        this.dataSource = new ArrayDataSource(TREE_DATA$1);
-        this.hasChild = function (_, node) { return !!node.children && node.children.length > 0; };
-    }
-    CdkTreeNestedExample = __decorate([
-        Component({
-            selector: 'cdk-tree-nested-example',
-            template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node\" class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" class=\"example-tree-node\">\n    <button mat-icon-button [attr.aria-label]=\"'toggle ' + node.name\" cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n",
-            styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n"]
-        })
-    ], CdkTreeNestedExample);
-    return CdkTreeNestedExample;
-}());
-
 /** @title Virtual scroll context variables */
 var CdkVirtualScrollContextExample = /** @class */ (function () {
     function CdkVirtualScrollContextExample() {
@@ -2142,6 +1207,795 @@ var CdkVirtualScrollTemplateCacheExample = /** @class */ (function () {
     return CdkVirtualScrollTemplateCacheExample;
 }());
 
+/** @title A custom CDK stepper without a form */
+var CdkCustomStepperWithoutFormExample = /** @class */ (function () {
+    function CdkCustomStepperWithoutFormExample() {
+    }
+    CdkCustomStepperWithoutFormExample = __decorate([
+        Component({
+            selector: 'cdk-custom-stepper-without-form-example',
+            template: "<example-custom-stepper>\n  <cdk-step> <p>This is any content of \"Step 1\"</p> </cdk-step>\n  <cdk-step> <p>This is any content of \"Step 2\"</p> </cdk-step>\n</example-custom-stepper>\n",
+            styles: [""]
+        })
+    ], CdkCustomStepperWithoutFormExample);
+    return CdkCustomStepperWithoutFormExample;
+}());
+/** Custom CDK stepper component */
+var CustomStepper = /** @class */ (function (_super) {
+    __extends(CustomStepper, _super);
+    function CustomStepper() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    CustomStepper_1 = CustomStepper;
+    CustomStepper.prototype.onClick = function (index) {
+        this.selectedIndex = index;
+    };
+    var CustomStepper_1;
+    CustomStepper = CustomStepper_1 = __decorate([
+        Component({
+            selector: 'example-custom-stepper',
+            template: "<section class=\"example-container\">\n  <header>\n    <h2>Step {{ selectedIndex + 1 }}/{{ steps.length }}</h2>\n  </header>\n\n  <div [style.display]=\"selected ? 'block' : 'none'\">\n    <ng-container [ngTemplateOutlet]=\"selected.content\"></ng-container>\n  </div>\n\n  <footer class=\"example-step-navigation-bar\">\n    <button class=\"example-nav-button\" cdkStepperPrevious>&larr;</button>\n    <button\n      class=\"example-step\"\n      *ngFor=\"let step of steps; let i = index\"\n      [ngClass]=\"{ 'example-active': selectedIndex === i }\"\n      (click)=\"onClick(i)\"\n    >\n      Step {{ i + 1 }}\n    </button>\n    <button class=\"example-nav-button\" cdkStepperNext>&rarr;</button>\n  </footer>\n</section>\n",
+            providers: [{ provide: CdkStepper, useExisting: CustomStepper_1 }],
+            styles: [".example-container {\n  border: 1px solid black;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-active {\n  color: blue;\n}\n\n.example-step {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: black;\n}\n\n.example-step.example-active {\n  color: blue;\n  border-bottom: 1px solid blue;\n}\n\n.example-nav-button {\n  background: transparent;\n  border: 0;\n}\n"]
+        })
+    ], CustomStepper);
+    return CustomStepper;
+}(CdkStepper));
+
+var ELEMENT_DATA$4 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
+ * @title Basic use of `<cdk-table>` (uses display flex)
+ */
+var CdkTableBasicFlexExample = /** @class */ (function () {
+    function CdkTableBasicFlexExample() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new ExampleDataSource$2();
+    }
+    CdkTableBasicFlexExample = __decorate([
+        Component({
+            selector: 'cdk-table-basic-flex-example',
+            template: "<cdk-table [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <cdk-header-cell *cdkHeaderCellDef> No. </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </cdk-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <cdk-header-cell *cdkHeaderCellDef> Name </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </cdk-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <cdk-header-cell *cdkHeaderCellDef> Weight </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </cdk-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <cdk-header-cell *cdkHeaderCellDef> Symbol </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </cdk-cell>\n  </ng-container>\n\n  <cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></cdk-header-row>\n  <cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></cdk-row>\n</cdk-table>\n",
+            styles: ["/**\n * Add basic flex styling so that the cells evenly space themselves in the row.\n */\ncdk-row, cdk-header-row, cdk-footer-row {\n  display: flex;\n}\n\ncdk-cell, cdk-header-cell, cdk-footer-cell {\n  flex: 1;\n}\n"]
+        })
+    ], CdkTableBasicFlexExample);
+    return CdkTableBasicFlexExample;
+}());
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+var ExampleDataSource$2 = /** @class */ (function (_super) {
+    __extends(ExampleDataSource, _super);
+    function ExampleDataSource() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        /** Stream of data that is provided to the table. */
+        _this.data = new BehaviorSubject(ELEMENT_DATA$4);
+        return _this;
+    }
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
+    ExampleDataSource.prototype.connect = function () {
+        return this.data;
+    };
+    ExampleDataSource.prototype.disconnect = function () { };
+    return ExampleDataSource;
+}(DataSource));
+
+var ELEMENT_DATA$5 = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+/**
+ * @title Basic CDK data-table
+ */
+var CdkTableBasicExample = /** @class */ (function () {
+    function CdkTableBasicExample() {
+        this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = new ExampleDataSource$3();
+    }
+    CdkTableBasicExample = __decorate([
+        Component({
+            selector: 'cdk-table-basic-example',
+            template: "<table cdk-table [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <th cdk-header-cell *cdkHeaderCellDef> No. </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <th cdk-header-cell *cdkHeaderCellDef> Name </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <th cdk-header-cell *cdkHeaderCellDef> Weight </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <th cdk-header-cell *cdkHeaderCellDef> Symbol </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></tr>\n  <tr cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+            styles: ["table {\n  width: 100%;\n}\n\nth {\n  text-align: left;\n}\n"]
+        })
+    ], CdkTableBasicExample);
+    return CdkTableBasicExample;
+}());
+/**
+ * Data source to provide what data should be rendered in the table. Note that the data source
+ * can retrieve its data in any way. In this case, the data source is provided a reference
+ * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+ * the underlying data. Instead, it only needs to take the data and send the table exactly what
+ * should be rendered.
+ */
+var ExampleDataSource$3 = /** @class */ (function (_super) {
+    __extends(ExampleDataSource, _super);
+    function ExampleDataSource() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        /** Stream of data that is provided to the table. */
+        _this.data = new BehaviorSubject(ELEMENT_DATA$5);
+        return _this;
+    }
+    /** Connect function called by the table to retrieve one stream containing the data to render. */
+    ExampleDataSource.prototype.connect = function () {
+        return this.data;
+    };
+    ExampleDataSource.prototype.disconnect = function () { };
+    return ExampleDataSource;
+}(DataSource));
+
+/** @title Monitoring autofill state with cdkAutofill */
+var TextFieldAutofillDirectiveExample = /** @class */ (function () {
+    function TextFieldAutofillDirectiveExample() {
+    }
+    TextFieldAutofillDirectiveExample = __decorate([
+        Component({
+            selector: 'text-field-autofill-directive-example',
+            template: "<form>\n  <mat-form-field>\n    <mat-label>First name</mat-label>\n    <input matInput (cdkAutofill)=\"firstNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field>\n    <mat-label>Last name</mat-label>\n    <input matInput (cdkAutofill)=\"lastNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n",
+            styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
+        })
+    ], TextFieldAutofillDirectiveExample);
+    return TextFieldAutofillDirectiveExample;
+}());
+
+/** @title Monitoring autofill state with AutofillMonitor */
+var TextFieldAutofillMonitorExample = /** @class */ (function () {
+    function TextFieldAutofillMonitorExample(_autofill) {
+        this._autofill = _autofill;
+    }
+    TextFieldAutofillMonitorExample.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this._autofill.monitor(this.firstName)
+            .subscribe(function (e) { return _this.firstNameAutofilled = e.isAutofilled; });
+        this._autofill.monitor(this.lastName)
+            .subscribe(function (e) { return _this.lastNameAutofilled = e.isAutofilled; });
+    };
+    TextFieldAutofillMonitorExample.prototype.ngOnDestroy = function () {
+        this._autofill.stopMonitoring(this.firstName);
+        this._autofill.stopMonitoring(this.lastName);
+    };
+    __decorate([
+        ViewChild('first', { read: ElementRef, static: false }),
+        __metadata("design:type", ElementRef)
+    ], TextFieldAutofillMonitorExample.prototype, "firstName", void 0);
+    __decorate([
+        ViewChild('last', { read: ElementRef, static: false }),
+        __metadata("design:type", ElementRef)
+    ], TextFieldAutofillMonitorExample.prototype, "lastName", void 0);
+    TextFieldAutofillMonitorExample = __decorate([
+        Component({
+            selector: 'text-field-autofill-monitor-example',
+            template: "<form>\n  <mat-form-field>\n    <mat-label>First name</mat-label>\n    <input matInput #first>\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field>\n    <mat-label>Last name</mat-label>\n    <input matInput #last>\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n",
+            styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
+        }),
+        __metadata("design:paramtypes", [AutofillMonitor])
+    ], TextFieldAutofillMonitorExample);
+    return TextFieldAutofillMonitorExample;
+}());
+
+/** @title Auto-resizing textarea */
+var TextFieldAutosizeTextareaExample = /** @class */ (function () {
+    function TextFieldAutosizeTextareaExample(_ngZone) {
+        this._ngZone = _ngZone;
+    }
+    TextFieldAutosizeTextareaExample.prototype.triggerResize = function () {
+        var _this = this;
+        // Wait for changes to be applied, then trigger textarea resize.
+        this._ngZone.onStable.pipe(take(1))
+            .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
+    };
+    __decorate([
+        ViewChild('autosize', { static: false }),
+        __metadata("design:type", CdkTextareaAutosize)
+    ], TextFieldAutosizeTextareaExample.prototype, "autosize", void 0);
+    TextFieldAutosizeTextareaExample = __decorate([
+        Component({
+            selector: 'text-field-autosize-textarea-example',
+            template: "<mat-form-field>\n  <mat-label>Font size</mat-label>\n  <mat-select #fontSize value=\"16px\" (selectionChange)=\"triggerResize()\">\n    <mat-option value=\"10px\">10px</mat-option>\n    <mat-option value=\"12px\">12px</mat-option>\n    <mat-option value=\"14px\">14px</mat-option>\n    <mat-option value=\"16px\">16px</mat-option>\n    <mat-option value=\"18px\">18px</mat-option>\n    <mat-option value=\"20px\">20px</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<mat-form-field [style.fontSize]=\"fontSize.value\">\n  <mat-label>Autosize textarea</mat-label>\n  <textarea matInput\n            cdkTextareaAutosize\n            #autosize=\"cdkTextareaAutosize\"\n            cdkAutosizeMinRows=\"1\"\n            cdkAutosizeMaxRows=\"5\"></textarea>\n</mat-form-field>\n",
+            styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
+        }),
+        __metadata("design:paramtypes", [NgZone])
+    ], TextFieldAutosizeTextareaExample);
+    return TextFieldAutosizeTextareaExample;
+}());
+
+var TREE_DATA = [
+    {
+        name: 'Fruit',
+        expandable: true,
+        level: 0,
+    }, {
+        name: 'Apple',
+        expandable: false,
+        level: 1,
+    }, {
+        name: 'Banana',
+        expandable: false,
+        level: 1,
+    }, {
+        name: 'Fruit loops',
+        expandable: false,
+        level: 1,
+    }, {
+        name: 'Vegetables',
+        expandable: true,
+        level: 0,
+    }, {
+        name: 'Green',
+        expandable: true,
+        level: 1,
+    }, {
+        name: 'Broccoli',
+        expandable: false,
+        level: 2,
+    }, {
+        name: 'Brussel sprouts',
+        expandable: false,
+        level: 2,
+    }, {
+        name: 'Orange',
+        expandable: true,
+        level: 1,
+    }, {
+        name: 'Pumpkins',
+        expandable: false,
+        level: 2,
+    }, {
+        name: 'Carrots',
+        expandable: false,
+        level: 2,
+    }
+];
+/**
+ * @title Tree with flat nodes
+ */
+var CdkTreeFlatExample = /** @class */ (function () {
+    function CdkTreeFlatExample() {
+        this.treeControl = new FlatTreeControl(function (node) { return node.level; }, function (node) { return node.expandable; });
+        this.dataSource = new ArrayDataSource(TREE_DATA);
+        this.hasChild = function (_, node) { return node.expandable; };
+    }
+    CdkTreeFlatExample.prototype.getParentNode = function (node) {
+        var nodeIndex = TREE_DATA.indexOf(node);
+        for (var i = nodeIndex - 1; i >= 0; i--) {
+            if (TREE_DATA[i].level === node.level - 1) {
+                return TREE_DATA[i];
+            }
+        }
+        return null;
+    };
+    CdkTreeFlatExample.prototype.shouldRender = function (node) {
+        var parent = this.getParentNode(node);
+        return !parent || parent.isExpanded;
+    };
+    CdkTreeFlatExample = __decorate([
+        Component({
+            selector: 'cdk-tree-flat-example',
+            template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.filename\"\n            (click)=\"node.isExpanded = !node.isExpanded\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n",
+            styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
+        })
+    ], CdkTreeFlatExample);
+    return CdkTreeFlatExample;
+}());
+
+var TREE_DATA$1 = [
+    {
+        name: 'Fruit',
+        children: [
+            { name: 'Apple' },
+            { name: 'Banana' },
+            { name: 'Fruit loops' },
+        ]
+    }, {
+        name: 'Vegetables',
+        children: [
+            {
+                name: 'Green',
+                children: [
+                    { name: 'Broccoli' },
+                    { name: 'Brussel sprouts' },
+                ]
+            }, {
+                name: 'Orange',
+                children: [
+                    { name: 'Pumpkins' },
+                    { name: 'Carrots' },
+                ]
+            },
+        ]
+    },
+];
+/**
+ * @title Tree with nested nodes
+ */
+var CdkTreeNestedExample = /** @class */ (function () {
+    function CdkTreeNestedExample() {
+        this.treeControl = new NestedTreeControl(function (node) { return node.children; });
+        this.dataSource = new ArrayDataSource(TREE_DATA$1);
+        this.hasChild = function (_, node) { return !!node.children && node.children.length > 0; };
+    }
+    CdkTreeNestedExample = __decorate([
+        Component({
+            selector: 'cdk-tree-nested-example',
+            template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node\" class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" class=\"example-tree-node\">\n    <button mat-icon-button [attr.aria-label]=\"'toggle ' + node.name\" cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n",
+            styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n"]
+        })
+    ], CdkTreeNestedExample);
+    return CdkTreeNestedExample;
+}());
+
+/**
+ * @title Highlight the first autocomplete option
+ */
+var AutocompleteAutoActiveFirstOptionExample = /** @class */ (function () {
+    function AutocompleteAutoActiveFirstOptionExample() {
+        this.myControl = new FormControl();
+        this.options = ['One', 'Two', 'Three'];
+    }
+    AutocompleteAutoActiveFirstOptionExample.prototype.ngOnInit = function () {
+        var _this = this;
+        this.filteredOptions = this.myControl.valueChanges.pipe(startWith(''), map(function (value) { return _this._filter(value); }));
+    };
+    AutocompleteAutoActiveFirstOptionExample.prototype._filter = function (value) {
+        var filterValue = value.toLowerCase();
+        return this.options.filter(function (option) { return option.toLowerCase().indexOf(filterValue) === 0; });
+    };
+    AutocompleteAutoActiveFirstOptionExample = __decorate([
+        Component({
+            selector: 'autocomplete-auto-active-first-option-example',
+            template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+        })
+    ], AutocompleteAutoActiveFirstOptionExample);
+    return AutocompleteAutoActiveFirstOptionExample;
+}());
+
+/**
+ * @title Display value autocomplete
+ */
+var AutocompleteDisplayExample = /** @class */ (function () {
+    function AutocompleteDisplayExample() {
+        this.myControl = new FormControl();
+        this.options = [
+            { name: 'Mary' },
+            { name: 'Shelley' },
+            { name: 'Igor' }
+        ];
+    }
+    AutocompleteDisplayExample.prototype.ngOnInit = function () {
+        var _this = this;
+        this.filteredOptions = this.myControl.valueChanges
+            .pipe(startWith(''), map(function (value) { return typeof value === 'string' ? value : value.name; }), map(function (name) { return name ? _this._filter(name) : _this.options.slice(); }));
+    };
+    AutocompleteDisplayExample.prototype.displayFn = function (user) {
+        return user ? user.name : undefined;
+    };
+    AutocompleteDisplayExample.prototype._filter = function (name) {
+        var filterValue = name.toLowerCase();
+        return this.options.filter(function (option) { return option.name.toLowerCase().indexOf(filterValue) === 0; });
+    };
+    AutocompleteDisplayExample = __decorate([
+        Component({
+            selector: 'autocomplete-display-example',
+            template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Assignee\" aria-label=\"Assignee\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\" [displayWith]=\"displayFn\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option.name}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+        })
+    ], AutocompleteDisplayExample);
+    return AutocompleteDisplayExample;
+}());
+
+/**
+ * @title Filter autocomplete
+ */
+var AutocompleteFilterExample = /** @class */ (function () {
+    function AutocompleteFilterExample() {
+        this.myControl = new FormControl();
+        this.options = ['One', 'Two', 'Three'];
+    }
+    AutocompleteFilterExample.prototype.ngOnInit = function () {
+        var _this = this;
+        this.filteredOptions = this.myControl.valueChanges
+            .pipe(startWith(''), map(function (value) { return _this._filter(value); }));
+    };
+    AutocompleteFilterExample.prototype._filter = function (value) {
+        var filterValue = value.toLowerCase();
+        return this.options.filter(function (option) { return option.toLowerCase().includes(filterValue); });
+    };
+    AutocompleteFilterExample = __decorate([
+        Component({
+            selector: 'autocomplete-filter-example',
+            template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+        })
+    ], AutocompleteFilterExample);
+    return AutocompleteFilterExample;
+}());
+
+var _filter = function (opt, value) {
+    var filterValue = value.toLowerCase();
+    return opt.filter(function (item) { return item.toLowerCase().indexOf(filterValue) === 0; });
+};
+/**
+ * @title Option groups autocomplete
+ */
+var AutocompleteOptgroupExample = /** @class */ (function () {
+    function AutocompleteOptgroupExample(_formBuilder) {
+        this._formBuilder = _formBuilder;
+        this.stateForm = this._formBuilder.group({
+            stateGroup: '',
+        });
+        this.stateGroups = [{
+                letter: 'A',
+                names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
+            }, {
+                letter: 'C',
+                names: ['California', 'Colorado', 'Connecticut']
+            }, {
+                letter: 'D',
+                names: ['Delaware']
+            }, {
+                letter: 'F',
+                names: ['Florida']
+            }, {
+                letter: 'G',
+                names: ['Georgia']
+            }, {
+                letter: 'H',
+                names: ['Hawaii']
+            }, {
+                letter: 'I',
+                names: ['Idaho', 'Illinois', 'Indiana', 'Iowa']
+            }, {
+                letter: 'K',
+                names: ['Kansas', 'Kentucky']
+            }, {
+                letter: 'L',
+                names: ['Louisiana']
+            }, {
+                letter: 'M',
+                names: ['Maine', 'Maryland', 'Massachusetts', 'Michigan',
+                    'Minnesota', 'Mississippi', 'Missouri', 'Montana']
+            }, {
+                letter: 'N',
+                names: ['Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
+                    'New Mexico', 'New York', 'North Carolina', 'North Dakota']
+            }, {
+                letter: 'O',
+                names: ['Ohio', 'Oklahoma', 'Oregon']
+            }, {
+                letter: 'P',
+                names: ['Pennsylvania']
+            }, {
+                letter: 'R',
+                names: ['Rhode Island']
+            }, {
+                letter: 'S',
+                names: ['South Carolina', 'South Dakota']
+            }, {
+                letter: 'T',
+                names: ['Tennessee', 'Texas']
+            }, {
+                letter: 'U',
+                names: ['Utah']
+            }, {
+                letter: 'V',
+                names: ['Vermont', 'Virginia']
+            }, {
+                letter: 'W',
+                names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
+            }];
+    }
+    AutocompleteOptgroupExample.prototype.ngOnInit = function () {
+        var _this = this;
+        this.stateGroupOptions = this.stateForm.get('stateGroup').valueChanges
+            .pipe(startWith(''), map(function (value) { return _this._filterGroup(value); }));
+    };
+    AutocompleteOptgroupExample.prototype._filterGroup = function (value) {
+        if (value) {
+            return this.stateGroups
+                .map(function (group) { return ({ letter: group.letter, names: _filter(group.names, value) }); })
+                .filter(function (group) { return group.names.length > 0; });
+        }
+        return this.stateGroups;
+    };
+    AutocompleteOptgroupExample = __decorate([
+        Component({
+            selector: 'autocomplete-optgroup-example',
+            template: "<form [formGroup]=\"stateForm\">\n  <mat-form-field>\n    <input type=\"text\" matInput placeholder=\"States Group\" formControlName=\"stateGroup\" required [matAutocomplete]=\"autoGroup\">\n      <mat-autocomplete #autoGroup=\"matAutocomplete\">\n        <mat-optgroup *ngFor=\"let group of stateGroupOptions | async\" [label]=\"group.letter\">\n          <mat-option *ngFor=\"let name of group.names\" [value]=\"name\">\n            {{name}}\n          </mat-option>\n      </mat-optgroup>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+            styles: ["/** No CSS for this example */\n"]
+        }),
+        __metadata("design:paramtypes", [FormBuilder])
+    ], AutocompleteOptgroupExample);
+    return AutocompleteOptgroupExample;
+}());
+
+/**
+ * @title Autocomplete overview
+ */
+var AutocompleteOverviewExample = /** @class */ (function () {
+    function AutocompleteOverviewExample() {
+        var _this = this;
+        this.stateCtrl = new FormControl();
+        this.states = [
+            {
+                name: 'Arkansas',
+                population: '2.978M',
+                // https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg'
+            },
+            {
+                name: 'California',
+                population: '39.14M',
+                // https://commons.wikimedia.org/wiki/File:Flag_of_California.svg
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg'
+            },
+            {
+                name: 'Florida',
+                population: '20.27M',
+                // https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg'
+            },
+            {
+                name: 'Texas',
+                population: '27.47M',
+                // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
+                flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+            }
+        ];
+        this.filteredStates = this.stateCtrl.valueChanges
+            .pipe(startWith(''), map(function (state) { return state ? _this._filterStates(state) : _this.states.slice(); }));
+    }
+    AutocompleteOverviewExample.prototype._filterStates = function (value) {
+        var filterValue = value.toLowerCase();
+        return this.states.filter(function (state) { return state.name.toLowerCase().indexOf(filterValue) === 0; });
+    };
+    AutocompleteOverviewExample = __decorate([
+        Component({
+            selector: 'autocomplete-overview-example',
+            template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"State\" aria-label=\"State\" [matAutocomplete]=\"auto\" [formControl]=\"stateCtrl\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let state of filteredStates | async\" [value]=\"state.name\">\n        <img class=\"example-option-img\" aria-hidden [src]=\"state.flag\" height=\"25\">\n        <span>{{state.name}}</span> |\n        <small>Population: {{state.population}}</small>\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n\n  <br>\n\n  <mat-slide-toggle\n    [checked]=\"stateCtrl.disabled\"\n    (change)=\"stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()\">\n    Disable Input?\n  </mat-slide-toggle>\n</form>\n",
+            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n\n.example-option-img {\n  vertical-align: middle;\n  margin-right: 8px;\n}\n\n[dir='rtl'] .example-option-img {\n  margin-right: 0;\n  margin-left: 8px;\n}\n"]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AutocompleteOverviewExample);
+    return AutocompleteOverviewExample;
+}());
+
+/**
+ * @title Plain input autocomplete
+ */
+var AutocompletePlainInputExample = /** @class */ (function () {
+    function AutocompletePlainInputExample() {
+        this.control = new FormControl();
+        this.streets = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+    }
+    AutocompletePlainInputExample.prototype.ngOnInit = function () {
+        var _this = this;
+        this.filteredStreets = this.control.valueChanges.pipe(startWith(''), map(function (value) { return _this._filter(value); }));
+    };
+    AutocompletePlainInputExample.prototype._filter = function (value) {
+        var _this = this;
+        var filterValue = this._normalizeValue(value);
+        return this.streets.filter(function (street) { return _this._normalizeValue(street).includes(filterValue); });
+    };
+    AutocompletePlainInputExample.prototype._normalizeValue = function (value) {
+        return value.toLowerCase().replace(/\s/g, '');
+    };
+    AutocompletePlainInputExample = __decorate([
+        Component({
+            selector: 'autocomplete-plain-input-example',
+            template: "<form class=\"example-form\">\n  <input type=\"text\" placeholder=\"Search for a street\" [formControl]=\"control\" [matAutocomplete]=\"auto\">\n  <mat-autocomplete #auto=\"matAutocomplete\">\n    <mat-option *ngFor=\"let street of filteredStreets | async\" [value]=\"street\">\n      {{street}}\n    </mat-option>\n  </mat-autocomplete>\n</form>\n",
+            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+        })
+    ], AutocompletePlainInputExample);
+    return AutocompletePlainInputExample;
+}());
+
+/**
+ * @title Simple autocomplete
+ */
+var AutocompleteSimpleExample = /** @class */ (function () {
+    function AutocompleteSimpleExample() {
+        this.myControl = new FormControl();
+        this.options = ['One', 'Two', 'Three'];
+    }
+    AutocompleteSimpleExample = __decorate([
+        Component({
+            selector: 'autocomplete-simple-example',
+            template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of options\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+            styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+        })
+    ], AutocompleteSimpleExample);
+    return AutocompleteSimpleExample;
+}());
+
+/**
+ * @title Badge overview
+ */
+var BadgeOverviewExample = /** @class */ (function () {
+    function BadgeOverviewExample() {
+    }
+    BadgeOverviewExample = __decorate([
+        Component({
+            selector: 'badge-overview-example',
+            template: "<p>\n  <span matBadge=\"4\" matBadgeOverlap=\"false\">Text with a badge</span>\n</p>\n\n<p>\n  Button with a badge on the left\n  <button mat-raised-button color=\"primary\"\n      matBadge=\"8\" matBadgePosition=\"before\" matBadgeColor=\"accent\">\n    Action\n  </button>\n</p>\n\n<p>\n  Icon with a badge\n  <mat-icon matBadge=\"15\" matBadgeColor=\"warn\">home</mat-icon>\n    <!-- Include text description of the icon's meaning for screen-readers -->\n    <span class=\"cdk-visually-hidden\">\n      Example with a home icon with overlaid badge showing the number 15\n    </span>\n</p>\n\n",
+            styles: ["/** No CSS for this example */\n"]
+        })
+    ], BadgeOverviewExample);
+    return BadgeOverviewExample;
+}());
+
+/**
+ * @title Bottom Sheet Overview
+ */
+var BottomSheetOverviewExample = /** @class */ (function () {
+    function BottomSheetOverviewExample(_bottomSheet) {
+        this._bottomSheet = _bottomSheet;
+    }
+    BottomSheetOverviewExample.prototype.openBottomSheet = function () {
+        this._bottomSheet.open(BottomSheetOverviewExampleSheet);
+    };
+    BottomSheetOverviewExample = __decorate([
+        Component({
+            selector: 'bottom-sheet-overview-example',
+            template: "<p>You have received a file called \"cat-picture.jpeg\".</p>\n\n<button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>\n",
+            styles: ["/** No CSS for this example */\n"]
+        }),
+        __metadata("design:paramtypes", [MatBottomSheet])
+    ], BottomSheetOverviewExample);
+    return BottomSheetOverviewExample;
+}());
+var BottomSheetOverviewExampleSheet = /** @class */ (function () {
+    function BottomSheetOverviewExampleSheet(_bottomSheetRef) {
+        this._bottomSheetRef = _bottomSheetRef;
+    }
+    BottomSheetOverviewExampleSheet.prototype.openLink = function (event) {
+        this._bottomSheetRef.dismiss();
+        event.preventDefault();
+    };
+    BottomSheetOverviewExampleSheet = __decorate([
+        Component({
+            selector: 'bottom-sheet-overview-example-sheet',
+            template: "<mat-nav-list>\n  <a href=\"https://keep.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Keep</span>\n    <span mat-line>Add to a note</span>\n  </a>\n\n  <a href=\"https://docs.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Docs</span>\n    <span mat-line>Embed in a document</span>\n  </a>\n\n  <a href=\"https://plus.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Plus</span>\n    <span mat-line>Share with your friends</span>\n  </a>\n\n  <a href=\"https://hangouts.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Hangouts</span>\n    <span mat-line>Show to your coworkers</span>\n  </a>\n</mat-nav-list>\n"
+        }),
+        __metadata("design:paramtypes", [MatBottomSheetRef])
+    ], BottomSheetOverviewExampleSheet);
+    return BottomSheetOverviewExampleSheet;
+}());
+
+/**
+ * @title Button toggle appearance
+ */
+var ButtonToggleAppearanceExample = /** @class */ (function () {
+    function ButtonToggleAppearanceExample() {
+    }
+    ButtonToggleAppearanceExample = __decorate([
+        Component({
+            selector: 'button-toggle-appearance-example',
+            template: "<p>\n  Default appearance:\n  <mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n\n<p>\n  Legacy appearance:\n  <mat-button-toggle-group appearance=\"legacy\" name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n",
+            styles: ["mat-button-toggle-group {\n  margin-left: 12px;\n}\n"]
+        })
+    ], ButtonToggleAppearanceExample);
+    return ButtonToggleAppearanceExample;
+}());
+
+/**
+ * @title Exclusive selection
+ */
+var ButtonToggleExclusiveExample = /** @class */ (function () {
+    function ButtonToggleExclusiveExample() {
+    }
+    ButtonToggleExclusiveExample = __decorate([
+        Component({
+            selector: 'button-toggle-exclusive-example',
+            template: "<mat-button-toggle-group #group=\"matButtonToggleGroup\">\n  <mat-button-toggle value=\"left\" aria-label=\"Text align left\">\n    <mat-icon>format_align_left</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"center\" aria-label=\"Text align center\">\n    <mat-icon>format_align_center</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"right\" aria-label=\"Text align right\">\n    <mat-icon>format_align_right</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"justify\" disabled aria-label=\"Text align justify\">\n    <mat-icon>format_align_justify</mat-icon>\n  </mat-button-toggle>\n</mat-button-toggle-group>\n<div class=\"example-selected-value\">Selected value: {{group.value}}</div>\n",
+            styles: [".example-selected-value {\n  margin: 15px 0;\n}\n"]
+        })
+    ], ButtonToggleExclusiveExample);
+    return ButtonToggleExclusiveExample;
+}());
+
+/**
+ * @title Basic button-toggles
+ */
+var ButtonToggleOverviewExample = /** @class */ (function () {
+    function ButtonToggleOverviewExample() {
+    }
+    ButtonToggleOverviewExample = __decorate([
+        Component({
+            selector: 'button-toggle-overview-example',
+            template: "<mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\n  <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n  <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n  <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n</mat-button-toggle-group>\n",
+            styles: ["/** No CSS for this example */\n"]
+        })
+    ], ButtonToggleOverviewExample);
+    return ButtonToggleOverviewExample;
+}());
+
+/**
+ * @title Basic buttons
+ */
+var ButtonOverviewExample = /** @class */ (function () {
+    function ButtonOverviewExample() {
+    }
+    ButtonOverviewExample = __decorate([
+        Component({
+            selector: 'button-overview-example',
+            template: "<button mat-button>Click me!</button>\n",
+            styles: ["/** No CSS for this example */\n"]
+        })
+    ], ButtonOverviewExample);
+    return ButtonOverviewExample;
+}());
+
+/**
+ * @title Button varieties
+ */
+var ButtonTypesExample = /** @class */ (function () {
+    function ButtonTypesExample() {
+    }
+    ButtonTypesExample = __decorate([
+        Component({
+            selector: 'button-types-example',
+            template: "<h3>Basic Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Raised Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>\n\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>\n\n<h3>Mini Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>\n",
+            styles: [".example-button-row button,\n.example-button-row a {\n  margin-right: 8px;\n}\n"]
+        })
+    ], ButtonTypesExample);
+    return ButtonTypesExample;
+}());
+
+/**
+ * @title Card with multiple sections
+ */
+var CardFancyExample = /** @class */ (function () {
+    function CardFancyExample() {
+    }
+    CardFancyExample = __decorate([
+        Component({
+            selector: 'card-fancy-example',
+            template: "<mat-card class=\"example-card\">\n  <mat-card-header>\n    <div mat-card-avatar class=\"example-header-image\"></div>\n    <mat-card-title>Shiba Inu</mat-card-title>\n    <mat-card-subtitle>Dog Breed</mat-card-subtitle>\n  </mat-card-header>\n  <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\">\n  <mat-card-content>\n    <p>\n      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.\n      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\n      bred for hunting.\n    </p>\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-button>LIKE</button>\n    <button mat-button>SHARE</button>\n  </mat-card-actions>\n</mat-card>\n",
+            styles: [".example-card {\n  max-width: 400px;\n}\n\n.example-header-image {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}\n"]
+        })
+    ], CardFancyExample);
+    return CardFancyExample;
+}());
+
+/**
+ * @title Basic cards
+ */
+var CardOverviewExample = /** @class */ (function () {
+    function CardOverviewExample() {
+    }
+    CardOverviewExample = __decorate([
+        Component({
+            selector: 'card-overview-example',
+            template: "<mat-card>Simple card</mat-card>\n",
+            styles: ["/** No CSS for this example */\n"]
+        })
+    ], CardOverviewExample);
+    return CardOverviewExample;
+}());
+
 /**
  * @title Configurable checkbox
  */
@@ -2352,6 +2206,42 @@ var ChipsStackedExample = /** @class */ (function () {
         })
     ], ChipsStackedExample);
     return ChipsStackedExample;
+}());
+
+/**
+ * @title Elevation CSS classes
+ */
+var ElevationOverviewExample = /** @class */ (function () {
+    function ElevationOverviewExample() {
+        this.isActive = false;
+    }
+    ElevationOverviewExample = __decorate([
+        Component({
+            selector: 'elevation-overview-example',
+            template: "<div class=\"example-container\"\n    [class.mat-elevation-z2]=\"!isActive\"\n    [class.mat-elevation-z8]=\"isActive\">\n  Example\n</div>\n\n<button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>\n",
+            styles: [".example-container {\n  padding: 16px;\n  margin-bottom: 16px;\n}\n"]
+        })
+    ], ElevationOverviewExample);
+    return ElevationOverviewExample;
+}());
+
+/**
+ * @title MatRipple basic usage
+ */
+var RippleOverviewExample = /** @class */ (function () {
+    function RippleOverviewExample() {
+        this.centered = false;
+        this.disabled = false;
+        this.unbounded = false;
+    }
+    RippleOverviewExample = __decorate([
+        Component({
+            selector: 'ripple-overview-example',
+            template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox>\n\n<mat-form-field class=\"example-ripple-form-field\">\n  <input matInput [(ngModel)]=\"radius\" type=\"number\" placeholder=\"Radius\">\n</mat-form-field>\n<mat-form-field class=\"example-ripple-form-field\">\n  <input matInput [(ngModel)]=\"color\" type=\"text\" placeholder=\"Color\">\n</mat-form-field>\n\n\n<div class=\"example-ripple-container mat-elevation-z4\"\n     matRipple\n     [matRippleCentered]=\"centered\"\n     [matRippleDisabled]=\"disabled\"\n     [matRippleUnbounded]=\"unbounded\"\n     [matRippleRadius]=\"radius\"\n     [matRippleColor]=\"color\">\n  Click me\n</div>\n",
+            styles: [".example-ripple-container {\n  cursor: pointer;\n  text-align: center;\n\n  width: 300px;\n  height: 300px;\n  line-height: 300px;\n\n  user-select: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n}\n\n/** Styles to make the demo look better. */\n.example-ripple-checkbox {\n  margin: 6px 12px 6px 0;\n}\n\n.example-ripple-form-field {\n  margin: 0 12px 0 0;\n}\n"]
+        })
+    ], RippleOverviewExample);
+    return RippleOverviewExample;
 }());
 
 /** @title Datepicker open method */
@@ -3166,23 +3056,6 @@ var DividerOverviewExample = /** @class */ (function () {
 }());
 
 /**
- * @title Elevation CSS classes
- */
-var ElevationOverviewExample = /** @class */ (function () {
-    function ElevationOverviewExample() {
-        this.isActive = false;
-    }
-    ElevationOverviewExample = __decorate([
-        Component({
-            selector: 'elevation-overview-example',
-            template: "<div class=\"example-container\"\n    [class.mat-elevation-z2]=\"!isActive\"\n    [class.mat-elevation-z8]=\"isActive\">\n  Example\n</div>\n\n<button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>\n",
-            styles: [".example-container {\n  padding: 16px;\n  margin-bottom: 16px;\n}\n"]
-        })
-    ], ElevationOverviewExample);
-    return ElevationOverviewExample;
-}());
-
-/**
  * @title Accordion with expand/collapse all toggles
  */
 var ExpansionExpandCollapseAllExample = /** @class */ (function () {
@@ -3243,122 +3116,6 @@ var ExpansionStepsExample = /** @class */ (function () {
         })
     ], ExpansionStepsExample);
     return ExpansionStepsExample;
-}());
-
-/** @title Monitoring focus with FocusMonitor */
-var FocusMonitorDirectivesExample = /** @class */ (function () {
-    function FocusMonitorDirectivesExample(_ngZone, _cdr) {
-        this._ngZone = _ngZone;
-        this._cdr = _cdr;
-        this.elementOrigin = this.formatOrigin(null);
-        this.subtreeOrigin = this.formatOrigin(null);
-    }
-    FocusMonitorDirectivesExample.prototype.formatOrigin = function (origin) {
-        return origin ? origin + ' focused' : 'blurred';
-    };
-    // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
-    FocusMonitorDirectivesExample.prototype.markForCheck = function () {
-        var _this = this;
-        this._ngZone.run(function () { return _this._cdr.markForCheck(); });
-    };
-    FocusMonitorDirectivesExample = __decorate([
-        Component({
-            selector: 'focus-monitor-directives-example',
-            template: "<div class=\"example-focus-monitor\">\n  <button cdkMonitorSubtreeFocus\n          (cdkFocusChange)=\"elementOrigin = formatOrigin($event); markForCheck()\">\n    Focus Monitored Element ({{elementOrigin}})\n  </button>\n</div>\n\n<div class=\"example-focus-monitor\">\n  <div cdkMonitorSubtreeFocus\n       (cdkFocusChange)=\"subtreeOrigin = formatOrigin($event); markForCheck()\">\n    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>\n    <button>Child Button 1</button>\n    <button>Child Button 2</button>\n  </div>\n</div>\n",
-            styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton {\n  margin-right: 12px;\n}\n"]
-        }),
-        __metadata("design:paramtypes", [NgZone, ChangeDetectorRef])
-    ], FocusMonitorDirectivesExample);
-    return FocusMonitorDirectivesExample;
-}());
-
-/** @title Focusing with a specific FocusOrigin */
-var FocusMonitorFocusViaExample = /** @class */ (function () {
-    function FocusMonitorFocusViaExample(focusMonitor, _cdr, _ngZone) {
-        this.focusMonitor = focusMonitor;
-        this._cdr = _cdr;
-        this._ngZone = _ngZone;
-        this.origin = this.formatOrigin(null);
-    }
-    FocusMonitorFocusViaExample.prototype.ngAfterViewInit = function () {
-        var _this = this;
-        this.focusMonitor.monitor(this.monitoredEl)
-            .subscribe(function (origin) { return _this._ngZone.run(function () {
-            _this.origin = _this.formatOrigin(origin);
-            _this._cdr.markForCheck();
-        }); });
-    };
-    FocusMonitorFocusViaExample.prototype.ngOnDestroy = function () {
-        this.focusMonitor.stopMonitoring(this.monitoredEl);
-    };
-    FocusMonitorFocusViaExample.prototype.formatOrigin = function (origin) {
-        return origin ? origin + ' focused' : 'blurred';
-    };
-    __decorate([
-        ViewChild('monitored', { static: false }),
-        __metadata("design:type", ElementRef)
-    ], FocusMonitorFocusViaExample.prototype, "monitoredEl", void 0);
-    FocusMonitorFocusViaExample = __decorate([
-        Component({
-            selector: 'focus-monitor-focus-via-example',
-            template: "<div class=\"example-focus-monitor\">\n  <button #monitored>1. Focus Monitored Element ({{origin}})</button>\n  <button #unmonitored>2. Not Monitored</button>\n</div>\n\n<mat-form-field>\n  <mat-label>Simulated focus origin</mat-label>\n  <mat-select #simulatedOrigin value=\"mouse\">\n    <mat-option value=\"mouse\">Mouse</mat-option>\n    <mat-option value=\"keyboard\">Keyboard</mat-option>\n    <mat-option value=\"touch\">Touch</mat-option>\n    <mat-option value=\"program\">Programmatic</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<button (click)=\"focusMonitor.focusVia(monitored, simulatedOrigin.value)\">\n  Focus button #1\n</button>\n<button (click)=\"focusMonitor.focusVia(unmonitored, simulatedOrigin.value)\">\n  Focus button #2\n</button>\n",
-            styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\n.example-focus-monitor button:focus {\n  box-shadow: 0 0 30px cyan;\n}\n\nmat-form-field,\nbutton {\n  margin-right: 12px;\n}\n"]
-        }),
-        __metadata("design:paramtypes", [FocusMonitor,
-            ChangeDetectorRef,
-            NgZone])
-    ], FocusMonitorFocusViaExample);
-    return FocusMonitorFocusViaExample;
-}());
-
-/** @title Monitoring focus with FocusMonitor */
-var FocusMonitorOverviewExample = /** @class */ (function () {
-    function FocusMonitorOverviewExample(_focusMonitor, _cdr, _ngZone) {
-        this._focusMonitor = _focusMonitor;
-        this._cdr = _cdr;
-        this._ngZone = _ngZone;
-        this.elementOrigin = this.formatOrigin(null);
-        this.subtreeOrigin = this.formatOrigin(null);
-    }
-    FocusMonitorOverviewExample.prototype.ngAfterViewInit = function () {
-        var _this = this;
-        this._focusMonitor.monitor(this.element)
-            .subscribe(function (origin) { return _this._ngZone.run(function () {
-            _this.elementOrigin = _this.formatOrigin(origin);
-            _this._cdr.markForCheck();
-        }); });
-        this._focusMonitor.monitor(this.subtree, true)
-            .subscribe(function (origin) { return _this._ngZone.run(function () {
-            _this.subtreeOrigin = _this.formatOrigin(origin);
-            _this._cdr.markForCheck();
-        }); });
-    };
-    FocusMonitorOverviewExample.prototype.ngOnDestroy = function () {
-        this._focusMonitor.stopMonitoring(this.element);
-        this._focusMonitor.stopMonitoring(this.subtree);
-    };
-    FocusMonitorOverviewExample.prototype.formatOrigin = function (origin) {
-        return origin ? origin + ' focused' : 'blurred';
-    };
-    __decorate([
-        ViewChild('element', { static: false }),
-        __metadata("design:type", ElementRef)
-    ], FocusMonitorOverviewExample.prototype, "element", void 0);
-    __decorate([
-        ViewChild('subtree', { static: false }),
-        __metadata("design:type", ElementRef)
-    ], FocusMonitorOverviewExample.prototype, "subtree", void 0);
-    FocusMonitorOverviewExample = __decorate([
-        Component({
-            selector: 'focus-monitor-overview-example',
-            template: "<div class=\"example-focus-monitor\">\n  <button #element>Focus Monitored Element ({{elementOrigin}})</button>\n</div>\n\n<div class=\"example-focus-monitor\">\n  <div #subtree>\n    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>\n    <button>Child Button 1</button>\n    <button>Child Button 2</button>\n  </div>\n</div>\n",
-            styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton {\n  margin-right: 12px;\n}\n"]
-        }),
-        __metadata("design:paramtypes", [FocusMonitor,
-            ChangeDetectorRef,
-            NgZone])
-    ], FocusMonitorOverviewExample);
-    return FocusMonitorOverviewExample;
 }());
 
 /** @title Form field appearance variants */
@@ -3994,7 +3751,7 @@ var NestedMenuExample = /** @class */ (function () {
     NestedMenuExample = __decorate([
         Component({
             selector: 'nested-menu-example',
-            template: "<button mat-button [matMenuTriggerFor]=\"animals\">Animal index</button>\r\n\r\n<mat-menu #animals=\"matMenu\">\r\n  <button mat-menu-item [matMenuTriggerFor]=\"vertebrates\">Vertebrates</button>\r\n  <button mat-menu-item [matMenuTriggerFor]=\"invertebrates\">Invertebrates</button>\r\n</mat-menu>\r\n\r\n<mat-menu #vertebrates=\"matMenu\">\r\n  <button mat-menu-item [matMenuTriggerFor]=\"fish\">Fishes</button>\r\n  <button mat-menu-item [matMenuTriggerFor]=\"amphibians\">Amphibians</button>\r\n  <button mat-menu-item [matMenuTriggerFor]=\"reptiles\">Reptiles</button>\r\n  <button mat-menu-item>Birds</button>\r\n  <button mat-menu-item>Mammals</button>\r\n</mat-menu>\r\n\r\n<mat-menu #invertebrates=\"matMenu\">\r\n  <button mat-menu-item>Insects</button>\r\n  <button mat-menu-item>Molluscs</button>\r\n  <button mat-menu-item>Crustaceans</button>\r\n  <button mat-menu-item>Corals</button>\r\n  <button mat-menu-item>Arachnids</button>\r\n  <button mat-menu-item>Velvet worms</button>\r\n  <button mat-menu-item>Horseshoe crabs</button>\r\n</mat-menu>\r\n\r\n<mat-menu #fish=\"matMenu\">\r\n  <button mat-menu-item>Baikal oilfish</button>\r\n  <button mat-menu-item>Bala shark</button>\r\n  <button mat-menu-item>Ballan wrasse</button>\r\n  <button mat-menu-item>Bamboo shark</button>\r\n  <button mat-menu-item>Banded killifish</button>\r\n</mat-menu>\r\n\r\n<mat-menu #amphibians=\"matMenu\">\r\n  <button mat-menu-item>Sonoran desert toad</button>\r\n  <button mat-menu-item>Western toad</button>\r\n  <button mat-menu-item>Arroyo toad</button>\r\n  <button mat-menu-item>Yosemite toad</button>\r\n</mat-menu>\r\n\r\n<mat-menu #reptiles=\"matMenu\">\r\n  <button mat-menu-item>Banded Day Gecko</button>\r\n  <button mat-menu-item>Banded Gila Monster</button>\r\n  <button mat-menu-item>Black Tree Monitor</button>\r\n  <button mat-menu-item>Blue Spiny Lizard</button>\r\n  <button mat-menu-item disabled>Velociraptor</button>\r\n</mat-menu>\r\n",
+            template: "<button mat-button [matMenuTriggerFor]=\"animals\">Animal index</button>\n\n<mat-menu #animals=\"matMenu\">\n  <button mat-menu-item [matMenuTriggerFor]=\"vertebrates\">Vertebrates</button>\n  <button mat-menu-item [matMenuTriggerFor]=\"invertebrates\">Invertebrates</button>\n</mat-menu>\n\n<mat-menu #vertebrates=\"matMenu\">\n  <button mat-menu-item [matMenuTriggerFor]=\"fish\">Fishes</button>\n  <button mat-menu-item [matMenuTriggerFor]=\"amphibians\">Amphibians</button>\n  <button mat-menu-item [matMenuTriggerFor]=\"reptiles\">Reptiles</button>\n  <button mat-menu-item>Birds</button>\n  <button mat-menu-item>Mammals</button>\n</mat-menu>\n\n<mat-menu #invertebrates=\"matMenu\">\n  <button mat-menu-item>Insects</button>\n  <button mat-menu-item>Molluscs</button>\n  <button mat-menu-item>Crustaceans</button>\n  <button mat-menu-item>Corals</button>\n  <button mat-menu-item>Arachnids</button>\n  <button mat-menu-item>Velvet worms</button>\n  <button mat-menu-item>Horseshoe crabs</button>\n</mat-menu>\n\n<mat-menu #fish=\"matMenu\">\n  <button mat-menu-item>Baikal oilfish</button>\n  <button mat-menu-item>Bala shark</button>\n  <button mat-menu-item>Ballan wrasse</button>\n  <button mat-menu-item>Bamboo shark</button>\n  <button mat-menu-item>Banded killifish</button>\n</mat-menu>\n\n<mat-menu #amphibians=\"matMenu\">\n  <button mat-menu-item>Sonoran desert toad</button>\n  <button mat-menu-item>Western toad</button>\n  <button mat-menu-item>Arroyo toad</button>\n  <button mat-menu-item>Yosemite toad</button>\n</mat-menu>\n\n<mat-menu #reptiles=\"matMenu\">\n  <button mat-menu-item>Banded Day Gecko</button>\n  <button mat-menu-item>Banded Gila Monster</button>\n  <button mat-menu-item>Black Tree Monitor</button>\n  <button mat-menu-item>Blue Spiny Lizard</button>\n  <button mat-menu-item disabled>Velociraptor</button>\n</mat-menu>\n",
             styles: ["/** No CSS for this example */\n"]
         })
     ], NestedMenuExample);
@@ -4486,25 +4243,6 @@ var RadioOverviewExample = /** @class */ (function () {
         })
     ], RadioOverviewExample);
     return RadioOverviewExample;
-}());
-
-/**
- * @title MatRipple basic usage
- */
-var RippleOverviewExample = /** @class */ (function () {
-    function RippleOverviewExample() {
-        this.centered = false;
-        this.disabled = false;
-        this.unbounded = false;
-    }
-    RippleOverviewExample = __decorate([
-        Component({
-            selector: 'ripple-overview-example',
-            template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox>\n\n<mat-form-field class=\"example-ripple-form-field\">\n  <input matInput [(ngModel)]=\"radius\" type=\"number\" placeholder=\"Radius\">\n</mat-form-field>\n<mat-form-field class=\"example-ripple-form-field\">\n  <input matInput [(ngModel)]=\"color\" type=\"text\" placeholder=\"Color\">\n</mat-form-field>\n\n\n<div class=\"example-ripple-container mat-elevation-z4\"\n     matRipple\n     [matRippleCentered]=\"centered\"\n     [matRippleDisabled]=\"disabled\"\n     [matRippleUnbounded]=\"unbounded\"\n     [matRippleRadius]=\"radius\"\n     [matRippleColor]=\"color\">\n  Click me\n</div>\n",
-            styles: [".example-ripple-container {\n  cursor: pointer;\n  text-align: center;\n\n  width: 300px;\n  height: 300px;\n  line-height: 300px;\n\n  user-select: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n}\n\n/** Styles to make the demo look better. */\n.example-ripple-checkbox {\n  margin: 6px 12px 6px 0;\n}\n\n.example-ripple-form-field {\n  margin: 0 12px 0 0;\n}\n"]
-        })
-    ], RippleOverviewExample);
-    return RippleOverviewExample;
 }());
 
 /** @title Select with custom trigger text */
@@ -5423,235 +5161,6 @@ var StepperVerticalExample = /** @class */ (function () {
     return StepperVerticalExample;
 }());
 
-/**
- * @title Tab group with aligned labels
- */
-var TabGroupAlignExample = /** @class */ (function () {
-    function TabGroupAlignExample() {
-    }
-    TabGroupAlignExample = __decorate([
-        Component({
-            selector: 'tab-group-align-example',
-            template: "<mat-tab-group mat-align-tabs=\"start\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n\n<mat-tab-group mat-align-tabs=\"center\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n\n<mat-tab-group mat-align-tabs=\"end\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n",
-            styles: [".mat-tab-group {\n  margin-bottom: 48px;\n}\n"]
-        })
-    ], TabGroupAlignExample);
-    return TabGroupAlignExample;
-}());
-
-/**
- * @title Tab group animations
- */
-var TabGroupAnimationsExample = /** @class */ (function () {
-    function TabGroupAnimationsExample() {
-    }
-    TabGroupAnimationsExample = __decorate([
-        Component({
-            selector: 'tab-group-animations-example',
-            template: "<h3>No animation</h3>\n\n<mat-tab-group animationDuration=\"0ms\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n\n<h3>Very slow animation</h3>\n<mat-tab-group animationDuration=\"2000ms\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n",
-            styles: [".mat-tab-group {\n  margin-bottom: 48px;\n}\n"]
-        })
-    ], TabGroupAnimationsExample);
-    return TabGroupAnimationsExample;
-}());
-
-/**
- * @title Tab group with asynchronously loading tab contents
- */
-var TabGroupAsyncExample = /** @class */ (function () {
-    function TabGroupAsyncExample() {
-        this.asyncTabs = new Observable(function (observer) {
-            setTimeout(function () {
-                observer.next([
-                    { label: 'First', content: 'Content 1' },
-                    { label: 'Second', content: 'Content 2' },
-                    { label: 'Third', content: 'Content 3' },
-                ]);
-            }, 1000);
-        });
-    }
-    TabGroupAsyncExample = __decorate([
-        Component({
-            selector: 'tab-group-async-example',
-            template: "<ng-container *ngIf=\"(asyncTabs | async) === null\">\n  Loading tabs...\n</ng-container>\n\n<mat-tab-group>\n  <mat-tab *ngFor=\"let tab of asyncTabs | async\">\n    <ng-template mat-tab-label>{{tab.label}}</ng-template>\n    {{tab.content}}\n  </mat-tab>\n</mat-tab-group>\n",
-            styles: ["/** No CSS for this example */\n"]
-        }),
-        __metadata("design:paramtypes", [])
-    ], TabGroupAsyncExample);
-    return TabGroupAsyncExample;
-}());
-
-/**
- * @title Basic use of the tab group
- */
-var TabGroupBasicExample = /** @class */ (function () {
-    function TabGroupBasicExample() {
-    }
-    TabGroupBasicExample = __decorate([
-        Component({
-            selector: 'tab-group-basic-example',
-            template: "<mat-tab-group>\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n",
-            styles: ["/** No CSS for this example */\n"]
-        })
-    ], TabGroupBasicExample);
-    return TabGroupBasicExample;
-}());
-
-/**
- * @title Using tabs with a custom label template
- */
-var TabGroupCustomLabelExample = /** @class */ (function () {
-    function TabGroupCustomLabelExample() {
-    }
-    TabGroupCustomLabelExample = __decorate([
-        Component({
-            selector: 'tab-group-custom-label-example',
-            template: "<mat-tab-group>\n  <mat-tab>\n    <ng-template mat-tab-label>\n      <mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>\n      First\n    </ng-template>\n    Content 1\n  </mat-tab>\n\n  <mat-tab>\n    <ng-template mat-tab-label>\n      <mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>\n      Second\n    </ng-template>\n    Content 2\n  </mat-tab>\n\n  <mat-tab>\n    <ng-template mat-tab-label>\n      <mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>\n      Third\n    </ng-template>\n\n    Content 3\n  </mat-tab>\n</mat-tab-group>\n",
-            styles: [".example-tab-icon {\n  margin-right: 8px;\n}\n"]
-        })
-    ], TabGroupCustomLabelExample);
-    return TabGroupCustomLabelExample;
-}());
-
-/**
- * @title Tab group with dynamic height based on tab contents
- */
-var TabGroupDynamicHeightExample = /** @class */ (function () {
-    function TabGroupDynamicHeightExample() {
-    }
-    TabGroupDynamicHeightExample = __decorate([
-        Component({
-            selector: 'tab-group-dynamic-height-example',
-            template: "<mat-tab-group dynamicHeight>\n  <mat-tab label=\"Short tab\">\n    <div class=\"example-small-box mat-elevation-z4\">\n      Small content\n    </div>\n  </mat-tab>\n  <mat-tab label=\"Long tab\">\n    <div class=\"example-large-box mat-elevation-z4\">\n      Large content\n    </div>\n  </mat-tab>\n</mat-tab-group>\n",
-            styles: [".example-small-box, .example-large-box {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 16px;\n  padding: 16px;\n  border-radius: 8px;\n}\n\n.example-small-box {\n  height: 100px;\n  width: 100px;\n}\n\n.example-large-box {\n  height: 300px;\n  width: 300px;\n}\n"]
-        })
-    ], TabGroupDynamicHeightExample);
-    return TabGroupDynamicHeightExample;
-}());
-
-/**
- * @title Tab group with dynamically changing tabs
- */
-var TabGroupDynamicExample = /** @class */ (function () {
-    function TabGroupDynamicExample() {
-        this.tabs = ['First', 'Second', 'Third'];
-        this.selected = new FormControl(0);
-    }
-    TabGroupDynamicExample.prototype.addTab = function (selectAfterAdding) {
-        this.tabs.push('New');
-        if (selectAfterAdding) {
-            this.selected.setValue(this.tabs.length - 1);
-        }
-    };
-    TabGroupDynamicExample.prototype.removeTab = function (index) {
-        this.tabs.splice(index, 1);
-    };
-    TabGroupDynamicExample = __decorate([
-        Component({
-            selector: 'tab-group-dynamic-example',
-            template: "<div>\n  <span class=\"example-input-label\"> Selected tab index: </span>\n  <mat-form-field>\n    <input matInput type=\"number\" [formControl]=\"selected\">\n  </mat-form-field>\n</div>\n\n<div>\n  <button mat-raised-button\n          class=\"example-add-tab-button\"\n          (click)=\"addTab(selectAfterAdding.checked)\">\n    Add new tab\n  </button>\n  <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>\n</div>\n\n<mat-tab-group [selectedIndex]=\"selected.value\"\n               (selectedIndexChange)=\"selected.setValue($event)\">\n  <mat-tab *ngFor=\"let tab of tabs; let index = index\" [label]=\"tab\">\n    Contents for {{tab}} tab\n\n    <button mat-raised-button\n            class=\"example-delete-tab-button\"\n            [disabled]=\"tabs.length === 1\"\n            (click)=\"removeTab(index)\">\n      Delete Tab\n    </button>\n  </mat-tab>\n</mat-tab-group>\n",
-            styles: [".example-input-label,\n.example-add-tab-button,\n.example-delete-tab-button {\n  margin: 8px;\n}\n"]
-        })
-    ], TabGroupDynamicExample);
-    return TabGroupDynamicExample;
-}());
-
-/**
- * @title Tab group with the headers on the bottom
- */
-var TabGroupHeaderBelowExample = /** @class */ (function () {
-    function TabGroupHeaderBelowExample() {
-    }
-    TabGroupHeaderBelowExample = __decorate([
-        Component({
-            selector: 'tab-group-header-below-example',
-            template: "<mat-tab-group headerPosition=\"below\">\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n",
-            styles: ["/** No CSS for this example */\n"]
-        })
-    ], TabGroupHeaderBelowExample);
-    return TabGroupHeaderBelowExample;
-}());
-
-/**
- * @title Tab group where the tab content is loaded lazily (when activated)
- */
-var TabGroupLazyLoadedExample = /** @class */ (function () {
-    function TabGroupLazyLoadedExample() {
-        this.tabLoadTimes = [];
-    }
-    TabGroupLazyLoadedExample.prototype.getTimeLoaded = function (index) {
-        if (!this.tabLoadTimes[index]) {
-            this.tabLoadTimes[index] = new Date();
-        }
-        return this.tabLoadTimes[index];
-    };
-    TabGroupLazyLoadedExample = __decorate([
-        Component({
-            selector: 'tab-group-lazy-loaded-example',
-            template: "<mat-tab-group>\n  <mat-tab label=\"First\">\n    <ng-template matTabContent>\n      Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <mat-tab label=\"Second\">\n    <ng-template matTabContent>\n      Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <mat-tab label=\"Third\">\n    <ng-template matTabContent>\n      Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n</mat-tab-group>\n",
-            styles: ["/** No CSS for this example */\n"]
-        })
-    ], TabGroupLazyLoadedExample);
-    return TabGroupLazyLoadedExample;
-}());
-
-/**
- * @title Tab group with stretched labels
- */
-var TabGroupStretchedExample = /** @class */ (function () {
-    function TabGroupStretchedExample() {
-    }
-    TabGroupStretchedExample = __decorate([
-        Component({
-            selector: 'tab-group-stretched-example',
-            template: "<mat-tab-group mat-stretch-tabs class=\"example-stretched-tabs mat-elevation-z4\">\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n",
-            styles: [".example-stretched-tabs {\n  max-width: 800px;\n}\n"]
-        })
-    ], TabGroupStretchedExample);
-    return TabGroupStretchedExample;
-}());
-
-/**
- * @title Customizing the theme options on the tab group
- */
-var TabGroupThemeExample = /** @class */ (function () {
-    function TabGroupThemeExample() {
-    }
-    TabGroupThemeExample = __decorate([
-        Component({
-            selector: 'tab-group-theme-example',
-            template: "<div>\n  <mat-button-toggle-group #colorToggle=\"matButtonToggleGroup\"\n                           value=\"primary\"\n                           aria-label=\"Change color\">\n    <mat-button-toggle value=\"primary\"> Primary </mat-button-toggle>\n    <mat-button-toggle value=\"accent\"> Accent </mat-button-toggle>\n  </mat-button-toggle-group>\n  <span class=\"example-button-toggle-label\"> Color </span>\n</div>\n\n<div>\n  <mat-button-toggle-group #backgroundColorToggle=\"matButtonToggleGroup\"\n                           value=\"primary\"\n                           aria-label=\"Change color\">\n    <mat-button-toggle value=\"primary\"> Primary </mat-button-toggle>\n    <mat-button-toggle value=\"accent\"> Accent </mat-button-toggle>\n  </mat-button-toggle-group>\n  <span class=\"example-button-toggle-label\"> Background Color </span>\n</div>\n\n<mat-tab-group [color]=\"colorToggle.value\" [backgroundColor]=\"backgroundColorToggle.value\">\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n",
-            styles: [".example-button-toggle-label {\n  display: inline-block;\n  margin: 16px;\n}\n"]
-        })
-    ], TabGroupThemeExample);
-    return TabGroupThemeExample;
-}());
-
-/**
- * @title Basic use of the tab nav bar
- */
-var TabNavBarBasicExample = /** @class */ (function () {
-    function TabNavBarBasicExample() {
-        this.links = ['First', 'Second', 'Third'];
-        this.activeLink = this.links[0];
-        this.background = '';
-    }
-    TabNavBarBasicExample.prototype.toggleBackground = function () {
-        this.background = this.background ? '' : 'primary';
-    };
-    TabNavBarBasicExample.prototype.addLink = function () {
-        this.links.push("Link " + (this.links.length + 1));
-    };
-    TabNavBarBasicExample = __decorate([
-        Component({
-            selector: 'tab-nav-bar-basic-example',
-            template: "<nav mat-tab-nav-bar [backgroundColor]=\"background\">\n  <a mat-tab-link *ngFor=\"let link of links\"\n     (click)=\"activeLink = link\"\n     [active]=\"activeLink == link\"> {{link}} </a>\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n\n<button mat-raised-button class=\"example-action-button\" (click)=\"toggleBackground()\">\n  Toggle background\n</button>\n<button mat-raised-button class=\"example-action-button\" (click)=\"addLink()\">\n  Add link\n</button>\n",
-            styles: [".example-action-button {\n  margin-top: 8px;\n  margin-right: 8px;\n}\n"]
-        })
-    ], TabNavBarBasicExample);
-    return TabNavBarBasicExample;
-}());
-
 var ELEMENT_DATA$9 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -6543,79 +6052,233 @@ var WrapperTable = /** @class */ (function () {
     return WrapperTable;
 }());
 
-/** @title Monitoring autofill state with cdkAutofill */
-var TextFieldAutofillDirectiveExample = /** @class */ (function () {
-    function TextFieldAutofillDirectiveExample() {
+/**
+ * @title Tab group with aligned labels
+ */
+var TabGroupAlignExample = /** @class */ (function () {
+    function TabGroupAlignExample() {
     }
-    TextFieldAutofillDirectiveExample = __decorate([
+    TabGroupAlignExample = __decorate([
         Component({
-            selector: 'text-field-autofill-directive-example',
-            template: "<form>\n  <mat-form-field>\n    <mat-label>First name</mat-label>\n    <input matInput (cdkAutofill)=\"firstNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field>\n    <mat-label>Last name</mat-label>\n    <input matInput (cdkAutofill)=\"lastNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n",
-            styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
+            selector: 'tab-group-align-example',
+            template: "<mat-tab-group mat-align-tabs=\"start\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n\n<mat-tab-group mat-align-tabs=\"center\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n\n<mat-tab-group mat-align-tabs=\"end\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n",
+            styles: [".mat-tab-group {\n  margin-bottom: 48px;\n}\n"]
         })
-    ], TextFieldAutofillDirectiveExample);
-    return TextFieldAutofillDirectiveExample;
+    ], TabGroupAlignExample);
+    return TabGroupAlignExample;
 }());
 
-/** @title Monitoring autofill state with AutofillMonitor */
-var TextFieldAutofillMonitorExample = /** @class */ (function () {
-    function TextFieldAutofillMonitorExample(_autofill) {
-        this._autofill = _autofill;
+/**
+ * @title Tab group animations
+ */
+var TabGroupAnimationsExample = /** @class */ (function () {
+    function TabGroupAnimationsExample() {
     }
-    TextFieldAutofillMonitorExample.prototype.ngAfterViewInit = function () {
-        var _this = this;
-        this._autofill.monitor(this.firstName)
-            .subscribe(function (e) { return _this.firstNameAutofilled = e.isAutofilled; });
-        this._autofill.monitor(this.lastName)
-            .subscribe(function (e) { return _this.lastNameAutofilled = e.isAutofilled; });
-    };
-    TextFieldAutofillMonitorExample.prototype.ngOnDestroy = function () {
-        this._autofill.stopMonitoring(this.firstName);
-        this._autofill.stopMonitoring(this.lastName);
-    };
-    __decorate([
-        ViewChild('first', { read: ElementRef, static: false }),
-        __metadata("design:type", ElementRef)
-    ], TextFieldAutofillMonitorExample.prototype, "firstName", void 0);
-    __decorate([
-        ViewChild('last', { read: ElementRef, static: false }),
-        __metadata("design:type", ElementRef)
-    ], TextFieldAutofillMonitorExample.prototype, "lastName", void 0);
-    TextFieldAutofillMonitorExample = __decorate([
+    TabGroupAnimationsExample = __decorate([
         Component({
-            selector: 'text-field-autofill-monitor-example',
-            template: "<form>\n  <mat-form-field>\n    <mat-label>First name</mat-label>\n    <input matInput #first>\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field>\n    <mat-label>Last name</mat-label>\n    <input matInput #last>\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n",
-            styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
-        }),
-        __metadata("design:paramtypes", [AutofillMonitor])
-    ], TextFieldAutofillMonitorExample);
-    return TextFieldAutofillMonitorExample;
+            selector: 'tab-group-animations-example',
+            template: "<h3>No animation</h3>\n\n<mat-tab-group animationDuration=\"0ms\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n\n<h3>Very slow animation</h3>\n<mat-tab-group animationDuration=\"2000ms\">\n  <mat-tab label=\"First\">Content 1</mat-tab>\n  <mat-tab label=\"Second\">Content 2</mat-tab>\n  <mat-tab label=\"Third\">Content 3</mat-tab>\n</mat-tab-group>\n",
+            styles: [".mat-tab-group {\n  margin-bottom: 48px;\n}\n"]
+        })
+    ], TabGroupAnimationsExample);
+    return TabGroupAnimationsExample;
 }());
 
-/** @title Auto-resizing textarea */
-var TextFieldAutosizeTextareaExample = /** @class */ (function () {
-    function TextFieldAutosizeTextareaExample(_ngZone) {
-        this._ngZone = _ngZone;
+/**
+ * @title Tab group with asynchronously loading tab contents
+ */
+var TabGroupAsyncExample = /** @class */ (function () {
+    function TabGroupAsyncExample() {
+        this.asyncTabs = new Observable(function (observer) {
+            setTimeout(function () {
+                observer.next([
+                    { label: 'First', content: 'Content 1' },
+                    { label: 'Second', content: 'Content 2' },
+                    { label: 'Third', content: 'Content 3' },
+                ]);
+            }, 1000);
+        });
     }
-    TextFieldAutosizeTextareaExample.prototype.triggerResize = function () {
-        var _this = this;
-        // Wait for changes to be applied, then trigger textarea resize.
-        this._ngZone.onStable.pipe(take(1))
-            .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
-    };
-    __decorate([
-        ViewChild('autosize', { static: false }),
-        __metadata("design:type", CdkTextareaAutosize)
-    ], TextFieldAutosizeTextareaExample.prototype, "autosize", void 0);
-    TextFieldAutosizeTextareaExample = __decorate([
+    TabGroupAsyncExample = __decorate([
         Component({
-            selector: 'text-field-autosize-textarea-example',
-            template: "<mat-form-field>\n  <mat-label>Font size</mat-label>\n  <mat-select #fontSize value=\"16px\" (selectionChange)=\"triggerResize()\">\n    <mat-option value=\"10px\">10px</mat-option>\n    <mat-option value=\"12px\">12px</mat-option>\n    <mat-option value=\"14px\">14px</mat-option>\n    <mat-option value=\"16px\">16px</mat-option>\n    <mat-option value=\"18px\">18px</mat-option>\n    <mat-option value=\"20px\">20px</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<mat-form-field [style.fontSize]=\"fontSize.value\">\n  <mat-label>Autosize textarea</mat-label>\n  <textarea matInput\n            cdkTextareaAutosize\n            #autosize=\"cdkTextareaAutosize\"\n            cdkAutosizeMinRows=\"1\"\n            cdkAutosizeMaxRows=\"5\"></textarea>\n</mat-form-field>\n",
-            styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
+            selector: 'tab-group-async-example',
+            template: "<ng-container *ngIf=\"(asyncTabs | async) === null\">\n  Loading tabs...\n</ng-container>\n\n<mat-tab-group>\n  <mat-tab *ngFor=\"let tab of asyncTabs | async\">\n    <ng-template mat-tab-label>{{tab.label}}</ng-template>\n    {{tab.content}}\n  </mat-tab>\n</mat-tab-group>\n",
+            styles: ["/** No CSS for this example */\n"]
         }),
-        __metadata("design:paramtypes", [NgZone])
-    ], TextFieldAutosizeTextareaExample);
-    return TextFieldAutosizeTextareaExample;
+        __metadata("design:paramtypes", [])
+    ], TabGroupAsyncExample);
+    return TabGroupAsyncExample;
+}());
+
+/**
+ * @title Basic use of the tab group
+ */
+var TabGroupBasicExample = /** @class */ (function () {
+    function TabGroupBasicExample() {
+    }
+    TabGroupBasicExample = __decorate([
+        Component({
+            selector: 'tab-group-basic-example',
+            template: "<mat-tab-group>\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n",
+            styles: ["/** No CSS for this example */\n"]
+        })
+    ], TabGroupBasicExample);
+    return TabGroupBasicExample;
+}());
+
+/**
+ * @title Using tabs with a custom label template
+ */
+var TabGroupCustomLabelExample = /** @class */ (function () {
+    function TabGroupCustomLabelExample() {
+    }
+    TabGroupCustomLabelExample = __decorate([
+        Component({
+            selector: 'tab-group-custom-label-example',
+            template: "<mat-tab-group>\n  <mat-tab>\n    <ng-template mat-tab-label>\n      <mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>\n      First\n    </ng-template>\n    Content 1\n  </mat-tab>\n\n  <mat-tab>\n    <ng-template mat-tab-label>\n      <mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>\n      Second\n    </ng-template>\n    Content 2\n  </mat-tab>\n\n  <mat-tab>\n    <ng-template mat-tab-label>\n      <mat-icon class=\"example-tab-icon\">thumb_up</mat-icon>\n      Third\n    </ng-template>\n\n    Content 3\n  </mat-tab>\n</mat-tab-group>\n",
+            styles: [".example-tab-icon {\n  margin-right: 8px;\n}\n"]
+        })
+    ], TabGroupCustomLabelExample);
+    return TabGroupCustomLabelExample;
+}());
+
+/**
+ * @title Tab group with dynamic height based on tab contents
+ */
+var TabGroupDynamicHeightExample = /** @class */ (function () {
+    function TabGroupDynamicHeightExample() {
+    }
+    TabGroupDynamicHeightExample = __decorate([
+        Component({
+            selector: 'tab-group-dynamic-height-example',
+            template: "<mat-tab-group dynamicHeight>\n  <mat-tab label=\"Short tab\">\n    <div class=\"example-small-box mat-elevation-z4\">\n      Small content\n    </div>\n  </mat-tab>\n  <mat-tab label=\"Long tab\">\n    <div class=\"example-large-box mat-elevation-z4\">\n      Large content\n    </div>\n  </mat-tab>\n</mat-tab-group>\n",
+            styles: [".example-small-box, .example-large-box {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 16px;\n  padding: 16px;\n  border-radius: 8px;\n}\n\n.example-small-box {\n  height: 100px;\n  width: 100px;\n}\n\n.example-large-box {\n  height: 300px;\n  width: 300px;\n}\n"]
+        })
+    ], TabGroupDynamicHeightExample);
+    return TabGroupDynamicHeightExample;
+}());
+
+/**
+ * @title Tab group with dynamically changing tabs
+ */
+var TabGroupDynamicExample = /** @class */ (function () {
+    function TabGroupDynamicExample() {
+        this.tabs = ['First', 'Second', 'Third'];
+        this.selected = new FormControl(0);
+    }
+    TabGroupDynamicExample.prototype.addTab = function (selectAfterAdding) {
+        this.tabs.push('New');
+        if (selectAfterAdding) {
+            this.selected.setValue(this.tabs.length - 1);
+        }
+    };
+    TabGroupDynamicExample.prototype.removeTab = function (index) {
+        this.tabs.splice(index, 1);
+    };
+    TabGroupDynamicExample = __decorate([
+        Component({
+            selector: 'tab-group-dynamic-example',
+            template: "<div>\n  <span class=\"example-input-label\"> Selected tab index: </span>\n  <mat-form-field>\n    <input matInput type=\"number\" [formControl]=\"selected\">\n  </mat-form-field>\n</div>\n\n<div>\n  <button mat-raised-button\n          class=\"example-add-tab-button\"\n          (click)=\"addTab(selectAfterAdding.checked)\">\n    Add new tab\n  </button>\n  <mat-checkbox #selectAfterAdding> Select tab after adding </mat-checkbox>\n</div>\n\n<mat-tab-group [selectedIndex]=\"selected.value\"\n               (selectedIndexChange)=\"selected.setValue($event)\">\n  <mat-tab *ngFor=\"let tab of tabs; let index = index\" [label]=\"tab\">\n    Contents for {{tab}} tab\n\n    <button mat-raised-button\n            class=\"example-delete-tab-button\"\n            [disabled]=\"tabs.length === 1\"\n            (click)=\"removeTab(index)\">\n      Delete Tab\n    </button>\n  </mat-tab>\n</mat-tab-group>\n",
+            styles: [".example-input-label,\n.example-add-tab-button,\n.example-delete-tab-button {\n  margin: 8px;\n}\n"]
+        })
+    ], TabGroupDynamicExample);
+    return TabGroupDynamicExample;
+}());
+
+/**
+ * @title Tab group with the headers on the bottom
+ */
+var TabGroupHeaderBelowExample = /** @class */ (function () {
+    function TabGroupHeaderBelowExample() {
+    }
+    TabGroupHeaderBelowExample = __decorate([
+        Component({
+            selector: 'tab-group-header-below-example',
+            template: "<mat-tab-group headerPosition=\"below\">\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n",
+            styles: ["/** No CSS for this example */\n"]
+        })
+    ], TabGroupHeaderBelowExample);
+    return TabGroupHeaderBelowExample;
+}());
+
+/**
+ * @title Tab group where the tab content is loaded lazily (when activated)
+ */
+var TabGroupLazyLoadedExample = /** @class */ (function () {
+    function TabGroupLazyLoadedExample() {
+        this.tabLoadTimes = [];
+    }
+    TabGroupLazyLoadedExample.prototype.getTimeLoaded = function (index) {
+        if (!this.tabLoadTimes[index]) {
+            this.tabLoadTimes[index] = new Date();
+        }
+        return this.tabLoadTimes[index];
+    };
+    TabGroupLazyLoadedExample = __decorate([
+        Component({
+            selector: 'tab-group-lazy-loaded-example',
+            template: "<mat-tab-group>\n  <mat-tab label=\"First\">\n    <ng-template matTabContent>\n      Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <mat-tab label=\"Second\">\n    <ng-template matTabContent>\n      Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n  <mat-tab label=\"Third\">\n    <ng-template matTabContent>\n      Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}\n    </ng-template>\n  </mat-tab>\n</mat-tab-group>\n",
+            styles: ["/** No CSS for this example */\n"]
+        })
+    ], TabGroupLazyLoadedExample);
+    return TabGroupLazyLoadedExample;
+}());
+
+/**
+ * @title Tab group with stretched labels
+ */
+var TabGroupStretchedExample = /** @class */ (function () {
+    function TabGroupStretchedExample() {
+    }
+    TabGroupStretchedExample = __decorate([
+        Component({
+            selector: 'tab-group-stretched-example',
+            template: "<mat-tab-group mat-stretch-tabs class=\"example-stretched-tabs mat-elevation-z4\">\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n",
+            styles: [".example-stretched-tabs {\n  max-width: 800px;\n}\n"]
+        })
+    ], TabGroupStretchedExample);
+    return TabGroupStretchedExample;
+}());
+
+/**
+ * @title Customizing the theme options on the tab group
+ */
+var TabGroupThemeExample = /** @class */ (function () {
+    function TabGroupThemeExample() {
+    }
+    TabGroupThemeExample = __decorate([
+        Component({
+            selector: 'tab-group-theme-example',
+            template: "<div>\n  <mat-button-toggle-group #colorToggle=\"matButtonToggleGroup\"\n                           value=\"primary\"\n                           aria-label=\"Change color\">\n    <mat-button-toggle value=\"primary\"> Primary </mat-button-toggle>\n    <mat-button-toggle value=\"accent\"> Accent </mat-button-toggle>\n  </mat-button-toggle-group>\n  <span class=\"example-button-toggle-label\"> Color </span>\n</div>\n\n<div>\n  <mat-button-toggle-group #backgroundColorToggle=\"matButtonToggleGroup\"\n                           value=\"primary\"\n                           aria-label=\"Change color\">\n    <mat-button-toggle value=\"primary\"> Primary </mat-button-toggle>\n    <mat-button-toggle value=\"accent\"> Accent </mat-button-toggle>\n  </mat-button-toggle-group>\n  <span class=\"example-button-toggle-label\"> Background Color </span>\n</div>\n\n<mat-tab-group [color]=\"colorToggle.value\" [backgroundColor]=\"backgroundColorToggle.value\">\n  <mat-tab label=\"First\"> Content 1 </mat-tab>\n  <mat-tab label=\"Second\"> Content 2 </mat-tab>\n  <mat-tab label=\"Third\"> Content 3 </mat-tab>\n</mat-tab-group>\n",
+            styles: [".example-button-toggle-label {\n  display: inline-block;\n  margin: 16px;\n}\n"]
+        })
+    ], TabGroupThemeExample);
+    return TabGroupThemeExample;
+}());
+
+/**
+ * @title Basic use of the tab nav bar
+ */
+var TabNavBarBasicExample = /** @class */ (function () {
+    function TabNavBarBasicExample() {
+        this.links = ['First', 'Second', 'Third'];
+        this.activeLink = this.links[0];
+        this.background = '';
+    }
+    TabNavBarBasicExample.prototype.toggleBackground = function () {
+        this.background = this.background ? '' : 'primary';
+    };
+    TabNavBarBasicExample.prototype.addLink = function () {
+        this.links.push("Link " + (this.links.length + 1));
+    };
+    TabNavBarBasicExample = __decorate([
+        Component({
+            selector: 'tab-nav-bar-basic-example',
+            template: "<nav mat-tab-nav-bar [backgroundColor]=\"background\">\n  <a mat-tab-link *ngFor=\"let link of links\"\n     (click)=\"activeLink = link\"\n     [active]=\"activeLink == link\"> {{link}} </a>\n  <a mat-tab-link disabled>Disabled Link</a>\n</nav>\n\n<button mat-raised-button class=\"example-action-button\" (click)=\"toggleBackground()\">\n  Toggle background\n</button>\n<button mat-raised-button class=\"example-action-button\" (click)=\"addLink()\">\n  Add link\n</button>\n",
+            styles: [".example-action-button {\n  margin-top: 8px;\n  margin-right: 8px;\n}\n"]
+        })
+    ], TabNavBarBasicExample);
+    return TabNavBarBasicExample;
 }());
 
 /**
@@ -7434,22 +7097,1409 @@ var TreeNestedOverviewExample = /** @class */ (function () {
     return TreeNestedOverviewExample;
 }());
 
+var EXAMPLES = [
+    FocusMonitorDirectivesExample,
+    FocusMonitorFocusViaExample,
+    FocusMonitorOverviewExample,
+];
+var CdkA11yExamplesModule = /** @class */ (function () {
+    function CdkA11yExamplesModule() {
+    }
+    CdkA11yExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                A11yModule,
+                MatSelectModule,
+            ],
+            declarations: EXAMPLES,
+            exports: EXAMPLES,
+        })
+    ], CdkA11yExamplesModule);
+    return CdkA11yExamplesModule;
+}());
+
+var EXAMPLES$1 = [
+    CdkDragDropAxisLockExample,
+    CdkDragDropBoundaryExample,
+    CdkDragDropConnectedSortingExample,
+    CdkDragDropConnectedSortingGroupExample,
+    CdkDragDropCustomPlaceholderExample,
+    CdkDragDropCustomPreviewExample,
+    CdkDragDropDelayExample,
+    CdkDragDropDisabledExample,
+    CdkDragDropDisabledSortingExample,
+    CdkDragDropEnterPredicateExample,
+    CdkDragDropFreeDragPositionExample,
+    CdkDragDropHandleExample,
+    CdkDragDropHorizontalSortingExample,
+    CdkDragDropOverviewExample,
+    CdkDragDropRootElementExample,
+    CdkDragDropSortingExample,
+];
+var CdkDragDropExamplesModule = /** @class */ (function () {
+    function CdkDragDropExamplesModule() {
+    }
+    CdkDragDropExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                DragDropModule,
+                OverlayModule,
+                CommonModule,
+            ],
+            declarations: EXAMPLES$1,
+            exports: EXAMPLES$1,
+        })
+    ], CdkDragDropExamplesModule);
+    return CdkDragDropExamplesModule;
+}());
+
+var EXAMPLES$2 = [CdkPlatformOverviewExample];
+var CdkPlatformExamplesModule = /** @class */ (function () {
+    function CdkPlatformExamplesModule() {
+    }
+    CdkPlatformExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                PlatformModule,
+            ],
+            declarations: EXAMPLES$2,
+            exports: EXAMPLES$2,
+        })
+    ], CdkPlatformExamplesModule);
+    return CdkPlatformExamplesModule;
+}());
+
+var EXAMPLES$3 = [
+    CdkPopoverEditCdkTableExample,
+    CdkPopoverEditCdkTableFlexExample,
+    CdkPopoverEditCellSpanVanillaTableExample,
+    CdkPopoverEditTabOutVanillaTableExample,
+    CdkPopoverEditVanillaTableExample,
+];
+var CdkPopoverEditExamplesModule = /** @class */ (function () {
+    function CdkPopoverEditExamplesModule() {
+    }
+    CdkPopoverEditExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CdkPopoverEditModule,
+                CdkTableModule,
+                FormsModule,
+                CommonModule,
+            ],
+            declarations: EXAMPLES$3,
+            exports: EXAMPLES$3,
+        })
+    ], CdkPopoverEditExamplesModule);
+    return CdkPopoverEditExamplesModule;
+}());
+
+var EXAMPLES$4 = [
+    CdkPortalOverviewExample,
+    ComponentPortalExample,
+];
+var CdkPortalExamplesModule = /** @class */ (function () {
+    function CdkPortalExamplesModule() {
+    }
+    CdkPortalExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                PortalModule,
+            ],
+            declarations: EXAMPLES$4,
+            exports: EXAMPLES$4,
+            entryComponents: [ComponentPortalExample]
+        })
+    ], CdkPortalExamplesModule);
+    return CdkPortalExamplesModule;
+}());
+
+var EXAMPLES$5 = [
+    CdkVirtualScrollContextExample,
+    CdkVirtualScrollCustomStrategyExample,
+    CdkVirtualScrollDataSourceExample,
+    CdkVirtualScrollDlExample,
+    CdkVirtualScrollFixedBufferExample,
+    CdkVirtualScrollHorizontalExample,
+    CdkVirtualScrollOverviewExample,
+    CdkVirtualScrollTemplateCacheExample,
+];
+var CdkScrollingExamplesModule = /** @class */ (function () {
+    function CdkScrollingExamplesModule() {
+    }
+    CdkScrollingExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                ScrollingModule,
+            ],
+            declarations: EXAMPLES$5,
+            exports: EXAMPLES$5,
+        })
+    ], CdkScrollingExamplesModule);
+    return CdkScrollingExamplesModule;
+}());
+
+var EXAMPLES$6 = [
+    CdkCustomStepperWithoutFormExample,
+    CustomStepper,
+];
+var CdkStepperExamplesModule = /** @class */ (function () {
+    function CdkStepperExamplesModule() {
+    }
+    CdkStepperExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CdkStepperModule,
+                CommonModule,
+            ],
+            declarations: EXAMPLES$6,
+            exports: EXAMPLES$6,
+        })
+    ], CdkStepperExamplesModule);
+    return CdkStepperExamplesModule;
+}());
+
+var EXAMPLES$7 = [
+    CdkTableBasicExample,
+    CdkTableBasicFlexExample,
+];
+var CdkTableExamplesModule = /** @class */ (function () {
+    function CdkTableExamplesModule() {
+    }
+    CdkTableExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CdkTableModule,
+            ],
+            declarations: EXAMPLES$7,
+            exports: EXAMPLES$7,
+        })
+    ], CdkTableExamplesModule);
+    return CdkTableExamplesModule;
+}());
+
+var EXAMPLES$8 = [
+    TextFieldAutofillDirectiveExample,
+    TextFieldAutofillMonitorExample,
+    TextFieldAutosizeTextareaExample,
+];
+var CdkTextFieldExamplesModule = /** @class */ (function () {
+    function CdkTextFieldExamplesModule() {
+    }
+    CdkTextFieldExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                TextFieldModule,
+                MatInputModule,
+                MatSelectModule,
+            ],
+            declarations: EXAMPLES$8,
+            exports: EXAMPLES$8,
+        })
+    ], CdkTextFieldExamplesModule);
+    return CdkTextFieldExamplesModule;
+}());
+
+var EXAMPLES$9 = [
+    CdkTreeFlatExample,
+    CdkTreeNestedExample,
+];
+var CdkTreeExamplesModule = /** @class */ (function () {
+    function CdkTreeExamplesModule() {
+    }
+    CdkTreeExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CdkTreeModule,
+                MatIconModule,
+            ],
+            declarations: EXAMPLES$9,
+            exports: EXAMPLES$9,
+        })
+    ], CdkTreeExamplesModule);
+    return CdkTreeExamplesModule;
+}());
+
+var EXAMPLES$a = [
+    AutocompleteAutoActiveFirstOptionExample,
+    AutocompleteDisplayExample,
+    AutocompleteFilterExample,
+    AutocompleteOptgroupExample,
+    AutocompleteOverviewExample,
+    AutocompletePlainInputExample,
+    AutocompleteSimpleExample,
+];
+var AutocompleteExamplesModule = /** @class */ (function () {
+    function AutocompleteExamplesModule() {
+    }
+    AutocompleteExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatAutocompleteModule,
+                MatFormFieldModule,
+                MatInputModule,
+                MatSlideToggleModule,
+                FormsModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES$a,
+            exports: EXAMPLES$a,
+        })
+    ], AutocompleteExamplesModule);
+    return AutocompleteExamplesModule;
+}());
+
+var EXAMPLES$b = [
+    BadgeOverviewExample,
+];
+var BadgeExamplesModule = /** @class */ (function () {
+    function BadgeExamplesModule() {
+    }
+    BadgeExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatBadgeModule,
+                MatIconModule,
+            ],
+            declarations: EXAMPLES$b,
+            exports: EXAMPLES$b,
+        })
+    ], BadgeExamplesModule);
+    return BadgeExamplesModule;
+}());
+
+var EXAMPLES$c = [
+    BottomSheetOverviewExample,
+    BottomSheetOverviewExampleSheet,
+];
+var BottomSheetExamplesModule = /** @class */ (function () {
+    function BottomSheetExamplesModule() {
+    }
+    BottomSheetExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatBottomSheetModule,
+                MatListModule,
+            ],
+            declarations: EXAMPLES$c,
+            exports: EXAMPLES$c,
+            entryComponents: [BottomSheetOverviewExampleSheet],
+        })
+    ], BottomSheetExamplesModule);
+    return BottomSheetExamplesModule;
+}());
+
+var EXAMPLES$d = [
+    ButtonToggleAppearanceExample,
+    ButtonToggleExclusiveExample,
+    ButtonToggleOverviewExample,
+];
+var ButtonToggleExamplesModule = /** @class */ (function () {
+    function ButtonToggleExamplesModule() {
+    }
+    ButtonToggleExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatButtonToggleModule,
+                MatIconModule,
+            ],
+            declarations: EXAMPLES$d,
+            exports: EXAMPLES$d,
+        })
+    ], ButtonToggleExamplesModule);
+    return ButtonToggleExamplesModule;
+}());
+
+var EXAMPLES$e = [
+    ButtonOverviewExample,
+    ButtonTypesExample,
+];
+var ButtonExamplesModule = /** @class */ (function () {
+    function ButtonExamplesModule() {
+    }
+    ButtonExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatButtonModule,
+                MatIconModule,
+            ],
+            declarations: EXAMPLES$e,
+            exports: EXAMPLES$e,
+        })
+    ], ButtonExamplesModule);
+    return ButtonExamplesModule;
+}());
+
+var EXAMPLES$f = [
+    CardFancyExample,
+    CardOverviewExample,
+];
+var CardExamplesModule = /** @class */ (function () {
+    function CardExamplesModule() {
+    }
+    CardExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatButtonModule,
+                MatCardModule,
+            ],
+            declarations: EXAMPLES$f,
+            exports: EXAMPLES$f,
+        })
+    ], CardExamplesModule);
+    return CardExamplesModule;
+}());
+
+var EXAMPLES$g = [
+    CheckboxConfigurableExample,
+    CheckboxOverviewExample,
+];
+var CheckboxExamplesModule = /** @class */ (function () {
+    function CheckboxExamplesModule() {
+    }
+    CheckboxExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatCardModule,
+                MatCheckboxModule,
+                MatRadioModule,
+                FormsModule,
+            ],
+            declarations: EXAMPLES$g,
+            exports: EXAMPLES$g,
+        })
+    ], CheckboxExamplesModule);
+    return CheckboxExamplesModule;
+}());
+
+var EXAMPLES$h = [
+    ChipsAutocompleteExample,
+    ChipsDragDropExample,
+    ChipsInputExample,
+    ChipsOverviewExample,
+    ChipsStackedExample,
+];
+var ChipsExamplesModule = /** @class */ (function () {
+    function ChipsExamplesModule() {
+    }
+    ChipsExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                DragDropModule,
+                MatAutocompleteModule,
+                MatChipsModule,
+                MatIconModule,
+                MatFormFieldModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES$h,
+            exports: EXAMPLES$h,
+        })
+    ], ChipsExamplesModule);
+    return ChipsExamplesModule;
+}());
+
+var EXAMPLES$i = [
+    ElevationOverviewExample,
+    RippleOverviewExample,
+];
+var CoreExamplesModule = /** @class */ (function () {
+    function CoreExamplesModule() {
+    }
+    CoreExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatButtonModule,
+                MatCheckboxModule,
+                MatInputModule,
+                MatRippleModule,
+                FormsModule,
+            ],
+            declarations: EXAMPLES$i,
+            exports: EXAMPLES$i,
+        })
+    ], CoreExamplesModule);
+    return CoreExamplesModule;
+}());
+
+var EXAMPLES$j = [
+    DatepickerApiExample,
+    DatepickerColorExample,
+    DatepickerCustomHeaderExample,
+    DatepickerCustomIconExample,
+    DatepickerDateClassExample,
+    DatepickerDisabledExample,
+    DatepickerEventsExample,
+    DatepickerFilterExample,
+    DatepickerFormatsExample,
+    DatepickerLocaleExample,
+    DatepickerMinMaxExample,
+    DatepickerMomentExample,
+    DatepickerOverviewExample,
+    DatepickerStartViewExample,
+    DatepickerTouchExample,
+    DatepickerValueExample,
+    DatepickerViewsSelectionExample,
+    ExampleHeader,
+];
+var DatepickerExamplesModule = /** @class */ (function () {
+    function DatepickerExamplesModule() {
+    }
+    DatepickerExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatButtonModule,
+                MatDatepickerModule,
+                MatInputModule,
+                MatIconModule,
+                MatNativeDateModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES$j,
+            exports: EXAMPLES$j,
+        })
+    ], DatepickerExamplesModule);
+    return DatepickerExamplesModule;
+}());
+
+var EXAMPLES$k = [
+    DialogContentExample,
+    DialogContentExampleDialog,
+    DialogDataExample,
+    DialogDataExampleDialog,
+    DialogElementsExample,
+    DialogElementsExampleDialog,
+    DialogOverviewExample,
+    DialogOverviewExampleDialog,
+];
+var DialogExamplesModule = /** @class */ (function () {
+    function DialogExamplesModule() {
+    }
+    DialogExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatButtonModule,
+                MatDialogModule,
+                MatInputModule,
+                FormsModule,
+            ],
+            declarations: EXAMPLES$k,
+            exports: EXAMPLES$k,
+            entryComponents: [
+                DialogContentExampleDialog,
+                DialogDataExampleDialog,
+                DialogElementsExampleDialog,
+                DialogOverviewExampleDialog,
+            ]
+        })
+    ], DialogExamplesModule);
+    return DialogExamplesModule;
+}());
+
+var EXAMPLES$l = [
+    DividerOverviewExample,
+];
+var DividerExamplesModule = /** @class */ (function () {
+    function DividerExamplesModule() {
+    }
+    DividerExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatDividerModule,
+                MatListModule,
+            ],
+            declarations: EXAMPLES$l,
+        })
+    ], DividerExamplesModule);
+    return DividerExamplesModule;
+}());
+
+var EXAMPLES$m = [
+    ExpansionExpandCollapseAllExample,
+    ExpansionOverviewExample,
+    ExpansionStepsExample,
+];
+var ExpansionExamplesModule = /** @class */ (function () {
+    function ExpansionExamplesModule() {
+    }
+    ExpansionExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatDatepickerModule,
+                MatExpansionModule,
+                MatIconModule,
+                MatInputModule,
+            ],
+            declarations: EXAMPLES$m,
+        })
+    ], ExpansionExamplesModule);
+    return ExpansionExamplesModule;
+}());
+
+var EXAMPLES$n = [
+    FormFieldAppearanceExample,
+    FormFieldCustomControlExample,
+    FormFieldErrorExample,
+    FormFieldHintExample,
+    FormFieldLabelExample,
+    FormFieldOverviewExample,
+    FormFieldPrefixSuffixExample,
+    FormFieldThemingExample,
+];
+var FormFieldExamplesModule = /** @class */ (function () {
+    function FormFieldExamplesModule() {
+    }
+    FormFieldExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatButtonModule,
+                MatCheckboxModule,
+                MatFormFieldModule,
+                MatIconModule,
+                MatInputModule,
+                MatRadioModule,
+                MatSelectModule,
+                ReactiveFormsModule,
+            ],
+            declarations: __spread(EXAMPLES$n, [MyTelInput]),
+            exports: EXAMPLES$n,
+        })
+    ], FormFieldExamplesModule);
+    return FormFieldExamplesModule;
+}());
+
+var EXAMPLES$o = [
+    GridListDynamicExample,
+    GridListOverviewExample,
+];
+var GridListExamplesModule = /** @class */ (function () {
+    function GridListExamplesModule() {
+    }
+    GridListExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatGridListModule,
+            ],
+            declarations: EXAMPLES$o,
+            exports: EXAMPLES$o,
+        })
+    ], GridListExamplesModule);
+    return GridListExamplesModule;
+}());
+
+var EXAMPLES$p = [
+    IconOverviewExample,
+    IconSvgExample,
+];
+var IconExamplesModule = /** @class */ (function () {
+    function IconExamplesModule() {
+    }
+    IconExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatIconModule,
+            ],
+            declarations: EXAMPLES$p,
+            exports: EXAMPLES$p,
+        })
+    ], IconExamplesModule);
+    return IconExamplesModule;
+}());
+
+var EXAMPLES$q = [
+    InputClearableExample,
+    InputErrorStateMatcherExample,
+    InputErrorsExample,
+    InputFormExample,
+    InputHintExample,
+    InputOverviewExample,
+    InputPrefixSuffixExample,
+];
+var InputExamplesModule = /** @class */ (function () {
+    function InputExamplesModule() {
+    }
+    InputExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatButtonModule,
+                MatIconModule,
+                MatInputModule,
+                FormsModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES$q,
+            exports: EXAMPLES$q,
+        })
+    ], InputExamplesModule);
+    return InputExamplesModule;
+}());
+
+var EXAMPLES$r = [
+    ListOverviewExample,
+    ListSectionsExample,
+    ListSelectionExample,
+];
+var ListExamplesModule = /** @class */ (function () {
+    function ListExamplesModule() {
+    }
+    ListExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatIconModule,
+                MatListModule,
+            ],
+            declarations: EXAMPLES$r,
+            exports: EXAMPLES$r,
+        })
+    ], ListExamplesModule);
+    return ListExamplesModule;
+}());
+
+var EXAMPLES$s = [
+    MenuIconsExample,
+    MenuOverviewExample,
+    MenuPositionExample,
+    NestedMenuExample,
+];
+var MenuExamplesModule = /** @class */ (function () {
+    function MenuExamplesModule() {
+    }
+    MenuExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatButtonModule,
+                MatIconModule,
+                MatMenuModule,
+            ],
+            declarations: EXAMPLES$s,
+            exports: EXAMPLES$s,
+        })
+    ], MenuExamplesModule);
+    return MenuExamplesModule;
+}());
+
+var EXAMPLES$t = [
+    PaginatorConfigurableExample,
+    PaginatorOverviewExample,
+];
+var PaginatorExamplesModule = /** @class */ (function () {
+    function PaginatorExamplesModule() {
+    }
+    PaginatorExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatInputModule,
+                MatPaginatorModule,
+                FormsModule,
+            ],
+            declarations: EXAMPLES$t,
+            exports: EXAMPLES$t,
+        })
+    ], PaginatorExamplesModule);
+    return PaginatorExamplesModule;
+}());
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A component that attaches to a form within the edit.
+ * It coordinates the form state with the table-wide edit system and handles
+ * closing the edit when the form is submitted or the user clicks
+ * out.
+ */
+var MatEditLens = /** @class */ (function (_super) {
+    __extends(MatEditLens, _super);
+    function MatEditLens() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MatEditLens = __decorate([
+        Directive({
+            selector: 'form[matEditLens]',
+            host: {
+                'class': 'mat-edit-lens',
+            },
+            inputs: [
+                'clickOutBehavior: matEditLensClickOutBehavior',
+                'preservedFormValue: matEditLensPreservedFormValue',
+                'ignoreSubmitUnlessValid: matEditLensIgnoreSubmitUnlessValid',
+            ],
+            outputs: ['preservedFormValueChange: matEditLensPreservedFormValueChange'],
+            providers: [EditRef],
+        })
+    ], MatEditLens);
+    return MatEditLens;
+}(CdkEditControl));
+/** Reverts the form to its initial or previously submitted state on click. */
+var MatEditRevert = /** @class */ (function (_super) {
+    __extends(MatEditRevert, _super);
+    function MatEditRevert() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MatEditRevert = __decorate([
+        Directive({
+            selector: 'button[matEditRevert]',
+            host: {
+                'type': 'button',
+            }
+        })
+    ], MatEditRevert);
+    return MatEditRevert;
+}(CdkEditRevert));
+/** Closes the lens on click. */
+var MatEditClose = /** @class */ (function (_super) {
+    __extends(MatEditClose, _super);
+    function MatEditClose() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MatEditClose = __decorate([
+        Directive({
+            selector: 'button[matEditClose]',
+            host: {
+                'type': 'button',
+            }
+        })
+    ], MatEditClose);
+    return MatEditClose;
+}(CdkEditClose));
+
+var POPOVER_EDIT_HOST_BINDINGS = {
+    'tabIndex': '0',
+    'class': 'mat-popover-edit-cell',
+    '[attr.aria-haspopup]': 'true',
+};
+var POPOVER_EDIT_INPUTS = [
+    'template: matPopoverEdit',
+    'context: matPopoverEditContext',
+    'colspan: matPopoverEditColspan',
+];
+var EDIT_PANE_CLASS = 'mat-edit-pane';
+var MAT_ROW_HOVER_CLASS = 'mat-row-hover-content';
+var MAT_ROW_HOVER_RTL_CLASS = MAT_ROW_HOVER_CLASS + '-rtl';
+var MAT_ROW_HOVER_ANIMATE_CLASS = MAT_ROW_HOVER_CLASS + '-visible';
+var MAT_ROW_HOVER_CELL_CLASS = MAT_ROW_HOVER_CLASS + '-host-cell';
+/**
+ * Attaches an ng-template to a cell and shows it when instructed to by the
+ * EditEventDispatcher service.
+ * Makes the cell focusable.
+ */
+var MatPopoverEdit = /** @class */ (function (_super) {
+    __extends(MatPopoverEdit, _super);
+    function MatPopoverEdit() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MatPopoverEdit.prototype.panelClass = function () {
+        return EDIT_PANE_CLASS;
+    };
+    MatPopoverEdit = __decorate([
+        Directive({
+            selector: '[matPopoverEdit]:not([matPopoverEditTabOut])',
+            host: POPOVER_EDIT_HOST_BINDINGS,
+            inputs: POPOVER_EDIT_INPUTS,
+        })
+    ], MatPopoverEdit);
+    return MatPopoverEdit;
+}(CdkPopoverEdit));
+/**
+ * Attaches an ng-template to a cell and shows it when instructed to by the
+ * EditEventDispatcher service.
+ * Makes the cell focusable.
+ */
+var MatPopoverEditTabOut = /** @class */ (function (_super) {
+    __extends(MatPopoverEditTabOut, _super);
+    function MatPopoverEditTabOut() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MatPopoverEditTabOut.prototype.panelClass = function () {
+        return EDIT_PANE_CLASS;
+    };
+    MatPopoverEditTabOut = __decorate([
+        Directive({
+            selector: '[matPopoverEdit][matPopoverEditTabOut]',
+            host: POPOVER_EDIT_HOST_BINDINGS,
+            inputs: POPOVER_EDIT_INPUTS,
+        })
+    ], MatPopoverEditTabOut);
+    return MatPopoverEditTabOut;
+}(CdkPopoverEditTabOut));
+/**
+ * A structural directive that shows its contents when the table row containing
+ * it is hovered or when an element in the row has focus.
+ */
+var MatRowHoverContent = /** @class */ (function (_super) {
+    __extends(MatRowHoverContent, _super);
+    function MatRowHoverContent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MatRowHoverContent.prototype.initElement = function (element) {
+        _super.prototype.initElement.call(this, element);
+        element.classList.add(MAT_ROW_HOVER_CLASS);
+    };
+    MatRowHoverContent.prototype.makeElementHiddenButFocusable = function (element) {
+        element.classList.remove(MAT_ROW_HOVER_ANIMATE_CLASS);
+    };
+    MatRowHoverContent.prototype.makeElementVisible = function (element) {
+        _closest(this.elementRef.nativeElement, _CELL_SELECTOR)
+            .classList.add(MAT_ROW_HOVER_CELL_CLASS);
+        if (this.services.directionality.value === 'rtl') {
+            element.classList.add(MAT_ROW_HOVER_RTL_CLASS);
+        }
+        else {
+            element.classList.remove(MAT_ROW_HOVER_RTL_CLASS);
+        }
+        element.classList.remove(MAT_ROW_HOVER_ANIMATE_CLASS);
+        this.services.ngZone.runOutsideAngular(function () {
+            setTimeout(function () {
+                element.classList.add(MAT_ROW_HOVER_ANIMATE_CLASS);
+            });
+        });
+    };
+    MatRowHoverContent = __decorate([
+        Directive({
+            selector: '[matRowHoverContent]',
+        })
+    ], MatRowHoverContent);
+    return MatRowHoverContent;
+}(CdkRowHoverContent));
+/**
+ * Opens the closest edit popover to this element, whether it's associated with this exact
+ * element or an ancestor element.
+ */
+var MatEditOpen = /** @class */ (function (_super) {
+    __extends(MatEditOpen, _super);
+    function MatEditOpen() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MatEditOpen = __decorate([
+        Directive({
+            selector: '[matEditOpen]',
+        })
+    ], MatEditOpen);
+    return MatEditOpen;
+}(CdkEditOpen));
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var EXPORTED_DECLARATIONS = [
+    MatPopoverEdit,
+    MatPopoverEditTabOut,
+    MatRowHoverContent,
+    MatEditLens,
+    MatEditRevert,
+    MatEditClose,
+    MatEditOpen
+];
+var MatPopoverEditModule = /** @class */ (function () {
+    function MatPopoverEditModule() {
+    }
+    MatPopoverEditModule = __decorate([
+        NgModule({
+            imports: [
+                CdkPopoverEditModule,
+                CommonModule,
+            ],
+            exports: __spread(EXPORTED_DECLARATIONS, [
+                CdkEditable,
+            ]),
+            declarations: EXPORTED_DECLARATIONS,
+        })
+    ], MatPopoverEditModule);
+    return MatPopoverEditModule;
+}());
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+var EXAMPLES$u = [
+    PopoverEditCellSpanMatTableExample,
+    PopoverEditMatTableExample,
+    PopoverEditMatTableFlexExample,
+    PopoverEditTabOutMatTableExample,
+];
+var PopoverEditExamplesModule = /** @class */ (function () {
+    function PopoverEditExamplesModule() {
+    }
+    PopoverEditExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatButtonModule,
+                MatIconModule,
+                MatInputModule,
+                MatPopoverEditModule,
+                MatSnackBarModule,
+                MatTableModule,
+                FormsModule,
+            ],
+            declarations: EXAMPLES$u,
+            exports: EXAMPLES$u,
+        })
+    ], PopoverEditExamplesModule);
+    return PopoverEditExamplesModule;
+}());
+
+var EXAMPLES$v = [
+    ProgressBarBufferExample,
+    ProgressBarConfigurableExample,
+    ProgressBarDeterminateExample,
+    ProgressBarIndeterminateExample,
+    ProgressBarQueryExample,
+];
+var ProgressBarExamplesModule = /** @class */ (function () {
+    function ProgressBarExamplesModule() {
+    }
+    ProgressBarExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatCardModule,
+                MatProgressBarModule,
+                MatRadioModule,
+                MatSliderModule,
+                FormsModule,
+            ],
+            declarations: EXAMPLES$v,
+            exports: EXAMPLES$v,
+        })
+    ], ProgressBarExamplesModule);
+    return ProgressBarExamplesModule;
+}());
+
+var EXAMPLES$w = [
+    ProgressSpinnerConfigurableExample,
+    ProgressSpinnerOverviewExample,
+];
+var ProgressSpinnerExamplesModule = /** @class */ (function () {
+    function ProgressSpinnerExamplesModule() {
+    }
+    ProgressSpinnerExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatCardModule,
+                MatProgressSpinnerModule,
+                MatRadioModule,
+                MatSliderModule,
+                FormsModule,
+            ],
+            declarations: EXAMPLES$w,
+            exports: EXAMPLES$w,
+        })
+    ], ProgressSpinnerExamplesModule);
+    return ProgressSpinnerExamplesModule;
+}());
+
+var EXAMPLES$x = [
+    RadioNgModelExample,
+    RadioOverviewExample,
+];
+var RadioExamplesModule = /** @class */ (function () {
+    function RadioExamplesModule() {
+    }
+    RadioExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatRadioModule,
+                FormsModule,
+            ],
+            declarations: EXAMPLES$x,
+            exports: EXAMPLES$x,
+        })
+    ], RadioExamplesModule);
+    return RadioExamplesModule;
+}());
+
+var EXAMPLES$y = [
+    SelectCustomTriggerExample,
+    SelectDisabledExample,
+    SelectErrorStateMatcherExample,
+    SelectFormExample,
+    SelectHintErrorExample,
+    SelectMultipleExample,
+    SelectNoRippleExample,
+    SelectOptgroupExample,
+    SelectOverviewExample,
+    SelectPanelClassExample,
+    SelectResetExample,
+    SelectValueBindingExample,
+];
+var SelectExamplesModule = /** @class */ (function () {
+    function SelectExamplesModule() {
+    }
+    SelectExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                FormsModule,
+                MatCheckboxModule,
+                MatInputModule,
+                MatSelectModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES$y,
+            exports: EXAMPLES$y,
+        })
+    ], SelectExamplesModule);
+    return SelectExamplesModule;
+}());
+
+var EXAMPLES$z = [
+    SidenavAutosizeExample,
+    SidenavBackdropExample,
+    SidenavDisableCloseExample,
+    SidenavDrawerOverviewExample,
+    SidenavFixedExample,
+    SidenavModeExample,
+    SidenavOpenCloseExample,
+    SidenavOverviewExample,
+    SidenavPositionExample,
+    SidenavResponsiveExample,
+];
+var SidenavExamplesModule = /** @class */ (function () {
+    function SidenavExamplesModule() {
+    }
+    SidenavExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                FormsModule,
+                MatButtonModule,
+                MatCheckboxModule,
+                MatIconModule,
+                MatListModule,
+                MatRadioModule,
+                MatSidenavModule,
+                MatSelectModule,
+                MatToolbarModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES$z,
+            exports: EXAMPLES$z,
+        })
+    ], SidenavExamplesModule);
+    return SidenavExamplesModule;
+}());
+
+var EXAMPLES$A = [
+    SlideToggleConfigurableExample,
+    SlideToggleFormsExample,
+    SlideToggleOverviewExample,
+];
+var SlideToggleExamplesModule = /** @class */ (function () {
+    function SlideToggleExamplesModule() {
+    }
+    SlideToggleExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                FormsModule,
+                MatButtonModule,
+                MatCardModule,
+                MatCheckboxModule,
+                MatRadioModule,
+                MatSlideToggleModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES$A,
+            exports: EXAMPLES$A,
+        })
+    ], SlideToggleExamplesModule);
+    return SlideToggleExamplesModule;
+}());
+
+var EXAMPLES$B = [
+    SliderConfigurableExample,
+    SliderFormattingExample,
+    SliderOverviewExample,
+];
+var SliderExamplesModule = /** @class */ (function () {
+    function SliderExamplesModule() {
+    }
+    SliderExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                FormsModule,
+                MatCardModule,
+                MatCheckboxModule,
+                MatInputModule,
+                MatSliderModule,
+            ],
+            declarations: EXAMPLES$B,
+            exports: EXAMPLES$B,
+        })
+    ], SliderExamplesModule);
+    return SliderExamplesModule;
+}());
+
+var EXAMPLES$C = [
+    SnackBarComponentExample,
+    SnackBarOverviewExample,
+    SnackBarPositionExample,
+];
+var SnackBarExamplesModule = /** @class */ (function () {
+    function SnackBarExamplesModule() {
+    }
+    SnackBarExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                FormsModule,
+                MatButtonModule,
+                MatInputModule,
+                MatSelectModule,
+                MatSnackBarModule,
+            ],
+            declarations: __spread(EXAMPLES$C, [PizzaPartyComponent]),
+            exports: EXAMPLES$C,
+            entryComponents: [PizzaPartyComponent],
+        })
+    ], SnackBarExamplesModule);
+    return SnackBarExamplesModule;
+}());
+
+var EXAMPLES$D = [
+    SortOverviewExample,
+];
+var SortExamplesModule = /** @class */ (function () {
+    function SortExamplesModule() {
+    }
+    SortExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatSortModule,
+            ],
+            declarations: EXAMPLES$D,
+            exports: EXAMPLES$D,
+        })
+    ], SortExamplesModule);
+    return SortExamplesModule;
+}());
+
+var EXAMPLES$E = [
+    StepperEditableExample,
+    StepperErrorsExample,
+    StepperLabelPositionBottomExample,
+    StepperOptionalExample,
+    StepperOverviewExample,
+    StepperStatesExample,
+    StepperVerticalExample,
+];
+var StepperExamplesModule = /** @class */ (function () {
+    function StepperExamplesModule() {
+    }
+    StepperExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatButtonModule,
+                MatIconModule,
+                MatInputModule,
+                MatStepperModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES$E,
+            exports: EXAMPLES$E,
+        })
+    ], StepperExamplesModule);
+    return StepperExamplesModule;
+}());
+
+var EXAMPLES$F = [
+    TableBasicExample, TableBasicFlexExample,
+    TableDynamicColumnsExample, TableExpandableRowsExample,
+    TableFilteringExample, TableFooterRowExample,
+    TableHttpExample, TableMultipleHeaderFooterExample,
+    TableOverviewExample, TablePaginationExample,
+    TableRowContextExample, TableSelectionExample,
+    TableSortingExample, TableStickyColumnsExample,
+    TableStickyComplexExample, TableStickyComplexFlexExample,
+    TableStickyFooterExample, TableStickyHeaderExample,
+    TableTextColumnExample, TableTextColumnAdvancedExample,
+    TableWrappedExample, WrapperTable,
+];
+var TableExamplesModule = /** @class */ (function () {
+    function TableExamplesModule() {
+    }
+    TableExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatButtonModule,
+                MatButtonToggleModule,
+                MatCheckboxModule,
+                MatIconModule,
+                MatInputModule,
+                MatPaginatorModule,
+                MatProgressSpinnerModule,
+                MatSortModule,
+                MatTableModule,
+            ],
+            declarations: EXAMPLES$F,
+            exports: EXAMPLES$F,
+        })
+    ], TableExamplesModule);
+    return TableExamplesModule;
+}());
+
+var EXAMPLES$G = [
+    TabGroupAlignExample,
+    TabGroupAnimationsExample,
+    TabGroupAsyncExample,
+    TabGroupBasicExample,
+    TabGroupCustomLabelExample,
+    TabGroupDynamicExample,
+    TabGroupDynamicHeightExample,
+    TabGroupHeaderBelowExample,
+    TabGroupLazyLoadedExample,
+    TabGroupStretchedExample,
+    TabGroupThemeExample,
+    TabNavBarBasicExample,
+];
+var TabGroupExamplesModule = /** @class */ (function () {
+    function TabGroupExamplesModule() {
+    }
+    TabGroupExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatButtonModule,
+                MatButtonToggleModule,
+                MatCheckboxModule,
+                MatIconModule,
+                MatInputModule,
+                MatTabsModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES$G,
+            exports: EXAMPLES$G,
+        })
+    ], TabGroupExamplesModule);
+    return TabGroupExamplesModule;
+}());
+
+var EXAMPLES$H = [
+    ToolbarMultirowExample,
+    ToolbarOverviewExample,
+];
+var ToolbarExamplesModule = /** @class */ (function () {
+    function ToolbarExamplesModule() {
+    }
+    ToolbarExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                MatIconModule,
+                MatToolbarModule,
+            ],
+            declarations: EXAMPLES$H,
+            exports: EXAMPLES$H,
+        })
+    ], ToolbarExamplesModule);
+    return ToolbarExamplesModule;
+}());
+
+var EXAMPLES$I = [
+    TooltipAutoHideExample,
+    TooltipCustomClassExample,
+    TooltipDelayExample,
+    TooltipDisabledExample,
+    TooltipManualExample,
+    TooltipMessageExample,
+    TooltipModifiedDefaultsExample,
+    TooltipOverviewExample,
+    TooltipPositionExample,
+];
+var TooltipExamplesModule = /** @class */ (function () {
+    function TooltipExamplesModule() {
+    }
+    TooltipExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatButtonModule,
+                MatCheckboxModule,
+                MatInputModule,
+                MatSelectModule,
+                MatTooltipModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES$I,
+            exports: EXAMPLES$I,
+        })
+    ], TooltipExamplesModule);
+    return TooltipExamplesModule;
+}());
+
+var EXAMPLES$J = [
+    TreeChecklistExample,
+    TreeDynamicExample,
+    TreeFlatOverviewExample,
+    TreeLoadmoreExample,
+    TreeNestedOverviewExample,
+];
+var TreeExamplesModule = /** @class */ (function () {
+    function TreeExamplesModule() {
+    }
+    TreeExamplesModule = __decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatButtonModule,
+                MatCheckboxModule,
+                MatIconModule,
+                MatInputModule,
+                MatProgressBarModule,
+                MatTreeModule,
+            ],
+            declarations: EXAMPLES$J,
+            exports: EXAMPLES$J,
+        })
+    ], TreeExamplesModule);
+    return TreeExamplesModule;
+}());
+
 /* tslint:disable */
-var EXAMPLE_COMPONENTS = { "autocomplete-auto-active-first-option": { "title": "Highlight the first autocomplete option", "component": AutocompleteAutoActiveFirstOptionExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-display": { "title": "Display value autocomplete", "component": AutocompleteDisplayExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-filter": { "title": "Filter autocomplete", "component": AutocompleteFilterExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-optgroup": { "title": "Option groups autocomplete", "component": AutocompleteOptgroupExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-overview": { "title": "Autocomplete overview", "component": AutocompleteOverviewExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-plain-input": { "title": "Plain input autocomplete", "component": AutocompletePlainInputExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-simple": { "title": "Simple autocomplete", "component": AutocompleteSimpleExample, "additionalFiles": [], "selectorName": "" }, "badge-overview": { "title": "Badge overview", "component": BadgeOverviewExample, "additionalFiles": [], "selectorName": "" }, "bottom-sheet-overview": { "title": "Bottom Sheet Overview", "component": BottomSheetOverviewExample, "additionalFiles": ["bottom-sheet-overview-example-sheet.html"], "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet" }, "button-overview": { "title": "Basic buttons", "component": ButtonOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-appearance": { "title": "Button toggle appearance", "component": ButtonToggleAppearanceExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-exclusive": { "title": "Exclusive selection", "component": ButtonToggleExclusiveExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-overview": { "title": "Basic button-toggles", "component": ButtonToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-types": { "title": "Button varieties", "component": ButtonTypesExample, "additionalFiles": [], "selectorName": "" }, "card-fancy": { "title": "Card with multiple sections", "component": CardFancyExample, "additionalFiles": [], "selectorName": "" }, "card-overview": { "title": "Basic cards", "component": CardOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-custom-stepper-without-form": { "title": "A custom CDK stepper without a form", "component": CdkCustomStepperWithoutFormExample, "additionalFiles": ["./example-custom-stepper.html", "./example-custom-stepper.css"], "selectorName": "CdkCustomStepperWithoutFormExample, CustomStepper" }, "cdk-drag-drop-axis-lock": { "title": "Drag&Drop position locking", "component": CdkDragDropAxisLockExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-boundary": { "title": "Drag&Drop boundary", "component": CdkDragDropBoundaryExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting-group": { "title": "Drag&Drop connected sorting group", "component": CdkDragDropConnectedSortingGroupExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting": { "title": "Drag&Drop connected sorting", "component": CdkDragDropConnectedSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-placeholder": { "title": "Drag&Drop custom placeholer", "component": CdkDragDropCustomPlaceholderExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-preview": { "title": "Drag&Drop custom preview", "component": CdkDragDropCustomPreviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-delay": { "title": "Delayed dragging", "component": CdkDragDropDelayExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled-sorting": { "title": "Drag&Drop disabled sorting", "component": CdkDragDropDisabledSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled": { "title": "Drag&Drop disabled", "component": CdkDragDropDisabledExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-enter-predicate": { "title": "Drag&Drop enter predicate", "component": CdkDragDropEnterPredicateExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-free-drag-position": { "title": "Programmatically setting the free drag position", "component": CdkDragDropFreeDragPositionExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-handle": { "title": "Drag&Drop with a handle", "component": CdkDragDropHandleExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-horizontal-sorting": { "title": "Drag&Drop horizontal sorting", "component": CdkDragDropHorizontalSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-overview": { "title": "Basic Drag&Drop", "component": CdkDragDropOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-root-element": { "title": "Drag&Drop with alternate root element", "component": CdkDragDropRootElementExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-sorting": { "title": "Drag&Drop sorting", "component": CdkDragDropSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-platform-overview": { "title": "Platform overview", "component": CdkPlatformOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cdk-table-flex": { "title": "CDK Popover Edit on a flex cdk-table.", "component": CdkPopoverEditCdkTableFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cdk-table": { "title": "CDK Popover Edit on a CDK data-table", "component": CdkPopoverEditCdkTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cell-span-vanilla-table": { "title": "CDK Popover Edit spanning multiple columns on an HTML data-table", "component": CdkPopoverEditCellSpanVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-tab-out-vanilla-table": { "title": "CDK Popover Edit with spreadsheet-like configuration on an HTML data-table", "component": CdkPopoverEditTabOutVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-vanilla-table": { "title": "CDK Popover Edit on an HTML data-table", "component": CdkPopoverEditVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-portal-overview": { "title": "Portal overview", "component": CdkPortalOverviewExample, "additionalFiles": [], "selectorName": "CdkPortalOverviewExample, ComponentPortalExample" }, "cdk-table-basic-flex": { "title": "Basic use of `<cdk-table>` (uses display flex)", "component": CdkTableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic": { "title": "Basic CDK data-table", "component": CdkTableBasicExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-flat": { "title": "Tree with flat nodes", "component": CdkTreeFlatExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-nested": { "title": "Tree with nested nodes", "component": CdkTreeNestedExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-context": { "title": "Virtual scroll context variables", "component": CdkVirtualScrollContextExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-custom-strategy": { "title": "Virtual scroll with a custom strategy", "component": CdkVirtualScrollCustomStrategyExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-data-source": { "title": "Virtual scroll with a custom data source", "component": CdkVirtualScrollDataSourceExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-dl": { "title": "Virtual scrolling `<dl>`", "component": CdkVirtualScrollDlExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-fixed-buffer": { "title": "Fixed size virtual scroll with custom buffer parameters", "component": CdkVirtualScrollFixedBufferExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-horizontal": { "title": "Horizontal virtual scroll", "component": CdkVirtualScrollHorizontalExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-overview": { "title": "Basic virtual scroll", "component": CdkVirtualScrollOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-template-cache": { "title": "Virtual scroll with no template caching", "component": CdkVirtualScrollTemplateCacheExample, "additionalFiles": [], "selectorName": "" }, "checkbox-configurable": { "title": "Configurable checkbox", "component": CheckboxConfigurableExample, "additionalFiles": [], "selectorName": "" }, "checkbox-overview": { "title": "Basic checkboxes", "component": CheckboxOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-autocomplete": { "title": "Chips Autocomplete", "component": ChipsAutocompleteExample, "additionalFiles": [], "selectorName": "" }, "chips-drag-drop": { "title": "Chips Drag and Drop", "component": ChipsDragDropExample, "additionalFiles": [], "selectorName": "" }, "chips-input": { "title": "Chips with input", "component": ChipsInputExample, "additionalFiles": [], "selectorName": "" }, "chips-overview": { "title": "Basic chips", "component": ChipsOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-stacked": { "title": "Stacked chips", "component": ChipsStackedExample, "additionalFiles": [], "selectorName": "" }, "datepicker-api": { "title": "Datepicker open method", "component": DatepickerApiExample, "additionalFiles": [], "selectorName": "" }, "datepicker-color": { "title": "Datepicker palette colors", "component": DatepickerColorExample, "additionalFiles": [], "selectorName": "" }, "datepicker-custom-header": { "title": "Datepicker with custom calendar header", "component": DatepickerCustomHeaderExample, "additionalFiles": [], "selectorName": "DatepickerCustomHeaderExample, ExampleHeader" }, "datepicker-custom-icon": { "title": "Datepicker with custom icon", "component": DatepickerCustomIconExample, "additionalFiles": [], "selectorName": "" }, "datepicker-date-class": { "title": "Datepicker with custom date classes", "component": DatepickerDateClassExample, "additionalFiles": [], "selectorName": "" }, "datepicker-disabled": { "title": "Disabled datepicker", "component": DatepickerDisabledExample, "additionalFiles": [], "selectorName": "" }, "datepicker-events": { "title": "Datepicker input and change events", "component": DatepickerEventsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-filter": { "title": "Datepicker with filter validation", "component": DatepickerFilterExample, "additionalFiles": [], "selectorName": "" }, "datepicker-formats": { "title": "Datepicker with custom formats", "component": DatepickerFormatsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-locale": { "title": "Datepicker with different locale", "component": DatepickerLocaleExample, "additionalFiles": [], "selectorName": "" }, "datepicker-min-max": { "title": "Datepicker with min & max validation", "component": DatepickerMinMaxExample, "additionalFiles": [], "selectorName": "" }, "datepicker-moment": { "title": "Datepicker that uses Moment.js dates", "component": DatepickerMomentExample, "additionalFiles": [], "selectorName": "" }, "datepicker-overview": { "title": "Basic datepicker", "component": DatepickerOverviewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-start-view": { "title": "Datepicker start date", "component": DatepickerStartViewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-touch": { "title": "Datepicker touch UI", "component": DatepickerTouchExample, "additionalFiles": [], "selectorName": "" }, "datepicker-value": { "title": "Datepicker selected value", "component": DatepickerValueExample, "additionalFiles": [], "selectorName": "" }, "datepicker-views-selection": { "title": "Datepicker emulating a Year and month picker", "component": DatepickerViewsSelectionExample, "additionalFiles": [], "selectorName": "" }, "dialog-content": { "title": "Dialog with header, scrollable content and actions", "component": DialogContentExample, "additionalFiles": ["dialog-content-example-dialog.html"], "selectorName": "DialogContentExample, DialogContentExampleDialog" }, "dialog-data": { "title": "Injecting data when opening a dialog", "component": DialogDataExample, "additionalFiles": ["dialog-data-example-dialog.html"], "selectorName": "DialogDataExample, DialogDataExampleDialog" }, "dialog-elements": { "title": "Dialog elements", "component": DialogElementsExample, "additionalFiles": ["dialog-elements-example-dialog.html"], "selectorName": "DialogElementsExample, DialogElementsExampleDialog" }, "dialog-overview": { "title": "Dialog Overview", "component": DialogOverviewExample, "additionalFiles": ["dialog-overview-example-dialog.html"], "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog" }, "divider-overview": { "title": "Basic divider", "component": DividerOverviewExample, "additionalFiles": [], "selectorName": "" }, "elevation-overview": { "title": "Elevation CSS classes", "component": ElevationOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-expand-collapse-all": { "title": "Accordion with expand/collapse all toggles", "component": ExpansionExpandCollapseAllExample, "additionalFiles": [], "selectorName": "" }, "expansion-overview": { "title": "Basic expansion panel", "component": ExpansionOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-steps": { "title": "Expansion panel as accordion", "component": ExpansionStepsExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-directives": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorDirectivesExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-focus-via": { "title": "Focusing with a specific FocusOrigin", "component": FocusMonitorFocusViaExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-overview": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-appearance": { "title": "Form field appearance variants", "component": FormFieldAppearanceExample, "additionalFiles": [], "selectorName": "" }, "form-field-custom-control": { "title": "Form field with custom telephone number input control.", "component": FormFieldCustomControlExample, "additionalFiles": ["example-tel-input-example.html", "example-tel-input-example.css"], "selectorName": "FormFieldCustomControlExample, MyTelInput" }, "form-field-error": { "title": "Form field with error messages", "component": FormFieldErrorExample, "additionalFiles": [], "selectorName": "" }, "form-field-hint": { "title": "Form field with hints", "component": FormFieldHintExample, "additionalFiles": [], "selectorName": "" }, "form-field-label": { "title": "Form field with label", "component": FormFieldLabelExample, "additionalFiles": [], "selectorName": "" }, "form-field-overview": { "title": "Simple form field", "component": FormFieldOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-prefix-suffix": { "title": "Form field with prefix & suffix", "component": FormFieldPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "form-field-theming": { "title": "Form field theming", "component": FormFieldThemingExample, "additionalFiles": [], "selectorName": "" }, "grid-list-dynamic": { "title": "Dynamic grid-list", "component": GridListDynamicExample, "additionalFiles": [], "selectorName": "" }, "grid-list-overview": { "title": "Basic grid-list", "component": GridListOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-overview": { "title": "Basic icons", "component": IconOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-svg": { "title": "SVG icons", "component": IconSvgExample, "additionalFiles": [], "selectorName": "" }, "input-clearable": { "title": "Input with a clear button", "component": InputClearableExample, "additionalFiles": [], "selectorName": "" }, "input-error-state-matcher": { "title": "Input with a custom ErrorStateMatcher", "component": InputErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "input-errors": { "title": "Input with error messages", "component": InputErrorsExample, "additionalFiles": [], "selectorName": "" }, "input-form": { "title": "Inputs in a form", "component": InputFormExample, "additionalFiles": [], "selectorName": "" }, "input-hint": { "title": "Input with hints", "component": InputHintExample, "additionalFiles": [], "selectorName": "" }, "input-overview": { "title": "Basic Inputs", "component": InputOverviewExample, "additionalFiles": [], "selectorName": "" }, "input-prefix-suffix": { "title": "Inputs with prefixes and suffixes", "component": InputPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "list-overview": { "title": "Basic list", "component": ListOverviewExample, "additionalFiles": [], "selectorName": "" }, "list-sections": { "title": "List with sections", "component": ListSectionsExample, "additionalFiles": [], "selectorName": "" }, "list-selection": { "title": "List with selection", "component": ListSelectionExample, "additionalFiles": [], "selectorName": "" }, "menu-icons": { "title": "Menu with icons", "component": MenuIconsExample, "additionalFiles": [], "selectorName": "" }, "menu-overview": { "title": "Basic menu", "component": MenuOverviewExample, "additionalFiles": [], "selectorName": "" }, "menu-position": { "title": "Menu positioning", "component": MenuPositionExample, "additionalFiles": [], "selectorName": "" }, "nested-menu": { "title": "Nested menu", "component": NestedMenuExample, "additionalFiles": [], "selectorName": "" }, "paginator-configurable": { "title": "Configurable paginator", "component": PaginatorConfigurableExample, "additionalFiles": [], "selectorName": "" }, "paginator-overview": { "title": "Paginator", "component": PaginatorOverviewExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-cell-span-mat-table": { "title": "Material Popover Edit spanning multiple columns on a Material data-table", "component": PopoverEditCellSpanMatTableExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-mat-table-flex": { "title": "Material Popover Edit on a flex Material data-table", "component": PopoverEditMatTableFlexExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-mat-table": { "title": "Material Popover Edit on a Material data-table", "component": PopoverEditMatTableExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-tab-out-mat-table": { "title": "Material Popover Edit with spreadsheet-like configuration on a Material data-table", "component": PopoverEditTabOutMatTableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-buffer": { "title": "Buffer progress-bar", "component": ProgressBarBufferExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-configurable": { "title": "Configurable progress-bar", "component": ProgressBarConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-determinate": { "title": "Determinate progress-bar", "component": ProgressBarDeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-indeterminate": { "title": "Indeterminate progress-bar", "component": ProgressBarIndeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-query": { "title": "Query progress-bar", "component": ProgressBarQueryExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-configurable": { "title": "Configurable progress spinner", "component": ProgressSpinnerConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-overview": { "title": "Basic progress-spinner", "component": ProgressSpinnerOverviewExample, "additionalFiles": [], "selectorName": "" }, "radio-ng-model": { "title": "Radios with ngModel", "component": RadioNgModelExample, "additionalFiles": [], "selectorName": "" }, "radio-overview": { "title": "Basic radios", "component": RadioOverviewExample, "additionalFiles": [], "selectorName": "" }, "ripple-overview": { "title": "MatRipple basic usage", "component": RippleOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-custom-trigger": { "title": "Select with custom trigger text", "component": SelectCustomTriggerExample, "additionalFiles": [], "selectorName": "" }, "select-disabled": { "title": "Disabled select", "component": SelectDisabledExample, "additionalFiles": [], "selectorName": "" }, "select-error-state-matcher": { "title": "Select with a custom ErrorStateMatcher", "component": SelectErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "select-form": { "title": "Select in a form", "component": SelectFormExample, "additionalFiles": [], "selectorName": "" }, "select-hint-error": { "title": "Select with form field features", "component": SelectHintErrorExample, "additionalFiles": [], "selectorName": "" }, "select-multiple": { "title": "Select with multiple selection", "component": SelectMultipleExample, "additionalFiles": [], "selectorName": "" }, "select-no-ripple": { "title": "Select with no option ripple", "component": SelectNoRippleExample, "additionalFiles": [], "selectorName": "" }, "select-optgroup": { "title": "Select with option groups", "component": SelectOptgroupExample, "additionalFiles": [], "selectorName": "" }, "select-overview": { "title": "Basic select", "component": SelectOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-panel-class": { "title": "Select with custom panel styling", "component": SelectPanelClassExample, "additionalFiles": [], "selectorName": "" }, "select-reset": { "title": "Select with reset option", "component": SelectResetExample, "additionalFiles": [], "selectorName": "" }, "select-value-binding": { "title": "Select with 2-way value binding", "component": SelectValueBindingExample, "additionalFiles": [], "selectorName": "" }, "sidenav-autosize": { "title": "Autosize sidenav", "component": SidenavAutosizeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-backdrop": { "title": "Drawer with explicit backdrop setting", "component": SidenavBackdropExample, "additionalFiles": [], "selectorName": "" }, "sidenav-disable-close": { "title": "Sidenav with custom escape and backdrop click behavior", "component": SidenavDisableCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-drawer-overview": { "title": "Basic drawer", "component": SidenavDrawerOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-fixed": { "title": "Fixed sidenav", "component": SidenavFixedExample, "additionalFiles": [], "selectorName": "" }, "sidenav-mode": { "title": "Sidenav with configurable mode", "component": SidenavModeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-open-close": { "title": "Sidenav open & close behavior", "component": SidenavOpenCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-overview": { "title": "Basic sidenav", "component": SidenavOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-position": { "title": "Implicit main content with two sidenavs", "component": SidenavPositionExample, "additionalFiles": [], "selectorName": "" }, "sidenav-responsive": { "title": "Responsive sidenav", "component": SidenavResponsiveExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-configurable": { "title": "Configurable slide-toggle", "component": SlideToggleConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-forms": { "title": "Slide-toggle with forms", "component": SlideToggleFormsExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-overview": { "title": "Basic slide-toggles", "component": SlideToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "slider-configurable": { "title": "Configurable slider", "component": SliderConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slider-formatting": { "title": "Slider with custom thumb label formatting.", "component": SliderFormattingExample, "additionalFiles": [], "selectorName": "" }, "slider-overview": { "title": "Basic slider", "component": SliderOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-component": { "title": "Snack-bar with a custom component", "component": SnackBarComponentExample, "additionalFiles": ["snack-bar-component-example-snack.html"], "selectorName": "SnackBarComponentExample, PizzaPartyComponent" }, "snack-bar-overview": { "title": "Basic snack-bar", "component": SnackBarOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-position": { "title": "Snack-bar with configurable position", "component": SnackBarPositionExample, "additionalFiles": [], "selectorName": "" }, "sort-overview": { "title": "Sorting overview", "component": SortOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-editable": { "title": "Stepper with editable steps", "component": StepperEditableExample, "additionalFiles": [], "selectorName": "" }, "stepper-errors": { "title": "Stepper that displays errors in the steps", "component": StepperErrorsExample, "additionalFiles": [], "selectorName": "" }, "stepper-label-position-bottom": { "title": "Stepper label bottom position", "component": StepperLabelPositionBottomExample, "additionalFiles": [], "selectorName": "" }, "stepper-optional": { "title": "Stepper with optional steps", "component": StepperOptionalExample, "additionalFiles": [], "selectorName": "" }, "stepper-overview": { "title": "Stepper overview", "component": StepperOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-states": { "title": "Stepper with customized states", "component": StepperStatesExample, "additionalFiles": [], "selectorName": "" }, "stepper-vertical": { "title": "Stepper vertical", "component": StepperVerticalExample, "additionalFiles": [], "selectorName": "" }, "tab-group-align": { "title": "Tab group with aligned labels", "component": TabGroupAlignExample, "additionalFiles": [], "selectorName": "" }, "tab-group-animations": { "title": "Tab group animations", "component": TabGroupAnimationsExample, "additionalFiles": [], "selectorName": "" }, "tab-group-async": { "title": "Tab group with asynchronously loading tab contents", "component": TabGroupAsyncExample, "additionalFiles": [], "selectorName": "" }, "tab-group-basic": { "title": "Basic use of the tab group", "component": TabGroupBasicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-custom-label": { "title": "Using tabs with a custom label template", "component": TabGroupCustomLabelExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic-height": { "title": "Tab group with dynamic height based on tab contents", "component": TabGroupDynamicHeightExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic": { "title": "Tab group with dynamically changing tabs", "component": TabGroupDynamicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-header-below": { "title": "Tab group with the headers on the bottom", "component": TabGroupHeaderBelowExample, "additionalFiles": [], "selectorName": "" }, "tab-group-lazy-loaded": { "title": "Tab group where the tab content is loaded lazily (when activated)", "component": TabGroupLazyLoadedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-stretched": { "title": "Tab group with stretched labels", "component": TabGroupStretchedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-theme": { "title": "Customizing the theme options on the tab group", "component": TabGroupThemeExample, "additionalFiles": [], "selectorName": "" }, "tab-nav-bar-basic": { "title": "Basic use of the tab nav bar", "component": TabNavBarBasicExample, "additionalFiles": [], "selectorName": "" }, "table-basic-flex": { "title": "Basic use of `<mat-table>` (uses display flex)", "component": TableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "table-basic": { "title": "Basic use of `<table mat-table>`", "component": TableBasicExample, "additionalFiles": [], "selectorName": "" }, "table-dynamic-columns": { "title": "Table dynamically changing the columns displayed", "component": TableDynamicColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-expandable-rows": { "title": "Table with expandable rows", "component": TableExpandableRowsExample, "additionalFiles": [], "selectorName": "" }, "table-filtering": { "title": "Table with filtering", "component": TableFilteringExample, "additionalFiles": [], "selectorName": "" }, "table-footer-row": { "title": "Footer row table", "component": TableFooterRowExample, "additionalFiles": [], "selectorName": "" }, "table-http": { "title": "Table retrieving data through HTTP", "component": TableHttpExample, "additionalFiles": [], "selectorName": "" }, "table-multiple-header-footer": { "title": "Table with multiple header and footer rows", "component": TableMultipleHeaderFooterExample, "additionalFiles": [], "selectorName": "" }, "table-overview": { "title": "Data table with sorting, pagination, and filtering.", "component": TableOverviewExample, "additionalFiles": [], "selectorName": "" }, "table-pagination": { "title": "Table with pagination", "component": TablePaginationExample, "additionalFiles": [], "selectorName": "" }, "table-row-context": { "title": "Table showing each row context properties.", "component": TableRowContextExample, "additionalFiles": [], "selectorName": "" }, "table-selection": { "title": "Table with selection", "component": TableSelectionExample, "additionalFiles": [], "selectorName": "" }, "table-sorting": { "title": "Table with sorting", "component": TableSortingExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-columns": { "title": "Table with sticky columns", "component": TableStickyColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex-flex": { "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexFlexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex": { "title": "Tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-footer": { "title": "Table with a sticky footer", "component": TableStickyFooterExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-header": { "title": "Table with sticky header", "component": TableStickyHeaderExample, "additionalFiles": [], "selectorName": "" }, "table-text-column-advanced": { "title": "Use of 'mat-text-column' with various configurations of the interface.", "component": TableTextColumnAdvancedExample, "additionalFiles": [], "selectorName": "" }, "table-text-column": { "title": "Use of `mat-text-column` which can be used for simple columns that only need to display\na text value for the header and cells.", "component": TableTextColumnExample, "additionalFiles": [], "selectorName": "" }, "table-wrapped": { "title": "Table example that shows how to wrap a table component for definition and behavior reuse.", "component": TableWrappedExample, "additionalFiles": ["wrapper-table.html"], "selectorName": "TableWrappedExample, WrapperTable" }, "text-field-autofill-directive": { "title": "Monitoring autofill state with cdkAutofill", "component": TextFieldAutofillDirectiveExample, "additionalFiles": [], "selectorName": "" }, "text-field-autofill-monitor": { "title": "Monitoring autofill state with AutofillMonitor", "component": TextFieldAutofillMonitorExample, "additionalFiles": [], "selectorName": "" }, "text-field-autosize-textarea": { "title": "Auto-resizing textarea", "component": TextFieldAutosizeTextareaExample, "additionalFiles": [], "selectorName": "" }, "toolbar-multirow": { "title": "Multi-row toolbar", "component": ToolbarMultirowExample, "additionalFiles": [], "selectorName": "" }, "toolbar-overview": { "title": "Basic toolbar", "component": ToolbarOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-auto-hide": { "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.", "component": TooltipAutoHideExample, "additionalFiles": [], "selectorName": "" }, "tooltip-custom-class": { "title": "Tooltip that can have a custom class applied.", "component": TooltipCustomClassExample, "additionalFiles": [], "selectorName": "" }, "tooltip-delay": { "title": "Tooltip with a show and hide delay", "component": TooltipDelayExample, "additionalFiles": [], "selectorName": "" }, "tooltip-disabled": { "title": "Tooltip that can be disabled", "component": TooltipDisabledExample, "additionalFiles": [], "selectorName": "" }, "tooltip-manual": { "title": "Tooltip that can be manually shown/hidden.", "component": TooltipManualExample, "additionalFiles": [], "selectorName": "" }, "tooltip-message": { "title": "Tooltip with a changing message", "component": TooltipMessageExample, "additionalFiles": [], "selectorName": "" }, "tooltip-modified-defaults": { "title": "Tooltip with a show and hide delay", "component": TooltipModifiedDefaultsExample, "additionalFiles": [], "selectorName": "" }, "tooltip-overview": { "title": "Basic tooltip", "component": TooltipOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-position": { "title": "Tooltip with a custom position", "component": TooltipPositionExample, "additionalFiles": [], "selectorName": "" }, "tree-checklist": { "title": "Tree with checkboxes", "component": TreeChecklistExample, "additionalFiles": [], "selectorName": "" }, "tree-dynamic": { "title": "Tree with dynamic data", "component": TreeDynamicExample, "additionalFiles": [], "selectorName": "" }, "tree-flat-overview": { "title": "Tree with flat nodes", "component": TreeFlatOverviewExample, "additionalFiles": [], "selectorName": "" }, "tree-loadmore": { "title": "Tree with partially loaded data", "component": TreeLoadmoreExample, "additionalFiles": [], "selectorName": "" }, "tree-nested-overview": { "title": "Tree with nested nodes", "component": TreeNestedOverviewExample, "additionalFiles": [], "selectorName": "" } };
-var EXAMPLE_LIST = [AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteSimpleExample, BadgeOverviewExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, ButtonOverviewExample, ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonTypesExample, CardFancyExample, CardOverviewExample, CdkCustomStepperWithoutFormExample, CustomStepper, CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledSortingExample, CdkDragDropDisabledExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkPlatformOverviewExample, CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPortalOverviewExample, ComponentPortalExample, CdkTableBasicFlexExample, CdkTableBasicExample, CdkTreeFlatExample, CdkTreeNestedExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CheckboxConfigurableExample, CheckboxOverviewExample, ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, ExampleHeader, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog, DividerOverviewExample, ElevationOverviewExample, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, FormFieldAppearanceExample, FormFieldCustomControlExample, MyTelInput, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, GridListDynamicExample, GridListOverviewExample, IconOverviewExample, IconSvgExample, InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample, PaginatorConfigurableExample, PaginatorOverviewExample, PopoverEditCellSpanMatTableExample, PopoverEditMatTableFlexExample, PopoverEditMatTableExample, PopoverEditTabOutMatTableExample, ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, RadioNgModelExample, RadioOverviewExample, RippleOverviewExample, SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SnackBarComponentExample, PizzaPartyComponent, SnackBarOverviewExample, SnackBarPositionExample, SortOverviewExample, StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, ToolbarMultirowExample, ToolbarOverviewExample, TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample];
+var EXAMPLE_COMPONENTS = { "focus-monitor-directives": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorDirectivesExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-focus-via": { "title": "Focusing with a specific FocusOrigin", "component": FocusMonitorFocusViaExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-overview": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-axis-lock": { "title": "Drag&Drop position locking", "component": CdkDragDropAxisLockExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-boundary": { "title": "Drag&Drop boundary", "component": CdkDragDropBoundaryExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting-group": { "title": "Drag&Drop connected sorting group", "component": CdkDragDropConnectedSortingGroupExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting": { "title": "Drag&Drop connected sorting", "component": CdkDragDropConnectedSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-placeholder": { "title": "Drag&Drop custom placeholer", "component": CdkDragDropCustomPlaceholderExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-preview": { "title": "Drag&Drop custom preview", "component": CdkDragDropCustomPreviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-delay": { "title": "Delayed dragging", "component": CdkDragDropDelayExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled-sorting": { "title": "Drag&Drop disabled sorting", "component": CdkDragDropDisabledSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled": { "title": "Drag&Drop disabled", "component": CdkDragDropDisabledExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-enter-predicate": { "title": "Drag&Drop enter predicate", "component": CdkDragDropEnterPredicateExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-free-drag-position": { "title": "Programmatically setting the free drag position", "component": CdkDragDropFreeDragPositionExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-handle": { "title": "Drag&Drop with a handle", "component": CdkDragDropHandleExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-horizontal-sorting": { "title": "Drag&Drop horizontal sorting", "component": CdkDragDropHorizontalSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-overview": { "title": "Basic Drag&Drop", "component": CdkDragDropOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-root-element": { "title": "Drag&Drop with alternate root element", "component": CdkDragDropRootElementExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-sorting": { "title": "Drag&Drop sorting", "component": CdkDragDropSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-platform-overview": { "title": "Platform overview", "component": CdkPlatformOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cdk-table-flex": { "title": "CDK Popover Edit on a flex cdk-table.", "component": CdkPopoverEditCdkTableFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cdk-table": { "title": "CDK Popover Edit on a CDK data-table", "component": CdkPopoverEditCdkTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cell-span-vanilla-table": { "title": "CDK Popover Edit spanning multiple columns on an HTML data-table", "component": CdkPopoverEditCellSpanVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-tab-out-vanilla-table": { "title": "CDK Popover Edit with spreadsheet-like configuration on an HTML data-table", "component": CdkPopoverEditTabOutVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-vanilla-table": { "title": "CDK Popover Edit on an HTML data-table", "component": CdkPopoverEditVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-portal-overview": { "title": "Portal overview", "component": CdkPortalOverviewExample, "additionalFiles": [], "selectorName": "CdkPortalOverviewExample, ComponentPortalExample" }, "cdk-virtual-scroll-context": { "title": "Virtual scroll context variables", "component": CdkVirtualScrollContextExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-custom-strategy": { "title": "Virtual scroll with a custom strategy", "component": CdkVirtualScrollCustomStrategyExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-data-source": { "title": "Virtual scroll with a custom data source", "component": CdkVirtualScrollDataSourceExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-dl": { "title": "Virtual scrolling `<dl>`", "component": CdkVirtualScrollDlExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-fixed-buffer": { "title": "Fixed size virtual scroll with custom buffer parameters", "component": CdkVirtualScrollFixedBufferExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-horizontal": { "title": "Horizontal virtual scroll", "component": CdkVirtualScrollHorizontalExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-overview": { "title": "Basic virtual scroll", "component": CdkVirtualScrollOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-template-cache": { "title": "Virtual scroll with no template caching", "component": CdkVirtualScrollTemplateCacheExample, "additionalFiles": [], "selectorName": "" }, "cdk-custom-stepper-without-form": { "title": "A custom CDK stepper without a form", "component": CdkCustomStepperWithoutFormExample, "additionalFiles": ["./example-custom-stepper.html", "./example-custom-stepper.css"], "selectorName": "CdkCustomStepperWithoutFormExample, CustomStepper" }, "cdk-table-basic-flex": { "title": "Basic use of `<cdk-table>` (uses display flex)", "component": CdkTableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic": { "title": "Basic CDK data-table", "component": CdkTableBasicExample, "additionalFiles": [], "selectorName": "" }, "text-field-autofill-directive": { "title": "Monitoring autofill state with cdkAutofill", "component": TextFieldAutofillDirectiveExample, "additionalFiles": [], "selectorName": "" }, "text-field-autofill-monitor": { "title": "Monitoring autofill state with AutofillMonitor", "component": TextFieldAutofillMonitorExample, "additionalFiles": [], "selectorName": "" }, "text-field-autosize-textarea": { "title": "Auto-resizing textarea", "component": TextFieldAutosizeTextareaExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-flat": { "title": "Tree with flat nodes", "component": CdkTreeFlatExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-nested": { "title": "Tree with nested nodes", "component": CdkTreeNestedExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-auto-active-first-option": { "title": "Highlight the first autocomplete option", "component": AutocompleteAutoActiveFirstOptionExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-display": { "title": "Display value autocomplete", "component": AutocompleteDisplayExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-filter": { "title": "Filter autocomplete", "component": AutocompleteFilterExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-optgroup": { "title": "Option groups autocomplete", "component": AutocompleteOptgroupExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-overview": { "title": "Autocomplete overview", "component": AutocompleteOverviewExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-plain-input": { "title": "Plain input autocomplete", "component": AutocompletePlainInputExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-simple": { "title": "Simple autocomplete", "component": AutocompleteSimpleExample, "additionalFiles": [], "selectorName": "" }, "badge-overview": { "title": "Badge overview", "component": BadgeOverviewExample, "additionalFiles": [], "selectorName": "" }, "bottom-sheet-overview": { "title": "Bottom Sheet Overview", "component": BottomSheetOverviewExample, "additionalFiles": ["bottom-sheet-overview-example-sheet.html"], "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet" }, "button-toggle-appearance": { "title": "Button toggle appearance", "component": ButtonToggleAppearanceExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-exclusive": { "title": "Exclusive selection", "component": ButtonToggleExclusiveExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-overview": { "title": "Basic button-toggles", "component": ButtonToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-overview": { "title": "Basic buttons", "component": ButtonOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-types": { "title": "Button varieties", "component": ButtonTypesExample, "additionalFiles": [], "selectorName": "" }, "card-fancy": { "title": "Card with multiple sections", "component": CardFancyExample, "additionalFiles": [], "selectorName": "" }, "card-overview": { "title": "Basic cards", "component": CardOverviewExample, "additionalFiles": [], "selectorName": "" }, "checkbox-configurable": { "title": "Configurable checkbox", "component": CheckboxConfigurableExample, "additionalFiles": [], "selectorName": "" }, "checkbox-overview": { "title": "Basic checkboxes", "component": CheckboxOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-autocomplete": { "title": "Chips Autocomplete", "component": ChipsAutocompleteExample, "additionalFiles": [], "selectorName": "" }, "chips-drag-drop": { "title": "Chips Drag and Drop", "component": ChipsDragDropExample, "additionalFiles": [], "selectorName": "" }, "chips-input": { "title": "Chips with input", "component": ChipsInputExample, "additionalFiles": [], "selectorName": "" }, "chips-overview": { "title": "Basic chips", "component": ChipsOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-stacked": { "title": "Stacked chips", "component": ChipsStackedExample, "additionalFiles": [], "selectorName": "" }, "elevation-overview": { "title": "Elevation CSS classes", "component": ElevationOverviewExample, "additionalFiles": [], "selectorName": "" }, "ripple-overview": { "title": "MatRipple basic usage", "component": RippleOverviewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-api": { "title": "Datepicker open method", "component": DatepickerApiExample, "additionalFiles": [], "selectorName": "" }, "datepicker-color": { "title": "Datepicker palette colors", "component": DatepickerColorExample, "additionalFiles": [], "selectorName": "" }, "datepicker-custom-header": { "title": "Datepicker with custom calendar header", "component": DatepickerCustomHeaderExample, "additionalFiles": [], "selectorName": "DatepickerCustomHeaderExample, ExampleHeader" }, "datepicker-custom-icon": { "title": "Datepicker with custom icon", "component": DatepickerCustomIconExample, "additionalFiles": [], "selectorName": "" }, "datepicker-date-class": { "title": "Datepicker with custom date classes", "component": DatepickerDateClassExample, "additionalFiles": [], "selectorName": "" }, "datepicker-disabled": { "title": "Disabled datepicker", "component": DatepickerDisabledExample, "additionalFiles": [], "selectorName": "" }, "datepicker-events": { "title": "Datepicker input and change events", "component": DatepickerEventsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-filter": { "title": "Datepicker with filter validation", "component": DatepickerFilterExample, "additionalFiles": [], "selectorName": "" }, "datepicker-formats": { "title": "Datepicker with custom formats", "component": DatepickerFormatsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-locale": { "title": "Datepicker with different locale", "component": DatepickerLocaleExample, "additionalFiles": [], "selectorName": "" }, "datepicker-min-max": { "title": "Datepicker with min & max validation", "component": DatepickerMinMaxExample, "additionalFiles": [], "selectorName": "" }, "datepicker-moment": { "title": "Datepicker that uses Moment.js dates", "component": DatepickerMomentExample, "additionalFiles": [], "selectorName": "" }, "datepicker-overview": { "title": "Basic datepicker", "component": DatepickerOverviewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-start-view": { "title": "Datepicker start date", "component": DatepickerStartViewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-touch": { "title": "Datepicker touch UI", "component": DatepickerTouchExample, "additionalFiles": [], "selectorName": "" }, "datepicker-value": { "title": "Datepicker selected value", "component": DatepickerValueExample, "additionalFiles": [], "selectorName": "" }, "datepicker-views-selection": { "title": "Datepicker emulating a Year and month picker", "component": DatepickerViewsSelectionExample, "additionalFiles": [], "selectorName": "" }, "dialog-content": { "title": "Dialog with header, scrollable content and actions", "component": DialogContentExample, "additionalFiles": ["dialog-content-example-dialog.html"], "selectorName": "DialogContentExample, DialogContentExampleDialog" }, "dialog-data": { "title": "Injecting data when opening a dialog", "component": DialogDataExample, "additionalFiles": ["dialog-data-example-dialog.html"], "selectorName": "DialogDataExample, DialogDataExampleDialog" }, "dialog-elements": { "title": "Dialog elements", "component": DialogElementsExample, "additionalFiles": ["dialog-elements-example-dialog.html"], "selectorName": "DialogElementsExample, DialogElementsExampleDialog" }, "dialog-overview": { "title": "Dialog Overview", "component": DialogOverviewExample, "additionalFiles": ["dialog-overview-example-dialog.html"], "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog" }, "divider-overview": { "title": "Basic divider", "component": DividerOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-expand-collapse-all": { "title": "Accordion with expand/collapse all toggles", "component": ExpansionExpandCollapseAllExample, "additionalFiles": [], "selectorName": "" }, "expansion-overview": { "title": "Basic expansion panel", "component": ExpansionOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-steps": { "title": "Expansion panel as accordion", "component": ExpansionStepsExample, "additionalFiles": [], "selectorName": "" }, "form-field-appearance": { "title": "Form field appearance variants", "component": FormFieldAppearanceExample, "additionalFiles": [], "selectorName": "" }, "form-field-custom-control": { "title": "Form field with custom telephone number input control.", "component": FormFieldCustomControlExample, "additionalFiles": ["example-tel-input-example.html", "example-tel-input-example.css"], "selectorName": "FormFieldCustomControlExample, MyTelInput" }, "form-field-error": { "title": "Form field with error messages", "component": FormFieldErrorExample, "additionalFiles": [], "selectorName": "" }, "form-field-hint": { "title": "Form field with hints", "component": FormFieldHintExample, "additionalFiles": [], "selectorName": "" }, "form-field-label": { "title": "Form field with label", "component": FormFieldLabelExample, "additionalFiles": [], "selectorName": "" }, "form-field-overview": { "title": "Simple form field", "component": FormFieldOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-prefix-suffix": { "title": "Form field with prefix & suffix", "component": FormFieldPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "form-field-theming": { "title": "Form field theming", "component": FormFieldThemingExample, "additionalFiles": [], "selectorName": "" }, "grid-list-dynamic": { "title": "Dynamic grid-list", "component": GridListDynamicExample, "additionalFiles": [], "selectorName": "" }, "grid-list-overview": { "title": "Basic grid-list", "component": GridListOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-overview": { "title": "Basic icons", "component": IconOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-svg": { "title": "SVG icons", "component": IconSvgExample, "additionalFiles": [], "selectorName": "" }, "input-clearable": { "title": "Input with a clear button", "component": InputClearableExample, "additionalFiles": [], "selectorName": "" }, "input-error-state-matcher": { "title": "Input with a custom ErrorStateMatcher", "component": InputErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "input-errors": { "title": "Input with error messages", "component": InputErrorsExample, "additionalFiles": [], "selectorName": "" }, "input-form": { "title": "Inputs in a form", "component": InputFormExample, "additionalFiles": [], "selectorName": "" }, "input-hint": { "title": "Input with hints", "component": InputHintExample, "additionalFiles": [], "selectorName": "" }, "input-overview": { "title": "Basic Inputs", "component": InputOverviewExample, "additionalFiles": [], "selectorName": "" }, "input-prefix-suffix": { "title": "Inputs with prefixes and suffixes", "component": InputPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "list-overview": { "title": "Basic list", "component": ListOverviewExample, "additionalFiles": [], "selectorName": "" }, "list-sections": { "title": "List with sections", "component": ListSectionsExample, "additionalFiles": [], "selectorName": "" }, "list-selection": { "title": "List with selection", "component": ListSelectionExample, "additionalFiles": [], "selectorName": "" }, "menu-icons": { "title": "Menu with icons", "component": MenuIconsExample, "additionalFiles": [], "selectorName": "" }, "menu-overview": { "title": "Basic menu", "component": MenuOverviewExample, "additionalFiles": [], "selectorName": "" }, "menu-position": { "title": "Menu positioning", "component": MenuPositionExample, "additionalFiles": [], "selectorName": "" }, "nested-menu": { "title": "Nested menu", "component": NestedMenuExample, "additionalFiles": [], "selectorName": "" }, "paginator-configurable": { "title": "Configurable paginator", "component": PaginatorConfigurableExample, "additionalFiles": [], "selectorName": "" }, "paginator-overview": { "title": "Paginator", "component": PaginatorOverviewExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-cell-span-mat-table": { "title": "Material Popover Edit spanning multiple columns on a Material data-table", "component": PopoverEditCellSpanMatTableExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-mat-table-flex": { "title": "Material Popover Edit on a flex Material data-table", "component": PopoverEditMatTableFlexExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-mat-table": { "title": "Material Popover Edit on a Material data-table", "component": PopoverEditMatTableExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-tab-out-mat-table": { "title": "Material Popover Edit with spreadsheet-like configuration on a Material data-table", "component": PopoverEditTabOutMatTableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-buffer": { "title": "Buffer progress-bar", "component": ProgressBarBufferExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-configurable": { "title": "Configurable progress-bar", "component": ProgressBarConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-determinate": { "title": "Determinate progress-bar", "component": ProgressBarDeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-indeterminate": { "title": "Indeterminate progress-bar", "component": ProgressBarIndeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-query": { "title": "Query progress-bar", "component": ProgressBarQueryExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-configurable": { "title": "Configurable progress spinner", "component": ProgressSpinnerConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-overview": { "title": "Basic progress-spinner", "component": ProgressSpinnerOverviewExample, "additionalFiles": [], "selectorName": "" }, "radio-ng-model": { "title": "Radios with ngModel", "component": RadioNgModelExample, "additionalFiles": [], "selectorName": "" }, "radio-overview": { "title": "Basic radios", "component": RadioOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-custom-trigger": { "title": "Select with custom trigger text", "component": SelectCustomTriggerExample, "additionalFiles": [], "selectorName": "" }, "select-disabled": { "title": "Disabled select", "component": SelectDisabledExample, "additionalFiles": [], "selectorName": "" }, "select-error-state-matcher": { "title": "Select with a custom ErrorStateMatcher", "component": SelectErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "select-form": { "title": "Select in a form", "component": SelectFormExample, "additionalFiles": [], "selectorName": "" }, "select-hint-error": { "title": "Select with form field features", "component": SelectHintErrorExample, "additionalFiles": [], "selectorName": "" }, "select-multiple": { "title": "Select with multiple selection", "component": SelectMultipleExample, "additionalFiles": [], "selectorName": "" }, "select-no-ripple": { "title": "Select with no option ripple", "component": SelectNoRippleExample, "additionalFiles": [], "selectorName": "" }, "select-optgroup": { "title": "Select with option groups", "component": SelectOptgroupExample, "additionalFiles": [], "selectorName": "" }, "select-overview": { "title": "Basic select", "component": SelectOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-panel-class": { "title": "Select with custom panel styling", "component": SelectPanelClassExample, "additionalFiles": [], "selectorName": "" }, "select-reset": { "title": "Select with reset option", "component": SelectResetExample, "additionalFiles": [], "selectorName": "" }, "select-value-binding": { "title": "Select with 2-way value binding", "component": SelectValueBindingExample, "additionalFiles": [], "selectorName": "" }, "sidenav-autosize": { "title": "Autosize sidenav", "component": SidenavAutosizeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-backdrop": { "title": "Drawer with explicit backdrop setting", "component": SidenavBackdropExample, "additionalFiles": [], "selectorName": "" }, "sidenav-disable-close": { "title": "Sidenav with custom escape and backdrop click behavior", "component": SidenavDisableCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-drawer-overview": { "title": "Basic drawer", "component": SidenavDrawerOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-fixed": { "title": "Fixed sidenav", "component": SidenavFixedExample, "additionalFiles": [], "selectorName": "" }, "sidenav-mode": { "title": "Sidenav with configurable mode", "component": SidenavModeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-open-close": { "title": "Sidenav open & close behavior", "component": SidenavOpenCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-overview": { "title": "Basic sidenav", "component": SidenavOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-position": { "title": "Implicit main content with two sidenavs", "component": SidenavPositionExample, "additionalFiles": [], "selectorName": "" }, "sidenav-responsive": { "title": "Responsive sidenav", "component": SidenavResponsiveExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-configurable": { "title": "Configurable slide-toggle", "component": SlideToggleConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-forms": { "title": "Slide-toggle with forms", "component": SlideToggleFormsExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-overview": { "title": "Basic slide-toggles", "component": SlideToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "slider-configurable": { "title": "Configurable slider", "component": SliderConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slider-formatting": { "title": "Slider with custom thumb label formatting.", "component": SliderFormattingExample, "additionalFiles": [], "selectorName": "" }, "slider-overview": { "title": "Basic slider", "component": SliderOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-component": { "title": "Snack-bar with a custom component", "component": SnackBarComponentExample, "additionalFiles": ["snack-bar-component-example-snack.html"], "selectorName": "SnackBarComponentExample, PizzaPartyComponent" }, "snack-bar-overview": { "title": "Basic snack-bar", "component": SnackBarOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-position": { "title": "Snack-bar with configurable position", "component": SnackBarPositionExample, "additionalFiles": [], "selectorName": "" }, "sort-overview": { "title": "Sorting overview", "component": SortOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-editable": { "title": "Stepper with editable steps", "component": StepperEditableExample, "additionalFiles": [], "selectorName": "" }, "stepper-errors": { "title": "Stepper that displays errors in the steps", "component": StepperErrorsExample, "additionalFiles": [], "selectorName": "" }, "stepper-label-position-bottom": { "title": "Stepper label bottom position", "component": StepperLabelPositionBottomExample, "additionalFiles": [], "selectorName": "" }, "stepper-optional": { "title": "Stepper with optional steps", "component": StepperOptionalExample, "additionalFiles": [], "selectorName": "" }, "stepper-overview": { "title": "Stepper overview", "component": StepperOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-states": { "title": "Stepper with customized states", "component": StepperStatesExample, "additionalFiles": [], "selectorName": "" }, "stepper-vertical": { "title": "Stepper vertical", "component": StepperVerticalExample, "additionalFiles": [], "selectorName": "" }, "table-basic-flex": { "title": "Basic use of `<mat-table>` (uses display flex)", "component": TableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "table-basic": { "title": "Basic use of `<table mat-table>`", "component": TableBasicExample, "additionalFiles": [], "selectorName": "" }, "table-dynamic-columns": { "title": "Table dynamically changing the columns displayed", "component": TableDynamicColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-expandable-rows": { "title": "Table with expandable rows", "component": TableExpandableRowsExample, "additionalFiles": [], "selectorName": "" }, "table-filtering": { "title": "Table with filtering", "component": TableFilteringExample, "additionalFiles": [], "selectorName": "" }, "table-footer-row": { "title": "Footer row table", "component": TableFooterRowExample, "additionalFiles": [], "selectorName": "" }, "table-http": { "title": "Table retrieving data through HTTP", "component": TableHttpExample, "additionalFiles": [], "selectorName": "" }, "table-multiple-header-footer": { "title": "Table with multiple header and footer rows", "component": TableMultipleHeaderFooterExample, "additionalFiles": [], "selectorName": "" }, "table-overview": { "title": "Data table with sorting, pagination, and filtering.", "component": TableOverviewExample, "additionalFiles": [], "selectorName": "" }, "table-pagination": { "title": "Table with pagination", "component": TablePaginationExample, "additionalFiles": [], "selectorName": "" }, "table-row-context": { "title": "Table showing each row context properties.", "component": TableRowContextExample, "additionalFiles": [], "selectorName": "" }, "table-selection": { "title": "Table with selection", "component": TableSelectionExample, "additionalFiles": [], "selectorName": "" }, "table-sorting": { "title": "Table with sorting", "component": TableSortingExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-columns": { "title": "Table with sticky columns", "component": TableStickyColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex-flex": { "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexFlexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex": { "title": "Tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-footer": { "title": "Table with a sticky footer", "component": TableStickyFooterExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-header": { "title": "Table with sticky header", "component": TableStickyHeaderExample, "additionalFiles": [], "selectorName": "" }, "table-text-column-advanced": { "title": "Use of 'mat-text-column' with various configurations of the interface.", "component": TableTextColumnAdvancedExample, "additionalFiles": [], "selectorName": "" }, "table-text-column": { "title": "Use of `mat-text-column` which can be used for simple columns that only need to display\na text value for the header and cells.", "component": TableTextColumnExample, "additionalFiles": [], "selectorName": "" }, "table-wrapped": { "title": "Table example that shows how to wrap a table component for definition and behavior reuse.", "component": TableWrappedExample, "additionalFiles": ["wrapper-table.html"], "selectorName": "TableWrappedExample, WrapperTable" }, "tab-group-align": { "title": "Tab group with aligned labels", "component": TabGroupAlignExample, "additionalFiles": [], "selectorName": "" }, "tab-group-animations": { "title": "Tab group animations", "component": TabGroupAnimationsExample, "additionalFiles": [], "selectorName": "" }, "tab-group-async": { "title": "Tab group with asynchronously loading tab contents", "component": TabGroupAsyncExample, "additionalFiles": [], "selectorName": "" }, "tab-group-basic": { "title": "Basic use of the tab group", "component": TabGroupBasicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-custom-label": { "title": "Using tabs with a custom label template", "component": TabGroupCustomLabelExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic-height": { "title": "Tab group with dynamic height based on tab contents", "component": TabGroupDynamicHeightExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic": { "title": "Tab group with dynamically changing tabs", "component": TabGroupDynamicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-header-below": { "title": "Tab group with the headers on the bottom", "component": TabGroupHeaderBelowExample, "additionalFiles": [], "selectorName": "" }, "tab-group-lazy-loaded": { "title": "Tab group where the tab content is loaded lazily (when activated)", "component": TabGroupLazyLoadedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-stretched": { "title": "Tab group with stretched labels", "component": TabGroupStretchedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-theme": { "title": "Customizing the theme options on the tab group", "component": TabGroupThemeExample, "additionalFiles": [], "selectorName": "" }, "tab-nav-bar-basic": { "title": "Basic use of the tab nav bar", "component": TabNavBarBasicExample, "additionalFiles": [], "selectorName": "" }, "toolbar-multirow": { "title": "Multi-row toolbar", "component": ToolbarMultirowExample, "additionalFiles": [], "selectorName": "" }, "toolbar-overview": { "title": "Basic toolbar", "component": ToolbarOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-auto-hide": { "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.", "component": TooltipAutoHideExample, "additionalFiles": [], "selectorName": "" }, "tooltip-custom-class": { "title": "Tooltip that can have a custom class applied.", "component": TooltipCustomClassExample, "additionalFiles": [], "selectorName": "" }, "tooltip-delay": { "title": "Tooltip with a show and hide delay", "component": TooltipDelayExample, "additionalFiles": [], "selectorName": "" }, "tooltip-disabled": { "title": "Tooltip that can be disabled", "component": TooltipDisabledExample, "additionalFiles": [], "selectorName": "" }, "tooltip-manual": { "title": "Tooltip that can be manually shown/hidden.", "component": TooltipManualExample, "additionalFiles": [], "selectorName": "" }, "tooltip-message": { "title": "Tooltip with a changing message", "component": TooltipMessageExample, "additionalFiles": [], "selectorName": "" }, "tooltip-modified-defaults": { "title": "Tooltip with a show and hide delay", "component": TooltipModifiedDefaultsExample, "additionalFiles": [], "selectorName": "" }, "tooltip-overview": { "title": "Basic tooltip", "component": TooltipOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-position": { "title": "Tooltip with a custom position", "component": TooltipPositionExample, "additionalFiles": [], "selectorName": "" }, "tree-checklist": { "title": "Tree with checkboxes", "component": TreeChecklistExample, "additionalFiles": [], "selectorName": "" }, "tree-dynamic": { "title": "Tree with dynamic data", "component": TreeDynamicExample, "additionalFiles": [], "selectorName": "" }, "tree-flat-overview": { "title": "Tree with flat nodes", "component": TreeFlatOverviewExample, "additionalFiles": [], "selectorName": "" }, "tree-loadmore": { "title": "Tree with partially loaded data", "component": TreeLoadmoreExample, "additionalFiles": [], "selectorName": "" }, "tree-nested-overview": { "title": "Tree with nested nodes", "component": TreeNestedOverviewExample, "additionalFiles": [], "selectorName": "" } };
+var EXAMPLE_MODULES = [CdkA11yExamplesModule, CdkDragDropExamplesModule, CdkPlatformExamplesModule, CdkPopoverEditExamplesModule, CdkPortalExamplesModule, CdkScrollingExamplesModule, CdkStepperExamplesModule, CdkTableExamplesModule, CdkTextFieldExamplesModule, CdkTreeExamplesModule, AutocompleteExamplesModule, BadgeExamplesModule, BottomSheetExamplesModule, ButtonToggleExamplesModule, ButtonExamplesModule, CardExamplesModule, CheckboxExamplesModule, ChipsExamplesModule, CoreExamplesModule, DatepickerExamplesModule, DialogExamplesModule, DividerExamplesModule, ExpansionExamplesModule, FormFieldExamplesModule, GridListExamplesModule, IconExamplesModule, InputExamplesModule, ListExamplesModule, MenuExamplesModule, PaginatorExamplesModule, PopoverEditExamplesModule, ProgressBarExamplesModule, ProgressSpinnerExamplesModule, RadioExamplesModule, SelectExamplesModule, SidenavExamplesModule, SlideToggleExamplesModule, SliderExamplesModule, SnackBarExamplesModule, SortExamplesModule, StepperExamplesModule, TableExamplesModule, TabGroupExamplesModule, ToolbarExamplesModule, TooltipExamplesModule, TreeExamplesModule];
+var EXAMPLE_LIST = [FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledSortingExample, CdkDragDropDisabledExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkPlatformOverviewExample, CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPortalOverviewExample, ComponentPortalExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CdkCustomStepperWithoutFormExample, CustomStepper, CdkTableBasicFlexExample, CdkTableBasicExample, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, CdkTreeFlatExample, CdkTreeNestedExample, AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteSimpleExample, BadgeOverviewExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonOverviewExample, ButtonTypesExample, CardFancyExample, CardOverviewExample, CheckboxConfigurableExample, CheckboxOverviewExample, ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, ElevationOverviewExample, RippleOverviewExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, ExampleHeader, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog, DividerOverviewExample, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, FormFieldAppearanceExample, FormFieldCustomControlExample, MyTelInput, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, GridListDynamicExample, GridListOverviewExample, IconOverviewExample, IconSvgExample, InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample, PaginatorConfigurableExample, PaginatorOverviewExample, PopoverEditCellSpanMatTableExample, PopoverEditMatTableFlexExample, PopoverEditMatTableExample, PopoverEditTabOutMatTableExample, ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, RadioNgModelExample, RadioOverviewExample, SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SnackBarComponentExample, PizzaPartyComponent, SnackBarOverviewExample, SnackBarPositionExample, SortOverviewExample, StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable, TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, ToolbarMultirowExample, ToolbarOverviewExample, TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample];
 var ExampleModule = /** @class */ (function () {
     function ExampleModule() {
     }
     ExampleModule = __decorate([
         NgModule({
-            declarations: EXAMPLE_LIST,
+            imports: EXAMPLE_MODULES,
+            exports: EXAMPLE_MODULES,
             entryComponents: EXAMPLE_LIST,
-            imports: [
-                ExampleMaterialModule,
-                FormsModule,
-                ReactiveFormsModule,
-                CommonModule
-            ]
         })
     ], ExampleModule);
     return ExampleModule;
@@ -7484,5 +8534,5 @@ var ExampleData = /** @class */ (function () {
  * Generated bundle index. Do not edit.
  */
 
-export { AutocompleteAutoActiveFirstOptionExample as ɵangular_material_src_material_examples_examples_a, AutocompleteDisplayExample as ɵangular_material_src_material_examples_examples_b, AutocompleteFilterExample as ɵangular_material_src_material_examples_examples_c, AutocompleteOptgroupExample as ɵangular_material_src_material_examples_examples_d, AutocompleteOverviewExample as ɵangular_material_src_material_examples_examples_e, AutocompletePlainInputExample as ɵangular_material_src_material_examples_examples_f, AutocompleteSimpleExample as ɵangular_material_src_material_examples_examples_g, BadgeOverviewExample as ɵangular_material_src_material_examples_examples_h, BottomSheetOverviewExample as ɵangular_material_src_material_examples_examples_i, BottomSheetOverviewExampleSheet as ɵangular_material_src_material_examples_examples_j, ButtonOverviewExample as ɵangular_material_src_material_examples_examples_k, ButtonToggleAppearanceExample as ɵangular_material_src_material_examples_examples_l, ButtonToggleExclusiveExample as ɵangular_material_src_material_examples_examples_m, ButtonTypesExample as ɵangular_material_src_material_examples_examples_n, CardOverviewExample as ɵangular_material_src_material_examples_examples_o, CdkCustomStepperWithoutFormExample as ɵangular_material_src_material_examples_examples_p, CustomStepper as ɵangular_material_src_material_examples_examples_q, CdkDragDropAxisLockExample as ɵangular_material_src_material_examples_examples_r, CdkDragDropBoundaryExample as ɵangular_material_src_material_examples_examples_s, CdkDragDropConnectedSortingGroupExample as ɵangular_material_src_material_examples_examples_t, CdkDragDropConnectedSortingExample as ɵangular_material_src_material_examples_examples_u, CdkDragDropCustomPlaceholderExample as ɵangular_material_src_material_examples_examples_v, CdkDragDropCustomPreviewExample as ɵangular_material_src_material_examples_examples_w, CdkDragDropDelayExample as ɵangular_material_src_material_examples_examples_x, CdkDragDropDisabledSortingExample as ɵangular_material_src_material_examples_examples_y, CdkDragDropDisabledExample as ɵangular_material_src_material_examples_examples_z, CdkDragDropEnterPredicateExample as ɵangular_material_src_material_examples_examples_ba, CdkDragDropFreeDragPositionExample as ɵangular_material_src_material_examples_examples_bb, CdkDragDropHandleExample as ɵangular_material_src_material_examples_examples_bc, CdkDragDropHorizontalSortingExample as ɵangular_material_src_material_examples_examples_bd, CdkDragDropOverviewExample as ɵangular_material_src_material_examples_examples_be, CdkDragDropRootElementExample as ɵangular_material_src_material_examples_examples_bf, CdkDragDropSortingExample as ɵangular_material_src_material_examples_examples_bg, CdkPlatformOverviewExample as ɵangular_material_src_material_examples_examples_bh, CdkPopoverEditCdkTableFlexExample as ɵangular_material_src_material_examples_examples_bi, CdkPopoverEditCdkTableExample as ɵangular_material_src_material_examples_examples_bj, CdkPopoverEditCellSpanVanillaTableExample as ɵangular_material_src_material_examples_examples_bk, CdkPopoverEditTabOutVanillaTableExample as ɵangular_material_src_material_examples_examples_bl, CdkPopoverEditVanillaTableExample as ɵangular_material_src_material_examples_examples_bm, CdkPortalOverviewExample as ɵangular_material_src_material_examples_examples_bn, ComponentPortalExample as ɵangular_material_src_material_examples_examples_bo, CdkTableBasicFlexExample as ɵangular_material_src_material_examples_examples_bp, CdkTableBasicExample as ɵangular_material_src_material_examples_examples_bq, CdkTreeFlatExample as ɵangular_material_src_material_examples_examples_br, CdkTreeNestedExample as ɵangular_material_src_material_examples_examples_bs, CdkVirtualScrollContextExample as ɵangular_material_src_material_examples_examples_bt, CdkVirtualScrollCustomStrategyExample as ɵangular_material_src_material_examples_examples_bv, CustomVirtualScrollStrategy as ɵangular_material_src_material_examples_examples_bu, CdkVirtualScrollDataSourceExample as ɵangular_material_src_material_examples_examples_bw, CdkVirtualScrollDlExample as ɵangular_material_src_material_examples_examples_bx, CdkVirtualScrollFixedBufferExample as ɵangular_material_src_material_examples_examples_by, CdkVirtualScrollHorizontalExample as ɵangular_material_src_material_examples_examples_bz, CdkVirtualScrollOverviewExample as ɵangular_material_src_material_examples_examples_ca, CdkVirtualScrollTemplateCacheExample as ɵangular_material_src_material_examples_examples_cb, CheckboxConfigurableExample as ɵangular_material_src_material_examples_examples_cc, CheckboxOverviewExample as ɵangular_material_src_material_examples_examples_cd, ChipsAutocompleteExample as ɵangular_material_src_material_examples_examples_ce, ChipsDragDropExample as ɵangular_material_src_material_examples_examples_cf, ChipsInputExample as ɵangular_material_src_material_examples_examples_cg, ChipsOverviewExample as ɵangular_material_src_material_examples_examples_ch, ChipsStackedExample as ɵangular_material_src_material_examples_examples_ci, DatepickerApiExample as ɵangular_material_src_material_examples_examples_cj, DatepickerColorExample as ɵangular_material_src_material_examples_examples_ck, DatepickerCustomHeaderExample as ɵangular_material_src_material_examples_examples_cl, ExampleHeader as ɵangular_material_src_material_examples_examples_cm, DatepickerCustomIconExample as ɵangular_material_src_material_examples_examples_cn, DatepickerDateClassExample as ɵangular_material_src_material_examples_examples_co, DatepickerDisabledExample as ɵangular_material_src_material_examples_examples_cp, DatepickerEventsExample as ɵangular_material_src_material_examples_examples_cq, DatepickerFilterExample as ɵangular_material_src_material_examples_examples_cr, DatepickerFormatsExample as ɵangular_material_src_material_examples_examples_ct, MY_FORMATS as ɵangular_material_src_material_examples_examples_cs, DatepickerLocaleExample as ɵangular_material_src_material_examples_examples_cu, DatepickerMinMaxExample as ɵangular_material_src_material_examples_examples_cv, DatepickerMomentExample as ɵangular_material_src_material_examples_examples_cw, DatepickerStartViewExample as ɵangular_material_src_material_examples_examples_cx, DatepickerTouchExample as ɵangular_material_src_material_examples_examples_cy, DatepickerValueExample as ɵangular_material_src_material_examples_examples_cz, DatepickerViewsSelectionExample as ɵangular_material_src_material_examples_examples_db, MY_FORMATS$1 as ɵangular_material_src_material_examples_examples_da, DialogContentExample as ɵangular_material_src_material_examples_examples_dc, DialogContentExampleDialog as ɵangular_material_src_material_examples_examples_dd, DialogDataExample as ɵangular_material_src_material_examples_examples_de, DialogDataExampleDialog as ɵangular_material_src_material_examples_examples_df, DialogElementsExample as ɵangular_material_src_material_examples_examples_dg, DialogElementsExampleDialog as ɵangular_material_src_material_examples_examples_dh, DialogOverviewExample as ɵangular_material_src_material_examples_examples_di, DialogOverviewExampleDialog as ɵangular_material_src_material_examples_examples_dj, DividerOverviewExample as ɵangular_material_src_material_examples_examples_dk, ElevationOverviewExample as ɵangular_material_src_material_examples_examples_dl, ExpansionExpandCollapseAllExample as ɵangular_material_src_material_examples_examples_dm, ExpansionStepsExample as ɵangular_material_src_material_examples_examples_dn, FocusMonitorDirectivesExample as ɵangular_material_src_material_examples_examples_do, FocusMonitorFocusViaExample as ɵangular_material_src_material_examples_examples_dp, FocusMonitorOverviewExample as ɵangular_material_src_material_examples_examples_dq, FormFieldAppearanceExample as ɵangular_material_src_material_examples_examples_dr, FormFieldCustomControlExample as ɵangular_material_src_material_examples_examples_ds, MyTelInput as ɵangular_material_src_material_examples_examples_dt, FormFieldErrorExample as ɵangular_material_src_material_examples_examples_du, FormFieldHintExample as ɵangular_material_src_material_examples_examples_dv, FormFieldLabelExample as ɵangular_material_src_material_examples_examples_dw, FormFieldOverviewExample as ɵangular_material_src_material_examples_examples_dx, FormFieldPrefixSuffixExample as ɵangular_material_src_material_examples_examples_dy, FormFieldThemingExample as ɵangular_material_src_material_examples_examples_dz, GridListDynamicExample as ɵangular_material_src_material_examples_examples_ea, GridListOverviewExample as ɵangular_material_src_material_examples_examples_eb, IconOverviewExample as ɵangular_material_src_material_examples_examples_ec, IconSvgExample as ɵangular_material_src_material_examples_examples_ed, InputClearableExample as ɵangular_material_src_material_examples_examples_ee, InputErrorStateMatcherExample as ɵangular_material_src_material_examples_examples_ef, InputErrorsExample as ɵangular_material_src_material_examples_examples_eg, InputFormExample as ɵangular_material_src_material_examples_examples_eh, InputHintExample as ɵangular_material_src_material_examples_examples_ei, InputOverviewExample as ɵangular_material_src_material_examples_examples_ej, InputPrefixSuffixExample as ɵangular_material_src_material_examples_examples_ek, ListSectionsExample as ɵangular_material_src_material_examples_examples_el, ListSelectionExample as ɵangular_material_src_material_examples_examples_em, ExampleMaterialModule as ɵangular_material_src_material_examples_examples_iy, MenuIconsExample as ɵangular_material_src_material_examples_examples_en, MenuOverviewExample as ɵangular_material_src_material_examples_examples_eo, MenuPositionExample as ɵangular_material_src_material_examples_examples_ep, NestedMenuExample as ɵangular_material_src_material_examples_examples_eq, PaginatorConfigurableExample as ɵangular_material_src_material_examples_examples_er, PaginatorOverviewExample as ɵangular_material_src_material_examples_examples_es, PopoverEditCellSpanMatTableExample as ɵangular_material_src_material_examples_examples_et, PopoverEditMatTableFlexExample as ɵangular_material_src_material_examples_examples_eu, PopoverEditMatTableExample as ɵangular_material_src_material_examples_examples_ev, PopoverEditTabOutMatTableExample as ɵangular_material_src_material_examples_examples_ew, ProgressBarBufferExample as ɵangular_material_src_material_examples_examples_ex, ProgressBarConfigurableExample as ɵangular_material_src_material_examples_examples_ey, ProgressBarDeterminateExample as ɵangular_material_src_material_examples_examples_ez, ProgressBarIndeterminateExample as ɵangular_material_src_material_examples_examples_fa, ProgressBarQueryExample as ɵangular_material_src_material_examples_examples_fb, ProgressSpinnerConfigurableExample as ɵangular_material_src_material_examples_examples_fc, ProgressSpinnerOverviewExample as ɵangular_material_src_material_examples_examples_fd, RadioNgModelExample as ɵangular_material_src_material_examples_examples_fe, RadioOverviewExample as ɵangular_material_src_material_examples_examples_ff, RippleOverviewExample as ɵangular_material_src_material_examples_examples_fg, SelectCustomTriggerExample as ɵangular_material_src_material_examples_examples_fh, SelectDisabledExample as ɵangular_material_src_material_examples_examples_fi, SelectErrorStateMatcherExample as ɵangular_material_src_material_examples_examples_fj, SelectFormExample as ɵangular_material_src_material_examples_examples_fk, SelectHintErrorExample as ɵangular_material_src_material_examples_examples_fl, SelectMultipleExample as ɵangular_material_src_material_examples_examples_fm, SelectNoRippleExample as ɵangular_material_src_material_examples_examples_fn, SelectOptgroupExample as ɵangular_material_src_material_examples_examples_fo, SelectOverviewExample as ɵangular_material_src_material_examples_examples_fp, SelectPanelClassExample as ɵangular_material_src_material_examples_examples_fq, SelectResetExample as ɵangular_material_src_material_examples_examples_fr, SelectValueBindingExample as ɵangular_material_src_material_examples_examples_fs, SidenavAutosizeExample as ɵangular_material_src_material_examples_examples_ft, SidenavBackdropExample as ɵangular_material_src_material_examples_examples_fu, SidenavDisableCloseExample as ɵangular_material_src_material_examples_examples_fv, SidenavDrawerOverviewExample as ɵangular_material_src_material_examples_examples_fw, SidenavFixedExample as ɵangular_material_src_material_examples_examples_fx, SidenavModeExample as ɵangular_material_src_material_examples_examples_fy, SidenavOpenCloseExample as ɵangular_material_src_material_examples_examples_fz, SidenavOverviewExample as ɵangular_material_src_material_examples_examples_ga, SidenavPositionExample as ɵangular_material_src_material_examples_examples_gb, SidenavResponsiveExample as ɵangular_material_src_material_examples_examples_gc, SlideToggleConfigurableExample as ɵangular_material_src_material_examples_examples_gd, SlideToggleFormsExample as ɵangular_material_src_material_examples_examples_ge, SlideToggleOverviewExample as ɵangular_material_src_material_examples_examples_gf, SliderConfigurableExample as ɵangular_material_src_material_examples_examples_gg, SliderFormattingExample as ɵangular_material_src_material_examples_examples_gh, SliderOverviewExample as ɵangular_material_src_material_examples_examples_gi, PizzaPartyComponent as ɵangular_material_src_material_examples_examples_gk, SnackBarComponentExample as ɵangular_material_src_material_examples_examples_gj, SnackBarOverviewExample as ɵangular_material_src_material_examples_examples_gl, SnackBarPositionExample as ɵangular_material_src_material_examples_examples_gm, SortOverviewExample as ɵangular_material_src_material_examples_examples_gn, StepperEditableExample as ɵangular_material_src_material_examples_examples_go, StepperErrorsExample as ɵangular_material_src_material_examples_examples_gp, StepperLabelPositionBottomExample as ɵangular_material_src_material_examples_examples_gq, StepperOptionalExample as ɵangular_material_src_material_examples_examples_gr, StepperStatesExample as ɵangular_material_src_material_examples_examples_gs, StepperVerticalExample as ɵangular_material_src_material_examples_examples_gt, TabGroupAlignExample as ɵangular_material_src_material_examples_examples_gu, TabGroupAnimationsExample as ɵangular_material_src_material_examples_examples_gv, TabGroupAsyncExample as ɵangular_material_src_material_examples_examples_gw, TabGroupBasicExample as ɵangular_material_src_material_examples_examples_gx, TabGroupCustomLabelExample as ɵangular_material_src_material_examples_examples_gy, TabGroupDynamicHeightExample as ɵangular_material_src_material_examples_examples_gz, TabGroupDynamicExample as ɵangular_material_src_material_examples_examples_ha, TabGroupHeaderBelowExample as ɵangular_material_src_material_examples_examples_hb, TabGroupLazyLoadedExample as ɵangular_material_src_material_examples_examples_hc, TabGroupStretchedExample as ɵangular_material_src_material_examples_examples_hd, TabGroupThemeExample as ɵangular_material_src_material_examples_examples_he, TabNavBarBasicExample as ɵangular_material_src_material_examples_examples_hf, TableBasicFlexExample as ɵangular_material_src_material_examples_examples_hg, TableBasicExample as ɵangular_material_src_material_examples_examples_hh, TableDynamicColumnsExample as ɵangular_material_src_material_examples_examples_hi, TableExpandableRowsExample as ɵangular_material_src_material_examples_examples_hj, TableFilteringExample as ɵangular_material_src_material_examples_examples_hk, TableFooterRowExample as ɵangular_material_src_material_examples_examples_hl, TableHttpExample as ɵangular_material_src_material_examples_examples_hm, TableMultipleHeaderFooterExample as ɵangular_material_src_material_examples_examples_hn, TableOverviewExample as ɵangular_material_src_material_examples_examples_ho, TablePaginationExample as ɵangular_material_src_material_examples_examples_hp, TableRowContextExample as ɵangular_material_src_material_examples_examples_hq, TableSelectionExample as ɵangular_material_src_material_examples_examples_hr, TableSortingExample as ɵangular_material_src_material_examples_examples_hs, TableStickyColumnsExample as ɵangular_material_src_material_examples_examples_ht, TableStickyComplexFlexExample as ɵangular_material_src_material_examples_examples_hu, TableStickyComplexExample as ɵangular_material_src_material_examples_examples_hv, TableStickyFooterExample as ɵangular_material_src_material_examples_examples_hw, TableStickyHeaderExample as ɵangular_material_src_material_examples_examples_hx, TableTextColumnAdvancedExample as ɵangular_material_src_material_examples_examples_hy, TableTextColumnExample as ɵangular_material_src_material_examples_examples_hz, TableWrappedExample as ɵangular_material_src_material_examples_examples_ia, WrapperTable as ɵangular_material_src_material_examples_examples_ib, TextFieldAutofillDirectiveExample as ɵangular_material_src_material_examples_examples_ic, TextFieldAutofillMonitorExample as ɵangular_material_src_material_examples_examples_id, TextFieldAutosizeTextareaExample as ɵangular_material_src_material_examples_examples_ie, ToolbarOverviewExample as ɵangular_material_src_material_examples_examples_if, TooltipAutoHideExample as ɵangular_material_src_material_examples_examples_ig, TooltipCustomClassExample as ɵangular_material_src_material_examples_examples_ih, TooltipDelayExample as ɵangular_material_src_material_examples_examples_ii, TooltipDisabledExample as ɵangular_material_src_material_examples_examples_ij, TooltipManualExample as ɵangular_material_src_material_examples_examples_ik, TooltipMessageExample as ɵangular_material_src_material_examples_examples_il, TooltipModifiedDefaultsExample as ɵangular_material_src_material_examples_examples_in, myCustomTooltipDefaults as ɵangular_material_src_material_examples_examples_im, TooltipOverviewExample as ɵangular_material_src_material_examples_examples_io, TooltipPositionExample as ɵangular_material_src_material_examples_examples_ip, ChecklistDatabase as ɵangular_material_src_material_examples_examples_iq, TreeChecklistExample as ɵangular_material_src_material_examples_examples_ir, DynamicDatabase as ɵangular_material_src_material_examples_examples_is, TreeDynamicExample as ɵangular_material_src_material_examples_examples_it, TreeFlatOverviewExample as ɵangular_material_src_material_examples_examples_iu, LoadmoreDatabase as ɵangular_material_src_material_examples_examples_iv, TreeLoadmoreExample as ɵangular_material_src_material_examples_examples_iw, TreeNestedOverviewExample as ɵangular_material_src_material_examples_examples_ix, ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_LIST, ExampleModule, ListOverviewExample, DatepickerOverviewExample, CardFancyExample, ToolbarMultirowExample, ButtonToggleOverviewExample, ExpansionOverviewExample, StepperOverviewExample };
+export { CdkA11yExamplesModule as ɵangular_material_src_material_examples_examples_a, CdkDragDropExamplesModule as ɵangular_material_src_material_examples_examples_b, CdkPlatformExamplesModule as ɵangular_material_src_material_examples_examples_c, CdkPopoverEditExamplesModule as ɵangular_material_src_material_examples_examples_d, CdkPortalExamplesModule as ɵangular_material_src_material_examples_examples_e, CdkScrollingExamplesModule as ɵangular_material_src_material_examples_examples_f, CdkStepperExamplesModule as ɵangular_material_src_material_examples_examples_g, CdkTableExamplesModule as ɵangular_material_src_material_examples_examples_h, CdkTextFieldExamplesModule as ɵangular_material_src_material_examples_examples_i, CdkTreeExamplesModule as ɵangular_material_src_material_examples_examples_j, AutocompleteExamplesModule as ɵangular_material_src_material_examples_examples_k, BadgeExamplesModule as ɵangular_material_src_material_examples_examples_l, BottomSheetExamplesModule as ɵangular_material_src_material_examples_examples_m, ButtonToggleExamplesModule as ɵangular_material_src_material_examples_examples_n, ButtonExamplesModule as ɵangular_material_src_material_examples_examples_o, CardExamplesModule as ɵangular_material_src_material_examples_examples_p, CheckboxExamplesModule as ɵangular_material_src_material_examples_examples_q, ChipsExamplesModule as ɵangular_material_src_material_examples_examples_r, CoreExamplesModule as ɵangular_material_src_material_examples_examples_s, DatepickerExamplesModule as ɵangular_material_src_material_examples_examples_t, DialogExamplesModule as ɵangular_material_src_material_examples_examples_u, DividerExamplesModule as ɵangular_material_src_material_examples_examples_v, ExpansionExamplesModule as ɵangular_material_src_material_examples_examples_w, FormFieldExamplesModule as ɵangular_material_src_material_examples_examples_x, GridListExamplesModule as ɵangular_material_src_material_examples_examples_y, IconExamplesModule as ɵangular_material_src_material_examples_examples_z, InputExamplesModule as ɵangular_material_src_material_examples_examples_ba, ListExamplesModule as ɵangular_material_src_material_examples_examples_bb, MenuExamplesModule as ɵangular_material_src_material_examples_examples_bc, PaginatorExamplesModule as ɵangular_material_src_material_examples_examples_bd, PopoverEditExamplesModule as ɵangular_material_src_material_examples_examples_be, ProgressBarExamplesModule as ɵangular_material_src_material_examples_examples_bf, ProgressSpinnerExamplesModule as ɵangular_material_src_material_examples_examples_bg, RadioExamplesModule as ɵangular_material_src_material_examples_examples_bh, SelectExamplesModule as ɵangular_material_src_material_examples_examples_bi, SidenavExamplesModule as ɵangular_material_src_material_examples_examples_bj, SlideToggleExamplesModule as ɵangular_material_src_material_examples_examples_bk, SliderExamplesModule as ɵangular_material_src_material_examples_examples_bl, SnackBarExamplesModule as ɵangular_material_src_material_examples_examples_bm, SortExamplesModule as ɵangular_material_src_material_examples_examples_bn, StepperExamplesModule as ɵangular_material_src_material_examples_examples_bo, TableExamplesModule as ɵangular_material_src_material_examples_examples_bp, TabGroupExamplesModule as ɵangular_material_src_material_examples_examples_bq, ToolbarExamplesModule as ɵangular_material_src_material_examples_examples_br, TooltipExamplesModule as ɵangular_material_src_material_examples_examples_bs, TreeExamplesModule as ɵangular_material_src_material_examples_examples_bt, ExampleData, EXAMPLE_COMPONENTS, EXAMPLE_MODULES, EXAMPLE_LIST, ExampleModule, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledSortingExample, CdkDragDropDisabledExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkPlatformOverviewExample, CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPortalOverviewExample, ComponentPortalExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CdkCustomStepperWithoutFormExample, CustomStepper, CdkTableBasicFlexExample, CdkTableBasicExample, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, CdkTreeFlatExample, CdkTreeNestedExample, AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteSimpleExample, BadgeOverviewExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonOverviewExample, ButtonTypesExample, CardFancyExample, CardOverviewExample, CheckboxConfigurableExample, CheckboxOverviewExample, ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, ElevationOverviewExample, RippleOverviewExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, ExampleHeader, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog, DividerOverviewExample, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, FormFieldAppearanceExample, FormFieldCustomControlExample, MyTelInput, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, GridListDynamicExample, GridListOverviewExample, IconOverviewExample, IconSvgExample, InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample, PaginatorConfigurableExample, PaginatorOverviewExample, PopoverEditCellSpanMatTableExample, PopoverEditMatTableFlexExample, PopoverEditMatTableExample, PopoverEditTabOutMatTableExample, ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, RadioNgModelExample, RadioOverviewExample, SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SnackBarComponentExample, PizzaPartyComponent, SnackBarOverviewExample, SnackBarPositionExample, SortOverviewExample, StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable, TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, ToolbarMultirowExample, ToolbarOverviewExample, TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample };
 //# sourceMappingURL=material-examples.js.map

@@ -1,0 +1,46 @@
+import * as tslib_1 from "tslib";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { AutocompleteAutoActiveFirstOptionExample } from './autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example';
+import { AutocompleteDisplayExample } from './autocomplete-display/autocomplete-display-example';
+import { AutocompleteFilterExample } from './autocomplete-filter/autocomplete-filter-example';
+import { AutocompleteOptgroupExample } from './autocomplete-optgroup/autocomplete-optgroup-example';
+import { AutocompleteOverviewExample } from './autocomplete-overview/autocomplete-overview-example';
+import { AutocompletePlainInputExample } from './autocomplete-plain-input/autocomplete-plain-input-example';
+import { AutocompleteSimpleExample } from './autocomplete-simple/autocomplete-simple-example';
+var EXAMPLES = [
+    AutocompleteAutoActiveFirstOptionExample,
+    AutocompleteDisplayExample,
+    AutocompleteFilterExample,
+    AutocompleteOptgroupExample,
+    AutocompleteOverviewExample,
+    AutocompletePlainInputExample,
+    AutocompleteSimpleExample,
+];
+var AutocompleteExamplesModule = /** @class */ (function () {
+    function AutocompleteExamplesModule() {
+    }
+    AutocompleteExamplesModule = tslib_1.__decorate([
+        NgModule({
+            imports: [
+                CommonModule,
+                MatAutocompleteModule,
+                MatFormFieldModule,
+                MatInputModule,
+                MatSlideToggleModule,
+                FormsModule,
+                ReactiveFormsModule,
+            ],
+            declarations: EXAMPLES,
+            exports: EXAMPLES,
+        })
+    ], AutocompleteExamplesModule);
+    return AutocompleteExamplesModule;
+}());
+export { AutocompleteExamplesModule };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9kdWxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL21hdGVyaWFsL2F1dG9jb21wbGV0ZS9tb2R1bGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLE9BQU8sRUFBQyxZQUFZLEVBQUMsTUFBTSxpQkFBaUIsQ0FBQztBQUM3QyxPQUFPLEVBQUMsUUFBUSxFQUFDLE1BQU0sZUFBZSxDQUFDO0FBQ3ZDLE9BQU8sRUFBQyxXQUFXLEVBQUUsbUJBQW1CLEVBQUMsTUFBTSxnQkFBZ0IsQ0FBQztBQUNoRSxPQUFPLEVBQUMscUJBQXFCLEVBQUMsTUFBTSxnQ0FBZ0MsQ0FBQztBQUNyRSxPQUFPLEVBQUMsa0JBQWtCLEVBQUMsTUFBTSw4QkFBOEIsQ0FBQztBQUNoRSxPQUFPLEVBQUMsY0FBYyxFQUFDLE1BQU0seUJBQXlCLENBQUM7QUFDdkQsT0FBTyxFQUFDLG9CQUFvQixFQUFDLE1BQU0sZ0NBQWdDLENBQUM7QUFDcEUsT0FBTyxFQUNMLHdDQUF3QyxFQUN6QyxNQUFNLHVGQUF1RixDQUFDO0FBQy9GLE9BQU8sRUFBQywwQkFBMEIsRUFBQyxNQUFNLHFEQUFxRCxDQUFDO0FBQy9GLE9BQU8sRUFBQyx5QkFBeUIsRUFBQyxNQUFNLG1EQUFtRCxDQUFDO0FBQzVGLE9BQU8sRUFBQywyQkFBMkIsRUFBQyxNQUFNLHVEQUF1RCxDQUFDO0FBQ2xHLE9BQU8sRUFBQywyQkFBMkIsRUFBQyxNQUFNLHVEQUF1RCxDQUFDO0FBQ2xHLE9BQU8sRUFDTCw2QkFBNkIsRUFDOUIsTUFBTSw2REFBNkQsQ0FBQztBQUNyRSxPQUFPLEVBQUMseUJBQXlCLEVBQUMsTUFBTSxtREFBbUQsQ0FBQztBQUU1RixJQUFNLFFBQVEsR0FBRztJQUNmLHdDQUF3QztJQUN4QywwQkFBMEI7SUFDMUIseUJBQXlCO0lBQ3pCLDJCQUEyQjtJQUMzQiwyQkFBMkI7SUFDM0IsNkJBQTZCO0lBQzdCLHlCQUF5QjtDQUMxQixDQUFDO0FBZUY7SUFBQTtJQUNBLENBQUM7SUFEWSwwQkFBMEI7UUFidEMsUUFBUSxDQUFDO1lBQ1IsT0FBTyxFQUFFO2dCQUNQLFlBQVk7Z0JBQ1oscUJBQXFCO2dCQUNyQixrQkFBa0I7Z0JBQ2xCLGNBQWM7Z0JBQ2Qsb0JBQW9CO2dCQUNwQixXQUFXO2dCQUNYLG1CQUFtQjthQUNwQjtZQUNELFlBQVksRUFBRSxRQUFRO1lBQ3RCLE9BQU8sRUFBRSxRQUFRO1NBQ2xCLENBQUM7T0FDVywwQkFBMEIsQ0FDdEM7SUFBRCxpQ0FBQztDQUFBLEFBREQsSUFDQztTQURZLDBCQUEwQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tbW9uTW9kdWxlfSBmcm9tICdAYW5ndWxhci9jb21tb24nO1xuaW1wb3J0IHtOZ01vZHVsZX0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQge0Zvcm1zTW9kdWxlLCBSZWFjdGl2ZUZvcm1zTW9kdWxlfSBmcm9tICdAYW5ndWxhci9mb3Jtcyc7XG5pbXBvcnQge01hdEF1dG9jb21wbGV0ZU1vZHVsZX0gZnJvbSAnQGFuZ3VsYXIvbWF0ZXJpYWwvYXV0b2NvbXBsZXRlJztcbmltcG9ydCB7TWF0Rm9ybUZpZWxkTW9kdWxlfSBmcm9tICdAYW5ndWxhci9tYXRlcmlhbC9mb3JtLWZpZWxkJztcbmltcG9ydCB7TWF0SW5wdXRNb2R1bGV9IGZyb20gJ0Bhbmd1bGFyL21hdGVyaWFsL2lucHV0JztcbmltcG9ydCB7TWF0U2xpZGVUb2dnbGVNb2R1bGV9IGZyb20gJ0Bhbmd1bGFyL21hdGVyaWFsL3NsaWRlLXRvZ2dsZSc7XG5pbXBvcnQge1xuICBBdXRvY29tcGxldGVBdXRvQWN0aXZlRmlyc3RPcHRpb25FeGFtcGxlXG59IGZyb20gJy4vYXV0b2NvbXBsZXRlLWF1dG8tYWN0aXZlLWZpcnN0LW9wdGlvbi9hdXRvY29tcGxldGUtYXV0by1hY3RpdmUtZmlyc3Qtb3B0aW9uLWV4YW1wbGUnO1xuaW1wb3J0IHtBdXRvY29tcGxldGVEaXNwbGF5RXhhbXBsZX0gZnJvbSAnLi9hdXRvY29tcGxldGUtZGlzcGxheS9hdXRvY29tcGxldGUtZGlzcGxheS1leGFtcGxlJztcbmltcG9ydCB7QXV0b2NvbXBsZXRlRmlsdGVyRXhhbXBsZX0gZnJvbSAnLi9hdXRvY29tcGxldGUtZmlsdGVyL2F1dG9jb21wbGV0ZS1maWx0ZXItZXhhbXBsZSc7XG5pbXBvcnQge0F1dG9jb21wbGV0ZU9wdGdyb3VwRXhhbXBsZX0gZnJvbSAnLi9hdXRvY29tcGxldGUtb3B0Z3JvdXAvYXV0b2NvbXBsZXRlLW9wdGdyb3VwLWV4YW1wbGUnO1xuaW1wb3J0IHtBdXRvY29tcGxldGVPdmVydmlld0V4YW1wbGV9IGZyb20gJy4vYXV0b2NvbXBsZXRlLW92ZXJ2aWV3L2F1dG9jb21wbGV0ZS1vdmVydmlldy1leGFtcGxlJztcbmltcG9ydCB7XG4gIEF1dG9jb21wbGV0ZVBsYWluSW5wdXRFeGFtcGxlXG59IGZyb20gJy4vYXV0b2NvbXBsZXRlLXBsYWluLWlucHV0L2F1dG9jb21wbGV0ZS1wbGFpbi1pbnB1dC1leGFtcGxlJztcbmltcG9ydCB7QXV0b2NvbXBsZXRlU2ltcGxlRXhhbXBsZX0gZnJvbSAnLi9hdXRvY29tcGxldGUtc2ltcGxlL2F1dG9jb21wbGV0ZS1zaW1wbGUtZXhhbXBsZSc7XG5cbmNvbnN0IEVYQU1QTEVTID0gW1xuICBBdXRvY29tcGxldGVBdXRvQWN0aXZlRmlyc3RPcHRpb25FeGFtcGxlLFxuICBBdXRvY29tcGxldGVEaXNwbGF5RXhhbXBsZSxcbiAgQXV0b2NvbXBsZXRlRmlsdGVyRXhhbXBsZSxcbiAgQXV0b2NvbXBsZXRlT3B0Z3JvdXBFeGFtcGxlLFxuICBBdXRvY29tcGxldGVPdmVydmlld0V4YW1wbGUsXG4gIEF1dG9jb21wbGV0ZVBsYWluSW5wdXRFeGFtcGxlLFxuICBBdXRvY29tcGxldGVTaW1wbGVFeGFtcGxlLFxuXTtcblxuQE5nTW9kdWxlKHtcbiAgaW1wb3J0czogW1xuICAgIENvbW1vbk1vZHVsZSxcbiAgICBNYXRBdXRvY29tcGxldGVNb2R1bGUsXG4gICAgTWF0Rm9ybUZpZWxkTW9kdWxlLFxuICAgIE1hdElucHV0TW9kdWxlLFxuICAgIE1hdFNsaWRlVG9nZ2xlTW9kdWxlLFxuICAgIEZvcm1zTW9kdWxlLFxuICAgIFJlYWN0aXZlRm9ybXNNb2R1bGUsXG4gIF0sXG4gIGRlY2xhcmF0aW9uczogRVhBTVBMRVMsXG4gIGV4cG9ydHM6IEVYQU1QTEVTLFxufSlcbmV4cG9ydCBjbGFzcyBBdXRvY29tcGxldGVFeGFtcGxlc01vZHVsZSB7XG59XG4iXX0=
