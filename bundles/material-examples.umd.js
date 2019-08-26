@@ -1,832 +1,126 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/forms'), require('@angular/common'), require('@angular/cdk-experimental/popover-edit'), require('@angular/cdk/a11y'), require('@angular/cdk/drag-drop'), require('@angular/cdk/portal'), require('@angular/cdk/scrolling'), require('@angular/cdk/stepper'), require('@angular/cdk/table'), require('@angular/cdk/tree'), require('@angular/material/autocomplete'), require('@angular/material/badge'), require('@angular/material/bottom-sheet'), require('@angular/material/button'), require('@angular/material/button-toggle'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/chips'), require('@angular/material/core'), require('@angular/material/datepicker'), require('@angular/material/dialog'), require('@angular/material/divider'), require('@angular/material/expansion'), require('@angular/material/form-field'), require('@angular/material/grid-list'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/list'), require('@angular/material/menu'), require('@angular/material/paginator'), require('@angular/material/progress-bar'), require('@angular/material/progress-spinner'), require('@angular/material/radio'), require('@angular/material/select'), require('@angular/material/sidenav'), require('@angular/material/slide-toggle'), require('@angular/material/slider'), require('@angular/material/snack-bar'), require('@angular/material/sort'), require('@angular/material/stepper'), require('@angular/material/table'), require('@angular/material/tabs'), require('@angular/material/toolbar'), require('@angular/material/tooltip'), require('@angular/material/tree'), require('rxjs/operators'), require('@angular/cdk/overlay'), require('@angular/cdk/platform'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/cdk/keycodes'), require('moment'), require('@angular/cdk/coercion'), require('@angular/platform-browser'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/common/http'), require('@angular/cdk/text-field')) :
-    typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', 'tslib', '@angular/core', '@angular/forms', '@angular/common', '@angular/cdk-experimental/popover-edit', '@angular/cdk/a11y', '@angular/cdk/drag-drop', '@angular/cdk/portal', '@angular/cdk/scrolling', '@angular/cdk/stepper', '@angular/cdk/table', '@angular/cdk/tree', '@angular/material/autocomplete', '@angular/material/badge', '@angular/material/bottom-sheet', '@angular/material/button', '@angular/material/button-toggle', '@angular/material/card', '@angular/material/checkbox', '@angular/material/chips', '@angular/material/core', '@angular/material/datepicker', '@angular/material/dialog', '@angular/material/divider', '@angular/material/expansion', '@angular/material/form-field', '@angular/material/grid-list', '@angular/material/icon', '@angular/material/input', '@angular/material/list', '@angular/material/menu', '@angular/material/paginator', '@angular/material/progress-bar', '@angular/material/progress-spinner', '@angular/material/radio', '@angular/material/select', '@angular/material/sidenav', '@angular/material/slide-toggle', '@angular/material/slider', '@angular/material/snack-bar', '@angular/material/sort', '@angular/material/stepper', '@angular/material/table', '@angular/material/tabs', '@angular/material/toolbar', '@angular/material/tooltip', '@angular/material/tree', 'rxjs/operators', '@angular/cdk/overlay', '@angular/cdk/platform', '@angular/cdk/collections', 'rxjs', '@angular/cdk/keycodes', 'moment', '@angular/cdk/coercion', '@angular/platform-browser', '@angular/cdk/layout', '@angular/animations', '@angular/common/http', '@angular/cdk/text-field'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = {}), global.tslib, global.ng.core, global.ng.forms, global.ng.common, global.ng.cdkExperimental['popover-edit'], global.ng.cdk.a11y, global.ng.cdk['drag-drop'], global.ng.cdk.portal, global.ng.cdk.scrolling, global.ng.cdk.stepper, global.ng.cdk.table, global.ng.cdk.tree, global.ng.material.autocomplete, global.ng.material.badge, global.ng.material['bottom-sheet'], global.ng.material.button, global.ng.material['button-toggle'], global.ng.material.card, global.ng.material.checkbox, global.ng.material.chips, global.ng.material.core, global.ng.material.datepicker, global.ng.material.dialog, global.ng.material.divider, global.ng.material.expansion, global.ng.material['form-field'], global.ng.material['grid-list'], global.ng.material.icon, global.ng.material.input, global.ng.material.list, global.ng.material.menu, global.ng.material.paginator, global.ng.material['progress-bar'], global.ng.material['progress-spinner'], global.ng.material.radio, global.ng.material.select, global.ng.material.sidenav, global.ng.material['slide-toggle'], global.ng.material.slider, global.ng.material['snack-bar'], global.ng.material.sort, global.ng.material.stepper, global.ng.material.table, global.ng.material.tabs, global.ng.material.toolbar, global.ng.material.tooltip, global.ng.material.tree, global.rxjs.operators, global.ng.cdk.overlay, global.ng.cdk.platform, global.ng.cdk.collections, global.rxjs, global.ng.cdk.keycodes, global.moment, global.ng.cdk.coercion, global.ng.platformBrowser, global.ng.cdk.layout, global.ng.animations, global.ng.common.http, global.ng.cdk['text-field']));
-}(this, function (exports, tslib_1, core, forms, common, popoverEdit, a11y, dragDrop, portal, scrolling, stepper, table, tree, autocomplete, badge, bottomSheet, button, buttonToggle, card, checkbox, chips, core$1, datepicker, dialog, divider, expansion, formField, gridList, icon, input, list, menu, paginator, progressBar, progressSpinner, radio, select, sidenav, slideToggle, slider, snackBar, sort, stepper$1, table$1, tabs, toolbar, tooltip, tree$1, operators, overlay, platform, collections, rxjs, keycodes, _rollupMoment, coercion, platformBrowser, layout, animations, http, textField) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/cdk/a11y'), require('@angular/cdk/drag-drop'), require('@angular/cdk/overlay'), require('@angular/cdk/portal'), require('@angular/cdk/platform'), require('@angular/cdk/collections'), require('rxjs'), require('@angular/cdk/scrolling'), require('@angular/cdk/stepper'), require('@angular/cdk/text-field'), require('rxjs/operators'), require('@angular/cdk/tree'), require('@angular/forms'), require('@angular/material/bottom-sheet'), require('@angular/cdk/keycodes'), require('@angular/material/autocomplete'), require('@angular/material/datepicker'), require('@angular/material/core'), require('moment'), require('@angular/material/dialog'), require('@angular/material/expansion'), require('@angular/cdk/coercion'), require('@angular/material/form-field'), require('@angular/platform-browser'), require('@angular/material/icon'), require('@angular/cdk-experimental/popover-edit'), require('@angular/material/snack-bar'), require('@angular/material/sidenav'), require('@angular/cdk/layout'), require('@angular/animations'), require('@angular/material/table'), require('@angular/common/http'), require('@angular/material/paginator'), require('@angular/material/sort'), require('@angular/common'), require('@angular/material/tooltip'), require('@angular/material/tree'), require('@angular/material/select'), require('@angular/cdk/table'), require('@angular/material/input'), require('@angular/material/slide-toggle'), require('@angular/material/badge'), require('@angular/material/list'), require('@angular/material/button-toggle'), require('@angular/material/button'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/radio'), require('@angular/material/chips'), require('@angular/material/divider'), require('@angular/material/grid-list'), require('@angular/material/menu'), require('@angular/material/progress-bar'), require('@angular/material/slider'), require('@angular/material/progress-spinner'), require('@angular/material/toolbar'), require('@angular/material/stepper'), require('@angular/material/tabs')) :
+    typeof define === 'function' && define.amd ? define('@angular/material-examples', ['exports', 'tslib', '@angular/core', '@angular/cdk/a11y', '@angular/cdk/drag-drop', '@angular/cdk/overlay', '@angular/cdk/portal', '@angular/cdk/platform', '@angular/cdk/collections', 'rxjs', '@angular/cdk/scrolling', '@angular/cdk/stepper', '@angular/cdk/text-field', 'rxjs/operators', '@angular/cdk/tree', '@angular/forms', '@angular/material/bottom-sheet', '@angular/cdk/keycodes', '@angular/material/autocomplete', '@angular/material/datepicker', '@angular/material/core', 'moment', '@angular/material/dialog', '@angular/material/expansion', '@angular/cdk/coercion', '@angular/material/form-field', '@angular/platform-browser', '@angular/material/icon', '@angular/cdk-experimental/popover-edit', '@angular/material/snack-bar', '@angular/material/sidenav', '@angular/cdk/layout', '@angular/animations', '@angular/material/table', '@angular/common/http', '@angular/material/paginator', '@angular/material/sort', '@angular/common', '@angular/material/tooltip', '@angular/material/tree', '@angular/material/select', '@angular/cdk/table', '@angular/material/input', '@angular/material/slide-toggle', '@angular/material/badge', '@angular/material/list', '@angular/material/button-toggle', '@angular/material/button', '@angular/material/card', '@angular/material/checkbox', '@angular/material/radio', '@angular/material/chips', '@angular/material/divider', '@angular/material/grid-list', '@angular/material/menu', '@angular/material/progress-bar', '@angular/material/slider', '@angular/material/progress-spinner', '@angular/material/toolbar', '@angular/material/stepper', '@angular/material/tabs'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = {}), global.tslib, global.ng.core, global.ng.cdk.a11y, global.ng.cdk['drag-drop'], global.ng.cdk.overlay, global.ng.cdk.portal, global.ng.cdk.platform, global.ng.cdk.collections, global.rxjs, global.ng.cdk.scrolling, global.ng.cdk.stepper, global.ng.cdk['text-field'], global.rxjs.operators, global.ng.cdk.tree, global.ng.forms, global.ng.material['bottom-sheet'], global.ng.cdk.keycodes, global.ng.material.autocomplete, global.ng.material.datepicker, global.ng.material.core, global.moment, global.ng.material.dialog, global.ng.material.expansion, global.ng.cdk.coercion, global.ng.material['form-field'], global.ng.platformBrowser, global.ng.material.icon, global.ng.cdkExperimental['popover-edit'], global.ng.material['snack-bar'], global.ng.material.sidenav, global.ng.cdk.layout, global.ng.animations, global.ng.material.table, global.ng.common.http, global.ng.material.paginator, global.ng.material.sort, global.ng.common, global.ng.material.tooltip, global.ng.material.tree, global.ng.material.select, global.ng.cdk.table, global.ng.material.input, global.ng.material['slide-toggle'], global.ng.material.badge, global.ng.material.list, global.ng.material['button-toggle'], global.ng.material.button, global.ng.material.card, global.ng.material.checkbox, global.ng.material.radio, global.ng.material.chips, global.ng.material.divider, global.ng.material['grid-list'], global.ng.material.menu, global.ng.material['progress-bar'], global.ng.material.slider, global.ng.material['progress-spinner'], global.ng.material.toolbar, global.ng.material.stepper, global.ng.material.tabs));
+}(this, function (exports, tslib_1, core, a11y, dragDrop, overlay, portal, platform, collections, rxjs, scrolling, stepper, textField, operators, tree, forms, bottomSheet, keycodes, autocomplete, datepicker, core$1, _rollupMoment, dialog, expansion, coercion, formField, platformBrowser, icon, popoverEdit, snackBar, sidenav, layout, animations, table, http, paginator, sort, common, tooltip, tree$1, select, table$1, input, slideToggle, badge, list, buttonToggle, button, card, checkbox, radio, chips, divider, gridList, menu, progressBar, slider, progressSpinner, toolbar, stepper$1, tabs) { 'use strict';
 
     var _rollupMoment__default = 'default' in _rollupMoment ? _rollupMoment['default'] : _rollupMoment;
 
-    /**
-     * @license
-     * Copyright Google LLC All Rights Reserved.
-     *
-     * Use of this source code is governed by an MIT-style license that can be
-     * found in the LICENSE file at https://angular.io/license
-     */
-    /**
-     * A component that attaches to a form within the edit.
-     * It coordinates the form state with the table-wide edit system and handles
-     * closing the edit when the form is submitted or the user clicks
-     * out.
-     */
-    var MatEditLens = /** @class */ (function (_super) {
-        tslib_1.__extends(MatEditLens, _super);
-        function MatEditLens() {
-            return _super !== null && _super.apply(this, arguments) || this;
+    /** @title Monitoring focus with FocusMonitor */
+    var FocusMonitorDirectivesExample = /** @class */ (function () {
+        function FocusMonitorDirectivesExample(_ngZone, _cdr) {
+            this._ngZone = _ngZone;
+            this._cdr = _cdr;
+            this.elementOrigin = this.formatOrigin(null);
+            this.subtreeOrigin = this.formatOrigin(null);
         }
-        MatEditLens = tslib_1.__decorate([
-            core.Directive({
-                selector: 'form[matEditLens]',
-                host: {
-                    'class': 'mat-edit-lens',
-                },
-                inputs: [
-                    'clickOutBehavior: matEditLensClickOutBehavior',
-                    'preservedFormValue: matEditLensPreservedFormValue',
-                    'ignoreSubmitUnlessValid: matEditLensIgnoreSubmitUnlessValid',
-                ],
-                outputs: ['preservedFormValueChange: matEditLensPreservedFormValueChange'],
-                providers: [popoverEdit.EditRef],
-            })
-        ], MatEditLens);
-        return MatEditLens;
-    }(popoverEdit.CdkEditControl));
-    /** Reverts the form to its initial or previously submitted state on click. */
-    var MatEditRevert = /** @class */ (function (_super) {
-        tslib_1.__extends(MatEditRevert, _super);
-        function MatEditRevert() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        MatEditRevert = tslib_1.__decorate([
-            core.Directive({
-                selector: 'button[matEditRevert]',
-                host: {
-                    'type': 'button',
-                }
-            })
-        ], MatEditRevert);
-        return MatEditRevert;
-    }(popoverEdit.CdkEditRevert));
-    /** Closes the lens on click. */
-    var MatEditClose = /** @class */ (function (_super) {
-        tslib_1.__extends(MatEditClose, _super);
-        function MatEditClose() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        MatEditClose = tslib_1.__decorate([
-            core.Directive({
-                selector: 'button[matEditClose]',
-                host: {
-                    'type': 'button',
-                }
-            })
-        ], MatEditClose);
-        return MatEditClose;
-    }(popoverEdit.CdkEditClose));
-
-    var POPOVER_EDIT_HOST_BINDINGS = {
-        'tabIndex': '0',
-        'class': 'mat-popover-edit-cell',
-        '[attr.aria-haspopup]': 'true',
-    };
-    var POPOVER_EDIT_INPUTS = [
-        'template: matPopoverEdit',
-        'context: matPopoverEditContext',
-        'colspan: matPopoverEditColspan',
-    ];
-    var EDIT_PANE_CLASS = 'mat-edit-pane';
-    var MAT_ROW_HOVER_CLASS = 'mat-row-hover-content';
-    var MAT_ROW_HOVER_RTL_CLASS = MAT_ROW_HOVER_CLASS + '-rtl';
-    var MAT_ROW_HOVER_ANIMATE_CLASS = MAT_ROW_HOVER_CLASS + '-visible';
-    var MAT_ROW_HOVER_CELL_CLASS = MAT_ROW_HOVER_CLASS + '-host-cell';
-    /**
-     * Attaches an ng-template to a cell and shows it when instructed to by the
-     * EditEventDispatcher service.
-     * Makes the cell focusable.
-     */
-    var MatPopoverEdit = /** @class */ (function (_super) {
-        tslib_1.__extends(MatPopoverEdit, _super);
-        function MatPopoverEdit() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        MatPopoverEdit.prototype.panelClass = function () {
-            return EDIT_PANE_CLASS;
+        FocusMonitorDirectivesExample.prototype.formatOrigin = function (origin) {
+            return origin ? origin + ' focused' : 'blurred';
         };
-        MatPopoverEdit = tslib_1.__decorate([
-            core.Directive({
-                selector: '[matPopoverEdit]:not([matPopoverEditTabOut])',
-                host: POPOVER_EDIT_HOST_BINDINGS,
-                inputs: POPOVER_EDIT_INPUTS,
-            })
-        ], MatPopoverEdit);
-        return MatPopoverEdit;
-    }(popoverEdit.CdkPopoverEdit));
-    /**
-     * Attaches an ng-template to a cell and shows it when instructed to by the
-     * EditEventDispatcher service.
-     * Makes the cell focusable.
-     */
-    var MatPopoverEditTabOut = /** @class */ (function (_super) {
-        tslib_1.__extends(MatPopoverEditTabOut, _super);
-        function MatPopoverEditTabOut() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        MatPopoverEditTabOut.prototype.panelClass = function () {
-            return EDIT_PANE_CLASS;
-        };
-        MatPopoverEditTabOut = tslib_1.__decorate([
-            core.Directive({
-                selector: '[matPopoverEdit][matPopoverEditTabOut]',
-                host: POPOVER_EDIT_HOST_BINDINGS,
-                inputs: POPOVER_EDIT_INPUTS,
-            })
-        ], MatPopoverEditTabOut);
-        return MatPopoverEditTabOut;
-    }(popoverEdit.CdkPopoverEditTabOut));
-    /**
-     * A structural directive that shows its contents when the table row containing
-     * it is hovered or when an element in the row has focus.
-     */
-    var MatRowHoverContent = /** @class */ (function (_super) {
-        tslib_1.__extends(MatRowHoverContent, _super);
-        function MatRowHoverContent() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        MatRowHoverContent.prototype.initElement = function (element) {
-            _super.prototype.initElement.call(this, element);
-            element.classList.add(MAT_ROW_HOVER_CLASS);
-        };
-        MatRowHoverContent.prototype.makeElementHiddenButFocusable = function (element) {
-            element.classList.remove(MAT_ROW_HOVER_ANIMATE_CLASS);
-        };
-        MatRowHoverContent.prototype.makeElementVisible = function (element) {
-            popoverEdit._closest(this.elementRef.nativeElement, popoverEdit._CELL_SELECTOR)
-                .classList.add(MAT_ROW_HOVER_CELL_CLASS);
-            if (this.services.directionality.value === 'rtl') {
-                element.classList.add(MAT_ROW_HOVER_RTL_CLASS);
-            }
-            else {
-                element.classList.remove(MAT_ROW_HOVER_RTL_CLASS);
-            }
-            element.classList.remove(MAT_ROW_HOVER_ANIMATE_CLASS);
-            this.services.ngZone.runOutsideAngular(function () {
-                setTimeout(function () {
-                    element.classList.add(MAT_ROW_HOVER_ANIMATE_CLASS);
-                });
-            });
-        };
-        MatRowHoverContent = tslib_1.__decorate([
-            core.Directive({
-                selector: '[matRowHoverContent]',
-            })
-        ], MatRowHoverContent);
-        return MatRowHoverContent;
-    }(popoverEdit.CdkRowHoverContent));
-    /**
-     * Opens the closest edit popover to this element, whether it's associated with this exact
-     * element or an ancestor element.
-     */
-    var MatEditOpen = /** @class */ (function (_super) {
-        tslib_1.__extends(MatEditOpen, _super);
-        function MatEditOpen() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        MatEditOpen = tslib_1.__decorate([
-            core.Directive({
-                selector: '[matEditOpen]',
-            })
-        ], MatEditOpen);
-        return MatEditOpen;
-    }(popoverEdit.CdkEditOpen));
-
-    /**
-     * @license
-     * Copyright Google LLC All Rights Reserved.
-     *
-     * Use of this source code is governed by an MIT-style license that can be
-     * found in the LICENSE file at https://angular.io/license
-     */
-    var EXPORTED_DECLARATIONS = [
-        MatPopoverEdit,
-        MatPopoverEditTabOut,
-        MatRowHoverContent,
-        MatEditLens,
-        MatEditRevert,
-        MatEditClose,
-        MatEditOpen
-    ];
-    var MatPopoverEditModule = /** @class */ (function () {
-        function MatPopoverEditModule() {
-        }
-        MatPopoverEditModule = tslib_1.__decorate([
-            core.NgModule({
-                imports: [
-                    popoverEdit.CdkPopoverEditModule,
-                    common.CommonModule,
-                ],
-                exports: tslib_1.__spread(EXPORTED_DECLARATIONS, [
-                    popoverEdit.CdkEditable,
-                ]),
-                declarations: EXPORTED_DECLARATIONS,
-            })
-        ], MatPopoverEditModule);
-        return MatPopoverEditModule;
-    }());
-
-    /**
-     * @license
-     * Copyright Google LLC All Rights Reserved.
-     *
-     * Use of this source code is governed by an MIT-style license that can be
-     * found in the LICENSE file at https://angular.io/license
-     */
-
-    /**
-     * @license
-     * Copyright Google LLC All Rights Reserved.
-     *
-     * Use of this source code is governed by an MIT-style license that can be
-     * found in the LICENSE file at https://angular.io/license
-     */
-
-    var ExampleMaterialModule = /** @class */ (function () {
-        function ExampleMaterialModule() {
-        }
-        ExampleMaterialModule = tslib_1.__decorate([
-            core.NgModule({
-                imports: [
-                    a11y.A11yModule,
-                    popoverEdit.CdkPopoverEditModule,
-                    table.CdkTableModule,
-                    tree.CdkTreeModule,
-                    stepper.CdkStepperModule,
-                    dragDrop.DragDropModule,
-                    autocomplete.MatAutocompleteModule,
-                    badge.MatBadgeModule,
-                    bottomSheet.MatBottomSheetModule,
-                    button.MatButtonModule,
-                    buttonToggle.MatButtonToggleModule,
-                    card.MatCardModule,
-                    checkbox.MatCheckboxModule,
-                    chips.MatChipsModule,
-                    datepicker.MatDatepickerModule,
-                    dialog.MatDialogModule,
-                    divider.MatDividerModule,
-                    expansion.MatExpansionModule,
-                    formField.MatFormFieldModule,
-                    gridList.MatGridListModule,
-                    icon.MatIconModule,
-                    input.MatInputModule,
-                    list.MatListModule,
-                    menu.MatMenuModule,
-                    paginator.MatPaginatorModule,
-                    MatPopoverEditModule,
-                    progressBar.MatProgressBarModule,
-                    progressSpinner.MatProgressSpinnerModule,
-                    radio.MatRadioModule,
-                    core$1.MatRippleModule,
-                    select.MatSelectModule,
-                    sidenav.MatSidenavModule,
-                    slideToggle.MatSlideToggleModule,
-                    slider.MatSliderModule,
-                    snackBar.MatSnackBarModule,
-                    sort.MatSortModule,
-                    stepper$1.MatStepperModule,
-                    table$1.MatTableModule,
-                    tabs.MatTabsModule,
-                    toolbar.MatToolbarModule,
-                    tooltip.MatTooltipModule,
-                    tree$1.MatTreeModule,
-                    scrolling.ScrollingModule,
-                    portal.PortalModule,
-                    core$1.MatNativeDateModule,
-                ],
-                exports: [
-                    a11y.A11yModule,
-                    popoverEdit.CdkPopoverEditModule,
-                    table.CdkTableModule,
-                    tree.CdkTreeModule,
-                    stepper.CdkStepperModule,
-                    dragDrop.DragDropModule,
-                    autocomplete.MatAutocompleteModule,
-                    badge.MatBadgeModule,
-                    bottomSheet.MatBottomSheetModule,
-                    button.MatButtonModule,
-                    buttonToggle.MatButtonToggleModule,
-                    card.MatCardModule,
-                    checkbox.MatCheckboxModule,
-                    chips.MatChipsModule,
-                    datepicker.MatDatepickerModule,
-                    dialog.MatDialogModule,
-                    divider.MatDividerModule,
-                    expansion.MatExpansionModule,
-                    formField.MatFormFieldModule,
-                    gridList.MatGridListModule,
-                    icon.MatIconModule,
-                    input.MatInputModule,
-                    list.MatListModule,
-                    menu.MatMenuModule,
-                    paginator.MatPaginatorModule,
-                    MatPopoverEditModule,
-                    progressBar.MatProgressBarModule,
-                    progressSpinner.MatProgressSpinnerModule,
-                    radio.MatRadioModule,
-                    core$1.MatRippleModule,
-                    select.MatSelectModule,
-                    sidenav.MatSidenavModule,
-                    slideToggle.MatSlideToggleModule,
-                    slider.MatSliderModule,
-                    snackBar.MatSnackBarModule,
-                    sort.MatSortModule,
-                    stepper$1.MatStepperModule,
-                    table$1.MatTableModule,
-                    tabs.MatTabsModule,
-                    toolbar.MatToolbarModule,
-                    tooltip.MatTooltipModule,
-                    tree$1.MatTreeModule,
-                    scrolling.ScrollingModule,
-                    portal.PortalModule,
-                    core$1.MatNativeDateModule,
-                ]
-            })
-        ], ExampleMaterialModule);
-        return ExampleMaterialModule;
-    }());
-
-    /**
-     * @title Highlight the first autocomplete option
-     */
-    var AutocompleteAutoActiveFirstOptionExample = /** @class */ (function () {
-        function AutocompleteAutoActiveFirstOptionExample() {
-            this.myControl = new forms.FormControl();
-            this.options = ['One', 'Two', 'Three'];
-        }
-        AutocompleteAutoActiveFirstOptionExample.prototype.ngOnInit = function () {
+        // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
+        FocusMonitorDirectivesExample.prototype.markForCheck = function () {
             var _this = this;
-            this.filteredOptions = this.myControl.valueChanges.pipe(operators.startWith(''), operators.map(function (value) { return _this._filter(value); }));
+            this._ngZone.run(function () { return _this._cdr.markForCheck(); });
         };
-        AutocompleteAutoActiveFirstOptionExample.prototype._filter = function (value) {
-            var filterValue = value.toLowerCase();
-            return this.options.filter(function (option) { return option.toLowerCase().indexOf(filterValue) === 0; });
-        };
-        AutocompleteAutoActiveFirstOptionExample = tslib_1.__decorate([
+        FocusMonitorDirectivesExample = tslib_1.__decorate([
             core.Component({
-                selector: 'autocomplete-auto-active-first-option-example',
-                template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
-                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
-            })
-        ], AutocompleteAutoActiveFirstOptionExample);
-        return AutocompleteAutoActiveFirstOptionExample;
-    }());
-
-    /**
-     * @title Display value autocomplete
-     */
-    var AutocompleteDisplayExample = /** @class */ (function () {
-        function AutocompleteDisplayExample() {
-            this.myControl = new forms.FormControl();
-            this.options = [
-                { name: 'Mary' },
-                { name: 'Shelley' },
-                { name: 'Igor' }
-            ];
-        }
-        AutocompleteDisplayExample.prototype.ngOnInit = function () {
-            var _this = this;
-            this.filteredOptions = this.myControl.valueChanges
-                .pipe(operators.startWith(''), operators.map(function (value) { return typeof value === 'string' ? value : value.name; }), operators.map(function (name) { return name ? _this._filter(name) : _this.options.slice(); }));
-        };
-        AutocompleteDisplayExample.prototype.displayFn = function (user) {
-            return user ? user.name : undefined;
-        };
-        AutocompleteDisplayExample.prototype._filter = function (name) {
-            var filterValue = name.toLowerCase();
-            return this.options.filter(function (option) { return option.name.toLowerCase().indexOf(filterValue) === 0; });
-        };
-        AutocompleteDisplayExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'autocomplete-display-example',
-                template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Assignee\" aria-label=\"Assignee\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\" [displayWith]=\"displayFn\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option.name}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
-                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
-            })
-        ], AutocompleteDisplayExample);
-        return AutocompleteDisplayExample;
-    }());
-
-    /**
-     * @title Filter autocomplete
-     */
-    var AutocompleteFilterExample = /** @class */ (function () {
-        function AutocompleteFilterExample() {
-            this.myControl = new forms.FormControl();
-            this.options = ['One', 'Two', 'Three'];
-        }
-        AutocompleteFilterExample.prototype.ngOnInit = function () {
-            var _this = this;
-            this.filteredOptions = this.myControl.valueChanges
-                .pipe(operators.startWith(''), operators.map(function (value) { return _this._filter(value); }));
-        };
-        AutocompleteFilterExample.prototype._filter = function (value) {
-            var filterValue = value.toLowerCase();
-            return this.options.filter(function (option) { return option.toLowerCase().includes(filterValue); });
-        };
-        AutocompleteFilterExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'autocomplete-filter-example',
-                template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
-                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
-            })
-        ], AutocompleteFilterExample);
-        return AutocompleteFilterExample;
-    }());
-
-    var _filter = function (opt, value) {
-        var filterValue = value.toLowerCase();
-        return opt.filter(function (item) { return item.toLowerCase().indexOf(filterValue) === 0; });
-    };
-    /**
-     * @title Option groups autocomplete
-     */
-    var AutocompleteOptgroupExample = /** @class */ (function () {
-        function AutocompleteOptgroupExample(_formBuilder) {
-            this._formBuilder = _formBuilder;
-            this.stateForm = this._formBuilder.group({
-                stateGroup: '',
-            });
-            this.stateGroups = [{
-                    letter: 'A',
-                    names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
-                }, {
-                    letter: 'C',
-                    names: ['California', 'Colorado', 'Connecticut']
-                }, {
-                    letter: 'D',
-                    names: ['Delaware']
-                }, {
-                    letter: 'F',
-                    names: ['Florida']
-                }, {
-                    letter: 'G',
-                    names: ['Georgia']
-                }, {
-                    letter: 'H',
-                    names: ['Hawaii']
-                }, {
-                    letter: 'I',
-                    names: ['Idaho', 'Illinois', 'Indiana', 'Iowa']
-                }, {
-                    letter: 'K',
-                    names: ['Kansas', 'Kentucky']
-                }, {
-                    letter: 'L',
-                    names: ['Louisiana']
-                }, {
-                    letter: 'M',
-                    names: ['Maine', 'Maryland', 'Massachusetts', 'Michigan',
-                        'Minnesota', 'Mississippi', 'Missouri', 'Montana']
-                }, {
-                    letter: 'N',
-                    names: ['Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
-                        'New Mexico', 'New York', 'North Carolina', 'North Dakota']
-                }, {
-                    letter: 'O',
-                    names: ['Ohio', 'Oklahoma', 'Oregon']
-                }, {
-                    letter: 'P',
-                    names: ['Pennsylvania']
-                }, {
-                    letter: 'R',
-                    names: ['Rhode Island']
-                }, {
-                    letter: 'S',
-                    names: ['South Carolina', 'South Dakota']
-                }, {
-                    letter: 'T',
-                    names: ['Tennessee', 'Texas']
-                }, {
-                    letter: 'U',
-                    names: ['Utah']
-                }, {
-                    letter: 'V',
-                    names: ['Vermont', 'Virginia']
-                }, {
-                    letter: 'W',
-                    names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
-                }];
-        }
-        AutocompleteOptgroupExample.prototype.ngOnInit = function () {
-            var _this = this;
-            this.stateGroupOptions = this.stateForm.get('stateGroup').valueChanges
-                .pipe(operators.startWith(''), operators.map(function (value) { return _this._filterGroup(value); }));
-        };
-        AutocompleteOptgroupExample.prototype._filterGroup = function (value) {
-            if (value) {
-                return this.stateGroups
-                    .map(function (group) { return ({ letter: group.letter, names: _filter(group.names, value) }); })
-                    .filter(function (group) { return group.names.length > 0; });
-            }
-            return this.stateGroups;
-        };
-        AutocompleteOptgroupExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'autocomplete-optgroup-example',
-                template: "<form [formGroup]=\"stateForm\">\n  <mat-form-field>\n    <input type=\"text\" matInput placeholder=\"States Group\" formControlName=\"stateGroup\" required [matAutocomplete]=\"autoGroup\">\n      <mat-autocomplete #autoGroup=\"matAutocomplete\">\n        <mat-optgroup *ngFor=\"let group of stateGroupOptions | async\" [label]=\"group.letter\">\n          <mat-option *ngFor=\"let name of group.names\" [value]=\"name\">\n            {{name}}\n          </mat-option>\n      </mat-optgroup>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
-                styles: ["/** No CSS for this example */\n"]
+                selector: 'focus-monitor-directives-example',
+                template: "<div class=\"example-focus-monitor\">\n  <button cdkMonitorSubtreeFocus\n          (cdkFocusChange)=\"elementOrigin = formatOrigin($event); markForCheck()\">\n    Focus Monitored Element ({{elementOrigin}})\n  </button>\n</div>\n\n<div class=\"example-focus-monitor\">\n  <div cdkMonitorSubtreeFocus\n       (cdkFocusChange)=\"subtreeOrigin = formatOrigin($event); markForCheck()\">\n    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>\n    <button>Child Button 1</button>\n    <button>Child Button 2</button>\n  </div>\n</div>\n",
+                styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton {\n  margin-right: 12px;\n}\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [forms.FormBuilder])
-        ], AutocompleteOptgroupExample);
-        return AutocompleteOptgroupExample;
+            tslib_1.__metadata("design:paramtypes", [core.NgZone, core.ChangeDetectorRef])
+        ], FocusMonitorDirectivesExample);
+        return FocusMonitorDirectivesExample;
     }());
 
-    /**
-     * @title Autocomplete overview
-     */
-    var AutocompleteOverviewExample = /** @class */ (function () {
-        function AutocompleteOverviewExample() {
+    /** @title Focusing with a specific FocusOrigin */
+    var FocusMonitorFocusViaExample = /** @class */ (function () {
+        function FocusMonitorFocusViaExample(focusMonitor, _cdr, _ngZone) {
+            this.focusMonitor = focusMonitor;
+            this._cdr = _cdr;
+            this._ngZone = _ngZone;
+            this.origin = this.formatOrigin(null);
+        }
+        FocusMonitorFocusViaExample.prototype.ngAfterViewInit = function () {
             var _this = this;
-            this.stateCtrl = new forms.FormControl();
-            this.states = [
-                {
-                    name: 'Arkansas',
-                    population: '2.978M',
-                    // https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg
-                    flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg'
-                },
-                {
-                    name: 'California',
-                    population: '39.14M',
-                    // https://commons.wikimedia.org/wiki/File:Flag_of_California.svg
-                    flag: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg'
-                },
-                {
-                    name: 'Florida',
-                    population: '20.27M',
-                    // https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg
-                    flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg'
-                },
-                {
-                    name: 'Texas',
-                    population: '27.47M',
-                    // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
-                    flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
-                }
-            ];
-            this.filteredStates = this.stateCtrl.valueChanges
-                .pipe(operators.startWith(''), operators.map(function (state) { return state ? _this._filterStates(state) : _this.states.slice(); }));
-        }
-        AutocompleteOverviewExample.prototype._filterStates = function (value) {
-            var filterValue = value.toLowerCase();
-            return this.states.filter(function (state) { return state.name.toLowerCase().indexOf(filterValue) === 0; });
+            this.focusMonitor.monitor(this.monitoredEl)
+                .subscribe(function (origin) { return _this._ngZone.run(function () {
+                _this.origin = _this.formatOrigin(origin);
+                _this._cdr.markForCheck();
+            }); });
         };
-        AutocompleteOverviewExample = tslib_1.__decorate([
+        FocusMonitorFocusViaExample.prototype.ngOnDestroy = function () {
+            this.focusMonitor.stopMonitoring(this.monitoredEl);
+        };
+        FocusMonitorFocusViaExample.prototype.formatOrigin = function (origin) {
+            return origin ? origin + ' focused' : 'blurred';
+        };
+        tslib_1.__decorate([
+            core.ViewChild('monitored', { static: false }),
+            tslib_1.__metadata("design:type", core.ElementRef)
+        ], FocusMonitorFocusViaExample.prototype, "monitoredEl", void 0);
+        FocusMonitorFocusViaExample = tslib_1.__decorate([
             core.Component({
-                selector: 'autocomplete-overview-example',
-                template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"State\" aria-label=\"State\" [matAutocomplete]=\"auto\" [formControl]=\"stateCtrl\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let state of filteredStates | async\" [value]=\"state.name\">\n        <img class=\"example-option-img\" aria-hidden [src]=\"state.flag\" height=\"25\">\n        <span>{{state.name}}</span> |\n        <small>Population: {{state.population}}</small>\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n\n  <br>\n\n  <mat-slide-toggle\n    [checked]=\"stateCtrl.disabled\"\n    (change)=\"stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()\">\n    Disable Input?\n  </mat-slide-toggle>\n</form>\n",
-                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n\n.example-option-img {\n  vertical-align: middle;\n  margin-right: 8px;\n}\n\n[dir='rtl'] .example-option-img {\n  margin-right: 0;\n  margin-left: 8px;\n}\n"]
+                selector: 'focus-monitor-focus-via-example',
+                template: "<div class=\"example-focus-monitor\">\n  <button #monitored>1. Focus Monitored Element ({{origin}})</button>\n  <button #unmonitored>2. Not Monitored</button>\n</div>\n\n<mat-form-field>\n  <mat-label>Simulated focus origin</mat-label>\n  <mat-select #simulatedOrigin value=\"mouse\">\n    <mat-option value=\"mouse\">Mouse</mat-option>\n    <mat-option value=\"keyboard\">Keyboard</mat-option>\n    <mat-option value=\"touch\">Touch</mat-option>\n    <mat-option value=\"program\">Programmatic</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<button (click)=\"focusMonitor.focusVia(monitored, simulatedOrigin.value)\">\n  Focus button #1\n</button>\n<button (click)=\"focusMonitor.focusVia(unmonitored, simulatedOrigin.value)\">\n  Focus button #2\n</button>\n",
+                styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\n.example-focus-monitor button:focus {\n  box-shadow: 0 0 30px cyan;\n}\n\nmat-form-field,\nbutton {\n  margin-right: 12px;\n}\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [])
-        ], AutocompleteOverviewExample);
-        return AutocompleteOverviewExample;
+            tslib_1.__metadata("design:paramtypes", [a11y.FocusMonitor,
+                core.ChangeDetectorRef,
+                core.NgZone])
+        ], FocusMonitorFocusViaExample);
+        return FocusMonitorFocusViaExample;
     }());
 
-    /**
-     * @title Plain input autocomplete
-     */
-    var AutocompletePlainInputExample = /** @class */ (function () {
-        function AutocompletePlainInputExample() {
-            this.control = new forms.FormControl();
-            this.streets = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+    /** @title Monitoring focus with FocusMonitor */
+    var FocusMonitorOverviewExample = /** @class */ (function () {
+        function FocusMonitorOverviewExample(_focusMonitor, _cdr, _ngZone) {
+            this._focusMonitor = _focusMonitor;
+            this._cdr = _cdr;
+            this._ngZone = _ngZone;
+            this.elementOrigin = this.formatOrigin(null);
+            this.subtreeOrigin = this.formatOrigin(null);
         }
-        AutocompletePlainInputExample.prototype.ngOnInit = function () {
+        FocusMonitorOverviewExample.prototype.ngAfterViewInit = function () {
             var _this = this;
-            this.filteredStreets = this.control.valueChanges.pipe(operators.startWith(''), operators.map(function (value) { return _this._filter(value); }));
+            this._focusMonitor.monitor(this.element)
+                .subscribe(function (origin) { return _this._ngZone.run(function () {
+                _this.elementOrigin = _this.formatOrigin(origin);
+                _this._cdr.markForCheck();
+            }); });
+            this._focusMonitor.monitor(this.subtree, true)
+                .subscribe(function (origin) { return _this._ngZone.run(function () {
+                _this.subtreeOrigin = _this.formatOrigin(origin);
+                _this._cdr.markForCheck();
+            }); });
         };
-        AutocompletePlainInputExample.prototype._filter = function (value) {
-            var _this = this;
-            var filterValue = this._normalizeValue(value);
-            return this.streets.filter(function (street) { return _this._normalizeValue(street).includes(filterValue); });
+        FocusMonitorOverviewExample.prototype.ngOnDestroy = function () {
+            this._focusMonitor.stopMonitoring(this.element);
+            this._focusMonitor.stopMonitoring(this.subtree);
         };
-        AutocompletePlainInputExample.prototype._normalizeValue = function (value) {
-            return value.toLowerCase().replace(/\s/g, '');
+        FocusMonitorOverviewExample.prototype.formatOrigin = function (origin) {
+            return origin ? origin + ' focused' : 'blurred';
         };
-        AutocompletePlainInputExample = tslib_1.__decorate([
+        tslib_1.__decorate([
+            core.ViewChild('element', { static: false }),
+            tslib_1.__metadata("design:type", core.ElementRef)
+        ], FocusMonitorOverviewExample.prototype, "element", void 0);
+        tslib_1.__decorate([
+            core.ViewChild('subtree', { static: false }),
+            tslib_1.__metadata("design:type", core.ElementRef)
+        ], FocusMonitorOverviewExample.prototype, "subtree", void 0);
+        FocusMonitorOverviewExample = tslib_1.__decorate([
             core.Component({
-                selector: 'autocomplete-plain-input-example',
-                template: "<form class=\"example-form\">\n  <input type=\"text\" placeholder=\"Search for a street\" [formControl]=\"control\" [matAutocomplete]=\"auto\">\n  <mat-autocomplete #auto=\"matAutocomplete\">\n    <mat-option *ngFor=\"let street of filteredStreets | async\" [value]=\"street\">\n      {{street}}\n    </mat-option>\n  </mat-autocomplete>\n</form>\n",
-                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
-            })
-        ], AutocompletePlainInputExample);
-        return AutocompletePlainInputExample;
-    }());
-
-    /**
-     * @title Simple autocomplete
-     */
-    var AutocompleteSimpleExample = /** @class */ (function () {
-        function AutocompleteSimpleExample() {
-            this.myControl = new forms.FormControl();
-            this.options = ['One', 'Two', 'Three'];
-        }
-        AutocompleteSimpleExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'autocomplete-simple-example',
-                template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of options\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
-                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
-            })
-        ], AutocompleteSimpleExample);
-        return AutocompleteSimpleExample;
-    }());
-
-    /**
-     * @title Badge overview
-     */
-    var BadgeOverviewExample = /** @class */ (function () {
-        function BadgeOverviewExample() {
-        }
-        BadgeOverviewExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'badge-overview-example',
-                template: "<p>\n  <span matBadge=\"4\" matBadgeOverlap=\"false\">Text with a badge</span>\n</p>\n\n<p>\n  Button with a badge on the left\n  <button mat-raised-button color=\"primary\"\n      matBadge=\"8\" matBadgePosition=\"before\" matBadgeColor=\"accent\">\n    Action\n  </button>\n</p>\n\n<p>\n  Icon with a badge\n  <mat-icon matBadge=\"15\" matBadgeColor=\"warn\">home</mat-icon>\n    <!-- Include text description of the icon's meaning for screen-readers -->\n    <span class=\"cdk-visually-hidden\">\n      Example with a home icon with overlaid badge showing the number 15\n    </span>\n</p>\n\n",
-                styles: ["/** No CSS for this example */\n"]
-            })
-        ], BadgeOverviewExample);
-        return BadgeOverviewExample;
-    }());
-
-    /**
-     * @title Bottom Sheet Overview
-     */
-    var BottomSheetOverviewExample = /** @class */ (function () {
-        function BottomSheetOverviewExample(_bottomSheet) {
-            this._bottomSheet = _bottomSheet;
-        }
-        BottomSheetOverviewExample.prototype.openBottomSheet = function () {
-            this._bottomSheet.open(BottomSheetOverviewExampleSheet);
-        };
-        BottomSheetOverviewExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'bottom-sheet-overview-example',
-                template: "<p>You have received a file called \"cat-picture.jpeg\".</p>\n\n<button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>\n",
-                styles: ["/** No CSS for this example */\n"]
+                selector: 'focus-monitor-overview-example',
+                template: "<div class=\"example-focus-monitor\">\n  <button #element>Focus Monitored Element ({{elementOrigin}})</button>\n</div>\n\n<div class=\"example-focus-monitor\">\n  <div #subtree>\n    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>\n    <button>Child Button 1</button>\n    <button>Child Button 2</button>\n  </div>\n</div>\n",
+                styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton {\n  margin-right: 12px;\n}\n"]
             }),
-            tslib_1.__metadata("design:paramtypes", [bottomSheet.MatBottomSheet])
-        ], BottomSheetOverviewExample);
-        return BottomSheetOverviewExample;
+            tslib_1.__metadata("design:paramtypes", [a11y.FocusMonitor,
+                core.ChangeDetectorRef,
+                core.NgZone])
+        ], FocusMonitorOverviewExample);
+        return FocusMonitorOverviewExample;
     }());
-    var BottomSheetOverviewExampleSheet = /** @class */ (function () {
-        function BottomSheetOverviewExampleSheet(_bottomSheetRef) {
-            this._bottomSheetRef = _bottomSheetRef;
-        }
-        BottomSheetOverviewExampleSheet.prototype.openLink = function (event) {
-            this._bottomSheetRef.dismiss();
-            event.preventDefault();
-        };
-        BottomSheetOverviewExampleSheet = tslib_1.__decorate([
-            core.Component({
-                selector: 'bottom-sheet-overview-example-sheet',
-                template: "<mat-nav-list>\n  <a href=\"https://keep.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Keep</span>\n    <span mat-line>Add to a note</span>\n  </a>\n\n  <a href=\"https://docs.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Docs</span>\n    <span mat-line>Embed in a document</span>\n  </a>\n\n  <a href=\"https://plus.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Plus</span>\n    <span mat-line>Share with your friends</span>\n  </a>\n\n  <a href=\"https://hangouts.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Hangouts</span>\n    <span mat-line>Show to your coworkers</span>\n  </a>\n</mat-nav-list>\n"
-            }),
-            tslib_1.__metadata("design:paramtypes", [bottomSheet.MatBottomSheetRef])
-        ], BottomSheetOverviewExampleSheet);
-        return BottomSheetOverviewExampleSheet;
-    }());
-
-    /**
-     * @title Basic buttons
-     */
-    var ButtonOverviewExample = /** @class */ (function () {
-        function ButtonOverviewExample() {
-        }
-        ButtonOverviewExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'button-overview-example',
-                template: "<button mat-button>Click me!</button>\n",
-                styles: ["/** No CSS for this example */\n"]
-            })
-        ], ButtonOverviewExample);
-        return ButtonOverviewExample;
-    }());
-
-    /**
-     * @title Button toggle appearance
-     */
-    var ButtonToggleAppearanceExample = /** @class */ (function () {
-        function ButtonToggleAppearanceExample() {
-        }
-        ButtonToggleAppearanceExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'button-toggle-appearance-example',
-                template: "<p>\n  Default appearance:\n  <mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n\n<p>\n  Legacy appearance:\n  <mat-button-toggle-group appearance=\"legacy\" name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n",
-                styles: ["mat-button-toggle-group {\n  margin-left: 12px;\n}\n"]
-            })
-        ], ButtonToggleAppearanceExample);
-        return ButtonToggleAppearanceExample;
-    }());
-
-    /**
-     * @title Exclusive selection
-     */
-    var ButtonToggleExclusiveExample = /** @class */ (function () {
-        function ButtonToggleExclusiveExample() {
-        }
-        ButtonToggleExclusiveExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'button-toggle-exclusive-example',
-                template: "<mat-button-toggle-group #group=\"matButtonToggleGroup\">\n  <mat-button-toggle value=\"left\" aria-label=\"Text align left\">\n    <mat-icon>format_align_left</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"center\" aria-label=\"Text align center\">\n    <mat-icon>format_align_center</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"right\" aria-label=\"Text align right\">\n    <mat-icon>format_align_right</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"justify\" disabled aria-label=\"Text align justify\">\n    <mat-icon>format_align_justify</mat-icon>\n  </mat-button-toggle>\n</mat-button-toggle-group>\n<div class=\"example-selected-value\">Selected value: {{group.value}}</div>\n",
-                styles: [".example-selected-value {\n  margin: 15px 0;\n}\n"]
-            })
-        ], ButtonToggleExclusiveExample);
-        return ButtonToggleExclusiveExample;
-    }());
-
-    /**
-     * @title Basic button-toggles
-     */
-    var ButtonToggleOverviewExample = /** @class */ (function () {
-        function ButtonToggleOverviewExample() {
-        }
-        ButtonToggleOverviewExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'button-toggle-overview-example',
-                template: "<mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\n  <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n  <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n  <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n</mat-button-toggle-group>\n",
-                styles: ["/** No CSS for this example */\n"]
-            })
-        ], ButtonToggleOverviewExample);
-        return ButtonToggleOverviewExample;
-    }());
-
-    /**
-     * @title Button varieties
-     */
-    var ButtonTypesExample = /** @class */ (function () {
-        function ButtonTypesExample() {
-        }
-        ButtonTypesExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'button-types-example',
-                template: "<h3>Basic Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Raised Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>\n\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>\n\n<h3>Mini Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>\n",
-                styles: [".example-button-row button,\n.example-button-row a {\n  margin-right: 8px;\n}\n"]
-            })
-        ], ButtonTypesExample);
-        return ButtonTypesExample;
-    }());
-
-    /**
-     * @title Card with multiple sections
-     */
-    var CardFancyExample = /** @class */ (function () {
-        function CardFancyExample() {
-        }
-        CardFancyExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'card-fancy-example',
-                template: "<mat-card class=\"example-card\">\n  <mat-card-header>\n    <div mat-card-avatar class=\"example-header-image\"></div>\n    <mat-card-title>Shiba Inu</mat-card-title>\n    <mat-card-subtitle>Dog Breed</mat-card-subtitle>\n  </mat-card-header>\n  <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\">\n  <mat-card-content>\n    <p>\n      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.\n      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\n      bred for hunting.\n    </p>\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-button>LIKE</button>\n    <button mat-button>SHARE</button>\n  </mat-card-actions>\n</mat-card>\n",
-                styles: [".example-card {\n  max-width: 400px;\n}\n\n.example-header-image {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}\n"]
-            })
-        ], CardFancyExample);
-        return CardFancyExample;
-    }());
-
-    /**
-     * @title Basic cards
-     */
-    var CardOverviewExample = /** @class */ (function () {
-        function CardOverviewExample() {
-        }
-        CardOverviewExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'card-overview-example',
-                template: "<mat-card>Simple card</mat-card>\n",
-                styles: ["/** No CSS for this example */\n"]
-            })
-        ], CardOverviewExample);
-        return CardOverviewExample;
-    }());
-
-    /** @title A custom CDK stepper without a form */
-    var CdkCustomStepperWithoutFormExample = /** @class */ (function () {
-        function CdkCustomStepperWithoutFormExample() {
-        }
-        CdkCustomStepperWithoutFormExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'cdk-custom-stepper-without-form-example',
-                template: "<example-custom-stepper>\n  <cdk-step> <p>This is any content of \"Step 1\"</p> </cdk-step>\n  <cdk-step> <p>This is any content of \"Step 2\"</p> </cdk-step>\n</example-custom-stepper>\n",
-                styles: [""]
-            })
-        ], CdkCustomStepperWithoutFormExample);
-        return CdkCustomStepperWithoutFormExample;
-    }());
-    /** Custom CDK stepper component */
-    var CustomStepper = /** @class */ (function (_super) {
-        tslib_1.__extends(CustomStepper, _super);
-        function CustomStepper() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        CustomStepper_1 = CustomStepper;
-        CustomStepper.prototype.onClick = function (index) {
-            this.selectedIndex = index;
-        };
-        var CustomStepper_1;
-        CustomStepper = CustomStepper_1 = tslib_1.__decorate([
-            core.Component({
-                selector: 'example-custom-stepper',
-                template: "<section class=\"example-container\">\n  <header>\n    <h2>Step {{ selectedIndex + 1 }}/{{ steps.length }}</h2>\n  </header>\n\n  <div [style.display]=\"selected ? 'block' : 'none'\">\n    <ng-container [ngTemplateOutlet]=\"selected.content\"></ng-container>\n  </div>\n\n  <footer class=\"example-step-navigation-bar\">\n    <button class=\"example-nav-button\" cdkStepperPrevious>&larr;</button>\n    <button\n      class=\"example-step\"\n      *ngFor=\"let step of steps; let i = index\"\n      [ngClass]=\"{ 'example-active': selectedIndex === i }\"\n      (click)=\"onClick(i)\"\n    >\n      Step {{ i + 1 }}\n    </button>\n    <button class=\"example-nav-button\" cdkStepperNext>&rarr;</button>\n  </footer>\n</section>\n",
-                providers: [{ provide: stepper.CdkStepper, useExisting: CustomStepper_1 }],
-                styles: [".example-container {\n  border: 1px solid black;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-active {\n  color: blue;\n}\n\n.example-step {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: black;\n}\n\n.example-step.example-active {\n  color: blue;\n  border-bottom: 1px solid blue;\n}\n\n.example-nav-button {\n  background: transparent;\n  border: 0;\n}\n"]
-            })
-        ], CustomStepper);
-        return CustomStepper;
-    }(stepper.CdkStepper));
 
     /**
      * @title Drag&Drop position locking
@@ -1626,235 +920,6 @@
         return ComponentPortalExample;
     }());
 
-    var ELEMENT_DATA$4 = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Basic use of `<cdk-table>` (uses display flex)
-     */
-    var CdkTableBasicFlexExample = /** @class */ (function () {
-        function CdkTableBasicFlexExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new ExampleDataSource$2();
-        }
-        CdkTableBasicFlexExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'cdk-table-basic-flex-example',
-                template: "<cdk-table [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <cdk-header-cell *cdkHeaderCellDef> No. </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </cdk-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <cdk-header-cell *cdkHeaderCellDef> Name </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </cdk-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <cdk-header-cell *cdkHeaderCellDef> Weight </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </cdk-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <cdk-header-cell *cdkHeaderCellDef> Symbol </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </cdk-cell>\n  </ng-container>\n\n  <cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></cdk-header-row>\n  <cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></cdk-row>\n</cdk-table>\n",
-                styles: ["/**\n * Add basic flex styling so that the cells evenly space themselves in the row.\n */\ncdk-row, cdk-header-row, cdk-footer-row {\n  display: flex;\n}\n\ncdk-cell, cdk-header-cell, cdk-footer-cell {\n  flex: 1;\n}\n"]
-            })
-        ], CdkTableBasicFlexExample);
-        return CdkTableBasicFlexExample;
-    }());
-    /**
-     * Data source to provide what data should be rendered in the table. Note that the data source
-     * can retrieve its data in any way. In this case, the data source is provided a reference
-     * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
-     * the underlying data. Instead, it only needs to take the data and send the table exactly what
-     * should be rendered.
-     */
-    var ExampleDataSource$2 = /** @class */ (function (_super) {
-        tslib_1.__extends(ExampleDataSource, _super);
-        function ExampleDataSource() {
-            var _this = _super !== null && _super.apply(this, arguments) || this;
-            /** Stream of data that is provided to the table. */
-            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$4);
-            return _this;
-        }
-        /** Connect function called by the table to retrieve one stream containing the data to render. */
-        ExampleDataSource.prototype.connect = function () {
-            return this.data;
-        };
-        ExampleDataSource.prototype.disconnect = function () { };
-        return ExampleDataSource;
-    }(collections.DataSource));
-
-    var ELEMENT_DATA$5 = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Basic CDK data-table
-     */
-    var CdkTableBasicExample = /** @class */ (function () {
-        function CdkTableBasicExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new ExampleDataSource$3();
-        }
-        CdkTableBasicExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'cdk-table-basic-example',
-                template: "<table cdk-table [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <th cdk-header-cell *cdkHeaderCellDef> No. </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <th cdk-header-cell *cdkHeaderCellDef> Name </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <th cdk-header-cell *cdkHeaderCellDef> Weight </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <th cdk-header-cell *cdkHeaderCellDef> Symbol </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></tr>\n  <tr cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n\nth {\n  text-align: left;\n}\n"]
-            })
-        ], CdkTableBasicExample);
-        return CdkTableBasicExample;
-    }());
-    /**
-     * Data source to provide what data should be rendered in the table. Note that the data source
-     * can retrieve its data in any way. In this case, the data source is provided a reference
-     * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
-     * the underlying data. Instead, it only needs to take the data and send the table exactly what
-     * should be rendered.
-     */
-    var ExampleDataSource$3 = /** @class */ (function (_super) {
-        tslib_1.__extends(ExampleDataSource, _super);
-        function ExampleDataSource() {
-            var _this = _super !== null && _super.apply(this, arguments) || this;
-            /** Stream of data that is provided to the table. */
-            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$5);
-            return _this;
-        }
-        /** Connect function called by the table to retrieve one stream containing the data to render. */
-        ExampleDataSource.prototype.connect = function () {
-            return this.data;
-        };
-        ExampleDataSource.prototype.disconnect = function () { };
-        return ExampleDataSource;
-    }(collections.DataSource));
-
-    var TREE_DATA = [
-        {
-            name: 'Fruit',
-            expandable: true,
-            level: 0,
-        }, {
-            name: 'Apple',
-            expandable: false,
-            level: 1,
-        }, {
-            name: 'Banana',
-            expandable: false,
-            level: 1,
-        }, {
-            name: 'Fruit loops',
-            expandable: false,
-            level: 1,
-        }, {
-            name: 'Vegetables',
-            expandable: true,
-            level: 0,
-        }, {
-            name: 'Green',
-            expandable: true,
-            level: 1,
-        }, {
-            name: 'Broccoli',
-            expandable: false,
-            level: 2,
-        }, {
-            name: 'Brussel sprouts',
-            expandable: false,
-            level: 2,
-        }, {
-            name: 'Orange',
-            expandable: true,
-            level: 1,
-        }, {
-            name: 'Pumpkins',
-            expandable: false,
-            level: 2,
-        }, {
-            name: 'Carrots',
-            expandable: false,
-            level: 2,
-        }
-    ];
-    /**
-     * @title Tree with flat nodes
-     */
-    var CdkTreeFlatExample = /** @class */ (function () {
-        function CdkTreeFlatExample() {
-            this.treeControl = new tree.FlatTreeControl(function (node) { return node.level; }, function (node) { return node.expandable; });
-            this.dataSource = new collections.ArrayDataSource(TREE_DATA);
-            this.hasChild = function (_, node) { return node.expandable; };
-        }
-        CdkTreeFlatExample.prototype.getParentNode = function (node) {
-            var nodeIndex = TREE_DATA.indexOf(node);
-            for (var i = nodeIndex - 1; i >= 0; i--) {
-                if (TREE_DATA[i].level === node.level - 1) {
-                    return TREE_DATA[i];
-                }
-            }
-            return null;
-        };
-        CdkTreeFlatExample.prototype.shouldRender = function (node) {
-            var parent = this.getParentNode(node);
-            return !parent || parent.isExpanded;
-        };
-        CdkTreeFlatExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'cdk-tree-flat-example',
-                template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.filename\"\n            (click)=\"node.isExpanded = !node.isExpanded\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n",
-                styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
-            })
-        ], CdkTreeFlatExample);
-        return CdkTreeFlatExample;
-    }());
-
-    var TREE_DATA$1 = [
-        {
-            name: 'Fruit',
-            children: [
-                { name: 'Apple' },
-                { name: 'Banana' },
-                { name: 'Fruit loops' },
-            ]
-        }, {
-            name: 'Vegetables',
-            children: [
-                {
-                    name: 'Green',
-                    children: [
-                        { name: 'Broccoli' },
-                        { name: 'Brussel sprouts' },
-                    ]
-                }, {
-                    name: 'Orange',
-                    children: [
-                        { name: 'Pumpkins' },
-                        { name: 'Carrots' },
-                    ]
-                },
-            ]
-        },
-    ];
-    /**
-     * @title Tree with nested nodes
-     */
-    var CdkTreeNestedExample = /** @class */ (function () {
-        function CdkTreeNestedExample() {
-            this.treeControl = new tree.NestedTreeControl(function (node) { return node.children; });
-            this.dataSource = new collections.ArrayDataSource(TREE_DATA$1);
-            this.hasChild = function (_, node) { return !!node.children && node.children.length > 0; };
-        }
-        CdkTreeNestedExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'cdk-tree-nested-example',
-                template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node\" class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" class=\"example-tree-node\">\n    <button mat-icon-button [attr.aria-label]=\"'toggle ' + node.name\" cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n",
-                styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n"]
-            })
-        ], CdkTreeNestedExample);
-        return CdkTreeNestedExample;
-    }());
-
     /** @title Virtual scroll context variables */
     var CdkVirtualScrollContextExample = /** @class */ (function () {
         function CdkVirtualScrollContextExample() {
@@ -2088,6 +1153,795 @@
         return CdkVirtualScrollTemplateCacheExample;
     }());
 
+    /** @title A custom CDK stepper without a form */
+    var CdkCustomStepperWithoutFormExample = /** @class */ (function () {
+        function CdkCustomStepperWithoutFormExample() {
+        }
+        CdkCustomStepperWithoutFormExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-custom-stepper-without-form-example',
+                template: "<example-custom-stepper>\n  <cdk-step> <p>This is any content of \"Step 1\"</p> </cdk-step>\n  <cdk-step> <p>This is any content of \"Step 2\"</p> </cdk-step>\n</example-custom-stepper>\n",
+                styles: [""]
+            })
+        ], CdkCustomStepperWithoutFormExample);
+        return CdkCustomStepperWithoutFormExample;
+    }());
+    /** Custom CDK stepper component */
+    var CustomStepper = /** @class */ (function (_super) {
+        tslib_1.__extends(CustomStepper, _super);
+        function CustomStepper() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        CustomStepper_1 = CustomStepper;
+        CustomStepper.prototype.onClick = function (index) {
+            this.selectedIndex = index;
+        };
+        var CustomStepper_1;
+        CustomStepper = CustomStepper_1 = tslib_1.__decorate([
+            core.Component({
+                selector: 'example-custom-stepper',
+                template: "<section class=\"example-container\">\n  <header>\n    <h2>Step {{ selectedIndex + 1 }}/{{ steps.length }}</h2>\n  </header>\n\n  <div [style.display]=\"selected ? 'block' : 'none'\">\n    <ng-container [ngTemplateOutlet]=\"selected.content\"></ng-container>\n  </div>\n\n  <footer class=\"example-step-navigation-bar\">\n    <button class=\"example-nav-button\" cdkStepperPrevious>&larr;</button>\n    <button\n      class=\"example-step\"\n      *ngFor=\"let step of steps; let i = index\"\n      [ngClass]=\"{ 'example-active': selectedIndex === i }\"\n      (click)=\"onClick(i)\"\n    >\n      Step {{ i + 1 }}\n    </button>\n    <button class=\"example-nav-button\" cdkStepperNext>&rarr;</button>\n  </footer>\n</section>\n",
+                providers: [{ provide: stepper.CdkStepper, useExisting: CustomStepper_1 }],
+                styles: [".example-container {\n  border: 1px solid black;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-active {\n  color: blue;\n}\n\n.example-step {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: black;\n}\n\n.example-step.example-active {\n  color: blue;\n  border-bottom: 1px solid blue;\n}\n\n.example-nav-button {\n  background: transparent;\n  border: 0;\n}\n"]
+            })
+        ], CustomStepper);
+        return CustomStepper;
+    }(stepper.CdkStepper));
+
+    var ELEMENT_DATA$4 = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Basic use of `<cdk-table>` (uses display flex)
+     */
+    var CdkTableBasicFlexExample = /** @class */ (function () {
+        function CdkTableBasicFlexExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new ExampleDataSource$2();
+        }
+        CdkTableBasicFlexExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-table-basic-flex-example',
+                template: "<cdk-table [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <cdk-header-cell *cdkHeaderCellDef> No. </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </cdk-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <cdk-header-cell *cdkHeaderCellDef> Name </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </cdk-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <cdk-header-cell *cdkHeaderCellDef> Weight </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </cdk-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <cdk-header-cell *cdkHeaderCellDef> Symbol </cdk-header-cell>\n    <cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </cdk-cell>\n  </ng-container>\n\n  <cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></cdk-header-row>\n  <cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></cdk-row>\n</cdk-table>\n",
+                styles: ["/**\n * Add basic flex styling so that the cells evenly space themselves in the row.\n */\ncdk-row, cdk-header-row, cdk-footer-row {\n  display: flex;\n}\n\ncdk-cell, cdk-header-cell, cdk-footer-cell {\n  flex: 1;\n}\n"]
+            })
+        ], CdkTableBasicFlexExample);
+        return CdkTableBasicFlexExample;
+    }());
+    /**
+     * Data source to provide what data should be rendered in the table. Note that the data source
+     * can retrieve its data in any way. In this case, the data source is provided a reference
+     * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+     * the underlying data. Instead, it only needs to take the data and send the table exactly what
+     * should be rendered.
+     */
+    var ExampleDataSource$2 = /** @class */ (function (_super) {
+        tslib_1.__extends(ExampleDataSource, _super);
+        function ExampleDataSource() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            /** Stream of data that is provided to the table. */
+            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$4);
+            return _this;
+        }
+        /** Connect function called by the table to retrieve one stream containing the data to render. */
+        ExampleDataSource.prototype.connect = function () {
+            return this.data;
+        };
+        ExampleDataSource.prototype.disconnect = function () { };
+        return ExampleDataSource;
+    }(collections.DataSource));
+
+    var ELEMENT_DATA$5 = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Basic CDK data-table
+     */
+    var CdkTableBasicExample = /** @class */ (function () {
+        function CdkTableBasicExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new ExampleDataSource$3();
+        }
+        CdkTableBasicExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-table-basic-example',
+                template: "<table cdk-table [dataSource]=\"dataSource\">\n  <!-- Position Column -->\n  <ng-container cdkColumnDef=\"position\">\n    <th cdk-header-cell *cdkHeaderCellDef> No. </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container cdkColumnDef=\"name\">\n    <th cdk-header-cell *cdkHeaderCellDef> Name </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container cdkColumnDef=\"weight\">\n    <th cdk-header-cell *cdkHeaderCellDef> Weight </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container cdkColumnDef=\"symbol\">\n    <th cdk-header-cell *cdkHeaderCellDef> Symbol </th>\n    <td cdk-cell *cdkCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr cdk-header-row *cdkHeaderRowDef=\"displayedColumns\"></tr>\n  <tr cdk-row *cdkRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n\nth {\n  text-align: left;\n}\n"]
+            })
+        ], CdkTableBasicExample);
+        return CdkTableBasicExample;
+    }());
+    /**
+     * Data source to provide what data should be rendered in the table. Note that the data source
+     * can retrieve its data in any way. In this case, the data source is provided a reference
+     * to a common data base, ExampleDatabase. It is not the data source's responsibility to manage
+     * the underlying data. Instead, it only needs to take the data and send the table exactly what
+     * should be rendered.
+     */
+    var ExampleDataSource$3 = /** @class */ (function (_super) {
+        tslib_1.__extends(ExampleDataSource, _super);
+        function ExampleDataSource() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            /** Stream of data that is provided to the table. */
+            _this.data = new rxjs.BehaviorSubject(ELEMENT_DATA$5);
+            return _this;
+        }
+        /** Connect function called by the table to retrieve one stream containing the data to render. */
+        ExampleDataSource.prototype.connect = function () {
+            return this.data;
+        };
+        ExampleDataSource.prototype.disconnect = function () { };
+        return ExampleDataSource;
+    }(collections.DataSource));
+
+    /** @title Monitoring autofill state with cdkAutofill */
+    var TextFieldAutofillDirectiveExample = /** @class */ (function () {
+        function TextFieldAutofillDirectiveExample() {
+        }
+        TextFieldAutofillDirectiveExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'text-field-autofill-directive-example',
+                template: "<form>\n  <mat-form-field>\n    <mat-label>First name</mat-label>\n    <input matInput (cdkAutofill)=\"firstNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field>\n    <mat-label>Last name</mat-label>\n    <input matInput (cdkAutofill)=\"lastNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n",
+                styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
+            })
+        ], TextFieldAutofillDirectiveExample);
+        return TextFieldAutofillDirectiveExample;
+    }());
+
+    /** @title Monitoring autofill state with AutofillMonitor */
+    var TextFieldAutofillMonitorExample = /** @class */ (function () {
+        function TextFieldAutofillMonitorExample(_autofill) {
+            this._autofill = _autofill;
+        }
+        TextFieldAutofillMonitorExample.prototype.ngAfterViewInit = function () {
+            var _this = this;
+            this._autofill.monitor(this.firstName)
+                .subscribe(function (e) { return _this.firstNameAutofilled = e.isAutofilled; });
+            this._autofill.monitor(this.lastName)
+                .subscribe(function (e) { return _this.lastNameAutofilled = e.isAutofilled; });
+        };
+        TextFieldAutofillMonitorExample.prototype.ngOnDestroy = function () {
+            this._autofill.stopMonitoring(this.firstName);
+            this._autofill.stopMonitoring(this.lastName);
+        };
+        tslib_1.__decorate([
+            core.ViewChild('first', { read: core.ElementRef, static: false }),
+            tslib_1.__metadata("design:type", core.ElementRef)
+        ], TextFieldAutofillMonitorExample.prototype, "firstName", void 0);
+        tslib_1.__decorate([
+            core.ViewChild('last', { read: core.ElementRef, static: false }),
+            tslib_1.__metadata("design:type", core.ElementRef)
+        ], TextFieldAutofillMonitorExample.prototype, "lastName", void 0);
+        TextFieldAutofillMonitorExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'text-field-autofill-monitor-example',
+                template: "<form>\n  <mat-form-field>\n    <mat-label>First name</mat-label>\n    <input matInput #first>\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field>\n    <mat-label>Last name</mat-label>\n    <input matInput #last>\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n",
+                styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
+            }),
+            tslib_1.__metadata("design:paramtypes", [textField.AutofillMonitor])
+        ], TextFieldAutofillMonitorExample);
+        return TextFieldAutofillMonitorExample;
+    }());
+
+    /** @title Auto-resizing textarea */
+    var TextFieldAutosizeTextareaExample = /** @class */ (function () {
+        function TextFieldAutosizeTextareaExample(_ngZone) {
+            this._ngZone = _ngZone;
+        }
+        TextFieldAutosizeTextareaExample.prototype.triggerResize = function () {
+            var _this = this;
+            // Wait for changes to be applied, then trigger textarea resize.
+            this._ngZone.onStable.pipe(operators.take(1))
+                .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
+        };
+        tslib_1.__decorate([
+            core.ViewChild('autosize', { static: false }),
+            tslib_1.__metadata("design:type", textField.CdkTextareaAutosize)
+        ], TextFieldAutosizeTextareaExample.prototype, "autosize", void 0);
+        TextFieldAutosizeTextareaExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'text-field-autosize-textarea-example',
+                template: "<mat-form-field>\n  <mat-label>Font size</mat-label>\n  <mat-select #fontSize value=\"16px\" (selectionChange)=\"triggerResize()\">\n    <mat-option value=\"10px\">10px</mat-option>\n    <mat-option value=\"12px\">12px</mat-option>\n    <mat-option value=\"14px\">14px</mat-option>\n    <mat-option value=\"16px\">16px</mat-option>\n    <mat-option value=\"18px\">18px</mat-option>\n    <mat-option value=\"20px\">20px</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<mat-form-field [style.fontSize]=\"fontSize.value\">\n  <mat-label>Autosize textarea</mat-label>\n  <textarea matInput\n            cdkTextareaAutosize\n            #autosize=\"cdkTextareaAutosize\"\n            cdkAutosizeMinRows=\"1\"\n            cdkAutosizeMaxRows=\"5\"></textarea>\n</mat-form-field>\n",
+                styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
+            }),
+            tslib_1.__metadata("design:paramtypes", [core.NgZone])
+        ], TextFieldAutosizeTextareaExample);
+        return TextFieldAutosizeTextareaExample;
+    }());
+
+    var TREE_DATA = [
+        {
+            name: 'Fruit',
+            expandable: true,
+            level: 0,
+        }, {
+            name: 'Apple',
+            expandable: false,
+            level: 1,
+        }, {
+            name: 'Banana',
+            expandable: false,
+            level: 1,
+        }, {
+            name: 'Fruit loops',
+            expandable: false,
+            level: 1,
+        }, {
+            name: 'Vegetables',
+            expandable: true,
+            level: 0,
+        }, {
+            name: 'Green',
+            expandable: true,
+            level: 1,
+        }, {
+            name: 'Broccoli',
+            expandable: false,
+            level: 2,
+        }, {
+            name: 'Brussel sprouts',
+            expandable: false,
+            level: 2,
+        }, {
+            name: 'Orange',
+            expandable: true,
+            level: 1,
+        }, {
+            name: 'Pumpkins',
+            expandable: false,
+            level: 2,
+        }, {
+            name: 'Carrots',
+            expandable: false,
+            level: 2,
+        }
+    ];
+    /**
+     * @title Tree with flat nodes
+     */
+    var CdkTreeFlatExample = /** @class */ (function () {
+        function CdkTreeFlatExample() {
+            this.treeControl = new tree.FlatTreeControl(function (node) { return node.level; }, function (node) { return node.expandable; });
+            this.dataSource = new collections.ArrayDataSource(TREE_DATA);
+            this.hasChild = function (_, node) { return node.expandable; };
+        }
+        CdkTreeFlatExample.prototype.getParentNode = function (node) {
+            var nodeIndex = TREE_DATA.indexOf(node);
+            for (var i = nodeIndex - 1; i >= 0; i--) {
+                if (TREE_DATA[i].level === node.level - 1) {
+                    return TREE_DATA[i];
+                }
+            }
+            return null;
+        };
+        CdkTreeFlatExample.prototype.shouldRender = function (node) {
+            var parent = this.getParentNode(node);
+            return !parent || parent.isExpanded;
+        };
+        CdkTreeFlatExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-tree-flat-example',
+                template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.filename\"\n            (click)=\"node.isExpanded = !node.isExpanded\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n",
+                styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
+            })
+        ], CdkTreeFlatExample);
+        return CdkTreeFlatExample;
+    }());
+
+    var TREE_DATA$1 = [
+        {
+            name: 'Fruit',
+            children: [
+                { name: 'Apple' },
+                { name: 'Banana' },
+                { name: 'Fruit loops' },
+            ]
+        }, {
+            name: 'Vegetables',
+            children: [
+                {
+                    name: 'Green',
+                    children: [
+                        { name: 'Broccoli' },
+                        { name: 'Brussel sprouts' },
+                    ]
+                }, {
+                    name: 'Orange',
+                    children: [
+                        { name: 'Pumpkins' },
+                        { name: 'Carrots' },
+                    ]
+                },
+            ]
+        },
+    ];
+    /**
+     * @title Tree with nested nodes
+     */
+    var CdkTreeNestedExample = /** @class */ (function () {
+        function CdkTreeNestedExample() {
+            this.treeControl = new tree.NestedTreeControl(function (node) { return node.children; });
+            this.dataSource = new collections.ArrayDataSource(TREE_DATA$1);
+            this.hasChild = function (_, node) { return !!node.children && node.children.length > 0; };
+        }
+        CdkTreeNestedExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'cdk-tree-nested-example',
+                template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node\" class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" class=\"example-tree-node\">\n    <button mat-icon-button [attr.aria-label]=\"'toggle ' + node.name\" cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n",
+                styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n"]
+            })
+        ], CdkTreeNestedExample);
+        return CdkTreeNestedExample;
+    }());
+
+    /**
+     * @title Highlight the first autocomplete option
+     */
+    var AutocompleteAutoActiveFirstOptionExample = /** @class */ (function () {
+        function AutocompleteAutoActiveFirstOptionExample() {
+            this.myControl = new forms.FormControl();
+            this.options = ['One', 'Two', 'Three'];
+        }
+        AutocompleteAutoActiveFirstOptionExample.prototype.ngOnInit = function () {
+            var _this = this;
+            this.filteredOptions = this.myControl.valueChanges.pipe(operators.startWith(''), operators.map(function (value) { return _this._filter(value); }));
+        };
+        AutocompleteAutoActiveFirstOptionExample.prototype._filter = function (value) {
+            var filterValue = value.toLowerCase();
+            return this.options.filter(function (option) { return option.toLowerCase().indexOf(filterValue) === 0; });
+        };
+        AutocompleteAutoActiveFirstOptionExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'autocomplete-auto-active-first-option-example',
+                template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+            })
+        ], AutocompleteAutoActiveFirstOptionExample);
+        return AutocompleteAutoActiveFirstOptionExample;
+    }());
+
+    /**
+     * @title Display value autocomplete
+     */
+    var AutocompleteDisplayExample = /** @class */ (function () {
+        function AutocompleteDisplayExample() {
+            this.myControl = new forms.FormControl();
+            this.options = [
+                { name: 'Mary' },
+                { name: 'Shelley' },
+                { name: 'Igor' }
+            ];
+        }
+        AutocompleteDisplayExample.prototype.ngOnInit = function () {
+            var _this = this;
+            this.filteredOptions = this.myControl.valueChanges
+                .pipe(operators.startWith(''), operators.map(function (value) { return typeof value === 'string' ? value : value.name; }), operators.map(function (name) { return name ? _this._filter(name) : _this.options.slice(); }));
+        };
+        AutocompleteDisplayExample.prototype.displayFn = function (user) {
+            return user ? user.name : undefined;
+        };
+        AutocompleteDisplayExample.prototype._filter = function (name) {
+            var filterValue = name.toLowerCase();
+            return this.options.filter(function (option) { return option.name.toLowerCase().indexOf(filterValue) === 0; });
+        };
+        AutocompleteDisplayExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'autocomplete-display-example',
+                template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Assignee\" aria-label=\"Assignee\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\" [displayWith]=\"displayFn\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option.name}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+            })
+        ], AutocompleteDisplayExample);
+        return AutocompleteDisplayExample;
+    }());
+
+    /**
+     * @title Filter autocomplete
+     */
+    var AutocompleteFilterExample = /** @class */ (function () {
+        function AutocompleteFilterExample() {
+            this.myControl = new forms.FormControl();
+            this.options = ['One', 'Two', 'Three'];
+        }
+        AutocompleteFilterExample.prototype.ngOnInit = function () {
+            var _this = this;
+            this.filteredOptions = this.myControl.valueChanges
+                .pipe(operators.startWith(''), operators.map(function (value) { return _this._filter(value); }));
+        };
+        AutocompleteFilterExample.prototype._filter = function (value) {
+            var filterValue = value.toLowerCase();
+            return this.options.filter(function (option) { return option.toLowerCase().includes(filterValue); });
+        };
+        AutocompleteFilterExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'autocomplete-filter-example',
+                template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+            })
+        ], AutocompleteFilterExample);
+        return AutocompleteFilterExample;
+    }());
+
+    var _filter = function (opt, value) {
+        var filterValue = value.toLowerCase();
+        return opt.filter(function (item) { return item.toLowerCase().indexOf(filterValue) === 0; });
+    };
+    /**
+     * @title Option groups autocomplete
+     */
+    var AutocompleteOptgroupExample = /** @class */ (function () {
+        function AutocompleteOptgroupExample(_formBuilder) {
+            this._formBuilder = _formBuilder;
+            this.stateForm = this._formBuilder.group({
+                stateGroup: '',
+            });
+            this.stateGroups = [{
+                    letter: 'A',
+                    names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
+                }, {
+                    letter: 'C',
+                    names: ['California', 'Colorado', 'Connecticut']
+                }, {
+                    letter: 'D',
+                    names: ['Delaware']
+                }, {
+                    letter: 'F',
+                    names: ['Florida']
+                }, {
+                    letter: 'G',
+                    names: ['Georgia']
+                }, {
+                    letter: 'H',
+                    names: ['Hawaii']
+                }, {
+                    letter: 'I',
+                    names: ['Idaho', 'Illinois', 'Indiana', 'Iowa']
+                }, {
+                    letter: 'K',
+                    names: ['Kansas', 'Kentucky']
+                }, {
+                    letter: 'L',
+                    names: ['Louisiana']
+                }, {
+                    letter: 'M',
+                    names: ['Maine', 'Maryland', 'Massachusetts', 'Michigan',
+                        'Minnesota', 'Mississippi', 'Missouri', 'Montana']
+                }, {
+                    letter: 'N',
+                    names: ['Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
+                        'New Mexico', 'New York', 'North Carolina', 'North Dakota']
+                }, {
+                    letter: 'O',
+                    names: ['Ohio', 'Oklahoma', 'Oregon']
+                }, {
+                    letter: 'P',
+                    names: ['Pennsylvania']
+                }, {
+                    letter: 'R',
+                    names: ['Rhode Island']
+                }, {
+                    letter: 'S',
+                    names: ['South Carolina', 'South Dakota']
+                }, {
+                    letter: 'T',
+                    names: ['Tennessee', 'Texas']
+                }, {
+                    letter: 'U',
+                    names: ['Utah']
+                }, {
+                    letter: 'V',
+                    names: ['Vermont', 'Virginia']
+                }, {
+                    letter: 'W',
+                    names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
+                }];
+        }
+        AutocompleteOptgroupExample.prototype.ngOnInit = function () {
+            var _this = this;
+            this.stateGroupOptions = this.stateForm.get('stateGroup').valueChanges
+                .pipe(operators.startWith(''), operators.map(function (value) { return _this._filterGroup(value); }));
+        };
+        AutocompleteOptgroupExample.prototype._filterGroup = function (value) {
+            if (value) {
+                return this.stateGroups
+                    .map(function (group) { return ({ letter: group.letter, names: _filter(group.names, value) }); })
+                    .filter(function (group) { return group.names.length > 0; });
+            }
+            return this.stateGroups;
+        };
+        AutocompleteOptgroupExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'autocomplete-optgroup-example',
+                template: "<form [formGroup]=\"stateForm\">\n  <mat-form-field>\n    <input type=\"text\" matInput placeholder=\"States Group\" formControlName=\"stateGroup\" required [matAutocomplete]=\"autoGroup\">\n      <mat-autocomplete #autoGroup=\"matAutocomplete\">\n        <mat-optgroup *ngFor=\"let group of stateGroupOptions | async\" [label]=\"group.letter\">\n          <mat-option *ngFor=\"let name of group.names\" [value]=\"name\">\n            {{name}}\n          </mat-option>\n      </mat-optgroup>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+                styles: ["/** No CSS for this example */\n"]
+            }),
+            tslib_1.__metadata("design:paramtypes", [forms.FormBuilder])
+        ], AutocompleteOptgroupExample);
+        return AutocompleteOptgroupExample;
+    }());
+
+    /**
+     * @title Autocomplete overview
+     */
+    var AutocompleteOverviewExample = /** @class */ (function () {
+        function AutocompleteOverviewExample() {
+            var _this = this;
+            this.stateCtrl = new forms.FormControl();
+            this.states = [
+                {
+                    name: 'Arkansas',
+                    population: '2.978M',
+                    // https://commons.wikimedia.org/wiki/File:Flag_of_Arkansas.svg
+                    flag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arkansas.svg'
+                },
+                {
+                    name: 'California',
+                    population: '39.14M',
+                    // https://commons.wikimedia.org/wiki/File:Flag_of_California.svg
+                    flag: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg'
+                },
+                {
+                    name: 'Florida',
+                    population: '20.27M',
+                    // https://commons.wikimedia.org/wiki/File:Flag_of_Florida.svg
+                    flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg'
+                },
+                {
+                    name: 'Texas',
+                    population: '27.47M',
+                    // https://commons.wikimedia.org/wiki/File:Flag_of_Texas.svg
+                    flag: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg'
+                }
+            ];
+            this.filteredStates = this.stateCtrl.valueChanges
+                .pipe(operators.startWith(''), operators.map(function (state) { return state ? _this._filterStates(state) : _this.states.slice(); }));
+        }
+        AutocompleteOverviewExample.prototype._filterStates = function (value) {
+            var filterValue = value.toLowerCase();
+            return this.states.filter(function (state) { return state.name.toLowerCase().indexOf(filterValue) === 0; });
+        };
+        AutocompleteOverviewExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'autocomplete-overview-example',
+                template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input matInput placeholder=\"State\" aria-label=\"State\" [matAutocomplete]=\"auto\" [formControl]=\"stateCtrl\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let state of filteredStates | async\" [value]=\"state.name\">\n        <img class=\"example-option-img\" aria-hidden [src]=\"state.flag\" height=\"25\">\n        <span>{{state.name}}</span> |\n        <small>Population: {{state.population}}</small>\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n\n  <br>\n\n  <mat-slide-toggle\n    [checked]=\"stateCtrl.disabled\"\n    (change)=\"stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()\">\n    Disable Input?\n  </mat-slide-toggle>\n</form>\n",
+                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n\n.example-option-img {\n  vertical-align: middle;\n  margin-right: 8px;\n}\n\n[dir='rtl'] .example-option-img {\n  margin-right: 0;\n  margin-left: 8px;\n}\n"]
+            }),
+            tslib_1.__metadata("design:paramtypes", [])
+        ], AutocompleteOverviewExample);
+        return AutocompleteOverviewExample;
+    }());
+
+    /**
+     * @title Plain input autocomplete
+     */
+    var AutocompletePlainInputExample = /** @class */ (function () {
+        function AutocompletePlainInputExample() {
+            this.control = new forms.FormControl();
+            this.streets = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+        }
+        AutocompletePlainInputExample.prototype.ngOnInit = function () {
+            var _this = this;
+            this.filteredStreets = this.control.valueChanges.pipe(operators.startWith(''), operators.map(function (value) { return _this._filter(value); }));
+        };
+        AutocompletePlainInputExample.prototype._filter = function (value) {
+            var _this = this;
+            var filterValue = this._normalizeValue(value);
+            return this.streets.filter(function (street) { return _this._normalizeValue(street).includes(filterValue); });
+        };
+        AutocompletePlainInputExample.prototype._normalizeValue = function (value) {
+            return value.toLowerCase().replace(/\s/g, '');
+        };
+        AutocompletePlainInputExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'autocomplete-plain-input-example',
+                template: "<form class=\"example-form\">\n  <input type=\"text\" placeholder=\"Search for a street\" [formControl]=\"control\" [matAutocomplete]=\"auto\">\n  <mat-autocomplete #auto=\"matAutocomplete\">\n    <mat-option *ngFor=\"let street of filteredStreets | async\" [value]=\"street\">\n      {{street}}\n    </mat-option>\n  </mat-autocomplete>\n</form>\n",
+                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+            })
+        ], AutocompletePlainInputExample);
+        return AutocompletePlainInputExample;
+    }());
+
+    /**
+     * @title Simple autocomplete
+     */
+    var AutocompleteSimpleExample = /** @class */ (function () {
+        function AutocompleteSimpleExample() {
+            this.myControl = new forms.FormControl();
+            this.options = ['One', 'Two', 'Three'];
+        }
+        AutocompleteSimpleExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'autocomplete-simple-example',
+                template: "<form class=\"example-form\">\n  <mat-form-field class=\"example-full-width\">\n    <input type=\"text\" placeholder=\"Pick one\" aria-label=\"Number\" matInput [formControl]=\"myControl\" [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of options\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>\n</form>\n",
+                styles: [".example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n"]
+            })
+        ], AutocompleteSimpleExample);
+        return AutocompleteSimpleExample;
+    }());
+
+    /**
+     * @title Badge overview
+     */
+    var BadgeOverviewExample = /** @class */ (function () {
+        function BadgeOverviewExample() {
+        }
+        BadgeOverviewExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'badge-overview-example',
+                template: "<p>\n  <span matBadge=\"4\" matBadgeOverlap=\"false\">Text with a badge</span>\n</p>\n\n<p>\n  Button with a badge on the left\n  <button mat-raised-button color=\"primary\"\n      matBadge=\"8\" matBadgePosition=\"before\" matBadgeColor=\"accent\">\n    Action\n  </button>\n</p>\n\n<p>\n  Icon with a badge\n  <mat-icon matBadge=\"15\" matBadgeColor=\"warn\">home</mat-icon>\n    <!-- Include text description of the icon's meaning for screen-readers -->\n    <span class=\"cdk-visually-hidden\">\n      Example with a home icon with overlaid badge showing the number 15\n    </span>\n</p>\n\n",
+                styles: ["/** No CSS for this example */\n"]
+            })
+        ], BadgeOverviewExample);
+        return BadgeOverviewExample;
+    }());
+
+    /**
+     * @title Bottom Sheet Overview
+     */
+    var BottomSheetOverviewExample = /** @class */ (function () {
+        function BottomSheetOverviewExample(_bottomSheet) {
+            this._bottomSheet = _bottomSheet;
+        }
+        BottomSheetOverviewExample.prototype.openBottomSheet = function () {
+            this._bottomSheet.open(BottomSheetOverviewExampleSheet);
+        };
+        BottomSheetOverviewExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'bottom-sheet-overview-example',
+                template: "<p>You have received a file called \"cat-picture.jpeg\".</p>\n\n<button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>\n",
+                styles: ["/** No CSS for this example */\n"]
+            }),
+            tslib_1.__metadata("design:paramtypes", [bottomSheet.MatBottomSheet])
+        ], BottomSheetOverviewExample);
+        return BottomSheetOverviewExample;
+    }());
+    var BottomSheetOverviewExampleSheet = /** @class */ (function () {
+        function BottomSheetOverviewExampleSheet(_bottomSheetRef) {
+            this._bottomSheetRef = _bottomSheetRef;
+        }
+        BottomSheetOverviewExampleSheet.prototype.openLink = function (event) {
+            this._bottomSheetRef.dismiss();
+            event.preventDefault();
+        };
+        BottomSheetOverviewExampleSheet = tslib_1.__decorate([
+            core.Component({
+                selector: 'bottom-sheet-overview-example-sheet',
+                template: "<mat-nav-list>\n  <a href=\"https://keep.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Keep</span>\n    <span mat-line>Add to a note</span>\n  </a>\n\n  <a href=\"https://docs.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Docs</span>\n    <span mat-line>Embed in a document</span>\n  </a>\n\n  <a href=\"https://plus.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Plus</span>\n    <span mat-line>Share with your friends</span>\n  </a>\n\n  <a href=\"https://hangouts.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Hangouts</span>\n    <span mat-line>Show to your coworkers</span>\n  </a>\n</mat-nav-list>\n"
+            }),
+            tslib_1.__metadata("design:paramtypes", [bottomSheet.MatBottomSheetRef])
+        ], BottomSheetOverviewExampleSheet);
+        return BottomSheetOverviewExampleSheet;
+    }());
+
+    /**
+     * @title Button toggle appearance
+     */
+    var ButtonToggleAppearanceExample = /** @class */ (function () {
+        function ButtonToggleAppearanceExample() {
+        }
+        ButtonToggleAppearanceExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'button-toggle-appearance-example',
+                template: "<p>\n  Default appearance:\n  <mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n\n<p>\n  Legacy appearance:\n  <mat-button-toggle-group appearance=\"legacy\" name=\"fontStyle\" aria-label=\"Font Style\">\n    <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n    <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n    <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n  </mat-button-toggle-group>\n</p>\n",
+                styles: ["mat-button-toggle-group {\n  margin-left: 12px;\n}\n"]
+            })
+        ], ButtonToggleAppearanceExample);
+        return ButtonToggleAppearanceExample;
+    }());
+
+    /**
+     * @title Exclusive selection
+     */
+    var ButtonToggleExclusiveExample = /** @class */ (function () {
+        function ButtonToggleExclusiveExample() {
+        }
+        ButtonToggleExclusiveExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'button-toggle-exclusive-example',
+                template: "<mat-button-toggle-group #group=\"matButtonToggleGroup\">\n  <mat-button-toggle value=\"left\" aria-label=\"Text align left\">\n    <mat-icon>format_align_left</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"center\" aria-label=\"Text align center\">\n    <mat-icon>format_align_center</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"right\" aria-label=\"Text align right\">\n    <mat-icon>format_align_right</mat-icon>\n  </mat-button-toggle>\n  <mat-button-toggle value=\"justify\" disabled aria-label=\"Text align justify\">\n    <mat-icon>format_align_justify</mat-icon>\n  </mat-button-toggle>\n</mat-button-toggle-group>\n<div class=\"example-selected-value\">Selected value: {{group.value}}</div>\n",
+                styles: [".example-selected-value {\n  margin: 15px 0;\n}\n"]
+            })
+        ], ButtonToggleExclusiveExample);
+        return ButtonToggleExclusiveExample;
+    }());
+
+    /**
+     * @title Basic button-toggles
+     */
+    var ButtonToggleOverviewExample = /** @class */ (function () {
+        function ButtonToggleOverviewExample() {
+        }
+        ButtonToggleOverviewExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'button-toggle-overview-example',
+                template: "<mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\n  <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\n  <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\n  <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\n</mat-button-toggle-group>\n",
+                styles: ["/** No CSS for this example */\n"]
+            })
+        ], ButtonToggleOverviewExample);
+        return ButtonToggleOverviewExample;
+    }());
+
+    /**
+     * @title Basic buttons
+     */
+    var ButtonOverviewExample = /** @class */ (function () {
+        function ButtonOverviewExample() {
+        }
+        ButtonOverviewExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'button-overview-example',
+                template: "<button mat-button>Click me!</button>\n",
+                styles: ["/** No CSS for this example */\n"]
+            })
+        ], ButtonOverviewExample);
+        return ButtonOverviewExample;
+    }());
+
+    /**
+     * @title Button varieties
+     */
+    var ButtonTypesExample = /** @class */ (function () {
+        function ButtonTypesExample() {
+        }
+        ButtonTypesExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'button-types-example',
+                template: "<h3>Basic Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-button>Basic</button>\n  <button mat-button color=\"primary\">Primary</button>\n  <button mat-button color=\"accent\">Accent</button>\n  <button mat-button color=\"warn\">Warn</button>\n  <button mat-button disabled>Disabled</button>\n  <a mat-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Raised Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-raised-button>Basic</button>\n  <button mat-raised-button color=\"primary\">Primary</button>\n  <button mat-raised-button color=\"accent\">Accent</button>\n  <button mat-raised-button color=\"warn\">Warn</button>\n  <button mat-raised-button disabled>Disabled</button>\n  <a mat-raised-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Stroked Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-stroked-button>Basic</button>\n  <button mat-stroked-button color=\"primary\">Primary</button>\n  <button mat-stroked-button color=\"accent\">Accent</button>\n  <button mat-stroked-button color=\"warn\">Warn</button>\n  <button mat-stroked-button disabled>Disabled</button>\n  <a mat-stroked-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Flat Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-flat-button>Basic</button>\n  <button mat-flat-button color=\"primary\">Primary</button>\n  <button mat-flat-button color=\"accent\">Accent</button>\n  <button mat-flat-button color=\"warn\">Warn</button>\n  <button mat-flat-button disabled>Disabled</button>\n  <a mat-flat-button routerLink=\".\">Link</a>\n</div>\n\n<h3>Icon Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-icon-button aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"primary\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"accent\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button color=\"warn\" aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <button mat-icon-button disabled aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n</div>\n\n<h3>Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-fab>Basic</button>\n  <button mat-fab color=\"primary\">Primary</button>\n  <button mat-fab color=\"accent\">Accent</button>\n  <button mat-fab color=\"warn\">Warn</button>\n  <button mat-fab disabled>Disabled</button>\n  <button mat-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-fab routerLink=\".\">Link</a>\n</div>\n\n<h3>Mini Fab Buttons</h3>\n<div class=\"example-button-row\">\n  <button mat-mini-fab>Basic</button>\n  <button mat-mini-fab color=\"primary\">Primary</button>\n  <button mat-mini-fab color=\"accent\">Accent</button>\n  <button mat-mini-fab color=\"warn\">Warn</button>\n  <button mat-mini-fab disabled>Disabled</button>\n  <button mat-mini-fab aria-label=\"Example icon-button with a heart icon\">\n    <mat-icon>favorite</mat-icon>\n  </button>\n  <a mat-mini-fab routerLink=\".\">Link</a>\n</div>\n",
+                styles: [".example-button-row button,\n.example-button-row a {\n  margin-right: 8px;\n}\n"]
+            })
+        ], ButtonTypesExample);
+        return ButtonTypesExample;
+    }());
+
+    /**
+     * @title Card with multiple sections
+     */
+    var CardFancyExample = /** @class */ (function () {
+        function CardFancyExample() {
+        }
+        CardFancyExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'card-fancy-example',
+                template: "<mat-card class=\"example-card\">\n  <mat-card-header>\n    <div mat-card-avatar class=\"example-header-image\"></div>\n    <mat-card-title>Shiba Inu</mat-card-title>\n    <mat-card-subtitle>Dog Breed</mat-card-subtitle>\n  </mat-card-header>\n  <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\">\n  <mat-card-content>\n    <p>\n      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.\n      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\n      bred for hunting.\n    </p>\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-button>LIKE</button>\n    <button mat-button>SHARE</button>\n  </mat-card-actions>\n</mat-card>\n",
+                styles: [".example-card {\n  max-width: 400px;\n}\n\n.example-header-image {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}\n"]
+            })
+        ], CardFancyExample);
+        return CardFancyExample;
+    }());
+
+    /**
+     * @title Basic cards
+     */
+    var CardOverviewExample = /** @class */ (function () {
+        function CardOverviewExample() {
+        }
+        CardOverviewExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'card-overview-example',
+                template: "<mat-card>Simple card</mat-card>\n",
+                styles: ["/** No CSS for this example */\n"]
+            })
+        ], CardOverviewExample);
+        return CardOverviewExample;
+    }());
+
     /**
      * @title Configurable checkbox
      */
@@ -2298,6 +2152,42 @@
             })
         ], ChipsStackedExample);
         return ChipsStackedExample;
+    }());
+
+    /**
+     * @title Elevation CSS classes
+     */
+    var ElevationOverviewExample = /** @class */ (function () {
+        function ElevationOverviewExample() {
+            this.isActive = false;
+        }
+        ElevationOverviewExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'elevation-overview-example',
+                template: "<div class=\"example-container\"\n    [class.mat-elevation-z2]=\"!isActive\"\n    [class.mat-elevation-z8]=\"isActive\">\n  Example\n</div>\n\n<button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>\n",
+                styles: [".example-container {\n  padding: 16px;\n  margin-bottom: 16px;\n}\n"]
+            })
+        ], ElevationOverviewExample);
+        return ElevationOverviewExample;
+    }());
+
+    /**
+     * @title MatRipple basic usage
+     */
+    var RippleOverviewExample = /** @class */ (function () {
+        function RippleOverviewExample() {
+            this.centered = false;
+            this.disabled = false;
+            this.unbounded = false;
+        }
+        RippleOverviewExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'ripple-overview-example',
+                template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox>\n\n<mat-form-field class=\"example-ripple-form-field\">\n  <input matInput [(ngModel)]=\"radius\" type=\"number\" placeholder=\"Radius\">\n</mat-form-field>\n<mat-form-field class=\"example-ripple-form-field\">\n  <input matInput [(ngModel)]=\"color\" type=\"text\" placeholder=\"Color\">\n</mat-form-field>\n\n\n<div class=\"example-ripple-container mat-elevation-z4\"\n     matRipple\n     [matRippleCentered]=\"centered\"\n     [matRippleDisabled]=\"disabled\"\n     [matRippleUnbounded]=\"unbounded\"\n     [matRippleRadius]=\"radius\"\n     [matRippleColor]=\"color\">\n  Click me\n</div>\n",
+                styles: [".example-ripple-container {\n  cursor: pointer;\n  text-align: center;\n\n  width: 300px;\n  height: 300px;\n  line-height: 300px;\n\n  user-select: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n}\n\n/** Styles to make the demo look better. */\n.example-ripple-checkbox {\n  margin: 6px 12px 6px 0;\n}\n\n.example-ripple-form-field {\n  margin: 0 12px 0 0;\n}\n"]
+            })
+        ], RippleOverviewExample);
+        return RippleOverviewExample;
     }());
 
     /** @title Datepicker open method */
@@ -3113,23 +3003,6 @@
     }());
 
     /**
-     * @title Elevation CSS classes
-     */
-    var ElevationOverviewExample = /** @class */ (function () {
-        function ElevationOverviewExample() {
-            this.isActive = false;
-        }
-        ElevationOverviewExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'elevation-overview-example',
-                template: "<div class=\"example-container\"\n    [class.mat-elevation-z2]=\"!isActive\"\n    [class.mat-elevation-z8]=\"isActive\">\n  Example\n</div>\n\n<button mat-button (click)=\"isActive = !isActive\">Toggle Elevation</button>\n",
-                styles: [".example-container {\n  padding: 16px;\n  margin-bottom: 16px;\n}\n"]
-            })
-        ], ElevationOverviewExample);
-        return ElevationOverviewExample;
-    }());
-
-    /**
      * @title Accordion with expand/collapse all toggles
      */
     var ExpansionExpandCollapseAllExample = /** @class */ (function () {
@@ -3190,122 +3063,6 @@
             })
         ], ExpansionStepsExample);
         return ExpansionStepsExample;
-    }());
-
-    /** @title Monitoring focus with FocusMonitor */
-    var FocusMonitorDirectivesExample = /** @class */ (function () {
-        function FocusMonitorDirectivesExample(_ngZone, _cdr) {
-            this._ngZone = _ngZone;
-            this._cdr = _cdr;
-            this.elementOrigin = this.formatOrigin(null);
-            this.subtreeOrigin = this.formatOrigin(null);
-        }
-        FocusMonitorDirectivesExample.prototype.formatOrigin = function (origin) {
-            return origin ? origin + ' focused' : 'blurred';
-        };
-        // Workaround for the fact that (cdkFocusChange) emits outside NgZone.
-        FocusMonitorDirectivesExample.prototype.markForCheck = function () {
-            var _this = this;
-            this._ngZone.run(function () { return _this._cdr.markForCheck(); });
-        };
-        FocusMonitorDirectivesExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'focus-monitor-directives-example',
-                template: "<div class=\"example-focus-monitor\">\n  <button cdkMonitorSubtreeFocus\n          (cdkFocusChange)=\"elementOrigin = formatOrigin($event); markForCheck()\">\n    Focus Monitored Element ({{elementOrigin}})\n  </button>\n</div>\n\n<div class=\"example-focus-monitor\">\n  <div cdkMonitorSubtreeFocus\n       (cdkFocusChange)=\"subtreeOrigin = formatOrigin($event); markForCheck()\">\n    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>\n    <button>Child Button 1</button>\n    <button>Child Button 2</button>\n  </div>\n</div>\n",
-                styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton {\n  margin-right: 12px;\n}\n"]
-            }),
-            tslib_1.__metadata("design:paramtypes", [core.NgZone, core.ChangeDetectorRef])
-        ], FocusMonitorDirectivesExample);
-        return FocusMonitorDirectivesExample;
-    }());
-
-    /** @title Focusing with a specific FocusOrigin */
-    var FocusMonitorFocusViaExample = /** @class */ (function () {
-        function FocusMonitorFocusViaExample(focusMonitor, _cdr, _ngZone) {
-            this.focusMonitor = focusMonitor;
-            this._cdr = _cdr;
-            this._ngZone = _ngZone;
-            this.origin = this.formatOrigin(null);
-        }
-        FocusMonitorFocusViaExample.prototype.ngAfterViewInit = function () {
-            var _this = this;
-            this.focusMonitor.monitor(this.monitoredEl)
-                .subscribe(function (origin) { return _this._ngZone.run(function () {
-                _this.origin = _this.formatOrigin(origin);
-                _this._cdr.markForCheck();
-            }); });
-        };
-        FocusMonitorFocusViaExample.prototype.ngOnDestroy = function () {
-            this.focusMonitor.stopMonitoring(this.monitoredEl);
-        };
-        FocusMonitorFocusViaExample.prototype.formatOrigin = function (origin) {
-            return origin ? origin + ' focused' : 'blurred';
-        };
-        tslib_1.__decorate([
-            core.ViewChild('monitored', { static: false }),
-            tslib_1.__metadata("design:type", core.ElementRef)
-        ], FocusMonitorFocusViaExample.prototype, "monitoredEl", void 0);
-        FocusMonitorFocusViaExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'focus-monitor-focus-via-example',
-                template: "<div class=\"example-focus-monitor\">\n  <button #monitored>1. Focus Monitored Element ({{origin}})</button>\n  <button #unmonitored>2. Not Monitored</button>\n</div>\n\n<mat-form-field>\n  <mat-label>Simulated focus origin</mat-label>\n  <mat-select #simulatedOrigin value=\"mouse\">\n    <mat-option value=\"mouse\">Mouse</mat-option>\n    <mat-option value=\"keyboard\">Keyboard</mat-option>\n    <mat-option value=\"touch\">Touch</mat-option>\n    <mat-option value=\"program\">Programmatic</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<button (click)=\"focusMonitor.focusVia(monitored, simulatedOrigin.value)\">\n  Focus button #1\n</button>\n<button (click)=\"focusMonitor.focusVia(unmonitored, simulatedOrigin.value)\">\n  Focus button #2\n</button>\n",
-                styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\n.example-focus-monitor button:focus {\n  box-shadow: 0 0 30px cyan;\n}\n\nmat-form-field,\nbutton {\n  margin-right: 12px;\n}\n"]
-            }),
-            tslib_1.__metadata("design:paramtypes", [a11y.FocusMonitor,
-                core.ChangeDetectorRef,
-                core.NgZone])
-        ], FocusMonitorFocusViaExample);
-        return FocusMonitorFocusViaExample;
-    }());
-
-    /** @title Monitoring focus with FocusMonitor */
-    var FocusMonitorOverviewExample = /** @class */ (function () {
-        function FocusMonitorOverviewExample(_focusMonitor, _cdr, _ngZone) {
-            this._focusMonitor = _focusMonitor;
-            this._cdr = _cdr;
-            this._ngZone = _ngZone;
-            this.elementOrigin = this.formatOrigin(null);
-            this.subtreeOrigin = this.formatOrigin(null);
-        }
-        FocusMonitorOverviewExample.prototype.ngAfterViewInit = function () {
-            var _this = this;
-            this._focusMonitor.monitor(this.element)
-                .subscribe(function (origin) { return _this._ngZone.run(function () {
-                _this.elementOrigin = _this.formatOrigin(origin);
-                _this._cdr.markForCheck();
-            }); });
-            this._focusMonitor.monitor(this.subtree, true)
-                .subscribe(function (origin) { return _this._ngZone.run(function () {
-                _this.subtreeOrigin = _this.formatOrigin(origin);
-                _this._cdr.markForCheck();
-            }); });
-        };
-        FocusMonitorOverviewExample.prototype.ngOnDestroy = function () {
-            this._focusMonitor.stopMonitoring(this.element);
-            this._focusMonitor.stopMonitoring(this.subtree);
-        };
-        FocusMonitorOverviewExample.prototype.formatOrigin = function (origin) {
-            return origin ? origin + ' focused' : 'blurred';
-        };
-        tslib_1.__decorate([
-            core.ViewChild('element', { static: false }),
-            tslib_1.__metadata("design:type", core.ElementRef)
-        ], FocusMonitorOverviewExample.prototype, "element", void 0);
-        tslib_1.__decorate([
-            core.ViewChild('subtree', { static: false }),
-            tslib_1.__metadata("design:type", core.ElementRef)
-        ], FocusMonitorOverviewExample.prototype, "subtree", void 0);
-        FocusMonitorOverviewExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'focus-monitor-overview-example',
-                template: "<div class=\"example-focus-monitor\">\n  <button #element>Focus Monitored Element ({{elementOrigin}})</button>\n</div>\n\n<div class=\"example-focus-monitor\">\n  <div #subtree>\n    <p>Focus Monitored Subtree ({{subtreeOrigin}})</p>\n    <button>Child Button 1</button>\n    <button>Child Button 2</button>\n  </div>\n</div>\n",
-                styles: [".example-focus-monitor {\n  padding: 20px;\n}\n\n.example-focus-monitor .cdk-mouse-focused {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-keyboard-focused {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor .cdk-touch-focused {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor .cdk-program-focused {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton {\n  margin-right: 12px;\n}\n"]
-            }),
-            tslib_1.__metadata("design:paramtypes", [a11y.FocusMonitor,
-                core.ChangeDetectorRef,
-                core.NgZone])
-        ], FocusMonitorOverviewExample);
-        return FocusMonitorOverviewExample;
     }());
 
     /** @title Form field appearance variants */
@@ -3941,7 +3698,7 @@
         NestedMenuExample = tslib_1.__decorate([
             core.Component({
                 selector: 'nested-menu-example',
-                template: "<button mat-button [matMenuTriggerFor]=\"animals\">Animal index</button>\r\n\r\n<mat-menu #animals=\"matMenu\">\r\n  <button mat-menu-item [matMenuTriggerFor]=\"vertebrates\">Vertebrates</button>\r\n  <button mat-menu-item [matMenuTriggerFor]=\"invertebrates\">Invertebrates</button>\r\n</mat-menu>\r\n\r\n<mat-menu #vertebrates=\"matMenu\">\r\n  <button mat-menu-item [matMenuTriggerFor]=\"fish\">Fishes</button>\r\n  <button mat-menu-item [matMenuTriggerFor]=\"amphibians\">Amphibians</button>\r\n  <button mat-menu-item [matMenuTriggerFor]=\"reptiles\">Reptiles</button>\r\n  <button mat-menu-item>Birds</button>\r\n  <button mat-menu-item>Mammals</button>\r\n</mat-menu>\r\n\r\n<mat-menu #invertebrates=\"matMenu\">\r\n  <button mat-menu-item>Insects</button>\r\n  <button mat-menu-item>Molluscs</button>\r\n  <button mat-menu-item>Crustaceans</button>\r\n  <button mat-menu-item>Corals</button>\r\n  <button mat-menu-item>Arachnids</button>\r\n  <button mat-menu-item>Velvet worms</button>\r\n  <button mat-menu-item>Horseshoe crabs</button>\r\n</mat-menu>\r\n\r\n<mat-menu #fish=\"matMenu\">\r\n  <button mat-menu-item>Baikal oilfish</button>\r\n  <button mat-menu-item>Bala shark</button>\r\n  <button mat-menu-item>Ballan wrasse</button>\r\n  <button mat-menu-item>Bamboo shark</button>\r\n  <button mat-menu-item>Banded killifish</button>\r\n</mat-menu>\r\n\r\n<mat-menu #amphibians=\"matMenu\">\r\n  <button mat-menu-item>Sonoran desert toad</button>\r\n  <button mat-menu-item>Western toad</button>\r\n  <button mat-menu-item>Arroyo toad</button>\r\n  <button mat-menu-item>Yosemite toad</button>\r\n</mat-menu>\r\n\r\n<mat-menu #reptiles=\"matMenu\">\r\n  <button mat-menu-item>Banded Day Gecko</button>\r\n  <button mat-menu-item>Banded Gila Monster</button>\r\n  <button mat-menu-item>Black Tree Monitor</button>\r\n  <button mat-menu-item>Blue Spiny Lizard</button>\r\n  <button mat-menu-item disabled>Velociraptor</button>\r\n</mat-menu>\r\n",
+                template: "<button mat-button [matMenuTriggerFor]=\"animals\">Animal index</button>\n\n<mat-menu #animals=\"matMenu\">\n  <button mat-menu-item [matMenuTriggerFor]=\"vertebrates\">Vertebrates</button>\n  <button mat-menu-item [matMenuTriggerFor]=\"invertebrates\">Invertebrates</button>\n</mat-menu>\n\n<mat-menu #vertebrates=\"matMenu\">\n  <button mat-menu-item [matMenuTriggerFor]=\"fish\">Fishes</button>\n  <button mat-menu-item [matMenuTriggerFor]=\"amphibians\">Amphibians</button>\n  <button mat-menu-item [matMenuTriggerFor]=\"reptiles\">Reptiles</button>\n  <button mat-menu-item>Birds</button>\n  <button mat-menu-item>Mammals</button>\n</mat-menu>\n\n<mat-menu #invertebrates=\"matMenu\">\n  <button mat-menu-item>Insects</button>\n  <button mat-menu-item>Molluscs</button>\n  <button mat-menu-item>Crustaceans</button>\n  <button mat-menu-item>Corals</button>\n  <button mat-menu-item>Arachnids</button>\n  <button mat-menu-item>Velvet worms</button>\n  <button mat-menu-item>Horseshoe crabs</button>\n</mat-menu>\n\n<mat-menu #fish=\"matMenu\">\n  <button mat-menu-item>Baikal oilfish</button>\n  <button mat-menu-item>Bala shark</button>\n  <button mat-menu-item>Ballan wrasse</button>\n  <button mat-menu-item>Bamboo shark</button>\n  <button mat-menu-item>Banded killifish</button>\n</mat-menu>\n\n<mat-menu #amphibians=\"matMenu\">\n  <button mat-menu-item>Sonoran desert toad</button>\n  <button mat-menu-item>Western toad</button>\n  <button mat-menu-item>Arroyo toad</button>\n  <button mat-menu-item>Yosemite toad</button>\n</mat-menu>\n\n<mat-menu #reptiles=\"matMenu\">\n  <button mat-menu-item>Banded Day Gecko</button>\n  <button mat-menu-item>Banded Gila Monster</button>\n  <button mat-menu-item>Black Tree Monitor</button>\n  <button mat-menu-item>Blue Spiny Lizard</button>\n  <button mat-menu-item disabled>Velociraptor</button>\n</mat-menu>\n",
                 styles: ["/** No CSS for this example */\n"]
             })
         ], NestedMenuExample);
@@ -4433,25 +4190,6 @@
             })
         ], RadioOverviewExample);
         return RadioOverviewExample;
-    }());
-
-    /**
-     * @title MatRipple basic usage
-     */
-    var RippleOverviewExample = /** @class */ (function () {
-        function RippleOverviewExample() {
-            this.centered = false;
-            this.disabled = false;
-            this.unbounded = false;
-        }
-        RippleOverviewExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'ripple-overview-example',
-                template: "<mat-checkbox [(ngModel)]=\"centered\" class=\"example-ripple-checkbox\">Centered</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"disabled\" class=\"example-ripple-checkbox\">Disabled</mat-checkbox>\n<mat-checkbox [(ngModel)]=\"unbounded\" class=\"example-ripple-checkbox\">Unbounded</mat-checkbox>\n\n<mat-form-field class=\"example-ripple-form-field\">\n  <input matInput [(ngModel)]=\"radius\" type=\"number\" placeholder=\"Radius\">\n</mat-form-field>\n<mat-form-field class=\"example-ripple-form-field\">\n  <input matInput [(ngModel)]=\"color\" type=\"text\" placeholder=\"Color\">\n</mat-form-field>\n\n\n<div class=\"example-ripple-container mat-elevation-z4\"\n     matRipple\n     [matRippleCentered]=\"centered\"\n     [matRippleDisabled]=\"disabled\"\n     [matRippleUnbounded]=\"unbounded\"\n     [matRippleRadius]=\"radius\"\n     [matRippleColor]=\"color\">\n  Click me\n</div>\n",
-                styles: [".example-ripple-container {\n  cursor: pointer;\n  text-align: center;\n\n  width: 300px;\n  height: 300px;\n  line-height: 300px;\n\n  user-select: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n}\n\n/** Styles to make the demo look better. */\n.example-ripple-checkbox {\n  margin: 6px 12px 6px 0;\n}\n\n.example-ripple-form-field {\n  margin: 0 12px 0 0;\n}\n"]
-            })
-        ], RippleOverviewExample);
-        return RippleOverviewExample;
     }());
 
     /** @title Select with custom trigger text */
@@ -5370,6 +5108,897 @@
         return StepperVerticalExample;
     }());
 
+    var ELEMENT_DATA$9 = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Basic use of `<mat-table>` (uses display flex)
+     */
+    var TableBasicFlexExample = /** @class */ (function () {
+        function TableBasicFlexExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = ELEMENT_DATA$9;
+        }
+        TableBasicFlexExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-basic-flex-example',
+                template: "<mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.position}} </mat-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.weight}} </mat-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.symbol}} </mat-cell>\n  </ng-container>\n\n  <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n  <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n</mat-table>",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            })
+        ], TableBasicFlexExample);
+        return TableBasicFlexExample;
+    }());
+
+    var ELEMENT_DATA$a = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Basic use of `<table mat-table>`
+     */
+    var TableBasicExample = /** @class */ (function () {
+        function TableBasicExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = ELEMENT_DATA$a;
+        }
+        TableBasicExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-basic-example',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n  <!--- Note that these columns can be defined in any order.\n        The actual rendered columns are set as a property on the row definition\" -->\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            })
+        ], TableBasicExample);
+        return TableBasicExample;
+    }());
+
+    var ELEMENT_DATA$b = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Table dynamically changing the columns displayed
+     */
+    var TableDynamicColumnsExample = /** @class */ (function () {
+        function TableDynamicColumnsExample() {
+            this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
+            this.columnsToDisplay = this.displayedColumns.slice();
+            this.data = ELEMENT_DATA$b;
+        }
+        TableDynamicColumnsExample.prototype.addColumn = function () {
+            var randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
+            this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
+        };
+        TableDynamicColumnsExample.prototype.removeColumn = function () {
+            if (this.columnsToDisplay.length) {
+                this.columnsToDisplay.pop();
+            }
+        };
+        TableDynamicColumnsExample.prototype.shuffle = function () {
+            var currentIndex = this.columnsToDisplay.length;
+            while (0 !== currentIndex) {
+                var randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                // Swap
+                var temp = this.columnsToDisplay[currentIndex];
+                this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
+                this.columnsToDisplay[randomIndex] = temp;
+            }
+        };
+        TableDynamicColumnsExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-dynamic-columns-example',
+                template: "<button mat-raised-button (click)=\"addColumn()\"> Add column </button>\n<button mat-raised-button (click)=\"removeColumn()\"> Remove column </button>\n<button mat-raised-button (click)=\"shuffle()\"> Shuffle </button>\n\n<table mat-table [dataSource]=\"data\" class=\"mat-elevation-z8\">\n  <ng-container [matColumnDef]=\"column\" *ngFor=\"let column of displayedColumns\">\n    <th mat-header-cell *matHeaderCellDef> {{column}} </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element[column]}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay;\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n\nbutton {\n  margin: 16px 8px;\n}\n"]
+            })
+        ], TableDynamicColumnsExample);
+        return TableDynamicColumnsExample;
+    }());
+
+    /**
+     * @title Table with expandable rows
+     */
+    var TableExpandableRowsExample = /** @class */ (function () {
+        function TableExpandableRowsExample() {
+            this.dataSource = ELEMENT_DATA$c;
+            this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
+        }
+        TableExpandableRowsExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-expandable-rows-example',
+                template: "<table mat-table\n       [dataSource]=\"dataSource\" multiTemplateDataRows\n       class=\"mat-elevation-z8\">\n  <ng-container matColumnDef=\"{{column}}\" *ngFor=\"let column of columnsToDisplay\">\n    <th mat-header-cell *matHeaderCellDef> {{column}} </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element[column]}} </td>\n  </ng-container>\n\n  <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->\n  <ng-container matColumnDef=\"expandedDetail\">\n    <td mat-cell *matCellDef=\"let element\" [attr.colspan]=\"columnsToDisplay.length\">\n      <div class=\"example-element-detail\"\n           [@detailExpand]=\"element == expandedElement ? 'expanded' : 'collapsed'\">\n        <div class=\"example-element-diagram\">\n          <div class=\"example-element-position\"> {{element.position}} </div>\n          <div class=\"example-element-symbol\"> {{element.symbol}} </div>\n          <div class=\"example-element-name\"> {{element.name}} </div>\n          <div class=\"example-element-weight\"> {{element.weight}} </div>\n        </div>\n        <div class=\"example-element-description\">\n          {{element.description}}\n          <span class=\"example-element-description-attribution\"> -- Wikipedia </span>\n        </div>\n      </div>\n    </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n  <tr mat-row *matRowDef=\"let element; columns: columnsToDisplay;\"\n      class=\"example-element-row\"\n      [class.example-expanded-row]=\"expandedElement === element\"\n      (click)=\"expandedElement = expandedElement === element ? null : element\">\n  </tr>\n  <tr mat-row *matRowDef=\"let row; columns: ['expandedDetail']\" class=\"example-detail-row\"></tr>\n</table>\n",
+                animations: [
+                    animations.trigger('detailExpand', [
+                        animations.state('collapsed', animations.style({ height: '0px', minHeight: '0' })),
+                        animations.state('expanded', animations.style({ height: '*' })),
+                        animations.transition('expanded <=> collapsed', animations.animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+                    ]),
+                ],
+                styles: ["table {\n  width: 100%;\n}\n\ntr.example-detail-row {\n  height: 0;\n}\n\ntr.example-element-row:not(.example-expanded-row):hover {\n  background: #777;\n}\n\ntr.example-element-row:not(.example-expanded-row):active {\n  background: #efefef;\n}\n\n.example-element-row td {\n  border-bottom-width: 0;\n}\n\n.example-element-detail {\n  overflow: hidden;\n  display: flex;\n}\n\n.example-element-diagram {\n  min-width: 80px;\n  border: 2px solid black;\n  padding: 8px;\n  font-weight: lighter;\n  margin: 8px 0;\n  height: 104px;\n}\n\n.example-element-symbol {\n  font-weight: bold;\n  font-size: 40px;\n  line-height: normal;\n}\n\n.example-element-description {\n  padding: 16px;\n}\n\n.example-element-description-attribution {\n  opacity: 0.5;\n}\n"]
+            })
+        ], TableExpandableRowsExample);
+        return TableExpandableRowsExample;
+    }());
+    var ELEMENT_DATA$c = [
+        {
+            position: 1,
+            name: 'Hydrogen',
+            weight: 1.0079,
+            symbol: 'H',
+            description: "Hydrogen is a chemical element with symbol H and atomic number 1. With a standard\n        atomic weight of 1.008, hydrogen is the lightest element on the periodic table."
+        }, {
+            position: 2,
+            name: 'Helium',
+            weight: 4.0026,
+            symbol: 'He',
+            description: "Helium is a chemical element with symbol He and atomic number 2. It is a\n        colorless, odorless, tasteless, non-toxic, inert, monatomic gas, the first in the noble gas\n        group in the periodic table. Its boiling point is the lowest among all the elements."
+        }, {
+            position: 3,
+            name: 'Lithium',
+            weight: 6.941,
+            symbol: 'Li',
+            description: "Lithium is a chemical element with symbol Li and atomic number 3. It is a soft,\n        silvery-white alkali metal. Under standard conditions, it is the lightest metal and the\n        lightest solid element."
+        }, {
+            position: 4,
+            name: 'Beryllium',
+            weight: 9.0122,
+            symbol: 'Be',
+            description: "Beryllium is a chemical element with symbol Be and atomic number 4. It is a\n        relatively rare element in the universe, usually occurring as a product of the spallation of\n        larger atomic nuclei that have collided with cosmic rays."
+        }, {
+            position: 5,
+            name: 'Boron',
+            weight: 10.811,
+            symbol: 'B',
+            description: "Boron is a chemical element with symbol B and atomic number 5. Produced entirely\n        by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a\n        low-abundance element in the Solar system and in the Earth's crust."
+        }, {
+            position: 6,
+            name: 'Carbon',
+            weight: 12.0107,
+            symbol: 'C',
+            description: "Carbon is a chemical element with symbol C and atomic number 6. It is nonmetallic\n        and tetravalent\u2014making four electrons available to form covalent chemical bonds. It belongs\n        to group 14 of the periodic table."
+        }, {
+            position: 7,
+            name: 'Nitrogen',
+            weight: 14.0067,
+            symbol: 'N',
+            description: "Nitrogen is a chemical element with symbol N and atomic number 7. It was first\n        discovered and isolated by Scottish physician Daniel Rutherford in 1772."
+        }, {
+            position: 8,
+            name: 'Oxygen',
+            weight: 15.9994,
+            symbol: 'O',
+            description: "Oxygen is a chemical element with symbol O and atomic number 8. It is a member of\n         the chalcogen group on the periodic table, a highly reactive nonmetal, and an oxidizing\n         agent that readily forms oxides with most elements as well as with other compounds."
+        }, {
+            position: 9,
+            name: 'Fluorine',
+            weight: 18.9984,
+            symbol: 'F',
+            description: "Fluorine is a chemical element with symbol F and atomic number 9. It is the\n        lightest halogen and exists as a highly toxic pale yellow diatomic gas at standard\n        conditions."
+        }, {
+            position: 10,
+            name: 'Neon',
+            weight: 20.1797,
+            symbol: 'Ne',
+            description: "Neon is a chemical element with symbol Ne and atomic number 10. It is a noble gas.\n        Neon is a colorless, odorless, inert monatomic gas under standard conditions, with about\n        two-thirds the density of air."
+        },
+    ];
+
+    var ELEMENT_DATA$d = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Table with filtering
+     */
+    var TableFilteringExample = /** @class */ (function () {
+        function TableFilteringExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new table.MatTableDataSource(ELEMENT_DATA$d);
+        }
+        TableFilteringExample.prototype.applyFilter = function (filterValue) {
+            this.dataSource.filter = filterValue.trim().toLowerCase();
+        };
+        TableFilteringExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-filtering-example',
+                template: "<mat-form-field>\n  <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n</mat-form-field>\n\n<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: ["/* Structure */\ntable {\n  width: 100%;\n}\n\n.mat-form-field {\n  font-size: 14px;\n  width: 100%;\n}\n"]
+            })
+        ], TableFilteringExample);
+        return TableFilteringExample;
+    }());
+
+    /**
+     * @title Footer row table
+     */
+    var TableFooterRowExample = /** @class */ (function () {
+        function TableFooterRowExample() {
+            this.displayedColumns = ['item', 'cost'];
+            this.transactions = [
+                { item: 'Beach ball', cost: 4 },
+                { item: 'Towel', cost: 5 },
+                { item: 'Frisbee', cost: 2 },
+                { item: 'Sunscreen', cost: 4 },
+                { item: 'Cooler', cost: 25 },
+                { item: 'Swim suit', cost: 15 },
+            ];
+        }
+        /** Gets the total cost of all transactions. */
+        TableFooterRowExample.prototype.getTotalCost = function () {
+            return this.transactions.map(function (t) { return t.cost; }).reduce(function (acc, value) { return acc + value; }, 0);
+        };
+        TableFooterRowExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-footer-row-example',
+                template: "<table mat-table [dataSource]=\"transactions\" class=\"mat-elevation-z8\">\n  <!-- Item Column -->\n  <ng-container matColumnDef=\"item\">\n    <th mat-header-cell *matHeaderCellDef> Item </th>\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.item}} </td>\n    <td mat-footer-cell *matFooterCellDef> Total </td>\n  </ng-container>\n\n  <!-- Cost Column -->\n  <ng-container matColumnDef=\"cost\">\n    <th mat-header-cell *matHeaderCellDef> Cost </th>\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.cost | currency}} </td>\n    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  <tr mat-footer-row *matFooterRowDef=\"displayedColumns\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n\ntr.mat-footer-row {\n  font-weight: bold;\n}\n"]
+            })
+        ], TableFooterRowExample);
+        return TableFooterRowExample;
+    }());
+
+    /**
+     * @title Table retrieving data through HTTP
+     */
+    var TableHttpExample = /** @class */ (function () {
+        function TableHttpExample(_httpClient) {
+            this._httpClient = _httpClient;
+            this.displayedColumns = ['created', 'state', 'number', 'title'];
+            this.data = [];
+            this.resultsLength = 0;
+            this.isLoadingResults = true;
+            this.isRateLimitReached = false;
+        }
+        TableHttpExample.prototype.ngAfterViewInit = function () {
+            var _this = this;
+            this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
+            // If the user changes the sort order, reset back to the first page.
+            this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
+            rxjs.merge(this.sort.sortChange, this.paginator.page)
+                .pipe(operators.startWith({}), operators.switchMap(function () {
+                _this.isLoadingResults = true;
+                return _this.exampleDatabase.getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
+            }), operators.map(function (data) {
+                // Flip flag to show that loading has finished.
+                _this.isLoadingResults = false;
+                _this.isRateLimitReached = false;
+                _this.resultsLength = data.total_count;
+                return data.items;
+            }), operators.catchError(function () {
+                _this.isLoadingResults = false;
+                // Catch if the GitHub API has reached its rate limit. Return empty data.
+                _this.isRateLimitReached = true;
+                return rxjs.of([]);
+            })).subscribe(function (data) { return _this.data = data; });
+        };
+        tslib_1.__decorate([
+            core.ViewChild(paginator.MatPaginator, { static: false }),
+            tslib_1.__metadata("design:type", paginator.MatPaginator)
+        ], TableHttpExample.prototype, "paginator", void 0);
+        tslib_1.__decorate([
+            core.ViewChild(sort.MatSort, { static: false }),
+            tslib_1.__metadata("design:type", sort.MatSort)
+        ], TableHttpExample.prototype, "sort", void 0);
+        TableHttpExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-http-example',
+                template: "<div class=\"example-container mat-elevation-z8\">\n  <div class=\"example-loading-shade\"\n       *ngIf=\"isLoadingResults || isRateLimitReached\">\n    <mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner>\n    <div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">\n      GitHub's API rate limit has been reached. It will be reset in one minute.\n    </div>\n  </div>\n\n  <div class=\"example-table-container\">\n\n    <table mat-table [dataSource]=\"data\" class=\"example-table\"\n           matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"desc\">\n      <!-- Number Column -->\n      <ng-container matColumnDef=\"number\">\n        <th mat-header-cell *matHeaderCellDef>#</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.number}}</td>\n      </ng-container>\n\n      <!-- Title Column -->\n      <ng-container matColumnDef=\"title\">\n        <th mat-header-cell *matHeaderCellDef>Title</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.title}}</td>\n      </ng-container>\n\n      <!-- State Column -->\n      <ng-container matColumnDef=\"state\">\n        <th mat-header-cell *matHeaderCellDef>State</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.state}}</td>\n      </ng-container>\n\n      <!-- Created Column -->\n      <ng-container matColumnDef=\"created\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>\n          Created\n        </th>\n        <td mat-cell *matCellDef=\"let row\">{{row.created_at | date}}</td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    </table>\n  </div>\n\n  <mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator>\n</div>\n",
+                styles: ["/* Structure */\n.example-container {\n  position: relative;\n  min-height: 200px;\n}\n\n.example-table-container {\n  position: relative;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n\n.example-loading-shade {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n/* Column Widths */\n.mat-column-number,\n.mat-column-state {\n  max-width: 64px;\n}\n\n.mat-column-created {\n  max-width: 124px;\n}\n"]
+            }),
+            tslib_1.__metadata("design:paramtypes", [http.HttpClient])
+        ], TableHttpExample);
+        return TableHttpExample;
+    }());
+    /** An example database that the data source uses to retrieve data for the table. */
+    var ExampleHttpDatabase = /** @class */ (function () {
+        function ExampleHttpDatabase(_httpClient) {
+            this._httpClient = _httpClient;
+        }
+        ExampleHttpDatabase.prototype.getRepoIssues = function (sort, order, page) {
+            var href = 'https://api.github.com/search/issues';
+            var requestUrl = href + "?q=repo:angular/components&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
+            return this._httpClient.get(requestUrl);
+        };
+        return ExampleHttpDatabase;
+    }());
+
+    /**
+     * @title Table with multiple header and footer rows
+     */
+    var TableMultipleHeaderFooterExample = /** @class */ (function () {
+        function TableMultipleHeaderFooterExample() {
+            this.displayedColumns = ['item', 'cost'];
+            this.transactions = [
+                { item: 'Beach ball', cost: 4 },
+                { item: 'Towel', cost: 5 },
+                { item: 'Frisbee', cost: 2 },
+                { item: 'Sunscreen', cost: 4 },
+                { item: 'Cooler', cost: 25 },
+                { item: 'Swim suit', cost: 15 },
+            ];
+        }
+        /** Gets the total cost of all transactions. */
+        TableMultipleHeaderFooterExample.prototype.getTotalCost = function () {
+            return this.transactions.map(function (t) { return t.cost; }).reduce(function (acc, value) { return acc + value; }, 0);
+        };
+        TableMultipleHeaderFooterExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-multiple-header-footer-example',
+                template: "<table mat-table [dataSource]=\"transactions\" class=\"mat-elevation-z8\">\n  <!-- Item Column -->\n  <ng-container matColumnDef=\"item\">\n    <th mat-header-cell *matHeaderCellDef> Item </th>\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.item}} </td>\n    <td mat-footer-cell *matFooterCellDef> Total </td>\n  </ng-container>\n\n  <!-- Cost Column -->\n  <ng-container matColumnDef=\"cost\">\n    <th mat-header-cell *matHeaderCellDef> Cost </th>\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.cost | currency}} </td>\n    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>\n  </ng-container>\n\n  <!-- Item Description Column -->\n  <ng-container matColumnDef=\"item-description\">\n    <th mat-header-cell *matHeaderCellDef> Name of the item purchased </th>\n  </ng-container>\n\n  <!-- Cost Description Column -->\n  <ng-container matColumnDef=\"cost-description\">\n    <th mat-header-cell *matHeaderCellDef> Cost of the item in USD </th>\n  </ng-container>\n\n  <!-- Disclaimer column -->\n  <ng-container matColumnDef=\"disclaimer\">\n    <td mat-footer-cell *matFooterCellDef colspan=\"2\">\n      Please note that the cost of items displayed are completely and totally made up.\n    </td>\n  </ng-container>\n\n  <!-- The table will render two header rows, one data row per data object, and two footer rows. -->\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"\n      class=\"example-first-header-row\">\n  </tr>\n  <tr mat-header-row *matHeaderRowDef=\"['item-description', 'cost-description']\"\n      class=\"example-second-header-row\">\n  </tr>\n\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n  <tr mat-footer-row *matFooterRowDef=\"displayedColumns\" class=\"example-first-footer-row\"></tr>\n  <tr mat-footer-row *matFooterRowDef=\"['disclaimer']\" class=\"example-second-footer-row\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n\n.example-first-header-row th {\n  border-bottom: none;\n}\n\n.example-second-header-row {\n  font-style: italic;\n}\n\n.example-first-footer-row {\n  font-weight: bold;\n}\n\n.example-second-footer-row td {\n  color: #900000;\n}\n"]
+            })
+        ], TableMultipleHeaderFooterExample);
+        return TableMultipleHeaderFooterExample;
+    }());
+
+    /** Constants used to fill up our data base. */
+    var COLORS = [
+        'maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple', 'fuchsia', 'lime', 'teal',
+        'aqua', 'blue', 'navy', 'black', 'gray'
+    ];
+    var NAMES = [
+        'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
+        'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
+    ];
+    /**
+     * @title Data table with sorting, pagination, and filtering.
+     */
+    var TableOverviewExample = /** @class */ (function () {
+        function TableOverviewExample() {
+            this.displayedColumns = ['id', 'name', 'progress', 'color'];
+            // Create 100 users
+            var users = Array.from({ length: 100 }, function (_, k) { return createNewUser(k + 1); });
+            // Assign the data to the data source for the table to render
+            this.dataSource = new table.MatTableDataSource(users);
+        }
+        TableOverviewExample.prototype.ngOnInit = function () {
+            this.dataSource.paginator = this.paginator;
+            this.dataSource.sort = this.sort;
+        };
+        TableOverviewExample.prototype.applyFilter = function (filterValue) {
+            this.dataSource.filter = filterValue.trim().toLowerCase();
+            if (this.dataSource.paginator) {
+                this.dataSource.paginator.firstPage();
+            }
+        };
+        tslib_1.__decorate([
+            core.ViewChild(paginator.MatPaginator, { static: true }),
+            tslib_1.__metadata("design:type", paginator.MatPaginator)
+        ], TableOverviewExample.prototype, "paginator", void 0);
+        tslib_1.__decorate([
+            core.ViewChild(sort.MatSort, { static: true }),
+            tslib_1.__metadata("design:type", sort.MatSort)
+        ], TableOverviewExample.prototype, "sort", void 0);
+        TableOverviewExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-overview-example',
+                template: "<mat-form-field>\n  <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n</mat-form-field>\n\n<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" matSort>\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"id\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n    </ng-container>\n\n    <!-- Progress Column -->\n    <ng-container matColumnDef=\"progress\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n    </ng-container>\n\n    <!-- Color Column -->\n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>\n      <td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n    </tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n</div>\n",
+                styles: ["table {\n  width: 100%;\n}\n\n.mat-form-field {\n  font-size: 14px;\n  width: 100%;\n}\n\ntd, th {\n  width: 25%;\n}\n"]
+            }),
+            tslib_1.__metadata("design:paramtypes", [])
+        ], TableOverviewExample);
+        return TableOverviewExample;
+    }());
+    /** Builds and returns a new User. */
+    function createNewUser(id) {
+        var name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
+            NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
+        return {
+            id: id.toString(),
+            name: name,
+            progress: Math.round(Math.random() * 100).toString(),
+            color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
+        };
+    }
+
+    /**
+     * @title Table with pagination
+     */
+    var TablePaginationExample = /** @class */ (function () {
+        function TablePaginationExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new table.MatTableDataSource(ELEMENT_DATA$e);
+        }
+        TablePaginationExample.prototype.ngOnInit = function () {
+            this.dataSource.paginator = this.paginator;
+        };
+        tslib_1.__decorate([
+            core.ViewChild(paginator.MatPaginator, { static: true }),
+            tslib_1.__metadata("design:type", paginator.MatPaginator)
+        ], TablePaginationExample.prototype, "paginator", void 0);
+        TablePaginationExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-pagination-example',
+                template: "<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\">\n\n    <!-- Position Column -->\n    <ng-container matColumnDef=\"position\">\n      <th mat-header-cell *matHeaderCellDef> No. </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n    </ng-container>\n\n    <!-- Weight Column -->\n    <ng-container matColumnDef=\"weight\">\n      <th mat-header-cell *matHeaderCellDef> Weight </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n    </ng-container>\n\n    <!-- Symbol Column -->\n    <ng-container matColumnDef=\"symbol\">\n      <th mat-header-cell *matHeaderCellDef> Symbol </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\n</div>\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            })
+        ], TablePaginationExample);
+        return TablePaginationExample;
+    }());
+    var ELEMENT_DATA$e = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+        { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
+        { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
+        { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
+        { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
+        { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
+        { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
+        { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
+        { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
+        { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
+        { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
+    ];
+
+    /**
+     * @title Table showing each row context properties.
+     */
+    var TableRowContextExample = /** @class */ (function () {
+        function TableRowContextExample() {
+            this.displayedColumns = ['$implicit', 'index', 'count', 'first', 'last', 'even', 'odd'];
+            this.data = ['one', 'two', 'three', 'four', 'five'];
+        }
+        TableRowContextExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-row-context-example',
+                template: "<table mat-table [dataSource]=\"data\" class=\"mat-elevation-z8\">\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"$implicit\">\n    <th mat-header-cell *matHeaderCellDef> $implicit </th>\n    <td mat-cell *matCellDef=\"let data\"> {{data}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"index\">\n    <th mat-header-cell *matHeaderCellDef> index </th>\n    <td mat-cell *matCellDef=\"let index = index\"> {{index}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"count\">\n    <th mat-header-cell *matHeaderCellDef> count </th>\n    <td mat-cell *matCellDef=\"let count = count\"> {{count}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"first\">\n    <th mat-header-cell *matHeaderCellDef> first </th>\n    <td mat-cell *matCellDef=\"let first = first\"> {{first}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"last\">\n    <th mat-header-cell *matHeaderCellDef> last </th>\n    <td mat-cell *matCellDef=\"let last = last\"> {{last}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"even\">\n    <th mat-header-cell *matHeaderCellDef> even </th>\n    <td mat-cell *matCellDef=\"let even = even\"> {{even}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"odd\">\n    <th mat-header-cell *matHeaderCellDef> odd </th>\n    <td mat-cell *matCellDef=\"let odd = odd\"> {{odd}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            })
+        ], TableRowContextExample);
+        return TableRowContextExample;
+    }());
+
+    var ELEMENT_DATA$f = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Table with selection
+     */
+    var TableSelectionExample = /** @class */ (function () {
+        function TableSelectionExample() {
+            this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
+            this.dataSource = new table.MatTableDataSource(ELEMENT_DATA$f);
+            this.selection = new collections.SelectionModel(true, []);
+        }
+        /** Whether the number of selected elements matches the total number of rows. */
+        TableSelectionExample.prototype.isAllSelected = function () {
+            var numSelected = this.selection.selected.length;
+            var numRows = this.dataSource.data.length;
+            return numSelected === numRows;
+        };
+        /** Selects all rows if they are not all selected; otherwise clear selection. */
+        TableSelectionExample.prototype.masterToggle = function () {
+            var _this = this;
+            this.isAllSelected() ?
+                this.selection.clear() :
+                this.dataSource.data.forEach(function (row) { return _this.selection.select(row); });
+        };
+        /** The label for the checkbox on the passed row */
+        TableSelectionExample.prototype.checkboxLabel = function (row) {
+            if (!row) {
+                return (this.isAllSelected() ? 'select' : 'deselect') + " all";
+            }
+            return (this.selection.isSelected(row) ? 'deselect' : 'select') + " row " + (row.position + 1);
+        };
+        TableSelectionExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-selection-example',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n  <!-- Checkbox Column -->\n  <ng-container matColumnDef=\"select\">\n    <th mat-header-cell *matHeaderCellDef>\n      <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\">\n      </mat-checkbox>\n    </th>\n    <td mat-cell *matCellDef=\"let row\">\n      <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\">\n      </mat-checkbox>\n    </td>\n  </ng-container>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"\n      (click)=\"selection.toggle(row)\">\n  </tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            })
+        ], TableSelectionExample);
+        return TableSelectionExample;
+    }());
+
+    var ELEMENT_DATA$g = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Table with sorting
+     */
+    var TableSortingExample = /** @class */ (function () {
+        function TableSortingExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new table.MatTableDataSource(ELEMENT_DATA$g);
+        }
+        TableSortingExample.prototype.ngOnInit = function () {
+            this.dataSource.sort = this.sort;
+        };
+        tslib_1.__decorate([
+            core.ViewChild(sort.MatSort, { static: true }),
+            tslib_1.__metadata("design:type", sort.MatSort)
+        ], TableSortingExample.prototype, "sort", void 0);
+        TableSortingExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-sorting-example',
+                template: "<table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z8\">\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n\nth.mat-sort-header-sorted {\n  color: black;\n}\n"]
+            })
+        ], TableSortingExample);
+        return TableSortingExample;
+    }());
+
+    /**
+     * @title Table with sticky columns
+     */
+    var TableStickyColumnsExample = /** @class */ (function () {
+        function TableStickyColumnsExample() {
+            this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
+            this.dataSource = ELEMENT_DATA$h;
+        }
+        TableStickyColumnsExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-sticky-columns-example',
+                template: "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\">\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\" sticky>\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n    </ng-container>\n\n    <!-- Position Column -->\n    <ng-container matColumnDef=\"position\">\n      <th mat-header-cell *matHeaderCellDef> No. </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n    </ng-container>\n\n    <!-- Weight Column -->\n    <ng-container matColumnDef=\"weight\">\n      <th mat-header-cell *matHeaderCellDef> Weight </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n    </ng-container>\n\n    <!-- Symbol Column -->\n    <ng-container matColumnDef=\"symbol\">\n      <th mat-header-cell *matHeaderCellDef> Symbol </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n    </ng-container>\n\n    <!-- Star Column -->\n    <ng-container matColumnDef=\"star\" stickyEnd>\n      <th mat-header-cell *matHeaderCellDef></th>\n      <td mat-cell *matCellDef=\"let element\">\n        <mat-icon>more_vert</mat-icon>\n      </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>\n",
+                styles: [".example-container {\n  height: 400px;\n  width: 550px;\n  overflow: auto;\n}\n\ntable {\n  width: 800px;\n}\n\ntd.mat-column-star {\n  width: 20px;\n  padding-right: 8px;\n}\n\nth.mat-column-position, td.mat-column-position {\n  padding-left: 8px;\n}\n\n.mat-table-sticky:first-child {\n  border-right: 1px solid #e0e0e0;\n}\n\n.mat-table-sticky:last-child {\n  border-left: 1px solid #e0e0e0;\n}\n"]
+            })
+        ], TableStickyColumnsExample);
+        return TableStickyColumnsExample;
+    }());
+    var ELEMENT_DATA$h = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+
+    /**
+     * @title Flex-layout tables with toggle-able sticky headers, footers, and columns
+     */
+    var TableStickyComplexFlexExample = /** @class */ (function () {
+        function TableStickyComplexFlexExample() {
+            this.displayedColumns = [];
+            this.dataSource = ELEMENT_DATA$i;
+            this.tables = [0];
+            this.displayedColumns.length = 24;
+            this.displayedColumns.fill('filler');
+            // The first two columns should be position and name; the last two columns: weight, symbol
+            this.displayedColumns[0] = 'position';
+            this.displayedColumns[1] = 'name';
+            this.displayedColumns[22] = 'weight';
+            this.displayedColumns[23] = 'symbol';
+        }
+        /** Whether the button toggle group contains the id as an active value. */
+        TableStickyComplexFlexExample.prototype.isSticky = function (buttonToggleGroup, id) {
+            return (buttonToggleGroup.value || []).indexOf(id) !== -1;
+        };
+        TableStickyComplexFlexExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-sticky-complex-flex-example',
+                template: "<div>\n  <button mat-raised-button (click)=\"tables.push(tables.length)\">Add table</button>\n  <button mat-raised-button (click)=\"tables.pop()\">Remove table</button>\n</div>\n\n<div>\n  Sticky Headers:\n  <mat-button-toggle-group multiple [value]=\"['header-1']\"\n                           #stickyHeaders=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"header-1\"> Row 1 </mat-button-toggle>\n    <mat-button-toggle value=\"header-2\"> Row 2 </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div>\n  Sticky Footers:\n  <mat-button-toggle-group multiple [value]=\"['footer-1']\"\n                           #stickyFooters=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"footer-1\"> Row 1 </mat-button-toggle>\n    <mat-button-toggle value=\"footer-2\"> Row 2 </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div>\n  Sticky Columns:\n  <mat-button-toggle-group multiple [value]=\"['position', 'symbol']\"\n                           #stickyColumns=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"position\"> Position </mat-button-toggle>\n    <mat-button-toggle value=\"name\"> Name </mat-button-toggle>\n    <mat-button-toggle value=\"weight\"> Weight </mat-button-toggle>\n    <mat-button-toggle value=\"symbol\"> Symbol </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <mat-table [dataSource]=\"dataSource\" *ngFor=\"let table of tables\">\n    <ng-container matColumnDef=\"position\" [sticky]=\"isSticky(stickyColumns, 'position')\">\n      <mat-header-cell *matHeaderCellDef> Position </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.position}} </mat-cell>\n      <mat-footer-cell *matFooterCellDef> Position Footer </mat-footer-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"name\" [sticky]=\"isSticky(stickyColumns, 'name')\">\n      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\n      <mat-footer-cell *matFooterCellDef> Name Footer </mat-footer-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"weight\" [stickyEnd]=\"isSticky(stickyColumns, 'weight')\">\n      <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.weight}} </mat-cell>\n      <mat-footer-cell *matFooterCellDef> Weight Footer </mat-footer-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"symbol\" [stickyEnd]=\"isSticky(stickyColumns, 'symbol')\">\n      <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.symbol}} </mat-cell>\n      <mat-footer-cell *matFooterCellDef> Symbol Footer </mat-footer-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"filler\">\n      <mat-header-cell *matHeaderCellDef> Filler header cell </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> Filler data cell </mat-cell>\n      <mat-footer-cell *matFooterCellDef> Filler footer cell </mat-footer-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: isSticky(stickyHeaders, 'header-1')\"></mat-header-row>\n    <mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: isSticky(stickyHeaders, 'header-2')\"></mat-header-row>\n\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n\n    <mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: isSticky(stickyFooters, 'footer-1')\"></mat-footer-row>\n    <mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: isSticky(stickyFooters, 'footer-2')\"></mat-footer-row>\n  </mat-table>\n</div>\n",
+                styles: [".example-container {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group {\n  margin: 8px;\n}\n\n.mat-column-filler {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell, .mat-footer-cell, .mat-cell {\n  min-width: 80px;\n  box-sizing: border-box;\n}\n\n.mat-header-row, .mat-footer-row, .mat-row {\n  min-width: 1920px; /* 24 columns, 80px each */\n}\n"]
+            }),
+            tslib_1.__metadata("design:paramtypes", [])
+        ], TableStickyComplexFlexExample);
+        return TableStickyComplexFlexExample;
+    }());
+    var ELEMENT_DATA$i = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+
+    /**
+     * @title Tables with toggle-able sticky headers, footers, and columns
+     */
+    var TableStickyComplexExample = /** @class */ (function () {
+        function TableStickyComplexExample() {
+            this.displayedColumns = [];
+            this.dataSource = ELEMENT_DATA$j;
+            this.tables = [0];
+            this.displayedColumns.length = 24;
+            this.displayedColumns.fill('filler');
+            // The first two columns should be position and name; the last two columns: weight, symbol
+            this.displayedColumns[0] = 'position';
+            this.displayedColumns[1] = 'name';
+            this.displayedColumns[22] = 'weight';
+            this.displayedColumns[23] = 'symbol';
+        }
+        /** Whether the button toggle group contains the id as an active value. */
+        TableStickyComplexExample.prototype.isSticky = function (buttonToggleGroup, id) {
+            return (buttonToggleGroup.value || []).indexOf(id) !== -1;
+        };
+        TableStickyComplexExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-sticky-complex-example',
+                template: "<div>\n  <button mat-raised-button (click)=\"tables.push(tables.length)\">Add table</button>\n  <button mat-raised-button (click)=\"tables.pop()\">Remove table</button>\n</div>\n\n<div>\n  Sticky Headers:\n  <mat-button-toggle-group multiple [value]=\"['header-1']\"\n                           #stickyHeaders=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"header-1\"> Row 1 </mat-button-toggle>\n    <mat-button-toggle value=\"header-2\"> Row 2 </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div>\n  Sticky Footers:\n  <mat-button-toggle-group multiple [value]=\"['footer-1']\"\n                           #stickyFooters=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"footer-1\"> Row 1 </mat-button-toggle>\n    <mat-button-toggle value=\"footer-2\"> Row 2 </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div>\n  Sticky Columns:\n  <mat-button-toggle-group multiple [value]=\"['position', 'symbol']\"\n                           #stickyColumns=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"position\"> Position </mat-button-toggle>\n    <mat-button-toggle value=\"name\"> Name </mat-button-toggle>\n    <mat-button-toggle value=\"weight\"> Weight </mat-button-toggle>\n    <mat-button-toggle value=\"symbol\"> Symbol </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" *ngFor=\"let table of tables\">\n    <ng-container matColumnDef=\"position\" [sticky]=\"isSticky(stickyColumns, 'position')\">\n      <th mat-header-cell *matHeaderCellDef> Position </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n      <td mat-footer-cell *matFooterCellDef> Position Footer </td>\n    </ng-container>\n\n    <ng-container matColumnDef=\"name\" [sticky]=\"isSticky(stickyColumns, 'name')\">\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n      <td mat-footer-cell *matFooterCellDef> Name Footer </td>\n    </ng-container>\n\n    <ng-container matColumnDef=\"weight\" [stickyEnd]=\"isSticky(stickyColumns, 'weight')\">\n      <th mat-header-cell *matHeaderCellDef> Weight </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n      <td mat-footer-cell *matFooterCellDef> Weight Footer </td>\n    </ng-container>\n\n    <ng-container matColumnDef=\"symbol\" [stickyEnd]=\"isSticky(stickyColumns, 'symbol')\">\n      <th mat-header-cell *matHeaderCellDef> Symbol </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n      <td mat-footer-cell *matFooterCellDef> Symbol Footer </td>\n    </ng-container>\n\n    <ng-container matColumnDef=\"filler\">\n      <th mat-header-cell *matHeaderCellDef> Filler header cell </th>\n      <td mat-cell *matCellDef=\"let element\"> Filler data cell </td>\n      <td mat-footer-cell *matFooterCellDef> Filler footer cell </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: isSticky(stickyHeaders, 'header-1')\"></tr>\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: isSticky(stickyHeaders, 'header-2')\"></tr>\n\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n    <tr mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: isSticky(stickyFooters, 'footer-1')\"></tr>\n    <tr mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: isSticky(stickyFooters, 'footer-2')\"></tr>\n  </table>\n</div>\n",
+                styles: [".example-container {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group {\n  margin: 8px;\n}\n\n.mat-column-filler {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell, .mat-footer-cell, .mat-cell {\n  min-width: 80px;\n  box-sizing: border-box;\n}\n"]
+            }),
+            tslib_1.__metadata("design:paramtypes", [])
+        ], TableStickyComplexExample);
+        return TableStickyComplexExample;
+    }());
+    var ELEMENT_DATA$j = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+
+    /**
+     * @title Table with a sticky footer
+     */
+    var TableStickyFooterExample = /** @class */ (function () {
+        function TableStickyFooterExample() {
+            this.displayedColumns = ['item', 'cost'];
+            this.transactions = [
+                { item: 'Beach ball', cost: 4 },
+                { item: 'Towel', cost: 5 },
+                { item: 'Frisbee', cost: 2 },
+                { item: 'Sunscreen', cost: 4 },
+                { item: 'Cooler', cost: 25 },
+                { item: 'Swim suit', cost: 15 },
+            ];
+        }
+        /** Gets the total cost of all transactions. */
+        TableStickyFooterExample.prototype.getTotalCost = function () {
+            return this.transactions.map(function (t) { return t.cost; }).reduce(function (acc, value) { return acc + value; }, 0);
+        };
+        TableStickyFooterExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-sticky-footer-example',
+                template: "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"transactions\">\n    <!-- Item Column -->\n    <ng-container matColumnDef=\"item\">\n      <th mat-header-cell *matHeaderCellDef> Item </th>\n      <td mat-cell *matCellDef=\"let transaction\"> {{transaction.item}} </td>\n      <td mat-footer-cell *matFooterCellDef> Total </td>\n    </ng-container>\n\n    <!-- Cost Column -->\n    <ng-container matColumnDef=\"cost\">\n      <th mat-header-cell *matHeaderCellDef> Cost </th>\n      <td mat-cell *matCellDef=\"let transaction\"> {{transaction.cost | currency}} </td>\n      <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    <tr mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: true\"></tr>\n  </table>\n</div>\n",
+                styles: [".example-container {\n  height: 270px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n\ntr.mat-footer-row {\n  font-weight: bold;\n}\n\n.mat-table-sticky {\n  border-top: 1px solid #e0e0e0;\n}\n"]
+            })
+        ], TableStickyFooterExample);
+        return TableStickyFooterExample;
+    }());
+
+    /**
+     * @title Table with sticky header
+     */
+    var TableStickyHeaderExample = /** @class */ (function () {
+        function TableStickyHeaderExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = ELEMENT_DATA$k;
+        }
+        TableStickyHeaderExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-sticky-header-example',
+                template: "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\">\n\n    <!-- Position Column -->\n    <ng-container matColumnDef=\"position\">\n      <th mat-header-cell *matHeaderCellDef> No. </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n    </ng-container>\n\n    <!-- Weight Column -->\n    <ng-container matColumnDef=\"weight\">\n      <th mat-header-cell *matHeaderCellDef> Weight </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n    </ng-container>\n\n    <!-- Symbol Column -->\n    <ng-container matColumnDef=\"symbol\">\n      <th mat-header-cell *matHeaderCellDef> Symbol </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>",
+                styles: [".example-container {\n  height: 400px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n"]
+            })
+        ], TableStickyHeaderExample);
+        return TableStickyHeaderExample;
+    }());
+    var ELEMENT_DATA$k = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+
+    var ELEMENT_DATA$l = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Use of 'mat-text-column' with various configurations of the interface.
+     */
+    var TableTextColumnAdvancedExample = /** @class */ (function () {
+        function TableTextColumnAdvancedExample() {
+            var _this = this;
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new table.MatTableDataSource(ELEMENT_DATA$l);
+            this.decimalPipe = new common.DecimalPipe('en-US');
+            /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
+            this.getWeight = function (data) { return _this.decimalPipe.transform(data.weight, '1.0-2'); };
+        }
+        TableTextColumnAdvancedExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-text-column-advanced-example',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <mat-text-column name=\"position\" [headerText]=\"headerText\"></mat-text-column>\n\n  <!-- Change the header text. -->\n  <mat-text-column name=\"name\" headerText=\"Element\"></mat-text-column>\n\n  <!-- Provide a data accessor for getting the cell text values. -->\n  <mat-text-column name=\"weight\" [dataAccessor]=\"getWeight\"></mat-text-column>\n\n  <!-- Justify the content of the cells to the cell end. -->\n  <mat-text-column name=\"symbol\" justify=\"end\"></mat-text-column>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            })
+        ], TableTextColumnAdvancedExample);
+        return TableTextColumnAdvancedExample;
+    }());
+
+    var ELEMENT_DATA$m = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Use of `mat-text-column` which can be used for simple columns that only need to display
+     * a text value for the header and cells.
+     */
+    var TableTextColumnExample = /** @class */ (function () {
+        function TableTextColumnExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = ELEMENT_DATA$m;
+        }
+        TableTextColumnExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-text-column-example',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <mat-text-column name=\"position\"></mat-text-column>\n  <mat-text-column name=\"name\"></mat-text-column>\n  <mat-text-column name=\"weight\"></mat-text-column>\n  <mat-text-column name=\"symbol\"></mat-text-column>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            })
+        ], TableTextColumnExample);
+        return TableTextColumnExample;
+    }());
+
+    var ELEMENT_DATA$n = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+    /**
+     * @title Table example that shows how to wrap a table component for definition and behavior reuse.
+     */
+    var TableWrappedExample = /** @class */ (function () {
+        function TableWrappedExample() {
+            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = new table.MatTableDataSource(ELEMENT_DATA$n);
+        }
+        TableWrappedExample.prototype.ngOnInit = function () {
+            this.dataSource.sort = this.sort;
+        };
+        tslib_1.__decorate([
+            core.ViewChild('sort', { static: true }),
+            tslib_1.__metadata("design:type", sort.MatSort)
+        ], TableWrappedExample.prototype, "sort", void 0);
+        TableWrappedExample = tslib_1.__decorate([
+            core.Component({
+                selector: 'table-wrapped-example',
+                template: "<wrapper-table [dataSource]=\"dataSource\" [columns]=\"displayedColumns\"\n               matSort #sort=\"matSort\">\n  <!-- Custom column definition to be provided to the wrapper table. -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Custom row definitions to be provided to the wrapper table. -->\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns; \"></tr>\n</wrapper-table>\n",
+                styles: ["table {\n  width: 100%;\n}\n"]
+            })
+        ], TableWrappedExample);
+        return TableWrappedExample;
+    }());
+    /**
+     * Table component that accepts column and row definitions in its content to be registered to the
+     * table.
+     */
+    var WrapperTable = /** @class */ (function () {
+        function WrapperTable() {
+        }
+        WrapperTable.prototype.ngAfterContentInit = function () {
+            var _this = this;
+            this.columnDefs.forEach(function (columnDef) { return _this.table.addColumnDef(columnDef); });
+            this.rowDefs.forEach(function (rowDef) { return _this.table.addRowDef(rowDef); });
+            this.headerRowDefs.forEach(function (headerRowDef) { return _this.table.addHeaderRowDef(headerRowDef); });
+        };
+        tslib_1.__decorate([
+            core.ContentChildren(table.MatHeaderRowDef),
+            tslib_1.__metadata("design:type", core.QueryList)
+        ], WrapperTable.prototype, "headerRowDefs", void 0);
+        tslib_1.__decorate([
+            core.ContentChildren(table.MatRowDef),
+            tslib_1.__metadata("design:type", core.QueryList)
+        ], WrapperTable.prototype, "rowDefs", void 0);
+        tslib_1.__decorate([
+            core.ContentChildren(table.MatColumnDef),
+            tslib_1.__metadata("design:type", core.QueryList)
+        ], WrapperTable.prototype, "columnDefs", void 0);
+        tslib_1.__decorate([
+            core.ViewChild(table.MatTable, { static: true }),
+            tslib_1.__metadata("design:type", table.MatTable)
+        ], WrapperTable.prototype, "table", void 0);
+        tslib_1.__decorate([
+            core.Input(),
+            tslib_1.__metadata("design:type", Array)
+        ], WrapperTable.prototype, "columns", void 0);
+        tslib_1.__decorate([
+            core.Input(),
+            tslib_1.__metadata("design:type", collections.DataSource)
+        ], WrapperTable.prototype, "dataSource", void 0);
+        WrapperTable = tslib_1.__decorate([
+            core.Component({
+                selector: 'wrapper-table',
+                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <ng-content></ng-content>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Color Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n</table>\n",
+                styles: ["\n    table {\n      width: 100%;\n    }\n  "]
+            })
+        ], WrapperTable);
+        return WrapperTable;
+    }());
+
     /**
      * @title Tab group with aligned labels
      */
@@ -5597,972 +6226,6 @@
             })
         ], TabNavBarBasicExample);
         return TabNavBarBasicExample;
-    }());
-
-    var ELEMENT_DATA$9 = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Basic use of `<mat-table>` (uses display flex)
-     */
-    var TableBasicFlexExample = /** @class */ (function () {
-        function TableBasicFlexExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$9;
-        }
-        TableBasicFlexExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-basic-flex-example',
-                template: "<mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.position}} </mat-cell>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.weight}} </mat-cell>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>\n    <mat-cell *matCellDef=\"let element\"> {{element.symbol}} </mat-cell>\n  </ng-container>\n\n  <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n  <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n</mat-table>",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            })
-        ], TableBasicFlexExample);
-        return TableBasicFlexExample;
-    }());
-
-    var ELEMENT_DATA$a = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Basic use of `<table mat-table>`
-     */
-    var TableBasicExample = /** @class */ (function () {
-        function TableBasicExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$a;
-        }
-        TableBasicExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-basic-example',
-                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n  <!--- Note that these columns can be defined in any order.\n        The actual rendered columns are set as a property on the row definition\" -->\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n\n",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            })
-        ], TableBasicExample);
-        return TableBasicExample;
-    }());
-
-    var ELEMENT_DATA$b = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Table dynamically changing the columns displayed
-     */
-    var TableDynamicColumnsExample = /** @class */ (function () {
-        function TableDynamicColumnsExample() {
-            this.displayedColumns = ['name', 'weight', 'symbol', 'position'];
-            this.columnsToDisplay = this.displayedColumns.slice();
-            this.data = ELEMENT_DATA$b;
-        }
-        TableDynamicColumnsExample.prototype.addColumn = function () {
-            var randomColumn = Math.floor(Math.random() * this.displayedColumns.length);
-            this.columnsToDisplay.push(this.displayedColumns[randomColumn]);
-        };
-        TableDynamicColumnsExample.prototype.removeColumn = function () {
-            if (this.columnsToDisplay.length) {
-                this.columnsToDisplay.pop();
-            }
-        };
-        TableDynamicColumnsExample.prototype.shuffle = function () {
-            var currentIndex = this.columnsToDisplay.length;
-            while (0 !== currentIndex) {
-                var randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex -= 1;
-                // Swap
-                var temp = this.columnsToDisplay[currentIndex];
-                this.columnsToDisplay[currentIndex] = this.columnsToDisplay[randomIndex];
-                this.columnsToDisplay[randomIndex] = temp;
-            }
-        };
-        TableDynamicColumnsExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-dynamic-columns-example',
-                template: "<button mat-raised-button (click)=\"addColumn()\"> Add column </button>\n<button mat-raised-button (click)=\"removeColumn()\"> Remove column </button>\n<button mat-raised-button (click)=\"shuffle()\"> Shuffle </button>\n\n<table mat-table [dataSource]=\"data\" class=\"mat-elevation-z8\">\n  <ng-container [matColumnDef]=\"column\" *ngFor=\"let column of displayedColumns\">\n    <th mat-header-cell *matHeaderCellDef> {{column}} </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element[column]}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: columnsToDisplay;\"></tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n\nbutton {\n  margin: 16px 8px;\n}\n"]
-            })
-        ], TableDynamicColumnsExample);
-        return TableDynamicColumnsExample;
-    }());
-
-    /**
-     * @title Table with expandable rows
-     */
-    var TableExpandableRowsExample = /** @class */ (function () {
-        function TableExpandableRowsExample() {
-            this.dataSource = ELEMENT_DATA$c;
-            this.columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
-        }
-        TableExpandableRowsExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-expandable-rows-example',
-                template: "<table mat-table\n       [dataSource]=\"dataSource\" multiTemplateDataRows\n       class=\"mat-elevation-z8\">\n  <ng-container matColumnDef=\"{{column}}\" *ngFor=\"let column of columnsToDisplay\">\n    <th mat-header-cell *matHeaderCellDef> {{column}} </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element[column]}} </td>\n  </ng-container>\n\n  <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->\n  <ng-container matColumnDef=\"expandedDetail\">\n    <td mat-cell *matCellDef=\"let element\" [attr.colspan]=\"columnsToDisplay.length\">\n      <div class=\"example-element-detail\"\n           [@detailExpand]=\"element == expandedElement ? 'expanded' : 'collapsed'\">\n        <div class=\"example-element-diagram\">\n          <div class=\"example-element-position\"> {{element.position}} </div>\n          <div class=\"example-element-symbol\"> {{element.symbol}} </div>\n          <div class=\"example-element-name\"> {{element.name}} </div>\n          <div class=\"example-element-weight\"> {{element.weight}} </div>\n        </div>\n        <div class=\"example-element-description\">\n          {{element.description}}\n          <span class=\"example-element-description-attribution\"> -- Wikipedia </span>\n        </div>\n      </div>\n    </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"columnsToDisplay\"></tr>\n  <tr mat-row *matRowDef=\"let element; columns: columnsToDisplay;\"\n      class=\"example-element-row\"\n      [class.example-expanded-row]=\"expandedElement === element\"\n      (click)=\"expandedElement = expandedElement === element ? null : element\">\n  </tr>\n  <tr mat-row *matRowDef=\"let row; columns: ['expandedDetail']\" class=\"example-detail-row\"></tr>\n</table>\n",
-                animations: [
-                    animations.trigger('detailExpand', [
-                        animations.state('collapsed', animations.style({ height: '0px', minHeight: '0' })),
-                        animations.state('expanded', animations.style({ height: '*' })),
-                        animations.transition('expanded <=> collapsed', animations.animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-                    ]),
-                ],
-                styles: ["table {\n  width: 100%;\n}\n\ntr.example-detail-row {\n  height: 0;\n}\n\ntr.example-element-row:not(.example-expanded-row):hover {\n  background: #777;\n}\n\ntr.example-element-row:not(.example-expanded-row):active {\n  background: #efefef;\n}\n\n.example-element-row td {\n  border-bottom-width: 0;\n}\n\n.example-element-detail {\n  overflow: hidden;\n  display: flex;\n}\n\n.example-element-diagram {\n  min-width: 80px;\n  border: 2px solid black;\n  padding: 8px;\n  font-weight: lighter;\n  margin: 8px 0;\n  height: 104px;\n}\n\n.example-element-symbol {\n  font-weight: bold;\n  font-size: 40px;\n  line-height: normal;\n}\n\n.example-element-description {\n  padding: 16px;\n}\n\n.example-element-description-attribution {\n  opacity: 0.5;\n}\n"]
-            })
-        ], TableExpandableRowsExample);
-        return TableExpandableRowsExample;
-    }());
-    var ELEMENT_DATA$c = [
-        {
-            position: 1,
-            name: 'Hydrogen',
-            weight: 1.0079,
-            symbol: 'H',
-            description: "Hydrogen is a chemical element with symbol H and atomic number 1. With a standard\n        atomic weight of 1.008, hydrogen is the lightest element on the periodic table."
-        }, {
-            position: 2,
-            name: 'Helium',
-            weight: 4.0026,
-            symbol: 'He',
-            description: "Helium is a chemical element with symbol He and atomic number 2. It is a\n        colorless, odorless, tasteless, non-toxic, inert, monatomic gas, the first in the noble gas\n        group in the periodic table. Its boiling point is the lowest among all the elements."
-        }, {
-            position: 3,
-            name: 'Lithium',
-            weight: 6.941,
-            symbol: 'Li',
-            description: "Lithium is a chemical element with symbol Li and atomic number 3. It is a soft,\n        silvery-white alkali metal. Under standard conditions, it is the lightest metal and the\n        lightest solid element."
-        }, {
-            position: 4,
-            name: 'Beryllium',
-            weight: 9.0122,
-            symbol: 'Be',
-            description: "Beryllium is a chemical element with symbol Be and atomic number 4. It is a\n        relatively rare element in the universe, usually occurring as a product of the spallation of\n        larger atomic nuclei that have collided with cosmic rays."
-        }, {
-            position: 5,
-            name: 'Boron',
-            weight: 10.811,
-            symbol: 'B',
-            description: "Boron is a chemical element with symbol B and atomic number 5. Produced entirely\n        by cosmic ray spallation and supernovae and not by stellar nucleosynthesis, it is a\n        low-abundance element in the Solar system and in the Earth's crust."
-        }, {
-            position: 6,
-            name: 'Carbon',
-            weight: 12.0107,
-            symbol: 'C',
-            description: "Carbon is a chemical element with symbol C and atomic number 6. It is nonmetallic\n        and tetravalent\u2014making four electrons available to form covalent chemical bonds. It belongs\n        to group 14 of the periodic table."
-        }, {
-            position: 7,
-            name: 'Nitrogen',
-            weight: 14.0067,
-            symbol: 'N',
-            description: "Nitrogen is a chemical element with symbol N and atomic number 7. It was first\n        discovered and isolated by Scottish physician Daniel Rutherford in 1772."
-        }, {
-            position: 8,
-            name: 'Oxygen',
-            weight: 15.9994,
-            symbol: 'O',
-            description: "Oxygen is a chemical element with symbol O and atomic number 8. It is a member of\n         the chalcogen group on the periodic table, a highly reactive nonmetal, and an oxidizing\n         agent that readily forms oxides with most elements as well as with other compounds."
-        }, {
-            position: 9,
-            name: 'Fluorine',
-            weight: 18.9984,
-            symbol: 'F',
-            description: "Fluorine is a chemical element with symbol F and atomic number 9. It is the\n        lightest halogen and exists as a highly toxic pale yellow diatomic gas at standard\n        conditions."
-        }, {
-            position: 10,
-            name: 'Neon',
-            weight: 20.1797,
-            symbol: 'Ne',
-            description: "Neon is a chemical element with symbol Ne and atomic number 10. It is a noble gas.\n        Neon is a colorless, odorless, inert monatomic gas under standard conditions, with about\n        two-thirds the density of air."
-        },
-    ];
-
-    var ELEMENT_DATA$d = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Table with filtering
-     */
-    var TableFilteringExample = /** @class */ (function () {
-        function TableFilteringExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$d);
-        }
-        TableFilteringExample.prototype.applyFilter = function (filterValue) {
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-        };
-        TableFilteringExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-filtering-example',
-                template: "<mat-form-field>\n  <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n</mat-form-field>\n\n<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
-                styles: ["/* Structure */\ntable {\n  width: 100%;\n}\n\n.mat-form-field {\n  font-size: 14px;\n  width: 100%;\n}\n"]
-            })
-        ], TableFilteringExample);
-        return TableFilteringExample;
-    }());
-
-    /**
-     * @title Footer row table
-     */
-    var TableFooterRowExample = /** @class */ (function () {
-        function TableFooterRowExample() {
-            this.displayedColumns = ['item', 'cost'];
-            this.transactions = [
-                { item: 'Beach ball', cost: 4 },
-                { item: 'Towel', cost: 5 },
-                { item: 'Frisbee', cost: 2 },
-                { item: 'Sunscreen', cost: 4 },
-                { item: 'Cooler', cost: 25 },
-                { item: 'Swim suit', cost: 15 },
-            ];
-        }
-        /** Gets the total cost of all transactions. */
-        TableFooterRowExample.prototype.getTotalCost = function () {
-            return this.transactions.map(function (t) { return t.cost; }).reduce(function (acc, value) { return acc + value; }, 0);
-        };
-        TableFooterRowExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-footer-row-example',
-                template: "<table mat-table [dataSource]=\"transactions\" class=\"mat-elevation-z8\">\n  <!-- Item Column -->\n  <ng-container matColumnDef=\"item\">\n    <th mat-header-cell *matHeaderCellDef> Item </th>\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.item}} </td>\n    <td mat-footer-cell *matFooterCellDef> Total </td>\n  </ng-container>\n\n  <!-- Cost Column -->\n  <ng-container matColumnDef=\"cost\">\n    <th mat-header-cell *matHeaderCellDef> Cost </th>\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.cost | currency}} </td>\n    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  <tr mat-footer-row *matFooterRowDef=\"displayedColumns\"></tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n\ntr.mat-footer-row {\n  font-weight: bold;\n}\n"]
-            })
-        ], TableFooterRowExample);
-        return TableFooterRowExample;
-    }());
-
-    /**
-     * @title Table retrieving data through HTTP
-     */
-    var TableHttpExample = /** @class */ (function () {
-        function TableHttpExample(_httpClient) {
-            this._httpClient = _httpClient;
-            this.displayedColumns = ['created', 'state', 'number', 'title'];
-            this.data = [];
-            this.resultsLength = 0;
-            this.isLoadingResults = true;
-            this.isRateLimitReached = false;
-        }
-        TableHttpExample.prototype.ngAfterViewInit = function () {
-            var _this = this;
-            this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
-            // If the user changes the sort order, reset back to the first page.
-            this.sort.sortChange.subscribe(function () { return _this.paginator.pageIndex = 0; });
-            rxjs.merge(this.sort.sortChange, this.paginator.page)
-                .pipe(operators.startWith({}), operators.switchMap(function () {
-                _this.isLoadingResults = true;
-                return _this.exampleDatabase.getRepoIssues(_this.sort.active, _this.sort.direction, _this.paginator.pageIndex);
-            }), operators.map(function (data) {
-                // Flip flag to show that loading has finished.
-                _this.isLoadingResults = false;
-                _this.isRateLimitReached = false;
-                _this.resultsLength = data.total_count;
-                return data.items;
-            }), operators.catchError(function () {
-                _this.isLoadingResults = false;
-                // Catch if the GitHub API has reached its rate limit. Return empty data.
-                _this.isRateLimitReached = true;
-                return rxjs.of([]);
-            })).subscribe(function (data) { return _this.data = data; });
-        };
-        tslib_1.__decorate([
-            core.ViewChild(paginator.MatPaginator, { static: false }),
-            tslib_1.__metadata("design:type", paginator.MatPaginator)
-        ], TableHttpExample.prototype, "paginator", void 0);
-        tslib_1.__decorate([
-            core.ViewChild(sort.MatSort, { static: false }),
-            tslib_1.__metadata("design:type", sort.MatSort)
-        ], TableHttpExample.prototype, "sort", void 0);
-        TableHttpExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-http-example',
-                template: "<div class=\"example-container mat-elevation-z8\">\n  <div class=\"example-loading-shade\"\n       *ngIf=\"isLoadingResults || isRateLimitReached\">\n    <mat-spinner *ngIf=\"isLoadingResults\"></mat-spinner>\n    <div class=\"example-rate-limit-reached\" *ngIf=\"isRateLimitReached\">\n      GitHub's API rate limit has been reached. It will be reset in one minute.\n    </div>\n  </div>\n\n  <div class=\"example-table-container\">\n\n    <table mat-table [dataSource]=\"data\" class=\"example-table\"\n           matSort matSortActive=\"created\" matSortDisableClear matSortDirection=\"desc\">\n      <!-- Number Column -->\n      <ng-container matColumnDef=\"number\">\n        <th mat-header-cell *matHeaderCellDef>#</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.number}}</td>\n      </ng-container>\n\n      <!-- Title Column -->\n      <ng-container matColumnDef=\"title\">\n        <th mat-header-cell *matHeaderCellDef>Title</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.title}}</td>\n      </ng-container>\n\n      <!-- State Column -->\n      <ng-container matColumnDef=\"state\">\n        <th mat-header-cell *matHeaderCellDef>State</th>\n        <td mat-cell *matCellDef=\"let row\">{{row.state}}</td>\n      </ng-container>\n\n      <!-- Created Column -->\n      <ng-container matColumnDef=\"created\">\n        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>\n          Created\n        </th>\n        <td mat-cell *matCellDef=\"let row\">{{row.created_at | date}}</td>\n      </ng-container>\n\n      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    </table>\n  </div>\n\n  <mat-paginator [length]=\"resultsLength\" [pageSize]=\"30\"></mat-paginator>\n</div>\n",
-                styles: ["/* Structure */\n.example-container {\n  position: relative;\n  min-height: 200px;\n}\n\n.example-table-container {\n  position: relative;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n\n.example-loading-shade {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n/* Column Widths */\n.mat-column-number,\n.mat-column-state {\n  max-width: 64px;\n}\n\n.mat-column-created {\n  max-width: 124px;\n}\n"]
-            }),
-            tslib_1.__metadata("design:paramtypes", [http.HttpClient])
-        ], TableHttpExample);
-        return TableHttpExample;
-    }());
-    /** An example database that the data source uses to retrieve data for the table. */
-    var ExampleHttpDatabase = /** @class */ (function () {
-        function ExampleHttpDatabase(_httpClient) {
-            this._httpClient = _httpClient;
-        }
-        ExampleHttpDatabase.prototype.getRepoIssues = function (sort, order, page) {
-            var href = 'https://api.github.com/search/issues';
-            var requestUrl = href + "?q=repo:angular/components&sort=" + sort + "&order=" + order + "&page=" + (page + 1);
-            return this._httpClient.get(requestUrl);
-        };
-        return ExampleHttpDatabase;
-    }());
-
-    /**
-     * @title Table with multiple header and footer rows
-     */
-    var TableMultipleHeaderFooterExample = /** @class */ (function () {
-        function TableMultipleHeaderFooterExample() {
-            this.displayedColumns = ['item', 'cost'];
-            this.transactions = [
-                { item: 'Beach ball', cost: 4 },
-                { item: 'Towel', cost: 5 },
-                { item: 'Frisbee', cost: 2 },
-                { item: 'Sunscreen', cost: 4 },
-                { item: 'Cooler', cost: 25 },
-                { item: 'Swim suit', cost: 15 },
-            ];
-        }
-        /** Gets the total cost of all transactions. */
-        TableMultipleHeaderFooterExample.prototype.getTotalCost = function () {
-            return this.transactions.map(function (t) { return t.cost; }).reduce(function (acc, value) { return acc + value; }, 0);
-        };
-        TableMultipleHeaderFooterExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-multiple-header-footer-example',
-                template: "<table mat-table [dataSource]=\"transactions\" class=\"mat-elevation-z8\">\n  <!-- Item Column -->\n  <ng-container matColumnDef=\"item\">\n    <th mat-header-cell *matHeaderCellDef> Item </th>\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.item}} </td>\n    <td mat-footer-cell *matFooterCellDef> Total </td>\n  </ng-container>\n\n  <!-- Cost Column -->\n  <ng-container matColumnDef=\"cost\">\n    <th mat-header-cell *matHeaderCellDef> Cost </th>\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.cost | currency}} </td>\n    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>\n  </ng-container>\n\n  <!-- Item Description Column -->\n  <ng-container matColumnDef=\"item-description\">\n    <th mat-header-cell *matHeaderCellDef> Name of the item purchased </th>\n  </ng-container>\n\n  <!-- Cost Description Column -->\n  <ng-container matColumnDef=\"cost-description\">\n    <th mat-header-cell *matHeaderCellDef> Cost of the item in USD </th>\n  </ng-container>\n\n  <!-- Disclaimer column -->\n  <ng-container matColumnDef=\"disclaimer\">\n    <td mat-footer-cell *matFooterCellDef colspan=\"2\">\n      Please note that the cost of items displayed are completely and totally made up.\n    </td>\n  </ng-container>\n\n  <!-- The table will render two header rows, one data row per data object, and two footer rows. -->\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"\n      class=\"example-first-header-row\">\n  </tr>\n  <tr mat-header-row *matHeaderRowDef=\"['item-description', 'cost-description']\"\n      class=\"example-second-header-row\">\n  </tr>\n\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n  <tr mat-footer-row *matFooterRowDef=\"displayedColumns\" class=\"example-first-footer-row\"></tr>\n  <tr mat-footer-row *matFooterRowDef=\"['disclaimer']\" class=\"example-second-footer-row\"></tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n\n.example-first-header-row th {\n  border-bottom: none;\n}\n\n.example-second-header-row {\n  font-style: italic;\n}\n\n.example-first-footer-row {\n  font-weight: bold;\n}\n\n.example-second-footer-row td {\n  color: #900000;\n}\n"]
-            })
-        ], TableMultipleHeaderFooterExample);
-        return TableMultipleHeaderFooterExample;
-    }());
-
-    /** Constants used to fill up our data base. */
-    var COLORS = [
-        'maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple', 'fuchsia', 'lime', 'teal',
-        'aqua', 'blue', 'navy', 'black', 'gray'
-    ];
-    var NAMES = [
-        'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
-        'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
-    ];
-    /**
-     * @title Data table with sorting, pagination, and filtering.
-     */
-    var TableOverviewExample = /** @class */ (function () {
-        function TableOverviewExample() {
-            this.displayedColumns = ['id', 'name', 'progress', 'color'];
-            // Create 100 users
-            var users = Array.from({ length: 100 }, function (_, k) { return createNewUser(k + 1); });
-            // Assign the data to the data source for the table to render
-            this.dataSource = new table$1.MatTableDataSource(users);
-        }
-        TableOverviewExample.prototype.ngOnInit = function () {
-            this.dataSource.paginator = this.paginator;
-            this.dataSource.sort = this.sort;
-        };
-        TableOverviewExample.prototype.applyFilter = function (filterValue) {
-            this.dataSource.filter = filterValue.trim().toLowerCase();
-            if (this.dataSource.paginator) {
-                this.dataSource.paginator.firstPage();
-            }
-        };
-        tslib_1.__decorate([
-            core.ViewChild(paginator.MatPaginator, { static: true }),
-            tslib_1.__metadata("design:type", paginator.MatPaginator)
-        ], TableOverviewExample.prototype, "paginator", void 0);
-        tslib_1.__decorate([
-            core.ViewChild(sort.MatSort, { static: true }),
-            tslib_1.__metadata("design:type", sort.MatSort)
-        ], TableOverviewExample.prototype, "sort", void 0);
-        TableOverviewExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-overview-example',
-                template: "<mat-form-field>\n  <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n</mat-form-field>\n\n<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" matSort>\n\n    <!-- ID Column -->\n    <ng-container matColumnDef=\"id\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.id}} </td>\n    </ng-container>\n\n    <!-- Progress Column -->\n    <ng-container matColumnDef=\"progress\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.progress}}% </td>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n      <td mat-cell *matCellDef=\"let row\"> {{row.name}} </td>\n    </ng-container>\n\n    <!-- Color Column -->\n    <ng-container matColumnDef=\"color\">\n      <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>\n      <td mat-cell *matCellDef=\"let row\" [style.color]=\"row.color\"> {{row.color}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\">\n    </tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 25, 100]\"></mat-paginator>\n</div>\n",
-                styles: ["table {\n  width: 100%;\n}\n\n.mat-form-field {\n  font-size: 14px;\n  width: 100%;\n}\n\ntd, th {\n  width: 25%;\n}\n"]
-            }),
-            tslib_1.__metadata("design:paramtypes", [])
-        ], TableOverviewExample);
-        return TableOverviewExample;
-    }());
-    /** Builds and returns a new User. */
-    function createNewUser(id) {
-        var name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-            NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-        return {
-            id: id.toString(),
-            name: name,
-            progress: Math.round(Math.random() * 100).toString(),
-            color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
-        };
-    }
-
-    /**
-     * @title Table with pagination
-     */
-    var TablePaginationExample = /** @class */ (function () {
-        function TablePaginationExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$e);
-        }
-        TablePaginationExample.prototype.ngOnInit = function () {
-            this.dataSource.paginator = this.paginator;
-        };
-        tslib_1.__decorate([
-            core.ViewChild(paginator.MatPaginator, { static: true }),
-            tslib_1.__metadata("design:type", paginator.MatPaginator)
-        ], TablePaginationExample.prototype, "paginator", void 0);
-        TablePaginationExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-pagination-example',
-                template: "<div class=\"mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\">\n\n    <!-- Position Column -->\n    <ng-container matColumnDef=\"position\">\n      <th mat-header-cell *matHeaderCellDef> No. </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n    </ng-container>\n\n    <!-- Weight Column -->\n    <ng-container matColumnDef=\"weight\">\n      <th mat-header-cell *matHeaderCellDef> Weight </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n    </ng-container>\n\n    <!-- Symbol Column -->\n    <ng-container matColumnDef=\"symbol\">\n      <th mat-header-cell *matHeaderCellDef> Symbol </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n\n  <mat-paginator [pageSizeOptions]=\"[5, 10, 20]\" showFirstLastButtons></mat-paginator>\n</div>\n",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            })
-        ], TablePaginationExample);
-        return TablePaginationExample;
-    }());
-    var ELEMENT_DATA$e = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-        { position: 11, name: 'Sodium', weight: 22.9897, symbol: 'Na' },
-        { position: 12, name: 'Magnesium', weight: 24.305, symbol: 'Mg' },
-        { position: 13, name: 'Aluminum', weight: 26.9815, symbol: 'Al' },
-        { position: 14, name: 'Silicon', weight: 28.0855, symbol: 'Si' },
-        { position: 15, name: 'Phosphorus', weight: 30.9738, symbol: 'P' },
-        { position: 16, name: 'Sulfur', weight: 32.065, symbol: 'S' },
-        { position: 17, name: 'Chlorine', weight: 35.453, symbol: 'Cl' },
-        { position: 18, name: 'Argon', weight: 39.948, symbol: 'Ar' },
-        { position: 19, name: 'Potassium', weight: 39.0983, symbol: 'K' },
-        { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
-    ];
-
-    /**
-     * @title Table showing each row context properties.
-     */
-    var TableRowContextExample = /** @class */ (function () {
-        function TableRowContextExample() {
-            this.displayedColumns = ['$implicit', 'index', 'count', 'first', 'last', 'even', 'odd'];
-            this.data = ['one', 'two', 'three', 'four', 'five'];
-        }
-        TableRowContextExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-row-context-example',
-                template: "<table mat-table [dataSource]=\"data\" class=\"mat-elevation-z8\">\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"$implicit\">\n    <th mat-header-cell *matHeaderCellDef> $implicit </th>\n    <td mat-cell *matCellDef=\"let data\"> {{data}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"index\">\n    <th mat-header-cell *matHeaderCellDef> index </th>\n    <td mat-cell *matCellDef=\"let index = index\"> {{index}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"count\">\n    <th mat-header-cell *matHeaderCellDef> count </th>\n    <td mat-cell *matCellDef=\"let count = count\"> {{count}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"first\">\n    <th mat-header-cell *matHeaderCellDef> first </th>\n    <td mat-cell *matCellDef=\"let first = first\"> {{first}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"last\">\n    <th mat-header-cell *matHeaderCellDef> last </th>\n    <td mat-cell *matCellDef=\"let last = last\"> {{last}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"even\">\n    <th mat-header-cell *matHeaderCellDef> even </th>\n    <td mat-cell *matCellDef=\"let even = even\"> {{even}} </td>\n  </ng-container>\n\n  <!-- Index Column -->\n  <ng-container matColumnDef=\"odd\">\n    <th mat-header-cell *matHeaderCellDef> odd </th>\n    <td mat-cell *matCellDef=\"let odd = odd\"> {{odd}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            })
-        ], TableRowContextExample);
-        return TableRowContextExample;
-    }());
-
-    var ELEMENT_DATA$f = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Table with selection
-     */
-    var TableSelectionExample = /** @class */ (function () {
-        function TableSelectionExample() {
-            this.displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
-            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$f);
-            this.selection = new collections.SelectionModel(true, []);
-        }
-        /** Whether the number of selected elements matches the total number of rows. */
-        TableSelectionExample.prototype.isAllSelected = function () {
-            var numSelected = this.selection.selected.length;
-            var numRows = this.dataSource.data.length;
-            return numSelected === numRows;
-        };
-        /** Selects all rows if they are not all selected; otherwise clear selection. */
-        TableSelectionExample.prototype.masterToggle = function () {
-            var _this = this;
-            this.isAllSelected() ?
-                this.selection.clear() :
-                this.dataSource.data.forEach(function (row) { return _this.selection.select(row); });
-        };
-        /** The label for the checkbox on the passed row */
-        TableSelectionExample.prototype.checkboxLabel = function (row) {
-            if (!row) {
-                return (this.isAllSelected() ? 'select' : 'deselect') + " all";
-            }
-            return (this.selection.isSelected(row) ? 'deselect' : 'select') + " row " + (row.position + 1);
-        };
-        TableSelectionExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-selection-example',
-                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n\n  <!-- Checkbox Column -->\n  <ng-container matColumnDef=\"select\">\n    <th mat-header-cell *matHeaderCellDef>\n      <mat-checkbox (change)=\"$event ? masterToggle() : null\"\n                    [checked]=\"selection.hasValue() && isAllSelected()\"\n                    [indeterminate]=\"selection.hasValue() && !isAllSelected()\"\n                    [aria-label]=\"checkboxLabel()\">\n      </mat-checkbox>\n    </th>\n    <td mat-cell *matCellDef=\"let row\">\n      <mat-checkbox (click)=\"$event.stopPropagation()\"\n                    (change)=\"$event ? selection.toggle(row) : null\"\n                    [checked]=\"selection.isSelected(row)\"\n                    [aria-label]=\"checkboxLabel(row)\">\n      </mat-checkbox>\n    </td>\n  </ng-container>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"\n      (click)=\"selection.toggle(row)\">\n  </tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            })
-        ], TableSelectionExample);
-        return TableSelectionExample;
-    }());
-
-    var ELEMENT_DATA$g = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Table with sorting
-     */
-    var TableSortingExample = /** @class */ (function () {
-        function TableSortingExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$g);
-        }
-        TableSortingExample.prototype.ngOnInit = function () {
-            this.dataSource.sort = this.sort;
-        };
-        tslib_1.__decorate([
-            core.ViewChild(sort.MatSort, { static: true }),
-            tslib_1.__metadata("design:type", sort.MatSort)
-        ], TableSortingExample.prototype, "sort", void 0);
-        TableSortingExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-sorting-example',
-                template: "<table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z8\">\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Name Column -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Symbol Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n\nth.mat-sort-header-sorted {\n  color: black;\n}\n"]
-            })
-        ], TableSortingExample);
-        return TableSortingExample;
-    }());
-
-    /**
-     * @title Table with sticky columns
-     */
-    var TableStickyColumnsExample = /** @class */ (function () {
-        function TableStickyColumnsExample() {
-            this.displayedColumns = ['name', 'position', 'weight', 'symbol', 'position', 'weight', 'symbol', 'star'];
-            this.dataSource = ELEMENT_DATA$h;
-        }
-        TableStickyColumnsExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-sticky-columns-example',
-                template: "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\">\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\" sticky>\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n    </ng-container>\n\n    <!-- Position Column -->\n    <ng-container matColumnDef=\"position\">\n      <th mat-header-cell *matHeaderCellDef> No. </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n    </ng-container>\n\n    <!-- Weight Column -->\n    <ng-container matColumnDef=\"weight\">\n      <th mat-header-cell *matHeaderCellDef> Weight </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n    </ng-container>\n\n    <!-- Symbol Column -->\n    <ng-container matColumnDef=\"symbol\">\n      <th mat-header-cell *matHeaderCellDef> Symbol </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n    </ng-container>\n\n    <!-- Star Column -->\n    <ng-container matColumnDef=\"star\" stickyEnd>\n      <th mat-header-cell *matHeaderCellDef></th>\n      <td mat-cell *matCellDef=\"let element\">\n        <mat-icon>more_vert</mat-icon>\n      </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>\n",
-                styles: [".example-container {\n  height: 400px;\n  width: 550px;\n  overflow: auto;\n}\n\ntable {\n  width: 800px;\n}\n\ntd.mat-column-star {\n  width: 20px;\n  padding-right: 8px;\n}\n\nth.mat-column-position, td.mat-column-position {\n  padding-left: 8px;\n}\n\n.mat-table-sticky:first-child {\n  border-right: 1px solid #e0e0e0;\n}\n\n.mat-table-sticky:last-child {\n  border-left: 1px solid #e0e0e0;\n}\n"]
-            })
-        ], TableStickyColumnsExample);
-        return TableStickyColumnsExample;
-    }());
-    var ELEMENT_DATA$h = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-
-    /**
-     * @title Flex-layout tables with toggle-able sticky headers, footers, and columns
-     */
-    var TableStickyComplexFlexExample = /** @class */ (function () {
-        function TableStickyComplexFlexExample() {
-            this.displayedColumns = [];
-            this.dataSource = ELEMENT_DATA$i;
-            this.tables = [0];
-            this.displayedColumns.length = 24;
-            this.displayedColumns.fill('filler');
-            // The first two columns should be position and name; the last two columns: weight, symbol
-            this.displayedColumns[0] = 'position';
-            this.displayedColumns[1] = 'name';
-            this.displayedColumns[22] = 'weight';
-            this.displayedColumns[23] = 'symbol';
-        }
-        /** Whether the button toggle group contains the id as an active value. */
-        TableStickyComplexFlexExample.prototype.isSticky = function (buttonToggleGroup, id) {
-            return (buttonToggleGroup.value || []).indexOf(id) !== -1;
-        };
-        TableStickyComplexFlexExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-sticky-complex-flex-example',
-                template: "<div>\n  <button mat-raised-button (click)=\"tables.push(tables.length)\">Add table</button>\n  <button mat-raised-button (click)=\"tables.pop()\">Remove table</button>\n</div>\n\n<div>\n  Sticky Headers:\n  <mat-button-toggle-group multiple [value]=\"['header-1']\"\n                           #stickyHeaders=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"header-1\"> Row 1 </mat-button-toggle>\n    <mat-button-toggle value=\"header-2\"> Row 2 </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div>\n  Sticky Footers:\n  <mat-button-toggle-group multiple [value]=\"['footer-1']\"\n                           #stickyFooters=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"footer-1\"> Row 1 </mat-button-toggle>\n    <mat-button-toggle value=\"footer-2\"> Row 2 </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div>\n  Sticky Columns:\n  <mat-button-toggle-group multiple [value]=\"['position', 'symbol']\"\n                           #stickyColumns=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"position\"> Position </mat-button-toggle>\n    <mat-button-toggle value=\"name\"> Name </mat-button-toggle>\n    <mat-button-toggle value=\"weight\"> Weight </mat-button-toggle>\n    <mat-button-toggle value=\"symbol\"> Symbol </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <mat-table [dataSource]=\"dataSource\" *ngFor=\"let table of tables\">\n    <ng-container matColumnDef=\"position\" [sticky]=\"isSticky(stickyColumns, 'position')\">\n      <mat-header-cell *matHeaderCellDef> Position </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.position}} </mat-cell>\n      <mat-footer-cell *matFooterCellDef> Position Footer </mat-footer-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"name\" [sticky]=\"isSticky(stickyColumns, 'name')\">\n      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\n      <mat-footer-cell *matFooterCellDef> Name Footer </mat-footer-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"weight\" [stickyEnd]=\"isSticky(stickyColumns, 'weight')\">\n      <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.weight}} </mat-cell>\n      <mat-footer-cell *matFooterCellDef> Weight Footer </mat-footer-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"symbol\" [stickyEnd]=\"isSticky(stickyColumns, 'symbol')\">\n      <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.symbol}} </mat-cell>\n      <mat-footer-cell *matFooterCellDef> Symbol Footer </mat-footer-cell>\n    </ng-container>\n\n    <ng-container matColumnDef=\"filler\">\n      <mat-header-cell *matHeaderCellDef> Filler header cell </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> Filler data cell </mat-cell>\n      <mat-footer-cell *matFooterCellDef> Filler footer cell </mat-footer-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: isSticky(stickyHeaders, 'header-1')\"></mat-header-row>\n    <mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: isSticky(stickyHeaders, 'header-2')\"></mat-header-row>\n\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\n\n    <mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: isSticky(stickyFooters, 'footer-1')\"></mat-footer-row>\n    <mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: isSticky(stickyFooters, 'footer-2')\"></mat-footer-row>\n  </mat-table>\n</div>\n",
-                styles: [".example-container {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group {\n  margin: 8px;\n}\n\n.mat-column-filler {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell, .mat-footer-cell, .mat-cell {\n  min-width: 80px;\n  box-sizing: border-box;\n}\n\n.mat-header-row, .mat-footer-row, .mat-row {\n  min-width: 1920px; /* 24 columns, 80px each */\n}\n"]
-            }),
-            tslib_1.__metadata("design:paramtypes", [])
-        ], TableStickyComplexFlexExample);
-        return TableStickyComplexFlexExample;
-    }());
-    var ELEMENT_DATA$i = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-
-    /**
-     * @title Tables with toggle-able sticky headers, footers, and columns
-     */
-    var TableStickyComplexExample = /** @class */ (function () {
-        function TableStickyComplexExample() {
-            this.displayedColumns = [];
-            this.dataSource = ELEMENT_DATA$j;
-            this.tables = [0];
-            this.displayedColumns.length = 24;
-            this.displayedColumns.fill('filler');
-            // The first two columns should be position and name; the last two columns: weight, symbol
-            this.displayedColumns[0] = 'position';
-            this.displayedColumns[1] = 'name';
-            this.displayedColumns[22] = 'weight';
-            this.displayedColumns[23] = 'symbol';
-        }
-        /** Whether the button toggle group contains the id as an active value. */
-        TableStickyComplexExample.prototype.isSticky = function (buttonToggleGroup, id) {
-            return (buttonToggleGroup.value || []).indexOf(id) !== -1;
-        };
-        TableStickyComplexExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-sticky-complex-example',
-                template: "<div>\n  <button mat-raised-button (click)=\"tables.push(tables.length)\">Add table</button>\n  <button mat-raised-button (click)=\"tables.pop()\">Remove table</button>\n</div>\n\n<div>\n  Sticky Headers:\n  <mat-button-toggle-group multiple [value]=\"['header-1']\"\n                           #stickyHeaders=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"header-1\"> Row 1 </mat-button-toggle>\n    <mat-button-toggle value=\"header-2\"> Row 2 </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div>\n  Sticky Footers:\n  <mat-button-toggle-group multiple [value]=\"['footer-1']\"\n                           #stickyFooters=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"footer-1\"> Row 1 </mat-button-toggle>\n    <mat-button-toggle value=\"footer-2\"> Row 2 </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div>\n  Sticky Columns:\n  <mat-button-toggle-group multiple [value]=\"['position', 'symbol']\"\n                           #stickyColumns=\"matButtonToggleGroup\"\n                           class=\"example-sticky-toggle-group\">\n    <mat-button-toggle value=\"position\"> Position </mat-button-toggle>\n    <mat-button-toggle value=\"name\"> Name </mat-button-toggle>\n    <mat-button-toggle value=\"weight\"> Weight </mat-button-toggle>\n    <mat-button-toggle value=\"symbol\"> Symbol </mat-button-toggle>\n  </mat-button-toggle-group>\n</div>\n\n<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\" *ngFor=\"let table of tables\">\n    <ng-container matColumnDef=\"position\" [sticky]=\"isSticky(stickyColumns, 'position')\">\n      <th mat-header-cell *matHeaderCellDef> Position </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n      <td mat-footer-cell *matFooterCellDef> Position Footer </td>\n    </ng-container>\n\n    <ng-container matColumnDef=\"name\" [sticky]=\"isSticky(stickyColumns, 'name')\">\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n      <td mat-footer-cell *matFooterCellDef> Name Footer </td>\n    </ng-container>\n\n    <ng-container matColumnDef=\"weight\" [stickyEnd]=\"isSticky(stickyColumns, 'weight')\">\n      <th mat-header-cell *matHeaderCellDef> Weight </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n      <td mat-footer-cell *matFooterCellDef> Weight Footer </td>\n    </ng-container>\n\n    <ng-container matColumnDef=\"symbol\" [stickyEnd]=\"isSticky(stickyColumns, 'symbol')\">\n      <th mat-header-cell *matHeaderCellDef> Symbol </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n      <td mat-footer-cell *matFooterCellDef> Symbol Footer </td>\n    </ng-container>\n\n    <ng-container matColumnDef=\"filler\">\n      <th mat-header-cell *matHeaderCellDef> Filler header cell </th>\n      <td mat-cell *matCellDef=\"let element\"> Filler data cell </td>\n      <td mat-footer-cell *matFooterCellDef> Filler footer cell </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: isSticky(stickyHeaders, 'header-1')\"></tr>\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: isSticky(stickyHeaders, 'header-2')\"></tr>\n\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n\n    <tr mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: isSticky(stickyFooters, 'footer-1')\"></tr>\n    <tr mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: isSticky(stickyFooters, 'footer-2')\"></tr>\n  </table>\n</div>\n",
-                styles: [".example-container {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group {\n  margin: 8px;\n}\n\n.mat-column-filler {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell, .mat-footer-cell, .mat-cell {\n  min-width: 80px;\n  box-sizing: border-box;\n}\n"]
-            }),
-            tslib_1.__metadata("design:paramtypes", [])
-        ], TableStickyComplexExample);
-        return TableStickyComplexExample;
-    }());
-    var ELEMENT_DATA$j = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-
-    /**
-     * @title Table with a sticky footer
-     */
-    var TableStickyFooterExample = /** @class */ (function () {
-        function TableStickyFooterExample() {
-            this.displayedColumns = ['item', 'cost'];
-            this.transactions = [
-                { item: 'Beach ball', cost: 4 },
-                { item: 'Towel', cost: 5 },
-                { item: 'Frisbee', cost: 2 },
-                { item: 'Sunscreen', cost: 4 },
-                { item: 'Cooler', cost: 25 },
-                { item: 'Swim suit', cost: 15 },
-            ];
-        }
-        /** Gets the total cost of all transactions. */
-        TableStickyFooterExample.prototype.getTotalCost = function () {
-            return this.transactions.map(function (t) { return t.cost; }).reduce(function (acc, value) { return acc + value; }, 0);
-        };
-        TableStickyFooterExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-sticky-footer-example',
-                template: "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"transactions\">\n    <!-- Item Column -->\n    <ng-container matColumnDef=\"item\">\n      <th mat-header-cell *matHeaderCellDef> Item </th>\n      <td mat-cell *matCellDef=\"let transaction\"> {{transaction.item}} </td>\n      <td mat-footer-cell *matFooterCellDef> Total </td>\n    </ng-container>\n\n    <!-- Cost Column -->\n    <ng-container matColumnDef=\"cost\">\n      <th mat-header-cell *matHeaderCellDef> Cost </th>\n      <td mat-cell *matCellDef=\"let transaction\"> {{transaction.cost | currency}} </td>\n      <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    <tr mat-footer-row *matFooterRowDef=\"displayedColumns; sticky: true\"></tr>\n  </table>\n</div>\n",
-                styles: [".example-container {\n  height: 270px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n\ntr.mat-footer-row {\n  font-weight: bold;\n}\n\n.mat-table-sticky {\n  border-top: 1px solid #e0e0e0;\n}\n"]
-            })
-        ], TableStickyFooterExample);
-        return TableStickyFooterExample;
-    }());
-
-    /**
-     * @title Table with sticky header
-     */
-    var TableStickyHeaderExample = /** @class */ (function () {
-        function TableStickyHeaderExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$k;
-        }
-        TableStickyHeaderExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-sticky-header-example',
-                template: "<div class=\"example-container mat-elevation-z8\">\n  <table mat-table [dataSource]=\"dataSource\">\n\n    <!-- Position Column -->\n    <ng-container matColumnDef=\"position\">\n      <th mat-header-cell *matHeaderCellDef> No. </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <th mat-header-cell *matHeaderCellDef> Name </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n    </ng-container>\n\n    <!-- Weight Column -->\n    <ng-container matColumnDef=\"weight\">\n      <th mat-header-cell *matHeaderCellDef> Weight </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n    </ng-container>\n\n    <!-- Symbol Column -->\n    <ng-container matColumnDef=\"symbol\">\n      <th mat-header-cell *matHeaderCellDef> Symbol </th>\n      <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n    </ng-container>\n\n    <tr mat-header-row *matHeaderRowDef=\"displayedColumns; sticky: true\"></tr>\n    <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n  </table>\n</div>",
-                styles: [".example-container {\n  height: 400px;\n  overflow: auto;\n}\n\ntable {\n  width: 100%;\n}\n"]
-            })
-        ], TableStickyHeaderExample);
-        return TableStickyHeaderExample;
-    }());
-    var ELEMENT_DATA$k = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-
-    var ELEMENT_DATA$l = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Use of 'mat-text-column' with various configurations of the interface.
-     */
-    var TableTextColumnAdvancedExample = /** @class */ (function () {
-        function TableTextColumnAdvancedExample() {
-            var _this = this;
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$l);
-            this.decimalPipe = new common.DecimalPipe('en-US');
-            /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
-            this.getWeight = function (data) { return _this.decimalPipe.transform(data.weight, '1.0-2'); };
-        }
-        TableTextColumnAdvancedExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-text-column-advanced-example',
-                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <mat-text-column name=\"position\" [headerText]=\"headerText\"></mat-text-column>\n\n  <!-- Change the header text. -->\n  <mat-text-column name=\"name\" headerText=\"Element\"></mat-text-column>\n\n  <!-- Provide a data accessor for getting the cell text values. -->\n  <mat-text-column name=\"weight\" [dataAccessor]=\"getWeight\"></mat-text-column>\n\n  <!-- Justify the content of the cells to the cell end. -->\n  <mat-text-column name=\"symbol\" justify=\"end\"></mat-text-column>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            })
-        ], TableTextColumnAdvancedExample);
-        return TableTextColumnAdvancedExample;
-    }());
-
-    var ELEMENT_DATA$m = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Use of `mat-text-column` which can be used for simple columns that only need to display
-     * a text value for the header and cells.
-     */
-    var TableTextColumnExample = /** @class */ (function () {
-        function TableTextColumnExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = ELEMENT_DATA$m;
-        }
-        TableTextColumnExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-text-column-example',
-                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <mat-text-column name=\"position\"></mat-text-column>\n  <mat-text-column name=\"name\"></mat-text-column>\n  <mat-text-column name=\"weight\"></mat-text-column>\n  <mat-text-column name=\"symbol\"></mat-text-column>\n\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n</table>\n",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            })
-        ], TableTextColumnExample);
-        return TableTextColumnExample;
-    }());
-
-    var ELEMENT_DATA$n = [
-        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-    ];
-    /**
-     * @title Table example that shows how to wrap a table component for definition and behavior reuse.
-     */
-    var TableWrappedExample = /** @class */ (function () {
-        function TableWrappedExample() {
-            this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
-            this.dataSource = new table$1.MatTableDataSource(ELEMENT_DATA$n);
-        }
-        TableWrappedExample.prototype.ngOnInit = function () {
-            this.dataSource.sort = this.sort;
-        };
-        tslib_1.__decorate([
-            core.ViewChild('sort', { static: true }),
-            tslib_1.__metadata("design:type", sort.MatSort)
-        ], TableWrappedExample.prototype, "sort", void 0);
-        TableWrappedExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'table-wrapped-example',
-                template: "<wrapper-table [dataSource]=\"dataSource\" [columns]=\"displayedColumns\"\n               matSort #sort=\"matSort\">\n  <!-- Custom column definition to be provided to the wrapper table. -->\n  <ng-container matColumnDef=\"name\">\n    <th mat-header-cell *matHeaderCellDef> Name </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n  </ng-container>\n\n  <!-- Custom row definitions to be provided to the wrapper table. -->\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns; \"></tr>\n</wrapper-table>\n",
-                styles: ["table {\n  width: 100%;\n}\n"]
-            })
-        ], TableWrappedExample);
-        return TableWrappedExample;
-    }());
-    /**
-     * Table component that accepts column and row definitions in its content to be registered to the
-     * table.
-     */
-    var WrapperTable = /** @class */ (function () {
-        function WrapperTable() {
-        }
-        WrapperTable.prototype.ngAfterContentInit = function () {
-            var _this = this;
-            this.columnDefs.forEach(function (columnDef) { return _this.table.addColumnDef(columnDef); });
-            this.rowDefs.forEach(function (rowDef) { return _this.table.addRowDef(rowDef); });
-            this.headerRowDefs.forEach(function (headerRowDef) { return _this.table.addHeaderRowDef(headerRowDef); });
-        };
-        tslib_1.__decorate([
-            core.ContentChildren(table$1.MatHeaderRowDef),
-            tslib_1.__metadata("design:type", core.QueryList)
-        ], WrapperTable.prototype, "headerRowDefs", void 0);
-        tslib_1.__decorate([
-            core.ContentChildren(table$1.MatRowDef),
-            tslib_1.__metadata("design:type", core.QueryList)
-        ], WrapperTable.prototype, "rowDefs", void 0);
-        tslib_1.__decorate([
-            core.ContentChildren(table$1.MatColumnDef),
-            tslib_1.__metadata("design:type", core.QueryList)
-        ], WrapperTable.prototype, "columnDefs", void 0);
-        tslib_1.__decorate([
-            core.ViewChild(table$1.MatTable, { static: true }),
-            tslib_1.__metadata("design:type", table$1.MatTable)
-        ], WrapperTable.prototype, "table", void 0);
-        tslib_1.__decorate([
-            core.Input(),
-            tslib_1.__metadata("design:type", Array)
-        ], WrapperTable.prototype, "columns", void 0);
-        tslib_1.__decorate([
-            core.Input(),
-            tslib_1.__metadata("design:type", collections.DataSource)
-        ], WrapperTable.prototype, "dataSource", void 0);
-        WrapperTable = tslib_1.__decorate([
-            core.Component({
-                selector: 'wrapper-table',
-                template: "<table mat-table [dataSource]=\"dataSource\" class=\"mat-elevation-z8\">\n  <ng-content></ng-content>\n\n  <!-- Position Column -->\n  <ng-container matColumnDef=\"position\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\n  </ng-container>\n\n  <!-- Weight Column -->\n  <ng-container matColumnDef=\"weight\">\n    <th mat-header-cell *matHeaderCellDef mat-sort-header> Weight </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\n  </ng-container>\n\n  <!-- Color Column -->\n  <ng-container matColumnDef=\"symbol\">\n    <th mat-header-cell *matHeaderCellDef> Symbol </th>\n    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\n  </ng-container>\n</table>\n",
-                styles: ["\n    table {\n      width: 100%;\n    }\n  "]
-            })
-        ], WrapperTable);
-        return WrapperTable;
-    }());
-
-    /** @title Monitoring autofill state with cdkAutofill */
-    var TextFieldAutofillDirectiveExample = /** @class */ (function () {
-        function TextFieldAutofillDirectiveExample() {
-        }
-        TextFieldAutofillDirectiveExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'text-field-autofill-directive-example',
-                template: "<form>\n  <mat-form-field>\n    <mat-label>First name</mat-label>\n    <input matInput (cdkAutofill)=\"firstNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field>\n    <mat-label>Last name</mat-label>\n    <input matInput (cdkAutofill)=\"lastNameAutofilled = $event.isAutofilled\">\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n",
-                styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
-            })
-        ], TextFieldAutofillDirectiveExample);
-        return TextFieldAutofillDirectiveExample;
-    }());
-
-    /** @title Monitoring autofill state with AutofillMonitor */
-    var TextFieldAutofillMonitorExample = /** @class */ (function () {
-        function TextFieldAutofillMonitorExample(_autofill) {
-            this._autofill = _autofill;
-        }
-        TextFieldAutofillMonitorExample.prototype.ngAfterViewInit = function () {
-            var _this = this;
-            this._autofill.monitor(this.firstName)
-                .subscribe(function (e) { return _this.firstNameAutofilled = e.isAutofilled; });
-            this._autofill.monitor(this.lastName)
-                .subscribe(function (e) { return _this.lastNameAutofilled = e.isAutofilled; });
-        };
-        TextFieldAutofillMonitorExample.prototype.ngOnDestroy = function () {
-            this._autofill.stopMonitoring(this.firstName);
-            this._autofill.stopMonitoring(this.lastName);
-        };
-        tslib_1.__decorate([
-            core.ViewChild('first', { read: core.ElementRef, static: false }),
-            tslib_1.__metadata("design:type", core.ElementRef)
-        ], TextFieldAutofillMonitorExample.prototype, "firstName", void 0);
-        tslib_1.__decorate([
-            core.ViewChild('last', { read: core.ElementRef, static: false }),
-            tslib_1.__metadata("design:type", core.ElementRef)
-        ], TextFieldAutofillMonitorExample.prototype, "lastName", void 0);
-        TextFieldAutofillMonitorExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'text-field-autofill-monitor-example',
-                template: "<form>\n  <mat-form-field>\n    <mat-label>First name</mat-label>\n    <input matInput #first>\n    <mat-hint *ngIf=\"firstNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <mat-form-field>\n    <mat-label>Last name</mat-label>\n    <input matInput #last>\n    <mat-hint *ngIf=\"lastNameAutofilled\">Autofilled!</mat-hint>\n  </mat-form-field>\n  <button mat-raised-button>Submit</button>\n</form>\n",
-                styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
-            }),
-            tslib_1.__metadata("design:paramtypes", [textField.AutofillMonitor])
-        ], TextFieldAutofillMonitorExample);
-        return TextFieldAutofillMonitorExample;
-    }());
-
-    /** @title Auto-resizing textarea */
-    var TextFieldAutosizeTextareaExample = /** @class */ (function () {
-        function TextFieldAutosizeTextareaExample(_ngZone) {
-            this._ngZone = _ngZone;
-        }
-        TextFieldAutosizeTextareaExample.prototype.triggerResize = function () {
-            var _this = this;
-            // Wait for changes to be applied, then trigger textarea resize.
-            this._ngZone.onStable.pipe(operators.take(1))
-                .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
-        };
-        tslib_1.__decorate([
-            core.ViewChild('autosize', { static: false }),
-            tslib_1.__metadata("design:type", textField.CdkTextareaAutosize)
-        ], TextFieldAutosizeTextareaExample.prototype, "autosize", void 0);
-        TextFieldAutosizeTextareaExample = tslib_1.__decorate([
-            core.Component({
-                selector: 'text-field-autosize-textarea-example',
-                template: "<mat-form-field>\n  <mat-label>Font size</mat-label>\n  <mat-select #fontSize value=\"16px\" (selectionChange)=\"triggerResize()\">\n    <mat-option value=\"10px\">10px</mat-option>\n    <mat-option value=\"12px\">12px</mat-option>\n    <mat-option value=\"14px\">14px</mat-option>\n    <mat-option value=\"16px\">16px</mat-option>\n    <mat-option value=\"18px\">18px</mat-option>\n    <mat-option value=\"20px\">20px</mat-option>\n  </mat-select>\n</mat-form-field>\n\n<mat-form-field [style.fontSize]=\"fontSize.value\">\n  <mat-label>Autosize textarea</mat-label>\n  <textarea matInput\n            cdkTextareaAutosize\n            #autosize=\"cdkTextareaAutosize\"\n            cdkAutosizeMinRows=\"1\"\n            cdkAutosizeMaxRows=\"5\"></textarea>\n</mat-form-field>\n",
-                styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
-            }),
-            tslib_1.__metadata("design:paramtypes", [core.NgZone])
-        ], TextFieldAutosizeTextareaExample);
-        return TextFieldAutosizeTextareaExample;
     }());
 
     /**
@@ -7381,22 +7044,1409 @@
         return TreeNestedOverviewExample;
     }());
 
+    var EXAMPLES = [
+        FocusMonitorDirectivesExample,
+        FocusMonitorFocusViaExample,
+        FocusMonitorOverviewExample,
+    ];
+    var CdkA11yExamplesModule = /** @class */ (function () {
+        function CdkA11yExamplesModule() {
+        }
+        CdkA11yExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    a11y.A11yModule,
+                    select.MatSelectModule,
+                ],
+                declarations: EXAMPLES,
+                exports: EXAMPLES,
+            })
+        ], CdkA11yExamplesModule);
+        return CdkA11yExamplesModule;
+    }());
+
+    var EXAMPLES$1 = [
+        CdkDragDropAxisLockExample,
+        CdkDragDropBoundaryExample,
+        CdkDragDropConnectedSortingExample,
+        CdkDragDropConnectedSortingGroupExample,
+        CdkDragDropCustomPlaceholderExample,
+        CdkDragDropCustomPreviewExample,
+        CdkDragDropDelayExample,
+        CdkDragDropDisabledExample,
+        CdkDragDropDisabledSortingExample,
+        CdkDragDropEnterPredicateExample,
+        CdkDragDropFreeDragPositionExample,
+        CdkDragDropHandleExample,
+        CdkDragDropHorizontalSortingExample,
+        CdkDragDropOverviewExample,
+        CdkDragDropRootElementExample,
+        CdkDragDropSortingExample,
+    ];
+    var CdkDragDropExamplesModule = /** @class */ (function () {
+        function CdkDragDropExamplesModule() {
+        }
+        CdkDragDropExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    dragDrop.DragDropModule,
+                    overlay.OverlayModule,
+                    common.CommonModule,
+                ],
+                declarations: EXAMPLES$1,
+                exports: EXAMPLES$1,
+            })
+        ], CdkDragDropExamplesModule);
+        return CdkDragDropExamplesModule;
+    }());
+
+    var EXAMPLES$2 = [CdkPlatformOverviewExample];
+    var CdkPlatformExamplesModule = /** @class */ (function () {
+        function CdkPlatformExamplesModule() {
+        }
+        CdkPlatformExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    platform.PlatformModule,
+                ],
+                declarations: EXAMPLES$2,
+                exports: EXAMPLES$2,
+            })
+        ], CdkPlatformExamplesModule);
+        return CdkPlatformExamplesModule;
+    }());
+
+    var EXAMPLES$3 = [
+        CdkPopoverEditCdkTableExample,
+        CdkPopoverEditCdkTableFlexExample,
+        CdkPopoverEditCellSpanVanillaTableExample,
+        CdkPopoverEditTabOutVanillaTableExample,
+        CdkPopoverEditVanillaTableExample,
+    ];
+    var CdkPopoverEditExamplesModule = /** @class */ (function () {
+        function CdkPopoverEditExamplesModule() {
+        }
+        CdkPopoverEditExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    popoverEdit.CdkPopoverEditModule,
+                    table$1.CdkTableModule,
+                    forms.FormsModule,
+                    common.CommonModule,
+                ],
+                declarations: EXAMPLES$3,
+                exports: EXAMPLES$3,
+            })
+        ], CdkPopoverEditExamplesModule);
+        return CdkPopoverEditExamplesModule;
+    }());
+
+    var EXAMPLES$4 = [
+        CdkPortalOverviewExample,
+        ComponentPortalExample,
+    ];
+    var CdkPortalExamplesModule = /** @class */ (function () {
+        function CdkPortalExamplesModule() {
+        }
+        CdkPortalExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    portal.PortalModule,
+                ],
+                declarations: EXAMPLES$4,
+                exports: EXAMPLES$4,
+                entryComponents: [ComponentPortalExample]
+            })
+        ], CdkPortalExamplesModule);
+        return CdkPortalExamplesModule;
+    }());
+
+    var EXAMPLES$5 = [
+        CdkVirtualScrollContextExample,
+        CdkVirtualScrollCustomStrategyExample,
+        CdkVirtualScrollDataSourceExample,
+        CdkVirtualScrollDlExample,
+        CdkVirtualScrollFixedBufferExample,
+        CdkVirtualScrollHorizontalExample,
+        CdkVirtualScrollOverviewExample,
+        CdkVirtualScrollTemplateCacheExample,
+    ];
+    var CdkScrollingExamplesModule = /** @class */ (function () {
+        function CdkScrollingExamplesModule() {
+        }
+        CdkScrollingExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    scrolling.ScrollingModule,
+                ],
+                declarations: EXAMPLES$5,
+                exports: EXAMPLES$5,
+            })
+        ], CdkScrollingExamplesModule);
+        return CdkScrollingExamplesModule;
+    }());
+
+    var EXAMPLES$6 = [
+        CdkCustomStepperWithoutFormExample,
+        CustomStepper,
+    ];
+    var CdkStepperExamplesModule = /** @class */ (function () {
+        function CdkStepperExamplesModule() {
+        }
+        CdkStepperExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    stepper.CdkStepperModule,
+                    common.CommonModule,
+                ],
+                declarations: EXAMPLES$6,
+                exports: EXAMPLES$6,
+            })
+        ], CdkStepperExamplesModule);
+        return CdkStepperExamplesModule;
+    }());
+
+    var EXAMPLES$7 = [
+        CdkTableBasicExample,
+        CdkTableBasicFlexExample,
+    ];
+    var CdkTableExamplesModule = /** @class */ (function () {
+        function CdkTableExamplesModule() {
+        }
+        CdkTableExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    table$1.CdkTableModule,
+                ],
+                declarations: EXAMPLES$7,
+                exports: EXAMPLES$7,
+            })
+        ], CdkTableExamplesModule);
+        return CdkTableExamplesModule;
+    }());
+
+    var EXAMPLES$8 = [
+        TextFieldAutofillDirectiveExample,
+        TextFieldAutofillMonitorExample,
+        TextFieldAutosizeTextareaExample,
+    ];
+    var CdkTextFieldExamplesModule = /** @class */ (function () {
+        function CdkTextFieldExamplesModule() {
+        }
+        CdkTextFieldExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    textField.TextFieldModule,
+                    input.MatInputModule,
+                    select.MatSelectModule,
+                ],
+                declarations: EXAMPLES$8,
+                exports: EXAMPLES$8,
+            })
+        ], CdkTextFieldExamplesModule);
+        return CdkTextFieldExamplesModule;
+    }());
+
+    var EXAMPLES$9 = [
+        CdkTreeFlatExample,
+        CdkTreeNestedExample,
+    ];
+    var CdkTreeExamplesModule = /** @class */ (function () {
+        function CdkTreeExamplesModule() {
+        }
+        CdkTreeExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    tree.CdkTreeModule,
+                    icon.MatIconModule,
+                ],
+                declarations: EXAMPLES$9,
+                exports: EXAMPLES$9,
+            })
+        ], CdkTreeExamplesModule);
+        return CdkTreeExamplesModule;
+    }());
+
+    var EXAMPLES$a = [
+        AutocompleteAutoActiveFirstOptionExample,
+        AutocompleteDisplayExample,
+        AutocompleteFilterExample,
+        AutocompleteOptgroupExample,
+        AutocompleteOverviewExample,
+        AutocompletePlainInputExample,
+        AutocompleteSimpleExample,
+    ];
+    var AutocompleteExamplesModule = /** @class */ (function () {
+        function AutocompleteExamplesModule() {
+        }
+        AutocompleteExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    autocomplete.MatAutocompleteModule,
+                    formField.MatFormFieldModule,
+                    input.MatInputModule,
+                    slideToggle.MatSlideToggleModule,
+                    forms.FormsModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES$a,
+                exports: EXAMPLES$a,
+            })
+        ], AutocompleteExamplesModule);
+        return AutocompleteExamplesModule;
+    }());
+
+    var EXAMPLES$b = [
+        BadgeOverviewExample,
+    ];
+    var BadgeExamplesModule = /** @class */ (function () {
+        function BadgeExamplesModule() {
+        }
+        BadgeExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    badge.MatBadgeModule,
+                    icon.MatIconModule,
+                ],
+                declarations: EXAMPLES$b,
+                exports: EXAMPLES$b,
+            })
+        ], BadgeExamplesModule);
+        return BadgeExamplesModule;
+    }());
+
+    var EXAMPLES$c = [
+        BottomSheetOverviewExample,
+        BottomSheetOverviewExampleSheet,
+    ];
+    var BottomSheetExamplesModule = /** @class */ (function () {
+        function BottomSheetExamplesModule() {
+        }
+        BottomSheetExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    bottomSheet.MatBottomSheetModule,
+                    list.MatListModule,
+                ],
+                declarations: EXAMPLES$c,
+                exports: EXAMPLES$c,
+                entryComponents: [BottomSheetOverviewExampleSheet],
+            })
+        ], BottomSheetExamplesModule);
+        return BottomSheetExamplesModule;
+    }());
+
+    var EXAMPLES$d = [
+        ButtonToggleAppearanceExample,
+        ButtonToggleExclusiveExample,
+        ButtonToggleOverviewExample,
+    ];
+    var ButtonToggleExamplesModule = /** @class */ (function () {
+        function ButtonToggleExamplesModule() {
+        }
+        ButtonToggleExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    buttonToggle.MatButtonToggleModule,
+                    icon.MatIconModule,
+                ],
+                declarations: EXAMPLES$d,
+                exports: EXAMPLES$d,
+            })
+        ], ButtonToggleExamplesModule);
+        return ButtonToggleExamplesModule;
+    }());
+
+    var EXAMPLES$e = [
+        ButtonOverviewExample,
+        ButtonTypesExample,
+    ];
+    var ButtonExamplesModule = /** @class */ (function () {
+        function ButtonExamplesModule() {
+        }
+        ButtonExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    button.MatButtonModule,
+                    icon.MatIconModule,
+                ],
+                declarations: EXAMPLES$e,
+                exports: EXAMPLES$e,
+            })
+        ], ButtonExamplesModule);
+        return ButtonExamplesModule;
+    }());
+
+    var EXAMPLES$f = [
+        CardFancyExample,
+        CardOverviewExample,
+    ];
+    var CardExamplesModule = /** @class */ (function () {
+        function CardExamplesModule() {
+        }
+        CardExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    button.MatButtonModule,
+                    card.MatCardModule,
+                ],
+                declarations: EXAMPLES$f,
+                exports: EXAMPLES$f,
+            })
+        ], CardExamplesModule);
+        return CardExamplesModule;
+    }());
+
+    var EXAMPLES$g = [
+        CheckboxConfigurableExample,
+        CheckboxOverviewExample,
+    ];
+    var CheckboxExamplesModule = /** @class */ (function () {
+        function CheckboxExamplesModule() {
+        }
+        CheckboxExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    card.MatCardModule,
+                    checkbox.MatCheckboxModule,
+                    radio.MatRadioModule,
+                    forms.FormsModule,
+                ],
+                declarations: EXAMPLES$g,
+                exports: EXAMPLES$g,
+            })
+        ], CheckboxExamplesModule);
+        return CheckboxExamplesModule;
+    }());
+
+    var EXAMPLES$h = [
+        ChipsAutocompleteExample,
+        ChipsDragDropExample,
+        ChipsInputExample,
+        ChipsOverviewExample,
+        ChipsStackedExample,
+    ];
+    var ChipsExamplesModule = /** @class */ (function () {
+        function ChipsExamplesModule() {
+        }
+        ChipsExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    dragDrop.DragDropModule,
+                    autocomplete.MatAutocompleteModule,
+                    chips.MatChipsModule,
+                    icon.MatIconModule,
+                    formField.MatFormFieldModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES$h,
+                exports: EXAMPLES$h,
+            })
+        ], ChipsExamplesModule);
+        return ChipsExamplesModule;
+    }());
+
+    var EXAMPLES$i = [
+        ElevationOverviewExample,
+        RippleOverviewExample,
+    ];
+    var CoreExamplesModule = /** @class */ (function () {
+        function CoreExamplesModule() {
+        }
+        CoreExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    button.MatButtonModule,
+                    checkbox.MatCheckboxModule,
+                    input.MatInputModule,
+                    core$1.MatRippleModule,
+                    forms.FormsModule,
+                ],
+                declarations: EXAMPLES$i,
+                exports: EXAMPLES$i,
+            })
+        ], CoreExamplesModule);
+        return CoreExamplesModule;
+    }());
+
+    var EXAMPLES$j = [
+        DatepickerApiExample,
+        DatepickerColorExample,
+        DatepickerCustomHeaderExample,
+        DatepickerCustomIconExample,
+        DatepickerDateClassExample,
+        DatepickerDisabledExample,
+        DatepickerEventsExample,
+        DatepickerFilterExample,
+        DatepickerFormatsExample,
+        DatepickerLocaleExample,
+        DatepickerMinMaxExample,
+        DatepickerMomentExample,
+        DatepickerOverviewExample,
+        DatepickerStartViewExample,
+        DatepickerTouchExample,
+        DatepickerValueExample,
+        DatepickerViewsSelectionExample,
+        ExampleHeader,
+    ];
+    var DatepickerExamplesModule = /** @class */ (function () {
+        function DatepickerExamplesModule() {
+        }
+        DatepickerExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    button.MatButtonModule,
+                    datepicker.MatDatepickerModule,
+                    input.MatInputModule,
+                    icon.MatIconModule,
+                    core$1.MatNativeDateModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES$j,
+                exports: EXAMPLES$j,
+            })
+        ], DatepickerExamplesModule);
+        return DatepickerExamplesModule;
+    }());
+
+    var EXAMPLES$k = [
+        DialogContentExample,
+        DialogContentExampleDialog,
+        DialogDataExample,
+        DialogDataExampleDialog,
+        DialogElementsExample,
+        DialogElementsExampleDialog,
+        DialogOverviewExample,
+        DialogOverviewExampleDialog,
+    ];
+    var DialogExamplesModule = /** @class */ (function () {
+        function DialogExamplesModule() {
+        }
+        DialogExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    button.MatButtonModule,
+                    dialog.MatDialogModule,
+                    input.MatInputModule,
+                    forms.FormsModule,
+                ],
+                declarations: EXAMPLES$k,
+                exports: EXAMPLES$k,
+                entryComponents: [
+                    DialogContentExampleDialog,
+                    DialogDataExampleDialog,
+                    DialogElementsExampleDialog,
+                    DialogOverviewExampleDialog,
+                ]
+            })
+        ], DialogExamplesModule);
+        return DialogExamplesModule;
+    }());
+
+    var EXAMPLES$l = [
+        DividerOverviewExample,
+    ];
+    var DividerExamplesModule = /** @class */ (function () {
+        function DividerExamplesModule() {
+        }
+        DividerExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    divider.MatDividerModule,
+                    list.MatListModule,
+                ],
+                declarations: EXAMPLES$l,
+            })
+        ], DividerExamplesModule);
+        return DividerExamplesModule;
+    }());
+
+    var EXAMPLES$m = [
+        ExpansionExpandCollapseAllExample,
+        ExpansionOverviewExample,
+        ExpansionStepsExample,
+    ];
+    var ExpansionExamplesModule = /** @class */ (function () {
+        function ExpansionExamplesModule() {
+        }
+        ExpansionExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    datepicker.MatDatepickerModule,
+                    expansion.MatExpansionModule,
+                    icon.MatIconModule,
+                    input.MatInputModule,
+                ],
+                declarations: EXAMPLES$m,
+            })
+        ], ExpansionExamplesModule);
+        return ExpansionExamplesModule;
+    }());
+
+    var EXAMPLES$n = [
+        FormFieldAppearanceExample,
+        FormFieldCustomControlExample,
+        FormFieldErrorExample,
+        FormFieldHintExample,
+        FormFieldLabelExample,
+        FormFieldOverviewExample,
+        FormFieldPrefixSuffixExample,
+        FormFieldThemingExample,
+    ];
+    var FormFieldExamplesModule = /** @class */ (function () {
+        function FormFieldExamplesModule() {
+        }
+        FormFieldExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    button.MatButtonModule,
+                    checkbox.MatCheckboxModule,
+                    formField.MatFormFieldModule,
+                    icon.MatIconModule,
+                    input.MatInputModule,
+                    radio.MatRadioModule,
+                    select.MatSelectModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: tslib_1.__spread(EXAMPLES$n, [MyTelInput]),
+                exports: EXAMPLES$n,
+            })
+        ], FormFieldExamplesModule);
+        return FormFieldExamplesModule;
+    }());
+
+    var EXAMPLES$o = [
+        GridListDynamicExample,
+        GridListOverviewExample,
+    ];
+    var GridListExamplesModule = /** @class */ (function () {
+        function GridListExamplesModule() {
+        }
+        GridListExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    gridList.MatGridListModule,
+                ],
+                declarations: EXAMPLES$o,
+                exports: EXAMPLES$o,
+            })
+        ], GridListExamplesModule);
+        return GridListExamplesModule;
+    }());
+
+    var EXAMPLES$p = [
+        IconOverviewExample,
+        IconSvgExample,
+    ];
+    var IconExamplesModule = /** @class */ (function () {
+        function IconExamplesModule() {
+        }
+        IconExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    icon.MatIconModule,
+                ],
+                declarations: EXAMPLES$p,
+                exports: EXAMPLES$p,
+            })
+        ], IconExamplesModule);
+        return IconExamplesModule;
+    }());
+
+    var EXAMPLES$q = [
+        InputClearableExample,
+        InputErrorStateMatcherExample,
+        InputErrorsExample,
+        InputFormExample,
+        InputHintExample,
+        InputOverviewExample,
+        InputPrefixSuffixExample,
+    ];
+    var InputExamplesModule = /** @class */ (function () {
+        function InputExamplesModule() {
+        }
+        InputExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    button.MatButtonModule,
+                    icon.MatIconModule,
+                    input.MatInputModule,
+                    forms.FormsModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES$q,
+                exports: EXAMPLES$q,
+            })
+        ], InputExamplesModule);
+        return InputExamplesModule;
+    }());
+
+    var EXAMPLES$r = [
+        ListOverviewExample,
+        ListSectionsExample,
+        ListSelectionExample,
+    ];
+    var ListExamplesModule = /** @class */ (function () {
+        function ListExamplesModule() {
+        }
+        ListExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    icon.MatIconModule,
+                    list.MatListModule,
+                ],
+                declarations: EXAMPLES$r,
+                exports: EXAMPLES$r,
+            })
+        ], ListExamplesModule);
+        return ListExamplesModule;
+    }());
+
+    var EXAMPLES$s = [
+        MenuIconsExample,
+        MenuOverviewExample,
+        MenuPositionExample,
+        NestedMenuExample,
+    ];
+    var MenuExamplesModule = /** @class */ (function () {
+        function MenuExamplesModule() {
+        }
+        MenuExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    button.MatButtonModule,
+                    icon.MatIconModule,
+                    menu.MatMenuModule,
+                ],
+                declarations: EXAMPLES$s,
+                exports: EXAMPLES$s,
+            })
+        ], MenuExamplesModule);
+        return MenuExamplesModule;
+    }());
+
+    var EXAMPLES$t = [
+        PaginatorConfigurableExample,
+        PaginatorOverviewExample,
+    ];
+    var PaginatorExamplesModule = /** @class */ (function () {
+        function PaginatorExamplesModule() {
+        }
+        PaginatorExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    input.MatInputModule,
+                    paginator.MatPaginatorModule,
+                    forms.FormsModule,
+                ],
+                declarations: EXAMPLES$t,
+                exports: EXAMPLES$t,
+            })
+        ], PaginatorExamplesModule);
+        return PaginatorExamplesModule;
+    }());
+
+    /**
+     * @license
+     * Copyright Google LLC All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     */
+    /**
+     * A component that attaches to a form within the edit.
+     * It coordinates the form state with the table-wide edit system and handles
+     * closing the edit when the form is submitted or the user clicks
+     * out.
+     */
+    var MatEditLens = /** @class */ (function (_super) {
+        tslib_1.__extends(MatEditLens, _super);
+        function MatEditLens() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MatEditLens = tslib_1.__decorate([
+            core.Directive({
+                selector: 'form[matEditLens]',
+                host: {
+                    'class': 'mat-edit-lens',
+                },
+                inputs: [
+                    'clickOutBehavior: matEditLensClickOutBehavior',
+                    'preservedFormValue: matEditLensPreservedFormValue',
+                    'ignoreSubmitUnlessValid: matEditLensIgnoreSubmitUnlessValid',
+                ],
+                outputs: ['preservedFormValueChange: matEditLensPreservedFormValueChange'],
+                providers: [popoverEdit.EditRef],
+            })
+        ], MatEditLens);
+        return MatEditLens;
+    }(popoverEdit.CdkEditControl));
+    /** Reverts the form to its initial or previously submitted state on click. */
+    var MatEditRevert = /** @class */ (function (_super) {
+        tslib_1.__extends(MatEditRevert, _super);
+        function MatEditRevert() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MatEditRevert = tslib_1.__decorate([
+            core.Directive({
+                selector: 'button[matEditRevert]',
+                host: {
+                    'type': 'button',
+                }
+            })
+        ], MatEditRevert);
+        return MatEditRevert;
+    }(popoverEdit.CdkEditRevert));
+    /** Closes the lens on click. */
+    var MatEditClose = /** @class */ (function (_super) {
+        tslib_1.__extends(MatEditClose, _super);
+        function MatEditClose() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MatEditClose = tslib_1.__decorate([
+            core.Directive({
+                selector: 'button[matEditClose]',
+                host: {
+                    'type': 'button',
+                }
+            })
+        ], MatEditClose);
+        return MatEditClose;
+    }(popoverEdit.CdkEditClose));
+
+    var POPOVER_EDIT_HOST_BINDINGS = {
+        'tabIndex': '0',
+        'class': 'mat-popover-edit-cell',
+        '[attr.aria-haspopup]': 'true',
+    };
+    var POPOVER_EDIT_INPUTS = [
+        'template: matPopoverEdit',
+        'context: matPopoverEditContext',
+        'colspan: matPopoverEditColspan',
+    ];
+    var EDIT_PANE_CLASS = 'mat-edit-pane';
+    var MAT_ROW_HOVER_CLASS = 'mat-row-hover-content';
+    var MAT_ROW_HOVER_RTL_CLASS = MAT_ROW_HOVER_CLASS + '-rtl';
+    var MAT_ROW_HOVER_ANIMATE_CLASS = MAT_ROW_HOVER_CLASS + '-visible';
+    var MAT_ROW_HOVER_CELL_CLASS = MAT_ROW_HOVER_CLASS + '-host-cell';
+    /**
+     * Attaches an ng-template to a cell and shows it when instructed to by the
+     * EditEventDispatcher service.
+     * Makes the cell focusable.
+     */
+    var MatPopoverEdit = /** @class */ (function (_super) {
+        tslib_1.__extends(MatPopoverEdit, _super);
+        function MatPopoverEdit() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MatPopoverEdit.prototype.panelClass = function () {
+            return EDIT_PANE_CLASS;
+        };
+        MatPopoverEdit = tslib_1.__decorate([
+            core.Directive({
+                selector: '[matPopoverEdit]:not([matPopoverEditTabOut])',
+                host: POPOVER_EDIT_HOST_BINDINGS,
+                inputs: POPOVER_EDIT_INPUTS,
+            })
+        ], MatPopoverEdit);
+        return MatPopoverEdit;
+    }(popoverEdit.CdkPopoverEdit));
+    /**
+     * Attaches an ng-template to a cell and shows it when instructed to by the
+     * EditEventDispatcher service.
+     * Makes the cell focusable.
+     */
+    var MatPopoverEditTabOut = /** @class */ (function (_super) {
+        tslib_1.__extends(MatPopoverEditTabOut, _super);
+        function MatPopoverEditTabOut() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MatPopoverEditTabOut.prototype.panelClass = function () {
+            return EDIT_PANE_CLASS;
+        };
+        MatPopoverEditTabOut = tslib_1.__decorate([
+            core.Directive({
+                selector: '[matPopoverEdit][matPopoverEditTabOut]',
+                host: POPOVER_EDIT_HOST_BINDINGS,
+                inputs: POPOVER_EDIT_INPUTS,
+            })
+        ], MatPopoverEditTabOut);
+        return MatPopoverEditTabOut;
+    }(popoverEdit.CdkPopoverEditTabOut));
+    /**
+     * A structural directive that shows its contents when the table row containing
+     * it is hovered or when an element in the row has focus.
+     */
+    var MatRowHoverContent = /** @class */ (function (_super) {
+        tslib_1.__extends(MatRowHoverContent, _super);
+        function MatRowHoverContent() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MatRowHoverContent.prototype.initElement = function (element) {
+            _super.prototype.initElement.call(this, element);
+            element.classList.add(MAT_ROW_HOVER_CLASS);
+        };
+        MatRowHoverContent.prototype.makeElementHiddenButFocusable = function (element) {
+            element.classList.remove(MAT_ROW_HOVER_ANIMATE_CLASS);
+        };
+        MatRowHoverContent.prototype.makeElementVisible = function (element) {
+            popoverEdit._closest(this.elementRef.nativeElement, popoverEdit._CELL_SELECTOR)
+                .classList.add(MAT_ROW_HOVER_CELL_CLASS);
+            if (this.services.directionality.value === 'rtl') {
+                element.classList.add(MAT_ROW_HOVER_RTL_CLASS);
+            }
+            else {
+                element.classList.remove(MAT_ROW_HOVER_RTL_CLASS);
+            }
+            element.classList.remove(MAT_ROW_HOVER_ANIMATE_CLASS);
+            this.services.ngZone.runOutsideAngular(function () {
+                setTimeout(function () {
+                    element.classList.add(MAT_ROW_HOVER_ANIMATE_CLASS);
+                });
+            });
+        };
+        MatRowHoverContent = tslib_1.__decorate([
+            core.Directive({
+                selector: '[matRowHoverContent]',
+            })
+        ], MatRowHoverContent);
+        return MatRowHoverContent;
+    }(popoverEdit.CdkRowHoverContent));
+    /**
+     * Opens the closest edit popover to this element, whether it's associated with this exact
+     * element or an ancestor element.
+     */
+    var MatEditOpen = /** @class */ (function (_super) {
+        tslib_1.__extends(MatEditOpen, _super);
+        function MatEditOpen() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        MatEditOpen = tslib_1.__decorate([
+            core.Directive({
+                selector: '[matEditOpen]',
+            })
+        ], MatEditOpen);
+        return MatEditOpen;
+    }(popoverEdit.CdkEditOpen));
+
+    /**
+     * @license
+     * Copyright Google LLC All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     */
+    var EXPORTED_DECLARATIONS = [
+        MatPopoverEdit,
+        MatPopoverEditTabOut,
+        MatRowHoverContent,
+        MatEditLens,
+        MatEditRevert,
+        MatEditClose,
+        MatEditOpen
+    ];
+    var MatPopoverEditModule = /** @class */ (function () {
+        function MatPopoverEditModule() {
+        }
+        MatPopoverEditModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    popoverEdit.CdkPopoverEditModule,
+                    common.CommonModule,
+                ],
+                exports: tslib_1.__spread(EXPORTED_DECLARATIONS, [
+                    popoverEdit.CdkEditable,
+                ]),
+                declarations: EXPORTED_DECLARATIONS,
+            })
+        ], MatPopoverEditModule);
+        return MatPopoverEditModule;
+    }());
+
+    /**
+     * @license
+     * Copyright Google LLC All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     */
+
+    /**
+     * @license
+     * Copyright Google LLC All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     */
+
+    var EXAMPLES$u = [
+        PopoverEditCellSpanMatTableExample,
+        PopoverEditMatTableExample,
+        PopoverEditMatTableFlexExample,
+        PopoverEditTabOutMatTableExample,
+    ];
+    var PopoverEditExamplesModule = /** @class */ (function () {
+        function PopoverEditExamplesModule() {
+        }
+        PopoverEditExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    button.MatButtonModule,
+                    icon.MatIconModule,
+                    input.MatInputModule,
+                    MatPopoverEditModule,
+                    snackBar.MatSnackBarModule,
+                    table.MatTableModule,
+                    forms.FormsModule,
+                ],
+                declarations: EXAMPLES$u,
+                exports: EXAMPLES$u,
+            })
+        ], PopoverEditExamplesModule);
+        return PopoverEditExamplesModule;
+    }());
+
+    var EXAMPLES$v = [
+        ProgressBarBufferExample,
+        ProgressBarConfigurableExample,
+        ProgressBarDeterminateExample,
+        ProgressBarIndeterminateExample,
+        ProgressBarQueryExample,
+    ];
+    var ProgressBarExamplesModule = /** @class */ (function () {
+        function ProgressBarExamplesModule() {
+        }
+        ProgressBarExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    card.MatCardModule,
+                    progressBar.MatProgressBarModule,
+                    radio.MatRadioModule,
+                    slider.MatSliderModule,
+                    forms.FormsModule,
+                ],
+                declarations: EXAMPLES$v,
+                exports: EXAMPLES$v,
+            })
+        ], ProgressBarExamplesModule);
+        return ProgressBarExamplesModule;
+    }());
+
+    var EXAMPLES$w = [
+        ProgressSpinnerConfigurableExample,
+        ProgressSpinnerOverviewExample,
+    ];
+    var ProgressSpinnerExamplesModule = /** @class */ (function () {
+        function ProgressSpinnerExamplesModule() {
+        }
+        ProgressSpinnerExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    card.MatCardModule,
+                    progressSpinner.MatProgressSpinnerModule,
+                    radio.MatRadioModule,
+                    slider.MatSliderModule,
+                    forms.FormsModule,
+                ],
+                declarations: EXAMPLES$w,
+                exports: EXAMPLES$w,
+            })
+        ], ProgressSpinnerExamplesModule);
+        return ProgressSpinnerExamplesModule;
+    }());
+
+    var EXAMPLES$x = [
+        RadioNgModelExample,
+        RadioOverviewExample,
+    ];
+    var RadioExamplesModule = /** @class */ (function () {
+        function RadioExamplesModule() {
+        }
+        RadioExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    radio.MatRadioModule,
+                    forms.FormsModule,
+                ],
+                declarations: EXAMPLES$x,
+                exports: EXAMPLES$x,
+            })
+        ], RadioExamplesModule);
+        return RadioExamplesModule;
+    }());
+
+    var EXAMPLES$y = [
+        SelectCustomTriggerExample,
+        SelectDisabledExample,
+        SelectErrorStateMatcherExample,
+        SelectFormExample,
+        SelectHintErrorExample,
+        SelectMultipleExample,
+        SelectNoRippleExample,
+        SelectOptgroupExample,
+        SelectOverviewExample,
+        SelectPanelClassExample,
+        SelectResetExample,
+        SelectValueBindingExample,
+    ];
+    var SelectExamplesModule = /** @class */ (function () {
+        function SelectExamplesModule() {
+        }
+        SelectExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    forms.FormsModule,
+                    checkbox.MatCheckboxModule,
+                    input.MatInputModule,
+                    select.MatSelectModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES$y,
+                exports: EXAMPLES$y,
+            })
+        ], SelectExamplesModule);
+        return SelectExamplesModule;
+    }());
+
+    var EXAMPLES$z = [
+        SidenavAutosizeExample,
+        SidenavBackdropExample,
+        SidenavDisableCloseExample,
+        SidenavDrawerOverviewExample,
+        SidenavFixedExample,
+        SidenavModeExample,
+        SidenavOpenCloseExample,
+        SidenavOverviewExample,
+        SidenavPositionExample,
+        SidenavResponsiveExample,
+    ];
+    var SidenavExamplesModule = /** @class */ (function () {
+        function SidenavExamplesModule() {
+        }
+        SidenavExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    forms.FormsModule,
+                    button.MatButtonModule,
+                    checkbox.MatCheckboxModule,
+                    icon.MatIconModule,
+                    list.MatListModule,
+                    radio.MatRadioModule,
+                    sidenav.MatSidenavModule,
+                    select.MatSelectModule,
+                    toolbar.MatToolbarModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES$z,
+                exports: EXAMPLES$z,
+            })
+        ], SidenavExamplesModule);
+        return SidenavExamplesModule;
+    }());
+
+    var EXAMPLES$A = [
+        SlideToggleConfigurableExample,
+        SlideToggleFormsExample,
+        SlideToggleOverviewExample,
+    ];
+    var SlideToggleExamplesModule = /** @class */ (function () {
+        function SlideToggleExamplesModule() {
+        }
+        SlideToggleExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    forms.FormsModule,
+                    button.MatButtonModule,
+                    card.MatCardModule,
+                    checkbox.MatCheckboxModule,
+                    radio.MatRadioModule,
+                    slideToggle.MatSlideToggleModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES$A,
+                exports: EXAMPLES$A,
+            })
+        ], SlideToggleExamplesModule);
+        return SlideToggleExamplesModule;
+    }());
+
+    var EXAMPLES$B = [
+        SliderConfigurableExample,
+        SliderFormattingExample,
+        SliderOverviewExample,
+    ];
+    var SliderExamplesModule = /** @class */ (function () {
+        function SliderExamplesModule() {
+        }
+        SliderExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    forms.FormsModule,
+                    card.MatCardModule,
+                    checkbox.MatCheckboxModule,
+                    input.MatInputModule,
+                    slider.MatSliderModule,
+                ],
+                declarations: EXAMPLES$B,
+                exports: EXAMPLES$B,
+            })
+        ], SliderExamplesModule);
+        return SliderExamplesModule;
+    }());
+
+    var EXAMPLES$C = [
+        SnackBarComponentExample,
+        SnackBarOverviewExample,
+        SnackBarPositionExample,
+    ];
+    var SnackBarExamplesModule = /** @class */ (function () {
+        function SnackBarExamplesModule() {
+        }
+        SnackBarExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    forms.FormsModule,
+                    button.MatButtonModule,
+                    input.MatInputModule,
+                    select.MatSelectModule,
+                    snackBar.MatSnackBarModule,
+                ],
+                declarations: tslib_1.__spread(EXAMPLES$C, [PizzaPartyComponent]),
+                exports: EXAMPLES$C,
+                entryComponents: [PizzaPartyComponent],
+            })
+        ], SnackBarExamplesModule);
+        return SnackBarExamplesModule;
+    }());
+
+    var EXAMPLES$D = [
+        SortOverviewExample,
+    ];
+    var SortExamplesModule = /** @class */ (function () {
+        function SortExamplesModule() {
+        }
+        SortExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    sort.MatSortModule,
+                ],
+                declarations: EXAMPLES$D,
+                exports: EXAMPLES$D,
+            })
+        ], SortExamplesModule);
+        return SortExamplesModule;
+    }());
+
+    var EXAMPLES$E = [
+        StepperEditableExample,
+        StepperErrorsExample,
+        StepperLabelPositionBottomExample,
+        StepperOptionalExample,
+        StepperOverviewExample,
+        StepperStatesExample,
+        StepperVerticalExample,
+    ];
+    var StepperExamplesModule = /** @class */ (function () {
+        function StepperExamplesModule() {
+        }
+        StepperExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    button.MatButtonModule,
+                    icon.MatIconModule,
+                    input.MatInputModule,
+                    stepper$1.MatStepperModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES$E,
+                exports: EXAMPLES$E,
+            })
+        ], StepperExamplesModule);
+        return StepperExamplesModule;
+    }());
+
+    var EXAMPLES$F = [
+        TableBasicExample, TableBasicFlexExample,
+        TableDynamicColumnsExample, TableExpandableRowsExample,
+        TableFilteringExample, TableFooterRowExample,
+        TableHttpExample, TableMultipleHeaderFooterExample,
+        TableOverviewExample, TablePaginationExample,
+        TableRowContextExample, TableSelectionExample,
+        TableSortingExample, TableStickyColumnsExample,
+        TableStickyComplexExample, TableStickyComplexFlexExample,
+        TableStickyFooterExample, TableStickyHeaderExample,
+        TableTextColumnExample, TableTextColumnAdvancedExample,
+        TableWrappedExample, WrapperTable,
+    ];
+    var TableExamplesModule = /** @class */ (function () {
+        function TableExamplesModule() {
+        }
+        TableExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    button.MatButtonModule,
+                    buttonToggle.MatButtonToggleModule,
+                    checkbox.MatCheckboxModule,
+                    icon.MatIconModule,
+                    input.MatInputModule,
+                    paginator.MatPaginatorModule,
+                    progressSpinner.MatProgressSpinnerModule,
+                    sort.MatSortModule,
+                    table.MatTableModule,
+                ],
+                declarations: EXAMPLES$F,
+                exports: EXAMPLES$F,
+            })
+        ], TableExamplesModule);
+        return TableExamplesModule;
+    }());
+
+    var EXAMPLES$G = [
+        TabGroupAlignExample,
+        TabGroupAnimationsExample,
+        TabGroupAsyncExample,
+        TabGroupBasicExample,
+        TabGroupCustomLabelExample,
+        TabGroupDynamicExample,
+        TabGroupDynamicHeightExample,
+        TabGroupHeaderBelowExample,
+        TabGroupLazyLoadedExample,
+        TabGroupStretchedExample,
+        TabGroupThemeExample,
+        TabNavBarBasicExample,
+    ];
+    var TabGroupExamplesModule = /** @class */ (function () {
+        function TabGroupExamplesModule() {
+        }
+        TabGroupExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    button.MatButtonModule,
+                    buttonToggle.MatButtonToggleModule,
+                    checkbox.MatCheckboxModule,
+                    icon.MatIconModule,
+                    input.MatInputModule,
+                    tabs.MatTabsModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES$G,
+                exports: EXAMPLES$G,
+            })
+        ], TabGroupExamplesModule);
+        return TabGroupExamplesModule;
+    }());
+
+    var EXAMPLES$H = [
+        ToolbarMultirowExample,
+        ToolbarOverviewExample,
+    ];
+    var ToolbarExamplesModule = /** @class */ (function () {
+        function ToolbarExamplesModule() {
+        }
+        ToolbarExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    icon.MatIconModule,
+                    toolbar.MatToolbarModule,
+                ],
+                declarations: EXAMPLES$H,
+                exports: EXAMPLES$H,
+            })
+        ], ToolbarExamplesModule);
+        return ToolbarExamplesModule;
+    }());
+
+    var EXAMPLES$I = [
+        TooltipAutoHideExample,
+        TooltipCustomClassExample,
+        TooltipDelayExample,
+        TooltipDisabledExample,
+        TooltipManualExample,
+        TooltipMessageExample,
+        TooltipModifiedDefaultsExample,
+        TooltipOverviewExample,
+        TooltipPositionExample,
+    ];
+    var TooltipExamplesModule = /** @class */ (function () {
+        function TooltipExamplesModule() {
+        }
+        TooltipExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    button.MatButtonModule,
+                    checkbox.MatCheckboxModule,
+                    input.MatInputModule,
+                    select.MatSelectModule,
+                    tooltip.MatTooltipModule,
+                    forms.ReactiveFormsModule,
+                ],
+                declarations: EXAMPLES$I,
+                exports: EXAMPLES$I,
+            })
+        ], TooltipExamplesModule);
+        return TooltipExamplesModule;
+    }());
+
+    var EXAMPLES$J = [
+        TreeChecklistExample,
+        TreeDynamicExample,
+        TreeFlatOverviewExample,
+        TreeLoadmoreExample,
+        TreeNestedOverviewExample,
+    ];
+    var TreeExamplesModule = /** @class */ (function () {
+        function TreeExamplesModule() {
+        }
+        TreeExamplesModule = tslib_1.__decorate([
+            core.NgModule({
+                imports: [
+                    common.CommonModule,
+                    button.MatButtonModule,
+                    checkbox.MatCheckboxModule,
+                    icon.MatIconModule,
+                    input.MatInputModule,
+                    progressBar.MatProgressBarModule,
+                    tree$1.MatTreeModule,
+                ],
+                declarations: EXAMPLES$J,
+                exports: EXAMPLES$J,
+            })
+        ], TreeExamplesModule);
+        return TreeExamplesModule;
+    }());
+
     /* tslint:disable */
-    var EXAMPLE_COMPONENTS = { "autocomplete-auto-active-first-option": { "title": "Highlight the first autocomplete option", "component": AutocompleteAutoActiveFirstOptionExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-display": { "title": "Display value autocomplete", "component": AutocompleteDisplayExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-filter": { "title": "Filter autocomplete", "component": AutocompleteFilterExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-optgroup": { "title": "Option groups autocomplete", "component": AutocompleteOptgroupExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-overview": { "title": "Autocomplete overview", "component": AutocompleteOverviewExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-plain-input": { "title": "Plain input autocomplete", "component": AutocompletePlainInputExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-simple": { "title": "Simple autocomplete", "component": AutocompleteSimpleExample, "additionalFiles": [], "selectorName": "" }, "badge-overview": { "title": "Badge overview", "component": BadgeOverviewExample, "additionalFiles": [], "selectorName": "" }, "bottom-sheet-overview": { "title": "Bottom Sheet Overview", "component": BottomSheetOverviewExample, "additionalFiles": ["bottom-sheet-overview-example-sheet.html"], "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet" }, "button-overview": { "title": "Basic buttons", "component": ButtonOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-appearance": { "title": "Button toggle appearance", "component": ButtonToggleAppearanceExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-exclusive": { "title": "Exclusive selection", "component": ButtonToggleExclusiveExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-overview": { "title": "Basic button-toggles", "component": ButtonToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-types": { "title": "Button varieties", "component": ButtonTypesExample, "additionalFiles": [], "selectorName": "" }, "card-fancy": { "title": "Card with multiple sections", "component": CardFancyExample, "additionalFiles": [], "selectorName": "" }, "card-overview": { "title": "Basic cards", "component": CardOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-custom-stepper-without-form": { "title": "A custom CDK stepper without a form", "component": CdkCustomStepperWithoutFormExample, "additionalFiles": ["./example-custom-stepper.html", "./example-custom-stepper.css"], "selectorName": "CdkCustomStepperWithoutFormExample, CustomStepper" }, "cdk-drag-drop-axis-lock": { "title": "Drag&Drop position locking", "component": CdkDragDropAxisLockExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-boundary": { "title": "Drag&Drop boundary", "component": CdkDragDropBoundaryExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting-group": { "title": "Drag&Drop connected sorting group", "component": CdkDragDropConnectedSortingGroupExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting": { "title": "Drag&Drop connected sorting", "component": CdkDragDropConnectedSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-placeholder": { "title": "Drag&Drop custom placeholer", "component": CdkDragDropCustomPlaceholderExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-preview": { "title": "Drag&Drop custom preview", "component": CdkDragDropCustomPreviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-delay": { "title": "Delayed dragging", "component": CdkDragDropDelayExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled-sorting": { "title": "Drag&Drop disabled sorting", "component": CdkDragDropDisabledSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled": { "title": "Drag&Drop disabled", "component": CdkDragDropDisabledExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-enter-predicate": { "title": "Drag&Drop enter predicate", "component": CdkDragDropEnterPredicateExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-free-drag-position": { "title": "Programmatically setting the free drag position", "component": CdkDragDropFreeDragPositionExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-handle": { "title": "Drag&Drop with a handle", "component": CdkDragDropHandleExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-horizontal-sorting": { "title": "Drag&Drop horizontal sorting", "component": CdkDragDropHorizontalSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-overview": { "title": "Basic Drag&Drop", "component": CdkDragDropOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-root-element": { "title": "Drag&Drop with alternate root element", "component": CdkDragDropRootElementExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-sorting": { "title": "Drag&Drop sorting", "component": CdkDragDropSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-platform-overview": { "title": "Platform overview", "component": CdkPlatformOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cdk-table-flex": { "title": "CDK Popover Edit on a flex cdk-table.", "component": CdkPopoverEditCdkTableFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cdk-table": { "title": "CDK Popover Edit on a CDK data-table", "component": CdkPopoverEditCdkTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cell-span-vanilla-table": { "title": "CDK Popover Edit spanning multiple columns on an HTML data-table", "component": CdkPopoverEditCellSpanVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-tab-out-vanilla-table": { "title": "CDK Popover Edit with spreadsheet-like configuration on an HTML data-table", "component": CdkPopoverEditTabOutVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-vanilla-table": { "title": "CDK Popover Edit on an HTML data-table", "component": CdkPopoverEditVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-portal-overview": { "title": "Portal overview", "component": CdkPortalOverviewExample, "additionalFiles": [], "selectorName": "CdkPortalOverviewExample, ComponentPortalExample" }, "cdk-table-basic-flex": { "title": "Basic use of `<cdk-table>` (uses display flex)", "component": CdkTableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic": { "title": "Basic CDK data-table", "component": CdkTableBasicExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-flat": { "title": "Tree with flat nodes", "component": CdkTreeFlatExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-nested": { "title": "Tree with nested nodes", "component": CdkTreeNestedExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-context": { "title": "Virtual scroll context variables", "component": CdkVirtualScrollContextExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-custom-strategy": { "title": "Virtual scroll with a custom strategy", "component": CdkVirtualScrollCustomStrategyExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-data-source": { "title": "Virtual scroll with a custom data source", "component": CdkVirtualScrollDataSourceExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-dl": { "title": "Virtual scrolling `<dl>`", "component": CdkVirtualScrollDlExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-fixed-buffer": { "title": "Fixed size virtual scroll with custom buffer parameters", "component": CdkVirtualScrollFixedBufferExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-horizontal": { "title": "Horizontal virtual scroll", "component": CdkVirtualScrollHorizontalExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-overview": { "title": "Basic virtual scroll", "component": CdkVirtualScrollOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-template-cache": { "title": "Virtual scroll with no template caching", "component": CdkVirtualScrollTemplateCacheExample, "additionalFiles": [], "selectorName": "" }, "checkbox-configurable": { "title": "Configurable checkbox", "component": CheckboxConfigurableExample, "additionalFiles": [], "selectorName": "" }, "checkbox-overview": { "title": "Basic checkboxes", "component": CheckboxOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-autocomplete": { "title": "Chips Autocomplete", "component": ChipsAutocompleteExample, "additionalFiles": [], "selectorName": "" }, "chips-drag-drop": { "title": "Chips Drag and Drop", "component": ChipsDragDropExample, "additionalFiles": [], "selectorName": "" }, "chips-input": { "title": "Chips with input", "component": ChipsInputExample, "additionalFiles": [], "selectorName": "" }, "chips-overview": { "title": "Basic chips", "component": ChipsOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-stacked": { "title": "Stacked chips", "component": ChipsStackedExample, "additionalFiles": [], "selectorName": "" }, "datepicker-api": { "title": "Datepicker open method", "component": DatepickerApiExample, "additionalFiles": [], "selectorName": "" }, "datepicker-color": { "title": "Datepicker palette colors", "component": DatepickerColorExample, "additionalFiles": [], "selectorName": "" }, "datepicker-custom-header": { "title": "Datepicker with custom calendar header", "component": DatepickerCustomHeaderExample, "additionalFiles": [], "selectorName": "DatepickerCustomHeaderExample, ExampleHeader" }, "datepicker-custom-icon": { "title": "Datepicker with custom icon", "component": DatepickerCustomIconExample, "additionalFiles": [], "selectorName": "" }, "datepicker-date-class": { "title": "Datepicker with custom date classes", "component": DatepickerDateClassExample, "additionalFiles": [], "selectorName": "" }, "datepicker-disabled": { "title": "Disabled datepicker", "component": DatepickerDisabledExample, "additionalFiles": [], "selectorName": "" }, "datepicker-events": { "title": "Datepicker input and change events", "component": DatepickerEventsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-filter": { "title": "Datepicker with filter validation", "component": DatepickerFilterExample, "additionalFiles": [], "selectorName": "" }, "datepicker-formats": { "title": "Datepicker with custom formats", "component": DatepickerFormatsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-locale": { "title": "Datepicker with different locale", "component": DatepickerLocaleExample, "additionalFiles": [], "selectorName": "" }, "datepicker-min-max": { "title": "Datepicker with min & max validation", "component": DatepickerMinMaxExample, "additionalFiles": [], "selectorName": "" }, "datepicker-moment": { "title": "Datepicker that uses Moment.js dates", "component": DatepickerMomentExample, "additionalFiles": [], "selectorName": "" }, "datepicker-overview": { "title": "Basic datepicker", "component": DatepickerOverviewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-start-view": { "title": "Datepicker start date", "component": DatepickerStartViewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-touch": { "title": "Datepicker touch UI", "component": DatepickerTouchExample, "additionalFiles": [], "selectorName": "" }, "datepicker-value": { "title": "Datepicker selected value", "component": DatepickerValueExample, "additionalFiles": [], "selectorName": "" }, "datepicker-views-selection": { "title": "Datepicker emulating a Year and month picker", "component": DatepickerViewsSelectionExample, "additionalFiles": [], "selectorName": "" }, "dialog-content": { "title": "Dialog with header, scrollable content and actions", "component": DialogContentExample, "additionalFiles": ["dialog-content-example-dialog.html"], "selectorName": "DialogContentExample, DialogContentExampleDialog" }, "dialog-data": { "title": "Injecting data when opening a dialog", "component": DialogDataExample, "additionalFiles": ["dialog-data-example-dialog.html"], "selectorName": "DialogDataExample, DialogDataExampleDialog" }, "dialog-elements": { "title": "Dialog elements", "component": DialogElementsExample, "additionalFiles": ["dialog-elements-example-dialog.html"], "selectorName": "DialogElementsExample, DialogElementsExampleDialog" }, "dialog-overview": { "title": "Dialog Overview", "component": DialogOverviewExample, "additionalFiles": ["dialog-overview-example-dialog.html"], "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog" }, "divider-overview": { "title": "Basic divider", "component": DividerOverviewExample, "additionalFiles": [], "selectorName": "" }, "elevation-overview": { "title": "Elevation CSS classes", "component": ElevationOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-expand-collapse-all": { "title": "Accordion with expand/collapse all toggles", "component": ExpansionExpandCollapseAllExample, "additionalFiles": [], "selectorName": "" }, "expansion-overview": { "title": "Basic expansion panel", "component": ExpansionOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-steps": { "title": "Expansion panel as accordion", "component": ExpansionStepsExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-directives": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorDirectivesExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-focus-via": { "title": "Focusing with a specific FocusOrigin", "component": FocusMonitorFocusViaExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-overview": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-appearance": { "title": "Form field appearance variants", "component": FormFieldAppearanceExample, "additionalFiles": [], "selectorName": "" }, "form-field-custom-control": { "title": "Form field with custom telephone number input control.", "component": FormFieldCustomControlExample, "additionalFiles": ["example-tel-input-example.html", "example-tel-input-example.css"], "selectorName": "FormFieldCustomControlExample, MyTelInput" }, "form-field-error": { "title": "Form field with error messages", "component": FormFieldErrorExample, "additionalFiles": [], "selectorName": "" }, "form-field-hint": { "title": "Form field with hints", "component": FormFieldHintExample, "additionalFiles": [], "selectorName": "" }, "form-field-label": { "title": "Form field with label", "component": FormFieldLabelExample, "additionalFiles": [], "selectorName": "" }, "form-field-overview": { "title": "Simple form field", "component": FormFieldOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-prefix-suffix": { "title": "Form field with prefix & suffix", "component": FormFieldPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "form-field-theming": { "title": "Form field theming", "component": FormFieldThemingExample, "additionalFiles": [], "selectorName": "" }, "grid-list-dynamic": { "title": "Dynamic grid-list", "component": GridListDynamicExample, "additionalFiles": [], "selectorName": "" }, "grid-list-overview": { "title": "Basic grid-list", "component": GridListOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-overview": { "title": "Basic icons", "component": IconOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-svg": { "title": "SVG icons", "component": IconSvgExample, "additionalFiles": [], "selectorName": "" }, "input-clearable": { "title": "Input with a clear button", "component": InputClearableExample, "additionalFiles": [], "selectorName": "" }, "input-error-state-matcher": { "title": "Input with a custom ErrorStateMatcher", "component": InputErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "input-errors": { "title": "Input with error messages", "component": InputErrorsExample, "additionalFiles": [], "selectorName": "" }, "input-form": { "title": "Inputs in a form", "component": InputFormExample, "additionalFiles": [], "selectorName": "" }, "input-hint": { "title": "Input with hints", "component": InputHintExample, "additionalFiles": [], "selectorName": "" }, "input-overview": { "title": "Basic Inputs", "component": InputOverviewExample, "additionalFiles": [], "selectorName": "" }, "input-prefix-suffix": { "title": "Inputs with prefixes and suffixes", "component": InputPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "list-overview": { "title": "Basic list", "component": ListOverviewExample, "additionalFiles": [], "selectorName": "" }, "list-sections": { "title": "List with sections", "component": ListSectionsExample, "additionalFiles": [], "selectorName": "" }, "list-selection": { "title": "List with selection", "component": ListSelectionExample, "additionalFiles": [], "selectorName": "" }, "menu-icons": { "title": "Menu with icons", "component": MenuIconsExample, "additionalFiles": [], "selectorName": "" }, "menu-overview": { "title": "Basic menu", "component": MenuOverviewExample, "additionalFiles": [], "selectorName": "" }, "menu-position": { "title": "Menu positioning", "component": MenuPositionExample, "additionalFiles": [], "selectorName": "" }, "nested-menu": { "title": "Nested menu", "component": NestedMenuExample, "additionalFiles": [], "selectorName": "" }, "paginator-configurable": { "title": "Configurable paginator", "component": PaginatorConfigurableExample, "additionalFiles": [], "selectorName": "" }, "paginator-overview": { "title": "Paginator", "component": PaginatorOverviewExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-cell-span-mat-table": { "title": "Material Popover Edit spanning multiple columns on a Material data-table", "component": PopoverEditCellSpanMatTableExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-mat-table-flex": { "title": "Material Popover Edit on a flex Material data-table", "component": PopoverEditMatTableFlexExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-mat-table": { "title": "Material Popover Edit on a Material data-table", "component": PopoverEditMatTableExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-tab-out-mat-table": { "title": "Material Popover Edit with spreadsheet-like configuration on a Material data-table", "component": PopoverEditTabOutMatTableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-buffer": { "title": "Buffer progress-bar", "component": ProgressBarBufferExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-configurable": { "title": "Configurable progress-bar", "component": ProgressBarConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-determinate": { "title": "Determinate progress-bar", "component": ProgressBarDeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-indeterminate": { "title": "Indeterminate progress-bar", "component": ProgressBarIndeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-query": { "title": "Query progress-bar", "component": ProgressBarQueryExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-configurable": { "title": "Configurable progress spinner", "component": ProgressSpinnerConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-overview": { "title": "Basic progress-spinner", "component": ProgressSpinnerOverviewExample, "additionalFiles": [], "selectorName": "" }, "radio-ng-model": { "title": "Radios with ngModel", "component": RadioNgModelExample, "additionalFiles": [], "selectorName": "" }, "radio-overview": { "title": "Basic radios", "component": RadioOverviewExample, "additionalFiles": [], "selectorName": "" }, "ripple-overview": { "title": "MatRipple basic usage", "component": RippleOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-custom-trigger": { "title": "Select with custom trigger text", "component": SelectCustomTriggerExample, "additionalFiles": [], "selectorName": "" }, "select-disabled": { "title": "Disabled select", "component": SelectDisabledExample, "additionalFiles": [], "selectorName": "" }, "select-error-state-matcher": { "title": "Select with a custom ErrorStateMatcher", "component": SelectErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "select-form": { "title": "Select in a form", "component": SelectFormExample, "additionalFiles": [], "selectorName": "" }, "select-hint-error": { "title": "Select with form field features", "component": SelectHintErrorExample, "additionalFiles": [], "selectorName": "" }, "select-multiple": { "title": "Select with multiple selection", "component": SelectMultipleExample, "additionalFiles": [], "selectorName": "" }, "select-no-ripple": { "title": "Select with no option ripple", "component": SelectNoRippleExample, "additionalFiles": [], "selectorName": "" }, "select-optgroup": { "title": "Select with option groups", "component": SelectOptgroupExample, "additionalFiles": [], "selectorName": "" }, "select-overview": { "title": "Basic select", "component": SelectOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-panel-class": { "title": "Select with custom panel styling", "component": SelectPanelClassExample, "additionalFiles": [], "selectorName": "" }, "select-reset": { "title": "Select with reset option", "component": SelectResetExample, "additionalFiles": [], "selectorName": "" }, "select-value-binding": { "title": "Select with 2-way value binding", "component": SelectValueBindingExample, "additionalFiles": [], "selectorName": "" }, "sidenav-autosize": { "title": "Autosize sidenav", "component": SidenavAutosizeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-backdrop": { "title": "Drawer with explicit backdrop setting", "component": SidenavBackdropExample, "additionalFiles": [], "selectorName": "" }, "sidenav-disable-close": { "title": "Sidenav with custom escape and backdrop click behavior", "component": SidenavDisableCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-drawer-overview": { "title": "Basic drawer", "component": SidenavDrawerOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-fixed": { "title": "Fixed sidenav", "component": SidenavFixedExample, "additionalFiles": [], "selectorName": "" }, "sidenav-mode": { "title": "Sidenav with configurable mode", "component": SidenavModeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-open-close": { "title": "Sidenav open & close behavior", "component": SidenavOpenCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-overview": { "title": "Basic sidenav", "component": SidenavOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-position": { "title": "Implicit main content with two sidenavs", "component": SidenavPositionExample, "additionalFiles": [], "selectorName": "" }, "sidenav-responsive": { "title": "Responsive sidenav", "component": SidenavResponsiveExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-configurable": { "title": "Configurable slide-toggle", "component": SlideToggleConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-forms": { "title": "Slide-toggle with forms", "component": SlideToggleFormsExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-overview": { "title": "Basic slide-toggles", "component": SlideToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "slider-configurable": { "title": "Configurable slider", "component": SliderConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slider-formatting": { "title": "Slider with custom thumb label formatting.", "component": SliderFormattingExample, "additionalFiles": [], "selectorName": "" }, "slider-overview": { "title": "Basic slider", "component": SliderOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-component": { "title": "Snack-bar with a custom component", "component": SnackBarComponentExample, "additionalFiles": ["snack-bar-component-example-snack.html"], "selectorName": "SnackBarComponentExample, PizzaPartyComponent" }, "snack-bar-overview": { "title": "Basic snack-bar", "component": SnackBarOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-position": { "title": "Snack-bar with configurable position", "component": SnackBarPositionExample, "additionalFiles": [], "selectorName": "" }, "sort-overview": { "title": "Sorting overview", "component": SortOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-editable": { "title": "Stepper with editable steps", "component": StepperEditableExample, "additionalFiles": [], "selectorName": "" }, "stepper-errors": { "title": "Stepper that displays errors in the steps", "component": StepperErrorsExample, "additionalFiles": [], "selectorName": "" }, "stepper-label-position-bottom": { "title": "Stepper label bottom position", "component": StepperLabelPositionBottomExample, "additionalFiles": [], "selectorName": "" }, "stepper-optional": { "title": "Stepper with optional steps", "component": StepperOptionalExample, "additionalFiles": [], "selectorName": "" }, "stepper-overview": { "title": "Stepper overview", "component": StepperOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-states": { "title": "Stepper with customized states", "component": StepperStatesExample, "additionalFiles": [], "selectorName": "" }, "stepper-vertical": { "title": "Stepper vertical", "component": StepperVerticalExample, "additionalFiles": [], "selectorName": "" }, "tab-group-align": { "title": "Tab group with aligned labels", "component": TabGroupAlignExample, "additionalFiles": [], "selectorName": "" }, "tab-group-animations": { "title": "Tab group animations", "component": TabGroupAnimationsExample, "additionalFiles": [], "selectorName": "" }, "tab-group-async": { "title": "Tab group with asynchronously loading tab contents", "component": TabGroupAsyncExample, "additionalFiles": [], "selectorName": "" }, "tab-group-basic": { "title": "Basic use of the tab group", "component": TabGroupBasicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-custom-label": { "title": "Using tabs with a custom label template", "component": TabGroupCustomLabelExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic-height": { "title": "Tab group with dynamic height based on tab contents", "component": TabGroupDynamicHeightExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic": { "title": "Tab group with dynamically changing tabs", "component": TabGroupDynamicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-header-below": { "title": "Tab group with the headers on the bottom", "component": TabGroupHeaderBelowExample, "additionalFiles": [], "selectorName": "" }, "tab-group-lazy-loaded": { "title": "Tab group where the tab content is loaded lazily (when activated)", "component": TabGroupLazyLoadedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-stretched": { "title": "Tab group with stretched labels", "component": TabGroupStretchedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-theme": { "title": "Customizing the theme options on the tab group", "component": TabGroupThemeExample, "additionalFiles": [], "selectorName": "" }, "tab-nav-bar-basic": { "title": "Basic use of the tab nav bar", "component": TabNavBarBasicExample, "additionalFiles": [], "selectorName": "" }, "table-basic-flex": { "title": "Basic use of `<mat-table>` (uses display flex)", "component": TableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "table-basic": { "title": "Basic use of `<table mat-table>`", "component": TableBasicExample, "additionalFiles": [], "selectorName": "" }, "table-dynamic-columns": { "title": "Table dynamically changing the columns displayed", "component": TableDynamicColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-expandable-rows": { "title": "Table with expandable rows", "component": TableExpandableRowsExample, "additionalFiles": [], "selectorName": "" }, "table-filtering": { "title": "Table with filtering", "component": TableFilteringExample, "additionalFiles": [], "selectorName": "" }, "table-footer-row": { "title": "Footer row table", "component": TableFooterRowExample, "additionalFiles": [], "selectorName": "" }, "table-http": { "title": "Table retrieving data through HTTP", "component": TableHttpExample, "additionalFiles": [], "selectorName": "" }, "table-multiple-header-footer": { "title": "Table with multiple header and footer rows", "component": TableMultipleHeaderFooterExample, "additionalFiles": [], "selectorName": "" }, "table-overview": { "title": "Data table with sorting, pagination, and filtering.", "component": TableOverviewExample, "additionalFiles": [], "selectorName": "" }, "table-pagination": { "title": "Table with pagination", "component": TablePaginationExample, "additionalFiles": [], "selectorName": "" }, "table-row-context": { "title": "Table showing each row context properties.", "component": TableRowContextExample, "additionalFiles": [], "selectorName": "" }, "table-selection": { "title": "Table with selection", "component": TableSelectionExample, "additionalFiles": [], "selectorName": "" }, "table-sorting": { "title": "Table with sorting", "component": TableSortingExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-columns": { "title": "Table with sticky columns", "component": TableStickyColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex-flex": { "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexFlexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex": { "title": "Tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-footer": { "title": "Table with a sticky footer", "component": TableStickyFooterExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-header": { "title": "Table with sticky header", "component": TableStickyHeaderExample, "additionalFiles": [], "selectorName": "" }, "table-text-column-advanced": { "title": "Use of 'mat-text-column' with various configurations of the interface.", "component": TableTextColumnAdvancedExample, "additionalFiles": [], "selectorName": "" }, "table-text-column": { "title": "Use of `mat-text-column` which can be used for simple columns that only need to display\na text value for the header and cells.", "component": TableTextColumnExample, "additionalFiles": [], "selectorName": "" }, "table-wrapped": { "title": "Table example that shows how to wrap a table component for definition and behavior reuse.", "component": TableWrappedExample, "additionalFiles": ["wrapper-table.html"], "selectorName": "TableWrappedExample, WrapperTable" }, "text-field-autofill-directive": { "title": "Monitoring autofill state with cdkAutofill", "component": TextFieldAutofillDirectiveExample, "additionalFiles": [], "selectorName": "" }, "text-field-autofill-monitor": { "title": "Monitoring autofill state with AutofillMonitor", "component": TextFieldAutofillMonitorExample, "additionalFiles": [], "selectorName": "" }, "text-field-autosize-textarea": { "title": "Auto-resizing textarea", "component": TextFieldAutosizeTextareaExample, "additionalFiles": [], "selectorName": "" }, "toolbar-multirow": { "title": "Multi-row toolbar", "component": ToolbarMultirowExample, "additionalFiles": [], "selectorName": "" }, "toolbar-overview": { "title": "Basic toolbar", "component": ToolbarOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-auto-hide": { "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.", "component": TooltipAutoHideExample, "additionalFiles": [], "selectorName": "" }, "tooltip-custom-class": { "title": "Tooltip that can have a custom class applied.", "component": TooltipCustomClassExample, "additionalFiles": [], "selectorName": "" }, "tooltip-delay": { "title": "Tooltip with a show and hide delay", "component": TooltipDelayExample, "additionalFiles": [], "selectorName": "" }, "tooltip-disabled": { "title": "Tooltip that can be disabled", "component": TooltipDisabledExample, "additionalFiles": [], "selectorName": "" }, "tooltip-manual": { "title": "Tooltip that can be manually shown/hidden.", "component": TooltipManualExample, "additionalFiles": [], "selectorName": "" }, "tooltip-message": { "title": "Tooltip with a changing message", "component": TooltipMessageExample, "additionalFiles": [], "selectorName": "" }, "tooltip-modified-defaults": { "title": "Tooltip with a show and hide delay", "component": TooltipModifiedDefaultsExample, "additionalFiles": [], "selectorName": "" }, "tooltip-overview": { "title": "Basic tooltip", "component": TooltipOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-position": { "title": "Tooltip with a custom position", "component": TooltipPositionExample, "additionalFiles": [], "selectorName": "" }, "tree-checklist": { "title": "Tree with checkboxes", "component": TreeChecklistExample, "additionalFiles": [], "selectorName": "" }, "tree-dynamic": { "title": "Tree with dynamic data", "component": TreeDynamicExample, "additionalFiles": [], "selectorName": "" }, "tree-flat-overview": { "title": "Tree with flat nodes", "component": TreeFlatOverviewExample, "additionalFiles": [], "selectorName": "" }, "tree-loadmore": { "title": "Tree with partially loaded data", "component": TreeLoadmoreExample, "additionalFiles": [], "selectorName": "" }, "tree-nested-overview": { "title": "Tree with nested nodes", "component": TreeNestedOverviewExample, "additionalFiles": [], "selectorName": "" } };
-    var EXAMPLE_LIST = [AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteSimpleExample, BadgeOverviewExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, ButtonOverviewExample, ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonTypesExample, CardFancyExample, CardOverviewExample, CdkCustomStepperWithoutFormExample, CustomStepper, CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledSortingExample, CdkDragDropDisabledExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkPlatformOverviewExample, CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPortalOverviewExample, ComponentPortalExample, CdkTableBasicFlexExample, CdkTableBasicExample, CdkTreeFlatExample, CdkTreeNestedExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CheckboxConfigurableExample, CheckboxOverviewExample, ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, ExampleHeader, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog, DividerOverviewExample, ElevationOverviewExample, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, FormFieldAppearanceExample, FormFieldCustomControlExample, MyTelInput, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, GridListDynamicExample, GridListOverviewExample, IconOverviewExample, IconSvgExample, InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample, PaginatorConfigurableExample, PaginatorOverviewExample, PopoverEditCellSpanMatTableExample, PopoverEditMatTableFlexExample, PopoverEditMatTableExample, PopoverEditTabOutMatTableExample, ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, RadioNgModelExample, RadioOverviewExample, RippleOverviewExample, SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SnackBarComponentExample, PizzaPartyComponent, SnackBarOverviewExample, SnackBarPositionExample, SortOverviewExample, StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, ToolbarMultirowExample, ToolbarOverviewExample, TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample];
+    var EXAMPLE_COMPONENTS = { "focus-monitor-directives": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorDirectivesExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-focus-via": { "title": "Focusing with a specific FocusOrigin", "component": FocusMonitorFocusViaExample, "additionalFiles": [], "selectorName": "" }, "focus-monitor-overview": { "title": "Monitoring focus with FocusMonitor", "component": FocusMonitorOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-axis-lock": { "title": "Drag&Drop position locking", "component": CdkDragDropAxisLockExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-boundary": { "title": "Drag&Drop boundary", "component": CdkDragDropBoundaryExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting-group": { "title": "Drag&Drop connected sorting group", "component": CdkDragDropConnectedSortingGroupExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-connected-sorting": { "title": "Drag&Drop connected sorting", "component": CdkDragDropConnectedSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-placeholder": { "title": "Drag&Drop custom placeholer", "component": CdkDragDropCustomPlaceholderExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-custom-preview": { "title": "Drag&Drop custom preview", "component": CdkDragDropCustomPreviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-delay": { "title": "Delayed dragging", "component": CdkDragDropDelayExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled-sorting": { "title": "Drag&Drop disabled sorting", "component": CdkDragDropDisabledSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-disabled": { "title": "Drag&Drop disabled", "component": CdkDragDropDisabledExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-enter-predicate": { "title": "Drag&Drop enter predicate", "component": CdkDragDropEnterPredicateExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-free-drag-position": { "title": "Programmatically setting the free drag position", "component": CdkDragDropFreeDragPositionExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-handle": { "title": "Drag&Drop with a handle", "component": CdkDragDropHandleExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-horizontal-sorting": { "title": "Drag&Drop horizontal sorting", "component": CdkDragDropHorizontalSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-overview": { "title": "Basic Drag&Drop", "component": CdkDragDropOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-root-element": { "title": "Drag&Drop with alternate root element", "component": CdkDragDropRootElementExample, "additionalFiles": [], "selectorName": "" }, "cdk-drag-drop-sorting": { "title": "Drag&Drop sorting", "component": CdkDragDropSortingExample, "additionalFiles": [], "selectorName": "" }, "cdk-platform-overview": { "title": "Platform overview", "component": CdkPlatformOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cdk-table-flex": { "title": "CDK Popover Edit on a flex cdk-table.", "component": CdkPopoverEditCdkTableFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cdk-table": { "title": "CDK Popover Edit on a CDK data-table", "component": CdkPopoverEditCdkTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-cell-span-vanilla-table": { "title": "CDK Popover Edit spanning multiple columns on an HTML data-table", "component": CdkPopoverEditCellSpanVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-tab-out-vanilla-table": { "title": "CDK Popover Edit with spreadsheet-like configuration on an HTML data-table", "component": CdkPopoverEditTabOutVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-popover-edit-vanilla-table": { "title": "CDK Popover Edit on an HTML data-table", "component": CdkPopoverEditVanillaTableExample, "additionalFiles": [], "selectorName": "" }, "cdk-portal-overview": { "title": "Portal overview", "component": CdkPortalOverviewExample, "additionalFiles": [], "selectorName": "CdkPortalOverviewExample, ComponentPortalExample" }, "cdk-virtual-scroll-context": { "title": "Virtual scroll context variables", "component": CdkVirtualScrollContextExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-custom-strategy": { "title": "Virtual scroll with a custom strategy", "component": CdkVirtualScrollCustomStrategyExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-data-source": { "title": "Virtual scroll with a custom data source", "component": CdkVirtualScrollDataSourceExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-dl": { "title": "Virtual scrolling `<dl>`", "component": CdkVirtualScrollDlExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-fixed-buffer": { "title": "Fixed size virtual scroll with custom buffer parameters", "component": CdkVirtualScrollFixedBufferExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-horizontal": { "title": "Horizontal virtual scroll", "component": CdkVirtualScrollHorizontalExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-overview": { "title": "Basic virtual scroll", "component": CdkVirtualScrollOverviewExample, "additionalFiles": [], "selectorName": "" }, "cdk-virtual-scroll-template-cache": { "title": "Virtual scroll with no template caching", "component": CdkVirtualScrollTemplateCacheExample, "additionalFiles": [], "selectorName": "" }, "cdk-custom-stepper-without-form": { "title": "A custom CDK stepper without a form", "component": CdkCustomStepperWithoutFormExample, "additionalFiles": ["./example-custom-stepper.html", "./example-custom-stepper.css"], "selectorName": "CdkCustomStepperWithoutFormExample, CustomStepper" }, "cdk-table-basic-flex": { "title": "Basic use of `<cdk-table>` (uses display flex)", "component": CdkTableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "cdk-table-basic": { "title": "Basic CDK data-table", "component": CdkTableBasicExample, "additionalFiles": [], "selectorName": "" }, "text-field-autofill-directive": { "title": "Monitoring autofill state with cdkAutofill", "component": TextFieldAutofillDirectiveExample, "additionalFiles": [], "selectorName": "" }, "text-field-autofill-monitor": { "title": "Monitoring autofill state with AutofillMonitor", "component": TextFieldAutofillMonitorExample, "additionalFiles": [], "selectorName": "" }, "text-field-autosize-textarea": { "title": "Auto-resizing textarea", "component": TextFieldAutosizeTextareaExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-flat": { "title": "Tree with flat nodes", "component": CdkTreeFlatExample, "additionalFiles": [], "selectorName": "" }, "cdk-tree-nested": { "title": "Tree with nested nodes", "component": CdkTreeNestedExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-auto-active-first-option": { "title": "Highlight the first autocomplete option", "component": AutocompleteAutoActiveFirstOptionExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-display": { "title": "Display value autocomplete", "component": AutocompleteDisplayExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-filter": { "title": "Filter autocomplete", "component": AutocompleteFilterExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-optgroup": { "title": "Option groups autocomplete", "component": AutocompleteOptgroupExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-overview": { "title": "Autocomplete overview", "component": AutocompleteOverviewExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-plain-input": { "title": "Plain input autocomplete", "component": AutocompletePlainInputExample, "additionalFiles": [], "selectorName": "" }, "autocomplete-simple": { "title": "Simple autocomplete", "component": AutocompleteSimpleExample, "additionalFiles": [], "selectorName": "" }, "badge-overview": { "title": "Badge overview", "component": BadgeOverviewExample, "additionalFiles": [], "selectorName": "" }, "bottom-sheet-overview": { "title": "Bottom Sheet Overview", "component": BottomSheetOverviewExample, "additionalFiles": ["bottom-sheet-overview-example-sheet.html"], "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet" }, "button-toggle-appearance": { "title": "Button toggle appearance", "component": ButtonToggleAppearanceExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-exclusive": { "title": "Exclusive selection", "component": ButtonToggleExclusiveExample, "additionalFiles": [], "selectorName": "" }, "button-toggle-overview": { "title": "Basic button-toggles", "component": ButtonToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-overview": { "title": "Basic buttons", "component": ButtonOverviewExample, "additionalFiles": [], "selectorName": "" }, "button-types": { "title": "Button varieties", "component": ButtonTypesExample, "additionalFiles": [], "selectorName": "" }, "card-fancy": { "title": "Card with multiple sections", "component": CardFancyExample, "additionalFiles": [], "selectorName": "" }, "card-overview": { "title": "Basic cards", "component": CardOverviewExample, "additionalFiles": [], "selectorName": "" }, "checkbox-configurable": { "title": "Configurable checkbox", "component": CheckboxConfigurableExample, "additionalFiles": [], "selectorName": "" }, "checkbox-overview": { "title": "Basic checkboxes", "component": CheckboxOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-autocomplete": { "title": "Chips Autocomplete", "component": ChipsAutocompleteExample, "additionalFiles": [], "selectorName": "" }, "chips-drag-drop": { "title": "Chips Drag and Drop", "component": ChipsDragDropExample, "additionalFiles": [], "selectorName": "" }, "chips-input": { "title": "Chips with input", "component": ChipsInputExample, "additionalFiles": [], "selectorName": "" }, "chips-overview": { "title": "Basic chips", "component": ChipsOverviewExample, "additionalFiles": [], "selectorName": "" }, "chips-stacked": { "title": "Stacked chips", "component": ChipsStackedExample, "additionalFiles": [], "selectorName": "" }, "elevation-overview": { "title": "Elevation CSS classes", "component": ElevationOverviewExample, "additionalFiles": [], "selectorName": "" }, "ripple-overview": { "title": "MatRipple basic usage", "component": RippleOverviewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-api": { "title": "Datepicker open method", "component": DatepickerApiExample, "additionalFiles": [], "selectorName": "" }, "datepicker-color": { "title": "Datepicker palette colors", "component": DatepickerColorExample, "additionalFiles": [], "selectorName": "" }, "datepicker-custom-header": { "title": "Datepicker with custom calendar header", "component": DatepickerCustomHeaderExample, "additionalFiles": [], "selectorName": "DatepickerCustomHeaderExample, ExampleHeader" }, "datepicker-custom-icon": { "title": "Datepicker with custom icon", "component": DatepickerCustomIconExample, "additionalFiles": [], "selectorName": "" }, "datepicker-date-class": { "title": "Datepicker with custom date classes", "component": DatepickerDateClassExample, "additionalFiles": [], "selectorName": "" }, "datepicker-disabled": { "title": "Disabled datepicker", "component": DatepickerDisabledExample, "additionalFiles": [], "selectorName": "" }, "datepicker-events": { "title": "Datepicker input and change events", "component": DatepickerEventsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-filter": { "title": "Datepicker with filter validation", "component": DatepickerFilterExample, "additionalFiles": [], "selectorName": "" }, "datepicker-formats": { "title": "Datepicker with custom formats", "component": DatepickerFormatsExample, "additionalFiles": [], "selectorName": "" }, "datepicker-locale": { "title": "Datepicker with different locale", "component": DatepickerLocaleExample, "additionalFiles": [], "selectorName": "" }, "datepicker-min-max": { "title": "Datepicker with min & max validation", "component": DatepickerMinMaxExample, "additionalFiles": [], "selectorName": "" }, "datepicker-moment": { "title": "Datepicker that uses Moment.js dates", "component": DatepickerMomentExample, "additionalFiles": [], "selectorName": "" }, "datepicker-overview": { "title": "Basic datepicker", "component": DatepickerOverviewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-start-view": { "title": "Datepicker start date", "component": DatepickerStartViewExample, "additionalFiles": [], "selectorName": "" }, "datepicker-touch": { "title": "Datepicker touch UI", "component": DatepickerTouchExample, "additionalFiles": [], "selectorName": "" }, "datepicker-value": { "title": "Datepicker selected value", "component": DatepickerValueExample, "additionalFiles": [], "selectorName": "" }, "datepicker-views-selection": { "title": "Datepicker emulating a Year and month picker", "component": DatepickerViewsSelectionExample, "additionalFiles": [], "selectorName": "" }, "dialog-content": { "title": "Dialog with header, scrollable content and actions", "component": DialogContentExample, "additionalFiles": ["dialog-content-example-dialog.html"], "selectorName": "DialogContentExample, DialogContentExampleDialog" }, "dialog-data": { "title": "Injecting data when opening a dialog", "component": DialogDataExample, "additionalFiles": ["dialog-data-example-dialog.html"], "selectorName": "DialogDataExample, DialogDataExampleDialog" }, "dialog-elements": { "title": "Dialog elements", "component": DialogElementsExample, "additionalFiles": ["dialog-elements-example-dialog.html"], "selectorName": "DialogElementsExample, DialogElementsExampleDialog" }, "dialog-overview": { "title": "Dialog Overview", "component": DialogOverviewExample, "additionalFiles": ["dialog-overview-example-dialog.html"], "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog" }, "divider-overview": { "title": "Basic divider", "component": DividerOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-expand-collapse-all": { "title": "Accordion with expand/collapse all toggles", "component": ExpansionExpandCollapseAllExample, "additionalFiles": [], "selectorName": "" }, "expansion-overview": { "title": "Basic expansion panel", "component": ExpansionOverviewExample, "additionalFiles": [], "selectorName": "" }, "expansion-steps": { "title": "Expansion panel as accordion", "component": ExpansionStepsExample, "additionalFiles": [], "selectorName": "" }, "form-field-appearance": { "title": "Form field appearance variants", "component": FormFieldAppearanceExample, "additionalFiles": [], "selectorName": "" }, "form-field-custom-control": { "title": "Form field with custom telephone number input control.", "component": FormFieldCustomControlExample, "additionalFiles": ["example-tel-input-example.html", "example-tel-input-example.css"], "selectorName": "FormFieldCustomControlExample, MyTelInput" }, "form-field-error": { "title": "Form field with error messages", "component": FormFieldErrorExample, "additionalFiles": [], "selectorName": "" }, "form-field-hint": { "title": "Form field with hints", "component": FormFieldHintExample, "additionalFiles": [], "selectorName": "" }, "form-field-label": { "title": "Form field with label", "component": FormFieldLabelExample, "additionalFiles": [], "selectorName": "" }, "form-field-overview": { "title": "Simple form field", "component": FormFieldOverviewExample, "additionalFiles": [], "selectorName": "" }, "form-field-prefix-suffix": { "title": "Form field with prefix & suffix", "component": FormFieldPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "form-field-theming": { "title": "Form field theming", "component": FormFieldThemingExample, "additionalFiles": [], "selectorName": "" }, "grid-list-dynamic": { "title": "Dynamic grid-list", "component": GridListDynamicExample, "additionalFiles": [], "selectorName": "" }, "grid-list-overview": { "title": "Basic grid-list", "component": GridListOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-overview": { "title": "Basic icons", "component": IconOverviewExample, "additionalFiles": [], "selectorName": "" }, "icon-svg": { "title": "SVG icons", "component": IconSvgExample, "additionalFiles": [], "selectorName": "" }, "input-clearable": { "title": "Input with a clear button", "component": InputClearableExample, "additionalFiles": [], "selectorName": "" }, "input-error-state-matcher": { "title": "Input with a custom ErrorStateMatcher", "component": InputErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "input-errors": { "title": "Input with error messages", "component": InputErrorsExample, "additionalFiles": [], "selectorName": "" }, "input-form": { "title": "Inputs in a form", "component": InputFormExample, "additionalFiles": [], "selectorName": "" }, "input-hint": { "title": "Input with hints", "component": InputHintExample, "additionalFiles": [], "selectorName": "" }, "input-overview": { "title": "Basic Inputs", "component": InputOverviewExample, "additionalFiles": [], "selectorName": "" }, "input-prefix-suffix": { "title": "Inputs with prefixes and suffixes", "component": InputPrefixSuffixExample, "additionalFiles": [], "selectorName": "" }, "list-overview": { "title": "Basic list", "component": ListOverviewExample, "additionalFiles": [], "selectorName": "" }, "list-sections": { "title": "List with sections", "component": ListSectionsExample, "additionalFiles": [], "selectorName": "" }, "list-selection": { "title": "List with selection", "component": ListSelectionExample, "additionalFiles": [], "selectorName": "" }, "menu-icons": { "title": "Menu with icons", "component": MenuIconsExample, "additionalFiles": [], "selectorName": "" }, "menu-overview": { "title": "Basic menu", "component": MenuOverviewExample, "additionalFiles": [], "selectorName": "" }, "menu-position": { "title": "Menu positioning", "component": MenuPositionExample, "additionalFiles": [], "selectorName": "" }, "nested-menu": { "title": "Nested menu", "component": NestedMenuExample, "additionalFiles": [], "selectorName": "" }, "paginator-configurable": { "title": "Configurable paginator", "component": PaginatorConfigurableExample, "additionalFiles": [], "selectorName": "" }, "paginator-overview": { "title": "Paginator", "component": PaginatorOverviewExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-cell-span-mat-table": { "title": "Material Popover Edit spanning multiple columns on a Material data-table", "component": PopoverEditCellSpanMatTableExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-mat-table-flex": { "title": "Material Popover Edit on a flex Material data-table", "component": PopoverEditMatTableFlexExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-mat-table": { "title": "Material Popover Edit on a Material data-table", "component": PopoverEditMatTableExample, "additionalFiles": [], "selectorName": "" }, "popover-edit-tab-out-mat-table": { "title": "Material Popover Edit with spreadsheet-like configuration on a Material data-table", "component": PopoverEditTabOutMatTableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-buffer": { "title": "Buffer progress-bar", "component": ProgressBarBufferExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-configurable": { "title": "Configurable progress-bar", "component": ProgressBarConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-determinate": { "title": "Determinate progress-bar", "component": ProgressBarDeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-indeterminate": { "title": "Indeterminate progress-bar", "component": ProgressBarIndeterminateExample, "additionalFiles": [], "selectorName": "" }, "progress-bar-query": { "title": "Query progress-bar", "component": ProgressBarQueryExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-configurable": { "title": "Configurable progress spinner", "component": ProgressSpinnerConfigurableExample, "additionalFiles": [], "selectorName": "" }, "progress-spinner-overview": { "title": "Basic progress-spinner", "component": ProgressSpinnerOverviewExample, "additionalFiles": [], "selectorName": "" }, "radio-ng-model": { "title": "Radios with ngModel", "component": RadioNgModelExample, "additionalFiles": [], "selectorName": "" }, "radio-overview": { "title": "Basic radios", "component": RadioOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-custom-trigger": { "title": "Select with custom trigger text", "component": SelectCustomTriggerExample, "additionalFiles": [], "selectorName": "" }, "select-disabled": { "title": "Disabled select", "component": SelectDisabledExample, "additionalFiles": [], "selectorName": "" }, "select-error-state-matcher": { "title": "Select with a custom ErrorStateMatcher", "component": SelectErrorStateMatcherExample, "additionalFiles": [], "selectorName": "" }, "select-form": { "title": "Select in a form", "component": SelectFormExample, "additionalFiles": [], "selectorName": "" }, "select-hint-error": { "title": "Select with form field features", "component": SelectHintErrorExample, "additionalFiles": [], "selectorName": "" }, "select-multiple": { "title": "Select with multiple selection", "component": SelectMultipleExample, "additionalFiles": [], "selectorName": "" }, "select-no-ripple": { "title": "Select with no option ripple", "component": SelectNoRippleExample, "additionalFiles": [], "selectorName": "" }, "select-optgroup": { "title": "Select with option groups", "component": SelectOptgroupExample, "additionalFiles": [], "selectorName": "" }, "select-overview": { "title": "Basic select", "component": SelectOverviewExample, "additionalFiles": [], "selectorName": "" }, "select-panel-class": { "title": "Select with custom panel styling", "component": SelectPanelClassExample, "additionalFiles": [], "selectorName": "" }, "select-reset": { "title": "Select with reset option", "component": SelectResetExample, "additionalFiles": [], "selectorName": "" }, "select-value-binding": { "title": "Select with 2-way value binding", "component": SelectValueBindingExample, "additionalFiles": [], "selectorName": "" }, "sidenav-autosize": { "title": "Autosize sidenav", "component": SidenavAutosizeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-backdrop": { "title": "Drawer with explicit backdrop setting", "component": SidenavBackdropExample, "additionalFiles": [], "selectorName": "" }, "sidenav-disable-close": { "title": "Sidenav with custom escape and backdrop click behavior", "component": SidenavDisableCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-drawer-overview": { "title": "Basic drawer", "component": SidenavDrawerOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-fixed": { "title": "Fixed sidenav", "component": SidenavFixedExample, "additionalFiles": [], "selectorName": "" }, "sidenav-mode": { "title": "Sidenav with configurable mode", "component": SidenavModeExample, "additionalFiles": [], "selectorName": "" }, "sidenav-open-close": { "title": "Sidenav open & close behavior", "component": SidenavOpenCloseExample, "additionalFiles": [], "selectorName": "" }, "sidenav-overview": { "title": "Basic sidenav", "component": SidenavOverviewExample, "additionalFiles": [], "selectorName": "" }, "sidenav-position": { "title": "Implicit main content with two sidenavs", "component": SidenavPositionExample, "additionalFiles": [], "selectorName": "" }, "sidenav-responsive": { "title": "Responsive sidenav", "component": SidenavResponsiveExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-configurable": { "title": "Configurable slide-toggle", "component": SlideToggleConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-forms": { "title": "Slide-toggle with forms", "component": SlideToggleFormsExample, "additionalFiles": [], "selectorName": "" }, "slide-toggle-overview": { "title": "Basic slide-toggles", "component": SlideToggleOverviewExample, "additionalFiles": [], "selectorName": "" }, "slider-configurable": { "title": "Configurable slider", "component": SliderConfigurableExample, "additionalFiles": [], "selectorName": "" }, "slider-formatting": { "title": "Slider with custom thumb label formatting.", "component": SliderFormattingExample, "additionalFiles": [], "selectorName": "" }, "slider-overview": { "title": "Basic slider", "component": SliderOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-component": { "title": "Snack-bar with a custom component", "component": SnackBarComponentExample, "additionalFiles": ["snack-bar-component-example-snack.html"], "selectorName": "SnackBarComponentExample, PizzaPartyComponent" }, "snack-bar-overview": { "title": "Basic snack-bar", "component": SnackBarOverviewExample, "additionalFiles": [], "selectorName": "" }, "snack-bar-position": { "title": "Snack-bar with configurable position", "component": SnackBarPositionExample, "additionalFiles": [], "selectorName": "" }, "sort-overview": { "title": "Sorting overview", "component": SortOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-editable": { "title": "Stepper with editable steps", "component": StepperEditableExample, "additionalFiles": [], "selectorName": "" }, "stepper-errors": { "title": "Stepper that displays errors in the steps", "component": StepperErrorsExample, "additionalFiles": [], "selectorName": "" }, "stepper-label-position-bottom": { "title": "Stepper label bottom position", "component": StepperLabelPositionBottomExample, "additionalFiles": [], "selectorName": "" }, "stepper-optional": { "title": "Stepper with optional steps", "component": StepperOptionalExample, "additionalFiles": [], "selectorName": "" }, "stepper-overview": { "title": "Stepper overview", "component": StepperOverviewExample, "additionalFiles": [], "selectorName": "" }, "stepper-states": { "title": "Stepper with customized states", "component": StepperStatesExample, "additionalFiles": [], "selectorName": "" }, "stepper-vertical": { "title": "Stepper vertical", "component": StepperVerticalExample, "additionalFiles": [], "selectorName": "" }, "table-basic-flex": { "title": "Basic use of `<mat-table>` (uses display flex)", "component": TableBasicFlexExample, "additionalFiles": [], "selectorName": "" }, "table-basic": { "title": "Basic use of `<table mat-table>`", "component": TableBasicExample, "additionalFiles": [], "selectorName": "" }, "table-dynamic-columns": { "title": "Table dynamically changing the columns displayed", "component": TableDynamicColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-expandable-rows": { "title": "Table with expandable rows", "component": TableExpandableRowsExample, "additionalFiles": [], "selectorName": "" }, "table-filtering": { "title": "Table with filtering", "component": TableFilteringExample, "additionalFiles": [], "selectorName": "" }, "table-footer-row": { "title": "Footer row table", "component": TableFooterRowExample, "additionalFiles": [], "selectorName": "" }, "table-http": { "title": "Table retrieving data through HTTP", "component": TableHttpExample, "additionalFiles": [], "selectorName": "" }, "table-multiple-header-footer": { "title": "Table with multiple header and footer rows", "component": TableMultipleHeaderFooterExample, "additionalFiles": [], "selectorName": "" }, "table-overview": { "title": "Data table with sorting, pagination, and filtering.", "component": TableOverviewExample, "additionalFiles": [], "selectorName": "" }, "table-pagination": { "title": "Table with pagination", "component": TablePaginationExample, "additionalFiles": [], "selectorName": "" }, "table-row-context": { "title": "Table showing each row context properties.", "component": TableRowContextExample, "additionalFiles": [], "selectorName": "" }, "table-selection": { "title": "Table with selection", "component": TableSelectionExample, "additionalFiles": [], "selectorName": "" }, "table-sorting": { "title": "Table with sorting", "component": TableSortingExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-columns": { "title": "Table with sticky columns", "component": TableStickyColumnsExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex-flex": { "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexFlexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-complex": { "title": "Tables with toggle-able sticky headers, footers, and columns", "component": TableStickyComplexExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-footer": { "title": "Table with a sticky footer", "component": TableStickyFooterExample, "additionalFiles": [], "selectorName": "" }, "table-sticky-header": { "title": "Table with sticky header", "component": TableStickyHeaderExample, "additionalFiles": [], "selectorName": "" }, "table-text-column-advanced": { "title": "Use of 'mat-text-column' with various configurations of the interface.", "component": TableTextColumnAdvancedExample, "additionalFiles": [], "selectorName": "" }, "table-text-column": { "title": "Use of `mat-text-column` which can be used for simple columns that only need to display\na text value for the header and cells.", "component": TableTextColumnExample, "additionalFiles": [], "selectorName": "" }, "table-wrapped": { "title": "Table example that shows how to wrap a table component for definition and behavior reuse.", "component": TableWrappedExample, "additionalFiles": ["wrapper-table.html"], "selectorName": "TableWrappedExample, WrapperTable" }, "tab-group-align": { "title": "Tab group with aligned labels", "component": TabGroupAlignExample, "additionalFiles": [], "selectorName": "" }, "tab-group-animations": { "title": "Tab group animations", "component": TabGroupAnimationsExample, "additionalFiles": [], "selectorName": "" }, "tab-group-async": { "title": "Tab group with asynchronously loading tab contents", "component": TabGroupAsyncExample, "additionalFiles": [], "selectorName": "" }, "tab-group-basic": { "title": "Basic use of the tab group", "component": TabGroupBasicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-custom-label": { "title": "Using tabs with a custom label template", "component": TabGroupCustomLabelExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic-height": { "title": "Tab group with dynamic height based on tab contents", "component": TabGroupDynamicHeightExample, "additionalFiles": [], "selectorName": "" }, "tab-group-dynamic": { "title": "Tab group with dynamically changing tabs", "component": TabGroupDynamicExample, "additionalFiles": [], "selectorName": "" }, "tab-group-header-below": { "title": "Tab group with the headers on the bottom", "component": TabGroupHeaderBelowExample, "additionalFiles": [], "selectorName": "" }, "tab-group-lazy-loaded": { "title": "Tab group where the tab content is loaded lazily (when activated)", "component": TabGroupLazyLoadedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-stretched": { "title": "Tab group with stretched labels", "component": TabGroupStretchedExample, "additionalFiles": [], "selectorName": "" }, "tab-group-theme": { "title": "Customizing the theme options on the tab group", "component": TabGroupThemeExample, "additionalFiles": [], "selectorName": "" }, "tab-nav-bar-basic": { "title": "Basic use of the tab nav bar", "component": TabNavBarBasicExample, "additionalFiles": [], "selectorName": "" }, "toolbar-multirow": { "title": "Multi-row toolbar", "component": ToolbarMultirowExample, "additionalFiles": [], "selectorName": "" }, "toolbar-overview": { "title": "Basic toolbar", "component": ToolbarOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-auto-hide": { "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.", "component": TooltipAutoHideExample, "additionalFiles": [], "selectorName": "" }, "tooltip-custom-class": { "title": "Tooltip that can have a custom class applied.", "component": TooltipCustomClassExample, "additionalFiles": [], "selectorName": "" }, "tooltip-delay": { "title": "Tooltip with a show and hide delay", "component": TooltipDelayExample, "additionalFiles": [], "selectorName": "" }, "tooltip-disabled": { "title": "Tooltip that can be disabled", "component": TooltipDisabledExample, "additionalFiles": [], "selectorName": "" }, "tooltip-manual": { "title": "Tooltip that can be manually shown/hidden.", "component": TooltipManualExample, "additionalFiles": [], "selectorName": "" }, "tooltip-message": { "title": "Tooltip with a changing message", "component": TooltipMessageExample, "additionalFiles": [], "selectorName": "" }, "tooltip-modified-defaults": { "title": "Tooltip with a show and hide delay", "component": TooltipModifiedDefaultsExample, "additionalFiles": [], "selectorName": "" }, "tooltip-overview": { "title": "Basic tooltip", "component": TooltipOverviewExample, "additionalFiles": [], "selectorName": "" }, "tooltip-position": { "title": "Tooltip with a custom position", "component": TooltipPositionExample, "additionalFiles": [], "selectorName": "" }, "tree-checklist": { "title": "Tree with checkboxes", "component": TreeChecklistExample, "additionalFiles": [], "selectorName": "" }, "tree-dynamic": { "title": "Tree with dynamic data", "component": TreeDynamicExample, "additionalFiles": [], "selectorName": "" }, "tree-flat-overview": { "title": "Tree with flat nodes", "component": TreeFlatOverviewExample, "additionalFiles": [], "selectorName": "" }, "tree-loadmore": { "title": "Tree with partially loaded data", "component": TreeLoadmoreExample, "additionalFiles": [], "selectorName": "" }, "tree-nested-overview": { "title": "Tree with nested nodes", "component": TreeNestedOverviewExample, "additionalFiles": [], "selectorName": "" } };
+    var EXAMPLE_MODULES = [CdkA11yExamplesModule, CdkDragDropExamplesModule, CdkPlatformExamplesModule, CdkPopoverEditExamplesModule, CdkPortalExamplesModule, CdkScrollingExamplesModule, CdkStepperExamplesModule, CdkTableExamplesModule, CdkTextFieldExamplesModule, CdkTreeExamplesModule, AutocompleteExamplesModule, BadgeExamplesModule, BottomSheetExamplesModule, ButtonToggleExamplesModule, ButtonExamplesModule, CardExamplesModule, CheckboxExamplesModule, ChipsExamplesModule, CoreExamplesModule, DatepickerExamplesModule, DialogExamplesModule, DividerExamplesModule, ExpansionExamplesModule, FormFieldExamplesModule, GridListExamplesModule, IconExamplesModule, InputExamplesModule, ListExamplesModule, MenuExamplesModule, PaginatorExamplesModule, PopoverEditExamplesModule, ProgressBarExamplesModule, ProgressSpinnerExamplesModule, RadioExamplesModule, SelectExamplesModule, SidenavExamplesModule, SlideToggleExamplesModule, SliderExamplesModule, SnackBarExamplesModule, SortExamplesModule, StepperExamplesModule, TableExamplesModule, TabGroupExamplesModule, ToolbarExamplesModule, TooltipExamplesModule, TreeExamplesModule];
+    var EXAMPLE_LIST = [FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledSortingExample, CdkDragDropDisabledExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkPlatformOverviewExample, CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPortalOverviewExample, ComponentPortalExample, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CdkCustomStepperWithoutFormExample, CustomStepper, CdkTableBasicFlexExample, CdkTableBasicExample, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, CdkTreeFlatExample, CdkTreeNestedExample, AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteSimpleExample, BadgeOverviewExample, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonOverviewExample, ButtonTypesExample, CardFancyExample, CardOverviewExample, CheckboxConfigurableExample, CheckboxOverviewExample, ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, ElevationOverviewExample, RippleOverviewExample, DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, ExampleHeader, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog, DividerOverviewExample, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, FormFieldAppearanceExample, FormFieldCustomControlExample, MyTelInput, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, GridListDynamicExample, GridListOverviewExample, IconOverviewExample, IconSvgExample, InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, ListOverviewExample, ListSectionsExample, ListSelectionExample, MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample, PaginatorConfigurableExample, PaginatorOverviewExample, PopoverEditCellSpanMatTableExample, PopoverEditMatTableFlexExample, PopoverEditMatTableExample, PopoverEditTabOutMatTableExample, ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, RadioNgModelExample, RadioOverviewExample, SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SnackBarComponentExample, PizzaPartyComponent, SnackBarOverviewExample, SnackBarPositionExample, SortOverviewExample, StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable, TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, ToolbarMultirowExample, ToolbarOverviewExample, TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample];
     var ExampleModule = /** @class */ (function () {
         function ExampleModule() {
         }
         ExampleModule = tslib_1.__decorate([
             core.NgModule({
-                declarations: EXAMPLE_LIST,
+                imports: EXAMPLE_MODULES,
+                exports: EXAMPLE_MODULES,
                 entryComponents: EXAMPLE_LIST,
-                imports: [
-                    ExampleMaterialModule,
-                    forms.FormsModule,
-                    forms.ReactiveFormsModule,
-                    common.CommonModule
-                ]
             })
         ], ExampleModule);
         return ExampleModule;
@@ -7431,250 +8481,289 @@
      * Generated bundle index. Do not edit.
      */
 
-    exports.ɵangular_material_src_material_examples_examples_a = AutocompleteAutoActiveFirstOptionExample;
-    exports.ɵangular_material_src_material_examples_examples_b = AutocompleteDisplayExample;
-    exports.ɵangular_material_src_material_examples_examples_c = AutocompleteFilterExample;
-    exports.ɵangular_material_src_material_examples_examples_d = AutocompleteOptgroupExample;
-    exports.ɵangular_material_src_material_examples_examples_e = AutocompleteOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_f = AutocompletePlainInputExample;
-    exports.ɵangular_material_src_material_examples_examples_g = AutocompleteSimpleExample;
-    exports.ɵangular_material_src_material_examples_examples_h = BadgeOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_i = BottomSheetOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_j = BottomSheetOverviewExampleSheet;
-    exports.ɵangular_material_src_material_examples_examples_k = ButtonOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_l = ButtonToggleAppearanceExample;
-    exports.ɵangular_material_src_material_examples_examples_m = ButtonToggleExclusiveExample;
-    exports.ɵangular_material_src_material_examples_examples_n = ButtonTypesExample;
-    exports.ɵangular_material_src_material_examples_examples_o = CardOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_p = CdkCustomStepperWithoutFormExample;
-    exports.ɵangular_material_src_material_examples_examples_q = CustomStepper;
-    exports.ɵangular_material_src_material_examples_examples_r = CdkDragDropAxisLockExample;
-    exports.ɵangular_material_src_material_examples_examples_s = CdkDragDropBoundaryExample;
-    exports.ɵangular_material_src_material_examples_examples_t = CdkDragDropConnectedSortingGroupExample;
-    exports.ɵangular_material_src_material_examples_examples_u = CdkDragDropConnectedSortingExample;
-    exports.ɵangular_material_src_material_examples_examples_v = CdkDragDropCustomPlaceholderExample;
-    exports.ɵangular_material_src_material_examples_examples_w = CdkDragDropCustomPreviewExample;
-    exports.ɵangular_material_src_material_examples_examples_x = CdkDragDropDelayExample;
-    exports.ɵangular_material_src_material_examples_examples_y = CdkDragDropDisabledSortingExample;
-    exports.ɵangular_material_src_material_examples_examples_z = CdkDragDropDisabledExample;
-    exports.ɵangular_material_src_material_examples_examples_ba = CdkDragDropEnterPredicateExample;
-    exports.ɵangular_material_src_material_examples_examples_bb = CdkDragDropFreeDragPositionExample;
-    exports.ɵangular_material_src_material_examples_examples_bc = CdkDragDropHandleExample;
-    exports.ɵangular_material_src_material_examples_examples_bd = CdkDragDropHorizontalSortingExample;
-    exports.ɵangular_material_src_material_examples_examples_be = CdkDragDropOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_bf = CdkDragDropRootElementExample;
-    exports.ɵangular_material_src_material_examples_examples_bg = CdkDragDropSortingExample;
-    exports.ɵangular_material_src_material_examples_examples_bh = CdkPlatformOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_bi = CdkPopoverEditCdkTableFlexExample;
-    exports.ɵangular_material_src_material_examples_examples_bj = CdkPopoverEditCdkTableExample;
-    exports.ɵangular_material_src_material_examples_examples_bk = CdkPopoverEditCellSpanVanillaTableExample;
-    exports.ɵangular_material_src_material_examples_examples_bl = CdkPopoverEditTabOutVanillaTableExample;
-    exports.ɵangular_material_src_material_examples_examples_bm = CdkPopoverEditVanillaTableExample;
-    exports.ɵangular_material_src_material_examples_examples_bn = CdkPortalOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_bo = ComponentPortalExample;
-    exports.ɵangular_material_src_material_examples_examples_bp = CdkTableBasicFlexExample;
-    exports.ɵangular_material_src_material_examples_examples_bq = CdkTableBasicExample;
-    exports.ɵangular_material_src_material_examples_examples_br = CdkTreeFlatExample;
-    exports.ɵangular_material_src_material_examples_examples_bs = CdkTreeNestedExample;
-    exports.ɵangular_material_src_material_examples_examples_bt = CdkVirtualScrollContextExample;
-    exports.ɵangular_material_src_material_examples_examples_bv = CdkVirtualScrollCustomStrategyExample;
-    exports.ɵangular_material_src_material_examples_examples_bu = CustomVirtualScrollStrategy;
-    exports.ɵangular_material_src_material_examples_examples_bw = CdkVirtualScrollDataSourceExample;
-    exports.ɵangular_material_src_material_examples_examples_bx = CdkVirtualScrollDlExample;
-    exports.ɵangular_material_src_material_examples_examples_by = CdkVirtualScrollFixedBufferExample;
-    exports.ɵangular_material_src_material_examples_examples_bz = CdkVirtualScrollHorizontalExample;
-    exports.ɵangular_material_src_material_examples_examples_ca = CdkVirtualScrollOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_cb = CdkVirtualScrollTemplateCacheExample;
-    exports.ɵangular_material_src_material_examples_examples_cc = CheckboxConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_cd = CheckboxOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ce = ChipsAutocompleteExample;
-    exports.ɵangular_material_src_material_examples_examples_cf = ChipsDragDropExample;
-    exports.ɵangular_material_src_material_examples_examples_cg = ChipsInputExample;
-    exports.ɵangular_material_src_material_examples_examples_ch = ChipsOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ci = ChipsStackedExample;
-    exports.ɵangular_material_src_material_examples_examples_cj = DatepickerApiExample;
-    exports.ɵangular_material_src_material_examples_examples_ck = DatepickerColorExample;
-    exports.ɵangular_material_src_material_examples_examples_cl = DatepickerCustomHeaderExample;
-    exports.ɵangular_material_src_material_examples_examples_cm = ExampleHeader;
-    exports.ɵangular_material_src_material_examples_examples_cn = DatepickerCustomIconExample;
-    exports.ɵangular_material_src_material_examples_examples_co = DatepickerDateClassExample;
-    exports.ɵangular_material_src_material_examples_examples_cp = DatepickerDisabledExample;
-    exports.ɵangular_material_src_material_examples_examples_cq = DatepickerEventsExample;
-    exports.ɵangular_material_src_material_examples_examples_cr = DatepickerFilterExample;
-    exports.ɵangular_material_src_material_examples_examples_ct = DatepickerFormatsExample;
-    exports.ɵangular_material_src_material_examples_examples_cs = MY_FORMATS;
-    exports.ɵangular_material_src_material_examples_examples_cu = DatepickerLocaleExample;
-    exports.ɵangular_material_src_material_examples_examples_cv = DatepickerMinMaxExample;
-    exports.ɵangular_material_src_material_examples_examples_cw = DatepickerMomentExample;
-    exports.ɵangular_material_src_material_examples_examples_cx = DatepickerStartViewExample;
-    exports.ɵangular_material_src_material_examples_examples_cy = DatepickerTouchExample;
-    exports.ɵangular_material_src_material_examples_examples_cz = DatepickerValueExample;
-    exports.ɵangular_material_src_material_examples_examples_db = DatepickerViewsSelectionExample;
-    exports.ɵangular_material_src_material_examples_examples_da = MY_FORMATS$1;
-    exports.ɵangular_material_src_material_examples_examples_dc = DialogContentExample;
-    exports.ɵangular_material_src_material_examples_examples_dd = DialogContentExampleDialog;
-    exports.ɵangular_material_src_material_examples_examples_de = DialogDataExample;
-    exports.ɵangular_material_src_material_examples_examples_df = DialogDataExampleDialog;
-    exports.ɵangular_material_src_material_examples_examples_dg = DialogElementsExample;
-    exports.ɵangular_material_src_material_examples_examples_dh = DialogElementsExampleDialog;
-    exports.ɵangular_material_src_material_examples_examples_di = DialogOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_dj = DialogOverviewExampleDialog;
-    exports.ɵangular_material_src_material_examples_examples_dk = DividerOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_dl = ElevationOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_dm = ExpansionExpandCollapseAllExample;
-    exports.ɵangular_material_src_material_examples_examples_dn = ExpansionStepsExample;
-    exports.ɵangular_material_src_material_examples_examples_do = FocusMonitorDirectivesExample;
-    exports.ɵangular_material_src_material_examples_examples_dp = FocusMonitorFocusViaExample;
-    exports.ɵangular_material_src_material_examples_examples_dq = FocusMonitorOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_dr = FormFieldAppearanceExample;
-    exports.ɵangular_material_src_material_examples_examples_ds = FormFieldCustomControlExample;
-    exports.ɵangular_material_src_material_examples_examples_dt = MyTelInput;
-    exports.ɵangular_material_src_material_examples_examples_du = FormFieldErrorExample;
-    exports.ɵangular_material_src_material_examples_examples_dv = FormFieldHintExample;
-    exports.ɵangular_material_src_material_examples_examples_dw = FormFieldLabelExample;
-    exports.ɵangular_material_src_material_examples_examples_dx = FormFieldOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_dy = FormFieldPrefixSuffixExample;
-    exports.ɵangular_material_src_material_examples_examples_dz = FormFieldThemingExample;
-    exports.ɵangular_material_src_material_examples_examples_ea = GridListDynamicExample;
-    exports.ɵangular_material_src_material_examples_examples_eb = GridListOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ec = IconOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ed = IconSvgExample;
-    exports.ɵangular_material_src_material_examples_examples_ee = InputClearableExample;
-    exports.ɵangular_material_src_material_examples_examples_ef = InputErrorStateMatcherExample;
-    exports.ɵangular_material_src_material_examples_examples_eg = InputErrorsExample;
-    exports.ɵangular_material_src_material_examples_examples_eh = InputFormExample;
-    exports.ɵangular_material_src_material_examples_examples_ei = InputHintExample;
-    exports.ɵangular_material_src_material_examples_examples_ej = InputOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ek = InputPrefixSuffixExample;
-    exports.ɵangular_material_src_material_examples_examples_el = ListSectionsExample;
-    exports.ɵangular_material_src_material_examples_examples_em = ListSelectionExample;
-    exports.ɵangular_material_src_material_examples_examples_iy = ExampleMaterialModule;
-    exports.ɵangular_material_src_material_examples_examples_en = MenuIconsExample;
-    exports.ɵangular_material_src_material_examples_examples_eo = MenuOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ep = MenuPositionExample;
-    exports.ɵangular_material_src_material_examples_examples_eq = NestedMenuExample;
-    exports.ɵangular_material_src_material_examples_examples_er = PaginatorConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_es = PaginatorOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_et = PopoverEditCellSpanMatTableExample;
-    exports.ɵangular_material_src_material_examples_examples_eu = PopoverEditMatTableFlexExample;
-    exports.ɵangular_material_src_material_examples_examples_ev = PopoverEditMatTableExample;
-    exports.ɵangular_material_src_material_examples_examples_ew = PopoverEditTabOutMatTableExample;
-    exports.ɵangular_material_src_material_examples_examples_ex = ProgressBarBufferExample;
-    exports.ɵangular_material_src_material_examples_examples_ey = ProgressBarConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_ez = ProgressBarDeterminateExample;
-    exports.ɵangular_material_src_material_examples_examples_fa = ProgressBarIndeterminateExample;
-    exports.ɵangular_material_src_material_examples_examples_fb = ProgressBarQueryExample;
-    exports.ɵangular_material_src_material_examples_examples_fc = ProgressSpinnerConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_fd = ProgressSpinnerOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fe = RadioNgModelExample;
-    exports.ɵangular_material_src_material_examples_examples_ff = RadioOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fg = RippleOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fh = SelectCustomTriggerExample;
-    exports.ɵangular_material_src_material_examples_examples_fi = SelectDisabledExample;
-    exports.ɵangular_material_src_material_examples_examples_fj = SelectErrorStateMatcherExample;
-    exports.ɵangular_material_src_material_examples_examples_fk = SelectFormExample;
-    exports.ɵangular_material_src_material_examples_examples_fl = SelectHintErrorExample;
-    exports.ɵangular_material_src_material_examples_examples_fm = SelectMultipleExample;
-    exports.ɵangular_material_src_material_examples_examples_fn = SelectNoRippleExample;
-    exports.ɵangular_material_src_material_examples_examples_fo = SelectOptgroupExample;
-    exports.ɵangular_material_src_material_examples_examples_fp = SelectOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fq = SelectPanelClassExample;
-    exports.ɵangular_material_src_material_examples_examples_fr = SelectResetExample;
-    exports.ɵangular_material_src_material_examples_examples_fs = SelectValueBindingExample;
-    exports.ɵangular_material_src_material_examples_examples_ft = SidenavAutosizeExample;
-    exports.ɵangular_material_src_material_examples_examples_fu = SidenavBackdropExample;
-    exports.ɵangular_material_src_material_examples_examples_fv = SidenavDisableCloseExample;
-    exports.ɵangular_material_src_material_examples_examples_fw = SidenavDrawerOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_fx = SidenavFixedExample;
-    exports.ɵangular_material_src_material_examples_examples_fy = SidenavModeExample;
-    exports.ɵangular_material_src_material_examples_examples_fz = SidenavOpenCloseExample;
-    exports.ɵangular_material_src_material_examples_examples_ga = SidenavOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_gb = SidenavPositionExample;
-    exports.ɵangular_material_src_material_examples_examples_gc = SidenavResponsiveExample;
-    exports.ɵangular_material_src_material_examples_examples_gd = SlideToggleConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_ge = SlideToggleFormsExample;
-    exports.ɵangular_material_src_material_examples_examples_gf = SlideToggleOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_gg = SliderConfigurableExample;
-    exports.ɵangular_material_src_material_examples_examples_gh = SliderFormattingExample;
-    exports.ɵangular_material_src_material_examples_examples_gi = SliderOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_gk = PizzaPartyComponent;
-    exports.ɵangular_material_src_material_examples_examples_gj = SnackBarComponentExample;
-    exports.ɵangular_material_src_material_examples_examples_gl = SnackBarOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_gm = SnackBarPositionExample;
-    exports.ɵangular_material_src_material_examples_examples_gn = SortOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_go = StepperEditableExample;
-    exports.ɵangular_material_src_material_examples_examples_gp = StepperErrorsExample;
-    exports.ɵangular_material_src_material_examples_examples_gq = StepperLabelPositionBottomExample;
-    exports.ɵangular_material_src_material_examples_examples_gr = StepperOptionalExample;
-    exports.ɵangular_material_src_material_examples_examples_gs = StepperStatesExample;
-    exports.ɵangular_material_src_material_examples_examples_gt = StepperVerticalExample;
-    exports.ɵangular_material_src_material_examples_examples_gu = TabGroupAlignExample;
-    exports.ɵangular_material_src_material_examples_examples_gv = TabGroupAnimationsExample;
-    exports.ɵangular_material_src_material_examples_examples_gw = TabGroupAsyncExample;
-    exports.ɵangular_material_src_material_examples_examples_gx = TabGroupBasicExample;
-    exports.ɵangular_material_src_material_examples_examples_gy = TabGroupCustomLabelExample;
-    exports.ɵangular_material_src_material_examples_examples_gz = TabGroupDynamicHeightExample;
-    exports.ɵangular_material_src_material_examples_examples_ha = TabGroupDynamicExample;
-    exports.ɵangular_material_src_material_examples_examples_hb = TabGroupHeaderBelowExample;
-    exports.ɵangular_material_src_material_examples_examples_hc = TabGroupLazyLoadedExample;
-    exports.ɵangular_material_src_material_examples_examples_hd = TabGroupStretchedExample;
-    exports.ɵangular_material_src_material_examples_examples_he = TabGroupThemeExample;
-    exports.ɵangular_material_src_material_examples_examples_hf = TabNavBarBasicExample;
-    exports.ɵangular_material_src_material_examples_examples_hg = TableBasicFlexExample;
-    exports.ɵangular_material_src_material_examples_examples_hh = TableBasicExample;
-    exports.ɵangular_material_src_material_examples_examples_hi = TableDynamicColumnsExample;
-    exports.ɵangular_material_src_material_examples_examples_hj = TableExpandableRowsExample;
-    exports.ɵangular_material_src_material_examples_examples_hk = TableFilteringExample;
-    exports.ɵangular_material_src_material_examples_examples_hl = TableFooterRowExample;
-    exports.ɵangular_material_src_material_examples_examples_hm = TableHttpExample;
-    exports.ɵangular_material_src_material_examples_examples_hn = TableMultipleHeaderFooterExample;
-    exports.ɵangular_material_src_material_examples_examples_ho = TableOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_hp = TablePaginationExample;
-    exports.ɵangular_material_src_material_examples_examples_hq = TableRowContextExample;
-    exports.ɵangular_material_src_material_examples_examples_hr = TableSelectionExample;
-    exports.ɵangular_material_src_material_examples_examples_hs = TableSortingExample;
-    exports.ɵangular_material_src_material_examples_examples_ht = TableStickyColumnsExample;
-    exports.ɵangular_material_src_material_examples_examples_hu = TableStickyComplexFlexExample;
-    exports.ɵangular_material_src_material_examples_examples_hv = TableStickyComplexExample;
-    exports.ɵangular_material_src_material_examples_examples_hw = TableStickyFooterExample;
-    exports.ɵangular_material_src_material_examples_examples_hx = TableStickyHeaderExample;
-    exports.ɵangular_material_src_material_examples_examples_hy = TableTextColumnAdvancedExample;
-    exports.ɵangular_material_src_material_examples_examples_hz = TableTextColumnExample;
-    exports.ɵangular_material_src_material_examples_examples_ia = TableWrappedExample;
-    exports.ɵangular_material_src_material_examples_examples_ib = WrapperTable;
-    exports.ɵangular_material_src_material_examples_examples_ic = TextFieldAutofillDirectiveExample;
-    exports.ɵangular_material_src_material_examples_examples_id = TextFieldAutofillMonitorExample;
-    exports.ɵangular_material_src_material_examples_examples_ie = TextFieldAutosizeTextareaExample;
-    exports.ɵangular_material_src_material_examples_examples_if = ToolbarOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ig = TooltipAutoHideExample;
-    exports.ɵangular_material_src_material_examples_examples_ih = TooltipCustomClassExample;
-    exports.ɵangular_material_src_material_examples_examples_ii = TooltipDelayExample;
-    exports.ɵangular_material_src_material_examples_examples_ij = TooltipDisabledExample;
-    exports.ɵangular_material_src_material_examples_examples_ik = TooltipManualExample;
-    exports.ɵangular_material_src_material_examples_examples_il = TooltipMessageExample;
-    exports.ɵangular_material_src_material_examples_examples_in = TooltipModifiedDefaultsExample;
-    exports.ɵangular_material_src_material_examples_examples_im = myCustomTooltipDefaults;
-    exports.ɵangular_material_src_material_examples_examples_io = TooltipOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_ip = TooltipPositionExample;
-    exports.ɵangular_material_src_material_examples_examples_iq = ChecklistDatabase;
-    exports.ɵangular_material_src_material_examples_examples_ir = TreeChecklistExample;
-    exports.ɵangular_material_src_material_examples_examples_is = DynamicDatabase;
-    exports.ɵangular_material_src_material_examples_examples_it = TreeDynamicExample;
-    exports.ɵangular_material_src_material_examples_examples_iu = TreeFlatOverviewExample;
-    exports.ɵangular_material_src_material_examples_examples_iv = LoadmoreDatabase;
-    exports.ɵangular_material_src_material_examples_examples_iw = TreeLoadmoreExample;
-    exports.ɵangular_material_src_material_examples_examples_ix = TreeNestedOverviewExample;
+    exports.ɵangular_material_src_material_examples_examples_a = CdkA11yExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_b = CdkDragDropExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_c = CdkPlatformExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_d = CdkPopoverEditExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_e = CdkPortalExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_f = CdkScrollingExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_g = CdkStepperExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_h = CdkTableExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_i = CdkTextFieldExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_j = CdkTreeExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_k = AutocompleteExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_l = BadgeExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_m = BottomSheetExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_n = ButtonToggleExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_o = ButtonExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_p = CardExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_q = CheckboxExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_r = ChipsExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_s = CoreExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_t = DatepickerExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_u = DialogExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_v = DividerExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_w = ExpansionExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_x = FormFieldExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_y = GridListExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_z = IconExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_ba = InputExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bb = ListExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bc = MenuExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bd = PaginatorExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_be = PopoverEditExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bf = ProgressBarExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bg = ProgressSpinnerExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bh = RadioExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bi = SelectExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bj = SidenavExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bk = SlideToggleExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bl = SliderExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bm = SnackBarExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bn = SortExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bo = StepperExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bp = TableExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bq = TabGroupExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_br = ToolbarExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bs = TooltipExamplesModule;
+    exports.ɵangular_material_src_material_examples_examples_bt = TreeExamplesModule;
     exports.ExampleData = ExampleData;
     exports.EXAMPLE_COMPONENTS = EXAMPLE_COMPONENTS;
+    exports.EXAMPLE_MODULES = EXAMPLE_MODULES;
     exports.EXAMPLE_LIST = EXAMPLE_LIST;
     exports.ExampleModule = ExampleModule;
-    exports.ListOverviewExample = ListOverviewExample;
-    exports.DatepickerOverviewExample = DatepickerOverviewExample;
-    exports.CardFancyExample = CardFancyExample;
-    exports.ToolbarMultirowExample = ToolbarMultirowExample;
+    exports.FocusMonitorDirectivesExample = FocusMonitorDirectivesExample;
+    exports.FocusMonitorFocusViaExample = FocusMonitorFocusViaExample;
+    exports.FocusMonitorOverviewExample = FocusMonitorOverviewExample;
+    exports.CdkDragDropAxisLockExample = CdkDragDropAxisLockExample;
+    exports.CdkDragDropBoundaryExample = CdkDragDropBoundaryExample;
+    exports.CdkDragDropConnectedSortingGroupExample = CdkDragDropConnectedSortingGroupExample;
+    exports.CdkDragDropConnectedSortingExample = CdkDragDropConnectedSortingExample;
+    exports.CdkDragDropCustomPlaceholderExample = CdkDragDropCustomPlaceholderExample;
+    exports.CdkDragDropCustomPreviewExample = CdkDragDropCustomPreviewExample;
+    exports.CdkDragDropDelayExample = CdkDragDropDelayExample;
+    exports.CdkDragDropDisabledSortingExample = CdkDragDropDisabledSortingExample;
+    exports.CdkDragDropDisabledExample = CdkDragDropDisabledExample;
+    exports.CdkDragDropEnterPredicateExample = CdkDragDropEnterPredicateExample;
+    exports.CdkDragDropFreeDragPositionExample = CdkDragDropFreeDragPositionExample;
+    exports.CdkDragDropHandleExample = CdkDragDropHandleExample;
+    exports.CdkDragDropHorizontalSortingExample = CdkDragDropHorizontalSortingExample;
+    exports.CdkDragDropOverviewExample = CdkDragDropOverviewExample;
+    exports.CdkDragDropRootElementExample = CdkDragDropRootElementExample;
+    exports.CdkDragDropSortingExample = CdkDragDropSortingExample;
+    exports.CdkPlatformOverviewExample = CdkPlatformOverviewExample;
+    exports.CdkPopoverEditCdkTableFlexExample = CdkPopoverEditCdkTableFlexExample;
+    exports.CdkPopoverEditCdkTableExample = CdkPopoverEditCdkTableExample;
+    exports.CdkPopoverEditCellSpanVanillaTableExample = CdkPopoverEditCellSpanVanillaTableExample;
+    exports.CdkPopoverEditTabOutVanillaTableExample = CdkPopoverEditTabOutVanillaTableExample;
+    exports.CdkPopoverEditVanillaTableExample = CdkPopoverEditVanillaTableExample;
+    exports.CdkPortalOverviewExample = CdkPortalOverviewExample;
+    exports.ComponentPortalExample = ComponentPortalExample;
+    exports.CdkVirtualScrollContextExample = CdkVirtualScrollContextExample;
+    exports.CdkVirtualScrollCustomStrategyExample = CdkVirtualScrollCustomStrategyExample;
+    exports.CdkVirtualScrollDataSourceExample = CdkVirtualScrollDataSourceExample;
+    exports.CdkVirtualScrollDlExample = CdkVirtualScrollDlExample;
+    exports.CdkVirtualScrollFixedBufferExample = CdkVirtualScrollFixedBufferExample;
+    exports.CdkVirtualScrollHorizontalExample = CdkVirtualScrollHorizontalExample;
+    exports.CdkVirtualScrollOverviewExample = CdkVirtualScrollOverviewExample;
+    exports.CdkVirtualScrollTemplateCacheExample = CdkVirtualScrollTemplateCacheExample;
+    exports.CdkCustomStepperWithoutFormExample = CdkCustomStepperWithoutFormExample;
+    exports.CustomStepper = CustomStepper;
+    exports.CdkTableBasicFlexExample = CdkTableBasicFlexExample;
+    exports.CdkTableBasicExample = CdkTableBasicExample;
+    exports.TextFieldAutofillDirectiveExample = TextFieldAutofillDirectiveExample;
+    exports.TextFieldAutofillMonitorExample = TextFieldAutofillMonitorExample;
+    exports.TextFieldAutosizeTextareaExample = TextFieldAutosizeTextareaExample;
+    exports.CdkTreeFlatExample = CdkTreeFlatExample;
+    exports.CdkTreeNestedExample = CdkTreeNestedExample;
+    exports.AutocompleteAutoActiveFirstOptionExample = AutocompleteAutoActiveFirstOptionExample;
+    exports.AutocompleteDisplayExample = AutocompleteDisplayExample;
+    exports.AutocompleteFilterExample = AutocompleteFilterExample;
+    exports.AutocompleteOptgroupExample = AutocompleteOptgroupExample;
+    exports.AutocompleteOverviewExample = AutocompleteOverviewExample;
+    exports.AutocompletePlainInputExample = AutocompletePlainInputExample;
+    exports.AutocompleteSimpleExample = AutocompleteSimpleExample;
+    exports.BadgeOverviewExample = BadgeOverviewExample;
+    exports.BottomSheetOverviewExample = BottomSheetOverviewExample;
+    exports.BottomSheetOverviewExampleSheet = BottomSheetOverviewExampleSheet;
+    exports.ButtonToggleAppearanceExample = ButtonToggleAppearanceExample;
+    exports.ButtonToggleExclusiveExample = ButtonToggleExclusiveExample;
     exports.ButtonToggleOverviewExample = ButtonToggleOverviewExample;
+    exports.ButtonOverviewExample = ButtonOverviewExample;
+    exports.ButtonTypesExample = ButtonTypesExample;
+    exports.CardFancyExample = CardFancyExample;
+    exports.CardOverviewExample = CardOverviewExample;
+    exports.CheckboxConfigurableExample = CheckboxConfigurableExample;
+    exports.CheckboxOverviewExample = CheckboxOverviewExample;
+    exports.ChipsAutocompleteExample = ChipsAutocompleteExample;
+    exports.ChipsDragDropExample = ChipsDragDropExample;
+    exports.ChipsInputExample = ChipsInputExample;
+    exports.ChipsOverviewExample = ChipsOverviewExample;
+    exports.ChipsStackedExample = ChipsStackedExample;
+    exports.ElevationOverviewExample = ElevationOverviewExample;
+    exports.RippleOverviewExample = RippleOverviewExample;
+    exports.DatepickerApiExample = DatepickerApiExample;
+    exports.DatepickerColorExample = DatepickerColorExample;
+    exports.DatepickerCustomHeaderExample = DatepickerCustomHeaderExample;
+    exports.ExampleHeader = ExampleHeader;
+    exports.DatepickerCustomIconExample = DatepickerCustomIconExample;
+    exports.DatepickerDateClassExample = DatepickerDateClassExample;
+    exports.DatepickerDisabledExample = DatepickerDisabledExample;
+    exports.DatepickerEventsExample = DatepickerEventsExample;
+    exports.DatepickerFilterExample = DatepickerFilterExample;
+    exports.DatepickerFormatsExample = DatepickerFormatsExample;
+    exports.DatepickerLocaleExample = DatepickerLocaleExample;
+    exports.DatepickerMinMaxExample = DatepickerMinMaxExample;
+    exports.DatepickerMomentExample = DatepickerMomentExample;
+    exports.DatepickerOverviewExample = DatepickerOverviewExample;
+    exports.DatepickerStartViewExample = DatepickerStartViewExample;
+    exports.DatepickerTouchExample = DatepickerTouchExample;
+    exports.DatepickerValueExample = DatepickerValueExample;
+    exports.DatepickerViewsSelectionExample = DatepickerViewsSelectionExample;
+    exports.DialogContentExample = DialogContentExample;
+    exports.DialogContentExampleDialog = DialogContentExampleDialog;
+    exports.DialogDataExample = DialogDataExample;
+    exports.DialogDataExampleDialog = DialogDataExampleDialog;
+    exports.DialogElementsExample = DialogElementsExample;
+    exports.DialogElementsExampleDialog = DialogElementsExampleDialog;
+    exports.DialogOverviewExample = DialogOverviewExample;
+    exports.DialogOverviewExampleDialog = DialogOverviewExampleDialog;
+    exports.DividerOverviewExample = DividerOverviewExample;
+    exports.ExpansionExpandCollapseAllExample = ExpansionExpandCollapseAllExample;
     exports.ExpansionOverviewExample = ExpansionOverviewExample;
+    exports.ExpansionStepsExample = ExpansionStepsExample;
+    exports.FormFieldAppearanceExample = FormFieldAppearanceExample;
+    exports.FormFieldCustomControlExample = FormFieldCustomControlExample;
+    exports.MyTelInput = MyTelInput;
+    exports.FormFieldErrorExample = FormFieldErrorExample;
+    exports.FormFieldHintExample = FormFieldHintExample;
+    exports.FormFieldLabelExample = FormFieldLabelExample;
+    exports.FormFieldOverviewExample = FormFieldOverviewExample;
+    exports.FormFieldPrefixSuffixExample = FormFieldPrefixSuffixExample;
+    exports.FormFieldThemingExample = FormFieldThemingExample;
+    exports.GridListDynamicExample = GridListDynamicExample;
+    exports.GridListOverviewExample = GridListOverviewExample;
+    exports.IconOverviewExample = IconOverviewExample;
+    exports.IconSvgExample = IconSvgExample;
+    exports.InputClearableExample = InputClearableExample;
+    exports.InputErrorStateMatcherExample = InputErrorStateMatcherExample;
+    exports.InputErrorsExample = InputErrorsExample;
+    exports.InputFormExample = InputFormExample;
+    exports.InputHintExample = InputHintExample;
+    exports.InputOverviewExample = InputOverviewExample;
+    exports.InputPrefixSuffixExample = InputPrefixSuffixExample;
+    exports.ListOverviewExample = ListOverviewExample;
+    exports.ListSectionsExample = ListSectionsExample;
+    exports.ListSelectionExample = ListSelectionExample;
+    exports.MenuIconsExample = MenuIconsExample;
+    exports.MenuOverviewExample = MenuOverviewExample;
+    exports.MenuPositionExample = MenuPositionExample;
+    exports.NestedMenuExample = NestedMenuExample;
+    exports.PaginatorConfigurableExample = PaginatorConfigurableExample;
+    exports.PaginatorOverviewExample = PaginatorOverviewExample;
+    exports.PopoverEditCellSpanMatTableExample = PopoverEditCellSpanMatTableExample;
+    exports.PopoverEditMatTableFlexExample = PopoverEditMatTableFlexExample;
+    exports.PopoverEditMatTableExample = PopoverEditMatTableExample;
+    exports.PopoverEditTabOutMatTableExample = PopoverEditTabOutMatTableExample;
+    exports.ProgressBarBufferExample = ProgressBarBufferExample;
+    exports.ProgressBarConfigurableExample = ProgressBarConfigurableExample;
+    exports.ProgressBarDeterminateExample = ProgressBarDeterminateExample;
+    exports.ProgressBarIndeterminateExample = ProgressBarIndeterminateExample;
+    exports.ProgressBarQueryExample = ProgressBarQueryExample;
+    exports.ProgressSpinnerConfigurableExample = ProgressSpinnerConfigurableExample;
+    exports.ProgressSpinnerOverviewExample = ProgressSpinnerOverviewExample;
+    exports.RadioNgModelExample = RadioNgModelExample;
+    exports.RadioOverviewExample = RadioOverviewExample;
+    exports.SelectCustomTriggerExample = SelectCustomTriggerExample;
+    exports.SelectDisabledExample = SelectDisabledExample;
+    exports.SelectErrorStateMatcherExample = SelectErrorStateMatcherExample;
+    exports.SelectFormExample = SelectFormExample;
+    exports.SelectHintErrorExample = SelectHintErrorExample;
+    exports.SelectMultipleExample = SelectMultipleExample;
+    exports.SelectNoRippleExample = SelectNoRippleExample;
+    exports.SelectOptgroupExample = SelectOptgroupExample;
+    exports.SelectOverviewExample = SelectOverviewExample;
+    exports.SelectPanelClassExample = SelectPanelClassExample;
+    exports.SelectResetExample = SelectResetExample;
+    exports.SelectValueBindingExample = SelectValueBindingExample;
+    exports.SidenavAutosizeExample = SidenavAutosizeExample;
+    exports.SidenavBackdropExample = SidenavBackdropExample;
+    exports.SidenavDisableCloseExample = SidenavDisableCloseExample;
+    exports.SidenavDrawerOverviewExample = SidenavDrawerOverviewExample;
+    exports.SidenavFixedExample = SidenavFixedExample;
+    exports.SidenavModeExample = SidenavModeExample;
+    exports.SidenavOpenCloseExample = SidenavOpenCloseExample;
+    exports.SidenavOverviewExample = SidenavOverviewExample;
+    exports.SidenavPositionExample = SidenavPositionExample;
+    exports.SidenavResponsiveExample = SidenavResponsiveExample;
+    exports.SlideToggleConfigurableExample = SlideToggleConfigurableExample;
+    exports.SlideToggleFormsExample = SlideToggleFormsExample;
+    exports.SlideToggleOverviewExample = SlideToggleOverviewExample;
+    exports.SliderConfigurableExample = SliderConfigurableExample;
+    exports.SliderFormattingExample = SliderFormattingExample;
+    exports.SliderOverviewExample = SliderOverviewExample;
+    exports.SnackBarComponentExample = SnackBarComponentExample;
+    exports.PizzaPartyComponent = PizzaPartyComponent;
+    exports.SnackBarOverviewExample = SnackBarOverviewExample;
+    exports.SnackBarPositionExample = SnackBarPositionExample;
+    exports.SortOverviewExample = SortOverviewExample;
+    exports.StepperEditableExample = StepperEditableExample;
+    exports.StepperErrorsExample = StepperErrorsExample;
+    exports.StepperLabelPositionBottomExample = StepperLabelPositionBottomExample;
+    exports.StepperOptionalExample = StepperOptionalExample;
     exports.StepperOverviewExample = StepperOverviewExample;
+    exports.StepperStatesExample = StepperStatesExample;
+    exports.StepperVerticalExample = StepperVerticalExample;
+    exports.TableBasicFlexExample = TableBasicFlexExample;
+    exports.TableBasicExample = TableBasicExample;
+    exports.TableDynamicColumnsExample = TableDynamicColumnsExample;
+    exports.TableExpandableRowsExample = TableExpandableRowsExample;
+    exports.TableFilteringExample = TableFilteringExample;
+    exports.TableFooterRowExample = TableFooterRowExample;
+    exports.TableHttpExample = TableHttpExample;
+    exports.TableMultipleHeaderFooterExample = TableMultipleHeaderFooterExample;
+    exports.TableOverviewExample = TableOverviewExample;
+    exports.TablePaginationExample = TablePaginationExample;
+    exports.TableRowContextExample = TableRowContextExample;
+    exports.TableSelectionExample = TableSelectionExample;
+    exports.TableSortingExample = TableSortingExample;
+    exports.TableStickyColumnsExample = TableStickyColumnsExample;
+    exports.TableStickyComplexFlexExample = TableStickyComplexFlexExample;
+    exports.TableStickyComplexExample = TableStickyComplexExample;
+    exports.TableStickyFooterExample = TableStickyFooterExample;
+    exports.TableStickyHeaderExample = TableStickyHeaderExample;
+    exports.TableTextColumnAdvancedExample = TableTextColumnAdvancedExample;
+    exports.TableTextColumnExample = TableTextColumnExample;
+    exports.TableWrappedExample = TableWrappedExample;
+    exports.WrapperTable = WrapperTable;
+    exports.TabGroupAlignExample = TabGroupAlignExample;
+    exports.TabGroupAnimationsExample = TabGroupAnimationsExample;
+    exports.TabGroupAsyncExample = TabGroupAsyncExample;
+    exports.TabGroupBasicExample = TabGroupBasicExample;
+    exports.TabGroupCustomLabelExample = TabGroupCustomLabelExample;
+    exports.TabGroupDynamicHeightExample = TabGroupDynamicHeightExample;
+    exports.TabGroupDynamicExample = TabGroupDynamicExample;
+    exports.TabGroupHeaderBelowExample = TabGroupHeaderBelowExample;
+    exports.TabGroupLazyLoadedExample = TabGroupLazyLoadedExample;
+    exports.TabGroupStretchedExample = TabGroupStretchedExample;
+    exports.TabGroupThemeExample = TabGroupThemeExample;
+    exports.TabNavBarBasicExample = TabNavBarBasicExample;
+    exports.ToolbarMultirowExample = ToolbarMultirowExample;
+    exports.ToolbarOverviewExample = ToolbarOverviewExample;
+    exports.TooltipAutoHideExample = TooltipAutoHideExample;
+    exports.TooltipCustomClassExample = TooltipCustomClassExample;
+    exports.TooltipDelayExample = TooltipDelayExample;
+    exports.TooltipDisabledExample = TooltipDisabledExample;
+    exports.TooltipManualExample = TooltipManualExample;
+    exports.TooltipMessageExample = TooltipMessageExample;
+    exports.TooltipModifiedDefaultsExample = TooltipModifiedDefaultsExample;
+    exports.TooltipOverviewExample = TooltipOverviewExample;
+    exports.TooltipPositionExample = TooltipPositionExample;
+    exports.TreeChecklistExample = TreeChecklistExample;
+    exports.TreeDynamicExample = TreeDynamicExample;
+    exports.TreeFlatOverviewExample = TreeFlatOverviewExample;
+    exports.TreeLoadmoreExample = TreeLoadmoreExample;
+    exports.TreeNestedOverviewExample = TreeNestedOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

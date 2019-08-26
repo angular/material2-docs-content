@@ -1,185 +1,72 @@
-<div class="docs-markdown"><p>For help getting started with a new Angular app, check out the
-<a href="https://cli.angular.io/">Angular CLI</a>.</p>
-<p>For existing apps, follow these steps to begin using Angular Material.</p>
+<div class="docs-markdown"><h1>Getting Started with Angular Material</h1><p>This guide explains how to setup your Angular project to begin using Angular Material. It includes information on prerequisites, installing Angular Material, and optionally displaying a sample material component in your application to verify your setup.</p>
 
-        <h3 id="step-1-install-angular-material-angular-cdk-and-angular-animations" class="docs-header-link">
-          <span header-link="step-1-install-angular-material-angular-cdk-and-angular-animations"></span>
-          Step 1: Install Angular Material, Angular CDK and Angular Animations
+        <h3 id="new-to-angular-" class="docs-header-link">
+          <span header-link="new-to-angular-"></span>
+          New to Angular ?
         </h3>
-      <p>You can use either the npm or yarn command-line tool to install packages. Use whichever is appropriate for your project in the examples below.</p>
+      <p>If you are new to Angular or getting started with a new Angular application, see <a href="https://angular.io/start">Angular&#39;s full Getting Started Guide</a> and <a href="https://angular.io/guide/setup-local">Setting up your environment</a>.</p>
+<p>For existing applications, follow the steps below to begin using Angular Material:</p>
 
-        <h4 id="npm" class="docs-header-link">
-          <span header-link="npm"></span>
-          NPM
-        </h4>
-      <pre><code class="language-bash">npm install --save @angular/material @angular/cdk @angular/animations</code></pre>
-
-        <h4 id="yarn" class="docs-header-link">
-          <span header-link="yarn"></span>
-          Yarn
-        </h4>
-      <pre><code class="language-bash">yarn add @angular/material @angular/cdk @angular/animations</code></pre>
-
-        <h4 id="alternative-1-snapshot-build" class="docs-header-link">
-          <span header-link="alternative-1-snapshot-build"></span>
-          Alternative 1: Snapshot Build
-        </h4>
-      <p>A snapshot build with the latest changes from master is also available. Note that this snapshot
-build should not be considered stable and may break between releases.</p>
-
-        <h4 id="npm" class="docs-header-link">
-          <span header-link="npm"></span>
-          NPM
-        </h4>
-      <pre><code class="language-bash">npm install --save angular/material2-builds angular/cdk-builds angular/animations-builds</code></pre>
-
-        <h4 id="yarn" class="docs-header-link">
-          <span header-link="yarn"></span>
-          Yarn
-        </h4>
-      <pre><code class="language-bash">yarn add angular/material2-builds angular/cdk-builds angular/animations-builds</code></pre>
-
-        <h4 id="alternative-2-angular-devkit-6-" class="docs-header-link">
-          <span header-link="alternative-2-angular-devkit-6-"></span>
-          Alternative 2: Angular Devkit 6+
-        </h4>
-      <p>Using the Angular CLI <code>ng add</code> command will update your Angular project with the correct dependencies, perform configuration changes and execute initialization code.</p>
+        <h3 id="step-1-install-angular-material-npm-packages" class="docs-header-link">
+          <span header-link="step-1-install-angular-material-npm-packages"></span>
+          Step 1: Install Angular Material npm packages
+        </h3>
+      <p>Use the Angular CLI&#39;s install <a href="https://material.angular.io/guide/schematics">schematic</a> to set up your Angular Material project by running the following command:</p>
 <pre><code class="language-bash">ng add @angular/material</code></pre>
-
-        <h3 id="step-2-configure-animations" class="docs-header-link">
-          <span header-link="step-2-configure-animations"></span>
-          Step 2: Configure animations
-        </h3>
-      <p>Once the animations package is installed, import <code>BrowserAnimationsModule</code> into your application to enable animations support.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {BrowserAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser/animations'</span>;
-
-<span class="hljs-meta">@NgModule</span>({
-  ...
-  imports: [BrowserAnimationsModule],
-  ...
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PizzaPartyAppModule { }</code></pre>
-<p>Alternatively, you can disable animations by importing <code>NoopAnimationsModule</code>.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {NoopAnimationsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/platform-browser/animations'</span>;
-
-<span class="hljs-meta">@NgModule</span>({
-  ...
-  imports: [NoopAnimationsModule],
-  ...
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PizzaPartyAppModule { }</code></pre>
-
-        <h3 id="step-3-import-the-component-modules" class="docs-header-link">
-          <span header-link="step-3-import-the-component-modules"></span>
-          Step 3: Import the component modules
-        </h3>
-      <p>Import the NgModule for each component you want to use:</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
-
-<span class="hljs-meta">@NgModule</span>({
-  ...
-  imports: [MatButtonModule, MatCheckboxModule],
-  ...
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PizzaPartyAppModule { }</code></pre>
-<p>Alternatively, you can create a separate NgModule that imports and then re-exports all of the Angular Material components that you will use in your application. By exporting them again, other modules can simply include your <code>CustomMaterialModule</code> wherever Material components are needed, and automatically get all of the exported Material modules. A good place for importing/exporting the application-wide Material modules is the <a href="https://angular.io/guide/ngmodule-faq#sharedmodule">SharedModule</a>.</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
-<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
-
-<span class="hljs-meta">@NgModule</span>({
-  imports: [MatButtonModule, MatCheckboxModule],
-  exports: [MatButtonModule, MatCheckboxModule],
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MyOwnCustomMaterialModule { }</code></pre>
-<p>Whichever approach you use, be sure to import the Angular Material modules <em>after</em> Angular&#39;s
-<code>BrowserModule</code>, as the import order matters for NgModules.</p>
-
-        <h3 id="step-4-include-a-theme" class="docs-header-link">
-          <span header-link="step-4-include-a-theme"></span>
-          Step 4: Include a theme
-        </h3>
-      <p>Including a theme is <strong>required</strong> to apply all of the core and theme styles to your application.</p>
-<p>To get started with a prebuilt theme, include one of Angular Material&#39;s prebuilt themes globally
-in your application. If you&#39;re using the Angular CLI, you can add this to your <code>styles.css</code>:</p>
-<pre><code class="language-css">@<span class="hljs-keyword">import</span> <span class="hljs-string">"~@angular/material/prebuilt-themes/indigo-pink.css"</span>;</code></pre>
-<p>If you are not using the Angular CLI, you can include a prebuilt theme via a <code>&lt;link&gt;</code> element in
-your <code>index.html</code>.</p>
-<p>For more information on theming and instructions on how to create a custom theme, see the
-<a href="guide/theming">theming guide</a>.</p>
-
-        <h3 id="step-5-gesture-support" class="docs-header-link">
-          <span header-link="step-5-gesture-support"></span>
-          Step 5: Gesture Support
-        </h3>
-      <p>Some components (<code>mat-slide-toggle</code>, <code>mat-slider</code>, <code>matTooltip</code>) rely on
-<a href="http://hammerjs.github.io/">HammerJS</a> for gestures. In order to get the full feature-set of these
-components, HammerJS must be loaded into the application.</p>
-<p>You can add HammerJS to your application via <a href="https://www.npmjs.com/package/hammerjs">npm</a>, a CDN
-(such as the <a href="https://developers.google.com/speed/libraries/#hammerjs">Google CDN</a>), or served
-directly from your app.</p>
-<p>To install via npm, use the following command:</p>
-
-        <h4 id="npm" class="docs-header-link">
-          <span header-link="npm"></span>
-          NPM
-        </h4>
-      <pre><code class="language-bash">npm install --save hammerjs</code></pre>
-
-        <h4 id="yarn" class="docs-header-link">
-          <span header-link="yarn"></span>
-          Yarn
-        </h4>
-      <pre><code class="language-bash">yarn add hammerjs</code></pre>
-<p>After installing, import it on your app&#39;s entry point (e.g. <code>src/main.ts</code>).</p>
-<pre><code class="language-ts"><span class="hljs-keyword">import</span> <span class="hljs-string">'hammerjs'</span>;</code></pre>
-
-        <h3 id="step-6-optional-add-material-icons" class="docs-header-link">
-          <span header-link="step-6-optional-add-material-icons"></span>
-          Step 6 (Optional): Add Material Icons
-        </h3>
-      <p>If you want to use the <code>mat-icon</code> component with the official
-<a href="https://material.io/icons/">Material Design Icons</a>, load the icon font in your <code>index.html</code>.</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span></code></pre>
-<p>For more information on using Material Icons, check out the
-<a href="https://google.github.io/material-design-icons/">Material Icons Guide</a>.</p>
-<p>Note that <code>mat-icon</code> supports any font or svg icons; using Material Icons is one of many options.</p>
-
-        <h3 id="appendix-configuring-systemjs" class="docs-header-link">
-          <span header-link="appendix-configuring-systemjs"></span>
-          Appendix: Configuring SystemJS
-        </h3>
-      <p>If your project is using SystemJS for module loading, you will need to add <code>@angular/material</code> and
-<code>@angular/cdk</code> to the SystemJS configuration.</p>
-<p>The <code>@angular/cdk</code> package is organized of multiple entry-points.
-Each of these entry-points must be registered individually with SystemJS.</p>
-<p>Here is a example configuration where <code>@angular/material</code>, <code>@angular/cdk/platform</code> and
-<code>@angular/cdk/a11y</code> are used:</p>
-<pre><code class="language-js">System.config({
-  <span class="hljs-comment">// Existing configuration options</span>
-  map: {
-    <span class="hljs-comment">// ...</span>
-    <span class="hljs-string">'@angular/material'</span>: <span class="hljs-string">'npm:@angular/material/bundles/material.umd.js'</span>,
-
-    <span class="hljs-comment">// CDK individual packages</span>
-    <span class="hljs-string">'@angular/cdk/platform'</span>: <span class="hljs-string">'npm:@angular/cdk/bundles/cdk-platform.umd.js'</span>,
-    <span class="hljs-string">'@angular/cdk/a11y'</span>: <span class="hljs-string">'npm:@angular/cdk/bundles/cdk-a11y.umd.js'</span>,
-    <span class="hljs-comment">// ...</span>
-    <span class="hljs-string">'hammerjs'</span>: <span class="hljs-string">'npm:hammerjs'</span>,
-  },
-  <span class="hljs-attr">packages</span>: {
-    <span class="hljs-comment">//...</span>
-    hammerjs: {<span class="hljs-attr">main</span>: <span class="hljs-string">'./hammer.min.js'</span>, <span class="hljs-attr">defaultExtension</span>: <span class="hljs-string">'js'</span>}
-    <span class="hljs-comment">//...</span>
-  }
-});</code></pre>
-
-        <h3 id="example-angular-material-projects" class="docs-header-link">
-          <span header-link="example-angular-material-projects"></span>
-          Example Angular Material projects
-        </h3>
-      <ul>
-<li><a href="https://material.angular.io">material.angular.io</a> -
-We build our own documentation with Angular Material!</li>
+<p>The <code>ng add</code> command will install Angular Material, the <a href="https://material.angular.io/cdk/categories">Component Dev Kit (CDK)</a>, <a href="https://angular.io/guide/animations">Angular Animations</a> and ask you the following questions to determine which features to include:</p>
+<ol>
+<li><p>Choose a prebuilt theme name, or &quot;custom&quot; for a custom theme: </p>
+<p>You can choose from <a href="https://material.angular.io/guide/theming#using-a-pre-built-theme">prebuilt material design themes</a> or set up an extensible <a href="https://material.angular.io/guide/theming#defining-a-custom-theme">custom theme</a>.</p>
+</li>
+<li><p>Set up HammerJS for gesture recognition:</p>
+<p><a href="http://hammerjs.github.io/">HammerJS</a> provides gesture recognition capabilities required by some components (<code>mat-slide-toggle</code>, <code>mat-slider</code>, <code>matToolTip</code>).</p>
+<p>Please note, if you choose not to install HammerJS it can be installed later (see Appendix).</p>
+</li>
+<li><p>Set up browser animations for Angular Material:</p>
+<p>Importing the <a href="https://angular.io/api/platform-browser/animations/BrowserAnimationsModule"><code>BrowserAnimationsModule</code></a> into your application enables Angular&#39;s <a href="https://angular.io/guide/animations">animation system</a>. Declining this will disable most of Angular Material&#39;s animations.</p>
+</li>
+</ol>
+<p>The <code>ng add</code> command will additionally perform the following configurations:</p>
+<ul>
+<li>Add project dependencies to <code>package.json</code></li>
+<li>Add the Roboto font to your <code>index.html</code></li>
+<li>Add the Material Design icon font to your <code>index.html</code></li>
+<li>Add a few global CSS styles to:<ul>
+<li>Remove margins from <code>body</code></li>
+<li>Set <code>height: 100%</code> on <code>html</code> and <code>body</code></li>
+<li>Set Roboto as the default application font</li>
 </ul>
+</li>
+</ul>
+<p>You&#39;re done! Angular Material is now configured to be used in your application.</p>
+
+        <h3 id="step-2-display-an-example-angular-material-component" class="docs-header-link">
+          <span header-link="step-2-display-an-example-angular-material-component"></span>
+          Step 2: Display an example Angular Material component
+        </h3>
+      <p>Let&#39;s display a slider component in your app and verify that everything works.</p>
+<p>You need to import the <code>MatSliderModule</code> that you want to display by adding the following lines to your app.module.ts file.</p>
+<pre><code class="language-ts"><span class="hljs-keyword">import</span> { MatSliderModule } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material'</span>;
+…
+<span class="hljs-meta">@NgModule</span> ({....
+  imports: [...,
+  MatSliderModule,
+…]
+})</code></pre>
+<p>Add the <code>&lt;mat-slider&gt;</code> tag to the <code>app.component.html</code> like so:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-slider</span> <span class="hljs-attr">min</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">max</span>=<span class="hljs-string">"100"</span> <span class="hljs-attr">step</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-slider</span>&gt;</span></code></pre>
+<p>Run your local dev server:</p>
+<pre><code class="language-bash">ng serve</code></pre>
+<p>and point your browser to <a href="http://localhost:4200">http://localhost:4200</a></p>
+<p>You should see the material slider component on the page.</p>
+<p>In addition to the install schematic, Angular Material comes with <a href="https://material.angular.io/guide/schematics">several schematics</a> (like nav, table, address-form, etc.) that can be used to easily generate pre-built components in your application.</p>
+
+        <h3 id="appendix-installing-a-href-http-hammerjs-github-io-hammerjs-a-" class="docs-header-link">
+          <span header-link="appendix-installing-a-href-http-hammerjs-github-io-hammerjs-a-"></span>
+          Appendix: Installing <a href="http://hammerjs.github.io/">HammerJS</a>
+        </h3>
+      <p>HammerJS can be installed using the following npm command:</p>
+<pre><code class="language-bash">   npm install --save hammerjs</code></pre>
+<p>   After installing, import it on your app&#39;s entry point (e.g. <code>src/main.ts</code>).</p>
+<pre><code class="language-ts">   <span class="hljs-keyword">import</span> <span class="hljs-string">'hammer.js'</span>;</code></pre>
 </div>

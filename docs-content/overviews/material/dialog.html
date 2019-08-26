@@ -27,6 +27,35 @@ value is forwarded as the result of the <code>afterClosed</code> promise.</p>
   }
 }</code></pre>
 
+        <h3 id="configuring-dialog-content-via-code-entrycomponents-code-" class="docs-header-link">
+          <span header-link="configuring-dialog-content-via-code-entrycomponents-code-"></span>
+          Configuring dialog content via <code>entryComponents</code>
+        </h3>
+      <p>Because <code>MatDialog</code> instantiates components at run-time, the Angular compiler needs extra
+information to create the necessary <code>ComponentFactory</code> for your dialog content component.</p>
+<p>For any component loaded into a dialog, you must include your component class in the list of
+<code>entryComponents</code> in your NgModule definition so that the Angular compiler knows to create
+the <code>ComponentFactory</code> for it.</p>
+<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
+  imports: [
+    <span class="hljs-comment">// ...</span>
+    MatDialogModule
+  ],
+
+  declarations: [
+    AppComponent,
+    ExampleDialogComponent
+  ],
+
+  entryComponents: [
+    ExampleDialogComponent
+  ],
+
+  providers: [],
+  bootstrap: [AppComponent]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule {}</code></pre>
+
         <h3 id="specifying-global-configuration-defaults" class="docs-header-link">
           <span header-link="specifying-global-configuration-defaults"></span>
           Specifying global configuration defaults
@@ -59,6 +88,11 @@ option to pass information to the dialog component.</p>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> YourDialog {
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-meta">@Inject</span>(MAT_DIALOG_DATA) <span class="hljs-keyword">public</span> data: <span class="hljs-built_in">any</span></span>) { }
 }</code></pre>
+<p>Note that if you&#39;re using a template dialog (one that was opened with a <code>TemplateRef</code>), the data
+will be available implicitly in the template:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> <span class="hljs-attr">let-data</span>&gt;</span>
+  Hello, {{data.name}}
+<span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span></code></pre>
 <div material-docs-example="dialog-data"></div>
 
 
@@ -104,35 +138,6 @@ option to pass information to the dialog component.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>Not Tabbable<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
 <div material-docs-example="dialog-content"></div>
 
-
-        <h3 id="configuring-dialog-content-via-code-entrycomponents-code-" class="docs-header-link">
-          <span header-link="configuring-dialog-content-via-code-entrycomponents-code-"></span>
-          Configuring dialog content via <code>entryComponents</code>
-        </h3>
-      <p>Because <code>MatDialog</code> instantiates components at run-time, the Angular compiler needs extra
-information to create the necessary <code>ComponentFactory</code> for your dialog content component.</p>
-<p>For any component loaded into a dialog, you must include your component class in the list of
-<code>entryComponents</code> in your NgModule definition so that the Angular compiler knows to create
-the <code>ComponentFactory</code> for it.</p>
-<pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
-  imports: [
-    <span class="hljs-comment">// ...</span>
-    MatDialogModule
-  ],
-
-  declarations: [
-    AppComponent,
-    ExampleDialogComponent
-  ],
-
-  entryComponents: [
-    ExampleDialogComponent
-  ],
-
-  providers: [],
-  bootstrap: [AppComponent]
-})
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule {}</code></pre>
 
         <h3 id="accessibility" class="docs-header-link">
           <span header-link="accessibility"></span>
