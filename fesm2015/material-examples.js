@@ -7674,9 +7674,6 @@ class SliderFormattingExample {
      * @return {?}
      */
     formatLabel(value) {
-        if (!value) {
-            return 0;
-        }
         if (value >= 1000) {
             return Math.round(value / 1000) + 'k';
         }
