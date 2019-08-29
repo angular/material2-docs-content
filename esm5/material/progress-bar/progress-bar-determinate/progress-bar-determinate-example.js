@@ -1,4 +1,3 @@
-import * as tslib_1 from "tslib";
 import { Component } from '@angular/core';
 /**
  * @title Determinate progress-bar
@@ -6,14 +5,14 @@ import { Component } from '@angular/core';
 var ProgressBarDeterminateExample = /** @class */ (function () {
     function ProgressBarDeterminateExample() {
     }
-    ProgressBarDeterminateExample = tslib_1.__decorate([
-        Component({
-            selector: 'progress-bar-determinate-example',
-            template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>\n",
-            styles: ["/** No CSS for this example */\n"]
-        })
-    ], ProgressBarDeterminateExample);
+    ProgressBarDeterminateExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'progress-bar-determinate-example',
+                    template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>\n",
+                    styles: ["/** No CSS for this example */\n"]
+                }] }
+    ];
     return ProgressBarDeterminateExample;
 }());
 export { ProgressBarDeterminateExample };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvZ3Jlc3MtYmFyLWRldGVybWluYXRlLWV4YW1wbGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvbWF0ZXJpYWwtZXhhbXBsZXMvbWF0ZXJpYWwvcHJvZ3Jlc3MtYmFyL3Byb2dyZXNzLWJhci1kZXRlcm1pbmF0ZS9wcm9ncmVzcy1iYXItZGV0ZXJtaW5hdGUtZXhhbXBsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsT0FBTyxFQUFDLFNBQVMsRUFBQyxNQUFNLGVBQWUsQ0FBQztBQUV4Qzs7R0FFRztBQU1IO0lBQUE7SUFBNEMsQ0FBQztJQUFoQyw2QkFBNkI7UUFMekMsU0FBUyxDQUFDO1lBQ1QsUUFBUSxFQUFFLGtDQUFrQztZQUM1QyxxRkFBb0Q7O1NBRXJELENBQUM7T0FDVyw2QkFBNkIsQ0FBRztJQUFELG9DQUFDO0NBQUEsQUFBN0MsSUFBNkM7U0FBaEMsNkJBQTZCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG4vKipcbiAqIEB0aXRsZSBEZXRlcm1pbmF0ZSBwcm9ncmVzcy1iYXJcbiAqL1xuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAncHJvZ3Jlc3MtYmFyLWRldGVybWluYXRlLWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ3Byb2dyZXNzLWJhci1kZXRlcm1pbmF0ZS1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsncHJvZ3Jlc3MtYmFyLWRldGVybWluYXRlLWV4YW1wbGUuY3NzJ10sXG59KVxuZXhwb3J0IGNsYXNzIFByb2dyZXNzQmFyRGV0ZXJtaW5hdGVFeGFtcGxlIHt9XG4iXX0=
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvZ3Jlc3MtYmFyLWRldGVybWluYXRlLWV4YW1wbGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvbWF0ZXJpYWwtZXhhbXBsZXMvbWF0ZXJpYWwvcHJvZ3Jlc3MtYmFyL3Byb2dyZXNzLWJhci1kZXRlcm1pbmF0ZS9wcm9ncmVzcy1iYXItZGV0ZXJtaW5hdGUtZXhhbXBsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDO0FBRXhDOztHQUVHO0FBQ0g7SUFBQTtJQUs0QyxDQUFDOztnQkFMNUMsU0FBUyxTQUFDO29CQUNULFFBQVEsRUFBRSxrQ0FBa0M7b0JBQzVDLHFGQUFvRDs7aUJBRXJEOztJQUMyQyxvQ0FBQztDQUFBLEFBTDdDLElBSzZDO1NBQWhDLDZCQUE2QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBAdGl0bGUgRGV0ZXJtaW5hdGUgcHJvZ3Jlc3MtYmFyXG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ3Byb2dyZXNzLWJhci1kZXRlcm1pbmF0ZS1leGFtcGxlJyxcbiAgdGVtcGxhdGVVcmw6ICdwcm9ncmVzcy1iYXItZGV0ZXJtaW5hdGUtZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ3Byb2dyZXNzLWJhci1kZXRlcm1pbmF0ZS1leGFtcGxlLmNzcyddLFxufSlcbmV4cG9ydCBjbGFzcyBQcm9ncmVzc0JhckRldGVybWluYXRlRXhhbXBsZSB7fVxuIl19
