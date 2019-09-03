@@ -1378,6 +1378,10 @@ sorting (using MatSort), and pagination (using MatPaginator).</p>
 <p>Allows for sort customization by overriding sortingDataAccessor, which defines how data
 properties are accessed. Also allows for filter customization by overriding filterTermAccessor,
 which defines how row data is converted to a string for filter matching.</p>
+<p><strong>Note:</strong> This class is meant to be a simple data source to help you get started. As such
+it isn&#39;t equipped to handle some more advanced cases like robust i18n support or server-side
+interactions. If your app needs to support more advanced use cases, consider implementing your
+own <code>DataSource</code>.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
