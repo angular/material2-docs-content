@@ -88,7 +88,7 @@ Without this <code>Intl.DateTimeFormat</code> sometimes chooses the wrong timeZo
 the result. (e.g. in the en-US locale <code>new Date(1800, 7, 14).toLocaleDateString()</code>
 will produce <code>&#39;8/13/1800&#39;</code>.</p>
 <p>TODO(mmalerba): drop this variable. It&#39;s not being used in the code right now. We&#39;re now
-getting the string representation of a Date object from it&#39;s utc representation. We&#39;re keeping
+getting the string representation of a Date object from its utc representation. We&#39;re keeping
 it here for sometime, just for precaution, in case we decide to revert some of these changes
 though.</p>
 </td>
@@ -2529,7 +2529,7 @@ month and date.</p>
 deserialize should only accept non-ambiguous, locale-independent formats (e.g. a ISO 8601
 string). The default implementation does not allow any deserialization, it simply checks that
 the given value is already a valid date object or null. The <code>&lt;mat-datepicker&gt;</code> will call this
-method on all of it&#39;s <code>@Input()</code> properties that accept dates. It is therefore possible to
+method on all of its <code>@Input()</code> properties that accept dates. It is therefore possible to
 support passing values from your backend directly to these properties by overriding this method
 to also deserialize the format used by your backend.</p>
 
