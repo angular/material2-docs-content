@@ -3555,6 +3555,75 @@ such as the <code>min</code> or <code>max</code> attribute of an <code>&lt;input
     
       
 
+<h4 id="GranularSanityChecks" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="GranularSanityChecks"></span>
+  <code>GranularSanityChecks</code>
+</h4><p class="docs-api-interface-description"><p>Object that can be used to configure the sanity checks granularly.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>doctype: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hammer: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>theme: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>version: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
 <h4 id="LabelOptions" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="LabelOptions"></span>
   <code>LabelOptions</code>
@@ -3925,6 +3994,21 @@ For component with <code>errorState</code> and need to update <code>errorState</
     
       
 
+<h4 id="SanityChecks" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="SanityChecks"></span>
+  <code>SanityChecks</code>
+</h4><p class="docs-api-type-alias-description"><p>Possible sanity checks that can be enabled. If set to
+true/false, all checks will be enabled/disabled.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> SanityChecks = <span class="hljs-built_in">boolean</span> | GranularSanityChecks;</code>
+</pre>
+</div>
+
+
+    
+      
+
 <h4 id="ThemePalette" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="ThemePalette"></span>
   <code>ThemePalette</code>
@@ -4000,7 +4084,7 @@ For component with <code>errorState</code> and need to update <code>errorState</
 </h4><p class="docs-api-constant-description"><p>Injection token that configures whether the Material sanity checks are enabled.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MATERIAL_SANITY_CHECKS: InjectionToken&lt;<span class="hljs-built_in">boolean</span>&gt;;</code>
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> MATERIAL_SANITY_CHECKS: InjectionToken&lt;SanityChecks&gt;;</code>
 </pre>
 </div>
 
