@@ -1,0 +1,11 @@
+{
+  "name": "@angular/material-examples/material/toolbar",
+  "main": "../../bundles/material-examples-material-toolbar.umd.js",
+  "fesm5": "../../fesm5/material/toolbar.js",
+  "fesm2015": "../../fesm2015/material/toolbar.js",
+  "esm5": "../../esm5/material/toolbar/index.js",
+  "esm2015": "../../esm2015/material/toolbar/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/material/toolbar.js",
+  "es2015": "../../fesm2015/material/toolbar.js"
+}

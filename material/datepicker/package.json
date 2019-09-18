@@ -1,0 +1,11 @@
+{
+  "name": "@angular/material-examples/material/datepicker",
+  "main": "../../bundles/material-examples-material-datepicker.umd.js",
+  "fesm5": "../../fesm5/material/datepicker.js",
+  "fesm2015": "../../fesm2015/material/datepicker.js",
+  "esm5": "../../esm5/material/datepicker/index.js",
+  "esm2015": "../../esm2015/material/datepicker/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/material/datepicker.js",
+  "es2015": "../../fesm2015/material/datepicker.js"
+}

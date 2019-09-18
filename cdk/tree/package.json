@@ -1,0 +1,11 @@
+{
+  "name": "@angular/material-examples/cdk/tree",
+  "main": "../../bundles/material-examples-cdk-tree.umd.js",
+  "fesm5": "../../fesm5/cdk/tree.js",
+  "fesm2015": "../../fesm2015/cdk/tree.js",
+  "esm5": "../../esm5/cdk/tree/index.js",
+  "esm2015": "../../esm2015/cdk/tree/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/cdk/tree.js",
+  "es2015": "../../fesm2015/cdk/tree.js"
+}

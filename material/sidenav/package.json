@@ -1,0 +1,11 @@
+{
+  "name": "@angular/material-examples/material/sidenav",
+  "main": "../../bundles/material-examples-material-sidenav.umd.js",
+  "fesm5": "../../fesm5/material/sidenav.js",
+  "fesm2015": "../../fesm2015/material/sidenav.js",
+  "esm5": "../../esm5/material/sidenav/index.js",
+  "esm2015": "../../esm2015/material/sidenav/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/material/sidenav.js",
+  "es2015": "../../fesm2015/material/sidenav.js"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@angular/material-examples/cdk/table",
+  "main": "../../bundles/material-examples-cdk-table.umd.js",
+  "fesm5": "../../fesm5/cdk/table.js",
+  "fesm2015": "../../fesm2015/cdk/table.js",
+  "esm5": "../../esm5/cdk/table/index.js",
+  "esm2015": "../../esm2015/cdk/table/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/cdk/table.js",
+  "es2015": "../../fesm2015/cdk/table.js"
+}
