@@ -1,0 +1,11 @@
+{
+  "name": "@angular/material-examples/material/card",
+  "main": "../../bundles/material-examples-material-card.umd.js",
+  "fesm5": "../../fesm5/material/card.js",
+  "fesm2015": "../../fesm2015/material/card.js",
+  "esm5": "../../esm5/material/card/index.js",
+  "esm2015": "../../esm2015/material/card/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/material/card.js",
+  "es2015": "../../fesm2015/material/card.js"
+}

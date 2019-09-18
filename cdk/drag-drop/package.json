@@ -1,0 +1,11 @@
+{
+  "name": "@angular/material-examples/cdk/drag-drop",
+  "main": "../../bundles/material-examples-cdk-drag-drop.umd.js",
+  "fesm5": "../../fesm5/cdk/drag-drop.js",
+  "fesm2015": "../../fesm2015/cdk/drag-drop.js",
+  "esm5": "../../esm5/cdk/drag-drop/index.js",
+  "esm2015": "../../esm2015/cdk/drag-drop/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/cdk/drag-drop.js",
+  "es2015": "../../fesm2015/cdk/drag-drop.js"
+}

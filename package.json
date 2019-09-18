@@ -1,11 +1,11 @@
 {
   "name": "@angular/material-examples",
-  "version": "8.2.0-9e8e4e6",
+  "version": "8.2.0-e05a966",
   "description": "Angular Material Examples",
   "main": "./bundles/material-examples.umd.js",
   "module": "./fesm5/material-examples.js",
   "es2015": "./fesm2015/material-examples.js",
-  "typings": "./examples_public_index.d.ts",
+  "typings": "./index.d.ts",
   "private": true,
   "repository": {
     "type": "git",
@@ -23,19 +23,19 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "8.2.0-9e8e4e6",
-    "@angular/cdk-experimental": "8.2.0-9e8e4e6",
+    "@angular/cdk": "8.2.0-e05a966",
+    "@angular/cdk-experimental": "8.2.0-e05a966",
     "@angular/core": "^8.0.0 || ^9.0.0-0",
     "@angular/common": "^8.0.0 || ^9.0.0-0",
-    "@angular/material": "8.2.0-9e8e4e6",
-    "@angular/material-experimental": "8.2.0-9e8e4e6",
-    "@angular/material-moment-adapter": "8.2.0-9e8e4e6"
+    "@angular/material": "8.2.0-e05a966",
+    "@angular/material-experimental": "8.2.0-e05a966",
+    "@angular/material-moment-adapter": "8.2.0-e05a966"
   },
   "dependencies": {
     "tslib": "^1.7.1"
   },
   "fesm5": "./fesm5/material-examples.js",
   "fesm2015": "./fesm2015/material-examples.js",
-  "esm5": "./esm5/examples_public_index.js",
-  "esm2015": "./esm2015/examples_public_index.js"
+  "esm5": "./esm5/index.js",
+  "esm2015": "./esm2015/index.js"
 }
