@@ -1,4 +1,5 @@
 import { Component, ViewChild, NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
@@ -77,6 +78,7 @@ var ExpansionExamplesModule = /** @class */ (function () {
     ExpansionExamplesModule.decorators = [
         { type: NgModule, args: [{
                     imports: [
+                        MatButtonModule,
                         MatDatepickerModule,
                         MatExpansionModule,
                         MatIconModule,

@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/badge'), require('@angular/material/icon')) :
-    typeof define === 'function' && define.amd ? define('@angular/material-examples/material/badge', ['exports', '@angular/core', '@angular/material/badge', '@angular/material/icon'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.badge = {}), global.ng.core, global.ng.material.badge, global.ng.material.icon));
-}(this, function (exports, core, badge, icon) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/badge'), require('@angular/material/button'), require('@angular/material/icon')) :
+    typeof define === 'function' && define.amd ? define('@angular/material-examples/material/badge', ['exports', '@angular/core', '@angular/material/badge', '@angular/material/button', '@angular/material/icon'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.badge = {}), global.ng.core, global.ng.material.badge, global.ng.material.button, global.ng.material.icon));
+}(this, function (exports, core, badge, button, icon) { 'use strict';
 
     /**
      * @title Badge overview
@@ -30,6 +30,7 @@
             { type: core.NgModule, args: [{
                         imports: [
                             badge.MatBadgeModule,
+                            button.MatButtonModule,
                             icon.MatIconModule,
                         ],
                         declarations: EXAMPLES,

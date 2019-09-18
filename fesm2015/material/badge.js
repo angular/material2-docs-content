@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 /**
@@ -33,6 +34,7 @@ BadgeExamplesModule.decorators = [
     { type: NgModule, args: [{
                 imports: [
                     MatBadgeModule,
+                    MatButtonModule,
                     MatIconModule,
                 ],
                 declarations: EXAMPLES,

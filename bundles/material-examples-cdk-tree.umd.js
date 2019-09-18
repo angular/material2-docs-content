@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/tree'), require('@angular/core'), require('@angular/material/icon'), require('@angular/cdk/collections')) :
-    typeof define === 'function' && define.amd ? define('@angular/material-examples/cdk/tree', ['exports', '@angular/cdk/tree', '@angular/core', '@angular/material/icon', '@angular/cdk/collections'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.cdk = global.ng.materialExamples.cdk || {}, global.ng.materialExamples.cdk.tree = {}), global.ng.cdk.tree, global.ng.core, global.ng.material.icon, global.ng.cdk.collections));
-}(this, function (exports, tree, core, icon, collections) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/tree'), require('@angular/core'), require('@angular/material/button'), require('@angular/material/icon'), require('@angular/cdk/collections')) :
+    typeof define === 'function' && define.amd ? define('@angular/material-examples/cdk/tree', ['exports', '@angular/cdk/tree', '@angular/core', '@angular/material/button', '@angular/material/icon', '@angular/cdk/collections'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.cdk = global.ng.materialExamples.cdk || {}, global.ng.materialExamples.cdk.tree = {}), global.ng.cdk.tree, global.ng.core, global.ng.material.button, global.ng.material.icon, global.ng.cdk.collections));
+}(this, function (exports, tree, core, button, icon, collections) { 'use strict';
 
     var TREE_DATA = [
         {
@@ -140,6 +140,7 @@
             { type: core.NgModule, args: [{
                         imports: [
                             tree.CdkTreeModule,
+                            button.MatButtonModule,
                             icon.MatIconModule,
                         ],
                         declarations: EXAMPLES,

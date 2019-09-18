@@ -1,5 +1,6 @@
 import { FlatTreeControl, NestedTreeControl, CdkTreeModule } from '@angular/cdk/tree';
 import { Component, NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ArrayDataSource } from '@angular/cdk/collections';
 
@@ -226,6 +227,7 @@ CdkTreeExamplesModule.decorators = [
     { type: NgModule, args: [{
                 imports: [
                     CdkTreeModule,
+                    MatButtonModule,
                     MatIconModule,
                 ],
                 declarations: EXAMPLES,

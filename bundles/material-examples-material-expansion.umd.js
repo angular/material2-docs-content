@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/datepicker'), require('@angular/material/expansion'), require('@angular/material/icon'), require('@angular/material/input')) :
-    typeof define === 'function' && define.amd ? define('@angular/material-examples/material/expansion', ['exports', '@angular/core', '@angular/material/datepicker', '@angular/material/expansion', '@angular/material/icon', '@angular/material/input'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.expansion = {}), global.ng.core, global.ng.material.datepicker, global.ng.material.expansion, global.ng.material.icon, global.ng.material.input));
-}(this, function (exports, core, datepicker, expansion, icon, input) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/datepicker'), require('@angular/material/expansion'), require('@angular/material/icon'), require('@angular/material/input')) :
+    typeof define === 'function' && define.amd ? define('@angular/material-examples/material/expansion', ['exports', '@angular/core', '@angular/material/button', '@angular/material/datepicker', '@angular/material/expansion', '@angular/material/icon', '@angular/material/input'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.expansion = {}), global.ng.core, global.ng.material.button, global.ng.material.datepicker, global.ng.material.expansion, global.ng.material.icon, global.ng.material.input));
+}(this, function (exports, core, button, datepicker, expansion, icon, input) { 'use strict';
 
     /**
      * @title Accordion with expand/collapse all toggles
@@ -77,6 +77,7 @@
         ExpansionExamplesModule.decorators = [
             { type: core.NgModule, args: [{
                         imports: [
+                            button.MatButtonModule,
                             datepicker.MatDatepickerModule,
                             expansion.MatExpansionModule,
                             icon.MatIconModule,

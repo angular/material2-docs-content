@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef, MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 
 /**
@@ -90,6 +91,7 @@ BottomSheetExamplesModule.decorators = [
     { type: NgModule, args: [{
                 imports: [
                     MatBottomSheetModule,
+                    MatButtonModule,
                     MatListModule,
                 ],
                 declarations: EXAMPLES,
