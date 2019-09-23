@@ -1,0 +1,11 @@
+{
+  "name": "@angular/material-examples/cdk-experimental/popover-edit",
+  "main": "../../bundles/material-examples-cdk-experimental-popover-edit.umd.js",
+  "fesm5": "../../fesm5/cdk-experimental/popover-edit.js",
+  "fesm2015": "../../fesm2015/cdk-experimental/popover-edit.js",
+  "esm5": "../../esm5/cdk-experimental/popover-edit/index.js",
+  "esm2015": "../../esm2015/cdk-experimental/popover-edit/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/cdk-experimental/popover-edit.js",
+  "es2015": "../../fesm2015/cdk-experimental/popover-edit.js"
+}
