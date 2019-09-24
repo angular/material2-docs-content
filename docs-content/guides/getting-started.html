@@ -1,15 +1,11 @@
 <div class="docs-markdown"><h1>Getting Started with Angular Material</h1><p>This guide explains how to setup your Angular project to begin using Angular Material. It includes information on prerequisites, installing Angular Material, and optionally displaying a sample material component in your application to verify your setup.</p>
+<p><em>Angular Resources</em></p>
+<p>If you are new to Angular or getting started with a new Angular application, see <a href="https://angular.io/start">Angular&#39;s full Getting Started Guide</a> and <a href="https://angular.io/guide/setup-local">Setting up your environment</a>.</p>
+<p>For existing applications, follow the steps below to begin using Angular Material.</p>
 
-        <h3 id="new-to-angular-" class="docs-header-link">
-          <span header-link="new-to-angular-"></span>
-          New to Angular ?
-        </h3>
-      <p>If you are new to Angular or getting started with a new Angular application, see <a href="https://angular.io/start">Angular&#39;s full Getting Started Guide</a> and <a href="https://angular.io/guide/setup-local">Setting up your environment</a>.</p>
-<p>For existing applications, follow the steps below to begin using Angular Material:</p>
-
-        <h3 id="step-1-install-angular-material-npm-packages" class="docs-header-link">
-          <span header-link="step-1-install-angular-material-npm-packages"></span>
-          Step 1: Install Angular Material npm packages
+        <h3 id="install-angular-material" class="docs-header-link">
+          <span header-link="install-angular-material"></span>
+          Install Angular Material
         </h3>
       <p>Use the Angular CLI&#39;s install <a href="https://material.angular.io/guide/schematics">schematic</a> to set up your Angular Material project by running the following command:</p>
 <pre><code class="language-bash">ng add @angular/material</code></pre>
@@ -20,7 +16,8 @@
 </li>
 <li><p>Set up HammerJS for gesture recognition:</p>
 <p><a href="http://hammerjs.github.io/">HammerJS</a> provides gesture recognition capabilities required by some components (<code>mat-slide-toggle</code>, <code>mat-slider</code>, <code>matToolTip</code>).</p>
-<p>Please note, if you choose not to install HammerJS it can be installed later (see Appendix).</p>
+<p>Please note, if you choose not to install HammerJS it can be installed later
+(see <a href="#installing-hammerjs">Appendix</a>).</p>
 </li>
 <li><p>Set up browser animations for Angular Material:</p>
 <p>Importing the <a href="https://angular.io/api/platform-browser/animations/BrowserAnimationsModule"><code>BrowserAnimationsModule</code></a> into your application enables Angular&#39;s <a href="https://angular.io/guide/animations">animation system</a>. Declining this will disable most of Angular Material&#39;s animations.</p>
@@ -40,9 +37,9 @@
 </ul>
 <p>You&#39;re done! Angular Material is now configured to be used in your application.</p>
 
-        <h3 id="step-2-display-an-example-angular-material-component" class="docs-header-link">
-          <span header-link="step-2-display-an-example-angular-material-component"></span>
-          Step 2: Display an example Angular Material component
+        <h3 id="display-a-component" class="docs-header-link">
+          <span header-link="display-a-component"></span>
+          Display a component
         </h3>
       <p>Let&#39;s display a slider component in your app and verify that everything works.</p>
 <p>You need to import the <code>MatSliderModule</code> that you want to display by adding the following lines to your app.module.ts file.</p>
@@ -61,12 +58,17 @@
 <p>You should see the material slider component on the page.</p>
 <p>In addition to the install schematic, Angular Material comes with <a href="https://material.angular.io/guide/schematics">several schematics</a> (like nav, table, address-form, etc.) that can be used to easily generate pre-built components in your application.</p>
 
-        <h3 id="appendix-installing-a-href-http-hammerjs-github-io-hammerjs-a-" class="docs-header-link">
-          <span header-link="appendix-installing-a-href-http-hammerjs-github-io-hammerjs-a-"></span>
-          Appendix: Installing <a href="http://hammerjs.github.io/">HammerJS</a>
+        <h3 id="appendix" class="docs-header-link">
+          <span header-link="appendix"></span>
+          Appendix
         </h3>
-      <p>HammerJS can be installed using the following npm command:</p>
+      
+        <h4 id="installing-hammerjs" class="docs-header-link">
+          <span header-link="installing-hammerjs"></span>
+          Installing HammerJS
+        </h4>
+      <p><a href="http://hammerjs.github.io/">HammerJS</a> can be installed using the following npm command:</p>
 <pre><code class="language-bash">   npm install --save hammerjs</code></pre>
 <p>   After installing, import it on your app&#39;s entry point (e.g. <code>src/main.ts</code>).</p>
-<pre><code class="language-ts">   <span class="hljs-keyword">import</span> <span class="hljs-string">'hammer.js'</span>;</code></pre>
+<pre><code class="language-ts">   <span class="hljs-keyword">import</span> <span class="hljs-string">'hammerjs'</span>;</code></pre>
 </div>
