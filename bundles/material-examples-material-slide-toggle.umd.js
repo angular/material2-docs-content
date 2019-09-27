@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/radio'), require('@angular/material/slide-toggle')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/slide-toggle', ['exports', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/card', '@angular/material/checkbox', '@angular/material/radio', '@angular/material/slide-toggle'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.slideToggle = {}), global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.card, global.ng.material.checkbox, global.ng.material.radio, global.ng.material['slide-toggle']));
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.slideToggle = {}), global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.card, global.ng.material.checkbox, global.ng.material.radio, global.ng.material.slideToggle));
 }(this, function (exports, core, forms, button, card, checkbox, radio, slideToggle) { 'use strict';
 
     /**

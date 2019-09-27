@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button-toggle'), require('@angular/material/icon')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/button-toggle', ['exports', '@angular/core', '@angular/material/button-toggle', '@angular/material/icon'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.buttonToggle = {}), global.ng.core, global.ng.material['button-toggle'], global.ng.material.icon));
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.buttonToggle = {}), global.ng.core, global.ng.material.buttonToggle, global.ng.material.icon));
 }(this, function (exports, core, buttonToggle, icon) { 'use strict';
 
     /**

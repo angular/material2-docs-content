@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/text-field'), require('@angular/common'), require('@angular/core'), require('@angular/material/input'), require('@angular/material/select'), require('rxjs/operators')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/cdk/text-field', ['exports', '@angular/cdk/text-field', '@angular/common', '@angular/core', '@angular/material/input', '@angular/material/select', 'rxjs/operators'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.cdk = global.ng.materialExamples.cdk || {}, global.ng.materialExamples.cdk.textField = {}), global.ng.cdk['text-field'], global.ng.common, global.ng.core, global.ng.material.input, global.ng.material.select, global.rxjs.operators));
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.cdk = global.ng.materialExamples.cdk || {}, global.ng.materialExamples.cdk.textField = {}), global.ng.cdk.textField, global.ng.common, global.ng.core, global.ng.material.input, global.ng.material.select, global.rxjs.operators));
 }(this, function (exports, textField, common, core, input, select, operators) { 'use strict';
 
     /** @title Monitoring autofill state with cdkAutofill */

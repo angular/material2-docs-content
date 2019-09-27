@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/bottom-sheet'), require('@angular/material/button'), require('@angular/material/list')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/bottom-sheet', ['exports', '@angular/core', '@angular/material/bottom-sheet', '@angular/material/button', '@angular/material/list'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.bottomSheet = {}), global.ng.core, global.ng.material['bottom-sheet'], global.ng.material.button, global.ng.material.list));
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.bottomSheet = {}), global.ng.core, global.ng.material.bottomSheet, global.ng.material.button, global.ng.material.list));
 }(this, function (exports, core, bottomSheet, button, list) { 'use strict';
 
     /**

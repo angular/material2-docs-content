@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk-experimental/popover-edit'), require('@angular/cdk/table'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('tslib'), require('@angular/cdk/collections'), require('rxjs')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/cdk-experimental/popover-edit', ['exports', '@angular/cdk-experimental/popover-edit', '@angular/cdk/table', '@angular/common', '@angular/core', '@angular/forms', 'tslib', '@angular/cdk/collections', 'rxjs'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.cdkExperimental = global.ng.materialExamples.cdkExperimental || {}, global.ng.materialExamples.cdkExperimental.popoverEdit = {}), global.ng.cdkExperimental['popover-edit'], global.ng.cdk.table, global.ng.common, global.ng.core, global.ng.forms, global.tslib, global.ng.cdk.collections, global.rxjs));
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.cdkExperimental = global.ng.materialExamples.cdkExperimental || {}, global.ng.materialExamples.cdkExperimental.popoverEdit = {}), global.ng.cdkExperimental.popoverEdit, global.ng.cdk.table, global.ng.common, global.ng.core, global.ng.forms, global.tslib, global.ng.cdk.collections, global.rxjs));
 }(this, function (exports, popoverEdit, table, common, core, forms, tslib_1, collections, rxjs) { 'use strict';
 
     var ELEMENT_DATA = [

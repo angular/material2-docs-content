@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/material/grid-list')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/grid-list', ['exports', '@angular/common', '@angular/core', '@angular/material/grid-list'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.gridList = {}), global.ng.common, global.ng.core, global.ng.material['grid-list']));
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.gridList = {}), global.ng.common, global.ng.core, global.ng.material.gridList));
 }(this, function (exports, common, core, gridList) { 'use strict';
 
     /**

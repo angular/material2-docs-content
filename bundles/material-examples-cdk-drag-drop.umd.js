@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/drag-drop'), require('@angular/cdk/overlay'), require('@angular/common'), require('@angular/core'), require('@angular/cdk/portal')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/cdk/drag-drop', ['exports', '@angular/cdk/drag-drop', '@angular/cdk/overlay', '@angular/common', '@angular/core', '@angular/cdk/portal'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.cdk = global.ng.materialExamples.cdk || {}, global.ng.materialExamples.cdk.dragDrop = {}), global.ng.cdk['drag-drop'], global.ng.cdk.overlay, global.ng.common, global.ng.core, global.ng.cdk.portal));
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.cdk = global.ng.materialExamples.cdk || {}, global.ng.materialExamples.cdk.dragDrop = {}), global.ng.cdk.dragDrop, global.ng.cdk.overlay, global.ng.common, global.ng.core, global.ng.cdk.portal));
 }(this, function (exports, dragDrop, overlay, common, core, portal) { 'use strict';
 
     /**
