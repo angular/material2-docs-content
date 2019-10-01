@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ChangeDetectionStrategy, Inject, ChangeDetectorRef, ViewEncapsulation, InjectionToken, Injectable, Optional, NgModule } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Inject, ChangeDetectorRef, ViewEncapsulation, NgModule } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { MomentDateAdapter, MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import * as _rollupMoment from 'moment';
 import _rollupMoment__default, {  } from 'moment';
 
@@ -337,408 +338,6 @@ if (false) {
  */
 /** @type {?} */
 const moment = _rollupMoment__default || _rollupMoment;
-/**
- * Configurable options for {\@see MomentDateAdapter}.
- * @record
- */
-function MatMomentDateAdapterOptions() { }
-if (false) {
-    /**
-     * When enabled, the dates have to match the format exactly.
-     * See https://momentjs.com/guides/#/parsing/strict-mode/.
-     * @type {?|undefined}
-     */
-    MatMomentDateAdapterOptions.prototype.strict;
-    /**
-     * Turns the use of utc dates on or off.
-     * Changing this will change how Angular Material components like DatePicker output dates.
-     * {\@default false}
-     * @type {?|undefined}
-     */
-    MatMomentDateAdapterOptions.prototype.useUtc;
-}
-/**
- * InjectionToken for moment date adapter to configure options.
- * @type {?}
- */
-const MAT_MOMENT_DATE_ADAPTER_OPTIONS = new InjectionToken('MAT_MOMENT_DATE_ADAPTER_OPTIONS', {
-    providedIn: 'root',
-    factory: MAT_MOMENT_DATE_ADAPTER_OPTIONS_FACTORY
-});
-/**
- * \@docs-private
- * @return {?}
- */
-function MAT_MOMENT_DATE_ADAPTER_OPTIONS_FACTORY() {
-    return {
-        useUtc: false
-    };
-}
-/**
- * Creates an array and fills it with values.
- * @template T
- * @param {?} length
- * @param {?} valueFunction
- * @return {?}
- */
-function range(length, valueFunction) {
-    /** @type {?} */
-    const valuesArray = Array(length);
-    for (let i = 0; i < length; i++) {
-        valuesArray[i] = valueFunction(i);
-    }
-    return valuesArray;
-}
-/**
- * Adapts Moment.js Dates for use with Angular Material.
- */
-class MomentDateAdapter extends DateAdapter {
-    /**
-     * @param {?} dateLocale
-     * @param {?=} _options
-     */
-    constructor(dateLocale, _options) {
-        super();
-        this._options = _options;
-        this.setLocale(dateLocale || moment.locale());
-    }
-    /**
-     * @param {?} locale
-     * @return {?}
-     */
-    setLocale(locale) {
-        super.setLocale(locale);
-        /** @type {?} */
-        let momentLocaleData = moment.localeData(locale);
-        this._localeData = {
-            firstDayOfWeek: momentLocaleData.firstDayOfWeek(),
-            longMonths: momentLocaleData.months(),
-            shortMonths: momentLocaleData.monthsShort(),
-            dates: range(31, (/**
-             * @param {?} i
-             * @return {?}
-             */
-            (i) => this.createDate(2017, 0, i + 1).format('D'))),
-            longDaysOfWeek: momentLocaleData.weekdays(),
-            shortDaysOfWeek: momentLocaleData.weekdaysShort(),
-            narrowDaysOfWeek: momentLocaleData.weekdaysMin(),
-        };
-    }
-    /**
-     * @param {?} date
-     * @return {?}
-     */
-    getYear(date) {
-        return this.clone(date).year();
-    }
-    /**
-     * @param {?} date
-     * @return {?}
-     */
-    getMonth(date) {
-        return this.clone(date).month();
-    }
-    /**
-     * @param {?} date
-     * @return {?}
-     */
-    getDate(date) {
-        return this.clone(date).date();
-    }
-    /**
-     * @param {?} date
-     * @return {?}
-     */
-    getDayOfWeek(date) {
-        return this.clone(date).day();
-    }
-    /**
-     * @param {?} style
-     * @return {?}
-     */
-    getMonthNames(style) {
-        // Moment.js doesn't support narrow month names, so we just use short if narrow is requested.
-        return style == 'long' ? this._localeData.longMonths : this._localeData.shortMonths;
-    }
-    /**
-     * @return {?}
-     */
-    getDateNames() {
-        return this._localeData.dates;
-    }
-    /**
-     * @param {?} style
-     * @return {?}
-     */
-    getDayOfWeekNames(style) {
-        if (style == 'long') {
-            return this._localeData.longDaysOfWeek;
-        }
-        if (style == 'short') {
-            return this._localeData.shortDaysOfWeek;
-        }
-        return this._localeData.narrowDaysOfWeek;
-    }
-    /**
-     * @param {?} date
-     * @return {?}
-     */
-    getYearName(date) {
-        return this.clone(date).format('YYYY');
-    }
-    /**
-     * @return {?}
-     */
-    getFirstDayOfWeek() {
-        return this._localeData.firstDayOfWeek;
-    }
-    /**
-     * @param {?} date
-     * @return {?}
-     */
-    getNumDaysInMonth(date) {
-        return this.clone(date).daysInMonth();
-    }
-    /**
-     * @param {?} date
-     * @return {?}
-     */
-    clone(date) {
-        return date.clone().locale(this.locale);
-    }
-    /**
-     * @param {?} year
-     * @param {?} month
-     * @param {?} date
-     * @return {?}
-     */
-    createDate(year, month, date) {
-        // Moment.js will create an invalid date if any of the components are out of bounds, but we
-        // explicitly check each case so we can throw more descriptive errors.
-        if (month < 0 || month > 11) {
-            throw Error(`Invalid month index "${month}". Month index has to be between 0 and 11.`);
-        }
-        if (date < 1) {
-            throw Error(`Invalid date "${date}". Date has to be greater than 0.`);
-        }
-        /** @type {?} */
-        const result = this._createMoment({ year, month, date }).locale(this.locale);
-        // If the result isn't valid, the date must have been out of bounds for this month.
-        if (!result.isValid()) {
-            throw Error(`Invalid date "${date}" for month with index "${month}".`);
-        }
-        return result;
-    }
-    /**
-     * @return {?}
-     */
-    today() {
-        return this._createMoment().locale(this.locale);
-    }
-    /**
-     * @param {?} value
-     * @param {?} parseFormat
-     * @return {?}
-     */
-    parse(value, parseFormat) {
-        if (value && typeof value == 'string') {
-            return this._createMoment(value, parseFormat, this.locale);
-        }
-        return value ? this._createMoment(value).locale(this.locale) : null;
-    }
-    /**
-     * @param {?} date
-     * @param {?} displayFormat
-     * @return {?}
-     */
-    format(date, displayFormat) {
-        date = this.clone(date);
-        if (!this.isValid(date)) {
-            throw Error('MomentDateAdapter: Cannot format invalid date.');
-        }
-        return date.format(displayFormat);
-    }
-    /**
-     * @param {?} date
-     * @param {?} years
-     * @return {?}
-     */
-    addCalendarYears(date, years) {
-        return this.clone(date).add({ years });
-    }
-    /**
-     * @param {?} date
-     * @param {?} months
-     * @return {?}
-     */
-    addCalendarMonths(date, months) {
-        return this.clone(date).add({ months });
-    }
-    /**
-     * @param {?} date
-     * @param {?} days
-     * @return {?}
-     */
-    addCalendarDays(date, days) {
-        return this.clone(date).add({ days });
-    }
-    /**
-     * @param {?} date
-     * @return {?}
-     */
-    toIso8601(date) {
-        return this.clone(date).format();
-    }
-    /**
-     * Returns the given value if given a valid Moment or null. Deserializes valid ISO 8601 strings
-     * (https://www.ietf.org/rfc/rfc3339.txt) and valid Date objects into valid Moments and empty
-     * string into null. Returns an invalid date for all other values.
-     * @param {?} value
-     * @return {?}
-     */
-    deserialize(value) {
-        /** @type {?} */
-        let date;
-        if (value instanceof Date) {
-            date = this._createMoment(value).locale(this.locale);
-        }
-        else if (this.isDateInstance(value)) {
-            // Note: assumes that cloning also sets the correct locale.
-            return this.clone(value);
-        }
-        if (typeof value === 'string') {
-            if (!value) {
-                return null;
-            }
-            date = this._createMoment(value, moment.ISO_8601).locale(this.locale);
-        }
-        if (date && this.isValid(date)) {
-            return this._createMoment(date).locale(this.locale);
-        }
-        return super.deserialize(value);
-    }
-    /**
-     * @param {?} obj
-     * @return {?}
-     */
-    isDateInstance(obj) {
-        return moment.isMoment(obj);
-    }
-    /**
-     * @param {?} date
-     * @return {?}
-     */
-    isValid(date) {
-        return this.clone(date).isValid();
-    }
-    /**
-     * @return {?}
-     */
-    invalid() {
-        return moment.invalid();
-    }
-    /**
-     * Creates a Moment instance while respecting the current UTC settings.
-     * @private
-     * @param {?} date
-     * @param {?=} format
-     * @param {?=} locale
-     * @return {?}
-     */
-    _createMoment(date, format, locale) {
-        const { strict, useUtc } = this._options || {};
-        return useUtc
-            ? moment.utc(date, format, locale, strict)
-            : moment(date, format, locale, strict);
-    }
-}
-MomentDateAdapter.decorators = [
-    { type: Injectable }
-];
-/** @nocollapse */
-MomentDateAdapter.ctorParameters = () => [
-    { type: String, decorators: [{ type: Optional }, { type: Inject, args: [MAT_DATE_LOCALE,] }] },
-    { type: undefined, decorators: [{ type: Optional }, { type: Inject, args: [MAT_MOMENT_DATE_ADAPTER_OPTIONS,] }] }
-];
-if (false) {
-    /**
-     * @type {?}
-     * @private
-     */
-    MomentDateAdapter.prototype._localeData;
-    /**
-     * @type {?}
-     * @private
-     */
-    MomentDateAdapter.prototype._options;
-}
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * @license
- * Copyright Google LLC All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/** @type {?} */
-const MAT_MOMENT_DATE_FORMATS = {
-    parse: {
-        dateInput: 'l',
-    },
-    display: {
-        dateInput: 'l',
-        monthYearLabel: 'MMM YYYY',
-        dateA11yLabel: 'LL',
-        monthYearA11yLabel: 'MMMM YYYY',
-    },
-};
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-class MomentDateModule {
-}
-MomentDateModule.decorators = [
-    { type: NgModule, args: [{
-                providers: [
-                    {
-                        provide: DateAdapter,
-                        useClass: MomentDateAdapter,
-                        deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
-                    }
-                ],
-            },] }
-];
-const ɵ0 = MAT_MOMENT_DATE_FORMATS;
-class MatMomentDateModule {
-}
-MatMomentDateModule.decorators = [
-    { type: NgModule, args: [{
-                imports: [MomentDateModule],
-                providers: [{ provide: MAT_DATE_FORMATS, useValue: ɵ0 }],
-            },] }
-];
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-
-/**
- * Generated bundle index. Do not edit.
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/** @type {?} */
-const moment$1 = _rollupMoment__default || _rollupMoment;
 // See the Moment.js docs for the meaning of these formats:
 // https://momentjs.com/docs/#/displaying/format/
 /** @type {?} */
@@ -758,7 +357,7 @@ const MY_FORMATS = {
  */
 class DatepickerFormatsExample {
     constructor() {
-        this.date = new FormControl(moment$1());
+        this.date = new FormControl(moment());
     }
 }
 DatepickerFormatsExample.decorators = [
@@ -784,7 +383,7 @@ if (false) {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
+const ɵ0 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker with different locale
  */
@@ -814,7 +413,7 @@ DatepickerLocaleExample.decorators = [
                     // `MatMomentDateModule` in your applications root module. We provide it at the component level
                     // here, due to limitations of our example generation script.
                     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                    { provide: MAT_DATE_FORMATS, useValue: ɵ0$1 },
+                    { provide: MAT_DATE_FORMATS, useValue: ɵ0 },
                 ],
                 styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
             }] }
@@ -863,15 +462,15 @@ if (false) {
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const moment$2 = _rollupMoment__default || _rollupMoment;
-const ɵ0$2 = MAT_MOMENT_DATE_FORMATS;
+const moment$1 = _rollupMoment__default || _rollupMoment;
+const ɵ0$1 = MAT_MOMENT_DATE_FORMATS;
 /**
  * \@title Datepicker that uses Moment.js dates
  */
 class DatepickerMomentExample {
     constructor() {
         // Datepicker takes `Moment` objects instead of `Date` objects.
-        this.date = new FormControl(moment$2([2017, 0, 1]));
+        this.date = new FormControl(moment$1([2017, 0, 1]));
     }
 }
 DatepickerMomentExample.decorators = [
@@ -883,7 +482,7 @@ DatepickerMomentExample.decorators = [
                     // `MatMomentDateModule` in your applications root module. We provide it at the component level
                     // here, due to limitations of our example generation script.
                     { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
-                    { provide: MAT_DATE_FORMATS, useValue: ɵ0$2 },
+                    { provide: MAT_DATE_FORMATS, useValue: ɵ0$1 },
                 ],
                 styles: ["/** No CSS for this example */\n"]
             }] }
@@ -983,7 +582,7 @@ if (false) {
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
-const moment$3 = _rollupMoment__default || _rollupMoment;
+const moment$2 = _rollupMoment__default || _rollupMoment;
 // See the Moment.js docs for the meaning of these formats:
 // https://momentjs.com/docs/#/displaying/format/
 /** @type {?} */
@@ -1003,7 +602,7 @@ const MY_FORMATS$1 = {
  */
 class DatepickerViewsSelectionExample {
     constructor() {
-        this.date = new FormControl(moment$3());
+        this.date = new FormControl(moment$2());
     }
     /**
      * @param {?} normalizedYear
