@@ -135,6 +135,33 @@ hiding of a tooltip provided position (defaults to below the element).</p>
 
 
     
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matTooltipTouchGestures&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>touchGestures: TooltipTouchGestures</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>How touch gestures should be handled by the tooltip. On touch devices the tooltip directive
+uses a long press gesture to show and hide, however it can conflict with the native browser
+gestures. To work around the conflict, Angular Material disables native gestures on the
+trigger, but that might not be desirable on particular elements (e.g. inputs and draggable
+elements). The different values for this option configure the touch event handling as follows:</p>
+<ul>
+<li><code>auto</code> - Enables touch gestures for all elements, but tries to avoid conflicts with native
+browser gestures on particular elements. In particular, it allows text selection on inputs
+and textareas, and preserves the native browser dragging on elements marked as <code>draggable</code>.</li>
+<li><code>on</code> - Enables touch gestures for all elements and disables native
+browser gestures with no exceptions.</li>
+<li><code>off</code> - Disables touch gestures. Note that this will prevent the tooltip from
+showing on touch devices.</li>
+</ul>
+</td>
+</tr>
+
+
+    
   </table>
 
 
@@ -288,6 +315,18 @@ hiding of a tooltip provided position (defaults to below the element).</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>touchGestures: TooltipTouchGestures</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>touchendHideDelay: number</code>
     </p>
   </td>
@@ -313,9 +352,25 @@ hiding of a tooltip provided position (defaults to below the element).</p>
 <h4 id="TooltipPosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="TooltipPosition"></span>
   <code>TooltipPosition</code>
-</h4><div class="docs-markdown">
+</h4><p class="docs-api-type-alias-description"><p>Possible positions for a tooltip.</p>
+</p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">type</span> TooltipPosition = <span class="hljs-string">'left'</span> | <span class="hljs-string">'right'</span> | <span class="hljs-string">'above'</span> | <span class="hljs-string">'below'</span> | <span class="hljs-string">'before'</span> | <span class="hljs-string">'after'</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="TooltipTouchGestures" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="TooltipTouchGestures"></span>
+  <code>TooltipTouchGestures</code>
+</h4><p class="docs-api-type-alias-description"><p>Options for how the tooltip trigger should handle touch gestures.
+See <code>MatTooltip.touchGestures</code> for more information.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> TooltipTouchGestures = <span class="hljs-string">'auto'</span> | <span class="hljs-string">'on'</span> | <span class="hljs-string">'off'</span>;</code>
 </pre>
 </div>
 
@@ -326,7 +381,8 @@ hiding of a tooltip provided position (defaults to below the element).</p>
 <h4 id="TooltipVisibility" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
   <span header-link="TooltipVisibility"></span>
   <code>TooltipVisibility</code>
-</h4><div class="docs-markdown">
+</h4><p class="docs-api-type-alias-description"><p>Possible visibility states of a tooltip.</p>
+</p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">type</span> TooltipVisibility = <span class="hljs-string">'initial'</span> | <span class="hljs-string">'visible'</span> | <span class="hljs-string">'hidden'</span>;</code>
 </pre>
