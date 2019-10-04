@@ -1,6 +1,6 @@
 {
   "name": "@angular/material-examples",
-  "version": "9.0.0-next.0-sha-6b3f87e6f",
+  "version": "9.0.0-next.0-sha-230fd2f6a",
   "description": "Angular Material Examples",
   "main": "./bundles/material-examples.umd.js",
   "fesm5": "./fesm5/material-examples.js",
@@ -27,13 +27,13 @@
   },
   "homepage": "https://github.com/angular/components#readme",
   "peerDependencies": {
-    "@angular/cdk": "9.0.0-next.0-sha-6b3f87e6f",
-    "@angular/cdk-experimental": "9.0.0-next.0-sha-6b3f87e6f",
+    "@angular/cdk": "9.0.0-next.0-sha-230fd2f6a",
+    "@angular/cdk-experimental": "9.0.0-next.0-sha-230fd2f6a",
     "@angular/core": "^8.0.0 || ^9.0.0-0",
     "@angular/common": "^8.0.0 || ^9.0.0-0",
-    "@angular/material": "9.0.0-next.0-sha-6b3f87e6f",
-    "@angular/material-experimental": "9.0.0-next.0-sha-6b3f87e6f",
-    "@angular/material-moment-adapter": "9.0.0-next.0-sha-6b3f87e6f"
+    "@angular/material": "9.0.0-next.0-sha-230fd2f6a",
+    "@angular/material-experimental": "9.0.0-next.0-sha-230fd2f6a",
+    "@angular/material-moment-adapter": "9.0.0-next.0-sha-230fd2f6a"
   },
   "dependencies": {
     "tslib": "^1.7.1"
