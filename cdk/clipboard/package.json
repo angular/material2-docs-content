@@ -1,0 +1,11 @@
+{
+  "name": "@angular/material-examples/cdk/clipboard",
+  "main": "../../bundles/material-examples-cdk-clipboard.umd.js",
+  "fesm5": "../../fesm5/cdk/clipboard.js",
+  "fesm2015": "../../fesm2015/cdk/clipboard.js",
+  "esm5": "../../esm5/cdk/clipboard/index.js",
+  "esm2015": "../../esm2015/cdk/clipboard/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/cdk/clipboard.js",
+  "es2015": "../../fesm2015/cdk/clipboard.js"
+}

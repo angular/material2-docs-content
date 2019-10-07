@@ -1,0 +1,310 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2>
+    API reference for Angular CDK clipboard
+  </h2>
+
+  <p class="docs-api-module-import">
+    <code>
+      import {ClipboardModule} from '@angular/cdk/clipboard';
+    </code>
+  </p><h3 id="services" class="docs-header-link docs-api-h3">
+      <span header-link="services"></span>
+      Services
+    </h3>
+    
+      
+
+<h4 id="Clipboard" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="Clipboard"></span>
+  <code>Clipboard</code>
+  
+</h4><p class="docs-api-class-description"><p>A service for copying text to the clipboard.</p>
+<p>Example usage:</p>
+<p>clipboard.copy(&quot;copy this text&quot;);</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">beginCopy
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Prepares a string to be copied later. This is useful for large strings
+which take too long to successfully render and be copied in the same tick.</p>
+<p>The caller must call <code>destroy</code> on the returned <code>PendingCopy</code>.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        text</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>The string to copy.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">PendingCopy</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>the pending copy operation.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">copy
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Copies the provided text into the user&#39;s clipboard.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        text</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>The string to copy.</p>
+
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        <p>Whether the operation was successful.</p>
+
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    <h3 id="directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"></span>
+      Directives
+    </h3>
+    
+      
+
+<h4 id="CdkCopyToClipboard" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="CdkCopyToClipboard"></span>
+  <code>CdkCopyToClipboard</code>
+  
+</h4><p class="docs-api-class-description"><p>Provides behavior for a button that when clicked copies content into user&#39;s
+clipboard.</p>
+<p>Example usage:</p>
+<p><code>&lt;button copyToClipboard=&quot;Content to be copied&quot;&gt;Copy me!&lt;/button&gt;</code></p>
+</p><p class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">Selector:</span>
+  
+    <span class="docs-api-class-selector-name">[cdkCopyToClipboard]</span>
+  
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkCopyToClipboard&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>text: &#39;&#39;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Content to be copied.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>copied: EventEmitter&lt;boolean&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits when some text is copied to the clipboard. The
+emitted value indicates whether copying was successful.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">copy
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Copies the current text to the clipboard.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    <h3 id="classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      Classes
+    </h3>
+    
+      
+
+<h4 id="PendingCopy" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="PendingCopy"></span>
+  <code>PendingCopy</code>
+  
+</h4><p class="docs-api-class-description"><p>A pending copy-to-clipboard operation.</p>
+<p>The implementation of copying text to the clipboard modifies the DOM and
+forces a relayout. This relayout can take too long if the string is large,
+causing the execCommand(&#39;copy&#39;) to happen too long after the user clicked.
+This results in the browser refusing to copy. This object lets the
+relayout happen in a separate tick from copying by providing a copy function
+that can be called later.</p>
+<p>Destroy must be called when no longer in use, regardless of whether <code>copy</code> is
+called.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">copy
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Finishes copying the text.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">boolean</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">destroy
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Cleans up DOM changes used to perform the copy operation.</p>
+
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    </div>
