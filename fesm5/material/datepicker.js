@@ -469,7 +469,11 @@ var DatepickerFormatsExample = /** @class */ (function () {
                         // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
                         // application's root module. We provide it at the component level here, due to limitations of
                         // our example generation script.
-                        { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
+                        {
+                            provide: DateAdapter,
+                            useClass: MomentDateAdapter,
+                            deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+                        },
                         { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
                     ],
                     styles: ["/** No CSS for this example */\n"]
@@ -498,7 +502,11 @@ var DatepickerLocaleExample = /** @class */ (function () {
                         // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
                         // `MatMomentDateModule` in your applications root module. We provide it at the component level
                         // here, due to limitations of our example generation script.
-                        { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
+                        {
+                            provide: DateAdapter,
+                            useClass: MomentDateAdapter,
+                            deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+                        },
                         { provide: MAT_DATE_FORMATS, useValue: ɵ0$1 },
                     ],
                     styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
@@ -649,7 +657,11 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
                         // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
                         // application's root module. We provide it at the component level here, due to limitations of
                         // our example generation script.
-                        { provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE] },
+                        {
+                            provide: DateAdapter,
+                            useClass: MomentDateAdapter,
+                            deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+                        },
                         { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS$1 },
                     ],
                     styles: [".example-month-picker .mat-calendar-period-button {\n  pointer-events: none;\n}\n\n.example-month-picker .mat-calendar-arrow {\n  display: none;\n}\n"]

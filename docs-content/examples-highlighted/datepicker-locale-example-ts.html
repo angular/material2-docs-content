@@ -1,5 +1,9 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-moment-adapter'</span>;
+<span class="hljs-keyword">import</span> {
+  MAT_MOMENT_DATE_FORMATS,
+  MomentDateAdapter,
+  MAT_MOMENT_DATE_ADAPTER_OPTIONS,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-moment-adapter'</span>;
 <span class="hljs-keyword">import</span> {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
 
 <span class="hljs-comment">/** @title Datepicker with different locale */</span>
@@ -15,7 +19,11 @@
     <span class="hljs-comment">// `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing</span>
     <span class="hljs-comment">// `MatMomentDateModule` in your applications root module. We provide it at the component level</span>
     <span class="hljs-comment">// here, due to limitations of our example generation script.</span>
-    {provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
+    {
+      provide: DateAdapter,
+      useClass: MomentDateAdapter,
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+    },
     {provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS},
   ],
 })
