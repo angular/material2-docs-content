@@ -126,12 +126,12 @@ will be available implicitly in the template:</p>
 </tr>
 </tbody></table>
 <p>For example:</p>
-<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">mat-dialog-title</span>&gt;</span>Delete all<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">mat-dialog-content</span>&gt;</span>Are you sure?<span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-content</span>&gt;</span>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">mat-dialog-title</span>&gt;</span>Delete all elements?<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-dialog-content</span>&gt;</span>This will delete all elements that are currently on this page and cannot be undone.<span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-content</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">mat-dialog-actions</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">mat-dialog-close</span>&gt;</span>No<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">mat-dialog-close</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
   <span class="hljs-comment">&lt;!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> [<span class="hljs-attr">mat-dialog-close</span>]=<span class="hljs-string">"true"</span>&gt;</span>Yes<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> [<span class="hljs-attr">mat-dialog-close</span>]=<span class="hljs-string">"true"</span>&gt;</span>Delete<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">mat-dialog-actions</span>&gt;</span></code></pre>
 <p>Once a dialog opens, the dialog will automatically focus the first tabbable element.</p>
 <p>You can control which elements are tab stops with the <code>tabindex</code> attribute</p>
