@@ -782,7 +782,10 @@ be rendered.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDragStartDelay&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>dragStartDelay: number</code>
+      <code>dragStartDelay: number | {
+    touch: number;
+    mouse: number;
+}</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Amount of milliseconds to wait after the user has put their
