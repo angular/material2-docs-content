@@ -554,7 +554,7 @@ class DynamicDataSource {
      * @return {?}
      */
     connect(collectionViewer) {
-        this._treeControl.expansionModel.onChange.subscribe((/**
+        this._treeControl.expansionModel.changed.subscribe((/**
          * @param {?} change
          * @return {?}
          */

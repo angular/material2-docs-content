@@ -313,7 +313,7 @@ var DynamicDataSource = /** @class */ (function () {
     });
     DynamicDataSource.prototype.connect = function (collectionViewer) {
         var _this = this;
-        this._treeControl.expansionModel.onChange.subscribe(function (change) {
+        this._treeControl.expansionModel.changed.subscribe(function (change) {
             if (change.added ||
                 change.removed) {
                 _this.handleTreeControl(change);
