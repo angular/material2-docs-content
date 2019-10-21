@@ -105,7 +105,7 @@ appending to document.body).</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Flushes change detection and async tasks.
+      <p>Flushes change detection and async tasks in the Angular zone.
 In most cases it should not be necessary to call this manually. However, there may be some edge
 cases where it is needed to fully flush animation events.</p>
 
@@ -391,6 +391,24 @@ of this <code>ComponentHarness</code>. When the resulting locator function is in
     </td>
   </tr>
   </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">waitForTasksOutsideAngular
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Waits for all scheduled or running async tasks to complete. This allows harness
+authors to wait for async tasks outside of the Angular zone.</p>
+
+    </td>
+  </tr></table>
 
 
   
@@ -1538,6 +1556,32 @@ element type, <code>E</code>, used by the particular test environment.</p>
 
 
   
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">waitForTasksOutsideAngular
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
 
 
 
@@ -1781,7 +1825,7 @@ component is found, an error is thrown.</p>
   <code>LocatorFactory</code>
 </h4><p class="docs-api-interface-description"><p>Interface used to create asynchronous locator functions used find elements and component
 harnesses. This interface is used by <code>ComponentHarness</code> authors to create locator functions for
-their <code>ComponentHarenss</code> subclass.</p>
+their <code>ComponentHarness</code> subclass.</p>
 </p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
@@ -1848,7 +1892,7 @@ their <code>ComponentHarenss</code> subclass.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Flushes change detection and async tasks.
+      <p>Flushes change detection and async tasks captured in the Angular zone.
 In most cases it should not be necessary to call this manually. However, there may be some edge
 cases where it is needed to fully flush animation events.</p>
 
@@ -2183,6 +2227,38 @@ elements are found, null is returned.</p>
         <p>An asynchronous locator function that searches for elements with the given selector,
     and either finds one or returns null.</p>
 
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">waitForTasksOutsideAngular
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Waits for all scheduled or running async tasks to complete. This allows harness
+authors to wait for async tasks outside of the Angular zone.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
       </p>
     </td>
   </tr></table>
