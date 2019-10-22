@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/dialog'), require('@angular/material/input'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/dialog', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/dialog', '@angular/material/input', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.dialog = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.dialog, global.ng.material.input, global.ng.material.formField));
-}(this, function (exports, i3, i0, i4, i2, i1, i3$1, i2$1) { 'use strict';
+}(this, function (exports, i6, i0, i4, i2, i1, i3, i2$1) { 'use strict';
 
     /**
      * @title Dialog with header, scrollable content and actions
@@ -240,7 +240,7 @@
                 i0.ɵɵproperty("ngIf", ctx.data.animal === "unicorn");
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngIf", ctx.data.animal === "lion");
-            } }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i3.NgIf], encapsulation: 2 });
+            } }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i6.NgIf], encapsulation: 2 });
         return DialogDataExampleDialog;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(DialogDataExampleDialog, [{
@@ -389,7 +389,7 @@
                 i0.ɵɵproperty("ngModel", ctx.name);
                 i0.ɵɵadvance(4);
                 i0.ɵɵproperty("ngIf", ctx.animal);
-            } }, directives: [i2$1.MatFormField, i3$1.MatInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i2.MatButton, i3.NgIf], styles: [""] });
+            } }, directives: [i2$1.MatFormField, i3.MatInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i2.MatButton, i6.NgIf], styles: [""] });
         return DialogOverviewExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(DialogOverviewExample, [{
@@ -450,7 +450,7 @@
                 i0.ɵɵproperty("ngModel", ctx.data.animal);
                 i0.ɵɵadvance(4);
                 i0.ɵɵproperty("mat-dialog-close", ctx.data.animal);
-            } }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i2$1.MatFormField, i3$1.MatInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
+            } }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i2$1.MatFormField, i3.MatInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
         return DialogOverviewExampleDialog;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(DialogOverviewExampleDialog, [{
@@ -480,10 +480,10 @@
         DialogExamplesModule.decorators = [
             { type: i0.NgModule, args: [{
                         imports: [
-                            i3.CommonModule,
+                            i6.CommonModule,
                             i2.MatButtonModule,
                             i1.MatDialogModule,
-                            i3$1.MatInputModule,
+                            i3.MatInputModule,
                             i4.FormsModule,
                         ],
                         declarations: EXAMPLES,
@@ -498,10 +498,10 @@
         ];
         DialogExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: DialogExamplesModule });
         DialogExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function DialogExamplesModule_Factory(t) { return new (t || DialogExamplesModule)(); }, imports: [[
-                    i3.CommonModule,
+                    i6.CommonModule,
                     i2.MatButtonModule,
                     i1.MatDialogModule,
-                    i3$1.MatInputModule,
+                    i3.MatInputModule,
                     i4.FormsModule,
                 ]] });
         return DialogExamplesModule;
@@ -513,10 +513,10 @@
             DialogElementsExample,
             DialogElementsExampleDialog,
             DialogOverviewExample,
-            DialogOverviewExampleDialog], imports: [i3.CommonModule,
+            DialogOverviewExampleDialog], imports: [i6.CommonModule,
             i2.MatButtonModule,
             i1.MatDialogModule,
-            i3$1.MatInputModule,
+            i3.MatInputModule,
             i4.FormsModule], exports: [DialogContentExample,
             DialogContentExampleDialog,
             DialogDataExample,
@@ -529,10 +529,10 @@
             type: i0.NgModule,
             args: [{
                     imports: [
-                        i3.CommonModule,
+                        i6.CommonModule,
                         i2.MatButtonModule,
                         i1.MatDialogModule,
-                        i3$1.MatInputModule,
+                        i3.MatInputModule,
                         i4.FormsModule,
                     ],
                     declarations: EXAMPLES,
