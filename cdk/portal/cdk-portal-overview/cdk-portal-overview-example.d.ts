@@ -1,5 +1,6 @@
 import { AfterViewInit, TemplateRef, ViewContainerRef } from '@angular/core';
 import { ComponentPortal, Portal, TemplatePortal } from '@angular/cdk/portal';
+import * as i0 from "@angular/core";
 /**
  * @title Portal overview
  */
@@ -11,6 +12,10 @@ export declare class CdkPortalOverviewExample implements AfterViewInit {
     templatePortal: TemplatePortal<any>;
     constructor(_viewContainerRef: ViewContainerRef);
     ngAfterViewInit(): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<CdkPortalOverviewExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkPortalOverviewExample, "cdk-portal-overview-example", never, {}, {}, never>;
 }
 export declare class ComponentPortalExample {
+    static ngFactoryDef: i0.ɵɵFactoryDef<ComponentPortalExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ComponentPortalExample, "component-portal-example", never, {}, {}, never>;
 }

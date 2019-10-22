@@ -1,5 +1,6 @@
 import { FocusMonitor, FocusOrigin } from '@angular/cdk/a11y';
 import { AfterViewInit, ChangeDetectorRef, ElementRef, NgZone, OnDestroy } from '@angular/core';
+import * as i0 from "@angular/core";
 /** @title Focusing with a specific FocusOrigin */
 export declare class FocusMonitorFocusViaExample implements OnDestroy, AfterViewInit {
     focusMonitor: FocusMonitor;
@@ -11,4 +12,6 @@ export declare class FocusMonitorFocusViaExample implements OnDestroy, AfterView
     ngAfterViewInit(): void;
     ngOnDestroy(): void;
     formatOrigin(origin: FocusOrigin): string;
+    static ngFactoryDef: i0.ɵɵFactoryDef<FocusMonitorFocusViaExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<FocusMonitorFocusViaExample, "focus-monitor-focus-via-example", never, {}, {}, never>;
 }

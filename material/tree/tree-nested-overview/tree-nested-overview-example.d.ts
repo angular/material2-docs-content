@@ -1,5 +1,6 @@
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
+import * as i0 from "@angular/core";
 /**
  * Food data with nested structure.
  * Each node has a name and an optiona list of children.
@@ -16,5 +17,7 @@ export declare class TreeNestedOverviewExample {
     dataSource: MatTreeNestedDataSource<FoodNode>;
     constructor();
     hasChild: (_: number, node: FoodNode) => boolean;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TreeNestedOverviewExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never>;
 }
 export {};

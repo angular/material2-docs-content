@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/forms";
+import * as i2 from "@angular/material/slide-toggle";
+import * as i3 from "@angular/material/button";
+var _c0 = ["form", "ngForm"];
 /**
  * @title Slide-toggle with forms
  */
@@ -17,15 +22,75 @@ var SlideToggleFormsExample = /** @class */ (function () {
     SlideToggleFormsExample.decorators = [
         { type: Component, args: [{
                     selector: 'slide-toggle-forms-example',
-                    template: "<p>Slide Toggle using a simple NgModel.</p>\n\n<mat-slide-toggle [(ngModel)]=\"isChecked\">Slide Toggle Checked: {{isChecked}}</mat-slide-toggle>\n\n<p>Slide Toggle inside of a Template-driven form</p>\n\n<form class=\"example-form\" #form=\"ngForm\" (ngSubmit)=\"onFormSubmit()\" ngNativeValidate>\n\n  <mat-slide-toggle ngModel name=\"enableWifi\">Enable Wifi</mat-slide-toggle>\n  <mat-slide-toggle ngModel name=\"acceptTerms\" required>Accept Terms of Service</mat-slide-toggle>\n\n  <button mat-raised-button type=\"submit\">Save Settings</button>\n</form>\n\n<p>Slide Toggle inside of a Reactive form</p>\n\n<form class=\"example-form\" [formGroup]=\"formGroup\" (ngSubmit)=\"onFormSubmit()\" ngNativeValidate>\n\n  <mat-slide-toggle formControlName=\"enableWifi\">Enable Wifi</mat-slide-toggle>\n  <mat-slide-toggle formControlName=\"acceptTerms\">Accept Terms of Service</mat-slide-toggle>\n\n  <p>Form Group Status: {{formGroup.status}}</p>\n\n  <button mat-rasied-button type=\"submit\">Save Settings</button>\n</form>\n",
-                    styles: [".example-form mat-slide-toggle {\n  margin: 8px 0;\n  display: block;\n}\n"]
-                }] }
+                    templateUrl: './slide-toggle-forms-example.html',
+                    styleUrls: ['./slide-toggle-forms-example.css'],
+                },] },
     ];
     /** @nocollapse */
     SlideToggleFormsExample.ctorParameters = function () { return [
         { type: FormBuilder }
     ]; };
+    SlideToggleFormsExample.ngFactoryDef = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+    SlideToggleFormsExample.ngComponentDef = i0.ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"], ["mat-rasied-button", "", "type", "submit"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵelementStart(0, "p");
+            i0.ɵɵtext(1, "Slide Toggle using a simple NgModel.");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(2, "mat-slide-toggle", 0);
+            i0.ɵɵlistener("ngModelChange", function SlideToggleFormsExample_Template_mat_slide_toggle_ngModelChange_2_listener($event) { return ctx.isChecked = $event; });
+            i0.ɵɵtext(3);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(4, "p");
+            i0.ɵɵtext(5, "Slide Toggle inside of a Template-driven form");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(6, "form", 1, _c0);
+            i0.ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_6_listener($event) { return ctx.onFormSubmit(); });
+            i0.ɵɵelementStart(8, "mat-slide-toggle", 2);
+            i0.ɵɵtext(9, "Enable Wifi");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(10, "mat-slide-toggle", 3);
+            i0.ɵɵtext(11, "Accept Terms of Service");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(12, "button", 4);
+            i0.ɵɵtext(13, "Save Settings");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(14, "p");
+            i0.ɵɵtext(15, "Slide Toggle inside of a Reactive form");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(16, "form", 5);
+            i0.ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_16_listener($event) { return ctx.onFormSubmit(); });
+            i0.ɵɵelementStart(17, "mat-slide-toggle", 6);
+            i0.ɵɵtext(18, "Enable Wifi");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(19, "mat-slide-toggle", 7);
+            i0.ɵɵtext(20, "Accept Terms of Service");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(21, "p");
+            i0.ɵɵtext(22);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(23, "button", 8);
+            i0.ɵɵtext(24, "Save Settings");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        } if (rf & 2) {
+            i0.ɵɵadvance(2);
+            i0.ɵɵproperty("ngModel", ctx.isChecked);
+            i0.ɵɵadvance(1);
+            i0.ɵɵtextInterpolate1("Slide Toggle Checked: ", ctx.isChecked, "");
+            i0.ɵɵadvance(13);
+            i0.ɵɵproperty("formGroup", ctx.formGroup);
+            i0.ɵɵadvance(6);
+            i0.ɵɵtextInterpolate1("Form Group Status: ", ctx.formGroup.status, "");
+        } }, directives: [i2.MatSlideToggle, i1.NgControlStatus, i1.NgModel, i1.NgControlStatusGroup, i1.NgForm, i2.MatSlideToggleRequiredValidator, i1.RequiredValidator, i3.MatButton, i1.FormGroupDirective, i1.FormControlName], styles: [".example-form[_ngcontent-%COMP%]   mat-slide-toggle[_ngcontent-%COMP%] {\n  margin: 8px 0;\n  display: block;\n}"] });
     return SlideToggleFormsExample;
 }());
 export { SlideToggleFormsExample };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2xpZGUtdG9nZ2xlLWZvcm1zLWV4YW1wbGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvbWF0ZXJpYWwtZXhhbXBsZXMvbWF0ZXJpYWwvc2xpZGUtdG9nZ2xlL3NsaWRlLXRvZ2dsZS1mb3Jtcy9zbGlkZS10b2dnbGUtZm9ybXMtZXhhbXBsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDO0FBQ3hDLE9BQU8sRUFBQyxXQUFXLEVBQWEsVUFBVSxFQUFDLE1BQU0sZ0JBQWdCLENBQUM7QUFFbEU7O0dBRUc7QUFDSDtJQVNFLGlDQUFZLFdBQXdCO1FBSHBDLGNBQVMsR0FBRyxJQUFJLENBQUM7UUFJZixJQUFJLENBQUMsU0FBUyxHQUFHLFdBQVcsQ0FBQyxLQUFLLENBQUM7WUFDakMsVUFBVSxFQUFFLEVBQUU7WUFDZCxXQUFXLEVBQUUsQ0FBQyxFQUFFLEVBQUUsVUFBVSxDQUFDLFlBQVksQ0FBQztTQUMzQyxDQUFDLENBQUM7SUFDTCxDQUFDO0lBRUQsOENBQVksR0FBWjtRQUNFLEtBQUssQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsS0FBSyxFQUFFLElBQUksRUFBRSxDQUFDLENBQUMsQ0FBQyxDQUFDO0lBQ3ZELENBQUM7O2dCQWxCRixTQUFTLFNBQUM7b0JBQ1QsUUFBUSxFQUFFLDRCQUE0QjtvQkFDdEMsa2hDQUFnRDs7aUJBRWpEOzs7O2dCQVRPLFdBQVc7O0lBd0JuQiw4QkFBQztDQUFBLEFBbkJELElBbUJDO1NBZFksdUJBQXVCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHtGb3JtQnVpbGRlciwgRm9ybUdyb3VwLCBWYWxpZGF0b3JzfSBmcm9tICdAYW5ndWxhci9mb3Jtcyc7XG5cbi8qKlxuICogQHRpdGxlIFNsaWRlLXRvZ2dsZSB3aXRoIGZvcm1zXG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ3NsaWRlLXRvZ2dsZS1mb3Jtcy1leGFtcGxlJyxcbiAgdGVtcGxhdGVVcmw6ICcuL3NsaWRlLXRvZ2dsZS1mb3Jtcy1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsnLi9zbGlkZS10b2dnbGUtZm9ybXMtZXhhbXBsZS5jc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgU2xpZGVUb2dnbGVGb3Jtc0V4YW1wbGUge1xuICBpc0NoZWNrZWQgPSB0cnVlO1xuICBmb3JtR3JvdXA6IEZvcm1Hcm91cDtcblxuICBjb25zdHJ1Y3Rvcihmb3JtQnVpbGRlcjogRm9ybUJ1aWxkZXIpIHtcbiAgICB0aGlzLmZvcm1Hcm91cCA9IGZvcm1CdWlsZGVyLmdyb3VwKHtcbiAgICAgIGVuYWJsZVdpZmk6ICcnLFxuICAgICAgYWNjZXB0VGVybXM6IFsnJywgVmFsaWRhdG9ycy5yZXF1aXJlZFRydWVdXG4gICAgfSk7XG4gIH1cblxuICBvbkZvcm1TdWJtaXQoKSB7XG4gICAgYWxlcnQoSlNPTi5zdHJpbmdpZnkodGhpcy5mb3JtR3JvdXAudmFsdWUsIG51bGwsIDIpKTtcbiAgfVxufVxuIl19
+/*@__PURE__*/ i0.ɵsetClassMetadata(SlideToggleFormsExample, [{
+        type: Component,
+        args: [{
+                selector: 'slide-toggle-forms-example',
+                templateUrl: './slide-toggle-forms-example.html',
+                styleUrls: ['./slide-toggle-forms-example.css'],
+            }]
+    }], function () { return [{ type: i1.FormBuilder }]; }, null);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2xpZGUtdG9nZ2xlLWZvcm1zLWV4YW1wbGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvbWF0ZXJpYWwtZXhhbXBsZXMvbWF0ZXJpYWwvc2xpZGUtdG9nZ2xlL3NsaWRlLXRvZ2dsZS1mb3Jtcy9zbGlkZS10b2dnbGUtZm9ybXMtZXhhbXBsZS50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9tYXRlcmlhbC1leGFtcGxlcy9tYXRlcmlhbC9zbGlkZS10b2dnbGUvc2xpZGUtdG9nZ2xlLWZvcm1zL3NsaWRlLXRvZ2dsZS1mb3Jtcy1leGFtcGxlLmh0bWwiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFDLFNBQVMsRUFBQyxNQUFNLGVBQWUsQ0FBQztBQUN4QyxPQUFPLEVBQUMsV0FBVyxFQUFhLFVBQVUsRUFBQyxNQUFNLGdCQUFnQixDQUFDOzs7Ozs7QUFFbEU7O0dBRUc7QUFDSDtJQVNFLGlDQUFZLFdBQXdCO1FBSHBDLGNBQVMsR0FBRyxJQUFJLENBQUM7UUFJZixJQUFJLENBQUMsU0FBUyxHQUFHLFdBQVcsQ0FBQyxLQUFLLENBQUM7WUFDakMsVUFBVSxFQUFFLEVBQUU7WUFDZCxXQUFXLEVBQUUsQ0FBQyxFQUFFLEVBQUUsVUFBVSxDQUFDLFlBQVksQ0FBQztTQUMzQyxDQUFDLENBQUM7SUFDTCxDQUFDO0lBRUQsOENBQVksR0FBWjtRQUNFLEtBQUssQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsS0FBSyxFQUFFLElBQUksRUFBRSxDQUFDLENBQUMsQ0FBQyxDQUFDO0lBQ3ZELENBQUM7O2dCQWxCRixTQUFTLFNBQUM7b0JBQ1QsUUFBUSxFQUFFLDRCQUE0QjtvQkFDdEMsV0FBVyxFQUFFLG1DQUFtQztvQkFDaEQsU0FBUyxFQUFFLENBQUMsa0NBQWtDLENBQUM7aUJBQ2hEOzs7O2dCQVRPLFdBQVc7OzBHQVVOLHVCQUF1QjswRUFBdkIsdUJBQXVCO1lDWHBDLHlCQUFHO1lBQUEsb0RBQW9DO1lBQUEsaUJBQUk7WUFFM0MsMkNBQTBDO1lBQXhCLDhKQUF1QjtZQUFDLFlBQW1DO1lBQUEsaUJBQW1CO1lBRWhHLHlCQUFHO1lBQUEsNkRBQTZDO1lBQUEsaUJBQUk7WUFFcEQsb0NBRUU7WUFGd0MsOEdBQVksa0JBQWMsSUFBQztZQUVuRSwyQ0FBNEM7WUFBQSwyQkFBVztZQUFBLGlCQUFtQjtZQUMxRSw0Q0FBc0Q7WUFBQSx3Q0FBdUI7WUFBQSxpQkFBbUI7WUFFaEcsa0NBQXdDO1lBQUEsOEJBQWE7WUFBQSxpQkFBUztZQUNoRSxpQkFBTztZQUVQLDBCQUFHO1lBQUEsdURBQXNDO1lBQUEsaUJBQUk7WUFFN0MsZ0NBRUU7WUFGaUQsK0dBQVksa0JBQWMsSUFBQztZQUU1RSw0Q0FBK0M7WUFBQSw0QkFBVztZQUFBLGlCQUFtQjtZQUM3RSw0Q0FBZ0Q7WUFBQSx3Q0FBdUI7WUFBQSxpQkFBbUI7WUFFMUYsMEJBQUc7WUFBQSxhQUF1QztZQUFBLGlCQUFJO1lBRTlDLGtDQUF3QztZQUFBLDhCQUFhO1lBQUEsaUJBQVM7WUFDaEUsaUJBQU87O1lBdEJXLGVBQXVCO1lBQXZCLHVDQUF1QjtZQUFDLGVBQW1DO1lBQW5DLGtFQUFtQztZQWNsRCxnQkFBdUI7WUFBdkIseUNBQXVCO1lBSzdDLGVBQXVDO1lBQXZDLHNFQUF1Qzs7a0NEckI1QztDQXlCQyxBQW5CRCxJQW1CQztTQWRZLHVCQUF1QjttQ0FBdkIsdUJBQXVCO2NBTG5DLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsNEJBQTRCO2dCQUN0QyxXQUFXLEVBQUUsbUNBQW1DO2dCQUNoRCxTQUFTLEVBQUUsQ0FBQyxrQ0FBa0MsQ0FBQzthQUNoRCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7Rm9ybUJ1aWxkZXIsIEZvcm1Hcm91cCwgVmFsaWRhdG9yc30gZnJvbSAnQGFuZ3VsYXIvZm9ybXMnO1xuXG4vKipcbiAqIEB0aXRsZSBTbGlkZS10b2dnbGUgd2l0aCBmb3Jtc1xuICovXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdzbGlkZS10b2dnbGUtZm9ybXMtZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAnLi9zbGlkZS10b2dnbGUtZm9ybXMtZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJy4vc2xpZGUtdG9nZ2xlLWZvcm1zLWV4YW1wbGUuY3NzJ10sXG59KVxuZXhwb3J0IGNsYXNzIFNsaWRlVG9nZ2xlRm9ybXNFeGFtcGxlIHtcbiAgaXNDaGVja2VkID0gdHJ1ZTtcbiAgZm9ybUdyb3VwOiBGb3JtR3JvdXA7XG5cbiAgY29uc3RydWN0b3IoZm9ybUJ1aWxkZXI6IEZvcm1CdWlsZGVyKSB7XG4gICAgdGhpcy5mb3JtR3JvdXAgPSBmb3JtQnVpbGRlci5ncm91cCh7XG4gICAgICBlbmFibGVXaWZpOiAnJyxcbiAgICAgIGFjY2VwdFRlcm1zOiBbJycsIFZhbGlkYXRvcnMucmVxdWlyZWRUcnVlXVxuICAgIH0pO1xuICB9XG5cbiAgb25Gb3JtU3VibWl0KCkge1xuICAgIGFsZXJ0KEpTT04uc3RyaW5naWZ5KHRoaXMuZm9ybUdyb3VwLnZhbHVlLCBudWxsLCAyKSk7XG4gIH1cbn1cbiIsIjxwPlNsaWRlIFRvZ2dsZSB1c2luZyBhIHNpbXBsZSBOZ01vZGVsLjwvcD5cblxuPG1hdC1zbGlkZS10b2dnbGUgWyhuZ01vZGVsKV09XCJpc0NoZWNrZWRcIj5TbGlkZSBUb2dnbGUgQ2hlY2tlZDoge3tpc0NoZWNrZWR9fTwvbWF0LXNsaWRlLXRvZ2dsZT5cblxuPHA+U2xpZGUgVG9nZ2xlIGluc2lkZSBvZiBhIFRlbXBsYXRlLWRyaXZlbiBmb3JtPC9wPlxuXG48Zm9ybSBjbGFzcz1cImV4YW1wbGUtZm9ybVwiICNmb3JtPVwibmdGb3JtXCIgKG5nU3VibWl0KT1cIm9uRm9ybVN1Ym1pdCgpXCIgbmdOYXRpdmVWYWxpZGF0ZT5cblxuICA8bWF0LXNsaWRlLXRvZ2dsZSBuZ01vZGVsIG5hbWU9XCJlbmFibGVXaWZpXCI+RW5hYmxlIFdpZmk8L21hdC1zbGlkZS10b2dnbGU+XG4gIDxtYXQtc2xpZGUtdG9nZ2xlIG5nTW9kZWwgbmFtZT1cImFjY2VwdFRlcm1zXCIgcmVxdWlyZWQ+QWNjZXB0IFRlcm1zIG9mIFNlcnZpY2U8L21hdC1zbGlkZS10b2dnbGU+XG5cbiAgPGJ1dHRvbiBtYXQtcmFpc2VkLWJ1dHRvbiB0eXBlPVwic3VibWl0XCI+U2F2ZSBTZXR0aW5nczwvYnV0dG9uPlxuPC9mb3JtPlxuXG48cD5TbGlkZSBUb2dnbGUgaW5zaWRlIG9mIGEgUmVhY3RpdmUgZm9ybTwvcD5cblxuPGZvcm0gY2xhc3M9XCJleGFtcGxlLWZvcm1cIiBbZm9ybUdyb3VwXT1cImZvcm1Hcm91cFwiIChuZ1N1Ym1pdCk9XCJvbkZvcm1TdWJtaXQoKVwiIG5nTmF0aXZlVmFsaWRhdGU+XG5cbiAgPG1hdC1zbGlkZS10b2dnbGUgZm9ybUNvbnRyb2xOYW1lPVwiZW5hYmxlV2lmaVwiPkVuYWJsZSBXaWZpPC9tYXQtc2xpZGUtdG9nZ2xlPlxuICA8bWF0LXNsaWRlLXRvZ2dsZSBmb3JtQ29udHJvbE5hbWU9XCJhY2NlcHRUZXJtc1wiPkFjY2VwdCBUZXJtcyBvZiBTZXJ2aWNlPC9tYXQtc2xpZGUtdG9nZ2xlPlxuXG4gIDxwPkZvcm0gR3JvdXAgU3RhdHVzOiB7e2Zvcm1Hcm91cC5zdGF0dXN9fTwvcD5cblxuICA8YnV0dG9uIG1hdC1yYXNpZWQtYnV0dG9uIHR5cGU9XCJzdWJtaXRcIj5TYXZlIFNldHRpbmdzPC9idXR0b24+XG48L2Zvcm0+XG4iXX0=

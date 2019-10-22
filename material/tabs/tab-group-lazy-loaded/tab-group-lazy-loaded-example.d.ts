@@ -1,7 +1,10 @@
+import * as i0 from "@angular/core";
 /**
  * @title Tab group where the tab content is loaded lazily (when activated)
  */
 export declare class TabGroupLazyLoadedExample {
     tabLoadTimes: Date[];
     getTimeLoaded(index: number): Date;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TabGroupLazyLoadedExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TabGroupLazyLoadedExample, "tab-group-lazy-loaded-example", never, {}, {}, never>;
 }

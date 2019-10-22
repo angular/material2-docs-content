@@ -1,6 +1,7 @@
 import { PortalModule } from '@angular/cdk/portal';
 import { NgModule } from '@angular/core';
 import { CdkPortalOverviewExample, ComponentPortalExample } from './cdk-portal-overview/cdk-portal-overview-example';
+import * as i0 from "@angular/core";
 export { CdkPortalOverviewExample, ComponentPortalExample };
 var EXAMPLES = [
     CdkPortalOverviewExample,
@@ -17,9 +18,27 @@ var CdkPortalExamplesModule = /** @class */ (function () {
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                     entryComponents: [ComponentPortalExample]
-                },] }
+                },] },
     ];
+    CdkPortalExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: CdkPortalExamplesModule });
+    CdkPortalExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function CdkPortalExamplesModule_Factory(t) { return new (t || CdkPortalExamplesModule)(); }, imports: [[
+                PortalModule,
+            ]] });
     return CdkPortalExamplesModule;
 }());
 export { CdkPortalExamplesModule };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9kdWxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL2Nkay9wb3J0YWwvbW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBQyxZQUFZLEVBQUMsTUFBTSxxQkFBcUIsQ0FBQztBQUNqRCxPQUFPLEVBQUMsUUFBUSxFQUFDLE1BQU0sZUFBZSxDQUFDO0FBQ3ZDLE9BQU8sRUFDTCx3QkFBd0IsRUFDeEIsc0JBQXNCLEVBQ3ZCLE1BQU0sbURBQW1ELENBQUM7QUFFM0QsT0FBTyxFQUFDLHdCQUF3QixFQUFFLHNCQUFzQixFQUFDLENBQUM7QUFFMUQsSUFBTSxRQUFRLEdBQUc7SUFDZix3QkFBd0I7SUFDeEIsc0JBQXNCO0NBQ3ZCLENBQUM7QUFFRjtJQUFBO0lBU0EsQ0FBQzs7Z0JBVEEsUUFBUSxTQUFDO29CQUNSLE9BQU8sRUFBRTt3QkFDUCxZQUFZO3FCQUNiO29CQUNELFlBQVksRUFBRSxRQUFRO29CQUN0QixPQUFPLEVBQUUsUUFBUTtvQkFDakIsZUFBZSxFQUFFLENBQUMsc0JBQXNCLENBQUM7aUJBQzFDOztJQUVELDhCQUFDO0NBQUEsQUFURCxJQVNDO1NBRFksdUJBQXVCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtQb3J0YWxNb2R1bGV9IGZyb20gJ0Bhbmd1bGFyL2Nkay9wb3J0YWwnO1xuaW1wb3J0IHtOZ01vZHVsZX0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQge1xuICBDZGtQb3J0YWxPdmVydmlld0V4YW1wbGUsXG4gIENvbXBvbmVudFBvcnRhbEV4YW1wbGVcbn0gZnJvbSAnLi9jZGstcG9ydGFsLW92ZXJ2aWV3L2Nkay1wb3J0YWwtb3ZlcnZpZXctZXhhbXBsZSc7XG5cbmV4cG9ydCB7Q2RrUG9ydGFsT3ZlcnZpZXdFeGFtcGxlLCBDb21wb25lbnRQb3J0YWxFeGFtcGxlfTtcblxuY29uc3QgRVhBTVBMRVMgPSBbXG4gIENka1BvcnRhbE92ZXJ2aWV3RXhhbXBsZSxcbiAgQ29tcG9uZW50UG9ydGFsRXhhbXBsZSxcbl07XG5cbkBOZ01vZHVsZSh7XG4gIGltcG9ydHM6IFtcbiAgICBQb3J0YWxNb2R1bGUsXG4gIF0sXG4gIGRlY2xhcmF0aW9uczogRVhBTVBMRVMsXG4gIGV4cG9ydHM6IEVYQU1QTEVTLFxuICBlbnRyeUNvbXBvbmVudHM6IFtDb21wb25lbnRQb3J0YWxFeGFtcGxlXVxufSlcbmV4cG9ydCBjbGFzcyBDZGtQb3J0YWxFeGFtcGxlc01vZHVsZSB7XG59XG4iXX0=
+/*@__PURE__*/ i0.ɵɵsetNgModuleScope(CdkPortalExamplesModule, { declarations: [CdkPortalOverviewExample,
+        ComponentPortalExample], imports: [PortalModule], exports: [CdkPortalOverviewExample,
+        ComponentPortalExample] });
+/*@__PURE__*/ i0.ɵsetClassMetadata(CdkPortalExamplesModule, [{
+        type: NgModule,
+        args: [{
+                imports: [
+                    PortalModule,
+                ],
+                declarations: EXAMPLES,
+                exports: EXAMPLES,
+                entryComponents: [ComponentPortalExample]
+            }]
+    }], null, null);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9kdWxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL2Nkay9wb3J0YWwvbW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBQyxZQUFZLEVBQUMsTUFBTSxxQkFBcUIsQ0FBQztBQUNqRCxPQUFPLEVBQUMsUUFBUSxFQUFDLE1BQU0sZUFBZSxDQUFDO0FBQ3ZDLE9BQU8sRUFDTCx3QkFBd0IsRUFDeEIsc0JBQXNCLEVBQ3ZCLE1BQU0sbURBQW1ELENBQUM7O0FBRTNELE9BQU8sRUFBQyx3QkFBd0IsRUFBRSxzQkFBc0IsRUFBQyxDQUFDO0FBRTFELElBQU0sUUFBUSxHQUFHO0lBQ2Ysd0JBQXdCO0lBQ3hCLHNCQUFzQjtDQUN2QixDQUFDO0FBRUY7SUFBQTtLQVNDOztnQkFUQSxRQUFRLFNBQUM7b0JBQ1IsT0FBTyxFQUFFO3dCQUNQLFlBQVk7cUJBQ2I7b0JBQ0QsWUFBWSxFQUFFLFFBQVE7b0JBQ3RCLE9BQU8sRUFBRSxRQUFRO29CQUNqQixlQUFlLEVBQUUsQ0FBQyxzQkFBc0IsQ0FBQztpQkFDMUM7O3NFQUNZLHVCQUF1QjswSUFBdkIsdUJBQXVCLGtCQVB6QjtnQkFDUCxZQUFZO2FBQ2I7a0NBakJIO0NBdUJDLEFBVEQsSUFTQztTQURZLHVCQUF1QjtvQ0FBdkIsdUJBQXVCLG1CQVpsQyx3QkFBd0I7UUFDeEIsc0JBQXNCLGFBS3BCLFlBQVksYUFOZCx3QkFBd0I7UUFDeEIsc0JBQXNCO21DQVdYLHVCQUF1QjtjQVJuQyxRQUFRO2VBQUM7Z0JBQ1IsT0FBTyxFQUFFO29CQUNQLFlBQVk7aUJBQ2I7Z0JBQ0QsWUFBWSxFQUFFLFFBQVE7Z0JBQ3RCLE9BQU8sRUFBRSxRQUFRO2dCQUNqQixlQUFlLEVBQUUsQ0FBQyxzQkFBc0IsQ0FBQzthQUMxQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7UG9ydGFsTW9kdWxlfSBmcm9tICdAYW5ndWxhci9jZGsvcG9ydGFsJztcbmltcG9ydCB7TmdNb2R1bGV9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHtcbiAgQ2RrUG9ydGFsT3ZlcnZpZXdFeGFtcGxlLFxuICBDb21wb25lbnRQb3J0YWxFeGFtcGxlXG59IGZyb20gJy4vY2RrLXBvcnRhbC1vdmVydmlldy9jZGstcG9ydGFsLW92ZXJ2aWV3LWV4YW1wbGUnO1xuXG5leHBvcnQge0Nka1BvcnRhbE92ZXJ2aWV3RXhhbXBsZSwgQ29tcG9uZW50UG9ydGFsRXhhbXBsZX07XG5cbmNvbnN0IEVYQU1QTEVTID0gW1xuICBDZGtQb3J0YWxPdmVydmlld0V4YW1wbGUsXG4gIENvbXBvbmVudFBvcnRhbEV4YW1wbGUsXG5dO1xuXG5ATmdNb2R1bGUoe1xuICBpbXBvcnRzOiBbXG4gICAgUG9ydGFsTW9kdWxlLFxuICBdLFxuICBkZWNsYXJhdGlvbnM6IEVYQU1QTEVTLFxuICBleHBvcnRzOiBFWEFNUExFUyxcbiAgZW50cnlDb21wb25lbnRzOiBbQ29tcG9uZW50UG9ydGFsRXhhbXBsZV1cbn0pXG5leHBvcnQgY2xhc3MgQ2RrUG9ydGFsRXhhbXBsZXNNb2R1bGUge1xufVxuIl19

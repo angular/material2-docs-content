@@ -1,10 +1,10 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatCardModule } from '@angular/material/card';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSliderModule } from '@angular/material/slider';
+import { NgIf, CommonModule } from '@angular/common';
+import { Component, ɵɵdefineComponent, ɵɵelement, ɵsetClassMetadata, ɵɵgetCurrentView, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵadvance, ɵɵproperty, ɵɵtemplate, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { NgControlStatus, NgModel, FormsModule } from '@angular/forms';
+import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
+import { MatProgressBar, MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatRadioGroup, MatRadioButton, MatRadioModule } from '@angular/material/radio';
+import { MatSlider, MatSliderModule } from '@angular/material/slider';
 
 /**
  * @fileoverview added by tsickle
@@ -18,15 +18,57 @@ class ProgressBarBufferExample {
 ProgressBarBufferExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-buffer-example',
-                template: "<mat-progress-bar mode=\"buffer\"></mat-progress-bar>\n",
-                styles: ["/** No CSS for this example */\n"]
-            }] }
+                templateUrl: 'progress-bar-buffer-example.html',
+                styleUrls: ['progress-bar-buffer-example.css'],
+            },] },
 ];
+/** @nocollapse */ ProgressBarBufferExample.ngFactoryDef = function ProgressBarBufferExample_Factory(t) { return new (t || ProgressBarBufferExample)(); };
+/** @nocollapse */ ProgressBarBufferExample.ngComponentDef = ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-progress-bar", 0);
+    } }, directives: [MatProgressBar], styles: [""] });
+/*@__PURE__*/ ɵsetClassMetadata(ProgressBarBufferExample, [{
+        type: Component,
+        args: [{
+                selector: 'progress-bar-buffer-example',
+                templateUrl: 'progress-bar-buffer-example.html',
+                styleUrls: ['progress-bar-buffer-example.css'],
+            }]
+    }], null, null);
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+function ProgressBarConfigurableExample_section_26_Template(rf, ctx) { if (rf & 1) {
+    const _r3 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "section", 1);
+    ɵɵelementStart(1, "label", 2);
+    ɵɵtext(2, "Progress:");
+    ɵɵelementEnd();
+    ɵɵelementStart(3, "mat-slider", 13);
+    ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_section_26_Template_mat_slider_ngModelChange_3_listener($event) { ɵɵrestoreView(_r3); const ctx_r2 = ɵɵnextContext(); return ctx_r2.value = $event; });
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = ɵɵnextContext();
+    ɵɵadvance(3);
+    ɵɵproperty("ngModel", ctx_r0.value);
+} }
+function ProgressBarConfigurableExample_section_27_Template(rf, ctx) { if (rf & 1) {
+    const _r5 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "section", 1);
+    ɵɵelementStart(1, "label", 2);
+    ɵɵtext(2, "Buffer:");
+    ɵɵelementEnd();
+    ɵɵelementStart(3, "mat-slider", 13);
+    ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_section_27_Template_mat_slider_ngModelChange_3_listener($event) { ɵɵrestoreView(_r5); const ctx_r4 = ɵɵnextContext(); return ctx_r4.bufferValue = $event; });
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r1 = ɵɵnextContext();
+    ɵɵadvance(3);
+    ɵɵproperty("ngModel", ctx_r1.bufferValue);
+} }
 /**
  * \@title Configurable progress-bar
  */
@@ -41,10 +83,88 @@ class ProgressBarConfigurableExample {
 ProgressBarConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-configurable-example',
-                template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Progress bar configuration</h2>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Color:</label>\n      <mat-radio-group [(ngModel)]=\"color\">\n        <mat-radio-button class=\"example-margin\" value=\"primary\">\n          Primary\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"accent\">\n          Accent\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"warn\">\n          Warn\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Mode:</label>\n      <mat-radio-group [(ngModel)]=\"mode\">\n        <mat-radio-button class=\"example-margin\" value=\"determinate\">\n          Determinate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"indeterminate\">\n          Indeterminate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"buffer\">\n          Buffer\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"query\">\n          Query\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\" *ngIf=\"mode === 'determinate' || mode === 'buffer'\">\n      <label class=\"example-margin\">Progress:</label>\n      <mat-slider class=\"example-margin\" [(ngModel)]=\"value\"></mat-slider>\n    </section>\n    <section class=\"example-section\" *ngIf=\"mode === 'buffer'\">\n      <label class=\"example-margin\">Buffer:</label>\n      <mat-slider class=\"example-margin\" [(ngModel)]=\"bufferValue\"></mat-slider>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <section class=\"example-section\">\n      <mat-progress-bar\n          class=\"example-margin\"\n          [color]=\"color\"\n          [mode]=\"mode\"\n          [value]=\"value\"\n          [bufferValue]=\"bufferValue\">\n      </mat-progress-bar>\n    </section>\n  </mat-card-content>\n</mat-card>\n",
-                styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n"]
-            }] }
+                templateUrl: 'progress-bar-configurable-example.html',
+                styleUrls: ['progress-bar-configurable-example.css'],
+            },] },
 ];
+/** @nocollapse */ ProgressBarConfigurableExample.ngFactoryDef = function ProgressBarConfigurableExample_Factory(t) { return new (t || ProgressBarConfigurableExample)(); };
+/** @nocollapse */ ProgressBarConfigurableExample.ngComponentDef = ɵɵdefineComponent({ type: ProgressBarConfigurableExample, selectors: [["progress-bar-configurable-example"]], decls: 34, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["value", "buffer", 1, "example-margin"], ["value", "query", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value", "bufferValue"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressBarConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-card");
+        ɵɵelementStart(1, "mat-card-content");
+        ɵɵelementStart(2, "h2", 0);
+        ɵɵtext(3, "Progress bar configuration");
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "section", 1);
+        ɵɵelementStart(5, "label", 2);
+        ɵɵtext(6, "Color:");
+        ɵɵelementEnd();
+        ɵɵelementStart(7, "mat-radio-group", 3);
+        ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_Template_mat_radio_group_ngModelChange_7_listener($event) { return ctx.color = $event; });
+        ɵɵelementStart(8, "mat-radio-button", 4);
+        ɵɵtext(9, " Primary ");
+        ɵɵelementEnd();
+        ɵɵelementStart(10, "mat-radio-button", 5);
+        ɵɵtext(11, " Accent ");
+        ɵɵelementEnd();
+        ɵɵelementStart(12, "mat-radio-button", 6);
+        ɵɵtext(13, " Warn ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(14, "section", 1);
+        ɵɵelementStart(15, "label", 2);
+        ɵɵtext(16, "Mode:");
+        ɵɵelementEnd();
+        ɵɵelementStart(17, "mat-radio-group", 3);
+        ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_Template_mat_radio_group_ngModelChange_17_listener($event) { return ctx.mode = $event; });
+        ɵɵelementStart(18, "mat-radio-button", 7);
+        ɵɵtext(19, " Determinate ");
+        ɵɵelementEnd();
+        ɵɵelementStart(20, "mat-radio-button", 8);
+        ɵɵtext(21, " Indeterminate ");
+        ɵɵelementEnd();
+        ɵɵelementStart(22, "mat-radio-button", 9);
+        ɵɵtext(23, " Buffer ");
+        ɵɵelementEnd();
+        ɵɵelementStart(24, "mat-radio-button", 10);
+        ɵɵtext(25, " Query ");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵtemplate(26, ProgressBarConfigurableExample_section_26_Template, 4, 1, "section", 11);
+        ɵɵtemplate(27, ProgressBarConfigurableExample_section_27_Template, 4, 1, "section", 11);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(28, "mat-card");
+        ɵɵelementStart(29, "mat-card-content");
+        ɵɵelementStart(30, "h2", 0);
+        ɵɵtext(31, "Result");
+        ɵɵelementEnd();
+        ɵɵelementStart(32, "section", 1);
+        ɵɵelement(33, "mat-progress-bar", 12);
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵadvance(7);
+        ɵɵproperty("ngModel", ctx.color);
+        ɵɵadvance(10);
+        ɵɵproperty("ngModel", ctx.mode);
+        ɵɵadvance(9);
+        ɵɵproperty("ngIf", ctx.mode === "determinate" || ctx.mode === "buffer");
+        ɵɵadvance(1);
+        ɵɵproperty("ngIf", ctx.mode === "buffer");
+        ɵɵadvance(6);
+        ɵɵproperty("color", ctx.color)("mode", ctx.mode)("value", ctx.value)("bufferValue", ctx.bufferValue);
+    } }, directives: [MatCard, MatCardContent, MatRadioGroup, NgControlStatus, NgModel, MatRadioButton, NgIf, MatProgressBar, MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
+/*@__PURE__*/ ɵsetClassMetadata(ProgressBarConfigurableExample, [{
+        type: Component,
+        args: [{
+                selector: 'progress-bar-configurable-example',
+                templateUrl: 'progress-bar-configurable-example.html',
+                styleUrls: ['progress-bar-configurable-example.css'],
+            }]
+    }], null, null);
 if (false) {
     /** @type {?} */
     ProgressBarConfigurableExample.prototype.color;
@@ -68,10 +188,22 @@ class ProgressBarDeterminateExample {
 ProgressBarDeterminateExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-determinate-example',
-                template: "<mat-progress-bar mode=\"determinate\" value=\"40\"></mat-progress-bar>\n",
-                styles: ["/** No CSS for this example */\n"]
-            }] }
+                templateUrl: 'progress-bar-determinate-example.html',
+                styleUrls: ['progress-bar-determinate-example.css'],
+            },] },
 ];
+/** @nocollapse */ ProgressBarDeterminateExample.ngFactoryDef = function ProgressBarDeterminateExample_Factory(t) { return new (t || ProgressBarDeterminateExample)(); };
+/** @nocollapse */ ProgressBarDeterminateExample.ngComponentDef = ɵɵdefineComponent({ type: ProgressBarDeterminateExample, selectors: [["progress-bar-determinate-example"]], decls: 1, vars: 0, consts: [["mode", "determinate", "value", "40"]], template: function ProgressBarDeterminateExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-progress-bar", 0);
+    } }, directives: [MatProgressBar], styles: [""] });
+/*@__PURE__*/ ɵsetClassMetadata(ProgressBarDeterminateExample, [{
+        type: Component,
+        args: [{
+                selector: 'progress-bar-determinate-example',
+                templateUrl: 'progress-bar-determinate-example.html',
+                styleUrls: ['progress-bar-determinate-example.css'],
+            }]
+    }], null, null);
 
 /**
  * @fileoverview added by tsickle
@@ -85,10 +217,22 @@ class ProgressBarIndeterminateExample {
 ProgressBarIndeterminateExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-indeterminate-example',
-                template: "<mat-progress-bar mode=\"indeterminate\"></mat-progress-bar>\n",
-                styles: ["/** No CSS for this example */\n"]
-            }] }
+                templateUrl: 'progress-bar-indeterminate-example.html',
+                styleUrls: ['progress-bar-indeterminate-example.css'],
+            },] },
 ];
+/** @nocollapse */ ProgressBarIndeterminateExample.ngFactoryDef = function ProgressBarIndeterminateExample_Factory(t) { return new (t || ProgressBarIndeterminateExample)(); };
+/** @nocollapse */ ProgressBarIndeterminateExample.ngComponentDef = ɵɵdefineComponent({ type: ProgressBarIndeterminateExample, selectors: [["progress-bar-indeterminate-example"]], decls: 1, vars: 0, consts: [["mode", "indeterminate"]], template: function ProgressBarIndeterminateExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-progress-bar", 0);
+    } }, directives: [MatProgressBar], styles: [""] });
+/*@__PURE__*/ ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
+        type: Component,
+        args: [{
+                selector: 'progress-bar-indeterminate-example',
+                templateUrl: 'progress-bar-indeterminate-example.html',
+                styleUrls: ['progress-bar-indeterminate-example.css'],
+            }]
+    }], null, null);
 
 /**
  * @fileoverview added by tsickle
@@ -102,10 +246,22 @@ class ProgressBarQueryExample {
 ProgressBarQueryExample.decorators = [
     { type: Component, args: [{
                 selector: 'progress-bar-query-example',
-                template: "<mat-progress-bar mode=\"query\"></mat-progress-bar>\n",
-                styles: ["/** No CSS for this example */\n"]
-            }] }
+                templateUrl: 'progress-bar-query-example.html',
+                styleUrls: ['progress-bar-query-example.css'],
+            },] },
 ];
+/** @nocollapse */ ProgressBarQueryExample.ngFactoryDef = function ProgressBarQueryExample_Factory(t) { return new (t || ProgressBarQueryExample)(); };
+/** @nocollapse */ ProgressBarQueryExample.ngComponentDef = ɵɵdefineComponent({ type: ProgressBarQueryExample, selectors: [["progress-bar-query-example"]], decls: 1, vars: 0, consts: [["mode", "query"]], template: function ProgressBarQueryExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-progress-bar", 0);
+    } }, directives: [MatProgressBar], styles: [""] });
+/*@__PURE__*/ ɵsetClassMetadata(ProgressBarQueryExample, [{
+        type: Component,
+        args: [{
+                selector: 'progress-bar-query-example',
+                templateUrl: 'progress-bar-query-example.html',
+                styleUrls: ['progress-bar-query-example.css'],
+            }]
+    }], null, null);
 
 /**
  * @fileoverview added by tsickle
@@ -133,8 +289,46 @@ ProgressBarExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
-            },] }
+            },] },
 ];
+/** @nocollapse */ ProgressBarExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: ProgressBarExamplesModule });
+/** @nocollapse */ ProgressBarExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function ProgressBarExamplesModule_Factory(t) { return new (t || ProgressBarExamplesModule)(); }, imports: [[
+            CommonModule,
+            MatCardModule,
+            MatProgressBarModule,
+            MatRadioModule,
+            MatSliderModule,
+            FormsModule,
+        ]] });
+/*@__PURE__*/ ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
+        ProgressBarConfigurableExample,
+        ProgressBarDeterminateExample,
+        ProgressBarIndeterminateExample,
+        ProgressBarQueryExample], imports: [CommonModule,
+        MatCardModule,
+        MatProgressBarModule,
+        MatRadioModule,
+        MatSliderModule,
+        FormsModule], exports: [ProgressBarBufferExample,
+        ProgressBarConfigurableExample,
+        ProgressBarDeterminateExample,
+        ProgressBarIndeterminateExample,
+        ProgressBarQueryExample] });
+/*@__PURE__*/ ɵsetClassMetadata(ProgressBarExamplesModule, [{
+        type: NgModule,
+        args: [{
+                imports: [
+                    CommonModule,
+                    MatCardModule,
+                    MatProgressBarModule,
+                    MatRadioModule,
+                    MatSliderModule,
+                    FormsModule,
+                ],
+                declarations: EXAMPLES,
+                exports: EXAMPLES,
+            }]
+    }], null, null);
 
 /**
  * Generated bundle index. Do not edit.

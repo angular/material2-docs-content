@@ -1,4 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
+<span class="hljs-keyword">import</span> {ProgressSpinnerMode} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/progress-spinner'</span>;
 
 <span class="hljs-comment">/**
  * @title Configurable progress spinner
@@ -9,7 +11,7 @@
   styleUrls: [<span class="hljs-string">'progress-spinner-configurable-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ProgressSpinnerConfigurableExample {
-  color = <span class="hljs-string">'primary'</span>;
-  mode = <span class="hljs-string">'determinate'</span>;
+  color: ThemePalette = <span class="hljs-string">'primary'</span>;
+  mode: ProgressSpinnerMode = <span class="hljs-string">'determinate'</span>;
   value = <span class="hljs-number">50</span>;
 }

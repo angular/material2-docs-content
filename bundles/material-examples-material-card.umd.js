@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/card')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/card', ['exports', '@angular/core', '@angular/material/button', '@angular/material/card'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.card = {}), global.ng.core, global.ng.material.button, global.ng.material.card));
-}(this, function (exports, core, button, card) { 'use strict';
+}(this, function (exports, i0, i2, i1) { 'use strict';
 
     /**
      * @title Card with multiple sections
@@ -11,14 +11,50 @@
         function CardFancyExample() {
         }
         CardFancyExample.decorators = [
-            { type: core.Component, args: [{
+            { type: i0.Component, args: [{
                         selector: 'card-fancy-example',
-                        template: "<mat-card class=\"example-card\">\n  <mat-card-header>\n    <div mat-card-avatar class=\"example-header-image\"></div>\n    <mat-card-title>Shiba Inu</mat-card-title>\n    <mat-card-subtitle>Dog Breed</mat-card-subtitle>\n  </mat-card-header>\n  <img mat-card-image src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Photo of a Shiba Inu\">\n  <mat-card-content>\n    <p>\n      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.\n      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally\n      bred for hunting.\n    </p>\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-button>LIKE</button>\n    <button mat-button>SHARE</button>\n  </mat-card-actions>\n</mat-card>\n",
-                        styles: [".example-card {\n  max-width: 400px;\n}\n\n.example-header-image {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}\n"]
-                    }] }
+                        templateUrl: 'card-fancy-example.html',
+                        styleUrls: ['card-fancy-example.css'],
+                    },] },
         ];
+        CardFancyExample.ngFactoryDef = function CardFancyExample_Factory(t) { return new (t || CardFancyExample)(); };
+        CardFancyExample.ngComponentDef = i0.ɵɵdefineComponent({ type: CardFancyExample, selectors: [["card-fancy-example"]], decls: 16, vars: 0, consts: [[1, "example-card"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://material.angular.io/assets/img/examples/shiba2.jpg", "alt", "Photo of a Shiba Inu"], ["mat-button", ""]], template: function CardFancyExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-card", 0);
+                i0.ɵɵelementStart(1, "mat-card-header");
+                i0.ɵɵelement(2, "div", 1);
+                i0.ɵɵelementStart(3, "mat-card-title");
+                i0.ɵɵtext(4, "Shiba Inu");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(5, "mat-card-subtitle");
+                i0.ɵɵtext(6, "Dog Breed");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(7, "img", 2);
+                i0.ɵɵelementStart(8, "mat-card-content");
+                i0.ɵɵelementStart(9, "p");
+                i0.ɵɵtext(10, " The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting. ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(11, "mat-card-actions");
+                i0.ɵɵelementStart(12, "button", 3);
+                i0.ɵɵtext(13, "LIKE");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(14, "button", 3);
+                i0.ɵɵtext(15, "SHARE");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            } }, directives: [i1.MatCard, i1.MatCardHeader, i1.MatCardAvatar, i1.MatCardTitle, i1.MatCardSubtitle, i1.MatCardImage, i1.MatCardContent, i1.MatCardActions, i2.MatButton], styles: [".example-card[_ngcontent-%COMP%] {\n  max-width: 400px;\n}\n\n.example-header-image[_ngcontent-%COMP%] {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}"] });
         return CardFancyExample;
     }());
+    /*@__PURE__*/ i0.ɵsetClassMetadata(CardFancyExample, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'card-fancy-example',
+                    templateUrl: 'card-fancy-example.html',
+                    styleUrls: ['card-fancy-example.css'],
+                }]
+        }], null, null);
 
     /**
      * @title Basic cards
@@ -27,14 +63,28 @@
         function CardOverviewExample() {
         }
         CardOverviewExample.decorators = [
-            { type: core.Component, args: [{
+            { type: i0.Component, args: [{
                         selector: 'card-overview-example',
-                        template: "<mat-card>Simple card</mat-card>\n",
-                        styles: ["/** No CSS for this example */\n"]
-                    }] }
+                        templateUrl: 'card-overview-example.html',
+                        styleUrls: ['card-overview-example.css'],
+                    },] },
         ];
+        CardOverviewExample.ngFactoryDef = function CardOverviewExample_Factory(t) { return new (t || CardOverviewExample)(); };
+        CardOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: CardOverviewExample, selectors: [["card-overview-example"]], decls: 2, vars: 0, template: function CardOverviewExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-card");
+                i0.ɵɵtext(1, "Simple card");
+                i0.ɵɵelementEnd();
+            } }, directives: [i1.MatCard], styles: [""] });
         return CardOverviewExample;
     }());
+    /*@__PURE__*/ i0.ɵsetClassMetadata(CardOverviewExample, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'card-overview-example',
+                    templateUrl: 'card-overview-example.html',
+                    styleUrls: ['card-overview-example.css'],
+                }]
+        }], null, null);
 
     var EXAMPLES = [
         CardFancyExample,
@@ -44,17 +94,37 @@
         function CardExamplesModule() {
         }
         CardExamplesModule.decorators = [
-            { type: core.NgModule, args: [{
+            { type: i0.NgModule, args: [{
                         imports: [
-                            button.MatButtonModule,
-                            card.MatCardModule,
+                            i2.MatButtonModule,
+                            i1.MatCardModule,
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
-                    },] }
+                    },] },
         ];
+        CardExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: CardExamplesModule });
+        CardExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function CardExamplesModule_Factory(t) { return new (t || CardExamplesModule)(); }, imports: [[
+                    i2.MatButtonModule,
+                    i1.MatCardModule,
+                ]] });
         return CardExamplesModule;
     }());
+    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CardExamplesModule, { declarations: [CardFancyExample,
+            CardOverviewExample], imports: [i2.MatButtonModule,
+            i1.MatCardModule], exports: [CardFancyExample,
+            CardOverviewExample] });
+    /*@__PURE__*/ i0.ɵsetClassMetadata(CardExamplesModule, [{
+            type: i0.NgModule,
+            args: [{
+                    imports: [
+                        i2.MatButtonModule,
+                        i1.MatCardModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                }]
+        }], null, null);
 
     /**
      * Generated bundle index. Do not edit.

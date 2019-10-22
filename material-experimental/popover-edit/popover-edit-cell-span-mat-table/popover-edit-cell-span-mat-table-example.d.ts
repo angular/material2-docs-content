@@ -1,6 +1,7 @@
 import { DataSource } from '@angular/cdk/collections';
 import { NgForm } from '@angular/forms';
 import { BehaviorSubject, Observable } from 'rxjs';
+import * as i0 from "@angular/core";
 export interface Person {
     id: number;
     firstName: string;
@@ -15,6 +16,8 @@ export declare class PopoverEditCellSpanMatTableExample {
     dataSource: ExampleDataSource;
     readonly preservedValues: WeakMap<Person, any>;
     onSubmit(person: Person, f: NgForm): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<PopoverEditCellSpanMatTableExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<PopoverEditCellSpanMatTableExample, "popover-edit-cell-span-mat-table-example", never, {}, {}, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

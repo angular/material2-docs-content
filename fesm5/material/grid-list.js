@@ -1,7 +1,19 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule } from '@angular/core';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { NgForOf, CommonModule } from '@angular/common';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵstyleSanitizer, ɵɵdefaultStyleSanitizer, ɵɵstyleProp, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵɵtemplate, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { MatGridList, MatGridTile, MatGridListModule } from '@angular/material/grid-list';
 
+function GridListDynamicExample_mat_grid_tile_1_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-grid-tile", 2);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var tile_r1 = ctx.$implicit;
+    ɵɵstyleSanitizer(ɵɵdefaultStyleSanitizer);
+    ɵɵstyleProp("background", tile_r1.color);
+    ɵɵproperty("colspan", tile_r1.cols)("rowspan", tile_r1.rows);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", tile_r1.text, " ");
+} }
 /**
  * @title Dynamic grid-list
  */
@@ -17,12 +29,29 @@ var GridListDynamicExample = /** @class */ (function () {
     GridListDynamicExample.decorators = [
         { type: Component, args: [{
                     selector: 'grid-list-dynamic-example',
-                    template: "<mat-grid-list cols=\"4\" rowHeight=\"100px\">\n  <mat-grid-tile\n      *ngFor=\"let tile of tiles\"\n      [colspan]=\"tile.cols\"\n      [rowspan]=\"tile.rows\"\n      [style.background]=\"tile.color\">\n    {{tile.text}}\n  </mat-grid-tile>\n</mat-grid-list>\n",
-                    styles: ["/** No CSS for this example */\n"]
-                }] }
+                    templateUrl: 'grid-list-dynamic-example.html',
+                    styleUrls: ['grid-list-dynamic-example.css'],
+                },] },
     ];
+    GridListDynamicExample.ngFactoryDef = function GridListDynamicExample_Factory(t) { return new (t || GridListDynamicExample)(); };
+    GridListDynamicExample.ngComponentDef = ɵɵdefineComponent({ type: GridListDynamicExample, selectors: [["grid-list-dynamic-example"]], decls: 2, vars: 1, consts: [["cols", "4", "rowHeight", "100px"], [3, "colspan", "rowspan", "background", 4, "ngFor", "ngForOf"], [3, "colspan", "rowspan"]], template: function GridListDynamicExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "mat-grid-list", 0);
+            ɵɵtemplate(1, GridListDynamicExample_mat_grid_tile_1_Template, 2, 4, "mat-grid-tile", 1);
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵadvance(1);
+            ɵɵproperty("ngForOf", ctx.tiles);
+        } }, directives: [MatGridList, NgForOf, MatGridTile], styles: [""] });
     return GridListDynamicExample;
 }());
+/*@__PURE__*/ ɵsetClassMetadata(GridListDynamicExample, [{
+        type: Component,
+        args: [{
+                selector: 'grid-list-dynamic-example',
+                templateUrl: 'grid-list-dynamic-example.html',
+                styleUrls: ['grid-list-dynamic-example.css'],
+            }]
+    }], null, null);
 
 /**
  * @title Basic grid-list
@@ -33,12 +62,37 @@ var GridListOverviewExample = /** @class */ (function () {
     GridListOverviewExample.decorators = [
         { type: Component, args: [{
                     selector: 'grid-list-overview-example',
-                    template: "<mat-grid-list cols=\"2\" rowHeight=\"2:1\">\n  <mat-grid-tile>1</mat-grid-tile>\n  <mat-grid-tile>2</mat-grid-tile>\n  <mat-grid-tile>3</mat-grid-tile>\n  <mat-grid-tile>4</mat-grid-tile>\n</mat-grid-list>\n",
-                    styles: ["mat-grid-tile {\n  background: lightblue;\n}\n"]
-                }] }
+                    styleUrls: ['grid-list-overview-example.css'],
+                    templateUrl: 'grid-list-overview-example.html',
+                },] },
     ];
+    GridListOverviewExample.ngFactoryDef = function GridListOverviewExample_Factory(t) { return new (t || GridListOverviewExample)(); };
+    GridListOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: GridListOverviewExample, selectors: [["grid-list-overview-example"]], decls: 9, vars: 0, consts: [["cols", "2", "rowHeight", "2:1"]], template: function GridListOverviewExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "mat-grid-list", 0);
+            ɵɵelementStart(1, "mat-grid-tile");
+            ɵɵtext(2, "1");
+            ɵɵelementEnd();
+            ɵɵelementStart(3, "mat-grid-tile");
+            ɵɵtext(4, "2");
+            ɵɵelementEnd();
+            ɵɵelementStart(5, "mat-grid-tile");
+            ɵɵtext(6, "3");
+            ɵɵelementEnd();
+            ɵɵelementStart(7, "mat-grid-tile");
+            ɵɵtext(8, "4");
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+        } }, directives: [MatGridList, MatGridTile], styles: ["mat-grid-tile[_ngcontent-%COMP%] {\n  background: lightblue;\n}"] });
     return GridListOverviewExample;
 }());
+/*@__PURE__*/ ɵsetClassMetadata(GridListOverviewExample, [{
+        type: Component,
+        args: [{
+                selector: 'grid-list-overview-example',
+                styleUrls: ['grid-list-overview-example.css'],
+                templateUrl: 'grid-list-overview-example.html',
+            }]
+    }], null, null);
 
 var EXAMPLES = [
     GridListDynamicExample,
@@ -55,10 +109,30 @@ var GridListExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
-                },] }
+                },] },
     ];
+    GridListExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: GridListExamplesModule });
+    GridListExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function GridListExamplesModule_Factory(t) { return new (t || GridListExamplesModule)(); }, imports: [[
+                CommonModule,
+                MatGridListModule,
+            ]] });
     return GridListExamplesModule;
 }());
+/*@__PURE__*/ ɵɵsetNgModuleScope(GridListExamplesModule, { declarations: [GridListDynamicExample,
+        GridListOverviewExample], imports: [CommonModule,
+        MatGridListModule], exports: [GridListDynamicExample,
+        GridListOverviewExample] });
+/*@__PURE__*/ ɵsetClassMetadata(GridListExamplesModule, [{
+        type: NgModule,
+        args: [{
+                imports: [
+                    CommonModule,
+                    MatGridListModule,
+                ],
+                declarations: EXAMPLES,
+                exports: EXAMPLES,
+            }]
+    }], null, null);
 
 /**
  * Generated bundle index. Do not edit.

@@ -1,13 +1,38 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { NgIf, CommonModule } from '@angular/common';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵproperty, ɵsetClassMetadata, ɵɵelement, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
+import { MatInput, MatInputModule } from '@angular/material/input';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormField } from '@angular/material/form-field';
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+function PaginatorConfigurableExample_div_10_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "div");
+    ɵɵelementStart(1, "h5");
+    ɵɵtext(2, "Page Change Event Properties");
+    ɵɵelementEnd();
+    ɵɵelementStart(3, "div");
+    ɵɵtext(4);
+    ɵɵelementEnd();
+    ɵɵelementStart(5, "div");
+    ɵɵtext(6);
+    ɵɵelementEnd();
+    ɵɵelementStart(7, "div");
+    ɵɵtext(8);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = ɵɵnextContext();
+    ɵɵadvance(4);
+    ɵɵtextInterpolate1("List length: ", ctx_r0.pageEvent.length, "");
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1("Page size: ", ctx_r0.pageEvent.pageSize, "");
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1("Page index: ", ctx_r0.pageEvent.pageIndex, "");
+} }
 /**
  * \@title Configurable paginator
  */
@@ -33,10 +58,54 @@ class PaginatorConfigurableExample {
 PaginatorConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'paginator-configurable-example',
-                template: "<mat-form-field>\n  List length:\n  <input matInput [(ngModel)]=\"length\">\n</mat-form-field>\n\n<mat-form-field>\n  Page size:\n  <input matInput [(ngModel)]=\"pageSize\">\n</mat-form-field>\n<mat-form-field>\n  Page size options:\n  <input matInput\n         [ngModel]=\"pageSizeOptions\"\n         (ngModelChange)=\"setPageSizeOptions($event)\">\n</mat-form-field>\n\n<mat-paginator [length]=\"length\"\n              [pageSize]=\"pageSize\"\n              [pageSizeOptions]=\"pageSizeOptions\"\n              (page)=\"pageEvent = $event\">\n</mat-paginator>\n\n<div *ngIf=\"pageEvent\">\n  <h5>Page Change Event Properties</h5>\n  <div>List length: {{pageEvent.length}}</div>\n  <div>Page size: {{pageEvent.pageSize}}</div>\n  <div>Page index: {{pageEvent.pageIndex}}</div>\n</div>\n",
-                styles: ["mat-form-field {\n  margin-right: 12px;\n}\n"]
-            }] }
+                templateUrl: 'paginator-configurable-example.html',
+                styleUrls: ['paginator-configurable-example.css'],
+            },] },
 ];
+/** @nocollapse */ PaginatorConfigurableExample.ngFactoryDef = function PaginatorConfigurableExample_Factory(t) { return new (t || PaginatorConfigurableExample)(); };
+/** @nocollapse */ PaginatorConfigurableExample.ngComponentDef = ɵɵdefineComponent({ type: PaginatorConfigurableExample, selectors: [["paginator-configurable-example"]], decls: 11, vars: 7, consts: [["matInput", "", 3, "ngModel", "ngModelChange"], [3, "length", "pageSize", "pageSizeOptions", "page"], [4, "ngIf"]], template: function PaginatorConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-form-field");
+        ɵɵtext(1, " List length: ");
+        ɵɵelementStart(2, "input", 0);
+        ɵɵlistener("ngModelChange", function PaginatorConfigurableExample_Template_input_ngModelChange_2_listener($event) { return ctx.length = $event; });
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "mat-form-field");
+        ɵɵtext(4, " Page size: ");
+        ɵɵelementStart(5, "input", 0);
+        ɵɵlistener("ngModelChange", function PaginatorConfigurableExample_Template_input_ngModelChange_5_listener($event) { return ctx.pageSize = $event; });
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "mat-form-field");
+        ɵɵtext(7, " Page size options: ");
+        ɵɵelementStart(8, "input", 0);
+        ɵɵlistener("ngModelChange", function PaginatorConfigurableExample_Template_input_ngModelChange_8_listener($event) { return ctx.setPageSizeOptions($event); });
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(9, "mat-paginator", 1);
+        ɵɵlistener("page", function PaginatorConfigurableExample_Template_mat_paginator_page_9_listener($event) { return ctx.pageEvent = $event; });
+        ɵɵelementEnd();
+        ɵɵtemplate(10, PaginatorConfigurableExample_div_10_Template, 9, 3, "div", 2);
+    } if (rf & 2) {
+        ɵɵadvance(2);
+        ɵɵproperty("ngModel", ctx.length);
+        ɵɵadvance(3);
+        ɵɵproperty("ngModel", ctx.pageSize);
+        ɵɵadvance(3);
+        ɵɵproperty("ngModel", ctx.pageSizeOptions);
+        ɵɵadvance(1);
+        ɵɵproperty("length", ctx.length)("pageSize", ctx.pageSize)("pageSizeOptions", ctx.pageSizeOptions);
+        ɵɵadvance(1);
+        ɵɵproperty("ngIf", ctx.pageEvent);
+    } }, directives: [MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatPaginator, NgIf], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+/*@__PURE__*/ ɵsetClassMetadata(PaginatorConfigurableExample, [{
+        type: Component,
+        args: [{
+                selector: 'paginator-configurable-example',
+                templateUrl: 'paginator-configurable-example.html',
+                styleUrls: ['paginator-configurable-example.css'],
+            }]
+    }], null, null);
 if (false) {
     /** @type {?} */
     PaginatorConfigurableExample.prototype.length;
@@ -52,6 +121,7 @@ if (false) {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+const _c0 = [5, 10, 25, 100];
 /**
  * \@title Paginator
  */
@@ -60,10 +130,24 @@ class PaginatorOverviewExample {
 PaginatorOverviewExample.decorators = [
     { type: Component, args: [{
                 selector: 'paginator-overview-example',
-                template: "<mat-paginator [length]=\"100\"\n              [pageSize]=\"10\"\n              [pageSizeOptions]=\"[5, 10, 25, 100]\">\n</mat-paginator>\n",
-                styles: ["/** No CSS for this example */\n"]
-            }] }
+                templateUrl: 'paginator-overview-example.html',
+                styleUrls: ['paginator-overview-example.css'],
+            },] },
 ];
+/** @nocollapse */ PaginatorOverviewExample.ngFactoryDef = function PaginatorOverviewExample_Factory(t) { return new (t || PaginatorOverviewExample)(); };
+/** @nocollapse */ PaginatorOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: PaginatorOverviewExample, selectors: [["paginator-overview-example"]], decls: 1, vars: 3, consts: [[3, "length", "pageSize", "pageSizeOptions"]], template: function PaginatorOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelement(0, "mat-paginator", 0);
+    } if (rf & 2) {
+        ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", _c0);
+    } }, directives: [MatPaginator], styles: [""] });
+/*@__PURE__*/ ɵsetClassMetadata(PaginatorOverviewExample, [{
+        type: Component,
+        args: [{
+                selector: 'paginator-overview-example',
+                templateUrl: 'paginator-overview-example.html',
+                styleUrls: ['paginator-overview-example.css'],
+            }]
+    }], null, null);
 
 /**
  * @fileoverview added by tsickle
@@ -86,8 +170,34 @@ PaginatorExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
-            },] }
+            },] },
 ];
+/** @nocollapse */ PaginatorExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: PaginatorExamplesModule });
+/** @nocollapse */ PaginatorExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function PaginatorExamplesModule_Factory(t) { return new (t || PaginatorExamplesModule)(); }, imports: [[
+            CommonModule,
+            MatInputModule,
+            MatPaginatorModule,
+            FormsModule,
+        ]] });
+/*@__PURE__*/ ɵɵsetNgModuleScope(PaginatorExamplesModule, { declarations: [PaginatorConfigurableExample,
+        PaginatorOverviewExample], imports: [CommonModule,
+        MatInputModule,
+        MatPaginatorModule,
+        FormsModule], exports: [PaginatorConfigurableExample,
+        PaginatorOverviewExample] });
+/*@__PURE__*/ ɵsetClassMetadata(PaginatorExamplesModule, [{
+        type: NgModule,
+        args: [{
+                imports: [
+                    CommonModule,
+                    MatInputModule,
+                    MatPaginatorModule,
+                    FormsModule,
+                ],
+                declarations: EXAMPLES,
+                exports: EXAMPLES,
+            }]
+    }], null, null);
 
 /**
  * Generated bundle index. Do not edit.

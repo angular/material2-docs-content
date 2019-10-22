@@ -1,4 +1,5 @@
 import { CdkDragDrop } from '@angular/cdk/drag-drop';
+import * as i0 from "@angular/core";
 /**
  * @title Drag&Drop custom preview
  */
@@ -11,4 +12,6 @@ export declare class CdkDragDropCustomPreviewExample {
         title: string;
         poster: string;
     }[]>): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<CdkDragDropCustomPreviewExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkDragDropCustomPreviewExample, "cdk-drag-drop-custom-preview-example", never, {}, {}, never>;
 }

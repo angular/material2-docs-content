@@ -4,6 +4,36 @@
  */
 import { coerceNumberProperty } from '@angular/cdk/coercion';
 import { Component } from '@angular/core';
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/material/card";
+import * as i2 from "@angular/material/form-field";
+import * as i3 from "@angular/material/input";
+import * as i4 from "@angular/forms";
+import * as i5 from "@angular/material/checkbox";
+import * as i6 from "@angular/common";
+import * as i7 from "@angular/material/slider";
+function SliderConfigurableExample_mat_checkbox_16_Template(rf, ctx) { if (rf & 1) {
+    const _r3 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "mat-checkbox", 7);
+    i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_mat_checkbox_16_Template_mat_checkbox_ngModelChange_0_listener($event) { i0.ɵɵrestoreView(_r3); const ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.autoTicks = $event; });
+    i0.ɵɵtext(1, " Auto ticks ");
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("ngModel", ctx_r0.autoTicks);
+} }
+function SliderConfigurableExample_mat_form_field_17_Template(rf, ctx) { if (rf & 1) {
+    const _r5 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "mat-form-field", 2);
+    i0.ɵɵelementStart(1, "input", 12);
+    i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_mat_form_field_17_Template_input_ngModelChange_1_listener($event) { i0.ɵɵrestoreView(_r5); const ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.tickInterval = $event; });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r1 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(1);
+    i0.ɵɵproperty("ngModel", ctx_r1.tickInterval);
+} }
 /**
  * \@title Configurable slider
  */
@@ -38,10 +68,115 @@ export class SliderConfigurableExample {
 SliderConfigurableExample.decorators = [
     { type: Component, args: [{
                 selector: 'slider-configurable-example',
-                template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Slider configuration</h2>\n\n    <section class=\"example-section\">\n      <mat-form-field class=\"example-margin\">\n        <input matInput type=\"number\" placeholder=\"Value\" [(ngModel)]=\"value\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin\">\n        <input matInput type=\"number\" placeholder=\"Min value\" [(ngModel)]=\"min\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin\">\n        <input matInput type=\"number\" placeholder=\"Max value\" [(ngModel)]=\"max\">\n      </mat-form-field>\n      <mat-form-field class=\"example-margin\">\n        <input matInput type=\"number\" placeholder=\"Step size\" [(ngModel)]=\"step\">\n      </mat-form-field>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"showTicks\">Show ticks</mat-checkbox>\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"autoTicks\" *ngIf=\"showTicks\">\n        Auto ticks\n      </mat-checkbox>\n      <mat-form-field class=\"example-margin\" *ngIf=\"showTicks && !autoTicks\">\n        <input matInput type=\"number\" placeholder=\"Tick interval\" [(ngModel)]=\"tickInterval\">\n      </mat-form-field>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"thumbLabel\">Show thumb label</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"vertical\">Vertical</mat-checkbox>\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"invert\">Inverted</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox>\n    </section>\n\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"result\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <mat-slider\n        class=\"example-margin\"\n        [disabled]=\"disabled\"\n        [invert]=\"invert\"\n        [max]=\"max\"\n        [min]=\"min\"\n        [step]=\"step\"\n        [thumbLabel]=\"thumbLabel\"\n        [tickInterval]=\"tickInterval\"\n        [(ngModel)]=\"value\"\n        [vertical]=\"vertical\">\n    </mat-slider>\n  </mat-card-content>\n</mat-card>\n",
-                styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 10px;\n}\n\n.mat-slider-horizontal {\n  width: 300px;\n}\n\n.mat-slider-vertical {\n  height: 300px;\n}\n"]
-            }] }
+                templateUrl: 'slider-configurable-example.html',
+                styleUrls: ['slider-configurable-example.css'],
+            },] },
 ];
+/** @nocollapse */ SliderConfigurableExample.ngFactoryDef = function SliderConfigurableExample_Factory(t) { return new (t || SliderConfigurableExample)(); };
+/** @nocollapse */ SliderConfigurableExample.ngComponentDef = i0.ɵɵdefineComponent({ type: SliderConfigurableExample, selectors: [["slider-configurable-example"]], decls: 34, vars: 20, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], ["matInput", "", "type", "number", "placeholder", "Value", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "number", "placeholder", "Min value", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "number", "placeholder", "Max value", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "number", "placeholder", "Step size", 3, "ngModel", "ngModelChange"], [1, "example-margin", 3, "ngModel", "ngModelChange"], ["class", "example-margin", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["class", "example-margin", 4, "ngIf"], [1, "result"], [1, "example-margin", 3, "disabled", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "ngModel", "vertical", "ngModelChange"], ["matInput", "", "type", "number", "placeholder", "Tick interval", 3, "ngModel", "ngModelChange"]], template: function SliderConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-card");
+        i0.ɵɵelementStart(1, "mat-card-content");
+        i0.ɵɵelementStart(2, "h2", 0);
+        i0.ɵɵtext(3, "Slider configuration");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(4, "section", 1);
+        i0.ɵɵelementStart(5, "mat-form-field", 2);
+        i0.ɵɵelementStart(6, "input", 3);
+        i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_6_listener($event) { return ctx.value = $event; });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(7, "mat-form-field", 2);
+        i0.ɵɵelementStart(8, "input", 4);
+        i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_8_listener($event) { return ctx.min = $event; });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(9, "mat-form-field", 2);
+        i0.ɵɵelementStart(10, "input", 5);
+        i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_10_listener($event) { return ctx.max = $event; });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(11, "mat-form-field", 2);
+        i0.ɵɵelementStart(12, "input", 6);
+        i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_input_ngModelChange_12_listener($event) { return ctx.step = $event; });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(13, "section", 1);
+        i0.ɵɵelementStart(14, "mat-checkbox", 7);
+        i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_14_listener($event) { return ctx.showTicks = $event; });
+        i0.ɵɵtext(15, "Show ticks");
+        i0.ɵɵelementEnd();
+        i0.ɵɵtemplate(16, SliderConfigurableExample_mat_checkbox_16_Template, 2, 1, "mat-checkbox", 8);
+        i0.ɵɵtemplate(17, SliderConfigurableExample_mat_form_field_17_Template, 2, 1, "mat-form-field", 9);
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(18, "section", 1);
+        i0.ɵɵelementStart(19, "mat-checkbox", 7);
+        i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_19_listener($event) { return ctx.thumbLabel = $event; });
+        i0.ɵɵtext(20, "Show thumb label");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(21, "section", 1);
+        i0.ɵɵelementStart(22, "mat-checkbox", 7);
+        i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_22_listener($event) { return ctx.vertical = $event; });
+        i0.ɵɵtext(23, "Vertical");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(24, "mat-checkbox", 7);
+        i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_24_listener($event) { return ctx.invert = $event; });
+        i0.ɵɵtext(25, "Inverted");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(26, "section", 1);
+        i0.ɵɵelementStart(27, "mat-checkbox", 7);
+        i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_checkbox_ngModelChange_27_listener($event) { return ctx.disabled = $event; });
+        i0.ɵɵtext(28, "Disabled");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(29, "mat-card", 10);
+        i0.ɵɵelementStart(30, "mat-card-content");
+        i0.ɵɵelementStart(31, "h2", 0);
+        i0.ɵɵtext(32, "Result");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementStart(33, "mat-slider", 11);
+        i0.ɵɵlistener("ngModelChange", function SliderConfigurableExample_Template_mat_slider_ngModelChange_33_listener($event) { return ctx.value = $event; });
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        i0.ɵɵadvance(6);
+        i0.ɵɵproperty("ngModel", ctx.value);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngModel", ctx.min);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngModel", ctx.max);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngModel", ctx.step);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngModel", ctx.showTicks);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngIf", ctx.showTicks);
+        i0.ɵɵadvance(1);
+        i0.ɵɵproperty("ngIf", ctx.showTicks && !ctx.autoTicks);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngModel", ctx.thumbLabel);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("ngModel", ctx.vertical);
+        i0.ɵɵadvance(2);
+        i0.ɵɵproperty("ngModel", ctx.invert);
+        i0.ɵɵadvance(3);
+        i0.ɵɵproperty("ngModel", ctx.disabled);
+        i0.ɵɵadvance(6);
+        i0.ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.tickInterval)("ngModel", ctx.value)("vertical", ctx.vertical);
+    } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatFormField, i3.MatInput, i4.NumberValueAccessor, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i5.MatCheckbox, i6.NgIf, i7.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}"] });
+/*@__PURE__*/ i0.ɵsetClassMetadata(SliderConfigurableExample, [{
+        type: Component,
+        args: [{
+                selector: 'slider-configurable-example',
+                templateUrl: 'slider-configurable-example.html',
+                styleUrls: ['slider-configurable-example.css'],
+            }]
+    }], null, null);
 if (false) {
     /** @type {?} */
     SliderConfigurableExample.prototype.autoTicks;
@@ -69,4 +204,4 @@ if (false) {
      */
     SliderConfigurableExample.prototype._tickInterval;
 }
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2xpZGVyLWNvbmZpZ3VyYWJsZS1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL21hdGVyaWFsL3NsaWRlci9zbGlkZXItY29uZmlndXJhYmxlL3NsaWRlci1jb25maWd1cmFibGUtZXhhbXBsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFDLG9CQUFvQixFQUFDLE1BQU0sdUJBQXVCLENBQUM7QUFDM0QsT0FBTyxFQUFDLFNBQVMsRUFBQyxNQUFNLGVBQWUsQ0FBQzs7OztBQVV4QyxNQUFNLE9BQU8seUJBQXlCO0lBTHRDO1FBTUUsY0FBUyxHQUFHLEtBQUssQ0FBQztRQUNsQixhQUFRLEdBQUcsS0FBSyxDQUFDO1FBQ2pCLFdBQU0sR0FBRyxLQUFLLENBQUM7UUFDZixRQUFHLEdBQUcsR0FBRyxDQUFDO1FBQ1YsUUFBRyxHQUFHLENBQUMsQ0FBQztRQUNSLGNBQVMsR0FBRyxLQUFLLENBQUM7UUFDbEIsU0FBSSxHQUFHLENBQUMsQ0FBQztRQUNULGVBQVUsR0FBRyxLQUFLLENBQUM7UUFDbkIsVUFBSyxHQUFHLENBQUMsQ0FBQztRQUNWLGFBQVEsR0FBRyxLQUFLLENBQUM7UUFRVCxrQkFBYSxHQUFHLENBQUMsQ0FBQztJQUM1QixDQUFDOzs7O0lBUEMsSUFBSSxZQUFZO1FBQ2QsT0FBTyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUFDLGFBQWEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUM7SUFDN0UsQ0FBQzs7Ozs7SUFDRCxJQUFJLFlBQVksQ0FBQyxLQUFLO1FBQ3BCLElBQUksQ0FBQyxhQUFhLEdBQUcsb0JBQW9CLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDbkQsQ0FBQzs7O1lBdEJGLFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUsNkJBQTZCO2dCQUN2Qyx3MUVBQStDOzthQUVoRDs7OztJQUVDLDhDQUFrQjs7SUFDbEIsNkNBQWlCOztJQUNqQiwyQ0FBZTs7SUFDZix3Q0FBVTs7SUFDVix3Q0FBUTs7SUFDUiw4Q0FBa0I7O0lBQ2xCLHlDQUFTOztJQUNULCtDQUFtQjs7SUFDbkIsMENBQVU7O0lBQ1YsNkNBQWlCOzs7OztJQVFqQixrREFBMEIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge2NvZXJjZU51bWJlclByb3BlcnR5fSBmcm9tICdAYW5ndWxhci9jZGsvY29lcmNpb24nO1xuaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG4vKipcbiAqIEB0aXRsZSBDb25maWd1cmFibGUgc2xpZGVyXG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ3NsaWRlci1jb25maWd1cmFibGUtZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAnc2xpZGVyLWNvbmZpZ3VyYWJsZS1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsnc2xpZGVyLWNvbmZpZ3VyYWJsZS1leGFtcGxlLmNzcyddLFxufSlcbmV4cG9ydCBjbGFzcyBTbGlkZXJDb25maWd1cmFibGVFeGFtcGxlIHtcbiAgYXV0b1RpY2tzID0gZmFsc2U7XG4gIGRpc2FibGVkID0gZmFsc2U7XG4gIGludmVydCA9IGZhbHNlO1xuICBtYXggPSAxMDA7XG4gIG1pbiA9IDA7XG4gIHNob3dUaWNrcyA9IGZhbHNlO1xuICBzdGVwID0gMTtcbiAgdGh1bWJMYWJlbCA9IGZhbHNlO1xuICB2YWx1ZSA9IDA7XG4gIHZlcnRpY2FsID0gZmFsc2U7XG5cbiAgZ2V0IHRpY2tJbnRlcnZhbCgpOiBudW1iZXIgfCAnYXV0bycge1xuICAgIHJldHVybiB0aGlzLnNob3dUaWNrcyA/ICh0aGlzLmF1dG9UaWNrcyA/ICdhdXRvJyA6IHRoaXMuX3RpY2tJbnRlcnZhbCkgOiAwO1xuICB9XG4gIHNldCB0aWNrSW50ZXJ2YWwodmFsdWUpIHtcbiAgICB0aGlzLl90aWNrSW50ZXJ2YWwgPSBjb2VyY2VOdW1iZXJQcm9wZXJ0eSh2YWx1ZSk7XG4gIH1cbiAgcHJpdmF0ZSBfdGlja0ludGVydmFsID0gMTtcbn1cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2xpZGVyLWNvbmZpZ3VyYWJsZS1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL21hdGVyaWFsL3NsaWRlci9zbGlkZXItY29uZmlndXJhYmxlL3NsaWRlci1jb25maWd1cmFibGUtZXhhbXBsZS50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9tYXRlcmlhbC1leGFtcGxlcy9tYXRlcmlhbC9zbGlkZXIvc2xpZGVyLWNvbmZpZ3VyYWJsZS9zbGlkZXItY29uZmlndXJhYmxlLWV4YW1wbGUuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBQUEsT0FBTyxFQUFDLG9CQUFvQixFQUFDLE1BQU0sdUJBQXVCLENBQUM7QUFDM0QsT0FBTyxFQUFDLFNBQVMsRUFBQyxNQUFNLGVBQWUsQ0FBQzs7Ozs7Ozs7Ozs7SUNvQmxDLHVDQUNFO0lBRG1DLHlPQUF1QjtJQUMxRCw0QkFDRjtJQUFBLGlCQUFlOzs7SUFGc0IsMENBQXVCOzs7O0lBRzVELHlDQUNFO0lBQUEsaUNBQ0Y7SUFENEQsdU9BQTBCO0lBQXBGLGlCQUNGO0lBQUEsaUJBQWlCOzs7SUFEMkMsZUFBMEI7SUFBMUIsNkNBQTBCOzs7OztBRGQ1RixNQUFNLE9BQU8seUJBQXlCO0lBTHRDO1FBTUUsY0FBUyxHQUFHLEtBQUssQ0FBQztRQUNsQixhQUFRLEdBQUcsS0FBSyxDQUFDO1FBQ2pCLFdBQU0sR0FBRyxLQUFLLENBQUM7UUFDZixRQUFHLEdBQUcsR0FBRyxDQUFDO1FBQ1YsUUFBRyxHQUFHLENBQUMsQ0FBQztRQUNSLGNBQVMsR0FBRyxLQUFLLENBQUM7UUFDbEIsU0FBSSxHQUFHLENBQUMsQ0FBQztRQUNULGVBQVUsR0FBRyxLQUFLLENBQUM7UUFDbkIsVUFBSyxHQUFHLENBQUMsQ0FBQztRQUNWLGFBQVEsR0FBRyxLQUFLLENBQUM7UUFRVCxrQkFBYSxHQUFHLENBQUMsQ0FB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O0lBQ1YsNkNBQWlCOzs7OztJQVFqQixrREFBMEIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge2NvZXJjZU51bWJlclByb3BlcnR5fSBmcm9tICdAYW5ndWxhci9jZGsvY29lcmNpb24nO1xuaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG4vKipcbiAqIEB0aXRsZSBDb25maWd1cmFibGUgc2xpZGVyXG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ3NsaWRlci1jb25maWd1cmFibGUtZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAnc2xpZGVyLWNvbmZpZ3VyYWJsZS1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsnc2xpZGVyLWNvbmZpZ3VyYWJsZS1leGFtcGxlLmNzcyddLFxufSlcbmV4cG9ydCBjbGFzcyBTbGlkZXJDb25maWd1cmFibGVFeGFtcGxlIHtcbiAgYXV0b1RpY2tzID0gZmFsc2U7XG4gIGRpc2FibGVkID0gZmFsc2U7XG4gIGludmVydCA9IGZhbHNlO1xuICBtYXggPSAxMDA7XG4gIG1pbiA9IDA7XG4gIHNob3dUaWNrcyA9IGZhbHNlO1xuICBzdGVwID0gMTtcbiAgdGh1bWJMYWJlbCA9IGZhbHNlO1xuICB2YWx1ZSA9IDA7XG4gIHZlcnRpY2FsID0gZmFsc2U7XG5cbiAgZ2V0IHRpY2tJbnRlcnZhbCgpOiBudW1iZXIgfCAnYXV0bycge1xuICAgIHJldHVybiB0aGlzLnNob3dUaWNrcyA/ICh0aGlzLmF1dG9UaWNrcyA/ICdhdXRvJyA6IHRoaXMuX3RpY2tJbnRlcnZhbCkgOiAwO1xuICB9XG4gIHNldCB0aWNrSW50ZXJ2YWwodmFsdWUpIHtcbiAgICB0aGlzLl90aWNrSW50ZXJ2YWwgPSBjb2VyY2VOdW1iZXJQcm9wZXJ0eSh2YWx1ZSk7XG4gIH1cbiAgcHJpdmF0ZSBfdGlja0ludGVydmFsID0gMTtcbn1cbiIsIjxtYXQtY2FyZD5cbiAgPG1hdC1jYXJkLWNvbnRlbnQ+XG4gICAgPGgyIGNsYXNzPVwiZXhhbXBsZS1oMlwiPlNsaWRlciBjb25maWd1cmF0aW9uPC9oMj5cblxuICAgIDxzZWN0aW9uIGNsYXNzPVwiZXhhbXBsZS1zZWN0aW9uXCI+XG4gICAgICA8bWF0LWZvcm0tZmllbGQgY2xhc3M9XCJleGFtcGxlLW1hcmdpblwiPlxuICAgICAgICA8aW5wdXQgbWF0SW5wdXQgdHlwZT1cIm51bWJlclwiIHBsYWNlaG9sZGVyPVwiVmFsdWVcIiBbKG5nTW9kZWwpXT1cInZhbHVlXCI+XG4gICAgICA8L21hdC1mb3JtLWZpZWxkPlxuICAgICAgPG1hdC1mb3JtLWZpZWxkIGNsYXNzPVwiZXhhbXBsZS1tYXJnaW5cIj5cbiAgICAgICAgPGlucHV0IG1hdElucHV0IHR5cGU9XCJudW1iZXJcIiBwbGFjZWhvbGRlcj1cIk1pbiB2YWx1ZVwiIFsobmdNb2RlbCldPVwibWluXCI+XG4gICAgICA8L21hdC1mb3JtLWZpZWxkPlxuICAgICAgPG1hdC1mb3JtLWZpZWxkIGNsYXNzPVwiZXhhbXBsZS1tYXJnaW5cIj5cbiAgICAgICAgPGlucHV0IG1hdElucHV0IHR5cGU9XCJudW1iZXJcIiBwbGFjZWhvbGRlcj1cIk1heCB2YWx1ZVwiIFsobmdNb2RlbCldPVwibWF4XCI+XG4gICAgICA8L21hdC1mb3JtLWZpZWxkPlxuICAgICAgPG1hdC1mb3JtLWZpZWxkIGNsYXNzPVwiZXhhbXBsZS1tYXJnaW5cIj5cbiAgICAgICAgPGlucHV0IG1hdElucHV0IHR5cGU9XCJudW1iZXJcIiBwbGFjZWhvbGRlcj1cIlN0ZXAgc2l6ZVwiIFsobmdNb2RlbCldPVwic3RlcFwiPlxuICAgICAgPC9tYXQtZm9ybS1maWVsZD5cbiAgICA8L3NlY3Rpb24+XG5cbiAgICA8c2VjdGlvbiBjbGFzcz1cImV4YW1wbGUtc2VjdGlvblwiPlxuICAgICAgPG1hdC1jaGVja2JveCBjbGFzcz1cImV4YW1wbGUtbWFyZ2luXCIgWyhuZ01vZGVsKV09XCJzaG93VGlja3NcIj5TaG93IHRpY2tzPC9tYXQtY2hlY2tib3g+XG4gICAgICA8bWF0LWNoZWNrYm94IGNsYXNzPVwiZXhhbXBsZS1tYXJnaW5cIiBbKG5nTW9kZWwpXT1cImF1dG9UaWNrc1wiICpuZ0lmPVwic2hvd1RpY2tzXCI+XG4gICAgICAgIEF1dG8gdGlja3NcbiAgICAgIDwvbWF0LWNoZWNrYm94PlxuICAgICAgPG1hdC1mb3JtLWZpZWxkIGNsYXNzPVwiZXhhbXBsZS1tYXJnaW5cIiAqbmdJZj1cInNob3dUaWNrcyAmJiAhYXV0b1RpY2tzXCI+XG4gICAgICAgIDxpbnB1dCBtYXRJbnB1dCB0eXBlPVwibnVtYmVyXCIgcGxhY2Vob2xkZXI9XCJUaWNrIGludGVydmFsXCIgWyhuZ01vZGVsKV09XCJ0aWNrSW50ZXJ2YWxcIj5cbiAgICAgIDwvbWF0LWZvcm0tZmllbGQ+XG4gICAgPC9zZWN0aW9uPlxuXG4gICAgPHNlY3Rpb24gY2xhc3M9XCJleGFtcGxlLXNlY3Rpb25cIj5cbiAgICAgIDxtYXQtY2hlY2tib3ggY2xhc3M9XCJleGFtcGxlLW1hcmdpblwiIFsobmdNb2RlbCldPVwidGh1bWJMYWJlbFwiPlNob3cgdGh1bWIgbGFiZWw8L21hdC1jaGVja2JveD5cbiAgICA8L3NlY3Rpb24+XG5cbiAgICA8c2VjdGlvbiBjbGFzcz1cImV4YW1wbGUtc2VjdGlvblwiPlxuICAgICAgPG1hdC1jaGVja2JveCBjbGFzcz1cImV4YW1wbGUtbWFyZ2luXCIgWyhuZ01vZGVsKV09XCJ2ZXJ0aWNhbFwiPlZlcnRpY2FsPC9tYXQtY2hlY2tib3g+XG4gICAgICA8bWF0LWNoZWNrYm94IGNsYXNzPVwiZXhhbXBsZS1tYXJnaW5cIiBbKG5nTW9kZWwpXT1cImludmVydFwiPkludmVydGVkPC9tYXQtY2hlY2tib3g+XG4gICAgPC9zZWN0aW9uPlxuXG4gICAgPHNlY3Rpb24gY2xhc3M9XCJleGFtcGxlLXNlY3Rpb25cIj5cbiAgICAgIDxtYXQtY2hlY2tib3ggY2xhc3M9XCJleGFtcGxlLW1hcmdpblwiIFsobmdNb2RlbCldPVwiZGlzYWJsZWRcIj5EaXNhYmxlZDwvbWF0LWNoZWNrYm94PlxuICAgIDwvc2VjdGlvbj5cblxuICA8L21hdC1jYXJkLWNvbnRlbnQ+XG48L21hdC1jYXJkPlxuXG48bWF0LWNhcmQgY2xhc3M9XCJyZXN1bHRcIj5cbiAgPG1hdC1jYXJkLWNvbnRlbnQ+XG4gICAgPGgyIGNsYXNzPVwiZXhhbXBsZS1oMlwiPlJlc3VsdDwvaDI+XG5cbiAgICA8bWF0LXNsaWRlclxuICAgICAgICBjbGFzcz1cImV4YW1wbGUtbWFyZ2luXCJcbiAgICAgICAgW2Rpc2FibGVkXT1cImRpc2FibGVkXCJcbiAgICAgICAgW2ludmVydF09XCJpbnZlcnRcIlxuICAgICAgICBbbWF4XT1cIm1heFwiXG4gICAgICAgIFttaW5dPVwibWluXCJcbiAgICAgICAgW3N0ZXBdPVwic3RlcFwiXG4gICAgICAgIFt0aHVtYkxhYmVsXT1cInRodW1iTGFiZWxcIlxuICAgICAgICBbdGlja0ludGVydmFsXT1cInRpY2tJbnRlcnZhbFwiXG4gICAgICAgIFsobmdNb2RlbCldPVwidmFsdWVcIlxuICAgICAgICBbdmVydGljYWxdPVwidmVydGljYWxcIj5cbiAgICA8L21hdC1zbGlkZXI+XG4gIDwvbWF0LWNhcmQtY29udGVudD5cbjwvbWF0LWNhcmQ+XG4iXX0=

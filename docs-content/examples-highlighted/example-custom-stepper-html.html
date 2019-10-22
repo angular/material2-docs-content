@@ -11,7 +11,7 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-nav-button"</span> <span class="hljs-attr">cdkStepperPrevious</span>&gt;</span>&amp;larr;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">button</span>
       <span class="hljs-attr">class</span>=<span class="hljs-string">"example-step"</span>
-      *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let step of steps; let i = index"</span>
+      *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let step of _stepsArray; let i = index"</span>
       [<span class="hljs-attr">ngClass</span>]=<span class="hljs-string">"{ 'example-active': selectedIndex === i }"</span>
       (<span class="hljs-attr">click</span>)=<span class="hljs-string">"onClick(i)"</span>
     &gt;</span>

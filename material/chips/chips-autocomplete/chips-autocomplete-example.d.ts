@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { MatAutocompleteSelectedEvent, MatAutocomplete } from '@angular/material/autocomplete';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { Observable } from 'rxjs';
+import * as i0 from "@angular/core";
 /**
  * @title Chips Autocomplete
  */
@@ -23,4 +24,6 @@ export declare class ChipsAutocompleteExample {
     remove(fruit: string): void;
     selected(event: MatAutocompleteSelectedEvent): void;
     private _filter;
+    static ngFactoryDef: i0.ɵɵFactoryDef<ChipsAutocompleteExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never>;
 }

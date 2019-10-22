@@ -1,5 +1,6 @@
 import { ArrayDataSource } from '@angular/cdk/collections';
 import { NestedTreeControl } from '@angular/cdk/tree';
+import * as i0 from "@angular/core";
 /**
  * Food data with nested structure.
  * Each node has a name and an optiona list of children.
@@ -15,5 +16,7 @@ export declare class CdkTreeNestedExample {
     treeControl: NestedTreeControl<FoodNode>;
     dataSource: ArrayDataSource<FoodNode>;
     hasChild: (_: number, node: FoodNode) => boolean;
+    static ngFactoryDef: i0.ɵɵFactoryDef<CdkTreeNestedExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkTreeNestedExample, "cdk-tree-nested-example", never, {}, {}, never>;
 }
 export {};

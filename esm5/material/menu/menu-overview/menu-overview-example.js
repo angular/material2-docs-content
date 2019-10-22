@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/material/button";
+import * as i2 from "@angular/material/menu";
+var _c0 = ["menu", "matMenu"];
 /**
  * @title Basic menu
  */
@@ -8,11 +12,36 @@ var MenuOverviewExample = /** @class */ (function () {
     MenuOverviewExample.decorators = [
         { type: Component, args: [{
                     selector: 'menu-overview-example',
-                    template: "<button mat-button [matMenuTriggerFor]=\"menu\">Menu</button>\n<mat-menu #menu=\"matMenu\">\n  <button mat-menu-item>Item 1</button>\n  <button mat-menu-item>Item 2</button>\n</mat-menu>\n",
-                    styles: ["/** No CSS for this example */\n"]
-                }] }
+                    templateUrl: 'menu-overview-example.html',
+                    styleUrls: ['menu-overview-example.css'],
+                },] },
     ];
+    MenuOverviewExample.ngFactoryDef = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
+    MenuOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵelementStart(0, "button", 0);
+            i0.ɵɵtext(1, "Menu");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(2, "mat-menu", null, _c0);
+            i0.ɵɵelementStart(4, "button", 1);
+            i0.ɵɵtext(5, "Item 1");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(6, "button", 1);
+            i0.ɵɵtext(7, "Item 2");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        } if (rf & 2) {
+            var _r1 = i0.ɵɵreference(3);
+            i0.ɵɵproperty("matMenuTriggerFor", _r1);
+        } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], styles: [""] });
     return MenuOverviewExample;
 }());
 export { MenuOverviewExample };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVudS1vdmVydmlldy1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL21hdGVyaWFsL21lbnUvbWVudS1vdmVydmlldy9tZW51LW92ZXJ2aWV3LWV4YW1wbGUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFDLFNBQVMsRUFBQyxNQUFNLGVBQWUsQ0FBQztBQUV4Qzs7R0FFRztBQUNIO0lBQUE7SUFLa0MsQ0FBQzs7Z0JBTGxDLFNBQVMsU0FBQztvQkFDVCxRQUFRLEVBQUUsdUJBQXVCO29CQUNqQyx3TUFBeUM7O2lCQUUxQzs7SUFDaUMsMEJBQUM7Q0FBQSxBQUxuQyxJQUttQztTQUF0QixtQkFBbUIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbi8qKlxuICogQHRpdGxlIEJhc2ljIG1lbnVcbiAqL1xuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnbWVudS1vdmVydmlldy1leGFtcGxlJyxcbiAgdGVtcGxhdGVVcmw6ICdtZW51LW92ZXJ2aWV3LWV4YW1wbGUuaHRtbCcsXG4gIHN0eWxlVXJsczogWydtZW51LW92ZXJ2aWV3LWV4YW1wbGUuY3NzJ10sXG59KVxuZXhwb3J0IGNsYXNzIE1lbnVPdmVydmlld0V4YW1wbGUge31cbiJdfQ==
+/*@__PURE__*/ i0.ɵsetClassMetadata(MenuOverviewExample, [{
+        type: Component,
+        args: [{
+                selector: 'menu-overview-example',
+                templateUrl: 'menu-overview-example.html',
+                styleUrls: ['menu-overview-example.css'],
+            }]
+    }], null, null);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWVudS1vdmVydmlldy1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL21hdGVyaWFsL21lbnUvbWVudS1vdmVydmlldy9tZW51LW92ZXJ2aWV3LWV4YW1wbGUudHMiLCIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvbWF0ZXJpYWwtZXhhbXBsZXMvbWF0ZXJpYWwvbWVudS9tZW51LW92ZXJ2aWV3L21lbnUtb3ZlcnZpZXctZXhhbXBsZS5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBQyxTQUFTLEVBQUMsTUFBTSxlQUFlLENBQUM7Ozs7O0FBRXhDOztHQUVHO0FBQ0g7SUFBQTtLQUttQzs7Z0JBTGxDLFNBQVMsU0FBQztvQkFDVCxRQUFRLEVBQUUsdUJBQXVCO29CQUNqQyxXQUFXLEVBQUUsNEJBQTRCO29CQUN6QyxTQUFTLEVBQUUsQ0FBQywyQkFBMkIsQ0FBQztpQkFDekM7O2tHQUNZLG1CQUFtQjtzRUFBbkIsbUJBQW1CO1lDVmhDLGlDQUE4QztZQUFBLG9CQUFJO1lBQUEsaUJBQVM7WUFDM0QsMkNBQ0U7WUFBQSxpQ0FBc0I7WUFBQSxzQkFBTTtZQUFBLGlCQUFTO1lBQ3JDLGlDQUFzQjtZQUFBLHNCQUFNO1lBQUEsaUJBQVM7WUFDdkMsaUJBQVc7OztZQUpRLHVDQUEwQjs7OEJEQTdDO0NBVW1DLEFBTG5DLElBS21DO1NBQXRCLG1CQUFtQjttQ0FBbkIsbUJBQW1CO2NBTC9CLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsdUJBQXVCO2dCQUNqQyxXQUFXLEVBQUUsNEJBQTRCO2dCQUN6QyxTQUFTLEVBQUUsQ0FBQywyQkFBMkIsQ0FBQzthQUN6QyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBAdGl0bGUgQmFzaWMgbWVudVxuICovXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdtZW51LW92ZXJ2aWV3LWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ21lbnUtb3ZlcnZpZXctZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ21lbnUtb3ZlcnZpZXctZXhhbXBsZS5jc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgTWVudU92ZXJ2aWV3RXhhbXBsZSB7fVxuIiwiPGJ1dHRvbiBtYXQtYnV0dG9uIFttYXRNZW51VHJpZ2dlckZvcl09XCJtZW51XCI+TWVudTwvYnV0dG9uPlxuPG1hdC1tZW51ICNtZW51PVwibWF0TWVudVwiPlxuICA8YnV0dG9uIG1hdC1tZW51LWl0ZW0+SXRlbSAxPC9idXR0b24+XG4gIDxidXR0b24gbWF0LW1lbnUtaXRlbT5JdGVtIDI8L2J1dHRvbj5cbjwvbWF0LW1lbnU+XG4iXX0=

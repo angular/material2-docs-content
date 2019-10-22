@@ -1,6 +1,7 @@
-import { CollectionViewer, SelectionChange } from '@angular/cdk/collections';
+import { CollectionViewer, SelectionChange, DataSource } from '@angular/cdk/collections';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { BehaviorSubject, Observable } from 'rxjs';
+import * as i0 from "@angular/core";
 /** Flat node with expandable and level information */
 export declare class DynamicFlatNode {
     item: string;
@@ -28,19 +29,22 @@ export declare class DynamicDatabase {
  * The input will be a json object string, and the output is a list of `FileNode` with nested
  * structure.
  */
-export declare class DynamicDataSource {
+export declare class DynamicDataSource implements DataSource<DynamicFlatNode> {
     private _treeControl;
     private _database;
     dataChange: BehaviorSubject<DynamicFlatNode[]>;
     data: DynamicFlatNode[];
     constructor(_treeControl: FlatTreeControl<DynamicFlatNode>, _database: DynamicDatabase);
     connect(collectionViewer: CollectionViewer): Observable<DynamicFlatNode[]>;
+    disconnect(collectionViewer: CollectionViewer): void;
     /** Handle expand/collapse behaviors */
     handleTreeControl(change: SelectionChange<DynamicFlatNode>): void;
     /**
      * Toggle the node, remove from display list
      */
     toggleNode(node: DynamicFlatNode, expand: boolean): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<DynamicDataSource>;
+    static ngInjectableDef: i0.ɵɵInjectableDef<DynamicDataSource>;
 }
 /**
  * @title Tree with dynamic data
@@ -52,4 +56,6 @@ export declare class TreeDynamicExample {
     getLevel: (node: DynamicFlatNode) => number;
     isExpandable: (node: DynamicFlatNode) => boolean;
     hasChild: (_: number, _nodeData: DynamicFlatNode) => boolean;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TreeDynamicExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never>;
 }

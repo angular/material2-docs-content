@@ -1,17 +1,80 @@
-import { CommonModule } from '@angular/common';
-import { Injectable, Component, NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatTreeFlattener, MatTreeFlatDataSource, MatTreeNestedDataSource, MatTreeModule } from '@angular/material/tree';
+import { NgIf, CommonModule } from '@angular/common';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵelement, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵproperty, ɵɵtextInterpolate, ɵɵreference, ɵɵattribute, ɵɵtextInterpolate1, Injectable, ɵɵdefineInjectable, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵProvidersFeature, ɵɵtemplate, ɵɵinject, ɵɵelementContainer, ɵɵclassProp, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { MatButton, MatButtonModule } from '@angular/material/button';
+import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { MatInput, MatInputModule } from '@angular/material/input';
+import { MatProgressBar, MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTreeFlattener, MatTreeFlatDataSource, MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatTreeNodePadding, MatTreeNestedDataSource, MatNestedTreeNode, MatTreeNodeOutlet, MatTreeModule } from '@angular/material/tree';
 import { __spread } from 'tslib';
 import { SelectionModel } from '@angular/cdk/collections';
 import { FlatTreeControl, NestedTreeControl } from '@angular/cdk/tree';
 import { BehaviorSubject, merge } from 'rxjs';
+import { MatFormField } from '@angular/material/form-field';
 import { map } from 'rxjs/operators';
 
+function TreeChecklistExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
+    var _r5 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "mat-tree-node", 3);
+    ɵɵelement(1, "button", 4);
+    ɵɵelementStart(2, "mat-checkbox", 5);
+    ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_1_Template_mat_checkbox_change_2_listener($event) { ɵɵrestoreView(_r5); var node_r3 = ctx.$implicit; var ctx_r4 = ɵɵnextContext(); return ctx_r4.todoLeafItemSelectionToggle(node_r3); });
+    ɵɵtext(3);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var node_r3 = ctx.$implicit;
+    var ctx_r0 = ɵɵnextContext();
+    ɵɵadvance(2);
+    ɵɵproperty("checked", ctx_r0.checklistSelection.isSelected(node_r3));
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(node_r3.item);
+} }
+var _c0 = ["itemValue", ""];
+function TreeChecklistExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
+    var _r9 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "mat-tree-node", 6);
+    ɵɵelement(1, "button", 4);
+    ɵɵelementStart(2, "mat-form-field");
+    ɵɵelement(3, "input", 7, _c0);
+    ɵɵelementEnd();
+    ɵɵelementStart(5, "button", 8);
+    ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_2_Template_button_click_5_listener($event) { ɵɵrestoreView(_r9); var node_r6 = ctx.$implicit; var _r7 = ɵɵreference(4); var ctx_r8 = ɵɵnextContext(); return ctx_r8.saveNode(node_r6, _r7.value); });
+    ɵɵtext(6, "Save");
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} }
+function TreeChecklistExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
+    var _r12 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "mat-tree-node", 6);
+    ɵɵelementStart(1, "button", 9);
+    ɵɵelementStart(2, "mat-icon", 10);
+    ɵɵtext(3);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵelementStart(4, "mat-checkbox", 11);
+    ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_3_Template_mat_checkbox_change_4_listener($event) { ɵɵrestoreView(_r12); var node_r10 = ctx.$implicit; var ctx_r11 = ɵɵnextContext(); return ctx_r11.todoItemSelectionToggle(node_r10); });
+    ɵɵtext(5);
+    ɵɵelementEnd();
+    ɵɵelementStart(6, "button", 12);
+    ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_3_Template_button_click_6_listener($event) { ɵɵrestoreView(_r12); var node_r10 = ctx.$implicit; var ctx_r13 = ɵɵnextContext(); return ctx_r13.addNewItem(node_r10); });
+    ɵɵelementStart(7, "mat-icon");
+    ɵɵtext(8, "add");
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var node_r10 = ctx.$implicit;
+    var ctx_r2 = ɵɵnextContext();
+    ɵɵadvance(1);
+    ɵɵattribute("aria-label", "toggle " + node_r10.filename);
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", ctx_r2.treeControl.isExpanded(node_r10) ? "expand_more" : "chevron_right", " ");
+    ɵɵadvance(1);
+    ɵɵproperty("checked", ctx_r2.descendantsAllSelected(node_r10))("indeterminate", ctx_r2.descendantsPartiallySelected(node_r10));
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(node_r10.item);
+} }
 /**
  * Node for to-do item
  */
@@ -101,12 +164,17 @@ var ChecklistDatabase = /** @class */ (function () {
         this.dataChange.next(this.data);
     };
     ChecklistDatabase.decorators = [
-        { type: Injectable }
+        { type: Injectable },
     ];
     /** @nocollapse */
     ChecklistDatabase.ctorParameters = function () { return []; };
+    ChecklistDatabase.ngFactoryDef = function ChecklistDatabase_Factory(t) { return new (t || ChecklistDatabase)(); };
+    ChecklistDatabase.ngInjectableDef = ɵɵdefineInjectable({ token: ChecklistDatabase, factory: function (t) { return ChecklistDatabase.ngFactoryDef(t); }, providedIn: null });
     return ChecklistDatabase;
 }());
+/*@__PURE__*/ ɵsetClassMetadata(ChecklistDatabase, [{
+        type: Injectable
+    }], function () { return []; }, null);
 /**
  * @title Tree with checkboxes
  */
@@ -238,18 +306,76 @@ var TreeChecklistExample = /** @class */ (function () {
     TreeChecklistExample.decorators = [
         { type: Component, args: [{
                     selector: 'tree-checklist-example',
-                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle matTreeNodePadding>\n    <button mat-icon-button disabled></button>\n    <mat-checkbox class=\"checklist-leaf-node\"\n                  [checked]=\"checklistSelection.isSelected(node)\"\n                  (change)=\"todoLeafItemSelectionToggle(node)\">{{node.item}}</mat-checkbox>\n  </mat-tree-node>\n\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasNoContent\" matTreeNodePadding>\n    <button mat-icon-button disabled></button>\n    <mat-form-field>\n      <input matInput #itemValue placeholder=\"New item...\">\n    </mat-form-field>\n    <button mat-button (click)=\"saveNode(node, itemValue.value)\">Save</button>\n  </mat-tree-node>\n\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding>\n    <button mat-icon-button matTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.filename\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    <mat-checkbox [checked]=\"descendantsAllSelected(node)\"\n                  [indeterminate]=\"descendantsPartiallySelected(node)\"\n                  (change)=\"todoItemSelectionToggle(node)\">{{node.item}}</mat-checkbox>\n    <button mat-icon-button (click)=\"addNewItem(node)\"><mat-icon>add</mat-icon></button>\n  </mat-tree-node>\n</mat-tree>\n",
-                    providers: [ChecklistDatabase],
-                    styles: [""]
-                }] }
+                    templateUrl: 'tree-checklist-example.html',
+                    styleUrls: ['tree-checklist-example.css'],
+                    providers: [ChecklistDatabase]
+                },] },
     ];
     /** @nocollapse */
     TreeChecklistExample.ctorParameters = function () { return [
         { type: ChecklistDatabase }
     ]; };
+    TreeChecklistExample.ngFactoryDef = function TreeChecklistExample_Factory(t) { return new (t || TreeChecklistExample)(ɵɵdirectiveInject(ChecklistDatabase)); };
+    TreeChecklistExample.ngComponentDef = ɵɵdefineComponent({ type: TreeChecklistExample, selectors: [["tree-checklist-example"]], features: [ɵɵProvidersFeature([ChecklistDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", "matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", "", "matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], [1, "checklist-leaf-node", 3, "checked", "change"], ["matTreeNodePadding", ""], ["matInput", "", "placeholder", "New item..."], ["mat-button", "", 3, "click"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], [3, "checked", "indeterminate", "change"], ["mat-icon-button", "", 3, "click"]], template: function TreeChecklistExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "mat-tree", 0);
+            ɵɵtemplate(1, TreeChecklistExample_mat_tree_node_1_Template, 4, 2, "mat-tree-node", 1);
+            ɵɵtemplate(2, TreeChecklistExample_mat_tree_node_2_Template, 7, 0, "mat-tree-node", 2);
+            ɵɵtemplate(3, TreeChecklistExample_mat_tree_node_3_Template, 9, 5, "mat-tree-node", 2);
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+            ɵɵadvance(2);
+            ɵɵproperty("matTreeNodeDefWhen", ctx.hasNoContent);
+            ɵɵadvance(1);
+            ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+        } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatTreeNodePadding, MatButton, MatCheckbox, MatFormField, MatInput, MatIcon], styles: [""] });
     return TreeChecklistExample;
 }());
+/*@__PURE__*/ ɵsetClassMetadata(TreeChecklistExample, [{
+        type: Component,
+        args: [{
+                selector: 'tree-checklist-example',
+                templateUrl: 'tree-checklist-example.html',
+                styleUrls: ['tree-checklist-example.css'],
+                providers: [ChecklistDatabase]
+            }]
+    }], function () { return [{ type: ChecklistDatabase }]; }, null);
 
+function TreeDynamicExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-tree-node", 3);
+    ɵɵelement(1, "button", 4);
+    ɵɵtext(2);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var node_r16 = ctx.$implicit;
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", node_r16.item, " ");
+} }
+function TreeDynamicExample_mat_tree_node_2_mat_progress_bar_5_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "mat-progress-bar", 8);
+} }
+function TreeDynamicExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-tree-node", 3);
+    ɵɵelementStart(1, "button", 5);
+    ɵɵelementStart(2, "mat-icon", 6);
+    ɵɵtext(3);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵtext(4);
+    ɵɵtemplate(5, TreeDynamicExample_mat_tree_node_2_mat_progress_bar_5_Template, 1, 0, "mat-progress-bar", 7);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var node_r17 = ctx.$implicit;
+    var ctx_r15 = ɵɵnextContext();
+    ɵɵadvance(1);
+    ɵɵattribute("aria-label", "toggle " + node_r17.filename);
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", ctx_r15.treeControl.isExpanded(node_r17) ? "expand_more" : "chevron_right", " ");
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", node_r17.item, " ");
+    ɵɵadvance(1);
+    ɵɵproperty("ngIf", node_r17.isLoading);
+} }
 /** Flat node with expandable and level information */
 var DynamicFlatNode = /** @class */ (function () {
     function DynamicFlatNode(item, level, expandable, isLoading) {
@@ -321,6 +447,7 @@ var DynamicDataSource = /** @class */ (function () {
         });
         return merge(collectionViewer.viewChange, this.dataChange).pipe(map(function () { return _this.data; }));
     };
+    DynamicDataSource.prototype.disconnect = function (collectionViewer) { };
     /** Handle expand/collapse behaviors */
     DynamicDataSource.prototype.handleTreeControl = function (change) {
         var _this = this;
@@ -362,15 +489,20 @@ var DynamicDataSource = /** @class */ (function () {
         }, 1000);
     };
     DynamicDataSource.decorators = [
-        { type: Injectable }
+        { type: Injectable },
     ];
     /** @nocollapse */
     DynamicDataSource.ctorParameters = function () { return [
         { type: FlatTreeControl },
         { type: DynamicDatabase }
     ]; };
+    DynamicDataSource.ngFactoryDef = function DynamicDataSource_Factory(t) { return new (t || DynamicDataSource)(ɵɵinject(FlatTreeControl), ɵɵinject(DynamicDatabase)); };
+    DynamicDataSource.ngInjectableDef = ɵɵdefineInjectable({ token: DynamicDataSource, factory: function (t) { return DynamicDataSource.ngFactoryDef(t); }, providedIn: null });
     return DynamicDataSource;
 }());
+/*@__PURE__*/ ɵsetClassMetadata(DynamicDataSource, [{
+        type: Injectable
+    }], function () { return [{ type: FlatTreeControl }, { type: DynamicDatabase }]; }, null);
 /**
  * @title Tree with dynamic data
  */
@@ -386,18 +518,67 @@ var TreeDynamicExample = /** @class */ (function () {
     TreeDynamicExample.decorators = [
         { type: Component, args: [{
                     selector: 'tree-dynamic-example',
-                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <button mat-icon-button disabled></button>\n    {{node.item}}\n  </mat-tree-node>\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding>\n    <button mat-icon-button\n            [attr.aria-label]=\"'toggle ' + node.filename\" matTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.item}}\n    <mat-progress-bar *ngIf=\"node.isLoading\"\n                      mode=\"indeterminate\"\n                      class=\"example-tree-progress-bar\"></mat-progress-bar>\n  </mat-tree-node>\n</mat-tree>\n",
-                    providers: [DynamicDatabase],
-                    styles: [".example-tree-progress-bar {\n  margin-left: 30px;\n}\n"]
-                }] }
+                    templateUrl: 'tree-dynamic-example.html',
+                    styleUrls: ['tree-dynamic-example.css'],
+                    providers: [DynamicDatabase]
+                },] },
     ];
     /** @nocollapse */
     TreeDynamicExample.ctorParameters = function () { return [
         { type: DynamicDatabase }
     ]; };
+    TreeDynamicExample.ngFactoryDef = function TreeDynamicExample_Factory(t) { return new (t || TreeDynamicExample)(ɵɵdirectiveInject(DynamicDatabase)); };
+    TreeDynamicExample.ngComponentDef = ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], features: [ɵɵProvidersFeature([DynamicDatabase])], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "mat-tree", 0);
+            ɵɵtemplate(1, TreeDynamicExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
+            ɵɵtemplate(2, TreeDynamicExample_mat_tree_node_2_Template, 6, 4, "mat-tree-node", 2);
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+            ɵɵadvance(2);
+            ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+        } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon, NgIf, MatProgressBar], styles: [".example-tree-progress-bar[_ngcontent-%COMP%] {\n  margin-left: 30px;\n}"] });
     return TreeDynamicExample;
 }());
+/*@__PURE__*/ ɵsetClassMetadata(TreeDynamicExample, [{
+        type: Component,
+        args: [{
+                selector: 'tree-dynamic-example',
+                templateUrl: 'tree-dynamic-example.html',
+                styleUrls: ['tree-dynamic-example.css'],
+                providers: [DynamicDatabase]
+            }]
+    }], function () { return [{ type: DynamicDatabase }]; }, null);
 
+function TreeFlatOverviewExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-tree-node", 3);
+    ɵɵelement(1, "button", 4);
+    ɵɵtext(2);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var node_r21 = ctx.$implicit;
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", node_r21.name, " ");
+} }
+function TreeFlatOverviewExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-tree-node", 3);
+    ɵɵelementStart(1, "button", 5);
+    ɵɵelementStart(2, "mat-icon", 6);
+    ɵɵtext(3);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵtext(4);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var node_r22 = ctx.$implicit;
+    var ctx_r20 = ɵɵnextContext();
+    ɵɵadvance(1);
+    ɵɵattribute("aria-label", "toggle " + node_r22.name);
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", ctx_r20.treeControl.isExpanded(node_r22) ? "expand_more" : "chevron_right", " ");
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", node_r22.name, " ");
+} }
 var TREE_DATA$1 = [
     {
         name: 'Fruit',
@@ -446,14 +627,33 @@ var TreeFlatOverviewExample = /** @class */ (function () {
     TreeFlatOverviewExample.decorators = [
         { type: Component, args: [{
                     selector: 'tree-flat-overview-example',
-                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node;when: hasChild\" matTreeNodePadding>\n    <button mat-icon-button matTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.name\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </mat-tree-node>\n</mat-tree>\n",
-                    styles: [""]
-                }] }
+                    templateUrl: 'tree-flat-overview-example.html',
+                    styleUrls: ['tree-flat-overview-example.css'],
+                },] },
     ];
     /** @nocollapse */
     TreeFlatOverviewExample.ctorParameters = function () { return []; };
+    TreeFlatOverviewExample.ngFactoryDef = function TreeFlatOverviewExample_Factory(t) { return new (t || TreeFlatOverviewExample)(); };
+    TreeFlatOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: TreeFlatOverviewExample, selectors: [["tree-flat-overview-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"]], template: function TreeFlatOverviewExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "mat-tree", 0);
+            ɵɵtemplate(1, TreeFlatOverviewExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
+            ɵɵtemplate(2, TreeFlatOverviewExample_mat_tree_node_2_Template, 5, 3, "mat-tree-node", 2);
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+            ɵɵadvance(2);
+            ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+        } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], styles: [""] });
     return TreeFlatOverviewExample;
 }());
+/*@__PURE__*/ ɵsetClassMetadata(TreeFlatOverviewExample, [{
+        type: Component,
+        args: [{
+                selector: 'tree-flat-overview-example',
+                templateUrl: 'tree-flat-overview-example.html',
+                styleUrls: ['tree-flat-overview-example.css'],
+            }]
+    }], function () { return []; }, null);
 
 /**
  * @license
@@ -462,6 +662,46 @@ var TreeFlatOverviewExample = /** @class */ (function () {
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
+function TreeLoadmoreExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-tree-node", 4);
+    ɵɵelement(1, "button", 5);
+    ɵɵtext(2);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var node_r26 = ctx.$implicit;
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", node_r26.item, " ");
+} }
+function TreeLoadmoreExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
+    var _r29 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "mat-tree-node", 4);
+    ɵɵelementStart(1, "button", 6);
+    ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_2_Template_button_click_1_listener($event) { ɵɵrestoreView(_r29); var node_r27 = ctx.$implicit; var ctx_r28 = ɵɵnextContext(); return ctx_r28.loadChildren(node_r27); });
+    ɵɵelementStart(2, "mat-icon", 7);
+    ɵɵtext(3);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵtext(4);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var node_r27 = ctx.$implicit;
+    var ctx_r24 = ɵɵnextContext();
+    ɵɵadvance(1);
+    ɵɵattribute("aria-label", "toggle " + node_r27.filename);
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", ctx_r24.treeControl.isExpanded(node_r27) ? "expand_more" : "chevron_right", " ");
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", node_r27.item, " ");
+} }
+function TreeLoadmoreExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
+    var _r32 = ɵɵgetCurrentView();
+    ɵɵelementStart(0, "mat-tree-node");
+    ɵɵelementStart(1, "button", 8);
+    ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_3_Template_button_click_1_listener($event) { ɵɵrestoreView(_r32); var node_r30 = ctx.$implicit; var ctx_r31 = ɵɵnextContext(); return ctx_r31.loadMore(node_r30.loadMoreParentItem); });
+    ɵɵtext(2, " Load more... ");
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} }
 var LOAD_MORE = 'LOAD_MORE';
 /** Nested node */
 var LoadmoreNode = /** @class */ (function () {
@@ -549,10 +789,15 @@ var LoadmoreDatabase = /** @class */ (function () {
         return result;
     };
     LoadmoreDatabase.decorators = [
-        { type: Injectable }
+        { type: Injectable },
     ];
+    LoadmoreDatabase.ngFactoryDef = function LoadmoreDatabase_Factory(t) { return new (t || LoadmoreDatabase)(); };
+    LoadmoreDatabase.ngInjectableDef = ɵɵdefineInjectable({ token: LoadmoreDatabase, factory: function (t) { return LoadmoreDatabase.ngFactoryDef(t); }, providedIn: null });
     return LoadmoreDatabase;
 }());
+/*@__PURE__*/ ɵsetClassMetadata(LoadmoreDatabase, [{
+        type: Injectable
+    }], null, null);
 /**
  * @title Tree with partially loaded data
  */
@@ -593,18 +838,81 @@ var TreeLoadmoreExample = /** @class */ (function () {
     TreeLoadmoreExample.decorators = [
         { type: Component, args: [{
                     selector: 'tree-loadmore-example',
-                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- Leaf node -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodePadding>\n    <button mat-icon-button disabled></button>\n    {{node.item}}\n  </mat-tree-node>\n\n  <!-- expandable node -->\n  <mat-tree-node *matTreeNodeDef=\"let node; when: hasChild\" matTreeNodePadding>\n    <button mat-icon-button\n            [attr.aria-label]=\"'toggle ' + node.filename\"\n            (click)=\"loadChildren(node)\"\n            matTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.item}}\n  </mat-tree-node>\n\n  <mat-tree-node *matTreeNodeDef=\"let node; when: isLoadMore\">\n    <button mat-button (click)=\"loadMore(node.loadMoreParentItem)\">\n      Load more...\n    </button>\n  </mat-tree-node>\n</mat-tree>\n",
-                    providers: [LoadmoreDatabase],
-                    styles: [""]
-                }] }
+                    templateUrl: 'tree-loadmore-example.html',
+                    styleUrls: ['tree-loadmore-example.css'],
+                    providers: [LoadmoreDatabase]
+                },] },
     ];
     /** @nocollapse */
     TreeLoadmoreExample.ctorParameters = function () { return [
         { type: LoadmoreDatabase }
     ]; };
+    TreeLoadmoreExample.ngFactoryDef = function TreeLoadmoreExample_Factory(t) { return new (t || TreeLoadmoreExample)(ɵɵdirectiveInject(LoadmoreDatabase)); };
+    TreeLoadmoreExample.ngComponentDef = ɵɵdefineComponent({ type: TreeLoadmoreExample, selectors: [["tree-loadmore-example"]], features: [ɵɵProvidersFeature([LoadmoreDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", "", 3, "click"], [1, "mat-icon-rtl-mirror"], ["mat-button", "", 3, "click"]], template: function TreeLoadmoreExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "mat-tree", 0);
+            ɵɵtemplate(1, TreeLoadmoreExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
+            ɵɵtemplate(2, TreeLoadmoreExample_mat_tree_node_2_Template, 5, 3, "mat-tree-node", 2);
+            ɵɵtemplate(3, TreeLoadmoreExample_mat_tree_node_3_Template, 3, 0, "mat-tree-node", 3);
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+            ɵɵadvance(2);
+            ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+            ɵɵadvance(1);
+            ɵɵproperty("matTreeNodeDefWhen", ctx.isLoadMore);
+        } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], styles: [""] });
     return TreeLoadmoreExample;
 }());
+/*@__PURE__*/ ɵsetClassMetadata(TreeLoadmoreExample, [{
+        type: Component,
+        args: [{
+                selector: 'tree-loadmore-example',
+                templateUrl: 'tree-loadmore-example.html',
+                styleUrls: ['tree-loadmore-example.css'],
+                providers: [LoadmoreDatabase]
+            }]
+    }], function () { return [{ type: LoadmoreDatabase }]; }, null);
 
+function TreeNestedOverviewExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-tree-node", 3);
+    ɵɵelementStart(1, "li", 4);
+    ɵɵelement(2, "button", 5);
+    ɵɵtext(3);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var node_r35 = ctx.$implicit;
+    ɵɵadvance(3);
+    ɵɵtextInterpolate1(" ", node_r35.name, " ");
+} }
+function TreeNestedOverviewExample_mat_nested_tree_node_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-nested-tree-node");
+    ɵɵelementStart(1, "li");
+    ɵɵelementStart(2, "div", 4);
+    ɵɵelementStart(3, "button", 6);
+    ɵɵelementStart(4, "mat-icon", 7);
+    ɵɵtext(5);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵtext(6);
+    ɵɵelementEnd();
+    ɵɵelementStart(7, "ul");
+    ɵɵelementContainer(8, 8);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var node_r36 = ctx.$implicit;
+    var ctx_r34 = ɵɵnextContext();
+    ɵɵadvance(3);
+    ɵɵattribute("aria-label", "toggle " + node_r36.name);
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", ctx_r34.treeControl.isExpanded(node_r36) ? "expand_more" : "chevron_right", " ");
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", node_r36.name, " ");
+    ɵɵadvance(1);
+    ɵɵclassProp("example-tree-invisible", !ctx_r34.treeControl.isExpanded(node_r36));
+} }
 var TREE_DATA$2 = [
     {
         name: 'Fruit',
@@ -645,14 +953,33 @@ var TreeNestedOverviewExample = /** @class */ (function () {
     TreeNestedOverviewExample.decorators = [
         { type: Component, args: [{
                     selector: 'tree-nested-overview-example',
-                    template: "<mat-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\" class=\"example-tree\">\n  <!-- This is the tree node template for leaf nodes -->\n  <mat-tree-node *matTreeNodeDef=\"let node\" matTreeNodeToggle>\n    <li class=\"mat-tree-node\">\n      <!-- use a disabled button to provide padding for tree leaf -->\n      <button mat-icon-button disabled></button>\n      {{node.name}}\n    </li>\n  </mat-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <mat-nested-tree-node *matTreeNodeDef=\"let node; when: hasChild\">\n    <li>\n      <div class=\"mat-tree-node\">\n        <button mat-icon-button matTreeNodeToggle\n                [attr.aria-label]=\"'toggle ' + node.name\">\n          <mat-icon class=\"mat-icon-rtl-mirror\">\n            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n          </mat-icon>\n        </button>\n        {{node.name}}\n      </div>\n      <ul [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n        <ng-container matTreeNodeOutlet></ng-container>\n      </ul>\n    </li>\n  </mat-nested-tree-node>\n</mat-tree>\n",
-                    styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n"]
-                }] }
+                    templateUrl: 'tree-nested-overview-example.html',
+                    styleUrls: ['tree-nested-overview-example.css'],
+                },] },
     ];
     /** @nocollapse */
     TreeNestedOverviewExample.ctorParameters = function () { return []; };
+    TreeNestedOverviewExample.ngFactoryDef = function TreeNestedOverviewExample_Factory(t) { return new (t || TreeNestedOverviewExample)(); };
+    TreeNestedOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: TreeNestedOverviewExample, selectors: [["tree-nested-overview-example"]], decls: 3, vars: 3, consts: [[1, "example-tree", 3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", 4, "matTreeNodeDef"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", ""], [1, "mat-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["matTreeNodeOutlet", ""]], template: function TreeNestedOverviewExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "mat-tree", 0);
+            ɵɵtemplate(1, TreeNestedOverviewExample_mat_tree_node_1_Template, 4, 1, "mat-tree-node", 1);
+            ɵɵtemplate(2, TreeNestedOverviewExample_mat_nested_tree_node_2_Template, 9, 4, "mat-nested-tree-node", 2);
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+            ɵɵadvance(2);
+            ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
+        } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatButton, MatNestedTreeNode, MatIcon, MatTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}"] });
     return TreeNestedOverviewExample;
 }());
+/*@__PURE__*/ ɵsetClassMetadata(TreeNestedOverviewExample, [{
+        type: Component,
+        args: [{
+                selector: 'tree-nested-overview-example',
+                templateUrl: 'tree-nested-overview-example.html',
+                styleUrls: ['tree-nested-overview-example.css'],
+            }]
+    }], function () { return []; }, null);
 
 var EXAMPLES = [
     TreeChecklistExample,
@@ -677,14 +1004,55 @@ var TreeExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
-                },] }
+                },] },
     ];
+    TreeExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: TreeExamplesModule });
+    TreeExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function TreeExamplesModule_Factory(t) { return new (t || TreeExamplesModule)(); }, imports: [[
+                CommonModule,
+                MatButtonModule,
+                MatCheckboxModule,
+                MatIconModule,
+                MatInputModule,
+                MatProgressBarModule,
+                MatTreeModule,
+            ]] });
     return TreeExamplesModule;
 }());
+/*@__PURE__*/ ɵɵsetNgModuleScope(TreeExamplesModule, { declarations: [TreeChecklistExample,
+        TreeDynamicExample,
+        TreeFlatOverviewExample,
+        TreeLoadmoreExample,
+        TreeNestedOverviewExample], imports: [CommonModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        MatIconModule,
+        MatInputModule,
+        MatProgressBarModule,
+        MatTreeModule], exports: [TreeChecklistExample,
+        TreeDynamicExample,
+        TreeFlatOverviewExample,
+        TreeLoadmoreExample,
+        TreeNestedOverviewExample] });
+/*@__PURE__*/ ɵsetClassMetadata(TreeExamplesModule, [{
+        type: NgModule,
+        args: [{
+                imports: [
+                    CommonModule,
+                    MatButtonModule,
+                    MatCheckboxModule,
+                    MatIconModule,
+                    MatInputModule,
+                    MatProgressBarModule,
+                    MatTreeModule,
+                ],
+                declarations: EXAMPLES,
+                exports: EXAMPLES,
+            }]
+    }], null, null);
 
 /**
  * Generated bundle index. Do not edit.
  */
 
-export { ChecklistDatabase as ɵangular_material_src_material_examples_material_tree_tree_a, DynamicDatabase as ɵangular_material_src_material_examples_material_tree_tree_b, LoadmoreDatabase as ɵangular_material_src_material_examples_material_tree_tree_c, TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample, TreeExamplesModule };
+export { TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample, TreeExamplesModule };
 //# sourceMappingURL=tree.js.map

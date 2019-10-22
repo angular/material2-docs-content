@@ -1,3 +1,4 @@
+import * as i0 from "@angular/core";
 export interface Transaction {
     item: string;
     cost: number;
@@ -10,4 +11,6 @@ export declare class TableStickyFooterExample {
     transactions: Transaction[];
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableStickyFooterExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableStickyFooterExample, "table-sticky-footer-example", never, {}, {}, never>;
 }

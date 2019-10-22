@@ -1,5 +1,6 @@
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
+import * as i0 from "@angular/core";
 /**
  * Food data with nested structure.
  * Each node has a name and an optiona list of children.
@@ -32,5 +33,7 @@ export declare class TreeFlatOverviewExample {
     }>;
     constructor();
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TreeFlatOverviewExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never>;
 }
 export {};

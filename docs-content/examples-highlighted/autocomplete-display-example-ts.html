@@ -33,8 +33,8 @@
       );
   }
 
-  displayFn(user?: User): <span class="hljs-built_in">string</span> | <span class="hljs-literal">undefined</span> {
-    <span class="hljs-keyword">return</span> user ? user.name : <span class="hljs-literal">undefined</span>;
+  displayFn(user: User): <span class="hljs-built_in">string</span> {
+    <span class="hljs-keyword">return</span> user.name;
   }
 
   <span class="hljs-keyword">private</span> _filter(name: <span class="hljs-built_in">string</span>): User[] {

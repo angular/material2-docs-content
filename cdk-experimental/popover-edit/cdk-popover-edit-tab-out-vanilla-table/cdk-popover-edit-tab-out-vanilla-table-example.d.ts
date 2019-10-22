@@ -1,4 +1,5 @@
 import { NgForm } from '@angular/forms';
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -14,4 +15,6 @@ export declare class CdkPopoverEditTabOutVanillaTableExample {
     readonly elements: PeriodicElement[];
     onSubmitName(element: PeriodicElement, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<CdkPopoverEditTabOutVanillaTableExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkPopoverEditTabOutVanillaTableExample, "cdk-popover-edit-tab-out-vanilla-table-example", never, {}, {}, never>;
 }

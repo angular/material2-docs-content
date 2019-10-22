@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/bottom-sheet'), require('@angular/material/button'), require('@angular/material/list')) :
-    typeof define === 'function' && define.amd ? define('@angular/material-examples/material/bottom-sheet', ['exports', '@angular/core', '@angular/material/bottom-sheet', '@angular/material/button', '@angular/material/list'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.bottomSheet = {}), global.ng.core, global.ng.material.bottomSheet, global.ng.material.button, global.ng.material.list));
-}(this, function (exports, core, bottomSheet, button, list) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/bottom-sheet'), require('@angular/material/button'), require('@angular/material/list'), require('@angular/material/core')) :
+    typeof define === 'function' && define.amd ? define('@angular/material-examples/material/bottom-sheet', ['exports', '@angular/core', '@angular/material/bottom-sheet', '@angular/material/button', '@angular/material/list', '@angular/material/core'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.bottomSheet = {}), global.ng.core, global.ng.material.bottomSheet, global.ng.material.button, global.ng.material.list, global.ng.material.core));
+}(this, function (exports, i0, i1, i2, i3, i4) { 'use strict';
 
     /**
      * @title Bottom Sheet Overview
@@ -15,18 +15,36 @@
             this._bottomSheet.open(BottomSheetOverviewExampleSheet);
         };
         BottomSheetOverviewExample.decorators = [
-            { type: core.Component, args: [{
+            { type: i0.Component, args: [{
                         selector: 'bottom-sheet-overview-example',
-                        template: "<p>You have received a file called \"cat-picture.jpeg\".</p>\n\n<button mat-raised-button (click)=\"openBottomSheet()\">Open file</button>\n",
-                        styles: ["/** No CSS for this example */\n"]
-                    }] }
+                        templateUrl: 'bottom-sheet-overview-example.html',
+                        styleUrls: ['bottom-sheet-overview-example.css'],
+                    },] },
         ];
         /** @nocollapse */
         BottomSheetOverviewExample.ctorParameters = function () { return [
-            { type: bottomSheet.MatBottomSheet }
+            { type: i1.MatBottomSheet }
         ]; };
+        BottomSheetOverviewExample.ngFactoryDef = function BottomSheetOverviewExample_Factory(t) { return new (t || BottomSheetOverviewExample)(i0.ɵɵdirectiveInject(i1.MatBottomSheet)); };
+        BottomSheetOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: BottomSheetOverviewExample, selectors: [["bottom-sheet-overview-example"]], decls: 4, vars: 0, consts: [["mat-raised-button", "", 3, "click"]], template: function BottomSheetOverviewExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "p");
+                i0.ɵɵtext(1, "You have received a file called \"cat-picture.jpeg\".");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(2, "button", 0);
+                i0.ɵɵlistener("click", function BottomSheetOverviewExample_Template_button_click_2_listener($event) { return ctx.openBottomSheet(); });
+                i0.ɵɵtext(3, "Open file");
+                i0.ɵɵelementEnd();
+            } }, directives: [i2.MatButton], styles: [""] });
         return BottomSheetOverviewExample;
     }());
+    /*@__PURE__*/ i0.ɵsetClassMetadata(BottomSheetOverviewExample, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'bottom-sheet-overview-example',
+                    templateUrl: 'bottom-sheet-overview-example.html',
+                    styleUrls: ['bottom-sheet-overview-example.css'],
+                }]
+        }], function () { return [{ type: i1.MatBottomSheet }]; }, null);
     var BottomSheetOverviewExampleSheet = /** @class */ (function () {
         function BottomSheetOverviewExampleSheet(_bottomSheetRef) {
             this._bottomSheetRef = _bottomSheetRef;
@@ -36,17 +54,65 @@
             event.preventDefault();
         };
         BottomSheetOverviewExampleSheet.decorators = [
-            { type: core.Component, args: [{
+            { type: i0.Component, args: [{
                         selector: 'bottom-sheet-overview-example-sheet',
-                        template: "<mat-nav-list>\n  <a href=\"https://keep.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Keep</span>\n    <span mat-line>Add to a note</span>\n  </a>\n\n  <a href=\"https://docs.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Docs</span>\n    <span mat-line>Embed in a document</span>\n  </a>\n\n  <a href=\"https://plus.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Plus</span>\n    <span mat-line>Share with your friends</span>\n  </a>\n\n  <a href=\"https://hangouts.google.com/\" mat-list-item (click)=\"openLink($event)\">\n    <span mat-line>Google Hangouts</span>\n    <span mat-line>Show to your coworkers</span>\n  </a>\n</mat-nav-list>\n"
-                    }] }
+                        templateUrl: 'bottom-sheet-overview-example-sheet.html',
+                    },] },
         ];
         /** @nocollapse */
         BottomSheetOverviewExampleSheet.ctorParameters = function () { return [
-            { type: bottomSheet.MatBottomSheetRef }
+            { type: i1.MatBottomSheetRef }
         ]; };
+        BottomSheetOverviewExampleSheet.ngFactoryDef = function BottomSheetOverviewExampleSheet_Factory(t) { return new (t || BottomSheetOverviewExampleSheet)(i0.ɵɵdirectiveInject(i1.MatBottomSheetRef)); };
+        BottomSheetOverviewExampleSheet.ngComponentDef = i0.ɵɵdefineComponent({ type: BottomSheetOverviewExampleSheet, selectors: [["bottom-sheet-overview-example-sheet"]], decls: 21, vars: 0, consts: [["href", "https://keep.google.com/", "mat-list-item", "", 3, "click"], ["mat-line", ""], ["href", "https://docs.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://plus.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://hangouts.google.com/", "mat-list-item", "", 3, "click"]], template: function BottomSheetOverviewExampleSheet_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-nav-list");
+                i0.ɵɵelementStart(1, "a", 0);
+                i0.ɵɵlistener("click", function BottomSheetOverviewExampleSheet_Template_a_click_1_listener($event) { return ctx.openLink($event); });
+                i0.ɵɵelementStart(2, "span", 1);
+                i0.ɵɵtext(3, "Google Keep");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(4, "span", 1);
+                i0.ɵɵtext(5, "Add to a note");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "a", 2);
+                i0.ɵɵlistener("click", function BottomSheetOverviewExampleSheet_Template_a_click_6_listener($event) { return ctx.openLink($event); });
+                i0.ɵɵelementStart(7, "span", 1);
+                i0.ɵɵtext(8, "Google Docs");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(9, "span", 1);
+                i0.ɵɵtext(10, "Embed in a document");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(11, "a", 3);
+                i0.ɵɵlistener("click", function BottomSheetOverviewExampleSheet_Template_a_click_11_listener($event) { return ctx.openLink($event); });
+                i0.ɵɵelementStart(12, "span", 1);
+                i0.ɵɵtext(13, "Google Plus");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(14, "span", 1);
+                i0.ɵɵtext(15, "Share with your friends");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(16, "a", 4);
+                i0.ɵɵlistener("click", function BottomSheetOverviewExampleSheet_Template_a_click_16_listener($event) { return ctx.openLink($event); });
+                i0.ɵɵelementStart(17, "span", 1);
+                i0.ɵɵtext(18, "Google Hangouts");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(19, "span", 1);
+                i0.ɵɵtext(20, "Show to your coworkers");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            } }, directives: [i3.MatNavList, i3.MatListItem, i4.MatLine], encapsulation: 2 });
         return BottomSheetOverviewExampleSheet;
     }());
+    /*@__PURE__*/ i0.ɵsetClassMetadata(BottomSheetOverviewExampleSheet, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'bottom-sheet-overview-example-sheet',
+                    templateUrl: 'bottom-sheet-overview-example-sheet.html',
+                }]
+        }], function () { return [{ type: i1.MatBottomSheetRef }]; }, null);
 
     var EXAMPLES = [
         BottomSheetOverviewExample,
@@ -56,19 +122,43 @@
         function BottomSheetExamplesModule() {
         }
         BottomSheetExamplesModule.decorators = [
-            { type: core.NgModule, args: [{
+            { type: i0.NgModule, args: [{
                         imports: [
-                            bottomSheet.MatBottomSheetModule,
-                            button.MatButtonModule,
-                            list.MatListModule,
+                            i1.MatBottomSheetModule,
+                            i2.MatButtonModule,
+                            i3.MatListModule,
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
                         entryComponents: [BottomSheetOverviewExampleSheet],
-                    },] }
+                    },] },
         ];
+        BottomSheetExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
+        BottomSheetExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function BottomSheetExamplesModule_Factory(t) { return new (t || BottomSheetExamplesModule)(); }, imports: [[
+                    i1.MatBottomSheetModule,
+                    i2.MatButtonModule,
+                    i3.MatListModule,
+                ]] });
         return BottomSheetExamplesModule;
     }());
+    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(BottomSheetExamplesModule, { declarations: [BottomSheetOverviewExample,
+            BottomSheetOverviewExampleSheet], imports: [i1.MatBottomSheetModule,
+            i2.MatButtonModule,
+            i3.MatListModule], exports: [BottomSheetOverviewExample,
+            BottomSheetOverviewExampleSheet] });
+    /*@__PURE__*/ i0.ɵsetClassMetadata(BottomSheetExamplesModule, [{
+            type: i0.NgModule,
+            args: [{
+                    imports: [
+                        i1.MatBottomSheetModule,
+                        i2.MatButtonModule,
+                        i3.MatListModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                    entryComponents: [BottomSheetOverviewExampleSheet],
+                }]
+        }], null, null);
 
     /**
      * Generated bundle index. Do not edit.

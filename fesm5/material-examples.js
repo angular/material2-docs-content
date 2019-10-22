@@ -1,5 +1,5 @@
 import { __spread } from 'tslib';
-import { NgModule } from '@angular/core';
+import { NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, ɵsetClassMetadata } from '@angular/core';
 import { CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPopoverEditExamplesModule } from '@angular/material-examples/cdk-experimental/popover-edit';
 export { CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample } from '@angular/material-examples/cdk-experimental/popover-edit';
 import { FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, CdkA11yExamplesModule } from '@angular/material-examples/cdk/a11y';
@@ -107,10 +107,22 @@ var ExampleModule = /** @class */ (function () {
                     imports: EXAMPLE_MODULES,
                     exports: EXAMPLE_MODULES,
                     entryComponents: EXAMPLE_LIST,
-                },] }
+                },] },
     ];
+    ExampleModule.ngModuleDef = ɵɵdefineNgModule({ type: ExampleModule });
+    ExampleModule.ngInjectorDef = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, imports: [EXAMPLE_MODULES,
+            CdkPopoverEditExamplesModule, CdkA11yExamplesModule, CdkClipboardExamplesModule, CdkDragDropExamplesModule, CdkPlatformExamplesModule, CdkPortalExamplesModule, CdkScrollingExamplesModule, CdkStepperExamplesModule, CdkTableExamplesModule, CdkTextFieldExamplesModule, CdkTreeExamplesModule, PopoverEditExamplesModule, AutocompleteExamplesModule, BadgeExamplesModule, BottomSheetExamplesModule, ButtonToggleExamplesModule, ButtonExamplesModule, CardExamplesModule, CheckboxExamplesModule, ChipsExamplesModule, CoreExamplesModule, DatepickerExamplesModule, DialogExamplesModule, DividerExamplesModule, ExpansionExamplesModule, FormFieldExamplesModule, GridListExamplesModule, IconExamplesModule, InputExamplesModule, ListExamplesModule, MenuExamplesModule, PaginatorExamplesModule, ProgressBarExamplesModule, ProgressSpinnerExamplesModule, RadioExamplesModule, SelectExamplesModule, SidenavExamplesModule, SlideToggleExamplesModule, SliderExamplesModule, SnackBarExamplesModule, SortExamplesModule, StepperExamplesModule, TableExamplesModule, TabGroupExamplesModule, ToolbarExamplesModule, TooltipExamplesModule, TreeExamplesModule] });
     return ExampleModule;
 }());
+/*@__PURE__*/ ɵɵsetNgModuleScope(ExampleModule, { imports: [CdkPopoverEditExamplesModule, CdkA11yExamplesModule, CdkClipboardExamplesModule, CdkDragDropExamplesModule, CdkPlatformExamplesModule, CdkPortalExamplesModule, CdkScrollingExamplesModule, CdkStepperExamplesModule, CdkTableExamplesModule, CdkTextFieldExamplesModule, CdkTreeExamplesModule, PopoverEditExamplesModule, AutocompleteExamplesModule, BadgeExamplesModule, BottomSheetExamplesModule, ButtonToggleExamplesModule, ButtonExamplesModule, CardExamplesModule, CheckboxExamplesModule, ChipsExamplesModule, CoreExamplesModule, DatepickerExamplesModule, DialogExamplesModule, DividerExamplesModule, ExpansionExamplesModule, FormFieldExamplesModule, GridListExamplesModule, IconExamplesModule, InputExamplesModule, ListExamplesModule, MenuExamplesModule, PaginatorExamplesModule, ProgressBarExamplesModule, ProgressSpinnerExamplesModule, RadioExamplesModule, SelectExamplesModule, SidenavExamplesModule, SlideToggleExamplesModule, SliderExamplesModule, SnackBarExamplesModule, SortExamplesModule, StepperExamplesModule, TableExamplesModule, TabGroupExamplesModule, ToolbarExamplesModule, TooltipExamplesModule, TreeExamplesModule], exports: [CdkPopoverEditExamplesModule, CdkA11yExamplesModule, CdkClipboardExamplesModule, CdkDragDropExamplesModule, CdkPlatformExamplesModule, CdkPortalExamplesModule, CdkScrollingExamplesModule, CdkStepperExamplesModule, CdkTableExamplesModule, CdkTextFieldExamplesModule, CdkTreeExamplesModule, PopoverEditExamplesModule, AutocompleteExamplesModule, BadgeExamplesModule, BottomSheetExamplesModule, ButtonToggleExamplesModule, ButtonExamplesModule, CardExamplesModule, CheckboxExamplesModule, ChipsExamplesModule, CoreExamplesModule, DatepickerExamplesModule, DialogExamplesModule, DividerExamplesModule, ExpansionExamplesModule, FormFieldExamplesModule, GridListExamplesModule, IconExamplesModule, InputExamplesModule, ListExamplesModule, MenuExamplesModule, PaginatorExamplesModule, ProgressBarExamplesModule, ProgressSpinnerExamplesModule, RadioExamplesModule, SelectExamplesModule, SidenavExamplesModule, SlideToggleExamplesModule, SliderExamplesModule, SnackBarExamplesModule, SortExamplesModule, StepperExamplesModule, TableExamplesModule, TabGroupExamplesModule, ToolbarExamplesModule, TooltipExamplesModule, TreeExamplesModule] });
+/*@__PURE__*/ ɵsetClassMetadata(ExampleModule, [{
+        type: NgModule,
+        args: [{
+                imports: EXAMPLE_MODULES,
+                exports: EXAMPLE_MODULES,
+                entryComponents: EXAMPLE_LIST,
+            }]
+    }], null, null);
 
 /**
  * Example data

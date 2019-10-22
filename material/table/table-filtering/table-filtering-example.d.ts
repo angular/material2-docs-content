@@ -1,4 +1,5 @@
 import { MatTableDataSource } from '@angular/material/table';
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -12,4 +13,6 @@ export declare class TableFilteringExample {
     displayedColumns: string[];
     dataSource: MatTableDataSource<PeriodicElement>;
     applyFilter(filterValue: string): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableFilteringExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableFilteringExample, "table-filtering-example", never, {}, {}, never>;
 }

@@ -1,3 +1,4 @@
+import * as i0 from "@angular/core";
 /**
  * @title Programmatically setting the free drag position
  */
@@ -7,4 +8,6 @@ export declare class CdkDragDropFreeDragPositionExample {
         y: number;
     };
     changePosition(): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<CdkDragDropFreeDragPositionExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkDragDropFreeDragPositionExample, "cdk-drag-drop-free-drag-position-example", never, {}, {}, never>;
 }

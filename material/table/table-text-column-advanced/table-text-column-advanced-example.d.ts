@@ -1,5 +1,6 @@
 import { DecimalPipe } from '@angular/common';
 import { MatTableDataSource } from '@angular/material/table';
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -15,5 +16,7 @@ export declare class TableTextColumnAdvancedExample {
     headerText: string;
     decimalPipe: DecimalPipe;
     /** Data accessor function that transforms the weight value to have at most 2 decimal digits. */
-    getWeight: (data: PeriodicElement) => string | null;
+    getWeight: (data: PeriodicElement) => string;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableTextColumnAdvancedExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableTextColumnAdvancedExample, "table-text-column-advanced-example", never, {}, {}, never>;
 }

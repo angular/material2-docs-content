@@ -39,5 +39,8 @@
   decimalPipe = <span class="hljs-keyword">new</span> DecimalPipe(<span class="hljs-string">'en-US'</span>);
 
   <span class="hljs-comment">/** Data accessor function that transforms the weight value to have at most 2 decimal digits. */</span>
-  getWeight = <span class="hljs-function">(<span class="hljs-params">data: PeriodicElement</span>) =&gt;</span> <span class="hljs-keyword">this</span>.decimalPipe.transform(data.weight, <span class="hljs-string">'1.0-2'</span>);
+  getWeight = (data: PeriodicElement): <span class="hljs-function"><span class="hljs-params">string</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">this</span>.decimalPipe.transform(data.weight, <span class="hljs-string">'1.0-2'</span>);
+    <span class="hljs-keyword">return</span> result === <span class="hljs-literal">null</span> ? <span class="hljs-string">''</span> : result;
+  }
 }

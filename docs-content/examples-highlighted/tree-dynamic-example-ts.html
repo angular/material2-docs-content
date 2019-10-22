@@ -1,4 +1,4 @@
-<span class="hljs-keyword">import</span> {CollectionViewer, SelectionChange} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
+<span class="hljs-keyword">import</span> {CollectionViewer, SelectionChange, DataSource} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/collections'</span>;
 <span class="hljs-keyword">import</span> {FlatTreeControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
 <span class="hljs-keyword">import</span> {Component, Injectable} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {BehaviorSubject, merge, Observable} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
@@ -45,7 +45,7 @@
  * structure.
  */</span>
 <span class="hljs-meta">@Injectable</span>()
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DynamicDataSource {
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DynamicDataSource <span class="hljs-keyword">implements</span> DataSource&lt;DynamicFlatNode&gt; {
 
   dataChange = <span class="hljs-keyword">new</span> BehaviorSubject&lt;DynamicFlatNode[]&gt;([]);
 
@@ -68,6 +68,8 @@
 
     <span class="hljs-keyword">return</span> merge(collectionViewer.viewChange, <span class="hljs-keyword">this</span>.dataChange).pipe(map(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">this</span>.data));
   }
+
+  disconnect(collectionViewer: CollectionViewer): <span class="hljs-built_in">void</span> {}
 
   <span class="hljs-comment">/** Handle expand/collapse behaviors */</span>
   handleTreeControl(change: SelectionChange&lt;DynamicFlatNode&gt;) {

@@ -2,6 +2,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { BehaviorSubject } from 'rxjs';
+import * as i0 from "@angular/core";
 /**
  * Node for to-do item
  */
@@ -35,6 +36,8 @@ export declare class ChecklistDatabase {
     /** Add an item to to-do list */
     insertItem(parent: TodoItemNode, name: string): void;
     updateItem(node: TodoItemNode, name: string): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<ChecklistDatabase>;
+    static ngInjectableDef: i0.ɵɵInjectableDef<ChecklistDatabase>;
 }
 /**
  * @title Tree with checkboxes
@@ -80,4 +83,6 @@ export declare class TreeChecklistExample {
     addNewItem(node: TodoItemFlatNode): void;
     /** Save the node to database */
     saveNode(node: TodoItemFlatNode, itemValue: string): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TreeChecklistExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TreeChecklistExample, "tree-checklist-example", never, {}, {}, never>;
 }

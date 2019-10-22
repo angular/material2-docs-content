@@ -1,4 +1,6 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
+<span class="hljs-keyword">import</span> {ProgressBarMode} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/progress-bar'</span>;
 
 <span class="hljs-comment">/**
  * @title Configurable progress-bar
@@ -9,8 +11,8 @@
   styleUrls: [<span class="hljs-string">'progress-bar-configurable-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ProgressBarConfigurableExample {
-  color = <span class="hljs-string">'primary'</span>;
-  mode = <span class="hljs-string">'determinate'</span>;
+  color: ThemePalette = <span class="hljs-string">'primary'</span>;
+  mode: ProgressBarMode = <span class="hljs-string">'determinate'</span>;
   value = <span class="hljs-number">50</span>;
   bufferValue = <span class="hljs-number">75</span>;
 }

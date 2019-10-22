@@ -3,6 +3,7 @@ import { FormValueContainer } from '@angular/cdk-experimental/popover-edit';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { BehaviorSubject, Observable } from 'rxjs';
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -23,6 +24,8 @@ export declare class PopoverEditMatTableExample {
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
     goodJob(element: PeriodicElement): void;
     badJob(element: PeriodicElement): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<PopoverEditMatTableExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

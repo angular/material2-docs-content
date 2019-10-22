@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/material/progress-bar";
 /**
  * @title Buffer progress-bar
  */
@@ -8,11 +10,23 @@ var ProgressBarBufferExample = /** @class */ (function () {
     ProgressBarBufferExample.decorators = [
         { type: Component, args: [{
                     selector: 'progress-bar-buffer-example',
-                    template: "<mat-progress-bar mode=\"buffer\"></mat-progress-bar>\n",
-                    styles: ["/** No CSS for this example */\n"]
-                }] }
+                    templateUrl: 'progress-bar-buffer-example.html',
+                    styleUrls: ['progress-bar-buffer-example.css'],
+                },] },
     ];
+    ProgressBarBufferExample.ngFactoryDef = function ProgressBarBufferExample_Factory(t) { return new (t || ProgressBarBufferExample)(); };
+    ProgressBarBufferExample.ngComponentDef = i0.ɵɵdefineComponent({ type: ProgressBarBufferExample, selectors: [["progress-bar-buffer-example"]], decls: 1, vars: 0, consts: [["mode", "buffer"]], template: function ProgressBarBufferExample_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵelement(0, "mat-progress-bar", 0);
+        } }, directives: [i1.MatProgressBar], styles: [""] });
     return ProgressBarBufferExample;
 }());
 export { ProgressBarBufferExample };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvZ3Jlc3MtYmFyLWJ1ZmZlci1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL21hdGVyaWFsL3Byb2dyZXNzLWJhci9wcm9ncmVzcy1iYXItYnVmZmVyL3Byb2dyZXNzLWJhci1idWZmZXItZXhhbXBsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDO0FBRXhDOztHQUVHO0FBQ0g7SUFBQTtJQUt1QyxDQUFDOztnQkFMdkMsU0FBUyxTQUFDO29CQUNULFFBQVEsRUFBRSw2QkFBNkI7b0JBQ3ZDLG1FQUErQzs7aUJBRWhEOztJQUNzQywrQkFBQztDQUFBLEFBTHhDLElBS3dDO1NBQTNCLHdCQUF3QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBAdGl0bGUgQnVmZmVyIHByb2dyZXNzLWJhclxuICovXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdwcm9ncmVzcy1iYXItYnVmZmVyLWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ3Byb2dyZXNzLWJhci1idWZmZXItZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ3Byb2dyZXNzLWJhci1idWZmZXItZXhhbXBsZS5jc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgUHJvZ3Jlc3NCYXJCdWZmZXJFeGFtcGxlIHt9XG4iXX0=
+/*@__PURE__*/ i0.ɵsetClassMetadata(ProgressBarBufferExample, [{
+        type: Component,
+        args: [{
+                selector: 'progress-bar-buffer-example',
+                templateUrl: 'progress-bar-buffer-example.html',
+                styleUrls: ['progress-bar-buffer-example.css'],
+            }]
+    }], null, null);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvZ3Jlc3MtYmFyLWJ1ZmZlci1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL21hdGVyaWFsL3Byb2dyZXNzLWJhci9wcm9ncmVzcy1iYXItYnVmZmVyL3Byb2dyZXNzLWJhci1idWZmZXItZXhhbXBsZS50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9tYXRlcmlhbC1leGFtcGxlcy9tYXRlcmlhbC9wcm9ncmVzcy1iYXIvcHJvZ3Jlc3MtYmFyLWJ1ZmZlci9wcm9ncmVzcy1iYXItYnVmZmVyLWV4YW1wbGUuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDOzs7QUFFeEM7O0dBRUc7QUFDSDtJQUFBO0tBS3dDOztnQkFMdkMsU0FBUyxTQUFDO29CQUNULFFBQVEsRUFBRSw2QkFBNkI7b0JBQ3ZDLFdBQVcsRUFBRSxrQ0FBa0M7b0JBQy9DLFNBQVMsRUFBRSxDQUFDLGlDQUFpQyxDQUFDO2lCQUMvQzs7NEdBQ1ksd0JBQXdCOzJFQUF4Qix3QkFBd0I7WUNWckMsc0NBQW1EOzttQ0RBbkQ7Q0FVd0MsQUFMeEMsSUFLd0M7U0FBM0Isd0JBQXdCO21DQUF4Qix3QkFBd0I7Y0FMcEMsU0FBUztlQUFDO2dCQUNULFFBQVEsRUFBRSw2QkFBNkI7Z0JBQ3ZDLFdBQVcsRUFBRSxrQ0FBa0M7Z0JBQy9DLFNBQVMsRUFBRSxDQUFDLGlDQUFpQyxDQUFDO2FBQy9DIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG4vKipcbiAqIEB0aXRsZSBCdWZmZXIgcHJvZ3Jlc3MtYmFyXG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ3Byb2dyZXNzLWJhci1idWZmZXItZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAncHJvZ3Jlc3MtYmFyLWJ1ZmZlci1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsncHJvZ3Jlc3MtYmFyLWJ1ZmZlci1leGFtcGxlLmNzcyddLFxufSlcbmV4cG9ydCBjbGFzcyBQcm9ncmVzc0JhckJ1ZmZlckV4YW1wbGUge31cbiIsIjxtYXQtcHJvZ3Jlc3MtYmFyIG1vZGU9XCJidWZmZXJcIj48L21hdC1wcm9ncmVzcy1iYXI+XG4iXX0=

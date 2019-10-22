@@ -1,3 +1,4 @@
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -14,4 +15,6 @@ export declare class TableDynamicColumnsExample {
     addColumn(): void;
     removeColumn(): void;
     shuffle(): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableDynamicColumnsExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableDynamicColumnsExample, "table-dynamic-columns-example", never, {}, {}, never>;
 }

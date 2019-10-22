@@ -1,5 +1,6 @@
 import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import * as i0 from "@angular/core";
 /** Error when invalid control is dirty, touched, or submitted. */
 export declare class MyErrorStateMatcher implements ErrorStateMatcher {
     isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean;
@@ -10,4 +11,6 @@ export declare class SelectErrorStateMatcherExample {
     selectFormControl: FormControl;
     nativeSelectFormControl: FormControl;
     matcher: MyErrorStateMatcher;
+    static ngFactoryDef: i0.ɵɵFactoryDef<SelectErrorStateMatcherExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SelectErrorStateMatcherExample, "select-error-state-matcher-example", never, {}, {}, never>;
 }

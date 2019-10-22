@@ -1,6 +1,7 @@
 import { DataSource } from '@angular/cdk/collections';
 import { NgForm } from '@angular/forms';
 import { BehaviorSubject, Observable } from 'rxjs';
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -17,6 +18,8 @@ export declare class PopoverEditMatTableFlexExample {
     readonly preservedWeightValues: WeakMap<PeriodicElement, any>;
     onSubmitName(element: PeriodicElement, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<PopoverEditMatTableFlexExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<PopoverEditMatTableFlexExample, "popover-edit-mat-table-flex-example", never, {}, {}, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

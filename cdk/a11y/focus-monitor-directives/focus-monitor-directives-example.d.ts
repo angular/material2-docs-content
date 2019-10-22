@@ -1,5 +1,6 @@
 import { FocusOrigin } from '@angular/cdk/a11y';
 import { ChangeDetectorRef, NgZone } from '@angular/core';
+import * as i0 from "@angular/core";
 /** @title Monitoring focus with FocusMonitor */
 export declare class FocusMonitorDirectivesExample {
     private _ngZone;
@@ -9,4 +10,6 @@ export declare class FocusMonitorDirectivesExample {
     constructor(_ngZone: NgZone, _cdr: ChangeDetectorRef);
     formatOrigin(origin: FocusOrigin): string;
     markForCheck(): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<FocusMonitorDirectivesExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<FocusMonitorDirectivesExample, "focus-monitor-directives-example", never, {}, {}, never>;
 }

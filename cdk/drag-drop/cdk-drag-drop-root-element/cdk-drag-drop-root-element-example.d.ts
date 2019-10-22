@@ -1,5 +1,6 @@
 import { TemplateRef, AfterViewInit, ViewContainerRef, OnDestroy } from '@angular/core';
 import { Overlay } from '@angular/cdk/overlay';
+import * as i0 from "@angular/core";
 /**
  * @title Drag&Drop with alternate root element
  */
@@ -13,4 +14,6 @@ export declare class CdkDragDropRootElementExample implements AfterViewInit, OnD
     ngAfterViewInit(): void;
     ngOnDestroy(): void;
     openDialog(): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<CdkDragDropRootElementExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkDragDropRootElementExample, "cdk-drag-drop-root-element-example", never, {}, {}, never>;
 }

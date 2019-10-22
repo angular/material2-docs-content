@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/radio')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/checkbox', ['exports', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/checkbox', '@angular/material/radio'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.checkbox = {}), global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.checkbox, global.ng.material.radio));
-}(this, function (exports, core, forms, card, checkbox, radio) { 'use strict';
+}(this, function (exports, i0, i3, i1, i1$1, i4) { 'use strict';
 
     /**
      * @title Configurable checkbox
@@ -15,14 +15,87 @@
             this.disabled = false;
         }
         CheckboxConfigurableExample.decorators = [
-            { type: core.Component, args: [{
+            { type: i0.Component, args: [{
                         selector: 'checkbox-configurable-example',
-                        template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Checkbox configuration</h2>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"checked\">Checked</mat-checkbox>\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"indeterminate\">Indeterminate</mat-checkbox>\n    </section>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Align:</label>\n      <mat-radio-group [(ngModel)]=\"labelPosition\">\n        <mat-radio-button class=\"example-margin\" value=\"after\">After</mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"before\">Before</mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\">\n      <mat-checkbox class=\"example-margin\" [(ngModel)]=\"disabled\">Disabled</mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card class=\"result\">\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <section class=\"example-section\">\n      <mat-checkbox\n          class=\"example-margin\"\n          [(ngModel)]=\"checked\"\n          [(indeterminate)]=\"indeterminate\"\n          [labelPosition]=\"labelPosition\"\n          [disabled]=\"disabled\">\n        I'm a checkbox\n      </mat-checkbox>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n",
-                        styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n"]
-                    }] }
+                        templateUrl: 'checkbox-configurable-example.html',
+                        styleUrls: ['checkbox-configurable-example.css'],
+                    },] },
         ];
+        CheckboxConfigurableExample.ngFactoryDef = function CheckboxConfigurableExample_Factory(t) { return new (t || CheckboxConfigurableExample)(); };
+        CheckboxConfigurableExample.ngComponentDef = i0.ɵɵdefineComponent({ type: CheckboxConfigurableExample, selectors: [["checkbox-configurable-example"]], decls: 27, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "after", 1, "example-margin"], ["value", "before", 1, "example-margin"], [1, "result"], [1, "example-margin", 3, "ngModel", "indeterminate", "labelPosition", "disabled", "ngModelChange", "indeterminateChange"]], template: function CheckboxConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-card");
+                i0.ɵɵelementStart(1, "mat-card-content");
+                i0.ɵɵelementStart(2, "h2", 0);
+                i0.ɵɵtext(3, "Checkbox configuration");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(4, "section", 1);
+                i0.ɵɵelementStart(5, "mat-checkbox", 2);
+                i0.ɵɵlistener("ngModelChange", function CheckboxConfigurableExample_Template_mat_checkbox_ngModelChange_5_listener($event) { return ctx.checked = $event; });
+                i0.ɵɵtext(6, "Checked");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(7, "mat-checkbox", 2);
+                i0.ɵɵlistener("ngModelChange", function CheckboxConfigurableExample_Template_mat_checkbox_ngModelChange_7_listener($event) { return ctx.indeterminate = $event; });
+                i0.ɵɵtext(8, "Indeterminate");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(9, "section", 1);
+                i0.ɵɵelementStart(10, "label", 3);
+                i0.ɵɵtext(11, "Align:");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(12, "mat-radio-group", 4);
+                i0.ɵɵlistener("ngModelChange", function CheckboxConfigurableExample_Template_mat_radio_group_ngModelChange_12_listener($event) { return ctx.labelPosition = $event; });
+                i0.ɵɵelementStart(13, "mat-radio-button", 5);
+                i0.ɵɵtext(14, "After");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(15, "mat-radio-button", 6);
+                i0.ɵɵtext(16, "Before");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(17, "section", 1);
+                i0.ɵɵelementStart(18, "mat-checkbox", 2);
+                i0.ɵɵlistener("ngModelChange", function CheckboxConfigurableExample_Template_mat_checkbox_ngModelChange_18_listener($event) { return ctx.disabled = $event; });
+                i0.ɵɵtext(19, "Disabled");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(20, "mat-card", 7);
+                i0.ɵɵelementStart(21, "mat-card-content");
+                i0.ɵɵelementStart(22, "h2", 0);
+                i0.ɵɵtext(23, "Result");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(24, "section", 1);
+                i0.ɵɵelementStart(25, "mat-checkbox", 8);
+                i0.ɵɵlistener("ngModelChange", function CheckboxConfigurableExample_Template_mat_checkbox_ngModelChange_25_listener($event) { return ctx.checked = $event; });
+                i0.ɵɵlistener("indeterminateChange", function CheckboxConfigurableExample_Template_mat_checkbox_indeterminateChange_25_listener($event) { return ctx.indeterminate = $event; });
+                i0.ɵɵtext(26, " I'm a checkbox ");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            } if (rf & 2) {
+                i0.ɵɵadvance(5);
+                i0.ɵɵproperty("ngModel", ctx.checked);
+                i0.ɵɵadvance(2);
+                i0.ɵɵproperty("ngModel", ctx.indeterminate);
+                i0.ɵɵadvance(5);
+                i0.ɵɵproperty("ngModel", ctx.labelPosition);
+                i0.ɵɵadvance(6);
+                i0.ɵɵproperty("ngModel", ctx.disabled);
+                i0.ɵɵadvance(7);
+                i0.ɵɵproperty("ngModel", ctx.checked)("indeterminate", ctx.indeterminate)("labelPosition", ctx.labelPosition)("disabled", ctx.disabled);
+            } }, directives: [i1.MatCard, i1.MatCardContent, i1$1.MatCheckbox, i3.NgControlStatus, i3.NgModel, i4.MatRadioGroup, i4.MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
         return CheckboxConfigurableExample;
     }());
+    /*@__PURE__*/ i0.ɵsetClassMetadata(CheckboxConfigurableExample, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'checkbox-configurable-example',
+                    templateUrl: 'checkbox-configurable-example.html',
+                    styleUrls: ['checkbox-configurable-example.css'],
+                }]
+        }], null, null);
 
     /**
      * @title Basic checkboxes
@@ -31,14 +104,28 @@
         function CheckboxOverviewExample() {
         }
         CheckboxOverviewExample.decorators = [
-            { type: core.Component, args: [{
+            { type: i0.Component, args: [{
                         selector: 'checkbox-overview-example',
-                        template: "<mat-checkbox>Check me!</mat-checkbox>\n",
-                        styles: ["/** No CSS for this example */\n"]
-                    }] }
+                        templateUrl: 'checkbox-overview-example.html',
+                        styleUrls: ['checkbox-overview-example.css'],
+                    },] },
         ];
+        CheckboxOverviewExample.ngFactoryDef = function CheckboxOverviewExample_Factory(t) { return new (t || CheckboxOverviewExample)(); };
+        CheckboxOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: CheckboxOverviewExample, selectors: [["checkbox-overview-example"]], decls: 2, vars: 0, template: function CheckboxOverviewExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-checkbox");
+                i0.ɵɵtext(1, "Check me!");
+                i0.ɵɵelementEnd();
+            } }, directives: [i1$1.MatCheckbox], styles: [""] });
         return CheckboxOverviewExample;
     }());
+    /*@__PURE__*/ i0.ɵsetClassMetadata(CheckboxOverviewExample, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'checkbox-overview-example',
+                    templateUrl: 'checkbox-overview-example.html',
+                    styleUrls: ['checkbox-overview-example.css'],
+                }]
+        }], null, null);
 
     var EXAMPLES = [
         CheckboxConfigurableExample,
@@ -48,19 +135,45 @@
         function CheckboxExamplesModule() {
         }
         CheckboxExamplesModule.decorators = [
-            { type: core.NgModule, args: [{
+            { type: i0.NgModule, args: [{
                         imports: [
-                            card.MatCardModule,
-                            checkbox.MatCheckboxModule,
-                            radio.MatRadioModule,
-                            forms.FormsModule,
+                            i1.MatCardModule,
+                            i1$1.MatCheckboxModule,
+                            i4.MatRadioModule,
+                            i3.FormsModule,
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
-                    },] }
+                    },] },
         ];
+        CheckboxExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: CheckboxExamplesModule });
+        CheckboxExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function CheckboxExamplesModule_Factory(t) { return new (t || CheckboxExamplesModule)(); }, imports: [[
+                    i1.MatCardModule,
+                    i1$1.MatCheckboxModule,
+                    i4.MatRadioModule,
+                    i3.FormsModule,
+                ]] });
         return CheckboxExamplesModule;
     }());
+    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CheckboxExamplesModule, { declarations: [CheckboxConfigurableExample,
+            CheckboxOverviewExample], imports: [i1.MatCardModule,
+            i1$1.MatCheckboxModule,
+            i4.MatRadioModule,
+            i3.FormsModule], exports: [CheckboxConfigurableExample,
+            CheckboxOverviewExample] });
+    /*@__PURE__*/ i0.ɵsetClassMetadata(CheckboxExamplesModule, [{
+            type: i0.NgModule,
+            args: [{
+                    imports: [
+                        i1.MatCardModule,
+                        i1$1.MatCheckboxModule,
+                        i4.MatRadioModule,
+                        i3.FormsModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                }]
+        }], null, null);
 
     /**
      * Generated bundle index. Do not edit.

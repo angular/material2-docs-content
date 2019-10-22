@@ -1,3 +1,4 @@
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -10,4 +11,6 @@ export interface PeriodicElement {
 export declare class TableBasicExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableBasicExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableBasicExample, "table-basic-example", never, {}, {}, never>;
 }

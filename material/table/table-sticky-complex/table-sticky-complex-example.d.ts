@@ -1,4 +1,5 @@
 import { MatButtonToggleGroup } from '@angular/material/button-toggle';
+import * as i0 from "@angular/core";
 /**
  * @title Tables with toggle-able sticky headers, footers, and columns
  */
@@ -9,6 +10,8 @@ export declare class TableStickyComplexExample {
     constructor();
     /** Whether the button toggle group contains the id as an active value. */
     isSticky(buttonToggleGroup: MatButtonToggleGroup, id: string): boolean;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableStickyComplexExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableStickyComplexExample, "table-sticky-complex-example", never, {}, {}, never>;
 }
 export interface PeriodicElement {
     name: string;

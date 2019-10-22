@@ -1,4 +1,41 @@
 import { Component } from '@angular/core';
+import * as i0 from "@angular/core";
+import * as i1 from "@angular/material/card";
+import * as i2 from "@angular/material/radio";
+import * as i3 from "@angular/forms";
+import * as i4 from "@angular/common";
+import * as i5 from "@angular/material/progress-bar";
+import * as i6 from "@angular/material/slider";
+function ProgressBarConfigurableExample_section_26_Template(rf, ctx) { if (rf & 1) {
+    var _r3 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "section", 1);
+    i0.ɵɵelementStart(1, "label", 2);
+    i0.ɵɵtext(2, "Progress:");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(3, "mat-slider", 13);
+    i0.ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_section_26_Template_mat_slider_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r3); var ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.value = $event; });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(3);
+    i0.ɵɵproperty("ngModel", ctx_r0.value);
+} }
+function ProgressBarConfigurableExample_section_27_Template(rf, ctx) { if (rf & 1) {
+    var _r5 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "section", 1);
+    i0.ɵɵelementStart(1, "label", 2);
+    i0.ɵɵtext(2, "Buffer:");
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(3, "mat-slider", 13);
+    i0.ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_section_27_Template_mat_slider_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r5); var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.bufferValue = $event; });
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    var ctx_r1 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(3);
+    i0.ɵɵproperty("ngModel", ctx_r1.bufferValue);
+} }
 /**
  * @title Configurable progress-bar
  */
@@ -12,11 +49,89 @@ var ProgressBarConfigurableExample = /** @class */ (function () {
     ProgressBarConfigurableExample.decorators = [
         { type: Component, args: [{
                     selector: 'progress-bar-configurable-example',
-                    template: "<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Progress bar configuration</h2>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Color:</label>\n      <mat-radio-group [(ngModel)]=\"color\">\n        <mat-radio-button class=\"example-margin\" value=\"primary\">\n          Primary\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"accent\">\n          Accent\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"warn\">\n          Warn\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\">\n      <label class=\"example-margin\">Mode:</label>\n      <mat-radio-group [(ngModel)]=\"mode\">\n        <mat-radio-button class=\"example-margin\" value=\"determinate\">\n          Determinate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"indeterminate\">\n          Indeterminate\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"buffer\">\n          Buffer\n        </mat-radio-button>\n        <mat-radio-button class=\"example-margin\" value=\"query\">\n          Query\n        </mat-radio-button>\n      </mat-radio-group>\n    </section>\n\n    <section class=\"example-section\" *ngIf=\"mode === 'determinate' || mode === 'buffer'\">\n      <label class=\"example-margin\">Progress:</label>\n      <mat-slider class=\"example-margin\" [(ngModel)]=\"value\"></mat-slider>\n    </section>\n    <section class=\"example-section\" *ngIf=\"mode === 'buffer'\">\n      <label class=\"example-margin\">Buffer:</label>\n      <mat-slider class=\"example-margin\" [(ngModel)]=\"bufferValue\"></mat-slider>\n    </section>\n  </mat-card-content>\n</mat-card>\n\n<mat-card>\n  <mat-card-content>\n    <h2 class=\"example-h2\">Result</h2>\n\n    <section class=\"example-section\">\n      <mat-progress-bar\n          class=\"example-margin\"\n          [color]=\"color\"\n          [mode]=\"mode\"\n          [value]=\"value\"\n          [bufferValue]=\"bufferValue\">\n      </mat-progress-bar>\n    </section>\n  </mat-card-content>\n</mat-card>\n",
-                    styles: [".example-h2 {\n  margin: 10px;\n}\n\n.example-section {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin {\n  margin: 0 10px;\n}\n"]
-                }] }
+                    templateUrl: 'progress-bar-configurable-example.html',
+                    styleUrls: ['progress-bar-configurable-example.css'],
+                },] },
     ];
+    ProgressBarConfigurableExample.ngFactoryDef = function ProgressBarConfigurableExample_Factory(t) { return new (t || ProgressBarConfigurableExample)(); };
+    ProgressBarConfigurableExample.ngComponentDef = i0.ɵɵdefineComponent({ type: ProgressBarConfigurableExample, selectors: [["progress-bar-configurable-example"]], decls: 34, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["value", "buffer", 1, "example-margin"], ["value", "query", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value", "bufferValue"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressBarConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+            i0.ɵɵelementStart(0, "mat-card");
+            i0.ɵɵelementStart(1, "mat-card-content");
+            i0.ɵɵelementStart(2, "h2", 0);
+            i0.ɵɵtext(3, "Progress bar configuration");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(4, "section", 1);
+            i0.ɵɵelementStart(5, "label", 2);
+            i0.ɵɵtext(6, "Color:");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(7, "mat-radio-group", 3);
+            i0.ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_Template_mat_radio_group_ngModelChange_7_listener($event) { return ctx.color = $event; });
+            i0.ɵɵelementStart(8, "mat-radio-button", 4);
+            i0.ɵɵtext(9, " Primary ");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(10, "mat-radio-button", 5);
+            i0.ɵɵtext(11, " Accent ");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(12, "mat-radio-button", 6);
+            i0.ɵɵtext(13, " Warn ");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(14, "section", 1);
+            i0.ɵɵelementStart(15, "label", 2);
+            i0.ɵɵtext(16, "Mode:");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(17, "mat-radio-group", 3);
+            i0.ɵɵlistener("ngModelChange", function ProgressBarConfigurableExample_Template_mat_radio_group_ngModelChange_17_listener($event) { return ctx.mode = $event; });
+            i0.ɵɵelementStart(18, "mat-radio-button", 7);
+            i0.ɵɵtext(19, " Determinate ");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(20, "mat-radio-button", 8);
+            i0.ɵɵtext(21, " Indeterminate ");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(22, "mat-radio-button", 9);
+            i0.ɵɵtext(23, " Buffer ");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(24, "mat-radio-button", 10);
+            i0.ɵɵtext(25, " Query ");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵtemplate(26, ProgressBarConfigurableExample_section_26_Template, 4, 1, "section", 11);
+            i0.ɵɵtemplate(27, ProgressBarConfigurableExample_section_27_Template, 4, 1, "section", 11);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(28, "mat-card");
+            i0.ɵɵelementStart(29, "mat-card-content");
+            i0.ɵɵelementStart(30, "h2", 0);
+            i0.ɵɵtext(31, "Result");
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementStart(32, "section", 1);
+            i0.ɵɵelement(33, "mat-progress-bar", 12);
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+            i0.ɵɵelementEnd();
+        } if (rf & 2) {
+            i0.ɵɵadvance(7);
+            i0.ɵɵproperty("ngModel", ctx.color);
+            i0.ɵɵadvance(10);
+            i0.ɵɵproperty("ngModel", ctx.mode);
+            i0.ɵɵadvance(9);
+            i0.ɵɵproperty("ngIf", ctx.mode === "determinate" || ctx.mode === "buffer");
+            i0.ɵɵadvance(1);
+            i0.ɵɵproperty("ngIf", ctx.mode === "buffer");
+            i0.ɵɵadvance(6);
+            i0.ɵɵproperty("color", ctx.color)("mode", ctx.mode)("value", ctx.value)("bufferValue", ctx.bufferValue);
+        } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i5.MatProgressBar, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
     return ProgressBarConfigurableExample;
 }());
 export { ProgressBarConfigurableExample };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvZ3Jlc3MtYmFyLWNvbmZpZ3VyYWJsZS1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL21hdGVyaWFsL3Byb2dyZXNzLWJhci9wcm9ncmVzcy1iYXItY29uZmlndXJhYmxlL3Byb2dyZXNzLWJhci1jb25maWd1cmFibGUtZXhhbXBsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDO0FBRXhDOztHQUVHO0FBQ0g7SUFBQTtRQU1FLFVBQUssR0FBRyxTQUFTLENBQUM7UUFDbEIsU0FBSSxHQUFHLGFBQWEsQ0FBQztRQUNyQixVQUFLLEdBQUcsRUFBRSxDQUFDO1FBQ1gsZ0JBQVcsR0FBRyxFQUFFLENBQUM7SUFDbkIsQ0FBQzs7Z0JBVkEsU0FBUyxTQUFDO29CQUNULFFBQVEsRUFBRSxtQ0FBbUM7b0JBQzdDLHlxRUFBcUQ7O2lCQUV0RDs7SUFNRCxxQ0FBQztDQUFBLEFBVkQsSUFVQztTQUxZLDhCQUE4QiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBAdGl0bGUgQ29uZmlndXJhYmxlIHByb2dyZXNzLWJhclxuICovXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdwcm9ncmVzcy1iYXItY29uZmlndXJhYmxlLWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ3Byb2dyZXNzLWJhci1jb25maWd1cmFibGUtZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ3Byb2dyZXNzLWJhci1jb25maWd1cmFibGUtZXhhbXBsZS5jc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgUHJvZ3Jlc3NCYXJDb25maWd1cmFibGVFeGFtcGxlIHtcbiAgY29sb3IgPSAncHJpbWFyeSc7XG4gIG1vZGUgPSAnZGV0ZXJtaW5hdGUnO1xuICB2YWx1ZSA9IDUwO1xuICBidWZmZXJWYWx1ZSA9IDc1O1xufVxuIl19
+/*@__PURE__*/ i0.ɵsetClassMetadata(ProgressBarConfigurableExample, [{
+        type: Component,
+        args: [{
+                selector: 'progress-bar-configurable-example',
+                templateUrl: 'progress-bar-configurable-example.html',
+                styleUrls: ['progress-bar-configurable-example.css'],
+            }]
+    }], null, null);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHJvZ3Jlc3MtYmFyLWNvbmZpZ3VyYWJsZS1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL21hdGVyaWFsLWV4YW1wbGVzL21hdGVyaWFsL3Byb2dyZXNzLWJhci9wcm9ncmVzcy1iYXItY29uZmlndXJhYmxlL3Byb2dyZXNzLWJhci1jb25maWd1cmFibGUtZXhhbXBsZS50cyIsIi4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uLy4uL3NyYy9tYXRlcmlhbC1leGFtcGxlcy9tYXRlcmlhbC9wcm9ncmVzcy1iYXIvcHJvZ3Jlc3MtYmFyLWNvbmZpZ3VyYWJsZS9wcm9ncmVzcy1iYXItY29uZmlndXJhYmxlLWV4YW1wbGUuaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDOzs7Ozs7Ozs7O0lDcUNwQyxrQ0FDRTtJQUFBLGdDQUE4QjtJQUFBLHlCQUFTO0lBQUEsaUJBQVE7SUFDL0Msc0NBQW9FO0lBQWpDLGlPQUFtQjtJQUFDLGlCQUFhO0lBQ3RFLGlCQUFVOzs7SUFEMkIsZUFBbUI7SUFBbkIsc0NBQW1COzs7O0lBRXhELGtDQUNFO0lBQUEsZ0NBQThCO0lBQUEsdUJBQU87SUFBQSxpQkFBUTtJQUM3QyxzQ0FBMEU7SUFBdkMsdU9BQXlCO0lBQUMsaUJBQWE7SUFDNUUsaUJBQVU7OztJQUQyQixlQUF5QjtJQUF6Qiw0Q0FBeUI7O0FEdkNsRTs7R0FFRztBQUNIO0lBQUE7UUFNRSxVQUFLLEdBQWlCLFNBQVMsQ0FBQztRQUNoQyxTQUFJLEdBQW9CLGFBQWEsQ0FBQztRQUN0QyxVQUFLLEdBQUcsRUFBRSxDQUFDO1FBQ1gsZ0JBQVcsR0FBRyxFQUFFLENBQUM7S0FDbEI7O2dCQVZBLFNBQVMsU0FBQztvQkFDVCxRQUFRLEVBQUUsbUNBQW1DO29CQUM3QyxXQUFXLEVBQUUsd0NBQXdDO29CQUNyRCxTQUFTLEVBQUUsQ0FBQyx1Q0FBdUMsQ0FBQztpQkFDckQ7O3dIQUNZLDhCQUE4QjtpRkFBOUIsOEJBQThCO1lDWjNDLGdDQUNFO1lBQUEsd0NBQ0U7WUFBQSw2QkFBdUI7WUFBQSwwQ0FBMEI7WUFBQSxpQkFBSztZQUV0RCxrQ0FDRTtZQUFBLGdDQUE4QjtZQUFBLHNCQUFNO1lBQUEsaUJBQVE7WUFDNUMsMENBQ0U7WUFEZSxnS0FBbUI7WUFDbEMsMkNBQ0U7WUFBQSx5QkFDRjtZQUFBLGlCQUFtQjtZQUNuQiw0Q0FDRTtZQUFBLHlCQUNGO1lBQUEsaUJBQW1CO1lBQ25CLDRDQUNFO1lBQUEsdUJBQ0Y7WUFBQSxpQkFBbUI7WUFDckIsaUJBQWtCO1lBQ3BCLGlCQUFVO1lBRVYsbUNBQ0U7WUFBQSxpQ0FBOEI7WUFBQSxzQkFBSztZQUFBLGlCQUFRO1lBQzNDLDJDQUNFO1lBRGUsZ0tBQWtCO1lBQ2pDLDRDQUNFO1lBQUEsOEJBQ0Y7WUFBQSxpQkFBbUI7WUFDbkIsNENBQ0U7WUFBQSxnQ0FDRjtZQUFBLGlCQUFtQjtZQUNuQiw0Q0FDRTtZQUFBLHlCQUNGO1lBQUEsaUJBQW1CO1lBQ25CLDZDQUNFO1lBQUEsd0JBQ0Y7WUFBQSxpQkFBbUI7WUFDckIsaUJBQWtCO1lBQ3BCLGlCQUFVO1lBRVYsMEZBQ0U7WUFHRiwwRkFDRTtZQUdKLGlCQUFtQjtZQUNyQixpQkFBVztZQUVYLGlDQUNFO1lBQUEseUNBQ0U7WUFBQSw4QkFBdUI7WUFBQSx1QkFBTTtZQUFBLGlCQUFLO1lBRWxDLG1DQUNFO1lBQUEsd0NBTW1CO1lBQ3JCLGlCQUFVO1lBQ1osaUJBQW1CO1lBQ3JCLGlCQUFXOztZQXhEWSxlQUFtQjtZQUFuQixtQ0FBbUI7WUFlbkIsZ0JBQWtCO1lBQWxCLGtDQUFrQjtZQWdCSixlQUFtRDtZQUFuRCwwRUFBbUQ7WUFJbkQsZUFBeUI7WUFBekIsNENBQXlCO1lBY3BELGVBQWU7WUFBZixpQ0FBZSxrQkFBQSxvQkFBQSxnQ0FBQTs7eUNEdkR6QjtDQWlCQyxBQVZELElBVUM7U0FMWSw4QkFBOEI7bUNBQTlCLDhCQUE4QjtjQUwxQyxTQUFTO2VBQUM7Z0JBQ1QsUUFBUSxFQUFFLG1DQUFtQztnQkFDN0MsV0FBVyxFQUFFLHdDQUF3QztnQkFDckQsU0FBUyxFQUFFLENBQUMsdUNBQXVDLENBQUM7YUFDckQiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge0NvbXBvbmVudH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQge1RoZW1lUGFsZXR0ZX0gZnJvbSAnQGFuZ3VsYXIvbWF0ZXJpYWwvY29yZSc7XG5pbXBvcnQge1Byb2dyZXNzQmFyTW9kZX0gZnJvbSAnQGFuZ3VsYXIvbWF0ZXJpYWwvcHJvZ3Jlc3MtYmFyJztcblxuLyoqXG4gKiBAdGl0bGUgQ29uZmlndXJhYmxlIHByb2dyZXNzLWJhclxuICovXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdwcm9ncmVzcy1iYXItY29uZmlndXJhYmxlLWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ3Byb2dyZXNzLWJhci1jb25maWd1cmFibGUtZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ3Byb2dyZXNzLWJhci1jb25maWd1cmFibGUtZXhhbXBsZS5jc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgUHJvZ3Jlc3NCYXJDb25maWd1cmFibGVFeGFtcGxlIHtcbiAgY29sb3I6IFRoZW1lUGFsZXR0ZSA9ICdwcmltYXJ5JztcbiAgbW9kZTogUHJvZ3Jlc3NCYXJNb2RlID0gJ2RldGVybWluYXRlJztcbiAgdmFsdWUgPSA1MDtcbiAgYnVmZmVyVmFsdWUgPSA3NTtcbn1cbiIsIjxtYXQtY2FyZD5cbiAgPG1hdC1jYXJkLWNvbnRlbnQ+XG4gICAgPGgyIGNsYXNzPVwiZXhhbXBsZS1oMlwiPlByb2dyZXNzIGJhciBjb25maWd1cmF0aW9uPC9oMj5cblxuICAgIDxzZWN0aW9uIGNsYXNzPVwiZXhhbXBsZS1zZWN0aW9uXCI+XG4gICAgICA8bGFiZWwgY2xhc3M9XCJleGFtcGxlLW1hcmdpblwiPkNvbG9yOjwvbGFiZWw+XG4gICAgICA8bWF0LXJhZGlvLWdyb3VwIFsobmdNb2RlbCldPVwiY29sb3JcIj5cbiAgICAgICAgPG1hdC1yYWRpby1idXR0b24gY2xhc3M9XCJleGFtcGxlLW1hcmdpblwiIHZhbHVlPVwicHJpbWFyeVwiPlxuICAgICAgICAgIFByaW1hcnlcbiAgICAgICAgPC9tYXQtcmFkaW8tYnV0dG9uPlxuICAgICAgICA8bWF0LXJhZGlvLWJ1dHRvbiBjbGFzcz1cImV4YW1wbGUtbWFyZ2luXCIgdmFsdWU9XCJhY2NlbnRcIj5cbiAgICAgICAgICBBY2NlbnRcbiAgICAgICAgPC9tYXQtcmFkaW8tYnV0dG9uPlxuICAgICAgICA8bWF0LXJhZGlvLWJ1dHRvbiBjbGFzcz1cImV4YW1wbGUtbWFyZ2luXCIgdmFsdWU9XCJ3YXJuXCI+XG4gICAgICAgICAgV2FyblxuICAgICAgICA8L21hdC1yYWRpby1idXR0b24+XG4gICAgICA8L21hdC1yYWRpby1ncm91cD5cbiAgICA8L3NlY3Rpb24+XG5cbiAgICA8c2VjdGlvbiBjbGFzcz1cImV4YW1wbGUtc2VjdGlvblwiPlxuICAgICAgPGxhYmVsIGNsYXNzPVwiZXhhbXBsZS1tYXJnaW5cIj5Nb2RlOjwvbGFiZWw+XG4gICAgICA8bWF0LXJhZGlvLWdyb3VwIFsobmdNb2RlbCldPVwibW9kZVwiPlxuICAgICAgICA8bWF0LXJhZGlvLWJ1dHRvbiBjbGFzcz1cImV4YW1wbGUtbWFyZ2luXCIgdmFsdWU9XCJkZXRlcm1pbmF0ZVwiPlxuICAgICAgICAgIERldGVybWluYXRlXG4gICAgICAgIDwvbWF0LXJhZGlvLWJ1dHRvbj5cbiAgICAgICAgPG1hdC1yYWRpby1idXR0b24gY2xhc3M9XCJleGFtcGxlLW1hcmdpblwiIHZhbHVlPVwiaW5kZXRlcm1pbmF0ZVwiPlxuICAgICAgICAgIEluZGV0ZXJtaW5hdGVcbiAgICAgICAgPC9tYXQtcmFkaW8tYnV0dG9uPlxuICAgICAgICA8bWF0LXJhZGlvLWJ1dHRvbiBjbGFzcz1cImV4YW1wbGUtbWFyZ2luXCIgdmFsdWU9XCJidWZmZXJcIj5cbiAgICAgICAgICBCdWZmZXJcbiAgICAgICAgPC9tYXQtcmFkaW8tYnV0dG9uPlxuICAgICAgICA8bWF0LXJhZGlvLWJ1dHRvbiBjbGFzcz1cImV4YW1wbGUtbWFyZ2luXCIgdmFsdWU9XCJxdWVyeVwiPlxuICAgICAgICAgIFF1ZXJ5XG4gICAgICAgIDwvbWF0LXJhZGlvLWJ1dHRvbj5cbiAgICAgIDwvbWF0LXJhZGlvLWdyb3VwPlxuICAgIDwvc2VjdGlvbj5cblxuICAgIDxzZWN0aW9uIGNsYXNzPVwiZXhhbXBsZS1zZWN0aW9uXCIgKm5nSWY9XCJtb2RlID09PSAnZGV0ZXJtaW5hdGUnIHx8IG1vZGUgPT09ICdidWZmZXInXCI+XG4gICAgICA8bGFiZWwgY2xhc3M9XCJleGFtcGxlLW1hcmdpblwiPlByb2dyZXNzOjwvbGFiZWw+XG4gICAgICA8bWF0LXNsaWRlciBjbGFzcz1cImV4YW1wbGUtbWFyZ2luXCIgWyhuZ01vZGVsKV09XCJ2YWx1ZVwiPjwvbWF0LXNsaWRlcj5cbiAgICA8L3NlY3Rpb24+XG4gICAgPHNlY3Rpb24gY2xhc3M9XCJleGFtcGxlLXNlY3Rpb25cIiAqbmdJZj1cIm1vZGUgPT09ICdidWZmZXInXCI+XG4gICAgICA8bGFiZWwgY2xhc3M9XCJleGFtcGxlLW1hcmdpblwiPkJ1ZmZlcjo8L2xhYmVsPlxuICAgICAgPG1hdC1zbGlkZXIgY2xhc3M9XCJleGFtcGxlLW1hcmdpblwiIFsobmdNb2RlbCldPVwiYnVmZmVyVmFsdWVcIj48L21hdC1zbGlkZXI+XG4gICAgPC9zZWN0aW9uPlxuICA8L21hdC1jYXJkLWNvbnRlbnQ+XG48L21hdC1jYXJkPlxuXG48bWF0LWNhcmQ+XG4gIDxtYXQtY2FyZC1jb250ZW50PlxuICAgIDxoMiBjbGFzcz1cImV4YW1wbGUtaDJcIj5SZXN1bHQ8L2gyPlxuXG4gICAgPHNlY3Rpb24gY2xhc3M9XCJleGFtcGxlLXNlY3Rpb25cIj5cbiAgICAgIDxtYXQtcHJvZ3Jlc3MtYmFyXG4gICAgICAgICAgY2xhc3M9XCJleGFtcGxlLW1hcmdpblwiXG4gICAgICAgICAgW2NvbG9yXT1cImNvbG9yXCJcbiAgICAgICAgICBbbW9kZV09XCJtb2RlXCJcbiAgICAgICAgICBbdmFsdWVdPVwidmFsdWVcIlxuICAgICAgICAgIFtidWZmZXJWYWx1ZV09XCJidWZmZXJWYWx1ZVwiPlxuICAgICAgPC9tYXQtcHJvZ3Jlc3MtYmFyPlxuICAgIDwvc2VjdGlvbj5cbiAgPC9tYXQtY2FyZC1jb250ZW50PlxuPC9tYXQtY2FyZD5cbiJdfQ==

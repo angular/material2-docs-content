@@ -1,4 +1,5 @@
 import { NgForm } from '@angular/forms';
+import * as i0 from "@angular/core";
 export interface Person {
     id: number;
     firstName: string;
@@ -12,4 +13,6 @@ export declare class CdkPopoverEditCellSpanVanillaTableExample {
     readonly preservedValues: WeakMap<Person, any>;
     readonly persons: Person[];
     onSubmit(person: Person, f: NgForm): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<CdkPopoverEditCellSpanVanillaTableExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkPopoverEditCellSpanVanillaTableExample, "cdk-popover-edit-cell-span-vanilla-table-example", never, {}, {}, never>;
 }

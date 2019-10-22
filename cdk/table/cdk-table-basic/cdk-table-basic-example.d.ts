@@ -1,5 +1,6 @@
 import { DataSource } from '@angular/cdk/collections';
 import { BehaviorSubject, Observable } from 'rxjs';
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -12,6 +13,8 @@ export interface PeriodicElement {
 export declare class CdkTableBasicExample {
     displayedColumns: string[];
     dataSource: ExampleDataSource;
+    static ngFactoryDef: i0.ɵɵFactoryDef<CdkTableBasicExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkTableBasicExample, "cdk-table-basic-example", never, {}, {}, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

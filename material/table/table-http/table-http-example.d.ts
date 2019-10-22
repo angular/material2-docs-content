@@ -3,6 +3,7 @@ import { AfterViewInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { Observable } from 'rxjs';
+import * as i0 from "@angular/core";
 /**
  * @title Table retrieving data through HTTP
  */
@@ -18,6 +19,8 @@ export declare class TableHttpExample implements AfterViewInit {
     sort: MatSort;
     constructor(_httpClient: HttpClient);
     ngAfterViewInit(): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableHttpExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableHttpExample, "table-http-example", never, {}, {}, never>;
 }
 export interface GithubApi {
     items: GithubIssue[];

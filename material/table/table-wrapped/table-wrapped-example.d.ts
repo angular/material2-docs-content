@@ -2,6 +2,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { AfterContentInit, OnInit, QueryList } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatColumnDef, MatHeaderRowDef, MatRowDef, MatTable, MatTableDataSource } from '@angular/material/table';
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -16,6 +17,8 @@ export declare class TableWrappedExample implements OnInit {
     dataSource: MatTableDataSource<PeriodicElement>;
     sort: MatSort;
     ngOnInit(): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableWrappedExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableWrappedExample, "table-wrapped-example", never, {}, {}, never>;
 }
 /**
  * Table component that accepts column and row definitions in its content to be registered to the
@@ -29,4 +32,6 @@ export declare class WrapperTable<T> implements AfterContentInit {
     columns: string[];
     dataSource: DataSource<T>;
     ngAfterContentInit(): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<WrapperTable<any>>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<WrapperTable<any>, "wrapper-table", never, { 'columns': "columns", 'dataSource': "dataSource" }, {}, ["headerRowDefs", "rowDefs", "columnDefs"]>;
 }

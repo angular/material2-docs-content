@@ -1,6 +1,7 @@
 import { OnInit } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -15,4 +16,6 @@ export declare class TableSortingExample implements OnInit {
     dataSource: MatTableDataSource<PeriodicElement>;
     sort: MatSort;
     ngOnInit(): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableSortingExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableSortingExample, "table-sorting-example", never, {}, {}, never>;
 }

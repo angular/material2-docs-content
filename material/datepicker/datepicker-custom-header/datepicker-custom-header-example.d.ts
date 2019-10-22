@@ -1,9 +1,12 @@
 import { ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { MatCalendar } from '@angular/material/datepicker';
 import { DateAdapter, MatDateFormats } from '@angular/material/core';
+import * as i0 from "@angular/core";
 /** @title Datepicker with custom calendar header */
 export declare class DatepickerCustomHeaderExample {
     exampleHeader: typeof ExampleHeader;
+    static ngFactoryDef: i0.ɵɵFactoryDef<DatepickerCustomHeaderExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<DatepickerCustomHeaderExample, "datepicker-custom-header-example", never, {}, {}, never>;
 }
 /** Custom header component for datepicker. */
 export declare class ExampleHeader<D> implements OnDestroy {
@@ -16,4 +19,6 @@ export declare class ExampleHeader<D> implements OnDestroy {
     readonly periodLabel: string;
     previousClicked(mode: 'month' | 'year'): void;
     nextClicked(mode: 'month' | 'year'): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<ExampleHeader<any>>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ExampleHeader<any>, "example-header", never, {}, {}, never>;
 }

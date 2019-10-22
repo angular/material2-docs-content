@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/icon'), require('@angular/platform-browser')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/icon', ['exports', '@angular/core', '@angular/material/icon', '@angular/platform-browser'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.icon = {}), global.ng.core, global.ng.material.icon, global.ng.platformBrowser));
-}(this, function (exports, core, icon, platformBrowser) { 'use strict';
+}(this, function (exports, i0, i1, i2) { 'use strict';
 
     /**
      * @title Basic icons
@@ -11,14 +11,28 @@
         function IconOverviewExample() {
         }
         IconOverviewExample.decorators = [
-            { type: core.Component, args: [{
+            { type: i0.Component, args: [{
                         selector: 'icon-overview-example',
-                        template: "<mat-icon aria-hidden=\"false\" aria-label=\"Example home icon\">home</mat-icon>\n",
-                        styles: ["/** No CSS for this example */\n"]
-                    }] }
+                        templateUrl: 'icon-overview-example.html',
+                        styleUrls: ['icon-overview-example.css'],
+                    },] },
         ];
+        IconOverviewExample.ngFactoryDef = function IconOverviewExample_Factory(t) { return new (t || IconOverviewExample)(); };
+        IconOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: IconOverviewExample, selectors: [["icon-overview-example"]], decls: 2, vars: 0, consts: [["aria-hidden", "false", "aria-label", "Example home icon"]], template: function IconOverviewExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-icon", 0);
+                i0.ɵɵtext(1, "home");
+                i0.ɵɵelementEnd();
+            } }, directives: [i1.MatIcon], styles: [""] });
         return IconOverviewExample;
     }());
+    /*@__PURE__*/ i0.ɵsetClassMetadata(IconOverviewExample, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'icon-overview-example',
+                    templateUrl: 'icon-overview-example.html',
+                    styleUrls: ['icon-overview-example.css'],
+                }]
+        }], null, null);
 
     /**
      * @title SVG icons
@@ -28,19 +42,31 @@
             iconRegistry.addSvgIcon('thumbs-up', sanitizer.bypassSecurityTrustResourceUrl('assets/img/examples/thumbup-icon.svg'));
         }
         IconSvgExample.decorators = [
-            { type: core.Component, args: [{
+            { type: i0.Component, args: [{
                         selector: 'icon-svg-example',
-                        template: "<mat-icon svgIcon=\"thumbs-up\" aria-hidden=\"false\" aria-label=\"Example thumbs up SVG icon\"></mat-icon>\n",
-                        styles: ["/** No CSS for this example */\n"]
-                    }] }
+                        templateUrl: 'icon-svg-example.html',
+                        styleUrls: ['icon-svg-example.css'],
+                    },] },
         ];
         /** @nocollapse */
         IconSvgExample.ctorParameters = function () { return [
-            { type: icon.MatIconRegistry },
-            { type: platformBrowser.DomSanitizer }
+            { type: i1.MatIconRegistry },
+            { type: i2.DomSanitizer }
         ]; };
+        IconSvgExample.ngFactoryDef = function IconSvgExample_Factory(t) { return new (t || IconSvgExample)(i0.ɵɵdirectiveInject(i1.MatIconRegistry), i0.ɵɵdirectiveInject(i2.DomSanitizer)); };
+        IconSvgExample.ngComponentDef = i0.ɵɵdefineComponent({ type: IconSvgExample, selectors: [["icon-svg-example"]], decls: 1, vars: 0, consts: [["svgIcon", "thumbs-up", "aria-hidden", "false", "aria-label", "Example thumbs up SVG icon"]], template: function IconSvgExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelement(0, "mat-icon", 0);
+            } }, directives: [i1.MatIcon], styles: [""] });
         return IconSvgExample;
     }());
+    /*@__PURE__*/ i0.ɵsetClassMetadata(IconSvgExample, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'icon-svg-example',
+                    templateUrl: 'icon-svg-example.html',
+                    styleUrls: ['icon-svg-example.css'],
+                }]
+        }], function () { return [{ type: i1.MatIconRegistry }, { type: i2.DomSanitizer }]; }, null);
 
     var EXAMPLES = [
         IconOverviewExample,
@@ -50,16 +76,33 @@
         function IconExamplesModule() {
         }
         IconExamplesModule.decorators = [
-            { type: core.NgModule, args: [{
+            { type: i0.NgModule, args: [{
                         imports: [
-                            icon.MatIconModule,
+                            i1.MatIconModule,
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
-                    },] }
+                    },] },
         ];
+        IconExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: IconExamplesModule });
+        IconExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function IconExamplesModule_Factory(t) { return new (t || IconExamplesModule)(); }, imports: [[
+                    i1.MatIconModule,
+                ]] });
         return IconExamplesModule;
     }());
+    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconOverviewExample,
+            IconSvgExample], imports: [i1.MatIconModule], exports: [IconOverviewExample,
+            IconSvgExample] });
+    /*@__PURE__*/ i0.ɵsetClassMetadata(IconExamplesModule, [{
+            type: i0.NgModule,
+            args: [{
+                    imports: [
+                        i1.MatIconModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                }]
+        }], null, null);
 
     /**
      * Generated bundle index. Do not edit.

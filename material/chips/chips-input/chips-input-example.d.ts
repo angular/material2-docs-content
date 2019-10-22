@@ -1,4 +1,5 @@
 import { MatChipInputEvent } from '@angular/material/chips';
+import * as i0 from "@angular/core";
 export interface Fruit {
     name: string;
 }
@@ -14,4 +15,6 @@ export declare class ChipsInputExample {
     fruits: Fruit[];
     add(event: MatChipInputEvent): void;
     remove(fruit: Fruit): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<ChipsInputExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ChipsInputExample, "chips-input-example", never, {}, {}, never>;
 }

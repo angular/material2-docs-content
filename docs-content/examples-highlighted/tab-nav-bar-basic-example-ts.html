@@ -1,4 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {ThemePalette} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
 
 <span class="hljs-comment">/**
  * @title Basic use of the tab nav bar
@@ -11,10 +12,10 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TabNavBarBasicExample {
   links = [<span class="hljs-string">'First'</span>, <span class="hljs-string">'Second'</span>, <span class="hljs-string">'Third'</span>];
   activeLink = <span class="hljs-keyword">this</span>.links[<span class="hljs-number">0</span>];
-  background = <span class="hljs-string">''</span>;
+  background: ThemePalette = <span class="hljs-literal">undefined</span>;
 
   toggleBackground() {
-    <span class="hljs-keyword">this</span>.background = <span class="hljs-keyword">this</span>.background ? <span class="hljs-string">''</span> : <span class="hljs-string">'primary'</span>;
+    <span class="hljs-keyword">this</span>.background = <span class="hljs-keyword">this</span>.background ? <span class="hljs-literal">undefined</span> : <span class="hljs-string">'primary'</span>;
   }
 
   addLink() {

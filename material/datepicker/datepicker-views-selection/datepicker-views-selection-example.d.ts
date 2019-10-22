@@ -1,6 +1,7 @@
 import { FormControl } from '@angular/forms';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { Moment } from 'moment';
+import * as i0 from "@angular/core";
 export declare const MY_FORMATS: {
     parse: {
         dateInput: string;
@@ -17,4 +18,6 @@ export declare class DatepickerViewsSelectionExample {
     date: FormControl;
     chosenYearHandler(normalizedYear: Moment): void;
     chosenMonthHandler(normalizedMonth: Moment, datepicker: MatDatepicker<Moment>): void;
+    static ngFactoryDef: i0.ɵɵFactoryDef<DatepickerViewsSelectionExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<DatepickerViewsSelectionExample, "datepicker-views-selection-example", never, {}, {}, never>;
 }

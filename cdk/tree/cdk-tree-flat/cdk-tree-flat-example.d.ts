@@ -1,5 +1,6 @@
 import { ArrayDataSource } from '@angular/cdk/collections';
 import { FlatTreeControl } from '@angular/cdk/tree';
+import * as i0 from "@angular/core";
 /** Flat node with expandable and level information */
 interface ExampleFlatNode {
     expandable: boolean;
@@ -16,5 +17,7 @@ export declare class CdkTreeFlatExample {
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
     getParentNode(node: ExampleFlatNode): ExampleFlatNode | null;
     shouldRender(node: ExampleFlatNode): boolean | undefined;
+    static ngFactoryDef: i0.ɵɵFactoryDef<CdkTreeFlatExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkTreeFlatExample, "cdk-tree-flat-example", never, {}, {}, never>;
 }
 export {};

@@ -1,13 +1,47 @@
-import { FlatTreeControl, NestedTreeControl, CdkTreeModule } from '@angular/cdk/tree';
-import { Component, NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { FlatTreeControl, CdkTree, CdkTreeNodeDef, CdkTreeNode, CdkTreeNodePadding, CdkTreeNodeToggle, NestedTreeControl, CdkNestedTreeNode, CdkTreeNodeOutlet, CdkTreeModule } from '@angular/cdk/tree';
+import { ɵɵelementStart, ɵɵelement, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵstyleProp, ɵɵadvance, ɵɵtextInterpolate1, ɵɵlistener, ɵɵattribute, Component, ɵɵdefineComponent, ɵɵtemplate, ɵɵproperty, ɵsetClassMetadata, ɵɵelementContainer, ɵɵclassProp, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { MatButton, MatButtonModule } from '@angular/material/button';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { ArrayDataSource } from '@angular/cdk/collections';
 
 /**
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+function CdkTreeFlatExample_cdk_tree_node_1_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "cdk-tree-node", 3);
+    ɵɵelement(1, "button", 4);
+    ɵɵtext(2);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const node_r2 = ctx.$implicit;
+    const ctx_r0 = ɵɵnextContext();
+    ɵɵstyleProp("display", ctx_r0.shouldRender(node_r2) ? "flex" : "none");
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", node_r2.name, " ");
+} }
+function CdkTreeFlatExample_cdk_tree_node_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "cdk-tree-node", 3);
+    ɵɵelementStart(1, "button", 5);
+    ɵɵlistener("click", function CdkTreeFlatExample_cdk_tree_node_2_Template_button_click_1_listener($event) { const node_r3 = ctx.$implicit; return node_r3.isExpanded = !node_r3.isExpanded; });
+    ɵɵelementStart(2, "mat-icon", 6);
+    ɵɵtext(3);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵtext(4);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const node_r3 = ctx.$implicit;
+    const ctx_r1 = ɵɵnextContext();
+    ɵɵstyleProp("display", ctx_r1.shouldRender(node_r3) ? "flex" : "none");
+    ɵɵadvance(1);
+    ɵɵstyleProp("visibility", node_r3.expandable ? "visible" : "hidden");
+    ɵɵattribute("aria-label", "toggle " + node_r3.filename);
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", ctx_r1.treeControl.isExpanded(node_r3) ? "expand_more" : "chevron_right", " ");
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", node_r3.name, " ");
+} }
 /** @type {?} */
 const TREE_DATA = [
     {
@@ -120,10 +154,29 @@ class CdkTreeFlatExample {
 CdkTreeFlatExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-tree-flat-example',
-                template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" cdkTreeNodePadding\n                 [style.display]=\"shouldRender(node) ? 'flex' : 'none'\"\n                 class=\"example-tree-node\">\n    <button mat-icon-button cdkTreeNodeToggle\n            [attr.aria-label]=\"'toggle ' + node.filename\"\n            (click)=\"node.isExpanded = !node.isExpanded\"\n            [style.visibility]=\"node.expandable ? 'visible' : 'hidden'\">\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n  </cdk-tree-node>\n</cdk-tree>\n",
-                styles: [".example-tree-node {\n  display: flex;\n  align-items: center;\n}\n"]
-            }] }
+                templateUrl: 'cdk-tree-flat-example.html',
+                styleUrls: ['cdk-tree-flat-example.css'],
+            },] },
 ];
+/** @nocollapse */ CdkTreeFlatExample.ngFactoryDef = function CdkTreeFlatExample_Factory(t) { return new (t || CdkTreeFlatExample)(); };
+/** @nocollapse */ CdkTreeFlatExample.ngComponentDef = ɵɵdefineComponent({ type: CdkTreeFlatExample, selectors: [["cdk-tree-flat-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["cdkTreeNodePadding", "", "class", "example-tree-node", 3, "display", 4, "cdkTreeNodeDef"], ["cdkTreeNodePadding", "", "class", "example-tree-node", 3, "display", 4, "cdkTreeNodeDef", "cdkTreeNodeDefWhen"], ["cdkTreeNodePadding", "", 1, "example-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "cdkTreeNodeToggle", "", 3, "click"], [1, "mat-icon-rtl-mirror"]], template: function CdkTreeFlatExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "cdk-tree", 0);
+        ɵɵtemplate(1, CdkTreeFlatExample_cdk_tree_node_1_Template, 3, 2, "cdk-tree-node", 1);
+        ɵɵtemplate(2, CdkTreeFlatExample_cdk_tree_node_2_Template, 5, 5, "cdk-tree-node", 2);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+        ɵɵadvance(2);
+        ɵɵproperty("cdkTreeNodeDefWhen", ctx.hasChild);
+    } }, directives: [CdkTree, CdkTreeNodeDef, CdkTreeNode, CdkTreeNodePadding, MatButton, CdkTreeNodeToggle, MatIcon], styles: [".example-tree-node[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}"] });
+/*@__PURE__*/ ɵsetClassMetadata(CdkTreeFlatExample, [{
+        type: Component,
+        args: [{
+                selector: 'cdk-tree-flat-example',
+                templateUrl: 'cdk-tree-flat-example.html',
+                styleUrls: ['cdk-tree-flat-example.css'],
+            }]
+    }], null, null);
 if (false) {
     /** @type {?} */
     CdkTreeFlatExample.prototype.treeControl;
@@ -137,6 +190,40 @@ if (false) {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
+function CdkTreeNestedExample_cdk_nested_tree_node_1_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "cdk-nested-tree-node", 3);
+    ɵɵelement(1, "button", 4);
+    ɵɵtext(2);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const node_r7 = ctx.$implicit;
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", node_r7.name, " ");
+} }
+function CdkTreeNestedExample_cdk_nested_tree_node_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "cdk-nested-tree-node", 3);
+    ɵɵelementStart(1, "button", 5);
+    ɵɵelementStart(2, "mat-icon", 6);
+    ɵɵtext(3);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+    ɵɵtext(4);
+    ɵɵelementStart(5, "div");
+    ɵɵelementContainer(6, 7);
+    ɵɵelementEnd();
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const node_r8 = ctx.$implicit;
+    const ctx_r6 = ɵɵnextContext();
+    ɵɵadvance(1);
+    ɵɵattribute("aria-label", "toggle " + node_r8.name);
+    ɵɵadvance(2);
+    ɵɵtextInterpolate1(" ", ctx_r6.treeControl.isExpanded(node_r8) ? "expand_more" : "chevron_right", " ");
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", node_r8.name, " ");
+    ɵɵadvance(1);
+    ɵɵclassProp("example-tree-invisible", !ctx_r6.treeControl.isExpanded(node_r8));
+} }
 /**
  * Food data with nested structure.
  * Each node has a name and an optiona list of children.
@@ -199,10 +286,29 @@ class CdkTreeNestedExample {
 CdkTreeNestedExample.decorators = [
     { type: Component, args: [{
                 selector: 'cdk-tree-nested-example',
-                template: "<cdk-tree [dataSource]=\"dataSource\" [treeControl]=\"treeControl\">\n  <!-- This is the tree node template for leaf nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node\" class=\"example-tree-node\">\n    <!-- use a disabled button to provide padding for tree leaf -->\n    <button mat-icon-button disabled></button>\n    {{node.name}}\n  </cdk-nested-tree-node>\n  <!-- This is the tree node template for expandable nodes -->\n  <cdk-nested-tree-node *cdkTreeNodeDef=\"let node; when: hasChild\" class=\"example-tree-node\">\n    <button mat-icon-button [attr.aria-label]=\"'toggle ' + node.name\" cdkTreeNodeToggle>\n      <mat-icon class=\"mat-icon-rtl-mirror\">\n        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}\n      </mat-icon>\n    </button>\n    {{node.name}}\n    <div [class.example-tree-invisible]=\"!treeControl.isExpanded(node)\">\n      <ng-container cdkTreeNodeOutlet></ng-container>\n    </div>\n  </cdk-nested-tree-node>\n</cdk-tree>\n",
-                styles: [".example-tree-invisible {\n  display: none;\n}\n\n.example-tree ul,\n.example-tree li {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node {\n  display: block;\n}\n\n.example-tree-node .example-tree-node {\n  padding-left: 40px;\n}\n"]
-            }] }
+                templateUrl: 'cdk-tree-nested-example.html',
+                styleUrls: ['cdk-tree-nested-example.css'],
+            },] },
 ];
+/** @nocollapse */ CdkTreeNestedExample.ngFactoryDef = function CdkTreeNestedExample_Factory(t) { return new (t || CdkTreeNestedExample)(); };
+/** @nocollapse */ CdkTreeNestedExample.ngComponentDef = ɵɵdefineComponent({ type: CdkTreeNestedExample, selectors: [["cdk-tree-nested-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["class", "example-tree-node", 4, "cdkTreeNodeDef"], ["class", "example-tree-node", 4, "cdkTreeNodeDef", "cdkTreeNodeDefWhen"], [1, "example-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "cdkTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["cdkTreeNodeOutlet", ""]], template: function CdkTreeNestedExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "cdk-tree", 0);
+        ɵɵtemplate(1, CdkTreeNestedExample_cdk_nested_tree_node_1_Template, 3, 1, "cdk-nested-tree-node", 1);
+        ɵɵtemplate(2, CdkTreeNestedExample_cdk_nested_tree_node_2_Template, 7, 4, "cdk-nested-tree-node", 2);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
+        ɵɵadvance(2);
+        ɵɵproperty("cdkTreeNodeDefWhen", ctx.hasChild);
+    } }, directives: [CdkTree, CdkTreeNodeDef, CdkNestedTreeNode, MatButton, CdkTreeNodeToggle, MatIcon, CdkTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node[_ngcontent-%COMP%] {\n  display: block;\n}\n\n.example-tree-node[_ngcontent-%COMP%]   .example-tree-node[_ngcontent-%COMP%] {\n  padding-left: 40px;\n}"] });
+/*@__PURE__*/ ɵsetClassMetadata(CdkTreeNestedExample, [{
+        type: Component,
+        args: [{
+                selector: 'cdk-tree-nested-example',
+                templateUrl: 'cdk-tree-nested-example.html',
+                styleUrls: ['cdk-tree-nested-example.css'],
+            }]
+    }], null, null);
 if (false) {
     /** @type {?} */
     CdkTreeNestedExample.prototype.treeControl;
@@ -232,8 +338,31 @@ CdkTreeExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
-            },] }
+            },] },
 ];
+/** @nocollapse */ CdkTreeExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: CdkTreeExamplesModule });
+/** @nocollapse */ CdkTreeExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function CdkTreeExamplesModule_Factory(t) { return new (t || CdkTreeExamplesModule)(); }, imports: [[
+            CdkTreeModule,
+            MatButtonModule,
+            MatIconModule,
+        ]] });
+/*@__PURE__*/ ɵɵsetNgModuleScope(CdkTreeExamplesModule, { declarations: [CdkTreeFlatExample,
+        CdkTreeNestedExample], imports: [CdkTreeModule,
+        MatButtonModule,
+        MatIconModule], exports: [CdkTreeFlatExample,
+        CdkTreeNestedExample] });
+/*@__PURE__*/ ɵsetClassMetadata(CdkTreeExamplesModule, [{
+        type: NgModule,
+        args: [{
+                imports: [
+                    CdkTreeModule,
+                    MatButtonModule,
+                    MatIconModule,
+                ],
+                declarations: EXAMPLES,
+                exports: EXAMPLES,
+            }]
+    }], null, null);
 
 /**
  * Generated bundle index. Do not edit.

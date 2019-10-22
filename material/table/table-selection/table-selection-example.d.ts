@@ -1,5 +1,6 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatTableDataSource } from '@angular/material/table';
+import * as i0 from "@angular/core";
 export interface PeriodicElement {
     name: string;
     position: number;
@@ -19,4 +20,6 @@ export declare class TableSelectionExample {
     masterToggle(): void;
     /** The label for the checkbox on the passed row */
     checkboxLabel(row?: PeriodicElement): string;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableSelectionExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableSelectionExample, "table-selection-example", never, {}, {}, never>;
 }

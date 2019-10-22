@@ -1,3 +1,4 @@
+import * as i0 from "@angular/core";
 /**
  * @title Table with expandable rows
  */
@@ -5,6 +6,8 @@ export declare class TableExpandableRowsExample {
     dataSource: PeriodicElement[];
     columnsToDisplay: string[];
     expandedElement: PeriodicElement | null;
+    static ngFactoryDef: i0.ɵɵFactoryDef<TableExpandableRowsExample>;
+    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never>;
 }
 export interface PeriodicElement {
     name: string;
