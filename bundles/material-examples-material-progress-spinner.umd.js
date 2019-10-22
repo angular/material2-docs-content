@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/progress-spinner'), require('@angular/material/radio'), require('@angular/material/slider')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/progress-spinner', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/progress-spinner', '@angular/material/radio', '@angular/material/slider'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.progressSpinner = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.progressSpinner, global.ng.material.radio, global.ng.material.slider));
-}(this, function (exports, i4, i0, i3, i1, i1$1, i2, i6) { 'use strict';
+}(this, function (exports, i4, i0, i3, i1, i5, i2, i6) { 'use strict';
 
     function ProgressSpinnerConfigurableExample_section_22_Template(rf, ctx) { if (rf & 1) {
         var _r2 = i0.ɵɵgetCurrentView();
@@ -93,7 +93,7 @@
                 i0.ɵɵproperty("ngIf", ctx.mode === "determinate");
                 i0.ɵɵadvance(5);
                 i0.ɵɵproperty("color", ctx.color)("mode", ctx.mode)("value", ctx.value);
-            } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i1$1.MatProgressSpinner, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
+            } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i5.MatProgressSpinner, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
         return ProgressSpinnerConfigurableExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
@@ -121,7 +121,7 @@
         ProgressSpinnerOverviewExample.ngFactoryDef = function ProgressSpinnerOverviewExample_Factory(t) { return new (t || ProgressSpinnerOverviewExample)(); };
         ProgressSpinnerOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: ProgressSpinnerOverviewExample, selectors: [["progress-spinner-overview-example"]], decls: 1, vars: 0, template: function ProgressSpinnerOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-spinner");
-            } }, directives: [i1$1.MatSpinner], styles: [""] });
+            } }, directives: [i5.MatSpinner], styles: [""] });
         return ProgressSpinnerOverviewExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
@@ -145,7 +145,7 @@
                         imports: [
                             i4.CommonModule,
                             i1.MatCardModule,
-                            i1$1.MatProgressSpinnerModule,
+                            i5.MatProgressSpinnerModule,
                             i2.MatRadioModule,
                             i6.MatSliderModule,
                             i3.FormsModule,
@@ -158,7 +158,7 @@
         ProgressSpinnerExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function ProgressSpinnerExamplesModule_Factory(t) { return new (t || ProgressSpinnerExamplesModule)(); }, imports: [[
                     i4.CommonModule,
                     i1.MatCardModule,
-                    i1$1.MatProgressSpinnerModule,
+                    i5.MatProgressSpinnerModule,
                     i2.MatRadioModule,
                     i6.MatSliderModule,
                     i3.FormsModule,
@@ -168,7 +168,7 @@
     /*@__PURE__*/ i0.ɵɵsetNgModuleScope(ProgressSpinnerExamplesModule, { declarations: [ProgressSpinnerConfigurableExample,
             ProgressSpinnerOverviewExample], imports: [i4.CommonModule,
             i1.MatCardModule,
-            i1$1.MatProgressSpinnerModule,
+            i5.MatProgressSpinnerModule,
             i2.MatRadioModule,
             i6.MatSliderModule,
             i3.FormsModule], exports: [ProgressSpinnerConfigurableExample,
@@ -179,7 +179,7 @@
                     imports: [
                         i4.CommonModule,
                         i1.MatCardModule,
-                        i1$1.MatProgressSpinnerModule,
+                        i5.MatProgressSpinnerModule,
                         i2.MatRadioModule,
                         i6.MatSliderModule,
                         i3.FormsModule,
