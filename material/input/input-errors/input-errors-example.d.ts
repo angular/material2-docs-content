@@ -5,6 +5,6 @@ import * as i0 from "@angular/core";
  */
 export declare class InputErrorsExample {
     emailFormControl: FormControl;
-    static ngFactoryDef: i0.ɵɵFactoryDef<InputErrorsExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<InputErrorsExample, "input-errors-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<InputErrorsExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<InputErrorsExample, "input-errors-example", never, {}, {}, never>;
 }

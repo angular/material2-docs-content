@@ -24,6 +24,6 @@ export declare class ChipsAutocompleteExample {
     remove(fruit: string): void;
     selected(event: MatAutocompleteSelectedEvent): void;
     private _filter;
-    static ngFactoryDef: i0.ɵɵFactoryDef<ChipsAutocompleteExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<ChipsAutocompleteExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<ChipsAutocompleteExample, "chips-autocomplete-example", never, {}, {}, never>;
 }

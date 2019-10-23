@@ -3,7 +3,7 @@ import { ɵɵtext, Component, ViewContainerRef, ViewChild, ɵɵdirectiveInject, 
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = ["templatePortalContent"];
 const _c1 = ["templatePortalContent", ""];
@@ -43,8 +43,8 @@ CdkPortalOverviewExample.ctorParameters = () => [
 CdkPortalOverviewExample.propDecorators = {
     templatePortalContent: [{ type: ViewChild, args: ['templatePortalContent', { static: false },] }]
 };
-/** @nocollapse */ CdkPortalOverviewExample.ngFactoryDef = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(ɵɵdirectiveInject(ViewContainerRef)); };
-/** @nocollapse */ CdkPortalOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ CdkPortalOverviewExample.ɵfac = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(ɵɵdirectiveInject(ViewContainerRef)); };
+/** @nocollapse */ CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0, true);
     } if (rf & 2) {
         var _t;
@@ -103,8 +103,8 @@ ComponentPortalExample.decorators = [
                 template: 'Hello, this is a component portal'
             },] },
 ];
-/** @nocollapse */ ComponentPortalExample.ngFactoryDef = function ComponentPortalExample_Factory(t) { return new (t || ComponentPortalExample)(); };
-/** @nocollapse */ ComponentPortalExample.ngComponentDef = ɵɵdefineComponent({ type: ComponentPortalExample, selectors: [["component-portal-example"]], decls: 1, vars: 0, template: function ComponentPortalExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ComponentPortalExample.ɵfac = function ComponentPortalExample_Factory(t) { return new (t || ComponentPortalExample)(); };
+/** @nocollapse */ ComponentPortalExample.ɵcmp = ɵɵdefineComponent({ type: ComponentPortalExample, selectors: [["component-portal-example"]], decls: 1, vars: 0, template: function ComponentPortalExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtext(0, "Hello, this is a component portal");
     } }, encapsulation: 2 });
 /*@__PURE__*/ ɵsetClassMetadata(ComponentPortalExample, [{
@@ -117,7 +117,7 @@ ComponentPortalExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -136,8 +136,8 @@ CdkPortalExamplesModule.decorators = [
                 entryComponents: [ComponentPortalExample]
             },] },
 ];
-/** @nocollapse */ CdkPortalExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: CdkPortalExamplesModule });
-/** @nocollapse */ CdkPortalExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function CdkPortalExamplesModule_Factory(t) { return new (t || CdkPortalExamplesModule)(); }, imports: [[
+/** @nocollapse */ CdkPortalExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPortalExamplesModule });
+/** @nocollapse */ CdkPortalExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPortalExamplesModule_Factory(t) { return new (t || CdkPortalExamplesModule)(); }, imports: [[
             PortalModule,
         ]] });
 /*@__PURE__*/ ɵɵsetNgModuleScope(CdkPortalExamplesModule, { declarations: [CdkPortalOverviewExample,

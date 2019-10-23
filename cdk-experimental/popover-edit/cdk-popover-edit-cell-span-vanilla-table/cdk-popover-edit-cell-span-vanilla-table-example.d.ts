@@ -13,6 +13,6 @@ export declare class CdkPopoverEditCellSpanVanillaTableExample {
     readonly preservedValues: WeakMap<Person, any>;
     readonly persons: Person[];
     onSubmit(person: Person, f: NgForm): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<CdkPopoverEditCellSpanVanillaTableExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkPopoverEditCellSpanVanillaTableExample, "cdk-popover-edit-cell-span-vanilla-table-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkPopoverEditCellSpanVanillaTableExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkPopoverEditCellSpanVanillaTableExample, "cdk-popover-edit-cell-span-vanilla-table-example", never, {}, {}, never>;
 }

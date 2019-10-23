@@ -21,8 +21,8 @@ var CheckboxConfigurableExample = /** @class */ (function () {
                     styleUrls: ['checkbox-configurable-example.css'],
                 },] },
     ];
-    CheckboxConfigurableExample.ngFactoryDef = function CheckboxConfigurableExample_Factory(t) { return new (t || CheckboxConfigurableExample)(); };
-    CheckboxConfigurableExample.ngComponentDef = ɵɵdefineComponent({ type: CheckboxConfigurableExample, selectors: [["checkbox-configurable-example"]], decls: 27, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "after", 1, "example-margin"], ["value", "before", 1, "example-margin"], [1, "result"], [1, "example-margin", 3, "ngModel", "indeterminate", "labelPosition", "disabled", "ngModelChange", "indeterminateChange"]], template: function CheckboxConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+    CheckboxConfigurableExample.ɵfac = function CheckboxConfigurableExample_Factory(t) { return new (t || CheckboxConfigurableExample)(); };
+    CheckboxConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: CheckboxConfigurableExample, selectors: [["checkbox-configurable-example"]], decls: 27, vars: 8, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "after", 1, "example-margin"], ["value", "before", 1, "example-margin"], [1, "result"], [1, "example-margin", 3, "ngModel", "indeterminate", "labelPosition", "disabled", "ngModelChange", "indeterminateChange"]], template: function CheckboxConfigurableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-card");
             ɵɵelementStart(1, "mat-card-content");
             ɵɵelementStart(2, "h2", 0);
@@ -110,8 +110,8 @@ var CheckboxOverviewExample = /** @class */ (function () {
                     styleUrls: ['checkbox-overview-example.css'],
                 },] },
     ];
-    CheckboxOverviewExample.ngFactoryDef = function CheckboxOverviewExample_Factory(t) { return new (t || CheckboxOverviewExample)(); };
-    CheckboxOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: CheckboxOverviewExample, selectors: [["checkbox-overview-example"]], decls: 2, vars: 0, template: function CheckboxOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    CheckboxOverviewExample.ɵfac = function CheckboxOverviewExample_Factory(t) { return new (t || CheckboxOverviewExample)(); };
+    CheckboxOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CheckboxOverviewExample, selectors: [["checkbox-overview-example"]], decls: 2, vars: 0, template: function CheckboxOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-checkbox");
             ɵɵtext(1, "Check me!");
             ɵɵelementEnd();
@@ -146,8 +146,8 @@ var CheckboxExamplesModule = /** @class */ (function () {
                     exports: EXAMPLES,
                 },] },
     ];
-    CheckboxExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: CheckboxExamplesModule });
-    CheckboxExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function CheckboxExamplesModule_Factory(t) { return new (t || CheckboxExamplesModule)(); }, imports: [[
+    CheckboxExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CheckboxExamplesModule });
+    CheckboxExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CheckboxExamplesModule_Factory(t) { return new (t || CheckboxExamplesModule)(); }, imports: [[
                 MatCardModule,
                 MatCheckboxModule,
                 MatRadioModule,

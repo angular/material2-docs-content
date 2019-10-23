@@ -5,6 +5,6 @@ import * as i0 from "@angular/core";
  */
 export declare class TooltipMessageExample {
     message: FormControl;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TooltipMessageExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TooltipMessageExample, "tooltip-message-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TooltipMessageExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TooltipMessageExample, "tooltip-message-example", never, {}, {}, never>;
 }

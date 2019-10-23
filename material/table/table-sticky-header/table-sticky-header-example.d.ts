@@ -5,8 +5,8 @@ import * as i0 from "@angular/core";
 export declare class TableStickyHeaderExample {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<TableStickyHeaderExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableStickyHeaderExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableStickyHeaderExample, "table-sticky-header-example", never, {}, {}, never>;
 }
 export interface PeriodicElement {
     name: string;

@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/table'), require('@angular/core'), require('tslib'), require('@angular/cdk/collections'), require('rxjs')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/cdk/table', ['exports', '@angular/cdk/table', '@angular/core', 'tslib', '@angular/cdk/collections', 'rxjs'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.cdk = global.ng.materialExamples.cdk || {}, global.ng.materialExamples.cdk.table = {}), global.ng.cdk.table, global.ng.core, global.tslib, global.ng.cdk.collections, global.rxjs));
-}(this, function (exports, i1, i0, tslib_1, collections, rxjs) { 'use strict';
+}(this, function (exports, i1, i0, tslib, collections, rxjs) { 'use strict';
 
     function CdkTableBasicFlexExample_cdk_header_cell_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "cdk-header-cell");
@@ -93,8 +93,8 @@
                         templateUrl: 'cdk-table-basic-flex-example.html',
                     },] },
         ];
-        CdkTableBasicFlexExample.ngFactoryDef = function CdkTableBasicFlexExample_Factory(t) { return new (t || CdkTableBasicFlexExample)(); };
-        CdkTableBasicFlexExample.ngComponentDef = i0.ɵɵdefineComponent({ type: CdkTableBasicFlexExample, selectors: [["cdk-table-basic-flex-example"]], decls: 15, vars: 3, consts: [[3, "dataSource"], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"]], template: function CdkTableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
+        CdkTableBasicFlexExample.ɵfac = function CdkTableBasicFlexExample_Factory(t) { return new (t || CdkTableBasicFlexExample)(); };
+        CdkTableBasicFlexExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkTableBasicFlexExample, selectors: [["cdk-table-basic-flex-example"]], decls: 15, vars: 3, consts: [[3, "dataSource"], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"]], template: function CdkTableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-table", 0);
                 i0.ɵɵelementContainerStart(1, 1);
                 i0.ɵɵtemplate(2, CdkTableBasicFlexExample_cdk_header_cell_2_Template, 2, 0, "cdk-header-cell", 2);
@@ -140,7 +140,7 @@
      * should be rendered.
      */
     var ExampleDataSource = /** @class */ (function (_super) {
-        tslib_1.__extends(ExampleDataSource, _super);
+        tslib.__extends(ExampleDataSource, _super);
         function ExampleDataSource() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
             /** Stream of data that is provided to the table. */
@@ -244,8 +244,8 @@
                         templateUrl: 'cdk-table-basic-example.html',
                     },] },
         ];
-        CdkTableBasicExample.ngFactoryDef = function CdkTableBasicExample_Factory(t) { return new (t || CdkTableBasicExample)(); };
-        CdkTableBasicExample.ngComponentDef = i0.ɵɵdefineComponent({ type: CdkTableBasicExample, selectors: [["cdk-table-basic-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", 3, "dataSource"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableBasicExample_Template(rf, ctx) { if (rf & 1) {
+        CdkTableBasicExample.ɵfac = function CdkTableBasicExample_Factory(t) { return new (t || CdkTableBasicExample)(); };
+        CdkTableBasicExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkTableBasicExample, selectors: [["cdk-table-basic-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", 3, "dataSource"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableBasicExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
                 i0.ɵɵelementContainerStart(1, 1);
                 i0.ɵɵtemplate(2, CdkTableBasicExample_th_2_Template, 2, 0, "th", 2);
@@ -291,7 +291,7 @@
      * should be rendered.
      */
     var ExampleDataSource$1 = /** @class */ (function (_super) {
-        tslib_1.__extends(ExampleDataSource, _super);
+        tslib.__extends(ExampleDataSource, _super);
         function ExampleDataSource() {
             var _this = _super !== null && _super.apply(this, arguments) || this;
             /** Stream of data that is provided to the table. */
@@ -322,8 +322,8 @@
                         exports: EXAMPLES,
                     },] },
         ];
-        CdkTableExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: CdkTableExamplesModule });
-        CdkTableExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function CdkTableExamplesModule_Factory(t) { return new (t || CdkTableExamplesModule)(); }, imports: [[
+        CdkTableExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkTableExamplesModule });
+        CdkTableExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkTableExamplesModule_Factory(t) { return new (t || CdkTableExamplesModule)(); }, imports: [[
                     i1.CdkTableModule,
                 ]] });
         return CdkTableExamplesModule;

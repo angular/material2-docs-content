@@ -10,6 +10,6 @@ export declare class StepperLabelPositionBottomExample implements OnInit {
     secondFormGroup: FormGroup;
     constructor(_formBuilder: FormBuilder);
     ngOnInit(): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<StepperLabelPositionBottomExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<StepperLabelPositionBottomExample, "stepper-label-position-bottom-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<StepperLabelPositionBottomExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<StepperLabelPositionBottomExample, "stepper-label-position-bottom-example", never, {}, {}, never>;
 }

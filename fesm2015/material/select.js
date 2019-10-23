@@ -1,6 +1,6 @@
 import { NgIf, NgForOf, CommonModule } from '@angular/common';
 import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate2, ɵɵproperty, ɵɵtextInterpolate, Component, ɵɵdefineComponent, ɵɵtemplate, ɵɵtextInterpolate1, ɵsetClassMetadata, ɵɵelement, ɵɵlistener, ViewEncapsulation, ɵɵpropertyInterpolate1, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
-import { FormControl, NgControlStatus, FormControlDirective, NgSelectOption, ɵangular_packages_forms_forms_y, Validators, SelectControlValueAccessor, ɵangular_packages_forms_forms_z, NgControlStatusGroup, NgForm, NgModel, RequiredValidator, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, NgControlStatus, FormControlDirective, NgSelectOption, ɵangular_packages_forms_forms_x, Validators, SelectControlValueAccessor, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, NgModel, RequiredValidator, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatSelect, MatSelectTrigger, MatSelectModule } from '@angular/material/select';
@@ -9,7 +9,7 @@ import { MatOption, MatOptgroup } from '@angular/material/core';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SelectCustomTriggerExample_span_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span", 3);
@@ -46,8 +46,8 @@ SelectCustomTriggerExample.decorators = [
                 styleUrls: ['select-custom-trigger-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectCustomTriggerExample.ngFactoryDef = function SelectCustomTriggerExample_Factory(t) { return new (t || SelectCustomTriggerExample)(); };
-/** @nocollapse */ SelectCustomTriggerExample.ngComponentDef = ɵɵdefineComponent({ type: SelectCustomTriggerExample, selectors: [["select-custom-trigger-example"]], decls: 6, vars: 4, consts: [["placeholder", "Toppings", "multiple", "", 3, "formControl"], ["class", "example-additional-selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "example-additional-selection"], [3, "value"]], template: function SelectCustomTriggerExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectCustomTriggerExample.ɵfac = function SelectCustomTriggerExample_Factory(t) { return new (t || SelectCustomTriggerExample)(); };
+/** @nocollapse */ SelectCustomTriggerExample.ɵcmp = ɵɵdefineComponent({ type: SelectCustomTriggerExample, selectors: [["select-custom-trigger-example"]], decls: 6, vars: 4, consts: [["placeholder", "Toppings", "multiple", "", 3, "formControl"], ["class", "example-additional-selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "example-additional-selection"], [3, "value"]], template: function SelectCustomTriggerExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
         ɵɵelementStart(1, "mat-select", 0);
         ɵɵelementStart(2, "mat-select-trigger");
@@ -84,7 +84,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Disabled select
@@ -101,8 +101,8 @@ SelectDisabledExample.decorators = [
                 styleUrls: ['select-disabled-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectDisabledExample.ngFactoryDef = function SelectDisabledExample_Factory(t) { return new (t || SelectDisabledExample)(); };
-/** @nocollapse */ SelectDisabledExample.ngComponentDef = ɵɵdefineComponent({ type: SelectDisabledExample, selectors: [["select-disabled-example"]], decls: 30, vars: 3, consts: [[3, "formControl"], [3, "disabled"], ["value", "option1"], ["value", "option2", "disabled", ""], ["value", "option3"], ["matNativeControl", "", 3, "disabled"], ["value", "", "selected", ""], ["value", "volvo"], ["value", "saab", "disabled", ""], ["value", "mercedes"], ["value", "audi"]], template: function SelectDisabledExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectDisabledExample.ɵfac = function SelectDisabledExample_Factory(t) { return new (t || SelectDisabledExample)(); };
+/** @nocollapse */ SelectDisabledExample.ɵcmp = ɵɵdefineComponent({ type: SelectDisabledExample, selectors: [["select-disabled-example"]], decls: 30, vars: 3, consts: [[3, "formControl"], [3, "disabled"], ["value", "option1"], ["value", "option2", "disabled", ""], ["value", "option3"], ["matNativeControl", "", 3, "disabled"], ["value", "", "selected", ""], ["value", "volvo"], ["value", "saab", "disabled", ""], ["value", "mercedes"], ["value", "audi"]], template: function SelectDisabledExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "p");
         ɵɵelementStart(1, "mat-checkbox", 0);
         ɵɵtext(2, "Disable select");
@@ -157,7 +157,7 @@ SelectDisabledExample.decorators = [
         ɵɵproperty("disabled", ctx.disableSelect.value);
         ɵɵadvance(12);
         ɵɵproperty("disabled", ctx.disableSelect.value);
-    } }, directives: [MatCheckbox, NgControlStatus, FormControlDirective, MatFormField, MatLabel, MatSelect, MatOption, MatInput, NgSelectOption, ɵangular_packages_forms_forms_y], styles: [""] });
+    } }, directives: [MatCheckbox, NgControlStatus, FormControlDirective, MatFormField, MatLabel, MatSelect, MatOption, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [""] });
 /*@__PURE__*/ ɵsetClassMetadata(SelectDisabledExample, [{
         type: Component,
         args: [{
@@ -173,7 +173,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SelectErrorStateMatcherExample_mat_error_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-error");
@@ -237,8 +237,8 @@ SelectErrorStateMatcherExample.decorators = [
                 styleUrls: ['select-error-state-matcher-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectErrorStateMatcherExample.ngFactoryDef = function SelectErrorStateMatcherExample_Factory(t) { return new (t || SelectErrorStateMatcherExample)(); };
-/** @nocollapse */ SelectErrorStateMatcherExample.ngComponentDef = ɵɵdefineComponent({ type: SelectErrorStateMatcherExample, selectors: [["select-error-state-matcher-example"]], decls: 29, vars: 8, consts: [[3, "formControl", "errorStateMatcher"], ["value", "valid"], ["value", "invalid"], [4, "ngIf"], [1, "demo-full-width"], ["matNativeControl", "", 3, "formControl", "errorStateMatcher"], ["value", ""], ["value", "valid", "selected", ""]], template: function SelectErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectErrorStateMatcherExample.ɵfac = function SelectErrorStateMatcherExample_Factory(t) { return new (t || SelectErrorStateMatcherExample)(); };
+/** @nocollapse */ SelectErrorStateMatcherExample.ɵcmp = ɵɵdefineComponent({ type: SelectErrorStateMatcherExample, selectors: [["select-error-state-matcher-example"]], decls: 29, vars: 8, consts: [[3, "formControl", "errorStateMatcher"], ["value", "valid"], ["value", "invalid"], [4, "ngIf"], [1, "demo-full-width"], ["matNativeControl", "", 3, "formControl", "errorStateMatcher"], ["value", ""], ["value", "valid", "selected", ""]], template: function SelectErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h4");
         ɵɵtext(1, "mat-select");
         ɵɵelementEnd();
@@ -295,7 +295,7 @@ SelectErrorStateMatcherExample.decorators = [
         ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("required"));
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("pattern") && !ctx.nativeSelectFormControl.hasError("required"));
-    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, MatHint, NgIf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_y, MatError], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, MatHint, NgIf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatError], styles: [""] });
 /*@__PURE__*/ ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
         type: Component,
         args: [{
@@ -317,7 +317,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SelectFormExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 4);
@@ -383,8 +383,8 @@ SelectFormExample.decorators = [
                 styleUrls: ['select-form-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectFormExample.ngFactoryDef = function SelectFormExample_Factory(t) { return new (t || SelectFormExample)(); };
-/** @nocollapse */ SelectFormExample.ngComponentDef = ɵɵdefineComponent({ type: SelectFormExample, selectors: [["select-form-example"]], decls: 20, vars: 6, consts: [["name", "food", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "ngModel", "ngModelChange"], ["value", "", "selected", ""], [3, "value"]], template: function SelectFormExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectFormExample.ɵfac = function SelectFormExample_Factory(t) { return new (t || SelectFormExample)(); };
+/** @nocollapse */ SelectFormExample.ɵcmp = ɵɵdefineComponent({ type: SelectFormExample, selectors: [["select-form-example"]], decls: 20, vars: 6, consts: [["name", "food", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "ngModel", "ngModelChange"], ["value", "", "selected", ""], [3, "value"]], template: function SelectFormExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "form");
         ɵɵelementStart(1, "h4");
         ɵɵtext(2, "mat-select");
@@ -431,7 +431,7 @@ SelectFormExample.decorators = [
         ɵɵproperty("ngForOf", ctx.cars);
         ɵɵadvance(2);
         ɵɵtextInterpolate1(" Selected car: ", ctx.selectedCar, " ");
-    } }, directives: [ɵangular_packages_forms_forms_z, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatSelect, NgControlStatus, NgModel, NgForOf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_y, MatOption], styles: [""] });
+    } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatSelect, NgControlStatus, NgModel, NgForOf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatOption], styles: [""] });
 /*@__PURE__*/ ɵsetClassMetadata(SelectFormExample, [{
         type: Component,
         args: [{
@@ -453,7 +453,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SelectHintErrorExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 8);
@@ -507,8 +507,8 @@ SelectHintErrorExample.decorators = [
                 styleUrls: ['select-hint-error-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectHintErrorExample.ngFactoryDef = function SelectHintErrorExample_Factory(t) { return new (t || SelectHintErrorExample)(); };
-/** @nocollapse */ SelectHintErrorExample.ngComponentDef = ɵɵdefineComponent({ type: SelectHintErrorExample, selectors: [["select-hint-error-example"]], decls: 28, vars: 6, consts: [["required", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [4, "ngIf"], ["matNativeControl", "", "required", "", 3, "formControl"], ["label", "--select something --"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectHintErrorExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectHintErrorExample.ɵfac = function SelectHintErrorExample_Factory(t) { return new (t || SelectHintErrorExample)(); };
+/** @nocollapse */ SelectHintErrorExample.ɵcmp = ɵɵdefineComponent({ type: SelectHintErrorExample, selectors: [["select-hint-error-example"]], decls: 28, vars: 6, consts: [["required", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [4, "ngIf"], ["matNativeControl", "", "required", "", 3, "formControl"], ["label", "--select something --"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectHintErrorExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h4");
         ɵɵtext(1, "mat select");
         ɵɵelementEnd();
@@ -564,7 +564,7 @@ SelectHintErrorExample.decorators = [
         ɵɵproperty("formControl", ctx.selectFormControl);
         ɵɵadvance(8);
         ɵɵproperty("ngIf", ctx.selectFormControl.hasError("required"));
-    } }, directives: [MatFormField, MatLabel, MatSelect, RequiredValidator, NgControlStatus, FormControlDirective, MatOption, NgForOf, NgIf, MatHint, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_y, MatError], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, RequiredValidator, NgControlStatus, FormControlDirective, MatOption, NgForOf, NgIf, MatHint, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatError], styles: [""] });
 /*@__PURE__*/ ɵsetClassMetadata(SelectHintErrorExample, [{
         type: Component,
         args: [{
@@ -584,7 +584,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SelectMultipleExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 2);
@@ -612,8 +612,8 @@ SelectMultipleExample.decorators = [
                 styleUrls: ['select-multiple-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectMultipleExample.ngFactoryDef = function SelectMultipleExample_Factory(t) { return new (t || SelectMultipleExample)(); };
-/** @nocollapse */ SelectMultipleExample.ngComponentDef = ɵɵdefineComponent({ type: SelectMultipleExample, selectors: [["select-multiple-example"]], decls: 5, vars: 2, consts: [["multiple", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectMultipleExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectMultipleExample.ɵfac = function SelectMultipleExample_Factory(t) { return new (t || SelectMultipleExample)(); };
+/** @nocollapse */ SelectMultipleExample.ɵcmp = ɵɵdefineComponent({ type: SelectMultipleExample, selectors: [["select-multiple-example"]], decls: 5, vars: 2, consts: [["multiple", "", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectMultipleExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
         ɵɵelementStart(1, "mat-label");
         ɵɵtext(2, "Toppings");
@@ -645,7 +645,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with no option ripple
@@ -659,8 +659,8 @@ SelectNoRippleExample.decorators = [
                 styleUrls: ['select-no-ripple-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectNoRippleExample.ngFactoryDef = function SelectNoRippleExample_Factory(t) { return new (t || SelectNoRippleExample)(); };
-/** @nocollapse */ SelectNoRippleExample.ngComponentDef = ɵɵdefineComponent({ type: SelectNoRippleExample, selectors: [["select-no-ripple-example"]], decls: 10, vars: 0, consts: [["disableRipple", ""], ["value", "1"], ["value", "2"], ["value", "3"]], template: function SelectNoRippleExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectNoRippleExample.ɵfac = function SelectNoRippleExample_Factory(t) { return new (t || SelectNoRippleExample)(); };
+/** @nocollapse */ SelectNoRippleExample.ɵcmp = ɵɵdefineComponent({ type: SelectNoRippleExample, selectors: [["select-no-ripple-example"]], decls: 10, vars: 0, consts: [["disableRipple", ""], ["value", "1"], ["value", "2"], ["value", "3"]], template: function SelectNoRippleExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
         ɵɵelementStart(1, "mat-label");
         ɵɵtext(2, "Select an option");
@@ -689,7 +689,7 @@ SelectNoRippleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SelectOptgroupExample_mat_optgroup_8_mat_option_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 11);
@@ -782,8 +782,8 @@ SelectOptgroupExample.decorators = [
                 styleUrls: ['select-optgroup-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectOptgroupExample.ngFactoryDef = function SelectOptgroupExample_Factory(t) { return new (t || SelectOptgroupExample)(); };
-/** @nocollapse */ SelectOptgroupExample.ngComponentDef = ɵɵdefineComponent({ type: SelectOptgroupExample, selectors: [["select-optgroup-example"]], decls: 25, vars: 2, consts: [[3, "formControl"], [3, "label", "disabled", 4, "ngFor", "ngForOf"], ["matNativeControl", ""], ["label", "Swedish Cars"], ["value", "volvo"], ["value", "saab"], ["label", "German Cars"], ["value", "mercedes"], ["value", "audi"], [3, "label", "disabled"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectOptgroupExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectOptgroupExample.ɵfac = function SelectOptgroupExample_Factory(t) { return new (t || SelectOptgroupExample)(); };
+/** @nocollapse */ SelectOptgroupExample.ɵcmp = ɵɵdefineComponent({ type: SelectOptgroupExample, selectors: [["select-optgroup-example"]], decls: 25, vars: 2, consts: [[3, "formControl"], [3, "label", "disabled", 4, "ngFor", "ngForOf"], ["matNativeControl", ""], ["label", "Swedish Cars"], ["value", "volvo"], ["value", "saab"], ["label", "German Cars"], ["value", "mercedes"], ["value", "audi"], [3, "label", "disabled"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function SelectOptgroupExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h4");
         ɵɵtext(1, "mat-select");
         ɵɵelementEnd();
@@ -829,7 +829,7 @@ SelectOptgroupExample.decorators = [
         ɵɵproperty("formControl", ctx.pokemonControl);
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ctx.pokemonGroups);
-    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_y, MatOptgroup], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x, MatOptgroup], styles: [""] });
 /*@__PURE__*/ ɵsetClassMetadata(SelectOptgroupExample, [{
         type: Component,
         args: [{
@@ -847,7 +847,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SelectOverviewExample_mat_option_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 6);
@@ -888,8 +888,8 @@ SelectOverviewExample.decorators = [
                 styleUrls: ['select-overview-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectOverviewExample.ngFactoryDef = function SelectOverviewExample_Factory(t) { return new (t || SelectOverviewExample)(); };
-/** @nocollapse */ SelectOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: SelectOverviewExample, selectors: [["select-overview-example"]], decls: 21, vars: 1, consts: [[3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "required", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectOverviewExample.ɵfac = function SelectOverviewExample_Factory(t) { return new (t || SelectOverviewExample)(); };
+/** @nocollapse */ SelectOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SelectOverviewExample, selectors: [["select-overview-example"]], decls: 21, vars: 1, consts: [[3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "required", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h4");
         ɵɵtext(1, "Basic mat-select");
         ɵɵelementEnd();
@@ -926,7 +926,7 @@ SelectOverviewExample.decorators = [
     } if (rf & 2) {
         ɵɵadvance(6);
         ɵɵproperty("ngForOf", ctx.foods);
-    } }, directives: [MatFormField, MatLabel, MatSelect, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_y, MatOption], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x, MatOption], styles: [""] });
 /*@__PURE__*/ ɵsetClassMetadata(SelectOverviewExample, [{
         type: Component,
         args: [{
@@ -942,7 +942,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with custom panel styling
@@ -962,8 +962,8 @@ SelectPanelClassExample.decorators = [
                 encapsulation: ViewEncapsulation.None,
             },] },
 ];
-/** @nocollapse */ SelectPanelClassExample.ngFactoryDef = function SelectPanelClassExample_Factory(t) { return new (t || SelectPanelClassExample)(); };
-/** @nocollapse */ SelectPanelClassExample.ngComponentDef = ɵɵdefineComponent({ type: SelectPanelClassExample, selectors: [["select-panel-class-example"]], decls: 10, vars: 2, consts: [[3, "formControl", "panelClass"], ["value", "red"], ["value", "green"], ["value", "blue"]], template: function SelectPanelClassExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectPanelClassExample.ɵfac = function SelectPanelClassExample_Factory(t) { return new (t || SelectPanelClassExample)(); };
+/** @nocollapse */ SelectPanelClassExample.ɵcmp = ɵɵdefineComponent({ type: SelectPanelClassExample, selectors: [["select-panel-class-example"]], decls: 10, vars: 2, consts: [[3, "formControl", "panelClass"], ["value", "red"], ["value", "green"], ["value", "blue"]], template: function SelectPanelClassExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
         ɵɵelementStart(1, "mat-label");
         ɵɵtext(2, "Panel color");
@@ -1003,7 +1003,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SelectResetExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 7);
@@ -1038,8 +1038,8 @@ SelectResetExample.decorators = [
                 styleUrls: ['select-reset-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectResetExample.ngFactoryDef = function SelectResetExample_Factory(t) { return new (t || SelectResetExample)(); };
-/** @nocollapse */ SelectResetExample.ngComponentDef = ɵɵdefineComponent({ type: SelectResetExample, selectors: [["select-reset-example"]], decls: 24, vars: 1, consts: [[3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "id", "mySelectId"], ["value", "", "disabled", "", "selected", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectResetExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectResetExample.ɵfac = function SelectResetExample_Factory(t) { return new (t || SelectResetExample)(); };
+/** @nocollapse */ SelectResetExample.ɵcmp = ɵɵdefineComponent({ type: SelectResetExample, selectors: [["select-reset-example"]], decls: 24, vars: 1, consts: [[3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "id", "mySelectId"], ["value", "", "disabled", "", "selected", ""], ["value", "volvo"], ["value", "saab"], ["value", "mercedes"], ["value", "audi"], [3, "value"]], template: function SelectResetExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h4");
         ɵɵtext(1, "mat-select");
         ɵɵelementEnd();
@@ -1080,7 +1080,7 @@ SelectResetExample.decorators = [
     } if (rf & 2) {
         ɵɵadvance(8);
         ɵɵproperty("ngForOf", ctx.states);
-    } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_y], styles: [""] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [""] });
 /*@__PURE__*/ ɵsetClassMetadata(SelectResetExample, [{
         type: Component,
         args: [{
@@ -1096,7 +1096,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Select with 2-way value binding
@@ -1113,8 +1113,8 @@ SelectValueBindingExample.decorators = [
                 styleUrls: ['select-value-binding-example.css'],
             },] },
 ];
-/** @nocollapse */ SelectValueBindingExample.ngFactoryDef = function SelectValueBindingExample_Factory(t) { return new (t || SelectValueBindingExample)(); };
-/** @nocollapse */ SelectValueBindingExample.ngComponentDef = ɵɵdefineComponent({ type: SelectValueBindingExample, selectors: [["select-value-binding-example"]], decls: 14, vars: 2, consts: [[3, "value", "valueChange"], ["value", "option1"], ["value", "option2"], ["value", "option3"]], template: function SelectValueBindingExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectValueBindingExample.ɵfac = function SelectValueBindingExample_Factory(t) { return new (t || SelectValueBindingExample)(); };
+/** @nocollapse */ SelectValueBindingExample.ɵcmp = ɵɵdefineComponent({ type: SelectValueBindingExample, selectors: [["select-value-binding-example"]], decls: 14, vars: 2, consts: [[3, "value", "valueChange"], ["value", "option1"], ["value", "option2"], ["value", "option3"]], template: function SelectValueBindingExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
         ɵɵelementStart(1, "mat-label");
         ɵɵtext(2, "Select an option");
@@ -1159,7 +1159,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -1192,8 +1192,8 @@ SelectExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ SelectExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: SelectExamplesModule });
-/** @nocollapse */ SelectExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function SelectExamplesModule_Factory(t) { return new (t || SelectExamplesModule)(); }, imports: [[
+/** @nocollapse */ SelectExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SelectExamplesModule });
+/** @nocollapse */ SelectExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SelectExamplesModule_Factory(t) { return new (t || SelectExamplesModule)(); }, imports: [[
             CommonModule,
             FormsModule,
             MatCheckboxModule,

@@ -33,7 +33,7 @@ export declare class TreeFlatOverviewExample {
     }>;
     constructor();
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TreeFlatOverviewExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TreeFlatOverviewExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never>;
 }
 export {};

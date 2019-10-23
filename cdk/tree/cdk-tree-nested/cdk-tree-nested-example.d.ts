@@ -16,7 +16,7 @@ export declare class CdkTreeNestedExample {
     treeControl: NestedTreeControl<FoodNode>;
     dataSource: ArrayDataSource<FoodNode>;
     hasChild: (_: number, node: FoodNode) => boolean;
-    static ngFactoryDef: i0.ɵɵFactoryDef<CdkTreeNestedExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkTreeNestedExample, "cdk-tree-nested-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkTreeNestedExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkTreeNestedExample, "cdk-tree-nested-example", never, {}, {}, never>;
 }
 export {};

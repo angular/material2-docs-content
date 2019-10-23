@@ -18,8 +18,8 @@ var ListOverviewExample = /** @class */ (function () {
                     styleUrls: ['list-overview-example.css'],
                 },] },
     ];
-    ListOverviewExample.ngFactoryDef = function ListOverviewExample_Factory(t) { return new (t || ListOverviewExample)(); };
-    ListOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: ListOverviewExample, selectors: [["list-overview-example"]], decls: 7, vars: 0, consts: [["role", "list"], ["role", "listitem"]], template: function ListOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    ListOverviewExample.ɵfac = function ListOverviewExample_Factory(t) { return new (t || ListOverviewExample)(); };
+    ListOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ListOverviewExample, selectors: [["list-overview-example"]], decls: 7, vars: 0, consts: [["role", "list"], ["role", "listitem"]], template: function ListOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-list", 0);
             ɵɵelementStart(1, "mat-list-item", 1);
             ɵɵtext(2, "Item 1");
@@ -120,8 +120,8 @@ var ListSectionsExample = /** @class */ (function () {
                     templateUrl: 'list-sections-example.html',
                 },] },
     ];
-    ListSectionsExample.ngFactoryDef = function ListSectionsExample_Factory(t) { return new (t || ListSectionsExample)(); };
-    ListSectionsExample.ngComponentDef = ɵɵdefineComponent({ type: ListSectionsExample, selectors: [["list-sections-example"]], decls: 8, vars: 2, consts: [["mat-subheader", ""], [4, "ngFor", "ngForOf"], ["mat-list-icon", ""], ["mat-line", ""]], template: function ListSectionsExample_Template(rf, ctx) { if (rf & 1) {
+    ListSectionsExample.ɵfac = function ListSectionsExample_Factory(t) { return new (t || ListSectionsExample)(); };
+    ListSectionsExample.ɵcmp = ɵɵdefineComponent({ type: ListSectionsExample, selectors: [["list-sections-example"]], decls: 8, vars: 2, consts: [["mat-subheader", ""], [4, "ngFor", "ngForOf"], ["mat-list-icon", ""], ["mat-line", ""]], template: function ListSectionsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-list");
             ɵɵelementStart(1, "h3", 0);
             ɵɵtext(2, "Folders");
@@ -174,8 +174,8 @@ var ListSelectionExample = /** @class */ (function () {
                     templateUrl: 'list-selection-example.html',
                 },] },
     ];
-    ListSelectionExample.ngFactoryDef = function ListSelectionExample_Factory(t) { return new (t || ListSelectionExample)(); };
-    ListSelectionExample.ngComponentDef = ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [[4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
+    ListSelectionExample.ɵfac = function ListSelectionExample_Factory(t) { return new (t || ListSelectionExample)(); };
+    ListSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [[4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-selection-list", null, _c0);
             ɵɵtemplate(2, ListSelectionExample_mat_list_option_2_Template, 2, 1, "mat-list-option", 0);
             ɵɵelementEnd();
@@ -219,8 +219,8 @@ var ListExamplesModule = /** @class */ (function () {
                     exports: EXAMPLES,
                 },] },
     ];
-    ListExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: ListExamplesModule });
-    ListExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function ListExamplesModule_Factory(t) { return new (t || ListExamplesModule)(); }, imports: [[
+    ListExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ListExamplesModule });
+    ListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ListExamplesModule_Factory(t) { return new (t || ListExamplesModule)(); }, imports: [[
                 CommonModule,
                 MatIconModule,
                 MatListModule,

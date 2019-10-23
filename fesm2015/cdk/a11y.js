@@ -6,7 +6,7 @@ import { MatOption } from '@angular/material/core';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Monitoring focus with FocusMonitor
@@ -52,8 +52,8 @@ FocusMonitorDirectivesExample.ctorParameters = () => [
     { type: NgZone },
     { type: ChangeDetectorRef }
 ];
-/** @nocollapse */ FocusMonitorDirectivesExample.ngFactoryDef = function FocusMonitorDirectivesExample_Factory(t) { return new (t || FocusMonitorDirectivesExample)(ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef)); };
-/** @nocollapse */ FocusMonitorDirectivesExample.ngComponentDef = ɵɵdefineComponent({ type: FocusMonitorDirectivesExample, selectors: [["focus-monitor-directives-example"]], decls: 11, vars: 2, consts: [[1, "example-focus-monitor"], ["cdkMonitorSubtreeFocus", "", 3, "cdkFocusChange"]], template: function FocusMonitorDirectivesExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ FocusMonitorDirectivesExample.ɵfac = function FocusMonitorDirectivesExample_Factory(t) { return new (t || FocusMonitorDirectivesExample)(ɵɵdirectiveInject(NgZone), ɵɵdirectiveInject(ChangeDetectorRef)); };
+/** @nocollapse */ FocusMonitorDirectivesExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorDirectivesExample, selectors: [["focus-monitor-directives-example"]], decls: 11, vars: 2, consts: [[1, "example-focus-monitor"], ["cdkMonitorSubtreeFocus", "", 3, "cdkFocusChange"]], template: function FocusMonitorDirectivesExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div", 0);
         ɵɵelementStart(1, "button", 1);
         ɵɵlistener("cdkFocusChange", function FocusMonitorDirectivesExample_Template_button_cdkFocusChange_1_listener($event) { ctx.elementOrigin = ctx.formatOrigin($event); return ctx.markForCheck(); });
@@ -107,7 +107,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = ["monitored"];
 const _c1 = ["monitored", ""];
@@ -175,8 +175,8 @@ FocusMonitorFocusViaExample.ctorParameters = () => [
 FocusMonitorFocusViaExample.propDecorators = {
     monitoredEl: [{ type: ViewChild, args: ['monitored', { static: false },] }]
 };
-/** @nocollapse */ FocusMonitorFocusViaExample.ngFactoryDef = function FocusMonitorFocusViaExample_Factory(t) { return new (t || FocusMonitorFocusViaExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
-/** @nocollapse */ FocusMonitorFocusViaExample.ngComponentDef = ɵɵdefineComponent({ type: FocusMonitorFocusViaExample, selectors: [["focus-monitor-focus-via-example"]], viewQuery: function FocusMonitorFocusViaExample_Query(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ FocusMonitorFocusViaExample.ɵfac = function FocusMonitorFocusViaExample_Factory(t) { return new (t || FocusMonitorFocusViaExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
+/** @nocollapse */ FocusMonitorFocusViaExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorFocusViaExample, selectors: [["focus-monitor-focus-via-example"]], viewQuery: function FocusMonitorFocusViaExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0, true);
     } if (rf & 2) {
         var _t;
@@ -254,7 +254,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0$1 = ["element"];
 const _c1$1 = ["subtree"];
@@ -337,8 +337,8 @@ FocusMonitorOverviewExample.propDecorators = {
     element: [{ type: ViewChild, args: ['element', { static: false },] }],
     subtree: [{ type: ViewChild, args: ['subtree', { static: false },] }]
 };
-/** @nocollapse */ FocusMonitorOverviewExample.ngFactoryDef = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
-/** @nocollapse */ FocusMonitorOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ FocusMonitorOverviewExample.ɵfac = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
+/** @nocollapse */ FocusMonitorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0$1, true);
         ɵɵviewQuery(_c1$1, true);
     } if (rf & 2) {
@@ -412,7 +412,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -432,8 +432,8 @@ CdkA11yExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ CdkA11yExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: CdkA11yExamplesModule });
-/** @nocollapse */ CdkA11yExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function CdkA11yExamplesModule_Factory(t) { return new (t || CdkA11yExamplesModule)(); }, imports: [[
+/** @nocollapse */ CdkA11yExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkA11yExamplesModule });
+/** @nocollapse */ CdkA11yExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkA11yExamplesModule_Factory(t) { return new (t || CdkA11yExamplesModule)(); }, imports: [[
             A11yModule,
             MatSelectModule,
         ]] });

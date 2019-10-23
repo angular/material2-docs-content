@@ -5,6 +5,6 @@ import * as i2 from "@angular/cdk/stepper";
 import * as i3 from "@angular/common";
 export { CdkCustomStepperWithoutFormExample, CustomStepper, };
 export declare class CdkStepperExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<CdkStepperExamplesModule, [typeof i1.CdkCustomStepperWithoutFormExample, typeof i1.CustomStepper], [typeof i2.CdkStepperModule, typeof i3.CommonModule], [typeof i1.CdkCustomStepperWithoutFormExample, typeof i1.CustomStepper]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<CdkStepperExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<CdkStepperExamplesModule, [typeof i1.CdkCustomStepperWithoutFormExample, typeof i1.CustomStepper], [typeof i2.CdkStepperModule, typeof i3.CommonModule], [typeof i1.CdkCustomStepperWithoutFormExample, typeof i1.CustomStepper]>;
+    static ɵinj: i0.ɵɵInjectorDef<CdkStepperExamplesModule>;
 }

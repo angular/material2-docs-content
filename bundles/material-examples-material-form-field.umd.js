@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/checkbox'), require('@angular/material/form-field'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/radio'), require('@angular/material/select'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('rxjs'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/form-field', ['exports', 'tslib', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/checkbox', '@angular/material/form-field', '@angular/material/icon', '@angular/material/input', '@angular/material/radio', '@angular/material/select', '@angular/cdk/a11y', '@angular/cdk/coercion', 'rxjs', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.formField = {}), global.tslib, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.checkbox, global.ng.material.formField, global.ng.material.icon, global.ng.material.input, global.ng.material.radio, global.ng.material.select, global.ng.cdk.a11y, global.ng.cdk.coercion, global.rxjs, global.ng.material.core));
-}(this, function (exports, tslib_1, i4, i0, i1, i3, i2, i1$1, i3$1, i2$1, i3$2, i3$3, i4$1, coercion, rxjs, i4$2) { 'use strict';
+}(this, function (exports, tslib, i4, i0, i1, i3, i2, i1$1, i3$1, i2$1, i3$2, i3$3, i4$1, coercion, rxjs, i4$2) { 'use strict';
 
     /** @title Form field appearance variants */
     var FormFieldAppearanceExample = /** @class */ (function () {
@@ -15,8 +15,8 @@
                         styleUrls: ['form-field-appearance-example.css'],
                     },] },
         ];
-        FormFieldAppearanceExample.ngFactoryDef = function FormFieldAppearanceExample_Factory(t) { return new (t || FormFieldAppearanceExample)(); };
-        FormFieldAppearanceExample.ngComponentDef = i0.ɵɵdefineComponent({ type: FormFieldAppearanceExample, selectors: [["form-field-appearance-example"]], decls: 36, vars: 0, consts: [["appearance", "legacy"], ["matInput", "", "placeholder", "Placeholder"], ["matSuffix", ""], ["appearance", "standard"], ["appearance", "fill"], ["appearance", "outline"]], template: function FormFieldAppearanceExample_Template(rf, ctx) { if (rf & 1) {
+        FormFieldAppearanceExample.ɵfac = function FormFieldAppearanceExample_Factory(t) { return new (t || FormFieldAppearanceExample)(); };
+        FormFieldAppearanceExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldAppearanceExample, selectors: [["form-field-appearance-example"]], decls: 36, vars: 0, consts: [["appearance", "legacy"], ["matInput", "", "placeholder", "Placeholder"], ["matSuffix", ""], ["appearance", "standard"], ["appearance", "fill"], ["appearance", "outline"]], template: function FormFieldAppearanceExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
                 i0.ɵɵelementStart(1, "mat-form-field", 0);
                 i0.ɵɵelementStart(2, "mat-label");
@@ -96,8 +96,8 @@
                         styleUrls: ['form-field-custom-control-example.css'],
                     },] },
         ];
-        FormFieldCustomControlExample.ngFactoryDef = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
-        FormFieldCustomControlExample.ngComponentDef = i0.ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 6, vars: 0, consts: [["placeholder", "Phone number", "required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
+        FormFieldCustomControlExample.ɵfac = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
+        FormFieldCustomControlExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 6, vars: 0, consts: [["placeholder", "Phone number", "required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelement(1, "example-tel-input", 0);
                 i0.ɵɵelementStart(2, "mat-icon", 1);
@@ -271,8 +271,8 @@
             disabled: [{ type: i0.Input }],
             value: [{ type: i0.Input }]
         };
-        MyTelInput.ngFactoryDef = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i1.FormBuilder), i0.ɵɵdirectiveInject(i4$1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1.NgControl, 10)); };
-        MyTelInput.ngComponentDef = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostBindings: function MyTelInput_HostBindings(rf, ctx, elIndex) { if (rf & 1) {
+        MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i1.FormBuilder), i0.ɵɵdirectiveInject(i4$1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1.NgControl, 10)); };
+        MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostBindings: function MyTelInput_HostBindings(rf, ctx, elIndex) { if (rf & 1) {
                 i0.ɵɵallocHostVars(3);
             } if (rf & 2) {
                 i0.ɵɵhostProperty("id", ctx.id);
@@ -354,8 +354,8 @@
                         styleUrls: ['form-field-error-example.css'],
                     },] },
         ];
-        FormFieldErrorExample.ngFactoryDef = function FormFieldErrorExample_Factory(t) { return new (t || FormFieldErrorExample)(); };
-        FormFieldErrorExample.ngComponentDef = i0.ɵɵdefineComponent({ type: FormFieldErrorExample, selectors: [["form-field-error-example"]], decls: 4, vars: 2, consts: [[1, "example-container"], ["matInput", "", "placeholder", "Enter your email", "required", "", 3, "formControl"], [4, "ngIf"]], template: function FormFieldErrorExample_Template(rf, ctx) { if (rf & 1) {
+        FormFieldErrorExample.ɵfac = function FormFieldErrorExample_Factory(t) { return new (t || FormFieldErrorExample)(); };
+        FormFieldErrorExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldErrorExample, selectors: [["form-field-error-example"]], decls: 4, vars: 2, consts: [[1, "example-container"], ["matInput", "", "placeholder", "Enter your email", "required", "", 3, "formControl"], [4, "ngIf"]], template: function FormFieldErrorExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "mat-form-field");
                 i0.ɵɵelement(2, "input", 1);
@@ -391,8 +391,8 @@
                         styleUrls: ['form-field-hint-example.css'],
                     },] },
         ];
-        FormFieldHintExample.ngFactoryDef = function FormFieldHintExample_Factory(t) { return new (t || FormFieldHintExample)(); };
-        FormFieldHintExample.ngComponentDef = i0.ɵɵdefineComponent({ type: FormFieldHintExample, selectors: [["form-field-hint-example"]], decls: 12, vars: 1, consts: [[1, "example-container"], ["hintLabel", "Max 10 characters"], ["matInput", "", "maxlength", "10", "placeholder", "Enter some input"], ["align", "end"], ["placeholder", "Select me"], ["value", "option"]], template: function FormFieldHintExample_Template(rf, ctx) { if (rf & 1) {
+        FormFieldHintExample.ɵfac = function FormFieldHintExample_Factory(t) { return new (t || FormFieldHintExample)(); };
+        FormFieldHintExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldHintExample, selectors: [["form-field-hint-example"]], decls: 12, vars: 1, consts: [[1, "example-container"], ["hintLabel", "Max 10 characters"], ["matInput", "", "maxlength", "10", "placeholder", "Enter some input"], ["align", "end"], ["placeholder", "Select me"], ["value", "option"]], template: function FormFieldHintExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2, _c0);
@@ -446,8 +446,8 @@
         FormFieldLabelExample.ctorParameters = function () { return [
             { type: i1.FormBuilder }
         ]; };
-        FormFieldLabelExample.ngFactoryDef = function FormFieldLabelExample_Factory(t) { return new (t || FormFieldLabelExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        FormFieldLabelExample.ngComponentDef = i0.ɵɵdefineComponent({ type: FormFieldLabelExample, selectors: [["form-field-label-example"]], decls: 33, vars: 6, consts: [[1, "example-container"], [1, "example-container", 3, "formGroup"], ["formControlName", "hideRequired"], ["formControlName", "floatLabel"], ["value", "auto"], ["value", "always"], ["value", "never"], [3, "hideRequiredMarker", "floatLabel"], ["matInput", "", "placeholder", "Simple placeholder", "required", ""], [3, "floatLabel"], ["matInput", "", "placeholder", "Simple placeholder"], ["required", ""], ["value", "option"]], template: function FormFieldLabelExample_Template(rf, ctx) { if (rf & 1) {
+        FormFieldLabelExample.ɵfac = function FormFieldLabelExample_Factory(t) { return new (t || FormFieldLabelExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+        FormFieldLabelExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldLabelExample, selectors: [["form-field-label-example"]], decls: 33, vars: 6, consts: [[1, "example-container"], [1, "example-container", 3, "formGroup"], ["formControlName", "hideRequired"], ["formControlName", "floatLabel"], ["value", "auto"], ["value", "always"], ["value", "never"], [3, "hideRequiredMarker", "floatLabel"], ["matInput", "", "placeholder", "Simple placeholder", "required", ""], [3, "floatLabel"], ["matInput", "", "placeholder", "Simple placeholder"], ["required", ""], ["value", "option"]], template: function FormFieldLabelExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "form", 1);
                 i0.ɵɵelementStart(2, "mat-checkbox", 2);
@@ -510,7 +510,7 @@
                 i0.ɵɵproperty("floatLabel", ctx.options.value.floatLabel);
                 i0.ɵɵadvance(4);
                 i0.ɵɵproperty("hideRequiredMarker", ctx.options.value.hideRequired)("floatLabel", ctx.options.value.floatLabel);
-            } }, directives: [i1.ɵangular_packages_forms_forms_z, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatCheckbox, i1.NgControlStatus, i1.FormControlName, i3$2.MatRadioGroup, i3$2.MatRadioButton, i1$1.MatFormField, i2$1.MatInput, i1$1.MatLabel, i3$3.MatSelect, i4$2.MatOption, i3$1.MatIcon], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 5px 0;\n}\n\n.example-container[_ngcontent-%COMP%]   .mat-radio-button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatCheckbox, i1.NgControlStatus, i1.FormControlName, i3$2.MatRadioGroup, i3$2.MatRadioButton, i1$1.MatFormField, i2$1.MatInput, i1$1.MatLabel, i3$3.MatSelect, i4$2.MatOption, i3$1.MatIcon], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 5px 0;\n}\n\n.example-container[_ngcontent-%COMP%]   .mat-radio-button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
         return FormFieldLabelExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(FormFieldLabelExample, [{
@@ -533,8 +533,8 @@
                         styleUrls: ['form-field-overview-example.css'],
                     },] },
         ];
-        FormFieldOverviewExample.ngFactoryDef = function FormFieldOverviewExample_Factory(t) { return new (t || FormFieldOverviewExample)(); };
-        FormFieldOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: FormFieldOverviewExample, selectors: [["form-field-overview-example"]], decls: 9, vars: 0, consts: [[1, "example-container"], ["matInput", "", "placeholder", "Input"], ["matInput", "", "placeholder", "Textarea"], ["placeholder", "Select"], ["value", "option"]], template: function FormFieldOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        FormFieldOverviewExample.ɵfac = function FormFieldOverviewExample_Factory(t) { return new (t || FormFieldOverviewExample)(); };
+        FormFieldOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldOverviewExample, selectors: [["form-field-overview-example"]], decls: 9, vars: 0, consts: [[1, "example-container"], ["matInput", "", "placeholder", "Input"], ["matInput", "", "placeholder", "Textarea"], ["placeholder", "Select"], ["value", "option"]], template: function FormFieldOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "mat-form-field");
                 i0.ɵɵelement(2, "input", 1);
@@ -574,8 +574,8 @@
                         styleUrls: ['form-field-prefix-suffix-example.css'],
                     },] },
         ];
-        FormFieldPrefixSuffixExample.ngFactoryDef = function FormFieldPrefixSuffixExample_Factory(t) { return new (t || FormFieldPrefixSuffixExample)(); };
-        FormFieldPrefixSuffixExample.ngComponentDef = i0.ɵɵdefineComponent({ type: FormFieldPrefixSuffixExample, selectors: [["form-field-prefix-suffix-example"]], decls: 12, vars: 4, consts: [[1, "example-container"], ["matInput", "", "placeholder", "Enter your password", 3, "type"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], ["matInput", "", "placeholder", "Amount", "type", "number", 1, "example-right-align"], ["matPrefix", ""], ["matSuffix", ""]], template: function FormFieldPrefixSuffixExample_Template(rf, ctx) { if (rf & 1) {
+        FormFieldPrefixSuffixExample.ɵfac = function FormFieldPrefixSuffixExample_Factory(t) { return new (t || FormFieldPrefixSuffixExample)(); };
+        FormFieldPrefixSuffixExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldPrefixSuffixExample, selectors: [["form-field-prefix-suffix-example"]], decls: 12, vars: 4, consts: [[1, "example-container"], ["matInput", "", "placeholder", "Enter your password", 3, "type"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], ["matInput", "", "placeholder", "Amount", "type", "number", 1, "example-right-align"], ["matPrefix", ""], ["matSuffix", ""]], template: function FormFieldPrefixSuffixExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "mat-form-field");
                 i0.ɵɵelement(2, "input", 1);
@@ -642,8 +642,8 @@
         FormFieldThemingExample.ctorParameters = function () { return [
             { type: i1.FormBuilder }
         ]; };
-        FormFieldThemingExample.ngFactoryDef = function FormFieldThemingExample_Factory(t) { return new (t || FormFieldThemingExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        FormFieldThemingExample.ngComponentDef = i0.ɵɵdefineComponent({ type: FormFieldThemingExample, selectors: [["form-field-theming-example"]], decls: 12, vars: 5, consts: [[1, "example-container", 3, "formGroup"], [3, "color"], ["placeholder", "Color", "formControlName", "color"], ["value", "primary"], ["value", "accent"], ["value", "warn"], ["matInput", "", "type", "number", "placeholder", "Font size (px)", "formControlName", "fontSize", "min", "10"], [4, "ngIf"]], template: function FormFieldThemingExample_Template(rf, ctx) { if (rf & 1) {
+        FormFieldThemingExample.ɵfac = function FormFieldThemingExample_Factory(t) { return new (t || FormFieldThemingExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
+        FormFieldThemingExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldThemingExample, selectors: [["form-field-theming-example"]], decls: 12, vars: 5, consts: [[1, "example-container", 3, "formGroup"], [3, "color"], ["placeholder", "Color", "formControlName", "color"], ["value", "primary"], ["value", "accent"], ["value", "warn"], ["matInput", "", "type", "number", "placeholder", "Font size (px)", "formControlName", "fontSize", "min", "10"], [4, "ngIf"]], template: function FormFieldThemingExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelementStart(2, "mat-select", 2);
@@ -674,7 +674,7 @@
                 i0.ɵɵproperty("color", ctx.options.value.color);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("ngIf", currVal_4);
-            } }, directives: [i1.ɵangular_packages_forms_forms_z, i1.NgControlStatusGroup, i1.FormGroupDirective, i1$1.MatFormField, i3$3.MatSelect, i1.NgControlStatus, i1.FormControlName, i4$2.MatOption, i2$1.MatInput, i1.NumberValueAccessor, i1.DefaultValueAccessor, i4.NgIf, i1$1.MatError], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i1$1.MatFormField, i3$3.MatSelect, i1.NgControlStatus, i1.FormControlName, i4$2.MatOption, i2$1.MatInput, i1.NumberValueAccessor, i1.DefaultValueAccessor, i4.NgIf, i1$1.MatError], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return FormFieldThemingExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(FormFieldThemingExample, [{
@@ -712,12 +712,12 @@
                             i3$3.MatSelectModule,
                             i1.ReactiveFormsModule,
                         ],
-                        declarations: tslib_1.__spread(EXAMPLES, [MyTelInput]),
+                        declarations: tslib.__spread(EXAMPLES, [MyTelInput]),
                         exports: EXAMPLES,
                     },] },
         ];
-        FormFieldExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: FormFieldExamplesModule });
-        FormFieldExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function FormFieldExamplesModule_Factory(t) { return new (t || FormFieldExamplesModule)(); }, imports: [[
+        FormFieldExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: FormFieldExamplesModule });
+        FormFieldExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function FormFieldExamplesModule_Factory(t) { return new (t || FormFieldExamplesModule)(); }, imports: [[
                     i4.CommonModule,
                     i3.MatButtonModule,
                     i2.MatCheckboxModule,
@@ -768,7 +768,7 @@
                         i3$3.MatSelectModule,
                         i1.ReactiveFormsModule,
                     ],
-                    declarations: tslib_1.__spread(EXAMPLES, [MyTelInput]),
+                    declarations: tslib.__spread(EXAMPLES, [MyTelInput]),
                     exports: EXAMPLES,
                 }]
         }], null, null);

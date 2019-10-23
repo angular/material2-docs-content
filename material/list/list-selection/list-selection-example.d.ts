@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
  */
 export declare class ListSelectionExample {
     typesOfShoes: string[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<ListSelectionExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ListSelectionExample, "list-selection-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<ListSelectionExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<ListSelectionExample, "list-selection-example", never, {}, {}, never>;
 }

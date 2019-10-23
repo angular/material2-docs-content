@@ -96,7 +96,7 @@ export { TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, Tree
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /* tslint:disable */
 /**
@@ -138,8 +138,8 @@ ExampleModule.decorators = [
                 entryComponents: EXAMPLE_LIST,
             },] },
 ];
-/** @nocollapse */ ExampleModule.ngModuleDef = ɵɵdefineNgModule({ type: ExampleModule });
-/** @nocollapse */ ExampleModule.ngInjectorDef = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, imports: [EXAMPLE_MODULES,
+/** @nocollapse */ ExampleModule.ɵmod = ɵɵdefineNgModule({ type: ExampleModule });
+/** @nocollapse */ ExampleModule.ɵinj = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, imports: [EXAMPLE_MODULES,
         CdkPopoverEditExamplesModule, CdkA11yExamplesModule, CdkClipboardExamplesModule, CdkDragDropExamplesModule, CdkPlatformExamplesModule, CdkPortalExamplesModule, CdkScrollingExamplesModule, CdkStepperExamplesModule, CdkTableExamplesModule, CdkTextFieldExamplesModule, CdkTreeExamplesModule, PopoverEditExamplesModule, AutocompleteExamplesModule, BadgeExamplesModule, BottomSheetExamplesModule, ButtonToggleExamplesModule, ButtonExamplesModule, CardExamplesModule, CheckboxExamplesModule, ChipsExamplesModule, CoreExamplesModule, DatepickerExamplesModule, DialogExamplesModule, DividerExamplesModule, ExpansionExamplesModule, FormFieldExamplesModule, GridListExamplesModule, IconExamplesModule, InputExamplesModule, ListExamplesModule, MenuExamplesModule, PaginatorExamplesModule, ProgressBarExamplesModule, ProgressSpinnerExamplesModule, RadioExamplesModule, SelectExamplesModule, SidenavExamplesModule, SlideToggleExamplesModule, SliderExamplesModule, SnackBarExamplesModule, SortExamplesModule, StepperExamplesModule, TableExamplesModule, TabGroupExamplesModule, ToolbarExamplesModule, TooltipExamplesModule, TreeExamplesModule] });
 /*@__PURE__*/ ɵɵsetNgModuleScope(ExampleModule, { imports: [CdkPopoverEditExamplesModule, CdkA11yExamplesModule, CdkClipboardExamplesModule, CdkDragDropExamplesModule, CdkPlatformExamplesModule, CdkPortalExamplesModule, CdkScrollingExamplesModule, CdkStepperExamplesModule, CdkTableExamplesModule, CdkTextFieldExamplesModule, CdkTreeExamplesModule, PopoverEditExamplesModule, AutocompleteExamplesModule, BadgeExamplesModule, BottomSheetExamplesModule, ButtonToggleExamplesModule, ButtonExamplesModule, CardExamplesModule, CheckboxExamplesModule, ChipsExamplesModule, CoreExamplesModule, DatepickerExamplesModule, DialogExamplesModule, DividerExamplesModule, ExpansionExamplesModule, FormFieldExamplesModule, GridListExamplesModule, IconExamplesModule, InputExamplesModule, ListExamplesModule, MenuExamplesModule, PaginatorExamplesModule, ProgressBarExamplesModule, ProgressSpinnerExamplesModule, RadioExamplesModule, SelectExamplesModule, SidenavExamplesModule, SlideToggleExamplesModule, SliderExamplesModule, SnackBarExamplesModule, SortExamplesModule, StepperExamplesModule, TableExamplesModule, TabGroupExamplesModule, ToolbarExamplesModule, TooltipExamplesModule, TreeExamplesModule], exports: [CdkPopoverEditExamplesModule, CdkA11yExamplesModule, CdkClipboardExamplesModule, CdkDragDropExamplesModule, CdkPlatformExamplesModule, CdkPortalExamplesModule, CdkScrollingExamplesModule, CdkStepperExamplesModule, CdkTableExamplesModule, CdkTextFieldExamplesModule, CdkTreeExamplesModule, PopoverEditExamplesModule, AutocompleteExamplesModule, BadgeExamplesModule, BottomSheetExamplesModule, ButtonToggleExamplesModule, ButtonExamplesModule, CardExamplesModule, CheckboxExamplesModule, ChipsExamplesModule, CoreExamplesModule, DatepickerExamplesModule, DialogExamplesModule, DividerExamplesModule, ExpansionExamplesModule, FormFieldExamplesModule, GridListExamplesModule, IconExamplesModule, InputExamplesModule, ListExamplesModule, MenuExamplesModule, PaginatorExamplesModule, ProgressBarExamplesModule, ProgressSpinnerExamplesModule, RadioExamplesModule, SelectExamplesModule, SidenavExamplesModule, SlideToggleExamplesModule, SliderExamplesModule, SnackBarExamplesModule, SortExamplesModule, StepperExamplesModule, TableExamplesModule, TabGroupExamplesModule, ToolbarExamplesModule, TooltipExamplesModule, TreeExamplesModule] });
 /*@__PURE__*/ ɵsetClassMetadata(ExampleModule, [{
@@ -153,7 +153,7 @@ ExampleModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * Example data
@@ -221,7 +221,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**

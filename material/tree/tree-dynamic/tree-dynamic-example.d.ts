@@ -43,8 +43,8 @@ export declare class DynamicDataSource implements DataSource<DynamicFlatNode> {
      * Toggle the node, remove from display list
      */
     toggleNode(node: DynamicFlatNode, expand: boolean): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<DynamicDataSource>;
-    static ngInjectableDef: i0.ɵɵInjectableDef<DynamicDataSource>;
+    static ɵfac: i0.ɵɵFactoryDef<DynamicDataSource>;
+    static ɵprov: i0.ɵɵInjectableDef<DynamicDataSource>;
 }
 /**
  * @title Tree with dynamic data
@@ -56,6 +56,6 @@ export declare class TreeDynamicExample {
     getLevel: (node: DynamicFlatNode) => number;
     isExpandable: (node: DynamicFlatNode) => boolean;
     hasChild: (_: number, _nodeData: DynamicFlatNode) => boolean;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TreeDynamicExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TreeDynamicExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeDynamicExample, "tree-dynamic-example", never, {}, {}, never>;
 }

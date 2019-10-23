@@ -11,6 +11,6 @@ import * as i7 from "@angular/material/slider";
 import * as i8 from "@angular/forms";
 export { ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, };
 export declare class ProgressSpinnerExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<ProgressSpinnerExamplesModule, [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerOverviewExample], [typeof i3.CommonModule, typeof i4.MatCardModule, typeof i5.MatProgressSpinnerModule, typeof i6.MatRadioModule, typeof i7.MatSliderModule, typeof i8.FormsModule], [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerOverviewExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<ProgressSpinnerExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<ProgressSpinnerExamplesModule, [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerOverviewExample], [typeof i3.CommonModule, typeof i4.MatCardModule, typeof i5.MatProgressSpinnerModule, typeof i6.MatRadioModule, typeof i7.MatSliderModule, typeof i8.FormsModule], [typeof i1.ProgressSpinnerConfigurableExample, typeof i2.ProgressSpinnerOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<ProgressSpinnerExamplesModule>;
 }

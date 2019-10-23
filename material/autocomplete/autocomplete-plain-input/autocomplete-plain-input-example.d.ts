@@ -12,6 +12,6 @@ export declare class AutocompletePlainInputExample implements OnInit {
     ngOnInit(): void;
     private _filter;
     private _normalizeValue;
-    static ngFactoryDef: i0.ɵɵFactoryDef<AutocompletePlainInputExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<AutocompletePlainInputExample, "autocomplete-plain-input-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<AutocompletePlainInputExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<AutocompletePlainInputExample, "autocomplete-plain-input-example", never, {}, {}, never>;
 }

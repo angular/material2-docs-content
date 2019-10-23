@@ -28,8 +28,8 @@
                         styleUrls: ['radio-ng-model-example.css'],
                     },] },
         ];
-        RadioNgModelExample.ngFactoryDef = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
-        RadioNgModelExample.ngComponentDef = i0.ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) { if (rf & 1) {
+        RadioNgModelExample.ɵfac = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
+        RadioNgModelExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "label", 0);
                 i0.ɵɵtext(1, "Pick your favorite season");
                 i0.ɵɵelementEnd();
@@ -72,8 +72,8 @@
                         styleUrls: ['radio-overview-example.css'],
                     },] },
         ];
-        RadioOverviewExample.ngFactoryDef = function RadioOverviewExample_Factory(t) { return new (t || RadioOverviewExample)(); };
-        RadioOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        RadioOverviewExample.ɵfac = function RadioOverviewExample_Factory(t) { return new (t || RadioOverviewExample)(); };
+        RadioOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-radio-group", 0);
                 i0.ɵɵelementStart(1, "mat-radio-button", 1);
                 i0.ɵɵtext(2, "Option 1");
@@ -112,8 +112,8 @@
                         exports: EXAMPLES,
                     },] },
         ];
-        RadioExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: RadioExamplesModule });
-        RadioExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); }, imports: [[
+        RadioExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: RadioExamplesModule });
+        RadioExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); }, imports: [[
                     i3.CommonModule,
                     i1.MatRadioModule,
                     i2.FormsModule,

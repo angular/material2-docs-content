@@ -7,6 +7,6 @@ export declare class CdkDragDropConnectedSortingGroupExample {
     todo: string[];
     done: string[];
     drop(event: CdkDragDrop<string[]>): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<CdkDragDropConnectedSortingGroupExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkDragDropConnectedSortingGroupExample, "cdk-drag-drop-connected-sorting-group-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropConnectedSortingGroupExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropConnectedSortingGroupExample, "cdk-drag-drop-connected-sorting-group-example", never, {}, {}, never>;
 }

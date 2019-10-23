@@ -8,7 +8,7 @@ import { MatFormField } from '@angular/material/form-field';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Elevation CSS classes
@@ -25,8 +25,8 @@ ElevationOverviewExample.decorators = [
                 templateUrl: 'elevation-overview-example.html',
             },] },
 ];
-/** @nocollapse */ ElevationOverviewExample.ngFactoryDef = function ElevationOverviewExample_Factory(t) { return new (t || ElevationOverviewExample)(); };
-/** @nocollapse */ ElevationOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: ElevationOverviewExample, selectors: [["elevation-overview-example"]], decls: 4, vars: 2, consts: [[1, "example-container"], ["mat-button", "", 3, "click"]], template: function ElevationOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ElevationOverviewExample.ɵfac = function ElevationOverviewExample_Factory(t) { return new (t || ElevationOverviewExample)(); };
+/** @nocollapse */ ElevationOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ElevationOverviewExample, selectors: [["elevation-overview-example"]], decls: 4, vars: 2, consts: [[1, "example-container"], ["mat-button", "", 3, "click"]], template: function ElevationOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div", 0);
         ɵɵtext(1, " Example\n");
         ɵɵelementEnd();
@@ -53,7 +53,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title MatRipple basic usage
@@ -72,8 +72,8 @@ RippleOverviewExample.decorators = [
                 styleUrls: ['ripple-overview-example.css'],
             },] },
 ];
-/** @nocollapse */ RippleOverviewExample.ngFactoryDef = function RippleOverviewExample_Factory(t) { return new (t || RippleOverviewExample)(); };
-/** @nocollapse */ RippleOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: RippleOverviewExample, selectors: [["ripple-overview-example"]], decls: 12, vars: 10, consts: [[1, "example-ripple-checkbox", 3, "ngModel", "ngModelChange"], [1, "example-ripple-form-field"], ["matInput", "", "type", "number", "placeholder", "Radius", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "text", "placeholder", "Color", 3, "ngModel", "ngModelChange"], ["matRipple", "", 1, "example-ripple-container", "mat-elevation-z4", 3, "matRippleCentered", "matRippleDisabled", "matRippleUnbounded", "matRippleRadius", "matRippleColor"]], template: function RippleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ RippleOverviewExample.ɵfac = function RippleOverviewExample_Factory(t) { return new (t || RippleOverviewExample)(); };
+/** @nocollapse */ RippleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: RippleOverviewExample, selectors: [["ripple-overview-example"]], decls: 12, vars: 10, consts: [[1, "example-ripple-checkbox", 3, "ngModel", "ngModelChange"], [1, "example-ripple-form-field"], ["matInput", "", "type", "number", "placeholder", "Radius", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "text", "placeholder", "Color", 3, "ngModel", "ngModelChange"], ["matRipple", "", 1, "example-ripple-container", "mat-elevation-z4", 3, "matRippleCentered", "matRippleDisabled", "matRippleUnbounded", "matRippleRadius", "matRippleColor"]], template: function RippleOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-checkbox", 0);
         ɵɵlistener("ngModelChange", function RippleOverviewExample_Template_mat_checkbox_ngModelChange_0_listener($event) { return ctx.centered = $event; });
         ɵɵtext(1, "Centered");
@@ -135,7 +135,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -157,8 +157,8 @@ CoreExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ CoreExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: CoreExamplesModule });
-/** @nocollapse */ CoreExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function CoreExamplesModule_Factory(t) { return new (t || CoreExamplesModule)(); }, imports: [[
+/** @nocollapse */ CoreExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CoreExamplesModule });
+/** @nocollapse */ CoreExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CoreExamplesModule_Factory(t) { return new (t || CoreExamplesModule)(); }, imports: [[
             MatButtonModule,
             MatCheckboxModule,
             MatInputModule,

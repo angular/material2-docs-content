@@ -4,7 +4,7 @@ import { MatSort, MatSortHeader, MatSortModule } from '@angular/material/sort';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SortOverviewExample_tr_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "tr");
@@ -106,8 +106,8 @@ SortOverviewExample.decorators = [
 ];
 /** @nocollapse */
 SortOverviewExample.ctorParameters = () => [];
-/** @nocollapse */ SortOverviewExample.ngFactoryDef = function SortOverviewExample_Factory(t) { return new (t || SortOverviewExample)(); };
-/** @nocollapse */ SortOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: SortOverviewExample, selectors: [["sort-overview-example"]], decls: 13, vars: 1, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SortOverviewExample.ɵfac = function SortOverviewExample_Factory(t) { return new (t || SortOverviewExample)(); };
+/** @nocollapse */ SortOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SortOverviewExample, selectors: [["sort-overview-example"]], decls: 13, vars: 1, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "table", 0);
         ɵɵlistener("matSortChange", function SortOverviewExample_Template_table_matSortChange_0_listener($event) { return ctx.sortData($event); });
         ɵɵelementStart(1, "tr");
@@ -159,7 +159,7 @@ function compare(a, b, isAsc) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -177,8 +177,8 @@ SortExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ SortExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: SortExamplesModule });
-/** @nocollapse */ SortExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function SortExamplesModule_Factory(t) { return new (t || SortExamplesModule)(); }, imports: [[
+/** @nocollapse */ SortExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SortExamplesModule });
+/** @nocollapse */ SortExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SortExamplesModule_Factory(t) { return new (t || SortExamplesModule)(); }, imports: [[
             CommonModule,
             MatSortModule,
         ]] });

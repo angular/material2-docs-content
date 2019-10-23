@@ -7,6 +7,6 @@ import * as i3 from "@angular/common";
 import * as i4 from "@angular/material/grid-list";
 export { GridListDynamicExample, GridListOverviewExample, };
 export declare class GridListExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<GridListExamplesModule, [typeof i1.GridListDynamicExample, typeof i2.GridListOverviewExample], [typeof i3.CommonModule, typeof i4.MatGridListModule], [typeof i1.GridListDynamicExample, typeof i2.GridListOverviewExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<GridListExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<GridListExamplesModule, [typeof i1.GridListDynamicExample, typeof i2.GridListOverviewExample], [typeof i3.CommonModule, typeof i4.MatGridListModule], [typeof i1.GridListDynamicExample, typeof i2.GridListOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<GridListExamplesModule>;
 }

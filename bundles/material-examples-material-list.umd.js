@@ -17,8 +17,8 @@
                         styleUrls: ['list-overview-example.css'],
                     },] },
         ];
-        ListOverviewExample.ngFactoryDef = function ListOverviewExample_Factory(t) { return new (t || ListOverviewExample)(); };
-        ListOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: ListOverviewExample, selectors: [["list-overview-example"]], decls: 7, vars: 0, consts: [["role", "list"], ["role", "listitem"]], template: function ListOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        ListOverviewExample.ɵfac = function ListOverviewExample_Factory(t) { return new (t || ListOverviewExample)(); };
+        ListOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ListOverviewExample, selectors: [["list-overview-example"]], decls: 7, vars: 0, consts: [["role", "list"], ["role", "listitem"]], template: function ListOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-list", 0);
                 i0.ɵɵelementStart(1, "mat-list-item", 1);
                 i0.ɵɵtext(2, "Item 1");
@@ -119,8 +119,8 @@
                         templateUrl: 'list-sections-example.html',
                     },] },
         ];
-        ListSectionsExample.ngFactoryDef = function ListSectionsExample_Factory(t) { return new (t || ListSectionsExample)(); };
-        ListSectionsExample.ngComponentDef = i0.ɵɵdefineComponent({ type: ListSectionsExample, selectors: [["list-sections-example"]], decls: 8, vars: 2, consts: [["mat-subheader", ""], [4, "ngFor", "ngForOf"], ["mat-list-icon", ""], ["mat-line", ""]], template: function ListSectionsExample_Template(rf, ctx) { if (rf & 1) {
+        ListSectionsExample.ɵfac = function ListSectionsExample_Factory(t) { return new (t || ListSectionsExample)(); };
+        ListSectionsExample.ɵcmp = i0.ɵɵdefineComponent({ type: ListSectionsExample, selectors: [["list-sections-example"]], decls: 8, vars: 2, consts: [["mat-subheader", ""], [4, "ngFor", "ngForOf"], ["mat-list-icon", ""], ["mat-line", ""]], template: function ListSectionsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-list");
                 i0.ɵɵelementStart(1, "h3", 0);
                 i0.ɵɵtext(2, "Folders");
@@ -173,8 +173,8 @@
                         templateUrl: 'list-selection-example.html',
                     },] },
         ];
-        ListSelectionExample.ngFactoryDef = function ListSelectionExample_Factory(t) { return new (t || ListSelectionExample)(); };
-        ListSelectionExample.ngComponentDef = i0.ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [[4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
+        ListSelectionExample.ɵfac = function ListSelectionExample_Factory(t) { return new (t || ListSelectionExample)(); };
+        ListSelectionExample.ɵcmp = i0.ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [[4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-selection-list", null, _c0);
                 i0.ɵɵtemplate(2, ListSelectionExample_mat_list_option_2_Template, 2, 1, "mat-list-option", 0);
                 i0.ɵɵelementEnd();
@@ -218,8 +218,8 @@
                         exports: EXAMPLES,
                     },] },
         ];
-        ListExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: ListExamplesModule });
-        ListExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function ListExamplesModule_Factory(t) { return new (t || ListExamplesModule)(); }, imports: [[
+        ListExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ListExamplesModule });
+        ListExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ListExamplesModule_Factory(t) { return new (t || ListExamplesModule)(); }, imports: [[
                     i2.CommonModule,
                     i4.MatIconModule,
                     i1.MatListModule,

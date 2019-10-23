@@ -10,6 +10,6 @@ export declare class StepperStatesExample implements OnInit {
     secondFormGroup: FormGroup;
     constructor(_formBuilder: FormBuilder);
     ngOnInit(): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<StepperStatesExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<StepperStatesExample, "stepper-states-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<StepperStatesExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<StepperStatesExample, "stepper-states-example", never, {}, {}, never>;
 }

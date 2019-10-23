@@ -9,6 +9,6 @@ export interface ChipColor {
  */
 export declare class ChipsStackedExample {
     availableColors: ChipColor[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<ChipsStackedExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ChipsStackedExample, "chips-stacked-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<ChipsStackedExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<ChipsStackedExample, "chips-stacked-example", never, {}, {}, never>;
 }

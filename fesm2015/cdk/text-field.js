@@ -9,7 +9,7 @@ import { MatOption } from '@angular/material/core';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TextFieldAutofillDirectiveExample_mat_hint_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-hint");
@@ -33,8 +33,8 @@ TextFieldAutofillDirectiveExample.decorators = [
                 styleUrls: ['./text-field-autofill-directive-example.css'],
             },] },
 ];
-/** @nocollapse */ TextFieldAutofillDirectiveExample.ngFactoryDef = function TextFieldAutofillDirectiveExample_Factory(t) { return new (t || TextFieldAutofillDirectiveExample)(); };
-/** @nocollapse */ TextFieldAutofillDirectiveExample.ngComponentDef = ɵɵdefineComponent({ type: TextFieldAutofillDirectiveExample, selectors: [["text-field-autofill-directive-example"]], decls: 13, vars: 2, consts: [["matInput", "", 3, "cdkAutofill"], [4, "ngIf"], ["mat-raised-button", ""]], template: function TextFieldAutofillDirectiveExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TextFieldAutofillDirectiveExample.ɵfac = function TextFieldAutofillDirectiveExample_Factory(t) { return new (t || TextFieldAutofillDirectiveExample)(); };
+/** @nocollapse */ TextFieldAutofillDirectiveExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutofillDirectiveExample, selectors: [["text-field-autofill-directive-example"]], decls: 13, vars: 2, consts: [["matInput", "", 3, "cdkAutofill"], [4, "ngIf"], ["mat-raised-button", ""]], template: function TextFieldAutofillDirectiveExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "form");
         ɵɵelementStart(1, "mat-form-field");
         ɵɵelementStart(2, "mat-label");
@@ -81,7 +81,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = ["first"];
 const _c1 = ["last"];
@@ -147,8 +147,8 @@ TextFieldAutofillMonitorExample.propDecorators = {
     firstName: [{ type: ViewChild, args: ['first', { read: ElementRef, static: false },] }],
     lastName: [{ type: ViewChild, args: ['last', { read: ElementRef, static: false },] }]
 };
-/** @nocollapse */ TextFieldAutofillMonitorExample.ngFactoryDef = function TextFieldAutofillMonitorExample_Factory(t) { return new (t || TextFieldAutofillMonitorExample)(ɵɵdirectiveInject(AutofillMonitor)); };
-/** @nocollapse */ TextFieldAutofillMonitorExample.ngComponentDef = ɵɵdefineComponent({ type: TextFieldAutofillMonitorExample, selectors: [["text-field-autofill-monitor-example"]], viewQuery: function TextFieldAutofillMonitorExample_Query(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TextFieldAutofillMonitorExample.ɵfac = function TextFieldAutofillMonitorExample_Factory(t) { return new (t || TextFieldAutofillMonitorExample)(ɵɵdirectiveInject(AutofillMonitor)); };
+/** @nocollapse */ TextFieldAutofillMonitorExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutofillMonitorExample, selectors: [["text-field-autofill-monitor-example"]], viewQuery: function TextFieldAutofillMonitorExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0, true, ElementRef);
         ɵɵviewQuery(_c1, true, ElementRef);
     } if (rf & 2) {
@@ -213,7 +213,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0$1 = ["autosize"];
 const _c1$1 = ["fontSize", ""];
@@ -254,8 +254,8 @@ TextFieldAutosizeTextareaExample.ctorParameters = () => [
 TextFieldAutosizeTextareaExample.propDecorators = {
     autosize: [{ type: ViewChild, args: ['autosize', { static: false },] }]
 };
-/** @nocollapse */ TextFieldAutosizeTextareaExample.ngFactoryDef = function TextFieldAutosizeTextareaExample_Factory(t) { return new (t || TextFieldAutosizeTextareaExample)(ɵɵdirectiveInject(NgZone)); };
-/** @nocollapse */ TextFieldAutosizeTextareaExample.ngComponentDef = ɵɵdefineComponent({ type: TextFieldAutosizeTextareaExample, selectors: [["text-field-autosize-textarea-example"]], viewQuery: function TextFieldAutosizeTextareaExample_Query(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TextFieldAutosizeTextareaExample.ɵfac = function TextFieldAutosizeTextareaExample_Factory(t) { return new (t || TextFieldAutosizeTextareaExample)(ɵɵdirectiveInject(NgZone)); };
+/** @nocollapse */ TextFieldAutosizeTextareaExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutosizeTextareaExample, selectors: [["text-field-autosize-textarea-example"]], viewQuery: function TextFieldAutosizeTextareaExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0$1, true);
     } if (rf & 2) {
         var _t;
@@ -321,7 +321,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -343,8 +343,8 @@ CdkTextFieldExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ CdkTextFieldExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: CdkTextFieldExamplesModule });
-/** @nocollapse */ CdkTextFieldExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function CdkTextFieldExamplesModule_Factory(t) { return new (t || CdkTextFieldExamplesModule)(); }, imports: [[
+/** @nocollapse */ CdkTextFieldExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkTextFieldExamplesModule });
+/** @nocollapse */ CdkTextFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTextFieldExamplesModule_Factory(t) { return new (t || CdkTextFieldExamplesModule)(); }, imports: [[
             CommonModule,
             TextFieldModule,
             MatInputModule,

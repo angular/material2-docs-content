@@ -25,8 +25,8 @@ var DatepickerApiExample = /** @class */ (function () {
                     styleUrls: ['datepicker-api-example.css'],
                 },] },
     ];
-    DatepickerApiExample.ngFactoryDef = function DatepickerApiExample_Factory(t) { return new (t || DatepickerApiExample)(); };
-    DatepickerApiExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerApiExample, selectors: [["datepicker-api-example"]], decls: 6, vars: 1, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["mat-raised-button", "", 3, "click"]], template: function DatepickerApiExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerApiExample.ɵfac = function DatepickerApiExample_Factory(t) { return new (t || DatepickerApiExample)(); };
+    DatepickerApiExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerApiExample, selectors: [["datepicker-api-example"]], decls: 6, vars: 1, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["mat-raised-button", "", 3, "click"]], template: function DatepickerApiExample_Template(rf, ctx) { if (rf & 1) {
             var _r1 = ɵɵgetCurrentView();
             ɵɵelementStart(0, "mat-form-field", 0);
             ɵɵelement(1, "input", 1);
@@ -65,8 +65,8 @@ var DatepickerColorExample = /** @class */ (function () {
                     styleUrls: ['datepicker-color-example.css'],
                 },] },
     ];
-    DatepickerColorExample.ngFactoryDef = function DatepickerColorExample_Factory(t) { return new (t || DatepickerColorExample)(); };
-    DatepickerColorExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerColorExample, selectors: [["datepicker-color-example"]], decls: 14, vars: 4, consts: [["color", "accent"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["color", "primary"]], template: function DatepickerColorExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerColorExample.ɵfac = function DatepickerColorExample_Factory(t) { return new (t || DatepickerColorExample)(); };
+    DatepickerColorExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerColorExample, selectors: [["datepicker-color-example"]], decls: 14, vars: 4, consts: [["color", "accent"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["color", "primary"]], template: function DatepickerColorExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Inherited calendar color");
@@ -119,8 +119,8 @@ var DatepickerCustomHeaderExample = /** @class */ (function () {
                     changeDetection: ChangeDetectionStrategy.OnPush,
                 },] },
     ];
-    DatepickerCustomHeaderExample.ngFactoryDef = function DatepickerCustomHeaderExample_Factory(t) { return new (t || DatepickerCustomHeaderExample)(); };
-    DatepickerCustomHeaderExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerCustomHeaderExample, selectors: [["datepicker-custom-header-example"]], decls: 7, vars: 3, consts: [["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], [3, "calendarHeaderComponent"]], template: function DatepickerCustomHeaderExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerCustomHeaderExample.ɵfac = function DatepickerCustomHeaderExample_Factory(t) { return new (t || DatepickerCustomHeaderExample)(); };
+    DatepickerCustomHeaderExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerCustomHeaderExample, selectors: [["datepicker-custom-header-example"]], decls: 7, vars: 3, consts: [["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], [3, "calendarHeaderComponent"]], template: function DatepickerCustomHeaderExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
             ɵɵtext(2, "Custom calendar header");
@@ -197,8 +197,8 @@ var ExampleHeader = /** @class */ (function () {
         { type: undefined, decorators: [{ type: Inject, args: [MAT_DATE_FORMATS,] }] },
         { type: ChangeDetectorRef }
     ]; };
-    ExampleHeader.ngFactoryDef = function ExampleHeader_Factory(t) { return new (t || ExampleHeader)(ɵɵdirectiveInject(MatCalendar), ɵɵdirectiveInject(DateAdapter), ɵɵdirectiveInject(MAT_DATE_FORMATS), ɵɵdirectiveInject(ChangeDetectorRef)); };
-    ExampleHeader.ngComponentDef = ɵɵdefineComponent({ type: ExampleHeader, selectors: [["example-header"]], decls: 19, vars: 1, consts: [[1, "example-header"], ["mat-icon-button", "", 1, "example-double-arrow", 3, "click"], ["mat-icon-button", "", 3, "click"], [1, "example-header-label"]], template: function ExampleHeader_Template(rf, ctx) { if (rf & 1) {
+    ExampleHeader.ɵfac = function ExampleHeader_Factory(t) { return new (t || ExampleHeader)(ɵɵdirectiveInject(MatCalendar), ɵɵdirectiveInject(DateAdapter), ɵɵdirectiveInject(MAT_DATE_FORMATS), ɵɵdirectiveInject(ChangeDetectorRef)); };
+    ExampleHeader.ɵcmp = ɵɵdefineComponent({ type: ExampleHeader, selectors: [["example-header"]], decls: 19, vars: 1, consts: [[1, "example-header"], ["mat-icon-button", "", 1, "example-double-arrow", 3, "click"], ["mat-icon-button", "", 3, "click"], [1, "example-header-label"]], template: function ExampleHeader_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "button", 1);
             ɵɵlistener("click", function ExampleHeader_Template_button_click_1_listener($event) { return ctx.previousClicked("year"); });
@@ -265,8 +265,8 @@ var DatepickerCustomIconExample = /** @class */ (function () {
                     styleUrls: ['datepicker-custom-icon-example.css'],
                 },] },
     ];
-    DatepickerCustomIconExample.ngFactoryDef = function DatepickerCustomIconExample_Factory(t) { return new (t || DatepickerCustomIconExample)(); };
-    DatepickerCustomIconExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerCustomIconExample, selectors: [["datepicker-custom-icon-example"]], decls: 7, vars: 2, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["matDatepickerToggleIcon", ""]], template: function DatepickerCustomIconExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerCustomIconExample.ɵfac = function DatepickerCustomIconExample_Factory(t) { return new (t || DatepickerCustomIconExample)(); };
+    DatepickerCustomIconExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerCustomIconExample, selectors: [["datepicker-custom-icon-example"]], decls: 7, vars: 2, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["matDatepickerToggleIcon", ""]], template: function DatepickerCustomIconExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
             ɵɵelement(1, "input", 1);
             ɵɵelementStart(2, "mat-datepicker-toggle", 2);
@@ -312,8 +312,8 @@ var DatepickerDateClassExample = /** @class */ (function () {
                     encapsulation: ViewEncapsulation.None,
                 },] },
     ];
-    DatepickerDateClassExample.ngFactoryDef = function DatepickerDateClassExample_Factory(t) { return new (t || DatepickerDateClassExample)(); };
-    DatepickerDateClassExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerDateClassExample, selectors: [["datepicker-date-class-example"]], decls: 5, vars: 3, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], [3, "dateClass"]], template: function DatepickerDateClassExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerDateClassExample.ɵfac = function DatepickerDateClassExample_Factory(t) { return new (t || DatepickerDateClassExample)(); };
+    DatepickerDateClassExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerDateClassExample, selectors: [["datepicker-date-class-example"]], decls: 5, vars: 3, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], [3, "dateClass"]], template: function DatepickerDateClassExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
             ɵɵelement(1, "input", 1);
             ɵɵelement(2, "mat-datepicker-toggle", 2);
@@ -354,8 +354,8 @@ var DatepickerDisabledExample = /** @class */ (function () {
                     styleUrls: ['datepicker-disabled-example.css'],
                 },] },
     ];
-    DatepickerDisabledExample.ngFactoryDef = function DatepickerDisabledExample_Factory(t) { return new (t || DatepickerDisabledExample)(); };
-    DatepickerDisabledExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerDisabledExample, selectors: [["datepicker-disabled-example"]], decls: 18, vars: 6, consts: [["matInput", "", "placeholder", "Completely disabled", "disabled", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["matInput", "", "placeholder", "Popup disabled", 3, "matDatepicker"], ["matSuffix", "", "disabled", "", 3, "for"], ["matInput", "", "placeholder", "Input disabled", "disabled", "", 3, "matDatepicker"], ["disabled", "false"]], template: function DatepickerDisabledExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerDisabledExample.ɵfac = function DatepickerDisabledExample_Factory(t) { return new (t || DatepickerDisabledExample)(); };
+    DatepickerDisabledExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerDisabledExample, selectors: [["datepicker-disabled-example"]], decls: 18, vars: 6, consts: [["matInput", "", "placeholder", "Completely disabled", "disabled", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["matInput", "", "placeholder", "Popup disabled", 3, "matDatepicker"], ["matSuffix", "", "disabled", "", 3, "for"], ["matInput", "", "placeholder", "Input disabled", "disabled", "", 3, "matDatepicker"], ["disabled", "false"]], template: function DatepickerDisabledExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵelementStart(1, "mat-form-field");
             ɵɵelement(2, "input", 0);
@@ -430,8 +430,8 @@ var DatepickerEventsExample = /** @class */ (function () {
                     styleUrls: ['datepicker-events-example.css'],
                 },] },
     ];
-    DatepickerEventsExample.ngFactoryDef = function DatepickerEventsExample_Factory(t) { return new (t || DatepickerEventsExample)(); };
-    DatepickerEventsExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerEventsExample, selectors: [["datepicker-events-example"]], decls: 7, vars: 3, consts: [["matInput", "", "placeholder", "Input & change events", 3, "matDatepicker", "dateInput", "dateChange"], ["matSuffix", "", 3, "for"], [1, "example-events"], [4, "ngFor", "ngForOf"]], template: function DatepickerEventsExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerEventsExample.ɵfac = function DatepickerEventsExample_Factory(t) { return new (t || DatepickerEventsExample)(); };
+    DatepickerEventsExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerEventsExample, selectors: [["datepicker-events-example"]], decls: 7, vars: 3, consts: [["matInput", "", "placeholder", "Input & change events", 3, "matDatepicker", "dateInput", "dateChange"], ["matSuffix", "", 3, "for"], [1, "example-events"], [4, "ngFor", "ngForOf"]], template: function DatepickerEventsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "input", 0);
             ɵɵlistener("dateInput", function DatepickerEventsExample_Template_input_dateInput_1_listener($event) { return ctx.addEvent("input", $event); });
@@ -480,8 +480,8 @@ var DatepickerFilterExample = /** @class */ (function () {
                     styleUrls: ['datepicker-filter-example.css'],
                 },] },
     ];
-    DatepickerFilterExample.ngFactoryDef = function DatepickerFilterExample_Factory(t) { return new (t || DatepickerFilterExample)(); };
-    DatepickerFilterExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerFilterExample, selectors: [["datepicker-filter-example"]], decls: 5, vars: 3, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepickerFilter", "matDatepicker"], ["matSuffix", "", 3, "for"]], template: function DatepickerFilterExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerFilterExample.ɵfac = function DatepickerFilterExample_Factory(t) { return new (t || DatepickerFilterExample)(); };
+    DatepickerFilterExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerFilterExample, selectors: [["datepicker-filter-example"]], decls: 5, vars: 3, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepickerFilter", "matDatepicker"], ["matSuffix", "", 3, "for"]], template: function DatepickerFilterExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
             ɵɵelement(1, "input", 1);
             ɵɵelement(2, "mat-datepicker-toggle", 2);
@@ -543,8 +543,8 @@ var DatepickerFormatsExample = /** @class */ (function () {
                     ],
                 },] },
     ];
-    DatepickerFormatsExample.ngFactoryDef = function DatepickerFormatsExample_Factory(t) { return new (t || DatepickerFormatsExample)(); };
-    DatepickerFormatsExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerFormatsExample, selectors: [["datepicker-formats-example"]], features: [ɵɵProvidersFeature([
+    DatepickerFormatsExample.ɵfac = function DatepickerFormatsExample_Factory(t) { return new (t || DatepickerFormatsExample)(); };
+    DatepickerFormatsExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerFormatsExample, selectors: [["datepicker-formats-example"]], features: [ɵɵProvidersFeature([
                 // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
                 // application's root module. We provide it at the component level here, due to limitations of
                 // our example generation script.
@@ -623,8 +623,8 @@ var DatepickerLocaleExample = /** @class */ (function () {
     DatepickerLocaleExample.ctorParameters = function () { return [
         { type: DateAdapter }
     ]; };
-    DatepickerLocaleExample.ngFactoryDef = function DatepickerLocaleExample_Factory(t) { return new (t || DatepickerLocaleExample)(ɵɵdirectiveInject(DateAdapter)); };
-    DatepickerLocaleExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerLocaleExample, selectors: [["datepicker-locale-example"]], features: [ɵɵProvidersFeature([
+    DatepickerLocaleExample.ɵfac = function DatepickerLocaleExample_Factory(t) { return new (t || DatepickerLocaleExample)(ɵɵdirectiveInject(DateAdapter)); };
+    DatepickerLocaleExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerLocaleExample, selectors: [["datepicker-locale-example"]], features: [ɵɵProvidersFeature([
                 // The locale would typically be provided on the root module of your application. We do it at
                 // the component level here, due to limitations of our example generation script.
                 { provide: MAT_DATE_LOCALE, useValue: 'ja-JP' },
@@ -693,8 +693,8 @@ var DatepickerMinMaxExample = /** @class */ (function () {
                     styleUrls: ['datepicker-min-max-example.css'],
                 },] },
     ];
-    DatepickerMinMaxExample.ngFactoryDef = function DatepickerMinMaxExample_Factory(t) { return new (t || DatepickerMinMaxExample)(); };
-    DatepickerMinMaxExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerMinMaxExample, selectors: [["datepicker-min-max-example"]], decls: 5, vars: 4, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "min", "max", "matDatepicker"], ["matSuffix", "", 3, "for"]], template: function DatepickerMinMaxExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerMinMaxExample.ɵfac = function DatepickerMinMaxExample_Factory(t) { return new (t || DatepickerMinMaxExample)(); };
+    DatepickerMinMaxExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerMinMaxExample, selectors: [["datepicker-min-max-example"]], decls: 5, vars: 4, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "min", "max", "matDatepicker"], ["matSuffix", "", 3, "for"]], template: function DatepickerMinMaxExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
             ɵɵelement(1, "input", 1);
             ɵɵelement(2, "mat-datepicker-toggle", 2);
@@ -740,8 +740,8 @@ var DatepickerMomentExample = /** @class */ (function () {
                     ],
                 },] },
     ];
-    DatepickerMomentExample.ngFactoryDef = function DatepickerMomentExample_Factory(t) { return new (t || DatepickerMomentExample)(); };
-    DatepickerMomentExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerMomentExample, selectors: [["datepicker-moment-example"]], features: [ɵɵProvidersFeature([
+    DatepickerMomentExample.ɵfac = function DatepickerMomentExample_Factory(t) { return new (t || DatepickerMomentExample)(); };
+    DatepickerMomentExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerMomentExample, selectors: [["datepicker-moment-example"]], features: [ɵɵProvidersFeature([
                 // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
                 // `MatMomentDateModule` in your applications root module. We provide it at the component level
                 // here, due to limitations of our example generation script.
@@ -790,8 +790,8 @@ var DatepickerOverviewExample = /** @class */ (function () {
                     styleUrls: ['datepicker-overview-example.css'],
                 },] },
     ];
-    DatepickerOverviewExample.ngFactoryDef = function DatepickerOverviewExample_Factory(t) { return new (t || DatepickerOverviewExample)(); };
-    DatepickerOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerOverviewExample, selectors: [["datepicker-overview-example"]], decls: 5, vars: 2, consts: [["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"]], template: function DatepickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerOverviewExample.ɵfac = function DatepickerOverviewExample_Factory(t) { return new (t || DatepickerOverviewExample)(); };
+    DatepickerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerOverviewExample, selectors: [["datepicker-overview-example"]], decls: 5, vars: 2, consts: [["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"]], template: function DatepickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelement(1, "input", 0);
             ɵɵelement(2, "mat-datepicker-toggle", 1);
@@ -828,8 +828,8 @@ var DatepickerStartViewExample = /** @class */ (function () {
                     styleUrls: ['datepicker-start-view-example.css'],
                 },] },
     ];
-    DatepickerStartViewExample.ngFactoryDef = function DatepickerStartViewExample_Factory(t) { return new (t || DatepickerStartViewExample)(); };
-    DatepickerStartViewExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerStartViewExample, selectors: [["datepicker-start-view-example"]], decls: 5, vars: 3, consts: [["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["startView", "year", 3, "startAt"]], template: function DatepickerStartViewExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerStartViewExample.ɵfac = function DatepickerStartViewExample_Factory(t) { return new (t || DatepickerStartViewExample)(); };
+    DatepickerStartViewExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerStartViewExample, selectors: [["datepicker-start-view-example"]], decls: 5, vars: 3, consts: [["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["startView", "year", 3, "startAt"]], template: function DatepickerStartViewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelement(1, "input", 0);
             ɵɵelement(2, "mat-datepicker-toggle", 1);
@@ -867,8 +867,8 @@ var DatepickerTouchExample = /** @class */ (function () {
                     styleUrls: ['datepicker-touch-example.css'],
                 },] },
     ];
-    DatepickerTouchExample.ngFactoryDef = function DatepickerTouchExample_Factory(t) { return new (t || DatepickerTouchExample)(); };
-    DatepickerTouchExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerTouchExample, selectors: [["datepicker-touch-example"]], decls: 5, vars: 2, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["touchUi", ""]], template: function DatepickerTouchExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerTouchExample.ɵfac = function DatepickerTouchExample_Factory(t) { return new (t || DatepickerTouchExample)(); };
+    DatepickerTouchExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerTouchExample, selectors: [["datepicker-touch-example"]], decls: 5, vars: 2, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["touchUi", ""]], template: function DatepickerTouchExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
             ɵɵelement(1, "input", 1);
             ɵɵelement(2, "mat-datepicker-toggle", 2);
@@ -908,8 +908,8 @@ var DatepickerValueExample = /** @class */ (function () {
                     styleUrls: ['datepicker-value-example.css'],
                 },] },
     ];
-    DatepickerValueExample.ngFactoryDef = function DatepickerValueExample_Factory(t) { return new (t || DatepickerValueExample)(); };
-    DatepickerValueExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerValueExample, selectors: [["datepicker-value-example"]], decls: 15, vars: 9, consts: [["matInput", "", "placeholder", "Angular forms", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["matInput", "", "placeholder", "Angular forms (w/ deserialization)", 3, "matDatepicker", "formControl"], ["matInput", "", "placeholder", "Value binding", 3, "matDatepicker", "value"]], template: function DatepickerValueExample_Template(rf, ctx) { if (rf & 1) {
+    DatepickerValueExample.ɵfac = function DatepickerValueExample_Factory(t) { return new (t || DatepickerValueExample)(); };
+    DatepickerValueExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerValueExample, selectors: [["datepicker-value-example"]], decls: 15, vars: 9, consts: [["matInput", "", "placeholder", "Angular forms", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["matInput", "", "placeholder", "Angular forms (w/ deserialization)", 3, "matDatepicker", "formControl"], ["matInput", "", "placeholder", "Value binding", 3, "matDatepicker", "value"]], template: function DatepickerValueExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelement(1, "input", 0);
             ɵɵelement(2, "mat-datepicker-toggle", 1);
@@ -1002,8 +1002,8 @@ var DatepickerViewsSelectionExample = /** @class */ (function () {
                     ],
                 },] },
     ];
-    DatepickerViewsSelectionExample.ngFactoryDef = function DatepickerViewsSelectionExample_Factory(t) { return new (t || DatepickerViewsSelectionExample)(); };
-    DatepickerViewsSelectionExample.ngComponentDef = ɵɵdefineComponent({ type: DatepickerViewsSelectionExample, selectors: [["datepicker-views-selection-example"]], features: [ɵɵProvidersFeature([
+    DatepickerViewsSelectionExample.ɵfac = function DatepickerViewsSelectionExample_Factory(t) { return new (t || DatepickerViewsSelectionExample)(); };
+    DatepickerViewsSelectionExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerViewsSelectionExample, selectors: [["datepicker-views-selection-example"]], features: [ɵɵProvidersFeature([
                 // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
                 // application's root module. We provide it at the component level here, due to limitations of
                 // our example generation script.
@@ -1090,8 +1090,8 @@ var DatepickerExamplesModule = /** @class */ (function () {
                     exports: EXAMPLES,
                 },] },
     ];
-    DatepickerExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: DatepickerExamplesModule });
-    DatepickerExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function DatepickerExamplesModule_Factory(t) { return new (t || DatepickerExamplesModule)(); }, imports: [[
+    DatepickerExamplesModule.ɵmod = ɵɵdefineNgModule({ type: DatepickerExamplesModule });
+    DatepickerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DatepickerExamplesModule_Factory(t) { return new (t || DatepickerExamplesModule)(); }, imports: [[
                 CommonModule,
                 MatButtonModule,
                 MatDatepickerModule,

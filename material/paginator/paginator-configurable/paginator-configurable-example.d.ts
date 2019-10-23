@@ -9,6 +9,6 @@ export declare class PaginatorConfigurableExample {
     pageSizeOptions: number[];
     pageEvent: PageEvent;
     setPageSizeOptions(setPageSizeOptionsInput: string): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<PaginatorConfigurableExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<PaginatorConfigurableExample, "paginator-configurable-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<PaginatorConfigurableExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<PaginatorConfigurableExample, "paginator-configurable-example", never, {}, {}, never>;
 }

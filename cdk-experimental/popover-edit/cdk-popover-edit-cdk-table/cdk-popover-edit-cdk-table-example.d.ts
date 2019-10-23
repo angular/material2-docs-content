@@ -18,8 +18,8 @@ export declare class CdkPopoverEditCdkTableExample {
     readonly preservedWeightValues: WeakMap<PeriodicElement, any>;
     onSubmitName(element: PeriodicElement, f: NgForm): void;
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<CdkPopoverEditCdkTableExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkPopoverEditCdkTableExample, "cdk-popover-edit-cdk-table-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkPopoverEditCdkTableExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkPopoverEditCdkTableExample, "cdk-popover-edit-cdk-table-example", never, {}, {}, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

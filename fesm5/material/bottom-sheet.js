@@ -25,8 +25,8 @@ var BottomSheetOverviewExample = /** @class */ (function () {
     BottomSheetOverviewExample.ctorParameters = function () { return [
         { type: MatBottomSheet }
     ]; };
-    BottomSheetOverviewExample.ngFactoryDef = function BottomSheetOverviewExample_Factory(t) { return new (t || BottomSheetOverviewExample)(ɵɵdirectiveInject(MatBottomSheet)); };
-    BottomSheetOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: BottomSheetOverviewExample, selectors: [["bottom-sheet-overview-example"]], decls: 4, vars: 0, consts: [["mat-raised-button", "", 3, "click"]], template: function BottomSheetOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    BottomSheetOverviewExample.ɵfac = function BottomSheetOverviewExample_Factory(t) { return new (t || BottomSheetOverviewExample)(ɵɵdirectiveInject(MatBottomSheet)); };
+    BottomSheetOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOverviewExample, selectors: [["bottom-sheet-overview-example"]], decls: 4, vars: 0, consts: [["mat-raised-button", "", 3, "click"]], template: function BottomSheetOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵtext(1, "You have received a file called \"cat-picture.jpeg\".");
             ɵɵelementEnd();
@@ -63,8 +63,8 @@ var BottomSheetOverviewExampleSheet = /** @class */ (function () {
     BottomSheetOverviewExampleSheet.ctorParameters = function () { return [
         { type: MatBottomSheetRef }
     ]; };
-    BottomSheetOverviewExampleSheet.ngFactoryDef = function BottomSheetOverviewExampleSheet_Factory(t) { return new (t || BottomSheetOverviewExampleSheet)(ɵɵdirectiveInject(MatBottomSheetRef)); };
-    BottomSheetOverviewExampleSheet.ngComponentDef = ɵɵdefineComponent({ type: BottomSheetOverviewExampleSheet, selectors: [["bottom-sheet-overview-example-sheet"]], decls: 21, vars: 0, consts: [["href", "https://keep.google.com/", "mat-list-item", "", 3, "click"], ["mat-line", ""], ["href", "https://docs.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://plus.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://hangouts.google.com/", "mat-list-item", "", 3, "click"]], template: function BottomSheetOverviewExampleSheet_Template(rf, ctx) { if (rf & 1) {
+    BottomSheetOverviewExampleSheet.ɵfac = function BottomSheetOverviewExampleSheet_Factory(t) { return new (t || BottomSheetOverviewExampleSheet)(ɵɵdirectiveInject(MatBottomSheetRef)); };
+    BottomSheetOverviewExampleSheet.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOverviewExampleSheet, selectors: [["bottom-sheet-overview-example-sheet"]], decls: 21, vars: 0, consts: [["href", "https://keep.google.com/", "mat-list-item", "", 3, "click"], ["mat-line", ""], ["href", "https://docs.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://plus.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://hangouts.google.com/", "mat-list-item", "", 3, "click"]], template: function BottomSheetOverviewExampleSheet_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-nav-list");
             ɵɵelementStart(1, "a", 0);
             ɵɵlistener("click", function BottomSheetOverviewExampleSheet_Template_a_click_1_listener($event) { return ctx.openLink($event); });
@@ -133,8 +133,8 @@ var BottomSheetExamplesModule = /** @class */ (function () {
                     entryComponents: [BottomSheetOverviewExampleSheet],
                 },] },
     ];
-    BottomSheetExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
-    BottomSheetExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function BottomSheetExamplesModule_Factory(t) { return new (t || BottomSheetExamplesModule)(); }, imports: [[
+    BottomSheetExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
+    BottomSheetExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BottomSheetExamplesModule_Factory(t) { return new (t || BottomSheetExamplesModule)(); }, imports: [[
                 MatBottomSheetModule,
                 MatButtonModule,
                 MatListModule,

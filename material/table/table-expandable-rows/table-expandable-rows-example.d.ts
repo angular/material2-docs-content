@@ -6,8 +6,8 @@ export declare class TableExpandableRowsExample {
     dataSource: PeriodicElement[];
     columnsToDisplay: string[];
     expandedElement: PeriodicElement | null;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TableExpandableRowsExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableExpandableRowsExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableExpandableRowsExample, "table-expandable-rows-example", never, {}, {}, never>;
 }
 export interface PeriodicElement {
     name: string;

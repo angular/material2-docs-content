@@ -10,6 +10,6 @@ export interface Tile {
  */
 export declare class GridListDynamicExample {
     tiles: Tile[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<GridListDynamicExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<GridListDynamicExample, "grid-list-dynamic-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<GridListDynamicExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<GridListDynamicExample, "grid-list-dynamic-example", never, {}, {}, never>;
 }

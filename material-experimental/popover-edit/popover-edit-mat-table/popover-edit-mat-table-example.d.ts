@@ -24,8 +24,8 @@ export declare class PopoverEditMatTableExample {
     onSubmitWeight(element: PeriodicElement, f: NgForm): void;
     goodJob(element: PeriodicElement): void;
     badJob(element: PeriodicElement): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<PopoverEditMatTableExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<PopoverEditMatTableExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<PopoverEditMatTableExample, "popover-edit-mat-table-example", never, {}, {}, never>;
 }
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source

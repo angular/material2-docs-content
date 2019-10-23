@@ -17,8 +17,8 @@
                         styleUrls: ['icon-overview-example.css'],
                     },] },
         ];
-        IconOverviewExample.ngFactoryDef = function IconOverviewExample_Factory(t) { return new (t || IconOverviewExample)(); };
-        IconOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: IconOverviewExample, selectors: [["icon-overview-example"]], decls: 2, vars: 0, consts: [["aria-hidden", "false", "aria-label", "Example home icon"]], template: function IconOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        IconOverviewExample.ɵfac = function IconOverviewExample_Factory(t) { return new (t || IconOverviewExample)(); };
+        IconOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: IconOverviewExample, selectors: [["icon-overview-example"]], decls: 2, vars: 0, consts: [["aria-hidden", "false", "aria-label", "Example home icon"]], template: function IconOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-icon", 0);
                 i0.ɵɵtext(1, "home");
                 i0.ɵɵelementEnd();
@@ -53,8 +53,8 @@
             { type: i1.MatIconRegistry },
             { type: i2.DomSanitizer }
         ]; };
-        IconSvgExample.ngFactoryDef = function IconSvgExample_Factory(t) { return new (t || IconSvgExample)(i0.ɵɵdirectiveInject(i1.MatIconRegistry), i0.ɵɵdirectiveInject(i2.DomSanitizer)); };
-        IconSvgExample.ngComponentDef = i0.ɵɵdefineComponent({ type: IconSvgExample, selectors: [["icon-svg-example"]], decls: 1, vars: 0, consts: [["svgIcon", "thumbs-up", "aria-hidden", "false", "aria-label", "Example thumbs up SVG icon"]], template: function IconSvgExample_Template(rf, ctx) { if (rf & 1) {
+        IconSvgExample.ɵfac = function IconSvgExample_Factory(t) { return new (t || IconSvgExample)(i0.ɵɵdirectiveInject(i1.MatIconRegistry), i0.ɵɵdirectiveInject(i2.DomSanitizer)); };
+        IconSvgExample.ɵcmp = i0.ɵɵdefineComponent({ type: IconSvgExample, selectors: [["icon-svg-example"]], decls: 1, vars: 0, consts: [["svgIcon", "thumbs-up", "aria-hidden", "false", "aria-label", "Example thumbs up SVG icon"]], template: function IconSvgExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-icon", 0);
             } }, directives: [i1.MatIcon], styles: [""] });
         return IconSvgExample;
@@ -84,8 +84,8 @@
                         exports: EXAMPLES,
                     },] },
         ];
-        IconExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: IconExamplesModule });
-        IconExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function IconExamplesModule_Factory(t) { return new (t || IconExamplesModule)(); }, imports: [[
+        IconExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: IconExamplesModule });
+        IconExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function IconExamplesModule_Factory(t) { return new (t || IconExamplesModule)(); }, imports: [[
                     i1.MatIconModule,
                 ]] });
         return IconExamplesModule;

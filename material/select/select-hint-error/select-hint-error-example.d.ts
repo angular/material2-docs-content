@@ -9,6 +9,6 @@ export declare class SelectHintErrorExample {
     animalControl: FormControl;
     selectFormControl: FormControl;
     animals: Animal[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<SelectHintErrorExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SelectHintErrorExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never>;
 }

@@ -18,6 +18,6 @@ import * as i11 from "@angular/material/form-field";
 import * as i12 from "@angular/forms";
 export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, };
 export declare class ChipsExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample], [typeof i6.CommonModule, typeof i7.DragDropModule, typeof i8.MatAutocompleteModule, typeof i9.MatChipsModule, typeof i10.MatIconModule, typeof i11.MatFormFieldModule, typeof i12.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<ChipsExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<ChipsExamplesModule, [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample], [typeof i6.CommonModule, typeof i7.DragDropModule, typeof i8.MatAutocompleteModule, typeof i9.MatChipsModule, typeof i10.MatIconModule, typeof i11.MatFormFieldModule, typeof i12.ReactiveFormsModule], [typeof i1.ChipsAutocompleteExample, typeof i2.ChipsDragDropExample, typeof i3.ChipsInputExample, typeof i4.ChipsOverviewExample, typeof i5.ChipsStackedExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<ChipsExamplesModule>;
 }

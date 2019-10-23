@@ -5,6 +5,6 @@ import * as i0 from "@angular/core";
  */
 export declare class SelectPanelClassExample {
     panelColor: FormControl;
-    static ngFactoryDef: i0.ɵɵFactoryDef<SelectPanelClassExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SelectPanelClassExample, "select-panel-class-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SelectPanelClassExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectPanelClassExample, "select-panel-class-example", never, {}, {}, never>;
 }

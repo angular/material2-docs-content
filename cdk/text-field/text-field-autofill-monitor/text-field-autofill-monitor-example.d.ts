@@ -11,6 +11,6 @@ export declare class TextFieldAutofillMonitorExample implements AfterViewInit, O
     constructor(_autofill: AutofillMonitor);
     ngAfterViewInit(): void;
     ngOnDestroy(): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TextFieldAutofillMonitorExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TextFieldAutofillMonitorExample, "text-field-autofill-monitor-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TextFieldAutofillMonitorExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TextFieldAutofillMonitorExample, "text-field-autofill-monitor-example", never, {}, {}, never>;
 }

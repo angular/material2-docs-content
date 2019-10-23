@@ -7,6 +7,6 @@ export declare class SlideToggleConfigurableExample {
     color: ThemePalette;
     checked: boolean;
     disabled: boolean;
-    static ngFactoryDef: i0.ɵɵFactoryDef<SlideToggleConfigurableExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SlideToggleConfigurableExample, "slide-toggle-configurable-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SlideToggleConfigurableExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SlideToggleConfigurableExample, "slide-toggle-configurable-example", never, {}, {}, never>;
 }

@@ -5,6 +5,6 @@ import * as i0 from "@angular/core";
 export declare class TableRowContextExample {
     displayedColumns: string[];
     data: string[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<TableRowContextExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableRowContextExample, "table-row-context-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableRowContextExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableRowContextExample, "table-row-context-example", never, {}, {}, never>;
 }

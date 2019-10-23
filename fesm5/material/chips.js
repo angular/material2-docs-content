@@ -107,8 +107,8 @@ var ChipsAutocompleteExample = /** @class */ (function () {
         fruitInput: [{ type: ViewChild, args: ['fruitInput', { static: false },] }],
         matAutocomplete: [{ type: ViewChild, args: ['auto', { static: false },] }]
     };
-    ChipsAutocompleteExample.ngFactoryDef = function ChipsAutocompleteExample_Factory(t) { return new (t || ChipsAutocompleteExample)(); };
-    ChipsAutocompleteExample.ngComponentDef = ɵɵdefineComponent({ type: ChipsAutocompleteExample, selectors: [["chips-autocomplete-example"]], viewQuery: function ChipsAutocompleteExample_Query(rf, ctx) { if (rf & 1) {
+    ChipsAutocompleteExample.ɵfac = function ChipsAutocompleteExample_Factory(t) { return new (t || ChipsAutocompleteExample)(); };
+    ChipsAutocompleteExample.ɵcmp = ɵɵdefineComponent({ type: ChipsAutocompleteExample, selectors: [["chips-autocomplete-example"]], viewQuery: function ChipsAutocompleteExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵviewQuery(_c0, true);
             ɵɵviewQuery(_c1, true);
         } if (rf & 2) {
@@ -189,8 +189,8 @@ var ChipsDragDropExample = /** @class */ (function () {
                     styleUrls: ['chips-drag-drop-example.css']
                 },] },
     ];
-    ChipsDragDropExample.ngFactoryDef = function ChipsDragDropExample_Factory(t) { return new (t || ChipsDragDropExample)(); };
-    ChipsDragDropExample.ngComponentDef = ɵɵdefineComponent({ type: ChipsDragDropExample, selectors: [["chips-drag-drop-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", "cdkDropListOrientation", "horizontal", 1, "example-chip", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function ChipsDragDropExample_Template(rf, ctx) { if (rf & 1) {
+    ChipsDragDropExample.ɵfac = function ChipsDragDropExample_Factory(t) { return new (t || ChipsDragDropExample)(); };
+    ChipsDragDropExample.ɵcmp = ɵɵdefineComponent({ type: ChipsDragDropExample, selectors: [["chips-drag-drop-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", "cdkDropListOrientation", "horizontal", 1, "example-chip", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function ChipsDragDropExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-chip-list", 0);
             ɵɵlistener("cdkDropListDropped", function ChipsDragDropExample_Template_mat_chip_list_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
             ɵɵtemplate(1, ChipsDragDropExample_mat_chip_1_Template, 2, 1, "mat-chip", 1);
@@ -273,8 +273,8 @@ var ChipsInputExample = /** @class */ (function () {
                     styleUrls: ['chips-input-example.css'],
                 },] },
     ];
-    ChipsInputExample.ngFactoryDef = function ChipsInputExample_Factory(t) { return new (t || ChipsInputExample)(); };
-    ChipsInputExample.ngComponentDef = ɵɵdefineComponent({ type: ChipsInputExample, selectors: [["chips-input-example"]], decls: 5, vars: 4, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputAddOnBlur", "matChipInputTokenEnd"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""]], template: function ChipsInputExample_Template(rf, ctx) { if (rf & 1) {
+    ChipsInputExample.ɵfac = function ChipsInputExample_Factory(t) { return new (t || ChipsInputExample)(); };
+    ChipsInputExample.ɵcmp = ɵɵdefineComponent({ type: ChipsInputExample, selectors: [["chips-input-example"]], decls: 5, vars: 4, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputAddOnBlur", "matChipInputTokenEnd"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""]], template: function ChipsInputExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
             ɵɵelementStart(1, "mat-chip-list", 1, _c0$1);
             ɵɵtemplate(3, ChipsInputExample_mat_chip_3_Template, 3, 4, "mat-chip", 2);
@@ -314,8 +314,8 @@ var ChipsOverviewExample = /** @class */ (function () {
                     styleUrls: ['chips-overview-example.css'],
                 },] },
     ];
-    ChipsOverviewExample.ngFactoryDef = function ChipsOverviewExample_Factory(t) { return new (t || ChipsOverviewExample)(); };
-    ChipsOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: ChipsOverviewExample, selectors: [["chips-overview-example"]], decls: 9, vars: 0, consts: [["aria-label", "Fish selection"], ["color", "primary", "selected", ""], ["color", "accent", "selected", ""]], template: function ChipsOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    ChipsOverviewExample.ɵfac = function ChipsOverviewExample_Factory(t) { return new (t || ChipsOverviewExample)(); };
+    ChipsOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ChipsOverviewExample, selectors: [["chips-overview-example"]], decls: 9, vars: 0, consts: [["aria-label", "Fish selection"], ["color", "primary", "selected", ""], ["color", "accent", "selected", ""]], template: function ChipsOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-chip-list", 0);
             ɵɵelementStart(1, "mat-chip");
             ɵɵtext(2, "One fish");
@@ -371,8 +371,8 @@ var ChipsStackedExample = /** @class */ (function () {
                     styleUrls: ['chips-stacked-example.css'],
                 },] },
     ];
-    ChipsStackedExample.ngFactoryDef = function ChipsStackedExample_Factory(t) { return new (t || ChipsStackedExample)(); };
-    ChipsStackedExample.ngComponentDef = ɵɵdefineComponent({ type: ChipsStackedExample, selectors: [["chips-stacked-example"]], decls: 2, vars: 1, consts: [["aria-label", "Color selection", 1, "mat-chip-list-stacked"], ["selected", "", 3, "color", 4, "ngFor", "ngForOf"], ["selected", "", 3, "color"]], template: function ChipsStackedExample_Template(rf, ctx) { if (rf & 1) {
+    ChipsStackedExample.ɵfac = function ChipsStackedExample_Factory(t) { return new (t || ChipsStackedExample)(); };
+    ChipsStackedExample.ɵcmp = ɵɵdefineComponent({ type: ChipsStackedExample, selectors: [["chips-stacked-example"]], decls: 2, vars: 1, consts: [["aria-label", "Color selection", 1, "mat-chip-list-stacked"], ["selected", "", 3, "color", 4, "ngFor", "ngForOf"], ["selected", "", 3, "color"]], template: function ChipsStackedExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-chip-list", 0);
             ɵɵtemplate(1, ChipsStackedExample_mat_chip_1_Template, 2, 2, "mat-chip", 1);
             ɵɵelementEnd();
@@ -416,8 +416,8 @@ var ChipsExamplesModule = /** @class */ (function () {
                     exports: EXAMPLES,
                 },] },
     ];
-    ChipsExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: ChipsExamplesModule });
-    ChipsExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function ChipsExamplesModule_Factory(t) { return new (t || ChipsExamplesModule)(); }, imports: [[
+    ChipsExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ChipsExamplesModule });
+    ChipsExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ChipsExamplesModule_Factory(t) { return new (t || ChipsExamplesModule)(); }, imports: [[
                 CommonModule,
                 DragDropModule,
                 MatAutocompleteModule,

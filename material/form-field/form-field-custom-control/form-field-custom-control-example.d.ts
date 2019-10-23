@@ -6,8 +6,8 @@ import { Subject } from 'rxjs';
 import * as i0 from "@angular/core";
 /** @title Form field with custom telephone number input control. */
 export declare class FormFieldCustomControlExample {
-    static ngFactoryDef: i0.ɵɵFactoryDef<FormFieldCustomControlExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<FormFieldCustomControlExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<FormFieldCustomControlExample, "form-field-custom-control-example", never, {}, {}, never>;
 }
 /** Data structure for holding telephone number. */
 export declare class MyTel {
@@ -49,6 +49,6 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     registerOnTouched(fn: any): void;
     setDisabledState(isDisabled: boolean): void;
     _handleInput(): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<MyTelInput>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<MyTelInput, "example-tel-input", never, { 'placeholder': "placeholder", 'required': "required", 'disabled': "disabled", 'value': "value" }, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<MyTelInput>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<MyTelInput, "example-tel-input", never, { 'placeholder': "placeholder", 'required': "required", 'disabled': "disabled", 'value': "value" }, {}, never>;
 }

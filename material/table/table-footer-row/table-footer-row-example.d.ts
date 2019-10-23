@@ -11,6 +11,6 @@ export declare class TableFooterRowExample {
     transactions: Transaction[];
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TableFooterRowExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableFooterRowExample, "table-footer-row-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableFooterRowExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableFooterRowExample, "table-footer-row-example", never, {}, {}, never>;
 }

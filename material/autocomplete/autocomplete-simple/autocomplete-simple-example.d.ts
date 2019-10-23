@@ -6,6 +6,6 @@ import * as i0 from "@angular/core";
 export declare class AutocompleteSimpleExample {
     myControl: FormControl;
     options: string[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<AutocompleteSimpleExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<AutocompleteSimpleExample, "autocomplete-simple-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<AutocompleteSimpleExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<AutocompleteSimpleExample, "autocomplete-simple-example", never, {}, {}, never>;
 }

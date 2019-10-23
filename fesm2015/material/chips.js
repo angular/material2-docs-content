@@ -12,7 +12,7 @@ import { MatOption } from '@angular/material/core';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = ["fruitInput"];
 const _c1 = ["auto"];
@@ -140,8 +140,8 @@ ChipsAutocompleteExample.propDecorators = {
     fruitInput: [{ type: ViewChild, args: ['fruitInput', { static: false },] }],
     matAutocomplete: [{ type: ViewChild, args: ['auto', { static: false },] }]
 };
-/** @nocollapse */ ChipsAutocompleteExample.ngFactoryDef = function ChipsAutocompleteExample_Factory(t) { return new (t || ChipsAutocompleteExample)(); };
-/** @nocollapse */ ChipsAutocompleteExample.ngComponentDef = ɵɵdefineComponent({ type: ChipsAutocompleteExample, selectors: [["chips-autocomplete-example"]], viewQuery: function ChipsAutocompleteExample_Query(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ChipsAutocompleteExample.ɵfac = function ChipsAutocompleteExample_Factory(t) { return new (t || ChipsAutocompleteExample)(); };
+/** @nocollapse */ ChipsAutocompleteExample.ɵcmp = ɵɵdefineComponent({ type: ChipsAutocompleteExample, selectors: [["chips-autocomplete-example"]], viewQuery: function ChipsAutocompleteExample_Query(rf, ctx) { if (rf & 1) {
         ɵɵviewQuery(_c0, true);
         ɵɵviewQuery(_c1, true);
     } if (rf & 2) {
@@ -213,7 +213,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function ChipsDragDropExample_mat_chip_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-chip", 2);
@@ -261,8 +261,8 @@ ChipsDragDropExample.decorators = [
                 styleUrls: ['chips-drag-drop-example.css']
             },] },
 ];
-/** @nocollapse */ ChipsDragDropExample.ngFactoryDef = function ChipsDragDropExample_Factory(t) { return new (t || ChipsDragDropExample)(); };
-/** @nocollapse */ ChipsDragDropExample.ngComponentDef = ɵɵdefineComponent({ type: ChipsDragDropExample, selectors: [["chips-drag-drop-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", "cdkDropListOrientation", "horizontal", 1, "example-chip", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function ChipsDragDropExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ChipsDragDropExample.ɵfac = function ChipsDragDropExample_Factory(t) { return new (t || ChipsDragDropExample)(); };
+/** @nocollapse */ ChipsDragDropExample.ɵcmp = ɵɵdefineComponent({ type: ChipsDragDropExample, selectors: [["chips-drag-drop-example"]], decls: 2, vars: 1, consts: [["cdkDropList", "", "cdkDropListOrientation", "horizontal", 1, "example-chip", 3, "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function ChipsDragDropExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-chip-list", 0);
         ɵɵlistener("cdkDropListDropped", function ChipsDragDropExample_Template_mat_chip_list_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
         ɵɵtemplate(1, ChipsDragDropExample_mat_chip_1_Template, 2, 1, "mat-chip", 1);
@@ -286,7 +286,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0$1 = ["chipList", ""];
 function ChipsInputExample_mat_chip_3_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
@@ -371,8 +371,8 @@ ChipsInputExample.decorators = [
                 styleUrls: ['chips-input-example.css'],
             },] },
 ];
-/** @nocollapse */ ChipsInputExample.ngFactoryDef = function ChipsInputExample_Factory(t) { return new (t || ChipsInputExample)(); };
-/** @nocollapse */ ChipsInputExample.ngComponentDef = ɵɵdefineComponent({ type: ChipsInputExample, selectors: [["chips-input-example"]], decls: 5, vars: 4, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputAddOnBlur", "matChipInputTokenEnd"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""]], template: function ChipsInputExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ChipsInputExample.ɵfac = function ChipsInputExample_Factory(t) { return new (t || ChipsInputExample)(); };
+/** @nocollapse */ ChipsInputExample.ɵcmp = ɵɵdefineComponent({ type: ChipsInputExample, selectors: [["chips-input-example"]], decls: 5, vars: 4, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputAddOnBlur", "matChipInputTokenEnd"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""]], template: function ChipsInputExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field", 0);
         ɵɵelementStart(1, "mat-chip-list", 1, _c0$1);
         ɵɵtemplate(3, ChipsInputExample_mat_chip_3_Template, 3, 4, "mat-chip", 2);
@@ -413,7 +413,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic chips
@@ -427,8 +427,8 @@ ChipsOverviewExample.decorators = [
                 styleUrls: ['chips-overview-example.css'],
             },] },
 ];
-/** @nocollapse */ ChipsOverviewExample.ngFactoryDef = function ChipsOverviewExample_Factory(t) { return new (t || ChipsOverviewExample)(); };
-/** @nocollapse */ ChipsOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: ChipsOverviewExample, selectors: [["chips-overview-example"]], decls: 9, vars: 0, consts: [["aria-label", "Fish selection"], ["color", "primary", "selected", ""], ["color", "accent", "selected", ""]], template: function ChipsOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ChipsOverviewExample.ɵfac = function ChipsOverviewExample_Factory(t) { return new (t || ChipsOverviewExample)(); };
+/** @nocollapse */ ChipsOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ChipsOverviewExample, selectors: [["chips-overview-example"]], decls: 9, vars: 0, consts: [["aria-label", "Fish selection"], ["color", "primary", "selected", ""], ["color", "accent", "selected", ""]], template: function ChipsOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-chip-list", 0);
         ɵɵelementStart(1, "mat-chip");
         ɵɵtext(2, "One fish");
@@ -455,7 +455,7 @@ ChipsOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function ChipsStackedExample_mat_chip_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-chip", 2);
@@ -497,8 +497,8 @@ ChipsStackedExample.decorators = [
                 styleUrls: ['chips-stacked-example.css'],
             },] },
 ];
-/** @nocollapse */ ChipsStackedExample.ngFactoryDef = function ChipsStackedExample_Factory(t) { return new (t || ChipsStackedExample)(); };
-/** @nocollapse */ ChipsStackedExample.ngComponentDef = ɵɵdefineComponent({ type: ChipsStackedExample, selectors: [["chips-stacked-example"]], decls: 2, vars: 1, consts: [["aria-label", "Color selection", 1, "mat-chip-list-stacked"], ["selected", "", 3, "color", 4, "ngFor", "ngForOf"], ["selected", "", 3, "color"]], template: function ChipsStackedExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ChipsStackedExample.ɵfac = function ChipsStackedExample_Factory(t) { return new (t || ChipsStackedExample)(); };
+/** @nocollapse */ ChipsStackedExample.ɵcmp = ɵɵdefineComponent({ type: ChipsStackedExample, selectors: [["chips-stacked-example"]], decls: 2, vars: 1, consts: [["aria-label", "Color selection", 1, "mat-chip-list-stacked"], ["selected", "", 3, "color", 4, "ngFor", "ngForOf"], ["selected", "", 3, "color"]], template: function ChipsStackedExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-chip-list", 0);
         ɵɵtemplate(1, ChipsStackedExample_mat_chip_1_Template, 2, 2, "mat-chip", 1);
         ɵɵelementEnd();
@@ -521,7 +521,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -548,8 +548,8 @@ ChipsExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ ChipsExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: ChipsExamplesModule });
-/** @nocollapse */ ChipsExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function ChipsExamplesModule_Factory(t) { return new (t || ChipsExamplesModule)(); }, imports: [[
+/** @nocollapse */ ChipsExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ChipsExamplesModule });
+/** @nocollapse */ ChipsExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ChipsExamplesModule_Factory(t) { return new (t || ChipsExamplesModule)(); }, imports: [[
             CommonModule,
             DragDropModule,
             MatAutocompleteModule,

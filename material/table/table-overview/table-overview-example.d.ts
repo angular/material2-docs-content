@@ -20,6 +20,6 @@ export declare class TableOverviewExample implements OnInit {
     constructor();
     ngOnInit(): void;
     applyFilter(filterValue: string): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TableOverviewExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableOverviewExample, "table-overview-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableOverviewExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableOverviewExample, "table-overview-example", never, {}, {}, never>;
 }

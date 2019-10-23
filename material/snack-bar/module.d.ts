@@ -12,6 +12,6 @@ import * as i7 from "@angular/material/select";
 import * as i8 from "@angular/material/snack-bar";
 export { SnackBarComponentExample, SnackBarOverviewExample, SnackBarPositionExample, PizzaPartyComponent, };
 export declare class SnackBarExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<SnackBarExamplesModule, [typeof i1.SnackBarComponentExample, typeof i2.SnackBarOverviewExample, typeof i3.SnackBarPositionExample, typeof i1.PizzaPartyComponent], [typeof i4.FormsModule, typeof i5.MatButtonModule, typeof i6.MatInputModule, typeof i7.MatSelectModule, typeof i8.MatSnackBarModule], [typeof i1.SnackBarComponentExample, typeof i2.SnackBarOverviewExample, typeof i3.SnackBarPositionExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<SnackBarExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<SnackBarExamplesModule, [typeof i1.SnackBarComponentExample, typeof i2.SnackBarOverviewExample, typeof i3.SnackBarPositionExample, typeof i1.PizzaPartyComponent], [typeof i4.FormsModule, typeof i5.MatButtonModule, typeof i6.MatInputModule, typeof i7.MatSelectModule, typeof i8.MatSnackBarModule], [typeof i1.SnackBarComponentExample, typeof i2.SnackBarOverviewExample, typeof i3.SnackBarPositionExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<SnackBarExamplesModule>;
 }

@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
 export declare class SelectMultipleExample {
     toppings: FormControl;
     toppingList: string[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<SelectMultipleExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SelectMultipleExample, "select-multiple-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SelectMultipleExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectMultipleExample, "select-multiple-example", never, {}, {}, never>;
 }

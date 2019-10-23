@@ -12,6 +12,6 @@ import * as i6 from "@angular/material/icon";
 import * as i7 from "@angular/material/menu";
 export { MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample, };
 export declare class MenuExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<MenuExamplesModule, [typeof i1.MenuIconsExample, typeof i2.MenuOverviewExample, typeof i3.MenuPositionExample, typeof i4.NestedMenuExample], [typeof i5.MatButtonModule, typeof i6.MatIconModule, typeof i7.MatMenuModule], [typeof i1.MenuIconsExample, typeof i2.MenuOverviewExample, typeof i3.MenuPositionExample, typeof i4.NestedMenuExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<MenuExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<MenuExamplesModule, [typeof i1.MenuIconsExample, typeof i2.MenuOverviewExample, typeof i3.MenuPositionExample, typeof i4.NestedMenuExample], [typeof i5.MatButtonModule, typeof i6.MatIconModule, typeof i7.MatMenuModule], [typeof i1.MenuIconsExample, typeof i2.MenuOverviewExample, typeof i3.MenuPositionExample, typeof i4.NestedMenuExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<MenuExamplesModule>;
 }

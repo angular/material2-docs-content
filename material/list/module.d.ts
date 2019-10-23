@@ -10,6 +10,6 @@ import * as i5 from "@angular/material/icon";
 import * as i6 from "@angular/material/list";
 export { ListOverviewExample, ListSectionsExample, ListSelectionExample, };
 export declare class ListExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<ListExamplesModule, [typeof i1.ListOverviewExample, typeof i2.ListSectionsExample, typeof i3.ListSelectionExample], [typeof i4.CommonModule, typeof i5.MatIconModule, typeof i6.MatListModule], [typeof i1.ListOverviewExample, typeof i2.ListSectionsExample, typeof i3.ListSelectionExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<ListExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<ListExamplesModule, [typeof i1.ListOverviewExample, typeof i2.ListSectionsExample, typeof i3.ListSelectionExample], [typeof i4.CommonModule, typeof i5.MatIconModule, typeof i6.MatListModule], [typeof i1.ListOverviewExample, typeof i2.ListSectionsExample, typeof i3.ListSelectionExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<ListExamplesModule>;
 }

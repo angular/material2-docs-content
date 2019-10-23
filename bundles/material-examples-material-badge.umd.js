@@ -17,8 +17,8 @@
                         styleUrls: ['badge-overview-example.css'],
                     },] },
         ];
-        BadgeOverviewExample.ngFactoryDef = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
-        BadgeOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 13, vars: 0, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        BadgeOverviewExample.ɵfac = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
+        BadgeOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 13, vars: 0, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
                 i0.ɵɵelementStart(1, "span", 0);
                 i0.ɵɵtext(2, "Text with a badge");
@@ -68,8 +68,8 @@
                         exports: EXAMPLES,
                     },] },
         ];
-        BadgeExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: BadgeExamplesModule });
-        BadgeExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function BadgeExamplesModule_Factory(t) { return new (t || BadgeExamplesModule)(); }, imports: [[
+        BadgeExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: BadgeExamplesModule });
+        BadgeExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function BadgeExamplesModule_Factory(t) { return new (t || BadgeExamplesModule)(); }, imports: [[
                     i1.MatBadgeModule,
                     i2.MatButtonModule,
                     i3.MatIconModule,

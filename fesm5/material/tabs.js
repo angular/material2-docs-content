@@ -23,8 +23,8 @@ var TabGroupAlignExample = /** @class */ (function () {
                     styleUrls: ['tab-group-align-example.css'],
                 },] },
     ];
-    TabGroupAlignExample.ngFactoryDef = function TabGroupAlignExample_Factory(t) { return new (t || TabGroupAlignExample)(); };
-    TabGroupAlignExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupAlignExample, selectors: [["tab-group-align-example"]], decls: 21, vars: 0, consts: [["mat-align-tabs", "start"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["mat-align-tabs", "center"], ["mat-align-tabs", "end"]], template: function TabGroupAlignExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupAlignExample.ɵfac = function TabGroupAlignExample_Factory(t) { return new (t || TabGroupAlignExample)(); };
+    TabGroupAlignExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAlignExample, selectors: [["tab-group-align-example"]], decls: 21, vars: 0, consts: [["mat-align-tabs", "start"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["mat-align-tabs", "center"], ["mat-align-tabs", "end"]], template: function TabGroupAlignExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tab-group", 0);
             ɵɵelementStart(1, "mat-tab", 1);
             ɵɵtext(2, "Content 1");
@@ -83,8 +83,8 @@ var TabGroupAnimationsExample = /** @class */ (function () {
                     styleUrls: ['tab-group-animations-example.css'],
                 },] },
     ];
-    TabGroupAnimationsExample.ngFactoryDef = function TabGroupAnimationsExample_Factory(t) { return new (t || TabGroupAnimationsExample)(); };
-    TabGroupAnimationsExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupAnimationsExample, selectors: [["tab-group-animations-example"]], decls: 18, vars: 0, consts: [["animationDuration", "0ms"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["animationDuration", "2000ms"]], template: function TabGroupAnimationsExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupAnimationsExample.ɵfac = function TabGroupAnimationsExample_Factory(t) { return new (t || TabGroupAnimationsExample)(); };
+    TabGroupAnimationsExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAnimationsExample, selectors: [["tab-group-animations-example"]], decls: 18, vars: 0, consts: [["animationDuration", "0ms"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["animationDuration", "2000ms"]], template: function TabGroupAnimationsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h3");
             ɵɵtext(1, "No animation");
             ɵɵelementEnd();
@@ -170,8 +170,8 @@ var TabGroupAsyncExample = /** @class */ (function () {
     ];
     /** @nocollapse */
     TabGroupAsyncExample.ctorParameters = function () { return []; };
-    TabGroupAsyncExample.ngFactoryDef = function TabGroupAsyncExample_Factory(t) { return new (t || TabGroupAsyncExample)(); };
-    TabGroupAsyncExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupAsyncExample, selectors: [["tab-group-async-example"]], decls: 5, vars: 6, consts: [[4, "ngIf"], [4, "ngFor", "ngForOf"], ["mat-tab-label", ""]], template: function TabGroupAsyncExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupAsyncExample.ɵfac = function TabGroupAsyncExample_Factory(t) { return new (t || TabGroupAsyncExample)(); };
+    TabGroupAsyncExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAsyncExample, selectors: [["tab-group-async-example"]], decls: 5, vars: 6, consts: [[4, "ngIf"], [4, "ngFor", "ngForOf"], ["mat-tab-label", ""]], template: function TabGroupAsyncExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵtemplate(0, TabGroupAsyncExample_ng_container_0_Template, 2, 0, "ng-container", 0);
             ɵɵpipe(1, "async");
             ɵɵelementStart(2, "mat-tab-group");
@@ -207,8 +207,8 @@ var TabGroupBasicExample = /** @class */ (function () {
                     styleUrls: ['tab-group-basic-example.css'],
                 },] },
     ];
-    TabGroupBasicExample.ngFactoryDef = function TabGroupBasicExample_Factory(t) { return new (t || TabGroupBasicExample)(); };
-    TabGroupBasicExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupBasicExample, selectors: [["tab-group-basic-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupBasicExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupBasicExample.ɵfac = function TabGroupBasicExample_Factory(t) { return new (t || TabGroupBasicExample)(); };
+    TabGroupBasicExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupBasicExample, selectors: [["tab-group-basic-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupBasicExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tab-group");
             ɵɵelementStart(1, "mat-tab", 0);
             ɵɵtext(2, " Content 1 ");
@@ -263,8 +263,8 @@ var TabGroupCustomLabelExample = /** @class */ (function () {
                     styleUrls: ['tab-group-custom-label-example.css'],
                 },] },
     ];
-    TabGroupCustomLabelExample.ngFactoryDef = function TabGroupCustomLabelExample_Factory(t) { return new (t || TabGroupCustomLabelExample)(); };
-    TabGroupCustomLabelExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupCustomLabelExample, selectors: [["tab-group-custom-label-example"]], decls: 10, vars: 0, consts: [["mat-tab-label", ""], [1, "example-tab-icon"]], template: function TabGroupCustomLabelExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupCustomLabelExample.ɵfac = function TabGroupCustomLabelExample_Factory(t) { return new (t || TabGroupCustomLabelExample)(); };
+    TabGroupCustomLabelExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupCustomLabelExample, selectors: [["tab-group-custom-label-example"]], decls: 10, vars: 0, consts: [["mat-tab-label", ""], [1, "example-tab-icon"]], template: function TabGroupCustomLabelExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tab-group");
             ɵɵelementStart(1, "mat-tab");
             ɵɵtemplate(2, TabGroupCustomLabelExample_ng_template_2_Template, 3, 0, "ng-template", 0);
@@ -304,8 +304,8 @@ var TabGroupDynamicHeightExample = /** @class */ (function () {
                     styleUrls: ['tab-group-dynamic-height-example.css'],
                 },] },
     ];
-    TabGroupDynamicHeightExample.ngFactoryDef = function TabGroupDynamicHeightExample_Factory(t) { return new (t || TabGroupDynamicHeightExample)(); };
-    TabGroupDynamicHeightExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupDynamicHeightExample, selectors: [["tab-group-dynamic-height-example"]], decls: 7, vars: 0, consts: [["dynamicHeight", ""], ["label", "Short tab"], [1, "example-small-box", "mat-elevation-z4"], ["label", "Long tab"], [1, "example-large-box", "mat-elevation-z4"]], template: function TabGroupDynamicHeightExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupDynamicHeightExample.ɵfac = function TabGroupDynamicHeightExample_Factory(t) { return new (t || TabGroupDynamicHeightExample)(); };
+    TabGroupDynamicHeightExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamicHeightExample, selectors: [["tab-group-dynamic-height-example"]], decls: 7, vars: 0, consts: [["dynamicHeight", ""], ["label", "Short tab"], [1, "example-small-box", "mat-elevation-z4"], ["label", "Long tab"], [1, "example-large-box", "mat-elevation-z4"]], template: function TabGroupDynamicHeightExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tab-group", 0);
             ɵɵelementStart(1, "mat-tab", 1);
             ɵɵelementStart(2, "div", 2);
@@ -373,8 +373,8 @@ var TabGroupDynamicExample = /** @class */ (function () {
                     styleUrls: ['tab-group-dynamic-example.css'],
                 },] },
     ];
-    TabGroupDynamicExample.ngFactoryDef = function TabGroupDynamicExample_Factory(t) { return new (t || TabGroupDynamicExample)(); };
-    TabGroupDynamicExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 13, vars: 3, consts: [[1, "example-input-label"], ["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupDynamicExample.ɵfac = function TabGroupDynamicExample_Factory(t) { return new (t || TabGroupDynamicExample)(); };
+    TabGroupDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 13, vars: 3, consts: [[1, "example-input-label"], ["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
             var _r14 = ɵɵgetCurrentView();
             ɵɵelementStart(0, "div");
             ɵɵelementStart(1, "span", 0);
@@ -429,8 +429,8 @@ var TabGroupHeaderBelowExample = /** @class */ (function () {
                     styleUrls: ['tab-group-header-below-example.css'],
                 },] },
     ];
-    TabGroupHeaderBelowExample.ngFactoryDef = function TabGroupHeaderBelowExample_Factory(t) { return new (t || TabGroupHeaderBelowExample)(); };
-    TabGroupHeaderBelowExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupHeaderBelowExample, selectors: [["tab-group-header-below-example"]], decls: 7, vars: 0, consts: [["headerPosition", "below"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupHeaderBelowExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupHeaderBelowExample.ɵfac = function TabGroupHeaderBelowExample_Factory(t) { return new (t || TabGroupHeaderBelowExample)(); };
+    TabGroupHeaderBelowExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupHeaderBelowExample, selectors: [["tab-group-header-below-example"]], decls: 7, vars: 0, consts: [["headerPosition", "below"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupHeaderBelowExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tab-group", 0);
             ɵɵelementStart(1, "mat-tab", 1);
             ɵɵtext(2, " Content 1 ");
@@ -495,8 +495,8 @@ var TabGroupLazyLoadedExample = /** @class */ (function () {
                     styleUrls: ['tab-group-lazy-loaded-example.css'],
                 },] },
     ];
-    TabGroupLazyLoadedExample.ngFactoryDef = function TabGroupLazyLoadedExample_Factory(t) { return new (t || TabGroupLazyLoadedExample)(); };
-    TabGroupLazyLoadedExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupLazyLoadedExample, selectors: [["tab-group-lazy-loaded-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["matTabContent", ""], ["label", "Second"], ["label", "Third"]], template: function TabGroupLazyLoadedExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupLazyLoadedExample.ɵfac = function TabGroupLazyLoadedExample_Factory(t) { return new (t || TabGroupLazyLoadedExample)(); };
+    TabGroupLazyLoadedExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupLazyLoadedExample, selectors: [["tab-group-lazy-loaded-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["matTabContent", ""], ["label", "Second"], ["label", "Third"]], template: function TabGroupLazyLoadedExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tab-group");
             ɵɵelementStart(1, "mat-tab", 0);
             ɵɵtemplate(2, TabGroupLazyLoadedExample_ng_template_2_Template, 2, 4, "ng-template", 1);
@@ -533,8 +533,8 @@ var TabGroupStretchedExample = /** @class */ (function () {
                     styleUrls: ['tab-group-stretched-example.css'],
                 },] },
     ];
-    TabGroupStretchedExample.ngFactoryDef = function TabGroupStretchedExample_Factory(t) { return new (t || TabGroupStretchedExample)(); };
-    TabGroupStretchedExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupStretchedExample, selectors: [["tab-group-stretched-example"]], decls: 7, vars: 0, consts: [["mat-stretch-tabs", "", 1, "example-stretched-tabs", "mat-elevation-z4"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupStretchedExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupStretchedExample.ɵfac = function TabGroupStretchedExample_Factory(t) { return new (t || TabGroupStretchedExample)(); };
+    TabGroupStretchedExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupStretchedExample, selectors: [["tab-group-stretched-example"]], decls: 7, vars: 0, consts: [["mat-stretch-tabs", "", 1, "example-stretched-tabs", "mat-elevation-z4"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupStretchedExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tab-group", 0);
             ɵɵelementStart(1, "mat-tab", 1);
             ɵɵtext(2, " Content 1 ");
@@ -573,8 +573,8 @@ var TabGroupThemeExample = /** @class */ (function () {
                     styleUrls: ['tab-group-theme-example.css'],
                 },] },
     ];
-    TabGroupThemeExample.ngFactoryDef = function TabGroupThemeExample_Factory(t) { return new (t || TabGroupThemeExample)(); };
-    TabGroupThemeExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupThemeExample, selectors: [["tab-group-theme-example"]], decls: 25, vars: 2, consts: [["value", "primary", "aria-label", "Change color"], ["value", "primary"], ["value", "accent"], [1, "example-button-toggle-label"], [3, "color", "backgroundColor"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupThemeExample_Template(rf, ctx) { if (rf & 1) {
+    TabGroupThemeExample.ɵfac = function TabGroupThemeExample_Factory(t) { return new (t || TabGroupThemeExample)(); };
+    TabGroupThemeExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupThemeExample, selectors: [["tab-group-theme-example"]], decls: 25, vars: 2, consts: [["value", "primary", "aria-label", "Change color"], ["value", "primary"], ["value", "accent"], [1, "example-button-toggle-label"], [3, "color", "backgroundColor"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupThemeExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div");
             ɵɵelementStart(1, "mat-button-toggle-group", 0, _c0$1);
             ɵɵelementStart(3, "mat-button-toggle", 1);
@@ -664,8 +664,8 @@ var TabNavBarBasicExample = /** @class */ (function () {
                     styleUrls: ['tab-nav-bar-basic-example.css'],
                 },] },
     ];
-    TabNavBarBasicExample.ngFactoryDef = function TabNavBarBasicExample_Factory(t) { return new (t || TabNavBarBasicExample)(); };
-    TabNavBarBasicExample.ngComponentDef = ɵɵdefineComponent({ type: TabNavBarBasicExample, selectors: [["tab-nav-bar-basic-example"]], decls: 8, vars: 2, consts: [["mat-tab-nav-bar", "", 3, "backgroundColor"], ["mat-tab-link", "", 3, "active", "click", 4, "ngFor", "ngForOf"], ["mat-tab-link", "", "disabled", ""], ["mat-raised-button", "", 1, "example-action-button", 3, "click"], ["mat-tab-link", "", 3, "active", "click"]], template: function TabNavBarBasicExample_Template(rf, ctx) { if (rf & 1) {
+    TabNavBarBasicExample.ɵfac = function TabNavBarBasicExample_Factory(t) { return new (t || TabNavBarBasicExample)(); };
+    TabNavBarBasicExample.ɵcmp = ɵɵdefineComponent({ type: TabNavBarBasicExample, selectors: [["tab-nav-bar-basic-example"]], decls: 8, vars: 2, consts: [["mat-tab-nav-bar", "", 3, "backgroundColor"], ["mat-tab-link", "", 3, "active", "click", 4, "ngFor", "ngForOf"], ["mat-tab-link", "", "disabled", ""], ["mat-raised-button", "", 1, "example-action-button", 3, "click"], ["mat-tab-link", "", 3, "active", "click"]], template: function TabNavBarBasicExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "nav", 0);
             ɵɵtemplate(1, TabNavBarBasicExample_a_1_Template, 2, 2, "a", 1);
             ɵɵelementStart(2, "a", 2);
@@ -729,8 +729,8 @@ var TabGroupExamplesModule = /** @class */ (function () {
                     exports: EXAMPLES,
                 },] },
     ];
-    TabGroupExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: TabGroupExamplesModule });
-    TabGroupExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function TabGroupExamplesModule_Factory(t) { return new (t || TabGroupExamplesModule)(); }, imports: [[
+    TabGroupExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TabGroupExamplesModule });
+    TabGroupExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TabGroupExamplesModule_Factory(t) { return new (t || TabGroupExamplesModule)(); }, imports: [[
                 CommonModule,
                 MatButtonModule,
                 MatButtonToggleModule,

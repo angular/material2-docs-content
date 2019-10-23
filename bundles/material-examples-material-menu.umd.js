@@ -18,8 +18,8 @@
                         styleUrls: ['menu-icons-example.css'],
                     },] },
         ];
-        MenuIconsExample.ngFactoryDef = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
-        MenuIconsExample.ngComponentDef = i0.ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
+        MenuIconsExample.ɵfac = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
+        MenuIconsExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵelementStart(1, "mat-icon");
                 i0.ɵɵtext(2, "more_vert");
@@ -80,8 +80,8 @@
                         styleUrls: ['menu-overview-example.css'],
                     },] },
         ];
-        MenuOverviewExample.ngFactoryDef = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
-        MenuOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        MenuOverviewExample.ɵfac = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
+        MenuOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, "Menu");
                 i0.ɵɵelementEnd();
@@ -125,8 +125,8 @@
                         styleUrls: ['menu-position-example.css'],
                     },] },
         ];
-        MenuPositionExample.ngFactoryDef = function MenuPositionExample_Factory(t) { return new (t || MenuPositionExample)(); };
-        MenuPositionExample.ngComponentDef = i0.ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["mat-menu-item", ""], ["yPosition", "below"], ["xPosition", "before"], ["xPosition", "after"]], template: function MenuPositionExample_Template(rf, ctx) { if (rf & 1) {
+        MenuPositionExample.ɵfac = function MenuPositionExample_Factory(t) { return new (t || MenuPositionExample)(); };
+        MenuPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["mat-menu-item", ""], ["yPosition", "below"], ["xPosition", "before"], ["xPosition", "after"]], template: function MenuPositionExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, "Above");
                 i0.ɵɵelementEnd();
@@ -214,8 +214,8 @@
                         styleUrls: ['nested-menu-example.css'],
                     },] },
         ];
-        NestedMenuExample.ngFactoryDef = function NestedMenuExample_Factory(t) { return new (t || NestedMenuExample)(); };
-        NestedMenuExample.ngComponentDef = i0.ɵɵdefineComponent({ type: NestedMenuExample, selectors: [["nested-menu-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function NestedMenuExample_Template(rf, ctx) { if (rf & 1) {
+        NestedMenuExample.ɵfac = function NestedMenuExample_Factory(t) { return new (t || NestedMenuExample)(); };
+        NestedMenuExample.ɵcmp = i0.ɵɵdefineComponent({ type: NestedMenuExample, selectors: [["nested-menu-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function NestedMenuExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, "Animal index");
                 i0.ɵɵelementEnd();
@@ -365,8 +365,8 @@
                         exports: EXAMPLES,
                     },] },
         ];
-        MenuExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: MenuExamplesModule });
-        MenuExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function MenuExamplesModule_Factory(t) { return new (t || MenuExamplesModule)(); }, imports: [[
+        MenuExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: MenuExamplesModule });
+        MenuExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function MenuExamplesModule_Factory(t) { return new (t || MenuExamplesModule)(); }, imports: [[
                     i1.MatButtonModule,
                     i3.MatIconModule,
                     i2.MatMenuModule,

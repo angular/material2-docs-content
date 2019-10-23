@@ -8,6 +8,6 @@ import * as i4 from "@angular/material/radio";
 import * as i5 from "@angular/forms";
 export { RadioNgModelExample, RadioOverviewExample, };
 export declare class RadioExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<RadioExamplesModule, [typeof i1.RadioNgModelExample, typeof i2.RadioOverviewExample], [typeof i3.CommonModule, typeof i4.MatRadioModule, typeof i5.FormsModule], [typeof i1.RadioNgModelExample, typeof i2.RadioOverviewExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<RadioExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<RadioExamplesModule, [typeof i1.RadioNgModelExample, typeof i2.RadioOverviewExample], [typeof i3.CommonModule, typeof i4.MatRadioModule, typeof i5.FormsModule], [typeof i1.RadioNgModelExample, typeof i2.RadioOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<RadioExamplesModule>;
 }

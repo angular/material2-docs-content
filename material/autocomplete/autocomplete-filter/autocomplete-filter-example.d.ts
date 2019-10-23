@@ -11,6 +11,6 @@ export declare class AutocompleteFilterExample implements OnInit {
     filteredOptions: Observable<string[]>;
     ngOnInit(): void;
     private _filter;
-    static ngFactoryDef: i0.ɵɵFactoryDef<AutocompleteFilterExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<AutocompleteFilterExample, "autocomplete-filter-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<AutocompleteFilterExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<AutocompleteFilterExample, "autocomplete-filter-example", never, {}, {}, never>;
 }

@@ -5,6 +5,6 @@ export declare class CdkVirtualScrollDlExample {
         name: string;
         capital: string;
     }[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<CdkVirtualScrollDlExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkVirtualScrollDlExample, "cdk-virtual-scroll-dl-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkVirtualScrollDlExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkVirtualScrollDlExample, "cdk-virtual-scroll-dl-example", never, {}, {}, never>;
 }

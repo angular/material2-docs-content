@@ -12,6 +12,6 @@ export declare class TableMultipleHeaderFooterExample {
     transactions: Transaction[];
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TableMultipleHeaderFooterExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableMultipleHeaderFooterExample, "table-multiple-header-footer-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableMultipleHeaderFooterExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableMultipleHeaderFooterExample, "table-multiple-header-footer-example", never, {}, {}, never>;
 }

@@ -3,7 +3,7 @@ import { Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, 
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Platform overview
@@ -30,8 +30,8 @@ CdkPlatformOverviewExample.decorators = [
 CdkPlatformOverviewExample.ctorParameters = () => [
     { type: Platform }
 ];
-/** @nocollapse */ CdkPlatformOverviewExample.ngFactoryDef = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(ɵɵdirectiveInject(Platform)); };
-/** @nocollapse */ CdkPlatformOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 22, vars: 10, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(ɵɵdirectiveInject(Platform)); };
+/** @nocollapse */ CdkPlatformOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 22, vars: 10, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h3");
         ɵɵtext(1, "Platform information:");
         ɵɵelementEnd();
@@ -108,7 +108,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [CdkPlatformOverviewExample];
@@ -123,8 +123,8 @@ CdkPlatformExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ CdkPlatformExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
-/** @nocollapse */ CdkPlatformExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); }, imports: [[
+/** @nocollapse */ CdkPlatformExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
+/** @nocollapse */ CdkPlatformExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); }, imports: [[
             PlatformModule,
         ]] });
 /*@__PURE__*/ ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [PlatformModule], exports: [CdkPlatformOverviewExample] });

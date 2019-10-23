@@ -15,6 +15,6 @@ export declare class SliderConfigurableExample {
     vertical: boolean;
     tickInterval: number | 'auto';
     private _tickInterval;
-    static ngFactoryDef: i0.ɵɵFactoryDef<SliderConfigurableExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SliderConfigurableExample, "slider-configurable-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SliderConfigurableExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SliderConfigurableExample, "slider-configurable-example", never, {}, {}, never>;
 }

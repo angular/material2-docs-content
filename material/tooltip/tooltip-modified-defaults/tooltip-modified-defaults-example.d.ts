@@ -6,6 +6,6 @@ export declare const myCustomTooltipDefaults: MatTooltipDefaultOptions;
  * @title Tooltip with a show and hide delay
  */
 export declare class TooltipModifiedDefaultsExample {
-    static ngFactoryDef: i0.ɵɵFactoryDef<TooltipModifiedDefaultsExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TooltipModifiedDefaultsExample, "tooltip-modified-defaults-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TooltipModifiedDefaultsExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TooltipModifiedDefaultsExample, "tooltip-modified-defaults-example", never, {}, {}, never>;
 }

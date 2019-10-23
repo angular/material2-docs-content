@@ -9,6 +9,6 @@ export interface Vegetable {
 export declare class ChipsDragDropExample {
     vegetables: Vegetable[];
     drop(event: CdkDragDrop<Vegetable[]>): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<ChipsDragDropExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ChipsDragDropExample, "chips-drag-drop-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<ChipsDragDropExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<ChipsDragDropExample, "chips-drag-drop-example", never, {}, {}, never>;
 }

@@ -7,7 +7,7 @@ import { MatLine } from '@angular/material/core';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic list
@@ -21,8 +21,8 @@ ListOverviewExample.decorators = [
                 styleUrls: ['list-overview-example.css'],
             },] },
 ];
-/** @nocollapse */ ListOverviewExample.ngFactoryDef = function ListOverviewExample_Factory(t) { return new (t || ListOverviewExample)(); };
-/** @nocollapse */ ListOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: ListOverviewExample, selectors: [["list-overview-example"]], decls: 7, vars: 0, consts: [["role", "list"], ["role", "listitem"]], template: function ListOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ListOverviewExample.ɵfac = function ListOverviewExample_Factory(t) { return new (t || ListOverviewExample)(); };
+/** @nocollapse */ ListOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ListOverviewExample, selectors: [["list-overview-example"]], decls: 7, vars: 0, consts: [["role", "list"], ["role", "listitem"]], template: function ListOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-list", 0);
         ɵɵelementStart(1, "mat-list-item", 1);
         ɵɵtext(2, "Item 1");
@@ -46,7 +46,7 @@ ListOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function ListSectionsExample_mat_list_item_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-list-item");
@@ -136,8 +136,8 @@ ListSectionsExample.decorators = [
                 templateUrl: 'list-sections-example.html',
             },] },
 ];
-/** @nocollapse */ ListSectionsExample.ngFactoryDef = function ListSectionsExample_Factory(t) { return new (t || ListSectionsExample)(); };
-/** @nocollapse */ ListSectionsExample.ngComponentDef = ɵɵdefineComponent({ type: ListSectionsExample, selectors: [["list-sections-example"]], decls: 8, vars: 2, consts: [["mat-subheader", ""], [4, "ngFor", "ngForOf"], ["mat-list-icon", ""], ["mat-line", ""]], template: function ListSectionsExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ListSectionsExample.ɵfac = function ListSectionsExample_Factory(t) { return new (t || ListSectionsExample)(); };
+/** @nocollapse */ ListSectionsExample.ɵcmp = ɵɵdefineComponent({ type: ListSectionsExample, selectors: [["list-sections-example"]], decls: 8, vars: 2, consts: [["mat-subheader", ""], [4, "ngFor", "ngForOf"], ["mat-list-icon", ""], ["mat-line", ""]], template: function ListSectionsExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-list");
         ɵɵelementStart(1, "h3", 0);
         ɵɵtext(2, "Folders");
@@ -172,7 +172,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = ["shoes", ""];
 function ListSelectionExample_mat_list_option_2_Template(rf, ctx) { if (rf & 1) {
@@ -199,8 +199,8 @@ ListSelectionExample.decorators = [
                 templateUrl: 'list-selection-example.html',
             },] },
 ];
-/** @nocollapse */ ListSelectionExample.ngFactoryDef = function ListSelectionExample_Factory(t) { return new (t || ListSelectionExample)(); };
-/** @nocollapse */ ListSelectionExample.ngComponentDef = ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [[4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ListSelectionExample.ɵfac = function ListSelectionExample_Factory(t) { return new (t || ListSelectionExample)(); };
+/** @nocollapse */ ListSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [[4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-selection-list", null, _c0);
         ɵɵtemplate(2, ListSelectionExample_mat_list_option_2_Template, 2, 1, "mat-list-option", 0);
         ɵɵelementEnd();
@@ -229,7 +229,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -250,8 +250,8 @@ ListExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ ListExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: ListExamplesModule });
-/** @nocollapse */ ListExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function ListExamplesModule_Factory(t) { return new (t || ListExamplesModule)(); }, imports: [[
+/** @nocollapse */ ListExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ListExamplesModule });
+/** @nocollapse */ ListExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ListExamplesModule_Factory(t) { return new (t || ListExamplesModule)(); }, imports: [[
             CommonModule,
             MatIconModule,
             MatListModule,

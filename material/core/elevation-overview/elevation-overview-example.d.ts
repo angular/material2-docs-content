@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
  */
 export declare class ElevationOverviewExample {
     isActive: boolean;
-    static ngFactoryDef: i0.ɵɵFactoryDef<ElevationOverviewExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ElevationOverviewExample, "elevation-overview-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<ElevationOverviewExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<ElevationOverviewExample, "elevation-overview-example", never, {}, {}, never>;
 }

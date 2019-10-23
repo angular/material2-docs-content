@@ -76,8 +76,8 @@
         ];
         /** @nocollapse */
         SortOverviewExample.ctorParameters = function () { return []; };
-        SortOverviewExample.ngFactoryDef = function SortOverviewExample_Factory(t) { return new (t || SortOverviewExample)(); };
-        SortOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: SortOverviewExample, selectors: [["sort-overview-example"]], decls: 13, vars: 1, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        SortOverviewExample.ɵfac = function SortOverviewExample_Factory(t) { return new (t || SortOverviewExample)(); };
+        SortOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SortOverviewExample, selectors: [["sort-overview-example"]], decls: 13, vars: 1, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
                 i0.ɵɵlistener("matSortChange", function SortOverviewExample_Template_table_matSortChange_0_listener($event) { return ctx.sortData($event); });
                 i0.ɵɵelementStart(1, "tr");
@@ -133,8 +133,8 @@
                         exports: EXAMPLES,
                     },] },
         ];
-        SortExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: SortExamplesModule });
-        SortExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function SortExamplesModule_Factory(t) { return new (t || SortExamplesModule)(); }, imports: [[
+        SortExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SortExamplesModule });
+        SortExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SortExamplesModule_Factory(t) { return new (t || SortExamplesModule)(); }, imports: [[
                     i2.CommonModule,
                     i1.MatSortModule,
                 ]] });

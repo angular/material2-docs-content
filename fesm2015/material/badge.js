@@ -5,7 +5,7 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Badge overview
@@ -19,8 +19,8 @@ BadgeOverviewExample.decorators = [
                 styleUrls: ['badge-overview-example.css'],
             },] },
 ];
-/** @nocollapse */ BadgeOverviewExample.ngFactoryDef = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
-/** @nocollapse */ BadgeOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 13, vars: 0, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ BadgeOverviewExample.ɵfac = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
+/** @nocollapse */ BadgeOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 13, vars: 0, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "p");
         ɵɵelementStart(1, "span", 0);
         ɵɵtext(2, "Text with a badge");
@@ -53,7 +53,7 @@ BadgeOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -72,8 +72,8 @@ BadgeExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ BadgeExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: BadgeExamplesModule });
-/** @nocollapse */ BadgeExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function BadgeExamplesModule_Factory(t) { return new (t || BadgeExamplesModule)(); }, imports: [[
+/** @nocollapse */ BadgeExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BadgeExamplesModule });
+/** @nocollapse */ BadgeExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BadgeExamplesModule_Factory(t) { return new (t || BadgeExamplesModule)(); }, imports: [[
             MatBadgeModule,
             MatButtonModule,
             MatIconModule,

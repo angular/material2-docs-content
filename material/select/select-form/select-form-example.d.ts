@@ -15,6 +15,6 @@ export declare class SelectFormExample {
     selectedCar: string;
     foods: Food[];
     cars: Car[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<SelectFormExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SelectFormExample, "select-form-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SelectFormExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectFormExample, "select-form-example", never, {}, {}, never>;
 }

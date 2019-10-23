@@ -16,6 +16,6 @@ import * as i10 from "@angular/material/table";
 import * as i11 from "@angular/forms";
 export { PopoverEditCellSpanMatTableExample, PopoverEditMatTableExample, PopoverEditMatTableFlexExample, PopoverEditTabOutMatTableExample, };
 export declare class PopoverEditExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<PopoverEditExamplesModule, [typeof i1.PopoverEditCellSpanMatTableExample, typeof i2.PopoverEditMatTableExample, typeof i3.PopoverEditMatTableFlexExample, typeof i4.PopoverEditTabOutMatTableExample], [typeof i5.MatButtonModule, typeof i6.MatIconModule, typeof i7.MatInputModule, typeof i8.MatPopoverEditModule, typeof i9.MatSnackBarModule, typeof i10.MatTableModule, typeof i11.FormsModule], [typeof i1.PopoverEditCellSpanMatTableExample, typeof i2.PopoverEditMatTableExample, typeof i3.PopoverEditMatTableFlexExample, typeof i4.PopoverEditTabOutMatTableExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<PopoverEditExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<PopoverEditExamplesModule, [typeof i1.PopoverEditCellSpanMatTableExample, typeof i2.PopoverEditMatTableExample, typeof i3.PopoverEditMatTableFlexExample, typeof i4.PopoverEditTabOutMatTableExample], [typeof i5.MatButtonModule, typeof i6.MatIconModule, typeof i7.MatInputModule, typeof i8.MatPopoverEditModule, typeof i9.MatSnackBarModule, typeof i10.MatTableModule, typeof i11.FormsModule], [typeof i1.PopoverEditCellSpanMatTableExample, typeof i2.PopoverEditMatTableExample, typeof i3.PopoverEditMatTableFlexExample, typeof i4.PopoverEditTabOutMatTableExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<PopoverEditExamplesModule>;
 }

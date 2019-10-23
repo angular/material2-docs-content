@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/input', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/icon', '@angular/material/input', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.input = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.icon, global.ng.material.input, global.ng.material.formField));
-}(this, function (exports, i4, i0, i1, i5, i6, i3, i2) { 'use strict';
+}(this, function (exports, i4, i0, i1, i5, i4$1, i3, i2) { 'use strict';
 
     function InputClearableExample_button_2_Template(rf, ctx) { if (rf & 1) {
         var _r2 = i0.ɵɵgetCurrentView();
@@ -27,8 +27,8 @@
                         styleUrls: ['./input-clearable-example.css'],
                     },] },
         ];
-        InputClearableExample.ngFactoryDef = function InputClearableExample_Factory(t) { return new (t || InputClearableExample)(); };
-        InputClearableExample.ngComponentDef = i0.ɵɵdefineComponent({ type: InputClearableExample, selectors: [["input-clearable-example"]], decls: 3, vars: 2, consts: [[1, "example-form-field"], ["matInput", "", "type", "text", "placeholder", "Clearable input", 3, "ngModel", "ngModelChange"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"]], template: function InputClearableExample_Template(rf, ctx) { if (rf & 1) {
+        InputClearableExample.ɵfac = function InputClearableExample_Factory(t) { return new (t || InputClearableExample)(); };
+        InputClearableExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputClearableExample, selectors: [["input-clearable-example"]], decls: 3, vars: 2, consts: [[1, "example-form-field"], ["matInput", "", "type", "text", "placeholder", "Clearable input", 3, "ngModel", "ngModelChange"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"]], template: function InputClearableExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
                 i0.ɵɵelementStart(1, "input", 1);
                 i0.ɵɵlistener("ngModelChange", function InputClearableExample_Template_input_ngModelChange_1_listener($event) { return ctx.value = $event; });
@@ -40,7 +40,7 @@
                 i0.ɵɵproperty("ngModel", ctx.value);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.value);
-            } }, directives: [i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.NgModel, i4.NgIf, i5.MatButton, i2.MatSuffix, i6.MatIcon], styles: [".example-form-field[_ngcontent-%COMP%] {\n  width: 200px;\n}"] });
+            } }, directives: [i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.NgModel, i4.NgIf, i5.MatButton, i2.MatSuffix, i4$1.MatIcon], styles: [".example-form-field[_ngcontent-%COMP%] {\n  width: 200px;\n}"] });
         return InputClearableExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(InputClearableExample, [{
@@ -91,8 +91,8 @@
                         styleUrls: ['./input-error-state-matcher-example.css'],
                     },] },
         ];
-        InputErrorStateMatcherExample.ngFactoryDef = function InputErrorStateMatcherExample_Factory(t) { return new (t || InputErrorStateMatcherExample)(); };
-        InputErrorStateMatcherExample.ngComponentDef = i0.ɵɵdefineComponent({ type: InputErrorStateMatcherExample, selectors: [["input-error-state-matcher-example"]], decls: 7, vars: 4, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Email", 3, "formControl", "errorStateMatcher"], [4, "ngIf"]], template: function InputErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
+        InputErrorStateMatcherExample.ɵfac = function InputErrorStateMatcherExample_Factory(t) { return new (t || InputErrorStateMatcherExample)(); };
+        InputErrorStateMatcherExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputErrorStateMatcherExample, selectors: [["input-error-state-matcher-example"]], decls: 7, vars: 4, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Email", 3, "formControl", "errorStateMatcher"], [4, "ngIf"]], template: function InputErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2);
@@ -110,7 +110,7 @@
                 i0.ɵɵproperty("ngIf", ctx.emailFormControl.hasError("email") && !ctx.emailFormControl.hasError("required"));
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.emailFormControl.hasError("required"));
-            } }, directives: [i1.ɵangular_packages_forms_forms_z, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i2.MatHint, i4.NgIf, i2.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i2.MatHint, i4.NgIf, i2.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputErrorStateMatcherExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(InputErrorStateMatcherExample, [{
@@ -152,8 +152,8 @@
                         styleUrls: ['input-errors-example.css'],
                     },] },
         ];
-        InputErrorsExample.ngFactoryDef = function InputErrorsExample_Factory(t) { return new (t || InputErrorsExample)(); };
-        InputErrorsExample.ngComponentDef = i0.ɵɵdefineComponent({ type: InputErrorsExample, selectors: [["input-errors-example"]], decls: 5, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Email", 3, "formControl"], [4, "ngIf"]], template: function InputErrorsExample_Template(rf, ctx) { if (rf & 1) {
+        InputErrorsExample.ɵfac = function InputErrorsExample_Factory(t) { return new (t || InputErrorsExample)(); };
+        InputErrorsExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputErrorsExample, selectors: [["input-errors-example"]], decls: 5, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Email", 3, "formControl"], [4, "ngIf"]], template: function InputErrorsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2);
@@ -168,7 +168,7 @@
                 i0.ɵɵproperty("ngIf", ctx.emailFormControl.hasError("email") && !ctx.emailFormControl.hasError("required"));
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.emailFormControl.hasError("required"));
-            } }, directives: [i1.ɵangular_packages_forms_forms_z, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i4.NgIf, i2.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i4.NgIf, i2.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputErrorsExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(InputErrorsExample, [{
@@ -194,8 +194,8 @@
                         styleUrls: ['input-form-example.css'],
                     },] },
         ];
-        InputFormExample.ngFactoryDef = function InputFormExample_Factory(t) { return new (t || InputFormExample)(); };
-        InputFormExample.ngComponentDef = i0.ɵɵdefineComponent({ type: InputFormExample, selectors: [["input-form-example"]], decls: 31, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Company (disabled)", "disabled", "", "value", "Google"], ["cellspacing", "0", 1, "example-full-width"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "placeholder", "Long Last Name That Will Be Truncated"], ["matInput", "", "placeholder", "Address"], ["matInput", "", "placeholder", "Address 2"], ["matInput", "", "placeholder", "City"], ["matInput", "", "placeholder", "State"], ["matInput", "", "maxlength", "5", "placeholder", "Postal Code", "value", "94043"], ["align", "end"]], template: function InputFormExample_Template(rf, ctx) { if (rf & 1) {
+        InputFormExample.ɵfac = function InputFormExample_Factory(t) { return new (t || InputFormExample)(); };
+        InputFormExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputFormExample, selectors: [["input-form-example"]], decls: 31, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Company (disabled)", "disabled", "", "value", "Google"], ["cellspacing", "0", 1, "example-full-width"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "placeholder", "Long Last Name That Will Be Truncated"], ["matInput", "", "placeholder", "Address"], ["matInput", "", "placeholder", "Address 2"], ["matInput", "", "placeholder", "City"], ["matInput", "", "placeholder", "State"], ["matInput", "", "maxlength", "5", "placeholder", "Postal Code", "value", "94043"], ["align", "end"]], template: function InputFormExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2);
@@ -251,7 +251,7 @@
                 var _r7 = i0.ɵɵreference(28);
                 i0.ɵɵadvance(30);
                 i0.ɵɵtextInterpolate1("", _r7.value.length, " / 5");
-            } }, directives: [i1.ɵangular_packages_forms_forms_z, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i2.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i2.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
         return InputFormExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(InputFormExample, [{
@@ -277,8 +277,8 @@
                         styleUrls: ['input-hint-example.css'],
                     },] },
         ];
-        InputHintExample.ngFactoryDef = function InputHintExample_Factory(t) { return new (t || InputHintExample)(); };
-        InputHintExample.ngComponentDef = i0.ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 9, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Message"], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
+        InputHintExample.ɵfac = function InputHintExample_Factory(t) { return new (t || InputHintExample)(); };
+        InputHintExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 9, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Message"], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2, _c0$1);
@@ -296,7 +296,7 @@
                 var _r8 = i0.ɵɵreference(3);
                 i0.ɵɵadvance(8);
                 i0.ɵɵtextInterpolate1("", _r8.value.length, " / 256");
-            } }, directives: [i1.ɵangular_packages_forms_forms_z, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i2.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i2.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputHintExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(InputHintExample, [{
@@ -321,8 +321,8 @@
                         templateUrl: 'input-overview-example.html',
                     },] },
         ];
-        InputOverviewExample.ngFactoryDef = function InputOverviewExample_Factory(t) { return new (t || InputOverviewExample)(); };
-        InputOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: InputOverviewExample, selectors: [["input-overview-example"]], decls: 5, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Favorite food", "value", "Sushi"], ["matInput", "", "placeholder", "Leave a comment"]], template: function InputOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        InputOverviewExample.ɵfac = function InputOverviewExample_Factory(t) { return new (t || InputOverviewExample)(); };
+        InputOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputOverviewExample, selectors: [["input-overview-example"]], decls: 5, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Favorite food", "value", "Sushi"], ["matInput", "", "placeholder", "Leave a comment"]], template: function InputOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2);
@@ -331,7 +331,7 @@
                 i0.ɵɵelement(4, "textarea", 3);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.ɵangular_packages_forms_forms_z, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputOverviewExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(InputOverviewExample, [{
@@ -356,8 +356,8 @@
                         styleUrls: ['input-prefix-suffix-example.css'],
                     },] },
         ];
-        InputPrefixSuffixExample.ngFactoryDef = function InputPrefixSuffixExample_Factory(t) { return new (t || InputPrefixSuffixExample)(); };
-        InputPrefixSuffixExample.ngComponentDef = i0.ɵɵdefineComponent({ type: InputPrefixSuffixExample, selectors: [["input-prefix-suffix-example"]], decls: 7, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matPrefix", ""], ["type", "tel", "matInput", "", "placeholder", "Telephone"], ["matSuffix", ""]], template: function InputPrefixSuffixExample_Template(rf, ctx) { if (rf & 1) {
+        InputPrefixSuffixExample.ɵfac = function InputPrefixSuffixExample_Factory(t) { return new (t || InputPrefixSuffixExample)(); };
+        InputPrefixSuffixExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputPrefixSuffixExample, selectors: [["input-prefix-suffix-example"]], decls: 7, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matPrefix", ""], ["type", "tel", "matInput", "", "placeholder", "Telephone"], ["matSuffix", ""]], template: function InputPrefixSuffixExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelementStart(2, "span", 2);
@@ -369,7 +369,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.ɵangular_packages_forms_forms_z, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatPrefix, i3.MatInput, i6.MatIcon, i2.MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatPrefix, i3.MatInput, i4$1.MatIcon, i2.MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputPrefixSuffixExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(InputPrefixSuffixExample, [{
@@ -398,7 +398,7 @@
                         imports: [
                             i4.CommonModule,
                             i5.MatButtonModule,
-                            i6.MatIconModule,
+                            i4$1.MatIconModule,
                             i3.MatInputModule,
                             i1.FormsModule,
                             i1.ReactiveFormsModule,
@@ -407,11 +407,11 @@
                         exports: EXAMPLES,
                     },] },
         ];
-        InputExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: InputExamplesModule });
-        InputExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function InputExamplesModule_Factory(t) { return new (t || InputExamplesModule)(); }, imports: [[
+        InputExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: InputExamplesModule });
+        InputExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function InputExamplesModule_Factory(t) { return new (t || InputExamplesModule)(); }, imports: [[
                     i4.CommonModule,
                     i5.MatButtonModule,
-                    i6.MatIconModule,
+                    i4$1.MatIconModule,
                     i3.MatInputModule,
                     i1.FormsModule,
                     i1.ReactiveFormsModule,
@@ -426,7 +426,7 @@
             InputOverviewExample,
             InputPrefixSuffixExample], imports: [i4.CommonModule,
             i5.MatButtonModule,
-            i6.MatIconModule,
+            i4$1.MatIconModule,
             i3.MatInputModule,
             i1.FormsModule,
             i1.ReactiveFormsModule], exports: [InputClearableExample,
@@ -442,7 +442,7 @@
                     imports: [
                         i4.CommonModule,
                         i5.MatButtonModule,
-                        i6.MatIconModule,
+                        i4$1.MatIconModule,
                         i3.MatInputModule,
                         i1.FormsModule,
                         i1.ReactiveFormsModule,

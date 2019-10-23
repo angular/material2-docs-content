@@ -7,6 +7,6 @@ export declare class TextFieldAutosizeTextareaExample {
     constructor(_ngZone: NgZone);
     autosize: CdkTextareaAutosize;
     triggerResize(): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TextFieldAutosizeTextareaExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TextFieldAutosizeTextareaExample, "text-field-autosize-textarea-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TextFieldAutosizeTextareaExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TextFieldAutosizeTextareaExample, "text-field-autosize-textarea-example", never, {}, {}, never>;
 }

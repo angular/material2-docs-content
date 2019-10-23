@@ -5,7 +5,7 @@ import { MatRadioGroup, MatRadioButton, MatRadioModule } from '@angular/material
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function RadioNgModelExample_mat_radio_button_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-radio-button", 3);
@@ -32,8 +32,8 @@ RadioNgModelExample.decorators = [
                 styleUrls: ['radio-ng-model-example.css'],
             },] },
 ];
-/** @nocollapse */ RadioNgModelExample.ngFactoryDef = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
-/** @nocollapse */ RadioNgModelExample.ngComponentDef = ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ RadioNgModelExample.ɵfac = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
+/** @nocollapse */ RadioNgModelExample.ɵcmp = ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "label", 0);
         ɵɵtext(1, "Pick your favorite season");
         ɵɵelementEnd();
@@ -69,7 +69,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic radios
@@ -83,8 +83,8 @@ RadioOverviewExample.decorators = [
                 styleUrls: ['radio-overview-example.css'],
             },] },
 ];
-/** @nocollapse */ RadioOverviewExample.ngFactoryDef = function RadioOverviewExample_Factory(t) { return new (t || RadioOverviewExample)(); };
-/** @nocollapse */ RadioOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ RadioOverviewExample.ɵfac = function RadioOverviewExample_Factory(t) { return new (t || RadioOverviewExample)(); };
+/** @nocollapse */ RadioOverviewExample.ɵcmp = ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-radio-group", 0);
         ɵɵelementStart(1, "mat-radio-button", 1);
         ɵɵtext(2, "Option 1");
@@ -105,7 +105,7 @@ RadioOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -125,8 +125,8 @@ RadioExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ RadioExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: RadioExamplesModule });
-/** @nocollapse */ RadioExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); }, imports: [[
+/** @nocollapse */ RadioExamplesModule.ɵmod = ɵɵdefineNgModule({ type: RadioExamplesModule });
+/** @nocollapse */ RadioExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); }, imports: [[
             CommonModule,
             MatRadioModule,
             FormsModule,

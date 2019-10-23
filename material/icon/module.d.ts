@@ -6,6 +6,6 @@ import * as i2 from "./icon-svg/icon-svg-example";
 import * as i3 from "@angular/material/icon";
 export { IconOverviewExample, IconSvgExample, };
 export declare class IconExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<IconExamplesModule, [typeof i1.IconOverviewExample, typeof i2.IconSvgExample], [typeof i3.MatIconModule], [typeof i1.IconOverviewExample, typeof i2.IconSvgExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<IconExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<IconExamplesModule, [typeof i1.IconOverviewExample, typeof i2.IconSvgExample], [typeof i3.MatIconModule], [typeof i1.IconOverviewExample, typeof i2.IconSvgExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<IconExamplesModule>;
 }

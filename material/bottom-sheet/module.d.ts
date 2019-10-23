@@ -6,6 +6,6 @@ import * as i3 from "@angular/material/button";
 import * as i4 from "@angular/material/list";
 export { BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, };
 export declare class BottomSheetExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<BottomSheetExamplesModule, [typeof i1.BottomSheetOverviewExample, typeof i1.BottomSheetOverviewExampleSheet], [typeof i2.MatBottomSheetModule, typeof i3.MatButtonModule, typeof i4.MatListModule], [typeof i1.BottomSheetOverviewExample, typeof i1.BottomSheetOverviewExampleSheet]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<BottomSheetExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<BottomSheetExamplesModule, [typeof i1.BottomSheetOverviewExample, typeof i1.BottomSheetOverviewExampleSheet], [typeof i2.MatBottomSheetModule, typeof i3.MatButtonModule, typeof i4.MatListModule], [typeof i1.BottomSheetOverviewExample, typeof i1.BottomSheetOverviewExampleSheet]>;
+    static ɵinj: i0.ɵɵInjectorDef<BottomSheetExamplesModule>;
 }

@@ -109,8 +109,8 @@ var ExampleModule = /** @class */ (function () {
                     entryComponents: EXAMPLE_LIST,
                 },] },
     ];
-    ExampleModule.ngModuleDef = ɵɵdefineNgModule({ type: ExampleModule });
-    ExampleModule.ngInjectorDef = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, imports: [EXAMPLE_MODULES,
+    ExampleModule.ɵmod = ɵɵdefineNgModule({ type: ExampleModule });
+    ExampleModule.ɵinj = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, imports: [EXAMPLE_MODULES,
             CdkPopoverEditExamplesModule, CdkA11yExamplesModule, CdkClipboardExamplesModule, CdkDragDropExamplesModule, CdkPlatformExamplesModule, CdkPortalExamplesModule, CdkScrollingExamplesModule, CdkStepperExamplesModule, CdkTableExamplesModule, CdkTextFieldExamplesModule, CdkTreeExamplesModule, PopoverEditExamplesModule, AutocompleteExamplesModule, BadgeExamplesModule, BottomSheetExamplesModule, ButtonToggleExamplesModule, ButtonExamplesModule, CardExamplesModule, CheckboxExamplesModule, ChipsExamplesModule, CoreExamplesModule, DatepickerExamplesModule, DialogExamplesModule, DividerExamplesModule, ExpansionExamplesModule, FormFieldExamplesModule, GridListExamplesModule, IconExamplesModule, InputExamplesModule, ListExamplesModule, MenuExamplesModule, PaginatorExamplesModule, ProgressBarExamplesModule, ProgressSpinnerExamplesModule, RadioExamplesModule, SelectExamplesModule, SidenavExamplesModule, SlideToggleExamplesModule, SliderExamplesModule, SnackBarExamplesModule, SortExamplesModule, StepperExamplesModule, TableExamplesModule, TabGroupExamplesModule, ToolbarExamplesModule, TooltipExamplesModule, TreeExamplesModule] });
     return ExampleModule;
 }());

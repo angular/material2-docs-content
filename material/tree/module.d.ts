@@ -18,6 +18,6 @@ import * as i11 from "@angular/material/progress-bar";
 import * as i12 from "@angular/material/tree";
 export { TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample, };
 export declare class TreeExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<TreeExamplesModule, [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeLoadmoreExample, typeof i5.TreeNestedOverviewExample], [typeof i6.CommonModule, typeof i7.MatButtonModule, typeof i8.MatCheckboxModule, typeof i9.MatIconModule, typeof i10.MatInputModule, typeof i11.MatProgressBarModule, typeof i12.MatTreeModule], [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeLoadmoreExample, typeof i5.TreeNestedOverviewExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<TreeExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<TreeExamplesModule, [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeLoadmoreExample, typeof i5.TreeNestedOverviewExample], [typeof i6.CommonModule, typeof i7.MatButtonModule, typeof i8.MatCheckboxModule, typeof i9.MatIconModule, typeof i10.MatInputModule, typeof i11.MatProgressBarModule, typeof i12.MatTreeModule], [typeof i1.TreeChecklistExample, typeof i2.TreeDynamicExample, typeof i3.TreeFlatOverviewExample, typeof i4.TreeLoadmoreExample, typeof i5.TreeNestedOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<TreeExamplesModule>;
 }

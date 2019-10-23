@@ -9,6 +9,6 @@ export interface Section {
 export declare class ListSectionsExample {
     folders: Section[];
     notes: Section[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<ListSectionsExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ListSectionsExample, "list-sections-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<ListSectionsExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<ListSectionsExample, "list-sections-example", never, {}, {}, never>;
 }

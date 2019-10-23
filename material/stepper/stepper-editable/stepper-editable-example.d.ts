@@ -11,6 +11,6 @@ export declare class StepperEditableExample implements OnInit {
     isEditable: boolean;
     constructor(_formBuilder: FormBuilder);
     ngOnInit(): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<StepperEditableExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<StepperEditableExample, "stepper-editable-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<StepperEditableExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<StepperEditableExample, "stepper-editable-example", never, {}, {}, never>;
 }

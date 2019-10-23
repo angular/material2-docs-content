@@ -13,6 +13,6 @@ import * as i8 from "@angular/material/input";
 import * as i9 from "@angular/material/slider";
 export { SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, };
 export declare class SliderExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<SliderExamplesModule, [typeof i1.SliderConfigurableExample, typeof i2.SliderFormattingExample, typeof i3.SliderOverviewExample], [typeof i4.CommonModule, typeof i5.FormsModule, typeof i6.MatCardModule, typeof i7.MatCheckboxModule, typeof i8.MatInputModule, typeof i9.MatSliderModule], [typeof i1.SliderConfigurableExample, typeof i2.SliderFormattingExample, typeof i3.SliderOverviewExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<SliderExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<SliderExamplesModule, [typeof i1.SliderConfigurableExample, typeof i2.SliderFormattingExample, typeof i3.SliderOverviewExample], [typeof i4.CommonModule, typeof i5.FormsModule, typeof i6.MatCardModule, typeof i7.MatCheckboxModule, typeof i8.MatInputModule, typeof i9.MatSliderModule], [typeof i1.SliderConfigurableExample, typeof i2.SliderFormattingExample, typeof i3.SliderOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<SliderExamplesModule>;
 }

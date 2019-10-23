@@ -9,6 +9,6 @@ import * as i5 from "@angular/material/radio";
 import * as i6 from "@angular/forms";
 export { CheckboxConfigurableExample, CheckboxOverviewExample, };
 export declare class CheckboxExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<CheckboxExamplesModule, [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample], [typeof i3.MatCardModule, typeof i4.MatCheckboxModule, typeof i5.MatRadioModule, typeof i6.FormsModule], [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<CheckboxExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<CheckboxExamplesModule, [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample], [typeof i3.MatCardModule, typeof i4.MatCheckboxModule, typeof i5.MatRadioModule, typeof i6.FormsModule], [typeof i1.CheckboxConfigurableExample, typeof i2.CheckboxOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<CheckboxExamplesModule>;
 }

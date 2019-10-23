@@ -8,6 +8,6 @@ export declare class SlideToggleFormsExample {
     formGroup: FormGroup;
     constructor(formBuilder: FormBuilder);
     onFormSubmit(): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<SlideToggleFormsExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SlideToggleFormsExample, "slide-toggle-forms-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SlideToggleFormsExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SlideToggleFormsExample, "slide-toggle-forms-example", never, {}, {}, never>;
 }

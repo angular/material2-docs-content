@@ -4,6 +4,6 @@ export declare class SidenavOpenCloseExample {
     events: string[];
     opened: boolean;
     shouldRun: boolean;
-    static ngFactoryDef: i0.ɵɵFactoryDef<SidenavOpenCloseExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SidenavOpenCloseExample, "sidenav-open-close-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SidenavOpenCloseExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SidenavOpenCloseExample, "sidenav-open-close-example", never, {}, {}, never>;
 }

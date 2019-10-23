@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/input'), require('@angular/material/select'), require('@angular/material/snack-bar'), require('@angular/material/form-field'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/snack-bar', ['exports', 'tslib', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/input', '@angular/material/select', '@angular/material/snack-bar', '@angular/material/form-field', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.snackBar = {}), global.tslib, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.input, global.ng.material.select, global.ng.material.snackBar, global.ng.material.formField, global.ng.material.core));
-}(this, function (exports, tslib_1, i0, i3, i5, i3$1, i3$2, i1, i2, i4) { 'use strict';
+}(this, function (exports, tslib, i0, i3, i5, i3$1, i3$2, i1, i2, i4) { 'use strict';
 
     /**
      * @title Snack-bar with a custom component
@@ -28,8 +28,8 @@
         SnackBarComponentExample.ctorParameters = function () { return [
             { type: i1.MatSnackBar }
         ]; };
-        SnackBarComponentExample.ngFactoryDef = function SnackBarComponentExample_Factory(t) { return new (t || SnackBarComponentExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-        SnackBarComponentExample.ngComponentDef = i0.ɵɵdefineComponent({ type: SnackBarComponentExample, selectors: [["snack-bar-component-example"]], decls: 6, vars: 1, consts: [["type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], ["mat-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarComponentExample_Template(rf, ctx) { if (rf & 1) {
+        SnackBarComponentExample.ɵfac = function SnackBarComponentExample_Factory(t) { return new (t || SnackBarComponentExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
+        SnackBarComponentExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarComponentExample, selectors: [["snack-bar-component-example"]], decls: 6, vars: 1, consts: [["type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], ["mat-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarComponentExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Snack bar duration (seconds)");
@@ -66,8 +66,8 @@
                         styles: ["\n    .example-pizza-party {\n      color: hotpink;\n    }\n  "],
                     },] },
         ];
-        PizzaPartyComponent.ngFactoryDef = function PizzaPartyComponent_Factory(t) { return new (t || PizzaPartyComponent)(); };
-        PizzaPartyComponent.ngComponentDef = i0.ɵɵdefineComponent({ type: PizzaPartyComponent, selectors: [["snack-bar-component-example-snack"]], decls: 2, vars: 0, consts: [[1, "example-pizza-party"]], template: function PizzaPartyComponent_Template(rf, ctx) { if (rf & 1) {
+        PizzaPartyComponent.ɵfac = function PizzaPartyComponent_Factory(t) { return new (t || PizzaPartyComponent)(); };
+        PizzaPartyComponent.ɵcmp = i0.ɵɵdefineComponent({ type: PizzaPartyComponent, selectors: [["snack-bar-component-example-snack"]], decls: 2, vars: 0, consts: [[1, "example-pizza-party"]], template: function PizzaPartyComponent_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "span", 0);
                 i0.ɵɵtext(1, " Pizza party!!! \uD83C\uDF55\n");
                 i0.ɵɵelementEnd();
@@ -108,8 +108,8 @@
         SnackBarOverviewExample.ctorParameters = function () { return [
             { type: i1.MatSnackBar }
         ]; };
-        SnackBarOverviewExample.ngFactoryDef = function SnackBarOverviewExample_Factory(t) { return new (t || SnackBarOverviewExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-        SnackBarOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 8, vars: 0, consts: [["matInput", "", "value", "Disco party!", "placeholder", "Message"], ["matInput", "", "value", "Dance", "placeholder", "Action"], ["mat-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        SnackBarOverviewExample.ɵfac = function SnackBarOverviewExample_Factory(t) { return new (t || SnackBarOverviewExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
+        SnackBarOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 8, vars: 0, consts: [["matInput", "", "value", "Disco party!", "placeholder", "Message"], ["matInput", "", "value", "Dance", "placeholder", "Action"], ["mat-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 var _r2 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelement(1, "input", 0, _c0);
@@ -160,8 +160,8 @@
         SnackBarPositionExample.ctorParameters = function () { return [
             { type: i1.MatSnackBar }
         ]; };
-        SnackBarPositionExample.ngFactoryDef = function SnackBarPositionExample_Factory(t) { return new (t || SnackBarPositionExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-        SnackBarPositionExample.ngComponentDef = i0.ɵɵdefineComponent({ type: SnackBarPositionExample, selectors: [["snack-bar-position-example"]], decls: 20, vars: 2, consts: [["placeholder", "Horizontal position", 3, "value", "valueChange"], ["value", "start"], ["value", "center"], ["value", "end"], ["value", "left"], ["value", "right"], ["placeholder", "Vertical position", 3, "value", "valueChange"], ["value", "top"], ["value", "bottom"], ["mat-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarPositionExample_Template(rf, ctx) { if (rf & 1) {
+        SnackBarPositionExample.ɵfac = function SnackBarPositionExample_Factory(t) { return new (t || SnackBarPositionExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
+        SnackBarPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarPositionExample, selectors: [["snack-bar-position-example"]], decls: 20, vars: 2, consts: [["placeholder", "Horizontal position", 3, "value", "valueChange"], ["value", "start"], ["value", "center"], ["value", "end"], ["value", "left"], ["value", "right"], ["placeholder", "Vertical position", 3, "value", "valueChange"], ["value", "top"], ["value", "bottom"], ["mat-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarPositionExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-select", 0);
                 i0.ɵɵlistener("valueChange", function SnackBarPositionExample_Template_mat_select_valueChange_1_listener($event) { return ctx.horizontalPosition = $event; });
@@ -231,13 +231,13 @@
                             i3$2.MatSelectModule,
                             i1.MatSnackBarModule,
                         ],
-                        declarations: tslib_1.__spread(EXAMPLES, [PizzaPartyComponent]),
+                        declarations: tslib.__spread(EXAMPLES, [PizzaPartyComponent]),
                         exports: EXAMPLES,
                         entryComponents: [PizzaPartyComponent],
                     },] },
         ];
-        SnackBarExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: SnackBarExamplesModule });
-        SnackBarExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function SnackBarExamplesModule_Factory(t) { return new (t || SnackBarExamplesModule)(); }, imports: [[
+        SnackBarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SnackBarExamplesModule });
+        SnackBarExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SnackBarExamplesModule_Factory(t) { return new (t || SnackBarExamplesModule)(); }, imports: [[
                     i3.FormsModule,
                     i5.MatButtonModule,
                     i3$1.MatInputModule,
@@ -266,7 +266,7 @@
                         i3$2.MatSelectModule,
                         i1.MatSnackBarModule,
                     ],
-                    declarations: tslib_1.__spread(EXAMPLES, [PizzaPartyComponent]),
+                    declarations: tslib.__spread(EXAMPLES, [PizzaPartyComponent]),
                     exports: EXAMPLES,
                     entryComponents: [PizzaPartyComponent],
                 }]

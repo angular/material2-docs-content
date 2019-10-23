@@ -13,6 +13,6 @@ export interface PokemonGroup {
 export declare class SelectOptgroupExample {
     pokemonControl: FormControl;
     pokemonGroups: PokemonGroup[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<SelectOptgroupExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SelectOptgroupExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectOptgroupExample, "select-optgroup-example", never, {}, {}, never>;
 }

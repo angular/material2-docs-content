@@ -32,8 +32,8 @@ var CdkPortalOverviewExample = /** @class */ (function () {
     CdkPortalOverviewExample.propDecorators = {
         templatePortalContent: [{ type: ViewChild, args: ['templatePortalContent', { static: false },] }]
     };
-    CdkPortalOverviewExample.ngFactoryDef = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(ɵɵdirectiveInject(ViewContainerRef)); };
-    CdkPortalOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
+    CdkPortalOverviewExample.ɵfac = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(ɵɵdirectiveInject(ViewContainerRef)); };
+    CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵviewQuery(_c0, true);
         } if (rf & 2) {
             var _t;
@@ -80,8 +80,8 @@ var ComponentPortalExample = /** @class */ (function () {
                     template: 'Hello, this is a component portal'
                 },] },
     ];
-    ComponentPortalExample.ngFactoryDef = function ComponentPortalExample_Factory(t) { return new (t || ComponentPortalExample)(); };
-    ComponentPortalExample.ngComponentDef = ɵɵdefineComponent({ type: ComponentPortalExample, selectors: [["component-portal-example"]], decls: 1, vars: 0, template: function ComponentPortalExample_Template(rf, ctx) { if (rf & 1) {
+    ComponentPortalExample.ɵfac = function ComponentPortalExample_Factory(t) { return new (t || ComponentPortalExample)(); };
+    ComponentPortalExample.ɵcmp = ɵɵdefineComponent({ type: ComponentPortalExample, selectors: [["component-portal-example"]], decls: 1, vars: 0, template: function ComponentPortalExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵtext(0, "Hello, this is a component portal");
         } }, encapsulation: 2 });
     return ComponentPortalExample;
@@ -111,8 +111,8 @@ var CdkPortalExamplesModule = /** @class */ (function () {
                     entryComponents: [ComponentPortalExample]
                 },] },
     ];
-    CdkPortalExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: CdkPortalExamplesModule });
-    CdkPortalExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function CdkPortalExamplesModule_Factory(t) { return new (t || CdkPortalExamplesModule)(); }, imports: [[
+    CdkPortalExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPortalExamplesModule });
+    CdkPortalExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPortalExamplesModule_Factory(t) { return new (t || CdkPortalExamplesModule)(); }, imports: [[
                 PortalModule,
             ]] });
     return CdkPortalExamplesModule;

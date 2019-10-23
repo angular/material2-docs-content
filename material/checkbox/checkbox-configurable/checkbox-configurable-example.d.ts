@@ -7,6 +7,6 @@ export declare class CheckboxConfigurableExample {
     indeterminate: boolean;
     labelPosition: 'before' | 'after';
     disabled: boolean;
-    static ngFactoryDef: i0.ɵɵFactoryDef<CheckboxConfigurableExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CheckboxConfigurableExample, "checkbox-configurable-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CheckboxConfigurableExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CheckboxConfigurableExample, "checkbox-configurable-example", never, {}, {}, never>;
 }

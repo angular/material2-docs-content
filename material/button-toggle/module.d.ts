@@ -9,6 +9,6 @@ import * as i4 from "@angular/material/button-toggle";
 import * as i5 from "@angular/material/icon";
 export { ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, };
 export declare class ButtonToggleExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<ButtonToggleExamplesModule, [typeof i1.ButtonToggleAppearanceExample, typeof i2.ButtonToggleExclusiveExample, typeof i3.ButtonToggleOverviewExample], [typeof i4.MatButtonToggleModule, typeof i5.MatIconModule], [typeof i1.ButtonToggleAppearanceExample, typeof i2.ButtonToggleExclusiveExample, typeof i3.ButtonToggleOverviewExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<ButtonToggleExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<ButtonToggleExamplesModule, [typeof i1.ButtonToggleAppearanceExample, typeof i2.ButtonToggleExclusiveExample, typeof i3.ButtonToggleOverviewExample], [typeof i4.MatButtonToggleModule, typeof i5.MatIconModule], [typeof i1.ButtonToggleAppearanceExample, typeof i2.ButtonToggleExclusiveExample, typeof i3.ButtonToggleOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<ButtonToggleExamplesModule>;
 }

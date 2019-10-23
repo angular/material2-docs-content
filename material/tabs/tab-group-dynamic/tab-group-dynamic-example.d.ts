@@ -8,6 +8,6 @@ export declare class TabGroupDynamicExample {
     selected: FormControl;
     addTab(selectAfterAdding: boolean): void;
     removeTab(index: number): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TabGroupDynamicExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TabGroupDynamicExample, "tab-group-dynamic-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TabGroupDynamicExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TabGroupDynamicExample, "tab-group-dynamic-example", never, {}, {}, never>;
 }

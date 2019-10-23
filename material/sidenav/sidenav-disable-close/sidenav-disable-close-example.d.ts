@@ -6,6 +6,6 @@ export declare class SidenavDisableCloseExample {
     reason: string;
     close(reason: string): void;
     shouldRun: boolean;
-    static ngFactoryDef: i0.ɵɵFactoryDef<SidenavDisableCloseExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SidenavDisableCloseExample, "sidenav-disable-close-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SidenavDisableCloseExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SidenavDisableCloseExample, "sidenav-disable-close-example", never, {}, {}, never>;
 }

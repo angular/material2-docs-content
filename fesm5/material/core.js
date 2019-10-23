@@ -20,8 +20,8 @@ var ElevationOverviewExample = /** @class */ (function () {
                     templateUrl: 'elevation-overview-example.html',
                 },] },
     ];
-    ElevationOverviewExample.ngFactoryDef = function ElevationOverviewExample_Factory(t) { return new (t || ElevationOverviewExample)(); };
-    ElevationOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: ElevationOverviewExample, selectors: [["elevation-overview-example"]], decls: 4, vars: 2, consts: [[1, "example-container"], ["mat-button", "", 3, "click"]], template: function ElevationOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    ElevationOverviewExample.ɵfac = function ElevationOverviewExample_Factory(t) { return new (t || ElevationOverviewExample)(); };
+    ElevationOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ElevationOverviewExample, selectors: [["elevation-overview-example"]], decls: 4, vars: 2, consts: [[1, "example-container"], ["mat-button", "", 3, "click"]], template: function ElevationOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵtext(1, " Example\n");
             ɵɵelementEnd();
@@ -60,8 +60,8 @@ var RippleOverviewExample = /** @class */ (function () {
                     styleUrls: ['ripple-overview-example.css'],
                 },] },
     ];
-    RippleOverviewExample.ngFactoryDef = function RippleOverviewExample_Factory(t) { return new (t || RippleOverviewExample)(); };
-    RippleOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: RippleOverviewExample, selectors: [["ripple-overview-example"]], decls: 12, vars: 10, consts: [[1, "example-ripple-checkbox", 3, "ngModel", "ngModelChange"], [1, "example-ripple-form-field"], ["matInput", "", "type", "number", "placeholder", "Radius", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "text", "placeholder", "Color", 3, "ngModel", "ngModelChange"], ["matRipple", "", 1, "example-ripple-container", "mat-elevation-z4", 3, "matRippleCentered", "matRippleDisabled", "matRippleUnbounded", "matRippleRadius", "matRippleColor"]], template: function RippleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    RippleOverviewExample.ɵfac = function RippleOverviewExample_Factory(t) { return new (t || RippleOverviewExample)(); };
+    RippleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: RippleOverviewExample, selectors: [["ripple-overview-example"]], decls: 12, vars: 10, consts: [[1, "example-ripple-checkbox", 3, "ngModel", "ngModelChange"], [1, "example-ripple-form-field"], ["matInput", "", "type", "number", "placeholder", "Radius", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "text", "placeholder", "Color", 3, "ngModel", "ngModelChange"], ["matRipple", "", 1, "example-ripple-container", "mat-elevation-z4", 3, "matRippleCentered", "matRippleDisabled", "matRippleUnbounded", "matRippleRadius", "matRippleColor"]], template: function RippleOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-checkbox", 0);
             ɵɵlistener("ngModelChange", function RippleOverviewExample_Template_mat_checkbox_ngModelChange_0_listener($event) { return ctx.centered = $event; });
             ɵɵtext(1, "Centered");
@@ -131,8 +131,8 @@ var CoreExamplesModule = /** @class */ (function () {
                     exports: EXAMPLES,
                 },] },
     ];
-    CoreExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: CoreExamplesModule });
-    CoreExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function CoreExamplesModule_Factory(t) { return new (t || CoreExamplesModule)(); }, imports: [[
+    CoreExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CoreExamplesModule });
+    CoreExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CoreExamplesModule_Factory(t) { return new (t || CoreExamplesModule)(); }, imports: [[
                 MatButtonModule,
                 MatCheckboxModule,
                 MatInputModule,

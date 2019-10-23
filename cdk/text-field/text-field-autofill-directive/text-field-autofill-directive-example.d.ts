@@ -3,6 +3,6 @@ import * as i0 from "@angular/core";
 export declare class TextFieldAutofillDirectiveExample {
     firstNameAutofilled: boolean;
     lastNameAutofilled: boolean;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TextFieldAutofillDirectiveExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TextFieldAutofillDirectiveExample, "text-field-autofill-directive-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TextFieldAutofillDirectiveExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TextFieldAutofillDirectiveExample, "text-field-autofill-directive-example", never, {}, {}, never>;
 }

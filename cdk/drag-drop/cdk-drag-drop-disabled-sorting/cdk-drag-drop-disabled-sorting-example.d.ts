@@ -7,6 +7,6 @@ export declare class CdkDragDropDisabledSortingExample {
     items: string[];
     basket: string[];
     drop(event: CdkDragDrop<string[]>): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<CdkDragDropDisabledSortingExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkDragDropDisabledSortingExample, "cdk-drag-drop-disabled-sorting-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropDisabledSortingExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropDisabledSortingExample, "cdk-drag-drop-disabled-sorting-example", never, {}, {}, never>;
 }

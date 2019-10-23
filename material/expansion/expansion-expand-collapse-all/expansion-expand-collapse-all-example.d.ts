@@ -5,6 +5,6 @@ import * as i0 from "@angular/core";
  */
 export declare class ExpansionExpandCollapseAllExample {
     accordion: MatAccordion;
-    static ngFactoryDef: i0.ɵɵFactoryDef<ExpansionExpandCollapseAllExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ExpansionExpandCollapseAllExample, "expansion-toggle-all-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<ExpansionExpandCollapseAllExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<ExpansionExpandCollapseAllExample, "expansion-toggle-all-example", never, {}, {}, never>;
 }

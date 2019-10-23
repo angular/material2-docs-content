@@ -18,6 +18,6 @@ export declare class DatepickerViewsSelectionExample {
     date: FormControl;
     chosenYearHandler(normalizedYear: Moment): void;
     chosenMonthHandler(normalizedMonth: Moment, datepicker: MatDatepicker<Moment>): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<DatepickerViewsSelectionExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<DatepickerViewsSelectionExample, "datepicker-views-selection-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<DatepickerViewsSelectionExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<DatepickerViewsSelectionExample, "datepicker-views-selection-example", never, {}, {}, never>;
 }

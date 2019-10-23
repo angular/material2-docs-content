@@ -8,6 +8,6 @@ export interface Food {
  */
 export declare class SelectOverviewExample {
     foods: Food[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<SelectOverviewExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SelectOverviewExample, "select-overview-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SelectOverviewExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectOverviewExample, "select-overview-example", never, {}, {}, never>;
 }

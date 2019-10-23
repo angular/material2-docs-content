@@ -22,8 +22,8 @@ var SlideToggleConfigurableExample = /** @class */ (function () {
                     styleUrls: ['slide-toggle-configurable-example.css'],
                 },] },
     ];
-    SlideToggleConfigurableExample.ngFactoryDef = function SlideToggleConfigurableExample_Factory(t) { return new (t || SlideToggleConfigurableExample)(); };
-    SlideToggleConfigurableExample.ngComponentDef = ɵɵdefineComponent({ type: SlideToggleConfigurableExample, selectors: [["slide-toggle-configurable-example"]], decls: 27, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "result"], [1, "example-margin", 3, "color", "checked", "disabled"]], template: function SlideToggleConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+    SlideToggleConfigurableExample.ɵfac = function SlideToggleConfigurableExample_Factory(t) { return new (t || SlideToggleConfigurableExample)(); };
+    SlideToggleConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleConfigurableExample, selectors: [["slide-toggle-configurable-example"]], decls: 27, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], [1, "example-margin", 3, "ngModel", "ngModelChange"], [1, "result"], [1, "example-margin", 3, "color", "checked", "disabled"]], template: function SlideToggleConfigurableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-card");
             ɵɵelementStart(1, "mat-card-content");
             ɵɵelementStart(2, "h2", 0);
@@ -119,8 +119,8 @@ var SlideToggleFormsExample = /** @class */ (function () {
     SlideToggleFormsExample.ctorParameters = function () { return [
         { type: FormBuilder }
     ]; };
-    SlideToggleFormsExample.ngFactoryDef = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(ɵɵdirectiveInject(FormBuilder)); };
-    SlideToggleFormsExample.ngComponentDef = ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"], ["mat-rasied-button", "", "type", "submit"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
+    SlideToggleFormsExample.ɵfac = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(ɵɵdirectiveInject(FormBuilder)); };
+    SlideToggleFormsExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"], ["mat-rasied-button", "", "type", "submit"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵtext(1, "Slide Toggle using a simple NgModel.");
             ɵɵelementEnd();
@@ -195,8 +195,8 @@ var SlideToggleOverviewExample = /** @class */ (function () {
                     styleUrls: ['slide-toggle-overview-example.css'],
                 },] },
     ];
-    SlideToggleOverviewExample.ngFactoryDef = function SlideToggleOverviewExample_Factory(t) { return new (t || SlideToggleOverviewExample)(); };
-    SlideToggleOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: SlideToggleOverviewExample, selectors: [["slide-toggle-overview-example"]], decls: 2, vars: 0, template: function SlideToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    SlideToggleOverviewExample.ɵfac = function SlideToggleOverviewExample_Factory(t) { return new (t || SlideToggleOverviewExample)(); };
+    SlideToggleOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleOverviewExample, selectors: [["slide-toggle-overview-example"]], decls: 2, vars: 0, template: function SlideToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-slide-toggle");
             ɵɵtext(1, "Slide me!");
             ɵɵelementEnd();
@@ -235,8 +235,8 @@ var SlideToggleExamplesModule = /** @class */ (function () {
                     exports: EXAMPLES,
                 },] },
     ];
-    SlideToggleExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: SlideToggleExamplesModule });
-    SlideToggleExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function SlideToggleExamplesModule_Factory(t) { return new (t || SlideToggleExamplesModule)(); }, imports: [[
+    SlideToggleExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SlideToggleExamplesModule });
+    SlideToggleExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SlideToggleExamplesModule_Factory(t) { return new (t || SlideToggleExamplesModule)(); }, imports: [[
                 FormsModule,
                 MatButtonModule,
                 MatCardModule,

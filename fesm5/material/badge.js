@@ -16,8 +16,8 @@ var BadgeOverviewExample = /** @class */ (function () {
                     styleUrls: ['badge-overview-example.css'],
                 },] },
     ];
-    BadgeOverviewExample.ngFactoryDef = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
-    BadgeOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 13, vars: 0, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    BadgeOverviewExample.ɵfac = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
+    BadgeOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 13, vars: 0, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵelementStart(1, "span", 0);
             ɵɵtext(2, "Text with a badge");
@@ -67,8 +67,8 @@ var BadgeExamplesModule = /** @class */ (function () {
                     exports: EXAMPLES,
                 },] },
     ];
-    BadgeExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: BadgeExamplesModule });
-    BadgeExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function BadgeExamplesModule_Factory(t) { return new (t || BadgeExamplesModule)(); }, imports: [[
+    BadgeExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BadgeExamplesModule });
+    BadgeExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BadgeExamplesModule_Factory(t) { return new (t || BadgeExamplesModule)(); }, imports: [[
                 MatBadgeModule,
                 MatButtonModule,
                 MatIconModule,

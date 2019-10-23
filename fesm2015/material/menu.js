@@ -5,7 +5,7 @@ import { MatMenuTrigger, _MatMenu, MatMenuItem, MatMenuModule } from '@angular/m
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = ["menu", "matMenu"];
 /**
@@ -20,8 +20,8 @@ MenuIconsExample.decorators = [
                 styleUrls: ['menu-icons-example.css'],
             },] },
 ];
-/** @nocollapse */ MenuIconsExample.ngFactoryDef = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
-/** @nocollapse */ MenuIconsExample.ngComponentDef = ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ MenuIconsExample.ɵfac = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
+/** @nocollapse */ MenuIconsExample.ɵcmp = ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0);
         ɵɵelementStart(1, "mat-icon");
         ɵɵtext(2, "more_vert");
@@ -68,7 +68,7 @@ MenuIconsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0$1 = ["menu", "matMenu"];
 /**
@@ -83,8 +83,8 @@ MenuOverviewExample.decorators = [
                 styleUrls: ['menu-overview-example.css'],
             },] },
 ];
-/** @nocollapse */ MenuOverviewExample.ngFactoryDef = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
-/** @nocollapse */ MenuOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ MenuOverviewExample.ɵfac = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
+/** @nocollapse */ MenuOverviewExample.ɵcmp = ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0);
         ɵɵtext(1, "Menu");
         ɵɵelementEnd();
@@ -111,7 +111,7 @@ MenuOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0$2 = ["aboveMenu", "matMenu"];
 const _c1 = ["belowMenu", "matMenu"];
@@ -129,8 +129,8 @@ MenuPositionExample.decorators = [
                 styleUrls: ['menu-position-example.css'],
             },] },
 ];
-/** @nocollapse */ MenuPositionExample.ngFactoryDef = function MenuPositionExample_Factory(t) { return new (t || MenuPositionExample)(); };
-/** @nocollapse */ MenuPositionExample.ngComponentDef = ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["mat-menu-item", ""], ["yPosition", "below"], ["xPosition", "before"], ["xPosition", "after"]], template: function MenuPositionExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ MenuPositionExample.ɵfac = function MenuPositionExample_Factory(t) { return new (t || MenuPositionExample)(); };
+/** @nocollapse */ MenuPositionExample.ɵcmp = ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["mat-menu-item", ""], ["yPosition", "below"], ["xPosition", "before"], ["xPosition", "after"]], template: function MenuPositionExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0);
         ɵɵtext(1, "Above");
         ɵɵelementEnd();
@@ -199,7 +199,7 @@ MenuPositionExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0$3 = ["animals", "matMenu"];
 const _c1$1 = ["vertebrates", "matMenu"];
@@ -219,8 +219,8 @@ NestedMenuExample.decorators = [
                 styleUrls: ['nested-menu-example.css'],
             },] },
 ];
-/** @nocollapse */ NestedMenuExample.ngFactoryDef = function NestedMenuExample_Factory(t) { return new (t || NestedMenuExample)(); };
-/** @nocollapse */ NestedMenuExample.ngComponentDef = ɵɵdefineComponent({ type: NestedMenuExample, selectors: [["nested-menu-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function NestedMenuExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ NestedMenuExample.ɵfac = function NestedMenuExample_Factory(t) { return new (t || NestedMenuExample)(); };
+/** @nocollapse */ NestedMenuExample.ɵcmp = ɵɵdefineComponent({ type: NestedMenuExample, selectors: [["nested-menu-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function NestedMenuExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0);
         ɵɵtext(1, "Animal index");
         ɵɵelementEnd();
@@ -350,7 +350,7 @@ NestedMenuExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -372,8 +372,8 @@ MenuExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ MenuExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: MenuExamplesModule });
-/** @nocollapse */ MenuExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function MenuExamplesModule_Factory(t) { return new (t || MenuExamplesModule)(); }, imports: [[
+/** @nocollapse */ MenuExamplesModule.ɵmod = ɵɵdefineNgModule({ type: MenuExamplesModule });
+/** @nocollapse */ MenuExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MenuExamplesModule_Factory(t) { return new (t || MenuExamplesModule)(); }, imports: [[
             MatButtonModule,
             MatIconModule,
             MatMenuModule,

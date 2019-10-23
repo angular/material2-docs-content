@@ -17,7 +17,7 @@ export declare class CdkTreeFlatExample {
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
     getParentNode(node: ExampleFlatNode): ExampleFlatNode | null;
     shouldRender(node: ExampleFlatNode): boolean | undefined;
-    static ngFactoryDef: i0.ɵɵFactoryDef<CdkTreeFlatExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkTreeFlatExample, "cdk-tree-flat-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkTreeFlatExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkTreeFlatExample, "cdk-tree-flat-example", never, {}, {}, never>;
 }
 export {};

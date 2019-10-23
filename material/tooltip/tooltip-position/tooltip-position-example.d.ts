@@ -7,6 +7,6 @@ import * as i0 from "@angular/core";
 export declare class TooltipPositionExample {
     positionOptions: TooltipPosition[];
     position: FormControl;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TooltipPositionExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TooltipPositionExample, "tooltip-position-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TooltipPositionExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TooltipPositionExample, "tooltip-position-example", never, {}, {}, never>;
 }

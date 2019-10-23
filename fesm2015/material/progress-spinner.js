@@ -8,7 +8,7 @@ import { MatSlider, MatSliderModule } from '@angular/material/slider';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function ProgressSpinnerConfigurableExample_section_22_Template(rf, ctx) { if (rf & 1) {
     const _r2 = ɵɵgetCurrentView();
@@ -42,8 +42,8 @@ ProgressSpinnerConfigurableExample.decorators = [
                 styleUrls: ['progress-spinner-configurable-example.css'],
             },] },
 ];
-/** @nocollapse */ ProgressSpinnerConfigurableExample.ngFactoryDef = function ProgressSpinnerConfigurableExample_Factory(t) { return new (t || ProgressSpinnerConfigurableExample)(); };
-/** @nocollapse */ ProgressSpinnerConfigurableExample.ngComponentDef = ɵɵdefineComponent({ type: ProgressSpinnerConfigurableExample, selectors: [["progress-spinner-configurable-example"]], decls: 28, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressSpinnerConfigurableExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ProgressSpinnerConfigurableExample.ɵfac = function ProgressSpinnerConfigurableExample_Factory(t) { return new (t || ProgressSpinnerConfigurableExample)(); };
+/** @nocollapse */ ProgressSpinnerConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: ProgressSpinnerConfigurableExample, selectors: [["progress-spinner-configurable-example"]], decls: 28, vars: 6, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], [3, "ngModel", "ngModelChange"], ["value", "primary", 1, "example-margin"], ["value", "accent", 1, "example-margin"], ["value", "warn", 1, "example-margin"], ["value", "determinate", 1, "example-margin"], ["value", "indeterminate", 1, "example-margin"], ["class", "example-section", 4, "ngIf"], [1, "example-margin", 3, "color", "mode", "value"], [1, "example-margin", 3, "ngModel", "ngModelChange"]], template: function ProgressSpinnerConfigurableExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-card");
         ɵɵelementStart(1, "mat-card-content");
         ɵɵelementStart(2, "h2", 0);
@@ -120,7 +120,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic progress-spinner
@@ -134,8 +134,8 @@ ProgressSpinnerOverviewExample.decorators = [
                 styleUrls: ['progress-spinner-overview-example.css'],
             },] },
 ];
-/** @nocollapse */ ProgressSpinnerOverviewExample.ngFactoryDef = function ProgressSpinnerOverviewExample_Factory(t) { return new (t || ProgressSpinnerOverviewExample)(); };
-/** @nocollapse */ ProgressSpinnerOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: ProgressSpinnerOverviewExample, selectors: [["progress-spinner-overview-example"]], decls: 1, vars: 0, template: function ProgressSpinnerOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ProgressSpinnerOverviewExample.ɵfac = function ProgressSpinnerOverviewExample_Factory(t) { return new (t || ProgressSpinnerOverviewExample)(); };
+/** @nocollapse */ ProgressSpinnerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ProgressSpinnerOverviewExample, selectors: [["progress-spinner-overview-example"]], decls: 1, vars: 0, template: function ProgressSpinnerOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-spinner");
     } }, directives: [MatSpinner], styles: [""] });
 /*@__PURE__*/ ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
@@ -149,7 +149,7 @@ ProgressSpinnerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -172,8 +172,8 @@ ProgressSpinnerExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ ProgressSpinnerExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: ProgressSpinnerExamplesModule });
-/** @nocollapse */ ProgressSpinnerExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function ProgressSpinnerExamplesModule_Factory(t) { return new (t || ProgressSpinnerExamplesModule)(); }, imports: [[
+/** @nocollapse */ ProgressSpinnerExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ProgressSpinnerExamplesModule });
+/** @nocollapse */ ProgressSpinnerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ProgressSpinnerExamplesModule_Factory(t) { return new (t || ProgressSpinnerExamplesModule)(); }, imports: [[
             CommonModule,
             MatCardModule,
             MatProgressSpinnerModule,

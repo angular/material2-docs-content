@@ -7,6 +7,6 @@ export declare class ExpansionStepsExample {
     setStep(index: number): void;
     nextStep(): void;
     prevStep(): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<ExpansionStepsExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<ExpansionStepsExample, "expansion-steps-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<ExpansionStepsExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<ExpansionStepsExample, "expansion-steps-example", never, {}, {}, never>;
 }

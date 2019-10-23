@@ -4,6 +4,6 @@ import * as i0 from "@angular/core";
 export declare class SelectCustomTriggerExample {
     toppings: FormControl;
     toppingList: string[];
-    static ngFactoryDef: i0.ɵɵFactoryDef<SelectCustomTriggerExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<SelectCustomTriggerExample, "select-custom-trigger-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SelectCustomTriggerExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectCustomTriggerExample, "select-custom-trigger-example", never, {}, {}, never>;
 }

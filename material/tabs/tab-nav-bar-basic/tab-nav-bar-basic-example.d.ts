@@ -9,6 +9,6 @@ export declare class TabNavBarBasicExample {
     background: ThemePalette;
     toggleBackground(): void;
     addLink(): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TabNavBarBasicExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TabNavBarBasicExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TabNavBarBasicExample, "tab-nav-bar-basic-example", never, {}, {}, never>;
 }

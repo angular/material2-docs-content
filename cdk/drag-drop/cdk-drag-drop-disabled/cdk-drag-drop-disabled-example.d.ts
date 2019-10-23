@@ -9,6 +9,6 @@ export declare class CdkDragDropDisabledExample {
         disabled: boolean;
     }[];
     drop(event: CdkDragDrop<string[]>): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<CdkDragDropDisabledExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<CdkDragDropDisabledExample, "cdk-drag-drop-disabled-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropDisabledExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropDisabledExample, "cdk-drag-drop-disabled-example", never, {}, {}, never>;
 }

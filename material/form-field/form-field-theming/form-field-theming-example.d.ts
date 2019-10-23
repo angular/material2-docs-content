@@ -5,6 +5,6 @@ export declare class FormFieldThemingExample {
     options: FormGroup;
     constructor(fb: FormBuilder);
     getFontSize(): number;
-    static ngFactoryDef: i0.ɵɵFactoryDef<FormFieldThemingExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<FormFieldThemingExample, "form-field-theming-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<FormFieldThemingExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<FormFieldThemingExample, "form-field-theming-example", never, {}, {}, never>;
 }

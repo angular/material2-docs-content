@@ -15,6 +15,6 @@ export declare class AutocompleteOverviewExample {
     states: State[];
     constructor();
     private _filterStates;
-    static ngFactoryDef: i0.ɵɵFactoryDef<AutocompleteOverviewExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<AutocompleteOverviewExample, "autocomplete-overview-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<AutocompleteOverviewExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<AutocompleteOverviewExample, "autocomplete-overview-example", never, {}, {}, never>;
 }

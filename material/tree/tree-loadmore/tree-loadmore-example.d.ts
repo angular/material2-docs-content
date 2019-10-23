@@ -41,8 +41,8 @@ export declare class LoadmoreDatabase {
     /** Expand a node whose children are not loaded */
     loadMore(item: string, onlyFirstTime?: boolean): void;
     private _generateNode;
-    static ngFactoryDef: i0.ɵɵFactoryDef<LoadmoreDatabase>;
-    static ngInjectableDef: i0.ɵɵInjectableDef<LoadmoreDatabase>;
+    static ɵfac: i0.ɵɵFactoryDef<LoadmoreDatabase>;
+    static ɵprov: i0.ɵɵInjectableDef<LoadmoreDatabase>;
 }
 /**
  * @title Tree with partially loaded data
@@ -63,6 +63,6 @@ export declare class TreeLoadmoreExample {
     /** Load more nodes from data source */
     loadMore(item: string): void;
     loadChildren(node: LoadmoreFlatNode): void;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TreeLoadmoreExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TreeLoadmoreExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeLoadmoreExample, "tree-loadmore-example", never, {}, {}, never>;
 }

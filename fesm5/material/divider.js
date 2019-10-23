@@ -15,8 +15,8 @@ var DividerOverviewExample = /** @class */ (function () {
                     styleUrls: ['divider-overview-example.css'],
                 },] },
     ];
-    DividerOverviewExample.ngFactoryDef = function DividerOverviewExample_Factory(t) { return new (t || DividerOverviewExample)(); };
-    DividerOverviewExample.ngComponentDef = ɵɵdefineComponent({ type: DividerOverviewExample, selectors: [["divider-overview-example"]], decls: 9, vars: 0, template: function DividerOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    DividerOverviewExample.ɵfac = function DividerOverviewExample_Factory(t) { return new (t || DividerOverviewExample)(); };
+    DividerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DividerOverviewExample, selectors: [["divider-overview-example"]], decls: 9, vars: 0, template: function DividerOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-list");
             ɵɵelementStart(1, "mat-list-item");
             ɵɵtext(2, "Item 1");
@@ -57,8 +57,8 @@ var DividerExamplesModule = /** @class */ (function () {
                     declarations: EXAMPLES,
                 },] },
     ];
-    DividerExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: DividerExamplesModule });
-    DividerExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function DividerExamplesModule_Factory(t) { return new (t || DividerExamplesModule)(); }, imports: [[
+    DividerExamplesModule.ɵmod = ɵɵdefineNgModule({ type: DividerExamplesModule });
+    DividerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DividerExamplesModule_Factory(t) { return new (t || DividerExamplesModule)(); }, imports: [[
                 MatDividerModule,
                 MatListModule,
             ]] });

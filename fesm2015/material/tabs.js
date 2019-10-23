@@ -12,7 +12,7 @@ import { MatFormField } from '@angular/material/form-field';
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with aligned labels
@@ -26,8 +26,8 @@ TabGroupAlignExample.decorators = [
                 styleUrls: ['tab-group-align-example.css'],
             },] },
 ];
-/** @nocollapse */ TabGroupAlignExample.ngFactoryDef = function TabGroupAlignExample_Factory(t) { return new (t || TabGroupAlignExample)(); };
-/** @nocollapse */ TabGroupAlignExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupAlignExample, selectors: [["tab-group-align-example"]], decls: 21, vars: 0, consts: [["mat-align-tabs", "start"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["mat-align-tabs", "center"], ["mat-align-tabs", "end"]], template: function TabGroupAlignExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupAlignExample.ɵfac = function TabGroupAlignExample_Factory(t) { return new (t || TabGroupAlignExample)(); };
+/** @nocollapse */ TabGroupAlignExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAlignExample, selectors: [["tab-group-align-example"]], decls: 21, vars: 0, consts: [["mat-align-tabs", "start"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["mat-align-tabs", "center"], ["mat-align-tabs", "end"]], template: function TabGroupAlignExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group", 0);
         ɵɵelementStart(1, "mat-tab", 1);
         ɵɵtext(2, "Content 1");
@@ -73,7 +73,7 @@ TabGroupAlignExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group animations
@@ -87,8 +87,8 @@ TabGroupAnimationsExample.decorators = [
                 styleUrls: ['tab-group-animations-example.css'],
             },] },
 ];
-/** @nocollapse */ TabGroupAnimationsExample.ngFactoryDef = function TabGroupAnimationsExample_Factory(t) { return new (t || TabGroupAnimationsExample)(); };
-/** @nocollapse */ TabGroupAnimationsExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupAnimationsExample, selectors: [["tab-group-animations-example"]], decls: 18, vars: 0, consts: [["animationDuration", "0ms"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["animationDuration", "2000ms"]], template: function TabGroupAnimationsExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupAnimationsExample.ɵfac = function TabGroupAnimationsExample_Factory(t) { return new (t || TabGroupAnimationsExample)(); };
+/** @nocollapse */ TabGroupAnimationsExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAnimationsExample, selectors: [["tab-group-animations-example"]], decls: 18, vars: 0, consts: [["animationDuration", "0ms"], ["label", "First"], ["label", "Second"], ["label", "Third"], ["animationDuration", "2000ms"]], template: function TabGroupAnimationsExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h3");
         ɵɵtext(1, "No animation");
         ɵɵelementEnd();
@@ -129,7 +129,7 @@ TabGroupAnimationsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TabGroupAsyncExample_ng_container_0_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementContainerStart(0);
@@ -194,8 +194,8 @@ TabGroupAsyncExample.decorators = [
 ];
 /** @nocollapse */
 TabGroupAsyncExample.ctorParameters = () => [];
-/** @nocollapse */ TabGroupAsyncExample.ngFactoryDef = function TabGroupAsyncExample_Factory(t) { return new (t || TabGroupAsyncExample)(); };
-/** @nocollapse */ TabGroupAsyncExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupAsyncExample, selectors: [["tab-group-async-example"]], decls: 5, vars: 6, consts: [[4, "ngIf"], [4, "ngFor", "ngForOf"], ["mat-tab-label", ""]], template: function TabGroupAsyncExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupAsyncExample.ɵfac = function TabGroupAsyncExample_Factory(t) { return new (t || TabGroupAsyncExample)(); };
+/** @nocollapse */ TabGroupAsyncExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupAsyncExample, selectors: [["tab-group-async-example"]], decls: 5, vars: 6, consts: [[4, "ngIf"], [4, "ngFor", "ngForOf"], ["mat-tab-label", ""]], template: function TabGroupAsyncExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵtemplate(0, TabGroupAsyncExample_ng_container_0_Template, 2, 0, "ng-container", 0);
         ɵɵpipe(1, "async");
         ɵɵelementStart(2, "mat-tab-group");
@@ -222,7 +222,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Basic use of the tab group
@@ -236,8 +236,8 @@ TabGroupBasicExample.decorators = [
                 styleUrls: ['tab-group-basic-example.css'],
             },] },
 ];
-/** @nocollapse */ TabGroupBasicExample.ngFactoryDef = function TabGroupBasicExample_Factory(t) { return new (t || TabGroupBasicExample)(); };
-/** @nocollapse */ TabGroupBasicExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupBasicExample, selectors: [["tab-group-basic-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupBasicExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupBasicExample.ɵfac = function TabGroupBasicExample_Factory(t) { return new (t || TabGroupBasicExample)(); };
+/** @nocollapse */ TabGroupBasicExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupBasicExample, selectors: [["tab-group-basic-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupBasicExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group");
         ɵɵelementStart(1, "mat-tab", 0);
         ɵɵtext(2, " Content 1 ");
@@ -261,7 +261,7 @@ TabGroupBasicExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TabGroupCustomLabelExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-icon", 1);
@@ -293,8 +293,8 @@ TabGroupCustomLabelExample.decorators = [
                 styleUrls: ['tab-group-custom-label-example.css'],
             },] },
 ];
-/** @nocollapse */ TabGroupCustomLabelExample.ngFactoryDef = function TabGroupCustomLabelExample_Factory(t) { return new (t || TabGroupCustomLabelExample)(); };
-/** @nocollapse */ TabGroupCustomLabelExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupCustomLabelExample, selectors: [["tab-group-custom-label-example"]], decls: 10, vars: 0, consts: [["mat-tab-label", ""], [1, "example-tab-icon"]], template: function TabGroupCustomLabelExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupCustomLabelExample.ɵfac = function TabGroupCustomLabelExample_Factory(t) { return new (t || TabGroupCustomLabelExample)(); };
+/** @nocollapse */ TabGroupCustomLabelExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupCustomLabelExample, selectors: [["tab-group-custom-label-example"]], decls: 10, vars: 0, consts: [["mat-tab-label", ""], [1, "example-tab-icon"]], template: function TabGroupCustomLabelExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group");
         ɵɵelementStart(1, "mat-tab");
         ɵɵtemplate(2, TabGroupCustomLabelExample_ng_template_2_Template, 3, 0, "ng-template", 0);
@@ -321,7 +321,7 @@ TabGroupCustomLabelExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with dynamic height based on tab contents
@@ -335,8 +335,8 @@ TabGroupDynamicHeightExample.decorators = [
                 styleUrls: ['tab-group-dynamic-height-example.css'],
             },] },
 ];
-/** @nocollapse */ TabGroupDynamicHeightExample.ngFactoryDef = function TabGroupDynamicHeightExample_Factory(t) { return new (t || TabGroupDynamicHeightExample)(); };
-/** @nocollapse */ TabGroupDynamicHeightExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupDynamicHeightExample, selectors: [["tab-group-dynamic-height-example"]], decls: 7, vars: 0, consts: [["dynamicHeight", ""], ["label", "Short tab"], [1, "example-small-box", "mat-elevation-z4"], ["label", "Long tab"], [1, "example-large-box", "mat-elevation-z4"]], template: function TabGroupDynamicHeightExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupDynamicHeightExample.ɵfac = function TabGroupDynamicHeightExample_Factory(t) { return new (t || TabGroupDynamicHeightExample)(); };
+/** @nocollapse */ TabGroupDynamicHeightExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamicHeightExample, selectors: [["tab-group-dynamic-height-example"]], decls: 7, vars: 0, consts: [["dynamicHeight", ""], ["label", "Short tab"], [1, "example-small-box", "mat-elevation-z4"], ["label", "Long tab"], [1, "example-large-box", "mat-elevation-z4"]], template: function TabGroupDynamicHeightExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group", 0);
         ɵɵelementStart(1, "mat-tab", 1);
         ɵɵelementStart(2, "div", 2);
@@ -361,7 +361,7 @@ TabGroupDynamicHeightExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = ["selectAfterAdding", ""];
 function TabGroupDynamicExample_mat_tab_12_Template(rf, ctx) { if (rf & 1) {
@@ -415,8 +415,8 @@ TabGroupDynamicExample.decorators = [
                 styleUrls: ['tab-group-dynamic-example.css'],
             },] },
 ];
-/** @nocollapse */ TabGroupDynamicExample.ngFactoryDef = function TabGroupDynamicExample_Factory(t) { return new (t || TabGroupDynamicExample)(); };
-/** @nocollapse */ TabGroupDynamicExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 13, vars: 3, consts: [[1, "example-input-label"], ["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupDynamicExample.ɵfac = function TabGroupDynamicExample_Factory(t) { return new (t || TabGroupDynamicExample)(); };
+/** @nocollapse */ TabGroupDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 13, vars: 3, consts: [[1, "example-input-label"], ["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
         const _r14 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "div");
         ɵɵelementStart(1, "span", 0);
@@ -464,7 +464,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with the headers on the bottom
@@ -478,8 +478,8 @@ TabGroupHeaderBelowExample.decorators = [
                 styleUrls: ['tab-group-header-below-example.css'],
             },] },
 ];
-/** @nocollapse */ TabGroupHeaderBelowExample.ngFactoryDef = function TabGroupHeaderBelowExample_Factory(t) { return new (t || TabGroupHeaderBelowExample)(); };
-/** @nocollapse */ TabGroupHeaderBelowExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupHeaderBelowExample, selectors: [["tab-group-header-below-example"]], decls: 7, vars: 0, consts: [["headerPosition", "below"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupHeaderBelowExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupHeaderBelowExample.ɵfac = function TabGroupHeaderBelowExample_Factory(t) { return new (t || TabGroupHeaderBelowExample)(); };
+/** @nocollapse */ TabGroupHeaderBelowExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupHeaderBelowExample, selectors: [["tab-group-header-below-example"]], decls: 7, vars: 0, consts: [["headerPosition", "below"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupHeaderBelowExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group", 0);
         ɵɵelementStart(1, "mat-tab", 1);
         ɵɵtext(2, " Content 1 ");
@@ -503,7 +503,7 @@ TabGroupHeaderBelowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TabGroupLazyLoadedExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0);
@@ -551,8 +551,8 @@ TabGroupLazyLoadedExample.decorators = [
                 styleUrls: ['tab-group-lazy-loaded-example.css'],
             },] },
 ];
-/** @nocollapse */ TabGroupLazyLoadedExample.ngFactoryDef = function TabGroupLazyLoadedExample_Factory(t) { return new (t || TabGroupLazyLoadedExample)(); };
-/** @nocollapse */ TabGroupLazyLoadedExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupLazyLoadedExample, selectors: [["tab-group-lazy-loaded-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["matTabContent", ""], ["label", "Second"], ["label", "Third"]], template: function TabGroupLazyLoadedExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupLazyLoadedExample.ɵfac = function TabGroupLazyLoadedExample_Factory(t) { return new (t || TabGroupLazyLoadedExample)(); };
+/** @nocollapse */ TabGroupLazyLoadedExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupLazyLoadedExample, selectors: [["tab-group-lazy-loaded-example"]], decls: 7, vars: 0, consts: [["label", "First"], ["matTabContent", ""], ["label", "Second"], ["label", "Third"]], template: function TabGroupLazyLoadedExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group");
         ɵɵelementStart(1, "mat-tab", 0);
         ɵɵtemplate(2, TabGroupLazyLoadedExample_ng_template_2_Template, 2, 4, "ng-template", 1);
@@ -580,7 +580,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
  * \@title Tab group with stretched labels
@@ -594,8 +594,8 @@ TabGroupStretchedExample.decorators = [
                 styleUrls: ['tab-group-stretched-example.css'],
             },] },
 ];
-/** @nocollapse */ TabGroupStretchedExample.ngFactoryDef = function TabGroupStretchedExample_Factory(t) { return new (t || TabGroupStretchedExample)(); };
-/** @nocollapse */ TabGroupStretchedExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupStretchedExample, selectors: [["tab-group-stretched-example"]], decls: 7, vars: 0, consts: [["mat-stretch-tabs", "", 1, "example-stretched-tabs", "mat-elevation-z4"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupStretchedExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupStretchedExample.ɵfac = function TabGroupStretchedExample_Factory(t) { return new (t || TabGroupStretchedExample)(); };
+/** @nocollapse */ TabGroupStretchedExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupStretchedExample, selectors: [["tab-group-stretched-example"]], decls: 7, vars: 0, consts: [["mat-stretch-tabs", "", 1, "example-stretched-tabs", "mat-elevation-z4"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupStretchedExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tab-group", 0);
         ɵɵelementStart(1, "mat-tab", 1);
         ɵɵtext(2, " Content 1 ");
@@ -619,7 +619,7 @@ TabGroupStretchedExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0$1 = ["colorToggle", "matButtonToggleGroup"];
 const _c1 = ["backgroundColorToggle", "matButtonToggleGroup"];
@@ -635,8 +635,8 @@ TabGroupThemeExample.decorators = [
                 styleUrls: ['tab-group-theme-example.css'],
             },] },
 ];
-/** @nocollapse */ TabGroupThemeExample.ngFactoryDef = function TabGroupThemeExample_Factory(t) { return new (t || TabGroupThemeExample)(); };
-/** @nocollapse */ TabGroupThemeExample.ngComponentDef = ɵɵdefineComponent({ type: TabGroupThemeExample, selectors: [["tab-group-theme-example"]], decls: 25, vars: 2, consts: [["value", "primary", "aria-label", "Change color"], ["value", "primary"], ["value", "accent"], [1, "example-button-toggle-label"], [3, "color", "backgroundColor"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupThemeExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupThemeExample.ɵfac = function TabGroupThemeExample_Factory(t) { return new (t || TabGroupThemeExample)(); };
+/** @nocollapse */ TabGroupThemeExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupThemeExample, selectors: [["tab-group-theme-example"]], decls: 25, vars: 2, consts: [["value", "primary", "aria-label", "Change color"], ["value", "primary"], ["value", "accent"], [1, "example-button-toggle-label"], [3, "color", "backgroundColor"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupThemeExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div");
         ɵɵelementStart(1, "mat-button-toggle-group", 0, _c0$1);
         ɵɵelementStart(3, "mat-button-toggle", 1);
@@ -691,7 +691,7 @@ TabGroupThemeExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TabNavBarBasicExample_a_1_Template(rf, ctx) { if (rf & 1) {
     const _r23 = ɵɵgetCurrentView();
@@ -735,8 +735,8 @@ TabNavBarBasicExample.decorators = [
                 styleUrls: ['tab-nav-bar-basic-example.css'],
             },] },
 ];
-/** @nocollapse */ TabNavBarBasicExample.ngFactoryDef = function TabNavBarBasicExample_Factory(t) { return new (t || TabNavBarBasicExample)(); };
-/** @nocollapse */ TabNavBarBasicExample.ngComponentDef = ɵɵdefineComponent({ type: TabNavBarBasicExample, selectors: [["tab-nav-bar-basic-example"]], decls: 8, vars: 2, consts: [["mat-tab-nav-bar", "", 3, "backgroundColor"], ["mat-tab-link", "", 3, "active", "click", 4, "ngFor", "ngForOf"], ["mat-tab-link", "", "disabled", ""], ["mat-raised-button", "", 1, "example-action-button", 3, "click"], ["mat-tab-link", "", 3, "active", "click"]], template: function TabNavBarBasicExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabNavBarBasicExample.ɵfac = function TabNavBarBasicExample_Factory(t) { return new (t || TabNavBarBasicExample)(); };
+/** @nocollapse */ TabNavBarBasicExample.ɵcmp = ɵɵdefineComponent({ type: TabNavBarBasicExample, selectors: [["tab-nav-bar-basic-example"]], decls: 8, vars: 2, consts: [["mat-tab-nav-bar", "", 3, "backgroundColor"], ["mat-tab-link", "", 3, "active", "click", 4, "ngFor", "ngForOf"], ["mat-tab-link", "", "disabled", ""], ["mat-raised-button", "", 1, "example-action-button", 3, "click"], ["mat-tab-link", "", 3, "active", "click"]], template: function TabNavBarBasicExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "nav", 0);
         ɵɵtemplate(1, TabNavBarBasicExample_a_1_Template, 2, 2, "a", 1);
         ɵɵelementStart(2, "a", 2);
@@ -775,7 +775,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
 const EXAMPLES = [
@@ -810,8 +810,8 @@ TabGroupExamplesModule.decorators = [
                 exports: EXAMPLES,
             },] },
 ];
-/** @nocollapse */ TabGroupExamplesModule.ngModuleDef = ɵɵdefineNgModule({ type: TabGroupExamplesModule });
-/** @nocollapse */ TabGroupExamplesModule.ngInjectorDef = ɵɵdefineInjector({ factory: function TabGroupExamplesModule_Factory(t) { return new (t || TabGroupExamplesModule)(); }, imports: [[
+/** @nocollapse */ TabGroupExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TabGroupExamplesModule });
+/** @nocollapse */ TabGroupExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TabGroupExamplesModule_Factory(t) { return new (t || TabGroupExamplesModule)(); }, imports: [[
             CommonModule,
             MatButtonModule,
             MatButtonToggleModule,

@@ -11,6 +11,6 @@ import * as i6 from "@angular/material/input";
 import * as i7 from "@angular/material/select";
 export { TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, };
 export declare class CdkTextFieldExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<CdkTextFieldExamplesModule, [typeof i1.TextFieldAutofillDirectiveExample, typeof i2.TextFieldAutofillMonitorExample, typeof i3.TextFieldAutosizeTextareaExample], [typeof i4.CommonModule, typeof i5.TextFieldModule, typeof i6.MatInputModule, typeof i7.MatSelectModule], [typeof i1.TextFieldAutofillDirectiveExample, typeof i2.TextFieldAutofillMonitorExample, typeof i3.TextFieldAutosizeTextareaExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<CdkTextFieldExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<CdkTextFieldExamplesModule, [typeof i1.TextFieldAutofillDirectiveExample, typeof i2.TextFieldAutofillMonitorExample, typeof i3.TextFieldAutosizeTextareaExample], [typeof i4.CommonModule, typeof i5.TextFieldModule, typeof i6.MatInputModule, typeof i7.MatSelectModule], [typeof i1.TextFieldAutofillDirectiveExample, typeof i2.TextFieldAutofillMonitorExample, typeof i3.TextFieldAutosizeTextareaExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<CdkTextFieldExamplesModule>;
 }

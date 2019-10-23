@@ -26,8 +26,8 @@
                         styleUrls: ['cdk-clipboard-overview-example.css'],
                     },] },
         ];
-        CdkClipboardOverviewExample.ngFactoryDef = function CdkClipboardOverviewExample_Factory(t) { return new (t || CdkClipboardOverviewExample)(); };
-        CdkClipboardOverviewExample.ngComponentDef = i0.ɵɵdefineComponent({ type: CdkClipboardOverviewExample, selectors: [["cdk-clipboard-overview-example"]], decls: 5, vars: 2, consts: [["for", "clipboard-example-textarea"], ["id", "clipboard-example-textarea", "cols", "30", "rows", "10", 3, "ngModel", "ngModelChange"], [3, "cdkCopyToClipboard"]], template: function CdkClipboardOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        CdkClipboardOverviewExample.ɵfac = function CdkClipboardOverviewExample_Factory(t) { return new (t || CdkClipboardOverviewExample)(); };
+        CdkClipboardOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkClipboardOverviewExample, selectors: [["cdk-clipboard-overview-example"]], decls: 5, vars: 2, consts: [["for", "clipboard-example-textarea"], ["id", "clipboard-example-textarea", "cols", "30", "rows", "10", 3, "ngModel", "ngModelChange"], [3, "cdkCopyToClipboard"]], template: function CdkClipboardOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "label", 0);
                 i0.ɵɵtext(1, "Text to be copied");
                 i0.ɵɵelementEnd();
@@ -65,8 +65,8 @@
                         exports: EXAMPLES,
                     },] },
         ];
-        CdkClipboardExamplesModule.ngModuleDef = i0.ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
-        CdkClipboardExamplesModule.ngInjectorDef = i0.ɵɵdefineInjector({ factory: function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); }, imports: [[i2.ClipboardModule, i1.FormsModule]] });
+        CdkClipboardExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
+        CdkClipboardExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); }, imports: [[i2.ClipboardModule, i1.FormsModule]] });
         return CdkClipboardExamplesModule;
     }());
     /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CdkClipboardExamplesModule, { declarations: [CdkClipboardOverviewExample], imports: [i2.ClipboardModule, i1.FormsModule], exports: [CdkClipboardOverviewExample] });

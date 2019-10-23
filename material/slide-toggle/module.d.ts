@@ -13,6 +13,6 @@ import * as i8 from "@angular/material/radio";
 import * as i9 from "@angular/material/slide-toggle";
 export { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, };
 export declare class SlideToggleExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<SlideToggleExamplesModule, [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleOverviewExample], [typeof i4.FormsModule, typeof i5.MatButtonModule, typeof i6.MatCardModule, typeof i7.MatCheckboxModule, typeof i8.MatRadioModule, typeof i9.MatSlideToggleModule, typeof i4.ReactiveFormsModule], [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleOverviewExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<SlideToggleExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<SlideToggleExamplesModule, [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleOverviewExample], [typeof i4.FormsModule, typeof i5.MatButtonModule, typeof i6.MatCardModule, typeof i7.MatCheckboxModule, typeof i8.MatRadioModule, typeof i9.MatSlideToggleModule, typeof i4.ReactiveFormsModule], [typeof i1.SlideToggleConfigurableExample, typeof i2.SlideToggleFormsExample, typeof i3.SlideToggleOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<SlideToggleExamplesModule>;
 }

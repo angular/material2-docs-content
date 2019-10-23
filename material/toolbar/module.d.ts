@@ -7,6 +7,6 @@ import * as i3 from "@angular/material/icon";
 import * as i4 from "@angular/material/toolbar";
 export { ToolbarMultirowExample, ToolbarOverviewExample, };
 export declare class ToolbarExamplesModule {
-    static ngModuleDef: i0.ɵɵNgModuleDefWithMeta<ToolbarExamplesModule, [typeof i1.ToolbarMultirowExample, typeof i2.ToolbarOverviewExample], [typeof i3.MatIconModule, typeof i4.MatToolbarModule], [typeof i1.ToolbarMultirowExample, typeof i2.ToolbarOverviewExample]>;
-    static ngInjectorDef: i0.ɵɵInjectorDef<ToolbarExamplesModule>;
+    static ɵmod: i0.ɵɵNgModuleDefWithMeta<ToolbarExamplesModule, [typeof i1.ToolbarMultirowExample, typeof i2.ToolbarOverviewExample], [typeof i3.MatIconModule, typeof i4.MatToolbarModule], [typeof i1.ToolbarMultirowExample, typeof i2.ToolbarOverviewExample]>;
+    static ɵinj: i0.ɵɵInjectorDef<ToolbarExamplesModule>;
 }

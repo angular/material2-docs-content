@@ -10,8 +10,8 @@ export declare class TableStickyComplexFlexExample {
     constructor();
     /** Whether the button toggle group contains the id as an active value. */
     isSticky(buttonToggleGroup: MatButtonToggleGroup, id: string): boolean;
-    static ngFactoryDef: i0.ɵɵFactoryDef<TableStickyComplexFlexExample>;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<TableStickyComplexFlexExample, "table-sticky-complex-flex-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableStickyComplexFlexExample>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableStickyComplexFlexExample, "table-sticky-complex-flex-example", never, {}, {}, never>;
 }
 export interface PeriodicElement {
     name: string;
