@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/input', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/icon', '@angular/material/input', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.input = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.icon, global.ng.material.input, global.ng.material.formField));
-}(this, function (exports, i4, i0, i1, i5, i6, i3, i2) { 'use strict';
+}(this, function (exports, i4, i0, i1, i5, i4$1, i3, i2) { 'use strict';
 
     function InputClearableExample_button_2_Template(rf, ctx) { if (rf & 1) {
         var _r2 = i0.ɵɵgetCurrentView();
@@ -40,7 +40,7 @@
                 i0.ɵɵproperty("ngModel", ctx.value);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.value);
-            } }, directives: [i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.NgModel, i4.NgIf, i5.MatButton, i2.MatSuffix, i6.MatIcon], styles: [".example-form-field[_ngcontent-%COMP%] {\n  width: 200px;\n}"] });
+            } }, directives: [i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.NgModel, i4.NgIf, i5.MatButton, i2.MatSuffix, i4$1.MatIcon], styles: [".example-form-field[_ngcontent-%COMP%] {\n  width: 200px;\n}"] });
         return InputClearableExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(InputClearableExample, [{
@@ -369,7 +369,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatPrefix, i3.MatInput, i6.MatIcon, i2.MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatPrefix, i3.MatInput, i4$1.MatIcon, i2.MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputPrefixSuffixExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(InputPrefixSuffixExample, [{
@@ -398,7 +398,7 @@
                         imports: [
                             i4.CommonModule,
                             i5.MatButtonModule,
-                            i6.MatIconModule,
+                            i4$1.MatIconModule,
                             i3.MatInputModule,
                             i1.FormsModule,
                             i1.ReactiveFormsModule,
@@ -411,7 +411,7 @@
         InputExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function InputExamplesModule_Factory(t) { return new (t || InputExamplesModule)(); }, imports: [[
                     i4.CommonModule,
                     i5.MatButtonModule,
-                    i6.MatIconModule,
+                    i4$1.MatIconModule,
                     i3.MatInputModule,
                     i1.FormsModule,
                     i1.ReactiveFormsModule,
@@ -426,7 +426,7 @@
             InputOverviewExample,
             InputPrefixSuffixExample], imports: [i4.CommonModule,
             i5.MatButtonModule,
-            i6.MatIconModule,
+            i4$1.MatIconModule,
             i3.MatInputModule,
             i1.FormsModule,
             i1.ReactiveFormsModule], exports: [InputClearableExample,
@@ -442,7 +442,7 @@
                     imports: [
                         i4.CommonModule,
                         i5.MatButtonModule,
-                        i6.MatIconModule,
+                        i4$1.MatIconModule,
                         i3.MatInputModule,
                         i1.FormsModule,
                         i1.ReactiveFormsModule,
