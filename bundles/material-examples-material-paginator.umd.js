@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/input'), require('@angular/material/paginator'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/paginator', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/input', '@angular/material/paginator', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.paginator = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.input, global.ng.material.paginator, global.ng.material.formField));
-}(this, function (exports, i5, i0, i3, i2, i4, i1) { 'use strict';
+}(this, function (exports, i5, i0, i3, i2, i1, i1$1) { 'use strict';
 
     function PaginatorConfigurableExample_div_10_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div");
@@ -83,7 +83,7 @@
                 i0.ɵɵproperty("length", ctx.length)("pageSize", ctx.pageSize)("pageSizeOptions", ctx.pageSizeOptions);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.pageEvent);
-            } }, directives: [i1.MatFormField, i2.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i4.MatPaginator, i5.NgIf], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+            } }, directives: [i1$1.MatFormField, i2.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i1.MatPaginator, i5.NgIf], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return PaginatorConfigurableExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(PaginatorConfigurableExample, [{
@@ -114,7 +114,7 @@
                 i0.ɵɵelement(0, "mat-paginator", 0);
             } if (rf & 2) {
                 i0.ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", _c0);
-            } }, directives: [i4.MatPaginator], styles: [""] });
+            } }, directives: [i1.MatPaginator], styles: [""] });
         return PaginatorOverviewExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(PaginatorOverviewExample, [{
@@ -138,7 +138,7 @@
                         imports: [
                             i5.CommonModule,
                             i2.MatInputModule,
-                            i4.MatPaginatorModule,
+                            i1.MatPaginatorModule,
                             i3.FormsModule,
                         ],
                         declarations: EXAMPLES,
@@ -149,7 +149,7 @@
         PaginatorExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function PaginatorExamplesModule_Factory(t) { return new (t || PaginatorExamplesModule)(); }, imports: [[
                     i5.CommonModule,
                     i2.MatInputModule,
-                    i4.MatPaginatorModule,
+                    i1.MatPaginatorModule,
                     i3.FormsModule,
                 ]] });
         return PaginatorExamplesModule;
@@ -157,7 +157,7 @@
     /*@__PURE__*/ i0.ɵɵsetNgModuleScope(PaginatorExamplesModule, { declarations: [PaginatorConfigurableExample,
             PaginatorOverviewExample], imports: [i5.CommonModule,
             i2.MatInputModule,
-            i4.MatPaginatorModule,
+            i1.MatPaginatorModule,
             i3.FormsModule], exports: [PaginatorConfigurableExample,
             PaginatorOverviewExample] });
     /*@__PURE__*/ i0.ɵsetClassMetadata(PaginatorExamplesModule, [{
@@ -166,7 +166,7 @@
                     imports: [
                         i5.CommonModule,
                         i2.MatInputModule,
-                        i4.MatPaginatorModule,
+                        i1.MatPaginatorModule,
                         i3.FormsModule,
                     ],
                     declarations: EXAMPLES,
