@@ -1216,8 +1216,8 @@ TableHttpExample.ctorParameters = () => [
     { type: HttpClient }
 ];
 TableHttpExample.propDecorators = {
-    paginator: [{ type: ViewChild, args: [MatPaginator, { static: false },] }],
-    sort: [{ type: ViewChild, args: [MatSort, { static: false },] }]
+    paginator: [{ type: ViewChild, args: [MatPaginator,] }],
+    sort: [{ type: ViewChild, args: [MatSort,] }]
 };
 /** @nocollapse */ TableHttpExample.ɵfac = function TableHttpExample_Factory(t) { return new (t || TableHttpExample)(ɵɵdirectiveInject(HttpClient)); };
 /** @nocollapse */ TableHttpExample.ɵcmp = ɵɵdefineComponent({ type: TableHttpExample, selectors: [["table-http-example"]], viewQuery: function TableHttpExample_Query(rf, ctx) { if (rf & 1) {
@@ -1275,10 +1275,10 @@ TableHttpExample.propDecorators = {
             }]
     }], function () { return [{ type: HttpClient }]; }, { paginator: [{
             type: ViewChild,
-            args: [MatPaginator, { static: false }]
+            args: [MatPaginator]
         }], sort: [{
             type: ViewChild,
-            args: [MatSort, { static: false }]
+            args: [MatSort]
         }] });
 if (false) {
     /** @type {?} */

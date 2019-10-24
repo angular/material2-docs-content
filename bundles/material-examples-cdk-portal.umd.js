@@ -33,7 +33,7 @@
             { type: i0.ViewContainerRef }
         ]; };
         CdkPortalOverviewExample.propDecorators = {
-            templatePortalContent: [{ type: i0.ViewChild, args: ['templatePortalContent', { static: false },] }]
+            templatePortalContent: [{ type: i0.ViewChild, args: ['templatePortalContent',] }]
         };
         CdkPortalOverviewExample.ɵfac = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(i0.ɵɵdirectiveInject(i0.ViewContainerRef)); };
         CdkPortalOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
@@ -72,7 +72,7 @@
                 }]
         }], function () { return [{ type: i0.ViewContainerRef }]; }, { templatePortalContent: [{
                 type: i0.ViewChild,
-                args: ['templatePortalContent', { static: false }]
+                args: ['templatePortalContent']
             }] });
     var ComponentPortalExample = /** @class */ (function () {
         function ComponentPortalExample() {

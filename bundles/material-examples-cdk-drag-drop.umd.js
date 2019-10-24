@@ -885,7 +885,7 @@
             { type: i0.ViewContainerRef }
         ]; };
         CdkDragDropRootElementExample.propDecorators = {
-            _dialogTemplate: [{ type: i0.ViewChild, args: [i0.TemplateRef, { static: false },] }]
+            _dialogTemplate: [{ type: i0.ViewChild, args: [i0.TemplateRef,] }]
         };
         CdkDragDropRootElementExample.ɵfac = function CdkDragDropRootElementExample_Factory(t) { return new (t || CdkDragDropRootElementExample)(i0.ɵɵdirectiveInject(i1$1.Overlay), i0.ɵɵdirectiveInject(i0.ViewContainerRef)); };
         CdkDragDropRootElementExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkDragDropRootElementExample, selectors: [["cdk-drag-drop-root-element-example"]], viewQuery: function CdkDragDropRootElementExample_Query(rf, ctx) { if (rf & 1) {
@@ -911,7 +911,7 @@
                 }]
         }], function () { return [{ type: i1$1.Overlay }, { type: i0.ViewContainerRef }]; }, { _dialogTemplate: [{
                 type: i0.ViewChild,
-                args: [i0.TemplateRef, { static: false }]
+                args: [i0.TemplateRef]
             }] });
 
     function CdkDragDropSortingExample_div_1_Template(rf, ctx) { if (rf & 1) {

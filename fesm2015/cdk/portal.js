@@ -41,7 +41,7 @@ CdkPortalOverviewExample.ctorParameters = () => [
     { type: ViewContainerRef }
 ];
 CdkPortalOverviewExample.propDecorators = {
-    templatePortalContent: [{ type: ViewChild, args: ['templatePortalContent', { static: false },] }]
+    templatePortalContent: [{ type: ViewChild, args: ['templatePortalContent',] }]
 };
 /** @nocollapse */ CdkPortalOverviewExample.ɵfac = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(ɵɵdirectiveInject(ViewContainerRef)); };
 /** @nocollapse */ CdkPortalOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
@@ -78,7 +78,7 @@ CdkPortalOverviewExample.propDecorators = {
             }]
     }], function () { return [{ type: ViewContainerRef }]; }, { templatePortalContent: [{
             type: ViewChild,
-            args: ['templatePortalContent', { static: false }]
+            args: ['templatePortalContent']
         }] });
 if (false) {
     /** @type {?} */

@@ -137,8 +137,8 @@ ChipsAutocompleteExample.decorators = [
 /** @nocollapse */
 ChipsAutocompleteExample.ctorParameters = () => [];
 ChipsAutocompleteExample.propDecorators = {
-    fruitInput: [{ type: ViewChild, args: ['fruitInput', { static: false },] }],
-    matAutocomplete: [{ type: ViewChild, args: ['auto', { static: false },] }]
+    fruitInput: [{ type: ViewChild, args: ['fruitInput',] }],
+    matAutocomplete: [{ type: ViewChild, args: ['auto',] }]
 };
 /** @nocollapse */ ChipsAutocompleteExample.ɵfac = function ChipsAutocompleteExample_Factory(t) { return new (t || ChipsAutocompleteExample)(); };
 /** @nocollapse */ ChipsAutocompleteExample.ɵcmp = ɵɵdefineComponent({ type: ChipsAutocompleteExample, selectors: [["chips-autocomplete-example"]], viewQuery: function ChipsAutocompleteExample_Query(rf, ctx) { if (rf & 1) {
@@ -181,10 +181,10 @@ ChipsAutocompleteExample.propDecorators = {
             }]
     }], function () { return []; }, { fruitInput: [{
             type: ViewChild,
-            args: ['fruitInput', { static: false }]
+            args: ['fruitInput']
         }], matAutocomplete: [{
             type: ViewChild,
-            args: ['auto', { static: false }]
+            args: ['auto']
         }] });
 if (false) {
     /** @type {?} */

@@ -16,7 +16,7 @@
   styleUrls: [<span class="hljs-string">'focus-monitor-focus-via-example.css'</span>]
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FocusMonitorFocusViaExample <span class="hljs-keyword">implements</span> OnDestroy, AfterViewInit {
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'monitored'</span>, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">false</span>}) monitoredEl: ElementRef&lt;HTMLElement&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'monitored'</span>) monitoredEl: ElementRef&lt;HTMLElement&gt;;
 
   origin = <span class="hljs-keyword">this</span>.formatOrigin(<span class="hljs-literal">null</span>);
 

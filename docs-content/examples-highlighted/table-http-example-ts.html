@@ -22,8 +22,8 @@
   isLoadingResults = <span class="hljs-literal">true</span>;
   isRateLimitReached = <span class="hljs-literal">false</span>;
 
-  <span class="hljs-meta">@ViewChild</span>(MatPaginator, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">false</span>}) paginator: MatPaginator;
-  <span class="hljs-meta">@ViewChild</span>(MatSort, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">false</span>}) sort: MatSort;
+  <span class="hljs-meta">@ViewChild</span>(MatPaginator) paginator: MatPaginator;
+  <span class="hljs-meta">@ViewChild</span>(MatSort) sort: MatSort;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _httpClient: HttpClient</span>) {}
 

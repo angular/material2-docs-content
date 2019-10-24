@@ -25,8 +25,8 @@
   fruits: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'Lemon'</span>];
   allFruits: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'Apple'</span>, <span class="hljs-string">'Lemon'</span>, <span class="hljs-string">'Lime'</span>, <span class="hljs-string">'Orange'</span>, <span class="hljs-string">'Strawberry'</span>];
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'fruitInput'</span>, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">false</span>}) fruitInput: ElementRef&lt;HTMLInputElement&gt;;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'auto'</span>, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">false</span>}) matAutocomplete: MatAutocomplete;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'fruitInput'</span>) fruitInput: ElementRef&lt;HTMLInputElement&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'auto'</span>) matAutocomplete: MatAutocomplete;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
     <span class="hljs-keyword">this</span>.filteredFruits = <span class="hljs-keyword">this</span>.fruitCtrl.valueChanges.pipe(

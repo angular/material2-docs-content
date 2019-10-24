@@ -111,7 +111,7 @@
             { type: i0.NgZone }
         ]; };
         FocusMonitorFocusViaExample.propDecorators = {
-            monitoredEl: [{ type: i0.ViewChild, args: ['monitored', { static: false },] }]
+            monitoredEl: [{ type: i0.ViewChild, args: ['monitored',] }]
         };
         FocusMonitorFocusViaExample.ɵfac = function FocusMonitorFocusViaExample_Factory(t) { return new (t || FocusMonitorFocusViaExample)(i0.ɵɵdirectiveInject(i1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i0.NgZone)); };
         FocusMonitorFocusViaExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorFocusViaExample, selectors: [["focus-monitor-focus-via-example"]], viewQuery: function FocusMonitorFocusViaExample_Query(rf, ctx) { if (rf & 1) {
@@ -171,7 +171,7 @@
                 }]
         }], function () { return [{ type: i1.FocusMonitor }, { type: i0.ChangeDetectorRef }, { type: i0.NgZone }]; }, { monitoredEl: [{
                 type: i0.ViewChild,
-                args: ['monitored', { static: false }]
+                args: ['monitored']
             }] });
 
     var _c0$1 = ["element"];
@@ -221,8 +221,8 @@
             { type: i0.NgZone }
         ]; };
         FocusMonitorOverviewExample.propDecorators = {
-            element: [{ type: i0.ViewChild, args: ['element', { static: false },] }],
-            subtree: [{ type: i0.ViewChild, args: ['subtree', { static: false },] }]
+            element: [{ type: i0.ViewChild, args: ['element',] }],
+            subtree: [{ type: i0.ViewChild, args: ['subtree',] }]
         };
         FocusMonitorOverviewExample.ɵfac = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(i0.ɵɵdirectiveInject(i1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i0.NgZone)); };
         FocusMonitorOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) { if (rf & 1) {
@@ -268,10 +268,10 @@
                 }]
         }], function () { return [{ type: i1.FocusMonitor }, { type: i0.ChangeDetectorRef }, { type: i0.NgZone }]; }, { element: [{
                 type: i0.ViewChild,
-                args: ['element', { static: false }]
+                args: ['element']
             }], subtree: [{
                 type: i0.ViewChild,
-                args: ['subtree', { static: false }]
+                args: ['subtree']
             }] });
 
     var EXAMPLES = [

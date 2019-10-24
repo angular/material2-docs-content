@@ -111,7 +111,7 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
         { type: NgZone }
     ]; };
     FocusMonitorFocusViaExample.propDecorators = {
-        monitoredEl: [{ type: ViewChild, args: ['monitored', { static: false },] }]
+        monitoredEl: [{ type: ViewChild, args: ['monitored',] }]
     };
     FocusMonitorFocusViaExample.ɵfac = function FocusMonitorFocusViaExample_Factory(t) { return new (t || FocusMonitorFocusViaExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
     FocusMonitorFocusViaExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorFocusViaExample, selectors: [["focus-monitor-focus-via-example"]], viewQuery: function FocusMonitorFocusViaExample_Query(rf, ctx) { if (rf & 1) {
@@ -171,7 +171,7 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
             }]
     }], function () { return [{ type: FocusMonitor }, { type: ChangeDetectorRef }, { type: NgZone }]; }, { monitoredEl: [{
             type: ViewChild,
-            args: ['monitored', { static: false }]
+            args: ['monitored']
         }] });
 
 var _c0$1 = ["element"];
@@ -221,8 +221,8 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
         { type: NgZone }
     ]; };
     FocusMonitorOverviewExample.propDecorators = {
-        element: [{ type: ViewChild, args: ['element', { static: false },] }],
-        subtree: [{ type: ViewChild, args: ['subtree', { static: false },] }]
+        element: [{ type: ViewChild, args: ['element',] }],
+        subtree: [{ type: ViewChild, args: ['subtree',] }]
     };
     FocusMonitorOverviewExample.ɵfac = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
     FocusMonitorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) { if (rf & 1) {
@@ -268,10 +268,10 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
             }]
     }], function () { return [{ type: FocusMonitor }, { type: ChangeDetectorRef }, { type: NgZone }]; }, { element: [{
             type: ViewChild,
-            args: ['element', { static: false }]
+            args: ['element']
         }], subtree: [{
             type: ViewChild,
-            args: ['subtree', { static: false }]
+            args: ['subtree']
         }] });
 
 var EXAMPLES = [

@@ -21,7 +21,7 @@ var ExpansionExpandCollapseAllExample = /** @class */ (function () {
                 },] },
     ];
     ExpansionExpandCollapseAllExample.propDecorators = {
-        accordion: [{ type: ViewChild, args: [MatAccordion, { static: false },] }]
+        accordion: [{ type: ViewChild, args: [MatAccordion,] }]
     };
     ExpansionExpandCollapseAllExample.ɵfac = function ExpansionExpandCollapseAllExample_Factory(t) { return new (t || ExpansionExpandCollapseAllExample)(); };
     ExpansionExpandCollapseAllExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-toggle-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
@@ -113,7 +113,7 @@ var ExpansionExpandCollapseAllExample = /** @class */ (function () {
             }]
     }], null, { accordion: [{
             type: ViewChild,
-            args: [MatAccordion, { static: false }]
+            args: [MatAccordion]
         }] });
 
 /**

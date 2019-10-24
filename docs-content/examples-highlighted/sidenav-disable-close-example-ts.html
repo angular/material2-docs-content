@@ -8,7 +8,7 @@
   styleUrls: [<span class="hljs-string">'sidenav-disable-close-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavDisableCloseExample {
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'sidenav'</span>, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">false</span>}) sidenav: MatSidenav;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'sidenav'</span>) sidenav: MatSidenav;
 
   reason = <span class="hljs-string">''</span>;
 

@@ -144,8 +144,8 @@ TextFieldAutofillMonitorExample.ctorParameters = () => [
     { type: AutofillMonitor }
 ];
 TextFieldAutofillMonitorExample.propDecorators = {
-    firstName: [{ type: ViewChild, args: ['first', { read: ElementRef, static: false },] }],
-    lastName: [{ type: ViewChild, args: ['last', { read: ElementRef, static: false },] }]
+    firstName: [{ type: ViewChild, args: ['first', { read: ElementRef },] }],
+    lastName: [{ type: ViewChild, args: ['last', { read: ElementRef },] }]
 };
 /** @nocollapse */ TextFieldAutofillMonitorExample.ɵfac = function TextFieldAutofillMonitorExample_Factory(t) { return new (t || TextFieldAutofillMonitorExample)(ɵɵdirectiveInject(AutofillMonitor)); };
 /** @nocollapse */ TextFieldAutofillMonitorExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutofillMonitorExample, selectors: [["text-field-autofill-monitor-example"]], viewQuery: function TextFieldAutofillMonitorExample_Query(rf, ctx) { if (rf & 1) {
@@ -190,10 +190,10 @@ TextFieldAutofillMonitorExample.propDecorators = {
             }]
     }], function () { return [{ type: AutofillMonitor }]; }, { firstName: [{
             type: ViewChild,
-            args: ['first', { read: ElementRef, static: false }]
+            args: ['first', { read: ElementRef }]
         }], lastName: [{
             type: ViewChild,
-            args: ['last', { read: ElementRef, static: false }]
+            args: ['last', { read: ElementRef }]
         }] });
 if (false) {
     /** @type {?} */
@@ -252,7 +252,7 @@ TextFieldAutosizeTextareaExample.ctorParameters = () => [
     { type: NgZone }
 ];
 TextFieldAutosizeTextareaExample.propDecorators = {
-    autosize: [{ type: ViewChild, args: ['autosize', { static: false },] }]
+    autosize: [{ type: ViewChild, args: ['autosize',] }]
 };
 /** @nocollapse */ TextFieldAutosizeTextareaExample.ɵfac = function TextFieldAutosizeTextareaExample_Factory(t) { return new (t || TextFieldAutosizeTextareaExample)(ɵɵdirectiveInject(NgZone)); };
 /** @nocollapse */ TextFieldAutosizeTextareaExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutosizeTextareaExample, selectors: [["text-field-autosize-textarea-example"]], viewQuery: function TextFieldAutosizeTextareaExample_Query(rf, ctx) { if (rf & 1) {
@@ -307,7 +307,7 @@ TextFieldAutosizeTextareaExample.propDecorators = {
             }]
     }], function () { return [{ type: NgZone }]; }, { autosize: [{
             type: ViewChild,
-            args: ['autosize', { static: false }]
+            args: ['autosize']
         }] });
 if (false) {
     /** @type {?} */

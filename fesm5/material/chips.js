@@ -104,8 +104,8 @@ var ChipsAutocompleteExample = /** @class */ (function () {
     /** @nocollapse */
     ChipsAutocompleteExample.ctorParameters = function () { return []; };
     ChipsAutocompleteExample.propDecorators = {
-        fruitInput: [{ type: ViewChild, args: ['fruitInput', { static: false },] }],
-        matAutocomplete: [{ type: ViewChild, args: ['auto', { static: false },] }]
+        fruitInput: [{ type: ViewChild, args: ['fruitInput',] }],
+        matAutocomplete: [{ type: ViewChild, args: ['auto',] }]
     };
     ChipsAutocompleteExample.ɵfac = function ChipsAutocompleteExample_Factory(t) { return new (t || ChipsAutocompleteExample)(); };
     ChipsAutocompleteExample.ɵcmp = ɵɵdefineComponent({ type: ChipsAutocompleteExample, selectors: [["chips-autocomplete-example"]], viewQuery: function ChipsAutocompleteExample_Query(rf, ctx) { if (rf & 1) {
@@ -150,10 +150,10 @@ var ChipsAutocompleteExample = /** @class */ (function () {
             }]
     }], function () { return []; }, { fruitInput: [{
             type: ViewChild,
-            args: ['fruitInput', { static: false }]
+            args: ['fruitInput']
         }], matAutocomplete: [{
             type: ViewChild,
-            args: ['auto', { static: false }]
+            args: ['auto']
         }] });
 
 function ChipsDragDropExample_mat_chip_1_Template(rf, ctx) { if (rf & 1) {

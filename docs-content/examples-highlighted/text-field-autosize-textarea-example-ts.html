@@ -11,7 +11,7 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TextFieldAutosizeTextareaExample {
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _ngZone: NgZone</span>) {}
 
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'autosize'</span>, {<span class="hljs-keyword">static</span>: <span class="hljs-literal">false</span>}) autosize: CdkTextareaAutosize;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'autosize'</span>) autosize: CdkTextareaAutosize;
 
   triggerResize() {
     <span class="hljs-comment">// Wait for changes to be applied, then trigger textarea resize.</span>

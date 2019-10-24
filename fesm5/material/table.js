@@ -997,8 +997,8 @@ var TableHttpExample = /** @class */ (function () {
         { type: HttpClient }
     ]; };
     TableHttpExample.propDecorators = {
-        paginator: [{ type: ViewChild, args: [MatPaginator, { static: false },] }],
-        sort: [{ type: ViewChild, args: [MatSort, { static: false },] }]
+        paginator: [{ type: ViewChild, args: [MatPaginator,] }],
+        sort: [{ type: ViewChild, args: [MatSort,] }]
     };
     TableHttpExample.ɵfac = function TableHttpExample_Factory(t) { return new (t || TableHttpExample)(ɵɵdirectiveInject(HttpClient)); };
     TableHttpExample.ɵcmp = ɵɵdefineComponent({ type: TableHttpExample, selectors: [["table-http-example"]], viewQuery: function TableHttpExample_Query(rf, ctx) { if (rf & 1) {
@@ -1058,10 +1058,10 @@ var TableHttpExample = /** @class */ (function () {
             }]
     }], function () { return [{ type: HttpClient }]; }, { paginator: [{
             type: ViewChild,
-            args: [MatPaginator, { static: false }]
+            args: [MatPaginator]
         }], sort: [{
             type: ViewChild,
-            args: [MatSort, { static: false }]
+            args: [MatSort]
         }] });
 /** An example database that the data source uses to retrieve data for the table. */
 var ExampleHttpDatabase = /** @class */ (function () {

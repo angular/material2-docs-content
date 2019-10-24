@@ -8,8 +8,8 @@
   styleUrls: [<span class="hljs-string">'./text-field-autofill-monitor-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TextFieldAutofillMonitorExample <span class="hljs-keyword">implements</span> AfterViewInit, OnDestroy {
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'first'</span>, { read: ElementRef, <span class="hljs-keyword">static</span>: <span class="hljs-literal">false</span> }) firstName: ElementRef&lt;HTMLElement&gt;;
-  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'last'</span>, { read: ElementRef, <span class="hljs-keyword">static</span>: <span class="hljs-literal">false</span> }) lastName: ElementRef&lt;HTMLElement&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'first'</span>, {read: ElementRef}) firstName: ElementRef&lt;HTMLElement&gt;;
+  <span class="hljs-meta">@ViewChild</span>(<span class="hljs-string">'last'</span>, {read: ElementRef}) lastName: ElementRef&lt;HTMLElement&gt;;
   firstNameAutofilled: <span class="hljs-built_in">boolean</span>;
   lastNameAutofilled: <span class="hljs-built_in">boolean</span>;
 

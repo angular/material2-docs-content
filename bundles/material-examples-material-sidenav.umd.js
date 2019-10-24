@@ -197,7 +197,7 @@
                     },] },
         ];
         SidenavDisableCloseExample.propDecorators = {
-            sidenav: [{ type: i0.ViewChild, args: ['sidenav', { static: false },] }]
+            sidenav: [{ type: i0.ViewChild, args: ['sidenav',] }]
         };
         SidenavDisableCloseExample.ɵfac = function SidenavDisableCloseExample_Factory(t) { return new (t || SidenavDisableCloseExample)(); };
         SidenavDisableCloseExample.ɵcmp = i0.ɵɵdefineComponent({ type: SidenavDisableCloseExample, selectors: [["sidenav-disable-close-example"]], viewQuery: function SidenavDisableCloseExample_Query(rf, ctx) { if (rf & 1) {
@@ -224,7 +224,7 @@
                 }]
         }], null, { sidenav: [{
                 type: i0.ViewChild,
-                args: ['sidenav', { static: false }]
+                args: ['sidenav']
             }] });
 
     /** @title Basic drawer */

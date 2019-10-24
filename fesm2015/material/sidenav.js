@@ -231,7 +231,7 @@ SidenavDisableCloseExample.decorators = [
             },] },
 ];
 SidenavDisableCloseExample.propDecorators = {
-    sidenav: [{ type: ViewChild, args: ['sidenav', { static: false },] }]
+    sidenav: [{ type: ViewChild, args: ['sidenav',] }]
 };
 /** @nocollapse */ SidenavDisableCloseExample.ɵfac = function SidenavDisableCloseExample_Factory(t) { return new (t || SidenavDisableCloseExample)(); };
 /** @nocollapse */ SidenavDisableCloseExample.ɵcmp = ɵɵdefineComponent({ type: SidenavDisableCloseExample, selectors: [["sidenav-disable-close-example"]], viewQuery: function SidenavDisableCloseExample_Query(rf, ctx) { if (rf & 1) {
@@ -256,7 +256,7 @@ SidenavDisableCloseExample.propDecorators = {
             }]
     }], null, { sidenav: [{
             type: ViewChild,
-            args: ['sidenav', { static: false }]
+            args: ['sidenav']
         }] });
 if (false) {
     /** @type {?} */

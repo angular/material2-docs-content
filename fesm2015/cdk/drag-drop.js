@@ -1023,7 +1023,7 @@ CdkDragDropRootElementExample.ctorParameters = () => [
     { type: ViewContainerRef }
 ];
 CdkDragDropRootElementExample.propDecorators = {
-    _dialogTemplate: [{ type: ViewChild, args: [TemplateRef, { static: false },] }]
+    _dialogTemplate: [{ type: ViewChild, args: [TemplateRef,] }]
 };
 /** @nocollapse */ CdkDragDropRootElementExample.ɵfac = function CdkDragDropRootElementExample_Factory(t) { return new (t || CdkDragDropRootElementExample)(ɵɵdirectiveInject(Overlay), ɵɵdirectiveInject(ViewContainerRef)); };
 /** @nocollapse */ CdkDragDropRootElementExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropRootElementExample, selectors: [["cdk-drag-drop-root-element-example"]], viewQuery: function CdkDragDropRootElementExample_Query(rf, ctx) { if (rf & 1) {
@@ -1047,7 +1047,7 @@ CdkDragDropRootElementExample.propDecorators = {
             }]
     }], function () { return [{ type: Overlay }, { type: ViewContainerRef }]; }, { _dialogTemplate: [{
             type: ViewChild,
-            args: [TemplateRef, { static: false }]
+            args: [TemplateRef]
         }] });
 if (false) {
     /** @type {?} */

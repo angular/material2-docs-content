@@ -19,7 +19,7 @@
                     },] },
         ];
         ExpansionExpandCollapseAllExample.propDecorators = {
-            accordion: [{ type: i0.ViewChild, args: [i1$1.MatAccordion, { static: false },] }]
+            accordion: [{ type: i0.ViewChild, args: [i1$1.MatAccordion,] }]
         };
         ExpansionExpandCollapseAllExample.ɵfac = function ExpansionExpandCollapseAllExample_Factory(t) { return new (t || ExpansionExpandCollapseAllExample)(); };
         ExpansionExpandCollapseAllExample.ɵcmp = i0.ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-toggle-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
@@ -111,7 +111,7 @@
                 }]
         }], null, { accordion: [{
                 type: i0.ViewChild,
-                args: [i1$1.MatAccordion, { static: false }]
+                args: [i1$1.MatAccordion]
             }] });
 
     /**
