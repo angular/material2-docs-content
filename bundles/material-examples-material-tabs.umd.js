@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/button-toggle'), require('@angular/material/checkbox'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/tabs'), require('rxjs'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/tabs', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/button-toggle', '@angular/material/checkbox', '@angular/material/icon', '@angular/material/input', '@angular/material/tabs', 'rxjs', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.tabs = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.buttonToggle, global.ng.material.checkbox, global.ng.material.icon, global.ng.material.input, global.ng.material.tabs, global.rxjs, global.ng.material.formField));
-}(this, function (exports, i1, i0, i3, i3$1, i1$1, i5, i2, i2$1, i1$2, rxjs, i1$3) { 'use strict';
+}(this, function (exports, i1, i0, i3, i4, i1$1, i5, i2, i2$1, i1$2, rxjs, i1$3) { 'use strict';
 
     /**
      * @title Tab group with aligned labels
@@ -398,7 +398,7 @@
                 i0.ɵɵproperty("selectedIndex", ctx.selected.value);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngForOf", ctx.tabs);
-            } }, directives: [i1$3.MatFormField, i2$1.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i3$1.MatButton, i5.MatCheckbox, i1$2.MatTabGroup, i1.NgForOf, i1$2.MatTab], styles: [".example-input-label[_ngcontent-%COMP%], .example-add-tab-button[_ngcontent-%COMP%], .example-delete-tab-button[_ngcontent-%COMP%] {\n  margin: 8px;\n}"] });
+            } }, directives: [i1$3.MatFormField, i2$1.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i4.MatButton, i5.MatCheckbox, i1$2.MatTabGroup, i1.NgForOf, i1$2.MatTab], styles: [".example-input-label[_ngcontent-%COMP%], .example-add-tab-button[_ngcontent-%COMP%], .example-delete-tab-button[_ngcontent-%COMP%] {\n  margin: 8px;\n}"] });
         return TabGroupDynamicExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupDynamicExample, [{
@@ -678,7 +678,7 @@
                 i0.ɵɵproperty("backgroundColor", ctx.background);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngForOf", ctx.links);
-            } }, directives: [i1$2.MatTabNav, i1.NgForOf, i1$2.MatTabLink, i3$1.MatButton], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 8px;\n  margin-right: 8px;\n}"] });
+            } }, directives: [i1$2.MatTabNav, i1.NgForOf, i1$2.MatTabLink, i4.MatButton], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 8px;\n  margin-right: 8px;\n}"] });
         return TabNavBarBasicExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(TabNavBarBasicExample, [{
@@ -711,7 +711,7 @@
             { type: i0.NgModule, args: [{
                         imports: [
                             i1.CommonModule,
-                            i3$1.MatButtonModule,
+                            i4.MatButtonModule,
                             i1$1.MatButtonToggleModule,
                             i5.MatCheckboxModule,
                             i2.MatIconModule,
@@ -726,7 +726,7 @@
         TabGroupExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: TabGroupExamplesModule });
         TabGroupExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function TabGroupExamplesModule_Factory(t) { return new (t || TabGroupExamplesModule)(); }, imports: [[
                     i1.CommonModule,
-                    i3$1.MatButtonModule,
+                    i4.MatButtonModule,
                     i1$1.MatButtonToggleModule,
                     i5.MatCheckboxModule,
                     i2.MatIconModule,
@@ -748,7 +748,7 @@
             TabGroupStretchedExample,
             TabGroupThemeExample,
             TabNavBarBasicExample], imports: [i1.CommonModule,
-            i3$1.MatButtonModule,
+            i4.MatButtonModule,
             i1$1.MatButtonToggleModule,
             i5.MatCheckboxModule,
             i2.MatIconModule,
@@ -771,7 +771,7 @@
             args: [{
                     imports: [
                         i1.CommonModule,
-                        i3$1.MatButtonModule,
+                        i4.MatButtonModule,
                         i1$1.MatButtonToggleModule,
                         i5.MatCheckboxModule,
                         i2.MatIconModule,

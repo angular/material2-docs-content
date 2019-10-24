@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/datepicker'), require('@angular/material/expansion'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/expansion', ['exports', '@angular/core', '@angular/material/button', '@angular/material/datepicker', '@angular/material/expansion', '@angular/material/icon', '@angular/material/input', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.expansion = {}), global.ng.core, global.ng.material.button, global.ng.material.datepicker, global.ng.material.expansion, global.ng.material.icon, global.ng.material.input, global.ng.material.formField));
-}(this, function (exports, i0, i1, i6, i1$1, i3, i3$1, i2) { 'use strict';
+}(this, function (exports, i0, i5, i6, i1, i2, i3, i2$1) { 'use strict';
 
     var _c0 = ["picker", ""];
     /**
@@ -19,11 +19,11 @@
                     },] },
         ];
         ExpansionExpandCollapseAllExample.propDecorators = {
-            accordion: [{ type: i0.ViewChild, args: [i1$1.MatAccordion, { static: false },] }]
+            accordion: [{ type: i0.ViewChild, args: [i1.MatAccordion, { static: false },] }]
         };
         ExpansionExpandCollapseAllExample.ɵfac = function ExpansionExpandCollapseAllExample_Factory(t) { return new (t || ExpansionExpandCollapseAllExample)(); };
         ExpansionExpandCollapseAllExample.ɵcmp = i0.ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-toggle-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
-                i0.ɵɵviewQuery(i1$1.MatAccordion, true);
+                i0.ɵɵviewQuery(i1.MatAccordion, true);
             } if (rf & 2) {
                 var _t;
                 i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.accordion = _t.first);
@@ -99,7 +99,7 @@
                 var _r0 = i0.ɵɵreference(39);
                 i0.ɵɵadvance(37);
                 i0.ɵɵproperty("matDatepicker", _r0);
-            } }, directives: [i1.MatButton, i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription, i3.MatIcon, i2.MatFormField, i3$1.MatInput, i6.MatDatepickerInput, i6.MatDatepicker], styles: [".example-action-buttons[_ngcontent-%COMP%] {\n  padding-bottom: 20px;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}"] });
+            } }, directives: [i5.MatButton, i1.MatAccordion, i1.MatExpansionPanel, i1.MatExpansionPanelHeader, i1.MatExpansionPanelTitle, i1.MatExpansionPanelDescription, i2.MatIcon, i2$1.MatFormField, i3.MatInput, i6.MatDatepickerInput, i6.MatDatepicker], styles: [".example-action-buttons[_ngcontent-%COMP%] {\n  padding-bottom: 20px;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}"] });
         return ExpansionExpandCollapseAllExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(ExpansionExpandCollapseAllExample, [{
@@ -111,7 +111,7 @@
                 }]
         }], null, { accordion: [{
                 type: i0.ViewChild,
-                args: [i1$1.MatAccordion, { static: false }]
+                args: [i1.MatAccordion, { static: false }]
             }] });
 
     /**
@@ -166,7 +166,7 @@
             } if (rf & 2) {
                 i0.ɵɵadvance(16);
                 i0.ɵɵtextInterpolate1(" Currently I am ", ctx.panelOpenState ? "open" : "closed", " ");
-            } }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription, i2.MatFormField, i3$1.MatInput], styles: [""] });
+            } }, directives: [i1.MatAccordion, i1.MatExpansionPanel, i1.MatExpansionPanelHeader, i1.MatExpansionPanelTitle, i1.MatExpansionPanelDescription, i2$1.MatFormField, i3.MatInput], styles: [""] });
         return ExpansionOverviewExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(ExpansionOverviewExample, [{
@@ -300,7 +300,7 @@
                 i0.ɵɵproperty("expanded", ctx.step === 2);
                 i0.ɵɵadvance(9);
                 i0.ɵɵproperty("matDatepicker", _r2);
-            } }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription, i3.MatIcon, i2.MatFormField, i3$1.MatInput, i1$1.MatExpansionPanelActionRow, i1.MatButton, i6.MatDatepickerInput, i6.MatDatepicker], styles: [".example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}\n\nmat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+            } }, directives: [i1.MatAccordion, i1.MatExpansionPanel, i1.MatExpansionPanelHeader, i1.MatExpansionPanelTitle, i1.MatExpansionPanelDescription, i2.MatIcon, i2$1.MatFormField, i3.MatInput, i1.MatExpansionPanelActionRow, i5.MatButton, i6.MatDatepickerInput, i6.MatDatepicker], styles: [".example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}\n\nmat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return ExpansionStepsExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(ExpansionStepsExample, [{
@@ -323,41 +323,41 @@
         ExpansionExamplesModule.decorators = [
             { type: i0.NgModule, args: [{
                         imports: [
-                            i1.MatButtonModule,
+                            i5.MatButtonModule,
                             i6.MatDatepickerModule,
-                            i1$1.MatExpansionModule,
-                            i3.MatIconModule,
-                            i3$1.MatInputModule,
+                            i1.MatExpansionModule,
+                            i2.MatIconModule,
+                            i3.MatInputModule,
                         ],
                         declarations: EXAMPLES,
                     },] },
         ];
         ExpansionExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ExpansionExamplesModule });
         ExpansionExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ExpansionExamplesModule_Factory(t) { return new (t || ExpansionExamplesModule)(); }, imports: [[
-                    i1.MatButtonModule,
+                    i5.MatButtonModule,
                     i6.MatDatepickerModule,
-                    i1$1.MatExpansionModule,
-                    i3.MatIconModule,
-                    i3$1.MatInputModule,
+                    i1.MatExpansionModule,
+                    i2.MatIconModule,
+                    i3.MatInputModule,
                 ]] });
         return ExpansionExamplesModule;
     }());
     /*@__PURE__*/ i0.ɵɵsetNgModuleScope(ExpansionExamplesModule, { declarations: [ExpansionExpandCollapseAllExample,
             ExpansionOverviewExample,
-            ExpansionStepsExample], imports: [i1.MatButtonModule,
+            ExpansionStepsExample], imports: [i5.MatButtonModule,
             i6.MatDatepickerModule,
-            i1$1.MatExpansionModule,
-            i3.MatIconModule,
-            i3$1.MatInputModule] });
+            i1.MatExpansionModule,
+            i2.MatIconModule,
+            i3.MatInputModule] });
     /*@__PURE__*/ i0.ɵsetClassMetadata(ExpansionExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
-                        i1.MatButtonModule,
+                        i5.MatButtonModule,
                         i6.MatDatepickerModule,
-                        i1$1.MatExpansionModule,
-                        i3.MatIconModule,
-                        i3$1.MatInputModule,
+                        i1.MatExpansionModule,
+                        i2.MatIconModule,
+                        i3.MatInputModule,
                     ],
                     declarations: EXAMPLES,
                 }]
