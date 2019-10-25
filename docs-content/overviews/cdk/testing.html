@@ -135,6 +135,10 @@ it(<span class="hljs-string">'loads harnesses'</span>, <span class="hljs-keyword
 <p>Since Protractor does not deal with fixtures, the API in this environment is simpler. The
 <code>HarnessLoader</code> returned by the <code>loader()</code> method should be sufficient for loading all necessary
 <code>ComponentHarness</code> instances.</p>
+<p>Please note that harnesses may not behave <em>exactly</em> the same in all environments. There will always
+be some difference between the real browser-generated event sequence when a user clicks or types in
+an element, versus the simulated event sequence generated in unit tests. Instead, the CDK makes a
+best effort to normalize the behavior and simulate the most important events in the sequence.</p>
 
         <h4 id="creating-harnesses-with-code-harnessloader-code-" class="docs-header-link">
           <span header-link="creating-harnesses-with-code-harnessloader-code-"></span>
