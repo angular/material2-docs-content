@@ -32,7 +32,7 @@ CdkPlatformOverviewExample.ctorParameters = () => [
 ];
 /** @nocollapse */ CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(ɵɵdirectiveInject(Platform)); };
 /** @nocollapse */ CdkPlatformOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 22, vars: 10, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "h3");
+        ɵɵelementStart(0, "h2");
         ɵɵtext(1, "Platform information:");
         ɵɵelementEnd();
         ɵɵelementStart(2, "p");
