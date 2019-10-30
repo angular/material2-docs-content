@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/core'), require('@angular/material/datepicker'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/form-field'), require('rxjs'), require('rxjs/operators'), require('@angular/material-moment-adapter'), require('moment')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/datepicker', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/core', '@angular/material/datepicker', '@angular/material/icon', '@angular/material/input', '@angular/material/form-field', 'rxjs', 'rxjs/operators', '@angular/material-moment-adapter', 'moment'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.datepicker = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.core, global.ng.material.datepicker, global.ng.material.icon, global.ng.material.input, global.ng.material.formField, global.rxjs, global.rxjs.operators, global.ng.materialMomentAdapter, global.moment));
-}(this, function (exports, i4, i0, i4$1, i5, i4$2, i3, i4$3, i2, i1, rxjs, operators, materialMomentAdapter, _rollupMoment) { 'use strict';
+}(this, function (exports, i4, i0, i4$1, i5, i4$2, i3, i6, i2, i1, rxjs, operators, materialMomentAdapter, _rollupMoment) { 'use strict';
 
     var _rollupMoment__default = 'default' in _rollupMoment ? _rollupMoment['default'] : _rollupMoment;
 
@@ -230,7 +230,7 @@
             } if (rf & 2) {
                 i0.ɵɵadvance(10);
                 i0.ɵɵtextInterpolate(ctx.periodLabel);
-            } }, directives: [i5.MatButton, i4$3.MatIcon], styles: [".example-header[_ngcontent-%COMP%] {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label[_ngcontent-%COMP%] {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow[_ngcontent-%COMP%]   .mat-icon[_ngcontent-%COMP%] {\n      margin: -22%;\n    }"], changeDetection: 0 });
+            } }, directives: [i5.MatButton, i6.MatIcon], styles: [".example-header[_ngcontent-%COMP%] {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label[_ngcontent-%COMP%] {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow[_ngcontent-%COMP%]   .mat-icon[_ngcontent-%COMP%] {\n      margin: -22%;\n    }"], changeDetection: 0 });
         return ExampleHeader;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(ExampleHeader, [{
@@ -275,7 +275,7 @@
                 i0.ɵɵproperty("matDatepicker", _r5);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("for", _r5);
-            } }, directives: [i1.MatFormField, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i4$3.MatIcon, i3.MatDatepickerToggleIcon, i3.MatDatepicker], styles: [""] });
+            } }, directives: [i1.MatFormField, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i6.MatIcon, i3.MatDatepickerToggleIcon, i3.MatDatepicker], styles: [""] });
         return DatepickerCustomIconExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(DatepickerCustomIconExample, [{
@@ -1075,7 +1075,7 @@
                             i5.MatButtonModule,
                             i3.MatDatepickerModule,
                             i2.MatInputModule,
-                            i4$3.MatIconModule,
+                            i6.MatIconModule,
                             i4$2.MatNativeDateModule,
                             i4$1.ReactiveFormsModule,
                         ],
@@ -1089,7 +1089,7 @@
                     i5.MatButtonModule,
                     i3.MatDatepickerModule,
                     i2.MatInputModule,
-                    i4$3.MatIconModule,
+                    i6.MatIconModule,
                     i4$2.MatNativeDateModule,
                     i4$1.ReactiveFormsModule,
                 ]] });
@@ -1116,7 +1116,7 @@
             i5.MatButtonModule,
             i3.MatDatepickerModule,
             i2.MatInputModule,
-            i4$3.MatIconModule,
+            i6.MatIconModule,
             i4$2.MatNativeDateModule,
             i4$1.ReactiveFormsModule], exports: [DatepickerApiExample,
             DatepickerColorExample,
@@ -1144,7 +1144,7 @@
                         i5.MatButtonModule,
                         i3.MatDatepickerModule,
                         i2.MatInputModule,
-                        i4$3.MatIconModule,
+                        i6.MatIconModule,
                         i4$2.MatNativeDateModule,
                         i4$1.ReactiveFormsModule,
                     ],
