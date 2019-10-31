@@ -6,7 +6,7 @@ import * as i0 from "@angular/core";
 export declare class CdkDragDropEnterPredicateExample {
     all: number[];
     even: number[];
-    drop(event: CdkDragDrop<string[]>): void;
+    drop(event: CdkDragDrop<number[]>): void;
     /** Predicate function that only allows even numbers to be dropped into a list. */
     evenPredicate(item: CdkDrag<number>): boolean;
     /** Predicate function that doesn't allow items to be dropped into a list. */

@@ -162,7 +162,7 @@ Defines a set of cells available for a table column.</p>
       <code>sticky: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether this column should be sticky positioned at the start of the row</p>
+  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
 </td>
 </tr>
 
@@ -171,12 +171,14 @@ Defines a set of cells available for a table column.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;stickyEnd&#39;</span>)
+        </div><p class="docs-api-property-name">
       <code>stickyEnd: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether this column should be sticky positioned on the end of the row</p>
+  <td class="docs-api-property-description"><p>Whether this column should be sticky positioned on the end of the row. Should make sure
+that it mimics the <code>CanStick</code> mixin such that <code>_hasStickyChanged</code> is set to true if the value
+has been changed.</p>
 </td>
 </tr>
 

@@ -468,7 +468,7 @@ var _c0$7 = ["picker", ""];
 var DatepickerFilterExample = /** @class */ (function () {
     function DatepickerFilterExample() {
         this.myFilter = function (d) {
-            var day = d.getDay();
+            var day = (d || new Date()).getDay();
             // Prevent Saturday and Sunday from being selected.
             return day !== 0 && day !== 6;
         };

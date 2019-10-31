@@ -417,6 +417,10 @@ if (false) {
     /** @type {?} */
     MyTelInput.nextId;
     /** @type {?} */
+    MyTelInput.ngAcceptInputType_disabled;
+    /** @type {?} */
+    MyTelInput.ngAcceptInputType_required;
+    /** @type {?} */
     MyTelInput.prototype.parts;
     /** @type {?} */
     MyTelInput.prototype.stateChanges;

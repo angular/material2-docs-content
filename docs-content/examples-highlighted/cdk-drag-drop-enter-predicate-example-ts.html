@@ -13,7 +13,7 @@
   all = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
   even = [<span class="hljs-number">10</span>];
 
-  drop(event: CdkDragDrop&lt;<span class="hljs-built_in">string</span>[]&gt;) {
+  drop(event: CdkDragDrop&lt;<span class="hljs-built_in">number</span>[]&gt;) {
     <span class="hljs-keyword">if</span> (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } <span class="hljs-keyword">else</span> {
