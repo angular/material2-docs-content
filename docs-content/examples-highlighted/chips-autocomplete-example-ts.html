@@ -18,7 +18,6 @@
   visible = <span class="hljs-literal">true</span>;
   selectable = <span class="hljs-literal">true</span>;
   removable = <span class="hljs-literal">true</span>;
-  addOnBlur = <span class="hljs-literal">true</span>;
   separatorKeysCodes: <span class="hljs-built_in">number</span>[] = [ENTER, COMMA];
   fruitCtrl = <span class="hljs-keyword">new</span> FormControl();
   filteredFruits: Observable&lt;<span class="hljs-built_in">string</span>[]&gt;;
@@ -35,24 +34,20 @@
   }
 
   add(event: MatChipInputEvent): <span class="hljs-built_in">void</span> {
-    <span class="hljs-comment">// Add fruit only when MatAutocomplete is not open</span>
-    <span class="hljs-comment">// To make sure this does not conflict with OptionSelected Event</span>
-    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.matAutocomplete.isOpen) {
-      <span class="hljs-keyword">const</span> input = event.input;
-      <span class="hljs-keyword">const</span> value = event.value;
+    <span class="hljs-keyword">const</span> input = event.input;
+    <span class="hljs-keyword">const</span> value = event.value;
 
-      <span class="hljs-comment">// Add our fruit</span>
-      <span class="hljs-keyword">if</span> ((value || <span class="hljs-string">''</span>).trim()) {
-        <span class="hljs-keyword">this</span>.fruits.push(value.trim());
-      }
-
-      <span class="hljs-comment">// Reset the input value</span>
-      <span class="hljs-keyword">if</span> (input) {
-        input.value = <span class="hljs-string">''</span>;
-      }
-
-      <span class="hljs-keyword">this</span>.fruitCtrl.setValue(<span class="hljs-literal">null</span>);
+    <span class="hljs-comment">// Add our fruit</span>
+    <span class="hljs-keyword">if</span> ((value || <span class="hljs-string">''</span>).trim()) {
+      <span class="hljs-keyword">this</span>.fruits.push(value.trim());
     }
+
+    <span class="hljs-comment">// Reset the input value</span>
+    <span class="hljs-keyword">if</span> (input) {
+      input.value = <span class="hljs-string">''</span>;
+    }
+
+    <span class="hljs-keyword">this</span>.fruitCtrl.setValue(<span class="hljs-literal">null</span>);
   }
 
   remove(fruit: <span class="hljs-built_in">string</span>): <span class="hljs-built_in">void</span> {

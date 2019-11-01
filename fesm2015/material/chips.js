@@ -58,7 +58,6 @@ class ChipsAutocompleteExample {
         this.visible = true;
         this.selectable = true;
         this.removable = true;
-        this.addOnBlur = true;
         this.separatorKeysCodes = [ENTER, COMMA];
         this.fruitCtrl = new FormControl();
         this.fruits = ['Lemon'];
@@ -74,23 +73,19 @@ class ChipsAutocompleteExample {
      * @return {?}
      */
     add(event) {
-        // Add fruit only when MatAutocomplete is not open
-        // To make sure this does not conflict with OptionSelected Event
-        if (!this.matAutocomplete.isOpen) {
-            /** @type {?} */
-            const input = event.input;
-            /** @type {?} */
-            const value = event.value;
-            // Add our fruit
-            if ((value || '').trim()) {
-                this.fruits.push(value.trim());
-            }
-            // Reset the input value
-            if (input) {
-                input.value = '';
-            }
-            this.fruitCtrl.setValue(null);
+        /** @type {?} */
+        const input = event.input;
+        /** @type {?} */
+        const value = event.value;
+        // Add our fruit
+        if ((value || '').trim()) {
+            this.fruits.push(value.trim());
         }
+        // Reset the input value
+        if (input) {
+            input.value = '';
+        }
+        this.fruitCtrl.setValue(null);
     }
     /**
      * @param {?} fruit
@@ -148,7 +143,7 @@ ChipsAutocompleteExample.propDecorators = {
         var _t;
         ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.fruitInput = _t.first);
         ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.matAutocomplete = _t.first);
-    } }, decls: 10, vars: 9, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "formControl", "matAutocomplete", "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputAddOnBlur", "matChipInputTokenEnd"], [3, "optionSelected"], [3, "value", 4, "ngFor", "ngForOf"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""], [3, "value"]], template: function ChipsAutocompleteExample_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 10, vars: 8, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "formControl", "matAutocomplete", "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputTokenEnd"], [3, "optionSelected"], [3, "value", 4, "ngFor", "ngForOf"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""], [3, "value"]], template: function ChipsAutocompleteExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field", 0);
         ɵɵelementStart(1, "mat-chip-list", 1, _c2);
         ɵɵtemplate(3, ChipsAutocompleteExample_mat_chip_3_Template, 3, 4, "mat-chip", 2);
@@ -168,9 +163,9 @@ ChipsAutocompleteExample.propDecorators = {
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ctx.fruits);
         ɵɵadvance(1);
-        ɵɵproperty("formControl", ctx.fruitCtrl)("matAutocomplete", _r3)("matChipInputFor", _r0)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes)("matChipInputAddOnBlur", ctx.addOnBlur);
+        ɵɵproperty("formControl", ctx.fruitCtrl)("matAutocomplete", _r3)("matChipInputFor", _r0)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes);
         ɵɵadvance(4);
-        ɵɵproperty("ngForOf", ɵɵpipeBind1(9, 7, ctx.filteredFruits));
+        ɵɵproperty("ngForOf", ɵɵpipeBind1(9, 6, ctx.filteredFruits));
     } }, directives: [MatFormField, MatChipList, NgForOf, DefaultValueAccessor, MatAutocompleteTrigger, MatChipInput, NgControlStatus, FormControlDirective, MatAutocomplete, MatChip, NgIf, MatIcon, MatChipRemove, MatOption], pipes: [AsyncPipe], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
 /*@__PURE__*/ ɵsetClassMetadata(ChipsAutocompleteExample, [{
         type: Component,
@@ -193,8 +188,6 @@ if (false) {
     ChipsAutocompleteExample.prototype.selectable;
     /** @type {?} */
     ChipsAutocompleteExample.prototype.removable;
-    /** @type {?} */
-    ChipsAutocompleteExample.prototype.addOnBlur;
     /** @type {?} */
     ChipsAutocompleteExample.prototype.separatorKeysCodes;
     /** @type {?} */

@@ -11,7 +11,6 @@ export declare class ChipsAutocompleteExample {
     visible: boolean;
     selectable: boolean;
     removable: boolean;
-    addOnBlur: boolean;
     separatorKeysCodes: number[];
     fruitCtrl: FormControl;
     filteredFruits: Observable<string[]>;
