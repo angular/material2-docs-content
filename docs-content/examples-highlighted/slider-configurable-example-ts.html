@@ -1,4 +1,3 @@
-<span class="hljs-keyword">import</span> {coerceNumberProperty} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/coercion'</span>;
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 
 <span class="hljs-comment">/**
@@ -20,12 +19,9 @@
   thumbLabel = <span class="hljs-literal">false</span>;
   value = <span class="hljs-number">0</span>;
   vertical = <span class="hljs-literal">false</span>;
+  tickInterval = <span class="hljs-number">1</span>;
 
-  <span class="hljs-keyword">get</span> tickInterval(): <span class="hljs-built_in">number</span> | <span class="hljs-string">'auto'</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.showTicks ? (<span class="hljs-keyword">this</span>.autoTicks ? <span class="hljs-string">'auto'</span> : <span class="hljs-keyword">this</span>._tickInterval) : <span class="hljs-number">0</span>;
+  getSliderTickInterval(): <span class="hljs-built_in">number</span> | <span class="hljs-string">'auto'</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.showTicks ? (<span class="hljs-keyword">this</span>.autoTicks ? <span class="hljs-string">'auto'</span> : <span class="hljs-keyword">this</span>.tickInterval) : <span class="hljs-number">0</span>;
   }
-  <span class="hljs-keyword">set</span> tickInterval(value) {
-    <span class="hljs-keyword">this</span>._tickInterval = coerceNumberProperty(value);
-  }
-  <span class="hljs-keyword">private</span> _tickInterval = <span class="hljs-number">1</span>;
 }

@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/input'), require('@angular/material/slider'), require('@angular/cdk/coercion'), require('@angular/material/form-field')) :
-    typeof define === 'function' && define.amd ? define('@angular/material-examples/material/slider', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/checkbox', '@angular/material/input', '@angular/material/slider', '@angular/cdk/coercion', '@angular/material/form-field'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.slider = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.checkbox, global.ng.material.input, global.ng.material.slider, global.ng.cdk.coercion, global.ng.material.formField));
-}(this, function (exports, i6, i0, i4, i1, i5, i3, i1$1, coercion, i2) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/input'), require('@angular/material/slider'), require('@angular/material/form-field')) :
+    typeof define === 'function' && define.amd ? define('@angular/material-examples/material/slider', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/checkbox', '@angular/material/input', '@angular/material/slider', '@angular/material/form-field'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.slider = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.checkbox, global.ng.material.input, global.ng.material.slider, global.ng.material.formField));
+}(this, function (exports, i6, i0, i4, i1, i5, i3, i1$1, i2) { 'use strict';
 
     function SliderConfigurableExample_mat_checkbox_16_Template(rf, ctx) { if (rf & 1) {
         var _r3 = i0.ɵɵgetCurrentView();
@@ -41,18 +41,11 @@
             this.thumbLabel = false;
             this.value = 0;
             this.vertical = false;
-            this._tickInterval = 1;
+            this.tickInterval = 1;
         }
-        Object.defineProperty(SliderConfigurableExample.prototype, "tickInterval", {
-            get: function () {
-                return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
-            },
-            set: function (value) {
-                this._tickInterval = coercion.coerceNumberProperty(value);
-            },
-            enumerable: true,
-            configurable: true
-        });
+        SliderConfigurableExample.prototype.getSliderTickInterval = function () {
+            return this.showTicks ? (this.autoTicks ? 'auto' : this.tickInterval) : 0;
+        };
         SliderConfigurableExample.decorators = [
             { type: i0.Component, args: [{
                         selector: 'slider-configurable-example',
@@ -155,7 +148,7 @@
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngModel", ctx.disabled);
                 i0.ɵɵadvance(6);
-                i0.ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.tickInterval)("ngModel", ctx.value)("vertical", ctx.vertical);
+                i0.ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.getSliderTickInterval())("ngModel", ctx.value)("vertical", ctx.vertical);
             } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatFormField, i3.MatInput, i4.NumberValueAccessor, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i5.MatCheckbox, i6.NgIf, i1$1.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}"] });
         return SliderConfigurableExample;
     }());

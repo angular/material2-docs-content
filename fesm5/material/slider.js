@@ -5,7 +5,6 @@ import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatSlider, MatSliderModule } from '@angular/material/slider';
-import { coerceNumberProperty } from '@angular/cdk/coercion';
 import { MatFormField } from '@angular/material/form-field';
 
 function SliderConfigurableExample_mat_checkbox_16_Template(rf, ctx) { if (rf & 1) {
@@ -45,18 +44,11 @@ var SliderConfigurableExample = /** @class */ (function () {
         this.thumbLabel = false;
         this.value = 0;
         this.vertical = false;
-        this._tickInterval = 1;
+        this.tickInterval = 1;
     }
-    Object.defineProperty(SliderConfigurableExample.prototype, "tickInterval", {
-        get: function () {
-            return this.showTicks ? (this.autoTicks ? 'auto' : this._tickInterval) : 0;
-        },
-        set: function (value) {
-            this._tickInterval = coerceNumberProperty(value);
-        },
-        enumerable: true,
-        configurable: true
-    });
+    SliderConfigurableExample.prototype.getSliderTickInterval = function () {
+        return this.showTicks ? (this.autoTicks ? 'auto' : this.tickInterval) : 0;
+    };
     SliderConfigurableExample.decorators = [
         { type: Component, args: [{
                     selector: 'slider-configurable-example',
@@ -159,7 +151,7 @@ var SliderConfigurableExample = /** @class */ (function () {
             ɵɵadvance(3);
             ɵɵproperty("ngModel", ctx.disabled);
             ɵɵadvance(6);
-            ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.tickInterval)("ngModel", ctx.value)("vertical", ctx.vertical);
+            ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.getSliderTickInterval())("ngModel", ctx.value)("vertical", ctx.vertical);
         } }, directives: [MatCard, MatCardContent, MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, NgModel, MatCheckbox, NgIf, MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}"] });
     return SliderConfigurableExample;
 }());

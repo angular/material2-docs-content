@@ -116,6 +116,12 @@ const ɵCustomStepper_BaseFactory = ɵɵgetInheritedFactory(CustomStepper);
                 providers: [{ provide: CdkStepper, useExisting: CustomStepper }]
             }]
     }], null, null);
+if (false) {
+    /** @type {?} */
+    CustomStepper.ngAcceptInputType_linear;
+    /** @type {?} */
+    CustomStepper.ngAcceptInputType_selectedIndex;
+}
 
 /**
  * @fileoverview added by tsickle

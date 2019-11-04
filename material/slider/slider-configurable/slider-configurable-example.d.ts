@@ -13,8 +13,8 @@ export declare class SliderConfigurableExample {
     thumbLabel: boolean;
     value: number;
     vertical: boolean;
-    tickInterval: number | 'auto';
-    private _tickInterval;
+    tickInterval: number;
+    getSliderTickInterval(): number | 'auto';
     static ɵfac: i0.ɵɵFactoryDef<SliderConfigurableExample>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<SliderConfigurableExample, "slider-configurable-example", never, {}, {}, never>;
 }
