@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/checkbox'), require('@angular/material/icon'), require('@angular/material/list'), require('@angular/material/radio'), require('@angular/material/select'), require('@angular/material/sidenav'), require('@angular/material/toolbar'), require('@angular/material/form-field'), require('@angular/material/core'), require('@angular/cdk/layout')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/sidenav', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/checkbox', '@angular/material/icon', '@angular/material/list', '@angular/material/radio', '@angular/material/select', '@angular/material/sidenav', '@angular/material/toolbar', '@angular/material/form-field', '@angular/material/core', '@angular/cdk/layout'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.sidenav = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.checkbox, global.ng.material.icon, global.ng.material.list, global.ng.material.radio, global.ng.material.select, global.ng.material.sidenav, global.ng.material.toolbar, global.ng.material.formField, global.ng.material.core, global.ng.cdk.layout));
-}(this, function (exports, i1, i0, i1$1, i3, i5, i5$1, i7, i4, i3$1, i2, i3$2, i2$1, i4$1, i1$2) { 'use strict';
+}(this, function (exports, i1, i0, i1$1, i3, i3$1, i5, i7, i4, i3$2, i2, i3$3, i2$1, i4$1, i1$2) { 'use strict';
 
     var _c0 = ["drawer", ""];
     function SidenavAutosizeExample_p_5_Template(rf, ctx) { if (rf & 1) {
@@ -130,7 +130,7 @@
                 i0.ɵɵproperty("value", true);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("value", false);
-            } }, directives: [i2.MatDrawerContainer, i2.MatDrawer, i2.MatDrawerContent, i2$1.MatFormField, i2$1.MatLabel, i3$1.MatSelect, i4$1.MatOption, i3.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 200px;\n  margin: 12px;\n  border: 1px solid #555;\n}\n\nmat-drawer-content[_ngcontent-%COMP%] {\n  padding: 12px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n}"] });
+            } }, directives: [i2.MatDrawerContainer, i2.MatDrawer, i2.MatDrawerContent, i2$1.MatFormField, i2$1.MatLabel, i3$2.MatSelect, i4$1.MatOption, i3.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 200px;\n  margin: 12px;\n  border: 1px solid #555;\n}\n\nmat-drawer-content[_ngcontent-%COMP%] {\n  padding: 12px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n}"] });
         return SidenavBackdropExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(SidenavBackdropExample, [{
@@ -342,7 +342,7 @@
                 i0.ɵɵproperty("ngIf", ctx.shouldRun);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
-            } }, directives: [i1.NgIf, i3$2.MatToolbar, i2.MatSidenavContainer, i2.MatSidenav, i2.MatSidenavContent, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i5.MatCheckbox, i1$1.NgControlStatus, i1$1.FormControlName, i2$1.MatFormField, i1$1.NumberValueAccessor, i1$1.DefaultValueAccessor, i3.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 60px;\n  bottom: 60px;\n  left: 0;\n  right: 0;\n}\n\n.example-sidenav[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-header[_ngcontent-%COMP%] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-footer[_ngcontent-%COMP%] {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}"] });
+            } }, directives: [i1.NgIf, i3$3.MatToolbar, i2.MatSidenavContainer, i2.MatSidenav, i2.MatSidenavContent, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i3$1.MatCheckbox, i1$1.NgControlStatus, i1$1.FormControlName, i2$1.MatFormField, i1$1.NumberValueAccessor, i1$1.DefaultValueAccessor, i3.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 60px;\n  bottom: 60px;\n  left: 0;\n  right: 0;\n}\n\n.example-sidenav[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-header[_ngcontent-%COMP%] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-footer[_ngcontent-%COMP%] {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}"] });
         return SidenavFixedExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(SidenavFixedExample, [{
@@ -529,7 +529,7 @@
                 i0.ɵɵproperty("ngIf", ctx.shouldRun);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
-            } }, directives: [i1.NgIf, i2.MatSidenavContainer, i2.MatSidenav, i2.MatSidenavContent, i5.MatCheckbox, i1$1.NgControlStatus, i1$1.NgModel, i3.MatButton, i1.NgForOf], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-events[_ngcontent-%COMP%] {\n  width: 300px;\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #555;\n}"] });
+            } }, directives: [i1.NgIf, i2.MatSidenavContainer, i2.MatSidenav, i2.MatSidenavContent, i3$1.MatCheckbox, i1$1.NgControlStatus, i1$1.NgModel, i3.MatButton, i1.NgForOf], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-events[_ngcontent-%COMP%] {\n  width: 300px;\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #555;\n}"] });
         return SidenavOpenCloseExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(SidenavOpenCloseExample, [{
@@ -732,7 +732,7 @@
                 i0.ɵɵproperty("ngIf", ctx.shouldRun);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
-            } }, directives: [i1.NgIf, i3$2.MatToolbar, i3.MatButton, i5$1.MatIcon, i2.MatSidenavContainer, i2.MatSidenav, i7.MatNavList, i1.NgForOf, i2.MatSidenavContent, i7.MatListItem], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-is-mobile[_ngcontent-%COMP%]   .example-toolbar[_ngcontent-%COMP%] {\n  position: fixed;\n  \n  z-index: 2;\n}\n\nh1.example-app-name[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}\n\n.example-sidenav-container[_ngcontent-%COMP%] {\n  \n  flex: 1;\n}\n\n.example-is-mobile[_ngcontent-%COMP%]   .example-sidenav-container[_ngcontent-%COMP%] {\n  \n  flex: 1 0 auto;\n}"] });
+            } }, directives: [i1.NgIf, i3$3.MatToolbar, i3.MatButton, i5.MatIcon, i2.MatSidenavContainer, i2.MatSidenav, i7.MatNavList, i1.NgForOf, i2.MatSidenavContent, i7.MatListItem], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-is-mobile[_ngcontent-%COMP%]   .example-toolbar[_ngcontent-%COMP%] {\n  position: fixed;\n  \n  z-index: 2;\n}\n\nh1.example-app-name[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}\n\n.example-sidenav-container[_ngcontent-%COMP%] {\n  \n  flex: 1;\n}\n\n.example-is-mobile[_ngcontent-%COMP%]   .example-sidenav-container[_ngcontent-%COMP%] {\n  \n  flex: 1 0 auto;\n}"] });
         return SidenavResponsiveExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(SidenavResponsiveExample, [{
@@ -765,13 +765,13 @@
                             i1.CommonModule,
                             i1$1.FormsModule,
                             i3.MatButtonModule,
-                            i5.MatCheckboxModule,
-                            i5$1.MatIconModule,
+                            i3$1.MatCheckboxModule,
+                            i5.MatIconModule,
                             i7.MatListModule,
                             i4.MatRadioModule,
                             i2.MatSidenavModule,
-                            i3$1.MatSelectModule,
-                            i3$2.MatToolbarModule,
+                            i3$2.MatSelectModule,
+                            i3$3.MatToolbarModule,
                             i1$1.ReactiveFormsModule,
                         ],
                         declarations: EXAMPLES,
@@ -783,13 +783,13 @@
                     i1.CommonModule,
                     i1$1.FormsModule,
                     i3.MatButtonModule,
-                    i5.MatCheckboxModule,
-                    i5$1.MatIconModule,
+                    i3$1.MatCheckboxModule,
+                    i5.MatIconModule,
                     i7.MatListModule,
                     i4.MatRadioModule,
                     i2.MatSidenavModule,
-                    i3$1.MatSelectModule,
-                    i3$2.MatToolbarModule,
+                    i3$2.MatSelectModule,
+                    i3$3.MatToolbarModule,
                     i1$1.ReactiveFormsModule,
                 ]] });
         return SidenavExamplesModule;
@@ -806,13 +806,13 @@
             SidenavResponsiveExample], imports: [i1.CommonModule,
             i1$1.FormsModule,
             i3.MatButtonModule,
-            i5.MatCheckboxModule,
-            i5$1.MatIconModule,
+            i3$1.MatCheckboxModule,
+            i5.MatIconModule,
             i7.MatListModule,
             i4.MatRadioModule,
             i2.MatSidenavModule,
-            i3$1.MatSelectModule,
-            i3$2.MatToolbarModule,
+            i3$2.MatSelectModule,
+            i3$3.MatToolbarModule,
             i1$1.ReactiveFormsModule], exports: [SidenavAutosizeExample,
             SidenavBackdropExample,
             SidenavDisableCloseExample,
@@ -830,13 +830,13 @@
                         i1.CommonModule,
                         i1$1.FormsModule,
                         i3.MatButtonModule,
-                        i5.MatCheckboxModule,
-                        i5$1.MatIconModule,
+                        i3$1.MatCheckboxModule,
+                        i5.MatIconModule,
                         i7.MatListModule,
                         i4.MatRadioModule,
                         i2.MatSidenavModule,
-                        i3$1.MatSelectModule,
-                        i3$2.MatToolbarModule,
+                        i3$2.MatSelectModule,
+                        i3$3.MatToolbarModule,
                         i1$1.ReactiveFormsModule,
                     ],
                     declarations: EXAMPLES,
