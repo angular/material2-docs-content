@@ -122,7 +122,8 @@ action is complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the current display value of the slider.</p>
+      <p>Gets the current display value of the slider. Returns null if the thumb
+label is disabled.</p>
 
     </td>
   </tr><thead>
@@ -132,7 +133,7 @@ action is complete.</p>
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
