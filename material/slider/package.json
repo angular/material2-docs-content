@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/slider",
-  "main": "../../bundles/material-examples-material-slider.umd.js",
+  "name": "@angular/components-examples/material/slider",
+  "main": "../../bundles/components-examples-material-slider.umd.js",
   "fesm5": "../../fesm5/material/slider.js",
   "fesm2015": "../../fesm2015/material/slider.js",
   "esm5": "../../esm5/material/slider/index.js",

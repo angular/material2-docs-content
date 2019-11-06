@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/card",
-  "main": "../../bundles/material-examples-material-card.umd.js",
+  "name": "@angular/components-examples/material/card",
+  "main": "../../bundles/components-examples-material-card.umd.js",
   "fesm5": "../../fesm5/material/card.js",
   "fesm2015": "../../fesm2015/material/card.js",
   "esm5": "../../esm5/material/card/index.js",

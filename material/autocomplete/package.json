@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/autocomplete",
-  "main": "../../bundles/material-examples-material-autocomplete.umd.js",
+  "name": "@angular/components-examples/material/autocomplete",
+  "main": "../../bundles/components-examples-material-autocomplete.umd.js",
   "fesm5": "../../fesm5/material/autocomplete.js",
   "fesm2015": "../../fesm2015/material/autocomplete.js",
   "esm5": "../../esm5/material/autocomplete/index.js",

@@ -102,9 +102,5 @@ var IconExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { IconOverviewExample, IconSvgExample, IconExamplesModule };
 //# sourceMappingURL=icon.js.map

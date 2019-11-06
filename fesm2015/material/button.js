@@ -281,9 +281,5 @@ ButtonExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { ButtonOverviewExample, ButtonTypesExample, ButtonExamplesModule };
 //# sourceMappingURL=button.js.map

@@ -455,9 +455,5 @@ CdkA11yExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, CdkA11yExamplesModule };
 //# sourceMappingURL=a11y.js.map

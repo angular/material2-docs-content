@@ -247,9 +247,5 @@ var ListExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { ListOverviewExample, ListSectionsExample, ListSelectionExample, ListExamplesModule };
 //# sourceMappingURL=list.js.map

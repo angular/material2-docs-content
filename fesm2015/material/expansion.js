@@ -396,9 +396,5 @@ ExpansionExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, ExpansionExamplesModule };
 //# sourceMappingURL=expansion.js.map

@@ -1103,9 +1103,5 @@ var CdkPopoverEditExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPopoverEditExamplesModule };
 //# sourceMappingURL=popover-edit.js.map

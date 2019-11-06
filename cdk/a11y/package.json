@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/cdk/a11y",
-  "main": "../../bundles/material-examples-cdk-a11y.umd.js",
+  "name": "@angular/components-examples/cdk/a11y",
+  "main": "../../bundles/components-examples-cdk-a11y.umd.js",
   "fesm5": "../../fesm5/cdk/a11y.js",
   "fesm2015": "../../fesm2015/cdk/a11y.js",
   "esm5": "../../esm5/cdk/a11y/index.js",

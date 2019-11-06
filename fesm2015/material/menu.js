@@ -400,9 +400,5 @@ MenuExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample, MenuExamplesModule };
 //# sourceMappingURL=menu.js.map

@@ -154,9 +154,5 @@ var CdkStepperExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CdkCustomStepperWithoutFormExample, CustomStepper, CdkStepperExamplesModule };
 //# sourceMappingURL=stepper.js.map

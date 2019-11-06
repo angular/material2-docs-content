@@ -175,9 +175,5 @@ var PaginatorExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { PaginatorConfigurableExample, PaginatorOverviewExample, PaginatorExamplesModule };
 //# sourceMappingURL=paginator.js.map

@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/bottom-sheet",
-  "main": "../../bundles/material-examples-material-bottom-sheet.umd.js",
+  "name": "@angular/components-examples/material/bottom-sheet",
+  "main": "../../bundles/components-examples-material-bottom-sheet.umd.js",
   "fesm5": "../../fesm5/material/bottom-sheet.js",
   "fesm2015": "../../fesm2015/material/bottom-sheet.js",
   "esm5": "../../esm5/material/bottom-sheet/index.js",

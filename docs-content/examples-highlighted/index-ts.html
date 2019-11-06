@@ -1,0 +1,50 @@
+<span class="hljs-keyword">import</span> {CdkPopoverEditModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk-experimental/popover-edit'</span>;
+<span class="hljs-keyword">import</span> {CdkTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/table'</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkPopoverEditCdkTableFlexExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-popover-edit-cdk-table-flex/cdk-popover-edit-cdk-table-flex-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkPopoverEditCdkTableExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-popover-edit-cdk-table/cdk-popover-edit-cdk-table-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkPopoverEditCellSpanVanillaTableExample
+  <span class="hljs-comment">// tslint:disable-next-line:max-line-length</span>
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-popover-edit-cell-span-vanilla-table/cdk-popover-edit-cell-span-vanilla-table-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkPopoverEditTabOutVanillaTableExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-popover-edit-tab-out-vanilla-table/cdk-popover-edit-tab-out-vanilla-table-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkPopoverEditVanillaTableExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-popover-edit-vanilla-table/cdk-popover-edit-vanilla-table-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  CdkPopoverEditCdkTableFlexExample,
+  CdkPopoverEditCdkTableExample,
+  CdkPopoverEditCellSpanVanillaTableExample,
+  CdkPopoverEditTabOutVanillaTableExample,
+  CdkPopoverEditVanillaTableExample
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  CdkPopoverEditCdkTableExample,
+  CdkPopoverEditCdkTableFlexExample,
+  CdkPopoverEditCellSpanVanillaTableExample,
+  CdkPopoverEditTabOutVanillaTableExample,
+  CdkPopoverEditVanillaTableExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CdkPopoverEditModule,
+    CdkTableModule,
+    FormsModule,
+    CommonModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkPopoverEditExamplesModule {
+}

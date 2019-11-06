@@ -1229,9 +1229,5 @@ CdkDragDropExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkDragDropExamplesModule };
 //# sourceMappingURL=drag-drop.js.map

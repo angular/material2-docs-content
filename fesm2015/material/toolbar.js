@@ -131,9 +131,5 @@ ToolbarExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { ToolbarMultirowExample, ToolbarOverviewExample, ToolbarExamplesModule };
 //# sourceMappingURL=toolbar.js.map

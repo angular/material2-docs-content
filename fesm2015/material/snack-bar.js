@@ -338,9 +338,5 @@ SnackBarExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { SnackBarComponentExample, SnackBarOverviewExample, SnackBarPositionExample, PizzaPartyComponent, SnackBarExamplesModule };
 //# sourceMappingURL=snack-bar.js.map

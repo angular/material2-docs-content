@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/dialog",
-  "main": "../../bundles/material-examples-material-dialog.umd.js",
+  "name": "@angular/components-examples/material/dialog",
+  "main": "../../bundles/components-examples-material-dialog.umd.js",
   "fesm5": "../../fesm5/material/dialog.js",
   "fesm2015": "../../fesm2015/material/dialog.js",
   "esm5": "../../esm5/material/dialog/index.js",

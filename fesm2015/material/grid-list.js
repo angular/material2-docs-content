@@ -158,9 +158,5 @@ GridListExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { GridListDynamicExample, GridListOverviewExample, GridListExamplesModule };
 //# sourceMappingURL=grid-list.js.map

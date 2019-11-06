@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/badge",
-  "main": "../../bundles/material-examples-material-badge.umd.js",
+  "name": "@angular/components-examples/material/badge",
+  "main": "../../bundles/components-examples-material-badge.umd.js",
   "fesm5": "../../fesm5/material/badge.js",
   "fesm2015": "../../fesm2015/material/badge.js",
   "esm5": "../../esm5/material/badge/index.js",

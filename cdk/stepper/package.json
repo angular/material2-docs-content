@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/cdk/stepper",
-  "main": "../../bundles/material-examples-cdk-stepper.umd.js",
+  "name": "@angular/components-examples/cdk/stepper",
+  "main": "../../bundles/components-examples-cdk-stepper.umd.js",
   "fesm5": "../../fesm5/cdk/stepper.js",
   "fesm2015": "../../fesm2015/cdk/stepper.js",
   "esm5": "../../esm5/cdk/stepper/index.js",

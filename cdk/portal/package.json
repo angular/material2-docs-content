@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/cdk/portal",
-  "main": "../../bundles/material-examples-cdk-portal.umd.js",
+  "name": "@angular/components-examples/cdk/portal",
+  "main": "../../bundles/components-examples-cdk-portal.umd.js",
   "fesm5": "../../fesm5/cdk/portal.js",
   "fesm2015": "../../fesm2015/cdk/portal.js",
   "esm5": "../../esm5/cdk/portal/index.js",

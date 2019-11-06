@@ -112,9 +112,5 @@ IconExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { IconOverviewExample, IconSvgExample, IconExamplesModule };
 //# sourceMappingURL=icon.js.map

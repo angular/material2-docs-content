@@ -195,9 +195,5 @@ var ButtonToggleExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonToggleExamplesModule };
 //# sourceMappingURL=button-toggle.js.map

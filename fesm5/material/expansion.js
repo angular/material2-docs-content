@@ -365,9 +365,5 @@ var ExpansionExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, ExpansionExamplesModule };
 //# sourceMappingURL=expansion.js.map

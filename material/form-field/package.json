@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/form-field",
-  "main": "../../bundles/material-examples-material-form-field.umd.js",
+  "name": "@angular/components-examples/material/form-field",
+  "main": "../../bundles/components-examples-material-form-field.umd.js",
   "fesm5": "../../fesm5/material/form-field.js",
   "fesm2015": "../../fesm2015/material/form-field.js",
   "esm5": "../../esm5/material/form-field/index.js",

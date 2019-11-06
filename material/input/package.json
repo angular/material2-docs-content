@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/input",
-  "main": "../../bundles/material-examples-material-input.umd.js",
+  "name": "@angular/components-examples/material/input",
+  "main": "../../bundles/components-examples-material-input.umd.js",
   "fesm5": "../../fesm5/material/input.js",
   "fesm2015": "../../fesm2015/material/input.js",
   "esm5": "../../esm5/material/input/index.js",

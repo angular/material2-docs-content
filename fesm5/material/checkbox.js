@@ -175,9 +175,5 @@ var CheckboxExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CheckboxConfigurableExample, CheckboxOverviewExample, CheckboxExamplesModule };
 //# sourceMappingURL=checkbox.js.map

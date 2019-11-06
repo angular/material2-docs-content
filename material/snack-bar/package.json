@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/snack-bar",
-  "main": "../../bundles/material-examples-material-snack-bar.umd.js",
+  "name": "@angular/components-examples/material/snack-bar",
+  "main": "../../bundles/components-examples-material-snack-bar.umd.js",
   "fesm5": "../../fesm5/material/snack-bar.js",
   "fesm2015": "../../fesm2015/material/snack-bar.js",
   "esm5": "../../esm5/material/snack-bar/index.js",

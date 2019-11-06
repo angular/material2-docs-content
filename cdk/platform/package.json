@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/cdk/platform",
-  "main": "../../bundles/material-examples-cdk-platform.umd.js",
+  "name": "@angular/components-examples/cdk/platform",
+  "main": "../../bundles/components-examples-cdk-platform.umd.js",
   "fesm5": "../../fesm5/cdk/platform.js",
   "fesm2015": "../../fesm2015/cdk/platform.js",
   "esm5": "../../esm5/cdk/platform/index.js",

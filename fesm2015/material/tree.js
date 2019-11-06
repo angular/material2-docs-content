@@ -1606,9 +1606,5 @@ TreeExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample, TreeExamplesModule };
 //# sourceMappingURL=tree.js.map

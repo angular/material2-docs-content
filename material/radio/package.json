@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/radio",
-  "main": "../../bundles/material-examples-material-radio.umd.js",
+  "name": "@angular/components-examples/material/radio",
+  "main": "../../bundles/components-examples-material-radio.umd.js",
   "fesm5": "../../fesm5/material/radio.js",
   "fesm2015": "../../fesm2015/material/radio.js",
   "esm5": "../../esm5/material/radio/index.js",

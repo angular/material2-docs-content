@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/divider",
-  "main": "../../bundles/material-examples-material-divider.umd.js",
+  "name": "@angular/components-examples/material/divider",
+  "main": "../../bundles/components-examples-material-divider.umd.js",
   "fesm5": "../../fesm5/material/divider.js",
   "fesm2015": "../../fesm2015/material/divider.js",
   "esm5": "../../esm5/material/divider/index.js",

@@ -94,9 +94,5 @@ BadgeExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { BadgeOverviewExample, BadgeExamplesModule };
 //# sourceMappingURL=badge.js.map

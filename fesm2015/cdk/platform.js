@@ -139,9 +139,5 @@ CdkPlatformExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CdkPlatformOverviewExample, CdkPlatformExamplesModule };
 //# sourceMappingURL=platform.js.map

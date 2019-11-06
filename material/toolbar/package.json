@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/toolbar",
-  "main": "../../bundles/material-examples-material-toolbar.umd.js",
+  "name": "@angular/components-examples/material/toolbar",
+  "main": "../../bundles/components-examples-material-toolbar.umd.js",
   "fesm5": "../../fesm5/material/toolbar.js",
   "fesm2015": "../../fesm2015/material/toolbar.js",
   "esm5": "../../esm5/material/toolbar/index.js",

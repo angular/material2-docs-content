@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/slide-toggle",
-  "main": "../../bundles/material-examples-material-slide-toggle.umd.js",
+  "name": "@angular/components-examples/material/slide-toggle",
+  "main": "../../bundles/components-examples-material-slide-toggle.umd.js",
   "fesm5": "../../fesm5/material/slide-toggle.js",
   "fesm2015": "../../fesm2015/material/slide-toggle.js",
   "esm5": "../../esm5/material/slide-toggle/index.js",

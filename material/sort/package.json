@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/sort",
-  "main": "../../bundles/material-examples-material-sort.umd.js",
+  "name": "@angular/components-examples/material/sort",
+  "main": "../../bundles/components-examples-material-sort.umd.js",
   "fesm5": "../../fesm5/material/sort.js",
   "fesm2015": "../../fesm2015/material/sort.js",
   "esm5": "../../esm5/material/sort/index.js",

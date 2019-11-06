@@ -199,9 +199,5 @@ PaginatorExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { PaginatorConfigurableExample, PaginatorOverviewExample, PaginatorExamplesModule };
 //# sourceMappingURL=paginator.js.map

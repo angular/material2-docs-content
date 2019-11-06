@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/table",
-  "main": "../../bundles/material-examples-material-table.umd.js",
+  "name": "@angular/components-examples/material/table",
+  "main": "../../bundles/components-examples-material-table.umd.js",
   "fesm5": "../../fesm5/material/table.js",
   "fesm2015": "../../fesm2015/material/table.js",
   "esm5": "../../esm5/material/table/index.js",

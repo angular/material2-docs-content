@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/cdk/text-field",
-  "main": "../../bundles/material-examples-cdk-text-field.umd.js",
+  "name": "@angular/components-examples/cdk/text-field",
+  "main": "../../bundles/components-examples-cdk-text-field.umd.js",
   "fesm5": "../../fesm5/cdk/text-field.js",
   "fesm2015": "../../fesm2015/cdk/text-field.js",
   "esm5": "../../esm5/cdk/text-field/index.js",

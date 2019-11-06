@@ -155,9 +155,5 @@ CdkPortalExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CdkPortalOverviewExample, ComponentPortalExample, CdkPortalExamplesModule };
 //# sourceMappingURL=portal.js.map

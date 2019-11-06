@@ -415,9 +415,5 @@ CdkTableExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CdkTableBasicExample, CdkTableBasicFlexExample, CdkTableExamplesModule };
 //# sourceMappingURL=table.js.map

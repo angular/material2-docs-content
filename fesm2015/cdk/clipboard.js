@@ -86,9 +86,5 @@ CdkClipboardExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CdkClipboardOverviewExample, CdkClipboardExamplesModule };
 //# sourceMappingURL=clipboard.js.map

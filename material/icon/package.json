@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/icon",
-  "main": "../../bundles/material-examples-material-icon.umd.js",
+  "name": "@angular/components-examples/material/icon",
+  "main": "../../bundles/components-examples-material-icon.umd.js",
   "fesm5": "../../fesm5/material/icon.js",
   "fesm2015": "../../fesm2015/material/icon.js",
   "esm5": "../../esm5/material/icon/index.js",

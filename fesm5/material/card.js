@@ -124,9 +124,5 @@ var CardExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { CardFancyExample, CardOverviewExample, CardExamplesModule };
 //# sourceMappingURL=card.js.map

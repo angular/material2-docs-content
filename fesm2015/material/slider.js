@@ -325,9 +325,5 @@ SliderExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SliderExamplesModule };
 //# sourceMappingURL=slider.js.map

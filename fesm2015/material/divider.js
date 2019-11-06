@@ -80,9 +80,5 @@ DividerExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { DividerOverviewExample, DividerExamplesModule };
 //# sourceMappingURL=divider.js.map

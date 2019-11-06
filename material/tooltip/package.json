@@ -1,6 +1,6 @@
 {
-  "name": "@angular/material-examples/material/tooltip",
-  "main": "../../bundles/material-examples-material-tooltip.umd.js",
+  "name": "@angular/components-examples/material/tooltip",
+  "main": "../../bundles/components-examples-material-tooltip.umd.js",
   "fesm5": "../../fesm5/material/tooltip.js",
   "fesm2015": "../../fesm2015/material/tooltip.js",
   "esm5": "../../esm5/material/tooltip/index.js",

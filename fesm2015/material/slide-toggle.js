@@ -304,9 +304,5 @@ SlideToggleExamplesModule.decorators = [
             }]
     }], null, null);
 
-/**
- * Generated bundle index. Do not edit.
- */
-
 export { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SlideToggleExamplesModule };
 //# sourceMappingURL=slide-toggle.js.map
