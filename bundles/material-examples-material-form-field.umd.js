@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/checkbox'), require('@angular/material/form-field'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/radio'), require('@angular/material/select'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('rxjs'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/material-examples/material/form-field', ['exports', 'tslib', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/checkbox', '@angular/material/form-field', '@angular/material/icon', '@angular/material/input', '@angular/material/radio', '@angular/material/select', '@angular/cdk/a11y', '@angular/cdk/coercion', 'rxjs', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.materialExamples = global.ng.materialExamples || {}, global.ng.materialExamples.material = global.ng.materialExamples.material || {}, global.ng.materialExamples.material.formField = {}), global.tslib, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.checkbox, global.ng.material.formField, global.ng.material.icon, global.ng.material.input, global.ng.material.radio, global.ng.material.select, global.ng.cdk.a11y, global.ng.cdk.coercion, global.rxjs, global.ng.material.core));
-}(this, function (exports, tslib, i4, i0, i1, i3, i2, i1$1, i3$1, i2$1, i3$2, i3$3, i4$1, coercion, rxjs, i4$2) { 'use strict';
+}(this, function (exports, tslib, i6, i0, i1, i3, i2, i1$1, i3$1, i2$1, i3$2, i3$3, i4, coercion, rxjs, i4$1) { 'use strict';
 
     /** @title Form field appearance variants */
     var FormFieldAppearanceExample = /** @class */ (function () {
@@ -261,7 +261,7 @@
         /** @nocollapse */
         MyTelInput.ctorParameters = function () { return [
             { type: i1.FormBuilder },
-            { type: i4$1.FocusMonitor },
+            { type: i4.FocusMonitor },
             { type: i0.ElementRef },
             { type: i1.NgControl, decorators: [{ type: i0.Optional }, { type: i0.Self }] }
         ]; };
@@ -271,7 +271,7 @@
             disabled: [{ type: i0.Input }],
             value: [{ type: i0.Input }]
         };
-        MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i1.FormBuilder), i0.ɵɵdirectiveInject(i4$1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1.NgControl, 10)); };
+        MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i1.FormBuilder), i0.ɵɵdirectiveInject(i4.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1.NgControl, 10)); };
         MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostBindings: function MyTelInput_HostBindings(rf, ctx, elIndex) { if (rf & 1) {
                 i0.ɵɵallocHostVars(3);
             } if (rf & 2) {
@@ -314,7 +314,7 @@
                         '[attr.aria-describedby]': 'describedBy',
                     }
                 }]
-        }], function () { return [{ type: i1.FormBuilder }, { type: i4$1.FocusMonitor }, { type: i0.ElementRef }, { type: i1.NgControl, decorators: [{
+        }], function () { return [{ type: i1.FormBuilder }, { type: i4.FocusMonitor }, { type: i0.ElementRef }, { type: i1.NgControl, decorators: [{
                     type: i0.Optional
                 }, {
                     type: i0.Self
@@ -367,7 +367,7 @@
                 i0.ɵɵproperty("formControl", ctx.email);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.email.invalid);
-            } }, directives: [i1$1.MatFormField, i2$1.MatInput, i1.DefaultValueAccessor, i1.RequiredValidator, i1.NgControlStatus, i1.FormControlDirective, i4.NgIf, i1$1.MatError], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1$1.MatFormField, i2$1.MatInput, i1.DefaultValueAccessor, i1.RequiredValidator, i1.NgControlStatus, i1.FormControlDirective, i6.NgIf, i1$1.MatError], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return FormFieldErrorExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(FormFieldErrorExample, [{
@@ -415,7 +415,7 @@
                 var _r1 = i0.ɵɵreference(3);
                 i0.ɵɵadvance(5);
                 i0.ɵɵtextInterpolate1("", (_r1.value == null ? null : _r1.value.length) || 0, "/10");
-            } }, directives: [i1$1.MatFormField, i2$1.MatInput, i1$1.MatHint, i3$3.MatSelect, i4$2.MatOption], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1$1.MatFormField, i2$1.MatInput, i1$1.MatHint, i3$3.MatSelect, i4$1.MatOption], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return FormFieldHintExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(FormFieldHintExample, [{
@@ -510,7 +510,7 @@
                 i0.ɵɵproperty("floatLabel", ctx.options.value.floatLabel);
                 i0.ɵɵadvance(4);
                 i0.ɵɵproperty("hideRequiredMarker", ctx.options.value.hideRequired)("floatLabel", ctx.options.value.floatLabel);
-            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatCheckbox, i1.NgControlStatus, i1.FormControlName, i3$2.MatRadioGroup, i3$2.MatRadioButton, i1$1.MatFormField, i2$1.MatInput, i1$1.MatLabel, i3$3.MatSelect, i4$2.MatOption, i3$1.MatIcon], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 5px 0;\n}\n\n.example-container[_ngcontent-%COMP%]   .mat-radio-button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatCheckbox, i1.NgControlStatus, i1.FormControlName, i3$2.MatRadioGroup, i3$2.MatRadioButton, i1$1.MatFormField, i2$1.MatInput, i1$1.MatLabel, i3$3.MatSelect, i4$1.MatOption, i3$1.MatIcon], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 5px 0;\n}\n\n.example-container[_ngcontent-%COMP%]   .mat-radio-button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
         return FormFieldLabelExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(FormFieldLabelExample, [{
@@ -550,7 +550,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-            } }, directives: [i1$1.MatFormField, i2$1.MatInput, i3$3.MatSelect, i4$2.MatOption], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1$1.MatFormField, i2$1.MatInput, i3$3.MatSelect, i4$1.MatOption], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return FormFieldOverviewExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(FormFieldOverviewExample, [{
@@ -674,7 +674,7 @@
                 i0.ɵɵproperty("color", ctx.options.value.color);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("ngIf", currVal_4);
-            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i1$1.MatFormField, i3$3.MatSelect, i1.NgControlStatus, i1.FormControlName, i4$2.MatOption, i2$1.MatInput, i1.NumberValueAccessor, i1.DefaultValueAccessor, i4.NgIf, i1$1.MatError], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i1$1.MatFormField, i3$3.MatSelect, i1.NgControlStatus, i1.FormControlName, i4$1.MatOption, i2$1.MatInput, i1.NumberValueAccessor, i1.DefaultValueAccessor, i6.NgIf, i1$1.MatError], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return FormFieldThemingExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(FormFieldThemingExample, [{
@@ -702,7 +702,7 @@
         FormFieldExamplesModule.decorators = [
             { type: i0.NgModule, args: [{
                         imports: [
-                            i4.CommonModule,
+                            i6.CommonModule,
                             i3.MatButtonModule,
                             i2.MatCheckboxModule,
                             i1$1.MatFormFieldModule,
@@ -718,7 +718,7 @@
         ];
         FormFieldExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: FormFieldExamplesModule });
         FormFieldExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function FormFieldExamplesModule_Factory(t) { return new (t || FormFieldExamplesModule)(); }, imports: [[
-                    i4.CommonModule,
+                    i6.CommonModule,
                     i3.MatButtonModule,
                     i2.MatCheckboxModule,
                     i1$1.MatFormFieldModule,
@@ -738,7 +738,7 @@
             FormFieldOverviewExample,
             FormFieldPrefixSuffixExample,
             FormFieldThemingExample,
-            MyTelInput], imports: [i4.CommonModule,
+            MyTelInput], imports: [i6.CommonModule,
             i3.MatButtonModule,
             i2.MatCheckboxModule,
             i1$1.MatFormFieldModule,
@@ -758,7 +758,7 @@
             type: i0.NgModule,
             args: [{
                     imports: [
-                        i4.CommonModule,
+                        i6.CommonModule,
                         i3.MatButtonModule,
                         i2.MatCheckboxModule,
                         i1$1.MatFormFieldModule,
