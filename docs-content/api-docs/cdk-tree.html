@@ -45,20 +45,7 @@
 </h4><p class="docs-api-class-description"><p>Nested node is a child of <code>&lt;cdk-tree&gt;</code>. It works with nested tree.
 By using <code>cdk-nested-tree-node</code> component in tree node template, children of the parent node will
 be added in the <code>cdkTreeNodeOutlet</code> in tree node template.
-For example:</p>
-<pre><code class="lang-html">&lt;cdk-nested-tree-node&gt;
-  {{node.name}}
-  &lt;ng-template cdkTreeNodeOutlet&gt;&lt;/ng-template&gt;
-&lt;/cdk-nested-tree-node&gt;
-</code></pre>
-<p>The children of node will be automatically added to <code>cdkTreeNodeOutlet</code>, the result dom will be
-like this:</p>
-<pre><code class="lang-html">&lt;cdk-nested-tree-node&gt;
-  {{node.name}}
-   &lt;cdk-nested-tree-node&gt;{{child1.name}}&lt;/cdk-nested-tree-node&gt;
-   &lt;cdk-nested-tree-node&gt;{{child2.name}}&lt;/cdk-nested-tree-node&gt;
-&lt;/cdk-nested-tree-node&gt;
-</code></pre>
+The children of node will be automatically added to <code>cdkTreeNodeOutlet</code>.</p>
 </p><p class="docs-api-directive-selectors">
   <span class="docs-api-class-selector-label">Selector:</span>
   
