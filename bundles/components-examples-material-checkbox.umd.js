@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/radio')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/checkbox', ['exports', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/checkbox', '@angular/material/radio'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.checkbox = {}), global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.checkbox, global.ng.material.radio));
-}(this, function (exports, i0, i3, i1, i2, i4) { 'use strict';
+}(this, function (exports, i0, i3, i1, i1$1, i4) { 'use strict';
 
     /**
      * @title Configurable checkbox
@@ -85,7 +85,7 @@
                 i0.ɵɵproperty("ngModel", ctx.disabled);
                 i0.ɵɵadvance(7);
                 i0.ɵɵproperty("ngModel", ctx.checked)("indeterminate", ctx.indeterminate)("labelPosition", ctx.labelPosition)("disabled", ctx.disabled);
-            } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatCheckbox, i3.NgControlStatus, i3.NgModel, i4.MatRadioGroup, i4.MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
+            } }, directives: [i1.MatCard, i1.MatCardContent, i1$1.MatCheckbox, i3.NgControlStatus, i3.NgModel, i4.MatRadioGroup, i4.MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
         return CheckboxConfigurableExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(CheckboxConfigurableExample, [{
@@ -115,7 +115,7 @@
                 i0.ɵɵelementStart(0, "mat-checkbox");
                 i0.ɵɵtext(1, "Check me!");
                 i0.ɵɵelementEnd();
-            } }, directives: [i2.MatCheckbox], styles: [""] });
+            } }, directives: [i1$1.MatCheckbox], styles: [""] });
         return CheckboxOverviewExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(CheckboxOverviewExample, [{
@@ -138,7 +138,7 @@
             { type: i0.NgModule, args: [{
                         imports: [
                             i1.MatCardModule,
-                            i2.MatCheckboxModule,
+                            i1$1.MatCheckboxModule,
                             i4.MatRadioModule,
                             i3.FormsModule,
                         ],
@@ -149,7 +149,7 @@
         CheckboxExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CheckboxExamplesModule });
         CheckboxExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CheckboxExamplesModule_Factory(t) { return new (t || CheckboxExamplesModule)(); }, imports: [[
                     i1.MatCardModule,
-                    i2.MatCheckboxModule,
+                    i1$1.MatCheckboxModule,
                     i4.MatRadioModule,
                     i3.FormsModule,
                 ]] });
@@ -157,7 +157,7 @@
     }());
     /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CheckboxExamplesModule, { declarations: [CheckboxConfigurableExample,
             CheckboxOverviewExample], imports: [i1.MatCardModule,
-            i2.MatCheckboxModule,
+            i1$1.MatCheckboxModule,
             i4.MatRadioModule,
             i3.FormsModule], exports: [CheckboxConfigurableExample,
             CheckboxOverviewExample] });
@@ -166,7 +166,7 @@
             args: [{
                     imports: [
                         i1.MatCardModule,
-                        i2.MatCheckboxModule,
+                        i1$1.MatCheckboxModule,
                         i4.MatRadioModule,
                         i3.FormsModule,
                     ],
