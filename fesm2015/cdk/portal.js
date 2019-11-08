@@ -6,7 +6,6 @@ import { ɵɵtext, Component, ViewContainerRef, ViewChild, ɵɵdirectiveInject, 
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = ["templatePortalContent"];
-const _c1 = ["templatePortalContent", ""];
 function CdkPortalOverviewExample_ng_template_3_Template(rf, ctx) { }
 function CdkPortalOverviewExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Hello, this is a template portal");
@@ -49,19 +48,19 @@ CdkPortalOverviewExample.propDecorators = {
     } if (rf & 2) {
         var _t;
         ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.templatePortalContent = _t.first);
-    } }, decls: 10, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], [3, "click"]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 10, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], ["templatePortalContent", ""], [3, "click"]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "h2");
         ɵɵtext(1, "The portal outlet is below:");
         ɵɵelementEnd();
         ɵɵelementStart(2, "div", 0);
         ɵɵtemplate(3, CdkPortalOverviewExample_ng_template_3_Template, 0, 0, "ng-template", 1);
         ɵɵelementEnd();
-        ɵɵtemplate(4, CdkPortalOverviewExample_ng_template_4_Template, 1, 0, "ng-template", null, _c1, ɵɵtemplateRefExtractor);
-        ɵɵelementStart(6, "button", 2);
+        ɵɵtemplate(4, CdkPortalOverviewExample_ng_template_4_Template, 1, 0, "ng-template", null, 2, ɵɵtemplateRefExtractor);
+        ɵɵelementStart(6, "button", 3);
         ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_6_listener($event) { return ctx.selectedPortal = ctx.componentPortal; });
         ɵɵtext(7, "Render component portal");
         ɵɵelementEnd();
-        ɵɵelementStart(8, "button", 2);
+        ɵɵelementStart(8, "button", 3);
         ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_8_listener($event) { return ctx.selectedPortal = ctx.templatePortal; });
         ɵɵtext(9, "Render template portal");
         ɵɵelementEnd();
@@ -155,5 +154,5 @@ CdkPortalExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { CdkPortalOverviewExample, ComponentPortalExample, CdkPortalExamplesModule };
+export { CdkPortalExamplesModule, CdkPortalOverviewExample, ComponentPortalExample };
 //# sourceMappingURL=portal.js.map

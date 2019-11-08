@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/radio')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/checkbox', ['exports', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/checkbox', '@angular/material/radio'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.checkbox = {}), global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.checkbox, global.ng.material.radio));
-}(this, function (exports, i0, i3, i1, i2, i4) { 'use strict';
+}(this, (function (exports, i0, i3, i1, i2, i4) { 'use strict';
 
     /**
      * @title Configurable checkbox
@@ -176,10 +176,10 @@
         }], null, null);
 
     exports.CheckboxConfigurableExample = CheckboxConfigurableExample;
-    exports.CheckboxOverviewExample = CheckboxOverviewExample;
     exports.CheckboxExamplesModule = CheckboxExamplesModule;
+    exports.CheckboxOverviewExample = CheckboxOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-checkbox.umd.js.map

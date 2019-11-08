@@ -2,9 +2,8 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/icon'), require('@angular/material/menu')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/menu', ['exports', '@angular/core', '@angular/material/button', '@angular/material/icon', '@angular/material/menu'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.menu = {}), global.ng.core, global.ng.material.button, global.ng.material.icon, global.ng.material.menu));
-}(this, function (exports, i0, i1, i3, i2) { 'use strict';
+}(this, (function (exports, i0, i1, i3, i2) { 'use strict';
 
-    var _c0 = ["menu", "matMenu"];
     /**
      * @title Menu with icons
      */
@@ -19,14 +18,14 @@
                     },] },
         ];
         MenuIconsExample.ɵfac = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
-        MenuIconsExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
+        MenuIconsExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵelementStart(1, "mat-icon");
                 i0.ɵɵtext(2, "more_vert");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-menu", null, _c0);
-                i0.ɵɵelementStart(5, "button", 1);
+                i0.ɵɵelementStart(3, "mat-menu", null, 1);
+                i0.ɵɵelementStart(5, "button", 2);
                 i0.ɵɵelementStart(6, "mat-icon");
                 i0.ɵɵtext(7, "dialpad");
                 i0.ɵɵelementEnd();
@@ -34,7 +33,7 @@
                 i0.ɵɵtext(9, "Redial");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(10, "button", 2);
+                i0.ɵɵelementStart(10, "button", 3);
                 i0.ɵɵelementStart(11, "mat-icon");
                 i0.ɵɵtext(12, "voicemail");
                 i0.ɵɵelementEnd();
@@ -42,7 +41,7 @@
                 i0.ɵɵtext(14, "Check voice mail");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(15, "button", 1);
+                i0.ɵɵelementStart(15, "button", 2);
                 i0.ɵɵelementStart(16, "mat-icon");
                 i0.ɵɵtext(17, "notifications_off");
                 i0.ɵɵelementEnd();
@@ -66,7 +65,6 @@
                 }]
         }], null, null);
 
-    var _c0$1 = ["menu", "matMenu"];
     /**
      * @title Basic menu
      */
@@ -81,15 +79,15 @@
                     },] },
         ];
         MenuOverviewExample.ɵfac = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
-        MenuOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        MenuOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, "Menu");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "mat-menu", null, _c0$1);
-                i0.ɵɵelementStart(4, "button", 1);
+                i0.ɵɵelementStart(2, "mat-menu", null, 1);
+                i0.ɵɵelementStart(4, "button", 2);
                 i0.ɵɵtext(5, "Item 1");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "button", 1);
+                i0.ɵɵelementStart(6, "button", 2);
                 i0.ɵɵtext(7, "Item 2");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -108,10 +106,6 @@
                 }]
         }], null, null);
 
-    var _c0$2 = ["aboveMenu", "matMenu"];
-    var _c1 = ["belowMenu", "matMenu"];
-    var _c2 = ["beforeMenu", "matMenu"];
-    var _c3 = ["afterMenu", "matMenu"];
     /**
      * @title Menu positioning
      */
@@ -126,48 +120,48 @@
                     },] },
         ];
         MenuPositionExample.ɵfac = function MenuPositionExample_Factory(t) { return new (t || MenuPositionExample)(); };
-        MenuPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["mat-menu-item", ""], ["yPosition", "below"], ["xPosition", "before"], ["xPosition", "after"]], template: function MenuPositionExample_Template(rf, ctx) { if (rf & 1) {
+        MenuPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["aboveMenu", "matMenu"], ["mat-menu-item", ""], ["yPosition", "below"], ["belowMenu", "matMenu"], ["xPosition", "before"], ["beforeMenu", "matMenu"], ["xPosition", "after"], ["afterMenu", "matMenu"]], template: function MenuPositionExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, "Above");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "mat-menu", 1, _c0$2);
-                i0.ɵɵelementStart(4, "button", 2);
+                i0.ɵɵelementStart(2, "mat-menu", 1, 2);
+                i0.ɵɵelementStart(4, "button", 3);
                 i0.ɵɵtext(5, "Item 1");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "button", 2);
+                i0.ɵɵelementStart(6, "button", 3);
                 i0.ɵɵtext(7, "Item 2");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(8, "button", 0);
                 i0.ɵɵtext(9, "Below");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(10, "mat-menu", 3, _c1);
-                i0.ɵɵelementStart(12, "button", 2);
+                i0.ɵɵelementStart(10, "mat-menu", 4, 5);
+                i0.ɵɵelementStart(12, "button", 3);
                 i0.ɵɵtext(13, "Item 1");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(14, "button", 2);
+                i0.ɵɵelementStart(14, "button", 3);
                 i0.ɵɵtext(15, "Item 2");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(16, "button", 0);
                 i0.ɵɵtext(17, "Before");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(18, "mat-menu", 4, _c2);
-                i0.ɵɵelementStart(20, "button", 2);
+                i0.ɵɵelementStart(18, "mat-menu", 6, 7);
+                i0.ɵɵelementStart(20, "button", 3);
                 i0.ɵɵtext(21, "Item 1");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(22, "button", 2);
+                i0.ɵɵelementStart(22, "button", 3);
                 i0.ɵɵtext(23, "Item 2");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(24, "button", 0);
                 i0.ɵɵtext(25, "After");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(26, "mat-menu", 5, _c3);
-                i0.ɵɵelementStart(28, "button", 2);
+                i0.ɵɵelementStart(26, "mat-menu", 8, 9);
+                i0.ɵɵelementStart(28, "button", 3);
                 i0.ɵɵtext(29, "Item 1");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(30, "button", 2);
+                i0.ɵɵelementStart(30, "button", 3);
                 i0.ɵɵtext(31, "Item 2");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -195,12 +189,6 @@
                 }]
         }], null, null);
 
-    var _c0$3 = ["animals", "matMenu"];
-    var _c1$1 = ["vertebrates", "matMenu"];
-    var _c2$1 = ["invertebrates", "matMenu"];
-    var _c3$1 = ["fish", "matMenu"];
-    var _c4 = ["amphibians", "matMenu"];
-    var _c5 = ["reptiles", "matMenu"];
     /**
      * @title Nested menu
      */
@@ -215,103 +203,103 @@
                     },] },
         ];
         NestedMenuExample.ɵfac = function NestedMenuExample_Factory(t) { return new (t || NestedMenuExample)(); };
-        NestedMenuExample.ɵcmp = i0.ɵɵdefineComponent({ type: NestedMenuExample, selectors: [["nested-menu-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function NestedMenuExample_Template(rf, ctx) { if (rf & 1) {
+        NestedMenuExample.ɵcmp = i0.ɵɵdefineComponent({ type: NestedMenuExample, selectors: [["nested-menu-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["animals", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["vertebrates", "matMenu"], ["mat-menu-item", ""], ["invertebrates", "matMenu"], ["fish", "matMenu"], ["amphibians", "matMenu"], ["reptiles", "matMenu"], ["mat-menu-item", "", "disabled", ""]], template: function NestedMenuExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵtext(1, "Animal index");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(2, "mat-menu", null, _c0$3);
-                i0.ɵɵelementStart(4, "button", 1);
+                i0.ɵɵelementStart(2, "mat-menu", null, 1);
+                i0.ɵɵelementStart(4, "button", 2);
                 i0.ɵɵtext(5, "Vertebrates");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "button", 1);
+                i0.ɵɵelementStart(6, "button", 2);
                 i0.ɵɵtext(7, "Invertebrates");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "mat-menu", null, _c1$1);
-                i0.ɵɵelementStart(10, "button", 1);
+                i0.ɵɵelementStart(8, "mat-menu", null, 3);
+                i0.ɵɵelementStart(10, "button", 2);
                 i0.ɵɵtext(11, "Fishes");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(12, "button", 1);
+                i0.ɵɵelementStart(12, "button", 2);
                 i0.ɵɵtext(13, "Amphibians");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(14, "button", 1);
+                i0.ɵɵelementStart(14, "button", 2);
                 i0.ɵɵtext(15, "Reptiles");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(16, "button", 2);
+                i0.ɵɵelementStart(16, "button", 4);
                 i0.ɵɵtext(17, "Birds");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(18, "button", 2);
+                i0.ɵɵelementStart(18, "button", 4);
                 i0.ɵɵtext(19, "Mammals");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(20, "mat-menu", null, _c2$1);
-                i0.ɵɵelementStart(22, "button", 2);
+                i0.ɵɵelementStart(20, "mat-menu", null, 5);
+                i0.ɵɵelementStart(22, "button", 4);
                 i0.ɵɵtext(23, "Insects");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(24, "button", 2);
+                i0.ɵɵelementStart(24, "button", 4);
                 i0.ɵɵtext(25, "Molluscs");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(26, "button", 2);
+                i0.ɵɵelementStart(26, "button", 4);
                 i0.ɵɵtext(27, "Crustaceans");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(28, "button", 2);
+                i0.ɵɵelementStart(28, "button", 4);
                 i0.ɵɵtext(29, "Corals");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(30, "button", 2);
+                i0.ɵɵelementStart(30, "button", 4);
                 i0.ɵɵtext(31, "Arachnids");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(32, "button", 2);
+                i0.ɵɵelementStart(32, "button", 4);
                 i0.ɵɵtext(33, "Velvet worms");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(34, "button", 2);
+                i0.ɵɵelementStart(34, "button", 4);
                 i0.ɵɵtext(35, "Horseshoe crabs");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(36, "mat-menu", null, _c3$1);
-                i0.ɵɵelementStart(38, "button", 2);
+                i0.ɵɵelementStart(36, "mat-menu", null, 6);
+                i0.ɵɵelementStart(38, "button", 4);
                 i0.ɵɵtext(39, "Baikal oilfish");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(40, "button", 2);
+                i0.ɵɵelementStart(40, "button", 4);
                 i0.ɵɵtext(41, "Bala shark");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(42, "button", 2);
+                i0.ɵɵelementStart(42, "button", 4);
                 i0.ɵɵtext(43, "Ballan wrasse");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(44, "button", 2);
+                i0.ɵɵelementStart(44, "button", 4);
                 i0.ɵɵtext(45, "Bamboo shark");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(46, "button", 2);
+                i0.ɵɵelementStart(46, "button", 4);
                 i0.ɵɵtext(47, "Banded killifish");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(48, "mat-menu", null, _c4);
-                i0.ɵɵelementStart(50, "button", 2);
+                i0.ɵɵelementStart(48, "mat-menu", null, 7);
+                i0.ɵɵelementStart(50, "button", 4);
                 i0.ɵɵtext(51, "Sonoran desert toad");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(52, "button", 2);
+                i0.ɵɵelementStart(52, "button", 4);
                 i0.ɵɵtext(53, "Western toad");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(54, "button", 2);
+                i0.ɵɵelementStart(54, "button", 4);
                 i0.ɵɵtext(55, "Arroyo toad");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(56, "button", 2);
+                i0.ɵɵelementStart(56, "button", 4);
                 i0.ɵɵtext(57, "Yosemite toad");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(58, "mat-menu", null, _c5);
-                i0.ɵɵelementStart(60, "button", 2);
+                i0.ɵɵelementStart(58, "mat-menu", null, 8);
+                i0.ɵɵelementStart(60, "button", 4);
                 i0.ɵɵtext(61, "Banded Day Gecko");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(62, "button", 2);
+                i0.ɵɵelementStart(62, "button", 4);
                 i0.ɵɵtext(63, "Banded Gila Monster");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(64, "button", 2);
+                i0.ɵɵelementStart(64, "button", 4);
                 i0.ɵɵtext(65, "Black Tree Monitor");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(66, "button", 2);
+                i0.ɵɵelementStart(66, "button", 4);
                 i0.ɵɵtext(67, "Blue Spiny Lizard");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(68, "button", 3);
+                i0.ɵɵelementStart(68, "button", 9);
                 i0.ɵɵtext(69, "Velociraptor");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -395,13 +383,13 @@
                 }]
         }], null, null);
 
+    exports.MenuExamplesModule = MenuExamplesModule;
     exports.MenuIconsExample = MenuIconsExample;
     exports.MenuOverviewExample = MenuOverviewExample;
     exports.MenuPositionExample = MenuPositionExample;
     exports.NestedMenuExample = NestedMenuExample;
-    exports.MenuExamplesModule = MenuExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-menu.umd.js.map

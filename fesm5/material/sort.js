@@ -152,5 +152,5 @@ var SortExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { SortOverviewExample, SortExamplesModule };
+export { SortExamplesModule, SortOverviewExample };
 //# sourceMappingURL=sort.js.map

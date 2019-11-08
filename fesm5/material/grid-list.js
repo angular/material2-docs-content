@@ -134,5 +134,5 @@ var GridListExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { GridListDynamicExample, GridListOverviewExample, GridListExamplesModule };
+export { GridListDynamicExample, GridListExamplesModule, GridListOverviewExample };
 //# sourceMappingURL=grid-list.js.map

@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/icon')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/button', ['exports', '@angular/core', '@angular/material/button', '@angular/material/icon'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.button = {}), global.ng.core, global.ng.material.button, global.ng.material.icon));
-}(this, function (exports, i0, i1, i2) { 'use strict';
+}(this, (function (exports, i0, i1, i2) { 'use strict';
 
     /**
      * @title Basic buttons
@@ -279,11 +279,11 @@
                 }]
         }], null, null);
 
+    exports.ButtonExamplesModule = ButtonExamplesModule;
     exports.ButtonOverviewExample = ButtonOverviewExample;
     exports.ButtonTypesExample = ButtonTypesExample;
-    exports.ButtonExamplesModule = ButtonExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-button.umd.js.map

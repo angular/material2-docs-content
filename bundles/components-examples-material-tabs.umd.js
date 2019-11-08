@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/button-toggle'), require('@angular/material/checkbox'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/tabs'), require('rxjs'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/tabs', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/button-toggle', '@angular/material/checkbox', '@angular/material/icon', '@angular/material/input', '@angular/material/tabs', 'rxjs', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.tabs = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.buttonToggle, global.ng.material.checkbox, global.ng.material.icon, global.ng.material.input, global.ng.material.tabs, global.rxjs, global.ng.material.formField));
-}(this, function (exports, i1, i0, i3, i4, i1$1, i5, i2, i2$1, i1$2, rxjs, i1$3) { 'use strict';
+}(this, (function (exports, i1, i0, i3, i4, i1$1, i5, i2, i2$1, i1$2, rxjs, i1$3) { 'use strict';
 
     /**
      * @title Tab group with aligned labels
@@ -324,12 +324,11 @@
                 }]
         }], null, null);
 
-    var _c0 = ["selectAfterAdding", ""];
     function TabGroupDynamicExample_mat_tab_12_Template(rf, ctx) { if (rf & 1) {
         var _r13 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "mat-tab", 5);
+        i0.ɵɵelementStart(0, "mat-tab", 6);
         i0.ɵɵtext(1);
-        i0.ɵɵelementStart(2, "button", 6);
+        i0.ɵɵelementStart(2, "button", 7);
         i0.ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_12_Template_button_click_2_listener($event) { i0.ɵɵrestoreView(_r13); var index_r11 = ctx.index; var ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.removeTab(index_r11); });
         i0.ɵɵtext(3, " Delete Tab ");
         i0.ɵɵelementEnd();
@@ -368,7 +367,7 @@
                     },] },
         ];
         TabGroupDynamicExample.ɵfac = function TabGroupDynamicExample_Factory(t) { return new (t || TabGroupDynamicExample)(); };
-        TabGroupDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 13, vars: 3, consts: [[1, "example-input-label"], ["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
+        TabGroupDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 13, vars: 3, consts: [[1, "example-input-label"], ["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], ["selectAfterAdding", ""], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
                 var _r14 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "div");
                 i0.ɵɵelementStart(1, "span", 0);
@@ -383,13 +382,13 @@
                 i0.ɵɵlistener("click", function TabGroupDynamicExample_Template_button_click_6_listener($event) { i0.ɵɵrestoreView(_r14); var _r8 = i0.ɵɵreference(9); return ctx.addTab(_r8.checked); });
                 i0.ɵɵtext(7, " Add new tab ");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "mat-checkbox", null, _c0);
+                i0.ɵɵelementStart(8, "mat-checkbox", null, 3);
                 i0.ɵɵtext(10, " Select tab after adding ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(11, "mat-tab-group", 3);
+                i0.ɵɵelementStart(11, "mat-tab-group", 4);
                 i0.ɵɵlistener("selectedIndexChange", function TabGroupDynamicExample_Template_mat_tab_group_selectedIndexChange_11_listener($event) { return ctx.selected.setValue($event); });
-                i0.ɵɵtemplate(12, TabGroupDynamicExample_mat_tab_12_Template, 4, 3, "mat-tab", 4);
+                i0.ɵɵtemplate(12, TabGroupDynamicExample_mat_tab_12_Template, 4, 3, "mat-tab", 5);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 i0.ɵɵadvance(4);
@@ -552,8 +551,6 @@
                 }]
         }], null, null);
 
-    var _c0$1 = ["colorToggle", "matButtonToggleGroup"];
-    var _c1 = ["backgroundColorToggle", "matButtonToggleGroup"];
     /**
      * @title Customizing the theme options on the tab group
      */
@@ -568,41 +565,41 @@
                     },] },
         ];
         TabGroupThemeExample.ɵfac = function TabGroupThemeExample_Factory(t) { return new (t || TabGroupThemeExample)(); };
-        TabGroupThemeExample.ɵcmp = i0.ɵɵdefineComponent({ type: TabGroupThemeExample, selectors: [["tab-group-theme-example"]], decls: 25, vars: 2, consts: [["value", "primary", "aria-label", "Change color"], ["value", "primary"], ["value", "accent"], [1, "example-button-toggle-label"], [3, "color", "backgroundColor"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupThemeExample_Template(rf, ctx) { if (rf & 1) {
+        TabGroupThemeExample.ɵcmp = i0.ɵɵdefineComponent({ type: TabGroupThemeExample, selectors: [["tab-group-theme-example"]], decls: 25, vars: 2, consts: [["value", "primary", "aria-label", "Change color"], ["colorToggle", "matButtonToggleGroup"], ["value", "primary"], ["value", "accent"], [1, "example-button-toggle-label"], ["backgroundColorToggle", "matButtonToggleGroup"], [3, "color", "backgroundColor"], ["label", "First"], ["label", "Second"], ["label", "Third"]], template: function TabGroupThemeExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div");
-                i0.ɵɵelementStart(1, "mat-button-toggle-group", 0, _c0$1);
-                i0.ɵɵelementStart(3, "mat-button-toggle", 1);
+                i0.ɵɵelementStart(1, "mat-button-toggle-group", 0, 1);
+                i0.ɵɵelementStart(3, "mat-button-toggle", 2);
                 i0.ɵɵtext(4, " Primary ");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "mat-button-toggle", 2);
+                i0.ɵɵelementStart(5, "mat-button-toggle", 3);
                 i0.ɵɵtext(6, " Accent ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(7, "span", 3);
+                i0.ɵɵelementStart(7, "span", 4);
                 i0.ɵɵtext(8, " Color ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(9, "div");
-                i0.ɵɵelementStart(10, "mat-button-toggle-group", 0, _c1);
-                i0.ɵɵelementStart(12, "mat-button-toggle", 1);
+                i0.ɵɵelementStart(10, "mat-button-toggle-group", 0, 5);
+                i0.ɵɵelementStart(12, "mat-button-toggle", 2);
                 i0.ɵɵtext(13, " Primary ");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(14, "mat-button-toggle", 2);
+                i0.ɵɵelementStart(14, "mat-button-toggle", 3);
                 i0.ɵɵtext(15, " Accent ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(16, "span", 3);
+                i0.ɵɵelementStart(16, "span", 4);
                 i0.ɵɵtext(17, " Background Color ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(18, "mat-tab-group", 4);
-                i0.ɵɵelementStart(19, "mat-tab", 5);
+                i0.ɵɵelementStart(18, "mat-tab-group", 6);
+                i0.ɵɵelementStart(19, "mat-tab", 7);
                 i0.ɵɵtext(20, " Content 1 ");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(21, "mat-tab", 6);
+                i0.ɵɵelementStart(21, "mat-tab", 8);
                 i0.ɵɵtext(22, " Content 2 ");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(23, "mat-tab", 7);
+                i0.ɵɵelementStart(23, "mat-tab", 9);
                 i0.ɵɵtext(24, " Content 3 ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -791,14 +788,14 @@
     exports.TabGroupCustomLabelExample = TabGroupCustomLabelExample;
     exports.TabGroupDynamicExample = TabGroupDynamicExample;
     exports.TabGroupDynamicHeightExample = TabGroupDynamicHeightExample;
+    exports.TabGroupExamplesModule = TabGroupExamplesModule;
     exports.TabGroupHeaderBelowExample = TabGroupHeaderBelowExample;
     exports.TabGroupLazyLoadedExample = TabGroupLazyLoadedExample;
     exports.TabGroupStretchedExample = TabGroupStretchedExample;
     exports.TabGroupThemeExample = TabGroupThemeExample;
     exports.TabNavBarBasicExample = TabNavBarBasicExample;
-    exports.TabGroupExamplesModule = TabGroupExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-tabs.umd.js.map

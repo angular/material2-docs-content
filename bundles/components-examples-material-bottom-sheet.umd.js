@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/bottom-sheet'), require('@angular/material/button'), require('@angular/material/list'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/bottom-sheet', ['exports', '@angular/core', '@angular/material/bottom-sheet', '@angular/material/button', '@angular/material/list', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.bottomSheet = {}), global.ng.core, global.ng.material.bottomSheet, global.ng.material.button, global.ng.material.list, global.ng.material.core));
-}(this, function (exports, i0, i1, i2, i3, i4) { 'use strict';
+}(this, (function (exports, i0, i1, i2, i3, i4) { 'use strict';
 
     /**
      * @title Bottom Sheet Overview
@@ -160,11 +160,11 @@
                 }]
         }], null, null);
 
+    exports.BottomSheetExamplesModule = BottomSheetExamplesModule;
     exports.BottomSheetOverviewExample = BottomSheetOverviewExample;
     exports.BottomSheetOverviewExampleSheet = BottomSheetOverviewExampleSheet;
-    exports.BottomSheetExamplesModule = BottomSheetExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-bottom-sheet.umd.js.map

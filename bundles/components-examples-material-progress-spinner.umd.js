@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/progress-spinner'), require('@angular/material/radio'), require('@angular/material/slider')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/progress-spinner', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/progress-spinner', '@angular/material/radio', '@angular/material/slider'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.progressSpinner = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.progressSpinner, global.ng.material.radio, global.ng.material.slider));
-}(this, function (exports, i4, i0, i3, i1, i5, i2, i6) { 'use strict';
+}(this, (function (exports, i4, i0, i3, i1, i5, i2, i6) { 'use strict';
 
     function ProgressSpinnerConfigurableExample_section_22_Template(rf, ctx) { if (rf & 1) {
         var _r2 = i0.ɵɵgetCurrentView();
@@ -190,10 +190,10 @@
         }], null, null);
 
     exports.ProgressSpinnerConfigurableExample = ProgressSpinnerConfigurableExample;
-    exports.ProgressSpinnerOverviewExample = ProgressSpinnerOverviewExample;
     exports.ProgressSpinnerExamplesModule = ProgressSpinnerExamplesModule;
+    exports.ProgressSpinnerOverviewExample = ProgressSpinnerOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-progress-spinner.umd.js.map

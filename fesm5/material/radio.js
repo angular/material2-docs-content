@@ -137,5 +137,5 @@ var RadioExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { RadioNgModelExample, RadioOverviewExample, RadioExamplesModule };
+export { RadioExamplesModule, RadioNgModelExample, RadioOverviewExample };
 //# sourceMappingURL=radio.js.map

@@ -77,5 +77,5 @@ var DividerExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { DividerOverviewExample, DividerExamplesModule };
+export { DividerExamplesModule, DividerOverviewExample };
 //# sourceMappingURL=divider.js.map

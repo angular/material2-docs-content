@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/card')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/card', ['exports', '@angular/core', '@angular/material/button', '@angular/material/card'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.card = {}), global.ng.core, global.ng.material.button, global.ng.material.card));
-}(this, function (exports, i0, i2, i1) { 'use strict';
+}(this, (function (exports, i0, i2, i1) { 'use strict';
 
     /**
      * @title Card with multiple sections
@@ -126,11 +126,11 @@
                 }]
         }], null, null);
 
+    exports.CardExamplesModule = CardExamplesModule;
     exports.CardFancyExample = CardFancyExample;
     exports.CardOverviewExample = CardOverviewExample;
-    exports.CardExamplesModule = CardExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-card.umd.js.map

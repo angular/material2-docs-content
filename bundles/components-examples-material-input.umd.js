@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/input', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/icon', '@angular/material/input', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.input = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.icon, global.ng.material.input, global.ng.material.formField));
-}(this, function (exports, i4, i0, i1, i5, i6, i3, i2) { 'use strict';
+}(this, (function (exports, i4, i0, i1, i5, i6, i3, i2) { 'use strict';
 
     function InputClearableExample_button_2_Template(rf, ctx) { if (rf & 1) {
         var _r2 = i0.ɵɵgetCurrentView();
@@ -180,7 +180,6 @@
                 }]
         }], null, null);
 
-    var _c0 = ["postalCode", ""];
     /**
      * @title Inputs in a form
      */
@@ -195,7 +194,7 @@
                     },] },
         ];
         InputFormExample.ɵfac = function InputFormExample_Factory(t) { return new (t || InputFormExample)(); };
-        InputFormExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputFormExample, selectors: [["input-form-example"]], decls: 31, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Company (disabled)", "disabled", "", "value", "Google"], ["cellspacing", "0", 1, "example-full-width"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "placeholder", "Long Last Name That Will Be Truncated"], ["matInput", "", "placeholder", "Address"], ["matInput", "", "placeholder", "Address 2"], ["matInput", "", "placeholder", "City"], ["matInput", "", "placeholder", "State"], ["matInput", "", "maxlength", "5", "placeholder", "Postal Code", "value", "94043"], ["align", "end"]], template: function InputFormExample_Template(rf, ctx) { if (rf & 1) {
+        InputFormExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputFormExample, selectors: [["input-form-example"]], decls: 31, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Company (disabled)", "disabled", "", "value", "Google"], ["cellspacing", "0", 1, "example-full-width"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "placeholder", "Long Last Name That Will Be Truncated"], ["matInput", "", "placeholder", "Address"], ["matInput", "", "placeholder", "Address 2"], ["matInput", "", "placeholder", "City"], ["matInput", "", "placeholder", "State"], ["matInput", "", "maxlength", "5", "placeholder", "Postal Code", "value", "94043"], ["postalCode", ""], ["align", "end"]], template: function InputFormExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2);
@@ -238,8 +237,8 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(25, "td");
                 i0.ɵɵelementStart(26, "mat-form-field", 1);
-                i0.ɵɵelement(27, "input", 10, _c0);
-                i0.ɵɵelementStart(29, "mat-hint", 11);
+                i0.ɵɵelement(27, "input", 10, 11);
+                i0.ɵɵelementStart(29, "mat-hint", 12);
                 i0.ɵɵtext(30);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -263,7 +262,6 @@
                 }]
         }], null, null);
 
-    var _c0$1 = ["message", ""];
     /**
      * @title Input with hints
      */
@@ -278,16 +276,16 @@
                     },] },
         ];
         InputHintExample.ɵfac = function InputHintExample_Factory(t) { return new (t || InputHintExample)(); };
-        InputHintExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 9, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Message"], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
+        InputHintExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 9, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Message"], ["message", ""], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
-                i0.ɵɵelement(2, "input", 2, _c0$1);
-                i0.ɵɵelementStart(4, "mat-hint", 3);
+                i0.ɵɵelement(2, "input", 2, 3);
+                i0.ɵɵelementStart(4, "mat-hint", 4);
                 i0.ɵɵelementStart(5, "strong");
                 i0.ɵɵtext(6, "Don't disclose personal info");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(7, "mat-hint", 4);
+                i0.ɵɵelementStart(7, "mat-hint", 5);
                 i0.ɵɵtext(8);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -455,13 +453,13 @@
     exports.InputClearableExample = InputClearableExample;
     exports.InputErrorStateMatcherExample = InputErrorStateMatcherExample;
     exports.InputErrorsExample = InputErrorsExample;
+    exports.InputExamplesModule = InputExamplesModule;
     exports.InputFormExample = InputFormExample;
     exports.InputHintExample = InputHintExample;
     exports.InputOverviewExample = InputOverviewExample;
     exports.InputPrefixSuffixExample = InputPrefixSuffixExample;
-    exports.InputExamplesModule = InputExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-input.umd.js.map

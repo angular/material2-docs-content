@@ -127,5 +127,5 @@ var ToolbarExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { ToolbarMultirowExample, ToolbarOverviewExample, ToolbarExamplesModule };
+export { ToolbarExamplesModule, ToolbarMultirowExample, ToolbarOverviewExample };
 //# sourceMappingURL=toolbar.js.map

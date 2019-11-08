@@ -139,5 +139,5 @@ CdkPlatformExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { CdkPlatformOverviewExample, CdkPlatformExamplesModule };
+export { CdkPlatformExamplesModule, CdkPlatformOverviewExample };
 //# sourceMappingURL=platform.js.map

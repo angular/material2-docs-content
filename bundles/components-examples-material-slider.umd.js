@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/input'), require('@angular/material/slider'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/slider', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/card', '@angular/material/checkbox', '@angular/material/input', '@angular/material/slider', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.slider = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.card, global.ng.material.checkbox, global.ng.material.input, global.ng.material.slider, global.ng.material.formField));
-}(this, function (exports, i6, i0, i4, i1, i5, i3, i1$1, i2) { 'use strict';
+}(this, (function (exports, i6, i0, i4, i1, i5, i3, i1$1, i2) { 'use strict';
 
     function SliderConfigurableExample_mat_checkbox_16_Template(rf, ctx) { if (rf & 1) {
         var _r3 = i0.ɵɵgetCurrentView();
@@ -285,11 +285,11 @@
         }], null, null);
 
     exports.SliderConfigurableExample = SliderConfigurableExample;
+    exports.SliderExamplesModule = SliderExamplesModule;
     exports.SliderFormattingExample = SliderFormattingExample;
     exports.SliderOverviewExample = SliderOverviewExample;
-    exports.SliderExamplesModule = SliderExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-slider.umd.js.map

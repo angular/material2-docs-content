@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/checkbox'), require('@angular/material/form-field'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/radio'), require('@angular/material/select'), require('@angular/cdk/a11y'), require('@angular/cdk/coercion'), require('rxjs'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/form-field', ['exports', 'tslib', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/checkbox', '@angular/material/form-field', '@angular/material/icon', '@angular/material/input', '@angular/material/radio', '@angular/material/select', '@angular/cdk/a11y', '@angular/cdk/coercion', 'rxjs', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.formField = {}), global.tslib, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.checkbox, global.ng.material.formField, global.ng.material.icon, global.ng.material.input, global.ng.material.radio, global.ng.material.select, global.ng.cdk.a11y, global.ng.cdk.coercion, global.rxjs, global.ng.material.core));
-}(this, function (exports, tslib, i4, i0, i1, i3, i2, i1$1, i3$1, i2$1, i3$2, i3$3, i4$1, coercion, rxjs, i4$2) { 'use strict';
+}(this, (function (exports, tslib, i4, i0, i1, i3, i2, i1$1, i3$1, i2$1, i3$2, i3$3, i4$1, coercion, rxjs, i4$2) { 'use strict';
 
     /** @title Form field appearance variants */
     var FormFieldAppearanceExample = /** @class */ (function () {
@@ -379,7 +379,6 @@
                 }]
         }], null, null);
 
-    var _c0 = ["input", ""];
     /** @title Form field with hints */
     var FormFieldHintExample = /** @class */ (function () {
         function FormFieldHintExample() {
@@ -392,21 +391,21 @@
                     },] },
         ];
         FormFieldHintExample.ɵfac = function FormFieldHintExample_Factory(t) { return new (t || FormFieldHintExample)(); };
-        FormFieldHintExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldHintExample, selectors: [["form-field-hint-example"]], decls: 12, vars: 1, consts: [[1, "example-container"], ["hintLabel", "Max 10 characters"], ["matInput", "", "maxlength", "10", "placeholder", "Enter some input"], ["align", "end"], ["placeholder", "Select me"], ["value", "option"]], template: function FormFieldHintExample_Template(rf, ctx) { if (rf & 1) {
+        FormFieldHintExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldHintExample, selectors: [["form-field-hint-example"]], decls: 12, vars: 1, consts: [[1, "example-container"], ["hintLabel", "Max 10 characters"], ["matInput", "", "maxlength", "10", "placeholder", "Enter some input"], ["input", ""], ["align", "end"], ["placeholder", "Select me"], ["value", "option"]], template: function FormFieldHintExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
-                i0.ɵɵelement(2, "input", 2, _c0);
-                i0.ɵɵelementStart(4, "mat-hint", 3);
+                i0.ɵɵelement(2, "input", 2, 3);
+                i0.ɵɵelementStart(4, "mat-hint", 4);
                 i0.ɵɵtext(5);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(6, "mat-form-field");
-                i0.ɵɵelementStart(7, "mat-select", 4);
-                i0.ɵɵelementStart(8, "mat-option", 5);
+                i0.ɵɵelementStart(7, "mat-select", 5);
+                i0.ɵɵelementStart(8, "mat-option", 6);
                 i0.ɵɵtext(9, "Option");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(10, "mat-hint", 3);
+                i0.ɵɵelementStart(10, "mat-hint", 4);
                 i0.ɵɵtext(11, "Here's the dropdown arrow ^");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -776,15 +775,15 @@
     exports.FormFieldAppearanceExample = FormFieldAppearanceExample;
     exports.FormFieldCustomControlExample = FormFieldCustomControlExample;
     exports.FormFieldErrorExample = FormFieldErrorExample;
+    exports.FormFieldExamplesModule = FormFieldExamplesModule;
     exports.FormFieldHintExample = FormFieldHintExample;
     exports.FormFieldLabelExample = FormFieldLabelExample;
     exports.FormFieldOverviewExample = FormFieldOverviewExample;
     exports.FormFieldPrefixSuffixExample = FormFieldPrefixSuffixExample;
     exports.FormFieldThemingExample = FormFieldThemingExample;
     exports.MyTelInput = MyTelInput;
-    exports.FormFieldExamplesModule = FormFieldExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-form-field.umd.js.map

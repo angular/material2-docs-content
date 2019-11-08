@@ -2215,9 +2215,6 @@ var ELEMENT_DATA$8 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
-var _c0$4 = ["stickyHeaders", "matButtonToggleGroup"];
-var _c1$1 = ["stickyFooters", "matButtonToggleGroup"];
-var _c2 = ["stickyColumns", "matButtonToggleGroup"];
 function TableStickyComplexFlexExample_mat_table_34_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-header-cell");
     ɵɵtext(1, " Position ");
@@ -2325,37 +2322,37 @@ function TableStickyComplexFlexExample_mat_table_34_mat_footer_row_25_Template(r
     ɵɵelement(0, "mat-footer-row");
 } }
 function TableStickyComplexFlexExample_mat_table_34_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-table", 12);
-    ɵɵelementContainerStart(1, 13);
-    ɵɵtemplate(2, TableStickyComplexFlexExample_mat_table_34_mat_header_cell_2_Template, 2, 0, "mat-header-cell", 14);
-    ɵɵtemplate(3, TableStickyComplexFlexExample_mat_table_34_mat_cell_3_Template, 2, 1, "mat-cell", 15);
-    ɵɵtemplate(4, TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_4_Template, 2, 0, "mat-footer-cell", 16);
+    ɵɵelementStart(0, "mat-table", 15);
+    ɵɵelementContainerStart(1, 16);
+    ɵɵtemplate(2, TableStickyComplexFlexExample_mat_table_34_mat_header_cell_2_Template, 2, 0, "mat-header-cell", 17);
+    ɵɵtemplate(3, TableStickyComplexFlexExample_mat_table_34_mat_cell_3_Template, 2, 1, "mat-cell", 18);
+    ɵɵtemplate(4, TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_4_Template, 2, 0, "mat-footer-cell", 19);
     ɵɵelementContainerEnd();
-    ɵɵelementContainerStart(5, 17);
-    ɵɵtemplate(6, TableStickyComplexFlexExample_mat_table_34_mat_header_cell_6_Template, 2, 0, "mat-header-cell", 14);
-    ɵɵtemplate(7, TableStickyComplexFlexExample_mat_table_34_mat_cell_7_Template, 2, 1, "mat-cell", 15);
-    ɵɵtemplate(8, TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_8_Template, 2, 0, "mat-footer-cell", 16);
+    ɵɵelementContainerStart(5, 20);
+    ɵɵtemplate(6, TableStickyComplexFlexExample_mat_table_34_mat_header_cell_6_Template, 2, 0, "mat-header-cell", 17);
+    ɵɵtemplate(7, TableStickyComplexFlexExample_mat_table_34_mat_cell_7_Template, 2, 1, "mat-cell", 18);
+    ɵɵtemplate(8, TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_8_Template, 2, 0, "mat-footer-cell", 19);
     ɵɵelementContainerEnd();
-    ɵɵelementContainerStart(9, 18);
-    ɵɵtemplate(10, TableStickyComplexFlexExample_mat_table_34_mat_header_cell_10_Template, 2, 0, "mat-header-cell", 14);
-    ɵɵtemplate(11, TableStickyComplexFlexExample_mat_table_34_mat_cell_11_Template, 2, 1, "mat-cell", 15);
-    ɵɵtemplate(12, TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_12_Template, 2, 0, "mat-footer-cell", 16);
+    ɵɵelementContainerStart(9, 21);
+    ɵɵtemplate(10, TableStickyComplexFlexExample_mat_table_34_mat_header_cell_10_Template, 2, 0, "mat-header-cell", 17);
+    ɵɵtemplate(11, TableStickyComplexFlexExample_mat_table_34_mat_cell_11_Template, 2, 1, "mat-cell", 18);
+    ɵɵtemplate(12, TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_12_Template, 2, 0, "mat-footer-cell", 19);
     ɵɵelementContainerEnd();
-    ɵɵelementContainerStart(13, 19);
-    ɵɵtemplate(14, TableStickyComplexFlexExample_mat_table_34_mat_header_cell_14_Template, 2, 0, "mat-header-cell", 14);
-    ɵɵtemplate(15, TableStickyComplexFlexExample_mat_table_34_mat_cell_15_Template, 2, 1, "mat-cell", 15);
-    ɵɵtemplate(16, TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_16_Template, 2, 0, "mat-footer-cell", 16);
+    ɵɵelementContainerStart(13, 22);
+    ɵɵtemplate(14, TableStickyComplexFlexExample_mat_table_34_mat_header_cell_14_Template, 2, 0, "mat-header-cell", 17);
+    ɵɵtemplate(15, TableStickyComplexFlexExample_mat_table_34_mat_cell_15_Template, 2, 1, "mat-cell", 18);
+    ɵɵtemplate(16, TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_16_Template, 2, 0, "mat-footer-cell", 19);
     ɵɵelementContainerEnd();
-    ɵɵelementContainerStart(17, 20);
-    ɵɵtemplate(18, TableStickyComplexFlexExample_mat_table_34_mat_header_cell_18_Template, 2, 0, "mat-header-cell", 14);
-    ɵɵtemplate(19, TableStickyComplexFlexExample_mat_table_34_mat_cell_19_Template, 2, 0, "mat-cell", 15);
-    ɵɵtemplate(20, TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_20_Template, 2, 0, "mat-footer-cell", 16);
+    ɵɵelementContainerStart(17, 23);
+    ɵɵtemplate(18, TableStickyComplexFlexExample_mat_table_34_mat_header_cell_18_Template, 2, 0, "mat-header-cell", 17);
+    ɵɵtemplate(19, TableStickyComplexFlexExample_mat_table_34_mat_cell_19_Template, 2, 0, "mat-cell", 18);
+    ɵɵtemplate(20, TableStickyComplexFlexExample_mat_table_34_mat_footer_cell_20_Template, 2, 0, "mat-footer-cell", 19);
     ɵɵelementContainerEnd();
-    ɵɵtemplate(21, TableStickyComplexFlexExample_mat_table_34_mat_header_row_21_Template, 1, 0, "mat-header-row", 21);
-    ɵɵtemplate(22, TableStickyComplexFlexExample_mat_table_34_mat_header_row_22_Template, 1, 0, "mat-header-row", 21);
-    ɵɵtemplate(23, TableStickyComplexFlexExample_mat_table_34_mat_row_23_Template, 1, 0, "mat-row", 22);
-    ɵɵtemplate(24, TableStickyComplexFlexExample_mat_table_34_mat_footer_row_24_Template, 1, 0, "mat-footer-row", 23);
-    ɵɵtemplate(25, TableStickyComplexFlexExample_mat_table_34_mat_footer_row_25_Template, 1, 0, "mat-footer-row", 23);
+    ɵɵtemplate(21, TableStickyComplexFlexExample_mat_table_34_mat_header_row_21_Template, 1, 0, "mat-header-row", 24);
+    ɵɵtemplate(22, TableStickyComplexFlexExample_mat_table_34_mat_header_row_22_Template, 1, 0, "mat-header-row", 24);
+    ɵɵtemplate(23, TableStickyComplexFlexExample_mat_table_34_mat_row_23_Template, 1, 0, "mat-row", 25);
+    ɵɵtemplate(24, TableStickyComplexFlexExample_mat_table_34_mat_footer_row_24_Template, 1, 0, "mat-footer-row", 26);
+    ɵɵtemplate(25, TableStickyComplexFlexExample_mat_table_34_mat_footer_row_25_Template, 1, 0, "mat-footer-row", 26);
     ɵɵelementEnd();
 } if (rf & 2) {
     var ctx_r233 = ɵɵnextContext();
@@ -2382,9 +2379,9 @@ function TableStickyComplexFlexExample_mat_table_34_Template(rf, ctx) { if (rf &
     ɵɵadvance(1);
     ɵɵproperty("matFooterRowDef", ctx_r233.displayedColumns)("matFooterRowDefSticky", ctx_r233.isSticky(_r231, "footer-2"));
 } }
-var _c3 = ["header-1"];
-var _c4 = ["footer-1"];
-var _c5 = ["position", "symbol"];
+var _c0$4 = ["header-1"];
+var _c1$1 = ["footer-1"];
+var _c2 = ["position", "symbol"];
 /**
  * @title Flex-layout tables with toggle-able sticky headers, footers, and columns
  */
@@ -2415,7 +2412,7 @@ var TableStickyComplexFlexExample = /** @class */ (function () {
     /** @nocollapse */
     TableStickyComplexFlexExample.ctorParameters = function () { return []; };
     TableStickyComplexFlexExample.ɵfac = function TableStickyComplexFlexExample_Factory(t) { return new (t || TableStickyComplexFlexExample)(); };
-    TableStickyComplexFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexFlexExample, selectors: [["table-sticky-complex-flex-example"]], decls: 35, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["value", "header-1"], ["value", "header-2"], ["value", "footer-1"], ["value", "footer-2"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], [3, "dataSource", 4, "ngFor", "ngForOf"], [3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], [4, "matHeaderCellDef"], [4, "matCellDef"], [4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], [4, "matHeaderRowDef", "matHeaderRowDefSticky"], [4, "matRowDef", "matRowDefColumns"], [4, "matFooterRowDef", "matFooterRowDefSticky"]], template: function TableStickyComplexFlexExample_Template(rf, ctx) { if (rf & 1) {
+    TableStickyComplexFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexFlexExample, selectors: [["table-sticky-complex-flex-example"]], decls: 35, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], [3, "dataSource", 4, "ngFor", "ngForOf"], [3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], [4, "matHeaderCellDef"], [4, "matCellDef"], [4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], [4, "matHeaderRowDef", "matHeaderRowDefSticky"], [4, "matRowDef", "matRowDefColumns"], [4, "matFooterRowDef", "matFooterRowDefSticky"]], template: function TableStickyComplexFlexExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div");
             ɵɵelementStart(1, "button", 0);
             ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_1_listener($event) { return ctx.tables.push(ctx.tables.length); });
@@ -2428,53 +2425,53 @@ var TableStickyComplexFlexExample = /** @class */ (function () {
             ɵɵelementEnd();
             ɵɵelementStart(5, "div");
             ɵɵtext(6, " Sticky Headers: ");
-            ɵɵelementStart(7, "mat-button-toggle-group", 1, _c0$4);
-            ɵɵelementStart(9, "mat-button-toggle", 2);
+            ɵɵelementStart(7, "mat-button-toggle-group", 1, 2);
+            ɵɵelementStart(9, "mat-button-toggle", 3);
             ɵɵtext(10, " Row 1 ");
             ɵɵelementEnd();
-            ɵɵelementStart(11, "mat-button-toggle", 3);
+            ɵɵelementStart(11, "mat-button-toggle", 4);
             ɵɵtext(12, " Row 2 ");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(13, "div");
             ɵɵtext(14, " Sticky Footers: ");
-            ɵɵelementStart(15, "mat-button-toggle-group", 1, _c1$1);
-            ɵɵelementStart(17, "mat-button-toggle", 4);
+            ɵɵelementStart(15, "mat-button-toggle-group", 1, 5);
+            ɵɵelementStart(17, "mat-button-toggle", 6);
             ɵɵtext(18, " Row 1 ");
             ɵɵelementEnd();
-            ɵɵelementStart(19, "mat-button-toggle", 5);
+            ɵɵelementStart(19, "mat-button-toggle", 7);
             ɵɵtext(20, " Row 2 ");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(21, "div");
             ɵɵtext(22, " Sticky Columns: ");
-            ɵɵelementStart(23, "mat-button-toggle-group", 1, _c2);
-            ɵɵelementStart(25, "mat-button-toggle", 6);
+            ɵɵelementStart(23, "mat-button-toggle-group", 1, 8);
+            ɵɵelementStart(25, "mat-button-toggle", 9);
             ɵɵtext(26, " Position ");
             ɵɵelementEnd();
-            ɵɵelementStart(27, "mat-button-toggle", 7);
+            ɵɵelementStart(27, "mat-button-toggle", 10);
             ɵɵtext(28, " Name ");
             ɵɵelementEnd();
-            ɵɵelementStart(29, "mat-button-toggle", 8);
+            ɵɵelementStart(29, "mat-button-toggle", 11);
             ɵɵtext(30, " Weight ");
             ɵɵelementEnd();
-            ɵɵelementStart(31, "mat-button-toggle", 9);
+            ɵɵelementStart(31, "mat-button-toggle", 12);
             ɵɵtext(32, " Symbol ");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(33, "div", 10);
-            ɵɵtemplate(34, TableStickyComplexFlexExample_mat_table_34_Template, 26, 14, "mat-table", 11);
+            ɵɵelementStart(33, "div", 13);
+            ɵɵtemplate(34, TableStickyComplexFlexExample_mat_table_34_Template, 26, 14, "mat-table", 14);
             ɵɵelementEnd();
         } if (rf & 2) {
             ɵɵadvance(7);
-            ɵɵproperty("value", _c3);
+            ɵɵproperty("value", _c0$4);
             ɵɵadvance(8);
-            ɵɵproperty("value", _c4);
+            ɵɵproperty("value", _c1$1);
             ɵɵadvance(8);
-            ɵɵproperty("value", _c5);
+            ɵɵproperty("value", _c2);
             ɵɵadvance(11);
             ɵɵproperty("ngForOf", ctx.tables);
         } }, directives: [MatButton, MatButtonToggleGroup, MatButtonToggle, NgForOf, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-column-filler[_ngcontent-%COMP%] {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell[_ngcontent-%COMP%], .mat-footer-cell[_ngcontent-%COMP%], .mat-cell[_ngcontent-%COMP%] {\n  min-width: 80px;\n  box-sizing: border-box;\n}\n\n.mat-header-row[_ngcontent-%COMP%], .mat-footer-row[_ngcontent-%COMP%], .mat-row[_ngcontent-%COMP%] {\n  min-width: 1920px; \n}"] });
@@ -2501,16 +2498,13 @@ var ELEMENT_DATA$9 = [
     { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 ];
 
-var _c0$5 = ["stickyHeaders", "matButtonToggleGroup"];
-var _c1$2 = ["stickyFooters", "matButtonToggleGroup"];
-var _c2$1 = ["stickyColumns", "matButtonToggleGroup"];
 function TableStickyComplexExample_table_34_th_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 24);
+    ɵɵelementStart(0, "th", 27);
     ɵɵtext(1, " Position ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_td_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 25);
+    ɵɵelementStart(0, "td", 28);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -2519,17 +2513,17 @@ function TableStickyComplexExample_table_34_td_3_Template(rf, ctx) { if (rf & 1)
     ɵɵtextInterpolate1(" ", element_r286.position, " ");
 } }
 function TableStickyComplexExample_table_34_td_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 26);
+    ɵɵelementStart(0, "td", 29);
     ɵɵtext(1, " Position Footer ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_th_6_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 24);
+    ɵɵelementStart(0, "th", 27);
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_td_7_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 25);
+    ɵɵelementStart(0, "td", 28);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -2538,17 +2532,17 @@ function TableStickyComplexExample_table_34_td_7_Template(rf, ctx) { if (rf & 1)
     ɵɵtextInterpolate1(" ", element_r287.name, " ");
 } }
 function TableStickyComplexExample_table_34_td_8_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 26);
+    ɵɵelementStart(0, "td", 29);
     ɵɵtext(1, " Name Footer ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_th_10_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 24);
+    ɵɵelementStart(0, "th", 27);
     ɵɵtext(1, " Weight ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_td_11_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 25);
+    ɵɵelementStart(0, "td", 28);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -2557,17 +2551,17 @@ function TableStickyComplexExample_table_34_td_11_Template(rf, ctx) { if (rf & 1
     ɵɵtextInterpolate1(" ", element_r288.weight, " ");
 } }
 function TableStickyComplexExample_table_34_td_12_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 26);
+    ɵɵelementStart(0, "td", 29);
     ɵɵtext(1, " Weight Footer ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_th_14_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 24);
+    ɵɵelementStart(0, "th", 27);
     ɵɵtext(1, " Symbol ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_td_15_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 25);
+    ɵɵelementStart(0, "td", 28);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -2576,72 +2570,72 @@ function TableStickyComplexExample_table_34_td_15_Template(rf, ctx) { if (rf & 1
     ɵɵtextInterpolate1(" ", element_r289.symbol, " ");
 } }
 function TableStickyComplexExample_table_34_td_16_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 26);
+    ɵɵelementStart(0, "td", 29);
     ɵɵtext(1, " Symbol Footer ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_th_18_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 24);
+    ɵɵelementStart(0, "th", 27);
     ɵɵtext(1, " Filler header cell ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_td_19_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 25);
+    ɵɵelementStart(0, "td", 28);
     ɵɵtext(1, " Filler data cell ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_td_20_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 26);
+    ɵɵelementStart(0, "td", 29);
     ɵɵtext(1, " Filler footer cell ");
     ɵɵelementEnd();
 } }
 function TableStickyComplexExample_table_34_tr_21_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 27);
+    ɵɵelement(0, "tr", 30);
 } }
 function TableStickyComplexExample_table_34_tr_22_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 27);
+    ɵɵelement(0, "tr", 30);
 } }
 function TableStickyComplexExample_table_34_tr_23_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 28);
+    ɵɵelement(0, "tr", 31);
 } }
 function TableStickyComplexExample_table_34_tr_24_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 29);
+    ɵɵelement(0, "tr", 32);
 } }
 function TableStickyComplexExample_table_34_tr_25_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 29);
+    ɵɵelement(0, "tr", 32);
 } }
 function TableStickyComplexExample_table_34_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "table", 12);
-    ɵɵelementContainerStart(1, 13);
-    ɵɵtemplate(2, TableStickyComplexExample_table_34_th_2_Template, 2, 0, "th", 14);
-    ɵɵtemplate(3, TableStickyComplexExample_table_34_td_3_Template, 2, 1, "td", 15);
-    ɵɵtemplate(4, TableStickyComplexExample_table_34_td_4_Template, 2, 0, "td", 16);
+    ɵɵelementStart(0, "table", 15);
+    ɵɵelementContainerStart(1, 16);
+    ɵɵtemplate(2, TableStickyComplexExample_table_34_th_2_Template, 2, 0, "th", 17);
+    ɵɵtemplate(3, TableStickyComplexExample_table_34_td_3_Template, 2, 1, "td", 18);
+    ɵɵtemplate(4, TableStickyComplexExample_table_34_td_4_Template, 2, 0, "td", 19);
     ɵɵelementContainerEnd();
-    ɵɵelementContainerStart(5, 17);
-    ɵɵtemplate(6, TableStickyComplexExample_table_34_th_6_Template, 2, 0, "th", 14);
-    ɵɵtemplate(7, TableStickyComplexExample_table_34_td_7_Template, 2, 1, "td", 15);
-    ɵɵtemplate(8, TableStickyComplexExample_table_34_td_8_Template, 2, 0, "td", 16);
+    ɵɵelementContainerStart(5, 20);
+    ɵɵtemplate(6, TableStickyComplexExample_table_34_th_6_Template, 2, 0, "th", 17);
+    ɵɵtemplate(7, TableStickyComplexExample_table_34_td_7_Template, 2, 1, "td", 18);
+    ɵɵtemplate(8, TableStickyComplexExample_table_34_td_8_Template, 2, 0, "td", 19);
     ɵɵelementContainerEnd();
-    ɵɵelementContainerStart(9, 18);
-    ɵɵtemplate(10, TableStickyComplexExample_table_34_th_10_Template, 2, 0, "th", 14);
-    ɵɵtemplate(11, TableStickyComplexExample_table_34_td_11_Template, 2, 1, "td", 15);
-    ɵɵtemplate(12, TableStickyComplexExample_table_34_td_12_Template, 2, 0, "td", 16);
+    ɵɵelementContainerStart(9, 21);
+    ɵɵtemplate(10, TableStickyComplexExample_table_34_th_10_Template, 2, 0, "th", 17);
+    ɵɵtemplate(11, TableStickyComplexExample_table_34_td_11_Template, 2, 1, "td", 18);
+    ɵɵtemplate(12, TableStickyComplexExample_table_34_td_12_Template, 2, 0, "td", 19);
     ɵɵelementContainerEnd();
-    ɵɵelementContainerStart(13, 19);
-    ɵɵtemplate(14, TableStickyComplexExample_table_34_th_14_Template, 2, 0, "th", 14);
-    ɵɵtemplate(15, TableStickyComplexExample_table_34_td_15_Template, 2, 1, "td", 15);
-    ɵɵtemplate(16, TableStickyComplexExample_table_34_td_16_Template, 2, 0, "td", 16);
+    ɵɵelementContainerStart(13, 22);
+    ɵɵtemplate(14, TableStickyComplexExample_table_34_th_14_Template, 2, 0, "th", 17);
+    ɵɵtemplate(15, TableStickyComplexExample_table_34_td_15_Template, 2, 1, "td", 18);
+    ɵɵtemplate(16, TableStickyComplexExample_table_34_td_16_Template, 2, 0, "td", 19);
     ɵɵelementContainerEnd();
-    ɵɵelementContainerStart(17, 20);
-    ɵɵtemplate(18, TableStickyComplexExample_table_34_th_18_Template, 2, 0, "th", 14);
-    ɵɵtemplate(19, TableStickyComplexExample_table_34_td_19_Template, 2, 0, "td", 15);
-    ɵɵtemplate(20, TableStickyComplexExample_table_34_td_20_Template, 2, 0, "td", 16);
+    ɵɵelementContainerStart(17, 23);
+    ɵɵtemplate(18, TableStickyComplexExample_table_34_th_18_Template, 2, 0, "th", 17);
+    ɵɵtemplate(19, TableStickyComplexExample_table_34_td_19_Template, 2, 0, "td", 18);
+    ɵɵtemplate(20, TableStickyComplexExample_table_34_td_20_Template, 2, 0, "td", 19);
     ɵɵelementContainerEnd();
-    ɵɵtemplate(21, TableStickyComplexExample_table_34_tr_21_Template, 1, 0, "tr", 21);
-    ɵɵtemplate(22, TableStickyComplexExample_table_34_tr_22_Template, 1, 0, "tr", 21);
-    ɵɵtemplate(23, TableStickyComplexExample_table_34_tr_23_Template, 1, 0, "tr", 22);
-    ɵɵtemplate(24, TableStickyComplexExample_table_34_tr_24_Template, 1, 0, "tr", 23);
-    ɵɵtemplate(25, TableStickyComplexExample_table_34_tr_25_Template, 1, 0, "tr", 23);
+    ɵɵtemplate(21, TableStickyComplexExample_table_34_tr_21_Template, 1, 0, "tr", 24);
+    ɵɵtemplate(22, TableStickyComplexExample_table_34_tr_22_Template, 1, 0, "tr", 24);
+    ɵɵtemplate(23, TableStickyComplexExample_table_34_tr_23_Template, 1, 0, "tr", 25);
+    ɵɵtemplate(24, TableStickyComplexExample_table_34_tr_24_Template, 1, 0, "tr", 26);
+    ɵɵtemplate(25, TableStickyComplexExample_table_34_tr_25_Template, 1, 0, "tr", 26);
     ɵɵelementEnd();
 } if (rf & 2) {
     var ctx_r264 = ɵɵnextContext();
@@ -2668,9 +2662,9 @@ function TableStickyComplexExample_table_34_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵproperty("matFooterRowDef", ctx_r264.displayedColumns)("matFooterRowDefSticky", ctx_r264.isSticky(_r262, "footer-2"));
 } }
-var _c3$1 = ["header-1"];
-var _c4$1 = ["footer-1"];
-var _c5$1 = ["position", "symbol"];
+var _c0$5 = ["header-1"];
+var _c1$2 = ["footer-1"];
+var _c2$1 = ["position", "symbol"];
 /**
  * @title Tables with toggle-able sticky headers, footers, and columns
  */
@@ -2701,7 +2695,7 @@ var TableStickyComplexExample = /** @class */ (function () {
     /** @nocollapse */
     TableStickyComplexExample.ctorParameters = function () { return []; };
     TableStickyComplexExample.ɵfac = function TableStickyComplexExample_Factory(t) { return new (t || TableStickyComplexExample)(); };
-    TableStickyComplexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexExample, selectors: [["table-sticky-complex-example"]], decls: 35, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["value", "header-1"], ["value", "header-2"], ["value", "footer-1"], ["value", "footer-2"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource", 4, "ngFor", "ngForOf"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyComplexExample_Template(rf, ctx) { if (rf & 1) {
+    TableStickyComplexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexExample, selectors: [["table-sticky-complex-example"]], decls: 35, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource", 4, "ngFor", "ngForOf"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyComplexExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div");
             ɵɵelementStart(1, "button", 0);
             ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_1_listener($event) { return ctx.tables.push(ctx.tables.length); });
@@ -2714,53 +2708,53 @@ var TableStickyComplexExample = /** @class */ (function () {
             ɵɵelementEnd();
             ɵɵelementStart(5, "div");
             ɵɵtext(6, " Sticky Headers: ");
-            ɵɵelementStart(7, "mat-button-toggle-group", 1, _c0$5);
-            ɵɵelementStart(9, "mat-button-toggle", 2);
+            ɵɵelementStart(7, "mat-button-toggle-group", 1, 2);
+            ɵɵelementStart(9, "mat-button-toggle", 3);
             ɵɵtext(10, " Row 1 ");
             ɵɵelementEnd();
-            ɵɵelementStart(11, "mat-button-toggle", 3);
+            ɵɵelementStart(11, "mat-button-toggle", 4);
             ɵɵtext(12, " Row 2 ");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(13, "div");
             ɵɵtext(14, " Sticky Footers: ");
-            ɵɵelementStart(15, "mat-button-toggle-group", 1, _c1$2);
-            ɵɵelementStart(17, "mat-button-toggle", 4);
+            ɵɵelementStart(15, "mat-button-toggle-group", 1, 5);
+            ɵɵelementStart(17, "mat-button-toggle", 6);
             ɵɵtext(18, " Row 1 ");
             ɵɵelementEnd();
-            ɵɵelementStart(19, "mat-button-toggle", 5);
+            ɵɵelementStart(19, "mat-button-toggle", 7);
             ɵɵtext(20, " Row 2 ");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(21, "div");
             ɵɵtext(22, " Sticky Columns: ");
-            ɵɵelementStart(23, "mat-button-toggle-group", 1, _c2$1);
-            ɵɵelementStart(25, "mat-button-toggle", 6);
+            ɵɵelementStart(23, "mat-button-toggle-group", 1, 8);
+            ɵɵelementStart(25, "mat-button-toggle", 9);
             ɵɵtext(26, " Position ");
             ɵɵelementEnd();
-            ɵɵelementStart(27, "mat-button-toggle", 7);
+            ɵɵelementStart(27, "mat-button-toggle", 10);
             ɵɵtext(28, " Name ");
             ɵɵelementEnd();
-            ɵɵelementStart(29, "mat-button-toggle", 8);
+            ɵɵelementStart(29, "mat-button-toggle", 11);
             ɵɵtext(30, " Weight ");
             ɵɵelementEnd();
-            ɵɵelementStart(31, "mat-button-toggle", 9);
+            ɵɵelementStart(31, "mat-button-toggle", 12);
             ɵɵtext(32, " Symbol ");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(33, "div", 10);
-            ɵɵtemplate(34, TableStickyComplexExample_table_34_Template, 26, 14, "table", 11);
+            ɵɵelementStart(33, "div", 13);
+            ɵɵtemplate(34, TableStickyComplexExample_table_34_Template, 26, 14, "table", 14);
             ɵɵelementEnd();
         } if (rf & 2) {
             ɵɵadvance(7);
-            ɵɵproperty("value", _c3$1);
+            ɵɵproperty("value", _c0$5);
             ɵɵadvance(8);
-            ɵɵproperty("value", _c4$1);
+            ɵɵproperty("value", _c1$2);
             ɵɵadvance(8);
-            ɵɵproperty("value", _c5$1);
+            ɵɵproperty("value", _c2$1);
             ɵɵadvance(11);
             ɵɵproperty("ngForOf", ctx.tables);
         } }, directives: [MatButton, MatButtonToggleGroup, MatButtonToggle, NgForOf, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatFooterCellDef, MatHeaderRowDef, MatRowDef, MatFooterRowDef, MatHeaderCell, MatCell, MatFooterCell, MatHeaderRow, MatRow, MatFooterRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-column-filler[_ngcontent-%COMP%] {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell[_ngcontent-%COMP%], .mat-footer-cell[_ngcontent-%COMP%], .mat-cell[_ngcontent-%COMP%] {\n  min-width: 80px;\n  box-sizing: border-box;\n}"] });
@@ -3173,14 +3167,13 @@ var TableTextColumnExample = /** @class */ (function () {
     }], null, null);
 
 var _c0$6 = ["sort"];
-var _c1$3 = ["sort", "matSort"];
 function TableWrappedExample_th_3_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 6);
+    ɵɵelementStart(0, "th", 7);
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } }
 function TableWrappedExample_td_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 7);
+    ɵɵelementStart(0, "td", 8);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -3189,10 +3182,10 @@ function TableWrappedExample_td_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", element_r330.name, " ");
 } }
 function TableWrappedExample_tr_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 8);
+    ɵɵelement(0, "tr", 9);
 } }
 function TableWrappedExample_tr_6_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 9);
+    ɵɵelement(0, "tr", 10);
 } }
 function WrapperTable_th_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 7);
@@ -3236,7 +3229,7 @@ function WrapperTable_td_10_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r340.symbol, " ");
 } }
-var _c2$2 = ["*"];
+var _c1$3 = ["*"];
 var ELEMENT_DATA$e = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
     { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3276,14 +3269,14 @@ var TableWrappedExample = /** @class */ (function () {
         } if (rf & 2) {
             var _t;
             ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.sort = _t.first);
-        } }, decls: 7, vars: 4, consts: [["matSort", "", 3, "dataSource", "columns"], ["matColumnDef", "name"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableWrappedExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "wrapper-table", 0, _c1$3);
-            ɵɵelementContainerStart(2, 1);
-            ɵɵtemplate(3, TableWrappedExample_th_3_Template, 2, 0, "th", 2);
-            ɵɵtemplate(4, TableWrappedExample_td_4_Template, 2, 1, "td", 3);
+        } }, decls: 7, vars: 4, consts: [["matSort", "", 3, "dataSource", "columns"], ["sort", "matSort"], ["matColumnDef", "name"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableWrappedExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "wrapper-table", 0, 1);
+            ɵɵelementContainerStart(2, 2);
+            ɵɵtemplate(3, TableWrappedExample_th_3_Template, 2, 0, "th", 3);
+            ɵɵtemplate(4, TableWrappedExample_td_4_Template, 2, 1, "td", 4);
             ɵɵelementContainerEnd();
-            ɵɵtemplate(5, TableWrappedExample_tr_5_Template, 1, 0, "tr", 4);
-            ɵɵtemplate(6, TableWrappedExample_tr_6_Template, 1, 0, "tr", 5);
+            ɵɵtemplate(5, TableWrappedExample_tr_5_Template, 1, 0, "tr", 5);
+            ɵɵtemplate(6, TableWrappedExample_tr_6_Template, 1, 0, "tr", 6);
             ɵɵelementEnd();
         } if (rf & 2) {
             ɵɵproperty("dataSource", ctx.dataSource)("columns", ctx.displayedColumns);
@@ -3348,7 +3341,7 @@ var WrapperTable = /** @class */ (function () {
         } if (rf & 2) {
             var _t;
             ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.table = _t.first);
-        } }, inputs: { columns: "columns", dataSource: "dataSource" }, ngContentSelectors: _c2$2, decls: 11, vars: 1, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-cell", ""]], template: function WrapperTable_Template(rf, ctx) { if (rf & 1) {
+        } }, inputs: { columns: "columns", dataSource: "dataSource" }, ngContentSelectors: _c1$3, decls: 11, vars: 1, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-cell", ""]], template: function WrapperTable_Template(rf, ctx) { if (rf & 1) {
             ɵɵprojectionDef();
             ɵɵelementStart(0, "table", 0);
             ɵɵprojection(1);
@@ -3494,5 +3487,5 @@ var TableExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { TableBasicExample, TableBasicFlexExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnExample, TableTextColumnAdvancedExample, TableWrappedExample, WrapperTable, TableExamplesModule };
+export { TableBasicExample, TableBasicFlexExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable };
 //# sourceMappingURL=table.js.map

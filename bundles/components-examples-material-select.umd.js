@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/checkbox'), require('@angular/material/input'), require('@angular/material/select'), require('@angular/material/form-field'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/select', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/checkbox', '@angular/material/input', '@angular/material/select', '@angular/material/form-field', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.select = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.checkbox, global.ng.material.input, global.ng.material.select, global.ng.material.formField, global.ng.material.core));
-}(this, function (exports, i4, i0, i3, i1, i6, i2, i1$1, i4$1) { 'use strict';
+}(this, (function (exports, i4, i0, i3, i1, i6, i2, i1$1, i4$1) { 'use strict';
 
     function SelectCustomTriggerExample_span_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "span", 3);
@@ -1058,6 +1058,7 @@
     exports.SelectCustomTriggerExample = SelectCustomTriggerExample;
     exports.SelectDisabledExample = SelectDisabledExample;
     exports.SelectErrorStateMatcherExample = SelectErrorStateMatcherExample;
+    exports.SelectExamplesModule = SelectExamplesModule;
     exports.SelectFormExample = SelectFormExample;
     exports.SelectHintErrorExample = SelectHintErrorExample;
     exports.SelectMultipleExample = SelectMultipleExample;
@@ -1067,9 +1068,8 @@
     exports.SelectPanelClassExample = SelectPanelClassExample;
     exports.SelectResetExample = SelectResetExample;
     exports.SelectValueBindingExample = SelectValueBindingExample;
-    exports.SelectExamplesModule = SelectExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-select.umd.js.map

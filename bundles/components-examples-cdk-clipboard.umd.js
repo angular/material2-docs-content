@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/cdk/clipboard')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/clipboard', ['exports', '@angular/core', '@angular/forms', '@angular/cdk/clipboard'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.clipboard = {}), global.ng.core, global.ng.forms, global.ng.cdk.clipboard));
-}(this, function (exports, i0, i1, i2) { 'use strict';
+}(this, (function (exports, i0, i1, i2) { 'use strict';
 
     /**
      * @title Clipboard overview
@@ -79,10 +79,10 @@
                 }]
         }], null, null);
 
-    exports.CdkClipboardOverviewExample = CdkClipboardOverviewExample;
     exports.CdkClipboardExamplesModule = CdkClipboardExamplesModule;
+    exports.CdkClipboardOverviewExample = CdkClipboardOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-cdk-clipboard.umd.js.map

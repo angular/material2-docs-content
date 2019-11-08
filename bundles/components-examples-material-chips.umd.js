@@ -2,24 +2,21 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/drag-drop'), require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/autocomplete'), require('@angular/material/chips'), require('@angular/material/form-field'), require('@angular/material/icon'), require('@angular/cdk/keycodes'), require('rxjs/operators'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/chips', ['exports', '@angular/cdk/drag-drop', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/autocomplete', '@angular/material/chips', '@angular/material/form-field', '@angular/material/icon', '@angular/cdk/keycodes', 'rxjs/operators', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.chips = {}), global.ng.cdk.dragDrop, global.ng.common, global.ng.core, global.ng.forms, global.ng.material.autocomplete, global.ng.material.chips, global.ng.material.formField, global.ng.material.icon, global.ng.cdk.keycodes, global.rxjs.operators, global.ng.material.core));
-}(this, function (exports, i2, i3, i0, i4, i5, i2$1, i1, i4$1, keycodes, operators, i7) { 'use strict';
+}(this, (function (exports, i2, i3, i0, i4, i5, i2$1, i1, i6, keycodes, operators, i7) { 'use strict';
 
     var _c0 = ["fruitInput"];
     var _c1 = ["auto"];
-    var _c2 = ["chipList", ""];
-    var _c3 = ["fruitInput", ""];
-    var _c4 = ["auto", "matAutocomplete"];
     function ChipsAutocompleteExample_mat_chip_3_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-icon", 8);
+        i0.ɵɵelementStart(0, "mat-icon", 11);
         i0.ɵɵtext(1, "cancel");
         i0.ɵɵelementEnd();
     } }
     function ChipsAutocompleteExample_mat_chip_3_Template(rf, ctx) { if (rf & 1) {
         var _r8 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "mat-chip", 6);
+        i0.ɵɵelementStart(0, "mat-chip", 9);
         i0.ɵɵlistener("removed", function ChipsAutocompleteExample_mat_chip_3_Template_mat_chip_removed_0_listener($event) { i0.ɵɵrestoreView(_r8); var fruit_r5 = ctx.$implicit; var ctx_r7 = i0.ɵɵnextContext(); return ctx_r7.remove(fruit_r5); });
         i0.ɵɵtext(1);
-        i0.ɵɵtemplate(2, ChipsAutocompleteExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 7);
+        i0.ɵɵtemplate(2, ChipsAutocompleteExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 10);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         var fruit_r5 = ctx.$implicit;
@@ -31,7 +28,7 @@
         i0.ɵɵproperty("ngIf", ctx_r1.removable);
     } }
     function ChipsAutocompleteExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 9);
+        i0.ɵɵelementStart(0, "mat-option", 12);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -104,17 +101,17 @@
                 var _t;
                 i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.fruitInput = _t.first);
                 i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.matAutocomplete = _t.first);
-            } }, decls: 10, vars: 8, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "formControl", "matAutocomplete", "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputTokenEnd"], [3, "optionSelected"], [3, "value", 4, "ngFor", "ngForOf"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""], [3, "value"]], template: function ChipsAutocompleteExample_Template(rf, ctx) { if (rf & 1) {
+            } }, decls: 10, vars: 8, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], ["chipList", ""], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "formControl", "matAutocomplete", "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputTokenEnd"], ["fruitInput", ""], [3, "optionSelected"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""], [3, "value"]], template: function ChipsAutocompleteExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
-                i0.ɵɵelementStart(1, "mat-chip-list", 1, _c2);
-                i0.ɵɵtemplate(3, ChipsAutocompleteExample_mat_chip_3_Template, 3, 4, "mat-chip", 2);
-                i0.ɵɵelementStart(4, "input", 3, _c3);
+                i0.ɵɵelementStart(1, "mat-chip-list", 1, 2);
+                i0.ɵɵtemplate(3, ChipsAutocompleteExample_mat_chip_3_Template, 3, 4, "mat-chip", 3);
+                i0.ɵɵelementStart(4, "input", 4, 5);
                 i0.ɵɵlistener("matChipInputTokenEnd", function ChipsAutocompleteExample_Template_input_matChipInputTokenEnd_4_listener($event) { return ctx.add($event); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "mat-autocomplete", 4, _c4);
+                i0.ɵɵelementStart(6, "mat-autocomplete", 6, 7);
                 i0.ɵɵlistener("optionSelected", function ChipsAutocompleteExample_Template_mat_autocomplete_optionSelected_6_listener($event) { return ctx.selected($event); });
-                i0.ɵɵtemplate(8, ChipsAutocompleteExample_mat_option_8_Template, 2, 2, "mat-option", 5);
+                i0.ɵɵtemplate(8, ChipsAutocompleteExample_mat_option_8_Template, 2, 2, "mat-option", 8);
                 i0.ɵɵpipe(9, "async");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -127,7 +124,7 @@
                 i0.ɵɵproperty("formControl", ctx.fruitCtrl)("matAutocomplete", _r3)("matChipInputFor", _r0)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes);
                 i0.ɵɵadvance(4);
                 i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(9, 6, ctx.filteredFruits));
-            } }, directives: [i1.MatFormField, i2$1.MatChipList, i3.NgForOf, i4.DefaultValueAccessor, i5.MatAutocompleteTrigger, i2$1.MatChipInput, i4.NgControlStatus, i4.FormControlDirective, i5.MatAutocomplete, i2$1.MatChip, i3.NgIf, i4$1.MatIcon, i2$1.MatChipRemove, i7.MatOption], pipes: [i3.AsyncPipe], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1.MatFormField, i2$1.MatChipList, i3.NgForOf, i4.DefaultValueAccessor, i5.MatAutocompleteTrigger, i2$1.MatChipInput, i4.NgControlStatus, i4.FormControlDirective, i5.MatAutocomplete, i2$1.MatChip, i3.NgIf, i6.MatIcon, i2$1.MatChipRemove, i7.MatOption], pipes: [i3.AsyncPipe], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return ChipsAutocompleteExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(ChipsAutocompleteExample, [{
@@ -199,18 +196,17 @@
                 }]
         }], null, null);
 
-    var _c0$1 = ["chipList", ""];
     function ChipsInputExample_mat_chip_3_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-icon", 6);
+        i0.ɵɵelementStart(0, "mat-icon", 7);
         i0.ɵɵtext(1, "cancel");
         i0.ɵɵelementEnd();
     } }
     function ChipsInputExample_mat_chip_3_Template(rf, ctx) { if (rf & 1) {
         var _r17 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "mat-chip", 4);
+        i0.ɵɵelementStart(0, "mat-chip", 5);
         i0.ɵɵlistener("removed", function ChipsInputExample_mat_chip_3_Template_mat_chip_removed_0_listener($event) { i0.ɵɵrestoreView(_r17); var fruit_r14 = ctx.$implicit; var ctx_r16 = i0.ɵɵnextContext(); return ctx_r16.remove(fruit_r14); });
         i0.ɵɵtext(1);
-        i0.ɵɵtemplate(2, ChipsInputExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 5);
+        i0.ɵɵtemplate(2, ChipsInputExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 6);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         var fruit_r14 = ctx.$implicit;
@@ -263,11 +259,11 @@
                     },] },
         ];
         ChipsInputExample.ɵfac = function ChipsInputExample_Factory(t) { return new (t || ChipsInputExample)(); };
-        ChipsInputExample.ɵcmp = i0.ɵɵdefineComponent({ type: ChipsInputExample, selectors: [["chips-input-example"]], decls: 5, vars: 4, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputAddOnBlur", "matChipInputTokenEnd"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""]], template: function ChipsInputExample_Template(rf, ctx) { if (rf & 1) {
+        ChipsInputExample.ɵcmp = i0.ɵɵdefineComponent({ type: ChipsInputExample, selectors: [["chips-input-example"]], decls: 5, vars: 4, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], ["chipList", ""], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputAddOnBlur", "matChipInputTokenEnd"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""]], template: function ChipsInputExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
-                i0.ɵɵelementStart(1, "mat-chip-list", 1, _c0$1);
-                i0.ɵɵtemplate(3, ChipsInputExample_mat_chip_3_Template, 3, 4, "mat-chip", 2);
-                i0.ɵɵelementStart(4, "input", 3);
+                i0.ɵɵelementStart(1, "mat-chip-list", 1, 2);
+                i0.ɵɵtemplate(3, ChipsInputExample_mat_chip_3_Template, 3, 4, "mat-chip", 3);
+                i0.ɵɵelementStart(4, "input", 4);
                 i0.ɵɵlistener("matChipInputTokenEnd", function ChipsInputExample_Template_input_matChipInputTokenEnd_4_listener($event) { return ctx.add($event); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -278,7 +274,7 @@
                 i0.ɵɵproperty("ngForOf", ctx.fruits);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matChipInputFor", _r12)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes)("matChipInputAddOnBlur", ctx.addOnBlur);
-            } }, directives: [i1.MatFormField, i2$1.MatChipList, i3.NgForOf, i2$1.MatChipInput, i2$1.MatChip, i3.NgIf, i4$1.MatIcon, i2$1.MatChipRemove], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+            } }, directives: [i1.MatFormField, i2$1.MatChipList, i3.NgForOf, i2$1.MatChipInput, i2$1.MatChip, i3.NgIf, i6.MatIcon, i2$1.MatChipRemove], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return ChipsInputExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(ChipsInputExample, [{
@@ -397,7 +393,7 @@
                             i2.DragDropModule,
                             i5.MatAutocompleteModule,
                             i2$1.MatChipsModule,
-                            i4$1.MatIconModule,
+                            i6.MatIconModule,
                             i1.MatFormFieldModule,
                             i4.ReactiveFormsModule,
                         ],
@@ -411,7 +407,7 @@
                     i2.DragDropModule,
                     i5.MatAutocompleteModule,
                     i2$1.MatChipsModule,
-                    i4$1.MatIconModule,
+                    i6.MatIconModule,
                     i1.MatFormFieldModule,
                     i4.ReactiveFormsModule,
                 ]] });
@@ -425,7 +421,7 @@
             i2.DragDropModule,
             i5.MatAutocompleteModule,
             i2$1.MatChipsModule,
-            i4$1.MatIconModule,
+            i6.MatIconModule,
             i1.MatFormFieldModule,
             i4.ReactiveFormsModule], exports: [ChipsAutocompleteExample,
             ChipsDragDropExample,
@@ -440,7 +436,7 @@
                         i2.DragDropModule,
                         i5.MatAutocompleteModule,
                         i2$1.MatChipsModule,
-                        i4$1.MatIconModule,
+                        i6.MatIconModule,
                         i1.MatFormFieldModule,
                         i4.ReactiveFormsModule,
                     ],
@@ -451,12 +447,12 @@
 
     exports.ChipsAutocompleteExample = ChipsAutocompleteExample;
     exports.ChipsDragDropExample = ChipsDragDropExample;
+    exports.ChipsExamplesModule = ChipsExamplesModule;
     exports.ChipsInputExample = ChipsInputExample;
     exports.ChipsOverviewExample = ChipsOverviewExample;
     exports.ChipsStackedExample = ChipsStackedExample;
-    exports.ChipsExamplesModule = ChipsExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-chips.umd.js.map

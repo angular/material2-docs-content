@@ -277,5 +277,5 @@ var ButtonExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { ButtonOverviewExample, ButtonTypesExample, ButtonExamplesModule };
+export { ButtonExamplesModule, ButtonOverviewExample, ButtonTypesExample };
 //# sourceMappingURL=button.js.map

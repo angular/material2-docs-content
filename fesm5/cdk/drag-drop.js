@@ -164,10 +164,8 @@ var CdkDragDropConnectedSortingGroupExample = /** @class */ (function () {
             }]
     }], null, null);
 
-var _c0 = ["todoList", "cdkDropList"];
-var _c1 = ["doneList", "cdkDropList"];
 function CdkDragDropConnectedSortingExample_div_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "div", 3);
+    ɵɵelementStart(0, "div", 5);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -176,7 +174,7 @@ function CdkDragDropConnectedSortingExample_div_5_Template(rf, ctx) { if (rf & 1
     ɵɵtextInterpolate(item_r8);
 } }
 function CdkDragDropConnectedSortingExample_div_11_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "div", 3);
+    ɵɵelementStart(0, "div", 5);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -184,7 +182,7 @@ function CdkDragDropConnectedSortingExample_div_11_Template(rf, ctx) { if (rf & 
     ɵɵadvance(1);
     ɵɵtextInterpolate(item_r9);
 } }
-var _c2 = function (a0) { return [a0]; };
+var _c0 = function (a0) { return [a0]; };
 /**
  * @title Drag&Drop connected sorting
  */
@@ -220,34 +218,34 @@ var CdkDragDropConnectedSortingExample = /** @class */ (function () {
                 },] },
     ];
     CdkDragDropConnectedSortingExample.ɵfac = function CdkDragDropConnectedSortingExample_Factory(t) { return new (t || CdkDragDropConnectedSortingExample)(); };
-    CdkDragDropConnectedSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropConnectedSortingExample, selectors: [["cdk-drag-drop-connected-sorting-example"]], decls: 12, vars: 10, consts: [[1, "example-container"], ["cdkDropList", "", 1, "example-list", 3, "cdkDropListData", "cdkDropListConnectedTo", "cdkDropListDropped"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropConnectedSortingExample_Template(rf, ctx) { if (rf & 1) {
+    CdkDragDropConnectedSortingExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropConnectedSortingExample, selectors: [["cdk-drag-drop-connected-sorting-example"]], decls: 12, vars: 10, consts: [[1, "example-container"], ["cdkDropList", "", 1, "example-list", 3, "cdkDropListData", "cdkDropListConnectedTo", "cdkDropListDropped"], ["todoList", "cdkDropList"], ["class", "example-box", "cdkDrag", "", 4, "ngFor", "ngForOf"], ["doneList", "cdkDropList"], ["cdkDrag", "", 1, "example-box"]], template: function CdkDragDropConnectedSortingExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "h2");
             ɵɵtext(2, "To do");
             ɵɵelementEnd();
-            ɵɵelementStart(3, "div", 1, _c0);
+            ɵɵelementStart(3, "div", 1, 2);
             ɵɵlistener("cdkDropListDropped", function CdkDragDropConnectedSortingExample_Template_div_cdkDropListDropped_3_listener($event) { return ctx.drop($event); });
-            ɵɵtemplate(5, CdkDragDropConnectedSortingExample_div_5_Template, 2, 1, "div", 2);
+            ɵɵtemplate(5, CdkDragDropConnectedSortingExample_div_5_Template, 2, 1, "div", 3);
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(6, "div", 0);
             ɵɵelementStart(7, "h2");
             ɵɵtext(8, "Done");
             ɵɵelementEnd();
-            ɵɵelementStart(9, "div", 1, _c1);
+            ɵɵelementStart(9, "div", 1, 4);
             ɵɵlistener("cdkDropListDropped", function CdkDragDropConnectedSortingExample_Template_div_cdkDropListDropped_9_listener($event) { return ctx.drop($event); });
-            ɵɵtemplate(11, CdkDragDropConnectedSortingExample_div_11_Template, 2, 1, "div", 2);
+            ɵɵtemplate(11, CdkDragDropConnectedSortingExample_div_11_Template, 2, 1, "div", 3);
             ɵɵelementEnd();
             ɵɵelementEnd();
         } if (rf & 2) {
             var _r4 = ɵɵreference(4);
             var _r6 = ɵɵreference(10);
             ɵɵadvance(3);
-            ɵɵproperty("cdkDropListData", ctx.todo)("cdkDropListConnectedTo", ɵɵpureFunction1(6, _c2, _r6));
+            ɵɵproperty("cdkDropListData", ctx.todo)("cdkDropListConnectedTo", ɵɵpureFunction1(6, _c0, _r6));
             ɵɵadvance(2);
             ɵɵproperty("ngForOf", ctx.todo);
             ɵɵadvance(4);
-            ɵɵproperty("cdkDropListData", ctx.done)("cdkDropListConnectedTo", ɵɵpureFunction1(8, _c2, _r4));
+            ɵɵproperty("cdkDropListData", ctx.done)("cdkDropListConnectedTo", ɵɵpureFunction1(8, _c0, _r4));
             ɵɵadvance(2);
             ɵɵproperty("ngForOf", ctx.done);
         } }, directives: [CdkDropList, NgForOf, CdkDrag], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list[_ngcontent-%COMP%] {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
@@ -1056,5 +1054,5 @@ var CdkDragDropExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkDragDropExamplesModule };
+export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropExamplesModule, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample };
 //# sourceMappingURL=drag-drop.js.map

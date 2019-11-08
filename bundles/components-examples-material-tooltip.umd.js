@@ -2,11 +2,10 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/checkbox'), require('@angular/material/input'), require('@angular/material/select'), require('@angular/material/tooltip'), require('@angular/material/form-field'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/tooltip', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/checkbox', '@angular/material/input', '@angular/material/select', '@angular/material/tooltip', '@angular/material/form-field', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.tooltip = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.checkbox, global.ng.material.input, global.ng.material.select, global.ng.material.tooltip, global.ng.material.formField, global.ng.material.core));
-}(this, function (exports, i4, i0, i3, i1, i3$1, i2, i2$1, i2$2, i1$1, i7) { 'use strict';
+}(this, (function (exports, i4, i0, i3, i1, i3$1, i2, i2$1, i2$2, i1$1, i7) { 'use strict';
 
-    var _c0 = ["tooltip", "matTooltip"];
     function TooltipAutoHideExample_mat_option_2_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 4);
+        i0.ɵɵelementStart(0, "mat-option", 5);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -31,14 +30,14 @@
                     },] },
         ];
         TooltipAutoHideExample.ɵfac = function TooltipAutoHideExample_Factory(t) { return new (t || TooltipAutoHideExample)(); };
-        TooltipAutoHideExample.ɵcmp = i0.ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 7, vars: 3, consts: [["placeholder", "Tooltip position", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdk-scrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
+        TooltipAutoHideExample.ɵcmp = i0.ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 7, vars: 3, consts: [["placeholder", "Tooltip position", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdk-scrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], ["tooltip", "matTooltip"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-select", 0);
                 i0.ɵɵtemplate(2, TooltipAutoHideExample_mat_option_2_Template, 2, 2, "mat-option", 1);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "div", 2);
-                i0.ɵɵelementStart(4, "button", 3, _c0);
+                i0.ɵɵelementStart(4, "button", 3, 4);
                 i0.ɵɵtext(6, " Action ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -180,7 +179,6 @@
                 }]
         }], null, null);
 
-    var _c0$1 = ["tooltip", "matTooltip"];
     /**
      * @title Tooltip that can be manually shown/hidden.
      */
@@ -195,7 +193,7 @@
                     },] },
         ];
         TooltipManualExample.ɵfac = function TooltipManualExample_Factory(t) { return new (t || TooltipManualExample)(); };
-        TooltipManualExample.ɵcmp = i0.ɵɵdefineComponent({ type: TooltipManualExample, selectors: [["tooltip-manual-example"]], decls: 12, vars: 0, consts: [["mat-button", "", "aria-label", "Show tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Show/Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipPosition", "right", "aria-tooltip", "Button that displays and hides a tooltip triggered by other buttons"]], template: function TooltipManualExample_Template(rf, ctx) { if (rf & 1) {
+        TooltipManualExample.ɵcmp = i0.ɵɵdefineComponent({ type: TooltipManualExample, selectors: [["tooltip-manual-example"]], decls: 12, vars: 0, consts: [["mat-button", "", "aria-label", "Show tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Show/Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipPosition", "right", "aria-tooltip", "Button that displays and hides a tooltip triggered by other buttons"], ["tooltip", "matTooltip"]], template: function TooltipManualExample_Template(rf, ctx) { if (rf & 1) {
                 var _r4 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "div");
                 i0.ɵɵelementStart(1, "span");
@@ -214,7 +212,7 @@
                 i0.ɵɵtext(8, " toggle show/hide ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(9, "button", 3, _c0$1);
+                i0.ɵɵelementStart(9, "button", 3, 4);
                 i0.ɵɵtext(11, " Action\n");
                 i0.ɵɵelementEnd();
             } }, directives: [i1.MatButton, i2$2.MatTooltip], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
@@ -481,14 +479,14 @@
     exports.TooltipCustomClassExample = TooltipCustomClassExample;
     exports.TooltipDelayExample = TooltipDelayExample;
     exports.TooltipDisabledExample = TooltipDisabledExample;
+    exports.TooltipExamplesModule = TooltipExamplesModule;
     exports.TooltipManualExample = TooltipManualExample;
     exports.TooltipMessageExample = TooltipMessageExample;
     exports.TooltipModifiedDefaultsExample = TooltipModifiedDefaultsExample;
     exports.TooltipOverviewExample = TooltipOverviewExample;
     exports.TooltipPositionExample = TooltipPositionExample;
-    exports.TooltipExamplesModule = TooltipExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-tooltip.umd.js.map

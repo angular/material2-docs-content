@@ -2,10 +2,9 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/portal'), require('@angular/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/portal', ['exports', '@angular/cdk/portal', '@angular/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.portal = {}), global.ng.cdk.portal, global.ng.core));
-}(this, function (exports, i1, i0) { 'use strict';
+}(this, (function (exports, i1, i0) { 'use strict';
 
     var _c0 = ["templatePortalContent"];
-    var _c1 = ["templatePortalContent", ""];
     function CdkPortalOverviewExample_ng_template_3_Template(rf, ctx) { }
     function CdkPortalOverviewExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtext(0, "Hello, this is a template portal");
@@ -41,19 +40,19 @@
             } if (rf & 2) {
                 var _t;
                 i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.templatePortalContent = _t.first);
-            } }, decls: 10, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], [3, "click"]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
+            } }, decls: 10, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], ["templatePortalContent", ""], [3, "click"]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h2");
                 i0.ɵɵtext(1, "The portal outlet is below:");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(2, "div", 0);
                 i0.ɵɵtemplate(3, CdkPortalOverviewExample_ng_template_3_Template, 0, 0, "ng-template", 1);
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(4, CdkPortalOverviewExample_ng_template_4_Template, 1, 0, "ng-template", null, _c1, i0.ɵɵtemplateRefExtractor);
-                i0.ɵɵelementStart(6, "button", 2);
+                i0.ɵɵtemplate(4, CdkPortalOverviewExample_ng_template_4_Template, 1, 0, "ng-template", null, 2, i0.ɵɵtemplateRefExtractor);
+                i0.ɵɵelementStart(6, "button", 3);
                 i0.ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_6_listener($event) { return ctx.selectedPortal = ctx.componentPortal; });
                 i0.ɵɵtext(7, "Render component portal");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "button", 2);
+                i0.ɵɵelementStart(8, "button", 3);
                 i0.ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_8_listener($event) { return ctx.selectedPortal = ctx.templatePortal; });
                 i0.ɵɵtext(9, "Render template portal");
                 i0.ɵɵelementEnd();
@@ -135,11 +134,11 @@
                 }]
         }], null, null);
 
+    exports.CdkPortalExamplesModule = CdkPortalExamplesModule;
     exports.CdkPortalOverviewExample = CdkPortalOverviewExample;
     exports.ComponentPortalExample = ComponentPortalExample;
-    exports.CdkPortalExamplesModule = CdkPortalExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-cdk-portal.umd.js.map

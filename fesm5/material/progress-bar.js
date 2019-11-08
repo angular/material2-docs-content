@@ -311,5 +311,5 @@ var ProgressBarExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressBarExamplesModule };
+export { ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarExamplesModule, ProgressBarIndeterminateExample, ProgressBarQueryExample };
 //# sourceMappingURL=progress-bar.js.map

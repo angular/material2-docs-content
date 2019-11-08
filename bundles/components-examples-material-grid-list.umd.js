@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/material/grid-list')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/grid-list', ['exports', '@angular/common', '@angular/core', '@angular/material/grid-list'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.gridList = {}), global.ng.common, global.ng.core, global.ng.material.gridList));
-}(this, function (exports, i2, i0, i1) { 'use strict';
+}(this, (function (exports, i2, i0, i1) { 'use strict';
 
     function GridListDynamicExample_mat_grid_tile_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-grid-tile", 2);
@@ -137,10 +137,10 @@
         }], null, null);
 
     exports.GridListDynamicExample = GridListDynamicExample;
-    exports.GridListOverviewExample = GridListOverviewExample;
     exports.GridListExamplesModule = GridListExamplesModule;
+    exports.GridListOverviewExample = GridListOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-grid-list.umd.js.map

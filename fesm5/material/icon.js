@@ -102,5 +102,5 @@ var IconExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { IconOverviewExample, IconSvgExample, IconExamplesModule };
+export { IconExamplesModule, IconOverviewExample, IconSvgExample };
 //# sourceMappingURL=icon.js.map

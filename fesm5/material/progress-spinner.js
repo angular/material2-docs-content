@@ -191,5 +191,5 @@ var ProgressSpinnerExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, ProgressSpinnerExamplesModule };
+export { ProgressSpinnerConfigurableExample, ProgressSpinnerExamplesModule, ProgressSpinnerOverviewExample };
 //# sourceMappingURL=progress-spinner.js.map

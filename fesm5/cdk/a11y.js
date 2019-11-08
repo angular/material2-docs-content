@@ -72,9 +72,6 @@ var FocusMonitorDirectivesExample = /** @class */ (function () {
     }], function () { return [{ type: NgZone }, { type: ChangeDetectorRef }]; }, null);
 
 var _c0 = ["monitored"];
-var _c1 = ["monitored", ""];
-var _c2 = ["unmonitored", ""];
-var _c3 = ["simulatedOrigin", ""];
 /** @title Focusing with a specific FocusOrigin */
 var FocusMonitorFocusViaExample = /** @class */ (function () {
     function FocusMonitorFocusViaExample(focusMonitor, _cdr, _ngZone) {
@@ -119,13 +116,13 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
         } if (rf & 2) {
             var _t;
             ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.monitoredEl = _t.first);
-        } }, decls: 24, vars: 1, consts: [[1, "example-focus-monitor"], ["value", "mouse"], ["value", "keyboard"], ["value", "touch"], ["value", "program"], [3, "click"]], template: function FocusMonitorFocusViaExample_Template(rf, ctx) { if (rf & 1) {
+        } }, decls: 24, vars: 1, consts: [[1, "example-focus-monitor"], ["monitored", ""], ["unmonitored", ""], ["value", "mouse"], ["simulatedOrigin", ""], ["value", "keyboard"], ["value", "touch"], ["value", "program"], [3, "click"]], template: function FocusMonitorFocusViaExample_Template(rf, ctx) { if (rf & 1) {
             var _r3 = ɵɵgetCurrentView();
             ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "button", null, _c1);
+            ɵɵelementStart(1, "button", null, 1);
             ɵɵtext(3);
             ɵɵelementEnd();
-            ɵɵelementStart(4, "button", null, _c2);
+            ɵɵelementStart(4, "button", null, 2);
             ɵɵtext(6, "2. Not Monitored");
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -133,26 +130,26 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
             ɵɵelementStart(8, "mat-label");
             ɵɵtext(9, "Simulated focus origin");
             ɵɵelementEnd();
-            ɵɵelementStart(10, "mat-select", 1, _c3);
-            ɵɵelementStart(12, "mat-option", 1);
+            ɵɵelementStart(10, "mat-select", 3, 4);
+            ɵɵelementStart(12, "mat-option", 3);
             ɵɵtext(13, "Mouse");
             ɵɵelementEnd();
-            ɵɵelementStart(14, "mat-option", 2);
+            ɵɵelementStart(14, "mat-option", 5);
             ɵɵtext(15, "Keyboard");
             ɵɵelementEnd();
-            ɵɵelementStart(16, "mat-option", 3);
+            ɵɵelementStart(16, "mat-option", 6);
             ɵɵtext(17, "Touch");
             ɵɵelementEnd();
-            ɵɵelementStart(18, "mat-option", 4);
+            ɵɵelementStart(18, "mat-option", 7);
             ɵɵtext(19, "Programmatic");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(20, "button", 5);
+            ɵɵelementStart(20, "button", 8);
             ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_20_listener($event) { ɵɵrestoreView(_r3); var _r0 = ɵɵreference(2); var _r2 = ɵɵreference(11); return ctx.focusMonitor.focusVia(_r0, _r2.value); });
             ɵɵtext(21, " Focus button #1\n");
             ɵɵelementEnd();
-            ɵɵelementStart(22, "button", 5);
+            ɵɵelementStart(22, "button", 8);
             ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_22_listener($event) { ɵɵrestoreView(_r3); var _r1 = ɵɵreference(5); var _r2 = ɵɵreference(11); return ctx.focusMonitor.focusVia(_r1, _r2.value); });
             ɵɵtext(23, " Focus button #2\n");
             ɵɵelementEnd();
@@ -175,9 +172,7 @@ var FocusMonitorFocusViaExample = /** @class */ (function () {
         }] });
 
 var _c0$1 = ["element"];
-var _c1$1 = ["subtree"];
-var _c2$1 = ["element", ""];
-var _c3$1 = ["subtree", ""];
+var _c1 = ["subtree"];
 /** @title Monitoring focus with FocusMonitor */
 var FocusMonitorOverviewExample = /** @class */ (function () {
     function FocusMonitorOverviewExample(_focusMonitor, _cdr, _ngZone) {
@@ -227,19 +222,19 @@ var FocusMonitorOverviewExample = /** @class */ (function () {
     FocusMonitorOverviewExample.ɵfac = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ChangeDetectorRef), ɵɵdirectiveInject(NgZone)); };
     FocusMonitorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵviewQuery(_c0$1, true);
-            ɵɵviewQuery(_c1$1, true);
+            ɵɵviewQuery(_c1, true);
         } if (rf & 2) {
             var _t;
             ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.element = _t.first);
             ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.subtree = _t.first);
-        } }, decls: 13, vars: 2, consts: [[1, "example-focus-monitor"]], template: function FocusMonitorOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        } }, decls: 13, vars: 2, consts: [[1, "example-focus-monitor"], ["element", ""], ["subtree", ""]], template: function FocusMonitorOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
-            ɵɵelementStart(1, "button", null, _c2$1);
+            ɵɵelementStart(1, "button", null, 1);
             ɵɵtext(3);
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(4, "div", 0);
-            ɵɵelementStart(5, "div", null, _c3$1);
+            ɵɵelementStart(5, "div", null, 2);
             ɵɵelementStart(7, "p");
             ɵɵtext(8);
             ɵɵelementEnd();
@@ -317,5 +312,5 @@ var CdkA11yExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, CdkA11yExamplesModule };
+export { CdkA11yExamplesModule, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample };
 //# sourceMappingURL=a11y.js.map

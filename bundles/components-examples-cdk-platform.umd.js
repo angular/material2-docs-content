@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/platform'), require('@angular/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/platform', ['exports', '@angular/cdk/platform', '@angular/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.platform = {}), global.ng.cdk.platform, global.ng.core));
-}(this, function (exports, i1, i0) { 'use strict';
+}(this, (function (exports, i1, i0) { 'use strict';
 
     /**
      * @title Platform overview
@@ -124,10 +124,10 @@
                 }]
         }], null, null);
 
-    exports.CdkPlatformOverviewExample = CdkPlatformOverviewExample;
     exports.CdkPlatformExamplesModule = CdkPlatformExamplesModule;
+    exports.CdkPlatformOverviewExample = CdkPlatformOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-cdk-platform.umd.js.map

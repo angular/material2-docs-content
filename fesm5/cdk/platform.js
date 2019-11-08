@@ -121,5 +121,5 @@ var CdkPlatformExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { CdkPlatformOverviewExample, CdkPlatformExamplesModule };
+export { CdkPlatformExamplesModule, CdkPlatformOverviewExample };
 //# sourceMappingURL=platform.js.map

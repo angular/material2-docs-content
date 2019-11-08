@@ -182,7 +182,6 @@ var InputErrorsExample = /** @class */ (function () {
             }]
     }], null, null);
 
-var _c0 = ["postalCode", ""];
 /**
  * @title Inputs in a form
  */
@@ -197,7 +196,7 @@ var InputFormExample = /** @class */ (function () {
                 },] },
     ];
     InputFormExample.ɵfac = function InputFormExample_Factory(t) { return new (t || InputFormExample)(); };
-    InputFormExample.ɵcmp = ɵɵdefineComponent({ type: InputFormExample, selectors: [["input-form-example"]], decls: 31, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Company (disabled)", "disabled", "", "value", "Google"], ["cellspacing", "0", 1, "example-full-width"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "placeholder", "Long Last Name That Will Be Truncated"], ["matInput", "", "placeholder", "Address"], ["matInput", "", "placeholder", "Address 2"], ["matInput", "", "placeholder", "City"], ["matInput", "", "placeholder", "State"], ["matInput", "", "maxlength", "5", "placeholder", "Postal Code", "value", "94043"], ["align", "end"]], template: function InputFormExample_Template(rf, ctx) { if (rf & 1) {
+    InputFormExample.ɵcmp = ɵɵdefineComponent({ type: InputFormExample, selectors: [["input-form-example"]], decls: 31, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Company (disabled)", "disabled", "", "value", "Google"], ["cellspacing", "0", 1, "example-full-width"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "placeholder", "Long Last Name That Will Be Truncated"], ["matInput", "", "placeholder", "Address"], ["matInput", "", "placeholder", "Address 2"], ["matInput", "", "placeholder", "City"], ["matInput", "", "placeholder", "State"], ["matInput", "", "maxlength", "5", "placeholder", "Postal Code", "value", "94043"], ["postalCode", ""], ["align", "end"]], template: function InputFormExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
             ɵɵelement(2, "input", 2);
@@ -240,8 +239,8 @@ var InputFormExample = /** @class */ (function () {
             ɵɵelementEnd();
             ɵɵelementStart(25, "td");
             ɵɵelementStart(26, "mat-form-field", 1);
-            ɵɵelement(27, "input", 10, _c0);
-            ɵɵelementStart(29, "mat-hint", 11);
+            ɵɵelement(27, "input", 10, 11);
+            ɵɵelementStart(29, "mat-hint", 12);
             ɵɵtext(30);
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -265,7 +264,6 @@ var InputFormExample = /** @class */ (function () {
             }]
     }], null, null);
 
-var _c0$1 = ["message", ""];
 /**
  * @title Input with hints
  */
@@ -280,16 +278,16 @@ var InputHintExample = /** @class */ (function () {
                 },] },
     ];
     InputHintExample.ɵfac = function InputHintExample_Factory(t) { return new (t || InputHintExample)(); };
-    InputHintExample.ɵcmp = ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 9, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Message"], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
+    InputHintExample.ɵcmp = ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 9, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Message"], ["message", ""], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
-            ɵɵelement(2, "input", 2, _c0$1);
-            ɵɵelementStart(4, "mat-hint", 3);
+            ɵɵelement(2, "input", 2, 3);
+            ɵɵelementStart(4, "mat-hint", 4);
             ɵɵelementStart(5, "strong");
             ɵɵtext(6, "Don't disclose personal info");
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(7, "mat-hint", 4);
+            ɵɵelementStart(7, "mat-hint", 5);
             ɵɵtext(8);
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -454,5 +452,5 @@ var InputExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, InputExamplesModule };
+export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputExamplesModule, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample };
 //# sourceMappingURL=input.js.map

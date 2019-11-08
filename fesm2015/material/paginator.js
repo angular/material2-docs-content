@@ -199,5 +199,5 @@ PaginatorExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { PaginatorConfigurableExample, PaginatorOverviewExample, PaginatorExamplesModule };
+export { PaginatorConfigurableExample, PaginatorExamplesModule, PaginatorOverviewExample };
 //# sourceMappingURL=paginator.js.map

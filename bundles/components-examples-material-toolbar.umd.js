@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/icon'), require('@angular/material/toolbar')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/toolbar', ['exports', '@angular/core', '@angular/material/icon', '@angular/material/toolbar'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.toolbar = {}), global.ng.core, global.ng.material.icon, global.ng.material.toolbar));
-}(this, function (exports, i0, i2, i1) { 'use strict';
+}(this, (function (exports, i0, i2, i1) { 'use strict';
 
     /**
      * @title Multi-row toolbar
@@ -129,11 +129,11 @@
                 }]
         }], null, null);
 
+    exports.ToolbarExamplesModule = ToolbarExamplesModule;
     exports.ToolbarMultirowExample = ToolbarMultirowExample;
     exports.ToolbarOverviewExample = ToolbarOverviewExample;
-    exports.ToolbarExamplesModule = ToolbarExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-toolbar.umd.js.map

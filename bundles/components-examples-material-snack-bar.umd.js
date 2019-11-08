@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/input'), require('@angular/material/select'), require('@angular/material/snack-bar'), require('@angular/material/form-field'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/snack-bar', ['exports', 'tslib', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/input', '@angular/material/select', '@angular/material/snack-bar', '@angular/material/form-field', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.snackBar = {}), global.tslib, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.input, global.ng.material.select, global.ng.material.snackBar, global.ng.material.formField, global.ng.material.core));
-}(this, function (exports, tslib, i0, i3, i5, i3$1, i3$2, i1, i2, i4) { 'use strict';
+}(this, (function (exports, tslib, i0, i3, i5, i4, i3$1, i1, i2, i4$1) { 'use strict';
 
     /**
      * @title Snack-bar with a custom component
@@ -45,7 +45,7 @@
             } if (rf & 2) {
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngModel", ctx.durationInSeconds);
-            } }, directives: [i2.MatFormField, i2.MatLabel, i3.NumberValueAccessor, i3$1.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i5.MatButton], styles: [""] });
+            } }, directives: [i2.MatFormField, i2.MatLabel, i3.NumberValueAccessor, i4.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i5.MatButton], styles: [""] });
         return SnackBarComponentExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(SnackBarComponentExample, [{
@@ -83,8 +83,6 @@
                 }]
         }], null, null);
 
-    var _c0 = ["message", ""];
-    var _c1 = ["action", ""];
     /**
      * @title Basic snack-bar
      */
@@ -109,19 +107,19 @@
             { type: i1.MatSnackBar }
         ]; };
         SnackBarOverviewExample.ɵfac = function SnackBarOverviewExample_Factory(t) { return new (t || SnackBarOverviewExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-        SnackBarOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 8, vars: 0, consts: [["matInput", "", "value", "Disco party!", "placeholder", "Message"], ["matInput", "", "value", "Dance", "placeholder", "Action"], ["mat-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        SnackBarOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 8, vars: 0, consts: [["matInput", "", "value", "Disco party!", "placeholder", "Message"], ["message", ""], ["matInput", "", "value", "Dance", "placeholder", "Action"], ["action", ""], ["mat-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 var _r2 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-form-field");
-                i0.ɵɵelement(1, "input", 0, _c0);
+                i0.ɵɵelement(1, "input", 0, 1);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "mat-form-field");
-                i0.ɵɵelement(4, "input", 1, _c1);
+                i0.ɵɵelement(4, "input", 2, 3);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "button", 2);
+                i0.ɵɵelementStart(6, "button", 4);
                 i0.ɵɵlistener("click", function SnackBarOverviewExample_Template_button_click_6_listener($event) { i0.ɵɵrestoreView(_r2); var _r0 = i0.ɵɵreference(2); var _r1 = i0.ɵɵreference(5); return ctx.openSnackBar(_r0.value, _r1.value); });
                 i0.ɵɵtext(7, "Show snack-bar");
                 i0.ɵɵelementEnd();
-            } }, directives: [i2.MatFormField, i3$1.MatInput, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+            } }, directives: [i2.MatFormField, i4.MatInput, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return SnackBarOverviewExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(SnackBarOverviewExample, [{
@@ -202,7 +200,7 @@
                 i0.ɵɵproperty("value", ctx.horizontalPosition);
                 i0.ɵɵadvance(12);
                 i0.ɵɵproperty("value", ctx.verticalPosition);
-            } }, directives: [i2.MatFormField, i3$2.MatSelect, i4.MatOption, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+            } }, directives: [i2.MatFormField, i3$1.MatSelect, i4$1.MatOption, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return SnackBarPositionExample;
     }());
     /*@__PURE__*/ i0.ɵsetClassMetadata(SnackBarPositionExample, [{
@@ -227,8 +225,8 @@
                         imports: [
                             i3.FormsModule,
                             i5.MatButtonModule,
-                            i3$1.MatInputModule,
-                            i3$2.MatSelectModule,
+                            i4.MatInputModule,
+                            i3$1.MatSelectModule,
                             i1.MatSnackBarModule,
                         ],
                         declarations: tslib.__spread(EXAMPLES, [PizzaPartyComponent]),
@@ -240,8 +238,8 @@
         SnackBarExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SnackBarExamplesModule_Factory(t) { return new (t || SnackBarExamplesModule)(); }, imports: [[
                     i3.FormsModule,
                     i5.MatButtonModule,
-                    i3$1.MatInputModule,
-                    i3$2.MatSelectModule,
+                    i4.MatInputModule,
+                    i3$1.MatSelectModule,
                     i1.MatSnackBarModule,
                 ]] });
         return SnackBarExamplesModule;
@@ -251,8 +249,8 @@
             SnackBarPositionExample,
             PizzaPartyComponent], imports: [i3.FormsModule,
             i5.MatButtonModule,
-            i3$1.MatInputModule,
-            i3$2.MatSelectModule,
+            i4.MatInputModule,
+            i3$1.MatSelectModule,
             i1.MatSnackBarModule], exports: [SnackBarComponentExample,
             SnackBarOverviewExample,
             SnackBarPositionExample] });
@@ -262,8 +260,8 @@
                     imports: [
                         i3.FormsModule,
                         i5.MatButtonModule,
-                        i3$1.MatInputModule,
-                        i3$2.MatSelectModule,
+                        i4.MatInputModule,
+                        i3$1.MatSelectModule,
                         i1.MatSnackBarModule,
                     ],
                     declarations: tslib.__spread(EXAMPLES, [PizzaPartyComponent]),
@@ -272,13 +270,13 @@
                 }]
         }], null, null);
 
+    exports.PizzaPartyComponent = PizzaPartyComponent;
     exports.SnackBarComponentExample = SnackBarComponentExample;
+    exports.SnackBarExamplesModule = SnackBarExamplesModule;
     exports.SnackBarOverviewExample = SnackBarOverviewExample;
     exports.SnackBarPositionExample = SnackBarPositionExample;
-    exports.PizzaPartyComponent = PizzaPartyComponent;
-    exports.SnackBarExamplesModule = SnackBarExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-snack-bar.umd.js.map

@@ -187,5 +187,5 @@ CoreExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { ElevationOverviewExample, RippleOverviewExample, CoreExamplesModule };
+export { CoreExamplesModule, ElevationOverviewExample, RippleOverviewExample };
 //# sourceMappingURL=core.js.map

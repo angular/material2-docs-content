@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button-toggle'), require('@angular/material/icon')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/button-toggle', ['exports', '@angular/core', '@angular/material/button-toggle', '@angular/material/icon'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.buttonToggle = {}), global.ng.core, global.ng.material.buttonToggle, global.ng.material.icon));
-}(this, function (exports, i0, i1, i2) { 'use strict';
+}(this, (function (exports, i0, i1, i2) { 'use strict';
 
     /**
      * @title Button toggle appearance
@@ -59,7 +59,6 @@
                 }]
         }], null, null);
 
-    var _c0 = ["group", "matButtonToggleGroup"];
     /**
      * @title Exclusive selection
      */
@@ -74,30 +73,30 @@
                     },] },
         ];
         ButtonToggleExclusiveExample.ɵfac = function ButtonToggleExclusiveExample_Factory(t) { return new (t || ButtonToggleExclusiveExample)(); };
-        ButtonToggleExclusiveExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-button-toggle-group", null, _c0);
-                i0.ɵɵelementStart(2, "mat-button-toggle", 0);
+        ButtonToggleExclusiveExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["group", "matButtonToggleGroup"], ["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-button-toggle-group", null, 0);
+                i0.ɵɵelementStart(2, "mat-button-toggle", 1);
                 i0.ɵɵelementStart(3, "mat-icon");
                 i0.ɵɵtext(4, "format_align_left");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "mat-button-toggle", 1);
+                i0.ɵɵelementStart(5, "mat-button-toggle", 2);
                 i0.ɵɵelementStart(6, "mat-icon");
                 i0.ɵɵtext(7, "format_align_center");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "mat-button-toggle", 2);
+                i0.ɵɵelementStart(8, "mat-button-toggle", 3);
                 i0.ɵɵelementStart(9, "mat-icon");
                 i0.ɵɵtext(10, "format_align_right");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(11, "mat-button-toggle", 3);
+                i0.ɵɵelementStart(11, "mat-button-toggle", 4);
                 i0.ɵɵelementStart(12, "mat-icon");
                 i0.ɵɵtext(13, "format_align_justify");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(14, "div", 4);
+                i0.ɵɵelementStart(14, "div", 5);
                 i0.ɵɵtext(15);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
@@ -198,11 +197,11 @@
         }], null, null);
 
     exports.ButtonToggleAppearanceExample = ButtonToggleAppearanceExample;
+    exports.ButtonToggleExamplesModule = ButtonToggleExamplesModule;
     exports.ButtonToggleExclusiveExample = ButtonToggleExclusiveExample;
     exports.ButtonToggleOverviewExample = ButtonToggleOverviewExample;
-    exports.ButtonToggleExamplesModule = ButtonToggleExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-button-toggle.umd.js.map

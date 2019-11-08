@@ -149,5 +149,5 @@ RadioExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { RadioNgModelExample, RadioOverviewExample, RadioExamplesModule };
+export { RadioExamplesModule, RadioNgModelExample, RadioOverviewExample };
 //# sourceMappingURL=radio.js.map

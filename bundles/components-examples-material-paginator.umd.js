@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/input'), require('@angular/material/paginator'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/paginator', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/input', '@angular/material/paginator', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.paginator = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.input, global.ng.material.paginator, global.ng.material.formField));
-}(this, function (exports, i5, i0, i3, i2, i4, i1) { 'use strict';
+}(this, (function (exports, i5, i0, i3, i2, i4, i1) { 'use strict';
 
     function PaginatorConfigurableExample_div_10_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div");
@@ -175,10 +175,10 @@
         }], null, null);
 
     exports.PaginatorConfigurableExample = PaginatorConfigurableExample;
-    exports.PaginatorOverviewExample = PaginatorOverviewExample;
     exports.PaginatorExamplesModule = PaginatorExamplesModule;
+    exports.PaginatorOverviewExample = PaginatorOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-paginator.umd.js.map

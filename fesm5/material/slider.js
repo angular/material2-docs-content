@@ -287,5 +287,5 @@ var SliderExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SliderExamplesModule };
+export { SliderConfigurableExample, SliderExamplesModule, SliderFormattingExample, SliderOverviewExample };
 //# sourceMappingURL=slider.js.map

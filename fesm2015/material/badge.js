@@ -94,5 +94,5 @@ BadgeExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { BadgeOverviewExample, BadgeExamplesModule };
+export { BadgeExamplesModule, BadgeOverviewExample };
 //# sourceMappingURL=badge.js.map

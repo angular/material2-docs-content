@@ -2,9 +2,8 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/datepicker'), require('@angular/material/expansion'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/expansion', ['exports', '@angular/core', '@angular/material/button', '@angular/material/datepicker', '@angular/material/expansion', '@angular/material/icon', '@angular/material/input', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.expansion = {}), global.ng.core, global.ng.material.button, global.ng.material.datepicker, global.ng.material.expansion, global.ng.material.icon, global.ng.material.input, global.ng.material.formField));
-}(this, function (exports, i0, i1, i6, i1$1, i3, i5, i4) { 'use strict';
+}(this, (function (exports, i0, i1, i6, i1$1, i3, i5, i4) { 'use strict';
 
-    var _c0 = ["picker", ""];
     /**
      * @title Accordion with expand/collapse all toggles
      */
@@ -27,7 +26,7 @@
             } if (rf & 2) {
                 var _t;
                 i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.accordion = _t.first);
-            } }, decls: 40, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "type", "number", "min", "1", "placeholder", "Age"], ["disabled", ""], ["matInput", "", "placeholder", "Country"], ["matInput", "", "placeholder", "Date", "readonly", "", 3, "matDatepicker", "focus"]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) { if (rf & 1) {
+            } }, decls: 40, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "type", "number", "min", "1", "placeholder", "Age"], ["disabled", ""], ["matInput", "", "placeholder", "Country"], ["matInput", "", "placeholder", "Date", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) { if (rf & 1) {
                 var _r1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "button", 1);
@@ -92,7 +91,7 @@
                 i0.ɵɵlistener("focus", function ExpansionExpandCollapseAllExample_Template_input_focus_37_listener($event) { i0.ɵɵrestoreView(_r1); var _r0 = i0.ɵɵreference(39); return _r0.open(); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(38, "mat-datepicker", null, _c0);
+                i0.ɵɵelement(38, "mat-datepicker", null, 8);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
@@ -178,7 +177,6 @@
                 }]
         }], null, null);
 
-    var _c0$1 = ["picker", ""];
     /**
      * @title Expansion panel as accordion
      */
@@ -203,7 +201,7 @@
                     },] },
         ];
         ExpansionStepsExample.ɵfac = function ExpansionStepsExample_Factory(t) { return new (t || ExpansionStepsExample)(); };
-        ExpansionStepsExample.ɵcmp = i0.ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 48, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "type", "number", "min", "1", "placeholder", "Age"], ["mat-button", "", "color", "primary", 3, "click"], ["matInput", "", "placeholder", "Country"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "placeholder", "Date", "readonly", "", 3, "matDatepicker", "focus"]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
+        ExpansionStepsExample.ɵcmp = i0.ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 48, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "type", "number", "min", "1", "placeholder", "Age"], ["mat-button", "", "color", "primary", 3, "click"], ["matInput", "", "placeholder", "Country"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "placeholder", "Date", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
                 var _r3 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-accordion", 0);
                 i0.ɵɵelementStart(1, "mat-expansion-panel", 1);
@@ -277,7 +275,7 @@
                 i0.ɵɵlistener("focus", function ExpansionStepsExample_Template_input_focus_40_listener($event) { i0.ɵɵrestoreView(_r3); var _r2 = i0.ɵɵreference(42); return _r2.open(); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelement(41, "mat-datepicker", null, _c0$1);
+                i0.ɵɵelement(41, "mat-datepicker", null, 8);
                 i0.ɵɵelementStart(43, "mat-action-row");
                 i0.ɵɵelementStart(44, "button", 6);
                 i0.ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_44_listener($event) { return ctx.prevStep(); });
@@ -363,12 +361,12 @@
                 }]
         }], null, null);
 
+    exports.ExpansionExamplesModule = ExpansionExamplesModule;
     exports.ExpansionExpandCollapseAllExample = ExpansionExpandCollapseAllExample;
     exports.ExpansionOverviewExample = ExpansionOverviewExample;
     exports.ExpansionStepsExample = ExpansionStepsExample;
-    exports.ExpansionExamplesModule = ExpansionExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-expansion.umd.js.map

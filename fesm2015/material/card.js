@@ -128,5 +128,5 @@ CardExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { CardFancyExample, CardOverviewExample, CardExamplesModule };
+export { CardExamplesModule, CardFancyExample, CardOverviewExample };
 //# sourceMappingURL=card.js.map

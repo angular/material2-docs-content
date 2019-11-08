@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/card'), require('@angular/material/checkbox'), require('@angular/material/radio'), require('@angular/material/slide-toggle')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/slide-toggle', ['exports', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/card', '@angular/material/checkbox', '@angular/material/radio', '@angular/material/slide-toggle'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.slideToggle = {}), global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.card, global.ng.material.checkbox, global.ng.material.radio, global.ng.material.slideToggle));
-}(this, function (exports, i0, i1, i3, i1$1, i4, i2, i2$1) { 'use strict';
+}(this, (function (exports, i0, i1, i3, i1$1, i4, i2, i2$1) { 'use strict';
 
     /**
      * @title Configurable slide-toggle
@@ -91,7 +91,6 @@
                 }]
         }], null, null);
 
-    var _c0 = ["form", "ngForm"];
     /**
      * @title Slide-toggle with forms
      */
@@ -118,7 +117,7 @@
             { type: i1.FormBuilder }
         ]; };
         SlideToggleFormsExample.ɵfac = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        SlideToggleFormsExample.ɵcmp = i0.ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"], ["mat-rasied-button", "", "type", "submit"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
+        SlideToggleFormsExample.ɵcmp = i0.ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["form", "ngForm"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"], ["mat-rasied-button", "", "type", "submit"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
                 i0.ɵɵtext(1, "Slide Toggle using a simple NgModel.");
                 i0.ɵɵelementEnd();
@@ -129,33 +128,33 @@
                 i0.ɵɵelementStart(4, "p");
                 i0.ɵɵtext(5, "Slide Toggle inside of a Template-driven form");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "form", 1, _c0);
+                i0.ɵɵelementStart(6, "form", 1, 2);
                 i0.ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_6_listener($event) { return ctx.onFormSubmit(); });
-                i0.ɵɵelementStart(8, "mat-slide-toggle", 2);
+                i0.ɵɵelementStart(8, "mat-slide-toggle", 3);
                 i0.ɵɵtext(9, "Enable Wifi");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(10, "mat-slide-toggle", 3);
+                i0.ɵɵelementStart(10, "mat-slide-toggle", 4);
                 i0.ɵɵtext(11, "Accept Terms of Service");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(12, "button", 4);
+                i0.ɵɵelementStart(12, "button", 5);
                 i0.ɵɵtext(13, "Save Settings");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(14, "p");
                 i0.ɵɵtext(15, "Slide Toggle inside of a Reactive form");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(16, "form", 5);
+                i0.ɵɵelementStart(16, "form", 6);
                 i0.ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_16_listener($event) { return ctx.onFormSubmit(); });
-                i0.ɵɵelementStart(17, "mat-slide-toggle", 6);
+                i0.ɵɵelementStart(17, "mat-slide-toggle", 7);
                 i0.ɵɵtext(18, "Enable Wifi");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(19, "mat-slide-toggle", 7);
+                i0.ɵɵelementStart(19, "mat-slide-toggle", 8);
                 i0.ɵɵtext(20, "Accept Terms of Service");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(21, "p");
                 i0.ɵɵtext(22);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(23, "button", 8);
+                i0.ɵɵelementStart(23, "button", 9);
                 i0.ɵɵtext(24, "Save Settings");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -274,11 +273,11 @@
         }], null, null);
 
     exports.SlideToggleConfigurableExample = SlideToggleConfigurableExample;
+    exports.SlideToggleExamplesModule = SlideToggleExamplesModule;
     exports.SlideToggleFormsExample = SlideToggleFormsExample;
     exports.SlideToggleOverviewExample = SlideToggleOverviewExample;
-    exports.SlideToggleExamplesModule = SlideToggleExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-slide-toggle.umd.js.map

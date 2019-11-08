@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/divider'), require('@angular/material/list')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/divider', ['exports', '@angular/core', '@angular/material/divider', '@angular/material/list'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.divider = {}), global.ng.core, global.ng.material.divider, global.ng.material.list));
-}(this, function (exports, i0, i2, i1) { 'use strict';
+}(this, (function (exports, i0, i2, i1) { 'use strict';
 
     /**
      * @title Basic divider
@@ -79,10 +79,10 @@
                 }]
         }], null, null);
 
-    exports.DividerOverviewExample = DividerOverviewExample;
     exports.DividerExamplesModule = DividerExamplesModule;
+    exports.DividerOverviewExample = DividerOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-divider.umd.js.map

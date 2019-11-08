@@ -7,7 +7,6 @@ import * as i0 from "@angular/core";
 import * as i1 from "@angular/forms";
 import * as i2 from "@angular/material/form-field";
 import * as i3 from "@angular/material/input";
-const _c0 = ["message", ""];
 /**
  * \@title Input with hints
  */
@@ -21,16 +20,16 @@ InputHintExample.decorators = [
             },] },
 ];
 /** @nocollapse */ InputHintExample.ɵfac = function InputHintExample_Factory(t) { return new (t || InputHintExample)(); };
-/** @nocollapse */ InputHintExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 9, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Message"], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ InputHintExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 9, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Message"], ["message", ""], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "form", 0);
         i0.ɵɵelementStart(1, "mat-form-field", 1);
-        i0.ɵɵelement(2, "input", 2, _c0);
-        i0.ɵɵelementStart(4, "mat-hint", 3);
+        i0.ɵɵelement(2, "input", 2, 3);
+        i0.ɵɵelementStart(4, "mat-hint", 4);
         i0.ɵɵelementStart(5, "strong");
         i0.ɵɵtext(6, "Don't disclose personal info");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(7, "mat-hint", 4);
+        i0.ɵɵelementStart(7, "mat-hint", 5);
         i0.ɵɵtext(8);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -48,4 +47,4 @@ InputHintExample.decorators = [
                 styleUrls: ['input-hint-example.css'],
             }]
     }], null, null);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5wdXQtaGludC1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvbWF0ZXJpYWwvaW5wdXQvaW5wdXQtaGludC9pbnB1dC1oaW50LWV4YW1wbGUudHMiLCIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvY29tcG9uZW50cy1leGFtcGxlcy9tYXRlcmlhbC9pbnB1dC9pbnB1dC1oaW50L2lucHV0LWhpbnQtZXhhbXBsZS5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDOzs7Ozs7Ozs7QUFVeEMsTUFBTSxPQUFPLGdCQUFnQjs7O1lBTDVCLFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUsb0JBQW9CO2dCQUM5QixXQUFXLEVBQUUseUJBQXlCO2dCQUN0QyxTQUFTLEVBQUUsQ0FBQyx3QkFBd0IsQ0FBQzthQUN0Qzs7Z0ZBQ1ksZ0JBQWdCO3FEQUFoQixnQkFBZ0I7UUNWN0IsK0JBRUU7UUFBQSx5Q0FDRTtRQUFBLGdDQUNBO1FBQUEsbUNBQXdCO1FBQUEsOEJBQVE7UUFBQSw0Q0FBNEI7UUFBQSxpQkFBUztRQUFDLGlCQUFXO1FBQ2pGLG1DQUFzQjtRQUFBLFlBQThCO1FBQUEsaUJBQVc7UUFDakUsaUJBQWlCO1FBRW5CLGlCQUFPOzs7UUFIbUIsZUFBOEI7UUFBOUIscURBQThCOzttQ0RLM0MsZ0JBQWdCO2NBTDVCLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsb0JBQW9CO2dCQUM5QixXQUFXLEVBQUUseUJBQXlCO2dCQUN0QyxTQUFTLEVBQUUsQ0FBQyx3QkFBd0IsQ0FBQzthQUN0QyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Q29tcG9uZW50fSBmcm9tICdAYW5ndWxhci9jb3JlJztcblxuLyoqXG4gKiBAdGl0bGUgSW5wdXQgd2l0aCBoaW50c1xuICovXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdpbnB1dC1oaW50LWV4YW1wbGUnLFxuICB0ZW1wbGF0ZVVybDogJ2lucHV0LWhpbnQtZXhhbXBsZS5odG1sJyxcbiAgc3R5bGVVcmxzOiBbJ2lucHV0LWhpbnQtZXhhbXBsZS5jc3MnXSxcbn0pXG5leHBvcnQgY2xhc3MgSW5wdXRIaW50RXhhbXBsZSB7fVxuIiwiPGZvcm0gY2xhc3M9XCJleGFtcGxlLWZvcm1cIj5cblxuICA8bWF0LWZvcm0tZmllbGQgY2xhc3M9XCJleGFtcGxlLWZ1bGwtd2lkdGhcIj5cbiAgICA8aW5wdXQgbWF0SW5wdXQgI21lc3NhZ2UgbWF4bGVuZ3RoPVwiMjU2XCIgcGxhY2Vob2xkZXI9XCJNZXNzYWdlXCI+XG4gICAgPG1hdC1oaW50IGFsaWduPVwic3RhcnRcIj48c3Ryb25nPkRvbid0IGRpc2Nsb3NlIHBlcnNvbmFsIGluZm88L3N0cm9uZz4gPC9tYXQtaGludD5cbiAgICA8bWF0LWhpbnQgYWxpZ249XCJlbmRcIj57e21lc3NhZ2UudmFsdWUubGVuZ3RofX0gLyAyNTY8L21hdC1oaW50PlxuICA8L21hdC1mb3JtLWZpZWxkPlxuICBcbjwvZm9ybT5cbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5wdXQtaGludC1leGFtcGxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vc3JjL2NvbXBvbmVudHMtZXhhbXBsZXMvbWF0ZXJpYWwvaW5wdXQvaW5wdXQtaGludC9pbnB1dC1oaW50LWV4YW1wbGUudHMiLCIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9zcmMvY29tcG9uZW50cy1leGFtcGxlcy9tYXRlcmlhbC9pbnB1dC9pbnB1dC1oaW50L2lucHV0LWhpbnQtZXhhbXBsZS5odG1sIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7QUFBQSxPQUFPLEVBQUMsU0FBUyxFQUFDLE1BQU0sZUFBZSxDQUFDOzs7Ozs7OztBQVV4QyxNQUFNLE9BQU8sZ0JBQWdCOzs7WUFMNUIsU0FBUyxTQUFDO2dCQUNULFFBQVEsRUFBRSxvQkFBb0I7Z0JBQzlCLFdBQVcsRUFBRSx5QkFBeUI7Z0JBQ3RDLFNBQVMsRUFBRSxDQUFDLHdCQUF3QixDQUFDO2FBQ3RDOztnRkFDWSxnQkFBZ0I7cURBQWhCLGdCQUFnQjtRQ1Y3QiwrQkFFRTtRQUFBLHlDQUNFO1FBQUEsOEJBQ0E7UUFBQSxtQ0FBd0I7UUFBQSw4QkFBUTtRQUFBLDRDQUE0QjtRQUFBLGlCQUFTO1FBQUMsaUJBQVc7UUFDakYsbUNBQXNCO1FBQUEsWUFBOEI7UUFBQSxpQkFBVztRQUNqRSxpQkFBaUI7UUFFbkIsaUJBQU87OztRQUhtQixlQUE4QjtRQUE5QixxREFBOEI7O21DREszQyxnQkFBZ0I7Y0FMNUIsU0FBUztlQUFDO2dCQUNULFFBQVEsRUFBRSxvQkFBb0I7Z0JBQzlCLFdBQVcsRUFBRSx5QkFBeUI7Z0JBQ3RDLFNBQVMsRUFBRSxDQUFDLHdCQUF3QixDQUFDO2FBQ3RDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtDb21wb25lbnR9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG4vKipcbiAqIEB0aXRsZSBJbnB1dCB3aXRoIGhpbnRzXG4gKi9cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ2lucHV0LWhpbnQtZXhhbXBsZScsXG4gIHRlbXBsYXRlVXJsOiAnaW5wdXQtaGludC1leGFtcGxlLmh0bWwnLFxuICBzdHlsZVVybHM6IFsnaW5wdXQtaGludC1leGFtcGxlLmNzcyddLFxufSlcbmV4cG9ydCBjbGFzcyBJbnB1dEhpbnRFeGFtcGxlIHt9XG4iLCI8Zm9ybSBjbGFzcz1cImV4YW1wbGUtZm9ybVwiPlxuXG4gIDxtYXQtZm9ybS1maWVsZCBjbGFzcz1cImV4YW1wbGUtZnVsbC13aWR0aFwiPlxuICAgIDxpbnB1dCBtYXRJbnB1dCAjbWVzc2FnZSBtYXhsZW5ndGg9XCIyNTZcIiBwbGFjZWhvbGRlcj1cIk1lc3NhZ2VcIj5cbiAgICA8bWF0LWhpbnQgYWxpZ249XCJzdGFydFwiPjxzdHJvbmc+RG9uJ3QgZGlzY2xvc2UgcGVyc29uYWwgaW5mbzwvc3Ryb25nPiA8L21hdC1oaW50PlxuICAgIDxtYXQtaGludCBhbGlnbj1cImVuZFwiPnt7bWVzc2FnZS52YWx1ZS5sZW5ndGh9fSAvIDI1NjwvbWF0LWhpbnQ+XG4gIDwvbWF0LWZvcm0tZmllbGQ+XG4gIFxuPC9mb3JtPlxuIl19

@@ -10,7 +10,6 @@ import { MatFormField } from '@angular/material/form-field';
  * @fileoverview added by tsickle
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const _c0 = ["picker", ""];
 /**
  * \@title Accordion with expand/collapse all toggles
  */
@@ -32,7 +31,7 @@ ExpansionExpandCollapseAllExample.propDecorators = {
     } if (rf & 2) {
         var _t;
         ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.accordion = _t.first);
-    } }, decls: 40, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "type", "number", "min", "1", "placeholder", "Age"], ["disabled", ""], ["matInput", "", "placeholder", "Country"], ["matInput", "", "placeholder", "Date", "readonly", "", 3, "matDatepicker", "focus"]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 40, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "type", "number", "min", "1", "placeholder", "Age"], ["disabled", ""], ["matInput", "", "placeholder", "Country"], ["matInput", "", "placeholder", "Date", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) { if (rf & 1) {
         const _r1 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "div", 0);
         ɵɵelementStart(1, "button", 1);
@@ -97,7 +96,7 @@ ExpansionExpandCollapseAllExample.propDecorators = {
         ɵɵlistener("focus", function ExpansionExpandCollapseAllExample_Template_input_focus_37_listener($event) { ɵɵrestoreView(_r1); const _r0 = ɵɵreference(39); return _r0.open(); });
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelement(38, "mat-datepicker", null, _c0);
+        ɵɵelement(38, "mat-datepicker", null, 8);
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
@@ -196,7 +195,6 @@ if (false) {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const _c0$1 = ["picker", ""];
 /**
  * \@title Expansion panel as accordion
  */
@@ -232,7 +230,7 @@ ExpansionStepsExample.decorators = [
             },] },
 ];
 /** @nocollapse */ ExpansionStepsExample.ɵfac = function ExpansionStepsExample_Factory(t) { return new (t || ExpansionStepsExample)(); };
-/** @nocollapse */ ExpansionStepsExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 48, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "type", "number", "min", "1", "placeholder", "Age"], ["mat-button", "", "color", "primary", 3, "click"], ["matInput", "", "placeholder", "Country"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "placeholder", "Date", "readonly", "", 3, "matDatepicker", "focus"]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ ExpansionStepsExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 48, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "type", "number", "min", "1", "placeholder", "Age"], ["mat-button", "", "color", "primary", 3, "click"], ["matInput", "", "placeholder", "Country"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "placeholder", "Date", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
         const _r3 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-accordion", 0);
         ɵɵelementStart(1, "mat-expansion-panel", 1);
@@ -306,7 +304,7 @@ ExpansionStepsExample.decorators = [
         ɵɵlistener("focus", function ExpansionStepsExample_Template_input_focus_40_listener($event) { ɵɵrestoreView(_r3); const _r2 = ɵɵreference(42); return _r2.open(); });
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelement(41, "mat-datepicker", null, _c0$1);
+        ɵɵelement(41, "mat-datepicker", null, 8);
         ɵɵelementStart(43, "mat-action-row");
         ɵɵelementStart(44, "button", 6);
         ɵɵlistener("click", function ExpansionStepsExample_Template_button_click_44_listener($event) { return ctx.prevStep(); });
@@ -396,5 +394,5 @@ ExpansionExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, ExpansionExamplesModule };
+export { ExpansionExamplesModule, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample };
 //# sourceMappingURL=expansion.js.map

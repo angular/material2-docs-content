@@ -57,7 +57,6 @@ var ButtonToggleAppearanceExample = /** @class */ (function () {
             }]
     }], null, null);
 
-var _c0 = ["group", "matButtonToggleGroup"];
 /**
  * @title Exclusive selection
  */
@@ -72,30 +71,30 @@ var ButtonToggleExclusiveExample = /** @class */ (function () {
                 },] },
     ];
     ButtonToggleExclusiveExample.ɵfac = function ButtonToggleExclusiveExample_Factory(t) { return new (t || ButtonToggleExclusiveExample)(); };
-    ButtonToggleExclusiveExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "mat-button-toggle-group", null, _c0);
-            ɵɵelementStart(2, "mat-button-toggle", 0);
+    ButtonToggleExclusiveExample.ɵcmp = ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["group", "matButtonToggleGroup"], ["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "mat-button-toggle-group", null, 0);
+            ɵɵelementStart(2, "mat-button-toggle", 1);
             ɵɵelementStart(3, "mat-icon");
             ɵɵtext(4, "format_align_left");
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(5, "mat-button-toggle", 1);
+            ɵɵelementStart(5, "mat-button-toggle", 2);
             ɵɵelementStart(6, "mat-icon");
             ɵɵtext(7, "format_align_center");
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(8, "mat-button-toggle", 2);
+            ɵɵelementStart(8, "mat-button-toggle", 3);
             ɵɵelementStart(9, "mat-icon");
             ɵɵtext(10, "format_align_right");
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(11, "mat-button-toggle", 3);
+            ɵɵelementStart(11, "mat-button-toggle", 4);
             ɵɵelementStart(12, "mat-icon");
             ɵɵtext(13, "format_align_justify");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(14, "div", 4);
+            ɵɵelementStart(14, "div", 5);
             ɵɵtext(15);
             ɵɵelementEnd();
         } if (rf & 2) {
@@ -195,5 +194,5 @@ var ButtonToggleExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonToggleExamplesModule };
+export { ButtonToggleAppearanceExample, ButtonToggleExamplesModule, ButtonToggleExclusiveExample, ButtonToggleOverviewExample };
 //# sourceMappingURL=button-toggle.js.map

@@ -12,33 +12,31 @@ import { BehaviorSubject } from 'rxjs';
 import { CdkEditable, FormValueContainer } from '@angular/cdk-experimental/popover-edit';
 import { MatFormField } from '@angular/material/form-field';
 
-var _c0 = ["nameEdit", ""];
-var _c1 = ["f", "ngForm"];
 function PopoverEditCellSpanMatTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     var _r15 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
-    ɵɵelementStart(1, "form", 10, _c1);
+    ɵɵelementStart(1, "form", 11, 12);
     ɵɵlistener("ngSubmit", function PopoverEditCellSpanMatTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r15); var ctx_r12 = ctx.$implicit; var _r13 = ɵɵreference(2); var ctx_r14 = ɵɵnextContext(); return ctx_r14.onSubmit(ctx_r12.person, _r13); });
     ɵɵlistener("matEditLensPreservedFormValueChange", function PopoverEditCellSpanMatTableExample_ng_template_1_Template_form_matEditLensPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r15); var ctx_r12 = ctx.$implicit; var ctx_r16 = ɵɵnextContext(); return ctx_r16.preservedValues.set(ctx_r12.person, $event); });
-    ɵɵelementStart(3, "div", 11);
+    ɵɵelementStart(3, "div", 13);
     ɵɵelementStart(4, "mat-form-field");
-    ɵɵelement(5, "input", 12);
+    ɵɵelement(5, "input", 14);
     ɵɵelementEnd();
     ɵɵelementStart(6, "mat-form-field");
-    ɵɵelement(7, "input", 13);
+    ɵɵelement(7, "input", 15);
     ɵɵelementEnd();
     ɵɵelementStart(8, "mat-form-field");
-    ɵɵelement(9, "input", 14);
+    ɵɵelement(9, "input", 16);
     ɵɵelementEnd();
     ɵɵelementEnd();
-    ɵɵelementStart(10, "div", 15);
-    ɵɵelementStart(11, "button", 16);
+    ɵɵelementStart(10, "div", 17);
+    ɵɵelementStart(11, "button", 18);
     ɵɵtext(12, "Confirm");
     ɵɵelementEnd();
-    ɵɵelementStart(13, "button", 17);
+    ɵɵelementStart(13, "button", 19);
     ɵɵtext(14, "Revert");
     ɵɵelementEnd();
-    ɵɵelementStart(15, "button", 18);
+    ɵɵelementStart(15, "button", 20);
     ɵɵtext(16, "Close");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -60,12 +58,12 @@ function PopoverEditCellSpanMatTableExample_ng_template_1_Template(rf, ctx) { if
     ɵɵattribute("cdkFocusInitial", ctx_r12.focus === "lastName" || null);
 } }
 function PopoverEditCellSpanMatTableExample_th_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 19);
+    ɵɵelementStart(0, "th", 21);
     ɵɵtext(1, " No. ");
     ɵɵelementEnd();
 } }
 function PopoverEditCellSpanMatTableExample_td_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 20);
+    ɵɵelementStart(0, "td", 22);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -74,97 +72,97 @@ function PopoverEditCellSpanMatTableExample_td_5_Template(rf, ctx) { if (rf & 1)
     ɵɵtextInterpolate1(" ", person_r17.id, " ");
 } }
 function PopoverEditCellSpanMatTableExample_th_7_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 19);
+    ɵɵelementStart(0, "th", 21);
     ɵɵtext(1, " First Name ");
     ɵɵelementEnd();
 } }
 function PopoverEditCellSpanMatTableExample_td_8_span_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span");
-    ɵɵelementStart(1, "button", 23);
+    ɵɵelementStart(1, "button", 25);
     ɵɵelementStart(2, "mat-icon");
     ɵɵtext(3, "edit");
     ɵɵelementEnd();
     ɵɵelementEnd();
     ɵɵelementEnd();
 } }
-var _c2 = function (a0) { return { person: a0, focus: "firstName" }; };
-var _c3 = { after: 2 };
+var _c0 = function (a0) { return { person: a0, focus: "firstName" }; };
+var _c1 = { after: 2 };
 function PopoverEditCellSpanMatTableExample_td_8_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 21);
+    ɵɵelementStart(0, "td", 23);
     ɵɵtext(1);
-    ɵɵtemplate(2, PopoverEditCellSpanMatTableExample_td_8_span_2_Template, 4, 0, "span", 22);
+    ɵɵtemplate(2, PopoverEditCellSpanMatTableExample_td_8_span_2_Template, 4, 0, "span", 24);
     ɵɵelementEnd();
 } if (rf & 2) {
     var person_r18 = ctx.$implicit;
     ɵɵnextContext();
     var _r0 = ɵɵreference(2);
-    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c2, person_r18))("matPopoverEditColspan", _c3);
+    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c0, person_r18))("matPopoverEditColspan", _c1);
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", person_r18.firstName, " ");
 } }
 function PopoverEditCellSpanMatTableExample_th_10_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 19);
+    ɵɵelementStart(0, "th", 21);
     ɵɵtext(1, " Middle Name ");
     ɵɵelementEnd();
 } }
 function PopoverEditCellSpanMatTableExample_td_11_span_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span");
-    ɵɵelementStart(1, "button", 23);
+    ɵɵelementStart(1, "button", 25);
     ɵɵelementStart(2, "mat-icon");
     ɵɵtext(3, "edit");
     ɵɵelementEnd();
     ɵɵelementEnd();
     ɵɵelementEnd();
 } }
-var _c4 = function (a0) { return { person: a0, focus: "middleName" }; };
-var _c5 = { before: 1, after: 1 };
+var _c2 = function (a0) { return { person: a0, focus: "middleName" }; };
+var _c3 = { before: 1, after: 1 };
 function PopoverEditCellSpanMatTableExample_td_11_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 21);
+    ɵɵelementStart(0, "td", 23);
     ɵɵtext(1);
-    ɵɵtemplate(2, PopoverEditCellSpanMatTableExample_td_11_span_2_Template, 4, 0, "span", 22);
+    ɵɵtemplate(2, PopoverEditCellSpanMatTableExample_td_11_span_2_Template, 4, 0, "span", 24);
     ɵɵelementEnd();
 } if (rf & 2) {
     var person_r20 = ctx.$implicit;
     ɵɵnextContext();
     var _r0 = ɵɵreference(2);
-    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c4, person_r20))("matPopoverEditColspan", _c5);
+    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c2, person_r20))("matPopoverEditColspan", _c3);
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", person_r20.middleName, " ");
 } }
 function PopoverEditCellSpanMatTableExample_th_13_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 19);
+    ɵɵelementStart(0, "th", 21);
     ɵɵtext(1, " Last Name ");
     ɵɵelementEnd();
 } }
 function PopoverEditCellSpanMatTableExample_td_14_span_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span");
-    ɵɵelementStart(1, "button", 23);
+    ɵɵelementStart(1, "button", 25);
     ɵɵelementStart(2, "mat-icon");
     ɵɵtext(3, "edit");
     ɵɵelementEnd();
     ɵɵelementEnd();
     ɵɵelementEnd();
 } }
-var _c6 = function (a0) { return { person: a0, focus: "lastName" }; };
-var _c7 = { before: 2 };
+var _c4 = function (a0) { return { person: a0, focus: "lastName" }; };
+var _c5 = { before: 2 };
 function PopoverEditCellSpanMatTableExample_td_14_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 21);
+    ɵɵelementStart(0, "td", 23);
     ɵɵtext(1);
-    ɵɵtemplate(2, PopoverEditCellSpanMatTableExample_td_14_span_2_Template, 4, 0, "span", 22);
+    ɵɵtemplate(2, PopoverEditCellSpanMatTableExample_td_14_span_2_Template, 4, 0, "span", 24);
     ɵɵelementEnd();
 } if (rf & 2) {
     var person_r22 = ctx.$implicit;
     ɵɵnextContext();
     var _r0 = ɵɵreference(2);
-    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c6, person_r22))("matPopoverEditColspan", _c7);
+    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c4, person_r22))("matPopoverEditColspan", _c5);
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", person_r22.lastName, " ");
 } }
 function PopoverEditCellSpanMatTableExample_tr_15_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 24);
+    ɵɵelement(0, "tr", 26);
 } }
 function PopoverEditCellSpanMatTableExample_tr_16_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 25);
+    ɵɵelement(0, "tr", 27);
 } }
 var PERSON_DATA = [
     { id: 1, firstName: 'Terra', middleName: 'Maduin', lastName: 'Branford' },
@@ -202,27 +200,27 @@ var PopoverEditCellSpanMatTableExample = /** @class */ (function () {
                 },] },
     ];
     PopoverEditCellSpanMatTableExample.ɵfac = function PopoverEditCellSpanMatTableExample_Factory(t) { return new (t || PopoverEditCellSpanMatTableExample)(); };
-    PopoverEditCellSpanMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditCellSpanMatTableExample, selectors: [["popover-edit-cell-span-mat-table-example"]], decls: 17, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "firstName"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", "matPopoverEditColspan", 4, "matCellDef"], ["matColumnDef", "middleName"], ["matColumnDef", "lastName"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["mat-edit-content", "", 1, "example-input-container"], ["matInput", "", "name", "firstName", "required", "", 3, "ngModel"], ["matInput", "", "name", "middleName", 3, "ngModel"], ["matInput", "", "name", "lastName", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "cdkEditRevert", ""], ["mat-button", "", "cdkEditClose", ""], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", "matPopoverEditColspan"], [4, "matRowHoverContent"], ["mat-icon-button", "", "matEditOpen", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function PopoverEditCellSpanMatTableExample_Template(rf, ctx) { if (rf & 1) {
+    PopoverEditCellSpanMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditCellSpanMatTableExample, selectors: [["popover-edit-cell-span-mat-table-example"]], decls: 17, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["nameEdit", ""], ["matColumnDef", "id"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "firstName"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", "matPopoverEditColspan", 4, "matCellDef"], ["matColumnDef", "middleName"], ["matColumnDef", "lastName"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", "", 1, "example-input-container"], ["matInput", "", "name", "firstName", "required", "", 3, "ngModel"], ["matInput", "", "name", "middleName", 3, "ngModel"], ["matInput", "", "name", "lastName", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "cdkEditRevert", ""], ["mat-button", "", "cdkEditClose", ""], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", "matPopoverEditColspan"], [4, "matRowHoverContent"], ["mat-icon-button", "", "matEditOpen", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function PopoverEditCellSpanMatTableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
-            ɵɵtemplate(1, PopoverEditCellSpanMatTableExample_ng_template_1_Template, 17, 7, "ng-template", null, _c0, ɵɵtemplateRefExtractor);
-            ɵɵelementContainerStart(3, 1);
-            ɵɵtemplate(4, PopoverEditCellSpanMatTableExample_th_4_Template, 2, 0, "th", 2);
-            ɵɵtemplate(5, PopoverEditCellSpanMatTableExample_td_5_Template, 2, 1, "td", 3);
+            ɵɵtemplate(1, PopoverEditCellSpanMatTableExample_ng_template_1_Template, 17, 7, "ng-template", null, 1, ɵɵtemplateRefExtractor);
+            ɵɵelementContainerStart(3, 2);
+            ɵɵtemplate(4, PopoverEditCellSpanMatTableExample_th_4_Template, 2, 0, "th", 3);
+            ɵɵtemplate(5, PopoverEditCellSpanMatTableExample_td_5_Template, 2, 1, "td", 4);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(6, 4);
-            ɵɵtemplate(7, PopoverEditCellSpanMatTableExample_th_7_Template, 2, 0, "th", 2);
-            ɵɵtemplate(8, PopoverEditCellSpanMatTableExample_td_8_Template, 3, 6, "td", 5);
+            ɵɵelementContainerStart(6, 5);
+            ɵɵtemplate(7, PopoverEditCellSpanMatTableExample_th_7_Template, 2, 0, "th", 3);
+            ɵɵtemplate(8, PopoverEditCellSpanMatTableExample_td_8_Template, 3, 6, "td", 6);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(9, 6);
-            ɵɵtemplate(10, PopoverEditCellSpanMatTableExample_th_10_Template, 2, 0, "th", 2);
-            ɵɵtemplate(11, PopoverEditCellSpanMatTableExample_td_11_Template, 3, 6, "td", 5);
+            ɵɵelementContainerStart(9, 7);
+            ɵɵtemplate(10, PopoverEditCellSpanMatTableExample_th_10_Template, 2, 0, "th", 3);
+            ɵɵtemplate(11, PopoverEditCellSpanMatTableExample_td_11_Template, 3, 6, "td", 6);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(12, 7);
-            ɵɵtemplate(13, PopoverEditCellSpanMatTableExample_th_13_Template, 2, 0, "th", 2);
-            ɵɵtemplate(14, PopoverEditCellSpanMatTableExample_td_14_Template, 3, 6, "td", 5);
+            ɵɵelementContainerStart(12, 8);
+            ɵɵtemplate(13, PopoverEditCellSpanMatTableExample_th_13_Template, 2, 0, "th", 3);
+            ɵɵtemplate(14, PopoverEditCellSpanMatTableExample_td_14_Template, 3, 6, "td", 6);
             ɵɵelementContainerEnd();
-            ɵɵtemplate(15, PopoverEditCellSpanMatTableExample_tr_15_Template, 1, 0, "tr", 8);
-            ɵɵtemplate(16, PopoverEditCellSpanMatTableExample_tr_16_Template, 1, 0, "tr", 9);
+            ɵɵtemplate(15, PopoverEditCellSpanMatTableExample_tr_15_Template, 1, 0, "tr", 9);
+            ɵɵtemplate(16, PopoverEditCellSpanMatTableExample_tr_16_Template, 1, 0, "tr", 10);
             ɵɵelementEnd();
         } if (rf & 2) {
             ɵɵproperty("dataSource", ctx.dataSource);
@@ -264,17 +262,15 @@ var ExampleDataSource = /** @class */ (function (_super) {
     return ExampleDataSource;
 }(DataSource));
 
-var _c0$1 = ["weightEdit", ""];
-var _c1$1 = ["f", "ngForm"];
 function PopoverEditMatTableFlexExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     var _r40 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
-    ɵɵelementStart(1, "form", 11, _c1$1);
+    ɵɵelementStart(1, "form", 12, 13);
     ɵɵlistener("ngSubmit", function PopoverEditMatTableFlexExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r40); var element_r37 = ctx.$implicit; var _r38 = ɵɵreference(2); var ctx_r39 = ɵɵnextContext(); return ctx_r39.onSubmitWeight(element_r37, _r38); });
     ɵɵlistener("matEditLensPreservedFormValueChange", function PopoverEditMatTableFlexExample_ng_template_1_Template_form_matEditLensPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r40); var element_r37 = ctx.$implicit; var ctx_r41 = ɵɵnextContext(); return ctx_r41.preservedWeightValues.set(element_r37, $event); });
-    ɵɵelementStart(3, "div", 12);
+    ɵɵelementStart(3, "div", 14);
     ɵɵelementStart(4, "mat-form-field");
-    ɵɵelement(5, "input", 13);
+    ɵɵelement(5, "input", 15);
     ɵɵelementEnd();
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -306,29 +302,28 @@ function PopoverEditMatTableFlexExample_mat_header_cell_7_Template(rf, ctx) { if
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } }
-var _c2$1 = ["nameEdit", ""];
 function PopoverEditMatTableFlexExample_mat_cell_8_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     var _r50 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
-    ɵɵelementStart(1, "form", 11, _c1$1);
+    ɵɵelementStart(1, "form", 12, 13);
     ɵɵlistener("ngSubmit", function PopoverEditMatTableFlexExample_mat_cell_8_ng_template_2_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r50); var _r47 = ɵɵreference(2); var element_r43 = ɵɵnextContext().$implicit; var ctx_r48 = ɵɵnextContext(); return ctx_r48.onSubmitName(element_r43, _r47); });
     ɵɵlistener("matEditLensPreservedFormValueChange", function PopoverEditMatTableFlexExample_mat_cell_8_ng_template_2_Template_form_matEditLensPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r50); var element_r43 = ɵɵnextContext().$implicit; var ctx_r51 = ɵɵnextContext(); return ctx_r51.preservedNameValues.set(element_r43, $event); });
-    ɵɵelementStart(3, "h2", 16);
+    ɵɵelementStart(3, "h2", 19);
     ɵɵtext(4, "Name");
     ɵɵelementEnd();
-    ɵɵelementStart(5, "div", 12);
+    ɵɵelementStart(5, "div", 14);
     ɵɵelementStart(6, "mat-form-field");
-    ɵɵelement(7, "input", 17);
+    ɵɵelement(7, "input", 20);
     ɵɵelementEnd();
     ɵɵelementEnd();
-    ɵɵelementStart(8, "div", 18);
-    ɵɵelementStart(9, "button", 19);
+    ɵɵelementStart(8, "div", 21);
+    ɵɵelementStart(9, "button", 22);
     ɵɵtext(10, "Confirm");
     ɵɵelementEnd();
-    ɵɵelementStart(11, "button", 20);
+    ɵɵelementStart(11, "button", 23);
     ɵɵtext(12, "Revert");
     ɵɵelementEnd();
-    ɵɵelementStart(13, "button", 21);
+    ɵɵelementStart(13, "button", 24);
     ɵɵtext(14, "Close");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -344,7 +339,7 @@ function PopoverEditMatTableFlexExample_mat_cell_8_ng_template_2_Template(rf, ct
 } }
 function PopoverEditMatTableFlexExample_mat_cell_8_span_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span");
-    ɵɵelementStart(1, "button", 22);
+    ɵɵelementStart(1, "button", 25);
     ɵɵelementStart(2, "mat-icon");
     ɵɵtext(3, "edit");
     ɵɵelementEnd();
@@ -352,10 +347,10 @@ function PopoverEditMatTableFlexExample_mat_cell_8_span_4_Template(rf, ctx) { if
     ɵɵelementEnd();
 } }
 function PopoverEditMatTableFlexExample_mat_cell_8_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-cell", 14);
+    ɵɵelementStart(0, "mat-cell", 16);
     ɵɵtext(1);
-    ɵɵtemplate(2, PopoverEditMatTableFlexExample_mat_cell_8_ng_template_2_Template, 15, 2, "ng-template", null, _c2$1, ɵɵtemplateRefExtractor);
-    ɵɵtemplate(4, PopoverEditMatTableFlexExample_mat_cell_8_span_4_Template, 4, 0, "span", 15);
+    ɵɵtemplate(2, PopoverEditMatTableFlexExample_mat_cell_8_ng_template_2_Template, 15, 2, "ng-template", null, 17, ɵɵtemplateRefExtractor);
+    ɵɵtemplate(4, PopoverEditMatTableFlexExample_mat_cell_8_span_4_Template, 4, 0, "span", 18);
     ɵɵelementEnd();
 } if (rf & 2) {
     var element_r43 = ctx.$implicit;
@@ -371,7 +366,7 @@ function PopoverEditMatTableFlexExample_mat_header_cell_10_Template(rf, ctx) { i
 } }
 function PopoverEditMatTableFlexExample_mat_cell_11_span_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span");
-    ɵɵelementStart(1, "button", 22);
+    ɵɵelementStart(1, "button", 25);
     ɵɵelementStart(2, "mat-icon");
     ɵɵtext(3, "edit");
     ɵɵelementEnd();
@@ -379,9 +374,9 @@ function PopoverEditMatTableFlexExample_mat_cell_11_span_2_Template(rf, ctx) { i
     ɵɵelementEnd();
 } }
 function PopoverEditMatTableFlexExample_mat_cell_11_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-cell", 23);
+    ɵɵelementStart(0, "mat-cell", 26);
     ɵɵtext(1);
-    ɵɵtemplate(2, PopoverEditMatTableFlexExample_mat_cell_11_span_2_Template, 4, 0, "span", 15);
+    ɵɵtemplate(2, PopoverEditMatTableFlexExample_mat_cell_11_span_2_Template, 4, 0, "span", 18);
     ɵɵelementEnd();
 } if (rf & 2) {
     var element_r54 = ctx.$implicit;
@@ -463,27 +458,27 @@ var PopoverEditMatTableFlexExample = /** @class */ (function () {
                 },] },
     ];
     PopoverEditMatTableFlexExample.ɵfac = function PopoverEditMatTableFlexExample_Factory(t) { return new (t || PopoverEditMatTableFlexExample)(); };
-    PopoverEditMatTableFlexExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditMatTableFlexExample, selectors: [["popover-edit-mat-table-flex-example"]], decls: 17, vars: 3, consts: [["editable", "", 1, "example-table", 3, "dataSource"], ["matColumnDef", "position"], [4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], [3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], [3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], [3, "matPopoverEdit"], [4, "matRowHoverContent"], ["mat-edit-title", ""], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "matEditRevert", ""], ["mat-button", "", "matEditClose", ""], ["mat-icon-button", "", "matEditOpen", ""], [3, "matPopoverEdit", "matPopoverEditContext"]], template: function PopoverEditMatTableFlexExample_Template(rf, ctx) { if (rf & 1) {
+    PopoverEditMatTableFlexExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditMatTableFlexExample, selectors: [["popover-edit-mat-table-flex-example"]], decls: 17, vars: 3, consts: [["editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["matColumnDef", "position"], [4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], [3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], [3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], [3, "matPopoverEdit"], ["nameEdit", ""], [4, "matRowHoverContent"], ["mat-edit-title", ""], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "matEditRevert", ""], ["mat-button", "", "matEditClose", ""], ["mat-icon-button", "", "matEditOpen", ""], [3, "matPopoverEdit", "matPopoverEditContext"]], template: function PopoverEditMatTableFlexExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-table", 0);
-            ɵɵtemplate(1, PopoverEditMatTableFlexExample_ng_template_1_Template, 6, 2, "ng-template", null, _c0$1, ɵɵtemplateRefExtractor);
-            ɵɵelementContainerStart(3, 1);
-            ɵɵtemplate(4, PopoverEditMatTableFlexExample_mat_header_cell_4_Template, 2, 0, "mat-header-cell", 2);
-            ɵɵtemplate(5, PopoverEditMatTableFlexExample_mat_cell_5_Template, 2, 1, "mat-cell", 3);
+            ɵɵtemplate(1, PopoverEditMatTableFlexExample_ng_template_1_Template, 6, 2, "ng-template", null, 1, ɵɵtemplateRefExtractor);
+            ɵɵelementContainerStart(3, 2);
+            ɵɵtemplate(4, PopoverEditMatTableFlexExample_mat_header_cell_4_Template, 2, 0, "mat-header-cell", 3);
+            ɵɵtemplate(5, PopoverEditMatTableFlexExample_mat_cell_5_Template, 2, 1, "mat-cell", 4);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(6, 4);
-            ɵɵtemplate(7, PopoverEditMatTableFlexExample_mat_header_cell_7_Template, 2, 0, "mat-header-cell", 2);
-            ɵɵtemplate(8, PopoverEditMatTableFlexExample_mat_cell_8_Template, 5, 2, "mat-cell", 5);
+            ɵɵelementContainerStart(6, 5);
+            ɵɵtemplate(7, PopoverEditMatTableFlexExample_mat_header_cell_7_Template, 2, 0, "mat-header-cell", 3);
+            ɵɵtemplate(8, PopoverEditMatTableFlexExample_mat_cell_8_Template, 5, 2, "mat-cell", 6);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(9, 6);
-            ɵɵtemplate(10, PopoverEditMatTableFlexExample_mat_header_cell_10_Template, 2, 0, "mat-header-cell", 2);
-            ɵɵtemplate(11, PopoverEditMatTableFlexExample_mat_cell_11_Template, 3, 3, "mat-cell", 7);
+            ɵɵelementContainerStart(9, 7);
+            ɵɵtemplate(10, PopoverEditMatTableFlexExample_mat_header_cell_10_Template, 2, 0, "mat-header-cell", 3);
+            ɵɵtemplate(11, PopoverEditMatTableFlexExample_mat_cell_11_Template, 3, 3, "mat-cell", 8);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(12, 8);
-            ɵɵtemplate(13, PopoverEditMatTableFlexExample_mat_header_cell_13_Template, 2, 0, "mat-header-cell", 2);
-            ɵɵtemplate(14, PopoverEditMatTableFlexExample_mat_cell_14_Template, 2, 1, "mat-cell", 3);
+            ɵɵelementContainerStart(12, 9);
+            ɵɵtemplate(13, PopoverEditMatTableFlexExample_mat_header_cell_13_Template, 2, 0, "mat-header-cell", 3);
+            ɵɵtemplate(14, PopoverEditMatTableFlexExample_mat_cell_14_Template, 2, 1, "mat-cell", 4);
             ɵɵelementContainerEnd();
-            ɵɵtemplate(15, PopoverEditMatTableFlexExample_mat_header_row_15_Template, 1, 0, "mat-header-row", 9);
-            ɵɵtemplate(16, PopoverEditMatTableFlexExample_mat_row_16_Template, 1, 0, "mat-row", 10);
+            ɵɵtemplate(15, PopoverEditMatTableFlexExample_mat_header_row_15_Template, 1, 0, "mat-header-row", 10);
+            ɵɵtemplate(16, PopoverEditMatTableFlexExample_mat_row_16_Template, 1, 0, "mat-row", 11);
             ɵɵelementEnd();
         } if (rf & 2) {
             ɵɵproperty("dataSource", ctx.dataSource);
@@ -525,17 +520,15 @@ var ExampleDataSource$1 = /** @class */ (function (_super) {
     return ExampleDataSource;
 }(DataSource));
 
-var _c0$2 = ["weightEdit", ""];
-var _c1$2 = ["f", "ngForm"];
 function PopoverEditMatTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     var _r73 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
-    ɵɵelementStart(1, "form", 11, _c1$2);
+    ɵɵelementStart(1, "form", 12, 13);
     ɵɵlistener("ngSubmit", function PopoverEditMatTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r73); var element_r70 = ctx.$implicit; var _r71 = ɵɵreference(2); var ctx_r72 = ɵɵnextContext(); return ctx_r72.onSubmitWeight(element_r70, _r71); });
     ɵɵlistener("matEditLensPreservedFormValueChange", function PopoverEditMatTableExample_ng_template_1_Template_form_matEditLensPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r73); var element_r70 = ctx.$implicit; var ctx_r74 = ɵɵnextContext(); return ctx_r74.weightValues.for(element_r70).value = $event; });
-    ɵɵelementStart(3, "div", 12);
+    ɵɵelementStart(3, "div", 14);
     ɵɵelementStart(4, "mat-form-field");
-    ɵɵelement(5, "input", 13);
+    ɵɵelement(5, "input", 15);
     ɵɵelementEnd();
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -549,20 +542,20 @@ function PopoverEditMatTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1
     ɵɵproperty("ngModel", element_r70.weight);
 } }
 function PopoverEditMatTableExample_th_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 14);
+    ɵɵelementStart(0, "th", 16);
     ɵɵtext(1, " No. ");
     ɵɵelementEnd();
 } }
 function PopoverEditMatTableExample_td_5_span_2_Template(rf, ctx) { if (rf & 1) {
     var _r79 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "span");
-    ɵɵelementStart(1, "button", 17);
+    ɵɵelementStart(1, "button", 19);
     ɵɵlistener("click", function PopoverEditMatTableExample_td_5_span_2_Template_button_click_1_listener($event) { ɵɵrestoreView(_r79); var element_r75 = ɵɵnextContext().$implicit; var ctx_r77 = ɵɵnextContext(); return ctx_r77.goodJob(element_r75); });
     ɵɵelementStart(2, "mat-icon");
     ɵɵtext(3, "thumb_up");
     ɵɵelementEnd();
     ɵɵelementEnd();
-    ɵɵelementStart(4, "button", 17);
+    ɵɵelementStart(4, "button", 19);
     ɵɵlistener("click", function PopoverEditMatTableExample_td_5_span_2_Template_button_click_4_listener($event) { ɵɵrestoreView(_r79); var element_r75 = ɵɵnextContext().$implicit; var ctx_r80 = ɵɵnextContext(); return ctx_r80.badJob(element_r75); });
     ɵɵelementStart(5, "mat-icon");
     ɵɵtext(6, "thumb_down");
@@ -571,9 +564,9 @@ function PopoverEditMatTableExample_td_5_span_2_Template(rf, ctx) { if (rf & 1) 
     ɵɵelementEnd();
 } }
 function PopoverEditMatTableExample_td_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 15);
+    ɵɵelementStart(0, "td", 17);
     ɵɵtext(1);
-    ɵɵtemplate(2, PopoverEditMatTableExample_td_5_span_2_Template, 7, 0, "span", 16);
+    ɵɵtemplate(2, PopoverEditMatTableExample_td_5_span_2_Template, 7, 0, "span", 18);
     ɵɵelementEnd();
 } if (rf & 2) {
     var element_r75 = ctx.$implicit;
@@ -581,33 +574,32 @@ function PopoverEditMatTableExample_td_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", element_r75.position, " ");
 } }
 function PopoverEditMatTableExample_th_7_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 14);
+    ɵɵelementStart(0, "th", 16);
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } }
-var _c2$2 = ["nameEdit", ""];
 function PopoverEditMatTableExample_td_8_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     var _r89 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
-    ɵɵelementStart(1, "form", 11, _c1$2);
+    ɵɵelementStart(1, "form", 12, 13);
     ɵɵlistener("ngSubmit", function PopoverEditMatTableExample_td_8_ng_template_2_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r89); var _r86 = ɵɵreference(2); var element_r82 = ɵɵnextContext().$implicit; var ctx_r87 = ɵɵnextContext(); return ctx_r87.onSubmitName(element_r82, _r86); });
     ɵɵlistener("matEditLensPreservedFormValueChange", function PopoverEditMatTableExample_td_8_ng_template_2_Template_form_matEditLensPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r89); var element_r82 = ɵɵnextContext().$implicit; var ctx_r90 = ɵɵnextContext(); return ctx_r90.nameValues.for(element_r82).value = $event; });
-    ɵɵelementStart(3, "h2", 19);
+    ɵɵelementStart(3, "h2", 22);
     ɵɵtext(4, "Name");
     ɵɵelementEnd();
-    ɵɵelementStart(5, "div", 12);
+    ɵɵelementStart(5, "div", 14);
     ɵɵelementStart(6, "mat-form-field");
-    ɵɵelement(7, "input", 20);
+    ɵɵelement(7, "input", 23);
     ɵɵelementEnd();
     ɵɵelementEnd();
-    ɵɵelementStart(8, "div", 21);
-    ɵɵelementStart(9, "button", 22);
+    ɵɵelementStart(8, "div", 24);
+    ɵɵelementStart(9, "button", 25);
     ɵɵtext(10, "Confirm");
     ɵɵelementEnd();
-    ɵɵelementStart(11, "button", 23);
+    ɵɵelementStart(11, "button", 26);
     ɵɵtext(12, "Revert");
     ɵɵelementEnd();
-    ɵɵelementStart(13, "button", 24);
+    ɵɵelementStart(13, "button", 27);
     ɵɵtext(14, "Close");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -623,7 +615,7 @@ function PopoverEditMatTableExample_td_8_ng_template_2_Template(rf, ctx) { if (r
 } }
 function PopoverEditMatTableExample_td_8_span_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span");
-    ɵɵelementStart(1, "button", 25);
+    ɵɵelementStart(1, "button", 28);
     ɵɵelementStart(2, "mat-icon");
     ɵɵtext(3, "edit");
     ɵɵelementEnd();
@@ -631,10 +623,10 @@ function PopoverEditMatTableExample_td_8_span_4_Template(rf, ctx) { if (rf & 1) 
     ɵɵelementEnd();
 } }
 function PopoverEditMatTableExample_td_8_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 18);
+    ɵɵelementStart(0, "td", 20);
     ɵɵtext(1);
-    ɵɵtemplate(2, PopoverEditMatTableExample_td_8_ng_template_2_Template, 15, 2, "ng-template", null, _c2$2, ɵɵtemplateRefExtractor);
-    ɵɵtemplate(4, PopoverEditMatTableExample_td_8_span_4_Template, 4, 0, "span", 16);
+    ɵɵtemplate(2, PopoverEditMatTableExample_td_8_ng_template_2_Template, 15, 2, "ng-template", null, 21, ɵɵtemplateRefExtractor);
+    ɵɵtemplate(4, PopoverEditMatTableExample_td_8_span_4_Template, 4, 0, "span", 18);
     ɵɵelementEnd();
 } if (rf & 2) {
     var element_r82 = ctx.$implicit;
@@ -644,13 +636,13 @@ function PopoverEditMatTableExample_td_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", element_r82.name, " ");
 } }
 function PopoverEditMatTableExample_th_10_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 14);
+    ɵɵelementStart(0, "th", 16);
     ɵɵtext(1, " Weight ");
     ɵɵelementEnd();
 } }
 function PopoverEditMatTableExample_td_11_span_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span");
-    ɵɵelementStart(1, "button", 25);
+    ɵɵelementStart(1, "button", 28);
     ɵɵelementStart(2, "mat-icon");
     ɵɵtext(3, "edit");
     ɵɵelementEnd();
@@ -658,9 +650,9 @@ function PopoverEditMatTableExample_td_11_span_2_Template(rf, ctx) { if (rf & 1)
     ɵɵelementEnd();
 } }
 function PopoverEditMatTableExample_td_11_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 26);
+    ɵɵelementStart(0, "td", 29);
     ɵɵtext(1);
-    ɵɵtemplate(2, PopoverEditMatTableExample_td_11_span_2_Template, 4, 0, "span", 16);
+    ɵɵtemplate(2, PopoverEditMatTableExample_td_11_span_2_Template, 4, 0, "span", 18);
     ɵɵelementEnd();
 } if (rf & 2) {
     var element_r93 = ctx.$implicit;
@@ -671,12 +663,12 @@ function PopoverEditMatTableExample_td_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", element_r93.weight, " ");
 } }
 function PopoverEditMatTableExample_th_13_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 14);
+    ɵɵelementStart(0, "th", 16);
     ɵɵtext(1, " Symbol ");
     ɵɵelementEnd();
 } }
 function PopoverEditMatTableExample_td_14_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 15);
+    ɵɵelementStart(0, "td", 17);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -685,10 +677,10 @@ function PopoverEditMatTableExample_td_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", element_r95.symbol, " ");
 } }
 function PopoverEditMatTableExample_tr_15_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 27);
+    ɵɵelement(0, "tr", 30);
 } }
 function PopoverEditMatTableExample_tr_16_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 28);
+    ɵɵelement(0, "tr", 31);
 } }
 var ELEMENT_DATA$1 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -753,27 +745,27 @@ var PopoverEditMatTableExample = /** @class */ (function () {
         { type: MatSnackBar }
     ]; };
     PopoverEditMatTableExample.ɵfac = function PopoverEditMatTableExample_Factory(t) { return new (t || PopoverEditMatTableExample)(ɵɵdirectiveInject(MatSnackBar)); };
-    PopoverEditMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditMatTableExample, selectors: [["popover-edit-mat-table-example"]], decls: 17, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-cell", "", 3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], ["mat-header-cell", ""], ["mat-cell", ""], [4, "matRowHoverContent"], ["mat-icon-button", "", 3, "click"], ["mat-cell", "", 3, "matPopoverEdit"], ["mat-edit-title", ""], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "matEditRevert", ""], ["mat-button", "", "matEditClose", ""], ["mat-icon-button", "", "matEditOpen", ""], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext"], ["mat-header-row", ""], ["mat-row", ""]], template: function PopoverEditMatTableExample_Template(rf, ctx) { if (rf & 1) {
+    PopoverEditMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditMatTableExample, selectors: [["popover-edit-mat-table-example"]], decls: 17, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-cell", "", 3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], ["mat-header-cell", ""], ["mat-cell", ""], [4, "matRowHoverContent"], ["mat-icon-button", "", 3, "click"], ["mat-cell", "", 3, "matPopoverEdit"], ["nameEdit", ""], ["mat-edit-title", ""], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-edit-actions", ""], ["mat-button", "", "type", "submit"], ["mat-button", "", "matEditRevert", ""], ["mat-button", "", "matEditClose", ""], ["mat-icon-button", "", "matEditOpen", ""], ["mat-cell", "", 3, "matPopoverEdit", "matPopoverEditContext"], ["mat-header-row", ""], ["mat-row", ""]], template: function PopoverEditMatTableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
-            ɵɵtemplate(1, PopoverEditMatTableExample_ng_template_1_Template, 6, 2, "ng-template", null, _c0$2, ɵɵtemplateRefExtractor);
-            ɵɵelementContainerStart(3, 1);
-            ɵɵtemplate(4, PopoverEditMatTableExample_th_4_Template, 2, 0, "th", 2);
-            ɵɵtemplate(5, PopoverEditMatTableExample_td_5_Template, 3, 1, "td", 3);
+            ɵɵtemplate(1, PopoverEditMatTableExample_ng_template_1_Template, 6, 2, "ng-template", null, 1, ɵɵtemplateRefExtractor);
+            ɵɵelementContainerStart(3, 2);
+            ɵɵtemplate(4, PopoverEditMatTableExample_th_4_Template, 2, 0, "th", 3);
+            ɵɵtemplate(5, PopoverEditMatTableExample_td_5_Template, 3, 1, "td", 4);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(6, 4);
-            ɵɵtemplate(7, PopoverEditMatTableExample_th_7_Template, 2, 0, "th", 2);
-            ɵɵtemplate(8, PopoverEditMatTableExample_td_8_Template, 5, 2, "td", 5);
+            ɵɵelementContainerStart(6, 5);
+            ɵɵtemplate(7, PopoverEditMatTableExample_th_7_Template, 2, 0, "th", 3);
+            ɵɵtemplate(8, PopoverEditMatTableExample_td_8_Template, 5, 2, "td", 6);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(9, 6);
-            ɵɵtemplate(10, PopoverEditMatTableExample_th_10_Template, 2, 0, "th", 2);
-            ɵɵtemplate(11, PopoverEditMatTableExample_td_11_Template, 3, 3, "td", 7);
+            ɵɵelementContainerStart(9, 7);
+            ɵɵtemplate(10, PopoverEditMatTableExample_th_10_Template, 2, 0, "th", 3);
+            ɵɵtemplate(11, PopoverEditMatTableExample_td_11_Template, 3, 3, "td", 8);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(12, 8);
-            ɵɵtemplate(13, PopoverEditMatTableExample_th_13_Template, 2, 0, "th", 2);
-            ɵɵtemplate(14, PopoverEditMatTableExample_td_14_Template, 2, 1, "td", 3);
+            ɵɵelementContainerStart(12, 9);
+            ɵɵtemplate(13, PopoverEditMatTableExample_th_13_Template, 2, 0, "th", 3);
+            ɵɵtemplate(14, PopoverEditMatTableExample_td_14_Template, 2, 1, "td", 4);
             ɵɵelementContainerEnd();
-            ɵɵtemplate(15, PopoverEditMatTableExample_tr_15_Template, 1, 0, "tr", 9);
-            ɵɵtemplate(16, PopoverEditMatTableExample_tr_16_Template, 1, 0, "tr", 10);
+            ɵɵtemplate(15, PopoverEditMatTableExample_tr_15_Template, 1, 0, "tr", 10);
+            ɵɵtemplate(16, PopoverEditMatTableExample_tr_16_Template, 1, 0, "tr", 11);
             ɵɵelementEnd();
         } if (rf & 2) {
             ɵɵproperty("dataSource", ctx.dataSource);
@@ -815,17 +807,15 @@ var ExampleDataSource$2 = /** @class */ (function (_super) {
     return ExampleDataSource;
 }(DataSource));
 
-var _c0$3 = ["weightEdit", ""];
-var _c1$3 = ["f", "ngForm"];
 function PopoverEditTabOutMatTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
     var _r112 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
-    ɵɵelementStart(1, "form", 11, _c1$3);
+    ɵɵelementStart(1, "form", 12, 13);
     ɵɵlistener("ngSubmit", function PopoverEditTabOutMatTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r112); var element_r109 = ctx.$implicit; var _r110 = ɵɵreference(2); var ctx_r111 = ɵɵnextContext(); return ctx_r111.onSubmitWeight(element_r109, _r110); });
     ɵɵlistener("matEditLensPreservedFormValueChange", function PopoverEditTabOutMatTableExample_ng_template_1_Template_form_matEditLensPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r112); var element_r109 = ctx.$implicit; var ctx_r113 = ɵɵnextContext(); return ctx_r113.preservedWeightValues.set(element_r109, $event); });
-    ɵɵelementStart(3, "div", 12);
+    ɵɵelementStart(3, "div", 14);
     ɵɵelementStart(4, "mat-form-field");
-    ɵɵelement(5, "input", 13);
+    ɵɵelement(5, "input", 15);
     ɵɵelementEnd();
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -839,12 +829,12 @@ function PopoverEditTabOutMatTableExample_ng_template_1_Template(rf, ctx) { if (
     ɵɵproperty("ngModel", element_r109.weight);
 } }
 function PopoverEditTabOutMatTableExample_th_4_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 14);
+    ɵɵelementStart(0, "th", 16);
     ɵɵtext(1, " No. ");
     ɵɵelementEnd();
 } }
 function PopoverEditTabOutMatTableExample_td_5_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 15);
+    ɵɵelementStart(0, "td", 17);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -853,20 +843,19 @@ function PopoverEditTabOutMatTableExample_td_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", element_r114.position, " ");
 } }
 function PopoverEditTabOutMatTableExample_th_7_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 14);
+    ɵɵelementStart(0, "th", 16);
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } }
-var _c2$3 = ["nameEdit", ""];
 function PopoverEditTabOutMatTableExample_td_8_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     var _r122 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div");
-    ɵɵelementStart(1, "form", 11, _c1$3);
+    ɵɵelementStart(1, "form", 12, 13);
     ɵɵlistener("ngSubmit", function PopoverEditTabOutMatTableExample_td_8_ng_template_2_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r122); var _r119 = ɵɵreference(2); var element_r115 = ɵɵnextContext().$implicit; var ctx_r120 = ɵɵnextContext(); return ctx_r120.onSubmitName(element_r115, _r119); });
     ɵɵlistener("matEditLensPreservedFormValueChange", function PopoverEditTabOutMatTableExample_td_8_ng_template_2_Template_form_matEditLensPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r122); var element_r115 = ɵɵnextContext().$implicit; var ctx_r123 = ɵɵnextContext(); return ctx_r123.preservedNameValues.set(element_r115, $event); });
-    ɵɵelementStart(3, "div", 12);
+    ɵɵelementStart(3, "div", 14);
     ɵɵelementStart(4, "mat-form-field");
-    ɵɵelement(5, "input", 18);
+    ɵɵelement(5, "input", 21);
     ɵɵelementEnd();
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -887,10 +876,10 @@ function PopoverEditTabOutMatTableExample_td_8_span_4_Template(rf, ctx) { if (rf
     ɵɵelementEnd();
 } }
 function PopoverEditTabOutMatTableExample_td_8_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 16);
+    ɵɵelementStart(0, "td", 18);
     ɵɵtext(1);
-    ɵɵtemplate(2, PopoverEditTabOutMatTableExample_td_8_ng_template_2_Template, 6, 2, "ng-template", null, _c2$3, ɵɵtemplateRefExtractor);
-    ɵɵtemplate(4, PopoverEditTabOutMatTableExample_td_8_span_4_Template, 3, 0, "span", 17);
+    ɵɵtemplate(2, PopoverEditTabOutMatTableExample_td_8_ng_template_2_Template, 6, 2, "ng-template", null, 19, ɵɵtemplateRefExtractor);
+    ɵɵtemplate(4, PopoverEditTabOutMatTableExample_td_8_span_4_Template, 3, 0, "span", 20);
     ɵɵelementEnd();
 } if (rf & 2) {
     var element_r115 = ctx.$implicit;
@@ -900,7 +889,7 @@ function PopoverEditTabOutMatTableExample_td_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵtextInterpolate1(" ", element_r115.name, " ");
 } }
 function PopoverEditTabOutMatTableExample_th_10_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 14);
+    ɵɵelementStart(0, "th", 16);
     ɵɵtext(1, " Weight ");
     ɵɵelementEnd();
 } }
@@ -912,9 +901,9 @@ function PopoverEditTabOutMatTableExample_td_11_span_2_Template(rf, ctx) { if (r
     ɵɵelementEnd();
 } }
 function PopoverEditTabOutMatTableExample_td_11_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 19);
+    ɵɵelementStart(0, "td", 22);
     ɵɵtext(1);
-    ɵɵtemplate(2, PopoverEditTabOutMatTableExample_td_11_span_2_Template, 3, 0, "span", 17);
+    ɵɵtemplate(2, PopoverEditTabOutMatTableExample_td_11_span_2_Template, 3, 0, "span", 20);
     ɵɵelementEnd();
 } if (rf & 2) {
     var element_r126 = ctx.$implicit;
@@ -925,12 +914,12 @@ function PopoverEditTabOutMatTableExample_td_11_Template(rf, ctx) { if (rf & 1) 
     ɵɵtextInterpolate1(" ", element_r126.weight, " ");
 } }
 function PopoverEditTabOutMatTableExample_th_13_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "th", 14);
+    ɵɵelementStart(0, "th", 16);
     ɵɵtext(1, " Symbol ");
     ɵɵelementEnd();
 } }
 function PopoverEditTabOutMatTableExample_td_14_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "td", 15);
+    ɵɵelementStart(0, "td", 17);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -939,10 +928,10 @@ function PopoverEditTabOutMatTableExample_td_14_Template(rf, ctx) { if (rf & 1) 
     ɵɵtextInterpolate1(" ", element_r128.symbol, " ");
 } }
 function PopoverEditTabOutMatTableExample_tr_15_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 20);
+    ɵɵelement(0, "tr", 23);
 } }
 function PopoverEditTabOutMatTableExample_tr_16_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelement(0, "tr", 21);
+    ɵɵelement(0, "tr", 24);
 } }
 var ELEMENT_DATA$2 = [
     { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
@@ -996,27 +985,27 @@ var PopoverEditTabOutMatTableExample = /** @class */ (function () {
                 },] },
     ];
     PopoverEditTabOutMatTableExample.ɵfac = function PopoverEditTabOutMatTableExample_Factory(t) { return new (t || PopoverEditTabOutMatTableExample)(); };
-    PopoverEditTabOutMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditTabOutMatTableExample, selectors: [["popover-edit-tab-out-mat-table-example"]], decls: 17, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", "matEditLensClickOutBehavior", "submit", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit"], [4, "matRowHoverContent"], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", "matPopoverEditContext"], ["mat-header-row", ""], ["mat-row", ""]], template: function PopoverEditTabOutMatTableExample_Template(rf, ctx) { if (rf & 1) {
+    PopoverEditTabOutMatTableExample.ɵcmp = ɵɵdefineComponent({ type: PopoverEditTabOutMatTableExample, selectors: [["popover-edit-tab-out-mat-table-example"]], decls: 17, vars: 3, consts: [["mat-table", "", "editable", "", 1, "example-table", 3, "dataSource"], ["weightEdit", ""], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", 4, "matCellDef"], ["matColumnDef", "weight"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", "matPopoverEditContext", 4, "matCellDef"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["matEditLens", "", "matEditLensClickOutBehavior", "submit", 3, "matEditLensPreservedFormValue", "ngSubmit", "matEditLensPreservedFormValueChange"], ["f", "ngForm"], ["mat-edit-content", ""], ["matInput", "", "type", "number", "name", "weight", "required", "", 3, "ngModel"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit"], ["nameEdit", ""], [4, "matRowHoverContent"], ["matInput", "", "name", "name", "required", "", 3, "ngModel"], ["mat-cell", "", "matPopoverEditTabOut", "", "matEditOpen", "", 3, "matPopoverEdit", "matPopoverEditContext"], ["mat-header-row", ""], ["mat-row", ""]], template: function PopoverEditTabOutMatTableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
-            ɵɵtemplate(1, PopoverEditTabOutMatTableExample_ng_template_1_Template, 6, 2, "ng-template", null, _c0$3, ɵɵtemplateRefExtractor);
-            ɵɵelementContainerStart(3, 1);
-            ɵɵtemplate(4, PopoverEditTabOutMatTableExample_th_4_Template, 2, 0, "th", 2);
-            ɵɵtemplate(5, PopoverEditTabOutMatTableExample_td_5_Template, 2, 1, "td", 3);
+            ɵɵtemplate(1, PopoverEditTabOutMatTableExample_ng_template_1_Template, 6, 2, "ng-template", null, 1, ɵɵtemplateRefExtractor);
+            ɵɵelementContainerStart(3, 2);
+            ɵɵtemplate(4, PopoverEditTabOutMatTableExample_th_4_Template, 2, 0, "th", 3);
+            ɵɵtemplate(5, PopoverEditTabOutMatTableExample_td_5_Template, 2, 1, "td", 4);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(6, 4);
-            ɵɵtemplate(7, PopoverEditTabOutMatTableExample_th_7_Template, 2, 0, "th", 2);
-            ɵɵtemplate(8, PopoverEditTabOutMatTableExample_td_8_Template, 5, 2, "td", 5);
+            ɵɵelementContainerStart(6, 5);
+            ɵɵtemplate(7, PopoverEditTabOutMatTableExample_th_7_Template, 2, 0, "th", 3);
+            ɵɵtemplate(8, PopoverEditTabOutMatTableExample_td_8_Template, 5, 2, "td", 6);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(9, 6);
-            ɵɵtemplate(10, PopoverEditTabOutMatTableExample_th_10_Template, 2, 0, "th", 2);
-            ɵɵtemplate(11, PopoverEditTabOutMatTableExample_td_11_Template, 3, 3, "td", 7);
+            ɵɵelementContainerStart(9, 7);
+            ɵɵtemplate(10, PopoverEditTabOutMatTableExample_th_10_Template, 2, 0, "th", 3);
+            ɵɵtemplate(11, PopoverEditTabOutMatTableExample_td_11_Template, 3, 3, "td", 8);
             ɵɵelementContainerEnd();
-            ɵɵelementContainerStart(12, 8);
-            ɵɵtemplate(13, PopoverEditTabOutMatTableExample_th_13_Template, 2, 0, "th", 2);
-            ɵɵtemplate(14, PopoverEditTabOutMatTableExample_td_14_Template, 2, 1, "td", 3);
+            ɵɵelementContainerStart(12, 9);
+            ɵɵtemplate(13, PopoverEditTabOutMatTableExample_th_13_Template, 2, 0, "th", 3);
+            ɵɵtemplate(14, PopoverEditTabOutMatTableExample_td_14_Template, 2, 1, "td", 4);
             ɵɵelementContainerEnd();
-            ɵɵtemplate(15, PopoverEditTabOutMatTableExample_tr_15_Template, 1, 0, "tr", 9);
-            ɵɵtemplate(16, PopoverEditTabOutMatTableExample_tr_16_Template, 1, 0, "tr", 10);
+            ɵɵtemplate(15, PopoverEditTabOutMatTableExample_tr_15_Template, 1, 0, "tr", 10);
+            ɵɵtemplate(16, PopoverEditTabOutMatTableExample_tr_16_Template, 1, 0, "tr", 11);
             ɵɵelementEnd();
         } if (rf & 2) {
             ɵɵproperty("dataSource", ctx.dataSource);
@@ -1124,5 +1113,5 @@ var PopoverEditExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { PopoverEditCellSpanMatTableExample, PopoverEditMatTableExample, PopoverEditMatTableFlexExample, PopoverEditTabOutMatTableExample, PopoverEditExamplesModule };
+export { PopoverEditCellSpanMatTableExample, PopoverEditExamplesModule, PopoverEditMatTableExample, PopoverEditMatTableFlexExample, PopoverEditTabOutMatTableExample };
 //# sourceMappingURL=popover-edit.js.map

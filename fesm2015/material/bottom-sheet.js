@@ -191,5 +191,5 @@ BottomSheetExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { BottomSheetOverviewExample, BottomSheetOverviewExampleSheet, BottomSheetExamplesModule };
+export { BottomSheetExamplesModule, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet };
 //# sourceMappingURL=bottom-sheet.js.map

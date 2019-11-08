@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/icon'), require('@angular/platform-browser')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/icon', ['exports', '@angular/core', '@angular/material/icon', '@angular/platform-browser'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.icon = {}), global.ng.core, global.ng.material.icon, global.ng.platformBrowser));
-}(this, function (exports, i0, i1, i2) { 'use strict';
+}(this, (function (exports, i0, i1, i2) { 'use strict';
 
     /**
      * @title Basic icons
@@ -104,11 +104,11 @@
                 }]
         }], null, null);
 
+    exports.IconExamplesModule = IconExamplesModule;
     exports.IconOverviewExample = IconOverviewExample;
     exports.IconSvgExample = IconSvgExample;
-    exports.IconExamplesModule = IconExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-icon.umd.js.map

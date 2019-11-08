@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/radio')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/radio', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/radio'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.radio = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.radio));
-}(this, function (exports, i3, i0, i2, i1) { 'use strict';
+}(this, (function (exports, i3, i0, i2, i1) { 'use strict';
 
     function RadioNgModelExample_mat_radio_button_3_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-radio-button", 3);
@@ -138,11 +138,11 @@
                 }]
         }], null, null);
 
+    exports.RadioExamplesModule = RadioExamplesModule;
     exports.RadioNgModelExample = RadioNgModelExample;
     exports.RadioOverviewExample = RadioOverviewExample;
-    exports.RadioExamplesModule = RadioExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-radio.umd.js.map

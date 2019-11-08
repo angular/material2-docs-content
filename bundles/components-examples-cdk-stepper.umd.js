@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/stepper'), require('@angular/common'), require('@angular/core'), require('tslib')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/stepper', ['exports', '@angular/cdk/stepper', '@angular/common', '@angular/core', 'tslib'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.stepper = {}), global.ng.cdk.stepper, global.ng.common, global.ng.core, global.tslib));
-}(this, function (exports, i1, i2, i0, tslib) { 'use strict';
+}(this, (function (exports, i1, i2, i0, tslib) { 'use strict';
 
     var _c0 = function (a0) { return { "example-active": a0 }; };
     function CustomStepper_button_9_Template(rf, ctx) { if (rf & 1) {
@@ -156,10 +156,10 @@
         }], null, null);
 
     exports.CdkCustomStepperWithoutFormExample = CdkCustomStepperWithoutFormExample;
-    exports.CustomStepper = CustomStepper;
     exports.CdkStepperExamplesModule = CdkStepperExamplesModule;
+    exports.CustomStepper = CustomStepper;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-cdk-stepper.umd.js.map

@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/dialog'), require('@angular/material/input'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/dialog', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/dialog', '@angular/material/input', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.dialog = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.dialog, global.ng.material.input, global.ng.material.formField));
-}(this, function (exports, i3, i0, i4, i2, i1, i3$1, i2$1) { 'use strict';
+}(this, (function (exports, i3, i0, i4, i2, i1, i3$1, i2$1) { 'use strict';
 
     /**
      * @title Dialog with header, scrollable content and actions
@@ -552,11 +552,11 @@
     exports.DialogDataExampleDialog = DialogDataExampleDialog;
     exports.DialogElementsExample = DialogElementsExample;
     exports.DialogElementsExampleDialog = DialogElementsExampleDialog;
+    exports.DialogExamplesModule = DialogExamplesModule;
     exports.DialogOverviewExample = DialogOverviewExample;
     exports.DialogOverviewExampleDialog = DialogOverviewExampleDialog;
-    exports.DialogExamplesModule = DialogExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-dialog.umd.js.map

@@ -174,7 +174,6 @@ if (false) {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const _c0 = ["shoes", ""];
 function ListSelectionExample_mat_list_option_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-list-option");
     ɵɵtext(1);
@@ -200,9 +199,9 @@ ListSelectionExample.decorators = [
             },] },
 ];
 /** @nocollapse */ ListSelectionExample.ɵfac = function ListSelectionExample_Factory(t) { return new (t || ListSelectionExample)(); };
-/** @nocollapse */ ListSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [[4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "mat-selection-list", null, _c0);
-        ɵɵtemplate(2, ListSelectionExample_mat_list_option_2_Template, 2, 1, "mat-list-option", 0);
+/** @nocollapse */ ListSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [["shoes", ""], [4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-selection-list", null, 0);
+        ɵɵtemplate(2, ListSelectionExample_mat_list_option_2_Template, 2, 1, "mat-list-option", 1);
         ɵɵelementEnd();
         ɵɵelementStart(3, "p");
         ɵɵtext(4);
@@ -276,5 +275,5 @@ ListExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { ListOverviewExample, ListSectionsExample, ListSelectionExample, ListExamplesModule };
+export { ListExamplesModule, ListOverviewExample, ListSectionsExample, ListSelectionExample };
 //# sourceMappingURL=list.js.map

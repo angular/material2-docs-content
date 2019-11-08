@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/material/icon'), require('@angular/material/list'), require('@angular/material/divider'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/list', ['exports', '@angular/common', '@angular/core', '@angular/material/icon', '@angular/material/list', '@angular/material/divider', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.list = {}), global.ng.common, global.ng.core, global.ng.material.icon, global.ng.material.list, global.ng.material.divider, global.ng.material.core));
-}(this, function (exports, i2, i0, i4, i1, i3, i5) { 'use strict';
+}(this, (function (exports, i2, i0, i4, i1, i3, i5) { 'use strict';
 
     /**
      * @title Basic list
@@ -149,7 +149,6 @@
                 }]
         }], null, null);
 
-    var _c0 = ["shoes", ""];
     function ListSelectionExample_mat_list_option_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-list-option");
         i0.ɵɵtext(1);
@@ -174,9 +173,9 @@
                     },] },
         ];
         ListSelectionExample.ɵfac = function ListSelectionExample_Factory(t) { return new (t || ListSelectionExample)(); };
-        ListSelectionExample.ɵcmp = i0.ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [[4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵelementStart(0, "mat-selection-list", null, _c0);
-                i0.ɵɵtemplate(2, ListSelectionExample_mat_list_option_2_Template, 2, 1, "mat-list-option", 0);
+        ListSelectionExample.ɵcmp = i0.ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [["shoes", ""], [4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "mat-selection-list", null, 0);
+                i0.ɵɵtemplate(2, ListSelectionExample_mat_list_option_2_Template, 2, 1, "mat-list-option", 1);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "p");
                 i0.ɵɵtext(4);
@@ -246,12 +245,12 @@
                 }]
         }], null, null);
 
+    exports.ListExamplesModule = ListExamplesModule;
     exports.ListOverviewExample = ListOverviewExample;
     exports.ListSectionsExample = ListSectionsExample;
     exports.ListSelectionExample = ListSelectionExample;
-    exports.ListExamplesModule = ListExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-list.umd.js.map

@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/checkbox'), require('@angular/material/core'), require('@angular/material/input'), require('@angular/material/form-field')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/core', ['exports', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/checkbox', '@angular/material/core', '@angular/material/input', '@angular/material/form-field'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.core = {}), global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.checkbox, global.ng.material.core, global.ng.material.input, global.ng.material.formField));
-}(this, function (exports, i0, i2, i1, i1$1, i5, i4, i3) { 'use strict';
+}(this, (function (exports, i0, i2, i1, i1$1, i5, i4, i3) { 'use strict';
 
     /**
      * @title Elevation CSS classes
@@ -161,11 +161,11 @@
                 }]
         }], null, null);
 
+    exports.CoreExamplesModule = CoreExamplesModule;
     exports.ElevationOverviewExample = ElevationOverviewExample;
     exports.RippleOverviewExample = RippleOverviewExample;
-    exports.CoreExamplesModule = CoreExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-core.umd.js.map

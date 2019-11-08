@@ -364,5 +364,5 @@ CdkTreeExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { CdkTreeFlatExample, CdkTreeNestedExample, CdkTreeExamplesModule };
+export { CdkTreeExamplesModule, CdkTreeFlatExample, CdkTreeNestedExample };
 //# sourceMappingURL=tree.js.map

@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/table'), require('@angular/core'), require('tslib'), require('@angular/cdk/collections'), require('rxjs')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/table', ['exports', '@angular/cdk/table', '@angular/core', 'tslib', '@angular/cdk/collections', 'rxjs'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.table = {}), global.ng.cdk.table, global.ng.core, global.tslib, global.ng.cdk.collections, global.rxjs));
-}(this, function (exports, i1, i0, tslib, collections, rxjs) { 'use strict';
+}(this, (function (exports, i1, i0, tslib, collections, rxjs) { 'use strict';
 
     function CdkTableBasicFlexExample_cdk_header_cell_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "cdk-header-cell");
@@ -348,5 +348,5 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-cdk-table.umd.js.map

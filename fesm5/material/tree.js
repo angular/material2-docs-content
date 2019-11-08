@@ -30,15 +30,14 @@ function TreeChecklistExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate(node_r3.item);
 } }
-var _c0 = ["itemValue", ""];
 function TreeChecklistExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     var _r9 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-tree-node", 6);
     ɵɵelement(1, "button", 4);
     ɵɵelementStart(2, "mat-form-field");
-    ɵɵelement(3, "input", 7, _c0);
+    ɵɵelement(3, "input", 7, 8);
     ɵɵelementEnd();
-    ɵɵelementStart(5, "button", 8);
+    ɵɵelementStart(5, "button", 9);
     ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_2_Template_button_click_5_listener($event) { ɵɵrestoreView(_r9); var node_r6 = ctx.$implicit; var _r7 = ɵɵreference(4); var ctx_r8 = ɵɵnextContext(); return ctx_r8.saveNode(node_r6, _r7.value); });
     ɵɵtext(6, "Save");
     ɵɵelementEnd();
@@ -47,16 +46,16 @@ function TreeChecklistExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
 function TreeChecklistExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
     var _r12 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-tree-node", 6);
-    ɵɵelementStart(1, "button", 9);
-    ɵɵelementStart(2, "mat-icon", 10);
+    ɵɵelementStart(1, "button", 10);
+    ɵɵelementStart(2, "mat-icon", 11);
     ɵɵtext(3);
     ɵɵelementEnd();
     ɵɵelementEnd();
-    ɵɵelementStart(4, "mat-checkbox", 11);
+    ɵɵelementStart(4, "mat-checkbox", 12);
     ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_3_Template_mat_checkbox_change_4_listener($event) { ɵɵrestoreView(_r12); var node_r10 = ctx.$implicit; var ctx_r11 = ɵɵnextContext(); return ctx_r11.todoItemSelectionToggle(node_r10); });
     ɵɵtext(5);
     ɵɵelementEnd();
-    ɵɵelementStart(6, "button", 12);
+    ɵɵelementStart(6, "button", 13);
     ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_3_Template_button_click_6_listener($event) { ɵɵrestoreView(_r12); var node_r10 = ctx.$implicit; var ctx_r13 = ɵɵnextContext(); return ctx_r13.addNewItem(node_r10); });
     ɵɵelementStart(7, "mat-icon");
     ɵɵtext(8, "add");
@@ -316,7 +315,7 @@ var TreeChecklistExample = /** @class */ (function () {
         { type: ChecklistDatabase }
     ]; };
     TreeChecklistExample.ɵfac = function TreeChecklistExample_Factory(t) { return new (t || TreeChecklistExample)(ɵɵdirectiveInject(ChecklistDatabase)); };
-    TreeChecklistExample.ɵcmp = ɵɵdefineComponent({ type: TreeChecklistExample, selectors: [["tree-checklist-example"]], features: [ɵɵProvidersFeature([ChecklistDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", "matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", "", "matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], [1, "checklist-leaf-node", 3, "checked", "change"], ["matTreeNodePadding", ""], ["matInput", "", "placeholder", "New item..."], ["mat-button", "", 3, "click"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], [3, "checked", "indeterminate", "change"], ["mat-icon-button", "", 3, "click"]], template: function TreeChecklistExample_Template(rf, ctx) { if (rf & 1) {
+    TreeChecklistExample.ɵcmp = ɵɵdefineComponent({ type: TreeChecklistExample, selectors: [["tree-checklist-example"]], features: [ɵɵProvidersFeature([ChecklistDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", "matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", "", "matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], [1, "checklist-leaf-node", 3, "checked", "change"], ["matTreeNodePadding", ""], ["matInput", "", "placeholder", "New item..."], ["itemValue", ""], ["mat-button", "", 3, "click"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], [3, "checked", "indeterminate", "change"], ["mat-icon-button", "", 3, "click"]], template: function TreeChecklistExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tree", 0);
             ɵɵtemplate(1, TreeChecklistExample_mat_tree_node_1_Template, 4, 2, "mat-tree-node", 1);
             ɵɵtemplate(2, TreeChecklistExample_mat_tree_node_2_Template, 7, 0, "mat-tree-node", 2);
@@ -1050,5 +1049,5 @@ var TreeExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample, TreeExamplesModule };
+export { TreeChecklistExample, TreeDynamicExample, TreeExamplesModule, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample };
 //# sourceMappingURL=tree.js.map

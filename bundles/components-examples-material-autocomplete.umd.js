@@ -2,11 +2,10 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/autocomplete'), require('@angular/material/form-field'), require('@angular/material/input'), require('@angular/material/slide-toggle'), require('rxjs/operators'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/autocomplete', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/autocomplete', '@angular/material/form-field', '@angular/material/input', '@angular/material/slide-toggle', 'rxjs/operators', '@angular/material/core'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.autocomplete = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.autocomplete, global.ng.material.formField, global.ng.material.input, global.ng.material.slideToggle, global.rxjs.operators, global.ng.material.core));
-}(this, function (exports, i5, i0, i1, i4, i2, i3, i6, operators, i6$1) { 'use strict';
+}(this, (function (exports, i5, i0, i1, i4, i2, i3, i6, operators, i6$1) { 'use strict';
 
-    var _c0 = ["auto", "matAutocomplete"];
     function AutocompleteAutoActiveFirstOptionExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 5);
+        i0.ɵɵelementStart(0, "mat-option", 6);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -39,12 +38,12 @@
                     },] },
         ];
         AutocompleteAutoActiveFirstOptionExample.ɵfac = function AutocompleteAutoActiveFirstOptionExample_Factory(t) { return new (t || AutocompleteAutoActiveFirstOptionExample)(); };
-        AutocompleteAutoActiveFirstOptionExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteAutoActiveFirstOptionExample, selectors: [["autocomplete-auto-active-first-option-example"]], decls: 7, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["autoActiveFirstOption", ""], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteAutoActiveFirstOptionExample_Template(rf, ctx) { if (rf & 1) {
+        AutocompleteAutoActiveFirstOptionExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteAutoActiveFirstOptionExample, selectors: [["autocomplete-auto-active-first-option-example"]], decls: 7, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["autoActiveFirstOption", ""], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteAutoActiveFirstOptionExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2);
-                i0.ɵɵelementStart(3, "mat-autocomplete", 3, _c0);
-                i0.ɵɵtemplate(5, AutocompleteAutoActiveFirstOptionExample_mat_option_5_Template, 2, 2, "mat-option", 4);
+                i0.ɵɵelementStart(3, "mat-autocomplete", 3, 4);
+                i0.ɵɵtemplate(5, AutocompleteAutoActiveFirstOptionExample_mat_option_5_Template, 2, 2, "mat-option", 5);
                 i0.ɵɵpipe(6, "async");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -67,9 +66,8 @@
                 }]
         }], null, null);
 
-    var _c0$1 = ["auto", "matAutocomplete"];
     function AutocompleteDisplayExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 5);
+        i0.ɵɵelementStart(0, "mat-option", 6);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -110,12 +108,12 @@
                     },] },
         ];
         AutocompleteDisplayExample.ɵfac = function AutocompleteDisplayExample_Factory(t) { return new (t || AutocompleteDisplayExample)(); };
-        AutocompleteDisplayExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteDisplayExample, selectors: [["autocomplete-display-example"]], decls: 7, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Assignee", "aria-label", "Assignee", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "displayWith"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteDisplayExample_Template(rf, ctx) { if (rf & 1) {
+        AutocompleteDisplayExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteDisplayExample, selectors: [["autocomplete-display-example"]], decls: 7, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Assignee", "aria-label", "Assignee", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "displayWith"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteDisplayExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2);
-                i0.ɵɵelementStart(3, "mat-autocomplete", 3, _c0$1);
-                i0.ɵɵtemplate(5, AutocompleteDisplayExample_mat_option_5_Template, 2, 2, "mat-option", 4);
+                i0.ɵɵelementStart(3, "mat-autocomplete", 3, 4);
+                i0.ɵɵtemplate(5, AutocompleteDisplayExample_mat_option_5_Template, 2, 2, "mat-option", 5);
                 i0.ɵɵpipe(6, "async");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -140,9 +138,8 @@
                 }]
         }], null, null);
 
-    var _c0$2 = ["auto", "matAutocomplete"];
     function AutocompleteFilterExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 4);
+        i0.ɵɵelementStart(0, "mat-option", 5);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -176,12 +173,12 @@
                     },] },
         ];
         AutocompleteFilterExample.ɵfac = function AutocompleteFilterExample_Factory(t) { return new (t || AutocompleteFilterExample)(); };
-        AutocompleteFilterExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteFilterExample, selectors: [["autocomplete-filter-example"]], decls: 7, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteFilterExample_Template(rf, ctx) { if (rf & 1) {
+        AutocompleteFilterExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteFilterExample, selectors: [["autocomplete-filter-example"]], decls: 7, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteFilterExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2);
-                i0.ɵɵelementStart(3, "mat-autocomplete", null, _c0$2);
-                i0.ɵɵtemplate(5, AutocompleteFilterExample_mat_option_5_Template, 2, 2, "mat-option", 3);
+                i0.ɵɵelementStart(3, "mat-autocomplete", null, 3);
+                i0.ɵɵtemplate(5, AutocompleteFilterExample_mat_option_5_Template, 2, 2, "mat-option", 4);
                 i0.ɵɵpipe(6, "async");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -204,9 +201,8 @@
                 }]
         }], null, null);
 
-    var _c0$3 = ["autoGroup", "matAutocomplete"];
     function AutocompleteOptgroupExample_mat_optgroup_5_mat_option_1_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 5);
+        i0.ɵɵelementStart(0, "mat-option", 6);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -216,8 +212,8 @@
         i0.ɵɵtextInterpolate1(" ", name_r13, " ");
     } }
     function AutocompleteOptgroupExample_mat_optgroup_5_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-optgroup", 3);
-        i0.ɵɵtemplate(1, AutocompleteOptgroupExample_mat_optgroup_5_mat_option_1_Template, 2, 2, "mat-option", 4);
+        i0.ɵɵelementStart(0, "mat-optgroup", 4);
+        i0.ɵɵtemplate(1, AutocompleteOptgroupExample_mat_optgroup_5_mat_option_1_Template, 2, 2, "mat-option", 5);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         var group_r11 = ctx.$implicit;
@@ -324,12 +320,12 @@
             { type: i1.FormBuilder }
         ]; };
         AutocompleteOptgroupExample.ɵfac = function AutocompleteOptgroupExample_Factory(t) { return new (t || AutocompleteOptgroupExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
-        AutocompleteOptgroupExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteOptgroupExample, selectors: [["autocomplete-optgroup-example"]], decls: 7, vars: 5, consts: [[3, "formGroup"], ["type", "text", "matInput", "", "placeholder", "States Group", "formControlName", "stateGroup", "required", "", 3, "matAutocomplete"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteOptgroupExample_Template(rf, ctx) { if (rf & 1) {
+        AutocompleteOptgroupExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteOptgroupExample, selectors: [["autocomplete-optgroup-example"]], decls: 7, vars: 5, consts: [[3, "formGroup"], ["type", "text", "matInput", "", "placeholder", "States Group", "formControlName", "stateGroup", "required", "", 3, "matAutocomplete"], ["autoGroup", "matAutocomplete"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteOptgroupExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field");
                 i0.ɵɵelement(2, "input", 1);
-                i0.ɵɵelementStart(3, "mat-autocomplete", null, _c0$3);
-                i0.ɵɵtemplate(5, AutocompleteOptgroupExample_mat_optgroup_5_Template, 2, 2, "mat-optgroup", 2);
+                i0.ɵɵelementStart(3, "mat-autocomplete", null, 2);
+                i0.ɵɵtemplate(5, AutocompleteOptgroupExample_mat_optgroup_5_Template, 2, 2, "mat-optgroup", 3);
                 i0.ɵɵpipe(6, "async");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -353,10 +349,9 @@
                 }]
         }], function () { return [{ type: i1.FormBuilder }]; }, null);
 
-    var _c0$4 = ["auto", "matAutocomplete"];
     function AutocompleteOverviewExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 5);
-        i0.ɵɵelement(1, "img", 6);
+        i0.ɵɵelementStart(0, "mat-option", 6);
+        i0.ɵɵelement(1, "img", 7);
         i0.ɵɵelementStart(2, "span");
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();
@@ -425,17 +420,17 @@
         /** @nocollapse */
         AutocompleteOverviewExample.ctorParameters = function () { return []; };
         AutocompleteOverviewExample.ɵfac = function AutocompleteOverviewExample_Factory(t) { return new (t || AutocompleteOverviewExample)(); };
-        AutocompleteOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteOverviewExample, selectors: [["autocomplete-overview-example"]], decls: 10, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "State", "aria-label", "State", 3, "matAutocomplete", "formControl"], [3, "value", 4, "ngFor", "ngForOf"], [3, "checked", "change"], [3, "value"], ["aria-hidden", "", "height", "25", 1, "example-option-img", 3, "src"]], template: function AutocompleteOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        AutocompleteOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteOverviewExample, selectors: [["autocomplete-overview-example"]], decls: 10, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "State", "aria-label", "State", 3, "matAutocomplete", "formControl"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "checked", "change"], [3, "value"], ["aria-hidden", "", "height", "25", 1, "example-option-img", 3, "src"]], template: function AutocompleteOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2);
-                i0.ɵɵelementStart(3, "mat-autocomplete", null, _c0$4);
-                i0.ɵɵtemplate(5, AutocompleteOverviewExample_mat_option_5_Template, 7, 4, "mat-option", 3);
+                i0.ɵɵelementStart(3, "mat-autocomplete", null, 3);
+                i0.ɵɵtemplate(5, AutocompleteOverviewExample_mat_option_5_Template, 7, 4, "mat-option", 4);
                 i0.ɵɵpipe(6, "async");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelement(7, "br");
-                i0.ɵɵelementStart(8, "mat-slide-toggle", 4);
+                i0.ɵɵelementStart(8, "mat-slide-toggle", 5);
                 i0.ɵɵlistener("change", function AutocompleteOverviewExample_Template_mat_slide_toggle_change_8_listener($event) { return ctx.stateCtrl.disabled ? ctx.stateCtrl.enable() : ctx.stateCtrl.disable(); });
                 i0.ɵɵtext(9, " Disable Input? ");
                 i0.ɵɵelementEnd();
@@ -460,9 +455,8 @@
                 }]
         }], function () { return []; }, null);
 
-    var _c0$5 = ["auto", "matAutocomplete"];
     function AutocompletePlainInputExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 3);
+        i0.ɵɵelementStart(0, "mat-option", 4);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -499,11 +493,11 @@
                     },] },
         ];
         AutocompletePlainInputExample.ɵfac = function AutocompletePlainInputExample_Factory(t) { return new (t || AutocompletePlainInputExample)(); };
-        AutocompletePlainInputExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompletePlainInputExample, selectors: [["autocomplete-plain-input-example"]], decls: 6, vars: 5, consts: [[1, "example-form"], ["type", "text", "placeholder", "Search for a street", 3, "formControl", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompletePlainInputExample_Template(rf, ctx) { if (rf & 1) {
+        AutocompletePlainInputExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompletePlainInputExample, selectors: [["autocomplete-plain-input-example"]], decls: 6, vars: 5, consts: [[1, "example-form"], ["type", "text", "placeholder", "Search for a street", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompletePlainInputExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelement(1, "input", 1);
-                i0.ɵɵelementStart(2, "mat-autocomplete", null, _c0$5);
-                i0.ɵɵtemplate(4, AutocompletePlainInputExample_mat_option_4_Template, 2, 2, "mat-option", 2);
+                i0.ɵɵelementStart(2, "mat-autocomplete", null, 2);
+                i0.ɵɵtemplate(4, AutocompletePlainInputExample_mat_option_4_Template, 2, 2, "mat-option", 3);
                 i0.ɵɵpipe(5, "async");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -525,9 +519,8 @@
                 }]
         }], null, null);
 
-    var _c0$6 = ["auto", "matAutocomplete"];
     function AutocompleteSimpleExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "mat-option", 4);
+        i0.ɵɵelementStart(0, "mat-option", 5);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {
@@ -552,12 +545,12 @@
                     },] },
         ];
         AutocompleteSimpleExample.ɵfac = function AutocompleteSimpleExample_Factory(t) { return new (t || AutocompleteSimpleExample)(); };
-        AutocompleteSimpleExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteSimpleExample, selectors: [["autocomplete-simple-example"]], decls: 6, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteSimpleExample_Template(rf, ctx) { if (rf & 1) {
+        AutocompleteSimpleExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteSimpleExample, selectors: [["autocomplete-simple-example"]], decls: 6, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteSimpleExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
                 i0.ɵɵelement(2, "input", 2);
-                i0.ɵɵelementStart(3, "mat-autocomplete", null, _c0$6);
-                i0.ɵɵtemplate(5, AutocompleteSimpleExample_mat_option_5_Template, 2, 2, "mat-option", 3);
+                i0.ɵɵelementStart(3, "mat-autocomplete", null, 3);
+                i0.ɵɵtemplate(5, AutocompleteSimpleExample_mat_option_5_Template, 2, 2, "mat-option", 4);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -656,14 +649,14 @@
 
     exports.AutocompleteAutoActiveFirstOptionExample = AutocompleteAutoActiveFirstOptionExample;
     exports.AutocompleteDisplayExample = AutocompleteDisplayExample;
+    exports.AutocompleteExamplesModule = AutocompleteExamplesModule;
     exports.AutocompleteFilterExample = AutocompleteFilterExample;
     exports.AutocompleteOptgroupExample = AutocompleteOptgroupExample;
     exports.AutocompleteOverviewExample = AutocompleteOverviewExample;
     exports.AutocompletePlainInputExample = AutocompletePlainInputExample;
     exports.AutocompleteSimpleExample = AutocompleteSimpleExample;
-    exports.AutocompleteExamplesModule = AutocompleteExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-autocomplete.umd.js.map

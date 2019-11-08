@@ -196,5 +196,5 @@ SortExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { SortOverviewExample, SortExamplesModule };
+export { SortExamplesModule, SortOverviewExample };
 //# sourceMappingURL=sort.js.map

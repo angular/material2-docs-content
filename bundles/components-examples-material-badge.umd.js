@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/badge'), require('@angular/material/button'), require('@angular/material/icon')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/badge', ['exports', '@angular/core', '@angular/material/badge', '@angular/material/button', '@angular/material/icon'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.badge = {}), global.ng.core, global.ng.material.badge, global.ng.material.button, global.ng.material.icon));
-}(this, function (exports, i0, i1, i2, i3) { 'use strict';
+}(this, (function (exports, i0, i1, i2, i3) { 'use strict';
 
     /**
      * @title Badge overview
@@ -92,10 +92,10 @@
                 }]
         }], null, null);
 
-    exports.BadgeOverviewExample = BadgeOverviewExample;
     exports.BadgeExamplesModule = BadgeExamplesModule;
+    exports.BadgeOverviewExample = BadgeOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-badge.umd.js.map

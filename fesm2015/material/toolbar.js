@@ -131,5 +131,5 @@ ToolbarExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { ToolbarMultirowExample, ToolbarOverviewExample, ToolbarExamplesModule };
+export { ToolbarExamplesModule, ToolbarMultirowExample, ToolbarOverviewExample };
 //# sourceMappingURL=toolbar.js.map

@@ -13,9 +13,8 @@ import { MatOption } from '@angular/material/core';
  * @fileoverview added by tsickle
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const _c0 = ["tooltip", "matTooltip"];
 function TooltipAutoHideExample_mat_option_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-option", 4);
+    ɵɵelementStart(0, "mat-option", 5);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -41,14 +40,14 @@ TooltipAutoHideExample.decorators = [
             },] },
 ];
 /** @nocollapse */ TooltipAutoHideExample.ɵfac = function TooltipAutoHideExample_Factory(t) { return new (t || TooltipAutoHideExample)(); };
-/** @nocollapse */ TooltipAutoHideExample.ɵcmp = ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 7, vars: 3, consts: [["placeholder", "Tooltip position", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdk-scrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TooltipAutoHideExample.ɵcmp = ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 7, vars: 3, consts: [["placeholder", "Tooltip position", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdk-scrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], ["tooltip", "matTooltip"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
         ɵɵelementStart(1, "mat-select", 0);
         ɵɵtemplate(2, TooltipAutoHideExample_mat_option_2_Template, 2, 2, "mat-option", 1);
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementStart(3, "div", 2);
-        ɵɵelementStart(4, "button", 3, _c0);
+        ɵɵelementStart(4, "button", 3, 4);
         ɵɵtext(6, " Action ");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -215,7 +214,6 @@ if (false) {
  * @fileoverview added by tsickle
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const _c0$1 = ["tooltip", "matTooltip"];
 /**
  * \@title Tooltip that can be manually shown/hidden.
  */
@@ -229,7 +227,7 @@ TooltipManualExample.decorators = [
             },] },
 ];
 /** @nocollapse */ TooltipManualExample.ɵfac = function TooltipManualExample_Factory(t) { return new (t || TooltipManualExample)(); };
-/** @nocollapse */ TooltipManualExample.ɵcmp = ɵɵdefineComponent({ type: TooltipManualExample, selectors: [["tooltip-manual-example"]], decls: 12, vars: 0, consts: [["mat-button", "", "aria-label", "Show tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Show/Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipPosition", "right", "aria-tooltip", "Button that displays and hides a tooltip triggered by other buttons"]], template: function TooltipManualExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TooltipManualExample.ɵcmp = ɵɵdefineComponent({ type: TooltipManualExample, selectors: [["tooltip-manual-example"]], decls: 12, vars: 0, consts: [["mat-button", "", "aria-label", "Show tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Show/Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipPosition", "right", "aria-tooltip", "Button that displays and hides a tooltip triggered by other buttons"], ["tooltip", "matTooltip"]], template: function TooltipManualExample_Template(rf, ctx) { if (rf & 1) {
         const _r4 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "div");
         ɵɵelementStart(1, "span");
@@ -248,7 +246,7 @@ TooltipManualExample.decorators = [
         ɵɵtext(8, " toggle show/hide ");
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelementStart(9, "button", 3, _c0$1);
+        ɵɵelementStart(9, "button", 3, 4);
         ɵɵtext(11, " Action\n");
         ɵɵelementEnd();
     } }, directives: [MatButton, MatTooltip], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
@@ -532,5 +530,5 @@ TooltipExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TooltipExamplesModule };
+export { TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipExamplesModule, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample };
 //# sourceMappingURL=tooltip.js.map

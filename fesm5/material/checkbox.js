@@ -175,5 +175,5 @@ var CheckboxExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { CheckboxConfigurableExample, CheckboxOverviewExample, CheckboxExamplesModule };
+export { CheckboxConfigurableExample, CheckboxExamplesModule, CheckboxOverviewExample };
 //# sourceMappingURL=checkbox.js.map

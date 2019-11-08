@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/tree'), require('@angular/core'), require('@angular/material/button'), require('@angular/material/icon'), require('@angular/cdk/collections')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/tree', ['exports', '@angular/cdk/tree', '@angular/core', '@angular/material/button', '@angular/material/icon', '@angular/cdk/collections'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.tree = {}), global.ng.cdk.tree, global.ng.core, global.ng.material.button, global.ng.material.icon, global.ng.cdk.collections));
-}(this, function (exports, i1, i0, i2, i3, collections) { 'use strict';
+}(this, (function (exports, i1, i0, i2, i3, collections) { 'use strict';
 
     function CdkTreeFlatExample_cdk_tree_node_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "cdk-tree-node", 3);
@@ -279,11 +279,11 @@
                 }]
         }], null, null);
 
+    exports.CdkTreeExamplesModule = CdkTreeExamplesModule;
     exports.CdkTreeFlatExample = CdkTreeFlatExample;
     exports.CdkTreeNestedExample = CdkTreeNestedExample;
-    exports.CdkTreeExamplesModule = CdkTreeExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-cdk-tree.umd.js.map

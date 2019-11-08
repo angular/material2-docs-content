@@ -112,5 +112,5 @@ IconExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { IconOverviewExample, IconSvgExample, IconExamplesModule };
+export { IconExamplesModule, IconOverviewExample, IconSvgExample };
 //# sourceMappingURL=icon.js.map

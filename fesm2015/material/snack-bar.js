@@ -113,8 +113,6 @@ PizzaPartyComponent.decorators = [
  * @fileoverview added by tsickle
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-const _c0 = ["message", ""];
-const _c1 = ["action", ""];
 /**
  * \@title Basic snack-bar
  */
@@ -148,15 +146,15 @@ SnackBarOverviewExample.ctorParameters = () => [
     { type: MatSnackBar }
 ];
 /** @nocollapse */ SnackBarOverviewExample.ɵfac = function SnackBarOverviewExample_Factory(t) { return new (t || SnackBarOverviewExample)(ɵɵdirectiveInject(MatSnackBar)); };
-/** @nocollapse */ SnackBarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 8, vars: 0, consts: [["matInput", "", "value", "Disco party!", "placeholder", "Message"], ["matInput", "", "value", "Dance", "placeholder", "Action"], ["mat-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SnackBarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 8, vars: 0, consts: [["matInput", "", "value", "Disco party!", "placeholder", "Message"], ["message", ""], ["matInput", "", "value", "Dance", "placeholder", "Action"], ["action", ""], ["mat-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) { if (rf & 1) {
         const _r2 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "mat-form-field");
-        ɵɵelement(1, "input", 0, _c0);
+        ɵɵelement(1, "input", 0, 1);
         ɵɵelementEnd();
         ɵɵelementStart(3, "mat-form-field");
-        ɵɵelement(4, "input", 1, _c1);
+        ɵɵelement(4, "input", 2, 3);
         ɵɵelementEnd();
-        ɵɵelementStart(6, "button", 2);
+        ɵɵelementStart(6, "button", 4);
         ɵɵlistener("click", function SnackBarOverviewExample_Template_button_click_6_listener($event) { ɵɵrestoreView(_r2); const _r0 = ɵɵreference(2); const _r1 = ɵɵreference(5); return ctx.openSnackBar(_r0.value, _r1.value); });
         ɵɵtext(7, "Show snack-bar");
         ɵɵelementEnd();
@@ -338,5 +336,5 @@ SnackBarExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { SnackBarComponentExample, SnackBarOverviewExample, SnackBarPositionExample, PizzaPartyComponent, SnackBarExamplesModule };
+export { PizzaPartyComponent, SnackBarComponentExample, SnackBarExamplesModule, SnackBarOverviewExample, SnackBarPositionExample };
 //# sourceMappingURL=snack-bar.js.map

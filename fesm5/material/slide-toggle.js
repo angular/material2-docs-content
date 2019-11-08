@@ -93,7 +93,6 @@ var SlideToggleConfigurableExample = /** @class */ (function () {
             }]
     }], null, null);
 
-var _c0 = ["form", "ngForm"];
 /**
  * @title Slide-toggle with forms
  */
@@ -120,7 +119,7 @@ var SlideToggleFormsExample = /** @class */ (function () {
         { type: FormBuilder }
     ]; };
     SlideToggleFormsExample.ɵfac = function SlideToggleFormsExample_Factory(t) { return new (t || SlideToggleFormsExample)(ɵɵdirectiveInject(FormBuilder)); };
-    SlideToggleFormsExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"], ["mat-rasied-button", "", "type", "submit"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
+    SlideToggleFormsExample.ɵcmp = ɵɵdefineComponent({ type: SlideToggleFormsExample, selectors: [["slide-toggle-forms-example"]], decls: 25, vars: 4, consts: [[3, "ngModel", "ngModelChange"], ["ngNativeValidate", "", 1, "example-form", 3, "ngSubmit"], ["form", "ngForm"], ["ngModel", "", "name", "enableWifi"], ["ngModel", "", "name", "acceptTerms", "required", ""], ["mat-raised-button", "", "type", "submit"], ["ngNativeValidate", "", 1, "example-form", 3, "formGroup", "ngSubmit"], ["formControlName", "enableWifi"], ["formControlName", "acceptTerms"], ["mat-rasied-button", "", "type", "submit"]], template: function SlideToggleFormsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
             ɵɵtext(1, "Slide Toggle using a simple NgModel.");
             ɵɵelementEnd();
@@ -131,33 +130,33 @@ var SlideToggleFormsExample = /** @class */ (function () {
             ɵɵelementStart(4, "p");
             ɵɵtext(5, "Slide Toggle inside of a Template-driven form");
             ɵɵelementEnd();
-            ɵɵelementStart(6, "form", 1, _c0);
+            ɵɵelementStart(6, "form", 1, 2);
             ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_6_listener($event) { return ctx.onFormSubmit(); });
-            ɵɵelementStart(8, "mat-slide-toggle", 2);
+            ɵɵelementStart(8, "mat-slide-toggle", 3);
             ɵɵtext(9, "Enable Wifi");
             ɵɵelementEnd();
-            ɵɵelementStart(10, "mat-slide-toggle", 3);
+            ɵɵelementStart(10, "mat-slide-toggle", 4);
             ɵɵtext(11, "Accept Terms of Service");
             ɵɵelementEnd();
-            ɵɵelementStart(12, "button", 4);
+            ɵɵelementStart(12, "button", 5);
             ɵɵtext(13, "Save Settings");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(14, "p");
             ɵɵtext(15, "Slide Toggle inside of a Reactive form");
             ɵɵelementEnd();
-            ɵɵelementStart(16, "form", 5);
+            ɵɵelementStart(16, "form", 6);
             ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_16_listener($event) { return ctx.onFormSubmit(); });
-            ɵɵelementStart(17, "mat-slide-toggle", 6);
+            ɵɵelementStart(17, "mat-slide-toggle", 7);
             ɵɵtext(18, "Enable Wifi");
             ɵɵelementEnd();
-            ɵɵelementStart(19, "mat-slide-toggle", 7);
+            ɵɵelementStart(19, "mat-slide-toggle", 8);
             ɵɵtext(20, "Accept Terms of Service");
             ɵɵelementEnd();
             ɵɵelementStart(21, "p");
             ɵɵtext(22);
             ɵɵelementEnd();
-            ɵɵelementStart(23, "button", 8);
+            ɵɵelementStart(23, "button", 9);
             ɵɵtext(24, "Save Settings");
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -275,5 +274,5 @@ var SlideToggleExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SlideToggleExamplesModule };
+export { SlideToggleConfigurableExample, SlideToggleExamplesModule, SlideToggleFormsExample, SlideToggleOverviewExample };
 //# sourceMappingURL=slide-toggle.js.map

@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/material/sort')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/sort', ['exports', '@angular/common', '@angular/core', '@angular/material/sort'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.sort = {}), global.ng.common, global.ng.core, global.ng.material.sort));
-}(this, function (exports, i2, i0, i1) { 'use strict';
+}(this, (function (exports, i2, i0, i1) { 'use strict';
 
     function SortOverviewExample_tr_12_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "tr");
@@ -154,10 +154,10 @@
                 }]
         }], null, null);
 
-    exports.SortOverviewExample = SortOverviewExample;
     exports.SortExamplesModule = SortExamplesModule;
+    exports.SortOverviewExample = SortOverviewExample;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-material-sort.umd.js.map

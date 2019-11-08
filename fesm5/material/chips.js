@@ -12,20 +12,17 @@ import { MatOption } from '@angular/material/core';
 
 var _c0 = ["fruitInput"];
 var _c1 = ["auto"];
-var _c2 = ["chipList", ""];
-var _c3 = ["fruitInput", ""];
-var _c4 = ["auto", "matAutocomplete"];
 function ChipsAutocompleteExample_mat_chip_3_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-icon", 8);
+    ɵɵelementStart(0, "mat-icon", 11);
     ɵɵtext(1, "cancel");
     ɵɵelementEnd();
 } }
 function ChipsAutocompleteExample_mat_chip_3_Template(rf, ctx) { if (rf & 1) {
     var _r8 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "mat-chip", 6);
+    ɵɵelementStart(0, "mat-chip", 9);
     ɵɵlistener("removed", function ChipsAutocompleteExample_mat_chip_3_Template_mat_chip_removed_0_listener($event) { ɵɵrestoreView(_r8); var fruit_r5 = ctx.$implicit; var ctx_r7 = ɵɵnextContext(); return ctx_r7.remove(fruit_r5); });
     ɵɵtext(1);
-    ɵɵtemplate(2, ChipsAutocompleteExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 7);
+    ɵɵtemplate(2, ChipsAutocompleteExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 10);
     ɵɵelementEnd();
 } if (rf & 2) {
     var fruit_r5 = ctx.$implicit;
@@ -37,7 +34,7 @@ function ChipsAutocompleteExample_mat_chip_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵproperty("ngIf", ctx_r1.removable);
 } }
 function ChipsAutocompleteExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-option", 9);
+    ɵɵelementStart(0, "mat-option", 12);
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -110,17 +107,17 @@ var ChipsAutocompleteExample = /** @class */ (function () {
             var _t;
             ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.fruitInput = _t.first);
             ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.matAutocomplete = _t.first);
-        } }, decls: 10, vars: 8, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "formControl", "matAutocomplete", "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputTokenEnd"], [3, "optionSelected"], [3, "value", 4, "ngFor", "ngForOf"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""], [3, "value"]], template: function ChipsAutocompleteExample_Template(rf, ctx) { if (rf & 1) {
+        } }, decls: 10, vars: 8, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], ["chipList", ""], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "formControl", "matAutocomplete", "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputTokenEnd"], ["fruitInput", ""], [3, "optionSelected"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""], [3, "value"]], template: function ChipsAutocompleteExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
-            ɵɵelementStart(1, "mat-chip-list", 1, _c2);
-            ɵɵtemplate(3, ChipsAutocompleteExample_mat_chip_3_Template, 3, 4, "mat-chip", 2);
-            ɵɵelementStart(4, "input", 3, _c3);
+            ɵɵelementStart(1, "mat-chip-list", 1, 2);
+            ɵɵtemplate(3, ChipsAutocompleteExample_mat_chip_3_Template, 3, 4, "mat-chip", 3);
+            ɵɵelementStart(4, "input", 4, 5);
             ɵɵlistener("matChipInputTokenEnd", function ChipsAutocompleteExample_Template_input_matChipInputTokenEnd_4_listener($event) { return ctx.add($event); });
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(6, "mat-autocomplete", 4, _c4);
+            ɵɵelementStart(6, "mat-autocomplete", 6, 7);
             ɵɵlistener("optionSelected", function ChipsAutocompleteExample_Template_mat_autocomplete_optionSelected_6_listener($event) { return ctx.selected($event); });
-            ɵɵtemplate(8, ChipsAutocompleteExample_mat_option_8_Template, 2, 2, "mat-option", 5);
+            ɵɵtemplate(8, ChipsAutocompleteExample_mat_option_8_Template, 2, 2, "mat-option", 8);
             ɵɵpipe(9, "async");
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -205,18 +202,17 @@ var ChipsDragDropExample = /** @class */ (function () {
             }]
     }], null, null);
 
-var _c0$1 = ["chipList", ""];
 function ChipsInputExample_mat_chip_3_mat_icon_2_Template(rf, ctx) { if (rf & 1) {
-    ɵɵelementStart(0, "mat-icon", 6);
+    ɵɵelementStart(0, "mat-icon", 7);
     ɵɵtext(1, "cancel");
     ɵɵelementEnd();
 } }
 function ChipsInputExample_mat_chip_3_Template(rf, ctx) { if (rf & 1) {
     var _r17 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "mat-chip", 4);
+    ɵɵelementStart(0, "mat-chip", 5);
     ɵɵlistener("removed", function ChipsInputExample_mat_chip_3_Template_mat_chip_removed_0_listener($event) { ɵɵrestoreView(_r17); var fruit_r14 = ctx.$implicit; var ctx_r16 = ɵɵnextContext(); return ctx_r16.remove(fruit_r14); });
     ɵɵtext(1);
-    ɵɵtemplate(2, ChipsInputExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 5);
+    ɵɵtemplate(2, ChipsInputExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 6);
     ɵɵelementEnd();
 } if (rf & 2) {
     var fruit_r14 = ctx.$implicit;
@@ -269,11 +265,11 @@ var ChipsInputExample = /** @class */ (function () {
                 },] },
     ];
     ChipsInputExample.ɵfac = function ChipsInputExample_Factory(t) { return new (t || ChipsInputExample)(); };
-    ChipsInputExample.ɵcmp = ɵɵdefineComponent({ type: ChipsInputExample, selectors: [["chips-input-example"]], decls: 5, vars: 4, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputAddOnBlur", "matChipInputTokenEnd"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""]], template: function ChipsInputExample_Template(rf, ctx) { if (rf & 1) {
+    ChipsInputExample.ɵcmp = ɵɵdefineComponent({ type: ChipsInputExample, selectors: [["chips-input-example"]], decls: 5, vars: 4, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], ["chipList", ""], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputAddOnBlur", "matChipInputTokenEnd"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""]], template: function ChipsInputExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
-            ɵɵelementStart(1, "mat-chip-list", 1, _c0$1);
-            ɵɵtemplate(3, ChipsInputExample_mat_chip_3_Template, 3, 4, "mat-chip", 2);
-            ɵɵelementStart(4, "input", 3);
+            ɵɵelementStart(1, "mat-chip-list", 1, 2);
+            ɵɵtemplate(3, ChipsInputExample_mat_chip_3_Template, 3, 4, "mat-chip", 3);
+            ɵɵelementStart(4, "input", 4);
             ɵɵlistener("matChipInputTokenEnd", function ChipsInputExample_Template_input_matChipInputTokenEnd_4_listener($event) { return ctx.add($event); });
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -455,5 +451,5 @@ var ChipsExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, ChipsExamplesModule };
+export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsExamplesModule, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample };
 //# sourceMappingURL=chips.js.map

@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/scrolling'), require('@angular/core'), require('tslib'), require('@angular/cdk/collections'), require('rxjs')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/scrolling', ['exports', '@angular/cdk/scrolling', '@angular/core', 'tslib', '@angular/cdk/collections', 'rxjs'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.scrolling = {}), global.ng.cdk.scrolling, global.ng.core, global.tslib, global.ng.cdk.collections, global.rxjs));
-}(this, function (exports, i1, i0, tslib, collections, rxjs) { 'use strict';
+}(this, (function (exports, i1, i0, tslib, collections, rxjs) { 'use strict';
 
     function CdkVirtualScrollContextExample_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div");
@@ -560,6 +560,7 @@
                 }]
         }], null, null);
 
+    exports.CdkScrollingExamplesModule = CdkScrollingExamplesModule;
     exports.CdkVirtualScrollContextExample = CdkVirtualScrollContextExample;
     exports.CdkVirtualScrollCustomStrategyExample = CdkVirtualScrollCustomStrategyExample;
     exports.CdkVirtualScrollDataSourceExample = CdkVirtualScrollDataSourceExample;
@@ -568,9 +569,8 @@
     exports.CdkVirtualScrollHorizontalExample = CdkVirtualScrollHorizontalExample;
     exports.CdkVirtualScrollOverviewExample = CdkVirtualScrollOverviewExample;
     exports.CdkVirtualScrollTemplateCacheExample = CdkVirtualScrollTemplateCacheExample;
-    exports.CdkScrollingExamplesModule = CdkScrollingExamplesModule;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
 //# sourceMappingURL=components-examples-cdk-scrolling.umd.js.map

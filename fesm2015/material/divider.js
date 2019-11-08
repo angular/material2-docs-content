@@ -80,5 +80,5 @@ DividerExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { DividerOverviewExample, DividerExamplesModule };
+export { DividerExamplesModule, DividerOverviewExample };
 //# sourceMappingURL=divider.js.map

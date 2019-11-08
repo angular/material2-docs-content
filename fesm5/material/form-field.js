@@ -389,7 +389,6 @@ var FormFieldErrorExample = /** @class */ (function () {
             }]
     }], null, null);
 
-var _c0 = ["input", ""];
 /** @title Form field with hints */
 var FormFieldHintExample = /** @class */ (function () {
     function FormFieldHintExample() {
@@ -402,21 +401,21 @@ var FormFieldHintExample = /** @class */ (function () {
                 },] },
     ];
     FormFieldHintExample.ɵfac = function FormFieldHintExample_Factory(t) { return new (t || FormFieldHintExample)(); };
-    FormFieldHintExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldHintExample, selectors: [["form-field-hint-example"]], decls: 12, vars: 1, consts: [[1, "example-container"], ["hintLabel", "Max 10 characters"], ["matInput", "", "maxlength", "10", "placeholder", "Enter some input"], ["align", "end"], ["placeholder", "Select me"], ["value", "option"]], template: function FormFieldHintExample_Template(rf, ctx) { if (rf & 1) {
+    FormFieldHintExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldHintExample, selectors: [["form-field-hint-example"]], decls: 12, vars: 1, consts: [[1, "example-container"], ["hintLabel", "Max 10 characters"], ["matInput", "", "maxlength", "10", "placeholder", "Enter some input"], ["input", ""], ["align", "end"], ["placeholder", "Select me"], ["value", "option"]], template: function FormFieldHintExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
-            ɵɵelement(2, "input", 2, _c0);
-            ɵɵelementStart(4, "mat-hint", 3);
+            ɵɵelement(2, "input", 2, 3);
+            ɵɵelementStart(4, "mat-hint", 4);
             ɵɵtext(5);
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(6, "mat-form-field");
-            ɵɵelementStart(7, "mat-select", 4);
-            ɵɵelementStart(8, "mat-option", 5);
+            ɵɵelementStart(7, "mat-select", 5);
+            ɵɵelementStart(8, "mat-option", 6);
             ɵɵtext(9, "Option");
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(10, "mat-hint", 3);
+            ɵɵelementStart(10, "mat-hint", 4);
             ɵɵtext(11, "Here's the dropdown arrow ^");
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -783,5 +782,5 @@ var FormFieldExamplesModule = /** @class */ (function () {
             }]
     }], null, null);
 
-export { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, MyTelInput, FormFieldExamplesModule };
+export { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldExamplesModule, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, MyTelInput };
 //# sourceMappingURL=form-field.js.map

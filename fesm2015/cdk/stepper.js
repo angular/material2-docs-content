@@ -165,5 +165,5 @@ CdkStepperExamplesModule.decorators = [
             }]
     }], null, null);
 
-export { CdkCustomStepperWithoutFormExample, CustomStepper, CdkStepperExamplesModule };
+export { CdkCustomStepperWithoutFormExample, CdkStepperExamplesModule, CustomStepper };
 //# sourceMappingURL=stepper.js.map
