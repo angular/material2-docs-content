@@ -8,8 +8,8 @@ export declare class CdkCustomStepperWithoutFormExample {
 /** Custom CDK stepper component */
 export declare class CustomStepper extends CdkStepper {
     onClick(index: number): void;
-    static ngAcceptInputType_linear: boolean | string;
-    static ngAcceptInputType_selectedIndex: number | string;
+    static ngAcceptInputType_linear: boolean | string | null | undefined;
+    static ngAcceptInputType_selectedIndex: number | string | null | undefined;
     static ɵfac: i0.ɵɵFactoryDef<CustomStepper>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<CustomStepper, "example-custom-stepper", never, {}, {}, never>;
 }

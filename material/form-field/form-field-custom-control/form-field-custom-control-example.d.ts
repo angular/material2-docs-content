@@ -49,8 +49,8 @@ export declare class MyTelInput implements ControlValueAccessor, MatFormFieldCon
     registerOnTouched(fn: any): void;
     setDisabledState(isDisabled: boolean): void;
     _handleInput(): void;
-    static ngAcceptInputType_disabled: boolean | string;
-    static ngAcceptInputType_required: boolean | string;
+    static ngAcceptInputType_disabled: boolean | string | null | undefined;
+    static ngAcceptInputType_required: boolean | string | null | undefined;
     static ɵfac: i0.ɵɵFactoryDef<MyTelInput>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<MyTelInput, "example-tel-input", never, { 'placeholder': "placeholder", 'required': "required", 'disabled': "disabled", 'value': "value" }, {}, never>;
 }
