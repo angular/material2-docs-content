@@ -669,8 +669,10 @@ var DatepickerLocaleExample = /** @class */ (function () {
 /** @title Datepicker with min & max validation */
 var DatepickerMinMaxExample = /** @class */ (function () {
     function DatepickerMinMaxExample() {
-        this.minDate = new Date(2000, 0, 1);
-        this.maxDate = new Date(2020, 0, 1);
+        // Set the minimum to January 1st 20 years in the past and December 31st a year in the future.
+        var currentYear = new Date().getFullYear();
+        this.minDate = new Date(currentYear - 20, 0, 1);
+        this.maxDate = new Date(currentYear + 1, 11, 31);
     }
     DatepickerMinMaxExample.decorators = [
         { type: Component, args: [{
@@ -679,6 +681,8 @@ var DatepickerMinMaxExample = /** @class */ (function () {
                     styleUrls: ['datepicker-min-max-example.css'],
                 },] },
     ];
+    /** @nocollapse */
+    DatepickerMinMaxExample.ctorParameters = function () { return []; };
     DatepickerMinMaxExample.ɵfac = function DatepickerMinMaxExample_Factory(t) { return new (t || DatepickerMinMaxExample)(); };
     DatepickerMinMaxExample.ɵcmp = ɵɵdefineComponent({ type: DatepickerMinMaxExample, selectors: [["datepicker-min-max-example"]], decls: 5, vars: 4, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "min", "max", "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DatepickerMinMaxExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
@@ -702,7 +706,7 @@ var DatepickerMinMaxExample = /** @class */ (function () {
                 templateUrl: 'datepicker-min-max-example.html',
                 styleUrls: ['datepicker-min-max-example.css'],
             }]
-    }], null, null);
+    }], function () { return []; }, null);
 
 var moment$1 = _rollupMoment__default || _rollupMoment;
 /** @title Datepicker that uses Moment.js dates */

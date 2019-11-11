@@ -7,6 +7,13 @@
   styleUrls: [<span class="hljs-string">'datepicker-min-max-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DatepickerMinMaxExample {
-  minDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2000</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
-  maxDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-number">2020</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
+  minDate: <span class="hljs-built_in">Date</span>;
+  maxDate: <span class="hljs-built_in">Date</span>;
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-comment">// Set the minimum to January 1st 20 years in the past and December 31st a year in the future.</span>
+    <span class="hljs-keyword">const</span> currentYear = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getFullYear();
+    <span class="hljs-keyword">this</span>.minDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(currentYear - <span class="hljs-number">20</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">this</span>.maxDate = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(currentYear + <span class="hljs-number">1</span>, <span class="hljs-number">11</span>, <span class="hljs-number">31</span>);
+  }
 }
