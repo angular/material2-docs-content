@@ -176,6 +176,21 @@ clipboard.</p>
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkCopyToClipboardAttempts&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>attempts: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>How many times to attempt to copy the text. This may be necessary for longer text, because
+the browser needs time to fill an intermediate textarea element and copy the content.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkCopyToClipboard&#39;</span>)
         </div><p class="docs-api-property-name">
       <code>text: string</code>
@@ -220,7 +235,25 @@ emitted value indicates whether copying was successful.</p>
       <p>Copies the current text to the clipboard.</p>
 
     </td>
-  </tr></table>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        attempts</p>
+      <code class="docs-api-method-parameter-type">number = this.attempts</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
 
 
   
@@ -301,6 +334,62 @@ called.</p>
 
   
 
+
+
+    <h3 id="cdk-clipboard-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="CdkCopyToClipboardConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CdkCopyToClipboardConfig"></span>
+  <code>CdkCopyToClipboardConfig</code>
+</h4><p class="docs-api-interface-description"><p>Object that can be used to configure the default options for <code>CdkCopyToClipboard</code>.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>attempts: number</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Default number of attempts to make when copying text to the clipboard.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    <h3 id="cdk-clipboard-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"></span>
+      Constants
+    </h3>
+    
+      
+
+<h4 id="CKD_COPY_TO_CLIPBOARD_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CKD_COPY_TO_CLIPBOARD_CONFIG"></span>
+  <code>CKD_COPY_TO_CLIPBOARD_CONFIG</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to provide the default options to <code>CdkCopyToClipboard</code>.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CKD_COPY_TO_CLIPBOARD_CONFIG: InjectionToken&lt;CdkCopyToClipboardConfig&gt;;</code>
+</pre>
+</div>
 
 
     </div>
