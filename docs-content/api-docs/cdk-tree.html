@@ -62,39 +62,11 @@ The children of node will be automatically added to <code>cdkTreeNodeOutlet</cod
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>role: &#39;treeitem&#39; | &#39;group&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The role of the node should be &#39;group&#39; if it&#39;s an internal node,
-and &#39;treeitem&#39; if it&#39;s a leaf node.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>data: T</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The tree node&#39;s data.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the option is disabled.</p>
 </td>
 </tr>
 
@@ -692,19 +664,6 @@ and &#39;treeitem&#39; if it&#39;s a leaf node.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the option is disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>isExpanded: boolean</code>
     </p>
   </td>
@@ -1283,45 +1242,6 @@ This is for flat tree node.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dataNodes: T[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Saved data node for <code>expandAll</code> action.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>expansionModel: SelectionModel&lt;T&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A selection model with multi-selection to track expansion status.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>getChildren: (dataNode: T) =&gt; (Observable&lt;T[]&gt; | T[] | undefined | null)</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Gets a stream that emits whenever the given data node&#39;s children change.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>getLevel: (dataNode: T) =&gt; number</code>
     </p>
   </td>
@@ -1722,63 +1642,10 @@ with correct levels.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>dataNodes: T[]</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Saved data node for <code>expandAll</code> action.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>expansionModel: SelectionModel&lt;T&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>A selection model with multi-selection to track expansion status.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>getChildren: (dataNode: T) =&gt; (Observable&lt;T[]&gt; | T[] | undefined | null)</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>getLevel: (dataNode: T) =&gt; number</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Get depth of a given data node, return the level number. This is for flat tree node.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>isExpandable: (dataNode: T) =&gt; boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the data node is expandable. Returns true if expandable.
-This is for flat tree node.</p>
-</td>
 </tr>
 
 

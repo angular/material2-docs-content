@@ -157,20 +157,6 @@ Defines a set of cells available for a table column.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>sticky: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;stickyEnd&#39;</span>)
         </div><p class="docs-api-property-name">
       <code>stickyEnd: boolean</code>
@@ -179,21 +165,6 @@ Defines a set of cells available for a table column.</p>
   <td class="docs-api-property-description"><p>Whether this column should be sticky positioned on the end of the row. Should make sure
 that it mimics the <code>CanStick</code> mixin such that <code>_hasStickyChanged</code> is set to true if the value
 has been changed.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>cssClassFriendlyName: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Transformed version of the column name that can be used as part of a CSS classname. Excludes
-all non-alphanumeric characters and the special characters &#39;-&#39; and &#39;_&#39;. Any characters that
-do not match are replaced by the &#39;-&#39; character.</p>
 </td>
 </tr>
 
@@ -599,6 +570,42 @@ Accepts a function that takes two parameters, <code>index</code> and <code>item<
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngAfterContentChecked
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnDestroy
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnInit
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell">removeColumnDef
       </th>
     </tr>
@@ -844,28 +851,7 @@ Captures the header row&#39;s template and other header properties such as the c
   
     <span class="docs-api-class-selector-name">[matHeaderRowDef]</span>
   
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matHeaderRowDefSticky</span>)
-        </div><p class="docs-api-property-name">
-      <code>sticky: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
-</td>
-</tr>
-
-
-    
-  </table>
+</p>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -898,6 +884,36 @@ Captures the header row&#39;s template and other header properties such as the c
       </p>
     </td>
   </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnChanges
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        changes</p>
+      <code class="docs-api-method-parameter-type">SimpleChanges</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
 
 
   
@@ -942,28 +958,7 @@ Captures the footer row&#39;s template and other footer properties such as the c
   
     <span class="docs-api-class-selector-name">[matFooterRowDef]</span>
   
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matFooterRowDefSticky</span>)
-        </div><p class="docs-api-property-name">
-      <code>sticky: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether sticky positioning should be applied.</p>
-</td>
-</tr>
-
-
-    
-  </table>
+</p>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -996,6 +991,36 @@ Captures the footer row&#39;s template and other footer properties such as the c
       </p>
     </td>
   </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnChanges
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        changes</p>
+      <code class="docs-api-method-parameter-type">SimpleChanges</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
 
 
   
@@ -1041,45 +1066,7 @@ a when predicate that describes when this row should be used.</p>
   
     <span class="docs-api-class-selector-name">[matRowDef]</span>
   
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matRowDefColumns</span>)
-        </div><p class="docs-api-property-name">
-      <code>columns: Iterable&lt;string&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The columns to be displayed on this row.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matRowDefWhen</span>)
-        </div><p class="docs-api-property-name">
-      <code>when: (index: number, rowData: T) =&gt; boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Function that should return true if this row template should be used for the provided index
-and row data. If left undefined, this row will be considered the default row template to use
-when no other when functions return true for the data.
-For every row, there must be at least one when function that passes or an undefined to default.</p>
-</td>
-</tr>
-
-
-    
-  </table>
+</p>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -1162,6 +1149,36 @@ if there is no difference.</p>
       </p>
     </td>
   </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnChanges
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        changes</p>
+      <code class="docs-api-method-parameter-type">SimpleChanges</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  </table>
 
 
   
@@ -1295,52 +1312,6 @@ input.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>dataAccessor: (data: T, name: string) =&gt; string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Accessor function to retrieve the data rendered for each cell. If this
-property is not set, the data cells will render the value found in the data&#39;s property matching
-the column&#39;s name. For example, if the column is named <code>id</code>, then the rendered value will be
-value defined by the data&#39;s <code>id</code> property.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>headerText: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Text label that should be used for the column header. If this property is not
-set, the header text will default to the column name with its first letter capitalized.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>justify: &#39;start&#39; | &#39;end&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Alignment of the cell values.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
       <code>name: string</code>
     </p>
   </td>
@@ -1353,7 +1324,32 @@ set, the header text will default to the column name with its first letter capit
   </table>
 
 
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
 
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnDestroy
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnInit
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
 
 
 

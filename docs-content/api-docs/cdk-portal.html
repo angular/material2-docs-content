@@ -61,19 +61,6 @@ the directive instance itself can be attached to a host, enabling declarative us
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>context: C | undefined</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Contextual data to be passed in to the embedded view.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>isAttached: boolean</code>
     </p>
   </td>
@@ -91,32 +78,6 @@ the directive instance itself can be attached to a host, enabling declarative us
     </p>
   </td>
   <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>templateRef: TemplateRef&lt;C&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The embedded template that will be used to instantiate an embedded View in the host.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewContainerRef: ViewContainerRef</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Reference to the ViewContainer into which the template will be stamped out.</p>
-</td>
 </tr>
 
 
@@ -276,19 +237,6 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>context: C | undefined</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Contextual data to be passed in to the embedded view.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>isAttached: boolean</code>
     </p>
   </td>
@@ -306,32 +254,6 @@ the PortalOutlet when it is performing an <code>attach()</code> or <code>detach(
     </p>
   </td>
   <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>templateRef: TemplateRef&lt;C&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The embedded template that will be used to instantiate an embedded View in the host.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewContainerRef: ViewContainerRef</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Reference to the ViewContainer into which the template will be stamped out.</p>
-</td>
 </tr>
 
 
@@ -913,55 +835,11 @@ directly attached to it, enabling declarative use.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>attached: EventEmitter&lt;CdkPortalOutletAttachedRef&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Emits when a portal is attached to the outlet.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>attachedRef: CdkPortalOutletAttachedRef</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Component or view reference that is attached to the portal.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" title="Will be deleted in v10.0.0">
-        Deprecated
-      </div><p class="docs-api-property-name">
-      <code>attachDomPortal: (portal: DomPortal) =&gt; {
-    if (!this._document) {
-        throw Error(&#39;Cannot attach DOM portal without _document constructor parameter&#39;);
-    }
-    let anchorNode = this._document.createComment(&#39;dom-portal&#39;);
-    let element = portal.element;
-    const nativeElement: Node = this._viewContainerRef.element.nativeElement;
-    const rootNode = nativeElement.nodeType === nativeElement.ELEMENT_NODE ?
-        nativeElement : nativeElement.parentNode!;
-    portal.setAttachedHost(this);
-    element.parentNode!.insertBefore(anchorNode, element);
-    rootNode.appendChild(element);
-    super.setDisposeFn(() =&gt; {
-        anchorNode.parentNode!.replaceChild(element, anchorNode);
-    });
-}</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Attaches the given DomPortal to this PortalHost by moving all of the portal content into it.</p>
 </td>
 </tr>
 
@@ -1268,6 +1146,30 @@ directly attached to it, enabling declarative use.</p>
       </p>
     </td>
   </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnDestroy
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnInit
+      </th>
+    </tr>
+  </thead></table>
 
 
   
@@ -2320,26 +2222,7 @@ ComponentPortal and TemplatePortal.</p>
   
 </h4><div class="docs-api-class-deprecated-marker" title="Will be deleted in v9.0.0">
   Deprecated
-</div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>attachDomPortal: null | ((portal: DomPortal) =&gt; any)</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-  </table>
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
@@ -3017,53 +2900,7 @@ application context.</p>
   
 </h4><div class="docs-api-class-deprecated-marker" title="Will be deleted in v9.0.0">
   Deprecated
-</div><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
-  <table class="docs-api-properties-table">
-    <tr class="docs-api-properties-header-row">
-      <th class="docs-api-properties-th">Name</th>
-      <th class="docs-api-properties-th">Description</th>
-    </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>outletElement: Element</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Element into which the content is projected.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" title="Will be deleted in v10.0.0">
-        Deprecated
-      </div><p class="docs-api-property-name">
-      <code>attachDomPortal: (portal: DomPortal) =&gt; {
-    if (!this._document) {
-        throw Error(&#39;Cannot attach DOM portal without _document constructor parameter&#39;);
-    }
-    let anchorNode = this._document.createComment(&#39;dom-portal&#39;);
-    let element = portal.element;
-    element.parentNode!.insertBefore(anchorNode, element);
-    this.outletElement.appendChild(element);
-    super.setDisposeFn(() =&gt; {
-        anchorNode.parentNode!.replaceChild(element, anchorNode);
-    });
-}</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Attaches a DOM portal by transferring its content into the outlet.</p>
-</td>
-</tr>
-
-
-    
-  </table>
+</div>
 
 
 <h5 class="docs-api-h5 docs-api-method-header">Methods</h5>

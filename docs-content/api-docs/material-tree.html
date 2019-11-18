@@ -54,20 +54,6 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
       <code>role: &#39;treeitem&#39; | &#39;group&#39;</code>
     </p>
   </td>
@@ -116,36 +102,6 @@
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;matTreeNode&#39;</span>)
         </div><p class="docs-api-property-name">
       <code>data: T</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias"> matTreeNodeDefWhen</span>)
-        </div><p class="docs-api-property-name">
-      <code>when: (index: number, nodeData: T) =&gt; boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Function that should return true if this node template should be used for the provided node
-data and index. If left undefined, this node will be considered the default node template to
-use when no other when functions return true for the data.
-For every node, there must be at least one when function that passes or an undefined to
-default.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>template: TemplateRef&lt;any&gt;</code>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
@@ -218,21 +174,6 @@ default.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>role: &#39;treeitem&#39; | &#39;group&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The role of the node should be &#39;group&#39; if it&#39;s an internal node,
-and &#39;treeitem&#39; if it&#39;s a leaf node.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>data: T</code>
     </p>
@@ -263,19 +204,6 @@ and &#39;treeitem&#39; if it&#39;s a leaf node.</p>
     </p>
   </td>
   <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>nodeOutlet: QueryList&lt;CdkTreeNodeOutlet&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The children node placeholder.</p>
-</td>
 </tr>
 
 
@@ -391,23 +319,23 @@ and &#39;treeitem&#39; if it&#39;s a leaf node.</p>
 
 
     
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>indentUnits: &#39;px&#39;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>CSS units used for the indentation value.</p>
-</td>
-</tr>
-
-
-    
   </table>
 
 
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
 
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnDestroy
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
 
 
 
@@ -450,54 +378,6 @@ and &#39;treeitem&#39; if it&#39;s a leaf node.</p>
   <td class="docs-api-property-description"><p>Provides a stream containing the latest data array to render. Influenced by the tree&#39;s
 stream of view window (what dataNodes are currently on screen).
 Data source can be an observable of data array, or a data array to render.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>trackBy: TrackByFunction&lt;T&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Tracking function that will be used to check the differences in data changes. Used similarly
-to <code>ngFor</code> <code>trackBy</code> function. Optimize node operations by identifying a node based on its data
-relative to the function to know if a node should be added/removed/moved.
-Accepts a function that takes two parameters, <code>index</code> and <code>item</code>.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>treeControl: TreeControl&lt;T&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>The tree controller</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>viewChange: BehaviorSubject&lt;{
-    start: number;
-    end: number;
-}&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Stream containing the latest information on what rows are being displayed on screen.
-Can be used by the data source to as a heuristic of what data should be provided.</p>
 </td>
 </tr>
 
@@ -580,6 +460,42 @@ within the data node view container.</p>
     </td>
   </tr>
   </table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngAfterContentChecked
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnDestroy
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnInit
+      </th>
+    </tr>
+  </thead></table>
 
 
   

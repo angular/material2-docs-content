@@ -53,20 +53,6 @@
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
-      <code>backdropClass: string</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Class to be added to the backdrop element.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
       <code>hasBackdrop: boolean | undefined</code>
     </p>
   </td>
@@ -137,58 +123,6 @@ to style the containing menu from outside the component.</p>
       
 
 <tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><p class="docs-api-property-name">
-      <code>closed: EventEmitter&lt;void | &#39;click&#39; | &#39;keydown&#39; | &#39;tab&#39;&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when the menu is closed.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>direction: Direction</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Layout direction of the menu.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>panelId: `mat-menu-panel-${menuPanelUid++}`</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"></td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>parentMenu: MatMenuPanel | undefined</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Parent menu of the current menu panel.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><div class="docs-api-deprecated-marker" title="Will be deleted in v8.0.0">
         Deprecated
@@ -199,37 +133,6 @@ to style the containing menu from outside the component.</p>
   <td class="docs-api-property-description"><p>This method takes classes set on the host mat-menu element and applies them on the
 menu template that displays in the overlay container.  Otherwise, it&#39;s difficult
 to style the containing menu from outside the component.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
-          @Output()</div><div class="docs-api-deprecated-marker" title="Will be deleted in v8.0.0">
-        Deprecated
-      </div><p class="docs-api-property-name">
-      <code>close: EventEmitter&lt;void | &#39;click&#39; | &#39;keydown&#39; | &#39;tab&#39;&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Event emitted when the menu is closed.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" title="Will be deleted in v8.0.0">
-        Deprecated
-      </div><p class="docs-api-property-name">
-      <code>items: QueryList&lt;MatMenuItem&gt;</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>List of the items inside of a menu.</p>
 </td>
 </tr>
 
@@ -311,6 +214,42 @@ to style the containing menu from outside the component.</p>
 <table class="docs-api-method-table">
   <thead>
     <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngAfterContentInit
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnDestroy
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">ngOnInit
+      </th>
+    </tr>
+  </thead></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell">resetActiveItem
       </th>
     </tr>
@@ -384,34 +323,6 @@ It exists mostly to set the role attribute.</p>
       <th class="docs-api-properties-th">Name</th>
       <th class="docs-api-properties-th">Description</th>
     </tr>
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disableRipple: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
-          @Input()</div><p class="docs-api-property-name">
-      <code>disabled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
-</td>
-</tr>
-
-
     
       
 
