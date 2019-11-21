@@ -161,14 +161,14 @@ SliderConfigurableExample.decorators = [
         ɵɵadvance(6);
         ɵɵproperty("disabled", ctx.disabled)("invert", ctx.invert)("max", ctx.max)("min", ctx.min)("step", ctx.step)("thumbLabel", ctx.thumbLabel)("tickInterval", ctx.getSliderTickInterval())("ngModel", ctx.value)("vertical", ctx.vertical);
     } }, directives: [MatCard, MatCardContent, MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, NgModel, MatCheckbox, NgIf, MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(SliderConfigurableExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SliderConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'slider-configurable-example',
                 templateUrl: 'slider-configurable-example.html',
                 styleUrls: ['slider-configurable-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SliderConfigurableExample.prototype.autoTicks;
@@ -226,14 +226,14 @@ SliderFormattingExample.decorators = [
     } if (rf & 2) {
         ɵɵproperty("displayWith", ctx.formatLabel);
     } }, directives: [MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(SliderFormattingExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SliderFormattingExample, [{
         type: Component,
         args: [{
                 selector: 'slider-formatting-example',
                 templateUrl: 'slider-formatting-example.html',
                 styleUrls: ['slider-formatting-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -255,14 +255,14 @@ SliderOverviewExample.decorators = [
 /** @nocollapse */ SliderOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SliderOverviewExample, selectors: [["slider-overview-example"]], decls: 1, vars: 0, template: function SliderOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-slider");
     } }, directives: [MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(SliderOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SliderOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'slider-overview-example',
                 templateUrl: 'slider-overview-example.html',
                 styleUrls: ['slider-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -299,7 +299,7 @@ SliderExamplesModule.decorators = [
             MatInputModule,
             MatSliderModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(SliderExamplesModule, { declarations: [SliderConfigurableExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SliderExamplesModule, { declarations: [SliderConfigurableExample,
         SliderFormattingExample,
         SliderOverviewExample], imports: [CommonModule,
         FormsModule,
@@ -308,8 +308,8 @@ SliderExamplesModule.decorators = [
         MatInputModule,
         MatSliderModule], exports: [SliderConfigurableExample,
         SliderFormattingExample,
-        SliderOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(SliderExamplesModule, [{
+        SliderOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SliderExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -323,7 +323,7 @@ SliderExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { SliderConfigurableExample, SliderExamplesModule, SliderFormattingExample, SliderOverviewExample };
 //# sourceMappingURL=slider.js.map

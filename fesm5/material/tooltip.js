@@ -56,14 +56,14 @@ var TooltipAutoHideExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatButton, MatTooltip, MatOption], styles: [".example-button[_ngcontent-%COMP%] {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container[_ngcontent-%COMP%] {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}"] });
     return TooltipAutoHideExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TooltipAutoHideExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipAutoHideExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-auto-hide-example',
                 templateUrl: 'tooltip-auto-hide-example.html',
                 styleUrls: ['tooltip-auto-hide-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Tooltip that can have a custom class applied.
@@ -89,7 +89,7 @@ var TooltipCustomClassExample = /** @class */ (function () {
         } }, directives: [MatButton, MatTooltip], styles: [".example-button {\n  margin-top: 16px;\n}\n\n.example-tooltip-red {\n  background: #b71c1c;\n}\n"], encapsulation: 2 });
     return TooltipCustomClassExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TooltipCustomClassExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipCustomClassExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-custom-class-example',
@@ -99,7 +99,7 @@ var TooltipCustomClassExample = /** @class */ (function () {
                 // `tooltip-custom-class-example.css` will not be scoped to this component's view.
                 encapsulation: ViewEncapsulation.None,
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Tooltip with a show and hide delay
@@ -137,14 +137,14 @@ var TooltipDelayExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatButton, MatTooltip], styles: [".example-user-input[_ngcontent-%COMP%] {\n  display: block;\n  width: 150px;\n}"] });
     return TooltipDelayExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TooltipDelayExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipDelayExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-delay-example',
                 templateUrl: 'tooltip-delay-example.html',
                 styleUrls: ['tooltip-delay-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Tooltip that can be disabled
@@ -175,14 +175,14 @@ var TooltipDisabledExample = /** @class */ (function () {
         } }, directives: [MatButton, MatTooltip, MatCheckbox, NgControlStatus, FormControlDirective], styles: [".example-disabled-checkbox[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
     return TooltipDisabledExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TooltipDisabledExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipDisabledExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-disabled-example',
                 templateUrl: 'tooltip-disabled-example.html',
                 styleUrls: ['tooltip-disabled-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Tooltip that can be manually shown/hidden.
@@ -223,14 +223,14 @@ var TooltipManualExample = /** @class */ (function () {
         } }, directives: [MatButton, MatTooltip], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
     return TooltipManualExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TooltipManualExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipManualExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-manual-example',
                 templateUrl: 'tooltip-manual-example.html',
                 styleUrls: ['tooltip-manual-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Tooltip with a changing message
@@ -262,14 +262,14 @@ var TooltipMessageExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatButton, MatTooltip], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
     return TooltipMessageExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TooltipMessageExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipMessageExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-message-example',
                 templateUrl: 'tooltip-message-example.html',
                 styleUrls: ['tooltip-message-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /** Custom options the configure the tooltip's default show/hide delays. */
 var myCustomTooltipDefaults = {
@@ -303,7 +303,7 @@ var TooltipModifiedDefaultsExample = /** @class */ (function () {
         } }, directives: [MatButton, MatTooltip], styles: [""] });
     return TooltipModifiedDefaultsExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TooltipModifiedDefaultsExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipModifiedDefaultsExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-modified-defaults-example',
@@ -313,7 +313,7 @@ var TooltipModifiedDefaultsExample = /** @class */ (function () {
                     { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
                 ],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Basic tooltip
@@ -336,14 +336,14 @@ var TooltipOverviewExample = /** @class */ (function () {
         } }, directives: [MatButton, MatTooltip], styles: [""] });
     return TooltipOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TooltipOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-overview-example',
                 templateUrl: 'tooltip-overview-example.html',
                 styleUrls: ['tooltip-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 function TooltipPositionExample_mat_option_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 4);
@@ -390,14 +390,14 @@ var TooltipPositionExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatButton, MatTooltip, MatOption], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
     return TooltipPositionExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TooltipPositionExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipPositionExample, [{
         type: Component,
         args: [{
                 selector: 'tooltip-position-example',
                 templateUrl: 'tooltip-position-example.html',
                 styleUrls: ['tooltip-position-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 var EXAMPLES = [
     TooltipAutoHideExample,
@@ -440,7 +440,7 @@ var TooltipExamplesModule = /** @class */ (function () {
             ]] });
     return TooltipExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(TooltipExamplesModule, { declarations: [TooltipAutoHideExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TooltipExamplesModule, { declarations: [TooltipAutoHideExample,
         TooltipCustomClassExample,
         TooltipDelayExample,
         TooltipDisabledExample,
@@ -462,8 +462,8 @@ var TooltipExamplesModule = /** @class */ (function () {
         TooltipMessageExample,
         TooltipModifiedDefaultsExample,
         TooltipOverviewExample,
-        TooltipPositionExample] });
-/*@__PURE__*/ ɵsetClassMetadata(TooltipExamplesModule, [{
+        TooltipPositionExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -478,7 +478,7 @@ var TooltipExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipExamplesModule, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample };
 //# sourceMappingURL=tooltip.js.map

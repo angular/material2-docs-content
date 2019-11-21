@@ -30,7 +30,7 @@ ExpansionExpandCollapseAllExample.propDecorators = {
         ɵɵviewQuery(MatAccordion, true);
     } if (rf & 2) {
         var _t;
-        ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.accordion = _t.first);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.accordion = _t.first);
     } }, decls: 40, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "type", "number", "min", "1", "placeholder", "Age"], ["disabled", ""], ["matInput", "", "placeholder", "Country"], ["matInput", "", "placeholder", "Date", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) { if (rf & 1) {
         const _r1 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "div", 0);
@@ -104,7 +104,7 @@ ExpansionExpandCollapseAllExample.propDecorators = {
         ɵɵadvance(37);
         ɵɵproperty("matDatepicker", _r0);
     } }, directives: [MatButton, MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelDescription, MatIcon, MatFormField, MatInput, MatDatepickerInput, MatDatepicker], styles: [".example-action-buttons[_ngcontent-%COMP%] {\n  padding-bottom: 20px;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(ExpansionExpandCollapseAllExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ExpansionExpandCollapseAllExample, [{
         type: Component,
         args: [{
                 selector: 'expansion-toggle-all-example',
@@ -114,7 +114,7 @@ ExpansionExpandCollapseAllExample.propDecorators = {
     }], null, { accordion: [{
             type: ViewChild,
             args: [MatAccordion]
-        }] });
+        }] }); })();
 if (false) {
     /** @type {?} */
     ExpansionExpandCollapseAllExample.prototype.accordion;
@@ -178,14 +178,14 @@ ExpansionOverviewExample.decorators = [
         ɵɵadvance(16);
         ɵɵtextInterpolate1(" Currently I am ", ctx.panelOpenState ? "open" : "closed", " ");
     } }, directives: [MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelDescription, MatFormField, MatInput], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(ExpansionOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ExpansionOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'expansion-overview-example',
                 templateUrl: 'expansion-overview-example.html',
                 styleUrls: ['expansion-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     ExpansionOverviewExample.prototype.panelOpenState;
@@ -328,14 +328,14 @@ ExpansionStepsExample.decorators = [
         ɵɵadvance(9);
         ɵɵproperty("matDatepicker", _r2);
     } }, directives: [MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelDescription, MatIcon, MatFormField, MatInput, MatExpansionPanelActionRow, MatButton, MatDatepickerInput, MatDatepicker], styles: [".example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}\n\nmat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(ExpansionStepsExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ExpansionStepsExample, [{
         type: Component,
         args: [{
                 selector: 'expansion-steps-example',
                 templateUrl: 'expansion-steps-example.html',
                 styleUrls: ['expansion-steps-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     ExpansionStepsExample.prototype.step;
@@ -373,14 +373,14 @@ ExpansionExamplesModule.decorators = [
             MatIconModule,
             MatInputModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(ExpansionExamplesModule, { declarations: [ExpansionExpandCollapseAllExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ExpansionExamplesModule, { declarations: [ExpansionExpandCollapseAllExample,
         ExpansionOverviewExample,
         ExpansionStepsExample], imports: [MatButtonModule,
         MatDatepickerModule,
         MatExpansionModule,
         MatIconModule,
-        MatInputModule] });
-/*@__PURE__*/ ɵsetClassMetadata(ExpansionExamplesModule, [{
+        MatInputModule] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ExpansionExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -392,7 +392,7 @@ ExpansionExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { ExpansionExamplesModule, ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample };
 //# sourceMappingURL=expansion.js.map

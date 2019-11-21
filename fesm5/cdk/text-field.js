@@ -61,14 +61,14 @@ var TextFieldAutofillDirectiveExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatLabel, MatInput, CdkAutofill, NgIf, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
     return TextFieldAutofillDirectiveExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TextFieldAutofillDirectiveExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutofillDirectiveExample, [{
         type: Component,
         args: [{
                 selector: 'text-field-autofill-directive-example',
                 templateUrl: './text-field-autofill-directive-example.html',
                 styleUrls: ['./text-field-autofill-directive-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 var _c0 = ["first"];
 var _c1 = ["last"];
@@ -119,8 +119,8 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
             ɵɵviewQuery(_c1, true, ElementRef);
         } if (rf & 2) {
             var _t;
-            ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.firstName = _t.first);
-            ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.lastName = _t.first);
+            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.firstName = _t.first);
+            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.lastName = _t.first);
         } }, decls: 15, vars: 2, consts: [["matInput", ""], ["first", ""], [4, "ngIf"], ["last", ""], ["mat-raised-button", ""]], template: function TextFieldAutofillMonitorExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form");
             ɵɵelementStart(1, "mat-form-field");
@@ -149,7 +149,7 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatLabel, MatInput, NgIf, MatHint], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
     return TextFieldAutofillMonitorExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TextFieldAutofillMonitorExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutofillMonitorExample, [{
         type: Component,
         args: [{
                 selector: 'text-field-autofill-monitor-example',
@@ -162,7 +162,7 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
         }], lastName: [{
             type: ViewChild,
             args: ['last', { read: ElementRef }]
-        }] });
+        }] }); })();
 
 var _c0$1 = ["autosize"];
 /** @title Auto-resizing textarea */
@@ -195,7 +195,7 @@ var TextFieldAutosizeTextareaExample = /** @class */ (function () {
             ɵɵviewQuery(_c0$1, true);
         } if (rf & 2) {
             var _t;
-            ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.autosize = _t.first);
+            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.autosize = _t.first);
         } }, decls: 22, vars: 1, consts: [["value", "16px", 3, "selectionChange"], ["fontSize", ""], ["value", "10px"], ["value", "12px"], ["value", "14px"], ["value", "16px"], ["value", "18px"], ["value", "20px"], ["matInput", "", "cdkTextareaAutosize", "", "cdkAutosizeMinRows", "1", "cdkAutosizeMaxRows", "5"], ["autosize", "cdkTextareaAutosize"]], template: function TextFieldAutosizeTextareaExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
             ɵɵelementStart(1, "mat-label");
@@ -236,7 +236,7 @@ var TextFieldAutosizeTextareaExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, MatInput, CdkTextareaAutosize], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
     return TextFieldAutosizeTextareaExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(TextFieldAutosizeTextareaExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TextFieldAutosizeTextareaExample, [{
         type: Component,
         args: [{
                 selector: 'text-field-autosize-textarea-example',
@@ -246,7 +246,7 @@ var TextFieldAutosizeTextareaExample = /** @class */ (function () {
     }], function () { return [{ type: NgZone }]; }, { autosize: [{
             type: ViewChild,
             args: ['autosize']
-        }] });
+        }] }); })();
 
 var EXAMPLES = [
     TextFieldAutofillDirectiveExample,
@@ -277,15 +277,15 @@ var CdkTextFieldExamplesModule = /** @class */ (function () {
             ]] });
     return CdkTextFieldExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(CdkTextFieldExamplesModule, { declarations: [TextFieldAutofillDirectiveExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkTextFieldExamplesModule, { declarations: [TextFieldAutofillDirectiveExample,
         TextFieldAutofillMonitorExample,
         TextFieldAutosizeTextareaExample], imports: [CommonModule,
         TextFieldModule,
         MatInputModule,
         MatSelectModule], exports: [TextFieldAutofillDirectiveExample,
         TextFieldAutofillMonitorExample,
-        TextFieldAutosizeTextareaExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkTextFieldExamplesModule, [{
+        TextFieldAutosizeTextareaExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTextFieldExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -297,7 +297,7 @@ var CdkTextFieldExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CdkTextFieldExamplesModule, TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample };
 //# sourceMappingURL=text-field.js.map

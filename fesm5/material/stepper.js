@@ -108,14 +108,14 @@ var StepperEditableExample = /** @class */ (function () {
         } }, directives: [MatButton, MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatStepperNext, MatStepperPrevious], styles: [""] });
     return StepperEditableExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(StepperEditableExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperEditableExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-editable-example',
                 templateUrl: 'stepper-editable-example.html',
                 styleUrls: ['stepper-editable-example.css']
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null);
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
 
 function StepperErrorsExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Fill out your name");
@@ -216,7 +216,7 @@ var StepperErrorsExample = /** @class */ (function () {
         } }, directives: [MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatButton, MatStepperNext, MatStepperPrevious], styles: [""] });
     return StepperErrorsExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(StepperErrorsExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperErrorsExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-errors-example',
@@ -226,7 +226,7 @@ var StepperErrorsExample = /** @class */ (function () {
                         provide: STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
                     }]
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null);
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
 
 function StepperLabelPositionBottomExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Fill out your name");
@@ -322,14 +322,14 @@ var StepperLabelPositionBottomExample = /** @class */ (function () {
         } }, directives: [MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatButton, MatStepperNext, MatStepperPrevious], styles: [""] });
     return StepperLabelPositionBottomExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(StepperLabelPositionBottomExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperLabelPositionBottomExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-label-position-bottom-example',
                 templateUrl: 'stepper-label-position-bottom-example.html',
                 styleUrls: ['stepper-label-position-bottom-example.css'],
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null);
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
 
 function StepperOptionalExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Fill out your name");
@@ -432,14 +432,14 @@ var StepperOptionalExample = /** @class */ (function () {
         } }, directives: [MatButton, MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatStepperNext, MatStepperPrevious], styles: [""] });
     return StepperOptionalExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(StepperOptionalExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperOptionalExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-optional-example',
                 templateUrl: 'stepper-optional-example.html',
                 styleUrls: ['stepper-optional-example.css']
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null);
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
 
 function StepperOverviewExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Fill out your name");
@@ -544,14 +544,14 @@ var StepperOverviewExample = /** @class */ (function () {
         } }, directives: [MatButton, MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatStepperNext, MatStepperPrevious], styles: [""] });
     return StepperOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(StepperOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-overview-example',
                 templateUrl: 'stepper-overview-example.html',
                 styleUrls: ['stepper-overview-example.css'],
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null);
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
 
 function StepperStatesExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Fill out your name");
@@ -694,7 +694,7 @@ var StepperStatesExample = /** @class */ (function () {
         } }, directives: [MatHorizontalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatButton, MatStepperNext, MatStepperPrevious, MatStepperIcon, MatIcon], styles: [""] });
     return StepperStatesExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(StepperStatesExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperStatesExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-states-example',
@@ -704,7 +704,7 @@ var StepperStatesExample = /** @class */ (function () {
                         provide: STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
                     }]
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null);
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
 
 function StepperVerticalExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵtext(0, "Fill out your name");
@@ -809,14 +809,14 @@ var StepperVerticalExample = /** @class */ (function () {
         } }, directives: [MatButton, MatVerticalStepper, MatStep, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatStepLabel, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, MatStepperNext, MatStepperPrevious], styles: [""] });
     return StepperVerticalExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(StepperVerticalExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperVerticalExample, [{
         type: Component,
         args: [{
                 selector: 'stepper-vertical-example',
                 templateUrl: 'stepper-vertical-example.html',
                 styleUrls: ['stepper-vertical-example.css']
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null);
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
 
 var EXAMPLES = [
     StepperEditableExample,
@@ -853,7 +853,7 @@ var StepperExamplesModule = /** @class */ (function () {
             ]] });
     return StepperExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(StepperExamplesModule, { declarations: [StepperEditableExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(StepperExamplesModule, { declarations: [StepperEditableExample,
         StepperErrorsExample,
         StepperLabelPositionBottomExample,
         StepperOptionalExample,
@@ -869,8 +869,8 @@ var StepperExamplesModule = /** @class */ (function () {
         StepperOptionalExample,
         StepperOverviewExample,
         StepperStatesExample,
-        StepperVerticalExample] });
-/*@__PURE__*/ ɵsetClassMetadata(StepperExamplesModule, [{
+        StepperVerticalExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(StepperExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -883,7 +883,7 @@ var StepperExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { StepperEditableExample, StepperErrorsExample, StepperExamplesModule, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample };
 //# sourceMappingURL=stepper.js.map

@@ -62,14 +62,14 @@ TabGroupAlignExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatTabGroup, MatTab], styles: [".mat-tab-group[_ngcontent-%COMP%] {\n  margin-bottom: 48px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupAlignExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupAlignExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-align-example',
                 templateUrl: 'tab-group-align-example.html',
                 styleUrls: ['tab-group-align-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -118,14 +118,14 @@ TabGroupAnimationsExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatTabGroup, MatTab], styles: [".mat-tab-group[_ngcontent-%COMP%] {\n  margin-bottom: 48px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupAnimationsExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupAnimationsExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-animations-example',
                 templateUrl: 'tab-group-animations-example.html',
                 styleUrls: ['tab-group-animations-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -207,14 +207,14 @@ TabGroupAsyncExample.ctorParameters = () => [];
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ɵɵpipeBind1(4, 4, ctx.asyncTabs));
     } }, directives: [NgIf, MatTabGroup, NgForOf, MatTab, MatTabLabel], pipes: [AsyncPipe], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupAsyncExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupAsyncExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-async-example',
                 templateUrl: 'tab-group-async-example.html',
                 styleUrls: ['tab-group-async-example.css'],
             }]
-    }], function () { return []; }, null);
+    }], function () { return []; }, null); })();
 if (false) {
     /** @type {?} */
     TabGroupAsyncExample.prototype.asyncTabs;
@@ -250,14 +250,14 @@ TabGroupBasicExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatTabGroup, MatTab], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupBasicExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupBasicExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-basic-example',
                 templateUrl: 'tab-group-basic-example.html',
                 styleUrls: ['tab-group-basic-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -310,14 +310,14 @@ TabGroupCustomLabelExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatTabGroup, MatTab, MatTabLabel, MatIcon], styles: [".example-tab-icon[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupCustomLabelExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupCustomLabelExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-custom-label-example',
                 templateUrl: 'tab-group-custom-label-example.html',
                 styleUrls: ['tab-group-custom-label-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -350,14 +350,14 @@ TabGroupDynamicHeightExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatTabGroup, MatTab], styles: [".example-small-box[_ngcontent-%COMP%], .example-large-box[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 16px;\n  padding: 16px;\n  border-radius: 8px;\n}\n\n.example-small-box[_ngcontent-%COMP%] {\n  height: 100px;\n  width: 100px;\n}\n\n.example-large-box[_ngcontent-%COMP%] {\n  height: 300px;\n  width: 300px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupDynamicHeightExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupDynamicHeightExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-dynamic-height-example',
                 templateUrl: 'tab-group-dynamic-height-example.html',
                 styleUrls: ['tab-group-dynamic-height-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -446,14 +446,14 @@ TabGroupDynamicExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.tabs);
     } }, directives: [MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatButton, MatCheckbox, MatTabGroup, NgForOf, MatTab], styles: [".example-input-label[_ngcontent-%COMP%], .example-add-tab-button[_ngcontent-%COMP%], .example-delete-tab-button[_ngcontent-%COMP%] {\n  margin: 8px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupDynamicExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupDynamicExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-dynamic-example',
                 templateUrl: 'tab-group-dynamic-example.html',
                 styleUrls: ['tab-group-dynamic-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     TabGroupDynamicExample.prototype.tabs;
@@ -491,14 +491,14 @@ TabGroupHeaderBelowExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatTabGroup, MatTab], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupHeaderBelowExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupHeaderBelowExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-header-below-example',
                 templateUrl: 'tab-group-header-below-example.html',
                 styleUrls: ['tab-group-header-below-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -564,14 +564,14 @@ TabGroupLazyLoadedExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatTabGroup, MatTab, MatTabContent], pipes: [DatePipe], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupLazyLoadedExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupLazyLoadedExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-lazy-loaded-example',
                 templateUrl: 'tab-group-lazy-loaded-example.html',
                 styleUrls: ['tab-group-lazy-loaded-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     TabGroupLazyLoadedExample.prototype.tabLoadTimes;
@@ -607,14 +607,14 @@ TabGroupStretchedExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatTabGroup, MatTab], styles: [".example-stretched-tabs[_ngcontent-%COMP%] {\n  max-width: 800px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupStretchedExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupStretchedExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-stretched-example',
                 templateUrl: 'tab-group-stretched-example.html',
                 styleUrls: ['tab-group-stretched-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -677,14 +677,14 @@ TabGroupThemeExample.decorators = [
         ɵɵadvance(18);
         ɵɵproperty("color", _r18.value)("backgroundColor", _r19.value);
     } }, directives: [MatButtonToggleGroup, MatButtonToggle, MatTabGroup, MatTab], styles: [".example-button-toggle-label[_ngcontent-%COMP%] {\n  display: inline-block;\n  margin: 16px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupThemeExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupThemeExample, [{
         type: Component,
         args: [{
                 selector: 'tab-group-theme-example',
                 templateUrl: 'tab-group-theme-example.html',
                 styleUrls: ['tab-group-theme-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -753,14 +753,14 @@ TabNavBarBasicExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.links);
     } }, directives: [MatTabNav, NgForOf, MatTabLink, MatButton], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 8px;\n  margin-right: 8px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(TabNavBarBasicExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabNavBarBasicExample, [{
         type: Component,
         args: [{
                 selector: 'tab-nav-bar-basic-example',
                 templateUrl: 'tab-nav-bar-basic-example.html',
                 styleUrls: ['tab-nav-bar-basic-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     TabNavBarBasicExample.prototype.links;
@@ -818,7 +818,7 @@ TabGroupExamplesModule.decorators = [
             MatTabsModule,
             ReactiveFormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(TabGroupExamplesModule, { declarations: [TabGroupAlignExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TabGroupExamplesModule, { declarations: [TabGroupAlignExample,
         TabGroupAnimationsExample,
         TabGroupAsyncExample,
         TabGroupBasicExample,
@@ -847,8 +847,8 @@ TabGroupExamplesModule.decorators = [
         TabGroupLazyLoadedExample,
         TabGroupStretchedExample,
         TabGroupThemeExample,
-        TabNavBarBasicExample] });
-/*@__PURE__*/ ɵsetClassMetadata(TabGroupExamplesModule, [{
+        TabNavBarBasicExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -864,7 +864,7 @@ TabGroupExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupExamplesModule, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample };
 //# sourceMappingURL=tabs.js.map

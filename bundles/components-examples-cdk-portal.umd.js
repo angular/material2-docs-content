@@ -39,7 +39,7 @@
                 i0.ɵɵviewQuery(_c0, true);
             } if (rf & 2) {
                 var _t;
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.templatePortalContent = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.templatePortalContent = _t.first);
             } }, decls: 10, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], ["templatePortalContent", ""], [3, "click"]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h2");
                 i0.ɵɵtext(1, "The portal outlet is below:");
@@ -62,7 +62,7 @@
             } }, directives: [i1.CdkPortalOutlet], styles: [".example-portal-outlet[_ngcontent-%COMP%] {\n  margin-bottom: 10px;\n  padding: 10px;\n  border: 1px dashed black;\n  width: 250px;\n  height: 250px;\n}"] });
         return CdkPortalOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkPortalOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPortalOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-portal-overview-example',
@@ -72,7 +72,7 @@
         }], function () { return [{ type: i0.ViewContainerRef }]; }, { templatePortalContent: [{
                 type: i0.ViewChild,
                 args: ['templatePortalContent']
-            }] });
+            }] }); })();
     var ComponentPortalExample = /** @class */ (function () {
         function ComponentPortalExample() {
         }
@@ -88,13 +88,13 @@
             } }, encapsulation: 2 });
         return ComponentPortalExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ComponentPortalExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ComponentPortalExample, [{
             type: i0.Component,
             args: [{
                     selector: 'component-portal-example',
                     template: 'Hello, this is a component portal'
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         CdkPortalOverviewExample,
@@ -119,10 +119,10 @@
                 ]] });
         return CdkPortalExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CdkPortalExamplesModule, { declarations: [CdkPortalOverviewExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkPortalExamplesModule, { declarations: [CdkPortalOverviewExample,
             ComponentPortalExample], imports: [i1.PortalModule], exports: [CdkPortalOverviewExample,
-            ComponentPortalExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkPortalExamplesModule, [{
+            ComponentPortalExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPortalExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -132,7 +132,7 @@
                     exports: EXAMPLES,
                     entryComponents: [ComponentPortalExample]
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.CdkPortalExamplesModule = CdkPortalExamplesModule;
     exports.CdkPortalOverviewExample = CdkPortalOverviewExample;

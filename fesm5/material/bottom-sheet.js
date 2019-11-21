@@ -37,14 +37,14 @@ var BottomSheetOverviewExample = /** @class */ (function () {
         } }, directives: [MatButton], styles: [""] });
     return BottomSheetOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(BottomSheetOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(BottomSheetOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'bottom-sheet-overview-example',
                 templateUrl: 'bottom-sheet-overview-example.html',
                 styleUrls: ['bottom-sheet-overview-example.css'],
             }]
-    }], function () { return [{ type: MatBottomSheet }]; }, null);
+    }], function () { return [{ type: MatBottomSheet }]; }, null); })();
 var BottomSheetOverviewExampleSheet = /** @class */ (function () {
     function BottomSheetOverviewExampleSheet(_bottomSheetRef) {
         this._bottomSheetRef = _bottomSheetRef;
@@ -106,13 +106,13 @@ var BottomSheetOverviewExampleSheet = /** @class */ (function () {
         } }, directives: [MatNavList, MatListItem, MatLine], encapsulation: 2 });
     return BottomSheetOverviewExampleSheet;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(BottomSheetOverviewExampleSheet, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(BottomSheetOverviewExampleSheet, [{
         type: Component,
         args: [{
                 selector: 'bottom-sheet-overview-example-sheet',
                 templateUrl: 'bottom-sheet-overview-example-sheet.html',
             }]
-    }], function () { return [{ type: MatBottomSheetRef }]; }, null);
+    }], function () { return [{ type: MatBottomSheetRef }]; }, null); })();
 
 var EXAMPLES = [
     BottomSheetOverviewExample,
@@ -141,12 +141,12 @@ var BottomSheetExamplesModule = /** @class */ (function () {
             ]] });
     return BottomSheetExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(BottomSheetExamplesModule, { declarations: [BottomSheetOverviewExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(BottomSheetExamplesModule, { declarations: [BottomSheetOverviewExample,
         BottomSheetOverviewExampleSheet], imports: [MatBottomSheetModule,
         MatButtonModule,
         MatListModule], exports: [BottomSheetOverviewExample,
-        BottomSheetOverviewExampleSheet] });
-/*@__PURE__*/ ɵsetClassMetadata(BottomSheetExamplesModule, [{
+        BottomSheetOverviewExampleSheet] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(BottomSheetExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -158,7 +158,7 @@ var BottomSheetExamplesModule = /** @class */ (function () {
                 exports: EXAMPLES,
                 entryComponents: [BottomSheetOverviewExampleSheet],
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { BottomSheetExamplesModule, BottomSheetOverviewExample, BottomSheetOverviewExampleSheet };
 //# sourceMappingURL=bottom-sheet.js.map

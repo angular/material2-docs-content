@@ -84,14 +84,14 @@
             } }, styles: [""] });
         return CdkPlatformOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkPlatformOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPlatformOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-platform-overview-example',
                     templateUrl: 'cdk-platform-overview-example.html',
                     styleUrls: ['cdk-platform-overview-example.css'],
                 }]
-        }], function () { return [{ type: i1.Platform }]; }, null);
+        }], function () { return [{ type: i1.Platform }]; }, null); })();
 
     var EXAMPLES = [CdkPlatformOverviewExample];
     var CdkPlatformExamplesModule = /** @class */ (function () {
@@ -112,8 +112,8 @@
                 ]] });
         return CdkPlatformExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [i1.PlatformModule], exports: [CdkPlatformOverviewExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkPlatformExamplesModule, [{
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [i1.PlatformModule], exports: [CdkPlatformOverviewExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPlatformExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -122,7 +122,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.CdkPlatformExamplesModule = CdkPlatformExamplesModule;
     exports.CdkPlatformOverviewExample = CdkPlatformOverviewExample;

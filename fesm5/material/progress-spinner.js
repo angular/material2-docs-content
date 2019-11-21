@@ -98,14 +98,14 @@ var ProgressSpinnerConfigurableExample = /** @class */ (function () {
         } }, directives: [MatCard, MatCardContent, MatRadioGroup, NgControlStatus, NgModel, MatRadioButton, NgIf, MatProgressSpinner, MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
     return ProgressSpinnerConfigurableExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'progress-spinner-configurable-example',
                 templateUrl: 'progress-spinner-configurable-example.html',
                 styleUrls: ['progress-spinner-configurable-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Basic progress-spinner
@@ -126,14 +126,14 @@ var ProgressSpinnerOverviewExample = /** @class */ (function () {
         } }, directives: [MatSpinner], styles: [""] });
     return ProgressSpinnerOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'progress-spinner-overview-example',
                 templateUrl: 'progress-spinner-overview-example.html',
                 styleUrls: ['progress-spinner-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 var EXAMPLES = [
     ProgressSpinnerConfigurableExample,
@@ -167,15 +167,15 @@ var ProgressSpinnerExamplesModule = /** @class */ (function () {
             ]] });
     return ProgressSpinnerExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(ProgressSpinnerExamplesModule, { declarations: [ProgressSpinnerConfigurableExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ProgressSpinnerExamplesModule, { declarations: [ProgressSpinnerConfigurableExample,
         ProgressSpinnerOverviewExample], imports: [CommonModule,
         MatCardModule,
         MatProgressSpinnerModule,
         MatRadioModule,
         MatSliderModule,
         FormsModule], exports: [ProgressSpinnerConfigurableExample,
-        ProgressSpinnerOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(ProgressSpinnerExamplesModule, [{
+        ProgressSpinnerOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -189,7 +189,7 @@ var ProgressSpinnerExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { ProgressSpinnerConfigurableExample, ProgressSpinnerExamplesModule, ProgressSpinnerOverviewExample };
 //# sourceMappingURL=progress-spinner.js.map

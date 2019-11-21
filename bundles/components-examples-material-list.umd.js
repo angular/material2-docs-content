@@ -33,14 +33,14 @@
             } }, directives: [i1.MatList, i1.MatListItem], styles: [""] });
         return ListOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ListOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ListOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'list-overview-example',
                     templateUrl: 'list-overview-example.html',
                     styleUrls: ['list-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function ListSectionsExample_mat_list_item_3_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-list-item");
@@ -140,14 +140,14 @@
             } }, directives: [i1.MatList, i1.MatListSubheaderCssMatStyler, i2.NgForOf, i3.MatDivider, i1.MatListItem, i4.MatIcon, i1.MatListIconCssMatStyler, i5.MatLine], pipes: [i2.DatePipe], styles: [".mat-list-icon[_ngcontent-%COMP%] {\n  color: rgba(0, 0, 0, 0.54);\n}"] });
         return ListSectionsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ListSectionsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ListSectionsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'list-sections-example',
                     styleUrls: ['list-sections-example.css'],
                     templateUrl: 'list-sections-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function ListSelectionExample_mat_list_option_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-list-option");
@@ -189,14 +189,14 @@
             } }, directives: [i1.MatSelectionList, i2.NgForOf, i1.MatListOption], styles: [""] });
         return ListSelectionExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ListSelectionExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ListSelectionExample, [{
             type: i0.Component,
             args: [{
                     selector: 'list-selection-example',
                     styleUrls: ['list-selection-example.css'],
                     templateUrl: 'list-selection-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         ListOverviewExample,
@@ -225,14 +225,14 @@
                 ]] });
         return ListExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(ListExamplesModule, { declarations: [ListOverviewExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ListExamplesModule, { declarations: [ListOverviewExample,
             ListSectionsExample,
             ListSelectionExample], imports: [i2.CommonModule,
             i4.MatIconModule,
             i1.MatListModule], exports: [ListOverviewExample,
             ListSectionsExample,
-            ListSelectionExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ListExamplesModule, [{
+            ListSelectionExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ListExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -243,7 +243,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.ListExamplesModule = ListExamplesModule;
     exports.ListOverviewExample = ListOverviewExample;

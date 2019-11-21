@@ -124,14 +124,14 @@
             } }, directives: [i1.CdkTable, i1.CdkColumnDef, i1.CdkHeaderCellDef, i1.CdkCellDef, i1.CdkHeaderRowDef, i1.CdkRowDef, i1.CdkHeaderCell, i1.CdkCell, i1.CdkHeaderRow, i1.CdkRow], styles: ["cdk-row[_ngcontent-%COMP%], cdk-header-row[_ngcontent-%COMP%], cdk-footer-row[_ngcontent-%COMP%] {\n  display: flex;\n}\n\ncdk-cell[_ngcontent-%COMP%], cdk-header-cell[_ngcontent-%COMP%], cdk-footer-cell[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
         return CdkTableBasicFlexExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkTableBasicFlexExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkTableBasicFlexExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-table-basic-flex-example',
                     styleUrls: ['cdk-table-basic-flex-example.css'],
                     templateUrl: 'cdk-table-basic-flex-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
     /**
      * Data source to provide what data should be rendered in the table. Note that the data source
      * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -275,14 +275,14 @@
             } }, directives: [i1.CdkTable, i1.CdkColumnDef, i1.CdkHeaderCellDef, i1.CdkCellDef, i1.CdkHeaderRowDef, i1.CdkRowDef, i1.CdkHeaderCell, i1.CdkCell, i1.CdkHeaderRow, i1.CdkRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nth[_ngcontent-%COMP%] {\n  text-align: left;\n}"] });
         return CdkTableBasicExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkTableBasicExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkTableBasicExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-table-basic-example',
                     styleUrls: ['cdk-table-basic-example.css'],
                     templateUrl: 'cdk-table-basic-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
     /**
      * Data source to provide what data should be rendered in the table. Note that the data source
      * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -328,10 +328,10 @@
                 ]] });
         return CdkTableExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
             CdkTableBasicFlexExample], imports: [i1.CdkTableModule], exports: [CdkTableBasicExample,
-            CdkTableBasicFlexExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkTableExamplesModule, [{
+            CdkTableBasicFlexExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkTableExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -340,7 +340,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.CdkTableBasicExample = CdkTableBasicExample;
     exports.CdkTableBasicFlexExample = CdkTableBasicFlexExample;

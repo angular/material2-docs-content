@@ -46,14 +46,14 @@
             } }, directives: function () { return [CustomStepper, i1.CdkStep]; }, styles: [""] });
         return CdkCustomStepperWithoutFormExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkCustomStepperWithoutFormExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkCustomStepperWithoutFormExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-custom-stepper-without-form-example',
                     templateUrl: './cdk-custom-stepper-without-form-example.html',
                     styleUrls: ['./cdk-custom-stepper-without-form-example.css']
                 }]
-        }], null, null);
+        }], null, null); })();
     /** Custom CDK stepper component */
     var CustomStepper = /** @class */ (function (_super) {
         tslib.__extends(CustomStepper, _super);
@@ -105,7 +105,7 @@
         return CustomStepper;
     }(i1.CdkStepper));
     var ɵCustomStepper_BaseFactory = i0.ɵɵgetInheritedFactory(CustomStepper);
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CustomStepper, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CustomStepper, [{
             type: i0.Component,
             args: [{
                     selector: 'example-custom-stepper',
@@ -113,7 +113,7 @@
                     styleUrls: ['./example-custom-stepper.css'],
                     providers: [{ provide: i1.CdkStepper, useExisting: CustomStepper }]
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         CdkCustomStepperWithoutFormExample,
@@ -139,11 +139,11 @@
                 ]] });
         return CdkStepperExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CdkStepperExamplesModule, { declarations: [CdkCustomStepperWithoutFormExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkStepperExamplesModule, { declarations: [CdkCustomStepperWithoutFormExample,
             CustomStepper], imports: [i1.CdkStepperModule,
             i2.CommonModule], exports: [CdkCustomStepperWithoutFormExample,
-            CustomStepper] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkStepperExamplesModule, [{
+            CustomStepper] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkStepperExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -153,7 +153,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.CdkCustomStepperWithoutFormExample = CdkCustomStepperWithoutFormExample;
     exports.CdkStepperExamplesModule = CdkStepperExamplesModule;

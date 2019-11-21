@@ -46,14 +46,14 @@ CardFancyExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatCard, MatCardHeader, MatCardAvatar, MatCardTitle, MatCardSubtitle, MatCardImage, MatCardContent, MatCardActions, MatButton], styles: [".example-card[_ngcontent-%COMP%] {\n  max-width: 400px;\n}\n\n.example-header-image[_ngcontent-%COMP%] {\n  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');\n  background-size: cover;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(CardFancyExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CardFancyExample, [{
         type: Component,
         args: [{
                 selector: 'card-fancy-example',
                 templateUrl: 'card-fancy-example.html',
                 styleUrls: ['card-fancy-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -77,14 +77,14 @@ CardOverviewExample.decorators = [
         ɵɵtext(1, "Simple card");
         ɵɵelementEnd();
     } }, directives: [MatCard], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(CardOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CardOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'card-overview-example',
                 templateUrl: 'card-overview-example.html',
                 styleUrls: ['card-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -112,11 +112,11 @@ CardExamplesModule.decorators = [
             MatButtonModule,
             MatCardModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(CardExamplesModule, { declarations: [CardFancyExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CardExamplesModule, { declarations: [CardFancyExample,
         CardOverviewExample], imports: [MatButtonModule,
         MatCardModule], exports: [CardFancyExample,
-        CardOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CardExamplesModule, [{
+        CardOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CardExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -126,7 +126,7 @@ CardExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CardExamplesModule, CardFancyExample, CardOverviewExample };
 //# sourceMappingURL=card.js.map

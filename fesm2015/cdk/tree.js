@@ -169,14 +169,14 @@ CdkTreeFlatExample.decorators = [
         ɵɵadvance(2);
         ɵɵproperty("cdkTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [CdkTree, CdkTreeNodeDef, CdkTreeNode, CdkTreeNodePadding, MatButton, CdkTreeNodeToggle, MatIcon], styles: [".example-tree-node[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkTreeFlatExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTreeFlatExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-tree-flat-example',
                 templateUrl: 'cdk-tree-flat-example.html',
                 styleUrls: ['cdk-tree-flat-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkTreeFlatExample.prototype.treeControl;
@@ -301,14 +301,14 @@ CdkTreeNestedExample.decorators = [
         ɵɵadvance(2);
         ɵɵproperty("cdkTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [CdkTree, CdkTreeNodeDef, CdkNestedTreeNode, MatButton, CdkTreeNodeToggle, MatIcon, CdkTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node[_ngcontent-%COMP%] {\n  display: block;\n}\n\n.example-tree-node[_ngcontent-%COMP%]   .example-tree-node[_ngcontent-%COMP%] {\n  padding-left: 40px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkTreeNestedExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTreeNestedExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-tree-nested-example',
                 templateUrl: 'cdk-tree-nested-example.html',
                 styleUrls: ['cdk-tree-nested-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkTreeNestedExample.prototype.treeControl;
@@ -346,12 +346,12 @@ CdkTreeExamplesModule.decorators = [
             MatButtonModule,
             MatIconModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(CdkTreeExamplesModule, { declarations: [CdkTreeFlatExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkTreeExamplesModule, { declarations: [CdkTreeFlatExample,
         CdkTreeNestedExample], imports: [CdkTreeModule,
         MatButtonModule,
         MatIconModule], exports: [CdkTreeFlatExample,
-        CdkTreeNestedExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkTreeExamplesModule, [{
+        CdkTreeNestedExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTreeExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -362,7 +362,7 @@ CdkTreeExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CdkTreeExamplesModule, CdkTreeFlatExample, CdkTreeNestedExample };
 //# sourceMappingURL=tree.js.map

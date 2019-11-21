@@ -52,14 +52,14 @@ var SnackBarComponentExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatLabel, NumberValueAccessor, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatButton], styles: [""] });
     return SnackBarComponentExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(SnackBarComponentExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SnackBarComponentExample, [{
         type: Component,
         args: [{
                 selector: 'snack-bar-component-example',
                 templateUrl: 'snack-bar-component-example.html',
                 styleUrls: ['snack-bar-component-example.css'],
             }]
-    }], function () { return [{ type: MatSnackBar }]; }, null);
+    }], function () { return [{ type: MatSnackBar }]; }, null); })();
 var PizzaPartyComponent = /** @class */ (function () {
     function PizzaPartyComponent() {
     }
@@ -78,14 +78,14 @@ var PizzaPartyComponent = /** @class */ (function () {
         } }, styles: [".example-pizza-party[_ngcontent-%COMP%] {\n      color: hotpink;\n    }"] });
     return PizzaPartyComponent;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(PizzaPartyComponent, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PizzaPartyComponent, [{
         type: Component,
         args: [{
                 selector: 'snack-bar-component-example-snack',
                 templateUrl: 'snack-bar-component-example-snack.html',
                 styles: ["\n    .example-pizza-party {\n      color: hotpink;\n    }\n  "],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Basic snack-bar
@@ -126,14 +126,14 @@ var SnackBarOverviewExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatInput, MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
     return SnackBarOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(SnackBarOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SnackBarOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'snack-bar-overview-example',
                 templateUrl: 'snack-bar-overview-example.html',
                 styleUrls: ['snack-bar-overview-example.css'],
             }]
-    }], function () { return [{ type: MatSnackBar }]; }, null);
+    }], function () { return [{ type: MatSnackBar }]; }, null); })();
 
 /**
  * @title Snack-bar with configurable position
@@ -207,14 +207,14 @@ var SnackBarPositionExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatSelect, MatOption, MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
     return SnackBarPositionExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(SnackBarPositionExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SnackBarPositionExample, [{
         type: Component,
         args: [{
                 selector: 'snack-bar-position-example',
                 templateUrl: 'snack-bar-position-example.html',
                 styleUrls: ['snack-bar-position-example.css'],
             }]
-    }], function () { return [{ type: MatSnackBar }]; }, null);
+    }], function () { return [{ type: MatSnackBar }]; }, null); })();
 
 var EXAMPLES = [
     SnackBarComponentExample,
@@ -248,7 +248,7 @@ var SnackBarExamplesModule = /** @class */ (function () {
             ]] });
     return SnackBarExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(SnackBarExamplesModule, { declarations: [SnackBarComponentExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SnackBarExamplesModule, { declarations: [SnackBarComponentExample,
         SnackBarOverviewExample,
         SnackBarPositionExample,
         PizzaPartyComponent], imports: [FormsModule,
@@ -257,8 +257,8 @@ var SnackBarExamplesModule = /** @class */ (function () {
         MatSelectModule,
         MatSnackBarModule], exports: [SnackBarComponentExample,
         SnackBarOverviewExample,
-        SnackBarPositionExample] });
-/*@__PURE__*/ ɵsetClassMetadata(SnackBarExamplesModule, [{
+        SnackBarPositionExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SnackBarExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -272,7 +272,7 @@ var SnackBarExamplesModule = /** @class */ (function () {
                 exports: EXAMPLES,
                 entryComponents: [PizzaPartyComponent],
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { PizzaPartyComponent, SnackBarComponentExample, SnackBarExamplesModule, SnackBarOverviewExample, SnackBarPositionExample };
 //# sourceMappingURL=snack-bar.js.map

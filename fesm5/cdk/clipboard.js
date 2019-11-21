@@ -43,14 +43,14 @@ var CdkClipboardOverviewExample = /** @class */ (function () {
         } }, directives: [DefaultValueAccessor, NgControlStatus, NgModel, CdkCopyToClipboard], styles: ["textarea[_ngcontent-%COMP%] {\n  display: block;\n  margin: 4px 0 8px;\n}"] });
     return CdkClipboardOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(CdkClipboardOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkClipboardOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-clipboard-overview-example',
                 templateUrl: 'cdk-clipboard-overview-example.html',
                 styleUrls: ['cdk-clipboard-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 var EXAMPLES = [CdkClipboardOverviewExample];
 var CdkClipboardExamplesModule = /** @class */ (function () {
@@ -67,15 +67,15 @@ var CdkClipboardExamplesModule = /** @class */ (function () {
     CdkClipboardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); }, imports: [[ClipboardModule, FormsModule]] });
     return CdkClipboardExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(CdkClipboardExamplesModule, { declarations: [CdkClipboardOverviewExample], imports: [ClipboardModule, FormsModule], exports: [CdkClipboardOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkClipboardExamplesModule, [{
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkClipboardExamplesModule, { declarations: [CdkClipboardOverviewExample], imports: [ClipboardModule, FormsModule], exports: [CdkClipboardOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkClipboardExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [ClipboardModule, FormsModule],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CdkClipboardExamplesModule, CdkClipboardOverviewExample };
 //# sourceMappingURL=clipboard.js.map

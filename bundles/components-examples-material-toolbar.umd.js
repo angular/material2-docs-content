@@ -50,14 +50,14 @@
             } }, directives: [i1.MatToolbar, i1.MatToolbarRow, i2.MatIcon], styles: [".example-icon[_ngcontent-%COMP%] {\n  padding: 0 14px;\n}\n\n.example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
         return ToolbarMultirowExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ToolbarMultirowExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ToolbarMultirowExample, [{
             type: i0.Component,
             args: [{
                     selector: 'toolbar-multirow-example',
                     templateUrl: 'toolbar-multirow-example.html',
                     styleUrls: ['toolbar-multirow-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Basic toolbar
@@ -80,14 +80,14 @@
             } }, directives: [i1.MatToolbar], styles: [""] });
         return ToolbarOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ToolbarOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ToolbarOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'toolbar-overview-example',
                     templateUrl: 'toolbar-overview-example.html',
                     styleUrls: ['toolbar-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         ToolbarMultirowExample,
@@ -113,11 +113,11 @@
                 ]] });
         return ToolbarExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(ToolbarExamplesModule, { declarations: [ToolbarMultirowExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ToolbarExamplesModule, { declarations: [ToolbarMultirowExample,
             ToolbarOverviewExample], imports: [i2.MatIconModule,
             i1.MatToolbarModule], exports: [ToolbarMultirowExample,
-            ToolbarOverviewExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ToolbarExamplesModule, [{
+            ToolbarOverviewExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ToolbarExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -127,7 +127,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.ToolbarExamplesModule = ToolbarExamplesModule;
     exports.ToolbarMultirowExample = ToolbarMultirowExample;

@@ -133,14 +133,14 @@ SortOverviewExample.ctorParameters = () => [];
         ɵɵadvance(12);
         ɵɵproperty("ngForOf", ctx.sortedData);
     } }, directives: [MatSort, MatSortHeader, NgForOf], styles: [".mat-sort-header-container[_ngcontent-%COMP%] {\n  align-items: center;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(SortOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SortOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'sort-overview-example',
                 templateUrl: 'sort-overview-example.html',
                 styleUrls: ['sort-overview-example.css'],
             }]
-    }], function () { return []; }, null);
+    }], function () { return []; }, null); })();
 if (false) {
     /** @type {?} */
     SortOverviewExample.prototype.desserts;
@@ -182,9 +182,9 @@ SortExamplesModule.decorators = [
             CommonModule,
             MatSortModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(SortExamplesModule, { declarations: [SortOverviewExample], imports: [CommonModule,
-        MatSortModule], exports: [SortOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(SortExamplesModule, [{
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SortExamplesModule, { declarations: [SortOverviewExample], imports: [CommonModule,
+        MatSortModule], exports: [SortOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SortExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -194,7 +194,7 @@ SortExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { SortExamplesModule, SortOverviewExample };
 //# sourceMappingURL=sort.js.map

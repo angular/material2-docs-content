@@ -43,14 +43,14 @@
             } }, directives: [i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.NgModel, i4.NgIf, i5.MatButton, i2.MatSuffix, i6.MatIcon], styles: [".example-form-field[_ngcontent-%COMP%] {\n  width: 200px;\n}"] });
         return InputClearableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(InputClearableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(InputClearableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'input-clearable-example',
                     templateUrl: './input-clearable-example.html',
                     styleUrls: ['./input-clearable-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function InputErrorStateMatcherExample_mat_error_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-error");
@@ -113,14 +113,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i2.MatHint, i4.NgIf, i2.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputErrorStateMatcherExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(InputErrorStateMatcherExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(InputErrorStateMatcherExample, [{
             type: i0.Component,
             args: [{
                     selector: 'input-error-state-matcher-example',
                     templateUrl: './input-error-state-matcher-example.html',
                     styleUrls: ['./input-error-state-matcher-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function InputErrorsExample_mat_error_3_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-error");
@@ -171,14 +171,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i4.NgIf, i2.MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputErrorsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(InputErrorsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(InputErrorsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'input-errors-example',
                     templateUrl: 'input-errors-example.html',
                     styleUrls: ['input-errors-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Inputs in a form
@@ -253,14 +253,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i2.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
         return InputFormExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(InputFormExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(InputFormExample, [{
             type: i0.Component,
             args: [{
                     selector: 'input-form-example',
                     templateUrl: 'input-form-example.html',
                     styleUrls: ['input-form-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Input with hints
@@ -297,14 +297,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i2.MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputHintExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(InputHintExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(InputHintExample, [{
             type: i0.Component,
             args: [{
                     selector: 'input-hint-example',
                     templateUrl: 'input-hint-example.html',
                     styleUrls: ['input-hint-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Basic Inputs
@@ -332,14 +332,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(InputOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(InputOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'input-overview-example',
                     styleUrls: ['input-overview-example.css'],
                     templateUrl: 'input-overview-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Inputs with prefixes and suffixes
@@ -370,14 +370,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatPrefix, i3.MatInput, i6.MatIcon, i2.MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return InputPrefixSuffixExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(InputPrefixSuffixExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(InputPrefixSuffixExample, [{
             type: i0.Component,
             args: [{
                     selector: 'input-prefix-suffix-example',
                     templateUrl: 'input-prefix-suffix-example.html',
                     styleUrls: ['input-prefix-suffix-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         InputClearableExample,
@@ -416,7 +416,7 @@
                 ]] });
         return InputExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(InputExamplesModule, { declarations: [InputClearableExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(InputExamplesModule, { declarations: [InputClearableExample,
             InputErrorStateMatcherExample,
             InputErrorsExample,
             InputFormExample,
@@ -433,8 +433,8 @@
             InputFormExample,
             InputHintExample,
             InputOverviewExample,
-            InputPrefixSuffixExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(InputExamplesModule, [{
+            InputPrefixSuffixExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(InputExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -448,7 +448,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.InputClearableExample = InputClearableExample;
     exports.InputErrorStateMatcherExample = InputErrorStateMatcherExample;

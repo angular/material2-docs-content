@@ -124,14 +124,14 @@ var CdkTableBasicFlexExample = /** @class */ (function () {
         } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["cdk-row[_ngcontent-%COMP%], cdk-header-row[_ngcontent-%COMP%], cdk-footer-row[_ngcontent-%COMP%] {\n  display: flex;\n}\n\ncdk-cell[_ngcontent-%COMP%], cdk-header-cell[_ngcontent-%COMP%], cdk-footer-cell[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
     return CdkTableBasicFlexExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(CdkTableBasicFlexExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableBasicFlexExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-table-basic-flex-example',
                 styleUrls: ['cdk-table-basic-flex-example.css'],
                 templateUrl: 'cdk-table-basic-flex-example.html',
             }]
-    }], null, null);
+    }], null, null); })();
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -275,14 +275,14 @@ var CdkTableBasicExample = /** @class */ (function () {
         } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nth[_ngcontent-%COMP%] {\n  text-align: left;\n}"] });
     return CdkTableBasicExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(CdkTableBasicExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableBasicExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-table-basic-example',
                 styleUrls: ['cdk-table-basic-example.css'],
                 templateUrl: 'cdk-table-basic-example.html',
             }]
-    }], null, null);
+    }], null, null); })();
 /**
  * Data source to provide what data should be rendered in the table. Note that the data source
  * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -328,10 +328,10 @@ var CdkTableExamplesModule = /** @class */ (function () {
             ]] });
     return CdkTableExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
         CdkTableBasicFlexExample], imports: [CdkTableModule], exports: [CdkTableBasicExample,
-        CdkTableBasicFlexExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkTableExamplesModule, [{
+        CdkTableBasicFlexExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -340,7 +340,7 @@ var CdkTableExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CdkTableBasicExample, CdkTableBasicFlexExample, CdkTableExamplesModule };
 //# sourceMappingURL=table.js.map

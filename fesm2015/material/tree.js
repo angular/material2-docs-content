@@ -206,9 +206,9 @@ ChecklistDatabase.decorators = [
 ChecklistDatabase.ctorParameters = () => [];
 /** @nocollapse */ ChecklistDatabase.ɵfac = function ChecklistDatabase_Factory(t) { return new (t || ChecklistDatabase)(); };
 /** @nocollapse */ ChecklistDatabase.ɵprov = ɵɵdefineInjectable({ token: ChecklistDatabase, factory: function (t) { return ChecklistDatabase.ɵfac(t); }, providedIn: null });
-/*@__PURE__*/ ɵsetClassMetadata(ChecklistDatabase, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ChecklistDatabase, [{
         type: Injectable
-    }], function () { return []; }, null);
+    }], function () { return []; }, null); })();
 if (false) {
     /** @type {?} */
     ChecklistDatabase.prototype.dataChange;
@@ -470,7 +470,7 @@ TreeChecklistExample.ctorParameters = () => [
         ɵɵadvance(1);
         ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatTreeNodePadding, MatButton, MatCheckbox, MatFormField, MatInput, MatIcon], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(TreeChecklistExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeChecklistExample, [{
         type: Component,
         args: [{
                 selector: 'tree-checklist-example',
@@ -478,7 +478,7 @@ TreeChecklistExample.ctorParameters = () => [
                 styleUrls: ['tree-checklist-example.css'],
                 providers: [ChecklistDatabase]
             }]
-    }], function () { return [{ type: ChecklistDatabase }]; }, null);
+    }], function () { return [{ type: ChecklistDatabase }]; }, null); })();
 if (false) {
     /**
      * Map from flat node to nested node. This helps us finding the nested node to be modified
@@ -771,9 +771,9 @@ DynamicDataSource.ctorParameters = () => [
 ];
 /** @nocollapse */ DynamicDataSource.ɵfac = function DynamicDataSource_Factory(t) { return new (t || DynamicDataSource)(ɵɵinject(FlatTreeControl), ɵɵinject(DynamicDatabase)); };
 /** @nocollapse */ DynamicDataSource.ɵprov = ɵɵdefineInjectable({ token: DynamicDataSource, factory: function (t) { return DynamicDataSource.ɵfac(t); }, providedIn: null });
-/*@__PURE__*/ ɵsetClassMetadata(DynamicDataSource, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DynamicDataSource, [{
         type: Injectable
-    }], function () { return [{ type: FlatTreeControl }, { type: DynamicDatabase }]; }, null);
+    }], function () { return [{ type: FlatTreeControl }, { type: DynamicDatabase }]; }, null); })();
 if (false) {
     /** @type {?} */
     DynamicDataSource.prototype.dataChange;
@@ -840,7 +840,7 @@ TreeDynamicExample.ctorParameters = () => [
         ɵɵadvance(2);
         ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon, NgIf, MatProgressBar], styles: [".example-tree-progress-bar[_ngcontent-%COMP%] {\n  margin-left: 30px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(TreeDynamicExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeDynamicExample, [{
         type: Component,
         args: [{
                 selector: 'tree-dynamic-example',
@@ -848,7 +848,7 @@ TreeDynamicExample.ctorParameters = () => [
                 styleUrls: ['tree-dynamic-example.css'],
                 providers: [DynamicDatabase]
             }]
-    }], function () { return [{ type: DynamicDatabase }]; }, null);
+    }], function () { return [{ type: DynamicDatabase }]; }, null); })();
 if (false) {
     /** @type {?} */
     TreeDynamicExample.prototype.treeControl;
@@ -1017,14 +1017,14 @@ TreeFlatOverviewExample.ctorParameters = () => [];
         ɵɵadvance(2);
         ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(TreeFlatOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeFlatOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'tree-flat-overview-example',
                 templateUrl: 'tree-flat-overview-example.html',
                 styleUrls: ['tree-flat-overview-example.css'],
             }]
-    }], function () { return []; }, null);
+    }], function () { return []; }, null); })();
 if (false) {
     /**
      * @type {?}
@@ -1231,9 +1231,9 @@ LoadmoreDatabase.decorators = [
 ];
 /** @nocollapse */ LoadmoreDatabase.ɵfac = function LoadmoreDatabase_Factory(t) { return new (t || LoadmoreDatabase)(); };
 /** @nocollapse */ LoadmoreDatabase.ɵprov = ɵɵdefineInjectable({ token: LoadmoreDatabase, factory: function (t) { return LoadmoreDatabase.ɵfac(t); }, providedIn: null });
-/*@__PURE__*/ ɵsetClassMetadata(LoadmoreDatabase, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(LoadmoreDatabase, [{
         type: Injectable
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     LoadmoreDatabase.prototype.batchNumber;
@@ -1356,7 +1356,7 @@ TreeLoadmoreExample.ctorParameters = () => [
         ɵɵadvance(1);
         ɵɵproperty("matTreeNodeDefWhen", ctx.isLoadMore);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodePadding, MatButton, MatTreeNodeToggle, MatIcon], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(TreeLoadmoreExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeLoadmoreExample, [{
         type: Component,
         args: [{
                 selector: 'tree-loadmore-example',
@@ -1364,7 +1364,7 @@ TreeLoadmoreExample.ctorParameters = () => [
                 styleUrls: ['tree-loadmore-example.css'],
                 providers: [LoadmoreDatabase]
             }]
-    }], function () { return [{ type: LoadmoreDatabase }]; }, null);
+    }], function () { return [{ type: LoadmoreDatabase }]; }, null); })();
 if (false) {
     /** @type {?} */
     TreeLoadmoreExample.prototype.nodeMap;
@@ -1517,14 +1517,14 @@ TreeNestedOverviewExample.ctorParameters = () => [];
         ɵɵadvance(2);
         ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
     } }, directives: [MatTree, MatTreeNodeDef, MatTreeNode, MatTreeNodeToggle, MatButton, MatNestedTreeNode, MatIcon, MatTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(TreeNestedOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeNestedOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'tree-nested-overview-example',
                 templateUrl: 'tree-nested-overview-example.html',
                 styleUrls: ['tree-nested-overview-example.css'],
             }]
-    }], function () { return []; }, null);
+    }], function () { return []; }, null); })();
 if (false) {
     /** @type {?} */
     TreeNestedOverviewExample.prototype.treeControl;
@@ -1573,7 +1573,7 @@ TreeExamplesModule.decorators = [
             MatProgressBarModule,
             MatTreeModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(TreeExamplesModule, { declarations: [TreeChecklistExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TreeExamplesModule, { declarations: [TreeChecklistExample,
         TreeDynamicExample,
         TreeFlatOverviewExample,
         TreeLoadmoreExample,
@@ -1587,8 +1587,8 @@ TreeExamplesModule.decorators = [
         TreeDynamicExample,
         TreeFlatOverviewExample,
         TreeLoadmoreExample,
-        TreeNestedOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(TreeExamplesModule, [{
+        TreeNestedOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TreeExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -1603,7 +1603,7 @@ TreeExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { TreeChecklistExample, TreeDynamicExample, TreeExamplesModule, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample };
 //# sourceMappingURL=tree.js.map

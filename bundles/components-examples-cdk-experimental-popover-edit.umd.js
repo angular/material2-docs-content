@@ -227,14 +227,14 @@
             } }, directives: [i1$1.CdkTable, i1.CdkEditable, i1$1.CdkColumnDef, i1$1.CdkHeaderCellDef, i1$1.CdkCellDef, i1$1.CdkHeaderRowDef, i1$1.CdkRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1.CdkEditControl, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1.CdkEditRevert, i1.CdkEditClose, i1$1.CdkHeaderCell, i1$1.CdkCell, i1.CdkPopoverEdit, i1.CdkRowHoverContent, i1.CdkEditOpen, i1$1.CdkHeaderRow, i1$1.CdkRow], styles: [".example-table[_ngcontent-%COMP%]   cdk-row[_ngcontent-%COMP%], cdk-header-row[_ngcontent-%COMP%], cdk-footer-row[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-table[_ngcontent-%COMP%]   cdk-cell[_ngcontent-%COMP%], cdk-header-cell[_ngcontent-%COMP%], cdk-footer-cell[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
         return CdkPopoverEditCdkTableFlexExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkPopoverEditCdkTableFlexExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPopoverEditCdkTableFlexExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-popover-edit-cdk-table-flex-example',
                     styleUrls: ['cdk-popover-edit-cdk-table-flex-example.css'],
                     templateUrl: 'cdk-popover-edit-cdk-table-flex-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
     /**
      * Data source to provide what data should be rendered in the table. Note that the data source
      * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -478,14 +478,14 @@
             } }, directives: [i1$1.CdkTable, i1.CdkEditable, i1$1.CdkColumnDef, i1$1.CdkHeaderCellDef, i1$1.CdkCellDef, i1$1.CdkHeaderRowDef, i1$1.CdkRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1.CdkEditControl, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1.CdkEditRevert, i1.CdkEditClose, i1$1.CdkHeaderCell, i1$1.CdkCell, i1.CdkPopoverEdit, i1.CdkRowHoverContent, i1.CdkEditOpen, i1$1.CdkHeaderRow, i1$1.CdkRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
         return CdkPopoverEditCdkTableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkPopoverEditCdkTableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPopoverEditCdkTableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-popover-edit-cdk-table-example',
                     styleUrls: ['cdk-popover-edit-cdk-table-example.css'],
                     templateUrl: 'cdk-popover-edit-cdk-table-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
     /**
      * Data source to provide what data should be rendered in the table. Note that the data source
      * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -570,11 +570,11 @@
         i0.ɵɵelementEnd();
     } }
     var _c0 = function (a0) { return { person: a0, focus: "firstName" }; };
-    var _c1 = { after: 2 };
+    var _c1 = function () { return { after: 2 }; };
     var _c2 = function (a0) { return { person: a0, focus: "middleName" }; };
-    var _c3 = { before: 1, after: 1 };
+    var _c3 = function () { return { before: 1, after: 1 }; };
     var _c4 = function (a0) { return { person: a0, focus: "lastName" }; };
-    var _c5 = { before: 2 };
+    var _c5 = function () { return { before: 2 }; };
     function CdkPopoverEditCellSpanVanillaTableExample_tr_12_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "tr");
         i0.ɵɵelementStart(1, "td");
@@ -600,15 +600,15 @@
         i0.ɵɵadvance(2);
         i0.ɵɵtextInterpolate1(" ", person_r74.id, " ");
         i0.ɵɵadvance(1);
-        i0.ɵɵproperty("cdkPopoverEdit", _r66)("cdkPopoverEditContext", i0.ɵɵpureFunction1(13, _c0, person_r74))("cdkPopoverEditColspan", _c1);
+        i0.ɵɵproperty("cdkPopoverEdit", _r66)("cdkPopoverEditContext", i0.ɵɵpureFunction1(13, _c0, person_r74))("cdkPopoverEditColspan", i0.ɵɵpureFunction0(15, _c1));
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate1(" ", person_r74.firstName, " ");
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("cdkPopoverEdit", _r66)("cdkPopoverEditContext", i0.ɵɵpureFunction1(15, _c2, person_r74))("cdkPopoverEditColspan", _c3);
+        i0.ɵɵproperty("cdkPopoverEdit", _r66)("cdkPopoverEditContext", i0.ɵɵpureFunction1(16, _c2, person_r74))("cdkPopoverEditColspan", i0.ɵɵpureFunction0(18, _c3));
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate1(" ", person_r74.middleName, " ");
         i0.ɵɵadvance(2);
-        i0.ɵɵproperty("cdkPopoverEdit", _r66)("cdkPopoverEditContext", i0.ɵɵpureFunction1(17, _c4, person_r74))("cdkPopoverEditColspan", _c5);
+        i0.ɵɵproperty("cdkPopoverEdit", _r66)("cdkPopoverEditContext", i0.ɵɵpureFunction1(19, _c4, person_r74))("cdkPopoverEditColspan", i0.ɵɵpureFunction0(21, _c5));
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate1(" ", person_r74.lastName, " ");
     } }
@@ -664,7 +664,7 @@
                 i0.ɵɵtext(11, " Last name ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(12, CdkPopoverEditCellSpanVanillaTableExample_tr_12_Template, 12, 19, "tr", 2);
+                i0.ɵɵtemplate(12, CdkPopoverEditCellSpanVanillaTableExample_tr_12_Template, 12, 22, "tr", 2);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 i0.ɵɵadvance(12);
@@ -672,14 +672,14 @@
             } }, directives: [i1.CdkEditable, i2.NgForOf, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1.CdkEditControl, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1.CdkEditRevert, i1.CdkEditClose, i1.CdkPopoverEdit, i1.CdkRowHoverContent, i1.CdkEditOpen], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  min-width: 300px;\n  width: 25%;\n}\n\n.example-input-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: stretch;\n}\n\n.example-input-container[_ngcontent-%COMP%]   input[_ngcontent-%COMP%] {\n  flex: 1;\n  font-size: 14px;\n}"] });
         return CdkPopoverEditCellSpanVanillaTableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkPopoverEditCellSpanVanillaTableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPopoverEditCellSpanVanillaTableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-popover-edit-cell-span-vanilla-table-example',
                     styleUrls: ['cdk-popover-edit-cell-span-vanilla-table-example.css'],
                     templateUrl: 'cdk-popover-edit-cell-span-vanilla-table-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkPopoverEditTabOutVanillaTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
         var _r84 = i0.ɵɵgetCurrentView();
@@ -829,14 +829,14 @@
             } }, directives: [i1.CdkEditable, i2.NgForOf, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1.CdkEditControl, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1.CdkEditOpen, i1.CdkPopoverEditTabOut], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  min-width: 300px;\n  width: 25%;\n}"] });
         return CdkPopoverEditTabOutVanillaTableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkPopoverEditTabOutVanillaTableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPopoverEditTabOutVanillaTableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-popover-edit-tab-out-vanilla-table-example',
                     styleUrls: ['cdk-popover-edit-tab-out-vanilla-table-example.css'],
                     templateUrl: 'cdk-popover-edit-tab-out-vanilla-table-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkPopoverEditVanillaTableExample_ng_template_1_Template(rf, ctx) { if (rf & 1) {
         var _r102 = i0.ɵɵgetCurrentView();
@@ -1020,14 +1020,14 @@
             } }, directives: [i1.CdkEditable, i2.NgForOf, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1.CdkEditControl, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1.CdkEditRevert, i1.CdkEditClose, i1.CdkPopoverEdit, i1.CdkRowHoverContent, i1.CdkEditOpen], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  min-width: 300px;\n  width: 25%;\n}"] });
         return CdkPopoverEditVanillaTableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkPopoverEditVanillaTableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPopoverEditVanillaTableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-popover-edit-vanilla-table-example',
                     styleUrls: ['cdk-popover-edit-vanilla-table-example.css'],
                     templateUrl: 'cdk-popover-edit-vanilla-table-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         CdkPopoverEditCdkTableExample,
@@ -1060,7 +1060,7 @@
                 ]] });
         return CdkPopoverEditExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CdkPopoverEditExamplesModule, { declarations: [CdkPopoverEditCdkTableExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkPopoverEditExamplesModule, { declarations: [CdkPopoverEditCdkTableExample,
             CdkPopoverEditCdkTableFlexExample,
             CdkPopoverEditCellSpanVanillaTableExample,
             CdkPopoverEditTabOutVanillaTableExample,
@@ -1071,8 +1071,8 @@
             CdkPopoverEditCdkTableFlexExample,
             CdkPopoverEditCellSpanVanillaTableExample,
             CdkPopoverEditTabOutVanillaTableExample,
-            CdkPopoverEditVanillaTableExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkPopoverEditExamplesModule, [{
+            CdkPopoverEditVanillaTableExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPopoverEditExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -1084,7 +1084,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.CdkPopoverEditCdkTableExample = CdkPopoverEditCdkTableExample;
     exports.CdkPopoverEditCdkTableFlexExample = CdkPopoverEditCdkTableFlexExample;

@@ -24,14 +24,14 @@ IconOverviewExample.decorators = [
         ɵɵtext(1, "home");
         ɵɵelementEnd();
     } }, directives: [MatIcon], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(IconOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(IconOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'icon-overview-example',
                 templateUrl: 'icon-overview-example.html',
                 styleUrls: ['icon-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -65,14 +65,14 @@ IconSvgExample.ctorParameters = () => [
 /** @nocollapse */ IconSvgExample.ɵcmp = ɵɵdefineComponent({ type: IconSvgExample, selectors: [["icon-svg-example"]], decls: 1, vars: 0, consts: [["svgIcon", "thumbs-up", "aria-hidden", "false", "aria-label", "Example thumbs up SVG icon"]], template: function IconSvgExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-icon", 0);
     } }, directives: [MatIcon], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(IconSvgExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(IconSvgExample, [{
         type: Component,
         args: [{
                 selector: 'icon-svg-example',
                 templateUrl: 'icon-svg-example.html',
                 styleUrls: ['icon-svg-example.css'],
             }]
-    }], function () { return [{ type: MatIconRegistry }, { type: DomSanitizer }]; }, null);
+    }], function () { return [{ type: MatIconRegistry }, { type: DomSanitizer }]; }, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -98,10 +98,10 @@ IconExamplesModule.decorators = [
 /** @nocollapse */ IconExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function IconExamplesModule_Factory(t) { return new (t || IconExamplesModule)(); }, imports: [[
             MatIconModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconOverviewExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconOverviewExample,
         IconSvgExample], imports: [MatIconModule], exports: [IconOverviewExample,
-        IconSvgExample] });
-/*@__PURE__*/ ɵsetClassMetadata(IconExamplesModule, [{
+        IconSvgExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(IconExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -110,7 +110,7 @@ IconExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { IconExamplesModule, IconOverviewExample, IconSvgExample };
 //# sourceMappingURL=icon.js.map

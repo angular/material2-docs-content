@@ -23,14 +23,14 @@ var ButtonOverviewExample = /** @class */ (function () {
         } }, directives: [MatButton], styles: [""] });
     return ButtonOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(ButtonOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'button-overview-example',
                 templateUrl: 'button-overview-example.html',
                 styleUrls: ['button-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Button varieties
@@ -228,14 +228,14 @@ var ButtonTypesExample = /** @class */ (function () {
         } }, directives: [MatButton, MatAnchor, MatIcon], styles: [".example-button-row[_ngcontent-%COMP%]   button[_ngcontent-%COMP%], .example-button-row[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
     return ButtonTypesExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(ButtonTypesExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonTypesExample, [{
         type: Component,
         args: [{
                 selector: 'button-types-example',
                 templateUrl: 'button-types-example.html',
                 styleUrls: ['button-types-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 var EXAMPLES = [
     ButtonOverviewExample,
@@ -261,11 +261,11 @@ var ButtonExamplesModule = /** @class */ (function () {
             ]] });
     return ButtonExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(ButtonExamplesModule, { declarations: [ButtonOverviewExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ButtonExamplesModule, { declarations: [ButtonOverviewExample,
         ButtonTypesExample], imports: [MatButtonModule,
         MatIconModule], exports: [ButtonOverviewExample,
-        ButtonTypesExample] });
-/*@__PURE__*/ ɵsetClassMetadata(ButtonExamplesModule, [{
+        ButtonTypesExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -275,7 +275,7 @@ var ButtonExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { ButtonExamplesModule, ButtonOverviewExample, ButtonTypesExample };
 //# sourceMappingURL=button.js.map

@@ -91,14 +91,14 @@ CheckboxConfigurableExample.decorators = [
         ɵɵadvance(7);
         ɵɵproperty("ngModel", ctx.checked)("indeterminate", ctx.indeterminate)("labelPosition", ctx.labelPosition)("disabled", ctx.disabled);
     } }, directives: [MatCard, MatCardContent, MatCheckbox, NgControlStatus, NgModel, MatRadioGroup, MatRadioButton], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(CheckboxConfigurableExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'checkbox-configurable-example',
                 templateUrl: 'checkbox-configurable-example.html',
                 styleUrls: ['checkbox-configurable-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CheckboxConfigurableExample.prototype.checked;
@@ -132,14 +132,14 @@ CheckboxOverviewExample.decorators = [
         ɵɵtext(1, "Check me!");
         ɵɵelementEnd();
     } }, directives: [MatCheckbox], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(CheckboxOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'checkbox-overview-example',
                 templateUrl: 'checkbox-overview-example.html',
                 styleUrls: ['checkbox-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -171,13 +171,13 @@ CheckboxExamplesModule.decorators = [
             MatRadioModule,
             FormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(CheckboxExamplesModule, { declarations: [CheckboxConfigurableExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CheckboxExamplesModule, { declarations: [CheckboxConfigurableExample,
         CheckboxOverviewExample], imports: [MatCardModule,
         MatCheckboxModule,
         MatRadioModule,
         FormsModule], exports: [CheckboxConfigurableExample,
-        CheckboxOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CheckboxExamplesModule, [{
+        CheckboxOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CheckboxExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -189,7 +189,7 @@ CheckboxExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CheckboxConfigurableExample, CheckboxExamplesModule, CheckboxOverviewExample };
 //# sourceMappingURL=checkbox.js.map

@@ -1,4 +1,4 @@
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵnextContext, ɵɵelement, ɵɵelementEnd, ɵɵtext, ɵɵadvance, ɵɵproperty, ɵɵattribute, ɵɵtextInterpolate1, ɵɵtemplate, ɵɵpureFunction1, Component, ɵɵdefineComponent, ɵɵtemplateRefExtractor, ɵɵelementContainerStart, ɵɵelementContainerEnd, ɵsetClassMetadata, ɵɵdirectiveInject, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵnextContext, ɵɵelement, ɵɵelementEnd, ɵɵtext, ɵɵadvance, ɵɵproperty, ɵɵattribute, ɵɵtextInterpolate1, ɵɵtemplate, ɵɵpureFunction1, ɵɵpureFunction0, Component, ɵɵdefineComponent, ɵɵtemplateRefExtractor, ɵɵelementContainerStart, ɵɵelementContainerEnd, ɵsetClassMetadata, ɵɵdirectiveInject, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, NumberValueAccessor, FormsModule } from '@angular/forms';
 import { MatEditLens, MatPopoverEdit, MatRowHoverContent, MatEditOpen, MatEditRevert, MatEditClose, MatPopoverEditTabOut, MatPopoverEditModule } from '@angular/material-experimental/popover-edit';
 import { MatButton, MatButtonModule } from '@angular/material/button';
@@ -89,7 +89,7 @@ function PopoverEditCellSpanMatTableExample_td_8_span_2_Template(rf, ctx) { if (
     ɵɵelementEnd();
 } }
 const _c0 = function (a0) { return { person: a0, focus: "firstName" }; };
-const _c1 = { after: 2 };
+const _c1 = function () { return { after: 2 }; };
 function PopoverEditCellSpanMatTableExample_td_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 23);
     ɵɵtext(1);
@@ -99,7 +99,7 @@ function PopoverEditCellSpanMatTableExample_td_8_Template(rf, ctx) { if (rf & 1)
     const person_r18 = ctx.$implicit;
     ɵɵnextContext();
     const _r0 = ɵɵreference(2);
-    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c0, person_r18))("matPopoverEditColspan", _c1);
+    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c0, person_r18))("matPopoverEditColspan", ɵɵpureFunction0(6, _c1));
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", person_r18.firstName, " ");
 } }
@@ -118,7 +118,7 @@ function PopoverEditCellSpanMatTableExample_td_11_span_2_Template(rf, ctx) { if 
     ɵɵelementEnd();
 } }
 const _c2 = function (a0) { return { person: a0, focus: "middleName" }; };
-const _c3 = { before: 1, after: 1 };
+const _c3 = function () { return { before: 1, after: 1 }; };
 function PopoverEditCellSpanMatTableExample_td_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 23);
     ɵɵtext(1);
@@ -128,7 +128,7 @@ function PopoverEditCellSpanMatTableExample_td_11_Template(rf, ctx) { if (rf & 1
     const person_r20 = ctx.$implicit;
     ɵɵnextContext();
     const _r0 = ɵɵreference(2);
-    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c2, person_r20))("matPopoverEditColspan", _c3);
+    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c2, person_r20))("matPopoverEditColspan", ɵɵpureFunction0(6, _c3));
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", person_r20.middleName, " ");
 } }
@@ -147,7 +147,7 @@ function PopoverEditCellSpanMatTableExample_td_14_span_2_Template(rf, ctx) { if 
     ɵɵelementEnd();
 } }
 const _c4 = function (a0) { return { person: a0, focus: "lastName" }; };
-const _c5 = { before: 2 };
+const _c5 = function () { return { before: 2 }; };
 function PopoverEditCellSpanMatTableExample_td_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 23);
     ɵɵtext(1);
@@ -157,7 +157,7 @@ function PopoverEditCellSpanMatTableExample_td_14_Template(rf, ctx) { if (rf & 1
     const person_r22 = ctx.$implicit;
     ɵɵnextContext();
     const _r0 = ɵɵreference(2);
-    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c4, person_r22))("matPopoverEditColspan", _c5);
+    ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", ɵɵpureFunction1(4, _c4, person_r22))("matPopoverEditColspan", ɵɵpureFunction0(6, _c5));
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", person_r22.lastName, " ");
 } }
@@ -233,15 +233,15 @@ PopoverEditCellSpanMatTableExample.decorators = [
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(6, 5);
         ɵɵtemplate(7, PopoverEditCellSpanMatTableExample_th_7_Template, 2, 0, "th", 3);
-        ɵɵtemplate(8, PopoverEditCellSpanMatTableExample_td_8_Template, 3, 6, "td", 6);
+        ɵɵtemplate(8, PopoverEditCellSpanMatTableExample_td_8_Template, 3, 7, "td", 6);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(9, 7);
         ɵɵtemplate(10, PopoverEditCellSpanMatTableExample_th_10_Template, 2, 0, "th", 3);
-        ɵɵtemplate(11, PopoverEditCellSpanMatTableExample_td_11_Template, 3, 6, "td", 6);
+        ɵɵtemplate(11, PopoverEditCellSpanMatTableExample_td_11_Template, 3, 7, "td", 6);
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(12, 8);
         ɵɵtemplate(13, PopoverEditCellSpanMatTableExample_th_13_Template, 2, 0, "th", 3);
-        ɵɵtemplate(14, PopoverEditCellSpanMatTableExample_td_14_Template, 3, 6, "td", 6);
+        ɵɵtemplate(14, PopoverEditCellSpanMatTableExample_td_14_Template, 3, 7, "td", 6);
         ɵɵelementContainerEnd();
         ɵɵtemplate(15, PopoverEditCellSpanMatTableExample_tr_15_Template, 1, 0, "tr", 9);
         ɵɵtemplate(16, PopoverEditCellSpanMatTableExample_tr_16_Template, 1, 0, "tr", 10);
@@ -253,14 +253,14 @@ PopoverEditCellSpanMatTableExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
     } }, directives: [MatTable, CdkEditable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatEditLens, MatFormField, MatInput, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, MatButton, MatHeaderCell, MatCell, MatPopoverEdit, MatRowHoverContent, MatEditOpen, MatIcon, MatHeaderRow, MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  min-width: 300px;\n  width: 25%;\n}\n\n.example-input-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: stretch;\n}\n\n.example-input-container[_ngcontent-%COMP%]   mat-form-field[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(PopoverEditCellSpanMatTableExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PopoverEditCellSpanMatTableExample, [{
         type: Component,
         args: [{
                 selector: 'popover-edit-cell-span-mat-table-example',
                 styleUrls: ['popover-edit-cell-span-mat-table-example.css'],
                 templateUrl: 'popover-edit-cell-span-mat-table-example.html',
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     PopoverEditCellSpanMatTableExample.prototype.displayedColumns;
@@ -559,14 +559,14 @@ PopoverEditMatTableFlexExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
     } }, directives: [MatTable, CdkEditable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatEditLens, MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, MatHeaderCell, MatCell, MatPopoverEdit, MatRowHoverContent, MatButton, MatEditRevert, MatEditClose, MatEditOpen, MatIcon, MatHeaderRow, MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(PopoverEditMatTableFlexExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PopoverEditMatTableFlexExample, [{
         type: Component,
         args: [{
                 selector: 'popover-edit-mat-table-flex-example',
                 styleUrls: ['popover-edit-mat-table-flex-example.css'],
                 templateUrl: 'popover-edit-mat-table-flex-example.html',
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     PopoverEditMatTableFlexExample.prototype.displayedColumns;
@@ -907,14 +907,14 @@ PopoverEditMatTableExample.ctorParameters = () => [
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
     } }, directives: [MatTable, CdkEditable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatEditLens, MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, MatHeaderCell, MatCell, MatRowHoverContent, MatButton, MatIcon, MatPopoverEdit, MatEditRevert, MatEditClose, MatEditOpen, MatHeaderRow, MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(PopoverEditMatTableExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PopoverEditMatTableExample, [{
         type: Component,
         args: [{
                 selector: 'popover-edit-mat-table-example',
                 styleUrls: ['popover-edit-mat-table-example.css'],
                 templateUrl: 'popover-edit-mat-table-example.html',
             }]
-    }], function () { return [{ type: MatSnackBar }]; }, null);
+    }], function () { return [{ type: MatSnackBar }]; }, null); })();
 if (false) {
     /** @type {?} */
     PopoverEditMatTableExample.prototype.displayedColumns;
@@ -1202,14 +1202,14 @@ PopoverEditTabOutMatTableExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
     } }, directives: [MatTable, CdkEditable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatEditLens, MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, RequiredValidator, NgControlStatus, NgModel, MatHeaderCell, MatCell, MatEditOpen, MatPopoverEditTabOut, MatRowHoverContent, MatIcon, MatHeaderRow, MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(PopoverEditTabOutMatTableExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PopoverEditTabOutMatTableExample, [{
         type: Component,
         args: [{
                 selector: 'popover-edit-tab-out-mat-table-example',
                 styleUrls: ['popover-edit-tab-out-mat-table-example.css'],
                 templateUrl: 'popover-edit-tab-out-mat-table-example.html',
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     PopoverEditTabOutMatTableExample.prototype.displayedColumns;
@@ -1293,7 +1293,7 @@ PopoverEditExamplesModule.decorators = [
             MatTableModule,
             FormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(PopoverEditExamplesModule, { declarations: [PopoverEditCellSpanMatTableExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(PopoverEditExamplesModule, { declarations: [PopoverEditCellSpanMatTableExample,
         PopoverEditMatTableExample,
         PopoverEditMatTableFlexExample,
         PopoverEditTabOutMatTableExample], imports: [MatButtonModule,
@@ -1305,8 +1305,8 @@ PopoverEditExamplesModule.decorators = [
         FormsModule], exports: [PopoverEditCellSpanMatTableExample,
         PopoverEditMatTableExample,
         PopoverEditMatTableFlexExample,
-        PopoverEditTabOutMatTableExample] });
-/*@__PURE__*/ ɵsetClassMetadata(PopoverEditExamplesModule, [{
+        PopoverEditTabOutMatTableExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PopoverEditExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -1321,7 +1321,7 @@ PopoverEditExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { PopoverEditCellSpanMatTableExample, PopoverEditExamplesModule, PopoverEditMatTableExample, PopoverEditMatTableFlexExample, PopoverEditTabOutMatTableExample };
 //# sourceMappingURL=popover-edit.js.map

@@ -87,14 +87,14 @@ CdkPlatformOverviewExample.ctorParameters = () => [
         ɵɵadvance(2);
         ɵɵtextInterpolate1("Supports scroll behavior: ", ctx.supportsScrollBehavior, "");
     } }, styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkPlatformOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkPlatformOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-platform-overview-example',
                 templateUrl: 'cdk-platform-overview-example.html',
                 styleUrls: ['cdk-platform-overview-example.css'],
             }]
-    }], function () { return [{ type: Platform }]; }, null);
+    }], function () { return [{ type: Platform }]; }, null); })();
 if (false) {
     /** @type {?} */
     CdkPlatformOverviewExample.prototype.supportedInputTypes;
@@ -127,8 +127,8 @@ CdkPlatformExamplesModule.decorators = [
 /** @nocollapse */ CdkPlatformExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); }, imports: [[
             PlatformModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [PlatformModule], exports: [CdkPlatformOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkPlatformExamplesModule, [{
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkPlatformExamplesModule, { declarations: [CdkPlatformOverviewExample], imports: [PlatformModule], exports: [CdkPlatformOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkPlatformExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -137,7 +137,7 @@ CdkPlatformExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CdkPlatformExamplesModule, CdkPlatformOverviewExample };
 //# sourceMappingURL=platform.js.map

@@ -78,7 +78,7 @@
         i0.ɵɵelementEnd();
     } }
     var _c0 = function (a0) { return { person: a0, focus: "firstName" }; };
-    var _c1 = { after: 2 };
+    var _c1 = function () { return { after: 2 }; };
     function PopoverEditCellSpanMatTableExample_td_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 23);
         i0.ɵɵtext(1);
@@ -88,7 +88,7 @@
         var person_r18 = ctx.$implicit;
         i0.ɵɵnextContext();
         var _r0 = i0.ɵɵreference(2);
-        i0.ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", i0.ɵɵpureFunction1(4, _c0, person_r18))("matPopoverEditColspan", _c1);
+        i0.ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", i0.ɵɵpureFunction1(4, _c0, person_r18))("matPopoverEditColspan", i0.ɵɵpureFunction0(6, _c1));
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate1(" ", person_r18.firstName, " ");
     } }
@@ -107,7 +107,7 @@
         i0.ɵɵelementEnd();
     } }
     var _c2 = function (a0) { return { person: a0, focus: "middleName" }; };
-    var _c3 = { before: 1, after: 1 };
+    var _c3 = function () { return { before: 1, after: 1 }; };
     function PopoverEditCellSpanMatTableExample_td_11_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 23);
         i0.ɵɵtext(1);
@@ -117,7 +117,7 @@
         var person_r20 = ctx.$implicit;
         i0.ɵɵnextContext();
         var _r0 = i0.ɵɵreference(2);
-        i0.ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", i0.ɵɵpureFunction1(4, _c2, person_r20))("matPopoverEditColspan", _c3);
+        i0.ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", i0.ɵɵpureFunction1(4, _c2, person_r20))("matPopoverEditColspan", i0.ɵɵpureFunction0(6, _c3));
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate1(" ", person_r20.middleName, " ");
     } }
@@ -136,7 +136,7 @@
         i0.ɵɵelementEnd();
     } }
     var _c4 = function (a0) { return { person: a0, focus: "lastName" }; };
-    var _c5 = { before: 2 };
+    var _c5 = function () { return { before: 2 }; };
     function PopoverEditCellSpanMatTableExample_td_14_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "td", 23);
         i0.ɵɵtext(1);
@@ -146,7 +146,7 @@
         var person_r22 = ctx.$implicit;
         i0.ɵɵnextContext();
         var _r0 = i0.ɵɵreference(2);
-        i0.ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", i0.ɵɵpureFunction1(4, _c4, person_r22))("matPopoverEditColspan", _c5);
+        i0.ɵɵproperty("matPopoverEdit", _r0)("matPopoverEditContext", i0.ɵɵpureFunction1(4, _c4, person_r22))("matPopoverEditColspan", i0.ɵɵpureFunction0(6, _c5));
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate1(" ", person_r22.lastName, " ");
     } }
@@ -201,15 +201,15 @@
                 i0.ɵɵelementContainerEnd();
                 i0.ɵɵelementContainerStart(6, 5);
                 i0.ɵɵtemplate(7, PopoverEditCellSpanMatTableExample_th_7_Template, 2, 0, "th", 3);
-                i0.ɵɵtemplate(8, PopoverEditCellSpanMatTableExample_td_8_Template, 3, 6, "td", 6);
+                i0.ɵɵtemplate(8, PopoverEditCellSpanMatTableExample_td_8_Template, 3, 7, "td", 6);
                 i0.ɵɵelementContainerEnd();
                 i0.ɵɵelementContainerStart(9, 7);
                 i0.ɵɵtemplate(10, PopoverEditCellSpanMatTableExample_th_10_Template, 2, 0, "th", 3);
-                i0.ɵɵtemplate(11, PopoverEditCellSpanMatTableExample_td_11_Template, 3, 6, "td", 6);
+                i0.ɵɵtemplate(11, PopoverEditCellSpanMatTableExample_td_11_Template, 3, 7, "td", 6);
                 i0.ɵɵelementContainerEnd();
                 i0.ɵɵelementContainerStart(12, 8);
                 i0.ɵɵtemplate(13, PopoverEditCellSpanMatTableExample_th_13_Template, 2, 0, "th", 3);
-                i0.ɵɵtemplate(14, PopoverEditCellSpanMatTableExample_td_14_Template, 3, 6, "td", 6);
+                i0.ɵɵtemplate(14, PopoverEditCellSpanMatTableExample_td_14_Template, 3, 7, "td", 6);
                 i0.ɵɵelementContainerEnd();
                 i0.ɵɵtemplate(15, PopoverEditCellSpanMatTableExample_tr_15_Template, 1, 0, "tr", 9);
                 i0.ɵɵtemplate(16, PopoverEditCellSpanMatTableExample_tr_16_Template, 1, 0, "tr", 10);
@@ -223,14 +223,14 @@
             } }, directives: [i1$1.MatTable, i2.CdkEditable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i4.MatEditLens, i5.MatFormField, i6.MatInput, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i7.MatButton, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatPopoverEdit, i4.MatRowHoverContent, i4.MatEditOpen, i8.MatIcon, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  min-width: 300px;\n  width: 25%;\n}\n\n.example-input-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: stretch;\n}\n\n.example-input-container[_ngcontent-%COMP%]   mat-form-field[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
         return PopoverEditCellSpanMatTableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(PopoverEditCellSpanMatTableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PopoverEditCellSpanMatTableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'popover-edit-cell-span-mat-table-example',
                     styleUrls: ['popover-edit-cell-span-mat-table-example.css'],
                     templateUrl: 'popover-edit-cell-span-mat-table-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
     /**
      * Data source to provide what data should be rendered in the table. Note that the data source
      * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -481,14 +481,14 @@
             } }, directives: [i1$1.MatTable, i2.CdkEditable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i4.MatEditLens, i5.MatFormField, i6.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatPopoverEdit, i4.MatRowHoverContent, i7.MatButton, i4.MatEditRevert, i4.MatEditClose, i4.MatEditOpen, i8.MatIcon, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return PopoverEditMatTableFlexExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(PopoverEditMatTableFlexExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PopoverEditMatTableFlexExample, [{
             type: i0.Component,
             args: [{
                     selector: 'popover-edit-mat-table-flex-example',
                     styleUrls: ['popover-edit-mat-table-flex-example.css'],
                     templateUrl: 'popover-edit-mat-table-flex-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
     /**
      * Data source to provide what data should be rendered in the table. Note that the data source
      * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -768,14 +768,14 @@
             } }, directives: [i1$1.MatTable, i2.CdkEditable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i4.MatEditLens, i5.MatFormField, i6.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatRowHoverContent, i7.MatButton, i8.MatIcon, i4.MatPopoverEdit, i4.MatEditRevert, i4.MatEditClose, i4.MatEditOpen, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
         return PopoverEditMatTableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(PopoverEditMatTableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PopoverEditMatTableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'popover-edit-mat-table-example',
                     styleUrls: ['popover-edit-mat-table-example.css'],
                     templateUrl: 'popover-edit-mat-table-example.html',
                 }]
-        }], function () { return [{ type: i1.MatSnackBar }]; }, null);
+        }], function () { return [{ type: i1.MatSnackBar }]; }, null); })();
     /**
      * Data source to provide what data should be rendered in the table. Note that the data source
      * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -1008,14 +1008,14 @@
             } }, directives: [i1$1.MatTable, i2.CdkEditable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i4.MatEditLens, i5.MatFormField, i6.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.RequiredValidator, i3.NgControlStatus, i3.NgModel, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatEditOpen, i4.MatPopoverEditTabOut, i4.MatRowHoverContent, i8.MatIcon, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  text-align: left;\n}\n\n.example-table[_ngcontent-%COMP%]   td[_ngcontent-%COMP%], .example-table[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
         return PopoverEditTabOutMatTableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(PopoverEditTabOutMatTableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PopoverEditTabOutMatTableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'popover-edit-tab-out-mat-table-example',
                     styleUrls: ['popover-edit-tab-out-mat-table-example.css'],
                     templateUrl: 'popover-edit-tab-out-mat-table-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
     /**
      * Data source to provide what data should be rendered in the table. Note that the data source
      * can retrieve its data in any way. In this case, the data source is provided a reference
@@ -1075,7 +1075,7 @@
                 ]] });
         return PopoverEditExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(PopoverEditExamplesModule, { declarations: [PopoverEditCellSpanMatTableExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(PopoverEditExamplesModule, { declarations: [PopoverEditCellSpanMatTableExample,
             PopoverEditMatTableExample,
             PopoverEditMatTableFlexExample,
             PopoverEditTabOutMatTableExample], imports: [i7.MatButtonModule,
@@ -1087,8 +1087,8 @@
             i3.FormsModule], exports: [PopoverEditCellSpanMatTableExample,
             PopoverEditMatTableExample,
             PopoverEditMatTableFlexExample,
-            PopoverEditTabOutMatTableExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(PopoverEditExamplesModule, [{
+            PopoverEditTabOutMatTableExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PopoverEditExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -1103,7 +1103,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.PopoverEditCellSpanMatTableExample = PopoverEditCellSpanMatTableExample;
     exports.PopoverEditExamplesModule = PopoverEditExamplesModule;

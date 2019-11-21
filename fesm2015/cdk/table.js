@@ -141,14 +141,14 @@ CdkTableBasicFlexExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
     } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["cdk-row[_ngcontent-%COMP%], cdk-header-row[_ngcontent-%COMP%], cdk-footer-row[_ngcontent-%COMP%] {\n  display: flex;\n}\n\ncdk-cell[_ngcontent-%COMP%], cdk-header-cell[_ngcontent-%COMP%], cdk-footer-cell[_ngcontent-%COMP%] {\n  flex: 1;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkTableBasicFlexExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableBasicFlexExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-table-basic-flex-example',
                 styleUrls: ['cdk-table-basic-flex-example.css'],
                 templateUrl: 'cdk-table-basic-flex-example.html',
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkTableBasicFlexExample.prototype.displayedColumns;
@@ -328,14 +328,14 @@ CdkTableBasicExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("cdkRowDefColumns", ctx.displayedColumns);
     } }, directives: [CdkTable, CdkColumnDef, CdkHeaderCellDef, CdkCellDef, CdkHeaderRowDef, CdkRowDef, CdkHeaderCell, CdkCell, CdkHeaderRow, CdkRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nth[_ngcontent-%COMP%] {\n  text-align: left;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkTableBasicExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableBasicExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-table-basic-example',
                 styleUrls: ['cdk-table-basic-example.css'],
                 templateUrl: 'cdk-table-basic-example.html',
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkTableBasicExample.prototype.displayedColumns;
@@ -401,10 +401,10 @@ CdkTableExamplesModule.decorators = [
 /** @nocollapse */ CdkTableExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTableExamplesModule_Factory(t) { return new (t || CdkTableExamplesModule)(); }, imports: [[
             CdkTableModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkTableExamplesModule, { declarations: [CdkTableBasicExample,
         CdkTableBasicFlexExample], imports: [CdkTableModule], exports: [CdkTableBasicExample,
-        CdkTableBasicFlexExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkTableExamplesModule, [{
+        CdkTableBasicFlexExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkTableExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -413,7 +413,7 @@ CdkTableExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CdkTableBasicExample, CdkTableBasicFlexExample, CdkTableExamplesModule };
 //# sourceMappingURL=table.js.map

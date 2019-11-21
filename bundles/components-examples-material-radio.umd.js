@@ -50,14 +50,14 @@
             } }, directives: [i1.MatRadioGroup, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i1.MatRadioButton], styles: [".example-radio-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.example-radio-button[_ngcontent-%COMP%] {\n  margin: 5px;\n}"] });
         return RadioNgModelExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(RadioNgModelExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(RadioNgModelExample, [{
             type: i0.Component,
             args: [{
                     selector: 'radio-ng-model-example',
                     templateUrl: 'radio-ng-model-example.html',
                     styleUrls: ['radio-ng-model-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Basic radios
@@ -85,14 +85,14 @@
             } }, directives: [i1.MatRadioGroup, i1.MatRadioButton], styles: [".mat-radio-button[_ngcontent-%COMP%]    ~ .mat-radio-button[_ngcontent-%COMP%] {\n  margin-left: 16px;\n}"] });
         return RadioOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(RadioOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(RadioOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'radio-overview-example',
                     templateUrl: 'radio-overview-example.html',
                     styleUrls: ['radio-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         RadioNgModelExample,
@@ -120,12 +120,12 @@
                 ]] });
         return RadioExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(RadioExamplesModule, { declarations: [RadioNgModelExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(RadioExamplesModule, { declarations: [RadioNgModelExample,
             RadioOverviewExample], imports: [i3.CommonModule,
             i1.MatRadioModule,
             i2.FormsModule], exports: [RadioNgModelExample,
-            RadioOverviewExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(RadioExamplesModule, [{
+            RadioOverviewExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(RadioExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -136,7 +136,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.RadioExamplesModule = RadioExamplesModule;
     exports.RadioNgModelExample = RadioNgModelExample;

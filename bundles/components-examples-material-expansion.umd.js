@@ -25,7 +25,7 @@
                 i0.ɵɵviewQuery(i1$1.MatAccordion, true);
             } if (rf & 2) {
                 var _t;
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.accordion = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.accordion = _t.first);
             } }, decls: 40, vars: 1, consts: [[1, "example-action-buttons"], ["mat-button", "", 3, "click"], ["multi", "", 1, "example-headers-align"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "type", "number", "min", "1", "placeholder", "Age"], ["disabled", ""], ["matInput", "", "placeholder", "Country"], ["matInput", "", "placeholder", "Date", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionExpandCollapseAllExample_Template(rf, ctx) { if (rf & 1) {
                 var _r1 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "div", 0);
@@ -101,7 +101,7 @@
             } }, directives: [i1.MatButton, i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription, i3.MatIcon, i4.MatFormField, i5.MatInput, i6.MatDatepickerInput, i6.MatDatepicker], styles: [".example-action-buttons[_ngcontent-%COMP%] {\n  padding-bottom: 20px;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}"] });
         return ExpansionExpandCollapseAllExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ExpansionExpandCollapseAllExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ExpansionExpandCollapseAllExample, [{
             type: i0.Component,
             args: [{
                     selector: 'expansion-toggle-all-example',
@@ -111,7 +111,7 @@
         }], null, { accordion: [{
                 type: i0.ViewChild,
                 args: [i1$1.MatAccordion]
-            }] });
+            }] }); })();
 
     /**
      * @title Basic expansion panel
@@ -168,14 +168,14 @@
             } }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription, i4.MatFormField, i5.MatInput], styles: [""] });
         return ExpansionOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ExpansionOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ExpansionOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'expansion-overview-example',
                     templateUrl: 'expansion-overview-example.html',
                     styleUrls: ['expansion-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Expansion panel as accordion
@@ -301,14 +301,14 @@
             } }, directives: [i1$1.MatAccordion, i1$1.MatExpansionPanel, i1$1.MatExpansionPanelHeader, i1$1.MatExpansionPanelTitle, i1$1.MatExpansionPanelDescription, i3.MatIcon, i4.MatFormField, i5.MatInput, i1$1.MatExpansionPanelActionRow, i1.MatButton, i6.MatDatepickerInput, i6.MatDatepicker], styles: [".example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-title[_ngcontent-%COMP%], .example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  flex-basis: 0;\n}\n\n.example-headers-align[_ngcontent-%COMP%]   .mat-expansion-panel-header-description[_ngcontent-%COMP%] {\n  justify-content: space-between;\n  align-items: center;\n}\n\nmat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return ExpansionStepsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ExpansionStepsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ExpansionStepsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'expansion-steps-example',
                     templateUrl: 'expansion-steps-example.html',
                     styleUrls: ['expansion-steps-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         ExpansionExpandCollapseAllExample,
@@ -340,14 +340,14 @@
                 ]] });
         return ExpansionExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(ExpansionExamplesModule, { declarations: [ExpansionExpandCollapseAllExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ExpansionExamplesModule, { declarations: [ExpansionExpandCollapseAllExample,
             ExpansionOverviewExample,
             ExpansionStepsExample], imports: [i1.MatButtonModule,
             i6.MatDatepickerModule,
             i1$1.MatExpansionModule,
             i3.MatIconModule,
-            i5.MatInputModule] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ExpansionExamplesModule, [{
+            i5.MatInputModule] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ExpansionExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -359,7 +359,7 @@
                     ],
                     declarations: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.ExpansionExamplesModule = ExpansionExamplesModule;
     exports.ExpansionExpandCollapseAllExample = ExpansionExpandCollapseAllExample;

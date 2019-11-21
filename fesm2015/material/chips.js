@@ -138,8 +138,8 @@ ChipsAutocompleteExample.propDecorators = {
         ɵɵviewQuery(_c1, true);
     } if (rf & 2) {
         var _t;
-        ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.fruitInput = _t.first);
-        ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.matAutocomplete = _t.first);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.fruitInput = _t.first);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.matAutocomplete = _t.first);
     } }, decls: 10, vars: 8, consts: [[1, "example-chip-list"], ["aria-label", "Fruit selection"], ["chipList", ""], [3, "selectable", "removable", "removed", 4, "ngFor", "ngForOf"], ["placeholder", "New fruit...", 3, "formControl", "matAutocomplete", "matChipInputFor", "matChipInputSeparatorKeyCodes", "matChipInputTokenEnd"], ["fruitInput", ""], [3, "optionSelected"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "selectable", "removable", "removed"], ["matChipRemove", "", 4, "ngIf"], ["matChipRemove", ""], [3, "value"]], template: function ChipsAutocompleteExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field", 0);
         ɵɵelementStart(1, "mat-chip-list", 1, 2);
@@ -164,7 +164,7 @@ ChipsAutocompleteExample.propDecorators = {
         ɵɵadvance(4);
         ɵɵproperty("ngForOf", ɵɵpipeBind1(9, 6, ctx.filteredFruits));
     } }, directives: [MatFormField, MatChipList, NgForOf, DefaultValueAccessor, MatAutocompleteTrigger, MatChipInput, NgControlStatus, FormControlDirective, MatAutocomplete, MatChip, NgIf, MatIcon, MatChipRemove, MatOption], pipes: [AsyncPipe], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(ChipsAutocompleteExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ChipsAutocompleteExample, [{
         type: Component,
         args: [{
                 selector: 'chips-autocomplete-example',
@@ -177,7 +177,7 @@ ChipsAutocompleteExample.propDecorators = {
         }], matAutocomplete: [{
             type: ViewChild,
             args: ['auto']
-        }] });
+        }] }); })();
 if (false) {
     /** @type {?} */
     ChipsAutocompleteExample.prototype.visible;
@@ -261,14 +261,14 @@ ChipsDragDropExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.vegetables);
     } }, directives: [MatChipList, CdkDropList, NgForOf, MatChip, CdkDrag], styles: [".example-box.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-chip[_ngcontent-%COMP%]   .cdk-drop-list-dragging[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(ChipsDragDropExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ChipsDragDropExample, [{
         type: Component,
         args: [{
                 selector: 'chips-drag-drop-example',
                 templateUrl: 'chips-drag-drop-example.html',
                 styleUrls: ['chips-drag-drop-example.css']
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     ChipsDragDropExample.prototype.vegetables;
@@ -377,14 +377,14 @@ ChipsInputExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("matChipInputFor", _r12)("matChipInputSeparatorKeyCodes", ctx.separatorKeysCodes)("matChipInputAddOnBlur", ctx.addOnBlur);
     } }, directives: [MatFormField, MatChipList, NgForOf, MatChipInput, MatChip, NgIf, MatIcon, MatChipRemove], styles: [".example-chip-list[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(ChipsInputExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ChipsInputExample, [{
         type: Component,
         args: [{
                 selector: 'chips-input-example',
                 templateUrl: 'chips-input-example.html',
                 styleUrls: ['chips-input-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     ChipsInputExample.prototype.visible;
@@ -433,14 +433,14 @@ ChipsOverviewExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatChipList, MatChip], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(ChipsOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ChipsOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'chips-overview-example',
                 templateUrl: 'chips-overview-example.html',
                 styleUrls: ['chips-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -495,14 +495,14 @@ ChipsStackedExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.availableColors);
     } }, directives: [MatChipList, NgForOf, MatChip], styles: ["mat-chip[_ngcontent-%COMP%] {\n  max-width: 200px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(ChipsStackedExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ChipsStackedExample, [{
         type: Component,
         args: [{
                 selector: 'chips-stacked-example',
                 templateUrl: 'chips-stacked-example.html',
                 styleUrls: ['chips-stacked-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     ChipsStackedExample.prototype.availableColors;
@@ -547,7 +547,7 @@ ChipsExamplesModule.decorators = [
             MatFormFieldModule,
             ReactiveFormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(ChipsExamplesModule, { declarations: [ChipsAutocompleteExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ChipsExamplesModule, { declarations: [ChipsAutocompleteExample,
         ChipsDragDropExample,
         ChipsInputExample,
         ChipsOverviewExample,
@@ -561,8 +561,8 @@ ChipsExamplesModule.decorators = [
         ChipsDragDropExample,
         ChipsInputExample,
         ChipsOverviewExample,
-        ChipsStackedExample] });
-/*@__PURE__*/ ɵsetClassMetadata(ChipsExamplesModule, [{
+        ChipsStackedExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ChipsExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -577,7 +577,7 @@ ChipsExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsExamplesModule, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample };
 //# sourceMappingURL=chips.js.map

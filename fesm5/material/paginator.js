@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵproperty, ɵsetClassMetadata, ɵɵelement, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵproperty, ɵsetClassMetadata, ɵɵelement, ɵɵpureFunction0, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
@@ -87,16 +87,16 @@ var PaginatorConfigurableExample = /** @class */ (function () {
         } }, directives: [MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatPaginator, NgIf], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
     return PaginatorConfigurableExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(PaginatorConfigurableExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PaginatorConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'paginator-configurable-example',
                 templateUrl: 'paginator-configurable-example.html',
                 styleUrls: ['paginator-configurable-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
-var _c0 = [5, 10, 25, 100];
+var _c0 = function () { return [5, 10, 25, 100]; };
 /**
  * @title Paginator
  */
@@ -111,21 +111,21 @@ var PaginatorOverviewExample = /** @class */ (function () {
                 },] },
     ];
     PaginatorOverviewExample.ɵfac = function PaginatorOverviewExample_Factory(t) { return new (t || PaginatorOverviewExample)(); };
-    PaginatorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: PaginatorOverviewExample, selectors: [["paginator-overview-example"]], decls: 1, vars: 3, consts: [[3, "length", "pageSize", "pageSizeOptions"]], template: function PaginatorOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    PaginatorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: PaginatorOverviewExample, selectors: [["paginator-overview-example"]], decls: 1, vars: 4, consts: [[3, "length", "pageSize", "pageSizeOptions"]], template: function PaginatorOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelement(0, "mat-paginator", 0);
         } if (rf & 2) {
-            ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", _c0);
+            ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", ɵɵpureFunction0(3, _c0));
         } }, directives: [MatPaginator], styles: [""] });
     return PaginatorOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(PaginatorOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PaginatorOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'paginator-overview-example',
                 templateUrl: 'paginator-overview-example.html',
                 styleUrls: ['paginator-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 var EXAMPLES = [
     PaginatorConfigurableExample,
@@ -155,13 +155,13 @@ var PaginatorExamplesModule = /** @class */ (function () {
             ]] });
     return PaginatorExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(PaginatorExamplesModule, { declarations: [PaginatorConfigurableExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(PaginatorExamplesModule, { declarations: [PaginatorConfigurableExample,
         PaginatorOverviewExample], imports: [CommonModule,
         MatInputModule,
         MatPaginatorModule,
         FormsModule], exports: [PaginatorConfigurableExample,
-        PaginatorOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(PaginatorExamplesModule, [{
+        PaginatorOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(PaginatorExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -173,7 +173,7 @@ var PaginatorExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { PaginatorConfigurableExample, PaginatorExamplesModule, PaginatorOverviewExample };
 //# sourceMappingURL=paginator.js.map

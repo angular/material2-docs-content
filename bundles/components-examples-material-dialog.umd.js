@@ -37,14 +37,14 @@
             } }, directives: [i2.MatButton], styles: [""] });
         return DialogContentExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DialogContentExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogContentExample, [{
             type: i0.Component,
             args: [{
                     selector: 'dialog-content-example',
                     templateUrl: 'dialog-content-example.html',
                     styleUrls: ['dialog-content-example.css'],
                 }]
-        }], function () { return [{ type: i1.MatDialog }]; }, null);
+        }], function () { return [{ type: i1.MatDialog }]; }, null); })();
     var DialogContentExampleDialog = /** @class */ (function () {
         function DialogContentExampleDialog() {
         }
@@ -132,13 +132,13 @@
             } }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
         return DialogContentExampleDialog;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DialogContentExampleDialog, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogContentExampleDialog, [{
             type: i0.Component,
             args: [{
                     selector: 'dialog-content-example-dialog',
                     templateUrl: 'dialog-content-example-dialog.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function DialogDataExampleDialog_span_6_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "span");
@@ -189,14 +189,14 @@
             } }, directives: [i2.MatButton], styles: [""] });
         return DialogDataExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DialogDataExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogDataExample, [{
             type: i0.Component,
             args: [{
                     selector: 'dialog-data-example',
                     templateUrl: 'dialog-data-example.html',
                     styleUrls: ['dialog-data-example.css'],
                 }]
-        }], function () { return [{ type: i1.MatDialog }]; }, null);
+        }], function () { return [{ type: i1.MatDialog }]; }, null); })();
     var DialogDataExampleDialog = /** @class */ (function () {
         function DialogDataExampleDialog(data) {
             this.data = data;
@@ -243,7 +243,7 @@
             } }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i3.NgIf], encapsulation: 2 });
         return DialogDataExampleDialog;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DialogDataExampleDialog, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogDataExampleDialog, [{
             type: i0.Component,
             args: [{
                     selector: 'dialog-data-example-dialog',
@@ -252,7 +252,7 @@
         }], function () { return [{ type: undefined, decorators: [{
                     type: i0.Inject,
                     args: [i1.MAT_DIALOG_DATA]
-                }] }]; }, null);
+                }] }]; }, null); })();
 
     /**
      * @title Dialog elements
@@ -284,14 +284,14 @@
             } }, directives: [i2.MatButton], styles: [""] });
         return DialogElementsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DialogElementsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogElementsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'dialog-elements-example',
                     templateUrl: 'dialog-elements-example.html',
                     styleUrls: ['dialog-elements-example.css'],
                 }]
-        }], function () { return [{ type: i1.MatDialog }]; }, null);
+        }], function () { return [{ type: i1.MatDialog }]; }, null); })();
     var DialogElementsExampleDialog = /** @class */ (function () {
         function DialogElementsExampleDialog() {
         }
@@ -317,13 +317,13 @@
             } }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
         return DialogElementsExampleDialog;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DialogElementsExampleDialog, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogElementsExampleDialog, [{
             type: i0.Component,
             args: [{
                     selector: 'dialog-elements-example-dialog',
                     templateUrl: 'dialog-elements-example-dialog.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function DialogOverviewExample_li_7_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "li");
@@ -392,14 +392,14 @@
             } }, directives: [i2$1.MatFormField, i3$1.MatInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i2.MatButton, i3.NgIf], styles: [""] });
         return DialogOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DialogOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'dialog-overview-example',
                     templateUrl: 'dialog-overview-example.html',
                     styleUrls: ['dialog-overview-example.css'],
                 }]
-        }], function () { return [{ type: i1.MatDialog }]; }, null);
+        }], function () { return [{ type: i1.MatDialog }]; }, null); })();
     var DialogOverviewExampleDialog = /** @class */ (function () {
         function DialogOverviewExampleDialog(dialogRef, data) {
             this.dialogRef = dialogRef;
@@ -453,7 +453,7 @@
             } }, directives: [i1.MatDialogTitle, i1.MatDialogContent, i2$1.MatFormField, i3$1.MatInput, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i1.MatDialogActions, i2.MatButton, i1.MatDialogClose], encapsulation: 2 });
         return DialogOverviewExampleDialog;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DialogOverviewExampleDialog, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogOverviewExampleDialog, [{
             type: i0.Component,
             args: [{
                     selector: 'dialog-overview-example-dialog',
@@ -462,7 +462,7 @@
         }], function () { return [{ type: i1.MatDialogRef }, { type: undefined, decorators: [{
                     type: i0.Inject,
                     args: [i1.MAT_DIALOG_DATA]
-                }] }]; }, null);
+                }] }]; }, null); })();
 
     var EXAMPLES = [
         DialogContentExample,
@@ -506,7 +506,7 @@
                 ]] });
         return DialogExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(DialogExamplesModule, { declarations: [DialogContentExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DialogExamplesModule, { declarations: [DialogContentExample,
             DialogContentExampleDialog,
             DialogDataExample,
             DialogDataExampleDialog,
@@ -524,8 +524,8 @@
             DialogElementsExample,
             DialogElementsExampleDialog,
             DialogOverviewExample,
-            DialogOverviewExampleDialog] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DialogExamplesModule, [{
+            DialogOverviewExampleDialog] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DialogExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -544,7 +544,7 @@
                         DialogOverviewExampleDialog,
                     ]
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.DialogContentExample = DialogContentExample;
     exports.DialogContentExampleDialog = DialogContentExampleDialog;

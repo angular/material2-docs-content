@@ -57,14 +57,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return AutocompleteAutoActiveFirstOptionExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(AutocompleteAutoActiveFirstOptionExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AutocompleteAutoActiveFirstOptionExample, [{
             type: i0.Component,
             args: [{
                     selector: 'autocomplete-auto-active-first-option-example',
                     templateUrl: 'autocomplete-auto-active-first-option-example.html',
                     styleUrls: ['autocomplete-auto-active-first-option-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function AutocompleteDisplayExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 6);
@@ -129,14 +129,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return AutocompleteDisplayExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(AutocompleteDisplayExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AutocompleteDisplayExample, [{
             type: i0.Component,
             args: [{
                     selector: 'autocomplete-display-example',
                     templateUrl: 'autocomplete-display-example.html',
                     styleUrls: ['autocomplete-display-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function AutocompleteFilterExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 5);
@@ -192,14 +192,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return AutocompleteFilterExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(AutocompleteFilterExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AutocompleteFilterExample, [{
             type: i0.Component,
             args: [{
                     selector: 'autocomplete-filter-example',
                     templateUrl: 'autocomplete-filter-example.html',
                     styleUrls: ['autocomplete-filter-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function AutocompleteOptgroupExample_mat_optgroup_5_mat_option_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 6);
@@ -340,14 +340,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.FormGroupDirective, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlName, i1.RequiredValidator, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOptgroup, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [""] });
         return AutocompleteOptgroupExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(AutocompleteOptgroupExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AutocompleteOptgroupExample, [{
             type: i0.Component,
             args: [{
                     selector: 'autocomplete-optgroup-example',
                     templateUrl: './autocomplete-optgroup-example.html',
                     styleUrls: ['./autocomplete-optgroup-example.css'],
                 }]
-        }], function () { return [{ type: i1.FormBuilder }]; }, null);
+        }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
 
     function AutocompleteOverviewExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 6);
@@ -446,14 +446,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i4.MatAutocompleteTrigger, i1.DefaultValueAccessor, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6.MatSlideToggle, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-option-img[_ngcontent-%COMP%] {\n  vertical-align: middle;\n  margin-right: 8px;\n}\n\n[dir='rtl'][_ngcontent-%COMP%]   .example-option-img[_ngcontent-%COMP%] {\n  margin-right: 0;\n  margin-left: 8px;\n}"] });
         return AutocompleteOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(AutocompleteOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AutocompleteOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'autocomplete-overview-example',
                     templateUrl: 'autocomplete-overview-example.html',
                     styleUrls: ['autocomplete-overview-example.css'],
                 }]
-        }], function () { return []; }, null);
+        }], function () { return []; }, null); })();
 
     function AutocompletePlainInputExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 4);
@@ -510,14 +510,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return AutocompletePlainInputExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(AutocompletePlainInputExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AutocompletePlainInputExample, [{
             type: i0.Component,
             args: [{
                     selector: 'autocomplete-plain-input-example',
                     templateUrl: 'autocomplete-plain-input-example.html',
                     styleUrls: ['autocomplete-plain-input-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function AutocompleteSimpleExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 5);
@@ -563,14 +563,14 @@
             } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOption], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return AutocompleteSimpleExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(AutocompleteSimpleExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AutocompleteSimpleExample, [{
             type: i0.Component,
             args: [{
                     selector: 'autocomplete-simple-example',
                     templateUrl: 'autocomplete-simple-example.html',
                     styleUrls: ['autocomplete-simple-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         AutocompleteAutoActiveFirstOptionExample,
@@ -611,7 +611,7 @@
                 ]] });
         return AutocompleteExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(AutocompleteExamplesModule, { declarations: [AutocompleteAutoActiveFirstOptionExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(AutocompleteExamplesModule, { declarations: [AutocompleteAutoActiveFirstOptionExample,
             AutocompleteDisplayExample,
             AutocompleteFilterExample,
             AutocompleteOptgroupExample,
@@ -629,8 +629,8 @@
             AutocompleteOptgroupExample,
             AutocompleteOverviewExample,
             AutocompletePlainInputExample,
-            AutocompleteSimpleExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(AutocompleteExamplesModule, [{
+            AutocompleteSimpleExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AutocompleteExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -645,7 +645,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.AutocompleteAutoActiveFirstOptionExample = AutocompleteAutoActiveFirstOptionExample;
     exports.AutocompleteDisplayExample = AutocompleteDisplayExample;

@@ -124,14 +124,14 @@
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return TableBasicFlexExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableBasicFlexExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableBasicFlexExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-basic-flex-example',
                     styleUrls: ['table-basic-flex-example.css'],
                     templateUrl: 'table-basic-flex-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TableBasicExample_th_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -253,14 +253,14 @@
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return TableBasicExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableBasicExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableBasicExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-basic-example',
                     styleUrls: ['table-basic-example.css'],
                     templateUrl: 'table-basic-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TableDynamicColumnsExample_ng_container_7_th_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 8);
@@ -375,14 +375,14 @@
             } }, directives: [i1.MatButton, i1$1.MatTable, i2.NgForOf, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin: 16px 8px;\n}"] });
         return TableDynamicColumnsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableDynamicColumnsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableDynamicColumnsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-dynamic-columns-example',
                     styleUrls: ['table-dynamic-columns-example.css'],
                     templateUrl: 'table-dynamic-columns-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TableExpandableRowsExample_ng_container_1_th_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -470,7 +470,7 @@
     function TableExpandableRowsExample_tr_6_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 21);
     } }
-    var _c0 = ["expandedDetail"];
+    var _c0 = function () { return ["expandedDetail"]; };
     /**
      * @title Table with expandable rows
      */
@@ -494,7 +494,7 @@
                     },] },
         ];
         TableExpandableRowsExample.ɵfac = function TableExpandableRowsExample_Factory(t) { return new (t || TableExpandableRowsExample)(); };
-        TableExpandableRowsExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableExpandableRowsExample, selectors: [["table-expandable-rows-example"]], decls: 7, vars: 5, consts: [["mat-table", "", "multiTemplateDataRows", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["matColumnDef", "expandedDetail"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", "class", "example-element-row", 3, "example-expanded-row", "click", 4, "matRowDef", "matRowDefColumns"], ["mat-row", "", "class", "example-detail-row", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], [1, "example-element-detail"], [1, "example-element-diagram"], [1, "example-element-position"], [1, "example-element-symbol"], [1, "example-element-name"], [1, "example-element-weight"], [1, "example-element-description"], [1, "example-element-description-attribution"], ["mat-header-row", ""], ["mat-row", "", 1, "example-element-row", 3, "click"], ["mat-row", "", 1, "example-detail-row"]], template: function TableExpandableRowsExample_Template(rf, ctx) { if (rf & 1) {
+        TableExpandableRowsExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableExpandableRowsExample, selectors: [["table-expandable-rows-example"]], decls: 7, vars: 6, consts: [["mat-table", "", "multiTemplateDataRows", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["matColumnDef", "expandedDetail"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", "class", "example-element-row", 3, "example-expanded-row", "click", 4, "matRowDef", "matRowDefColumns"], ["mat-row", "", "class", "example-detail-row", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], [1, "example-element-detail"], [1, "example-element-diagram"], [1, "example-element-position"], [1, "example-element-symbol"], [1, "example-element-name"], [1, "example-element-weight"], [1, "example-element-description"], [1, "example-element-description-attribution"], ["mat-header-row", ""], ["mat-row", "", 1, "example-element-row", 3, "click"], ["mat-row", "", 1, "example-detail-row"]], template: function TableExpandableRowsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
                 i0.ɵɵtemplate(1, TableExpandableRowsExample_ng_container_1_Template, 3, 1, "ng-container", 1);
                 i0.ɵɵelementContainerStart(2, 2);
@@ -513,7 +513,7 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matRowDefColumns", ctx.columnsToDisplay);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("matRowDefColumns", _c0);
+                i0.ɵɵproperty("matRowDefColumns", i0.ɵɵpureFunction0(5, _c0));
             } }, directives: [i1$1.MatTable, i2.NgForOf, i1$1.MatColumnDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCellDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntr.example-detail-row[_ngcontent-%COMP%] {\n  height: 0;\n}\n\ntr.example-element-row[_ngcontent-%COMP%]:not(.example-expanded-row):hover {\n  background: #777;\n}\n\ntr.example-element-row[_ngcontent-%COMP%]:not(.example-expanded-row):active {\n  background: #efefef;\n}\n\n.example-element-row[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  border-bottom-width: 0;\n}\n\n.example-element-detail[_ngcontent-%COMP%] {\n  overflow: hidden;\n  display: flex;\n}\n\n.example-element-diagram[_ngcontent-%COMP%] {\n  min-width: 80px;\n  border: 2px solid black;\n  padding: 8px;\n  font-weight: lighter;\n  margin: 8px 0;\n  height: 104px;\n}\n\n.example-element-symbol[_ngcontent-%COMP%] {\n  font-weight: bold;\n  font-size: 40px;\n  line-height: normal;\n}\n\n.example-element-description[_ngcontent-%COMP%] {\n  padding: 16px;\n}\n\n.example-element-description-attribution[_ngcontent-%COMP%] {\n  opacity: 0.5;\n}"], data: { animation: [
                     animations.trigger('detailExpand', [
                         animations.state('collapsed', animations.style({ height: '0px', minHeight: '0' })),
@@ -523,7 +523,7 @@
                 ] } });
         return TableExpandableRowsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableExpandableRowsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableExpandableRowsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-expandable-rows-example',
@@ -537,7 +537,7 @@
                         ]),
                     ],
                 }]
-        }], null, null);
+        }], null, null); })();
     var ELEMENT_DATA$3 = [
         {
             position: 1,
@@ -731,14 +731,14 @@
             } }, directives: [i1$2.MatFormField, i2$4.MatInput, i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  font-size: 14px;\n  width: 100%;\n}"] });
         return TableFilteringExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableFilteringExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableFilteringExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-filtering-example',
                     styleUrls: ['table-filtering-example.css'],
                     templateUrl: 'table-filtering-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TableFooterRowExample_th_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -847,14 +847,14 @@
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatFooterCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatFooterRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatFooterCell, i1$1.MatHeaderRow, i1$1.MatRow, i1$1.MatFooterRow], pipes: [i2.CurrencyPipe], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntr.mat-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}"] });
         return TableFooterRowExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableFooterRowExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableFooterRowExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-footer-row-example',
                     styleUrls: ['table-footer-row-example.css'],
                     templateUrl: 'table-footer-row-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TableHttpExample_div_1_mat_spinner_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "mat-spinner");
@@ -994,8 +994,8 @@
                 i0.ɵɵviewQuery(i4.MatSort, true);
             } if (rf & 2) {
                 var _t;
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.paginator = _t.first);
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.sort = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.paginator = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.sort = _t.first);
             } }, decls: 19, vars: 6, consts: [[1, "example-container", "mat-elevation-z8"], ["class", "example-loading-shade", 4, "ngIf"], [1, "example-table-container"], ["mat-table", "", "matSort", "", "matSortActive", "created", "matSortDisableClear", "", "matSortDirection", "desc", 1, "example-table", 3, "dataSource"], ["matColumnDef", "number"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "title"], ["matColumnDef", "state"], ["matColumnDef", "created"], ["mat-header-cell", "", "mat-sort-header", "", "disableClear", "", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "length", "pageSize"], [1, "example-loading-shade"], [4, "ngIf"], ["class", "example-rate-limit-reached", 4, "ngIf"], [1, "example-rate-limit-reached"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-cell", "", "mat-sort-header", "", "disableClear", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableHttpExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵtemplate(1, TableHttpExample_div_1_Template, 3, 2, "div", 1);
@@ -1037,7 +1037,7 @@
             } }, directives: [i2.NgIf, i1$1.MatTable, i4.MatSort, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i5.MatPaginator, i6.MatSpinner, i1$1.MatHeaderCell, i1$1.MatCell, i4.MatSortHeader, i1$1.MatHeaderRow, i1$1.MatRow], pipes: [i2.DatePipe], styles: [".example-container[_ngcontent-%COMP%] {\n  position: relative;\n  min-height: 200px;\n}\n\n.example-table-container[_ngcontent-%COMP%] {\n  position: relative;\n  max-height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-loading-shade[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 56px;\n  right: 0;\n  background: rgba(0, 0, 0, 0.15);\n  z-index: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.example-rate-limit-reached[_ngcontent-%COMP%] {\n  color: #980000;\n  max-width: 360px;\n  text-align: center;\n}\n\n\n.mat-column-number[_ngcontent-%COMP%], .mat-column-state[_ngcontent-%COMP%] {\n  max-width: 64px;\n}\n\n.mat-column-created[_ngcontent-%COMP%] {\n  max-width: 124px;\n}"] });
         return TableHttpExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableHttpExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableHttpExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-http-example',
@@ -1050,7 +1050,7 @@
             }], sort: [{
                 type: i0.ViewChild,
                 args: [i4.MatSort]
-            }] });
+            }] }); })();
     /** An example database that the data source uses to retrieve data for the table. */
     var ExampleHttpDatabase = /** @class */ (function () {
         function ExampleHttpDatabase(_httpClient) {
@@ -1138,8 +1138,8 @@
     function TableMultipleHeaderFooterExample_tr_19_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 23);
     } }
-    var _c0$1 = ["item-description", "cost-description"];
-    var _c1 = ["disclaimer"];
+    var _c0$1 = function () { return ["item-description", "cost-description"]; };
+    var _c1 = function () { return ["disclaimer"]; };
     /**
      * @title Table with multiple header and footer rows
      */
@@ -1167,7 +1167,7 @@
                     },] },
         ];
         TableMultipleHeaderFooterExample.ɵfac = function TableMultipleHeaderFooterExample_Factory(t) { return new (t || TableMultipleHeaderFooterExample)(); };
-        TableMultipleHeaderFooterExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableMultipleHeaderFooterExample, selectors: [["table-multiple-header-footer-example"]], decls: 20, vars: 6, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["matColumnDef", "item-description"], ["matColumnDef", "cost-description"], ["matColumnDef", "disclaimer"], ["mat-footer-cell", "", "colspan", "2", 4, "matFooterCellDef"], ["mat-header-row", "", "class", "example-first-header-row", 4, "matHeaderRowDef"], ["mat-header-row", "", "class", "example-second-header-row", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", "class", "example-first-footer-row", 4, "matFooterRowDef"], ["mat-footer-row", "", "class", "example-second-footer-row", 4, "matFooterRowDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-footer-cell", "", "colspan", "2"], ["mat-header-row", "", 1, "example-first-header-row"], ["mat-header-row", "", 1, "example-second-header-row"], ["mat-row", ""], ["mat-footer-row", "", 1, "example-first-footer-row"], ["mat-footer-row", "", 1, "example-second-footer-row"]], template: function TableMultipleHeaderFooterExample_Template(rf, ctx) { if (rf & 1) {
+        TableMultipleHeaderFooterExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableMultipleHeaderFooterExample, selectors: [["table-multiple-header-footer-example"]], decls: 20, vars: 8, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "item"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "cost"], ["matColumnDef", "item-description"], ["matColumnDef", "cost-description"], ["matColumnDef", "disclaimer"], ["mat-footer-cell", "", "colspan", "2", 4, "matFooterCellDef"], ["mat-header-row", "", "class", "example-first-header-row", 4, "matHeaderRowDef"], ["mat-header-row", "", "class", "example-second-header-row", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", "class", "example-first-footer-row", 4, "matFooterRowDef"], ["mat-footer-row", "", "class", "example-second-footer-row", 4, "matFooterRowDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-footer-cell", "", "colspan", "2"], ["mat-header-row", "", 1, "example-first-header-row"], ["mat-header-row", "", 1, "example-second-header-row"], ["mat-row", ""], ["mat-footer-row", "", 1, "example-first-footer-row"], ["mat-footer-row", "", 1, "example-second-footer-row"]], template: function TableMultipleHeaderFooterExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
                 i0.ɵɵelementContainerStart(1, 1);
                 i0.ɵɵtemplate(2, TableMultipleHeaderFooterExample_th_2_Template, 2, 0, "th", 2);
@@ -1199,24 +1199,24 @@
                 i0.ɵɵadvance(15);
                 i0.ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("matHeaderRowDef", _c0$1);
+                i0.ɵɵproperty("matHeaderRowDef", i0.ɵɵpureFunction0(6, _c0$1));
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matFooterRowDef", ctx.displayedColumns);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("matFooterRowDef", _c1);
+                i0.ɵɵproperty("matFooterRowDef", i0.ɵɵpureFunction0(7, _c1));
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatFooterCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatFooterRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatFooterCell, i1$1.MatHeaderRow, i1$1.MatRow, i1$1.MatFooterRow], pipes: [i2.CurrencyPipe], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-first-header-row[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  border-bottom: none;\n}\n\n.example-second-header-row[_ngcontent-%COMP%] {\n  font-style: italic;\n}\n\n.example-first-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.example-second-footer-row[_ngcontent-%COMP%]   td[_ngcontent-%COMP%] {\n  color: #900000;\n}"] });
         return TableMultipleHeaderFooterExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableMultipleHeaderFooterExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableMultipleHeaderFooterExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-multiple-header-footer-example',
                     styleUrls: ['table-multiple-header-footer-example.css'],
                     templateUrl: 'table-multiple-header-footer-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TableOverviewExample_th_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 13);
@@ -1281,7 +1281,7 @@
     function TableOverviewExample_tr_17_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 16);
     } }
-    var _c0$2 = [5, 10, 25, 100];
+    var _c0$2 = function () { return [5, 10, 25, 100]; };
     /** Constants used to fill up our data base. */
     var COLORS = [
         'maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple', 'fuchsia', 'lime', 'teal',
@@ -1331,9 +1331,9 @@
                 i0.ɵɵstaticViewQuery(i4.MatSort, true);
             } if (rf & 2) {
                 var _t;
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.paginator = _t.first);
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.sort = _t.first);
-            } }, decls: 19, vars: 4, consts: [["matInput", "", "placeholder", "Filter", 3, "keyup"], [1, "mat-elevation-z8"], ["mat-table", "", "matSort", "", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "progress"], ["matColumnDef", "name"], ["matColumnDef", "color"], ["mat-cell", "", 3, "color", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "pageSizeOptions"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableOverviewExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.paginator = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.sort = _t.first);
+            } }, decls: 19, vars: 5, consts: [["matInput", "", "placeholder", "Filter", 3, "keyup"], [1, "mat-elevation-z8"], ["mat-table", "", "matSort", "", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "progress"], ["matColumnDef", "name"], ["matColumnDef", "color"], ["mat-cell", "", 3, "color", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "pageSizeOptions"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "input", 0);
                 i0.ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_1_listener($event) { return ctx.applyFilter($event.target.value); });
@@ -1370,11 +1370,11 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("pageSizeOptions", _c0$2);
+                i0.ɵɵproperty("pageSizeOptions", i0.ɵɵpureFunction0(4, _c0$2));
             } }, directives: [i1$2.MatFormField, i2$4.MatInput, i1$1.MatTable, i4.MatSort, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i5.MatPaginator, i1$1.MatHeaderCell, i4.MatSortHeader, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  font-size: 14px;\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%], th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
         return TableOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-overview-example',
@@ -1387,7 +1387,7 @@
             }], sort: [{
                 type: i0.ViewChild,
                 args: [i4.MatSort, { static: true }]
-            }] });
+            }] }); })();
     /** Builds and returns a new User. */
     function createNewUser(id) {
         var name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
@@ -1462,7 +1462,7 @@
     function TablePaginationExample_tr_15_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 14);
     } }
-    var _c0$3 = [5, 10, 20];
+    var _c0$3 = function () { return [5, 10, 20]; };
     /**
      * @title Table with pagination
      */
@@ -1489,8 +1489,8 @@
                 i0.ɵɵstaticViewQuery(i5.MatPaginator, true);
             } if (rf & 2) {
                 var _t;
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.paginator = _t.first);
-            } }, decls: 17, vars: 4, consts: [[1, "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["showFirstLastButtons", "", 3, "pageSizeOptions"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TablePaginationExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.paginator = _t.first);
+            } }, decls: 17, vars: 5, consts: [[1, "mat-elevation-z8"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["showFirstLastButtons", "", 3, "pageSizeOptions"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TablePaginationExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
                 i0.ɵɵelementStart(1, "table", 1);
                 i0.ɵɵelementContainerStart(2, 2);
@@ -1522,11 +1522,11 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
                 i0.ɵɵadvance(1);
-                i0.ɵɵproperty("pageSizeOptions", _c0$3);
+                i0.ɵɵproperty("pageSizeOptions", i0.ɵɵpureFunction0(4, _c0$3));
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i5.MatPaginator, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return TablePaginationExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TablePaginationExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TablePaginationExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-pagination-example',
@@ -1536,7 +1536,7 @@
         }], null, { paginator: [{
                 type: i0.ViewChild,
                 args: [i5.MatPaginator, { static: true }]
-            }] });
+            }] }); })();
     var ELEMENT_DATA$5 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -1722,14 +1722,14 @@
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return TableRowContextExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableRowContextExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableRowContextExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-row-context-example',
                     styleUrls: ['table-row-context-example.css'],
                     templateUrl: 'table-row-context-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TableSelectionExample_th_2_Template(rf, ctx) { if (rf & 1) {
         var _r185 = i0.ɵɵgetCurrentView();
@@ -1905,14 +1905,14 @@
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i2$2.MatCheckbox, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return TableSelectionExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableSelectionExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableSelectionExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-selection-example',
                     styleUrls: ['table-selection-example.css'],
                     templateUrl: 'table-selection-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TableSortingExample_th_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 9);
@@ -2014,7 +2014,7 @@
                 i0.ɵɵstaticViewQuery(i4.MatSort, true);
             } if (rf & 2) {
                 var _t;
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.sort = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.sort = _t.first);
             } }, decls: 15, vars: 3, consts: [["mat-table", "", "matSort", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableSortingExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
                 i0.ɵɵelementContainerStart(1, 1);
@@ -2045,7 +2045,7 @@
             } }, directives: [i1$1.MatTable, i4.MatSort, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i4.MatSortHeader, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\nth.mat-sort-header-sorted[_ngcontent-%COMP%] {\n  color: black;\n}"] });
         return TableSortingExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableSortingExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableSortingExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-sorting-example',
@@ -2055,7 +2055,7 @@
         }], null, { sort: [{
                 type: i0.ViewChild,
                 args: [i4.MatSort, { static: true }]
-            }] });
+            }] }); })();
 
     function TableStickyColumnsExample_th_3_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 11);
@@ -2182,14 +2182,14 @@
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i2$3.MatIcon, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  width: 550px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 800px;\n}\n\ntd.mat-column-star[_ngcontent-%COMP%] {\n  width: 20px;\n  padding-right: 8px;\n}\n\nth.mat-column-position[_ngcontent-%COMP%], td.mat-column-position[_ngcontent-%COMP%] {\n  padding-left: 8px;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%]:first-child {\n  border-right: 1px solid #e0e0e0;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%]:last-child {\n  border-left: 1px solid #e0e0e0;\n}"] });
         return TableStickyColumnsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableStickyColumnsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableStickyColumnsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-sticky-columns-example',
                     styleUrls: ['table-sticky-columns-example.css'],
                     templateUrl: 'table-sticky-columns-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
     var ELEMENT_DATA$8 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -2367,9 +2367,9 @@
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("matFooterRowDef", ctx_r233.displayedColumns)("matFooterRowDefSticky", ctx_r233.isSticky(_r231, "footer-2"));
     } }
-    var _c0$4 = ["header-1"];
-    var _c1$1 = ["footer-1"];
-    var _c2 = ["position", "symbol"];
+    var _c0$4 = function () { return ["header-1"]; };
+    var _c1$1 = function () { return ["footer-1"]; };
+    var _c2 = function () { return ["position", "symbol"]; };
     /**
      * @title Flex-layout tables with toggle-able sticky headers, footers, and columns
      */
@@ -2400,7 +2400,7 @@
         /** @nocollapse */
         TableStickyComplexFlexExample.ctorParameters = function () { return []; };
         TableStickyComplexFlexExample.ɵfac = function TableStickyComplexFlexExample_Factory(t) { return new (t || TableStickyComplexFlexExample)(); };
-        TableStickyComplexFlexExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableStickyComplexFlexExample, selectors: [["table-sticky-complex-flex-example"]], decls: 35, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], [3, "dataSource", 4, "ngFor", "ngForOf"], [3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], [4, "matHeaderCellDef"], [4, "matCellDef"], [4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], [4, "matHeaderRowDef", "matHeaderRowDefSticky"], [4, "matRowDef", "matRowDefColumns"], [4, "matFooterRowDef", "matFooterRowDefSticky"]], template: function TableStickyComplexFlexExample_Template(rf, ctx) { if (rf & 1) {
+        TableStickyComplexFlexExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableStickyComplexFlexExample, selectors: [["table-sticky-complex-flex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], [3, "dataSource", 4, "ngFor", "ngForOf"], [3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], [4, "matHeaderCellDef"], [4, "matCellDef"], [4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], [4, "matHeaderRowDef", "matHeaderRowDefSticky"], [4, "matRowDef", "matRowDefColumns"], [4, "matFooterRowDef", "matFooterRowDefSticky"]], template: function TableStickyComplexFlexExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div");
                 i0.ɵɵelementStart(1, "button", 0);
                 i0.ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_1_listener($event) { return ctx.tables.push(ctx.tables.length); });
@@ -2455,24 +2455,24 @@
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 i0.ɵɵadvance(7);
-                i0.ɵɵproperty("value", _c0$4);
+                i0.ɵɵproperty("value", i0.ɵɵpureFunction0(4, _c0$4));
                 i0.ɵɵadvance(8);
-                i0.ɵɵproperty("value", _c1$1);
+                i0.ɵɵproperty("value", i0.ɵɵpureFunction0(5, _c1$1));
                 i0.ɵɵadvance(8);
-                i0.ɵɵproperty("value", _c2);
+                i0.ɵɵproperty("value", i0.ɵɵpureFunction0(6, _c2));
                 i0.ɵɵadvance(11);
                 i0.ɵɵproperty("ngForOf", ctx.tables);
             } }, directives: [i1.MatButton, i2$1.MatButtonToggleGroup, i2$1.MatButtonToggle, i2.NgForOf, i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatFooterCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatFooterRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatFooterCell, i1$1.MatHeaderRow, i1$1.MatRow, i1$1.MatFooterRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-column-filler[_ngcontent-%COMP%] {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell[_ngcontent-%COMP%], .mat-footer-cell[_ngcontent-%COMP%], .mat-cell[_ngcontent-%COMP%] {\n  min-width: 80px;\n  box-sizing: border-box;\n}\n\n.mat-header-row[_ngcontent-%COMP%], .mat-footer-row[_ngcontent-%COMP%], .mat-row[_ngcontent-%COMP%] {\n  min-width: 1920px; \n}"] });
         return TableStickyComplexFlexExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableStickyComplexFlexExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableStickyComplexFlexExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-sticky-complex-flex-example',
                     styleUrls: ['table-sticky-complex-flex-example.css'],
                     templateUrl: 'table-sticky-complex-flex-example.html',
                 }]
-        }], function () { return []; }, null);
+        }], function () { return []; }, null); })();
     var ELEMENT_DATA$9 = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -2650,9 +2650,9 @@
         i0.ɵɵadvance(1);
         i0.ɵɵproperty("matFooterRowDef", ctx_r264.displayedColumns)("matFooterRowDefSticky", ctx_r264.isSticky(_r262, "footer-2"));
     } }
-    var _c0$5 = ["header-1"];
-    var _c1$2 = ["footer-1"];
-    var _c2$1 = ["position", "symbol"];
+    var _c0$5 = function () { return ["header-1"]; };
+    var _c1$2 = function () { return ["footer-1"]; };
+    var _c2$1 = function () { return ["position", "symbol"]; };
     /**
      * @title Tables with toggle-able sticky headers, footers, and columns
      */
@@ -2683,7 +2683,7 @@
         /** @nocollapse */
         TableStickyComplexExample.ctorParameters = function () { return []; };
         TableStickyComplexExample.ɵfac = function TableStickyComplexExample_Factory(t) { return new (t || TableStickyComplexExample)(); };
-        TableStickyComplexExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableStickyComplexExample, selectors: [["table-sticky-complex-example"]], decls: 35, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource", 4, "ngFor", "ngForOf"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyComplexExample_Template(rf, ctx) { if (rf & 1) {
+        TableStickyComplexExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableStickyComplexExample, selectors: [["table-sticky-complex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource", 4, "ngFor", "ngForOf"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyComplexExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div");
                 i0.ɵɵelementStart(1, "button", 0);
                 i0.ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_1_listener($event) { return ctx.tables.push(ctx.tables.length); });
@@ -2738,24 +2738,24 @@
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 i0.ɵɵadvance(7);
-                i0.ɵɵproperty("value", _c0$5);
+                i0.ɵɵproperty("value", i0.ɵɵpureFunction0(4, _c0$5));
                 i0.ɵɵadvance(8);
-                i0.ɵɵproperty("value", _c1$2);
+                i0.ɵɵproperty("value", i0.ɵɵpureFunction0(5, _c1$2));
                 i0.ɵɵadvance(8);
-                i0.ɵɵproperty("value", _c2$1);
+                i0.ɵɵproperty("value", i0.ɵɵpureFunction0(6, _c2$1));
                 i0.ɵɵadvance(11);
                 i0.ɵɵproperty("ngForOf", ctx.tables);
             } }, directives: [i1.MatButton, i2$1.MatButtonToggleGroup, i2$1.MatButtonToggle, i2.NgForOf, i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatFooterCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatFooterRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatFooterCell, i1$1.MatHeaderRow, i1$1.MatRow, i1$1.MatFooterRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  background: #59abfd;\n  opacity: 1;\n}\n\n.example-sticky-toggle-group[_ngcontent-%COMP%] {\n  margin: 8px;\n}\n\n.mat-column-filler[_ngcontent-%COMP%] {\n  padding: 0 8px;\n  font-size: 10px;\n  text-align: center;\n}\n\n.mat-header-cell[_ngcontent-%COMP%], .mat-footer-cell[_ngcontent-%COMP%], .mat-cell[_ngcontent-%COMP%] {\n  min-width: 80px;\n  box-sizing: border-box;\n}"] });
         return TableStickyComplexExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableStickyComplexExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableStickyComplexExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-sticky-complex-example',
                     styleUrls: ['table-sticky-complex-example.css'],
                     templateUrl: 'table-sticky-complex-example.html',
                 }]
-        }], function () { return []; }, null);
+        }], function () { return []; }, null); })();
     var ELEMENT_DATA$a = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -2879,14 +2879,14 @@
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatFooterCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatFooterRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatFooterCell, i1$1.MatHeaderRow, i1$1.MatRow, i1$1.MatFooterRow], pipes: [i2.CurrencyPipe], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 270px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntr.mat-footer-row[_ngcontent-%COMP%] {\n  font-weight: bold;\n}\n\n.mat-table-sticky[_ngcontent-%COMP%] {\n  border-top: 1px solid #e0e0e0;\n}"] });
         return TableStickyFooterExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableStickyFooterExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableStickyFooterExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-sticky-footer-example',
                     styleUrls: ['table-sticky-footer-example.css'],
                     templateUrl: 'table-sticky-footer-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TableStickyHeaderExample_th_3_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "th", 10);
@@ -2999,14 +2999,14 @@
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: [".example-container[_ngcontent-%COMP%] {\n  height: 400px;\n  overflow: auto;\n}\n\ntable[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return TableStickyHeaderExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableStickyHeaderExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableStickyHeaderExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-sticky-header-example',
                     styleUrls: ['table-sticky-header-example.css'],
                     templateUrl: 'table-sticky-header-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
     var ELEMENT_DATA$b = [
         { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
         { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
@@ -3083,14 +3083,14 @@
             } }, directives: [i1$1.MatTable, i1$1.MatTextColumn, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return TableTextColumnAdvancedExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableTextColumnAdvancedExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableTextColumnAdvancedExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-text-column-advanced-example',
                     styleUrls: ['table-text-column-advanced-example.css'],
                     templateUrl: 'table-text-column-advanced-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TableTextColumnExample_tr_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "tr", 7);
@@ -3145,14 +3145,14 @@
             } }, directives: [i1$1.MatTable, i1$1.MatTextColumn, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return TableTextColumnExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableTextColumnExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableTextColumnExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-text-column-example',
                     styleUrls: ['table-text-column-example.css'],
                     templateUrl: 'table-text-column-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var _c0$6 = ["sort"];
     function TableWrappedExample_th_3_Template(rf, ctx) { if (rf & 1) {
@@ -3256,7 +3256,7 @@
                 i0.ɵɵstaticViewQuery(_c0$6, true);
             } if (rf & 2) {
                 var _t;
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.sort = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.sort = _t.first);
             } }, decls: 7, vars: 4, consts: [["matSort", "", 3, "dataSource", "columns"], ["sort", "matSort"], ["matColumnDef", "name"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableWrappedExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "wrapper-table", 0, 1);
                 i0.ɵɵelementContainerStart(2, 2);
@@ -3275,7 +3275,7 @@
             } }, directives: function () { return [WrapperTable, i4.MatSort, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow]; }, styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return TableWrappedExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableWrappedExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableWrappedExample, [{
             type: i0.Component,
             args: [{
                     selector: 'table-wrapped-example',
@@ -3285,7 +3285,7 @@
         }], null, { sort: [{
                 type: i0.ViewChild,
                 args: ['sort', { static: true }]
-            }] });
+            }] }); })();
     /**
      * Table component that accepts column and row definitions in its content to be registered to the
      * table.
@@ -3321,14 +3321,14 @@
                 i0.ɵɵcontentQuery(dirIndex, i1$1.MatColumnDef, false);
             } if (rf & 2) {
                 var _t;
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.headerRowDefs = _t);
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.rowDefs = _t);
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.columnDefs = _t);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.headerRowDefs = _t);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.rowDefs = _t);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.columnDefs = _t);
             } }, viewQuery: function WrapperTable_Query(rf, ctx) { if (rf & 1) {
                 i0.ɵɵstaticViewQuery(i1$1.MatTable, true);
             } if (rf & 2) {
                 var _t;
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx.table = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.table = _t.first);
             } }, inputs: { columns: "columns", dataSource: "dataSource" }, ngContentSelectors: _c1$3, decls: 11, vars: 1, consts: [["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-cell", ""]], template: function WrapperTable_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵprojectionDef();
                 i0.ɵɵelementStart(0, "table", 0);
@@ -3351,7 +3351,7 @@
             } }, directives: [i1$1.MatTable, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderCell, i4.MatSortHeader, i1$1.MatCell], styles: ["table[_ngcontent-%COMP%] {\n      width: 100%;\n    }"] });
         return WrapperTable;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(WrapperTable, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(WrapperTable, [{
             type: i0.Component,
             args: [{
                     selector: 'wrapper-table',
@@ -3374,7 +3374,7 @@
                 type: i0.Input
             }], dataSource: [{
                 type: i0.Input
-            }] });
+            }] }); })();
 
     var EXAMPLES = [
         TableBasicExample, TableBasicFlexExample,
@@ -3425,7 +3425,7 @@
                 ]] });
         return TableExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(TableExamplesModule, { declarations: [TableBasicExample, TableBasicFlexExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(TableExamplesModule, { declarations: [TableBasicExample, TableBasicFlexExample,
             TableDynamicColumnsExample, TableExpandableRowsExample,
             TableFilteringExample, TableFooterRowExample,
             TableHttpExample, TableMultipleHeaderFooterExample,
@@ -3454,8 +3454,8 @@
             TableStickyComplexExample, TableStickyComplexFlexExample,
             TableStickyFooterExample, TableStickyHeaderExample,
             TableTextColumnExample, TableTextColumnAdvancedExample,
-            TableWrappedExample, WrapperTable] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TableExamplesModule, [{
+            TableWrappedExample, WrapperTable] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -3473,7 +3473,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.TableBasicExample = TableBasicExample;
     exports.TableBasicFlexExample = TableBasicFlexExample;

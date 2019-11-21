@@ -59,14 +59,14 @@
             } }, directives: [i1$1.MatFormField, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i2.MatSelectTrigger, i4.NgIf, i4.NgForOf, i4$1.MatOption], styles: [".example-additional-selection[_ngcontent-%COMP%] {\n  opacity: 0.75;\n  font-size: 0.75em;\n}"] });
         return SelectCustomTriggerExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectCustomTriggerExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectCustomTriggerExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-custom-trigger-example',
                     templateUrl: 'select-custom-trigger-example.html',
                     styleUrls: ['select-custom-trigger-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /** @title Disabled select */
     var SelectDisabledExample = /** @class */ (function () {
@@ -139,14 +139,14 @@
             } }, directives: [i1.MatCheckbox, i3.NgControlStatus, i3.FormControlDirective, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], styles: [""] });
         return SelectDisabledExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectDisabledExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectDisabledExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-disabled-example',
                     templateUrl: 'select-disabled-example.html',
                     styleUrls: ['select-disabled-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function SelectErrorStateMatcherExample_mat_error_14_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-error");
@@ -263,14 +263,14 @@
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i1$1.MatHint, i4.NgIf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i1$1.MatError], styles: [""] });
         return SelectErrorStateMatcherExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-error-state-matcher-example',
                     templateUrl: 'select-error-state-matcher-example.html',
                     styleUrls: ['select-error-state-matcher-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function SelectFormExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 4);
@@ -366,14 +366,14 @@
             } }, directives: [i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.NgForm, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.NgModel, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOption], styles: [""] });
         return SelectFormExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectFormExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectFormExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-form-example',
                     templateUrl: 'select-form-example.html',
                     styleUrls: ['select-form-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function SelectHintErrorExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 8);
@@ -474,14 +474,14 @@
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.RequiredValidator, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i4.NgIf, i1$1.MatHint, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i1$1.MatError], styles: [""] });
         return SelectHintErrorExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectHintErrorExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectHintErrorExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-hint-error-example',
                     templateUrl: 'select-hint-error-example.html',
                     styleUrls: ['select-hint-error-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function SelectMultipleExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 2);
@@ -524,14 +524,14 @@
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i4$1.MatOption], styles: [""] });
         return SelectMultipleExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectMultipleExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectMultipleExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-multiple-example',
                     templateUrl: 'select-multiple-example.html',
                     styleUrls: ['select-multiple-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /** @title Select with no option ripple */
     var SelectNoRippleExample = /** @class */ (function () {
@@ -565,14 +565,14 @@
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption], styles: [""] });
         return SelectNoRippleExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectNoRippleExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectNoRippleExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-no-ripple-example',
                     templateUrl: 'select-no-ripple-example.html',
                     styleUrls: ['select-no-ripple-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function SelectOptgroupExample_mat_optgroup_8_mat_option_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 11);
@@ -690,14 +690,14 @@
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOptgroup], styles: [""] });
         return SelectOptgroupExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectOptgroupExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectOptgroupExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-optgroup-example',
                     templateUrl: 'select-optgroup-example.html',
                     styleUrls: ['select-optgroup-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function SelectOverviewExample_mat_option_6_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 6);
@@ -768,14 +768,14 @@
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x, i4$1.MatOption], styles: [""] });
         return SelectOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-overview-example',
                     templateUrl: 'select-overview-example.html',
                     styleUrls: ['select-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Select with custom panel styling
@@ -819,7 +819,7 @@
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption], styles: [".example-panel-red.mat-select-panel {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-panel-green.mat-select-panel {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-panel-blue.mat-select-panel {\n  background: rgba(0, 0, 255, 0.5);\n}\n"], encapsulation: 2 });
         return SelectPanelClassExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectPanelClassExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectPanelClassExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-panel-class-example',
@@ -829,7 +829,7 @@
                     // component style to apply to the select panel.
                     encapsulation: i0.ViewEncapsulation.None,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function SelectResetExample_mat_option_8_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 7);
@@ -906,14 +906,14 @@
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], styles: [""] });
         return SelectResetExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectResetExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectResetExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-reset-example',
                     templateUrl: 'select-reset-example.html',
                     styleUrls: ['select-reset-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /** @title Select with 2-way value binding */
     var SelectValueBindingExample = /** @class */ (function () {
@@ -960,14 +960,14 @@
             } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption], styles: [""] });
         return SelectValueBindingExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectValueBindingExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectValueBindingExample, [{
             type: i0.Component,
             args: [{
                     selector: 'select-value-binding-example',
                     templateUrl: 'select-value-binding-example.html',
                     styleUrls: ['select-value-binding-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         SelectCustomTriggerExample,
@@ -1011,7 +1011,7 @@
                 ]] });
         return SelectExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(SelectExamplesModule, { declarations: [SelectCustomTriggerExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SelectExamplesModule, { declarations: [SelectCustomTriggerExample,
             SelectDisabledExample,
             SelectErrorStateMatcherExample,
             SelectFormExample,
@@ -1038,8 +1038,8 @@
             SelectOverviewExample,
             SelectPanelClassExample,
             SelectResetExample,
-            SelectValueBindingExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SelectExamplesModule, [{
+            SelectValueBindingExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -1053,7 +1053,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.SelectCustomTriggerExample = SelectCustomTriggerExample;
     exports.SelectDisabledExample = SelectDisabledExample;

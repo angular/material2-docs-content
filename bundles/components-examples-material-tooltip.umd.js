@@ -51,14 +51,14 @@
             } }, directives: [i1$1.MatFormField, i2$1.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i1.MatButton, i2$2.MatTooltip, i7.MatOption], styles: [".example-button[_ngcontent-%COMP%] {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container[_ngcontent-%COMP%] {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}"] });
         return TooltipAutoHideExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TooltipAutoHideExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipAutoHideExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tooltip-auto-hide-example',
                     templateUrl: 'tooltip-auto-hide-example.html',
                     styleUrls: ['tooltip-auto-hide-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Tooltip that can have a custom class applied.
@@ -84,7 +84,7 @@
             } }, directives: [i1.MatButton, i2$2.MatTooltip], styles: [".example-button {\n  margin-top: 16px;\n}\n\n.example-tooltip-red {\n  background: #b71c1c;\n}\n"], encapsulation: 2 });
         return TooltipCustomClassExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TooltipCustomClassExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipCustomClassExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tooltip-custom-class-example',
@@ -94,7 +94,7 @@
                     // `tooltip-custom-class-example.css` will not be scoped to this component's view.
                     encapsulation: i0.ViewEncapsulation.None,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Tooltip with a show and hide delay
@@ -132,14 +132,14 @@
             } }, directives: [i1$1.MatFormField, i2.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i1.MatButton, i2$2.MatTooltip], styles: [".example-user-input[_ngcontent-%COMP%] {\n  display: block;\n  width: 150px;\n}"] });
         return TooltipDelayExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TooltipDelayExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipDelayExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tooltip-delay-example',
                     templateUrl: 'tooltip-delay-example.html',
                     styleUrls: ['tooltip-delay-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Tooltip that can be disabled
@@ -170,14 +170,14 @@
             } }, directives: [i1.MatButton, i2$2.MatTooltip, i3$1.MatCheckbox, i3.NgControlStatus, i3.FormControlDirective], styles: [".example-disabled-checkbox[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
         return TooltipDisabledExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TooltipDisabledExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipDisabledExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tooltip-disabled-example',
                     templateUrl: 'tooltip-disabled-example.html',
                     styleUrls: ['tooltip-disabled-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Tooltip that can be manually shown/hidden.
@@ -218,14 +218,14 @@
             } }, directives: [i1.MatButton, i2$2.MatTooltip], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}"] });
         return TooltipManualExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TooltipManualExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipManualExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tooltip-manual-example',
                     templateUrl: 'tooltip-manual-example.html',
                     styleUrls: ['tooltip-manual-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Tooltip with a changing message
@@ -257,14 +257,14 @@
             } }, directives: [i1$1.MatFormField, i2.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i1.MatButton, i2$2.MatTooltip], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
         return TooltipMessageExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TooltipMessageExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipMessageExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tooltip-message-example',
                     templateUrl: 'tooltip-message-example.html',
                     styleUrls: ['tooltip-message-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /** Custom options the configure the tooltip's default show/hide delays. */
     var myCustomTooltipDefaults = {
@@ -298,7 +298,7 @@
             } }, directives: [i1.MatButton, i2$2.MatTooltip], styles: [""] });
         return TooltipModifiedDefaultsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TooltipModifiedDefaultsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipModifiedDefaultsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tooltip-modified-defaults-example',
@@ -308,7 +308,7 @@
                         { provide: i2$2.MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
                     ],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Basic tooltip
@@ -331,14 +331,14 @@
             } }, directives: [i1.MatButton, i2$2.MatTooltip], styles: [""] });
         return TooltipOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TooltipOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tooltip-overview-example',
                     templateUrl: 'tooltip-overview-example.html',
                     styleUrls: ['tooltip-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TooltipPositionExample_mat_option_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 4);
@@ -385,14 +385,14 @@
             } }, directives: [i1$1.MatFormField, i2$1.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i1.MatButton, i2$2.MatTooltip, i7.MatOption], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
         return TooltipPositionExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TooltipPositionExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipPositionExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tooltip-position-example',
                     templateUrl: 'tooltip-position-example.html',
                     styleUrls: ['tooltip-position-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         TooltipAutoHideExample,
@@ -435,7 +435,7 @@
                 ]] });
         return TooltipExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(TooltipExamplesModule, { declarations: [TooltipAutoHideExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(TooltipExamplesModule, { declarations: [TooltipAutoHideExample,
             TooltipCustomClassExample,
             TooltipDelayExample,
             TooltipDisabledExample,
@@ -457,8 +457,8 @@
             TooltipMessageExample,
             TooltipModifiedDefaultsExample,
             TooltipOverviewExample,
-            TooltipPositionExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TooltipExamplesModule, [{
+            TooltipPositionExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -473,7 +473,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.TooltipAutoHideExample = TooltipAutoHideExample;
     exports.TooltipCustomClassExample = TooltipCustomClassExample;

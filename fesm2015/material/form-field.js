@@ -88,14 +88,14 @@ FormFieldAppearanceExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatFormField, MatLabel, MatInput, MatIcon, MatSuffix, MatHint], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(FormFieldAppearanceExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldAppearanceExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-appearance-example',
                 templateUrl: 'form-field-appearance-example.html',
                 styleUrls: ['form-field-appearance-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -125,14 +125,14 @@ FormFieldCustomControlExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: function () { return [MatFormField, MyTelInput, MatIcon, MatSuffix, MatHint]; }, styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(FormFieldCustomControlExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldCustomControlExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-custom-control-example',
                 templateUrl: 'form-field-custom-control-example.html',
                 styleUrls: ['form-field-custom-control-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 /**
  * Data structure for holding telephone number.
  */
@@ -387,7 +387,7 @@ MyTelInput.propDecorators = {
     } if (rf & 2) {
         ɵɵproperty("formGroup", ctx.parts);
     } }, directives: [NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName], styles: [".example-tel-input-container[_ngcontent-%COMP%] {\n  display: flex;\n}\n\n.example-tel-input-element[_ngcontent-%COMP%] {\n  border: none;\n  background: none;\n  padding: 0;\n  outline: none;\n  font: inherit;\n  text-align: center;\n}\n\n.example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 0;\n  transition: opacity 200ms;\n}\n\n.example-floating[_nghost-%COMP%]   .example-tel-input-spacer[_ngcontent-%COMP%] {\n  opacity: 1;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(MyTelInput, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(MyTelInput, [{
         type: Component,
         args: [{
                 selector: 'example-tel-input',
@@ -412,7 +412,7 @@ MyTelInput.propDecorators = {
             type: Input
         }], value: [{
             type: Input
-        }] });
+        }] }); })();
 if (false) {
     /** @type {?} */
     MyTelInput.nextId;
@@ -517,14 +517,14 @@ FormFieldErrorExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.email.invalid);
     } }, directives: [MatFormField, MatInput, DefaultValueAccessor, RequiredValidator, NgControlStatus, FormControlDirective, NgIf, MatError], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(FormFieldErrorExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldErrorExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-error-example',
                 templateUrl: 'form-field-error-example.html',
                 styleUrls: ['form-field-error-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     FormFieldErrorExample.prototype.email;
@@ -571,14 +571,14 @@ FormFieldHintExample.decorators = [
         ɵɵadvance(5);
         ɵɵtextInterpolate1("", (_r1.value == null ? null : _r1.value.length) || 0, "/10");
     } }, directives: [MatFormField, MatInput, MatHint, MatSelect, MatOption], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(FormFieldHintExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldHintExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-hint-example',
                 templateUrl: 'form-field-hint-example.html',
                 styleUrls: ['form-field-hint-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -674,14 +674,14 @@ FormFieldLabelExample.ctorParameters = () => [
         ɵɵadvance(4);
         ɵɵproperty("hideRequiredMarker", ctx.options.value.hideRequired)("floatLabel", ctx.options.value.floatLabel);
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatCheckbox, NgControlStatus, FormControlName, MatRadioGroup, MatRadioButton, MatFormField, MatInput, MatLabel, MatSelect, MatOption, MatIcon], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.example-container[_ngcontent-%COMP%]   form[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  margin: 5px 0;\n}\n\n.example-container[_ngcontent-%COMP%]   .mat-radio-button[_ngcontent-%COMP%] {\n  margin: 0 12px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(FormFieldLabelExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldLabelExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-label-example',
                 templateUrl: 'form-field-label-example.html',
                 styleUrls: ['form-field-label-example.css'],
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null);
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
 if (false) {
     /** @type {?} */
     FormFieldLabelExample.prototype.options;
@@ -721,14 +721,14 @@ FormFieldOverviewExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatFormField, MatInput, MatSelect, MatOption], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(FormFieldOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-overview-example',
                 templateUrl: 'form-field-overview-example.html',
                 styleUrls: ['form-field-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -779,14 +779,14 @@ FormFieldPrefixSuffixExample.decorators = [
         ɵɵadvance(2);
         ɵɵtextInterpolate(ctx.hide ? "visibility_off" : "visibility");
     } }, directives: [MatFormField, MatInput, MatButton, MatSuffix, MatIcon, MatPrefix], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.example-right-align[_ngcontent-%COMP%] {\n  text-align: right;\n}\n\ninput.example-right-align[_ngcontent-%COMP%]::-webkit-outer-spin-button, input.example-right-align[_ngcontent-%COMP%]::-webkit-inner-spin-button {\n  display: none;\n}\n\ninput.example-right-align[_ngcontent-%COMP%] {\n  -moz-appearance: textfield;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(FormFieldPrefixSuffixExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldPrefixSuffixExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-prefix-suffix-example',
                 templateUrl: 'form-field-prefix-suffix-example.html',
                 styleUrls: ['form-field-prefix-suffix-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     FormFieldPrefixSuffixExample.prototype.hide;
@@ -865,14 +865,14 @@ FormFieldThemingExample.ctorParameters = () => [
         ɵɵadvance(2);
         ɵɵproperty("ngIf", currVal_4);
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatSelect, NgControlStatus, FormControlName, MatOption, MatInput, NumberValueAccessor, DefaultValueAccessor, NgIf, MatError], styles: [".example-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n}\n\n.example-container[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(FormFieldThemingExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldThemingExample, [{
         type: Component,
         args: [{
                 selector: 'form-field-theming-example',
                 templateUrl: 'form-field-theming-example.html',
                 styleUrls: ['form-field-theming-example.css'],
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null);
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
 if (false) {
     /** @type {?} */
     FormFieldThemingExample.prototype.options;
@@ -924,7 +924,7 @@ FormFieldExamplesModule.decorators = [
             MatSelectModule,
             ReactiveFormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(FormFieldExamplesModule, { declarations: [FormFieldAppearanceExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(FormFieldExamplesModule, { declarations: [FormFieldAppearanceExample,
         FormFieldCustomControlExample,
         FormFieldErrorExample,
         FormFieldHintExample,
@@ -947,8 +947,8 @@ FormFieldExamplesModule.decorators = [
         FormFieldLabelExample,
         FormFieldOverviewExample,
         FormFieldPrefixSuffixExample,
-        FormFieldThemingExample] });
-/*@__PURE__*/ ɵsetClassMetadata(FormFieldExamplesModule, [{
+        FormFieldThemingExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FormFieldExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -965,7 +965,7 @@ FormFieldExamplesModule.decorators = [
                 declarations: [...EXAMPLES, MyTelInput],
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldExamplesModule, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, MyTelInput };
 //# sourceMappingURL=form-field.js.map

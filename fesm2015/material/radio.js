@@ -52,14 +52,14 @@ RadioNgModelExample.decorators = [
         ɵɵadvance(2);
         ɵɵtextInterpolate1("Your favorite season is: ", ctx.favoriteSeason, "");
     } }, directives: [MatRadioGroup, NgControlStatus, NgModel, NgForOf, MatRadioButton], styles: [".example-radio-group[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  margin: 15px 0;\n}\n\n.example-radio-button[_ngcontent-%COMP%] {\n  margin: 5px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(RadioNgModelExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(RadioNgModelExample, [{
         type: Component,
         args: [{
                 selector: 'radio-ng-model-example',
                 templateUrl: 'radio-ng-model-example.html',
                 styleUrls: ['radio-ng-model-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     RadioNgModelExample.prototype.favoriteSeason;
@@ -94,14 +94,14 @@ RadioOverviewExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatRadioGroup, MatRadioButton], styles: [".mat-radio-button[_ngcontent-%COMP%]    ~ .mat-radio-button[_ngcontent-%COMP%] {\n  margin-left: 16px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(RadioOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(RadioOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'radio-overview-example',
                 templateUrl: 'radio-overview-example.html',
                 styleUrls: ['radio-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -131,12 +131,12 @@ RadioExamplesModule.decorators = [
             MatRadioModule,
             FormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(RadioExamplesModule, { declarations: [RadioNgModelExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(RadioExamplesModule, { declarations: [RadioNgModelExample,
         RadioOverviewExample], imports: [CommonModule,
         MatRadioModule,
         FormsModule], exports: [RadioNgModelExample,
-        RadioOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(RadioExamplesModule, [{
+        RadioOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(RadioExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -147,7 +147,7 @@ RadioExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { RadioExamplesModule, RadioNgModelExample, RadioOverviewExample };
 //# sourceMappingURL=radio.js.map

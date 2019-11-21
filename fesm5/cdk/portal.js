@@ -36,7 +36,7 @@ var CdkPortalOverviewExample = /** @class */ (function () {
             ɵɵviewQuery(_c0, true);
         } if (rf & 2) {
             var _t;
-            ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.templatePortalContent = _t.first);
+            ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.templatePortalContent = _t.first);
         } }, decls: 10, vars: 1, consts: [[1, "example-portal-outlet"], [3, "cdkPortalOutlet"], ["templatePortalContent", ""], [3, "click"]], template: function CdkPortalOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h2");
             ɵɵtext(1, "The portal outlet is below:");
@@ -59,7 +59,7 @@ var CdkPortalOverviewExample = /** @class */ (function () {
         } }, directives: [CdkPortalOutlet], styles: [".example-portal-outlet[_ngcontent-%COMP%] {\n  margin-bottom: 10px;\n  padding: 10px;\n  border: 1px dashed black;\n  width: 250px;\n  height: 250px;\n}"] });
     return CdkPortalOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(CdkPortalOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkPortalOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-portal-overview-example',
@@ -69,7 +69,7 @@ var CdkPortalOverviewExample = /** @class */ (function () {
     }], function () { return [{ type: ViewContainerRef }]; }, { templatePortalContent: [{
             type: ViewChild,
             args: ['templatePortalContent']
-        }] });
+        }] }); })();
 var ComponentPortalExample = /** @class */ (function () {
     function ComponentPortalExample() {
     }
@@ -85,13 +85,13 @@ var ComponentPortalExample = /** @class */ (function () {
         } }, encapsulation: 2 });
     return ComponentPortalExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(ComponentPortalExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ComponentPortalExample, [{
         type: Component,
         args: [{
                 selector: 'component-portal-example',
                 template: 'Hello, this is a component portal'
             }]
-    }], null, null);
+    }], null, null); })();
 
 var EXAMPLES = [
     CdkPortalOverviewExample,
@@ -116,10 +116,10 @@ var CdkPortalExamplesModule = /** @class */ (function () {
             ]] });
     return CdkPortalExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(CdkPortalExamplesModule, { declarations: [CdkPortalOverviewExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkPortalExamplesModule, { declarations: [CdkPortalOverviewExample,
         ComponentPortalExample], imports: [PortalModule], exports: [CdkPortalOverviewExample,
-        ComponentPortalExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkPortalExamplesModule, [{
+        ComponentPortalExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkPortalExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -129,7 +129,7 @@ var CdkPortalExamplesModule = /** @class */ (function () {
                 exports: EXAMPLES,
                 entryComponents: [ComponentPortalExample]
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CdkPortalExamplesModule, CdkPortalOverviewExample, ComponentPortalExample };
 //# sourceMappingURL=portal.js.map

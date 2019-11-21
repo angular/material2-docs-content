@@ -38,14 +38,14 @@ ElevationOverviewExample.decorators = [
         ɵɵclassProp("mat-elevation-z2", !ctx.isActive);
         ɵɵclassProp("mat-elevation-z8", ctx.isActive);
     } }, directives: [MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  padding: 16px;\n  margin-bottom: 16px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(ElevationOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ElevationOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'elevation-overview-example',
                 styleUrls: ['elevation-overview-example.css'],
                 templateUrl: 'elevation-overview-example.html',
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     ElevationOverviewExample.prototype.isActive;
@@ -112,14 +112,14 @@ RippleOverviewExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("matRippleCentered", ctx.centered)("matRippleDisabled", ctx.disabled)("matRippleUnbounded", ctx.unbounded)("matRippleRadius", ctx.radius)("matRippleColor", ctx.color);
     } }, directives: [MatCheckbox, NgControlStatus, NgModel, MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, MatRipple], styles: [".example-ripple-container[_ngcontent-%COMP%] {\n  cursor: pointer;\n  text-align: center;\n\n  width: 300px;\n  height: 300px;\n  line-height: 300px;\n\n  user-select: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n}\n\n\n.example-ripple-checkbox[_ngcontent-%COMP%] {\n  margin: 6px 12px 6px 0;\n}\n\n.example-ripple-form-field[_ngcontent-%COMP%] {\n  margin: 0 12px 0 0;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(RippleOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(RippleOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'ripple-overview-example',
                 templateUrl: 'ripple-overview-example.html',
                 styleUrls: ['ripple-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     RippleOverviewExample.prototype.centered;
@@ -165,14 +165,14 @@ CoreExamplesModule.decorators = [
             MatRippleModule,
             FormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(CoreExamplesModule, { declarations: [ElevationOverviewExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CoreExamplesModule, { declarations: [ElevationOverviewExample,
         RippleOverviewExample], imports: [MatButtonModule,
         MatCheckboxModule,
         MatInputModule,
         MatRippleModule,
         FormsModule], exports: [ElevationOverviewExample,
-        RippleOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CoreExamplesModule, [{
+        RippleOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CoreExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -185,7 +185,7 @@ CoreExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CoreExamplesModule, ElevationOverviewExample, RippleOverviewExample };
 //# sourceMappingURL=core.js.map

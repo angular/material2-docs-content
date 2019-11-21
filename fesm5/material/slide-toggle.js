@@ -84,14 +84,14 @@ var SlideToggleConfigurableExample = /** @class */ (function () {
         } }, directives: [MatCard, MatCardContent, MatRadioGroup, NgControlStatus, NgModel, MatRadioButton, MatCheckbox, MatSlideToggle], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}"] });
     return SlideToggleConfigurableExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(SlideToggleConfigurableExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SlideToggleConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'slide-toggle-configurable-example',
                 templateUrl: 'slide-toggle-configurable-example.html',
                 styleUrls: ['slide-toggle-configurable-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Slide-toggle with forms
@@ -172,14 +172,14 @@ var SlideToggleFormsExample = /** @class */ (function () {
         } }, directives: [MatSlideToggle, NgControlStatus, NgModel, NgControlStatusGroup, NgForm, MatSlideToggleRequiredValidator, RequiredValidator, MatButton, FormGroupDirective, FormControlName], styles: [".example-form[_ngcontent-%COMP%]   mat-slide-toggle[_ngcontent-%COMP%] {\n  margin: 8px 0;\n  display: block;\n}"] });
     return SlideToggleFormsExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(SlideToggleFormsExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SlideToggleFormsExample, [{
         type: Component,
         args: [{
                 selector: 'slide-toggle-forms-example',
                 templateUrl: './slide-toggle-forms-example.html',
                 styleUrls: ['./slide-toggle-forms-example.css'],
             }]
-    }], function () { return [{ type: FormBuilder }]; }, null);
+    }], function () { return [{ type: FormBuilder }]; }, null); })();
 
 /**
  * @title Basic slide-toggles
@@ -202,14 +202,14 @@ var SlideToggleOverviewExample = /** @class */ (function () {
         } }, directives: [MatSlideToggle], styles: [""] });
     return SlideToggleOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(SlideToggleOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SlideToggleOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'slide-toggle-overview-example',
                 templateUrl: 'slide-toggle-overview-example.html',
                 styleUrls: ['slide-toggle-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 var EXAMPLES = [
     SlideToggleConfigurableExample,
@@ -246,7 +246,7 @@ var SlideToggleExamplesModule = /** @class */ (function () {
             ]] });
     return SlideToggleExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(SlideToggleExamplesModule, { declarations: [SlideToggleConfigurableExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SlideToggleExamplesModule, { declarations: [SlideToggleConfigurableExample,
         SlideToggleFormsExample,
         SlideToggleOverviewExample], imports: [FormsModule,
         MatButtonModule,
@@ -256,8 +256,8 @@ var SlideToggleExamplesModule = /** @class */ (function () {
         MatSlideToggleModule,
         ReactiveFormsModule], exports: [SlideToggleConfigurableExample,
         SlideToggleFormsExample,
-        SlideToggleOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(SlideToggleExamplesModule, [{
+        SlideToggleOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SlideToggleExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -272,7 +272,7 @@ var SlideToggleExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { SlideToggleConfigurableExample, SlideToggleExamplesModule, SlideToggleFormsExample, SlideToggleOverviewExample };
 //# sourceMappingURL=slide-toggle.js.map

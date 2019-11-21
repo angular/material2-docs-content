@@ -45,14 +45,14 @@ DatepickerApiExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("matDatepicker", _r0);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepicker, MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerApiExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerApiExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-api-example',
                 templateUrl: 'datepicker-api-example.html',
                 styleUrls: ['datepicker-api-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -100,14 +100,14 @@ DatepickerColorExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("for", _r3);
     } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerColorExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerColorExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-color-example',
                 templateUrl: 'datepicker-color-example.html',
                 styleUrls: ['datepicker-color-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -147,14 +147,14 @@ DatepickerCustomHeaderExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("calendarHeaderComponent", ctx.exampleHeader);
     } }, directives: [MatFormField, MatLabel, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerCustomHeaderExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerCustomHeaderExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-custom-header-example',
                 templateUrl: 'datepicker-custom-header-example.html',
                 changeDetection: ChangeDetectionStrategy.OnPush,
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     DatepickerCustomHeaderExample.prototype.exampleHeader;
@@ -307,7 +307,7 @@ ExampleHeader.ctorParameters = () => [
         ɵɵadvance(10);
         ɵɵtextInterpolate(ctx.periodLabel);
     } }, directives: [MatButton, MatIcon], styles: [".example-header[_ngcontent-%COMP%] {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label[_ngcontent-%COMP%] {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow[_ngcontent-%COMP%]   .mat-icon[_ngcontent-%COMP%] {\n      margin: -22%;\n    }"], changeDetection: 0 });
-/*@__PURE__*/ ɵsetClassMetadata(ExampleHeader, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ExampleHeader, [{
         type: Component,
         args: [{
                 selector: 'example-header',
@@ -353,7 +353,7 @@ ExampleHeader.ctorParameters = () => [
     }], function () { return [{ type: MatCalendar }, { type: DateAdapter }, { type: undefined, decorators: [{
                 type: Inject,
                 args: [MAT_DATE_FORMATS]
-            }] }, { type: ChangeDetectorRef }]; }, null);
+            }] }, { type: ChangeDetectorRef }]; }, null); })();
 if (false) {
     /**
      * @type {?}
@@ -411,14 +411,14 @@ DatepickerCustomIconExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("for", _r5);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatIcon, MatDatepickerToggleIcon, MatDatepicker], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerCustomIconExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerCustomIconExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-custom-icon-example',
                 templateUrl: 'datepicker-custom-icon-example.html',
                 styleUrls: ['datepicker-custom-icon-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -465,7 +465,7 @@ DatepickerDateClassExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("dateClass", ctx.dateClass);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [".example-custom-date-class {\n  background: orange;\n  border-radius: 100%;\n}\n"], encapsulation: 2 });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerDateClassExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerDateClassExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-date-class-example',
@@ -473,7 +473,7 @@ DatepickerDateClassExample.decorators = [
                 styleUrls: ['datepicker-date-class-example.css'],
                 encapsulation: ViewEncapsulation.None,
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     DatepickerDateClassExample.prototype.dateClass;
@@ -535,14 +535,14 @@ DatepickerDisabledExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("for", _r9);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerDisabledExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerDisabledExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-disabled-example',
                 templateUrl: 'datepicker-disabled-example.html',
                 styleUrls: ['datepicker-disabled-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -602,14 +602,14 @@ DatepickerEventsExample.decorators = [
         ɵɵadvance(4);
         ɵɵproperty("ngForOf", ctx.events);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker, NgForOf], styles: [".example-events[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerEventsExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerEventsExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-events-example',
                 templateUrl: 'datepicker-events-example.html',
                 styleUrls: ['datepicker-events-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     DatepickerEventsExample.prototype.events;
@@ -657,14 +657,14 @@ DatepickerFilterExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("for", _r13);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerFilterExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerFilterExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-filter-example',
                 templateUrl: 'datepicker-filter-example.html',
                 styleUrls: ['datepicker-filter-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     DatepickerFilterExample.prototype.myFilter;
@@ -740,7 +740,7 @@ DatepickerFormatsExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("for", _r14);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerFormatsExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerFormatsExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-formats-example',
@@ -758,7 +758,7 @@ DatepickerFormatsExample.decorators = [
                     { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
                 ],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     DatepickerFormatsExample.prototype.date;
@@ -841,7 +841,7 @@ DatepickerLocaleExample.ctorParameters = () => [
         ɵɵadvance(1);
         ɵɵproperty("for", _r15);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker, MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerLocaleExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerLocaleExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-locale-example',
@@ -862,7 +862,7 @@ DatepickerLocaleExample.ctorParameters = () => [
                     { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
                 ],
             }]
-    }], function () { return [{ type: DateAdapter }]; }, null);
+    }], function () { return [{ type: DateAdapter }]; }, null); })();
 if (false) {
     /**
      * @type {?}
@@ -910,14 +910,14 @@ DatepickerMinMaxExample.ctorParameters = () => [];
         ɵɵadvance(1);
         ɵɵproperty("for", _r16);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerMinMaxExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerMinMaxExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-min-max-example',
                 templateUrl: 'datepicker-min-max-example.html',
                 styleUrls: ['datepicker-min-max-example.css'],
             }]
-    }], function () { return []; }, null);
+    }], function () { return []; }, null); })();
 if (false) {
     /** @type {?} */
     DatepickerMinMaxExample.prototype.minDate;
@@ -974,7 +974,7 @@ DatepickerMomentExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("for", _r17);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerMomentExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerMomentExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-moment-example',
@@ -988,7 +988,7 @@ DatepickerMomentExample.decorators = [
                     { provide: MAT_DATE_FORMATS, useValue: MAT_MOMENT_DATE_FORMATS },
                 ],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     DatepickerMomentExample.prototype.date;
@@ -1024,14 +1024,14 @@ DatepickerOverviewExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("for", _r18);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-overview-example',
                 templateUrl: 'datepicker-overview-example.html',
                 styleUrls: ['datepicker-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -1068,14 +1068,14 @@ DatepickerStartViewExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("startAt", ctx.startDate);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerStartViewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerStartViewExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-start-view-example',
                 templateUrl: 'datepicker-start-view-example.html',
                 styleUrls: ['datepicker-start-view-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     DatepickerStartViewExample.prototype.startDate;
@@ -1111,14 +1111,14 @@ DatepickerTouchExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("for", _r20);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerTouchExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerTouchExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-touch-example',
                 templateUrl: 'datepicker-touch-example.html',
                 styleUrls: ['datepicker-touch-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -1174,14 +1174,14 @@ DatepickerValueExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("for", _r23);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerValueExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerValueExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-value-example',
                 templateUrl: 'datepicker-value-example.html',
                 styleUrls: ['datepicker-value-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     DatepickerValueExample.prototype.date;
@@ -1285,7 +1285,7 @@ DatepickerViewsSelectionExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("for", _r24);
     } }, directives: [MatFormField, MatInput, MatDatepickerInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatDatepickerToggle, MatSuffix, MatDatepicker], styles: [".example-month-picker[_ngcontent-%COMP%]   .mat-calendar-period-button[_ngcontent-%COMP%] {\n  pointer-events: none;\n}\n\n.example-month-picker[_ngcontent-%COMP%]   .mat-calendar-arrow[_ngcontent-%COMP%] {\n  display: none;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerViewsSelectionExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerViewsSelectionExample, [{
         type: Component,
         args: [{
                 selector: 'datepicker-views-selection-example',
@@ -1303,7 +1303,7 @@ DatepickerViewsSelectionExample.decorators = [
                     { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS$1 },
                 ],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     DatepickerViewsSelectionExample.prototype.date;
@@ -1361,7 +1361,7 @@ DatepickerExamplesModule.decorators = [
             MatNativeDateModule,
             ReactiveFormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(DatepickerExamplesModule, { declarations: [DatepickerApiExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DatepickerExamplesModule, { declarations: [DatepickerApiExample,
         DatepickerColorExample,
         DatepickerCustomHeaderExample,
         DatepickerCustomIconExample,
@@ -1401,8 +1401,8 @@ DatepickerExamplesModule.decorators = [
         DatepickerTouchExample,
         DatepickerValueExample,
         DatepickerViewsSelectionExample,
-        ExampleHeader] });
-/*@__PURE__*/ ɵsetClassMetadata(DatepickerExamplesModule, [{
+        ExampleHeader] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -1417,7 +1417,7 @@ DatepickerExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerExamplesModule, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader };
 //# sourceMappingURL=datepicker.js.map

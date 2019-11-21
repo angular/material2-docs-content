@@ -56,14 +56,14 @@
             } }, directives: [i1.MatButton, i2.MatMenuTrigger, i3.MatIcon, i2._MatMenu, i2.MatMenuItem], styles: [""] });
         return MenuIconsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(MenuIconsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuIconsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'menu-icons-example',
                     templateUrl: 'menu-icons-example.html',
                     styleUrls: ['menu-icons-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Basic menu
@@ -97,14 +97,14 @@
             } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], styles: [""] });
         return MenuOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(MenuOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'menu-overview-example',
                     templateUrl: 'menu-overview-example.html',
                     styleUrls: ['menu-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Menu positioning
@@ -180,14 +180,14 @@
             } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], styles: [""] });
         return MenuPositionExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(MenuPositionExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuPositionExample, [{
             type: i0.Component,
             args: [{
                     selector: 'menu-position-example',
                     templateUrl: 'menu-position-example.html',
                     styleUrls: ['menu-position-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Nested menu
@@ -324,14 +324,14 @@
             } }, directives: [i1.MatButton, i2.MatMenuTrigger, i2._MatMenu, i2.MatMenuItem], styles: [""] });
         return NestedMenuExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(NestedMenuExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(NestedMenuExample, [{
             type: i0.Component,
             args: [{
                     selector: 'nested-menu-example',
                     templateUrl: 'nested-menu-example.html',
                     styleUrls: ['nested-menu-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         MenuIconsExample,
@@ -361,7 +361,7 @@
                 ]] });
         return MenuExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(MenuExamplesModule, { declarations: [MenuIconsExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(MenuExamplesModule, { declarations: [MenuIconsExample,
             MenuOverviewExample,
             MenuPositionExample,
             NestedMenuExample], imports: [i1.MatButtonModule,
@@ -369,8 +369,8 @@
             i2.MatMenuModule], exports: [MenuIconsExample,
             MenuOverviewExample,
             MenuPositionExample,
-            NestedMenuExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(MenuExamplesModule, [{
+            NestedMenuExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MenuExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -381,7 +381,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.MenuExamplesModule = MenuExamplesModule;
     exports.MenuIconsExample = MenuIconsExample;

@@ -33,14 +33,14 @@
             } }, directives: [i1.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  padding: 16px;\n  margin-bottom: 16px;\n}"] });
         return ElevationOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ElevationOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ElevationOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'elevation-overview-example',
                     styleUrls: ['elevation-overview-example.css'],
                     templateUrl: 'elevation-overview-example.html',
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title MatRipple basic usage
@@ -100,14 +100,14 @@
             } }, directives: [i1$1.MatCheckbox, i2.NgControlStatus, i2.NgModel, i3.MatFormField, i4.MatInput, i2.NumberValueAccessor, i2.DefaultValueAccessor, i5.MatRipple], styles: [".example-ripple-container[_ngcontent-%COMP%] {\n  cursor: pointer;\n  text-align: center;\n\n  width: 300px;\n  height: 300px;\n  line-height: 300px;\n\n  user-select: none;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n\n  -webkit-user-drag: none;\n  -webkit-tap-highlight-color: transparent;\n}\n\n\n.example-ripple-checkbox[_ngcontent-%COMP%] {\n  margin: 6px 12px 6px 0;\n}\n\n.example-ripple-form-field[_ngcontent-%COMP%] {\n  margin: 0 12px 0 0;\n}"] });
         return RippleOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(RippleOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(RippleOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'ripple-overview-example',
                     templateUrl: 'ripple-overview-example.html',
                     styleUrls: ['ripple-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         ElevationOverviewExample,
@@ -139,14 +139,14 @@
                 ]] });
         return CoreExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CoreExamplesModule, { declarations: [ElevationOverviewExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CoreExamplesModule, { declarations: [ElevationOverviewExample,
             RippleOverviewExample], imports: [i1.MatButtonModule,
             i1$1.MatCheckboxModule,
             i4.MatInputModule,
             i5.MatRippleModule,
             i2.FormsModule], exports: [ElevationOverviewExample,
-            RippleOverviewExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CoreExamplesModule, [{
+            RippleOverviewExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CoreExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -159,7 +159,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.CoreExamplesModule = CoreExamplesModule;
     exports.ElevationOverviewExample = ElevationOverviewExample;

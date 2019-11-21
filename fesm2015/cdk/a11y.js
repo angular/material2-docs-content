@@ -80,14 +80,14 @@ FocusMonitorDirectivesExample.ctorParameters = () => [
         ɵɵadvance(4);
         ɵɵtextInterpolate1("Focus Monitored Subtree (", ctx.subtreeOrigin, ")");
     } }, directives: [CdkMonitorFocus], styles: [".example-focus-monitor[_ngcontent-%COMP%] {\n  padding: 20px;\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-mouse-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-keyboard-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-touch-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-program-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(FocusMonitorDirectivesExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FocusMonitorDirectivesExample, [{
         type: Component,
         args: [{
                 selector: 'focus-monitor-directives-example',
                 templateUrl: 'focus-monitor-directives-example.html',
                 styleUrls: ['focus-monitor-directives-example.css']
             }]
-    }], function () { return [{ type: NgZone }, { type: ChangeDetectorRef }]; }, null);
+    }], function () { return [{ type: NgZone }, { type: ChangeDetectorRef }]; }, null); })();
 if (false) {
     /** @type {?} */
     FocusMonitorDirectivesExample.prototype.elementOrigin;
@@ -177,7 +177,7 @@ FocusMonitorFocusViaExample.propDecorators = {
         ɵɵviewQuery(_c0, true);
     } if (rf & 2) {
         var _t;
-        ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.monitoredEl = _t.first);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.monitoredEl = _t.first);
     } }, decls: 24, vars: 1, consts: [[1, "example-focus-monitor"], ["monitored", ""], ["unmonitored", ""], ["value", "mouse"], ["simulatedOrigin", ""], ["value", "keyboard"], ["value", "touch"], ["value", "program"], [3, "click"]], template: function FocusMonitorFocusViaExample_Template(rf, ctx) { if (rf & 1) {
         const _r3 = ɵɵgetCurrentView();
         ɵɵelementStart(0, "div", 0);
@@ -219,7 +219,7 @@ FocusMonitorFocusViaExample.propDecorators = {
         ɵɵadvance(3);
         ɵɵtextInterpolate1("1. Focus Monitored Element (", ctx.origin, ")");
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption], styles: [".example-focus-monitor[_ngcontent-%COMP%] {\n  padding: 20px;\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-mouse-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-keyboard-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-touch-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-program-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 255, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]:focus {\n  box-shadow: 0 0 30px cyan;\n}\n\nmat-form-field[_ngcontent-%COMP%], button[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(FocusMonitorFocusViaExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FocusMonitorFocusViaExample, [{
         type: Component,
         args: [{
                 selector: 'focus-monitor-focus-via-example',
@@ -229,7 +229,7 @@ FocusMonitorFocusViaExample.propDecorators = {
     }], function () { return [{ type: FocusMonitor }, { type: ChangeDetectorRef }, { type: NgZone }]; }, { monitoredEl: [{
             type: ViewChild,
             args: ['monitored']
-        }] });
+        }] }); })();
 if (false) {
     /** @type {?} */
     FocusMonitorFocusViaExample.prototype.monitoredEl;
@@ -338,8 +338,8 @@ FocusMonitorOverviewExample.propDecorators = {
         ɵɵviewQuery(_c1, true);
     } if (rf & 2) {
         var _t;
-        ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.element = _t.first);
-        ɵɵqueryRefresh((_t = ɵɵloadQuery())) && (ctx.subtree = _t.first);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.element = _t.first);
+        ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.subtree = _t.first);
     } }, decls: 13, vars: 2, consts: [[1, "example-focus-monitor"], ["element", ""], ["subtree", ""]], template: function FocusMonitorOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div", 0);
         ɵɵelementStart(1, "button", null, 1);
@@ -365,7 +365,7 @@ FocusMonitorOverviewExample.propDecorators = {
         ɵɵadvance(5);
         ɵɵtextInterpolate1("Focus Monitored Subtree (", ctx.subtreeOrigin, ")");
     } }, styles: [".example-focus-monitor[_ngcontent-%COMP%] {\n  padding: 20px;\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-mouse-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-keyboard-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-touch-focused[_ngcontent-%COMP%] {\n  background: rgba(0, 0, 255, 0.5);\n}\n\n.example-focus-monitor[_ngcontent-%COMP%]   .cdk-program-focused[_ngcontent-%COMP%] {\n  background: rgba(255, 0, 255, 0.5);\n}\n\nbutton[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(FocusMonitorOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(FocusMonitorOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'focus-monitor-overview-example',
@@ -378,7 +378,7 @@ FocusMonitorOverviewExample.propDecorators = {
         }], subtree: [{
             type: ViewChild,
             args: ['subtree']
-        }] });
+        }] }); })();
 if (false) {
     /** @type {?} */
     FocusMonitorOverviewExample.prototype.element;
@@ -432,13 +432,13 @@ CdkA11yExamplesModule.decorators = [
             A11yModule,
             MatSelectModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(CdkA11yExamplesModule, { declarations: [FocusMonitorDirectivesExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkA11yExamplesModule, { declarations: [FocusMonitorDirectivesExample,
         FocusMonitorFocusViaExample,
         FocusMonitorOverviewExample], imports: [A11yModule,
         MatSelectModule], exports: [FocusMonitorDirectivesExample,
         FocusMonitorFocusViaExample,
-        FocusMonitorOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkA11yExamplesModule, [{
+        FocusMonitorOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkA11yExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -448,7 +448,7 @@ CdkA11yExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CdkA11yExamplesModule, FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample };
 //# sourceMappingURL=a11y.js.map

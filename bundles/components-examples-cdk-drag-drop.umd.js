@@ -28,14 +28,14 @@
             } }, directives: [i1.CdkDrag], styles: [".example-box[_ngcontent-%COMP%] {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  margin-right: 25px;\n  position: relative;\n  z-index: 1;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box[_ngcontent-%COMP%]:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}"] });
         return CdkDragDropAxisLockExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropAxisLockExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropAxisLockExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-axis-lock-example',
                     templateUrl: 'cdk-drag-drop-axis-lock-example.html',
                     styleUrls: ['cdk-drag-drop-axis-lock-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Drag&Drop boundary
@@ -60,14 +60,14 @@
             } }, directives: [i1.CdkDrag], styles: [".example-box[_ngcontent-%COMP%] {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  margin-right: 25px;\n  position: relative;\n  z-index: 1;\n  box-sizing: border-box;\n  padding: 10px;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box[_ngcontent-%COMP%]:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.example-boundary[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 400px;\n  max-width: 100%;\n  border: dotted #ccc 2px;\n}"] });
         return CdkDragDropBoundaryExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropBoundaryExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropBoundaryExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-boundary-example',
                     templateUrl: 'cdk-drag-drop-boundary-example.html',
                     styleUrls: ['cdk-drag-drop-boundary-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkDragDropConnectedSortingGroupExample_div_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 4);
@@ -155,14 +155,14 @@
             } }, directives: [i1.CdkDropListGroup, i1.CdkDropList, i2.NgForOf, i1.CdkDrag], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list[_ngcontent-%COMP%] {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
         return CdkDragDropConnectedSortingGroupExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropConnectedSortingGroupExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropConnectedSortingGroupExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-connected-sorting-group-example',
                     templateUrl: 'cdk-drag-drop-connected-sorting-group-example.html',
                     styleUrls: ['cdk-drag-drop-connected-sorting-group-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkDragDropConnectedSortingExample_div_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 5);
@@ -251,14 +251,14 @@
             } }, directives: [i1.CdkDropList, i2.NgForOf, i1.CdkDrag], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list[_ngcontent-%COMP%] {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
         return CdkDragDropConnectedSortingExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropConnectedSortingExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropConnectedSortingExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-connected-sorting-example',
                     templateUrl: 'cdk-drag-drop-connected-sorting-example.html',
                     styleUrls: ['cdk-drag-drop-connected-sorting-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkDragDropCustomPlaceholderExample_div_1_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "div", 4);
@@ -311,14 +311,14 @@
             } }, directives: [i1.CdkDropList, i2.NgForOf, i1.CdkDrag, i1.CdkDragPlaceholder], styles: [".example-list[_ngcontent-%COMP%] {\n  width: 500px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: block;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-custom-placeholder[_ngcontent-%COMP%] {\n  background: #ccc;\n  border: dotted 3px #999;\n  min-height: 60px;\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
         return CdkDragDropCustomPlaceholderExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropCustomPlaceholderExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropCustomPlaceholderExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-custom-placeholder-example',
                     templateUrl: 'cdk-drag-drop-custom-placeholder-example.html',
                     styleUrls: ['cdk-drag-drop-custom-placeholder-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkDragDropCustomPreviewExample_div_1_img_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelement(0, "img", 4);
@@ -400,14 +400,14 @@
             } }, directives: [i1.CdkDropList, i2.NgForOf, i1.CdkDrag, i1.CdkDragPreview], styles: [".example-list[_ngcontent-%COMP%] {\n  width: 500px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: block;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
         return CdkDragDropCustomPreviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropCustomPreviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropCustomPreviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-custom-preview-example',
                     templateUrl: 'cdk-drag-drop-custom-preview-example.html',
                     styleUrls: ['cdk-drag-drop-custom-preview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Delayed dragging
@@ -432,14 +432,14 @@
             } }, directives: [i1.CdkDrag], styles: [".example-box[_ngcontent-%COMP%] {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  position: relative;\n  z-index: 1;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box[_ngcontent-%COMP%]:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}"] });
         return CdkDragDropDelayExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropDelayExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropDelayExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-delay-example',
                     templateUrl: 'cdk-drag-drop-delay-example.html',
                     styleUrls: ['cdk-drag-drop-delay-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkDragDropDisabledSortingExample_div_5_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 5);
@@ -526,14 +526,14 @@
             } }, directives: [i1.CdkDropListGroup, i1.CdkDropList, i2.NgForOf, i1.CdkDrag], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list[_ngcontent-%COMP%] {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
         return CdkDragDropDisabledSortingExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropDisabledSortingExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropDisabledSortingExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-disabled-sorting-example',
                     templateUrl: 'cdk-drag-drop-disabled-sorting-example.html',
                     styleUrls: ['cdk-drag-drop-disabled-sorting-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkDragDropDisabledExample_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 2);
@@ -578,14 +578,14 @@
             } }, directives: [i1.CdkDropList, i2.NgForOf, i1.CdkDrag], styles: [".example-list[_ngcontent-%COMP%] {\n  width: 500px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: block;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.example-box.cdk-drag-disabled[_ngcontent-%COMP%] {\n  background: #ccc;\n  cursor: default;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
         return CdkDragDropDisabledExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropDisabledExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropDisabledExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-disabled-example',
                     templateUrl: 'cdk-drag-drop-disabled-example.html',
                     styleUrls: ['cdk-drag-drop-disabled-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkDragDropEnterPredicateExample_div_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 4);
@@ -670,14 +670,14 @@
             } }, directives: [i1.CdkDropList, i2.NgForOf, i1.CdkDrag], styles: [".example-container[_ngcontent-%COMP%] {\n  width: 400px;\n  max-width: 100%;\n  margin: 0 25px 25px 0;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.example-list[_ngcontent-%COMP%] {\n  border: solid 1px #ccc;\n  min-height: 60px;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n  display: block;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
         return CdkDragDropEnterPredicateExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropEnterPredicateExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropEnterPredicateExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-enter-predicate-example',
                     templateUrl: 'cdk-drag-drop-enter-predicate-example.html',
                     styleUrls: ['cdk-drag-drop-enter-predicate-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Programmatically setting the free drag position
@@ -713,14 +713,14 @@
             } }, directives: [i1.CdkDrag], styles: [".example-box[_ngcontent-%COMP%] {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  position: relative;\n  z-index: 1;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box[_ngcontent-%COMP%]:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}"] });
         return CdkDragDropFreeDragPositionExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropFreeDragPositionExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropFreeDragPositionExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-free-drag-position-example',
                     templateUrl: 'cdk-drag-drop-free-drag-position-example.html',
                     styleUrls: ['cdk-drag-drop-free-drag-position-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Drag&Drop with a handle
@@ -750,14 +750,14 @@
             } }, directives: [i1.CdkDrag, i1.CdkDragHandle], styles: [".example-box[_ngcontent-%COMP%] {\n  width: 200px;\n  height: 200px;\n  padding: 10px;\n  box-sizing: border-box;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  position: relative;\n  z-index: 1;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box[_ngcontent-%COMP%]:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.example-handle[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n  color: #ccc;\n  cursor: move;\n  width: 24px;\n  height: 24px;\n}"] });
         return CdkDragDropHandleExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropHandleExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropHandleExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-handle-example',
                     templateUrl: 'cdk-drag-drop-handle-example.html',
                     styleUrls: ['cdk-drag-drop-handle-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkDragDropHorizontalSortingExample_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 2);
@@ -803,14 +803,14 @@
             } }, directives: [i1.CdkDropList, i2.NgForOf, i1.CdkDrag], styles: [".example-list[_ngcontent-%COMP%] {\n  width: 1000px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: flex;\n  flex-direction: row;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-right: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n  flex-grow: 1;\n  flex-basis: 0;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
         return CdkDragDropHorizontalSortingExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropHorizontalSortingExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropHorizontalSortingExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-horizontal-sorting-example',
                     templateUrl: 'cdk-drag-drop-horizontal-sorting-example.html',
                     styleUrls: ['cdk-drag-drop-horizontal-sorting-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Basic Drag&Drop
@@ -833,14 +833,14 @@
             } }, directives: [i1.CdkDrag], styles: [".example-box[_ngcontent-%COMP%] {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  background: #fff;\n  border-radius: 4px;\n  position: relative;\n  z-index: 1;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-box[_ngcontent-%COMP%]:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}"] });
         return CdkDragDropOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-overview-example',
                     templateUrl: 'cdk-drag-drop-overview-example.html',
                     styleUrls: ['cdk-drag-drop-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkDragDropRootElementExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 1);
@@ -890,7 +890,7 @@
                 i0.ɵɵviewQuery(i0.TemplateRef, true);
             } if (rf & 2) {
                 var _t;
-                i0.ɵɵqueryRefresh((_t = i0.ɵɵloadQuery())) && (ctx._dialogTemplate = _t.first);
+                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx._dialogTemplate = _t.first);
             } }, decls: 3, vars: 0, consts: [[3, "click"], ["cdkDrag", "", "cdkDragRootElement", ".cdk-overlay-pane", 1, "example-dialog-content"]], template: function CdkDragDropRootElementExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
                 i0.ɵɵlistener("click", function CdkDragDropRootElementExample_Template_button_click_0_listener($event) { return ctx.openDialog(); });
@@ -900,7 +900,7 @@
             } }, directives: [i1.CdkDrag], styles: [".example-dialog-content[_ngcontent-%COMP%] {\n  width: 200px;\n  height: 200px;\n  border: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  cursor: move;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background: #fff;\n  border-radius: 4px;\n  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);\n  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),\n              0 2px 2px 0 rgba(0, 0, 0, 0.14),\n              0 1px 5px 0 rgba(0, 0, 0, 0.12);\n}\n\n.example-dialog-content[_ngcontent-%COMP%]:active {\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}"] });
         return CdkDragDropRootElementExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropRootElementExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropRootElementExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-root-element-example',
@@ -910,7 +910,7 @@
         }], function () { return [{ type: i1$1.Overlay }, { type: i0.ViewContainerRef }]; }, { _dialogTemplate: [{
                 type: i0.ViewChild,
                 args: [i0.TemplateRef]
-            }] });
+            }] }); })();
 
     function CdkDragDropSortingExample_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div", 2);
@@ -959,14 +959,14 @@
             } }, directives: [i1.CdkDropList, i2.NgForOf, i1.CdkDrag], styles: [".example-list[_ngcontent-%COMP%] {\n  width: 500px;\n  max-width: 100%;\n  border: solid 1px #ccc;\n  min-height: 60px;\n  display: block;\n  background: white;\n  border-radius: 4px;\n  overflow: hidden;\n}\n\n.example-box[_ngcontent-%COMP%] {\n  padding: 20px 10px;\n  border-bottom: solid 1px #ccc;\n  color: rgba(0, 0, 0, 0.87);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  box-sizing: border-box;\n  cursor: move;\n  background: white;\n  font-size: 14px;\n}\n\n.cdk-drag-preview[_ngcontent-%COMP%] {\n  box-sizing: border-box;\n  border-radius: 4px;\n  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),\n              0 8px 10px 1px rgba(0, 0, 0, 0.14),\n              0 3px 14px 2px rgba(0, 0, 0, 0.12);\n}\n\n.cdk-drag-placeholder[_ngcontent-%COMP%] {\n  opacity: 0;\n}\n\n.cdk-drag-animating[_ngcontent-%COMP%] {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}\n\n.example-box[_ngcontent-%COMP%]:last-child {\n  border: none;\n}\n\n.example-list.cdk-drop-list-dragging[_ngcontent-%COMP%]   .example-box[_ngcontent-%COMP%]:not(.cdk-drag-placeholder) {\n  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);\n}"] });
         return CdkDragDropSortingExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropSortingExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropSortingExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-drag-drop-sorting-example',
                     templateUrl: 'cdk-drag-drop-sorting-example.html',
                     styleUrls: ['cdk-drag-drop-sorting-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         CdkDragDropAxisLockExample,
@@ -1008,7 +1008,7 @@
                 ]] });
         return CdkDragDropExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CdkDragDropExamplesModule, { declarations: [CdkDragDropAxisLockExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkDragDropExamplesModule, { declarations: [CdkDragDropAxisLockExample,
             CdkDragDropBoundaryExample,
             CdkDragDropConnectedSortingExample,
             CdkDragDropConnectedSortingGroupExample,
@@ -1040,8 +1040,8 @@
             CdkDragDropHorizontalSortingExample,
             CdkDragDropOverviewExample,
             CdkDragDropRootElementExample,
-            CdkDragDropSortingExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkDragDropExamplesModule, [{
+            CdkDragDropSortingExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkDragDropExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -1052,7 +1052,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.CdkDragDropAxisLockExample = CdkDragDropAxisLockExample;
     exports.CdkDragDropBoundaryExample = CdkDragDropBoundaryExample;

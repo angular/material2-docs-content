@@ -127,14 +127,14 @@
             } }, directives: [i1.CdkTree, i1.CdkTreeNodeDef, i1.CdkTreeNode, i1.CdkTreeNodePadding, i2.MatButton, i1.CdkTreeNodeToggle, i3.MatIcon], styles: [".example-tree-node[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n}"] });
         return CdkTreeFlatExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkTreeFlatExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkTreeFlatExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-tree-flat-example',
                     templateUrl: 'cdk-tree-flat-example.html',
                     styleUrls: ['cdk-tree-flat-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function CdkTreeNestedExample_cdk_nested_tree_node_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "cdk-nested-tree-node", 3);
@@ -226,14 +226,14 @@
             } }, directives: [i1.CdkTree, i1.CdkTreeNodeDef, i1.CdkNestedTreeNode, i2.MatButton, i1.CdkTreeNodeToggle, i3.MatIcon, i1.CdkTreeNodeOutlet], styles: [".example-tree-invisible[_ngcontent-%COMP%] {\n  display: none;\n}\n\n.example-tree[_ngcontent-%COMP%]   ul[_ngcontent-%COMP%], .example-tree[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\n  margin-top: 0;\n  margin-bottom: 0;\n  list-style-type: none;\n}\n.example-tree-node[_ngcontent-%COMP%] {\n  display: block;\n}\n\n.example-tree-node[_ngcontent-%COMP%]   .example-tree-node[_ngcontent-%COMP%] {\n  padding-left: 40px;\n}"] });
         return CdkTreeNestedExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkTreeNestedExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkTreeNestedExample, [{
             type: i0.Component,
             args: [{
                     selector: 'cdk-tree-nested-example',
                     templateUrl: 'cdk-tree-nested-example.html',
                     styleUrls: ['cdk-tree-nested-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         CdkTreeFlatExample,
@@ -261,12 +261,12 @@
                 ]] });
         return CdkTreeExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(CdkTreeExamplesModule, { declarations: [CdkTreeFlatExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkTreeExamplesModule, { declarations: [CdkTreeFlatExample,
             CdkTreeNestedExample], imports: [i1.CdkTreeModule,
             i2.MatButtonModule,
             i3.MatIconModule], exports: [CdkTreeFlatExample,
-            CdkTreeNestedExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(CdkTreeExamplesModule, [{
+            CdkTreeNestedExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkTreeExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -277,7 +277,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.CdkTreeExamplesModule = CdkTreeExamplesModule;
     exports.CdkTreeFlatExample = CdkTreeFlatExample;

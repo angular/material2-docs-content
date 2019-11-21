@@ -86,7 +86,7 @@ CdkVirtualScrollContextExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("cdkVirtualForOf", ctx.items);
     } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item-detail[_ngcontent-%COMP%] {\n  height: 18px;\n}\n\n.example-alternate[_ngcontent-%COMP%] {\n  background: rgba(127, 127, 127, 0.3);\n}"], changeDetection: 0 });
-/*@__PURE__*/ ɵsetClassMetadata(CdkVirtualScrollContextExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollContextExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-virtual-scroll-context-example',
@@ -94,7 +94,7 @@ CdkVirtualScrollContextExample.decorators = [
                 templateUrl: 'cdk-virtual-scroll-context-example.html',
                 changeDetection: ChangeDetectionStrategy.OnPush,
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkVirtualScrollContextExample.prototype.items;
@@ -149,7 +149,7 @@ CdkVirtualScrollCustomStrategyExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("cdkVirtualForOf", ctx.items);
     } }, directives: [CdkVirtualScrollViewport, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-/*@__PURE__*/ ɵsetClassMetadata(CdkVirtualScrollCustomStrategyExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollCustomStrategyExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-virtual-scroll-custom-strategy-example',
@@ -158,7 +158,7 @@ CdkVirtualScrollCustomStrategyExample.decorators = [
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 providers: [{ provide: VIRTUAL_SCROLL_STRATEGY, useClass: CustomVirtualScrollStrategy }]
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkVirtualScrollCustomStrategyExample.prototype.items;
@@ -202,7 +202,7 @@ CdkVirtualScrollDataSourceExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("cdkVirtualForOf", ctx.ds);
     } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-/*@__PURE__*/ ɵsetClassMetadata(CdkVirtualScrollDataSourceExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollDataSourceExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-virtual-scroll-data-source-example',
@@ -210,7 +210,7 @@ CdkVirtualScrollDataSourceExample.decorators = [
                 templateUrl: 'cdk-virtual-scroll-data-source-example.html',
                 changeDetection: ChangeDetectionStrategy.OnPush,
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkVirtualScrollDataSourceExample.prototype.ds;
@@ -416,7 +416,7 @@ CdkVirtualScrollDlExample.decorators = [
         ɵɵadvance(2);
         ɵɵproperty("cdkVirtualForOf", ctx.states);
     } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-dt[_ngcontent-%COMP%] {\n  height: 30px;\n  font-weight: bold;\n}\n\n.example-dd[_ngcontent-%COMP%] {\n  height: 30px;\n}"], changeDetection: 0 });
-/*@__PURE__*/ ɵsetClassMetadata(CdkVirtualScrollDlExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollDlExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-virtual-scroll-dl-example',
@@ -424,7 +424,7 @@ CdkVirtualScrollDlExample.decorators = [
                 templateUrl: 'cdk-virtual-scroll-dl-example.html',
                 changeDetection: ChangeDetectionStrategy.OnPush,
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkVirtualScrollDlExample.prototype.states;
@@ -473,7 +473,7 @@ CdkVirtualScrollFixedBufferExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("cdkVirtualForOf", ctx.items);
     } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-/*@__PURE__*/ ɵsetClassMetadata(CdkVirtualScrollFixedBufferExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollFixedBufferExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-virtual-scroll-fixed-buffer-example',
@@ -481,7 +481,7 @@ CdkVirtualScrollFixedBufferExample.decorators = [
                 templateUrl: 'cdk-virtual-scroll-fixed-buffer-example.html',
                 changeDetection: ChangeDetectionStrategy.OnPush,
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkVirtualScrollFixedBufferExample.prototype.items;
@@ -533,7 +533,7 @@ CdkVirtualScrollHorizontalExample.decorators = [
         ɵɵadvance(2);
         ɵɵproperty("cdkVirtualForOf", ctx.items);
     } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".cdk-virtual-scroll-data-source-example .example-viewport {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.cdk-virtual-scroll-data-source-example .example-viewport .cdk-virtual-scroll-content-wrapper {\n  display: flex;\n  flex-direction: row;\n}\n\n.cdk-virtual-scroll-data-source-example .example-item {\n  width: 50px;\n  height: 100%;\n  writing-mode: vertical-lr;\n}\n"], encapsulation: 2, changeDetection: 0 });
-/*@__PURE__*/ ɵsetClassMetadata(CdkVirtualScrollHorizontalExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollHorizontalExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-virtual-scroll-horizontal-example',
@@ -542,7 +542,7 @@ CdkVirtualScrollHorizontalExample.decorators = [
                 encapsulation: ViewEncapsulation.None,
                 changeDetection: ChangeDetectionStrategy.OnPush,
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkVirtualScrollHorizontalExample.prototype.items;
@@ -591,7 +591,7 @@ CdkVirtualScrollOverviewExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("cdkVirtualForOf", ctx.items);
     } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-/*@__PURE__*/ ɵsetClassMetadata(CdkVirtualScrollOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-virtual-scroll-overview-example',
@@ -599,7 +599,7 @@ CdkVirtualScrollOverviewExample.decorators = [
                 templateUrl: 'cdk-virtual-scroll-overview-example.html',
                 changeDetection: ChangeDetectionStrategy.OnPush,
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkVirtualScrollOverviewExample.prototype.items;
@@ -648,7 +648,7 @@ CdkVirtualScrollTemplateCacheExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("cdkVirtualForOf", ctx.items)("cdkVirtualForTemplateCacheSize", 0);
     } }, directives: [CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf], styles: [".example-viewport[_ngcontent-%COMP%] {\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n\n.example-item[_ngcontent-%COMP%] {\n  height: 50px;\n}"], changeDetection: 0 });
-/*@__PURE__*/ ɵsetClassMetadata(CdkVirtualScrollTemplateCacheExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkVirtualScrollTemplateCacheExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-virtual-scroll-template-cache-example',
@@ -656,7 +656,7 @@ CdkVirtualScrollTemplateCacheExample.decorators = [
                 templateUrl: 'cdk-virtual-scroll-template-cache-example.html',
                 changeDetection: ChangeDetectionStrategy.OnPush,
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CdkVirtualScrollTemplateCacheExample.prototype.items;
@@ -692,7 +692,7 @@ CdkScrollingExamplesModule.decorators = [
 /** @nocollapse */ CdkScrollingExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkScrollingExamplesModule_Factory(t) { return new (t || CdkScrollingExamplesModule)(); }, imports: [[
             ScrollingModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(CdkScrollingExamplesModule, { declarations: [CdkVirtualScrollContextExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkScrollingExamplesModule, { declarations: [CdkVirtualScrollContextExample,
         CdkVirtualScrollCustomStrategyExample,
         CdkVirtualScrollDataSourceExample,
         CdkVirtualScrollDlExample,
@@ -706,8 +706,8 @@ CdkScrollingExamplesModule.decorators = [
         CdkVirtualScrollFixedBufferExample,
         CdkVirtualScrollHorizontalExample,
         CdkVirtualScrollOverviewExample,
-        CdkVirtualScrollTemplateCacheExample] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkScrollingExamplesModule, [{
+        CdkVirtualScrollTemplateCacheExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkScrollingExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -716,7 +716,7 @@ CdkScrollingExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CdkScrollingExamplesModule, CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample };
 //# sourceMappingURL=scrolling.js.map

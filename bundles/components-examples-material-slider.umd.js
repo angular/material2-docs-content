@@ -152,14 +152,14 @@
             } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatFormField, i3.MatInput, i4.NumberValueAccessor, i4.DefaultValueAccessor, i4.NgControlStatus, i4.NgModel, i5.MatCheckbox, i6.NgIf, i1$1.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.mat-slider-horizontal[_ngcontent-%COMP%] {\n  width: 300px;\n}\n\n.mat-slider-vertical[_ngcontent-%COMP%] {\n  height: 300px;\n}"] });
         return SliderConfigurableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SliderConfigurableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SliderConfigurableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'slider-configurable-example',
                     templateUrl: 'slider-configurable-example.html',
                     styleUrls: ['slider-configurable-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Slider with custom thumb label formatting.
@@ -188,14 +188,14 @@
             } }, directives: [i1$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
         return SliderFormattingExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SliderFormattingExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SliderFormattingExample, [{
             type: i0.Component,
             args: [{
                     selector: 'slider-formatting-example',
                     templateUrl: 'slider-formatting-example.html',
                     styleUrls: ['slider-formatting-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Basic slider
@@ -216,14 +216,14 @@
             } }, directives: [i1$1.MatSlider], styles: ["mat-slider[_ngcontent-%COMP%] {\n  width: 300px;\n}"] });
         return SliderOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SliderOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SliderOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'slider-overview-example',
                     templateUrl: 'slider-overview-example.html',
                     styleUrls: ['slider-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         SliderConfigurableExample,
@@ -258,7 +258,7 @@
                 ]] });
         return SliderExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(SliderExamplesModule, { declarations: [SliderConfigurableExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SliderExamplesModule, { declarations: [SliderConfigurableExample,
             SliderFormattingExample,
             SliderOverviewExample], imports: [i6.CommonModule,
             i4.FormsModule,
@@ -267,8 +267,8 @@
             i3.MatInputModule,
             i1$1.MatSliderModule], exports: [SliderConfigurableExample,
             SliderFormattingExample,
-            SliderOverviewExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SliderExamplesModule, [{
+            SliderOverviewExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SliderExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -282,7 +282,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.SliderConfigurableExample = SliderConfigurableExample;
     exports.SliderExamplesModule = SliderExamplesModule;

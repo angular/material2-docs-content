@@ -86,16 +86,16 @@
             } }, directives: [i1.MatFormField, i2.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i4.MatPaginator, i5.NgIf], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return PaginatorConfigurableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(PaginatorConfigurableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PaginatorConfigurableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'paginator-configurable-example',
                     templateUrl: 'paginator-configurable-example.html',
                     styleUrls: ['paginator-configurable-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
-    var _c0 = [5, 10, 25, 100];
+    var _c0 = function () { return [5, 10, 25, 100]; };
     /**
      * @title Paginator
      */
@@ -110,21 +110,21 @@
                     },] },
         ];
         PaginatorOverviewExample.ɵfac = function PaginatorOverviewExample_Factory(t) { return new (t || PaginatorOverviewExample)(); };
-        PaginatorOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: PaginatorOverviewExample, selectors: [["paginator-overview-example"]], decls: 1, vars: 3, consts: [[3, "length", "pageSize", "pageSizeOptions"]], template: function PaginatorOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        PaginatorOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: PaginatorOverviewExample, selectors: [["paginator-overview-example"]], decls: 1, vars: 4, consts: [[3, "length", "pageSize", "pageSizeOptions"]], template: function PaginatorOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-paginator", 0);
             } if (rf & 2) {
-                i0.ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", _c0);
+                i0.ɵɵproperty("length", 100)("pageSize", 10)("pageSizeOptions", i0.ɵɵpureFunction0(3, _c0));
             } }, directives: [i4.MatPaginator], styles: [""] });
         return PaginatorOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(PaginatorOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PaginatorOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'paginator-overview-example',
                     templateUrl: 'paginator-overview-example.html',
                     styleUrls: ['paginator-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         PaginatorConfigurableExample,
@@ -154,13 +154,13 @@
                 ]] });
         return PaginatorExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(PaginatorExamplesModule, { declarations: [PaginatorConfigurableExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(PaginatorExamplesModule, { declarations: [PaginatorConfigurableExample,
             PaginatorOverviewExample], imports: [i5.CommonModule,
             i2.MatInputModule,
             i4.MatPaginatorModule,
             i3.FormsModule], exports: [PaginatorConfigurableExample,
-            PaginatorOverviewExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(PaginatorExamplesModule, [{
+            PaginatorOverviewExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(PaginatorExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -172,7 +172,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.PaginatorConfigurableExample = PaginatorConfigurableExample;
     exports.PaginatorExamplesModule = PaginatorExamplesModule;

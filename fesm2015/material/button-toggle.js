@@ -49,14 +49,14 @@ ButtonToggleAppearanceExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatButtonToggleGroup, MatButtonToggle], styles: ["mat-button-toggle-group[_ngcontent-%COMP%] {\n  margin-left: 12px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(ButtonToggleAppearanceExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleAppearanceExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-appearance-example',
                 templateUrl: 'button-toggle-appearance-example.html',
                 styleUrls: ['button-toggle-appearance-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -106,14 +106,14 @@ ButtonToggleExclusiveExample.decorators = [
         ɵɵadvance(15);
         ɵɵtextInterpolate1("Selected value: ", _r0.value, "");
     } }, directives: [MatButtonToggleGroup, MatButtonToggle, MatIcon], styles: [".example-selected-value[_ngcontent-%COMP%] {\n  margin: 15px 0;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleExclusiveExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-exclusive-example',
                 templateUrl: 'button-toggle-exclusive-example.html',
                 styleUrls: ['button-toggle-exclusive-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -145,14 +145,14 @@ ButtonToggleOverviewExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatButtonToggleGroup, MatButtonToggle], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(ButtonToggleOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'button-toggle-overview-example',
                 templateUrl: 'button-toggle-overview-example.html',
                 styleUrls: ['button-toggle-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -181,13 +181,13 @@ ButtonToggleExamplesModule.decorators = [
             MatButtonToggleModule,
             MatIconModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(ButtonToggleExamplesModule, { declarations: [ButtonToggleAppearanceExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ButtonToggleExamplesModule, { declarations: [ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
         ButtonToggleOverviewExample], imports: [MatButtonToggleModule,
         MatIconModule], exports: [ButtonToggleAppearanceExample,
         ButtonToggleExclusiveExample,
-        ButtonToggleOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(ButtonToggleExamplesModule, [{
+        ButtonToggleOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonToggleExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -197,7 +197,7 @@ ButtonToggleExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { ButtonToggleAppearanceExample, ButtonToggleExamplesModule, ButtonToggleExclusiveExample, ButtonToggleOverviewExample };
 //# sourceMappingURL=button-toggle.js.map

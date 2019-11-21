@@ -33,14 +33,14 @@ var DividerOverviewExample = /** @class */ (function () {
         } }, directives: [MatList, MatListItem, MatDivider], styles: [""] });
     return DividerOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(DividerOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DividerOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'divider-overview-example',
                 templateUrl: 'divider-overview-example.html',
                 styleUrls: ['divider-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 var EXAMPLES = [
     DividerOverviewExample,
@@ -64,9 +64,9 @@ var DividerExamplesModule = /** @class */ (function () {
             ]] });
     return DividerExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerOverviewExample], imports: [MatDividerModule,
-        MatListModule] });
-/*@__PURE__*/ ɵsetClassMetadata(DividerExamplesModule, [{
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerOverviewExample], imports: [MatDividerModule,
+        MatListModule] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DividerExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -75,7 +75,7 @@ var DividerExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { DividerExamplesModule, DividerOverviewExample };
 //# sourceMappingURL=divider.js.map

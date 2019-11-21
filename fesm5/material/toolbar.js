@@ -48,14 +48,14 @@ var ToolbarMultirowExample = /** @class */ (function () {
         } }, directives: [MatToolbar, MatToolbarRow, MatIcon], styles: [".example-icon[_ngcontent-%COMP%] {\n  padding: 0 14px;\n}\n\n.example-spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}"] });
     return ToolbarMultirowExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(ToolbarMultirowExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarMultirowExample, [{
         type: Component,
         args: [{
                 selector: 'toolbar-multirow-example',
                 templateUrl: 'toolbar-multirow-example.html',
                 styleUrls: ['toolbar-multirow-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Basic toolbar
@@ -78,14 +78,14 @@ var ToolbarOverviewExample = /** @class */ (function () {
         } }, directives: [MatToolbar], styles: [""] });
     return ToolbarOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(ToolbarOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'toolbar-overview-example',
                 templateUrl: 'toolbar-overview-example.html',
                 styleUrls: ['toolbar-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 var EXAMPLES = [
     ToolbarMultirowExample,
@@ -111,11 +111,11 @@ var ToolbarExamplesModule = /** @class */ (function () {
             ]] });
     return ToolbarExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(ToolbarExamplesModule, { declarations: [ToolbarMultirowExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ToolbarExamplesModule, { declarations: [ToolbarMultirowExample,
         ToolbarOverviewExample], imports: [MatIconModule,
         MatToolbarModule], exports: [ToolbarMultirowExample,
-        ToolbarOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(ToolbarExamplesModule, [{
+        ToolbarOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ToolbarExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -125,7 +125,7 @@ var ToolbarExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { ToolbarExamplesModule, ToolbarMultirowExample, ToolbarOverviewExample };
 //# sourceMappingURL=toolbar.js.map

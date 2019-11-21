@@ -67,14 +67,14 @@ SelectCustomTriggerExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.toppingList);
     } }, directives: [MatFormField, MatSelect, NgControlStatus, FormControlDirective, MatSelectTrigger, NgIf, NgForOf, MatOption], styles: [".example-additional-selection[_ngcontent-%COMP%] {\n  opacity: 0.75;\n  font-size: 0.75em;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectCustomTriggerExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectCustomTriggerExample, [{
         type: Component,
         args: [{
                 selector: 'select-custom-trigger-example',
                 templateUrl: 'select-custom-trigger-example.html',
                 styleUrls: ['select-custom-trigger-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectCustomTriggerExample.prototype.toppings;
@@ -158,14 +158,14 @@ SelectDisabledExample.decorators = [
         ɵɵadvance(12);
         ɵɵproperty("disabled", ctx.disableSelect.value);
     } }, directives: [MatCheckbox, NgControlStatus, FormControlDirective, MatFormField, MatLabel, MatSelect, MatOption, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectDisabledExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectDisabledExample, [{
         type: Component,
         args: [{
                 selector: 'select-disabled-example',
                 templateUrl: 'select-disabled-example.html',
                 styleUrls: ['select-disabled-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectDisabledExample.prototype.disableSelect;
@@ -296,14 +296,14 @@ SelectErrorStateMatcherExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.nativeSelectFormControl.hasError("pattern") && !ctx.nativeSelectFormControl.hasError("required"));
     } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, MatHint, NgIf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatError], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectErrorStateMatcherExample, [{
         type: Component,
         args: [{
                 selector: 'select-error-state-matcher-example',
                 templateUrl: 'select-error-state-matcher-example.html',
                 styleUrls: ['select-error-state-matcher-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectErrorStateMatcherExample.prototype.selected;
@@ -432,14 +432,14 @@ SelectFormExample.decorators = [
         ɵɵadvance(2);
         ɵɵtextInterpolate1(" Selected car: ", ctx.selectedCar, " ");
     } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatSelect, NgControlStatus, NgModel, NgForOf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatOption], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectFormExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectFormExample, [{
         type: Component,
         args: [{
                 selector: 'select-form-example',
                 templateUrl: 'select-form-example.html',
                 styleUrls: ['select-form-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectFormExample.prototype.selectedValue;
@@ -565,14 +565,14 @@ SelectHintErrorExample.decorators = [
         ɵɵadvance(8);
         ɵɵproperty("ngIf", ctx.selectFormControl.hasError("required"));
     } }, directives: [MatFormField, MatLabel, MatSelect, RequiredValidator, NgControlStatus, FormControlDirective, MatOption, NgForOf, NgIf, MatHint, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, MatError], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectHintErrorExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectHintErrorExample, [{
         type: Component,
         args: [{
                 selector: 'select-hint-error-example',
                 templateUrl: 'select-hint-error-example.html',
                 styleUrls: ['select-hint-error-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectHintErrorExample.prototype.animalControl;
@@ -628,14 +628,14 @@ SelectMultipleExample.decorators = [
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.toppingList);
     } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatOption], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectMultipleExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectMultipleExample, [{
         type: Component,
         args: [{
                 selector: 'select-multiple-example',
                 templateUrl: 'select-multiple-example.html',
                 styleUrls: ['select-multiple-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectMultipleExample.prototype.toppings;
@@ -678,14 +678,14 @@ SelectNoRippleExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectNoRippleExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectNoRippleExample, [{
         type: Component,
         args: [{
                 selector: 'select-no-ripple-example',
                 templateUrl: 'select-no-ripple-example.html',
                 styleUrls: ['select-no-ripple-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -830,14 +830,14 @@ SelectOptgroupExample.decorators = [
         ɵɵadvance(3);
         ɵɵproperty("ngForOf", ctx.pokemonGroups);
     } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x, MatOptgroup], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectOptgroupExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectOptgroupExample, [{
         type: Component,
         args: [{
                 selector: 'select-optgroup-example',
                 templateUrl: 'select-optgroup-example.html',
                 styleUrls: ['select-optgroup-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectOptgroupExample.prototype.pokemonControl;
@@ -927,14 +927,14 @@ SelectOverviewExample.decorators = [
         ɵɵadvance(6);
         ɵɵproperty("ngForOf", ctx.foods);
     } }, directives: [MatFormField, MatLabel, MatSelect, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x, MatOption], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'select-overview-example',
                 templateUrl: 'select-overview-example.html',
                 styleUrls: ['select-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectOverviewExample.prototype.foods;
@@ -985,7 +985,7 @@ SelectPanelClassExample.decorators = [
         ɵɵpropertyInterpolate1("panelClass", "example-panel-", ctx.panelColor.value, "");
         ɵɵproperty("formControl", ctx.panelColor);
     } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption], styles: [".example-panel-red.mat-select-panel {\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-panel-green.mat-select-panel {\n  background: rgba(0, 255, 0, 0.5);\n}\n\n.example-panel-blue.mat-select-panel {\n  background: rgba(0, 0, 255, 0.5);\n}\n"], encapsulation: 2 });
-/*@__PURE__*/ ɵsetClassMetadata(SelectPanelClassExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectPanelClassExample, [{
         type: Component,
         args: [{
                 selector: 'select-panel-class-example',
@@ -995,7 +995,7 @@ SelectPanelClassExample.decorators = [
                 // component style to apply to the select panel.
                 encapsulation: ViewEncapsulation.None,
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectPanelClassExample.prototype.panelColor;
@@ -1081,14 +1081,14 @@ SelectResetExample.decorators = [
         ɵɵadvance(8);
         ɵɵproperty("ngForOf", ctx.states);
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectResetExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectResetExample, [{
         type: Component,
         args: [{
                 selector: 'select-reset-example',
                 templateUrl: 'select-reset-example.html',
                 styleUrls: ['select-reset-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectResetExample.prototype.states;
@@ -1144,14 +1144,14 @@ SelectValueBindingExample.decorators = [
         ɵɵadvance(10);
         ɵɵtextInterpolate1("You selected: ", ctx.selected, "");
     } }, directives: [MatFormField, MatLabel, MatSelect, MatOption], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectValueBindingExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectValueBindingExample, [{
         type: Component,
         args: [{
                 selector: 'select-value-binding-example',
                 templateUrl: 'select-value-binding-example.html',
                 styleUrls: ['select-value-binding-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     SelectValueBindingExample.prototype.selected;
@@ -1201,7 +1201,7 @@ SelectExamplesModule.decorators = [
             MatSelectModule,
             ReactiveFormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(SelectExamplesModule, { declarations: [SelectCustomTriggerExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(SelectExamplesModule, { declarations: [SelectCustomTriggerExample,
         SelectDisabledExample,
         SelectErrorStateMatcherExample,
         SelectFormExample,
@@ -1228,8 +1228,8 @@ SelectExamplesModule.decorators = [
         SelectOverviewExample,
         SelectPanelClassExample,
         SelectResetExample,
-        SelectValueBindingExample] });
-/*@__PURE__*/ ɵsetClassMetadata(SelectExamplesModule, [{
+        SelectValueBindingExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -1243,7 +1243,7 @@ SelectExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectExamplesModule, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample };
 //# sourceMappingURL=select.js.map

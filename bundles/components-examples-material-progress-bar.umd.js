@@ -23,14 +23,14 @@
             } }, directives: [i1$1.MatProgressBar], styles: [""] });
         return ProgressBarBufferExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ProgressBarBufferExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarBufferExample, [{
             type: i0.Component,
             args: [{
                     selector: 'progress-bar-buffer-example',
                     templateUrl: 'progress-bar-buffer-example.html',
                     styleUrls: ['progress-bar-buffer-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function ProgressBarConfigurableExample_section_26_Template(rf, ctx) { if (rf & 1) {
         var _r3 = i0.ɵɵgetCurrentView();
@@ -151,14 +151,14 @@
             } }, directives: [i1.MatCard, i1.MatCardContent, i2.MatRadioGroup, i3.NgControlStatus, i3.NgModel, i2.MatRadioButton, i4.NgIf, i1$1.MatProgressBar, i6.MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
         return ProgressBarConfigurableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ProgressBarConfigurableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarConfigurableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'progress-bar-configurable-example',
                     templateUrl: 'progress-bar-configurable-example.html',
                     styleUrls: ['progress-bar-configurable-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Determinate progress-bar
@@ -179,14 +179,14 @@
             } }, directives: [i1$1.MatProgressBar], styles: [""] });
         return ProgressBarDeterminateExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ProgressBarDeterminateExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarDeterminateExample, [{
             type: i0.Component,
             args: [{
                     selector: 'progress-bar-determinate-example',
                     templateUrl: 'progress-bar-determinate-example.html',
                     styleUrls: ['progress-bar-determinate-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Indeterminate progress-bar
@@ -207,14 +207,14 @@
             } }, directives: [i1$1.MatProgressBar], styles: [""] });
         return ProgressBarIndeterminateExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarIndeterminateExample, [{
             type: i0.Component,
             args: [{
                     selector: 'progress-bar-indeterminate-example',
                     templateUrl: 'progress-bar-indeterminate-example.html',
                     styleUrls: ['progress-bar-indeterminate-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Query progress-bar
@@ -235,14 +235,14 @@
             } }, directives: [i1$1.MatProgressBar], styles: [""] });
         return ProgressBarQueryExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ProgressBarQueryExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarQueryExample, [{
             type: i0.Component,
             args: [{
                     selector: 'progress-bar-query-example',
                     templateUrl: 'progress-bar-query-example.html',
                     styleUrls: ['progress-bar-query-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         ProgressBarBufferExample,
@@ -279,7 +279,7 @@
                 ]] });
         return ProgressBarExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(ProgressBarExamplesModule, { declarations: [ProgressBarBufferExample,
             ProgressBarConfigurableExample,
             ProgressBarDeterminateExample,
             ProgressBarIndeterminateExample,
@@ -292,8 +292,8 @@
             ProgressBarConfigurableExample,
             ProgressBarDeterminateExample,
             ProgressBarIndeterminateExample,
-            ProgressBarQueryExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(ProgressBarExamplesModule, [{
+            ProgressBarQueryExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ProgressBarExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -307,7 +307,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.ProgressBarBufferExample = ProgressBarBufferExample;
     exports.ProgressBarConfigurableExample = ProgressBarConfigurableExample;

@@ -44,14 +44,14 @@ var GridListDynamicExample = /** @class */ (function () {
         } }, directives: [MatGridList, NgForOf, MatGridTile], styles: [""] });
     return GridListDynamicExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(GridListDynamicExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(GridListDynamicExample, [{
         type: Component,
         args: [{
                 selector: 'grid-list-dynamic-example',
                 templateUrl: 'grid-list-dynamic-example.html',
                 styleUrls: ['grid-list-dynamic-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title Basic grid-list
@@ -85,14 +85,14 @@ var GridListOverviewExample = /** @class */ (function () {
         } }, directives: [MatGridList, MatGridTile], styles: ["mat-grid-tile[_ngcontent-%COMP%] {\n  background: lightblue;\n}"] });
     return GridListOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(GridListOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(GridListOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'grid-list-overview-example',
                 styleUrls: ['grid-list-overview-example.css'],
                 templateUrl: 'grid-list-overview-example.html',
             }]
-    }], null, null);
+    }], null, null); })();
 
 var EXAMPLES = [
     GridListDynamicExample,
@@ -118,11 +118,11 @@ var GridListExamplesModule = /** @class */ (function () {
             ]] });
     return GridListExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(GridListExamplesModule, { declarations: [GridListDynamicExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(GridListExamplesModule, { declarations: [GridListDynamicExample,
         GridListOverviewExample], imports: [CommonModule,
         MatGridListModule], exports: [GridListDynamicExample,
-        GridListOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(GridListExamplesModule, [{
+        GridListOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(GridListExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -132,7 +132,7 @@ var GridListExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { GridListDynamicExample, GridListExamplesModule, GridListOverviewExample };
 //# sourceMappingURL=grid-list.js.map

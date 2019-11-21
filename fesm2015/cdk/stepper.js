@@ -47,14 +47,14 @@ CdkCustomStepperWithoutFormExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: function () { return [CustomStepper, CdkStep]; }, styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkCustomStepperWithoutFormExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkCustomStepperWithoutFormExample, [{
         type: Component,
         args: [{
                 selector: 'cdk-custom-stepper-without-form-example',
                 templateUrl: './cdk-custom-stepper-without-form-example.html',
                 styleUrls: ['./cdk-custom-stepper-without-form-example.css']
             }]
-    }], null, null);
+    }], null, null); })();
 /**
  * Custom CDK stepper component
  */
@@ -107,7 +107,7 @@ CustomStepper.decorators = [
         ɵɵproperty("ngForOf", ctx._stepsArray);
     } }, directives: [NgTemplateOutlet, CdkStepperPrevious, NgForOf, CdkStepperNext, NgClass], styles: [".example-container[_ngcontent-%COMP%] {\n  border: 1px solid black;\n  padding: 10px;\n  margin: 10px;\n}\n\n.example-step-navigation-bar[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-start;\n  margin-top: 10px;\n}\n\n.example-active[_ngcontent-%COMP%] {\n  color: blue;\n}\n\n.example-step[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n  margin: 0 10px;\n  padding: 10px;\n  color: black;\n}\n\n.example-step.example-active[_ngcontent-%COMP%] {\n  color: blue;\n  border-bottom: 1px solid blue;\n}\n\n.example-nav-button[_ngcontent-%COMP%] {\n  background: transparent;\n  border: 0;\n}"] });
 const ɵCustomStepper_BaseFactory = ɵɵgetInheritedFactory(CustomStepper);
-/*@__PURE__*/ ɵsetClassMetadata(CustomStepper, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CustomStepper, [{
         type: Component,
         args: [{
                 selector: 'example-custom-stepper',
@@ -115,7 +115,7 @@ const ɵCustomStepper_BaseFactory = ɵɵgetInheritedFactory(CustomStepper);
                 styleUrls: ['./example-custom-stepper.css'],
                 providers: [{ provide: CdkStepper, useExisting: CustomStepper }]
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     CustomStepper.ngAcceptInputType_linear;
@@ -149,11 +149,11 @@ CdkStepperExamplesModule.decorators = [
             CdkStepperModule,
             CommonModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(CdkStepperExamplesModule, { declarations: [CdkCustomStepperWithoutFormExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkStepperExamplesModule, { declarations: [CdkCustomStepperWithoutFormExample,
         CustomStepper], imports: [CdkStepperModule,
         CommonModule], exports: [CdkCustomStepperWithoutFormExample,
-        CustomStepper] });
-/*@__PURE__*/ ɵsetClassMetadata(CdkStepperExamplesModule, [{
+        CustomStepper] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(CdkStepperExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -163,7 +163,7 @@ CdkStepperExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { CdkCustomStepperWithoutFormExample, CdkStepperExamplesModule, CustomStepper };
 //# sourceMappingURL=stepper.js.map

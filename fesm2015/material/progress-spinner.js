@@ -101,14 +101,14 @@ ProgressSpinnerConfigurableExample.decorators = [
         ɵɵadvance(5);
         ɵɵproperty("color", ctx.color)("mode", ctx.mode)("value", ctx.value);
     } }, directives: [MatCard, MatCardContent, MatRadioGroup, NgControlStatus, NgModel, MatRadioButton, NgIf, MatProgressSpinner, MatSlider], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 0 10px;\n}"] });
-/*@__PURE__*/ ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerConfigurableExample, [{
         type: Component,
         args: [{
                 selector: 'progress-spinner-configurable-example',
                 templateUrl: 'progress-spinner-configurable-example.html',
                 styleUrls: ['progress-spinner-configurable-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     ProgressSpinnerConfigurableExample.prototype.color;
@@ -138,14 +138,14 @@ ProgressSpinnerOverviewExample.decorators = [
 /** @nocollapse */ ProgressSpinnerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ProgressSpinnerOverviewExample, selectors: [["progress-spinner-overview-example"]], decls: 1, vars: 0, template: function ProgressSpinnerOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelement(0, "mat-spinner");
     } }, directives: [MatSpinner], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'progress-spinner-overview-example',
                 templateUrl: 'progress-spinner-overview-example.html',
                 styleUrls: ['progress-spinner-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -181,15 +181,15 @@ ProgressSpinnerExamplesModule.decorators = [
             MatSliderModule,
             FormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(ProgressSpinnerExamplesModule, { declarations: [ProgressSpinnerConfigurableExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ProgressSpinnerExamplesModule, { declarations: [ProgressSpinnerConfigurableExample,
         ProgressSpinnerOverviewExample], imports: [CommonModule,
         MatCardModule,
         MatProgressSpinnerModule,
         MatRadioModule,
         MatSliderModule,
         FormsModule], exports: [ProgressSpinnerConfigurableExample,
-        ProgressSpinnerOverviewExample] });
-/*@__PURE__*/ ɵsetClassMetadata(ProgressSpinnerExamplesModule, [{
+        ProgressSpinnerOverviewExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ProgressSpinnerExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -203,7 +203,7 @@ ProgressSpinnerExamplesModule.decorators = [
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { ProgressSpinnerConfigurableExample, ProgressSpinnerExamplesModule, ProgressSpinnerOverviewExample };
 //# sourceMappingURL=progress-spinner.js.map

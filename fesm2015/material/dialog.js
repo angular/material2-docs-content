@@ -53,14 +53,14 @@ DialogContentExample.ctorParameters = () => [
         ɵɵtext(1, "Open dialog");
         ɵɵelementEnd();
     } }, directives: [MatButton], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DialogContentExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogContentExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-content-example',
                 templateUrl: 'dialog-content-example.html',
                 styleUrls: ['dialog-content-example.css'],
             }]
-    }], function () { return [{ type: MatDialog }]; }, null);
+    }], function () { return [{ type: MatDialog }]; }, null); })();
 if (false) {
     /** @type {?} */
     DialogContentExample.prototype.dialog;
@@ -149,13 +149,13 @@ DialogContentExampleDialog.decorators = [
         ɵɵadvance(44);
         ɵɵproperty("mat-dialog-close", true);
     } }, directives: [MatDialogTitle, MatDialogContent, MatDialogActions, MatButton, MatDialogClose], encapsulation: 2 });
-/*@__PURE__*/ ɵsetClassMetadata(DialogContentExampleDialog, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogContentExampleDialog, [{
         type: Component,
         args: [{
                 selector: 'dialog-content-example-dialog',
                 templateUrl: 'dialog-content-example-dialog.html',
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -223,14 +223,14 @@ DialogDataExample.ctorParameters = () => [
         ɵɵtext(1, "Open dialog");
         ɵɵelementEnd();
     } }, directives: [MatButton], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DialogDataExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogDataExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-data-example',
                 templateUrl: 'dialog-data-example.html',
                 styleUrls: ['dialog-data-example.css'],
             }]
-    }], function () { return [{ type: MatDialog }]; }, null);
+    }], function () { return [{ type: MatDialog }]; }, null); })();
 if (false) {
     /** @type {?} */
     DialogDataExample.prototype.dialog;
@@ -283,7 +283,7 @@ DialogDataExampleDialog.ctorParameters = () => [
         ɵɵadvance(3);
         ɵɵproperty("ngIf", ctx.data.animal === "lion");
     } }, directives: [MatDialogTitle, MatDialogContent, NgIf], encapsulation: 2 });
-/*@__PURE__*/ ɵsetClassMetadata(DialogDataExampleDialog, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogDataExampleDialog, [{
         type: Component,
         args: [{
                 selector: 'dialog-data-example-dialog',
@@ -292,7 +292,7 @@ DialogDataExampleDialog.ctorParameters = () => [
     }], function () { return [{ type: undefined, decorators: [{
                 type: Inject,
                 args: [MAT_DIALOG_DATA]
-            }] }]; }, null);
+            }] }]; }, null); })();
 if (false) {
     /** @type {?} */
     DialogDataExampleDialog.prototype.data;
@@ -337,14 +337,14 @@ DialogElementsExample.ctorParameters = () => [
         ɵɵtext(1, "Launch dialog");
         ɵɵelementEnd();
     } }, directives: [MatButton], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DialogElementsExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogElementsExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-elements-example',
                 templateUrl: 'dialog-elements-example.html',
                 styleUrls: ['dialog-elements-example.css'],
             }]
-    }], function () { return [{ type: MatDialog }]; }, null);
+    }], function () { return [{ type: MatDialog }]; }, null); })();
 if (false) {
     /** @type {?} */
     DialogElementsExample.prototype.dialog;
@@ -371,13 +371,13 @@ DialogElementsExampleDialog.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
     } }, directives: [MatDialogTitle, MatDialogContent, MatDialogActions, MatButton, MatDialogClose], encapsulation: 2 });
-/*@__PURE__*/ ɵsetClassMetadata(DialogElementsExampleDialog, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogElementsExampleDialog, [{
         type: Component,
         args: [{
                 selector: 'dialog-elements-example-dialog',
                 templateUrl: 'dialog-elements-example-dialog.html',
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -469,14 +469,14 @@ DialogOverviewExample.ctorParameters = () => [
         ɵɵadvance(4);
         ɵɵproperty("ngIf", ctx.animal);
     } }, directives: [MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatButton, NgIf], styles: [""] });
-/*@__PURE__*/ ɵsetClassMetadata(DialogOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'dialog-overview-example',
                 templateUrl: 'dialog-overview-example.html',
                 styleUrls: ['dialog-overview-example.css'],
             }]
-    }], function () { return [{ type: MatDialog }]; }, null);
+    }], function () { return [{ type: MatDialog }]; }, null); })();
 if (false) {
     /** @type {?} */
     DialogOverviewExample.prototype.animal;
@@ -544,7 +544,7 @@ DialogOverviewExampleDialog.ctorParameters = () => [
         ɵɵadvance(4);
         ɵɵproperty("mat-dialog-close", ctx.data.animal);
     } }, directives: [MatDialogTitle, MatDialogContent, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatDialogActions, MatButton, MatDialogClose], encapsulation: 2 });
-/*@__PURE__*/ ɵsetClassMetadata(DialogOverviewExampleDialog, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogOverviewExampleDialog, [{
         type: Component,
         args: [{
                 selector: 'dialog-overview-example-dialog',
@@ -553,7 +553,7 @@ DialogOverviewExampleDialog.ctorParameters = () => [
     }], function () { return [{ type: MatDialogRef }, { type: undefined, decorators: [{
                 type: Inject,
                 args: [MAT_DIALOG_DATA]
-            }] }]; }, null);
+            }] }]; }, null); })();
 if (false) {
     /** @type {?} */
     DialogOverviewExampleDialog.prototype.dialogRef;
@@ -605,7 +605,7 @@ DialogExamplesModule.decorators = [
             MatInputModule,
             FormsModule,
         ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(DialogExamplesModule, { declarations: [DialogContentExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DialogExamplesModule, { declarations: [DialogContentExample,
         DialogContentExampleDialog,
         DialogDataExample,
         DialogDataExampleDialog,
@@ -623,8 +623,8 @@ DialogExamplesModule.decorators = [
         DialogElementsExample,
         DialogElementsExampleDialog,
         DialogOverviewExample,
-        DialogOverviewExampleDialog] });
-/*@__PURE__*/ ɵsetClassMetadata(DialogExamplesModule, [{
+        DialogOverviewExampleDialog] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DialogExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -643,7 +643,7 @@ DialogExamplesModule.decorators = [
                     DialogOverviewExampleDialog,
                 ]
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogExamplesModule, DialogOverviewExample, DialogOverviewExampleDialog };
 //# sourceMappingURL=dialog.js.map

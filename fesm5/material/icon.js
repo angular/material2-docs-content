@@ -23,14 +23,14 @@ var IconOverviewExample = /** @class */ (function () {
         } }, directives: [MatIcon], styles: [""] });
     return IconOverviewExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(IconOverviewExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(IconOverviewExample, [{
         type: Component,
         args: [{
                 selector: 'icon-overview-example',
                 templateUrl: 'icon-overview-example.html',
                 styleUrls: ['icon-overview-example.css'],
             }]
-    }], null, null);
+    }], null, null); })();
 
 /**
  * @title SVG icons
@@ -57,14 +57,14 @@ var IconSvgExample = /** @class */ (function () {
         } }, directives: [MatIcon], styles: [""] });
     return IconSvgExample;
 }());
-/*@__PURE__*/ ɵsetClassMetadata(IconSvgExample, [{
+/*@__PURE__*/ (function () { ɵsetClassMetadata(IconSvgExample, [{
         type: Component,
         args: [{
                 selector: 'icon-svg-example',
                 templateUrl: 'icon-svg-example.html',
                 styleUrls: ['icon-svg-example.css'],
             }]
-    }], function () { return [{ type: MatIconRegistry }, { type: DomSanitizer }]; }, null);
+    }], function () { return [{ type: MatIconRegistry }, { type: DomSanitizer }]; }, null); })();
 
 var EXAMPLES = [
     IconOverviewExample,
@@ -88,10 +88,10 @@ var IconExamplesModule = /** @class */ (function () {
             ]] });
     return IconExamplesModule;
 }());
-/*@__PURE__*/ ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconOverviewExample,
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconOverviewExample,
         IconSvgExample], imports: [MatIconModule], exports: [IconOverviewExample,
-        IconSvgExample] });
-/*@__PURE__*/ ɵsetClassMetadata(IconExamplesModule, [{
+        IconSvgExample] }); })();
+/*@__PURE__*/ (function () { ɵsetClassMetadata(IconExamplesModule, [{
         type: NgModule,
         args: [{
                 imports: [
@@ -100,7 +100,7 @@ var IconExamplesModule = /** @class */ (function () {
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
             }]
-    }], null, null);
+    }], null, null); })();
 
 export { IconExamplesModule, IconOverviewExample, IconSvgExample };
 //# sourceMappingURL=icon.js.map

@@ -35,14 +35,14 @@
             } }, directives: [i1.MatList, i1.MatListItem, i2.MatDivider], styles: [""] });
         return DividerOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DividerOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DividerOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'divider-overview-example',
                     templateUrl: 'divider-overview-example.html',
                     styleUrls: ['divider-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         DividerOverviewExample,
@@ -66,9 +66,9 @@
                 ]] });
         return DividerExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerOverviewExample], imports: [i2.MatDividerModule,
-            i1.MatListModule] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(DividerExamplesModule, [{
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerOverviewExample], imports: [i2.MatDividerModule,
+            i1.MatListModule] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DividerExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -77,7 +77,7 @@
                     ],
                     declarations: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.DividerExamplesModule = DividerExamplesModule;
     exports.DividerOverviewExample = DividerOverviewExample;

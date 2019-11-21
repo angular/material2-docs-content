@@ -55,14 +55,14 @@
             } }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [".mat-tab-group[_ngcontent-%COMP%] {\n  margin-bottom: 48px;\n}"] });
         return TabGroupAlignExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupAlignExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupAlignExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-align-example',
                     templateUrl: 'tab-group-align-example.html',
                     styleUrls: ['tab-group-align-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Tab group animations
@@ -110,14 +110,14 @@
             } }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [".mat-tab-group[_ngcontent-%COMP%] {\n  margin-bottom: 48px;\n}"] });
         return TabGroupAnimationsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupAnimationsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupAnimationsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-animations-example',
                     templateUrl: 'tab-group-animations-example.html',
                     styleUrls: ['tab-group-animations-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TabGroupAsyncExample_ng_container_0_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementContainerStart(0);
@@ -179,14 +179,14 @@
             } }, directives: [i1.NgIf, i1$2.MatTabGroup, i1.NgForOf, i1$2.MatTab, i1$2.MatTabLabel], pipes: [i1.AsyncPipe], styles: [""] });
         return TabGroupAsyncExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupAsyncExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupAsyncExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-async-example',
                     templateUrl: 'tab-group-async-example.html',
                     styleUrls: ['tab-group-async-example.css'],
                 }]
-        }], function () { return []; }, null);
+        }], function () { return []; }, null); })();
 
     /**
      * @title Basic use of the tab group
@@ -217,14 +217,14 @@
             } }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [""] });
         return TabGroupBasicExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupBasicExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupBasicExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-basic-example',
                     templateUrl: 'tab-group-basic-example.html',
                     styleUrls: ['tab-group-basic-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TabGroupCustomLabelExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-icon", 1);
@@ -276,14 +276,14 @@
             } }, directives: [i1$2.MatTabGroup, i1$2.MatTab, i1$2.MatTabLabel, i2.MatIcon], styles: [".example-tab-icon[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
         return TabGroupCustomLabelExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupCustomLabelExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupCustomLabelExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-custom-label-example',
                     templateUrl: 'tab-group-custom-label-example.html',
                     styleUrls: ['tab-group-custom-label-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Tab group with dynamic height based on tab contents
@@ -315,14 +315,14 @@
             } }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [".example-small-box[_ngcontent-%COMP%], .example-large-box[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin: 16px;\n  padding: 16px;\n  border-radius: 8px;\n}\n\n.example-small-box[_ngcontent-%COMP%] {\n  height: 100px;\n  width: 100px;\n}\n\n.example-large-box[_ngcontent-%COMP%] {\n  height: 300px;\n  width: 300px;\n}"] });
         return TabGroupDynamicHeightExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupDynamicHeightExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupDynamicHeightExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-dynamic-height-example',
                     templateUrl: 'tab-group-dynamic-height-example.html',
                     styleUrls: ['tab-group-dynamic-height-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TabGroupDynamicExample_mat_tab_12_Template(rf, ctx) { if (rf & 1) {
         var _r13 = i0.ɵɵgetCurrentView();
@@ -400,14 +400,14 @@
             } }, directives: [i1$3.MatFormField, i2$1.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i4.MatButton, i5.MatCheckbox, i1$2.MatTabGroup, i1.NgForOf, i1$2.MatTab], styles: [".example-input-label[_ngcontent-%COMP%], .example-add-tab-button[_ngcontent-%COMP%], .example-delete-tab-button[_ngcontent-%COMP%] {\n  margin: 8px;\n}"] });
         return TabGroupDynamicExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupDynamicExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupDynamicExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-dynamic-example',
                     templateUrl: 'tab-group-dynamic-example.html',
                     styleUrls: ['tab-group-dynamic-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Tab group with the headers on the bottom
@@ -438,14 +438,14 @@
             } }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [""] });
         return TabGroupHeaderBelowExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupHeaderBelowExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupHeaderBelowExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-header-below-example',
                     templateUrl: 'tab-group-header-below-example.html',
                     styleUrls: ['tab-group-header-below-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TabGroupLazyLoadedExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵtext(0);
@@ -504,14 +504,14 @@
             } }, directives: [i1$2.MatTabGroup, i1$2.MatTab, i1$2.MatTabContent], pipes: [i1.DatePipe], styles: [""] });
         return TabGroupLazyLoadedExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupLazyLoadedExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupLazyLoadedExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-lazy-loaded-example',
                     templateUrl: 'tab-group-lazy-loaded-example.html',
                     styleUrls: ['tab-group-lazy-loaded-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Tab group with stretched labels
@@ -542,14 +542,14 @@
             } }, directives: [i1$2.MatTabGroup, i1$2.MatTab], styles: [".example-stretched-tabs[_ngcontent-%COMP%] {\n  max-width: 800px;\n}"] });
         return TabGroupStretchedExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupStretchedExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupStretchedExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-stretched-example',
                     templateUrl: 'tab-group-stretched-example.html',
                     styleUrls: ['tab-group-stretched-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Customizing the theme options on the tab group
@@ -611,14 +611,14 @@
             } }, directives: [i1$1.MatButtonToggleGroup, i1$1.MatButtonToggle, i1$2.MatTabGroup, i1$2.MatTab], styles: [".example-button-toggle-label[_ngcontent-%COMP%] {\n  display: inline-block;\n  margin: 16px;\n}"] });
         return TabGroupThemeExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupThemeExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupThemeExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-group-theme-example',
                     templateUrl: 'tab-group-theme-example.html',
                     styleUrls: ['tab-group-theme-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     function TabNavBarBasicExample_a_1_Template(rf, ctx) { if (rf & 1) {
         var _r23 = i0.ɵɵgetCurrentView();
@@ -678,14 +678,14 @@
             } }, directives: [i1$2.MatTabNav, i1.NgForOf, i1$2.MatTabLink, i4.MatButton], styles: [".example-action-button[_ngcontent-%COMP%] {\n  margin-top: 8px;\n  margin-right: 8px;\n}"] });
         return TabNavBarBasicExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabNavBarBasicExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabNavBarBasicExample, [{
             type: i0.Component,
             args: [{
                     selector: 'tab-nav-bar-basic-example',
                     templateUrl: 'tab-nav-bar-basic-example.html',
                     styleUrls: ['tab-nav-bar-basic-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         TabGroupAlignExample,
@@ -733,7 +733,7 @@
                 ]] });
         return TabGroupExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(TabGroupExamplesModule, { declarations: [TabGroupAlignExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(TabGroupExamplesModule, { declarations: [TabGroupAlignExample,
             TabGroupAnimationsExample,
             TabGroupAsyncExample,
             TabGroupBasicExample,
@@ -762,8 +762,8 @@
             TabGroupLazyLoadedExample,
             TabGroupStretchedExample,
             TabGroupThemeExample,
-            TabNavBarBasicExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(TabGroupExamplesModule, [{
+            TabNavBarBasicExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -779,7 +779,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.TabGroupAlignExample = TabGroupAlignExample;
     exports.TabGroupAnimationsExample = TabGroupAnimationsExample;

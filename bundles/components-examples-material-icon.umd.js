@@ -25,14 +25,14 @@
             } }, directives: [i1.MatIcon], styles: [""] });
         return IconOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(IconOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(IconOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'icon-overview-example',
                     templateUrl: 'icon-overview-example.html',
                     styleUrls: ['icon-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title SVG icons
@@ -59,14 +59,14 @@
             } }, directives: [i1.MatIcon], styles: [""] });
         return IconSvgExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(IconSvgExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(IconSvgExample, [{
             type: i0.Component,
             args: [{
                     selector: 'icon-svg-example',
                     templateUrl: 'icon-svg-example.html',
                     styleUrls: ['icon-svg-example.css'],
                 }]
-        }], function () { return [{ type: i1.MatIconRegistry }, { type: i2.DomSanitizer }]; }, null);
+        }], function () { return [{ type: i1.MatIconRegistry }, { type: i2.DomSanitizer }]; }, null); })();
 
     var EXAMPLES = [
         IconOverviewExample,
@@ -90,10 +90,10 @@
                 ]] });
         return IconExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconOverviewExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(IconExamplesModule, { declarations: [IconOverviewExample,
             IconSvgExample], imports: [i1.MatIconModule], exports: [IconOverviewExample,
-            IconSvgExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(IconExamplesModule, [{
+            IconSvgExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(IconExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -102,7 +102,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.IconExamplesModule = IconExamplesModule;
     exports.IconOverviewExample = IconOverviewExample;

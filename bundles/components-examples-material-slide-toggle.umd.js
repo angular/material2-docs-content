@@ -82,14 +82,14 @@
             } }, directives: [i1$1.MatCard, i1$1.MatCardContent, i2.MatRadioGroup, i1.NgControlStatus, i1.NgModel, i2.MatRadioButton, i4.MatCheckbox, i2$1.MatSlideToggle], styles: [".example-h2[_ngcontent-%COMP%] {\n  margin: 10px;\n}\n\n.example-section[_ngcontent-%COMP%] {\n  display: flex;\n  align-content: center;\n  align-items: center;\n  height: 60px;\n}\n\n.example-margin[_ngcontent-%COMP%] {\n  margin: 10px;\n}"] });
         return SlideToggleConfigurableExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SlideToggleConfigurableExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SlideToggleConfigurableExample, [{
             type: i0.Component,
             args: [{
                     selector: 'slide-toggle-configurable-example',
                     templateUrl: 'slide-toggle-configurable-example.html',
                     styleUrls: ['slide-toggle-configurable-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     /**
      * @title Slide-toggle with forms
@@ -170,14 +170,14 @@
             } }, directives: [i2$1.MatSlideToggle, i1.NgControlStatus, i1.NgModel, i1.NgControlStatusGroup, i1.NgForm, i2$1.MatSlideToggleRequiredValidator, i1.RequiredValidator, i3.MatButton, i1.FormGroupDirective, i1.FormControlName], styles: [".example-form[_ngcontent-%COMP%]   mat-slide-toggle[_ngcontent-%COMP%] {\n  margin: 8px 0;\n  display: block;\n}"] });
         return SlideToggleFormsExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SlideToggleFormsExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SlideToggleFormsExample, [{
             type: i0.Component,
             args: [{
                     selector: 'slide-toggle-forms-example',
                     templateUrl: './slide-toggle-forms-example.html',
                     styleUrls: ['./slide-toggle-forms-example.css'],
                 }]
-        }], function () { return [{ type: i1.FormBuilder }]; }, null);
+        }], function () { return [{ type: i1.FormBuilder }]; }, null); })();
 
     /**
      * @title Basic slide-toggles
@@ -200,14 +200,14 @@
             } }, directives: [i2$1.MatSlideToggle], styles: [""] });
         return SlideToggleOverviewExample;
     }());
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SlideToggleOverviewExample, [{
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SlideToggleOverviewExample, [{
             type: i0.Component,
             args: [{
                     selector: 'slide-toggle-overview-example',
                     templateUrl: 'slide-toggle-overview-example.html',
                     styleUrls: ['slide-toggle-overview-example.css'],
                 }]
-        }], null, null);
+        }], null, null); })();
 
     var EXAMPLES = [
         SlideToggleConfigurableExample,
@@ -244,7 +244,7 @@
                 ]] });
         return SlideToggleExamplesModule;
     }());
-    /*@__PURE__*/ i0.ɵɵsetNgModuleScope(SlideToggleExamplesModule, { declarations: [SlideToggleConfigurableExample,
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(SlideToggleExamplesModule, { declarations: [SlideToggleConfigurableExample,
             SlideToggleFormsExample,
             SlideToggleOverviewExample], imports: [i1.FormsModule,
             i3.MatButtonModule,
@@ -254,8 +254,8 @@
             i2$1.MatSlideToggleModule,
             i1.ReactiveFormsModule], exports: [SlideToggleConfigurableExample,
             SlideToggleFormsExample,
-            SlideToggleOverviewExample] });
-    /*@__PURE__*/ i0.ɵsetClassMetadata(SlideToggleExamplesModule, [{
+            SlideToggleOverviewExample] }); })();
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SlideToggleExamplesModule, [{
             type: i0.NgModule,
             args: [{
                     imports: [
@@ -270,7 +270,7 @@
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
                 }]
-        }], null, null);
+        }], null, null); })();
 
     exports.SlideToggleConfigurableExample = SlideToggleConfigurableExample;
     exports.SlideToggleExamplesModule = SlideToggleExamplesModule;
