@@ -676,5 +676,152 @@ may need to explicitly wait for tasks outside <code>NgZone</code>, as this does 
           <span header-link="api-for-harness-environment-authors"></span>
           API for harness environment authors
         </h3>
-      <p>TODO(mmalerba): Fill in docs for harness environment authors</p>
+      <p>Harness environment authors are developers who want to add support for using component harnesses in
+additional testing environments. Out-of-the-box, Angular CDK&#39;s component harnesses can be used in
+Protractor E2E tests and Karma unit tests. Developers can support additional environments by
+creating custom implementations of <code>TestElement</code> and <code>HarnessEnvironment</code>. </p>
+
+        <h4 id="creating-a-code-testelement-code-implementation-for-the-environment" class="docs-header-link">
+          <span header-link="creating-a-code-testelement-code-implementation-for-the-environment"></span>
+          Creating a <code>TestElement</code> implementation for the environment
+        </h4>
+      <p>The first step in adding support for a new testing environment is to create a <code>TestElement</code>
+implementation. The <code>TestElement</code> interface serves as an environment-agnostic representation of a
+DOM element; it lets harnesses interact with DOM elements regardless of the underlying environment.
+Because some environments don&#39;t support interacting with DOM elements synchronously
+(e.g. webdriver), all of <code>TestElement</code> methods are asynchronous, returning a <code>Promise</code> with the
+result of the operation.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>blur(): Promise&lt;void&gt;</code></td>
+<td>Blurs the element.</td>
+</tr>
+<tr>
+<td><code>clear(): Promise&lt;void&gt;</code></td>
+<td>Clears the text from an element (only applies for <code>&lt;input&gt;</code> and <code>&lt;textarea&gt;</code>).</td>
+</tr>
+<tr>
+<td><code>click(relativeX?: number, relativeY?: number): Promise&lt;void&gt;</code></td>
+<td>Clicks an element at a point relative to it&#39;s top-left corner.</td>
+</tr>
+<tr>
+<td><code>focus(): Promise&lt;void&gt;</code></td>
+<td>Focuses the element.</td>
+</tr>
+<tr>
+<td><code>getCssValue(property: string): Promise&lt;string&gt;</code></td>
+<td>Gets the computed CSS value of the given property for the element.</td>
+</tr>
+<tr>
+<td><code>hover(): Promise&lt;void&gt;</code></td>
+<td>Hovers the mouse over the element.</td>
+</tr>
+<tr>
+<td><code>sendKeys(...keys: (string | TestKey)[]): Promise&lt;void&gt;</code></td>
+<td>Sends a sequence of key events to the element.</td>
+</tr>
+<tr>
+<td><code>sendKeys(modifiers: ModifierKeys, ...keys: (string | TestKey)[]): Promise&lt;void&gt;</code></td>
+<td>Sends a sequence of key events to the element, while holding a set of modifier keys.</td>
+</tr>
+<tr>
+<td><code>text(): Promise&lt;string&gt;</code></td>
+<td>Gets the text content of the element.</td>
+</tr>
+<tr>
+<td><code>getAttribute(name: string): Promise&lt;string | null&gt;</code></td>
+<td>Gets the value of the given HTML attribute for the element.</td>
+</tr>
+<tr>
+<td><code>hasClass(name: string): Promise&lt;boolean&gt;</code></td>
+<td>Checks whether the element has the given class.</td>
+</tr>
+<tr>
+<td><code>getDimensions(): Promise&lt;ElementDimensions&gt;</code></td>
+<td>Gets the dimensions of the element.</td>
+</tr>
+<tr>
+<td><code>getProperty(name: string): Promise&lt;any&gt;</code></td>
+<td>Gets the value of the given property for the element.</td>
+</tr>
+<tr>
+<td><code>matchesSelector(selector: string): Promise&lt;boolean&gt;</code></td>
+<td>Checks whether the given selector matches the element.</td>
+</tr>
+</tbody></table>
+<p>The <code>TestElement</code> interface consists largely of methods that resemble methods
+available on <code>HTMLElement</code>; similar methods exist in most test environments, which makes
+implementing the methods fairly straightforward. However, one important difference to note when
+implementing the <code>sendKeys</code> method, is that the key codes in the <code>TestKey</code>
+enum likely differ from the key codes used in the test environment. Environment authors should
+maintain a mapping from <code>TestKey</code> codes to the codes used in the particular testing environment.</p>
+<p>The 
+<a href="https://github.com/angular/components/blob/master/src/cdk/testing/testbed/unit-test-element.ts#L57"><code>UnitTestElement</code></a>
+and 
+<a href="https://github.com/angular/components/blob/master/src/cdk/testing/protractor/protractor-element.ts#L67"><code>ProtractorElement</code></a>
+implementations in Angular CDK serve as good examples of implementations of this interface.</p>
+
+        <h4 id="creating-a-code-harnessenvironemnt-code-implementation-for-the-environment" class="docs-header-link">
+          <span header-link="creating-a-code-harnessenvironemnt-code-implementation-for-the-environment"></span>
+          Creating a <code>HarnessEnvironemnt</code> implementation for the environment
+        </h4>
+      <p>Test authors use <code>HarnessEnvironemnt</code> to create component harness instances for use in tests. </p>
+<p><code>HarnessEnvironment</code> is an abstract class that must be extended to create a concrete subclass for
+the new environment. When supporting a new test environment, you must create a <code>HarnessEnvironment</code>
+subclass that add concrete implementations for all abstract members.</p>
+<p>You will notice that <code>HarnessEnvironment</code> has a generic type parameter: <code>HarnessEnvironment&lt;E&gt;</code>.
+This parameter, <code>E</code>, represents the raw element type of the environment. For example, this parameter
+is <code>Element</code> for unit test environments.</p>
+<p>The following are the abstract methods that must be implemented:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>abstract getDocumentRoot(): E</code></td>
+<td>Gets the root element for the environment (e.g. <code>document.body</code>).</td>
+</tr>
+<tr>
+<td><code>abstract createTestElement(element: E): TestElement</code></td>
+<td>Creates a <code>TestElement</code> for the given raw element.</td>
+</tr>
+<tr>
+<td><code>abstract createEnvironment(element: E): HarnessEnvironment</code></td>
+<td>Creates a <code>HarnessEnvironment</code> rooted at the given raw element.</td>
+</tr>
+<tr>
+<td><code>abstract getAllRawElements(selector: string): Promise&lt;E[]&gt;</code></td>
+<td>Gets all of the raw elements under the root element of the environment matching the given selector.</td>
+</tr>
+<tr>
+<td><code>abstract forceStabilize(): Promise&lt;void&gt;</code></td>
+<td>Gets a <code>Promise</code> that resolves when the <code>NgZone</code> is stable. Additionally, if applicable, tells <code>NgZone</code> to stabilize (e.g. calling <code>flush()</code> in a <code>fakeAsync</code> test).</td>
+</tr>
+<tr>
+<td><code>abstract waitForTasksOutsideAngular(): Promise&lt;void&gt;</code></td>
+<td>Gets a <code>Promise</code> that resolves when the parent zone of <code>NgZone</code> is stable.</td>
+</tr>
+</tbody></table>
+<p>In addition to implementing the missing methods, this class should provide a way for test authors to
+get <code>ComponentHarness</code> instances. The recommended approach is to have a protected constructor and
+provide a static method called <code>loader</code> that returns a <code>HarnessLoader</code> instance. This allows test
+authors to write code like: <code>SomeHarnessEnvironment.loader().getHarness(...)</code>. Depending on the
+needs of the particular environment, the class may provide several different static methods or
+require arguments to be passed. (e.g. the <code>loader</code> method on <code>TestbedHarnessEnvironment</code> takes a
+<code>ComponentFixture</code>, and the class provides additional static methods called <code>documentRootLoader</code> and
+<code>harnessForFixture</code>).</p>
+<p>The 
+<a href="https://github.com/angular/components/blob/master/src/cdk/testing/testbed/testbed-harness-environment.ts#L20"><code>TestbedHarnessEnvironment</code></a>
+and 
+<a href="https://github.com/angular/components/blob/master/src/cdk/testing/protractor/protractor-harness-environment.ts#L16"><code>ProtractorHarnessEnvironment</code></a>
+implementations in Angular CDK serve as good examples of implementations of this interface.</p>
 </div>
