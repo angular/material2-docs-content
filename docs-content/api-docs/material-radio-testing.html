@@ -75,7 +75,9 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>An optional filter to apply to the child radio buttons. The first tab matching
+    the filter will be selected.</p>
+
       </p>
     </td>
   </tr>
@@ -232,7 +234,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets all radio buttons which are part of the radio-group.</p>
+      <p>Gets a list of radio buttons which are part of the radio-group.</p>
 
     </td>
   </tr><thead>
@@ -249,7 +251,8 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>Optionally filters which radio buttons are included.</p>
+
       </p>
     </td>
   </tr>
@@ -335,8 +338,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Blurs the radio-button and returns a void promise that indicates when the
-action is complete.</p>
+      <p>Blurs the radio-button.</p>
 
     </td>
   </tr><thead>
@@ -369,8 +371,7 @@ action is complete.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Puts the radio-button in a checked state by clicking it if it is currently unchecked,
-or doing nothing if it is already checked. Returns a void promise that indicates when
-the action is complete.</p>
+or doing nothing if it is already checked.</p>
 
     </td>
   </tr><thead>
@@ -402,8 +403,7 @@ the action is complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the radio-button and returns a void promise that indicates when the
-action is complete.</p>
+      <p>Focuses the radio-button.</p>
 
     </td>
   </tr><thead>
@@ -435,7 +435,7 @@ action is complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a promise for the radio-button&#39;s id.</p>
+      <p>Gets the radio-button&#39;s id.</p>
 
     </td>
   </tr><thead>
@@ -466,7 +466,7 @@ action is complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a promise for the radio-button&#39;s label text.</p>
+      <p>Gets the radio-button&#39;s label text.</p>
 
     </td>
   </tr><thead>
@@ -497,7 +497,7 @@ action is complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a promise for the radio-button&#39;s name.</p>
+      <p>Gets the radio-button&#39;s name.</p>
 
     </td>
   </tr><thead>
@@ -528,10 +528,9 @@ action is complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the value of the radio-button. The radio-button value will be
-converted to a string.</p>
-<p>Note that this means that radio-button&#39;s with objects as value will
-intentionally have the <code>[object Object]</code> as return value.</p>
+      <p>Gets the value of the radio-button. The radio-button value will be converted to a string.</p>
+<p>Note: This means that for radio-button&#39;s with an object as a value <code>[object Object]</code> is
+intentionally returned.</p>
 
     </td>
   </tr><thead>
@@ -689,7 +688,8 @@ intentionally have the <code>[object Object]</code> as return value.</p>
 <h4 id="RadioGroupHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="RadioGroupHarnessFilters"></span>
   <code>RadioGroupHarnessFilters</code>
-</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatRadioGroupHarness</code> instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -703,7 +703,8 @@ intentionally have the <code>[object Object]</code> as return value.</p>
       <code>name: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Only find instances whose name attribute is the given value.</p>
+</td>
 </tr>
 
 
@@ -721,7 +722,8 @@ intentionally have the <code>[object Object]</code> as return value.</p>
 <h4 id="RadioButtonHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="RadioButtonHarnessFilters"></span>
   <code>RadioButtonHarnessFilters</code>
-</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatRadioButtonHarness</code> instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -735,7 +737,8 @@ intentionally have the <code>[object Object]</code> as return value.</p>
       <code>label: string | RegExp</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Only find instances whose label matches the given value.</p>
+</td>
 </tr>
 
 
@@ -747,7 +750,8 @@ intentionally have the <code>[object Object]</code> as return value.</p>
       <code>name: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Only find instances whose name attribute is the given value.</p>
+</td>
 </tr>
 
 

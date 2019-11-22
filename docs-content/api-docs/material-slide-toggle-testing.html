@@ -58,7 +58,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Blurs the slide-toggle and returns a void promise that indicates action completion.</p>
+      <p>Blurs the slide-toggle.</p>
 
     </td>
   </tr><thead>
@@ -91,9 +91,7 @@
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Puts the slide-toggle in a checked state by toggling it if it is currently unchecked, or doing
-nothing if it is already checked. Returns a void promise that indicates when the action is
-complete.</p>
-<p>Note: This attempts to check the slide-toggle as a user would, by clicking it.</p>
+nothing if it is already checked.</p>
 
     </td>
   </tr><thead>
@@ -125,7 +123,7 @@ complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the slide-toggle and returns a void promise that indicates action completion.</p>
+      <p>Focuses the slide-toggle.</p>
 
     </td>
   </tr><thead>
@@ -157,7 +155,7 @@ complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a promise for the slide-toggle&#39;s aria-label.</p>
+      <p>Gets the slide-toggle&#39;s aria-label.</p>
 
     </td>
   </tr><thead>
@@ -188,7 +186,7 @@ complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a promise for the slide-toggle&#39;s aria-labelledby.</p>
+      <p>Gets the slide-toggle&#39;s aria-labelledby.</p>
 
     </td>
   </tr><thead>
@@ -219,7 +217,7 @@ complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a promise for the slide-toggle&#39;s label text.</p>
+      <p>Gets the slide-toggle&#39;s label text.</p>
 
     </td>
   </tr><thead>
@@ -250,7 +248,7 @@ complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a promise for the slide-toggle&#39;s name.</p>
+      <p>Gets the slide-toggle&#39;s name.</p>
 
     </td>
   </tr><thead>
@@ -312,7 +310,7 @@ complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a boolean promise indicating if the slide-toggle is checked.</p>
+      <p>Whether the slide-toggle is checked.</p>
 
     </td>
   </tr><thead>
@@ -343,7 +341,7 @@ complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a boolean promise indicating if the slide-toggle is disabled.</p>
+      <p>Whether the slide-toggle is disabled.</p>
 
     </td>
   </tr><thead>
@@ -374,7 +372,7 @@ complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a boolean promise indicating if the slide-toggle is required.</p>
+      <p>Whether the slide-toggle is required.</p>
 
     </td>
   </tr><thead>
@@ -405,7 +403,7 @@ complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a boolean promise indicating if the slide-toggle is valid.</p>
+      <p>Whether the slide-toggle is valid.</p>
 
     </td>
   </tr><thead>
@@ -436,9 +434,7 @@ complete.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Toggle the checked state of the slide-toggle and returns a void promise that indicates when the
-action is complete.</p>
-<p>Note: This toggles the slide-toggle as a user would, by clicking it.</p>
+      <p>Toggle the checked state of the slide-toggle.</p>
 
     </td>
   </tr><thead>
@@ -471,9 +467,7 @@ action is complete.</p>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Puts the slide-toggle in an unchecked state by toggling it if it is currently checked, or doing
-nothing if it is already unchecked. Returns a void promise that indicates when the action is
-complete.</p>
-<p>Note: This toggles the slide-toggle as a user would, by clicking it.</p>
+nothing if it is already unchecked.</p>
 
     </td>
   </tr><thead>
@@ -508,7 +502,8 @@ complete.</p>
 <h4 id="SlideToggleHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="SlideToggleHarnessFilters"></span>
   <code>SlideToggleHarnessFilters</code>
-</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatSlideToggleHarness</code> instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -522,7 +517,8 @@ complete.</p>
       <code>label: string | RegExp</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Only find instances whose label matches the given value.</p>
+</td>
 </tr>
 
 
@@ -534,7 +530,8 @@ complete.</p>
       <code>name: string</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Only find instances whose name is the given value.</p>
+</td>
 </tr>
 
 

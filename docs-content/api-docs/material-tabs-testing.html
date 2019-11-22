@@ -89,7 +89,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets all tabs of the tab group.</p>
+      <p>Gets the list of tabs in the tab group.</p>
 
     </td>
   </tr><thead>
@@ -106,7 +106,8 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>Optionally filters which tabs are included.</p>
+
       </p>
     </td>
   </tr>
@@ -186,7 +187,9 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>An optional filter to apply to the child tabs. The first tab matching the filter
+    will be selected.</p>
+
       </p>
     </td>
   </tr>
@@ -242,7 +245,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the aria label of the tab.</p>
+      <p>Gets the aria-label of the tab.</p>
 
     </td>
   </tr><thead>
@@ -491,8 +494,7 @@ content area.</p>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects the given tab by clicking on the label. Tab cannot be
-selected if disabled.</p>
+      <p>Selects the given tab by clicking on the label. Tab cannot be selected if disabled.</p>
 
     </td>
   </tr><thead>
@@ -527,7 +529,8 @@ selected if disabled.</p>
 <h4 id="TabHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="TabHarnessFilters"></span>
   <code>TabHarnessFilters</code>
-</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatRadioButtonHarness</code> instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -541,7 +544,8 @@ selected if disabled.</p>
       <code>label: string | RegExp</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Only find instances whose label matches the given value.</p>
+</td>
 </tr>
 
 
@@ -559,7 +563,8 @@ selected if disabled.</p>
 <h4 id="TabGroupHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="TabGroupHarnessFilters"></span>
   <code>TabGroupHarnessFilters</code>
-</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatRadioButtonHarness</code> instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -573,7 +578,8 @@ selected if disabled.</p>
       <code>selectedTabLabel: string | RegExp</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Only find instances whose selected tab label matches the given value.</p>
+</td>
 </tr>
 
 

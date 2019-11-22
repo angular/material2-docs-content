@@ -58,7 +58,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Blurs the menu and returns a void promise that indicates when the action is complete.</p>
+      <p>Blurs the menu.</p>
 
     </td>
   </tr><thead>
@@ -88,7 +88,12 @@
       <th colspan="2" class="docs-api-method-name-cell">clickItem
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Clicks an item in the menu, and optionally continues clicking items in subsequent sub-menus.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -97,12 +102,14 @@
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        filter</p>
+        itemFilter</p>
       <code class="docs-api-method-parameter-type">Pick&lt;MenuItemHarnessFilters, &quot;text&quot; | &quot;hasSubmenu&quot; | &quot;selector&quot;&gt;</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>A filter used to represent which item in the menu should be clicked. The
+    first matching menu item will be clicked.</p>
+
       </p>
     </td>
   </tr>
@@ -110,7 +117,23 @@
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        ...filters</p>
+        subItemFilters</p>
+      <code class="docs-api-method-parameter-type"></code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        <p>A list of filters representing the items to click in any subsequent
+    sub-menus. The first item in the sub-menu matching the corresponding filter in
+    <code>subItemFilters</code> will be clicked.</p>
+
+      </p>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        ...subItemFilters</p>
       <code class="docs-api-method-parameter-type">Pick&lt;MenuItemHarnessFilters, &quot;text&quot; | &quot;hasSubmenu&quot; | &quot;selector&quot;&gt;[]</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
@@ -146,7 +169,12 @@
       <th colspan="2" class="docs-api-method-name-cell">close
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Closes the menu.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -175,7 +203,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the menu and returns a void promise that indicates when the action is complete.</p>
+      <p>Focuses the menu.</p>
 
     </td>
   </tr><thead>
@@ -205,7 +233,12 @@
       <th colspan="2" class="docs-api-method-name-cell">getItems
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a list of <code>MatMenuItemHarness</code> representing the items in the menu.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-parameters-header-row">
       <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
     </tr>
@@ -219,7 +252,8 @@
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>Optionally filters which menu items are included.</p>
+
       </p>
     </td>
   </tr>
@@ -249,7 +283,12 @@
       <th colspan="2" class="docs-api-method-name-cell">getTriggerText
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text of the menu&#39;s trigger element.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -308,7 +347,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a boolean promise indicating if the menu is disabled.</p>
+      <p>Whether the menu is disabled.</p>
 
     </td>
   </tr><thead>
@@ -368,7 +407,12 @@
       <th colspan="2" class="docs-api-method-name-cell">open
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Opens the menu.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -420,7 +464,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Blurs the menu and returns a void promise that indicates when the action is complete.</p>
+      <p>Blurs the menu item.</p>
 
     </td>
   </tr><thead>
@@ -484,7 +528,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the menu and returns a void promise that indicates when the action is complete.</p>
+      <p>Focuses the menu item.</p>
 
     </td>
   </tr><thead>
@@ -545,7 +589,12 @@
       <th colspan="2" class="docs-api-method-name-cell">getText
       </th>
     </tr>
-  </thead><thead>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text of the menu item.</p>
+
+    </td>
+  </tr><thead>
     <tr class="docs-api-method-returns-header-row">
       <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
     </tr>
@@ -635,7 +684,7 @@
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets a boolean promise indicating if the menu is disabled.</p>
+      <p>Whether the menu is disabled.</p>
 
     </td>
   </tr><thead>
@@ -669,7 +718,8 @@
 <h4 id="MenuHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="MenuHarnessFilters"></span>
   <code>MenuHarnessFilters</code>
-</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatMenuHarness</code> instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -683,7 +733,8 @@
       <code>triggerText: string | RegExp</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Only find instances whose trigger text matches the given value.</p>
+</td>
 </tr>
 
 
@@ -701,7 +752,8 @@
 <h4 id="MenuItemHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
   <span header-link="MenuItemHarnessFilters"></span>
   <code>MenuItemHarnessFilters</code>
-</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatMenuItemHarness</code> instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -715,7 +767,8 @@
       <code>hasSubmenu: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Only find instances that have a sub-menu.</p>
+</td>
 </tr>
 
 
@@ -727,7 +780,8 @@
       <code>text: string | RegExp</code>
     </p>
   </td>
-  <td class="docs-api-property-description"></td>
+  <td class="docs-api-property-description"><p>Only find instances whose text matches the given value.</p>
+</td>
 </tr>
 
 
