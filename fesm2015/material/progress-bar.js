@@ -8,6 +8,7 @@ import { MatSlider, MatSliderModule } from '@angular/material/slider';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/progress-bar/progress-bar-buffer/progress-bar-buffer-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -37,6 +38,7 @@ ProgressBarBufferExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/progress-bar/progress-bar-configurable/progress-bar-configurable-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function ProgressBarConfigurableExample_section_26_Template(rf, ctx) { if (rf & 1) {
@@ -178,6 +180,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/progress-bar/progress-bar-determinate/progress-bar-determinate-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -207,6 +210,7 @@ ProgressBarDeterminateExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/progress-bar/progress-bar-indeterminate/progress-bar-indeterminate-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -236,6 +240,7 @@ ProgressBarIndeterminateExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/progress-bar/progress-bar-query/progress-bar-query-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -265,6 +270,7 @@ ProgressBarQueryExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/progress-bar/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

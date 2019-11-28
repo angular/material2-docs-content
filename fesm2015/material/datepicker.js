@@ -15,6 +15,7 @@ import _rollupMoment__default, {  } from 'moment';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-api/datepicker-api-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -56,6 +57,7 @@ DatepickerApiExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-color/datepicker-color-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -111,6 +113,7 @@ DatepickerColorExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-custom-header/datepicker-custom-header-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -379,6 +382,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-custom-icon/datepicker-custom-icon-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -422,6 +426,7 @@ DatepickerCustomIconExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-date-class/datepicker-date-class-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -481,6 +486,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-disabled/datepicker-disabled-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -546,6 +552,7 @@ DatepickerDisabledExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-events/datepicker-events-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function DatepickerEventsExample_div_6_Template(rf, ctx) { if (rf & 1) {
@@ -617,6 +624,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-filter/datepicker-filter-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -672,6 +680,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-formats/datepicker-formats-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
@@ -766,6 +775,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-locale/datepicker-locale-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -873,6 +883,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-min-max/datepicker-min-max-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -927,6 +938,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-moment/datepicker-moment-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
@@ -996,6 +1008,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-overview/datepicker-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -1035,6 +1048,7 @@ DatepickerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-start-view/datepicker-start-view-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -1083,6 +1097,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-touch/datepicker-touch-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -1122,6 +1137,7 @@ DatepickerTouchExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-value/datepicker-value-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -1191,6 +1207,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/datepicker-views-selection/datepicker-views-selection-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
@@ -1311,6 +1328,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/datepicker/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

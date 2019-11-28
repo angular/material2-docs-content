@@ -5,6 +5,7 @@ import { BehaviorSubject } from 'rxjs';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/table/cdk-table-basic-flex/cdk-table-basic-flex-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkTableBasicFlexExample_cdk_header_cell_2_Template(rf, ctx) { if (rf & 1) {
@@ -192,6 +193,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/table/cdk-table-basic/cdk-table-basic-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkTableBasicExample_th_2_Template(rf, ctx) { if (rf & 1) {
@@ -379,6 +381,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/table/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

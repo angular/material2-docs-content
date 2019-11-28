@@ -15,6 +15,7 @@ import { MatOption } from '@angular/material/core';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/form-field/form-field-appearance/form-field-appearance-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -99,6 +100,7 @@ FormFieldAppearanceExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/form-field/form-field-custom-control/form-field-custom-control-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -469,6 +471,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/form-field/form-field-error/form-field-error-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function FormFieldErrorExample_mat_error_3_Template(rf, ctx) { if (rf & 1) {
@@ -532,6 +535,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/form-field/form-field-hint/form-field-hint-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -582,6 +586,7 @@ FormFieldHintExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/form-field/form-field-label/form-field-label-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -689,6 +694,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/form-field/form-field-overview/form-field-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -732,6 +738,7 @@ FormFieldOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/form-field/form-field-prefix-suffix/form-field-prefix-suffix-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -794,6 +801,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/form-field/form-field-theming/form-field-theming-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function FormFieldThemingExample_mat_error_11_Template(rf, ctx) { if (rf & 1) {
@@ -880,6 +888,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/form-field/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

@@ -11,6 +11,7 @@ import { MatOption } from '@angular/material/core';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/tooltip/tooltip-auto-hide/tooltip-auto-hide-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TooltipAutoHideExample_mat_option_2_Template(rf, ctx) { if (rf & 1) {
@@ -76,6 +77,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/tooltip/tooltip-custom-class/tooltip-custom-class-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -113,6 +115,7 @@ TooltipCustomClassExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/tooltip/tooltip-delay/tooltip-delay-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -167,6 +170,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/tooltip/tooltip-disabled/tooltip-disabled-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -212,6 +216,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/tooltip/tooltip-manual/tooltip-manual-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -261,6 +266,7 @@ TooltipManualExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/tooltip/tooltip-message/tooltip-message-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -307,6 +313,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/tooltip/tooltip-modified-defaults/tooltip-modified-defaults-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -355,6 +362,7 @@ TooltipModifiedDefaultsExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/tooltip/tooltip-overview/tooltip-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -386,6 +394,7 @@ TooltipOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/tooltip/tooltip-position/tooltip-position-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TooltipPositionExample_mat_option_2_Template(rf, ctx) { if (rf & 1) {
@@ -449,6 +458,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/tooltip/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

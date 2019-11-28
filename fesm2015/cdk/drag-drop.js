@@ -6,6 +6,7 @@ import { TemplatePortal } from '@angular/cdk/portal';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-axis-lock/cdk-drag-drop-axis-lock-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -40,6 +41,7 @@ CdkDragDropAxisLockExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-boundary/cdk-drag-drop-boundary-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -73,6 +75,7 @@ CdkDragDropBoundaryExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-connected-sorting-group/cdk-drag-drop-connected-sorting-group-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkDragDropConnectedSortingGroupExample_div_5_Template(rf, ctx) { if (rf & 1) {
@@ -181,6 +184,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-connected-sorting/cdk-drag-drop-connected-sorting-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkDragDropConnectedSortingExample_div_5_Template(rf, ctx) { if (rf & 1) {
@@ -290,6 +294,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-custom-placeholder/cdk-drag-drop-custom-placeholder-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkDragDropCustomPlaceholderExample_div_1_div_1_Template(rf, ctx) { if (rf & 1) {
@@ -361,6 +366,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-custom-preview/cdk-drag-drop-custom-preview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkDragDropCustomPreviewExample_div_1_img_2_Template(rf, ctx) { if (rf & 1) {
@@ -461,6 +467,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-delay/cdk-drag-drop-delay-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -494,6 +501,7 @@ CdkDragDropDelayExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-disabled-sorting/cdk-drag-drop-disabled-sorting-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkDragDropDisabledSortingExample_div_5_Template(rf, ctx) { if (rf & 1) {
@@ -601,6 +609,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-disabled/cdk-drag-drop-disabled-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkDragDropDisabledExample_div_1_Template(rf, ctx) { if (rf & 1) {
@@ -664,6 +673,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-enter-predicate/cdk-drag-drop-enter-predicate-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkDragDropEnterPredicateExample_div_4_Template(rf, ctx) { if (rf & 1) {
@@ -776,6 +786,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-free-drag-position/cdk-drag-drop-free-drag-position-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -829,6 +840,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-handle/cdk-drag-drop-handle-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -867,6 +879,7 @@ CdkDragDropHandleExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-horizontal-sorting/cdk-drag-drop-horizontal-sorting-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkDragDropHorizontalSortingExample_div_1_Template(rf, ctx) { if (rf & 1) {
@@ -931,6 +944,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-overview/cdk-drag-drop-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -962,6 +976,7 @@ CdkDragDropOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-root-element/cdk-drag-drop-root-element-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkDragDropRootElementExample_ng_template_2_Template(rf, ctx) { if (rf & 1) {
@@ -1074,6 +1089,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/cdk-drag-drop-sorting/cdk-drag-drop-sorting-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkDragDropSortingExample_div_1_Template(rf, ctx) { if (rf & 1) {
@@ -1141,6 +1157,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/drag-drop/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

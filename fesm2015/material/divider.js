@@ -4,6 +4,7 @@ import { MatList, MatListItem, MatListModule } from '@angular/material/list';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/divider/divider-overview/divider-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -45,6 +46,7 @@ DividerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/divider/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

@@ -96,6 +96,7 @@ export { TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, Tree
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: bazel-out/k8-fastbuild/bin/src/components-examples/example-module.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /* tslint:disable */
@@ -153,6 +154,7 @@ ExampleModule.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/example-data.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -221,6 +223,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/public-api.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 

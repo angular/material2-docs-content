@@ -10,6 +10,7 @@ import { MatOption, MatOptgroup } from '@angular/material/core';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/autocomplete/autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function AutocompleteAutoActiveFirstOptionExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
@@ -99,6 +100,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/autocomplete/autocomplete-display/autocomplete-display-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function AutocompleteDisplayExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
@@ -214,6 +216,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/autocomplete/autocomplete-filter/autocomplete-filter-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function AutocompleteFilterExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
@@ -304,6 +307,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/autocomplete/autocomplete-optgroup/autocomplete-optgroup-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function AutocompleteOptgroupExample_mat_optgroup_5_mat_option_1_Template(rf, ctx) { if (rf & 1) {
@@ -511,6 +515,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/autocomplete/autocomplete-overview/autocomplete-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function AutocompleteOverviewExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
@@ -653,6 +658,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/autocomplete/autocomplete-plain-input/autocomplete-plain-input-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function AutocompletePlainInputExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
@@ -748,6 +754,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/autocomplete/autocomplete-simple/autocomplete-simple-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function AutocompleteSimpleExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
@@ -810,6 +817,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/autocomplete/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

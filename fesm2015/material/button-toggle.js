@@ -4,6 +4,7 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/button-toggle/button-toggle-appearance/button-toggle-appearance-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -60,6 +61,7 @@ ButtonToggleAppearanceExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/button-toggle/button-toggle-exclusive/button-toggle-exclusive-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -117,6 +119,7 @@ ButtonToggleExclusiveExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/button-toggle/button-toggle-overview/button-toggle-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -156,6 +159,7 @@ ButtonToggleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/button-toggle/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

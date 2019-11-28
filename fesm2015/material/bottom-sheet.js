@@ -6,6 +6,7 @@ import { MatLine } from '@angular/material/core';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/bottom-sheet/bottom-sheet-overview/bottom-sheet-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -145,6 +146,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/bottom-sheet/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

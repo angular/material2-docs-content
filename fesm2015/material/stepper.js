@@ -9,6 +9,7 @@ import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/stepper/stepper-editable/stepper-editable-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function StepperEditableExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
@@ -141,6 +142,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/stepper/stepper-errors/stepper-errors-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function StepperErrorsExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
@@ -272,6 +274,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/stepper/stepper-label-position-bottom/stepper-label-position-bottom-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function StepperLabelPositionBottomExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
@@ -395,6 +398,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/stepper/stepper-optional/stepper-optional-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function StepperOptionalExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
@@ -527,6 +531,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/stepper/stepper-overview/stepper-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function StepperOverviewExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
@@ -661,6 +666,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/stepper/stepper-states/stepper-states-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function StepperStatesExample_ng_template_4_Template(rf, ctx) { if (rf & 1) {
@@ -834,6 +840,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/stepper/stepper-vertical/stepper-vertical-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function StepperVerticalExample_ng_template_6_Template(rf, ctx) { if (rf & 1) {
@@ -968,6 +975,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/stepper/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

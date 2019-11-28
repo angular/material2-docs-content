@@ -15,6 +15,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/sidenav-autosize/sidenav-autosize-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SidenavAutosizeExample_p_5_Template(rf, ctx) { if (rf & 1) {
@@ -77,6 +78,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/sidenav-backdrop/sidenav-backdrop-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -159,6 +161,7 @@ SidenavBackdropExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/sidenav-disable-close/sidenav-disable-close-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = ["sidenav"];
@@ -264,6 +267,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/sidenav-drawer-overview/sidenav-drawer-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -300,6 +304,7 @@ SidenavDrawerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/sidenav-fixed/sidenav-fixed-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SidenavFixedExample_ng_container_0_Template(rf, ctx) { if (rf & 1) {
@@ -411,6 +416,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/sidenav-mode/sidenav-mode-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SidenavModeExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
@@ -525,6 +531,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/sidenav-open-close/sidenav-open-close-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SidenavOpenCloseExample_mat_sidenav_container_0_div_14_Template(rf, ctx) { if (rf & 1) {
@@ -628,6 +635,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/sidenav-overview/sidenav-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SidenavOverviewExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
@@ -688,6 +696,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/sidenav-position/sidenav-position-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SidenavPositionExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
@@ -749,6 +758,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/sidenav-responsive/sidenav-responsive-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SidenavResponsiveExample_div_0_a_11_Template(rf, ctx) { if (rf & 1) {
@@ -900,6 +910,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sidenav/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

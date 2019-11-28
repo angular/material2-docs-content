@@ -8,6 +8,7 @@ import { MatSlider, MatSliderModule } from '@angular/material/slider';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/progress-spinner/progress-spinner-configurable/progress-spinner-configurable-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function ProgressSpinnerConfigurableExample_section_22_Template(rf, ctx) { if (rf & 1) {
@@ -120,6 +121,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/progress-spinner/progress-spinner-overview/progress-spinner-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -149,6 +151,7 @@ ProgressSpinnerOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/progress-spinner/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

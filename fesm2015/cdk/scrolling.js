@@ -5,6 +5,7 @@ import { BehaviorSubject, Subscription } from 'rxjs';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/scrolling/cdk-virtual-scroll-context/cdk-virtual-scroll-context-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkVirtualScrollContextExample_div_1_Template(rf, ctx) { if (rf & 1) {
@@ -102,6 +103,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/scrolling/cdk-virtual-scroll-custom-strategy/cdk-virtual-scroll-custom-strategy-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkVirtualScrollCustomStrategyExample_div_1_Template(rf, ctx) { if (rf & 1) {
@@ -166,6 +168,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/scrolling/cdk-virtual-scroll-data-source/cdk-virtual-scroll-data-source-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkVirtualScrollDataSourceExample_div_1_Template(rf, ctx) { if (rf & 1) {
@@ -320,6 +323,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/scrolling/cdk-virtual-scroll-dl/cdk-virtual-scroll-dl-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkVirtualScrollDlExample_ng_container_2_Template(rf, ctx) { if (rf & 1) {
@@ -432,6 +436,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/scrolling/cdk-virtual-scroll-fixed-buffer/cdk-virtual-scroll-fixed-buffer-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkVirtualScrollFixedBufferExample_div_1_Template(rf, ctx) { if (rf & 1) {
@@ -489,6 +494,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/scrolling/cdk-virtual-scroll-horizontal/cdk-virtual-scroll-horizontal-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkVirtualScrollHorizontalExample_div_2_Template(rf, ctx) { if (rf & 1) {
@@ -550,6 +556,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/scrolling/cdk-virtual-scroll-overview/cdk-virtual-scroll-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkVirtualScrollOverviewExample_div_1_Template(rf, ctx) { if (rf & 1) {
@@ -607,6 +614,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/scrolling/cdk-virtual-scroll-template-cache/cdk-virtual-scroll-template-cache-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function CdkVirtualScrollTemplateCacheExample_div_1_Template(rf, ctx) { if (rf & 1) {
@@ -664,6 +672,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/scrolling/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

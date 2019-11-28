@@ -18,6 +18,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-basic-flex/table-basic-flex-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableBasicFlexExample_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
@@ -171,6 +172,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-basic/table-basic-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableBasicExample_th_2_Template(rf, ctx) { if (rf & 1) {
@@ -324,6 +326,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-dynamic-columns/table-dynamic-columns-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableDynamicColumnsExample_ng_container_7_th_1_Template(rf, ctx) { if (rf & 1) {
@@ -485,6 +488,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-expandable-rows/table-expandable-rows-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableExpandableRowsExample_ng_container_1_th_1_Template(rf, ctx) { if (rf & 1) {
@@ -749,6 +753,7 @@ const ELEMENT_DATA$3 = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-filtering/table-filtering-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableFilteringExample_th_4_Template(rf, ctx) { if (rf & 1) {
@@ -915,6 +920,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-footer-row/table-footer-row-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableFooterRowExample_th_2_Template(rf, ctx) { if (rf & 1) {
@@ -1062,6 +1068,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-http/table-http-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableHttpExample_div_1_mat_spinner_1_Template(rf, ctx) { if (rf & 1) {
@@ -1361,6 +1368,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-multiple-header-footer/table-multiple-header-footer-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableMultipleHeaderFooterExample_th_2_Template(rf, ctx) { if (rf & 1) {
@@ -1546,6 +1554,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-overview/table-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableOverviewExample_th_5_Template(rf, ctx) { if (rf & 1) {
@@ -1777,6 +1786,7 @@ function createNewUser(id) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-pagination/table-pagination-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TablePaginationExample_th_3_Template(rf, ctx) { if (rf & 1) {
@@ -1966,6 +1976,7 @@ const ELEMENT_DATA$5 = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-row-context/table-row-context-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableRowContextExample_th_2_Template(rf, ctx) { if (rf & 1) {
@@ -2146,6 +2157,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-selection/table-selection-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableSelectionExample_th_2_Template(rf, ctx) { if (rf & 1) {
@@ -2370,6 +2382,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-sorting/table-sorting-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableSortingExample_th_2_Template(rf, ctx) { if (rf & 1) {
@@ -2542,6 +2555,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-sticky-columns/table-sticky-columns-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableStickyColumnsExample_th_3_Template(rf, ctx) { if (rf & 1) {
@@ -2712,6 +2726,7 @@ const ELEMENT_DATA$8 = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-sticky-complex-flex/table-sticky-complex-flex-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableStickyComplexFlexExample_mat_table_34_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
@@ -3026,6 +3041,7 @@ const ELEMENT_DATA$9 = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-sticky-complex/table-sticky-complex-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableStickyComplexExample_table_34_th_2_Template(rf, ctx) { if (rf & 1) {
@@ -3340,6 +3356,7 @@ const ELEMENT_DATA$a = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-sticky-footer/table-sticky-footer-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableStickyFooterExample_th_3_Template(rf, ctx) { if (rf & 1) {
@@ -3490,6 +3507,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-sticky-header/table-sticky-header-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableStickyHeaderExample_th_3_Template(rf, ctx) { if (rf & 1) {
@@ -3646,6 +3664,7 @@ const ELEMENT_DATA$b = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-text-column-advanced/table-text-column-advanced-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableTextColumnAdvancedExample_tr_5_Template(rf, ctx) { if (rf & 1) {
@@ -3757,6 +3776,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-text-column/table-text-column-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function TableTextColumnExample_tr_5_Template(rf, ctx) { if (rf & 1) {
@@ -3843,6 +3863,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-wrapped/table-wrapped-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0$6 = ["sort"];
@@ -4128,6 +4149,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

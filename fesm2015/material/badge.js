@@ -5,6 +5,7 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/badge/badge-overview/badge-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -53,6 +54,7 @@ BadgeOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/badge/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

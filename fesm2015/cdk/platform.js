@@ -3,6 +3,7 @@ import { Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, 
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/platform/cdk-platform-overview/cdk-platform-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -108,6 +109,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/platform/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

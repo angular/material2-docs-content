@@ -6,6 +6,7 @@ import { MatRadioGroup, MatRadioButton, MatRadioModule } from '@angular/material
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/checkbox/checkbox-configurable/checkbox-configurable-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -112,6 +113,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/checkbox/checkbox-overview/checkbox-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -143,6 +145,7 @@ CheckboxOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/checkbox/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

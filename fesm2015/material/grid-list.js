@@ -4,6 +4,7 @@ import { MatGridList, MatGridTile, MatGridListModule } from '@angular/material/g
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/grid-list/grid-list-dynamic/grid-list-dynamic-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function GridListDynamicExample_mat_grid_tile_1_Template(rf, ctx) { if (rf & 1) {
@@ -76,6 +77,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/grid-list/grid-list-overview/grid-list-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -118,6 +120,7 @@ GridListOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/grid-list/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

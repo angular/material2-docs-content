@@ -4,6 +4,7 @@ import { MatCard, MatCardHeader, MatCardAvatar, MatCardTitle, MatCardSubtitle, M
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/card/card-fancy/card-fancy-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -57,6 +58,7 @@ CardFancyExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/card/card-overview/card-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -88,6 +90,7 @@ CardOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/card/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

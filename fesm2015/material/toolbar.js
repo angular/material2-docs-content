@@ -4,6 +4,7 @@ import { MatToolbar, MatToolbarRow, MatToolbarModule } from '@angular/material/t
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/toolbar/toolbar-multirow/toolbar-multirow-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -60,6 +61,7 @@ ToolbarMultirowExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/toolbar/toolbar-overview/toolbar-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -91,6 +93,7 @@ ToolbarOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/toolbar/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

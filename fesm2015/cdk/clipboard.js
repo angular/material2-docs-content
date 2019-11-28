@@ -4,6 +4,7 @@ import { CdkCopyToClipboard, ClipboardModule } from '@angular/cdk/clipboard';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/clipboard/cdk-clipboard-overview/cdk-clipboard-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -61,6 +62,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/clipboard/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

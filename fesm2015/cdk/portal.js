@@ -3,6 +3,7 @@ import { ɵɵtext, Component, ViewContainerRef, ViewChild, ɵɵdirectiveInject, 
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/portal/cdk-portal-overview/cdk-portal-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = ["templatePortalContent"];
@@ -116,6 +117,7 @@ ComponentPortalExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/portal/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

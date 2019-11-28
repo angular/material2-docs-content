@@ -8,6 +8,7 @@ import { MatSlideToggle, MatSlideToggleRequiredValidator, MatSlideToggleModule }
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/slide-toggle/slide-toggle-configurable/slide-toggle-configurable-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -106,6 +107,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/slide-toggle/slide-toggle-forms/slide-toggle-forms-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -209,6 +211,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/slide-toggle/slide-toggle-overview/slide-toggle-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -240,6 +243,7 @@ SlideToggleOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/slide-toggle/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

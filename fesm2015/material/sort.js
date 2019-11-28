@@ -4,6 +4,7 @@ import { MatSort, MatSortHeader, MatSortModule } from '@angular/material/sort';
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sort/sort-overview/sort-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function SortOverviewExample_tr_12_Template(rf, ctx) { if (rf & 1) {
@@ -159,6 +160,7 @@ function compare(a, b, isAsc) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/sort/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

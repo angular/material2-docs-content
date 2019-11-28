@@ -4,6 +4,7 @@ import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵ
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/stepper/cdk-custom-stepper-without-form/cdk-custom-stepper-without-form-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 const _c0 = function (a0) { return { "example-active": a0 }; };
@@ -125,6 +126,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/cdk/stepper/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */

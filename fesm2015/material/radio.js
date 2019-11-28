@@ -5,6 +5,7 @@ import { MatRadioGroup, MatRadioButton, MatRadioModule } from '@angular/material
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/radio/radio-ng-model/radio-ng-model-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 function RadioNgModelExample_mat_radio_button_3_Template(rf, ctx) { if (rf & 1) {
@@ -69,6 +70,7 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/radio/radio-overview/radio-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
@@ -105,6 +107,7 @@ RadioOverviewExample.decorators = [
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/radio/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /** @type {?} */
