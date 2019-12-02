@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵelement, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵproperty, ɵɵtextInterpolate, ɵɵreference, ɵɵattribute, ɵɵtextInterpolate1, Injectable, ɵɵdefineInjectable, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵProvidersFeature, ɵɵtemplate, ɵɵinject, ɵɵelementContainer, ɵɵclassProp, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵelement, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵproperty, ɵɵtextInterpolate, ɵɵreference, ɵɵattribute, ɵɵtextInterpolate1, Injectable, ɵɵdefineInjectable, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵProvidersFeature, ɵɵtemplate, ɵɵelementContainer, ɵɵclassProp, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
@@ -412,8 +412,17 @@ var DynamicDatabase = /** @class */ (function () {
     DynamicDatabase.prototype.isExpandable = function (node) {
         return this.dataMap.has(node);
     };
+    DynamicDatabase.decorators = [
+        { type: Injectable, args: [{ providedIn: 'root' },] },
+    ];
+    DynamicDatabase.ɵfac = function DynamicDatabase_Factory(t) { return new (t || DynamicDatabase)(); };
+    DynamicDatabase.ɵprov = ɵɵdefineInjectable({ token: DynamicDatabase, factory: function (t) { return DynamicDatabase.ɵfac(t); }, providedIn: 'root' });
     return DynamicDatabase;
 }());
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DynamicDatabase, [{
+        type: Injectable,
+        args: [{ providedIn: 'root' }]
+    }], null, null); })();
 /**
  * File database, it can build a tree structured Json object from string.
  * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -487,21 +496,8 @@ var DynamicDataSource = /** @class */ (function () {
             node.isLoading = false;
         }, 1000);
     };
-    DynamicDataSource.decorators = [
-        { type: Injectable },
-    ];
-    /** @nocollapse */
-    DynamicDataSource.ctorParameters = function () { return [
-        { type: FlatTreeControl },
-        { type: DynamicDatabase }
-    ]; };
-    DynamicDataSource.ɵfac = function DynamicDataSource_Factory(t) { return new (t || DynamicDataSource)(ɵɵinject(FlatTreeControl), ɵɵinject(DynamicDatabase)); };
-    DynamicDataSource.ɵprov = ɵɵdefineInjectable({ token: DynamicDataSource, factory: function (t) { return DynamicDataSource.ɵfac(t); }, providedIn: null });
     return DynamicDataSource;
 }());
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DynamicDataSource, [{
-        type: Injectable
-    }], function () { return [{ type: FlatTreeControl }, { type: DynamicDatabase }]; }, null); })();
 /**
  * @title Tree with dynamic data
  */
@@ -518,8 +514,7 @@ var TreeDynamicExample = /** @class */ (function () {
         { type: Component, args: [{
                     selector: 'tree-dynamic-example',
                     templateUrl: 'tree-dynamic-example.html',
-                    styleUrls: ['tree-dynamic-example.css'],
-                    providers: [DynamicDatabase]
+                    styleUrls: ['tree-dynamic-example.css']
                 },] },
     ];
     /** @nocollapse */
@@ -527,7 +522,7 @@ var TreeDynamicExample = /** @class */ (function () {
         { type: DynamicDatabase }
     ]; };
     TreeDynamicExample.ɵfac = function TreeDynamicExample_Factory(t) { return new (t || TreeDynamicExample)(ɵɵdirectiveInject(DynamicDatabase)); };
-    TreeDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], features: [ɵɵProvidersFeature([DynamicDatabase])], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
+    TreeDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tree", 0);
             ɵɵtemplate(1, TreeDynamicExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
             ɵɵtemplate(2, TreeDynamicExample_mat_tree_node_2_Template, 6, 4, "mat-tree-node", 2);
@@ -544,8 +539,7 @@ var TreeDynamicExample = /** @class */ (function () {
         args: [{
                 selector: 'tree-dynamic-example',
                 templateUrl: 'tree-dynamic-example.html',
-                styleUrls: ['tree-dynamic-example.css'],
-                providers: [DynamicDatabase]
+                styleUrls: ['tree-dynamic-example.css']
             }]
     }], function () { return [{ type: DynamicDatabase }]; }, null); })();
 

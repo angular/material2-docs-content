@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/material/button'), require('@angular/material/checkbox'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/progress-bar'), require('@angular/material/tree'), require('tslib'), require('@angular/cdk/collections'), require('@angular/cdk/tree'), require('rxjs'), require('@angular/material/form-field'), require('rxjs/operators')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/material/tree', ['exports', '@angular/common', '@angular/core', '@angular/material/button', '@angular/material/checkbox', '@angular/material/icon', '@angular/material/input', '@angular/material/progress-bar', '@angular/material/tree', 'tslib', '@angular/cdk/collections', '@angular/cdk/tree', 'rxjs', '@angular/material/form-field', 'rxjs/operators'], factory) :
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.tree = {}), global.ng.common, global.ng.core, global.ng.material.button, global.ng.material.checkbox, global.ng.material.icon, global.ng.material.input, global.ng.material.progressBar, global.ng.material.tree, global.tslib, global.ng.cdk.collections, global.ng.cdk.tree, global.rxjs, global.ng.material.formField, global.rxjs.operators));
-}(this, (function (exports, i5, i0, i2, i3, i3$1, i5$1, i6, i1, tslib, collections, i1$1, rxjs, i4, operators) { 'use strict';
+}(this, (function (exports, i4, i0, i2, i3, i3$1, i5, i5$1, i1, tslib, collections, tree, rxjs, i4$1, operators) { 'use strict';
 
     function TreeChecklistExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
         var _r5 = i0.ɵɵgetCurrentView();
@@ -203,7 +203,7 @@
                 return flatNode;
             };
             this.treeFlattener = new i1.MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
-            this.treeControl = new i1$1.FlatTreeControl(this.getLevel, this.isExpandable);
+            this.treeControl = new tree.FlatTreeControl(this.getLevel, this.isExpandable);
             this.dataSource = new i1.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
             _database.dataChange.subscribe(function (data) {
                 _this.dataSource.data = data;
@@ -318,7 +318,7 @@
                 i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasNoContent);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-            } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodeToggle, i1.MatTreeNodePadding, i2.MatButton, i3.MatCheckbox, i4.MatFormField, i5$1.MatInput, i3$1.MatIcon], styles: [""] });
+            } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodeToggle, i1.MatTreeNodePadding, i2.MatButton, i3.MatCheckbox, i4$1.MatFormField, i5.MatInput, i3$1.MatIcon], styles: [""] });
         return TreeChecklistExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TreeChecklistExample, [{
@@ -403,8 +403,17 @@
         DynamicDatabase.prototype.isExpandable = function (node) {
             return this.dataMap.has(node);
         };
+        DynamicDatabase.decorators = [
+            { type: i0.Injectable, args: [{ providedIn: 'root' },] },
+        ];
+        DynamicDatabase.ɵfac = function DynamicDatabase_Factory(t) { return new (t || DynamicDatabase)(); };
+        DynamicDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: DynamicDatabase, factory: function (t) { return DynamicDatabase.ɵfac(t); }, providedIn: 'root' });
         return DynamicDatabase;
     }());
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DynamicDatabase, [{
+            type: i0.Injectable,
+            args: [{ providedIn: 'root' }]
+        }], null, null); })();
     /**
      * File database, it can build a tree structured Json object from string.
      * Each node in Json object represents a file or a directory. For a file, it has filename and type.
@@ -478,21 +487,8 @@
                 node.isLoading = false;
             }, 1000);
         };
-        DynamicDataSource.decorators = [
-            { type: i0.Injectable },
-        ];
-        /** @nocollapse */
-        DynamicDataSource.ctorParameters = function () { return [
-            { type: i1$1.FlatTreeControl },
-            { type: DynamicDatabase }
-        ]; };
-        DynamicDataSource.ɵfac = function DynamicDataSource_Factory(t) { return new (t || DynamicDataSource)(i0.ɵɵinject(i1$1.FlatTreeControl), i0.ɵɵinject(DynamicDatabase)); };
-        DynamicDataSource.ɵprov = i0.ɵɵdefineInjectable({ token: DynamicDataSource, factory: function (t) { return DynamicDataSource.ɵfac(t); }, providedIn: null });
         return DynamicDataSource;
     }());
-    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DynamicDataSource, [{
-            type: i0.Injectable
-        }], function () { return [{ type: i1$1.FlatTreeControl }, { type: DynamicDatabase }]; }, null); })();
     /**
      * @title Tree with dynamic data
      */
@@ -501,7 +497,7 @@
             this.getLevel = function (node) { return node.level; };
             this.isExpandable = function (node) { return node.expandable; };
             this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
-            this.treeControl = new i1$1.FlatTreeControl(this.getLevel, this.isExpandable);
+            this.treeControl = new tree.FlatTreeControl(this.getLevel, this.isExpandable);
             this.dataSource = new DynamicDataSource(this.treeControl, database);
             this.dataSource.data = database.initialData();
         }
@@ -509,8 +505,7 @@
             { type: i0.Component, args: [{
                         selector: 'tree-dynamic-example',
                         templateUrl: 'tree-dynamic-example.html',
-                        styleUrls: ['tree-dynamic-example.css'],
-                        providers: [DynamicDatabase]
+                        styleUrls: ['tree-dynamic-example.css']
                     },] },
         ];
         /** @nocollapse */
@@ -518,7 +513,7 @@
             { type: DynamicDatabase }
         ]; };
         TreeDynamicExample.ɵfac = function TreeDynamicExample_Factory(t) { return new (t || TreeDynamicExample)(i0.ɵɵdirectiveInject(DynamicDatabase)); };
-        TreeDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], features: [i0.ɵɵProvidersFeature([DynamicDatabase])], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
+        TreeDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-tree", 0);
                 i0.ɵɵtemplate(1, TreeDynamicExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
                 i0.ɵɵtemplate(2, TreeDynamicExample_mat_tree_node_2_Template, 6, 4, "mat-tree-node", 2);
@@ -527,7 +522,7 @@
                 i0.ɵɵproperty("dataSource", ctx.dataSource)("treeControl", ctx.treeControl);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("matTreeNodeDefWhen", ctx.hasChild);
-            } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodePadding, i2.MatButton, i1.MatTreeNodeToggle, i3$1.MatIcon, i5.NgIf, i6.MatProgressBar], styles: [".example-tree-progress-bar[_ngcontent-%COMP%] {\n  margin-left: 30px;\n}"] });
+            } }, directives: [i1.MatTree, i1.MatTreeNodeDef, i1.MatTreeNode, i1.MatTreeNodePadding, i2.MatButton, i1.MatTreeNodeToggle, i3$1.MatIcon, i4.NgIf, i5$1.MatProgressBar], styles: [".example-tree-progress-bar[_ngcontent-%COMP%] {\n  margin-left: 30px;\n}"] });
         return TreeDynamicExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TreeDynamicExample, [{
@@ -535,8 +530,7 @@
             args: [{
                     selector: 'tree-dynamic-example',
                     templateUrl: 'tree-dynamic-example.html',
-                    styleUrls: ['tree-dynamic-example.css'],
-                    providers: [DynamicDatabase]
+                    styleUrls: ['tree-dynamic-example.css']
                 }]
         }], function () { return [{ type: DynamicDatabase }]; }, null); })();
 
@@ -608,7 +602,7 @@
                     level: level,
                 };
             };
-            this.treeControl = new i1$1.FlatTreeControl(function (node) { return node.level; }, function (node) { return node.expandable; });
+            this.treeControl = new tree.FlatTreeControl(function (node) { return node.level; }, function (node) { return node.expandable; });
             this.treeFlattener = new i1.MatTreeFlattener(this._transformer, function (node) { return node.level; }, function (node) { return node.expandable; }, function (node) { return node.children; });
             this.dataSource = new i1.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
             this.hasChild = function (_, node) { return node.expandable; };
@@ -811,7 +805,7 @@
             this.hasChild = function (_, _nodeData) { return _nodeData.expandable; };
             this.isLoadMore = function (_, _nodeData) { return _nodeData.item === LOAD_MORE; };
             this.treeFlattener = new i1.MatTreeFlattener(this.transformer, this.getLevel, this.isExpandable, this.getChildren);
-            this.treeControl = new i1$1.FlatTreeControl(this.getLevel, this.isExpandable);
+            this.treeControl = new tree.FlatTreeControl(this.getLevel, this.isExpandable);
             this.dataSource = new i1.MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
             _database.dataChange.subscribe(function (data) {
                 _this.dataSource.data = data;
@@ -935,7 +929,7 @@
      */
     var TreeNestedOverviewExample = /** @class */ (function () {
         function TreeNestedOverviewExample() {
-            this.treeControl = new i1$1.NestedTreeControl(function (node) { return node.children; });
+            this.treeControl = new tree.NestedTreeControl(function (node) { return node.children; });
             this.dataSource = new i1.MatTreeNestedDataSource();
             this.hasChild = function (_, node) { return !!node.children && node.children.length > 0; };
             this.dataSource.data = TREE_DATA$2;
@@ -984,12 +978,12 @@
         TreeExamplesModule.decorators = [
             { type: i0.NgModule, args: [{
                         imports: [
-                            i5.CommonModule,
+                            i4.CommonModule,
                             i2.MatButtonModule,
                             i3.MatCheckboxModule,
                             i3$1.MatIconModule,
-                            i5$1.MatInputModule,
-                            i6.MatProgressBarModule,
+                            i5.MatInputModule,
+                            i5$1.MatProgressBarModule,
                             i1.MatTreeModule,
                         ],
                         declarations: EXAMPLES,
@@ -998,12 +992,12 @@
         ];
         TreeExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: TreeExamplesModule });
         TreeExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function TreeExamplesModule_Factory(t) { return new (t || TreeExamplesModule)(); }, imports: [[
-                    i5.CommonModule,
+                    i4.CommonModule,
                     i2.MatButtonModule,
                     i3.MatCheckboxModule,
                     i3$1.MatIconModule,
-                    i5$1.MatInputModule,
-                    i6.MatProgressBarModule,
+                    i5.MatInputModule,
+                    i5$1.MatProgressBarModule,
                     i1.MatTreeModule,
                 ]] });
         return TreeExamplesModule;
@@ -1012,12 +1006,12 @@
             TreeDynamicExample,
             TreeFlatOverviewExample,
             TreeLoadmoreExample,
-            TreeNestedOverviewExample], imports: [i5.CommonModule,
+            TreeNestedOverviewExample], imports: [i4.CommonModule,
             i2.MatButtonModule,
             i3.MatCheckboxModule,
             i3$1.MatIconModule,
-            i5$1.MatInputModule,
-            i6.MatProgressBarModule,
+            i5.MatInputModule,
+            i5$1.MatProgressBarModule,
             i1.MatTreeModule], exports: [TreeChecklistExample,
             TreeDynamicExample,
             TreeFlatOverviewExample,
@@ -1027,12 +1021,12 @@
             type: i0.NgModule,
             args: [{
                     imports: [
-                        i5.CommonModule,
+                        i4.CommonModule,
                         i2.MatButtonModule,
                         i3.MatCheckboxModule,
                         i3$1.MatIconModule,
-                        i5$1.MatInputModule,
-                        i6.MatProgressBarModule,
+                        i5.MatInputModule,
+                        i5$1.MatProgressBarModule,
                         i1.MatTreeModule,
                     ],
                     declarations: EXAMPLES,

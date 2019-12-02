@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵelement, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵproperty, ɵɵtextInterpolate, ɵɵreference, ɵɵattribute, ɵɵtextInterpolate1, Injectable, ɵɵdefineInjectable, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵProvidersFeature, ɵɵtemplate, ɵɵinject, ɵɵelementContainer, ɵɵclassProp, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵelement, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵproperty, ɵɵtextInterpolate, ɵɵreference, ɵɵattribute, ɵɵtextInterpolate1, Injectable, ɵɵdefineInjectable, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵProvidersFeature, ɵɵtemplate, ɵɵelementContainer, ɵɵclassProp, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
@@ -641,6 +641,15 @@ class DynamicDatabase {
         return this.dataMap.has(node);
     }
 }
+DynamicDatabase.decorators = [
+    { type: Injectable, args: [{ providedIn: 'root' },] },
+];
+/** @nocollapse */ DynamicDatabase.ɵfac = function DynamicDatabase_Factory(t) { return new (t || DynamicDatabase)(); };
+/** @nocollapse */ DynamicDatabase.ɵprov = ɵɵdefineInjectable({ token: DynamicDatabase, factory: function (t) { return DynamicDatabase.ɵfac(t); }, providedIn: 'root' });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(DynamicDatabase, [{
+        type: Injectable,
+        args: [{ providedIn: 'root' }]
+    }], null, null); })();
 if (false) {
     /** @type {?} */
     DynamicDatabase.prototype.dataMap;
@@ -763,19 +772,6 @@ class DynamicDataSource {
         }), 1000);
     }
 }
-DynamicDataSource.decorators = [
-    { type: Injectable },
-];
-/** @nocollapse */
-DynamicDataSource.ctorParameters = () => [
-    { type: FlatTreeControl },
-    { type: DynamicDatabase }
-];
-/** @nocollapse */ DynamicDataSource.ɵfac = function DynamicDataSource_Factory(t) { return new (t || DynamicDataSource)(ɵɵinject(FlatTreeControl), ɵɵinject(DynamicDatabase)); };
-/** @nocollapse */ DynamicDataSource.ɵprov = ɵɵdefineInjectable({ token: DynamicDataSource, factory: function (t) { return DynamicDataSource.ɵfac(t); }, providedIn: null });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DynamicDataSource, [{
-        type: Injectable
-    }], function () { return [{ type: FlatTreeControl }, { type: DynamicDatabase }]; }, null); })();
 if (false) {
     /** @type {?} */
     DynamicDataSource.prototype.dataChange;
@@ -823,8 +819,7 @@ TreeDynamicExample.decorators = [
     { type: Component, args: [{
                 selector: 'tree-dynamic-example',
                 templateUrl: 'tree-dynamic-example.html',
-                styleUrls: ['tree-dynamic-example.css'],
-                providers: [DynamicDatabase]
+                styleUrls: ['tree-dynamic-example.css']
             },] },
 ];
 /** @nocollapse */
@@ -832,7 +827,7 @@ TreeDynamicExample.ctorParameters = () => [
     { type: DynamicDatabase }
 ];
 /** @nocollapse */ TreeDynamicExample.ɵfac = function TreeDynamicExample_Factory(t) { return new (t || TreeDynamicExample)(ɵɵdirectiveInject(DynamicDatabase)); };
-/** @nocollapse */ TreeDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], features: [ɵɵProvidersFeature([DynamicDatabase])], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TreeDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-tree", 0);
         ɵɵtemplate(1, TreeDynamicExample_mat_tree_node_1_Template, 3, 1, "mat-tree-node", 1);
         ɵɵtemplate(2, TreeDynamicExample_mat_tree_node_2_Template, 6, 4, "mat-tree-node", 2);
@@ -847,8 +842,7 @@ TreeDynamicExample.ctorParameters = () => [
         args: [{
                 selector: 'tree-dynamic-example',
                 templateUrl: 'tree-dynamic-example.html',
-                styleUrls: ['tree-dynamic-example.css'],
-                providers: [DynamicDatabase]
+                styleUrls: ['tree-dynamic-example.css']
             }]
     }], function () { return [{ type: DynamicDatabase }]; }, null); })();
 if (false) {

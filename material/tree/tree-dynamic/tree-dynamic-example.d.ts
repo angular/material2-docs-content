@@ -21,6 +21,8 @@ export declare class DynamicDatabase {
     initialData(): DynamicFlatNode[];
     getChildren(node: string): string[] | undefined;
     isExpandable(node: string): boolean;
+    static ɵfac: i0.ɵɵFactoryDef<DynamicDatabase>;
+    static ɵprov: i0.ɵɵInjectableDef<DynamicDatabase>;
 }
 /**
  * File database, it can build a tree structured Json object from string.
@@ -43,8 +45,6 @@ export declare class DynamicDataSource implements DataSource<DynamicFlatNode> {
      * Toggle the node, remove from display list
      */
     toggleNode(node: DynamicFlatNode, expand: boolean): void;
-    static ɵfac: i0.ɵɵFactoryDef<DynamicDataSource>;
-    static ɵprov: i0.ɵɵInjectableDef<DynamicDataSource>;
 }
 /**
  * @title Tree with dynamic data
