@@ -49,7 +49,7 @@ var DatepickerEventsExample = /** @class */ (function () {
             i0.ɵɵproperty("for", _r10);
             i0.ɵɵadvance(4);
             i0.ɵɵproperty("ngForOf", ctx.events);
-        } }, directives: [i1.MatFormField, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker, i4.NgForOf], styles: [".example-events[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}"] });
+        } }, directives: [i1.MatFormField, i2.MatInput, i3.MatDatepickerInput, i3.MatDatepickerToggle, i1.MatSuffix, i3.MatDatepicker, i4.NgForOf], styles: [".example-events[_ngcontent-%COMP%] {\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}"] });
     return DatepickerEventsExample;
 }());
 export { DatepickerEventsExample };

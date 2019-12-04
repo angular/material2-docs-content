@@ -608,7 +608,7 @@ DatepickerEventsExample.decorators = [
         ɵɵproperty("for", _r10);
         ɵɵadvance(4);
         ɵɵproperty("ngForOf", ctx.events);
-    } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker, NgForOf], styles: [".example-events[_ngcontent-%COMP%] {\n  width: 400px;\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}"] });
+    } }, directives: [MatFormField, MatInput, MatDatepickerInput, MatDatepickerToggle, MatSuffix, MatDatepicker, NgForOf], styles: [".example-events[_ngcontent-%COMP%] {\n  height: 200px;\n  border: 1px solid #555;\n  overflow: auto;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DatepickerEventsExample, [{
         type: Component,
         args: [{
