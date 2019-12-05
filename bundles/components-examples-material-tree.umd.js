@@ -159,7 +159,7 @@
         /** @nocollapse */
         ChecklistDatabase.ctorParameters = function () { return []; };
         ChecklistDatabase.ɵfac = function ChecklistDatabase_Factory(t) { return new (t || ChecklistDatabase)(); };
-        ChecklistDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: ChecklistDatabase, factory: function (t) { return ChecklistDatabase.ɵfac(t); }, providedIn: null });
+        ChecklistDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: ChecklistDatabase, factory: ChecklistDatabase.ɵfac });
         return ChecklistDatabase;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(ChecklistDatabase, [{
@@ -407,7 +407,7 @@
             { type: i0.Injectable, args: [{ providedIn: 'root' },] },
         ];
         DynamicDatabase.ɵfac = function DynamicDatabase_Factory(t) { return new (t || DynamicDatabase)(); };
-        DynamicDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: DynamicDatabase, factory: function (t) { return DynamicDatabase.ɵfac(t); }, providedIn: 'root' });
+        DynamicDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: DynamicDatabase, factory: DynamicDatabase.ɵfac, providedIn: 'root' });
         return DynamicDatabase;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DynamicDatabase, [{
@@ -776,7 +776,7 @@
             { type: i0.Injectable },
         ];
         LoadmoreDatabase.ɵfac = function LoadmoreDatabase_Factory(t) { return new (t || LoadmoreDatabase)(); };
-        LoadmoreDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: LoadmoreDatabase, factory: function (t) { return LoadmoreDatabase.ɵfac(t); }, providedIn: null });
+        LoadmoreDatabase.ɵprov = i0.ɵɵdefineInjectable({ token: LoadmoreDatabase, factory: LoadmoreDatabase.ɵfac });
         return LoadmoreDatabase;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(LoadmoreDatabase, [{
