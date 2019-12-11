@@ -28,8 +28,7 @@
                 i0.ɵɵtext(3, "Toggle Elevation");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                i0.ɵɵclassProp("mat-elevation-z2", !ctx.isActive);
-                i0.ɵɵclassProp("mat-elevation-z8", ctx.isActive);
+                i0.ɵɵclassProp("mat-elevation-z2", !ctx.isActive)("mat-elevation-z8", ctx.isActive);
             } }, directives: [i1.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  padding: 16px;\n  margin-bottom: 16px;\n}"] });
         return ElevationOverviewExample;
     }());

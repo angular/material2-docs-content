@@ -67,8 +67,7 @@ var CheckboxConfigurableExample = /** @class */ (function () {
             ɵɵelementEnd();
             ɵɵelementStart(24, "section", 1);
             ɵɵelementStart(25, "mat-checkbox", 8);
-            ɵɵlistener("ngModelChange", function CheckboxConfigurableExample_Template_mat_checkbox_ngModelChange_25_listener($event) { return ctx.checked = $event; });
-            ɵɵlistener("indeterminateChange", function CheckboxConfigurableExample_Template_mat_checkbox_indeterminateChange_25_listener($event) { return ctx.indeterminate = $event; });
+            ɵɵlistener("ngModelChange", function CheckboxConfigurableExample_Template_mat_checkbox_ngModelChange_25_listener($event) { return ctx.checked = $event; })("indeterminateChange", function CheckboxConfigurableExample_Template_mat_checkbox_indeterminateChange_25_listener($event) { return ctx.indeterminate = $event; });
             ɵɵtext(26, " I'm a checkbox ");
             ɵɵelementEnd();
             ɵɵelementEnd();

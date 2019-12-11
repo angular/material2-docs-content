@@ -11,8 +11,7 @@ function CdkPopoverEditCdkTableFlexExample_ng_template_1_Template(rf, ctx) { if 
     var _r15 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 12);
     ɵɵelementStart(1, "form", 13, 14);
-    ɵɵlistener("ngSubmit", function CdkPopoverEditCdkTableFlexExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r15); var element_r12 = ctx.$implicit; var _r13 = ɵɵreference(2); var ctx_r14 = ɵɵnextContext(); return ctx_r14.onSubmitWeight(element_r12, _r13); });
-    ɵɵlistener("cdkEditControlPreservedFormValueChange", function CdkPopoverEditCdkTableFlexExample_ng_template_1_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r15); var element_r12 = ctx.$implicit; var ctx_r16 = ɵɵnextContext(); return ctx_r16.preservedWeightValues.set(element_r12, $event); });
+    ɵɵlistener("ngSubmit", function CdkPopoverEditCdkTableFlexExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r15); var element_r12 = ctx.$implicit; var _r13 = ɵɵreference(2); var ctx_r14 = ɵɵnextContext(); return ctx_r14.onSubmitWeight(element_r12, _r13); })("cdkEditControlPreservedFormValueChange", function CdkPopoverEditCdkTableFlexExample_ng_template_1_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r15); var element_r12 = ctx.$implicit; var ctx_r16 = ɵɵnextContext(); return ctx_r16.preservedWeightValues.set(element_r12, $event); });
     ɵɵtext(3, " Edit b: ");
     ɵɵelement(4, "input", 15);
     ɵɵelement(5, "br");
@@ -58,8 +57,7 @@ function CdkPopoverEditCdkTableFlexExample_cdk_cell_8_ng_template_2_Template(rf,
     var _r25 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 12);
     ɵɵelementStart(1, "form", 13, 14);
-    ɵɵlistener("ngSubmit", function CdkPopoverEditCdkTableFlexExample_cdk_cell_8_ng_template_2_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r25); var _r22 = ɵɵreference(2); var element_r18 = ɵɵnextContext().$implicit; var ctx_r23 = ɵɵnextContext(); return ctx_r23.onSubmitName(element_r18, _r22); });
-    ɵɵlistener("cdkEditControlPreservedFormValueChange", function CdkPopoverEditCdkTableFlexExample_cdk_cell_8_ng_template_2_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r25); var element_r18 = ɵɵnextContext().$implicit; var ctx_r26 = ɵɵnextContext(); return ctx_r26.preservedNameValues.set(element_r18, $event); });
+    ɵɵlistener("ngSubmit", function CdkPopoverEditCdkTableFlexExample_cdk_cell_8_ng_template_2_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r25); var _r22 = ɵɵreference(2); var element_r18 = ɵɵnextContext().$implicit; var ctx_r23 = ɵɵnextContext(); return ctx_r23.onSubmitName(element_r18, _r22); })("cdkEditControlPreservedFormValueChange", function CdkPopoverEditCdkTableFlexExample_cdk_cell_8_ng_template_2_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r25); var element_r18 = ɵɵnextContext().$implicit; var ctx_r26 = ɵɵnextContext(); return ctx_r26.preservedNameValues.set(element_r18, $event); });
     ɵɵtext(3, " Edit a: ");
     ɵɵelement(4, "input", 22);
     ɵɵelement(5, "br");
@@ -265,8 +263,7 @@ function CdkPopoverEditCdkTableExample_ng_template_1_Template(rf, ctx) { if (rf 
     var _r48 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 12);
     ɵɵelementStart(1, "form", 13, 14);
-    ɵɵlistener("ngSubmit", function CdkPopoverEditCdkTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r48); var element_r45 = ctx.$implicit; var _r46 = ɵɵreference(2); var ctx_r47 = ɵɵnextContext(); return ctx_r47.onSubmitWeight(element_r45, _r46); });
-    ɵɵlistener("cdkEditControlPreservedFormValueChange", function CdkPopoverEditCdkTableExample_ng_template_1_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r48); var element_r45 = ctx.$implicit; var ctx_r49 = ɵɵnextContext(); return ctx_r49.preservedWeightValues.set(element_r45, $event); });
+    ɵɵlistener("ngSubmit", function CdkPopoverEditCdkTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r48); var element_r45 = ctx.$implicit; var _r46 = ɵɵreference(2); var ctx_r47 = ɵɵnextContext(); return ctx_r47.onSubmitWeight(element_r45, _r46); })("cdkEditControlPreservedFormValueChange", function CdkPopoverEditCdkTableExample_ng_template_1_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r48); var element_r45 = ctx.$implicit; var ctx_r49 = ɵɵnextContext(); return ctx_r49.preservedWeightValues.set(element_r45, $event); });
     ɵɵtext(3, " Edit b: ");
     ɵɵelement(4, "input", 15);
     ɵɵelement(5, "br");
@@ -309,8 +306,7 @@ function CdkPopoverEditCdkTableExample_td_8_ng_template_2_Template(rf, ctx) { if
     var _r58 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 12);
     ɵɵelementStart(1, "form", 13, 14);
-    ɵɵlistener("ngSubmit", function CdkPopoverEditCdkTableExample_td_8_ng_template_2_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r58); var _r55 = ɵɵreference(2); var element_r51 = ɵɵnextContext().$implicit; var ctx_r56 = ɵɵnextContext(); return ctx_r56.onSubmitName(element_r51, _r55); });
-    ɵɵlistener("cdkEditControlPreservedFormValueChange", function CdkPopoverEditCdkTableExample_td_8_ng_template_2_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r58); var element_r51 = ɵɵnextContext().$implicit; var ctx_r59 = ɵɵnextContext(); return ctx_r59.preservedNameValues.set(element_r51, $event); });
+    ɵɵlistener("ngSubmit", function CdkPopoverEditCdkTableExample_td_8_ng_template_2_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r58); var _r55 = ɵɵreference(2); var element_r51 = ɵɵnextContext().$implicit; var ctx_r56 = ɵɵnextContext(); return ctx_r56.onSubmitName(element_r51, _r55); })("cdkEditControlPreservedFormValueChange", function CdkPopoverEditCdkTableExample_td_8_ng_template_2_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r58); var element_r51 = ɵɵnextContext().$implicit; var ctx_r59 = ɵɵnextContext(); return ctx_r59.preservedNameValues.set(element_r51, $event); });
     ɵɵtext(3, " Edit a: ");
     ɵɵelement(4, "input", 23);
     ɵɵelement(5, "br");
@@ -516,8 +512,7 @@ function CdkPopoverEditCellSpanVanillaTableExample_ng_template_1_Template(rf, ct
     var _r72 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 3);
     ɵɵelementStart(1, "form", 4, 5);
-    ɵɵlistener("ngSubmit", function CdkPopoverEditCellSpanVanillaTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r72); var ctx_r69 = ctx.$implicit; var _r70 = ɵɵreference(2); var ctx_r71 = ɵɵnextContext(); return ctx_r71.onSubmit(ctx_r69.person, _r70); });
-    ɵɵlistener("cdkEditControlPreservedFormValueChange", function CdkPopoverEditCellSpanVanillaTableExample_ng_template_1_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r72); var ctx_r69 = ctx.$implicit; var ctx_r73 = ɵɵnextContext(); return ctx_r73.preservedValues.set(ctx_r69.person, $event); });
+    ɵɵlistener("ngSubmit", function CdkPopoverEditCellSpanVanillaTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r72); var ctx_r69 = ctx.$implicit; var _r70 = ɵɵreference(2); var ctx_r71 = ɵɵnextContext(); return ctx_r71.onSubmit(ctx_r69.person, _r70); })("cdkEditControlPreservedFormValueChange", function CdkPopoverEditCellSpanVanillaTableExample_ng_template_1_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r72); var ctx_r69 = ctx.$implicit; var ctx_r73 = ɵɵnextContext(); return ctx_r73.preservedValues.set(ctx_r69.person, $event); });
     ɵɵelementStart(3, "div", 6);
     ɵɵelement(4, "input", 7);
     ɵɵelement(5, "input", 8);
@@ -688,8 +683,7 @@ function CdkPopoverEditTabOutVanillaTableExample_ng_template_1_Template(rf, ctx)
     var _r84 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 3);
     ɵɵelementStart(1, "form", 4, 5);
-    ɵɵlistener("ngSubmit", function CdkPopoverEditTabOutVanillaTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r84); var element_r81 = ctx.$implicit; var _r82 = ɵɵreference(2); var ctx_r83 = ɵɵnextContext(); return ctx_r83.onSubmitWeight(element_r81, _r82); });
-    ɵɵlistener("cdkEditControlPreservedFormValueChange", function CdkPopoverEditTabOutVanillaTableExample_ng_template_1_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r84); var element_r81 = ctx.$implicit; var ctx_r85 = ɵɵnextContext(); return ctx_r85.preservedWeightValues.set(element_r81, $event); });
+    ɵɵlistener("ngSubmit", function CdkPopoverEditTabOutVanillaTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r84); var element_r81 = ctx.$implicit; var _r82 = ɵɵreference(2); var ctx_r83 = ɵɵnextContext(); return ctx_r83.onSubmitWeight(element_r81, _r82); })("cdkEditControlPreservedFormValueChange", function CdkPopoverEditTabOutVanillaTableExample_ng_template_1_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r84); var element_r81 = ctx.$implicit; var ctx_r85 = ɵɵnextContext(); return ctx_r85.preservedWeightValues.set(element_r81, $event); });
     ɵɵelement(3, "input", 6);
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -705,8 +699,7 @@ function CdkPopoverEditTabOutVanillaTableExample_tr_12_ng_template_5_Template(rf
     var _r92 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 3);
     ɵɵelementStart(1, "form", 4, 5);
-    ɵɵlistener("ngSubmit", function CdkPopoverEditTabOutVanillaTableExample_tr_12_ng_template_5_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r92); var _r89 = ɵɵreference(2); var element_r86 = ɵɵnextContext().$implicit; var ctx_r90 = ɵɵnextContext(); return ctx_r90.onSubmitName(element_r86, _r89); });
-    ɵɵlistener("cdkEditControlPreservedFormValueChange", function CdkPopoverEditTabOutVanillaTableExample_tr_12_ng_template_5_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r92); var element_r86 = ɵɵnextContext().$implicit; var ctx_r93 = ɵɵnextContext(); return ctx_r93.preservedNameValues.set(element_r86, $event); });
+    ɵɵlistener("ngSubmit", function CdkPopoverEditTabOutVanillaTableExample_tr_12_ng_template_5_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r92); var _r89 = ɵɵreference(2); var element_r86 = ɵɵnextContext().$implicit; var ctx_r90 = ɵɵnextContext(); return ctx_r90.onSubmitName(element_r86, _r89); })("cdkEditControlPreservedFormValueChange", function CdkPopoverEditTabOutVanillaTableExample_tr_12_ng_template_5_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r92); var element_r86 = ɵɵnextContext().$implicit; var ctx_r93 = ɵɵnextContext(); return ctx_r93.preservedNameValues.set(element_r86, $event); });
     ɵɵelement(3, "input", 10);
     ɵɵelement(4, "br");
     ɵɵelementStart(5, "button", 11);
@@ -845,8 +838,7 @@ function CdkPopoverEditVanillaTableExample_ng_template_1_Template(rf, ctx) { if 
     var _r102 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 3);
     ɵɵelementStart(1, "form", 4, 5);
-    ɵɵlistener("ngSubmit", function CdkPopoverEditVanillaTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r102); var element_r99 = ctx.$implicit; var _r100 = ɵɵreference(2); var ctx_r101 = ɵɵnextContext(); return ctx_r101.onSubmitWeight(element_r99, _r100); });
-    ɵɵlistener("cdkEditControlPreservedFormValueChange", function CdkPopoverEditVanillaTableExample_ng_template_1_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r102); var element_r99 = ctx.$implicit; var ctx_r103 = ɵɵnextContext(); return ctx_r103.preservedWeightValues.set(element_r99, $event); });
+    ɵɵlistener("ngSubmit", function CdkPopoverEditVanillaTableExample_ng_template_1_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r102); var element_r99 = ctx.$implicit; var _r100 = ɵɵreference(2); var ctx_r101 = ɵɵnextContext(); return ctx_r101.onSubmitWeight(element_r99, _r100); })("cdkEditControlPreservedFormValueChange", function CdkPopoverEditVanillaTableExample_ng_template_1_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r102); var element_r99 = ctx.$implicit; var ctx_r103 = ɵɵnextContext(); return ctx_r103.preservedWeightValues.set(element_r99, $event); });
     ɵɵtext(3, " Edit b: ");
     ɵɵelement(4, "input", 6);
     ɵɵelement(5, "br");
@@ -873,8 +865,7 @@ function CdkPopoverEditVanillaTableExample_tr_12_ng_template_5_Template(rf, ctx)
     var _r112 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "div", 3);
     ɵɵelementStart(1, "form", 4, 5);
-    ɵɵlistener("ngSubmit", function CdkPopoverEditVanillaTableExample_tr_12_ng_template_5_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r112); var _r109 = ɵɵreference(2); var element_r104 = ɵɵnextContext().$implicit; var ctx_r110 = ɵɵnextContext(); return ctx_r110.onSubmitName(element_r104, _r109); });
-    ɵɵlistener("cdkEditControlPreservedFormValueChange", function CdkPopoverEditVanillaTableExample_tr_12_ng_template_5_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r112); var element_r104 = ɵɵnextContext().$implicit; var ctx_r113 = ɵɵnextContext(); return ctx_r113.preservedNameValues.set(element_r104, $event); });
+    ɵɵlistener("ngSubmit", function CdkPopoverEditVanillaTableExample_tr_12_ng_template_5_Template_form_ngSubmit_1_listener($event) { ɵɵrestoreView(_r112); var _r109 = ɵɵreference(2); var element_r104 = ɵɵnextContext().$implicit; var ctx_r110 = ɵɵnextContext(); return ctx_r110.onSubmitName(element_r104, _r109); })("cdkEditControlPreservedFormValueChange", function CdkPopoverEditVanillaTableExample_tr_12_ng_template_5_Template_form_cdkEditControlPreservedFormValueChange_1_listener($event) { ɵɵrestoreView(_r112); var element_r104 = ɵɵnextContext().$implicit; var ctx_r113 = ɵɵnextContext(); return ctx_r113.preservedNameValues.set(element_r104, $event); });
     ɵɵtext(3, " Edit a: ");
     ɵɵelement(4, "input", 14);
     ɵɵelement(5, "br");

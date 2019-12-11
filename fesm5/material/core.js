@@ -30,8 +30,7 @@ var ElevationOverviewExample = /** @class */ (function () {
             ɵɵtext(3, "Toggle Elevation");
             ɵɵelementEnd();
         } if (rf & 2) {
-            ɵɵclassProp("mat-elevation-z2", !ctx.isActive);
-            ɵɵclassProp("mat-elevation-z8", ctx.isActive);
+            ɵɵclassProp("mat-elevation-z2", !ctx.isActive)("mat-elevation-z8", ctx.isActive);
         } }, directives: [MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  padding: 16px;\n  margin-bottom: 16px;\n}"] });
     return ElevationOverviewExample;
 }());

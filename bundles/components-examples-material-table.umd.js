@@ -1747,8 +1747,7 @@
         var _r188 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "td", 12);
         i0.ɵɵelementStart(1, "mat-checkbox", 13);
-        i0.ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r188); return $event.stopPropagation(); });
-        i0.ɵɵlistener("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r188); var row_r186 = ctx.$implicit; var ctx_r189 = i0.ɵɵnextContext(); return $event ? ctx_r189.selection.toggle(row_r186) : null; });
+        i0.ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { i0.ɵɵrestoreView(_r188); return $event.stopPropagation(); })("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { i0.ɵɵrestoreView(_r188); var row_r186 = ctx.$implicit; var ctx_r189 = i0.ɵɵnextContext(); return $event ? ctx_r189.selection.toggle(row_r186) : null; });
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
     } if (rf & 2) {

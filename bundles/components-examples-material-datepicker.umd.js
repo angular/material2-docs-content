@@ -417,8 +417,7 @@
         DatepickerEventsExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerEventsExample, selectors: [["datepicker-events-example"]], decls: 7, vars: 3, consts: [["matInput", "", "placeholder", "Input & change events", 3, "matDatepicker", "dateInput", "dateChange"], ["matSuffix", "", 3, "for"], ["picker", ""], [1, "example-events"], [4, "ngFor", "ngForOf"]], template: function DatepickerEventsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "input", 0);
-                i0.ɵɵlistener("dateInput", function DatepickerEventsExample_Template_input_dateInput_1_listener($event) { return ctx.addEvent("input", $event); });
-                i0.ɵɵlistener("dateChange", function DatepickerEventsExample_Template_input_dateChange_1_listener($event) { return ctx.addEvent("change", $event); });
+                i0.ɵɵlistener("dateInput", function DatepickerEventsExample_Template_input_dateInput_1_listener($event) { return ctx.addEvent("input", $event); })("dateChange", function DatepickerEventsExample_Template_input_dateChange_1_listener($event) { return ctx.addEvent("change", $event); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelement(2, "mat-datepicker-toggle", 1);
                 i0.ɵɵelement(3, "mat-datepicker", null, 2);
@@ -994,8 +993,7 @@
                 i0.ɵɵelement(1, "input", 0);
                 i0.ɵɵelement(2, "mat-datepicker-toggle", 1);
                 i0.ɵɵelementStart(3, "mat-datepicker", 2, 3);
-                i0.ɵɵlistener("yearSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_yearSelected_3_listener($event) { return ctx.chosenYearHandler($event); });
-                i0.ɵɵlistener("monthSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_monthSelected_3_listener($event) { i0.ɵɵrestoreView(_r25); var _r24 = i0.ɵɵreference(4); return ctx.chosenMonthHandler($event, _r24); });
+                i0.ɵɵlistener("yearSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_yearSelected_3_listener($event) { return ctx.chosenYearHandler($event); })("monthSelected", function DatepickerViewsSelectionExample_Template_mat_datepicker_monthSelected_3_listener($event) { i0.ɵɵrestoreView(_r25); var _r24 = i0.ɵɵreference(4); return ctx.chosenMonthHandler($event, _r24); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {

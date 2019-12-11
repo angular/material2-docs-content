@@ -460,9 +460,7 @@
         var _r32 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-sidenav-container", 2);
         i0.ɵɵelementStart(1, "mat-sidenav", 3, 4);
-        i0.ɵɵlistener("openedChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_openedChange_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r31 = i0.ɵɵnextContext(); return ctx_r31.opened = $event; });
-        i0.ɵɵlistener("opened", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_opened_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r33 = i0.ɵɵnextContext(); return ctx_r33.events.push("open!"); });
-        i0.ɵɵlistener("closed", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_closed_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r34 = i0.ɵɵnextContext(); return ctx_r34.events.push("close!"); });
+        i0.ɵɵlistener("openedChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_openedChange_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r31 = i0.ɵɵnextContext(); return ctx_r31.opened = $event; })("opened", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_opened_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r33 = i0.ɵɵnextContext(); return ctx_r33.events.push("open!"); })("closed", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_closed_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r34 = i0.ɵɵnextContext(); return ctx_r34.events.push("close!"); });
         i0.ɵɵtext(3, " Sidenav content ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(4, "mat-sidenav-content");

@@ -2176,8 +2176,7 @@ function TableSelectionExample_td_3_Template(rf, ctx) { if (rf & 1) {
     const _r188 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "td", 12);
     ɵɵelementStart(1, "mat-checkbox", 13);
-    ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { ɵɵrestoreView(_r188); return $event.stopPropagation(); });
-    ɵɵlistener("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { ɵɵrestoreView(_r188); const row_r186 = ctx.$implicit; const ctx_r189 = ɵɵnextContext(); return $event ? ctx_r189.selection.toggle(row_r186) : null; });
+    ɵɵlistener("click", function TableSelectionExample_td_3_Template_mat_checkbox_click_1_listener($event) { ɵɵrestoreView(_r188); return $event.stopPropagation(); })("change", function TableSelectionExample_td_3_Template_mat_checkbox_change_1_listener($event) { ɵɵrestoreView(_r188); const row_r186 = ctx.$implicit; const ctx_r189 = ɵɵnextContext(); return $event ? ctx_r189.selection.toggle(row_r186) : null; });
     ɵɵelementEnd();
     ɵɵelementEnd();
 } if (rf & 2) {

@@ -149,8 +149,7 @@ var ExpansionOverviewExample = /** @class */ (function () {
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(11, "mat-expansion-panel", 2);
-            ɵɵlistener("opened", function ExpansionOverviewExample_Template_mat_expansion_panel_opened_11_listener($event) { return ctx.panelOpenState = true; });
-            ɵɵlistener("closed", function ExpansionOverviewExample_Template_mat_expansion_panel_closed_11_listener($event) { return ctx.panelOpenState = false; });
+            ɵɵlistener("opened", function ExpansionOverviewExample_Template_mat_expansion_panel_opened_11_listener($event) { return ctx.panelOpenState = true; })("closed", function ExpansionOverviewExample_Template_mat_expansion_panel_closed_11_listener($event) { return ctx.panelOpenState = false; });
             ɵɵelementStart(12, "mat-expansion-panel-header");
             ɵɵelementStart(13, "mat-panel-title");
             ɵɵtext(14, " Self aware panel ");
