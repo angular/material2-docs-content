@@ -17,23 +17,23 @@
 
 <div class="docs-api">
   <h2>
-    API reference for Angular Material autocomplete-testing
+    API reference for Angular Material core-testing
   </h2>
 
   <p class="docs-api-module-import">
     <code>
-      import {MatAutocompleteHarness} from '@angular/material/autocomplete/testing';
+      import {MatOptionHarness} from '@angular/material/core/testing';
     </code>
-  </p><h3 id="material-autocomplete-testing-classes" class="docs-header-link docs-api-h3">
+  </p><h3 id="material-core-testing-classes" class="docs-header-link docs-api-h3">
       <span header-link="classes"></span>
       Classes
     </h3>
     
       
 
-<h4 id="MatAutocompleteHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
-  <span header-link="MatAutocompleteHarness"></span>
-  <code>MatAutocompleteHarness</code>
+<h4 id="MatOptionHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatOptionHarness"></span>
+  <code>MatOptionHarness</code>
   
   <span class="docs-api-class-extends-clauses">
     <span class="docs-api-class-extends-label">extends</span>
@@ -42,7 +42,7 @@
     </a>
   </span>
   
-</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-autocomplete in tests.</p>
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a <code>mat-option</code> in tests.</p>
 </p>
 
 
@@ -55,12 +55,12 @@
     <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
           async
-        </div>blur
+        </div>click
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Blurs the autocomplete input.</p>
+      <p>Clicks the option.</p>
 
     </td>
   </tr><thead>
@@ -89,200 +89,12 @@
     <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
           async
-        </div>enterText
+        </div>getText
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Enters text into the autocomplete.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        value</p>
-      <code class="docs-api-method-parameter-type">string</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Promise that resolves when the action completes.</p>
-
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
-          async
-        </div>focus
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Focuses the autocomplete input.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        <p>Promise that resolves when the action completes.</p>
-
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
-          async
-        </div>getOptionGroups
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the option groups inside the autocomplete panel.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        filters</p>
-      <code class="docs-api-method-parameter-type">Pick&lt;OptgroupHarnessFilters, &quot;selector&quot; | &quot;labelText&quot;&gt; = {}</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatOptgroupHarness[]&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
-          async
-        </div>getOptions
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the options inside the autocomplete panel.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-parameters-header-row">
-      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
-    </tr>
-  </thead>
-  
-  <tr class="docs-api-method-parameter-row">
-    <td class="docs-api-method-parameter-cell">
-      <p class="docs-api-method-parameter-name">
-        filters</p>
-      <code class="docs-api-method-parameter-type">Pick&lt;OptionHarnessFilters, &quot;text&quot; | &quot;isSelected&quot; | &quot;selector&quot;&gt; = {}</code>
-    </td>
-    <td class="docs-api-method-parameter-description-cell">
-      <p class="docs-api-method-parameter-description">
-        
-      </p>
-    </td>
-  </tr>
-  <thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;MatOptionHarness[]&gt;</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
-          async
-        </div>getValue
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the value of the autocomplete input.</p>
+      <p>Gets the option&#39;s label text.</p>
 
     </td>
   </tr><thead>
@@ -341,12 +153,45 @@
     <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
           async
+        </div>isActive
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the option is active.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
         </div>isDisabled
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the autocomplete input is disabled.</p>
+      <p>Gets whether the option is disabled.</p>
 
     </td>
   </tr><thead>
@@ -374,12 +219,12 @@
     <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
           async
-        </div>isOpen
+        </div>isMultiple
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Whether the autocomplete is open.</p>
+      <p>Gets whether the option is in multiple selection mode.</p>
 
     </td>
   </tr><thead>
@@ -407,12 +252,101 @@
     <tr class="docs-api-method-name-row">
       <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
           async
-        </div>selectOption
+        </div>isSelected
       </th>
     </tr>
   </thead><tr class="docs-api-method-description-row">
     <td colspan="2" class="docs-api-method-description-cell">
-      <p>Selects the first option matching the given filters.</p>
+      <p>Gets whether the option is selected.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatOptgroupHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatOptgroupHarness"></span>
+  <code>MatOptgroupHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a <code>mat-optgroup</code> in tests.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getLabelText
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the option group&#39;s label text.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getOptions
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the options that are inside the group.</p>
 
     </td>
   </tr><thead>
@@ -424,12 +358,13 @@
   <tr class="docs-api-method-parameter-row">
     <td class="docs-api-method-parameter-cell">
       <p class="docs-api-method-parameter-name">
-        filters</p>
-      <code class="docs-api-method-parameter-type">OptionHarnessFilters</code>
+        filter</p>
+      <code class="docs-api-method-parameter-type">OptionHarnessFilters = {}</code>
     </td>
     <td class="docs-api-method-parameter-description-cell">
       <p class="docs-api-method-parameter-description">
-        
+        <p>Optionally filters which options are included.</p>
+
       </p>
     </td>
   </tr>
@@ -440,12 +375,75 @@
   </thead>
   <tr>
     <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+      <code class="docs-api-method-returns-type">Promise&lt;MatOptionHarness[]&gt;</code>
     </td>
     <td class="docs-api-method-returns-description-cell">
       <p class="docs-api-method-returns-description">
-        <p>Promise that resolves when the action completes.</p>
+        
+      </p>
+    </td>
+  </tr></table>
 
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets whether the option group is disabled.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
       </p>
     </td>
   </tr></table>
@@ -455,18 +453,17 @@
 
 
 
-    <h3 id="material-autocomplete-testing-interfaces" class="docs-header-link docs-api-h3">
+    <h3 id="material-core-testing-interfaces" class="docs-header-link docs-api-h3">
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
     
       
 
-<h4 id="AutocompleteHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
-  <span header-link="AutocompleteHarnessFilters"></span>
-  <code>AutocompleteHarnessFilters</code>
-</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatAutocompleteHarness</code> instances.</p>
-</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+<h4 id="OptionHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="OptionHarnessFilters"></span>
+  <code>OptionHarnessFilters</code>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
   <table class="docs-api-properties-table">
     <tr class="docs-api-properties-header-row">
       <th class="docs-api-properties-th">Name</th>
@@ -477,11 +474,54 @@
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>value: string | RegExp</code>
+      <code>isSelected: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Only find instances whose associated input element matches the given value.</p>
-</td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>text: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="OptgroupHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="OptgroupHarnessFilters"></span>
+  <code>OptgroupHarnessFilters</code>
+</h4><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>labelText: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
