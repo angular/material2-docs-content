@@ -1,0 +1,1253 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="docs-api">
+  <h2>
+    API reference for Angular Material table-testing
+  </h2>
+
+  <p class="docs-api-module-import">
+    <code>
+      import {MatTableHarness} from '@angular/material/table/testing';
+    </code>
+  </p><h3 id="material-table-testing-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      Classes
+    </h3>
+    
+      
+
+<h4 id="MatTableHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTableHarness"></span>
+  <code>MatTableHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard mat-table in tests.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getCellTextByColumnName
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text inside the entire table organized by columns.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatTableHarnessColumnsText&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getCellTextByIndex
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text inside the entire table organized by rows.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string[][]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getFooterRows
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets all of the footer rows in a table.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">RowHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatFooterRowHarness[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getHeaderRows
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets all of the header rows in a table.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">RowHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatHeaderRowHarness[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getRows
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets all of the regular data rows in a table.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">RowHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatRowHarness[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatRowHarness"></span>
+  <code>MatRowHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table row.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getCellTextByIndex
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text of the cells in the row.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getCells
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a list of <code>MatCellHarness</code> for all cells in the row.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatCellHarness[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatHeaderRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatHeaderRowHarness"></span>
+  <code>MatHeaderRowHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table header row.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getCellTextByIndex
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text of the cells in the header row.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getCells
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a list of <code>MatHeaderCellHarness</code> for all cells in the row.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatHeaderCellHarness[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatFooterRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFooterRowHarness"></span>
+  <code>MatFooterRowHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table footer row.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getCellTextByIndex
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text of the cells in the footer row.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getCells
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a list of <code>MatFooterCellHarness</code> for all cells in the row.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatFooterCellHarness[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatCellHarness"></span>
+  <code>MatCellHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table cell.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getColumnName
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the name of the column that the cell belongs to.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          async
+        </div>getText
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the cell&#39;s text.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatHeaderCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatHeaderCellHarness"></span>
+  <code>MatHeaderCellHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/table/testing/api#MatCellHarness" class="docs-api-class-extends-type">
+      MatCellHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table header cell.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getColumnName
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the name of the column that the cell belongs to.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getText
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the cell&#39;s text.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatFooterCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFooterCellHarness"></span>
+  <code>MatFooterCellHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/table/testing/api#MatCellHarness" class="docs-api-class-extends-type">
+      MatCellHarness
+    </a>
+  </span>
+  
+</h4><p class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table footer cell.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getColumnName
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the name of the column that the cell belongs to.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getText
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the cell&#39;s text.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">host
+      </th>
+    </tr>
+  </thead><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+    </td>
+  </tr><thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    <h3 id="material-table-testing-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      Interfaces
+    </h3>
+    
+      
+
+<h4 id="MatTableHarnessColumnsText" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatTableHarnessColumnsText"></span>
+  <code>MatTableHarnessColumnsText</code>
+</h4><p class="docs-api-interface-description"><p>Text extracted from a table organized by columns.</p>
+</p>
+
+
+<h5 class="docs-api-h5 docs-api-method-header">Methods</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">__index
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        columnName</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <p class="docs-api-method-parameter-description">
+        
+      </p>
+    </td>
+  </tr>
+  <thead>
+    <tr class="docs-api-method-returns-header-row">
+      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">{
+    text: string[];
+    headerText: string[];
+    footerText: string[];
+}</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <p class="docs-api-method-returns-description">
+        
+      </p>
+    </td>
+  </tr></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CellHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CellHarnessFilters"></span>
+  <code>CellHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of cell harness instances.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>text: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Only find instances whose text matches the given value.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="RowHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="RowHarnessFilters"></span>
+  <code>RowHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of row harness instances.</p>
+</p>
+
+
+
+
+
+
+    
+      
+
+<h4 id="TableHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="TableHarnessFilters"></span>
+  <code>TableHarnessFilters</code>
+</h4><p class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of table harness instances.</p>
+</p>
+
+
+
+
+
+
+    </div>
