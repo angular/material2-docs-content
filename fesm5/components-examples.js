@@ -106,7 +106,6 @@ var ExampleModule = /** @class */ (function () {
         { type: NgModule, args: [{
                     imports: EXAMPLE_MODULES,
                     exports: EXAMPLE_MODULES,
-                    entryComponents: EXAMPLE_LIST,
                 },] },
     ];
     ExampleModule.ɵmod = ɵɵdefineNgModule({ type: ExampleModule });
@@ -120,7 +119,6 @@ var ExampleModule = /** @class */ (function () {
         args: [{
                 imports: EXAMPLE_MODULES,
                 exports: EXAMPLE_MODULES,
-                entryComponents: EXAMPLE_LIST,
             }]
     }], null, null); })();
 

@@ -136,7 +136,6 @@ ExampleModule.decorators = [
     { type: NgModule, args: [{
                 imports: EXAMPLE_MODULES,
                 exports: EXAMPLE_MODULES,
-                entryComponents: EXAMPLE_LIST,
             },] },
 ];
 /** @nocollapse */ ExampleModule.ɵmod = ɵɵdefineNgModule({ type: ExampleModule });
@@ -148,7 +147,6 @@ ExampleModule.decorators = [
         args: [{
                 imports: EXAMPLE_MODULES,
                 exports: EXAMPLE_MODULES,
-                entryComponents: EXAMPLE_LIST,
             }]
     }], null, null); })();
 
