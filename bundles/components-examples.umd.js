@@ -15,7 +15,6 @@
             { type: i0.NgModule, args: [{
                         imports: EXAMPLE_MODULES,
                         exports: EXAMPLE_MODULES,
-                        entryComponents: EXAMPLE_LIST,
                     },] },
         ];
         ExampleModule.ɵmod = i0.ɵɵdefineNgModule({ type: ExampleModule });
@@ -29,7 +28,6 @@
             args: [{
                     imports: EXAMPLE_MODULES,
                     exports: EXAMPLE_MODULES,
-                    entryComponents: EXAMPLE_LIST,
                 }]
         }], null, null); })();
 
