@@ -66,7 +66,7 @@
                 }]
         }], null, null); })();
 
-    function AutocompleteDisplayExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
+    function AutocompleteDisplayExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 6);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
@@ -94,7 +94,7 @@
                 .pipe(operators.startWith(''), operators.map(function (value) { return typeof value === 'string' ? value : value.name; }), operators.map(function (name) { return name ? _this._filter(name) : _this.options.slice(); }));
         };
         AutocompleteDisplayExample.prototype.displayFn = function (user) {
-            return user.name;
+            return user && user.name ? user.name : '';
         };
         AutocompleteDisplayExample.prototype._filter = function (name) {
             var filterValue = name.toLowerCase();
@@ -108,25 +108,28 @@
                     },] },
         ];
         AutocompleteDisplayExample.ɵfac = function AutocompleteDisplayExample_Factory(t) { return new (t || AutocompleteDisplayExample)(); };
-        AutocompleteDisplayExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteDisplayExample, selectors: [["autocomplete-display-example"]], decls: 7, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Assignee", "aria-label", "Assignee", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "displayWith"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteDisplayExample_Template(rf, ctx) { if (rf & 1) {
+        AutocompleteDisplayExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteDisplayExample, selectors: [["autocomplete-display-example"]], decls: 9, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "displayWith"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteDisplayExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
                 i0.ɵɵelementStart(1, "mat-form-field", 1);
-                i0.ɵɵelement(2, "input", 2);
-                i0.ɵɵelementStart(3, "mat-autocomplete", 3, 4);
-                i0.ɵɵtemplate(5, AutocompleteDisplayExample_mat_option_5_Template, 2, 2, "mat-option", 5);
-                i0.ɵɵpipe(6, "async");
+                i0.ɵɵelementStart(2, "mat-label");
+                i0.ɵɵtext(3, "Assignee");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelement(4, "input", 2);
+                i0.ɵɵelementStart(5, "mat-autocomplete", 3, 4);
+                i0.ɵɵtemplate(7, AutocompleteDisplayExample_mat_option_7_Template, 2, 2, "mat-option", 5);
+                i0.ɵɵpipe(8, "async");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                var _r3 = i0.ɵɵreference(4);
-                i0.ɵɵadvance(2);
+                var _r3 = i0.ɵɵreference(6);
+                i0.ɵɵadvance(4);
                 i0.ɵɵproperty("formControl", ctx.myControl)("matAutocomplete", _r3);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("displayWith", ctx.displayFn);
                 i0.ɵɵadvance(2);
-                i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(6, 4, ctx.filteredOptions));
-            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+                i0.ɵɵproperty("ngForOf", i0.ɵɵpipeBind1(8, 4, ctx.filteredOptions));
+            } }, directives: [i1.ɵangular_packages_forms_forms_y, i1.NgControlStatusGroup, i1.NgForm, i2.MatFormField, i2.MatLabel, i3.MatInput, i1.DefaultValueAccessor, i4.MatAutocompleteTrigger, i1.NgControlStatus, i1.FormControlDirective, i4.MatAutocomplete, i5.NgForOf, i6$1.MatOption], pipes: [i5.AsyncPipe], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
         return AutocompleteDisplayExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(AutocompleteDisplayExample, [{
