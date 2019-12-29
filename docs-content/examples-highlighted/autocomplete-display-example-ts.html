@@ -34,7 +34,7 @@
   }
 
   displayFn(user: User): <span class="hljs-built_in">string</span> {
-    <span class="hljs-keyword">return</span> user &amp;&amp; user.name ? user.name : <span class="hljs-string">''</span>;
+    <span class="hljs-keyword">return</span> user.name;
   }
 
   <span class="hljs-keyword">private</span> _filter(name: <span class="hljs-built_in">string</span>): User[] {

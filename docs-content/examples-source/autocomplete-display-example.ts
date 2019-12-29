@@ -34,7 +34,7 @@ export class AutocompleteDisplayExample implements OnInit {
   }
 
   displayFn(user: User): string {
-    return user && user.name ? user.name : '';
+    return user.name;
   }
 
   private _filter(name: string): User[] {
