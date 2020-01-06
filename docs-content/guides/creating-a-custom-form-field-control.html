@@ -18,11 +18,11 @@ just a starting point for us to learn.)</p>
   selector: <span class="hljs-string">'example-tel-input'</span>,
   template: <span class="hljs-string">`
     &lt;div [formGroup]="parts"&gt;
-      &lt;input class="area" formControlName="area" size="3"&gt;
+      &lt;input class="area" formControlName="area" maxlength="3"&gt;
       &lt;span&gt;&amp;ndash;&lt;/span&gt;
-      &lt;input class="exchange" formControlName="exchange" size="3"&gt;
+      &lt;input class="exchange" formControlName="exchange" maxlength="3"&gt;
       &lt;span&gt;&amp;ndash;&lt;/span&gt;
-      &lt;input class="subscriber" formControlName="subscriber" size="4"&gt;
+      &lt;input class="subscriber" formControlName="subscriber" maxlength="4"&gt;
     &lt;/div&gt;
   `</span>,
   styles: [<span class="hljs-string">`
