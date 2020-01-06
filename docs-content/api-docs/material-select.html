@@ -131,6 +131,34 @@ should be returned.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples are disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the component is disabled.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>errorStateMatcher: ErrorStateMatcher</code>
     </p>
   </td>
@@ -287,6 +315,20 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>autofilled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the input is currently in an autofilled state. If property is not present on the
+control it is assumed to be false.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>controlType: &#39;mat-select&#39;</code>
     </p>
   </td>
@@ -317,6 +359,19 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the select has a value.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>errorState: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the control is in an error state.</p>
 </td>
 </tr>
 
@@ -420,6 +475,20 @@ Follows the same logic as <code>Array.prototype.sort</code>.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>The currently selected option.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>stateChanges: Observable&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Stream that emits whenever the state of the control changes such that the parent <code>MatFormField</code>
+needs to run change detection.</p>
 </td>
 </tr>
 

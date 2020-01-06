@@ -137,6 +137,35 @@ components if the labels have changed after initialization.</p>
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-label&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Aria label for the tab.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;aria-labelledby&#39;</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabelledby: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the element that the tab is labelled by.
+Will be cleared if <code>aria-label</code> is set at the same time.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
       <code>completed: boolean</code>
@@ -167,6 +196,20 @@ components if the labels have changed after initialization.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>errorMessage: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Error message to display when there&#39;s an error.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>hasError: boolean</code>
     </p>
   </td>
@@ -181,10 +224,78 @@ components if the labels have changed after initialization.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>label: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Plain text label of the step.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>optional: boolean</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Whether the completion of step is optional.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>state: StepState</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>State of the step.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>stepControl: AbstractControlLike</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>The top level abstract control of the step.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>content: TemplateRef&lt;any&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Template for step content.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>interacted: false</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether user has seen the expanded step content or not.</p>
 </td>
 </tr>
 
@@ -267,18 +378,6 @@ components if the labels have changed after initialization.</p>
       </p>
     </td>
   </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">ngOnChanges
-      </th>
-    </tr>
-  </thead></table>
 
 
   
@@ -418,6 +517,20 @@ components if the labels have changed after initialization.</p>
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>selectionChange: EventEmitter&lt;StepperSelectionEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when the selected step has changed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>steps: QueryList&lt;CdkStep&gt;</code>
     </p>
@@ -447,30 +560,6 @@ components if the labels have changed after initialization.</p>
 
     </td>
   </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">ngAfterViewInit
-      </th>
-    </tr>
-  </thead></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">ngOnDestroy
-      </th>
-    </tr>
-  </thead></table>
 
 
   
@@ -543,6 +632,20 @@ components if the labels have changed after initialization.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples should be disabled for the step headers.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>labelPosition: &#39;bottom&#39; | &#39;end&#39;</code>
     </p>
   </td>
@@ -597,6 +700,34 @@ components if the labels have changed after initialization.</p>
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>animationDone: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when the current step is done transitioning in.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>selectionChange: EventEmitter&lt;StepperSelectionEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when the selected step has changed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>steps: QueryList&lt;CdkStep&gt;</code>
     </p>
@@ -626,42 +757,6 @@ components if the labels have changed after initialization.</p>
 
     </td>
   </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">ngAfterContentInit
-      </th>
-    </tr>
-  </thead></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">ngAfterViewInit
-      </th>
-    </tr>
-  </thead></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">ngOnDestroy
-      </th>
-    </tr>
-  </thead></table>
 
 
   
@@ -734,6 +829,20 @@ components if the labels have changed after initialization.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
           @Input()</div><p class="docs-api-property-name">
+      <code>disableRipple: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether ripples should be disabled for the step headers.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
       <code>linear: boolean</code>
     </p>
   </td>
@@ -774,6 +883,34 @@ components if the labels have changed after initialization.</p>
       
 
 <tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>animationDone: EventEmitter&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when the current step is done transitioning in.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
+      <code>selectionChange: EventEmitter&lt;StepperSelectionEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Event emitted when the selected step has changed.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>steps: QueryList&lt;CdkStep&gt;</code>
     </p>
@@ -803,42 +940,6 @@ components if the labels have changed after initialization.</p>
 
     </td>
   </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">ngAfterContentInit
-      </th>
-    </tr>
-  </thead></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">ngAfterViewInit
-      </th>
-    </tr>
-  </thead></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">ngOnDestroy
-      </th>
-    </tr>
-  </thead></table>
 
 
   
@@ -899,7 +1000,28 @@ components if the labels have changed after initialization.</p>
   
     <span class="docs-api-class-selector-name">button[matStepperNext]</span>
   
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>type: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Type of the next button. Defaults to &quot;submit&quot; if not specified.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 
@@ -926,7 +1048,28 @@ components if the labels have changed after initialization.</p>
   
     <span class="docs-api-class-selector-name">button[matStepperPrevious]</span>
   
-</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>type: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Type of the previous button. Defaults to &quot;button&quot; if not specified.</p>
+</td>
+</tr>
+
+
+    
+  </table>
 
 
 
@@ -1082,6 +1225,19 @@ components if the labels have changed after initialization.</p>
     </p>
   </td>
   <td class="docs-api-property-description"><p>State of the given step.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Whether the option is disabled.</p>
 </td>
 </tr>
 
