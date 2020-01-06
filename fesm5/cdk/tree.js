@@ -68,7 +68,7 @@ var TREE_DATA = [
         expandable: false,
         level: 2,
     }, {
-        name: 'Brussel sprouts',
+        name: 'Brussels sprouts',
         expandable: false,
         level: 2,
     }, {
@@ -185,7 +185,7 @@ var TREE_DATA$1 = [
                 name: 'Green',
                 children: [
                     { name: 'Broccoli' },
-                    { name: 'Brussel sprouts' },
+                    { name: 'Brussels sprouts' },
                 ]
             }, {
                 name: 'Orange',

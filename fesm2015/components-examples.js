@@ -1924,8 +1924,8 @@ ExampleModule.decorators = [
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
- * Example data
- *   with information about Component name, selector, files used in example, and path to examples
+ * Example data with information about component name, selector, files used in example, and path to
+ * examples.
  */
 class ExampleData {
     /**

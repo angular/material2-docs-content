@@ -578,7 +578,7 @@
                     name: 'Green',
                     children: [
                         { name: 'Broccoli' },
-                        { name: 'Brussel sprouts' },
+                        { name: 'Brussels sprouts' },
                     ]
                 }, {
                     name: 'Orange',
@@ -912,7 +912,7 @@
                     name: 'Green',
                     children: [
                         { name: 'Broccoli' },
-                        { name: 'Brussel sprouts' },
+                        { name: 'Brussels sprouts' },
                     ]
                 }, {
                     name: 'Orange',

@@ -894,7 +894,7 @@ function TreeFlatOverviewExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1)
 } }
 /**
  * Food data with nested structure.
- * Each node has a name and an optiona list of children.
+ * Each node has a name and an optional list of children.
  * @record
  */
 function FoodNode() { }
@@ -920,7 +920,7 @@ const TREE_DATA$1 = [
                 name: 'Green',
                 children: [
                     { name: 'Broccoli' },
-                    { name: 'Brussel sprouts' },
+                    { name: 'Brussels sprouts' },
                 ]
             }, {
                 name: 'Orange',
@@ -1438,7 +1438,7 @@ function TreeNestedOverviewExample_mat_nested_tree_node_2_Template(rf, ctx) { if
 } }
 /**
  * Food data with nested structure.
- * Each node has a name and an optiona list of children.
+ * Each node has a name and an optional list of children.
  * @record
  */
 function FoodNode$1() { }
@@ -1464,7 +1464,7 @@ const TREE_DATA$2 = [
                 name: 'Green',
                 children: [
                     { name: 'Broccoli' },
-                    { name: 'Brussel sprouts' },
+                    { name: 'Brussels sprouts' },
                 ]
             }, {
                 name: 'Orange',

@@ -1810,8 +1810,8 @@
         }], null, null); })();
 
     /**
-     * Example data
-     *   with information about Component name, selector, files used in example, and path to examples
+     * Example data with information about component name, selector, files used in example, and path to
+     * examples.
      */
     var ExampleData = /** @class */ (function () {
         function ExampleData(example) {
