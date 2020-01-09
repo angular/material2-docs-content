@@ -33,5 +33,5 @@ export declare class WrapperTable<T> implements AfterContentInit {
     dataSource: DataSource<T>;
     ngAfterContentInit(): void;
     static ɵfac: i0.ɵɵFactoryDef<WrapperTable<any>>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<WrapperTable<any>, "wrapper-table", never, { 'columns': "columns", 'dataSource': "dataSource" }, {}, ["headerRowDefs", "rowDefs", "columnDefs"]>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<WrapperTable<any>, "wrapper-table", never, { "columns": "columns"; "dataSource": "dataSource"; }, {}, ["headerRowDefs", "rowDefs", "columnDefs"]>;
 }
