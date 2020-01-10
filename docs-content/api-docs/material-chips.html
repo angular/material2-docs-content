@@ -140,20 +140,6 @@ the selected states for all the chips inside the chip list are always ignored.</
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>autofilled: boolean</code>
-    </p>
-  </td>
-  <td class="docs-api-property-description"><p>Whether the input is currently in an autofilled state. If property is not present on the
-control it is assumed to be false.</p>
-</td>
-</tr>
-
-
-    
-      
-
-<tr class="docs-api-properties-row">
-  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
       <code>chipBlurChanges: Observable&lt;MatChipEvent&gt;</code>
     </p>
   </td>
@@ -222,8 +208,7 @@ control it is assumed to be false.</p>
       <code>errorState: boolean</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Whether the control is in an error state.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -271,12 +256,10 @@ control it is assumed to be false.</p>
 
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
-      <code>stateChanges: Observable&lt;void&gt;</code>
+      <code>stateChanges: Subject&lt;void&gt;</code>
     </p>
   </td>
-  <td class="docs-api-property-description"><p>Stream that emits whenever the state of the control changes such that the parent <code>MatFormField</code>
-needs to run change detection.</p>
-</td>
+  <td class="docs-api-property-description"></td>
 </tr>
 
 
@@ -641,37 +624,6 @@ not selectable.</p>
     <td colspan="2" class="docs-api-method-description-cell">
       <p>Allows for programmatic focusing of the chip.</p>
 
-    </td>
-  </tr></table>
-
-
-  
-    
-
-<table class="docs-api-method-table">
-  <thead>
-    <tr class="docs-api-method-name-row">
-      <th colspan="2" class="docs-api-method-name-cell">getLabel
-      </th>
-    </tr>
-  </thead><tr class="docs-api-method-description-row">
-    <td colspan="2" class="docs-api-method-description-cell">
-      <p>Gets the label for this option.</p>
-
-    </td>
-  </tr><thead>
-    <tr class="docs-api-method-returns-header-row">
-      <th colspan="2" class="docs-api-method-returns-header-cell">Returns</th>
-    </tr>
-  </thead>
-  <tr>
-    <td class="docs-api-method-returns-type-cell">
-      <code class="docs-api-method-returns-type">string</code>
-    </td>
-    <td class="docs-api-method-returns-description-cell">
-      <p class="docs-api-method-returns-description">
-        
-      </p>
     </td>
   </tr></table>
 
