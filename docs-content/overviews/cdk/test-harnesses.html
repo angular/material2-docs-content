@@ -557,7 +557,7 @@ This can now easily be expanded to allow users of the harness to search for part
 
   <span class="hljs-comment">/** Gets a list of items in the menu, optionally filtered based on the given criteria. */</span>
   <span class="hljs-keyword">async</span> getItems(filters: MyMenuItemHarnessFilters = {}): <span class="hljs-built_in">Promise</span>&lt;MyMenuItemHarness[]&gt; {
-    <span class="hljs-keyword">const</span> getFilteredItems = <span class="hljs-keyword">this</span>.locatorFor(MyMenuItemHarness.with(filters));
+    <span class="hljs-keyword">const</span> getFilteredItems = <span class="hljs-keyword">this</span>.locatorForAll(MyMenuItemHarness.with(filters));
     <span class="hljs-keyword">return</span> getFilteredItems();
   }
 
