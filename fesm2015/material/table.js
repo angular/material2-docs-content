@@ -1448,16 +1448,6 @@ function TableMultipleHeaderFooterExample_tr_19_Template(rf, ctx) { if (rf & 1) 
 const _c0$1 = function () { return ["item-description", "cost-description"]; };
 const _c1 = function () { return ["disclaimer"]; };
 /**
- * @record
- */
-function Transaction$1() { }
-if (false) {
-    /** @type {?} */
-    Transaction$1.prototype.item;
-    /** @type {?} */
-    Transaction$1.prototype.cost;
-}
-/**
  * \@title Table with multiple header and footer rows
  */
 class TableMultipleHeaderFooterExample {
@@ -3414,12 +3404,12 @@ function TableStickyFooterExample_tr_12_Template(rf, ctx) { if (rf & 1) {
 /**
  * @record
  */
-function Transaction$2() { }
+function Transaction$1() { }
 if (false) {
     /** @type {?} */
-    Transaction$2.prototype.item;
+    Transaction$1.prototype.item;
     /** @type {?} */
-    Transaction$2.prototype.cost;
+    Transaction$1.prototype.cost;
 }
 /**
  * \@title Table with a sticky footer
