@@ -1,9 +1,5 @@
 import { Transaction } from '../table-footer-row/table-footer-row-example';
 import * as i0 from "@angular/core";
-export interface Transaction {
-    item: string;
-    cost: number;
-}
 /**
  * @title Table with multiple header and footer rows
  */
