@@ -745,6 +745,12 @@
             "additionalFiles": [],
             "selectorName": ""
         },
+        "list-single-selection": {
+            "title": "List with single selection",
+            "component": list.ListSingleSelectionExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
         "menu-icons": {
             "title": "Menu with icons",
             "component": menu.MenuIconsExample,
@@ -1543,6 +1549,7 @@
         list.ListOverviewExample,
         list.ListSectionsExample,
         list.ListSelectionExample,
+        list.ListSingleSelectionExample,
         menu.MenuIconsExample,
         menu.MenuOverviewExample,
         menu.MenuPositionExample,
@@ -2604,6 +2611,12 @@
         enumerable: true,
         get: function () {
             return list.ListSelectionExample;
+        }
+    });
+    Object.defineProperty(exports, 'ListSingleSelectionExample', {
+        enumerable: true,
+        get: function () {
+            return list.ListSingleSelectionExample;
         }
     });
     Object.defineProperty(exports, 'MenuIconsExample', {

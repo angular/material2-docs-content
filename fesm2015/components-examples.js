@@ -57,8 +57,8 @@ import { IconOverviewExample, IconSvgExample, IconExamplesModule } from '@angula
 export { IconOverviewExample, IconSvgExample } from '@angular/components-examples/material/icon';
 import { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, InputExamplesModule } from '@angular/components-examples/material/input';
 export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample } from '@angular/components-examples/material/input';
-import { ListOverviewExample, ListSectionsExample, ListSelectionExample, ListExamplesModule } from '@angular/components-examples/material/list';
-export { ListOverviewExample, ListSectionsExample, ListSelectionExample } from '@angular/components-examples/material/list';
+import { ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample, ListExamplesModule } from '@angular/components-examples/material/list';
+export { ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample } from '@angular/components-examples/material/list';
 import { MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample, MenuExamplesModule } from '@angular/components-examples/material/menu';
 export { MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample } from '@angular/components-examples/material/menu';
 import { PaginatorConfigurableExample, PaginatorOverviewExample, PaginatorExamplesModule } from '@angular/components-examples/material/paginator';
@@ -852,6 +852,12 @@ const EXAMPLE_COMPONENTS = {
     "list-selection": {
         "title": "List with selection",
         "component": ListSelectionExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "list-single-selection": {
+        "title": "List with single selection",
+        "component": ListSingleSelectionExample,
         "additionalFiles": [],
         "selectorName": ""
     },
@@ -1655,6 +1661,7 @@ const EXAMPLE_LIST = [CdkPopoverEditCdkTableFlexExample,
     ListOverviewExample,
     ListSectionsExample,
     ListSelectionExample,
+    ListSingleSelectionExample,
     MenuIconsExample,
     MenuOverviewExample,
     MenuPositionExample,

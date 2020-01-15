@@ -231,6 +231,64 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/list/list-single-selection/list-single-selection-example.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+function ListSingleSelectionExample_mat_list_option_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-list-option");
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const shoe_r9 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", shoe_r9, " ");
+} }
+/**
+ * \@title List with single selection
+ */
+class ListSingleSelectionExample {
+    constructor() {
+        this.typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
+    }
+}
+ListSingleSelectionExample.decorators = [
+    { type: Component, args: [{
+                selector: 'list-single-selection-example',
+                styleUrls: ['list-single-selection-example.css'],
+                templateUrl: 'list-single-selection-example.html',
+            },] },
+];
+/** @nocollapse */ ListSingleSelectionExample.ɵfac = function ListSingleSelectionExample_Factory(t) { return new (t || ListSingleSelectionExample)(); };
+/** @nocollapse */ ListSingleSelectionExample.ɵcmp = ɵɵdefineComponent({ type: ListSingleSelectionExample, selectors: [["list-single-selection-example"]], decls: 5, vars: 3, consts: [[3, "multiple"], ["shoes", ""], [4, "ngFor", "ngForOf"]], template: function ListSingleSelectionExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "mat-selection-list", 0, 1);
+        ɵɵtemplate(2, ListSingleSelectionExample_mat_list_option_2_Template, 2, 1, "mat-list-option", 2);
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "p");
+        ɵɵtext(4);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        const _r7 = ɵɵreference(1);
+        ɵɵproperty("multiple", false);
+        ɵɵadvance(2);
+        ɵɵproperty("ngForOf", ctx.typesOfShoes);
+        ɵɵadvance(2);
+        ɵɵtextInterpolate1(" Option selected: ", _r7.selectedOptions.selected, "\n");
+    } }, directives: [MatSelectionList, NgForOf, MatListOption], styles: [""] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(ListSingleSelectionExample, [{
+        type: Component,
+        args: [{
+                selector: 'list-single-selection-example',
+                styleUrls: ['list-single-selection-example.css'],
+                templateUrl: 'list-single-selection-example.html',
+            }]
+    }], null, null); })();
+if (false) {
+    /** @type {?} */
+    ListSingleSelectionExample.prototype.typesOfShoes;
+}
+
+/**
+ * @fileoverview added by tsickle
  * Generated from: src/components-examples/material/list/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
@@ -239,6 +297,7 @@ const EXAMPLES = [
     ListOverviewExample,
     ListSectionsExample,
     ListSelectionExample,
+    ListSingleSelectionExample,
 ];
 class ListExamplesModule {
 }
@@ -261,11 +320,13 @@ ListExamplesModule.decorators = [
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ListExamplesModule, { declarations: [ListOverviewExample,
         ListSectionsExample,
-        ListSelectionExample], imports: [CommonModule,
+        ListSelectionExample,
+        ListSingleSelectionExample], imports: [CommonModule,
         MatIconModule,
         MatListModule], exports: [ListOverviewExample,
         ListSectionsExample,
-        ListSelectionExample] }); })();
+        ListSelectionExample,
+        ListSingleSelectionExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ListExamplesModule, [{
         type: NgModule,
         args: [{
@@ -279,5 +340,5 @@ ListExamplesModule.decorators = [
             }]
     }], null, null); })();
 
-export { ListExamplesModule, ListOverviewExample, ListSectionsExample, ListSelectionExample };
+export { ListExamplesModule, ListOverviewExample, ListSectionsExample, ListSelectionExample, ListSingleSelectionExample };
 //# sourceMappingURL=list.js.map
