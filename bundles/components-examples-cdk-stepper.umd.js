@@ -22,13 +22,6 @@
     var CdkCustomStepperWithoutFormExample = /** @class */ (function () {
         function CdkCustomStepperWithoutFormExample() {
         }
-        CdkCustomStepperWithoutFormExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'cdk-custom-stepper-without-form-example',
-                        templateUrl: './cdk-custom-stepper-without-form-example.html',
-                        styleUrls: ['./cdk-custom-stepper-without-form-example.css']
-                    },] },
-        ];
         CdkCustomStepperWithoutFormExample.ɵfac = function CdkCustomStepperWithoutFormExample_Factory(t) { return new (t || CdkCustomStepperWithoutFormExample)(); };
         CdkCustomStepperWithoutFormExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkCustomStepperWithoutFormExample, selectors: [["cdk-custom-stepper-without-form-example"]], decls: 7, vars: 0, template: function CdkCustomStepperWithoutFormExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "example-custom-stepper");
@@ -63,14 +56,6 @@
         CustomStepper.prototype.onClick = function (index) {
             this.selectedIndex = index;
         };
-        CustomStepper.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'example-custom-stepper',
-                        templateUrl: './example-custom-stepper.html',
-                        styleUrls: ['./example-custom-stepper.css'],
-                        providers: [{ provide: i1.CdkStepper, useExisting: CustomStepper }]
-                    },] },
-        ];
         CustomStepper.ɵfac = function CustomStepper_Factory(t) { return ɵCustomStepper_BaseFactory(t || CustomStepper); };
         CustomStepper.ɵcmp = i0.ɵɵdefineComponent({ type: CustomStepper, selectors: [["example-custom-stepper"]], features: [i0.ɵɵProvidersFeature([{ provide: i1.CdkStepper, useExisting: CustomStepper }]), i0.ɵɵInheritDefinitionFeature], decls: 12, vars: 5, consts: [[1, "example-container"], [3, "ngTemplateOutlet"], [1, "example-step-navigation-bar"], ["cdkStepperPrevious", "", 1, "example-nav-button"], ["class", "example-step", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], ["cdkStepperNext", "", 1, "example-nav-button"], [1, "example-step", 3, "ngClass", "click"]], template: function CustomStepper_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "section", 0);
@@ -122,16 +107,6 @@
     var CdkStepperExamplesModule = /** @class */ (function () {
         function CdkStepperExamplesModule() {
         }
-        CdkStepperExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i1.CdkStepperModule,
-                            i2.CommonModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         CdkStepperExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkStepperExamplesModule });
         CdkStepperExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkStepperExamplesModule_Factory(t) { return new (t || CdkStepperExamplesModule)(); }, imports: [[
                     i1.CdkStepperModule,

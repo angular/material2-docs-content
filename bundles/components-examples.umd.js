@@ -1658,12 +1658,6 @@
     var ExampleModule = /** @class */ (function () {
         function ExampleModule() {
         }
-        ExampleModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: EXAMPLE_MODULES,
-                        exports: EXAMPLE_MODULES,
-                    },] },
-        ];
         ExampleModule.ɵmod = i0.ɵɵdefineNgModule({ type: ExampleModule });
         ExampleModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, imports: [EXAMPLE_MODULES,
                 popoverEdit.CdkPopoverEditExamplesModule,

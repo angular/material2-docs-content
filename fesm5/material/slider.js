@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, Component, ɵɵdefineComponent, ɵɵtemplate, ɵsetClassMetadata, ɵɵelement, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵdefineComponent, ɵɵtemplate, ɵsetClassMetadata, Component, ɵɵelement, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NumberValueAccessor, DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -49,13 +49,6 @@ var SliderConfigurableExample = /** @class */ (function () {
     SliderConfigurableExample.prototype.getSliderTickInterval = function () {
         return this.showTicks ? (this.autoTicks ? 'auto' : this.tickInterval) : 0;
     };
-    SliderConfigurableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'slider-configurable-example',
-                    templateUrl: 'slider-configurable-example.html',
-                    styleUrls: ['slider-configurable-example.css'],
-                },] },
-    ];
     SliderConfigurableExample.ɵfac = function SliderConfigurableExample_Factory(t) { return new (t || SliderConfigurableExample)(); };
     SliderConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: SliderConfigurableExample, selectors: [["slider-configurable-example"]], decls: 34, vars: 20, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], ["matInput", "", "type", "number", "placeholder", "Value", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "number", "placeholder", "Min value", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "number", "placeholder", "Max value", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "number", "placeholder", "Step size", 3, "ngModel", "ngModelChange"], [1, "example-margin", 3, "ngModel", "ngModelChange"], ["class", "example-margin", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["class", "example-margin", 4, "ngIf"], [1, "result"], [1, "example-margin", 3, "disabled", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "ngModel", "vertical", "ngModelChange"], ["matInput", "", "type", "number", "placeholder", "Tick interval", 3, "ngModel", "ngModelChange"]], template: function SliderConfigurableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-card");
@@ -176,13 +169,6 @@ var SliderFormattingExample = /** @class */ (function () {
         }
         return value;
     };
-    SliderFormattingExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'slider-formatting-example',
-                    templateUrl: 'slider-formatting-example.html',
-                    styleUrls: ['slider-formatting-example.css'],
-                },] },
-    ];
     SliderFormattingExample.ɵfac = function SliderFormattingExample_Factory(t) { return new (t || SliderFormattingExample)(); };
     SliderFormattingExample.ɵcmp = ɵɵdefineComponent({ type: SliderFormattingExample, selectors: [["slider-formatting-example"]], decls: 1, vars: 1, consts: [["thumbLabel", "", "tickInterval", "1000", "min", "1", "max", "100000", 3, "displayWith"]], template: function SliderFormattingExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelement(0, "mat-slider", 0);
@@ -206,13 +192,6 @@ var SliderFormattingExample = /** @class */ (function () {
 var SliderOverviewExample = /** @class */ (function () {
     function SliderOverviewExample() {
     }
-    SliderOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'slider-overview-example',
-                    templateUrl: 'slider-overview-example.html',
-                    styleUrls: ['slider-overview-example.css'],
-                },] },
-    ];
     SliderOverviewExample.ɵfac = function SliderOverviewExample_Factory(t) { return new (t || SliderOverviewExample)(); };
     SliderOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SliderOverviewExample, selectors: [["slider-overview-example"]], decls: 1, vars: 0, template: function SliderOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelement(0, "mat-slider");
@@ -236,20 +215,6 @@ var EXAMPLES = [
 var SliderExamplesModule = /** @class */ (function () {
     function SliderExamplesModule() {
     }
-    SliderExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        FormsModule,
-                        MatCardModule,
-                        MatCheckboxModule,
-                        MatInputModule,
-                        MatSliderModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                },] },
-    ];
     SliderExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SliderExamplesModule });
     SliderExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SliderExamplesModule_Factory(t) { return new (t || SliderExamplesModule)(); }, imports: [[
                 CommonModule,

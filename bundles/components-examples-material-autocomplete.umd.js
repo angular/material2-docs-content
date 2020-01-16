@@ -30,13 +30,6 @@
             var filterValue = value.toLowerCase();
             return this.options.filter(function (option) { return option.toLowerCase().indexOf(filterValue) === 0; });
         };
-        AutocompleteAutoActiveFirstOptionExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'autocomplete-auto-active-first-option-example',
-                        templateUrl: 'autocomplete-auto-active-first-option-example.html',
-                        styleUrls: ['autocomplete-auto-active-first-option-example.css'],
-                    },] },
-        ];
         AutocompleteAutoActiveFirstOptionExample.ɵfac = function AutocompleteAutoActiveFirstOptionExample_Factory(t) { return new (t || AutocompleteAutoActiveFirstOptionExample)(); };
         AutocompleteAutoActiveFirstOptionExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteAutoActiveFirstOptionExample, selectors: [["autocomplete-auto-active-first-option-example"]], decls: 7, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["autoActiveFirstOption", ""], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteAutoActiveFirstOptionExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -100,13 +93,6 @@
             var filterValue = name.toLowerCase();
             return this.options.filter(function (option) { return option.name.toLowerCase().indexOf(filterValue) === 0; });
         };
-        AutocompleteDisplayExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'autocomplete-display-example',
-                        templateUrl: 'autocomplete-display-example.html',
-                        styleUrls: ['autocomplete-display-example.css'],
-                    },] },
-        ];
         AutocompleteDisplayExample.ɵfac = function AutocompleteDisplayExample_Factory(t) { return new (t || AutocompleteDisplayExample)(); };
         AutocompleteDisplayExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteDisplayExample, selectors: [["autocomplete-display-example"]], decls: 9, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "matInput", "", 3, "formControl", "matAutocomplete"], [3, "displayWith"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteDisplayExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -168,13 +154,6 @@
             var filterValue = value.toLowerCase();
             return this.options.filter(function (option) { return option.toLowerCase().includes(filterValue); });
         };
-        AutocompleteFilterExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'autocomplete-filter-example',
-                        templateUrl: 'autocomplete-filter-example.html',
-                        styleUrls: ['autocomplete-filter-example.css'],
-                    },] },
-        ];
         AutocompleteFilterExample.ɵfac = function AutocompleteFilterExample_Factory(t) { return new (t || AutocompleteFilterExample)(); };
         AutocompleteFilterExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteFilterExample, selectors: [["autocomplete-filter-example"]], decls: 7, vars: 5, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteFilterExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -311,17 +290,6 @@
             }
             return this.stateGroups;
         };
-        AutocompleteOptgroupExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'autocomplete-optgroup-example',
-                        templateUrl: './autocomplete-optgroup-example.html',
-                        styleUrls: ['./autocomplete-optgroup-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        AutocompleteOptgroupExample.ctorParameters = function () { return [
-            { type: i1.FormBuilder }
-        ]; };
         AutocompleteOptgroupExample.ɵfac = function AutocompleteOptgroupExample_Factory(t) { return new (t || AutocompleteOptgroupExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
         AutocompleteOptgroupExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteOptgroupExample, selectors: [["autocomplete-optgroup-example"]], decls: 7, vars: 5, consts: [[3, "formGroup"], ["type", "text", "matInput", "", "placeholder", "States Group", "formControlName", "stateGroup", "required", "", 3, "matAutocomplete"], ["autoGroup", "matAutocomplete"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteOptgroupExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -413,15 +381,6 @@
             var filterValue = value.toLowerCase();
             return this.states.filter(function (state) { return state.name.toLowerCase().indexOf(filterValue) === 0; });
         };
-        AutocompleteOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'autocomplete-overview-example',
-                        templateUrl: 'autocomplete-overview-example.html',
-                        styleUrls: ['autocomplete-overview-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        AutocompleteOverviewExample.ctorParameters = function () { return []; };
         AutocompleteOverviewExample.ɵfac = function AutocompleteOverviewExample_Factory(t) { return new (t || AutocompleteOverviewExample)(); };
         AutocompleteOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteOverviewExample, selectors: [["autocomplete-overview-example"]], decls: 10, vars: 6, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "State", "aria-label", "State", 3, "matAutocomplete", "formControl"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "checked", "change"], [3, "value"], ["aria-hidden", "", "height", "25", 1, "example-option-img", 3, "src"]], template: function AutocompleteOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -488,13 +447,6 @@
         AutocompletePlainInputExample.prototype._normalizeValue = function (value) {
             return value.toLowerCase().replace(/\s/g, '');
         };
-        AutocompletePlainInputExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'autocomplete-plain-input-example',
-                        templateUrl: 'autocomplete-plain-input-example.html',
-                        styleUrls: ['autocomplete-plain-input-example.css'],
-                    },] },
-        ];
         AutocompletePlainInputExample.ɵfac = function AutocompletePlainInputExample_Factory(t) { return new (t || AutocompletePlainInputExample)(); };
         AutocompletePlainInputExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompletePlainInputExample, selectors: [["autocomplete-plain-input-example"]], decls: 6, vars: 5, consts: [[1, "example-form"], ["type", "text", "placeholder", "Search for a street", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompletePlainInputExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -540,13 +492,6 @@
             this.myControl = new i1.FormControl();
             this.options = ['One', 'Two', 'Three'];
         }
-        AutocompleteSimpleExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'autocomplete-simple-example',
-                        templateUrl: 'autocomplete-simple-example.html',
-                        styleUrls: ['autocomplete-simple-example.css'],
-                    },] },
-        ];
         AutocompleteSimpleExample.ɵfac = function AutocompleteSimpleExample_Factory(t) { return new (t || AutocompleteSimpleExample)(); };
         AutocompleteSimpleExample.ɵcmp = i0.ɵɵdefineComponent({ type: AutocompleteSimpleExample, selectors: [["autocomplete-simple-example"]], decls: 6, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["type", "text", "placeholder", "Pick one", "aria-label", "Number", "matInput", "", 3, "formControl", "matAutocomplete"], ["auto", "matAutocomplete"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]], template: function AutocompleteSimpleExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -587,21 +532,6 @@
     var AutocompleteExamplesModule = /** @class */ (function () {
         function AutocompleteExamplesModule() {
         }
-        AutocompleteExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i5.CommonModule,
-                            i4.MatAutocompleteModule,
-                            i2.MatFormFieldModule,
-                            i3.MatInputModule,
-                            i6.MatSlideToggleModule,
-                            i1.FormsModule,
-                            i1.ReactiveFormsModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         AutocompleteExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: AutocompleteExamplesModule });
         AutocompleteExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function AutocompleteExamplesModule_Factory(t) { return new (t || AutocompleteExamplesModule)(); }, imports: [[
                     i5.CommonModule,

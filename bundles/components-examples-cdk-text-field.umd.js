@@ -18,13 +18,6 @@
     var TextFieldAutofillDirectiveExample = /** @class */ (function () {
         function TextFieldAutofillDirectiveExample() {
         }
-        TextFieldAutofillDirectiveExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'text-field-autofill-directive-example',
-                        templateUrl: './text-field-autofill-directive-example.html',
-                        styleUrls: ['./text-field-autofill-directive-example.css'],
-                    },] },
-        ];
         TextFieldAutofillDirectiveExample.ɵfac = function TextFieldAutofillDirectiveExample_Factory(t) { return new (t || TextFieldAutofillDirectiveExample)(); };
         TextFieldAutofillDirectiveExample.ɵcmp = i0.ɵɵdefineComponent({ type: TextFieldAutofillDirectiveExample, selectors: [["text-field-autofill-directive-example"]], decls: 13, vars: 2, consts: [["matInput", "", 3, "cdkAutofill"], [4, "ngIf"], ["mat-raised-button", ""]], template: function TextFieldAutofillDirectiveExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form");
@@ -95,21 +88,6 @@
             this._autofill.stopMonitoring(this.firstName);
             this._autofill.stopMonitoring(this.lastName);
         };
-        TextFieldAutofillMonitorExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'text-field-autofill-monitor-example',
-                        templateUrl: './text-field-autofill-monitor-example.html',
-                        styleUrls: ['./text-field-autofill-monitor-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        TextFieldAutofillMonitorExample.ctorParameters = function () { return [
-            { type: i1.AutofillMonitor }
-        ]; };
-        TextFieldAutofillMonitorExample.propDecorators = {
-            firstName: [{ type: i0.ViewChild, args: ['first', { read: i0.ElementRef },] }],
-            lastName: [{ type: i0.ViewChild, args: ['last', { read: i0.ElementRef },] }]
-        };
         TextFieldAutofillMonitorExample.ɵfac = function TextFieldAutofillMonitorExample_Factory(t) { return new (t || TextFieldAutofillMonitorExample)(i0.ɵɵdirectiveInject(i1.AutofillMonitor)); };
         TextFieldAutofillMonitorExample.ɵcmp = i0.ɵɵdefineComponent({ type: TextFieldAutofillMonitorExample, selectors: [["text-field-autofill-monitor-example"]], viewQuery: function TextFieldAutofillMonitorExample_Query(rf, ctx) { if (rf & 1) {
                 i0.ɵɵviewQuery(_c0, true, i0.ElementRef);
@@ -172,20 +150,6 @@
             // Wait for changes to be applied, then trigger textarea resize.
             this._ngZone.onStable.pipe(operators.take(1))
                 .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
-        };
-        TextFieldAutosizeTextareaExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'text-field-autosize-textarea-example',
-                        templateUrl: './text-field-autosize-textarea-example.html',
-                        styleUrls: ['./text-field-autosize-textarea-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        TextFieldAutosizeTextareaExample.ctorParameters = function () { return [
-            { type: i0.NgZone }
-        ]; };
-        TextFieldAutosizeTextareaExample.propDecorators = {
-            autosize: [{ type: i0.ViewChild, args: ['autosize',] }]
         };
         TextFieldAutosizeTextareaExample.ɵfac = function TextFieldAutosizeTextareaExample_Factory(t) { return new (t || TextFieldAutosizeTextareaExample)(i0.ɵɵdirectiveInject(i0.NgZone)); };
         TextFieldAutosizeTextareaExample.ɵcmp = i0.ɵɵdefineComponent({ type: TextFieldAutosizeTextareaExample, selectors: [["text-field-autosize-textarea-example"]], viewQuery: function TextFieldAutosizeTextareaExample_Query(rf, ctx) { if (rf & 1) {
@@ -253,18 +217,6 @@
     var CdkTextFieldExamplesModule = /** @class */ (function () {
         function CdkTextFieldExamplesModule() {
         }
-        CdkTextFieldExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i4.CommonModule,
-                            i1.TextFieldModule,
-                            i2.MatInputModule,
-                            i2$1.MatSelectModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         CdkTextFieldExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkTextFieldExamplesModule });
         CdkTextFieldExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkTextFieldExamplesModule_Factory(t) { return new (t || CdkTextFieldExamplesModule)(); }, imports: [[
                     i4.CommonModule,

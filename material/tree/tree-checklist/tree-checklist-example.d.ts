@@ -23,7 +23,7 @@ export declare class TodoItemFlatNode {
  */
 export declare class ChecklistDatabase {
     dataChange: BehaviorSubject<TodoItemNode[]>;
-    readonly data: TodoItemNode[];
+    get data(): TodoItemNode[];
     constructor();
     initialize(): void;
     /**

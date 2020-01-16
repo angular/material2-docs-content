@@ -10,13 +10,6 @@
     var DatepickerApiExample = /** @class */ (function () {
         function DatepickerApiExample() {
         }
-        DatepickerApiExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-api-example',
-                        templateUrl: 'datepicker-api-example.html',
-                        styleUrls: ['datepicker-api-example.css'],
-                    },] },
-        ];
         DatepickerApiExample.ɵfac = function DatepickerApiExample_Factory(t) { return new (t || DatepickerApiExample)(); };
         DatepickerApiExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerApiExample, selectors: [["datepicker-api-example"]], decls: 6, vars: 1, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["picker", ""], ["mat-raised-button", "", 3, "click"]], template: function DatepickerApiExample_Template(rf, ctx) { if (rf & 1) {
                 var _r1 = i0.ɵɵgetCurrentView();
@@ -48,13 +41,6 @@
     var DatepickerColorExample = /** @class */ (function () {
         function DatepickerColorExample() {
         }
-        DatepickerColorExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-color-example',
-                        templateUrl: 'datepicker-color-example.html',
-                        styleUrls: ['datepicker-color-example.css'],
-                    },] },
-        ];
         DatepickerColorExample.ɵfac = function DatepickerColorExample_Factory(t) { return new (t || DatepickerColorExample)(); };
         DatepickerColorExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerColorExample, selectors: [["datepicker-color-example"]], decls: 14, vars: 4, consts: [["color", "accent"], ["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker1", ""], ["color", "primary"], ["picker2", ""]], template: function DatepickerColorExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
@@ -101,13 +87,6 @@
         function DatepickerCustomHeaderExample() {
             this.exampleHeader = ExampleHeader;
         }
-        DatepickerCustomHeaderExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-custom-header-example',
-                        templateUrl: 'datepicker-custom-header-example.html',
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    },] },
-        ];
         DatepickerCustomHeaderExample.ɵfac = function DatepickerCustomHeaderExample_Factory(t) { return new (t || DatepickerCustomHeaderExample)(); };
         DatepickerCustomHeaderExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerCustomHeaderExample, selectors: [["datepicker-custom-header-example"]], decls: 7, vars: 3, consts: [["matInput", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], [3, "calendarHeaderComponent"], ["picker", ""]], template: function DatepickerCustomHeaderExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
@@ -171,21 +150,6 @@
                 this._dateAdapter.addCalendarMonths(this._calendar.activeDate, 1) :
                 this._dateAdapter.addCalendarYears(this._calendar.activeDate, 1);
         };
-        ExampleHeader.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'example-header',
-                        styles: ["\n    .example-header {\n      display: flex;\n      align-items: center;\n      padding: 0.5em;\n    }\n\n    .example-header-label {\n      flex: 1;\n      height: 1em;\n      font-weight: 500;\n      text-align: center;\n    }\n\n    .example-double-arrow .mat-icon {\n      margin: -22%;\n    }\n  "],
-                        template: "\n    <div class=\"example-header\">\n      <button mat-icon-button class=\"example-double-arrow\" (click)=\"previousClicked('year')\">\n        <mat-icon>keyboard_arrow_left</mat-icon>\n        <mat-icon>keyboard_arrow_left</mat-icon>\n      </button>\n      <button mat-icon-button (click)=\"previousClicked('month')\">\n        <mat-icon>keyboard_arrow_left</mat-icon>\n      </button>\n      <span class=\"example-header-label\">{{periodLabel}}</span>\n      <button mat-icon-button (click)=\"nextClicked('month')\">\n        <mat-icon>keyboard_arrow_right</mat-icon>\n      </button>\n      <button mat-icon-button class=\"example-double-arrow\" (click)=\"nextClicked('year')\">\n        <mat-icon>keyboard_arrow_right</mat-icon>\n        <mat-icon>keyboard_arrow_right</mat-icon>\n      </button>\n    </div>\n  ",
-                        changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    },] },
-        ];
-        /** @nocollapse */
-        ExampleHeader.ctorParameters = function () { return [
-            { type: i3.MatCalendar },
-            { type: i4$2.DateAdapter },
-            { type: undefined, decorators: [{ type: i0.Inject, args: [i4$2.MAT_DATE_FORMATS,] }] },
-            { type: i0.ChangeDetectorRef }
-        ]; };
         ExampleHeader.ɵfac = function ExampleHeader_Factory(t) { return new (t || ExampleHeader)(i0.ɵɵdirectiveInject(i3.MatCalendar), i0.ɵɵdirectiveInject(i4$2.DateAdapter), i0.ɵɵdirectiveInject(i4$2.MAT_DATE_FORMATS), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
         ExampleHeader.ɵcmp = i0.ɵɵdefineComponent({ type: ExampleHeader, selectors: [["example-header"]], decls: 19, vars: 1, consts: [[1, "example-header"], ["mat-icon-button", "", 1, "example-double-arrow", 3, "click"], ["mat-icon-button", "", 3, "click"], [1, "example-header-label"]], template: function ExampleHeader_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
@@ -246,13 +210,6 @@
     var DatepickerCustomIconExample = /** @class */ (function () {
         function DatepickerCustomIconExample() {
         }
-        DatepickerCustomIconExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-custom-icon-example',
-                        templateUrl: 'datepicker-custom-icon-example.html',
-                        styleUrls: ['datepicker-custom-icon-example.css'],
-                    },] },
-        ];
         DatepickerCustomIconExample.ɵfac = function DatepickerCustomIconExample_Factory(t) { return new (t || DatepickerCustomIconExample)(); };
         DatepickerCustomIconExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerCustomIconExample, selectors: [["datepicker-custom-icon-example"]], decls: 7, vars: 2, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["matDatepickerToggleIcon", ""], ["picker", ""]], template: function DatepickerCustomIconExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
@@ -291,14 +248,6 @@
                 return (date === 1 || date === 20) ? 'example-custom-date-class' : '';
             };
         }
-        DatepickerDateClassExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-date-class-example',
-                        templateUrl: 'datepicker-date-class-example.html',
-                        styleUrls: ['datepicker-date-class-example.css'],
-                        encapsulation: i0.ViewEncapsulation.None,
-                    },] },
-        ];
         DatepickerDateClassExample.ɵfac = function DatepickerDateClassExample_Factory(t) { return new (t || DatepickerDateClassExample)(); };
         DatepickerDateClassExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerDateClassExample, selectors: [["datepicker-date-class-example"]], decls: 5, vars: 3, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], [3, "dateClass"], ["picker", ""]], template: function DatepickerDateClassExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
@@ -331,13 +280,6 @@
     var DatepickerDisabledExample = /** @class */ (function () {
         function DatepickerDisabledExample() {
         }
-        DatepickerDisabledExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-disabled-example',
-                        templateUrl: 'datepicker-disabled-example.html',
-                        styleUrls: ['datepicker-disabled-example.css'],
-                    },] },
-        ];
         DatepickerDisabledExample.ɵfac = function DatepickerDisabledExample_Factory(t) { return new (t || DatepickerDisabledExample)(); };
         DatepickerDisabledExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerDisabledExample, selectors: [["datepicker-disabled-example"]], decls: 18, vars: 6, consts: [["matInput", "", "placeholder", "Completely disabled", "disabled", "", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["dp1", ""], ["matInput", "", "placeholder", "Popup disabled", 3, "matDatepicker"], ["matSuffix", "", "disabled", "", 3, "for"], ["dp2", ""], ["matInput", "", "placeholder", "Input disabled", "disabled", "", 3, "matDatepicker"], ["disabled", "false"], ["dp3", ""]], template: function DatepickerDisabledExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
@@ -406,13 +348,6 @@
         DatepickerEventsExample.prototype.addEvent = function (type, event) {
             this.events.push(type + ": " + event.value);
         };
-        DatepickerEventsExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-events-example',
-                        templateUrl: 'datepicker-events-example.html',
-                        styleUrls: ['datepicker-events-example.css'],
-                    },] },
-        ];
         DatepickerEventsExample.ɵfac = function DatepickerEventsExample_Factory(t) { return new (t || DatepickerEventsExample)(); };
         DatepickerEventsExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerEventsExample, selectors: [["datepicker-events-example"]], decls: 7, vars: 3, consts: [["matInput", "", "placeholder", "Input & change events", 3, "matDatepicker", "dateInput", "dateChange"], ["matSuffix", "", 3, "for"], ["picker", ""], [1, "example-events"], [4, "ngFor", "ngForOf"]], template: function DatepickerEventsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
@@ -454,13 +389,6 @@
                 return day !== 0 && day !== 6;
             };
         }
-        DatepickerFilterExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-filter-example',
-                        templateUrl: 'datepicker-filter-example.html',
-                        styleUrls: ['datepicker-filter-example.css'],
-                    },] },
-        ];
         DatepickerFilterExample.ɵfac = function DatepickerFilterExample_Factory(t) { return new (t || DatepickerFilterExample)(); };
         DatepickerFilterExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerFilterExample, selectors: [["datepicker-filter-example"]], decls: 5, vars: 3, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepickerFilter", "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DatepickerFilterExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
@@ -505,24 +433,6 @@
         function DatepickerFormatsExample() {
             this.date = new i4$1.FormControl(moment());
         }
-        DatepickerFormatsExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-formats-example',
-                        templateUrl: 'datepicker-formats-example.html',
-                        styleUrls: ['datepicker-formats-example.css'],
-                        providers: [
-                            // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
-                            // application's root module. We provide it at the component level here, due to limitations of
-                            // our example generation script.
-                            {
-                                provide: i4$2.DateAdapter,
-                                useClass: materialMomentAdapter.MomentDateAdapter,
-                                deps: [i4$2.MAT_DATE_LOCALE, materialMomentAdapter.MAT_MOMENT_DATE_ADAPTER_OPTIONS]
-                            },
-                            { provide: i4$2.MAT_DATE_FORMATS, useValue: MY_FORMATS },
-                        ],
-                    },] },
-        ];
         DatepickerFormatsExample.ɵfac = function DatepickerFormatsExample_Factory(t) { return new (t || DatepickerFormatsExample)(); };
         DatepickerFormatsExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerFormatsExample, selectors: [["datepicker-formats-example"]], features: [i0.ɵɵProvidersFeature([
                     // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
@@ -577,31 +487,6 @@
         DatepickerLocaleExample.prototype.french = function () {
             this._adapter.setLocale('fr');
         };
-        DatepickerLocaleExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-locale-example',
-                        templateUrl: 'datepicker-locale-example.html',
-                        styleUrls: ['datepicker-locale-example.css'],
-                        providers: [
-                            // The locale would typically be provided on the root module of your application. We do it at
-                            // the component level here, due to limitations of our example generation script.
-                            { provide: i4$2.MAT_DATE_LOCALE, useValue: 'ja-JP' },
-                            // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
-                            // `MatMomentDateModule` in your applications root module. We provide it at the component level
-                            // here, due to limitations of our example generation script.
-                            {
-                                provide: i4$2.DateAdapter,
-                                useClass: materialMomentAdapter.MomentDateAdapter,
-                                deps: [i4$2.MAT_DATE_LOCALE, materialMomentAdapter.MAT_MOMENT_DATE_ADAPTER_OPTIONS]
-                            },
-                            { provide: i4$2.MAT_DATE_FORMATS, useValue: materialMomentAdapter.MAT_MOMENT_DATE_FORMATS },
-                        ],
-                    },] },
-        ];
-        /** @nocollapse */
-        DatepickerLocaleExample.ctorParameters = function () { return [
-            { type: i4$2.DateAdapter }
-        ]; };
         DatepickerLocaleExample.ɵfac = function DatepickerLocaleExample_Factory(t) { return new (t || DatepickerLocaleExample)(i0.ɵɵdirectiveInject(i4$2.DateAdapter)); };
         DatepickerLocaleExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerLocaleExample, selectors: [["datepicker-locale-example"]], features: [i0.ɵɵProvidersFeature([
                     // The locale would typically be provided on the root module of your application. We do it at
@@ -666,15 +551,6 @@
             this.minDate = new Date(currentYear - 20, 0, 1);
             this.maxDate = new Date(currentYear + 1, 11, 31);
         }
-        DatepickerMinMaxExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-min-max-example',
-                        templateUrl: 'datepicker-min-max-example.html',
-                        styleUrls: ['datepicker-min-max-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        DatepickerMinMaxExample.ctorParameters = function () { return []; };
         DatepickerMinMaxExample.ɵfac = function DatepickerMinMaxExample_Factory(t) { return new (t || DatepickerMinMaxExample)(); };
         DatepickerMinMaxExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerMinMaxExample, selectors: [["datepicker-min-max-example"]], decls: 5, vars: 4, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "min", "max", "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DatepickerMinMaxExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
@@ -707,20 +583,6 @@
             // Datepicker takes `Moment` objects instead of `Date` objects.
             this.date = new i4$1.FormControl(moment$1([2017, 0, 1]));
         }
-        DatepickerMomentExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-moment-example',
-                        templateUrl: 'datepicker-moment-example.html',
-                        styleUrls: ['datepicker-moment-example.css'],
-                        providers: [
-                            // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
-                            // `MatMomentDateModule` in your applications root module. We provide it at the component level
-                            // here, due to limitations of our example generation script.
-                            { provide: i4$2.DateAdapter, useClass: materialMomentAdapter.MomentDateAdapter, deps: [i4$2.MAT_DATE_LOCALE] },
-                            { provide: i4$2.MAT_DATE_FORMATS, useValue: materialMomentAdapter.MAT_MOMENT_DATE_FORMATS },
-                        ],
-                    },] },
-        ];
         DatepickerMomentExample.ɵfac = function DatepickerMomentExample_Factory(t) { return new (t || DatepickerMomentExample)(); };
         DatepickerMomentExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerMomentExample, selectors: [["datepicker-moment-example"]], features: [i0.ɵɵProvidersFeature([
                     // `MomentDateAdapter` and `MAT_MOMENT_DATE_FORMATS` can be automatically provided by importing
@@ -763,13 +625,6 @@
     var DatepickerOverviewExample = /** @class */ (function () {
         function DatepickerOverviewExample() {
         }
-        DatepickerOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-overview-example',
-                        templateUrl: 'datepicker-overview-example.html',
-                        styleUrls: ['datepicker-overview-example.css'],
-                    },] },
-        ];
         DatepickerOverviewExample.ɵfac = function DatepickerOverviewExample_Factory(t) { return new (t || DatepickerOverviewExample)(); };
         DatepickerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerOverviewExample, selectors: [["datepicker-overview-example"]], decls: 5, vars: 2, consts: [["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["picker", ""]], template: function DatepickerOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
@@ -800,13 +655,6 @@
         function DatepickerStartViewExample() {
             this.startDate = new Date(1990, 0, 1);
         }
-        DatepickerStartViewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-start-view-example',
-                        templateUrl: 'datepicker-start-view-example.html',
-                        styleUrls: ['datepicker-start-view-example.css'],
-                    },] },
-        ];
         DatepickerStartViewExample.ɵfac = function DatepickerStartViewExample_Factory(t) { return new (t || DatepickerStartViewExample)(); };
         DatepickerStartViewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerStartViewExample, selectors: [["datepicker-start-view-example"]], decls: 5, vars: 3, consts: [["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["startView", "year", 3, "startAt"], ["picker", ""]], template: function DatepickerStartViewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
@@ -838,13 +686,6 @@
     var DatepickerTouchExample = /** @class */ (function () {
         function DatepickerTouchExample() {
         }
-        DatepickerTouchExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-touch-example',
-                        templateUrl: 'datepicker-touch-example.html',
-                        styleUrls: ['datepicker-touch-example.css'],
-                    },] },
-        ];
         DatepickerTouchExample.ɵfac = function DatepickerTouchExample_Factory(t) { return new (t || DatepickerTouchExample)(); };
         DatepickerTouchExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerTouchExample, selectors: [["datepicker-touch-example"]], decls: 5, vars: 2, consts: [[1, "example-full-width"], ["matInput", "", "placeholder", "Choose a date", 3, "matDatepicker"], ["matSuffix", "", 3, "for"], ["touchUi", ""], ["picker", ""]], template: function DatepickerTouchExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
@@ -876,13 +717,6 @@
             this.date = new i4$1.FormControl(new Date());
             this.serializedDate = new i4$1.FormControl((new Date()).toISOString());
         }
-        DatepickerValueExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-value-example',
-                        templateUrl: 'datepicker-value-example.html',
-                        styleUrls: ['datepicker-value-example.css'],
-                    },] },
-        ];
         DatepickerValueExample.ɵfac = function DatepickerValueExample_Factory(t) { return new (t || DatepickerValueExample)(); };
         DatepickerValueExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerValueExample, selectors: [["datepicker-value-example"]], decls: 15, vars: 9, consts: [["matInput", "", "placeholder", "Angular forms", 3, "matDatepicker", "formControl"], ["matSuffix", "", 3, "for"], ["picker1", ""], ["matInput", "", "placeholder", "Angular forms (w/ deserialization)", 3, "matDatepicker", "formControl"], ["picker2", ""], ["matInput", "", "placeholder", "Value binding", 3, "matDatepicker", "value"], ["picker3", ""]], template: function DatepickerValueExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
@@ -958,24 +792,6 @@
             this.date.setValue(ctrlValue);
             datepicker.close();
         };
-        DatepickerViewsSelectionExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'datepicker-views-selection-example',
-                        templateUrl: 'datepicker-views-selection-example.html',
-                        styleUrls: ['datepicker-views-selection-example.css'],
-                        providers: [
-                            // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
-                            // application's root module. We provide it at the component level here, due to limitations of
-                            // our example generation script.
-                            {
-                                provide: i4$2.DateAdapter,
-                                useClass: materialMomentAdapter.MomentDateAdapter,
-                                deps: [i4$2.MAT_DATE_LOCALE, materialMomentAdapter.MAT_MOMENT_DATE_ADAPTER_OPTIONS]
-                            },
-                            { provide: i4$2.MAT_DATE_FORMATS, useValue: MY_FORMATS$1 },
-                        ],
-                    },] },
-        ];
         DatepickerViewsSelectionExample.ɵfac = function DatepickerViewsSelectionExample_Factory(t) { return new (t || DatepickerViewsSelectionExample)(); };
         DatepickerViewsSelectionExample.ɵcmp = i0.ɵɵdefineComponent({ type: DatepickerViewsSelectionExample, selectors: [["datepicker-views-selection-example"]], features: [i0.ɵɵProvidersFeature([
                     // `MomentDateAdapter` can be automatically provided by importing `MomentDateModule` in your
@@ -1048,21 +864,6 @@
     var DatepickerExamplesModule = /** @class */ (function () {
         function DatepickerExamplesModule() {
         }
-        DatepickerExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i4.CommonModule,
-                            i5.MatButtonModule,
-                            i3.MatDatepickerModule,
-                            i2.MatInputModule,
-                            i6.MatIconModule,
-                            i4$2.MatNativeDateModule,
-                            i4$1.ReactiveFormsModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         DatepickerExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: DatepickerExamplesModule });
         DatepickerExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function DatepickerExamplesModule_Factory(t) { return new (t || DatepickerExamplesModule)(); }, imports: [[
                     i4.CommonModule,

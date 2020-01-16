@@ -1,4 +1,4 @@
-import { ɵɵtext, Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵelementEnd, ɵɵtemplate, ɵɵelement, ɵɵrestoreView, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, ɵɵproperty, ɵsetClassMetadata, ɵɵProvidersFeature, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵtext, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵelementEnd, ɵɵtemplate, ɵɵelement, ɵɵrestoreView, ɵɵreference, ɵɵadvance, ɵɵtextInterpolate1, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵProvidersFeature, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { Validators, FormBuilder, ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, RequiredValidator, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
@@ -32,17 +32,6 @@ var StepperEditableExample = /** @class */ (function () {
             secondCtrl: ['', Validators.required]
         });
     };
-    StepperEditableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'stepper-editable-example',
-                    templateUrl: 'stepper-editable-example.html',
-                    styleUrls: ['stepper-editable-example.css']
-                },] },
-    ];
-    /** @nocollapse */
-    StepperEditableExample.ctorParameters = function () { return [
-        { type: FormBuilder }
-    ]; };
     StepperEditableExample.ɵfac = function StepperEditableExample_Factory(t) { return new (t || StepperEditableExample)(ɵɵdirectiveInject(FormBuilder)); };
     StepperEditableExample.ɵcmp = ɵɵdefineComponent({ type: StepperEditableExample, selectors: [["stepper-editable-example"]], decls: 30, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl", "editable"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "placeholder", "Address", "formControlName", "secondCtrl", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperEditableExample_Template(rf, ctx) { if (rf & 1) {
             var _r4 = ɵɵgetCurrentView();
@@ -141,20 +130,6 @@ var StepperErrorsExample = /** @class */ (function () {
             secondCtrl: ['', Validators.required]
         });
     };
-    StepperErrorsExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'stepper-errors-example',
-                    templateUrl: 'stepper-errors-example.html',
-                    styleUrls: ['stepper-errors-example.css'],
-                    providers: [{
-                            provide: STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
-                        }]
-                },] },
-    ];
-    /** @nocollapse */
-    StepperErrorsExample.ctorParameters = function () { return [
-        { type: FormBuilder }
-    ]; };
     StepperErrorsExample.ɵfac = function StepperErrorsExample_Factory(t) { return new (t || StepperErrorsExample)(ɵɵdirectiveInject(FormBuilder)); };
     StepperErrorsExample.ɵcmp = ɵɵdefineComponent({ type: StepperErrorsExample, selectors: [["stepper-errors-example"]], features: [ɵɵProvidersFeature([{
                     provide: STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
@@ -252,17 +227,6 @@ var StepperLabelPositionBottomExample = /** @class */ (function () {
             secondCtrl: ['', Validators.required]
         });
     };
-    StepperLabelPositionBottomExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'stepper-label-position-bottom-example',
-                    templateUrl: 'stepper-label-position-bottom-example.html',
-                    styleUrls: ['stepper-label-position-bottom-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    StepperLabelPositionBottomExample.ctorParameters = function () { return [
-        { type: FormBuilder }
-    ]; };
     StepperLabelPositionBottomExample.ɵfac = function StepperLabelPositionBottomExample_Factory(t) { return new (t || StepperLabelPositionBottomExample)(ɵɵdirectiveInject(FormBuilder)); };
     StepperLabelPositionBottomExample.ɵcmp = ɵɵdefineComponent({ type: StepperLabelPositionBottomExample, selectors: [["stepper-label-position-bottom-example"]], decls: 28, vars: 4, consts: [["labelPosition", "bottom"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["optional", "", 3, "stepControl"], ["matInput", "", "placeholder", "Address", "formControlName", "secondCtrl", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperLabelPositionBottomExample_Template(rf, ctx) { if (rf & 1) {
             var _r14 = ɵɵgetCurrentView();
@@ -356,17 +320,6 @@ var StepperOptionalExample = /** @class */ (function () {
             secondCtrl: ''
         });
     };
-    StepperOptionalExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'stepper-optional-example',
-                    templateUrl: 'stepper-optional-example.html',
-                    styleUrls: ['stepper-optional-example.css']
-                },] },
-    ];
-    /** @nocollapse */
-    StepperOptionalExample.ctorParameters = function () { return [
-        { type: FormBuilder }
-    ]; };
     StepperOptionalExample.ɵfac = function StepperOptionalExample_Factory(t) { return new (t || StepperOptionalExample)(ɵɵdirectiveInject(FormBuilder)); };
     StepperOptionalExample.ɵcmp = ɵɵdefineComponent({ type: StepperOptionalExample, selectors: [["stepper-optional-example"]], decls: 30, vars: 6, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], [3, "stepControl", "optional"], ["matInput", "", "placeholder", "Address", "formControlName", "secondCtrl", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOptionalExample_Template(rf, ctx) { if (rf & 1) {
             var _r19 = ɵɵgetCurrentView();
@@ -466,17 +419,6 @@ var StepperOverviewExample = /** @class */ (function () {
             secondCtrl: ['', Validators.required]
         });
     };
-    StepperOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'stepper-overview-example',
-                    templateUrl: 'stepper-overview-example.html',
-                    styleUrls: ['stepper-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    StepperOverviewExample.ctorParameters = function () { return [
-        { type: FormBuilder }
-    ]; };
     StepperOverviewExample.ɵfac = function StepperOverviewExample_Factory(t) { return new (t || StepperOverviewExample)(ɵɵdirectiveInject(FormBuilder)); };
     StepperOverviewExample.ɵcmp = ɵɵdefineComponent({ type: StepperOverviewExample, selectors: [["stepper-overview-example"]], decls: 30, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "placeholder", "Address", "formControlName", "secondCtrl", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOverviewExample_Template(rf, ctx) { if (rf & 1) {
             var _r24 = ɵɵgetCurrentView();
@@ -587,20 +529,6 @@ var StepperStatesExample = /** @class */ (function () {
             secondCtrl: ['', Validators.required]
         });
     };
-    StepperStatesExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'stepper-states-example',
-                    templateUrl: 'stepper-states-example.html',
-                    styleUrls: ['stepper-states-example.css'],
-                    providers: [{
-                            provide: STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
-                        }]
-                },] },
-    ];
-    /** @nocollapse */
-    StepperStatesExample.ctorParameters = function () { return [
-        { type: FormBuilder }
-    ]; };
     StepperStatesExample.ɵfac = function StepperStatesExample_Factory(t) { return new (t || StepperStatesExample)(ɵɵdirectiveInject(FormBuilder)); };
     StepperStatesExample.ɵcmp = ɵɵdefineComponent({ type: StepperStatesExample, selectors: [["stepper-states-example"]], features: [ɵɵProvidersFeature([{
                     provide: STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
@@ -731,17 +659,6 @@ var StepperVerticalExample = /** @class */ (function () {
             secondCtrl: ['', Validators.required]
         });
     };
-    StepperVerticalExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'stepper-vertical-example',
-                    templateUrl: 'stepper-vertical-example.html',
-                    styleUrls: ['stepper-vertical-example.css']
-                },] },
-    ];
-    /** @nocollapse */
-    StepperVerticalExample.ctorParameters = function () { return [
-        { type: FormBuilder }
-    ]; };
     StepperVerticalExample.ɵfac = function StepperVerticalExample_Factory(t) { return new (t || StepperVerticalExample)(ɵɵdirectiveInject(FormBuilder)); };
     StepperVerticalExample.ɵcmp = ɵɵdefineComponent({ type: StepperVerticalExample, selectors: [["stepper-vertical-example"]], decls: 30, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "placeholder", "Address", "formControlName", "secondCtrl", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperVerticalExample_Template(rf, ctx) { if (rf & 1) {
             var _r36 = ɵɵgetCurrentView();
@@ -830,19 +747,6 @@ var EXAMPLES = [
 var StepperExamplesModule = /** @class */ (function () {
     function StepperExamplesModule() {
     }
-    StepperExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatButtonModule,
-                        MatIconModule,
-                        MatInputModule,
-                        MatStepperModule,
-                        ReactiveFormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                },] },
-    ];
     StepperExamplesModule.ɵmod = ɵɵdefineNgModule({ type: StepperExamplesModule });
     StepperExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function StepperExamplesModule_Factory(t) { return new (t || StepperExamplesModule)(); }, imports: [[
                 MatButtonModule,

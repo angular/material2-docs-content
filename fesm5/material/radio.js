@@ -1,5 +1,5 @@
 import { NgForOf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatRadioGroup, MatRadioButton, MatRadioModule } from '@angular/material/radio';
 
@@ -20,13 +20,6 @@ var RadioNgModelExample = /** @class */ (function () {
     function RadioNgModelExample() {
         this.seasons = ['Winter', 'Spring', 'Summer', 'Autumn'];
     }
-    RadioNgModelExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'radio-ng-model-example',
-                    templateUrl: 'radio-ng-model-example.html',
-                    styleUrls: ['radio-ng-model-example.css'],
-                },] },
-    ];
     RadioNgModelExample.ɵfac = function RadioNgModelExample_Factory(t) { return new (t || RadioNgModelExample)(); };
     RadioNgModelExample.ɵcmp = ɵɵdefineComponent({ type: RadioNgModelExample, selectors: [["radio-ng-model-example"]], decls: 6, vars: 3, consts: [["id", "example-radio-group-label"], ["aria-labelledby", "example-radio-group-label", 1, "example-radio-group", 3, "ngModel", "ngModelChange"], ["class", "example-radio-button", 3, "value", 4, "ngFor", "ngForOf"], [1, "example-radio-button", 3, "value"]], template: function RadioNgModelExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "label", 0);
@@ -64,13 +57,6 @@ var RadioNgModelExample = /** @class */ (function () {
 var RadioOverviewExample = /** @class */ (function () {
     function RadioOverviewExample() {
     }
-    RadioOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'radio-overview-example',
-                    templateUrl: 'radio-overview-example.html',
-                    styleUrls: ['radio-overview-example.css'],
-                },] },
-    ];
     RadioOverviewExample.ɵfac = function RadioOverviewExample_Factory(t) { return new (t || RadioOverviewExample)(); };
     RadioOverviewExample.ɵcmp = ɵɵdefineComponent({ type: RadioOverviewExample, selectors: [["radio-overview-example"]], decls: 5, vars: 0, consts: [["aria-label", "Select an option"], ["value", "1"], ["value", "2"]], template: function RadioOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-radio-group", 0);
@@ -100,17 +86,6 @@ var EXAMPLES = [
 var RadioExamplesModule = /** @class */ (function () {
     function RadioExamplesModule() {
     }
-    RadioExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        MatRadioModule,
-                        FormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                },] },
-    ];
     RadioExamplesModule.ɵmod = ɵɵdefineNgModule({ type: RadioExamplesModule });
     RadioExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function RadioExamplesModule_Factory(t) { return new (t || RadioExamplesModule)(); }, imports: [[
                 CommonModule,

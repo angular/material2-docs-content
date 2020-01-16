@@ -20,13 +20,6 @@
         function InputClearableExample() {
             this.value = 'Clear me';
         }
-        InputClearableExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'input-clearable-example',
-                        templateUrl: './input-clearable-example.html',
-                        styleUrls: ['./input-clearable-example.css'],
-                    },] },
-        ];
         InputClearableExample.ɵfac = function InputClearableExample_Factory(t) { return new (t || InputClearableExample)(); };
         InputClearableExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputClearableExample, selectors: [["input-clearable-example"]], decls: 3, vars: 2, consts: [[1, "example-form-field"], ["matInput", "", "type", "text", "placeholder", "Clearable input", 3, "ngModel", "ngModelChange"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"]], template: function InputClearableExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
@@ -84,13 +77,6 @@
             ]);
             this.matcher = new MyErrorStateMatcher();
         }
-        InputErrorStateMatcherExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'input-error-state-matcher-example',
-                        templateUrl: './input-error-state-matcher-example.html',
-                        styleUrls: ['./input-error-state-matcher-example.css'],
-                    },] },
-        ];
         InputErrorStateMatcherExample.ɵfac = function InputErrorStateMatcherExample_Factory(t) { return new (t || InputErrorStateMatcherExample)(); };
         InputErrorStateMatcherExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputErrorStateMatcherExample, selectors: [["input-error-state-matcher-example"]], decls: 7, vars: 4, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Email", 3, "formControl", "errorStateMatcher"], [4, "ngIf"]], template: function InputErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -145,13 +131,6 @@
                 i1.Validators.email,
             ]);
         }
-        InputErrorsExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'input-errors-example',
-                        templateUrl: 'input-errors-example.html',
-                        styleUrls: ['input-errors-example.css'],
-                    },] },
-        ];
         InputErrorsExample.ɵfac = function InputErrorsExample_Factory(t) { return new (t || InputErrorsExample)(); };
         InputErrorsExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputErrorsExample, selectors: [["input-errors-example"]], decls: 5, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Email", 3, "formControl"], [4, "ngIf"]], template: function InputErrorsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -186,13 +165,6 @@
     var InputFormExample = /** @class */ (function () {
         function InputFormExample() {
         }
-        InputFormExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'input-form-example',
-                        templateUrl: 'input-form-example.html',
-                        styleUrls: ['input-form-example.css'],
-                    },] },
-        ];
         InputFormExample.ɵfac = function InputFormExample_Factory(t) { return new (t || InputFormExample)(); };
         InputFormExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputFormExample, selectors: [["input-form-example"]], decls: 31, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Company (disabled)", "disabled", "", "value", "Google"], ["cellspacing", "0", 1, "example-full-width"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "placeholder", "Long Last Name That Will Be Truncated"], ["matInput", "", "placeholder", "Address"], ["matInput", "", "placeholder", "Address 2"], ["matInput", "", "placeholder", "City"], ["matInput", "", "placeholder", "State"], ["matInput", "", "maxlength", "5", "placeholder", "Postal Code", "value", "94043"], ["postalCode", ""], ["align", "end"]], template: function InputFormExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -268,13 +240,6 @@
     var InputHintExample = /** @class */ (function () {
         function InputHintExample() {
         }
-        InputHintExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'input-hint-example',
-                        templateUrl: 'input-hint-example.html',
-                        styleUrls: ['input-hint-example.css'],
-                    },] },
-        ];
         InputHintExample.ɵfac = function InputHintExample_Factory(t) { return new (t || InputHintExample)(); };
         InputHintExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 9, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Message"], ["message", ""], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -312,13 +277,6 @@
     var InputOverviewExample = /** @class */ (function () {
         function InputOverviewExample() {
         }
-        InputOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'input-overview-example',
-                        styleUrls: ['input-overview-example.css'],
-                        templateUrl: 'input-overview-example.html',
-                    },] },
-        ];
         InputOverviewExample.ɵfac = function InputOverviewExample_Factory(t) { return new (t || InputOverviewExample)(); };
         InputOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputOverviewExample, selectors: [["input-overview-example"]], decls: 5, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Favorite food", "value", "Sushi"], ["matInput", "", "placeholder", "Leave a comment"]], template: function InputOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -347,13 +305,6 @@
     var InputPrefixSuffixExample = /** @class */ (function () {
         function InputPrefixSuffixExample() {
         }
-        InputPrefixSuffixExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'input-prefix-suffix-example',
-                        templateUrl: 'input-prefix-suffix-example.html',
-                        styleUrls: ['input-prefix-suffix-example.css'],
-                    },] },
-        ];
         InputPrefixSuffixExample.ɵfac = function InputPrefixSuffixExample_Factory(t) { return new (t || InputPrefixSuffixExample)(); };
         InputPrefixSuffixExample.ɵcmp = i0.ɵɵdefineComponent({ type: InputPrefixSuffixExample, selectors: [["input-prefix-suffix-example"]], decls: 7, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matPrefix", ""], ["type", "tel", "matInput", "", "placeholder", "Telephone"], ["matSuffix", ""]], template: function InputPrefixSuffixExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -391,20 +342,6 @@
     var InputExamplesModule = /** @class */ (function () {
         function InputExamplesModule() {
         }
-        InputExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i4.CommonModule,
-                            i5.MatButtonModule,
-                            i6.MatIconModule,
-                            i3.MatInputModule,
-                            i1.FormsModule,
-                            i1.ReactiveFormsModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         InputExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: InputExamplesModule });
         InputExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function InputExamplesModule_Factory(t) { return new (t || InputExamplesModule)(); }, imports: [[
                     i4.CommonModule,

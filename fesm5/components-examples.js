@@ -1,5 +1,5 @@
 import { __spread } from 'tslib';
-import { NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, ɵsetClassMetadata } from '@angular/core';
+import { ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, ɵsetClassMetadata, NgModule } from '@angular/core';
 import { CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPopoverEditExamplesModule } from '@angular/components-examples/cdk-experimental/popover-edit';
 export { CdkPopoverEditCdkTableExample, CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample } from '@angular/components-examples/cdk-experimental/popover-edit';
 import { FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, CdkA11yExamplesModule } from '@angular/components-examples/cdk/a11y';
@@ -1749,12 +1749,6 @@ var EXAMPLE_LIST = [CdkPopoverEditCdkTableFlexExample,
 var ExampleModule = /** @class */ (function () {
     function ExampleModule() {
     }
-    ExampleModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: EXAMPLE_MODULES,
-                    exports: EXAMPLE_MODULES,
-                },] },
-    ];
     ExampleModule.ɵmod = ɵɵdefineNgModule({ type: ExampleModule });
     ExampleModule.ɵinj = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, imports: [EXAMPLE_MODULES,
             CdkPopoverEditExamplesModule,

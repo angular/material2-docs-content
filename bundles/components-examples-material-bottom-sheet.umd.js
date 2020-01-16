@@ -14,17 +14,6 @@
         BottomSheetOverviewExample.prototype.openBottomSheet = function () {
             this._bottomSheet.open(BottomSheetOverviewExampleSheet);
         };
-        BottomSheetOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'bottom-sheet-overview-example',
-                        templateUrl: 'bottom-sheet-overview-example.html',
-                        styleUrls: ['bottom-sheet-overview-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        BottomSheetOverviewExample.ctorParameters = function () { return [
-            { type: i1.MatBottomSheet }
-        ]; };
         BottomSheetOverviewExample.ɵfac = function BottomSheetOverviewExample_Factory(t) { return new (t || BottomSheetOverviewExample)(i0.ɵɵdirectiveInject(i1.MatBottomSheet)); };
         BottomSheetOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: BottomSheetOverviewExample, selectors: [["bottom-sheet-overview-example"]], decls: 4, vars: 0, consts: [["mat-raised-button", "", 3, "click"]], template: function BottomSheetOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
@@ -53,16 +42,6 @@
             this._bottomSheetRef.dismiss();
             event.preventDefault();
         };
-        BottomSheetOverviewExampleSheet.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'bottom-sheet-overview-example-sheet',
-                        templateUrl: 'bottom-sheet-overview-example-sheet.html',
-                    },] },
-        ];
-        /** @nocollapse */
-        BottomSheetOverviewExampleSheet.ctorParameters = function () { return [
-            { type: i1.MatBottomSheetRef }
-        ]; };
         BottomSheetOverviewExampleSheet.ɵfac = function BottomSheetOverviewExampleSheet_Factory(t) { return new (t || BottomSheetOverviewExampleSheet)(i0.ɵɵdirectiveInject(i1.MatBottomSheetRef)); };
         BottomSheetOverviewExampleSheet.ɵcmp = i0.ɵɵdefineComponent({ type: BottomSheetOverviewExampleSheet, selectors: [["bottom-sheet-overview-example-sheet"]], decls: 21, vars: 0, consts: [["href", "https://keep.google.com/", "mat-list-item", "", 3, "click"], ["mat-line", ""], ["href", "https://docs.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://plus.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://hangouts.google.com/", "mat-list-item", "", 3, "click"]], template: function BottomSheetOverviewExampleSheet_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-nav-list");
@@ -121,18 +100,6 @@
     var BottomSheetExamplesModule = /** @class */ (function () {
         function BottomSheetExamplesModule() {
         }
-        BottomSheetExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i1.MatBottomSheetModule,
-                            i2.MatButtonModule,
-                            i3.MatListModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                        entryComponents: [BottomSheetOverviewExampleSheet],
-                    },] },
-        ];
         BottomSheetExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
         BottomSheetExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function BottomSheetExamplesModule_Factory(t) { return new (t || BottomSheetExamplesModule)(); }, imports: [[
                     i1.MatBottomSheetModule,

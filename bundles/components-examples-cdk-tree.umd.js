@@ -107,13 +107,6 @@
             var parent = this.getParentNode(node);
             return !parent || parent.isExpanded;
         };
-        CdkTreeFlatExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'cdk-tree-flat-example',
-                        templateUrl: 'cdk-tree-flat-example.html',
-                        styleUrls: ['cdk-tree-flat-example.css'],
-                    },] },
-        ];
         CdkTreeFlatExample.ɵfac = function CdkTreeFlatExample_Factory(t) { return new (t || CdkTreeFlatExample)(); };
         CdkTreeFlatExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkTreeFlatExample, selectors: [["cdk-tree-flat-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["cdkTreeNodePadding", "", "class", "example-tree-node", 3, "display", 4, "cdkTreeNodeDef"], ["cdkTreeNodePadding", "", "class", "example-tree-node", 3, "display", 4, "cdkTreeNodeDef", "cdkTreeNodeDefWhen"], ["cdkTreeNodePadding", "", 1, "example-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "cdkTreeNodeToggle", "", 3, "click"], [1, "mat-icon-rtl-mirror"]], template: function CdkTreeFlatExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-tree", 0);
@@ -206,13 +199,6 @@
             this.dataSource = new collections.ArrayDataSource(TREE_DATA$1);
             this.hasChild = function (_, node) { return !!node.children && node.children.length > 0; };
         }
-        CdkTreeNestedExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'cdk-tree-nested-example',
-                        templateUrl: 'cdk-tree-nested-example.html',
-                        styleUrls: ['cdk-tree-nested-example.css'],
-                    },] },
-        ];
         CdkTreeNestedExample.ɵfac = function CdkTreeNestedExample_Factory(t) { return new (t || CdkTreeNestedExample)(); };
         CdkTreeNestedExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkTreeNestedExample, selectors: [["cdk-tree-nested-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["class", "example-tree-node", 4, "cdkTreeNodeDef"], ["class", "example-tree-node", 4, "cdkTreeNodeDef", "cdkTreeNodeDefWhen"], [1, "example-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "cdkTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["cdkTreeNodeOutlet", ""]], template: function CdkTreeNestedExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-tree", 0);
@@ -242,17 +228,6 @@
     var CdkTreeExamplesModule = /** @class */ (function () {
         function CdkTreeExamplesModule() {
         }
-        CdkTreeExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i1.CdkTreeModule,
-                            i2.MatButtonModule,
-                            i3.MatIconModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         CdkTreeExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkTreeExamplesModule });
         CdkTreeExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkTreeExamplesModule_Factory(t) { return new (t || CdkTreeExamplesModule)(); }, imports: [[
                     i1.CdkTreeModule,
