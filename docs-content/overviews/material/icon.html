@@ -43,18 +43,22 @@ explicitly set by calling <code>MatIconRegistry.setDefaultFontSetClass</code>.</
           <span header-link="svg-icons"></span>
           SVG icons
         </h3>
-      <p>When an <code>mat-icon</code> component displays an SVG icon, it does so by directly inlining the SVG content
-into the page as a child of the component. (Rather than using an <code>&lt;img&gt;</code> tag or a div background
-image). This makes it easier to apply CSS styles to SVG icons. For example, the default color of the
+      <p><code>&lt;mat-icon&gt;</code> displays SVG icons by directly inlining the SVG content into the DOM
+as a child of itself. This approach offers an advantage over an <code>&lt;img&gt;</code> tag or a CSS
+<code>background-image</code> because it allows styling the SVG with CSS. For example, the default color of the
 SVG content is the CSS
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentColor_keyword">currentColor</a>
 value. This makes SVG icons by default have the same color as surrounding text, and allows you to
-change the color by setting the &quot;color&quot; style on the <code>mat-icon</code> element.</p>
-<p>In order to prevent XSS vulnerabilities, any SVG URLs and HTML strings passed to the
+change the color by setting the <code>color</code> style on the <code>mat-icon</code> element.</p>
+<p>In order to guard against XSS vulnerabilities, any SVG URLs and HTML strings passed to the
 <code>MatIconRegistry</code> must be marked as trusted by using Angular&#39;s <code>DomSanitizer</code> service.</p>
-<p>Also note that all SVG icons, registered by URL, are fetched via XmlHttpRequest, and due to the
-same-origin policy, their URLs must be on the same domain as the containing page, or their servers
-must be configured to allow cross-domain access.</p>
+<p><code>MatIconRegistry</code> fetches all remote SVG icons via Angular&#39;s <code>HttpClient</code> service. If you haven&#39;t
+included <a href="https://angular.io/guide/http"><code>HttpClientModule</code> from the <code>@angular/common/http</code> package</a>
+in your <code>NgModule</code> imports, you will get an error at runtime.</p>
+<p>Note that <code>HttpClient</code> fetches SVG icons registered with a URL via <code>XmlHttpRequest</code>, subject to the
+<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a>. This
+means that icon URLs must have the same origin as the containing page or that the application&#39;s
+server must be configured to allow cross-origin requests.</p>
 
         <h4 id="named-icons" class="docs-header-link">
           <span header-link="named-icons"></span>
@@ -102,8 +106,8 @@ element.</p>
 <ol>
 <li><strong>Decorative</strong>: the icon conveys no real semantic meaning and is purely cosmetic.</li>
 <li><strong>Interactive</strong>: a user will click or otherwise interact with the icon to perform some action.</li>
-<li><strong>Indicator</strong>: the icon is not interactive, but it conveys some information, such as a status. This
-includes using the icon in place of text inside of a larger message.</li>
+<li><strong>Indicator</strong>: the icon is not interactive, but it conveys some information, such as a status.
+This includes using the icon in place of text inside of a larger message.</li>
 </ol>
 
         <h4 id="decorative-icons" class="docs-header-link">
@@ -129,8 +133,8 @@ direct text content, <code>aria-label</code>, or <code>aria-labelledby</code>.</
           <span header-link="indicator-icons"></span>
           Indicator icons
         </h4>
-      <p>When the presence of an icon communicates some information to the user whether as an indicator or 
-by being inlined into a block of text, that information must also be made available to 
+      <p>When the presence of an icon communicates some information to the user whether as an indicator or
+by being inlined into a block of text, that information must also be made available to
 screen-readers. The most straightforward way to do this is to</p>
 <ol>
 <li>Add a <code>&lt;span&gt;</code> as an adjacent sibling to the <code>&lt;mat-icon&gt;</code> element with text that conveys the same
@@ -144,7 +148,7 @@ on-screen but still available to screen-reader users.</li>
           Bidirectionality
         </h3>
       <p>By default icons in an RTL layout will look exactly the same as in LTR, however certain icons have
-to be <a href="https://material.io/guidelines/usability/bidirectionality.html">mirrored for RTL users</a>. If
+to be <a href="https://material.io/design/usability/bidirectionality.html">mirrored for RTL users</a>. If
 you want to mirror an icon only in an RTL layout, you can use the <code>mat-icon-rtl-mirror</code> CSS class.</p>
 <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mat-icon-rtl-mirror"</span> <span class="hljs-attr">svgIcon</span>=<span class="hljs-string">"thumb-up"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span></code></pre>
 </div>
