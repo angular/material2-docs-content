@@ -1,5 +1,5 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormControl, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
 <span class="hljs-comment">/** @title Form field with label */</span>
 <span class="hljs-meta">@Component</span>({
@@ -9,11 +9,13 @@
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldLabelExample {
   options: FormGroup;
+  hideRequiredControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-literal">false</span>);
+  floatLabelControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">'auto'</span>);
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params">fb: FormBuilder</span>) {
     <span class="hljs-keyword">this</span>.options = fb.group({
-      hideRequired: <span class="hljs-literal">false</span>,
-      floatLabel: <span class="hljs-string">'auto'</span>,
+      hideRequired: <span class="hljs-keyword">this</span>.hideRequiredControl,
+      floatLabel: <span class="hljs-keyword">this</span>.floatLabelControl,
     });
   }
 }
