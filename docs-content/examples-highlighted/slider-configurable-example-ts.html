@@ -22,6 +22,10 @@
   tickInterval = <span class="hljs-number">1</span>;
 
   getSliderTickInterval(): <span class="hljs-built_in">number</span> | <span class="hljs-string">'auto'</span> {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.showTicks ? (<span class="hljs-keyword">this</span>.autoTicks ? <span class="hljs-string">'auto'</span> : <span class="hljs-keyword">this</span>.tickInterval) : <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.showTicks) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.autoTicks ? <span class="hljs-string">'auto'</span> : <span class="hljs-keyword">this</span>.tickInterval;
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
   }
 }

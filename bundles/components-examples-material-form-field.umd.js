@@ -306,9 +306,10 @@
             this.email = new i1.FormControl('', [i1.Validators.required, i1.Validators.email]);
         }
         FormFieldErrorExample.prototype.getErrorMessage = function () {
-            return this.email.hasError('required') ? 'You must enter a value' :
-                this.email.hasError('email') ? 'Not a valid email' :
-                    '';
+            if (this.email.hasError('required')) {
+                return 'You must enter a value';
+            }
+            return this.email.hasError('email') ? 'Not a valid email' : '';
         };
         FormFieldErrorExample.ɵfac = function FormFieldErrorExample_Factory(t) { return new (t || FormFieldErrorExample)(); };
         FormFieldErrorExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldErrorExample, selectors: [["form-field-error-example"]], decls: 6, vars: 2, consts: [[1, "example-container"], ["appearance", "fill"], ["matInput", "", "placeholder", "pat@example.com", "required", "", 3, "formControl"], [4, "ngIf"]], template: function FormFieldErrorExample_Template(rf, ctx) { if (rf & 1) {

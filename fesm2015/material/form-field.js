@@ -497,9 +497,10 @@ class FormFieldErrorExample {
      * @return {?}
      */
     getErrorMessage() {
-        return this.email.hasError('required') ? 'You must enter a value' :
-            this.email.hasError('email') ? 'Not a valid email' :
-                '';
+        if (this.email.hasError('required')) {
+            return 'You must enter a value';
+        }
+        return this.email.hasError('email') ? 'Not a valid email' : '';
     }
 }
 FormFieldErrorExample.decorators = [

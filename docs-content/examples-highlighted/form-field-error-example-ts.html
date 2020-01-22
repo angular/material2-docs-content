@@ -11,8 +11,10 @@
   email = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [Validators.required, Validators.email]);
 
   getErrorMessage() {
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.email.hasError(<span class="hljs-string">'required'</span>) ? <span class="hljs-string">'You must enter a value'</span> :
-        <span class="hljs-keyword">this</span>.email.hasError(<span class="hljs-string">'email'</span>) ? <span class="hljs-string">'Not a valid email'</span> :
-            <span class="hljs-string">''</span>;
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.email.hasError(<span class="hljs-string">'required'</span>)) {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">'You must enter a value'</span>;
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.email.hasError(<span class="hljs-string">'email'</span>) ? <span class="hljs-string">'Not a valid email'</span> : <span class="hljs-string">''</span>;
   }
 }

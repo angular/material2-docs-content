@@ -55,7 +55,10 @@ class SliderConfigurableExample {
      * @return {?}
      */
     getSliderTickInterval() {
-        return this.showTicks ? (this.autoTicks ? 'auto' : this.tickInterval) : 0;
+        if (this.showTicks) {
+            return this.autoTicks ? 'auto' : this.tickInterval;
+        }
+        return 0;
     }
 }
 SliderConfigurableExample.decorators = [
