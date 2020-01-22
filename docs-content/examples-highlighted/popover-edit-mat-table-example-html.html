@@ -71,6 +71,43 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
+  <span class="hljs-comment">&lt;!-- Type Column --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"type"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Type <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>
+        [<span class="hljs-attr">matPopoverEdit</span>]=<span class="hljs-string">"typeEdit"</span>&gt;</span>
+      {{element.type}}
+
+      <span class="hljs-comment">&lt;!-- This edit is defined in the cell and can implicitly access element --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">typeEdit</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">f</span>=<span class="hljs-string">"ngForm"</span>
+              <span class="hljs-attr">matEditLens</span>
+              <span class="hljs-attr">matEditClose</span>
+              (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">"onSubmitType(element, f)"</span>
+              [(<span class="hljs-attr">matEditLensPreservedFormValue</span>)]=<span class="hljs-string">"typeValues.for(element).value"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-edit-fill</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">mat-selection-list</span> [<span class="hljs-attr">multiple</span>]=<span class="hljs-string">"false"</span>
+                  <span class="hljs-attr">name</span>=<span class="hljs-string">"type"</span>
+                  [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">"[element.type]"</span>
+                  (<span class="hljs-attr">selectionChange</span>)=<span class="hljs-string">"f.ngSubmit.emit()"</span>
+                  <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Element type"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let type of TYPES"</span>
+                    [<span class="hljs-attr">value</span>]=<span class="hljs-string">"type"</span>&gt;</span>
+                  {{type}}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-option</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">mat-selection-list</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">matRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">matEditOpen</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>arrow_drop_down<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
+
   <span class="hljs-comment">&lt;!-- Weight Column --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"weight"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Weight <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
@@ -92,4 +129,43 @@
 
   <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-header-row</span> *<span class="hljs-attr">matHeaderRowDef</span>=<span class="hljs-string">"displayedColumns"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">mat-row</span> *<span class="hljs-attr">matRowDef</span>=<span class="hljs-string">"let row; columns: displayedColumns;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Fantasy Counterparts Column --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"fantasyCounterpart"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Fantasy Counterparts <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>
+        [<span class="hljs-attr">matPopoverEdit</span>]=<span class="hljs-string">"fantasyCounterpartEdit"</span>&gt;</span>
+      {{element.fantasyCounterparts.join(', ')}}
+
+      <span class="hljs-comment">&lt;!-- This edit is defined in the cell and can implicitly access element --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ng-template</span> #<span class="hljs-attr">fantasyCounterpartEdit</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">form</span> #<span class="hljs-attr">f</span>=<span class="hljs-string">"ngForm"</span>
+              <span class="hljs-attr">matEditLens</span>
+              (<span class="hljs-attr">ngSubmit</span>)=<span class="hljs-string">"onSubmitFantasyCounterparts(element, f)"</span>
+              [(<span class="hljs-attr">matEditLensPreservedFormValue</span>)]=<span class="hljs-string">"fantasyValues.for(element).value"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-edit-fill</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">mat-selection-list</span> [<span class="hljs-attr">ngModel</span>]=<span class="hljs-string">"element.fantasyCounterparts"</span>
+                  <span class="hljs-attr">name</span>=<span class="hljs-string">"fantasyCounterparts"</span>
+                  <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Fantasy Element Counterparts"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">mat-list-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let fantasyElement of FANTASY_ELEMENTS"</span>
+                    [<span class="hljs-attr">value</span>]=<span class="hljs-string">"fantasyElement"</span>
+                    <span class="hljs-attr">checkboxPosition</span>=<span class="hljs-string">"before"</span>&gt;</span>
+                  {{fantasyElement}}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">mat-list-option</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">mat-selection-list</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">mat-edit-actions</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Confirm<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-button</span> <span class="hljs-attr">matEditRevert</span>&gt;</span>Revert<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">matRowHoverContent</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">matEditOpen</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>arrow_drop_down<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
