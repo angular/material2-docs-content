@@ -15,7 +15,7 @@
             this.supportsScrollBehavior = i1.supportsScrollBehavior();
         }
         CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(i0.ɵɵdirectiveInject(i1.Platform)); };
-        CdkPlatformOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 22, vars: 10, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        CdkPlatformOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 24, vars: 11, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h2");
                 i0.ɵɵtext(1, "Platform information:");
                 i0.ɵɵelementEnd();
@@ -49,6 +49,9 @@
                 i0.ɵɵelementStart(20, "p");
                 i0.ɵɵtext(21);
                 i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(22, "p");
+                i0.ɵɵtext(23);
+                i0.ɵɵelementEnd();
             } if (rf & 2) {
                 i0.ɵɵadvance(3);
                 i0.ɵɵtextInterpolate1("Is Android: ", ctx.platform.ANDROID, "");
@@ -64,6 +67,8 @@
                 i0.ɵɵtextInterpolate1("Is Trident: ", ctx.platform.TRIDENT, "");
                 i0.ɵɵadvance(2);
                 i0.ɵɵtextInterpolate1("Is Edge: ", ctx.platform.EDGE, "");
+                i0.ɵɵadvance(2);
+                i0.ɵɵtextInterpolate1("Is Safari: ", ctx.platform.SAFARI, "");
                 i0.ɵɵadvance(2);
                 i0.ɵɵtextInterpolate1("Supported input types: ", ctx.supportedInputTypes, "");
                 i0.ɵɵadvance(2);
