@@ -1,6 +1,6 @@
 import { FormControl } from '@angular/forms';
 import * as i0 from "@angular/core";
-export interface Animal {
+interface Animal {
     name: string;
     sound: string;
 }
@@ -12,3 +12,4 @@ export declare class SelectHintErrorExample {
     static ɵfac: i0.ɵɵFactoryDef<SelectHintErrorExample>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never>;
 }
+export {};

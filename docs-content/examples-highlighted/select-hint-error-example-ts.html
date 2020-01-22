@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Animal {
+<span class="hljs-keyword">interface</span> Animal {
   name: <span class="hljs-built_in">string</span>;
   sound: <span class="hljs-built_in">string</span>;
 }
@@ -13,7 +13,7 @@
   styleUrls: [<span class="hljs-string">'select-hint-error-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectHintErrorExample {
-  animalControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, [Validators.required]);
+  animalControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, Validators.required);
   selectFormControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-string">''</span>, Validators.required);
   animals: Animal[] = [
     {name: <span class="hljs-string">'Dog'</span>, sound: <span class="hljs-string">'Woof!'</span>},
