@@ -20,10 +20,4 @@
   onClick(index: <span class="hljs-built_in">number</span>): <span class="hljs-built_in">void</span> {
     <span class="hljs-keyword">this</span>.selectedIndex = index;
   }
-
-  <span class="hljs-comment">// These properties are required so that the Ivy template type checker in strict mode knows</span>
-  <span class="hljs-comment">// what kind of values are accepted by the `linear` and `selectedIndex` inputs which</span>
-  <span class="hljs-comment">// are inherited from `CdkStepper`.</span>
-  <span class="hljs-keyword">static</span> ngAcceptInputType_linear: <span class="hljs-built_in">boolean</span> | <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> | <span class="hljs-literal">undefined</span>;
-  <span class="hljs-keyword">static</span> ngAcceptInputType_selectedIndex: <span class="hljs-built_in">number</span> | <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> | <span class="hljs-literal">undefined</span>;
 }
