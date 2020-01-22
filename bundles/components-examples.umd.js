@@ -871,6 +871,12 @@
             "additionalFiles": [],
             "selectorName": ""
         },
+        "select-initial-value": {
+            "title": "Basic select with initial value and no form",
+            "component": select.SelectInitialValueExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
         "select-multiple": {
             "title": "Select with multiple selection",
             "component": select.SelectMultipleExample,
@@ -898,6 +904,12 @@
         "select-panel-class": {
             "title": "Select with custom panel styling",
             "component": select.SelectPanelClassExample,
+            "additionalFiles": [],
+            "selectorName": ""
+        },
+        "select-reactive-form": {
+            "title": "Select in a reactive form",
+            "component": select.SelectReactiveFormExample,
             "additionalFiles": [],
             "selectorName": ""
         },
@@ -1570,11 +1582,13 @@
         select.SelectErrorStateMatcherExample,
         select.SelectFormExample,
         select.SelectHintErrorExample,
+        select.SelectInitialValueExample,
         select.SelectMultipleExample,
         select.SelectNoRippleExample,
         select.SelectOptgroupExample,
         select.SelectOverviewExample,
         select.SelectPanelClassExample,
+        select.SelectReactiveFormExample,
         select.SelectResetExample,
         select.SelectValueBindingExample,
         sidenav.SidenavAutosizeExample,
@@ -2733,6 +2747,12 @@
             return select.SelectHintErrorExample;
         }
     });
+    Object.defineProperty(exports, 'SelectInitialValueExample', {
+        enumerable: true,
+        get: function () {
+            return select.SelectInitialValueExample;
+        }
+    });
     Object.defineProperty(exports, 'SelectMultipleExample', {
         enumerable: true,
         get: function () {
@@ -2761,6 +2781,12 @@
         enumerable: true,
         get: function () {
             return select.SelectPanelClassExample;
+        }
+    });
+    Object.defineProperty(exports, 'SelectReactiveFormExample', {
+        enumerable: true,
+        get: function () {
+            return select.SelectReactiveFormExample;
         }
     });
     Object.defineProperty(exports, 'SelectResetExample', {

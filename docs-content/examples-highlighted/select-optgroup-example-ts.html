@@ -1,12 +1,12 @@
 <span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
 <span class="hljs-keyword">import</span> {FormControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> Pokemon {
+<span class="hljs-keyword">interface</span> Pokemon {
   value: <span class="hljs-built_in">string</span>;
   viewValue: <span class="hljs-built_in">string</span>;
 }
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> PokemonGroup {
+<span class="hljs-keyword">interface</span> PokemonGroup {
   disabled?: <span class="hljs-built_in">boolean</span>;
   name: <span class="hljs-built_in">string</span>;
   pokemon: Pokemon[];

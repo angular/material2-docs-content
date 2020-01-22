@@ -370,7 +370,7 @@
     /** @title Select with form field features */
     var SelectHintErrorExample = /** @class */ (function () {
         function SelectHintErrorExample() {
-            this.animalControl = new i3.FormControl('', [i3.Validators.required]);
+            this.animalControl = new i3.FormControl('', i3.Validators.required);
             this.selectFormControl = new i3.FormControl('', i3.Validators.required);
             this.animals = [
                 { name: 'Dog', sound: 'Woof!' },
@@ -882,17 +882,221 @@
                 }]
         }], null, null); })();
 
+    function SelectReactiveFormExample_mat_option_9_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-option", 5);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        var food_r27 = ctx.$implicit;
+        i0.ɵɵproperty("value", food_r27.value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", food_r27.viewValue, " ");
+    } }
+    function SelectReactiveFormExample_option_20_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "option", 5);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        var car_r28 = ctx.$implicit;
+        i0.ɵɵproperty("value", car_r28.value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", car_r28.viewValue, " ");
+    } }
+    /**
+     * @title Select in a reactive form
+     */
+    var SelectReactiveFormExample = /** @class */ (function () {
+        function SelectReactiveFormExample() {
+            this.foods = [
+                { value: 'steak-0', viewValue: 'Steak' },
+                { value: 'pizza-1', viewValue: 'Pizza' },
+                { value: 'tacos-2', viewValue: 'Tacos' }
+            ];
+            this.cars = [
+                { value: 'volvo', viewValue: 'Volvo' },
+                { value: 'saab', viewValue: 'Saab' },
+                { value: 'mercedes', viewValue: 'Mercedes' }
+            ];
+            this.foodControl = new i3.FormControl(this.foods[2].value);
+            this.carControl = new i3.FormControl(this.cars[1].value);
+            this.form = new i3.FormGroup({
+                food: this.foodControl,
+                car: this.carControl
+            });
+        }
+        SelectReactiveFormExample.ɵfac = function SelectReactiveFormExample_Factory(t) { return new (t || SelectReactiveFormExample)(); };
+        SelectReactiveFormExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectReactiveFormExample, selectors: [["select-reactive-form-example"]], decls: 23, vars: 7, consts: [[3, "formGroup"], ["name", "food", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "formControl"], ["value", ""], [3, "value"]], template: function SelectReactiveFormExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "form", 0);
+                i0.ɵɵelementStart(1, "h4");
+                i0.ɵɵtext(2, "mat-select");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(3, "mat-form-field");
+                i0.ɵɵelementStart(4, "mat-label");
+                i0.ɵɵtext(5, "Favorite Food");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(6, "mat-select", 1);
+                i0.ɵɵelementStart(7, "mat-option");
+                i0.ɵɵtext(8, "None");
+                i0.ɵɵelementEnd();
+                i0.ɵɵtemplate(9, SelectReactiveFormExample_mat_option_9_Template, 2, 2, "mat-option", 2);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(10, "p");
+                i0.ɵɵtext(11);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(12, "h4");
+                i0.ɵɵtext(13, "Native select");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(14, "mat-form-field");
+                i0.ɵɵelementStart(15, "mat-label");
+                i0.ɵɵtext(16, "Favorite Car");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(17, "select", 3);
+                i0.ɵɵelementStart(18, "option", 4);
+                i0.ɵɵtext(19, "None");
+                i0.ɵɵelementEnd();
+                i0.ɵɵtemplate(20, SelectReactiveFormExample_option_20_Template, 2, 2, "option", 2);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(21, "p");
+                i0.ɵɵtext(22);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+            } if (rf & 2) {
+                i0.ɵɵproperty("formGroup", ctx.form);
+                i0.ɵɵadvance(6);
+                i0.ɵɵproperty("formControl", ctx.foodControl);
+                i0.ɵɵadvance(3);
+                i0.ɵɵproperty("ngForOf", ctx.foods);
+                i0.ɵɵadvance(2);
+                i0.ɵɵtextInterpolate1("Selected: ", ctx.foodControl.value, "");
+                i0.ɵɵadvance(6);
+                i0.ɵɵproperty("formControl", ctx.carControl);
+                i0.ɵɵadvance(3);
+                i0.ɵɵproperty("ngForOf", ctx.cars);
+                i0.ɵɵadvance(2);
+                i0.ɵɵtextInterpolate1("Selected: ", ctx.carControl.value, "");
+            } }, directives: [i3.ɵangular_packages_forms_forms_y, i3.NgControlStatusGroup, i3.FormGroupDirective, i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.SelectControlValueAccessor, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], styles: [""] });
+        return SelectReactiveFormExample;
+    }());
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectReactiveFormExample, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'select-reactive-form-example',
+                    templateUrl: 'select-reactive-form-example.html',
+                    styleUrls: ['select-reactive-form-example.css'],
+                }]
+        }], function () { return []; }, null); })();
+
+    function SelectInitialValueExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "mat-option", 5);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        var option_r31 = ctx.$implicit;
+        i0.ɵɵproperty("value", option_r31.value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(option_r31.viewValue);
+    } }
+    function SelectInitialValueExample_option_17_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "option", 6);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        var option_r32 = ctx.$implicit;
+        var ctx_r30 = i0.ɵɵnextContext();
+        i0.ɵɵproperty("value", option_r32.value)("selected", ctx_r30.selectedCar === option_r32.value);
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate(option_r32.viewValue);
+    } }
+    /**
+     * @title Basic select with initial value and no form
+     */
+    var SelectInitialValueExample = /** @class */ (function () {
+        function SelectInitialValueExample() {
+            this.foods = [
+                { value: 'steak-0', viewValue: 'Steak' },
+                { value: 'pizza-1', viewValue: 'Pizza' },
+                { value: 'tacos-2', viewValue: 'Tacos' }
+            ];
+            this.cars = [
+                { value: 'ford', viewValue: 'Ford' },
+                { value: 'chevrolet', viewValue: 'Chevrolet' },
+                { value: 'dodge', viewValue: 'Dodge' }
+            ];
+            this.selectedFood = this.foods[2].value;
+            this.selectedCar = this.cars[0].value;
+        }
+        SelectInitialValueExample.ɵfac = function SelectInitialValueExample_Factory(t) { return new (t || SelectInitialValueExample)(); };
+        SelectInitialValueExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectInitialValueExample, selectors: [["select-initial-value-example"]], decls: 20, vars: 5, consts: [[3, "value", "valueChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", 3, "change"], ["value", ""], [3, "value", "selected", 4, "ngFor", "ngForOf"], [3, "value"], [3, "value", "selected"]], template: function SelectInitialValueExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "h4");
+                i0.ɵɵtext(1, "Basic mat-select with initial value");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(2, "mat-form-field");
+                i0.ɵɵelementStart(3, "mat-label");
+                i0.ɵɵtext(4, "Favorite Food");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(5, "mat-select", 0);
+                i0.ɵɵlistener("valueChange", function SelectInitialValueExample_Template_mat_select_valueChange_5_listener($event) { return ctx.selectedFood = $event; });
+                i0.ɵɵelement(6, "mat-option");
+                i0.ɵɵtemplate(7, SelectInitialValueExample_mat_option_7_Template, 2, 2, "mat-option", 1);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(8, "p");
+                i0.ɵɵtext(9);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(10, "h4");
+                i0.ɵɵtext(11, "Basic native select with initial value");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(12, "mat-form-field");
+                i0.ɵɵelementStart(13, "mat-label");
+                i0.ɵɵtext(14, "Favorite Car");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(15, "select", 2);
+                i0.ɵɵlistener("change", function SelectInitialValueExample_Template_select_change_15_listener($event) { return ctx.selectedCar = $event.target.value; });
+                i0.ɵɵelement(16, "option", 3);
+                i0.ɵɵtemplate(17, SelectInitialValueExample_option_17_Template, 2, 3, "option", 4);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(18, "p");
+                i0.ɵɵtext(19);
+                i0.ɵɵelementEnd();
+            } if (rf & 2) {
+                i0.ɵɵadvance(5);
+                i0.ɵɵproperty("value", ctx.selectedFood);
+                i0.ɵɵadvance(2);
+                i0.ɵɵproperty("ngForOf", ctx.foods);
+                i0.ɵɵadvance(2);
+                i0.ɵɵtextInterpolate1("You selected: ", ctx.selectedFood, "");
+                i0.ɵɵadvance(8);
+                i0.ɵɵproperty("ngForOf", ctx.cars);
+                i0.ɵɵadvance(2);
+                i0.ɵɵtextInterpolate1("You selected: ", ctx.selectedCar, "");
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i4$1.MatOption, i4.NgForOf, i6.MatInput, i3.NgSelectOption, i3.ɵangular_packages_forms_forms_x], styles: [""] });
+        return SelectInitialValueExample;
+    }());
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectInitialValueExample, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'select-initial-value-example',
+                    templateUrl: 'select-initial-value-example.html',
+                    styleUrls: ['select-initial-value-example.css'],
+                }]
+        }], null, null); })();
+
     var EXAMPLES = [
         SelectCustomTriggerExample,
         SelectDisabledExample,
         SelectErrorStateMatcherExample,
         SelectFormExample,
         SelectHintErrorExample,
+        SelectInitialValueExample,
         SelectMultipleExample,
         SelectNoRippleExample,
         SelectOptgroupExample,
         SelectOverviewExample,
         SelectPanelClassExample,
+        SelectReactiveFormExample,
         SelectResetExample,
         SelectValueBindingExample,
     ];
@@ -915,11 +1119,13 @@
             SelectErrorStateMatcherExample,
             SelectFormExample,
             SelectHintErrorExample,
+            SelectInitialValueExample,
             SelectMultipleExample,
             SelectNoRippleExample,
             SelectOptgroupExample,
             SelectOverviewExample,
             SelectPanelClassExample,
+            SelectReactiveFormExample,
             SelectResetExample,
             SelectValueBindingExample], imports: [i4.CommonModule,
             i3.FormsModule,
@@ -931,11 +1137,13 @@
             SelectErrorStateMatcherExample,
             SelectFormExample,
             SelectHintErrorExample,
+            SelectInitialValueExample,
             SelectMultipleExample,
             SelectNoRippleExample,
             SelectOptgroupExample,
             SelectOverviewExample,
             SelectPanelClassExample,
+            SelectReactiveFormExample,
             SelectResetExample,
             SelectValueBindingExample] }); })();
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectExamplesModule, [{
@@ -960,11 +1168,13 @@
     exports.SelectExamplesModule = SelectExamplesModule;
     exports.SelectFormExample = SelectFormExample;
     exports.SelectHintErrorExample = SelectHintErrorExample;
+    exports.SelectInitialValueExample = SelectInitialValueExample;
     exports.SelectMultipleExample = SelectMultipleExample;
     exports.SelectNoRippleExample = SelectNoRippleExample;
     exports.SelectOptgroupExample = SelectOptgroupExample;
     exports.SelectOverviewExample = SelectOverviewExample;
     exports.SelectPanelClassExample = SelectPanelClassExample;
+    exports.SelectReactiveFormExample = SelectReactiveFormExample;
     exports.SelectResetExample = SelectResetExample;
     exports.SelectValueBindingExample = SelectValueBindingExample;
 

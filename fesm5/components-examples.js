@@ -70,8 +70,8 @@ import { ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, Pro
 export { ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample } from '@angular/components-examples/material/progress-spinner';
 import { RadioNgModelExample, RadioOverviewExample, RadioExamplesModule } from '@angular/components-examples/material/radio';
 export { RadioNgModelExample, RadioOverviewExample } from '@angular/components-examples/material/radio';
-import { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample, SelectExamplesModule } from '@angular/components-examples/material/select';
-export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample } from '@angular/components-examples/material/select';
+import { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectInitialValueExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectReactiveFormExample, SelectResetExample, SelectValueBindingExample, SelectExamplesModule } from '@angular/components-examples/material/select';
+export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectInitialValueExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectReactiveFormExample, SelectResetExample, SelectValueBindingExample } from '@angular/components-examples/material/select';
 import { SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SidenavExamplesModule } from '@angular/components-examples/material/sidenav';
 export { SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample } from '@angular/components-examples/material/sidenav';
 import { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SlideToggleExamplesModule } from '@angular/components-examples/material/slide-toggle';
@@ -962,6 +962,12 @@ var EXAMPLE_COMPONENTS = {
         "additionalFiles": [],
         "selectorName": ""
     },
+    "select-initial-value": {
+        "title": "Basic select with initial value and no form",
+        "component": SelectInitialValueExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
     "select-multiple": {
         "title": "Select with multiple selection",
         "component": SelectMultipleExample,
@@ -989,6 +995,12 @@ var EXAMPLE_COMPONENTS = {
     "select-panel-class": {
         "title": "Select with custom panel styling",
         "component": SelectPanelClassExample,
+        "additionalFiles": [],
+        "selectorName": ""
+    },
+    "select-reactive-form": {
+        "title": "Select in a reactive form",
+        "component": SelectReactiveFormExample,
         "additionalFiles": [],
         "selectorName": ""
     },
@@ -1661,11 +1673,13 @@ var EXAMPLE_LIST = [CdkPopoverEditCdkTableFlexExample,
     SelectErrorStateMatcherExample,
     SelectFormExample,
     SelectHintErrorExample,
+    SelectInitialValueExample,
     SelectMultipleExample,
     SelectNoRippleExample,
     SelectOptgroupExample,
     SelectOverviewExample,
     SelectPanelClassExample,
+    SelectReactiveFormExample,
     SelectResetExample,
     SelectValueBindingExample,
     SidenavAutosizeExample,

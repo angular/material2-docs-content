@@ -1,5 +1,5 @@
 import * as i0 from "@angular/core";
-export interface Food {
+interface Food {
     value: string;
     viewValue: string;
 }
@@ -11,3 +11,4 @@ export declare class SelectOverviewExample {
     static ɵfac: i0.ɵɵFactoryDef<SelectOverviewExample>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectOverviewExample, "select-overview-example", never, {}, {}, never>;
 }
+export {};

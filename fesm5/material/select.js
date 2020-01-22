@@ -1,6 +1,6 @@
 import { NgIf, NgForOf, CommonModule } from '@angular/common';
 import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate2, ɵɵproperty, ɵɵtextInterpolate, ɵɵdefineComponent, ɵɵtemplate, ɵɵtextInterpolate1, ɵsetClassMetadata, Component, ɵɵelement, ɵɵlistener, ɵɵpropertyInterpolate1, ViewEncapsulation, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { FormControl, NgControlStatus, FormControlDirective, NgSelectOption, ɵangular_packages_forms_forms_x, Validators, SelectControlValueAccessor, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, NgModel, RequiredValidator, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, NgControlStatus, FormControlDirective, NgSelectOption, ɵangular_packages_forms_forms_x, Validators, SelectControlValueAccessor, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, NgModel, RequiredValidator, FormGroup, FormGroupDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatSelect, MatSelectTrigger, MatSelectModule } from '@angular/material/select';
@@ -373,7 +373,7 @@ function SelectHintErrorExample_mat_error_25_Template(rf, ctx) { if (rf & 1) {
 /** @title Select with form field features */
 var SelectHintErrorExample = /** @class */ (function () {
     function SelectHintErrorExample() {
-        this.animalControl = new FormControl('', [Validators.required]);
+        this.animalControl = new FormControl('', Validators.required);
         this.selectFormControl = new FormControl('', Validators.required);
         this.animals = [
             { name: 'Dog', sound: 'Woof!' },
@@ -885,17 +885,221 @@ var SelectValueBindingExample = /** @class */ (function () {
             }]
     }], null, null); })();
 
+function SelectReactiveFormExample_mat_option_9_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-option", 5);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var food_r27 = ctx.$implicit;
+    ɵɵproperty("value", food_r27.value);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", food_r27.viewValue, " ");
+} }
+function SelectReactiveFormExample_option_20_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "option", 5);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var car_r28 = ctx.$implicit;
+    ɵɵproperty("value", car_r28.value);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", car_r28.viewValue, " ");
+} }
+/**
+ * @title Select in a reactive form
+ */
+var SelectReactiveFormExample = /** @class */ (function () {
+    function SelectReactiveFormExample() {
+        this.foods = [
+            { value: 'steak-0', viewValue: 'Steak' },
+            { value: 'pizza-1', viewValue: 'Pizza' },
+            { value: 'tacos-2', viewValue: 'Tacos' }
+        ];
+        this.cars = [
+            { value: 'volvo', viewValue: 'Volvo' },
+            { value: 'saab', viewValue: 'Saab' },
+            { value: 'mercedes', viewValue: 'Mercedes' }
+        ];
+        this.foodControl = new FormControl(this.foods[2].value);
+        this.carControl = new FormControl(this.cars[1].value);
+        this.form = new FormGroup({
+            food: this.foodControl,
+            car: this.carControl
+        });
+    }
+    SelectReactiveFormExample.ɵfac = function SelectReactiveFormExample_Factory(t) { return new (t || SelectReactiveFormExample)(); };
+    SelectReactiveFormExample.ɵcmp = ɵɵdefineComponent({ type: SelectReactiveFormExample, selectors: [["select-reactive-form-example"]], decls: 23, vars: 7, consts: [[3, "formGroup"], ["name", "food", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "name", "car", 3, "formControl"], ["value", ""], [3, "value"]], template: function SelectReactiveFormExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "form", 0);
+            ɵɵelementStart(1, "h4");
+            ɵɵtext(2, "mat-select");
+            ɵɵelementEnd();
+            ɵɵelementStart(3, "mat-form-field");
+            ɵɵelementStart(4, "mat-label");
+            ɵɵtext(5, "Favorite Food");
+            ɵɵelementEnd();
+            ɵɵelementStart(6, "mat-select", 1);
+            ɵɵelementStart(7, "mat-option");
+            ɵɵtext(8, "None");
+            ɵɵelementEnd();
+            ɵɵtemplate(9, SelectReactiveFormExample_mat_option_9_Template, 2, 2, "mat-option", 2);
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+            ɵɵelementStart(10, "p");
+            ɵɵtext(11);
+            ɵɵelementEnd();
+            ɵɵelementStart(12, "h4");
+            ɵɵtext(13, "Native select");
+            ɵɵelementEnd();
+            ɵɵelementStart(14, "mat-form-field");
+            ɵɵelementStart(15, "mat-label");
+            ɵɵtext(16, "Favorite Car");
+            ɵɵelementEnd();
+            ɵɵelementStart(17, "select", 3);
+            ɵɵelementStart(18, "option", 4);
+            ɵɵtext(19, "None");
+            ɵɵelementEnd();
+            ɵɵtemplate(20, SelectReactiveFormExample_option_20_Template, 2, 2, "option", 2);
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+            ɵɵelementStart(21, "p");
+            ɵɵtext(22);
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵproperty("formGroup", ctx.form);
+            ɵɵadvance(6);
+            ɵɵproperty("formControl", ctx.foodControl);
+            ɵɵadvance(3);
+            ɵɵproperty("ngForOf", ctx.foods);
+            ɵɵadvance(2);
+            ɵɵtextInterpolate1("Selected: ", ctx.foodControl.value, "");
+            ɵɵadvance(6);
+            ɵɵproperty("formControl", ctx.carControl);
+            ɵɵadvance(3);
+            ɵɵproperty("ngForOf", ctx.cars);
+            ɵɵadvance(2);
+            ɵɵtextInterpolate1("Selected: ", ctx.carControl.value, "");
+        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, FormGroupDirective, MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatOption, NgForOf, MatInput, SelectControlValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [""] });
+    return SelectReactiveFormExample;
+}());
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectReactiveFormExample, [{
+        type: Component,
+        args: [{
+                selector: 'select-reactive-form-example',
+                templateUrl: 'select-reactive-form-example.html',
+                styleUrls: ['select-reactive-form-example.css'],
+            }]
+    }], function () { return []; }, null); })();
+
+function SelectInitialValueExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "mat-option", 5);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var option_r31 = ctx.$implicit;
+    ɵɵproperty("value", option_r31.value);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(option_r31.viewValue);
+} }
+function SelectInitialValueExample_option_17_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "option", 6);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    var option_r32 = ctx.$implicit;
+    var ctx_r30 = ɵɵnextContext();
+    ɵɵproperty("value", option_r32.value)("selected", ctx_r30.selectedCar === option_r32.value);
+    ɵɵadvance(1);
+    ɵɵtextInterpolate(option_r32.viewValue);
+} }
+/**
+ * @title Basic select with initial value and no form
+ */
+var SelectInitialValueExample = /** @class */ (function () {
+    function SelectInitialValueExample() {
+        this.foods = [
+            { value: 'steak-0', viewValue: 'Steak' },
+            { value: 'pizza-1', viewValue: 'Pizza' },
+            { value: 'tacos-2', viewValue: 'Tacos' }
+        ];
+        this.cars = [
+            { value: 'ford', viewValue: 'Ford' },
+            { value: 'chevrolet', viewValue: 'Chevrolet' },
+            { value: 'dodge', viewValue: 'Dodge' }
+        ];
+        this.selectedFood = this.foods[2].value;
+        this.selectedCar = this.cars[0].value;
+    }
+    SelectInitialValueExample.ɵfac = function SelectInitialValueExample_Factory(t) { return new (t || SelectInitialValueExample)(); };
+    SelectInitialValueExample.ɵcmp = ɵɵdefineComponent({ type: SelectInitialValueExample, selectors: [["select-initial-value-example"]], decls: 20, vars: 5, consts: [[3, "value", "valueChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", 3, "change"], ["value", ""], [3, "value", "selected", 4, "ngFor", "ngForOf"], [3, "value"], [3, "value", "selected"]], template: function SelectInitialValueExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "h4");
+            ɵɵtext(1, "Basic mat-select with initial value");
+            ɵɵelementEnd();
+            ɵɵelementStart(2, "mat-form-field");
+            ɵɵelementStart(3, "mat-label");
+            ɵɵtext(4, "Favorite Food");
+            ɵɵelementEnd();
+            ɵɵelementStart(5, "mat-select", 0);
+            ɵɵlistener("valueChange", function SelectInitialValueExample_Template_mat_select_valueChange_5_listener($event) { return ctx.selectedFood = $event; });
+            ɵɵelement(6, "mat-option");
+            ɵɵtemplate(7, SelectInitialValueExample_mat_option_7_Template, 2, 2, "mat-option", 1);
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+            ɵɵelementStart(8, "p");
+            ɵɵtext(9);
+            ɵɵelementEnd();
+            ɵɵelementStart(10, "h4");
+            ɵɵtext(11, "Basic native select with initial value");
+            ɵɵelementEnd();
+            ɵɵelementStart(12, "mat-form-field");
+            ɵɵelementStart(13, "mat-label");
+            ɵɵtext(14, "Favorite Car");
+            ɵɵelementEnd();
+            ɵɵelementStart(15, "select", 2);
+            ɵɵlistener("change", function SelectInitialValueExample_Template_select_change_15_listener($event) { return ctx.selectedCar = $event.target.value; });
+            ɵɵelement(16, "option", 3);
+            ɵɵtemplate(17, SelectInitialValueExample_option_17_Template, 2, 3, "option", 4);
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+            ɵɵelementStart(18, "p");
+            ɵɵtext(19);
+            ɵɵelementEnd();
+        } if (rf & 2) {
+            ɵɵadvance(5);
+            ɵɵproperty("value", ctx.selectedFood);
+            ɵɵadvance(2);
+            ɵɵproperty("ngForOf", ctx.foods);
+            ɵɵadvance(2);
+            ɵɵtextInterpolate1("You selected: ", ctx.selectedFood, "");
+            ɵɵadvance(8);
+            ɵɵproperty("ngForOf", ctx.cars);
+            ɵɵadvance(2);
+            ɵɵtextInterpolate1("You selected: ", ctx.selectedCar, "");
+        } }, directives: [MatFormField, MatLabel, MatSelect, MatOption, NgForOf, MatInput, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [""] });
+    return SelectInitialValueExample;
+}());
+/*@__PURE__*/ (function () { ɵsetClassMetadata(SelectInitialValueExample, [{
+        type: Component,
+        args: [{
+                selector: 'select-initial-value-example',
+                templateUrl: 'select-initial-value-example.html',
+                styleUrls: ['select-initial-value-example.css'],
+            }]
+    }], null, null); })();
+
 var EXAMPLES = [
     SelectCustomTriggerExample,
     SelectDisabledExample,
     SelectErrorStateMatcherExample,
     SelectFormExample,
     SelectHintErrorExample,
+    SelectInitialValueExample,
     SelectMultipleExample,
     SelectNoRippleExample,
     SelectOptgroupExample,
     SelectOverviewExample,
     SelectPanelClassExample,
+    SelectReactiveFormExample,
     SelectResetExample,
     SelectValueBindingExample,
 ];
@@ -918,11 +1122,13 @@ var SelectExamplesModule = /** @class */ (function () {
         SelectErrorStateMatcherExample,
         SelectFormExample,
         SelectHintErrorExample,
+        SelectInitialValueExample,
         SelectMultipleExample,
         SelectNoRippleExample,
         SelectOptgroupExample,
         SelectOverviewExample,
         SelectPanelClassExample,
+        SelectReactiveFormExample,
         SelectResetExample,
         SelectValueBindingExample], imports: [CommonModule,
         FormsModule,
@@ -934,11 +1140,13 @@ var SelectExamplesModule = /** @class */ (function () {
         SelectErrorStateMatcherExample,
         SelectFormExample,
         SelectHintErrorExample,
+        SelectInitialValueExample,
         SelectMultipleExample,
         SelectNoRippleExample,
         SelectOptgroupExample,
         SelectOverviewExample,
         SelectPanelClassExample,
+        SelectReactiveFormExample,
         SelectResetExample,
         SelectValueBindingExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectExamplesModule, [{
@@ -957,5 +1165,5 @@ var SelectExamplesModule = /** @class */ (function () {
             }]
     }], null, null); })();
 
-export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectExamplesModule, SelectFormExample, SelectHintErrorExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectResetExample, SelectValueBindingExample };
+export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectExamplesModule, SelectFormExample, SelectHintErrorExample, SelectInitialValueExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectReactiveFormExample, SelectResetExample, SelectValueBindingExample };
 //# sourceMappingURL=select.js.map

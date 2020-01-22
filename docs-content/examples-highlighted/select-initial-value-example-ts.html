@@ -1,0 +1,34 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+<span class="hljs-keyword">interface</span> Food {
+  value: <span class="hljs-built_in">string</span>;
+  viewValue: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">interface</span> Car {
+  value: <span class="hljs-built_in">string</span>;
+  viewValue: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-comment">/**
+ * @title Basic select with initial value and no form
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'select-initial-value-example'</span>,
+  templateUrl: <span class="hljs-string">'select-initial-value-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'select-initial-value-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectInitialValueExample {
+  foods: Food[] = [
+    {value: <span class="hljs-string">'steak-0'</span>, viewValue: <span class="hljs-string">'Steak'</span>},
+    {value: <span class="hljs-string">'pizza-1'</span>, viewValue: <span class="hljs-string">'Pizza'</span>},
+    {value: <span class="hljs-string">'tacos-2'</span>, viewValue: <span class="hljs-string">'Tacos'</span>}
+  ];
+  cars: Car[] = [
+    {value: <span class="hljs-string">'ford'</span>, viewValue: <span class="hljs-string">'Ford'</span>},
+    {value: <span class="hljs-string">'chevrolet'</span>, viewValue: <span class="hljs-string">'Chevrolet'</span>},
+    {value: <span class="hljs-string">'dodge'</span>, viewValue: <span class="hljs-string">'Dodge'</span>}
+  ];
+  selectedFood = <span class="hljs-keyword">this</span>.foods[<span class="hljs-number">2</span>].value;
+  selectedCar = <span class="hljs-keyword">this</span>.cars[<span class="hljs-number">0</span>].value;
+}

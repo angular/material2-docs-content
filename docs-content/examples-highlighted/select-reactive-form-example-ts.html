@@ -1,0 +1,43 @@
+<span class="hljs-keyword">import</span> {Component} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormControl, FormGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+
+<span class="hljs-keyword">interface</span> Food {
+  value: <span class="hljs-built_in">string</span>;
+  viewValue: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">interface</span> Car {
+  value: <span class="hljs-built_in">string</span>;
+  viewValue: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-comment">/**
+ * @title Select in a reactive form
+ */</span>
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'select-reactive-form-example'</span>,
+  templateUrl: <span class="hljs-string">'select-reactive-form-example.html'</span>,
+  styleUrls: [<span class="hljs-string">'select-reactive-form-example.css'</span>],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectReactiveFormExample {
+  form: FormGroup;
+  foods: Food[] = [
+    {value: <span class="hljs-string">'steak-0'</span>, viewValue: <span class="hljs-string">'Steak'</span>},
+    {value: <span class="hljs-string">'pizza-1'</span>, viewValue: <span class="hljs-string">'Pizza'</span>},
+    {value: <span class="hljs-string">'tacos-2'</span>, viewValue: <span class="hljs-string">'Tacos'</span>}
+  ];
+  cars: Car[] = [
+    {value: <span class="hljs-string">'volvo'</span>, viewValue: <span class="hljs-string">'Volvo'</span>},
+    {value: <span class="hljs-string">'saab'</span>, viewValue: <span class="hljs-string">'Saab'</span>},
+    {value: <span class="hljs-string">'mercedes'</span>, viewValue: <span class="hljs-string">'Mercedes'</span>}
+  ];
+  foodControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">this</span>.foods[<span class="hljs-number">2</span>].value);
+  carControl = <span class="hljs-keyword">new</span> FormControl(<span class="hljs-keyword">this</span>.cars[<span class="hljs-number">1</span>].value);
+
+  <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">this</span>.form = <span class="hljs-keyword">new</span> FormGroup({
+      food: <span class="hljs-keyword">this</span>.foodControl,
+      car: <span class="hljs-keyword">this</span>.carControl
+    });
+  }
+}
