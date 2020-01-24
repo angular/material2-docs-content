@@ -278,7 +278,7 @@ in the <code>connectedTo</code> of another <code>CdkDropList</code>.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDropListLockAxis&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>lockAxis: &#39;x&#39; | &#39;y&#39;</code>
+      <code>lockAxis: DragAxis</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Locks the position of the draggable elements inside the container along the specified axis.</p>
@@ -292,7 +292,7 @@ in the <code>connectedTo</code> of another <code>CdkDropList</code>.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDropListOrientation&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>orientation: &#39;horizontal&#39; | &#39;vertical&#39;</code>
+      <code>orientation: DropListOrientation</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Direction in which the list is oriented.</p>
@@ -782,10 +782,7 @@ be rendered.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDragStartDelay&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>dragStartDelay: number | {
-    touch: number;
-    mouse: number;
-}</code>
+      <code>dragStartDelay: DragStartDelay</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Amount of milliseconds to wait after the user has put their
@@ -818,7 +815,7 @@ Can be used to restore the element&#39;s position for a returning user.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">&#39;cdkDragLockAxis&#39;</span>)
         </div><p class="docs-api-property-name">
-      <code>lockAxis: &#39;x&#39; | &#39;y&#39;</code>
+      <code>lockAxis: DragAxis</code>
     </p>
   </td>
   <td class="docs-api-property-description"><p>Locks the position of the dragged element along the specified axis.</p>
@@ -3438,6 +3435,148 @@ that the position hasn&#39;t changed.</p>
 
 
 
+    
+      
+
+<h4 id="DragDropConfig" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="DragDropConfig"></span>
+  <code>DragDropConfig</code>
+</h4><p class="docs-api-interface-description"><p>Object that can be used to configure the drag
+items and drop lists within a module or a component.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>boundaryElement: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>constrainPosition: DragConstrainPosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dragStartDelay: DragStartDelay</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>draggingDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>listAutoScrollDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>listOrientation: DropListOrientation</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>lockAxis: DragAxis</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>previewClass: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>rootElementSelector: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>sortingDisabled: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
     <h3 id="cdk-drag-drop-functions" class="docs-header-link docs-api-h3">
       <span header-link="functions"></span>
       Functions
@@ -3666,10 +3805,88 @@ original position in current array.</p>
   </table>
 
 
+    <h3 id="cdk-drag-drop-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"></span>
+      Type aliases
+    </h3>
+    
+      
+
+<h4 id="DragStartDelay" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DragStartDelay"></span>
+  <code>DragStartDelay</code>
+</h4><p class="docs-api-type-alias-description"><p>Possible values that can be used to configure the drag start delay.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragStartDelay = <span class="hljs-built_in">number</span> | {
+    touch: <span class="hljs-built_in">number</span>;
+    mouse: <span class="hljs-built_in">number</span>;
+};</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="DragAxis" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DragAxis"></span>
+  <code>DragAxis</code>
+</h4><p class="docs-api-type-alias-description"><p>Possible axis along which dragging can be locked.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragAxis = <span class="hljs-string">'x'</span> | <span class="hljs-string">'y'</span>;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="DragConstrainPosition" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DragConstrainPosition"></span>
+  <code>DragConstrainPosition</code>
+</h4><p class="docs-api-type-alias-description"><p>Function that can be used to constrain the position of a dragged element.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DragConstrainPosition = <span class="hljs-function">(<span class="hljs-params">point: Point, dragRef: DragRef</span>) =&gt;</span> Point;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="DropListOrientation" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DropListOrientation"></span>
+  <code>DropListOrientation</code>
+</h4><p class="docs-api-type-alias-description"><p>Possible orientations for a drop list.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">type</span> DropListOrientation = <span class="hljs-string">'horizontal'</span> | <span class="hljs-string">'vertical'</span>;</code>
+</pre>
+</div>
+
+
     <h3 id="cdk-drag-drop-constants" class="docs-header-link docs-api-h3">
       <span header-link="constants"></span>
       Constants
     </h3>
+    
+      
+
+<h4 id="CDK_DRAG_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="CDK_DRAG_CONFIG"></span>
+  <code>CDK_DRAG_CONFIG</code>
+</h4><p class="docs-api-constant-description"><p>Injection token that can be used to configure the
+behavior of the drag&amp;drop-related components.</p>
+</p><div class="docs-markdown">
+<pre class="docs-markdown-pre">
+<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_CONFIG: InjectionToken&lt;DragDropConfig&gt;;</code>
+</pre>
+</div>
+
+
     
       
 
@@ -3681,20 +3898,6 @@ Used for avoiding circular imports.</p>
 </p><div class="docs-markdown">
 <pre class="docs-markdown-pre">
 <code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DROP_LIST: InjectionToken&lt;CdkDropListInternal&gt;;</code>
-</pre>
-</div>
-
-
-    
-      
-
-<h4 id="CDK_DRAG_CONFIG" class="docs-header-link docs-api-h4 docs-api-constant-name">
-  <span header-link="CDK_DRAG_CONFIG"></span>
-  <code>CDK_DRAG_CONFIG</code>
-</h4><p class="docs-api-constant-description"><p>Injection token that can be used to configure the behavior of <code>CdkDrag</code>.</p>
-</p><div class="docs-markdown">
-<pre class="docs-markdown-pre">
-<code class="docs-markdown-code"><span class="hljs-keyword">const</span> CDK_DRAG_CONFIG: InjectionToken&lt;DragRefConfig&gt;;</code>
 </pre>
 </div>
 
