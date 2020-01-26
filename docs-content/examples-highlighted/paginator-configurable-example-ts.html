@@ -19,6 +19,8 @@
   pageEvent: PageEvent;
 
   setPageSizeOptions(setPageSizeOptionsInput: <span class="hljs-built_in">string</span>) {
-    <span class="hljs-keyword">this</span>.pageSizeOptions = setPageSizeOptionsInput.split(<span class="hljs-string">','</span>).map(<span class="hljs-function"><span class="hljs-params">str</span> =&gt;</span> +str);
+    <span class="hljs-keyword">if</span> (setPageSizeOptionsInput) {
+      <span class="hljs-keyword">this</span>.pageSizeOptions = setPageSizeOptionsInput.split(<span class="hljs-string">','</span>).map(<span class="hljs-function"><span class="hljs-params">str</span> =&gt;</span> +str);
+    }
   }
 }

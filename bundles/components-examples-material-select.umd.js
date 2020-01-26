@@ -4,7 +4,7 @@
     (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.select = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.checkbox, global.ng.material.input, global.ng.material.select, global.ng.material.formField, global.ng.material.core));
 }(this, (function (exports, i4, i0, i3, i1, i6, i2, i1$1, i4$1) { 'use strict';
 
-    function SelectCustomTriggerExample_span_4_Template(rf, ctx) { if (rf & 1) {
+    function SelectCustomTriggerExample_span_6_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "span", 3);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
@@ -13,7 +13,7 @@
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate2(" (+", ctx_r0.toppings.value.length - 1, " ", (ctx_r0.toppings.value == null ? null : ctx_r0.toppings.value.length) === 2 ? "other" : "others", ") ");
     } }
-    function SelectCustomTriggerExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
+    function SelectCustomTriggerExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 4);
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
@@ -30,18 +30,21 @@
             this.toppingList = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
         }
         SelectCustomTriggerExample.ɵfac = function SelectCustomTriggerExample_Factory(t) { return new (t || SelectCustomTriggerExample)(); };
-        SelectCustomTriggerExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectCustomTriggerExample, selectors: [["select-custom-trigger-example"]], decls: 6, vars: 4, consts: [["placeholder", "Toppings", "multiple", "", 3, "formControl"], ["class", "example-additional-selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "example-additional-selection"], [3, "value"]], template: function SelectCustomTriggerExample_Template(rf, ctx) { if (rf & 1) {
+        SelectCustomTriggerExample.ɵcmp = i0.ɵɵdefineComponent({ type: SelectCustomTriggerExample, selectors: [["select-custom-trigger-example"]], decls: 8, vars: 4, consts: [["multiple", "", 3, "formControl"], ["class", "example-additional-selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "example-additional-selection"], [3, "value"]], template: function SelectCustomTriggerExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
-                i0.ɵɵelementStart(1, "mat-select", 0);
-                i0.ɵɵelementStart(2, "mat-select-trigger");
-                i0.ɵɵtext(3);
-                i0.ɵɵtemplate(4, SelectCustomTriggerExample_span_4_Template, 2, 2, "span", 1);
+                i0.ɵɵelementStart(1, "mat-label");
+                i0.ɵɵtext(2, "Toppings");
                 i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(5, SelectCustomTriggerExample_mat_option_5_Template, 2, 2, "mat-option", 2);
+                i0.ɵɵelementStart(3, "mat-select", 0);
+                i0.ɵɵelementStart(4, "mat-select-trigger");
+                i0.ɵɵtext(5);
+                i0.ɵɵtemplate(6, SelectCustomTriggerExample_span_6_Template, 2, 2, "span", 1);
+                i0.ɵɵelementEnd();
+                i0.ɵɵtemplate(7, SelectCustomTriggerExample_mat_option_7_Template, 2, 2, "mat-option", 2);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                i0.ɵɵadvance(1);
+                i0.ɵɵadvance(3);
                 i0.ɵɵproperty("formControl", ctx.toppings);
                 i0.ɵɵadvance(2);
                 i0.ɵɵtextInterpolate1(" ", ctx.toppings.value ? ctx.toppings.value[0] : "", " ");
@@ -49,7 +52,7 @@
                 i0.ɵɵproperty("ngIf", (ctx.toppings.value == null ? null : ctx.toppings.value.length) > 1);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngForOf", ctx.toppingList);
-            } }, directives: [i1$1.MatFormField, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i2.MatSelectTrigger, i4.NgIf, i4.NgForOf, i4$1.MatOption], styles: [".example-additional-selection[_ngcontent-%COMP%] {\n  opacity: 0.75;\n  font-size: 0.75em;\n}"] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i2.MatSelectTrigger, i4.NgIf, i4.NgForOf, i4$1.MatOption], styles: [".example-additional-selection[_ngcontent-%COMP%] {\n  opacity: 0.75;\n  font-size: 0.75em;\n}"] });
         return SelectCustomTriggerExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SelectCustomTriggerExample, [{

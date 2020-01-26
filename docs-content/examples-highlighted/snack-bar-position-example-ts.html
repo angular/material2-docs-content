@@ -14,14 +14,13 @@
   styleUrls: [<span class="hljs-string">'snack-bar-position-example.css'</span>],
 })
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SnackBarPositionExample {
-
   horizontalPosition: MatSnackBarHorizontalPosition = <span class="hljs-string">'start'</span>;
   verticalPosition: MatSnackBarVerticalPosition = <span class="hljs-string">'bottom'</span>;
 
   <span class="hljs-keyword">constructor</span>(<span class="hljs-params"><span class="hljs-keyword">private</span> _snackBar: MatSnackBar</span>) {}
 
   openSnackBar() {
-    <span class="hljs-keyword">this</span>._snackBar.open(<span class="hljs-string">'Canonball!!'</span>, <span class="hljs-string">'End now'</span>, {
+    <span class="hljs-keyword">this</span>._snackBar.open(<span class="hljs-string">'Cannonball!!'</span>, <span class="hljs-string">'End now'</span>, {
       duration: <span class="hljs-number">500</span>,
       horizontalPosition: <span class="hljs-keyword">this</span>.horizontalPosition,
       verticalPosition: <span class="hljs-keyword">this</span>.verticalPosition,

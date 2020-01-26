@@ -280,12 +280,12 @@
                 }]
         }], null, null); })();
 
-    function TabGroupDynamicExample_mat_tab_12_Template(rf, ctx) { if (rf & 1) {
+    function TabGroupDynamicExample_mat_tab_11_Template(rf, ctx) { if (rf & 1) {
         var _r13 = i0.ɵɵgetCurrentView();
-        i0.ɵɵelementStart(0, "mat-tab", 6);
+        i0.ɵɵelementStart(0, "mat-tab", 5);
         i0.ɵɵtext(1);
-        i0.ɵɵelementStart(2, "button", 7);
-        i0.ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_12_Template_button_click_2_listener($event) { i0.ɵɵrestoreView(_r13); var index_r11 = ctx.index; var ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.removeTab(index_r11); });
+        i0.ɵɵelementStart(2, "button", 6);
+        i0.ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_11_Template_button_click_2_listener($event) { i0.ɵɵrestoreView(_r13); var index_r11 = ctx.index; var ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.removeTab(index_r11); });
         i0.ɵɵtext(3, " Delete Tab ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -316,37 +316,35 @@
             this.tabs.splice(index, 1);
         };
         TabGroupDynamicExample.ɵfac = function TabGroupDynamicExample_Factory(t) { return new (t || TabGroupDynamicExample)(); };
-        TabGroupDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 13, vars: 3, consts: [[1, "example-input-label"], ["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], ["selectAfterAdding", ""], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
+        TabGroupDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 12, vars: 3, consts: [["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], ["selectAfterAdding", ""], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
                 var _r14 = i0.ɵɵgetCurrentView();
-                i0.ɵɵelementStart(0, "div");
-                i0.ɵɵelementStart(1, "span", 0);
-                i0.ɵɵtext(2, " Selected tab index: ");
+                i0.ɵɵelementStart(0, "mat-form-field");
+                i0.ɵɵelementStart(1, "mat-label");
+                i0.ɵɵtext(2, "Selected tab index");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-form-field");
-                i0.ɵɵelement(4, "input", 1);
+                i0.ɵɵelement(3, "input", 0);
                 i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(4, "div");
+                i0.ɵɵelementStart(5, "button", 1);
+                i0.ɵɵlistener("click", function TabGroupDynamicExample_Template_button_click_5_listener($event) { i0.ɵɵrestoreView(_r14); var _r8 = i0.ɵɵreference(8); return ctx.addTab(_r8.checked); });
+                i0.ɵɵtext(6, " Add new tab ");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "div");
-                i0.ɵɵelementStart(6, "button", 2);
-                i0.ɵɵlistener("click", function TabGroupDynamicExample_Template_button_click_6_listener($event) { i0.ɵɵrestoreView(_r14); var _r8 = i0.ɵɵreference(9); return ctx.addTab(_r8.checked); });
-                i0.ɵɵtext(7, " Add new tab ");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "mat-checkbox", null, 3);
-                i0.ɵɵtext(10, " Select tab after adding ");
+                i0.ɵɵelementStart(7, "mat-checkbox", null, 2);
+                i0.ɵɵtext(9, " Select tab after adding ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(11, "mat-tab-group", 4);
-                i0.ɵɵlistener("selectedIndexChange", function TabGroupDynamicExample_Template_mat_tab_group_selectedIndexChange_11_listener($event) { return ctx.selected.setValue($event); });
-                i0.ɵɵtemplate(12, TabGroupDynamicExample_mat_tab_12_Template, 4, 3, "mat-tab", 5);
+                i0.ɵɵelementStart(10, "mat-tab-group", 3);
+                i0.ɵɵlistener("selectedIndexChange", function TabGroupDynamicExample_Template_mat_tab_group_selectedIndexChange_10_listener($event) { return ctx.selected.setValue($event); });
+                i0.ɵɵtemplate(11, TabGroupDynamicExample_mat_tab_11_Template, 4, 3, "mat-tab", 4);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                i0.ɵɵadvance(4);
+                i0.ɵɵadvance(3);
                 i0.ɵɵproperty("formControl", ctx.selected);
                 i0.ɵɵadvance(7);
                 i0.ɵɵproperty("selectedIndex", ctx.selected.value);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngForOf", ctx.tabs);
-            } }, directives: [i1$3.MatFormField, i2$1.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i4.MatButton, i5.MatCheckbox, i1$2.MatTabGroup, i1.NgForOf, i1$2.MatTab], styles: [".example-input-label[_ngcontent-%COMP%], .example-add-tab-button[_ngcontent-%COMP%], .example-delete-tab-button[_ngcontent-%COMP%] {\n  margin: 8px;\n}"] });
+            } }, directives: [i1$3.MatFormField, i1$3.MatLabel, i2$1.MatInput, i3.NumberValueAccessor, i3.DefaultValueAccessor, i3.NgControlStatus, i3.FormControlDirective, i4.MatButton, i5.MatCheckbox, i1$2.MatTabGroup, i1.NgForOf, i1$2.MatTab], styles: [".example-input-label[_ngcontent-%COMP%], .example-add-tab-button[_ngcontent-%COMP%], .example-delete-tab-button[_ngcontent-%COMP%] {\n  margin: 8px;\n}"] });
         return TabGroupDynamicExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TabGroupDynamicExample, [{

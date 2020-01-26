@@ -4,7 +4,7 @@ import { DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@an
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogTitle, MatDialogContent, MatDialogActions, MatDialogClose, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 import { MatInput, MatInputModule } from '@angular/material/input';
-import { MatFormField } from '@angular/material/form-field';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
 
 /**
  * @title Dialog with header, scrollable content and actions
@@ -272,7 +272,7 @@ var DialogElementsExampleDialog = /** @class */ (function () {
             }]
     }], null, null); })();
 
-function DialogOverviewExample_li_7_Template(rf, ctx) { if (rf & 1) {
+function DialogOverviewExample_li_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "li");
     ɵɵtext(1, " You chose: ");
     ɵɵelementStart(2, "i");
@@ -303,29 +303,32 @@ var DialogOverviewExample = /** @class */ (function () {
         });
     };
     DialogOverviewExample.ɵfac = function DialogOverviewExample_Factory(t) { return new (t || DialogOverviewExample)(ɵɵdirectiveInject(MatDialog)); };
-    DialogOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewExample, selectors: [["dialog-overview-example"]], decls: 8, vars: 2, consts: [["matInput", "", "placeholder", "What's your name?", 3, "ngModel", "ngModelChange"], ["mat-raised-button", "", 3, "click"], [4, "ngIf"]], template: function DialogOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    DialogOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewExample, selectors: [["dialog-overview-example"]], decls: 10, vars: 2, consts: [["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-raised-button", "", 3, "click"], [4, "ngIf"]], template: function DialogOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "ol");
             ɵɵelementStart(1, "li");
             ɵɵelementStart(2, "mat-form-field");
-            ɵɵelementStart(3, "input", 0);
-            ɵɵlistener("ngModelChange", function DialogOverviewExample_Template_input_ngModelChange_3_listener($event) { return ctx.name = $event; });
+            ɵɵelementStart(3, "mat-label");
+            ɵɵtext(4, "What's your name?");
+            ɵɵelementEnd();
+            ɵɵelementStart(5, "input", 0);
+            ɵɵlistener("ngModelChange", function DialogOverviewExample_Template_input_ngModelChange_5_listener($event) { return ctx.name = $event; });
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(4, "li");
-            ɵɵelementStart(5, "button", 1);
-            ɵɵlistener("click", function DialogOverviewExample_Template_button_click_5_listener($event) { return ctx.openDialog(); });
-            ɵɵtext(6, "Pick one");
+            ɵɵelementStart(6, "li");
+            ɵɵelementStart(7, "button", 1);
+            ɵɵlistener("click", function DialogOverviewExample_Template_button_click_7_listener($event) { return ctx.openDialog(); });
+            ɵɵtext(8, "Pick one");
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵtemplate(7, DialogOverviewExample_li_7_Template, 4, 1, "li", 2);
+            ɵɵtemplate(9, DialogOverviewExample_li_9_Template, 4, 1, "li", 2);
             ɵɵelementEnd();
         } if (rf & 2) {
-            ɵɵadvance(3);
+            ɵɵadvance(5);
             ɵɵproperty("ngModel", ctx.name);
             ɵɵadvance(4);
             ɵɵproperty("ngIf", ctx.animal);
-        } }, directives: [MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatButton, NgIf], styles: [""] });
+        } }, directives: [MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatButton, NgIf], styles: [""] });
     return DialogOverviewExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DialogOverviewExample, [{
@@ -345,7 +348,7 @@ var DialogOverviewExampleDialog = /** @class */ (function () {
         this.dialogRef.close();
     };
     DialogOverviewExampleDialog.ɵfac = function DialogOverviewExampleDialog_Factory(t) { return new (t || DialogOverviewExampleDialog)(ɵɵdirectiveInject(MatDialogRef), ɵɵdirectiveInject(MAT_DIALOG_DATA)); };
-    DialogOverviewExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewExampleDialog, selectors: [["dialog-overview-example-dialog"]], decls: 12, vars: 3, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], ["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-dialog-actions", ""], ["mat-button", "", 3, "click"], ["mat-button", "", "cdkFocusInitial", "", 3, "mat-dialog-close"]], template: function DialogOverviewExampleDialog_Template(rf, ctx) { if (rf & 1) {
+    DialogOverviewExampleDialog.ɵcmp = ɵɵdefineComponent({ type: DialogOverviewExampleDialog, selectors: [["dialog-overview-example-dialog"]], decls: 14, vars: 3, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], ["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-dialog-actions", ""], ["mat-button", "", 3, "click"], ["mat-button", "", "cdkFocusInitial", "", 3, "mat-dialog-close"]], template: function DialogOverviewExampleDialog_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h1", 0);
             ɵɵtext(1);
             ɵɵelementEnd();
@@ -354,28 +357,31 @@ var DialogOverviewExampleDialog = /** @class */ (function () {
             ɵɵtext(4, "What's your favorite animal?");
             ɵɵelementEnd();
             ɵɵelementStart(5, "mat-form-field");
-            ɵɵelementStart(6, "input", 2);
-            ɵɵlistener("ngModelChange", function DialogOverviewExampleDialog_Template_input_ngModelChange_6_listener($event) { return ctx.data.animal = $event; });
+            ɵɵelementStart(6, "mat-label");
+            ɵɵtext(7, "Favorite Animal");
+            ɵɵelementEnd();
+            ɵɵelementStart(8, "input", 2);
+            ɵɵlistener("ngModelChange", function DialogOverviewExampleDialog_Template_input_ngModelChange_8_listener($event) { return ctx.data.animal = $event; });
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(7, "div", 3);
-            ɵɵelementStart(8, "button", 4);
-            ɵɵlistener("click", function DialogOverviewExampleDialog_Template_button_click_8_listener($event) { return ctx.onNoClick(); });
-            ɵɵtext(9, "No Thanks");
+            ɵɵelementStart(9, "div", 3);
+            ɵɵelementStart(10, "button", 4);
+            ɵɵlistener("click", function DialogOverviewExampleDialog_Template_button_click_10_listener($event) { return ctx.onNoClick(); });
+            ɵɵtext(11, "No Thanks");
             ɵɵelementEnd();
-            ɵɵelementStart(10, "button", 5);
-            ɵɵtext(11, "Ok");
+            ɵɵelementStart(12, "button", 5);
+            ɵɵtext(13, "Ok");
             ɵɵelementEnd();
             ɵɵelementEnd();
         } if (rf & 2) {
             ɵɵadvance(1);
             ɵɵtextInterpolate1("Hi ", ctx.data.name, "");
-            ɵɵadvance(5);
+            ɵɵadvance(7);
             ɵɵproperty("ngModel", ctx.data.animal);
             ɵɵadvance(4);
             ɵɵproperty("mat-dialog-close", ctx.data.animal);
-        } }, directives: [MatDialogTitle, MatDialogContent, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatDialogActions, MatButton, MatDialogClose], encapsulation: 2 });
+        } }, directives: [MatDialogTitle, MatDialogContent, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, MatDialogActions, MatButton, MatDialogClose], encapsulation: 2 });
     return DialogOverviewExampleDialog;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DialogOverviewExampleDialog, [{

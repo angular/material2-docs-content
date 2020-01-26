@@ -6,7 +6,7 @@ import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatTooltip, MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipModule } from '@angular/material/tooltip';
-import { MatFormField } from '@angular/material/form-field';
+import { MatFormField, MatLabel, MatHint } from '@angular/material/form-field';
 import { MatOption } from '@angular/material/core';
 
 /**
@@ -14,7 +14,7 @@ import { MatOption } from '@angular/material/core';
  * Generated from: src/components-examples/material/tooltip/tooltip-auto-hide/tooltip-auto-hide-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-function TooltipAutoHideExample_mat_option_2_Template(rf, ctx) { if (rf & 1) {
+function TooltipAutoHideExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 5);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -41,25 +41,28 @@ TooltipAutoHideExample.decorators = [
             },] },
 ];
 /** @nocollapse */ TooltipAutoHideExample.ɵfac = function TooltipAutoHideExample_Factory(t) { return new (t || TooltipAutoHideExample)(); };
-/** @nocollapse */ TooltipAutoHideExample.ɵcmp = ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 7, vars: 3, consts: [["placeholder", "Tooltip position", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdk-scrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], ["tooltip", "matTooltip"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TooltipAutoHideExample.ɵcmp = ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 9, vars: 3, consts: [[3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdk-scrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], ["tooltip", "matTooltip"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
-        ɵɵelementStart(1, "mat-select", 0);
-        ɵɵtemplate(2, TooltipAutoHideExample_mat_option_2_Template, 2, 2, "mat-option", 1);
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Tooltip position");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "mat-select", 0);
+        ɵɵtemplate(4, TooltipAutoHideExample_mat_option_4_Template, 2, 2, "mat-option", 1);
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelementStart(3, "div", 2);
-        ɵɵelementStart(4, "button", 3, 4);
-        ɵɵtext(6, " Action ");
+        ɵɵelementStart(5, "div", 2);
+        ɵɵelementStart(6, "button", 3, 4);
+        ɵɵtext(8, " Action ");
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(1);
+        ɵɵadvance(3);
         ɵɵproperty("formControl", ctx.position);
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.positionOptions);
         ɵɵadvance(2);
         ɵɵproperty("matTooltipPosition", ctx.position.value);
-    } }, directives: [MatFormField, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatButton, MatTooltip, MatOption], styles: [".example-button[_ngcontent-%COMP%] {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container[_ngcontent-%COMP%] {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatButton, MatTooltip, MatOption], styles: [".example-button[_ngcontent-%COMP%] {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container[_ngcontent-%COMP%] {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipAutoHideExample, [{
         type: Component,
         args: [{
@@ -135,24 +138,36 @@ TooltipDelayExample.decorators = [
             },] },
 ];
 /** @nocollapse */ TooltipDelayExample.ɵfac = function TooltipDelayExample_Factory(t) { return new (t || TooltipDelayExample)(); };
-/** @nocollapse */ TooltipDelayExample.ɵcmp = ɵɵdefineComponent({ type: TooltipDelayExample, selectors: [["tooltip-delay-example"]], decls: 6, vars: 4, consts: [[1, "example-user-input"], ["matInput", "", "placeholder", "Show delay (milliseconds)", "type", "number", "aria-label", "Adds a delay between hovering over the button and displaying the tooltip", 3, "formControl"], ["matInput", "", "placeholder", "Hide delay (milliseconds)", "type", "number", "aria-label", "Adds a delay between hovering away from the button and hiding the tooltip", 3, "formControl"], ["mat-raised-button", "", "matTooltip", "Info about the action", "aria-label", "Button that displays a tooltip with a customized delay in showing and hiding", 3, "matTooltipShowDelay", "matTooltipHideDelay"]], template: function TooltipDelayExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TooltipDelayExample.ɵcmp = ɵɵdefineComponent({ type: TooltipDelayExample, selectors: [["tooltip-delay-example"]], decls: 14, vars: 4, consts: [[1, "example-user-input"], ["matInput", "", "type", "number", "aria-label", "Adds a delay between hovering over the button and displaying the tooltip", 3, "formControl"], ["matInput", "", "type", "number", "aria-label", "Adds a delay between hovering away from the button and hiding the tooltip", 3, "formControl"], ["mat-raised-button", "", "matTooltip", "Info about the action", "aria-label", "Button that displays a tooltip with a customized delay in showing and hiding", 3, "matTooltipShowDelay", "matTooltipHideDelay"]], template: function TooltipDelayExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field", 0);
-        ɵɵelement(1, "input", 1);
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Show delay");
         ɵɵelementEnd();
-        ɵɵelementStart(2, "mat-form-field", 0);
-        ɵɵelement(3, "input", 2);
+        ɵɵelement(3, "input", 1);
+        ɵɵelementStart(4, "mat-hint");
+        ɵɵtext(5, "milliseconds");
         ɵɵelementEnd();
-        ɵɵelementStart(4, "button", 3);
-        ɵɵtext(5, " Action\n");
+        ɵɵelementEnd();
+        ɵɵelementStart(6, "mat-form-field", 0);
+        ɵɵelementStart(7, "mat-label");
+        ɵɵtext(8, "Hide delay");
+        ɵɵelementEnd();
+        ɵɵelement(9, "input", 2);
+        ɵɵelementStart(10, "mat-hint");
+        ɵɵtext(11, "milliseconds");
+        ɵɵelementEnd();
+        ɵɵelementEnd();
+        ɵɵelementStart(12, "button", 3);
+        ɵɵtext(13, " Action\n");
         ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(1);
+        ɵɵadvance(3);
         ɵɵproperty("formControl", ctx.showDelay);
-        ɵɵadvance(2);
+        ɵɵadvance(6);
         ɵɵproperty("formControl", ctx.hideDelay);
-        ɵɵadvance(1);
+        ɵɵadvance(3);
         ɵɵproperty("matTooltipShowDelay", ctx.showDelay.value)("matTooltipHideDelay", ctx.hideDelay.value);
-    } }, directives: [MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatButton, MatTooltip], styles: [".example-user-input[_ngcontent-%COMP%] {\n  display: block;\n  width: 150px;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatInput, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatHint, MatButton, MatTooltip], styles: [".mat-form-field[_ngcontent-%COMP%]    + .mat-form-field[_ngcontent-%COMP%], .mat-raised-button[_ngcontent-%COMP%] {\n  margin-left: 8px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipDelayExample, [{
         type: Component,
         args: [{
@@ -285,19 +300,22 @@ TooltipMessageExample.decorators = [
             },] },
 ];
 /** @nocollapse */ TooltipMessageExample.ɵfac = function TooltipMessageExample_Factory(t) { return new (t || TooltipMessageExample)(); };
-/** @nocollapse */ TooltipMessageExample.ɵcmp = ɵɵdefineComponent({ type: TooltipMessageExample, selectors: [["tooltip-message-example"]], decls: 4, vars: 2, consts: [[1, "example-user-input"], ["matInput", "", "placeholder", "Tooltip message", 3, "formControl"], ["mat-raised-button", "", "aria-label", "Button that displays a tooltip with a custom message", 3, "matTooltip"]], template: function TooltipMessageExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TooltipMessageExample.ɵcmp = ɵɵdefineComponent({ type: TooltipMessageExample, selectors: [["tooltip-message-example"]], decls: 6, vars: 2, consts: [[1, "example-user-input"], ["matInput", "", 3, "formControl"], ["mat-raised-button", "", "aria-label", "Button that displays a tooltip with a custom message", 3, "matTooltip"]], template: function TooltipMessageExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field", 0);
-        ɵɵelement(1, "input", 1);
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Tooltip message");
         ɵɵelementEnd();
-        ɵɵelementStart(2, "button", 2);
-        ɵɵtext(3, " Action\n");
+        ɵɵelement(3, "input", 1);
+        ɵɵelementEnd();
+        ɵɵelementStart(4, "button", 2);
+        ɵɵtext(5, " Action\n");
         ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(1);
+        ɵɵadvance(3);
         ɵɵproperty("formControl", ctx.message);
         ɵɵadvance(1);
         ɵɵproperty("matTooltip", ctx.message.value);
-    } }, directives: [MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatButton, MatTooltip], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatButton, MatTooltip], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipMessageExample, [{
         type: Component,
         args: [{
@@ -397,7 +415,7 @@ TooltipOverviewExample.decorators = [
  * Generated from: src/components-examples/material/tooltip/tooltip-position/tooltip-position-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-function TooltipPositionExample_mat_option_2_Template(rf, ctx) { if (rf & 1) {
+function TooltipPositionExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 4);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -424,23 +442,26 @@ TooltipPositionExample.decorators = [
             },] },
 ];
 /** @nocollapse */ TooltipPositionExample.ɵfac = function TooltipPositionExample_Factory(t) { return new (t || TooltipPositionExample)(); };
-/** @nocollapse */ TooltipPositionExample.ɵcmp = ɵɵdefineComponent({ type: TooltipPositionExample, selectors: [["tooltip-position-example"]], decls: 5, vars: 3, consts: [[1, "example-user-input"], ["placeholder", "Tooltip position", 3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["mat-raised-button", "", "matTooltip", "Info about the action", "aria-label", "Button that displays a tooltip in various positions", 3, "matTooltipPosition"], [3, "value"]], template: function TooltipPositionExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TooltipPositionExample.ɵcmp = ɵɵdefineComponent({ type: TooltipPositionExample, selectors: [["tooltip-position-example"]], decls: 7, vars: 3, consts: [[1, "example-user-input"], [3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["mat-raised-button", "", "matTooltip", "Info about the action", "aria-label", "Button that displays a tooltip in various positions", 3, "matTooltipPosition"], [3, "value"]], template: function TooltipPositionExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field", 0);
-        ɵɵelementStart(1, "mat-select", 1);
-        ɵɵtemplate(2, TooltipPositionExample_mat_option_2_Template, 2, 2, "mat-option", 2);
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Tooltip position");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "mat-select", 1);
+        ɵɵtemplate(4, TooltipPositionExample_mat_option_4_Template, 2, 2, "mat-option", 2);
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelementStart(3, "button", 3);
-        ɵɵtext(4, " Action\n");
+        ɵɵelementStart(5, "button", 3);
+        ɵɵtext(6, " Action\n");
         ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(1);
+        ɵɵadvance(3);
         ɵɵproperty("formControl", ctx.position);
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.positionOptions);
         ɵɵadvance(1);
         ɵɵproperty("matTooltipPosition", ctx.position.value);
-    } }, directives: [MatFormField, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatButton, MatTooltip, MatOption], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatButton, MatTooltip, MatOption], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipPositionExample, [{
         type: Component,
         args: [{

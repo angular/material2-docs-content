@@ -18,7 +18,7 @@
             });
         };
         SnackBarComponentExample.ɵfac = function SnackBarComponentExample_Factory(t) { return new (t || SnackBarComponentExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-        SnackBarComponentExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarComponentExample, selectors: [["snack-bar-component-example"]], decls: 6, vars: 1, consts: [["type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], ["mat-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarComponentExample_Template(rf, ctx) { if (rf & 1) {
+        SnackBarComponentExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarComponentExample, selectors: [["snack-bar-component-example"]], decls: 6, vars: 1, consts: [["type", "number", "matInput", "", 3, "ngModel", "ngModelChange"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarComponentExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Snack bar duration (seconds)");
@@ -34,7 +34,7 @@
             } if (rf & 2) {
                 i0.ɵɵadvance(3);
                 i0.ɵɵproperty("ngModel", ctx.durationInSeconds);
-            } }, directives: [i2.MatFormField, i2.MatLabel, i3.NumberValueAccessor, i4.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i5.MatButton], styles: [""] });
+            } }, directives: [i2.MatFormField, i2.MatLabel, i3.NumberValueAccessor, i4.MatInput, i3.DefaultValueAccessor, i3.NgControlStatus, i3.NgModel, i5.MatButton], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
         return SnackBarComponentExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SnackBarComponentExample, [{
@@ -78,19 +78,25 @@
             });
         };
         SnackBarOverviewExample.ɵfac = function SnackBarOverviewExample_Factory(t) { return new (t || SnackBarOverviewExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-        SnackBarOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 8, vars: 0, consts: [["matInput", "", "value", "Disco party!", "placeholder", "Message"], ["message", ""], ["matInput", "", "value", "Dance", "placeholder", "Action"], ["action", ""], ["mat-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) { if (rf & 1) {
+        SnackBarOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarOverviewExample, selectors: [["snack-bar-overview-example"]], decls: 12, vars: 0, consts: [["matInput", "", "value", "Disco party!"], ["message", ""], ["matInput", "", "value", "Dance"], ["action", ""], ["mat-stroked-button", "", 3, "click"]], template: function SnackBarOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 var _r2 = i0.ɵɵgetCurrentView();
                 i0.ɵɵelementStart(0, "mat-form-field");
-                i0.ɵɵelement(1, "input", 0, 1);
+                i0.ɵɵelementStart(1, "mat-label");
+                i0.ɵɵtext(2, "Message");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "mat-form-field");
-                i0.ɵɵelement(4, "input", 2, 3);
+                i0.ɵɵelement(3, "input", 0, 1);
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "button", 4);
-                i0.ɵɵlistener("click", function SnackBarOverviewExample_Template_button_click_6_listener($event) { i0.ɵɵrestoreView(_r2); var _r0 = i0.ɵɵreference(2); var _r1 = i0.ɵɵreference(5); return ctx.openSnackBar(_r0.value, _r1.value); });
-                i0.ɵɵtext(7, "Show snack-bar");
+                i0.ɵɵelementStart(5, "mat-form-field");
+                i0.ɵɵelementStart(6, "mat-label");
+                i0.ɵɵtext(7, "Action");
                 i0.ɵɵelementEnd();
-            } }, directives: [i2.MatFormField, i4.MatInput, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+                i0.ɵɵelement(8, "input", 2, 3);
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(10, "button", 4);
+                i0.ɵɵlistener("click", function SnackBarOverviewExample_Template_button_click_10_listener($event) { i0.ɵɵrestoreView(_r2); var _r0 = i0.ɵɵreference(4); var _r1 = i0.ɵɵreference(9); return ctx.openSnackBar(_r0.value, _r1.value); });
+                i0.ɵɵtext(11, "Show snack-bar");
+                i0.ɵɵelementEnd();
+            } }, directives: [i2.MatFormField, i2.MatLabel, i4.MatInput, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
         return SnackBarOverviewExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SnackBarOverviewExample, [{
@@ -112,55 +118,61 @@
             this.verticalPosition = 'bottom';
         }
         SnackBarPositionExample.prototype.openSnackBar = function () {
-            this._snackBar.open('Canonball!!', 'End now', {
+            this._snackBar.open('Cannonball!!', 'End now', {
                 duration: 500,
                 horizontalPosition: this.horizontalPosition,
                 verticalPosition: this.verticalPosition,
             });
         };
         SnackBarPositionExample.ɵfac = function SnackBarPositionExample_Factory(t) { return new (t || SnackBarPositionExample)(i0.ɵɵdirectiveInject(i1.MatSnackBar)); };
-        SnackBarPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarPositionExample, selectors: [["snack-bar-position-example"]], decls: 20, vars: 2, consts: [["placeholder", "Horizontal position", 3, "value", "valueChange"], ["value", "start"], ["value", "center"], ["value", "end"], ["value", "left"], ["value", "right"], ["placeholder", "Vertical position", 3, "value", "valueChange"], ["value", "top"], ["value", "bottom"], ["mat-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarPositionExample_Template(rf, ctx) { if (rf & 1) {
+        SnackBarPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: SnackBarPositionExample, selectors: [["snack-bar-position-example"]], decls: 24, vars: 2, consts: [[3, "value", "valueChange"], ["value", "start"], ["value", "center"], ["value", "end"], ["value", "left"], ["value", "right"], ["value", "top"], ["value", "bottom"], ["mat-stroked-button", "", "aria-label", "Show an example snack-bar", 3, "click"]], template: function SnackBarPositionExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
-                i0.ɵɵelementStart(1, "mat-select", 0);
-                i0.ɵɵlistener("valueChange", function SnackBarPositionExample_Template_mat_select_valueChange_1_listener($event) { return ctx.horizontalPosition = $event; });
-                i0.ɵɵelementStart(2, "mat-option", 1);
-                i0.ɵɵtext(3, "Start");
+                i0.ɵɵelementStart(1, "mat-label");
+                i0.ɵɵtext(2, "Horizontal position");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(4, "mat-option", 2);
-                i0.ɵɵtext(5, "Center");
+                i0.ɵɵelementStart(3, "mat-select", 0);
+                i0.ɵɵlistener("valueChange", function SnackBarPositionExample_Template_mat_select_valueChange_3_listener($event) { return ctx.horizontalPosition = $event; });
+                i0.ɵɵelementStart(4, "mat-option", 1);
+                i0.ɵɵtext(5, "Start");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(6, "mat-option", 3);
-                i0.ɵɵtext(7, "End");
+                i0.ɵɵelementStart(6, "mat-option", 2);
+                i0.ɵɵtext(7, "Center");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "mat-option", 4);
-                i0.ɵɵtext(9, "Left");
+                i0.ɵɵelementStart(8, "mat-option", 3);
+                i0.ɵɵtext(9, "End");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(10, "mat-option", 5);
-                i0.ɵɵtext(11, "Right");
+                i0.ɵɵelementStart(10, "mat-option", 4);
+                i0.ɵɵtext(11, "Left");
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(12, "mat-form-field");
-                i0.ɵɵelementStart(13, "mat-select", 6);
-                i0.ɵɵlistener("valueChange", function SnackBarPositionExample_Template_mat_select_valueChange_13_listener($event) { return ctx.verticalPosition = $event; });
-                i0.ɵɵelementStart(14, "mat-option", 7);
-                i0.ɵɵtext(15, "Top");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(16, "mat-option", 8);
-                i0.ɵɵtext(17, "Bottom");
+                i0.ɵɵelementStart(12, "mat-option", 5);
+                i0.ɵɵtext(13, "Right");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(18, "button", 9);
-                i0.ɵɵlistener("click", function SnackBarPositionExample_Template_button_click_18_listener($event) { return ctx.openSnackBar(); });
-                i0.ɵɵtext(19, " Pool party!\n");
+                i0.ɵɵelementStart(14, "mat-form-field");
+                i0.ɵɵelementStart(15, "mat-label");
+                i0.ɵɵtext(16, "Vertical position");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(17, "mat-select", 0);
+                i0.ɵɵlistener("valueChange", function SnackBarPositionExample_Template_mat_select_valueChange_17_listener($event) { return ctx.verticalPosition = $event; });
+                i0.ɵɵelementStart(18, "mat-option", 6);
+                i0.ɵɵtext(19, "Top");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(20, "mat-option", 7);
+                i0.ɵɵtext(21, "Bottom");
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementEnd();
+                i0.ɵɵelementStart(22, "button", 8);
+                i0.ɵɵlistener("click", function SnackBarPositionExample_Template_button_click_22_listener($event) { return ctx.openSnackBar(); });
+                i0.ɵɵtext(23, " Pool party!\n");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
-                i0.ɵɵadvance(1);
+                i0.ɵɵadvance(3);
                 i0.ɵɵproperty("value", ctx.horizontalPosition);
-                i0.ɵɵadvance(12);
+                i0.ɵɵadvance(14);
                 i0.ɵɵproperty("value", ctx.verticalPosition);
-            } }, directives: [i2.MatFormField, i3$1.MatSelect, i4$1.MatOption, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
+            } }, directives: [i2.MatFormField, i2.MatLabel, i3$1.MatSelect, i4$1.MatOption, i5.MatButton], styles: [".mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
         return SnackBarPositionExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SnackBarPositionExample, [{

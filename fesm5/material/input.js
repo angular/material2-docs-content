@@ -4,12 +4,12 @@ import { DefaultValueAccessor, NgControlStatus, NgModel, FormControl, Validators
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatInput, MatInputModule } from '@angular/material/input';
-import { MatFormField, MatSuffix, MatHint, MatError, MatPrefix } from '@angular/material/form-field';
+import { MatFormField, MatLabel, MatSuffix, MatHint, MatError, MatPrefix } from '@angular/material/form-field';
 
-function InputClearableExample_button_2_Template(rf, ctx) { if (rf & 1) {
+function InputClearableExample_button_4_Template(rf, ctx) { if (rf & 1) {
     var _r2 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "button", 3);
-    ɵɵlistener("click", function InputClearableExample_button_2_Template_button_click_0_listener($event) { ɵɵrestoreView(_r2); var ctx_r1 = ɵɵnextContext(); return ctx_r1.value = ""; });
+    ɵɵlistener("click", function InputClearableExample_button_4_Template_button_click_0_listener($event) { ɵɵrestoreView(_r2); var ctx_r1 = ɵɵnextContext(); return ctx_r1.value = ""; });
     ɵɵelementStart(1, "mat-icon");
     ɵɵtext(2, "close");
     ɵɵelementEnd();
@@ -23,19 +23,22 @@ var InputClearableExample = /** @class */ (function () {
         this.value = 'Clear me';
     }
     InputClearableExample.ɵfac = function InputClearableExample_Factory(t) { return new (t || InputClearableExample)(); };
-    InputClearableExample.ɵcmp = ɵɵdefineComponent({ type: InputClearableExample, selectors: [["input-clearable-example"]], decls: 3, vars: 2, consts: [[1, "example-form-field"], ["matInput", "", "type", "text", "placeholder", "Clearable input", 3, "ngModel", "ngModelChange"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"]], template: function InputClearableExample_Template(rf, ctx) { if (rf & 1) {
+    InputClearableExample.ɵcmp = ɵɵdefineComponent({ type: InputClearableExample, selectors: [["input-clearable-example"]], decls: 5, vars: 2, consts: [[1, "example-form-field"], ["matInput", "", "type", "text", 3, "ngModel", "ngModelChange"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"]], template: function InputClearableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
-            ɵɵelementStart(1, "input", 1);
-            ɵɵlistener("ngModelChange", function InputClearableExample_Template_input_ngModelChange_1_listener($event) { return ctx.value = $event; });
+            ɵɵelementStart(1, "mat-label");
+            ɵɵtext(2, "Clearable input");
             ɵɵelementEnd();
-            ɵɵtemplate(2, InputClearableExample_button_2_Template, 3, 0, "button", 2);
+            ɵɵelementStart(3, "input", 1);
+            ɵɵlistener("ngModelChange", function InputClearableExample_Template_input_ngModelChange_3_listener($event) { return ctx.value = $event; });
+            ɵɵelementEnd();
+            ɵɵtemplate(4, InputClearableExample_button_4_Template, 3, 0, "button", 2);
             ɵɵelementEnd();
         } if (rf & 2) {
-            ɵɵadvance(1);
+            ɵɵadvance(3);
             ɵɵproperty("ngModel", ctx.value);
             ɵɵadvance(1);
             ɵɵproperty("ngIf", ctx.value);
-        } }, directives: [MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, NgIf, MatButton, MatSuffix, MatIcon], styles: [".example-form-field[_ngcontent-%COMP%] {\n  width: 200px;\n}"] });
+        } }, directives: [MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, NgModel, NgIf, MatButton, MatSuffix, MatIcon], styles: [".example-form-field[_ngcontent-%COMP%] {\n  width: 200px;\n}"] });
     return InputClearableExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(InputClearableExample, [{
@@ -47,12 +50,12 @@ var InputClearableExample = /** @class */ (function () {
             }]
     }], null, null); })();
 
-function InputErrorStateMatcherExample_mat_error_5_Template(rf, ctx) { if (rf & 1) {
+function InputErrorStateMatcherExample_mat_error_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-error");
     ɵɵtext(1, " Please enter a valid email address ");
     ɵɵelementEnd();
 } }
-function InputErrorStateMatcherExample_mat_error_6_Template(rf, ctx) { if (rf & 1) {
+function InputErrorStateMatcherExample_mat_error_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-error");
     ɵɵtext(1, " Email is ");
     ɵɵelementStart(2, "strong");
@@ -80,25 +83,28 @@ var InputErrorStateMatcherExample = /** @class */ (function () {
         this.matcher = new MyErrorStateMatcher();
     }
     InputErrorStateMatcherExample.ɵfac = function InputErrorStateMatcherExample_Factory(t) { return new (t || InputErrorStateMatcherExample)(); };
-    InputErrorStateMatcherExample.ɵcmp = ɵɵdefineComponent({ type: InputErrorStateMatcherExample, selectors: [["input-error-state-matcher-example"]], decls: 7, vars: 4, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Email", 3, "formControl", "errorStateMatcher"], [4, "ngIf"]], template: function InputErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
+    InputErrorStateMatcherExample.ɵcmp = ɵɵdefineComponent({ type: InputErrorStateMatcherExample, selectors: [["input-error-state-matcher-example"]], decls: 9, vars: 4, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Ex. pat@example.com", 3, "formControl", "errorStateMatcher"], [4, "ngIf"]], template: function InputErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
-            ɵɵelement(2, "input", 2);
-            ɵɵelementStart(3, "mat-hint");
-            ɵɵtext(4, "Errors appear instantly!");
+            ɵɵelementStart(2, "mat-label");
+            ɵɵtext(3, "Email");
             ɵɵelementEnd();
-            ɵɵtemplate(5, InputErrorStateMatcherExample_mat_error_5_Template, 2, 0, "mat-error", 3);
-            ɵɵtemplate(6, InputErrorStateMatcherExample_mat_error_6_Template, 4, 0, "mat-error", 3);
+            ɵɵelement(4, "input", 2);
+            ɵɵelementStart(5, "mat-hint");
+            ɵɵtext(6, "Errors appear instantly!");
+            ɵɵelementEnd();
+            ɵɵtemplate(7, InputErrorStateMatcherExample_mat_error_7_Template, 2, 0, "mat-error", 3);
+            ɵɵtemplate(8, InputErrorStateMatcherExample_mat_error_8_Template, 4, 0, "mat-error", 3);
             ɵɵelementEnd();
             ɵɵelementEnd();
         } if (rf & 2) {
-            ɵɵadvance(2);
+            ɵɵadvance(4);
             ɵɵproperty("formControl", ctx.emailFormControl)("errorStateMatcher", ctx.matcher);
             ɵɵadvance(3);
             ɵɵproperty("ngIf", ctx.emailFormControl.hasError("email") && !ctx.emailFormControl.hasError("required"));
             ɵɵadvance(1);
             ɵɵproperty("ngIf", ctx.emailFormControl.hasError("required"));
-        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatHint, NgIf, MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatHint, NgIf, MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     return InputErrorStateMatcherExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(InputErrorStateMatcherExample, [{
@@ -110,12 +116,12 @@ var InputErrorStateMatcherExample = /** @class */ (function () {
             }]
     }], null, null); })();
 
-function InputErrorsExample_mat_error_3_Template(rf, ctx) { if (rf & 1) {
+function InputErrorsExample_mat_error_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-error");
     ɵɵtext(1, " Please enter a valid email address ");
     ɵɵelementEnd();
 } }
-function InputErrorsExample_mat_error_4_Template(rf, ctx) { if (rf & 1) {
+function InputErrorsExample_mat_error_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-error");
     ɵɵtext(1, " Email is ");
     ɵɵelementStart(2, "strong");
@@ -134,22 +140,25 @@ var InputErrorsExample = /** @class */ (function () {
         ]);
     }
     InputErrorsExample.ɵfac = function InputErrorsExample_Factory(t) { return new (t || InputErrorsExample)(); };
-    InputErrorsExample.ɵcmp = ɵɵdefineComponent({ type: InputErrorsExample, selectors: [["input-errors-example"]], decls: 5, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Email", 3, "formControl"], [4, "ngIf"]], template: function InputErrorsExample_Template(rf, ctx) { if (rf & 1) {
+    InputErrorsExample.ɵcmp = ɵɵdefineComponent({ type: InputErrorsExample, selectors: [["input-errors-example"]], decls: 7, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Ex. pat@example.com", 3, "formControl"], [4, "ngIf"]], template: function InputErrorsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
-            ɵɵelement(2, "input", 2);
-            ɵɵtemplate(3, InputErrorsExample_mat_error_3_Template, 2, 0, "mat-error", 3);
-            ɵɵtemplate(4, InputErrorsExample_mat_error_4_Template, 4, 0, "mat-error", 3);
+            ɵɵelementStart(2, "mat-label");
+            ɵɵtext(3, "Email");
+            ɵɵelementEnd();
+            ɵɵelement(4, "input", 2);
+            ɵɵtemplate(5, InputErrorsExample_mat_error_5_Template, 2, 0, "mat-error", 3);
+            ɵɵtemplate(6, InputErrorsExample_mat_error_6_Template, 4, 0, "mat-error", 3);
             ɵɵelementEnd();
             ɵɵelementEnd();
         } if (rf & 2) {
-            ɵɵadvance(2);
+            ɵɵadvance(4);
             ɵɵproperty("formControl", ctx.emailFormControl);
             ɵɵadvance(1);
             ɵɵproperty("ngIf", ctx.emailFormControl.hasError("email") && !ctx.emailFormControl.hasError("required"));
             ɵɵadvance(1);
             ɵɵproperty("ngIf", ctx.emailFormControl.hasError("required"));
-        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, NgIf, MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, DefaultValueAccessor, NgControlStatus, FormControlDirective, NgIf, MatError], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     return InputErrorsExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(InputErrorsExample, [{
@@ -168,52 +177,76 @@ var InputFormExample = /** @class */ (function () {
     function InputFormExample() {
     }
     InputFormExample.ɵfac = function InputFormExample_Factory(t) { return new (t || InputFormExample)(); };
-    InputFormExample.ɵcmp = ɵɵdefineComponent({ type: InputFormExample, selectors: [["input-form-example"]], decls: 31, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Company (disabled)", "disabled", "", "value", "Google"], ["cellspacing", "0", 1, "example-full-width"], ["matInput", "", "placeholder", "First name"], ["matInput", "", "placeholder", "Long Last Name That Will Be Truncated"], ["matInput", "", "placeholder", "Address"], ["matInput", "", "placeholder", "Address 2"], ["matInput", "", "placeholder", "City"], ["matInput", "", "placeholder", "State"], ["matInput", "", "maxlength", "5", "placeholder", "Postal Code", "value", "94043"], ["postalCode", ""], ["align", "end"]], template: function InputFormExample_Template(rf, ctx) { if (rf & 1) {
+    InputFormExample.ɵcmp = ɵɵdefineComponent({ type: InputFormExample, selectors: [["input-form-example"]], decls: 47, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "disabled", "", "value", "Google"], ["cellspacing", "0", 1, "example-full-width"], ["matInput", ""], ["matInput", "", "placeholder", "Ex. 100 Main St"], ["matInput", "", "placeholder", "Ex. San Francisco"], ["matInput", "", "placeholder", "Ex. California"], ["matInput", "", "maxlength", "5", "placeholder", "Ex. 94105", "value", "94043"], ["postalCode", ""], ["align", "end"]], template: function InputFormExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
-            ɵɵelement(2, "input", 2);
+            ɵɵelementStart(2, "mat-label");
+            ɵɵtext(3, "Company (disabled)");
             ɵɵelementEnd();
-            ɵɵelementStart(3, "table", 3);
-            ɵɵelementStart(4, "tr");
-            ɵɵelementStart(5, "td");
-            ɵɵelementStart(6, "mat-form-field", 1);
-            ɵɵelement(7, "input", 4);
+            ɵɵelement(4, "input", 2);
             ɵɵelementEnd();
+            ɵɵelementStart(5, "table", 3);
+            ɵɵelementStart(6, "tr");
+            ɵɵelementStart(7, "td");
+            ɵɵelementStart(8, "mat-form-field", 1);
+            ɵɵelementStart(9, "mat-label");
+            ɵɵtext(10, "First name");
             ɵɵelementEnd();
-            ɵɵelementStart(8, "td");
-            ɵɵelementStart(9, "mat-form-field", 1);
-            ɵɵelement(10, "input", 5);
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(11, "p");
-            ɵɵelementStart(12, "mat-form-field", 1);
-            ɵɵelementStart(13, "textarea", 6);
-            ɵɵtext(14, "1600 Amphitheatre Pkwy");
+            ɵɵelement(11, "input", 4);
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(15, "mat-form-field", 1);
-            ɵɵelement(16, "textarea", 7);
+            ɵɵelementStart(12, "td");
+            ɵɵelementStart(13, "mat-form-field", 1);
+            ɵɵelementStart(14, "mat-label");
+            ɵɵtext(15, "Long Last Name That Will Be Truncated");
+            ɵɵelementEnd();
+            ɵɵelement(16, "input", 4);
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(17, "table", 3);
-            ɵɵelementStart(18, "tr");
-            ɵɵelementStart(19, "td");
-            ɵɵelementStart(20, "mat-form-field", 1);
-            ɵɵelement(21, "input", 8);
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(22, "td");
+            ɵɵelementStart(17, "p");
+            ɵɵelementStart(18, "mat-form-field", 1);
+            ɵɵelementStart(19, "mat-label");
+            ɵɵtext(20, "Address");
+            ɵɵelementEnd();
+            ɵɵelementStart(21, "textarea", 5);
+            ɵɵtext(22, "1600 Amphitheatre Pkwy");
+            ɵɵelementEnd();
+            ɵɵelementEnd();
             ɵɵelementStart(23, "mat-form-field", 1);
-            ɵɵelement(24, "input", 9);
+            ɵɵelementStart(24, "mat-label");
+            ɵɵtext(25, "Address 2");
+            ɵɵelementEnd();
+            ɵɵelement(26, "textarea", 4);
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(25, "td");
-            ɵɵelementStart(26, "mat-form-field", 1);
-            ɵɵelement(27, "input", 10, 11);
-            ɵɵelementStart(29, "mat-hint", 12);
-            ɵɵtext(30);
+            ɵɵelementStart(27, "table", 3);
+            ɵɵelementStart(28, "tr");
+            ɵɵelementStart(29, "td");
+            ɵɵelementStart(30, "mat-form-field", 1);
+            ɵɵelementStart(31, "mat-label");
+            ɵɵtext(32, "City");
+            ɵɵelementEnd();
+            ɵɵelement(33, "input", 6);
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+            ɵɵelementStart(34, "td");
+            ɵɵelementStart(35, "mat-form-field", 1);
+            ɵɵelementStart(36, "mat-label");
+            ɵɵtext(37, "State");
+            ɵɵelementEnd();
+            ɵɵelement(38, "input", 7);
+            ɵɵelementEnd();
+            ɵɵelementEnd();
+            ɵɵelementStart(39, "td");
+            ɵɵelementStart(40, "mat-form-field", 1);
+            ɵɵelementStart(41, "mat-label");
+            ɵɵtext(42, "Postal Code");
+            ɵɵelementEnd();
+            ɵɵelement(43, "input", 8, 9);
+            ɵɵelementStart(45, "mat-hint", 10);
+            ɵɵtext(46);
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -221,10 +254,10 @@ var InputFormExample = /** @class */ (function () {
             ɵɵelementEnd();
             ɵɵelementEnd();
         } if (rf & 2) {
-            var _r7 = ɵɵreference(28);
-            ɵɵadvance(30);
+            var _r7 = ɵɵreference(44);
+            ɵɵadvance(46);
             ɵɵtextInterpolate1("", _r7.value.length, " / 5");
-        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatInput, MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
+        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%] {\n  padding-right: 8px;\n}"] });
     return InputFormExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(InputFormExample, [{
@@ -243,25 +276,28 @@ var InputHintExample = /** @class */ (function () {
     function InputHintExample() {
     }
     InputHintExample.ɵfac = function InputHintExample_Factory(t) { return new (t || InputHintExample)(); };
-    InputHintExample.ɵcmp = ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 9, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Message"], ["message", ""], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
+    InputHintExample.ɵcmp = ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 11, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Ex. I need help with..."], ["message", ""], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
-            ɵɵelement(2, "input", 2, 3);
-            ɵɵelementStart(4, "mat-hint", 4);
-            ɵɵelementStart(5, "strong");
-            ɵɵtext(6, "Don't disclose personal info");
+            ɵɵelementStart(2, "mat-label");
+            ɵɵtext(3, "Message");
+            ɵɵelementEnd();
+            ɵɵelement(4, "input", 2, 3);
+            ɵɵelementStart(6, "mat-hint", 4);
+            ɵɵelementStart(7, "strong");
+            ɵɵtext(8, "Don't disclose personal info");
             ɵɵelementEnd();
             ɵɵelementEnd();
-            ɵɵelementStart(7, "mat-hint", 5);
-            ɵɵtext(8);
+            ɵɵelementStart(9, "mat-hint", 5);
+            ɵɵtext(10);
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
         } if (rf & 2) {
-            var _r8 = ɵɵreference(3);
-            ɵɵadvance(8);
+            var _r8 = ɵɵreference(5);
+            ɵɵadvance(10);
             ɵɵtextInterpolate1("", _r8.value.length, " / 256");
-        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatInput, MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput, MatHint], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     return InputHintExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(InputHintExample, [{
@@ -280,16 +316,22 @@ var InputOverviewExample = /** @class */ (function () {
     function InputOverviewExample() {
     }
     InputOverviewExample.ɵfac = function InputOverviewExample_Factory(t) { return new (t || InputOverviewExample)(); };
-    InputOverviewExample.ɵcmp = ɵɵdefineComponent({ type: InputOverviewExample, selectors: [["input-overview-example"]], decls: 5, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Favorite food", "value", "Sushi"], ["matInput", "", "placeholder", "Leave a comment"]], template: function InputOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    InputOverviewExample.ɵcmp = ɵɵdefineComponent({ type: InputOverviewExample, selectors: [["input-overview-example"]], decls: 9, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Ex. Pizza", "value", "Sushi"], ["matInput", "", "placeholder", "Ex. It makes me feel..."]], template: function InputOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
-            ɵɵelement(2, "input", 2);
+            ɵɵelementStart(2, "mat-label");
+            ɵɵtext(3, "Favorite food");
             ɵɵelementEnd();
-            ɵɵelementStart(3, "mat-form-field", 1);
-            ɵɵelement(4, "textarea", 3);
+            ɵɵelement(4, "input", 2);
+            ɵɵelementEnd();
+            ɵɵelementStart(5, "mat-form-field", 1);
+            ɵɵelementStart(6, "mat-label");
+            ɵɵtext(7, "Leave a comment");
+            ɵɵelementEnd();
+            ɵɵelement(8, "textarea", 3);
             ɵɵelementEnd();
             ɵɵelementEnd();
-        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatInput], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatInput], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     return InputOverviewExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(InputOverviewExample, [{
@@ -308,19 +350,22 @@ var InputPrefixSuffixExample = /** @class */ (function () {
     function InputPrefixSuffixExample() {
     }
     InputPrefixSuffixExample.ɵfac = function InputPrefixSuffixExample_Factory(t) { return new (t || InputPrefixSuffixExample)(); };
-    InputPrefixSuffixExample.ɵcmp = ɵɵdefineComponent({ type: InputPrefixSuffixExample, selectors: [["input-prefix-suffix-example"]], decls: 7, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matPrefix", ""], ["type", "tel", "matInput", "", "placeholder", "Telephone"], ["matSuffix", ""]], template: function InputPrefixSuffixExample_Template(rf, ctx) { if (rf & 1) {
+    InputPrefixSuffixExample.ɵcmp = ɵɵdefineComponent({ type: InputPrefixSuffixExample, selectors: [["input-prefix-suffix-example"]], decls: 9, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matPrefix", ""], ["type", "tel", "matInput", "", "placeholder", "555-555-1234"], ["matSuffix", ""]], template: function InputPrefixSuffixExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
             ɵɵelementStart(1, "mat-form-field", 1);
-            ɵɵelementStart(2, "span", 2);
-            ɵɵtext(3, "+1 \u00A0");
+            ɵɵelementStart(2, "mat-label");
+            ɵɵtext(3, "Telephone");
             ɵɵelementEnd();
-            ɵɵelement(4, "input", 3);
-            ɵɵelementStart(5, "mat-icon", 4);
-            ɵɵtext(6, "mode_edit");
+            ɵɵelementStart(4, "span", 2);
+            ɵɵtext(5, "+1 \u00A0");
+            ɵɵelementEnd();
+            ɵɵelement(6, "input", 3);
+            ɵɵelementStart(7, "mat-icon", 4);
+            ɵɵtext(8, "mode_edit");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementEnd();
-        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatPrefix, MatInput, MatIcon, MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        } }, directives: [ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, MatFormField, MatLabel, MatPrefix, MatInput, MatIcon, MatSuffix], styles: [".example-form[_ngcontent-%COMP%] {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
     return InputPrefixSuffixExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(InputPrefixSuffixExample, [{

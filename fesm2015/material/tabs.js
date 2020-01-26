@@ -8,7 +8,7 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatTabGroup, MatTab, MatTabLabel, MatTabContent, MatTabNav, MatTabLink, MatTabsModule } from '@angular/material/tabs';
 import { Observable } from 'rxjs';
-import { MatFormField } from '@angular/material/form-field';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
 
 /**
  * @fileoverview added by tsickle
@@ -370,12 +370,12 @@ TabGroupDynamicHeightExample.decorators = [
  * Generated from: src/components-examples/material/tabs/tab-group-dynamic/tab-group-dynamic-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-function TabGroupDynamicExample_mat_tab_12_Template(rf, ctx) { if (rf & 1) {
+function TabGroupDynamicExample_mat_tab_11_Template(rf, ctx) { if (rf & 1) {
     const _r13 = ɵɵgetCurrentView();
-    ɵɵelementStart(0, "mat-tab", 6);
+    ɵɵelementStart(0, "mat-tab", 5);
     ɵɵtext(1);
-    ɵɵelementStart(2, "button", 7);
-    ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_12_Template_button_click_2_listener($event) { ɵɵrestoreView(_r13); const index_r11 = ctx.index; const ctx_r12 = ɵɵnextContext(); return ctx_r12.removeTab(index_r11); });
+    ɵɵelementStart(2, "button", 6);
+    ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_11_Template_button_click_2_listener($event) { ɵɵrestoreView(_r13); const index_r11 = ctx.index; const ctx_r12 = ɵɵnextContext(); return ctx_r12.removeTab(index_r11); });
     ɵɵtext(3, " Delete Tab ");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -422,37 +422,35 @@ TabGroupDynamicExample.decorators = [
             },] },
 ];
 /** @nocollapse */ TabGroupDynamicExample.ɵfac = function TabGroupDynamicExample_Factory(t) { return new (t || TabGroupDynamicExample)(); };
-/** @nocollapse */ TabGroupDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 13, vars: 3, consts: [[1, "example-input-label"], ["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], ["selectAfterAdding", ""], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TabGroupDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TabGroupDynamicExample, selectors: [["tab-group-dynamic-example"]], decls: 12, vars: 3, consts: [["matInput", "", "type", "number", 3, "formControl"], ["mat-raised-button", "", 1, "example-add-tab-button", 3, "click"], ["selectAfterAdding", ""], [3, "selectedIndex", "selectedIndexChange"], [3, "label", 4, "ngFor", "ngForOf"], [3, "label"], ["mat-raised-button", "", 1, "example-delete-tab-button", 3, "disabled", "click"]], template: function TabGroupDynamicExample_Template(rf, ctx) { if (rf & 1) {
         const _r14 = ɵɵgetCurrentView();
-        ɵɵelementStart(0, "div");
-        ɵɵelementStart(1, "span", 0);
-        ɵɵtext(2, " Selected tab index: ");
+        ɵɵelementStart(0, "mat-form-field");
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Selected tab index");
         ɵɵelementEnd();
-        ɵɵelementStart(3, "mat-form-field");
-        ɵɵelement(4, "input", 1);
+        ɵɵelement(3, "input", 0);
         ɵɵelementEnd();
+        ɵɵelementStart(4, "div");
+        ɵɵelementStart(5, "button", 1);
+        ɵɵlistener("click", function TabGroupDynamicExample_Template_button_click_5_listener($event) { ɵɵrestoreView(_r14); const _r8 = ɵɵreference(8); return ctx.addTab(_r8.checked); });
+        ɵɵtext(6, " Add new tab ");
         ɵɵelementEnd();
-        ɵɵelementStart(5, "div");
-        ɵɵelementStart(6, "button", 2);
-        ɵɵlistener("click", function TabGroupDynamicExample_Template_button_click_6_listener($event) { ɵɵrestoreView(_r14); const _r8 = ɵɵreference(9); return ctx.addTab(_r8.checked); });
-        ɵɵtext(7, " Add new tab ");
-        ɵɵelementEnd();
-        ɵɵelementStart(8, "mat-checkbox", null, 3);
-        ɵɵtext(10, " Select tab after adding ");
+        ɵɵelementStart(7, "mat-checkbox", null, 2);
+        ɵɵtext(9, " Select tab after adding ");
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelementStart(11, "mat-tab-group", 4);
-        ɵɵlistener("selectedIndexChange", function TabGroupDynamicExample_Template_mat_tab_group_selectedIndexChange_11_listener($event) { return ctx.selected.setValue($event); });
-        ɵɵtemplate(12, TabGroupDynamicExample_mat_tab_12_Template, 4, 3, "mat-tab", 5);
+        ɵɵelementStart(10, "mat-tab-group", 3);
+        ɵɵlistener("selectedIndexChange", function TabGroupDynamicExample_Template_mat_tab_group_selectedIndexChange_10_listener($event) { return ctx.selected.setValue($event); });
+        ɵɵtemplate(11, TabGroupDynamicExample_mat_tab_11_Template, 4, 3, "mat-tab", 4);
         ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(4);
+        ɵɵadvance(3);
         ɵɵproperty("formControl", ctx.selected);
         ɵɵadvance(7);
         ɵɵproperty("selectedIndex", ctx.selected.value);
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.tabs);
-    } }, directives: [MatFormField, MatInput, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatButton, MatCheckbox, MatTabGroup, NgForOf, MatTab], styles: [".example-input-label[_ngcontent-%COMP%], .example-add-tab-button[_ngcontent-%COMP%], .example-delete-tab-button[_ngcontent-%COMP%] {\n  margin: 8px;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatInput, NumberValueAccessor, DefaultValueAccessor, NgControlStatus, FormControlDirective, MatButton, MatCheckbox, MatTabGroup, NgForOf, MatTab], styles: [".example-input-label[_ngcontent-%COMP%], .example-add-tab-button[_ngcontent-%COMP%], .example-delete-tab-button[_ngcontent-%COMP%] {\n  margin: 8px;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TabGroupDynamicExample, [{
         type: Component,
         args: [{

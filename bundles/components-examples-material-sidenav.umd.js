@@ -242,24 +242,30 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(11, "p");
         i0.ɵɵelementStart(12, "mat-form-field");
-        i0.ɵɵelement(13, "input", 7);
+        i0.ɵɵelementStart(13, "mat-label");
+        i0.ɵɵtext(14, "Top gap");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(15, "input", 7);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(14, "p");
-        i0.ɵɵelementStart(15, "mat-form-field");
-        i0.ɵɵelement(16, "input", 8);
+        i0.ɵɵelementStart(16, "p");
+        i0.ɵɵelementStart(17, "mat-form-field");
+        i0.ɵɵelementStart(18, "mat-label");
+        i0.ɵɵtext(19, "Bottom gap");
+        i0.ɵɵelementEnd();
+        i0.ɵɵelement(20, "input", 8);
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(17, "p");
-        i0.ɵɵelementStart(18, "button", 9);
-        i0.ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_18_listener($event) { i0.ɵɵrestoreView(_r19); var _r17 = i0.ɵɵreference(5); return _r17.toggle(); });
-        i0.ɵɵtext(19, "Toggle");
+        i0.ɵɵelementStart(21, "p");
+        i0.ɵɵelementStart(22, "button", 9);
+        i0.ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_22_listener($event) { i0.ɵɵrestoreView(_r19); var _r17 = i0.ɵɵreference(5); return _r17.toggle(); });
+        i0.ɵɵtext(23, "Toggle");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
-        i0.ɵɵelementStart(20, "mat-toolbar", 10);
-        i0.ɵɵtext(21, "Footer");
+        i0.ɵɵelementStart(24, "mat-toolbar", 10);
+        i0.ɵɵtext(25, "Footer");
         i0.ɵɵelementEnd();
         i0.ɵɵelementContainerEnd();
     } if (rf & 2) {
@@ -273,7 +279,7 @@
     } }
     function SidenavFixedExample_div_1_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "div");
-        i0.ɵɵtext(1, "Please open on Stackblitz to see result");
+        i0.ɵɵtext(1, "Please open on StackBlitz to see result");
         i0.ɵɵelementEnd();
     } }
     /** @title Fixed sidenav */
@@ -287,14 +293,14 @@
             });
         }
         SidenavFixedExample.ɵfac = function SidenavFixedExample_Factory(t) { return new (t || SidenavFixedExample)(i0.ɵɵdirectiveInject(i1$1.FormBuilder)); };
-        SidenavFixedExample.ɵcmp = i0.ɵɵdefineComponent({ type: SidenavFixedExample, selectors: [["sidenav-fixed-example"]], decls: 2, vars: 2, consts: [[4, "ngIf"], [1, "example-header"], [1, "example-container"], ["mode", "side", "opened", "", 1, "example-sidenav", 3, "fixedInViewport", "fixedTopGap", "fixedBottomGap"], ["sidenav", ""], [3, "formGroup"], ["formControlName", "fixed"], ["matInput", "", "type", "number", "formControlName", "top", "placeholder", "Top gap"], ["matInput", "", "type", "number", "formControlName", "bottom", "placeholder", "Bottom gap"], ["mat-button", "", 3, "click"], [1, "example-footer"]], template: function SidenavFixedExample_Template(rf, ctx) { if (rf & 1) {
-                i0.ɵɵtemplate(0, SidenavFixedExample_ng_container_0_Template, 22, 5, "ng-container", 0);
+        SidenavFixedExample.ɵcmp = i0.ɵɵdefineComponent({ type: SidenavFixedExample, selectors: [["sidenav-fixed-example"]], decls: 2, vars: 2, consts: [[4, "ngIf"], [1, "example-header"], [1, "example-container"], ["mode", "side", "opened", "", 1, "example-sidenav", 3, "fixedInViewport", "fixedTopGap", "fixedBottomGap"], ["sidenav", ""], [3, "formGroup"], ["formControlName", "fixed"], ["matInput", "", "type", "number", "formControlName", "top"], ["matInput", "", "type", "number", "formControlName", "bottom"], ["mat-button", "", 3, "click"], [1, "example-footer"]], template: function SidenavFixedExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵtemplate(0, SidenavFixedExample_ng_container_0_Template, 26, 5, "ng-container", 0);
                 i0.ɵɵtemplate(1, SidenavFixedExample_div_1_Template, 2, 0, "div", 0);
             } if (rf & 2) {
                 i0.ɵɵproperty("ngIf", ctx.shouldRun);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", !ctx.shouldRun);
-            } }, directives: [i1.NgIf, i3$2.MatToolbar, i2.MatSidenavContainer, i2.MatSidenav, i2.MatSidenavContent, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i5.MatCheckbox, i1$1.NgControlStatus, i1$1.FormControlName, i2$1.MatFormField, i1$1.NumberValueAccessor, i1$1.DefaultValueAccessor, i3.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 60px;\n  bottom: 60px;\n  left: 0;\n  right: 0;\n}\n\n.example-sidenav[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-header[_ngcontent-%COMP%] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-footer[_ngcontent-%COMP%] {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}"] });
+            } }, directives: [i1.NgIf, i3$2.MatToolbar, i2.MatSidenavContainer, i2.MatSidenav, i2.MatSidenavContent, i1$1.NgControlStatusGroup, i1$1.FormGroupDirective, i5.MatCheckbox, i1$1.NgControlStatus, i1$1.FormControlName, i2$1.MatFormField, i2$1.MatLabel, i1$1.NumberValueAccessor, i1$1.DefaultValueAccessor, i3.MatButton], styles: [".example-container[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 60px;\n  bottom: 60px;\n  left: 0;\n  right: 0;\n}\n\n.example-sidenav[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 200px;\n  background: rgba(255, 0, 0, 0.5);\n}\n\n.example-header[_ngcontent-%COMP%] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n}\n\n.example-footer[_ngcontent-%COMP%] {\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}"] });
         return SidenavFixedExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(SidenavFixedExample, [{
