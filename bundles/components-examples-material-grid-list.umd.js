@@ -10,8 +10,7 @@
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         var tile_r1 = ctx.$implicit;
-        i0.ɵɵstyleSanitizer(i0.ɵɵdefaultStyleSanitizer);
-        i0.ɵɵstyleProp("background", tile_r1.color);
+        i0.ɵɵstyleProp("background", tile_r1.color, i0.ɵɵdefaultStyleSanitizer);
         i0.ɵɵproperty("colspan", tile_r1.cols)("rowspan", tile_r1.rows);
         i0.ɵɵadvance(1);
         i0.ɵɵtextInterpolate1(" ", tile_r1.text, " ");
@@ -31,7 +30,7 @@
         GridListDynamicExample.ɵfac = function GridListDynamicExample_Factory(t) { return new (t || GridListDynamicExample)(); };
         GridListDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: GridListDynamicExample, selectors: [["grid-list-dynamic-example"]], decls: 2, vars: 1, consts: [["cols", "4", "rowHeight", "100px"], [3, "colspan", "rowspan", "background", 4, "ngFor", "ngForOf"], [3, "colspan", "rowspan"]], template: function GridListDynamicExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-grid-list", 0);
-                i0.ɵɵtemplate(1, GridListDynamicExample_mat_grid_tile_1_Template, 2, 4, "mat-grid-tile", 1);
+                i0.ɵɵtemplate(1, GridListDynamicExample_mat_grid_tile_1_Template, 2, 5, "mat-grid-tile", 1);
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
                 i0.ɵɵadvance(1);

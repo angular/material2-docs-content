@@ -609,7 +609,7 @@ TableExpandableRowsExample.decorators = [
         ɵɵtemplate(3, TableExpandableRowsExample_td_3_Template, 15, 7, "td", 3);
         ɵɵelementContainerEnd();
         ɵɵtemplate(4, TableExpandableRowsExample_tr_4_Template, 1, 0, "tr", 4);
-        ɵɵtemplate(5, TableExpandableRowsExample_tr_5_Template, 1, 1, "tr", 5);
+        ɵɵtemplate(5, TableExpandableRowsExample_tr_5_Template, 1, 2, "tr", 5);
         ɵɵtemplate(6, TableExpandableRowsExample_tr_6_Template, 1, 0, "tr", 6);
         ɵɵelementEnd();
     } if (rf & 2) {
@@ -1716,7 +1716,7 @@ TableOverviewExample.propDecorators = {
         ɵɵelementContainerEnd();
         ɵɵelementContainerStart(13, 8);
         ɵɵtemplate(14, TableOverviewExample_th_14_Template, 2, 0, "th", 4);
-        ɵɵtemplate(15, TableOverviewExample_td_15_Template, 2, 2, "td", 9);
+        ɵɵtemplate(15, TableOverviewExample_td_15_Template, 2, 3, "td", 9);
         ɵɵelementContainerEnd();
         ɵɵtemplate(16, TableOverviewExample_tr_16_Template, 1, 0, "tr", 10);
         ɵɵtemplate(17, TableOverviewExample_tr_17_Template, 1, 0, "tr", 11);

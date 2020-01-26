@@ -132,7 +132,7 @@ var TableOverviewExample = /** @class */ (function () {
             i0.ɵɵelementContainerEnd();
             i0.ɵɵelementContainerStart(13, 8);
             i0.ɵɵtemplate(14, TableOverviewExample_th_14_Template, 2, 0, "th", 4);
-            i0.ɵɵtemplate(15, TableOverviewExample_td_15_Template, 2, 2, "td", 9);
+            i0.ɵɵtemplate(15, TableOverviewExample_td_15_Template, 2, 3, "td", 9);
             i0.ɵɵelementContainerEnd();
             i0.ɵɵtemplate(16, TableOverviewExample_tr_16_Template, 1, 0, "tr", 10);
             i0.ɵɵtemplate(17, TableOverviewExample_tr_17_Template, 1, 0, "tr", 11);
