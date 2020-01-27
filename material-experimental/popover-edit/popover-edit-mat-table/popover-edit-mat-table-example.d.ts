@@ -21,6 +21,7 @@ export declare class PopoverEditMatTableExample {
     private readonly _snackBar;
     displayedColumns: string[];
     dataSource: ExampleDataSource;
+    nameEditEnabled: boolean;
     readonly TYPES: readonly ElementType[];
     readonly FANTASY_ELEMENTS: readonly FantasyElement[];
     readonly nameValues: FormValueContainer<PeriodicElement, any>;

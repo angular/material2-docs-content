@@ -38,9 +38,14 @@
 
   <span class="hljs-comment">&lt;!-- Name Column --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> <span class="hljs-attr">matColumnDef</span>=<span class="hljs-string">"name"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span> Name <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">mat-header-cell</span> *<span class="hljs-attr">matHeaderCellDef</span>&gt;</span>
+      Name
+      <span class="hljs-tag">&lt;<span class="hljs-name">mat-checkbox</span>
+          [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"nameEditEnabled"</span>&gt;</span>Edit enabled<span class="hljs-tag">&lt;/<span class="hljs-name">mat-checkbox</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">mat-cell</span> *<span class="hljs-attr">matCellDef</span>=<span class="hljs-string">"let element"</span>
-        [<span class="hljs-attr">matPopoverEdit</span>]=<span class="hljs-string">"nameEdit"</span>&gt;</span>
+        [<span class="hljs-attr">matPopoverEdit</span>]=<span class="hljs-string">"nameEdit"</span>
+        [<span class="hljs-attr">matPopoverEditDisabled</span>]=<span class="hljs-string">"!nameEditEnabled"</span>&gt;</span>
       {{element.name}}
       
       <span class="hljs-comment">&lt;!-- This edit is defined in the cell and can implicitly access element --&gt;</span>
@@ -65,9 +70,11 @@
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">ng-template</span>&gt;</span>
 
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">matRowHoverContent</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">matEditOpen</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ng-container</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"nameEditEnabled"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> *<span class="hljs-attr">matRowHoverContent</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-icon-button</span> <span class="hljs-attr">matEditOpen</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">mat-icon</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">mat-icon</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">ng-container</span>&gt;</span>
 
