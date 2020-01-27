@@ -16,7 +16,7 @@ export declare class ExampleHeader<D> implements OnDestroy {
     private _destroyed;
     constructor(_calendar: MatCalendar<D>, _dateAdapter: DateAdapter<D>, _dateFormats: MatDateFormats, cdr: ChangeDetectorRef);
     ngOnDestroy(): void;
-    readonly periodLabel: string;
+    get periodLabel(): string;
     previousClicked(mode: 'month' | 'year'): void;
     nextClicked(mode: 'month' | 'year'): void;
     static ɵfac: i0.ɵɵFactoryDef<ExampleHeader<any>>;

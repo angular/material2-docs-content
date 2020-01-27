@@ -35,7 +35,8 @@ export declare class DynamicDataSource implements DataSource<DynamicFlatNode> {
     private _treeControl;
     private _database;
     dataChange: BehaviorSubject<DynamicFlatNode[]>;
-    data: DynamicFlatNode[];
+    get data(): DynamicFlatNode[];
+    set data(value: DynamicFlatNode[]);
     constructor(_treeControl: FlatTreeControl<DynamicFlatNode>, _database: DynamicDatabase);
     connect(collectionViewer: CollectionViewer): Observable<DynamicFlatNode[]>;
     disconnect(collectionViewer: CollectionViewer): void;

@@ -10,13 +10,6 @@
     var CardFancyExample = /** @class */ (function () {
         function CardFancyExample() {
         }
-        CardFancyExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'card-fancy-example',
-                        templateUrl: 'card-fancy-example.html',
-                        styleUrls: ['card-fancy-example.css'],
-                    },] },
-        ];
         CardFancyExample.ɵfac = function CardFancyExample_Factory(t) { return new (t || CardFancyExample)(); };
         CardFancyExample.ɵcmp = i0.ɵɵdefineComponent({ type: CardFancyExample, selectors: [["card-fancy-example"]], decls: 16, vars: 0, consts: [[1, "example-card"], ["mat-card-avatar", "", 1, "example-header-image"], ["mat-card-image", "", "src", "https://material.angular.io/assets/img/examples/shiba2.jpg", "alt", "Photo of a Shiba Inu"], ["mat-button", ""]], template: function CardFancyExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-card", 0);
@@ -62,13 +55,6 @@
     var CardOverviewExample = /** @class */ (function () {
         function CardOverviewExample() {
         }
-        CardOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'card-overview-example',
-                        templateUrl: 'card-overview-example.html',
-                        styleUrls: ['card-overview-example.css'],
-                    },] },
-        ];
         CardOverviewExample.ɵfac = function CardOverviewExample_Factory(t) { return new (t || CardOverviewExample)(); };
         CardOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CardOverviewExample, selectors: [["card-overview-example"]], decls: 2, vars: 0, template: function CardOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-card");
@@ -93,16 +79,6 @@
     var CardExamplesModule = /** @class */ (function () {
         function CardExamplesModule() {
         }
-        CardExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i2.MatButtonModule,
-                            i1.MatCardModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         CardExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CardExamplesModule });
         CardExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CardExamplesModule_Factory(t) { return new (t || CardExamplesModule)(); }, imports: [[
                     i2.MatButtonModule,

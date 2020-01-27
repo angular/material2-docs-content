@@ -12,7 +12,7 @@ import { MatOption, MatOptgroup } from '@angular/material/core';
  * Generated from: src/components-examples/material/select/select-custom-trigger/select-custom-trigger-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-function SelectCustomTriggerExample_span_4_Template(rf, ctx) { if (rf & 1) {
+function SelectCustomTriggerExample_span_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "span", 3);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -21,7 +21,7 @@ function SelectCustomTriggerExample_span_4_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate2(" (+", ctx_r0.toppings.value.length - 1, " ", (ctx_r0.toppings.value == null ? null : ctx_r0.toppings.value.length) === 2 ? "other" : "others", ") ");
 } }
-function SelectCustomTriggerExample_mat_option_5_Template(rf, ctx) { if (rf & 1) {
+function SelectCustomTriggerExample_mat_option_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-option", 4);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -48,18 +48,21 @@ SelectCustomTriggerExample.decorators = [
             },] },
 ];
 /** @nocollapse */ SelectCustomTriggerExample.ɵfac = function SelectCustomTriggerExample_Factory(t) { return new (t || SelectCustomTriggerExample)(); };
-/** @nocollapse */ SelectCustomTriggerExample.ɵcmp = ɵɵdefineComponent({ type: SelectCustomTriggerExample, selectors: [["select-custom-trigger-example"]], decls: 6, vars: 4, consts: [["placeholder", "Toppings", "multiple", "", 3, "formControl"], ["class", "example-additional-selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "example-additional-selection"], [3, "value"]], template: function SelectCustomTriggerExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ SelectCustomTriggerExample.ɵcmp = ɵɵdefineComponent({ type: SelectCustomTriggerExample, selectors: [["select-custom-trigger-example"]], decls: 8, vars: 4, consts: [["multiple", "", 3, "formControl"], ["class", "example-additional-selection", 4, "ngIf"], [3, "value", 4, "ngFor", "ngForOf"], [1, "example-additional-selection"], [3, "value"]], template: function SelectCustomTriggerExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
-        ɵɵelementStart(1, "mat-select", 0);
-        ɵɵelementStart(2, "mat-select-trigger");
-        ɵɵtext(3);
-        ɵɵtemplate(4, SelectCustomTriggerExample_span_4_Template, 2, 2, "span", 1);
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Toppings");
         ɵɵelementEnd();
-        ɵɵtemplate(5, SelectCustomTriggerExample_mat_option_5_Template, 2, 2, "mat-option", 2);
+        ɵɵelementStart(3, "mat-select", 0);
+        ɵɵelementStart(4, "mat-select-trigger");
+        ɵɵtext(5);
+        ɵɵtemplate(6, SelectCustomTriggerExample_span_6_Template, 2, 2, "span", 1);
+        ɵɵelementEnd();
+        ɵɵtemplate(7, SelectCustomTriggerExample_mat_option_7_Template, 2, 2, "mat-option", 2);
         ɵɵelementEnd();
         ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(1);
+        ɵɵadvance(3);
         ɵɵproperty("formControl", ctx.toppings);
         ɵɵadvance(2);
         ɵɵtextInterpolate1(" ", ctx.toppings.value ? ctx.toppings.value[0] : "", " ");
@@ -67,7 +70,7 @@ SelectCustomTriggerExample.decorators = [
         ɵɵproperty("ngIf", (ctx.toppings.value == null ? null : ctx.toppings.value.length) > 1);
         ɵɵadvance(1);
         ɵɵproperty("ngForOf", ctx.toppingList);
-    } }, directives: [MatFormField, MatSelect, NgControlStatus, FormControlDirective, MatSelectTrigger, NgIf, NgForOf, MatOption], styles: [".example-additional-selection[_ngcontent-%COMP%] {\n  opacity: 0.75;\n  font-size: 0.75em;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, MatSelectTrigger, NgIf, NgForOf, MatOption], styles: [".example-additional-selection[_ngcontent-%COMP%] {\n  opacity: 0.75;\n  font-size: 0.75em;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(SelectCustomTriggerExample, [{
         type: Component,
         args: [{

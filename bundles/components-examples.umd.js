@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/components-examples/cdk-experimental/popover-edit'), require('@angular/components-examples/cdk/a11y'), require('@angular/components-examples/cdk/clipboard'), require('@angular/components-examples/cdk/drag-drop'), require('@angular/components-examples/cdk/platform'), require('@angular/components-examples/cdk/portal'), require('@angular/components-examples/cdk/scrolling'), require('@angular/components-examples/cdk/stepper'), require('@angular/components-examples/cdk/table'), require('@angular/components-examples/cdk/text-field'), require('@angular/components-examples/cdk/tree'), require('@angular/components-examples/material-experimental/popover-edit'), require('@angular/components-examples/material/autocomplete'), require('@angular/components-examples/material/badge'), require('@angular/components-examples/material/bottom-sheet'), require('@angular/components-examples/material/button-toggle'), require('@angular/components-examples/material/button'), require('@angular/components-examples/material/card'), require('@angular/components-examples/material/checkbox'), require('@angular/components-examples/material/chips'), require('@angular/components-examples/material/core'), require('@angular/components-examples/material/datepicker'), require('@angular/components-examples/material/dialog'), require('@angular/components-examples/material/divider'), require('@angular/components-examples/material/expansion'), require('@angular/components-examples/material/form-field'), require('@angular/components-examples/material/grid-list'), require('@angular/components-examples/material/icon'), require('@angular/components-examples/material/input'), require('@angular/components-examples/material/list'), require('@angular/components-examples/material/menu'), require('@angular/components-examples/material/paginator'), require('@angular/components-examples/material/progress-bar'), require('@angular/components-examples/material/progress-spinner'), require('@angular/components-examples/material/radio'), require('@angular/components-examples/material/select'), require('@angular/components-examples/material/sidenav'), require('@angular/components-examples/material/slide-toggle'), require('@angular/components-examples/material/slider'), require('@angular/components-examples/material/snack-bar'), require('@angular/components-examples/material/sort'), require('@angular/components-examples/material/stepper'), require('@angular/components-examples/material/table'), require('@angular/components-examples/material/tabs'), require('@angular/components-examples/material/toolbar'), require('@angular/components-examples/material/tooltip'), require('@angular/components-examples/material/tree')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples', ['exports', 'tslib', '@angular/core', '@angular/components-examples/cdk-experimental/popover-edit', '@angular/components-examples/cdk/a11y', '@angular/components-examples/cdk/clipboard', '@angular/components-examples/cdk/drag-drop', '@angular/components-examples/cdk/platform', '@angular/components-examples/cdk/portal', '@angular/components-examples/cdk/scrolling', '@angular/components-examples/cdk/stepper', '@angular/components-examples/cdk/table', '@angular/components-examples/cdk/text-field', '@angular/components-examples/cdk/tree', '@angular/components-examples/material-experimental/popover-edit', '@angular/components-examples/material/autocomplete', '@angular/components-examples/material/badge', '@angular/components-examples/material/bottom-sheet', '@angular/components-examples/material/button-toggle', '@angular/components-examples/material/button', '@angular/components-examples/material/card', '@angular/components-examples/material/checkbox', '@angular/components-examples/material/chips', '@angular/components-examples/material/core', '@angular/components-examples/material/datepicker', '@angular/components-examples/material/dialog', '@angular/components-examples/material/divider', '@angular/components-examples/material/expansion', '@angular/components-examples/material/form-field', '@angular/components-examples/material/grid-list', '@angular/components-examples/material/icon', '@angular/components-examples/material/input', '@angular/components-examples/material/list', '@angular/components-examples/material/menu', '@angular/components-examples/material/paginator', '@angular/components-examples/material/progress-bar', '@angular/components-examples/material/progress-spinner', '@angular/components-examples/material/radio', '@angular/components-examples/material/select', '@angular/components-examples/material/sidenav', '@angular/components-examples/material/slide-toggle', '@angular/components-examples/material/slider', '@angular/components-examples/material/snack-bar', '@angular/components-examples/material/sort', '@angular/components-examples/material/stepper', '@angular/components-examples/material/table', '@angular/components-examples/material/tabs', '@angular/components-examples/material/toolbar', '@angular/components-examples/material/tooltip', '@angular/components-examples/material/tree'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = {}), global.tslib, global.ng.core, global.ng.componentsExamples.cdkExperimental.popoverEdit, global.ng.componentsExamples.cdk.a11y, global.ng.componentsExamples.cdk.clipboard, global.ng.componentsExamples.cdk.dragDrop, global.ng.componentsExamples.cdk.platform, global.ng.componentsExamples.cdk.portal, global.ng.componentsExamples.cdk.scrolling, global.ng.componentsExamples.cdk.stepper, global.ng.componentsExamples.cdk.table, global.ng.componentsExamples.cdk.textField, global.ng.componentsExamples.cdk.tree, global.ng.componentsExamples.materialExperimental.popoverEdit, global.ng.componentsExamples.material.autocomplete, global.ng.componentsExamples.material.badge, global.ng.componentsExamples.material.bottomSheet, global.ng.componentsExamples.material.buttonToggle, global.ng.componentsExamples.material.button, global.ng.componentsExamples.material.card, global.ng.componentsExamples.material.checkbox, global.ng.componentsExamples.material.chips, global.ng.componentsExamples.material.core, global.ng.componentsExamples.material.datepicker, global.ng.componentsExamples.material.dialog, global.ng.componentsExamples.material.divider, global.ng.componentsExamples.material.expansion, global.ng.componentsExamples.material.formField, global.ng.componentsExamples.material.gridList, global.ng.componentsExamples.material.icon, global.ng.componentsExamples.material.input, global.ng.componentsExamples.material.list, global.ng.componentsExamples.material.menu, global.ng.componentsExamples.material.paginator, global.ng.componentsExamples.material.progressBar, global.ng.componentsExamples.material.progressSpinner, global.ng.componentsExamples.material.radio, global.ng.componentsExamples.material.select, global.ng.componentsExamples.material.sidenav, global.ng.componentsExamples.material.slideToggle, global.ng.componentsExamples.material.slider, global.ng.componentsExamples.material.snackBar, global.ng.componentsExamples.material.sort, global.ng.componentsExamples.material.stepper, global.ng.componentsExamples.material.table, global.ng.componentsExamples.material.tabs, global.ng.componentsExamples.material.toolbar, global.ng.componentsExamples.material.tooltip, global.ng.componentsExamples.material.tree));
-}(this, (function (exports, tslib, i0, popoverEdit, a11y, clipboard, dragDrop, platform, portal, scrolling, stepper, table, textField, tree, popoverEdit$1, autocomplete, badge, bottomSheet, buttonToggle, button, card, checkbox, chips, core, datepicker, dialog, divider, expansion, formField, gridList, icon, input, list, menu, paginator, progressBar, progressSpinner, radio, select, sidenav, slideToggle, slider, snackBar, sort, stepper$1, table$1, tabs, toolbar, tooltip, tree$1) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('tslib'), require('@angular/core'), require('@angular/material/form-field'), require('@angular/components-examples/cdk-experimental/popover-edit'), require('@angular/components-examples/cdk/a11y'), require('@angular/components-examples/cdk/clipboard'), require('@angular/components-examples/cdk/drag-drop'), require('@angular/components-examples/cdk/platform'), require('@angular/components-examples/cdk/portal'), require('@angular/components-examples/cdk/scrolling'), require('@angular/components-examples/cdk/stepper'), require('@angular/components-examples/cdk/table'), require('@angular/components-examples/cdk/text-field'), require('@angular/components-examples/cdk/tree'), require('@angular/components-examples/material-experimental/popover-edit'), require('@angular/components-examples/material/autocomplete'), require('@angular/components-examples/material/badge'), require('@angular/components-examples/material/bottom-sheet'), require('@angular/components-examples/material/button-toggle'), require('@angular/components-examples/material/button'), require('@angular/components-examples/material/card'), require('@angular/components-examples/material/checkbox'), require('@angular/components-examples/material/chips'), require('@angular/components-examples/material/core'), require('@angular/components-examples/material/datepicker'), require('@angular/components-examples/material/dialog'), require('@angular/components-examples/material/divider'), require('@angular/components-examples/material/expansion'), require('@angular/components-examples/material/form-field'), require('@angular/components-examples/material/grid-list'), require('@angular/components-examples/material/icon'), require('@angular/components-examples/material/input'), require('@angular/components-examples/material/list'), require('@angular/components-examples/material/menu'), require('@angular/components-examples/material/paginator'), require('@angular/components-examples/material/progress-bar'), require('@angular/components-examples/material/progress-spinner'), require('@angular/components-examples/material/radio'), require('@angular/components-examples/material/select'), require('@angular/components-examples/material/sidenav'), require('@angular/components-examples/material/slide-toggle'), require('@angular/components-examples/material/slider'), require('@angular/components-examples/material/snack-bar'), require('@angular/components-examples/material/sort'), require('@angular/components-examples/material/stepper'), require('@angular/components-examples/material/table'), require('@angular/components-examples/material/tabs'), require('@angular/components-examples/material/toolbar'), require('@angular/components-examples/material/tooltip'), require('@angular/components-examples/material/tree')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples', ['exports', 'tslib', '@angular/core', '@angular/material/form-field', '@angular/components-examples/cdk-experimental/popover-edit', '@angular/components-examples/cdk/a11y', '@angular/components-examples/cdk/clipboard', '@angular/components-examples/cdk/drag-drop', '@angular/components-examples/cdk/platform', '@angular/components-examples/cdk/portal', '@angular/components-examples/cdk/scrolling', '@angular/components-examples/cdk/stepper', '@angular/components-examples/cdk/table', '@angular/components-examples/cdk/text-field', '@angular/components-examples/cdk/tree', '@angular/components-examples/material-experimental/popover-edit', '@angular/components-examples/material/autocomplete', '@angular/components-examples/material/badge', '@angular/components-examples/material/bottom-sheet', '@angular/components-examples/material/button-toggle', '@angular/components-examples/material/button', '@angular/components-examples/material/card', '@angular/components-examples/material/checkbox', '@angular/components-examples/material/chips', '@angular/components-examples/material/core', '@angular/components-examples/material/datepicker', '@angular/components-examples/material/dialog', '@angular/components-examples/material/divider', '@angular/components-examples/material/expansion', '@angular/components-examples/material/form-field', '@angular/components-examples/material/grid-list', '@angular/components-examples/material/icon', '@angular/components-examples/material/input', '@angular/components-examples/material/list', '@angular/components-examples/material/menu', '@angular/components-examples/material/paginator', '@angular/components-examples/material/progress-bar', '@angular/components-examples/material/progress-spinner', '@angular/components-examples/material/radio', '@angular/components-examples/material/select', '@angular/components-examples/material/sidenav', '@angular/components-examples/material/slide-toggle', '@angular/components-examples/material/slider', '@angular/components-examples/material/snack-bar', '@angular/components-examples/material/sort', '@angular/components-examples/material/stepper', '@angular/components-examples/material/table', '@angular/components-examples/material/tabs', '@angular/components-examples/material/toolbar', '@angular/components-examples/material/tooltip', '@angular/components-examples/material/tree'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = {}), global.tslib, global.ng.core, global.ng.material.formField, global.ng.componentsExamples.cdkExperimental.popoverEdit, global.ng.componentsExamples.cdk.a11y, global.ng.componentsExamples.cdk.clipboard, global.ng.componentsExamples.cdk.dragDrop, global.ng.componentsExamples.cdk.platform, global.ng.componentsExamples.cdk.portal, global.ng.componentsExamples.cdk.scrolling, global.ng.componentsExamples.cdk.stepper, global.ng.componentsExamples.cdk.table, global.ng.componentsExamples.cdk.textField, global.ng.componentsExamples.cdk.tree, global.ng.componentsExamples.materialExperimental.popoverEdit, global.ng.componentsExamples.material.autocomplete, global.ng.componentsExamples.material.badge, global.ng.componentsExamples.material.bottomSheet, global.ng.componentsExamples.material.buttonToggle, global.ng.componentsExamples.material.button, global.ng.componentsExamples.material.card, global.ng.componentsExamples.material.checkbox, global.ng.componentsExamples.material.chips, global.ng.componentsExamples.material.core, global.ng.componentsExamples.material.datepicker, global.ng.componentsExamples.material.dialog, global.ng.componentsExamples.material.divider, global.ng.componentsExamples.material.expansion, global.ng.componentsExamples.material.formField, global.ng.componentsExamples.material.gridList, global.ng.componentsExamples.material.icon, global.ng.componentsExamples.material.input, global.ng.componentsExamples.material.list, global.ng.componentsExamples.material.menu, global.ng.componentsExamples.material.paginator, global.ng.componentsExamples.material.progressBar, global.ng.componentsExamples.material.progressSpinner, global.ng.componentsExamples.material.radio, global.ng.componentsExamples.material.select, global.ng.componentsExamples.material.sidenav, global.ng.componentsExamples.material.slideToggle, global.ng.componentsExamples.material.slider, global.ng.componentsExamples.material.snackBar, global.ng.componentsExamples.material.sort, global.ng.componentsExamples.material.stepper, global.ng.componentsExamples.material.table, global.ng.componentsExamples.material.tabs, global.ng.componentsExamples.material.toolbar, global.ng.componentsExamples.material.tooltip, global.ng.componentsExamples.material.tree));
+}(this, (function (exports, tslib, i0, formField, popoverEdit, a11y, clipboard, dragDrop, platform, portal, scrolling, stepper, table, textField, tree, popoverEdit$1, autocomplete, badge, bottomSheet, buttonToggle, button, card, checkbox, chips, core, datepicker, dialog, divider, expansion, formField$1, gridList, icon, input, list, menu, paginator, progressBar, progressSpinner, radio, select, sidenav, slideToggle, slider, snackBar, sort, stepper$1, table$1, tabs, toolbar, tooltip, tree$1) { 'use strict';
 
     /**
      ******************************************************************************
@@ -612,13 +612,13 @@
         },
         "form-field-appearance": {
             "title": "Form field appearance variants",
-            "component": formField.FormFieldAppearanceExample,
+            "component": formField$1.FormFieldAppearanceExample,
             "additionalFiles": [],
             "selectorName": ""
         },
         "form-field-custom-control": {
             "title": "Form field with custom telephone number input control.",
-            "component": formField.FormFieldCustomControlExample,
+            "component": formField$1.FormFieldCustomControlExample,
             "additionalFiles": [
                 "example-tel-input-example.html",
                 "example-tel-input-example.css"
@@ -627,37 +627,37 @@
         },
         "form-field-error": {
             "title": "Form field with error messages",
-            "component": formField.FormFieldErrorExample,
+            "component": formField$1.FormFieldErrorExample,
             "additionalFiles": [],
             "selectorName": ""
         },
         "form-field-hint": {
             "title": "Form field with hints",
-            "component": formField.FormFieldHintExample,
+            "component": formField$1.FormFieldHintExample,
             "additionalFiles": [],
             "selectorName": ""
         },
         "form-field-label": {
             "title": "Form field with label",
-            "component": formField.FormFieldLabelExample,
+            "component": formField$1.FormFieldLabelExample,
             "additionalFiles": [],
             "selectorName": ""
         },
         "form-field-overview": {
             "title": "Simple form field",
-            "component": formField.FormFieldOverviewExample,
+            "component": formField$1.FormFieldOverviewExample,
             "additionalFiles": [],
             "selectorName": ""
         },
         "form-field-prefix-suffix": {
             "title": "Form field with prefix & suffix",
-            "component": formField.FormFieldPrefixSuffixExample,
+            "component": formField$1.FormFieldPrefixSuffixExample,
             "additionalFiles": [],
             "selectorName": ""
         },
         "form-field-theming": {
             "title": "Form field theming",
-            "component": formField.FormFieldThemingExample,
+            "component": formField$1.FormFieldThemingExample,
             "additionalFiles": [],
             "selectorName": ""
         },
@@ -1405,7 +1405,7 @@
         dialog.DialogExamplesModule,
         divider.DividerExamplesModule,
         expansion.ExpansionExamplesModule,
-        formField.FormFieldExamplesModule,
+        formField$1.FormFieldExamplesModule,
         gridList.GridListExamplesModule,
         icon.IconExamplesModule,
         input.InputExamplesModule,
@@ -1532,15 +1532,15 @@
         expansion.ExpansionExpandCollapseAllExample,
         expansion.ExpansionOverviewExample,
         expansion.ExpansionStepsExample,
-        formField.FormFieldAppearanceExample,
-        formField.FormFieldCustomControlExample,
-        formField.MyTelInput,
-        formField.FormFieldErrorExample,
-        formField.FormFieldHintExample,
-        formField.FormFieldLabelExample,
-        formField.FormFieldOverviewExample,
-        formField.FormFieldPrefixSuffixExample,
-        formField.FormFieldThemingExample,
+        formField$1.FormFieldAppearanceExample,
+        formField$1.FormFieldCustomControlExample,
+        formField$1.MyTelInput,
+        formField$1.FormFieldErrorExample,
+        formField$1.FormFieldHintExample,
+        formField$1.FormFieldLabelExample,
+        formField$1.FormFieldOverviewExample,
+        formField$1.FormFieldPrefixSuffixExample,
+        formField$1.FormFieldThemingExample,
         gridList.GridListDynamicExample,
         gridList.GridListOverviewExample,
         icon.IconOverviewExample,
@@ -1662,17 +1662,15 @@
         tree$1.TreeFlatOverviewExample,
         tree$1.TreeLoadmoreExample,
         tree$1.TreeNestedOverviewExample];
+    // Default MatFormField appearance to 'fill' as that is the new recommended approach and the
+    // `legacy` and `standard` appearances are scheduled for deprecation in version 10.
     var ExampleModule = /** @class */ (function () {
         function ExampleModule() {
         }
-        ExampleModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: EXAMPLE_MODULES,
-                        exports: EXAMPLE_MODULES,
-                    },] },
-        ];
         ExampleModule.ɵmod = i0.ɵɵdefineNgModule({ type: ExampleModule });
-        ExampleModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, imports: [EXAMPLE_MODULES,
+        ExampleModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, providers: [
+                { provide: formField.MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+            ], imports: [EXAMPLE_MODULES,
                 popoverEdit.CdkPopoverEditExamplesModule,
                 a11y.CdkA11yExamplesModule,
                 clipboard.CdkClipboardExamplesModule,
@@ -1698,7 +1696,7 @@
                 dialog.DialogExamplesModule,
                 divider.DividerExamplesModule,
                 expansion.ExpansionExamplesModule,
-                formField.FormFieldExamplesModule,
+                formField$1.FormFieldExamplesModule,
                 gridList.GridListExamplesModule,
                 icon.IconExamplesModule,
                 input.InputExamplesModule,
@@ -1747,7 +1745,7 @@
             dialog.DialogExamplesModule,
             divider.DividerExamplesModule,
             expansion.ExpansionExamplesModule,
-            formField.FormFieldExamplesModule,
+            formField$1.FormFieldExamplesModule,
             gridList.GridListExamplesModule,
             icon.IconExamplesModule,
             input.InputExamplesModule,
@@ -1793,7 +1791,7 @@
             dialog.DialogExamplesModule,
             divider.DividerExamplesModule,
             expansion.ExpansionExamplesModule,
-            formField.FormFieldExamplesModule,
+            formField$1.FormFieldExamplesModule,
             gridList.GridListExamplesModule,
             icon.IconExamplesModule,
             input.InputExamplesModule,
@@ -1820,6 +1818,9 @@
             args: [{
                     imports: EXAMPLE_MODULES,
                     exports: EXAMPLE_MODULES,
+                    providers: [
+                        { provide: formField.MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+                    ],
                 }]
         }], null, null); })();
 
@@ -2485,55 +2486,55 @@
     Object.defineProperty(exports, 'FormFieldAppearanceExample', {
         enumerable: true,
         get: function () {
-            return formField.FormFieldAppearanceExample;
+            return formField$1.FormFieldAppearanceExample;
         }
     });
     Object.defineProperty(exports, 'FormFieldCustomControlExample', {
         enumerable: true,
         get: function () {
-            return formField.FormFieldCustomControlExample;
+            return formField$1.FormFieldCustomControlExample;
         }
     });
     Object.defineProperty(exports, 'FormFieldErrorExample', {
         enumerable: true,
         get: function () {
-            return formField.FormFieldErrorExample;
+            return formField$1.FormFieldErrorExample;
         }
     });
     Object.defineProperty(exports, 'FormFieldHintExample', {
         enumerable: true,
         get: function () {
-            return formField.FormFieldHintExample;
+            return formField$1.FormFieldHintExample;
         }
     });
     Object.defineProperty(exports, 'FormFieldLabelExample', {
         enumerable: true,
         get: function () {
-            return formField.FormFieldLabelExample;
+            return formField$1.FormFieldLabelExample;
         }
     });
     Object.defineProperty(exports, 'FormFieldOverviewExample', {
         enumerable: true,
         get: function () {
-            return formField.FormFieldOverviewExample;
+            return formField$1.FormFieldOverviewExample;
         }
     });
     Object.defineProperty(exports, 'FormFieldPrefixSuffixExample', {
         enumerable: true,
         get: function () {
-            return formField.FormFieldPrefixSuffixExample;
+            return formField$1.FormFieldPrefixSuffixExample;
         }
     });
     Object.defineProperty(exports, 'FormFieldThemingExample', {
         enumerable: true,
         get: function () {
-            return formField.FormFieldThemingExample;
+            return formField$1.FormFieldThemingExample;
         }
     });
     Object.defineProperty(exports, 'MyTelInput', {
         enumerable: true,
         get: function () {
-            return formField.MyTelInput;
+            return formField$1.MyTelInput;
         }
     });
     Object.defineProperty(exports, 'GridListDynamicExample', {

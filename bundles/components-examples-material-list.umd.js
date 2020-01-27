@@ -10,13 +10,6 @@
     var ListOverviewExample = /** @class */ (function () {
         function ListOverviewExample() {
         }
-        ListOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'list-overview-example',
-                        templateUrl: 'list-overview-example.html',
-                        styleUrls: ['list-overview-example.css'],
-                    },] },
-        ];
         ListOverviewExample.ɵfac = function ListOverviewExample_Factory(t) { return new (t || ListOverviewExample)(); };
         ListOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ListOverviewExample, selectors: [["list-overview-example"]], decls: 7, vars: 0, consts: [["role", "list"], ["role", "listitem"]], template: function ListOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-list", 0);
@@ -112,13 +105,6 @@
                 }
             ];
         }
-        ListSectionsExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'list-sections-example',
-                        styleUrls: ['list-sections-example.css'],
-                        templateUrl: 'list-sections-example.html',
-                    },] },
-        ];
         ListSectionsExample.ɵfac = function ListSectionsExample_Factory(t) { return new (t || ListSectionsExample)(); };
         ListSectionsExample.ɵcmp = i0.ɵɵdefineComponent({ type: ListSectionsExample, selectors: [["list-sections-example"]], decls: 8, vars: 2, consts: [["mat-subheader", ""], [4, "ngFor", "ngForOf"], ["mat-list-icon", ""], ["mat-line", ""]], template: function ListSectionsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-list");
@@ -165,13 +151,6 @@
         function ListSelectionExample() {
             this.typesOfShoes = ['Boots', 'Clogs', 'Loafers', 'Moccasins', 'Sneakers'];
         }
-        ListSelectionExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'list-selection-example',
-                        styleUrls: ['list-selection-example.css'],
-                        templateUrl: 'list-selection-example.html',
-                    },] },
-        ];
         ListSelectionExample.ɵfac = function ListSelectionExample_Factory(t) { return new (t || ListSelectionExample)(); };
         ListSelectionExample.ɵcmp = i0.ɵɵdefineComponent({ type: ListSelectionExample, selectors: [["list-selection-example"]], decls: 5, vars: 2, consts: [["shoes", ""], [4, "ngFor", "ngForOf"]], template: function ListSelectionExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-selection-list", null, 0);
@@ -206,17 +185,6 @@
     var ListExamplesModule = /** @class */ (function () {
         function ListExamplesModule() {
         }
-        ListExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i2.CommonModule,
-                            i4.MatIconModule,
-                            i1.MatListModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         ListExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ListExamplesModule });
         ListExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ListExamplesModule_Factory(t) { return new (t || ListExamplesModule)(); }, imports: [[
                     i2.CommonModule,

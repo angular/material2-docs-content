@@ -67,15 +67,6 @@
                 }
             });
         };
-        SortOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'sort-overview-example',
-                        templateUrl: 'sort-overview-example.html',
-                        styleUrls: ['sort-overview-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        SortOverviewExample.ctorParameters = function () { return []; };
         SortOverviewExample.ɵfac = function SortOverviewExample_Factory(t) { return new (t || SortOverviewExample)(); };
         SortOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SortOverviewExample, selectors: [["sort-overview-example"]], decls: 13, vars: 1, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
@@ -123,16 +114,6 @@
     var SortExamplesModule = /** @class */ (function () {
         function SortExamplesModule() {
         }
-        SortExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i2.CommonModule,
-                            i1.MatSortModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         SortExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SortExamplesModule });
         SortExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SortExamplesModule_Factory(t) { return new (t || SortExamplesModule)(); }, imports: [[
                     i2.CommonModule,

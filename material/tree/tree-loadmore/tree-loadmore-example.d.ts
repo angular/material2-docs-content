@@ -15,7 +15,7 @@ export declare class LoadmoreNode {
     hasChildren: boolean;
     loadMoreParentItem: string | null;
     childrenChange: BehaviorSubject<LoadmoreNode[]>;
-    readonly children: LoadmoreNode[];
+    get children(): LoadmoreNode[];
     constructor(item: string, hasChildren?: boolean, loadMoreParentItem?: string | null);
 }
 /** Flat node with expandable and level information */

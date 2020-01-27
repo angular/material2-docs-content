@@ -1,5 +1,6 @@
 import { __spread } from 'tslib';
-import { NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, ɵsetClassMetadata } from '@angular/core';
+import { ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, ɵsetClassMetadata, NgModule } from '@angular/core';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPopoverEditExamplesModule } from '@angular/components-examples/cdk-experimental/popover-edit';
 export { CdkPopoverEditCdkTableExample, CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample } from '@angular/components-examples/cdk-experimental/popover-edit';
 import { FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, CdkA11yExamplesModule } from '@angular/components-examples/cdk/a11y';
@@ -1753,17 +1754,15 @@ var EXAMPLE_LIST = [CdkPopoverEditCdkTableFlexExample,
     TreeFlatOverviewExample,
     TreeLoadmoreExample,
     TreeNestedOverviewExample];
+// Default MatFormField appearance to 'fill' as that is the new recommended approach and the
+// `legacy` and `standard` appearances are scheduled for deprecation in version 10.
 var ExampleModule = /** @class */ (function () {
     function ExampleModule() {
     }
-    ExampleModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: EXAMPLE_MODULES,
-                    exports: EXAMPLE_MODULES,
-                },] },
-    ];
     ExampleModule.ɵmod = ɵɵdefineNgModule({ type: ExampleModule });
-    ExampleModule.ɵinj = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, imports: [EXAMPLE_MODULES,
+    ExampleModule.ɵinj = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, providers: [
+            { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+        ], imports: [EXAMPLE_MODULES,
             CdkPopoverEditExamplesModule,
             CdkA11yExamplesModule,
             CdkClipboardExamplesModule,
@@ -1911,6 +1910,9 @@ var ExampleModule = /** @class */ (function () {
         args: [{
                 imports: EXAMPLE_MODULES,
                 exports: EXAMPLE_MODULES,
+                providers: [
+                    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+                ],
             }]
     }], null, null); })();
 

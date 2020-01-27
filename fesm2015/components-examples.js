@@ -1,4 +1,5 @@
 import { NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, ɵsetClassMetadata } from '@angular/core';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPopoverEditExamplesModule } from '@angular/components-examples/cdk-experimental/popover-edit';
 export { CdkPopoverEditCdkTableExample, CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample } from '@angular/components-examples/cdk-experimental/popover-edit';
 import { FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, CdkA11yExamplesModule } from '@angular/components-examples/cdk/a11y';
@@ -1774,16 +1775,23 @@ const EXAMPLE_LIST = [CdkPopoverEditCdkTableFlexExample,
     TreeFlatOverviewExample,
     TreeLoadmoreExample,
     TreeNestedOverviewExample];
+// Default MatFormField appearance to 'fill' as that is the new recommended approach and the
+// `legacy` and `standard` appearances are scheduled for deprecation in version 10.
 class ExampleModule {
 }
 ExampleModule.decorators = [
     { type: NgModule, args: [{
                 imports: EXAMPLE_MODULES,
                 exports: EXAMPLE_MODULES,
+                providers: [
+                    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+                ],
             },] },
 ];
 /** @nocollapse */ ExampleModule.ɵmod = ɵɵdefineNgModule({ type: ExampleModule });
-/** @nocollapse */ ExampleModule.ɵinj = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, imports: [EXAMPLE_MODULES,
+/** @nocollapse */ ExampleModule.ɵinj = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, providers: [
+        { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+    ], imports: [EXAMPLE_MODULES,
         CdkPopoverEditExamplesModule,
         CdkA11yExamplesModule,
         CdkClipboardExamplesModule,
@@ -1929,6 +1937,9 @@ ExampleModule.decorators = [
         args: [{
                 imports: EXAMPLE_MODULES,
                 exports: EXAMPLE_MODULES,
+                providers: [
+                    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+                ],
             }]
     }], null, null); })();
 

@@ -10,7 +10,7 @@ import { MatSpinner, MatProgressSpinnerModule } from '@angular/material/progress
 import { MatSort, MatSortHeader, MatSortModule } from '@angular/material/sort';
 import { MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow, MatTableDataSource, MatFooterCellDef, MatFooterRowDef, MatFooterCell, MatFooterRow, MatTextColumn, MatTableModule } from '@angular/material/table';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { MatFormField } from '@angular/material/form-field';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { HttpClient } from '@angular/common/http';
 import { merge, of } from 'rxjs';
 import { startWith, switchMap, map, catchError } from 'rxjs/operators';
@@ -609,7 +609,7 @@ TableExpandableRowsExample.decorators = [
         ɵɵtemplate(3, TableExpandableRowsExample_td_3_Template, 15, 7, "td", 3);
         ɵɵelementContainerEnd();
         ɵɵtemplate(4, TableExpandableRowsExample_tr_4_Template, 1, 0, "tr", 4);
-        ɵɵtemplate(5, TableExpandableRowsExample_tr_5_Template, 1, 1, "tr", 5);
+        ɵɵtemplate(5, TableExpandableRowsExample_tr_5_Template, 1, 2, "tr", 5);
         ɵɵtemplate(6, TableExpandableRowsExample_tr_6_Template, 1, 0, "tr", 6);
         ɵɵelementEnd();
     } if (rf & 2) {
@@ -756,12 +756,12 @@ const ELEMENT_DATA$3 = [
  * Generated from: src/components-examples/material/table/table-filtering/table-filtering-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-function TableFilteringExample_th_4_Template(rf, ctx) { if (rf & 1) {
+function TableFilteringExample_th_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 10);
     ɵɵtext(1, " No. ");
     ɵɵelementEnd();
 } }
-function TableFilteringExample_td_5_Template(rf, ctx) { if (rf & 1) {
+function TableFilteringExample_td_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 11);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -770,12 +770,12 @@ function TableFilteringExample_td_5_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r66.position, " ");
 } }
-function TableFilteringExample_th_7_Template(rf, ctx) { if (rf & 1) {
+function TableFilteringExample_th_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 10);
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } }
-function TableFilteringExample_td_8_Template(rf, ctx) { if (rf & 1) {
+function TableFilteringExample_td_10_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 11);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -784,12 +784,12 @@ function TableFilteringExample_td_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r67.name, " ");
 } }
-function TableFilteringExample_th_10_Template(rf, ctx) { if (rf & 1) {
+function TableFilteringExample_th_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 10);
     ɵɵtext(1, " Weight ");
     ɵɵelementEnd();
 } }
-function TableFilteringExample_td_11_Template(rf, ctx) { if (rf & 1) {
+function TableFilteringExample_td_13_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 11);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -798,12 +798,12 @@ function TableFilteringExample_td_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r68.weight, " ");
 } }
-function TableFilteringExample_th_13_Template(rf, ctx) { if (rf & 1) {
+function TableFilteringExample_th_15_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 10);
     ɵɵtext(1, " Symbol ");
     ɵɵelementEnd();
 } }
-function TableFilteringExample_td_14_Template(rf, ctx) { if (rf & 1) {
+function TableFilteringExample_td_16_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 11);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -812,10 +812,10 @@ function TableFilteringExample_td_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", element_r69.symbol, " ");
 } }
-function TableFilteringExample_tr_15_Template(rf, ctx) { if (rf & 1) {
+function TableFilteringExample_tr_17_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 12);
 } }
-function TableFilteringExample_tr_16_Template(rf, ctx) { if (rf & 1) {
+function TableFilteringExample_tr_18_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 13);
 } }
 /**
@@ -869,40 +869,43 @@ TableFilteringExample.decorators = [
             },] },
 ];
 /** @nocollapse */ TableFilteringExample.ɵfac = function TableFilteringExample_Factory(t) { return new (t || TableFilteringExample)(); };
-/** @nocollapse */ TableFilteringExample.ɵcmp = ɵɵdefineComponent({ type: TableFilteringExample, selectors: [["table-filtering-example"]], decls: 17, vars: 3, consts: [["matInput", "", "placeholder", "Filter", 3, "keyup"], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableFilteringExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TableFilteringExample.ɵcmp = ɵɵdefineComponent({ type: TableFilteringExample, selectors: [["table-filtering-example"]], decls: 19, vars: 3, consts: [["matInput", "", "placeholder", "Ex. ium", 3, "keyup"], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableFilteringExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
-        ɵɵelementStart(1, "input", 0);
-        ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_1_listener($event) { return ctx.applyFilter($event.target.value); });
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Filter");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "input", 0);
+        ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event.target.value); });
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelementStart(2, "table", 1);
-        ɵɵelementContainerStart(3, 2);
-        ɵɵtemplate(4, TableFilteringExample_th_4_Template, 2, 0, "th", 3);
-        ɵɵtemplate(5, TableFilteringExample_td_5_Template, 2, 1, "td", 4);
+        ɵɵelementStart(4, "table", 1);
+        ɵɵelementContainerStart(5, 2);
+        ɵɵtemplate(6, TableFilteringExample_th_6_Template, 2, 0, "th", 3);
+        ɵɵtemplate(7, TableFilteringExample_td_7_Template, 2, 1, "td", 4);
         ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(6, 5);
-        ɵɵtemplate(7, TableFilteringExample_th_7_Template, 2, 0, "th", 3);
-        ɵɵtemplate(8, TableFilteringExample_td_8_Template, 2, 1, "td", 4);
+        ɵɵelementContainerStart(8, 5);
+        ɵɵtemplate(9, TableFilteringExample_th_9_Template, 2, 0, "th", 3);
+        ɵɵtemplate(10, TableFilteringExample_td_10_Template, 2, 1, "td", 4);
         ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(9, 6);
-        ɵɵtemplate(10, TableFilteringExample_th_10_Template, 2, 0, "th", 3);
-        ɵɵtemplate(11, TableFilteringExample_td_11_Template, 2, 1, "td", 4);
+        ɵɵelementContainerStart(11, 6);
+        ɵɵtemplate(12, TableFilteringExample_th_12_Template, 2, 0, "th", 3);
+        ɵɵtemplate(13, TableFilteringExample_td_13_Template, 2, 1, "td", 4);
         ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(12, 7);
-        ɵɵtemplate(13, TableFilteringExample_th_13_Template, 2, 0, "th", 3);
-        ɵɵtemplate(14, TableFilteringExample_td_14_Template, 2, 1, "td", 4);
+        ɵɵelementContainerStart(14, 7);
+        ɵɵtemplate(15, TableFilteringExample_th_15_Template, 2, 0, "th", 3);
+        ɵɵtemplate(16, TableFilteringExample_td_16_Template, 2, 1, "td", 4);
         ɵɵelementContainerEnd();
-        ɵɵtemplate(15, TableFilteringExample_tr_15_Template, 1, 0, "tr", 8);
-        ɵɵtemplate(16, TableFilteringExample_tr_16_Template, 1, 0, "tr", 9);
+        ɵɵtemplate(17, TableFilteringExample_tr_17_Template, 1, 0, "tr", 8);
+        ɵɵtemplate(18, TableFilteringExample_tr_18_Template, 1, 0, "tr", 9);
         ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(2);
+        ɵɵadvance(4);
         ɵɵproperty("dataSource", ctx.dataSource);
         ɵɵadvance(13);
         ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
         ɵɵadvance(1);
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
-    } }, directives: [MatFormField, MatInput, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  font-size: 14px;\n  width: 100%;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  font-size: 14px;\n  width: 100%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableFilteringExample, [{
         type: Component,
         args: [{
@@ -1547,12 +1550,12 @@ if (false) {
  * Generated from: src/components-examples/material/table/table-overview/table-overview-example.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
-function TableOverviewExample_th_5_Template(rf, ctx) { if (rf & 1) {
+function TableOverviewExample_th_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 13);
     ɵɵtext(1, " ID ");
     ɵɵelementEnd();
 } }
-function TableOverviewExample_td_6_Template(rf, ctx) { if (rf & 1) {
+function TableOverviewExample_td_8_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 14);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -1561,12 +1564,12 @@ function TableOverviewExample_td_6_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", row_r128.id, " ");
 } }
-function TableOverviewExample_th_8_Template(rf, ctx) { if (rf & 1) {
+function TableOverviewExample_th_10_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 13);
     ɵɵtext(1, " Progress ");
     ɵɵelementEnd();
 } }
-function TableOverviewExample_td_9_Template(rf, ctx) { if (rf & 1) {
+function TableOverviewExample_td_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 14);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -1575,12 +1578,12 @@ function TableOverviewExample_td_9_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", row_r129.progress, "% ");
 } }
-function TableOverviewExample_th_11_Template(rf, ctx) { if (rf & 1) {
+function TableOverviewExample_th_13_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 13);
     ɵɵtext(1, " Name ");
     ɵɵelementEnd();
 } }
-function TableOverviewExample_td_12_Template(rf, ctx) { if (rf & 1) {
+function TableOverviewExample_td_14_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 14);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -1589,12 +1592,12 @@ function TableOverviewExample_td_12_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", row_r130.name, " ");
 } }
-function TableOverviewExample_th_14_Template(rf, ctx) { if (rf & 1) {
+function TableOverviewExample_th_16_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "th", 13);
     ɵɵtext(1, " Color ");
     ɵɵelementEnd();
 } }
-function TableOverviewExample_td_15_Template(rf, ctx) { if (rf & 1) {
+function TableOverviewExample_td_17_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "td", 14);
     ɵɵtext(1);
     ɵɵelementEnd();
@@ -1604,10 +1607,10 @@ function TableOverviewExample_td_15_Template(rf, ctx) { if (rf & 1) {
     ɵɵadvance(1);
     ɵɵtextInterpolate1(" ", row_r131.color, " ");
 } }
-function TableOverviewExample_tr_16_Template(rf, ctx) { if (rf & 1) {
+function TableOverviewExample_tr_18_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 15);
 } }
-function TableOverviewExample_tr_17_Template(rf, ctx) { if (rf & 1) {
+function TableOverviewExample_tr_19_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(0, "tr", 16);
 } }
 const _c0$2 = function () { return [5, 10, 25, 100]; };
@@ -1694,37 +1697,40 @@ TableOverviewExample.propDecorators = {
         var _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.sort = _t.first);
-    } }, decls: 19, vars: 5, consts: [["matInput", "", "placeholder", "Filter", 3, "keyup"], [1, "mat-elevation-z8"], ["mat-table", "", "matSort", "", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "progress"], ["matColumnDef", "name"], ["matColumnDef", "color"], ["mat-cell", "", 3, "color", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "pageSizeOptions"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableOverviewExample_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 21, vars: 5, consts: [["matInput", "", "placeholder", "Ex. Mia", 3, "keyup"], [1, "mat-elevation-z8"], ["mat-table", "", "matSort", "", 3, "dataSource"], ["matColumnDef", "id"], ["mat-header-cell", "", "mat-sort-header", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "progress"], ["matColumnDef", "name"], ["matColumnDef", "color"], ["mat-cell", "", 3, "color", 4, "matCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "pageSizeOptions"], ["mat-header-cell", "", "mat-sort-header", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableOverviewExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
-        ɵɵelementStart(1, "input", 0);
-        ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_1_listener($event) { return ctx.applyFilter($event.target.value); });
+        ɵɵelementStart(1, "mat-label");
+        ɵɵtext(2, "Filter");
+        ɵɵelementEnd();
+        ɵɵelementStart(3, "input", 0);
+        ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event.target.value); });
         ɵɵelementEnd();
         ɵɵelementEnd();
-        ɵɵelementStart(2, "div", 1);
-        ɵɵelementStart(3, "table", 2);
-        ɵɵelementContainerStart(4, 3);
-        ɵɵtemplate(5, TableOverviewExample_th_5_Template, 2, 0, "th", 4);
-        ɵɵtemplate(6, TableOverviewExample_td_6_Template, 2, 1, "td", 5);
+        ɵɵelementStart(4, "div", 1);
+        ɵɵelementStart(5, "table", 2);
+        ɵɵelementContainerStart(6, 3);
+        ɵɵtemplate(7, TableOverviewExample_th_7_Template, 2, 0, "th", 4);
+        ɵɵtemplate(8, TableOverviewExample_td_8_Template, 2, 1, "td", 5);
         ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(7, 6);
-        ɵɵtemplate(8, TableOverviewExample_th_8_Template, 2, 0, "th", 4);
-        ɵɵtemplate(9, TableOverviewExample_td_9_Template, 2, 1, "td", 5);
+        ɵɵelementContainerStart(9, 6);
+        ɵɵtemplate(10, TableOverviewExample_th_10_Template, 2, 0, "th", 4);
+        ɵɵtemplate(11, TableOverviewExample_td_11_Template, 2, 1, "td", 5);
         ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(10, 7);
-        ɵɵtemplate(11, TableOverviewExample_th_11_Template, 2, 0, "th", 4);
-        ɵɵtemplate(12, TableOverviewExample_td_12_Template, 2, 1, "td", 5);
+        ɵɵelementContainerStart(12, 7);
+        ɵɵtemplate(13, TableOverviewExample_th_13_Template, 2, 0, "th", 4);
+        ɵɵtemplate(14, TableOverviewExample_td_14_Template, 2, 1, "td", 5);
         ɵɵelementContainerEnd();
-        ɵɵelementContainerStart(13, 8);
-        ɵɵtemplate(14, TableOverviewExample_th_14_Template, 2, 0, "th", 4);
-        ɵɵtemplate(15, TableOverviewExample_td_15_Template, 2, 2, "td", 9);
+        ɵɵelementContainerStart(15, 8);
+        ɵɵtemplate(16, TableOverviewExample_th_16_Template, 2, 0, "th", 4);
+        ɵɵtemplate(17, TableOverviewExample_td_17_Template, 2, 3, "td", 9);
         ɵɵelementContainerEnd();
-        ɵɵtemplate(16, TableOverviewExample_tr_16_Template, 1, 0, "tr", 10);
-        ɵɵtemplate(17, TableOverviewExample_tr_17_Template, 1, 0, "tr", 11);
+        ɵɵtemplate(18, TableOverviewExample_tr_18_Template, 1, 0, "tr", 10);
+        ɵɵtemplate(19, TableOverviewExample_tr_19_Template, 1, 0, "tr", 11);
         ɵɵelementEnd();
-        ɵɵelement(18, "mat-paginator", 12);
+        ɵɵelement(20, "mat-paginator", 12);
         ɵɵelementEnd();
     } if (rf & 2) {
-        ɵɵadvance(3);
+        ɵɵadvance(5);
         ɵɵproperty("dataSource", ctx.dataSource);
         ɵɵadvance(13);
         ɵɵproperty("matHeaderRowDef", ctx.displayedColumns);
@@ -1732,7 +1738,7 @@ TableOverviewExample.propDecorators = {
         ɵɵproperty("matRowDefColumns", ctx.displayedColumns);
         ɵɵadvance(1);
         ɵɵproperty("pageSizeOptions", ɵɵpureFunction0(4, _c0$2));
-    } }, directives: [MatFormField, MatInput, MatTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatPaginator, MatHeaderCell, MatSortHeader, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  font-size: 14px;\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%], th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatInput, MatTable, MatSort, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatPaginator, MatHeaderCell, MatSortHeader, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}\n\n.mat-form-field[_ngcontent-%COMP%] {\n  font-size: 14px;\n  width: 100%;\n}\n\ntd[_ngcontent-%COMP%], th[_ngcontent-%COMP%] {\n  width: 25%;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableOverviewExample, [{
         type: Component,
         args: [{

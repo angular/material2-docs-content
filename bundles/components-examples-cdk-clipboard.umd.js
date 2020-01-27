@@ -19,13 +19,6 @@
                 "Unfortunately, he taught his apprentice everything he knew, then his apprentice " +
                 "killed him in his sleep. Ironic. He could save others from death, but not himself.";
         }
-        CdkClipboardOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'cdk-clipboard-overview-example',
-                        templateUrl: 'cdk-clipboard-overview-example.html',
-                        styleUrls: ['cdk-clipboard-overview-example.css'],
-                    },] },
-        ];
         CdkClipboardOverviewExample.ɵfac = function CdkClipboardOverviewExample_Factory(t) { return new (t || CdkClipboardOverviewExample)(); };
         CdkClipboardOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkClipboardOverviewExample, selectors: [["cdk-clipboard-overview-example"]], decls: 5, vars: 2, consts: [["for", "clipboard-example-textarea"], ["id", "clipboard-example-textarea", "cols", "30", "rows", "10", 3, "ngModel", "ngModelChange"], [3, "cdkCopyToClipboard"]], template: function CdkClipboardOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "label", 0);
@@ -58,13 +51,6 @@
     var CdkClipboardExamplesModule = /** @class */ (function () {
         function CdkClipboardExamplesModule() {
         }
-        CdkClipboardExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [i2.ClipboardModule, i1.FormsModule],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                    },] },
-        ];
         CdkClipboardExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
         CdkClipboardExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); }, imports: [[i2.ClipboardModule, i1.FormsModule]] });
         return CdkClipboardExamplesModule;
