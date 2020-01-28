@@ -323,7 +323,8 @@ class CdkDragDropCustomPlaceholderExample {
             'Episode V - The Empire Strikes Back',
             'Episode VI - Return of the Jedi',
             'Episode VII - The Force Awakens',
-            'Episode VIII - The Last Jedi'
+            'Episode VIII - The Last Jedi',
+            'Episode IX – The Rise of Skywalker'
         ];
     }
     /**
@@ -423,6 +424,10 @@ class CdkDragDropCustomPreviewExample {
             {
                 title: 'Episode VIII - The Last Jedi',
                 poster: 'https://upload.wikimedia.org/wikipedia/en/7/7f/Star_Wars_The_Last_Jedi.jpg'
+            },
+            {
+                title: 'Episode IX – The Rise of Skywalker',
+                poster: 'https://upload.wikimedia.org/wikipedia/en/a/af/Star_Wars_The_Rise_of_Skywalker_poster.jpg'
             }
         ];
     }
@@ -1114,7 +1119,8 @@ class CdkDragDropSortingExample {
             'Episode V - The Empire Strikes Back',
             'Episode VI - Return of the Jedi',
             'Episode VII - The Force Awakens',
-            'Episode VIII - The Last Jedi'
+            'Episode VIII - The Last Jedi',
+            'Episode IX – The Rise of Skywalker'
         ];
     }
     /**
