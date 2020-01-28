@@ -214,39 +214,58 @@ from <code>@angular/core</code>. If you want to override it, you can provide a n
         </h4>
       <p>The datepicker was built to be date implementation agnostic. This means that it can be made to work
 with a variety of different date implementations. However it also means that developers need to make
-sure to provide the appropriate pieces for the datepicker to work with their chosen implementation.
-The easiest way to ensure this is just to import one of the pre-made modules:</p>
+sure to provide the appropriate pieces for the datepicker to work with their chosen implementation.</p>
+<p>The easiest way to ensure this is to import one of the provided date modules:</p>
+<p><code>MatNativeDateModule</code></p>
 <table>
-<thead>
-<tr>
-<th>Module</th>
-<th>Date type</th>
-<th>Supported locales</th>
-<th>Dependencies</th>
-<th>Import from</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>MatNativeDateModule</code></td>
-<td><code>Date</code></td>
-<td>en-US</td>
-<td>None</td>
-<td><code>@angular/material</code></td>
-</tr>
-<tr>
-<td><code>MatMomentDateModule</code></td>
-<td><code>Moment</code></td>
-<td><a href="https://github.com/moment/moment/tree/develop/src/locale">See project</a></td>
-<td><a href="https://momentjs.com/">Moment.js</a></td>
-<td><code>@angular/material-moment-adapter</code></td>
-</tr>
-</tbody></table>
-<p><em>Please note: <code>MatNativeDateModule</code> is based off of the functionality available in JavaScript&#39;s
-native <code>Date</code> object, and is thus not suitable for many locales. One of the biggest shortcomings of
-the native <code>Date</code> object is the inability to set the parse format. We highly recommend using the
-<code>MomentDateAdapter</code> or a custom <code>DateAdapter</code> that works with the formatting/parsing library of your
-choice.</em></p>
-<p>These modules include providers for <code>DateAdapter</code> and <code>MAT_DATE_FORMATS</code></p>
+  <tbody>
+  <tr>
+    <th align="left" scope="row">Date type</th>
+    <td><code>Date</code></td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Supported locales</th>
+    <td>en-US</td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Dependencies</th>
+    <td>None</td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Import from</th>
+    <td><code>@angular/material/core</code></td>
+  </tr>
+  </tbody>
+</table>
+
+<p><code>MatMomentDateModule</code></p>
+<table>
+  <tbody>
+  <tr>
+    <th align="left" scope="row">Date type</th>
+    <td><code>Moment</code></td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Supported locales</th>
+    <td><a href="https://github.com/moment/moment/tree/develop/src/locale) for details">See project</a></td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Dependencies</th>
+    <td><a href="https://momentjs.com/">Moment.js</a></td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Import from</th>
+    <td><code>@angular/material-moment-adapter</code></td>
+  </tr>
+  </tbody>
+</table>
+
+<p><em>Please note: <code>MatNativeDateModule</code> is based off the functionality available in JavaScript&#39;s
+native <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date</code> object</a>.
+Thus it is not suitable for many locales. One of the biggest shortcomings of the native <code>Date</code>
+object is the inability to set the parse format. We highly recommend using the <code>MomentDateAdapter</code>
+or a custom <code>DateAdapter</code> that works with the formatting/parsing library of your choice.</em></p>
+<p>These modules include providers for <code>DateAdapter</code> and <code>MAT_DATE_FORMATS</code>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   imports: [MatDatepickerModule, MatNativeDateModule],
 })
@@ -298,7 +317,7 @@ information about <code>MAT_DATE_FORMATS</code>.</p>
           <span header-link="customizing-the-parse-and-display-formats"></span>
           Customizing the parse and display formats
         </h4>
-      <p>The <code>MAT_DATE_FORMATS</code> object is just a collection of formats that the datepicker uses when parsing
+      <p>The <code>MAT_DATE_FORMATS</code> object is a collection of formats that the datepicker uses when parsing
 and displaying dates. These formats are passed through to the <code>DateAdapter</code> so you will want to make
 sure that the format objects you&#39;re using are compatible with the <code>DateAdapter</code> used in your app.</p>
 <p>If you want use one of the <code>DateAdapters</code> that ships with Angular Material, but use your own
