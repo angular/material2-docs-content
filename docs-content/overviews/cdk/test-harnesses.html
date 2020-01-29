@@ -176,7 +176,7 @@ are used to create <code>ComponentHarness</code> instances for elements under th
 for a button that has some particular text, etc). The
 <a href="#filtering-harness-instances-with-harnesspredicate">details of <code>HarnessPredicate</code></a> are discussed in
 the <a href="#api-for-component-harness-authors">API for component harness authors</a>; harness authors should
-provide convenience methods on their <code>ComponentHarness</code> subclass to facilitate creation of
+provide convenience methods on their <code>ComponentHarness</code> subclass to facilitate the creation of
 <code>HarnessPredicate</code> instances. However, if the harness author&#39;s API is not sufficient, they can be
 created manually.</p>
 
@@ -184,13 +184,13 @@ created manually.</p>
           <span header-link="working-with-asynchronous-component-harness-methods"></span>
           Working with asynchronous component harness methods
         </h4>
-      <p>In order to support both unit and end-to-end tests, and to insulate tests against changes in
+      <p>To support both unit and end-to-end tests, and to insulate tests against changes in
 asynchronous behavior, almost all harness methods are asynchronous and return a <code>Promise</code>;
 therefore, the Angular team recommends using 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">ES2017 <code>async</code>/<code>await</code> syntax</a>
 to improve the test readability.</p>
 <p>Note that <code>await</code> statements block the execution of your test until the associated <code>Promise</code>
-resolves. When reading multiple properties off a harness it may not be necessary to block on the
+resolves. When reading multiple properties of a harness it may not be necessary to block on the
 first before asking for the next, in these cases use <code>Promise.all</code> to parallelize.</p>
 <p>For example, consider the following example of reading both the <code>checked</code> and <code>indeterminate</code> state
 off of a checkbox harness:</p>
@@ -220,7 +220,7 @@ common components for a large Angular application.</p>
       <p>The abstract <code>ComponentHarness</code> class is the base class for all component harnesses. To create a
 custom component harness, extend <code>ComponentHarness</code> and implement the static property
 <code>hostSelector</code>. The <code>hostSelector</code> property identifies elements in the DOM that match this harness
-subclass. In most cases the <code>hostSelector</code> should be the same as the <code>selector</code> of the corresponding
+subclass. In most cases, the <code>hostSelector</code> should be the same as the <code>selector</code> of the corresponding
 <code>Component</code> or <code>Directive</code>. For example, consider a simple popup component:</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'my-popup'</span>,
@@ -370,7 +370,7 @@ environments.</p>
 unless its an element the component consumer defines directly (e.g. the host element). Exposing
 <code>TestElement</code> instances for internal elements leads users to depend on a component&#39;s internal DOM
 structure.</p>
-<p>Instead, provide more narrow-focused methods for particular actions the end user will
+<p>Instead, provide more narrow-focused methods for particular actions the end-user will
 take or particular state they may want to check. For example, <code>MyPopupHarness</code> could provide methods
 like <code>toggle</code> and <code>isOpen</code>:</p>
 <pre><code class="language-ts"><span class="hljs-keyword">class</span> MyPopupHarness <span class="hljs-keyword">extends</span> ComponentHarness {
@@ -419,7 +419,7 @@ earlier has an alternate signature that can be used for locating sub-harnesses r
 <td>Creates a function that returns a <code>Promise</code> for a list of all harnesses matching the given harness type when called.</td>
 </tr>
 </tbody></table>
-<p>For example consider a menu build using the popup shown above:</p>
+<p>For example, consider a menu build using the popup shown above:</p>
 <pre><code class="language-ts"><span class="hljs-meta">@Component</span>({
   selector: <span class="hljs-string">'my-menu'</span>,
   template: <span class="hljs-string">`
@@ -608,10 +608,8 @@ that users may want to load harnesses for. <code>MyPopupHarness</code> could add
           <span header-link="accessing-elements-outside-of-the-component-39-s-host-element"></span>
           Accessing elements outside of the component&#39;s host element
         </h4>
-      <p>There are times when a component harness might need to access elements outside of it&#39;s corresponding
-component&#39;s host element. A good example of this is components that use the
-<a href="https://material.angular.io/cdk/overlay/overview">CDK overlay</a>. The CDK overlay creates an element
-that is attached directly to the body, outside of the component&#39;s host element. In this case,
+      <p>There are times when a component harness might need to access elements outside of its corresponding
+component&#39;s host element. Components that use <a href="https://material.angular.io/cdk/overlay/overview">CDK overlay</a> serve as examples of this. The CDK overlay creates an element that is attached directly to the body, outside of the component&#39;s host element. In this case,
 <code>ComponentHarness</code> provides a method that can be used to get a <code>LocatorFactory</code> for the root element
 of the document. The <code>LocatorFactory</code> supports most of the same APIs as the <code>ComponentHarness</code> base
 class, and can then be used to query relative to the document&#39;s root element.</p>
@@ -651,8 +649,8 @@ asynchronous tasks. However, there are some edge cases where this may not be suf
 subsequent <code>NgZone</code> stabilization before animation events are fully flushed. In cases where this is
 needed, the <code>ComponentHarness</code> offers a <code>forceStabilize()</code> method that can be called to do the
 second round.</p>
-<p>Additionally some components may intentionally schedule tasks <em>outside</em> of <code>NgZone</code>, this is
-typically accomplished by using <code>NgZone.runOutsideAngular</code>. In this case the corresponding harness
+<p>Additionally, some components may intentionally schedule tasks <em>outside</em> of <code>NgZone</code>, this is
+typically accomplished by using <code>NgZone.runOutsideAngular</code>. In this case, the corresponding harness
 may need to explicitly wait for tasks outside <code>NgZone</code>, as this does not happen automatically.
 <code>ComponentHarness</code> offers a method called <code>waitForTasksOutsideAngular</code> for this purpose.</p>
 <table>
@@ -689,7 +687,7 @@ creating custom implementations of <code>TestElement</code> and <code>HarnessEnv
 implementation. The <code>TestElement</code> interface serves as an environment-agnostic representation of a
 DOM element; it lets harnesses interact with DOM elements regardless of the underlying environment.
 Because some environments don&#39;t support interacting with DOM elements synchronously
-(e.g. webdriver), all of <code>TestElement</code> methods are asynchronous, returning a <code>Promise</code> with the
+(e.g. webdriver), all of the <code>TestElement</code> methods are asynchronous, returning a <code>Promise</code> with the
 result of the operation.</p>
 <table>
 <thead>
@@ -774,7 +772,7 @@ implementations in Angular CDK serve as good examples of implementations of this
       <p>Test authors use <code>HarnessEnvironemnt</code> to create component harness instances for use in tests. </p>
 <p><code>HarnessEnvironment</code> is an abstract class that must be extended to create a concrete subclass for
 the new environment. When supporting a new test environment, you must create a <code>HarnessEnvironment</code>
-subclass that add concrete implementations for all abstract members.</p>
+subclass that adds concrete implementations for all abstract members.</p>
 <p>You will notice that <code>HarnessEnvironment</code> has a generic type parameter: <code>HarnessEnvironment&lt;E&gt;</code>.
 This parameter, <code>E</code>, represents the raw element type of the environment. For example, this parameter
 is <code>Element</code> for unit test environments.</p>
