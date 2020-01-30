@@ -12,7 +12,7 @@ export interface PeriodicElement {
 export declare class TableFilteringExample {
     displayedColumns: string[];
     dataSource: MatTableDataSource<PeriodicElement>;
-    applyFilter(filterValue: string): void;
+    applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDef<TableFilteringExample>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<TableFilteringExample, "table-filtering-example", never, {}, {}, never>;
 }

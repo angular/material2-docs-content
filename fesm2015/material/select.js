@@ -1387,6 +1387,13 @@ class SelectInitialValueExample {
         this.selectedFood = this.foods[2].value;
         this.selectedCar = this.cars[0].value;
     }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    selectCar(event) {
+        this.selectedCar = ((/** @type {?} */ (event.target))).value;
+    }
 }
 SelectInitialValueExample.decorators = [
     { type: Component, args: [{
@@ -1421,7 +1428,7 @@ SelectInitialValueExample.decorators = [
         ɵɵtext(14, "Favorite Car");
         ɵɵelementEnd();
         ɵɵelementStart(15, "select", 2);
-        ɵɵlistener("change", function SelectInitialValueExample_Template_select_change_15_listener($event) { return ctx.selectedCar = $event.target.value; });
+        ɵɵlistener("change", function SelectInitialValueExample_Template_select_change_15_listener($event) { return ctx.selectCar($event); });
         ɵɵelement(16, "option", 3);
         ɵɵtemplate(17, SelectInitialValueExample_option_17_Template, 2, 3, "option", 4);
         ɵɵelementEnd();

@@ -854,10 +854,12 @@ class TableFilteringExample {
         this.dataSource = new MatTableDataSource(ELEMENT_DATA$4);
     }
     /**
-     * @param {?} filterValue
+     * @param {?} event
      * @return {?}
      */
-    applyFilter(filterValue) {
+    applyFilter(event) {
+        /** @type {?} */
+        const filterValue = ((/** @type {?} */ (event.target))).value;
         this.dataSource.filter = filterValue.trim().toLowerCase();
     }
 }
@@ -875,7 +877,7 @@ TableFilteringExample.decorators = [
         ɵɵtext(2, "Filter");
         ɵɵelementEnd();
         ɵɵelementStart(3, "input", 0);
-        ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event.target.value); });
+        ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementStart(4, "table", 1);
@@ -1666,10 +1668,12 @@ class TableOverviewExample {
         this.dataSource.sort = this.sort;
     }
     /**
-     * @param {?} filterValue
+     * @param {?} event
      * @return {?}
      */
-    applyFilter(filterValue) {
+    applyFilter(event) {
+        /** @type {?} */
+        const filterValue = ((/** @type {?} */ (event.target))).value;
         this.dataSource.filter = filterValue.trim().toLowerCase();
         if (this.dataSource.paginator) {
             this.dataSource.paginator.firstPage();
@@ -1703,7 +1707,7 @@ TableOverviewExample.propDecorators = {
         ɵɵtext(2, "Filter");
         ɵɵelementEnd();
         ɵɵelementStart(3, "input", 0);
-        ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event.target.value); });
+        ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementStart(4, "div", 1);

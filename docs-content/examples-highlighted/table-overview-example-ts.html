@@ -48,7 +48,8 @@
     <span class="hljs-keyword">this</span>.dataSource.sort = <span class="hljs-keyword">this</span>.sort;
   }
 
-  applyFilter(filterValue: <span class="hljs-built_in">string</span>) {
+  applyFilter(event: Event) {
+    <span class="hljs-keyword">const</span> filterValue = (event.target <span class="hljs-keyword">as</span> HTMLInputElement).value;
     <span class="hljs-keyword">this</span>.dataSource.filter = filterValue.trim().toLowerCase();
 
     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.dataSource.paginator) {

@@ -19,7 +19,7 @@ export declare class TableOverviewExample implements OnInit {
     sort: MatSort;
     constructor();
     ngOnInit(): void;
-    applyFilter(filterValue: string): void;
+    applyFilter(event: Event): void;
     static ɵfac: i0.ɵɵFactoryDef<TableOverviewExample>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<TableOverviewExample, "table-overview-example", never, {}, {}, never>;
 }

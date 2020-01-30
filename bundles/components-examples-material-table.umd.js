@@ -649,7 +649,8 @@
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new i1$1.MatTableDataSource(ELEMENT_DATA$4);
         }
-        TableFilteringExample.prototype.applyFilter = function (filterValue) {
+        TableFilteringExample.prototype.applyFilter = function (event) {
+            var filterValue = event.target.value;
             this.dataSource.filter = filterValue.trim().toLowerCase();
         };
         TableFilteringExample.ɵfac = function TableFilteringExample_Factory(t) { return new (t || TableFilteringExample)(); };
@@ -659,7 +660,7 @@
                 i0.ɵɵtext(2, "Filter");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "input", 0);
-                i0.ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event.target.value); });
+                i0.ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(4, "table", 1);
@@ -1238,7 +1239,8 @@
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;
         };
-        TableOverviewExample.prototype.applyFilter = function (filterValue) {
+        TableOverviewExample.prototype.applyFilter = function (event) {
+            var filterValue = event.target.value;
             this.dataSource.filter = filterValue.trim().toLowerCase();
             if (this.dataSource.paginator) {
                 this.dataSource.paginator.firstPage();
@@ -1258,7 +1260,7 @@
                 i0.ɵɵtext(2, "Filter");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "input", 0);
-                i0.ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event.target.value); });
+                i0.ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(4, "div", 1);
