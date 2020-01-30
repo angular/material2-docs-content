@@ -33,7 +33,8 @@
   displayedColumns: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">'position'</span>, <span class="hljs-string">'name'</span>, <span class="hljs-string">'weight'</span>, <span class="hljs-string">'symbol'</span>];
   dataSource = <span class="hljs-keyword">new</span> MatTableDataSource(ELEMENT_DATA);
 
-  applyFilter(filterValue: <span class="hljs-built_in">string</span>) {
+  applyFilter(event: Event) {
+    <span class="hljs-keyword">const</span> filterValue = (event.target <span class="hljs-keyword">as</span> HTMLInputElement).value;
     <span class="hljs-keyword">this</span>.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }

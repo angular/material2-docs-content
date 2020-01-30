@@ -661,7 +661,8 @@ var TableFilteringExample = /** @class */ (function () {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = new MatTableDataSource(ELEMENT_DATA$4);
     }
-    TableFilteringExample.prototype.applyFilter = function (filterValue) {
+    TableFilteringExample.prototype.applyFilter = function (event) {
+        var filterValue = event.target.value;
         this.dataSource.filter = filterValue.trim().toLowerCase();
     };
     TableFilteringExample.ɵfac = function TableFilteringExample_Factory(t) { return new (t || TableFilteringExample)(); };
@@ -671,7 +672,7 @@ var TableFilteringExample = /** @class */ (function () {
             ɵɵtext(2, "Filter");
             ɵɵelementEnd();
             ɵɵelementStart(3, "input", 0);
-            ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event.target.value); });
+            ɵɵlistener("keyup", function TableFilteringExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(4, "table", 1);
@@ -1250,7 +1251,8 @@ var TableOverviewExample = /** @class */ (function () {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
     };
-    TableOverviewExample.prototype.applyFilter = function (filterValue) {
+    TableOverviewExample.prototype.applyFilter = function (event) {
+        var filterValue = event.target.value;
         this.dataSource.filter = filterValue.trim().toLowerCase();
         if (this.dataSource.paginator) {
             this.dataSource.paginator.firstPage();
@@ -1270,7 +1272,7 @@ var TableOverviewExample = /** @class */ (function () {
             ɵɵtext(2, "Filter");
             ɵɵelementEnd();
             ɵɵelementStart(3, "input", 0);
-            ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event.target.value); });
+            ɵɵlistener("keyup", function TableOverviewExample_Template_input_keyup_3_listener($event) { return ctx.applyFilter($event); });
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(4, "div", 1);

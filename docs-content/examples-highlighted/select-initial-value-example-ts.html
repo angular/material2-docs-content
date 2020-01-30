@@ -31,4 +31,8 @@
   ];
   selectedFood = <span class="hljs-keyword">this</span>.foods[<span class="hljs-number">2</span>].value;
   selectedCar = <span class="hljs-keyword">this</span>.cars[<span class="hljs-number">0</span>].value;
+
+  selectCar(event: Event) {
+    <span class="hljs-keyword">this</span>.selectedCar = (event.target <span class="hljs-keyword">as</span> HTMLSelectElement).value;
+  }
 }

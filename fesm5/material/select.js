@@ -1033,6 +1033,9 @@ var SelectInitialValueExample = /** @class */ (function () {
         this.selectedFood = this.foods[2].value;
         this.selectedCar = this.cars[0].value;
     }
+    SelectInitialValueExample.prototype.selectCar = function (event) {
+        this.selectedCar = event.target.value;
+    };
     SelectInitialValueExample.ɵfac = function SelectInitialValueExample_Factory(t) { return new (t || SelectInitialValueExample)(); };
     SelectInitialValueExample.ɵcmp = ɵɵdefineComponent({ type: SelectInitialValueExample, selectors: [["select-initial-value-example"]], decls: 20, vars: 5, consts: [[3, "value", "valueChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", 3, "change"], ["value", ""], [3, "value", "selected", 4, "ngFor", "ngForOf"], [3, "value"], [3, "value", "selected"]], template: function SelectInitialValueExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h4");
@@ -1059,7 +1062,7 @@ var SelectInitialValueExample = /** @class */ (function () {
             ɵɵtext(14, "Favorite Car");
             ɵɵelementEnd();
             ɵɵelementStart(15, "select", 2);
-            ɵɵlistener("change", function SelectInitialValueExample_Template_select_change_15_listener($event) { return ctx.selectedCar = $event.target.value; });
+            ɵɵlistener("change", function SelectInitialValueExample_Template_select_change_15_listener($event) { return ctx.selectCar($event); });
             ɵɵelement(16, "option", 3);
             ɵɵtemplate(17, SelectInitialValueExample_option_17_Template, 2, 3, "option", 4);
             ɵɵelementEnd();
