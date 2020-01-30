@@ -1,4 +1,4 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { CdkCopyToClipboard, ClipboardModule } from '@angular/cdk/clipboard';
 
@@ -17,6 +17,13 @@ var CdkClipboardOverviewExample = /** @class */ (function () {
             "Unfortunately, he taught his apprentice everything he knew, then his apprentice " +
             "killed him in his sleep. Ironic. He could save others from death, but not himself.";
     }
+    CdkClipboardOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'cdk-clipboard-overview-example',
+                    templateUrl: 'cdk-clipboard-overview-example.html',
+                    styleUrls: ['cdk-clipboard-overview-example.css'],
+                },] },
+    ];
     CdkClipboardOverviewExample.ɵfac = function CdkClipboardOverviewExample_Factory(t) { return new (t || CdkClipboardOverviewExample)(); };
     CdkClipboardOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkClipboardOverviewExample, selectors: [["cdk-clipboard-overview-example"]], decls: 5, vars: 2, consts: [["for", "clipboard-example-textarea"], ["id", "clipboard-example-textarea", "cols", "30", "rows", "10", 3, "ngModel", "ngModelChange"], [3, "cdkCopyToClipboard"]], template: function CdkClipboardOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "label", 0);
@@ -49,6 +56,13 @@ var EXAMPLES = [CdkClipboardOverviewExample];
 var CdkClipboardExamplesModule = /** @class */ (function () {
     function CdkClipboardExamplesModule() {
     }
+    CdkClipboardExamplesModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [ClipboardModule, FormsModule],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                },] },
+    ];
     CdkClipboardExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
     CdkClipboardExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkClipboardExamplesModule_Factory(t) { return new (t || CdkClipboardExamplesModule)(); }, imports: [[ClipboardModule, FormsModule]] });
     return CdkClipboardExamplesModule;

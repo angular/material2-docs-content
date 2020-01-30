@@ -1,4 +1,4 @@
-import { ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵɵrestoreView, ɵɵreference, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ViewChild, ɵɵtextInterpolate1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { Component, ViewChild, ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵɵrestoreView, ɵɵreference, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, ɵɵtextInterpolate1, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatDatepickerInput, MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
 import { MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelDescription, MatExpansionPanelActionRow, MatExpansionModule } from '@angular/material/expansion';
@@ -12,6 +12,16 @@ import { MatFormField, MatLabel } from '@angular/material/form-field';
 var ExpansionExpandCollapseAllExample = /** @class */ (function () {
     function ExpansionExpandCollapseAllExample() {
     }
+    ExpansionExpandCollapseAllExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'expansion-toggle-all-example',
+                    templateUrl: 'expansion-expand-collapse-all-example.html',
+                    styleUrls: ['expansion-expand-collapse-all-example.css'],
+                },] },
+    ];
+    ExpansionExpandCollapseAllExample.propDecorators = {
+        accordion: [{ type: ViewChild, args: [MatAccordion,] }]
+    };
     ExpansionExpandCollapseAllExample.ɵfac = function ExpansionExpandCollapseAllExample_Factory(t) { return new (t || ExpansionExpandCollapseAllExample)(); };
     ExpansionExpandCollapseAllExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionExpandCollapseAllExample, selectors: [["expansion-toggle-all-example"]], viewQuery: function ExpansionExpandCollapseAllExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵviewQuery(MatAccordion, true);
@@ -124,6 +134,13 @@ var ExpansionOverviewExample = /** @class */ (function () {
     function ExpansionOverviewExample() {
         this.panelOpenState = false;
     }
+    ExpansionOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'expansion-overview-example',
+                    templateUrl: 'expansion-overview-example.html',
+                    styleUrls: ['expansion-overview-example.css'],
+                },] },
+    ];
     ExpansionOverviewExample.ɵfac = function ExpansionOverviewExample_Factory(t) { return new (t || ExpansionOverviewExample)(); };
     ExpansionOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionOverviewExample, selectors: [["expansion-overview-example"]], decls: 23, vars: 1, consts: [["matInput", ""], ["matInput", "", "type", "number", "min", "1"], [3, "opened", "closed"]], template: function ExpansionOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-accordion");
@@ -195,6 +212,13 @@ var ExpansionStepsExample = /** @class */ (function () {
     ExpansionStepsExample.prototype.prevStep = function () {
         this.step--;
     };
+    ExpansionStepsExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'expansion-steps-example',
+                    templateUrl: 'expansion-steps-example.html',
+                    styleUrls: ['expansion-steps-example.css'],
+                },] },
+    ];
     ExpansionStepsExample.ɵfac = function ExpansionStepsExample_Factory(t) { return new (t || ExpansionStepsExample)(); };
     ExpansionStepsExample.ɵcmp = ɵɵdefineComponent({ type: ExpansionStepsExample, selectors: [["expansion-steps-example"]], decls: 56, vars: 4, consts: [[1, "example-headers-align"], ["hideToggle", "", 3, "expanded", "opened"], ["matInput", ""], ["matInput", "", "type", "number", "min", "1"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", "color", "warn", 3, "click"], ["matInput", "", "readonly", "", 3, "matDatepicker", "focus"], ["picker", ""]], template: function ExpansionStepsExample_Template(rf, ctx) { if (rf & 1) {
             var _r3 = ɵɵgetCurrentView();
@@ -325,6 +349,18 @@ var EXAMPLES = [
 var ExpansionExamplesModule = /** @class */ (function () {
     function ExpansionExamplesModule() {
     }
+    ExpansionExamplesModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [
+                        MatButtonModule,
+                        MatDatepickerModule,
+                        MatExpansionModule,
+                        MatIconModule,
+                        MatInputModule,
+                    ],
+                    declarations: EXAMPLES,
+                },] },
+    ];
     ExpansionExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ExpansionExamplesModule });
     ExpansionExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ExpansionExamplesModule_Factory(t) { return new (t || ExpansionExamplesModule)(); }, imports: [[
                 MatButtonModule,

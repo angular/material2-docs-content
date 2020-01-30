@@ -20,6 +20,20 @@
             this.componentPortal = new i1.ComponentPortal(ComponentPortalExample);
             this.templatePortal = new i1.TemplatePortal(this.templatePortalContent, this._viewContainerRef);
         };
+        CdkPortalOverviewExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'cdk-portal-overview-example',
+                        templateUrl: 'cdk-portal-overview-example.html',
+                        styleUrls: ['cdk-portal-overview-example.css'],
+                    },] },
+        ];
+        /** @nocollapse */
+        CdkPortalOverviewExample.ctorParameters = function () { return [
+            { type: i0.ViewContainerRef }
+        ]; };
+        CdkPortalOverviewExample.propDecorators = {
+            templatePortalContent: [{ type: i0.ViewChild, args: ['templatePortalContent',] }]
+        };
         CdkPortalOverviewExample.ɵfac = function CdkPortalOverviewExample_Factory(t) { return new (t || CdkPortalOverviewExample)(i0.ɵɵdirectiveInject(i0.ViewContainerRef)); };
         CdkPortalOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkPortalOverviewExample, selectors: [["cdk-portal-overview-example"]], viewQuery: function CdkPortalOverviewExample_Query(rf, ctx) { if (rf & 1) {
                 i0.ɵɵviewQuery(_c0, true);
@@ -62,6 +76,12 @@
     var ComponentPortalExample = /** @class */ (function () {
         function ComponentPortalExample() {
         }
+        ComponentPortalExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'component-portal-example',
+                        template: 'Hello, this is a component portal'
+                    },] },
+        ];
         ComponentPortalExample.ɵfac = function ComponentPortalExample_Factory(t) { return new (t || ComponentPortalExample)(); };
         ComponentPortalExample.ɵcmp = i0.ɵɵdefineComponent({ type: ComponentPortalExample, selectors: [["component-portal-example"]], decls: 1, vars: 0, template: function ComponentPortalExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵtext(0, "Hello, this is a component portal");
@@ -83,6 +103,16 @@
     var CdkPortalExamplesModule = /** @class */ (function () {
         function CdkPortalExamplesModule() {
         }
+        CdkPortalExamplesModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: [
+                            i1.PortalModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: [ComponentPortalExample]
+                    },] },
+        ];
         CdkPortalExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkPortalExamplesModule });
         CdkPortalExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkPortalExamplesModule_Factory(t) { return new (t || CdkPortalExamplesModule)(); }, imports: [[
                     i1.PortalModule,

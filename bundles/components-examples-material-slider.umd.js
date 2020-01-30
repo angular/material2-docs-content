@@ -49,6 +49,13 @@
         SliderConfigurableExample.prototype.getSliderTickInterval = function () {
             return this.showTicks ? (this.autoTicks ? 'auto' : this.tickInterval) : 0;
         };
+        SliderConfigurableExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'slider-configurable-example',
+                        templateUrl: 'slider-configurable-example.html',
+                        styleUrls: ['slider-configurable-example.css'],
+                    },] },
+        ];
         SliderConfigurableExample.ɵfac = function SliderConfigurableExample_Factory(t) { return new (t || SliderConfigurableExample)(); };
         SliderConfigurableExample.ɵcmp = i0.ɵɵdefineComponent({ type: SliderConfigurableExample, selectors: [["slider-configurable-example"]], decls: 42, vars: 20, consts: [[1, "example-h2"], [1, "example-section"], [1, "example-margin"], ["matInput", "", "type", "number", 3, "ngModel", "ngModelChange"], [1, "example-margin", 3, "ngModel", "ngModelChange"], ["class", "example-margin", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["class", "example-margin", 4, "ngIf"], [1, "example-result-card"], [1, "example-margin", 3, "disabled", "invert", "max", "min", "step", "thumbLabel", "tickInterval", "ngModel", "vertical", "ngModelChange"]], template: function SliderConfigurableExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-card");
@@ -181,6 +188,13 @@
             }
             return value;
         };
+        SliderFormattingExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'slider-formatting-example',
+                        templateUrl: 'slider-formatting-example.html',
+                        styleUrls: ['slider-formatting-example.css'],
+                    },] },
+        ];
         SliderFormattingExample.ɵfac = function SliderFormattingExample_Factory(t) { return new (t || SliderFormattingExample)(); };
         SliderFormattingExample.ɵcmp = i0.ɵɵdefineComponent({ type: SliderFormattingExample, selectors: [["slider-formatting-example"]], decls: 1, vars: 1, consts: [["thumbLabel", "", "tickInterval", "1000", "min", "1", "max", "100000", 3, "displayWith"]], template: function SliderFormattingExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-slider", 0);
@@ -204,6 +218,13 @@
     var SliderOverviewExample = /** @class */ (function () {
         function SliderOverviewExample() {
         }
+        SliderOverviewExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'slider-overview-example',
+                        templateUrl: 'slider-overview-example.html',
+                        styleUrls: ['slider-overview-example.css'],
+                    },] },
+        ];
         SliderOverviewExample.ɵfac = function SliderOverviewExample_Factory(t) { return new (t || SliderOverviewExample)(); };
         SliderOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: SliderOverviewExample, selectors: [["slider-overview-example"]], decls: 1, vars: 0, template: function SliderOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-slider");
@@ -227,6 +248,20 @@
     var SliderExamplesModule = /** @class */ (function () {
         function SliderExamplesModule() {
         }
+        SliderExamplesModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: [
+                            i6.CommonModule,
+                            i4.FormsModule,
+                            i1.MatCardModule,
+                            i5.MatCheckboxModule,
+                            i3.MatInputModule,
+                            i1$1.MatSliderModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                    },] },
+        ];
         SliderExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SliderExamplesModule });
         SliderExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function SliderExamplesModule_Factory(t) { return new (t || SliderExamplesModule)(); }, imports: [[
                     i6.CommonModule,

@@ -10,6 +10,13 @@
     var DividerOverviewExample = /** @class */ (function () {
         function DividerOverviewExample() {
         }
+        DividerOverviewExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'divider-overview-example',
+                        templateUrl: 'divider-overview-example.html',
+                        styleUrls: ['divider-overview-example.css'],
+                    },] },
+        ];
         DividerOverviewExample.ɵfac = function DividerOverviewExample_Factory(t) { return new (t || DividerOverviewExample)(); };
         DividerOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DividerOverviewExample, selectors: [["divider-overview-example"]], decls: 9, vars: 0, template: function DividerOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-list");
@@ -43,6 +50,15 @@
     var DividerExamplesModule = /** @class */ (function () {
         function DividerExamplesModule() {
         }
+        DividerExamplesModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: [
+                            i2.MatDividerModule,
+                            i1.MatListModule,
+                        ],
+                        declarations: EXAMPLES,
+                    },] },
+        ];
         DividerExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: DividerExamplesModule });
         DividerExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function DividerExamplesModule_Factory(t) { return new (t || DividerExamplesModule)(); }, imports: [[
                     i2.MatDividerModule,

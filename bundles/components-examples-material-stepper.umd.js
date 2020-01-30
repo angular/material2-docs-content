@@ -29,6 +29,17 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
+        StepperEditableExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'stepper-editable-example',
+                        templateUrl: 'stepper-editable-example.html',
+                        styleUrls: ['stepper-editable-example.css']
+                    },] },
+        ];
+        /** @nocollapse */
+        StepperEditableExample.ctorParameters = function () { return [
+            { type: i1.FormBuilder }
+        ]; };
         StepperEditableExample.ɵfac = function StepperEditableExample_Factory(t) { return new (t || StepperEditableExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
         StepperEditableExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperEditableExample, selectors: [["stepper-editable-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl", "editable"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "formControlName", "firstCtrl", "placeholder", "Last name, First name", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperEditableExample_Template(rf, ctx) { if (rf & 1) {
                 var _r4 = i0.ɵɵgetCurrentView();
@@ -135,6 +146,20 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
+        StepperErrorsExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'stepper-errors-example',
+                        templateUrl: 'stepper-errors-example.html',
+                        styleUrls: ['stepper-errors-example.css'],
+                        providers: [{
+                                provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
+                            }]
+                    },] },
+        ];
+        /** @nocollapse */
+        StepperErrorsExample.ctorParameters = function () { return [
+            { type: i1.FormBuilder }
+        ]; };
         StepperErrorsExample.ɵfac = function StepperErrorsExample_Factory(t) { return new (t || StepperErrorsExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
         StepperErrorsExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperErrorsExample, selectors: [["stepper-errors-example"]], features: [i0.ɵɵProvidersFeature([{
                         provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { showError: true }
@@ -240,6 +265,17 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
+        StepperLabelPositionBottomExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'stepper-label-position-bottom-example',
+                        templateUrl: 'stepper-label-position-bottom-example.html',
+                        styleUrls: ['stepper-label-position-bottom-example.css'],
+                    },] },
+        ];
+        /** @nocollapse */
+        StepperLabelPositionBottomExample.ctorParameters = function () { return [
+            { type: i1.FormBuilder }
+        ]; };
         StepperLabelPositionBottomExample.ɵfac = function StepperLabelPositionBottomExample_Factory(t) { return new (t || StepperLabelPositionBottomExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
         StepperLabelPositionBottomExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperLabelPositionBottomExample, selectors: [["stepper-label-position-bottom-example"]], decls: 33, vars: 4, consts: [["labelPosition", "bottom"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["optional", "", 3, "stepControl"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperLabelPositionBottomExample_Template(rf, ctx) { if (rf & 1) {
                 var _r14 = i0.ɵɵgetCurrentView();
@@ -341,6 +377,17 @@
                 secondCtrl: ''
             });
         };
+        StepperOptionalExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'stepper-optional-example',
+                        templateUrl: 'stepper-optional-example.html',
+                        styleUrls: ['stepper-optional-example.css']
+                    },] },
+        ];
+        /** @nocollapse */
+        StepperOptionalExample.ctorParameters = function () { return [
+            { type: i1.FormBuilder }
+        ]; };
         StepperOptionalExample.ɵfac = function StepperOptionalExample_Factory(t) { return new (t || StepperOptionalExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
         StepperOptionalExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperOptionalExample, selectors: [["stepper-optional-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], [3, "stepControl", "optional"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOptionalExample_Template(rf, ctx) { if (rf & 1) {
                 var _r19 = i0.ɵɵgetCurrentView();
@@ -448,6 +495,17 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
+        StepperOverviewExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'stepper-overview-example',
+                        templateUrl: 'stepper-overview-example.html',
+                        styleUrls: ['stepper-overview-example.css'],
+                    },] },
+        ];
+        /** @nocollapse */
+        StepperOverviewExample.ctorParameters = function () { return [
+            { type: i1.FormBuilder }
+        ]; };
         StepperOverviewExample.ɵfac = function StepperOverviewExample_Factory(t) { return new (t || StepperOverviewExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
         StepperOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperOverviewExample, selectors: [["stepper-overview-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 var _r24 = i0.ɵɵgetCurrentView();
@@ -566,6 +624,20 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
+        StepperStatesExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'stepper-states-example',
+                        templateUrl: 'stepper-states-example.html',
+                        styleUrls: ['stepper-states-example.css'],
+                        providers: [{
+                                provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
+                            }]
+                    },] },
+        ];
+        /** @nocollapse */
+        StepperStatesExample.ctorParameters = function () { return [
+            { type: i1.FormBuilder }
+        ]; };
         StepperStatesExample.ɵfac = function StepperStatesExample_Factory(t) { return new (t || StepperStatesExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
         StepperStatesExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperStatesExample, selectors: [["stepper-states-example"]], features: [i0.ɵɵProvidersFeature([{
                         provide: stepper.STEPPER_GLOBAL_OPTIONS, useValue: { displayDefaultIndicatorType: false }
@@ -704,6 +776,17 @@
                 secondCtrl: ['', i1.Validators.required]
             });
         };
+        StepperVerticalExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'stepper-vertical-example',
+                        templateUrl: 'stepper-vertical-example.html',
+                        styleUrls: ['stepper-vertical-example.css']
+                    },] },
+        ];
+        /** @nocollapse */
+        StepperVerticalExample.ctorParameters = function () { return [
+            { type: i1.FormBuilder }
+        ]; };
         StepperVerticalExample.ɵfac = function StepperVerticalExample_Factory(t) { return new (t || StepperVerticalExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
         StepperVerticalExample.ɵcmp = i0.ɵɵdefineComponent({ type: StepperVerticalExample, selectors: [["stepper-vertical-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperVerticalExample_Template(rf, ctx) { if (rf & 1) {
                 var _r36 = i0.ɵɵgetCurrentView();
@@ -800,6 +883,19 @@
     var StepperExamplesModule = /** @class */ (function () {
         function StepperExamplesModule() {
         }
+        StepperExamplesModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: [
+                            i2.MatButtonModule,
+                            i6.MatIconModule,
+                            i5.MatInputModule,
+                            i3.MatStepperModule,
+                            i1.ReactiveFormsModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                    },] },
+        ];
         StepperExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: StepperExamplesModule });
         StepperExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function StepperExamplesModule_Factory(t) { return new (t || StepperExamplesModule)(); }, imports: [[
                     i2.MatButtonModule,

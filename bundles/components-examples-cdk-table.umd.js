@@ -86,6 +86,13 @@
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new ExampleDataSource();
         }
+        CdkTableBasicFlexExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'cdk-table-basic-flex-example',
+                        styleUrls: ['cdk-table-basic-flex-example.css'],
+                        templateUrl: 'cdk-table-basic-flex-example.html',
+                    },] },
+        ];
         CdkTableBasicFlexExample.ɵfac = function CdkTableBasicFlexExample_Factory(t) { return new (t || CdkTableBasicFlexExample)(); };
         CdkTableBasicFlexExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkTableBasicFlexExample, selectors: [["cdk-table-basic-flex-example"]], decls: 15, vars: 3, consts: [[3, "dataSource"], ["cdkColumnDef", "position"], [4, "cdkHeaderCellDef"], [4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], [4, "cdkHeaderRowDef"], [4, "cdkRowDef", "cdkRowDefColumns"]], template: function CdkTableBasicFlexExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "cdk-table", 0);
@@ -230,6 +237,13 @@
             this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
             this.dataSource = new ExampleDataSource$1();
         }
+        CdkTableBasicExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'cdk-table-basic-example',
+                        styleUrls: ['cdk-table-basic-example.css'],
+                        templateUrl: 'cdk-table-basic-example.html',
+                    },] },
+        ];
         CdkTableBasicExample.ɵfac = function CdkTableBasicExample_Factory(t) { return new (t || CdkTableBasicExample)(); };
         CdkTableBasicExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkTableBasicExample, selectors: [["cdk-table-basic-example"]], decls: 15, vars: 3, consts: [["cdk-table", "", 3, "dataSource"], ["cdkColumnDef", "position"], ["cdk-header-cell", "", 4, "cdkHeaderCellDef"], ["cdk-cell", "", 4, "cdkCellDef"], ["cdkColumnDef", "name"], ["cdkColumnDef", "weight"], ["cdkColumnDef", "symbol"], ["cdk-header-row", "", 4, "cdkHeaderRowDef"], ["cdk-row", "", 4, "cdkRowDef", "cdkRowDefColumns"], ["cdk-header-cell", ""], ["cdk-cell", ""], ["cdk-header-row", ""], ["cdk-row", ""]], template: function CdkTableBasicExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "table", 0);
@@ -299,6 +313,15 @@
     var CdkTableExamplesModule = /** @class */ (function () {
         function CdkTableExamplesModule() {
         }
+        CdkTableExamplesModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: [
+                            i1.CdkTableModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                    },] },
+        ];
         CdkTableExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkTableExamplesModule });
         CdkTableExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkTableExamplesModule_Factory(t) { return new (t || CdkTableExamplesModule)(); }, imports: [[
                     i1.CdkTableModule,

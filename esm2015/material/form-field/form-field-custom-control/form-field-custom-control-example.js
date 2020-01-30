@@ -276,7 +276,7 @@ MyTelInput.propDecorators = {
     value: [{ type: Input }]
 };
 /** @nocollapse */ MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i3.FormBuilder), i0.ɵɵdirectiveInject(i4.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i3.NgControl, 10)); };
-/** @nocollapse */ MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx, elIndex) { if (rf & 2) {
+/** @nocollapse */ MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
         i0.ɵɵhostProperty("id", ctx.id);
         i0.ɵɵattribute("aria-describedby", ctx.describedBy);
         i0.ɵɵclassProp("example-floating", ctx.shouldLabelFloat);

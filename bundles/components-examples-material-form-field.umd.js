@@ -8,6 +8,13 @@
     var FormFieldAppearanceExample = /** @class */ (function () {
         function FormFieldAppearanceExample() {
         }
+        FormFieldAppearanceExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'form-field-appearance-example',
+                        templateUrl: 'form-field-appearance-example.html',
+                        styleUrls: ['form-field-appearance-example.css'],
+                    },] },
+        ];
         FormFieldAppearanceExample.ɵfac = function FormFieldAppearanceExample_Factory(t) { return new (t || FormFieldAppearanceExample)(); };
         FormFieldAppearanceExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldAppearanceExample, selectors: [["form-field-appearance-example"]], decls: 36, vars: 0, consts: [["appearance", "legacy"], ["matInput", "", "placeholder", "Placeholder"], ["matSuffix", ""], ["appearance", "standard"], ["appearance", "fill"], ["appearance", "outline"]], template: function FormFieldAppearanceExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
@@ -82,6 +89,13 @@
     var FormFieldCustomControlExample = /** @class */ (function () {
         function FormFieldCustomControlExample() {
         }
+        FormFieldCustomControlExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'form-field-custom-control-example',
+                        templateUrl: 'form-field-custom-control-example.html',
+                        styleUrls: ['form-field-custom-control-example.css'],
+                    },] },
+        ];
         FormFieldCustomControlExample.ɵfac = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
         FormFieldCustomControlExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["appearance", "fill"], ["required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field", 0);
@@ -234,8 +248,34 @@
             this.onChange(this.parts.value);
         };
         MyTelInput.nextId = 0;
+        MyTelInput.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'example-tel-input',
+                        templateUrl: 'example-tel-input-example.html',
+                        styleUrls: ['example-tel-input-example.css'],
+                        providers: [{ provide: i1$1.MatFormFieldControl, useExisting: MyTelInput }],
+                        host: {
+                            '[class.example-floating]': 'shouldLabelFloat',
+                            '[id]': 'id',
+                            '[attr.aria-describedby]': 'describedBy',
+                        }
+                    },] },
+        ];
+        /** @nocollapse */
+        MyTelInput.ctorParameters = function () { return [
+            { type: i1.FormBuilder },
+            { type: i4$1.FocusMonitor },
+            { type: i0.ElementRef },
+            { type: i1.NgControl, decorators: [{ type: i0.Optional }, { type: i0.Self }] }
+        ]; };
+        MyTelInput.propDecorators = {
+            placeholder: [{ type: i0.Input }],
+            required: [{ type: i0.Input }],
+            disabled: [{ type: i0.Input }],
+            value: [{ type: i0.Input }]
+        };
         MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i1.FormBuilder), i0.ɵɵdirectiveInject(i4$1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i1.NgControl, 10)); };
-        MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx, elIndex) { if (rf & 2) {
+        MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
                 i0.ɵɵhostProperty("id", ctx.id);
                 i0.ɵɵattribute("aria-describedby", ctx.describedBy);
                 i0.ɵɵclassProp("example-floating", ctx.shouldLabelFloat);
@@ -308,6 +348,13 @@
                 this.email.hasError('email') ? 'Not a valid email' :
                     '';
         };
+        FormFieldErrorExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'form-field-error-example',
+                        templateUrl: 'form-field-error-example.html',
+                        styleUrls: ['form-field-error-example.css'],
+                    },] },
+        ];
         FormFieldErrorExample.ɵfac = function FormFieldErrorExample_Factory(t) { return new (t || FormFieldErrorExample)(); };
         FormFieldErrorExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldErrorExample, selectors: [["form-field-error-example"]], decls: 6, vars: 2, consts: [[1, "example-container"], ["appearance", "fill"], ["matInput", "", "placeholder", "pat@example.com", "required", "", 3, "formControl"], [4, "ngIf"]], template: function FormFieldErrorExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
@@ -340,6 +387,13 @@
     var FormFieldHintExample = /** @class */ (function () {
         function FormFieldHintExample() {
         }
+        FormFieldHintExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'form-field-hint-example',
+                        templateUrl: 'form-field-hint-example.html',
+                        styleUrls: ['form-field-hint-example.css'],
+                    },] },
+        ];
         FormFieldHintExample.ɵfac = function FormFieldHintExample_Factory(t) { return new (t || FormFieldHintExample)(); };
         FormFieldHintExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldHintExample, selectors: [["form-field-hint-example"]], decls: 16, vars: 1, consts: [[1, "example-container"], ["hintLabel", "Max 10 characters", "appearance", "fill"], ["matInput", "", "maxlength", "10", "placeholder", "Ex. Nougat"], ["input", ""], ["align", "end"], ["appearance", "fill"], ["value", "option"]], template: function FormFieldHintExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
@@ -392,6 +446,17 @@
                 floatLabel: this.floatLabelControl,
             });
         }
+        FormFieldLabelExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'form-field-label-example',
+                        templateUrl: 'form-field-label-example.html',
+                        styleUrls: ['form-field-label-example.css'],
+                    },] },
+        ];
+        /** @nocollapse */
+        FormFieldLabelExample.ctorParameters = function () { return [
+            { type: i1.FormBuilder }
+        ]; };
         FormFieldLabelExample.ɵfac = function FormFieldLabelExample_Factory(t) { return new (t || FormFieldLabelExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
         FormFieldLabelExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldLabelExample, selectors: [["form-field-label-example"]], decls: 31, vars: 8, consts: [[1, "example-container"], [3, "formGroup"], [3, "formControl"], ["value", "auto"], ["value", "always"], ["appearance", "fill", 3, "hideRequiredMarker", "floatLabel"], ["matInput", "", "placeholder", "Simple placeholder", "required", ""], ["appearance", "fill", 3, "floatLabel"], ["matInput", "", "placeholder", "Simple placeholder"], ["required", ""], ["value", "option"]], template: function FormFieldLabelExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
@@ -473,6 +538,13 @@
     var FormFieldOverviewExample = /** @class */ (function () {
         function FormFieldOverviewExample() {
         }
+        FormFieldOverviewExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'form-field-overview-example',
+                        templateUrl: 'form-field-overview-example.html',
+                        styleUrls: ['form-field-overview-example.css'],
+                    },] },
+        ];
         FormFieldOverviewExample.ɵfac = function FormFieldOverviewExample_Factory(t) { return new (t || FormFieldOverviewExample)(); };
         FormFieldOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldOverviewExample, selectors: [["form-field-overview-example"]], decls: 17, vars: 0, consts: [[1, "example-container"], ["appearance", "fill"], ["matInput", ""], ["value", "option"]], template: function FormFieldOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
@@ -518,6 +590,13 @@
         function FormFieldPrefixSuffixExample() {
             this.hide = true;
         }
+        FormFieldPrefixSuffixExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'form-field-prefix-suffix-example',
+                        templateUrl: 'form-field-prefix-suffix-example.html',
+                        styleUrls: ['form-field-prefix-suffix-example.css'],
+                    },] },
+        ];
         FormFieldPrefixSuffixExample.ɵfac = function FormFieldPrefixSuffixExample_Factory(t) { return new (t || FormFieldPrefixSuffixExample)(); };
         FormFieldPrefixSuffixExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldPrefixSuffixExample, selectors: [["form-field-prefix-suffix-example"]], decls: 16, vars: 4, consts: [[1, "example-container"], ["appearance", "fill"], ["matInput", "", 3, "type"], ["mat-icon-button", "", "matSuffix", "", 3, "click"], ["matInput", "", "type", "number", 1, "example-right-align"], ["matPrefix", ""], ["matSuffix", ""]], template: function FormFieldPrefixSuffixExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
@@ -583,6 +662,17 @@
         FormFieldThemingExample.prototype.getFontSize = function () {
             return Math.max(10, this.fontSizeControl.value);
         };
+        FormFieldThemingExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'form-field-theming-example',
+                        templateUrl: 'form-field-theming-example.html',
+                        styleUrls: ['form-field-theming-example.css'],
+                    },] },
+        ];
+        /** @nocollapse */
+        FormFieldThemingExample.ctorParameters = function () { return [
+            { type: i1.FormBuilder }
+        ]; };
         FormFieldThemingExample.ɵfac = function FormFieldThemingExample_Factory(t) { return new (t || FormFieldThemingExample)(i0.ɵɵdirectiveInject(i1.FormBuilder)); };
         FormFieldThemingExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldThemingExample, selectors: [["form-field-theming-example"]], decls: 18, vars: 8, consts: [[1, "example-container", 3, "formGroup"], ["appearance", "fill", 3, "color"], [3, "formControl"], ["value", "primary"], ["value", "accent"], ["value", "warn"], ["matInput", "", "type", "number", "placeholder", "Ex. 12", "min", "10", 3, "formControl"], ["matSuffix", ""], [4, "ngIf"]], template: function FormFieldThemingExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "form", 0);
@@ -651,6 +741,23 @@
     var FormFieldExamplesModule = /** @class */ (function () {
         function FormFieldExamplesModule() {
         }
+        FormFieldExamplesModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: [
+                            i4.CommonModule,
+                            i3.MatButtonModule,
+                            i2.MatCheckboxModule,
+                            i1$1.MatFormFieldModule,
+                            i3$1.MatIconModule,
+                            i2$1.MatInputModule,
+                            i3$2.MatRadioModule,
+                            i3$3.MatSelectModule,
+                            i1.ReactiveFormsModule,
+                        ],
+                        declarations: tslib.__spread(EXAMPLES, [MyTelInput]),
+                        exports: EXAMPLES,
+                    },] },
+        ];
         FormFieldExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: FormFieldExamplesModule });
         FormFieldExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function FormFieldExamplesModule_Factory(t) { return new (t || FormFieldExamplesModule)(); }, imports: [[
                     i4.CommonModule,

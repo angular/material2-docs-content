@@ -10,6 +10,13 @@
     var MenuIconsExample = /** @class */ (function () {
         function MenuIconsExample() {
         }
+        MenuIconsExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'menu-icons-example',
+                        templateUrl: 'menu-icons-example.html',
+                        styleUrls: ['menu-icons-example.css'],
+                    },] },
+        ];
         MenuIconsExample.ɵfac = function MenuIconsExample_Factory(t) { return new (t || MenuIconsExample)(); };
         MenuIconsExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuIconsExample, selectors: [["menu-icons-example"]], decls: 20, vars: 1, consts: [["mat-icon-button", "", "aria-label", "Example icon-button with a menu", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""], ["mat-menu-item", "", "disabled", ""]], template: function MenuIconsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
@@ -64,6 +71,13 @@
     var MenuOverviewExample = /** @class */ (function () {
         function MenuOverviewExample() {
         }
+        MenuOverviewExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'menu-overview-example',
+                        templateUrl: 'menu-overview-example.html',
+                        styleUrls: ['menu-overview-example.css'],
+                    },] },
+        ];
         MenuOverviewExample.ɵfac = function MenuOverviewExample_Factory(t) { return new (t || MenuOverviewExample)(); };
         MenuOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuOverviewExample, selectors: [["menu-overview-example"]], decls: 8, vars: 1, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["menu", "matMenu"], ["mat-menu-item", ""]], template: function MenuOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
@@ -98,6 +112,13 @@
     var MenuPositionExample = /** @class */ (function () {
         function MenuPositionExample() {
         }
+        MenuPositionExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'menu-position-example',
+                        templateUrl: 'menu-position-example.html',
+                        styleUrls: ['menu-position-example.css'],
+                    },] },
+        ];
         MenuPositionExample.ɵfac = function MenuPositionExample_Factory(t) { return new (t || MenuPositionExample)(); };
         MenuPositionExample.ɵcmp = i0.ɵɵdefineComponent({ type: MenuPositionExample, selectors: [["menu-position-example"]], decls: 32, vars: 4, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["yPosition", "above"], ["aboveMenu", "matMenu"], ["mat-menu-item", ""], ["yPosition", "below"], ["belowMenu", "matMenu"], ["xPosition", "before"], ["beforeMenu", "matMenu"], ["xPosition", "after"], ["afterMenu", "matMenu"]], template: function MenuPositionExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
@@ -174,6 +195,13 @@
     var NestedMenuExample = /** @class */ (function () {
         function NestedMenuExample() {
         }
+        NestedMenuExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'nested-menu-example',
+                        templateUrl: 'nested-menu-example.html',
+                        styleUrls: ['nested-menu-example.css'],
+                    },] },
+        ];
         NestedMenuExample.ɵfac = function NestedMenuExample_Factory(t) { return new (t || NestedMenuExample)(); };
         NestedMenuExample.ɵcmp = i0.ɵɵdefineComponent({ type: NestedMenuExample, selectors: [["nested-menu-example"]], decls: 70, vars: 6, consts: [["mat-button", "", 3, "matMenuTriggerFor"], ["animals", "matMenu"], ["mat-menu-item", "", 3, "matMenuTriggerFor"], ["vertebrates", "matMenu"], ["mat-menu-item", ""], ["invertebrates", "matMenu"], ["fish", "matMenu"], ["amphibians", "matMenu"], ["reptiles", "matMenu"], ["mat-menu-item", "", "disabled", ""]], template: function NestedMenuExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
@@ -314,6 +342,17 @@
     var MenuExamplesModule = /** @class */ (function () {
         function MenuExamplesModule() {
         }
+        MenuExamplesModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: [
+                            i1.MatButtonModule,
+                            i3.MatIconModule,
+                            i2.MatMenuModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                    },] },
+        ];
         MenuExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: MenuExamplesModule });
         MenuExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function MenuExamplesModule_Factory(t) { return new (t || MenuExamplesModule)(); }, imports: [[
                     i1.MatButtonModule,

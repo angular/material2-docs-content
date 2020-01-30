@@ -14,6 +14,17 @@
             this.supportsPassiveEventListeners = i1.supportsPassiveEventListeners();
             this.supportsScrollBehavior = i1.supportsScrollBehavior();
         }
+        CdkPlatformOverviewExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'cdk-platform-overview-example',
+                        templateUrl: 'cdk-platform-overview-example.html',
+                        styleUrls: ['cdk-platform-overview-example.css'],
+                    },] },
+        ];
+        /** @nocollapse */
+        CdkPlatformOverviewExample.ctorParameters = function () { return [
+            { type: i1.Platform }
+        ]; };
         CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(i0.ɵɵdirectiveInject(i1.Platform)); };
         CdkPlatformOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 22, vars: 10, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h2");
@@ -86,6 +97,15 @@
     var CdkPlatformExamplesModule = /** @class */ (function () {
         function CdkPlatformExamplesModule() {
         }
+        CdkPlatformExamplesModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: [
+                            i1.PlatformModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                    },] },
+        ];
         CdkPlatformExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
         CdkPlatformExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); }, imports: [[
                     i1.PlatformModule,
