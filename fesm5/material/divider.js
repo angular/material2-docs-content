@@ -1,4 +1,4 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatDivider, MatDividerModule } from '@angular/material/divider';
 import { MatList, MatListItem, MatListModule } from '@angular/material/list';
 
@@ -8,6 +8,13 @@ import { MatList, MatListItem, MatListModule } from '@angular/material/list';
 var DividerOverviewExample = /** @class */ (function () {
     function DividerOverviewExample() {
     }
+    DividerOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'divider-overview-example',
+                    templateUrl: 'divider-overview-example.html',
+                    styleUrls: ['divider-overview-example.css'],
+                },] },
+    ];
     DividerOverviewExample.ɵfac = function DividerOverviewExample_Factory(t) { return new (t || DividerOverviewExample)(); };
     DividerOverviewExample.ɵcmp = ɵɵdefineComponent({ type: DividerOverviewExample, selectors: [["divider-overview-example"]], decls: 9, vars: 0, template: function DividerOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-list");
@@ -41,6 +48,15 @@ var EXAMPLES = [
 var DividerExamplesModule = /** @class */ (function () {
     function DividerExamplesModule() {
     }
+    DividerExamplesModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [
+                        MatDividerModule,
+                        MatListModule,
+                    ],
+                    declarations: EXAMPLES,
+                },] },
+    ];
     DividerExamplesModule.ɵmod = ɵɵdefineNgModule({ type: DividerExamplesModule });
     DividerExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function DividerExamplesModule_Factory(t) { return new (t || DividerExamplesModule)(); }, imports: [[
                 MatDividerModule,

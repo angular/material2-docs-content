@@ -1,4 +1,4 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatToolbar, MatToolbarRow, MatToolbarModule } from '@angular/material/toolbar';
 
@@ -8,6 +8,13 @@ import { MatToolbar, MatToolbarRow, MatToolbarModule } from '@angular/material/t
 var ToolbarMultirowExample = /** @class */ (function () {
     function ToolbarMultirowExample() {
     }
+    ToolbarMultirowExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'toolbar-multirow-example',
+                    templateUrl: 'toolbar-multirow-example.html',
+                    styleUrls: ['toolbar-multirow-example.css'],
+                },] },
+    ];
     ToolbarMultirowExample.ɵfac = function ToolbarMultirowExample_Factory(t) { return new (t || ToolbarMultirowExample)(); };
     ToolbarMultirowExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarMultirowExample, selectors: [["toolbar-multirow-example"]], decls: 18, vars: 0, consts: [["color", "primary"], [1, "example-spacer"], ["aria-hidden", "false", "aria-label", "Example user verified icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example heart icon", 1, "example-icon"], ["aria-hidden", "false", "aria-label", "Example delete icon", 1, "example-icon"]], template: function ToolbarMultirowExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-toolbar", 0);
@@ -56,6 +63,13 @@ var ToolbarMultirowExample = /** @class */ (function () {
 var ToolbarOverviewExample = /** @class */ (function () {
     function ToolbarOverviewExample() {
     }
+    ToolbarOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'toolbar-overview-example',
+                    templateUrl: 'toolbar-overview-example.html',
+                    styleUrls: ['toolbar-overview-example.css'],
+                },] },
+    ];
     ToolbarOverviewExample.ɵfac = function ToolbarOverviewExample_Factory(t) { return new (t || ToolbarOverviewExample)(); };
     ToolbarOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ToolbarOverviewExample, selectors: [["toolbar-overview-example"]], decls: 2, vars: 0, template: function ToolbarOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-toolbar");
@@ -80,6 +94,16 @@ var EXAMPLES = [
 var ToolbarExamplesModule = /** @class */ (function () {
     function ToolbarExamplesModule() {
     }
+    ToolbarExamplesModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [
+                        MatIconModule,
+                        MatToolbarModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                },] },
+    ];
     ToolbarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ToolbarExamplesModule });
     ToolbarExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ToolbarExamplesModule_Factory(t) { return new (t || ToolbarExamplesModule)(); }, imports: [[
                 MatIconModule,

@@ -1,4 +1,4 @@
-import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵlistener, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatNavList, MatListItem, MatListModule } from '@angular/material/list';
@@ -14,6 +14,17 @@ var BottomSheetOverviewExample = /** @class */ (function () {
     BottomSheetOverviewExample.prototype.openBottomSheet = function () {
         this._bottomSheet.open(BottomSheetOverviewExampleSheet);
     };
+    BottomSheetOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'bottom-sheet-overview-example',
+                    templateUrl: 'bottom-sheet-overview-example.html',
+                    styleUrls: ['bottom-sheet-overview-example.css'],
+                },] },
+    ];
+    /** @nocollapse */
+    BottomSheetOverviewExample.ctorParameters = function () { return [
+        { type: MatBottomSheet }
+    ]; };
     BottomSheetOverviewExample.ɵfac = function BottomSheetOverviewExample_Factory(t) { return new (t || BottomSheetOverviewExample)(ɵɵdirectiveInject(MatBottomSheet)); };
     BottomSheetOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOverviewExample, selectors: [["bottom-sheet-overview-example"]], decls: 4, vars: 0, consts: [["mat-raised-button", "", 3, "click"]], template: function BottomSheetOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
@@ -42,6 +53,16 @@ var BottomSheetOverviewExampleSheet = /** @class */ (function () {
         this._bottomSheetRef.dismiss();
         event.preventDefault();
     };
+    BottomSheetOverviewExampleSheet.decorators = [
+        { type: Component, args: [{
+                    selector: 'bottom-sheet-overview-example-sheet',
+                    templateUrl: 'bottom-sheet-overview-example-sheet.html',
+                },] },
+    ];
+    /** @nocollapse */
+    BottomSheetOverviewExampleSheet.ctorParameters = function () { return [
+        { type: MatBottomSheetRef }
+    ]; };
     BottomSheetOverviewExampleSheet.ɵfac = function BottomSheetOverviewExampleSheet_Factory(t) { return new (t || BottomSheetOverviewExampleSheet)(ɵɵdirectiveInject(MatBottomSheetRef)); };
     BottomSheetOverviewExampleSheet.ɵcmp = ɵɵdefineComponent({ type: BottomSheetOverviewExampleSheet, selectors: [["bottom-sheet-overview-example-sheet"]], decls: 21, vars: 0, consts: [["href", "https://keep.google.com/", "mat-list-item", "", 3, "click"], ["mat-line", ""], ["href", "https://docs.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://plus.google.com/", "mat-list-item", "", 3, "click"], ["href", "https://hangouts.google.com/", "mat-list-item", "", 3, "click"]], template: function BottomSheetOverviewExampleSheet_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-nav-list");
@@ -100,6 +121,18 @@ var EXAMPLES = [
 var BottomSheetExamplesModule = /** @class */ (function () {
     function BottomSheetExamplesModule() {
     }
+    BottomSheetExamplesModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [
+                        MatBottomSheetModule,
+                        MatButtonModule,
+                        MatListModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                    entryComponents: [BottomSheetOverviewExampleSheet],
+                },] },
+    ];
     BottomSheetExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
     BottomSheetExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BottomSheetExamplesModule_Factory(t) { return new (t || BottomSheetExamplesModule)(); }, imports: [[
                 MatBottomSheetModule,

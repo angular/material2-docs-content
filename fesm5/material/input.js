@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵdefineComponent, ɵɵtemplate, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵelement, ɵɵreference, ɵɵtextInterpolate1, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, Component, ɵɵdefineComponent, ɵɵtemplate, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, ɵɵelement, ɵɵreference, ɵɵtextInterpolate1, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { DefaultValueAccessor, NgControlStatus, NgModel, FormControl, Validators, ɵangular_packages_forms_forms_y, NgControlStatusGroup, NgForm, FormControlDirective, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
@@ -22,6 +22,13 @@ var InputClearableExample = /** @class */ (function () {
     function InputClearableExample() {
         this.value = 'Clear me';
     }
+    InputClearableExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'input-clearable-example',
+                    templateUrl: './input-clearable-example.html',
+                    styleUrls: ['./input-clearable-example.css'],
+                },] },
+    ];
     InputClearableExample.ɵfac = function InputClearableExample_Factory(t) { return new (t || InputClearableExample)(); };
     InputClearableExample.ɵcmp = ɵɵdefineComponent({ type: InputClearableExample, selectors: [["input-clearable-example"]], decls: 5, vars: 2, consts: [[1, "example-form-field"], ["matInput", "", "type", "text", 3, "ngModel", "ngModelChange"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click", 4, "ngIf"], ["mat-button", "", "matSuffix", "", "mat-icon-button", "", "aria-label", "Clear", 3, "click"]], template: function InputClearableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
@@ -82,6 +89,13 @@ var InputErrorStateMatcherExample = /** @class */ (function () {
         ]);
         this.matcher = new MyErrorStateMatcher();
     }
+    InputErrorStateMatcherExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'input-error-state-matcher-example',
+                    templateUrl: './input-error-state-matcher-example.html',
+                    styleUrls: ['./input-error-state-matcher-example.css'],
+                },] },
+    ];
     InputErrorStateMatcherExample.ɵfac = function InputErrorStateMatcherExample_Factory(t) { return new (t || InputErrorStateMatcherExample)(); };
     InputErrorStateMatcherExample.ɵcmp = ɵɵdefineComponent({ type: InputErrorStateMatcherExample, selectors: [["input-error-state-matcher-example"]], decls: 9, vars: 4, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Ex. pat@example.com", 3, "formControl", "errorStateMatcher"], [4, "ngIf"]], template: function InputErrorStateMatcherExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
@@ -139,6 +153,13 @@ var InputErrorsExample = /** @class */ (function () {
             Validators.email,
         ]);
     }
+    InputErrorsExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'input-errors-example',
+                    templateUrl: 'input-errors-example.html',
+                    styleUrls: ['input-errors-example.css'],
+                },] },
+    ];
     InputErrorsExample.ɵfac = function InputErrorsExample_Factory(t) { return new (t || InputErrorsExample)(); };
     InputErrorsExample.ɵcmp = ɵɵdefineComponent({ type: InputErrorsExample, selectors: [["input-errors-example"]], decls: 7, vars: 3, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Ex. pat@example.com", 3, "formControl"], [4, "ngIf"]], template: function InputErrorsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
@@ -176,6 +197,13 @@ var InputErrorsExample = /** @class */ (function () {
 var InputFormExample = /** @class */ (function () {
     function InputFormExample() {
     }
+    InputFormExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'input-form-example',
+                    templateUrl: 'input-form-example.html',
+                    styleUrls: ['input-form-example.css'],
+                },] },
+    ];
     InputFormExample.ɵfac = function InputFormExample_Factory(t) { return new (t || InputFormExample)(); };
     InputFormExample.ɵcmp = ɵɵdefineComponent({ type: InputFormExample, selectors: [["input-form-example"]], decls: 47, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "disabled", "", "value", "Google"], ["cellspacing", "0", 1, "example-full-width"], ["matInput", ""], ["matInput", "", "placeholder", "Ex. 100 Main St"], ["matInput", "", "placeholder", "Ex. San Francisco"], ["matInput", "", "placeholder", "Ex. California"], ["matInput", "", "maxlength", "5", "placeholder", "Ex. 94105", "value", "94043"], ["postalCode", ""], ["align", "end"]], template: function InputFormExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
@@ -275,6 +303,13 @@ var InputFormExample = /** @class */ (function () {
 var InputHintExample = /** @class */ (function () {
     function InputHintExample() {
     }
+    InputHintExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'input-hint-example',
+                    templateUrl: 'input-hint-example.html',
+                    styleUrls: ['input-hint-example.css'],
+                },] },
+    ];
     InputHintExample.ɵfac = function InputHintExample_Factory(t) { return new (t || InputHintExample)(); };
     InputHintExample.ɵcmp = ɵɵdefineComponent({ type: InputHintExample, selectors: [["input-hint-example"]], decls: 11, vars: 1, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "maxlength", "256", "placeholder", "Ex. I need help with..."], ["message", ""], ["align", "start"], ["align", "end"]], template: function InputHintExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
@@ -315,6 +350,13 @@ var InputHintExample = /** @class */ (function () {
 var InputOverviewExample = /** @class */ (function () {
     function InputOverviewExample() {
     }
+    InputOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'input-overview-example',
+                    styleUrls: ['input-overview-example.css'],
+                    templateUrl: 'input-overview-example.html',
+                },] },
+    ];
     InputOverviewExample.ɵfac = function InputOverviewExample_Factory(t) { return new (t || InputOverviewExample)(); };
     InputOverviewExample.ɵcmp = ɵɵdefineComponent({ type: InputOverviewExample, selectors: [["input-overview-example"]], decls: 9, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matInput", "", "placeholder", "Ex. Pizza", "value", "Sushi"], ["matInput", "", "placeholder", "Ex. It makes me feel..."]], template: function InputOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
@@ -349,6 +391,13 @@ var InputOverviewExample = /** @class */ (function () {
 var InputPrefixSuffixExample = /** @class */ (function () {
     function InputPrefixSuffixExample() {
     }
+    InputPrefixSuffixExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'input-prefix-suffix-example',
+                    templateUrl: 'input-prefix-suffix-example.html',
+                    styleUrls: ['input-prefix-suffix-example.css'],
+                },] },
+    ];
     InputPrefixSuffixExample.ɵfac = function InputPrefixSuffixExample_Factory(t) { return new (t || InputPrefixSuffixExample)(); };
     InputPrefixSuffixExample.ɵcmp = ɵɵdefineComponent({ type: InputPrefixSuffixExample, selectors: [["input-prefix-suffix-example"]], decls: 9, vars: 0, consts: [[1, "example-form"], [1, "example-full-width"], ["matPrefix", ""], ["type", "tel", "matInput", "", "placeholder", "555-555-1234"], ["matSuffix", ""]], template: function InputPrefixSuffixExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form", 0);
@@ -389,6 +438,20 @@ var EXAMPLES = [
 var InputExamplesModule = /** @class */ (function () {
     function InputExamplesModule() {
     }
+    InputExamplesModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [
+                        CommonModule,
+                        MatButtonModule,
+                        MatIconModule,
+                        MatInputModule,
+                        FormsModule,
+                        ReactiveFormsModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                },] },
+    ];
     InputExamplesModule.ɵmod = ɵɵdefineNgModule({ type: InputExamplesModule });
     InputExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function InputExamplesModule_Factory(t) { return new (t || InputExamplesModule)(); }, imports: [[
                 CommonModule,

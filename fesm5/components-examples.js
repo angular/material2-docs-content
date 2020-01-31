@@ -1,5 +1,5 @@
 import { __spread } from 'tslib';
-import { ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, ɵsetClassMetadata, NgModule } from '@angular/core';
+import { NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, ɵsetClassMetadata } from '@angular/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPopoverEditExamplesModule } from '@angular/components-examples/cdk-experimental/popover-edit';
 export { CdkPopoverEditCdkTableExample, CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample } from '@angular/components-examples/cdk-experimental/popover-edit';
@@ -1766,6 +1766,15 @@ var EXAMPLE_LIST = [CdkPopoverEditCdkTableFlexExample,
 var ExampleModule = /** @class */ (function () {
     function ExampleModule() {
     }
+    ExampleModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: EXAMPLE_MODULES,
+                    exports: EXAMPLE_MODULES,
+                    providers: [
+                        { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+                    ],
+                },] },
+    ];
     ExampleModule.ɵmod = ɵɵdefineNgModule({ type: ExampleModule });
     ExampleModule.ɵinj = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, providers: [
             { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },

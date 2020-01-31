@@ -1674,6 +1674,15 @@
     var ExampleModule = /** @class */ (function () {
         function ExampleModule() {
         }
+        ExampleModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: EXAMPLE_MODULES,
+                        exports: EXAMPLE_MODULES,
+                        providers: [
+                            { provide: formField.MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+                        ],
+                    },] },
+        ];
         ExampleModule.ɵmod = i0.ɵɵdefineNgModule({ type: ExampleModule });
         ExampleModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, providers: [
                 { provide: formField.MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },

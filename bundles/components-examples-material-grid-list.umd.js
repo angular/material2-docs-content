@@ -27,6 +27,13 @@
                 { text: 'Four', cols: 2, rows: 1, color: '#DDBDF1' },
             ];
         }
+        GridListDynamicExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'grid-list-dynamic-example',
+                        templateUrl: 'grid-list-dynamic-example.html',
+                        styleUrls: ['grid-list-dynamic-example.css'],
+                    },] },
+        ];
         GridListDynamicExample.ɵfac = function GridListDynamicExample_Factory(t) { return new (t || GridListDynamicExample)(); };
         GridListDynamicExample.ɵcmp = i0.ɵɵdefineComponent({ type: GridListDynamicExample, selectors: [["grid-list-dynamic-example"]], decls: 2, vars: 1, consts: [["cols", "4", "rowHeight", "100px"], [3, "colspan", "rowspan", "background", 4, "ngFor", "ngForOf"], [3, "colspan", "rowspan"]], template: function GridListDynamicExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-grid-list", 0);
@@ -53,6 +60,13 @@
     var GridListOverviewExample = /** @class */ (function () {
         function GridListOverviewExample() {
         }
+        GridListOverviewExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'grid-list-overview-example',
+                        styleUrls: ['grid-list-overview-example.css'],
+                        templateUrl: 'grid-list-overview-example.html',
+                    },] },
+        ];
         GridListOverviewExample.ɵfac = function GridListOverviewExample_Factory(t) { return new (t || GridListOverviewExample)(); };
         GridListOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: GridListOverviewExample, selectors: [["grid-list-overview-example"]], decls: 9, vars: 0, consts: [["cols", "2", "rowHeight", "2:1"]], template: function GridListOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-grid-list", 0);
@@ -88,6 +102,16 @@
     var GridListExamplesModule = /** @class */ (function () {
         function GridListExamplesModule() {
         }
+        GridListExamplesModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: [
+                            i2.CommonModule,
+                            i1.MatGridListModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                    },] },
+        ];
         GridListExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: GridListExamplesModule });
         GridListExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function GridListExamplesModule_Factory(t) { return new (t || GridListExamplesModule)(); }, imports: [[
                     i2.CommonModule,

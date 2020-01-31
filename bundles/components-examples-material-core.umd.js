@@ -11,6 +11,13 @@
         function ElevationOverviewExample() {
             this.isActive = false;
         }
+        ElevationOverviewExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'elevation-overview-example',
+                        styleUrls: ['elevation-overview-example.css'],
+                        templateUrl: 'elevation-overview-example.html',
+                    },] },
+        ];
         ElevationOverviewExample.ɵfac = function ElevationOverviewExample_Factory(t) { return new (t || ElevationOverviewExample)(); };
         ElevationOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ElevationOverviewExample, selectors: [["elevation-overview-example"]], decls: 4, vars: 4, consts: [[1, "example-container"], ["mat-button", "", 3, "click"]], template: function ElevationOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
@@ -43,6 +50,13 @@
             this.disabled = false;
             this.unbounded = false;
         }
+        RippleOverviewExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'ripple-overview-example',
+                        templateUrl: 'ripple-overview-example.html',
+                        styleUrls: ['ripple-overview-example.css'],
+                    },] },
+        ];
         RippleOverviewExample.ɵfac = function RippleOverviewExample_Factory(t) { return new (t || RippleOverviewExample)(); };
         RippleOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: RippleOverviewExample, selectors: [["ripple-overview-example"]], decls: 12, vars: 10, consts: [[1, "example-ripple-checkbox", 3, "ngModel", "ngModelChange"], [1, "example-ripple-form-field"], ["matInput", "", "type", "number", "placeholder", "Radius", 3, "ngModel", "ngModelChange"], ["matInput", "", "type", "text", "placeholder", "Color", 3, "ngModel", "ngModelChange"], ["matRipple", "", 1, "example-ripple-container", "mat-elevation-z4", 3, "matRippleCentered", "matRippleDisabled", "matRippleUnbounded", "matRippleRadius", "matRippleColor"]], template: function RippleOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-checkbox", 0);
@@ -101,6 +115,19 @@
     var CoreExamplesModule = /** @class */ (function () {
         function CoreExamplesModule() {
         }
+        CoreExamplesModule.decorators = [
+            { type: i0.NgModule, args: [{
+                        imports: [
+                            i1.MatButtonModule,
+                            i1$1.MatCheckboxModule,
+                            i4.MatInputModule,
+                            i5.MatRippleModule,
+                            i2.FormsModule,
+                        ],
+                        declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                    },] },
+        ];
         CoreExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CoreExamplesModule });
         CoreExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CoreExamplesModule_Factory(t) { return new (t || CoreExamplesModule)(); }, imports: [[
                     i1.MatButtonModule,

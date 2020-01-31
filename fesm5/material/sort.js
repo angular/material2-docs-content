@@ -1,5 +1,5 @@
 import { NgForOf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate, Component, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵproperty, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatSort, MatSortHeader, MatSortModule } from '@angular/material/sort';
 
 function SortOverviewExample_tr_12_Template(rf, ctx) { if (rf & 1) {
@@ -65,6 +65,15 @@ var SortOverviewExample = /** @class */ (function () {
             }
         });
     };
+    SortOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'sort-overview-example',
+                    templateUrl: 'sort-overview-example.html',
+                    styleUrls: ['sort-overview-example.css'],
+                },] },
+    ];
+    /** @nocollapse */
+    SortOverviewExample.ctorParameters = function () { return []; };
     SortOverviewExample.ɵfac = function SortOverviewExample_Factory(t) { return new (t || SortOverviewExample)(); };
     SortOverviewExample.ɵcmp = ɵɵdefineComponent({ type: SortOverviewExample, selectors: [["sort-overview-example"]], decls: 13, vars: 1, consts: [["matSort", "", 3, "matSortChange"], ["mat-sort-header", "name"], ["mat-sort-header", "calories"], ["mat-sort-header", "fat"], ["mat-sort-header", "carbs"], ["mat-sort-header", "protein"], [4, "ngFor", "ngForOf"]], template: function SortOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
@@ -112,6 +121,16 @@ var EXAMPLES = [
 var SortExamplesModule = /** @class */ (function () {
     function SortExamplesModule() {
     }
+    SortExamplesModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [
+                        CommonModule,
+                        MatSortModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                },] },
+    ];
     SortExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SortExamplesModule });
     SortExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function SortExamplesModule_Factory(t) { return new (t || SortExamplesModule)(); }, imports: [[
                 CommonModule,

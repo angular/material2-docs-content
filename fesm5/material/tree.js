@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵelement, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵproperty, ɵɵtextInterpolate, ɵɵreference, ɵɵattribute, ɵɵtextInterpolate1, ɵɵdefineInjectable, ɵsetClassMetadata, Injectable, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵProvidersFeature, ɵɵtemplate, Component, ɵɵelementContainer, ɵɵclassProp, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵgetCurrentView, ɵɵelementStart, ɵɵelement, ɵɵlistener, ɵɵrestoreView, ɵɵnextContext, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵproperty, ɵɵtextInterpolate, ɵɵreference, ɵɵattribute, ɵɵtextInterpolate1, Injectable, ɵɵdefineInjectable, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵProvidersFeature, ɵɵtemplate, ɵɵelementContainer, ɵɵclassProp, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
@@ -165,6 +165,11 @@ var ChecklistDatabase = /** @class */ (function () {
         node.item = name;
         this.dataChange.next(this.data);
     };
+    ChecklistDatabase.decorators = [
+        { type: Injectable },
+    ];
+    /** @nocollapse */
+    ChecklistDatabase.ctorParameters = function () { return []; };
     ChecklistDatabase.ɵfac = function ChecklistDatabase_Factory(t) { return new (t || ChecklistDatabase)(); };
     ChecklistDatabase.ɵprov = ɵɵdefineInjectable({ token: ChecklistDatabase, factory: ChecklistDatabase.ɵfac });
     return ChecklistDatabase;
@@ -300,6 +305,18 @@ var TreeChecklistExample = /** @class */ (function () {
         var nestedNode = this.flatNodeMap.get(node);
         this._database.updateItem(nestedNode, itemValue);
     };
+    TreeChecklistExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tree-checklist-example',
+                    templateUrl: 'tree-checklist-example.html',
+                    styleUrls: ['tree-checklist-example.css'],
+                    providers: [ChecklistDatabase]
+                },] },
+    ];
+    /** @nocollapse */
+    TreeChecklistExample.ctorParameters = function () { return [
+        { type: ChecklistDatabase }
+    ]; };
     TreeChecklistExample.ɵfac = function TreeChecklistExample_Factory(t) { return new (t || TreeChecklistExample)(ɵɵdirectiveInject(ChecklistDatabase)); };
     TreeChecklistExample.ɵcmp = ɵɵdefineComponent({ type: TreeChecklistExample, selectors: [["tree-checklist-example"]], features: [ɵɵProvidersFeature([ChecklistDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", "matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", "", "matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], [1, "checklist-leaf-node", 3, "checked", "change"], ["matTreeNodePadding", ""], ["matInput", "", "placeholder", "Ex. Lettuce"], ["itemValue", ""], ["mat-button", "", 3, "click"], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], [3, "checked", "indeterminate", "change"], ["mat-icon-button", "", 3, "click"]], template: function TreeChecklistExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tree", 0);
@@ -398,6 +415,9 @@ var DynamicDatabase = /** @class */ (function () {
     DynamicDatabase.prototype.isExpandable = function (node) {
         return this.dataMap.has(node);
     };
+    DynamicDatabase.decorators = [
+        { type: Injectable, args: [{ providedIn: 'root' },] },
+    ];
     DynamicDatabase.ɵfac = function DynamicDatabase_Factory(t) { return new (t || DynamicDatabase)(); };
     DynamicDatabase.ɵprov = ɵɵdefineInjectable({ token: DynamicDatabase, factory: DynamicDatabase.ɵfac, providedIn: 'root' });
     return DynamicDatabase;
@@ -493,6 +513,17 @@ var TreeDynamicExample = /** @class */ (function () {
         this.dataSource = new DynamicDataSource(this.treeControl, database);
         this.dataSource.data = database.initialData();
     }
+    TreeDynamicExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tree-dynamic-example',
+                    templateUrl: 'tree-dynamic-example.html',
+                    styleUrls: ['tree-dynamic-example.css']
+                },] },
+    ];
+    /** @nocollapse */
+    TreeDynamicExample.ctorParameters = function () { return [
+        { type: DynamicDatabase }
+    ]; };
     TreeDynamicExample.ɵfac = function TreeDynamicExample_Factory(t) { return new (t || TreeDynamicExample)(ɵɵdirectiveInject(DynamicDatabase)); };
     TreeDynamicExample.ɵcmp = ɵɵdefineComponent({ type: TreeDynamicExample, selectors: [["tree-dynamic-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["mode", "indeterminate", "class", "example-tree-progress-bar", 4, "ngIf"], ["mode", "indeterminate", 1, "example-tree-progress-bar"]], template: function TreeDynamicExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tree", 0);
@@ -589,6 +620,15 @@ var TreeFlatOverviewExample = /** @class */ (function () {
         this.hasChild = function (_, node) { return node.expandable; };
         this.dataSource.data = TREE_DATA$1;
     }
+    TreeFlatOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tree-flat-overview-example',
+                    templateUrl: 'tree-flat-overview-example.html',
+                    styleUrls: ['tree-flat-overview-example.css'],
+                },] },
+    ];
+    /** @nocollapse */
+    TreeFlatOverviewExample.ctorParameters = function () { return []; };
     TreeFlatOverviewExample.ɵfac = function TreeFlatOverviewExample_Factory(t) { return new (t || TreeFlatOverviewExample)(); };
     TreeFlatOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TreeFlatOverviewExample, selectors: [["tree-flat-overview-example"]], decls: 3, vars: 3, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"]], template: function TreeFlatOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tree", 0);
@@ -744,6 +784,9 @@ var LoadmoreDatabase = /** @class */ (function () {
         this.nodeMap.set(item, result);
         return result;
     };
+    LoadmoreDatabase.decorators = [
+        { type: Injectable },
+    ];
     LoadmoreDatabase.ɵfac = function LoadmoreDatabase_Factory(t) { return new (t || LoadmoreDatabase)(); };
     LoadmoreDatabase.ɵprov = ɵɵdefineInjectable({ token: LoadmoreDatabase, factory: LoadmoreDatabase.ɵfac });
     return LoadmoreDatabase;
@@ -788,6 +831,18 @@ var TreeLoadmoreExample = /** @class */ (function () {
     TreeLoadmoreExample.prototype.loadChildren = function (node) {
         this._database.loadMore(node.item, true);
     };
+    TreeLoadmoreExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tree-loadmore-example',
+                    templateUrl: 'tree-loadmore-example.html',
+                    styleUrls: ['tree-loadmore-example.css'],
+                    providers: [LoadmoreDatabase]
+                },] },
+    ];
+    /** @nocollapse */
+    TreeLoadmoreExample.ctorParameters = function () { return [
+        { type: LoadmoreDatabase }
+    ]; };
     TreeLoadmoreExample.ɵfac = function TreeLoadmoreExample_Factory(t) { return new (t || TreeLoadmoreExample)(ɵɵdirectiveInject(LoadmoreDatabase)); };
     TreeLoadmoreExample.ɵcmp = ɵɵdefineComponent({ type: TreeLoadmoreExample, selectors: [["tree-loadmore-example"]], features: [ɵɵProvidersFeature([LoadmoreDatabase])], decls: 4, vars: 4, consts: [[3, "dataSource", "treeControl"], ["matTreeNodePadding", "", 4, "matTreeNodeDef"], ["matTreeNodePadding", "", 4, "matTreeNodeDef", "matTreeNodeDefWhen"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodePadding", ""], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", "", 3, "click"], [1, "mat-icon-rtl-mirror"], ["mat-button", "", 3, "click"]], template: function TreeLoadmoreExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tree", 0);
@@ -891,6 +946,15 @@ var TreeNestedOverviewExample = /** @class */ (function () {
         this.hasChild = function (_, node) { return !!node.children && node.children.length > 0; };
         this.dataSource.data = TREE_DATA$2;
     }
+    TreeNestedOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tree-nested-overview-example',
+                    templateUrl: 'tree-nested-overview-example.html',
+                    styleUrls: ['tree-nested-overview-example.css'],
+                },] },
+    ];
+    /** @nocollapse */
+    TreeNestedOverviewExample.ctorParameters = function () { return []; };
     TreeNestedOverviewExample.ɵfac = function TreeNestedOverviewExample_Factory(t) { return new (t || TreeNestedOverviewExample)(); };
     TreeNestedOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TreeNestedOverviewExample, selectors: [["tree-nested-overview-example"]], decls: 3, vars: 3, consts: [[1, "example-tree", 3, "dataSource", "treeControl"], ["matTreeNodeToggle", "", 4, "matTreeNodeDef"], [4, "matTreeNodeDef", "matTreeNodeDefWhen"], ["matTreeNodeToggle", ""], [1, "mat-tree-node"], ["mat-icon-button", "", "disabled", ""], ["mat-icon-button", "", "matTreeNodeToggle", ""], [1, "mat-icon-rtl-mirror"], ["matTreeNodeOutlet", ""]], template: function TreeNestedOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-tree", 0);
@@ -923,6 +987,21 @@ var EXAMPLES = [
 var TreeExamplesModule = /** @class */ (function () {
     function TreeExamplesModule() {
     }
+    TreeExamplesModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [
+                        CommonModule,
+                        MatButtonModule,
+                        MatCheckboxModule,
+                        MatIconModule,
+                        MatInputModule,
+                        MatProgressBarModule,
+                        MatTreeModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                },] },
+    ];
     TreeExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TreeExamplesModule });
     TreeExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TreeExamplesModule_Factory(t) { return new (t || TreeExamplesModule)(); }, imports: [[
                 CommonModule,

@@ -1,5 +1,5 @@
 import { NgForOf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵɵtemplate, ɵsetClassMetadata, Component, ViewEncapsulation, ɵɵelement, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵProvidersFeature, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵɵtemplate, ɵsetClassMetadata, ViewEncapsulation, ɵɵelement, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵProvidersFeature, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { FormControl, NgControlStatus, FormControlDirective, NumberValueAccessor, DefaultValueAccessor, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
@@ -27,6 +27,13 @@ var TooltipAutoHideExample = /** @class */ (function () {
         this.positionOptions = ['below', 'above', 'left', 'right'];
         this.position = new FormControl(this.positionOptions[0]);
     }
+    TooltipAutoHideExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tooltip-auto-hide-example',
+                    templateUrl: 'tooltip-auto-hide-example.html',
+                    styleUrls: ['tooltip-auto-hide-example.css'],
+                },] },
+    ];
     TooltipAutoHideExample.ɵfac = function TooltipAutoHideExample_Factory(t) { return new (t || TooltipAutoHideExample)(); };
     TooltipAutoHideExample.ɵcmp = ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 9, vars: 3, consts: [[3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdk-scrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], ["tooltip", "matTooltip"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
@@ -67,6 +74,16 @@ var TooltipAutoHideExample = /** @class */ (function () {
 var TooltipCustomClassExample = /** @class */ (function () {
     function TooltipCustomClassExample() {
     }
+    TooltipCustomClassExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tooltip-custom-class-example',
+                    templateUrl: 'tooltip-custom-class-example.html',
+                    styleUrls: ['tooltip-custom-class-example.css'],
+                    // Need to remove view encapsulation so that the custom tooltip style defined in
+                    // `tooltip-custom-class-example.css` will not be scoped to this component's view.
+                    encapsulation: ViewEncapsulation.None,
+                },] },
+    ];
     TooltipCustomClassExample.ɵfac = function TooltipCustomClassExample_Factory(t) { return new (t || TooltipCustomClassExample)(); };
     TooltipCustomClassExample.ɵcmp = ɵɵdefineComponent({ type: TooltipCustomClassExample, selectors: [["tooltip-custom-class-example"]], decls: 2, vars: 0, consts: [["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipClass", "example-tooltip-red", "aria-label", "Button that shows a red tooltip", 1, "example-button"]], template: function TooltipCustomClassExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
@@ -95,6 +112,13 @@ var TooltipDelayExample = /** @class */ (function () {
         this.showDelay = new FormControl(1000);
         this.hideDelay = new FormControl(2000);
     }
+    TooltipDelayExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tooltip-delay-example',
+                    templateUrl: 'tooltip-delay-example.html',
+                    styleUrls: ['tooltip-delay-example.css'],
+                },] },
+    ];
     TooltipDelayExample.ɵfac = function TooltipDelayExample_Factory(t) { return new (t || TooltipDelayExample)(); };
     TooltipDelayExample.ɵcmp = ɵɵdefineComponent({ type: TooltipDelayExample, selectors: [["tooltip-delay-example"]], decls: 14, vars: 4, consts: [[1, "example-user-input"], ["matInput", "", "type", "number", "aria-label", "Adds a delay between hovering over the button and displaying the tooltip", 3, "formControl"], ["matInput", "", "type", "number", "aria-label", "Adds a delay between hovering away from the button and hiding the tooltip", 3, "formControl"], ["mat-raised-button", "", "matTooltip", "Info about the action", "aria-label", "Button that displays a tooltip with a customized delay in showing and hiding", 3, "matTooltipShowDelay", "matTooltipHideDelay"]], template: function TooltipDelayExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
@@ -144,6 +168,13 @@ var TooltipDisabledExample = /** @class */ (function () {
     function TooltipDisabledExample() {
         this.disabled = new FormControl(false);
     }
+    TooltipDisabledExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tooltip-disabled-example',
+                    templateUrl: 'tooltip-disabled-example.html',
+                    styleUrls: ['tooltip-disabled-example.css'],
+                },] },
+    ];
     TooltipDisabledExample.ɵfac = function TooltipDisabledExample_Factory(t) { return new (t || TooltipDisabledExample)(); };
     TooltipDisabledExample.ɵcmp = ɵɵdefineComponent({ type: TooltipDisabledExample, selectors: [["tooltip-disabled-example"]], decls: 4, vars: 2, consts: [["mat-raised-button", "", "matTooltip", "Info about the action", "aria-label", "Button that displays a tooltip that can be programatically disabled", 3, "matTooltipDisabled"], [1, "example-disabled-checkbox", 3, "formControl"]], template: function TooltipDisabledExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
@@ -174,6 +205,13 @@ var TooltipDisabledExample = /** @class */ (function () {
 var TooltipManualExample = /** @class */ (function () {
     function TooltipManualExample() {
     }
+    TooltipManualExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tooltip-manual-example',
+                    templateUrl: 'tooltip-manual-example.html',
+                    styleUrls: ['tooltip-manual-example.css'],
+                },] },
+    ];
     TooltipManualExample.ɵfac = function TooltipManualExample_Factory(t) { return new (t || TooltipManualExample)(); };
     TooltipManualExample.ɵcmp = ɵɵdefineComponent({ type: TooltipManualExample, selectors: [["tooltip-manual-example"]], decls: 12, vars: 0, consts: [["mat-button", "", "aria-label", "Show tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-button", "", "aria-label", "Show/Hide tooltip on the button at the end of this section", 1, "example-action-button", 3, "click"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipPosition", "right", "aria-tooltip", "Button that displays and hides a tooltip triggered by other buttons"], ["tooltip", "matTooltip"]], template: function TooltipManualExample_Template(rf, ctx) { if (rf & 1) {
             var _r4 = ɵɵgetCurrentView();
@@ -216,6 +254,13 @@ var TooltipMessageExample = /** @class */ (function () {
     function TooltipMessageExample() {
         this.message = new FormControl('Info about the action');
     }
+    TooltipMessageExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tooltip-message-example',
+                    templateUrl: 'tooltip-message-example.html',
+                    styleUrls: ['tooltip-message-example.css'],
+                },] },
+    ];
     TooltipMessageExample.ɵfac = function TooltipMessageExample_Factory(t) { return new (t || TooltipMessageExample)(); };
     TooltipMessageExample.ɵcmp = ɵɵdefineComponent({ type: TooltipMessageExample, selectors: [["tooltip-message-example"]], decls: 6, vars: 2, consts: [[1, "example-user-input"], ["matInput", "", 3, "formControl"], ["mat-raised-button", "", "aria-label", "Button that displays a tooltip with a custom message", 3, "matTooltip"]], template: function TooltipMessageExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
@@ -256,6 +301,16 @@ var myCustomTooltipDefaults = {
 var TooltipModifiedDefaultsExample = /** @class */ (function () {
     function TooltipModifiedDefaultsExample() {
     }
+    TooltipModifiedDefaultsExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tooltip-modified-defaults-example',
+                    templateUrl: 'tooltip-modified-defaults-example.html',
+                    styleUrls: ['tooltip-modified-defaults-example.css'],
+                    providers: [
+                        { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
+                    ],
+                },] },
+    ];
     TooltipModifiedDefaultsExample.ɵfac = function TooltipModifiedDefaultsExample_Factory(t) { return new (t || TooltipModifiedDefaultsExample)(); };
     TooltipModifiedDefaultsExample.ɵcmp = ɵɵdefineComponent({ type: TooltipModifiedDefaultsExample, selectors: [["tooltip-modified-defaults-example"]], features: [ɵɵProvidersFeature([
                 { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: myCustomTooltipDefaults }
@@ -284,6 +339,13 @@ var TooltipModifiedDefaultsExample = /** @class */ (function () {
 var TooltipOverviewExample = /** @class */ (function () {
     function TooltipOverviewExample() {
     }
+    TooltipOverviewExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tooltip-overview-example',
+                    templateUrl: 'tooltip-overview-example.html',
+                    styleUrls: ['tooltip-overview-example.css'],
+                },] },
+    ];
     TooltipOverviewExample.ɵfac = function TooltipOverviewExample_Factory(t) { return new (t || TooltipOverviewExample)(); };
     TooltipOverviewExample.ɵcmp = ɵɵdefineComponent({ type: TooltipOverviewExample, selectors: [["tooltip-overview-example"]], decls: 2, vars: 0, consts: [["mat-raised-button", "", "matTooltip", "Info about the action", "aria-label", "Button that displays a tooltip when focused or hovered over"]], template: function TooltipOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "button", 0);
@@ -319,6 +381,13 @@ var TooltipPositionExample = /** @class */ (function () {
         this.positionOptions = ['after', 'before', 'above', 'below', 'left', 'right'];
         this.position = new FormControl(this.positionOptions[0]);
     }
+    TooltipPositionExample.decorators = [
+        { type: Component, args: [{
+                    selector: 'tooltip-position-example',
+                    templateUrl: 'tooltip-position-example.html',
+                    styleUrls: ['tooltip-position-example.css'],
+                },] },
+    ];
     TooltipPositionExample.ɵfac = function TooltipPositionExample_Factory(t) { return new (t || TooltipPositionExample)(); };
     TooltipPositionExample.ɵcmp = ɵɵdefineComponent({ type: TooltipPositionExample, selectors: [["tooltip-position-example"]], decls: 7, vars: 3, consts: [[1, "example-user-input"], [3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["mat-raised-button", "", "matTooltip", "Info about the action", "aria-label", "Button that displays a tooltip in various positions", 3, "matTooltipPosition"], [3, "value"]], template: function TooltipPositionExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field", 0);
@@ -365,6 +434,21 @@ var EXAMPLES = [
 var TooltipExamplesModule = /** @class */ (function () {
     function TooltipExamplesModule() {
     }
+    TooltipExamplesModule.decorators = [
+        { type: NgModule, args: [{
+                    imports: [
+                        CommonModule,
+                        MatButtonModule,
+                        MatCheckboxModule,
+                        MatInputModule,
+                        MatSelectModule,
+                        MatTooltipModule,
+                        ReactiveFormsModule,
+                    ],
+                    declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                },] },
+    ];
     TooltipExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TooltipExamplesModule });
     TooltipExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function TooltipExamplesModule_Factory(t) { return new (t || TooltipExamplesModule)(); }, imports: [[
                 CommonModule,
