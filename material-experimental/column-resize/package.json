@@ -1,0 +1,11 @@
+{
+  "name": "@angular/components-examples/material-experimental/column-resize",
+  "main": "../../bundles/components-examples-material-experimental-column-resize.umd.js",
+  "fesm5": "../../fesm5/material-experimental/column-resize.js",
+  "fesm2015": "../../fesm2015/material-experimental/column-resize.js",
+  "esm5": "../../esm5/material-experimental/column-resize/index.js",
+  "esm2015": "../../esm2015/material-experimental/column-resize/index.js",
+  "typings": "./index.d.ts",
+  "module": "../../fesm5/material-experimental/column-resize.js",
+  "es2015": "../../fesm2015/material-experimental/column-resize.js"
+}
