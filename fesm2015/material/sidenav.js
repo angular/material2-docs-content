@@ -949,6 +949,7 @@ SidenavExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ SidenavExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SidenavExamplesModule });
@@ -1012,6 +1013,7 @@ SidenavExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

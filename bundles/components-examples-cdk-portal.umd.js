@@ -105,18 +105,14 @@
         }
         CdkPortalExamplesModule.decorators = [
             { type: i0.NgModule, args: [{
-                        imports: [
-                            i1.PortalModule,
-                        ],
+                        imports: [i1.PortalModule],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
-                        entryComponents: [ComponentPortalExample]
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         CdkPortalExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkPortalExamplesModule });
-        CdkPortalExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkPortalExamplesModule_Factory(t) { return new (t || CdkPortalExamplesModule)(); }, imports: [[
-                    i1.PortalModule,
-                ]] });
+        CdkPortalExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkPortalExamplesModule_Factory(t) { return new (t || CdkPortalExamplesModule)(); }, imports: [[i1.PortalModule]] });
         return CdkPortalExamplesModule;
     }());
     (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(CdkPortalExamplesModule, { declarations: [CdkPortalOverviewExample,
@@ -125,12 +121,10 @@
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(CdkPortalExamplesModule, [{
             type: i0.NgModule,
             args: [{
-                    imports: [
-                        i1.PortalModule,
-                    ],
+                    imports: [i1.PortalModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
-                    entryComponents: [ComponentPortalExample]
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

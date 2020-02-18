@@ -165,7 +165,7 @@ BottomSheetExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
-                entryComponents: [BottomSheetOverviewExampleSheet],
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ BottomSheetExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
@@ -189,7 +189,7 @@ BottomSheetExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
-                entryComponents: [BottomSheetOverviewExampleSheet],
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

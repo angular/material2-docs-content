@@ -108,6 +108,7 @@ CardExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CardExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CardExamplesModule });
@@ -128,6 +129,7 @@ CardExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

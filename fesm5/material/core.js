@@ -128,6 +128,7 @@ var CoreExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     CoreExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CoreExamplesModule });
@@ -159,6 +160,7 @@ var CoreExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

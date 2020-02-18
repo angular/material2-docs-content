@@ -320,6 +320,7 @@ var CdkTableExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     CdkTableExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkTableExamplesModule });
@@ -339,6 +340,7 @@ var CdkTableExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

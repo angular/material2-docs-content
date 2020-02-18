@@ -95,6 +95,7 @@ IconExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ IconExamplesModule.ɵmod = ɵɵdefineNgModule({ type: IconExamplesModule });
@@ -112,6 +113,7 @@ IconExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

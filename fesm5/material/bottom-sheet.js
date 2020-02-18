@@ -130,7 +130,7 @@ var BottomSheetExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
-                    entryComponents: [BottomSheetOverviewExampleSheet],
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     BottomSheetExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BottomSheetExamplesModule });
@@ -156,7 +156,7 @@ var BottomSheetExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
-                entryComponents: [BottomSheetOverviewExampleSheet],
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

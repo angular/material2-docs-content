@@ -1,6 +1,6 @@
 /**
- * Example data with information about component name, selector, files used in example, and path to
- * examples.
+ * Example data with information about component name, selector, files used in
+ * example, and path to examples.
  */
 export declare class ExampleData {
     /** Description of the example. */
@@ -11,10 +11,7 @@ export declare class ExampleData {
     selectorName: string;
     /** Name of the file that contains the example component. */
     indexFilename: string;
-    /**
-     * Name of the example component. For examples with multiple components, this property will
-     * include multiple components that are comma separated (e.g. dialog-overview)
-     */
-    componentName: string;
+    /** Names of the components being used in this example. */
+    componentNames: string[];
     constructor(example: string);
 }

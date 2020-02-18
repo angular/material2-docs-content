@@ -4183,6 +4183,7 @@ TableExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ TableExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TableExamplesModule });
@@ -4245,6 +4246,7 @@ TableExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

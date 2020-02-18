@@ -263,6 +263,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         CdkTextFieldExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkTextFieldExamplesModule });
@@ -293,6 +294,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

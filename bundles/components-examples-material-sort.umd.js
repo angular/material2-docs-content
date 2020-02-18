@@ -131,6 +131,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         SortExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SortExamplesModule });
@@ -151,6 +152,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

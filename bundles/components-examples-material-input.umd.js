@@ -448,6 +448,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         InputExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: InputExamplesModule });
@@ -492,6 +493,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

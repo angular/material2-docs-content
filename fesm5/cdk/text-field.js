@@ -266,6 +266,7 @@ var CdkTextFieldExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     CdkTextFieldExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkTextFieldExamplesModule });
@@ -296,6 +297,7 @@ var CdkTextFieldExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

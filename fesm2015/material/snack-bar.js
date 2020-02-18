@@ -315,7 +315,7 @@ SnackBarExamplesModule.decorators = [
                 ],
                 declarations: [...EXAMPLES, PizzaPartyComponent],
                 exports: EXAMPLES,
-                entryComponents: [PizzaPartyComponent],
+                entryComponents: [...EXAMPLES, PizzaPartyComponent],
             },] },
 ];
 /** @nocollapse */ SnackBarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SnackBarExamplesModule });
@@ -348,7 +348,7 @@ SnackBarExamplesModule.decorators = [
                 ],
                 declarations: [...EXAMPLES, PizzaPartyComponent],
                 exports: EXAMPLES,
-                entryComponents: [PizzaPartyComponent],
+                entryComponents: [...EXAMPLES, PizzaPartyComponent],
             }]
     }], null, null); })();
 

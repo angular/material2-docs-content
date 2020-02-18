@@ -716,6 +716,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         TabGroupExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: TabGroupExamplesModule });
@@ -776,6 +777,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

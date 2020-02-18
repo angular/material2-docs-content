@@ -57,6 +57,8 @@
                             i1.MatListModule,
                         ],
                         declarations: EXAMPLES,
+                        exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         DividerExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: DividerExamplesModule });
@@ -67,7 +69,7 @@
         return DividerExamplesModule;
     }());
     (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerOverviewExample], imports: [i2.MatDividerModule,
-            i1.MatListModule] }); })();
+            i1.MatListModule], exports: [DividerOverviewExample] }); })();
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(DividerExamplesModule, [{
             type: i0.NgModule,
             args: [{
@@ -76,6 +78,8 @@
                         i1.MatListModule,
                     ],
                     declarations: EXAMPLES,
+                    exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

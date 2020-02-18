@@ -767,6 +767,7 @@ var FormFieldExamplesModule = /** @class */ (function () {
                     ],
                     declarations: __spread(EXAMPLES, [MyTelInput]),
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     FormFieldExamplesModule.ɵmod = ɵɵdefineNgModule({ type: FormFieldExamplesModule });
@@ -823,6 +824,7 @@ var FormFieldExamplesModule = /** @class */ (function () {
                 ],
                 declarations: __spread(EXAMPLES, [MyTelInput]),
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

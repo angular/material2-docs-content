@@ -848,6 +848,7 @@ AutocompleteExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ AutocompleteExamplesModule.ɵmod = ɵɵdefineNgModule({ type: AutocompleteExamplesModule });
@@ -893,6 +894,7 @@ AutocompleteExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

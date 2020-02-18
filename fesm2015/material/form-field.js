@@ -971,6 +971,7 @@ FormFieldExamplesModule.decorators = [
                 ],
                 declarations: [...EXAMPLES, MyTelInput],
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ FormFieldExamplesModule.ɵmod = ɵɵdefineNgModule({ type: FormFieldExamplesModule });
@@ -1025,6 +1026,7 @@ FormFieldExamplesModule.decorators = [
                 ],
                 declarations: [...EXAMPLES, MyTelInput],
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

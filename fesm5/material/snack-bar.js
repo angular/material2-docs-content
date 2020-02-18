@@ -247,7 +247,7 @@ var SnackBarExamplesModule = /** @class */ (function () {
                     ],
                     declarations: __spread(EXAMPLES, [PizzaPartyComponent]),
                     exports: EXAMPLES,
-                    entryComponents: [PizzaPartyComponent],
+                    entryComponents: __spread(EXAMPLES, [PizzaPartyComponent]),
                 },] },
     ];
     SnackBarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SnackBarExamplesModule });
@@ -282,7 +282,7 @@ var SnackBarExamplesModule = /** @class */ (function () {
                 ],
                 declarations: __spread(EXAMPLES, [PizzaPartyComponent]),
                 exports: EXAMPLES,
-                entryComponents: [PizzaPartyComponent],
+                entryComponents: __spread(EXAMPLES, [PizzaPartyComponent]),
             }]
     }], null, null); })();
 

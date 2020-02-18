@@ -108,6 +108,7 @@ var GridListExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     GridListExamplesModule.ɵmod = ɵɵdefineNgModule({ type: GridListExamplesModule });
@@ -130,6 +131,7 @@ var GridListExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

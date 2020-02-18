@@ -252,6 +252,7 @@ var ButtonExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     ButtonExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ButtonExamplesModule });
@@ -274,6 +275,7 @@ var ButtonExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

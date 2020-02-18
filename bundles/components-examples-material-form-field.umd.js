@@ -757,6 +757,7 @@
                         ],
                         declarations: tslib.__spread(EXAMPLES, [MyTelInput]),
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         FormFieldExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: FormFieldExamplesModule });
@@ -813,6 +814,7 @@
                     ],
                     declarations: tslib.__spread(EXAMPLES, [MyTelInput]),
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

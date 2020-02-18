@@ -1057,6 +1057,7 @@ StepperExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ StepperExamplesModule.ɵmod = ɵɵdefineNgModule({ type: StepperExamplesModule });
@@ -1096,6 +1097,7 @@ StepperExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

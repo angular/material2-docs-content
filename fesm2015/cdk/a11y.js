@@ -429,6 +429,7 @@ CdkA11yExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CdkA11yExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkA11yExamplesModule });
@@ -451,6 +452,7 @@ CdkA11yExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

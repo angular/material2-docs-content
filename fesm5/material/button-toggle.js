@@ -167,6 +167,7 @@ var ButtonToggleExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     ButtonToggleExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
@@ -191,6 +192,7 @@ var ButtonToggleExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

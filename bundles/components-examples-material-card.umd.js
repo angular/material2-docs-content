@@ -101,6 +101,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         CardExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CardExamplesModule });
@@ -123,6 +124,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

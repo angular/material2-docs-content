@@ -63,6 +63,7 @@
                         imports: [i2.ClipboardModule, i1.FormsModule],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         CdkClipboardExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
@@ -76,6 +77,7 @@
                     imports: [i2.ClipboardModule, i1.FormsModule],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

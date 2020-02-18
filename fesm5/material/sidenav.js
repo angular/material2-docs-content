@@ -780,6 +780,7 @@ var SidenavExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     SidenavExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SidenavExamplesModule });
@@ -845,6 +846,7 @@ var SidenavExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

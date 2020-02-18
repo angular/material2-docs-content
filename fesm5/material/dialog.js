@@ -496,12 +496,7 @@ var DialogExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
-                    entryComponents: [
-                        DialogContentExampleDialog,
-                        DialogDataExampleDialog,
-                        DialogElementsExampleDialog,
-                        DialogOverviewExampleDialog,
-                    ]
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     DialogExamplesModule.ɵmod = ɵɵdefineNgModule({ type: DialogExamplesModule });
@@ -545,12 +540,7 @@ var DialogExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
-                entryComponents: [
-                    DialogContentExampleDialog,
-                    DialogDataExampleDialog,
-                    DialogElementsExampleDialog,
-                    DialogOverviewExampleDialog,
-                ]
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

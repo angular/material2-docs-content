@@ -126,6 +126,7 @@ RadioExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ RadioExamplesModule.ɵmod = ɵɵdefineNgModule({ type: RadioExamplesModule });
@@ -149,6 +150,7 @@ RadioExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

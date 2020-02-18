@@ -496,6 +496,7 @@ InputExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ InputExamplesModule.ɵmod = ɵɵdefineNgModule({ type: InputExamplesModule });
@@ -538,6 +539,7 @@ InputExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

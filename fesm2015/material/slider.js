@@ -310,6 +310,7 @@ SliderExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ SliderExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SliderExamplesModule });
@@ -344,6 +345,7 @@ SliderExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

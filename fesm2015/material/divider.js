@@ -62,6 +62,8 @@ DividerExamplesModule.decorators = [
                     MatListModule,
                 ],
                 declarations: EXAMPLES,
+                exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ DividerExamplesModule.ɵmod = ɵɵdefineNgModule({ type: DividerExamplesModule });
@@ -70,7 +72,7 @@ DividerExamplesModule.decorators = [
             MatListModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(DividerExamplesModule, { declarations: [DividerOverviewExample], imports: [MatDividerModule,
-        MatListModule] }); })();
+        MatListModule], exports: [DividerOverviewExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(DividerExamplesModule, [{
         type: NgModule,
         args: [{
@@ -79,6 +81,8 @@ DividerExamplesModule.decorators = [
                     MatListModule,
                 ],
                 declarations: EXAMPLES,
+                exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

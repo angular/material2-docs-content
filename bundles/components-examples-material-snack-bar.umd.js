@@ -243,7 +243,7 @@
                         ],
                         declarations: tslib.__spread(EXAMPLES, [PizzaPartyComponent]),
                         exports: EXAMPLES,
-                        entryComponents: [PizzaPartyComponent],
+                        entryComponents: tslib.__spread(EXAMPLES, [PizzaPartyComponent]),
                     },] },
         ];
         SnackBarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: SnackBarExamplesModule });
@@ -278,7 +278,7 @@
                     ],
                     declarations: tslib.__spread(EXAMPLES, [PizzaPartyComponent]),
                     exports: EXAMPLES,
-                    entryComponents: [PizzaPartyComponent],
+                    entryComponents: tslib.__spread(EXAMPLES, [PizzaPartyComponent]),
                 }]
         }], null, null); })();
 

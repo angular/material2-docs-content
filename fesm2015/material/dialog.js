@@ -600,12 +600,7 @@ DialogExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
-                entryComponents: [
-                    DialogContentExampleDialog,
-                    DialogDataExampleDialog,
-                    DialogElementsExampleDialog,
-                    DialogOverviewExampleDialog,
-                ]
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ DialogExamplesModule.ɵmod = ɵɵdefineNgModule({ type: DialogExamplesModule });
@@ -647,12 +642,7 @@ DialogExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
-                entryComponents: [
-                    DialogContentExampleDialog,
-                    DialogDataExampleDialog,
-                    DialogElementsExampleDialog,
-                    DialogOverviewExampleDialog,
-                ]
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

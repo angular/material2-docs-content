@@ -447,6 +447,7 @@ var TooltipExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     TooltipExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TooltipExamplesModule });
@@ -498,6 +499,7 @@ var TooltipExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

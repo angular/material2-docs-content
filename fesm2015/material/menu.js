@@ -363,6 +363,7 @@ MenuExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ MenuExamplesModule.ɵmod = ɵɵdefineNgModule({ type: MenuExamplesModule });
@@ -390,6 +391,7 @@ MenuExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

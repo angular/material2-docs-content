@@ -261,6 +261,7 @@ ButtonExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ ButtonExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ButtonExamplesModule });
@@ -281,6 +282,7 @@ ButtonExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

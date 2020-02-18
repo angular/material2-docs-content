@@ -341,6 +341,7 @@ CdkTextFieldExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CdkTextFieldExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkTextFieldExamplesModule });
@@ -369,6 +370,7 @@ CdkTextFieldExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

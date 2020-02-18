@@ -1253,6 +1253,7 @@ CdkPopoverEditExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CdkPopoverEditExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPopoverEditExamplesModule });
@@ -1285,6 +1286,7 @@ CdkPopoverEditExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

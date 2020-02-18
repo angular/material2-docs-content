@@ -99,6 +99,7 @@ var CardExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     CardExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CardExamplesModule });
@@ -121,6 +122,7 @@ var CardExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

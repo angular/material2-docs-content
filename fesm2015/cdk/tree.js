@@ -341,6 +341,7 @@ CdkTreeExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CdkTreeExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkTreeExamplesModule });
@@ -364,6 +365,7 @@ CdkTreeExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

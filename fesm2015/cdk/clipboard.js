@@ -74,6 +74,7 @@ CdkClipboardExamplesModule.decorators = [
                 imports: [ClipboardModule, FormsModule],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CdkClipboardExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkClipboardExamplesModule });
@@ -85,6 +86,7 @@ CdkClipboardExamplesModule.decorators = [
                 imports: [ClipboardModule, FormsModule],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

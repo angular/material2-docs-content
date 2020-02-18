@@ -600,6 +600,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         AutocompleteExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: AutocompleteExamplesModule });
@@ -647,6 +648,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

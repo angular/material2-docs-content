@@ -1564,6 +1564,7 @@ TreeExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ TreeExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TreeExamplesModule });
@@ -1605,6 +1606,7 @@ TreeExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

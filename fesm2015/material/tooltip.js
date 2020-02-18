@@ -509,6 +509,7 @@ TooltipExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ TooltipExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TooltipExamplesModule });
@@ -558,6 +559,7 @@ TooltipExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 
