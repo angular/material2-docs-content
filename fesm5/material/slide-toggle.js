@@ -232,6 +232,7 @@ var SlideToggleExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     SlideToggleExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SlideToggleExamplesModule });
@@ -271,6 +272,7 @@ var SlideToggleExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

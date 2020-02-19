@@ -295,6 +295,7 @@ ProgressBarExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ ProgressBarExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ProgressBarExamplesModule });
@@ -333,6 +334,7 @@ ProgressBarExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

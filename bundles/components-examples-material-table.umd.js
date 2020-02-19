@@ -3415,6 +3415,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         TableExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: TableExamplesModule });
@@ -3479,6 +3480,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

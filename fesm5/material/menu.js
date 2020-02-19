@@ -350,6 +350,7 @@ var MenuExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     MenuExamplesModule.ɵmod = ɵɵdefineNgModule({ type: MenuExamplesModule });
@@ -379,6 +380,7 @@ var MenuExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

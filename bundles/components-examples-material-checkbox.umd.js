@@ -143,6 +143,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         CheckboxExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CheckboxExamplesModule });
@@ -171,6 +172,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

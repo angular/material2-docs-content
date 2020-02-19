@@ -104,6 +104,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         ToolbarExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ToolbarExamplesModule });
@@ -126,6 +127,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

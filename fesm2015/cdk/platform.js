@@ -123,6 +123,7 @@ CdkPlatformExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CdkPlatformExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
@@ -138,6 +139,7 @@ CdkPlatformExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

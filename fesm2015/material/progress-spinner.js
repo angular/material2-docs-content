@@ -173,6 +173,7 @@ ProgressSpinnerExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ ProgressSpinnerExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ProgressSpinnerExamplesModule });
@@ -205,6 +206,7 @@ ProgressSpinnerExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

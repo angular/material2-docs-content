@@ -82,6 +82,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         IconExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: IconExamplesModule });
@@ -101,6 +102,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

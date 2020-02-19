@@ -1,99 +1,4 @@
-import { NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, ɵsetClassMetadata } from '@angular/core';
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCdkTableExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample, CdkPopoverEditExamplesModule } from '@angular/components-examples/cdk-experimental/popover-edit';
-export { CdkPopoverEditCdkTableExample, CdkPopoverEditCdkTableFlexExample, CdkPopoverEditCellSpanVanillaTableExample, CdkPopoverEditTabOutVanillaTableExample, CdkPopoverEditVanillaTableExample } from '@angular/components-examples/cdk-experimental/popover-edit';
-import { FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample, CdkA11yExamplesModule } from '@angular/components-examples/cdk/a11y';
-export { FocusMonitorDirectivesExample, FocusMonitorFocusViaExample, FocusMonitorOverviewExample } from '@angular/components-examples/cdk/a11y';
-import { CdkClipboardOverviewExample, CdkClipboardExamplesModule } from '@angular/components-examples/cdk/clipboard';
-export { CdkClipboardOverviewExample } from '@angular/components-examples/cdk/clipboard';
-import { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropConnectedSortingExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledSortingExample, CdkDragDropDisabledExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample, CdkDragDropExamplesModule } from '@angular/components-examples/cdk/drag-drop';
-export { CdkDragDropAxisLockExample, CdkDragDropBoundaryExample, CdkDragDropConnectedSortingExample, CdkDragDropConnectedSortingGroupExample, CdkDragDropCustomPlaceholderExample, CdkDragDropCustomPreviewExample, CdkDragDropDelayExample, CdkDragDropDisabledExample, CdkDragDropDisabledSortingExample, CdkDragDropEnterPredicateExample, CdkDragDropFreeDragPositionExample, CdkDragDropHandleExample, CdkDragDropHorizontalSortingExample, CdkDragDropOverviewExample, CdkDragDropRootElementExample, CdkDragDropSortingExample } from '@angular/components-examples/cdk/drag-drop';
-import { CdkPlatformOverviewExample, CdkPlatformExamplesModule } from '@angular/components-examples/cdk/platform';
-export { CdkPlatformOverviewExample } from '@angular/components-examples/cdk/platform';
-import { CdkPortalOverviewExample, CdkPortalExamplesModule, ComponentPortalExample } from '@angular/components-examples/cdk/portal';
-export { CdkPortalOverviewExample, ComponentPortalExample } from '@angular/components-examples/cdk/portal';
-import { CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample, CdkScrollingExamplesModule } from '@angular/components-examples/cdk/scrolling';
-export { CdkVirtualScrollContextExample, CdkVirtualScrollCustomStrategyExample, CdkVirtualScrollDataSourceExample, CdkVirtualScrollDlExample, CdkVirtualScrollFixedBufferExample, CdkVirtualScrollHorizontalExample, CdkVirtualScrollOverviewExample, CdkVirtualScrollTemplateCacheExample } from '@angular/components-examples/cdk/scrolling';
-import { CdkCustomStepperWithoutFormExample, CdkStepperExamplesModule, CustomStepper } from '@angular/components-examples/cdk/stepper';
-export { CdkCustomStepperWithoutFormExample, CustomStepper } from '@angular/components-examples/cdk/stepper';
-import { CdkTableBasicFlexExample, CdkTableBasicExample, CdkTableExamplesModule } from '@angular/components-examples/cdk/table';
-export { CdkTableBasicExample, CdkTableBasicFlexExample } from '@angular/components-examples/cdk/table';
-import { TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample, CdkTextFieldExamplesModule } from '@angular/components-examples/cdk/text-field';
-export { TextFieldAutofillDirectiveExample, TextFieldAutofillMonitorExample, TextFieldAutosizeTextareaExample } from '@angular/components-examples/cdk/text-field';
-import { CdkTreeFlatExample, CdkTreeNestedExample, CdkTreeExamplesModule } from '@angular/components-examples/cdk/tree';
-export { CdkTreeFlatExample, CdkTreeNestedExample } from '@angular/components-examples/cdk/tree';
-import { PopoverEditCellSpanMatTableExample, PopoverEditMatTableFlexExample, PopoverEditMatTableExample, PopoverEditTabOutMatTableExample, PopoverEditExamplesModule } from '@angular/components-examples/material-experimental/popover-edit';
-export { PopoverEditCellSpanMatTableExample, PopoverEditMatTableExample, PopoverEditMatTableFlexExample, PopoverEditTabOutMatTableExample } from '@angular/components-examples/material-experimental/popover-edit';
-import { AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteSimpleExample, AutocompleteExamplesModule } from '@angular/components-examples/material/autocomplete';
-export { AutocompleteAutoActiveFirstOptionExample, AutocompleteDisplayExample, AutocompleteFilterExample, AutocompleteOptgroupExample, AutocompleteOverviewExample, AutocompletePlainInputExample, AutocompleteSimpleExample } from '@angular/components-examples/material/autocomplete';
-import { BadgeOverviewExample, BadgeExamplesModule } from '@angular/components-examples/material/badge';
-export { BadgeOverviewExample } from '@angular/components-examples/material/badge';
-import { BottomSheetOverviewExample, BottomSheetExamplesModule, BottomSheetOverviewExampleSheet } from '@angular/components-examples/material/bottom-sheet';
-export { BottomSheetOverviewExample, BottomSheetOverviewExampleSheet } from '@angular/components-examples/material/bottom-sheet';
-import { ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample, ButtonToggleExamplesModule } from '@angular/components-examples/material/button-toggle';
-export { ButtonToggleAppearanceExample, ButtonToggleExclusiveExample, ButtonToggleOverviewExample } from '@angular/components-examples/material/button-toggle';
-import { ButtonOverviewExample, ButtonTypesExample, ButtonExamplesModule } from '@angular/components-examples/material/button';
-export { ButtonOverviewExample, ButtonTypesExample } from '@angular/components-examples/material/button';
-import { CardFancyExample, CardOverviewExample, CardExamplesModule } from '@angular/components-examples/material/card';
-export { CardFancyExample, CardOverviewExample } from '@angular/components-examples/material/card';
-import { CheckboxConfigurableExample, CheckboxOverviewExample, CheckboxExamplesModule } from '@angular/components-examples/material/checkbox';
-export { CheckboxConfigurableExample, CheckboxOverviewExample } from '@angular/components-examples/material/checkbox';
-import { ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample, ChipsExamplesModule } from '@angular/components-examples/material/chips';
-export { ChipsAutocompleteExample, ChipsDragDropExample, ChipsInputExample, ChipsOverviewExample, ChipsStackedExample } from '@angular/components-examples/material/chips';
-import { ElevationOverviewExample, RippleOverviewExample, CoreExamplesModule } from '@angular/components-examples/material/core';
-export { ElevationOverviewExample, RippleOverviewExample } from '@angular/components-examples/material/core';
-import { DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, DatepickerExamplesModule, ExampleHeader } from '@angular/components-examples/material/datepicker';
-export { DatepickerApiExample, DatepickerColorExample, DatepickerCustomHeaderExample, DatepickerCustomIconExample, DatepickerDateClassExample, DatepickerDisabledExample, DatepickerEventsExample, DatepickerFilterExample, DatepickerFormatsExample, DatepickerLocaleExample, DatepickerMinMaxExample, DatepickerMomentExample, DatepickerOverviewExample, DatepickerStartViewExample, DatepickerTouchExample, DatepickerValueExample, DatepickerViewsSelectionExample, ExampleHeader } from '@angular/components-examples/material/datepicker';
-import { DialogContentExample, DialogDataExample, DialogElementsExample, DialogOverviewExample, DialogExamplesModule, DialogContentExampleDialog, DialogDataExampleDialog, DialogElementsExampleDialog, DialogOverviewExampleDialog } from '@angular/components-examples/material/dialog';
-export { DialogContentExample, DialogContentExampleDialog, DialogDataExample, DialogDataExampleDialog, DialogElementsExample, DialogElementsExampleDialog, DialogOverviewExample, DialogOverviewExampleDialog } from '@angular/components-examples/material/dialog';
-import { DividerOverviewExample, DividerExamplesModule } from '@angular/components-examples/material/divider';
-export { DividerOverviewExample } from '@angular/components-examples/material/divider';
-import { ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample, ExpansionExamplesModule } from '@angular/components-examples/material/expansion';
-export { ExpansionExpandCollapseAllExample, ExpansionOverviewExample, ExpansionStepsExample } from '@angular/components-examples/material/expansion';
-import { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, FormFieldExamplesModule, MyTelInput } from '@angular/components-examples/material/form-field';
-export { FormFieldAppearanceExample, FormFieldCustomControlExample, FormFieldErrorExample, FormFieldHintExample, FormFieldLabelExample, FormFieldOverviewExample, FormFieldPrefixSuffixExample, FormFieldThemingExample, MyTelInput } from '@angular/components-examples/material/form-field';
-import { GridListDynamicExample, GridListOverviewExample, GridListExamplesModule } from '@angular/components-examples/material/grid-list';
-export { GridListDynamicExample, GridListOverviewExample } from '@angular/components-examples/material/grid-list';
-import { IconOverviewExample, IconSvgExample, IconExamplesModule } from '@angular/components-examples/material/icon';
-export { IconOverviewExample, IconSvgExample } from '@angular/components-examples/material/icon';
-import { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample, InputExamplesModule } from '@angular/components-examples/material/input';
-export { InputClearableExample, InputErrorStateMatcherExample, InputErrorsExample, InputFormExample, InputHintExample, InputOverviewExample, InputPrefixSuffixExample } from '@angular/components-examples/material/input';
-import { ListOverviewExample, ListSectionsExample, ListSelectionExample, ListExamplesModule } from '@angular/components-examples/material/list';
-export { ListOverviewExample, ListSectionsExample, ListSelectionExample } from '@angular/components-examples/material/list';
-import { MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample, MenuExamplesModule } from '@angular/components-examples/material/menu';
-export { MenuIconsExample, MenuOverviewExample, MenuPositionExample, NestedMenuExample } from '@angular/components-examples/material/menu';
-import { PaginatorConfigurableExample, PaginatorOverviewExample, PaginatorExamplesModule } from '@angular/components-examples/material/paginator';
-export { PaginatorConfigurableExample, PaginatorOverviewExample } from '@angular/components-examples/material/paginator';
-import { ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample, ProgressBarExamplesModule } from '@angular/components-examples/material/progress-bar';
-export { ProgressBarBufferExample, ProgressBarConfigurableExample, ProgressBarDeterminateExample, ProgressBarIndeterminateExample, ProgressBarQueryExample } from '@angular/components-examples/material/progress-bar';
-import { ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample, ProgressSpinnerExamplesModule } from '@angular/components-examples/material/progress-spinner';
-export { ProgressSpinnerConfigurableExample, ProgressSpinnerOverviewExample } from '@angular/components-examples/material/progress-spinner';
-import { RadioNgModelExample, RadioOverviewExample, RadioExamplesModule } from '@angular/components-examples/material/radio';
-export { RadioNgModelExample, RadioOverviewExample } from '@angular/components-examples/material/radio';
-import { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectInitialValueExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectReactiveFormExample, SelectResetExample, SelectValueBindingExample, SelectExamplesModule } from '@angular/components-examples/material/select';
-export { SelectCustomTriggerExample, SelectDisabledExample, SelectErrorStateMatcherExample, SelectFormExample, SelectHintErrorExample, SelectInitialValueExample, SelectMultipleExample, SelectNoRippleExample, SelectOptgroupExample, SelectOverviewExample, SelectPanelClassExample, SelectReactiveFormExample, SelectResetExample, SelectValueBindingExample } from '@angular/components-examples/material/select';
-import { SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample, SidenavExamplesModule } from '@angular/components-examples/material/sidenav';
-export { SidenavAutosizeExample, SidenavBackdropExample, SidenavDisableCloseExample, SidenavDrawerOverviewExample, SidenavFixedExample, SidenavModeExample, SidenavOpenCloseExample, SidenavOverviewExample, SidenavPositionExample, SidenavResponsiveExample } from '@angular/components-examples/material/sidenav';
-import { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample, SlideToggleExamplesModule } from '@angular/components-examples/material/slide-toggle';
-export { SlideToggleConfigurableExample, SlideToggleFormsExample, SlideToggleOverviewExample } from '@angular/components-examples/material/slide-toggle';
-import { SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample, SliderExamplesModule } from '@angular/components-examples/material/slider';
-export { SliderConfigurableExample, SliderFormattingExample, SliderOverviewExample } from '@angular/components-examples/material/slider';
-import { SnackBarComponentExample, SnackBarOverviewExample, SnackBarPositionExample, SnackBarExamplesModule, PizzaPartyComponent } from '@angular/components-examples/material/snack-bar';
-export { PizzaPartyComponent, SnackBarComponentExample, SnackBarOverviewExample, SnackBarPositionExample } from '@angular/components-examples/material/snack-bar';
-import { SortOverviewExample, SortExamplesModule } from '@angular/components-examples/material/sort';
-export { SortOverviewExample } from '@angular/components-examples/material/sort';
-import { StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample, StepperExamplesModule } from '@angular/components-examples/material/stepper';
-export { StepperEditableExample, StepperErrorsExample, StepperLabelPositionBottomExample, StepperOptionalExample, StepperOverviewExample, StepperStatesExample, StepperVerticalExample } from '@angular/components-examples/material/stepper';
-import { TableBasicFlexExample, TableBasicExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexFlexExample, TableStickyComplexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, TableExamplesModule, WrapperTable } from '@angular/components-examples/material/table';
-export { TableBasicExample, TableBasicFlexExample, TableDynamicColumnsExample, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable } from '@angular/components-examples/material/table';
-import { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicHeightExample, TabGroupDynamicExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample, TabGroupExamplesModule } from '@angular/components-examples/material/tabs';
-export { TabGroupAlignExample, TabGroupAnimationsExample, TabGroupAsyncExample, TabGroupBasicExample, TabGroupCustomLabelExample, TabGroupDynamicExample, TabGroupDynamicHeightExample, TabGroupHeaderBelowExample, TabGroupLazyLoadedExample, TabGroupStretchedExample, TabGroupThemeExample, TabNavBarBasicExample } from '@angular/components-examples/material/tabs';
-import { ToolbarMultirowExample, ToolbarOverviewExample, ToolbarExamplesModule } from '@angular/components-examples/material/toolbar';
-export { ToolbarMultirowExample, ToolbarOverviewExample } from '@angular/components-examples/material/toolbar';
-import { TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample, TooltipExamplesModule } from '@angular/components-examples/material/tooltip';
-export { TooltipAutoHideExample, TooltipCustomClassExample, TooltipDelayExample, TooltipDisabledExample, TooltipManualExample, TooltipMessageExample, TooltipModifiedDefaultsExample, TooltipOverviewExample, TooltipPositionExample } from '@angular/components-examples/material/tooltip';
-import { TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample, TreeExamplesModule } from '@angular/components-examples/material/tree';
-export { TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, TreeLoadmoreExample, TreeNestedOverviewExample } from '@angular/components-examples/material/tree';
+import { __awaiter } from 'tslib';
 
 /**
  * @fileoverview added by tsickle
@@ -103,1845 +8,2339 @@ export { TreeChecklistExample, TreeDynamicExample, TreeFlatOverviewExample, Tree
 /**
  ******************************************************************************
  * DO NOT MANUALLY EDIT THIS FILE. THIS FILE IS AUTOMATICALLY GENERATED.
- *
- * IMPORTANT: Due to a bug with the bazel ng_module rule, this file is now
- * checked into the repository. Please rebuild the example module by running
- * the following command: "yarn gulp build-examples-module"
- *
- * BUG: https://github.com/angular/angular/issues/30259
  ******************************************************************************/
 /**
  * @record
  */
 function LiveExample() { }
 if (false) {
-    /** @type {?} */
+    /**
+     * Title of the example.
+     * @type {?}
+     */
     LiveExample.prototype.title;
-    /** @type {?} */
-    LiveExample.prototype.component;
-    /** @type {?|undefined} */
+    /**
+     * Name of the example component.
+     * @type {?}
+     */
+    LiveExample.prototype.componentName;
+    /**
+     * List of additional components which are part of the example.
+     * @type {?}
+     */
+    LiveExample.prototype.additionalComponents;
+    /**
+     * List of additional files which are part of the example.
+     * @type {?}
+     */
     LiveExample.prototype.additionalFiles;
-    /** @type {?|undefined} */
-    LiveExample.prototype.selectorName;
+    /**
+     * NgModule that declares this example.
+     * @type {?}
+     */
+    LiveExample.prototype.module;
+}
+/**
+ * @record
+ */
+function NgModuleInfo() { }
+if (false) {
+    /**
+     * Name of the NgModule.
+     * @type {?}
+     */
+    NgModuleInfo.prototype.name;
+    /**
+     * Import specifier that resolves to this NgModule.
+     * @type {?}
+     */
+    NgModuleInfo.prototype.importSpecifier;
 }
 /** @type {?} */
 const EXAMPLE_COMPONENTS = {
     "cdk-popover-edit-cdk-table-flex": {
         "title": "CDK Popover Edit on a flex cdk-table.",
-        "component": CdkPopoverEditCdkTableFlexExample,
+        "componentName": "CdkPopoverEditCdkTableFlexExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkPopoverEditExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk-experimental/popover-edit"
+        }
     },
     "cdk-popover-edit-cdk-table": {
         "title": "CDK Popover Edit on a CDK data-table",
-        "component": CdkPopoverEditCdkTableExample,
+        "componentName": "CdkPopoverEditCdkTableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkPopoverEditExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk-experimental/popover-edit"
+        }
     },
     "cdk-popover-edit-cell-span-vanilla-table": {
         "title": "CDK Popover Edit spanning multiple columns on an HTML data-table",
-        "component": CdkPopoverEditCellSpanVanillaTableExample,
+        "componentName": "CdkPopoverEditCellSpanVanillaTableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkPopoverEditExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk-experimental/popover-edit"
+        }
     },
     "cdk-popover-edit-tab-out-vanilla-table": {
         "title": "CDK Popover Edit with spreadsheet-like configuration on an HTML data-table",
-        "component": CdkPopoverEditTabOutVanillaTableExample,
+        "componentName": "CdkPopoverEditTabOutVanillaTableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkPopoverEditExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk-experimental/popover-edit"
+        }
     },
     "cdk-popover-edit-vanilla-table": {
         "title": "CDK Popover Edit on an HTML data-table",
-        "component": CdkPopoverEditVanillaTableExample,
+        "componentName": "CdkPopoverEditVanillaTableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkPopoverEditExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk-experimental/popover-edit"
+        }
     },
     "focus-monitor-directives": {
         "title": "Monitoring focus with FocusMonitor",
-        "component": FocusMonitorDirectivesExample,
+        "componentName": "FocusMonitorDirectivesExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkA11yExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/a11y"
+        }
     },
     "focus-monitor-focus-via": {
         "title": "Focusing with a specific FocusOrigin",
-        "component": FocusMonitorFocusViaExample,
+        "componentName": "FocusMonitorFocusViaExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkA11yExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/a11y"
+        }
     },
     "focus-monitor-overview": {
         "title": "Monitoring focus with FocusMonitor",
-        "component": FocusMonitorOverviewExample,
+        "componentName": "FocusMonitorOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkA11yExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/a11y"
+        }
     },
     "cdk-clipboard-overview": {
         "title": "Clipboard overview",
-        "component": CdkClipboardOverviewExample,
+        "componentName": "CdkClipboardOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkClipboardExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/clipboard"
+        }
     },
     "cdk-drag-drop-axis-lock": {
         "title": "Drag&Drop position locking",
-        "component": CdkDragDropAxisLockExample,
+        "componentName": "CdkDragDropAxisLockExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-boundary": {
         "title": "Drag&Drop boundary",
-        "component": CdkDragDropBoundaryExample,
+        "componentName": "CdkDragDropBoundaryExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-connected-sorting-group": {
         "title": "Drag&Drop connected sorting group",
-        "component": CdkDragDropConnectedSortingGroupExample,
+        "componentName": "CdkDragDropConnectedSortingGroupExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-connected-sorting": {
         "title": "Drag&Drop connected sorting",
-        "component": CdkDragDropConnectedSortingExample,
+        "componentName": "CdkDragDropConnectedSortingExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-custom-placeholder": {
         "title": "Drag&Drop custom placeholer",
-        "component": CdkDragDropCustomPlaceholderExample,
+        "componentName": "CdkDragDropCustomPlaceholderExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-custom-preview": {
         "title": "Drag&Drop custom preview",
-        "component": CdkDragDropCustomPreviewExample,
+        "componentName": "CdkDragDropCustomPreviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-delay": {
         "title": "Delayed dragging",
-        "component": CdkDragDropDelayExample,
+        "componentName": "CdkDragDropDelayExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-disabled-sorting": {
         "title": "Drag&Drop disabled sorting",
-        "component": CdkDragDropDisabledSortingExample,
+        "componentName": "CdkDragDropDisabledSortingExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-disabled": {
         "title": "Drag&Drop disabled",
-        "component": CdkDragDropDisabledExample,
+        "componentName": "CdkDragDropDisabledExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-enter-predicate": {
         "title": "Drag&Drop enter predicate",
-        "component": CdkDragDropEnterPredicateExample,
+        "componentName": "CdkDragDropEnterPredicateExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-free-drag-position": {
         "title": "Programmatically setting the free drag position",
-        "component": CdkDragDropFreeDragPositionExample,
+        "componentName": "CdkDragDropFreeDragPositionExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-handle": {
         "title": "Drag&Drop with a handle",
-        "component": CdkDragDropHandleExample,
+        "componentName": "CdkDragDropHandleExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-horizontal-sorting": {
         "title": "Drag&Drop horizontal sorting",
-        "component": CdkDragDropHorizontalSortingExample,
+        "componentName": "CdkDragDropHorizontalSortingExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-overview": {
         "title": "Basic Drag&Drop",
-        "component": CdkDragDropOverviewExample,
+        "componentName": "CdkDragDropOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-root-element": {
         "title": "Drag&Drop with alternate root element",
-        "component": CdkDragDropRootElementExample,
+        "componentName": "CdkDragDropRootElementExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-drag-drop-sorting": {
         "title": "Drag&Drop sorting",
-        "component": CdkDragDropSortingExample,
+        "componentName": "CdkDragDropSortingExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkDragDropExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+        }
     },
     "cdk-platform-overview": {
         "title": "Platform overview",
-        "component": CdkPlatformOverviewExample,
+        "componentName": "CdkPlatformOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkPlatformExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/platform"
+        }
     },
     "cdk-portal-overview": {
         "title": "Portal overview",
-        "component": CdkPortalOverviewExample,
+        "componentName": "CdkPortalOverviewExample",
         "additionalFiles": [],
-        "selectorName": "CdkPortalOverviewExample, ComponentPortalExample"
+        "additionalComponents": [
+            "ComponentPortalExample"
+        ],
+        "module": {
+            "name": "CdkPortalExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/portal"
+        }
     },
     "cdk-virtual-scroll-context": {
         "title": "Virtual scroll context variables",
-        "component": CdkVirtualScrollContextExample,
+        "componentName": "CdkVirtualScrollContextExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkScrollingExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+        }
     },
     "cdk-virtual-scroll-custom-strategy": {
         "title": "Virtual scroll with a custom strategy",
-        "component": CdkVirtualScrollCustomStrategyExample,
+        "componentName": "CdkVirtualScrollCustomStrategyExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkScrollingExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+        }
     },
     "cdk-virtual-scroll-data-source": {
         "title": "Virtual scroll with a custom data source",
-        "component": CdkVirtualScrollDataSourceExample,
+        "componentName": "CdkVirtualScrollDataSourceExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkScrollingExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+        }
     },
     "cdk-virtual-scroll-dl": {
         "title": "Virtual scrolling `<dl>`",
-        "component": CdkVirtualScrollDlExample,
+        "componentName": "CdkVirtualScrollDlExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkScrollingExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+        }
     },
     "cdk-virtual-scroll-fixed-buffer": {
         "title": "Fixed size virtual scroll with custom buffer parameters",
-        "component": CdkVirtualScrollFixedBufferExample,
+        "componentName": "CdkVirtualScrollFixedBufferExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkScrollingExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+        }
     },
     "cdk-virtual-scroll-horizontal": {
         "title": "Horizontal virtual scroll",
-        "component": CdkVirtualScrollHorizontalExample,
+        "componentName": "CdkVirtualScrollHorizontalExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkScrollingExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+        }
     },
     "cdk-virtual-scroll-overview": {
         "title": "Basic virtual scroll",
-        "component": CdkVirtualScrollOverviewExample,
+        "componentName": "CdkVirtualScrollOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkScrollingExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+        }
     },
     "cdk-virtual-scroll-template-cache": {
         "title": "Virtual scroll with no template caching",
-        "component": CdkVirtualScrollTemplateCacheExample,
+        "componentName": "CdkVirtualScrollTemplateCacheExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkScrollingExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+        }
     },
     "cdk-custom-stepper-without-form": {
         "title": "A custom CDK stepper without a form",
-        "component": CdkCustomStepperWithoutFormExample,
+        "componentName": "CdkCustomStepperWithoutFormExample",
         "additionalFiles": [
             "./example-custom-stepper.html",
             "./example-custom-stepper.css"
         ],
-        "selectorName": "CdkCustomStepperWithoutFormExample, CustomStepper"
+        "additionalComponents": [
+            "CustomStepper"
+        ],
+        "module": {
+            "name": "CdkStepperExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/stepper"
+        }
     },
     "cdk-table-basic-flex": {
         "title": "Basic use of `<cdk-table>` (uses display flex)",
-        "component": CdkTableBasicFlexExample,
+        "componentName": "CdkTableBasicFlexExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkTableExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/table"
+        }
     },
     "cdk-table-basic": {
         "title": "Basic CDK data-table",
-        "component": CdkTableBasicExample,
+        "componentName": "CdkTableBasicExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkTableExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/table"
+        }
     },
     "text-field-autofill-directive": {
         "title": "Monitoring autofill state with cdkAutofill",
-        "component": TextFieldAutofillDirectiveExample,
+        "componentName": "TextFieldAutofillDirectiveExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkTextFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/text-field"
+        }
     },
     "text-field-autofill-monitor": {
         "title": "Monitoring autofill state with AutofillMonitor",
-        "component": TextFieldAutofillMonitorExample,
+        "componentName": "TextFieldAutofillMonitorExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkTextFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/text-field"
+        }
     },
     "text-field-autosize-textarea": {
         "title": "Auto-resizing textarea",
-        "component": TextFieldAutosizeTextareaExample,
+        "componentName": "TextFieldAutosizeTextareaExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkTextFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/text-field"
+        }
     },
     "cdk-tree-flat": {
         "title": "Tree with flat nodes",
-        "component": CdkTreeFlatExample,
+        "componentName": "CdkTreeFlatExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkTreeExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/tree"
+        }
     },
     "cdk-tree-nested": {
         "title": "Tree with nested nodes",
-        "component": CdkTreeNestedExample,
+        "componentName": "CdkTreeNestedExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CdkTreeExamplesModule",
+            "importSpecifier": "@angular/components-examples/cdk/tree"
+        }
     },
     "popover-edit-cell-span-mat-table": {
         "title": "Material Popover Edit spanning multiple columns on a Material data-table",
-        "component": PopoverEditCellSpanMatTableExample,
+        "componentName": "PopoverEditCellSpanMatTableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "PopoverEditExamplesModule",
+            "importSpecifier": "@angular/components-examples/material-experimental/popover-edit"
+        }
     },
     "popover-edit-mat-table-flex": {
         "title": "Material Popover Edit on a flex Material data-table",
-        "component": PopoverEditMatTableFlexExample,
+        "componentName": "PopoverEditMatTableFlexExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "PopoverEditExamplesModule",
+            "importSpecifier": "@angular/components-examples/material-experimental/popover-edit"
+        }
     },
     "popover-edit-mat-table": {
         "title": "Material Popover Edit on a Material data-table",
-        "component": PopoverEditMatTableExample,
+        "componentName": "PopoverEditMatTableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "PopoverEditExamplesModule",
+            "importSpecifier": "@angular/components-examples/material-experimental/popover-edit"
+        }
     },
     "popover-edit-tab-out-mat-table": {
         "title": "Material Popover Edit with spreadsheet-like configuration on a Material data-table",
-        "component": PopoverEditTabOutMatTableExample,
+        "componentName": "PopoverEditTabOutMatTableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "PopoverEditExamplesModule",
+            "importSpecifier": "@angular/components-examples/material-experimental/popover-edit"
+        }
     },
     "autocomplete-auto-active-first-option": {
         "title": "Highlight the first autocomplete option",
-        "component": AutocompleteAutoActiveFirstOptionExample,
+        "componentName": "AutocompleteAutoActiveFirstOptionExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/autocomplete"
+        }
     },
     "autocomplete-display": {
         "title": "Display value autocomplete",
-        "component": AutocompleteDisplayExample,
+        "componentName": "AutocompleteDisplayExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/autocomplete"
+        }
     },
     "autocomplete-filter": {
         "title": "Filter autocomplete",
-        "component": AutocompleteFilterExample,
+        "componentName": "AutocompleteFilterExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/autocomplete"
+        }
     },
     "autocomplete-optgroup": {
         "title": "Option groups autocomplete",
-        "component": AutocompleteOptgroupExample,
+        "componentName": "AutocompleteOptgroupExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/autocomplete"
+        }
     },
     "autocomplete-overview": {
         "title": "Autocomplete overview",
-        "component": AutocompleteOverviewExample,
+        "componentName": "AutocompleteOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/autocomplete"
+        }
     },
     "autocomplete-plain-input": {
         "title": "Plain input autocomplete",
-        "component": AutocompletePlainInputExample,
+        "componentName": "AutocompletePlainInputExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/autocomplete"
+        }
     },
     "autocomplete-simple": {
         "title": "Simple autocomplete",
-        "component": AutocompleteSimpleExample,
+        "componentName": "AutocompleteSimpleExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/autocomplete"
+        }
     },
     "badge-overview": {
         "title": "Badge overview",
-        "component": BadgeOverviewExample,
+        "componentName": "BadgeOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "BadgeExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/badge"
+        }
     },
     "bottom-sheet-overview": {
         "title": "Bottom Sheet Overview",
-        "component": BottomSheetOverviewExample,
+        "componentName": "BottomSheetOverviewExample",
         "additionalFiles": [
             "bottom-sheet-overview-example-sheet.html"
         ],
-        "selectorName": "BottomSheetOverviewExample, BottomSheetOverviewExampleSheet"
+        "additionalComponents": [
+            "BottomSheetOverviewExampleSheet"
+        ],
+        "module": {
+            "name": "BottomSheetExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/bottom-sheet"
+        }
     },
     "button-toggle-appearance": {
         "title": "Button toggle appearance",
-        "component": ButtonToggleAppearanceExample,
+        "componentName": "ButtonToggleAppearanceExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ButtonToggleExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/button-toggle"
+        }
     },
     "button-toggle-exclusive": {
         "title": "Exclusive selection",
-        "component": ButtonToggleExclusiveExample,
+        "componentName": "ButtonToggleExclusiveExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ButtonToggleExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/button-toggle"
+        }
     },
     "button-toggle-overview": {
         "title": "Basic button-toggles",
-        "component": ButtonToggleOverviewExample,
+        "componentName": "ButtonToggleOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ButtonToggleExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/button-toggle"
+        }
     },
     "button-overview": {
         "title": "Basic buttons",
-        "component": ButtonOverviewExample,
+        "componentName": "ButtonOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ButtonExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/button"
+        }
     },
     "button-types": {
         "title": "Button varieties",
-        "component": ButtonTypesExample,
+        "componentName": "ButtonTypesExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ButtonExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/button"
+        }
     },
     "card-fancy": {
         "title": "Card with multiple sections",
-        "component": CardFancyExample,
+        "componentName": "CardFancyExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CardExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/card"
+        }
     },
     "card-overview": {
         "title": "Basic cards",
-        "component": CardOverviewExample,
+        "componentName": "CardOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CardExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/card"
+        }
     },
     "checkbox-configurable": {
         "title": "Configurable checkbox",
-        "component": CheckboxConfigurableExample,
+        "componentName": "CheckboxConfigurableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CheckboxExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/checkbox"
+        }
     },
     "checkbox-overview": {
         "title": "Basic checkboxes",
-        "component": CheckboxOverviewExample,
+        "componentName": "CheckboxOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CheckboxExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/checkbox"
+        }
     },
     "chips-autocomplete": {
         "title": "Chips Autocomplete",
-        "component": ChipsAutocompleteExample,
+        "componentName": "ChipsAutocompleteExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/chips"
+        }
     },
     "chips-drag-drop": {
         "title": "Chips Drag and Drop",
-        "component": ChipsDragDropExample,
+        "componentName": "ChipsDragDropExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/chips"
+        }
     },
     "chips-input": {
         "title": "Chips with input",
-        "component": ChipsInputExample,
+        "componentName": "ChipsInputExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/chips"
+        }
     },
     "chips-overview": {
         "title": "Basic chips",
-        "component": ChipsOverviewExample,
+        "componentName": "ChipsOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/chips"
+        }
     },
     "chips-stacked": {
         "title": "Stacked chips",
-        "component": ChipsStackedExample,
+        "componentName": "ChipsStackedExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/chips"
+        }
     },
     "elevation-overview": {
         "title": "Elevation CSS classes",
-        "component": ElevationOverviewExample,
+        "componentName": "ElevationOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CoreExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/core"
+        }
     },
     "ripple-overview": {
         "title": "MatRipple basic usage",
-        "component": RippleOverviewExample,
+        "componentName": "RippleOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "CoreExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/core"
+        }
     },
     "datepicker-api": {
         "title": "Datepicker open method",
-        "component": DatepickerApiExample,
+        "componentName": "DatepickerApiExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-color": {
         "title": "Datepicker palette colors",
-        "component": DatepickerColorExample,
+        "componentName": "DatepickerColorExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-custom-header": {
         "title": "Datepicker with custom calendar header",
-        "component": DatepickerCustomHeaderExample,
+        "componentName": "DatepickerCustomHeaderExample",
         "additionalFiles": [],
-        "selectorName": "DatepickerCustomHeaderExample, ExampleHeader"
+        "additionalComponents": [
+            "ExampleHeader"
+        ],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-custom-icon": {
         "title": "Datepicker with custom icon",
-        "component": DatepickerCustomIconExample,
+        "componentName": "DatepickerCustomIconExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-date-class": {
         "title": "Datepicker with custom date classes",
-        "component": DatepickerDateClassExample,
+        "componentName": "DatepickerDateClassExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-disabled": {
         "title": "Disabled datepicker",
-        "component": DatepickerDisabledExample,
+        "componentName": "DatepickerDisabledExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-events": {
         "title": "Datepicker input and change events",
-        "component": DatepickerEventsExample,
+        "componentName": "DatepickerEventsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-filter": {
         "title": "Datepicker with filter validation",
-        "component": DatepickerFilterExample,
+        "componentName": "DatepickerFilterExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-formats": {
         "title": "Datepicker with custom formats",
-        "component": DatepickerFormatsExample,
+        "componentName": "DatepickerFormatsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-locale": {
         "title": "Datepicker with different locale",
-        "component": DatepickerLocaleExample,
+        "componentName": "DatepickerLocaleExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-min-max": {
         "title": "Datepicker with min & max validation",
-        "component": DatepickerMinMaxExample,
+        "componentName": "DatepickerMinMaxExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-moment": {
         "title": "Datepicker that uses Moment.js dates",
-        "component": DatepickerMomentExample,
+        "componentName": "DatepickerMomentExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-overview": {
         "title": "Basic datepicker",
-        "component": DatepickerOverviewExample,
+        "componentName": "DatepickerOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-start-view": {
         "title": "Datepicker start date",
-        "component": DatepickerStartViewExample,
+        "componentName": "DatepickerStartViewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-touch": {
         "title": "Datepicker touch UI",
-        "component": DatepickerTouchExample,
+        "componentName": "DatepickerTouchExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-value": {
         "title": "Datepicker selected value",
-        "component": DatepickerValueExample,
+        "componentName": "DatepickerValueExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "datepicker-views-selection": {
         "title": "Datepicker emulating a Year and month picker",
-        "component": DatepickerViewsSelectionExample,
+        "componentName": "DatepickerViewsSelectionExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/datepicker"
+        }
     },
     "dialog-content": {
         "title": "Dialog with header, scrollable content and actions",
-        "component": DialogContentExample,
+        "componentName": "DialogContentExample",
         "additionalFiles": [
             "dialog-content-example-dialog.html"
         ],
-        "selectorName": "DialogContentExample, DialogContentExampleDialog"
+        "additionalComponents": [
+            "DialogContentExampleDialog"
+        ],
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/dialog"
+        }
     },
     "dialog-data": {
         "title": "Injecting data when opening a dialog",
-        "component": DialogDataExample,
+        "componentName": "DialogDataExample",
         "additionalFiles": [
             "dialog-data-example-dialog.html"
         ],
-        "selectorName": "DialogDataExample, DialogDataExampleDialog"
+        "additionalComponents": [
+            "DialogDataExampleDialog"
+        ],
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/dialog"
+        }
     },
     "dialog-elements": {
         "title": "Dialog elements",
-        "component": DialogElementsExample,
+        "componentName": "DialogElementsExample",
         "additionalFiles": [
             "dialog-elements-example-dialog.html"
         ],
-        "selectorName": "DialogElementsExample, DialogElementsExampleDialog"
+        "additionalComponents": [
+            "DialogElementsExampleDialog"
+        ],
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/dialog"
+        }
     },
     "dialog-overview": {
         "title": "Dialog Overview",
-        "component": DialogOverviewExample,
+        "componentName": "DialogOverviewExample",
         "additionalFiles": [
             "dialog-overview-example-dialog.html"
         ],
-        "selectorName": "DialogOverviewExample, DialogOverviewExampleDialog"
+        "additionalComponents": [
+            "DialogOverviewExampleDialog"
+        ],
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/dialog"
+        }
     },
     "divider-overview": {
         "title": "Basic divider",
-        "component": DividerOverviewExample,
+        "componentName": "DividerOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "DividerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/divider"
+        }
     },
     "expansion-expand-collapse-all": {
         "title": "Accordion with expand/collapse all toggles",
-        "component": ExpansionExpandCollapseAllExample,
+        "componentName": "ExpansionExpandCollapseAllExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ExpansionExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/expansion"
+        }
     },
     "expansion-overview": {
         "title": "Basic expansion panel",
-        "component": ExpansionOverviewExample,
+        "componentName": "ExpansionOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ExpansionExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/expansion"
+        }
     },
     "expansion-steps": {
         "title": "Expansion panel as accordion",
-        "component": ExpansionStepsExample,
+        "componentName": "ExpansionStepsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ExpansionExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/expansion"
+        }
     },
     "form-field-appearance": {
         "title": "Form field appearance variants",
-        "component": FormFieldAppearanceExample,
+        "componentName": "FormFieldAppearanceExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "FormFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/form-field"
+        }
     },
     "form-field-custom-control": {
         "title": "Form field with custom telephone number input control.",
-        "component": FormFieldCustomControlExample,
+        "componentName": "FormFieldCustomControlExample",
         "additionalFiles": [
             "example-tel-input-example.html",
             "example-tel-input-example.css"
         ],
-        "selectorName": "FormFieldCustomControlExample, MyTelInput"
+        "additionalComponents": [
+            "MyTelInput"
+        ],
+        "module": {
+            "name": "FormFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/form-field"
+        }
     },
     "form-field-error": {
         "title": "Form field with error messages",
-        "component": FormFieldErrorExample,
+        "componentName": "FormFieldErrorExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "FormFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/form-field"
+        }
     },
     "form-field-hint": {
         "title": "Form field with hints",
-        "component": FormFieldHintExample,
+        "componentName": "FormFieldHintExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "FormFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/form-field"
+        }
     },
     "form-field-label": {
         "title": "Form field with label",
-        "component": FormFieldLabelExample,
+        "componentName": "FormFieldLabelExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "FormFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/form-field"
+        }
     },
     "form-field-overview": {
         "title": "Simple form field",
-        "component": FormFieldOverviewExample,
+        "componentName": "FormFieldOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "FormFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/form-field"
+        }
     },
     "form-field-prefix-suffix": {
         "title": "Form field with prefix & suffix",
-        "component": FormFieldPrefixSuffixExample,
+        "componentName": "FormFieldPrefixSuffixExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "FormFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/form-field"
+        }
     },
     "form-field-theming": {
         "title": "Form field theming",
-        "component": FormFieldThemingExample,
+        "componentName": "FormFieldThemingExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "FormFieldExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/form-field"
+        }
     },
     "grid-list-dynamic": {
         "title": "Dynamic grid-list",
-        "component": GridListDynamicExample,
+        "componentName": "GridListDynamicExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "GridListExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/grid-list"
+        }
     },
     "grid-list-overview": {
         "title": "Basic grid-list",
-        "component": GridListOverviewExample,
+        "componentName": "GridListOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "GridListExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/grid-list"
+        }
     },
     "icon-overview": {
         "title": "Basic icons",
-        "component": IconOverviewExample,
+        "componentName": "IconOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "IconExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/icon"
+        }
     },
     "icon-svg": {
         "title": "SVG icons",
-        "component": IconSvgExample,
+        "componentName": "IconSvgExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "IconExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/icon"
+        }
     },
     "input-clearable": {
         "title": "Input with a clear button",
-        "component": InputClearableExample,
+        "componentName": "InputClearableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "InputExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/input"
+        }
     },
     "input-error-state-matcher": {
         "title": "Input with a custom ErrorStateMatcher",
-        "component": InputErrorStateMatcherExample,
+        "componentName": "InputErrorStateMatcherExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "InputExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/input"
+        }
     },
     "input-errors": {
         "title": "Input with error messages",
-        "component": InputErrorsExample,
+        "componentName": "InputErrorsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "InputExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/input"
+        }
     },
     "input-form": {
         "title": "Inputs in a form",
-        "component": InputFormExample,
+        "componentName": "InputFormExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "InputExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/input"
+        }
     },
     "input-hint": {
         "title": "Input with hints",
-        "component": InputHintExample,
+        "componentName": "InputHintExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "InputExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/input"
+        }
     },
     "input-overview": {
         "title": "Basic Inputs",
-        "component": InputOverviewExample,
+        "componentName": "InputOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "InputExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/input"
+        }
     },
     "input-prefix-suffix": {
         "title": "Inputs with prefixes and suffixes",
-        "component": InputPrefixSuffixExample,
+        "componentName": "InputPrefixSuffixExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "InputExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/input"
+        }
     },
     "list-overview": {
         "title": "Basic list",
-        "component": ListOverviewExample,
+        "componentName": "ListOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ListExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/list"
+        }
     },
     "list-sections": {
         "title": "List with sections",
-        "component": ListSectionsExample,
+        "componentName": "ListSectionsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ListExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/list"
+        }
     },
     "list-selection": {
         "title": "List with selection",
-        "component": ListSelectionExample,
+        "componentName": "ListSelectionExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ListExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/list"
+        }
     },
     "menu-icons": {
         "title": "Menu with icons",
-        "component": MenuIconsExample,
+        "componentName": "MenuIconsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "MenuExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/menu"
+        }
     },
     "menu-overview": {
         "title": "Basic menu",
-        "component": MenuOverviewExample,
+        "componentName": "MenuOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "MenuExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/menu"
+        }
     },
     "menu-position": {
         "title": "Menu positioning",
-        "component": MenuPositionExample,
+        "componentName": "MenuPositionExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "MenuExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/menu"
+        }
     },
     "nested-menu": {
         "title": "Nested menu",
-        "component": NestedMenuExample,
+        "componentName": "NestedMenuExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "MenuExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/menu"
+        }
     },
     "paginator-configurable": {
         "title": "Configurable paginator",
-        "component": PaginatorConfigurableExample,
+        "componentName": "PaginatorConfigurableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "PaginatorExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/paginator"
+        }
     },
     "paginator-overview": {
         "title": "Paginator",
-        "component": PaginatorOverviewExample,
+        "componentName": "PaginatorOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "PaginatorExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/paginator"
+        }
     },
     "progress-bar-buffer": {
         "title": "Buffer progress-bar",
-        "component": ProgressBarBufferExample,
+        "componentName": "ProgressBarBufferExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ProgressBarExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/progress-bar"
+        }
     },
     "progress-bar-configurable": {
         "title": "Configurable progress-bar",
-        "component": ProgressBarConfigurableExample,
+        "componentName": "ProgressBarConfigurableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ProgressBarExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/progress-bar"
+        }
     },
     "progress-bar-determinate": {
         "title": "Determinate progress-bar",
-        "component": ProgressBarDeterminateExample,
+        "componentName": "ProgressBarDeterminateExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ProgressBarExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/progress-bar"
+        }
     },
     "progress-bar-indeterminate": {
         "title": "Indeterminate progress-bar",
-        "component": ProgressBarIndeterminateExample,
+        "componentName": "ProgressBarIndeterminateExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ProgressBarExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/progress-bar"
+        }
     },
     "progress-bar-query": {
         "title": "Query progress-bar",
-        "component": ProgressBarQueryExample,
+        "componentName": "ProgressBarQueryExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ProgressBarExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/progress-bar"
+        }
     },
     "progress-spinner-configurable": {
         "title": "Configurable progress spinner",
-        "component": ProgressSpinnerConfigurableExample,
+        "componentName": "ProgressSpinnerConfigurableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ProgressSpinnerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/progress-spinner"
+        }
     },
     "progress-spinner-overview": {
         "title": "Basic progress-spinner",
-        "component": ProgressSpinnerOverviewExample,
+        "componentName": "ProgressSpinnerOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ProgressSpinnerExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/progress-spinner"
+        }
     },
     "radio-ng-model": {
         "title": "Radios with ngModel",
-        "component": RadioNgModelExample,
+        "componentName": "RadioNgModelExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "RadioExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/radio"
+        }
     },
     "radio-overview": {
         "title": "Basic radios",
-        "component": RadioOverviewExample,
+        "componentName": "RadioOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "RadioExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/radio"
+        }
     },
     "select-custom-trigger": {
         "title": "Select with custom trigger text",
-        "component": SelectCustomTriggerExample,
+        "componentName": "SelectCustomTriggerExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-disabled": {
         "title": "Disabled select",
-        "component": SelectDisabledExample,
+        "componentName": "SelectDisabledExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-error-state-matcher": {
         "title": "Select with a custom ErrorStateMatcher",
-        "component": SelectErrorStateMatcherExample,
+        "componentName": "SelectErrorStateMatcherExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-form": {
         "title": "Select in a form",
-        "component": SelectFormExample,
+        "componentName": "SelectFormExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-hint-error": {
         "title": "Select with form field features",
-        "component": SelectHintErrorExample,
+        "componentName": "SelectHintErrorExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-initial-value": {
         "title": "Basic select with initial value and no form",
-        "component": SelectInitialValueExample,
+        "componentName": "SelectInitialValueExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-multiple": {
         "title": "Select with multiple selection",
-        "component": SelectMultipleExample,
+        "componentName": "SelectMultipleExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-no-ripple": {
         "title": "Select with no option ripple",
-        "component": SelectNoRippleExample,
+        "componentName": "SelectNoRippleExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-optgroup": {
         "title": "Select with option groups",
-        "component": SelectOptgroupExample,
+        "componentName": "SelectOptgroupExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-overview": {
         "title": "Basic select",
-        "component": SelectOverviewExample,
+        "componentName": "SelectOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-panel-class": {
         "title": "Select with custom panel styling",
-        "component": SelectPanelClassExample,
+        "componentName": "SelectPanelClassExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-reactive-form": {
         "title": "Select in a reactive form",
-        "component": SelectReactiveFormExample,
+        "componentName": "SelectReactiveFormExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-reset": {
         "title": "Select with reset option",
-        "component": SelectResetExample,
+        "componentName": "SelectResetExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "select-value-binding": {
         "title": "Select with 2-way value binding",
-        "component": SelectValueBindingExample,
+        "componentName": "SelectValueBindingExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SelectExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/select"
+        }
     },
     "sidenav-autosize": {
         "title": "Autosize sidenav",
-        "component": SidenavAutosizeExample,
+        "componentName": "SidenavAutosizeExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sidenav"
+        }
     },
     "sidenav-backdrop": {
         "title": "Drawer with explicit backdrop setting",
-        "component": SidenavBackdropExample,
+        "componentName": "SidenavBackdropExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sidenav"
+        }
     },
     "sidenav-disable-close": {
         "title": "Sidenav with custom escape and backdrop click behavior",
-        "component": SidenavDisableCloseExample,
+        "componentName": "SidenavDisableCloseExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sidenav"
+        }
     },
     "sidenav-drawer-overview": {
         "title": "Basic drawer",
-        "component": SidenavDrawerOverviewExample,
+        "componentName": "SidenavDrawerOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sidenav"
+        }
     },
     "sidenav-fixed": {
         "title": "Fixed sidenav",
-        "component": SidenavFixedExample,
+        "componentName": "SidenavFixedExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sidenav"
+        }
     },
     "sidenav-mode": {
         "title": "Sidenav with configurable mode",
-        "component": SidenavModeExample,
+        "componentName": "SidenavModeExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sidenav"
+        }
     },
     "sidenav-open-close": {
         "title": "Sidenav open & close behavior",
-        "component": SidenavOpenCloseExample,
+        "componentName": "SidenavOpenCloseExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sidenav"
+        }
     },
     "sidenav-overview": {
         "title": "Basic sidenav",
-        "component": SidenavOverviewExample,
+        "componentName": "SidenavOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sidenav"
+        }
     },
     "sidenav-position": {
         "title": "Implicit main content with two sidenavs",
-        "component": SidenavPositionExample,
+        "componentName": "SidenavPositionExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sidenav"
+        }
     },
     "sidenav-responsive": {
         "title": "Responsive sidenav",
-        "component": SidenavResponsiveExample,
+        "componentName": "SidenavResponsiveExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SidenavExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sidenav"
+        }
     },
     "slide-toggle-configurable": {
         "title": "Configurable slide-toggle",
-        "component": SlideToggleConfigurableExample,
+        "componentName": "SlideToggleConfigurableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SlideToggleExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/slide-toggle"
+        }
     },
     "slide-toggle-forms": {
         "title": "Slide-toggle with forms",
-        "component": SlideToggleFormsExample,
+        "componentName": "SlideToggleFormsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SlideToggleExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/slide-toggle"
+        }
     },
     "slide-toggle-overview": {
         "title": "Basic slide-toggles",
-        "component": SlideToggleOverviewExample,
+        "componentName": "SlideToggleOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SlideToggleExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/slide-toggle"
+        }
     },
     "slider-configurable": {
         "title": "Configurable slider",
-        "component": SliderConfigurableExample,
+        "componentName": "SliderConfigurableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SliderExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/slider"
+        }
     },
     "slider-formatting": {
         "title": "Slider with custom thumb label formatting.",
-        "component": SliderFormattingExample,
+        "componentName": "SliderFormattingExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SliderExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/slider"
+        }
     },
     "slider-overview": {
         "title": "Basic slider",
-        "component": SliderOverviewExample,
+        "componentName": "SliderOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SliderExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/slider"
+        }
     },
     "snack-bar-component": {
         "title": "Snack-bar with a custom component",
-        "component": SnackBarComponentExample,
+        "componentName": "SnackBarComponentExample",
         "additionalFiles": [
             "snack-bar-component-example-snack.html"
         ],
-        "selectorName": "SnackBarComponentExample, PizzaPartyComponent"
+        "additionalComponents": [
+            "PizzaPartyComponent"
+        ],
+        "module": {
+            "name": "SnackBarExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/snack-bar"
+        }
     },
     "snack-bar-overview": {
         "title": "Basic snack-bar",
-        "component": SnackBarOverviewExample,
+        "componentName": "SnackBarOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SnackBarExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/snack-bar"
+        }
     },
     "snack-bar-position": {
         "title": "Snack-bar with configurable position",
-        "component": SnackBarPositionExample,
+        "componentName": "SnackBarPositionExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SnackBarExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/snack-bar"
+        }
     },
     "sort-overview": {
         "title": "Sorting overview",
-        "component": SortOverviewExample,
+        "componentName": "SortOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "SortExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/sort"
+        }
     },
     "stepper-editable": {
         "title": "Stepper with editable steps",
-        "component": StepperEditableExample,
+        "componentName": "StepperEditableExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "StepperExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/stepper"
+        }
     },
     "stepper-errors": {
         "title": "Stepper that displays errors in the steps",
-        "component": StepperErrorsExample,
+        "componentName": "StepperErrorsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "StepperExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/stepper"
+        }
     },
     "stepper-label-position-bottom": {
         "title": "Stepper label bottom position",
-        "component": StepperLabelPositionBottomExample,
+        "componentName": "StepperLabelPositionBottomExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "StepperExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/stepper"
+        }
     },
     "stepper-optional": {
         "title": "Stepper with optional steps",
-        "component": StepperOptionalExample,
+        "componentName": "StepperOptionalExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "StepperExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/stepper"
+        }
     },
     "stepper-overview": {
         "title": "Stepper overview",
-        "component": StepperOverviewExample,
+        "componentName": "StepperOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "StepperExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/stepper"
+        }
     },
     "stepper-states": {
         "title": "Stepper with customized states",
-        "component": StepperStatesExample,
+        "componentName": "StepperStatesExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "StepperExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/stepper"
+        }
     },
     "stepper-vertical": {
         "title": "Stepper vertical",
-        "component": StepperVerticalExample,
+        "componentName": "StepperVerticalExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "StepperExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/stepper"
+        }
     },
     "table-basic-flex": {
         "title": "Basic use of `<mat-table>` (uses display flex)",
-        "component": TableBasicFlexExample,
+        "componentName": "TableBasicFlexExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-basic": {
         "title": "Basic use of `<table mat-table>`",
-        "component": TableBasicExample,
+        "componentName": "TableBasicExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-dynamic-columns": {
         "title": "Table dynamically changing the columns displayed",
-        "component": TableDynamicColumnsExample,
+        "componentName": "TableDynamicColumnsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-expandable-rows": {
         "title": "Table with expandable rows",
-        "component": TableExpandableRowsExample,
+        "componentName": "TableExpandableRowsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-filtering": {
         "title": "Table with filtering",
-        "component": TableFilteringExample,
+        "componentName": "TableFilteringExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-footer-row": {
         "title": "Footer row table",
-        "component": TableFooterRowExample,
+        "componentName": "TableFooterRowExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-http": {
         "title": "Table retrieving data through HTTP",
-        "component": TableHttpExample,
+        "componentName": "TableHttpExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-multiple-header-footer": {
         "title": "Table with multiple header and footer rows",
-        "component": TableMultipleHeaderFooterExample,
+        "componentName": "TableMultipleHeaderFooterExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-overview": {
         "title": "Data table with sorting, pagination, and filtering.",
-        "component": TableOverviewExample,
+        "componentName": "TableOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-pagination": {
         "title": "Table with pagination",
-        "component": TablePaginationExample,
+        "componentName": "TablePaginationExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-row-context": {
         "title": "Table showing each row context properties.",
-        "component": TableRowContextExample,
+        "componentName": "TableRowContextExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-selection": {
         "title": "Table with selection",
-        "component": TableSelectionExample,
+        "componentName": "TableSelectionExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-sorting": {
         "title": "Table with sorting",
-        "component": TableSortingExample,
+        "componentName": "TableSortingExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-sticky-columns": {
         "title": "Table with sticky columns",
-        "component": TableStickyColumnsExample,
+        "componentName": "TableStickyColumnsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-sticky-complex-flex": {
         "title": "Flex-layout tables with toggle-able sticky headers, footers, and columns",
-        "component": TableStickyComplexFlexExample,
+        "componentName": "TableStickyComplexFlexExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-sticky-complex": {
         "title": "Tables with toggle-able sticky headers, footers, and columns",
-        "component": TableStickyComplexExample,
+        "componentName": "TableStickyComplexExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-sticky-footer": {
         "title": "Table with a sticky footer",
-        "component": TableStickyFooterExample,
+        "componentName": "TableStickyFooterExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-sticky-header": {
         "title": "Table with sticky header",
-        "component": TableStickyHeaderExample,
+        "componentName": "TableStickyHeaderExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-text-column-advanced": {
         "title": "Use of 'mat-text-column' with various configurations of the interface.",
-        "component": TableTextColumnAdvancedExample,
+        "componentName": "TableTextColumnAdvancedExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-text-column": {
         "title": "Use of `mat-text-column` which can be used for simple columns that only need to display\na text value for the header and cells.",
-        "component": TableTextColumnExample,
+        "componentName": "TableTextColumnExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "table-wrapped": {
         "title": "Table example that shows how to wrap a table component for definition and behavior reuse.",
-        "component": TableWrappedExample,
+        "componentName": "TableWrappedExample",
         "additionalFiles": [
             "wrapper-table.html"
         ],
-        "selectorName": "TableWrappedExample, WrapperTable"
+        "additionalComponents": [
+            "WrapperTable"
+        ],
+        "module": {
+            "name": "TableExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/table"
+        }
     },
     "tab-group-align": {
         "title": "Tab group with aligned labels",
-        "component": TabGroupAlignExample,
+        "componentName": "TabGroupAlignExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-group-animations": {
         "title": "Tab group animations",
-        "component": TabGroupAnimationsExample,
+        "componentName": "TabGroupAnimationsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-group-async": {
         "title": "Tab group with asynchronously loading tab contents",
-        "component": TabGroupAsyncExample,
+        "componentName": "TabGroupAsyncExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-group-basic": {
         "title": "Basic use of the tab group",
-        "component": TabGroupBasicExample,
+        "componentName": "TabGroupBasicExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-group-custom-label": {
         "title": "Using tabs with a custom label template",
-        "component": TabGroupCustomLabelExample,
+        "componentName": "TabGroupCustomLabelExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-group-dynamic-height": {
         "title": "Tab group with dynamic height based on tab contents",
-        "component": TabGroupDynamicHeightExample,
+        "componentName": "TabGroupDynamicHeightExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-group-dynamic": {
         "title": "Tab group with dynamically changing tabs",
-        "component": TabGroupDynamicExample,
+        "componentName": "TabGroupDynamicExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-group-header-below": {
         "title": "Tab group with the headers on the bottom",
-        "component": TabGroupHeaderBelowExample,
+        "componentName": "TabGroupHeaderBelowExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-group-lazy-loaded": {
         "title": "Tab group where the tab content is loaded lazily (when activated)",
-        "component": TabGroupLazyLoadedExample,
+        "componentName": "TabGroupLazyLoadedExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-group-stretched": {
         "title": "Tab group with stretched labels",
-        "component": TabGroupStretchedExample,
+        "componentName": "TabGroupStretchedExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-group-theme": {
         "title": "Customizing the theme options on the tab group",
-        "component": TabGroupThemeExample,
+        "componentName": "TabGroupThemeExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "tab-nav-bar-basic": {
         "title": "Basic use of the tab nav bar",
-        "component": TabNavBarBasicExample,
+        "componentName": "TabNavBarBasicExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TabGroupExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tabs"
+        }
     },
     "toolbar-multirow": {
         "title": "Multi-row toolbar",
-        "component": ToolbarMultirowExample,
+        "componentName": "ToolbarMultirowExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ToolbarExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/toolbar"
+        }
     },
     "toolbar-overview": {
         "title": "Basic toolbar",
-        "component": ToolbarOverviewExample,
+        "componentName": "ToolbarOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "ToolbarExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/toolbar"
+        }
     },
     "tooltip-auto-hide": {
         "title": "Tooltip that demonstrates auto-hiding when it clips out of its scrolling container.",
-        "component": TooltipAutoHideExample,
+        "componentName": "TooltipAutoHideExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TooltipExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tooltip"
+        }
     },
     "tooltip-custom-class": {
         "title": "Tooltip that can have a custom class applied.",
-        "component": TooltipCustomClassExample,
+        "componentName": "TooltipCustomClassExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TooltipExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tooltip"
+        }
     },
     "tooltip-delay": {
         "title": "Tooltip with a show and hide delay",
-        "component": TooltipDelayExample,
+        "componentName": "TooltipDelayExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TooltipExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tooltip"
+        }
     },
     "tooltip-disabled": {
         "title": "Tooltip that can be disabled",
-        "component": TooltipDisabledExample,
+        "componentName": "TooltipDisabledExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TooltipExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tooltip"
+        }
     },
     "tooltip-manual": {
         "title": "Tooltip that can be manually shown/hidden.",
-        "component": TooltipManualExample,
+        "componentName": "TooltipManualExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TooltipExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tooltip"
+        }
     },
     "tooltip-message": {
         "title": "Tooltip with a changing message",
-        "component": TooltipMessageExample,
+        "componentName": "TooltipMessageExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TooltipExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tooltip"
+        }
     },
     "tooltip-modified-defaults": {
         "title": "Tooltip with a show and hide delay",
-        "component": TooltipModifiedDefaultsExample,
+        "componentName": "TooltipModifiedDefaultsExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TooltipExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tooltip"
+        }
     },
     "tooltip-overview": {
         "title": "Basic tooltip",
-        "component": TooltipOverviewExample,
+        "componentName": "TooltipOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TooltipExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tooltip"
+        }
     },
     "tooltip-position": {
         "title": "Tooltip with a custom position",
-        "component": TooltipPositionExample,
+        "componentName": "TooltipPositionExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TooltipExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tooltip"
+        }
     },
     "tree-checklist": {
         "title": "Tree with checkboxes",
-        "component": TreeChecklistExample,
+        "componentName": "TreeChecklistExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TreeExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tree"
+        }
     },
     "tree-dynamic": {
         "title": "Tree with dynamic data",
-        "component": TreeDynamicExample,
+        "componentName": "TreeDynamicExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TreeExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tree"
+        }
     },
     "tree-flat-overview": {
         "title": "Tree with flat nodes",
-        "component": TreeFlatOverviewExample,
+        "componentName": "TreeFlatOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TreeExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tree"
+        }
     },
     "tree-loadmore": {
         "title": "Tree with partially loaded data",
-        "component": TreeLoadmoreExample,
+        "componentName": "TreeLoadmoreExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TreeExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tree"
+        }
     },
     "tree-nested-overview": {
         "title": "Tree with nested nodes",
-        "component": TreeNestedOverviewExample,
+        "componentName": "TreeNestedOverviewExample",
         "additionalFiles": [],
-        "selectorName": ""
+        "additionalComponents": [],
+        "module": {
+            "name": "TreeExamplesModule",
+            "importSpecifier": "@angular/components-examples/material/tree"
+        }
     }
 };
-/** @type {?} */
-const EXAMPLE_MODULES = [CdkPopoverEditExamplesModule,
-    CdkA11yExamplesModule,
-    CdkClipboardExamplesModule,
-    CdkDragDropExamplesModule,
-    CdkPlatformExamplesModule,
-    CdkPortalExamplesModule,
-    CdkScrollingExamplesModule,
-    CdkStepperExamplesModule,
-    CdkTableExamplesModule,
-    CdkTextFieldExamplesModule,
-    CdkTreeExamplesModule,
-    PopoverEditExamplesModule,
-    AutocompleteExamplesModule,
-    BadgeExamplesModule,
-    BottomSheetExamplesModule,
-    ButtonToggleExamplesModule,
-    ButtonExamplesModule,
-    CardExamplesModule,
-    CheckboxExamplesModule,
-    ChipsExamplesModule,
-    CoreExamplesModule,
-    DatepickerExamplesModule,
-    DialogExamplesModule,
-    DividerExamplesModule,
-    ExpansionExamplesModule,
-    FormFieldExamplesModule,
-    GridListExamplesModule,
-    IconExamplesModule,
-    InputExamplesModule,
-    ListExamplesModule,
-    MenuExamplesModule,
-    PaginatorExamplesModule,
-    ProgressBarExamplesModule,
-    ProgressSpinnerExamplesModule,
-    RadioExamplesModule,
-    SelectExamplesModule,
-    SidenavExamplesModule,
-    SlideToggleExamplesModule,
-    SliderExamplesModule,
-    SnackBarExamplesModule,
-    SortExamplesModule,
-    StepperExamplesModule,
-    TableExamplesModule,
-    TabGroupExamplesModule,
-    ToolbarExamplesModule,
-    TooltipExamplesModule,
-    TreeExamplesModule];
-/** @type {?} */
-const EXAMPLE_LIST = [CdkPopoverEditCdkTableFlexExample,
-    CdkPopoverEditCdkTableExample,
-    CdkPopoverEditCellSpanVanillaTableExample,
-    CdkPopoverEditTabOutVanillaTableExample,
-    CdkPopoverEditVanillaTableExample,
-    FocusMonitorDirectivesExample,
-    FocusMonitorFocusViaExample,
-    FocusMonitorOverviewExample,
-    CdkClipboardOverviewExample,
-    CdkDragDropAxisLockExample,
-    CdkDragDropBoundaryExample,
-    CdkDragDropConnectedSortingGroupExample,
-    CdkDragDropConnectedSortingExample,
-    CdkDragDropCustomPlaceholderExample,
-    CdkDragDropCustomPreviewExample,
-    CdkDragDropDelayExample,
-    CdkDragDropDisabledSortingExample,
-    CdkDragDropDisabledExample,
-    CdkDragDropEnterPredicateExample,
-    CdkDragDropFreeDragPositionExample,
-    CdkDragDropHandleExample,
-    CdkDragDropHorizontalSortingExample,
-    CdkDragDropOverviewExample,
-    CdkDragDropRootElementExample,
-    CdkDragDropSortingExample,
-    CdkPlatformOverviewExample,
-    CdkPortalOverviewExample,
-    ComponentPortalExample,
-    CdkVirtualScrollContextExample,
-    CdkVirtualScrollCustomStrategyExample,
-    CdkVirtualScrollDataSourceExample,
-    CdkVirtualScrollDlExample,
-    CdkVirtualScrollFixedBufferExample,
-    CdkVirtualScrollHorizontalExample,
-    CdkVirtualScrollOverviewExample,
-    CdkVirtualScrollTemplateCacheExample,
-    CdkCustomStepperWithoutFormExample,
-    CustomStepper,
-    CdkTableBasicFlexExample,
-    CdkTableBasicExample,
-    TextFieldAutofillDirectiveExample,
-    TextFieldAutofillMonitorExample,
-    TextFieldAutosizeTextareaExample,
-    CdkTreeFlatExample,
-    CdkTreeNestedExample,
-    PopoverEditCellSpanMatTableExample,
-    PopoverEditMatTableFlexExample,
-    PopoverEditMatTableExample,
-    PopoverEditTabOutMatTableExample,
-    AutocompleteAutoActiveFirstOptionExample,
-    AutocompleteDisplayExample,
-    AutocompleteFilterExample,
-    AutocompleteOptgroupExample,
-    AutocompleteOverviewExample,
-    AutocompletePlainInputExample,
-    AutocompleteSimpleExample,
-    BadgeOverviewExample,
-    BottomSheetOverviewExample,
-    BottomSheetOverviewExampleSheet,
-    ButtonToggleAppearanceExample,
-    ButtonToggleExclusiveExample,
-    ButtonToggleOverviewExample,
-    ButtonOverviewExample,
-    ButtonTypesExample,
-    CardFancyExample,
-    CardOverviewExample,
-    CheckboxConfigurableExample,
-    CheckboxOverviewExample,
-    ChipsAutocompleteExample,
-    ChipsDragDropExample,
-    ChipsInputExample,
-    ChipsOverviewExample,
-    ChipsStackedExample,
-    ElevationOverviewExample,
-    RippleOverviewExample,
-    DatepickerApiExample,
-    DatepickerColorExample,
-    DatepickerCustomHeaderExample,
-    ExampleHeader,
-    DatepickerCustomIconExample,
-    DatepickerDateClassExample,
-    DatepickerDisabledExample,
-    DatepickerEventsExample,
-    DatepickerFilterExample,
-    DatepickerFormatsExample,
-    DatepickerLocaleExample,
-    DatepickerMinMaxExample,
-    DatepickerMomentExample,
-    DatepickerOverviewExample,
-    DatepickerStartViewExample,
-    DatepickerTouchExample,
-    DatepickerValueExample,
-    DatepickerViewsSelectionExample,
-    DialogContentExample,
-    DialogContentExampleDialog,
-    DialogDataExample,
-    DialogDataExampleDialog,
-    DialogElementsExample,
-    DialogElementsExampleDialog,
-    DialogOverviewExample,
-    DialogOverviewExampleDialog,
-    DividerOverviewExample,
-    ExpansionExpandCollapseAllExample,
-    ExpansionOverviewExample,
-    ExpansionStepsExample,
-    FormFieldAppearanceExample,
-    FormFieldCustomControlExample,
-    MyTelInput,
-    FormFieldErrorExample,
-    FormFieldHintExample,
-    FormFieldLabelExample,
-    FormFieldOverviewExample,
-    FormFieldPrefixSuffixExample,
-    FormFieldThemingExample,
-    GridListDynamicExample,
-    GridListOverviewExample,
-    IconOverviewExample,
-    IconSvgExample,
-    InputClearableExample,
-    InputErrorStateMatcherExample,
-    InputErrorsExample,
-    InputFormExample,
-    InputHintExample,
-    InputOverviewExample,
-    InputPrefixSuffixExample,
-    ListOverviewExample,
-    ListSectionsExample,
-    ListSelectionExample,
-    MenuIconsExample,
-    MenuOverviewExample,
-    MenuPositionExample,
-    NestedMenuExample,
-    PaginatorConfigurableExample,
-    PaginatorOverviewExample,
-    ProgressBarBufferExample,
-    ProgressBarConfigurableExample,
-    ProgressBarDeterminateExample,
-    ProgressBarIndeterminateExample,
-    ProgressBarQueryExample,
-    ProgressSpinnerConfigurableExample,
-    ProgressSpinnerOverviewExample,
-    RadioNgModelExample,
-    RadioOverviewExample,
-    SelectCustomTriggerExample,
-    SelectDisabledExample,
-    SelectErrorStateMatcherExample,
-    SelectFormExample,
-    SelectHintErrorExample,
-    SelectInitialValueExample,
-    SelectMultipleExample,
-    SelectNoRippleExample,
-    SelectOptgroupExample,
-    SelectOverviewExample,
-    SelectPanelClassExample,
-    SelectReactiveFormExample,
-    SelectResetExample,
-    SelectValueBindingExample,
-    SidenavAutosizeExample,
-    SidenavBackdropExample,
-    SidenavDisableCloseExample,
-    SidenavDrawerOverviewExample,
-    SidenavFixedExample,
-    SidenavModeExample,
-    SidenavOpenCloseExample,
-    SidenavOverviewExample,
-    SidenavPositionExample,
-    SidenavResponsiveExample,
-    SlideToggleConfigurableExample,
-    SlideToggleFormsExample,
-    SlideToggleOverviewExample,
-    SliderConfigurableExample,
-    SliderFormattingExample,
-    SliderOverviewExample,
-    SnackBarComponentExample,
-    PizzaPartyComponent,
-    SnackBarOverviewExample,
-    SnackBarPositionExample,
-    SortOverviewExample,
-    StepperEditableExample,
-    StepperErrorsExample,
-    StepperLabelPositionBottomExample,
-    StepperOptionalExample,
-    StepperOverviewExample,
-    StepperStatesExample,
-    StepperVerticalExample,
-    TableBasicFlexExample,
-    TableBasicExample,
-    TableDynamicColumnsExample,
-    TableExpandableRowsExample,
-    TableFilteringExample,
-    TableFooterRowExample,
-    TableHttpExample,
-    TableMultipleHeaderFooterExample,
-    TableOverviewExample,
-    TablePaginationExample,
-    TableRowContextExample,
-    TableSelectionExample,
-    TableSortingExample,
-    TableStickyColumnsExample,
-    TableStickyComplexFlexExample,
-    TableStickyComplexExample,
-    TableStickyFooterExample,
-    TableStickyHeaderExample,
-    TableTextColumnAdvancedExample,
-    TableTextColumnExample,
-    TableWrappedExample,
-    WrapperTable,
-    TabGroupAlignExample,
-    TabGroupAnimationsExample,
-    TabGroupAsyncExample,
-    TabGroupBasicExample,
-    TabGroupCustomLabelExample,
-    TabGroupDynamicHeightExample,
-    TabGroupDynamicExample,
-    TabGroupHeaderBelowExample,
-    TabGroupLazyLoadedExample,
-    TabGroupStretchedExample,
-    TabGroupThemeExample,
-    TabNavBarBasicExample,
-    ToolbarMultirowExample,
-    ToolbarOverviewExample,
-    TooltipAutoHideExample,
-    TooltipCustomClassExample,
-    TooltipDelayExample,
-    TooltipDisabledExample,
-    TooltipManualExample,
-    TooltipMessageExample,
-    TooltipModifiedDefaultsExample,
-    TooltipOverviewExample,
-    TooltipPositionExample,
-    TreeChecklistExample,
-    TreeDynamicExample,
-    TreeFlatOverviewExample,
-    TreeLoadmoreExample,
-    TreeNestedOverviewExample];
-// Default MatFormField appearance to 'fill' as that is the new recommended approach and the
-// `legacy` and `standard` appearances are scheduled for deprecation in version 10.
-class ExampleModule {
-}
-ExampleModule.decorators = [
-    { type: NgModule, args: [{
-                imports: EXAMPLE_MODULES,
-                exports: EXAMPLE_MODULES,
-                providers: [
-                    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
-                ],
-            },] },
-];
-/** @nocollapse */ ExampleModule.ɵmod = ɵɵdefineNgModule({ type: ExampleModule });
-/** @nocollapse */ ExampleModule.ɵinj = ɵɵdefineInjector({ factory: function ExampleModule_Factory(t) { return new (t || ExampleModule)(); }, providers: [
-        { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
-    ], imports: [EXAMPLE_MODULES,
-        CdkPopoverEditExamplesModule,
-        CdkA11yExamplesModule,
-        CdkClipboardExamplesModule,
-        CdkDragDropExamplesModule,
-        CdkPlatformExamplesModule,
-        CdkPortalExamplesModule,
-        CdkScrollingExamplesModule,
-        CdkStepperExamplesModule,
-        CdkTableExamplesModule,
-        CdkTextFieldExamplesModule,
-        CdkTreeExamplesModule,
-        PopoverEditExamplesModule,
-        AutocompleteExamplesModule,
-        BadgeExamplesModule,
-        BottomSheetExamplesModule,
-        ButtonToggleExamplesModule,
-        ButtonExamplesModule,
-        CardExamplesModule,
-        CheckboxExamplesModule,
-        ChipsExamplesModule,
-        CoreExamplesModule,
-        DatepickerExamplesModule,
-        DialogExamplesModule,
-        DividerExamplesModule,
-        ExpansionExamplesModule,
-        FormFieldExamplesModule,
-        GridListExamplesModule,
-        IconExamplesModule,
-        InputExamplesModule,
-        ListExamplesModule,
-        MenuExamplesModule,
-        PaginatorExamplesModule,
-        ProgressBarExamplesModule,
-        ProgressSpinnerExamplesModule,
-        RadioExamplesModule,
-        SelectExamplesModule,
-        SidenavExamplesModule,
-        SlideToggleExamplesModule,
-        SliderExamplesModule,
-        SnackBarExamplesModule,
-        SortExamplesModule,
-        StepperExamplesModule,
-        TableExamplesModule,
-        TabGroupExamplesModule,
-        ToolbarExamplesModule,
-        TooltipExamplesModule,
-        TreeExamplesModule] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ExampleModule, { imports: [CdkPopoverEditExamplesModule,
-        CdkA11yExamplesModule,
-        CdkClipboardExamplesModule,
-        CdkDragDropExamplesModule,
-        CdkPlatformExamplesModule,
-        CdkPortalExamplesModule,
-        CdkScrollingExamplesModule,
-        CdkStepperExamplesModule,
-        CdkTableExamplesModule,
-        CdkTextFieldExamplesModule,
-        CdkTreeExamplesModule,
-        PopoverEditExamplesModule,
-        AutocompleteExamplesModule,
-        BadgeExamplesModule,
-        BottomSheetExamplesModule,
-        ButtonToggleExamplesModule,
-        ButtonExamplesModule,
-        CardExamplesModule,
-        CheckboxExamplesModule,
-        ChipsExamplesModule,
-        CoreExamplesModule,
-        DatepickerExamplesModule,
-        DialogExamplesModule,
-        DividerExamplesModule,
-        ExpansionExamplesModule,
-        FormFieldExamplesModule,
-        GridListExamplesModule,
-        IconExamplesModule,
-        InputExamplesModule,
-        ListExamplesModule,
-        MenuExamplesModule,
-        PaginatorExamplesModule,
-        ProgressBarExamplesModule,
-        ProgressSpinnerExamplesModule,
-        RadioExamplesModule,
-        SelectExamplesModule,
-        SidenavExamplesModule,
-        SlideToggleExamplesModule,
-        SliderExamplesModule,
-        SnackBarExamplesModule,
-        SortExamplesModule,
-        StepperExamplesModule,
-        TableExamplesModule,
-        TabGroupExamplesModule,
-        ToolbarExamplesModule,
-        TooltipExamplesModule,
-        TreeExamplesModule], exports: [CdkPopoverEditExamplesModule,
-        CdkA11yExamplesModule,
-        CdkClipboardExamplesModule,
-        CdkDragDropExamplesModule,
-        CdkPlatformExamplesModule,
-        CdkPortalExamplesModule,
-        CdkScrollingExamplesModule,
-        CdkStepperExamplesModule,
-        CdkTableExamplesModule,
-        CdkTextFieldExamplesModule,
-        CdkTreeExamplesModule,
-        PopoverEditExamplesModule,
-        AutocompleteExamplesModule,
-        BadgeExamplesModule,
-        BottomSheetExamplesModule,
-        ButtonToggleExamplesModule,
-        ButtonExamplesModule,
-        CardExamplesModule,
-        CheckboxExamplesModule,
-        ChipsExamplesModule,
-        CoreExamplesModule,
-        DatepickerExamplesModule,
-        DialogExamplesModule,
-        DividerExamplesModule,
-        ExpansionExamplesModule,
-        FormFieldExamplesModule,
-        GridListExamplesModule,
-        IconExamplesModule,
-        InputExamplesModule,
-        ListExamplesModule,
-        MenuExamplesModule,
-        PaginatorExamplesModule,
-        ProgressBarExamplesModule,
-        ProgressSpinnerExamplesModule,
-        RadioExamplesModule,
-        SelectExamplesModule,
-        SidenavExamplesModule,
-        SlideToggleExamplesModule,
-        SliderExamplesModule,
-        SnackBarExamplesModule,
-        SortExamplesModule,
-        StepperExamplesModule,
-        TableExamplesModule,
-        TabGroupExamplesModule,
-        ToolbarExamplesModule,
-        TooltipExamplesModule,
-        TreeExamplesModule] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(ExampleModule, [{
-        type: NgModule,
-        args: [{
-                imports: EXAMPLE_MODULES,
-                exports: EXAMPLE_MODULES,
-                providers: [
-                    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
-                ],
-            }]
-    }], null, null); })();
 
 /**
  * @fileoverview added by tsickle
@@ -1949,8 +2348,8 @@ ExampleModule.decorators = [
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 /**
- * Example data with information about component name, selector, files used in example, and path to
- * examples.
+ * Example data with information about component name, selector, files used in
+ * example, and path to examples.
  */
 class ExampleData {
     /**
@@ -1960,8 +2359,13 @@ class ExampleData {
         if (!example || !EXAMPLE_COMPONENTS.hasOwnProperty(example)) {
             return;
         }
+        const { componentName, additionalFiles, additionalComponents, title } = EXAMPLE_COMPONENTS[example];
         /** @type {?} */
-        const exampleConfig = EXAMPLE_COMPONENTS[example];
+        const exampleName = example.replace(/(?:^\w|\b\w)/g, (/**
+         * @param {?} letter
+         * @return {?}
+         */
+        letter => letter.toUpperCase()));
         // TODO(tinayuangao): Do not hard-code extensions
         this.exampleFiles = ['html', 'ts', 'css'].map((/**
          * @param {?} extension
@@ -1969,18 +2373,9 @@ class ExampleData {
          */
         extension => `${example}-example.${extension}`));
         this.selectorName = this.indexFilename = `${example}-example`;
-        if (exampleConfig.additionalFiles) {
-            this.exampleFiles.push(...exampleConfig.additionalFiles);
-        }
-        /** @type {?} */
-        const exampleName = example.replace(/(?:^\w|\b\w)/g, (/**
-         * @param {?} letter
-         * @return {?}
-         */
-        letter => letter.toUpperCase()));
-        this.description = exampleConfig.title || exampleName.replace(/[\-]+/g, ' ') + ' Example';
-        this.componentName = exampleConfig.selectorName ||
-            exampleName.replace(/[\-]+/g, '') + 'Example';
+        this.exampleFiles.push(...additionalFiles);
+        this.description = title || exampleName.replace(/[\-]+/g, ' ') + ' Example';
+        this.componentNames = [componentName, ...additionalComponents];
     }
 }
 if (false) {
@@ -2005,11 +2400,39 @@ if (false) {
      */
     ExampleData.prototype.indexFilename;
     /**
-     * Name of the example component. For examples with multiple components, this property will
-     * include multiple components that are comma separated (e.g. dialog-overview)
+     * Names of the components being used in this example.
      * @type {?}
      */
-    ExampleData.prototype.componentName;
+    ExampleData.prototype.componentNames;
+}
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: src/components-examples/load-example.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/**
+ * Asynchronously loads the specified example and returns its component factory.
+ * @param {?} name
+ * @param {?} injector
+ * @return {?}
+ * @this {*}
+ */
+function loadExampleFactory(name, injector) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const { componentName, module } = EXAMPLE_COMPONENTS[name];
+        // TODO(devversion): remove the NgFactory import when the `--config=view-engine` switch is gone.
+        const [moduleFactoryExports, moduleExports] = yield Promise.all([
+            import(module.importSpecifier + '/index.ngfactory'),
+            import(module.importSpecifier)
+        ]);
+        /** @type {?} */
+        const moduleFactory = moduleFactoryExports[`${module.name}NgFactory`];
+        /** @type {?} */
+        const componentType = moduleExports[componentName];
+        return moduleFactory.create(injector)
+            .componentFactoryResolver.resolveComponentFactory(componentType);
+    });
 }
 
 /**
@@ -2022,5 +2445,5 @@ if (false) {
  * Generated bundle index. Do not edit.
  */
 
-export { EXAMPLE_COMPONENTS, EXAMPLE_LIST, EXAMPLE_MODULES, ExampleData, ExampleModule };
+export { EXAMPLE_COMPONENTS, ExampleData, loadExampleFactory };
 //# sourceMappingURL=components-examples.js.map

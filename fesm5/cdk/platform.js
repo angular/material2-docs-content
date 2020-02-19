@@ -101,6 +101,7 @@ var CdkPlatformExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     CdkPlatformExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
@@ -118,6 +119,7 @@ var CdkPlatformExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

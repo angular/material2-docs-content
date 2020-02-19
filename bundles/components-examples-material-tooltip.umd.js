@@ -442,6 +442,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         TooltipExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: TooltipExamplesModule });
@@ -493,6 +494,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

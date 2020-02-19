@@ -1227,6 +1227,7 @@ var SelectExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     SelectExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SelectExamplesModule });
@@ -1285,6 +1286,7 @@ var SelectExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

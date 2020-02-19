@@ -1503,6 +1503,7 @@ SelectExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ SelectExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SelectExamplesModule });
@@ -1559,6 +1560,7 @@ SelectExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

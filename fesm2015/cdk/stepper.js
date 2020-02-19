@@ -138,6 +138,7 @@ CdkStepperExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CdkStepperExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkStepperExamplesModule });
@@ -158,6 +159,7 @@ CdkStepperExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

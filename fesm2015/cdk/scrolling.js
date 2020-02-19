@@ -690,17 +690,14 @@ class CdkScrollingExamplesModule {
 }
 CdkScrollingExamplesModule.decorators = [
     { type: NgModule, args: [{
-                imports: [
-                    ScrollingModule,
-                ],
+                imports: [ScrollingModule],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CdkScrollingExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkScrollingExamplesModule });
-/** @nocollapse */ CdkScrollingExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkScrollingExamplesModule_Factory(t) { return new (t || CdkScrollingExamplesModule)(); }, imports: [[
-            ScrollingModule,
-        ]] });
+/** @nocollapse */ CdkScrollingExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkScrollingExamplesModule_Factory(t) { return new (t || CdkScrollingExamplesModule)(); }, imports: [[ScrollingModule]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(CdkScrollingExamplesModule, { declarations: [CdkVirtualScrollContextExample,
         CdkVirtualScrollCustomStrategyExample,
         CdkVirtualScrollDataSourceExample,
@@ -719,11 +716,10 @@ CdkScrollingExamplesModule.decorators = [
 /*@__PURE__*/ (function () { ɵsetClassMetadata(CdkScrollingExamplesModule, [{
         type: NgModule,
         args: [{
-                imports: [
-                    ScrollingModule,
-                ],
+                imports: [ScrollingModule],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

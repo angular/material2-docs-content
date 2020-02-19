@@ -109,6 +109,7 @@ var RadioExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     RadioExamplesModule.ɵmod = ɵɵdefineNgModule({ type: RadioExamplesModule });
@@ -134,6 +135,7 @@ var RadioExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

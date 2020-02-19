@@ -450,6 +450,7 @@ var InputExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     InputExamplesModule.ɵmod = ɵɵdefineNgModule({ type: InputExamplesModule });
@@ -494,6 +495,7 @@ var InputExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

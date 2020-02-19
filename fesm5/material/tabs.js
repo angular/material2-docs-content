@@ -722,6 +722,7 @@ var TabGroupExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     TabGroupExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TabGroupExamplesModule });
@@ -782,6 +783,7 @@ var TabGroupExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

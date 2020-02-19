@@ -216,6 +216,7 @@ var ListExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     ListExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ListExamplesModule });
@@ -243,6 +244,7 @@ var ListExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

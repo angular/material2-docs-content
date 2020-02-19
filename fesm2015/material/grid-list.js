@@ -137,6 +137,7 @@ GridListExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ GridListExamplesModule.ɵmod = ɵɵdefineNgModule({ type: GridListExamplesModule });
@@ -157,6 +158,7 @@ GridListExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

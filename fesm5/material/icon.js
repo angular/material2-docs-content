@@ -80,6 +80,7 @@ var IconExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     IconExamplesModule.ɵmod = ɵɵdefineNgModule({ type: IconExamplesModule });
@@ -99,6 +100,7 @@ var IconExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

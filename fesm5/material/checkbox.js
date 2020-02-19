@@ -143,6 +143,7 @@ var CheckboxExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     CheckboxExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CheckboxExamplesModule });
@@ -171,6 +172,7 @@ var CheckboxExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

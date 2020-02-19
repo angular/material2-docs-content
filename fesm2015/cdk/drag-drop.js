@@ -1190,6 +1190,7 @@ CdkDragDropExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CdkDragDropExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkDragDropExamplesModule });
@@ -1241,6 +1242,7 @@ CdkDragDropExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

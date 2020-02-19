@@ -126,6 +126,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         CoreExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CoreExamplesModule });
@@ -157,6 +158,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

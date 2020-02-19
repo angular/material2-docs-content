@@ -267,6 +267,7 @@ SlideToggleExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ SlideToggleExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SlideToggleExamplesModule });
@@ -304,6 +305,7 @@ SlideToggleExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

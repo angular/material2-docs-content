@@ -604,6 +604,7 @@ var AutocompleteExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     AutocompleteExamplesModule.ɵmod = ɵɵdefineNgModule({ type: AutocompleteExamplesModule });
@@ -651,6 +652,7 @@ var AutocompleteExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

@@ -396,6 +396,8 @@ ExpansionExamplesModule.decorators = [
                     MatInputModule,
                 ],
                 declarations: EXAMPLES,
+                exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ ExpansionExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ExpansionExamplesModule });
@@ -412,7 +414,9 @@ ExpansionExamplesModule.decorators = [
         MatDatepickerModule,
         MatExpansionModule,
         MatIconModule,
-        MatInputModule] }); })();
+        MatInputModule], exports: [ExpansionExpandCollapseAllExample,
+        ExpansionOverviewExample,
+        ExpansionStepsExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ExpansionExamplesModule, [{
         type: NgModule,
         args: [{
@@ -424,6 +428,8 @@ ExpansionExamplesModule.decorators = [
                     MatInputModule,
                 ],
                 declarations: EXAMPLES,
+                exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

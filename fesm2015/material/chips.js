@@ -541,6 +541,7 @@ ChipsExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ ChipsExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ChipsExamplesModule });
@@ -582,6 +583,7 @@ ChipsExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

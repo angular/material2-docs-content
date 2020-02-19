@@ -154,6 +154,7 @@ var ProgressSpinnerExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     ProgressSpinnerExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ProgressSpinnerExamplesModule });
@@ -188,6 +189,7 @@ var ProgressSpinnerExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

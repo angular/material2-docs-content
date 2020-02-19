@@ -816,6 +816,7 @@ TabGroupExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ TabGroupExamplesModule.ɵmod = ɵɵdefineNgModule({ type: TabGroupExamplesModule });
@@ -874,6 +875,7 @@ TabGroupExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

@@ -494,12 +494,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
-                        entryComponents: [
-                            DialogContentExampleDialog,
-                            DialogDataExampleDialog,
-                            DialogElementsExampleDialog,
-                            DialogOverviewExampleDialog,
-                        ]
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         DialogExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: DialogExamplesModule });
@@ -543,12 +538,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
-                    entryComponents: [
-                        DialogContentExampleDialog,
-                        DialogDataExampleDialog,
-                        DialogElementsExampleDialog,
-                        DialogOverviewExampleDialog,
-                    ]
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

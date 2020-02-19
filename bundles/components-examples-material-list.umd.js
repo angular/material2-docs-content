@@ -215,6 +215,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         ListExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ListExamplesModule });
@@ -242,6 +243,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 

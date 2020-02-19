@@ -157,6 +157,7 @@ CoreExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ CoreExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CoreExamplesModule });
@@ -186,6 +187,7 @@ CoreExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

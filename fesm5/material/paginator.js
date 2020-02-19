@@ -153,6 +153,7 @@ var PaginatorExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     PaginatorExamplesModule.ɵmod = ɵɵdefineNgModule({ type: PaginatorExamplesModule });
@@ -181,6 +182,7 @@ var PaginatorExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

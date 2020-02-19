@@ -129,6 +129,7 @@ var SortExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     SortExamplesModule.ɵmod = ɵɵdefineNgModule({ type: SortExamplesModule });
@@ -149,6 +150,7 @@ var SortExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

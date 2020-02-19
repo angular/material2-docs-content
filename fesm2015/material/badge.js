@@ -72,6 +72,7 @@ BadgeExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ BadgeExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BadgeExamplesModule });
@@ -93,6 +94,7 @@ BadgeExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

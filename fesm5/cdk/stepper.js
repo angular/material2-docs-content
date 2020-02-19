@@ -129,6 +129,7 @@ var CdkStepperExamplesModule = /** @class */ (function () {
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 },] },
     ];
     CdkStepperExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkStepperExamplesModule });
@@ -151,6 +152,7 @@ var CdkStepperExamplesModule = /** @class */ (function () {
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

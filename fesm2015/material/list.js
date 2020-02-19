@@ -251,6 +251,7 @@ ListExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ ListExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ListExamplesModule });
@@ -276,6 +277,7 @@ ListExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

@@ -178,6 +178,7 @@ ButtonToggleExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             },] },
 ];
 /** @nocollapse */ ButtonToggleExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
@@ -200,6 +201,7 @@ ButtonToggleExamplesModule.decorators = [
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
+                entryComponents: EXAMPLES,
             }]
     }], null, null); })();
 

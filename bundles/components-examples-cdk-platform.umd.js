@@ -104,6 +104,7 @@
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
+                        entryComponents: EXAMPLES,
                     },] },
         ];
         CdkPlatformExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
@@ -121,6 +122,7 @@
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
+                    entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
 
