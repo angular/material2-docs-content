@@ -1,5 +1,3 @@
-import { __awaiter } from 'tslib';
-
 /**
  * @fileoverview added by tsickle
  * Generated from: bazel-out/k8-fastbuild/bin/src/components-examples/example-module.ts
@@ -51,7 +49,9 @@ if (false) {
      */
     NgModuleInfo.prototype.name;
     /**
-     * Import specifier that resolves to this NgModule.
+     * Import specifier that resolves to this module. The specifier is not scoped to
+     * `\@angular/components-examples` because it's up to the consumer how the module is
+     * imported. For example, in the docs app, modules are lazily imported from `fesm2015/`.
      * @type {?}
      */
     NgModuleInfo.prototype.importSpecifier;
@@ -65,7 +65,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkPopoverEditExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk-experimental/popover-edit"
+            "importSpecifier": "cdk-experimental/popover-edit"
         }
     },
     "cdk-popover-edit-cdk-table": {
@@ -75,7 +75,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkPopoverEditExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk-experimental/popover-edit"
+            "importSpecifier": "cdk-experimental/popover-edit"
         }
     },
     "cdk-popover-edit-cell-span-vanilla-table": {
@@ -85,7 +85,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkPopoverEditExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk-experimental/popover-edit"
+            "importSpecifier": "cdk-experimental/popover-edit"
         }
     },
     "cdk-popover-edit-tab-out-vanilla-table": {
@@ -95,7 +95,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkPopoverEditExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk-experimental/popover-edit"
+            "importSpecifier": "cdk-experimental/popover-edit"
         }
     },
     "cdk-popover-edit-vanilla-table": {
@@ -105,7 +105,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkPopoverEditExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk-experimental/popover-edit"
+            "importSpecifier": "cdk-experimental/popover-edit"
         }
     },
     "focus-monitor-directives": {
@@ -115,7 +115,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkA11yExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/a11y"
+            "importSpecifier": "cdk/a11y"
         }
     },
     "focus-monitor-focus-via": {
@@ -125,7 +125,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkA11yExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/a11y"
+            "importSpecifier": "cdk/a11y"
         }
     },
     "focus-monitor-overview": {
@@ -135,7 +135,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkA11yExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/a11y"
+            "importSpecifier": "cdk/a11y"
         }
     },
     "cdk-clipboard-overview": {
@@ -145,7 +145,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkClipboardExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/clipboard"
+            "importSpecifier": "cdk/clipboard"
         }
     },
     "cdk-drag-drop-axis-lock": {
@@ -155,7 +155,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-boundary": {
@@ -165,7 +165,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-connected-sorting-group": {
@@ -175,7 +175,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-connected-sorting": {
@@ -185,7 +185,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-custom-placeholder": {
@@ -195,7 +195,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-custom-preview": {
@@ -205,7 +205,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-delay": {
@@ -215,7 +215,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-disabled-sorting": {
@@ -225,7 +225,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-disabled": {
@@ -235,7 +235,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-enter-predicate": {
@@ -245,7 +245,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-free-drag-position": {
@@ -255,7 +255,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-handle": {
@@ -265,7 +265,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-horizontal-sorting": {
@@ -275,7 +275,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-overview": {
@@ -285,7 +285,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-root-element": {
@@ -295,7 +295,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-drag-drop-sorting": {
@@ -305,7 +305,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkDragDropExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/drag-drop"
+            "importSpecifier": "cdk/drag-drop"
         }
     },
     "cdk-platform-overview": {
@@ -315,7 +315,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkPlatformExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/platform"
+            "importSpecifier": "cdk/platform"
         }
     },
     "cdk-portal-overview": {
@@ -327,7 +327,7 @@ const EXAMPLE_COMPONENTS = {
         ],
         "module": {
             "name": "CdkPortalExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/portal"
+            "importSpecifier": "cdk/portal"
         }
     },
     "cdk-virtual-scroll-context": {
@@ -337,7 +337,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+            "importSpecifier": "cdk/scrolling"
         }
     },
     "cdk-virtual-scroll-custom-strategy": {
@@ -347,7 +347,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+            "importSpecifier": "cdk/scrolling"
         }
     },
     "cdk-virtual-scroll-data-source": {
@@ -357,7 +357,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+            "importSpecifier": "cdk/scrolling"
         }
     },
     "cdk-virtual-scroll-dl": {
@@ -367,7 +367,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+            "importSpecifier": "cdk/scrolling"
         }
     },
     "cdk-virtual-scroll-fixed-buffer": {
@@ -377,7 +377,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+            "importSpecifier": "cdk/scrolling"
         }
     },
     "cdk-virtual-scroll-horizontal": {
@@ -387,7 +387,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+            "importSpecifier": "cdk/scrolling"
         }
     },
     "cdk-virtual-scroll-overview": {
@@ -397,7 +397,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+            "importSpecifier": "cdk/scrolling"
         }
     },
     "cdk-virtual-scroll-template-cache": {
@@ -407,7 +407,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkScrollingExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/scrolling"
+            "importSpecifier": "cdk/scrolling"
         }
     },
     "cdk-custom-stepper-without-form": {
@@ -422,7 +422,7 @@ const EXAMPLE_COMPONENTS = {
         ],
         "module": {
             "name": "CdkStepperExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/stepper"
+            "importSpecifier": "cdk/stepper"
         }
     },
     "cdk-table-basic-flex": {
@@ -432,7 +432,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkTableExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/table"
+            "importSpecifier": "cdk/table"
         }
     },
     "cdk-table-basic": {
@@ -442,7 +442,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkTableExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/table"
+            "importSpecifier": "cdk/table"
         }
     },
     "text-field-autofill-directive": {
@@ -452,7 +452,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkTextFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/text-field"
+            "importSpecifier": "cdk/text-field"
         }
     },
     "text-field-autofill-monitor": {
@@ -462,7 +462,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkTextFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/text-field"
+            "importSpecifier": "cdk/text-field"
         }
     },
     "text-field-autosize-textarea": {
@@ -472,7 +472,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkTextFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/text-field"
+            "importSpecifier": "cdk/text-field"
         }
     },
     "cdk-tree-flat": {
@@ -482,7 +482,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkTreeExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/tree"
+            "importSpecifier": "cdk/tree"
         }
     },
     "cdk-tree-nested": {
@@ -492,579 +492,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "CdkTreeExamplesModule",
-            "importSpecifier": "@angular/components-examples/cdk/tree"
-        }
-    },
-    "popover-edit-cell-span-mat-table": {
-        "title": "Material Popover Edit spanning multiple columns on a Material data-table",
-        "componentName": "PopoverEditCellSpanMatTableExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "PopoverEditExamplesModule",
-            "importSpecifier": "@angular/components-examples/material-experimental/popover-edit"
-        }
-    },
-    "popover-edit-mat-table-flex": {
-        "title": "Material Popover Edit on a flex Material data-table",
-        "componentName": "PopoverEditMatTableFlexExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "PopoverEditExamplesModule",
-            "importSpecifier": "@angular/components-examples/material-experimental/popover-edit"
-        }
-    },
-    "popover-edit-mat-table": {
-        "title": "Material Popover Edit on a Material data-table",
-        "componentName": "PopoverEditMatTableExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "PopoverEditExamplesModule",
-            "importSpecifier": "@angular/components-examples/material-experimental/popover-edit"
-        }
-    },
-    "popover-edit-tab-out-mat-table": {
-        "title": "Material Popover Edit with spreadsheet-like configuration on a Material data-table",
-        "componentName": "PopoverEditTabOutMatTableExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "PopoverEditExamplesModule",
-            "importSpecifier": "@angular/components-examples/material-experimental/popover-edit"
-        }
-    },
-    "autocomplete-auto-active-first-option": {
-        "title": "Highlight the first autocomplete option",
-        "componentName": "AutocompleteAutoActiveFirstOptionExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/autocomplete"
-        }
-    },
-    "autocomplete-display": {
-        "title": "Display value autocomplete",
-        "componentName": "AutocompleteDisplayExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/autocomplete"
-        }
-    },
-    "autocomplete-filter": {
-        "title": "Filter autocomplete",
-        "componentName": "AutocompleteFilterExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/autocomplete"
-        }
-    },
-    "autocomplete-optgroup": {
-        "title": "Option groups autocomplete",
-        "componentName": "AutocompleteOptgroupExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/autocomplete"
-        }
-    },
-    "autocomplete-overview": {
-        "title": "Autocomplete overview",
-        "componentName": "AutocompleteOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/autocomplete"
-        }
-    },
-    "autocomplete-plain-input": {
-        "title": "Plain input autocomplete",
-        "componentName": "AutocompletePlainInputExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/autocomplete"
-        }
-    },
-    "autocomplete-simple": {
-        "title": "Simple autocomplete",
-        "componentName": "AutocompleteSimpleExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "AutocompleteExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/autocomplete"
-        }
-    },
-    "badge-overview": {
-        "title": "Badge overview",
-        "componentName": "BadgeOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "BadgeExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/badge"
-        }
-    },
-    "bottom-sheet-overview": {
-        "title": "Bottom Sheet Overview",
-        "componentName": "BottomSheetOverviewExample",
-        "additionalFiles": [
-            "bottom-sheet-overview-example-sheet.html"
-        ],
-        "additionalComponents": [
-            "BottomSheetOverviewExampleSheet"
-        ],
-        "module": {
-            "name": "BottomSheetExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/bottom-sheet"
-        }
-    },
-    "button-toggle-appearance": {
-        "title": "Button toggle appearance",
-        "componentName": "ButtonToggleAppearanceExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ButtonToggleExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/button-toggle"
-        }
-    },
-    "button-toggle-exclusive": {
-        "title": "Exclusive selection",
-        "componentName": "ButtonToggleExclusiveExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ButtonToggleExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/button-toggle"
-        }
-    },
-    "button-toggle-overview": {
-        "title": "Basic button-toggles",
-        "componentName": "ButtonToggleOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ButtonToggleExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/button-toggle"
-        }
-    },
-    "button-overview": {
-        "title": "Basic buttons",
-        "componentName": "ButtonOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ButtonExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/button"
-        }
-    },
-    "button-types": {
-        "title": "Button varieties",
-        "componentName": "ButtonTypesExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ButtonExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/button"
-        }
-    },
-    "card-fancy": {
-        "title": "Card with multiple sections",
-        "componentName": "CardFancyExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "CardExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/card"
-        }
-    },
-    "card-overview": {
-        "title": "Basic cards",
-        "componentName": "CardOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "CardExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/card"
-        }
-    },
-    "checkbox-configurable": {
-        "title": "Configurable checkbox",
-        "componentName": "CheckboxConfigurableExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "CheckboxExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/checkbox"
-        }
-    },
-    "checkbox-overview": {
-        "title": "Basic checkboxes",
-        "componentName": "CheckboxOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "CheckboxExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/checkbox"
-        }
-    },
-    "chips-autocomplete": {
-        "title": "Chips Autocomplete",
-        "componentName": "ChipsAutocompleteExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/chips"
-        }
-    },
-    "chips-drag-drop": {
-        "title": "Chips Drag and Drop",
-        "componentName": "ChipsDragDropExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/chips"
-        }
-    },
-    "chips-input": {
-        "title": "Chips with input",
-        "componentName": "ChipsInputExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/chips"
-        }
-    },
-    "chips-overview": {
-        "title": "Basic chips",
-        "componentName": "ChipsOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/chips"
-        }
-    },
-    "chips-stacked": {
-        "title": "Stacked chips",
-        "componentName": "ChipsStackedExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ChipsExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/chips"
-        }
-    },
-    "elevation-overview": {
-        "title": "Elevation CSS classes",
-        "componentName": "ElevationOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "CoreExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/core"
-        }
-    },
-    "ripple-overview": {
-        "title": "MatRipple basic usage",
-        "componentName": "RippleOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "CoreExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/core"
-        }
-    },
-    "datepicker-api": {
-        "title": "Datepicker open method",
-        "componentName": "DatepickerApiExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-color": {
-        "title": "Datepicker palette colors",
-        "componentName": "DatepickerColorExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-custom-header": {
-        "title": "Datepicker with custom calendar header",
-        "componentName": "DatepickerCustomHeaderExample",
-        "additionalFiles": [],
-        "additionalComponents": [
-            "ExampleHeader"
-        ],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-custom-icon": {
-        "title": "Datepicker with custom icon",
-        "componentName": "DatepickerCustomIconExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-date-class": {
-        "title": "Datepicker with custom date classes",
-        "componentName": "DatepickerDateClassExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-disabled": {
-        "title": "Disabled datepicker",
-        "componentName": "DatepickerDisabledExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-events": {
-        "title": "Datepicker input and change events",
-        "componentName": "DatepickerEventsExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-filter": {
-        "title": "Datepicker with filter validation",
-        "componentName": "DatepickerFilterExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-formats": {
-        "title": "Datepicker with custom formats",
-        "componentName": "DatepickerFormatsExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-locale": {
-        "title": "Datepicker with different locale",
-        "componentName": "DatepickerLocaleExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-min-max": {
-        "title": "Datepicker with min & max validation",
-        "componentName": "DatepickerMinMaxExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-moment": {
-        "title": "Datepicker that uses Moment.js dates",
-        "componentName": "DatepickerMomentExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-overview": {
-        "title": "Basic datepicker",
-        "componentName": "DatepickerOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-start-view": {
-        "title": "Datepicker start date",
-        "componentName": "DatepickerStartViewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-touch": {
-        "title": "Datepicker touch UI",
-        "componentName": "DatepickerTouchExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-value": {
-        "title": "Datepicker selected value",
-        "componentName": "DatepickerValueExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "datepicker-views-selection": {
-        "title": "Datepicker emulating a Year and month picker",
-        "componentName": "DatepickerViewsSelectionExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DatepickerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/datepicker"
-        }
-    },
-    "dialog-content": {
-        "title": "Dialog with header, scrollable content and actions",
-        "componentName": "DialogContentExample",
-        "additionalFiles": [
-            "dialog-content-example-dialog.html"
-        ],
-        "additionalComponents": [
-            "DialogContentExampleDialog"
-        ],
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/dialog"
-        }
-    },
-    "dialog-data": {
-        "title": "Injecting data when opening a dialog",
-        "componentName": "DialogDataExample",
-        "additionalFiles": [
-            "dialog-data-example-dialog.html"
-        ],
-        "additionalComponents": [
-            "DialogDataExampleDialog"
-        ],
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/dialog"
-        }
-    },
-    "dialog-elements": {
-        "title": "Dialog elements",
-        "componentName": "DialogElementsExample",
-        "additionalFiles": [
-            "dialog-elements-example-dialog.html"
-        ],
-        "additionalComponents": [
-            "DialogElementsExampleDialog"
-        ],
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/dialog"
-        }
-    },
-    "dialog-overview": {
-        "title": "Dialog Overview",
-        "componentName": "DialogOverviewExample",
-        "additionalFiles": [
-            "dialog-overview-example-dialog.html"
-        ],
-        "additionalComponents": [
-            "DialogOverviewExampleDialog"
-        ],
-        "module": {
-            "name": "DialogExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/dialog"
-        }
-    },
-    "divider-overview": {
-        "title": "Basic divider",
-        "componentName": "DividerOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "DividerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/divider"
-        }
-    },
-    "expansion-expand-collapse-all": {
-        "title": "Accordion with expand/collapse all toggles",
-        "componentName": "ExpansionExpandCollapseAllExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ExpansionExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/expansion"
-        }
-    },
-    "expansion-overview": {
-        "title": "Basic expansion panel",
-        "componentName": "ExpansionOverviewExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ExpansionExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/expansion"
-        }
-    },
-    "expansion-steps": {
-        "title": "Expansion panel as accordion",
-        "componentName": "ExpansionStepsExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "ExpansionExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/expansion"
-        }
-    },
-    "form-field-appearance": {
-        "title": "Form field appearance variants",
-        "componentName": "FormFieldAppearanceExample",
-        "additionalFiles": [],
-        "additionalComponents": [],
-        "module": {
-            "name": "FormFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/form-field"
+            "importSpecifier": "cdk/tree"
         }
     },
     "form-field-custom-control": {
@@ -1079,7 +507,579 @@ const EXAMPLE_COMPONENTS = {
         ],
         "module": {
             "name": "FormFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/form-field"
+            "importSpecifier": "material/form-field"
+        }
+    },
+    "popover-edit-cell-span-mat-table": {
+        "title": "Material Popover Edit spanning multiple columns on a Material data-table",
+        "componentName": "PopoverEditCellSpanMatTableExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "PopoverEditExamplesModule",
+            "importSpecifier": "material-experimental/popover-edit"
+        }
+    },
+    "popover-edit-mat-table-flex": {
+        "title": "Material Popover Edit on a flex Material data-table",
+        "componentName": "PopoverEditMatTableFlexExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "PopoverEditExamplesModule",
+            "importSpecifier": "material-experimental/popover-edit"
+        }
+    },
+    "popover-edit-mat-table": {
+        "title": "Material Popover Edit on a Material data-table",
+        "componentName": "PopoverEditMatTableExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "PopoverEditExamplesModule",
+            "importSpecifier": "material-experimental/popover-edit"
+        }
+    },
+    "popover-edit-tab-out-mat-table": {
+        "title": "Material Popover Edit with spreadsheet-like configuration on a Material data-table",
+        "componentName": "PopoverEditTabOutMatTableExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "PopoverEditExamplesModule",
+            "importSpecifier": "material-experimental/popover-edit"
+        }
+    },
+    "autocomplete-auto-active-first-option": {
+        "title": "Highlight the first autocomplete option",
+        "componentName": "AutocompleteAutoActiveFirstOptionExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "material/autocomplete"
+        }
+    },
+    "autocomplete-display": {
+        "title": "Display value autocomplete",
+        "componentName": "AutocompleteDisplayExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "material/autocomplete"
+        }
+    },
+    "autocomplete-filter": {
+        "title": "Filter autocomplete",
+        "componentName": "AutocompleteFilterExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "material/autocomplete"
+        }
+    },
+    "autocomplete-optgroup": {
+        "title": "Option groups autocomplete",
+        "componentName": "AutocompleteOptgroupExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "material/autocomplete"
+        }
+    },
+    "autocomplete-overview": {
+        "title": "Autocomplete overview",
+        "componentName": "AutocompleteOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "material/autocomplete"
+        }
+    },
+    "autocomplete-plain-input": {
+        "title": "Plain input autocomplete",
+        "componentName": "AutocompletePlainInputExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "material/autocomplete"
+        }
+    },
+    "autocomplete-simple": {
+        "title": "Simple autocomplete",
+        "componentName": "AutocompleteSimpleExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "AutocompleteExamplesModule",
+            "importSpecifier": "material/autocomplete"
+        }
+    },
+    "badge-overview": {
+        "title": "Badge overview",
+        "componentName": "BadgeOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "BadgeExamplesModule",
+            "importSpecifier": "material/badge"
+        }
+    },
+    "bottom-sheet-overview": {
+        "title": "Bottom Sheet Overview",
+        "componentName": "BottomSheetOverviewExample",
+        "additionalFiles": [
+            "bottom-sheet-overview-example-sheet.html"
+        ],
+        "additionalComponents": [
+            "BottomSheetOverviewExampleSheet"
+        ],
+        "module": {
+            "name": "BottomSheetExamplesModule",
+            "importSpecifier": "material/bottom-sheet"
+        }
+    },
+    "button-toggle-appearance": {
+        "title": "Button toggle appearance",
+        "componentName": "ButtonToggleAppearanceExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ButtonToggleExamplesModule",
+            "importSpecifier": "material/button-toggle"
+        }
+    },
+    "button-toggle-exclusive": {
+        "title": "Exclusive selection",
+        "componentName": "ButtonToggleExclusiveExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ButtonToggleExamplesModule",
+            "importSpecifier": "material/button-toggle"
+        }
+    },
+    "button-toggle-overview": {
+        "title": "Basic button-toggles",
+        "componentName": "ButtonToggleOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ButtonToggleExamplesModule",
+            "importSpecifier": "material/button-toggle"
+        }
+    },
+    "button-overview": {
+        "title": "Basic buttons",
+        "componentName": "ButtonOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ButtonExamplesModule",
+            "importSpecifier": "material/button"
+        }
+    },
+    "button-types": {
+        "title": "Button varieties",
+        "componentName": "ButtonTypesExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ButtonExamplesModule",
+            "importSpecifier": "material/button"
+        }
+    },
+    "card-fancy": {
+        "title": "Card with multiple sections",
+        "componentName": "CardFancyExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "CardExamplesModule",
+            "importSpecifier": "material/card"
+        }
+    },
+    "card-overview": {
+        "title": "Basic cards",
+        "componentName": "CardOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "CardExamplesModule",
+            "importSpecifier": "material/card"
+        }
+    },
+    "checkbox-configurable": {
+        "title": "Configurable checkbox",
+        "componentName": "CheckboxConfigurableExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "CheckboxExamplesModule",
+            "importSpecifier": "material/checkbox"
+        }
+    },
+    "checkbox-overview": {
+        "title": "Basic checkboxes",
+        "componentName": "CheckboxOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "CheckboxExamplesModule",
+            "importSpecifier": "material/checkbox"
+        }
+    },
+    "chips-autocomplete": {
+        "title": "Chips Autocomplete",
+        "componentName": "ChipsAutocompleteExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "material/chips"
+        }
+    },
+    "chips-drag-drop": {
+        "title": "Chips Drag and Drop",
+        "componentName": "ChipsDragDropExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "material/chips"
+        }
+    },
+    "chips-input": {
+        "title": "Chips with input",
+        "componentName": "ChipsInputExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "material/chips"
+        }
+    },
+    "chips-overview": {
+        "title": "Basic chips",
+        "componentName": "ChipsOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "material/chips"
+        }
+    },
+    "chips-stacked": {
+        "title": "Stacked chips",
+        "componentName": "ChipsStackedExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ChipsExamplesModule",
+            "importSpecifier": "material/chips"
+        }
+    },
+    "elevation-overview": {
+        "title": "Elevation CSS classes",
+        "componentName": "ElevationOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "CoreExamplesModule",
+            "importSpecifier": "material/core"
+        }
+    },
+    "ripple-overview": {
+        "title": "MatRipple basic usage",
+        "componentName": "RippleOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "CoreExamplesModule",
+            "importSpecifier": "material/core"
+        }
+    },
+    "datepicker-api": {
+        "title": "Datepicker open method",
+        "componentName": "DatepickerApiExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-color": {
+        "title": "Datepicker palette colors",
+        "componentName": "DatepickerColorExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-custom-header": {
+        "title": "Datepicker with custom calendar header",
+        "componentName": "DatepickerCustomHeaderExample",
+        "additionalFiles": [],
+        "additionalComponents": [
+            "ExampleHeader"
+        ],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-custom-icon": {
+        "title": "Datepicker with custom icon",
+        "componentName": "DatepickerCustomIconExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-date-class": {
+        "title": "Datepicker with custom date classes",
+        "componentName": "DatepickerDateClassExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-disabled": {
+        "title": "Disabled datepicker",
+        "componentName": "DatepickerDisabledExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-events": {
+        "title": "Datepicker input and change events",
+        "componentName": "DatepickerEventsExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-filter": {
+        "title": "Datepicker with filter validation",
+        "componentName": "DatepickerFilterExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-formats": {
+        "title": "Datepicker with custom formats",
+        "componentName": "DatepickerFormatsExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-locale": {
+        "title": "Datepicker with different locale",
+        "componentName": "DatepickerLocaleExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-min-max": {
+        "title": "Datepicker with min & max validation",
+        "componentName": "DatepickerMinMaxExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-moment": {
+        "title": "Datepicker that uses Moment.js dates",
+        "componentName": "DatepickerMomentExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-overview": {
+        "title": "Basic datepicker",
+        "componentName": "DatepickerOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-start-view": {
+        "title": "Datepicker start date",
+        "componentName": "DatepickerStartViewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-touch": {
+        "title": "Datepicker touch UI",
+        "componentName": "DatepickerTouchExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-value": {
+        "title": "Datepicker selected value",
+        "componentName": "DatepickerValueExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "datepicker-views-selection": {
+        "title": "Datepicker emulating a Year and month picker",
+        "componentName": "DatepickerViewsSelectionExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DatepickerExamplesModule",
+            "importSpecifier": "material/datepicker"
+        }
+    },
+    "dialog-content": {
+        "title": "Dialog with header, scrollable content and actions",
+        "componentName": "DialogContentExample",
+        "additionalFiles": [
+            "dialog-content-example-dialog.html"
+        ],
+        "additionalComponents": [
+            "DialogContentExampleDialog"
+        ],
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "material/dialog"
+        }
+    },
+    "dialog-data": {
+        "title": "Injecting data when opening a dialog",
+        "componentName": "DialogDataExample",
+        "additionalFiles": [
+            "dialog-data-example-dialog.html"
+        ],
+        "additionalComponents": [
+            "DialogDataExampleDialog"
+        ],
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "material/dialog"
+        }
+    },
+    "dialog-elements": {
+        "title": "Dialog elements",
+        "componentName": "DialogElementsExample",
+        "additionalFiles": [
+            "dialog-elements-example-dialog.html"
+        ],
+        "additionalComponents": [
+            "DialogElementsExampleDialog"
+        ],
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "material/dialog"
+        }
+    },
+    "dialog-overview": {
+        "title": "Dialog Overview",
+        "componentName": "DialogOverviewExample",
+        "additionalFiles": [
+            "dialog-overview-example-dialog.html"
+        ],
+        "additionalComponents": [
+            "DialogOverviewExampleDialog"
+        ],
+        "module": {
+            "name": "DialogExamplesModule",
+            "importSpecifier": "material/dialog"
+        }
+    },
+    "divider-overview": {
+        "title": "Basic divider",
+        "componentName": "DividerOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "DividerExamplesModule",
+            "importSpecifier": "material/divider"
+        }
+    },
+    "expansion-expand-collapse-all": {
+        "title": "Accordion with expand/collapse all toggles",
+        "componentName": "ExpansionExpandCollapseAllExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ExpansionExamplesModule",
+            "importSpecifier": "material/expansion"
+        }
+    },
+    "expansion-overview": {
+        "title": "Basic expansion panel",
+        "componentName": "ExpansionOverviewExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ExpansionExamplesModule",
+            "importSpecifier": "material/expansion"
+        }
+    },
+    "expansion-steps": {
+        "title": "Expansion panel as accordion",
+        "componentName": "ExpansionStepsExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "ExpansionExamplesModule",
+            "importSpecifier": "material/expansion"
+        }
+    },
+    "form-field-appearance": {
+        "title": "Form field appearance variants",
+        "componentName": "FormFieldAppearanceExample",
+        "additionalFiles": [],
+        "additionalComponents": [],
+        "module": {
+            "name": "FormFieldExamplesModule",
+            "importSpecifier": "material/form-field"
         }
     },
     "form-field-error": {
@@ -1089,7 +1089,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "FormFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/form-field"
+            "importSpecifier": "material/form-field"
         }
     },
     "form-field-hint": {
@@ -1099,7 +1099,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "FormFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/form-field"
+            "importSpecifier": "material/form-field"
         }
     },
     "form-field-label": {
@@ -1109,7 +1109,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "FormFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/form-field"
+            "importSpecifier": "material/form-field"
         }
     },
     "form-field-overview": {
@@ -1119,7 +1119,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "FormFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/form-field"
+            "importSpecifier": "material/form-field"
         }
     },
     "form-field-prefix-suffix": {
@@ -1129,7 +1129,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "FormFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/form-field"
+            "importSpecifier": "material/form-field"
         }
     },
     "form-field-theming": {
@@ -1139,7 +1139,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "FormFieldExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/form-field"
+            "importSpecifier": "material/form-field"
         }
     },
     "grid-list-dynamic": {
@@ -1149,7 +1149,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "GridListExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/grid-list"
+            "importSpecifier": "material/grid-list"
         }
     },
     "grid-list-overview": {
@@ -1159,7 +1159,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "GridListExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/grid-list"
+            "importSpecifier": "material/grid-list"
         }
     },
     "icon-overview": {
@@ -1169,7 +1169,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "IconExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/icon"
+            "importSpecifier": "material/icon"
         }
     },
     "icon-svg": {
@@ -1179,7 +1179,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "IconExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/icon"
+            "importSpecifier": "material/icon"
         }
     },
     "input-clearable": {
@@ -1189,7 +1189,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "InputExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/input"
+            "importSpecifier": "material/input"
         }
     },
     "input-error-state-matcher": {
@@ -1199,7 +1199,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "InputExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/input"
+            "importSpecifier": "material/input"
         }
     },
     "input-errors": {
@@ -1209,7 +1209,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "InputExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/input"
+            "importSpecifier": "material/input"
         }
     },
     "input-form": {
@@ -1219,7 +1219,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "InputExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/input"
+            "importSpecifier": "material/input"
         }
     },
     "input-hint": {
@@ -1229,7 +1229,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "InputExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/input"
+            "importSpecifier": "material/input"
         }
     },
     "input-overview": {
@@ -1239,7 +1239,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "InputExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/input"
+            "importSpecifier": "material/input"
         }
     },
     "input-prefix-suffix": {
@@ -1249,7 +1249,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "InputExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/input"
+            "importSpecifier": "material/input"
         }
     },
     "list-overview": {
@@ -1259,7 +1259,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ListExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/list"
+            "importSpecifier": "material/list"
         }
     },
     "list-sections": {
@@ -1269,7 +1269,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ListExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/list"
+            "importSpecifier": "material/list"
         }
     },
     "list-selection": {
@@ -1279,7 +1279,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ListExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/list"
+            "importSpecifier": "material/list"
         }
     },
     "list-single-selection": {
@@ -1289,7 +1289,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ListExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/list"
+            "importSpecifier": "material/list"
         }
     },
     "menu-icons": {
@@ -1299,7 +1299,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "MenuExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/menu"
+            "importSpecifier": "material/menu"
         }
     },
     "menu-overview": {
@@ -1309,7 +1309,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "MenuExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/menu"
+            "importSpecifier": "material/menu"
         }
     },
     "menu-position": {
@@ -1319,7 +1319,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "MenuExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/menu"
+            "importSpecifier": "material/menu"
         }
     },
     "nested-menu": {
@@ -1329,7 +1329,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "MenuExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/menu"
+            "importSpecifier": "material/menu"
         }
     },
     "paginator-configurable": {
@@ -1339,7 +1339,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "PaginatorExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/paginator"
+            "importSpecifier": "material/paginator"
         }
     },
     "paginator-overview": {
@@ -1349,7 +1349,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "PaginatorExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/paginator"
+            "importSpecifier": "material/paginator"
         }
     },
     "progress-bar-buffer": {
@@ -1359,7 +1359,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ProgressBarExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/progress-bar"
+            "importSpecifier": "material/progress-bar"
         }
     },
     "progress-bar-configurable": {
@@ -1369,7 +1369,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ProgressBarExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/progress-bar"
+            "importSpecifier": "material/progress-bar"
         }
     },
     "progress-bar-determinate": {
@@ -1379,7 +1379,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ProgressBarExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/progress-bar"
+            "importSpecifier": "material/progress-bar"
         }
     },
     "progress-bar-indeterminate": {
@@ -1389,7 +1389,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ProgressBarExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/progress-bar"
+            "importSpecifier": "material/progress-bar"
         }
     },
     "progress-bar-query": {
@@ -1399,7 +1399,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ProgressBarExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/progress-bar"
+            "importSpecifier": "material/progress-bar"
         }
     },
     "progress-spinner-configurable": {
@@ -1409,7 +1409,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ProgressSpinnerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/progress-spinner"
+            "importSpecifier": "material/progress-spinner"
         }
     },
     "progress-spinner-overview": {
@@ -1419,7 +1419,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ProgressSpinnerExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/progress-spinner"
+            "importSpecifier": "material/progress-spinner"
         }
     },
     "radio-ng-model": {
@@ -1429,7 +1429,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "RadioExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/radio"
+            "importSpecifier": "material/radio"
         }
     },
     "radio-overview": {
@@ -1439,7 +1439,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "RadioExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/radio"
+            "importSpecifier": "material/radio"
         }
     },
     "select-custom-trigger": {
@@ -1449,7 +1449,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-disabled": {
@@ -1459,7 +1459,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-error-state-matcher": {
@@ -1469,7 +1469,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-form": {
@@ -1479,7 +1479,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-hint-error": {
@@ -1489,7 +1489,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-initial-value": {
@@ -1499,7 +1499,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-multiple": {
@@ -1509,7 +1509,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-no-ripple": {
@@ -1519,7 +1519,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-optgroup": {
@@ -1529,7 +1529,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-overview": {
@@ -1539,7 +1539,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-panel-class": {
@@ -1549,7 +1549,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-reactive-form": {
@@ -1559,7 +1559,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-reset": {
@@ -1569,7 +1569,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "select-value-binding": {
@@ -1579,7 +1579,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SelectExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/select"
+            "importSpecifier": "material/select"
         }
     },
     "sidenav-autosize": {
@@ -1589,7 +1589,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SidenavExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sidenav"
+            "importSpecifier": "material/sidenav"
         }
     },
     "sidenav-backdrop": {
@@ -1599,7 +1599,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SidenavExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sidenav"
+            "importSpecifier": "material/sidenav"
         }
     },
     "sidenav-disable-close": {
@@ -1609,7 +1609,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SidenavExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sidenav"
+            "importSpecifier": "material/sidenav"
         }
     },
     "sidenav-drawer-overview": {
@@ -1619,7 +1619,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SidenavExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sidenav"
+            "importSpecifier": "material/sidenav"
         }
     },
     "sidenav-fixed": {
@@ -1629,7 +1629,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SidenavExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sidenav"
+            "importSpecifier": "material/sidenav"
         }
     },
     "sidenav-mode": {
@@ -1639,7 +1639,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SidenavExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sidenav"
+            "importSpecifier": "material/sidenav"
         }
     },
     "sidenav-open-close": {
@@ -1649,7 +1649,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SidenavExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sidenav"
+            "importSpecifier": "material/sidenav"
         }
     },
     "sidenav-overview": {
@@ -1659,7 +1659,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SidenavExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sidenav"
+            "importSpecifier": "material/sidenav"
         }
     },
     "sidenav-position": {
@@ -1669,7 +1669,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SidenavExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sidenav"
+            "importSpecifier": "material/sidenav"
         }
     },
     "sidenav-responsive": {
@@ -1679,7 +1679,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SidenavExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sidenav"
+            "importSpecifier": "material/sidenav"
         }
     },
     "slide-toggle-configurable": {
@@ -1689,7 +1689,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SlideToggleExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/slide-toggle"
+            "importSpecifier": "material/slide-toggle"
         }
     },
     "slide-toggle-forms": {
@@ -1699,7 +1699,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SlideToggleExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/slide-toggle"
+            "importSpecifier": "material/slide-toggle"
         }
     },
     "slide-toggle-overview": {
@@ -1709,7 +1709,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SlideToggleExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/slide-toggle"
+            "importSpecifier": "material/slide-toggle"
         }
     },
     "slider-configurable": {
@@ -1719,7 +1719,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SliderExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/slider"
+            "importSpecifier": "material/slider"
         }
     },
     "slider-formatting": {
@@ -1729,7 +1729,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SliderExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/slider"
+            "importSpecifier": "material/slider"
         }
     },
     "slider-overview": {
@@ -1739,7 +1739,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SliderExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/slider"
+            "importSpecifier": "material/slider"
         }
     },
     "snack-bar-component": {
@@ -1753,7 +1753,7 @@ const EXAMPLE_COMPONENTS = {
         ],
         "module": {
             "name": "SnackBarExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/snack-bar"
+            "importSpecifier": "material/snack-bar"
         }
     },
     "snack-bar-overview": {
@@ -1763,7 +1763,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SnackBarExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/snack-bar"
+            "importSpecifier": "material/snack-bar"
         }
     },
     "snack-bar-position": {
@@ -1773,7 +1773,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SnackBarExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/snack-bar"
+            "importSpecifier": "material/snack-bar"
         }
     },
     "sort-overview": {
@@ -1783,7 +1783,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "SortExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/sort"
+            "importSpecifier": "material/sort"
         }
     },
     "stepper-editable": {
@@ -1793,7 +1793,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "StepperExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/stepper"
+            "importSpecifier": "material/stepper"
         }
     },
     "stepper-errors": {
@@ -1803,7 +1803,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "StepperExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/stepper"
+            "importSpecifier": "material/stepper"
         }
     },
     "stepper-label-position-bottom": {
@@ -1813,7 +1813,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "StepperExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/stepper"
+            "importSpecifier": "material/stepper"
         }
     },
     "stepper-optional": {
@@ -1823,7 +1823,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "StepperExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/stepper"
+            "importSpecifier": "material/stepper"
         }
     },
     "stepper-overview": {
@@ -1833,7 +1833,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "StepperExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/stepper"
+            "importSpecifier": "material/stepper"
         }
     },
     "stepper-states": {
@@ -1843,7 +1843,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "StepperExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/stepper"
+            "importSpecifier": "material/stepper"
         }
     },
     "stepper-vertical": {
@@ -1853,7 +1853,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "StepperExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/stepper"
+            "importSpecifier": "material/stepper"
         }
     },
     "table-basic-flex": {
@@ -1863,7 +1863,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-basic": {
@@ -1873,7 +1873,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-dynamic-columns": {
@@ -1883,7 +1883,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-expandable-rows": {
@@ -1893,7 +1893,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-filtering": {
@@ -1903,7 +1903,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-footer-row": {
@@ -1913,7 +1913,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-http": {
@@ -1923,7 +1923,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-multiple-header-footer": {
@@ -1933,7 +1933,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-overview": {
@@ -1943,7 +1943,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-pagination": {
@@ -1953,7 +1953,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-row-context": {
@@ -1963,7 +1963,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-selection": {
@@ -1973,7 +1973,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-sorting": {
@@ -1983,7 +1983,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-sticky-columns": {
@@ -1993,7 +1993,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-sticky-complex-flex": {
@@ -2003,7 +2003,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-sticky-complex": {
@@ -2013,7 +2013,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-sticky-footer": {
@@ -2023,7 +2023,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-sticky-header": {
@@ -2033,7 +2033,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-text-column-advanced": {
@@ -2043,7 +2043,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-text-column": {
@@ -2053,7 +2053,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "table-wrapped": {
@@ -2067,7 +2067,7 @@ const EXAMPLE_COMPONENTS = {
         ],
         "module": {
             "name": "TableExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/table"
+            "importSpecifier": "material/table"
         }
     },
     "tab-group-align": {
@@ -2077,7 +2077,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-group-animations": {
@@ -2087,7 +2087,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-group-async": {
@@ -2097,7 +2097,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-group-basic": {
@@ -2107,7 +2107,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-group-custom-label": {
@@ -2117,7 +2117,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-group-dynamic-height": {
@@ -2127,7 +2127,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-group-dynamic": {
@@ -2137,7 +2137,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-group-header-below": {
@@ -2147,7 +2147,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-group-lazy-loaded": {
@@ -2157,7 +2157,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-group-stretched": {
@@ -2167,7 +2167,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-group-theme": {
@@ -2177,7 +2177,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "tab-nav-bar-basic": {
@@ -2187,7 +2187,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TabGroupExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tabs"
+            "importSpecifier": "material/tabs"
         }
     },
     "toolbar-multirow": {
@@ -2197,7 +2197,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ToolbarExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/toolbar"
+            "importSpecifier": "material/toolbar"
         }
     },
     "toolbar-overview": {
@@ -2207,7 +2207,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "ToolbarExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/toolbar"
+            "importSpecifier": "material/toolbar"
         }
     },
     "tooltip-auto-hide": {
@@ -2217,7 +2217,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TooltipExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tooltip"
+            "importSpecifier": "material/tooltip"
         }
     },
     "tooltip-custom-class": {
@@ -2227,7 +2227,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TooltipExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tooltip"
+            "importSpecifier": "material/tooltip"
         }
     },
     "tooltip-delay": {
@@ -2237,7 +2237,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TooltipExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tooltip"
+            "importSpecifier": "material/tooltip"
         }
     },
     "tooltip-disabled": {
@@ -2247,7 +2247,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TooltipExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tooltip"
+            "importSpecifier": "material/tooltip"
         }
     },
     "tooltip-manual": {
@@ -2257,7 +2257,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TooltipExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tooltip"
+            "importSpecifier": "material/tooltip"
         }
     },
     "tooltip-message": {
@@ -2267,7 +2267,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TooltipExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tooltip"
+            "importSpecifier": "material/tooltip"
         }
     },
     "tooltip-modified-defaults": {
@@ -2277,7 +2277,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TooltipExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tooltip"
+            "importSpecifier": "material/tooltip"
         }
     },
     "tooltip-overview": {
@@ -2287,7 +2287,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TooltipExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tooltip"
+            "importSpecifier": "material/tooltip"
         }
     },
     "tooltip-position": {
@@ -2297,7 +2297,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TooltipExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tooltip"
+            "importSpecifier": "material/tooltip"
         }
     },
     "tree-checklist": {
@@ -2307,7 +2307,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TreeExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tree"
+            "importSpecifier": "material/tree"
         }
     },
     "tree-dynamic": {
@@ -2317,7 +2317,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TreeExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tree"
+            "importSpecifier": "material/tree"
         }
     },
     "tree-flat-overview": {
@@ -2327,7 +2327,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TreeExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tree"
+            "importSpecifier": "material/tree"
         }
     },
     "tree-loadmore": {
@@ -2337,7 +2337,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TreeExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tree"
+            "importSpecifier": "material/tree"
         }
     },
     "tree-nested-overview": {
@@ -2347,7 +2347,7 @@ const EXAMPLE_COMPONENTS = {
         "additionalComponents": [],
         "module": {
             "name": "TreeExamplesModule",
-            "importSpecifier": "@angular/components-examples/material/tree"
+            "importSpecifier": "material/tree"
         }
     }
 };
@@ -2418,35 +2418,6 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
- * Generated from: src/components-examples/load-example.ts
- * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
- */
-/**
- * Asynchronously loads the specified example and returns its component factory.
- * @param {?} name
- * @param {?} injector
- * @return {?}
- * @this {*}
- */
-function loadExampleFactory(name, injector) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const { componentName, module } = EXAMPLE_COMPONENTS[name];
-        // TODO(devversion): remove the NgFactory import when the `--config=view-engine` switch is gone.
-        const [moduleFactoryExports, moduleExports] = yield Promise.all([
-            import(module.importSpecifier + '/index.ngfactory'),
-            import(module.importSpecifier)
-        ]);
-        /** @type {?} */
-        const moduleFactory = moduleFactoryExports[`${module.name}NgFactory`];
-        /** @type {?} */
-        const componentType = moduleExports[componentName];
-        return moduleFactory.create(injector)
-            .componentFactoryResolver.resolveComponentFactory(componentType);
-    });
-}
-
-/**
- * @fileoverview added by tsickle
  * Generated from: src/components-examples/public-api.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
@@ -2455,5 +2426,5 @@ function loadExampleFactory(name, injector) {
  * Generated bundle index. Do not edit.
  */
 
-export { EXAMPLE_COMPONENTS, ExampleData, loadExampleFactory };
+export { EXAMPLE_COMPONENTS, ExampleData };
 //# sourceMappingURL=components-examples.js.map
