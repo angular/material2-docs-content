@@ -154,6 +154,20 @@ match the width of its host.</p>
 <tr class="docs-api-properties-row">
   <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
           @Output()</div><p class="docs-api-property-name">
+      <code>optionActivated: EventEmitter&lt;MatAutocompleteActivatedEvent&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Emits whenever an option is activated using the keyboard.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-output-marker">
+          @Output()</div><p class="docs-api-property-name">
       <code>optionSelected: EventEmitter&lt;MatAutocompleteSelectedEvent&gt;</code>
     </p>
   </td>
@@ -517,6 +531,53 @@ as a connection point for an autocomplete panel.</p>
       <span header-link="interfaces"></span>
       Interfaces
     </h3>
+    
+      
+
+<h4 id="MatAutocompleteActivatedEvent" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatAutocompleteActivatedEvent"></span>
+  <code>MatAutocompleteActivatedEvent</code>
+</h4><p class="docs-api-interface-description"><p>Event object that is emitted when an autocomplete option is activated.</p>
+</p><h5 class="docs-api-h5 docs-api-method-header">Properties</h5>
+  <table class="docs-api-properties-table">
+    <tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">Name</th>
+      <th class="docs-api-properties-th">Description</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>option: MatOption | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Option that was selected.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>source: MatAutocomplete</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Reference to the autocomplete panel that emitted the event.</p>
+</td>
+</tr>
+
+
+    
+  </table>
+
+
+
+
+
+
     
       
 
