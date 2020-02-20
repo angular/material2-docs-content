@@ -160,7 +160,10 @@ restrict the user to only be able to do so using a handle element, you can do it
       <p>When a <code>cdkDrag</code> element is picked up, it will create a preview element visible while dragging.
 By default, this will be a clone of the original element positioned next to the user&#39;s cursor.
 This preview can be customized, though, by providing a custom template via <code>*cdkDragPreview</code>.
-Note that the cloned element will remove its <code>id</code> attribute in order to avoid having multiple
+Using the default configuration the custom preview won&#39;t match the size of the original dragged
+element, because the CDK doesn&#39;t make assumptions about the element&#39;s content. If you want the
+size to be matched, you can pass <code>true</code> to the <code>matchSize</code> input.</p>
+<p>Note that the cloned element will remove its <code>id</code> attribute in order to avoid having multiple
 elements with the same <code>id</code> on the page. This will cause any CSS that targets that <code>id</code> not
 to be applied.</p>
 <div material-docs-example="cdk-drag-drop-custom-preview"></div>
