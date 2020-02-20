@@ -399,7 +399,7 @@ MdcFormFieldExamplesModule.decorators = [
                     ReactiveFormsModule,
                 ],
                 declarations: [...EXAMPLES, MyTelInput],
-                exports: EXAMPLES,
+                exports: [...EXAMPLES, MyTelInput],
                 entryComponents: EXAMPLES,
             },] },
 ];
@@ -414,7 +414,8 @@ MdcFormFieldExamplesModule.decorators = [
         MyTelInput], imports: [CommonModule,
         MatFormFieldModule,
         MatIconModule,
-        ReactiveFormsModule], exports: [FormFieldCustomControlExample] }); })();
+        ReactiveFormsModule], exports: [FormFieldCustomControlExample,
+        MyTelInput] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
         type: NgModule,
         args: [{
@@ -425,7 +426,7 @@ MdcFormFieldExamplesModule.decorators = [
                     ReactiveFormsModule,
                 ],
                 declarations: [...EXAMPLES, MyTelInput],
-                exports: EXAMPLES,
+                exports: [...EXAMPLES, MyTelInput],
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();

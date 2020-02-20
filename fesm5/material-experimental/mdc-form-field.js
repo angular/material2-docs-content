@@ -267,7 +267,7 @@ var MdcFormFieldExamplesModule = /** @class */ (function () {
                         ReactiveFormsModule,
                     ],
                     declarations: __spread(EXAMPLES, [MyTelInput]),
-                    exports: EXAMPLES,
+                    exports: __spread(EXAMPLES, [MyTelInput]),
                     entryComponents: EXAMPLES,
                 },] },
     ];
@@ -284,7 +284,8 @@ var MdcFormFieldExamplesModule = /** @class */ (function () {
         MyTelInput], imports: [CommonModule,
         MatFormFieldModule,
         MatIconModule,
-        ReactiveFormsModule], exports: [FormFieldCustomControlExample] }); })();
+        ReactiveFormsModule], exports: [FormFieldCustomControlExample,
+        MyTelInput] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
         type: NgModule,
         args: [{
@@ -295,7 +296,7 @@ var MdcFormFieldExamplesModule = /** @class */ (function () {
                     ReactiveFormsModule,
                 ],
                 declarations: __spread(EXAMPLES, [MyTelInput]),
-                exports: EXAMPLES,
+                exports: __spread(EXAMPLES, [MyTelInput]),
                 entryComponents: EXAMPLES,
             }]
     }], null, null); })();

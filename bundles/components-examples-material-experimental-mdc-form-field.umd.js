@@ -263,7 +263,7 @@
                             i3.ReactiveFormsModule,
                         ],
                         declarations: tslib.__spread(EXAMPLES, [MyTelInput]),
-                        exports: EXAMPLES,
+                        exports: tslib.__spread(EXAMPLES, [MyTelInput]),
                         entryComponents: EXAMPLES,
                     },] },
         ];
@@ -280,7 +280,8 @@
             MyTelInput], imports: [common.CommonModule,
             i1.MatFormFieldModule,
             i2.MatIconModule,
-            i3.ReactiveFormsModule], exports: [FormFieldCustomControlExample] }); })();
+            i3.ReactiveFormsModule], exports: [FormFieldCustomControlExample,
+            MyTelInput] }); })();
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(MdcFormFieldExamplesModule, [{
             type: i0.NgModule,
             args: [{
@@ -291,7 +292,7 @@
                         i3.ReactiveFormsModule,
                     ],
                     declarations: tslib.__spread(EXAMPLES, [MyTelInput]),
-                    exports: EXAMPLES,
+                    exports: tslib.__spread(EXAMPLES, [MyTelInput]),
                     entryComponents: EXAMPLES,
                 }]
         }], null, null); })();
