@@ -1907,6 +1907,16 @@
                 "importSpecifier": "material/table"
             }
         },
+        "table-reorderable": {
+            "title": "Table with re-orderable columns",
+            "componentName": "TableReorderableExample",
+            "additionalFiles": [],
+            "additionalComponents": [],
+            "module": {
+                "name": "TableExamplesModule",
+                "importSpecifier": "material/table"
+            }
+        },
         "table-row-context": {
             "title": "Table showing each row context properties.",
             "componentName": "TableRowContextExample",

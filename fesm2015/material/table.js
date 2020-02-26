@@ -9,6 +9,8 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSpinner, MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSort, MatSortHeader, MatSortModule } from '@angular/material/sort';
 import { MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow, MatTableDataSource, MatFooterCellDef, MatFooterRowDef, MatFooterCell, MatFooterRow, MatTextColumn, MatTableModule } from '@angular/material/table';
+import { moveItemInArray, CdkDropList, CdkDrag, DragDropModule } from '@angular/cdk/drag-drop';
+import { CdkTableModule } from '@angular/cdk/table';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { HttpClient } from '@angular/common/http';
@@ -4148,6 +4150,168 @@ if (false) {
 
 /**
  * @fileoverview added by tsickle
+ * Generated from: src/components-examples/material/table/table-reorderable/table-reorderable-example.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+function TableReorderableExample_th_2_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " No. ");
+    ɵɵelementEnd();
+} }
+function TableReorderableExample_td_3_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r351 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r351.position, " ");
+} }
+function TableReorderableExample_th_5_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " Name ");
+    ɵɵelementEnd();
+} }
+function TableReorderableExample_td_6_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r352 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r352.name, " ");
+} }
+function TableReorderableExample_th_8_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " Weight ");
+    ɵɵelementEnd();
+} }
+function TableReorderableExample_td_9_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r353 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r353.weight, " ");
+} }
+function TableReorderableExample_th_11_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "th", 9);
+    ɵɵtext(1, " Symbol ");
+    ɵɵelementEnd();
+} }
+function TableReorderableExample_td_12_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelementStart(0, "td", 10);
+    ɵɵtext(1);
+    ɵɵelementEnd();
+} if (rf & 2) {
+    const element_r354 = ctx.$implicit;
+    ɵɵadvance(1);
+    ɵɵtextInterpolate1(" ", element_r354.symbol, " ");
+} }
+function TableReorderableExample_tr_13_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 11);
+} }
+function TableReorderableExample_tr_14_Template(rf, ctx) { if (rf & 1) {
+    ɵɵelement(0, "tr", 12);
+} }
+/**
+ * \@title Table with re-orderable columns
+ */
+class TableReorderableExample {
+    constructor() {
+        this.columns = ['position', 'name', 'weight', 'symbol'];
+        this.dataSource = ELEMENT_DATA$f;
+    }
+    /**
+     * @param {?} event
+     * @return {?}
+     */
+    drop(event) {
+        moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
+    }
+}
+TableReorderableExample.decorators = [
+    { type: Component, args: [{
+                selector: 'table-reorderable-example',
+                templateUrl: './table-reorderable-example.html',
+                styleUrls: ['./table-reorderable-example.css']
+            },] },
+];
+/** @nocollapse */ TableReorderableExample.ɵfac = function TableReorderableExample_Factory(t) { return new (t || TableReorderableExample)(); };
+/** @nocollapse */ TableReorderableExample.ɵcmp = ɵɵdefineComponent({ type: TableReorderableExample, selectors: [["table-reorderable-example"]], decls: 15, vars: 3, consts: [["mat-table", "", "cdkDropList", "", "cdkDropListOrientation", "horizontal", 3, "dataSource", "cdkDropListDropped"], ["matColumnDef", "position"], ["mat-header-cell", "", "cdkDrag", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "cdkDrag", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableReorderableExample_Template(rf, ctx) { if (rf & 1) {
+        ɵɵelementStart(0, "table", 0);
+        ɵɵlistener("cdkDropListDropped", function TableReorderableExample_Template_table_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
+        ɵɵelementContainerStart(1, 1);
+        ɵɵtemplate(2, TableReorderableExample_th_2_Template, 2, 0, "th", 2);
+        ɵɵtemplate(3, TableReorderableExample_td_3_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(4, 4);
+        ɵɵtemplate(5, TableReorderableExample_th_5_Template, 2, 0, "th", 2);
+        ɵɵtemplate(6, TableReorderableExample_td_6_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(7, 5);
+        ɵɵtemplate(8, TableReorderableExample_th_8_Template, 2, 0, "th", 2);
+        ɵɵtemplate(9, TableReorderableExample_td_9_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵelementContainerStart(10, 6);
+        ɵɵtemplate(11, TableReorderableExample_th_11_Template, 2, 0, "th", 2);
+        ɵɵtemplate(12, TableReorderableExample_td_12_Template, 2, 1, "td", 3);
+        ɵɵelementContainerEnd();
+        ɵɵtemplate(13, TableReorderableExample_tr_13_Template, 1, 0, "tr", 7);
+        ɵɵtemplate(14, TableReorderableExample_tr_14_Template, 1, 0, "tr", 8);
+        ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵɵproperty("dataSource", ctx.dataSource);
+        ɵɵadvance(13);
+        ɵɵproperty("matHeaderRowDef", ctx.columns);
+        ɵɵadvance(1);
+        ɵɵproperty("matRowDefColumns", ctx.columns);
+    } }, directives: [MatTable, CdkDropList, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, CdkDrag, MatCell, MatHeaderRow, MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+/*@__PURE__*/ (function () { ɵsetClassMetadata(TableReorderableExample, [{
+        type: Component,
+        args: [{
+                selector: 'table-reorderable-example',
+                templateUrl: './table-reorderable-example.html',
+                styleUrls: ['./table-reorderable-example.css']
+            }]
+    }], null, null); })();
+if (false) {
+    /** @type {?} */
+    TableReorderableExample.prototype.columns;
+    /** @type {?} */
+    TableReorderableExample.prototype.dataSource;
+}
+/**
+ * @record
+ */
+function PeriodicElement$f() { }
+if (false) {
+    /** @type {?} */
+    PeriodicElement$f.prototype.name;
+    /** @type {?} */
+    PeriodicElement$f.prototype.position;
+    /** @type {?} */
+    PeriodicElement$f.prototype.weight;
+    /** @type {?} */
+    PeriodicElement$f.prototype.symbol;
+}
+/** @type {?} */
+const ELEMENT_DATA$f = [
+    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+    { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+    { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+    { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+];
+
+/**
+ * @fileoverview added by tsickle
  * Generated from: src/components-examples/material/table/index.ts
  * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
@@ -4164,6 +4328,7 @@ const EXAMPLES = [
     TableStickyFooterExample, TableStickyHeaderExample,
     TableTextColumnExample, TableTextColumnAdvancedExample,
     TableWrappedExample, WrapperTable,
+    TableReorderableExample,
 ];
 class TableExamplesModule {
 }
@@ -4180,6 +4345,8 @@ TableExamplesModule.decorators = [
                     MatProgressSpinnerModule,
                     MatSortModule,
                     MatTableModule,
+                    CdkTableModule,
+                    DragDropModule,
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
@@ -4198,6 +4365,8 @@ TableExamplesModule.decorators = [
             MatProgressSpinnerModule,
             MatSortModule,
             MatTableModule,
+            CdkTableModule,
+            DragDropModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TableExamplesModule, { declarations: [TableBasicExample, TableBasicFlexExample,
         TableDynamicColumnsExample, TableExpandableRowsExample,
@@ -4209,7 +4378,8 @@ TableExamplesModule.decorators = [
         TableStickyComplexExample, TableStickyComplexFlexExample,
         TableStickyFooterExample, TableStickyHeaderExample,
         TableTextColumnExample, TableTextColumnAdvancedExample,
-        TableWrappedExample, WrapperTable], imports: [CommonModule,
+        TableWrappedExample, WrapperTable,
+        TableReorderableExample], imports: [CommonModule,
         MatButtonModule,
         MatButtonToggleModule,
         MatCheckboxModule,
@@ -4218,7 +4388,9 @@ TableExamplesModule.decorators = [
         MatPaginatorModule,
         MatProgressSpinnerModule,
         MatSortModule,
-        MatTableModule], exports: [TableBasicExample, TableBasicFlexExample,
+        MatTableModule,
+        CdkTableModule,
+        DragDropModule], exports: [TableBasicExample, TableBasicFlexExample,
         TableDynamicColumnsExample, TableExpandableRowsExample,
         TableFilteringExample, TableFooterRowExample,
         TableHttpExample, TableMultipleHeaderFooterExample,
@@ -4228,7 +4400,8 @@ TableExamplesModule.decorators = [
         TableStickyComplexExample, TableStickyComplexFlexExample,
         TableStickyFooterExample, TableStickyHeaderExample,
         TableTextColumnExample, TableTextColumnAdvancedExample,
-        TableWrappedExample, WrapperTable] }); })();
+        TableWrappedExample, WrapperTable,
+        TableReorderableExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TableExamplesModule, [{
         type: NgModule,
         args: [{
@@ -4243,6 +4416,8 @@ TableExamplesModule.decorators = [
                     MatProgressSpinnerModule,
                     MatSortModule,
                     MatTableModule,
+                    CdkTableModule,
+                    DragDropModule,
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
@@ -4250,5 +4425,5 @@ TableExamplesModule.decorators = [
             }]
     }], null, null); })();
 
-export { TableBasicExample, TableBasicFlexExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable };
+export { TableBasicExample, TableBasicFlexExample, TableDynamicColumnsExample, TableExamplesModule, TableExpandableRowsExample, TableFilteringExample, TableFooterRowExample, TableHttpExample, TableMultipleHeaderFooterExample, TableOverviewExample, TablePaginationExample, TableReorderableExample, TableRowContextExample, TableSelectionExample, TableSortingExample, TableStickyColumnsExample, TableStickyComplexExample, TableStickyComplexFlexExample, TableStickyFooterExample, TableStickyHeaderExample, TableTextColumnAdvancedExample, TableTextColumnExample, TableWrappedExample, WrapperTable };
 //# sourceMappingURL=table.js.map

@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/material/button'), require('@angular/material/button-toggle'), require('@angular/material/checkbox'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/paginator'), require('@angular/material/progress-spinner'), require('@angular/material/sort'), require('@angular/material/table'), require('@angular/animations'), require('@angular/material/form-field'), require('@angular/common/http'), require('rxjs'), require('rxjs/operators'), require('@angular/cdk/collections')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/table', ['exports', '@angular/common', '@angular/core', '@angular/material/button', '@angular/material/button-toggle', '@angular/material/checkbox', '@angular/material/icon', '@angular/material/input', '@angular/material/paginator', '@angular/material/progress-spinner', '@angular/material/sort', '@angular/material/table', '@angular/animations', '@angular/material/form-field', '@angular/common/http', 'rxjs', 'rxjs/operators', '@angular/cdk/collections'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.table = {}), global.ng.common, global.ng.core, global.ng.material.button, global.ng.material.buttonToggle, global.ng.material.checkbox, global.ng.material.icon, global.ng.material.input, global.ng.material.paginator, global.ng.material.progressSpinner, global.ng.material.sort, global.ng.material.table, global.ng.animations, global.ng.material.formField, global.ng.common.http, global.rxjs, global.rxjs.operators, global.ng.cdk.collections));
-}(this, (function (exports, i2, i0, i1, i2$1, i2$2, i2$3, i2$4, i5, i6, i4, i1$1, animations, i1$2, i1$3, rxjs, operators, collections) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/material/button'), require('@angular/material/button-toggle'), require('@angular/material/checkbox'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/paginator'), require('@angular/material/progress-spinner'), require('@angular/material/sort'), require('@angular/material/table'), require('@angular/cdk/drag-drop'), require('@angular/cdk/table'), require('@angular/animations'), require('@angular/material/form-field'), require('@angular/common/http'), require('rxjs'), require('rxjs/operators'), require('@angular/cdk/collections')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/table', ['exports', '@angular/common', '@angular/core', '@angular/material/button', '@angular/material/button-toggle', '@angular/material/checkbox', '@angular/material/icon', '@angular/material/input', '@angular/material/paginator', '@angular/material/progress-spinner', '@angular/material/sort', '@angular/material/table', '@angular/cdk/drag-drop', '@angular/cdk/table', '@angular/animations', '@angular/material/form-field', '@angular/common/http', 'rxjs', 'rxjs/operators', '@angular/cdk/collections'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.table = {}), global.ng.common, global.ng.core, global.ng.material.button, global.ng.material.buttonToggle, global.ng.material.checkbox, global.ng.material.icon, global.ng.material.input, global.ng.material.paginator, global.ng.material.progressSpinner, global.ng.material.sort, global.ng.material.table, global.ng.cdk.dragDrop, global.ng.cdk.table, global.ng.animations, global.ng.material.formField, global.ng.common.http, global.rxjs, global.rxjs.operators, global.ng.cdk.collections));
+}(this, (function (exports, i2, i0, i1, i2$1, i2$2, i2$3, i2$4, i5, i6, i4, i1$1, i2$5, table, animations, i1$2, i1$3, rxjs, operators, collections) { 'use strict';
 
     function TableBasicFlexExample_mat_header_cell_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-header-cell");
@@ -3383,6 +3383,139 @@
                 type: i0.Input
             }] }); })();
 
+    function TableReorderableExample_th_2_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 9);
+        i0.ɵɵtext(1, " No. ");
+        i0.ɵɵelementEnd();
+    } }
+    function TableReorderableExample_td_3_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 10);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        var element_r351 = ctx.$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", element_r351.position, " ");
+    } }
+    function TableReorderableExample_th_5_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 9);
+        i0.ɵɵtext(1, " Name ");
+        i0.ɵɵelementEnd();
+    } }
+    function TableReorderableExample_td_6_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 10);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        var element_r352 = ctx.$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", element_r352.name, " ");
+    } }
+    function TableReorderableExample_th_8_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 9);
+        i0.ɵɵtext(1, " Weight ");
+        i0.ɵɵelementEnd();
+    } }
+    function TableReorderableExample_td_9_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 10);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        var element_r353 = ctx.$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", element_r353.weight, " ");
+    } }
+    function TableReorderableExample_th_11_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "th", 9);
+        i0.ɵɵtext(1, " Symbol ");
+        i0.ɵɵelementEnd();
+    } }
+    function TableReorderableExample_td_12_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelementStart(0, "td", 10);
+        i0.ɵɵtext(1);
+        i0.ɵɵelementEnd();
+    } if (rf & 2) {
+        var element_r354 = ctx.$implicit;
+        i0.ɵɵadvance(1);
+        i0.ɵɵtextInterpolate1(" ", element_r354.symbol, " ");
+    } }
+    function TableReorderableExample_tr_13_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 11);
+    } }
+    function TableReorderableExample_tr_14_Template(rf, ctx) { if (rf & 1) {
+        i0.ɵɵelement(0, "tr", 12);
+    } }
+    /**
+     * @title Table with re-orderable columns
+     */
+    var TableReorderableExample = /** @class */ (function () {
+        function TableReorderableExample() {
+            this.columns = ['position', 'name', 'weight', 'symbol'];
+            this.dataSource = ELEMENT_DATA$f;
+        }
+        TableReorderableExample.prototype.drop = function (event) {
+            i2$5.moveItemInArray(this.columns, event.previousIndex, event.currentIndex);
+        };
+        TableReorderableExample.decorators = [
+            { type: i0.Component, args: [{
+                        selector: 'table-reorderable-example',
+                        templateUrl: './table-reorderable-example.html',
+                        styleUrls: ['./table-reorderable-example.css']
+                    },] },
+        ];
+        TableReorderableExample.ɵfac = function TableReorderableExample_Factory(t) { return new (t || TableReorderableExample)(); };
+        TableReorderableExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableReorderableExample, selectors: [["table-reorderable-example"]], decls: 15, vars: 3, consts: [["mat-table", "", "cdkDropList", "", "cdkDropListOrientation", "horizontal", 3, "dataSource", "cdkDropListDropped"], ["matColumnDef", "position"], ["mat-header-cell", "", "cdkDrag", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["matColumnDef", "weight"], ["matColumnDef", "symbol"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "cdkDrag", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableReorderableExample_Template(rf, ctx) { if (rf & 1) {
+                i0.ɵɵelementStart(0, "table", 0);
+                i0.ɵɵlistener("cdkDropListDropped", function TableReorderableExample_Template_table_cdkDropListDropped_0_listener($event) { return ctx.drop($event); });
+                i0.ɵɵelementContainerStart(1, 1);
+                i0.ɵɵtemplate(2, TableReorderableExample_th_2_Template, 2, 0, "th", 2);
+                i0.ɵɵtemplate(3, TableReorderableExample_td_3_Template, 2, 1, "td", 3);
+                i0.ɵɵelementContainerEnd();
+                i0.ɵɵelementContainerStart(4, 4);
+                i0.ɵɵtemplate(5, TableReorderableExample_th_5_Template, 2, 0, "th", 2);
+                i0.ɵɵtemplate(6, TableReorderableExample_td_6_Template, 2, 1, "td", 3);
+                i0.ɵɵelementContainerEnd();
+                i0.ɵɵelementContainerStart(7, 5);
+                i0.ɵɵtemplate(8, TableReorderableExample_th_8_Template, 2, 0, "th", 2);
+                i0.ɵɵtemplate(9, TableReorderableExample_td_9_Template, 2, 1, "td", 3);
+                i0.ɵɵelementContainerEnd();
+                i0.ɵɵelementContainerStart(10, 6);
+                i0.ɵɵtemplate(11, TableReorderableExample_th_11_Template, 2, 0, "th", 2);
+                i0.ɵɵtemplate(12, TableReorderableExample_td_12_Template, 2, 1, "td", 3);
+                i0.ɵɵelementContainerEnd();
+                i0.ɵɵtemplate(13, TableReorderableExample_tr_13_Template, 1, 0, "tr", 7);
+                i0.ɵɵtemplate(14, TableReorderableExample_tr_14_Template, 1, 0, "tr", 8);
+                i0.ɵɵelementEnd();
+            } if (rf & 2) {
+                i0.ɵɵproperty("dataSource", ctx.dataSource);
+                i0.ɵɵadvance(13);
+                i0.ɵɵproperty("matHeaderRowDef", ctx.columns);
+                i0.ɵɵadvance(1);
+                i0.ɵɵproperty("matRowDefColumns", ctx.columns);
+            } }, directives: [i1$1.MatTable, i2$5.CdkDropList, i1$1.MatColumnDef, i1$1.MatHeaderCellDef, i1$1.MatCellDef, i1$1.MatHeaderRowDef, i1$1.MatRowDef, i1$1.MatHeaderCell, i2$5.CdkDrag, i1$1.MatCell, i1$1.MatHeaderRow, i1$1.MatRow], styles: ["table[_ngcontent-%COMP%] {\n  width: 100%;\n}"] });
+        return TableReorderableExample;
+    }());
+    /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableReorderableExample, [{
+            type: i0.Component,
+            args: [{
+                    selector: 'table-reorderable-example',
+                    templateUrl: './table-reorderable-example.html',
+                    styleUrls: ['./table-reorderable-example.css']
+                }]
+        }], null, null); })();
+    var ELEMENT_DATA$f = [
+        { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+        { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+        { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+        { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+        { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+        { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+        { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+        { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+        { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+        { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+    ];
+
     var EXAMPLES = [
         TableBasicExample, TableBasicFlexExample,
         TableDynamicColumnsExample, TableExpandableRowsExample,
@@ -3395,6 +3528,7 @@
         TableStickyFooterExample, TableStickyHeaderExample,
         TableTextColumnExample, TableTextColumnAdvancedExample,
         TableWrappedExample, WrapperTable,
+        TableReorderableExample,
     ];
     var TableExamplesModule = /** @class */ (function () {
         function TableExamplesModule() {
@@ -3412,6 +3546,8 @@
                             i6.MatProgressSpinnerModule,
                             i4.MatSortModule,
                             i1$1.MatTableModule,
+                            table.CdkTableModule,
+                            i2$5.DragDropModule,
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
@@ -3430,6 +3566,8 @@
                     i6.MatProgressSpinnerModule,
                     i4.MatSortModule,
                     i1$1.MatTableModule,
+                    table.CdkTableModule,
+                    i2$5.DragDropModule,
                 ]] });
         return TableExamplesModule;
     }());
@@ -3443,7 +3581,8 @@
             TableStickyComplexExample, TableStickyComplexFlexExample,
             TableStickyFooterExample, TableStickyHeaderExample,
             TableTextColumnExample, TableTextColumnAdvancedExample,
-            TableWrappedExample, WrapperTable], imports: [i2.CommonModule,
+            TableWrappedExample, WrapperTable,
+            TableReorderableExample], imports: [i2.CommonModule,
             i1.MatButtonModule,
             i2$1.MatButtonToggleModule,
             i2$2.MatCheckboxModule,
@@ -3452,7 +3591,9 @@
             i5.MatPaginatorModule,
             i6.MatProgressSpinnerModule,
             i4.MatSortModule,
-            i1$1.MatTableModule], exports: [TableBasicExample, TableBasicFlexExample,
+            i1$1.MatTableModule,
+            table.CdkTableModule,
+            i2$5.DragDropModule], exports: [TableBasicExample, TableBasicFlexExample,
             TableDynamicColumnsExample, TableExpandableRowsExample,
             TableFilteringExample, TableFooterRowExample,
             TableHttpExample, TableMultipleHeaderFooterExample,
@@ -3462,7 +3603,8 @@
             TableStickyComplexExample, TableStickyComplexFlexExample,
             TableStickyFooterExample, TableStickyHeaderExample,
             TableTextColumnExample, TableTextColumnAdvancedExample,
-            TableWrappedExample, WrapperTable] }); })();
+            TableWrappedExample, WrapperTable,
+            TableReorderableExample] }); })();
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TableExamplesModule, [{
             type: i0.NgModule,
             args: [{
@@ -3477,6 +3619,8 @@
                         i6.MatProgressSpinnerModule,
                         i4.MatSortModule,
                         i1$1.MatTableModule,
+                        table.CdkTableModule,
+                        i2$5.DragDropModule,
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,
@@ -3495,6 +3639,7 @@
     exports.TableMultipleHeaderFooterExample = TableMultipleHeaderFooterExample;
     exports.TableOverviewExample = TableOverviewExample;
     exports.TablePaginationExample = TablePaginationExample;
+    exports.TableReorderableExample = TableReorderableExample;
     exports.TableRowContextExample = TableRowContextExample;
     exports.TableSelectionExample = TableSelectionExample;
     exports.TableSortingExample = TableSortingExample;
