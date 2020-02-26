@@ -334,7 +334,7 @@ class MyTelInput {
      * @return {?}
      */
     _handleInput() {
-        this.onChange(this.parts.value);
+        this.onChange(this.value);
     }
 }
 MyTelInput.nextId = 0;

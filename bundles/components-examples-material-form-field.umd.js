@@ -245,7 +245,7 @@
             this.disabled = isDisabled;
         };
         MyTelInput.prototype._handleInput = function () {
-            this.onChange(this.parts.value);
+            this.onChange(this.value);
         };
         MyTelInput.nextId = 0;
         MyTelInput.decorators = [
