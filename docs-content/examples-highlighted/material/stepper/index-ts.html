@@ -1,0 +1,50 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/stepper'</span>;
+<span class="hljs-keyword">import</span> {StepperEditableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-editable/stepper-editable-example'</span>;
+<span class="hljs-keyword">import</span> {StepperErrorsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-errors/stepper-errors-example'</span>;
+<span class="hljs-keyword">import</span> {
+  StepperLabelPositionBottomExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-label-position-bottom/stepper-label-position-bottom-example'</span>;
+<span class="hljs-keyword">import</span> {StepperOptionalExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-optional/stepper-optional-example'</span>;
+<span class="hljs-keyword">import</span> {StepperOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-overview/stepper-overview-example'</span>;
+<span class="hljs-keyword">import</span> {StepperStatesExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-states/stepper-states-example'</span>;
+<span class="hljs-keyword">import</span> {StepperVerticalExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./stepper-vertical/stepper-vertical-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  StepperEditableExample,
+  StepperErrorsExample,
+  StepperLabelPositionBottomExample,
+  StepperOptionalExample,
+  StepperOverviewExample,
+  StepperStatesExample,
+  StepperVerticalExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  StepperEditableExample,
+  StepperErrorsExample,
+  StepperLabelPositionBottomExample,
+  StepperOptionalExample,
+  StepperOverviewExample,
+  StepperStatesExample,
+  StepperVerticalExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> StepperExamplesModule {
+}

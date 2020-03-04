@@ -1,0 +1,40 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/select'</span>;
+<span class="hljs-keyword">import</span> {MatSnackBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/snack-bar'</span>;
+<span class="hljs-keyword">import</span> {
+  PizzaPartyComponent,
+  SnackBarComponentExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./snack-bar-component/snack-bar-component-example'</span>;
+<span class="hljs-keyword">import</span> {SnackBarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./snack-bar-overview/snack-bar-overview-example'</span>;
+<span class="hljs-keyword">import</span> {SnackBarPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./snack-bar-position/snack-bar-position-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  SnackBarComponentExample,
+  SnackBarOverviewExample,
+  SnackBarPositionExample,
+  PizzaPartyComponent,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  SnackBarComponentExample,
+  SnackBarOverviewExample,
+  SnackBarPositionExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    FormsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatSelectModule,
+    MatSnackBarModule,
+  ],
+  declarations: [...EXAMPLES, PizzaPartyComponent],
+  exports: EXAMPLES,
+  entryComponents: [...EXAMPLES, PizzaPartyComponent],
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SnackBarExamplesModule {
+}

@@ -1,0 +1,24 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatBadgeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/badge'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {BadgeOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./badge-overview/badge-overview-example'</span>;
+
+<span class="hljs-keyword">export</span> {BadgeOverviewExample};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  BadgeOverviewExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    MatBadgeModule,
+    MatButtonModule,
+    MatIconModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> BadgeExamplesModule {
+}

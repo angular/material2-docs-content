@@ -1,0 +1,71 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatButtonToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button-toggle'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatTabsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tabs'</span>;
+<span class="hljs-keyword">import</span> {TabGroupAlignExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-align/tab-group-align-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupAnimationsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-animations/tab-group-animations-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupAsyncExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-async/tab-group-async-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-basic/tab-group-basic-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupCustomLabelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-custom-label/tab-group-custom-label-example'</span>;
+<span class="hljs-keyword">import</span> {
+  TabGroupDynamicHeightExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-dynamic-height/tab-group-dynamic-height-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupDynamicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-dynamic/tab-group-dynamic-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupHeaderBelowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-header-below/tab-group-header-below-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupLazyLoadedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-lazy-loaded/tab-group-lazy-loaded-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupStretchedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-stretched/tab-group-stretched-example'</span>;
+<span class="hljs-keyword">import</span> {TabGroupThemeExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-group-theme/tab-group-theme-example'</span>;
+<span class="hljs-keyword">import</span> {TabNavBarBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tab-nav-bar-basic/tab-nav-bar-basic-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  TabGroupAlignExample,
+  TabGroupAnimationsExample,
+  TabGroupAsyncExample,
+  TabGroupBasicExample,
+  TabGroupCustomLabelExample,
+  TabGroupDynamicExample,
+  TabGroupDynamicHeightExample,
+  TabGroupHeaderBelowExample,
+  TabGroupLazyLoadedExample,
+  TabGroupStretchedExample,
+  TabGroupThemeExample,
+  TabNavBarBasicExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  TabGroupAlignExample,
+  TabGroupAnimationsExample,
+  TabGroupAsyncExample,
+  TabGroupBasicExample,
+  TabGroupCustomLabelExample,
+  TabGroupDynamicExample,
+  TabGroupDynamicHeightExample,
+  TabGroupHeaderBelowExample,
+  TabGroupLazyLoadedExample,
+  TabGroupStretchedExample,
+  TabGroupThemeExample,
+  TabNavBarBasicExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatInputModule,
+    MatTabsModule,
+    ReactiveFormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TabGroupExamplesModule {
+}

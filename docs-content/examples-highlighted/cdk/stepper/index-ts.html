@@ -1,0 +1,29 @@
+<span class="hljs-keyword">import</span> {CdkStepperModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/stepper'</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkCustomStepperWithoutFormExample,
+  CustomStepper
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-custom-stepper-without-form/cdk-custom-stepper-without-form-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  CdkCustomStepperWithoutFormExample,
+  CustomStepper,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  CdkCustomStepperWithoutFormExample,
+  CustomStepper,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CdkStepperModule,
+    CommonModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkStepperExamplesModule {
+}

@@ -1,0 +1,50 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/card'</span>;
+<span class="hljs-keyword">import</span> {MatProgressBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/progress-bar'</span>;
+<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/radio'</span>;
+<span class="hljs-keyword">import</span> {MatSliderModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/slider'</span>;
+<span class="hljs-keyword">import</span> {ProgressBarBufferExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-buffer/progress-bar-buffer-example'</span>;
+<span class="hljs-keyword">import</span> {
+  ProgressBarConfigurableExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-configurable/progress-bar-configurable-example'</span>;
+<span class="hljs-keyword">import</span> {
+  ProgressBarDeterminateExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-determinate/progress-bar-determinate-example'</span>;
+<span class="hljs-keyword">import</span> {
+  ProgressBarIndeterminateExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-indeterminate/progress-bar-indeterminate-example'</span>;
+<span class="hljs-keyword">import</span> {ProgressBarQueryExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-bar-query/progress-bar-query-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  ProgressBarBufferExample,
+  ProgressBarConfigurableExample,
+  ProgressBarDeterminateExample,
+  ProgressBarIndeterminateExample,
+  ProgressBarQueryExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  ProgressBarBufferExample,
+  ProgressBarConfigurableExample,
+  ProgressBarDeterminateExample,
+  ProgressBarIndeterminateExample,
+  ProgressBarQueryExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatRadioModule,
+    MatSliderModule,
+    FormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ProgressBarExamplesModule {
+}

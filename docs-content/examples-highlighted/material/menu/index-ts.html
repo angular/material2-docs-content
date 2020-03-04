@@ -1,0 +1,35 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatMenuModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/menu'</span>;
+<span class="hljs-keyword">import</span> {MenuIconsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./menu-icons/menu-icons-example'</span>;
+<span class="hljs-keyword">import</span> {MenuOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./menu-overview/menu-overview-example'</span>;
+<span class="hljs-keyword">import</span> {MenuPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./menu-position/menu-position-example'</span>;
+<span class="hljs-keyword">import</span> {NestedMenuExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./nested-menu/nested-menu-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  MenuIconsExample,
+  MenuOverviewExample,
+  MenuPositionExample,
+  NestedMenuExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  MenuIconsExample,
+  MenuOverviewExample,
+  MenuPositionExample,
+  NestedMenuExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> MenuExamplesModule {
+}

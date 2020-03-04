@@ -1,0 +1,72 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/select'</span>;
+<span class="hljs-keyword">import</span> {SelectCustomTriggerExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-custom-trigger/select-custom-trigger-example'</span>;
+<span class="hljs-keyword">import</span> {SelectDisabledExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-disabled/select-disabled-example'</span>;
+<span class="hljs-keyword">import</span> {
+  SelectErrorStateMatcherExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-error-state-matcher/select-error-state-matcher-example'</span>;
+<span class="hljs-keyword">import</span> {SelectFormExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-form/select-form-example'</span>;
+<span class="hljs-keyword">import</span> {SelectHintErrorExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-hint-error/select-hint-error-example'</span>;
+<span class="hljs-keyword">import</span> {SelectMultipleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-multiple/select-multiple-example'</span>;
+<span class="hljs-keyword">import</span> {SelectNoRippleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-no-ripple/select-no-ripple-example'</span>;
+<span class="hljs-keyword">import</span> {SelectOptgroupExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-optgroup/select-optgroup-example'</span>;
+<span class="hljs-keyword">import</span> {SelectOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-overview/select-overview-example'</span>;
+<span class="hljs-keyword">import</span> {SelectPanelClassExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-panel-class/select-panel-class-example'</span>;
+<span class="hljs-keyword">import</span> {SelectResetExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-reset/select-reset-example'</span>;
+<span class="hljs-keyword">import</span> {SelectValueBindingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-value-binding/select-value-binding-example'</span>;
+<span class="hljs-keyword">import</span> {SelectReactiveFormExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-reactive-form/select-reactive-form-example'</span>;
+<span class="hljs-keyword">import</span> {SelectInitialValueExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./select-initial-value/select-initial-value-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  SelectCustomTriggerExample,
+  SelectDisabledExample,
+  SelectErrorStateMatcherExample,
+  SelectFormExample,
+  SelectHintErrorExample,
+  SelectInitialValueExample,
+  SelectMultipleExample,
+  SelectNoRippleExample,
+  SelectOptgroupExample,
+  SelectOverviewExample,
+  SelectPanelClassExample,
+  SelectReactiveFormExample,
+  SelectResetExample,
+  SelectValueBindingExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  SelectCustomTriggerExample,
+  SelectDisabledExample,
+  SelectErrorStateMatcherExample,
+  SelectFormExample,
+  SelectHintErrorExample,
+  SelectInitialValueExample,
+  SelectMultipleExample,
+  SelectNoRippleExample,
+  SelectOptgroupExample,
+  SelectOverviewExample,
+  SelectPanelClassExample,
+  SelectReactiveFormExample,
+  SelectResetExample,
+  SelectValueBindingExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SelectExamplesModule {
+}

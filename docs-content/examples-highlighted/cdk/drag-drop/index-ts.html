@@ -1,0 +1,91 @@
+<span class="hljs-keyword">import</span> {DragDropModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
+<span class="hljs-keyword">import</span> {OverlayModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/overlay'</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDragDropAxisLockExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-axis-lock/cdk-drag-drop-axis-lock-example'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDropBoundaryExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-boundary/cdk-drag-drop-boundary-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDragDropConnectedSortingGroupExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-connected-sorting-group/cdk-drag-drop-connected-sorting-group-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDragDropConnectedSortingExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-connected-sorting/cdk-drag-drop-connected-sorting-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDragDropCustomPlaceholderExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-custom-placeholder/cdk-drag-drop-custom-placeholder-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDragDropCustomPreviewExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-custom-preview/cdk-drag-drop-custom-preview-example'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDropDelayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-delay/cdk-drag-drop-delay-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDragDropDisabledSortingExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-disabled-sorting/cdk-drag-drop-disabled-sorting-example'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDropDisabledExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-disabled/cdk-drag-drop-disabled-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDragDropEnterPredicateExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-enter-predicate/cdk-drag-drop-enter-predicate-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDragDropFreeDragPositionExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-free-drag-position/cdk-drag-drop-free-drag-position-example'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDropHandleExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-handle/cdk-drag-drop-handle-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDragDropHorizontalSortingExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-horizontal-sorting/cdk-drag-drop-horizontal-sorting-example'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDropOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-overview/cdk-drag-drop-overview-example'</span>;
+<span class="hljs-keyword">import</span> {
+  CdkDragDropRootElementExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-root-element/cdk-drag-drop-root-element-example'</span>;
+<span class="hljs-keyword">import</span> {CdkDragDropSortingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-drag-drop-sorting/cdk-drag-drop-sorting-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  CdkDragDropAxisLockExample,
+  CdkDragDropBoundaryExample,
+  CdkDragDropConnectedSortingExample,
+  CdkDragDropConnectedSortingGroupExample,
+  CdkDragDropCustomPlaceholderExample,
+  CdkDragDropCustomPreviewExample,
+  CdkDragDropDelayExample,
+  CdkDragDropDisabledExample,
+  CdkDragDropDisabledSortingExample,
+  CdkDragDropEnterPredicateExample,
+  CdkDragDropFreeDragPositionExample,
+  CdkDragDropHandleExample,
+  CdkDragDropHorizontalSortingExample,
+  CdkDragDropOverviewExample,
+  CdkDragDropRootElementExample,
+  CdkDragDropSortingExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  CdkDragDropAxisLockExample,
+  CdkDragDropBoundaryExample,
+  CdkDragDropConnectedSortingExample,
+  CdkDragDropConnectedSortingGroupExample,
+  CdkDragDropCustomPlaceholderExample,
+  CdkDragDropCustomPreviewExample,
+  CdkDragDropDelayExample,
+  CdkDragDropDisabledExample,
+  CdkDragDropDisabledSortingExample,
+  CdkDragDropEnterPredicateExample,
+  CdkDragDropFreeDragPositionExample,
+  CdkDragDropHandleExample,
+  CdkDragDropHorizontalSortingExample,
+  CdkDragDropOverviewExample,
+  CdkDragDropRootElementExample,
+  CdkDragDropSortingExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    DragDropModule,
+    OverlayModule,
+    CommonModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkDragDropExamplesModule {
+}

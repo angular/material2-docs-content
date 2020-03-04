@@ -1,0 +1,29 @@
+<span class="hljs-keyword">import</span> {CdkTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/tree'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {CdkTreeFlatExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-tree-flat/cdk-tree-flat-example'</span>;
+<span class="hljs-keyword">import</span> {CdkTreeNestedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-tree-nested/cdk-tree-nested-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  CdkTreeFlatExample,
+  CdkTreeNestedExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  CdkTreeFlatExample,
+  CdkTreeNestedExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CdkTreeModule,
+    MatButtonModule,
+    MatIconModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkTreeExamplesModule {
+}

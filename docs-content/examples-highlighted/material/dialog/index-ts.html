@@ -1,0 +1,56 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatDialogModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/dialog'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {
+  DialogContentExample,
+  DialogContentExampleDialog
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-content/dialog-content-example'</span>;
+<span class="hljs-keyword">import</span> {DialogDataExample, DialogDataExampleDialog} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-data/dialog-data-example'</span>;
+<span class="hljs-keyword">import</span> {
+  DialogElementsExample,
+  DialogElementsExampleDialog
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-elements/dialog-elements-example'</span>;
+<span class="hljs-keyword">import</span> {
+  DialogOverviewExample,
+  DialogOverviewExampleDialog
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./dialog-overview/dialog-overview-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  DialogContentExample,
+  DialogContentExampleDialog,
+  DialogDataExample,
+  DialogDataExampleDialog,
+  DialogElementsExample,
+  DialogElementsExampleDialog,
+  DialogOverviewExample,
+  DialogOverviewExampleDialog,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  DialogContentExample,
+  DialogContentExampleDialog,
+  DialogDataExample,
+  DialogDataExampleDialog,
+  DialogElementsExample,
+  DialogElementsExampleDialog,
+  DialogOverviewExample,
+  DialogOverviewExampleDialog,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule,
+    FormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> DialogExamplesModule {
+}

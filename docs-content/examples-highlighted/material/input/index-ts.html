@@ -1,0 +1,51 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {InputClearableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-clearable/input-clearable-example'</span>;
+<span class="hljs-keyword">import</span> {
+  InputErrorStateMatcherExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-error-state-matcher/input-error-state-matcher-example'</span>;
+<span class="hljs-keyword">import</span> {InputErrorsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-errors/input-errors-example'</span>;
+<span class="hljs-keyword">import</span> {InputFormExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-form/input-form-example'</span>;
+<span class="hljs-keyword">import</span> {InputHintExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-hint/input-hint-example'</span>;
+<span class="hljs-keyword">import</span> {InputOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-overview/input-overview-example'</span>;
+<span class="hljs-keyword">import</span> {InputPrefixSuffixExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./input-prefix-suffix/input-prefix-suffix-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  InputClearableExample,
+  InputErrorStateMatcherExample,
+  InputErrorsExample,
+  InputFormExample,
+  InputHintExample,
+  InputOverviewExample,
+  InputPrefixSuffixExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  InputClearableExample,
+  InputErrorStateMatcherExample,
+  InputErrorsExample,
+  InputFormExample,
+  InputHintExample,
+  InputOverviewExample,
+  InputPrefixSuffixExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatIconModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> InputExamplesModule {
+}

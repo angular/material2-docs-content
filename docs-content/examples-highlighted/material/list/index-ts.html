@@ -1,0 +1,35 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/list'</span>;
+<span class="hljs-keyword">import</span> {ListOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./list-overview/list-overview-example'</span>;
+<span class="hljs-keyword">import</span> {ListSectionsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./list-sections/list-sections-example'</span>;
+<span class="hljs-keyword">import</span> {ListSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./list-selection/list-selection-example'</span>;
+<span class="hljs-keyword">import</span> {ListSingleSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./list-single-selection/list-single-selection-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  ListOverviewExample,
+  ListSectionsExample,
+  ListSelectionExample,
+  ListSingleSelectionExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  ListOverviewExample,
+  ListSectionsExample,
+  ListSelectionExample,
+  ListSingleSelectionExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatIconModule,
+    MatListModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ListExamplesModule {
+}

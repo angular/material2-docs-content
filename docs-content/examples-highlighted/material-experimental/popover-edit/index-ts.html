@@ -1,0 +1,55 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatPopoverEditModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-experimental/popover-edit'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/list'</span>;
+<span class="hljs-keyword">import</span> {MatSnackBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/snack-bar'</span>;
+<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/table'</span>;
+<span class="hljs-keyword">import</span> {
+  PopoverEditCellSpanMatTableExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./popover-edit-cell-span-mat-table/popover-edit-cell-span-mat-table-example'</span>;
+<span class="hljs-keyword">import</span> {
+  PopoverEditMatTableFlexExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./popover-edit-mat-table-flex/popover-edit-mat-table-flex-example'</span>;
+<span class="hljs-keyword">import</span> {PopoverEditMatTableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./popover-edit-mat-table/popover-edit-mat-table-example'</span>;
+<span class="hljs-keyword">import</span> {
+  PopoverEditTabOutMatTableExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./popover-edit-tab-out-mat-table/popover-edit-tab-out-mat-table-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  PopoverEditCellSpanMatTableExample,
+  PopoverEditMatTableExample,
+  PopoverEditMatTableFlexExample,
+  PopoverEditTabOutMatTableExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  PopoverEditCellSpanMatTableExample,
+  PopoverEditMatTableExample,
+  PopoverEditMatTableFlexExample,
+  PopoverEditTabOutMatTableExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatPopoverEditModule,
+    MatSnackBarModule,
+    MatTableModule,
+    FormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PopoverEditExamplesModule {
+}

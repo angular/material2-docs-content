@@ -1,0 +1,33 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {MatRippleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/core'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {ElevationOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./elevation-overview/elevation-overview-example'</span>;
+<span class="hljs-keyword">import</span> {RippleOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./ripple-overview/ripple-overview-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  ElevationOverviewExample,
+  RippleOverviewExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  ElevationOverviewExample,
+  RippleOverviewExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatRippleModule,
+    FormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CoreExamplesModule {
+}

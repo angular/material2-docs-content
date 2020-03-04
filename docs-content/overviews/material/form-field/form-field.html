@@ -68,12 +68,12 @@ the form field control. It can be set to <code>always</code> to float the label 
 present in the form field control. It can also be set to <code>auto</code> to restore the default behavior.</p>
 <div material-docs-example="form-field-label"></div>
 
-<p>Global default label options can be specified by providing a value for
-<code>MAT_LABEL_GLOBAL_OPTIONS</code> in your application&#39;s root module. Like the property, the global
-setting can be either <code>always</code>, <code>never</code>, or <code>auto</code>.</p>
+<p>The floating label behavior can be adjusted globally by providing a value for
+<code>MAT_FORM_FIELD_DEFAULT_OPTIONS</code> in your application&#39;s root module. Like the <code>floatLabel</code> input,
+the option can be either set to <code>always</code>, <code>never</code>, or <code>auto</code>.</p>
 <pre><code class="language-ts"><span class="hljs-meta">@NgModule</span>({
   providers: [
-    {provide: MAT_LABEL_GLOBAL_OPTIONS, useValue: {float: <span class="hljs-string">'always'</span>}}
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: <span class="hljs-string">'always'</span>}}
   ]
 })</code></pre>
 

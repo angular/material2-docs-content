@@ -1,0 +1,39 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/card'</span>;
+<span class="hljs-keyword">import</span> {MatProgressSpinnerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/progress-spinner'</span>;
+<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/radio'</span>;
+<span class="hljs-keyword">import</span> {MatSliderModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/slider'</span>;
+<span class="hljs-keyword">import</span> {
+  ProgressSpinnerConfigurableExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-spinner-configurable/progress-spinner-configurable-example'</span>;
+<span class="hljs-keyword">import</span> {
+  ProgressSpinnerOverviewExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./progress-spinner-overview/progress-spinner-overview-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  ProgressSpinnerConfigurableExample,
+  ProgressSpinnerOverviewExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  ProgressSpinnerConfigurableExample,
+  ProgressSpinnerOverviewExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatSliderModule,
+    FormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ProgressSpinnerExamplesModule {
+}

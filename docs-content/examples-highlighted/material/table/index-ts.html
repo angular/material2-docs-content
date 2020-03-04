@@ -1,0 +1,94 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatButtonToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button-toggle'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatPaginatorModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/paginator'</span>;
+<span class="hljs-keyword">import</span> {MatProgressSpinnerModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/progress-spinner'</span>;
+<span class="hljs-keyword">import</span> {MatSortModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/sort'</span>;
+<span class="hljs-keyword">import</span> {MatTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/table'</span>;
+<span class="hljs-keyword">import</span> {DragDropModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/drag-drop'</span>;
+<span class="hljs-keyword">import</span> {CdkTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/table'</span>;
+
+<span class="hljs-keyword">import</span> {TableBasicFlexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-basic-flex/table-basic-flex-example'</span>;
+<span class="hljs-keyword">import</span> {TableBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-basic/table-basic-example'</span>;
+<span class="hljs-keyword">import</span> {TableDynamicColumnsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-dynamic-columns/table-dynamic-columns-example'</span>;
+<span class="hljs-keyword">import</span> {TableExpandableRowsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-expandable-rows/table-expandable-rows-example'</span>;
+<span class="hljs-keyword">import</span> {TableFilteringExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-filtering/table-filtering-example'</span>;
+<span class="hljs-keyword">import</span> {TableFooterRowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-footer-row/table-footer-row-example'</span>;
+<span class="hljs-keyword">import</span> {TableHttpExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-http/table-http-example'</span>;
+<span class="hljs-keyword">import</span> {
+  TableMultipleHeaderFooterExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-multiple-header-footer/table-multiple-header-footer-example'</span>;
+<span class="hljs-keyword">import</span> {TableOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-overview/table-overview-example'</span>;
+<span class="hljs-keyword">import</span> {TablePaginationExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-pagination/table-pagination-example'</span>;
+<span class="hljs-keyword">import</span> {TableRowContextExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-row-context/table-row-context-example'</span>;
+<span class="hljs-keyword">import</span> {TableSelectionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-selection/table-selection-example'</span>;
+<span class="hljs-keyword">import</span> {TableSortingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sorting/table-sorting-example'</span>;
+<span class="hljs-keyword">import</span> {TableStickyColumnsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-columns/table-sticky-columns-example'</span>;
+<span class="hljs-keyword">import</span> {
+  TableStickyComplexFlexExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-complex-flex/table-sticky-complex-flex-example'</span>;
+<span class="hljs-keyword">import</span> {TableStickyComplexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-complex/table-sticky-complex-example'</span>;
+<span class="hljs-keyword">import</span> {TableStickyFooterExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-footer/table-sticky-footer-example'</span>;
+<span class="hljs-keyword">import</span> {TableStickyHeaderExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-sticky-header/table-sticky-header-example'</span>;
+<span class="hljs-keyword">import</span> {
+  TableTextColumnAdvancedExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-text-column-advanced/table-text-column-advanced-example'</span>;
+<span class="hljs-keyword">import</span> {TableTextColumnExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-text-column/table-text-column-example'</span>;
+<span class="hljs-keyword">import</span> {TableWrappedExample, WrapperTable} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-wrapped/table-wrapped-example'</span>;
+<span class="hljs-keyword">import</span> {TableReorderableExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./table-reorderable/table-reorderable-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  TableBasicExample,          TableBasicFlexExample,
+  TableDynamicColumnsExample, TableExpandableRowsExample,
+  TableFilteringExample,      TableFooterRowExample,
+  TableHttpExample,           TableMultipleHeaderFooterExample,
+  TableOverviewExample,       TablePaginationExample,
+  TableRowContextExample,     TableSelectionExample,
+  TableSortingExample,        TableStickyColumnsExample,
+  TableStickyComplexExample,  TableStickyComplexFlexExample,
+  TableStickyFooterExample,   TableStickyHeaderExample,
+  TableTextColumnExample,     TableTextColumnAdvancedExample,
+  TableWrappedExample,        WrapperTable,
+  TableReorderableExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  TableBasicExample,          TableBasicFlexExample,
+  TableDynamicColumnsExample, TableExpandableRowsExample,
+  TableFilteringExample,      TableFooterRowExample,
+  TableHttpExample,           TableMultipleHeaderFooterExample,
+  TableOverviewExample,       TablePaginationExample,
+  TableRowContextExample,     TableSelectionExample,
+  TableSortingExample,        TableStickyColumnsExample,
+  TableStickyComplexExample,  TableStickyComplexFlexExample,
+  TableStickyFooterExample,   TableStickyHeaderExample,
+  TableTextColumnExample,     TableTextColumnAdvancedExample,
+  TableWrappedExample,        WrapperTable,
+  TableReorderableExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatTableModule,
+    CdkTableModule,
+    DragDropModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TableExamplesModule {
+}
