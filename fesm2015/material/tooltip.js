@@ -1,7 +1,6 @@
 import { NgForOf, CommonModule } from '@angular/common';
 import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵɵtemplate, ɵsetClassMetadata, ViewEncapsulation, ɵɵelement, ɵɵgetCurrentView, ɵɵlistener, ɵɵrestoreView, ɵɵreference, ɵɵProvidersFeature, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { FormControl, NgControlStatus, FormControlDirective, NumberValueAccessor, DefaultValueAccessor, ReactiveFormsModule } from '@angular/forms';
-import { CdkScrollable, ScrollingModule } from '@angular/cdk/scrolling';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInput, MatInputModule } from '@angular/material/input';
@@ -42,7 +41,7 @@ TooltipAutoHideExample.decorators = [
             },] },
 ];
 /** @nocollapse */ TooltipAutoHideExample.ɵfac = function TooltipAutoHideExample_Factory(t) { return new (t || TooltipAutoHideExample)(); };
-/** @nocollapse */ TooltipAutoHideExample.ɵcmp = ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 9, vars: 3, consts: [[3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdkScrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], ["tooltip", "matTooltip"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
+/** @nocollapse */ TooltipAutoHideExample.ɵcmp = ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 9, vars: 3, consts: [[3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdk-scrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], ["tooltip", "matTooltip"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "mat-form-field");
         ɵɵelementStart(1, "mat-label");
         ɵɵtext(2, "Tooltip position");
@@ -63,7 +62,7 @@ TooltipAutoHideExample.decorators = [
         ɵɵproperty("ngForOf", ctx.positionOptions);
         ɵɵadvance(2);
         ɵɵproperty("matTooltipPosition", ctx.position.value);
-    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, NgForOf, CdkScrollable, MatButton, MatTooltip, MatOption], styles: [".example-button[_ngcontent-%COMP%] {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container[_ngcontent-%COMP%] {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}"] });
+    } }, directives: [MatFormField, MatLabel, MatSelect, NgControlStatus, FormControlDirective, NgForOf, MatButton, MatTooltip, MatOption], styles: [".example-button[_ngcontent-%COMP%] {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container[_ngcontent-%COMP%] {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}"] });
 /*@__PURE__*/ (function () { ɵsetClassMetadata(TooltipAutoHideExample, [{
         type: Component,
         args: [{
@@ -507,7 +506,6 @@ TooltipExamplesModule.decorators = [
                     MatSelectModule,
                     MatTooltipModule,
                     ReactiveFormsModule,
-                    ScrollingModule,
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
@@ -523,7 +521,6 @@ TooltipExamplesModule.decorators = [
             MatSelectModule,
             MatTooltipModule,
             ReactiveFormsModule,
-            ScrollingModule,
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(TooltipExamplesModule, { declarations: [TooltipAutoHideExample,
         TooltipCustomClassExample,
@@ -539,8 +536,7 @@ TooltipExamplesModule.decorators = [
         MatInputModule,
         MatSelectModule,
         MatTooltipModule,
-        ReactiveFormsModule,
-        ScrollingModule], exports: [TooltipAutoHideExample,
+        ReactiveFormsModule], exports: [TooltipAutoHideExample,
         TooltipCustomClassExample,
         TooltipDelayExample,
         TooltipDisabledExample,
@@ -560,7 +556,6 @@ TooltipExamplesModule.decorators = [
                     MatSelectModule,
                     MatTooltipModule,
                     ReactiveFormsModule,
-                    ScrollingModule,
                 ],
                 declarations: EXAMPLES,
                 exports: EXAMPLES,
