@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/cdk/a11y'), require('@angular/core'), require('@angular/material/select'), require('@angular/material/form-field'), require('@angular/material/core')) :
     typeof define === 'function' && define.amd ? define('@angular/components-examples/cdk/a11y', ['exports', '@angular/cdk/a11y', '@angular/core', '@angular/material/select', '@angular/material/form-field', '@angular/material/core'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.a11Y = {}), global.ng.cdk.a11y, global.ng.core, global.ng.material.select, global.ng.material.formField, global.ng.material.core));
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.cdk = global.ng.componentsExamples.cdk || {}, global.ng.componentsExamples.cdk.a11y = {}), global.ng.cdk.a11y, global.ng.core, global.ng.material.select, global.ng.material.formField, global.ng.material.core));
 }(this, (function (exports, i1, i0, i3, i2, i4) { 'use strict';
 
     /** @title Monitoring focus with FocusMonitor */
@@ -146,11 +146,11 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(20, "button", 8);
-                i0.ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_20_listener($event) { i0.ɵɵrestoreView(_r3); var _r0 = i0.ɵɵreference(2); var _r2 = i0.ɵɵreference(11); return ctx.focusMonitor.focusVia(_r0, _r2.value); });
+                i0.ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_20_listener() { i0.ɵɵrestoreView(_r3); var _r0 = i0.ɵɵreference(2); var _r2 = i0.ɵɵreference(11); return ctx.focusMonitor.focusVia(_r0, _r2.value); });
                 i0.ɵɵtext(21, " Focus button #1\n");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(22, "button", 8);
-                i0.ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_22_listener($event) { i0.ɵɵrestoreView(_r3); var _r1 = i0.ɵɵreference(5); var _r2 = i0.ɵɵreference(11); return ctx.focusMonitor.focusVia(_r1, _r2.value); });
+                i0.ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_22_listener() { i0.ɵɵrestoreView(_r3); var _r1 = i0.ɵɵreference(5); var _r2 = i0.ɵɵreference(11); return ctx.focusMonitor.focusVia(_r1, _r2.value); });
                 i0.ɵɵtext(23, " Focus button #2\n");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {

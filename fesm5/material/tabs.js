@@ -335,7 +335,7 @@ function TabGroupDynamicExample_mat_tab_11_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-tab", 5);
     ɵɵtext(1);
     ɵɵelementStart(2, "button", 6);
-    ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_11_Template_button_click_2_listener($event) { ɵɵrestoreView(_r13); var index_r11 = ctx.index; var ctx_r12 = ɵɵnextContext(); return ctx_r12.removeTab(index_r11); });
+    ɵɵlistener("click", function TabGroupDynamicExample_mat_tab_11_Template_button_click_2_listener() { ɵɵrestoreView(_r13); var index_r11 = ctx.index; var ctx_r12 = ɵɵnextContext(); return ctx_r12.removeTab(index_r11); });
     ɵɵtext(3, " Delete Tab ");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -383,7 +383,7 @@ var TabGroupDynamicExample = /** @class */ (function () {
             ɵɵelementEnd();
             ɵɵelementStart(4, "div");
             ɵɵelementStart(5, "button", 1);
-            ɵɵlistener("click", function TabGroupDynamicExample_Template_button_click_5_listener($event) { ɵɵrestoreView(_r14); var _r8 = ɵɵreference(8); return ctx.addTab(_r8.checked); });
+            ɵɵlistener("click", function TabGroupDynamicExample_Template_button_click_5_listener() { ɵɵrestoreView(_r14); var _r8 = ɵɵreference(8); return ctx.addTab(_r8.checked); });
             ɵɵtext(6, " Add new tab ");
             ɵɵelementEnd();
             ɵɵelementStart(7, "mat-checkbox", null, 2);
@@ -627,7 +627,7 @@ var TabGroupThemeExample = /** @class */ (function () {
 function TabNavBarBasicExample_a_1_Template(rf, ctx) { if (rf & 1) {
     var _r23 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "a", 4);
-    ɵɵlistener("click", function TabNavBarBasicExample_a_1_Template_a_click_0_listener($event) { ɵɵrestoreView(_r23); var link_r21 = ctx.$implicit; var ctx_r22 = ɵɵnextContext(); return ctx_r22.activeLink = link_r21; });
+    ɵɵlistener("click", function TabNavBarBasicExample_a_1_Template_a_click_0_listener() { ɵɵrestoreView(_r23); var link_r21 = ctx.$implicit; var ctx_r22 = ɵɵnextContext(); return ctx_r22.activeLink = link_r21; });
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {
@@ -668,11 +668,11 @@ var TabNavBarBasicExample = /** @class */ (function () {
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(4, "button", 3);
-            ɵɵlistener("click", function TabNavBarBasicExample_Template_button_click_4_listener($event) { return ctx.toggleBackground(); });
+            ɵɵlistener("click", function TabNavBarBasicExample_Template_button_click_4_listener() { return ctx.toggleBackground(); });
             ɵɵtext(5, " Toggle background\n");
             ɵɵelementEnd();
             ɵɵelementStart(6, "button", 3);
-            ɵɵlistener("click", function TabNavBarBasicExample_Template_button_click_6_listener($event) { return ctx.addLink(); });
+            ɵɵlistener("click", function TabNavBarBasicExample_Template_button_click_6_listener() { return ctx.addLink(); });
             ɵɵtext(7, " Add link\n");
             ɵɵelementEnd();
         } if (rf & 2) {

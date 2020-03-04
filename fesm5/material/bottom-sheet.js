@@ -31,7 +31,7 @@ var BottomSheetOverviewExample = /** @class */ (function () {
             ɵɵtext(1, "You have received a file called \"cat-picture.jpeg\".");
             ɵɵelementEnd();
             ɵɵelementStart(2, "button", 0);
-            ɵɵlistener("click", function BottomSheetOverviewExample_Template_button_click_2_listener($event) { return ctx.openBottomSheet(); });
+            ɵɵlistener("click", function BottomSheetOverviewExample_Template_button_click_2_listener() { return ctx.openBottomSheet(); });
             ɵɵtext(3, "Open file");
             ɵɵelementEnd();
         } }, directives: [MatButton], styles: [""] });

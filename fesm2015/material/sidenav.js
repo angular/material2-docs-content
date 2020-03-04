@@ -48,13 +48,13 @@ SidenavAutosizeExample.decorators = [
         ɵɵelementEnd();
         ɵɵtemplate(5, SidenavAutosizeExample_p_5_Template, 2, 0, "p", 3);
         ɵɵelementStart(6, "button", 4);
-        ɵɵlistener("click", function SidenavAutosizeExample_Template_button_click_6_listener($event) { return ctx.showFiller = !ctx.showFiller; });
+        ɵɵlistener("click", function SidenavAutosizeExample_Template_button_click_6_listener() { return ctx.showFiller = !ctx.showFiller; });
         ɵɵtext(7, " Toggle extra text ");
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementStart(8, "div", 5);
         ɵɵelementStart(9, "button", 6);
-        ɵɵlistener("click", function SidenavAutosizeExample_Template_button_click_9_listener($event) { ɵɵrestoreView(_r2); const _r0 = ɵɵreference(2); return _r0.toggle(); });
+        ɵɵlistener("click", function SidenavAutosizeExample_Template_button_click_9_listener() { ɵɵrestoreView(_r2); const _r0 = ɵɵreference(2); return _r0.toggle(); });
         ɵɵtext(10, " Toggle sidenav ");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -134,7 +134,7 @@ SidenavBackdropExample.decorators = [
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementStart(27, "button", 9);
-        ɵɵlistener("click", function SidenavBackdropExample_Template_button_click_27_listener($event) { ɵɵrestoreView(_r6); const _r3 = ɵɵreference(2); return _r3.toggle(); });
+        ɵɵlistener("click", function SidenavBackdropExample_Template_button_click_27_listener() { ɵɵrestoreView(_r6); const _r3 = ɵɵreference(2); return _r3.toggle(); });
         ɵɵtext(28, "Toggle drawer");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -168,12 +168,12 @@ const _c0 = ["sidenav"];
 function SidenavDisableCloseExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
     const _r11 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-sidenav-container", 2);
-    ɵɵlistener("backdropClick", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_container_backdropClick_0_listener($event) { ɵɵrestoreView(_r11); const ctx_r10 = ɵɵnextContext(); return ctx_r10.close("backdrop"); });
+    ɵɵlistener("backdropClick", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_container_backdropClick_0_listener() { ɵɵrestoreView(_r11); const ctx_r10 = ɵɵnextContext(); return ctx_r10.close("backdrop"); });
     ɵɵelementStart(1, "mat-sidenav", 3, 4);
-    ɵɵlistener("keydown.escape", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_keydown_escape_1_listener($event) { ɵɵrestoreView(_r11); const ctx_r12 = ɵɵnextContext(); return ctx_r12.close("escape"); });
+    ɵɵlistener("keydown.escape", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_keydown_escape_1_listener() { ɵɵrestoreView(_r11); const ctx_r12 = ɵɵnextContext(); return ctx_r12.close("escape"); });
     ɵɵelementStart(3, "p");
     ɵɵelementStart(4, "button", 5);
-    ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_4_listener($event) { ɵɵrestoreView(_r11); const ctx_r13 = ɵɵnextContext(); return ctx_r13.close("toggle button"); });
+    ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_4_listener() { ɵɵrestoreView(_r11); const ctx_r13 = ɵɵnextContext(); return ctx_r13.close("toggle button"); });
     ɵɵtext(5, "Toggle");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -181,7 +181,7 @@ function SidenavDisableCloseExample_mat_sidenav_container_0_Template(rf, ctx) { 
     ɵɵelementStart(6, "mat-sidenav-content");
     ɵɵelementStart(7, "p");
     ɵɵelementStart(8, "button", 5);
-    ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_8_listener($event) { ɵɵrestoreView(_r11); const _r9 = ɵɵreference(2); return _r9.open(); });
+    ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_8_listener() { ɵɵrestoreView(_r11); const _r9 = ɵɵreference(2); return _r9.open(); });
     ɵɵtext(9, "Open");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -341,7 +341,7 @@ function SidenavFixedExample_ng_container_0_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementEnd();
     ɵɵelementStart(21, "p");
     ɵɵelementStart(22, "button", 9);
-    ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_22_listener($event) { ɵɵrestoreView(_r19); const _r17 = ɵɵreference(5); return _r17.toggle(); });
+    ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_22_listener() { ɵɵrestoreView(_r19); const _r17 = ɵɵreference(5); return _r17.toggle(); });
     ɵɵtext(23, "Toggle");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -431,7 +431,7 @@ function SidenavModeExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf &
     ɵɵelementStart(1, "mat-sidenav", 3, 4);
     ɵɵelementStart(3, "p");
     ɵɵelementStart(4, "button", 5);
-    ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_4_listener($event) { ɵɵrestoreView(_r24); const _r22 = ɵɵreference(2); return _r22.toggle(); });
+    ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_4_listener() { ɵɵrestoreView(_r24); const _r22 = ɵɵreference(2); return _r22.toggle(); });
     ɵɵtext(5, "Toggle");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -455,7 +455,7 @@ function SidenavModeExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf &
     ɵɵelementStart(16, "mat-sidenav-content");
     ɵɵelementStart(17, "p");
     ɵɵelementStart(18, "button", 5);
-    ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_18_listener($event) { ɵɵrestoreView(_r24); const _r22 = ɵɵreference(2); return _r22.toggle(); });
+    ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_18_listener() { ɵɵrestoreView(_r24); const _r22 = ɵɵreference(2); return _r22.toggle(); });
     ɵɵtext(19, "Toggle");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -553,7 +553,7 @@ function SidenavOpenCloseExample_mat_sidenav_container_0_Template(rf, ctx) { if 
     const _r32 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-sidenav-container", 2);
     ɵɵelementStart(1, "mat-sidenav", 3, 4);
-    ɵɵlistener("openedChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_openedChange_1_listener($event) { ɵɵrestoreView(_r32); const ctx_r31 = ɵɵnextContext(); return ctx_r31.opened = $event; })("opened", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_opened_1_listener($event) { ɵɵrestoreView(_r32); const ctx_r33 = ɵɵnextContext(); return ctx_r33.events.push("open!"); })("closed", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_closed_1_listener($event) { ɵɵrestoreView(_r32); const ctx_r34 = ɵɵnextContext(); return ctx_r34.events.push("close!"); });
+    ɵɵlistener("openedChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_openedChange_1_listener($event) { ɵɵrestoreView(_r32); const ctx_r31 = ɵɵnextContext(); return ctx_r31.opened = $event; })("opened", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_opened_1_listener() { ɵɵrestoreView(_r32); const ctx_r33 = ɵɵnextContext(); return ctx_r33.events.push("open!"); })("closed", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_closed_1_listener() { ɵɵrestoreView(_r32); const ctx_r34 = ɵɵnextContext(); return ctx_r34.events.push("close!"); });
     ɵɵtext(3, " Sidenav content ");
     ɵɵelementEnd();
     ɵɵelementStart(4, "mat-sidenav-content");
@@ -565,7 +565,7 @@ function SidenavOpenCloseExample_mat_sidenav_container_0_Template(rf, ctx) { if 
     ɵɵelementEnd();
     ɵɵelementStart(8, "p");
     ɵɵelementStart(9, "button", 6);
-    ɵɵlistener("click", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_button_click_9_listener($event) { ɵɵrestoreView(_r32); const _r28 = ɵɵreference(2); return _r28.toggle(); });
+    ɵɵlistener("click", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_button_click_9_listener() { ɵɵrestoreView(_r32); const _r28 = ɵɵreference(2); return _r28.toggle(); });
     ɵɵtext(10, "sidenav.toggle()");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -788,7 +788,7 @@ function SidenavResponsiveExample_div_0_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "div", 2);
     ɵɵelementStart(1, "mat-toolbar", 3);
     ɵɵelementStart(2, "button", 4);
-    ɵɵlistener("click", function SidenavResponsiveExample_div_0_Template_button_click_2_listener($event) { ɵɵrestoreView(_r49); const _r43 = ɵɵreference(9); return _r43.toggle(); });
+    ɵɵlistener("click", function SidenavResponsiveExample_div_0_Template_button_click_2_listener() { ɵɵrestoreView(_r49); const _r43 = ɵɵreference(9); return _r43.toggle(); });
     ɵɵelementStart(3, "mat-icon");
     ɵɵtext(4, "menu");
     ɵɵelementEnd();

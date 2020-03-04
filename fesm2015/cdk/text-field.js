@@ -265,7 +265,7 @@ TextFieldAutosizeTextareaExample.propDecorators = {
         ɵɵtext(2, "Font size");
         ɵɵelementEnd();
         ɵɵelementStart(3, "mat-select", 0, 1);
-        ɵɵlistener("selectionChange", function TextFieldAutosizeTextareaExample_Template_mat_select_selectionChange_3_listener($event) { return ctx.triggerResize(); });
+        ɵɵlistener("selectionChange", function TextFieldAutosizeTextareaExample_Template_mat_select_selectionChange_3_listener() { return ctx.triggerResize(); });
         ɵɵelementStart(5, "mat-option", 2);
         ɵɵtext(6, "10px");
         ɵɵelementEnd();

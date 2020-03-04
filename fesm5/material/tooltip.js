@@ -221,15 +221,15 @@ var TooltipManualExample = /** @class */ (function () {
             ɵɵtext(2, " Click the following buttons to... ");
             ɵɵelementEnd();
             ɵɵelementStart(3, "button", 0);
-            ɵɵlistener("click", function TooltipManualExample_Template_button_click_3_listener($event) { ɵɵrestoreView(_r4); var _r3 = ɵɵreference(10); return _r3.show(); });
+            ɵɵlistener("click", function TooltipManualExample_Template_button_click_3_listener() { ɵɵrestoreView(_r4); var _r3 = ɵɵreference(10); return _r3.show(); });
             ɵɵtext(4, " show ");
             ɵɵelementEnd();
             ɵɵelementStart(5, "button", 1);
-            ɵɵlistener("click", function TooltipManualExample_Template_button_click_5_listener($event) { ɵɵrestoreView(_r4); var _r3 = ɵɵreference(10); return _r3.hide(); });
+            ɵɵlistener("click", function TooltipManualExample_Template_button_click_5_listener() { ɵɵrestoreView(_r4); var _r3 = ɵɵreference(10); return _r3.hide(); });
             ɵɵtext(6, " hide ");
             ɵɵelementEnd();
             ɵɵelementStart(7, "button", 2);
-            ɵɵlistener("click", function TooltipManualExample_Template_button_click_7_listener($event) { ɵɵrestoreView(_r4); var _r3 = ɵɵreference(10); return _r3.toggle(); });
+            ɵɵlistener("click", function TooltipManualExample_Template_button_click_7_listener() { ɵɵrestoreView(_r4); var _r3 = ɵɵreference(10); return _r3.toggle(); });
             ɵɵtext(8, " toggle show/hide ");
             ɵɵelementEnd();
             ɵɵelementEnd();

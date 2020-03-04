@@ -445,15 +445,15 @@ TableDynamicColumnsExample.decorators = [
 /** @nocollapse */ TableDynamicColumnsExample.ɵfac = function TableDynamicColumnsExample_Factory(t) { return new (t || TableDynamicColumnsExample)(); };
 /** @nocollapse */ TableDynamicColumnsExample.ɵcmp = ɵɵdefineComponent({ type: TableDynamicColumnsExample, selectors: [["table-dynamic-columns-example"]], decls: 10, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableDynamicColumnsExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0);
-        ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_0_listener($event) { return ctx.addColumn(); });
+        ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_0_listener() { return ctx.addColumn(); });
         ɵɵtext(1, " Add column ");
         ɵɵelementEnd();
         ɵɵelementStart(2, "button", 0);
-        ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_2_listener($event) { return ctx.removeColumn(); });
+        ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_2_listener() { return ctx.removeColumn(); });
         ɵɵtext(3, " Remove column ");
         ɵɵelementEnd();
         ɵɵelementStart(4, "button", 0);
-        ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_4_listener($event) { return ctx.shuffle(); });
+        ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_4_listener() { return ctx.shuffle(); });
         ɵɵtext(5, " Shuffle ");
         ɵɵelementEnd();
         ɵɵelementStart(6, "table", 1);
@@ -569,7 +569,7 @@ function TableExpandableRowsExample_tr_4_Template(rf, ctx) { if (rf & 1) {
 function TableExpandableRowsExample_tr_5_Template(rf, ctx) { if (rf & 1) {
     const _r54 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "tr", 20);
-    ɵɵlistener("click", function TableExpandableRowsExample_tr_5_Template_tr_click_0_listener($event) { ɵɵrestoreView(_r54); const element_r52 = ctx.$implicit; const ctx_r53 = ɵɵnextContext(); return ctx_r53.expandedElement = ctx_r53.expandedElement === element_r52 ? null : element_r52; });
+    ɵɵlistener("click", function TableExpandableRowsExample_tr_5_Template_tr_click_0_listener() { ɵɵrestoreView(_r54); const element_r52 = ctx.$implicit; const ctx_r53 = ɵɵnextContext(); return ctx_r53.expandedElement = ctx_r53.expandedElement === element_r52 ? null : element_r52; });
     ɵɵelementEnd();
 } if (rf & 2) {
     const element_r52 = ctx.$implicit;
@@ -2249,7 +2249,7 @@ function TableSelectionExample_tr_16_Template(rf, ctx) { if (rf & 1) {
 function TableSelectionExample_tr_17_Template(rf, ctx) { if (rf & 1) {
     const _r196 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "tr", 15);
-    ɵɵlistener("click", function TableSelectionExample_tr_17_Template_tr_click_0_listener($event) { ɵɵrestoreView(_r196); const row_r194 = ctx.$implicit; const ctx_r195 = ɵɵnextContext(); return ctx_r195.selection.toggle(row_r194); });
+    ɵɵlistener("click", function TableSelectionExample_tr_17_Template_tr_click_0_listener() { ɵɵrestoreView(_r196); const row_r194 = ctx.$implicit; const ctx_r195 = ɵɵnextContext(); return ctx_r195.selection.toggle(row_r194); });
     ɵɵelementEnd();
 } }
 /**
@@ -2936,11 +2936,11 @@ TableStickyComplexFlexExample.ctorParameters = () => [];
 /** @nocollapse */ TableStickyComplexFlexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexFlexExample, selectors: [["table-sticky-complex-flex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], [3, "dataSource", 4, "ngFor", "ngForOf"], [3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], [4, "matHeaderCellDef"], [4, "matCellDef"], [4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], [4, "matHeaderRowDef", "matHeaderRowDefSticky"], [4, "matRowDef", "matRowDefColumns"], [4, "matFooterRowDef", "matFooterRowDefSticky"]], template: function TableStickyComplexFlexExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div");
         ɵɵelementStart(1, "button", 0);
-        ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_1_listener($event) { return ctx.tables.push(ctx.tables.length); });
+        ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_1_listener() { return ctx.tables.push(ctx.tables.length); });
         ɵɵtext(2, "Add table");
         ɵɵelementEnd();
         ɵɵelementStart(3, "button", 0);
-        ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_3_listener($event) { return ctx.tables.pop(); });
+        ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_3_listener() { return ctx.tables.pop(); });
         ɵɵtext(4, "Remove table");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -3251,11 +3251,11 @@ TableStickyComplexExample.ctorParameters = () => [];
 /** @nocollapse */ TableStickyComplexExample.ɵcmp = ɵɵdefineComponent({ type: TableStickyComplexExample, selectors: [["table-sticky-complex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource", 4, "ngFor", "ngForOf"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyComplexExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "div");
         ɵɵelementStart(1, "button", 0);
-        ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_1_listener($event) { return ctx.tables.push(ctx.tables.length); });
+        ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_1_listener() { return ctx.tables.push(ctx.tables.length); });
         ɵɵtext(2, "Add table");
         ɵɵelementEnd();
         ɵɵelementStart(3, "button", 0);
-        ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_3_listener($event) { return ctx.tables.pop(); });
+        ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_3_listener() { return ctx.tables.pop(); });
         ɵɵtext(4, "Remove table");
         ɵɵelementEnd();
         ɵɵelementEnd();

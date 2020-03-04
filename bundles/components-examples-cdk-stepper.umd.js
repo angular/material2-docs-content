@@ -8,7 +8,7 @@
     function CustomStepper_button_9_Template(rf, ctx) { if (rf & 1) {
         var _r4 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "button", 6);
-        i0.ɵɵlistener("click", function CustomStepper_button_9_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r4); var i_r2 = ctx.index; var ctx_r3 = i0.ɵɵnextContext(); return ctx_r3.onClick(i_r2); });
+        i0.ɵɵlistener("click", function CustomStepper_button_9_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r4); var i_r2 = ctx.index; var ctx_r3 = i0.ɵɵnextContext(); return ctx_r3.onClick(i_r2); });
         i0.ɵɵtext(1);
         i0.ɵɵelementEnd();
     } if (rf & 2) {

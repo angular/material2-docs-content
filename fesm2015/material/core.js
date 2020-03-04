@@ -32,7 +32,7 @@ ElevationOverviewExample.decorators = [
         ɵɵtext(1, " Example\n");
         ɵɵelementEnd();
         ɵɵelementStart(2, "button", 1);
-        ɵɵlistener("click", function ElevationOverviewExample_Template_button_click_2_listener($event) { return ctx.isActive = !ctx.isActive; });
+        ɵɵlistener("click", function ElevationOverviewExample_Template_button_click_2_listener() { return ctx.isActive = !ctx.isActive; });
         ɵɵtext(3, "Toggle Elevation");
         ɵɵelementEnd();
     } if (rf & 2) {

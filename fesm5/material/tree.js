@@ -18,7 +18,7 @@ function TreeChecklistExample_mat_tree_node_1_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(0, "mat-tree-node", 3);
     ɵɵelement(1, "button", 4);
     ɵɵelementStart(2, "mat-checkbox", 5);
-    ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_1_Template_mat_checkbox_change_2_listener($event) { ɵɵrestoreView(_r5); var node_r3 = ctx.$implicit; var ctx_r4 = ɵɵnextContext(); return ctx_r4.todoLeafItemSelectionToggle(node_r3); });
+    ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_1_Template_mat_checkbox_change_2_listener() { ɵɵrestoreView(_r5); var node_r3 = ctx.$implicit; var ctx_r4 = ɵɵnextContext(); return ctx_r4.todoLeafItemSelectionToggle(node_r3); });
     ɵɵtext(3);
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -41,7 +41,7 @@ function TreeChecklistExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     ɵɵelement(5, "input", 7, 8);
     ɵɵelementEnd();
     ɵɵelementStart(7, "button", 9);
-    ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_2_Template_button_click_7_listener($event) { ɵɵrestoreView(_r9); var node_r6 = ctx.$implicit; var _r7 = ɵɵreference(6); var ctx_r8 = ɵɵnextContext(); return ctx_r8.saveNode(node_r6, _r7.value); });
+    ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_2_Template_button_click_7_listener() { ɵɵrestoreView(_r9); var node_r6 = ctx.$implicit; var _r7 = ɵɵreference(6); var ctx_r8 = ɵɵnextContext(); return ctx_r8.saveNode(node_r6, _r7.value); });
     ɵɵtext(8, "Save");
     ɵɵelementEnd();
     ɵɵelementEnd();
@@ -55,11 +55,11 @@ function TreeChecklistExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementEnd();
     ɵɵelementEnd();
     ɵɵelementStart(4, "mat-checkbox", 12);
-    ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_3_Template_mat_checkbox_change_4_listener($event) { ɵɵrestoreView(_r12); var node_r10 = ctx.$implicit; var ctx_r11 = ɵɵnextContext(); return ctx_r11.todoItemSelectionToggle(node_r10); });
+    ɵɵlistener("change", function TreeChecklistExample_mat_tree_node_3_Template_mat_checkbox_change_4_listener() { ɵɵrestoreView(_r12); var node_r10 = ctx.$implicit; var ctx_r11 = ɵɵnextContext(); return ctx_r11.todoItemSelectionToggle(node_r10); });
     ɵɵtext(5);
     ɵɵelementEnd();
     ɵɵelementStart(6, "button", 13);
-    ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_3_Template_button_click_6_listener($event) { ɵɵrestoreView(_r12); var node_r10 = ctx.$implicit; var ctx_r13 = ɵɵnextContext(); return ctx_r13.addNewItem(node_r10); });
+    ɵɵlistener("click", function TreeChecklistExample_mat_tree_node_3_Template_button_click_6_listener() { ɵɵrestoreView(_r12); var node_r10 = ctx.$implicit; var ctx_r13 = ɵɵnextContext(); return ctx_r13.addNewItem(node_r10); });
     ɵɵelementStart(7, "mat-icon");
     ɵɵtext(8, "add");
     ɵɵelementEnd();
@@ -672,7 +672,7 @@ function TreeLoadmoreExample_mat_tree_node_2_Template(rf, ctx) { if (rf & 1) {
     var _r29 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-tree-node", 4);
     ɵɵelementStart(1, "button", 6);
-    ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_2_Template_button_click_1_listener($event) { ɵɵrestoreView(_r29); var node_r27 = ctx.$implicit; var ctx_r28 = ɵɵnextContext(); return ctx_r28.loadChildren(node_r27); });
+    ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_2_Template_button_click_1_listener() { ɵɵrestoreView(_r29); var node_r27 = ctx.$implicit; var ctx_r28 = ɵɵnextContext(); return ctx_r28.loadChildren(node_r27); });
     ɵɵelementStart(2, "mat-icon", 7);
     ɵɵtext(3);
     ɵɵelementEnd();
@@ -693,7 +693,7 @@ function TreeLoadmoreExample_mat_tree_node_3_Template(rf, ctx) { if (rf & 1) {
     var _r32 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-tree-node");
     ɵɵelementStart(1, "button", 8);
-    ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_3_Template_button_click_1_listener($event) { ɵɵrestoreView(_r32); var node_r30 = ctx.$implicit; var ctx_r31 = ɵɵnextContext(); return ctx_r31.loadMore(node_r30.loadMoreParentItem); });
+    ɵɵlistener("click", function TreeLoadmoreExample_mat_tree_node_3_Template_button_click_1_listener() { ɵɵrestoreView(_r32); var node_r30 = ctx.$implicit; var ctx_r31 = ɵɵnextContext(); return ctx_r31.loadMore(node_r30.loadMoreParentItem); });
     ɵɵtext(2, " Load more... ");
     ɵɵelementEnd();
     ɵɵelementEnd();

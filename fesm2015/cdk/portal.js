@@ -58,11 +58,11 @@ CdkPortalOverviewExample.propDecorators = {
         ɵɵelementEnd();
         ɵɵtemplate(4, CdkPortalOverviewExample_ng_template_4_Template, 1, 0, "ng-template", null, 2, ɵɵtemplateRefExtractor);
         ɵɵelementStart(6, "button", 3);
-        ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_6_listener($event) { return ctx.selectedPortal = ctx.componentPortal; });
+        ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_6_listener() { return ctx.selectedPortal = ctx.componentPortal; });
         ɵɵtext(7, "Render component portal");
         ɵɵelementEnd();
         ɵɵelementStart(8, "button", 3);
-        ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_8_listener($event) { return ctx.selectedPortal = ctx.templatePortal; });
+        ɵɵlistener("click", function CdkPortalOverviewExample_Template_button_click_8_listener() { return ctx.selectedPortal = ctx.templatePortal; });
         ɵɵtext(9, "Render template portal");
         ɵɵelementEnd();
     } if (rf & 2) {

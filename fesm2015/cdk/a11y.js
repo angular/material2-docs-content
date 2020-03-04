@@ -210,11 +210,11 @@ FocusMonitorFocusViaExample.propDecorators = {
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementStart(20, "button", 8);
-        ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_20_listener($event) { ɵɵrestoreView(_r3); const _r0 = ɵɵreference(2); const _r2 = ɵɵreference(11); return ctx.focusMonitor.focusVia(_r0, _r2.value); });
+        ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_20_listener() { ɵɵrestoreView(_r3); const _r0 = ɵɵreference(2); const _r2 = ɵɵreference(11); return ctx.focusMonitor.focusVia(_r0, _r2.value); });
         ɵɵtext(21, " Focus button #1\n");
         ɵɵelementEnd();
         ɵɵelementStart(22, "button", 8);
-        ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_22_listener($event) { ɵɵrestoreView(_r3); const _r1 = ɵɵreference(5); const _r2 = ɵɵreference(11); return ctx.focusMonitor.focusVia(_r1, _r2.value); });
+        ɵɵlistener("click", function FocusMonitorFocusViaExample_Template_button_click_22_listener() { ɵɵrestoreView(_r3); const _r1 = ɵɵreference(5); const _r2 = ɵɵreference(11); return ctx.focusMonitor.focusVia(_r1, _r2.value); });
         ɵɵtext(23, " Focus button #2\n");
         ɵɵelementEnd();
     } if (rf & 2) {

@@ -39,7 +39,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(4, "button", 1);
-                i0.ɵɵlistener("click", function SnackBarComponentExample_Template_button_click_4_listener($event) { return ctx.openSnackBar(); });
+                i0.ɵɵlistener("click", function SnackBarComponentExample_Template_button_click_4_listener() { return ctx.openSnackBar(); });
                 i0.ɵɵtext(5, " Pizza party\n");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {
@@ -122,7 +122,7 @@
                 i0.ɵɵelement(8, "input", 2, 3);
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(10, "button", 4);
-                i0.ɵɵlistener("click", function SnackBarOverviewExample_Template_button_click_10_listener($event) { i0.ɵɵrestoreView(_r2); var _r0 = i0.ɵɵreference(4); var _r1 = i0.ɵɵreference(9); return ctx.openSnackBar(_r0.value, _r1.value); });
+                i0.ɵɵlistener("click", function SnackBarOverviewExample_Template_button_click_10_listener() { i0.ɵɵrestoreView(_r2); var _r0 = i0.ɵɵreference(4); var _r1 = i0.ɵɵreference(9); return ctx.openSnackBar(_r0.value, _r1.value); });
                 i0.ɵɵtext(11, "Show snack-bar");
                 i0.ɵɵelementEnd();
             } }, directives: [i2.MatFormField, i2.MatLabel, i4.MatInput, i5.MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
@@ -204,7 +204,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(22, "button", 8);
-                i0.ɵɵlistener("click", function SnackBarPositionExample_Template_button_click_22_listener($event) { return ctx.openSnackBar(); });
+                i0.ɵɵlistener("click", function SnackBarPositionExample_Template_button_click_22_listener() { return ctx.openSnackBar(); });
                 i0.ɵɵtext(23, " Pool party!\n");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {

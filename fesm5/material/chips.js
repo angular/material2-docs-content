@@ -20,7 +20,7 @@ function ChipsAutocompleteExample_mat_chip_3_mat_icon_2_Template(rf, ctx) { if (
 function ChipsAutocompleteExample_mat_chip_3_Template(rf, ctx) { if (rf & 1) {
     var _r8 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-chip", 9);
-    ɵɵlistener("removed", function ChipsAutocompleteExample_mat_chip_3_Template_mat_chip_removed_0_listener($event) { ɵɵrestoreView(_r8); var fruit_r5 = ctx.$implicit; var ctx_r7 = ɵɵnextContext(); return ctx_r7.remove(fruit_r5); });
+    ɵɵlistener("removed", function ChipsAutocompleteExample_mat_chip_3_Template_mat_chip_removed_0_listener() { ɵɵrestoreView(_r8); var fruit_r5 = ctx.$implicit; var ctx_r7 = ɵɵnextContext(); return ctx_r7.remove(fruit_r5); });
     ɵɵtext(1);
     ɵɵtemplate(2, ChipsAutocompleteExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 10);
     ɵɵelementEnd();
@@ -210,7 +210,7 @@ function ChipsInputExample_mat_chip_3_mat_icon_2_Template(rf, ctx) { if (rf & 1)
 function ChipsInputExample_mat_chip_3_Template(rf, ctx) { if (rf & 1) {
     var _r17 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "mat-chip", 5);
-    ɵɵlistener("removed", function ChipsInputExample_mat_chip_3_Template_mat_chip_removed_0_listener($event) { ɵɵrestoreView(_r17); var fruit_r14 = ctx.$implicit; var ctx_r16 = ɵɵnextContext(); return ctx_r16.remove(fruit_r14); });
+    ɵɵlistener("removed", function ChipsInputExample_mat_chip_3_Template_mat_chip_removed_0_listener() { ɵɵrestoreView(_r17); var fruit_r14 = ctx.$implicit; var ctx_r16 = ɵɵnextContext(); return ctx_r16.remove(fruit_r14); });
     ɵɵtext(1);
     ɵɵtemplate(2, ChipsInputExample_mat_chip_3_mat_icon_2_Template, 2, 0, "mat-icon", 6);
     ɵɵelementEnd();

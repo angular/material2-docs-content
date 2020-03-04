@@ -32,7 +32,7 @@ var DatepickerApiExample = /** @class */ (function () {
             ɵɵelement(2, "mat-datepicker", null, 2);
             ɵɵelementEnd();
             ɵɵelementStart(4, "button", 3);
-            ɵɵlistener("click", function DatepickerApiExample_Template_button_click_4_listener($event) { ɵɵrestoreView(_r1); var _r0 = ɵɵreference(3); return _r0.open(); });
+            ɵɵlistener("click", function DatepickerApiExample_Template_button_click_4_listener() { ɵɵrestoreView(_r1); var _r0 = ɵɵreference(3); return _r0.open(); });
             ɵɵtext(5, "Open");
             ɵɵelementEnd();
         } if (rf & 2) {
@@ -197,7 +197,7 @@ var ExampleHeader = /** @class */ (function () {
     ExampleHeader.ɵcmp = ɵɵdefineComponent({ type: ExampleHeader, selectors: [["example-header"]], decls: 19, vars: 1, consts: [[1, "example-header"], ["mat-icon-button", "", 1, "example-double-arrow", 3, "click"], ["mat-icon-button", "", 3, "click"], [1, "example-header-label"]], template: function ExampleHeader_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "button", 1);
-            ɵɵlistener("click", function ExampleHeader_Template_button_click_1_listener($event) { return ctx.previousClicked("year"); });
+            ɵɵlistener("click", function ExampleHeader_Template_button_click_1_listener() { return ctx.previousClicked("year"); });
             ɵɵelementStart(2, "mat-icon");
             ɵɵtext(3, "keyboard_arrow_left");
             ɵɵelementEnd();
@@ -206,7 +206,7 @@ var ExampleHeader = /** @class */ (function () {
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(6, "button", 2);
-            ɵɵlistener("click", function ExampleHeader_Template_button_click_6_listener($event) { return ctx.previousClicked("month"); });
+            ɵɵlistener("click", function ExampleHeader_Template_button_click_6_listener() { return ctx.previousClicked("month"); });
             ɵɵelementStart(7, "mat-icon");
             ɵɵtext(8, "keyboard_arrow_left");
             ɵɵelementEnd();
@@ -215,13 +215,13 @@ var ExampleHeader = /** @class */ (function () {
             ɵɵtext(10);
             ɵɵelementEnd();
             ɵɵelementStart(11, "button", 2);
-            ɵɵlistener("click", function ExampleHeader_Template_button_click_11_listener($event) { return ctx.nextClicked("month"); });
+            ɵɵlistener("click", function ExampleHeader_Template_button_click_11_listener() { return ctx.nextClicked("month"); });
             ɵɵelementStart(12, "mat-icon");
             ɵɵtext(13, "keyboard_arrow_right");
             ɵɵelementEnd();
             ɵɵelementEnd();
             ɵɵelementStart(14, "button", 1);
-            ɵɵlistener("click", function ExampleHeader_Template_button_click_14_listener($event) { return ctx.nextClicked("year"); });
+            ɵɵlistener("click", function ExampleHeader_Template_button_click_14_listener() { return ctx.nextClicked("year"); });
             ɵɵelementStart(15, "mat-icon");
             ɵɵtext(16, "keyboard_arrow_right");
             ɵɵelementEnd();
@@ -657,7 +657,7 @@ var DatepickerLocaleExample = /** @class */ (function () {
             ɵɵelement(5, "mat-datepicker", null, 2);
             ɵɵelementEnd();
             ɵɵelementStart(7, "button", 3);
-            ɵɵlistener("click", function DatepickerLocaleExample_Template_button_click_7_listener($event) { return ctx.french(); });
+            ɵɵlistener("click", function DatepickerLocaleExample_Template_button_click_7_listener() { return ctx.french(); });
             ɵɵtext(8, "Dynamically switch to French");
             ɵɵelementEnd();
         } if (rf & 2) {
