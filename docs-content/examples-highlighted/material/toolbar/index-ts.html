@@ -1,0 +1,27 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatToolbarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/toolbar'</span>;
+<span class="hljs-keyword">import</span> {ToolbarMultirowExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./toolbar-multirow/toolbar-multirow-example'</span>;
+<span class="hljs-keyword">import</span> {ToolbarOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./toolbar-overview/toolbar-overview-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  ToolbarMultirowExample,
+  ToolbarOverviewExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  ToolbarMultirowExample,
+  ToolbarOverviewExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    MatIconModule,
+    MatToolbarModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> ToolbarExamplesModule {
+}

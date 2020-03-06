@@ -347,15 +347,15 @@
         TableDynamicColumnsExample.ɵfac = function TableDynamicColumnsExample_Factory(t) { return new (t || TableDynamicColumnsExample)(); };
         TableDynamicColumnsExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableDynamicColumnsExample, selectors: [["table-dynamic-columns-example"]], decls: 10, vars: 4, consts: [["mat-raised-button", "", 3, "click"], ["mat-table", "", 1, "mat-elevation-z8", 3, "dataSource"], [3, "matColumnDef", 4, "ngFor", "ngForOf"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], [3, "matColumnDef"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function TableDynamicColumnsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
-                i0.ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_0_listener($event) { return ctx.addColumn(); });
+                i0.ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_0_listener() { return ctx.addColumn(); });
                 i0.ɵɵtext(1, " Add column ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(2, "button", 0);
-                i0.ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_2_listener($event) { return ctx.removeColumn(); });
+                i0.ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_2_listener() { return ctx.removeColumn(); });
                 i0.ɵɵtext(3, " Remove column ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(4, "button", 0);
-                i0.ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_4_listener($event) { return ctx.shuffle(); });
+                i0.ɵɵlistener("click", function TableDynamicColumnsExample_Template_button_click_4_listener() { return ctx.shuffle(); });
                 i0.ɵɵtext(5, " Shuffle ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(6, "table", 1);
@@ -460,7 +460,7 @@
     function TableExpandableRowsExample_tr_5_Template(rf, ctx) { if (rf & 1) {
         var _r54 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "tr", 20);
-        i0.ɵɵlistener("click", function TableExpandableRowsExample_tr_5_Template_tr_click_0_listener($event) { i0.ɵɵrestoreView(_r54); var element_r52 = ctx.$implicit; var ctx_r53 = i0.ɵɵnextContext(); return ctx_r53.expandedElement = ctx_r53.expandedElement === element_r52 ? null : element_r52; });
+        i0.ɵɵlistener("click", function TableExpandableRowsExample_tr_5_Template_tr_click_0_listener() { i0.ɵɵrestoreView(_r54); var element_r52 = ctx.$implicit; var ctx_r53 = i0.ɵɵnextContext(); return ctx_r53.expandedElement = ctx_r53.expandedElement === element_r52 ? null : element_r52; });
         i0.ɵɵelementEnd();
     } if (rf & 2) {
         var element_r52 = ctx.$implicit;
@@ -1826,7 +1826,7 @@
     function TableSelectionExample_tr_17_Template(rf, ctx) { if (rf & 1) {
         var _r196 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "tr", 15);
-        i0.ɵɵlistener("click", function TableSelectionExample_tr_17_Template_tr_click_0_listener($event) { i0.ɵɵrestoreView(_r196); var row_r194 = ctx.$implicit; var ctx_r195 = i0.ɵɵnextContext(); return ctx_r195.selection.toggle(row_r194); });
+        i0.ɵɵlistener("click", function TableSelectionExample_tr_17_Template_tr_click_0_listener() { i0.ɵɵrestoreView(_r196); var row_r194 = ctx.$implicit; var ctx_r195 = i0.ɵɵnextContext(); return ctx_r195.selection.toggle(row_r194); });
         i0.ɵɵelementEnd();
     } }
     var ELEMENT_DATA$6 = [
@@ -2410,11 +2410,11 @@
         TableStickyComplexFlexExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableStickyComplexFlexExample, selectors: [["table-sticky-complex-flex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], [3, "dataSource", 4, "ngFor", "ngForOf"], [3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], [4, "matHeaderCellDef"], [4, "matCellDef"], [4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], [4, "matHeaderRowDef", "matHeaderRowDefSticky"], [4, "matRowDef", "matRowDefColumns"], [4, "matFooterRowDef", "matFooterRowDefSticky"]], template: function TableStickyComplexFlexExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div");
                 i0.ɵɵelementStart(1, "button", 0);
-                i0.ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_1_listener($event) { return ctx.tables.push(ctx.tables.length); });
+                i0.ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_1_listener() { return ctx.tables.push(ctx.tables.length); });
                 i0.ɵɵtext(2, "Add table");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "button", 0);
-                i0.ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_3_listener($event) { return ctx.tables.pop(); });
+                i0.ɵɵlistener("click", function TableStickyComplexFlexExample_Template_button_click_3_listener() { return ctx.tables.pop(); });
                 i0.ɵɵtext(4, "Remove table");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -2693,11 +2693,11 @@
         TableStickyComplexExample.ɵcmp = i0.ɵɵdefineComponent({ type: TableStickyComplexExample, selectors: [["table-sticky-complex-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["multiple", "", 1, "example-sticky-toggle-group", 3, "value"], ["stickyHeaders", "matButtonToggleGroup"], ["value", "header-1"], ["value", "header-2"], ["stickyFooters", "matButtonToggleGroup"], ["value", "footer-1"], ["value", "footer-2"], ["stickyColumns", "matButtonToggleGroup"], ["value", "position"], ["value", "name"], ["value", "weight"], ["value", "symbol"], [1, "example-container", "mat-elevation-z8"], ["mat-table", "", 3, "dataSource", 4, "ngFor", "ngForOf"], ["mat-table", "", 3, "dataSource"], ["matColumnDef", "position", 3, "sticky"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["mat-footer-cell", "", 4, "matFooterCellDef"], ["matColumnDef", "name", 3, "sticky"], ["matColumnDef", "weight", 3, "stickyEnd"], ["matColumnDef", "symbol", 3, "stickyEnd"], ["matColumnDef", "filler"], ["mat-header-row", "", 4, "matHeaderRowDef", "matHeaderRowDefSticky"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-footer-row", "", 4, "matFooterRowDef", "matFooterRowDefSticky"], ["mat-header-cell", ""], ["mat-cell", ""], ["mat-footer-cell", ""], ["mat-header-row", ""], ["mat-row", ""], ["mat-footer-row", ""]], template: function TableStickyComplexExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div");
                 i0.ɵɵelementStart(1, "button", 0);
-                i0.ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_1_listener($event) { return ctx.tables.push(ctx.tables.length); });
+                i0.ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_1_listener() { return ctx.tables.push(ctx.tables.length); });
                 i0.ɵɵtext(2, "Add table");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "button", 0);
-                i0.ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_3_listener($event) { return ctx.tables.pop(); });
+                i0.ɵɵlistener("click", function TableStickyComplexExample_Template_button_click_3_listener() { return ctx.tables.pop(); });
                 i0.ɵɵtext(4, "Remove table");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();

@@ -1,0 +1,41 @@
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatCardModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/card'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/radio'</span>;
+<span class="hljs-keyword">import</span> {MatSlideToggleModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/slide-toggle'</span>;
+<span class="hljs-keyword">import</span> {
+  SlideToggleConfigurableExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./slide-toggle-configurable/slide-toggle-configurable-example'</span>;
+<span class="hljs-keyword">import</span> {SlideToggleFormsExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./slide-toggle-forms/slide-toggle-forms-example'</span>;
+<span class="hljs-keyword">import</span> {SlideToggleOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./slide-toggle-overview/slide-toggle-overview-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  SlideToggleConfigurableExample,
+  SlideToggleFormsExample,
+  SlideToggleOverviewExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  SlideToggleConfigurableExample,
+  SlideToggleFormsExample,
+  SlideToggleOverviewExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    FormsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SlideToggleExamplesModule {
+}

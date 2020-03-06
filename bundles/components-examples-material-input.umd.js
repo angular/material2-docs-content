@@ -7,7 +7,7 @@
     function InputClearableExample_button_4_Template(rf, ctx) { if (rf & 1) {
         var _r2 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "button", 3);
-        i0.ɵɵlistener("click", function InputClearableExample_button_4_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r2); var ctx_r1 = i0.ɵɵnextContext(); return ctx_r1.value = ""; });
+        i0.ɵɵlistener("click", function InputClearableExample_button_4_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r2); var ctx_r1 = i0.ɵɵnextContext(); return ctx_r1.value = ""; });
         i0.ɵɵelementStart(1, "mat-icon");
         i0.ɵɵtext(2, "close");
         i0.ɵɵelementEnd();

@@ -1,0 +1,62 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {ScrollingModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/scrolling'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/select'</span>;
+<span class="hljs-keyword">import</span> {MatTooltipModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tooltip'</span>;
+<span class="hljs-keyword">import</span> {TooltipAutoHideExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-auto-hide/tooltip-auto-hide-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipCustomClassExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-custom-class/tooltip-custom-class-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipDelayExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-delay/tooltip-delay-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipDisabledExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-disabled/tooltip-disabled-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipManualExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-manual/tooltip-manual-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipMessageExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-message/tooltip-message-example'</span>;
+<span class="hljs-keyword">import</span> {
+  TooltipModifiedDefaultsExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-modified-defaults/tooltip-modified-defaults-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-overview/tooltip-overview-example'</span>;
+<span class="hljs-keyword">import</span> {TooltipPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tooltip-position/tooltip-position-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  TooltipAutoHideExample,
+  TooltipCustomClassExample,
+  TooltipDelayExample,
+  TooltipDisabledExample,
+  TooltipManualExample,
+  TooltipMessageExample,
+  TooltipModifiedDefaultsExample,
+  TooltipOverviewExample,
+  TooltipPositionExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  TooltipAutoHideExample,
+  TooltipCustomClassExample,
+  TooltipDelayExample,
+  TooltipDisabledExample,
+  TooltipManualExample,
+  TooltipMessageExample,
+  TooltipModifiedDefaultsExample,
+  TooltipOverviewExample,
+  TooltipPositionExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatSelectModule,
+    MatTooltipModule,
+    ReactiveFormsModule,
+    ScrollingModule, <span class="hljs-comment">// Required for the auto-scrolling example</span>
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TooltipExamplesModule {
+}

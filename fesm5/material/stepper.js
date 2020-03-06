@@ -47,7 +47,7 @@ var StepperEditableExample = /** @class */ (function () {
     StepperEditableExample.ɵcmp = ɵɵdefineComponent({ type: StepperEditableExample, selectors: [["stepper-editable-example"]], decls: 35, vars: 7, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl", "editable"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "formControlName", "firstCtrl", "placeholder", "Last name, First name", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperEditableExample_Template(rf, ctx) { if (rf & 1) {
             var _r4 = ɵɵgetCurrentView();
             ɵɵelementStart(0, "button", 0);
-            ɵɵlistener("click", function StepperEditableExample_Template_button_click_0_listener($event) { return ctx.isEditable = !ctx.isEditable; });
+            ɵɵlistener("click", function StepperEditableExample_Template_button_click_0_listener() { return ctx.isEditable = !ctx.isEditable; });
             ɵɵtext(1);
             ɵɵelementEnd();
             ɵɵelementStart(2, "mat-horizontal-stepper", 1, 2);
@@ -96,7 +96,7 @@ var StepperEditableExample = /** @class */ (function () {
             ɵɵtext(32, "Back");
             ɵɵelementEnd();
             ɵɵelementStart(33, "button", 10);
-            ɵɵlistener("click", function StepperEditableExample_Template_button_click_33_listener($event) { ɵɵrestoreView(_r4); var _r0 = ɵɵreference(3); return _r0.reset(); });
+            ɵɵlistener("click", function StepperEditableExample_Template_button_click_33_listener() { ɵɵrestoreView(_r4); var _r0 = ɵɵreference(3); return _r0.reset(); });
             ɵɵtext(34, "Reset");
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -214,7 +214,7 @@ var StepperErrorsExample = /** @class */ (function () {
             ɵɵtext(30, "Back");
             ɵɵelementEnd();
             ɵɵelementStart(31, "button", 10);
-            ɵɵlistener("click", function StepperErrorsExample_Template_button_click_31_listener($event) { ɵɵrestoreView(_r9); var _r5 = ɵɵreference(1); return _r5.reset(); });
+            ɵɵlistener("click", function StepperErrorsExample_Template_button_click_31_listener() { ɵɵrestoreView(_r9); var _r5 = ɵɵreference(1); return _r5.reset(); });
             ɵɵtext(32, "Reset");
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -328,7 +328,7 @@ var StepperLabelPositionBottomExample = /** @class */ (function () {
             ɵɵtext(30, "Back");
             ɵɵelementEnd();
             ɵɵelementStart(31, "button", 10);
-            ɵɵlistener("click", function StepperLabelPositionBottomExample_Template_button_click_31_listener($event) { ɵɵrestoreView(_r14); var _r10 = ɵɵreference(1); return _r10.reset(); });
+            ɵɵlistener("click", function StepperLabelPositionBottomExample_Template_button_click_31_listener() { ɵɵrestoreView(_r14); var _r10 = ɵɵreference(1); return _r10.reset(); });
             ɵɵtext(32, "Reset");
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -395,7 +395,7 @@ var StepperOptionalExample = /** @class */ (function () {
     StepperOptionalExample.ɵcmp = ɵɵdefineComponent({ type: StepperOptionalExample, selectors: [["stepper-optional-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", 3, "click"], ["linear", ""], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], [3, "stepControl", "optional"], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOptionalExample_Template(rf, ctx) { if (rf & 1) {
             var _r19 = ɵɵgetCurrentView();
             ɵɵelementStart(0, "button", 0);
-            ɵɵlistener("click", function StepperOptionalExample_Template_button_click_0_listener($event) { return ctx.isOptional = !ctx.isOptional; });
+            ɵɵlistener("click", function StepperOptionalExample_Template_button_click_0_listener() { return ctx.isOptional = !ctx.isOptional; });
             ɵɵtext(1);
             ɵɵelementEnd();
             ɵɵelementStart(2, "mat-horizontal-stepper", 1, 2);
@@ -444,7 +444,7 @@ var StepperOptionalExample = /** @class */ (function () {
             ɵɵtext(32, "Back");
             ɵɵelementEnd();
             ɵɵelementStart(33, "button", 11);
-            ɵɵlistener("click", function StepperOptionalExample_Template_button_click_33_listener($event) { ɵɵrestoreView(_r19); var _r15 = ɵɵreference(3); return _r15.reset(); });
+            ɵɵlistener("click", function StepperOptionalExample_Template_button_click_33_listener() { ɵɵrestoreView(_r19); var _r15 = ɵɵreference(3); return _r15.reset(); });
             ɵɵtext(34, "Reset");
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -513,7 +513,7 @@ var StepperOverviewExample = /** @class */ (function () {
     StepperOverviewExample.ɵcmp = ɵɵdefineComponent({ type: StepperOverviewExample, selectors: [["stepper-overview-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperOverviewExample_Template(rf, ctx) { if (rf & 1) {
             var _r24 = ɵɵgetCurrentView();
             ɵɵelementStart(0, "button", 0);
-            ɵɵlistener("click", function StepperOverviewExample_Template_button_click_0_listener($event) { return ctx.isLinear = !ctx.isLinear; });
+            ɵɵlistener("click", function StepperOverviewExample_Template_button_click_0_listener() { return ctx.isLinear = !ctx.isLinear; });
             ɵɵtext(1);
             ɵɵelementEnd();
             ɵɵelementStart(2, "mat-horizontal-stepper", 1, 2);
@@ -562,7 +562,7 @@ var StepperOverviewExample = /** @class */ (function () {
             ɵɵtext(32, "Back");
             ɵɵelementEnd();
             ɵɵelementStart(33, "button", 10);
-            ɵɵlistener("click", function StepperOverviewExample_Template_button_click_33_listener($event) { ɵɵrestoreView(_r24); var _r20 = ɵɵreference(3); return _r20.reset(); });
+            ɵɵlistener("click", function StepperOverviewExample_Template_button_click_33_listener() { ɵɵrestoreView(_r24); var _r20 = ɵɵreference(3); return _r20.reset(); });
             ɵɵtext(34, "Reset");
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -692,7 +692,7 @@ var StepperStatesExample = /** @class */ (function () {
             ɵɵtext(30, "Back");
             ɵɵelementEnd();
             ɵɵelementStart(31, "button", 8);
-            ɵɵlistener("click", function StepperStatesExample_Template_button_click_31_listener($event) { ɵɵrestoreView(_r31); var _r25 = ɵɵreference(1); return _r25.reset(); });
+            ɵɵlistener("click", function StepperStatesExample_Template_button_click_31_listener() { ɵɵrestoreView(_r31); var _r25 = ɵɵreference(1); return _r25.reset(); });
             ɵɵtext(32, "Reset");
             ɵɵelementEnd();
             ɵɵelementEnd();
@@ -794,7 +794,7 @@ var StepperVerticalExample = /** @class */ (function () {
     StepperVerticalExample.ɵcmp = ɵɵdefineComponent({ type: StepperVerticalExample, selectors: [["stepper-vertical-example"]], decls: 35, vars: 6, consts: [["mat-raised-button", "", "id", "toggle-linear", 3, "click"], [3, "linear"], ["stepper", ""], [3, "stepControl"], [3, "formGroup"], ["matStepLabel", ""], ["matInput", "", "placeholder", "Last name, First name", "formControlName", "firstCtrl", "required", ""], ["mat-button", "", "matStepperNext", ""], ["matInput", "", "formControlName", "secondCtrl", "placeholder", "Ex. 1 Main St, New York, NY", "required", ""], ["mat-button", "", "matStepperPrevious", ""], ["mat-button", "", 3, "click"]], template: function StepperVerticalExample_Template(rf, ctx) { if (rf & 1) {
             var _r36 = ɵɵgetCurrentView();
             ɵɵelementStart(0, "button", 0);
-            ɵɵlistener("click", function StepperVerticalExample_Template_button_click_0_listener($event) { return ctx.isLinear = !ctx.isLinear; });
+            ɵɵlistener("click", function StepperVerticalExample_Template_button_click_0_listener() { return ctx.isLinear = !ctx.isLinear; });
             ɵɵtext(1);
             ɵɵelementEnd();
             ɵɵelementStart(2, "mat-vertical-stepper", 1, 2);
@@ -843,7 +843,7 @@ var StepperVerticalExample = /** @class */ (function () {
             ɵɵtext(32, "Back");
             ɵɵelementEnd();
             ɵɵelementStart(33, "button", 10);
-            ɵɵlistener("click", function StepperVerticalExample_Template_button_click_33_listener($event) { ɵɵrestoreView(_r36); var _r32 = ɵɵreference(3); return _r32.reset(); });
+            ɵɵlistener("click", function StepperVerticalExample_Template_button_click_33_listener() { ɵɵrestoreView(_r36); var _r32 = ɵɵreference(3); return _r32.reset(); });
             ɵɵtext(34, "Reset");
             ɵɵelementEnd();
             ɵɵelementEnd();

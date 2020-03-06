@@ -31,7 +31,7 @@
         DialogContentExample.ɵfac = function DialogContentExample_Factory(t) { return new (t || DialogContentExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
         DialogContentExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogContentExample, selectors: [["dialog-content-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogContentExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
-                i0.ɵɵlistener("click", function DialogContentExample_Template_button_click_0_listener($event) { return ctx.openDialog(); });
+                i0.ɵɵlistener("click", function DialogContentExample_Template_button_click_0_listener() { return ctx.openDialog(); });
                 i0.ɵɵtext(1, "Open dialog");
                 i0.ɵɵelementEnd();
             } }, directives: [i2.MatButton], styles: [""] });
@@ -183,7 +183,7 @@
         DialogDataExample.ɵfac = function DialogDataExample_Factory(t) { return new (t || DialogDataExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
         DialogDataExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogDataExample, selectors: [["dialog-data-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogDataExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
-                i0.ɵɵlistener("click", function DialogDataExample_Template_button_click_0_listener($event) { return ctx.openDialog(); });
+                i0.ɵɵlistener("click", function DialogDataExample_Template_button_click_0_listener() { return ctx.openDialog(); });
                 i0.ɵɵtext(1, "Open dialog");
                 i0.ɵɵelementEnd();
             } }, directives: [i2.MatButton], styles: [""] });
@@ -278,7 +278,7 @@
         DialogElementsExample.ɵfac = function DialogElementsExample_Factory(t) { return new (t || DialogElementsExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
         DialogElementsExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogElementsExample, selectors: [["dialog-elements-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogElementsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
-                i0.ɵɵlistener("click", function DialogElementsExample_Template_button_click_0_listener($event) { return ctx.openDialog(); });
+                i0.ɵɵlistener("click", function DialogElementsExample_Template_button_click_0_listener() { return ctx.openDialog(); });
                 i0.ɵɵtext(1, "Launch dialog");
                 i0.ɵɵelementEnd();
             } }, directives: [i2.MatButton], styles: [""] });
@@ -381,7 +381,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(6, "li");
                 i0.ɵɵelementStart(7, "button", 1);
-                i0.ɵɵlistener("click", function DialogOverviewExample_Template_button_click_7_listener($event) { return ctx.openDialog(); });
+                i0.ɵɵlistener("click", function DialogOverviewExample_Template_button_click_7_listener() { return ctx.openDialog(); });
                 i0.ɵɵtext(8, "Pick one");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -442,7 +442,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(9, "div", 3);
                 i0.ɵɵelementStart(10, "button", 4);
-                i0.ɵɵlistener("click", function DialogOverviewExampleDialog_Template_button_click_10_listener($event) { return ctx.onNoClick(); });
+                i0.ɵɵlistener("click", function DialogOverviewExampleDialog_Template_button_click_10_listener() { return ctx.onNoClick(); });
                 i0.ɵɵtext(11, "No Thanks");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(12, "button", 5);

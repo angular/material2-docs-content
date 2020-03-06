@@ -1,0 +1,33 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatPaginatorModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/paginator'</span>;
+<span class="hljs-keyword">import</span> {
+  PaginatorConfigurableExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./paginator-configurable/paginator-configurable-example'</span>;
+<span class="hljs-keyword">import</span> {PaginatorOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./paginator-overview/paginator-overview-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  PaginatorConfigurableExample,
+  PaginatorOverviewExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  PaginatorConfigurableExample,
+  PaginatorOverviewExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatInputModule,
+    MatPaginatorModule,
+    FormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> PaginatorExamplesModule {
+}

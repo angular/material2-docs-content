@@ -1,0 +1,25 @@
+<span class="hljs-keyword">import</span> {CdkTableModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/table'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkTableBasicFlexExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-table-basic-flex/cdk-table-basic-flex-example'</span>;
+<span class="hljs-keyword">import</span> {CdkTableBasicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-table-basic/cdk-table-basic-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  CdkTableBasicExample,
+  CdkTableBasicFlexExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  CdkTableBasicExample,
+  CdkTableBasicFlexExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CdkTableModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkTableExamplesModule {
+}

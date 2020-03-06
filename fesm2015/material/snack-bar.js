@@ -54,7 +54,7 @@ SnackBarComponentExample.ctorParameters = () => [
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementStart(4, "button", 1);
-        ɵɵlistener("click", function SnackBarComponentExample_Template_button_click_4_listener($event) { return ctx.openSnackBar(); });
+        ɵɵlistener("click", function SnackBarComponentExample_Template_button_click_4_listener() { return ctx.openSnackBar(); });
         ɵɵtext(5, " Pizza party\n");
         ɵɵelementEnd();
     } if (rf & 2) {
@@ -163,7 +163,7 @@ SnackBarOverviewExample.ctorParameters = () => [
         ɵɵelement(8, "input", 2, 3);
         ɵɵelementEnd();
         ɵɵelementStart(10, "button", 4);
-        ɵɵlistener("click", function SnackBarOverviewExample_Template_button_click_10_listener($event) { ɵɵrestoreView(_r2); const _r0 = ɵɵreference(4); const _r1 = ɵɵreference(9); return ctx.openSnackBar(_r0.value, _r1.value); });
+        ɵɵlistener("click", function SnackBarOverviewExample_Template_button_click_10_listener() { ɵɵrestoreView(_r2); const _r0 = ɵɵreference(4); const _r1 = ɵɵreference(9); return ctx.openSnackBar(_r0.value, _r1.value); });
         ɵɵtext(11, "Show snack-bar");
         ɵɵelementEnd();
     } }, directives: [MatFormField, MatLabel, MatInput, MatButton], styles: ["mat-form-field[_ngcontent-%COMP%] {\n  margin-right: 12px;\n}"] });
@@ -262,7 +262,7 @@ SnackBarPositionExample.ctorParameters = () => [
         ɵɵelementEnd();
         ɵɵelementEnd();
         ɵɵelementStart(22, "button", 8);
-        ɵɵlistener("click", function SnackBarPositionExample_Template_button_click_22_listener($event) { return ctx.openSnackBar(); });
+        ɵɵlistener("click", function SnackBarPositionExample_Template_button_click_22_listener() { return ctx.openSnackBar(); });
         ɵɵtext(23, " Pool party!\n");
         ɵɵelementEnd();
     } if (rf & 2) {

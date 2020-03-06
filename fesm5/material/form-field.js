@@ -292,19 +292,19 @@ var MyTelInput = /** @class */ (function () {
         } }, inputs: { placeholder: "placeholder", required: "required", disabled: "disabled", value: "value" }, features: [ɵɵProvidersFeature([{ provide: MatFormFieldControl, useExisting: MyTelInput }])], decls: 8, vars: 1, consts: [[1, "example-tel-input-container", 3, "formGroup"], ["formControlName", "area", "size", "3", "aria-label", "Area code", 1, "example-tel-input-element", 3, "input"], [1, "example-tel-input-spacer"], ["formControlName", "exchange", "size", "3", "aria-label", "Exchange code", 1, "example-tel-input-element", 3, "input"], ["formControlName", "subscriber", "size", "4", "aria-label", "Subscriber number", 1, "example-tel-input-element", 3, "input"]], template: function MyTelInput_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "div", 0);
             ɵɵelementStart(1, "input", 1);
-            ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener($event) { return ctx._handleInput(); });
+            ɵɵlistener("input", function MyTelInput_Template_input_input_1_listener() { return ctx._handleInput(); });
             ɵɵelementEnd();
             ɵɵelementStart(2, "span", 2);
             ɵɵtext(3, "\u2013");
             ɵɵelementEnd();
             ɵɵelementStart(4, "input", 3);
-            ɵɵlistener("input", function MyTelInput_Template_input_input_4_listener($event) { return ctx._handleInput(); });
+            ɵɵlistener("input", function MyTelInput_Template_input_input_4_listener() { return ctx._handleInput(); });
             ɵɵelementEnd();
             ɵɵelementStart(5, "span", 2);
             ɵɵtext(6, "\u2013");
             ɵɵelementEnd();
             ɵɵelementStart(7, "input", 4);
-            ɵɵlistener("input", function MyTelInput_Template_input_input_7_listener($event) { return ctx._handleInput(); });
+            ɵɵlistener("input", function MyTelInput_Template_input_input_7_listener() { return ctx._handleInput(); });
             ɵɵelementEnd();
             ɵɵelementEnd();
         } if (rf & 2) {
@@ -617,7 +617,7 @@ var FormFieldPrefixSuffixExample = /** @class */ (function () {
             ɵɵelementEnd();
             ɵɵelement(4, "input", 2);
             ɵɵelementStart(5, "button", 3);
-            ɵɵlistener("click", function FormFieldPrefixSuffixExample_Template_button_click_5_listener($event) { return ctx.hide = !ctx.hide; });
+            ɵɵlistener("click", function FormFieldPrefixSuffixExample_Template_button_click_5_listener() { return ctx.hide = !ctx.hide; });
             ɵɵelementStart(6, "mat-icon");
             ɵɵtext(7);
             ɵɵelementEnd();

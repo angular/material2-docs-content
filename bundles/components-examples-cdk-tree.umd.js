@@ -19,7 +19,7 @@
     function CdkTreeFlatExample_cdk_tree_node_2_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "cdk-tree-node", 3);
         i0.ɵɵelementStart(1, "button", 5);
-        i0.ɵɵlistener("click", function CdkTreeFlatExample_cdk_tree_node_2_Template_button_click_1_listener($event) { var node_r3 = ctx.$implicit; return node_r3.isExpanded = !node_r3.isExpanded; });
+        i0.ɵɵlistener("click", function CdkTreeFlatExample_cdk_tree_node_2_Template_button_click_1_listener() { var node_r3 = ctx.$implicit; return node_r3.isExpanded = !node_r3.isExpanded; });
         i0.ɵɵelementStart(2, "mat-icon", 6);
         i0.ɵɵtext(3);
         i0.ɵɵelementEnd();

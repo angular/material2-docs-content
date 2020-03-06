@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/material/button'), require('@angular/material/checkbox'), require('@angular/material/input'), require('@angular/material/select'), require('@angular/material/tooltip'), require('@angular/material/form-field'), require('@angular/material/core')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/tooltip', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/material/button', '@angular/material/checkbox', '@angular/material/input', '@angular/material/select', '@angular/material/tooltip', '@angular/material/form-field', '@angular/material/core'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.tooltip = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.material.button, global.ng.material.checkbox, global.ng.material.input, global.ng.material.select, global.ng.material.tooltip, global.ng.material.formField, global.ng.material.core));
-}(this, (function (exports, i4, i0, i3, i1, i3$1, i2, i2$1, i2$2, i1$1, i7) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/common'), require('@angular/core'), require('@angular/forms'), require('@angular/cdk/scrolling'), require('@angular/material/button'), require('@angular/material/checkbox'), require('@angular/material/input'), require('@angular/material/select'), require('@angular/material/tooltip'), require('@angular/material/form-field'), require('@angular/material/core')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/tooltip', ['exports', '@angular/common', '@angular/core', '@angular/forms', '@angular/cdk/scrolling', '@angular/material/button', '@angular/material/checkbox', '@angular/material/input', '@angular/material/select', '@angular/material/tooltip', '@angular/material/form-field', '@angular/material/core'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.tooltip = {}), global.ng.common, global.ng.core, global.ng.forms, global.ng.cdk.scrolling, global.ng.material.button, global.ng.material.checkbox, global.ng.material.input, global.ng.material.select, global.ng.material.tooltip, global.ng.material.formField, global.ng.material.core));
+}(this, (function (exports, i4, i0, i3, i5, i1, i3$1, i2, i2$1, i2$2, i1$1, i8) { 'use strict';
 
     function TooltipAutoHideExample_mat_option_4_Template(rf, ctx) { if (rf & 1) {
         i0.ɵɵelementStart(0, "mat-option", 5);
@@ -30,7 +30,7 @@
                     },] },
         ];
         TooltipAutoHideExample.ɵfac = function TooltipAutoHideExample_Factory(t) { return new (t || TooltipAutoHideExample)(); };
-        TooltipAutoHideExample.ɵcmp = i0.ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 9, vars: 3, consts: [[3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdk-scrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], ["tooltip", "matTooltip"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
+        TooltipAutoHideExample.ɵcmp = i0.ɵɵdefineComponent({ type: TooltipAutoHideExample, selectors: [["tooltip-auto-hide-example"]], decls: 9, vars: 3, consts: [[3, "formControl"], [3, "value", 4, "ngFor", "ngForOf"], ["cdkScrollable", "", 1, "example-container"], ["mat-raised-button", "", "matTooltip", "Info about the action", "matTooltipHideDelay", "100000", "aria-label", "Button that displays a tooltip that hides when scrolled out of the container", 1, "example-button", 3, "matTooltipPosition"], ["tooltip", "matTooltip"], [3, "value"]], template: function TooltipAutoHideExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
                 i0.ɵɵelementStart(1, "mat-label");
                 i0.ɵɵtext(2, "Tooltip position");
@@ -51,7 +51,7 @@
                 i0.ɵɵproperty("ngForOf", ctx.positionOptions);
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("matTooltipPosition", ctx.position.value);
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i1.MatButton, i2$2.MatTooltip, i7.MatOption], styles: [".example-button[_ngcontent-%COMP%] {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container[_ngcontent-%COMP%] {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}"] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i5.CdkScrollable, i1.MatButton, i2$2.MatTooltip, i8.MatOption], styles: [".example-button[_ngcontent-%COMP%] {\n  display: block;\n  margin: 80px auto 400px;\n}\n\n.example-container[_ngcontent-%COMP%] {\n  height: 200px;\n  overflow: auto;\n  border: 1px solid #ccc;\n}"] });
         return TooltipAutoHideExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipAutoHideExample, [{
@@ -215,15 +215,15 @@
                 i0.ɵɵtext(2, " Click the following buttons to... ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "button", 0);
-                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_3_listener($event) { i0.ɵɵrestoreView(_r4); var _r3 = i0.ɵɵreference(10); return _r3.show(); });
+                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_3_listener() { i0.ɵɵrestoreView(_r4); var _r3 = i0.ɵɵreference(10); return _r3.show(); });
                 i0.ɵɵtext(4, " show ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(5, "button", 1);
-                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_5_listener($event) { i0.ɵɵrestoreView(_r4); var _r3 = i0.ɵɵreference(10); return _r3.hide(); });
+                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_5_listener() { i0.ɵɵrestoreView(_r4); var _r3 = i0.ɵɵreference(10); return _r3.hide(); });
                 i0.ɵɵtext(6, " hide ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(7, "button", 2);
-                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_7_listener($event) { i0.ɵɵrestoreView(_r4); var _r3 = i0.ɵɵreference(10); return _r3.toggle(); });
+                i0.ɵɵlistener("click", function TooltipManualExample_Template_button_click_7_listener() { i0.ɵɵrestoreView(_r4); var _r3 = i0.ɵɵreference(10); return _r3.toggle(); });
                 i0.ɵɵtext(8, " toggle show/hide ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -403,7 +403,7 @@
                 i0.ɵɵproperty("ngForOf", ctx.positionOptions);
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("matTooltipPosition", ctx.position.value);
-            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i1.MatButton, i2$2.MatTooltip, i7.MatOption], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
+            } }, directives: [i1$1.MatFormField, i1$1.MatLabel, i2$1.MatSelect, i3.NgControlStatus, i3.FormControlDirective, i4.NgForOf, i1.MatButton, i2$2.MatTooltip, i8.MatOption], styles: [".example-user-input[_ngcontent-%COMP%] {\n  margin-right: 8px;\n}"] });
         return TooltipPositionExample;
     }());
     /*@__PURE__*/ (function () { i0.ɵsetClassMetadata(TooltipPositionExample, [{
@@ -439,6 +439,7 @@
                             i2$1.MatSelectModule,
                             i2$2.MatTooltipModule,
                             i3.ReactiveFormsModule,
+                            i5.ScrollingModule,
                         ],
                         declarations: EXAMPLES,
                         exports: EXAMPLES,
@@ -454,6 +455,7 @@
                     i2$1.MatSelectModule,
                     i2$2.MatTooltipModule,
                     i3.ReactiveFormsModule,
+                    i5.ScrollingModule,
                 ]] });
         return TooltipExamplesModule;
     }());
@@ -471,7 +473,8 @@
             i2.MatInputModule,
             i2$1.MatSelectModule,
             i2$2.MatTooltipModule,
-            i3.ReactiveFormsModule], exports: [TooltipAutoHideExample,
+            i3.ReactiveFormsModule,
+            i5.ScrollingModule], exports: [TooltipAutoHideExample,
             TooltipCustomClassExample,
             TooltipDelayExample,
             TooltipDisabledExample,
@@ -491,6 +494,7 @@
                         i2$1.MatSelectModule,
                         i2$2.MatTooltipModule,
                         i3.ReactiveFormsModule,
+                        i5.ScrollingModule,
                     ],
                     declarations: EXAMPLES,
                     exports: EXAMPLES,

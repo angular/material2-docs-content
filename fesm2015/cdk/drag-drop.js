@@ -819,7 +819,7 @@ CdkDragDropFreeDragPositionExample.decorators = [
 /** @nocollapse */ CdkDragDropFreeDragPositionExample.ɵcmp = ɵɵdefineComponent({ type: CdkDragDropFreeDragPositionExample, selectors: [["cdk-drag-drop-free-drag-position-example"]], decls: 5, vars: 1, consts: [[3, "click"], ["cdkDrag", "", 1, "example-box", 3, "cdkDragFreeDragPosition"]], template: function CdkDragDropFreeDragPositionExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "p");
         ɵɵelementStart(1, "button", 0);
-        ɵɵlistener("click", function CdkDragDropFreeDragPositionExample_Template_button_click_1_listener($event) { return ctx.changePosition(); });
+        ɵɵlistener("click", function CdkDragDropFreeDragPositionExample_Template_button_click_1_listener() { return ctx.changePosition(); });
         ɵɵtext(2, "Change element position");
         ɵɵelementEnd();
         ɵɵelementEnd();
@@ -1051,7 +1051,7 @@ CdkDragDropRootElementExample.propDecorators = {
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx._dialogTemplate = _t.first);
     } }, decls: 3, vars: 0, consts: [[3, "click"], ["cdkDrag", "", "cdkDragRootElement", ".cdk-overlay-pane", 1, "example-dialog-content"]], template: function CdkDragDropRootElementExample_Template(rf, ctx) { if (rf & 1) {
         ɵɵelementStart(0, "button", 0);
-        ɵɵlistener("click", function CdkDragDropRootElementExample_Template_button_click_0_listener($event) { return ctx.openDialog(); });
+        ɵɵlistener("click", function CdkDragDropRootElementExample_Template_button_click_0_listener() { return ctx.openDialog(); });
         ɵɵtext(1, "Open a draggable dialog");
         ɵɵelementEnd();
         ɵɵtemplate(2, CdkDragDropRootElementExample_ng_template_2_Template, 2, 0, "ng-template");

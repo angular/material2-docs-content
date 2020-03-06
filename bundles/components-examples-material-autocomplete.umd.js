@@ -434,7 +434,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelement(7, "br");
                 i0.ɵɵelementStart(8, "mat-slide-toggle", 5);
-                i0.ɵɵlistener("change", function AutocompleteOverviewExample_Template_mat_slide_toggle_change_8_listener($event) { return ctx.stateCtrl.disabled ? ctx.stateCtrl.enable() : ctx.stateCtrl.disable(); });
+                i0.ɵɵlistener("change", function AutocompleteOverviewExample_Template_mat_slide_toggle_change_8_listener() { return ctx.stateCtrl.disabled ? ctx.stateCtrl.enable() : ctx.stateCtrl.disable(); });
                 i0.ɵɵtext(9, " Disable Input? ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();

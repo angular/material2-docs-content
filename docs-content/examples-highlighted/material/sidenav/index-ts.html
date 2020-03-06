@@ -1,0 +1,70 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {FormsModule, ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatListModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/list'</span>;
+<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/radio'</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/select'</span>;
+<span class="hljs-keyword">import</span> {MatSidenavModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/sidenav'</span>;
+<span class="hljs-keyword">import</span> {MatToolbarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/toolbar'</span>;
+<span class="hljs-keyword">import</span> {SidenavAutosizeExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-autosize/sidenav-autosize-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavBackdropExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-backdrop/sidenav-backdrop-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavDisableCloseExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-disable-close/sidenav-disable-close-example'</span>;
+<span class="hljs-keyword">import</span> {
+  SidenavDrawerOverviewExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-drawer-overview/sidenav-drawer-overview-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavFixedExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-fixed/sidenav-fixed-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavModeExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-mode/sidenav-mode-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavOpenCloseExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-open-close/sidenav-open-close-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-overview/sidenav-overview-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavPositionExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-position/sidenav-position-example'</span>;
+<span class="hljs-keyword">import</span> {SidenavResponsiveExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./sidenav-responsive/sidenav-responsive-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  SidenavAutosizeExample,
+  SidenavBackdropExample,
+  SidenavDisableCloseExample,
+  SidenavDrawerOverviewExample,
+  SidenavFixedExample,
+  SidenavModeExample,
+  SidenavOpenCloseExample,
+  SidenavOverviewExample,
+  SidenavPositionExample,
+  SidenavResponsiveExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  SidenavAutosizeExample,
+  SidenavBackdropExample,
+  SidenavDisableCloseExample,
+  SidenavDrawerOverviewExample,
+  SidenavFixedExample,
+  SidenavModeExample,
+  SidenavOpenCloseExample,
+  SidenavOverviewExample,
+  SidenavPositionExample,
+  SidenavResponsiveExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatListModule,
+    MatRadioModule,
+    MatSidenavModule,
+    MatSelectModule,
+    MatToolbarModule,
+    ReactiveFormsModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> SidenavExamplesModule {
+}

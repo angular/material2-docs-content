@@ -1,0 +1,18 @@
+<span class="hljs-keyword">import</span> {PlatformModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/platform'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {CdkPlatformOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./cdk-platform-overview/cdk-platform-overview-example'</span>;
+
+<span class="hljs-keyword">export</span> {CdkPlatformOverviewExample};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [CdkPlatformOverviewExample];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    PlatformModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> CdkPlatformExamplesModule {
+}

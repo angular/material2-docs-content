@@ -129,7 +129,7 @@
                 i0.ɵɵtext(5, "Slide Toggle inside of a Template-driven form");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(6, "form", 1, 2);
-                i0.ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_6_listener($event) { return ctx.onFormSubmit(); });
+                i0.ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_6_listener() { return ctx.onFormSubmit(); });
                 i0.ɵɵelementStart(8, "mat-slide-toggle", 3);
                 i0.ɵɵtext(9, "Enable Wifi");
                 i0.ɵɵelementEnd();
@@ -144,7 +144,7 @@
                 i0.ɵɵtext(15, "Slide Toggle inside of a Reactive form");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(16, "form", 6);
-                i0.ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_16_listener($event) { return ctx.onFormSubmit(); });
+                i0.ɵɵlistener("ngSubmit", function SlideToggleFormsExample_Template_form_ngSubmit_16_listener() { return ctx.onFormSubmit(); });
                 i0.ɵɵelementStart(17, "mat-slide-toggle", 7);
                 i0.ɵɵtext(18, "Enable Wifi");
                 i0.ɵɵelementEnd();

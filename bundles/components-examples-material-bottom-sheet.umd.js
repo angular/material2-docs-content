@@ -31,7 +31,7 @@
                 i0.ɵɵtext(1, "You have received a file called \"cat-picture.jpeg\".");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(2, "button", 0);
-                i0.ɵɵlistener("click", function BottomSheetOverviewExample_Template_button_click_2_listener($event) { return ctx.openBottomSheet(); });
+                i0.ɵɵlistener("click", function BottomSheetOverviewExample_Template_button_click_2_listener() { return ctx.openBottomSheet(); });
                 i0.ɵɵtext(3, "Open file");
                 i0.ɵɵelementEnd();
             } }, directives: [i2.MatButton], styles: [""] });

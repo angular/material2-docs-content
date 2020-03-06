@@ -1,0 +1,19 @@
+<span class="hljs-tag">&lt;<span class="hljs-name">mat-form-field</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-label</span>&gt;</span>Tooltip position<span class="hljs-tag">&lt;/<span class="hljs-name">mat-label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mat-select</span> [<span class="hljs-attr">formControl</span>]=<span class="hljs-string">"position"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mat-option</span> *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">"let positionOption of positionOptions"</span> [<span class="hljs-attr">value</span>]=<span class="hljs-string">"positionOption"</span>&gt;</span>
+      {{positionOption}}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">mat-option</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">mat-select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mat-form-field</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"example-container"</span> <span class="hljs-attr">cdkScrollable</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">mat-raised-button</span> #<span class="hljs-attr">tooltip</span>=<span class="hljs-string">"matTooltip"</span>
+          <span class="hljs-attr">matTooltip</span>=<span class="hljs-string">"Info about the action"</span>
+          [<span class="hljs-attr">matTooltipPosition</span>]=<span class="hljs-string">"position.value"</span>
+          <span class="hljs-attr">matTooltipHideDelay</span>=<span class="hljs-string">"100000"</span>
+          <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Button that displays a tooltip that hides when scrolled out of the container"</span>
+          <span class="hljs-attr">class</span>=<span class="hljs-string">"example-button"</span>&gt;</span>
+    Action
+  <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>

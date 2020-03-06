@@ -1,0 +1,46 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatProgressBarModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/progress-bar'</span>;
+<span class="hljs-keyword">import</span> {MatTreeModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/tree'</span>;
+<span class="hljs-keyword">import</span> {TreeChecklistExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-checklist/tree-checklist-example'</span>;
+<span class="hljs-keyword">import</span> {TreeDynamicExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-dynamic/tree-dynamic-example'</span>;
+<span class="hljs-keyword">import</span> {TreeFlatOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-flat-overview/tree-flat-overview-example'</span>;
+<span class="hljs-keyword">import</span> {TreeLoadmoreExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-loadmore/tree-loadmore-example'</span>;
+<span class="hljs-keyword">import</span> {TreeNestedOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./tree-nested-overview/tree-nested-overview-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  TreeChecklistExample,
+  TreeDynamicExample,
+  TreeFlatOverviewExample,
+  TreeLoadmoreExample,
+  TreeNestedOverviewExample,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  TreeChecklistExample,
+  TreeDynamicExample,
+  TreeFlatOverviewExample,
+  TreeLoadmoreExample,
+  TreeNestedOverviewExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatInputModule,
+    MatProgressBarModule,
+    MatTreeModule,
+  ],
+  declarations: EXAMPLES,
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> TreeExamplesModule {
+}

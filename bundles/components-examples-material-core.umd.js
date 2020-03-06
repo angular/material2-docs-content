@@ -24,7 +24,7 @@
                 i0.ɵɵtext(1, " Example\n");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(2, "button", 1);
-                i0.ɵɵlistener("click", function ElevationOverviewExample_Template_button_click_2_listener($event) { return ctx.isActive = !ctx.isActive; });
+                i0.ɵɵlistener("click", function ElevationOverviewExample_Template_button_click_2_listener() { return ctx.isActive = !ctx.isActive; });
                 i0.ɵɵtext(3, "Toggle Elevation");
                 i0.ɵɵelementEnd();
             } if (rf & 2) {

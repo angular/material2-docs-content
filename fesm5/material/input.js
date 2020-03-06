@@ -9,7 +9,7 @@ import { MatFormField, MatLabel, MatSuffix, MatHint, MatError, MatPrefix } from 
 function InputClearableExample_button_4_Template(rf, ctx) { if (rf & 1) {
     var _r2 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "button", 3);
-    ɵɵlistener("click", function InputClearableExample_button_4_Template_button_click_0_listener($event) { ɵɵrestoreView(_r2); var ctx_r1 = ɵɵnextContext(); return ctx_r1.value = ""; });
+    ɵɵlistener("click", function InputClearableExample_button_4_Template_button_click_0_listener() { ɵɵrestoreView(_r2); var ctx_r1 = ɵɵnextContext(); return ctx_r1.value = ""; });
     ɵɵelementStart(1, "mat-icon");
     ɵɵtext(2, "close");
     ɵɵelementEnd();

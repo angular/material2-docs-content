@@ -199,7 +199,7 @@
                 i0.ɵɵtext(2, "Font size");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(3, "mat-select", 0, 1);
-                i0.ɵɵlistener("selectionChange", function TextFieldAutosizeTextareaExample_Template_mat_select_selectionChange_3_listener($event) { return ctx.triggerResize(); });
+                i0.ɵɵlistener("selectionChange", function TextFieldAutosizeTextareaExample_Template_mat_select_selectionChange_3_listener() { return ctx.triggerResize(); });
                 i0.ɵɵelementStart(5, "mat-option", 2);
                 i0.ɵɵtext(6, "10px");
                 i0.ɵɵelementEnd();

@@ -1,0 +1,65 @@
+<span class="hljs-keyword">import</span> {CommonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/common'</span>;
+<span class="hljs-keyword">import</span> {NgModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> {ReactiveFormsModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {MatButtonModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/button'</span>;
+<span class="hljs-keyword">import</span> {MatCheckboxModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/checkbox'</span>;
+<span class="hljs-keyword">import</span> {MatFormFieldModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/form-field'</span>;
+<span class="hljs-keyword">import</span> {MatIconModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/icon'</span>;
+<span class="hljs-keyword">import</span> {MatInputModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/input'</span>;
+<span class="hljs-keyword">import</span> {MatRadioModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/radio'</span>;
+<span class="hljs-keyword">import</span> {MatSelectModule} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material/select'</span>;
+<span class="hljs-keyword">import</span> {FormFieldAppearanceExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./form-field-appearance/form-field-appearance-example'</span>;
+<span class="hljs-keyword">import</span> {
+  FormFieldCustomControlExample,
+  MyTelInput
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./form-field-custom-control/form-field-custom-control-example'</span>;
+<span class="hljs-keyword">import</span> {FormFieldErrorExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./form-field-error/form-field-error-example'</span>;
+<span class="hljs-keyword">import</span> {FormFieldHintExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./form-field-hint/form-field-hint-example'</span>;
+<span class="hljs-keyword">import</span> {FormFieldLabelExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./form-field-label/form-field-label-example'</span>;
+<span class="hljs-keyword">import</span> {FormFieldOverviewExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./form-field-overview/form-field-overview-example'</span>;
+<span class="hljs-keyword">import</span> {
+  FormFieldPrefixSuffixExample
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'./form-field-prefix-suffix/form-field-prefix-suffix-example'</span>;
+<span class="hljs-keyword">import</span> {FormFieldThemingExample} <span class="hljs-keyword">from</span> <span class="hljs-string">'./form-field-theming/form-field-theming-example'</span>;
+
+<span class="hljs-keyword">export</span> {
+  FormFieldAppearanceExample,
+  FormFieldCustomControlExample,
+  FormFieldErrorExample,
+  FormFieldHintExample,
+  FormFieldLabelExample,
+  FormFieldOverviewExample,
+  FormFieldPrefixSuffixExample,
+  FormFieldThemingExample,
+  MyTelInput,
+};
+
+<span class="hljs-keyword">const</span> EXAMPLES = [
+  FormFieldAppearanceExample,
+  FormFieldCustomControlExample,
+  FormFieldErrorExample,
+  FormFieldHintExample,
+  FormFieldLabelExample,
+  FormFieldOverviewExample,
+  FormFieldPrefixSuffixExample,
+  FormFieldThemingExample,
+];
+
+<span class="hljs-meta">@NgModule</span>({
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatRadioModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+  ],
+  declarations: [...EXAMPLES, MyTelInput],
+  exports: EXAMPLES,
+  entryComponents: EXAMPLES,
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> FormFieldExamplesModule {
+}

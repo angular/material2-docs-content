@@ -11,7 +11,7 @@ const _c0 = function (a0) { return { "example-active": a0 }; };
 function CustomStepper_button_9_Template(rf, ctx) { if (rf & 1) {
     const _r4 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "button", 6);
-    ɵɵlistener("click", function CustomStepper_button_9_Template_button_click_0_listener($event) { ɵɵrestoreView(_r4); const i_r2 = ctx.index; const ctx_r3 = ɵɵnextContext(); return ctx_r3.onClick(i_r2); });
+    ɵɵlistener("click", function CustomStepper_button_9_Template_button_click_0_listener() { ɵɵrestoreView(_r4); const i_r2 = ctx.index; const ctx_r3 = ɵɵnextContext(); return ctx_r3.onClick(i_r2); });
     ɵɵtext(1);
     ɵɵelementEnd();
 } if (rf & 2) {

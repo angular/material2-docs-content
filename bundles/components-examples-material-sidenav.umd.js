@@ -33,13 +33,13 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵtemplate(5, SidenavAutosizeExample_p_5_Template, 2, 0, "p", 3);
                 i0.ɵɵelementStart(6, "button", 4);
-                i0.ɵɵlistener("click", function SidenavAutosizeExample_Template_button_click_6_listener($event) { return ctx.showFiller = !ctx.showFiller; });
+                i0.ɵɵlistener("click", function SidenavAutosizeExample_Template_button_click_6_listener() { return ctx.showFiller = !ctx.showFiller; });
                 i0.ɵɵtext(7, " Toggle extra text ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(8, "div", 5);
                 i0.ɵɵelementStart(9, "button", 6);
-                i0.ɵɵlistener("click", function SidenavAutosizeExample_Template_button_click_9_listener($event) { i0.ɵɵrestoreView(_r2); var _r0 = i0.ɵɵreference(2); return _r0.toggle(); });
+                i0.ɵɵlistener("click", function SidenavAutosizeExample_Template_button_click_9_listener() { i0.ɵɵrestoreView(_r2); var _r0 = i0.ɵɵreference(2); return _r0.toggle(); });
                 i0.ɵɵtext(10, " Toggle sidenav ");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -111,7 +111,7 @@
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementStart(27, "button", 9);
-                i0.ɵɵlistener("click", function SidenavBackdropExample_Template_button_click_27_listener($event) { i0.ɵɵrestoreView(_r6); var _r3 = i0.ɵɵreference(2); return _r3.toggle(); });
+                i0.ɵɵlistener("click", function SidenavBackdropExample_Template_button_click_27_listener() { i0.ɵɵrestoreView(_r6); var _r3 = i0.ɵɵreference(2); return _r3.toggle(); });
                 i0.ɵɵtext(28, "Toggle drawer");
                 i0.ɵɵelementEnd();
                 i0.ɵɵelementEnd();
@@ -142,12 +142,12 @@
     function SidenavDisableCloseExample_mat_sidenav_container_0_Template(rf, ctx) { if (rf & 1) {
         var _r11 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-sidenav-container", 2);
-        i0.ɵɵlistener("backdropClick", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_container_backdropClick_0_listener($event) { i0.ɵɵrestoreView(_r11); var ctx_r10 = i0.ɵɵnextContext(); return ctx_r10.close("backdrop"); });
+        i0.ɵɵlistener("backdropClick", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_container_backdropClick_0_listener() { i0.ɵɵrestoreView(_r11); var ctx_r10 = i0.ɵɵnextContext(); return ctx_r10.close("backdrop"); });
         i0.ɵɵelementStart(1, "mat-sidenav", 3, 4);
-        i0.ɵɵlistener("keydown.escape", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_keydown_escape_1_listener($event) { i0.ɵɵrestoreView(_r11); var ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.close("escape"); });
+        i0.ɵɵlistener("keydown.escape", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_mat_sidenav_keydown_escape_1_listener() { i0.ɵɵrestoreView(_r11); var ctx_r12 = i0.ɵɵnextContext(); return ctx_r12.close("escape"); });
         i0.ɵɵelementStart(3, "p");
         i0.ɵɵelementStart(4, "button", 5);
-        i0.ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_4_listener($event) { i0.ɵɵrestoreView(_r11); var ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.close("toggle button"); });
+        i0.ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r11); var ctx_r13 = i0.ɵɵnextContext(); return ctx_r13.close("toggle button"); });
         i0.ɵɵtext(5, "Toggle");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -155,7 +155,7 @@
         i0.ɵɵelementStart(6, "mat-sidenav-content");
         i0.ɵɵelementStart(7, "p");
         i0.ɵɵelementStart(8, "button", 5);
-        i0.ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_8_listener($event) { i0.ɵɵrestoreView(_r11); var _r9 = i0.ɵɵreference(2); return _r9.open(); });
+        i0.ɵɵlistener("click", function SidenavDisableCloseExample_mat_sidenav_container_0_Template_button_click_8_listener() { i0.ɵɵrestoreView(_r11); var _r9 = i0.ɵɵreference(2); return _r9.open(); });
         i0.ɵɵtext(9, "Open");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -289,7 +289,7 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(21, "p");
         i0.ɵɵelementStart(22, "button", 9);
-        i0.ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_22_listener($event) { i0.ɵɵrestoreView(_r19); var _r17 = i0.ɵɵreference(5); return _r17.toggle(); });
+        i0.ɵɵlistener("click", function SidenavFixedExample_ng_container_0_Template_button_click_22_listener() { i0.ɵɵrestoreView(_r19); var _r17 = i0.ɵɵreference(5); return _r17.toggle(); });
         i0.ɵɵtext(23, "Toggle");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -360,7 +360,7 @@
         i0.ɵɵelementStart(1, "mat-sidenav", 3, 4);
         i0.ɵɵelementStart(3, "p");
         i0.ɵɵelementStart(4, "button", 5);
-        i0.ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_4_listener($event) { i0.ɵɵrestoreView(_r24); var _r22 = i0.ɵɵreference(2); return _r22.toggle(); });
+        i0.ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_4_listener() { i0.ɵɵrestoreView(_r24); var _r22 = i0.ɵɵreference(2); return _r22.toggle(); });
         i0.ɵɵtext(5, "Toggle");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -384,7 +384,7 @@
         i0.ɵɵelementStart(16, "mat-sidenav-content");
         i0.ɵɵelementStart(17, "p");
         i0.ɵɵelementStart(18, "button", 5);
-        i0.ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_18_listener($event) { i0.ɵɵrestoreView(_r24); var _r22 = i0.ɵɵreference(2); return _r22.toggle(); });
+        i0.ɵɵlistener("click", function SidenavModeExample_mat_sidenav_container_0_Template_button_click_18_listener() { i0.ɵɵrestoreView(_r24); var _r22 = i0.ɵɵreference(2); return _r22.toggle(); });
         i0.ɵɵtext(19, "Toggle");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -466,7 +466,7 @@
         var _r32 = i0.ɵɵgetCurrentView();
         i0.ɵɵelementStart(0, "mat-sidenav-container", 2);
         i0.ɵɵelementStart(1, "mat-sidenav", 3, 4);
-        i0.ɵɵlistener("openedChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_openedChange_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r31 = i0.ɵɵnextContext(); return ctx_r31.opened = $event; })("opened", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_opened_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r33 = i0.ɵɵnextContext(); return ctx_r33.events.push("open!"); })("closed", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_closed_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r34 = i0.ɵɵnextContext(); return ctx_r34.events.push("close!"); });
+        i0.ɵɵlistener("openedChange", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_openedChange_1_listener($event) { i0.ɵɵrestoreView(_r32); var ctx_r31 = i0.ɵɵnextContext(); return ctx_r31.opened = $event; })("opened", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_opened_1_listener() { i0.ɵɵrestoreView(_r32); var ctx_r33 = i0.ɵɵnextContext(); return ctx_r33.events.push("open!"); })("closed", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_mat_sidenav_closed_1_listener() { i0.ɵɵrestoreView(_r32); var ctx_r34 = i0.ɵɵnextContext(); return ctx_r34.events.push("close!"); });
         i0.ɵɵtext(3, " Sidenav content ");
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(4, "mat-sidenav-content");
@@ -478,7 +478,7 @@
         i0.ɵɵelementEnd();
         i0.ɵɵelementStart(8, "p");
         i0.ɵɵelementStart(9, "button", 6);
-        i0.ɵɵlistener("click", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_button_click_9_listener($event) { i0.ɵɵrestoreView(_r32); var _r28 = i0.ɵɵreference(2); return _r28.toggle(); });
+        i0.ɵɵlistener("click", function SidenavOpenCloseExample_mat_sidenav_container_0_Template_button_click_9_listener() { i0.ɵɵrestoreView(_r32); var _r28 = i0.ɵɵreference(2); return _r28.toggle(); });
         i0.ɵɵtext(10, "sidenav.toggle()");
         i0.ɵɵelementEnd();
         i0.ɵɵelementEnd();
@@ -655,7 +655,7 @@
         i0.ɵɵelementStart(0, "div", 2);
         i0.ɵɵelementStart(1, "mat-toolbar", 3);
         i0.ɵɵelementStart(2, "button", 4);
-        i0.ɵɵlistener("click", function SidenavResponsiveExample_div_0_Template_button_click_2_listener($event) { i0.ɵɵrestoreView(_r49); var _r43 = i0.ɵɵreference(9); return _r43.toggle(); });
+        i0.ɵɵlistener("click", function SidenavResponsiveExample_div_0_Template_button_click_2_listener() { i0.ɵɵrestoreView(_r49); var _r43 = i0.ɵɵreference(9); return _r43.toggle(); });
         i0.ɵɵelementStart(3, "mat-icon");
         i0.ɵɵtext(4, "menu");
         i0.ɵɵelementEnd();
