@@ -9,10 +9,10 @@ to tabular data.</p>
         </h3>
       <p>To add sorting behavior and styling to a set of table headers, add the <code>&lt;mat-sort-header&gt;</code> component
 to each header and provide an <code>id</code> that will identify it. These headers should be contained within a
-parent element with the <code>matSort</code> directive, which will emit an <code>matSortChange</code> event when the user
+parent element with the <code>matSort</code> directive, which will emit a <code>matSortChange</code> event when the user
  triggers sorting on the header.</p>
 <p>Users can trigger the sort header through a mouse click or keyboard action. When this happens, the
-<code>matSort</code> will emit an <code>matSortChange</code> event that contains the ID of the header triggered and the
+<code>matSort</code> will emit a <code>matSortChange</code> event that contains the ID of the header triggered and the
 direction to sort (<code>asc</code> or <code>desc</code>).</p>
 
         <h4 id="changing-the-sort-order" class="docs-header-link">
@@ -24,7 +24,7 @@ after <code>desc</code> will remove sorting.</p>
 <p>To reverse the sort order for all headers, set the <code>matSortStart</code> to <code>desc</code> on the <code>matSort</code>
 directive. To reverse the order only for a specific header, set the <code>start</code> input only on the header
 instead.</p>
-<p>To prevent the user from clearing the sort sort state from an already sorted column, set
+<p>To prevent the user from clearing the sort state from an already sorted column, set
 <code>matSortDisableClear</code> to <code>true</code> on the <code>matSort</code> to affect all headers, or set <code>disableClear</code> to
 <code>true</code> on a specific header.</p>
 
@@ -33,13 +33,13 @@ instead.</p>
           Disabling sorting
         </h4>
       <p>If you want to prevent the user from changing the sorting order of any column, you can use the
-<code>matSortDisabled</code> binding on the <code>mat-sort</code>, or the <code>disabled</code> on an single <code>mat-sort-header</code>.</p>
+<code>matSortDisabled</code> binding on the <code>mat-sort</code>, or the <code>disabled</code> on a single <code>mat-sort-header</code>.</p>
 
         <h4 id="using-sort-with-the-mat-table" class="docs-header-link">
           <span header-link="using-sort-with-the-mat-table"></span>
           Using sort with the mat-table
         </h4>
-      <p>When used on an <code>mat-table</code> header, it is not required to set an <code>mat-sort-header</code> id on because
+      <p>When used on a <code>mat-table</code> header, it is not required to set a <code>mat-sort-header</code> id on because
 by default it will use the id of the column.</p>
 <div material-docs-example="table-sorting"></div>
 
