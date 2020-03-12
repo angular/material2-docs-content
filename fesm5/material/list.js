@@ -48,10 +48,10 @@ function ListSectionsExample_mat_list_item_3_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(1, "mat-icon", 2);
     ɵɵtext(2, "folder");
     ɵɵelementEnd();
-    ɵɵelementStart(3, "h4", 3);
+    ɵɵelementStart(3, "div", 3);
     ɵɵtext(4);
     ɵɵelementEnd();
-    ɵɵelementStart(5, "p", 3);
+    ɵɵelementStart(5, "div", 3);
     ɵɵtext(6);
     ɵɵpipe(7, "date");
     ɵɵelementEnd();
@@ -68,10 +68,10 @@ function ListSectionsExample_mat_list_item_7_Template(rf, ctx) { if (rf & 1) {
     ɵɵelementStart(1, "mat-icon", 2);
     ɵɵtext(2, "note");
     ɵɵelementEnd();
-    ɵɵelementStart(3, "h4", 3);
+    ɵɵelementStart(3, "div", 3);
     ɵɵtext(4);
     ɵɵelementEnd();
-    ɵɵelementStart(5, "p", 3);
+    ɵɵelementStart(5, "div", 3);
     ɵɵtext(6);
     ɵɵpipe(7, "date");
     ɵɵelementEnd();
@@ -123,12 +123,12 @@ var ListSectionsExample = /** @class */ (function () {
     ListSectionsExample.ɵfac = function ListSectionsExample_Factory(t) { return new (t || ListSectionsExample)(); };
     ListSectionsExample.ɵcmp = ɵɵdefineComponent({ type: ListSectionsExample, selectors: [["list-sections-example"]], decls: 8, vars: 2, consts: [["mat-subheader", ""], [4, "ngFor", "ngForOf"], ["mat-list-icon", ""], ["mat-line", ""]], template: function ListSectionsExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-list");
-            ɵɵelementStart(1, "h3", 0);
+            ɵɵelementStart(1, "div", 0);
             ɵɵtext(2, "Folders");
             ɵɵelementEnd();
             ɵɵtemplate(3, ListSectionsExample_mat_list_item_3_Template, 8, 4, "mat-list-item", 1);
             ɵɵelement(4, "mat-divider");
-            ɵɵelementStart(5, "h3", 0);
+            ɵɵelementStart(5, "div", 0);
             ɵɵtext(6, "Notes");
             ɵɵelementEnd();
             ɵɵtemplate(7, ListSectionsExample_mat_list_item_7_Template, 8, 4, "mat-list-item", 1);
