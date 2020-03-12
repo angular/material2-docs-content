@@ -1,6 +1,7 @@
 import { Component, ViewChild, ɵɵdefineComponent, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵgetCurrentView, ɵɵelementStart, ɵɵlistener, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵɵrestoreView, ɵɵreference, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, ɵɵtextInterpolate1, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatDatepickerInput, MatDatepicker, MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatAccordion, MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle, MatExpansionPanelDescription, MatExpansionPanelActionRow, MatExpansionModule } from '@angular/material/expansion';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatInput, MatInputModule } from '@angular/material/input';
@@ -354,6 +355,7 @@ var ExpansionExamplesModule = /** @class */ (function () {
                     imports: [
                         MatButtonModule,
                         MatDatepickerModule,
+                        MatNativeDateModule,
                         MatExpansionModule,
                         MatIconModule,
                         MatInputModule,
@@ -367,6 +369,7 @@ var ExpansionExamplesModule = /** @class */ (function () {
     ExpansionExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ExpansionExamplesModule_Factory(t) { return new (t || ExpansionExamplesModule)(); }, imports: [[
                 MatButtonModule,
                 MatDatepickerModule,
+                MatNativeDateModule,
                 MatExpansionModule,
                 MatIconModule,
                 MatInputModule,
@@ -377,6 +380,7 @@ var ExpansionExamplesModule = /** @class */ (function () {
         ExpansionOverviewExample,
         ExpansionStepsExample], imports: [MatButtonModule,
         MatDatepickerModule,
+        MatNativeDateModule,
         MatExpansionModule,
         MatIconModule,
         MatInputModule], exports: [ExpansionExpandCollapseAllExample,
@@ -388,6 +392,7 @@ var ExpansionExamplesModule = /** @class */ (function () {
                 imports: [
                     MatButtonModule,
                     MatDatepickerModule,
+                    MatNativeDateModule,
                     MatExpansionModule,
                     MatIconModule,
                     MatInputModule,
