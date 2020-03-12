@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/datepicker'), require('@angular/material/expansion'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/form-field')) :
-    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/expansion', ['exports', '@angular/core', '@angular/material/button', '@angular/material/datepicker', '@angular/material/expansion', '@angular/material/icon', '@angular/material/input', '@angular/material/form-field'], factory) :
-    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.expansion = {}), global.ng.core, global.ng.material.button, global.ng.material.datepicker, global.ng.material.expansion, global.ng.material.icon, global.ng.material.input, global.ng.material.formField));
-}(this, (function (exports, i0, i1, i6, i1$1, i3, i5, i4) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/material/button'), require('@angular/material/datepicker'), require('@angular/material/core'), require('@angular/material/expansion'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/form-field')) :
+    typeof define === 'function' && define.amd ? define('@angular/components-examples/material/expansion', ['exports', '@angular/core', '@angular/material/button', '@angular/material/datepicker', '@angular/material/core', '@angular/material/expansion', '@angular/material/icon', '@angular/material/input', '@angular/material/form-field'], factory) :
+    (global = global || self, factory((global.ng = global.ng || {}, global.ng.componentsExamples = global.ng.componentsExamples || {}, global.ng.componentsExamples.material = global.ng.componentsExamples.material || {}, global.ng.componentsExamples.material.expansion = {}), global.ng.core, global.ng.material.button, global.ng.material.datepicker, global.ng.material.core, global.ng.material.expansion, global.ng.material.icon, global.ng.material.input, global.ng.material.formField));
+}(this, (function (exports, i0, i1, i6, core, i1$1, i3, i5, i4) { 'use strict';
 
     /**
      * @title Accordion with expand/collapse all toggles
@@ -352,6 +352,7 @@
                         imports: [
                             i1.MatButtonModule,
                             i6.MatDatepickerModule,
+                            core.MatNativeDateModule,
                             i1$1.MatExpansionModule,
                             i3.MatIconModule,
                             i5.MatInputModule,
@@ -365,6 +366,7 @@
         ExpansionExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ExpansionExamplesModule_Factory(t) { return new (t || ExpansionExamplesModule)(); }, imports: [[
                     i1.MatButtonModule,
                     i6.MatDatepickerModule,
+                    core.MatNativeDateModule,
                     i1$1.MatExpansionModule,
                     i3.MatIconModule,
                     i5.MatInputModule,
@@ -375,6 +377,7 @@
             ExpansionOverviewExample,
             ExpansionStepsExample], imports: [i1.MatButtonModule,
             i6.MatDatepickerModule,
+            core.MatNativeDateModule,
             i1$1.MatExpansionModule,
             i3.MatIconModule,
             i5.MatInputModule], exports: [ExpansionExpandCollapseAllExample,
@@ -386,6 +389,7 @@
                     imports: [
                         i1.MatButtonModule,
                         i6.MatDatepickerModule,
+                        core.MatNativeDateModule,
                         i1$1.MatExpansionModule,
                         i3.MatIconModule,
                         i5.MatInputModule,
