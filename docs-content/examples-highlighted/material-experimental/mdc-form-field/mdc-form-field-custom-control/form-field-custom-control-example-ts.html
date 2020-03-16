@@ -1,7 +1,7 @@
 <span class="hljs-keyword">import</span> {FocusMonitor} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/a11y'</span>;
 <span class="hljs-keyword">import</span> {coerceBooleanProperty} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/cdk/coercion'</span>;
 <span class="hljs-keyword">import</span> {Component, ElementRef, Input, OnDestroy, Optional, Self} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
-<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, ControlValueAccessor, NgControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
+<span class="hljs-keyword">import</span> {FormBuilder, FormGroup, ControlValueAccessor, NgControl, Validators} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/forms'</span>;
 <span class="hljs-keyword">import</span> {MatFormFieldControl} <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/material-experimental/mdc-form-field'</span>;
 <span class="hljs-keyword">import</span> {Subject} <span class="hljs-keyword">from</span> <span class="hljs-string">'rxjs'</span>;
 
@@ -78,8 +78,8 @@
 
   <span class="hljs-meta">@Input</span>()
   <span class="hljs-keyword">get</span> value(): MyTel | <span class="hljs-literal">null</span> {
-    <span class="hljs-keyword">const</span> {value: {area, exchange, subscriber}} = <span class="hljs-keyword">this</span>.parts;
-    <span class="hljs-keyword">if</span> (area.length === <span class="hljs-number">3</span> &amp;&amp; exchange.length === <span class="hljs-number">3</span> &amp;&amp; subscriber.length === <span class="hljs-number">4</span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.parts.valid) {
+      <span class="hljs-keyword">const</span> {value: {area, exchange, subscriber}} = <span class="hljs-keyword">this</span>.parts;
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> MyTel(area, exchange, subscriber);
     }
     <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
@@ -97,9 +97,9 @@
     <span class="hljs-meta">@Optional</span>() <span class="hljs-meta">@Self</span>() <span class="hljs-keyword">public</span> ngControl: NgControl</span>) {
 
     <span class="hljs-keyword">this</span>.parts = formBuilder.group({
-      area: <span class="hljs-string">''</span>,
-      exchange: <span class="hljs-string">''</span>,
-      subscriber: <span class="hljs-string">''</span>,
+      area: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
+      exchange: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">3</span>), Validators.maxLength(<span class="hljs-number">3</span>)]],
+      subscriber: [<span class="hljs-literal">null</span>, [Validators.required, Validators.minLength(<span class="hljs-number">4</span>), Validators.maxLength(<span class="hljs-number">4</span>)]],
     });
 
     _focusMonitor.monitor(_elementRef, <span class="hljs-literal">true</span>).subscribe(<span class="hljs-function"><span class="hljs-params">origin</span> =&gt;</span> {

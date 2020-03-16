@@ -1,7 +1,7 @@
 import { __spread } from 'tslib';
 import { NgIf, CommonModule } from '@angular/common';
 import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, ElementRef, Optional, Self, Input, ɵɵdirectiveInject, ɵɵhostProperty, ɵɵattribute, ɵɵclassProp, ɵɵProvidersFeature, ɵɵlistener, ɵɵproperty, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate, ɵɵtemplate, ɵɵreference, ɵɵtextInterpolate1, ɵɵstyleProp, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
-import { FormBuilder, NgControl, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, FormControl, Validators, RequiredValidator, FormControlDirective, ɵangular_packages_forms_forms_y, NumberValueAccessor, ReactiveFormsModule } from '@angular/forms';
+import { Validators, FormBuilder, NgControl, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, FormControl, RequiredValidator, FormControlDirective, ɵangular_packages_forms_forms_y, NumberValueAccessor, ReactiveFormsModule } from '@angular/forms';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormField, MatLabel, MatSuffix, MatHint, MatFormFieldControl, MatError, MatPrefix, MatFormFieldModule } from '@angular/material/form-field';
@@ -158,9 +158,9 @@ var MyTelInput = /** @class */ (function () {
         this._required = false;
         this._disabled = false;
         this.parts = formBuilder.group({
-            area: '',
-            exchange: '',
-            subscriber: '',
+            area: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
+            exchange: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
+            subscriber: [null, [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
         });
         _focusMonitor.monitor(_elementRef, true).subscribe(function (origin) {
             if (_this.focused && !origin) {
@@ -216,8 +216,8 @@ var MyTelInput = /** @class */ (function () {
     });
     Object.defineProperty(MyTelInput.prototype, "value", {
         get: function () {
-            var _a = this.parts.value, area = _a.area, exchange = _a.exchange, subscriber = _a.subscriber;
-            if (area.length === 3 && exchange.length === 3 && subscriber.length === 4) {
+            if (this.parts.valid) {
+                var _a = this.parts.value, area = _a.area, exchange = _a.exchange, subscriber = _a.subscriber;
                 return new MyTel(area, exchange, subscriber);
             }
             return null;

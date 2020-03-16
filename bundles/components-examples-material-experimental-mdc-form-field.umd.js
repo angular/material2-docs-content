@@ -264,9 +264,9 @@
             this._required = false;
             this._disabled = false;
             this.parts = formBuilder.group({
-                area: '',
-                exchange: '',
-                subscriber: '',
+                area: [null, [i3.Validators.required, i3.Validators.minLength(3), i3.Validators.maxLength(3)]],
+                exchange: [null, [i3.Validators.required, i3.Validators.minLength(3), i3.Validators.maxLength(3)]],
+                subscriber: [null, [i3.Validators.required, i3.Validators.minLength(4), i3.Validators.maxLength(4)]],
             });
             _focusMonitor.monitor(_elementRef, true).subscribe(function (origin) {
                 if (_this.focused && !origin) {
@@ -322,8 +322,8 @@
         });
         Object.defineProperty(MyTelInput.prototype, "value", {
             get: function () {
-                var _a = this.parts.value, area = _a.area, exchange = _a.exchange, subscriber = _a.subscriber;
-                if (area.length === 3 && exchange.length === 3 && subscriber.length === 4) {
+                if (this.parts.valid) {
+                    var _a = this.parts.value, area = _a.area, exchange = _a.exchange, subscriber = _a.subscriber;
                     return new MyTel(area, exchange, subscriber);
                 }
                 return null;

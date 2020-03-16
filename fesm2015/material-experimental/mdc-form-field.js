@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, ElementRef, Optional, Self, Input, ɵɵdirectiveInject, ɵɵhostProperty, ɵɵattribute, ɵɵclassProp, ɵɵProvidersFeature, ɵɵlistener, ɵɵproperty, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
-import { FormBuilder, NgControl, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, ReactiveFormsModule } from '@angular/forms';
+import { Validators, FormBuilder, NgControl, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, ReactiveFormsModule } from '@angular/forms';
 import { MatFormField, MatLabel, MatSuffix, MatHint, MatFormFieldControl, MatFormFieldModule } from '@angular/material-experimental/mdc-form-field';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { FocusMonitor } from '@angular/cdk/a11y';
@@ -102,9 +102,9 @@ class MyTelInput {
         this._required = false;
         this._disabled = false;
         this.parts = formBuilder.group({
-            area: '',
-            exchange: '',
-            subscriber: '',
+            area: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
+            exchange: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(3)]],
+            subscriber: [null, [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
         });
         _focusMonitor.monitor(_elementRef, true).subscribe((/**
          * @param {?} origin
@@ -173,8 +173,8 @@ class MyTelInput {
      * @return {?}
      */
     get value() {
-        const { value: { area, exchange, subscriber } } = this.parts;
-        if (area.length === 3 && exchange.length === 3 && subscriber.length === 4) {
+        if (this.parts.valid) {
+            const { value: { area, exchange, subscriber } } = this.parts;
             return new MyTel(area, exchange, subscriber);
         }
         return null;
