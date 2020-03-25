@@ -20,18 +20,6 @@
             var _this = this;
             this._ngZone.run(function () { return _this._cdr.markForCheck(); });
         };
-        FocusMonitorDirectivesExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'focus-monitor-directives-example',
-                        templateUrl: 'focus-monitor-directives-example.html',
-                        styleUrls: ['focus-monitor-directives-example.css']
-                    },] },
-        ];
-        /** @nocollapse */
-        FocusMonitorDirectivesExample.ctorParameters = function () { return [
-            { type: i0.NgZone },
-            { type: i0.ChangeDetectorRef }
-        ]; };
         FocusMonitorDirectivesExample.ɵfac = function FocusMonitorDirectivesExample_Factory(t) { return new (t || FocusMonitorDirectivesExample)(i0.ɵɵdirectiveInject(i0.NgZone), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef)); };
         FocusMonitorDirectivesExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorDirectivesExample, selectors: [["focus-monitor-directives-example"]], decls: 11, vars: 2, consts: [[1, "example-focus-monitor"], ["cdkMonitorSubtreeFocus", "", 3, "cdkFocusChange"]], template: function FocusMonitorDirectivesExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "div", 0);
@@ -93,22 +81,6 @@
         };
         FocusMonitorFocusViaExample.prototype.formatOrigin = function (origin) {
             return origin ? origin + ' focused' : 'blurred';
-        };
-        FocusMonitorFocusViaExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'focus-monitor-focus-via-example',
-                        templateUrl: 'focus-monitor-focus-via-example.html',
-                        styleUrls: ['focus-monitor-focus-via-example.css']
-                    },] },
-        ];
-        /** @nocollapse */
-        FocusMonitorFocusViaExample.ctorParameters = function () { return [
-            { type: i1.FocusMonitor },
-            { type: i0.ChangeDetectorRef },
-            { type: i0.NgZone }
-        ]; };
-        FocusMonitorFocusViaExample.propDecorators = {
-            monitoredEl: [{ type: i0.ViewChild, args: ['monitored',] }]
         };
         FocusMonitorFocusViaExample.ɵfac = function FocusMonitorFocusViaExample_Factory(t) { return new (t || FocusMonitorFocusViaExample)(i0.ɵɵdirectiveInject(i1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i0.NgZone)); };
         FocusMonitorFocusViaExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorFocusViaExample, selectors: [["focus-monitor-focus-via-example"]], viewQuery: function FocusMonitorFocusViaExample_Query(rf, ctx) { if (rf & 1) {
@@ -202,23 +174,6 @@
         FocusMonitorOverviewExample.prototype.formatOrigin = function (origin) {
             return origin ? origin + ' focused' : 'blurred';
         };
-        FocusMonitorOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'focus-monitor-overview-example',
-                        templateUrl: 'focus-monitor-overview-example.html',
-                        styleUrls: ['focus-monitor-overview-example.css']
-                    },] },
-        ];
-        /** @nocollapse */
-        FocusMonitorOverviewExample.ctorParameters = function () { return [
-            { type: i1.FocusMonitor },
-            { type: i0.ChangeDetectorRef },
-            { type: i0.NgZone }
-        ]; };
-        FocusMonitorOverviewExample.propDecorators = {
-            element: [{ type: i0.ViewChild, args: ['element',] }],
-            subtree: [{ type: i0.ViewChild, args: ['subtree',] }]
-        };
         FocusMonitorOverviewExample.ɵfac = function FocusMonitorOverviewExample_Factory(t) { return new (t || FocusMonitorOverviewExample)(i0.ɵɵdirectiveInject(i1.FocusMonitor), i0.ɵɵdirectiveInject(i0.ChangeDetectorRef), i0.ɵɵdirectiveInject(i0.NgZone)); };
         FocusMonitorOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: FocusMonitorOverviewExample, selectors: [["focus-monitor-overview-example"]], viewQuery: function FocusMonitorOverviewExample_Query(rf, ctx) { if (rf & 1) {
                 i0.ɵɵviewQuery(_c0$1, true);
@@ -277,17 +232,6 @@
     var CdkA11yExamplesModule = /** @class */ (function () {
         function CdkA11yExamplesModule() {
         }
-        CdkA11yExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i1.A11yModule,
-                            i3.MatSelectModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                        entryComponents: EXAMPLES,
-                    },] },
-        ];
         CdkA11yExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: CdkA11yExamplesModule });
         CdkA11yExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function CdkA11yExamplesModule_Factory(t) { return new (t || CdkA11yExamplesModule)(); }, imports: [[
                     i1.A11yModule,

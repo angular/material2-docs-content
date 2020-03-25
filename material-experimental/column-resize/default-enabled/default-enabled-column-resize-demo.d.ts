@@ -11,6 +11,6 @@ export interface PeriodicElement {
 export declare class DefaultEnabledColumnResizeDemo {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
-    static ɵfac: i0.ɵɵFactoryDef<DefaultEnabledColumnResizeDemo>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DefaultEnabledColumnResizeDemo, "default-enabled-column-resize-demo", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<DefaultEnabledColumnResizeDemo, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<DefaultEnabledColumnResizeDemo, "default-enabled-column-resize-demo", never, {}, {}, never, never>;
 }

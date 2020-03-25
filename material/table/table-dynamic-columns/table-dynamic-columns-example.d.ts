@@ -15,6 +15,6 @@ export declare class TableDynamicColumnsExample {
     addColumn(): void;
     removeColumn(): void;
     shuffle(): void;
-    static ɵfac: i0.ɵɵFactoryDef<TableDynamicColumnsExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableDynamicColumnsExample, "table-dynamic-columns-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableDynamicColumnsExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableDynamicColumnsExample, "table-dynamic-columns-example", never, {}, {}, never, never>;
 }

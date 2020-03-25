@@ -10,8 +10,8 @@ export declare class TablePaginationExample implements OnInit {
     dataSource: MatTableDataSource<PeriodicElement>;
     paginator: MatPaginator;
     ngOnInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<TablePaginationExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TablePaginationExample, "table-pagination-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TablePaginationExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TablePaginationExample, "table-pagination-example", never, {}, {}, never, never>;
 }
 export interface PeriodicElement {
     name: string;

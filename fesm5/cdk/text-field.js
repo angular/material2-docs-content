@@ -1,6 +1,6 @@
 import { CdkAutofill, AutofillMonitor, CdkTextareaAutosize, TextFieldModule } from '@angular/cdk/text-field';
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, Component, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, ViewChild, ElementRef, ɵɵdirectiveInject, ɵɵviewQuery, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵelement, NgZone, ɵɵreference, ɵɵstyleProp, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵadvance, ɵɵproperty, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ɵɵviewQuery, ElementRef, ɵɵqueryRefresh, ɵɵloadQuery, ɵɵelement, ViewChild, NgZone, ɵɵreference, ɵɵstyleProp, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { MatFormField, MatLabel, MatHint } from '@angular/material/form-field';
@@ -21,13 +21,6 @@ function TextFieldAutofillDirectiveExample_mat_hint_10_Template(rf, ctx) { if (r
 var TextFieldAutofillDirectiveExample = /** @class */ (function () {
     function TextFieldAutofillDirectiveExample() {
     }
-    TextFieldAutofillDirectiveExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'text-field-autofill-directive-example',
-                    templateUrl: './text-field-autofill-directive-example.html',
-                    styleUrls: ['./text-field-autofill-directive-example.css'],
-                },] },
-    ];
     TextFieldAutofillDirectiveExample.ɵfac = function TextFieldAutofillDirectiveExample_Factory(t) { return new (t || TextFieldAutofillDirectiveExample)(); };
     TextFieldAutofillDirectiveExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutofillDirectiveExample, selectors: [["text-field-autofill-directive-example"]], decls: 13, vars: 2, consts: [["matInput", "", 3, "cdkAutofill"], [4, "ngIf"], ["mat-raised-button", ""]], template: function TextFieldAutofillDirectiveExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "form");
@@ -98,21 +91,6 @@ var TextFieldAutofillMonitorExample = /** @class */ (function () {
         this._autofill.stopMonitoring(this.firstName);
         this._autofill.stopMonitoring(this.lastName);
     };
-    TextFieldAutofillMonitorExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'text-field-autofill-monitor-example',
-                    templateUrl: './text-field-autofill-monitor-example.html',
-                    styleUrls: ['./text-field-autofill-monitor-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    TextFieldAutofillMonitorExample.ctorParameters = function () { return [
-        { type: AutofillMonitor }
-    ]; };
-    TextFieldAutofillMonitorExample.propDecorators = {
-        firstName: [{ type: ViewChild, args: ['first', { read: ElementRef },] }],
-        lastName: [{ type: ViewChild, args: ['last', { read: ElementRef },] }]
-    };
     TextFieldAutofillMonitorExample.ɵfac = function TextFieldAutofillMonitorExample_Factory(t) { return new (t || TextFieldAutofillMonitorExample)(ɵɵdirectiveInject(AutofillMonitor)); };
     TextFieldAutofillMonitorExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutofillMonitorExample, selectors: [["text-field-autofill-monitor-example"]], viewQuery: function TextFieldAutofillMonitorExample_Query(rf, ctx) { if (rf & 1) {
             ɵɵviewQuery(_c0, true, ElementRef);
@@ -175,20 +153,6 @@ var TextFieldAutosizeTextareaExample = /** @class */ (function () {
         // Wait for changes to be applied, then trigger textarea resize.
         this._ngZone.onStable.pipe(take(1))
             .subscribe(function () { return _this.autosize.resizeToFitContent(true); });
-    };
-    TextFieldAutosizeTextareaExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'text-field-autosize-textarea-example',
-                    templateUrl: './text-field-autosize-textarea-example.html',
-                    styleUrls: ['./text-field-autosize-textarea-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    TextFieldAutosizeTextareaExample.ctorParameters = function () { return [
-        { type: NgZone }
-    ]; };
-    TextFieldAutosizeTextareaExample.propDecorators = {
-        autosize: [{ type: ViewChild, args: ['autosize',] }]
     };
     TextFieldAutosizeTextareaExample.ɵfac = function TextFieldAutosizeTextareaExample_Factory(t) { return new (t || TextFieldAutosizeTextareaExample)(ɵɵdirectiveInject(NgZone)); };
     TextFieldAutosizeTextareaExample.ɵcmp = ɵɵdefineComponent({ type: TextFieldAutosizeTextareaExample, selectors: [["text-field-autosize-textarea-example"]], viewQuery: function TextFieldAutosizeTextareaExample_Query(rf, ctx) { if (rf & 1) {
@@ -256,19 +220,6 @@ var EXAMPLES = [
 var CdkTextFieldExamplesModule = /** @class */ (function () {
     function CdkTextFieldExamplesModule() {
     }
-    CdkTextFieldExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        TextFieldModule,
-                        MatInputModule,
-                        MatSelectModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
     CdkTextFieldExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkTextFieldExamplesModule });
     CdkTextFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkTextFieldExamplesModule_Factory(t) { return new (t || CdkTextFieldExamplesModule)(); }, imports: [[
                 CommonModule,

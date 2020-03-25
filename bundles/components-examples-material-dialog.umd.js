@@ -17,17 +17,6 @@
                 console.log("Dialog result: " + result);
             });
         };
-        DialogContentExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'dialog-content-example',
-                        templateUrl: 'dialog-content-example.html',
-                        styleUrls: ['dialog-content-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        DialogContentExample.ctorParameters = function () { return [
-            { type: i1.MatDialog }
-        ]; };
         DialogContentExample.ɵfac = function DialogContentExample_Factory(t) { return new (t || DialogContentExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
         DialogContentExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogContentExample, selectors: [["dialog-content-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogContentExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
@@ -48,12 +37,6 @@
     var DialogContentExampleDialog = /** @class */ (function () {
         function DialogContentExampleDialog() {
         }
-        DialogContentExampleDialog.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'dialog-content-example-dialog',
-                        templateUrl: 'dialog-content-example-dialog.html',
-                    },] },
-        ];
         DialogContentExampleDialog.ɵfac = function DialogContentExampleDialog_Factory(t) { return new (t || DialogContentExampleDialog)(); };
         DialogContentExampleDialog.ɵcmp = i0.ɵɵdefineComponent({ type: DialogContentExampleDialog, selectors: [["dialog-content-example-dialog"]], decls: 46, vars: 1, consts: [["mat-dialog-title", ""], [1, "mat-typography"], ["align", "end"], ["mat-button", "", "mat-dialog-close", ""], ["mat-button", "", "cdkFocusInitial", "", 3, "mat-dialog-close"]], template: function DialogContentExampleDialog_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h2", 0);
@@ -169,17 +152,6 @@
                 }
             });
         };
-        DialogDataExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'dialog-data-example',
-                        templateUrl: 'dialog-data-example.html',
-                        styleUrls: ['dialog-data-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        DialogDataExample.ctorParameters = function () { return [
-            { type: i1.MatDialog }
-        ]; };
         DialogDataExample.ɵfac = function DialogDataExample_Factory(t) { return new (t || DialogDataExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
         DialogDataExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogDataExample, selectors: [["dialog-data-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogDataExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
@@ -201,16 +173,6 @@
         function DialogDataExampleDialog(data) {
             this.data = data;
         }
-        DialogDataExampleDialog.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'dialog-data-example-dialog',
-                        templateUrl: 'dialog-data-example-dialog.html',
-                    },] },
-        ];
-        /** @nocollapse */
-        DialogDataExampleDialog.ctorParameters = function () { return [
-            { type: undefined, decorators: [{ type: i0.Inject, args: [i1.MAT_DIALOG_DATA,] }] }
-        ]; };
         DialogDataExampleDialog.ɵfac = function DialogDataExampleDialog_Factory(t) { return new (t || DialogDataExampleDialog)(i0.ɵɵdirectiveInject(i1.MAT_DIALOG_DATA)); };
         DialogDataExampleDialog.ɵcmp = i0.ɵɵdefineComponent({ type: DialogDataExampleDialog, selectors: [["dialog-data-example-dialog"]], decls: 14, vars: 3, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], [4, "ngIf"]], template: function DialogDataExampleDialog_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h1", 0);
@@ -264,17 +226,6 @@
         DialogElementsExample.prototype.openDialog = function () {
             this.dialog.open(DialogElementsExampleDialog);
         };
-        DialogElementsExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'dialog-elements-example',
-                        templateUrl: 'dialog-elements-example.html',
-                        styleUrls: ['dialog-elements-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        DialogElementsExample.ctorParameters = function () { return [
-            { type: i1.MatDialog }
-        ]; };
         DialogElementsExample.ɵfac = function DialogElementsExample_Factory(t) { return new (t || DialogElementsExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
         DialogElementsExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogElementsExample, selectors: [["dialog-elements-example"]], decls: 2, vars: 0, consts: [["mat-button", "", 3, "click"]], template: function DialogElementsExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "button", 0);
@@ -295,12 +246,6 @@
     var DialogElementsExampleDialog = /** @class */ (function () {
         function DialogElementsExampleDialog() {
         }
-        DialogElementsExampleDialog.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'dialog-elements-example-dialog',
-                        templateUrl: 'dialog-elements-example-dialog.html',
-                    },] },
-        ];
         DialogElementsExampleDialog.ɵfac = function DialogElementsExampleDialog_Factory(t) { return new (t || DialogElementsExampleDialog)(); };
         DialogElementsExampleDialog.ɵcmp = i0.ɵɵdefineComponent({ type: DialogElementsExampleDialog, selectors: [["dialog-elements-example-dialog"]], decls: 7, vars: 0, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], ["mat-dialog-actions", ""], ["mat-button", "", "mat-dialog-close", ""]], template: function DialogElementsExampleDialog_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h1", 0);
@@ -355,17 +300,6 @@
                 _this.animal = result;
             });
         };
-        DialogOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'dialog-overview-example',
-                        templateUrl: 'dialog-overview-example.html',
-                        styleUrls: ['dialog-overview-example.css'],
-                    },] },
-        ];
-        /** @nocollapse */
-        DialogOverviewExample.ctorParameters = function () { return [
-            { type: i1.MatDialog }
-        ]; };
         DialogOverviewExample.ɵfac = function DialogOverviewExample_Factory(t) { return new (t || DialogOverviewExample)(i0.ɵɵdirectiveInject(i1.MatDialog)); };
         DialogOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: DialogOverviewExample, selectors: [["dialog-overview-example"]], decls: 10, vars: 2, consts: [["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-raised-button", "", 3, "click"], [4, "ngIf"]], template: function DialogOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "ol");
@@ -411,17 +345,6 @@
         DialogOverviewExampleDialog.prototype.onNoClick = function () {
             this.dialogRef.close();
         };
-        DialogOverviewExampleDialog.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'dialog-overview-example-dialog',
-                        templateUrl: 'dialog-overview-example-dialog.html',
-                    },] },
-        ];
-        /** @nocollapse */
-        DialogOverviewExampleDialog.ctorParameters = function () { return [
-            { type: i1.MatDialogRef },
-            { type: undefined, decorators: [{ type: i0.Inject, args: [i1.MAT_DIALOG_DATA,] }] }
-        ]; };
         DialogOverviewExampleDialog.ɵfac = function DialogOverviewExampleDialog_Factory(t) { return new (t || DialogOverviewExampleDialog)(i0.ɵɵdirectiveInject(i1.MatDialogRef), i0.ɵɵdirectiveInject(i1.MAT_DIALOG_DATA)); };
         DialogOverviewExampleDialog.ɵcmp = i0.ɵɵdefineComponent({ type: DialogOverviewExampleDialog, selectors: [["dialog-overview-example-dialog"]], decls: 14, vars: 3, consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], ["matInput", "", 3, "ngModel", "ngModelChange"], ["mat-dialog-actions", ""], ["mat-button", "", 3, "click"], ["mat-button", "", "cdkFocusInitial", "", 3, "mat-dialog-close"]], template: function DialogOverviewExampleDialog_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "h1", 0);
@@ -483,20 +406,6 @@
     var DialogExamplesModule = /** @class */ (function () {
         function DialogExamplesModule() {
         }
-        DialogExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i3.CommonModule,
-                            i2.MatButtonModule,
-                            i1.MatDialogModule,
-                            i3$1.MatInputModule,
-                            i4.FormsModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                        entryComponents: EXAMPLES,
-                    },] },
-        ];
         DialogExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: DialogExamplesModule });
         DialogExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function DialogExamplesModule_Factory(t) { return new (t || DialogExamplesModule)(); }, imports: [[
                     i3.CommonModule,

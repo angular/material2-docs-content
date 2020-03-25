@@ -19,8 +19,8 @@ export declare class TableHttpExample implements AfterViewInit {
     sort: MatSort;
     constructor(_httpClient: HttpClient);
     ngAfterViewInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<TableHttpExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableHttpExample, "table-http-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableHttpExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableHttpExample, "table-http-example", never, {}, {}, never, never>;
 }
 export interface GithubApi {
     items: GithubIssue[];

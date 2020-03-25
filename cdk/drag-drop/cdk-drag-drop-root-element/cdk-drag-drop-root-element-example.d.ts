@@ -14,6 +14,6 @@ export declare class CdkDragDropRootElementExample implements AfterViewInit, OnD
     ngAfterViewInit(): void;
     ngOnDestroy(): void;
     openDialog(): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropRootElementExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropRootElementExample, "cdk-drag-drop-root-element-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkDragDropRootElementExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkDragDropRootElementExample, "cdk-drag-drop-root-element-example", never, {}, {}, never, never>;
 }

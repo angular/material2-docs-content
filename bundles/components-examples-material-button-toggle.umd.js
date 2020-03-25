@@ -10,13 +10,6 @@
     var ButtonToggleAppearanceExample = /** @class */ (function () {
         function ButtonToggleAppearanceExample() {
         }
-        ButtonToggleAppearanceExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'button-toggle-appearance-example',
-                        templateUrl: 'button-toggle-appearance-example.html',
-                        styleUrls: ['button-toggle-appearance-example.css'],
-                    },] },
-        ];
         ButtonToggleAppearanceExample.ɵfac = function ButtonToggleAppearanceExample_Factory(t) { return new (t || ButtonToggleAppearanceExample)(); };
         ButtonToggleAppearanceExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleAppearanceExample, selectors: [["button-toggle-appearance-example"]], decls: 18, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"], ["appearance", "legacy", "name", "fontStyle", "aria-label", "Font Style"]], template: function ButtonToggleAppearanceExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "p");
@@ -65,13 +58,6 @@
     var ButtonToggleExclusiveExample = /** @class */ (function () {
         function ButtonToggleExclusiveExample() {
         }
-        ButtonToggleExclusiveExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'button-toggle-exclusive-example',
-                        templateUrl: 'button-toggle-exclusive-example.html',
-                        styleUrls: ['button-toggle-exclusive-example.css'],
-                    },] },
-        ];
         ButtonToggleExclusiveExample.ɵfac = function ButtonToggleExclusiveExample_Factory(t) { return new (t || ButtonToggleExclusiveExample)(); };
         ButtonToggleExclusiveExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleExclusiveExample, selectors: [["button-toggle-exclusive-example"]], decls: 16, vars: 1, consts: [["group", "matButtonToggleGroup"], ["value", "left", "aria-label", "Text align left"], ["value", "center", "aria-label", "Text align center"], ["value", "right", "aria-label", "Text align right"], ["value", "justify", "disabled", "", "aria-label", "Text align justify"], [1, "example-selected-value"]], template: function ButtonToggleExclusiveExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-button-toggle-group", null, 0);
@@ -121,13 +107,6 @@
     var ButtonToggleOverviewExample = /** @class */ (function () {
         function ButtonToggleOverviewExample() {
         }
-        ButtonToggleOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'button-toggle-overview-example',
-                        templateUrl: 'button-toggle-overview-example.html',
-                        styleUrls: ['button-toggle-overview-example.css'],
-                    },] },
-        ];
         ButtonToggleOverviewExample.ɵfac = function ButtonToggleOverviewExample_Factory(t) { return new (t || ButtonToggleOverviewExample)(); };
         ButtonToggleOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: ButtonToggleOverviewExample, selectors: [["button-toggle-overview-example"]], decls: 7, vars: 0, consts: [["name", "fontStyle", "aria-label", "Font Style"], ["value", "bold"], ["value", "italic"], ["value", "underline"]], template: function ButtonToggleOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-button-toggle-group", 0);
@@ -161,17 +140,6 @@
     var ButtonToggleExamplesModule = /** @class */ (function () {
         function ButtonToggleExamplesModule() {
         }
-        ButtonToggleExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i1.MatButtonToggleModule,
-                            i2.MatIconModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                        entryComponents: EXAMPLES,
-                    },] },
-        ];
         ButtonToggleExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: ButtonToggleExamplesModule });
         ButtonToggleExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function ButtonToggleExamplesModule_Factory(t) { return new (t || ButtonToggleExamplesModule)(); }, imports: [[
                     i1.MatButtonToggleModule,

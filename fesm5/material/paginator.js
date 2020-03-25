@@ -1,5 +1,5 @@
 import { NgIf, CommonModule } from '@angular/common';
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate1, Component, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵproperty, ɵɵpureFunction0, ɵsetClassMetadata, ɵɵelement, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵnextContext, ɵɵadvance, ɵɵtextInterpolate1, ɵɵdefineComponent, ɵɵlistener, ɵɵtemplate, ɵɵproperty, ɵɵpureFunction0, ɵsetClassMetadata, Component, ɵɵelement, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { NumberValueAccessor, DefaultValueAccessor, NgControlStatus, NgModel, FormsModule } from '@angular/forms';
 import { MatInput, MatInputModule } from '@angular/material/input';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
@@ -45,13 +45,6 @@ var PaginatorConfigurableExample = /** @class */ (function () {
             this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(function (str) { return +str; });
         }
     };
-    PaginatorConfigurableExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'paginator-configurable-example',
-                    templateUrl: 'paginator-configurable-example.html',
-                    styleUrls: ['paginator-configurable-example.css'],
-                },] },
-    ];
     PaginatorConfigurableExample.ɵfac = function PaginatorConfigurableExample_Factory(t) { return new (t || PaginatorConfigurableExample)(); };
     PaginatorConfigurableExample.ɵcmp = ɵɵdefineComponent({ type: PaginatorConfigurableExample, selectors: [["paginator-configurable-example"]], decls: 14, vars: 9, consts: [["matInput", "", "type", "number", 3, "ngModel", "ngModelChange"], ["matInput", "", "placeholder", "Ex. 10,25,50", 3, "ngModel", "ngModelOptions", "ngModelChange"], [3, "length", "pageSize", "pageSizeOptions", "page"], [4, "ngIf"]], template: function PaginatorConfigurableExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
@@ -112,13 +105,6 @@ var _c0$1 = function () { return [5, 10, 25, 100]; };
 var PaginatorOverviewExample = /** @class */ (function () {
     function PaginatorOverviewExample() {
     }
-    PaginatorOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'paginator-overview-example',
-                    templateUrl: 'paginator-overview-example.html',
-                    styleUrls: ['paginator-overview-example.css'],
-                },] },
-    ];
     PaginatorOverviewExample.ɵfac = function PaginatorOverviewExample_Factory(t) { return new (t || PaginatorOverviewExample)(); };
     PaginatorOverviewExample.ɵcmp = ɵɵdefineComponent({ type: PaginatorOverviewExample, selectors: [["paginator-overview-example"]], decls: 1, vars: 4, consts: [[3, "length", "pageSize", "pageSizeOptions"]], template: function PaginatorOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelement(0, "mat-paginator", 0);
@@ -143,19 +129,6 @@ var EXAMPLES = [
 var PaginatorExamplesModule = /** @class */ (function () {
     function PaginatorExamplesModule() {
     }
-    PaginatorExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        MatInputModule,
-                        MatPaginatorModule,
-                        FormsModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
     PaginatorExamplesModule.ɵmod = ɵɵdefineNgModule({ type: PaginatorExamplesModule });
     PaginatorExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function PaginatorExamplesModule_Factory(t) { return new (t || PaginatorExamplesModule)(); }, imports: [[
                 CommonModule,

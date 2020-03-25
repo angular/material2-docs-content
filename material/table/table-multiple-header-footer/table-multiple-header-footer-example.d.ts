@@ -8,6 +8,6 @@ export declare class TableMultipleHeaderFooterExample {
     transactions: Transaction[];
     /** Gets the total cost of all transactions. */
     getTotalCost(): number;
-    static ɵfac: i0.ɵɵFactoryDef<TableMultipleHeaderFooterExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableMultipleHeaderFooterExample, "table-multiple-header-footer-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableMultipleHeaderFooterExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableMultipleHeaderFooterExample, "table-multiple-header-footer-example", never, {}, {}, never, never>;
 }

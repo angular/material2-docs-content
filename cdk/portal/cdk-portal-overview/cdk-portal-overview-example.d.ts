@@ -12,10 +12,10 @@ export declare class CdkPortalOverviewExample implements AfterViewInit {
     templatePortal: TemplatePortal<any>;
     constructor(_viewContainerRef: ViewContainerRef);
     ngAfterViewInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<CdkPortalOverviewExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkPortalOverviewExample, "cdk-portal-overview-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkPortalOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkPortalOverviewExample, "cdk-portal-overview-example", never, {}, {}, never, never>;
 }
 export declare class ComponentPortalExample {
-    static ɵfac: i0.ɵɵFactoryDef<ComponentPortalExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<ComponentPortalExample, "component-portal-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<ComponentPortalExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<ComponentPortalExample, "component-portal-example", never, {}, {}, never, never>;
 }

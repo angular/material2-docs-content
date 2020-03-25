@@ -1,6 +1,6 @@
 import { __spread } from 'tslib';
 import { CommonModule } from '@angular/common';
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, ElementRef, Optional, Self, Input, ɵɵdirectiveInject, ɵɵhostProperty, ɵɵattribute, ɵɵclassProp, ɵɵProvidersFeature, ɵɵlistener, ɵɵproperty, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵdirectiveInject, ElementRef, ɵɵhostProperty, ɵɵattribute, ɵɵclassProp, ɵɵProvidersFeature, ɵɵlistener, ɵɵproperty, Optional, Self, Input, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { Validators, FormBuilder, NgControl, NgControlStatusGroup, FormGroupDirective, DefaultValueAccessor, NgControlStatus, FormControlName, ReactiveFormsModule } from '@angular/forms';
 import { MatFormField, MatLabel, MatSuffix, MatHint, MatFormFieldControl, MatFormFieldModule } from '@angular/material-experimental/mdc-form-field';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
@@ -12,13 +12,6 @@ import { Subject } from 'rxjs';
 var FormFieldCustomControlExample = /** @class */ (function () {
     function FormFieldCustomControlExample() {
     }
-    FormFieldCustomControlExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'form-field-custom-control-example',
-                    templateUrl: 'form-field-custom-control-example.html',
-                    styleUrls: ['form-field-custom-control-example.css'],
-                },] },
-    ];
     FormFieldCustomControlExample.ɵfac = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
     FormFieldCustomControlExample.ɵcmp = ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-form-field");
@@ -171,32 +164,6 @@ var MyTelInput = /** @class */ (function () {
         this.onChange(this.value);
     };
     MyTelInput.nextId = 0;
-    MyTelInput.decorators = [
-        { type: Component, args: [{
-                    selector: 'example-tel-input',
-                    templateUrl: 'example-tel-input-example.html',
-                    styleUrls: ['example-tel-input-example.css'],
-                    providers: [{ provide: MatFormFieldControl, useExisting: MyTelInput }],
-                    host: {
-                        '[class.example-floating]': 'shouldLabelFloat',
-                        '[id]': 'id',
-                        '[attr.aria-describedby]': 'describedBy',
-                    }
-                },] },
-    ];
-    /** @nocollapse */
-    MyTelInput.ctorParameters = function () { return [
-        { type: FormBuilder },
-        { type: FocusMonitor },
-        { type: ElementRef },
-        { type: NgControl, decorators: [{ type: Optional }, { type: Self }] }
-    ]; };
-    MyTelInput.propDecorators = {
-        placeholder: [{ type: Input }],
-        required: [{ type: Input }],
-        disabled: [{ type: Input }],
-        value: [{ type: Input }]
-    };
     MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(ɵɵdirectiveInject(FormBuilder), ɵɵdirectiveInject(FocusMonitor), ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(NgControl, 10)); };
     MyTelInput.ɵcmp = ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
             ɵɵhostProperty("id", ctx.id);
@@ -258,19 +225,6 @@ var EXAMPLES = [
 var MdcFormFieldExamplesModule = /** @class */ (function () {
     function MdcFormFieldExamplesModule() {
     }
-    MdcFormFieldExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        CommonModule,
-                        MatFormFieldModule,
-                        MatIconModule,
-                        ReactiveFormsModule,
-                    ],
-                    declarations: __spread(EXAMPLES, [MyTelInput]),
-                    exports: __spread(EXAMPLES, [MyTelInput]),
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
     MdcFormFieldExamplesModule.ɵmod = ɵɵdefineNgModule({ type: MdcFormFieldExamplesModule });
     MdcFormFieldExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function MdcFormFieldExamplesModule_Factory(t) { return new (t || MdcFormFieldExamplesModule)(); }, imports: [[
                 CommonModule,

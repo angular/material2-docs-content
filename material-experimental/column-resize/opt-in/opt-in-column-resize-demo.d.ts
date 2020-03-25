@@ -11,6 +11,6 @@ export interface PeriodicElement {
 export declare class OptInColumnResizeDemo {
     displayedColumns: string[];
     dataSource: PeriodicElement[];
-    static ɵfac: i0.ɵɵFactoryDef<OptInColumnResizeDemo>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<OptInColumnResizeDemo, "opt-in-column-resize-demo", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<OptInColumnResizeDemo, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<OptInColumnResizeDemo, "opt-in-column-resize-demo", never, {}, {}, never, never>;
 }

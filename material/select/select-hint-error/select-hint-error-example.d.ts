@@ -9,7 +9,7 @@ export declare class SelectHintErrorExample {
     animalControl: FormControl;
     selectFormControl: FormControl;
     animals: Animal[];
-    static ɵfac: i0.ɵɵFactoryDef<SelectHintErrorExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<SelectHintErrorExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<SelectHintErrorExample, "select-hint-error-example", never, {}, {}, never, never>;
 }
 export {};

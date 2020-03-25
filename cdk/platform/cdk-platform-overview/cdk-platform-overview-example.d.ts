@@ -9,6 +9,6 @@ export declare class CdkPlatformOverviewExample {
     supportsPassiveEventListeners: boolean;
     supportsScrollBehavior: boolean;
     constructor(platform: Platform);
-    static ɵfac: i0.ɵɵFactoryDef<CdkPlatformOverviewExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkPlatformOverviewExample, "cdk-platform-overview-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<CdkPlatformOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<CdkPlatformOverviewExample, "cdk-platform-overview-example", never, {}, {}, never, never>;
 }

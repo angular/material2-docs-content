@@ -9,6 +9,6 @@ export declare class MyErrorStateMatcher implements ErrorStateMatcher {
 export declare class InputErrorStateMatcherExample {
     emailFormControl: FormControl;
     matcher: MyErrorStateMatcher;
-    static ɵfac: i0.ɵɵFactoryDef<InputErrorStateMatcherExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<InputErrorStateMatcherExample, "input-error-state-matcher-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<InputErrorStateMatcherExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<InputErrorStateMatcherExample, "input-error-state-matcher-example", never, {}, {}, never, never>;
 }

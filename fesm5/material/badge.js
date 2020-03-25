@@ -1,4 +1,4 @@
-import { Component, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatBadge, MatBadgeModule } from '@angular/material/badge';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
@@ -9,13 +9,6 @@ import { MatIcon, MatIconModule } from '@angular/material/icon';
 var BadgeOverviewExample = /** @class */ (function () {
     function BadgeOverviewExample() {
     }
-    BadgeOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'badge-overview-example',
-                    templateUrl: 'badge-overview-example.html',
-                    styleUrls: ['badge-overview-example.css'],
-                },] },
-    ];
     BadgeOverviewExample.ɵfac = function BadgeOverviewExample_Factory(t) { return new (t || BadgeOverviewExample)(); };
     BadgeOverviewExample.ɵcmp = ɵɵdefineComponent({ type: BadgeOverviewExample, selectors: [["badge-overview-example"]], decls: 13, vars: 0, consts: [["matBadge", "4", "matBadgeOverlap", "false"], ["mat-raised-button", "", "color", "primary", "matBadge", "8", "matBadgePosition", "before", "matBadgeColor", "accent"], ["matBadge", "15", "matBadgeColor", "warn"], [1, "cdk-visually-hidden"]], template: function BadgeOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "p");
@@ -56,18 +49,6 @@ var EXAMPLES = [
 var BadgeExamplesModule = /** @class */ (function () {
     function BadgeExamplesModule() {
     }
-    BadgeExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatBadgeModule,
-                        MatButtonModule,
-                        MatIconModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
     BadgeExamplesModule.ɵmod = ɵɵdefineNgModule({ type: BadgeExamplesModule });
     BadgeExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function BadgeExamplesModule_Factory(t) { return new (t || BadgeExamplesModule)(); }, imports: [[
                 MatBadgeModule,

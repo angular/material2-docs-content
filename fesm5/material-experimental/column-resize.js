@@ -1,4 +1,4 @@
-import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, Component, ViewEncapsulation, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵproperty, ɵɵadvance, ɵɵtextInterpolate1, ɵɵelement, ɵɵdefineComponent, ɵɵelementContainerStart, ɵɵtemplate, ɵɵelementContainerEnd, ɵsetClassMetadata, Component, ViewEncapsulation, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatDefaultEnabledColumnResize, MatDefaultResizable, MatDefaultEnabledColumnResizeModule, MatDefaultEnabledColumnResizeFlex, MatColumnResize, MatResizable, MatColumnResizeModule } from '@angular/material-experimental/column-resize';
 import { MatTable, MatColumnDef, MatHeaderCellDef, MatCellDef, MatHeaderRowDef, MatRowDef, MatHeaderCell, MatCell, MatHeaderRow, MatRow, MatTableModule } from '@angular/material/table';
 
@@ -105,13 +105,6 @@ var DefaultEnabledColumnResizeDemo = /** @class */ (function () {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = ELEMENT_DATA;
     }
-    DefaultEnabledColumnResizeDemo.decorators = [
-        { type: Component, args: [{
-                    selector: 'default-enabled-column-resize-demo',
-                    templateUrl: 'default-enabled-column-resize-demo.html',
-                    encapsulation: ViewEncapsulation.None,
-                },] },
-    ];
     DefaultEnabledColumnResizeDemo.ɵfac = function DefaultEnabledColumnResizeDemo_Factory(t) { return new (t || DefaultEnabledColumnResizeDemo)(); };
     DefaultEnabledColumnResizeDemo.ɵcmp = ɵɵdefineComponent({ type: DefaultEnabledColumnResizeDemo, selectors: [["default-enabled-column-resize-demo"]], decls: 15, vars: 3, consts: [["mat-table", "", 1, "mat-elevation-z8", "example-table", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", 3, "matResizableMaxWidthPx", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-header-cell", "", 3, "matResizableMinWidthPx", 4, "matHeaderCellDef"], ["matColumnDef", "weight"], ["mat-header-cell", "", "disableResize", "", 4, "matHeaderCellDef"], ["matColumnDef", "symbol"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", 3, "matResizableMaxWidthPx"], ["mat-cell", ""], ["mat-header-cell", "", 3, "matResizableMinWidthPx"], ["mat-header-cell", "", "disableResize", ""], ["mat-header-cell", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function DefaultEnabledColumnResizeDemo_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
@@ -162,16 +155,6 @@ var DefaultEnabledColumnResizeDemo = /** @class */ (function () {
 var DefaultEnabledColumnResizeDemoModule = /** @class */ (function () {
     function DefaultEnabledColumnResizeDemoModule() {
     }
-    DefaultEnabledColumnResizeDemoModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatDefaultEnabledColumnResizeModule,
-                        MatTableModule,
-                    ],
-                    declarations: [DefaultEnabledColumnResizeDemo],
-                    exports: [DefaultEnabledColumnResizeDemo],
-                },] },
-    ];
     DefaultEnabledColumnResizeDemoModule.ɵmod = ɵɵdefineNgModule({ type: DefaultEnabledColumnResizeDemoModule });
     DefaultEnabledColumnResizeDemoModule.ɵinj = ɵɵdefineInjector({ factory: function DefaultEnabledColumnResizeDemoModule_Factory(t) { return new (t || DefaultEnabledColumnResizeDemoModule)(); }, imports: [[
                 MatDefaultEnabledColumnResizeModule,
@@ -296,13 +279,6 @@ var DefaultEnabledColumnResizeFlexDemo = /** @class */ (function () {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = ELEMENT_DATA$1;
     }
-    DefaultEnabledColumnResizeFlexDemo.decorators = [
-        { type: Component, args: [{
-                    selector: 'default-enabled-column-resize-flex-demo',
-                    templateUrl: 'default-enabled-column-resize-flex-demo.html',
-                    encapsulation: ViewEncapsulation.None,
-                },] },
-    ];
     DefaultEnabledColumnResizeFlexDemo.ɵfac = function DefaultEnabledColumnResizeFlexDemo_Factory(t) { return new (t || DefaultEnabledColumnResizeFlexDemo)(); };
     DefaultEnabledColumnResizeFlexDemo.ɵcmp = ɵɵdefineComponent({ type: DefaultEnabledColumnResizeFlexDemo, selectors: [["default-enabled-column-resize-flex-demo"]], decls: 15, vars: 3, consts: [[1, "mat-elevation-z8", "example-table", 3, "dataSource"], ["matColumnDef", "position"], [3, "matResizableMaxWidthPx", 4, "matHeaderCellDef"], [4, "matCellDef"], ["matColumnDef", "name"], [3, "matResizableMinWidthPx", 4, "matHeaderCellDef"], ["matColumnDef", "weight"], ["disableResize", "", 4, "matHeaderCellDef"], ["matColumnDef", "symbol"], [4, "matHeaderCellDef"], [4, "matHeaderRowDef"], [4, "matRowDef", "matRowDefColumns"], [3, "matResizableMaxWidthPx"], [3, "matResizableMinWidthPx"], ["disableResize", ""]], template: function DefaultEnabledColumnResizeFlexDemo_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "mat-table", 0);
@@ -353,16 +329,6 @@ var DefaultEnabledColumnResizeFlexDemo = /** @class */ (function () {
 var DefaultEnabledColumnResizeFlexDemoModule = /** @class */ (function () {
     function DefaultEnabledColumnResizeFlexDemoModule() {
     }
-    DefaultEnabledColumnResizeFlexDemoModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatDefaultEnabledColumnResizeModule,
-                        MatTableModule,
-                    ],
-                    declarations: [DefaultEnabledColumnResizeFlexDemo],
-                    exports: [DefaultEnabledColumnResizeFlexDemo],
-                },] },
-    ];
     DefaultEnabledColumnResizeFlexDemoModule.ɵmod = ɵɵdefineNgModule({ type: DefaultEnabledColumnResizeFlexDemoModule });
     DefaultEnabledColumnResizeFlexDemoModule.ɵinj = ɵɵdefineInjector({ factory: function DefaultEnabledColumnResizeFlexDemoModule_Factory(t) { return new (t || DefaultEnabledColumnResizeFlexDemoModule)(); }, imports: [[
                 MatDefaultEnabledColumnResizeModule,
@@ -487,13 +453,6 @@ var OptInColumnResizeDemo = /** @class */ (function () {
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = ELEMENT_DATA$2;
     }
-    OptInColumnResizeDemo.decorators = [
-        { type: Component, args: [{
-                    selector: 'opt-in-column-resize-demo',
-                    templateUrl: 'opt-in-column-resize-demo.html',
-                    encapsulation: ViewEncapsulation.None,
-                },] },
-    ];
     OptInColumnResizeDemo.ɵfac = function OptInColumnResizeDemo_Factory(t) { return new (t || OptInColumnResizeDemo)(); };
     OptInColumnResizeDemo.ɵcmp = ɵɵdefineComponent({ type: OptInColumnResizeDemo, selectors: [["opt-in-column-resize-demo"]], decls: 15, vars: 3, consts: [["mat-table", "", "columnResize", "", 1, "mat-elevation-z8", "example-table", 3, "dataSource"], ["matColumnDef", "position"], ["mat-header-cell", "", "resizable", "", 3, "matResizableMaxWidthPx", 4, "matHeaderCellDef"], ["mat-cell", "", 4, "matCellDef"], ["matColumnDef", "name"], ["mat-header-cell", "", "resizable", "", 3, "matResizableMinWidthPx", 4, "matHeaderCellDef"], ["matColumnDef", "weight"], ["mat-header-cell", "", 4, "matHeaderCellDef"], ["matColumnDef", "symbol"], ["mat-header-cell", "", "resizable", "", 4, "matHeaderCellDef"], ["mat-header-row", "", 4, "matHeaderRowDef"], ["mat-row", "", 4, "matRowDef", "matRowDefColumns"], ["mat-header-cell", "", "resizable", "", 3, "matResizableMaxWidthPx"], ["mat-cell", ""], ["mat-header-cell", "", "resizable", "", 3, "matResizableMinWidthPx"], ["mat-header-cell", ""], ["mat-header-cell", "", "resizable", ""], ["mat-header-row", ""], ["mat-row", ""]], template: function OptInColumnResizeDemo_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "table", 0);
@@ -544,16 +503,6 @@ var OptInColumnResizeDemo = /** @class */ (function () {
 var OptInColumnResizeDemoModule = /** @class */ (function () {
     function OptInColumnResizeDemoModule() {
     }
-    OptInColumnResizeDemoModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        MatColumnResizeModule,
-                        MatTableModule,
-                    ],
-                    declarations: [OptInColumnResizeDemo],
-                    exports: [OptInColumnResizeDemo],
-                },] },
-    ];
     OptInColumnResizeDemoModule.ɵmod = ɵɵdefineNgModule({ type: OptInColumnResizeDemoModule });
     OptInColumnResizeDemoModule.ɵinj = ɵɵdefineInjector({ factory: function OptInColumnResizeDemoModule_Factory(t) { return new (t || OptInColumnResizeDemoModule)(); }, imports: [[
                 MatColumnResizeModule,

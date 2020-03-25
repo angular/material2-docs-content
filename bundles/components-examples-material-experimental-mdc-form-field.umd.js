@@ -205,13 +205,6 @@
     var FormFieldCustomControlExample = /** @class */ (function () {
         function FormFieldCustomControlExample() {
         }
-        FormFieldCustomControlExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'form-field-custom-control-example',
-                        templateUrl: 'form-field-custom-control-example.html',
-                        styleUrls: ['form-field-custom-control-example.css'],
-                    },] },
-        ];
         FormFieldCustomControlExample.ɵfac = function FormFieldCustomControlExample_Factory(t) { return new (t || FormFieldCustomControlExample)(); };
         FormFieldCustomControlExample.ɵcmp = i0.ɵɵdefineComponent({ type: FormFieldCustomControlExample, selectors: [["form-field-custom-control-example"]], decls: 8, vars: 0, consts: [["required", ""], ["matSuffix", ""]], template: function FormFieldCustomControlExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
@@ -364,32 +357,6 @@
             this.onChange(this.value);
         };
         MyTelInput.nextId = 0;
-        MyTelInput.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'example-tel-input',
-                        templateUrl: 'example-tel-input-example.html',
-                        styleUrls: ['example-tel-input-example.css'],
-                        providers: [{ provide: i1.MatFormFieldControl, useExisting: MyTelInput }],
-                        host: {
-                            '[class.example-floating]': 'shouldLabelFloat',
-                            '[id]': 'id',
-                            '[attr.aria-describedby]': 'describedBy',
-                        }
-                    },] },
-        ];
-        /** @nocollapse */
-        MyTelInput.ctorParameters = function () { return [
-            { type: i3.FormBuilder },
-            { type: i4.FocusMonitor },
-            { type: i0.ElementRef },
-            { type: i3.NgControl, decorators: [{ type: i0.Optional }, { type: i0.Self }] }
-        ]; };
-        MyTelInput.propDecorators = {
-            placeholder: [{ type: i0.Input }],
-            required: [{ type: i0.Input }],
-            disabled: [{ type: i0.Input }],
-            value: [{ type: i0.Input }]
-        };
         MyTelInput.ɵfac = function MyTelInput_Factory(t) { return new (t || MyTelInput)(i0.ɵɵdirectiveInject(i3.FormBuilder), i0.ɵɵdirectiveInject(i4.FocusMonitor), i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i3.NgControl, 10)); };
         MyTelInput.ɵcmp = i0.ɵɵdefineComponent({ type: MyTelInput, selectors: [["example-tel-input"]], hostVars: 4, hostBindings: function MyTelInput_HostBindings(rf, ctx) { if (rf & 2) {
                 i0.ɵɵhostProperty("id", ctx.id);
@@ -451,19 +418,6 @@
     var MdcFormFieldExamplesModule = /** @class */ (function () {
         function MdcFormFieldExamplesModule() {
         }
-        MdcFormFieldExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            common.CommonModule,
-                            i1.MatFormFieldModule,
-                            i2.MatIconModule,
-                            i3.ReactiveFormsModule,
-                        ],
-                        declarations: __spread(EXAMPLES, [MyTelInput]),
-                        exports: __spread(EXAMPLES, [MyTelInput]),
-                        entryComponents: EXAMPLES,
-                    },] },
-        ];
         MdcFormFieldExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: MdcFormFieldExamplesModule });
         MdcFormFieldExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function MdcFormFieldExamplesModule_Factory(t) { return new (t || MdcFormFieldExamplesModule)(); }, imports: [[
                     common.CommonModule,

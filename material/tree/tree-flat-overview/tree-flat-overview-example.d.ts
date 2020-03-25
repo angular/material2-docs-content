@@ -33,7 +33,7 @@ export declare class TreeFlatOverviewExample {
     }>;
     constructor();
     hasChild: (_: number, node: ExampleFlatNode) => boolean;
-    static ɵfac: i0.ɵɵFactoryDef<TreeFlatOverviewExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TreeFlatOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeFlatOverviewExample, "tree-flat-overview-example", never, {}, {}, never, never>;
 }
 export {};

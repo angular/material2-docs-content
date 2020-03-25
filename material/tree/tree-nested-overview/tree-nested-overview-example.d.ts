@@ -17,7 +17,7 @@ export declare class TreeNestedOverviewExample {
     dataSource: MatTreeNestedDataSource<FoodNode>;
     constructor();
     hasChild: (_: number, node: FoodNode) => boolean;
-    static ɵfac: i0.ɵɵFactoryDef<TreeNestedOverviewExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TreeNestedOverviewExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TreeNestedOverviewExample, "tree-nested-overview-example", never, {}, {}, never, never>;
 }
 export {};

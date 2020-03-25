@@ -16,6 +16,6 @@ export declare class TableSortingExample implements OnInit {
     dataSource: MatTableDataSource<PeriodicElement>;
     sort: MatSort;
     ngOnInit(): void;
-    static ɵfac: i0.ɵɵFactoryDef<TableSortingExample>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableSortingExample, "table-sorting-example", never, {}, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDef<TableSortingExample, never>;
+    static ɵcmp: i0.ɵɵComponentDefWithMeta<TableSortingExample, "table-sorting-example", never, {}, {}, never, never>;
 }

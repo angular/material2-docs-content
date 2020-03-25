@@ -44,13 +44,6 @@
                 this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(function (str) { return +str; });
             }
         };
-        PaginatorConfigurableExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'paginator-configurable-example',
-                        templateUrl: 'paginator-configurable-example.html',
-                        styleUrls: ['paginator-configurable-example.css'],
-                    },] },
-        ];
         PaginatorConfigurableExample.ɵfac = function PaginatorConfigurableExample_Factory(t) { return new (t || PaginatorConfigurableExample)(); };
         PaginatorConfigurableExample.ɵcmp = i0.ɵɵdefineComponent({ type: PaginatorConfigurableExample, selectors: [["paginator-configurable-example"]], decls: 14, vars: 9, consts: [["matInput", "", "type", "number", 3, "ngModel", "ngModelChange"], ["matInput", "", "placeholder", "Ex. 10,25,50", 3, "ngModel", "ngModelOptions", "ngModelChange"], [3, "length", "pageSize", "pageSizeOptions", "page"], [4, "ngIf"]], template: function PaginatorConfigurableExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelementStart(0, "mat-form-field");
@@ -111,13 +104,6 @@
     var PaginatorOverviewExample = /** @class */ (function () {
         function PaginatorOverviewExample() {
         }
-        PaginatorOverviewExample.decorators = [
-            { type: i0.Component, args: [{
-                        selector: 'paginator-overview-example',
-                        templateUrl: 'paginator-overview-example.html',
-                        styleUrls: ['paginator-overview-example.css'],
-                    },] },
-        ];
         PaginatorOverviewExample.ɵfac = function PaginatorOverviewExample_Factory(t) { return new (t || PaginatorOverviewExample)(); };
         PaginatorOverviewExample.ɵcmp = i0.ɵɵdefineComponent({ type: PaginatorOverviewExample, selectors: [["paginator-overview-example"]], decls: 1, vars: 4, consts: [[3, "length", "pageSize", "pageSizeOptions"]], template: function PaginatorOverviewExample_Template(rf, ctx) { if (rf & 1) {
                 i0.ɵɵelement(0, "mat-paginator", 0);
@@ -142,19 +128,6 @@
     var PaginatorExamplesModule = /** @class */ (function () {
         function PaginatorExamplesModule() {
         }
-        PaginatorExamplesModule.decorators = [
-            { type: i0.NgModule, args: [{
-                        imports: [
-                            i5.CommonModule,
-                            i2.MatInputModule,
-                            i4.MatPaginatorModule,
-                            i3.FormsModule,
-                        ],
-                        declarations: EXAMPLES,
-                        exports: EXAMPLES,
-                        entryComponents: EXAMPLES,
-                    },] },
-        ];
         PaginatorExamplesModule.ɵmod = i0.ɵɵdefineNgModule({ type: PaginatorExamplesModule });
         PaginatorExamplesModule.ɵinj = i0.ɵɵdefineInjector({ factory: function PaginatorExamplesModule_Factory(t) { return new (t || PaginatorExamplesModule)(); }, imports: [[
                     i5.CommonModule,

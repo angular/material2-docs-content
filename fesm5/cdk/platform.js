@@ -1,5 +1,5 @@
 import { getSupportedInputTypes, supportsPassiveEventListeners, supportsScrollBehavior, Platform, PlatformModule } from '@angular/cdk/platform';
-import { Component, ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵsetClassMetadata, NgModule, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope } from '@angular/core';
+import { ɵɵdirectiveInject, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵadvance, ɵɵtextInterpolate1, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 
 /**
  * @title Platform overview
@@ -11,17 +11,6 @@ var CdkPlatformOverviewExample = /** @class */ (function () {
         this.supportsPassiveEventListeners = supportsPassiveEventListeners();
         this.supportsScrollBehavior = supportsScrollBehavior();
     }
-    CdkPlatformOverviewExample.decorators = [
-        { type: Component, args: [{
-                    selector: 'cdk-platform-overview-example',
-                    templateUrl: 'cdk-platform-overview-example.html',
-                    styleUrls: ['cdk-platform-overview-example.css'],
-                },] },
-    ];
-    /** @nocollapse */
-    CdkPlatformOverviewExample.ctorParameters = function () { return [
-        { type: Platform }
-    ]; };
     CdkPlatformOverviewExample.ɵfac = function CdkPlatformOverviewExample_Factory(t) { return new (t || CdkPlatformOverviewExample)(ɵɵdirectiveInject(Platform)); };
     CdkPlatformOverviewExample.ɵcmp = ɵɵdefineComponent({ type: CdkPlatformOverviewExample, selectors: [["cdk-platform-overview-example"]], decls: 24, vars: 11, template: function CdkPlatformOverviewExample_Template(rf, ctx) { if (rf & 1) {
             ɵɵelementStart(0, "h2");
@@ -99,16 +88,6 @@ var EXAMPLES = [CdkPlatformOverviewExample];
 var CdkPlatformExamplesModule = /** @class */ (function () {
     function CdkPlatformExamplesModule() {
     }
-    CdkPlatformExamplesModule.decorators = [
-        { type: NgModule, args: [{
-                    imports: [
-                        PlatformModule,
-                    ],
-                    declarations: EXAMPLES,
-                    exports: EXAMPLES,
-                    entryComponents: EXAMPLES,
-                },] },
-    ];
     CdkPlatformExamplesModule.ɵmod = ɵɵdefineNgModule({ type: CdkPlatformExamplesModule });
     CdkPlatformExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function CdkPlatformExamplesModule_Factory(t) { return new (t || CdkPlatformExamplesModule)(); }, imports: [[
                 PlatformModule,
