@@ -1,6 +1,5 @@
-import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵɵelement, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, ɵsetClassMetadata, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
 import { MatButton, MatAnchor, MatButtonModule } from '@angular/material/button';
-import { MatDivider, MatDividerModule } from '@angular/material/divider';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 /**
@@ -10,222 +9,11 @@ var ButtonOverviewExample = /** @class */ (function () {
     function ButtonOverviewExample() {
     }
     ButtonOverviewExample.ɵfac = function ButtonOverviewExample_Factory(t) { return new (t || ButtonOverviewExample)(); };
-    ButtonOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ButtonOverviewExample, selectors: [["button-overview-example"]], decls: 132, vars: 0, consts: [[1, "example-label"], [1, "example-button-row"], ["mat-button", ""], ["mat-button", "", "color", "primary"], ["mat-button", "", "color", "accent"], ["mat-button", "", "color", "warn"], ["mat-button", "", "disabled", ""], ["mat-button", "", "href", "https://www.google.com/", "target", "_blank"], ["mat-raised-button", ""], ["mat-raised-button", "", "color", "primary"], ["mat-raised-button", "", "color", "accent"], ["mat-raised-button", "", "color", "warn"], ["mat-raised-button", "", "disabled", ""], ["mat-raised-button", "", "href", "https://www.google.com/", "target", "_blank"], ["mat-stroked-button", ""], ["mat-stroked-button", "", "color", "primary"], ["mat-stroked-button", "", "color", "accent"], ["mat-stroked-button", "", "color", "warn"], ["mat-stroked-button", "", "disabled", ""], ["mat-stroked-button", "", "href", "https://www.google.com/", "target", "_blank"], ["mat-flat-button", ""], ["mat-flat-button", "", "color", "primary"], ["mat-flat-button", "", "color", "accent"], ["mat-flat-button", "", "color", "warn"], ["mat-flat-button", "", "disabled", ""], ["mat-flat-button", "", "href", "https://www.google.com/", "target", "_blank"], [1, "example-flex-container"], ["mat-icon-button", "", "aria-label", "Example icon button with a vertical three dot icon"], ["mat-icon-button", "", "color", "primary", "aria-label", "Example icon button with a home icon"], ["mat-icon-button", "", "color", "accent", "aria-label", "Example icon button with a menu icon"], ["mat-icon-button", "", "color", "warn", "aria-label", "Example icon button with a heart icon"], ["mat-icon-button", "", "disabled", "", "aria-label", "Example icon button with a open in new tab icon"], [1, "example-button-container"], ["mat-fab", "", "color", "primary", "aria-label", "Example icon button with a delete icon"], ["mat-fab", "", "color", "accent", "aria-label", "Example icon button with a bookmark icon"], ["mat-fab", "", "color", "warn", "aria-label", "Example icon button with a home icon"], ["mat-fab", "", "disabled", "", "aria-label", "Example icon button with a heart icon"], ["mat-mini-fab", "", "color", "primary", "aria-label", "Example icon button with a menu icon"], ["mat-mini-fab", "", "color", "accent", "aria-label", "Example icon button with a plus one icon"], ["mat-mini-fab", "", "color", "warn", "aria-label", "Example icon button with a filter list icon"], ["mat-mini-fab", "", "disabled", "", "aria-label", "Example icon button with a home icon"]], template: function ButtonOverviewExample_Template(rf, ctx) { if (rf & 1) {
-            ɵɵelementStart(0, "section");
-            ɵɵelementStart(1, "div", 0);
-            ɵɵtext(2, "Basic");
-            ɵɵelementEnd();
-            ɵɵelementStart(3, "div", 1);
-            ɵɵelementStart(4, "button", 2);
-            ɵɵtext(5, "Basic");
-            ɵɵelementEnd();
-            ɵɵelementStart(6, "button", 3);
-            ɵɵtext(7, "Primary");
-            ɵɵelementEnd();
-            ɵɵelementStart(8, "button", 4);
-            ɵɵtext(9, "Accent");
-            ɵɵelementEnd();
-            ɵɵelementStart(10, "button", 5);
-            ɵɵtext(11, "Warn");
-            ɵɵelementEnd();
-            ɵɵelementStart(12, "button", 6);
-            ɵɵtext(13, "Disabled");
-            ɵɵelementEnd();
-            ɵɵelementStart(14, "a", 7);
-            ɵɵtext(15, "Link");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelement(16, "mat-divider");
-            ɵɵelementStart(17, "section");
-            ɵɵelementStart(18, "div", 0);
-            ɵɵtext(19, "Raised");
-            ɵɵelementEnd();
-            ɵɵelementStart(20, "div", 1);
-            ɵɵelementStart(21, "button", 8);
-            ɵɵtext(22, "Basic");
-            ɵɵelementEnd();
-            ɵɵelementStart(23, "button", 9);
-            ɵɵtext(24, "Primary");
-            ɵɵelementEnd();
-            ɵɵelementStart(25, "button", 10);
-            ɵɵtext(26, "Accent");
-            ɵɵelementEnd();
-            ɵɵelementStart(27, "button", 11);
-            ɵɵtext(28, "Warn");
-            ɵɵelementEnd();
-            ɵɵelementStart(29, "button", 12);
-            ɵɵtext(30, "Disabled");
-            ɵɵelementEnd();
-            ɵɵelementStart(31, "a", 13);
-            ɵɵtext(32, "Link");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelement(33, "mat-divider");
-            ɵɵelementStart(34, "section");
-            ɵɵelementStart(35, "div", 0);
-            ɵɵtext(36, "Stroked");
-            ɵɵelementEnd();
-            ɵɵelementStart(37, "div", 1);
-            ɵɵelementStart(38, "button", 14);
-            ɵɵtext(39, "Basic");
-            ɵɵelementEnd();
-            ɵɵelementStart(40, "button", 15);
-            ɵɵtext(41, "Primary");
-            ɵɵelementEnd();
-            ɵɵelementStart(42, "button", 16);
-            ɵɵtext(43, "Accent");
-            ɵɵelementEnd();
-            ɵɵelementStart(44, "button", 17);
-            ɵɵtext(45, "Warn");
-            ɵɵelementEnd();
-            ɵɵelementStart(46, "button", 18);
-            ɵɵtext(47, "Disabled");
-            ɵɵelementEnd();
-            ɵɵelementStart(48, "a", 19);
-            ɵɵtext(49, "Link");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelement(50, "mat-divider");
-            ɵɵelementStart(51, "section");
-            ɵɵelementStart(52, "div", 0);
-            ɵɵtext(53, "Flat");
-            ɵɵelementEnd();
-            ɵɵelementStart(54, "div", 1);
-            ɵɵelementStart(55, "button", 20);
-            ɵɵtext(56, "Basic");
-            ɵɵelementEnd();
-            ɵɵelementStart(57, "button", 21);
-            ɵɵtext(58, "Primary");
-            ɵɵelementEnd();
-            ɵɵelementStart(59, "button", 22);
-            ɵɵtext(60, "Accent");
-            ɵɵelementEnd();
-            ɵɵelementStart(61, "button", 23);
-            ɵɵtext(62, "Warn");
-            ɵɵelementEnd();
-            ɵɵelementStart(63, "button", 24);
-            ɵɵtext(64, "Disabled");
-            ɵɵelementEnd();
-            ɵɵelementStart(65, "a", 25);
-            ɵɵtext(66, "Link");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelement(67, "mat-divider");
-            ɵɵelementStart(68, "section");
-            ɵɵelementStart(69, "div", 0);
-            ɵɵtext(70, "Icon");
-            ɵɵelementEnd();
-            ɵɵelementStart(71, "div", 1);
-            ɵɵelementStart(72, "div", 26);
-            ɵɵelementStart(73, "button", 27);
-            ɵɵelementStart(74, "mat-icon");
-            ɵɵtext(75, "more_vert");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(76, "button", 28);
-            ɵɵelementStart(77, "mat-icon");
-            ɵɵtext(78, "home");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(79, "button", 29);
-            ɵɵelementStart(80, "mat-icon");
-            ɵɵtext(81, "menu");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(82, "button", 30);
-            ɵɵelementStart(83, "mat-icon");
-            ɵɵtext(84, "favorite");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(85, "button", 31);
-            ɵɵelementStart(86, "mat-icon");
-            ɵɵtext(87, "open_in_new");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelement(88, "mat-divider");
-            ɵɵelementStart(89, "section");
-            ɵɵelementStart(90, "div", 0);
-            ɵɵtext(91, "FAB");
-            ɵɵelementEnd();
-            ɵɵelementStart(92, "div", 1);
-            ɵɵelementStart(93, "div", 26);
-            ɵɵelementStart(94, "div", 32);
-            ɵɵelementStart(95, "button", 33);
-            ɵɵelementStart(96, "mat-icon");
-            ɵɵtext(97, "delete");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(98, "div", 32);
-            ɵɵelementStart(99, "button", 34);
-            ɵɵelementStart(100, "mat-icon");
-            ɵɵtext(101, "bookmark");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(102, "div", 32);
-            ɵɵelementStart(103, "button", 35);
-            ɵɵelementStart(104, "mat-icon");
-            ɵɵtext(105, "home");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(106, "div", 32);
-            ɵɵelementStart(107, "button", 36);
-            ɵɵelementStart(108, "mat-icon");
-            ɵɵtext(109, "favorite");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelement(110, "mat-divider");
-            ɵɵelementStart(111, "section");
-            ɵɵelementStart(112, "div", 0);
-            ɵɵtext(113, "Mini FAB");
-            ɵɵelementEnd();
-            ɵɵelementStart(114, "div", 1);
-            ɵɵelementStart(115, "div", 26);
-            ɵɵelementStart(116, "div", 32);
-            ɵɵelementStart(117, "button", 37);
-            ɵɵelementStart(118, "mat-icon");
-            ɵɵtext(119, "menu");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(120, "div", 32);
-            ɵɵelementStart(121, "button", 38);
-            ɵɵelementStart(122, "mat-icon");
-            ɵɵtext(123, "plus_one");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(124, "div", 32);
-            ɵɵelementStart(125, "button", 39);
-            ɵɵelementStart(126, "mat-icon");
-            ɵɵtext(127, "filter_list");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementStart(128, "div", 32);
-            ɵɵelementStart(129, "button", 40);
-            ɵɵelementStart(130, "mat-icon");
-            ɵɵtext(131, "home");
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-            ɵɵelementEnd();
-        } }, directives: [MatButton, MatAnchor, MatDivider, MatIcon], styles: ["section[_ngcontent-%COMP%] {\n  display: table;\n  margin: 8px;\n}\n\n.example-label[_ngcontent-%COMP%] {\n  display: table-cell;\n  font-size: 14px;\n  margin-left: 8px;\n  width: 120px;\n}\n\n.example-button-row[_ngcontent-%COMP%] {\n  display: table-cell;\n}\n\n.example-button-row[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  display: table-cell;\n  margin-right: 8px;\n}\n\n.example-flex-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  width: 480px;\n}\n\n.example-button-container[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  width: 120px;\n}"] });
+    ButtonOverviewExample.ɵcmp = ɵɵdefineComponent({ type: ButtonOverviewExample, selectors: [["button-overview-example"]], decls: 2, vars: 0, consts: [["mat-button", ""]], template: function ButtonOverviewExample_Template(rf, ctx) { if (rf & 1) {
+            ɵɵelementStart(0, "button", 0);
+            ɵɵtext(1, "Click me!");
+            ɵɵelementEnd();
+        } }, directives: [MatButton], styles: [""] });
     return ButtonOverviewExample;
 }());
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonOverviewExample, [{
@@ -445,14 +233,12 @@ var ButtonExamplesModule = /** @class */ (function () {
     ButtonExamplesModule.ɵmod = ɵɵdefineNgModule({ type: ButtonExamplesModule });
     ButtonExamplesModule.ɵinj = ɵɵdefineInjector({ factory: function ButtonExamplesModule_Factory(t) { return new (t || ButtonExamplesModule)(); }, imports: [[
                 MatButtonModule,
-                MatDividerModule,
                 MatIconModule,
             ]] });
     return ButtonExamplesModule;
 }());
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(ButtonExamplesModule, { declarations: [ButtonOverviewExample,
         ButtonTypesExample], imports: [MatButtonModule,
-        MatDividerModule,
         MatIconModule], exports: [ButtonOverviewExample,
         ButtonTypesExample] }); })();
 /*@__PURE__*/ (function () { ɵsetClassMetadata(ButtonExamplesModule, [{
@@ -460,7 +246,6 @@ var ButtonExamplesModule = /** @class */ (function () {
         args: [{
                 imports: [
                     MatButtonModule,
-                    MatDividerModule,
                     MatIconModule,
                 ],
                 declarations: EXAMPLES,
